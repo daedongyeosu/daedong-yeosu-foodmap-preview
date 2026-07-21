@@ -11,7 +11,7 @@ if (stores.length !== 471 || normal.length !== 470) throw new Error(`Unexpected 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const clean = (v) => String(v || '').normalize('NFKC').toLowerCase().replace(/여수시?|전라남도|전남|점포|매장|본점/g, '').replace(/[\s()[\]{}·&.,'"_-]/g, '');
 const brand = (v) => clean(v).replace(/(소호|신기|죽림|학동|문수|여서|웅천|무선|봉계|덕충|교동|중앙|국동|돌산|여천|봉강|화장|안산|미평|오림|관문|서교|충무|공화|종화|고소|수정|월호|선원|주삼|삼일|묘도|율촌|소라|화양|남면|화정|삼산).*$/, '');
-const isYeosu = (d) => /전라남도\s*여수시|전남\s*여수시|\b여수시\b/.test(`${d.address_name || ''} ${d.road_address_name || ''}`);
+const isYeosu = (d) => /여수시/.test(`${d.address_name || ''} ${d.road_address_name || ''}`);
 const districtMatch = (store, d) => !store.district || `${d.address_name || ''} ${d.road_address_name || ''}`.includes(String(store.district).replace(/\s/g, ''));
 const nameMatch = (store, d) => {
   const a = clean(store.name), b = clean(d.place_name);
