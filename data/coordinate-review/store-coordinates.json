@@ -306,22 +306,26 @@
     "confidence": "keyword-exact"
   },
   "718031989449bc32": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "가장맛있는족발 여수여서점 여서동",
-    "matchedAddress": "",
-    "status": "manual-review",
-    "confidence": "ambiguous"
+    "latitude": 34.7503551918701,
+    "longitude": 127.700174920231,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xAAquxSv",
+    "inputAddress": "전남 여수시 여문문화2길 77",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 77",
+    "status": "verified",
+    "confidence": "exact"
   },
   "005382cbb06108d3": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "가장맛있는족발 여수웅천점 웅천동",
-    "matchedAddress": "",
-    "status": "manual-review",
-    "confidence": "ambiguous"
+    "latitude": 34.7465543756456,
+    "longitude": 127.669999699213,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GzEDf6CC",
+    "inputAddress": "전남 여수시 예울마루로 37-26 1층 114-1호",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-26",
+    "status": "verified",
+    "confidence": "exact"
   },
   "52f5738519110900": {
     "latitude": 34.7637616136069,
@@ -756,13 +760,15 @@
     "confidence": "ambiguous"
   },
   "b717d583801d3f04": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "깐깐한족발 여수문수점 문수동",
-    "matchedAddress": "",
-    "status": "manual-review",
-    "confidence": "ambiguous"
+    "latitude": 34.7538477573529,
+    "longitude": 127.704002761944,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GPdHDX8A",
+    "inputAddress": "전남 여수시 여문1로 60",
+    "matchedAddress": "전남광주통합특별시 여수시 여문1로 60",
+    "status": "verified",
+    "confidence": "exact"
   },
   "f20eb017620ccc33": {
     "latitude": 34.75701178931271,
@@ -1728,13 +1734,15 @@
     "confidence": "none"
   },
   "2b78b30bde243ae6": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "바른보쌈1990 여수웅천점 웅천동",
-    "matchedAddress": "",
-    "status": "search-failed",
-    "confidence": "none"
+    "latitude": 34.7479879038255,
+    "longitude": 127.677909764516,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5SKKOwax",
+    "inputAddress": "전남 여수시 웅천로 19-14",
+    "matchedAddress": "전남광주통합특별시 여수시 웅천로 19-14",
+    "status": "verified",
+    "confidence": "exact"
   },
   "51ed482a660b8247": {
     "latitude": null,
@@ -2637,13 +2645,15 @@
     "confidence": "keyword-exact"
   },
   "d322f9f9a91b0bdb": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "원할머니보쌈족발 여수여천점 여천동",
-    "matchedAddress": "",
-    "status": "manual-review",
-    "confidence": "ambiguous"
+    "latitude": 34.7567113642668,
+    "longitude": 127.665424448123,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5z5yUNCQ",
+    "inputAddress": "전남 여수시 선소로 35",
+    "matchedAddress": "전남광주통합특별시 여수시 선소로 35",
+    "status": "verified",
+    "confidence": "exact"
   },
   "c8633f33e72e2e0a": {
     "latitude": 34.7538328354448,
@@ -2952,13 +2962,15 @@
     "confidence": "keyword-exact"
   },
   "5768a9d8a72502ef": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "조선제일 감자탕&뼈해장국 여서점 여서동",
-    "matchedAddress": "",
-    "status": "search-failed",
-    "confidence": "none"
+    "latitude": 34.7534590145186,
+    "longitude": 127.704434133404,
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/xTTtg37m",
+    "inputAddress": "전남 여수시 여문1로 54 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 여문1로 54",
+    "status": "verified",
+    "confidence": "exact"
   },
   "82fb6c389b7aced5": {
     "latitude": null,
@@ -3096,13 +3108,15 @@
     "confidence": "none"
   },
   "83a409add1950550": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "참 맛있는 족발 여수본점(신기동) 신기동",
-    "matchedAddress": "",
-    "status": "search-failed",
-    "confidence": "none"
+    "latitude": 34.7568949017523,
+    "longitude": 127.67363544145,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GM3oyOeX",
+    "inputAddress": "전남 여수시 망마로 106",
+    "matchedAddress": "전남광주통합특별시 여수시 망마로 106",
+    "status": "verified",
+    "confidence": "exact"
   },
   "3c62ab40bf66608e": {
     "latitude": null,
@@ -3672,13 +3686,15 @@
     "confidence": "keyword-exact"
   },
   "e16359de9292f582": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "피자알볼로 여수엑스포점(수정동) 수정동",
-    "matchedAddress": "",
-    "status": "search-failed",
-    "confidence": "none"
+    "latitude": 34.7432462725732,
+    "longitude": 127.749028178854,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xONU2m70",
+    "inputAddress": "전남 여수시 이순신광장로 266 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 266",
+    "status": "verified",
+    "confidence": "exact"
   },
   "afb901f3a32de6e8": {
     "latitude": 34.7523750197696,
@@ -3717,13 +3733,15 @@
     "confidence": "none"
   },
   "7b221aa6623bd0a2": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "하이오커피 여수신월국동항점 국동",
-    "matchedAddress": "",
-    "status": "manual-review",
-    "confidence": "ambiguous"
+    "latitude": 34.7251443389237,
+    "longitude": 127.7118853331,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FkLqT4l1",
+    "inputAddress": "전남 여수시 신월1길 15-5 창성빌딩 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 신월1길 15-5",
+    "status": "verified",
+    "confidence": "exact"
   },
   "4621df767ea3905a": {
     "latitude": 34.753797392829,
@@ -3762,13 +3780,15 @@
     "confidence": "none"
   },
   "8f8486e4cd5aaec3": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "항아리치킨&깐풍기 봉산점 봉산동",
-    "matchedAddress": "",
-    "status": "search-failed",
-    "confidence": "none"
+    "latitude": 34.7323488018265,
+    "longitude": 127.720892048116,
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GfCnCeGf",
+    "inputAddress": "전남 여수시 봉산남4길 20-1",
+    "matchedAddress": "전남광주통합특별시 여수시 봉산남4길 20-1",
+    "status": "verified",
+    "confidence": "exact"
   },
   "9b760748be6ee430": {
     "latitude": 34.75866835063315,
@@ -3951,13 +3971,15 @@
     "confidence": "ambiguous"
   },
   "ba870ddfedb99508": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "본죽&비빔밥 여수미평점 저장해두시면",
-    "matchedAddress": "",
-    "status": "manual-review",
-    "confidence": "ambiguous"
+    "latitude": 34.767062231761,
+    "longitude": 127.702750536544,
+    "source": "excel-naver-map",
+    "sourceSheet": "미평",
+    "naverMapUrl": "https://naver.me/xKEbkHlD",
+    "inputAddress": "전남 여수시 둔덕2길 6-4 본죽&비빔밥cafe 여수미평점",
+    "matchedAddress": "전남광주통합특별시 여수시 둔덕2길 6-4",
+    "status": "verified",
+    "confidence": "exact"
   },
   "ddc27f852308889a": {
     "latitude": 34.7304599044567,
@@ -3978,13 +4000,15 @@
     "confidence": "none"
   },
   "08e5e26653436fef": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "알토랑반찬 여수문수본점 저장해두시면",
-    "matchedAddress": "",
-    "status": "search-failed",
-    "confidence": "none"
+    "latitude": 34.7490573201775,
+    "longitude": 127.698109437148,
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/5l75YMGb",
+    "inputAddress": "전남 여수시 문수5길 48",
+    "matchedAddress": "전남광주통합특별시 여수시 문수5길 48",
+    "status": "verified",
+    "confidence": "exact"
   },
   "768e4fe8150f5039": {
     "latitude": null,
@@ -3996,13 +4020,15 @@
     "confidence": "ambiguous"
   },
   "0ad5341dc696d4f1": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "맛있는 반찬 저장해두시면",
-    "matchedAddress": "",
-    "status": "search-failed",
-    "confidence": "none"
+    "latitude": 34.7493481728985,
+    "longitude": 127.698318725175,
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/GgBCLWh7",
+    "inputAddress": "전남 여수시 문수5길 42",
+    "matchedAddress": "전남광주통합특별시 여수시 문수5길 42",
+    "status": "verified",
+    "confidence": "exact"
   },
   "d409f6d9118b7bad": {
     "latitude": null,
