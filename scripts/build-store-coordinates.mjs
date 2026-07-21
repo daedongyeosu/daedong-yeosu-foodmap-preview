@@ -44,6 +44,7 @@ async function keywordSearch(query) {
 const result = {};
 const detail = [];
 let outsideYeosuCount = 0;
+const keywordDiagnostics = [];
 for (let i = 0; i < normal.length; i++) {
   const s = normal[i];
   const road = String(s.roadAddress || s.road_address || s.address || '').trim();
@@ -75,6 +76,19 @@ for (let i = 0; i < normal.length; i++) {
       await sleep(45);
     }
     const dedupedKeyword = [...new Map(rawKeyword.map((d) => [`${d.id || ''}:${d.x}:${d.y}`, d])).values()];
+    if (keywordDiagnostics.length < 20) {
+      keywordDiagnostics.push({
+        store_id: s.id,
+        storeName: s.name,
+        district: s.district || '',
+        queries,
+        returned: dedupedKeyword.length,
+        yeosuMatches: dedupedKeyword.filter(isYeosu).length,
+        nameMatches: dedupedKeyword.filter((d) => nameMatch(s, d)).length,
+        acceptedMatches: dedupedKeyword.filter((d) => isYeosu(d) && nameMatch(s, d)).length,
+        samples: dedupedKeyword.slice(0, 5).map((d) => ({ placeName: d.place_name || '', address: d.road_address_name || d.address_name || '' }))
+      });
+    }
     outsideYeosuCount += dedupedKeyword.filter((d) => nameMatch(s, d) && !isYeosu(d)).length;
     candidates = dedupedKeyword.filter(isYeosu).filter((d) => nameMatch(s, d)).map((d) => ({
       latitude: Number(d.y), longitude: Number(d.x), matchedAddress: d.road_address_name || d.address_name || '',
@@ -125,7 +139,7 @@ const stats = {
 };
 fs.mkdirSync('coordinate-output', { recursive: true });
 fs.writeFileSync('coordinate-output/store-coordinates.json', JSON.stringify(result, null, 2) + '\n');
-fs.writeFileSync('coordinate-output/coordinate-validation.json', JSON.stringify({ stats, duplicateCoordinates, stores: detail }, null, 2) + '\n');
+fs.writeFileSync('coordinate-output/coordinate-validation.json', JSON.stringify({ stats, duplicateCoordinates, keywordDiagnostics, stores: detail }, null, 2) + '\n');
 const sha = crypto.createHash('sha256').update(fs.readFileSync('coordinate-output/store-coordinates.json')).digest('hex');
 fs.writeFileSync('coordinate-output/SHA256.txt', `${sha}  store-coordinates.json\n`);
 console.log(JSON.stringify(stats));
