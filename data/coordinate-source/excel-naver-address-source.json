@@ -1,0 +1,602 @@
+{
+  "fe356412007caf0c": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/52cEz4n6",
+    "roadAddress": "전남 여수시 신월로 655 국동 서희스타힐스 상가",
+    "jibunAddress": "전남 여수시 국동 438 서희스타힐스 상가",
+    "naverPlaceId": "2002892838",
+    "matchedPlaceName": "여수튀김"
+  },
+  "d60f32bbdaa13cf5": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5W9S4mmD",
+    "roadAddress": "전남 여수시 봉산남7길 10-1 1층 카페빈",
+    "jibunAddress": "전남 여수시 봉산동 275-2",
+    "naverPlaceId": "1356701168",
+    "matchedPlaceName": "카페빈"
+  },
+  "e9dc60119d9cdfb5": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5CFsaPRS",
+    "roadAddress": "전남 여수시 신월로 655 (국동, 서희스타힐스) 서희스타힐스상가",
+    "jibunAddress": "전남 여수시 국동 438 서희스타힐스 서희스타힐스상가",
+    "naverPlaceId": "17283540",
+    "matchedPlaceName": "파리바게뜨 여수국동점"
+  },
+  "b17cdef5234b021b": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xzHymU99",
+    "roadAddress": "전남 여수시 진남상가길 42 (교동) .",
+    "jibunAddress": "전남 여수시 교동 653 .",
+    "naverPlaceId": "11690678",
+    "matchedPlaceName": "파리바게뜨 여수교동점"
+  },
+  "1bdc59414a5c8b64": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FNIEsMi8",
+    "roadAddress": "전남 여수시 동문로 7 (중앙동) 1층",
+    "jibunAddress": "전남 여수시 중앙동 671 1층",
+    "naverPlaceId": "17281837",
+    "matchedPlaceName": "파리바게뜨 여수중앙점"
+  },
+  "6059e7ea81c9f4d1": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GfCN82RH",
+    "roadAddress": "전남 여수시 박람회길 46 (덕충동 2041)",
+    "jibunAddress": "전남 여수시 덕충동 2041 2041",
+    "naverPlaceId": "1213203128",
+    "matchedPlaceName": "파리바게뜨 여수엑스포점"
+  },
+  "0fcde82a0f46ee28": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5LHwaXe5",
+    "roadAddress": "전남 여수시 돌산읍 강남해안로 76",
+    "jibunAddress": "전남 여수시 돌산읍 우두리 661-29",
+    "naverPlaceId": "1164727816",
+    "matchedPlaceName": "이디야커피 여수돌산우두리점"
+  },
+  "f0c36824f150a779": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FlBTHYJ5",
+    "roadAddress": "전남 여수시 신월로 681 1층",
+    "jibunAddress": "전남 여수시 국동 691-1",
+    "naverPlaceId": "1000093269",
+    "matchedPlaceName": "더벤티 여수국동서희스타힐스점"
+  },
+  "aa29edc20eb6da8b": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/IFgLBbUq",
+    "roadAddress": "전남 여수시 돌산읍 강남로 55 1층",
+    "jibunAddress": "전남 여수시 돌산읍 우두리 1029-1",
+    "naverPlaceId": "1508794927",
+    "matchedPlaceName": "더벤티 여수돌산점"
+  },
+  "7a91bd1d1f218c97": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/57Q8H6ls",
+    "roadAddress": "전남 여수시 대교로 30 1층",
+    "jibunAddress": "전남 여수시 봉산동 247-19",
+    "naverPlaceId": "1329909277",
+    "matchedPlaceName": "이디야 여수대교동점"
+  },
+  "43b4908cf2161b80": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/IMyb4O8N",
+    "roadAddress": "전남 여수시 좌수영로 101 1층",
+    "jibunAddress": "전남 여수시 연등동 845",
+    "naverPlaceId": "1752066582",
+    "matchedPlaceName": "이디야커피 여수연등메트하임점"
+  },
+  "728262018f22a2cc": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FW6Gmnu6",
+    "roadAddress": "전남 여수시 좌수영로 25 1층",
+    "jibunAddress": "전남 여수시 광무동 297-2",
+    "naverPlaceId": "1471964388",
+    "matchedPlaceName": "투썸플레이스 여수한재사거리점"
+  },
+  "a2939cd769593c56": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5SSEem9n",
+    "roadAddress": "전남 여수시 돌산읍 강남로 64",
+    "jibunAddress": "전남 여수시 돌산읍 우두리 1069-8",
+    "naverPlaceId": "1398070906",
+    "matchedPlaceName": "뚜레쥬르 여수돌산"
+  },
+  "03f6d7c59d6d1a45": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xktFwV8r",
+    "roadAddress": "전남 여수시 박람회길 38 103호",
+    "jibunAddress": "전남 여수시 덕충동 2042-1",
+    "naverPlaceId": "64492681",
+    "matchedPlaceName": "뚜레쥬르 여수엑스포타운점"
+  },
+  "2b78b30bde243ae6": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5SKKOwax",
+    "roadAddress": "전남 여수시 웅천로 19-14",
+    "jibunAddress": "전남 여수시 웅천동 1718-3",
+    "naverPlaceId": "1010317675",
+    "matchedPlaceName": "바른보쌈1990"
+  },
+  "e4707894d7a253d7": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/502S0YcE",
+    "roadAddress": "전남 여수시 충무로 38-3",
+    "jibunAddress": "전남 여수시 교동 641",
+    "naverPlaceId": "1412508414",
+    "matchedPlaceName": "반올림피자 여수3호점"
+  },
+  "485ad1139b230bcf": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xAABpmE0",
+    "roadAddress": "전남 여수시 동문로 114 1층",
+    "jibunAddress": "전남 여수시 공화동 734-2",
+    "naverPlaceId": "1845917790",
+    "matchedPlaceName": "여수족발 엑스포점"
+  },
+  "d322f9f9a91b0bdb": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5z5yUNCQ",
+    "roadAddress": "전남 여수시 선소로 35",
+    "jibunAddress": "전남 여수시 학동 181-11",
+    "naverPlaceId": "1139378009",
+    "matchedPlaceName": "원할머니보쌈족발 여수여천점"
+  },
+  "4663ccf86e9128fa": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/551WjWMU",
+    "roadAddress": "전남 여수시 웅천로 190 1층 청담피자",
+    "jibunAddress": "전남 여수시 웅천동 1853",
+    "naverPlaceId": "1076940696",
+    "matchedPlaceName": "청담피자여수웅천점"
+  },
+  "b88f6b8e8fd14ad3": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xHmqfwGX",
+    "roadAddress": "전남 여수시 소라면 죽림1길 10 1층 청담피자",
+    "jibunAddress": "전남 여수시 소라면 죽림리 1211-7",
+    "naverPlaceId": "1920327596",
+    "matchedPlaceName": "청담피자 여수죽림점"
+  },
+  "6b13f2db6e79b4eb": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FiPodx25",
+    "roadAddress": "전남 여수시 신월로 624-2",
+    "jibunAddress": "전남 여수시 신월동 2-2",
+    "naverPlaceId": "16899394",
+    "matchedPlaceName": "평양보쌈왕족발 본점"
+  },
+  "10f225b9ca817dc4": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/F3Eu4BlV",
+    "roadAddress": "전남 여수시 신월로 716",
+    "jibunAddress": "전남 여수시 봉산동 268-11",
+    "naverPlaceId": "1257783555",
+    "matchedPlaceName": "배스킨라빈스 여수국동점"
+  },
+  "2d1d2bf163bd7e3f": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5wNj8Cmp",
+    "roadAddress": "전남 여수시 통제영2길 7",
+    "jibunAddress": "전남 여수시 교동 397",
+    "naverPlaceId": "33511383",
+    "matchedPlaceName": "피자스쿨 여수교동점"
+  },
+  "ef2eacdbb6233f97": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FeX477Lh",
+    "roadAddress": "전남 여수시 신월로 655 서희스타힐스",
+    "jibunAddress": "전남 여수시 국동 438",
+    "naverPlaceId": "35628587",
+    "matchedPlaceName": "피자스쿨 여수국동점"
+  },
+  "da66e7ae0cdf1907": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xFLGuyjm",
+    "roadAddress": "전남 여수시 무선중앙로 65",
+    "jibunAddress": "전남 여수시 선원동 1246-7",
+    "naverPlaceId": "33819729",
+    "matchedPlaceName": "피자스쿨 여수무선점"
+  },
+  "793ce4c7d0f32994": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FHODfOCh",
+    "roadAddress": "전남 여수시 흥국로 103",
+    "jibunAddress": "전남 여수시 신기동 43-10",
+    "naverPlaceId": "38230513",
+    "matchedPlaceName": "피자스쿨 여수신기점"
+  },
+  "5d4e5d274ebd1b7c": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5reGDJfs",
+    "roadAddress": "전남 여수시 소라면 죽림로 31",
+    "jibunAddress": "전남 여수시 소라면 죽림리 1198-7",
+    "naverPlaceId": "1427665690",
+    "matchedPlaceName": "피자스쿨 죽림점"
+  },
+  "4526a5114ecaef34": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GDQwSQz4",
+    "roadAddress": "전남 여수시 무선로 28",
+    "jibunAddress": "전남 여수시 학동 59",
+    "naverPlaceId": "38230515",
+    "matchedPlaceName": "피자스쿨 여수학동점"
+  },
+  "87dcf0c9a9804bd2": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GnRsgeCa",
+    "roadAddress": "전남 여수시 동문로 66",
+    "jibunAddress": "전남 여수시 관문동 597",
+    "naverPlaceId": "1915387691",
+    "matchedPlaceName": "킹스타피자 관문점"
+  },
+  "e16359de9292f582": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xONU2m70",
+    "roadAddress": "전남 여수시 이순신광장로 266 1층",
+    "jibunAddress": "전남 여수시 수정동 173-5",
+    "naverPlaceId": "1092077838",
+    "matchedPlaceName": "피자알볼로 여수엑스포점"
+  },
+  "9bb804e004dff7d8": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5VmsrWDQ",
+    "roadAddress": "전남 여수시 신월로 562",
+    "jibunAddress": "전남 여수시 신월동 110",
+    "naverPlaceId": "1127939261",
+    "matchedPlaceName": "온앤"
+  },
+  "7b221aa6623bd0a2": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FkLqT4l1",
+    "roadAddress": "전남 여수시 신월1길 15-5 창성빌딩 1층",
+    "jibunAddress": "전남 여수시 신월동 33-12",
+    "naverPlaceId": "2043117960",
+    "matchedPlaceName": "하이오커피 여수신월국동항점"
+  },
+  "711596e9d930aab0": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5qcRS6jP",
+    "roadAddress": "전남 여수시 구봉길 49",
+    "jibunAddress": "전남 여수시 국동 1110-10",
+    "naverPlaceId": "1953367275",
+    "matchedPlaceName": "냠냠치킨"
+  },
+  "fb32c4e0939b5468": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/ID38HM9e",
+    "roadAddress": "전남 여수시 신월로 644",
+    "jibunAddress": "전남 여수시 국동 997-2",
+    "naverPlaceId": "16896604",
+    "matchedPlaceName": "김밥나라 국동점"
+  },
+  "cc5b3b36c8737601": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xMjtdw3Z",
+    "roadAddress": "전남 여수시 동문로 70-1",
+    "jibunAddress": "전남 여수시 관문동 681-3",
+    "naverPlaceId": "1310121031",
+    "matchedPlaceName": "김밥나라 관문점"
+  },
+  "44a0e464d6d22c38": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5XcB326N",
+    "roadAddress": "전남 여수시 신월로 655 서희아파트상가 A동 2층 205호 중앙돈까스",
+    "jibunAddress": "전남 여수시 국동 438",
+    "naverPlaceId": "1107417712",
+    "matchedPlaceName": "중앙돈까스"
+  },
+  "82b2cd167c1e053b": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FdqOyAdk",
+    "roadAddress": "전남 여수시 신월로 672",
+    "jibunAddress": "전남 여수시 국동 462-2",
+    "naverPlaceId": "1454259533",
+    "matchedPlaceName": "조선다방 국동점"
+  },
+  "cfd74ce112f2b187": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5hojInHC",
+    "roadAddress": "전남 여수시 박람회길 46 동성노블힐스1차 상가 105동 104호",
+    "jibunAddress": "전남 여수시 덕충동 2041",
+    "naverPlaceId": "1208223124",
+    "matchedPlaceName": "조선다방 엑스포점"
+  },
+  "bef7f3b6456df7fd": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5DDNoNdr",
+    "roadAddress": "전남 여수시 돌산읍 강남동로 39",
+    "jibunAddress": "전남 여수시 돌산읍 우두리 1088-5",
+    "naverPlaceId": "1513890190",
+    "matchedPlaceName": "조선다방 돌산점"
+  },
+  "8608c923097a2adc": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GKIv7k6u",
+    "roadAddress": "전남 여수시 국동남5길 8-3 1층",
+    "jibunAddress": "전남 여수시 국동 491-1",
+    "naverPlaceId": "2069248928",
+    "matchedPlaceName": "선비칼국수 여수국동점"
+  },
+  "989fc2e054bb87c9": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GA8Jn2XT",
+    "roadAddress": "전남 여수시 진남상가길 47-2",
+    "jibunAddress": "전남 여수시 충무동 628-15",
+    "naverPlaceId": "33049949",
+    "matchedPlaceName": "배스킨라빈스 여수충무"
+  },
+  "8f8486e4cd5aaec3": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GfCnCeGf",
+    "roadAddress": "전남 여수시 봉산남4길 20-1",
+    "jibunAddress": "전남 여수시 봉산동 281-14",
+    "naverPlaceId": "16885174",
+    "matchedPlaceName": "항아리치킨"
+  },
+  "dedded076c21a785": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FkL0F9kX",
+    "roadAddress": "전남 여수시 신월로 710 1층",
+    "jibunAddress": "전남 여수시 봉산동 269-25",
+    "naverPlaceId": "2037901316",
+    "matchedPlaceName": "마라시대 여수점"
+  },
+  "718031989449bc32": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xAAquxSv",
+    "roadAddress": "전남 여수시 여문문화2길 77",
+    "jibunAddress": "전남 여수시 문수동 190-1",
+    "naverPlaceId": "36187908",
+    "matchedPlaceName": "가장맛있는족발 여수여서점"
+  },
+  "005382cbb06108d3": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GzEDf6CC",
+    "roadAddress": "전남 여수시 예울마루로 37-26 1층 114-1호",
+    "jibunAddress": "전남 여수시 웅천동 1694-1",
+    "naverPlaceId": "1472250085",
+    "matchedPlaceName": "가장맛있는족발 여수웅천점"
+  },
+  "31716733c2083fed": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/xgNJic9H",
+    "roadAddress": "전남 여수시 돌산읍 강남8길 34 1층 1호",
+    "jibunAddress": "전남 여수시 돌산읍 우두리 1056-1",
+    "naverPlaceId": "1970914359",
+    "matchedPlaceName": "가장맛있는족발 여수돌산점"
+  },
+  "dc67f48b1278de3b": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5Ag1a99G",
+    "roadAddress": "전남 여수시 신월로 604 1층 101호",
+    "jibunAddress": "전남 여수시 신월동 12-4",
+    "naverPlaceId": "1517753850",
+    "matchedPlaceName": "가장맛있는족발 신월점"
+  },
+  "52f5738519110900": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FqWgCgQq",
+    "roadAddress": "전남 여수시 소라면 죽림중앙로 29-18",
+    "jibunAddress": "전남 여수시 소라면 죽림리 1157-2",
+    "naverPlaceId": "1863441907",
+    "matchedPlaceName": "가장맛있는족발 여수죽림점"
+  },
+  "b717d583801d3f04": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GPdHDX8A",
+    "roadAddress": "전남 여수시 여문1로 60",
+    "jibunAddress": "전남 여수시 문수동 119-5",
+    "naverPlaceId": "1821143004",
+    "matchedPlaceName": "깐깐한족발 여수문수점"
+  },
+  "f20eb017620ccc33": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/5ch7g6k8",
+    "roadAddress": "전남 여수시 시청동3길 35-12 1층",
+    "jibunAddress": "전남 여수시 학동 181-1",
+    "naverPlaceId": "1706505273",
+    "matchedPlaceName": "깐깐한족발 여수학동점"
+  },
+  "2f4c3cfb0866c4a4": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/FO9dn6hl",
+    "roadAddress": "전남 여수시 도원로 277",
+    "jibunAddress": "전남 여수시 학동 67-17",
+    "naverPlaceId": "12964240",
+    "matchedPlaceName": "도미노피자 여천점"
+  },
+  "0ad5341dc696d4f1": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/GgBCLWh7",
+    "roadAddress": "전남 여수시 문수5길 42",
+    "jibunAddress": "전남 여수시 문수동 784-7",
+    "naverPlaceId": "1663553081",
+    "matchedPlaceName": "맛있는반찬"
+  },
+  "4674f8f434b1796a": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/5AgB6zkF",
+    "roadAddress": "전남 여수시 문수로 143 1층",
+    "jibunAddress": "전남 여수시 문수동 82-9",
+    "naverPlaceId": "1803359457",
+    "matchedPlaceName": "바다양푼이동태탕 여수문수점"
+  },
+  "5768a9d8a72502ef": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/xTTtg37m",
+    "roadAddress": "전남 여수시 여문1로 54 1층",
+    "jibunAddress": "전남 여수시 여서동 215",
+    "naverPlaceId": "1848871568",
+    "matchedPlaceName": "조선제일 뼈해장국 여서점"
+  },
+  "17d9bf1de3d671fd": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/FhUwkBcw",
+    "roadAddress": "전남 여수시 여서1로 72-1 1층 해인이네",
+    "jibunAddress": "전남 여수시 여서동 226-4",
+    "naverPlaceId": "1208289233",
+    "matchedPlaceName": "해인이네"
+  },
+  "36d31c0f01bd0e9a": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/x8kMCW5x",
+    "roadAddress": "전남 여수시 문수6길 29 1층",
+    "jibunAddress": "전남 여수시 문수동 782-9",
+    "naverPlaceId": "1006907441",
+    "matchedPlaceName": "닭씨네닭강정"
+  },
+  "08e5e26653436fef": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "여서동",
+    "naverMapUrl": "https://naver.me/5l75YMGb",
+    "roadAddress": "전남 여수시 문수5길 48",
+    "jibunAddress": "전남 여수시 문수동 804-11",
+    "naverPlaceId": "1202738822",
+    "matchedPlaceName": "알토랑반찬"
+  },
+  "c97c66bc78a649ea": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "미평",
+    "naverMapUrl": "https://naver.me/Fy2Cnttq",
+    "roadAddress": "전남 여수시 쌍봉로 361 연세소아과의원",
+    "jibunAddress": "전남 여수시 둔덕동 434-7",
+    "naverPlaceId": "11801994",
+    "matchedPlaceName": "교촌치킨 둔덕점"
+  },
+  "ba870ddfedb99508": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "미평",
+    "naverMapUrl": "https://naver.me/xKEbkHlD",
+    "roadAddress": "전남 여수시 둔덕2길 6-4 본죽&비빔밥cafe 여수미평점",
+    "jibunAddress": "전남 여수시 미평동 570-11",
+    "naverPlaceId": "1716292908",
+    "matchedPlaceName": "본죽&비빔밥 여수미평점"
+  },
+  "83a409add1950550": {
+    "sourceStatus": "verified-source",
+    "source": "excel-naver-map",
+    "sourceSheet": "최근작업",
+    "naverMapUrl": "https://naver.me/GM3oyOeX",
+    "roadAddress": "전남 여수시 망마로 106",
+    "jibunAddress": "전남 여수시 신기동 135-5",
+    "naverPlaceId": "1439900213",
+    "matchedPlaceName": "참맛있는족발"
+  }
+}

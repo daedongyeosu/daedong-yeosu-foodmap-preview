@@ -1,0 +1,634 @@
+{
+  "3f441930b8d18783": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "a75505094208bb61": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "b1beeb518c437d02": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "55ef78aa24e1eac6": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "9cb90900e5057c72": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "718031989449bc32": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "005382cbb06108d3": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "1e7308d1e28fe49e": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "91cc31c37aa68d62": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "2f939a1b44f5f7ec": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "4b8ea4cbc481a3ee": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "f68c9f29515c518e": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "57bb58bd63f0de94": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "0df58cf68356ebff": {
+    "unresolvedReason": "가게명·지점명·동네 불일치",
+    "recommendedAction": "Notion 가게명과 네이버 장소명·지점·동네를 수동 대조"
+  },
+  "d556f1478e479e75": {
+    "unresolvedReason": "가게명·지점명·동네 불일치",
+    "recommendedAction": "Notion 가게명과 네이버 장소명·지점·동네를 수동 대조"
+  },
+  "aed649ea91b727b8": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "665953a0453afc52": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "7ed65c8f086f11f2": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "67f5b4a369c1c6d9": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "4fd2d6fdd67f0db8": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "d60f32bbdaa13cf5": {
+    "unresolvedReason": "검색 결과가 여러 개라 자동 확정 불가",
+    "recommendedAction": "후보 주소·지점명·동네를 수동 대조해 한 곳만 확정"
+  },
+  "b717d583801d3f04": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "b91093385f1baa6a": {
+    "unresolvedReason": "가게명·지점명·동네 불일치",
+    "recommendedAction": "Notion 가게명과 네이버 장소명·지점·동네를 수동 대조"
+  },
+  "ac2e0e2021267315": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "187287f22433bfcf": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "248fb06bce3aa6e4": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "d1c9de66c95c1d46": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "634cd6c2572df494": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "950ba1c64e791621": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "1ae0c16d309d1556": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "e334f4707bd1046f": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "bee72f182a400ed4": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "9c7b5c85a8c79a6a": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "e74e79529019bad1": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "a3297f2e48bf9793": {
+    "unresolvedReason": "가게명·지점명·동네 불일치",
+    "recommendedAction": "Notion 가게명과 네이버 장소명·지점·동네를 수동 대조"
+  },
+  "f57b6ed2e480011d": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "1fe48c8f1857b4d2": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "dfa033316cfcecf7": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "0a5ea9fd4c080ed0": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "e1089d6ba40ec342": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "dd932b154f9ea0e6": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "576a1f68d57eaf29": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "315dee55700b0a02": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "876cb9bc8fa15d8e": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "1ddcb01bb576c2e3": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "2b78b30bde243ae6": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "51ed482a660b8247": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "4b5980481e1d5f41": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "a16ab5b99748d6a2": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "cf169d6bbf8830f8": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "91806c266ead3108": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "30fff2720e2ce0c9": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "de00a38f4c4fe9d4": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "09de7c8235046632": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "75cd8af6d0da1b98": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "2723324111f200b8": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "72f43b13ec8436f7": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "779bc5453215d9c5": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "9407e6bd4e71b539": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "3a33f3bc732c6bae": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "19ae04f80e0e3ba6": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "94fd76dc2861933c": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "85e4327fdf0e8dda": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "3a743fd9484606d1": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "2909b3dc166a5ee7": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "31d479a979a700cf": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "9a94c05bdeca2d9e": {
+    "unresolvedReason": "가게명·지점명·동네 불일치",
+    "recommendedAction": "Notion 가게명과 네이버 장소명·지점·동네를 수동 대조"
+  },
+  "6772d4141d54e74d": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "c34a81ea7ed1d578": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "69f92930ea1e00c4": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "75f31fc5eb51073b": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "b2b796461ee30ef2": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "f78b89beff94fd0e": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "0cc943f6a58888d0": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "656eff52d5fce811": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "e6339c85e31322fa": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "d322f9f9a91b0bdb": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "df16b7312c25da31": {
+    "unresolvedReason": "검색 결과가 여러 개라 자동 확정 불가",
+    "recommendedAction": "후보 주소·지점명·동네를 수동 대조해 한 곳만 확정"
+  },
+  "0199534cac937a52": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "9edba048ff8c3b2e": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "382dd89b36993ff8": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "31ffaa41b54a57aa": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "90fed609e43aafb2": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "b22e961a2bed3729": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "de1d344e8798f0dd": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "401e4210d0416b54": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "f58bf8f877dcacd5": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "21a676f860851a5a": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "98779281080288d1": {
+    "unresolvedReason": "가게명·지점명·동네 불일치",
+    "recommendedAction": "Notion 가게명과 네이버 장소명·지점·동네를 수동 대조"
+  },
+  "0df36c0ba138ac89": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "5768a9d8a72502ef": {
+    "unresolvedReason": "가게명·지점명·동네 불일치",
+    "recommendedAction": "Notion 가게명과 네이버 장소명·지점·동네를 수동 대조"
+  },
+  "82fb6c389b7aced5": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "4e43f1180007c10f": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "54fd901a0b754ee1": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "a4ba6805e73e7e76": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "09dc33ce2f8f08d3": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "77b1600313d1d6d4": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "2524c5a9954d4ba8": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "9b2419177903b1d8": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "102347a538ed090c": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "83a409add1950550": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "3c62ab40bf66608e": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "215d025987786df2": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "bb9aef1788a685c6": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "7d656b9342aabd94": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "8df8f77db6d9a205": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "37f1a033eac82aa2": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "9acc51c50813ce03": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "2857b7140087f6ab": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "f1fa55a4b8c7c428": {
+    "unresolvedReason": "검색 결과가 여러 개라 자동 확정 불가",
+    "recommendedAction": "후보 주소·지점명·동네를 수동 대조해 한 곳만 확정"
+  },
+  "9abb1d4db21758ad": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "9ab837d6e24d69df": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "60dbbe5071a2ebe6": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "f3cb61dd45ba9b8b": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "f17f729605bb5945": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "0eea4a740e820fd3": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "92f4faa988a87728": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "a6f3cc0da6d5c044": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "217d38b37c2b4d5b": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "83f635e7ea7d737e": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "e16359de9292f582": {
+    "unresolvedReason": "Notion에 주소·지도 정보 없음",
+    "recommendedAction": "기존 Notion 원본에 정확한 도로명주소와 해당 가게 네이버지도 링크 확인"
+  },
+  "7af7ffc2da561850": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "7b221aa6623bd0a2": {
+    "unresolvedReason": "Notion에 주소·지도 정보 없음",
+    "recommendedAction": "기존 Notion 원본에 정확한 도로명주소와 해당 가게 네이버지도 링크 확인"
+  },
+  "06f2a251304b0a51": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "53bfb32926455221": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "8f8486e4cd5aaec3": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "43780265104bccba": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "d19810627d63e95c": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "18503945dc9c16c8": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "a0e873ce4d21b431": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "a037743d0ee273e2": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "7bc7239e6b509c44": {
+    "unresolvedReason": "Notion에 주소·지도 정보 없음",
+    "recommendedAction": "기존 Notion 원본에 정확한 도로명주소와 해당 가게 네이버지도 링크 확인"
+  },
+  "04910f606ba038a6": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "320d26d67b993c4a": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "ba870ddfedb99508": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "1921d1d5c7710872": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "08e5e26653436fef": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "768e4fe8150f5039": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "0ad5341dc696d4f1": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "d409f6d9118b7bad": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "84c118675c0caa4c": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "f7d93ad21c1a93d7": {
+    "unresolvedReason": "Notion에 주소·지도 정보 없음",
+    "recommendedAction": "기존 Notion 원본에 정확한 도로명주소와 해당 가게 네이버지도 링크 확인"
+  },
+  "1acf6756b7471125": {
+    "unresolvedReason": "Notion에 주소·지도 정보 없음",
+    "recommendedAction": "기존 Notion 원본에 정확한 도로명주소와 해당 가게 네이버지도 링크 확인"
+  },
+  "4e83618703e993b5": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "91798b85e5a50244": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "144ed6ece1f4734a": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "411052fdc9de5d44": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "e5b0545e92f03409": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "98a1464075ea68e5": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "b58c688c90df4687": {
+    "unresolvedReason": "Notion에 주소·지도 정보 없음",
+    "recommendedAction": "기존 Notion 원본에 정확한 도로명주소와 해당 가게 네이버지도 링크 확인"
+  },
+  "8dc7782b3cb4bdcf": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "3bcce1dd4c36eee0": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "5942ed8c00fa1037": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "c29fb9cd27867a9d": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "02bed6e23cbbf188": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "0bcf02e9bd40b7d0": {
+    "unresolvedReason": "네이버지도 링크 없음",
+    "recommendedAction": "기존 Notion 페이지에 해당 가게의 정확한 네이버지도 링크 확인"
+  },
+  "9e422525b203c97f": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  },
+  "17d9bf1de3d671fd": {
+    "unresolvedReason": "네이버지도 링크는 있으나 주소 추출 실패",
+    "recommendedAction": "단축링크 최종 목적지와 네이버 장소 페이지를 수동 확인"
+  }
+}
