@@ -1,0 +1,44 @@
+name: Build new recovery store coordinates
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-new-coordinates:
+    runs-on: ubuntu-latest
+    env:
+      KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify secret is available
+        shell: bash
+        run: |
+          if [ -z "$KAKAO_REST_API_KEY" ]; then
+            echo "Required repository secret is not available."
+            exit 1
+          fi
+
+      - name: Build proposals for null-coordinate recovery stores
+        run: node scripts/build-store-coordinates.mjs
+
+      - name: Verify frozen coordinate file was not modified
+        run: git diff --exit-code -- data/store-coordinates.json
+
+      - name: Upload coordinate proposal and review report
+        uses: actions/upload-artifact@v4
+        with:
+          name: new-recovery-store-coordinate-review
+          path: |
+            artifacts/store-coordinates-new-verified.json
+            artifacts/store-coordinate-build-review.csv
+            artifacts/store-coordinate-build-summary.json
+          if-no-files-found: error
+          retention-days: 30
