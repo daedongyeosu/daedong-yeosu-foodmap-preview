@@ -43,6 +43,7 @@ async function keywordSearch(query) {
 
 const result = {};
 const detail = [];
+let outsideYeosuCount = 0;
 for (let i = 0; i < normal.length; i++) {
   const s = normal[i];
   const road = String(s.roadAddress || s.road_address || s.address || '').trim();
@@ -60,10 +61,22 @@ for (let i = 0; i < normal.length; i++) {
     placeName: '', sourceType: method
   }));
   if (!candidates.length) {
-    const query = `${s.name} 전라남도 여수시 ${s.district || ''}`.trim();
-    inputAddress = query; method = 'keyword';
-    const kd = await keywordSearch(query);
-    candidates = kd.filter(isYeosu).filter((d) => nameMatch(s, d)).map((d) => ({
+    const queries = [
+      `${s.name} ${s.district || ''}`.trim(),
+      `${s.name} 여수`.trim(),
+      `${s.name}`.trim()
+    ];
+    inputAddress = queries[0]; method = 'keyword';
+    const rawKeyword = [];
+    for (const query of [...new Set(queries)]) {
+      const kd = await keywordSearch(query);
+      rawKeyword.push(...kd);
+      if (kd.some((d) => isYeosu(d) && nameMatch(s, d))) break;
+      await sleep(45);
+    }
+    const dedupedKeyword = [...new Map(rawKeyword.map((d) => [`${d.id || ''}:${d.x}:${d.y}`, d])).values()];
+    outsideYeosuCount += dedupedKeyword.filter((d) => nameMatch(s, d) && !isYeosu(d)).length;
+    candidates = dedupedKeyword.filter(isYeosu).filter((d) => nameMatch(s, d)).map((d) => ({
       latitude: Number(d.y), longitude: Number(d.x), matchedAddress: d.road_address_name || d.address_name || '',
       placeName: d.place_name || '', sourceType: 'keyword', districtMatch: districtMatch(s, d)
     }));
@@ -106,7 +119,7 @@ const stats = {
   keywordVerified: detail.filter((x) => x.status === 'verified' && x.confidence === 'keyword-exact').length,
   manualReview: detail.filter((x) => x.status === 'manual-review').length,
   searchFailed: detail.filter((x) => x.status === 'search-failed').length,
-  outsideYeosu: 0,
+  outsideYeosu: outsideYeosuCount,
   duplicateCoordinateGroups: duplicateCoordinates.length,
   excludedUntitled: stores.length - normal.length
 };
