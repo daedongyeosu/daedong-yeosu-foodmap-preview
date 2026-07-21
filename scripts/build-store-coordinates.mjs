@@ -5,6 +5,8 @@ const key = process.env.KAKAO_REST_API_KEY;
 if (!key) throw new Error('KAKAO_REST_API_KEY is not configured');
 
 const stores = JSON.parse(fs.readFileSync('data/stores.json', 'utf8'));
+const notionAddressSource = fs.existsSync('data/coordinate-source/notion-address-source.json')
+  ? JSON.parse(fs.readFileSync('data/coordinate-source/notion-address-source.json', 'utf8')) : {};
 const normal = stores.filter((s) => String(s.name || '').trim() && String(s.name).trim() !== '제목 없음');
 if (stores.length !== 471 || normal.length !== 470) throw new Error(`Unexpected store counts: ${stores.length}/${normal.length}`);
 
@@ -47,11 +49,12 @@ let outsideYeosuCount = 0;
 const keywordDiagnostics = [];
 for (let i = 0; i < normal.length; i++) {
   const s = normal[i];
-  const road = String(s.roadAddress || s.road_address || s.address || '').trim();
-  const jibun = String(s.jibunAddress || s.jibun_address || '').trim();
+  const evidence = notionAddressSource[s.id]?.sourceStatus === 'verified-source' ? notionAddressSource[s.id] : null;
+  const road = String(evidence?.roadAddress || s.roadAddress || s.road_address || s.address || '').trim();
+  const jibun = String(evidence?.jibunAddress || s.jibunAddress || s.jibun_address || '').trim();
   let method = null, docs = [], inputAddress = '';
-  if (road) { inputAddress = road; docs = await addressSearch(road); method = 'road-address'; }
-  if (!docs.length && jibun) { inputAddress = jibun; docs = await addressSearch(jibun); method = 'jibun-address'; }
+  if (road) { inputAddress = road; docs = await addressSearch(road); method = evidence ? 'notion-road-address' : 'road-address'; }
+  if (!docs.length && jibun) { inputAddress = jibun; docs = await addressSearch(jibun); method = evidence ? 'notion-jibun-address' : 'jibun-address'; }
   if (!docs.length && inputAddress && !/전라남도|전남/.test(inputAddress)) {
     inputAddress = `전라남도 여수시 ${inputAddress}`;
     docs = await addressSearch(inputAddress); method = `${method || 'address'}-yeosu-prefix`;
@@ -113,7 +116,7 @@ for (let i = 0; i < normal.length; i++) {
     status,
     confidence
   };
-  detail.push({ store_id: s.id, name: s.name, district: s.district || '', status, confidence, candidateCount: unique.length, placeName: chosen?.placeName || '', matchedAddress: chosen?.matchedAddress || '' });
+  detail.push({ store_id: s.id, name: s.name, district: s.district || '', status, confidence, sourceType: chosen?.sourceType || method || '', candidateCount: unique.length, placeName: chosen?.placeName || '', matchedAddress: chosen?.matchedAddress || '' });
   await sleep(45);
   if ((i + 1) % 50 === 0) console.log(`processed ${i + 1}/${normal.length}`);
 }
@@ -128,8 +131,8 @@ const duplicateCoordinates = [...coordGroups.entries()].filter(([, rows]) => row
 const stats = {
   target: normal.length,
   automaticVerified: detail.filter((x) => x.status === 'verified').length,
-  roadAddressVerified: detail.filter((x) => x.status === 'verified' && x.confidence === 'exact').length,
-  jibunAddressVerified: 0,
+  roadAddressVerified: detail.filter((x) => x.status === 'verified' && /road-address/.test(x.sourceType)).length,
+  jibunAddressVerified: detail.filter((x) => x.status === 'verified' && /jibun-address/.test(x.sourceType)).length,
   keywordVerified: detail.filter((x) => x.status === 'verified' && x.confidence === 'keyword-exact').length,
   manualReview: detail.filter((x) => x.status === 'manual-review').length,
   searchFailed: detail.filter((x) => x.status === 'search-failed').length,
