@@ -1,0 +1,14 @@
+.yeosu-night-shell{background-image:linear-gradient(180deg,rgba(7,47,78,.12),rgba(4,43,70,.18)),url('assets/yeosu-rc6/dolsan-day-mobile.webp');background-size:cover;background-position:center top;color:#092f49}
+.yeosu-night-shell::before{background:linear-gradient(180deg,rgba(4,48,78,.08),rgba(255,255,255,.03) 45%,rgba(0,54,86,.12));pointer-events:none}
+.yeosu-night-shell .bridge-light-layer,.yeosu-night-shell .firework-layer{display:none!important}
+.rc6-gulls{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.rc6-gull{position:absolute;left:-12%;top:var(--y);width:var(--size);height:auto;opacity:.72;filter:drop-shadow(0 1px 1px rgba(0,35,56,.16));animation:rc6-gull-flight var(--duration) linear infinite;animation-delay:var(--delay)}
+.rc6-gull path{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round}
+@keyframes rc6-gull-flight{from{transform:translate3d(0,0,0) scale(var(--scale))}50%{transform:translate3d(58vw,-5px,0) scale(var(--scale))}to{transform:translate3d(124vw,2px,0) scale(var(--scale))}}
+.rc6-hero-target{appearance:none;border:0;padding:0;width:100%;background:transparent;cursor:pointer;text-align:inherit}
+.rc6-hero-target[aria-disabled="true"]{cursor:default}
+.rc6-hero-target picture,.rc6-hero-target img{display:block;width:100%}
+.rc6-distance{font-weight:800;color:#075b78}
+@media(min-width:768px){.yeosu-night-shell{background-image:linear-gradient(180deg,rgba(7,47,78,.1),rgba(4,43,70,.16)),url('assets/yeosu-rc6/dolsan-day-desktop.webp');background-position:center center}}
+@media(prefers-reduced-motion:reduce){.rc6-gull{animation:none;left:var(--x,72%)}}
+.page-hidden .rc6-gull{animation-play-state:paused}

@@ -1,0 +1,19 @@
+{
+  "01": {"storeId":"2f4c3cfb0866c4a4","label":"도미노피자 여천점(학동)","status":"mapped"},
+  "02": {"storeId":null,"label":"백년족발","status":"unmapped"},
+  "03": {"storeId":null,"label":"컴포즈커피 문수광장점","status":"unmapped"},
+  "04": {"storeId":null,"label":"족팔계 왕족발","status":"unmapped"},
+  "05": {"storeId":null,"label":"탕화쿵푸마라탕 여서점","status":"unmapped"},
+  "06": {"storeId":null,"label":"요거트월드 여서점","status":"unmapped"},
+  "07": {"storeId":null,"label":"아주커치킨 둔덕점","status":"unmapped"},
+  "08": {"storeId":null,"label":"롯데리아","status":"unmapped"},
+  "09": {"storeId":null,"label":"조선 밀면&냉면 여서점","status":"unmapped"},
+  "10": {"storeId":null,"label":"외계인피자","status":"unmapped"},
+  "11": {"storeId":"0cc943f6a58888d0","label":"왕창 돼지두루치기 여서점","status":"mapped"},
+  "12": {"storeId":null,"label":"린차이나","status":"unmapped"},
+  "13": {"storeId":null,"label":"김종구 식맛치킨","status":"unmapped"},
+  "14": {"storeId":null,"label":"맘스터치","status":"unmapped"},
+  "15": {"storeId":null,"label":"금산소","status":"unmapped"},
+  "16": {"storeId":"7bc7239e6b509c44","label":"수라상궁 조선국밥 여서점","status":"mapped"},
+  "17": {"storeId":null,"label":"비요탕수","status":"unmapped"}
+}
