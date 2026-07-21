@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   geocode:
@@ -44,3 +44,16 @@ jobs:
           path: coordinate-output/
           if-no-files-found: error
           retention-days: 7
+      - name: Publish review output to coordinate branch only
+        shell: bash
+        run: |
+          mkdir -p data/coordinate-review
+          cp coordinate-output/store-coordinates.json data/coordinate-review/store-coordinates.json
+          cp coordinate-output/coordinate-validation.json data/coordinate-review/coordinate-validation.json
+          cp coordinate-output/SHA256.txt data/coordinate-review/SHA256.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/coordinate-review
+          git diff --cached --quiet && exit 0
+          git commit -m "Add coordinate review output"
+          git push origin HEAD:coordinate-build
