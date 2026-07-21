@@ -1,0 +1,46 @@
+name: Private coordinate build
+
+on:
+  push:
+    branches:
+      - coordinate-build
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  geocode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Verify secret presence without printing it
+        shell: bash
+        run: |
+          if [ -z "$KAKAO_REST_API_KEY" ]; then
+            echo "KAKAO_REST_API_KEY is not configured" >&2
+            exit 1
+          fi
+          echo "KAKAO_REST_API_KEY is configured"
+      - name: Build coordinate dataset
+        run: node scripts/build-store-coordinates.mjs
+      - name: Scan output for forbidden secret or credential markers
+        shell: bash
+        run: |
+          if grep -R -E 'KakaoAK|KAKAO_REST_API_KEY|[?&](key|api_key|serviceKey)=' coordinate-output; then
+            echo "Forbidden credential marker found" >&2
+            exit 1
+          fi
+          echo "Credential markers: 0"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: store-coordinate-validation
+          path: coordinate-output/
+          if-no-files-found: error
+          retention-days: 7
