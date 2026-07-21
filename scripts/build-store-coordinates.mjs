@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
 const key = process.env.KAKAO_REST_API_KEY;
 if (!key) throw new Error('KAKAO_REST_API_KEY is not configured');
 const stores = JSON.parse(fs.readFileSync('data/stores.json', 'utf8'));
-const base = JSON.parse(fs.readFileSync('data/coordinate-review/store-coordinates.json', 'utf8'));
+const base = JSON.parse(fs.readFileSync('data/coordinate-source/store-coordinates-before-excel.json', 'utf8'));
 const excel = JSON.parse(fs.readFileSync('data/coordinate-source/excel-naver-address-source.json', 'utf8'));
 const priorReasons = JSON.parse(fs.readFileSync('data/coordinate-source/unresolved-after-onenote-reasons.json', 'utf8'));
 const normal = stores.filter((s) => String(s.name || '').trim() && String(s.name).trim() !== '제목 없음');

@@ -1,0 +1,3443 @@
+Warning: truncated output (original token count: 37016)
+Total output lines: 4232
+
+{
+  "3f441930b8d18783": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "1980밀면회관&냉면 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "a75505094208bb61": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "1988응답하라추억의옛날도시락 고소동점 고소동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "d09fa15da80ff88e": {
+    "latitude": 34.738010428798,
+    "longitude": 127.724273687022,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 봉산벅수길 24",
+    "matchedAddress": "전남광주통합특별시 여수시 봉산벅수길 24",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "360b32bc2f5a850c": {
+    "latitude": 34.7479098451573,
+    "longitude": 127.700604541722,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "1키로 오리스타 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 대치1길 7",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "275f52997bdd2755": {
+    "latitude": 34.7495469072356,
+    "longitude": 127.695882096533,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 허문정2길 18",
+    "matchedAddress": "전남광주통합특별시 여수시 허문정2길 18",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "fa836f4f328cb34f": {
+    "latitude": 34.718826337963,
+    "longitude": 127.755630876826,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "60계치킨 돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남동로 43",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "e53db0006339f439": {
+    "latitude": 34.74618758293959,
+    "longitude": 127.67077176135372,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "60계치킨 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-53",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "87fd57845e1c58b5": {
+    "latitude": 34.7614797516515,
+    "longitude": 127.639280342845,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "60계치킨 죽림점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림2길 38-12",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "d7674e8acedd94b2": {
+    "latitude": 34.7438644148707,
+    "longitude": 127.728015113302,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 좌수영로 39",
+    "matchedAddress": "전남광주통합특별시 여수시 좌수영로 39",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "b1beeb518c437d02": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "60일숙성 명품김치찜&김치찌개&쌈밥 교동점 교동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "a0f6eb8bcf768489": {
+    "latitude": 34.7507031043982,
+    "longitude": 127.70126045662,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "79대포 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 25",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "53300b03ac188a38": {
+    "latitude": 34.71918394785608,
+    "longitude": 127.75217458947651,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "BHC 돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남9길 18",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "ecff9d7b88d1c8fb": {
+    "latitude": 34.7360355447303,
+    "longitude": 127.721298698396,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 신월로 748-1",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 748-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "043d814d4c3c1e13": {
+    "latitude": 34.7498158485591,
+    "longitude": 127.69906746693,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 문수로 15",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 15",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "b373a08350017273": {
+    "latitude": 34.77151108573706,
+    "longitude": 127.70248074571906,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "BHC 여수미평점 미평동",
+    "matchedAddress": "전남광주통합특별시 여수시 대학로 16",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "5f9d2fdf4666eb73": {
+    "latitude": 34.7844211120597,
+    "longitude": 127.696659953599,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 상암로 16",
+    "matchedAddress": "전남광주통합특별시 여수시 상암로 16",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "b285c40f90621c5c": {
+    "latitude": 34.7440941581955,
+    "longitude": 127.651411932339,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "BHC 여수소호점 소호동",
+    "matchedAddress": "전남광주통합특별시 여수시 소호5길 6-6",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "08c9054aa0115345": {
+    "latitude": 34.7475683086008,
+    "longitude": 127.744760780433,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 공화남3길 19-1",
+    "matchedAddress": "전남광주통합특별시 여수시 공화남3길 19-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "fb3ad6747507444d": {
+    "latitude": 34.7536760798402,
+    "longitude": 127.703543807375,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 문수로 76",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 76",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "800e9f2ab3c24e8f": {
+    "latitude": 34.74873812945754,
+    "longitude": 127.67889832715304,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "BHC 여수웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 웅천로 19-35",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "c9df0658ace5336b": {
+    "latitude": 34.76543776504923,
+    "longitude": 127.63722237925738,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "BHC 여수죽림무선점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 63",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4152cf5c2c0c2dab": {
+    "latitude": 34.75749593711353,
+    "longitude": 127.66611762320719,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "BHC 여수학동점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 시청동5길 23-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "55ef78aa24e1eac6": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "Boss짬뽕 직화제육 미평점 미평동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "c443f150b874d4d2": {
+    "latitude": 34.7538362552007,
+    "longitude": 127.705740699548,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여문문화1길 13 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화1길 13",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "adf7b4ab161ec9d2": {
+    "latitude": 34.77090125524,
+    "longitude": 127.704748794095,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 만성로 85",
+    "matchedAddress": "전남광주통합특별시 여수시 만성로 85",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "9cb90900e5057c72": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "가마솥 볶음밥 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "2ce5b80012bc506a": {
+    "latitude": 34.77276570081576,
+    "longitude": 127.65110298299592,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가마치통닭 무선점 선원동",
+    "matchedAddress": "전남광주통합특별시 여수시 무선중앙로 65",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "07a25456cf8c91c4": {
+    "latitude": 34.75450987388345,
+    "longitude": 127.69399269562983,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가마치통닭 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문2로 82",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "1d6b92bb000bbc08": {
+    "latitude": 34.7446508261113,
+    "longitude": 127.652159971683,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가마치통닭 소호점 소호동",
+    "matchedAddress": "전남광주통합특별시 여수시 소호로 467-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "1956f41dd81e8568": {
+    "latitude": 34.763881433486,
+    "longitude": 127.678524754946,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가마치통닭 신기점 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 208",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "724adc8d9593fe05": {
+    "latitude": 34.7646876372956,
+    "longitude": 127.638630038403,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가마치통닭 죽림점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 47",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "1f8db0d628436011": {
+    "latitude": 34.76206148201716,
+    "longitude": 127.65616344616541,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가마치통닭 학동점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 무선로 16",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "31716733c2083fed": {
+    "latitude": 34.720332894567534,
+    "longitude": 127.74959657981277,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가장맛있는족발 여수돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남8길 34",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "dc67f48b1278de3b": {
+    "latitude": 34.7266227805323,
+    "longitude": 127.712353718389,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가장맛있는족발 여수신월점 신월동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 604",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "718031989449bc32": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "가장맛있는족발 여수여서점 여서동",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "005382cbb06108d3": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "가장맛있는족발 여수웅천점 웅천동",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "52f5738519110900": {
+    "latitude": 34.7637616136069,
+    "longitude": 127.635756768044,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "가장맛있는족발 여수죽림점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림중앙로 29-18",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "1e7308d1e28fe49e": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "갈비냉면 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "539d762fe299233d": {
+    "latitude": 34.7198768182289,
+    "longitude": 127.754264902948,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "강남국밥 돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남3길 20",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "815c0895b7dcfaa8": {
+    "latitude": 34.7540865724946,
+    "longitude": 127.736681963891,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 덕충3길 6 상가동 104호",
+    "matchedAddress": "전남광주통합특별시 여수시 덕충3길 6",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "aa035789f77b304d": {
+    "latitude": 34.73325353649532,
+    "longitude": 127.72259557870424,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "계동치킨 봉산점 봉산동",
+    "matchedAddress": "전남광주통합특별시 여수시 봉산1로 21",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "91cc31c37aa68d62": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "고궁 갈비탕&갈비찜&육개장 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "5caf409776519dd6": {
+    "latitude": 34.7567899130352,
+    "longitude": 127.711724769564,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "고기듬뿍 국물두루치기 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수북5길 20",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "2f939a1b44f5f7ec": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "골목낙곱새 1977 봉강점 봉강동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "4b8ea4cbc481a3ee": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "골목짬뽕 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "f68c9f29515c518e": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "곱도리辛 낙곱새 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "687febad1f2bf0dd": {
+    "latitude": 34.7530104535017,
+    "longitude": 127.705201805883,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "공차 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서동1길 46-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "72747cfe04586176": {
+    "latitude": 34.7373933085575,
+    "longitude": 127.741327204158,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 이순신광장로 159 골드비치 1동 103호",
+    "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 159",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "d0400d97c15c0a02": {
+    "latitude": 34.74628101653561,
+    "longitude": 127.670992017829,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "공차 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-53",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "59785990d2abe3e2": {
+    "latitude": 34.7400460786301,
+    "longitude": 127.731974145828,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 중앙로 40-1 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 중앙로 40-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "dc01f52e24fc6b2b": {
+    "latitude": 34.7246165208616,
+    "longitude": 127.709607114538,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 신월로 570",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 570",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "b115c4e54c35d82e": {
+    "latitude": 34.7528841557547,
+    "longitude": 127.74340883388946,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "교촌치킨 덕충점 덕충동",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 46",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4e2bf615062e7234": {
+    "latitude": 34.71943091511407,
+    "longitude": 127.75232311188915,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "교촌치킨 돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남9길 17",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "c97c66bc78a649ea": {
+    "latitude": 34.7685937887888,
+    "longitude": 127.694077034621,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 쌍봉로 361 연세소아과의원",
+    "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 361",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "84fc553896d0b051": {
+    "latitude": 34.75311865663297,
+    "longitude": 127.70238829920486,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "교촌치킨 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 42",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "04ae2e96e82f63ef": {
+    "latitude": 34.7581835572502,
+    "longitude": 127.67139629916988,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "교촌치킨 신기점 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 망마로 81",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "dfb50765a5f3a8ab": {
+    "latitude": 34.76072493436156,
+    "longitude": 127.65108379858331,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "교촌치킨 안산점 안산동",
+    "matchedAddress": "전남광주통합특별시 여수시 도원로 182",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "99ade7376cceea13": {
+    "latitude": 34.75295695419417,
+    "longitude": 127.70510087505544,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "교촌치킨 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 70",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "6126fa948ce536e6": {
+    "latitude": 34.74681444943689,
+    "longitude": 127.66988134586269,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "교촌치킨 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-26",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "8e930495e2e94c21": {
+    "latitude": 34.76254983696003,
+    "longitude": 127.63959988690601,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "교촌치킨 죽림무선점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 19",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "57bb58bd63f0de94": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "구운돼지 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "116a9f7b45941e78": {
+    "latitude": 34.7519206191569,
+    "longitude": 127.707788940054,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여서동2길 5",
+    "matchedAddress": "전남광주통합특별시 여수시 여서동2길 5",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "ef6e7bfe76e0dbd1": {
+    "latitude": 34.75318010504269,
+    "longitude": 127.74291784319585,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "국수나무 여수엑스포점 덕충동",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 46",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "0df58cf68356ebff": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "굽네치킨&피자 관문점 관문동",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "32f005992963d474": {
+    "latitude": 34.72034852769728,
+    "longitude": 127.74969279031694,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "굽네치킨&피자 돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남8길 34",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "c194972cb20f2229": {
+    "latitude": 34.7728611089318,
+    "longitude": 127.649103553,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "굽네치킨&피자 무선점(화장동) 화장동",
+    "matchedAddress": "전남광주통합특별시 여수시 화산1길 7",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "d556f1478e479e75": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "굽네치킨&피자 봉산국동점 국동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "6fd217d22e3ad371": {
+    "latitude": 34.75146477609697,
+    "longitude": 127.705942222943,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "굽네치킨&피자 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문1로 28",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "33558e3cc2ad9dbd": {
+    "latitude": 34.757060395594,
+    "longitude": 127.673195869554,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "굽네치킨&피자 여천점(신기동) 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 망마로 102",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "33c73743521674c6": {
+    "latitude": 34.74855692227174,
+    "longitude": 127.67785118264973,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "굽네치킨&피자 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 웅천로 19-9",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "72e0104c30277686": {
+    "latitude": 34.76371115275601,
+    "longitude": 127.6366160037502,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "굽네치킨&피자 죽림점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림중앙로 33",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "aed649ea91b727b8": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "귀한김치찜 국동봉산점 국동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "c0bab6826b36d95f": {
+    "latitude": 34.75400140216424,
+    "longitude": 127.70561432371467,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "그루브 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화1길 14",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "8f3251e2788d4931": {
+    "latitude": 34.7513908562545,
+    "longitude": 127.705336455754,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여서2로 25",
+    "matchedAddress": "전남광주통합특별시 여수시 여서2로 25",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "1a9ef3c649eefc17": {
+    "latitude": 34.7605353808195,
+    "longitude": 127.651974666208,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "기영이숯불두마리치킨 여천점(안산동) 안산동",
+    "matchedAddress": "전남광주통합특별시 여수시 안산1길 186-25",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "cc5b3b36c8737601": {
+    "latitude": 34.7431439838825,
+    "longitude": 127.741097929826,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 동문로 70-1",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 70-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "fb32c4e0939b5468": {
+    "latitude": 34.7289910089764,
+    "longitude": 127.715540298596,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "김밥나라 국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 644",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "404f1649d53b97eb": {
+    "latitude": 34.73084109739785,
+    "longitude": 127.71761435936128,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "김밥천국 국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 672",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "665953a0453afc52": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "김사장 국밥 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "7ed65c8f086f11f2": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "김사장 대박난 국수집 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "5535998cfac3846a": {
+    "latitude": 34.75824749738689,
+    "longitude": 127.66599041048833,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "김종구식 맛치킨 전기바베큐 옛날통닭 학동점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 시청동5길 20",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "67f5b4a369c1c6d9": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "김치찌개참잘하는집 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "4fd2d6fdd67f0db8": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "김치찜팝니다 서교점 서교동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "d60f32bbdaa13cf5": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "전남광주 여수시 봉산남7길 10-1 1층 카페빈",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "b717d583801d3f04": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "깐깐한족발 여수문수점 문수동",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "f20eb017620ccc33": {
+    "latitude": 34.75701178931271,
+    "longitude": 127.66531097728998,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "깐깐한족발 여수학동점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 시청동3길 35-12",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4e44728a4ea3bcef": {
+    "latitude": 34.7313051530179,
+    "longitude": 127.722977361494,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 봉산남8길 14",
+    "matchedAddress": "전남광주통합특별시 여수시 봉산남8길 14",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "f0b4ebfd7df44a75": {
+    "latitude": 34.7594391016854,
+    "longitude": 127.66946668263,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 신기남1길 26-2",
+    "matchedAddress": "전남광주통합특별시 여수시 신기남1길 26-2",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "da59f19c1590082f": {
+    "latitude": 34.7355853788669,
+    "longitude": 127.721010783265,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 신월로 732-3 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 732-3",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "4e877826c5a4b649": {
+    "latitude": 34.7512983939137,
+    "longitude": 127.700820781759,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여문문화길 68-1 낙지천국",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 68-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "b91093385f1baa6a": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "내가 끓였찌 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "f5f72c3d9bbf39b6": {
+    "latitude": 34.7345392996811,
+    "longitude": 127.723929810049,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 봉산1로 42 내조국국밥",
+    "matchedAddress": "전남광주통합특별시 여수시 봉산1로 42",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "711596e9d930aab0": {
+    "latitude": 34.7319065900028,
+    "longitude": 127.712509767498,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 구봉길 49",
+    "matchedAddress": "전남광주통합특별시 여수시 구봉길 49",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "119e21e06f1471b6": {
+    "latitude": 34.7345613721256,
+    "longitude": 127.718038506598,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "네네치킨 국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 구봉산길 15-2",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "2875fb8206bbf1a6": {
+    "latitude": 34.77210965168812,
+    "longitude": 127.65275498141638,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "네네치킨 무선지구점(선원동) 선원동",
+    "matchedAddress": "전남광주통합특별시 여수시 무선3길 6",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "190c9c9cea69da3b": {
+    "latitude": 34.76378637102098,
+    "longitude": 127.67616903094154,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "네네치킨 신기점 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 새터로 93",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "54a0c1a2addb92d6": {
+    "latitude": 34.759913979725,
+    "longitude": 127.644537505198,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 안심산길 13 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 안심산길 13",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "f63bbae9b9a80813": {
+    "latitude": 34.74578008058938,
+    "longitude": 127.7425534563172,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "네네치킨 엑스포점 공화동",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 101-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4cacbf0f8d535667": {
+    "latitude": 34.7468186337241,
+    "longitude": 127.699754448955,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "네네치킨 여서문수점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 대치3길 13-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "3a5417b7d9525787": {
+    "latitude": 34.752853326579,
+    "longitude": 127.704799331024,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문1로 46-1",
+    "matchedAddress": "전남광주통합특별시 여수시 여문1로 46-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "dc42166bad88a929": {
+    "latitude": 34.7413023767817,
+    "longitude": 127.735799931138,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "노랑고래 찹쌀꽈배기 중앙점 중앙동",
+    "matchedAddress": "전남광주통합특별시 여수시 진남상가길 9",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "b8267998349b16e1": {
+    "latitude": 34.7540195814718,
+    "longitude": 127.693094563249,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 문수8길 33 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 문수8길 33",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "40673a86169d791f": {
+    "latitude": 34.73733315843988,
+    "longitude": 127.74150934547491,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "노랑통닭 여수밤바다점(중앙동) 중앙동",
+    "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 159",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "aea70baec8c61d25": {
+    "latitude": 34.74131433478366,
+    "longitude": 127.67538966556106,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "노랑통닭 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 웅천로 108",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "ce40f493bcd2ca2b": {
+    "latitude": 34.7656217261604,
+    "longitude": 127.636863333091,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "노랑통닭 죽림점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 67",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "f0804947cebd20cc": {
+    "latitude": 34.7524406006454,
+    "longitude": 127.70414087772,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "노브랜드버거 여수여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 58",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "759915faca1feb20": {
+    "latitude": 34.7533258137106,
+    "longitude": 127.743087991811,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 박람회길 46 상가 120호 다기야엑스포점",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 46",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "a5916a5a02aab661": {
+    "latitude": 34.7383369457631,
+    "longitude": 127.724435194684,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 신월로 778-1",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 778-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "b9ea332bb64a02e8": {
+    "latitude": 34.7607075253031,
+    "longitude": 127.67220314186827,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "닥엔돈스 쪽갈비 여천점(신기동) 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 신기남3길 2-5",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "ac2e0e2021267315": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "닭곰탕 백숙 보약한첩 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "36d31c0f01bd0e9a": {
+    "latitude": 34.7503743611547,
+    "longitude": 127.698783531838,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 문수6길 29 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 문수6길 29",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "f1b6def61b82cc48": {
+    "latitude": 34.7438803276745,
+    "longitude": 127.728911246475,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 서교8길 14 S001동 1층 14호",
+    "matchedAddress": "전남광주통합특별시 여수시 서교8길 14",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "187287f22433bfcf": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "더 진한 소한마리탕&국밥 엑스포점 덕충동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "d86fa53d88c8d127": {
+    "latitude": 34.75799622460906,
+    "longitude": 127.70998433013682,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "더리터 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 155",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "248fb06bce3aa6e4": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "더바른 정국밥 미평점 미평동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "f0c36824f150a779": {
+    "latitude": 34.7317829535496,
+    "longitude": 127.717785186398,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "더벤티 여수국동서희스타힐스점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 681",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "aa29edc20eb6da8b": {
+    "latitude": 34.7206602495401,
+    "longitude": 127.750889925954,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "더벤티 여수돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남로 55",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "8d6b7abaf3f7f596": {
+    "latitude": 34.7386168920428,
+    "longitude": 127.731197620352,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "더벤티 여수수산시장점(교동) 교동",
+    "matchedAddress": "전남광주통합특별시 여수시 충무로 23-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "aae3c781ba45f8a3": {
+    "latitude": 34.7404340909068,
+    "longitude": 127.736436491229,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "더벤티 여수이순신광장점(중앙동) 중앙동",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 2-2",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4990a1c1dc208fce": {
+    "latitude": 34.7373792473013,
+    "longitude": 127.741045690128,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "더벤티 여수해양공원점(중앙동) 중앙동",
+    "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 159",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "afe9497576e46e1e": {
+    "latitude": 34.7284041680937,
+    "longitude": 127.721505238929,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "던킨 여수롯데마트점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 국포1로 36",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "d1c9de66c95c1d46": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "덮밥전문점 고기그릇 공화동점 공화동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "86df23f2e79b3bb8": {
+    "latitude": 34.7414873059817,
+    "longitude": 127.731736576163,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 충무로 54-9",
+    "matchedAddress": "전남광주통합특별시 여수시 충무로 54-9",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "634cd6c2572df494": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "도도닭발&오돌뼈 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "2f4c3cfb0866c4a4": {
+    "latitude": 34.7615195378641,
+    "longitude": 127.661531921791,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "도미노피자 여천점(학동) 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 도원로 277",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "7249484d1a76ce44": {
+    "latitude": 34.76142389177822,
+    "longitude": 127.63961850891718,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "도야족발 여수여천점(죽림) 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 5",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "950ba1c64e791621": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "돈도니밥도둑짜글이 국동점 국동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "20c4d1a484e47732": {
+    "latitude": 34.7540580296233,
+    "longitude": 127.704817102581,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여문문화2길 15",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 15",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "3bb130edaf8e75fe": {
+    "latitude": 34.7399522843981,
+    "longitude": 127.729638823031,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 교동시장3길 16-2",
+    "matchedAddress": "전남광주통합특별시 여수시 교동시장3길 16-2",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "149224e8ca5281d9": {
+    "latitude": 34.75334312561785,
+    "longitude": 127.70285326550055,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "동대문엽기떡볶이 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 68",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "2e2afe0788acce6a": {
+    "latitude": 34.758803585136505,
+    "longitude": 127.67027524949876,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "동서울왕족발(신기동) 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 신기남1길 15",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "68ba9ebef219905e": {
+    "latitude": 34.7503817314301,
+    "longitude": 127.699807544301,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 문수로 22",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 22",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "720324ed8ea3a46e": {
+    "latitude": 34.7454558482265,
+    "longitude": 127.742775294279,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 동문로 102 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 102",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "d9a3b065f1cd0cf8": {
+    "latitude": 34.7462430018781,
+    "longitude": 127.670512957856,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 예울마루로 37-33 1층 106호",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-33",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "1ae0c16d309d1556": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "둥이식당 봉강점 봉강동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "d6e14895fe474fb3": {
+    "latitude": 34.7724872086048,
+    "longitude": 127.652173415453,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 무선중앙로 76",
+    "matchedAddress": "전남광주통합특별시 여수시 무선중앙로 76",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "16669581b8dc378d": {
+    "latitude": 34.7506875964734,
+    "longitude": 127.701605429486,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "땅스부대찌개 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서로 181",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "fd8d24a45e887938": {
+    "latitude": 34.7498180527881,
+    "longitude": 127.70256894352,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여서로 181 상가4동 1층 1호",
+    "matchedAddress": "전남광주통합특별시 여수시 여서로 181",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "e334f4707bd1046f": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "떡순이 알찬만두 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "c05575dae26cfbae": {
+    "latitude": 34.7583063337449,
+    "longitude": 127.710288432211,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "또래김밥 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 159-2",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "47b56ab22cab7ce0": {
+    "latitude": 34.7503952778737,
+    "longitude": 127.700555636054,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "또바기 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 77",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "a2939cd769593c56": {
+    "latitude": 34.7210426179544,
+    "longitude": 127.751738364067,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "뚜레쥬르 여수돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남로 64",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "03f6d7c59d6d1a45": {
+    "latitude": 34.75266276090419,
+    "longitude": 127.74364711700032,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "뚜레쥬르 여수엑스포타운점 덕충동",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 38",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "bee72f182a400ed4": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "뚱땡이숯불두마리치킨 직영점(학동) 학동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "24420dd7743c89a6": {
+    "latitude": 34.7346219951981,
+    "longitude": 127.712981731045,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 구봉길 79",
+    "matchedAddress": "전남광주통합특별시 여수시 구봉길 79",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "cc97a2338805f0c2": {
+    "latitude": 34.74665112319097,
+    "longitude": 127.67040421149558,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "라홍방마라탕 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-21",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "dedded076c21a785": {
+    "latitude": 34.7337350903112,
+    "longitude": 127.719713504454,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 신월로 710 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 710",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "9c7b5c85a8c79a6a": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "마라월드 마라탕&마라상궈 여수문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "e74e79529019bad1": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "마포매운쌀떡볶이 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "a3297f2e48bf9793": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "마형제 족발보쌈 학동점 학동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "f57b6ed2e480011d": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "막국수파는집 문수본점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "c99ad2ba715a5abb": {
+    "latitude": 34.7350532049938,
+    "longitude": 127.720612860702,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 신월로 726 만석군 노란색집",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 726",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "11161bd0b4783703": {
+    "latitude": 34.775924771551,
+    "longitude": 127.646597459231,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "맘스터치 무선점 무선",
+    "matchedAddress": "전남광주통합특별시 여수시 무선중앙로 7-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "a7d0d397991605ec": {
+    "latitude": 34.766692539750736,
+    "longitude": 127.65922690009452,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "맘스터치 여천 학동점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 29",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "3b07bfa30f252db8": {
+    "latitude": 34.7491217756957,
+    "longitude": 127.678880170848,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "맘스터치 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 96",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "e9753bad89c254a3": {
+    "latitude": 34.7525263918134,
+    "longitude": 127.703489607237,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "맛나감자탕 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 53",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "1fe48c8f1857b4d2": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "맛있는 전시회 국동점 국동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "5bc1cef8362365a5": {
+    "latitude": 34.7448415879053,
+    "longitude": 127.748334513264,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 수정3길 11-8 1층 밥장인",
+    "matchedAddress": "전남광주통합특별시 여수시 수정3길 11-8",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "88b98e5ecb968c2c": {
+    "latitude": 34.7637175197284,
+    "longitude": 127.705773452139,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "맥도날드 여수미평DT점 미평동",
+    "matchedAddress": "전남광주통합특별시 여수시 좌수영로 387",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "8dfdc5de41e3eca9": {
+    "latitude": 34.7610237558002,
+    "longitude": 127.664365388756,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 망마로 9",
+    "matchedAddress": "전남광주통합특별시 여수시 망마로 9",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "4c16d7a9aafcf6fd": {
+    "latitude": 34.7423646293574,
+    "longitude": 127.74093634431,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 동문로 62",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 62",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "4ff23be15f0664ae": {
+    "latitude": 34.7194748968642,
+    "longitude": 127.755121501466,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "맥시칸치킨 돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남3길 17-16",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "173d62e7132f3370": {
+    "latitude": 34.774305121330585,
+    "longitude": 127.64128441820336,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "맥시칸치킨 무선점 화장동",
+    "matchedAddress": "전남광주통합특별시 여수시 성산로 33",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "b5e31af3d61fc8fe": {
+    "latitude": 34.76724171983356,
+    "longitude": 127.70799027280695,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "맥시칸치킨 미평점 미평동",
+    "matchedAddress": "전남광주통합특별시 여수시 미평로 45",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "dfa033316cfcecf7": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "맵도리닭 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "48113ac49e27c620": {
+    "latitude": 34.7547931653566,
+    "longitude": 127.694106465686,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문2로 83",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "9999f4db1009d483": {
+    "latitude": 34.7705557540828,
+    "longitude": 127.70323621177,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 미평점 미평동",
+    "matchedAddress": "전남광주통합특별시 여수시 만성로 69",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4289ad6217815b70": {
+    "latitude": 34.7529557766948,
+    "longitude": 127.705101847961,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여서1로 70 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 70",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "d14f1e6669383a88": {
+    "latitude": 34.74138604269075,
+    "longitude": 127.73283705036206,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 여수교동점 교동",
+    "matchedAddress": "전남광주통합특별시 여수시 진남상가길 38",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "d5ab6e067ab79cb9": {
+    "latitude": 34.76152076226199,
+    "longitude": 127.67429046252398,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 여수신기점 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 새터로 64",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "9d7d7e2f99658a9c": {
+    "latitude": 34.753219029400874,
+    "longitude": 127.74289088852655,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 여수엑스포점 덕충동",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 46",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "3a60142ebc07e295": {
+    "latitude": 34.746924576745,
+    "longitude": 127.670671790073,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 여수웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 41",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "08eecf0379470865": {
+    "latitude": 34.76486314542091,
+    "longitude": 127.66312931096836,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 여수진남시장점(학동) 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 시청로 34",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "62cd152fab8dc42e": {
+    "latitude": 34.783688463436,
+    "longitude": 127.692964188596,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 여수진남주유소점(봉계동) 봉계동",
+    "matchedAddress": "전남광주통합특별시 여수시 좌수영로 684",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "9a4e8ea87951b54e": {
+    "latitude": 34.76625470214237,
+    "longitude": 127.66001425097706,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "메가MGC커피 여천점(학동) 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 36-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "f25d8111c5d1b135": {
+    "latitude": 34.7340989293353,
+    "longitude": 127.713287005345,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "멕시카나치킨 국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 구봉길 79",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "183a9d859fd9518d": {
+    "latitude": 34.7745280781304,
+    "longitude": 127.651749337273,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "멕시카나치킨 무선죽림점 선원동",
+    "matchedAddress": "전남광주통합특별시 여수시 무선6길 24",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "e313a8628fc0916a": {
+    "latitude": 34.7606836306995,
+    "longitude": 127.669996633106,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "멕시카나치킨 신기점 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 신기남3길 28-2",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "aef73537733e9387": {
+    "latitude": 34.75050972624541,
+    "longitude": 127.70150017584936,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "멕시카나치킨 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서로 181",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "486bad289ae76e54": {
+    "latitude": 34.764911904903,
+    "longitude": 127.664931981809,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "멕시칸치킨 학동점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 학동1길 16-11",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "0a5ea9fd4c080ed0": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "멜로우 국동점 국동",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "e1089d6ba40ec342": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "명품1인도시락&시원냉면밀면(국동) 국동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "fbf90dcb8bf85a24": {
+    "latitude": 34.7558625400933,
+    "longitude": 127.716615186282,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "명품육회 오림동점 오림동",
+    "matchedAddress": "전남광주통합특별시 여수시 장군산길 70",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "dd932b154f9ea0e6": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "모도리보쌈족발 여수본점(봉산동) 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "9dcbffc6c6a5ba77": {
+    "latitude": 34.76124245473667,
+    "longitude": 127.67196718452506,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "모도리보쌈족발 여수직영…7016 tokens truncated…점",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림4길 2-17",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "2a1bd22a9b5f938e": {
+    "latitude": 34.740779682369286,
+    "longitude": 127.73338969164722,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "여수다복 교동점 교동",
+    "matchedAddress": "전남광주통합특별시 여수시 통제영2길 8-11",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "732120ab53b3f457": {
+    "latitude": 34.7541125786433,
+    "longitude": 127.692544789032,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여문2로 69",
+    "matchedAddress": "전남광주통합특별시 여수시 여문2로 69",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "485ad1139b230bcf": {
+    "latitude": 34.7464569238364,
+    "longitude": 127.743604597589,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "여수족발 엑스포점 공화동",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 114",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "0a4aaf8ee1103e4f": {
+    "latitude": 34.7638852381056,
+    "longitude": 127.6770316436437,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "여수족발(신기동) 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 새터로 100",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "fe356412007caf0c": {
+    "latitude": 34.7303573677126,
+    "longitude": 127.714830919018,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 신월로 655 국동 서희스타힐스 상가",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 655",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "61791dbea82168f1": {
+    "latitude": 34.75268778512429,
+    "longitude": 127.74368228929431,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "역전할머니맥주 덕충점 덕충동",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 38",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "69f92930ea1e00c4": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "연변양꼬치구이&마라탕 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "75f31fc5eb51073b": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "영화루 국동점 국동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "b2b796461ee30ef2": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "예원닭강정 여수1호점(문수동) 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "2cd9e5b3f51e62e6": {
+    "latitude": 34.752512254671764,
+    "longitude": 127.70328416785115,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "예향정 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 51",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "90e006413bc79cbc": {
+    "latitude": 34.7668988260756,
+    "longitude": 127.659434660673,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 학동북3길 6",
+    "matchedAddress": "전남광주통합특별시 여수시 학동북3길 6",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "f78b89beff94fd0e": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "오늘은카레 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "9bb804e004dff7d8": {
+    "latitude": 34.7241144835009,
+    "longitude": 127.708918624352,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 신월로 562",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 562",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "0cc943f6a58888d0": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "왕창 돼지두루치기 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "656eff52d5fce811": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "우가족발 여수점(충무동) 충무동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "34817ff59a6bc66d": {
+    "latitude": 34.7540528918959,
+    "longitude": 127.70637271037,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "우리할매떡볶이 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 85",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "0e6d7a1000b1c53b": {
+    "latitude": 34.7537617177131,
+    "longitude": 127.709632456141,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여서1로 116",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 116",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "39b2241021f9616c": {
+    "latitude": 34.7464401404739,
+    "longitude": 127.699738152411,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "우주호떡 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 대치3길 17",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "e6339c85e31322fa": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "울엄마 김치찜 갈비찜 중앙점 중앙동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "571770a25990ba97": {
+    "latitude": 34.7462389713418,
+    "longitude": 127.672404783975,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "웅천횟집 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 35-42",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "d322f9f9a91b0bdb": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "원할머니보쌈족발 여수여천점 여천동",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "c8633f33e72e2e0a": {
+    "latitude": 34.7538328354448,
+    "longitude": 127.707169192322,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "웡김밥 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 92",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "df16b7312c25da31": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "전남 여수시 여서로 146-2 현대건설아파트",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "0199534cac937a52": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "유어문 Your Moon 둔덕점 미평, 둔덕동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "65c908d7b367de45": {
+    "latitude": 34.7513837426065,
+    "longitude": 127.710112300414,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "육식사관학교 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서동5길 2",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "fb28167259749571": {
+    "latitude": 34.7540500968336,
+    "longitude": 127.705766546096,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "육회밤바다 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 13",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "3c3819748a5c2d63": {
+    "latitude": 34.7504331323065,
+    "longitude": 127.698987703134,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "윤김밥 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 허문정1길 5",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "9edba048ff8c3b2e": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "이가네 나주곰탕&설렁탕 교동점 교동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "382dd89b36993ff8": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "이동천 시원냉면 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "7a91bd1d1f218c97": {
+    "latitude": 34.7353124559088,
+    "longitude": 127.724395149479,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 대교로 30 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 대교로 30",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "0fcde82a0f46ee28": {
+    "latitude": 34.718867349554834,
+    "longitude": 127.74575701995691,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "이디야커피 여수돌산우두리점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남해안로 76",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "43b4908cf2161b80": {
+    "latitude": 34.74935816996432,
+    "longitude": 127.72769495854006,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "이디야커피 여수연등메트하임점 연등동",
+    "matchedAddress": "전남광주통합특별시 여수시 좌수영로 101",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "31ffaa41b54a57aa": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "이라이타코야끼 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "90fed609e43aafb2": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "이라이타코야끼&카페1리터 여문점 여서,문수",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "424a3dadd34b19fa": {
+    "latitude": 34.7352640302431,
+    "longitude": 127.724519858182,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 대교로 32-1",
+    "matchedAddress": "전남광주통합특별시 여수시 대교로 32-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "b22e961a2bed3729": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "인생냉면 가야밀면 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "de1d344e8798f0dd": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "인생냉면 국동점 국동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "a638ac9c079a28c0": {
+    "latitude": 34.7363569237525,
+    "longitude": 127.722965890675,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 대교로 13-1 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 대교로 13-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "7c1c77a3d0c35a43": {
+    "latitude": 34.731348146267,
+    "longitude": 127.721198902235,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "잇텐스시 국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 국동남6길 3",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "c68d21da9b32f1eb": {
+    "latitude": 34.7543654689634,
+    "longitude": 127.744388658662,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "자담치킨 여수엑스포점 덕충동",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 70",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4ae622b733f163c7": {
+    "latitude": 34.75045276508257,
+    "longitude": 127.70106067079973,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "자담치킨 여수여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 21-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "58228e47bba2b29c": {
+    "latitude": 34.74939140518832,
+    "longitude": 127.67007142553025,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "자담치킨 여수웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 웅천중앙로 27",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "c6b947813051ac38": {
+    "latitude": 34.761543331577016,
+    "longitude": 127.633669948982,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "자담치킨 여수죽림점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림중앙로 7-39",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "1894da97ed277235": {
+    "latitude": 34.76075818151351,
+    "longitude": 127.65630823168445,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "자담치킨 여수학동점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 소호로 662",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "401e4210d0416b54": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "자연산오징어회 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "802d4c09e4ee1ae9": {
+    "latitude": 34.7387536057472,
+    "longitude": 127.730977051454,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 교동시장5길 2-2 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 교동시장5길 2-2",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "f3f6088916279991": {
+    "latitude": 34.74623519053068,
+    "longitude": 127.6727629440372,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "전가복 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 35-41",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "bc6152833cd076f5": {
+    "latitude": 34.7541676742361,
+    "longitude": 127.704577434307,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여문문화2길 18",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 18",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "f58bf8f877dcacd5": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "정담오리바베큐 여수엑스포점 덕충동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "21a676f860851a5a": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "정말 맛있는 김치찌개 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "98779281080288d1": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "제복이네 짜글이&제육쌈밥&두루치기 교동점 교동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "0df36c0ba138ac89": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "제육대패 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "82b2cd167c1e053b": {
+    "latitude": 34.7308751622601,
+    "longitude": 127.71764631713731,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "조선다방 국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 672",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "bef7f3b6456df7fd": {
+    "latitude": 34.7185302475162,
+    "longitude": 127.75540984848041,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "조선다방 돌산점 돌산",
+    "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남동로 39",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "cfd74ce112f2b187": {
+    "latitude": 34.753166058559096,
+    "longitude": 127.74300399568766,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "조선다방 엑스포점 덕충동",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 46",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "5768a9d8a72502ef": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "조선제일 감자탕&뼈해장국 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "82fb6c389b7aced5": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "종가찜 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "44a0e464d6d22c38": {
+    "latitude": 34.731021274463906,
+    "longitude": 127.71717262931807,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "중앙돈까스 국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 655",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4e43f1180007c10f": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "쥬씨차얌 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "501b2c5aaa6005f2": {
+    "latitude": 34.759335283925,
+    "longitude": 127.668822746876,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 신기남1길 29",
+    "matchedAddress": "전남광주통합특별시 여수시 신기남1길 29",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "0b952604bdf47c31": {
+    "latitude": 34.7411407106709,
+    "longitude": 127.736299713165,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 진남상가길 2-1 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 진남상가길 2-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "27fc5651d1d3feb0": {
+    "latitude": 34.735217918299,
+    "longitude": 127.723906793087,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 봉산1로 47",
+    "matchedAddress": "전남광주통합특별시 여수시 봉산1로 47",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "5d45d58855f0c602": {
+    "latitude": 34.7567089012848,
+    "longitude": 127.711859504666,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "진한설렁탕 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수북5길 22",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "54fd901a0b754ee1": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "집으로 삼겹구이 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "a4ba6805e73e7e76": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "짜장왕 왕서방 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "36856e4f20cae7d0": {
+    "latitude": 34.7547703053569,
+    "longitude": 127.693530708454,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "짱구김밥 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문2로 77-2",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "09dc33ce2f8f08d3": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "쭈꾸미닭 공화점 공화동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "77b1600313d1d6d4": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "쭈신쭈왕 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "2524c5a9954d4ba8": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "찌개랑갈비랑 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "9b2419177903b1d8": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "찜스틸러갈비찜 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "102347a538ed090c": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "차이난짬뽕 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "83a409add1950550": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "참 맛있는 족발 여수본점(신기동) 신기동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "3c62ab40bf66608e": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "참숯이면돼지 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "215d025987786df2": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "찹쌀품은 삼계탕 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "8c8ee85a0bc3b219": {
+    "latitude": 34.77407811720083,
+    "longitude": 127.6438181545714,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "처갓집양념치킨 무선점 화장동",
+    "matchedAddress": "전남광주통합특별시 여수시 성산6길 53-9",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "b6c5400a34504bc0": {
+    "latitude": 34.7535662884465,
+    "longitude": 127.703231944271,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "처갓집양념치킨 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 72",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "96f341e2aced2187": {
+    "latitude": 34.7613640368557,
+    "longitude": 127.671496320255,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "처갓집양념치킨 신기점 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 신기남4길 14",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "ad437cdcefd55447": {
+    "latitude": 34.744285908258654,
+    "longitude": 127.68785194055658,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "처갓집양념치킨 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 웅천로 261",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "23e36eb3741524aa": {
+    "latitude": 34.754777511352,
+    "longitude": 127.705581935843,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 문수로 98",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 98",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "bb9aef1788a685c6": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "청년뚝배기 덕충점 덕충동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "7d656b9342aabd94": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "청담곱떡 고소동점 고소동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "8df8f77db6d9a205": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "청담낙곱새 고소동점 고소동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "4663ccf86e9128fa": {
+    "latitude": 34.73972539316647,
+    "longitude": 127.68391039132494,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "청담피자 여수웅천 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 웅천로 190",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "b88f6b8e8fd14ad3": {
+    "latitude": 34.76190600379375,
+    "longitude": 127.63620347292093,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "청담피자 여수죽림점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림1길 10",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "37f1a033eac82aa2": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "청송삼계탕&닭칼국수 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "b6e9f49b01144bc8": {
+    "latitude": 34.7330662342189,
+    "longitude": 127.722016568842,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 봉산남4길 23-32 청정게장촌",
+    "matchedAddress": "전남광주통합특별시 여수시 봉산남4길 23-32",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "cd2ecfcd707cd2c7": {
+    "latitude": 34.7285523164919,
+    "longitude": 127.714262377204,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "청춘꼬마김밥 여수국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 631",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "b9501772f0f6b1fb": {
+    "latitude": 34.75138328609958,
+    "longitude": 127.70132518017867,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "청하대 영빈관 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화1길 64",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "9acc51c50813ce03": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "초밥처럼 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "2857b7140087f6ab": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "치코두마리파닭 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "5ada4cec81d04ced": {
+    "latitude": 34.7269016150752,
+    "longitude": 127.719068089004,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 국동남6길 49-10 . 104호",
+    "matchedAddress": "전남광주통합특별시 여수시 국동남6길 49-10",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "58063b75a96362b4": {
+    "latitude": 34.7729609845691,
+    "longitude": 127.645237243305,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "치킨마루 무선호수공원점(화장동) 화장동",
+    "matchedAddress": "전남광주통합특별시 여수시 화산로 62-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "f65edfe1927ef379": {
+    "latitude": 34.78422971488397,
+    "longitude": 127.69241588808433,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "치킨마루 여수봉계점 봉계동",
+    "matchedAddress": "전남광주통합특별시 여수시 좌수영로 682-25",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "f1fa55a4b8c7c428": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "전남 여수시 신월2길 9-1 코아루아파트",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "0173191ff3ddab64": {
+    "latitude": 34.7668482885905,
+    "longitude": 127.689960671053,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 쌍봉로 318",
+    "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 318",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "25ebed742b1238d5": {
+    "latitude": 34.7720974294784,
+    "longitude": 127.653017058051,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "치킨아이 무선점 선원동",
+    "matchedAddress": "전남광주통합특별시 여수시 무선2길 13",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "9a8243a043f3735c": {
+    "latitude": 34.7546518370846,
+    "longitude": 127.693123436669,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "치킨아이 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문2로 73",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4cd9573bfca48b92": {
+    "latitude": 34.7546902191136,
+    "longitude": 127.652705790445,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 장성1길 40",
+    "matchedAddress": "전남광주통합특별시 여수시 장성1길 40",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "bc89627508bf7a16": {
+    "latitude": 34.75988260289911,
+    "longitude": 127.67222922221472,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "치킨아이 신기점 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 신기남길 23",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "b6fa10980521859b": {
+    "latitude": 34.7624772402432,
+    "longitude": 127.656525106425,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 학동서5길 10 102호",
+    "matchedAddress": "전남광주통합특별시 여수시 학동서5길 10",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "da81c19f4ce50220": {
+    "latitude": 34.7477488884314,
+    "longitude": 127.698983107798,
+    "source": "kakao-notion-road-address-geocoding",
+    "inputAddress": "전남광주 여수시 여서로 146-11",
+    "matchedAddress": "전남광주통합특별시 여수시 여서로 146-11",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "9abb1d4db21758ad": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "카레상 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "9ab837d6e24d69df": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "카페요아정 여수엑스포점 덕충동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "60dbbe5071a2ebe6": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "코리안 찌개 타운 서교점 서교동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "66f78262c4f9aa55": {
+    "latitude": 34.76182105193852,
+    "longitude": 127.65057467706656,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "코리엔탈깻잎두마리치킨 선원점 선원동",
+    "matchedAddress": "전남광주통합특별시 여수시 선원4길 71",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "f3cb61dd45ba9b8b": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "콩담은 콩나물 국밥 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "7ec91a7f6e875069": {
+    "latitude": 34.7540420012193,
+    "longitude": 127.704237801888,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 문수로 82-1",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 82-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "420af240943ff849": {
+    "latitude": 34.7667082806436,
+    "longitude": 127.659981815227,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "큰손닭강정 여수본점(학동) 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 35-2",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "f17f729605bb5945": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "키로족발 여수점(여서동) 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "87dcf0c9a9804bd2": {
+    "latitude": 34.7427310726923,
+    "longitude": 127.741006118477,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "킹스타피자 관문점 관문동",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 66",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "852b5da8f5e3e3dc": {
+    "latitude": 34.7517442493157,
+    "longitude": 127.701129685238,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문문화길 62 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 62",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "0eea4a740e820fd3": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "타코아찌 타코야끼전문점 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "92f4faa988a87728": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "타코이찌 타코야끼전문점 문수점 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "ddfe30e801fed73f": {
+    "latitude": 34.7483972997522,
+    "longitude": 127.697026664469,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "탕참 탕수육참잘하는집 여수점(여서동) 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서로 136",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "a1e8130ec540e37f": {
+    "latitude": 34.7557593334447,
+    "longitude": 127.704176695185,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "토담 민속주점 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수1길 16",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "f9a6f0eb9fba0696": {
+    "latitude": 34.754607720429966,
+    "longitude": 127.69311433079834,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "통뼈감자탕 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 여문2로 73",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "a6f3cc0da6d5c044": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "통큰두마리찜닭 여서점 여서동",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "217d38b37c2b4d5b": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "통큰한방삼계탕 공화점 공화동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "6fcebc9381432d73": {
+    "latitude": 34.74649090843028,
+    "longitude": 127.67150697786225,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "투썸플레이스 웅천점 웅천동",
+    "matchedAddress": "전남광주통합특별시 여수시 예울마루로 35-14",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "728262018f22a2cc": {
+    "latitude": 34.74281852389172,
+    "longitude": 127.72784945481999,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "투썸플레이스 한재사거리점 광무동",
+    "matchedAddress": "전남광주통합특별시 여수시 좌수영로 25",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "b17cdef5234b021b": {
+    "latitude": 34.74132540495521,
+    "longitude": 127.73242811616693,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "파리바게뜨 여수교동점 교동",
+    "matchedAddress": "전남광주통합특별시 여수시 진남상가길 42",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "e9dc60119d9cdfb5": {
+    "latitude": 34.731001489703495,
+    "longitude": 127.71716481552508,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "파리바게뜨 여수국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 655",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "6059e7ea81c9f4d1": {
+    "latitude": 34.75322356948299,
+    "longitude": 127.74288546853478,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "파리바게뜨 여수엑스포점 덕충동",
+    "matchedAddress": "전남광주통합특별시 여수시 박람회길 46",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "1bdc59414a5c8b64": {
+    "latitude": 34.7407193752463,
+    "longitude": 127.736214077544,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "파리바게뜨 여수중앙점 중앙동",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 7",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "83f635e7ea7d737e": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "파파핫도그 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "6b13f2db6e79b4eb": {
+    "latitude": 34.72781671165394,
+    "longitude": 127.71396563070532,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "평양보쌈왕족발 신월동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 624-2",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "20c107a437ec483e": {
+    "latitude": 34.754582440220545,
+    "longitude": 127.70458718262653,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "포슬포슬꼬마김밥 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 89",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "5deb911df92c645a": {
+    "latitude": 34.7554651314883,
+    "longitude": 127.6943479963,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "포우머그 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수7길 27",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "3d91b86995f619d6": {
+    "latitude": 34.75240169055337,
+    "longitude": 127.70338698224347,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "프랭크버거 여수여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 51",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "2d1d2bf163bd7e3f": {
+    "latitude": 34.7408554772832,
+    "longitude": 127.732777766826,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "피자스쿨 여수교동점 교동",
+    "matchedAddress": "전남광주통합특별시 여수시 통제영2길 7",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "ef2eacdbb6233f97": {
+    "latitude": 34.7308424902105,
+    "longitude": 127.717071727605,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "피자스쿨 여수국동점 국동",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 655",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "da66e7ae0cdf1907": {
+    "latitude": 34.77277709715348,
+    "longitude": 127.65116315429569,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "피자스쿨 여수무선점 선원동",
+    "matchedAddress": "전남광주통합특별시 여수시 무선중앙로 65",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "793ce4c7d0f32994": {
+    "latitude": 34.76150494034643,
+    "longitude": 127.67356617491997,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "피자스쿨 여수신기점 신기동",
+    "matchedAddress": "전남광주통합특별시 여수시 흥국로 103",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "5d4e5d274ebd1b7c": {
+    "latitude": 34.76360541830792,
+    "longitude": 127.63959164467524,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "피자스쿨 여수죽림점 죽림",
+    "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 31",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4526a5114ecaef34": {
+    "latitude": 34.7633864096855,
+    "longitude": 127.65618703740998,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "피자스쿨 여수학동점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 무선로 28",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "e16359de9292f582": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "피자알볼로 여수엑스포점(수정동) 수정동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "afb901f3a32de6e8": {
+    "latitude": 34.7523750197696,
+    "longitude": 127.701384784979,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 문수로 52",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 52",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "05634c81541f6bda": {
+    "latitude": 34.760795593260575,
+    "longitude": 127.65939409925518,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "피자헛 여수시청점 학동",
+    "matchedAddress": "전남광주통합특별시 여수시 도원로 256-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "bf15349639417d6b": {
+    "latitude": 34.7375867346669,
+    "longitude": 127.743532764359,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "피피마켓 종화동점 종화동",
+    "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 180",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "7af7ffc2da561850": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "하루빙수 여서점 여서동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "7b221aa6623bd0a2": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "하이오커피 여수신월국동항점 국동",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "4621df767ea3905a": {
+    "latitude": 34.753797392829,
+    "longitude": 127.705167103722,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문문화1길 20 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화1길 20",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "4391cea41df014b3": {
+    "latitude": 34.7448756101134,
+    "longitude": 127.741578923635,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "한국전통춘천닭갈비 공화동점 공화동",
+    "matchedAddress": "전남광주통합특별시 여수시 동문로 89-1",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "06f2a251304b0a51": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "한끼국밥&갈비찜 국동점 국동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "53bfb32926455221": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "한식전문 혼밥대장 공화동점 공화동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "8f8486e4cd5aaec3": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "항아리치킨&깐풍기 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "9b760748be6ee430": {
+    "latitude": 34.75866835063315,
+    "longitude": 127.71065632922793,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "해룡옥수수찐빵 문수점 문수동",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 165",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "43780265104bccba": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "핵떡 여수봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "6047251f50214125": {
+    "latitude": 34.74667995702264,
+    "longitude": 127.69973034640792,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "햄토피아토스트 여서점 여서동",
+    "matchedAddress": "전남광주통합특별시 여수시 대치3길 15",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "b8c2dcaa9ef57af5": {
+    "latitude": 34.754777511352,
+    "longitude": 127.705581935843,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 문수로 98",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 98",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "d19810627d63e95c": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "허참봉 곰탕&갈비탕 봉산점 봉산동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "abd3c4c1fae55d22": {
+    "latitude": 34.7704535921765,
+    "longitude": 127.705718937598,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 미평10길 3 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 미평10길 3",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "18503945dc9c16c8": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "홍紅 곱도리탕 봉강점 봉강동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "a6ff0bcfc0afe5b6": {
+    "latitude": 34.7541676742361,
+    "longitude": 127.704577434307,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문문화2길 18",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 18",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "9586eb46ca401707": {
+    "latitude": 34.7531321727236,
+    "longitude": 127.703216905875,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문문화길 38-1",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 38-1",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "7777fc7f051bf178": {
+    "latitude": 34.7318663251985,
+    "longitude": 127.721524408109,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "황금코다리 봉산점 봉산동",
+    "matchedAddress": "전남광주통합특별시 여수시 봉산1로 3",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "35613e179e0c318b": {
+    "latitude": 34.7515040076761,
+    "longitude": 127.701446114631,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문문화1길 62 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화1길 62",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "a0e873ce4d21b431": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "와쭈 본점 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "5aa4432158274a35": {
+    "latitude": 34.7523657960813,
+    "longitude": 127.703140513353,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여서1로 49",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 49",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "bb036844c501c40a": {
+    "latitude": 34.7526061719606,
+    "longitude": 127.703628874611,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여서1로 55 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 여서1로 55",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "a037743d0ee273e2": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "정성집밥 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "cfde2617224f33a0": {
+    "latitude": 34.7516203040727,
+    "longitude": 127.701098932214,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문문화길 64 1층 콩산소(청년다방 우측 안쪽)",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 64",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "7bc7239e6b509c44": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "수라상궁 조선국밥 여서점 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "04910f606ba038a6": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "오워래 수제 돈까스 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "dba6beeeb774318f": {
+    "latitude": 34.7522423295259,
+    "longitude": 127.702323979743,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전라남도 여수시 여문문화길 51",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 51",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "320d26d67b993c4a": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "아로이태국음식전문점 저장해두시면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "ba870ddfedb99508": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "본죽&비빔밥 여수미평점 저장해두시면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "ddc27f852308889a": {
+    "latitude": 34.7304599044567,
+    "longitude": 127.717337451004,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 신월로 668",
+    "matchedAddress": "전남광주통합특별시 여수시 신월로 668",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "1921d1d5c7710872": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "모두의 죽 교동점(영업시간06시~02시까지) 교동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "08e5e26653436fef": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "알토랑반찬 여수문수본점 저장해두시면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "768e4fe8150f5039": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "정성이 가득찬 반찬 저장해두시면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "0ad5341dc696d4f1": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "맛있는 반찬 저장해두시면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "d409f6d9118b7bad": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "황금손 반찬 저장해두시면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "84c118675c0caa4c": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "바오탕수 여서점 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "f7d93ad21c1a93d7": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "맘스터치 엑스포점 홈화면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "1acf6756b7471125": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "맘스터치 중앙점 홈화면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "8cb29ac81df85b54": {
+    "latitude": 34.7391348983215,
+    "longitude": 127.73154723905441,
+    "source": "kakao-keyword-geocoding",
+    "inputAddress": "여수언니 교동점 교동",
+    "matchedAddress": "전남광주통합특별시 여수시 충무로 30-4",
+    "status": "verified",
+    "confidence": "keyword-exact"
+  },
+  "4e83618703e993b5": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "걸작떡볶이치킨 여수중앙점 홈화면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "91798b85e5a50244": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "진남집밥 교동점 교동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "144ed6ece1f4734a": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "여수팥빙수 교동점 교동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "411052fdc9de5d44": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "모노데일리 남산점 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "e5b0545e92f03409": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "이조삼계탕 충무점 홈화면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "98a1464075ea68e5": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "포슈아 쌀국수배달전문 서교점 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "b58c688c90df4687": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "본죽&비빔밥 여수중앙점 홈화면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "8dc7782b3cb4bdcf": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "김밥세상 광무점 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "3bcce1dd4c36eee0": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "동백 봉강점 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "5942ed8c00fa1037": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "금도령찜닭 여수봉강점 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "75dbdaa6383cd49c": {
+    "latitude": 34.7522423295259,
+    "longitude": 127.702323979743,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문문화길 51 1층",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 51",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "c29fb9cd27867a9d": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "여서해장국 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "02bed6e23cbbf188": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "양아 치킨 여수점(문수동) 문수동",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "925f6f828599eb4f": {
+    "latitude": 34.7656247799613,
+    "longitude": 127.704419289949,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 미평남5길 5",
+    "matchedAddress": "전남광주통합특별시 여수시 미평남5길 5",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "0bcf02e9bd40b7d0": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "뿅가야채곱창 문수점 홈화면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  },
+  "0ee3922e77afa736": {
+    "latitude": 34.7545371917886,
+    "longitude": 127.705178635178,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 문수로 94",
+    "matchedAddress": "전남광주통합특별시 여수시 문수로 94",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "a7d684d2ce59e962": {
+    "latitude": 34.7528952058255,
+    "longitude": 127.702684231068,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 여문문화길 42-2",
+    "matchedAddress": "전남광주통합특별시 여수시 여문문화길 42-2",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "585904750de0000c": {
+    "latitude": 34.7729624079353,
+    "longitude": 127.702263969828,
+    "source": "kakao-onenote-map-road-address-geocoding",
+    "inputAddress": "전남 여수시 양지1길 29 땡초닭발",
+    "matchedAddress": "전남광주통합특별시 여수시 양지1길 29",
+    "status": "verified",
+    "confidence": "exact"
+  },
+  "9e422525b203c97f": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "황실육회 봉산점(1) 홈화면",
+    "matchedAddress": "",
+    "status": "search-failed",
+    "confidence": "none"
+  },
+  "17d9bf1de3d671fd": {
+    "latitude": null,
+    "longitude": null,
+    "source": "kakao-geocoding",
+    "inputAddress": "해인이네 여서점 홈화면",
+    "matchedAddress": "",
+    "status": "manual-review",
+    "confidence": "ambiguous"
+  }
+}
