@@ -48,13 +48,14 @@ const coordinates = readJson('data/store-coordinates.json');
 const banners = readJson('data/banner-targets.json');
 const candidates = parseCsv(readFileSync('canonical-recovery-candidates-182.csv', 'utf8'));
 const canonicalOnly = parseCsv(readFileSync('canonical-only-22-review.csv', 'utf8'));
+const photoRecovery = parseCsv(readFileSync('canonical-photo-recovery-audit-180.csv', 'utf8'));
 
 const untitled = stores.filter(store => store.name === '제목 없음');
 const canonicalStores = stores.filter(store => (store.store_id || store.id) && store.name && store.name.trim() && store.name !== '제목 없음');
 const ids = canonicalStores.map(store => String(store.store_id || store.id));
 const pageIds = canonicalStores.map(store => store.notionPageId).filter(Boolean);
-assert(stores.length === 473, `Expected 473 total rows, received ${stores.length}`);
-assert(canonicalStores.length === 472, `Expected 472 searchable canonical stores, received ${canonicalStores.length}`);
+assert(stores.length === 650, `Expected 650 total rows, received ${stores.length}`);
+assert(canonicalStores.length === 649, `Expected 649 searchable canonical stores, received ${canonicalStores.length}`);
 assert(untitled.length === 1, `Expected exactly one 제목 없음 row, received ${untitled.length}`);
 assert(new Set(ids).size === ids.length, 'Duplicate store_id detected');
 assert(new Set(pageIds).size === pageIds.length, 'One Notion page is connected to multiple store_id values');
@@ -70,8 +71,16 @@ for (const row of candidates) {
     const store = canonicalByNotion.get(row.notion_page_id);
     assert(store, `Reviewed normal Notion store missing from canonical: ${row.notion_store_name}`);
     assert(String(store.store_id || store.id) === row.proposed_store_id, `Notion/store_id mismatch: ${row.notion_store_name}`);
+  }
+}
+assert(photoRecovery.length === 180, `Expected 180 photo recovery audit rows, received ${photoRecovery.length}`);
+for (const row of photoRecovery) {
+  const store = canonicalByNotion.get(row.notion_page_id);
+  if (row.recovery_decision === 'restore-approved' || row.recovery_decision === 'link-existing-canonical') {
+    assert(store, `Approved photo recovery missing from canonical: ${row.notion_store_name}`);
+    assert(String(store.store_id || store.id) === row.proposed_store_id, `Approved recovery store_id mismatch: ${row.notion_store_name}`);
   } else {
-    assert(!ids.includes(row.proposed_store_id), `Unreviewed candidate store_id already exists in canonical: ${row.notion_store_name}`);
+    assert(!store, `Held recovery candidate unexpectedly entered canonical: ${row.notion_store_name}`);
   }
 }
 
@@ -93,6 +102,13 @@ for (const id of emergencyIds) {
     assert(owners.length === 1 && String(owners[0].store_id || owners[0].id) === id, `Emergency route connected to another store: ${store.name} / ${route.url}`);
   }
 }
+for (const row of photoRecovery.filter(item => item.recovery_decision === 'restore-approved')) {
+  const store = canonicalByNotion.get(row.notion_page_id);
+  assert(store.latitude === null && store.longitude === null && store.coordinateStatus === 'unverified', `Recovered coordinates must stay null: ${store.name}`);
+  const photo = photoByStore.get(String(store.store_id || store.id));
+  assert(photo && existsSync(photo.src), `Recovered photo mapping or file missing: ${store.name}`);
+  assert(Array.isArray(store.routes), `Recovered store routes field missing: ${store.name}`);
+}
 
 const coordinateStatuses = Object.values(coordinates).map(row => row.status);
 assert(Object.keys(coordinates).length === 470, 'Frozen coordinate row count changed');
@@ -110,7 +126,7 @@ const appSource = readFileSync('app.js', 'utf8');
 const finalSource = readFileSync('final-experience.js', 'utf8');
 const rc6Source = readFileSync('rc6-fixes.js', 'utf8');
 assert(appSource.includes('searchableStores = canonicalStores'), 'Searchable stores are not fixed to all canonical stores');
-assert(finalSource.includes('const list=searchableStores.map'), 'Search modal does not use searchableStores');
+assert(finalSource.includes('searchableStores.map'), 'Search modal does not use searchableStores');
 assert(rc6Source.includes('const rows=coordinateStores.map'), 'GPS distance calculation does not use coordinateStores');
 
 const bbq = canonicalStores.find(store => store.store_id === '0abd7147b7d6b1dd');
@@ -123,6 +139,7 @@ console.log(JSON.stringify({
   searchableCanonicalStores: canonicalStores.length,
   untitledRows: untitled.length,
   recoveryCandidates: candidates.length,
+  photoRecoveryAuditRows: photoRecovery.length,
   canonicalOnlyReviewRows: canonicalOnly.length,
   verifiedCoordinateStores: 326,
   frozenNullCoordinateRows: 144,

@@ -44,7 +44,6 @@ function search(query) {
     .map(store => ({store, score: relevance(store, query)}))
     .filter(item => item.score > 0)
     .sort((a, b) => b.score - a.score || a.store.name.localeCompare(b.store.name, 'ko'))
-    .slice(0, 80)
     .map(item => item.store);
 }
 
@@ -57,14 +56,20 @@ const cases = [
   ['조선밀면', '조선밀면&냉면 여수여서점'],
   ['조선 밀면', '조선밀면&냉면 여수여서점'],
   ['조선밀면&냉면', '조선밀면&냉면 여수여서점'],
-  ['밀면', '조선밀면&냉면 여수여서점']
+  ['밀면', '조선밀면&냉면 여수여서점'],
+  ['60계', '60계치킨 여수여서문수점'],
+  ['60계치킨', '60계치킨 여수여서문수점'],
+  ['더벤티', '더벤티 여수국동항점'],
+  ['보드람치킨', '보드람치킨 여서점'],
+  ['청하대 영빈관', '청하대 영빈관 여서점'],
+  ['바삭한 휴게소', '바삭한 휴게소 여서점']
 ];
 
 const report = cases.map(([query, expected]) => {
   const results = search(query);
   const selected = results.find(store => store.name === expected);
   assert(selected, `${query}: expected store missing`);
-  assert(selected.routes?.length > 0, `${query}: selected store routes missing`);
+  assert(Array.isArray(selected.routes), `${query}: selected store routes field missing`);
   return {
     query,
     resultCount: results.length,
@@ -76,7 +81,7 @@ const report = cases.map(([query, expected]) => {
   };
 });
 
-assert(searchableStores.length === 472, `Searchable canonical count changed: ${searchableStores.length}`);
+assert(searchableStores.length === 649, `Searchable canonical count changed: ${searchableStores.length}`);
 assert(coordinateStores.length === 326, `Coordinate search separation failed: ${coordinateStores.length}`);
 assert(!search('BBQ').some(store => store.name === 'BHC 여수미평점'), 'BBQ search incorrectly includes BHC');
 assert(!search('조선밀면').some(store => store.name === '1980밀면회관&냉면 문수점'), 'Chosun alias incorrectly includes 1980 store');

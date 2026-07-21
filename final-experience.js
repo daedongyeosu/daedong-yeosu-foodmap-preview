@@ -5,6 +5,7 @@ const FX_PHONE_URL='data/phone-order-runtime.json';
 const FX_BRAND_URL='data/brand-app-mapping.json';
 const FX_BRAND_SUPPLEMENT_URL='data/brand-app-missing-nine-supplement.json';
 const FX_HAPPY_URL='data/happyorder-channel-research.json';
+const FX_BRAND_PHOTO_POOL_URL='data/brand-photo-pools.json';
 const FX_BATTLE_SESSION='daedongNavalSuccessPlayedV1';
 const FX_ENTRY_SESSION='daedongEntryFireworkPlayedV1';
 const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
@@ -14,6 +15,7 @@ let fxBrandData={stores:[],brands:[]};
 let fxSupplement={storeMappings:[],directApps:[]};
 let fxHappyData={candidateStoreMappings:[],currentScreenBrands:[],categories:[]};
 let fxPhoneData={storeMappings:[]};
+let fxBrandPhotoPool={brands:{},assignments:{}};
 let fxRainState='clear';
 let fxTouchLocked=false;
 const fxBrandByStore=new Map();
@@ -31,7 +33,7 @@ function fxPlatform(){const ua=navigator.userAgent||'';if(/iphone|ipad|ipod/i.te
 function fxLowPower(){return Number(navigator.hardwareConcurrency||8)<=4||Number(navigator.deviceMemory||8)<=4;}
 function fxReduced(){return matchMedia('(prefers-reduced-motion: reduce)').matches;}
 function fxStoreById(id){return stores.find(store=>String(store.id)===String(id));}
-function fxPhoto(store){return photoResolver?.resolve(store)?.src||'';}
+function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]||photoResolver?.resolve(store)?.src||'';}
 function fxCardPhoto(store){const src=fxPhoto(store);return src?`<img src="${escapeHtml(src)}" alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
 function fxDistance(store){return state.coords&&store.lat!==null&&store.lng!==null?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;}
 
@@ -101,7 +103,8 @@ function fxAppAction(item,type){const platform=fxPlatform(),isHappy=type==='happ
 function fxEnhanceStoreDetail(store){const detail=$('#modalContent .store-detail');if(!detail)return;const brand=fxBrandByStore.get(String(store.id)),happy=fxHappyByStore.get(String(store.id));if(brand||happy){const target=detail.querySelector('.store-other-wrap')||detail.querySelector('.detail-personal-actions');const html=`<div class="brand-store-actions">${brand?fxAppAction(brand,'brand'):''}${happy?fxAppAction(happy,'happy'):''}</div>`;target?.insertAdjacentHTML('beforebegin',html);}const quick=detail.querySelectorAll('.detail-quick-link .quick-icon');quick.forEach(icon=>{const text=icon.parentElement.textContent;icon.innerHTML=text.includes('네이버')?fxSvg('map'):fxSvg('card');});const actions=detail.querySelector('.detail-personal-actions');if(actions){actions.classList.add('final-personal-actions');actions.insertAdjacentHTML('beforeend',`<button type="button" class="detail-personal-btn glass-action" data-share-store="${escapeHtml(store.id)}">공유하기</button>`);}}
 openStore=function(store){if(!fxVisible(store))return;fxOriginalOpenStore(store);fxEnhanceStoreDetail(store);};
 
-function fxSearchModal(query=''){const q=String(query).trim();const list=searchableStores.map(store=>({store,score:relevance(store,q)})).filter(item=>!q||item.score>0).sort((a,b)=>b.score-a.score||a.store.name.localeCompare(b.store.name,'ko')).slice(0,80);openModal(`<section class="app-browser search-popup"><h2 id="modalTitle">메뉴·가게명·동네 검색</h2><div class="searchbox"><input id="fxSearchInput" value="${escapeHtml(q)}" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="fxSearchRun" class="primary-btn" type="button">검색</button></div><div class="app-browser-list">${list.map(({store})=>`<button type="button" class="app-browser-card glass-action" data-search-store-id="${escapeHtml(store.id)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('')||'<p class="empty">검색 결과가 없습니다.</p>'}</div></section>`);setTimeout(()=>$('#fxSearchInput')?.focus(),20);}
+function fxDiversifySearchPhotos(items){const remaining=[...items],result=[];if(remaining.length)result.push(remaining.shift());while(remaining.length){const previous=fxPhoto(result.at(-1).store),counts=new Map();remaining.forEach(item=>counts.set(fxPhoto(item.store),(counts.get(fxPhoto(item.store))||0)+1));let index=-1,best=-1;remaining.forEach((item,i)=>{const photo=fxPhoto(item.store),count=counts.get(photo)||0;if(photo!==previous&&count>best){index=i;best=count;}});if(index<0)index=0;result.push(remaining.splice(index,1)[0]);}return result;}
+function fxSearchModal(query=''){const q=String(query).trim();const ranked=searchableStores.map(store=>({store,score:relevance(store,q)})).filter(item=>!q||item.score>0).sort((a,b)=>b.score-a.score||a.store.name.localeCompare(b.store.name,'ko'));const list=fxDiversifySearchPhotos(ranked);openModal(`<section class="app-browser search-popup"><h2 id="modalTitle">메뉴·가게명·동네 검색</h2><div class="searchbox"><input id="fxSearchInput" value="${escapeHtml(q)}" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="fxSearchRun" class="primary-btn" type="button">검색</button></div><div class="app-browser-list">${list.map(({store})=>`<button type="button" class="app-browser-card glass-action" data-search-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('')||'<p class="empty">검색 결과가 없습니다.</p>'}</div></section>`);setTimeout(()=>$('#fxSearchInput')?.focus(),20);}
 
 function fxRipple(x,y){if(fxReduced())return;for(let i=0;i<2;i++){const ring=document.createElement('i');ring.className=`ripple-ring ${i?'second':''}`;ring.style.left=`${x}px`;ring.style.top=`${y}px`;document.body.append(ring);setTimeout(()=>ring.remove(),480);}}
 function fxFormation(){const lane=$('#navalLane');if(!lane)return;lane.querySelectorAll('.turtle-ship').forEach(node=>node.remove());[['',7],['escort',2],['escort two',13]].forEach(([cls,bottom])=>{const ship=document.createElement('i');ship.className=`turtle-ship ${cls}`;ship.style.left='18px';ship.style.bottom=`${bottom}px`;lane.append(ship);setTimeout(()=>ship.remove(),680);});}
@@ -144,8 +147,8 @@ function fxInstallEvents(){
 }
 
 async function fxInitialize(){
- const [brand,supplement,happy,phone]=await Promise.all([fetchJson(FX_BRAND_URL,{stores:[],brands:[]}),fetchJson(FX_BRAND_SUPPLEMENT_URL,{storeMappings:[],directApps:[]}),fetchJson(FX_HAPPY_URL,{candidateStoreMappings:[],currentScreenBrands:[],categories:[]}),fetchJson(FX_PHONE_URL,{storeMappings:[]})]);
- fxBrandData=brand;fxSupplement=supplement;fxHappyData=happy;fxPhoneData=phone;fxBuildIndexes();
+ const [brand,supplement,happy,phone,brandPhotos]=await Promise.all([fetchJson(FX_BRAND_URL,{stores:[],brands:[]}),fetchJson(FX_BRAND_SUPPLEMENT_URL,{storeMappings:[],directApps:[]}),fetchJson(FX_HAPPY_URL,{candidateStoreMappings:[],currentScreenBrands:[],categories:[]}),fetchJson(FX_PHONE_URL,{storeMappings:[]}),fetchJson(FX_BRAND_PHOTO_POOL_URL,{brands:{},assignments:{}})]);
+ fxBrandData=brand;fxSupplement=supplement;fxHappyData=happy;fxPhoneData=phone;fxBrandPhotoPool=brandPhotos;fxBuildIndexes();
  APP_META.phone.icon='assets/ui/phone.svg';
  fxRenderRails();
  await fxInitWeather();
