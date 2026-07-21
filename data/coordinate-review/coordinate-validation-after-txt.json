@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "target": 470,
+    "txtNaverLinksTotal": 71,
+    "matchedCurrentUnresolved": 4,
+    "baselineVerified": 325,
+    "txtVerifiedAdded": 1,
+    "nameOrBranchMismatch": 1,
+    "addressExtractionFailed": 2,
+    "multipleResults": 0,
+    "outsideYeosu": 0,
+    "finalVerified": 326,
+    "finalUnresolved": 144,
+    "existingVerifiedChanged": 0,
+    "excludedUntitled": 1
+  }
+}

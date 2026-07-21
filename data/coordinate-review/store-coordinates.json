@@ -3962,13 +3962,14 @@
     "confidence": "exact"
   },
   "320d26d67b993c4a": {
-    "latitude": null,
-    "longitude": null,
-    "source": "kakao-geocoding",
-    "inputAddress": "아로이태국음식전문점 저장해두시면",
-    "matchedAddress": "",
-    "status": "manual-review",
-    "confidence": "ambiguous"
+    "latitude": 34.7527554235886,
+    "longitude": 127.70486359005,
+    "source": "txt-naver-map",
+    "naverMapUrl": "https://naver.me/xHgtSq5g",
+    "inputAddress": "전라남도 여수시 여문1로 46 2층",
+    "matchedAddress": "전남광주통합특별시 여수시 여문1로 46",
+    "status": "verified",
+    "confidence": "exact"
   },
   "ba870ddfedb99508": {
     "latitude": 34.767062231761,
