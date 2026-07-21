@@ -82,8 +82,10 @@ function rc3ShowAllOnHome({close = false} = {}) {
   requestAnimationFrame(() => window.scrollTo(0, pageScroll));
 }
 
-function rc3RailCard(store) {
-  return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action" data-rc3-rail-open="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-method">${escapeHtml(rc2RepresentativeMethod(store))}</span><button type="button" class="rail-order-button rc3-rail-order-button glass-action" data-rc3-rail-order="${escapeHtml(store.id)}">주문방법 보기</button></footer></article>`;
+function rc3RailCard(store, spec) {
+  const distance=spec?.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';
+  const locationLabel=spec?.kind==='near'?(distance||store.proximityLabel||''):'';
+  return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action" data-rc3-rail-open="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-method">${escapeHtml(rc2RepresentativeMethod(store))}</span><button type="button" class="rail-order-button rc3-rail-order-button glass-action" data-rc3-rail-order="${escapeHtml(store.id)}">주문방법 보기</button></footer></article>`;
 }
 
 fxRenderRails = function rc3RenderRails() {
@@ -99,7 +101,7 @@ fxRenderRails = function rc3RenderRails() {
   root.innerHTML = fxSelectedRails().map(spec => {
     const cards = rc2RailCandidates(spec, globallyUsed, 8);
     const allCandidates = fxRankStores(spec);
-    return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(rc3RailCard).join('') || '<p class="empty">추천 가게를 확인 중입니다.</p>'}</div></section>`;
+    return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">추천 가게를 확인 중입니다.</p>'}</div></section>`;
   }).join('');
 };
 

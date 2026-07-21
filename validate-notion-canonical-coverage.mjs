@@ -125,11 +125,13 @@ assert(sha256File('assets/yeosu-rc6/dolsan-day-mobile.webp') === '5d0eec4d433d72
 const appSource = readFileSync('app.js', 'utf8');
 const finalSource = readFileSync('final-experience.js', 'utf8');
 const rc6Source = readFileSync('rc6-fixes.js', 'utf8');
+const rc3Source = readFileSync('rc3-fixes.js', 'utf8');
 assert(appSource.includes('searchableStores = canonicalStores'), 'Searchable stores are not fixed to all canonical stores');
 assert(finalSource.includes('searchableStores.map'), 'Search modal does not use searchableStores');
 assert(rc6Source.includes('customerHasCoords&&rc6Verified(store)?haversine'), 'Verified-coordinate GPS distance calculation is missing');
 assert(rc6Source.includes('canonicalStores.map'), 'Coordinate-null neighborhood fallback does not use all canonical stores');
 assert(finalSource.includes('Number.isFinite(store.distance)'), 'Numeric distance display is not restricted to real calculated distances');
+assert(rc3Source.includes("spec?.kind==='near'&&Number.isFinite(store.distance)"), 'Visible nearby cards do not restrict km labels to real distances');
 
 const bbq = canonicalStores.find(store => store.store_id === '0abd7147b7d6b1dd');
 const chosun = canonicalStores.find(store => store.store_id === 'd86586aaef8454c9');
