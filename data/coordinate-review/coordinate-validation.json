@@ -1,10 +1,10 @@
 {
   "stats": {
     "target": 470,
-    "baselineVerified": 312,
+    "baselineVerified": 325,
     "excelSourceMatches": 60,
-    "excelMatchedUnresolved": 15,
-    "excelVerifiedAdded": 13,
+    "excelMatchedUnresolved": 2,
+    "excelVerifiedAdded": 0,
     "multipleResults": 2,
     "addressExtractionFailed": 0,
     "outsideYeosu": 0,
@@ -12,6 +12,8 @@
     "finalVerified": 325,
     "finalUnresolved": 145,
     "duplicateCoordinateGroups": 5,
+    "sharedAddressGroups": 21,
+    "sharedNaverUrlGroups": 0,
     "excludedUntitled": 1
   },
   "conflicts": [
@@ -126,6 +128,426 @@
       ]
     }
   ],
+  "sharedAddresses": [
+    {
+      "address": "전남광주통합특별시 여수시 예울마루로 37-53",
+      "stores": [
+        {
+          "store_id": "e53db0006339f439",
+          "name": "60계치킨 웅천점",
+          "latitude": 34.74618758293959,
+          "longitude": 127.67077176135372
+        },
+        {
+          "store_id": "d0400d97c15c0a02",
+          "name": "공차 웅천점",
+          "latitude": 34.74628101653561,
+          "longitude": 127.670992017829
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 여서1로 25",
+      "stores": [
+        {
+          "store_id": "a0f6eb8bcf768489",
+          "name": "79대포 여서점",
+          "latitude": 34.7507031043982,
+          "longitude": 127.70126045662
+        },
+        {
+          "store_id": "4c6d5dcf82e3e56b",
+          "name": "보드람치킨 여서점",
+          "latitude": 34.75070045693684,
+          "longitude": 127.70125060532976
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 웅천로 19-35",
+      "stores": [
+        {
+          "store_id": "800e9f2ab3c24e8f",
+          "name": "BHC 여수웅천점",
+          "latitude": 34.74873812945754,
+          "longitude": 127.67889832715304
+        },
+        {
+          "store_id": "2ec1cf195195db03",
+          "name": "버거리 웅천점",
+          "latitude": 34.748708509187,
+          "longitude": 127.67879488351
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 무선중앙로 65",
+      "stores": [
+        {
+          "store_id": "2ce5b80012bc506a",
+          "name": "가마치통닭 무선점",
+          "latitude": 34.77276570081576,
+          "longitude": 127.65110298299592
+        },
+        {
+          "store_id": "da66e7ae0cdf1907",
+          "name": "피자스쿨 여수무선점",
+          "latitude": 34.77277709715348,
+          "longitude": 127.65116315429569
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 돌산읍 강남8길 34",
+      "stores": [
+        {
+          "store_id": "31716733c2083fed",
+          "name": "가장맛있는족발 여수돌산점",
+          "latitude": 34.720332894567534,
+          "longitude": 127.74959657981277
+        },
+        {
+          "store_id": "32f005992963d474",
+          "name": "굽네치킨&피자 돌산점",
+          "latitude": 34.72034852769728,
+          "longitude": 127.74969279031694
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 예울마루로 37-26",
+      "stores": [
+        {
+          "store_id": "005382cbb06108d3",
+          "name": "가장맛있는족발 여수웅천점",
+          "latitude": 34.7465543756456,
+          "longitude": 127.669999699213
+        },
+        {
+          "store_id": "6126fa948ce536e6",
+          "name": "교촌치킨 웅천점",
+          "latitude": 34.74681444943689,
+          "longitude": 127.66988134586269
+        },
+        {
+          "store_id": "d3dbc3f83e7b9aed",
+          "name": "여수강촌토종닭숯불구이 웅천본점",
+          "latitude": 34.7465543756456,
+          "longitude": 127.669999699213
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 이순신광장로 159",
+      "stores": [
+        {
+          "store_id": "72747cfe04586176",
+          "name": "공차 여수해양공원점",
+          "latitude": 34.7373933085575,
+          "longitude": 127.741327204158
+        },
+        {
+          "store_id": "40673a86169d791f",
+          "name": "노랑통닭 여수밤바다점(중앙동)",
+          "latitude": 34.73733315843988,
+          "longitude": 127.74150934547491
+        },
+        {
+          "store_id": "4990a1c1dc208fce",
+          "name": "더벤티 여수해양공원점(중앙동)",
+          "latitude": 34.7373792473013,
+          "longitude": 127.741045690128
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 박람회길 46",
+      "stores": [
+        {
+          "store_id": "b115c4e54c35d82e",
+          "name": "교촌치킨 덕충점",
+          "latitude": 34.7528841557547,
+          "longitude": 127.74340883388946
+        },
+        {
+          "store_id": "ef6e7bfe76e0dbd1",
+          "name": "국수나무 여수엑스포점",
+          "latitude": 34.75318010504269,
+          "longitude": 127.74291784319585
+        },
+        {
+          "store_id": "759915faca1feb20",
+          "name": "다기야 엑스포점",
+          "latitude": 34.7533258137106,
+          "longitude": 127.743087991811
+        },
+        {
+          "store_id": "9d7d7e2f99658a9c",
+          "name": "메가MGC커피 여수엑스포점",
+          "latitude": 34.753219029400874,
+          "longitude": 127.74289088852655
+        },
+        {
+          "store_id": "e2645d79ef555a24",
+          "name": "비비큐 여수엑스포점",
+          "latitude": 34.7533258137106,
+          "longitude": 127.743087991811
+        },
+        {
+          "store_id": "cfd74ce112f2b187",
+          "name": "조선다방 엑스포점",
+          "latitude": 34.753166058559096,
+          "longitude": 127.74300399568766
+        },
+        {
+          "store_id": "6059e7ea81c9f4d1",
+          "name": "파리바게뜨 여수엑스포점",
+          "latitude": 34.75322356948299,
+          "longitude": 127.74288546853478
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 여문문화2길 42",
+      "stores": [
+        {
+          "store_id": "84fc553896d0b051",
+          "name": "교촌치킨 문수점",
+          "latitude": 34.75311865663297,
+          "longitude": 127.70238829920486
+        },
+        {
+          "store_id": "e6ac7de74abcd1d9",
+          "name": "신전떡볶이 문수점",
+          "latitude": 34.7530626153164,
+          "longitude": 127.702415127997
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 여서1로 70",
+      "stores": [
+        {
+          "store_id": "99ade7376cceea13",
+          "name": "교촌치킨 여서점",
+          "latitude": 34.75295695419417,
+          "longitude": 127.70510087505544
+        },
+        {
+          "store_id": "4289ad6217815b70",
+          "name": "메가MGC커피 여서사거리점",
+          "latitude": 34.7529557766948,
+          "longitude": 127.705101847961
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 신월로 672",
+      "stores": [
+        {
+          "store_id": "404f1649d53b97eb",
+          "name": "김밥천국 국동점",
+          "latitude": 34.73084109739785,
+          "longitude": 127.71761435936128
+        },
+        {
+          "store_id": "82b2cd167c1e053b",
+          "name": "조선다방 국동점",
+          "latitude": 34.7308751622601,
+          "longitude": 127.71764631713731
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 여서로 181",
+      "stores": [
+        {
+          "store_id": "16669581b8dc378d",
+          "name": "땅스부대찌개 여서점",
+          "latitude": 34.7506875964734,
+          "longitude": 127.701605429486
+        },
+        {
+          "store_id": "fd8d24a45e887938",
+          "name": "땅스즉석떡볶이 여서점",
+          "latitude": 34.7498180527881,
+          "longitude": 127.70256894352
+        },
+        {
+          "store_id": "aef73537733e9387",
+          "name": "멕시카나치킨 여서점",
+          "latitude": 34.75050972624541,
+          "longitude": 127.70150017584936
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 박람회길 38",
+      "stores": [
+        {
+          "store_id": "03f6d7c59d6d1a45",
+          "name": "뚜레쥬르 여수엑스포타운점",
+          "latitude": 34.75266276090419,
+          "longitude": 127.74364711700032
+        },
+        {
+          "store_id": "61791dbea82168f1",
+          "name": "역전할머니맥주 덕충점",
+          "latitude": 34.75268778512429,
+          "longitude": 127.74368228929431
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 구봉길 79",
+      "stores": [
+        {
+          "store_id": "24420dd7743c89a6",
+          "name": "라인반점 국동점",
+          "latitude": 34.7346219951981,
+          "longitude": 127.712981731045
+        },
+        {
+          "store_id": "f25d8111c5d1b135",
+          "name": "멕시카나치킨 국동점",
+          "latitude": 34.7340989293353,
+          "longitude": 127.713287005345
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 어항로 34",
+      "stores": [
+        {
+          "store_id": "adcbd0b7f13946a4",
+          "name": "삼해수산마차 국동점",
+          "latitude": 34.7312252272178,
+          "longitude": 127.721711000799
+        },
+        {
+          "store_id": "67d28f42d21c125f",
+          "name": "서희국밥&족발 국동본점",
+          "latitude": 34.7311793229707,
+          "longitude": 127.721699683322
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 신월로 655",
+      "stores": [
+        {
+          "store_id": "fe356412007caf0c",
+          "name": "여수튀김 국동점",
+          "latitude": 34.7303573677126,
+          "longitude": 127.714830919018
+        },
+        {
+          "store_id": "44a0e464d6d22c38",
+          "name": "중앙돈까스 국동점",
+          "latitude": 34.731021274463906,
+          "longitude": 127.71717262931807
+        },
+        {
+          "store_id": "e9dc60119d9cdfb5",
+          "name": "파리바게뜨 여수국동점",
+          "latitude": 34.731001489703495,
+          "longitude": 127.71716481552508
+        },
+        {
+          "store_id": "ef2eacdbb6233f97",
+          "name": "피자스쿨 여수국동점",
+          "latitude": 34.7308424902105,
+          "longitude": 127.717071727605
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 여서1로 51",
+      "stores": [
+        {
+          "store_id": "2cd9e5b3f51e62e6",
+          "name": "예향정 여서점",
+          "latitude": 34.752512254671764,
+          "longitude": 127.70328416785115
+        },
+        {
+          "store_id": "3d91b86995f619d6",
+          "name": "프랭크버거 여수여서점",
+          "latitude": 34.75240169055337,
+          "longitude": 127.70338698224347
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 여문문화2길 18",
+      "stores": [
+        {
+          "store_id": "bc6152833cd076f5",
+          "name": "전골의법칙 얼큰한곱창전골 문수점",
+          "latitude": 34.7541676742361,
+          "longitude": 127.704577434307
+        },
+        {
+          "store_id": "a6ff0bcfc0afe5b6",
+          "name": "화끈하게매운 핫불닭발&오돌뼈 여서점",
+          "latitude": 34.7541676742361,
+          "longitude": 127.704577434307
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 문수로 98",
+      "stores": [
+        {
+          "store_id": "23e36eb3741524aa",
+          "name": "철웅이네 입큰 붕어빵 문수점",
+          "latitude": 34.754777511352,
+          "longitude": 127.705581935843
+        },
+        {
+          "store_id": "b8c2dcaa9ef57af5",
+          "name": "행복분식 문수점",
+          "latitude": 34.754777511352,
+          "longitude": 127.705581935843
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 여문2로 73",
+      "stores": [
+        {
+          "store_id": "9a8243a043f3735c",
+          "name": "치킨아이 문수점",
+          "latitude": 34.7546518370846,
+          "longitude": 127.693123436669
+        },
+        {
+          "store_id": "f9a6f0eb9fba0696",
+          "name": "통뼈감자탕 문수점",
+          "latitude": 34.754607720429966,
+          "longitude": 127.69311433079834
+        }
+      ]
+    },
+    {
+      "address": "전남광주통합특별시 여수시 여문문화길 51",
+      "stores": [
+        {
+          "store_id": "dba6beeeb774318f",
+          "name": "베트남쌀국수 123 ZO",
+          "latitude": 34.7522423295259,
+          "longitude": 127.702323979743
+        },
+        {
+          "store_id": "75dbdaa6383cd49c",
+          "name": "생생연어 여서점",
+          "latitude": 34.7522423295259,
+          "longitude": 127.702323979743
+        }
+      ]
+    }
+  ],
+  "sharedNaverUrls": [],
   "stores": [
     {
       "store_id": "3f441930b8d18783",
@@ -334,16 +756,14 @@
     {
       "store_id": "718031989449bc32",
       "name": "가장맛있는족발 여수여서점",
-      "baselineStatus": "manual-review",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 77"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "005382cbb06108d3",
       "name": "가장맛있는족발 여수웅천점",
-      "baselineStatus": "manual-review",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-26"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "52f5738519110900",
@@ -636,9 +1056,8 @@
     {
       "store_id": "b717d583801d3f04",
       "name": "깐깐한족발 여수문수점",
-      "baselineStatus": "manual-review",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 여문1로 60"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "f20eb017620ccc33",
@@ -1285,9 +1704,8 @@
     {
       "store_id": "2b78b30bde243ae6",
       "name": "바른보쌈1990 여수웅천점",
-      "baselineStatus": "search-failed",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 웅천로 19-14"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "51ed482a660b8247",
@@ -1892,9 +2310,8 @@
     {
       "store_id": "d322f9f9a91b0bdb",
       "name": "원할머니보쌈족발 여수여천점",
-      "baselineStatus": "manual-review",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 선소로 35"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "c8633f33e72e2e0a",
@@ -2103,9 +2520,8 @@
     {
       "store_id": "5768a9d8a72502ef",
       "name": "조선제일 감자탕&뼈해장국 여서점",
-      "baselineStatus": "search-failed",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 여문1로 54"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "82fb6c389b7aced5",
@@ -2200,9 +2616,8 @@
     {
       "store_id": "83a409add1950550",
       "name": "참 맛있는 족발 여수본점(신기동)",
-      "baselineStatus": "search-failed",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 망마로 106"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "3c62ab40bf66608e",
@@ -2585,9 +3000,8 @@
     {
       "store_id": "e16359de9292f582",
       "name": "피자알볼로 여수엑스포점(수정동)",
-      "baselineStatus": "search-failed",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 266"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "afb901f3a32de6e8",
@@ -2616,9 +3030,8 @@
     {
       "store_id": "7b221aa6623bd0a2",
       "name": "하이오커피 여수신월국동항점",
-      "baselineStatus": "manual-review",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 신월1길 15-5"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "4621df767ea3905a",
@@ -2647,9 +3060,8 @@
     {
       "store_id": "8f8486e4cd5aaec3",
       "name": "항아리치킨&깐풍기 봉산점",
-      "baselineStatus": "search-failed",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 봉산남4길 20-1"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "9b760748be6ee430",
@@ -2774,9 +3186,8 @@
     {
       "store_id": "ba870ddfedb99508",
       "name": "본죽&비빔밥 여수미평점",
-      "baselineStatus": "manual-review",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 둔덕2길 6-4"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "ddc27f852308889a",
@@ -2793,9 +3204,8 @@
     {
       "store_id": "08e5e26653436fef",
       "name": "알토랑반찬 여수문수본점",
-      "baselineStatus": "search-failed",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 문수5길 48"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "768e4fe8150f5039",
@@ -2806,9 +3216,8 @@
     {
       "store_id": "0ad5341dc696d4f1",
       "name": "맛있는 반찬",
-      "baselineStatus": "search-failed",
-      "excelStatus": "verified",
-      "matchedAddress": "전남광주통합특별시 여수시 문수5길 42"
+      "baselineStatus": "verified",
+      "excelStatus": "verified"
     },
     {
       "store_id": "d409f6d9118b7bad",
