@@ -720,7 +720,8 @@ function chooseAddressBase(value, extra={}) { addressDraft={...(addressDraft||{}
 function commitAddressSelection() {
   const base=String(addressDraft?.address || $('#addressSearchInput')?.value || '').trim(); if(!base){$('#addressSearchInput')?.focus();return;}
   const detail=String($('#addressDetailInput')?.value||'').trim(), full=[base,detail].filter(Boolean).join(' '), coords=addressDraft?.coords||null, sortByDistance=Boolean(addressDraft?.sortByDistance&&coords);
-  const item={type:addressDraft?.type||'recent',address:base,detail,label:full,area:addressDraft?.area||addressAreaFor(base),coords,sortByDistance,createdAt:new Date().toISOString()};
+  const inferredArea=addressAreaFor(base), area=inferredArea!=='여수시 전체'?inferredArea:(addressDraft?.area||'여수시 전체');
+  const item={type:addressDraft?.type||'recent',address:base,detail,label:full,area,coords,sortByDistance,createdAt:new Date().toISOString()};
   writeLocalJson(ADDRESS_KEY,item); saveAddressBook([item,...getAddressBook().filter(old=>old.label!==item.label||old.type!==item.type)]);
   state.location=item.area||'여수시 전체'; state.addressLabel=item.label; state.coords=coords; state.sortByDistance=sortByDistance;
   saveLocationState(item.label,coords,sortByDistance,item); $('#locationText').textContent=shortAddress(item.label); hardClose(); setTimeout(()=>renderStores({scroll:true,resetCount:true}),60);
