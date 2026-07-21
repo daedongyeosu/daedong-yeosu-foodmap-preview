@@ -1,0 +1,1002 @@
+{
+  "d09fa15da80ff88e": {
+    "roadAddress": "전남광주 여수시 봉산벅수길 24",
+    "jibunAddress": "전남광주 여수시 봉강동 430",
+    "notionPageId": "396da158-dd2a-80e9-b72f-ce35cca211b9",
+    "naverPlaceId": "1745631098",
+    "sourceStoreName": "1989마라탕 봉강점",
+    "matchedPlaceName": "1989마라탕 여수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "275f52997bdd2755": {
+    "roadAddress": "전남광주 여수시 허문정2길 18",
+    "jibunAddress": "전남광주 여수시 문수동 755-1",
+    "notionPageId": "69eda158-dd2a-8279-a234-81d47094d4fd",
+    "naverPlaceId": "16917525",
+    "sourceStoreName": "30년전통 할매손곰탕 문수점",
+    "matchedPlaceName": "할매손곰탕",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "d7674e8acedd94b2": {
+    "roadAddress": "전남광주 여수시 좌수영로 39",
+    "jibunAddress": "전남광주 여수시 광무동 152-1",
+    "notionPageId": "27cda158-dd2a-83bd-abe8-014583e5f483",
+    "naverPlaceId": "1683908944",
+    "sourceStoreName": "60계치킨 충무점",
+    "matchedPlaceName": "60계치킨 여수충무점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "ecff9d7b88d1c8fb": {
+    "roadAddress": "전남광주 여수시 신월로 748-1",
+    "jibunAddress": "전남광주 여수시 봉산동 251-3",
+    "notionPageId": "f90da158-dd2a-8204-a0cf-8168a6103fef",
+    "naverPlaceId": "330058329",
+    "sourceStoreName": "BHC 여수국동점",
+    "matchedPlaceName": "BHC치킨 여수국동점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "043d814d4c3c1e13": {
+    "roadAddress": "전남광주 여수시 문수로 15",
+    "jibunAddress": "전남광주 여수시 문수동 783-5",
+    "notionPageId": "e09da158-dd2a-8230-8ead-8148e5dc4a1e",
+    "naverPlaceId": "1217632422",
+    "sourceStoreName": "BHC 여수문수점",
+    "matchedPlaceName": "BHC치킨 여수문수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "5f9d2fdf4666eb73": {
+    "roadAddress": "전남광주 여수시 상암로 16",
+    "jibunAddress": "전남광주 여수시 둔덕동 266",
+    "notionPageId": "2a2da158-dd2a-8315-83bc-01029876c0e8",
+    "naverPlaceId": "806399447",
+    "sourceStoreName": "BHC 여수봉계둔덕점",
+    "matchedPlaceName": "BHC치킨 여수봉계둔덕점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "08c9054aa0115345": {
+    "roadAddress": "전남광주 여수시 공화남3길 19-1",
+    "jibunAddress": "전남광주 여수시 공화동 658",
+    "notionPageId": "f41da158-dd2a-82bb-a232-014746c7cb4c",
+    "naverPlaceId": "21880638",
+    "sourceStoreName": "BHC 여수엑스포광장점",
+    "matchedPlaceName": "BHC치킨 여수엑스포광장점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "fb3ad6747507444d": {
+    "roadAddress": "전남광주 여수시 문수로 76",
+    "jibunAddress": "전남광주 여수시 문수동 122-6",
+    "notionPageId": "6e6da158-dd2a-820b-919c-0189ea5be3ad",
+    "naverPlaceId": "1060764925",
+    "sourceStoreName": "BHC 여수여서점",
+    "matchedPlaceName": "BHC치킨 여서점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "c443f150b874d4d2": {
+    "roadAddress": "전남광주 여수시 여문문화1길 13 1층",
+    "jibunAddress": "전남광주 여수시 여서동 220-8",
+    "notionPageId": "614da158-dd2a-83fa-812e-81a0d150210b",
+    "naverPlaceId": "1949962733",
+    "sourceStoreName": "LA통닭&포차 여서본점",
+    "matchedPlaceName": "LA통닭&포차",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "adf7b4ab161ec9d2": {
+    "roadAddress": "전남광주 여수시 만성로 85 1층 립앤테이블",
+    "jibunAddress": "전남광주 여수시 미평동 785",
+    "notionPageId": "0a5da158-dd2a-8246-8911-81acf8d17fd4",
+    "naverPlaceId": "1020389369",
+    "sourceStoreName": "RIB&TABLE 바베큐립 전문점(미평동)",
+    "matchedPlaceName": "립앤테이블",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "815c0895b7dcfaa8": {
+    "roadAddress": "전남광주 여수시 덕충3길 6 상가동 104호",
+    "jibunAddress": "전남광주 여수시 덕충동 1744-1",
+    "notionPageId": "e57da158-dd2a-8350-9cde-81324329fd0f",
+    "naverPlaceId": "1233665407",
+    "sourceStoreName": "계동치킨 덕충점",
+    "matchedPlaceName": "계동치킨 덕충점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "72747cfe04586176": {
+    "roadAddress": "전남광주 여수시 이순신광장로 159 골드비치 1동 103호",
+    "jibunAddress": "전남광주 여수시 중앙동 243",
+    "notionPageId": "fcada158-dd2a-82cc-aa41-0177b2b9b199",
+    "naverPlaceId": "58299591",
+    "sourceStoreName": "공차 여수해양공원점",
+    "matchedPlaceName": "공차 여수해양공원점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "59785990d2abe3e2": {
+    "roadAddress": "전남광주 여수시 중앙로 40-1 1층",
+    "jibunAddress": "전남광주 여수시 교동 651-3",
+    "notionPageId": "4b0da158-dd2a-8255-91f4-01fd8d0d6254",
+    "naverPlaceId": "1145213744",
+    "sourceStoreName": "교동야식 교동점",
+    "matchedPlaceName": "교동야식",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "c97c66bc78a649ea": {
+    "roadAddress": "전남광주 여수시 쌍봉로 361 연세소아과의원",
+    "jibunAddress": "전남광주 여수시 둔덕동 434-7",
+    "notionPageId": "643da158-dd2a-835b-8582-01cf0d84f0ae",
+    "naverPlaceId": "11801994",
+    "sourceStoreName": "교촌치킨 둔덕점",
+    "matchedPlaceName": "교촌치킨 둔덕점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "116a9f7b45941e78": {
+    "roadAddress": "전남광주 여수시 여서동2길 5",
+    "jibunAddress": "전남광주 여수시 여서동 384",
+    "notionPageId": "03eda158-dd2a-835d-b17b-0173770efb5c",
+    "naverPlaceId": "2044070136",
+    "sourceStoreName": "국빈 중화요리전문점(여서동)",
+    "matchedPlaceName": "국빈",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "0df58cf68356ebff": {
+    "roadAddress": "전남광주 여수시 충무로 58-17",
+    "jibunAddress": "전남광주 여수시 충무동 463-1",
+    "notionPageId": "0c4da158-dd2a-835d-8d3a-01c3db12d045",
+    "naverPlaceId": "33980100",
+    "sourceStoreName": "굽네치킨&피자 관문점",
+    "matchedPlaceName": "굽네치킨 여수관문점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "d556f1478e479e75": {
+    "roadAddress": "전남광주 여수시 대교로 26 굽네치킨 봉산국동점",
+    "jibunAddress": "전남광주 여수시 봉산동 248-1",
+    "notionPageId": "7fada158-dd2a-8270-808f-81941251b01d",
+    "naverPlaceId": "13395207",
+    "sourceStoreName": "굽네치킨&피자 봉산국동점",
+    "matchedPlaceName": "굽네치킨 여수봉산국동점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "8f3251e2788d4931": {
+    "roadAddress": "전남광주 여수시 여서2로 25",
+    "jibunAddress": "전남광주 여수시 여서동 239-7",
+    "notionPageId": "c4eda158-dd2a-832b-b279-8141e9efc304",
+    "naverPlaceId": "2144586385",
+    "sourceStoreName": "금마차 여서점",
+    "matchedPlaceName": "금마차",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "cc5b3b36c8737601": {
+    "roadAddress": "전남광주 여수시 동문로 70-1",
+    "jibunAddress": "전남광주 여수시 관문동 681-3",
+    "notionPageId": "4a8da158-dd2a-83bd-8349-01d0b570a32e",
+    "naverPlaceId": "1310121031",
+    "sourceStoreName": "김밥나라 관문점",
+    "matchedPlaceName": "김밥나라 관문점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "d60f32bbdaa13cf5": {
+    "roadAddress": "전남광주 여수시 봉산남7길 10-1 1층 카페빈",
+    "jibunAddress": "전남광주 여수시 봉산동 275-2",
+    "notionPageId": "e90da158-dd2a-839a-918d-814becaffbf4",
+    "naverPlaceId": "1356701168",
+    "sourceStoreName": "까페빈 봉산점",
+    "matchedPlaceName": "카페빈",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "4e44728a4ea3bcef": {
+    "roadAddress": "전남광주 여수시 봉산남8길 14",
+    "jibunAddress": "전남광주 여수시 봉산동 278-21",
+    "notionPageId": "7e0da158-dd2a-824c-a835-81953fab0ffa",
+    "naverPlaceId": "16887821",
+    "sourceStoreName": "꽃게장&갈치조림 전문점 늘푸른식당 봉산점",
+    "matchedPlaceName": "늘푸른식당 게장백반",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "da59f19c1590082f": {
+    "roadAddress": "전남광주 여수시 신월로 732-3 1층",
+    "jibunAddress": "전남광주 여수시 봉산동 251-13",
+    "notionPageId": "9e6da158-dd2a-8261-a70e-015b254c7a08",
+    "naverPlaceId": "1370998177",
+    "sourceStoreName": "나능이 능이버섯백숙 봉산점",
+    "matchedPlaceName": "나능이능이버섯백숙 봉산점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "4e877826c5a4b649": {
+    "roadAddress": "전남광주 여수시 여문문화길 68-1 낙지천국",
+    "jibunAddress": "전남광주 여수시 문수동 189-7",
+    "notionPageId": "407da158-dd2a-82a8-8b5f-810baa3a5b7b",
+    "naverPlaceId": "1111237693",
+    "sourceStoreName": "낙지천국 문수점",
+    "matchedPlaceName": "낙지천국",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "b91093385f1baa6a": {
+    "roadAddress": "전남광주 여수시 교동시장3길 16-2",
+    "jibunAddress": "전남광주 여수시 교동 626-43",
+    "notionPageId": "1c7da158-dd2a-82c4-b90f-8120794dc31a",
+    "naverPlaceId": "1180223321",
+    "sourceStoreName": "내가 끓였찌 여서점",
+    "matchedPlaceName": "돌산텃밭김치",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "f5f72c3d9bbf39b6": {
+    "roadAddress": "전남광주 여수시 봉산1로 42 내조국국밥",
+    "jibunAddress": "전남광주 여수시 봉산동 256-16",
+    "notionPageId": "dd8da158-dd2a-826d-8225-81e5d011dc38",
+    "naverPlaceId": "1095380985",
+    "sourceStoreName": "내조국 국밥 봉산점",
+    "matchedPlaceName": "내조국국밥 봉산점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "711596e9d930aab0": {
+    "roadAddress": "전남광주 여수시 구봉길 49",
+    "jibunAddress": "전남광주 여수시 국동 1110-10",
+    "notionPageId": "842da158-dd2a-8268-aeb3-81be4aec06a6",
+    "naverPlaceId": "1953367275",
+    "sourceStoreName": "냠냠치킨 국동점",
+    "matchedPlaceName": "냠냠치킨",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "3a5417b7d9525787": {
+    "roadAddress": "전남광주 여수시 여문1로 46-1",
+    "jibunAddress": "전남광주 여수시 여서동 227",
+    "notionPageId": "853da158-dd2a-8215-aeaa-01d87fe06455",
+    "naverPlaceId": "1602404191",
+    "sourceStoreName": "노랑고래 찹쌀꽈배기 여수여서직영점",
+    "matchedPlaceName": "노랑고래 찹쌀꽈배기 여수 여서동점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "759915faca1feb20": {
+    "roadAddress": "전남광주 여수시 박람회길 46 상가 120호 다기야엑스포점",
+    "jibunAddress": "전남광주 여수시 덕충동 2041",
+    "notionPageId": "88fda158-dd2a-8386-8ea2-816520537f9c",
+    "naverPlaceId": "1935446238",
+    "sourceStoreName": "다기야 엑스포점",
+    "matchedPlaceName": "다기야 엑스포점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "a5916a5a02aab661": {
+    "roadAddress": "전남광주 여수시 신월로 778-1",
+    "jibunAddress": "전남광주 여수시 봉강동 417-1",
+    "notionPageId": "e61da158-dd2a-8254-af7e-816db7862d71",
+    "naverPlaceId": "1887554290",
+    "sourceStoreName": "닥엔돈스 쪽갈비 봉강점",
+    "matchedPlaceName": "닥엔돈스 여수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "36d31c0f01bd0e9a": {
+    "roadAddress": "전남광주 여수시 문수6길 29 1층",
+    "jibunAddress": "전남광주 여수시 문수동 782-9",
+    "notionPageId": "989da158-dd2a-82d6-8a96-01e67c87a61d",
+    "naverPlaceId": "1006907441",
+    "sourceStoreName": "닭씨네 닭강정 여수점(문수동)",
+    "matchedPlaceName": "닭씨네닭강정",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "f1b6def61b82cc48": {
+    "roadAddress": "전남광주 여수시 서교8길 14 S001동 1층 14호",
+    "jibunAddress": "전남광주 여수시 서교동 140-1",
+    "notionPageId": "efcda158-dd2a-8202-b32a-01c697d16d9d",
+    "naverPlaceId": "2091468119",
+    "sourceStoreName": "담분식 서교점",
+    "matchedPlaceName": "담분식",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "86df23f2e79b3bb8": {
+    "roadAddress": "전남광주 여수시 충무로 54-9",
+    "jibunAddress": "전남광주 여수시 충무동 493",
+    "notionPageId": "1d3da158-dd2a-8233-98cb-01abdc3493fb",
+    "naverPlaceId": "1561413671",
+    "sourceStoreName": "도담식당 충무동점",
+    "matchedPlaceName": "도담",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "20c4d1a484e47732": {
+    "roadAddress": "전남광주 여수시 여문문화2길 15",
+    "jibunAddress": "전남광주 여수시 문수동 115-1",
+    "notionPageId": "312da158-dd2a-83cb-beec-0177457d3983",
+    "naverPlaceId": "19359772",
+    "sourceStoreName": "돈쌈대패 문수점",
+    "matchedPlaceName": "돈쌈",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "3bb130edaf8e75fe": {
+    "roadAddress": "전남광주 여수시 교동시장3길 16-2",
+    "jibunAddress": "전남광주 여수시 교동 626-43",
+    "notionPageId": "34dda158-dd2a-83d0-a8fd-01728f28516c",
+    "naverPlaceId": "1180223321",
+    "sourceStoreName": "돌산텃밭김치·반찬 교동점",
+    "matchedPlaceName": "돌산텃밭김치",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "68ba9ebef219905e": {
+    "roadAddress": "전남광주 여수시 문수로 22",
+    "jibunAddress": "전남광주 여수시 문수동 191",
+    "notionPageId": "c17da158-dd2a-83ef-9885-81ef77c5ae29",
+    "naverPlaceId": "1866699462",
+    "sourceStoreName": "두마리찜닭 두찜 여수문수점",
+    "matchedPlaceName": "두찜 여수 문수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "720324ed8ea3a46e": {
+    "roadAddress": "전남광주 여수시 동문로 102 1층",
+    "jibunAddress": "전남광주 여수시 공화동 1047",
+    "notionPageId": "d03da158-dd2a-8373-921d-01d7a2c1f5de",
+    "naverPlaceId": "1350463932",
+    "sourceStoreName": "두마리찜닭 두찜 여수엑스포점",
+    "matchedPlaceName": "두찜 여수엑스포점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "d9a3b065f1cd0cf8": {
+    "roadAddress": "전남광주 여수시 예울마루로 37-33 1층 106호",
+    "jibunAddress": "전남광주 여수시 웅천동 1696-4",
+    "notionPageId": "cb8da158-dd2a-8262-a4e2-81334e516974",
+    "naverPlaceId": "1921885898",
+    "sourceStoreName": "두마리찜닭 두찜 여수웅천점",
+    "matchedPlaceName": "두찜 여수웅천점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "d6e14895fe474fb3": {
+    "roadAddress": "전남광주 여수시 무선중앙로 76",
+    "jibunAddress": "전남광주 여수시 선원동 1248-4",
+    "notionPageId": "b57da158-dd2a-833d-99dd-01cf3be85a6a",
+    "naverPlaceId": "21568643",
+    "sourceStoreName": "드피치 피자&치킨 선원동점",
+    "matchedPlaceName": "드피치 여천1호점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "fd8d24a45e887938": {
+    "roadAddress": "전남광주 여수시 여서로 181 상가4동 1층 1호",
+    "jibunAddress": "전남광주 여수시 여서동 479",
+    "notionPageId": "c18da158-dd2a-8223-86f6-017e5a3b4f71",
+    "naverPlaceId": "1994454669",
+    "sourceStoreName": "땅스즉석떡볶이 여서점",
+    "matchedPlaceName": "땅스부대찌개 여수여서점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "24420dd7743c89a6": {
+    "roadAddress": "전남광주 여수시 구봉길 79",
+    "jibunAddress": "전남광주 여수시 국동 857",
+    "notionPageId": "88eda158-dd2a-8337-83d8-01a9b1814030",
+    "naverPlaceId": "1186364133",
+    "sourceStoreName": "라인반점 국동점",
+    "matchedPlaceName": "라인반점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "dedded076c21a785": {
+    "roadAddress": "전남광주 여수시 신월로 710 1층",
+    "jibunAddress": "전남광주 여수시 봉산동 269-25",
+    "notionPageId": "a1dda158-dd2a-83d9-95e2-0119b7e6d9c5",
+    "naverPlaceId": "2037901316",
+    "sourceStoreName": "마라시대 마라탕 봉산점",
+    "matchedPlaceName": "마라시대 여수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "a3297f2e48bf9793": {
+    "roadAddress": "전남광주 여수시 웅천남8로 23 216동 1층 104호",
+    "jibunAddress": "전남광주 여수시 웅천동 1889-1",
+    "notionPageId": "14fda158-dd2a-8312-b172-014bf936c1e7",
+    "naverPlaceId": "497163269",
+    "sourceStoreName": "마형제 족발보쌈 학동점",
+    "matchedPlaceName": "BBQ치킨 여수웅천점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "c99ad2ba715a5abb": {
+    "roadAddress": "전남광주 여수시 신월로 726 만석군 노란색집",
+    "jibunAddress": "전남광주 여수시 봉산동 268-4",
+    "notionPageId": "4ceda158-dd2a-82a5-b0da-816fcef69796",
+    "naverPlaceId": "2040888728",
+    "sourceStoreName": "만석군 봉산점",
+    "matchedPlaceName": "만석군",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "5bc1cef8362365a5": {
+    "roadAddress": "전남광주 여수시 수정3길 11-8 1층 밥장인",
+    "jibunAddress": "전남광주 여수시 수정동 609-3",
+    "notionPageId": "ef3da158-dd2a-8397-a0c4-8175bdacf134",
+    "naverPlaceId": "1226417535",
+    "sourceStoreName": "매운맛 땡길때 밥장인 엑스포점",
+    "matchedPlaceName": "밥장인 여수엑스포점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "8dfdc5de41e3eca9": {
+    "roadAddress": "전남광주 여수시 망마로 9",
+    "jibunAddress": "전남광주 여수시 학동 82-3",
+    "notionPageId": "333da158-dd2a-8351-901c-81b0c73d112a",
+    "naverPlaceId": "36022396",
+    "sourceStoreName": "맥도날드 여수학동DT점",
+    "matchedPlaceName": "맥도날드 여수학동DT점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "4c16d7a9aafcf6fd": {
+    "roadAddress": "전남광주 여수시 동문로 62",
+    "jibunAddress": "전남광주 여수시 관문동 451-1",
+    "notionPageId": "f48da158-dd2a-82de-acfd-01d7eb40ffc9",
+    "naverPlaceId": "12905220",
+    "sourceStoreName": "맥시칸치킨 공화관문점",
+    "matchedPlaceName": "맥시칸치킨 공화동점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "4289ad6217815b70": {
+    "roadAddress": "전남광주 여수시 여서1로 70 1층",
+    "jibunAddress": "전남광주 여수시 여서동 227-2",
+    "notionPageId": "e0bda158-dd2a-8349-8345-01b5ac775b73",
+    "naverPlaceId": "1747300695",
+    "sourceStoreName": "메가MGC커피 여서사거리점",
+    "matchedPlaceName": "메가MGC커피 여수여서사거리점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "10f225b9ca817dc4": {
+    "roadAddress": "전남광주 여수시 신월로 716",
+    "jibunAddress": "전남광주 여수시 봉산동 268-11",
+    "notionPageId": "c12da158-dd2a-82ca-8322-011e5978e130",
+    "naverPlaceId": "1257783555",
+    "sourceStoreName": "배스킨라빈스 여수국동점",
+    "matchedPlaceName": "배스킨라빈스 여수국동점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "74914ff35d06477d": {
+    "roadAddress": "전남광주 여수시 봉산1로 35 1층",
+    "jibunAddress": "전남광주 여수시 봉산동 255-26",
+    "notionPageId": "396da158-dd2a-802a-9f13-e2d42f2cb44f",
+    "naverPlaceId": "1130032976",
+    "sourceStoreName": "별별김밥 봉산점",
+    "matchedPlaceName": "별별김밥",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "6721d86f9ff6f74b": {
+    "roadAddress": "전남광주 여수시 문수7길 32 103호",
+    "jibunAddress": "전남광주 여수시 문수동 450-1",
+    "notionPageId": "ef0da158-dd2a-8289-94d5-811b93021b18",
+    "naverPlaceId": "1252274629",
+    "sourceStoreName": "부리나 바베큐 치킨 여문점",
+    "matchedPlaceName": "부리나 치킨 여문점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "b978240417a18e51": {
+    "roadAddress": "전남광주 여수시 학동2길 19 1층 부어치킨 학동점",
+    "jibunAddress": "전남광주 여수시 학동 38-3 1층 부어치킨 점",
+    "notionPageId": "b78da158-dd2a-82c1-a479-8114fee0d757",
+    "naverPlaceId": "1160650570",
+    "sourceStoreName": "부어치킨 여수학동점",
+    "matchedPlaceName": "부어치킨 학동점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "066197a9443c3145": {
+    "roadAddress": "전남광주 여수시 돌산읍 강남8길 13",
+    "jibunAddress": "전남광주 여수시 돌산읍 우두리 1037-9",
+    "notionPageId": "b24da158-dd2a-833a-ba73-81f2184248a4",
+    "naverPlaceId": "101653697",
+    "sourceStoreName": "비비큐 여수돌산점",
+    "matchedPlaceName": "BBQ치킨 여수돌산점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "4059491d8dbb4159": {
+    "roadAddress": "전남광주 여수시 무선중앙로 53",
+    "jibunAddress": "전남광주 여수시 선원동 1243-8",
+    "notionPageId": "177da158-dd2a-838e-ab9f-01de1e31e367",
+    "naverPlaceId": "1015631407",
+    "sourceStoreName": "비비큐 여수무선점",
+    "matchedPlaceName": "BBQ치킨 여수무선점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "572e4a658f762cbe": {
+    "roadAddress": "전남광주 여수시 흥국로 91 비비큐치킨",
+    "jibunAddress": "전남광주 여수시 신기동 72-15",
+    "notionPageId": "02bda158-dd2a-82c7-95ad-81dec39b25a8",
+    "naverPlaceId": "36324249",
+    "sourceStoreName": "비비큐 여수신기행운점",
+    "matchedPlaceName": "BBQ여수신기행운점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "e2645d79ef555a24": {
+    "roadAddress": "전남광주 여수시 박람회길 46",
+    "jibunAddress": "전남광주 여수시 덕충동 2041",
+    "notionPageId": "27cda158-dd2a-82fa-8127-8138901f7260",
+    "naverPlaceId": "1482453637",
+    "sourceStoreName": "비비큐 여수엑스포점",
+    "matchedPlaceName": "BBQ치킨 여수엑스포점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "b73ca9b4a41f7502": {
+    "roadAddress": "전남광주 여수시 웅천남8로 23 216동 1층 104호",
+    "jibunAddress": "전남광주 여수시 웅천동 1889-1",
+    "notionPageId": "883da158-dd2a-826f-8942-01ae1595306c",
+    "naverPlaceId": "497163269",
+    "sourceStoreName": "비비큐 여수웅천점",
+    "matchedPlaceName": "BBQ치킨 여수웅천점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "c1df1c34732d2757": {
+    "roadAddress": "전남광주 여수시 소라면 죽림로 39 1층",
+    "jibunAddress": "전남광주 여수시 소라면 죽림리 1198-2",
+    "notionPageId": "c6fda158-dd2a-826f-8eeb-0121746dc262",
+    "naverPlaceId": "2043589272",
+    "sourceStoreName": "비비큐 여수죽림점",
+    "matchedPlaceName": "BBQ치킨 여수죽림점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "9cba7b46fed409a9": {
+    "roadAddress": "전남광주 여수시 도원로 270 104호",
+    "jibunAddress": "전남광주 여수시 학동 105-3",
+    "notionPageId": "055da158-dd2a-82bf-8af4-01b9ad4f5169",
+    "naverPlaceId": "1710275085",
+    "sourceStoreName": "비비큐 여수학동점",
+    "matchedPlaceName": "BBQ치킨 여수학동점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "43384f472418faec": {
+    "roadAddress": "전남광주 여수시 여문2로 150 1층 3호 삼마",
+    "jibunAddress": "전남광주 여수시 문수동 183-7",
+    "notionPageId": "8c9da158-dd2a-82a1-a262-814e46b19627",
+    "naverPlaceId": "1042642943",
+    "sourceStoreName": "삼마 문수점",
+    "matchedPlaceName": "삼마 여수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "030d45b86234bb7b": {
+    "roadAddress": "전남광주 여수시 화산로 124 1층",
+    "jibunAddress": "전남광주 여수시 선원동 1278-10",
+    "notionPageId": "a30da158-dd2a-825a-a5f4-01fb18b02da6",
+    "naverPlaceId": "1356371465",
+    "sourceStoreName": "생생치킨 무선점(선원동)",
+    "matchedPlaceName": "생생호프 여수무선점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "8608c923097a2adc": {
+    "roadAddress": "전남광주 여수시 국동남5길 8-3 1층",
+    "jibunAddress": "전남광주 여수시 국동 491-1",
+    "notionPageId": "07eda158-dd2a-83bb-a49e-81ac097420b5",
+    "naverPlaceId": "2069248928",
+    "sourceStoreName": "선비칼국수 여수국동점",
+    "matchedPlaceName": "선비칼국수 여수국동점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "03809451afc7b09b": {
+    "roadAddress": "전남광주 여수시 웅천3길 12-14 1층",
+    "jibunAddress": "전남광주 여수시 웅천동 1789-7",
+    "notionPageId": "204da158-dd2a-8375-b23e-014c923593ef",
+    "naverPlaceId": "1513329352",
+    "sourceStoreName": "소유 커피&디저트 웅천점",
+    "matchedPlaceName": "소유 커피&빙수",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "11e1973f448ef7a6": {
+    "roadAddress": "전남광주 여수시 문수북5길 26 송촌꼬마김밥 여문점",
+    "jibunAddress": "전남광주 여수시 문수동 9-2",
+    "notionPageId": "195da158-dd2a-83ab-9f68-01e263dc020e",
+    "naverPlaceId": "1569815190",
+    "sourceStoreName": "송촌꼬마김밥 여문점",
+    "matchedPlaceName": "송촌꼬마김밥 여문점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "421fc97caaddfbc5": {
+    "roadAddress": "전남광주 여수시 공화남2길 17",
+    "jibunAddress": "전남광주 여수시 공화동 1043-2",
+    "notionPageId": "289da158-dd2a-8260-beac-01a6de9c2ec5",
+    "naverPlaceId": "1754381282",
+    "sourceStoreName": "수시아 김밥전문 공화동점",
+    "matchedPlaceName": "수시아",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "14d4b7be316bc8e7": {
+    "roadAddress": "전남광주 여수시 여문문화1길 22 1층",
+    "jibunAddress": "전남광주 여수시 여서동 215-3",
+    "notionPageId": "9eeda158-dd2a-83fd-bcdf-0172919b86a1",
+    "naverPlaceId": "1308911537",
+    "sourceStoreName": "쉐프의수제요리 야미야미 여서점",
+    "matchedPlaceName": "야미야미",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "49814996a90d2a3d": {
+    "roadAddress": "전남광주 여수시 여문문화길 12 (문수동)",
+    "jibunAddress": "전남광주 여수시 문수동 114-3",
+    "notionPageId": "0c6da158-dd2a-8276-bd6f-0162d4f3f77a",
+    "naverPlaceId": "1610225702",
+    "sourceStoreName": "슬기로운돼지생활(문수동)",
+    "matchedPlaceName": "슬기로운돼지생활",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "e81c1980fff43a29": {
+    "roadAddress": "전남광주 여수시 문수북6길 6 1층",
+    "jibunAddress": "전남광주 여수시 문수동 80-10",
+    "notionPageId": "0afda158-dd2a-82b3-a6a6-0145ccc300d9",
+    "naverPlaceId": "2056945523",
+    "sourceStoreName": "시장불닭발 문수점",
+    "matchedPlaceName": "시장불닭발 여수문수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "561cc726687ccd61": {
+    "roadAddress": "전남광주 여수시 여서로 201 상가3동 1층 5호",
+    "jibunAddress": "전남광주 여수시 여서동 479",
+    "notionPageId": "dccda158-dd2a-82a9-b8d6-010a2cce91cd",
+    "naverPlaceId": "1715190899",
+    "sourceStoreName": "쌀통닭 여문점",
+    "matchedPlaceName": "쌀통닭 여문점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "c30f3543d3d24747": {
+    "roadAddress": "전남광주 여수시 통제영2길 8-9",
+    "jibunAddress": "전남광주 여수시 교동 366",
+    "notionPageId": "324da158-dd2a-83c1-8c68-817ea1854fa5",
+    "naverPlaceId": "16868186",
+    "sourceStoreName": "아구찜&장어탕명가 조롱박 교동점",
+    "matchedPlaceName": "조롱박",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "e7be983ffc863971": {
+    "roadAddress": "전남광주 여수시 문수로 70 1층 아담만두",
+    "jibunAddress": "전남광주 여수시 문수동 122-8",
+    "notionPageId": "ebbda158-dd2a-82c3-9a31-01b18e9ca727",
+    "naverPlaceId": "2087217607",
+    "sourceStoreName": "아담만두 문수점",
+    "matchedPlaceName": "아담만두 여수문수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "b77500c258104b51": {
+    "roadAddress": "전남광주 여수시 신기남4길 20 아이커버거앤치킨",
+    "jibunAddress": "전남광주 여수시 신기동 65-10",
+    "notionPageId": "076da158-dd2a-839a-8a6c-819941c9102a",
+    "naverPlaceId": "31119862",
+    "sourceStoreName": "아이커 버거&치킨 여천점(신기동)",
+    "matchedPlaceName": "아이커버거&치킨 신기점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "3733c57e37212005": {
+    "roadAddress": "전남광주 여수시 동문로 96",
+    "jibunAddress": "전남광주 여수시 공화동 1047-7",
+    "notionPageId": "c61da158-dd2a-824f-8be5-010d4e23ef9c",
+    "naverPlaceId": "455327034",
+    "sourceStoreName": "아주커치킨 관문점",
+    "matchedPlaceName": "아주커치킨 관문점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "b25a59f2207a9e10": {
+    "roadAddress": "전남광주 여수시 성산로 21",
+    "jibunAddress": "전남광주 여수시 화장동 871-5",
+    "notionPageId": "7bada158-dd2a-822b-9ffe-813862a14bc9",
+    "naverPlaceId": "35940101",
+    "sourceStoreName": "아주커치킨 무선점",
+    "matchedPlaceName": "아주커치킨 무선점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "9a94c05bdeca2d9e": {
+    "roadAddress": "전남광주 여수시 쌍봉로 58",
+    "jibunAddress": "전남광주 여수시 학동 44",
+    "notionPageId": "7edda158-dd2a-8336-a78f-81630bd42fd2",
+    "naverPlaceId": "13021037",
+    "sourceStoreName": "아주커치킨 학동점",
+    "matchedPlaceName": "아주커치킨 여천학동점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "38f4e2e9e89a61b9": {
+    "roadAddress": "전남광주 여수시 여문문화2길 40 여서 육감",
+    "jibunAddress": "전남광주 여수시 문수동 124-2",
+    "notionPageId": "777da158-dd2a-83ac-80a7-81a3974ca70d",
+    "naverPlaceId": "2088862844",
+    "sourceStoreName": "여서 육감 문수점",
+    "matchedPlaceName": "여서 육감",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "035938bab3de179c": {
+    "roadAddress": "전남광주 여수시 봉산2로 34 1층",
+    "jibunAddress": "전남광주 여수시 봉산동 207-2",
+    "notionPageId": "272da158-dd2a-8371-abd4-01d0023fca2e",
+    "naverPlaceId": "2066883282",
+    "sourceStoreName": "여수강촌토종닭숯불구이 봉산직영점",
+    "matchedPlaceName": "여수강촌토종닭숯불구이 봉산직영점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "d3dbc3f83e7b9aed": {
+    "roadAddress": "전남광주 여수시 예울마루로 37-26",
+    "jibunAddress": "전남광주 여수시 웅천동 1694-1",
+    "notionPageId": "3e8da158-dd2a-83dd-b9aa-81aa61f654fd",
+    "naverPlaceId": "36103875",
+    "sourceStoreName": "여수강촌토종닭숯불구이 웅천본점",
+    "matchedPlaceName": "여수강촌토종닭숯불구이 웅천본점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "51b657cc3416c67d": {
+    "roadAddress": "전남광주 여수시 소라면 죽림4길 2-17 여수강촌토종닭숯불구이 죽림직영점",
+    "jibunAddress": "전남광주 여수시 소라면 죽림리 1152-1",
+    "notionPageId": "4a6da158-dd2a-8328-b1cc-81d9c53964c8",
+    "naverPlaceId": "1372132231",
+    "sourceStoreName": "여수강촌토종닭숯불구이 죽림직영점",
+    "matchedPlaceName": "여수강촌토종닭숯불구이 죽림직영점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "732120ab53b3f457": {
+    "roadAddress": "전남광주 여수시 여문2로 69",
+    "jibunAddress": "전남광주 여수시 문수동 451-2",
+    "notionPageId": "419da158-dd2a-8206-9b9a-81db9c7d80e4",
+    "naverPlaceId": "2000441181",
+    "sourceStoreName": "여수분식 문수점",
+    "matchedPlaceName": "여수분식",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "fe356412007caf0c": {
+    "roadAddress": "전남광주 여수시 신월로 655 국동 서희스타힐스 상가",
+    "jibunAddress": "전남광주 여수시 국동 438 서희스타힐스 상가",
+    "notionPageId": "2bbda158-dd2a-82a8-a3a9-017a191bc36e",
+    "naverPlaceId": "2002892838",
+    "sourceStoreName": "여수튀김 국동점",
+    "matchedPlaceName": "여수튀김",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "90e006413bc79cbc": {
+    "roadAddress": "전남광주 여수시 학동북3길 6",
+    "jibunAddress": "전남광주 여수시 학동 5-27",
+    "notionPageId": "e64da158-dd2a-8215-afe7-01f7cfdd061d",
+    "naverPlaceId": "1564511546",
+    "sourceStoreName": "오꾸닭 학동점",
+    "matchedPlaceName": "오븐에꾸운닭 여수학동점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "9bb804e004dff7d8": {
+    "roadAddress": "전남광주 여수시 신월로 562",
+    "jibunAddress": "전남광주 여수시 신월동 110",
+    "notionPageId": "948da158-dd2a-83e1-9076-01fa2c1c240f",
+    "naverPlaceId": "1127939261",
+    "sourceStoreName": "온앤 신월점",
+    "matchedPlaceName": "온앤",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "0e6d7a1000b1c53b": {
+    "roadAddress": "전남광주 여수시 여서1로 116",
+    "jibunAddress": "전남광주 여수시 여서동 224-19",
+    "notionPageId": "52dda158-dd2a-83fb-937c-01625a9bc632",
+    "naverPlaceId": "16903675",
+    "sourceStoreName": "우사골설렁탕 여서동본점",
+    "matchedPlaceName": "우사골 본점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "df16b7312c25da31": {
+    "roadAddress": "전남광주 여수시 여서로 146-2 현대건설아파트",
+    "jibunAddress": "전남광주 여수시 여서동 489-1",
+    "notionPageId": "69fda158-dd2a-82bf-86f5-01ef53ed3a8c",
+    "naverPlaceId": "1348828562",
+    "sourceStoreName": "위대한 닭뽀끼&짜파구리 여서점",
+    "matchedPlaceName": "위대한 닭뽀끼",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "7a91bd1d1f218c97": {
+    "roadAddress": "전남광주 여수시 대교로 30 1층",
+    "jibunAddress": "전남광주 여수시 봉산동 247-19",
+    "notionPageId": "b79da158-dd2a-8292-bb9a-01b5a1bed0f1",
+    "naverPlaceId": "1329909277",
+    "sourceStoreName": "이디야 여수대교동점",
+    "matchedPlaceName": "이디야 여수대교동점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "424a3dadd34b19fa": {
+    "roadAddress": "전남광주 여수시 대교로 32-1",
+    "jibunAddress": "전남광주 여수시 봉산동 247-4",
+    "notionPageId": "728da158-dd2a-823e-8169-01cbf0c8ca8e",
+    "naverPlaceId": "37413156",
+    "sourceStoreName": "이모네분식 봉산점",
+    "matchedPlaceName": "이모네",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "a638ac9c079a28c0": {
+    "roadAddress": "전남광주 여수시 대교로 13-1 1층",
+    "jibunAddress": "전남광주 여수시 봉산동 242-24",
+    "notionPageId": "f9cda158-dd2a-82c0-aab8-81a4c3eeef3d",
+    "naverPlaceId": "2040295521",
+    "sourceStoreName": "임꺽정 갈비탕 봉산점",
+    "matchedPlaceName": "임꺽정",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "802d4c09e4ee1ae9": {
+    "roadAddress": "전남광주 여수시 교동시장5길 2-2 1층",
+    "jibunAddress": "전남광주 여수시 교동 596-30",
+    "notionPageId": "f94da158-dd2a-830c-977d-01875a1bbf04",
+    "naverPlaceId": "501394847",
+    "sourceStoreName": "장터순대국 교동점",
+    "matchedPlaceName": "장터순대국",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "bc6152833cd076f5": {
+    "roadAddress": "전남광주 여수시 여문문화2길 18",
+    "jibunAddress": "전남광주 여수시 문수동 116-4",
+    "notionPageId": "317da158-dd2a-8217-ae46-81e9d2ad6e17",
+    "naverPlaceId": "1514607015",
+    "sourceStoreName": "전골의법칙 얼큰한곱창전골 문수점",
+    "matchedPlaceName": "전골의법칙 얼큰한곱창전골 여수점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "98779281080288d1": {
+    "roadAddress": "전남광주 여수시 신월로 732-3 1층",
+    "jibunAddress": "전남광주 여수시 봉산동 251-13",
+    "notionPageId": "fe4da158-dd2a-8298-a14d-812103634c87",
+    "naverPlaceId": "1370998177",
+    "sourceStoreName": "제복이네 짜글이&제육쌈밥&두루치기 교동점",
+    "matchedPlaceName": "나능이능이버섯백숙 봉산점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "5768a9d8a72502ef": {
+    "roadAddress": "전남광주 여수시 여서1로 79 배스킨라빈스 여수여서",
+    "jibunAddress": "전남광주 여수시 여서동 220",
+    "notionPageId": "a80da158-dd2a-83e8-88ee-81416777e3da",
+    "naverPlaceId": "1149391087",
+    "sourceStoreName": "조선제일 감자탕&뼈해장국 여서점",
+    "matchedPlaceName": "배스킨라빈스 여수여서점",
+    "sourceStatus": "manual-review",
+    "sourceReason": "place-name-mismatch"
+  },
+  "501b2c5aaa6005f2": {
+    "roadAddress": "전남광주 여수시 신기남1길 29",
+    "jibunAddress": "전남광주 여수시 신기동 110-3",
+    "notionPageId": "937da158-dd2a-8364-85fa-01025cf22908",
+    "naverPlaceId": "1236456312",
+    "sourceStoreName": "지코바숯불양념치킨 여천점(신기동)",
+    "matchedPlaceName": "지코바숯불양념치킨 여천점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "0b952604bdf47c31": {
+    "roadAddress": "전남광주 여수시 진남상가길 2-1 1층",
+    "jibunAddress": "전남광주 여수시 중앙동 568",
+    "notionPageId": "df3da158-dd2a-83f8-9076-01bce41f87a5",
+    "naverPlaceId": "1123670862",
+    "sourceStoreName": "진남컵밥 중앙점",
+    "matchedPlaceName": "진남컵밥",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "27fc5651d1d3feb0": {
+    "roadAddress": "전남광주 여수시 봉산1로 47",
+    "jibunAddress": "전남광주 여수시 봉산동 248-7",
+    "notionPageId": "c10da158-dd2a-832d-a1b5-018e0968fb35",
+    "naverPlaceId": "32217728",
+    "sourceStoreName": "진통뼈사랑 봉산점",
+    "matchedPlaceName": "통뼈사랑",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "b6e9f49b01144bc8": {
+    "roadAddress": "전남광주 여수시 봉산남4길 23-32 청정게장촌",
+    "jibunAddress": "전남광주 여수시 봉산동 273-36",
+    "notionPageId": "d1dda158-dd2a-8304-9025-01378913a915",
+    "naverPlaceId": "20553144",
+    "sourceStoreName": "청정게장촌 봉산점",
+    "matchedPlaceName": "청정게장촌",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "5ada4cec81d04ced": {
+    "roadAddress": "전남광주 여수시 국동남6길 49-10 . 104호",
+    "jibunAddress": "전남광주 여수시 국동 105",
+    "notionPageId": "317da158-dd2a-82a5-b472-81388f55fdea",
+    "naverPlaceId": "1471769106",
+    "sourceStoreName": "치킨갱스터 국동유탑점",
+    "matchedPlaceName": "치킨갱스터 국동유탑점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "f1fa55a4b8c7c428": {
+    "roadAddress": "전남광주 여수시 신월2길 9-1 코아루아파트",
+    "jibunAddress": "전남광주 여수시 신월동 51",
+    "notionPageId": "0dbda158-dd2a-8292-bc7a-816a49494e44",
+    "naverPlaceId": "16899795",
+    "sourceStoreName": "치킨아이 국동점",
+    "matchedPlaceName": "치킨아이 국동점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "0173191ff3ddab64": {
+    "roadAddress": "전남광주 여수시 쌍봉로 318",
+    "jibunAddress": "전남광주 여수시 둔덕동 653",
+    "notionPageId": "0e7da158-dd2a-8383-bd56-81e76d799585",
+    "naverPlaceId": "16943145",
+    "sourceStoreName": "치킨아이 둔덕점",
+    "matchedPlaceName": "치킨아이",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "4cd9573bfca48b92": {
+    "roadAddress": "전남광주 여수시 장성1길 40",
+    "jibunAddress": "전남광주 여수시 안산동 726-15",
+    "notionPageId": "1a7da158-dd2a-82ba-a612-01b3590bce83",
+    "naverPlaceId": "1004953941",
+    "sourceStoreName": "치킨아이 소호점",
+    "matchedPlaceName": "치킨아이 소호점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  },
+  "da81c19f4ce50220": {
+    "roadAddress": "전남광주 여수시 여서로 146-11",
+    "jibunAddress": "전남광주 여수시 여서동 490-11",
+    "notionPageId": "28bda158-dd2a-83c1-bc17-01f8d455b533",
+    "naverPlaceId": "2017477516",
+    "sourceStoreName": "치폴리니 여서점",
+    "matchedPlaceName": "치폴리니 여수여서점",
+    "sourceStatus": "verified-source",
+    "sourceReason": "notion-map-page-and-place-match"
+  }
+}
