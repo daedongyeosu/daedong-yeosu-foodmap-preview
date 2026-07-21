@@ -467,11 +467,31 @@ function relevance(store, query) {
   if (normalize(store.cat).includes(q)) return 70; if (normalize(store.area).includes(q)) return 60;
   return text.includes(q) ? 50 : 0;
 }
+const YE0SU_NEIGHBORHOOD_RULES = [
+  ['여서동', /여서(?:동|[0-9]*로)?|여문/], ['문수동', /문수(?:동|로)?/],
+  ['미평동', /미평(?:동|로)?/], ['둔덕동', /둔덕(?:동|로)?/], ['오림동', /오림(?:동|로)?/],
+  ['고소동', /고소(?:동|로)?/], ['교동', /교동/], ['중앙동', /중앙동/], ['충무동', /충무동/],
+  ['공화동', /공화동/], ['관문동', /관문동/], ['종화동', /종화동/], ['수정동', /수정동/], ['덕충동', /덕충동/],
+  ['국동', /국동/], ['신월동', /신월동/], ['봉산동', /봉산동/], ['광무동', /광무동/],
+  ['학동', /학동/], ['신기동', /신기동/], ['선원동', /선원동/], ['화장동', /화장동/],
+  ['안산동', /안산동/], ['소호동', /소호동/], ['웅천동', /웅천동/], ['죽림', /죽림/],
+  ['돌산', /돌산/], ['소라', /소라(?:면)?/], ['율촌', /율촌(?:면)?/]
+];
+function neighborhoodsFor(value='') {
+  const text=String(value).replace(/\s+/g,'');
+  return YE0SU_NEIGHBORHOOD_RULES.filter(([,pattern])=>pattern.test(text)).map(([name])=>name);
+}
+function neighborhoodFor(value='') { return neighborhoodsFor(value)[0] || ''; }
+function storeNeighborhoods(store) { return neighborhoodsFor([store?.area,store?.district,store?.address,store?.name].filter(Boolean).join(' ')); }
+function storeMatchesLocation(store, location) {
+  const selected=neighborhoodFor(location); if(!selected)return normalize(store.area).includes(normalize(location));
+  return storeNeighborhoods(store).includes(selected);
+}
 function filteredStores() {
   const brand = state.brandId ? BRAND_BY_ID[state.brandId] : null;
   return stores.map(store => ({store, score: relevance(store, state.query), distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null}))
     .filter(item => item.score > 0)
-    .filter(({store}) => state.sortByDistance || state.location === '여수시 전체' || normalize(store.area).includes(normalize(state.location)))
+    .filter(({store}) => state.sortByDistance || state.location === '여수시 전체' || storeMatchesLocation(store,state.location))
     .filter(({store}) => state.category === '전체' || store.cat === state.category)
     .filter(({store}) => !brand || brandMatchesStore(store, brand))
     .sort((a, b) => {
@@ -676,7 +696,7 @@ function saveLocationState(label, coords = null, sortByDistance = false, meta = 
   localStorage.setItem('savedLocation', JSON.stringify(saved)); localStorage.setItem('location', saved.area);
 }
 function addressAreas() { return ['여수시 전체', ...new Set(stores.map(store => store.area).filter(Boolean))].sort((a,b)=>a==='여수시 전체'?-1:a.localeCompare(b,'ko')); }
-function addressAreaFor(text='') { const normalized=normalize(text); return addressAreas().find(area=>area!=='여수시 전체'&&normalized.includes(normalize(area))) || (text==='여수시 전체'?'여수시 전체':'여수시 전체'); }
+function addressAreaFor(text='') { const neighborhood=neighborhoodFor(text); if(neighborhood)return neighborhood; const normalized=normalize(text); return addressAreas().find(area=>area!=='여수시 전체'&&normalized.includes(normalize(area))) || (text==='여수시 전체'?'여수시 전체':'여수시 전체'); }
 function renderAddressDraft() {
   const preview = $('#addressSelectedPreview'); if (!preview) return;
   const base = String(addressDraft?.address || '').trim(), detail = String($('#addressDetailInput')?.value || addressDraft?.detail || '').trim();
