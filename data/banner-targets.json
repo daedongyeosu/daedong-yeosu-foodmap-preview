@@ -1,5 +1,5 @@
 {
-  "01": {"storeId":"2f4c3cfb0866c4a4","label":"도미노피자 여천점(학동)","status":"mapped"},
+  "01": {"storeId":null,"label":"도미노피자","status":"unresolved"},
   "02": {"storeId":null,"label":"백년족발","status":"unmapped"},
   "03": {"storeId":null,"label":"컴포즈커피 문수광장점","status":"unmapped"},
   "04": {"storeId":null,"label":"족팔계 왕족발","status":"unmapped"},

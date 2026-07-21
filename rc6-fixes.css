@@ -7,6 +7,7 @@
 @keyframes rc6-gull-flight{from{transform:translate3d(0,0,0) scale(var(--scale))}50%{transform:translate3d(58vw,-5px,0) scale(var(--scale))}to{transform:translate3d(124vw,2px,0) scale(var(--scale))}}
 .rc6-hero-target{appearance:none;border:0;padding:0;width:100%;background:transparent;cursor:pointer;text-align:inherit}
 .rc6-hero-target[aria-disabled="true"]{cursor:default}
+.rc6-hero-target:not([aria-disabled="true"]):active{filter:brightness(1.06);transform:scale(.997)}
 .rc6-hero-target picture,.rc6-hero-target img{display:block;width:100%}
 .rc6-distance{font-weight:800;color:#075b78}
 @media(min-width:768px){.yeosu-night-shell{background-image:linear-gradient(180deg,rgba(7,47,78,.1),rgba(4,43,70,.16)),url('assets/yeosu-rc6/dolsan-day-desktop.webp');background-position:center center}}
