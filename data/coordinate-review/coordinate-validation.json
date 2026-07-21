@@ -12,6 +12,400 @@
     "excludedUntitled": 1
   },
   "duplicateCoordinates": [],
+  "keywordDiagnostics": [
+    {
+      "store_id": "3f441930b8d18783",
+      "storeName": "1980밀면회관&냉면 문수점",
+      "district": "문수동",
+      "queries": [
+        "1980밀면회관&냉면 문수점 문수동",
+        "1980밀면회관&냉면 문수점 여수",
+        "1980밀면회관&냉면 문수점"
+      ],
+      "returned": 0,
+      "yeosuMatches": 0,
+      "nameMatches": 0,
+      "acceptedMatches": 0,
+      "samples": []
+    },
+    {
+      "store_id": "a75505094208bb61",
+      "storeName": "1988응답하라추억의옛날도시락 고소동점",
+      "district": "고소동",
+      "queries": [
+        "1988응답하라추억의옛날도시락 고소동점 고소동",
+        "1988응답하라추억의옛날도시락 고소동점 여수",
+        "1988응답하라추억의옛날도시락 고소동점"
+      ],
+      "returned": 0,
+      "yeosuMatches": 0,
+      "nameMatches": 0,
+      "acceptedMatches": 0,
+      "samples": []
+    },
+    {
+      "store_id": "d09fa15da80ff88e",
+      "storeName": "1989마라탕 봉강점",
+      "district": "봉강동",
+      "queries": [
+        "1989마라탕 봉강점 봉강동",
+        "1989마라탕 봉강점 여수",
+        "1989마라탕 봉강점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "1989마라탕",
+          "address": "전남광주통합특별시 여수시 봉산남1길 11-4"
+        }
+      ]
+    },
+    {
+      "store_id": "360b32bc2f5a850c",
+      "storeName": "1키로 오리스타 여서점",
+      "district": "여서동",
+      "queries": [
+        "1키로 오리스타 여서점 여서동",
+        "1키로 오리스타 여서점 여수",
+        "1키로 오리스타 여서점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "1키로 오리스타",
+          "address": "전남광주통합특별시 여수시 대치1길 7"
+        }
+      ]
+    },
+    {
+      "store_id": "275f52997bdd2755",
+      "storeName": "30년전통 할매손곰탕 문수점",
+      "district": "문수동",
+      "queries": [
+        "30년전통 할매손곰탕 문수점 문수동",
+        "30년전통 할매손곰탕 문수점 여수",
+        "30년전통 할매손곰탕 문수점"
+      ],
+      "returned": 0,
+      "yeosuMatches": 0,
+      "nameMatches": 0,
+      "acceptedMatches": 0,
+      "samples": []
+    },
+    {
+      "store_id": "fa836f4f328cb34f",
+      "storeName": "60계치킨 돌산점",
+      "district": "돌산",
+      "queries": [
+        "60계치킨 돌산점 돌산",
+        "60계치킨 돌산점 여수",
+        "60계치킨 돌산점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "60계치킨 여수돌산점",
+          "address": "전남광주통합특별시 여수시 돌산읍 강남동로 43"
+        }
+      ]
+    },
+    {
+      "store_id": "e53db0006339f439",
+      "storeName": "60계치킨 웅천점",
+      "district": "웅천동",
+      "queries": [
+        "60계치킨 웅천점 웅천동",
+        "60계치킨 웅천점 여수",
+        "60계치킨 웅천점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "60계치킨 여수웅천점",
+          "address": "전남광주통합특별시 여수시 예울마루로 37-53"
+        }
+      ]
+    },
+    {
+      "store_id": "87fd57845e1c58b5",
+      "storeName": "60계치킨 죽림점",
+      "district": "죽림",
+      "queries": [
+        "60계치킨 죽림점 죽림",
+        "60계치킨 죽림점 여수",
+        "60계치킨 죽림점"
+      ],
+      "returned": 2,
+      "yeosuMatches": 0,
+      "nameMatches": 2,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "60계치킨 여수죽림점",
+          "address": "전남광주통합특별시 여수시 소라면 죽림2길 38-12"
+        },
+        {
+          "placeName": "60계치킨 통영죽림점",
+          "address": "경남 통영시 광도면 신죽2길 1"
+        }
+      ]
+    },
+    {
+      "store_id": "d7674e8acedd94b2",
+      "storeName": "60계치킨 충무점",
+      "district": "충무동",
+      "queries": [
+        "60계치킨 충무점 충무동",
+        "60계치킨 충무점 여수",
+        "60계치킨 충무점"
+      ],
+      "returned": 2,
+      "yeosuMatches": 0,
+      "nameMatches": 2,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "60계치킨 진해충무점",
+          "address": "경남 창원시 진해구 벚꽃로 78-1"
+        },
+        {
+          "placeName": "60계치킨 여수충무점",
+          "address": "전남광주통합특별시 여수시 좌수영로 39"
+        }
+      ]
+    },
+    {
+      "store_id": "b1beeb518c437d02",
+      "storeName": "60일숙성 명품김치찜&김치찌개&쌈밥 교동점",
+      "district": "교동",
+      "queries": [
+        "60일숙성 명품김치찜&김치찌개&쌈밥 교동점 교동",
+        "60일숙성 명품김치찜&김치찌개&쌈밥 교동점 여수",
+        "60일숙성 명품김치찜&김치찌개&쌈밥 교동점"
+      ],
+      "returned": 0,
+      "yeosuMatches": 0,
+      "nameMatches": 0,
+      "acceptedMatches": 0,
+      "samples": []
+    },
+    {
+      "store_id": "a0f6eb8bcf768489",
+      "storeName": "79대포 여서점",
+      "district": "여서동",
+      "queries": [
+        "79대포 여서점 여서동",
+        "79대포 여서점 여수",
+        "79대포 여서점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "79대포 여수여서점",
+          "address": "전남광주통합특별시 여수시 여서1로 25"
+        }
+      ]
+    },
+    {
+      "store_id": "53300b03ac188a38",
+      "storeName": "BHC 돌산점",
+      "district": "돌산",
+      "queries": [
+        "BHC 돌산점 돌산",
+        "BHC 돌산점 여수",
+        "BHC 돌산점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수돌산점",
+          "address": "전남광주통합특별시 여수시 돌산읍 강남9길 18"
+        }
+      ]
+    },
+    {
+      "store_id": "ecff9d7b88d1c8fb",
+      "storeName": "BHC 여수국동점",
+      "district": "국동",
+      "queries": [
+        "BHC 여수국동점 국동",
+        "BHC 여수국동점 여수",
+        "BHC 여수국동점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수국동점",
+          "address": "전남광주통합특별시 여수시 신월로 748-1"
+        }
+      ]
+    },
+    {
+      "store_id": "043d814d4c3c1e13",
+      "storeName": "BHC 여수문수점",
+      "district": "문수동",
+      "queries": [
+        "BHC 여수문수점 문수동",
+        "BHC 여수문수점 여수",
+        "BHC 여수문수점"
+      ],
+      "returned": 2,
+      "yeosuMatches": 0,
+      "nameMatches": 2,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수문수점",
+          "address": "전남광주통합특별시 여수시 문수로 15"
+        },
+        {
+          "placeName": "BHC치킨 여수여서점",
+          "address": "전남광주통합특별시 여수시 문수로 76"
+        }
+      ]
+    },
+    {
+      "store_id": "b373a08350017273",
+      "storeName": "BHC 여수미평점",
+      "district": "미평동",
+      "queries": [
+        "BHC 여수미평점 미평동",
+        "BHC 여수미평점 여수",
+        "BHC 여수미평점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수미평점",
+          "address": "전남광주통합특별시 여수시 대학로 16"
+        }
+      ]
+    },
+    {
+      "store_id": "5f9d2fdf4666eb73",
+      "storeName": "BHC 여수봉계둔덕점",
+      "district": "봉계동",
+      "queries": [
+        "BHC 여수봉계둔덕점 봉계동",
+        "BHC 여수봉계둔덕점 여수",
+        "BHC 여수봉계둔덕점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수봉계둔덕점",
+          "address": "전남광주통합특별시 여수시 상암로 16"
+        }
+      ]
+    },
+    {
+      "store_id": "b285c40f90621c5c",
+      "storeName": "BHC 여수소호점",
+      "district": "소호동",
+      "queries": [
+        "BHC 여수소호점 소호동",
+        "BHC 여수소호점 여수",
+        "BHC 여수소호점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수소호점",
+          "address": "전남광주통합특별시 여수시 소호5길 6-6"
+        }
+      ]
+    },
+    {
+      "store_id": "08c9054aa0115345",
+      "storeName": "BHC 여수엑스포광장점",
+      "district": "덕충동",
+      "queries": [
+        "BHC 여수엑스포광장점 덕충동",
+        "BHC 여수엑스포광장점 여수",
+        "BHC 여수엑스포광장점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 0,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수엑스포광장점",
+          "address": "전남광주통합특별시 여수시 공화남3길 19-1"
+        }
+      ]
+    },
+    {
+      "store_id": "fb3ad6747507444d",
+      "storeName": "BHC 여수여서점",
+      "district": "여서동",
+      "queries": [
+        "BHC 여수여서점 여서동",
+        "BHC 여수여서점 여수",
+        "BHC 여수여서점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수여서점",
+          "address": "전남광주통합특별시 여수시 문수로 76"
+        }
+      ]
+    },
+    {
+      "store_id": "800e9f2ab3c24e8f",
+      "storeName": "BHC 여수웅천점",
+      "district": "웅천동",
+      "queries": [
+        "BHC 여수웅천점 웅천동",
+        "BHC 여수웅천점 여수",
+        "BHC 여수웅천점"
+      ],
+      "returned": 1,
+      "yeosuMatches": 0,
+      "nameMatches": 1,
+      "acceptedMatches": 0,
+      "samples": [
+        {
+          "placeName": "BHC치킨 여수웅천점",
+          "address": "전남광주통합특별시 여수시 웅천로 19-35"
+        }
+      ]
+    }
+  ],
   "stores": [
     {
       "store_id": "3f441930b8d18783",
