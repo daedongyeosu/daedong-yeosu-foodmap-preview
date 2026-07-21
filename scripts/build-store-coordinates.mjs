@@ -7,6 +7,8 @@ if (!key) throw new Error('KAKAO_REST_API_KEY is not configured');
 const stores = JSON.parse(fs.readFileSync('data/stores.json', 'utf8'));
 const notionAddressSource = fs.existsSync('data/coordinate-source/notion-address-source.json')
   ? JSON.parse(fs.readFileSync('data/coordinate-source/notion-address-source.json', 'utf8')) : {};
+const oneNoteMapAddressSource = fs.existsSync('data/coordinate-source/onenote-map-address-source.json')
+  ? JSON.parse(fs.readFileSync('data/coordinate-source/onenote-map-address-source.json', 'utf8')) : {};
 const normal = stores.filter((s) => String(s.name || '').trim() && String(s.name).trim() !== '제목 없음');
 if (stores.length !== 471 || normal.length !== 470) throw new Error(`Unexpected store counts: ${stores.length}/${normal.length}`);
 
@@ -49,12 +51,15 @@ let outsideYeosuCount = 0;
 const keywordDiagnostics = [];
 for (let i = 0; i < normal.length; i++) {
   const s = normal[i];
-  const evidence = notionAddressSource[s.id]?.sourceStatus === 'verified-source' ? notionAddressSource[s.id] : null;
+  const oneNoteEvidence = oneNoteMapAddressSource[s.id]?.sourceStatus === 'verified-source' ? oneNoteMapAddressSource[s.id] : null;
+  const notionEvidence = notionAddressSource[s.id]?.sourceStatus === 'verified-source' ? notionAddressSource[s.id] : null;
+  const evidence = oneNoteEvidence || notionEvidence;
+  const evidencePrefix = oneNoteEvidence ? 'onenote-map' : notionEvidence ? 'notion' : '';
   const road = String(evidence?.roadAddress || s.roadAddress || s.road_address || s.address || '').trim();
   const jibun = String(evidence?.jibunAddress || s.jibunAddress || s.jibun_address || '').trim();
   let method = null, docs = [], inputAddress = '';
-  if (road) { inputAddress = road; docs = await addressSearch(road); method = evidence ? 'notion-road-address' : 'road-address'; }
-  if (!docs.length && jibun) { inputAddress = jibun; docs = await addressSearch(jibun); method = evidence ? 'notion-jibun-address' : 'jibun-address'; }
+  if (road) { inputAddress = road; docs = await addressSearch(road); method = evidence ? `${evidencePrefix}-road-address` : 'road-address'; }
+  if (!docs.length && jibun) { inputAddress = jibun; docs = await addressSearch(jibun); method = evidence ? `${evidencePrefix}-jibun-address` : 'jibun-address'; }
   if (!docs.length && inputAddress && !/전라남도|전남/.test(inputAddress)) {
     inputAddress = `전라남도 여수시 ${inputAddress}`;
     docs = await addressSearch(inputAddress); method = `${method || 'address'}-yeosu-prefix`;
@@ -133,6 +138,7 @@ const stats = {
   target: normal.length,
   automaticVerified: detail.filter((x) => x.status === 'verified').length,
   roadAddressVerified: detail.filter((x) => x.status === 'verified' && /road-address/.test(x.sourceType)).length,
+  oneNoteMapAddressVerified: detail.filter((x) => x.status === 'verified' && /onenote-map-(road|jibun)-address/.test(x.sourceType)).length,
   jibunAddressVerified: detail.filter((x) => x.status === 'verified' && /jibun-address/.test(x.sourceType)).length,
   keywordVerified: detail.filter((x) => x.status === 'verified' && x.confidence === 'keyword-exact').length,
   manualReview: detail.filter((x) => x.status === 'manual-review').length,
