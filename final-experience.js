@@ -6,6 +6,9 @@ const FX_BRAND_URL='data/brand-app-mapping.json';
 const FX_BRAND_SUPPLEMENT_URL='data/brand-app-missing-nine-supplement.json';
 const FX_HAPPY_URL='data/happyorder-channel-research.json';
 const FX_BRAND_PHOTO_POOL_URL='data/brand-photo-pools.json';
+const FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS={
+ '066197a9443c3145':'assets/store-photos/485a846f6445df/02.webp','4059491d8dbb4159':'assets/photo-batch-3-refresh/card/bbq.webp','572e4a658f762cbe':'assets/notion-recovery-180/450856a6b5fd4846/01.png','e2645d79ef555a24':'assets/photo-batch-3-refresh/card/bbq.webp','c1df1c34732d2757':'assets/notion-recovery-180/450856a6b5fd4846/01.png','e32f28eff787161a':'assets/notion-recovery-180/450856a6b5fd4846/01.png','9cba7b46fed409a9':'assets/notion-recovery-180/450856a6b5fd4846/01.png','39f3c8acab504b00':'assets/store-photos/af8b15c5b69a94/01.webp','9ee73ce6168105ec':'assets/store-photos/e982b7aa80a2e4/02.webp'
+};
 const FX_BATTLE_SESSION='daedongNavalSuccessPlayedV1';
 const FX_ENTRY_SESSION='daedongEntryFireworkPlayedV1';
 const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
@@ -33,7 +36,7 @@ function fxPlatform(){const ua=navigator.userAgent||'';if(/iphone|ipad|ipod/i.te
 function fxLowPower(){return Number(navigator.hardwareConcurrency||8)<=4||Number(navigator.deviceMemory||8)<=4;}
 function fxReduced(){return matchMedia('(prefers-reduced-motion: reduce)').matches;}
 function fxStoreById(id){return stores.find(store=>String(store.id)===String(id));}
-function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]||photoResolver?.resolve(store)?.src||'';}
+function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]||FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS[String(store?.id)]||photoResolver?.resolve(store)?.src||'';}
 function fxCardPhoto(store){const src=fxPhoto(store);return src?`<img src="${escapeHtml(src)}" alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
 function fxDistance(store){return state.coords&&store.lat!==null&&store.lng!==null?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;}
 
