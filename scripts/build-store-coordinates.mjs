@@ -72,10 +72,20 @@ for (const s of normal.filter((x) => result[x.id].status === 'verified')) {
   coordGroups.get(k).push({ store_id: s.id, name: s.name, matchedAddress: c.matchedAddress });
 }
 const duplicateCoordinates = [...coordGroups.entries()].filter(([, rows]) => rows.length > 1).map(([coordinate, rows]) => ({ coordinate, stores: rows }));
-const stats = { target: 470, baselineVerified: Object.values(base).filter((x) => x.status === 'verified').length, excelSourceMatches: Object.keys(excel).length, excelMatchedUnresolved: normal.filter((s) => base[s.id].status !== 'verified' && excel[s.id]).length, excelVerifiedAdded: added, multipleResults, addressExtractionFailed: extractionFailed, outsideYeosu, existingConflicts: conflicts.length, finalVerified: Object.values(result).filter((x) => x.status === 'verified').length, finalUnresolved: Object.values(result).filter((x) => x.status !== 'verified').length, duplicateCoordinateGroups: duplicateCoordinates.length, excludedUntitled: 1 };
+const addressGroups = new Map();
+for (const s of normal.filter((x) => result[x.id].status === 'verified')) {
+  const c = result[s.id], k = String(c.matchedAddress || '').replace(/\s+/g, ' ').trim();
+  if (!k) continue; if (!addressGroups.has(k)) addressGroups.set(k, []);
+  addressGroups.get(k).push({ store_id: s.id, name: s.name, latitude: c.latitude, longitude: c.longitude });
+}
+const sharedAddresses = [...addressGroups.entries()].filter(([, rows]) => rows.length > 1).map(([address, rows]) => ({ address, stores: rows }));
+const naverGroups = new Map();
+for (const [id, e] of Object.entries(excel)) { if (!naverGroups.has(e.naverMapUrl)) naverGroups.set(e.naverMapUrl, []); naverGroups.get(e.naverMapUrl).push({ store_id: id, name: normal.find((s) => s.id === id)?.name || '' }); }
+const sharedNaverUrls = [...naverGroups.entries()].filter(([, rows]) => rows.length > 1).map(([url, rows]) => ({ url, stores: rows }));
+const stats = { target: 470, baselineVerified: Object.values(base).filter((x) => x.status === 'verified').length, excelSourceMatches: Object.keys(excel).length, excelMatchedUnresolved: normal.filter((s) => base[s.id].status !== 'verified' && excel[s.id]).length, excelVerifiedAdded: added, multipleResults, addressExtractionFailed: extractionFailed, outsideYeosu, existingConflicts: conflicts.length, finalVerified: Object.values(result).filter((x) => x.status === 'verified').length, finalUnresolved: Object.values(result).filter((x) => x.status !== 'verified').length, duplicateCoordinateGroups: duplicateCoordinates.length, sharedAddressGroups: sharedAddresses.length, sharedNaverUrlGroups: sharedNaverUrls.length, excludedUntitled: 1 };
 fs.mkdirSync('coordinate-output', { recursive: true });
 fs.writeFileSync('coordinate-output/store-coordinates.json', JSON.stringify(result, null, 2) + '\n');
-fs.writeFileSync('coordinate-output/coordinate-validation.json', JSON.stringify({ stats, conflicts, duplicateCoordinates, stores: detail }, null, 2) + '\n');
+fs.writeFileSync('coordinate-output/coordinate-validation.json', JSON.stringify({ stats, conflicts, duplicateCoordinates, sharedAddresses, sharedNaverUrls, stores: detail }, null, 2) + '\n');
 const conflictHeaders = ['store_id','store_name','existing_address','existing_latitude','existing_longitude','excel_naver_url','excel_address','conflict_reason','recommended_action'];
 fs.writeFileSync('coordinate-output/coordinate-existing-conflicts-after-excel.csv', [conflictHeaders.join(','), ...conflicts.map((r) => conflictHeaders.map((h) => csv(r[h])).join(','))].join('\n') + '\n');
 const unresolvedHeaders = ['store_id','store_name','neighborhood','excel_sheet','excel_naver_url_exists','extracted_address','kakao_query','unresolved_reason','recommended_action'];
@@ -89,6 +99,15 @@ const unresolvedRows = normal.filter((s) => result[s.id].status !== 'verified').
   return { store_id: s.id, store_name: s.name, neighborhood: s.district || '', excel_sheet: e?.sourceSheet || '', excel_naver_url_exists: e?.naverMapUrl ? 'yes' : 'no', extracted_address: e?.roadAddress || e?.jibunAddress || '', kakao_query: e?.roadAddress || e?.jibunAddress || `${s.name} ${s.district || ''}`.trim(), unresolved_reason: reason, recommended_action: action };
 });
 fs.writeFileSync('coordinate-output/coordinate-unresolved-after-excel.csv', [unresolvedHeaders.join(','), ...unresolvedRows.map((r) => unresolvedHeaders.map((h) => csv(r[h])).join(','))].join('\n') + '\n');
+const duplicateCoordinateRows = duplicateCoordinates.flatMap((g) => g.stores.map((s) => ({ coordinate: g.coordinate, store_id: s.store_id, store_name: s.name, matched_address: s.matchedAddress })));
+const duplicateCoordinateHeaders = ['coordinate','store_id','store_name','matched_address'];
+fs.writeFileSync('coordinate-output/coordinate-duplicate-coordinates-after-excel.csv', [duplicateCoordinateHeaders.join(','), ...duplicateCoordinateRows.map((r) => duplicateCoordinateHeaders.map((h) => csv(r[h])).join(','))].join('\n') + '\n');
+const sharedAddressRows = sharedAddresses.flatMap((g) => g.stores.map((s) => ({ address: g.address, store_id: s.store_id, store_name: s.name, latitude: s.latitude, longitude: s.longitude })));
+const sharedAddressHeaders = ['address','store_id','store_name','latitude','longitude'];
+fs.writeFileSync('coordinate-output/coordinate-shared-addresses-after-excel.csv', [sharedAddressHeaders.join(','), ...sharedAddressRows.map((r) => sharedAddressHeaders.map((h) => csv(r[h])).join(','))].join('\n') + '\n');
+const sharedNaverRows = sharedNaverUrls.flatMap((g) => g.stores.map((s) => ({ naver_map_url: g.url, store_id: s.store_id, store_name: s.name })));
+const sharedNaverHeaders = ['naver_map_url','store_id','store_name'];
+fs.writeFileSync('coordinate-output/coordinate-shared-naver-links-after-excel.csv', [sharedNaverHeaders.join(','), ...sharedNaverRows.map((r) => sharedNaverHeaders.map((h) => csv(r[h])).join(','))].join('\n') + '\n');
 const sha = crypto.createHash('sha256').update(fs.readFileSync('coordinate-output/store-coordinates.json')).digest('hex');
 fs.writeFileSync('coordinate-output/SHA256.txt', `${sha}  store-coordinates.json\n`);
 console.log(JSON.stringify(stats));
