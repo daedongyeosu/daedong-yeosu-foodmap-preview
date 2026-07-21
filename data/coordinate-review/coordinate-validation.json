@@ -1,13 +1,13 @@
 {
   "stats": {
     "target": 470,
-    "automaticVerified": 0,
+    "automaticVerified": 196,
     "roadAddressVerified": 0,
     "jibunAddressVerified": 0,
-    "keywordVerified": 0,
-    "manualReview": 0,
-    "searchFailed": 470,
-    "outsideYeosu": 335,
+    "keywordVerified": 196,
+    "manualReview": 52,
+    "searchFailed": 222,
+    "outsideYeosu": 27,
     "duplicateCoordinateGroups": 0,
     "excludedUntitled": 1
   },
@@ -53,9 +53,9 @@
         "1989마라탕 봉강점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "1989마라탕",
@@ -73,9 +73,9 @@
         "1키로 오리스타 여서점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "1키로 오리스타",
@@ -108,9 +108,9 @@
         "60계치킨 돌산점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "60계치킨 여수돌산점",
@@ -128,9 +128,9 @@
         "60계치킨 웅천점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "60계치킨 여수웅천점",
@@ -147,18 +147,14 @@
         "60계치킨 죽림점 여수",
         "60계치킨 죽림점"
       ],
-      "returned": 2,
-      "yeosuMatches": 0,
-      "nameMatches": 2,
-      "acceptedMatches": 0,
+      "returned": 1,
+      "yeosuMatches": 1,
+      "nameMatches": 1,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "60계치킨 여수죽림점",
           "address": "전남광주통합특별시 여수시 소라면 죽림2길 38-12"
-        },
-        {
-          "placeName": "60계치킨 통영죽림점",
-          "address": "경남 통영시 광도면 신죽2길 1"
         }
       ]
     },
@@ -172,9 +168,9 @@
         "60계치킨 충무점"
       ],
       "returned": 2,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 2,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "60계치킨 진해충무점",
@@ -211,9 +207,9 @@
         "79대포 여서점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "79대포 여수여서점",
@@ -231,9 +227,9 @@
         "BHC 돌산점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "BHC치킨 여수돌산점",
@@ -251,9 +247,9 @@
         "BHC 여수국동점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "BHC치킨 여수국동점",
@@ -271,9 +267,9 @@
         "BHC 여수문수점"
       ],
       "returned": 2,
-      "yeosuMatches": 0,
+      "yeosuMatches": 2,
       "nameMatches": 2,
-      "acceptedMatches": 0,
+      "acceptedMatches": 2,
       "samples": [
         {
           "placeName": "BHC치킨 여수문수점",
@@ -295,9 +291,9 @@
         "BHC 여수미평점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "BHC치킨 여수미평점",
@@ -315,9 +311,9 @@
         "BHC 여수봉계둔덕점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "BHC치킨 여수봉계둔덕점",
@@ -335,9 +331,9 @@
         "BHC 여수소호점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "BHC치킨 여수소호점",
@@ -355,7 +351,7 @@
         "BHC 여수엑스포광장점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 0,
       "acceptedMatches": 0,
       "samples": [
@@ -375,9 +371,9 @@
         "BHC 여수여서점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "BHC치킨 여수여서점",
@@ -395,9 +391,9 @@
         "BHC 여수웅천점"
       ],
       "returned": 1,
-      "yeosuMatches": 0,
+      "yeosuMatches": 1,
       "nameMatches": 1,
-      "acceptedMatches": 0,
+      "acceptedMatches": 1,
       "samples": [
         {
           "placeName": "BHC치킨 여수웅천점",
@@ -431,21 +427,21 @@
       "store_id": "d09fa15da80ff88e",
       "name": "1989마라탕 봉강점",
       "district": "봉강동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "1989마라탕",
+      "matchedAddress": "전남광주통합특별시 여수시 봉산남1길 11-4"
     },
     {
       "store_id": "360b32bc2f5a850c",
       "name": "1키로 오리스타 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "1키로 오리스타",
+      "matchedAddress": "전남광주통합특별시 여수시 대치1길 7"
     },
     {
       "store_id": "275f52997bdd2755",
@@ -461,41 +457,41 @@
       "store_id": "fa836f4f328cb34f",
       "name": "60계치킨 돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "60계치킨 여수돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남동로 43"
     },
     {
       "store_id": "e53db0006339f439",
       "name": "60계치킨 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "60계치킨 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-53"
     },
     {
       "store_id": "87fd57845e1c58b5",
       "name": "60계치킨 죽림점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "60계치킨 여수죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림2길 38-12"
     },
     {
       "store_id": "d7674e8acedd94b2",
       "name": "60계치킨 충무점",
       "district": "충무동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "60계치킨 여수충무점",
+      "matchedAddress": "전남광주통합특별시 여수시 좌수영로 39"
     },
     {
       "store_id": "b1beeb518c437d02",
@@ -511,39 +507,39 @@
       "store_id": "a0f6eb8bcf768489",
       "name": "79대포 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "79대포 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 25"
     },
     {
       "store_id": "53300b03ac188a38",
       "name": "BHC 돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남9길 18"
     },
     {
       "store_id": "ecff9d7b88d1c8fb",
       "name": "BHC 여수국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 748-1"
     },
     {
       "store_id": "043d814d4c3c1e13",
       "name": "BHC 여수문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 2,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -551,31 +547,31 @@
       "store_id": "b373a08350017273",
       "name": "BHC 여수미평점",
       "district": "미평동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수미평점",
+      "matchedAddress": "전남광주통합특별시 여수시 대학로 16"
     },
     {
       "store_id": "5f9d2fdf4666eb73",
       "name": "BHC 여수봉계둔덕점",
       "district": "봉계동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수봉계둔덕점",
+      "matchedAddress": "전남광주통합특별시 여수시 상암로 16"
     },
     {
       "store_id": "b285c40f90621c5c",
       "name": "BHC 여수소호점",
       "district": "소호동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수소호점",
+      "matchedAddress": "전남광주통합특별시 여수시 소호5길 6-6"
     },
     {
       "store_id": "08c9054aa0115345",
@@ -591,41 +587,41 @@
       "store_id": "fb3ad6747507444d",
       "name": "BHC 여수여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 76"
     },
     {
       "store_id": "800e9f2ab3c24e8f",
       "name": "BHC 여수웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 19-35"
     },
     {
       "store_id": "c9df0658ace5336b",
       "name": "BHC 여수죽림무선점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수죽림무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 63"
     },
     {
       "store_id": "4152cf5c2c0c2dab",
       "name": "BHC 여수학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "BHC치킨 여수학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 시청동5길 23-1"
     },
     {
       "store_id": "55ef78aa24e1eac6",
@@ -671,99 +667,99 @@
       "store_id": "2ce5b80012bc506a",
       "name": "가마치통닭 무선점",
       "district": "선원동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가마치통닭 여수무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 무선중앙로 65"
     },
     {
       "store_id": "07a25456cf8c91c4",
       "name": "가마치통닭 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가마치통닭 여수문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문2로 82"
     },
     {
       "store_id": "1d6b92bb000bbc08",
       "name": "가마치통닭 소호점",
       "district": "소호동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가마치통닭 여수소호점",
+      "matchedAddress": "전남광주통합특별시 여수시 소호로 467-1"
     },
     {
       "store_id": "1956f41dd81e8568",
       "name": "가마치통닭 신기점",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가마치통닭 여수신기점",
+      "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 208"
     },
     {
       "store_id": "724adc8d9593fe05",
       "name": "가마치통닭 죽림점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가마치통닭 여수죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 47"
     },
     {
       "store_id": "1f8db0d628436011",
       "name": "가마치통닭 학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가마치통닭 여수학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 무선로 16"
     },
     {
       "store_id": "31716733c2083fed",
       "name": "가장맛있는족발 여수돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가장맛있는족발 여수돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남8길 34"
     },
     {
       "store_id": "dc67f48b1278de3b",
       "name": "가장맛있는족발 여수신월점",
       "district": "신월동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가장맛있는족발 신월점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 604"
     },
     {
       "store_id": "718031989449bc32",
       "name": "가장맛있는족발 여수여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "가장맛있는족발 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 77"
     },
     {
       "store_id": "005382cbb06108d3",
       "name": "가장맛있는족발 여수웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 4,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -771,11 +767,11 @@
       "store_id": "52f5738519110900",
       "name": "가장맛있는족발 여수죽림점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "가장맛있는족발 여수죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림중앙로 29-18"
     },
     {
       "store_id": "1e7308d1e28fe49e",
@@ -791,19 +787,19 @@
       "store_id": "539d762fe299233d",
       "name": "강남국밥 돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "강남국밥",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남3길 20"
     },
     {
       "store_id": "815c0895b7dcfaa8",
       "name": "계동치킨 덕충점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 3,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -811,11 +807,11 @@
       "store_id": "aa035789f77b304d",
       "name": "계동치킨 봉산점",
       "district": "봉산동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "계동치킨 봉산점",
+      "matchedAddress": "전남광주통합특별시 여수시 봉산1로 21"
     },
     {
       "store_id": "91cc31c37aa68d62",
@@ -831,11 +827,11 @@
       "store_id": "5caf409776519dd6",
       "name": "고기듬뿍 국물두루치기 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "고기듬뿍국물두루치기 여수문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수북5길 20"
     },
     {
       "store_id": "2f939a1b44f5f7ec",
@@ -871,31 +867,31 @@
       "store_id": "687febad1f2bf0dd",
       "name": "공차 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "공차 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서동1길 46-1"
     },
     {
       "store_id": "72747cfe04586176",
       "name": "공차 여수해양공원점",
       "district": "교동, 중앙동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "공차 여수해양공원점",
+      "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 159"
     },
     {
       "store_id": "d0400d97c15c0a02",
       "name": "공차 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "공차 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-53"
     },
     {
       "store_id": "59785990d2abe3e2",
@@ -911,101 +907,101 @@
       "store_id": "dc01f52e24fc6b2b",
       "name": "교촌치킨 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 570"
     },
     {
       "store_id": "b115c4e54c35d82e",
       "name": "교촌치킨 덕충점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 덕충점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 46"
     },
     {
       "store_id": "4e2bf615062e7234",
       "name": "교촌치킨 돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남9길 17"
     },
     {
       "store_id": "c97c66bc78a649ea",
       "name": "교촌치킨 둔덕점",
       "district": "미평/ 둔덕",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 둔덕점",
+      "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 361"
     },
     {
       "store_id": "84fc553896d0b051",
       "name": "교촌치킨 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 42"
     },
     {
       "store_id": "04ae2e96e82f63ef",
       "name": "교촌치킨 신기점",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 신기점",
+      "matchedAddress": "전남광주통합특별시 여수시 망마로 81"
     },
     {
       "store_id": "dfb50765a5f3a8ab",
       "name": "교촌치킨 안산점",
       "district": "안산동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 안산점",
+      "matchedAddress": "전남광주통합특별시 여수시 도원로 182"
     },
     {
       "store_id": "99ade7376cceea13",
       "name": "교촌치킨 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 70"
     },
     {
       "store_id": "6126fa948ce536e6",
       "name": "교촌치킨 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-26"
     },
     {
       "store_id": "8e930495e2e94c21",
       "name": "교촌치킨 죽림무선점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "교촌치킨 죽림무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 19"
     },
     {
       "store_id": "57bb58bd63f0de94",
@@ -1031,41 +1027,41 @@
       "store_id": "ef6e7bfe76e0dbd1",
       "name": "국수나무 여수엑스포점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "국수나무 여수엑스포점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 46"
     },
     {
       "store_id": "0df58cf68356ebff",
       "name": "굽네치킨&피자 관문점",
       "district": "관문동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "굽네치킨 여수관문점",
+      "matchedAddress": "전남광주통합특별시 여수시 충무로 58-19"
     },
     {
       "store_id": "32f005992963d474",
       "name": "굽네치킨&피자 돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "굽네치킨 여수돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남8길 34"
     },
     {
       "store_id": "c194972cb20f2229",
       "name": "굽네치킨&피자 무선점(화장동)",
       "district": "화장동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "굽네치킨 여수무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 화산1길 7"
     },
     {
       "store_id": "d556f1478e479e75",
@@ -1081,41 +1077,41 @@
       "store_id": "6fd217d22e3ad371",
       "name": "굽네치킨&피자 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "굽네치킨 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문1로 28"
     },
     {
       "store_id": "33558e3cc2ad9dbd",
       "name": "굽네치킨&피자 여천점(신기동)",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "굽네치킨 여수여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 망마로 102"
     },
     {
       "store_id": "33c73743521674c6",
       "name": "굽네치킨&피자 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "굽네치킨 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 19-9"
     },
     {
       "store_id": "72e0104c30277686",
       "name": "굽네치킨&피자 죽림점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "굽네치킨 여수죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림중앙로 33"
     },
     {
       "store_id": "aed649ea91b727b8",
@@ -1131,11 +1127,11 @@
       "store_id": "c0bab6826b36d95f",
       "name": "그루브 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "그루브",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화1길 14"
     },
     {
       "store_id": "8f3251e2788d4931",
@@ -1151,11 +1147,11 @@
       "store_id": "1a9ef3c649eefc17",
       "name": "기영이숯불두마리치킨 여천점(안산동)",
       "district": "안산동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "기영이숯불두마리치킨 여수여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 안산1길 186-25"
     },
     {
       "store_id": "cc5b3b36c8737601",
@@ -1171,21 +1167,21 @@
       "store_id": "fb32c4e0939b5468",
       "name": "김밥나라 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "김밥나라 국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 644"
     },
     {
       "store_id": "404f1649d53b97eb",
       "name": "김밥천국 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "김밥천국 국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 672"
     },
     {
       "store_id": "665953a0453afc52",
@@ -1211,11 +1207,11 @@
       "store_id": "5535998cfac3846a",
       "name": "김종구식 맛치킨 전기바베큐 옛날통닭 학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "김종구식맛치킨전기바베큐옛날통닭 여수학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 시청동5길 20"
     },
     {
       "store_id": "67f5b4a369c1c6d9",
@@ -1251,9 +1247,9 @@
       "store_id": "b717d583801d3f04",
       "name": "깐깐한족발 여수문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 2,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -1261,11 +1257,11 @@
       "store_id": "f20eb017620ccc33",
       "name": "깐깐한족발 여수학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "깐깐한족발 여수학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 시청동3길 35-12"
     },
     {
       "store_id": "4e44728a4ea3bcef",
@@ -1341,31 +1337,31 @@
       "store_id": "119e21e06f1471b6",
       "name": "네네치킨 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "네네치킨 국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 구봉산길 15-2"
     },
     {
       "store_id": "2875fb8206bbf1a6",
       "name": "네네치킨 무선지구점(선원동)",
       "district": "선원동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "네네치킨 무선지구점",
+      "matchedAddress": "전남광주통합특별시 여수시 무선3길 6"
     },
     {
       "store_id": "190c9c9cea69da3b",
       "name": "네네치킨 신기점",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "네네치킨 신기점",
+      "matchedAddress": "전남광주통합특별시 여수시 새터로 93"
     },
     {
       "store_id": "54a0c1a2addb92d6",
@@ -1381,21 +1377,21 @@
       "store_id": "f63bbae9b9a80813",
       "name": "네네치킨 엑스포점",
       "district": "공화동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "네네치킨 엑스포점",
+      "matchedAddress": "전남광주통합특별시 여수시 동문로 101-1"
     },
     {
       "store_id": "4cacbf0f8d535667",
       "name": "네네치킨 여서문수점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "네네치킨 여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 대치3길 13-1"
     },
     {
       "store_id": "3a5417b7d9525787",
@@ -1411,61 +1407,61 @@
       "store_id": "dc42166bad88a929",
       "name": "노랑고래 찹쌀꽈배기 중앙점",
       "district": "중앙동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "노랑고래찹쌀꽈배기 여수중앙점",
+      "matchedAddress": "전남광주통합특별시 여수시 진남상가길 9"
     },
     {
       "store_id": "b8267998349b16e1",
       "name": "노랑통닭 여서문수점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "노랑통닭 여수여서문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수8길 33"
     },
     {
       "store_id": "40673a86169d791f",
       "name": "노랑통닭 여수밤바다점(중앙동)",
       "district": "중앙동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "노랑통닭 여수밤바다점",
+      "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 159"
     },
     {
       "store_id": "aea70baec8c61d25",
       "name": "노랑통닭 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "노랑통닭 웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 108"
     },
     {
       "store_id": "ce40f493bcd2ca2b",
       "name": "노랑통닭 죽림점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "노랑통닭 여수죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 67"
     },
     {
       "store_id": "f0804947cebd20cc",
       "name": "노브랜드버거 여수여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "노브랜드버거 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 58"
     },
     {
       "store_id": "759915faca1feb20",
@@ -1481,21 +1477,21 @@
       "store_id": "a5916a5a02aab661",
       "name": "닥엔돈스 쪽갈비 봉강점",
       "district": "봉강동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "닥엔돈스 여수여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남3길 2-5"
     },
     {
       "store_id": "b9ea332bb64a02e8",
       "name": "닥엔돈스 쪽갈비 여천점(신기동)",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "닥엔돈스 여수여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남3길 2-5"
     },
     {
       "store_id": "ac2e0e2021267315",
@@ -1541,11 +1537,11 @@
       "store_id": "d86fa53d88c8d127",
       "name": "더리터 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "더리터 여수문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 155"
     },
     {
       "store_id": "248fb06bce3aa6e4",
@@ -1561,61 +1557,61 @@
       "store_id": "f0c36824f150a779",
       "name": "더벤티 여수국동서희스타힐스점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "더벤티 여수국동서희스타힐스점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 681"
     },
     {
       "store_id": "aa29edc20eb6da8b",
       "name": "더벤티 여수돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "더벤티 여수돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남로 55"
     },
     {
       "store_id": "8d6b7abaf3f7f596",
       "name": "더벤티 여수수산시장점(교동)",
       "district": "교동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "더벤티 여수수산시장점",
+      "matchedAddress": "전남광주통합특별시 여수시 충무로 23-1"
     },
     {
       "store_id": "aae3c781ba45f8a3",
       "name": "더벤티 여수이순신광장점(중앙동)",
       "district": "중앙동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "더벤티 여수이순신광장점",
+      "matchedAddress": "전남광주통합특별시 여수시 동문로 2-2"
     },
     {
       "store_id": "4990a1c1dc208fce",
       "name": "더벤티 여수해양공원점(중앙동)",
       "district": "중앙동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "더벤티 여수해양공원점",
+      "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 159"
     },
     {
       "store_id": "afe9497576e46e1e",
       "name": "던킨 여수롯데마트점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "던킨 여수롯데마트점",
+      "matchedAddress": "전남광주통합특별시 여수시 국포1로 36"
     },
     {
       "store_id": "d1c9de66c95c1d46",
@@ -1631,11 +1627,11 @@
       "store_id": "86df23f2e79b3bb8",
       "name": "도담식당 충무동점",
       "district": "충무동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "도담",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 96"
     },
     {
       "store_id": "634cd6c2572df494",
@@ -1651,21 +1647,21 @@
       "store_id": "2f4c3cfb0866c4a4",
       "name": "도미노피자 여천점(학동)",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "도미노피자 여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 도원로 277"
     },
     {
       "store_id": "7249484d1a76ce44",
       "name": "도야족발 여수여천점(죽림)",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "도야족발 여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 5"
     },
     {
       "store_id": "950ba1c64e791621",
@@ -1701,21 +1697,21 @@
       "store_id": "149224e8ca5281d9",
       "name": "동대문엽기떡볶이 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "동대문엽기떡볶이 여수문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 68"
     },
     {
       "store_id": "2e2afe0788acce6a",
       "name": "동서울왕족발(신기동)",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "동서울왕족발",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남1길 15"
     },
     {
       "store_id": "68ba9ebef219905e",
@@ -1771,11 +1767,11 @@
       "store_id": "16669581b8dc378d",
       "name": "땅스부대찌개 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "땅스부대찌개 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서로 181"
     },
     {
       "store_id": "fd8d24a45e887938",
@@ -1801,41 +1797,41 @@
       "store_id": "c05575dae26cfbae",
       "name": "또래김밥 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "또래김밥 문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 159-2"
     },
     {
       "store_id": "47b56ab22cab7ce0",
       "name": "또바기 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "또바기",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화길 77"
     },
     {
       "store_id": "a2939cd769593c56",
       "name": "뚜레쥬르 여수돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "뚜레쥬르 여수돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남로 64"
     },
     {
       "store_id": "03f6d7c59d6d1a45",
       "name": "뚜레쥬르 여수엑스포타운점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "뚜레쥬르 여수엑스포타운점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 38"
     },
     {
       "store_id": "bee72f182a400ed4",
@@ -1861,11 +1857,11 @@
       "store_id": "cc97a2338805f0c2",
       "name": "라홍방마라탕 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "라홍방마라탕 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-21"
     },
     {
       "store_id": "dedded076c21a785",
@@ -1931,41 +1927,41 @@
       "store_id": "11161bd0b4783703",
       "name": "맘스터치 무선점",
       "district": "무선",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "맘스터치 무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 무선중앙로 7-1"
     },
     {
       "store_id": "a7d0d397991605ec",
       "name": "맘스터치 여천 학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "맘스터치 여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 29"
     },
     {
       "store_id": "3b07bfa30f252db8",
       "name": "맘스터치 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "맘스터치 메가박스웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 96"
     },
     {
       "store_id": "e9753bad89c254a3",
       "name": "맛나감자탕 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "맛나감자탕 여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 53"
     },
     {
       "store_id": "1fe48c8f1857b4d2",
@@ -1991,19 +1987,19 @@
       "store_id": "88b98e5ecb968c2c",
       "name": "맥도날드 여수미평DT점",
       "district": "미평동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "맥도날드 여수미평DT점",
+      "matchedAddress": "전남광주통합특별시 여수시 좌수영로 387"
     },
     {
       "store_id": "8dfdc5de41e3eca9",
       "name": "맥도날드 여수학동DT점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 2,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -2021,31 +2017,31 @@
       "store_id": "4ff23be15f0664ae",
       "name": "맥시칸치킨 돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "맥시칸치킨 돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남3길 17-16"
     },
     {
       "store_id": "173d62e7132f3370",
       "name": "맥시칸치킨 무선점",
       "district": "화장동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "맥시칸치킨 무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 성산로 33"
     },
     {
       "store_id": "b5e31af3d61fc8fe",
       "name": "맥시칸치킨 미평점",
       "district": "미평동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "맥시칸치킨 미평점",
+      "matchedAddress": "전남광주통합특별시 여수시 미평로 45"
     },
     {
       "store_id": "dfa033316cfcecf7",
@@ -2061,21 +2057,21 @@
       "store_id": "48113ac49e27c620",
       "name": "메가MGC커피 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문2로 83"
     },
     {
       "store_id": "9999f4db1009d483",
       "name": "메가MGC커피 미평점",
       "district": "미평동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수미평점",
+      "matchedAddress": "전남광주통합특별시 여수시 만성로 69"
     },
     {
       "store_id": "4289ad6217815b70",
@@ -2091,131 +2087,131 @@
       "store_id": "d14f1e6669383a88",
       "name": "메가MGC커피 여수교동점",
       "district": "교동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수교동점",
+      "matchedAddress": "전남광주통합특별시 여수시 진남상가길 38"
     },
     {
       "store_id": "d5ab6e067ab79cb9",
       "name": "메가MGC커피 여수신기점",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수신기점",
+      "matchedAddress": "전남광주통합특별시 여수시 새터로 64"
     },
     {
       "store_id": "9d7d7e2f99658a9c",
       "name": "메가MGC커피 여수엑스포점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수엑스포점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 46"
     },
     {
       "store_id": "3a60142ebc07e295",
       "name": "메가MGC커피 여수웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 41"
     },
     {
       "store_id": "08eecf0379470865",
       "name": "메가MGC커피 여수진남시장점(학동)",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수진남시장점",
+      "matchedAddress": "전남광주통합특별시 여수시 시청로 34"
     },
     {
       "store_id": "62cd152fab8dc42e",
       "name": "메가MGC커피 여수진남주유소점(봉계동)",
       "district": "봉계동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수진남주유소점",
+      "matchedAddress": "전남광주통합특별시 여수시 좌수영로 684"
     },
     {
       "store_id": "9a4e8ea87951b54e",
       "name": "메가MGC커피 여천점(학동)",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "메가MGC커피 여수여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 36-1"
     },
     {
       "store_id": "f25d8111c5d1b135",
       "name": "멕시카나치킨 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "멕시카나치킨 국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 구봉길 79"
     },
     {
       "store_id": "183a9d859fd9518d",
       "name": "멕시카나치킨 무선죽림점",
       "district": "선원동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "멕시카나치킨 무선죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 무선6길 24"
     },
     {
       "store_id": "e313a8628fc0916a",
       "name": "멕시카나치킨 신기점",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "멕시카나치킨 신기학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남3길 28-2"
     },
     {
       "store_id": "aef73537733e9387",
       "name": "멕시카나치킨 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "멕시카나치킨 여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서로 181"
     },
     {
       "store_id": "486bad289ae76e54",
       "name": "멕시칸치킨 학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "멕시칸치킨 학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 학동1길 16-11"
     },
     {
       "store_id": "0a5ea9fd4c080ed0",
       "name": "멜로우 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "버터멜로우",
+      "matchedAddress": "전남광주통합특별시 여수시 망마로 100"
     },
     {
       "store_id": "e1089d6ba40ec342",
@@ -2231,11 +2227,11 @@
       "store_id": "fbf90dcb8bf85a24",
       "name": "명품육회 오림동점",
       "district": "오림동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "명품육회 여수본점",
+      "matchedAddress": "전남광주통합특별시 여수시 장군산길 70"
     },
     {
       "store_id": "dd932b154f9ea0e6",
@@ -2251,11 +2247,11 @@
       "store_id": "9dcbffc6c6a5ba77",
       "name": "모도리보쌈족발 여수직영점(신기동)",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "모도리보쌈족발 여수직영점",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남4길 10"
     },
     {
       "store_id": "576a1f68d57eaf29",
@@ -2281,11 +2277,11 @@
       "store_id": "6a7625bd1d16ac3b",
       "name": "미스터피자 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "미스터피자 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 83"
     },
     {
       "store_id": "876cb9bc8fa15d8e",
@@ -2301,21 +2297,21 @@
       "store_id": "4674f8f434b1796a",
       "name": "바다양푼이동태탕/찜 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "바다양푼이동태탕 여수문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 143"
     },
     {
       "store_id": "3a09685a7db0f853",
       "name": "바르다김선생 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "바르다김선생 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 84"
     },
     {
       "store_id": "1ddcb01bb576c2e3",
@@ -2371,21 +2367,21 @@
       "store_id": "e4707894d7a253d7",
       "name": "반올림피자 여수3호점피자(교동)",
       "district": "교동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "반올림피자 전남여수3호점",
+      "matchedAddress": "전남광주통합특별시 여수시 충무로 38-3"
     },
     {
       "store_id": "a43b83f3f712fc43",
       "name": "반올림피자 여수점(신기동)",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "반올림피자 여수점",
+      "matchedAddress": "전남광주통합특별시 여수시 새터로 19-1"
     },
     {
       "store_id": "cf169d6bbf8830f8",
@@ -2411,41 +2407,41 @@
       "store_id": "10f225b9ca817dc4",
       "name": "배스킨라빈스 여수국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "배스킨라빈스 여수국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 716"
     },
     {
       "store_id": "989fc2e054bb87c9",
       "name": "배스킨라빈스 여수충무점",
       "district": "충무동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "배스킨라빈스 여수충무점",
+      "matchedAddress": "전남광주통합특별시 여수시 진남상가길 47-2"
     },
     {
       "store_id": "2ec1cf195195db03",
       "name": "버거리 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "버거리 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 19-35"
     },
     {
       "store_id": "7b80f8d10b67089e",
       "name": "버거킹 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "버거킹 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-15"
     },
     {
       "store_id": "74914ff35d06477d",
@@ -2461,21 +2457,21 @@
       "store_id": "4c6d5dcf82e3e56b",
       "name": "보드람치킨 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "보드람치킨 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 25"
     },
     {
       "store_id": "db28774d00c0d9ba",
       "name": "보배반점 여수여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "보배반점 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화1길 42"
     },
     {
       "store_id": "30fff2720e2ce0c9",
@@ -2491,41 +2487,41 @@
       "store_id": "81d552a2ffdcf486",
       "name": "뵈르뵈르 여수봉산점",
       "district": "봉산동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "뵈르뵈르 여수봉산점",
+      "matchedAddress": "전남광주통합특별시 여수시 봉산남4길 23-33"
     },
     {
       "store_id": "6721d86f9ff6f74b",
       "name": "부리나 바베큐 치킨 여문점",
       "district": "여서/ 문수",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "부리나바베큐치킨 여문점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수7길 32"
     },
     {
       "store_id": "b978240417a18e51",
       "name": "부어치킨 여수학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "부어치킨 여수소호점",
+      "matchedAddress": "전남광주통합특별시 여수시 소호로 469-1"
     },
     {
       "store_id": "16b4130f35ec93ae",
       "name": "부어치킨&버거 여수소호점",
       "district": "소호동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "부어치킨 여수소호점",
+      "matchedAddress": "전남광주통합특별시 여수시 소호로 469-1"
     },
     {
       "store_id": "de00a38f4c4fe9d4",
@@ -2561,11 +2557,11 @@
       "store_id": "374ad657608d7b20",
       "name": "브라더한정식도시락 여수점(문수동)",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "브라더한정식도시락 여수점",
+      "matchedAddress": "전남광주통합특별시 여수시 허문정1길 51-2"
     },
     {
       "store_id": "066197a9443c3145",
@@ -2661,11 +2657,11 @@
       "store_id": "adcbd0b7f13946a4",
       "name": "삼해수산마차 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "삼해수산마차",
+      "matchedAddress": "전남광주통합특별시 여수시 어항로 34"
     },
     {
       "store_id": "030d45b86234bb7b",
@@ -2681,11 +2677,11 @@
       "store_id": "67d28f42d21c125f",
       "name": "서희국밥&족발 국동본점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "서희국밥&족발 여수본점",
+      "matchedAddress": "전남광주통합특별시 여수시 어항로 34"
     },
     {
       "store_id": "8608c923097a2adc",
@@ -2711,11 +2707,11 @@
       "store_id": "8d23a7a6daaa7c6d",
       "name": "소녹 종화동점",
       "district": "종화동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "소녹",
+      "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 191-3"
     },
     {
       "store_id": "03809451afc7b09b",
@@ -2731,11 +2727,11 @@
       "store_id": "de5f7fd077422974",
       "name": "소코아 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "소코아 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅남5길 3"
     },
     {
       "store_id": "72f43b13ec8436f7",
@@ -2751,11 +2747,11 @@
       "store_id": "3b0b23248891aa0e",
       "name": "손수김밥 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "손수김밥 여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문1로 43-5"
     },
     {
       "store_id": "779bc5453215d9c5",
@@ -2771,11 +2767,11 @@
       "store_id": "11e1973f448ef7a6",
       "name": "송촌꼬마김밥 여문점",
       "district": "여서,문수",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "송촌꼬마김밥 여문점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수북5길 26"
     },
     {
       "store_id": "421fc97caaddfbc5",
@@ -2821,11 +2817,11 @@
       "store_id": "0104c356b7c6428c",
       "name": "순살만공격 여수여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "순살만공격 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서동6길 14-1"
     },
     {
       "store_id": "14d4b7be316bc8e7",
@@ -2841,11 +2837,11 @@
       "store_id": "3de8202985e65f35",
       "name": "스텔라떡볶이 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "스텔라떡볶이 전남여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅남2길 37"
     },
     {
       "store_id": "94fd76dc2861933c",
@@ -2881,11 +2877,11 @@
       "store_id": "b218c9f269d44fa8",
       "name": "시니롱 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "시니롱",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천5길 9"
     },
     {
       "store_id": "3a743fd9484606d1",
@@ -2921,51 +2917,51 @@
       "store_id": "e6ac7de74abcd1d9",
       "name": "신전떡볶이 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "신전떡볶이 여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 42"
     },
     {
       "store_id": "5c881a3751b1c6cf",
       "name": "쌀쌀맞은닭 여천점(신기동)",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "쌀쌀맞은닭 여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남길 26"
     },
     {
       "store_id": "6706deb8a748599b",
       "name": "쌀통닭 무선점",
       "district": "화장동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "쌀통닭 무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 화산2길 7"
     },
     {
       "store_id": "561cc726687ccd61",
       "name": "쌀통닭 여문점",
       "district": "여서/ 문수",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "쌀통닭 여수여문점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서로 201"
     },
     {
       "store_id": "cdf241640091abac",
       "name": "쑝쑝돈까스 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "쑝쑝돈까스 여수문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서로 143-1"
     },
     {
       "store_id": "c30f3543d3d24747",
@@ -2981,11 +2977,11 @@
       "store_id": "e7be983ffc863971",
       "name": "아담만두 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "아담만두 학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 학동2길 5"
     },
     {
       "store_id": "31d479a979a700cf",
@@ -3011,11 +3007,11 @@
       "store_id": "3733c57e37212005",
       "name": "아주커치킨 관문점",
       "district": "관문동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "아주커치킨 관문점",
+      "matchedAddress": "전남광주통합특별시 여수시 동문로 96"
     },
     {
       "store_id": "b25a59f2207a9e10",
@@ -3031,21 +3027,21 @@
       "store_id": "cef7263a330f4e0f",
       "name": "아주커치킨 여수국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "아주커치킨 국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 646-2"
     },
     {
       "store_id": "7d9f7e5be4bb49db",
       "name": "아주커치킨 여수돌산대교점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "아주커치킨 돌산대교점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남해안로 11"
     },
     {
       "store_id": "9a94c05bdeca2d9e",
@@ -3061,11 +3057,11 @@
       "store_id": "86976639259e5d7f",
       "name": "얌샘김밥 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "얌샘김밥 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 330"
     },
     {
       "store_id": "6772d4141d54e74d",
@@ -3081,11 +3077,11 @@
       "store_id": "38f4e2e9e89a61b9",
       "name": "여서 육감 문수점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "여서육감",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 40"
     },
     {
       "store_id": "c34a81ea7ed1d578",
@@ -3101,11 +3097,11 @@
       "store_id": "d0c01cd4ef9821c3",
       "name": "여수 오리날개 튀김 여천점(신기동)",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "여수오리날개튀김 여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남3길 1"
     },
     {
       "store_id": "035938bab3de179c",
@@ -3141,11 +3137,11 @@
       "store_id": "2a1bd22a9b5f938e",
       "name": "여수다복 교동점",
       "district": "교동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "여수다복",
+      "matchedAddress": "전남광주통합특별시 여수시 통제영2길 8-11"
     },
     {
       "store_id": "732120ab53b3f457",
@@ -3161,21 +3157,21 @@
       "store_id": "485ad1139b230bcf",
       "name": "여수족발 엑스포점",
       "district": "공화동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "여수족발 엑스포점",
+      "matchedAddress": "전남광주통합특별시 여수시 동문로 114"
     },
     {
       "store_id": "0a4aaf8ee1103e4f",
       "name": "여수족발(신기동)",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "여수족발",
+      "matchedAddress": "전남광주통합특별시 여수시 새터로 100"
     },
     {
       "store_id": "fe356412007caf0c",
@@ -3191,11 +3187,11 @@
       "store_id": "61791dbea82168f1",
       "name": "역전할머니맥주 덕충점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "역전할머니맥주 여수덕충점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 38"
     },
     {
       "store_id": "69f92930ea1e00c4",
@@ -3231,11 +3227,11 @@
       "store_id": "2cd9e5b3f51e62e6",
       "name": "예향정 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "예향정 여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 51"
     },
     {
       "store_id": "90e006413bc79cbc",
@@ -3291,11 +3287,11 @@
       "store_id": "34817ff59a6bc66d",
       "name": "우리할매떡볶이 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "우리할매떡볶이 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 85"
     },
     {
       "store_id": "0e6d7a1000b1c53b",
@@ -3311,11 +3307,11 @@
       "store_id": "39b2241021f9616c",
       "name": "우주호떡 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "우주호떡",
+      "matchedAddress": "전남광주통합특별시 여수시 대치3길 17"
     },
     {
       "store_id": "e6339c85e31322fa",
@@ -3331,31 +3327,31 @@
       "store_id": "571770a25990ba97",
       "name": "웅천횟집",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "웅천횟집",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 35-42"
     },
     {
       "store_id": "d322f9f9a91b0bdb",
       "name": "원할머니보쌈족발 여수여천점",
       "district": "여천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "원할머니보쌈족발 여수여천점",
+      "matchedAddress": "전남광주통합특별시 여수시 선소로 35"
     },
     {
       "store_id": "c8633f33e72e2e0a",
       "name": "웡김밥 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "웡김밥",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 92"
     },
     {
       "store_id": "df16b7312c25da31",
@@ -3381,31 +3377,31 @@
       "store_id": "65c908d7b367de45",
       "name": "육식사관학교 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "육식사관학교 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서동5길 2"
     },
     {
       "store_id": "fb28167259749571",
       "name": "육회밤바다 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "육회밤바다",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화길 13"
     },
     {
       "store_id": "3c3819748a5c2d63",
       "name": "윤김밥 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "윤김밥",
+      "matchedAddress": "전남광주통합특별시 여수시 허문정1길 5"
     },
     {
       "store_id": "9edba048ff8c3b2e",
@@ -3441,21 +3437,21 @@
       "store_id": "0fcde82a0f46ee28",
       "name": "이디야커피 여수돌산우두리점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "이디야커피 여수돌산우두리점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남해안로 76"
     },
     {
       "store_id": "43b4908cf2161b80",
       "name": "이디야커피 여수연등메트하임점",
       "district": "연등동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "이디야커피 여수연등메트하임점",
+      "matchedAddress": "전남광주통합특별시 여수시 좌수영로 101"
     },
     {
       "store_id": "31ffaa41b54a57aa",
@@ -3521,61 +3517,61 @@
       "store_id": "7c1c77a3d0c35a43",
       "name": "잇텐스시 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "잇텐스시",
+      "matchedAddress": "전남광주통합특별시 여수시 국동남6길 3"
     },
     {
       "store_id": "c68d21da9b32f1eb",
       "name": "자담치킨 여수엑스포점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "자담치킨 엑스포점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 70"
     },
     {
       "store_id": "4ae622b733f163c7",
       "name": "자담치킨 여수여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "자담치킨 여수여서동점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 21-1"
     },
     {
       "store_id": "58228e47bba2b29c",
       "name": "자담치킨 여수웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "자담치킨 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천중앙로 27"
     },
     {
       "store_id": "c6b947813051ac38",
       "name": "자담치킨 여수죽림점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "자담치킨 여수죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림중앙로 7-39"
     },
     {
       "store_id": "1894da97ed277235",
       "name": "자담치킨 여수학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "자담치킨 여수학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 소호로 662"
     },
     {
       "store_id": "401e4210d0416b54",
@@ -3601,11 +3597,11 @@
       "store_id": "f3f6088916279991",
       "name": "전가복 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "전가복 웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 35-41"
     },
     {
       "store_id": "bc6152833cd076f5",
@@ -3661,31 +3657,31 @@
       "store_id": "82b2cd167c1e053b",
       "name": "조선다방 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "조선다방 국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 672"
     },
     {
       "store_id": "bef7f3b6456df7fd",
       "name": "조선다방 돌산점",
       "district": "돌산",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "조선다방 돌산점",
+      "matchedAddress": "전남광주통합특별시 여수시 돌산읍 강남동로 39"
     },
     {
       "store_id": "cfd74ce112f2b187",
       "name": "조선다방 엑스포점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "조선다방 엑스포점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 46"
     },
     {
       "store_id": "5768a9d8a72502ef",
@@ -3711,11 +3707,11 @@
       "store_id": "44a0e464d6d22c38",
       "name": "중앙돈까스 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "중앙돈까스",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 655"
     },
     {
       "store_id": "4e43f1180007c10f",
@@ -3761,11 +3757,11 @@
       "store_id": "5d45d58855f0c602",
       "name": "진한설렁탕 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "진한설렁탕",
+      "matchedAddress": "전남광주통합특별시 여수시 문수북5길 22"
     },
     {
       "store_id": "54fd901a0b754ee1",
@@ -3791,11 +3787,11 @@
       "store_id": "36856e4f20cae7d0",
       "name": "짱구김밥 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "짱구김밥",
+      "matchedAddress": "전남광주통합특별시 여수시 여문2로 77-2"
     },
     {
       "store_id": "09dc33ce2f8f08d3",
@@ -3881,41 +3877,41 @@
       "store_id": "8c8ee85a0bc3b219",
       "name": "처갓집양념치킨 무선점",
       "district": "화장동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "처갓집양념치킨 무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 성산6길 53-9"
     },
     {
       "store_id": "b6c5400a34504bc0",
       "name": "처갓집양념치킨 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "처갓집양념치킨 문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 72"
     },
     {
       "store_id": "96f341e2aced2187",
       "name": "처갓집양념치킨 신기점",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "처갓집양념치킨 신기점",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남4길 14"
     },
     {
       "store_id": "ad437cdcefd55447",
       "name": "처갓집양념치킨 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "처갓집양념치킨 웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 261"
     },
     {
       "store_id": "23e36eb3741524aa",
@@ -3961,21 +3957,21 @@
       "store_id": "4663ccf86e9128fa",
       "name": "청담피자 여수웅천",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "청담피자 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 190"
     },
     {
       "store_id": "b88f6b8e8fd14ad3",
       "name": "청담피자 여수죽림점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "청담피자 여수죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림1길 10"
     },
     {
       "store_id": "37f1a033eac82aa2",
@@ -4001,21 +3997,21 @@
       "store_id": "cd2ecfcd707cd2c7",
       "name": "청춘꼬마김밥 여수국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "청춘꼬마김밥 국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 631"
     },
     {
       "store_id": "b9501772f0f6b1fb",
       "name": "청하대 영빈관 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "청하대영빈관",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화1길 64"
     },
     {
       "store_id": "9acc51c50813ce03",
@@ -4051,29 +4047,29 @@
       "store_id": "58063b75a96362b4",
       "name": "치킨마루 무선호수공원점(화장동)",
       "district": "화장동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "치킨마루 무선호수공원점",
+      "matchedAddress": "전남광주통합특별시 여수시 화산로 62-1"
     },
     {
       "store_id": "f65edfe1927ef379",
       "name": "치킨마루 여수봉계점",
       "district": "봉계동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "치킨마루 여수봉계점",
+      "matchedAddress": "전남광주통합특별시 여수시 좌수영로 682-25"
     },
     {
       "store_id": "f1fa55a4b8c7c428",
       "name": "치킨아이 국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 6,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -4081,51 +4077,51 @@
       "store_id": "0173191ff3ddab64",
       "name": "치킨아이 둔덕점",
       "district": "미평/ 둔덕",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "치킨아이 둔덕점",
+      "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 318"
     },
     {
       "store_id": "25ebed742b1238d5",
       "name": "치킨아이 무선점",
       "district": "선원동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "치킨아이 무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 무선2길 13"
     },
     {
       "store_id": "9a8243a043f3735c",
       "name": "치킨아이 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "치킨아이 문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문2로 73"
     },
     {
       "store_id": "4cd9573bfca48b92",
       "name": "치킨아이 소호점",
       "district": "소호동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "치킨아이 소호점",
+      "matchedAddress": "전남광주통합특별시 여수시 장성1길 40"
     },
     {
       "store_id": "bc89627508bf7a16",
       "name": "치킨아이 신기점",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "치킨아이 신기점",
+      "matchedAddress": "전남광주통합특별시 여수시 신기남길 23"
     },
     {
       "store_id": "b6fa10980521859b",
@@ -4181,11 +4177,11 @@
       "store_id": "66f78262c4f9aa55",
       "name": "코리엔탈깻잎두마리치킨 선원점",
       "district": "선원동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "코리엔탈깻잎두마리치킨 선원점",
+      "matchedAddress": "전남광주통합특별시 여수시 선원4길 71"
     },
     {
       "store_id": "f3cb61dd45ba9b8b",
@@ -4211,11 +4207,11 @@
       "store_id": "420af240943ff849",
       "name": "큰손닭강정 여수본점(학동)",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "큰손닭강정 여수본점",
+      "matchedAddress": "전남광주통합특별시 여수시 쌍봉로 35-2"
     },
     {
       "store_id": "f17f729605bb5945",
@@ -4231,11 +4227,11 @@
       "store_id": "87dcf0c9a9804bd2",
       "name": "킹스타피자 관문점",
       "district": "관문동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "킹스타피자 관문점",
+      "matchedAddress": "전남광주통합특별시 여수시 동문로 66"
     },
     {
       "store_id": "852b5da8f5e3e3dc",
@@ -4271,41 +4267,41 @@
       "store_id": "ddfe30e801fed73f",
       "name": "탕참 탕수육참잘하는집 여수점(여서동)",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "탕참 탕수육참잘하는집 여서문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서로 136"
     },
     {
       "store_id": "a1e8130ec540e37f",
       "name": "토담 민속주점 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "토담민속주점",
+      "matchedAddress": "전남광주통합특별시 여수시 문수1길 16"
     },
     {
       "store_id": "f9a6f0eb9fba0696",
       "name": "통뼈감자탕 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "통뼈감자탕 여수문수점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문2로 73"
     },
     {
       "store_id": "a6f3cc0da6d5c044",
       "name": "통큰두마리찜닭 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "통큰두마리찜닭 여수수정점",
+      "matchedAddress": "전남광주통합특별시 여수시 수정2길 10-1"
     },
     {
       "store_id": "217d38b37c2b4d5b",
@@ -4321,61 +4317,61 @@
       "store_id": "6fcebc9381432d73",
       "name": "투썸플레이스 웅천점",
       "district": "웅천동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "투썸플레이스 여수웅천점",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 35-14"
     },
     {
       "store_id": "728262018f22a2cc",
       "name": "투썸플레이스 한재사거리점",
       "district": "광무동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "투썸플레이스 여수한재사거리점",
+      "matchedAddress": "전남광주통합특별시 여수시 좌수영로 25"
     },
     {
       "store_id": "b17cdef5234b021b",
       "name": "파리바게뜨 여수교동점",
       "district": "교동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "파리바게뜨 여수교동점",
+      "matchedAddress": "전남광주통합특별시 여수시 진남상가길 42"
     },
     {
       "store_id": "e9dc60119d9cdfb5",
       "name": "파리바게뜨 여수국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "파리바게뜨 여수국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 655"
     },
     {
       "store_id": "6059e7ea81c9f4d1",
       "name": "파리바게뜨 여수엑스포점",
       "district": "덕충동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "파리바게뜨 여수엑스포점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 46"
     },
     {
       "store_id": "1bdc59414a5c8b64",
       "name": "파리바게뜨 여수중앙점",
       "district": "중앙동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "파리바게뜨 여수중앙점",
+      "matchedAddress": "전남광주통합특별시 여수시 동문로 7"
     },
     {
       "store_id": "83f635e7ea7d737e",
@@ -4391,101 +4387,101 @@
       "store_id": "6b13f2db6e79b4eb",
       "name": "평양보쌈왕족발",
       "district": "신월동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "평양보쌈왕족발 본점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 624-2"
     },
     {
       "store_id": "20c107a437ec483e",
       "name": "포슬포슬꼬마김밥 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "포슬포슬꼬마김밥",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 89"
     },
     {
       "store_id": "5deb911df92c645a",
       "name": "포우머그 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "포우머그",
+      "matchedAddress": "전남광주통합특별시 여수시 문수7길 27"
     },
     {
       "store_id": "3d91b86995f619d6",
       "name": "프랭크버거 여수여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "프랭크버거 여수여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 51"
     },
     {
       "store_id": "2d1d2bf163bd7e3f",
       "name": "피자스쿨 여수교동점",
       "district": "교동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "피자스쿨 여수교동점",
+      "matchedAddress": "전남광주통합특별시 여수시 통제영2길 7"
     },
     {
       "store_id": "ef2eacdbb6233f97",
       "name": "피자스쿨 여수국동점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "피자스쿨 여수국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 655"
     },
     {
       "store_id": "da66e7ae0cdf1907",
       "name": "피자스쿨 여수무선점",
       "district": "선원동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "피자스쿨 여수무선점",
+      "matchedAddress": "전남광주통합특별시 여수시 무선중앙로 65"
     },
     {
       "store_id": "793ce4c7d0f32994",
       "name": "피자스쿨 여수신기점",
       "district": "신기동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "피자스쿨 여수신기점",
+      "matchedAddress": "전남광주통합특별시 여수시 흥국로 103"
     },
     {
       "store_id": "5d4e5d274ebd1b7c",
       "name": "피자스쿨 여수죽림점",
       "district": "죽림",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "피자스쿨 여수죽림점",
+      "matchedAddress": "전남광주통합특별시 여수시 소라면 죽림로 31"
     },
     {
       "store_id": "4526a5114ecaef34",
       "name": "피자스쿨 여수학동점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "피자스쿨 여수학동점",
+      "matchedAddress": "전남광주통합특별시 여수시 무선로 28"
     },
     {
       "store_id": "e16359de9292f582",
@@ -4501,31 +4497,31 @@
       "store_id": "afb901f3a32de6e8",
       "name": "피자헛 여수문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "피자헛 여수시청점",
+      "matchedAddress": "전남광주통합특별시 여수시 도원로 256-1"
     },
     {
       "store_id": "05634c81541f6bda",
       "name": "피자헛 여수시청점",
       "district": "학동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "피자헛 여수시청점",
+      "matchedAddress": "전남광주통합특별시 여수시 도원로 256-1"
     },
     {
       "store_id": "bf15349639417d6b",
       "name": "피피마켓 종화동점",
       "district": "종화동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "피피마켓",
+      "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 180"
     },
     {
       "store_id": "7af7ffc2da561850",
@@ -4541,11 +4537,11 @@
       "store_id": "7b221aa6623bd0a2",
       "name": "하이오커피 여수신월국동항점",
       "district": "국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "하이오커피 여수신월국동항점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월1길 15-5"
     },
     {
       "store_id": "4621df767ea3905a",
@@ -4561,11 +4557,11 @@
       "store_id": "4391cea41df014b3",
       "name": "한국전통춘천닭갈비 공화동점",
       "district": "공화동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "한국전통춘천닭갈비",
+      "matchedAddress": "전남광주통합특별시 여수시 동문로 89-1"
     },
     {
       "store_id": "06f2a251304b0a51",
@@ -4601,11 +4597,11 @@
       "store_id": "9b760748be6ee430",
       "name": "해룡옥수수찐빵 문수점",
       "district": "문수동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "해룡옥수수찐빵",
+      "matchedAddress": "전남광주통합특별시 여수시 문수로 165"
     },
     {
       "store_id": "43780265104bccba",
@@ -4621,11 +4617,11 @@
       "store_id": "6047251f50214125",
       "name": "햄토피아토스트 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "햄토피아토스트",
+      "matchedAddress": "전남광주통합특별시 여수시 대치3길 15"
     },
     {
       "store_id": "b8c2dcaa9ef57af5",
@@ -4671,11 +4667,11 @@
       "store_id": "a6ff0bcfc0afe5b6",
       "name": "화끈하게매운 핫불닭발&오돌뼈 여서점",
       "district": "여서동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "화끈하게 매운 핫불닭발&오돌뼈 여수점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 18"
     },
     {
       "store_id": "9586eb46ca401707",
@@ -4691,11 +4687,11 @@
       "store_id": "7777fc7f051bf178",
       "name": "황금코다리 봉산점",
       "district": "봉산동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "황금코다리 여수봉산점",
+      "matchedAddress": "전남광주통합특별시 여수시 봉산1로 3"
     },
     {
       "store_id": "35613e179e0c318b",
@@ -4721,9 +4717,9 @@
       "store_id": "5aa4432158274a35",
       "name": "이화수 전통 육개장",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 2,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -4731,11 +4727,11 @@
       "store_id": "bb036844c501c40a",
       "name": "콩시루 여서점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "콩시루 여서점",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 55"
     },
     {
       "store_id": "a037743d0ee273e2",
@@ -4791,31 +4787,31 @@
       "store_id": "320d26d67b993c4a",
       "name": "아로이태국음식전문점",
       "district": "저장해두시면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "아로이태국음식전문점",
+      "matchedAddress": "전남광주통합특별시 여수시 여문1로 46"
     },
     {
       "store_id": "ba870ddfedb99508",
       "name": "본죽&비빔밥 여수미평점",
       "district": "저장해두시면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "본죽&비빔밥cafe 여수미평점",
+      "matchedAddress": "전남광주통합특별시 여수시 둔덕2길 6-4"
     },
     {
       "store_id": "ddc27f852308889a",
       "name": "본죽 여수국동점",
       "district": "여수국동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "본죽 여수국동점",
+      "matchedAddress": "전남광주통합특별시 여수시 신월로 668"
     },
     {
       "store_id": "1921d1d5c7710872",
@@ -4841,11 +4837,11 @@
       "store_id": "768e4fe8150f5039",
       "name": "정성이 가득찬 반찬",
       "district": "저장해두시면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "정성이가득찬",
+      "matchedAddress": "전남광주통합특별시 여수시 여서로 146-2"
     },
     {
       "store_id": "0ad5341dc696d4f1",
@@ -4861,11 +4857,11 @@
       "store_id": "d409f6d9118b7bad",
       "name": "황금손 반찬",
       "district": "저장해두시면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "황금손반찬",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화길 78-1"
     },
     {
       "store_id": "84c118675c0caa4c",
@@ -4881,41 +4877,41 @@
       "store_id": "f7d93ad21c1a93d7",
       "name": "맘스터치 엑스포점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "맘스터치 여수엑스포점",
+      "matchedAddress": "전남광주통합특별시 여수시 박람회길 1"
     },
     {
       "store_id": "1acf6756b7471125",
       "name": "맘스터치 중앙점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "맘스터치 여수중앙점",
+      "matchedAddress": "전남광주통합특별시 여수시 중앙로 48"
     },
     {
       "store_id": "8cb29ac81df85b54",
       "name": "여수언니 교동점",
       "district": "교동",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "verified",
+      "confidence": "keyword-exact",
+      "candidateCount": 1,
+      "placeName": "여수언니",
+      "matchedAddress": "전남광주통합특별시 여수시 충무로 30-4"
     },
     {
       "store_id": "4e83618703e993b5",
       "name": "걸작떡볶이치킨 여수중앙점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "걸작떡볶이치킨 여수중앙점",
+      "matchedAddress": "전남광주통합특별시 여수시 진남상가길 42-1"
     },
     {
       "store_id": "91798b85e5a50244",
@@ -4951,11 +4947,11 @@
       "store_id": "e5b0545e92f03409",
       "name": "이조삼계탕 충무점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "이조삼계탕 여수점",
+      "matchedAddress": "전남광주통합특별시 여수시 진남로 20"
     },
     {
       "store_id": "98a1464075ea68e5",
@@ -4971,11 +4967,11 @@
       "store_id": "b58c688c90df4687",
       "name": "본죽&비빔밥 여수중앙점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "본죽&비빔밥cafe 여수중앙점",
+      "matchedAddress": "전남광주통합특별시 여수시 좌수영로 39"
     },
     {
       "store_id": "8dc7782b3cb4bdcf",
@@ -5011,9 +5007,9 @@
       "store_id": "75dbdaa6383cd49c",
       "name": "생생연어 여서점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 2,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -5051,11 +5047,11 @@
       "store_id": "0bcf02e9bd40b7d0",
       "name": "뿅가야채곱창 문수점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "뿅가야채곱창 여수수정점",
+      "matchedAddress": "전남광주통합특별시 여수시 수정2길 10-1"
     },
     {
       "store_id": "0ee3922e77afa736",
@@ -5071,9 +5067,9 @@
       "store_id": "a7d684d2ce59e962",
       "name": "부뚜막 문수점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 2,
       "placeName": "",
       "matchedAddress": ""
     },
@@ -5081,11 +5077,11 @@
       "store_id": "585904750de0000c",
       "name": "땡초닭발 미평점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "땡초닭발",
+      "matchedAddress": "전남광주통합특별시 여수시 양지1길 29"
     },
     {
       "store_id": "9e422525b203c97f",
@@ -5101,11 +5097,11 @@
       "store_id": "17d9bf1de3d671fd",
       "name": "해인이네 여서점",
       "district": "홈화면",
-      "status": "search-failed",
-      "confidence": "none",
-      "candidateCount": 0,
-      "placeName": "",
-      "matchedAddress": ""
+      "status": "manual-review",
+      "confidence": "ambiguous",
+      "candidateCount": 1,
+      "placeName": "해인이네",
+      "matchedAddress": "전남광주통합특별시 여수시 여서1로 72-1"
     }
   ]
 }
