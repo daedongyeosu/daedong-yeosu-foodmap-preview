@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "mode": "manifest-first-fail-safe",
+  "allowedClassifications": [
+    "food",
+    "menu_food",
+    "storefront",
+    "store_logo",
+    "food_packaging"
+  ],
+  "blockedClassifications": [
+    "document",
+    "sensitive_document",
+    "price_list",
+    "menu_board_text_only",
+    "receipt",
+    "invoice",
+    "bank_account",
+    "personal_information",
+    "identity_document",
+    "contract",
+    "screen_capture",
+    "people",
+    "vehicle",
+    "non_food",
+    "unknown_sensitive"
+  ],
+  "blockedPathKeywords": [
+    "가격표",
+    "메뉴판",
+    "영수증",
+    "사업자등록",
+    "통장",
+    "계좌",
+    "신분증",
+    "주민등록",
+    "계약서",
+    "서류",
+    "견적서",
+    "price-list",
+    "pricelist",
+    "receipt",
+    "invoice",
+    "document",
+    "screenshot",
+    "screen-shot"
+  ],
+  "fallback": "placeholder",
+  "requireExplicitAllowForPackageEntries": true,
+  "notes": "민감서류·가격표·비음식 사진은 고객 화면에서 차단한다. 픽셀 판별이 아니라 검수된 분류값과 파일명 차단 규칙을 사용하며, 미분류 패키지 사진은 자동 노출하지 않는다."
+}

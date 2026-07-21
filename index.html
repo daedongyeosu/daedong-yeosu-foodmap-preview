@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+  <meta name="theme-color" content="#ff5a1f">
+  <meta name="description" content="여수 음식점과 주문방법을 한눈에 찾는 대동여수음식지도">
+  <title>대동여수음식지도</title>
+  <link rel="preload" as="image" href="images/01.png">
+  <link rel="stylesheet" href="app.css?v=approved-ux-2">
+  <link rel="stylesheet" href="final-experience.css?v=final-local-1">
+</head>
+<body>
+  <div id="app">
+    <div class="yeosu-night-shell" data-weather="clear">
+    <div class="weather-layer" aria-hidden="true"></div>
+    <div class="bridge-light-layer" aria-hidden="true"></div>
+    <div id="microFxLayer" class="micro-fx-layer" aria-hidden="true"></div>
+    <header class="topbar">
+      <button id="locationBtn" class="location-chip" type="button" aria-label="지역 선택">
+        <svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#location"></use></svg><span id="locationText">여수시 전체</span><span aria-hidden="true">⌄</span>
+      </button>
+      <a class="brand" href="#app" aria-label="대동여수음식지도 홈"><img src="assets/logo.png" alt="대동여수음식지도"></a>
+      <button id="noticeBtn" class="icon-btn glass-action" type="button" aria-label="알림"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#bell"></use></svg><b class="badge">2</b></button>
+    </header>
+
+    <section class="search-row main-search-row" aria-label="가게 검색">
+      <div class="searchbox glass-action" id="searchSurface"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#search"></use></svg><input id="mainSearch" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="clearMainSearch" class="input-clear" type="button" aria-label="검색어 지우기" hidden>×</button></div>
+      <button id="searchBtn" class="primary-btn" type="button">검색</button>
+      <button id="topFavoriteBtn" class="top-quick-btn glass-action" type="button" aria-label="찜한 가게"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#heart"></use></svg><span>찜</span></button>
+      <button id="topRecentBtn" class="top-quick-btn glass-action" type="button" aria-label="최근 방문 가게"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#recent"></use></svg><span>최근</span></button>
+    </section>
+
+    <section class="section order-section">
+      <div class="section-head">
+        <div class="section-head-copy"><h2>원하는 방법으로 편하게 주문하세요</h2><p>가게마다 이용 가능한 주문방법을 한눈에 확인할 수 있습니다.</p></div>
+        <button class="text-btn" type="button" data-open="guide">이용안내 ›</button>
+      </div>
+      <div class="order-grid" aria-label="주문방법 선택">
+        <button class="order-item first glass-action community-order" type="button" data-order-key="direct"><svg class="order-svg" aria-hidden="true"><use href="assets/ui/ui-icons.svg#store"></use></svg><strong>가게바로주문</strong></button>
+        <button class="order-item glass-action community-order" type="button" data-order-key="mukkebi"><img src="assets/mukkebi-v7.png" alt="먹깨비"><strong>먹깨비</strong></button>
+        <button class="order-item glass-action community-order" type="button" data-order-key="ddangyo"><img src="assets/ddangyo-v7.png" alt="땡겨요"><strong>땡겨요</strong></button>
+        <button class="order-item glass-action" type="button" data-order-key="brand"><span class="brand-app-icon"><img src="images/momstouch.jpg" alt=""><img src="images/ajukeo.jpg" alt=""><img src="images/burgerking.png" alt=""><span aria-hidden="true">＋</span></span><strong>브랜드앱</strong></button>
+        <button class="order-item glass-action community-order" type="button" data-order-key="ondongne"><img src="assets/ondongne.png" alt="온동네"><strong>온동네</strong></button>
+        <button class="order-item glass-action community-order" type="button" data-order-key="phone"><img src="assets/ui/phone.svg" alt=""><strong>전화주문</strong></button>
+        <button id="moreAppsBtn" class="order-item more-apps glass-action" type="button" data-order-key="other"><svg class="order-svg" aria-hidden="true"><use href="assets/ui/ui-icons.svg#package"></use></svg><strong>다른 주문앱</strong></button>
+      </div>
+      <div id="moreAppsPopover" class="popover" hidden>
+        <button class="popover-close" type="button" aria-label="닫기">×</button><h3>다른 주문앱 보기</h3>
+        <div class="external-apps">
+          <button type="button" data-global-external="yogiyo"><img src="assets/yogiyo.jpg" alt="요기요"><span>요기요</span></button>
+          <button type="button" data-global-external="coupang"><img src="assets/coupang-eats.jpg" alt="쿠팡이츠"><span>쿠팡이츠</span></button>
+          <button type="button" data-global-external="baemin"><img src="assets/baemin.jpg" alt="배달의민족"><span>배달의민족</span></button>
+        </div>
+      </div>
+      <div id="navalLane" class="naval-lane" aria-hidden="true"><span class="sea-line"></span></div>
+    </section>
+    <section class="hero" aria-label="메인 슬라이드 배너">
+      <div id="heroCarousel" class="carousel-controller">
+        <div class="carousel-shell hero-frame">
+          <button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 배너">‹</button>
+          <div id="heroTrack" class="carousel-track"></div>
+          <button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 배너">›</button>
+        </div>
+        <div id="heroDots" class="carousel-dots" aria-label="배너 위치"></div>
+      </div>
+    </section>
+    </div>
+
+    <section class="section category-section">
+      <div class="section-head"><div class="section-head-copy"><h2>원하는 음식 종류를 선택하세요</h2><p>카테고리와 동네를 5초 안에 선택할 수 있도록 구성했습니다.</p></div><button id="allCategoryBtn" class="text-btn" type="button">전체보기 ›</button></div>
+      <div id="categoryGrid" class="category-grid horizontal-categories"></div>
+    </section>
+
+    <section id="searchSummary" class="search-summary" hidden></section>
+    <section id="recommendRails" class="recommend-rails" aria-label="상황별 추천"></section>
+    <section id="recommendSection" class="section">
+      <div class="section-head"><h2>가게목록</h2><button id="resetCategoryBtn" class="text-btn" type="button" hidden>전체 추천 보기 ›</button></div>
+      <div id="storeGrid" class="store-grid"><div class="empty">가게 정보를 불러오는 중입니다.</div></div>
+      <button id="loadMoreBtn" class="load-more" type="button" hidden>더보기</button>
+    </section>
+
+    <section class="section promo-section" aria-label="광고와 지역 소식">
+      <div class="section-head"><div class="section-head-copy"><h2>여수와 함께하는 소식</h2><p>기사 모집, 가게 모집, 신규 오픈과 지역 소식을 전합니다.</p></div></div>
+      <div id="promoCarousel" class="carousel-controller">
+        <div class="carousel-shell promo-frame">
+          <button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 소식">‹</button>
+          <div id="promoTrack" class="carousel-track"></div>
+          <button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 소식">›</button>
+        </div>
+        <div class="carousel-dots" aria-label="소식 위치"></div>
+      </div>
+    </section>
+
+    <footer class="legal"><button type="button" data-open="guide">이용안내</button><button type="button">개인정보처리방침</button><button type="button">광고 문의</button></footer>
+    <div class="build-mark">대동여수음식지도 RC3 로컬 검수 후보 · 원격 미반영</div>
+  </div>
+
+  <nav class="bottom-nav"><button type="button" data-tab="home" class="active"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#store"></use></svg><span>홈</span></button><button type="button" data-tab="search"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#search"></use></svg><span>검색</span></button><button type="button" data-tab="favorite"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#heart"></use></svg><span>찜한가게</span></button><button type="button" data-tab="recent"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#recent"></use></svg><span>최근방문</span></button><button type="button" data-tab="mypage"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#location"></use></svg><span>마이페이지</span></button></nav>
+  <div id="overlay" class="overlay" hidden></div>
+  <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button class="modal-close" type="button" aria-label="닫기">×</button><div id="modalContent"></div></div></div>
+  <div id="photoViewer" class="photo-viewer" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="가게사진 전체화면 보기"><button class="photo-viewer-close" type="button" data-photo-viewer-close aria-label="전체화면 사진 닫기">×</button><div id="photoViewerCarousel" class="carousel-controller photo-viewer-carousel"><div class="carousel-shell photo-viewer-frame"><button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 전체화면 사진">‹</button><div class="carousel-track"></div><button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 전체화면 사진">›</button></div><div class="photo-viewer-footer"><div class="carousel-dots" aria-label="전체화면 사진 위치"></div><span class="photo-viewer-count">1 / 1</span></div></div></div>
+  <div id="startupAd" class="startup-ad" hidden><div class="startup-card"><button class="startup-close" type="button" aria-label="닫기">×</button><small>대동여수음식지도 안내</small><h2>배달기사·가맹점 모집</h2><p>기사 모집, 가게 모집, 주문앱 가입 안내, 신규 오픈 가게와 소상공인 소식을 알립니다.</p><div class="startup-actions"><button id="startupDetails" class="primary-btn" type="button">자세히 보기</button><button id="hideToday" type="button">오늘 그만 보기</button></div></div></div>
+  <noscript><p class="noscript">대동여수음식지도를 이용하려면 자바스크립트를 켜주세요.</p></noscript>
+  <script src="app.js?v=approved-ux-2" defer></script>
+  <script src="final-experience.js?v=final-local-1" defer></script>
+</body>
+</html>

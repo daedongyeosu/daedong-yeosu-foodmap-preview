@@ -1,0 +1,131 @@
+/* RC3 phone-verified failure fixes. Frozen content data and banner sequence remain unchanged. */
+.hero-frame,
+.hero-slide,
+.hero-slide picture,
+.hero-slide img { border-radius: 0 !important; }
+
+.category-color-icon,
+.category-modal-color-icon {
+  display: block;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  overflow: visible;
+}
+.horizontal-categories .category-color-icon { width: 38px; height: 38px; }
+.rc3-category-list .category-modal-color-icon { width: 42px; height: 42px; }
+.horizontal-categories .category,
+.rc3-category-list button { color: #17314b; }
+
+.recommend-track {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  align-items: stretch !important;
+  gap: 11px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-inline: contain;
+  touch-action: pan-x pan-y;
+}
+.recommend-track > .rail-card {
+  display: flex !important;
+  flex: 0 0 min(72vw, 278px) !important;
+  width: min(72vw, 278px) !important;
+  max-width: min(72vw, 278px) !important;
+  flex-direction: column;
+}
+.rc3-rail-card-open,
+.rc3-rail-order-button {
+  pointer-events: auto !important;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.rc3-rail-card-open { flex: 1 1 auto; }
+.rc3-rail-order-button { position: relative; z-index: 2; }
+
+.store-other-popover { display: none !important; }
+.rc3-order-methods-trigger { margin-bottom: 9px; }
+.order-methods-sheet .selected-store-name,
+.community-guide .selected-store-name {
+  display: block;
+  margin: 5px 0 14px;
+  color: #102f49;
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 900;
+}
+.order-methods-list { display: grid; gap: 9px; margin-top: 14px; }
+.order-methods-list .detail-route { width: 100%; }
+.order-methods-sheet .brand-store-actions { margin-top: 9px; }
+
+.phone-order-confirm .phone-confirm-photo img,
+.phone-order-confirm .phone-confirm-photo .app-browser-photo-placeholder,
+.phone-order-confirm .phone-confirm-photo .detail-photo-placeholder {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.verified-phone-number {
+  margin: 14px 0 6px;
+  color: #102f49;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: .02em;
+  text-align: center;
+}
+.phone-call-link { background: var(--orange); color: #fff; }
+
+.feedback-sheet input,
+.feedback-sheet select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 11px;
+  background: #fff;
+  font: inherit;
+}
+.feedback-sheet input[readonly] { background: #f4f7f9; color: #425466; }
+.feedback-app-fields { display: grid; gap: 13px; }
+.feedback-app-fields[hidden] { display: none !important; }
+.feedback-channel-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.feedback-channel-list label,
+.feedback-consent {
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: flex-start;
+  gap: 8px !important;
+  min-height: 44px;
+  border: 1px solid #e1e8ee;
+  border-radius: 11px;
+  padding: 9px;
+  background: #f8fafb;
+  font-size: 13px;
+  font-weight: 700;
+}
+.feedback-channel-list input,
+.feedback-consent input { width: 18px; height: 18px; min-height: 0; flex: 0 0 auto; margin: 0; }
+.feedback-error { color: #b42318; font-size: 13px; font-weight: 750; }
+
+.modal-card > .modal-close { z-index: 20; }
+.modalContent .modal-close,
+.store-other-close { display: none !important; }
+
+@media (max-width: 520px) {
+  .recommend-track > .rail-card {
+    flex-basis: 72vw !important;
+    width: 72vw !important;
+    max-width: 278px !important;
+  }
+  .feedback-channel-list { grid-template-columns: 1fr; }
+}

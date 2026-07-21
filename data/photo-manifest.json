@@ -1,0 +1,1353 @@
+{
+  "entries": [
+    {
+      "storeId": "dc01f52e24fc6b2b",
+      "src": "assets/photo-batch-2-vetted/282.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/282.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "b115c4e54c35d82e",
+      "src": "assets/photo-batch-2-vetted/284.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/284.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "4e2bf615062e7234",
+      "src": "assets/photo-batch-2-vetted/282.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/282.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "84fc553896d0b051",
+      "src": "assets/photo-batch-2-vetted/284.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/284.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "04ae2e96e82f63ef",
+      "src": "assets/photo-batch-2-vetted/282.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/282.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "dfb50765a5f3a8ab",
+      "src": "assets/photo-batch-2-vetted/284.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/284.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "6126fa948ce536e6",
+      "src": "assets/photo-batch-2-vetted/282.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/282.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "8e930495e2e94c21",
+      "src": "assets/photo-batch-2-vetted/284.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/284.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "11161bd0b4783703",
+      "src": "assets/photo-batch-2-vetted/082.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/082.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "a7d0d397991605ec",
+      "src": "assets/photo-batch-2-vetted/083.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/083.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "f7d93ad21c1a93d7",
+      "src": "assets/photo-batch-2-vetted/084.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/084.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "1acf6756b7471125",
+      "src": "assets/photo-batch-2-vetted/082.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/082.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "8dfdc5de41e3eca9",
+      "src": "assets/photo-batch-2-vetted/089.webp",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/photo-batch-2-vetted/089.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "0ee3922e77afa736",
+      "src": "assets/photo-batch-2-vetted/107.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-2-vetted/108.webp",
+        "assets/photo-batch-2-vetted/109.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-2-vetted/107.webp",
+        "assets/photo-batch-2-vetted/108.webp",
+        "assets/photo-batch-2-vetted/109.webp"
+      ],
+      "source": "photo-batch-2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "ecff9d7b88d1c8fb",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "b373a08350017273",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "5f9d2fdf4666eb73",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "b285c40f90621c5c",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "08c9054aa0115345",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "fb3ad6747507444d",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "800e9f2ab3c24e8f",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "c9df0658ace5336b",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "4152cf5c2c0c2dab",
+      "src": "assets/photo-batch-3-refresh/card/bhc.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bhc.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "0df58cf68356ebff",
+      "src": "assets/photo-batch-3-refresh/card/goobne.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "32f005992963d474",
+      "src": "assets/photo-batch-3-refresh/card/goobne.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "c194972cb20f2229",
+      "src": "assets/photo-batch-3-refresh/card/goobne.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "d556f1478e479e75",
+      "src": "assets/photo-batch-3-refresh/card/goobne.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "6fd217d22e3ad371",
+      "src": "assets/photo-batch-3-refresh/card/goobne.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "33558e3cc2ad9dbd",
+      "src": "assets/photo-batch-3-refresh/card/goobne.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "72e0104c30277686",
+      "src": "assets/photo-batch-3-refresh/card/goobne.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/goobne.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "2875fb8206bbf1a6",
+      "src": "assets/photo-batch-3-refresh/card/nene.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/nene.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/nene.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "190c9c9cea69da3b",
+      "src": "assets/photo-batch-3-refresh/card/nene.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/nene.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/nene.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "54a0c1a2addb92d6",
+      "src": "assets/photo-batch-3-refresh/card/nene.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/nene.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/nene.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "f63bbae9b9a80813",
+      "src": "assets/photo-batch-3-refresh/card/nene.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/nene.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/nene.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "40673a86169d791f",
+      "src": "assets/photo-batch-3-refresh/card/norang.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/norang.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/norang.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "aea70baec8c61d25",
+      "src": "assets/photo-batch-3-refresh/card/norang.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/norang.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/norang.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "ce40f493bcd2ca2b",
+      "src": "assets/photo-batch-3-refresh/card/norang.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/norang.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/norang.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "b9ea332bb64a02e8",
+      "src": "assets/photo-batch-3-refresh/card/dakndons.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/dakndons.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/dakndons.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "4c16d7a9aafcf6fd",
+      "src": "assets/photo-batch-3-refresh/card/mexican.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mexican.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mexican.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "4ff23be15f0664ae",
+      "src": "assets/photo-batch-3-refresh/card/mexican.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mexican.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mexican.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "173d62e7132f3370",
+      "src": "assets/photo-batch-3-refresh/card/mexican.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mexican.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mexican.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "9999f4db1009d483",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "4289ad6217815b70",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "d14f1e6669383a88",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "d5ab6e067ab79cb9",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "9d7d7e2f99658a9c",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "3a60142ebc07e295",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "08eecf0379470865",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "62cd152fab8dc42e",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "9a4e8ea87951b54e",
+      "src": "assets/photo-batch-3-refresh/card/mega.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mega.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "f25d8111c5d1b135",
+      "src": "assets/photo-batch-3-refresh/card/mexicana.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mexicana.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mexicana.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "183a9d859fd9518d",
+      "src": "assets/photo-batch-3-refresh/card/mexicana.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mexicana.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mexicana.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "e313a8628fc0916a",
+      "src": "assets/photo-batch-3-refresh/card/mexicana.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/mexicana.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/mexicana.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "b978240417a18e51",
+      "src": "assets/photo-batch-3-refresh/card/boor.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/boor.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/boor.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "066197a9443c3145",
+      "src": "assets/photo-batch-3-refresh/card/bbq.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "4059491d8dbb4159",
+      "src": "assets/photo-batch-3-refresh/card/bbq.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "572e4a658f762cbe",
+      "src": "assets/photo-batch-3-refresh/card/bbq.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "e2645d79ef555a24",
+      "src": "assets/photo-batch-3-refresh/card/bbq.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "c1df1c34732d2757",
+      "src": "assets/photo-batch-3-refresh/card/bbq.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "e32f28eff787161a",
+      "src": "assets/photo-batch-3-refresh/card/bbq.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "9cba7b46fed409a9",
+      "src": "assets/photo-batch-3-refresh/card/bbq.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/bbq.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "6706deb8a748599b",
+      "src": "assets/photo-batch-3-refresh/card/ssaltongdak.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/ssaltongdak.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/ssaltongdak.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "561cc726687ccd61",
+      "src": "assets/photo-batch-3-refresh/card/ssaltongdak.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/ssaltongdak.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/ssaltongdak.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "035938bab3de179c",
+      "src": "assets/photo-batch-3-refresh/card/gangchon.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/gangchon.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/gangchon.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "51b657cc3416c67d",
+      "src": "assets/photo-batch-3-refresh/card/gangchon.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/gangchon.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/gangchon.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "9ab837d6e24d69df",
+      "src": "assets/photo-batch-3-refresh/card/yoajung.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/yoajung.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/yoajung.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "7bc7239e6b509c44",
+      "src": "assets/photo-batch-3-refresh/card/surasang.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/surasang.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/surasang.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "f1fa55a4b8c7c428",
+      "src": "assets/photo-batch-3-refresh/card/chickeneye.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "0173191ff3ddab64",
+      "src": "assets/photo-batch-3-refresh/card/chickeneye.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "25ebed742b1238d5",
+      "src": "assets/photo-batch-3-refresh/card/chickeneye.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "bc89627508bf7a16",
+      "src": "assets/photo-batch-3-refresh/card/chickeneye.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "b6fa10980521859b",
+      "src": "assets/photo-batch-3-refresh/card/chickeneye.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-3-refresh/detail/chickeneye.webp"
+      ],
+      "source": "photo-batch-3-refresh",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "a0e873ce4d21b431",
+      "src": "assets/photo-batch-6/card/source-batch6-443.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-6/detail/source-batch6-443.webp",
+        "assets/photo-batch-6/detail/source-batch6-445.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-6/detail/source-batch6-443.webp",
+        "assets/photo-batch-6/detail/source-batch6-445.webp"
+      ],
+      "source": "photo-batch-6-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "b25a59f2207a9e10",
+      "src": "assets/notion-store-photos/3733c57e372120/01.webp",
+      "additionalSrcs": [
+        "assets/notion-store-photos/3733c57e372120/01.webp",
+        "assets/notion-store-photos/3733c57e372120/02.webp"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/3733c57e372120/01.webp",
+        "assets/notion-store-photos/3733c57e372120/02.webp"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "cef7263a330f4e0f",
+      "src": "assets/notion-store-photos/3733c57e372120/02.webp",
+      "additionalSrcs": [
+        "assets/notion-store-photos/3733c57e372120/02.webp",
+        "assets/notion-store-photos/3733c57e372120/01.webp"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/3733c57e372120/02.webp",
+        "assets/notion-store-photos/3733c57e372120/01.webp"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "7d9f7e5be4bb49db",
+      "src": "assets/notion-store-photos/3733c57e372120/01.webp",
+      "additionalSrcs": [
+        "assets/notion-store-photos/3733c57e372120/01.webp",
+        "assets/notion-store-photos/3733c57e372120/02.webp"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/3733c57e372120/01.webp",
+        "assets/notion-store-photos/3733c57e372120/02.webp"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "9a94c05bdeca2d9e",
+      "src": "assets/notion-store-photos/3733c57e372120/02.webp",
+      "additionalSrcs": [
+        "assets/notion-store-photos/3733c57e372120/02.webp",
+        "assets/notion-store-photos/3733c57e372120/01.webp"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/3733c57e372120/02.webp",
+        "assets/notion-store-photos/3733c57e372120/01.webp"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "8c8ee85a0bc3b219",
+      "src": "assets/photo-manual-alias-mapping/card/manual-source-001.webp",
+      "additionalSrcs": [
+        "assets/photo-manual-alias-mapping/detail/manual-source-001.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-002.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-003.webp"
+      ],
+      "gallery": [
+        "assets/photo-manual-alias-mapping/detail/manual-source-001.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-002.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-003.webp"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "96f341e2aced2187",
+      "src": "assets/photo-manual-alias-mapping/card/manual-source-002.webp",
+      "additionalSrcs": [
+        "assets/photo-manual-alias-mapping/detail/manual-source-002.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-003.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-001.webp"
+      ],
+      "gallery": [
+        "assets/photo-manual-alias-mapping/detail/manual-source-002.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-003.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-001.webp"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "ad437cdcefd55447",
+      "src": "assets/photo-manual-alias-mapping/card/manual-source-003.webp",
+      "additionalSrcs": [
+        "assets/photo-manual-alias-mapping/detail/manual-source-003.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-001.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-002.webp"
+      ],
+      "gallery": [
+        "assets/photo-manual-alias-mapping/detail/manual-source-003.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-001.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-002.webp"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "e9dc60119d9cdfb5",
+      "src": "images/notion-stores/dbf6e23b9517.png",
+      "additionalSrcs": [
+        "images/notion-stores/dbf6e23b9517.png"
+      ],
+      "gallery": [
+        "images/notion-stores/dbf6e23b9517.png"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "6059e7ea81c9f4d1",
+      "src": "images/notion-stores/dbf6e23b9517.png",
+      "additionalSrcs": [
+        "images/notion-stores/dbf6e23b9517.png"
+      ],
+      "gallery": [
+        "images/notion-stores/dbf6e23b9517.png"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "1bdc59414a5c8b64",
+      "src": "images/notion-stores/dbf6e23b9517.png",
+      "additionalSrcs": [
+        "images/notion-stores/dbf6e23b9517.png"
+      ],
+      "gallery": [
+        "images/notion-stores/dbf6e23b9517.png"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "58063b75a96362b4",
+      "src": "assets/photo-manual-alias-mapping/card/manual-source-005.webp",
+      "additionalSrcs": [
+        "assets/photo-manual-alias-mapping/detail/manual-source-005.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-004.webp"
+      ],
+      "gallery": [
+        "assets/photo-manual-alias-mapping/detail/manual-source-005.webp",
+        "assets/photo-manual-alias-mapping/detail/manual-source-004.webp"
+      ],
+      "source": "photo-manual-alias-mapping-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "aa035789f77b304d",
+      "src": "assets/photo-final-missing-stores/card/final-source-021.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-021.webp",
+        "assets/photo-final-missing-stores/detail/final-source-015.webp",
+        "assets/photo-final-missing-stores/detail/final-source-018.webp",
+        "assets/photo-final-missing-stores/detail/final-source-007.webp",
+        "assets/photo-final-missing-stores/detail/final-source-019.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-021.webp",
+        "assets/photo-final-missing-stores/detail/final-source-015.webp",
+        "assets/photo-final-missing-stores/detail/final-source-018.webp",
+        "assets/photo-final-missing-stores/detail/final-source-007.webp",
+        "assets/photo-final-missing-stores/detail/final-source-019.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "5942ed8c00fa1037",
+      "src": "assets/photo-final-missing-stores/card/final-source-025.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-025.webp",
+        "assets/photo-final-missing-stores/detail/final-source-026.webp",
+        "assets/photo-final-missing-stores/detail/final-source-024.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-025.webp",
+        "assets/photo-final-missing-stores/detail/final-source-026.webp",
+        "assets/photo-final-missing-stores/detail/final-source-024.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "8dc7782b3cb4bdcf",
+      "src": "assets/photo-final-missing-stores/card/final-source-027.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-027.webp",
+        "assets/photo-final-missing-stores/detail/final-source-028.webp",
+        "assets/photo-final-missing-stores/detail/final-source-029.webp",
+        "assets/photo-final-missing-stores/detail/final-source-030.webp",
+        "assets/photo-final-missing-stores/detail/final-source-031.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-027.webp",
+        "assets/photo-final-missing-stores/detail/final-source-028.webp",
+        "assets/photo-final-missing-stores/detail/final-source-029.webp",
+        "assets/photo-final-missing-stores/detail/final-source-030.webp",
+        "assets/photo-final-missing-stores/detail/final-source-031.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "3bcce1dd4c36eee0",
+      "src": "assets/photo-final-missing-stores/card/final-source-034.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-034.webp",
+        "assets/photo-final-missing-stores/detail/final-source-033.webp",
+        "assets/photo-final-missing-stores/detail/final-source-032.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-034.webp",
+        "assets/photo-final-missing-stores/detail/final-source-033.webp",
+        "assets/photo-final-missing-stores/detail/final-source-032.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "411052fdc9de5d44",
+      "src": "assets/photo-final-missing-stores/card/final-source-036.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-036.webp",
+        "assets/photo-final-missing-stores/detail/final-source-038.webp",
+        "assets/photo-final-missing-stores/detail/final-source-040.webp",
+        "assets/photo-final-missing-stores/detail/final-source-042.webp",
+        "assets/photo-final-missing-stores/detail/final-source-044.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-036.webp",
+        "assets/photo-final-missing-stores/detail/final-source-038.webp",
+        "assets/photo-final-missing-stores/detail/final-source-040.webp",
+        "assets/photo-final-missing-stores/detail/final-source-042.webp",
+        "assets/photo-final-missing-stores/detail/final-source-044.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "84c118675c0caa4c",
+      "src": "assets/photo-final-missing-stores/card/final-source-057.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-057.webp",
+        "assets/photo-final-missing-stores/detail/final-source-060.webp",
+        "assets/photo-final-missing-stores/detail/final-source-058.webp",
+        "assets/photo-final-missing-stores/detail/final-source-056.webp",
+        "assets/photo-final-missing-stores/detail/final-source-051.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-057.webp",
+        "assets/photo-final-missing-stores/detail/final-source-060.webp",
+        "assets/photo-final-missing-stores/detail/final-source-058.webp",
+        "assets/photo-final-missing-stores/detail/final-source-056.webp",
+        "assets/photo-final-missing-stores/detail/final-source-051.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "8cb29ac81df85b54",
+      "src": "assets/photo-final-missing-stores/card/final-source-074.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-074.webp",
+        "assets/photo-final-missing-stores/detail/final-source-072.webp",
+        "assets/photo-final-missing-stores/detail/final-source-073.webp",
+        "assets/photo-final-missing-stores/detail/final-source-069.webp",
+        "assets/photo-final-missing-stores/detail/final-source-071.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-074.webp",
+        "assets/photo-final-missing-stores/detail/final-source-072.webp",
+        "assets/photo-final-missing-stores/detail/final-source-073.webp",
+        "assets/photo-final-missing-stores/detail/final-source-069.webp",
+        "assets/photo-final-missing-stores/detail/final-source-071.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "e5b0545e92f03409",
+      "src": "assets/photo-final-missing-stores/card/final-source-075.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-075.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-075.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "98779281080288d1",
+      "src": "assets/photo-final-missing-stores/card/final-source-079.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-079.webp",
+        "assets/photo-final-missing-stores/detail/final-source-080.webp",
+        "assets/photo-final-missing-stores/detail/final-source-081.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-079.webp",
+        "assets/photo-final-missing-stores/detail/final-source-080.webp",
+        "assets/photo-final-missing-stores/detail/final-source-081.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "cfde2617224f33a0",
+      "src": "assets/photo-final-missing-stores/card/final-source-092.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-092.webp",
+        "assets/photo-final-missing-stores/detail/final-source-093.webp",
+        "assets/photo-final-missing-stores/detail/final-source-094.webp",
+        "assets/photo-final-missing-stores/detail/final-source-095.webp",
+        "assets/photo-final-missing-stores/detail/final-source-096.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-092.webp",
+        "assets/photo-final-missing-stores/detail/final-source-093.webp",
+        "assets/photo-final-missing-stores/detail/final-source-094.webp",
+        "assets/photo-final-missing-stores/detail/final-source-095.webp",
+        "assets/photo-final-missing-stores/detail/final-source-096.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "98a1464075ea68e5",
+      "src": "assets/photo-final-missing-stores/card/final-source-107.webp",
+      "additionalSrcs": [
+        "assets/photo-final-missing-stores/detail/final-source-107.webp",
+        "assets/photo-final-missing-stores/detail/final-source-104.webp",
+        "assets/photo-final-missing-stores/detail/final-source-105.webp",
+        "assets/photo-final-missing-stores/detail/final-source-108.webp",
+        "assets/photo-final-missing-stores/detail/final-source-109.webp"
+      ],
+      "gallery": [
+        "assets/photo-final-missing-stores/detail/final-source-107.webp",
+        "assets/photo-final-missing-stores/detail/final-source-104.webp",
+        "assets/photo-final-missing-stores/detail/final-source-105.webp",
+        "assets/photo-final-missing-stores/detail/final-source-108.webp",
+        "assets/photo-final-missing-stores/detail/final-source-109.webp"
+      ],
+      "source": "photo-final-missing-stores-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "5aa4432158274a35",
+      "src": "assets/photo-batch-4/card/source-batch4-332.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-4/detail/source-batch4-332.webp",
+        "assets/photo-batch-4/detail/source-batch4-316.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-4/detail/source-batch4-332.webp",
+        "assets/photo-batch-4/detail/source-batch4-316.webp"
+      ],
+      "source": "photo-batch-4-deploy-v1",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "1921d1d5c7710872",
+      "src": "assets/photo-batch-5/card/source-batch5-150.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-5/detail/source-batch5-150.webp",
+        "assets/photo-batch-5/detail/source-batch5-149.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-5/detail/source-batch5-150.webp",
+        "assets/photo-batch-5/detail/source-batch5-149.webp"
+      ],
+      "source": "photo-batch-5-deploy-v2",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "dba6beeeb774318f",
+      "src": "assets/photo-batch-5/card/source-batch5-195.webp",
+      "additionalSrcs": [
+        "assets/photo-batch-5/detail/source-batch5-195.webp",
+        "assets/photo-batch-5/detail/source-batch5-200.webp"
+      ],
+      "gallery": [
+        "assets/photo-batch-5/detail/source-batch5-195.webp",
+        "assets/photo-batch-5/detail/source-batch5-200.webp"
+      ],
+      "source": "photo-batch-5-deploy-v2",
+      "classification": "food",
+      "blocked": false
+    }
+  ]
+}

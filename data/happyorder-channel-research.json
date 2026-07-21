@@ -1,0 +1,576 @@
+{
+  "candidateStoreMappings": [
+    {
+      "store_id": "b17cdef5234b021b",
+      "storeName": "파리바게뜨 여수교동점",
+      "brandName": "파리바게뜨",
+      "category": "베이커리",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "파리바게뜨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 파리바게뜨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "e9dc60119d9cdfb5",
+      "storeName": "파리바게뜨 여수국동점",
+      "brandName": "파리바게뜨",
+      "category": "베이커리",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "파리바게뜨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 파리바게뜨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "6059e7ea81c9f4d1",
+      "storeName": "파리바게뜨 여수엑스포점",
+      "brandName": "파리바게뜨",
+      "category": "베이커리",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "파리바게뜨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 파리바게뜨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "1bdc59414a5c8b64",
+      "storeName": "파리바게뜨 여수중앙점",
+      "brandName": "파리바게뜨",
+      "category": "베이커리",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "파리바게뜨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 파리바게뜨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "10f225b9ca817dc4",
+      "storeName": "배스킨라빈스 여수국동점",
+      "brandName": "배스킨라빈스",
+      "category": "디저트",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "배스킨라빈스",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 배스킨라빈스 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "989fc2e054bb87c9",
+      "storeName": "배스킨라빈스 여수충무점",
+      "brandName": "배스킨라빈스",
+      "category": "디저트",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "배스킨라빈스",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 배스킨라빈스 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "afe9497576e46e1e",
+      "storeName": "던킨 여수롯데마트점",
+      "brandName": "던킨",
+      "category": "베이커리",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "던킨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 던킨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "687febad1f2bf0dd",
+      "storeName": "공차 여서점",
+      "brandName": "공차",
+      "category": "카페",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "공차",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 공차 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "72747cfe04586176",
+      "storeName": "공차 여수해양공원점",
+      "brandName": "공차",
+      "category": "카페",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "공차",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 공차 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "d0400d97c15c0a02",
+      "storeName": "공차 웅천점",
+      "brandName": "공차",
+      "category": "카페",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "공차",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 공차 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "066197a9443c3145",
+      "storeName": "비비큐 여수돌산점",
+      "brandName": "BBQ",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "BBQ",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 BBQ 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "4059491d8dbb4159",
+      "storeName": "비비큐 여수무선점",
+      "brandName": "BBQ",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "BBQ",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 BBQ 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "572e4a658f762cbe",
+      "storeName": "비비큐 여수신기행운점",
+      "brandName": "BBQ",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "BBQ",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 BBQ 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "e2645d79ef555a24",
+      "storeName": "비비큐 여수엑스포점",
+      "brandName": "BBQ",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "BBQ",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 BBQ 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "b73ca9b4a41f7502",
+      "storeName": "비비큐 여수웅천점",
+      "brandName": "BBQ",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "BBQ",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 BBQ 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "c1df1c34732d2757",
+      "storeName": "비비큐 여수죽림점",
+      "brandName": "BBQ",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "BBQ",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 BBQ 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "e32f28eff787161a",
+      "storeName": "비비큐 여수충무점",
+      "brandName": "BBQ",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "BBQ",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 BBQ 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "9cba7b46fed409a9",
+      "storeName": "비비큐 여수학동점",
+      "brandName": "BBQ",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "BBQ",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 BBQ 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "c68d21da9b32f1eb",
+      "storeName": "자담치킨 여수엑스포점",
+      "brandName": "자담치킨",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "자담치킨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 자담치킨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "4ae622b733f163c7",
+      "storeName": "자담치킨 여수여서점",
+      "brandName": "자담치킨",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "자담치킨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 자담치킨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "58228e47bba2b29c",
+      "storeName": "자담치킨 여수웅천점",
+      "brandName": "자담치킨",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "자담치킨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 자담치킨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "c6b947813051ac38",
+      "storeName": "자담치킨 여수죽림점",
+      "brandName": "자담치킨",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "자담치킨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 자담치킨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "1894da97ed277235",
+      "storeName": "자담치킨 여수학동점",
+      "brandName": "자담치킨",
+      "category": "치킨",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "자담치킨",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 자담치킨 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "afb901f3a32de6e8",
+      "storeName": "피자헛 여수문수점",
+      "brandName": "피자헛",
+      "category": "파스타·피자",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "피자헛",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 피자헛 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    },
+    {
+      "store_id": "05634c81541f6bda",
+      "storeName": "피자헛 여수시청점",
+      "brandName": "피자헛",
+      "category": "파스타·피자",
+      "happyOrder": {
+        "provider": "happyorder",
+        "brandName": "피자헛",
+        "platform": "Android",
+        "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+        "packageName": "com.happypointcard.happyorder",
+        "buttonLabel": "해피오더에서 피자헛 찾기",
+        "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+        "linkType": "app_install_or_open",
+        "directStoreLink": false,
+        "icon": "assets/order-channels/happyorder.png"
+      }
+    }
+  ],
+  "currentScreenBrands": [
+    {
+      "brandName": "파리바게뜨",
+      "category": "베이커리",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": "assets/brand-selection/paris-baguette.png"
+    },
+    {
+      "brandName": "파스쿠찌",
+      "category": "카페",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": null
+    },
+    {
+      "brandName": "배스킨라빈스",
+      "category": "디저트",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": "assets/brand-selection/baskin-robbins.jpg"
+    },
+    {
+      "brandName": "던킨",
+      "category": "베이커리",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": "assets/brand-selection/dunkin.png"
+    },
+    {
+      "brandName": "빚은",
+      "category": "베이커리",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": null
+    },
+    {
+      "brandName": "봉명동내커피",
+      "category": "카페",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": null
+    },
+    {
+      "brandName": "공차",
+      "category": "카페",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": "assets/brand-selection/gongcha.png"
+    },
+    {
+      "brandName": "이삭토스트",
+      "category": "샌드위치",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": null
+    },
+    {
+      "brandName": "BBQ",
+      "category": "치킨",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": "assets/brand-selection/bbq.jpg"
+    },
+    {
+      "brandName": "자담치킨",
+      "category": "치킨",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": "assets/brand-selection/jadam-chicken.png"
+    },
+    {
+      "brandName": "바른치킨",
+      "category": "치킨",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": null
+    },
+    {
+      "brandName": "파파존스",
+      "category": "파스타·피자",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": null
+    },
+    {
+      "brandName": "피자헛",
+      "category": "파스타·피자",
+      "currentScreenConfirmed": true,
+      "brandSelectionImage": "assets/brand-selection/pizza-hut.png"
+    }
+  ],
+  "categories": [
+    {
+      "displayOrder": 1,
+      "categoryName": "베이커리"
+    },
+    {
+      "displayOrder": 2,
+      "categoryName": "디저트"
+    },
+    {
+      "displayOrder": 3,
+      "categoryName": "카페"
+    },
+    {
+      "displayOrder": 4,
+      "categoryName": "샐러드"
+    },
+    {
+      "displayOrder": 5,
+      "categoryName": "샌드위치"
+    },
+    {
+      "displayOrder": 6,
+      "categoryName": "버거"
+    },
+    {
+      "displayOrder": 7,
+      "categoryName": "치킨"
+    },
+    {
+      "displayOrder": 8,
+      "categoryName": "파스타·피자"
+    },
+    {
+      "displayOrder": 9,
+      "categoryName": "분식"
+    },
+    {
+      "displayOrder": 10,
+      "categoryName": "편의점"
+    }
+  ]
+}
