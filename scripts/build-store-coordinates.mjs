@@ -106,7 +106,8 @@ for (let i = 0; i < normal.length; i++) {
   if (unique.length === 1 && /여수시/.test(unique[0].matchedAddress) && (unique[0].sourceType !== 'keyword' || unique[0].districtMatch !== false)) {
     status = 'verified'; confidence = unique[0].sourceType === 'keyword' ? 'keyword-exact' : 'exact';
   } else if (!unique.length) { status = 'search-failed'; confidence = 'none'; }
-  const chosen = unique.length === 1 ? unique[0] : null;
+  const candidate = unique.length === 1 ? unique[0] : null;
+  const chosen = status === 'verified' ? candidate : null;
   result[s.id] = {
     latitude: chosen?.latitude ?? null,
     longitude: chosen?.longitude ?? null,
@@ -116,7 +117,7 @@ for (let i = 0; i < normal.length; i++) {
     status,
     confidence
   };
-  detail.push({ store_id: s.id, name: s.name, district: s.district || '', status, confidence, sourceType: chosen?.sourceType || method || '', candidateCount: unique.length, placeName: chosen?.placeName || '', matchedAddress: chosen?.matchedAddress || '' });
+  detail.push({ store_id: s.id, name: s.name, district: s.district || '', status, confidence, sourceType: candidate?.sourceType || method || '', candidateCount: unique.length, placeName: candidate?.placeName || '', matchedAddress: candidate?.matchedAddress || '' });
   await sleep(45);
   if ((i + 1) % 50 === 0) console.log(`processed ${i + 1}/${normal.length}`);
 }
