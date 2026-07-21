@@ -3,6 +3,7 @@
 const DATA_URL = 'data/stores.json';
 const PHOTO_MANIFEST_URL = 'data/photo-manifest.json';
 const PHOTO_POLICY_URL = 'data/photo-policy.json';
+const NEIGHBORHOOD_URL = 'data/yeosu-neighborhoods.json';
 const EXTERNAL_APP_KEYS = ['yogiyo', 'coupang', 'baemin'];
 const LOW_FEE_KEYS = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand', 'phone'];
 const LOCAL_DETAIL_KEYS = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand'];
@@ -173,6 +174,8 @@ let detailCarousel = null;
 let photoViewerCarousel = null;
 let photoResolver = null;
 let addressDraft = null;
+let yeosuNeighborhoods = [];
+let neighborhoodByName = new Map();
 let modalHistoryActive = false;
 let photoViewerHistoryActive = false;
 let ignoreNextPop = false;
@@ -206,31 +209,15 @@ function parseCoordinate(value) {
   const number = Number(value);
   return Number.isFinite(number) ? number : null;
 }
-const DISTRICT_CENTERS = new Map(Object.entries({
-  '여서동':[34.7602,127.7007], '문수동':[34.7578,127.7027], '국동':[34.7355,127.7199],
-  '봉산동':[34.7407,127.7282], '웅천동':[34.7485,127.6715], '학동':[34.7616,127.6621],
-  '교동':[34.7412,127.7336], '신기동':[34.7587,127.6785], '덕충동':[34.7535,127.7460],
-  '돌산':[34.7120,127.7440], '죽림':[34.7930,127.6370], '공화동':[34.7488,127.7455],
-  '미평동':[34.7750,127.7050], '선원동':[34.7715,127.6505], '화장동':[34.7790,127.6550],
-  '중앙동':[34.7398,127.7365], '충무동':[34.7488,127.7270], '봉강동':[34.7540,127.7150],
-  '소호동':[34.7315,127.6520], '관문동':[34.7410,127.7420], '서교동':[34.7450,127.7280],
-  '고소동':[34.7380,127.7420], '봉계동':[34.7825,127.6890], '신월동':[34.7280,127.7060],
-  '안산동':[34.7555,127.6470], '종화동':[34.7330,127.7440], '무선':[34.7800,127.6600],
-  '오림동':[34.7660,127.7240], '여천동':[34.7760,127.6640], '둔덕동':[34.7820,127.7120],
-  '연등동':[34.7580,127.7240], '광무동':[34.7500,127.7190], '수정동':[34.7460,127.7500],
-  '여수시':[34.7604,127.6622], '여서문수':[34.7590,127.7017], '미평둔덕':[34.7785,127.7085],
-  '미평둔덕동':[34.7785,127.7085], '교동중앙동':[34.7405,127.7350], '여수국동':[34.7355,127.7199]
-}).map(([name,[lat,lng]]) => [normalize(name), {lat,lng}]));
+function neighborhoodsFor(value='') {
+  const text=normalize(value);if(!text)return[];
+  return yeosuNeighborhoods.filter(item=>[item.name,...(item.aliases||[])].some(alias=>text.includes(normalize(alias)))).map(item=>item.name);
+}
+function neighborhoodFor(value='') { return neighborhoodsFor(value)[0] || ''; }
+function neighborhoodPoint(name) { const item=neighborhoodByName.get(name);return item&&Number.isFinite(Number(item.latitude))&&Number.isFinite(Number(item.longitude))?{lat:Number(item.latitude),lng:Number(item.longitude)}:null; }
 function districtCoordinate(value) {
-  const area = normalize(value);
-  if (!area || area.includes('홈화면') || area.includes('저장해두시면')) return null;
-  if (DISTRICT_CENTERS.has(area)) return DISTRICT_CENTERS.get(area);
-  const matches = [...DISTRICT_CENTERS.entries()].filter(([key]) => area.includes(key) || key.includes(area));
-  if (!matches.length) return null;
-  return {
-    lat: matches.reduce((sum,[,point]) => sum + point.lat, 0) / matches.length,
-    lng: matches.reduce((sum,[,point]) => sum + point.lng, 0) / matches.length
-  };
+  const points=neighborhoodsFor(value).map(neighborhoodPoint).filter(Boolean);if(!points.length)return null;
+  return {lat:points.reduce((sum,point)=>sum+point.lat,0)/points.length,lng:points.reduce((sum,point)=>sum+point.lng,0)/points.length};
 }
 function imagePathFromValue(value) {
   if (typeof value === 'string') return value.trim();
@@ -245,10 +232,9 @@ function normalizedStore(raw, index) {
   const area = raw.district || raw.area || '';
   const rawLat = parseCoordinate(raw.latitude ?? raw.lat);
   const rawLng = parseCoordinate(raw.longitude ?? raw.lng);
-  const center = rawLat !== null && rawLng !== null || raw.coordinateStatus === 'unverified' ? null : districtCoordinate(area);
-  const lat = rawLat ?? center?.lat ?? null;
-  const lng = rawLng ?? center?.lng ?? null;
-  const coordinateSource = rawLat !== null && rawLng !== null ? 'store' : center ? 'district-centroid' : '';
+  const lat = rawLat !== null && rawLng !== null ? rawLat : null;
+  const lng = rawLat !== null && rawLng !== null ? rawLng : null;
+  const coordinateSource = rawLat !== null && rawLng !== null ? 'store' : '';
   const legacyImages = uniquePaths([raw.image, raw.img, ...(Array.isArray(raw.images) ? raw.images : [])]);
   const id = String(raw.store_id || raw.id || index);
   const name = raw.name || '이름 없는 가게';
@@ -256,6 +242,11 @@ function normalizedStore(raw, index) {
   const branchName = raw.branchName || '';
   const searchAliases = canonicalSearchAliases(raw);
   const searchIndex = normalize([name, raw.realBusinessName, brandName, branchName, area, raw.category, ...searchAliases, ...(raw.shopInShopNames || [])].filter(Boolean).join(' '));
+  const addressNeighborhoods=/여수시/.test(String(raw.address||''))?neighborhoodsFor(raw.address):[];
+  const branchText=[branchName,name].filter(Boolean).join(' '), branchNeighborhoods=/점|지점|항|지구/.test(branchText)?neighborhoodsFor(branchText):[];
+  const notionNeighborhoods=neighborhoodsFor(area);
+  const inferredNeighborhoods=addressNeighborhoods.length?addressNeighborhoods:branchNeighborhoods.length?branchNeighborhoods:notionNeighborhoods;
+  const locationSource=addressNeighborhoods.length?'verified-address':branchNeighborhoods.length?'store-name-branch':notionNeighborhoods.length?'notion-or-canonical-neighborhood':'unresolved';
   return {
     id, store_id: id, name, realBusinessName: raw.realBusinessName || '',
     notionPageId: raw.notionPageId || '', notionUrl: raw.notionUrl || '', brandName, branchName, searchAliases, searchIndex,
@@ -264,7 +255,8 @@ function normalizedStore(raw, index) {
     legacyImage: legacyImages[0] || '', legacyImages,
     tags: [raw.category, raw.district, raw.address, ...(raw.shopInShopNames || [])].filter(Boolean), routes,
     managed: Boolean(raw.managed), sharedManaged: Boolean(raw.sharedManaged), pinPosition: raw.pinPosition,
-    forceBottom: Boolean(raw.forceBottom), lat, lng, coordinateSource
+    forceBottom: Boolean(raw.forceBottom), lat, lng, coordinateSource,
+    neighborhoods: inferredNeighborhoods, locationSource, neighborhoodConfidence: locationSource==='store-name-branch'?'high':inferredNeighborhoods.length?'verified':'none', sourceType:raw.source?.type||''
   };
 }
 function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
@@ -467,21 +459,6 @@ function relevance(store, query) {
   if (normalize(store.cat).includes(q)) return 70; if (normalize(store.area).includes(q)) return 60;
   return text.includes(q) ? 50 : 0;
 }
-const YE0SU_NEIGHBORHOOD_RULES = [
-  ['여서동', /여서(?:동|[0-9]*로)?|여문/], ['문수동', /문수(?:동|로)?/],
-  ['미평동', /미평(?:동|로)?/], ['둔덕동', /둔덕(?:동|로)?/], ['오림동', /오림(?:동|로)?/],
-  ['고소동', /고소(?:동|로)?/], ['교동', /교동/], ['중앙동', /중앙동/], ['충무동', /충무동/],
-  ['공화동', /공화동/], ['관문동', /관문동/], ['종화동', /종화동/], ['수정동', /수정동/], ['덕충동', /덕충동/],
-  ['국동', /국동/], ['신월동', /신월동/], ['봉산동', /봉산동/], ['광무동', /광무동/],
-  ['학동', /학동/], ['신기동', /신기동/], ['선원동', /선원동/], ['화장동', /화장동/],
-  ['안산동', /안산동/], ['소호동', /소호동/], ['웅천동', /웅천동/], ['죽림', /죽림/],
-  ['돌산', /돌산/], ['소라', /소라(?:면)?/], ['율촌', /율촌(?:면)?/]
-];
-function neighborhoodsFor(value='') {
-  const text=String(value).replace(/\s+/g,'');
-  return YE0SU_NEIGHBORHOOD_RULES.filter(([,pattern])=>pattern.test(text)).map(([name])=>name);
-}
-function neighborhoodFor(value='') { return neighborhoodsFor(value)[0] || ''; }
 function storeNeighborhoods(store) { return neighborhoodsFor([store?.area,store?.district,store?.address,store?.name].filter(Boolean).join(' ')); }
 function storeMatchesLocation(store, location) {
   const selected=neighborhoodFor(location); if(!selected)return normalize(store.area).includes(normalize(location));
@@ -783,7 +760,8 @@ async function fetchJson(url, fallback) {
 }
 async function initialize() {
   renderHero(); renderPromos();
-  const [rawStores, manifest, policy] = await Promise.all([fetchJson(DATA_URL, []), fetchJson(PHOTO_MANIFEST_URL, {entries: []}), fetchJson(PHOTO_POLICY_URL, {})]);
+  const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([fetchJson(DATA_URL, []), fetchJson(PHOTO_MANIFEST_URL, {entries: []}), fetchJson(PHOTO_POLICY_URL, {}), fetchJson(NEIGHBORHOOD_URL,{neighborhoods:[]})]);
+  yeosuNeighborhoods=neighborhoodData.neighborhoods||[];neighborhoodByName=new Map(yeosuNeighborhoods.map(item=>[item.name,item]));
   photoResolver = new PhotoResolver(manifest, policy);
   allStores = rawStores.map(normalizedStore);
   canonicalStores = allStores.filter(store => store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');

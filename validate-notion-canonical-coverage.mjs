@@ -127,7 +127,9 @@ const finalSource = readFileSync('final-experience.js', 'utf8');
 const rc6Source = readFileSync('rc6-fixes.js', 'utf8');
 assert(appSource.includes('searchableStores = canonicalStores'), 'Searchable stores are not fixed to all canonical stores');
 assert(finalSource.includes('searchableStores.map'), 'Search modal does not use searchableStores');
-assert(rc6Source.includes('const rows=coordinateStores.map'), 'GPS distance calculation does not use coordinateStores');
+assert(rc6Source.includes('customerHasCoords&&rc6Verified(store)?haversine'), 'Verified-coordinate GPS distance calculation is missing');
+assert(rc6Source.includes('canonicalStores.map'), 'Coordinate-null neighborhood fallback does not use all canonical stores');
+assert(finalSource.includes('Number.isFinite(store.distance)'), 'Numeric distance display is not restricted to real calculated distances');
 
 const bbq = canonicalStores.find(store => store.store_id === '0abd7147b7d6b1dd');
 const chosun = canonicalStores.find(store => store.store_id === 'd86586aaef8454c9');
