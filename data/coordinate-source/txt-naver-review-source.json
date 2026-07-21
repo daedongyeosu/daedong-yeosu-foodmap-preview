@@ -1,0 +1,47 @@
+{
+  "source": "txt-naver-map",
+  "txtNaverLinksTotal": 71,
+  "matchedCurrentUnresolved": 4,
+  "rows": [
+    {
+      "store_id": "320d26d67b993c4a",
+      "storeName": "아로이태국음식전문점",
+      "naverMapUrl": "https://naver.me/xHgtSq5g",
+      "placeId": "1827731587",
+      "placeName": "아로이 태국음식점",
+      "roadAddress": "전라남도 여수시 여문1로 46 2층",
+      "jibunAddress": "전라남도 여수시 여서동 227-4",
+      "reviewStatus": "verified-source"
+    },
+    {
+      "store_id": "768e4fe8150f5039",
+      "storeName": "정성이 가득찬 반찬",
+      "naverMapUrl": "https://naver.me/GbrY4QxH",
+      "placeId": "",
+      "placeName": "",
+      "roadAddress": "",
+      "jibunAddress": "",
+      "reviewStatus": "address-extraction-failed"
+    },
+    {
+      "store_id": "d409f6d9118b7bad",
+      "storeName": "황금손 반찬",
+      "naverMapUrl": "https://naver.me/xb7w0Gt2",
+      "placeId": "",
+      "placeName": "",
+      "roadAddress": "",
+      "jibunAddress": "",
+      "reviewStatus": "address-extraction-failed"
+    },
+    {
+      "store_id": "0eea4a740e820fd3",
+      "storeName": "타코아찌 타코야끼전문점 문수점",
+      "naverMapUrl": "https://naver.me/GII1ITAd",
+      "placeId": "1961816468",
+      "placeName": "타코이찌 타코야끼전문점",
+      "roadAddress": "전라남도 여수시 문수7길 33-6",
+      "jibunAddress": "전라남도 여수시 문수동 455-4",
+      "reviewStatus": "store-name-mismatch"
+    }
+  ]
+}
