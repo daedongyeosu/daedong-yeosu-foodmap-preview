@@ -1,10 +1,10 @@
 {
   "stats": {
     "target": 470,
-    "baselineVerified": 325,
+    "baselineVerified": 312,
     "excelSourceMatches": 60,
-    "excelMatchedUnresolved": 2,
-    "excelVerifiedAdded": 0,
+    "excelMatchedUnresolved": 15,
+    "excelVerifiedAdded": 13,
     "multipleResults": 2,
     "addressExtractionFailed": 0,
     "outsideYeosu": 0,
@@ -756,14 +756,16 @@
     {
       "store_id": "718031989449bc32",
       "name": "가장맛있는족발 여수여서점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "manual-review",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 여문문화2길 77"
     },
     {
       "store_id": "005382cbb06108d3",
       "name": "가장맛있는족발 여수웅천점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "manual-review",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 예울마루로 37-26"
     },
     {
       "store_id": "52f5738519110900",
@@ -1056,8 +1058,9 @@
     {
       "store_id": "b717d583801d3f04",
       "name": "깐깐한족발 여수문수점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "manual-review",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 여문1로 60"
     },
     {
       "store_id": "f20eb017620ccc33",
@@ -1704,8 +1707,9 @@
     {
       "store_id": "2b78b30bde243ae6",
       "name": "바른보쌈1990 여수웅천점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "search-failed",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 웅천로 19-14"
     },
     {
       "store_id": "51ed482a660b8247",
@@ -2310,8 +2314,9 @@
     {
       "store_id": "d322f9f9a91b0bdb",
       "name": "원할머니보쌈족발 여수여천점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "manual-review",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 선소로 35"
     },
     {
       "store_id": "c8633f33e72e2e0a",
@@ -2520,8 +2525,9 @@
     {
       "store_id": "5768a9d8a72502ef",
       "name": "조선제일 감자탕&뼈해장국 여서점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "search-failed",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 여문1로 54"
     },
     {
       "store_id": "82fb6c389b7aced5",
@@ -2616,8 +2622,9 @@
     {
       "store_id": "83a409add1950550",
       "name": "참 맛있는 족발 여수본점(신기동)",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "search-failed",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 망마로 106"
     },
     {
       "store_id": "3c62ab40bf66608e",
@@ -3000,8 +3007,9 @@
     {
       "store_id": "e16359de9292f582",
       "name": "피자알볼로 여수엑스포점(수정동)",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "search-failed",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 이순신광장로 266"
     },
     {
       "store_id": "afb901f3a32de6e8",
@@ -3030,8 +3038,9 @@
     {
       "store_id": "7b221aa6623bd0a2",
       "name": "하이오커피 여수신월국동항점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "manual-review",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 신월1길 15-5"
     },
     {
       "store_id": "4621df767ea3905a",
@@ -3060,8 +3069,9 @@
     {
       "store_id": "8f8486e4cd5aaec3",
       "name": "항아리치킨&깐풍기 봉산점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "search-failed",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 봉산남4길 20-1"
     },
     {
       "store_id": "9b760748be6ee430",
@@ -3186,8 +3196,9 @@
     {
       "store_id": "ba870ddfedb99508",
       "name": "본죽&비빔밥 여수미평점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "manual-review",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 둔덕2길 6-4"
     },
     {
       "store_id": "ddc27f852308889a",
@@ -3204,8 +3215,9 @@
     {
       "store_id": "08e5e26653436fef",
       "name": "알토랑반찬 여수문수본점",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "search-failed",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 문수5길 48"
     },
     {
       "store_id": "768e4fe8150f5039",
@@ -3216,8 +3228,9 @@
     {
       "store_id": "0ad5341dc696d4f1",
       "name": "맛있는 반찬",
-      "baselineStatus": "verified",
-      "excelStatus": "verified"
+      "baselineStatus": "search-failed",
+      "excelStatus": "verified",
+      "matchedAddress": "전남광주통합특별시 여수시 문수5길 42"
     },
     {
       "store_id": "d409f6d9118b7bad",
