@@ -160,6 +160,10 @@ const fxRc3Style=document.createElement('link');
 fxRc3Style.rel='stylesheet';
 fxRc3Style.href='rc3-fixes.css?v=rc3';
 document.head.append(fxRc3Style);
+const fxRc4Style=document.createElement('link');
+fxRc4Style.rel='stylesheet';
+fxRc4Style.href='rc4-fixes.css?v=rc4';
+document.head.append(fxRc4Style);
 const fxRc2Script=document.createElement('script');
 fxRc2Script.src='rc2-fixes.js?v=rc2';
 fxRc2Script.async=false;
@@ -167,7 +171,14 @@ fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
  fxRc3Script.src='rc3-fixes.js?v=rc3';
  fxRc3Script.async=false;
- fxRc3Script.onload=()=>{fxInstallEvents();setTimeout(fxInitialize,0);};
+ fxRc3Script.onload=()=>{
+  const fxRc4Script=document.createElement('script');
+  fxRc4Script.src='rc4-fixes.js?v=rc4';
+  fxRc4Script.async=false;
+  fxRc4Script.onload=()=>{fxInstallEvents();setTimeout(fxInitialize,0);};
+  fxRc4Script.onerror=()=>console.error('RC4 검수 수정 레이어를 불러오지 못했습니다.');
+  document.head.append(fxRc4Script);
+ };
  fxRc3Script.onerror=()=>console.error('RC3 검수 수정 레이어를 불러오지 못했습니다.');
  document.head.append(fxRc3Script);
 };
