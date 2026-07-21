@@ -7,7 +7,7 @@
   "06": {"storeId":null,"label":"요거트월드 여서점","status":"unmapped"},
   "07": {"storeId":null,"label":"아주커치킨 둔덕점","status":"unmapped"},
   "08": {"storeId":null,"label":"롯데리아","status":"unmapped"},
-  "09": {"storeId":null,"label":"조선 밀면&냉면 여서점","status":"unmapped"},
+  "09": {"storeId":"d86586aaef8454c9","label":"조선 밀면&냉면 여서점","status":"mapped"},
   "10": {"storeId":null,"label":"외계인피자","status":"unmapped"},
   "11": {"storeId":"0cc943f6a58888d0","label":"왕창 돼지두루치기 여서점","status":"mapped"},
   "12": {"storeId":null,"label":"린차이나","status":"unmapped"},

@@ -67,6 +67,9 @@ const BRAND_GROUPS = [
   ]}
 ].map(group => ({name: group.name, brands: group.brands.map(([id, label, aliases, icon]) => ({id, label, aliases, icon}))}));
 const BRAND_BY_ID = Object.fromEntries(BRAND_GROUPS.flatMap(group => group.brands).map(brand => [brand.id, brand]));
+const SEARCH_BRAND_ALIAS_GROUPS = [
+  ['BBQ', '비비큐', 'BBQ치킨', '비비큐치킨']
+];
 
 const CATEGORY_PREFERRED = ['한식', '치킨', '피자', '중식', '분식/도시락', '분식', '족발/보쌈', '회/해산물', '국밥/찜/탕/찌개/조림', '면요리', '고기/구이', '돈까스/일식', '카페/디저트', '햄버거', '야식/주점', '마라탕/양꼬치', '샐러드/건강식', '도시락/죽', '반찬', '베이커리/떡', '아시안', '패스트푸드', '퓨전', '기타'];
 const CATEGORY_ICON_RULES = [[/치킨|닭/, '🍗'], [/피자/, '🍕'], [/중식|짜장|짬뽕/, '🍜'], [/분식|떡볶이|도시락/, '🍢'], [/족발|보쌈/, '🥩'], [/회|해산물|횟집|수산/, '🐟'], [/국밥|찜|탕|찌개|조림/, '🍲'], [/면|냉면|국수/, '🍜'], [/고기|구이|삼겹|갈비/, '🥩'], [/돈까스|일식|초밥|스시/, '🍱'], [/카페|커피|디저트|빙수/, '☕'], [/햄버거|버거/, '🍔'], [/야식|주점|술집/, '🌙'], [/마라|양꼬치/, '🌶️'], [/샐러드|건강/, '🥗'], [/죽/, '🥣'], [/반찬/, '🍚'], [/베이커리|빵|떡/, '🥐'], [/아시안|베트남|태국/, '🍛'], [/한식/, '🍚']];
@@ -158,7 +161,11 @@ const state = {
   coords: savedLocation?.coords || null,
   sortByDistance: savedLocation?.sortByDistance || false
 };
+let allStores = [];
 let stores = [];
+let canonicalStores = [];
+let searchableStores = [];
+let coordinateStores = [];
 let categories = [];
 let heroCarousel = null;
 let promoCarousel = null;
@@ -171,6 +178,12 @@ let photoViewerHistoryActive = false;
 let ignoreNextPop = false;
 
 function normalize(value) { return String(value ?? '').trim().toLowerCase().replace(/[\s·&()\-_/.,]/g, ''); }
+function canonicalSearchAliases(raw) {
+  const explicit = Array.isArray(raw.searchAliases) ? raw.searchAliases : [];
+  const identity = normalize([raw.name, raw.realBusinessName, raw.brandName].filter(Boolean).join(' '));
+  const brandAliases = SEARCH_BRAND_ALIAS_GROUPS.flatMap(group => group.some(alias => identity.includes(normalize(alias))) ? group : []);
+  return [...new Set([...explicit, ...brandAliases].map(value => String(value).trim()).filter(Boolean))];
+}
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>'"]/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'}[char])); }
 function categoryIcon(name) { const rule = CATEGORY_ICON_RULES.find(([pattern]) => pattern.test(name)); return rule ? rule[1] : '🍽️'; }
 function safeHref(value) { try { const url = new URL(String(value), location.href); return ['http:', 'https:', 'tel:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } }
@@ -232,13 +245,20 @@ function normalizedStore(raw, index) {
   const area = raw.district || raw.area || '';
   const rawLat = parseCoordinate(raw.latitude ?? raw.lat);
   const rawLng = parseCoordinate(raw.longitude ?? raw.lng);
-  const center = rawLat !== null && rawLng !== null ? null : districtCoordinate(area);
+  const center = rawLat !== null && rawLng !== null || raw.coordinateStatus === 'unverified' ? null : districtCoordinate(area);
   const lat = rawLat ?? center?.lat ?? null;
   const lng = rawLng ?? center?.lng ?? null;
   const coordinateSource = rawLat !== null && rawLng !== null ? 'store' : center ? 'district-centroid' : '';
   const legacyImages = uniquePaths([raw.image, raw.img, ...(Array.isArray(raw.images) ? raw.images : [])]);
+  const id = String(raw.store_id || raw.id || index);
+  const name = raw.name || '이름 없는 가게';
+  const brandName = raw.brandName || '';
+  const branchName = raw.branchName || '';
+  const searchAliases = canonicalSearchAliases(raw);
+  const searchIndex = normalize([name, raw.realBusinessName, brandName, branchName, area, raw.category, ...searchAliases, ...(raw.shopInShopNames || [])].filter(Boolean).join(' '));
   return {
-    id: String(raw.id || index), name: raw.name || '이름 없는 가게', realBusinessName: raw.realBusinessName || '',
+    id, store_id: id, name, realBusinessName: raw.realBusinessName || '',
+    notionPageId: raw.notionPageId || '', notionUrl: raw.notionUrl || '', brandName, branchName, searchAliases, searchIndex,
     shopInShopNames: raw.shopInShopNames || [], area, cat: raw.category || raw.cat || '기타',
     address: raw.address || '', phone: raw.phone || '', naverMap: safeHref(raw.naverMap || ''),
     legacyImage: legacyImages[0] || '', legacyImages,
@@ -247,7 +267,7 @@ function normalizedStore(raw, index) {
     forceBottom: Boolean(raw.forceBottom), lat, lng, coordinateSource
   };
 }
-function storeText(store) { return normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
+function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
 function routeFor(store, key) { return store.routes.find(route => route.key === key); }
 function brandMatchesStore(store, brand) { const text = storeText(store); return brand.aliases.some(alias => text.includes(normalize(alias))); }
 function brandCount(brand) { return stores.filter(store => brandMatchesStore(store, brand)).length; }
@@ -744,7 +764,11 @@ async function initialize() {
   renderHero(); renderPromos();
   const [rawStores, manifest, policy] = await Promise.all([fetchJson(DATA_URL, []), fetchJson(PHOTO_MANIFEST_URL, {entries: []}), fetchJson(PHOTO_POLICY_URL, {})]);
   photoResolver = new PhotoResolver(manifest, policy);
-  stores = rawStores.map(normalizedStore);
+  allStores = rawStores.map(normalizedStore);
+  canonicalStores = allStores.filter(store => store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
+  searchableStores = canonicalStores;
+  coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);
+  stores = canonicalStores;
   categories = [...new Set(stores.map(store => store.cat).filter(Boolean))].sort((a, b) => {
     const ai = CATEGORY_PREFERRED.indexOf(a), bi = CATEGORY_PREFERRED.indexOf(b);
     if (ai >= 0 || bi >= 0) return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi);

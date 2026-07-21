@@ -29822,5 +29822,159 @@
     "sharedManaged": false,
     "pinPosition": null,
     "forceBottom": false
+  },
+  {
+    "id": "0abd7147b7d6b1dd",
+    "store_id": "0abd7147b7d6b1dd",
+    "notionPageId": "2f2da158dd2a8031add4d55c925d8e73",
+    "notionUrl": "https://app.notion.com/p/2f2da158dd2a8031add4d55c925d8e73",
+    "name": "비비큐 미평둔덕점",
+    "realBusinessName": "비비큐 미평둔덕점",
+    "brandName": "비비큐",
+    "branchName": "미평둔덕점",
+    "searchAliases": [
+      "BBQ",
+      "비비큐",
+      "BBQ치킨",
+      "비비큐치킨"
+    ],
+    "shopInShopNames": [],
+    "district": "미평/ 둔덕",
+    "category": "치킨",
+    "address": "",
+    "phone": "0616527111",
+    "naverMap": "https://bit.ly/비비큐미평둔덕점네이버지도",
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "image": "assets/store-photos/0abd7147b7d6b1dd/01.jpg",
+    "img": "assets/store-photos/0abd7147b7d6b1dd/01.jpg",
+    "images": [
+      {
+        "card": "assets/store-photos/0abd7147b7d6b1dd/01.jpg",
+        "detail": "assets/store-photos/0abd7147b7d6b1dd/01.jpg"
+      }
+    ],
+    "routes": [
+      {
+        "name": "브랜드앱",
+        "url": "https://bit.ly/비비큐미평둔덕점비비큐앱",
+        "enabled": true
+      },
+      {
+        "name": "가게바로주문",
+        "url": "https://bit.ly/auto-비비큐미평둔덕점",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "https://bit.ly/mk-비비큐미평둔덕점",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-비비큐미평둔덕점",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-비비큐미평둔덕점",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-비비큐미평둔덕점",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616527111",
+        "enabled": true
+      }
+    ],
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false
+  },
+  {
+    "id": "d86586aaef8454c9",
+    "store_id": "d86586aaef8454c9",
+    "notionPageId": "315da158dd2a8047906cc5c3c4c51e69",
+    "notionUrl": "https://app.notion.com/p/315da158dd2a8047906cc5c3c4c51e69",
+    "name": "조선밀면&냉면 여수여서점",
+    "realBusinessName": "조선밀면&냉면 여수여서점",
+    "brandName": "조선밀면&냉면",
+    "branchName": "여수여서점",
+    "searchAliases": [
+      "조선밀면&냉면 여수여서점",
+      "조선밀면&냉면 여서점",
+      "조선밀면",
+      "조선 밀면",
+      "조선밀면냉면"
+    ],
+    "shopInShopNames": [],
+    "district": "여서동",
+    "category": "면요리",
+    "address": "",
+    "phone": "01023113511",
+    "naverMap": "",
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "image": "assets/store-photos/d86586aaef8454c9/01.png",
+    "img": "assets/store-photos/d86586aaef8454c9/01.png",
+    "images": [
+      {
+        "card": "assets/store-photos/d86586aaef8454c9/01.png",
+        "detail": "assets/store-photos/d86586aaef8454c9/01.png"
+      }
+    ],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://bit.ly/4s1U0rz",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4rKk1LL",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3OF16Dq",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4shtuKk",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4saGWj0",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3OGeerU",
+        "enabled": true
+      }
+    ],
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false
   }
 ]

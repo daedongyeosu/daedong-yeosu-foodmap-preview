@@ -1348,6 +1348,28 @@
       "source": "photo-batch-5-deploy-v2",
       "classification": "food",
       "blocked": false
+    },
+    {
+      "storeId": "0abd7147b7d6b1dd",
+      "src": "assets/store-photos/0abd7147b7d6b1dd/01.jpg",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/store-photos/0abd7147b7d6b1dd/01.jpg"
+      ],
+      "source": "notion-page:2f2da158dd2a8031add4d55c925d8e73",
+      "classification": "food-store",
+      "blocked": false
+    },
+    {
+      "storeId": "d86586aaef8454c9",
+      "src": "assets/store-photos/d86586aaef8454c9/01.png",
+      "additionalSrcs": [],
+      "gallery": [
+        "assets/store-photos/d86586aaef8454c9/01.png"
+      ],
+      "source": "notion-page:315da158dd2a8047906cc5c3c4c51e69",
+      "classification": "food",
+      "blocked": false
     }
   ]
 }
