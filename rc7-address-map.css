@@ -119,12 +119,22 @@
 .rc5-postcode-frame>div,.rc5-postcode-frame iframe{display:block!important;width:100%!important;height:100%!important;min-height:100%!important;border:0!important}
 
 @media(max-width:520px){
+  .topbar .brand{
+    width:52px;height:52px;padding:3px;border:1px solid rgba(255,255,255,.94);border-radius:50%;overflow:hidden;
+    background:rgba(255,255,255,.94);box-shadow:0 5px 16px rgba(8,42,66,.18)
+  }
+  .topbar .brand img{width:100%;height:100%;border-radius:50%;object-fit:contain}
+  .topbar .location-chip{max-width:calc(50% - 44px)!important}
   .active-address-bar{min-height:56px}
   .address-modal .modal-card{height:calc(100dvh - max(8px,env(safe-area-inset-top)));max-height:calc(100dvh - max(8px,env(safe-area-inset-top)))!important}
   .rc5-postcode-view{height:calc(100dvh - max(8px,env(safe-area-inset-top)))!important}
   .rc5-postcode-frame{min-height:calc(100dvh - 112px)!important}
   .rc7-address-main{padding-left:11px;padding-right:11px}
   .rc7-map-wrap{height:245px}
+}
+@media(max-width:380px){
+  .topbar .brand{width:48px;height:48px}
+  .topbar .location-chip{max-width:calc(50% - 41px)!important}
 }
 @media(max-height:720px){.rc7-map-wrap{height:205px}.rc7-saved-list{max-height:180px}}
 @media(prefers-reduced-motion:reduce){.rc7-gps-loading{animation:none}}
