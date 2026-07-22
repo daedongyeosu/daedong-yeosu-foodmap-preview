@@ -1855,6 +1855,118 @@
     {
       "store_id": "17d9bf1de3d671fd",
       "clickableTel": true
+    },
+    {
+      "store_id": "0abd7147b7d6b1dd",
+      "clickableTel": true
+    },
+    {
+      "store_id": "d86586aaef8454c9",
+      "clickableTel": true
+    },
+    {
+      "store_id": "14feb7cbd67ef7e2",
+      "clickableTel": true
+    },
+    {
+      "store_id": "068b2ae8fe32874a",
+      "clickableTel": true
+    },
+    {
+      "store_id": "361f855efc21c1c2",
+      "clickableTel": true
+    },
+    {
+      "store_id": "7432d966de3f75ab",
+      "clickableTel": true
+    },
+    {
+      "store_id": "e57c51a4f6294349",
+      "clickableTel": true
+    },
+    {
+      "store_id": "f7385d8006310630",
+      "clickableTel": true
+    },
+    {
+      "store_id": "f6d0e57091aa21ab",
+      "clickableTel": true
+    },
+    {
+      "store_id": "895a9425dc41ddf7",
+      "clickableTel": true
+    },
+    {
+      "store_id": "450eb70e506c2de9",
+      "clickableTel": true
+    },
+    {
+      "store_id": "888abbb8bf28aa2f",
+      "clickableTel": true
+    },
+    {
+      "store_id": "ec69425551829f69",
+      "clickableTel": true
+    },
+    {
+      "store_id": "0d3062d5a5b94697",
+      "clickableTel": true
+    },
+    {
+      "store_id": "9e0a2da7ddfa3d93",
+      "clickableTel": true
+    },
+    {
+      "store_id": "8a219b158c321627",
+      "clickableTel": true
+    },
+    {
+      "store_id": "f31d8c5f04fb7b79",
+      "clickableTel": true
+    },
+    {
+      "store_id": "406b4a0b39f729fc",
+      "clickableTel": true
+    },
+    {
+      "store_id": "dabbebff4fca3c56",
+      "clickableTel": true
+    },
+    {
+      "store_id": "45dc9cf61ba55263",
+      "clickableTel": true
+    },
+    {
+      "store_id": "dc638b23f8cf3c5b",
+      "clickableTel": true
+    },
+    {
+      "store_id": "1ecbe36dd1efafed",
+      "clickableTel": true
+    },
+    {
+      "store_id": "d6602c793047b361",
+      "clickableTel": true
+    },
+    {
+      "store_id": "30d2edbcabcca6ec",
+      "clickableTel": true
+    },
+    {
+      "store_id": "f7167d017e7368e7",
+      "clickableTel": true
+    },
+    {
+      "store_id": "e0c6949efb48f4b2",
+      "clickableTel": true
+    },
+    {
+      "store_id": "2bd8ea8779f87995",
+      "clickableTel": true
+    },
+    {
+      "store_id": "27ea3ca86eab89ec",
+      "clickableTel": true
     }
   ],
   "stores": [
@@ -3713,6 +3825,118 @@
     {
       "store_id": "17d9bf1de3d671fd",
       "phone": "050714405626"
+    },
+    {
+      "store_id": "0abd7147b7d6b1dd",
+      "phone": "0616527111"
+    },
+    {
+      "store_id": "d86586aaef8454c9",
+      "phone": "01023113511"
+    },
+    {
+      "store_id": "14feb7cbd67ef7e2",
+      "phone": "0616540172"
+    },
+    {
+      "store_id": "068b2ae8fe32874a",
+      "phone": "0616551082"
+    },
+    {
+      "store_id": "361f855efc21c1c2",
+      "phone": "0616518292"
+    },
+    {
+      "store_id": "7432d966de3f75ab",
+      "phone": "0616510770"
+    },
+    {
+      "store_id": "e57c51a4f6294349",
+      "phone": "01066030342"
+    },
+    {
+      "store_id": "f7385d8006310630",
+      "phone": "0616521272"
+    },
+    {
+      "store_id": "f6d0e57091aa21ab",
+      "phone": "0616510017"
+    },
+    {
+      "store_id": "895a9425dc41ddf7",
+      "phone": "0616543221"
+    },
+    {
+      "store_id": "450eb70e506c2de9",
+      "phone": "0616521766"
+    },
+    {
+      "store_id": "888abbb8bf28aa2f",
+      "phone": "0616524199"
+    },
+    {
+      "store_id": "ec69425551829f69",
+      "phone": "0616524346"
+    },
+    {
+      "store_id": "0d3062d5a5b94697",
+      "phone": "0616669279"
+    },
+    {
+      "store_id": "9e0a2da7ddfa3d93",
+      "phone": "0616534018"
+    },
+    {
+      "store_id": "8a219b158c321627",
+      "phone": "050713236732"
+    },
+    {
+      "store_id": "f31d8c5f04fb7b79",
+      "phone": "0616523355"
+    },
+    {
+      "store_id": "406b4a0b39f729fc",
+      "phone": "0616538417"
+    },
+    {
+      "store_id": "dabbebff4fca3c56",
+      "phone": "0616533692"
+    },
+    {
+      "store_id": "45dc9cf61ba55263",
+      "phone": "0618100222"
+    },
+    {
+      "store_id": "dc638b23f8cf3c5b",
+      "phone": "0616541188"
+    },
+    {
+      "store_id": "1ecbe36dd1efafed",
+      "phone": "0616815999"
+    },
+    {
+      "store_id": "d6602c793047b361",
+      "phone": "0616510054"
+    },
+    {
+      "store_id": "30d2edbcabcca6ec",
+      "phone": "0616518806"
+    },
+    {
+      "store_id": "f7167d017e7368e7",
+      "phone": "0616535922"
+    },
+    {
+      "store_id": "e0c6949efb48f4b2",
+      "phone": "0616546552"
+    },
+    {
+      "store_id": "2bd8ea8779f87995",
+      "phone": "0616553781"
+    },
+    {
+      "store_id": "27ea3ca86eab89ec",
+      "phone": "0616525695"
     }
   ]
 }

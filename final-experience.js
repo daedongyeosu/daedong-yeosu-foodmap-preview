@@ -1,7 +1,7 @@
 'use strict';
 
 /* Final local experience layer. Frozen store/order datasets remain read-only. */
-const FX_PHONE_URL='data/phone-order-runtime.json?v=phone-audit-batch-01';
+const FX_PHONE_URL='data/phone-order-runtime.json?v=phone-audit-batch-02';
 const FX_BRAND_URL='data/brand-app-mapping.json';
 const FX_BRAND_SUPPLEMENT_URL='data/brand-app-missing-nine-supplement.json';
 const FX_HAPPY_URL='data/happyorder-channel-research.json';
@@ -197,7 +197,7 @@ fxRc2Style.href='rc2-fixes.css?v=rc2';
 document.head.append(fxRc2Style);
 const fxRc3Style=document.createElement('link');
 fxRc3Style.rel='stylesheet';
-fxRc3Style.href='rc3-fixes.css?v=phone-audit-batch-01';
+fxRc3Style.href='rc3-fixes.css?v=phone-audit-batch-02';
 document.head.append(fxRc3Style);
 const fxRc4Style=document.createElement('link');
 fxRc4Style.rel='stylesheet';
@@ -227,7 +227,7 @@ fxRc2Script.src='rc2-fixes.js?v=rc2';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=phone-audit-batch-01';
+ fxRc3Script.src='rc3-fixes.js?v=phone-audit-batch-02';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
