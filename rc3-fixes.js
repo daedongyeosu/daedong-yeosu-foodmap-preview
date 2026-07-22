@@ -97,12 +97,20 @@ fxRenderRails = function rc3RenderRails() {
     return;
   }
   root.hidden = false;
-  const globallyUsed = new Set();
-  root.innerHTML = fxSelectedRails().map(spec => {
-    const cards = rc2RailCandidates(spec, globallyUsed, 8);
-    const allCandidates = fxRankStores(spec);
-    return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">추천 가게를 확인 중입니다.</p>'}</div></section>`;
-  }).join('');
+  try {
+    const globallyUsed = new Set();
+    root.innerHTML = fxSelectedRails().map(spec => {
+      const cards = rc2RailCandidates(spec, globallyUsed, 8);
+      const allCandidates = fxRankStores(spec);
+      return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">현재 표시할 추천 가게가 없습니다.</p>'}</div></section>`;
+    }).join('');
+  } catch (error) {
+    console.error('recommendation-render-failed', error);
+    const fallback = (Array.isArray(stores) ? stores : []).slice(0, 8).map(store => rc3RailCard(store, {kind: 'fallback'})).join('');
+    root.innerHTML = `<section class="recommend-rail" data-rail="fallback"><header class="recommend-rail-head"><div><h2>오늘의 추천</h2><p>현재 확인 가능한 여수 가게</p></div></header><div class="recommend-track">${fallback || '<p class="empty">가게 정보를 다시 불러와 주세요.</p>'}</div></section>`;
+  } finally {
+    root.querySelectorAll('p').forEach(node => { if (node.textContent.trim() === '추천 가게를 확인 중입니다.') node.remove(); });
+  }
 };
 
 renderStores = function rc3RenderStores(options = {}) {
@@ -166,33 +174,62 @@ function rc3RouteButton(store, route) {
   return `<a class="detail-route" href="${escapeHtml(route.url)}" target="_blank" rel="noopener" data-route-key="${escapeHtml(route.key)}">${appIcon(route.key, 'detail-route-icon')}<span>${escapeHtml(route.name)}</span><b>›</b></a>`;
 }
 
+function resolveStoreChannels(store) {
+  const safeStore = store && typeof store === 'object' ? store : {};
+  const route = key => routeFor(safeStore, key) || null;
+  const phone = rc3VerifiedPhone(safeStore);
+  const phoneOrder = phone && fxPhoneByStore.get(String(safeStore.id))?.clickableTel
+    ? {key: 'phone', name: '전화주문', phone}
+    : null;
+  return {
+    utilities: {
+      naverMap: safeStore.naverMap && safeStore.naverMap !== '#' ? {key: 'naver', name: '네이버지도', url: safeStore.naverMap} : null,
+      localGiftApp: route('chak')
+    },
+    primaryOrder: {
+      directOrder: route('direct'),
+      brandApp: fxBrandByStore.get(String(safeStore.id)) || null,
+      mukkebi: route('mukkebi'),
+      ddangyo: route('ddangyo'),
+      ondongne: route('ondongne'),
+      phoneOrder
+    },
+    externalOrder: {
+      yogiyo: route('yogiyo'),
+      coupangEats: route('coupang'),
+      baemin: route('baemin')
+    },
+    happyOrder: fxHappyByStore.get(String(safeStore.id)) || null
+  };
+}
+globalThis.resolveStoreChannels = resolveStoreChannels;
+
 function rc3OpenOrderMethods(store) {
   if (!store) return;
-  const routes = [];
-  const phone = rc3VerifiedPhone(store);
-  if (phone && fxPhoneByStore.get(String(store.id))?.clickableTel) routes.push({key: 'phone', name: '전화주문'});
-  for (const key of ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'yogiyo', 'coupang', 'baemin']) {
-    const route = routeFor(store, key);
-    if (route) routes.push(route);
-  }
-  const seen = new Set();
-  const routeMarkup = routes.filter(route => !seen.has(route.key) && seen.add(route.key)).map(route => route.key === 'phone'
-    ? `<button type="button" class="detail-route" data-rc3-phone-store="${escapeHtml(store.id)}"><img class="detail-route-icon" src="assets/ui/phone.svg" alt=""><span>전화주문</span><b>›</b></button>`
-    : rc3RouteButton(store, route)).join('');
-  const brand = fxBrandByStore.get(String(store.id));
-  const happy = fxHappyByStore.get(String(store.id));
-  const appMarkup = brand || happy ? `<div class="brand-store-actions">${brand ? fxAppAction(brand, 'brand') : ''}${happy ? fxAppAction(happy, 'happy') : ''}</div>` : '';
-  openModal(`<section class="order-methods-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">다른 주문방법 보기</h2><span>선택한 가게</span><strong class="selected-store-name">${escapeHtml(store.name)}</strong><div class="order-methods-list">${routeMarkup || '<p class="empty">확인된 주문방법이 없습니다.</p>'}</div>${appMarkup}</section>`);
+  const channels = resolveStoreChannels(store);
+  const routes = Object.values(channels.externalOrder).filter(Boolean);
+  const routeMarkup = routes.map(route => rc3RouteButton(store, route)).join('');
+  if (!routeMarkup) return;
+  openModal(`<section class="order-methods-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">다른 주문방법 보기</h2><span>선택한 가게</span><strong class="selected-store-name">${escapeHtml(store.name)}</strong><div class="order-methods-list">${routeMarkup}</div></section>`);
   $('#modal').dataset.activeStoreId = store.id;
 }
 
 function rc3EnhanceStoreDetail(store) {
   const detail = $('#modalContent .store-detail');
   if (!detail) return;
-  const wrap = detail.querySelector('.store-other-wrap');
-  if (wrap) {
-    wrap.innerHTML = `<button class="detail-route store-other-toggle rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"><span>다른 주문방법 보기</span><b>›</b></button>`;
-  }
+  const channels = resolveStoreChannels(store);
+  detail.querySelector('.detail-quick-links')?.remove();
+  detail.querySelector('.local-detail-routes')?.remove();
+  detail.querySelectorAll('.brand-store-actions').forEach(node => node.remove());
+  detail.querySelector('.store-other-wrap')?.remove();
+  const gallery = detail.querySelector('.detail-meta');
+  const utilities = [channels.utilities.naverMap, channels.utilities.localGiftApp].filter(Boolean).map(item => `<a class="detail-quick-link" data-detail-only="${escapeHtml(item.key)}" href="${escapeHtml(item.url)}" target="_blank" rel="noopener"><span class="quick-icon">${item.key === 'naver' ? '🗺️' : '💳'}</span><span>${escapeHtml(item.name === 'CHAK 지역상품권' ? '지역상품권앱' : item.name)}</span></a>`).join('');
+  const primary = [channels.primaryOrder.directOrder, channels.primaryOrder.mukkebi, channels.primaryOrder.ddangyo, channels.primaryOrder.ondongne].filter(Boolean).map(route => routeLink(route, 'local-order-route')).join('');
+  const phone = channels.primaryOrder.phoneOrder ? `<button type="button" class="detail-route local-order-route" data-rc3-phone-store="${escapeHtml(store.id)}"><img class="detail-route-icon" src="assets/ui/phone.svg" alt=""><span>전화주문</span><b>›</b></button>` : '';
+  const apps = channels.primaryOrder.brandApp || channels.happyOrder ? `<div class="brand-store-actions">${channels.primaryOrder.brandApp ? fxAppAction(channels.primaryOrder.brandApp, 'brand') : ''}${channels.happyOrder ? fxAppAction(channels.happyOrder, 'happy') : ''}</div>` : '';
+  const hasExternal = Object.values(channels.externalOrder).some(Boolean);
+  const other = hasExternal ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"><span>다른 주문방법 보기</span><b>›</b></button></div>` : '';
+  gallery?.insertAdjacentHTML('afterend', `${utilities ? `<div class="detail-quick-links">${utilities}</div>` : ''}<div class="detail-routes local-detail-routes">${primary}${apps}${phone || (!primary && !apps ? '<p class="muted">등록된 주문방법을 확인 중입니다.</p>' : '')}</div>${other}`);
 }
 
 const rc3OpenStoreBase = openStore;

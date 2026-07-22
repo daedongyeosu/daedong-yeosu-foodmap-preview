@@ -7901,11 +7901,13 @@
     "id": "2f4c3cfb0866c4a4",
     "name": "도미노피자 여천점(학동)",
     "realBusinessName": "도미노피자 여천점(학동)",
+    "brandName": "도미노피자",
+    "notionUrl": "https://app.notion.com/p/f0eda158dd2a834a9a8a8103d0f5f0ad",
     "shopInShopNames": [],
     "district": "학동",
     "category": "피자",
     "address": "",
-    "phone": "",
+    "phone": "0616913082",
     "naverMap": "https://naver.me/FO9dn6hl",
     "image": "assets/notion-store-photos/2f4c3cfb0866c4/01.webp",
     "img": "assets/notion-store-photos/2f4c3cfb0866c4/01.webp",
@@ -32476,7 +32478,7 @@
     "district": "여서,문수",
     "category": "피자",
     "address": "",
-    "phone": "",
+    "phone": "0616541188",
     "naverMap": "",
     "notionUrl": "https://app.notion.com/p/2eada158dd2a80518569cfdb0e2f6404",
     "image": "assets/notion-recovery-180/dc638b23f8cf3c5b/01.png",
@@ -32499,8 +32501,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-domino",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/2eada158dd2a8068afb6f23f9db03827",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/pr4iuz",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-domino",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/SX000g4Va4QSH",
         "enabled": true
       }
     ],

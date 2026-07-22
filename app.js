@@ -1,6 +1,7 @@
 'use strict';
 
-const DATA_URL = 'data/stores.json';
+const ASSET_VERSION = 'order-channel-safe-1';
+const DATA_URL = `data/stores.json?v=${ASSET_VERSION}`;
 const PHOTO_MANIFEST_URL = 'data/photo-manifest.json';
 const PHOTO_POLICY_URL = 'data/photo-policy.json';
 const NEIGHBORHOOD_URL = 'data/yeosu-neighborhoods.json';
@@ -226,7 +227,8 @@ function imagePathFromValue(value) {
 }
 function uniquePaths(values) { return [...new Set(values.map(imagePathFromValue).filter(Boolean))]; }
 function normalizedStore(raw, index) {
-  const routes = (raw.routes || [])
+  const sourceRoutes = Array.isArray(raw?.routes) ? raw.routes : [];
+  const routes = sourceRoutes
     .filter(route => route && route.enabled !== false && route.url && safeHref(route.url) !== '#')
     .map(route => ({...route, key: routeKey(route.name), url: safeHref(route.url)}));
   const area = raw.district || raw.area || '';
@@ -260,7 +262,7 @@ function normalizedStore(raw, index) {
   };
 }
 function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
-function routeFor(store, key) { return store.routes.find(route => route.key === key); }
+function routeFor(store, key) { return (Array.isArray(store?.routes) ? store.routes : []).find(route => route?.key === key); }
 function brandMatchesStore(store, brand) { const text = storeText(store); return brand.aliases.some(alias => text.includes(normalize(alias))); }
 function brandCount(brand) { return stores.filter(store => brandMatchesStore(store, brand)).length; }
 function haversine(a, b) {
@@ -751,7 +753,8 @@ function openStore(store) {
 
 async function fetchJson(url, fallback) {
   try {
-    const response = await fetch(`${url}?v=${Date.now()}`, {cache: 'no-store'});
+    const separator = url.includes('?') ? '&' : '?';
+    const response = await fetch(`${url}${separator}request=${Date.now()}`, {cache: 'no-store'});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {
@@ -763,7 +766,11 @@ async function initialize() {
   const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([fetchJson(DATA_URL, []), fetchJson(PHOTO_MANIFEST_URL, {entries: []}), fetchJson(PHOTO_POLICY_URL, {}), fetchJson(NEIGHBORHOOD_URL,{neighborhoods:[]})]);
   yeosuNeighborhoods=neighborhoodData.neighborhoods||[];neighborhoodByName=new Map(yeosuNeighborhoods.map(item=>[item.name,item]));
   photoResolver = new PhotoResolver(manifest, policy);
-  allStores = rawStores.map(normalizedStore);
+  const safeRawStores = Array.isArray(rawStores) ? rawStores : [];
+  allStores = safeRawStores.map((raw, index) => {
+    try { return normalizedStore(raw && typeof raw === 'object' ? raw : {}, index); }
+    catch (error) { console.error('store-normalization-failed', raw?.store_id || raw?.id || index, error); return null; }
+  }).filter(Boolean);
   canonicalStores = allStores.filter(store => store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
   searchableStores = canonicalStores;
   coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);
