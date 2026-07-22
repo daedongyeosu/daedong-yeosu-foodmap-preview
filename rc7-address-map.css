@@ -1,0 +1,126 @@
+/* RC7: visible main address, full-button GPS touch target and map-first address sheet. */
+.active-address-bar{
+  position:relative;z-index:3;width:calc(100% - 24px);min-height:58px;margin:2px 12px 6px;
+  display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:9px;
+  padding:8px 11px;border:1px solid rgba(255,255,255,.9);border-radius:17px;
+  background:rgba(255,255,255,.88);color:#123852;text-align:left;
+  box-shadow:0 7px 20px rgba(0,28,48,.13);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  touch-action:manipulation
+}
+.active-address-bar>.ui-icon{width:25px;height:25px;color:#ff5a1f}
+.active-address-copy{display:flex;min-width:0;flex-direction:column;gap:2px}
+.active-address-copy small{font-size:10px;font-weight:850;color:#6b7b86}
+.active-address-copy b{font-size:14px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.active-address-copy em{font-size:10px;line-height:1.25;color:#687782;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.active-address-change{font-size:12px;font-weight:900;color:#d64d19}
+.topbar .location-chip{min-width:0;max-width:calc(58vw - 12px)!important;touch-action:manipulation}
+.topbar .location-chip #locationText{font-weight:900}
+
+.address-modal{padding:0!important;align-items:flex-end!important}
+.address-modal .modal-card{
+  width:min(600px,100%)!important;height:min(94dvh,900px);max-height:94dvh!important;
+  padding:0!important;border-radius:26px 26px 0 0!important;overflow:hidden!important;background:#f6f8fa
+}
+.address-modal .modal-close{
+  top:12px;right:13px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:#fff;border:1px solid #dce4e9;box-shadow:0 3px 12px rgba(24,48,67,.13);font-size:29px;line-height:1
+}
+.rc7-address-sheet,.rc7-address-main{height:100%;min-height:0}
+.rc7-address-main{display:block!important;overflow-y:auto;overscroll-behavior:contain;padding:17px 14px calc(18px + env(safe-area-inset-bottom))}
+.rc7-address-head{padding:1px 50px 10px 2px}
+.rc7-address-head>span{display:inline-block;margin-bottom:3px;color:#d95620;font-size:11px;font-weight:950}
+.rc7-address-head h2{margin:0!important;padding:0!important;font-size:25px!important;line-height:1.1!important;color:#17232d}
+.rc7-address-head p{margin:5px 0 0!important;font-size:12px!important;color:#6b7780!important}
+
+.rc7-selected-preview{
+  display:grid!important;grid-template-columns:35px minmax(0,1fr);align-items:center;gap:9px;
+  margin:0 0 9px!important;padding:10px 11px!important;min-height:67px!important;
+  border:1px solid #dce5eb;border-radius:16px!important;background:#fff!important;box-shadow:0 4px 14px rgba(28,54,73,.06)
+}
+.rc7-preview-icon{width:35px;height:35px;border-radius:12px;display:grid;place-items:center;background:#fff0e9;font-size:19px}
+.rc7-selected-preview>span:last-child{display:grid;min-width:0;gap:2px}
+.rc7-selected-preview small{font-size:10px!important;color:#d95620!important;font-weight:900}
+.rc7-selected-preview b{font-size:13px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rc7-selected-preview em{font-style:normal;font-size:10px;color:#6d7982;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.rc7-address-search{
+  min-height:54px!important;border:2px solid #ff7a46!important;border-radius:15px!important;
+  padding:0 13px 0 15px!important;color:#304657!important;box-shadow:0 3px 12px rgba(255,90,31,.08);touch-action:manipulation
+}
+.rc7-address-search span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left}
+.rc7-address-search b{min-width:44px;text-align:right!important;color:#e04c16!important}
+.rc7-current-location{
+  position:relative;z-index:2;display:flex!important;align-items:center;justify-content:center;gap:9px;
+  margin:8px 0!important;min-height:54px!important;border:1px solid #8dc9a6!important;border-radius:15px!important;
+  background:#effbf3!important;color:#126b35!important;font-size:15px;font-weight:950!important;
+  pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent
+}
+.rc7-current-location *{pointer-events:none!important}
+.rc7-current-location:active{background:#ddf6e6!important;transform:scale(.992)}
+.rc7-current-location:disabled{opacity:.68;transform:none}
+.rc7-gps-symbol{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#d8f3e1;font-size:19px;line-height:1}
+.rc7-gps-loading{animation:rc7-gps-pulse .9s ease-in-out infinite alternate}
+@keyframes rc7-gps-pulse{to{transform:scale(1.12);background:#bde8cc}}
+
+.rc7-map-section{overflow:hidden;border:1px solid #d7e1e7;border-radius:18px;background:#fff;box-shadow:0 5px 16px rgba(31,57,76,.07)}
+.rc7-map-section>header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 11px 8px}
+.rc7-map-section>header small{display:block;color:#d95620;font-size:10px;font-weight:900}
+.rc7-map-section>header h3{margin:2px 0 0;font-size:14px;color:#243744}
+.rc7-map-section>header button{
+  width:42px;height:42px;border:1px solid #d8e2e8;border-radius:50%;background:#fff;color:#e34f19;
+  font-size:24px;font-weight:900;touch-action:manipulation
+}
+.rc7-map-wrap{position:relative;height:255px;background:#e7eef2;overflow:hidden}
+#deliveryAddressMap{position:absolute;inset:0;z-index:1;touch-action:none}
+.rc7-center-pin{
+  position:absolute;left:50%;top:50%;z-index:500;pointer-events:none;transform:translate(-50%,-100%);
+  width:42px;height:52px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))
+}
+.rc7-center-pin::before{
+  content:"";position:absolute;left:5px;top:0;width:32px;height:32px;border:4px solid #fff;border-radius:50% 50% 50% 0;
+  background:#ff5a1f;transform:rotate(-45deg);box-shadow:0 1px 4px rgba(0,0,0,.24)
+}
+.rc7-center-pin span{position:absolute;left:17px;top:11px;z-index:1;width:9px;height:9px;border-radius:50%;background:#fff}
+.rc7-map-copy{display:grid;gap:2px;padding:9px 11px 10px}
+.rc7-map-copy b{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#2e424f}
+.rc7-map-copy small{font-size:10px;color:#74818a}
+.rc7-map-unavailable{height:100%;display:grid;place-content:center;text-align:center;gap:5px;padding:20px;color:#4e606c}
+.rc7-map-unavailable span{font-size:11px}
+.leaflet-control-attribution{font-size:8px!important}
+.leaflet-control-zoom a{width:32px!important;height:32px!important;line-height:32px!important}
+
+.rc7-detail-label{margin-top:9px!important;gap:5px!important}
+.rc7-detail-label>span{font-size:12px}
+.rc7-detail-label>span small{color:#7a878f;font-weight:600}
+.rc7-detail-label input{min-height:48px!important;background:#fff}
+.rc7-saved-section{margin-top:12px;padding:11px;border:1px solid #dce5eb;border-radius:17px;background:#fff}
+.rc7-saved-section .address-section-title{margin:0 0 8px!important}
+.rc7-saved-section .address-section-title small{display:block;color:#d95620;font-size:9px;font-weight:900}
+.rc7-saved-section .address-section-title h3{font-size:16px}
+.rc7-saved-section .address-section-title>span{font-size:10px}
+.rc7-saved-list{display:grid;gap:7px;max-height:250px;overflow:auto;overscroll-behavior:contain}
+.rc7-saved-card{display:grid;grid-template-columns:minmax(0,1fr) 47px;align-items:stretch;border:1px solid #e0e7eb;border-radius:14px;overflow:hidden;background:#fff}
+.rc7-saved-card.active{border-color:#ff8b5e;background:#fff8f4;box-shadow:inset 3px 0 #ff5a1f}
+.rc7-saved-select{min-width:0;min-height:64px;display:grid;grid-template-columns:31px minmax(0,1fr) auto;align-items:center;gap:7px;padding:7px 8px;border:0;background:transparent;text-align:left;color:#263946;touch-action:manipulation}
+.rc7-saved-icon{width:31px;height:31px;border-radius:10px;display:grid;place-items:center;background:#eef4f7}
+.rc7-saved-copy{min-width:0;display:grid;gap:3px}
+.rc7-saved-copy b,.rc7-saved-copy small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rc7-saved-copy b{font-size:12px}.rc7-saved-copy small{font-size:9px;color:#78858d}
+.rc7-saved-state{font-size:9px;font-weight:900;color:#df501a;white-space:nowrap}
+.rc7-saved-delete{border:0;border-left:1px solid #e4eaee;background:#fafcfd;color:#75818a;font-size:10px;font-weight:800;touch-action:manipulation}
+.rc7-address-empty{margin:0!important;padding:16px!important;text-align:center;font-size:11px;color:#74818a}
+.rc7-confirm{position:sticky;bottom:0;z-index:40;min-height:56px!important;margin:12px 0 0!important;border-radius:16px!important;background:#ff5a1f!important;box-shadow:0 8px 20px rgba(255,77,20,.23);touch-action:manipulation}
+.rc7-confirm:disabled{background:#aeb9c0!important;box-shadow:none}
+
+.rc5-postcode-view{padding:14px;height:100%!important;min-height:0!important;background:#fff}
+.rc5-postcode-head{padding-right:50px}
+.rc5-postcode-frame{border-radius:16px!important}
+
+@media(max-width:520px){
+  .active-address-bar{min-height:56px}
+  .address-modal .modal-card{height:calc(100dvh - max(8px,env(safe-area-inset-top)));max-height:calc(100dvh - max(8px,env(safe-area-inset-top)))!important}
+  .rc7-address-main{padding-left:11px;padding-right:11px}
+  .rc7-map-wrap{height:245px}
+}
+@media(max-height:720px){.rc7-map-wrap{height:205px}.rc7-saved-list{max-height:180px}}
+@media(prefers-reduced-motion:reduce){.rc7-gps-loading{animation:none}}

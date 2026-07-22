@@ -201,7 +201,17 @@ fxRc2Script.onload=()=>{
    const fxRc5Script=document.createElement('script');
    fxRc5Script.src='rc5-fixes.js?v=rc5';
    fxRc5Script.async=false;
-   fxRc5Script.onload=()=>{const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=location-mixed-ranking-1';document.head.append(css);const script=document.createElement('script');script.src='rc6-fixes.js?v=location-mixed-ranking-1';script.onload=()=>{fxInstallEvents();setTimeout(async()=>{await fxInitialize();await rc6Initialize();},0);};script.onerror=()=>console.error('RC6 검수 수정 레이어를 불러오지 못했습니다.');document.head.append(script);};
+   fxRc5Script.onload=()=>{
+    const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=address-map-1';document.head.append(css);
+    const script=document.createElement('script');script.src='rc6-fixes.js?v=address-map-1';
+    script.onload=()=>{
+     const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=address-map-1';
+     addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{await fxInitialize();await rc6Initialize();window.rc7Initialize?.();},0);};
+     addressScript.onerror=()=>console.error('RC7 주소·지도 검수 레이어를 불러오지 못했습니다.');
+     document.head.append(addressScript);
+    };
+    script.onerror=()=>console.error('RC6 검수 수정 레이어를 불러오지 못했습니다.');document.head.append(script);
+   };
    fxRc5Script.onerror=()=>console.error('RC5 검수 수정 레이어를 불러오지 못했습니다.');
    document.head.append(fxRc5Script);
   };

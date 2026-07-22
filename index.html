@@ -7,8 +7,10 @@
   <meta name="description" content="여수 음식점과 주문방법을 한눈에 찾는 대동여수음식지도">
   <title>대동여수음식지도</title>
   <link rel="preload" as="image" href="images/01.png">
-  <link rel="stylesheet" href="app.css?v=approved-ux-2">
-  <link rel="stylesheet" href="final-experience.css?v=final-local-1">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
+  <link rel="stylesheet" href="app.css?v=address-map-1">
+  <link rel="stylesheet" href="final-experience.css?v=address-map-1">
+  <link rel="stylesheet" href="rc7-address-map.css?v=address-map-1">
 </head>
 <body>
   <div id="app">
@@ -23,6 +25,12 @@
       <a class="brand" href="#app" aria-label="대동여수음식지도 홈"><img src="assets/logo.png" alt="대동여수음식지도"></a>
       <button id="noticeBtn" class="icon-btn glass-action" type="button" aria-label="알림"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#bell"></use></svg><b class="badge">2</b></button>
     </header>
+
+    <button class="active-address-bar glass-action" type="button" data-open-address aria-label="현재 배달 위치 확인 및 변경">
+      <svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#location"></use></svg>
+      <span class="active-address-copy"><small>현재 배달 위치</small><b id="activeAddressText">배달받을 주소를 설정해 주세요</b><em id="activeAddressHint">주소를 설정하면 가까운 가게부터 볼 수 있습니다</em></span>
+      <span class="active-address-change">변경 ›</span>
+    </button>
 
     <section class="search-row main-search-row" aria-label="가게 검색">
       <div class="searchbox glass-action" id="searchSurface"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#search"></use></svg><input id="mainSearch" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="clearMainSearch" class="input-clear" type="button" aria-label="검색어 지우기" hidden>×</button></div>
@@ -102,7 +110,8 @@
   <div id="photoViewer" class="photo-viewer" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="가게사진 전체화면 보기"><button class="photo-viewer-close" type="button" data-photo-viewer-close aria-label="전체화면 사진 닫기">×</button><div id="photoViewerCarousel" class="carousel-controller photo-viewer-carousel"><div class="carousel-shell photo-viewer-frame"><button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 전체화면 사진">‹</button><div class="carousel-track"></div><button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 전체화면 사진">›</button></div><div class="photo-viewer-footer"><div class="carousel-dots" aria-label="전체화면 사진 위치"></div><span class="photo-viewer-count">1 / 1</span></div></div></div>
   <div id="startupAd" class="startup-ad" hidden><div class="startup-card"><button class="startup-close" type="button" aria-label="닫기">×</button><small>대동여수음식지도 안내</small><h2>배달기사·가맹점 모집</h2><p>기사 모집, 가게 모집, 주문앱 가입 안내, 신규 오픈 가게와 소상공인 소식을 알립니다.</p><div class="startup-actions"><button id="startupDetails" class="primary-btn" type="button">자세히 보기</button><button id="hideToday" type="button">오늘 그만 보기</button></div></div></div>
   <noscript><p class="noscript">대동여수음식지도를 이용하려면 자바스크립트를 켜주세요.</p></noscript>
-  <script src="app.js?v=order-channel-safe-2" defer></script>
-  <script src="final-experience.js?v=order-channel-safe-2" defer></script>
+  <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
+  <script src="app.js?v=address-map-1" defer></script>
+  <script src="final-experience.js?v=address-map-1" defer></script>
 </body>
 </html>
