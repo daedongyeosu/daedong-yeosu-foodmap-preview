@@ -23,7 +23,22 @@ function rc6NearStores(){
  const ranked=rc6DiversifyDistance(rows).map(row=>({...row.store,distance:row.actual,rc6SortDistance:row.actual??row.neighborhoodDistance,proximityLabel:row.actual!==null?'':row.bucket===0?`${selected}의 가게`:row.bucket===1?`${row.candidate} 주변 가게`:'여수의 다른 추천 가게',locationSource:row.store.locationSource,neighborhoodConfidence:row.store.neighborhoodConfidence}));rc6LocationCache={key:cacheKey,stores:ranked};return ranked;
 }
 function rc6RankCandidatesByCustomerLocation(candidates){const nearby=rc6NearStores();if(!nearby.length)return candidates;const rank=new Map(nearby.map((store,index)=>[String(store.id),index])),details=new Map(nearby.map(store=>[String(store.id),store]));return candidates.map((store,index)=>({store:{...store,...details.get(String(store.id))},index})).sort((a,b)=>(rank.get(String(a.store.id))??Infinity)-(rank.get(String(b.store.id))??Infinity)||a.index-b.index).map(item=>item.store);}
-function rc6CategoryStoresByCustomerLocation(){return rc5Diversify(rc6RankCandidatesByCustomerLocation(filteredStores().filter(fxVisible)));}
+function rc6CategoryCandidates(){
+ const brand=state.brandId?BRAND_BY_ID[state.brandId]:null;
+ return stores.map(store=>({store,score:relevance(store,state.query)}))
+  .filter(item=>item.score>0&&fxVisible(item.store))
+  .filter(({store})=>state.category==='전체'||store.cat===state.category)
+  .filter(({store})=>!brand||brandMatchesStore(store,brand))
+  .sort((a,b)=>{
+   const aPin=Number.isFinite(Number(a.store.pinPosition))?Number(a.store.pinPosition):9999,bPin=Number.isFinite(Number(b.store.pinPosition))?Number(b.store.pinPosition):9999;
+   if(aPin!==bPin)return aPin-bPin;
+   if(a.store.forceBottom!==b.store.forceBottom)return a.store.forceBottom?1:-1;
+   if(a.store.managed!==b.store.managed)return a.store.managed?-1:1;
+   if(a.store.sharedManaged!==b.store.sharedManaged)return a.store.sharedManaged?-1:1;
+   return b.score-a.score||a.store.name.localeCompare(b.store.name,'ko');
+  }).map(item=>item.store);
+}
+function rc6CategoryStoresByCustomerLocation(){return rc5Diversify(rc6RankCandidatesByCustomerLocation(rc6CategoryCandidates()));}
 function rc6InstallChannelLocationSorting(){
  if(rc6ChannelSortingInstalled)return;rc6ChannelSortingInstalled=true;
  appRegisteredStores=function rc6LocationAppStores(key){return rc6RankCandidatesByCustomerLocation(rc6AppRegisteredStoresBase(key));};
