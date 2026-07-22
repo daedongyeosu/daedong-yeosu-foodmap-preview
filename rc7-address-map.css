@@ -1,4 +1,9 @@
 /* RC7: visible main address, full-button GPS touch target and map-first address sheet. */
+@font-face{
+  font-family:"Daedong Brush";
+  src:url("assets/fonts/daedong-nanum-brush-korean.woff2") format("woff2");
+  font-style:normal;font-weight:400;font-display:swap
+}
 .active-address-bar{
   position:relative;z-index:3;width:calc(100% - 24px);min-height:58px;margin:2px 12px 6px;
   display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:9px;
@@ -16,14 +21,16 @@
 .topbar .location-chip{min-width:0;max-width:calc(58vw - 12px)!important;touch-action:manipulation}
 .topbar .location-chip #locationText{font-weight:900}
 .topbar .brand-wordmark{
-  width:284px;height:54px;padding:5px 13px;gap:7px;border:1px solid rgba(255,255,255,.94);border-radius:20px;
-  display:flex;align-items:center;justify-content:center;overflow:hidden;box-sizing:border-box;
-  background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(240,248,252,.88));
-  box-shadow:0 7px 20px rgba(5,35,60,.19),inset 0 1px rgba(255,255,255,.96)
+  width:306px;height:54px;padding:3px 5px;gap:8px;border:0;border-radius:0;
+  display:flex;align-items:center;justify-content:center;overflow:visible;box-sizing:border-box;
+  background:transparent;box-shadow:none
 }
 .topbar .brand-word{
-  flex:0 0 auto;white-space:nowrap;color:#0a3154;font-family:"Noto Serif KR","Nanum Myeongjo","Apple SD Gothic Neo",serif;
-  font-size:20px;font-weight:950;line-height:1;letter-spacing:-1.8px;text-shadow:0 1px 0 #fff
+  flex:0 0 auto;white-space:nowrap;color:#082f52;
+  font-family:"Daedong Brush","Nanum Brush Script","Nanum Pen Script",cursive;
+  font-size:29px;font-weight:400;line-height:1;letter-spacing:-1px;
+  -webkit-text-stroke:.45px currentColor;
+  text-shadow:0 1px 0 rgba(255,255,255,.98),0 0 7px rgba(255,255,255,.82),0 2px 5px rgba(2,28,52,.22)
 }
 .topbar .brand-word b{font:inherit}.topbar .brand-word em{font:inherit;font-style:normal;color:#ef531d}
 .topbar .brand-symbol{
@@ -34,7 +41,7 @@
   position:absolute;left:50%;top:0;width:84px!important;height:56px!important;max-width:none!important;
   border-radius:0!important;object-fit:fill!important;transform:translateX(-50%);filter:saturate(1.06) contrast(1.02)
 }
-.topbar .brand-word-right{letter-spacing:-2px}
+.topbar .brand-word-right{letter-spacing:-1.2px}
 
 .address-modal{padding:0!important;align-items:flex-end!important}
 .address-modal .modal-card{
@@ -141,10 +148,10 @@
 @media(max-width:760px){
   .topbar{min-height:116px!important;padding:6px 12px 58px!important;align-items:flex-start!important}
   .topbar .brand-wordmark{
-    left:50%;top:auto;bottom:5px;transform:translateX(-50%);width:min(284px,calc(100vw - 68px));height:50px;
-    padding:4px 11px;gap:6px;border-radius:18px
+    left:50%;top:auto;bottom:5px;transform:translateX(-50%);width:min(306px,calc(100vw - 48px));height:50px;
+    padding:2px 4px;gap:7px
   }
-  .topbar .brand-word{font-size:19px;letter-spacing:-1.7px}.topbar .brand-word-right{letter-spacing:-1.9px}
+  .topbar .brand-word{font-size:28px;letter-spacing:-1px}.topbar .brand-word-right{letter-spacing:-1.2px}
   .topbar .brand-symbol{flex-basis:40px;width:40px;height:39px}
   .topbar .brand-symbol img{width:78px!important;height:52px!important}
   .topbar .location-chip{max-width:calc(100% - 70px)!important}
@@ -159,8 +166,8 @@
 }
 @media(max-width:380px){
   .topbar{min-height:111px!important;padding-bottom:54px!important}
-  .topbar .brand-wordmark{width:min(252px,calc(100vw - 60px));height:46px;bottom:4px;padding:3px 9px;gap:5px}
-  .topbar .brand-word{font-size:17px;letter-spacing:-1.5px}.topbar .brand-word-right{letter-spacing:-1.7px}
+  .topbar .brand-wordmark{width:min(280px,calc(100vw - 38px));height:46px;bottom:4px;padding:2px 3px;gap:5px}
+  .topbar .brand-word{font-size:25px;letter-spacing:-.8px}.topbar .brand-word-right{letter-spacing:-1px}
   .topbar .brand-symbol{flex-basis:36px;width:36px;height:35px}
   .topbar .brand-symbol img{width:70px!important;height:47px!important}
 }
