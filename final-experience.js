@@ -205,7 +205,7 @@ fxRc4Style.href='rc4-fixes.css?v=rc4';
 document.head.append(fxRc4Style);
 const fxRc5Style=document.createElement('link');
 fxRc5Style.rel='stylesheet';
-fxRc5Style.href='rc5-fixes.css?v=rc5';
+fxRc5Style.href='rc5-fixes.css?v=category-card-single-detail-1';
 document.head.append(fxRc5Style);
 function fxAllCategoryTileFromEvent(event){
  const grid=document.getElementById('categoryGrid');
@@ -235,7 +235,7 @@ fxRc2Script.onload=()=>{
   fxRc4Script.async=false;
   fxRc4Script.onload=()=>{
    const fxRc5Script=document.createElement('script');
-   fxRc5Script.src='rc5-fixes.js?v=rc5';
+   fxRc5Script.src='rc5-fixes.js?v=category-card-single-detail-1';
    fxRc5Script.async=false;
    fxRc5Script.onload=()=>{
     const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=bridge-gull-motion-2';document.head.append(css);
