@@ -34335,6 +34335,21 @@
         "name": "전화주문",
         "url": "https://bit.ly/전화-미치게본점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-미치게본점",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-미치게본점",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-미치게본점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -34473,6 +34488,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-반올림피자여수미평점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-반올림피자여수미평점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-반올림피자여수미평점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -34551,6 +34576,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-배떡여수점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-배떡여수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-배떡여수점",
         "enabled": true
       }
     ],
@@ -34690,6 +34725,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-배스킨라빈스여수여서점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-배스킨라빈스여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-배스킨라빈스여수여서점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -34763,6 +34808,16 @@
       {
         "name": "전화주문",
         "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-백년족발",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-백년족발",
         "enabled": true
       }
     ],
@@ -34846,6 +34901,11 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-백수초밥",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-백수초밥",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -34927,6 +34987,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-백억흑미꼬마김밥",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-백억흑미꼬마김밥",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-백억흑미꼬마김밥",
         "enabled": true
       }
     ],
@@ -35105,6 +35175,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-봉구스밥버거문수점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-봉구스밥버거문수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-봉구스밥버거문수점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -35184,6 +35264,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-봉명동내커피여수문수점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-봉명동내커피여수문수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-봉명동내커피여수문수점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -35262,6 +35352,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-부대찌개전쟁터",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-부대찌개전쟁터",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-부대찌개전쟁터",
         "enabled": true
       }
     ],
@@ -35345,6 +35445,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-북촌손만두피냉면여수문수점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-북촌손만두피냉면여수문수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-북촌손만두피냉면여수문수점",
         "enabled": true
       }
     ],
@@ -35686,6 +35796,26 @@
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-빵위에치즈여수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-빵위에치즈여수점",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-빵위에치즈1인피자",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-빵위에치즈1인피자",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -35829,6 +35959,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-삼첩분식미평점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-삼첩분식미평점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-삼첩분식미평점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -35908,6 +36048,11 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-서영이네김밥미평점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-서영이네김밥미평점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -35976,6 +36121,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-서울깍두기미평직영점",
         "enabled": true
       }
     ],
@@ -36246,6 +36396,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-수해복마라탕여수미평점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-수해복마라탕여수미평점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-수해복마라탕여수미평점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -36324,6 +36484,16 @@
       {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-쉐프의생안심탕수육문수점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-쉐프의생안심탕수육문수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-쉐프의생안심탕수육문수점",
         "enabled": true
       }
     ],
@@ -36514,6 +36684,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-써브웨이여서점",
         "enabled": true
       }
     ],
@@ -36740,6 +36915,11 @@
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/vmuzp8",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -36818,6 +36998,16 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-아주커치킨문수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-아주커치킨문수점",
         "enabled": true
       }
     ],
