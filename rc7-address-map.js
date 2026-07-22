@@ -259,8 +259,9 @@
             frame.innerHTML = '<p class="rc5-postcode-error">선택한 주소를 확인하지 못했습니다.</p>';
             return;
           }
+          const area = addressAreaFor([address, data.jibunAddress, data.autoJibunAddress].filter(Boolean).join(' '));
           chooseAddressBase(address, {
-            area: addressAreaFor(address),
+            area,
             coords: null,
             sortByDistance: false,
             type: 'postcode'
