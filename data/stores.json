@@ -142,11 +142,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=159313",
         "enabled": true
@@ -2904,11 +2899,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?Ar367ov=",
         "enabled": true
@@ -3047,11 +3037,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?pnyfCwP=",
@@ -4796,11 +4781,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=147833",
         "enabled": true
@@ -4850,11 +4830,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=148042",
@@ -5277,11 +5252,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=214141",
@@ -5841,11 +5811,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=163810",
@@ -7299,11 +7264,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?UNxAMQJ=",
         "enabled": true
@@ -7364,11 +7324,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=155416",
@@ -7435,11 +7390,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=189965",
@@ -7517,11 +7467,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?HV4TAXK=",
         "enabled": true
@@ -7588,11 +7533,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=155205",
         "enabled": true
@@ -7647,11 +7587,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?9sMedUD=",
@@ -8596,11 +8531,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?hZjPEu9=",
         "enabled": true
@@ -9037,11 +8967,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?cVQA2DA=",
         "enabled": true
@@ -9100,11 +9025,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?dL0Bi2d=",
@@ -9229,11 +9149,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=167269",
@@ -9363,11 +9278,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=193773",
@@ -10023,11 +9933,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=210498",
         "enabled": true
@@ -10517,11 +10422,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=182906",
@@ -11352,11 +11252,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=213088",
         "enabled": true
@@ -11420,11 +11315,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=148915",
@@ -12667,11 +12557,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=216074",
         "enabled": true
@@ -12747,11 +12632,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=216035",
@@ -12940,11 +12820,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?CLoS6qJ=",
@@ -13215,11 +13090,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?c9f2voC=",
@@ -14230,11 +14100,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=194608",
         "enabled": true
@@ -14404,11 +14269,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=213228",
@@ -16950,11 +16810,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?sfYdDUA=",
         "enabled": true
@@ -17502,11 +17357,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=190908",
         "enabled": true
@@ -17675,11 +17525,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=213530",
@@ -17935,11 +17780,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=214191",
         "enabled": true
@@ -17989,11 +17829,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=164618",
@@ -19072,11 +18907,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?BN9BuOg=",
         "enabled": true
@@ -19152,11 +18982,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=164611",
         "enabled": true
@@ -19231,11 +19056,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/38eda158dd2a805cb72bc0187ae51579",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=153475",
