@@ -82,12 +82,50 @@ function rc3ShowAllOnHome({close = false} = {}) {
   requestAnimationFrame(() => window.scrollTo(0, pageScroll));
 }
 
+const RC3_CARD_PRIMARY_CHANNELS = Object.freeze([
+  ['direct', 'directOrder'],
+  ['brand', 'brandApp'],
+  ['mukkebi', 'mukkebi'],
+  ['ddangyo', 'ddangyo'],
+  ['ondongne', 'ondongne'],
+  ['phone', 'phoneOrder']
+]);
+
+function rc3PrimaryCardChannels(store) {
+  const channels = resolveStoreChannels(store);
+  const primary = {...channels.primaryOrder};
+  if (!primary.brandApp) primary.brandApp = routeFor(store, 'brand') || null;
+  return RC3_CARD_PRIMARY_CHANNELS
+    .map(([key, field]) => ({key, channel: primary[field]}))
+    .filter(item => Boolean(item.channel));
+}
+
+function rc3PrimaryChannelIcon(key, channel, className) {
+  const cls = escapeHtml(className);
+  if (key === 'brand') {
+    if (channel?.icon) return `<img class="${cls}" src="${escapeHtml(channel.icon)}" alt="브랜드앱" title="브랜드앱">`;
+    return `<svg class="${cls} rc3-order-channel-svg" role="img" aria-label="브랜드앱"><use href="assets/ui/ui-icons.svg#store"></use></svg>`;
+  }
+  if (key === 'phone') return `<img class="${cls}" src="assets/ui/phone.svg" alt="전화주문" title="전화주문">`;
+  return appIcon(key, className);
+}
+
+function rc3PrimaryCardIcons(store, className = 'rail-channel-icon') {
+  return rc3PrimaryCardChannels(store)
+    .map(({key, channel}) => rc3PrimaryChannelIcon(key, channel, className))
+    .join('');
+}
+
+miniRoutes = function rc3MiniRoutes(store) {
+  return rc3PrimaryCardIcons(store, 'miniapp-icon');
+};
+
 function rc3RailCard(store, spec) {
   const distance=spec?.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';
   const locationLabel=spec?.kind==='near'?(distance||store.proximityLabel||''):'';
-  return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action" data-rc3-rail-open="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-method">${escapeHtml(rc2RepresentativeMethod(store))}</span><button type="button" class="rail-order-button rc3-rail-order-button glass-action" data-rc3-rail-order="${escapeHtml(store.id)}">주문방법 보기</button></footer></article>`;
+  const channelIcons=rc3PrimaryCardIcons(store);
+  return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action" data-rc3-rail-open="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-channel-icons" aria-label="이용 가능한 기본 주문방법">${channelIcons||'<span class="rail-method">주문방법 확인</span>'}</span><button type="button" class="rail-order-button rc3-rail-order-button glass-action" data-rc3-rail-order="${escapeHtml(store.id)}">주문방법 보기</button></footer></article>`;
 }
-
 fxRenderRails = function rc3RenderRails() {
   const root = $('#recommendRails');
   if (!root) return;

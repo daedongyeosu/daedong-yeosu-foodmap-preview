@@ -129,3 +129,11 @@
   }
   .feedback-channel-list { grid-template-columns: 1fr; }
 }
+
+.rail-card footer{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important}
+.rail-channel-icons{min-width:0;display:flex;align-items:center;gap:3px;overflow:hidden}
+.rail-channel-icon{width:24px!important;height:24px!important;min-width:24px!important;border-radius:7px!important;object-fit:cover!important;background:#fff;border:1px solid #e7edf2;flex:0 0 24px}
+.rail-channel-icon.miniemoji{display:grid!important;place-items:center;font-size:14px}
+.rc3-order-channel-svg{padding:3px;color:#164d72;fill:none}
+.store-card .miniapps{gap:4px}
+.store-card .miniapps .miniapp-icon,.store-card .miniapps .miniemoji{width:22px!important;height:22px!important;min-width:22px!important;flex-basis:22px!important}
