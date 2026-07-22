@@ -15,6 +15,26 @@
 .active-address-change{font-size:12px;font-weight:900;color:#d64d19}
 .topbar .location-chip{min-width:0;max-width:calc(58vw - 12px)!important;touch-action:manipulation}
 .topbar .location-chip #locationText{font-weight:900}
+.topbar .brand-wordmark{
+  width:284px;height:54px;padding:5px 13px;gap:7px;border:1px solid rgba(255,255,255,.94);border-radius:20px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;box-sizing:border-box;
+  background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(240,248,252,.88));
+  box-shadow:0 7px 20px rgba(5,35,60,.19),inset 0 1px rgba(255,255,255,.96)
+}
+.topbar .brand-word{
+  flex:0 0 auto;white-space:nowrap;color:#0a3154;font-family:"Noto Serif KR","Nanum Myeongjo","Apple SD Gothic Neo",serif;
+  font-size:20px;font-weight:950;line-height:1;letter-spacing:-1.8px;text-shadow:0 1px 0 #fff
+}
+.topbar .brand-word b{font:inherit}.topbar .brand-word em{font:inherit;font-style:normal;color:#ef531d}
+.topbar .brand-symbol{
+  position:relative;flex:0 0 43px;width:43px;height:42px;overflow:hidden;border-radius:50%;
+  background:#fff;border:1px solid rgba(255,115,55,.3);box-shadow:0 3px 10px rgba(11,48,76,.11)
+}
+.topbar .brand-symbol img{
+  position:absolute;left:50%;top:0;width:84px!important;height:56px!important;max-width:none!important;
+  border-radius:0!important;object-fit:fill!important;transform:translateX(-50%);filter:saturate(1.06) contrast(1.02)
+}
+.topbar .brand-word-right{letter-spacing:-2px}
 
 .address-modal{padding:0!important;align-items:flex-end!important}
 .address-modal .modal-card{
@@ -118,13 +138,18 @@
 .rc5-postcode-frame{width:100%;height:100%!important;min-height:0!important;border-radius:16px!important;background:#fff}
 .rc5-postcode-frame>div,.rc5-postcode-frame iframe{display:block!important;width:100%!important;height:100%!important;min-height:100%!important;border:0!important}
 
-@media(max-width:520px){
-  .topbar .brand{
-    width:52px;height:52px;padding:3px;border:1px solid rgba(255,255,255,.94);border-radius:50%;overflow:hidden;
-    background:rgba(255,255,255,.94);box-shadow:0 5px 16px rgba(8,42,66,.18)
+@media(max-width:760px){
+  .topbar{min-height:116px!important;padding:6px 12px 58px!important;align-items:flex-start!important}
+  .topbar .brand-wordmark{
+    left:50%;top:auto;bottom:5px;transform:translateX(-50%);width:min(284px,calc(100vw - 68px));height:50px;
+    padding:4px 11px;gap:6px;border-radius:18px
   }
-  .topbar .brand img{width:100%;height:100%;border-radius:50%;object-fit:contain}
-  .topbar .location-chip{max-width:calc(50% - 44px)!important}
+  .topbar .brand-word{font-size:19px;letter-spacing:-1.7px}.topbar .brand-word-right{letter-spacing:-1.9px}
+  .topbar .brand-symbol{flex-basis:40px;width:40px;height:39px}
+  .topbar .brand-symbol img{width:78px!important;height:52px!important}
+  .topbar .location-chip{max-width:calc(100% - 70px)!important}
+}
+@media(max-width:520px){
   .active-address-bar{min-height:56px}
   .address-modal .modal-card{height:calc(100dvh - max(8px,env(safe-area-inset-top)));max-height:calc(100dvh - max(8px,env(safe-area-inset-top)))!important}
   .rc5-postcode-view{height:calc(100dvh - max(8px,env(safe-area-inset-top)))!important}
@@ -133,8 +158,11 @@
   .rc7-map-wrap{height:245px}
 }
 @media(max-width:380px){
-  .topbar .brand{width:48px;height:48px}
-  .topbar .location-chip{max-width:calc(50% - 41px)!important}
+  .topbar{min-height:111px!important;padding-bottom:54px!important}
+  .topbar .brand-wordmark{width:min(252px,calc(100vw - 60px));height:46px;bottom:4px;padding:3px 9px;gap:5px}
+  .topbar .brand-word{font-size:17px;letter-spacing:-1.5px}.topbar .brand-word-right{letter-spacing:-1.7px}
+  .topbar .brand-symbol{flex-basis:36px;width:36px;height:35px}
+  .topbar .brand-symbol img{width:70px!important;height:47px!important}
 }
 @media(max-height:720px){.rc7-map-wrap{height:205px}.rc7-saved-list{max-height:180px}}
 @media(prefers-reduced-motion:reduce){.rc7-gps-loading{animation:none}}
