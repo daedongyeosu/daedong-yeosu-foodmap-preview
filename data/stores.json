@@ -37196,6 +37196,11 @@
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-앨리스토리커피",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -37256,7 +37261,7 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-양지골수육",
         "enabled": true
       },
       {
@@ -37267,6 +37272,11 @@
       {
         "name": "전화주문",
         "url": "https://bit.ly/전화-양지골수육",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-양지골수육",
         "enabled": true
       }
     ],
@@ -37328,17 +37338,22 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-양철북곱창여수미평점",
         "enabled": true
       },
       {
         "name": "전화주문",
-        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "url": "https://bit.ly/전화-양철북곱창여수미평점",
         "enabled": true
       },
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/0a4rcj",
         "enabled": true
       }
     ],
@@ -37402,7 +37417,7 @@
       },
       {
         "name": "전화주문",
-        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "url": "https://bit.ly/전화-여수돌산꽈배기",
         "enabled": true
       },
       {
@@ -37418,6 +37433,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-여수돌산꽈배기",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-여수돌산꽈배기",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-여수돌산꽈배기",
         "enabled": true
       }
     ],
@@ -37608,11 +37633,6 @@
         "enabled": true
       },
       {
-        "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
-        "enabled": true
-      },
-      {
         "name": "전화주문",
         "url": "https://bit.ly/전화-여수싱싱회육회문수본점",
         "enabled": true
@@ -37630,6 +37650,11 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-여수싱싱회육회문수본점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-여수싱싱회육회문수본점",
         "enabled": true
       }
     ],
@@ -37693,7 +37718,7 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-여수하늘",
         "enabled": true
       },
       {
@@ -37709,6 +37734,11 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-여수하늘",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-여수하늘",
         "enabled": true
       }
     ],
@@ -37782,6 +37812,11 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-여수회포차",
         "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-여수회포차",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -37853,6 +37888,21 @@
       {
         "name": "전화주문",
         "url": "https://bit.ly/전화-여정식당여문점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-여정식당여문점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/rn991l",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-여정식당여문점",
         "enabled": true
       }
     ],
@@ -38034,7 +38084,7 @@
       },
       {
         "name": "전화주문",
-        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "url": "https://bit.ly/전화-연변양꼬치구이미평점",
         "enabled": true
       },
       {
@@ -38045,6 +38095,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-연변양꼬치구이미평점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-연변양꼬치구이미평점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-연변양꼬치구이미평점",
         "enabled": true
       }
     ],
@@ -38197,7 +38257,7 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-오븐에꾸운닭여문점",
         "enabled": true
       },
       {
@@ -38218,6 +38278,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-오븐에꾸운닭여문점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-오븐에꾸운닭여문점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-오븐에꾸운닭여문점",
         "enabled": true
       }
     ],
@@ -38281,7 +38351,7 @@
       },
       {
         "name": "전화주문",
-        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "url": "https://bit.ly/전화-올떡볶이여수봉계점",
         "enabled": true
       },
       {
@@ -38297,6 +38367,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-올떡볶이여수봉계점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-올떡볶이여수봉계점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-올떡볶이여수봉계점",
         "enabled": true
       }
     ],
@@ -38550,6 +38630,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-요아정여수여서점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-요아정여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-요아정여수여서점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -38730,7 +38820,7 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-우정통닭",
         "enabled": true
       },
       {
@@ -38741,6 +38831,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-우정통닭",
         "enabled": true
       }
     ],
@@ -38913,6 +39008,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-원할머니보쌈족발여수여서점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-원할머니보쌈족발여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-원할머니보쌈족발여수여서점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -38975,12 +39080,12 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-유림식당",
         "enabled": true
       },
       {
         "name": "전화주문",
-        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "url": "https://bit.ly/전화-유림식당",
         "enabled": true
       },
       {
@@ -38996,6 +39101,11 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-유림식당",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-유림식당",
         "enabled": true
       }
     ],
@@ -39057,12 +39167,12 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-윤가네선어",
         "enabled": true
       },
       {
         "name": "전화주문",
-        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "url": "https://bit.ly/전화-윤가네선어",
         "enabled": true
       },
       {
@@ -39073,6 +39183,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-윤가네선어",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-윤가네선어",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-윤가네선어",
         "enabled": true
       }
     ],
@@ -39151,6 +39271,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-을찌로국물떡볶이국동점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-을찌로국물떡볶이국동점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-을찌로국물떡볶이국동점",
         "enabled": true
       }
     ],
@@ -39607,12 +39737,12 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-장충동왕족발여수점",
         "enabled": true
       },
       {
         "name": "전화주문",
-        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "url": "https://bit.ly/전화-장충동왕족발여수점",
         "enabled": true
       },
       {
@@ -39628,6 +39758,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-장충동왕족발여수점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-장충동왕족발여수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-장충동왕족발여수점",
         "enabled": true
       }
     ],
@@ -40010,7 +40150,7 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-족발자리",
         "enabled": true
       },
       {
@@ -40031,6 +40171,11 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-족발자리",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-족발자리",
         "enabled": true
       }
     ],
@@ -40092,7 +40237,7 @@
       },
       {
         "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
+        "url": "https://bit.ly/mk-족팔계왕족발",
         "enabled": true
       },
       {
@@ -40102,7 +40247,22 @@
       },
       {
         "name": "전화주문",
-        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "url": "https://bit.ly/전화-족팔계왕족발",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/oyevu7",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-족팔계왕족발",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-족팔계왕족발",
         "enabled": true
       }
     ],
