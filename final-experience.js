@@ -207,6 +207,21 @@ const fxRc5Style=document.createElement('link');
 fxRc5Style.rel='stylesheet';
 fxRc5Style.href='rc5-fixes.css?v=rc5';
 document.head.append(fxRc5Style);
+function fxAllCategoryTileFromEvent(event){
+ const grid=document.getElementById('categoryGrid');
+ if(!grid)return null;
+ const path=typeof event.composedPath==='function'?event.composedPath():[];
+ const fromPath=path.find(node=>node instanceof Element&&node.getAttribute?.('data-cat')==='전체');
+ const tile=fromPath||event.target?.closest?.('[data-cat="전체"]');
+ return tile&&grid.contains(tile)?tile:null;
+}
+document.addEventListener('click',event=>{
+ if(!fxAllCategoryTileFromEvent(event))return;
+ event.preventDefault();
+ event.stopImmediatePropagation();
+ if(typeof allCategoriesModal==='function')allCategoriesModal();
+},true);
+
 const fxRc2Script=document.createElement('script');
 fxRc2Script.src='rc2-fixes.js?v=rc2';
 fxRc2Script.async=false;
