@@ -225,6 +225,72 @@
     requestAnimationFrame(initializeMap);
   }
 
+  function sizePostcodeFrame(frame) {
+    if (!frame) return;
+    const viewportHeight = Math.round(window.visualViewport?.height || window.innerHeight || 720);
+    frame.style.minHeight = `${Math.max(480, viewportHeight - 112)}px`;
+    const embedded = new Set([...frame.children, ...frame.querySelectorAll('iframe')]);
+    embedded.forEach(element => {
+      element.style.setProperty('display', 'block', 'important');
+      element.style.setProperty('width', '100%', 'important');
+      element.style.setProperty('height', '100%', 'important');
+      element.style.setProperty('min-height', '100%', 'important');
+    });
+  }
+
+  async function openPostcode() {
+    const form = document.querySelector('#modal .rc5-address-form');
+    const view = document.querySelector('#modal .rc5-postcode-view');
+    const frame = document.querySelector('#modal [data-rc5-postcode-frame]');
+    if (!form || !view || !frame) return;
+    form.hidden = true;
+    view.hidden = false;
+    frame.innerHTML = '<p class="rc4-address-status">주소검색을 불러오는 중입니다.</p>';
+    sizePostcodeFrame(frame);
+    try {
+      const Postcode = await rc4LoadPostcode();
+      frame.innerHTML = '';
+      const postcode = new Postcode({
+        width: '100%',
+        height: '100%',
+        oncomplete(data) {
+          const address = String(data.roadAddress || data.jibunAddress || data.address || '').trim();
+          if (!address) {
+            frame.innerHTML = '<p class="rc5-postcode-error">선택한 주소를 확인하지 못했습니다.</p>';
+            return;
+          }
+          chooseAddressBase(address, {
+            area: addressAreaFor(address),
+            coords: null,
+            sortByDistance: false,
+            type: 'postcode'
+          });
+          const label = form.querySelector('[data-rc5-postcode-open] span');
+          if (label) label.textContent = address;
+          form.hidden = false;
+          view.hidden = true;
+          renderAddressDraft();
+          setTimeout(() => document.querySelector('#addressDetailInput')?.focus(), 0);
+        },
+        onclose() {
+          form.hidden = false;
+          view.hidden = true;
+          setTimeout(() => map?.invalidateSize(), 0);
+        }
+      });
+      postcode.embed(frame, {autoClose: false});
+      requestAnimationFrame(() => sizePostcodeFrame(frame));
+      setTimeout(() => sizePostcodeFrame(frame), 250);
+      setTimeout(() => {
+        if (!view.hidden && !frame.querySelector('iframe')) {
+          frame.innerHTML = '<p class="rc5-postcode-error">주소검색 화면을 불러오지 못했습니다. 돌아간 뒤 다시 눌러 주세요.</p>';
+        }
+      }, 4000);
+    } catch {
+      frame.innerHTML = '<p class="rc5-postcode-error">주소검색을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>';
+    }
+  }
+
   function useGps() {
     const button = document.querySelector('#gpsLocationBtn');
     if (!button) return;
@@ -350,6 +416,7 @@
     commitAddressSelection = commitAddress;
     chooseAddressBase = chooseAddress;
     renderAddressDraft = renderDraft;
+    rc5OpenPostcode = openPostcode;
     hardClose = function rc7HardClose(options = {}) {
       destroyMap();
       hardCloseBase(options);
