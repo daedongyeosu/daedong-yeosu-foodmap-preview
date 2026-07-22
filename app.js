@@ -797,8 +797,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#mainSearch').addEventListener('keydown', event => { if (event.key === 'Enter') $('#searchBtn').click(); });
   $('#clearMainSearch').addEventListener('click', () => { $('#mainSearch').value = ''; state.query = ''; $('#clearMainSearch').hidden = true; renderStores({resetCount: true}); $('#mainSearch').focus(); });
   $('#searchBtn').addEventListener('click', () => { state.query = $('#mainSearch').value.trim(); state.category = '전체'; state.brandId = ''; renderStores({scroll: true, resetCount: true}); });
-  $('#categoryGrid').addEventListener('click', event => { const button = event.target.closest('[data-cat]'); if (!button) return; state.category = button.dataset.cat; state.brandId = ''; state.query = ''; $('#mainSearch').value = ''; $('#clearMainSearch').hidden = true; renderStores({scroll: true, resetCount: true}); });
-  $('#allCategoryBtn').addEventListener('click', () => allCategoriesModal());
+  $('#categoryGrid').addEventListener('click', event => { const button = event.target.closest('[data-cat]'); if (!button) return; if (button.dataset.cat === '전체') { allCategoriesModal(); return; } state.category = button.dataset.cat; state.brandId = ''; state.query = ''; $('#mainSearch').value = ''; $('#clearMainSearch').hidden = true; renderStores({scroll: true, resetCount: true}); });
   $('#loadMoreBtn').addEventListener('click', () => { state.visibleCount += 40; renderStores(); });
   $('#resetCategoryBtn').addEventListener('click', resetFilters);
   $('#locationBtn').addEventListener('click', areaModal);
