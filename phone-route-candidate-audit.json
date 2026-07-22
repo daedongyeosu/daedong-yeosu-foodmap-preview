@@ -1,0 +1,874 @@
+[
+  {
+    "store_id": "84fc553896d0b051",
+    "store_name": "교촌치킨 문수점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4dTo9U2",
+    "destination": "https://app.notion.com/p/371da158dd2a8054868cc746f998aa4a?source=copy_link",
+    "notion_phone_page_id": "371da158dd2a8054868cc746f998aa4a"
+  },
+  {
+    "store_id": "99ade7376cceea13",
+    "store_name": "교촌치킨 여서점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4nW497A",
+    "destination": "https://app.notion.com/p/371da158dd2a8090801dec845395eff8?source=copy_link",
+    "notion_phone_page_id": "371da158dd2a8090801dec845395eff8"
+  },
+  {
+    "store_id": "f0804947cebd20cc",
+    "store_name": "노브랜드버거 여수여서점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/3RtARBr",
+    "destination": "https://www.notion.so/370da158dd2a80d89abddffcf270c95b?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a80d89abddffcf270c95b"
+  },
+  {
+    "store_id": "88b98e5ecb968c2c",
+    "store_name": "맥도날드 여수미평DT점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4uFB0jT",
+    "destination": "https://www.notion.so/DT-370da158dd2a804d8e52e3bb605e5def?source=copy_link",
+    "notion_phone_page_id": ""
+  },
+  {
+    "store_id": "8dfdc5de41e3eca9",
+    "store_name": "맥도날드 여수학동DT점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4x4gOcV",
+    "destination": "https://app.notion.com/p/DT-372da158dd2a80b1bda8cd31c039dba8?source=copy_link",
+    "notion_phone_page_id": ""
+  },
+  {
+    "store_id": "b978240417a18e51",
+    "store_name": "부어치킨 여수학동점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4nYrg1v",
+    "destination": "https://www.notion.so/371da158dd2a80209d25dc4956bd0298?source=copy_link",
+    "notion_phone_page_id": "371da158dd2a80209d25dc4956bd0298"
+  },
+  {
+    "store_id": "16b4130f35ec93ae",
+    "store_name": "부어치킨&버거 여수소호점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4fLxAaw",
+    "destination": "https://www.notion.so/371da158dd2a80a0837bf913d5e25970?source=copy_link",
+    "notion_phone_page_id": "371da158dd2a80a0837bf913d5e25970"
+  },
+  {
+    "store_id": "09de7c8235046632",
+    "store_name": "불족대가 미평점",
+    "canonical_page_id": "",
+    "phone_route": "https://app.notion.com/p/379da158dd2a80a59d43f63b881880d6",
+    "destination": "https://app.notion.com/p/379da158dd2a80a59d43f63b881880d6",
+    "notion_phone_page_id": "379da158dd2a80a59d43f63b881880d6"
+  },
+  {
+    "store_id": "066197a9443c3145",
+    "store_name": "비비큐 여수돌산점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4vhZkYM",
+    "destination": "https://www.notion.so/370da158dd2a806b9b0adc49e3ca602b?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a806b9b0adc49e3ca602b"
+  },
+  {
+    "store_id": "4059491d8dbb4159",
+    "store_name": "비비큐 여수무선점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4dUAxmu",
+    "destination": "https://www.notion.so/370da158dd2a80d6bf47dc37723e5e36?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a80d6bf47dc37723e5e36"
+  },
+  {
+    "store_id": "572e4a658f762cbe",
+    "store_name": "비비큐 여수신기행운점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4dFD8SE",
+    "destination": "https://www.notion.so/370da158dd2a808c8423c9579335cb91?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a808c8423c9579335cb91"
+  },
+  {
+    "store_id": "e2645d79ef555a24",
+    "store_name": "비비큐 여수엑스포점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/3PTz0VY",
+    "destination": "https://www.notion.so/370da158dd2a80bda799cc53f7130a0a?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a80bda799cc53f7130a0a"
+  },
+  {
+    "store_id": "b73ca9b4a41f7502",
+    "store_name": "비비큐 여수웅천점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/3RCEODQ",
+    "destination": "https://www.notion.so/370da158dd2a80a7adefdd1977349dd1?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a80a7adefdd1977349dd1"
+  },
+  {
+    "store_id": "c1df1c34732d2757",
+    "store_name": "비비큐 여수죽림점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/430BXXP",
+    "destination": "https://www.notion.so/370da158dd2a805f9093f51e1484e903?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a805f9093f51e1484e903"
+  },
+  {
+    "store_id": "e32f28eff787161a",
+    "store_name": "비비큐 여수충무점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4398drI",
+    "destination": "https://www.notion.so/370da158dd2a80e1ac5fe449c0fe2623?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a80e1ac5fe449c0fe2623"
+  },
+  {
+    "store_id": "9cba7b46fed409a9",
+    "store_name": "비비큐 여수학동점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4uMOjPA",
+    "destination": "https://www.notion.so/370da158dd2a8097bc01cb459d70e8dd?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a8097bc01cb459d70e8dd"
+  },
+  {
+    "store_id": "5768a9d8a72502ef",
+    "store_name": "조선제일 감자탕&뼈해장국 여서점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/전화-조선제일감자탕뼈해장국여서점",
+    "destination": "https://www.notion.so/304da158dd2a806599c9d41c65f05c0c",
+    "notion_phone_page_id": "304da158dd2a806599c9d41c65f05c0c"
+  },
+  {
+    "store_id": "0eea4a740e820fd3",
+    "store_name": "타코아찌 타코야끼전문점 문수점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/전화-타코아찌타코야끼전문점문수점",
+    "destination": "https://www.notion.so/302da158dd2a8041b788f364dc72a520",
+    "notion_phone_page_id": "302da158dd2a8041b788f364dc72a520"
+  },
+  {
+    "store_id": "3d91b86995f619d6",
+    "store_name": "프랭크버거 여수여서점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4dAPprq",
+    "destination": "https://www.notion.so/370da158dd2a805a8b0ef907fe111e6d?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a805a8b0ef907fe111e6d"
+  },
+  {
+    "store_id": "afb901f3a32de6e8",
+    "store_name": "피자헛 여수문수점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/3Q9RrWw",
+    "destination": "https://www.notion.so/371da158dd2a8032aed4d1d6c69f01aa?source=copy_link",
+    "notion_phone_page_id": "371da158dd2a8032aed4d1d6c69f01aa"
+  },
+  {
+    "store_id": "05634c81541f6bda",
+    "store_name": "피자헛 여수시청점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4nZuthn",
+    "destination": "https://www.notion.so/370da158dd2a80dda336e8d98dd532a0?source=copy_link",
+    "notion_phone_page_id": "370da158dd2a80dda336e8d98dd532a0"
+  },
+  {
+    "store_id": "bb036844c501c40a",
+    "store_name": "콩시루 여서점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/전화-콩시루여서점",
+    "destination": "https://www.notion.so/300da158dd2a80728874f10135b41afb",
+    "notion_phone_page_id": "300da158dd2a80728874f10135b41afb"
+  },
+  {
+    "store_id": "a037743d0ee273e2",
+    "store_name": "정성집밥",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/전화-정성집밥",
+    "destination": "https://www.notion.so/324da158dd2a800f95b6d3c35056804e",
+    "notion_phone_page_id": "324da158dd2a800f95b6d3c35056804e"
+  },
+  {
+    "store_id": "7bc7239e6b509c44",
+    "store_name": "수라상궁 조선국밥 여서점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/tel0616543511",
+    "destination": "https://www.notion.so/2ddda158dd2a80bcacadd18b70d360e5?source=copy_link",
+    "notion_phone_page_id": "2ddda158dd2a80bcacadd18b70d360e5"
+  },
+  {
+    "store_id": "04910f606ba038a6",
+    "store_name": "오워래 수제 돈까스",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/phone-오워래",
+    "destination": "https://www.notion.so/2e8da158dd2a8075856ee1f5cf89da4d?source=copy_link",
+    "notion_phone_page_id": "2e8da158dd2a8075856ee1f5cf89da4d"
+  },
+  {
+    "store_id": "320d26d67b993c4a",
+    "store_name": "아로이태국음식전문점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/전화-아로이태국음식전문점",
+    "destination": "https://www.notion.so/351da158dd2a80a2b977d468363a78a6",
+    "notion_phone_page_id": "351da158dd2a80a2b977d468363a78a6"
+  },
+  {
+    "store_id": "768e4fe8150f5039",
+    "store_name": "정성이 가득찬 반찬",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/전화-정성이가득찬반찬",
+    "destination": "https://www.notion.so/324da158dd2a80ffa1aded9774abd0dd",
+    "notion_phone_page_id": "324da158dd2a80ffa1aded9774abd0dd"
+  },
+  {
+    "store_id": "0ad5341dc696d4f1",
+    "store_name": "맛있는 반찬",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/4ao5nU0",
+    "destination": "https://www.notion.so/2f8da158dd2a80ec94bbc207108707d5",
+    "notion_phone_page_id": "2f8da158dd2a80ec94bbc207108707d5"
+  },
+  {
+    "store_id": "d409f6d9118b7bad",
+    "store_name": "황금손 반찬",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/전화-황금손반찬",
+    "destination": "https://www.notion.so/324da158dd2a80348da2f734e2db09b4",
+    "notion_phone_page_id": "324da158dd2a80348da2f734e2db09b4"
+  },
+  {
+    "store_id": "84c118675c0caa4c",
+    "store_name": "바오탕수 여서점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/tel-0616543511",
+    "destination": "https://www.notion.so/2eada158dd2a8017a9c1feff13a96318?source=copy_link",
+    "notion_phone_page_id": "2eada158dd2a8017a9c1feff13a96318"
+  },
+  {
+    "store_id": "17d9bf1de3d671fd",
+    "store_name": "해인이네 여서점",
+    "canonical_page_id": "",
+    "phone_route": "https://bit.ly/전화-해인이네",
+    "destination": "https://www.notion.so/305da158dd2a80c7a787db84372c4326",
+    "notion_phone_page_id": "305da158dd2a80c7a787db84372c4326"
+  },
+  {
+    "store_id": "0abd7147b7d6b1dd",
+    "store_name": "비비큐 미평둔덕점",
+    "canonical_page_id": "2f2da158dd2a8031add4d55c925d8e73",
+    "phone_route": "https://bit.ly/tel0616527111",
+    "destination": "https://www.notion.so/2f2da158dd2a804c8186c3415dc539b3?source=copy_link",
+    "notion_phone_page_id": "2f2da158dd2a804c8186c3415dc539b3"
+  },
+  {
+    "store_id": "d86586aaef8454c9",
+    "store_name": "조선밀면&냉면 여수여서점",
+    "canonical_page_id": "315da158dd2a8047906cc5c3c4c51e69",
+    "phone_route": "https://bit.ly/4shtuKk",
+    "destination": "https://www.notion.so/315da158dd2a805886ecebb495cf36d0?source=copy_link",
+    "notion_phone_page_id": "315da158dd2a805886ecebb495cf36d0"
+  },
+  {
+    "store_id": "14feb7cbd67ef7e2",
+    "store_name": "1인피자 미니8 여수점",
+    "canonical_page_id": "302da158dd2a805d987ff151d2d67239",
+    "phone_route": "https://bit.ly/전화-1인피자미니8여수점",
+    "destination": "https://www.notion.so/1-8-302da158dd2a8027b3e4c40cc53df4d4",
+    "notion_phone_page_id": ""
+  },
+  {
+    "store_id": "068b2ae8fe32874a",
+    "store_name": "1인피자 피자먹다 여수여서점",
+    "canonical_page_id": "2feda158dd2a80a08084f21217d8ac0b",
+    "phone_route": "https://bit.ly/전화-1인피자피자먹다여수여서점",
+    "destination": "https://www.notion.so/1-2feda158dd2a80848c2cdcf0f8f87559",
+    "notion_phone_page_id": ""
+  },
+  {
+    "store_id": "361f855efc21c1c2",
+    "store_name": "가마치통닭 여서점",
+    "canonical_page_id": "2f3da158dd2a808e97dcc2d9bf2e8fe8",
+    "phone_route": "https://bit.ly/전화-가마치통닭여서점",
+    "destination": "https://www.notion.so/2f3da158dd2a80eca915ec9a4aa16472",
+    "notion_phone_page_id": "2f3da158dd2a80eca915ec9a4aa16472"
+  },
+  {
+    "store_id": "7432d966de3f75ab",
+    "store_name": "감탄떡볶이 문수점",
+    "canonical_page_id": "2fdda158dd2a80438ef8d74a949733e2",
+    "phone_route": "https://bit.ly/전화-감탄떡볶이문수점",
+    "destination": "https://www.notion.so/2fdda158dd2a80f29836ff6504046c8c",
+    "notion_phone_page_id": "2fdda158dd2a80f29836ff6504046c8c"
+  },
+  {
+    "store_id": "e57c51a4f6294349",
+    "store_name": "계근상 여수본점(문수동)",
+    "canonical_page_id": "302da158dd2a8032b317e4e3c155af5f",
+    "phone_route": "https://bit.ly/전화-계근상여수본점",
+    "destination": "https://www.notion.so/302da158dd2a802187c7dc8b37bc6a88",
+    "notion_phone_page_id": "302da158dd2a802187c7dc8b37bc6a88"
+  },
+  {
+    "store_id": "f7385d8006310630",
+    "store_name": "국민학교",
+    "canonical_page_id": "31fda158dd2a8090854fcb00c928888a",
+    "phone_route": "https://bit.ly/전화-국민학교",
+    "destination": "https://www.notion.so/31fda158dd2a80c0bd2afde21f3f5449",
+    "notion_phone_page_id": "31fda158dd2a80c0bd2afde21f3f5449"
+  },
+  {
+    "store_id": "f6d0e57091aa21ab",
+    "store_name": "굽네치킨&피자 문수점",
+    "canonical_page_id": "31eda158dd2a80aba8d2c7139259b8b3",
+    "phone_route": "https://bit.ly/전화-굽네치킨피자여수문수점",
+    "destination": "https://www.notion.so/6-349da158dd2a80c5bcafe9446cad4ce8",
+    "notion_phone_page_id": ""
+  },
+  {
+    "store_id": "895a9425dc41ddf7",
+    "store_name": "금성칡냉면 미평점",
+    "canonical_page_id": "324da158dd2a8032b82de778963b1c31",
+    "phone_route": "https://bit.ly/전화-금성칡냉면미평점",
+    "destination": "https://www.notion.so/324da158dd2a8062b12addfd7116c7af",
+    "notion_phone_page_id": "324da158dd2a8062b12addfd7116c7af"
+  },
+  {
+    "store_id": "450eb70e506c2de9",
+    "store_name": "금쪽갈비 여수점",
+    "canonical_page_id": "2feda158dd2a809497e3e1e121c61095",
+    "phone_route": "https://bit.ly/전화-금쪽갈비여수점",
+    "destination": "https://www.notion.so/2feda158dd2a8034bf04dbbfe09e8024",
+    "notion_phone_page_id": "2feda158dd2a8034bf04dbbfe09e8024"
+  },
+  {
+    "store_id": "888abbb8bf28aa2f",
+    "store_name": "김종구식 맛치킨 전기바베큐 옛날통닭 여서점",
+    "canonical_page_id": "34bda158dd2a801a9f9ef1379ac363d0",
+    "phone_route": "https://bit.ly/전화-김종구식맛치킨전기바베큐옛날통닭여수여서점",
+    "destination": "https://www.notion.so/34bda158dd2a8098ba3cde1e7a37bcf5",
+    "notion_phone_page_id": "34bda158dd2a8098ba3cde1e7a37bcf5"
+  },
+  {
+    "store_id": "ec69425551829f69",
+    "store_name": "까치식당 문수점",
+    "canonical_page_id": "2feda158dd2a80588801f5bca8c0e621",
+    "phone_route": "https://bit.ly/전화-까치식당",
+    "destination": "https://www.notion.so/2ffda158dd2a80dcac1ec76d49d6d7f6",
+    "notion_phone_page_id": "2ffda158dd2a80dcac1ec76d49d6d7f6"
+  },
+  {
+    "store_id": "0d3062d5a5b94697",
+    "store_name": "다기야치킨 여문점",
+    "canonical_page_id": "304da158dd2a80c08d73ce23e9f0d2bb",
+    "phone_route": "https://bit.ly/전화-다기야치킨여문점",
+    "destination": "https://www.notion.so/304da158dd2a80c3af68c9f5643e74ac",
+    "notion_phone_page_id": "304da158dd2a80c3af68c9f5643e74ac"
+  },
+  {
+    "store_id": "9e0a2da7ddfa3d93",
+    "store_name": "다정아구 미평",
+    "canonical_page_id": "31ada158dd2a807290efd0e6d658e742",
+    "phone_route": "https://bit.ly/전화-다정아구",
+    "destination": "https://www.notion.so/31eda158dd2a800eaa38cb8922ce7c71",
+    "notion_phone_page_id": "31eda158dd2a800eaa38cb8922ce7c71"
+  },
+  {
+    "store_id": "8a219b158c321627",
+    "store_name": "닭가대표 숯불직화구이치킨 여수대표점",
+    "canonical_page_id": "300da158dd2a8092a711d50955fa4905",
+    "phone_route": "https://bit.ly/전화-닭가대표숯불직화구이치킨여수대표점",
+    "destination": "https://www.notion.so/300da158dd2a80768e30fd53a8d0a4cf",
+    "notion_phone_page_id": "300da158dd2a80768e30fd53a8d0a4cf"
+  },
+  {
+    "store_id": "f31d8c5f04fb7b79",
+    "store_name": "대박난쪽갈비 여수점",
+    "canonical_page_id": "2feda158dd2a80c080a2fe42842ec53c",
+    "phone_route": "https://bit.ly/전화-대박난쪽갈비여수점",
+    "destination": "https://www.notion.so/2feda158dd2a802cb614daa5e1e83fa6",
+    "notion_phone_page_id": "2feda158dd2a802cb614daa5e1e83fa6"
+  },
+  {
+    "store_id": "406b4a0b39f729fc",
+    "store_name": "대정식당 미평점",
+    "canonical_page_id": "31fda158dd2a80a0a743c316f08c0990",
+    "phone_route": "https://bit.ly/전화-대정식당",
+    "destination": "https://www.notion.so/31eda158dd2a80fdb8d6e8f2a42ff5d6",
+    "notion_phone_page_id": "31eda158dd2a80fdb8d6e8f2a42ff5d6"
+  },
+  {
+    "store_id": "dabbebff4fca3c56",
+    "store_name": "대패가1900 문수점",
+    "canonical_page_id": "300da158dd2a8062b63cde87c4415628",
+    "phone_route": "https://bit.ly/전화-대패가1900문수점",
+    "destination": "https://www.notion.so/1900-2ffda158dd2a808f9dffffbbd091efdd",
+    "notion_phone_page_id": ""
+  },
+  {
+    "store_id": "45dc9cf61ba55263",
+    "store_name": "덮덮밥 미평점",
+    "canonical_page_id": "30cda158dd2a808e8039fb581cc41616",
+    "phone_route": "https://bit.ly/전화-덮덮밥미평점",
+    "destination": "https://www.notion.so/30cda158dd2a804ebd9bd99e02433494",
+    "notion_phone_page_id": "30cda158dd2a804ebd9bd99e02433494"
+  },
+  {
+    "store_id": "dc638b23f8cf3c5b",
+    "store_name": "도미노피자 문수점",
+    "canonical_page_id": "2eada158dd2a80518569cfdb0e2f6404",
+    "phone_route": "https://app.notion.com/p/2eada158dd2a8068afb6f23f9db03827",
+    "destination": "https://app.notion.com/p/2eada158dd2a8068afb6f23f9db03827",
+    "notion_phone_page_id": "2eada158dd2a8068afb6f23f9db03827"
+  },
+  {
+    "store_id": "1ecbe36dd1efafed",
+    "store_name": "돈치킨 여수둔덕봉계점",
+    "canonical_page_id": "2fcda158dd2a80efb2a1c94087ebe615",
+    "phone_route": "https://bit.ly/전화-돈치킨여수둔덕봉계점",
+    "destination": "https://www.notion.so/2fcda158dd2a8071a263ca93a00491ae",
+    "notion_phone_page_id": "2fcda158dd2a8071a263ca93a00491ae"
+  },
+  {
+    "store_id": "d6602c793047b361",
+    "store_name": "뚜레쥬르 여수미평점",
+    "canonical_page_id": "318da158dd2a8085b930f449ce74776f",
+    "phone_route": "https://bit.ly/전화-뚜레쥬르여수미평점",
+    "destination": "https://www.notion.so/318da158dd2a801ba10add52f8ebe05d",
+    "notion_phone_page_id": "318da158dd2a801ba10add52f8ebe05d"
+  },
+  {
+    "store_id": "30d2edbcabcca6ec",
+    "store_name": "뚜레쥬르 여수여서점",
+    "canonical_page_id": "34bda158dd2a80aa877be5feac2193da",
+    "phone_route": "https://bit.ly/전화-뚜레쥬르여수여서점",
+    "destination": "https://www.notion.so/349da158dd2a8028af3ec0e3245550cf",
+    "notion_phone_page_id": "349da158dd2a8028af3ec0e3245550cf"
+  },
+  {
+    "store_id": "f7167d017e7368e7",
+    "store_name": "롤링파스타 여서점",
+    "canonical_page_id": "2feda158dd2a801da0b0d8d6f42a61f1",
+    "phone_route": "https://bit.ly/전화-롤링파스타여서점",
+    "destination": "https://www.notion.so/2feda158dd2a8043b837cdeb3700747b",
+    "notion_phone_page_id": "2feda158dd2a8043b837cdeb3700747b"
+  },
+  {
+    "store_id": "e0c6949efb48f4b2",
+    "store_name": "롯데리아 이마트점",
+    "canonical_page_id": "2e8da158dd2a80528750d501658159bd",
+    "phone_route": "https://bit.ly/phone-롯데리아이마트점",
+    "destination": "https://www.notion.so/2e9da158dd2a80179f42c230bcb1e6d7?source=copy_link",
+    "notion_phone_page_id": "2e9da158dd2a80179f42c230bcb1e6d7"
+  },
+  {
+    "store_id": "2bd8ea8779f87995",
+    "store_name": "리얼펍살얼음맥주 여수문수점",
+    "canonical_page_id": "305da158dd2a809db4f1f9fa54f5c3ea",
+    "phone_route": "https://bit.ly/전화-리얼펍살얼음맥주여수문수점",
+    "destination": "https://www.notion.so/30cda158dd2a80c1b6a5c633a00208f0",
+    "notion_phone_page_id": "30cda158dd2a80c1b6a5c633a00208f0"
+  },
+  {
+    "store_id": "27ea3ca86eab89ec",
+    "store_name": "린차이나(먹깨비,땡겨요로 주문시 만두 서비스!!!)",
+    "canonical_page_id": "323da158dd2a801ca3a6fe9161851afe",
+    "phone_route": "https://bit.ly/전화-린차이나",
+    "destination": "https://www.notion.so/31fda158dd2a806e89c8f747903340c0",
+    "notion_phone_page_id": "31fda158dd2a806e89c8f747903340c0"
+  },
+  {
+    "store_id": "039652f6eff5f6d7",
+    "store_name": "맛집남도밀면",
+    "canonical_page_id": "31fda158dd2a803db0f0ea4cf62ff37a",
+    "phone_route": "https://bit.ly/전화-맛집남도밀면",
+    "destination": "https://www.notion.so/31eda158dd2a807497d0f40efbffe863",
+    "notion_phone_page_id": "31eda158dd2a807497d0f40efbffe863"
+  },
+  {
+    "store_id": "92c0c6cc2688ef0d",
+    "store_name": "미미꼬마김밥 여서점",
+    "canonical_page_id": "34bda158dd2a801d8ec7db274e13e0f0",
+    "phone_route": "https://bit.ly/전화-미미꼬마김밥여서점",
+    "destination": "https://www.notion.so/34bda158dd2a803181cfcd0961723de6",
+    "notion_phone_page_id": "34bda158dd2a803181cfcd0961723de6"
+  },
+  {
+    "store_id": "7a151d290e01dc51",
+    "store_name": "미치게 본점",
+    "canonical_page_id": "2ffda158dd2a802ab278f6f4ff571dfd",
+    "phone_route": "https://bit.ly/전화-미치게본점",
+    "destination": "https://www.notion.so/2feda158dd2a80ffb982dc9d185549c1",
+    "notion_phone_page_id": "2feda158dd2a80ffb982dc9d185549c1"
+  },
+  {
+    "store_id": "0619092f600c5be4",
+    "store_name": "배스킨라빈스 여수여서점",
+    "canonical_page_id": "2f3da158dd2a80e09fbddb2c637ea8a7",
+    "phone_route": "https://bit.ly/전화-배스킨라빈스여수여서점",
+    "destination": "https://www.notion.so/33eda158dd2a80f9bed6d4fa26748a35?source=copy_link",
+    "notion_phone_page_id": "33eda158dd2a80f9bed6d4fa26748a35"
+  },
+  {
+    "store_id": "0987413e7ca12e2a",
+    "store_name": "백년족발",
+    "canonical_page_id": "33cda158dd2a8041bf7acb4e513dfc34",
+    "phone_route": "https://bit.ly/전화-백년족발",
+    "destination": "https://www.notion.so/2f8da158dd2a80cd9820d4be394b4690",
+    "notion_phone_page_id": "2f8da158dd2a80cd9820d4be394b4690"
+  },
+  {
+    "store_id": "6c3386fc9f4a5b5b",
+    "store_name": "백수초밥",
+    "canonical_page_id": "2feda158dd2a80a1a745ca4fc21ec289",
+    "phone_route": "https://bit.ly/전화-백수초밥",
+    "destination": "https://www.notion.so/2feda158dd2a8046b543d011261661f7",
+    "notion_phone_page_id": "2feda158dd2a8046b543d011261661f7"
+  },
+  {
+    "store_id": "40c638502decc604",
+    "store_name": "백억 흑미 꼬마김밥",
+    "canonical_page_id": "324da158dd2a803db3f2d17aa3487d5a",
+    "phone_route": "https://bit.ly/전화-백억흑미꼬마김밥",
+    "destination": "https://www.notion.so/31fda158dd2a80ed96add2e73c3a238e",
+    "notion_phone_page_id": "31fda158dd2a80ed96add2e73c3a238e"
+  },
+  {
+    "store_id": "57ae8848b4ccc2a1",
+    "store_name": "본스치킨 미평점",
+    "canonical_page_id": "31eda158dd2a801999b3f457de24ff0f",
+    "phone_route": "https://bit.ly/전화-본스치킨미평점",
+    "destination": "https://www.notion.so/31fda158dd2a80f3b117c2e1dcbfbb9c",
+    "notion_phone_page_id": "31fda158dd2a80f3b117c2e1dcbfbb9c"
+  },
+  {
+    "store_id": "7c03a236a9c011b4",
+    "store_name": "봉구스밥버거 문수점",
+    "canonical_page_id": "2feda158dd2a8064ba77f1d5c3bc11ed",
+    "phone_route": "https://bit.ly/전화-봉구스밥버거문수점",
+    "destination": "https://www.notion.so/2ffda158dd2a80579e07d029535d9623",
+    "notion_phone_page_id": "2ffda158dd2a80579e07d029535d9623"
+  },
+  {
+    "store_id": "c1a35b0c8903cd57",
+    "store_name": "북촌손만두&피냉면 여수문수점",
+    "canonical_page_id": "2feda158dd2a8080b11ee43aa7d09c96",
+    "phone_route": "https://bit.ly/전화-북촌손만두피냉면여수문수점",
+    "destination": "https://www.notion.so/2feda158dd2a80209ca2ca42c075c058",
+    "notion_phone_page_id": "2feda158dd2a80209ca2ca42c075c058"
+  },
+  {
+    "store_id": "f14bc5ec109f3af0",
+    "store_name": "빵빵김밥 여서점",
+    "canonical_page_id": "2fcda158dd2a80909257e03a9e41f591",
+    "phone_route": "https://bit.ly/전화-빵빵김밥여서점",
+    "destination": "https://www.notion.so/2fcda158dd2a8085a4ceda798fdc86e3",
+    "notion_phone_page_id": "2fcda158dd2a8085a4ceda798fdc86e3"
+  },
+  {
+    "store_id": "9509311543276bbf",
+    "store_name": "삼첩분식 미평점",
+    "canonical_page_id": "301da158dd2a803597e0f26b4b81e909",
+    "phone_route": "https://bit.ly/전화-삼첩분식미평점",
+    "destination": "https://www.notion.so/317da158dd2a8066a910ecb05a2cc970",
+    "notion_phone_page_id": "317da158dd2a8066a910ecb05a2cc970"
+  },
+  {
+    "store_id": "90cd1600c54ce7d0",
+    "store_name": "서영이네김밥 미평점",
+    "canonical_page_id": "2fcda158dd2a8001803fc7dd177f5ff4",
+    "phone_route": "https://bit.ly/전화-서영이네김밥미평점",
+    "destination": "https://www.notion.so/2feda158dd2a808fb955e885949345c9?source=copy_link",
+    "notion_phone_page_id": "2feda158dd2a808fb955e885949345c9"
+  },
+  {
+    "store_id": "c59a5a8f5a91ce24",
+    "store_name": "수해복마라탕 여수미평점",
+    "canonical_page_id": "31eda158dd2a8091986bd92f0d3281e5",
+    "phone_route": "https://bit.ly/전화-수해복마라탕여수미평점",
+    "destination": "https://www.notion.so/31eda158dd2a8094a4afdc557c87cdd5",
+    "notion_phone_page_id": "31eda158dd2a8094a4afdc557c87cdd5"
+  },
+  {
+    "store_id": "1945b6a42e0da33c",
+    "store_name": "쉐프의 생 안심탕수육 문수점",
+    "canonical_page_id": "303da158dd2a80a7a87ac2acd31f2968",
+    "phone_route": "https://bit.ly/전화-쉐프의생안심탕수육문수점",
+    "destination": "https://www.notion.so/303da158dd2a80a9bdefddeb6b3fb4c3",
+    "notion_phone_page_id": "303da158dd2a80a9bdefddeb6b3fb4c3"
+  },
+  {
+    "store_id": "4d45e2363f0a18dd",
+    "store_name": "아구회관",
+    "canonical_page_id": "34bda158dd2a809dbc2ef7f17fb284c6",
+    "phone_route": "https://bit.ly/전화-아구회관",
+    "destination": "https://www.notion.so/34bda158dd2a800b958cf1d70449bdce",
+    "notion_phone_page_id": "34bda158dd2a800b958cf1d70449bdce"
+  },
+  {
+    "store_id": "170c2c5b7b5a24c1",
+    "store_name": "양지골수육",
+    "canonical_page_id": "31fda158dd2a80799ceff7d3d52bd6af",
+    "phone_route": "https://bit.ly/전화-양지골수육",
+    "destination": "https://www.notion.so/31fda158dd2a80d8a1b0ca7fa86f175c",
+    "notion_phone_page_id": "31fda158dd2a80d8a1b0ca7fa86f175c"
+  },
+  {
+    "store_id": "4b2a2803e3a4c80a",
+    "store_name": "양철북곱창 미평점",
+    "canonical_page_id": "319da158dd2a80d78e4cf3e288438399",
+    "phone_route": "https://bit.ly/전화-양철북곱창여수미평점",
+    "destination": "https://www.notion.so/319da158dd2a801aa06eebe45d76de9d",
+    "notion_phone_page_id": "319da158dd2a801aa06eebe45d76de9d"
+  },
+  {
+    "store_id": "a60a8b15c1648b9b",
+    "store_name": "여수 돌산 꽈배기",
+    "canonical_page_id": "302da158dd2a803b96f9d9ae92d38785",
+    "phone_route": "https://bit.ly/전화-여수돌산꽈배기",
+    "destination": "https://www.notion.so/302da158dd2a80178c4eded183e5b4a3",
+    "notion_phone_page_id": "302da158dd2a80178c4eded183e5b4a3"
+  },
+  {
+    "store_id": "48a8921c93fca359",
+    "store_name": "여수대표치킨",
+    "canonical_page_id": "324da158dd2a807aa5facf215846d1b9",
+    "phone_route": "https://bit.ly/전화-여수대표치킨",
+    "destination": "https://www.notion.so/324da158dd2a80989acaf1f4dab756fc",
+    "notion_phone_page_id": "324da158dd2a80989acaf1f4dab756fc"
+  },
+  {
+    "store_id": "b878080708bef825",
+    "store_name": "여수싱싱회&육회 문수본점",
+    "canonical_page_id": "2ffda158dd2a800a9290e2af9872221f",
+    "phone_route": "https://bit.ly/전화-여수싱싱회육회문수본점",
+    "destination": "https://www.notion.so/300da158dd2a80c1afb4e3638006e2ec",
+    "notion_phone_page_id": "300da158dd2a80c1afb4e3638006e2ec"
+  },
+  {
+    "store_id": "6739ddf6736ef934",
+    "store_name": "여수하늘",
+    "canonical_page_id": "2ffda158dd2a8067bad6c8c600bfc3ba",
+    "phone_route": "https://bit.ly/전화-여수하늘",
+    "destination": "https://www.notion.so/2ffda158dd2a80a998ead743e8141ef4",
+    "notion_phone_page_id": "2ffda158dd2a80a998ead743e8141ef4"
+  },
+  {
+    "store_id": "115416d8f8939ff3",
+    "store_name": "여정식당 여문점",
+    "canonical_page_id": "2f3da158dd2a807896fef5cf31285b37",
+    "phone_route": "https://bit.ly/전화-여정식당여문점",
+    "destination": "https://bit.ly/전화-여정식당여문점",
+    "notion_phone_page_id": ""
+  },
+  {
+    "store_id": "9949709e121ff949",
+    "store_name": "연변양꼬치구이 미평점",
+    "canonical_page_id": "30cda158dd2a807b9128d24f4daefb52",
+    "phone_route": "https://bit.ly/전화-연변양꼬치구이미평점",
+    "destination": "https://www.notion.so/30cda158dd2a80ca96b1e16b4836d75d",
+    "notion_phone_page_id": "30cda158dd2a80ca96b1e16b4836d75d"
+  },
+  {
+    "store_id": "a8218795099e637e",
+    "store_name": "오늘은 오므라이스 여수점",
+    "canonical_page_id": "30cda158dd2a80bd952cea9bf8c64754",
+    "phone_route": "https://bit.ly/전화-오늘은오므라이스여수점",
+    "destination": "https://www.notion.so/30cda158dd2a80549acef85398d8f6ed",
+    "notion_phone_page_id": "30cda158dd2a80549acef85398d8f6ed"
+  },
+  {
+    "store_id": "48033be58064b50c",
+    "store_name": "오븐에꾸운닭 여문점",
+    "canonical_page_id": "2fcda158dd2a80009ef5e42ebcbb8dc0",
+    "phone_route": "https://bit.ly/전화-오븐에꾸운닭여문점",
+    "destination": "https://www.notion.so/2fcda158dd2a8030b38fd4083b16b116",
+    "notion_phone_page_id": "2fcda158dd2a8030b38fd4083b16b116"
+  },
+  {
+    "store_id": "b05ef0b1b1774d35",
+    "store_name": "올떡볶이 여수봉계점",
+    "canonical_page_id": "31eda158dd2a80e1bff9d3ff93e8a277",
+    "phone_route": "https://bit.ly/전화-올떡볶이여수봉계점",
+    "destination": "https://www.notion.so/31eda158dd2a807097c0fc7bb9c7604a",
+    "notion_phone_page_id": "31eda158dd2a807097c0fc7bb9c7604a"
+  },
+  {
+    "store_id": "8f4cfdc693976989",
+    "store_name": "우정통닭",
+    "canonical_page_id": "2ebda158dd2a808babafd0d6f3b2a664",
+    "phone_route": "https://bit.ly/전화-우정통닭",
+    "destination": "https://www.notion.so/2ebda158dd2a80c998b4dad2977850bf",
+    "notion_phone_page_id": "2ebda158dd2a80c998b4dad2977850bf"
+  },
+  {
+    "store_id": "a4aaeb8049d4e9f9",
+    "store_name": "우쿠야 여수여서점",
+    "canonical_page_id": "304da158dd2a80ec9b0ae171783b172b",
+    "phone_route": "https://bit.ly/전화-우쿠야여수여서점",
+    "destination": "https://www.notion.so/304da158dd2a803fb002eafd5e0640c5",
+    "notion_phone_page_id": "304da158dd2a803fb002eafd5e0640c5"
+  },
+  {
+    "store_id": "49470f61773e41e2",
+    "store_name": "유림식당",
+    "canonical_page_id": "31fda158dd2a80db9bccc1971697c1b0",
+    "phone_route": "https://bit.ly/전화-유림식당",
+    "destination": "https://www.notion.so/31eda158dd2a80509fe3ed3afd4707ff",
+    "notion_phone_page_id": "31eda158dd2a80509fe3ed3afd4707ff"
+  },
+  {
+    "store_id": "2fb0f76b3d55052b",
+    "store_name": "윤가네 선어",
+    "canonical_page_id": "33cda158dd2a8046bd05d2b7f347d832",
+    "phone_route": "https://bit.ly/전화-윤가네선어",
+    "destination": "https://www.notion.so/349da158dd2a80cea52dd01c1b3765f8",
+    "notion_phone_page_id": "349da158dd2a80cea52dd01c1b3765f8"
+  },
+  {
+    "store_id": "c26995210f249627",
+    "store_name": "응큼떡볶이 여수점",
+    "canonical_page_id": "305da158dd2a80588296c776e8eac18f",
+    "phone_route": "https://bit.ly/전화-응큼떡뽁이여수점",
+    "destination": "https://www.notion.so/305da158dd2a800085e7c05af108273a",
+    "notion_phone_page_id": "305da158dd2a800085e7c05af108273a"
+  },
+  {
+    "store_id": "75b59b6f39651fc8",
+    "store_name": "자담치킨 여수미평점",
+    "canonical_page_id": "2fada158dd2a801fb601c9927ad00204",
+    "phone_route": "https://bit.ly/전화-자담치킨여수미평점",
+    "destination": "https://www.notion.so/2fada158dd2a8072b934e77d5c7d1b7c",
+    "notion_phone_page_id": "2fada158dd2a8072b934e77d5c7d1b7c"
+  },
+  {
+    "store_id": "b929bcd743be8b12",
+    "store_name": "장충동왕족발 여수점",
+    "canonical_page_id": "33cda158dd2a8087aad6e9935bf2c2e8",
+    "phone_route": "https://bit.ly/전화-장충동왕족발여수점",
+    "destination": "https://www.notion.so/34bda158dd2a80478030ef03471d6fb9",
+    "notion_phone_page_id": "34bda158dd2a80478030ef03471d6fb9"
+  },
+  {
+    "store_id": "76235bf473121cbe",
+    "store_name": "족발자리",
+    "canonical_page_id": "31ada158dd2a80e3adc5ca227fad34f0",
+    "phone_route": "https://bit.ly/전화-족발자리",
+    "destination": "https://www.notion.so/31ada158dd2a80628badf06f4d4cd374",
+    "notion_phone_page_id": "31ada158dd2a80628badf06f4d4cd374"
+  },
+  {
+    "store_id": "eb1005c7067bc9d4",
+    "store_name": "족팔계왕족발",
+    "canonical_page_id": "303da158dd2a80f686dffa92a6fae9e3",
+    "phone_route": "https://bit.ly/전화-족팔계왕족발",
+    "destination": "https://www.notion.so/302da158dd2a801c964ce6806ed5bd9c",
+    "notion_phone_page_id": "302da158dd2a801c964ce6806ed5bd9c"
+  },
+  {
+    "store_id": "7a01cce02afa8141",
+    "store_name": "주가네김치찌개&찜 여수여서점",
+    "canonical_page_id": "301da158dd2a80b8835ed0b91556abb9",
+    "phone_route": "https://bit.ly/전화-주가네김치찌개찜여수여서점",
+    "destination": "https://www.notion.so/301da158dd2a8064a26ff8ba03260552",
+    "notion_phone_page_id": "301da158dd2a8064a26ff8ba03260552"
+  },
+  {
+    "store_id": "295dc97b6abaf2e2",
+    "store_name": "중국관",
+    "canonical_page_id": "2fcda158dd2a80ba8fbad2c798d4d7d5",
+    "phone_route": "https://bit.ly/전화-중국관",
+    "destination": "https://www.notion.so/2fcda158dd2a80a1978cde367b4a9031",
+    "notion_phone_page_id": "2fcda158dd2a80a1978cde367b4a9031"
+  },
+  {
+    "store_id": "340a17ea324662dc",
+    "store_name": "천화마라탕",
+    "canonical_page_id": "2fdda158dd2a80e7ab82c5ad30fff882",
+    "phone_route": "https://bit.ly/전화-천화마라탕",
+    "destination": "https://www.notion.so/2fdda158dd2a80aeaae0eaff2a3b2309",
+    "notion_phone_page_id": "2fdda158dd2a80aeaae0eaff2a3b2309"
+  },
+  {
+    "store_id": "3d512878922a19db",
+    "store_name": "초이커피",
+    "canonical_page_id": "2fdda158dd2a807bb6f7e661f7de4ba1",
+    "phone_route": "https://bit.ly/전화-초이커피",
+    "destination": "https://www.notion.so/2fdda158dd2a8001be94cf888db96669",
+    "notion_phone_page_id": "2fdda158dd2a8001be94cf888db96669"
+  },
+  {
+    "store_id": "884076b36adf9697",
+    "store_name": "촌닭두마리치킨 오림점",
+    "canonical_page_id": "324da158dd2a805f95becc164c45e1b3",
+    "phone_route": "https://bit.ly/전화-촌닭두마리치킨오림점",
+    "destination": "https://www.notion.so/324da158dd2a8007b904c5f96af10c31",
+    "notion_phone_page_id": "324da158dd2a8007b904c5f96af10c31"
+  },
+  {
+    "store_id": "478795eb80081c91",
+    "store_name": "커피어클락",
+    "canonical_page_id": "305da158dd2a80838fd4d7f52282e7d4",
+    "phone_route": "https://bit.ly/전화-커피어클락",
+    "destination": "https://www.notion.so/304da158dd2a804aa397c02570b9ec3b",
+    "notion_phone_page_id": "304da158dd2a804aa397c02570b9ec3b"
+  },
+  {
+    "store_id": "2cddfb9ee60f0d7b",
+    "store_name": "컴포즈커피 여수문수광장점",
+    "canonical_page_id": "324da158dd2a801493cced68d6e4bb5f",
+    "phone_route": "https://bit.ly/전화-컴포즈커피여수문수광장점",
+    "destination": "https://www.notion.so/31fda158dd2a8062a30fe9ce96d43d8f",
+    "notion_phone_page_id": "31fda158dd2a8062a30fe9ce96d43d8f"
+  },
+  {
+    "store_id": "68360b2d1b0e6457",
+    "store_name": "컴포즈커피 여수여서점",
+    "canonical_page_id": "2fada158dd2a809e98bdd274c050a3f1",
+    "phone_route": "https://bit.ly/전화-컴포즈커피여수여서점",
+    "destination": "https://www.notion.so/2fada158dd2a804580aac084f6a47f65",
+    "notion_phone_page_id": "2fada158dd2a804580aac084f6a47f65"
+  },
+  {
+    "store_id": "5b408dab11c7b1dd",
+    "store_name": "케이키팩토리",
+    "canonical_page_id": "319da158dd2a8048b165c3f3f91e5366",
+    "phone_route": "https://bit.ly/전화-케이키팩토리",
+    "destination": "https://www.notion.so/318da158dd2a80a7b47fc6cd5c661e9f",
+    "notion_phone_page_id": "318da158dd2a80a7b47fc6cd5c661e9f"
+  },
+  {
+    "store_id": "0a231139875a51cc",
+    "store_name": "푸줏간 고기도시락 여수문수점",
+    "canonical_page_id": "2fada158dd2a800ab2fdd65e5737881c",
+    "phone_route": "https://bit.ly/전화-푸줏간고기도시락여수문수점",
+    "destination": "https://www.notion.so/2fada158dd2a809d8a4ed1da47701c58",
+    "notion_phone_page_id": "2fada158dd2a809d8a4ed1da47701c58"
+  },
+  {
+    "store_id": "abb76aa470e26f7a",
+    "store_name": "피자스쿨 여문점",
+    "canonical_page_id": "2ecda158dd2a80b9be29d52d2d66b287",
+    "phone_route": "https://bit.ly/tel-피자스쿨여문점",
+    "destination": "https://www.notion.so/2ecda158dd2a806d9942ea21e0f589fb?source=copy_link",
+    "notion_phone_page_id": "2ecda158dd2a806d9942ea21e0f589fb"
+  },
+  {
+    "store_id": "4597954f924a4979",
+    "store_name": "황금마차",
+    "canonical_page_id": "303da158dd2a800e8eede36b42da8ed8",
+    "phone_route": "https://bit.ly/전화-황금마차",
+    "destination": "https://www.notion.so/303da158dd2a80b48225ce54bf815159",
+    "notion_phone_page_id": "303da158dd2a80b48225ce54bf815159"
+  },
+  {
+    "store_id": "6390834d3238c3eb",
+    "store_name": "황금아구 미평점",
+    "canonical_page_id": "318da158dd2a80ee89f0df6834bffd90",
+    "phone_route": "https://bit.ly/전화-황금아구",
+    "destination": "https://www.notion.so/318da158dd2a8031a909cae4069cee58",
+    "notion_phone_page_id": "318da158dd2a8031a909cae4069cee58"
+  },
+  {
+    "store_id": "39f3c8acab504b00",
+    "store_name": "60계치킨 여수여서문수점",
+    "canonical_page_id": "2edda158dd2a80fda362ebecdffc1327",
+    "phone_route": "https://bit.ly/tel0616549685",
+    "destination": "https://www.notion.so/60-2edda158dd2a809fb784e4b5feace2b4?source=copy_link",
+    "notion_phone_page_id": ""
+  }
+]

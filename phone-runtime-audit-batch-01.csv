@@ -1,0 +1,31 @@
+store_id,store_name,phone,source_type,source_notion_page_id,final_destination_store,branch_match,decision
+4b2a2803e3a4c80a,양철북곱창 미평점,050713269925,notion-exact-phone-page,319da158dd2a801aa06eebe45d76de9d,양철북곱창 여수미평점 전화,true,restore
+84fc553896d0b051,교촌치킨 문수점,0616517168,notion-exact-phone-page,371da158dd2a8054868cc746f998aa4a,교촌치킨 문수점 전화,true,restore
+99ade7376cceea13,교촌치킨 여서점,0616546727,notion-exact-phone-page,371da158dd2a8090801dec845395eff8,교촌치킨 여서점 전화,true,restore
+f0804947cebd20cc,노브랜드버거 여수여서점,0616529730,notion-exact-phone-page,370da158dd2a80d89abddffcf270c95b,노브랜드버거 여수여서점 전화,true,restore
+b978240417a18e51,부어치킨 여수학동점,0616810763,notion-exact-phone-page,371da158dd2a80209d25dc4956bd0298,부어치킨 여수학동점 전화,true,restore
+16b4130f35ec93ae,부어치킨&버거 여수소호점,0616929955,notion-exact-phone-page,371da158dd2a80a0837bf913d5e25970,부어치킨 여수소호점 전화,true,restore
+09de7c8235046632,불족대가 미평점,,notion-exact-phone-page,379da158dd2a80a59d43f63b881880d6,불족대가 미평점 전화,true,reject-invalid-phone
+066197a9443c3145,비비큐 여수돌산점,0616419285,notion-exact-phone-page,370da158dd2a806b9b0adc49e3ca602b,비비큐 여수돌산점 전화,true,restore
+4059491d8dbb4159,비비큐 여수무선점,0616921959,notion-exact-phone-page,370da158dd2a80d6bf47dc37723e5e36,비비큐 여수무선점 전화,true,restore
+572e4a658f762cbe,비비큐 여수신기행운점,0616862997,notion-exact-phone-page,370da158dd2a808c8423c9579335cb91,비비큐 여수신기행운점 전화,true,restore
+e2645d79ef555a24,비비큐 여수엑스포점,0616639282,notion-exact-phone-page,370da158dd2a80bda799cc53f7130a0a,비비큐 여수엑스포점 전화,true,restore
+b73ca9b4a41f7502,비비큐 여수웅천점,0616919282,notion-exact-phone-page,370da158dd2a80a7adefdd1977349dd1,비비큐 여수웅천점 전화,true,restore
+c1df1c34732d2757,비비큐 여수죽림점,0616852229,notion-exact-phone-page,370da158dd2a805f9093f51e1484e903,비비큐 여수죽림점 전화,true,restore
+e32f28eff787161a,비비큐 여수충무점,0619204669,notion-exact-phone-page,370da158dd2a80e1ac5fe449c0fe2623,비비큐 여수충무점 전화,true,restore
+9cba7b46fed409a9,비비큐 여수학동점,0616869295,notion-exact-phone-page,370da158dd2a8097bc01cb459d70e8dd,비비큐 여수학동점 전화,true,restore
+5768a9d8a72502ef,조선제일 감자탕&뼈해장국 여서점,0619203317,notion-exact-phone-page,304da158dd2a806599c9d41c65f05c0c,조선제일 감자탕&뼈해장국 여서점 전화,true,restore
+0eea4a740e820fd3,타코아찌 타코야끼전문점 문수점,0616548284,notion-exact-phone-page,302da158dd2a8041b788f364dc72a520,타코아찌 타코야끼전문점 문수점 전화,true,restore
+3d91b86995f619d6,프랭크버거 여수여서점,07082111955,notion-exact-phone-page,370da158dd2a805a8b0ef907fe111e6d,프랭크버거 여수여서점 전화,true,restore
+afb901f3a32de6e8,피자헛 여수문수점,0616525588,notion-exact-phone-page,371da158dd2a8032aed4d1d6c69f01aa,피자헛 여수문수점 전화,true,restore
+05634c81541f6bda,피자헛 여수시청점,0616625588,notion-exact-phone-page,370da158dd2a80dda336e8d98dd532a0,피자헛 여수시청점 전화,true,restore
+bb036844c501c40a,콩시루 여서점,0616553339,notion-exact-phone-page,300da158dd2a80728874f10135b41afb,콩시루 여서점 전화,true,restore
+a037743d0ee273e2,정성집밥,0619203552,notion-exact-phone-page,324da158dd2a800f95b6d3c35056804e,정성집밥 전화,true,restore
+7bc7239e6b509c44,수라상궁 조선국밥 여서점,0616543511,notion-exact-phone-page,2ddda158dd2a80bcacadd18b70d360e5,수라상궁 여서점 전화 주문,true,restore
+04910f606ba038a6,오워래 수제 돈까스,0616543511,notion-exact-phone-page,2e8da158dd2a8075856ee1f5cf89da4d,오워래 수제돈까스 전화,true,restore
+320d26d67b993c4a,아로이태국음식전문점,050713116329,notion-exact-phone-page,351da158dd2a80a2b977d468363a78a6,아로이태국음식전문점 전화,true,restore
+768e4fe8150f5039,정성이 가득찬 반찬,050713308070,notion-exact-phone-page,324da158dd2a80ffa1aded9774abd0dd,정성이 가득찬 반찬 전화,true,restore
+0ad5341dc696d4f1,맛있는 반찬,0610000000,notion-exact-phone-page,2f8da158dd2a80ec94bbc207108707d5,카페 브라운 전화,false,reject-wrong-store
+d409f6d9118b7bad,황금손 반찬,0616516117,notion-exact-phone-page,324da158dd2a80348da2f734e2db09b4,황금손 반찬 전화,true,restore
+84c118675c0caa4c,바오탕수 여서점,0616543511,notion-exact-phone-page,2eada158dd2a8017a9c1feff13a96318,바오탕수 여서점 전화,true,restore
+17d9bf1de3d671fd,해인이네 여서점,050714405626,notion-exact-phone-page,305da158dd2a80c7a787db84372c4326,해인이네 전화,true,restore
