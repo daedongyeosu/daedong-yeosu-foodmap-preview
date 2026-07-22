@@ -119,7 +119,27 @@ function fxEnhanceStoreDetail(store){const detail=$('#modalContent .store-detail
 openStore=function(store){if(!fxVisible(store))return;fxOriginalOpenStore(store);fxEnhanceStoreDetail(store);};
 
 function fxDiversifySearchPhotos(items){const remaining=[...items],result=[];if(remaining.length)result.push(remaining.shift());while(remaining.length){const previous=fxPhoto(result.at(-1).store),counts=new Map();remaining.forEach(item=>counts.set(fxPhoto(item.store),(counts.get(fxPhoto(item.store))||0)+1));let index=-1,best=-1;remaining.forEach((item,i)=>{const photo=fxPhoto(item.store),count=counts.get(photo)||0;if(photo!==previous&&count>best){index=i;best=count;}});if(index<0)index=0;result.push(remaining.splice(index,1)[0]);}return result;}
-function fxSearchModal(query=''){const q=String(query).trim();const ranked=searchableStores.map(store=>({store,score:relevance(store,q)})).filter(item=>!q||item.score>0).sort((a,b)=>b.score-a.score||a.store.name.localeCompare(b.store.name,'ko'));const list=fxDiversifySearchPhotos(ranked);openModal(`<section class="app-browser search-popup"><h2 id="modalTitle">메뉴·가게명·동네 검색</h2><div class="searchbox"><input id="fxSearchInput" value="${escapeHtml(q)}" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="fxSearchRun" class="primary-btn" type="button">검색</button></div><div class="app-browser-list">${list.map(({store})=>`<button type="button" class="app-browser-card glass-action" data-search-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('')||'<p class="empty">검색 결과가 없습니다.</p>'}</div></section>`);setTimeout(()=>$('#fxSearchInput')?.focus(),20);}
+let fxSearchRenderToken=0;
+function fxSearchCard({store}){return `<button type="button" class="app-browser-card glass-action" data-search-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`;}
+function fxRenderSearchResults(query=''){
+ const target=$('#fxSearchResults');if(!target)return;const q=String(query).trim(),token=++fxSearchRenderToken;
+ if(!q){target.innerHTML='<p class="empty">검색어를 입력하면 649개 전체 가게에서 찾습니다.</p>';return;}
+ target.innerHTML='<p class="empty">검색 결과를 찾고 있습니다.</p>';
+ setTimeout(()=>{
+  if(token!==fxSearchRenderToken||!target.isConnected)return;
+  const ranked=searchableStores.map(store=>({store,score:relevance(store,q)})).filter(item=>item.score>0).sort((a,b)=>b.score-a.score||a.store.name.localeCompare(b.store.name,'ko'));
+  const list=fxDiversifySearchPhotos(ranked);if(!list.length){target.innerHTML='<p class="empty">검색 결과가 없습니다.</p>';return;}
+  target.innerHTML=`<p class="empty">${list.length}곳을 찾았습니다.</p>`;let index=0;
+  const append=()=>{if(token!==fxSearchRenderToken||!target.isConnected)return;const next=list.slice(index,index+36);target.insertAdjacentHTML('beforeend',next.map(fxSearchCard).join(''));index+=next.length;if(index<list.length)requestAnimationFrame(append);};append();
+ },0);
+}
+function fxSearchModal(query=''){
+ const q=String(query).trim(),current=$('#modal .search-popup');
+ if(current&&!$('#modal').hidden){const input=$('#fxSearchInput');if(input)input.value=q;fxRenderSearchResults(q);setTimeout(()=>input?.focus(),0);return;}
+ openModal(`<section class="app-browser search-popup"><h2 id="modalTitle">메뉴·가게명·동네 검색</h2><div class="searchbox"><input id="fxSearchInput" value="${escapeHtml(q)}" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="fxSearchRun" class="primary-btn" type="button">검색</button></div><div id="fxSearchResults" class="app-browser-list" aria-live="polite"><p class="empty">${q?'검색 결과를 준비하고 있습니다.':'검색어를 입력하면 649개 전체 가게에서 찾습니다.'}</p></div></section>`);
+ const input=$('#fxSearchInput'),run=$('#fxSearchRun');run?.addEventListener('click',()=>fxRenderSearchResults(input?.value||''));
+ requestAnimationFrame(()=>{input?.focus();if(q)fxRenderSearchResults(q);});
+}
 
 function fxRipple(x,y){if(fxReduced())return;for(let i=0;i<2;i++){const ring=document.createElement('i');ring.className=`ripple-ring ${i?'second':''}`;ring.style.left=`${x}px`;ring.style.top=`${y}px`;document.body.append(ring);setTimeout(()=>ring.remove(),480);}}
 function fxFormation(){const lane=$('#navalLane');if(!lane)return;lane.querySelectorAll('.turtle-ship').forEach(node=>node.remove());[['',7],['escort',2],['escort two',13]].forEach(([cls,bottom])=>{const ship=document.createElement('i');ship.className=`turtle-ship ${cls}`;ship.style.left='18px';ship.style.bottom=`${bottom}px`;lane.append(ship);setTimeout(()=>ship.remove(),680);});}
@@ -152,7 +172,6 @@ function fxInstallEvents(){
   const happyBrand=event.target.closest('[data-happy-brand]');if(happyBrand){fxOpenBrandHub('happy-stores',happyBrand.dataset.happyBrand);return;}
   const channelStore=event.target.closest('[data-channel-store-id]');if(channelStore){const store=fxStoreById(channelStore.dataset.channelStoreId);if(store)openStore(store);return;}
   const searchStore=event.target.closest('[data-search-store-id]');if(searchStore){const store=fxStoreById(searchStore.dataset.searchStoreId);if(store)openStore(store);return;}
-  if(event.target.id==='fxSearchRun'){fxSearchModal($('#fxSearchInput')?.value||'');return;}
   const share=event.target.closest('[data-share-store]');if(share){const store=fxStoreById(share.dataset.shareStore);if(store)fxShare(store,share);return;}
   const favorite=event.target.closest('[data-favorite-store]');if(favorite)fxGull(favorite,true);
   const finalLocal=event.target.closest('.detail-route[data-route-key="direct"],.detail-route[data-route-key="mukkebi"],.detail-route[data-route-key="ddangyo"],.detail-route[data-route-key="ondongne"],.community-choice-link');if(finalLocal)fxBattle();
