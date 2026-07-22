@@ -123,20 +123,22 @@ let fxSearchRenderToken=0;
 function fxSearchCard({store}){return `<button type="button" class="app-browser-card glass-action" data-search-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`;}
 function fxRenderSearchResults(query=''){
  const target=$('#fxSearchResults');if(!target)return;const q=String(query).trim(),token=++fxSearchRenderToken;
- if(!q){target.innerHTML='<p class="empty">검색어를 입력하면 649개 전체 가게에서 찾습니다.</p>';return;}
- target.innerHTML='<p class="empty">검색 결과를 찾고 있습니다.</p>';
- setTimeout(()=>{
+ target.removeAttribute('aria-label');target.removeAttribute('aria-busy');
+ if(!q){target.innerHTML='';return;}
+ target.innerHTML='';target.setAttribute('aria-busy','true');
+ let readinessChecks=0;const render=()=>{
   if(token!==fxSearchRenderToken||!target.isConnected)return;
+  if(!searchableStores.length&&readinessChecks++<100){setTimeout(render,50);return;}
   const ranked=searchableStores.map(store=>({store,score:relevance(store,q)})).filter(item=>item.score>0).sort((a,b)=>b.score-a.score||a.store.name.localeCompare(b.store.name,'ko'));
-  const list=fxDiversifySearchPhotos(ranked);if(!list.length){target.innerHTML='<p class="empty">검색 결과가 없습니다.</p>';return;}
-  target.innerHTML=`<p class="empty">${list.length}곳을 찾았습니다.</p>`;let index=0;
-  const append=()=>{if(token!==fxSearchRenderToken||!target.isConnected)return;const next=list.slice(index,index+36);target.insertAdjacentHTML('beforeend',next.map(fxSearchCard).join(''));index+=next.length;if(index<list.length)requestAnimationFrame(append);};append();
- },0);
+  const list=fxDiversifySearchPhotos(ranked);target.removeAttribute('aria-busy');if(!list.length){target.innerHTML='<p class="empty">검색 결과가 없습니다.</p>';return;}
+  target.setAttribute('aria-label',`${list.length}개 검색 결과`);let index=0;
+  const append=()=>{if(token!==fxSearchRenderToken||!target.isConnected)return;const next=list.slice(index,index+36);target.insertAdjacentHTML('beforeend',next.map(fxSearchCard).join(''));index+=next.length;if(index===next.length){const card=target.closest('.modal-card');if(card)card.scrollTop=0;}if(index<list.length)requestAnimationFrame(append);};append();
+ };setTimeout(render,0);
 }
 function fxSearchModal(query=''){
  const q=String(query).trim(),current=$('#modal .search-popup');
  if(current&&!$('#modal').hidden){const input=$('#fxSearchInput');if(input)input.value=q;fxRenderSearchResults(q);setTimeout(()=>input?.focus(),0);return;}
- openModal(`<section class="app-browser search-popup"><h2 id="modalTitle">메뉴·가게명·동네 검색</h2><div class="searchbox"><input id="fxSearchInput" value="${escapeHtml(q)}" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="fxSearchRun" class="primary-btn" type="button">검색</button></div><div id="fxSearchResults" class="app-browser-list" aria-live="polite"><p class="empty">${q?'검색 결과를 준비하고 있습니다.':'검색어를 입력하면 649개 전체 가게에서 찾습니다.'}</p></div></section>`);
+ openModal(`<section class="app-browser search-popup"><h2 id="modalTitle">메뉴·가게명·동네 검색</h2><div class="searchbox"><input id="fxSearchInput" value="${escapeHtml(q)}" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="fxSearchRun" class="primary-btn" type="button">검색</button></div><div id="fxSearchResults" class="app-browser-list" aria-live="polite"></div></section>`);
  const input=$('#fxSearchInput'),run=$('#fxSearchRun');run?.addEventListener('click',()=>fxRenderSearchResults(input?.value||''));
  requestAnimationFrame(()=>{input?.focus();if(q)fxRenderSearchResults(q);});
 }
