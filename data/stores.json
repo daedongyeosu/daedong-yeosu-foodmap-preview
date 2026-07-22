@@ -211,11 +211,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/388da158dd2a80eaac9dd9c0ebc4c875",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=125826",
         "enabled": true
@@ -1654,11 +1649,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/385da158dd2a8001a76ee3e5bc63b74d",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=199490",
@@ -10592,11 +10582,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/373da158dd2a800da5a1d8c0007c57a5",
-        "enabled": true
-      },
-      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
@@ -10641,11 +10626,6 @@
     "img": "",
     "images": [],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/373da158dd2a800da5a1d8c0007c57a5",
-        "enabled": true
-      },
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
@@ -10924,11 +10904,6 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
-        "enabled": true
-      },
-      {
-        "name": "전화주문",
-        "url": "https://app.notion.com/p/373da158dd2a80c7a7a3f538ab0d4843",
         "enabled": true
       },
       {
@@ -11321,11 +11296,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/37bda158dd2a8011bd10d4a47eb9be39",
-        "enabled": true
-      },
       {
         "name": "땡겨요",
         "url": "https://fdofd.ddangyo.com/gateway1.html?Rd2OLG6=",
@@ -21954,11 +21924,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/387da158dd2a80559ca4fe51253f4fc9",
-        "enabled": true
-      },
-      {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=101770",
         "enabled": true
@@ -22072,11 +22037,6 @@
     "img": "",
     "images": [],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/377da158dd2a80a18883f5f48c16cad2",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=92291",
@@ -29599,11 +29559,6 @@
         "enabled": true
       },
       {
-        "name": "전화주문",
-        "url": "https://app.notion.com/p/39bda158dd2a806e8ac6e41ae413ee2f",
-        "enabled": true
-      },
-      {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/xl7chfl",
         "enabled": true
@@ -29713,11 +29668,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://app.notion.com/p/39bda158dd2a80f4982fea55e72b7633",
-        "enabled": true
-      },
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=180884",
@@ -32807,11 +32757,6 @@
       {
         "name": "가게바로주문",
         "url": "https://bit.ly/auto-돈치킨여수둔덕봉계점",
-        "enabled": true
-      },
-      {
-        "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
         "enabled": true
       },
       {
@@ -36817,11 +36762,6 @@
       {
         "name": "전화주문",
         "url": "https://bit.ly/전화-아구회관",
-        "enabled": true
-      },
-      {
-        "name": "먹깨비",
-        "url": "https://bit.ly/mk-보드람치킨여수여서점",
         "enabled": true
       },
       {
@@ -41756,26 +41696,6 @@
     ],
     "routes": [
       {
-        "name": "가게바로주문",
-        "url": "https://bit.ly/auto-두찜여수국동점",
-        "enabled": true
-      },
-      {
-        "name": "먹깨비",
-        "url": "https://bit.ly/mk-두찜여수국동점",
-        "enabled": true
-      },
-      {
-        "name": "쿠팡이츠",
-        "url": "https://bit.ly/cu-두찜여수국동점",
-        "enabled": true
-      },
-      {
-        "name": "배달의민족",
-        "url": "https://bit.ly/bm-두찜여수국동점",
-        "enabled": true
-      },
-      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
@@ -42118,16 +42038,6 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
-        "enabled": true
-      },
-      {
-        "name": "쿠팡이츠",
-        "url": "https://bit.ly/cu-맘스터치문수점",
-        "enabled": true
-      },
-      {
-        "name": "배달의민족",
-        "url": "https://bit.ly/bm-맘스터치문수점",
         "enabled": true
       }
     ],
@@ -42715,16 +42625,6 @@
       }
     ],
     "routes": [
-      {
-        "name": "가게바로주문",
-        "url": "https://bit.ly/auto-외계인피자여수점",
-        "enabled": true
-      },
-      {
-        "name": "먹깨비",
-        "url": "https://bit.ly/mk-외계인피자여수점",
-        "enabled": true
-      },
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
