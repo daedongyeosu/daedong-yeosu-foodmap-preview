@@ -88,8 +88,20 @@ function fxBuildIndexes(){
  fxBrandByStore.clear();fxHappyByStore.clear();fxPhoneByStore.clear();
  for(const item of fxBrandData.stores||[])fxBrandByStore.set(String(item.store_id),{brandName:item.brandName,storeName:item.storeName,appLink:item.appLink,packageName:item.packageName,buttonLabel:item.buttonLabel,icon:item.icon,platform:'Android'});
  for(const item of fxSupplement.storeMappings||[]){const app=item.orderChannels?.brandApp;if(app)fxBrandByStore.set(String(item.store_id),{brandName:item.brandName,storeName:item.storeName,...app});}
+ const brandTemplates=new Map();
+ for(const item of fxBrandByStore.values()){
+  const key=normalize(String(item.brandName||'').replace(/domino'?s?/gi,'도미노피자'));
+  if(key&&!brandTemplates.has(key))brandTemplates.set(key,item);
+ }
+ for(const store of stores){
+  if(fxBrandByStore.has(String(store.id)))continue;
+  const identity=normalize([store.brandName,store.name].filter(Boolean).join(' ').replace(/domino'?s?/gi,'도미노피자'));
+  const match=[...brandTemplates].find(([key])=>key&&identity.includes(key));
+  if(match)fxBrandByStore.set(String(store.id),{...match[1],storeName:store.name,brandName:match[1].brandName});
+ }
  for(const item of fxHappyData.candidateStoreMappings||[])if(item.happyOrder)fxHappyByStore.set(String(item.store_id),{storeName:item.storeName,...item.happyOrder,category:item.category});
  for(const item of fxPhoneData.storeMappings||[])fxPhoneByStore.set(String(item.store_id),item);
+ for(const store of stores){const phone=String(store.phone||'').replace(/[^0-9]/g,'');if(phone&&!fxPhoneByStore.has(String(store.id)))fxPhoneByStore.set(String(store.id),{store_id:String(store.id),storeName:store.name,phone,clickableTel:true});}
 }
 function fxDirectBrands(){const map=new Map();for(const [id,item] of fxBrandByStore){if(!map.has(item.brandName))map.set(item.brandName,{name:item.brandName,icon:item.icon,stores:[]});map.get(item.brandName).stores.push(id);}return [...map.values()].sort((a,b)=>a.name.localeCompare(b.name,'ko'));}
 function fxOpenBrandHub(view='channels',value=''){

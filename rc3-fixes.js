@@ -166,33 +166,61 @@ function rc3RouteButton(store, route) {
   return `<a class="detail-route" href="${escapeHtml(route.url)}" target="_blank" rel="noopener" data-route-key="${escapeHtml(route.key)}">${appIcon(route.key, 'detail-route-icon')}<span>${escapeHtml(route.name)}</span><b>›</b></a>`;
 }
 
+function resolveStoreChannels(store) {
+  const route = key => routeFor(store, key) || null;
+  const phone = rc3VerifiedPhone(store);
+  const phoneOrder = phone && fxPhoneByStore.get(String(store.id))?.clickableTel
+    ? {key: 'phone', name: '전화주문', phone}
+    : null;
+  return {
+    utilities: {
+      naverMap: store.naverMap && store.naverMap !== '#' ? {key: 'naver', name: '네이버지도', url: store.naverMap} : null,
+      localGiftApp: route('chak')
+    },
+    primaryOrder: {
+      directOrder: route('direct'),
+      brandApp: fxBrandByStore.get(String(store.id)) || null,
+      mukkebi: route('mukkebi'),
+      ddangyo: route('ddangyo'),
+      ondongne: route('ondongne'),
+      phoneOrder
+    },
+    externalOrder: {
+      yogiyo: route('yogiyo'),
+      coupangEats: route('coupang'),
+      baemin: route('baemin')
+    },
+    happyOrder: fxHappyByStore.get(String(store.id)) || null
+  };
+}
+globalThis.resolveStoreChannels = resolveStoreChannels;
+
 function rc3OpenOrderMethods(store) {
   if (!store) return;
-  const routes = [];
-  const phone = rc3VerifiedPhone(store);
-  if (phone && fxPhoneByStore.get(String(store.id))?.clickableTel) routes.push({key: 'phone', name: '전화주문'});
-  for (const key of ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'yogiyo', 'coupang', 'baemin']) {
-    const route = routeFor(store, key);
-    if (route) routes.push(route);
-  }
-  const seen = new Set();
-  const routeMarkup = routes.filter(route => !seen.has(route.key) && seen.add(route.key)).map(route => route.key === 'phone'
-    ? `<button type="button" class="detail-route" data-rc3-phone-store="${escapeHtml(store.id)}"><img class="detail-route-icon" src="assets/ui/phone.svg" alt=""><span>전화주문</span><b>›</b></button>`
-    : rc3RouteButton(store, route)).join('');
-  const brand = fxBrandByStore.get(String(store.id));
-  const happy = fxHappyByStore.get(String(store.id));
-  const appMarkup = brand || happy ? `<div class="brand-store-actions">${brand ? fxAppAction(brand, 'brand') : ''}${happy ? fxAppAction(happy, 'happy') : ''}</div>` : '';
-  openModal(`<section class="order-methods-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">다른 주문방법 보기</h2><span>선택한 가게</span><strong class="selected-store-name">${escapeHtml(store.name)}</strong><div class="order-methods-list">${routeMarkup || '<p class="empty">확인된 주문방법이 없습니다.</p>'}</div>${appMarkup}</section>`);
+  const channels = resolveStoreChannels(store);
+  const routes = Object.values(channels.externalOrder).filter(Boolean);
+  const routeMarkup = routes.map(route => rc3RouteButton(store, route)).join('');
+  if (!routeMarkup) return;
+  openModal(`<section class="order-methods-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">다른 주문방법 보기</h2><span>선택한 가게</span><strong class="selected-store-name">${escapeHtml(store.name)}</strong><div class="order-methods-list">${routeMarkup}</div></section>`);
   $('#modal').dataset.activeStoreId = store.id;
 }
 
 function rc3EnhanceStoreDetail(store) {
   const detail = $('#modalContent .store-detail');
   if (!detail) return;
-  const wrap = detail.querySelector('.store-other-wrap');
-  if (wrap) {
-    wrap.innerHTML = `<button class="detail-route store-other-toggle rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"><span>다른 주문방법 보기</span><b>›</b></button>`;
-  }
+  const channels = resolveStoreChannels(store);
+  detail.querySelector('.detail-quick-links')?.remove();
+  detail.querySelector('.local-detail-routes')?.remove();
+  detail.querySelectorAll('.brand-store-actions').forEach(node => node.remove());
+  detail.querySelector('.store-other-wrap')?.remove();
+  const gallery = detail.querySelector('.detail-meta');
+  const utilities = [channels.utilities.naverMap, channels.utilities.localGiftApp].filter(Boolean).map(item => `<a class="detail-quick-link" data-detail-only="${escapeHtml(item.key)}" href="${escapeHtml(item.url)}" target="_blank" rel="noopener"><span class="quick-icon">${item.key === 'naver' ? '🗺️' : '💳'}</span><span>${escapeHtml(item.name === 'CHAK 지역상품권' ? '지역상품권앱' : item.name)}</span></a>`).join('');
+  const primary = [channels.primaryOrder.directOrder, channels.primaryOrder.mukkebi, channels.primaryOrder.ddangyo, channels.primaryOrder.ondongne].filter(Boolean).map(route => routeLink(route, 'local-order-route')).join('');
+  const phone = channels.primaryOrder.phoneOrder ? `<button type="button" class="detail-route local-order-route" data-rc3-phone-store="${escapeHtml(store.id)}"><img class="detail-route-icon" src="assets/ui/phone.svg" alt=""><span>전화주문</span><b>›</b></button>` : '';
+  const apps = channels.primaryOrder.brandApp || channels.happyOrder ? `<div class="brand-store-actions">${channels.primaryOrder.brandApp ? fxAppAction(channels.primaryOrder.brandApp, 'brand') : ''}${channels.happyOrder ? fxAppAction(channels.happyOrder, 'happy') : ''}</div>` : '';
+  const hasExternal = Object.values(channels.externalOrder).some(Boolean);
+  const other = hasExternal ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"><span>다른 주문방법 보기</span><b>›</b></button></div>` : '';
+  gallery?.insertAdjacentHTML('afterend', `${utilities ? `<div class="detail-quick-links">${utilities}</div>` : ''}<div class="detail-routes local-detail-routes">${primary}${apps}${phone || (!primary && !apps ? '<p class="muted">등록된 주문방법을 확인 중입니다.</p>' : '')}</div>${other}`);
 }
 
 const rc3OpenStoreBase = openStore;
