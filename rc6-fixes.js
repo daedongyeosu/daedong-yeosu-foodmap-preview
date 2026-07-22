@@ -1,4 +1,8 @@
-let rc6Coordinates={},rc6BannerTargets={},rc6Pointer=null,rc6LocationCache={key:'',stores:[]};
+let rc6Coordinates={},rc6BannerTargets={},rc6Pointer=null,rc6LocationCache={key:'',stores:[]},rc6ChannelSortingInstalled=false;
+const rc6AppRegisteredStoresBase=appRegisteredStores;
+const rc6PhoneStoresBase=fxPhoneStores;
+const rc6DirectBrandsBase=fxDirectBrands;
+const rc6OpenBrandHubBase=fxOpenBrandHub;
 const rc6Verified=store=>Boolean(store&&store.coordinateVerified&&Number.isFinite(store.lat)&&Number.isFinite(store.lng));
 function rc6ApplyCoordinates(){canonicalStores.forEach(store=>{const row=rc6Coordinates[String(store.id)];if(row&&row.status==='verified'&&Number.isFinite(Number(row.latitude))&&Number.isFinite(Number(row.longitude))){store.lat=Number(row.latitude);store.lng=Number(row.longitude);store.coordinateSource='verified';store.coordinateVerified=true;}else{store.lat=null;store.lng=null;store.coordinateSource='';store.coordinateVerified=false;}});coordinateStores=canonicalStores.filter(rc6Verified);}
 function rc6RandomizeGull(gull){const curve=()=>`${Math.round(-20+Math.random()*40)}px`,bank=()=>`${Math.round(-11+Math.random()*22)}deg`;['a','b','c','d','e'].forEach(key=>gull.style.setProperty(`--curve-${key}`,curve()));['start','a','b','c','d','end'].forEach(key=>gull.style.setProperty(`--bank-${key}`,bank()));gull.style.setProperty('--flap',`${(.44+Math.random()*.34).toFixed(2)}s`);}
@@ -19,7 +23,26 @@ function rc6NearStores(){
  const ranked=rc6DiversifyDistance(rows).map(row=>({...row.store,distance:row.actual,rc6SortDistance:row.actual??row.neighborhoodDistance,proximityLabel:row.actual!==null?'':row.bucket===0?`${selected}의 가게`:row.bucket===1?`${row.candidate} 주변 가게`:'여수의 다른 추천 가게',locationSource:row.store.locationSource,neighborhoodConfidence:row.store.neighborhoodConfidence}));rc6LocationCache={key:cacheKey,stores:ranked};return ranked;
 }
 function rc6RankCandidatesByCustomerLocation(candidates){const nearby=rc6NearStores();if(!nearby.length)return candidates;const rank=new Map(nearby.map((store,index)=>[String(store.id),index])),details=new Map(nearby.map(store=>[String(store.id),store]));return candidates.map((store,index)=>({store:{...store,...details.get(String(store.id))},index})).sort((a,b)=>(rank.get(String(a.store.id))??Infinity)-(rank.get(String(b.store.id))??Infinity)||a.index-b.index).map(item=>item.store);}
+function rc6InstallChannelLocationSorting(){
+ if(rc6ChannelSortingInstalled)return;rc6ChannelSortingInstalled=true;
+ appRegisteredStores=function rc6LocationAppStores(key){return rc6RankCandidatesByCustomerLocation(rc6AppRegisteredStoresBase(key));};
+ fxPhoneStores=function rc6LocationPhoneStores(category='추천'){
+  const items=rc6PhoneStoresBase(category),byId=new Map(items.map(item=>[String(item.store.id),item]));
+  return rc6RankCandidatesByCustomerLocation(items.map(item=>item.store)).map(store=>({...byId.get(String(store.id)),store}));
+ };
+ fxDirectBrands=function rc6LocationDirectBrands(){
+  const nearby=rc6NearStores(),rank=new Map(nearby.map((store,index)=>[String(store.id),index]));
+  return rc6DirectBrandsBase().map(brand=>{const stores=rc6RankCandidatesByCustomerLocation((brand.stores||[]).map(fxStoreById).filter(Boolean));return{...brand,stores:stores.map(store=>String(store.id)),rc6Nearest:Math.min(...stores.map(store=>rank.get(String(store.id))??Infinity))};}).sort((a,b)=>a.rc6Nearest-b.rc6Nearest||a.name.localeCompare(b.name,'ko'));
+ };
+ fxOpenBrandHub=function rc6LocationBrandHub(view='channels',value=''){
+  if(view!=='happy-stores'){rc6OpenBrandHubBase(view,value);return;}
+  const ids=[...fxHappyByStore].filter(([,item])=>item.brandName===value).map(([id])=>id);
+  const stores=rc6RankCandidatesByCustomerLocation(ids.map(fxStoreById).filter(fxVisible));
+  const cards=stores.map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
+  openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p><div class="channel-store-list">${cards}</div></section>`);
+ };
+}
 function rc6LocationRankedRail(spec,originalRank){if(spec.kind==='near')return rc6NearStores();let candidates=spec.kind==='new'?stores.filter(fxVisible).sort((a,b)=>(a.rawIndex??Infinity)-(b.rawIndex??Infinity)||a.name.localeCompare(b.name,'ko')).slice(0,80):originalRank(spec);if(spec.kind==='local')candidates=candidates.filter(store=>['direct','mukkebi','ddangyo','ondongne'].some(key=>routeFor(store,key)));return rc6RankCandidatesByCustomerLocation(candidates);}
 const rc6CommitAddressBase=commitAddressSelection;
 function rc6CommitAddress(){if(addressDraft?.type!=='current'){rc6CommitAddressBase();return;}const coords=addressDraft.coords;if(!coords)return;state.location='여수시 전체';state.addressLabel='현재 위치';state.coords=coords;state.sortByDistance=true;sessionStorage.setItem('rc6LocationActive','1');document.querySelector('#locationText').textContent='현재 위치';hardClose();setTimeout(()=>renderStores({scroll:true,resetCount:true}),60);}
-async function rc6Initialize(){[rc6Coordinates,rc6BannerTargets]=await Promise.all([fetchJson('data/store-coordinates.json',{}),fetchJson('data/banner-targets.json',{})]);rc6ApplyCoordinates();rc4StoreHasRealCoordinates=rc6Verified;fxDistance=store=>state.coords&&rc6Verified(store)?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;const originalRank=fxRankStores,originalFiltered=filteredStores;fxRankStores=spec=>rc6LocationRankedRail(spec,originalRank);filteredStores=()=>rc6RankCandidatesByCustomerLocation(originalFiltered());useCurrentLocation=rc6UseCurrentLocation;commitAddressSelection=rc6CommitAddress;rc6RenderHero();rc6HeroEvents();rc6Gulls();renderStores({resetCount:true});fxRenderRails();document.querySelector('.build-mark').textContent='대동여수음식지도 RC6 온라인 검수 후보';}
+async function rc6Initialize(){[rc6Coordinates,rc6BannerTargets]=await Promise.all([fetchJson('data/store-coordinates.json',{}),fetchJson('data/banner-targets.json',{})]);rc6ApplyCoordinates();rc4StoreHasRealCoordinates=rc6Verified;fxDistance=store=>state.coords&&rc6Verified(store)?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;const originalRank=fxRankStores,originalFiltered=filteredStores;fxRankStores=spec=>rc6LocationRankedRail(spec,originalRank);filteredStores=()=>rc6RankCandidatesByCustomerLocation(originalFiltered());rc6InstallChannelLocationSorting();useCurrentLocation=rc6UseCurrentLocation;commitAddressSelection=rc6CommitAddress;rc6RenderHero();rc6HeroEvents();rc6Gulls();renderStores({resetCount:true});fxRenderRails();document.querySelector('.build-mark').textContent='대동여수음식지도 RC6 온라인 검수 후보';}
