@@ -1860,21 +1860,6 @@
         "name": "전화주문",
         "url": "https://app.notion.com/p/37dda158dd2a80a9a18be1690309064e",
         "enabled": true
-      },
-      {
-        "name": "요기요",
-        "url": "https://ws.yogiyo.co.kr/wo81k0",
-        "enabled": true
-      },
-      {
-        "name": "쿠팡이츠",
-        "url": "https://web.coupangeats.com/share?storeId=853966&dishId=&key=b7d0ca85-a876-4a5a-8165-6d4b2e7d0d7f",
-        "enabled": true
-      },
-      {
-        "name": "배달의민족",
-        "url": "https://s.baemin.com/Nm000zzEausdF",
-        "enabled": true
       }
     ],
     "managed": false,
@@ -8784,16 +8769,6 @@
         "enabled": true
       },
       {
-        "name": "먹깨비",
-        "url": "http://mukkebi.com/shop.php?data=199172",
-        "enabled": true
-      },
-      {
-        "name": "땡겨요",
-        "url": "https://fdofd.ddangyo.com/gateway1.html?jARRyNy=",
-        "enabled": true
-      },
-      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
@@ -10614,11 +10589,6 @@
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=152465",
-        "enabled": true
-      },
-      {
-        "name": "땡겨요",
-        "url": "https://fdofd.ddangyo.com/gateway1.html?yEFuFqi=",
         "enabled": true
       },
       {
@@ -16515,21 +16485,6 @@
         "name": "전화주문",
         "url": "https://app.notion.com/p/37cda158dd2a8017a1f8d57eda65d356",
         "enabled": true
-      },
-      {
-        "name": "요기요",
-        "url": "https://ws.yogiyo.co.kr/0j9cdx",
-        "enabled": true
-      },
-      {
-        "name": "쿠팡이츠",
-        "url": "https://web.coupangeats.com/share?storeId=285489&dishId=&key=1bc58d83-b570-439c-bfb7-b84e1590fe57",
-        "enabled": true
-      },
-      {
-        "name": "배달의민족",
-        "url": "https://s.baemin.com/WW000gmZNNtpU",
-        "enabled": true
       }
     ],
     "managed": false,
@@ -18254,11 +18209,6 @@
         "enabled": true
       },
       {
-        "name": "땡겨요",
-        "url": "https://fdofd.ddangyo.com/gateway1.html?hdPOwoC=",
-        "enabled": true
-      },
-      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
@@ -18266,11 +18216,6 @@
       {
         "name": "전화주문",
         "url": "https://app.notion.com/p/393da158dd2a80bca854c51e0a04fd2f",
-        "enabled": true
-      },
-      {
-        "name": "요기요",
-        "url": "https://ws.yogiyo.co.kr/w4q24re",
         "enabled": true
       },
       {
@@ -19188,11 +19133,6 @@
       {
         "name": "먹깨비",
         "url": "http://mukkebi.com/shop.php?data=93523",
-        "enabled": true
-      },
-      {
-        "name": "땡겨요",
-        "url": "https://fdofd.ddangyo.com/gateway1.html?dbJMgro=",
         "enabled": true
       },
       {
