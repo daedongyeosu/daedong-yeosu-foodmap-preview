@@ -10,6 +10,10 @@
 }
 .yeosu-night-shell::before{background:linear-gradient(180deg,rgba(4,48,78,.08),rgba(255,255,255,.03) 45%,rgba(0,54,86,.12))!important}
 .yeosu-night-shell::after{content:none!important;background:none!important}
+.yeosu-night-shell .hero-frame{
+  border-radius:20px!important;overflow:hidden!important;
+  transform:translateZ(0)
+}
 .active-address-bar{
   position:relative;z-index:3;width:calc(100% - 24px);min-height:58px;margin:2px 12px 6px;
   display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:9px;
