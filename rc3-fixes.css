@@ -137,3 +137,22 @@
 .rc3-order-channel-svg{padding:3px;color:#164d72;fill:none}
 .store-card .miniapps{gap:4px}
 .store-card .miniapps .miniapp-icon,.store-card .miniapps .miniemoji{width:22px!important;height:22px!important;min-width:22px!important;flex-basis:22px!important}
+
+
+/* Recommendation cards use one clear entry: the whole card opens store details. */
+.rail-card[data-rc3-rail-open] {
+  cursor: pointer;
+}
+.rail-card[data-rc3-rail-open] footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  grid-template-columns: none !important;
+}
+.rail-card[data-rc3-rail-open] .rail-channel-icons {
+  width: 100%;
+}
+.rail-card[data-rc3-rail-open] footer,
+.rail-card[data-rc3-rail-open] footer * {
+  pointer-events: none !important;
+}

@@ -124,7 +124,7 @@ function rc3RailCard(store, spec) {
   const distance=spec?.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';
   const locationLabel=spec?.kind==='near'?(distance||store.proximityLabel||''):'';
   const channelIcons=rc3PrimaryCardIcons(store);
-  return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action" data-rc3-rail-open="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-channel-icons" aria-label="이용 가능한 기본 주문방법">${channelIcons||'<span class="rail-method">주문방법 확인</span>'}</span><button type="button" class="rail-order-button rc3-rail-order-button glass-action" data-rc3-rail-order="${escapeHtml(store.id)}">주문방법 보기</button></footer></article>`;
+  return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}" data-rc3-rail-open="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-channel-icons" aria-label="이용 가능한 기본 주문방법">${channelIcons||'<span class="rail-method">주문방법 확인</span>'}</span></footer></article>`;
 }
 fxRenderRails = function rc3RenderRails() {
   const root = $('#recommendRails');
@@ -366,7 +366,7 @@ copyQueuedReport = function rc3CopyQueuedReport(reportId) {
 };
 
 function rc3RailPointerTarget(event) {
-  return event.target.closest('[data-rc3-rail-order],[data-rc3-rail-open]');
+  return event.target.closest('[data-rc3-rail-open]');
 }
 
 function rc3OnPointerDown(event) {
@@ -406,14 +406,6 @@ function rc3HandleClick(event) {
     event.preventDefault();
     event.stopImmediatePropagation();
     rc3ShowAllOnHome({close: true});
-    return;
-  }
-  const railOrder = event.target.closest('[data-rc3-rail-order]');
-  if (railOrder) {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    if (railOrder.dataset.rc3Gesture === 'drag') return;
-    rc3OpenOrderMethods(fxStoreById(railOrder.dataset.rc3RailOrder));
     return;
   }
   const railOpen = event.target.closest('[data-rc3-rail-open]');
