@@ -191,7 +191,7 @@ fxRc2Script.src='rc2-fixes.js?v=rc2';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=location-mixed-ranking-1';
+ fxRc3Script.src='rc3-fixes.js?v=channel-groups-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
