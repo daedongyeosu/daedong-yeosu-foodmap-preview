@@ -205,6 +205,14 @@ async function fxShareHomeNative(target){
   else await fxCopyHomeShareUrl();
  }
 }
+function fxHandleHomeShareClick(event){
+ const homeShare=event.target.closest('[data-share-home]');
+ if(homeShare){event.preventDefault();event.stopImmediatePropagation();fxOpenHomeShare(homeShare);return;}
+ const homeShareNative=event.target.closest('[data-home-share-native]');
+ if(homeShareNative){event.preventDefault();event.stopImmediatePropagation();fxShareHomeNative(homeShareNative);return;}
+ if(event.target.closest('[data-home-share-copy]')){event.preventDefault();event.stopImmediatePropagation();fxCopyHomeShareUrl();}
+}
+document.addEventListener('click',fxHandleHomeShareClick,true);
 
 function fxRainCount(level){return level==='light'?15:level==='moderate'?27:40;}
 function fxApplyRain(level){fxRainState=['light','moderate','strong'].includes(level)?level:'clear';const shell=$('.yeosu-night-shell'),layer=$('.weather-layer');if(!shell||!layer)return;shell.dataset.weather=fxRainState;layer.className='weather-layer';layer.innerHTML='';if(fxRainState==='clear'){fxRenderRails();return;}layer.classList.add('rain');const count=Math.max(6,Math.round(fxRainCount(fxRainState)*(fxLowPower()?.5:1)));for(let i=0;i<count;i++){const d=document.createElement('i');d.className='rain-drop';d.style.left=`${(i*37)%101}%`;d.style.animationDelay=`-${(i*83)%760}ms`;d.style.setProperty('--rain-speed',fxRainState==='strong'?'430ms':fxRainState==='moderate'?'590ms':'780ms');d.style.setProperty('--rain-opacity',fxRainState==='strong'?'.72':fxRainState==='moderate'?'.6':'.43');layer.append(d);}fxRenderRails();}
@@ -219,9 +227,6 @@ function fxInstallEvents(){
   const order=event.target.closest('[data-order-key]');if(order){event.preventDefault();event.stopImmediatePropagation();fxOrderClick(order);return;}
   if(event.target.closest('#searchSurface')&&!event.target.closest('#clearMainSearch')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
   if(event.target.closest('#searchBtn')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
-  const homeShare=event.target.closest('[data-share-home]');if(homeShare){event.preventDefault();event.stopImmediatePropagation();fxOpenHomeShare(homeShare);return;}
-  const homeShareNative=event.target.closest('[data-home-share-native]');if(homeShareNative){event.preventDefault();event.stopImmediatePropagation();fxShareHomeNative(homeShareNative);return;}
-  if(event.target.closest('[data-home-share-copy]')){event.preventDefault();event.stopImmediatePropagation();fxCopyHomeShareUrl();return;}
   const rail=event.target.closest('[data-rail-store-id]');if(rail){const store=fxStoreById(rail.dataset.railStoreId);if(store)openStore(store);return;}
   const phoneCat=event.target.closest('[data-phone-category]');if(phoneCat){fxOpenPhoneDirectory(phoneCat.dataset.phoneCategory);return;}
   const phoneStore=event.target.closest('[data-phone-store-id]');if(phoneStore){fxOpenPhoneConfirm(phoneStore.dataset.phoneStoreId);return;}
