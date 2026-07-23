@@ -30227,6 +30227,21 @@
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/2bml3e",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-계근상여수본점",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-계근상여수본점",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-계근상여수본점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -30304,6 +30319,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-계동치킨",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-계동치킨",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-계동치킨",
         "enabled": true
       }
     ],
@@ -30469,6 +30494,26 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-굽네치킨피자여수문수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-굽네치킨피자여수문수점",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-굽네치킨피자여수문수점",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-굽네치킨피자여수문수점",
         "enabled": true
       }
     ],
@@ -30920,6 +30965,16 @@
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/d2x99a",
         "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-김종구식맛치킨전기바베큐옛날통닭여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-김종구식맛치킨전기바베큐옛날통닭여수여서점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -31082,6 +31137,21 @@
       {
         "name": "전화주문",
         "url": "https://bit.ly/전화-까치식당",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-까치식당",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-까치식당",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-까치식당",
         "enabled": true
       }
     ],
@@ -31759,6 +31829,16 @@
         "name": "전화주문",
         "url": "https://bit.ly/전화-다정아구",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-다정아구",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-다정아구",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -32200,6 +32280,16 @@
       {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/ih4u4e",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-대정식당",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-대정식당",
         "enabled": true
       }
     ],
@@ -33608,6 +33698,11 @@
         "name": "전화주문",
         "url": "https://bit.ly/phone-롯데리아이마트점",
         "enabled": true
+      },
+      {
+        "name": "가게바로주문",
+        "url": "https://bit.ly/lotte-이마트자동주문",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -33874,6 +33969,21 @@
       {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/zuhcyn",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-린차이나",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-린차이나",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-린차이나",
         "enabled": true
       }
     ],
@@ -36553,6 +36663,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-소풍",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-소풍",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-소풍",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -37789,6 +37909,16 @@
       {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/0a4rcj",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-양철북곱창여수미평점",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-양철북곱창여수미평점",
         "enabled": true
       }
     ],
@@ -39946,6 +40076,16 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-응큼떡뽁이여수점",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-응큼떡뽁이여수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-응큼떡뽁이여수점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -40024,6 +40164,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-이디야국동점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-이디야거피국동점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-이디야국동점",
         "enabled": true
       }
     ],
@@ -40472,6 +40622,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-장충동BNF족발보쌈여수점",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-장충동BNF족발보쌈여수점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-장충동BNF족발보쌈여수점",
         "enabled": true
       }
     ],
@@ -42181,6 +42341,11 @@
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-커피샵",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -42852,6 +43017,11 @@
         "name": "배달의민족",
         "url": "https://bit.ly/bm-thang",
         "enabled": true
+      },
+      {
+        "name": "가게바로주문",
+        "url": "https://bit.ly/탕화쿵푸자동주문",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -42935,6 +43105,16 @@
       {
         "name": "배달의민족",
         "url": "https://bit.ly/3NS9VcE",
+        "enabled": true
+      },
+      {
+        "name": "가게바로주문",
+        "url": "https://bit.ly/테그42자동주문-카페디저트",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "https://bit.ly/테그42먹깨비-카페디저트",
         "enabled": true
       }
     ],
@@ -44555,6 +44735,21 @@
       {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/f0rsu8g",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-황금아구",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-황금아구",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-황금아구",
         "enabled": true
       }
     ],
