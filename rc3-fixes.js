@@ -1,7 +1,7 @@
 'use strict';
 
 /* RC3 fixes only. Store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
-const RC3_ICON_SPRITE = 'assets/ui/category-icons-color.svg';
+const RC3_ICON_SPRITE = CATEGORY_ICON_SPRITE;
 const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-06';
 const RC3_APP_PARTICLE = Object.freeze({
   yogiyo: '요기요로',
@@ -55,13 +55,10 @@ function rc3CategoryIconId(name) {
 }
 
 fxCategoryMarkup = function rc3CategoryMarkup(name) {
-  return `<button type="button" class="category glass-action ${state.category === name ? 'active' : ''}" data-cat="${escapeHtml(name)}">${rc3Icon(rc3CategoryIconId(name))}<span>${escapeHtml(name)}</span></button>`;
+  return categoryButtonMarkup(name);
 };
 
-renderCategories = function rc3RenderCategories() {
-  const names = ['전체', ...mainCategories()];
-  $('#categoryGrid').innerHTML = names.map(fxCategoryMarkup).join('');
-};
+renderCategories = renderCategoryGrid;
 
 allCategoriesModal = function rc3AllCategoriesModal() {
   const names = ['전체', ...categories.filter(name => name !== '전체')];

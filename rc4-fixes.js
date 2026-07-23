@@ -1,7 +1,7 @@
 'use strict';
 
 /* RC4 fixes only. Content data, photos, routes, brand-apps, HappyOrder and banners remain read-only. */
-const RC4_CATEGORY_ICON_SPRITE='assets/ui/category-icons-color.svg';
+const RC4_CATEGORY_ICON_SPRITE=CATEGORY_ICON_SPRITE;
 const RC4_POSTCODE_SCRIPT='https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js';
 const RC4_CATEGORY_ICON_MAP=Object.freeze([
  [/^전체$/,'all'],[/마라|양꼬치/,'mala'],[/치킨|닭/,'chicken'],[/피자/,'pizza'],[/중식|짜장|짬뽕/,'chinese'],
@@ -15,8 +15,8 @@ let rc4PostcodePromise=null;
 function rc4CategoryIconId(name){const value=String(name||'');return RC4_CATEGORY_ICON_MAP.find(([pattern])=>pattern.test(value))?.[1]||'other'}
 function rc4CategoryIcon(name,className='rc4-category-icon'){return `<svg class="${className}" aria-hidden="true"><use href="${RC4_CATEGORY_ICON_SPRITE}#${rc4CategoryIconId(name)}"></use></svg>`}
 
-fxCategoryMarkup=function(name){return `<button type="button" class="category glass-action ${state.category===name?'active':''}" data-cat="${escapeHtml(name)}">${rc4CategoryIcon(name)}<span>${escapeHtml(name)}</span></button>`};
-renderCategories=function(){$('#categoryGrid').innerHTML=['전체',...mainCategories()].map(fxCategoryMarkup).join('')};
+fxCategoryMarkup=categoryButtonMarkup;
+renderCategories=renderCategoryGrid;
 allCategoriesModal=function(){const names=['전체',...categories.filter(name=>name!=='전체')];openModal(`<section class="category-modal"><h2 id="modalTitle">전체 음식 카테고리</h2><div class="all-category-list rc4-category-list">${names.map(name=>`<button type="button" data-modal-cat="${escapeHtml(name)}">${rc4CategoryIcon(name,'rc4-category-modal-icon')}<b>${escapeHtml(name)}</b></button>`).join('')}</div></section>`);requestAnimationFrame(()=>{const card=$('#modal .modal-card'),list=$('#modal .rc4-category-list');if(card)card.scrollTop=0;if(list)list.scrollTop=0})};
 
 function rc4StoreHasRealCoordinates(store){return store?.coordinateSource==='store'&&Number.isFinite(store.lat)&&Number.isFinite(store.lng)}
