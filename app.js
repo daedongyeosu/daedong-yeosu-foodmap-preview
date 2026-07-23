@@ -212,7 +212,11 @@ function parseCoordinate(value) {
 }
 function neighborhoodsFor(value='') {
   const text=normalize(value);if(!text)return[];
-  return yeosuNeighborhoods.filter(item=>[item.name,...(item.aliases||[])].some(alias=>text.includes(normalize(alias)))).map(item=>item.name);
+  return yeosuNeighborhoods.filter(item=>{
+    if([item.name,...(item.aliases||[])].some(alias=>text.includes(normalize(alias))))return true;
+    const stem=normalize(item.name).replace(/동$/,'');
+    return stem.length>=2&&text.includes(stem);
+  }).map(item=>item.name);
 }
 function neighborhoodFor(value='') { return neighborhoodsFor(value)[0] || ''; }
 function neighborhoodPoint(name) { const item=neighborhoodByName.get(name);return item&&Number.isFinite(Number(item.latitude))&&Number.isFinite(Number(item.longitude))?{lat:Number(item.latitude),lng:Number(item.longitude)}:null; }
