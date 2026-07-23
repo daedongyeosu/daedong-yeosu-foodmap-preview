@@ -6,6 +6,7 @@ const js = fs.readFileSync('turtle-ship-hero.js', 'utf8');
 
 const checks = [
   ['새 거북선 장면이 홈 배경에 존재', html.includes('id="turtleShipHeroScene"')],
+  ['거북선 CSS 캐시 버전 갱신', html.includes('turtle-ship-hero.css?v=4')],
   ['북서향 모바일 압축 자산 사용', html.includes('turtle-ship-northwest-mobile-v3.webp')],
   ['북서향 데스크톱 압축 자산 사용', html.includes('turtle-ship-northwest-v3.webp')],
   ['기존 바다선 제거', !html.includes('class="sea-line"')],
