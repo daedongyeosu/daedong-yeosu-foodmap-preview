@@ -247,7 +247,9 @@ function normalizedStore(raw, index) {
   const addressNeighborhoods=/여수시/.test(String(raw.address||''))?neighborhoodsFor(raw.address):[];
   const branchText=[branchName,name].filter(Boolean).join(' '), branchNeighborhoods=/점|지점|항|지구/.test(branchText)?neighborhoodsFor(branchText):[];
   const notionNeighborhoods=neighborhoodsFor(area);
-  const inferredNeighborhoods=addressNeighborhoods.length?addressNeighborhoods:branchNeighborhoods.length?branchNeighborhoods:notionNeighborhoods;
+  const inferredNeighborhoods=addressNeighborhoods.length
+    ? addressNeighborhoods
+    : [...new Set([...branchNeighborhoods,...notionNeighborhoods])];
   const locationSource=addressNeighborhoods.length?'verified-address':branchNeighborhoods.length?'store-name-branch':notionNeighborhoods.length?'notion-or-canonical-neighborhood':'unresolved';
   return {
     id, store_id: id, name, realBusinessName: raw.realBusinessName || '',

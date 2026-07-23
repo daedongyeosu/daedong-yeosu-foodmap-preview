@@ -198,17 +198,42 @@ function rc2RepresentativeMethod(store) {
 function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
   const brandKeys = new Set();
   const photoKeys = new Set();
+  const selectedIds = new Set();
   const result = [];
+  const groups = [];
   for (const store of fxRankStores(spec)) {
+    const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
+    const tier = typeof rc6OwnershipTier === 'function' ? rc6OwnershipTier(store) : 2;
+    const key = `${bucket}:${tier}`;
+    const last = groups[groups.length - 1];
+    if (!last || last.key !== key) groups.push({key, stores: [store]});
+    else last.stores.push(store);
+  }
+  const addStore = (store, relaxDiversity = false) => {
     const storeId = String(store.id);
+    if (selectedIds.has(storeId)) return;
     const brandKey = rc2BrandKey(store);
     const photoKey = fxPhoto(store);
-    if (globallyUsed.has(storeId) || brandKeys.has(brandKey) || (photoKey && photoKeys.has(photoKey))) continue;
+    if (!relaxDiversity && (brandKeys.has(brandKey) || (photoKey && photoKeys.has(photoKey)))) return;
     result.push(store);
+    selectedIds.add(storeId);
     brandKeys.add(brandKey);
     if (photoKey) photoKeys.add(photoKey);
     globallyUsed.add(storeId);
-    if (result.length >= limit) break;
+  };
+  for (const group of groups) {
+    const ordered = [
+      ...group.stores.filter(store => !globallyUsed.has(String(store.id))),
+      ...group.stores.filter(store => globallyUsed.has(String(store.id)))
+    ];
+    for (const store of ordered) {
+      addStore(store, false);
+      if (result.length >= limit) return result;
+    }
+    for (const store of ordered) {
+      addStore(store, true);
+      if (result.length >= limit) return result;
+    }
   }
   return result;
 }

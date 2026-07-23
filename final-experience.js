@@ -223,7 +223,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=rc2';
+fxRc2Script.src='rc2-fixes.js?v=location-first-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
@@ -239,7 +239,7 @@ fxRc2Script.onload=()=>{
    fxRc5Script.async=false;
    fxRc5Script.onload=()=>{
     const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=bridge-gull-motion-2';document.head.append(css);
-    const script=document.createElement('script');script.src='rc6-fixes.js?v=managed-priority-1';
+    const script=document.createElement('script');script.src='rc6-fixes.js?v=location-first-1';
     script.onload=()=>{
      const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=order-channel-location-3';
      addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{await fxInitialize();await rc6Initialize();window.rc7Initialize?.();},0);};
