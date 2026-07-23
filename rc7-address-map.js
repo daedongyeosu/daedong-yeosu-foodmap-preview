@@ -374,7 +374,7 @@
     saveLocationState(label, coords, Boolean(coords), item);
     syncMainAddress();
     hardClose();
-    setTimeout(() => renderStores({scroll: true, resetCount: true}), 60);
+    setTimeout(showHomeAfterAddressCommit, 60);
   }
 
   function handleClick(event) {
