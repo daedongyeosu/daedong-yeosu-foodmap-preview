@@ -195,6 +195,50 @@ function rc2RepresentativeMethod(store) {
   return '주문방법 확인';
 }
 
+const RC2_RAIL_RANDOM_SEED = String(Date.now()) + '-' + String(Math.random());
+
+function rc2StringSeed(value) {
+  let hash = 2166136261;
+  const text = String(value || '');
+  for (let index = 0; index < text.length; index += 1) {
+    hash ^= text.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function rc2SeededShuffle(list, seedText) {
+  const result = [...list];
+  let seed = rc2StringSeed(seedText);
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    seed += 0x6D2B79F5;
+    let value = seed;
+    value = Math.imul(value ^ (value >>> 15), value | 1);
+    value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+    const random = ((value ^ (value >>> 14)) >>> 0) / 4294967296;
+    const swapIndex = Math.floor(random * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+  }
+  return result;
+}
+
+function rc2RandomizedRailStores(stores, spec, groupKey) {
+  const locationKey = [
+    RC2_RAIL_RANDOM_SEED,
+    spec.id,
+    state.location,
+    state.addressLabel,
+    state.coords?.lat ?? '',
+    state.coords?.lng ?? '',
+    groupKey
+  ].join('|');
+  const result = [];
+  for (let index = 0; index < stores.length; index += 16) {
+    result.push(...rc2SeededShuffle(stores.slice(index, index + 16), locationKey + '|' + index));
+  }
+  return result;
+}
+
 function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
   const brandKeys = new Set();
   const photoKeys = new Set();
@@ -204,14 +248,17 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
   for (const store of fxRankStores(spec)) {
     const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
     const tier = typeof rc6OwnershipTier === 'function' ? rc6OwnershipTier(store) : 2;
-    const key = `${bucket}:${tier}`;
+    const key = String(bucket) + ':' + String(tier);
     const last = groups[groups.length - 1];
     if (!last || last.key !== key) groups.push({key, stores: [store]});
     else last.stores.push(store);
   }
-  const addStore = (store, relaxDiversity = false) => {
+  for (const group of groups) {
+    group.stores = rc2RandomizedRailStores(group.stores, spec, group.key);
+  }
+  const addStore = (store, relaxDiversity = false, allowGlobalReuse = false) => {
     const storeId = String(store.id);
-    if (selectedIds.has(storeId)) return;
+    if (selectedIds.has(storeId) || (!allowGlobalReuse && globallyUsed.has(storeId))) return;
     const brandKey = rc2BrandKey(store);
     const photoKey = fxPhoto(store);
     if (!relaxDiversity && (brandKeys.has(brandKey) || (photoKey && photoKeys.has(photoKey)))) return;
@@ -221,20 +268,19 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
     if (photoKey) photoKeys.add(photoKey);
     globallyUsed.add(storeId);
   };
-  for (const group of groups) {
-    const ordered = [
-      ...group.stores.filter(store => !globallyUsed.has(String(store.id))),
-      ...group.stores.filter(store => globallyUsed.has(String(store.id)))
-    ];
-    for (const store of ordered) {
-      addStore(store, false);
-      if (result.length >= limit) return result;
+  const fill = (allowGlobalReuse, relaxDiversity) => {
+    for (const group of groups) {
+      for (const store of group.stores) {
+        addStore(store, relaxDiversity, allowGlobalReuse);
+        if (result.length >= limit) return true;
+      }
     }
-    for (const store of ordered) {
-      addStore(store, true);
-      if (result.length >= limit) return result;
-    }
-  }
+    return false;
+  };
+  if (fill(false, false)) return result;
+  if (fill(false, true)) return result;
+  if (fill(true, false)) return result;
+  fill(true, true);
   return result;
 }
 
