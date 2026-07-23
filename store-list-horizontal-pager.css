@@ -1,0 +1,6 @@
+.store-pager-controls{display:grid;grid-template-columns:1fr;gap:9px;margin-top:14px}
+.store-pager-controls.both-directions{grid-template-columns:1fr 1fr}
+.store-pager-controls[hidden]{display:none!important}
+.store-pager-controls .load-more{margin-top:0}
+.store-page-prev{color:#30343c}
+.store-page-next{color:#172330}
