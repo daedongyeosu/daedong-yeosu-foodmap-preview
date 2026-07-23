@@ -1,6 +1,6 @@
 'use strict';
 
-const ASSET_VERSION = 'channel-recovery-06';
+const ASSET_VERSION = 'channel-recovery-07';
 const DATA_URL = `data/stores.json?v=${ASSET_VERSION}`;
 const PHOTO_MANIFEST_URL = 'data/photo-manifest.json';
 const PHOTO_POLICY_URL = 'data/photo-policy.json';
@@ -746,7 +746,8 @@ function openStore(store) {
   const local = LOCAL_DETAIL_KEYS.map(key=>routeFor(store,key)).filter(Boolean);
   const phoneDigits = String(store.phone || '').replace(/[^0-9]/g, '');
   const phoneVerified = /^02\d{7,8}$/.test(phoneDigits) || /^0(?:3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{7,8}$/.test(phoneDigits) || /^01[016789]\d{7,8}$/.test(phoneDigits) || /^070\d{8}$/.test(phoneDigits);
-  const phoneRoute = phoneVerified ? {key:'phone',name:`전화주문 ${phoneDigits}`,url:`tel:${phoneDigits}`} : null;
+  const registeredPhoneRoute = routeFor(store,'phone');
+  const phoneRoute = phoneVerified ? {key:'phone',name:`전화주문 ${phoneDigits}`,url:`tel:${phoneDigits}`} : registeredPhoneRoute;
   const external = EXTERNAL_APP_KEYS.map(key=>routeFor(store,key)).filter(Boolean);
   const otherRoutes = [phoneRoute,...external].filter(Boolean);
   const otherMenu = otherRoutes.length ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle" type="button"><span>다른 주문방법 보기</span><span class="other-inline-icons">${otherRoutes.map(route=>appIcon(route.key,'other-inline-icon')).join('')}</span><b>›</b></button><div class="store-other-popover" hidden><button type="button" class="store-other-close" aria-label="다른 주문방법 닫기">×</button>${otherRoutes.map(route => route.key === 'phone' ? routeLink(route,'store-other-link') : `<button type="button" class="store-other-link" data-external-route-key="${route.key}">${appIcon(route.key,'store-other-icon')}<span>${escapeHtml(route.name)}</span><b>›</b></button>`).join('')}</div></div>` : '';
