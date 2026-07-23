@@ -262,7 +262,7 @@ fxRc2Style.href='rc2-fixes.css?v=rc2';
 document.head.append(fxRc2Style);
 const fxRc3Style=document.createElement('link');
 fxRc3Style.rel='stylesheet';
-fxRc3Style.href='rc3-fixes.css?v=phone-audit-batch-04';
+fxRc3Style.href='rc3-fixes.css?v=selected-category-label-1';
 document.head.append(fxRc3Style);
 const fxRc4Style=document.createElement('link');
 fxRc4Style.rel='stylesheet';
@@ -288,11 +288,11 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=location-priority-2';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=category-first-paint-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
