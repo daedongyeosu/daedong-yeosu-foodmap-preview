@@ -69,6 +69,128 @@ function fxSelectedRails(){const hour=new Date().getHours();const ids=fxRainStat
 function fxRenderRails(){const root=$('#recommendRails');if(!root)return;if(state.category!=='전체'||state.query||state.brandId){root.hidden=true;root.innerHTML='';return;}root.hidden=false;const used=new Set();root.innerHTML=fxSelectedRails().map(spec=>{let list=fxRankStores(spec).filter(store=>!used.has(store.id)).slice(0,8);if(list.length<3)list=fxRankStores(spec).slice(0,8);list.slice(0,4).forEach(store=>used.add(store.id));const cards=list.map(store=>{const distance=spec.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';const locationLabel=distance||store.proximityLabel||'';return `<button type="button" class="rail-card glass-action" data-rail-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</p></span></button>`}).join('');const empty=spec.kind==='near'?'주소에서 동네를 확인하면 가까운 권역의 가게를 보여드립니다.':'추천 가게를 확인 중입니다.';return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div></header><div class="recommend-track">${cards||`<p class="empty">${empty}</p>`}</div></section>`;}).join('');}
 renderStores=function(options={}){fxOriginalRenderStores(options);fxRenderRails();};
 
+const FX_STORE_PAGER_NEXT_LABEL='다음 가게 보기 →';
+const FX_STORE_PAGER_PREV_LABEL='← 이전 가게';
+let fxStorePagerPage=0;
+let fxStorePagerContext='';
+let fxStorePagerFrame=0;
+let fxStorePagerScrollFrame=0;
+let fxStorePagerProgrammatic=false;
+let fxStorePagerObserver=null;
+
+function fxStorePagerElements(){
+ return {
+  controls:document.getElementById('storePagerControls'),
+  grid:document.getElementById('storeGrid'),
+  prev:document.getElementById('storePrevBtn'),
+  next:document.getElementById('loadMoreBtn')
+ };
+}
+function fxStorePagerEligible(grid){
+ return Boolean(grid&&grid.classList.contains('store-grid')&&state.category==='전체'&&!state.query&&!state.brandId);
+}
+function fxStorePagerContextKey(){
+ return [state.category,state.query,state.brandId,state.location,state.sortByDistance?'distance':'area'].join('\u0000');
+}
+function fxStorePagerMetrics(grid){
+ const cards=Array.from(grid?.children||[]).filter(node=>node.classList?.contains('store-card'));
+ const total=fxStorePagerEligible(grid)?filteredStores().length:cards.length;
+ if(!cards.length)return{cards,total,pageSize:1,maxPage:0};
+ const firstLeft=cards[0].offsetLeft;
+ const viewportEnd=firstLeft+Math.max(1,grid.clientWidth)-1;
+ const pageSize=Math.max(1,cards.filter(card=>card.offsetLeft<viewportEnd).length);
+ return{cards,total,pageSize,maxPage:Math.max(0,Math.ceil(total/pageSize)-1)};
+}
+function fxApplyStorePager(){
+ const {controls,grid,prev,next}=fxStorePagerElements();
+ if(!controls||!grid||!prev||!next)return;
+ if(!fxStorePagerEligible(grid)){
+  fxStorePagerPage=0;
+  fxStorePagerContext='';
+  prev.hidden=true;
+  controls.classList.remove('both-directions');
+  controls.hidden=next.hidden;
+  return;
+ }
+ const context=fxStorePagerContextKey();
+ if(context!==fxStorePagerContext){
+  fxStorePagerContext=context;
+  fxStorePagerPage=0;
+  grid.scrollLeft=0;
+ }
+ const {maxPage}=fxStorePagerMetrics(grid);
+ fxStorePagerPage=Math.max(0,Math.min(fxStorePagerPage,maxPage));
+ prev.textContent=FX_STORE_PAGER_PREV_LABEL;
+ next.textContent=FX_STORE_PAGER_NEXT_LABEL;
+ prev.hidden=fxStorePagerPage===0;
+ next.hidden=fxStorePagerPage>=maxPage;
+ controls.hidden=maxPage===0;
+ controls.classList.toggle('both-directions',!prev.hidden&&!next.hidden);
+}
+function fxScheduleStorePager(){
+ if(fxStorePagerFrame)cancelAnimationFrame(fxStorePagerFrame);
+ fxStorePagerFrame=requestAnimationFrame(()=>{fxStorePagerFrame=0;fxApplyStorePager()});
+}
+function fxReadStorePagerScroll(){
+ if(fxStorePagerProgrammatic)return;
+ const {grid}=fxStorePagerElements();
+ if(!fxStorePagerEligible(grid))return;
+ const {cards,pageSize,maxPage}=fxStorePagerMetrics(grid);
+ if(!cards.length)return;
+ const firstLeft=cards[0].offsetLeft;
+ const targetLeft=grid.scrollLeft+firstLeft;
+ let nearestIndex=0;
+ let nearestDistance=Infinity;
+ cards.forEach((card,index)=>{
+  const distance=Math.abs(card.offsetLeft-targetLeft);
+  if(distance<nearestDistance){nearestDistance=distance;nearestIndex=index}
+ });
+ fxStorePagerPage=Math.max(0,Math.min(Math.round(nearestIndex/pageSize),maxPage));
+ fxApplyStorePager();
+}
+function fxScheduleStorePagerScrollRead(){
+ if(fxStorePagerScrollFrame)cancelAnimationFrame(fxStorePagerScrollFrame);
+ fxStorePagerScrollFrame=requestAnimationFrame(()=>{fxStorePagerScrollFrame=0;fxReadStorePagerScroll()});
+}
+function fxScrollStorePagerTo(page){
+ const {grid}=fxStorePagerElements();
+ if(!fxStorePagerEligible(grid))return;
+ const {cards,pageSize,maxPage}=fxStorePagerMetrics(grid);
+ const nextPage=Math.max(0,Math.min(page,maxPage));
+ const target=cards[Math.min(cards.length-1,nextPage*pageSize)];
+ if(!target)return;
+ const left=Math.max(0,target.offsetLeft-cards[0].offsetLeft);
+ fxStorePagerPage=nextPage;
+ fxStorePagerProgrammatic=true;
+ fxApplyStorePager();
+ grid.scrollTo({left,behavior:fxReduced()?'auto':'smooth'});
+ window.setTimeout(()=>{fxStorePagerProgrammatic=false;fxReadStorePagerScroll()},460);
+}
+function fxMoveStorePager(direction){
+ const {grid}=fxStorePagerElements();
+ if(!fxStorePagerEligible(grid))return false;
+ const {cards,total,pageSize,maxPage}=fxStorePagerMetrics(grid);
+ const targetPage=Math.max(0,Math.min(fxStorePagerPage+(direction==='prev'?-1:1),maxPage));
+ if(targetPage===fxStorePagerPage)return true;
+ const targetIndex=targetPage*pageSize;
+ if(targetIndex>=cards.length&&cards.length<total){
+  state.visibleCount=Math.min(total,Math.max(Number(state.visibleCount||0)+40,targetIndex+pageSize));
+  renderStores();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>fxScrollStorePagerTo(targetPage)));
+ }else fxScrollStorePagerTo(targetPage);
+ return true;
+}
+function fxInitializeStorePager(){
+ const {grid}=fxStorePagerElements();
+ if(!grid||grid.dataset.storePagerReady==='1'){fxScheduleStorePager();return}
+ grid.dataset.storePagerReady='1';
+ grid.addEventListener('scroll',fxScheduleStorePagerScrollRead,{passive:true});
+ fxStorePagerObserver=new MutationObserver(fxScheduleStorePager);
+ fxStorePagerObserver.observe(grid,{childList:true});
+ window.addEventListener('resize',fxScheduleStorePager,{passive:true});
+ fxScheduleStorePager();
+}
+
 function fxAppBrowserMarkup(key,selectedCategory='추천'){
  const meta=APP_META[key],all=appRegisteredStores(key),cats=[...new Set(all.map(store=>store.cat).filter(Boolean))];const list=selectedCategory==='추천'?all:all.filter(store=>store.cat===selectedCategory);
  const chips=`<nav class="app-browser-category-chips"><button type="button" data-app-category="추천" class="${selectedCategory==='추천'?'active':''}">추천</button>${cats.map(cat=>`<button type="button" data-app-category="${escapeHtml(cat)}" class="${selectedCategory===cat?'active':''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
@@ -265,8 +387,11 @@ function fxPressStart(event){const target=event.target.closest('.glass-action,.c
 function fxOrderClick(button){const key=button.dataset.orderKey;$$('.order-item').forEach(item=>item.classList.remove('selected'));button.classList.add('selected');if(['direct','mukkebi','ddangyo','ondongne'].includes(key))fxFormation();if(key==='brand')fxOpenBrandHub('channels');else if(key==='phone')fxOpenPhoneDirectory();else openAppBrowser(key);}
 
 function fxInstallEvents(){
+ fxInitializeStorePager();
  document.addEventListener('pointerdown',fxPressStart,true);
  document.addEventListener('click',event=>{
+  const storePager=event.target.closest('[data-store-page-direction]');
+  if(storePager&&fxMoveStorePager(storePager.dataset.storePageDirection)){event.preventDefault();event.stopImmediatePropagation();return;}
   const order=event.target.closest('[data-order-key]');if(order){event.preventDefault();event.stopImmediatePropagation();fxOrderClick(order);return;}
   if(event.target.closest('#searchSurface')&&!event.target.closest('#clearMainSearch')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
   if(event.target.closest('#searchBtn')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}

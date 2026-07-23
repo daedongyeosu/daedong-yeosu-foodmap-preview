@@ -20,7 +20,7 @@
   <link rel="preload" as="image" href="assets/yeosu-rc6/dolsan-day-mobile.webp" media="(max-width: 767px)">
   <link rel="preload" as="image" href="assets/yeosu-rc6/dolsan-day-desktop.webp" media="(min-width: 768px)">
   <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
-  <link rel="stylesheet" href="app.css?v=selected-category-label-1">
+  <link rel="stylesheet" href="app.css?v=selected-category-label-1-store-list-pager-1">
   <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1">
   <link rel="stylesheet" href="rc6-fixes.css?v=location-store-hero-1">
   <link rel="stylesheet" href="rc7-address-map.css?v=home-share-touch-3">
@@ -106,7 +106,10 @@
     <section id="recommendSection" class="section">
       <div class="section-head"><h2>가게목록</h2><button id="resetCategoryBtn" class="text-btn" type="button" hidden>전체 추천 보기 ›</button></div>
       <div id="storeGrid" class="store-grid"><div class="empty">가게 정보를 불러오는 중입니다.</div></div>
-      <button id="loadMoreBtn" class="load-more" type="button" hidden>더보기</button>
+      <div id="storePagerControls" class="store-pager-controls">
+        <button id="storePrevBtn" class="load-more store-page-prev" type="button" data-store-page-direction="prev" hidden>← 이전 가게</button>
+        <button id="loadMoreBtn" class="load-more store-page-next" type="button" data-store-page-direction="next" hidden>다음 가게 보기 →</button>
+      </div>
     </section>
 
     <section class="section promo-section" aria-label="광고와 지역 소식">
@@ -132,6 +135,6 @@
   <noscript><p class="noscript">대동여수음식지도를 이용하려면 자바스크립트를 켜주세요.</p></noscript>
   <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
   <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1" defer></script>
-  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1" defer></script>
+  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-store-list-pager-1" defer></script>
 </body>
 </html>
