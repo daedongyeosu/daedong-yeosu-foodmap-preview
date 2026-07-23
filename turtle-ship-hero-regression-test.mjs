@@ -10,6 +10,7 @@ const checks = [
   ['데스크톱 압축 자산 사용', html.includes('turtle-ship-hero-v2.webp')],
   ['기존 바다선 제거', !html.includes('class="sea-line"')],
   ['구형 효과용 DOM은 비가시 상태', html.includes('id="navalLane" hidden')],
+  ['거북선이 선명하게 보이는 열린 바다 구간', html.includes('class="turtle-ship-passage"') && /\.turtle-ship-passage\s*\{[\s\S]*?height:clamp\(82px,10vw,108px\)/.test(css)],
   ['거북선 레이어가 터치를 가로막지 않음', /\.turtle-ship-hero-scene\s*\{[\s\S]*?pointer-events:none/.test(css)],
   ['남동쪽에서 북서쪽으로 축소 이동', css.includes('translate3d(42%,18%,0) scale(1.08)') && css.includes('translate3d(-83%,-153%,0) scale(.16)')],
   ['세션당 한 번만 실행', js.includes('daedongTurtleShipHeroPlayedV1') && js.includes('alreadyPlayed')],

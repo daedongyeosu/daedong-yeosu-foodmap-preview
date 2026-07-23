@@ -6,6 +6,12 @@
   display:none!important;
 }
 
+.turtle-ship-passage{
+  position:relative;
+  height:clamp(82px,10vw,108px);
+  pointer-events:none;
+}
+
 .turtle-ship-hero-scene{
   position:absolute;
   inset:0;
@@ -59,7 +65,7 @@
 }
 
 .turtle-ship-hero-scene.is-sailing .turtle-ship-hero-voyage{
-  animation:turtle-ship-hero-voyage 7.2s cubic-bezier(.19,.58,.2,1) both;
+  animation:turtle-ship-hero-voyage 8.4s cubic-bezier(.19,.58,.2,1) both;
 }
 
 .turtle-ship-hero-scene.is-sailing .turtle-ship-hero-voyage::before{
@@ -84,11 +90,15 @@
   7%{
     opacity:.98;
   }
-  34%{
+  29%{
     opacity:.96;
-    transform:translate3d(-2%,-35%,0) scale(.72) rotate(-5deg);
+    transform:translate3d(1%,-28%,0) scale(.76) rotate(-5deg);
   }
-  68%{
+  43%{
+    opacity:.96;
+    transform:translate3d(-13%,-45%,0) scale(.67) rotate(-5.3deg);
+  }
+  70%{
     opacity:.9;
     transform:translate3d(-48%,-92%,0) scale(.4) rotate(-6deg);
     filter:drop-shadow(0 8px 13px rgba(0,31,49,.28)) saturate(.84) contrast(1.02);
@@ -126,6 +136,10 @@
 }
 
 @media(max-width:420px){
+  .turtle-ship-passage{
+    height:112px;
+  }
+
   .turtle-ship-hero-voyage{
     left:48%;
     top:66%;
