@@ -14,7 +14,7 @@ const checks = [
   ['거북선 레이어가 터치를 가로막지 않음', /\.turtle-ship-hero-scene\s*\{[\s\S]*?pointer-events:none/.test(css)],
   ['모바일에서 현재보다 약 3배 크게 출항', css.includes('width:180vw') && css.includes('scale(1.24)') && html.includes('width="1400" height="700"')],
   ['실제 바다 구간 중심을 운항 기준점으로 사용', js.includes('syncPassageCenter') && js.includes('--turtle-passage-center') && css.includes('var(--turtle-passage-center,67%)')],
-  ['바다 안에서 남동쪽에서 북서쪽으로 축소 이동', css.includes('translate3d(24%,-47%,0) scale(1.24)') && css.includes('translate3d(-28%,-58%,0) scale(.34)') && !css.includes('-153%')],
+  ['처음부터 오른쪽 바다에 보이며 북서쪽으로 축소 이동', css.includes('translate3d(-4%,-47%,0) scale(1.24)') && css.includes('translate3d(-24%,-58%,0) scale(.34)') && !css.includes('-153%')],
   ['12.6초 동안 유유히 운항 뒤 자연스럽게 종료', css.includes('12.6s linear') && js.includes('setTimeout(markFinished, 13200)')],
   ['세션당 한 번만 실행', js.includes('daedongTurtleShipHeroPlayedV1') && js.includes('alreadyPlayed')],
   ['시작 광고·팝업이 닫힌 홈에서 운항', js.includes('homeIsClear') && js.includes('MutationObserver')],
