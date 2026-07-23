@@ -668,7 +668,13 @@ fxInstallEvents = function rc2InstallEvents() {
     if (searchStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(searchStore.dataset.searchStoreId); if (store) openStore(store); return; }
     if (event.target.id === 'fxSearchRun') { event.preventDefault(); event.stopImmediatePropagation(); fxSearchModal($('#fxSearchInput')?.value || ''); return; }
     const share = event.target.closest('[data-share-store]');
-    if (share) { const store = fxStoreById(share.dataset.shareStore); if (store) fxShare(store, share); return; }
+    if (share) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      const store = fxStoreById(share.dataset.shareStore);
+      if (store) fxShare(store, share);
+      return;
+    }
     const favorite = event.target.closest('[data-favorite-store]');
     if (favorite) fxGull(favorite, true);
     const comparedExternal = event.target.closest('a[data-community-original]');
