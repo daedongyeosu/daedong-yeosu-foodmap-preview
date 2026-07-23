@@ -1,6 +1,6 @@
 'use strict';
 
-const RC5_ICON_SPRITE='assets/ui/category-icons-color.svg';
+const RC5_ICON_SPRITE=CATEGORY_ICON_SPRITE;
 const RC5_ICON_MAP=Object.freeze([
  [/^전체$/,'all'],[/마라|양꼬치/,'mala'],[/치킨|닭/,'chicken'],[/피자/,'pizza'],[/중식|짜장|짬뽕/,'chinese'],
  [/분식.*도시락|도시락.*분식/,'lunchbox'],[/분식|떡볶이/,'snack'],[/족발|보쌈/,'pork'],[/회|해산물|초밥|선어|수산/,'seafood'],
@@ -12,9 +12,9 @@ const rc5Pointers=new Map();
 
 function rc5IconId(name){const value=String(name||'');return RC5_ICON_MAP.find(([pattern])=>pattern.test(value))?.[1]||'other'}
 function rc5Icon(name,cls='rc5-category-icon'){return `<svg class="${cls}" aria-hidden="true"><use href="${RC5_ICON_SPRITE}#${rc5IconId(name)}"></use></svg>`}
-function rc5CategoryButton(name,modal=false){return `<button type="button" class="${modal?'':'category glass-action '}${state.category===name?'active':''}" ${modal?'data-modal-cat':'data-cat'}="${escapeHtml(name)}">${rc5Icon(name,modal?'rc5-category-modal-icon':'rc5-category-icon')}<${modal?'b':'span'}>${escapeHtml(name)}</${modal?'b':'span'}></button>`}
+function rc5CategoryButton(name,modal=false){return modal?`<button type="button" class="${state.category===name?'active':''}" data-modal-cat="${escapeHtml(name)}">${rc5Icon(name,'rc5-category-modal-icon')}<b>${escapeHtml(name)}</b></button>`:categoryButtonMarkup(name)}
 fxCategoryMarkup=name=>rc5CategoryButton(name,false);
-renderCategories=function(){$('#categoryGrid').innerHTML=['전체',...mainCategories()].map(name=>rc5CategoryButton(name,false)).join('')};
+renderCategories=renderCategoryGrid;
 allCategoriesModal=function(){const names=['전체',...categories.filter(name=>name!=='전체')];openModal(`<section class="category-modal"><h2 id="modalTitle">전체 음식 카테고리</h2><div class="all-category-list rc5-category-list">${names.map(name=>rc5CategoryButton(name,true)).join('')}</div></section>`);requestAnimationFrame(()=>{$('#modal .modal-card').scrollTop=0})};
 
 function rc5BrandKey(store){const mapped=rc2BrandKey(store);if(mapped&&mapped!==normalize(store?.name||''))return mapped;let name=String(store?.name||'').replace(/\([^)]*\)/g,'').replace(/\s+/g,' ').trim();name=name.replace(/\s+(?:여수)?[^\s]{1,10}(?:점|본점)$/,'').trim();const first=name.split(' ')[0];if(/(?:통닭|치킨|피자|버거|커피|카페)$/.test(first))return normalize(first);return normalize(name)}
