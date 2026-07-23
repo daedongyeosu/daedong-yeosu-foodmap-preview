@@ -157,6 +157,10 @@ function fxShareToast(message){
  const toast=document.createElement('div');toast.className='home-share-toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');toast.textContent=message;
  document.body.append(toast);setTimeout(()=>toast.remove(),1800);
 }
+function fxSetHomeShareStatus(message){
+ const status=document.querySelector('[data-home-share-status]');
+ if(status)status.textContent=message;
+}
 async function fxCopyHomeShareUrl(){
  try{
   if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(FX_HOME_SHARE_URL);
@@ -164,15 +168,42 @@ async function fxCopyHomeShareUrl(){
    const input=document.createElement('textarea');input.value=FX_HOME_SHARE_URL;input.setAttribute('readonly','');input.style.position='fixed';input.style.opacity='0';
    document.body.append(input);input.select();const copied=document.execCommand('copy');input.remove();if(!copied)throw new Error('copy failed');
   }
+  fxSetHomeShareStatus('링크를 복사했습니다. 원하는 대화방에 붙여넣어 주세요.');
   fxShareToast('대동여수음식지도 링크를 복사했습니다.');
- }catch{fxShareToast('공유 링크: daedongmap.kr');}
+ }catch{
+  fxSetHomeShareStatus('복사가 차단되었습니다. 아래 주소를 길게 눌러 복사해 주세요.');
+  fxShareToast('공유 링크: daedongmap.kr');
+ }
 }
-async function fxShareHome(target){
+function fxOpenHomeShare(target){
+ fxGull(target,false);
+ openModal(`<section class="home-share-sheet">
+  <h2 id="modalTitle">대동여수음식지도 공유하기</h2>
+  <p>가게 한 곳이 아니라 대동여수음식지도 홈 전체를 가족·지인에게 알려주세요.</p>
+  <div class="home-share-preview"><img src="assets/logo.png" alt=""><span><b>대동여수음식지도</b><small>${FX_HOME_SHARE_URL}</small></span></div>
+  <div class="home-share-actions">
+   <button class="home-share-native glass-action" type="button" data-home-share-native>휴대폰 공유창 열기</button>
+   <button class="home-share-copy glass-action" type="button" data-home-share-copy>링크 복사하기</button>
+  </div>
+  <p class="home-share-status" role="status" aria-live="polite" data-home-share-status>공유 방법을 선택해 주세요.</p>
+ </section>`);
+}
+async function fxShareHomeNative(target){
  fxGull(target,false);
  const payload={title:'대동여수음식지도',text:FX_HOME_SHARE_TEXT,url:FX_HOME_SHARE_URL};
- if(!navigator.share){await fxCopyHomeShareUrl();return;}
- try{await navigator.share(payload);}
- catch(error){if(error?.name!=='AbortError')await fxCopyHomeShareUrl();}
+ if(!navigator.share){
+  fxSetHomeShareStatus('이 브라우저는 휴대폰 공유창을 지원하지 않아 링크를 복사합니다.');
+  await fxCopyHomeShareUrl();
+  return;
+ }
+ fxSetHomeShareStatus('휴대폰 공유창을 여는 중입니다…');
+ try{
+  await navigator.share(payload);
+  fxSetHomeShareStatus('공유가 완료되었습니다.');
+ }catch(error){
+  if(error?.name==='AbortError')fxSetHomeShareStatus('공유를 취소했습니다. 다시 선택할 수 있습니다.');
+  else await fxCopyHomeShareUrl();
+ }
 }
 
 function fxRainCount(level){return level==='light'?15:level==='moderate'?27:40;}
@@ -188,7 +219,9 @@ function fxInstallEvents(){
   const order=event.target.closest('[data-order-key]');if(order){event.preventDefault();event.stopImmediatePropagation();fxOrderClick(order);return;}
   if(event.target.closest('#searchSurface')&&!event.target.closest('#clearMainSearch')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
   if(event.target.closest('#searchBtn')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
-  const homeShare=event.target.closest('[data-share-home]');if(homeShare){event.preventDefault();event.stopImmediatePropagation();fxShareHome(homeShare);return;}
+  const homeShare=event.target.closest('[data-share-home]');if(homeShare){event.preventDefault();event.stopImmediatePropagation();fxOpenHomeShare(homeShare);return;}
+  const homeShareNative=event.target.closest('[data-home-share-native]');if(homeShareNative){event.preventDefault();event.stopImmediatePropagation();fxShareHomeNative(homeShareNative);return;}
+  if(event.target.closest('[data-home-share-copy]')){event.preventDefault();event.stopImmediatePropagation();fxCopyHomeShareUrl();return;}
   const rail=event.target.closest('[data-rail-store-id]');if(rail){const store=fxStoreById(rail.dataset.railStoreId);if(store)openStore(store);return;}
   const phoneCat=event.target.closest('[data-phone-category]');if(phoneCat){fxOpenPhoneDirectory(phoneCat.dataset.phoneCategory);return;}
   const phoneStore=event.target.closest('[data-phone-store-id]');if(phoneStore){fxOpenPhoneConfirm(phoneStore.dataset.phoneStoreId);return;}

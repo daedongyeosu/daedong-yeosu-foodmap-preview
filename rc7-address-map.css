@@ -43,6 +43,11 @@
 .topbar-share-btn .home-share-icon path{
   fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round
 }
+.topbar-share-btn{
+  position:relative!important;z-index:5!important;pointer-events:auto!important;
+  cursor:pointer;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(255,106,42,.18)
+}
+.topbar-share-btn *{pointer-events:none!important}
 .topbar-share-btn:active{transform:scale(.97)}
 .topbar .brand-wordmark{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;pointer-events:auto;
