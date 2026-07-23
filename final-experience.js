@@ -12,7 +12,7 @@ const FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS={
 const FX_BATTLE_SESSION='daedongNavalSuccessPlayedV1';
 const FX_ENTRY_SESSION='daedongEntryFireworkPlayedV1';
 const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
-const FX_HOME_SHARE_URL='https://daedongmap.com/';
+const FX_HOME_SHARE_URL='https://preview.daedongmap.com/';
 const FX_HOME_SHARE_TEXT='여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.';
 const FX_STORE_SHARE_PARAM='store';
 window.DAEDONG_WEATHER_CONFIG=window.DAEDONG_WEATHER_CONFIG||{enabled:false,proxyUrl:'',cacheMinutes:18};
@@ -195,7 +195,7 @@ async function fxCopyHomeShareUrl(){
   fxShareToast('대동여수음식지도 링크를 복사했습니다.');
  }catch{
   fxSetHomeShareStatus('복사가 차단되었습니다. 아래 주소를 길게 눌러 복사해 주세요.');
-  fxShareToast('공유 링크: daedongmap.com');
+  fxShareToast('공유 링크: preview.daedongmap.com');
  }
 }
 function fxOpenHomeShare(target){
