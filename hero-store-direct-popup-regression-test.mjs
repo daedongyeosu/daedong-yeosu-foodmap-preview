@@ -16,10 +16,10 @@ assert.doesNotMatch(
   /if\(store\)openStore\(store\);return;/,
   'A store hero must not synchronously place a photo-viewer target under the same tap.',
 );
-assert.match(
+assert.doesNotMatch(
   app,
-  /data-photo-viewer data-gallery-index=/,
-  'Tapping a photo inside an already-open store popup must still support the photo viewer.',
+  /data-photo-viewer|openPhotoViewer|closePhotoViewer|photoViewerCarousel/,
+  'The removed full-screen photo viewer must not be reachable from a store popup.',
 );
 assert.match(
   finalExperience,
