@@ -12,3 +12,6 @@
 
 #categoryGrid [data-cat="전체"]{pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:rgba(255,106,42,.14);cursor:pointer}
 #categoryGrid [data-cat="전체"] *{pointer-events:none!important}
+.home-share-toast{position:fixed;left:50%;top:max(18px,env(safe-area-inset-top));z-index:1900;transform:translateX(-50%);max-width:calc(100vw - 32px);padding:11px 16px;border-radius:999px;background:rgba(7,35,58,.94);color:#fff;font-size:13px;font-weight:850;line-height:1.35;text-align:center;white-space:nowrap;box-shadow:0 8px 26px rgba(0,0,0,.22);animation:home-share-toast 1.8s ease both;pointer-events:none}
+@keyframes home-share-toast{0%{opacity:0;transform:translate(-50%,-8px)}12%,82%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,-6px)}}
+@media(max-width:360px){.home-share-toast{font-size:12px;white-space:normal}}

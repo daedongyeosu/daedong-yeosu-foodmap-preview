@@ -12,6 +12,8 @@ const FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS={
 const FX_BATTLE_SESSION='daedongNavalSuccessPlayedV1';
 const FX_ENTRY_SESSION='daedongEntryFireworkPlayedV1';
 const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
+const FX_HOME_SHARE_URL='https://daedongmap.kr/';
+const FX_HOME_SHARE_TEXT='여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.';
 window.DAEDONG_WEATHER_CONFIG=window.DAEDONG_WEATHER_CONFIG||{enabled:false,proxyUrl:'',cacheMinutes:18};
 
 let fxBrandData={stores:[],brands:[]};
@@ -150,6 +152,28 @@ function fxFireworks(withToast=false){if(fxReduced()||fxLowPower())return;const 
 function fxBattle({phone=false}={}){fxFormation();fxBridgeLight();if(phone||fxReduced()||fxLowPower()||sessionStorage.getItem(FX_BATTLE_SESSION))return;sessionStorage.setItem(FX_BATTLE_SESSION,'1');const lane=$('#navalLane');if(!lane)return;for(const cls of ['enemy-ship','battle-smoke','cannon-flash','cannon-ball']){const node=document.createElement('i');node.className=cls;lane.append(node);setTimeout(()=>node.remove(),1250);}fxFireworks(true);}
 function fxGull(target,favorite=false){if(fxReduced()||fxLowPower())return;const r=target.getBoundingClientRect(),g=document.createElement('i');g.className=`gull-fx ${favorite?'favorite':''}`;g.style.left=`${r.left+r.width/2}px`;g.style.top=`${r.top}px`;document.body.append(g);setTimeout(()=>g.remove(),520);}
 function fxShare(store,target){fxGull(target,false);const url=location.href,title=`${store.name} · 대동여수음식지도`;if(navigator.share)navigator.share({title,url}).catch(()=>{});else navigator.clipboard?.writeText(url);}
+function fxShareToast(message){
+ document.querySelector('.home-share-toast')?.remove();
+ const toast=document.createElement('div');toast.className='home-share-toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');toast.textContent=message;
+ document.body.append(toast);setTimeout(()=>toast.remove(),1800);
+}
+async function fxCopyHomeShareUrl(){
+ try{
+  if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(FX_HOME_SHARE_URL);
+  else{
+   const input=document.createElement('textarea');input.value=FX_HOME_SHARE_URL;input.setAttribute('readonly','');input.style.position='fixed';input.style.opacity='0';
+   document.body.append(input);input.select();const copied=document.execCommand('copy');input.remove();if(!copied)throw new Error('copy failed');
+  }
+  fxShareToast('대동여수음식지도 링크를 복사했습니다.');
+ }catch{fxShareToast('공유 링크: daedongmap.kr');}
+}
+async function fxShareHome(target){
+ fxGull(target,false);
+ const payload={title:'대동여수음식지도',text:FX_HOME_SHARE_TEXT,url:FX_HOME_SHARE_URL};
+ if(!navigator.share){await fxCopyHomeShareUrl();return;}
+ try{await navigator.share(payload);}
+ catch(error){if(error?.name!=='AbortError')await fxCopyHomeShareUrl();}
+}
 
 function fxRainCount(level){return level==='light'?15:level==='moderate'?27:40;}
 function fxApplyRain(level){fxRainState=['light','moderate','strong'].includes(level)?level:'clear';const shell=$('.yeosu-night-shell'),layer=$('.weather-layer');if(!shell||!layer)return;shell.dataset.weather=fxRainState;layer.className='weather-layer';layer.innerHTML='';if(fxRainState==='clear'){fxRenderRails();return;}layer.classList.add('rain');const count=Math.max(6,Math.round(fxRainCount(fxRainState)*(fxLowPower()?.5:1)));for(let i=0;i<count;i++){const d=document.createElement('i');d.className='rain-drop';d.style.left=`${(i*37)%101}%`;d.style.animationDelay=`-${(i*83)%760}ms`;d.style.setProperty('--rain-speed',fxRainState==='strong'?'430ms':fxRainState==='moderate'?'590ms':'780ms');d.style.setProperty('--rain-opacity',fxRainState==='strong'?'.72':fxRainState==='moderate'?'.6':'.43');layer.append(d);}fxRenderRails();}
@@ -164,6 +188,7 @@ function fxInstallEvents(){
   const order=event.target.closest('[data-order-key]');if(order){event.preventDefault();event.stopImmediatePropagation();fxOrderClick(order);return;}
   if(event.target.closest('#searchSurface')&&!event.target.closest('#clearMainSearch')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
   if(event.target.closest('#searchBtn')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
+  const homeShare=event.target.closest('[data-share-home]');if(homeShare){event.preventDefault();event.stopImmediatePropagation();fxShareHome(homeShare);return;}
   const rail=event.target.closest('[data-rail-store-id]');if(rail){const store=fxStoreById(rail.dataset.railStoreId);if(store)openStore(store);return;}
   const phoneCat=event.target.closest('[data-phone-category]');if(phoneCat){fxOpenPhoneDirectory(phoneCat.dataset.phoneCategory);return;}
   const phoneStore=event.target.closest('[data-phone-store-id]');if(phoneStore){fxOpenPhoneConfirm(phoneStore.dataset.phoneStoreId);return;}

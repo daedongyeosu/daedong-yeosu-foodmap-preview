@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
   <meta name="theme-color" content="#ff5a1f">
   <meta name="description" content="여수 음식점과 주문방법을 한눈에 찾는 대동여수음식지도">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="대동여수음식지도">
+  <meta property="og:title" content="대동여수음식지도">
+  <meta property="og:description" content="여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.">
+  <meta property="og:url" content="https://daedongmap.kr/">
+  <meta property="og:image" content="https://daedongmap.kr/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://daedongmap.kr/">
   <title>대동여수음식지도</title>
   <link rel="preload" as="image" href="images/01.png">
   <link rel="preload" as="image" href="assets/yeosu-rc6/dolsan-day-mobile.webp" media="(max-width: 767px)">
@@ -13,7 +22,7 @@
   <link rel="stylesheet" href="app.css?v=store-list-horizontal-1">
   <link rel="stylesheet" href="final-experience.css?v=category-all-touch-1">
   <link rel="stylesheet" href="rc6-fixes.css?v=location-store-hero-1">
-  <link rel="stylesheet" href="rc7-address-map.css?v=rounded-hero-1">
+  <link rel="stylesheet" href="rc7-address-map.css?v=home-share-brand-1">
 </head>
 <body>
   <div id="app">
@@ -30,7 +39,17 @@
         <span class="brand-symbol" aria-hidden="true"><img src="assets/logo.png" alt=""></span>
         <span class="brand-word brand-word-right" aria-hidden="true">음식지도</span>
       </a>
-      <button id="noticeBtn" class="icon-btn glass-action" type="button" aria-label="알림"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#bell"></use></svg><b class="badge">2</b></button>
+      <div class="topbar-actions">
+        <button id="homeShareBtn" class="icon-btn topbar-share-btn glass-action" type="button" data-share-home aria-label="대동여수음식지도 공유하기">
+          <svg class="ui-icon home-share-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="18" cy="5" r="2.2"></circle>
+            <circle cx="6" cy="12" r="2.2"></circle>
+            <circle cx="18" cy="19" r="2.2"></circle>
+            <path d="m8 11 7.8-4.6M8 13l7.8 4.6"></path>
+          </svg>
+        </button>
+        <button id="noticeBtn" class="icon-btn glass-action" type="button" aria-label="알림"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#bell"></use></svg><b class="badge">2</b></button>
+      </div>
     </header>
 
     <section class="search-row main-search-row" aria-label="가게 검색">
@@ -113,6 +132,6 @@
   <noscript><p class="noscript">대동여수음식지도를 이용하려면 자바스크립트를 켜주세요.</p></noscript>
   <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
   <script src="app.js?v=address-home-return-1" defer></script>
-  <script src="final-experience.js?v=address-home-return-1" defer></script>
+  <script src="final-experience.js?v=home-share-brand-1" defer></script>
 </body>
 </html>
