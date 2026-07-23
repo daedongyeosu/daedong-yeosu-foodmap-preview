@@ -36988,7 +36988,7 @@
     "district": "여서,문수",
     "category": "족발/보쌈",
     "address": "",
-    "phone": "",
+    "phone": "050713018246",
     "naverMap": "",
     "notionUrl": "https://app.notion.com/p/2f6da158dd2a80ab9c16d70647e1d012",
     "image": "assets/notion-recovery-180/709d27cafd434e30/01.jpg",
@@ -37003,6 +37003,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4qWUGxu",
         "enabled": true
       }
     ],
@@ -37045,7 +37050,7 @@
     "district": "국동",
     "category": "면요리",
     "address": "",
-    "phone": "",
+    "phone": "050841789106",
     "naverMap": "",
     "notionUrl": "https://app.notion.com/p/357da158dd2a802ea8dace62da48cd2d",
     "image": "assets/notion-recovery-180/c057c0a0076a8eb1/01.jpg",
@@ -37060,6 +37065,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/3QPKFoX",
         "enabled": true
       }
     ],

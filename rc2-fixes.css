@@ -40,6 +40,10 @@
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
+.phone-order-card {
+  color: #172330;
+  text-decoration: none;
+}
 .weather-layer,
 .bridge-light-layer,
 .micro-fx-layer,

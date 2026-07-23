@@ -16,11 +16,9 @@ const RC3_FEEDBACK_CHANNELS = Object.freeze([
   '먹깨비', '땡겨요', '온동네', '요기요', '쿠팡이츠', '배달의민족',
   '브랜드앱 상담', '전화주문 등록', '기타 확인이 필요한 기존 주문채널'
 ]);
-const RC3_OWNER_DIRECTED_PHONE_ROUTE_STORES = new Set([
-  'fa0bccb2d190a7c0',
-  '8d9df0fbb77ce9eb',
-  '9f89e6d7784cf4a2',
-  '9ee73ce6168105ec'
+const RC3_BLOCKED_PHONE_ROUTE_STORES = new Set([
+  '09de7c8235046632', // 불족대가 미평점: placeholder number
+  '0ad5341dc696d4f1'  // 맛있는 반찬: another store's placeholder page
 ]);
 const rc3RailPointers = new Map();
 let rc3InternalPhoneByStore = new Map();
@@ -181,9 +179,10 @@ function rc3FormatPhone(value) {
 }
 
 fxPhoneStores = function rc3PhoneStores(category = '추천') {
-  let list = fxPhoneData.storeMappings
-    .map(item => ({...item, store: fxStoreById(item.store_id)}))
-    .filter(item => fxVisible(item.store) && item.clickableTel === true && rc3VerifiedPhone(item.store));
+  let list = stores
+    .filter(fxVisible)
+    .map(store => ({store, phoneOrder: resolveStoreChannels(store).primaryOrder.phoneOrder}))
+    .filter(item => Boolean(item.phoneOrder));
   if (category !== '추천') list = list.filter(item => item.store.cat === category);
   return list.sort((a, b) => (fxDistance(a.store) ?? 999) - (fxDistance(b.store) ?? 999) || a.store.name.localeCompare(b.store.name, 'ko'));
 };
@@ -194,8 +193,13 @@ fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천') {
   const list = fxPhoneStores(category);
   if (!$('#modal')?.hidden && $('#modalContent .phone-order-sheet')) rc2ReplaceModal();
   const chips = `<nav class="app-browser-category-chips"><button type="button" data-phone-category="추천" class="${category === '추천' ? 'active' : ''}">추천</button>${cats.map(cat => `<button type="button" data-phone-category="${escapeHtml(cat)}" class="${category === cat ? 'active' : ''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
-  const cards = list.map(({store}) => `<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
-  openModal(`<section class="phone-order-sheet"><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p>${chips}${rc2SelectedCategoryMarkup(category)}<div class="phone-order-list">${cards || '<p class="empty">내부에서 확인된 전화번호가 있는 가게가 없습니다.</p>'}</div></section>`);
+  const cards = list.map(({store, phoneOrder}) => {
+    const content = `${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b>`;
+    return phoneOrder.url
+      ? `<a class="phone-order-card glass-action" href="${escapeHtml(phoneOrder.url)}" target="_blank" rel="noopener" data-phone-route-store-id="${escapeHtml(store.id)}">${content}</a>`
+      : `<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${content}</button>`;
+  }).join('');
+  openModal(`<section class="phone-order-sheet"><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호 또는 확인된 전화주문 페이지를 확인한 뒤 전화해 주세요.</p>${chips}${rc2SelectedCategoryMarkup(category)}<div class="phone-order-list">${cards || '<p class="empty">확인 가능한 전화주문 경로가 없습니다.</p>'}</div></section>`);
   rc2RevealSelectedCategory();
 };
 
@@ -220,10 +224,11 @@ function resolveStoreChannels(store) {
   const safeStore = store && typeof store === 'object' ? store : {};
   const route = key => routeFor(safeStore, key) || null;
   const phone = rc3VerifiedPhone(safeStore);
+  const phoneRoute = route('phone');
   const phoneOrder = phone && fxPhoneByStore.get(String(safeStore.id))?.clickableTel
     ? {key: 'phone', name: '전화주문', phone}
-    : RC3_OWNER_DIRECTED_PHONE_ROUTE_STORES.has(String(safeStore.id))
-      ? route('phone')
+    : phoneRoute && !RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(safeStore.id))
+      ? phoneRoute
       : null;
   return {
     utilities: {
