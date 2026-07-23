@@ -9,8 +9,8 @@ const priorities = JSON.parse(readFileSync(new URL('./data/store-priority.json',
 
 assert.match(html, /id="storePrevBtn"[^>]+data-store-page-direction="prev"[^>]*hidden>← 이전 가게<\/button>/);
 assert.match(html, /id="loadMoreBtn"[^>]+data-store-page-direction="next"[^>]*hidden>다음 가게 보기 →<\/button>/);
-assert.match(html, /app\.css\?v=selected-category-label-1-store-list-pager-1/);
-assert.match(html, /final-experience\.js\?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-store-list-pager-1/);
+assert.match(html, /app\.css\?v=selected-category-label-1-store-list-pager-2/);
+assert.match(html, /final-experience\.js\?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-store-list-pager-2/);
 
 assert.match(css, /\.store-pager-controls\{display:grid;grid-template-columns:1fr/);
 assert.match(css, /\.store-pager-controls\.both-directions\{grid-template-columns:1fr 1fr\}/);
