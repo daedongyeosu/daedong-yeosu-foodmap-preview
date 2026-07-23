@@ -29665,6 +29665,11 @@
         "enabled": true
       },
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4tDTb7W",
+        "enabled": true
+      },
+      {
         "name": "전화주문",
         "url": "https://bit.ly/전화-1인피자피자먹다여수여서점",
         "enabled": true
@@ -29826,7 +29831,7 @@
     "category": "햄버거/샌드위치/토스트/핫도그",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4rAl8NH",
     "notionUrl": "https://app.notion.com/p/2fcda158dd2a8003bd46c55e388d5fc7",
     "image": "assets/notion-recovery-180/f0f1211ec16d7730/01.png",
     "img": "assets/notion-recovery-180/f0f1211ec16d7730/01.png",
@@ -29838,8 +29843,33 @@
     ],
     "routes": [
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4rsOBsH",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4a9DDBh",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4kcYAQl",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4kc31uO",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4buMfVx",
         "enabled": true
       }
     ],
@@ -29991,8 +30021,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/45uhjAU",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4rdGL5V",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/49GAvhp",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3NGkQ98",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/49XNHgK",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/49GK5kr",
         "enabled": true
       }
     ],
@@ -30232,6 +30292,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616538886",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-계동치킨",
         "enabled": true
@@ -30449,7 +30514,7 @@
     "category": "치킨",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4qQcivc",
     "notionUrl": "https://app.notion.com/p/2f6da158dd2a8092a251ca7553a34391",
     "image": "assets/notion-recovery-180/0836fdf722805702/01.jpg",
     "img": "assets/notion-recovery-180/0836fdf722805702/01.jpg",
@@ -30461,8 +30526,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/3ZAu0GW",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4t5xij3",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4k8pl8K",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/49Mak93",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4kccUZE",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4a4lC7C",
         "enabled": true
       }
     ],
@@ -30718,6 +30813,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0618100666",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-기영이숯불두마리치킨여수여서점",
         "enabled": true
@@ -30876,8 +30976,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4taozvK",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4ceFYvN",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/423Akrz",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4sssKlo",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/48sBb8X",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4cya6Ue",
         "enabled": true
       }
     ],
@@ -31009,8 +31139,28 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4u7dE5j",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4x1ahQk",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4aglLp7",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4uDst0L",
         "enabled": true
       }
     ],
@@ -31056,7 +31206,7 @@
     "category": "한식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4qdrQrG",
     "notionUrl": "https://app.notion.com/p/2fcda158dd2a80adb0d2d8245be21c35",
     "image": "assets/notion-recovery-180/10b54f62f36e9854/01.png",
     "img": "assets/notion-recovery-180/10b54f62f36e9854/01.png",
@@ -31068,8 +31218,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/3NSEezY",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4qq4uPS",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4tgDt3J",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3NVR0O2",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4asnVCx",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4a9VIz3",
         "enabled": true
       }
     ],
@@ -31127,8 +31307,23 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/3Oq6vyx",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/41W1O2v",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4sR0EQE",
         "enabled": true
       }
     ],
@@ -31206,6 +31401,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/37dda158dd2a8028b051e7239ab34143",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/qxv263",
         "enabled": true
@@ -31280,8 +31480,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4r9LRjF",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/45yJfUl",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3ZxYTvz",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/3LDmuIa",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/49YKuNY",
         "enabled": true
       }
     ],
@@ -31344,8 +31569,23 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-neul",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel050713725908",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-neul",
         "enabled": true
       },
       {
@@ -31656,7 +31896,7 @@
     "category": "카페/디저트/베이커리/아이스크림/빙수",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/3Z5VRP8",
     "notionUrl": "https://app.notion.com/p/2f9da158dd2a806c88cbfc1d1c727bff",
     "image": "assets/notion-recovery-180/eb850ecfb17945a7/01.png",
     "img": "assets/notion-recovery-180/eb850ecfb17945a7/01.png",
@@ -31668,8 +31908,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4qf7f6r",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4t9aNtt",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4a7CaeX",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3M4oLfA",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4tbdH0G",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4c22p90",
         "enabled": true
       }
     ],
@@ -31826,8 +32096,23 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-daebak",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel010-8412-7720",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-daebak",
         "enabled": true
       },
       {
@@ -32049,7 +32334,7 @@
     "category": "카페/디저트/베이커리/아이스크림/빙수",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4kaXgxv",
     "notionUrl": "https://app.notion.com/p/2f9da158dd2a80ceaedbf08f4d41c7b3",
     "image": "assets/notion-recovery-180/452526604d3b10c4/01.jpg",
     "img": "assets/notion-recovery-180/452526604d3b10c4/01.jpg",
@@ -32066,8 +32351,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4t9widN",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/45HPVPZ",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/49PG7Ga",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4keLUsn",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4c2QR5m",
         "enabled": true
       }
     ],
@@ -32214,8 +32524,33 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4uBOgFS",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4eEVwf0",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4cDA9bG",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/48cFaXa",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4vOEMZd",
         "enabled": true
       }
     ],
@@ -32454,8 +32789,33 @@
     ],
     "routes": [
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4wDyITz",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/49WX8O3",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/42ODsbu",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4urNcoj",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4a2W3UZ",
         "enabled": true
       }
     ],
@@ -32520,6 +32880,11 @@
       {
         "name": "먹깨비",
         "url": "https://bit.ly/mk-두찜여수국동점",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616442272",
         "enabled": true
       },
       {
@@ -32590,7 +32955,7 @@
     "category": "한식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/3Zr7JLL",
     "notionUrl": "https://app.notion.com/p/301da158dd2a80b1ab50e69357f296ab",
     "image": "assets/notion-recovery-180/996f54c7c66ec979/01.png",
     "img": "assets/notion-recovery-180/996f54c7c66ec979/01.png",
@@ -32602,8 +32967,33 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4quCWbX",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4ttNpXW",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/3McFc9M",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4kl3dYC",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4aightk",
         "enabled": true
       }
     ],
@@ -32849,6 +33239,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616548240",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-라홍방마라탕문수점",
         "enabled": true
@@ -32916,7 +33311,7 @@
     "category": "마라탕/양꼬치",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/3ZK2wi1",
     "notionUrl": "https://app.notion.com/p/2f6da158dd2a807d8350c394a649db09",
     "image": "assets/notion-recovery-180/cfe1c17e1840e7d3/01.jpg",
     "img": "assets/notion-recovery-180/cfe1c17e1840e7d3/01.jpg",
@@ -32928,8 +33323,33 @@
     ],
     "routes": [
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3LDNhUM",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/3Md3ssc",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3M8xqO5",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4akZQxx",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4tcawGq",
         "enabled": true
       }
     ],
@@ -33081,8 +33501,18 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-lotte1",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616411365",
         "enabled": true
       },
       {
@@ -33157,6 +33587,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-lotte",
         "enabled": true
       },
       {
@@ -33239,13 +33674,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-lotte",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616620974",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/y0v93w",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-lotte",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-lotte",
         "enabled": true
       }
     ],
@@ -33485,13 +33940,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-masun",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616533260",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/huo2ysn",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-masun",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-masun",
         "enabled": true
       }
     ],
@@ -33568,6 +34043,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/465Zo3W",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://bit.ly/yo-맘스터치문수점",
         "enabled": true
@@ -33625,7 +34105,7 @@
     "category": "햄버거/샌드위치/토스트/핫도그",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/49SHQuo",
     "notionUrl": "https://app.notion.com/p/2f9da158dd2a8013b034f1ffae05e8f9",
     "image": "assets/notion-recovery-180/1d729c41283c6026/01.jpg",
     "img": "assets/notion-recovery-180/1d729c41283c6026/01.jpg",
@@ -33637,8 +34117,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4ttkwKp",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3MdWvam",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4qer3H9",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4k8hEiF",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/49UpLfy",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4burnha",
         "enabled": true
       }
     ],
@@ -33944,7 +34454,7 @@
     "category": "분식/도시락",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/3PEKMmI",
     "notionUrl": "https://app.notion.com/p/335da158dd2a801ebbe6d3186bb33596",
     "image": "assets/notion-recovery-180/00720e7025646b7f/01.jpg",
     "img": "assets/notion-recovery-180/00720e7025646b7f/01.jpg",
@@ -33956,8 +34466,28 @@
     ],
     "routes": [
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4168oDa",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4bKS7K7",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3NWrGaY",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4v8zLdG",
         "enabled": true
       }
     ],
@@ -34027,6 +34557,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616527979",
         "enabled": true
       },
       {
@@ -34116,6 +34651,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616548288",
         "enabled": true
       },
       {
@@ -34831,6 +35371,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel050720934075",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-봉명동내커피여수문수점",
         "enabled": true
@@ -34917,6 +35462,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616657892",
         "enabled": true
       },
       {
@@ -35075,7 +35625,7 @@
     "category": "치킨",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4qKh9hv",
     "notionUrl": "https://app.notion.com/p/2f5da158dd2a80d2a8eff2505d85a2b8",
     "image": "assets/notion-recovery-180/372fc26c2137b79f/01.jpg",
     "img": "assets/notion-recovery-180/372fc26c2137b79f/01.jpg",
@@ -35087,8 +35637,33 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4rj7Dlf",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/462l4ha",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4t4L5Gr",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4t4BejQ",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/49KOOSa",
         "enabled": true
       }
     ],
@@ -35134,7 +35709,7 @@
     "category": "치킨",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4mH3Eh2",
     "notionUrl": "https://app.notion.com/p/349da158dd2a807fb4bcebd3c98f8384",
     "image": "assets/notion-recovery-180/450856a6b5fd4846/01.png",
     "img": "assets/notion-recovery-180/450856a6b5fd4846/01.png",
@@ -35146,8 +35721,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4cD8cAD",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4sMp9yu",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/42jpi1w",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3QdjsfH",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4tv9NQm",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/42oBTk0",
         "enabled": true
       }
     ],
@@ -35193,7 +35798,7 @@
     "category": "카페/디저트/베이커리/아이스크림/빙수",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/3Z3oc8Q",
     "notionUrl": "https://app.notion.com/p/2f6da158dd2a80228637ddf59e2fb3f0",
     "image": "assets/notion-recovery-180/29413e4ca86793cf/01.jpg",
     "img": "assets/notion-recovery-180/29413e4ca86793cf/01.jpg",
@@ -35205,8 +35810,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/46fTZqM",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4kcX9la",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/3NHDYnk",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3NHDZHU",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/3NT4OJ3",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3LOI4tf",
         "enabled": true
       }
     ],
@@ -35378,6 +36013,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616540172",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://bit.ly/yo-빵위에치즈여수점",
         "enabled": true
@@ -35447,8 +36087,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4v7f8gW",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4nVqW3y",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4uaVXlK",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4nUIQn8",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4vhmpLp",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4dJaY9r",
         "enabled": true
       }
     ],
@@ -35702,6 +36372,26 @@
         "name": "땡겨요",
         "url": "https://bit.ly/tk-서울깍두기미평직영점",
         "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4qzVUPa",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3YZ4sTK",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/45s6Tls",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4rdwkzh",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -35746,7 +36436,7 @@
     "category": "한식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/45QeytY",
     "notionUrl": "https://app.notion.com/p/2fcda158dd2a80db9819c2f9978a7854",
     "image": "assets/notion-recovery-180/944533e323d7707e/01.png",
     "img": "assets/notion-recovery-180/944533e323d7707e/01.png",
@@ -35758,8 +36448,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4qV6RuJ",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3ZMYWUm",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4qm19RN",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3M4CLGe",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/3NNRZQu",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4r0FxeO",
         "enabled": true
       }
     ],
@@ -35825,6 +36545,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0619203023",
+        "enabled": true
+      },
+      {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-소풍",
         "enabled": true
@@ -35884,8 +36609,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/47p4okQ",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4dO5URg",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/47qJH83",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4c1RCKC",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/3Q5McGO",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4sEIQZQ",
         "enabled": true
       }
     ],
@@ -36247,6 +37002,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616511121",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-써브웨이여서점",
         "enabled": true
@@ -36309,7 +37069,7 @@
     "category": "돈까스/일식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4taxcqc",
     "notionUrl": "https://app.notion.com/p/2f8da158dd2a809bba1de1a9e37385b1",
     "image": "assets/notion-recovery-180/8d9e961a6ffd106f/01.jpg",
     "img": "assets/notion-recovery-180/8d9e961a6ffd106f/01.jpg",
@@ -36326,8 +37086,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3Zc49VF",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4qjT2Fq",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4t6QH2W",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4a7oaBQ",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4kd9jdJ",
         "enabled": true
       }
     ],
@@ -36482,13 +37267,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-yeosu",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616520116",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/vmuzp8",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-yeosu1",
         "enabled": true
       }
     ],
@@ -36553,6 +37358,11 @@
       {
         "name": "먹깨비",
         "url": "https://bit.ly/mk-아주커치킨문수점",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616536692",
         "enabled": true
       },
       {
@@ -36635,8 +37445,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/3NTJDHa",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3Px5qVQ",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4sCsyAN",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3PBh2Hn",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/47xihxm",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4tiQnO6",
         "enabled": true
       }
     ],
@@ -36694,8 +37534,28 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4sZs9st",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4cuDIlo",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4t1ckBu",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3NUfNTc",
         "enabled": true
       }
     ],
@@ -36770,6 +37630,11 @@
       {
         "name": "땡겨요",
         "url": "https://bit.ly/tk-앨리스토리커피",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616530377",
         "enabled": true
       }
     ],
@@ -37141,8 +38006,23 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4u93l1f",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4tq9plW",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4ecIp4R",
         "enabled": true
       }
     ],
@@ -37379,6 +38259,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel050713457828",
+        "enabled": true
+      },
+      {
         "name": "배달의민족",
         "url": "https://bit.ly/bm-여수회포차",
         "enabled": true
@@ -37530,8 +38415,33 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4kkL5OV",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4pWtb5V",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/3NSisMB",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4aeTG1Q",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3Z55c9Q",
         "enabled": true
       }
     ],
@@ -37577,7 +38487,7 @@
     "category": "야식/주점",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/41to0ki",
     "notionUrl": "https://app.notion.com/p/33dda158dd2a80548615e3334d4f8bac",
     "image": "assets/notion-recovery-180/a4eec3c764528112/01.jpg",
     "img": "assets/notion-recovery-180/a4eec3c764528112/01.jpg",
@@ -37589,8 +38499,28 @@
     ],
     "routes": [
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4vsN1dh",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/41lbrHM",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4t97LFo",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4mqT2Dc",
         "enabled": true
       }
     ],
@@ -38024,6 +38954,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel050713852676",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://bit.ly/yo-외계인피자여수점",
         "enabled": true
@@ -38113,6 +39048,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel07086572539",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/wf0lwd",
         "enabled": true
@@ -38192,6 +39132,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel07086570733",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-요아정여수여서점",
         "enabled": true
@@ -38254,7 +39199,7 @@
     "category": "회/초밥/선어/해산물",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4bFAQlZ",
     "notionUrl": "https://app.notion.com/p/2f5da158dd2a80c78293c0146eb4ba6d",
     "image": "assets/notion-recovery-180/c2aa469b555fbbf7/01.jpg",
     "img": "assets/notion-recovery-180/c2aa469b555fbbf7/01.jpg",
@@ -38266,8 +39211,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4qRuG72",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4k0usaN",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4bgTeBk",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/49TSqQw",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/49TTQKQ",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3O6EXNQ",
         "enabled": true
       }
     ],
@@ -38600,6 +39575,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616545354",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-원할머니보쌈족발여수여서점",
         "enabled": true
@@ -38864,6 +39844,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616449255",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-을찌로국물떡볶이국동점",
         "enabled": true
@@ -39027,6 +40012,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616423653",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-이디야국동점",
         "enabled": true
@@ -39091,8 +40081,33 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4c6Nhpn",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4mcrgKs",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4txKQ6o",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4mdFnzc",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4e1LF2C",
         "enabled": true
       }
     ],
@@ -39165,6 +40180,11 @@
       {
         "name": "땡겨요",
         "url": "https://bit.ly/tk-인생아구찜여수문수점",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616523601",
         "enabled": true
       },
       {
@@ -39440,6 +40460,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616627878",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-장충동BNF족발보쌈여수점",
         "enabled": true
@@ -39492,7 +40517,7 @@
     "category": "한식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/3Za6e4s",
     "notionUrl": "https://app.notion.com/p/2f9da158dd2a80fb96ebe363554a6e44",
     "image": "assets/notion-recovery-180/78366e913c324782/01.jpg",
     "img": "assets/notion-recovery-180/78366e913c324782/01.jpg",
@@ -39506,6 +40531,16 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4q3vAvH",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/45CMQAL",
         "enabled": true
       }
     ],
@@ -39551,7 +40586,7 @@
     "category": "한식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4qSa26s",
     "notionUrl": "https://app.notion.com/p/2f9da158dd2a80ddaeddf601b2271e53",
     "image": "assets/notion-recovery-180/7c9ca9471d15acc4/01.jpg",
     "img": "assets/notion-recovery-180/7c9ca9471d15acc4/01.jpg",
@@ -39568,8 +40603,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4tcIcDu",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4aqs4XC",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3O0aml4",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4qOb0k9",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4rqJFoi",
         "enabled": true
       }
     ],
@@ -39627,8 +40687,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4cV0O4O",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/42jdE6O",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4sQcmLJ",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4u0kKJt",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/41HiKK3",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4mHw3nd",
         "enabled": true
       }
     ],
@@ -39685,8 +40775,33 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4sX6qBl",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4srDm40",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3Ongg0b",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4mfGIWa",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4m9Fn2W",
         "enabled": true
       }
     ],
@@ -40017,6 +41132,11 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-중국관",
+        "enabled": true
+      },
+      {
         "name": "전화주문",
         "url": "https://bit.ly/전화-중국관",
         "enabled": true
@@ -40024,6 +41144,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-중국관",
         "enabled": true
       },
       {
@@ -40077,7 +41202,7 @@
     "category": "치킨",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4a5QbcQ",
     "notionUrl": "https://app.notion.com/p/2f8da158dd2a80c2b287f29f7ab7bfcc",
     "image": "assets/notion-recovery-180/fa5bca3967c25462/01.jpg",
     "img": "assets/notion-recovery-180/fa5bca3967c25462/01.jpg",
@@ -40094,8 +41219,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4rl1LIb",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/3Z4L5sv",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4q3Skfj",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/3M51z0B",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4q3uZdp",
         "enabled": true
       }
     ],
@@ -40141,7 +41291,7 @@
     "category": "족발/보쌈",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4tgmpKC",
     "notionUrl": "https://app.notion.com/p/328da158dd2a80499ef3c9522c65b6e3",
     "image": "assets/notion-recovery-180/7f48f499a367b2b8/01.jpg",
     "img": "assets/notion-recovery-180/7f48f499a367b2b8/01.jpg",
@@ -40153,8 +41303,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4db9FjA",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4lUX1Y6",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4dgZj1I",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4syxsyG",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/3PCoHVL",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4bSWnWK",
         "enabled": true
       }
     ],
@@ -40226,6 +41406,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616663243",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-쫑포피자문수점",
         "enabled": true
@@ -40288,7 +41473,7 @@
     "category": "한식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4a4zEWu",
     "notionUrl": "https://app.notion.com/p/2f8da158dd2a80f7a86dcaac1f4df905",
     "image": "assets/notion-recovery-180/01f219eac1bdc294/01.jpg",
     "img": "assets/notion-recovery-180/01f219eac1bdc294/01.jpg",
@@ -40305,8 +41490,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3LXtlMI",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/49ZSM8g",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/45H6BHr",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/3LX23pI",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4qcD7IB",
         "enabled": true
       }
     ],
@@ -40351,7 +41561,7 @@
     "category": "중식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4dcOj5p",
     "notionUrl": "https://app.notion.com/p/332da158dd2a80a38045d314f4d35062",
     "image": "assets/notion-recovery-180/c6568ee1688504c7/01.jpg",
     "img": "assets/notion-recovery-180/c6568ee1688504c7/01.jpg",
@@ -40363,8 +41573,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4c9pgPD",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/41zFxXX",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/41BszJg",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4bOA7Ny",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/48i7cjV",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4taDsO0",
         "enabled": true
       }
     ],
@@ -40496,7 +41736,7 @@
     "category": "분식/도시락",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/45Cjcvp",
     "notionUrl": "https://app.notion.com/p/2f6da158dd2a80d78c4cd7e883bfb243",
     "image": "assets/notion-recovery-180/e456f248cbe542a3/01.jpg",
     "img": "assets/notion-recovery-180/e456f248cbe542a3/01.jpg",
@@ -40508,8 +41748,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/3Z84b0L",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3Z57KF2",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/49VlcBH",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4resW7j",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4q8V8HL",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3NIpOSU",
         "enabled": true
       }
     ],
@@ -40736,7 +42006,7 @@
     "category": "카페/디저트/베이커리/아이스크림/빙수",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4rmlKpO",
     "notionUrl": "https://app.notion.com/p/2f8da158dd2a80d3b820cfc22a66e275",
     "image": "assets/notion-recovery-180/dddc8ea5032e3c62/01.jpg",
     "img": "assets/notion-recovery-180/dddc8ea5032e3c62/01.jpg",
@@ -40753,8 +42023,28 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4aa8Y71",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3ZEpRBN",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/45CVX4p",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4rrckJW",
         "enabled": true
       }
     ],
@@ -40799,7 +42089,7 @@
     "category": "카페/디저트/베이커리/아이스크림/빙수",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4pVYSwt",
     "notionUrl": "https://app.notion.com/p/2f5da158dd2a800798b5c885dd128d7c",
     "image": "assets/notion-recovery-180/fa0bccb2d190a7c0/01.jpg",
     "img": "assets/notion-recovery-180/fa0bccb2d190a7c0/01.jpg",
@@ -40870,6 +42160,11 @@
       {
         "name": "가게바로주문",
         "url": "https://bit.ly/auto-coffeeshop",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel01093283013",
         "enabled": true
       },
       {
@@ -41020,7 +42315,7 @@
     "category": "치킨",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4kaUzMt",
     "notionUrl": "https://app.notion.com/p/2f9da158dd2a8022b162ea131682ef34",
     "image": "assets/notion-recovery-180/9a494eae325155d9/01.jpg",
     "img": "assets/notion-recovery-180/9a494eae325155d9/01.jpg",
@@ -41034,6 +42329,26 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4qcGEXI",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4bqgcWN",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/45F8ft0",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3Z9Jce8",
         "enabled": true
       }
     ],
@@ -41408,7 +42723,7 @@
     "category": "한식",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4q9BknY",
     "notionUrl": "https://app.notion.com/p/2f7da158dd2a802d9cf8c581ccfbb4bf",
     "image": "assets/notion-recovery-180/04036067da3dde5f/01.jpg",
     "img": "assets/notion-recovery-180/04036067da3dde5f/01.jpg",
@@ -41425,8 +42740,28 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4k2Ujik",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/49Ydqpi",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4q5IZ6E",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3LVjirs",
         "enabled": true
       }
     ],
@@ -41489,8 +42824,33 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-thang",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616517188",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-thang",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-thang",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-thang",
         "enabled": true
       }
     ],
@@ -41555,6 +42915,26 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0618073042",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/46swk6y",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4qyeZRf",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3NS9VcE",
         "enabled": true
       }
     ],
@@ -41624,6 +43004,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616548670",
         "enabled": true
       },
       {
@@ -41701,8 +43086,18 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4mjcilN",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4dzSvwi",
         "enabled": true
       }
     ],
@@ -41765,6 +43160,11 @@
       {
         "name": "먹깨비",
         "url": "https://bit.ly/mk-푸라닭치킨여수문수점",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616519206",
         "enabled": true
       },
       {
@@ -41951,8 +43351,23 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-yeosu1",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616547656",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-yeosu1",
         "enabled": true
       },
       {
@@ -42020,8 +43435,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/42L1oMG",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4w77JQa",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4w63Iv7",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4umGHlU",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4taRi2w",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4t9tiww",
         "enabled": true
       }
     ],
@@ -42067,7 +43512,7 @@
     "category": "피자",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4uiqwWS",
     "notionUrl": "https://app.notion.com/p/354da158dd2a80d9ad76c8718ac4ffc2",
     "image": "assets/notion-recovery-180/d77bf57a99d5a355/01.jpg",
     "img": "assets/notion-recovery-180/d77bf57a99d5a355/01.jpg",
@@ -42079,8 +43524,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/3OEjVXR",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4eoEO3I",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4n1hH1a",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/42fb7L4",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4epjStq",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4d27KvQ",
         "enabled": true
       }
     ],
@@ -42138,8 +43613,28 @@
     ],
     "routes": [
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4seEfwN",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4l3VqyV",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4r46fm0",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/47iOuIm",
         "enabled": true
       }
     ],
@@ -42338,7 +43833,7 @@
     "category": "치킨",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/4cmKoSB",
     "notionUrl": "https://app.notion.com/p/339da158dd2a80cca07cfeee0e12efcc",
     "image": "assets/notion-recovery-180/13c8e99cd1a7d7a1/01.jpg",
     "img": "assets/notion-recovery-180/13c8e99cd1a7d7a1/01.jpg",
@@ -42350,8 +43845,33 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4c8ob9w",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3NO4ETU",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4cvq54v",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/48dBQuO",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/47IxD28",
         "enabled": true
       }
     ],
@@ -42409,8 +43929,28 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/3NHjI5m",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4tieYDw",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4t3OyoC",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/49ZMHIS",
         "enabled": true
       }
     ],
@@ -42468,8 +44008,23 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4c5OWeF",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/41jlTzt",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4cfWw6S",
         "enabled": true
       }
     ],
@@ -42547,6 +44102,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616550667",
+        "enabled": true
+      },
+      {
         "name": "요기요",
         "url": "https://ws.yogiyo.co.kr/vi2fbz",
         "enabled": true
@@ -42619,8 +44179,18 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/47Q5q9z",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel050713119916",
         "enabled": true
       },
       {
@@ -42708,6 +44278,11 @@
         "enabled": true
       },
       {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616419295",
+        "enabled": true
+      },
+      {
         "name": "쿠팡이츠",
         "url": "https://bit.ly/cu-호식이두마리치킨국동점",
         "enabled": true
@@ -42789,6 +44364,11 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel07086910410",
         "enabled": true
       },
       {
@@ -43044,6 +44624,16 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel050714782248",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-회먹다",
         "enabled": true
       },
       {
