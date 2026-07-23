@@ -23,3 +23,13 @@
 @media(min-width:768px){.yeosu-night-shell{background-image:linear-gradient(180deg,rgba(7,47,78,.1),rgba(4,43,70,.16)),url('assets/yeosu-rc6/dolsan-day-desktop.webp');background-position:center center}}
 @media(prefers-reduced-motion:reduce){.rc6-gull{animation:none;left:var(--x,72%)}.rc6-gull-flap{animation:none}}
 .page-hidden .rc6-gull,.page-hidden .rc6-gull-flap{animation-play-state:paused}
+
+.rc6-store-hero-media{position:relative;display:block;width:100%;height:285px;overflow:hidden;background:#082f4b}
+.rc6-store-hero-media>img{display:block;width:100%;height:100%!important;object-fit:cover;object-position:center}
+.rc6-store-hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,23,38,.88) 0%,rgba(4,35,56,.68) 42%,rgba(4,32,51,.16) 72%,rgba(3,24,39,.08) 100%)}
+.rc6-store-hero-copy{position:absolute;z-index:1;left:clamp(22px,6vw,68px);top:50%;transform:translateY(-50%);width:min(66%,620px);display:flex;flex-direction:column;align-items:flex-start;color:#fff;text-align:left;text-shadow:0 2px 12px rgba(0,0,0,.48)}
+.rc6-store-hero-copy small{display:inline-flex;max-width:100%;padding:7px 13px;border-radius:999px;background:#ff6a2a;color:#fff;font-size:clamp(12px,2.4vw,20px);font-weight:900;line-height:1.15;text-shadow:none}
+.rc6-store-hero-copy strong{display:block;margin-top:12px;max-width:100%;font-size:clamp(24px,5vw,52px);line-height:1.12;letter-spacing:-.04em;word-break:keep-all;overflow-wrap:anywhere}
+.rc6-store-hero-copy>span{margin-top:7px;font-size:clamp(13px,2.5vw,23px);font-weight:750;opacity:.94}
+.rc6-store-hero-copy b{display:inline-flex;margin-top:15px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.94);color:#083b5c;font-size:clamp(12px,2.2vw,18px);font-weight:900;text-shadow:none}
+@media(max-width:520px){.rc6-store-hero-media{height:auto;aspect-ratio:1200/700}.rc6-store-hero-copy{left:20px;width:72%}.rc6-store-hero-copy strong{margin-top:9px}.rc6-store-hero-copy b{margin-top:10px}}
