@@ -288,7 +288,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');

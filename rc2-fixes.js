@@ -418,7 +418,8 @@ fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
     if (!$('#modal')?.hidden && $('#modalContent .direct-brand-browser')) rc2ReplaceModal();
     const brands = fxDirectBrands().filter(brand => category === '전체' || brand.category === category);
     const cards = brands.map(brand => `<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}">${brand.icon ? `<img src="${escapeHtml(brand.icon)}" alt="">` : rc2Icon('other', 'order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');
-    openModal(`<section class="brand-app-hub direct-brand-browser"><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p>${rc2BrandCategoryChips(category)}<div class="brand-app-grid">${cards}</div></section>`);
+    openModal(`<section class="brand-app-hub direct-brand-browser"><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p>${rc2BrandCategoryChips(category)}${rc2SelectedCategoryMarkup(category)}<div class="brand-app-grid">${cards}</div></section>`);
+    rc2RevealSelectedCategory();
     return;
   }
   if (view === 'direct-stores') {
