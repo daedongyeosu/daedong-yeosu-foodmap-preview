@@ -12,8 +12,9 @@ const FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS={
 const FX_BATTLE_SESSION='daedongNavalSuccessPlayedV1';
 const FX_ENTRY_SESSION='daedongEntryFireworkPlayedV1';
 const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
-const FX_HOME_SHARE_URL='https://daedongmap.kr/';
+const FX_HOME_SHARE_URL='https://daedongmap.com/';
 const FX_HOME_SHARE_TEXT='여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.';
+const FX_STORE_SHARE_PARAM='store';
 window.DAEDONG_WEATHER_CONFIG=window.DAEDONG_WEATHER_CONFIG||{enabled:false,proxyUrl:'',cacheMinutes:18};
 
 let fxBrandData={stores:[],brands:[]};
@@ -151,7 +152,29 @@ function fxBridgeLight(){const layer=$('.bridge-light-layer');if(!layer)return;l
 function fxFireworks(withToast=false){if(fxReduced()||fxLowPower())return;const layer=$('#microFxLayer');if(!layer)return;for(const [left,top] of [['12%','38px'],['84%','53px'],['68%','26px']]){const fire=document.createElement('i');fire.className='firework';fire.style.left=left;fire.style.top=top;layer.append(fire);setTimeout(()=>fire.remove(),700);}if(withToast){const toast=document.createElement('div');toast.className='success-toast';toast.textContent='여수에 힘이 되는 주문길을 선택했어요';layer.append(toast);setTimeout(()=>toast.remove(),1200);}}
 function fxBattle({phone=false}={}){fxFormation();fxBridgeLight();if(phone||fxReduced()||fxLowPower()||sessionStorage.getItem(FX_BATTLE_SESSION))return;sessionStorage.setItem(FX_BATTLE_SESSION,'1');const lane=$('#navalLane');if(!lane)return;for(const cls of ['enemy-ship','battle-smoke','cannon-flash','cannon-ball']){const node=document.createElement('i');node.className=cls;lane.append(node);setTimeout(()=>node.remove(),1250);}fxFireworks(true);}
 function fxGull(target,favorite=false){if(fxReduced()||fxLowPower())return;const r=target.getBoundingClientRect(),g=document.createElement('i');g.className=`gull-fx ${favorite?'favorite':''}`;g.style.left=`${r.left+r.width/2}px`;g.style.top=`${r.top}px`;document.body.append(g);setTimeout(()=>g.remove(),520);}
-function fxShare(store,target){fxGull(target,false);const url=location.href,title=`${store.name} · 대동여수음식지도`;if(navigator.share)navigator.share({title,url}).catch(()=>{});else navigator.clipboard?.writeText(url);}
+function fxStoreShareUrl(store){
+ const url=new URL(FX_HOME_SHARE_URL);
+ url.searchParams.set(FX_STORE_SHARE_PARAM,String(store.id));
+ return url.href;
+}
+async function fxShare(store,target){
+ fxGull(target,false);
+ const url=fxStoreShareUrl(store),title=`${store.name} · 대동여수음식지도`;
+ const payload={title,text:`${store.name} 가게 정보를 대동여수음식지도에서 확인해보세요.`,url};
+ if(navigator.share&&(!navigator.canShare||navigator.canShare(payload))){
+  try{await navigator.share(payload);return;}catch(error){if(error?.name==='AbortError')return;}
+ }
+ try{
+  if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(url);
+  else{
+   const input=document.createElement('textarea');input.value=url;input.setAttribute('readonly','');input.style.position='fixed';input.style.opacity='0';
+   document.body.append(input);input.select();document.execCommand('copy');input.remove();
+  }
+  fxShareToast(`${store.name} 가게 링크를 복사했습니다.`);
+ }catch{
+  fxShareToast(`가게 공유 링크: ${url}`);
+ }
+}
 function fxShareToast(message){
  document.querySelector('.home-share-toast')?.remove();
  const toast=document.createElement('div');toast.className='home-share-toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');toast.textContent=message;
@@ -172,7 +195,7 @@ async function fxCopyHomeShareUrl(){
   fxShareToast('대동여수음식지도 링크를 복사했습니다.');
  }catch{
   fxSetHomeShareStatus('복사가 차단되었습니다. 아래 주소를 길게 눌러 복사해 주세요.');
-  fxShareToast('공유 링크: daedongmap.kr');
+  fxShareToast('공유 링크: daedongmap.com');
  }
 }
 function fxOpenHomeShare(target){
@@ -207,6 +230,24 @@ async function fxShareHome(target){
  }finally{
   if(target.isConnected)target.disabled=false;
  }
+}
+function fxRequestedSharedStoreId(){
+ const value=new URLSearchParams(location.search).get(FX_STORE_SHARE_PARAM);
+ return value?String(value).trim():'';
+}
+async function fxOpenSharedStoreFromUrl(){
+ const storeId=fxRequestedSharedStoreId();
+ if(!storeId)return false;
+ for(let attempt=0;attempt<50;attempt+=1){
+  const store=fxStoreById(storeId);
+  if(store&&fxVisible(store)){
+   openStore(store);
+   return true;
+  }
+  await new Promise(resolve=>setTimeout(resolve,100));
+ }
+ console.warn('공유된 가게를 찾지 못했습니다.',storeId);
+ return false;
 }
 function fxHandleHomeShareClick(event){
  const homeShare=event.target.closest('[data-share-home]');
@@ -288,7 +329,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
@@ -307,7 +348,7 @@ fxRc2Script.onload=()=>{
     const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1';
     script.onload=()=>{
      const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=address-home-return-1';
-     addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{await fxInitialize();await rc6Initialize();window.rc7Initialize?.();},0);};
+     addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{await fxInitialize();await rc6Initialize();window.rc7Initialize?.();await fxOpenSharedStoreFromUrl();},0);};
      addressScript.onerror=()=>console.error('RC7 주소·지도 검수 레이어를 불러오지 못했습니다.');
      document.head.append(addressScript);
     };

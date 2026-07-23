@@ -913,7 +913,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let startupHistoryOpen = false;
   const openStartupAd = () => { startupAd.hidden = false; lockPage(); if (!startupHistoryOpen) { history.pushState({daedongStartup:true}, ''); startupHistoryOpen = true; } };
   const closeStartupAd = ({fromPop = false} = {}) => { if (startupAd.hidden) return; startupAd.hidden = true; const goBack = !fromPop && startupHistoryOpen && history.state?.daedongStartup; startupHistoryOpen = false; if (!layerStillOpen()) unlockPage(); if (goBack) { ignoreNextPop=true; history.back(); } };
-  if (localStorage.getItem('hideStartup') !== today) setTimeout(openStartupAd, 600);
+  const requestedSharedStoreId = new URLSearchParams(location.search).get('store');
+  if (!requestedSharedStoreId && localStorage.getItem('hideStartup') !== today) setTimeout(openStartupAd, 600);
   $('.startup-close').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); });
   startupAd.addEventListener('click', event => { if (event.target === startupAd) closeStartupAd(); });
   $('.startup-card').addEventListener('click', event => event.stopPropagation());
