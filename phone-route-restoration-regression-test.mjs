@@ -4,6 +4,9 @@ const stores = JSON.parse(fs.readFileSync(new URL('./data/stores.json', import.m
 const phoneData = JSON.parse(fs.readFileSync(new URL('./data/phone-order-runtime.json', import.meta.url), 'utf8'));
 const priorityData = JSON.parse(fs.readFileSync(new URL('./data/store-priority.json', import.meta.url), 'utf8'));
 const source = fs.readFileSync(new URL('./rc3-fixes.js', import.meta.url), 'utf8');
+const appSource = fs.readFileSync(new URL('./app.js', import.meta.url), 'utf8');
+const finalExperienceSource = fs.readFileSync(new URL('./final-experience.js', import.meta.url), 'utf8');
+const htmlSource = fs.readFileSync(new URL('./index.html', import.meta.url), 'utf8');
 const classificationCsv = fs.readFileSync(new URL('./recovered-store-channel-classification.csv', import.meta.url), 'utf8');
 const byId = new Map(stores.map(store => [String(store.store_id || store.id), store]));
 const assert = (condition, message) => {
@@ -117,6 +120,11 @@ assert(source.includes('.map(store => ({store, phoneOrder: resolveStoreChannels(
 assert(source.includes('const channels = resolveStoreChannels(store);'), '가게 팝업이 공통 채널 판정을 사용하지 않습니다.');
 assert(source.includes('phoneRoute && !RC3_BLOCKED_PHONE_ROUTE_STORES.has'), '전화경로 허용·차단 판정이 누락되었습니다.');
 assert(source.includes('data-phone-route-store-id='), '홈 전화주문 목록의 검증 경로 링크가 누락되었습니다.');
+assert(appSource.includes("const ASSET_VERSION = 'phone-route-restoration-1';"), '가게 데이터 캐시 버전이 갱신되지 않았습니다.');
+assert(finalExperienceSource.includes("fxRc2Style.href='rc2-fixes.css?v=phone-route-restoration-1';"), '전화목록 스타일 캐시 버전이 갱신되지 않았습니다.');
+assert(finalExperienceSource.includes("fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-1';"), '전화경로 코드 캐시 버전이 갱신되지 않았습니다.');
+assert(htmlSource.includes('app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1'), '기본 앱 캐시 버전이 갱신되지 않았습니다.');
+assert(htmlSource.includes('final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1'), '최종 화면 코드 캐시 버전이 갱신되지 않았습니다.');
 
 console.log(JSON.stringify({
   ok: true,

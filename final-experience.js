@@ -299,7 +299,7 @@ async function fxInitialize(){
 
 const fxRc2Style=document.createElement('link');
 fxRc2Style.rel='stylesheet';
-fxRc2Style.href='rc2-fixes.css?v=rc2';
+fxRc2Style.href='rc2-fixes.css?v=phone-route-restoration-1';
 document.head.append(fxRc2Style);
 const fxRc3Style=document.createElement('link');
 fxRc3Style.rel='stylesheet';
@@ -333,7 +333,7 @@ fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
