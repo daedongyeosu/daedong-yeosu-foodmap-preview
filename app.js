@@ -190,7 +190,7 @@ function canonicalSearchAliases(raw) {
 }
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>'"]/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'}[char])); }
 function categoryIcon(name) { const rule = CATEGORY_ICON_RULES.find(([pattern]) => pattern.test(name)); return rule ? rule[1] : '🍽️'; }
-function safeHref(value) { const raw=String(value??'').trim();if(!raw)return '#';try { const url = new URL(raw, location.href); return ['http:', 'https:', 'tel:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } }
+function safeHref(value) { const raw=String(value??'').trim();if(!/^(?:https?:|tel:)/i.test(raw))return '#';try { const url = new URL(raw); return ['http:', 'https:', 'tel:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } }
 function routeKey(name) {
   const text = normalize(name);
   if (text.includes('가게바로')) return 'direct';
