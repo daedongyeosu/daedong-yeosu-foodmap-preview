@@ -182,35 +182,37 @@ function fxOpenHomeShare(target){
   <p>가게 한 곳이 아니라 대동여수음식지도 홈 전체를 가족·지인에게 알려주세요.</p>
   <div class="home-share-preview"><img src="assets/logo.png" alt=""><span><b>대동여수음식지도</b><small>${FX_HOME_SHARE_URL}</small></span></div>
   <div class="home-share-actions">
-   <button class="home-share-native glass-action" type="button" data-home-share-native>휴대폰 공유창 열기</button>
-   <button class="home-share-copy glass-action" type="button" data-home-share-copy>링크 복사하기</button>
+   <button class="home-share-action glass-action" type="button" data-home-share-action>대동여수음식지도 공유하기</button>
   </div>
-  <p class="home-share-status" role="status" aria-live="polite" data-home-share-status>공유 방법을 선택해 주세요.</p>
+  <p class="home-share-status" role="status" aria-live="polite" data-home-share-status>휴대폰 공유창을 지원하지 않으면 링크가 자동으로 복사됩니다.</p>
  </section>`);
 }
-async function fxShareHomeNative(target){
+async function fxShareHome(target){
+ if(target?.disabled)return;
  fxGull(target,false);
  const payload={title:'대동여수음식지도',text:FX_HOME_SHARE_TEXT,url:FX_HOME_SHARE_URL};
- if(!navigator.share){
+ if(!navigator.share||(navigator.canShare&&!navigator.canShare(payload))){
   fxSetHomeShareStatus('이 브라우저는 휴대폰 공유창을 지원하지 않아 링크를 복사합니다.');
   await fxCopyHomeShareUrl();
   return;
  }
+ target.disabled=true;
  fxSetHomeShareStatus('휴대폰 공유창을 여는 중입니다…');
  try{
   await navigator.share(payload);
   fxSetHomeShareStatus('공유가 완료되었습니다.');
  }catch(error){
-  if(error?.name==='AbortError')fxSetHomeShareStatus('공유를 취소했습니다. 다시 선택할 수 있습니다.');
+  if(error?.name==='AbortError')fxSetHomeShareStatus('공유를 취소했습니다. 버튼을 누르면 다시 공유할 수 있습니다.');
   else await fxCopyHomeShareUrl();
+ }finally{
+  if(target.isConnected)target.disabled=false;
  }
 }
 function fxHandleHomeShareClick(event){
  const homeShare=event.target.closest('[data-share-home]');
  if(homeShare){event.preventDefault();event.stopImmediatePropagation();fxOpenHomeShare(homeShare);return;}
- const homeShareNative=event.target.closest('[data-home-share-native]');
- if(homeShareNative){event.preventDefault();event.stopImmediatePropagation();fxShareHomeNative(homeShareNative);return;}
- if(event.target.closest('[data-home-share-copy]')){event.preventDefault();event.stopImmediatePropagation();fxCopyHomeShareUrl();}
+ const homeShareAction=event.target.closest('[data-home-share-action]');
+ if(homeShareAction){event.preventDefault();event.stopImmediatePropagation();fxShareHome(homeShareAction);}
 }
 document.addEventListener('click',fxHandleHomeShareClick,true);
 
