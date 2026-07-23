@@ -38312,7 +38312,7 @@
     "district": "여서,문수",
     "category": "한식",
     "address": "전남 여수시 여서1로 90",
-    "phone": "",
+    "phone": "0616529578",
     "naverMap": "https://naver.me/Gt1lvoSK",
     "notionUrl": "https://app.notion.com/p/367da158dd2a80da9baaf260969a9892",
     "image": "assets/notion-recovery-180/b1995040582014bf/01.jpg",
@@ -38327,6 +38327,36 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4djPgbK",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3PPFEfQ",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4un4cf3",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4fwBq7c",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4urTrZ8",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/4dmKOcf",
         "enabled": true
       }
     ],
