@@ -9,7 +9,7 @@ function rc6ApplyStorePriority(){rc6ManagedStoreIds=new Set((rc6StorePriority.ma
 function rc6OwnershipTier(store){const id=String(store?.id??store?.store_id??'');return rc6ManagedStoreIds.has(id)?0:rc6SharedManagedStoreIds.has(id)?1:2;}
 function rc6RandomizeGull(gull){const curve=()=>`${Math.round(-20+Math.random()*40)}px`,bank=()=>`${Math.round(-11+Math.random()*22)}deg`;['a','b','c','d','e'].forEach(key=>gull.style.setProperty(`--curve-${key}`,curve()));['start','a','b','c','d','end'].forEach(key=>gull.style.setProperty(`--bank-${key}`,bank()));gull.style.setProperty('--flap',`${(.44+Math.random()*.34).toFixed(2)}s`);}
 function rc6Gulls(){const shell=document.querySelector('.yeosu-night-shell');if(!shell||shell.querySelector('.rc6-gulls'))return;const layer=document.createElement('div');layer.className='rc6-gulls';layer.setAttribute('aria-hidden','true');[[12,22,11,-2,.8],[20,29,13,-6,1],[27,18,9,-9,.7],[33,25,14,-3,.9]].forEach(([y,size,duration,delay,scale],i)=>{layer.insertAdjacentHTML('beforeend',`<svg class="rc6-gull" style="--y:${y}%;--size:${size}px;--duration:${duration}s;--delay:${delay}s;--scale:${scale};--x:${62+i*8}%" viewBox="0 0 32 14"><g class="rc6-gull-flap"><path d="M2 10 Q9 2 16 9 Q23 2 30 10"/></g></svg>`);const gull=layer.lastElementChild;rc6RandomizeGull(gull);gull.addEventListener('animationiteration',event=>{if(event.target===gull)rc6RandomizeGull(gull);});});shell.prepend(layer);}
-const RC6_DAILY_HERO_LIMIT=15;
+const RC6_DAILY_HERO_LIMIT=15,RC6_DAILY_STORE_HERO_LIMIT=12;
 function rc6SeoulDay(now=new Date()){
  const parts=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now);
  const values={};for(const part of parts)if(part.type!=='literal')values[part.type]=part.value;
@@ -31,7 +31,7 @@ function rc6RotateHeroGroup(items,seed,dayNumber){
 function rc6DailyHeroOrder(entries,day=rc6SeoulDay()){
  const groups=[];for(const entry of entries){const key=rc6HeroGroupKey(entry),last=groups[groups.length-1];if(!last||last.key!==key)groups.push({key,items:[entry]});else last.items.push(entry);}
  const locationKey=[state.location,state.addressLabel,state.coords?.lat??'',state.coords?.lng??''].join('|');
- return groups.flatMap(group=>rc6RotateHeroGroup(group.items,locationKey+'|'+group.key,day.number)).slice(0,RC6_DAILY_HERO_LIMIT);
+ return groups.flatMap(group=>rc6RotateHeroGroup(group.items,locationKey+'|'+group.key,day.number)).slice(0,RC6_DAILY_STORE_HERO_LIMIT);
 }
 function rc6SpecialHeroEntries(day=rc6SeoulDay()){
  const specials=Object.entries(rc6BannerTargets).filter(([,target])=>target.status==='notion'&&target.notionUrl&&target.image).map(([key,target],index)=>({banner:{desktop:target.image,mobile:target.image},index:HERO_BANNERS.length+index,key:`notion-${key}`,target,store:null,tier:3,kind:'notion'}));
@@ -44,19 +44,27 @@ function rc6InterleaveHeroEntries(managed,specials){
  while(specialIndex<specials.length)result.push(specials[specialIndex++]);
  return result.slice(0,RC6_DAILY_HERO_LIMIT);
 }
+function rc6StaticHeroBannersByStore(){
+ const byId=new Map();
+ HERO_BANNERS.forEach((banner,index)=>{const key=String(index+1).padStart(2,'0'),target=rc6BannerTargets[key]||{};if(target.status==='mapped'&&target.storeId)byId.set(String(target.storeId),{banner,key,target});});
+ return byId;
+}
+function rc6ManagedStoreHeroEntries(){
+ const staticById=rc6StaticHeroBannersByStore();
+ return rc6RankCandidatesByCustomerLocation(stores.filter(store=>fxVisible(store)&&rc6OwnershipTier(store)<2)).map((rankedStore,index)=>{
+  const id=String(rankedStore.id),preset=staticById.get(id),photo=fxPhoto(rankedStore),banner=preset?.banner||(photo?{desktop:photo,mobile:photo}:null);
+  if(!banner)return null;
+  return{banner,index,key:preset?.key||`store-${id}`,target:preset?.target||{label:rankedStore.name},store:rankedStore,rankedStore,tier:rc6OwnershipTier(rankedStore),kind:'store',presentation:preset?'creative':'photo'};
+ }).filter(Boolean);
+}
 function rc6HeroEntries(){
- const entries=HERO_BANNERS.map((banner,index)=>{const key=String(index+1).padStart(2,'0'),target=rc6BannerTargets[key]||{},store=target.status==='mapped'&&target.storeId?stores.find(item=>String(item.id)===String(target.storeId)):null;return{banner,index,key,target,store,tier:store?rc6OwnershipTier(store):3,kind:'store'};});
- const owned=entries.filter(item=>item.store&&item.tier<2);
- const byId=new Map(owned.map(item=>[String(item.store.id),item]));
- const rankedStores=rc6RankCandidatesByCustomerLocation(owned.map(item=>item.store));
- const rankedEntries=rankedStores.map(rankedStore=>({...byId.get(String(rankedStore.id)),rankedStore})).filter(item=>item.store);
- return rc6InterleaveHeroEntries(rc6DailyHeroOrder(rankedEntries),rc6SpecialHeroEntries());
+ return rc6InterleaveHeroEntries(rc6DailyHeroOrder(rc6ManagedStoreHeroEntries()),rc6SpecialHeroEntries());
 }
 function rc6RenderHero(){
  const track=document.querySelector('#heroTrack');if(!track)return;
  const day=rc6SeoulDay(),entries=rc6HeroEntries(),renderKey=day.key+'|'+entries.map(item=>item.key).join('|')+'|'+[state.location,state.addressLabel,state.coords?.lat??'',state.coords?.lng??''].join('|');
  if(rc6HeroRenderKey===renderKey&&track.children.length)return;rc6HeroRenderKey=renderKey;if(heroCarousel)heroCarousel.destroy();
- track.innerHTML=entries.map((item,displayIndex)=>{const{banner,target,store}=item,isNotion=item.kind==='notion',label=isNotion?`${target.label} 노션에서 자세히 보기`:`${target.label} 가게 상세 보기`,targetAttr=isNotion?`data-rc6-banner-notion="${escapeHtml(target.notionUrl)}"`:`data-rc6-banner-store="${escapeHtml(store.id)}"`,media=isNotion?`<img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="675" decoding="async" loading="${displayIndex?'lazy':'eager'}">`:`<picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"></picture>`;return `<button type="button" class="carousel-slide hero-slide rc6-hero-target" data-hero-index="${displayIndex}" ${targetAttr} aria-label="${escapeHtml(label)}">${media}</button>`}).join('');
+ track.innerHTML=entries.map((item,displayIndex)=>{const{banner,target,store}=item,isNotion=item.kind==='notion',isPhoto=item.presentation==='photo',label=isNotion?`${target.label} 노션에서 자세히 보기`:`${store.name} 가게 상세 보기`,targetAttr=isNotion?`data-rc6-banner-notion="${escapeHtml(target.notionUrl)}"`:`data-rc6-banner-store="${escapeHtml(store.id)}"`;let media;if(isNotion){media=`<img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="675" decoding="async" loading="${displayIndex?'lazy':'eager'}">`;}else if(isPhoto){const proximity=item.rankedStore?.proximityLabel||'가까운 우리가게',meta=[store.area,store.cat].filter(Boolean).join(' · ');media=`<span class="rc6-store-hero-media"><img src="${escapeHtml(banner.desktop)}" alt="${escapeHtml(store.name)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"><span class="rc6-store-hero-copy"><small>${escapeHtml(proximity)}</small><strong>${escapeHtml(store.name)}</strong><span>${escapeHtml(meta)}</span><b>가게카드 보기&nbsp; ›</b></span></span>`;}else{media=`<picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"></picture>`;}return `<button type="button" class="carousel-slide hero-slide rc6-hero-target" data-hero-index="${displayIndex}" ${targetAttr} aria-label="${escapeHtml(label)}">${media}</button>`}).join('');
  if(entries.length)heroCarousel=new InfiniteCarousel(document.querySelector('#heroCarousel'),{interval:3500});
 }
 function rc6WatchHeroDay(){
