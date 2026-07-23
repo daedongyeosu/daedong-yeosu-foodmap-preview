@@ -8,22 +8,8 @@
   const SESSION_KEY = 'daedongTurtleShipHeroPlayedV1';
   const scene = document.getElementById('turtleShipHeroScene');
   if (!scene) return;
-  const shell = scene.parentElement;
-  const passage = shell?.querySelector('.turtle-ship-passage');
 
   let finishTimer = 0;
-
-  function syncPassageCenter() {
-    if (!shell || !passage) return;
-    const shellRect = shell.getBoundingClientRect();
-    const passageRect = passage.getBoundingClientRect();
-    const top = passageRect.top - shellRect.top;
-    const bottom = shellRect.height - (passageRect.bottom - shellRect.top);
-    const center = top + (passageRect.height / 2);
-    scene.style.setProperty('--turtle-passage-top', `${Math.max(0, Math.round(top))}px`);
-    scene.style.setProperty('--turtle-passage-bottom', `${Math.max(0, Math.round(bottom))}px`);
-    scene.style.setProperty('--turtle-passage-center', `${Math.round(center)}px`);
-  }
 
   function markFinished() {
     scene.classList.remove('is-sailing', 'is-paused');
@@ -74,15 +60,11 @@
   document.addEventListener('visibilitychange', () => {
     scene.classList.toggle('is-paused', document.hidden);
   });
-  window.addEventListener('resize', syncPassageCenter, {passive:true});
-
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      syncPassageCenter();
       window.setTimeout(waitForClearHome, 900);
     }, {once:true});
   } else {
-    syncPassageCenter();
     window.setTimeout(waitForClearHome, 900);
   }
 })();
