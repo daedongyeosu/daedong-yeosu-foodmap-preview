@@ -23,6 +23,11 @@ assert.match(
   'Order-app store lists must show their selected category name.',
 );
 assert.match(
+  rc2,
+  /direct-brand-browser[\s\S]*rc2SelectedCategoryMarkup\(category\)/,
+  'Direct brand-app lists must show their selected category name.',
+);
+assert.match(
   rc3,
   /rc2SelectedCategoryMarkup\(category\)/,
   'The verified phone-order list must show its selected category name.',
@@ -39,7 +44,7 @@ assert.doesNotMatch(
 );
 assert.match(
   finalExperience,
-  /rc2-fixes\.js\?v=selected-category-label-1/,
+  /rc2-fixes\.js\?v=selected-category-label-2/,
   'The category-label runtime must bypass older cached RC2 copies.',
 );
 assert.match(
@@ -54,7 +59,7 @@ assert.match(
 );
 assert.match(
   index,
-  /final-experience\.js\?v=selected-category-label-1/,
+  /final-experience\.js\?v=selected-category-label-2/,
   'The runtime loader must bypass older cached copies.',
 );
 
