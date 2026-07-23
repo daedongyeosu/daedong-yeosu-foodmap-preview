@@ -532,6 +532,46 @@ function renderStores({scroll = false, resetCount = false} = {}) {
   if (scroll) $('#recommendSection').scrollIntoView({behavior: 'smooth', block: 'start'});
 }
 
+let instantScrollRestoreFrame = 0;
+let instantScrollRestoreStyle = null;
+function scrollWindowInstant(top) {
+  const root = document.documentElement;
+  if (!instantScrollRestoreStyle) {
+    instantScrollRestoreStyle = {
+      value: root.style.getPropertyValue('scroll-behavior'),
+      priority: root.style.getPropertyPriority('scroll-behavior')
+    };
+  }
+  root.style.setProperty('scroll-behavior', 'auto', 'important');
+  window.scrollTo({top: Math.max(0, Number(top) || 0), left: 0, behavior: 'auto'});
+  if (instantScrollRestoreFrame) cancelAnimationFrame(instantScrollRestoreFrame);
+  instantScrollRestoreFrame = requestAnimationFrame(() => {
+    const saved = instantScrollRestoreStyle;
+    instantScrollRestoreFrame = 0;
+    instantScrollRestoreStyle = null;
+    if (saved?.value) root.style.setProperty('scroll-behavior', saved.value, saved.priority);
+    else root.style.removeProperty('scroll-behavior');
+  });
+}
+function showHomeAfterAddressCommit() {
+  state.query = '';
+  state.category = '전체';
+  state.brandId = '';
+  const search = $('#mainSearch');
+  if (search) search.value = '';
+  const clear = $('#clearMainSearch');
+  if (clear) clear.hidden = true;
+  renderStores({resetCount: true});
+  requestAnimationFrame(() => {
+    const hero = $('.hero');
+    if (!hero) { scrollWindowInstant(0); return; }
+    const navHeight = $('.bottom-nav')?.getBoundingClientRect().height || 0;
+    const usableHeight = Math.max(240, window.innerHeight - navHeight - 12);
+    const heroTop = window.scrollY + hero.getBoundingClientRect().top;
+    scrollWindowInstant(heroTop + hero.offsetHeight - usableHeight);
+  });
+}
+
 function lockPage() {
   if (document.body.classList.contains('modal-open')) return;
   const top = window.scrollY || document.documentElement.scrollTop || 0;
@@ -544,7 +584,7 @@ function unlockPage() {
   delete document.body.dataset.lockScrollY;
   document.documentElement.classList.remove('modal-open','photo-viewer-open'); document.body.classList.remove('modal-open','photo-viewer-open');
   for (const property of ['position','top','left','right','width','overflow']) document.body.style.removeProperty(property);
-  window.scrollTo(0, top);
+  scrollWindowInstant(top);
 }
 function layerStillOpen() {
   return !$('#modal')?.hidden || !$('#photoViewer')?.hidden || !$('#startupAd')?.hidden;
@@ -709,7 +749,7 @@ function commitAddressSelection() {
   const item={type:addressDraft?.type||'recent',address:base,detail,label:full,area,coords,sortByDistance,createdAt:new Date().toISOString()};
   writeLocalJson(ADDRESS_KEY,item); saveAddressBook([item,...getAddressBook().filter(old=>old.label!==item.label||old.type!==item.type)]);
   state.location=item.area||'여수시 전체'; state.addressLabel=item.label; state.coords=coords; state.sortByDistance=sortByDistance;
-  saveLocationState(item.label,coords,sortByDistance,item); $('#locationText').textContent=shortAddress(item.label); hardClose(); setTimeout(()=>renderStores({scroll:true,resetCount:true}),60);
+  saveLocationState(item.label,coords,sortByDistance,item); $('#locationText').textContent=shortAddress(item.label); hardClose(); setTimeout(showHomeAfterAddressCommit,60);
 }
 function useCurrentLocation() {
   const button=$('#gpsLocationBtn'); if(!button)return;
