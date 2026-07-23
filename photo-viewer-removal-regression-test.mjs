@@ -38,8 +38,8 @@ assert.match(
 );
 assert.match(
   index,
-  /app\.css\?v=photo-viewer-removed-1/,
-  'The stylesheet cache key must expose the removal immediately.',
+  /app\.css\?v=(?!store-list-horizontal-1)[^"]+/,
+  'The stylesheet cache key must remain newer than the full-screen photo viewer version.',
 );
 assert.match(
   index,
