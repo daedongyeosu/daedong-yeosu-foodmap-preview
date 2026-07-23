@@ -2,7 +2,7 @@
 
 /* RC3 fixes only. Store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
 const RC3_ICON_SPRITE = 'assets/ui/category-icons-color.svg';
-const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=phone-audit-batch-04';
+const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-06';
 const RC3_APP_PARTICLE = Object.freeze({
   yogiyo: '요기요로',
   baemin: '배달의민족으로',

@@ -1,6 +1,6 @@
 'use strict';
 
-const ASSET_VERSION = 'order-channel-safe-2';
+const ASSET_VERSION = 'channel-recovery-06';
 const DATA_URL = `data/stores.json?v=${ASSET_VERSION}`;
 const PHOTO_MANIFEST_URL = 'data/photo-manifest.json';
 const PHOTO_POLICY_URL = 'data/photo-policy.json';

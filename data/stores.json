@@ -29736,7 +29736,7 @@
     "district": "미평/ 둔덕",
     "category": "치킨",
     "address": "",
-    "phone": "",
+    "phone": "0616539282",
     "naverMap": "https://naver.me/GCu8It8X",
     "notionUrl": "https://app.notion.com/p/301da158dd2a80c1b659f0645bd2402a",
     "image": "assets/notion-recovery-180/fb798d3119a28415/01.png",
@@ -29749,8 +29749,38 @@
     ],
     "routes": [
       {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4cgOrQK",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4afNHZv",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4qHX1vH",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/4bDSJkY",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4rcVdMg",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/3MdICck",
         "enabled": true
       }
     ],
@@ -34150,8 +34180,8 @@
     "district": "미평, 둔덕동",
     "category": "카페/디저트/베이커리/아이스크림/빙수",
     "address": "",
-    "phone": "",
-    "naverMap": "",
+    "phone": "0616533131",
+    "naverMap": "https://bit.ly/4cieSE0",
     "notionUrl": "https://app.notion.com/p/33dda158dd2a80bc9a58fc213cd8cab0",
     "image": "assets/notion-recovery-180/6286966a0169a76b/01.png",
     "img": "assets/notion-recovery-180/6286966a0169a76b/01.png",
@@ -34163,8 +34193,33 @@
     ],
     "routes": [
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3Qg2z3L",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/4c1UXKH",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/41Y0yMc",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/4tFpwff",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/41klOeZ",
         "enabled": true
       }
     ],

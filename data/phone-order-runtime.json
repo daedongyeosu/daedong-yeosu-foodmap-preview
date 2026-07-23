@@ -2163,6 +2163,14 @@
     {
       "store_id": "39f3c8acab504b00",
       "clickableTel": true
+    },
+    {
+      "store_id": "fb798d3119a28415",
+      "clickableTel": true
+    },
+    {
+      "store_id": "6286966a0169a76b",
+      "clickableTel": true
     }
   ],
   "stores": [
@@ -4329,6 +4337,14 @@
     {
       "store_id": "39f3c8acab504b00",
       "phone": "0616549685"
+    },
+    {
+      "store_id": "fb798d3119a28415",
+      "phone": "0616539282"
+    },
+    {
+      "store_id": "6286966a0169a76b",
+      "phone": "0616533131"
     }
   ]
 }
