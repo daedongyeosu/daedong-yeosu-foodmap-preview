@@ -42264,6 +42264,31 @@
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4r9LRjF",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/45yJfUl",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/3ZxYTvz",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/3LDmuIa",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/49YKuNY",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -42844,6 +42869,21 @@
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-두찜여수국동점",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel0616442272",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-두찜여수국동점",
+        "enabled": true
       }
     ],
     "latitude": null,
@@ -43278,6 +43318,11 @@
       {
         "name": "전화주문",
         "url": "https://bit.ly/4dzSvwi",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-맘스터치문수점",
         "enabled": true
       }
     ],
@@ -43968,6 +44013,31 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/tk-외계인피자여수점",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/tel050713852676",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-외계인피자여수점",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-외계인피자여수점",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-외계인피자여수점",
         "enabled": true
       }
     ],
@@ -44981,7 +45051,7 @@
     "category": "카페/디저트/베이커리/아이스크림/빙수",
     "address": "",
     "phone": "",
-    "naverMap": "",
+    "naverMap": "https://bit.ly/네이버지도-배스킨라빈스여수여서점",
     "notionUrl": "https://app.notion.com/p/2f5da158dd2a8098a5b6ccd63e5f290a",
     "notionPageId": "2f5da158dd2a8098a5b6ccd63e5f290a",
     "image": "assets/store-photos/e982b7aa80a2e4/02.webp",
@@ -44996,6 +45066,31 @@
       {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "가게바로주문",
+        "url": "https://bit.ly/auto-배스킨라빈스여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://bit.ly/전화-배스킨라빈스여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://bit.ly/yo-배스킨라빈스여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://bit.ly/cu-배스킨라빈스여수여서점",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://bit.ly/bm-배스킨라빈스여수여서점",
         "enabled": true
       }
     ],
