@@ -29,7 +29,7 @@
   width:min(150vw,1680px);
   aspect-ratio:2/1;
   opacity:0;
-  transform:translate3d(-4%,-47%,0) scale(1.24) rotate(-6deg);
+  transform:translate3d(-20%,-47%,0) scale(1.24) rotate(-6deg);
   transform-origin:18% 45%;
   filter:
     drop-shadow(0 22px 24px rgba(0,31,49,.36))
@@ -64,29 +64,29 @@
 @keyframes turtle-ship-hero-voyage{
   0%{
     opacity:0;
-    transform:translate3d(-4%,-47%,0) scale(1.24) rotate(-6deg);
+    transform:translate3d(-20%,-47%,0) scale(1.24) rotate(-6deg);
     filter:drop-shadow(0 24px 26px rgba(0,31,49,.4)) saturate(.94) contrast(1.06);
   }
   8%{
     opacity:1;
-    transform:translate3d(-6%,-48%,0) scale(1.22) rotate(-6.2deg);
+    transform:translate3d(-21%,-48%,0) scale(1.22) rotate(-6.2deg);
   }
   38%{
     opacity:1;
-    transform:translate3d(-15%,-50%,0) scale(.98) rotate(-6.8deg);
+    transform:translate3d(-24%,-50%,0) scale(.98) rotate(-6.8deg);
   }
   68%{
     opacity:.96;
-    transform:translate3d(-20%,-53%,0) scale(.7) rotate(-7.2deg);
+    transform:translate3d(-27%,-53%,0) scale(.7) rotate(-7.2deg);
     filter:drop-shadow(0 14px 18px rgba(0,31,49,.3)) saturate(.9) contrast(1.04);
   }
   90%{
     opacity:.82;
-    transform:translate3d(-23%,-56%,0) scale(.43) rotate(-7.5deg);
+    transform:translate3d(-30%,-56%,0) scale(.43) rotate(-7.5deg);
   }
   100%{
     opacity:0;
-    transform:translate3d(-24%,-58%,0) scale(.34) rotate(-7.7deg);
+    transform:translate3d(-32%,-58%,0) scale(.34) rotate(-7.7deg);
     filter:drop-shadow(0 5px 8px rgba(0,31,49,.13)) saturate(.82) contrast(1);
   }
 }
