@@ -30,7 +30,7 @@
       requestAnimationFrame(() => {
         scene.classList.add('is-sailing');
         clearTimeout(finishTimer);
-        finishTimer = window.setTimeout(markFinished, 7600);
+        finishTimer = window.setTimeout(markFinished, 9000);
       });
     };
 
