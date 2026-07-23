@@ -74,7 +74,16 @@ const SEARCH_BRAND_ALIAS_GROUPS = [
 ];
 
 const CATEGORY_PREFERRED = ['한식', '치킨', '피자', '중식', '분식/도시락', '분식', '족발/보쌈', '회/해산물', '국밥/찜/탕/찌개/조림', '면요리', '고기/구이', '돈까스/일식', '카페/디저트', '햄버거', '야식/주점', '마라탕/양꼬치', '샐러드/건강식', '도시락/죽', '반찬', '베이커리/떡', '아시안', '패스트푸드', '퓨전', '기타'];
-const CATEGORY_ICON_RULES = [[/치킨|닭/, '🍗'], [/피자/, '🍕'], [/중식|짜장|짬뽕/, '🍜'], [/분식.*도시락|도시락.*분식/, '🍱'], [/분식|떡볶이/, '🍢'], [/족발|보쌈/, '🍖'], [/회|해산물|횟집|수산/, '🐟'], [/국밥|찜|탕|찌개|조림/, '🍲'], [/면|냉면|국수/, '🍜'], [/고기|구이|삼겹|갈비/, '🥩'], [/돈까스|일식|초밥|스시/, '🍱'], [/카페|커피|디저트|빙수/, '☕'], [/햄버거|버거/, '🍔'], [/야식|주점|술집/, '🌙'], [/마라|양꼬치/, '🌶️'], [/샐러드|건강/, '🥗'], [/죽/, '🥣'], [/반찬/, '🍚'], [/베이커리|빵|떡/, '🥐'], [/아시안|베트남|태국/, '🍛'], [/한식/, '🍚']];
+const CATEGORY_ICON_SPRITE = 'assets/ui/category-icons-color.svg?v=category-first-paint-1';
+const CATEGORY_ICON_RULES = [
+  [/^전체$/, 'all'], [/마라|양꼬치/, 'mala'], [/치킨|닭/, 'chicken'], [/피자/, 'pizza'],
+  [/중식|짜장|짬뽕/, 'chinese'], [/분식.*도시락|도시락.*분식/, 'lunchbox'], [/분식|떡볶이/, 'snack'],
+  [/족발|보쌈/, 'pork'], [/회|해산물|초밥|선어|수산/, 'seafood'], [/국밥|찜|탕|찌개|조림/, 'stew'],
+  [/면|국수|냉면|우동|라멘/, 'noodles'], [/고기|구이|삼겹|갈비/, 'grill'], [/돈가스|돈까스|일식/, 'japanese'],
+  [/카페|디저트|빙수|아이스크림|커피/, 'dessert'], [/야식|주점|술집/, 'night'],
+  [/햄버거|버거|샌드위치|토스트|핫도그/, 'burger'], [/반찬/, 'banchan'], [/베이커리|빵|떡/, 'bakery'],
+  [/한식/, 'korean']
+];
 const HERO_BANNERS = Array.from({length: 17}, (_, index) => {
   const number = String(index + 1).padStart(2, '0');
   return {desktop: `images/${number}.png`, mobile: `images/${number}.png`, fallback: `images/${number}.png`, alt: `대동여수음식지도 배너 ${index + 1}`};
@@ -189,7 +198,16 @@ function canonicalSearchAliases(raw) {
   return [...new Set([...explicit, ...brandAliases].map(value => String(value).trim()).filter(Boolean))];
 }
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>'"]/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'}[char])); }
-function categoryIcon(name) { const rule = CATEGORY_ICON_RULES.find(([pattern]) => pattern.test(name)); return rule ? rule[1] : '🍽️'; }
+function categoryIconId(name) {
+  const value = String(name || '');
+  return CATEGORY_ICON_RULES.find(([pattern]) => pattern.test(value))?.[1] || 'other';
+}
+function categoryIcon(name, className = 'category-inline-icon') {
+  return `<svg class="${className}" aria-hidden="true"><use href="${CATEGORY_ICON_SPRITE}#${categoryIconId(name)}"></use></svg>`;
+}
+function categoryButtonMarkup(name) {
+  return `<button type="button" class="category glass-action ${state.category === name ? 'active' : ''}" data-cat="${escapeHtml(name)}">${categoryIcon(name, 'category-main-icon')}<span>${escapeHtml(name)}</span></button>`;
+}
 function safeHref(value) { const raw=String(value??'').trim();if(!/^(?:https?:|tel:)/i.test(raw))return '#';try { const url = new URL(raw); return ['http:', 'https:', 'tel:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } }
 function routeKey(name) {
   const text = normalize(name);
@@ -457,9 +475,16 @@ function mainCategories() {
   const remaining = categories.filter(name => !preferred.includes(name));
   return [...preferred, ...remaining].slice(0, 12);
 }
-function renderCategories() {
-  $('#categoryGrid').innerHTML = mainCategories().map(name => `<button type="button" class="category ${state.category === name ? 'active' : ''}" data-cat="${escapeHtml(name)}"><span class="bubble">${categoryIcon(name)}</span><span>${escapeHtml(name)}</span></button>`).join('');
+function renderCategoryGrid() {
+  const grid = $('#categoryGrid');
+  if (!grid) return;
+  const names = ['전체', ...mainCategories().filter(name => name !== '전체')];
+  const signature = `${state.category}\u0000${names.join('\u0000')}`;
+  if (grid.dataset.categorySignature === signature) return;
+  grid.innerHTML = names.map(categoryButtonMarkup).join('');
+  grid.dataset.categorySignature = signature;
 }
+function renderCategories() { renderCategoryGrid(); }
 function relevance(store, query) {
   const q = normalize(query); if (!q) return 1;
   const name = normalize(store.name), text = storeText(store);
@@ -654,7 +679,7 @@ function guide() {
 }
 function appBrowserPhoto(store) {
   const photo = photoResolver.resolve(store);
-  return photo ? `<img class="app-browser-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)}" loading="lazy" data-photo-kind="card">` : `<span class="app-browser-photo-placeholder">${categoryIcon(store.cat)}</span>`;
+  return photo ? `<img class="app-browser-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)}" loading="lazy" data-photo-kind="card">` : `<span class="app-browser-photo-placeholder">${categoryIcon(store.cat, 'category-placeholder-icon')}</span>`;
 }
 function appRegisteredStores(key) {
   return stores.filter(store => routeFor(store, key)).map(store => ({store, distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null})).sort((a, b) => {
@@ -671,7 +696,7 @@ function appBrowserMarkup(key, selectedCategory = '추천') {
     const ai=CATEGORY_PREFERRED.indexOf(a), bi=CATEGORY_PREFERRED.indexOf(b); return (ai<0?999:ai)-(bi<0?999:bi)||a.localeCompare(b,'ko');
   });
   const list = selectedCategory === '추천' ? all : all.filter(store => store.cat === selectedCategory);
-  const chips = `<nav class="app-browser-category-chips" aria-label="음식 카테고리"><button type="button" data-app-category="추천" class="${selectedCategory === '추천' ? 'active' : ''}">추천</button>${categoriesForApp.map(category => `<button type="button" data-app-category="${escapeHtml(category)}" class="${selectedCategory === category ? 'active' : ''}">${categoryIcon(category)} ${escapeHtml(category)}</button>`).join('')}</nav>`;
+  const chips = `<nav class="app-browser-category-chips" aria-label="음식 카테고리"><button type="button" data-app-category="추천" class="${selectedCategory === '추천' ? 'active' : ''}">추천</button>${categoriesForApp.map(category => `<button type="button" data-app-category="${escapeHtml(category)}" class="${selectedCategory === category ? 'active' : ''}">${categoryIcon(category, 'category-chip-icon')} ${escapeHtml(category)}</button>`).join('')}</nav>`;
   const cards = list.map(store => `<button type="button" class="app-browser-card" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}${Number.isFinite(store.appDistance) ? ` · ${store.appDistance < 1 ? `${Math.round(store.appDistance*1000)}m` : `${store.appDistance.toFixed(1)}km`}` : ''}</small><span class="app-browser-only-icon">${appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
   return `<section class="app-browser" data-app-key="${key}" data-app-category-current="${escapeHtml(selectedCategory)}"><header class="app-browser-head">${appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>${escapeHtml(meta.label)}에 실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div></section>`;
 }
@@ -710,7 +735,7 @@ function brandsModal() {
   openModal(`<h2 id="modalTitle">브랜드앱 주문 가능 가게</h2><p>브랜드를 누르면 여수에 등록된 해당 브랜드 가게만 모아 보여드립니다.</p>${groups}`);
 }
 function allCategoriesModal() {
-  openModal(`<h2 id="modalTitle">전체 음식 카테고리</h2><div class="all-category-list">${categories.map(name => `<button type="button" data-modal-cat="${escapeHtml(name)}"><span>${categoryIcon(name)}</span><b>${escapeHtml(name)}</b></button>`).join('')}</div>`);
+  openModal(`<h2 id="modalTitle">전체 음식 카테고리</h2><div class="all-category-list">${categories.map(name => `<button type="button" data-modal-cat="${escapeHtml(name)}">${categoryIcon(name, 'category-modal-icon')}<b>${escapeHtml(name)}</b></button>`).join('')}</div>`);
 }
 function getSavedAddress() { return readLocalJson(ADDRESS_KEY, null); }
 function getAddressBook() { return readLocalJson(ADDRESS_BOOK_KEY, []); }
