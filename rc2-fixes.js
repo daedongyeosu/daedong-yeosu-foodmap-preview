@@ -268,19 +268,19 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
     if (photoKey) photoKeys.add(photoKey);
     globallyUsed.add(storeId);
   };
-  const fill = (allowGlobalReuse, relaxDiversity) => {
-    for (const group of groups) {
-      for (const store of group.stores) {
-        addStore(store, relaxDiversity, allowGlobalReuse);
-        if (result.length >= limit) return true;
-      }
+  const fillGroup = (group, allowGlobalReuse, relaxDiversity) => {
+    for (const store of group.stores) {
+      addStore(store, relaxDiversity, allowGlobalReuse);
+      if (result.length >= limit) return true;
     }
     return false;
   };
-  if (fill(false, false)) return result;
-  if (fill(false, true)) return result;
-  if (fill(true, false)) return result;
-  fill(true, true);
+  for (const group of groups) {
+    if (fillGroup(group, false, false)) return result;
+    if (fillGroup(group, false, true)) return result;
+    if (fillGroup(group, true, false)) return result;
+    if (fillGroup(group, true, true)) return result;
+  }
   return result;
 }
 
