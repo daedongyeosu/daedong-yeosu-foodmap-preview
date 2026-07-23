@@ -181,13 +181,11 @@ let categories = [];
 let heroCarousel = null;
 let promoCarousel = null;
 let detailCarousel = null;
-let photoViewerCarousel = null;
 let photoResolver = null;
 let addressDraft = null;
 let yeosuNeighborhoods = [];
 let neighborhoodByName = new Map();
 let modalHistoryActive = false;
-let photoViewerHistoryActive = false;
 let ignoreNextPop = false;
 
 function normalize(value) { return String(value ?? '').trim().toLowerCase().replace(/[\s·&()\-_/.,]/g, ''); }
@@ -345,12 +343,12 @@ class PhotoResolver {
     if (!photos.length) return placeholderMarkup('detail');
     if (photos.length === 1) {
       const photo = photos[0];
-      return `<div class="detail-single-photo"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 1" loading="lazy" data-photo-kind="detail" data-photo-source="${escapeHtml(photo.source)}" data-photo-viewer data-gallery-index="0"></div>`;
+      return `<div class="detail-single-photo"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 1" loading="lazy" data-photo-kind="detail" data-photo-source="${escapeHtml(photo.source)}"></div>`;
     }
     return `<div id="detailPhotoCarousel" class="carousel-controller detail-photo-carousel" data-original-count="${photos.length}">
       <div class="carousel-shell detail-photo-frame">
         <button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 가게사진">‹</button>
-        <div class="carousel-track">${photos.map((photo, index) => `<article class="carousel-slide detail-photo-slide"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 ${index + 1}" loading="lazy" data-photo-kind="detail" data-photo-source="${escapeHtml(photo.source)}" data-photo-viewer data-gallery-index="${index}"></article>`).join('')}</div>
+        <div class="carousel-track">${photos.map((photo, index) => `<article class="carousel-slide detail-photo-slide"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 ${index + 1}" loading="lazy" data-photo-kind="detail" data-photo-source="${escapeHtml(photo.source)}"></article>`).join('')}</div>
         <button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 가게사진">›</button>
       </div><div class="carousel-dots" aria-label="가게사진 위치"></div></div>`;
   }
@@ -607,12 +605,12 @@ function lockPage() {
 function unlockPage() {
   const top = Number(document.body.dataset.lockScrollY || 0);
   delete document.body.dataset.lockScrollY;
-  document.documentElement.classList.remove('modal-open','photo-viewer-open'); document.body.classList.remove('modal-open','photo-viewer-open');
+  document.documentElement.classList.remove('modal-open'); document.body.classList.remove('modal-open');
   for (const property of ['position','top','left','right','width','overflow']) document.body.style.removeProperty(property);
   scrollWindowInstant(top);
 }
 function layerStillOpen() {
-  return !$('#modal')?.hidden || !$('#photoViewer')?.hidden || !$('#startupAd')?.hidden;
+  return !$('#modal')?.hidden || !$('#startupAd')?.hidden;
 }
 function classifyModal() {
   const modal = $('#modal'); if (!modal) return;
@@ -632,48 +630,18 @@ function openModal(html) {
   if (wasHidden && !history.state?.daedongModal) { history.pushState({daedongModal:true}, ''); modalHistoryActive = true; }
   setTimeout(() => $('.modal-close')?.focus(), 0);
 }
-function closePhotoViewer({fromPop = false, syncDetail = true} = {}) {
-  const viewer = $('#photoViewer'); if (!viewer || viewer.hidden) return;
-  const index = photoViewerCarousel?.logicalIndex?.() ?? 0;
-  photoViewerCarousel?.destroy(); photoViewerCarousel = null;
-  viewer.hidden = true; viewer.setAttribute('aria-hidden','true'); viewer.querySelector('.carousel-track').innerHTML = ''; viewer.querySelector('.carousel-dots').innerHTML = '';
-  document.documentElement.classList.remove('photo-viewer-open'); document.body.classList.remove('photo-viewer-open');
-  if (syncDetail && detailCarousel?.count) { detailCarousel.current = Math.max(0, Math.min(detailCarousel.count - 1, index)) + 1; detailCarousel.jump(false); detailCarousel.start(); }
-  photoViewerHistoryActive = false;
-  if (!layerStillOpen()) unlockPage();
-  if (!fromPop && history.state?.daedongPhotoViewer) { ignoreNextPop = true; history.back(); }
-}
 function hardClose({fromPop = false} = {}) {
-  const viewerWasOpen = !$('#photoViewer')?.hidden;
-  closePhotoViewer({fromPop:true, syncDetail:false});
   detailCarousel?.destroy(); detailCarousel = null;
   const modal = $('#modal'); if (modal) { modal.hidden = true; modal.className = 'modal'; modal.removeAttribute('data-app-browser-key'); modal.removeAttribute('data-app-browser-category'); modal.removeAttribute('data-active-store-id'); }
   if ($('#modalContent')) $('#modalContent').innerHTML = '';
   if ($('#overlay')) $('#overlay').hidden = true;
   if ($('#moreAppsPopover')) $('#moreAppsPopover').hidden = true;
   if ($('#startupAd')) $('#startupAd').hidden = true;
-  unlockPage(); modalHistoryActive = false; photoViewerHistoryActive = false;
-  if (!fromPop) {
-    if (viewerWasOpen && history.state?.daedongPhotoViewer) { ignoreNextPop = true; history.go(-2); }
-    else if (history.state?.daedongModal) { ignoreNextPop = true; history.back(); }
-  }
+  unlockPage(); modalHistoryActive = false;
+  if (!fromPop && history.state?.daedongModal) { ignoreNextPop = true; history.back(); }
 }
 function closeModal(options = {}) { hardClose(options); }
 window.hardClose = hardClose; window.hideModal = hardClose; window.closeModal = hardClose;
-function openPhotoViewer(image) {
-  const viewer = $('#photoViewer'), store = stores.find(item => String(item.id) === String($('#modal')?.dataset.activeStoreId));
-  if (!viewer || !store) return;
-  const photos = photoResolver.resolveGallery(store); if (!photos.length) return;
-  const requested = Number(image?.dataset.galleryIndex); const initial = Number.isFinite(requested) ? requested : (detailCarousel?.logicalIndex?.() ?? 0);
-  const track = viewer.querySelector('.carousel-track');
-  track.innerHTML = photos.map((photo,index)=>`<article class="carousel-slide photo-viewer-slide"><img src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 전체화면 사진 ${index+1}" data-gallery-index="${index}"></article>`).join('');
-  viewer.hidden = false; viewer.setAttribute('aria-hidden','false'); document.documentElement.classList.add('photo-viewer-open'); document.body.classList.add('photo-viewer-open'); lockPage(); detailCarousel?.stop();
-  const counter = viewer.querySelector('.photo-viewer-count');
-  photoViewerCarousel = new InfiniteCarousel($('#photoViewerCarousel'), {interval:0, onChange:(index,count)=>{ counter.textContent = `${index+1} / ${count}`; }});
-  photoViewerCarousel.goTo(Math.max(0, Math.min(photos.length - 1, initial)));
-  if (!history.state?.daedongPhotoViewer) { history.pushState({daedongPhotoViewer:true}, ''); photoViewerHistoryActive = true; }
-  viewer.querySelector('.photo-viewer-close')?.focus();
-}
 function guide() {
   openModal(`<h2 id="modalTitle">원하는 방법으로 편하게 주문하세요</h2><p>가게마다 이용 가능한 주문방법을 한눈에 확인할 수 있습니다. 가게를 먼저 선택한 뒤 원하는 경로를 확인해 주세요.</p>`);
 }
@@ -885,12 +853,10 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.modal-close').addEventListener('click', () => hardClose());
   $('#overlay').addEventListener('click', () => hardClose());
   $('#modal').addEventListener('click', event => { if (event.target === $('#modal')) hardClose(); });
-  $('#photoViewer').addEventListener('click', event => { if (event.target === $('#photoViewer') || event.target.closest('[data-photo-viewer-close]')) closePhotoViewer(); });
-  document.addEventListener('keydown', event => { if (event.key !== 'Escape') return; if (!$('#photoViewer').hidden) closePhotoViewer(); else if (!$('#modal').hidden) hardClose(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('#modal').hidden) hardClose(); });
 
   document.addEventListener('click', event => {
     if (event.target.id === 'clearSearch') { resetFilters(); return; }
-    if (event.target.closest('[data-photo-viewer]')) { event.preventDefault(); event.stopPropagation(); openPhotoViewer(event.target.closest('[data-photo-viewer]')); return; }
     if (event.target.id === 'addressSearchBtn') { renderAddressResults($('#addressSearchInput')?.value || ''); return; }
     if (event.target.id === 'clearAddressSearch') { $('#addressSearchInput').value=''; event.target.hidden=true; renderAddressResults(''); return; }
     const addressBase=event.target.closest('[data-address-base]'); if(addressBase){chooseAddressBase(addressBase.dataset.addressBase);return;}
@@ -953,5 +919,5 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.startup-card').addEventListener('click', event => event.stopPropagation());
   $('#hideToday').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); localStorage.setItem('hideStartup', today); closeStartupAd(); });
   $('#startupDetails').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); setTimeout(() => openModal(`<h2 id="modalTitle">대동여수음식지도 모집·광고 안내</h2><div class="guide-list">${PROMOS.map(promo => `<button type="button">${promo.title}<br><small>${promo.desc}</small></button>`).join('')}</div>`), 60); });
-  window.addEventListener('popstate', () => { if(ignoreNextPop){ignoreNextPop=false;return;} if (!$('#photoViewer').hidden) { closePhotoViewer({fromPop:true}); return; } if (!startupAd.hidden) { closeStartupAd({fromPop:true}); return; } if (!$('#modal').hidden) hardClose({fromPop:true}); });
+  window.addEventListener('popstate', () => { if(ignoreNextPop){ignoreNextPop=false;return;} if (!startupAd.hidden) { closeStartupAd({fromPop:true}); return; } if (!$('#modal').hidden) hardClose({fromPop:true}); });
 });
