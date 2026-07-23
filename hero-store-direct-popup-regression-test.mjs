@@ -28,8 +28,8 @@ assert.match(
 );
 assert.match(
   index,
-  /final-experience\.js\?v=hero-store-direct-1/,
-  'The loader containing the corrected hero script version must bypass older cached copies.',
+  /final-experience\.js\?v=selected-category-label-1/,
+  'The current loader must continue to include the corrected hero script version.',
 );
 
 console.log('hero-store-direct-popup-regression-test: pass');
