@@ -46,8 +46,8 @@ normalizedStore=function(raw,index){const store=fxOriginalNormalizedStore(raw,in
 filteredStores=function(){return fxOriginalFilteredStores().filter(fxVisible);};
 appRegisteredStores=function(key){return fxOriginalAppRegisteredStores(key).filter(fxVisible);};
 
-function fxCategoryMarkup(name){return `<button type="button" class="category glass-action ${state.category===name?'active':''}" data-cat="${escapeHtml(name)}">${fxSvg('food','category-local-icon')}<span>${escapeHtml(name)}</span></button>`;}
-renderCategories=function(){const names=['전체',...mainCategories()];$('#categoryGrid').innerHTML=names.map(fxCategoryMarkup).join('');};
+function fxCategoryMarkup(name){return categoryButtonMarkup(name);}
+renderCategories=renderCategoryGrid;
 
 function fxThemeMatch(store,spec){const text=storeText(store);return spec.pattern?spec.pattern.test(text):true;}
 function fxRankStores(spec){return stores.filter(fxVisible).filter(store=>fxThemeMatch(store,spec)).map(store=>{const distance=fxDistance(store);const low=['direct','mukkebi','ddangyo','ondongne'].some(key=>routeFor(store,key));let score=spec.pattern?80:20;if(distance!==null)score+=Math.max(0,32-distance*4);if(low)score+=12;if(store.managed)score+=8;else if(store.sharedManaged)score+=5;if(spec.kind==='near'&&distance!==null)score+=Math.max(0,120-distance*25);if(spec.kind==='local'&&low)score+=80;if(spec.kind==='new')score+=Math.max(0,500-(store.rawIndex||0));return{store,distance,score};}).sort((a,b)=>b.score-a.score||(a.distance??999)-(b.distance??999)||a.store.name.localeCompare(b.store.name,'ko')).map(item=>({...item.store,distance:item.distance}));}
@@ -292,15 +292,15 @@ fxRc2Script.src='rc2-fixes.js?v=location-priority-2';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=order-link-audit-1';
+ fxRc3Script.src='rc3-fixes.js?v=category-first-paint-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
-  fxRc4Script.src='rc4-fixes.js?v=rc4';
+  fxRc4Script.src='rc4-fixes.js?v=category-first-paint-1';
   fxRc4Script.async=false;
   fxRc4Script.onload=()=>{
    const fxRc5Script=document.createElement('script');
-   fxRc5Script.src='rc5-fixes.js?v=category-card-single-detail-1';
+   fxRc5Script.src='rc5-fixes.js?v=category-first-paint-1';
    fxRc5Script.async=false;
    fxRc5Script.onload=()=>{
     const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=location-store-hero-1';document.head.append(css);
