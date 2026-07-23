@@ -28,7 +28,7 @@ assert.match(
 );
 assert.match(
   index,
-  /final-experience\.js\?v=selected-category-label-1/,
+  /final-experience\.js\?v=selected-category-label-2/,
   'The current loader must continue to include the corrected hero script version.',
 );
 
