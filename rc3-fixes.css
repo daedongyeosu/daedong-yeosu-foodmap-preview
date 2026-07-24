@@ -80,6 +80,15 @@
   text-align: center;
 }
 .phone-call-link { background: var(--orange); color: #fff; }
+.popup-utility-links {
+  margin: 14px 0;
+}
+.popup-utility-links.single {
+  grid-template-columns: 1fr;
+}
+.popup-utility-links .detail-quick-link {
+  min-height: 56px;
+}
 
 .feedback-sheet input,
 .feedback-sheet select {
