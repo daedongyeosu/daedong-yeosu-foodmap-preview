@@ -183,13 +183,13 @@ fxPhoneStores = function rc3PhoneStores(category = '추천') {
     .filter(fxVisible)
     .map(store => ({store, phoneOrder: resolveStoreChannels(store).primaryOrder.phoneOrder}))
     .filter(item => Boolean(item.phoneOrder));
-  if (category !== '추천') list = list.filter(item => item.store.cat === category);
-  return list.sort((a, b) => (fxDistance(a.store) ?? 999) - (fxDistance(b.store) ?? 999) || a.store.name.localeCompare(b.store.name, 'ko'));
+  if (category !== '추천') list = list.filter(item => storeMatchesCategory(item.store, category));
+  return applyCategoryPriorityOverrides(list.sort((a, b) => (fxDistance(a.store) ?? 999) - (fxDistance(b.store) ?? 999) || a.store.name.localeCompare(b.store.name, 'ko')), category);
 };
 
 fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천') {
   const all = fxPhoneStores();
-  const cats = [...new Set(all.map(item => item.store.cat).filter(Boolean))];
+  const cats = categoriesFromStores(all.map(item => item.store));
   const list = fxPhoneStores(category);
   if (!$('#modal')?.hidden && $('#modalContent .phone-order-sheet')) rc2ReplaceModal();
   const chips = `<nav class="app-browser-category-chips"><button type="button" data-phone-category="추천" class="${category === '추천' ? 'active' : ''}">추천</button>${cats.map(cat => `<button type="button" data-phone-category="${escapeHtml(cat)}" class="${category === cat ? 'active' : ''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
