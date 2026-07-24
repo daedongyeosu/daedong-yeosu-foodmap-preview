@@ -17,7 +17,10 @@
     if (!shell || !passage) return;
     const shellRect = shell.getBoundingClientRect();
     const passageRect = passage.getBoundingClientRect();
-    const center = passageRect.top - shellRect.top + (passageRect.height / 2);
+    const originalCourseOffset = window.matchMedia('(max-width: 767px)').matches
+      ? 56
+      : Math.min(54, Math.max(41, window.innerWidth * 0.05));
+    const center = passageRect.top - shellRect.top + originalCourseOffset;
     scene.style.setProperty('--turtle-passage-center', `${Math.round(center)}px`);
   }
 

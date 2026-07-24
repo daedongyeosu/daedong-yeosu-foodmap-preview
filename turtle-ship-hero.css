@@ -12,7 +12,7 @@
  */
 .turtle-ship-passage{
   position:relative;
-  height:clamp(82px,10vw,108px);
+  height:30px;
   pointer-events:none;
 }
 
@@ -98,7 +98,7 @@
 
 @media(max-width:767px){
   .turtle-ship-passage{
-    height:112px;
+    height:28px;
   }
 
   .turtle-ship-hero-voyage{
