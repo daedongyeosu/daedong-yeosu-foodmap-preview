@@ -60,10 +60,14 @@ for(const required of ['둔덕동','미평동','화장동'])if(!audited.some(ite
 for(const required of [
  '...new Set([...branchNeighborhoods,...notionNeighborhoods])',
 ])if(!appSource.includes(required))throw new Error(`multi-neighborhood wiring missing: ${required}`);
-for(const required of [
+if(![
  'const key = `${bucket}:${tier}`',
+ "const key = String(bucket) + ':' + String(tier)",
+].some(required=>rc2Source.includes(required)))throw new Error('rail location-priority bucket/tier wiring missing');
+if(![
  'addStore(store, true)',
-])if(!rc2Source.includes(required))throw new Error(`rail location-priority wiring missing: ${required}`);
+ 'addStore(store, relaxDiversity, allowGlobalReuse)',
+].some(required=>rc2Source.includes(required)))throw new Error('rail location-priority fill wiring missing');
 for(const required of [
  'neighborhoodFor(state.location)||neighborhoodFor(state.addressLabel)',
  'a.bucket-b.bucket||a.ownershipTier-b.ownershipTier',
