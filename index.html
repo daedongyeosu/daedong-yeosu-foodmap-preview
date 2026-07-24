@@ -19,15 +19,15 @@
   <link rel="preload" as="image" href="assets/ui/category-icons-color.svg?v=category-first-paint-1">
   <link rel="preload" as="image" href="assets/yeosu-rc6/dolsan-day-mobile.webp" media="(max-width: 767px)">
   <link rel="preload" as="image" href="assets/yeosu-rc6/dolsan-day-desktop.webp" media="(min-width: 768px)">
-  <link rel="preload" as="image" href="assets/yeosu-ux/turtle-ship-northwest-mobile-v3.webp" media="(max-width: 767px)">
-  <link rel="preload" as="image" href="assets/yeosu-ux/turtle-ship-northwest-v3.webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="assets/yeosu-ux/turtle-ship-northwest-mobile-v4.webp" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="assets/yeosu-ux/turtle-ship-northwest-v4.webp" media="(min-width: 768px)">
   <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
   <link rel="stylesheet" href="app.css?v=selected-category-label-1">
   <link rel="stylesheet" href="store-list-horizontal-pager.css?v=1">
-  <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1">
+  <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1-turtle-glass-1">
   <link rel="stylesheet" href="rc6-fixes.css?v=location-store-hero-1">
   <link rel="stylesheet" href="rc7-address-map.css?v=home-share-touch-3">
-  <link rel="stylesheet" href="turtle-ship-hero.css?v=10">
+  <link rel="stylesheet" href="turtle-ship-hero.css?v=12">
 </head>
 <body>
   <div id="app">
@@ -35,6 +35,14 @@
     <div class="weather-layer" aria-hidden="true"></div>
     <div class="bridge-light-layer" aria-hidden="true"></div>
     <div id="microFxLayer" class="micro-fx-layer" aria-hidden="true"></div>
+    <div id="turtleShipHeroScene" class="turtle-ship-hero-scene" data-heading="northwest-rear-three-quarter" aria-hidden="true">
+      <div class="turtle-ship-hero-voyage">
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/yeosu-ux/turtle-ship-northwest-mobile-v4.webp">
+          <img src="assets/yeosu-ux/turtle-ship-northwest-v4.webp" alt="" width="1400" height="700" decoding="async">
+        </picture>
+      </div>
+    </div>
     <header class="topbar">
       <button id="locationBtn" class="location-chip" type="button" aria-label="지역 선택">
         <svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#location"></use></svg><span id="locationText">여수시 전체</span><span aria-hidden="true">⌄</span>
@@ -87,16 +95,7 @@
         </div>
       </div>
       <div id="navalLane" hidden aria-hidden="true"></div>
-      <div class="turtle-ship-passage" aria-hidden="true">
-        <div id="turtleShipHeroScene" class="turtle-ship-hero-scene">
-          <div class="turtle-ship-hero-voyage">
-            <picture>
-              <source media="(max-width: 767px)" srcset="assets/yeosu-ux/turtle-ship-northwest-mobile-v3.webp">
-              <img src="assets/yeosu-ux/turtle-ship-northwest-v3.webp" alt="" width="1400" height="700" decoding="async">
-            </picture>
-          </div>
-        </div>
-      </div>
+      <div class="turtle-ship-passage" aria-hidden="true"></div>
     </section>
     <section class="hero" aria-label="메인 슬라이드 배너">
       <div id="heroCarousel" class="carousel-controller">
@@ -151,6 +150,6 @@
   <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1" defer></script>
   <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1" defer></script>
   <script src="store-list-horizontal-pager.js?v=1" defer></script>
-  <script src="turtle-ship-hero.js?v=6" defer></script>
+  <script src="turtle-ship-hero.js?v=7" defer></script>
 </body>
 </html>

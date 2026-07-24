@@ -6,19 +6,24 @@
   display:none!important;
 }
 
+/*
+ * 거북선 때문에 주문 버튼이나 배너가 밀리지 않도록
+ * 최초 열린 바다 보완 때의 간격으로 되돌린다.
+ */
 .turtle-ship-passage{
   position:relative;
-  z-index:3;
-  height:clamp(190px,20vw,250px);
-  overflow:hidden;
-  isolation:isolate;
+  height:clamp(82px,10vw,108px);
   pointer-events:none;
 }
 
+/*
+ * 선체는 여수 배경 위, 주문 버튼·메인 배너 아래에서만 합성된다.
+ * 주문 버튼은 원래 위치를 유지하고 30% 유리판으로 선체를 비춘다.
+ */
 .turtle-ship-hero-scene{
   position:absolute;
   inset:0;
-  z-index:2;
+  z-index:1;
   overflow:hidden;
   pointer-events:none;
   user-select:none;
@@ -26,14 +31,14 @@
 
 .turtle-ship-hero-voyage{
   position:absolute;
-  left:43%;
-  top:50%;
+  left:50%;
+  top:var(--turtle-passage-center,68%);
   width:min(150vw,1680px);
   aspect-ratio:2/1;
-  background:url('assets/yeosu-ux/turtle-ship-northwest-v3.webp') center/contain no-repeat;
+  background:url('assets/yeosu-ux/turtle-ship-northwest-v4.webp') center/contain no-repeat;
   opacity:0;
-  transform:translate3d(-20%,-3%,0) scale(1.24) rotate(-6deg);
-  transform-origin:18% 45%;
+  transform:translate3d(8%,-35%,0) scale(2.05);
+  transform-origin:20% 30%;
   backface-visibility:hidden;
   will-change:transform,opacity;
 }
@@ -45,12 +50,8 @@
   height:100%;
 }
 
-.turtle-ship-hero-voyage img{
-  object-fit:contain;
-}
-
 .turtle-ship-hero-scene.is-sailing .turtle-ship-hero-voyage{
-  animation:turtle-ship-hero-voyage 12.6s linear both;
+  animation:turtle-ship-hero-voyage 16.8s cubic-bezier(.22,.55,.2,1) both;
 }
 
 .turtle-ship-hero-scene.is-paused .turtle-ship-hero-voyage{
@@ -64,46 +65,46 @@
 @keyframes turtle-ship-hero-voyage{
   0%{
     opacity:0;
-    transform:translate3d(-20%,-3%,0) scale(1.24) rotate(-6deg);
+    transform:translate3d(8%,-35%,0) scale(2.05);
   }
-  8%{
+  6%{
     opacity:1;
-    transform:translate3d(-21%,-6%,0) scale(1.22) rotate(-6.2deg);
+    transform:translate3d(3%,-38%,0) scale(1.95);
   }
-  38%{
+  40%{
     opacity:1;
-    transform:translate3d(-24%,-18%,0) scale(.98) rotate(-6.8deg);
+    transform:translate3d(-12%,-55%,0) scale(1.45);
   }
-  68%{
+  70%{
+    opacity:1;
+    transform:translate3d(-25%,-72%,0) scale(1);
+  }
+  94%{
     opacity:.96;
-    transform:translate3d(-27%,-30%,0) scale(.7) rotate(-7.2deg);
-  }
-  90%{
-    opacity:.82;
-    transform:translate3d(-30%,-39%,0) scale(.43) rotate(-7.5deg);
+    transform:translate3d(-34%,-84%,0) scale(.72);
   }
   100%{
     opacity:0;
-    transform:translate3d(-32%,-44%,0) scale(.34) rotate(-7.7deg);
+    transform:translate3d(-38%,-89%,0) scale(.62);
   }
 }
 
 @media(min-width:768px){
   .turtle-ship-hero-voyage{
-    left:46%;
+    left:50%;
     width:min(120vw,1880px);
   }
 }
 
 @media(max-width:767px){
   .turtle-ship-passage{
-    height:340px;
+    height:112px;
   }
 
   .turtle-ship-hero-voyage{
-    left:42%;
+    left:50%;
     width:180vw;
-    background-image:url('assets/yeosu-ux/turtle-ship-northwest-mobile-v3.webp');
+    background-image:url('assets/yeosu-ux/turtle-ship-northwest-mobile-v4.webp');
   }
 }
 
@@ -116,10 +117,10 @@
 @keyframes turtle-ship-hero-still{
   0%,100%{
     opacity:0;
-    transform:translate3d(-1%,-50%,0) scale(.92) rotate(-6.8deg);
+    transform:translate3d(-18%,-62%,0) scale(1.15);
   }
   18%,72%{
-    opacity:.7;
-    transform:translate3d(-1%,-50%,0) scale(.92) rotate(-6.8deg);
+    opacity:.72;
+    transform:translate3d(-18%,-62%,0) scale(1.15);
   }
 }
