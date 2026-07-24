@@ -1,0 +1,32 @@
+{
+  "campaigns": {
+    "67a9e4f14c8c7ea4": {
+      "storeId": "67a9e4f14c8c7ea4",
+      "slug": "sonsugimbap-yangji-flyer",
+      "label": "손수김밥 전용 대동여수음식지도",
+      "title": "손수김밥",
+      "meta": "미평·둔덕 · 김밥·분식·한식",
+      "images": [
+        "assets/campaigns/sonsugimbap-yangji/01-gimbap-set.webp",
+        "assets/campaigns/sonsugimbap-yangji/02-storefront.webp",
+        "assets/campaigns/sonsugimbap-yangji/03-gimbap.webp",
+        "assets/campaigns/sonsugimbap-yangji/04-spicy-soup-table.webp",
+        "assets/campaigns/sonsugimbap-yangji/05-yukgaejang.webp",
+        "assets/campaigns/sonsugimbap-yangji/06-spicy-noodles.webp",
+        "assets/campaigns/sonsugimbap-yangji/07-seafood-ramyeon.webp",
+        "assets/campaigns/sonsugimbap-yangji/08-pork-cutlet-set.webp",
+        "assets/campaigns/sonsugimbap-yangji/09-pork-cutlet.webp",
+        "assets/campaigns/sonsugimbap-yangji/10-tteokbokki.webp",
+        "assets/campaigns/sonsugimbap-yangji/11-fried-rice.webp",
+        "assets/campaigns/sonsugimbap-yangji/12-side-dishes-wide.webp",
+        "assets/campaigns/sonsugimbap-yangji/13-side-dishes.webp",
+        "assets/campaigns/sonsugimbap-yangji/14-seafood-soup.webp"
+      ],
+      "specialBannerKeys": [
+        "18",
+        "19",
+        "20"
+      ]
+    }
+  }
+}
