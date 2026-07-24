@@ -6,7 +6,7 @@ const js = fs.readFileSync('turtle-ship-hero.js', 'utf8');
 
 const checks = [
   ['새 거북선 장면이 홈 배경에 존재', html.includes('id="turtleShipHeroScene"')],
-  ['거북선 CSS·JS 캐시 버전 갱신', html.includes('turtle-ship-hero.css?v=8') && html.includes('turtle-ship-hero.js?v=6')],
+  ['거북선 CSS·JS 캐시 버전 갱신', html.includes('turtle-ship-hero.css?v=9') && html.includes('turtle-ship-hero.js?v=6')],
   ['북서향 모바일 압축 자산 사용', html.includes('turtle-ship-northwest-mobile-v3.webp')],
   ['북서향 데스크톱 압축 자산 사용', html.includes('turtle-ship-northwest-v3.webp')],
   ['기존 바다선 제거', !html.includes('class="sea-line"')],
@@ -15,6 +15,7 @@ const checks = [
   ['거북선 레이어가 터치를 가로막지 않음', /\.turtle-ship-hero-scene\s*\{[\s\S]*?pointer-events:none/.test(css)],
   ['버튼을 덮지 않고 열린 바다 안에서만 표시', /turtle-ship-passage[^>]*>[\s\S]*?id="turtleShipHeroScene"/.test(html) && /\.turtle-ship-passage\s*\{[\s\S]*?overflow:hidden/.test(css) && css.includes('isolation:isolate')],
   ['큰 투명 선체의 안정적인 합성', css.includes('backface-visibility:hidden') && css.includes('will-change:transform,opacity') && !css.includes('contain:layout paint')],
+  ['투명 선체를 CSS 배경으로 직접 합성', css.includes("background:url('assets/yeosu-ux/turtle-ship-northwest-v3.webp')") && css.includes("background-image:url('assets/yeosu-ux/turtle-ship-northwest-mobile-v3.webp')")],
   ['모바일에서 현재보다 약 3배 크게 출항', css.includes('width:180vw') && css.includes('scale(1.24)') && html.includes('width="1400" height="700"')],
   ['실제 바다 구간 중앙을 운항 기준점으로 사용', css.includes('top:50%') && !js.includes('syncPassageCenter')],
   ['처음부터 오른쪽 바다에 선체가 보이며 북서쪽으로 축소 이동', css.includes('translate3d(-20%,-47%,0) scale(1.24)') && css.includes('translate3d(-32%,-58%,0) scale(.34)') && !css.includes('-153%')],
