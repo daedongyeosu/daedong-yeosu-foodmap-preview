@@ -122,7 +122,7 @@ assert(source.includes('phoneRoute && !RC3_BLOCKED_PHONE_ROUTE_STORES.has'), '�
 assert(source.includes('data-phone-route-store-id='), '홈 전화주문 목록의 검증 경로 링크가 누락되었습니다.');
 assert(appSource.includes("const ASSET_VERSION = 'phone-route-restoration-1';"), '가게 데이터 캐시 버전이 갱신되지 않았습니다.');
 assert(finalExperienceSource.includes("fxRc2Style.href='rc2-fixes.css?v=phone-route-restoration-1';"), '전화목록 스타일 캐시 버전이 갱신되지 않았습니다.');
-assert(finalExperienceSource.includes("fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1';"), '전화경로 코드 캐시 버전이 갱신되지 않았습니다.');
+assert(finalExperienceSource.includes("fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1-popup-utility-links-1';"), '전화경로 코드 캐시 버전이 갱신되지 않았습니다.');
 assert(htmlSource.includes('app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1'), '기본 앱 캐시 버전이 갱신되지 않았습니다.');
 assert(htmlSource.includes('final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1'), '최종 화면 코드 캐시 버전이 갱신되지 않았습니다.');
 
