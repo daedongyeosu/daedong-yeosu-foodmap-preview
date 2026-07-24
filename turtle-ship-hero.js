@@ -5,11 +5,21 @@
  * 데이터·가게 목록·주문 경로·팝업 이벤트에는 연결하지 않는다.
  */
 (() => {
-  const SESSION_KEY = 'daedongTurtleShipHeroPlayedV1';
+  const SESSION_KEY = 'daedongTurtleShipHeroPlayedV2';
   const scene = document.getElementById('turtleShipHeroScene');
   if (!scene) return;
+  const shell = scene.parentElement;
+  const passage = shell?.querySelector('.turtle-ship-passage');
 
   let finishTimer = 0;
+
+  function syncPassageCenter() {
+    if (!shell || !passage) return;
+    const shellRect = shell.getBoundingClientRect();
+    const passageRect = passage.getBoundingClientRect();
+    const center = passageRect.top - shellRect.top + (passageRect.height / 2);
+    scene.style.setProperty('--turtle-passage-center', `${Math.round(center)}px`);
+  }
 
   function markFinished() {
     scene.classList.remove('is-sailing', 'is-paused');
@@ -30,7 +40,7 @@
       requestAnimationFrame(() => {
         scene.classList.add('is-sailing');
         clearTimeout(finishTimer);
-        finishTimer = window.setTimeout(markFinished, 13200);
+        finishTimer = window.setTimeout(markFinished, 17500);
       });
     };
 
@@ -60,11 +70,23 @@
   document.addEventListener('visibilitychange', () => {
     scene.classList.toggle('is-paused', document.hidden);
   });
+  window.addEventListener('resize', syncPassageCenter, {passive:true});
+
+  if (typeof ResizeObserver === 'function' && shell && passage) {
+    const layoutObserver = new ResizeObserver(syncPassageCenter);
+    layoutObserver.observe(shell);
+    layoutObserver.observe(passage);
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+      syncPassageCenter();
+      window.setTimeout(syncPassageCenter, 800);
       window.setTimeout(waitForClearHome, 900);
     }, {once:true});
   } else {
+    syncPassageCenter();
+    window.setTimeout(syncPassageCenter, 800);
     window.setTimeout(waitForClearHome, 900);
   }
 })();
