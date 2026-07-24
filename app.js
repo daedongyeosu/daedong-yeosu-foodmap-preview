@@ -28,9 +28,9 @@ const APP_META = {
   phone: {label: '전화주문', icon: '☎'},
   chak: {label: 'CHAK 지역상품권', icon: '💳'},
   naver: {label: '네이버지도', icon: '🗺️'},
-  yogiyo: {label: '요기요', icon: 'assets/yogiyo.jpg'},
-  coupang: {label: '쿠팡이츠', icon: 'assets/coupang-eats.jpg'},
-  baemin: {label: '배달의민족', icon: 'assets/baemin.jpg'}
+  yogiyo: {label: '요기요'},
+  coupang: {label: '쿠팡이츠'},
+  baemin: {label: '배달의민족'}
 };
 
 const GLOBAL_EXTERNAL_APPS = {
@@ -38,6 +38,7 @@ const GLOBAL_EXTERNAL_APPS = {
   coupang: {label: '쿠팡이츠'},
   baemin: {label: '배달의민족'}
 };
+const EXTERNAL_APP_NOTICE_TEXT = '앱 이름은 주문 경로 안내를 위해 표시되며, 대동여수음식지도와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
 
 const BRAND_GROUPS = [
   {name: '치킨·버거', brands: [
@@ -496,8 +497,12 @@ function renderPromos() {
 }
 function appIcon(key, cls = '') {
   const meta = APP_META[key]; if (!meta) return '';
+  if (EXTERNAL_APP_KEYS.includes(key)) return `<span class="${escapeHtml(`${cls} external-app-text-mark`.trim())}" aria-label="${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</span>`;
   if (String(meta.icon).includes('/') || String(meta.icon).startsWith('http')) return `<img class="${cls}" src="${meta.icon}" alt="${meta.label}">`;
   return `<span class="${cls} miniemoji">${meta.icon}</span>`;
+}
+function externalAppNoticeMarkup() {
+  return `<p class="external-app-notice" role="note"><span aria-hidden="true">ⓘ</span><span>${escapeHtml(EXTERNAL_APP_NOTICE_TEXT)}</span></p>`;
 }
 function mainCategories() {
   const preferred = CATEGORY_PREFERRED.filter(name => categories.includes(name));
@@ -692,14 +697,15 @@ function appRegisteredStores(key) {
 }
 function appBrowserMarkup(key, selectedCategory = '추천') {
   const meta = APP_META[key], all = appRegisteredStores(key);
+  const isExternal = EXTERNAL_APP_KEYS.includes(key);
   const categoriesForApp = categoriesFromStores(all).sort((a,b) => {
     const ai=CATEGORY_PREFERRED.indexOf(a), bi=CATEGORY_PREFERRED.indexOf(b); return (ai<0?999:ai)-(bi<0?999:bi)||a.localeCompare(b,'ko');
   });
   const filtered = selectedCategory === '추천' ? all : all.filter(store => storeMatchesCategory(store, selectedCategory));
   const list = applyCategoryPriorityOverrides(filtered, selectedCategory);
   const chips = `<nav class="app-browser-category-chips" aria-label="음식 카테고리"><button type="button" data-app-category="추천" class="${selectedCategory === '추천' ? 'active' : ''}">추천</button>${categoriesForApp.map(category => `<button type="button" data-app-category="${escapeHtml(category)}" class="${selectedCategory === category ? 'active' : ''}">${categoryIcon(category, 'category-chip-icon')} ${escapeHtml(category)}</button>`).join('')}</nav>`;
-  const cards = list.map(store => `<button type="button" class="app-browser-card" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}${Number.isFinite(store.appDistance) ? ` · ${store.appDistance < 1 ? `${Math.round(store.appDistance*1000)}m` : `${store.appDistance.toFixed(1)}km`}` : ''}</small><span class="app-browser-only-icon">${appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
-  return `<section class="app-browser" data-app-key="${key}" data-app-category-current="${escapeHtml(selectedCategory)}"><header class="app-browser-head">${appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>${escapeHtml(meta.label)}에 실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div></section>`;
+  const cards = list.map(store => `<button type="button" class="app-browser-card" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}${Number.isFinite(store.appDistance) ? ` · ${store.appDistance < 1 ? `${Math.round(store.appDistance*1000)}m` : `${store.appDistance.toFixed(1)}km`}` : ''}</small><span class="app-browser-only-icon">${isExternal ? `<span class="external-app-card-label">${escapeHtml(meta.label)}</span>` : appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
+  return `<section class="app-browser" data-app-key="${key}" data-app-category-current="${escapeHtml(selectedCategory)}"><header class="app-browser-head${isExternal ? ' external-app-browser-head' : ''}">${isExternal ? '' : appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>${escapeHtml(meta.label)}에 실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${isExternal ? externalAppNoticeMarkup() : ''}</section>`;
 }
 function openAppBrowser(key, selectedCategory = '추천') {
   if (!GLOBAL_EXTERNAL_APPS[key]) return;
@@ -796,7 +802,7 @@ function feeGuideMarkup(store, selectedRoute, {fromBrowser = false} = {}) {
   const localRoutes = LOW_FEE_KEYS.map(key => routeFor(store, key)).filter(Boolean);
   const selectedMeta = APP_META[selectedRoute.key] || {label:selectedRoute.name};
   const continueLabel = orderAppContinueLabel(selectedRoute.key, selectedMeta.label);
-  return `<section id="feeGuidePanel" class="community-guide" data-selected-app="${selectedRoute.key}" data-store-id="${escapeHtml(store.id)}"><span class="community-order-kicker">같은 여수, 함께 이어가는 주문</span><h2 id="modalTitle">주문하기 전에 이용 가능한 방법을 함께 확인해 보세요</h2><p class="community-order-lead">가격과 배달비를 비교해 고객님께 맞는 방법을 자유롭게 선택하세요.</p><div class="community-choice-list">${localRoutes.length ? localRoutes.map(route => routeLink(route,'community-choice-link low-fee-route')).join('') : '<p class="muted">이 가게에 등록된 지역 주문방법이 아직 없습니다.</p>'}</div><p class="community-original-label">선택한 가게</p><strong class="selected-store-name">${escapeHtml(store.name)}</strong><p class="community-original-label">처음 선택한 주문방법</p><a class="selected-app-continue community-choice-original" href="${escapeHtml(selectedRoute.url)}" target="_blank" rel="noopener" data-community-original="${selectedRoute.key}">${appIcon(selectedRoute.key,'fee-guide-icon')}<span><b>${escapeHtml(store.name)}</b><small>${escapeHtml(continueLabel)} 계속 주문하기</small></span><b>›</b></a>${fromBrowser ? `<button type="button" class="community-back" data-back-app-browser="${selectedRoute.key}">← ${escapeHtml(selectedMeta.label)} 가게목록으로</button>` : ''}<p class="community-order-note">어떤 주문방법을 선택해도 됩니다. 고객님의 비용과 편의를 먼저 확인해 주세요.</p></section>`;
+  return `<section id="feeGuidePanel" class="community-guide" data-selected-app="${selectedRoute.key}" data-store-id="${escapeHtml(store.id)}"><span class="community-order-kicker">같은 여수, 함께 이어가는 주문</span><h2 id="modalTitle">주문하기 전에 이용 가능한 방법을 함께 확인해 보세요</h2><p class="community-order-lead">가격과 배달비를 비교해 고객님께 맞는 방법을 자유롭게 선택하세요.</p><div class="community-choice-list">${localRoutes.length ? localRoutes.map(route => routeLink(route,'community-choice-link low-fee-route')).join('') : '<p class="muted">이 가게에 등록된 지역 주문방법이 아직 없습니다.</p>'}</div><p class="community-original-label">선택한 가게</p><strong class="selected-store-name">${escapeHtml(store.name)}</strong><p class="community-original-label">처음 선택한 주문방법</p><a class="selected-app-continue community-choice-original external-text-route" href="${escapeHtml(selectedRoute.url)}" target="_blank" rel="noopener" data-community-original="${selectedRoute.key}"><span><b>${escapeHtml(store.name)}</b><small>${escapeHtml(continueLabel)} 계속 주문하기</small></span><b>›</b></a>${externalAppNoticeMarkup()}${fromBrowser ? `<button type="button" class="community-back" data-back-app-browser="${selectedRoute.key}">← ${escapeHtml(selectedMeta.label)} 가게목록으로</button>` : ''}<p class="community-order-note">어떤 주문방법을 선택해도 됩니다. 고객님의 비용과 편의를 먼저 확인해 주세요.</p></section>`;
 }
 function openCommunityChoice(store, key, options = {}) {
   const selectedRoute = routeFor(store,key); if (!selectedRoute) return;
@@ -816,8 +822,8 @@ function openStore(store) {
   const phoneRoute = phoneVerified ? {key:'phone',name:`전화주문 ${phoneDigits}`,url:`tel:${phoneDigits}`} : registeredPhoneRoute;
   const external = EXTERNAL_APP_KEYS.map(key=>routeFor(store,key)).filter(Boolean);
   const otherRoutes = [phoneRoute,...external].filter(Boolean);
-  const otherMenu = otherRoutes.length ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle" type="button"><span>다른 주문방법 보기</span><span class="other-inline-icons">${otherRoutes.map(route=>appIcon(route.key,'other-inline-icon')).join('')}</span><b>›</b></button><div class="store-other-popover" hidden><button type="button" class="store-other-close" aria-label="다른 주문방법 닫기">×</button>${otherRoutes.map(route => route.key === 'phone' ? routeLink(route,'store-other-link') : `<button type="button" class="store-other-link" data-external-route-key="${route.key}">${appIcon(route.key,'store-other-icon')}<span>${escapeHtml(route.name)}</span><b>›</b></button>`).join('')}</div></div>` : '';
-  const selectedCta = selectedRoute ? `<button type="button" class="selected-order-cta" data-external-route-key="${selectedRoute.key}">${appIcon(selectedRoute.key,'selected-order-icon')}<span>처음 선택한 ${escapeHtml(APP_META[selectedRoute.key].label)}로 주문하기</span><b>›</b></button>` : '';
+  const otherMenu = otherRoutes.length ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle external-text-route" type="button"><span>다른 주문방법 보기</span><b>›</b></button><div class="store-other-popover" hidden><button type="button" class="store-other-close" aria-label="다른 주문방법 닫기">×</button>${otherRoutes.map(route => route.key === 'phone' ? routeLink(route,'store-other-link') : `<button type="button" class="store-other-link external-text-route" data-external-route-key="${route.key}"><span>${escapeHtml(route.name)}</span><b>›</b></button>`).join('')}${externalAppNoticeMarkup()}</div></div>` : '';
+  const selectedCta = selectedRoute ? `<button type="button" class="selected-order-cta external-text-route" data-external-route-key="${selectedRoute.key}"><span>처음 선택한 ${escapeHtml(APP_META[selectedRoute.key].label)}로 주문하기</span><b>›</b></button>` : '';
   const favorite=isFavorite(store.id);
   openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<p class="detail-meta">${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
   const carouselRoot = $('#detailPhotoCarousel'); if (carouselRoot) detailCarousel = new InfiniteCarousel(carouselRoot,{interval:3500});
