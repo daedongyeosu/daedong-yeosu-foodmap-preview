@@ -22,7 +22,7 @@
   <link rel="preload" as="image" href="assets/yeosu-ux/turtle-ship-northwest-mobile-v4.webp" media="(max-width: 767px)">
   <link rel="preload" as="image" href="assets/yeosu-ux/turtle-ship-northwest-v4.webp" media="(min-width: 768px)">
   <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
-  <link rel="stylesheet" href="app.css?v=selected-category-label-1">
+  <link rel="stylesheet" href="app.css?v=selected-category-label-1-external-app-text-1">
   <link rel="stylesheet" href="store-list-horizontal-pager.css?v=1">
   <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1-turtle-glass-1">
   <link rel="stylesheet" href="rc6-fixes.css?v=location-store-hero-1">
@@ -89,10 +89,11 @@
       <div id="moreAppsPopover" class="popover" hidden>
         <button class="popover-close" type="button" aria-label="닫기">×</button><h3>다른 주문앱 보기</h3>
         <div class="external-apps">
-          <button type="button" data-global-external="yogiyo"><img src="assets/yogiyo.jpg" alt="요기요"><span>요기요</span></button>
-          <button type="button" data-global-external="coupang"><img src="assets/coupang-eats.jpg" alt="쿠팡이츠"><span>쿠팡이츠</span></button>
-          <button type="button" data-global-external="baemin"><img src="assets/baemin.jpg" alt="배달의민족"><span>배달의민족</span></button>
+          <button type="button" data-global-external="yogiyo"><span class="external-app-choice-label">요기요</span></button>
+          <button type="button" data-global-external="coupang"><span class="external-app-choice-label">쿠팡이츠</span></button>
+          <button type="button" data-global-external="baemin"><span class="external-app-choice-label">배달의민족</span></button>
         </div>
+        <p class="external-app-notice" role="note"><span aria-hidden="true">ⓘ</span><span>앱 이름은 주문 경로 안내를 위해 표시되며, 대동여수음식지도와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.</span></p>
       </div>
       <div id="navalLane" hidden aria-hidden="true"></div>
       <div class="turtle-ship-passage" aria-hidden="true"></div>
@@ -147,8 +148,8 @@
   <div id="startupAd" class="startup-ad" hidden><div class="startup-card"><button class="startup-close" type="button" aria-label="닫기">×</button><small>대동여수음식지도 안내</small><h2>배달기사·가맹점 모집</h2><p>기사 모집, 가게 모집, 주문앱 가입 안내, 신규 오픈 가게와 소상공인 소식을 알립니다.</p><div class="startup-actions"><button id="startupDetails" class="primary-btn" type="button">자세히 보기</button><button id="hideToday" type="button">오늘 그만 보기</button></div></div></div>
   <noscript><p class="noscript">대동여수음식지도를 이용하려면 자바스크립트를 켜주세요.</p></noscript>
   <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
-  <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1" defer></script>
-  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-multi-category-1-hamburger-priority-1" defer></script>
+  <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1" defer></script>
+  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1" defer></script>
   <script src="store-list-horizontal-pager.js?v=1" defer></script>
   <script src="turtle-ship-hero.js?v=8" defer></script>
 </body>

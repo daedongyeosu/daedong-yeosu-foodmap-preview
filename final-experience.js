@@ -71,9 +71,10 @@ renderStores=function(options={}){fxOriginalRenderStores(options);fxRenderRails(
 
 function fxAppBrowserMarkup(key,selectedCategory='추천'){
  const meta=APP_META[key],all=appRegisteredStores(key),cats=categoriesFromStores(all);const filtered=selectedCategory==='추천'?all:all.filter(store=>storeMatchesCategory(store,selectedCategory)),list=applyCategoryPriorityOverrides(filtered,selectedCategory);
+ const isExternal=EXTERNAL_APP_KEYS.includes(key);
  const chips=`<nav class="app-browser-category-chips"><button type="button" data-app-category="추천" class="${selectedCategory==='추천'?'active':''}">추천</button>${cats.map(cat=>`<button type="button" data-app-category="${escapeHtml(cat)}" class="${selectedCategory===cat?'active':''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
- const cards=list.map(store=>`<button type="button" class="app-browser-card glass-action" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small><span>${appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
- return `<section class="app-browser"><header class="app-browser-head">${appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards||'<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div></section>`;
+ const cards=list.map(store=>`<button type="button" class="app-browser-card glass-action" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small><span>${isExternal?`<span class="external-app-card-label">${escapeHtml(meta.label)}</span>`:appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
+ return `<section class="app-browser"><header class="app-browser-head${isExternal?' external-app-browser-head':''}">${isExternal?'':appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards||'<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${isExternal?externalAppNoticeMarkup():''}</section>`;
 }
 openAppBrowser=function(key,selectedCategory='추천'){if(!['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'].includes(key))return;openModal(fxAppBrowserMarkup(key,selectedCategory));$('#modal').dataset.appBrowserKey=key;$('#modal').dataset.appBrowserCategory=selectedCategory;};
 globalExternalGuide=function(key){openAppBrowser(key);};
@@ -329,11 +330,11 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-external-app-text-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
