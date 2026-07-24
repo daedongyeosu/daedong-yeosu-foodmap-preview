@@ -56,7 +56,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "a75505094208bb61",
@@ -120,7 +123,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "d09fa15da80ff88e",
@@ -180,7 +187,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "마라탕/양꼬치"
+    ]
   },
   {
     "id": "360b32bc2f5a850c",
@@ -239,7 +249,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "275f52997bdd2755",
@@ -298,7 +312,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "fa836f4f328cb34f",
@@ -383,7 +401,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "e53db0006339f439",
@@ -468,7 +489,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "87fd57845e1c58b5",
@@ -553,7 +577,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "d7674e8acedd94b2",
@@ -638,7 +665,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b1beeb518c437d02",
@@ -698,7 +728,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "a0f6eb8bcf768489",
@@ -753,7 +787,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "야식/주점"
+    ]
   },
   {
     "id": "53300b03ac188a38",
@@ -821,7 +859,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "ecff9d7b88d1c8fb",
@@ -881,7 +922,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "043d814d4c3c1e13",
@@ -950,7 +994,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b373a08350017273",
@@ -1010,7 +1057,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "5f9d2fdf4666eb73",
@@ -1070,7 +1120,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b285c40f90621c5c",
@@ -1130,7 +1183,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "08c9054aa0115345",
@@ -1190,7 +1246,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "fb3ad6747507444d",
@@ -1250,7 +1309,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "800e9f2ab3c24e8f",
@@ -1310,7 +1372,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "c9df0658ace5336b",
@@ -1370,7 +1435,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "4152cf5c2c0c2dab",
@@ -1430,7 +1498,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "55ef78aa24e1eac6",
@@ -1494,7 +1565,13 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "중식",
+      "면요리",
+      "고기/구이"
+    ]
   },
   {
     "id": "c443f150b874d4d2",
@@ -1563,7 +1640,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "야식/주점"
+    ]
   },
   {
     "id": "adf7b4ab161ec9d2",
@@ -1623,7 +1704,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "9cb90900e5057c72",
@@ -1683,7 +1767,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "2ce5b80012bc506a",
@@ -1752,7 +1839,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "07a25456cf8c91c4",
@@ -1811,7 +1901,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "1d6b92bb000bbc08",
@@ -1865,7 +1958,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "1956f41dd81e8568",
@@ -1934,7 +2030,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "724adc8d9593fe05",
@@ -2003,7 +2102,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "1f8db0d628436011",
@@ -2067,7 +2169,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "31716733c2083fed",
@@ -2122,7 +2227,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "dc67f48b1278de3b",
@@ -2182,7 +2292,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "718031989449bc32",
@@ -2222,7 +2337,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "005382cbb06108d3",
@@ -2287,7 +2407,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "52f5738519110900",
@@ -2352,7 +2477,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "1e7308d1e28fe49e",
@@ -2416,7 +2546,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "면요리",
+      "고기/구이"
+    ]
   },
   {
     "id": "539d762fe299233d",
@@ -2470,7 +2605,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "815c0895b7dcfaa8",
@@ -2535,7 +2674,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "aa035789f77b304d",
@@ -2595,7 +2737,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "91cc31c37aa68d62",
@@ -2659,7 +2804,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "5caf409776519dd6",
@@ -2728,7 +2878,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "2f939a1b44f5f7ec",
@@ -2797,7 +2952,14 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이",
+      "야식/주점"
+    ]
   },
   {
     "id": "4b8ea4cbc481a3ee",
@@ -2862,7 +3024,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식",
+      "면요리"
+    ]
   },
   {
     "id": "f68c9f29515c518e",
@@ -2912,7 +3078,14 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이",
+      "야식/주점"
+    ]
   },
   {
     "id": "687febad1f2bf0dd",
@@ -2985,7 +3158,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "72747cfe04586176",
@@ -3056,7 +3232,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "d0400d97c15c0a02",
@@ -3132,7 +3311,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "59785990d2abe3e2",
@@ -3187,7 +3369,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "야식/주점"
+    ]
   },
   {
     "id": "dc01f52e24fc6b2b",
@@ -3249,7 +3435,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b115c4e54c35d82e",
@@ -3311,7 +3500,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "4e2bf615062e7234",
@@ -3368,7 +3560,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "c97c66bc78a649ea",
@@ -3453,7 +3648,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "84fc553896d0b051",
@@ -3515,7 +3713,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "04ae2e96e82f63ef",
@@ -3577,7 +3778,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "dfb50765a5f3a8ab",
@@ -3639,7 +3843,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "99ade7376cceea13",
@@ -3704,7 +3911,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "6126fa948ce536e6",
@@ -3766,7 +3976,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "8e930495e2e94c21",
@@ -3823,7 +4036,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "57bb58bd63f0de94",
@@ -3892,7 +4108,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "116a9f7b45941e78",
@@ -3947,7 +4167,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "ef6e7bfe76e0dbd1",
@@ -4012,7 +4235,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "0df58cf68356ebff",
@@ -4072,7 +4298,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "32f005992963d474",
@@ -4132,7 +4362,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "c194972cb20f2229",
@@ -4192,7 +4426,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "d556f1478e479e75",
@@ -4252,7 +4490,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "6fd217d22e3ad371",
@@ -4312,7 +4554,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "33558e3cc2ad9dbd",
@@ -4372,7 +4618,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "33c73743521674c6",
@@ -4441,7 +4691,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "72e0104c30277686",
@@ -4501,7 +4755,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "aed649ea91b727b8",
@@ -4550,7 +4808,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "c0bab6826b36d95f",
@@ -4615,7 +4877,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "8f3251e2788d4931",
@@ -4684,7 +4949,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "1a9ef3c649eefc17",
@@ -4744,7 +5012,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "cc5b3b36c8737601",
@@ -4794,7 +5066,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "fb32c4e0939b5468",
@@ -4849,7 +5125,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "404f1649d53b97eb",
@@ -4918,7 +5198,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "665953a0453afc52",
@@ -4973,7 +5257,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "7ed65c8f086f11f2",
@@ -5018,7 +5306,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "면요리"
+    ]
   },
   {
     "id": "5535998cfac3846a",
@@ -5083,7 +5375,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "67f5b4a369c1c6d9",
@@ -5152,7 +5447,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "4fd2d6fdd67f0db8",
@@ -5216,7 +5515,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "d60f32bbdaa13cf5",
@@ -5276,7 +5579,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "b717d583801d3f04",
@@ -5336,7 +5642,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "f20eb017620ccc33",
@@ -5401,7 +5712,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "4e44728a4ea3bcef",
@@ -5465,7 +5781,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "f0b4ebfd7df44a75",
@@ -5530,7 +5851,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "da59f19c1590082f",
@@ -5590,7 +5915,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "4e877826c5a4b649",
@@ -5650,7 +5979,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물"
+    ]
   },
   {
     "id": "b91093385f1baa6a",
@@ -5710,7 +6043,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "f5f72c3d9bbf39b6",
@@ -5775,7 +6112,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "711596e9d930aab0",
@@ -5835,7 +6176,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "119e21e06f1471b6",
@@ -5900,7 +6244,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "2875fb8206bbf1a6",
@@ -5960,7 +6307,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "190c9c9cea69da3b",
@@ -6020,7 +6370,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "54a0c1a2addb92d6",
@@ -6075,7 +6428,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "f63bbae9b9a80813",
@@ -6135,7 +6491,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "4cacbf0f8d535667",
@@ -6204,7 +6563,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "3a5417b7d9525787",
@@ -6269,7 +6631,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "dc42166bad88a929",
@@ -6333,7 +6698,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "b8267998349b16e1",
@@ -6402,7 +6770,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "40673a86169d791f",
@@ -6452,7 +6823,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "aea70baec8c61d25",
@@ -6512,7 +6886,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "ce40f493bcd2ca2b",
@@ -6572,7 +6949,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "f0804947cebd20cc",
@@ -6646,7 +7026,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "759915faca1feb20",
@@ -6701,7 +7084,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "a5916a5a02aab661",
@@ -6766,7 +7152,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "b9ea332bb64a02e8",
@@ -6826,7 +7217,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "ac2e0e2021267315",
@@ -6885,7 +7281,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "36d31c0f01bd0e9a",
@@ -6950,7 +7350,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "f1b6def61b82cc48",
@@ -7019,7 +7422,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "187287f22433bfcf",
@@ -7078,7 +7485,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "d86fa53d88c8d127",
@@ -7142,7 +7553,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "248fb06bce3aa6e4",
@@ -7211,7 +7625,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "f0c36824f150a779",
@@ -7272,7 +7690,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "aa29edc20eb6da8b",
@@ -7338,7 +7759,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "8d6b7abaf3f7f596",
@@ -7414,7 +7838,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "aae3c781ba45f8a3",
@@ -7480,7 +7907,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "4990a1c1dc208fce",
@@ -7551,7 +7981,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "afe9497576e46e1e",
@@ -7606,7 +8039,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "d1c9de66c95c1d46",
@@ -7671,7 +8107,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "86df23f2e79b3bb8",
@@ -7740,7 +8180,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "634cd6c2572df494",
@@ -7805,7 +8248,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "야식/주점"
+    ]
   },
   {
     "id": "2f4c3cfb0866c4a4",
@@ -7872,7 +8318,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "7249484d1a76ce44",
@@ -7937,7 +8386,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "950ba1c64e791621",
@@ -7991,7 +8445,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "20c4d1a484e47732",
@@ -8060,7 +8518,13 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "고기/구이",
+      "야식/주점"
+    ]
   },
   {
     "id": "3bb130edaf8e75fe",
@@ -8105,7 +8569,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "반찬"
+    ]
   },
   {
     "id": "149224e8ca5281d9",
@@ -8174,7 +8642,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "2e2afe0788acce6a",
@@ -8239,7 +8711,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "68ba9ebef219905e",
@@ -8324,7 +8801,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "치킨",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "720324ed8ea3a46e",
@@ -8409,7 +8891,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "치킨",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "d9a3b065f1cd0cf8",
@@ -8494,7 +8981,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "치킨",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "1ae0c16d309d1556",
@@ -8539,7 +9031,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "d6e14895fe474fb3",
@@ -8604,7 +9099,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "피자"
+    ]
   },
   {
     "id": "16669581b8dc378d",
@@ -8669,7 +9168,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "fd8d24a45e887938",
@@ -8738,7 +9241,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "e334f4707bd1046f",
@@ -8792,7 +9299,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "c05575dae26cfbae",
@@ -8856,7 +9367,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "47b56ab22cab7ce0",
@@ -8920,7 +9435,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "a2939cd769593c56",
@@ -8975,7 +9493,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "03f6d7c59d6d1a45",
@@ -9034,7 +9555,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "bee72f182a400ed4",
@@ -9103,7 +9627,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "24420dd7743c89a6",
@@ -9163,7 +9691,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "cc97a2338805f0c2",
@@ -9232,7 +9763,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "마라탕/양꼬치"
+    ]
   },
   {
     "id": "dedded076c21a785",
@@ -9292,7 +9826,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "마라탕/양꼬치"
+    ]
   },
   {
     "id": "9c7b5c85a8c79a6a",
@@ -9357,7 +9894,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "마라탕/양꼬치"
+    ]
   },
   {
     "id": "e74e79529019bad1",
@@ -9421,7 +9961,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "a3297f2e48bf9793",
@@ -9490,7 +10034,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "f57b6ed2e480011d",
@@ -9559,7 +10108,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "c99ad2ba715a5abb",
@@ -9628,7 +10180,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "11161bd0b4783703",
@@ -9690,7 +10245,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "a7d0d397991605ec",
@@ -9752,7 +10310,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "3b07bfa30f252db8",
@@ -9817,7 +10378,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "e9753bad89c254a3",
@@ -9886,7 +10450,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "1fe48c8f1857b4d2",
@@ -9946,7 +10514,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "5bc1cef8362365a5",
@@ -10015,7 +10586,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "88b98e5ecb968c2c",
@@ -10079,7 +10653,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "8dfdc5de41e3eca9",
@@ -10136,7 +10713,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "4c16d7a9aafcf6fd",
@@ -10191,7 +10771,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "4ff23be15f0664ae",
@@ -10251,7 +10834,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "173d62e7132f3370",
@@ -10311,7 +10897,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b5e31af3d61fc8fe",
@@ -10376,7 +10965,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "dfa033316cfcecf7",
@@ -10431,7 +11023,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "48113ac49e27c620",
@@ -10485,7 +11081,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "9999f4db1009d483",
@@ -10525,7 +11124,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "4289ad6217815b70",
@@ -10565,7 +11167,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "d14f1e6669383a88",
@@ -10615,7 +11220,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "d5ab6e067ab79cb9",
@@ -10660,7 +11268,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "9d7d7e2f99658a9c",
@@ -10700,7 +11311,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "3a60142ebc07e295",
@@ -10750,7 +11364,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "08eecf0379470865",
@@ -10795,7 +11412,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "62cd152fab8dc42e",
@@ -10840,7 +11460,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "9a4e8ea87951b54e",
@@ -10885,7 +11508,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "f25d8111c5d1b135",
@@ -10940,7 +11566,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "183a9d859fd9518d",
@@ -11000,7 +11629,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "e313a8628fc0916a",
@@ -11060,7 +11692,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "aef73537733e9387",
@@ -11145,7 +11780,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "486bad289ae76e54",
@@ -11200,7 +11838,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "0a5ea9fd4c080ed0",
@@ -11260,7 +11901,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "e1089d6ba40ec342",
@@ -11314,7 +11958,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락",
+      "면요리"
+    ]
   },
   {
     "id": "fbf90dcb8bf85a24",
@@ -11383,7 +12032,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이"
+    ]
   },
   {
     "id": "dd932b154f9ea0e6",
@@ -11448,7 +12101,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "9dcbffc6c6a5ba77",
@@ -11513,7 +12171,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "576a1f68d57eaf29",
@@ -11577,7 +12240,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "315dee55700b0a02",
@@ -11646,7 +12312,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "6a7625bd1d16ac3b",
@@ -11727,7 +12396,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "876cb9bc8fa15d8e",
@@ -11791,7 +12463,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "4674f8f434b1796a",
@@ -11846,7 +12522,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "3a09685a7db0f853",
@@ -11910,7 +12590,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "1ddcb01bb576c2e3",
@@ -11970,7 +12654,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "2b78b30bde243ae6",
@@ -12035,7 +12724,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "51ed482a660b8247",
@@ -12107,6 +12801,10 @@
     "notionPageId": "2f2da158dd2a803d97aacb2300fcd64a",
     "searchAliases": [
       "휴게소 여수여서점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -12171,7 +12869,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "a16ab5b99748d6a2",
@@ -12240,7 +12941,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "e4707894d7a253d7",
@@ -12300,7 +13006,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "a43b83f3f712fc43",
@@ -12365,7 +13074,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "cf169d6bbf8830f8",
@@ -12434,7 +13146,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "면요리"
+    ]
   },
   {
     "id": "91806c266ead3108",
@@ -12489,7 +13205,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "10f225b9ca817dc4",
@@ -12565,7 +13285,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "989fc2e054bb87c9",
@@ -12641,7 +13364,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "2ec1cf195195db03",
@@ -12705,7 +13431,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "7b80f8d10b67089e",
@@ -12769,7 +13498,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "74914ff35d06477d",
@@ -12824,7 +13556,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "4c6d5dcf82e3e56b",
@@ -12901,6 +13637,9 @@
     "notionPageId": "2f3da158dd2a80588303dcd01d7384a8",
     "searchAliases": [
       "보드람치킨 여수여서점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -12970,7 +13709,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "30fff2720e2ce0c9",
@@ -13039,7 +13781,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "81d552a2ffdcf486",
@@ -13094,7 +13840,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "6721d86f9ff6f74b",
@@ -13163,7 +13912,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b978240417a18e51",
@@ -13218,7 +13970,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "16b4130f35ec93ae",
@@ -13282,7 +14037,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "de00a38f4c4fe9d4",
@@ -13341,7 +14100,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "09de7c8235046632",
@@ -13391,7 +14154,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "75cd8af6d0da1b98",
@@ -13441,7 +14209,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "374ad657608d7b20",
@@ -13501,7 +14272,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "066197a9443c3145",
@@ -13561,7 +14336,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "4059491d8dbb4159",
@@ -13621,7 +14399,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "572e4a658f762cbe",
@@ -13681,7 +14462,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "e2645d79ef555a24",
@@ -13741,7 +14525,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b73ca9b4a41f7502",
@@ -13814,7 +14601,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "c1df1c34732d2757",
@@ -13874,7 +14664,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "e32f28eff787161a",
@@ -13924,7 +14717,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "9cba7b46fed409a9",
@@ -13984,7 +14780,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "43384f472418faec",
@@ -14048,7 +14847,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "adcbd0b7f13946a4",
@@ -14103,7 +14905,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "회/초밥/선어/해산물"
+    ]
   },
   {
     "id": "030d45b86234bb7b",
@@ -14158,7 +14963,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "67d28f42d21c125f",
@@ -14218,7 +15026,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "8608c923097a2adc",
@@ -14273,7 +15086,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "2723324111f200b8",
@@ -14342,7 +15158,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "8d23a7a6daaa7c6d",
@@ -14406,7 +15225,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "03809451afc7b09b",
@@ -14475,7 +15297,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "de5f7fd077422974",
@@ -14539,7 +15364,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "72f43b13ec8436f7",
@@ -14599,7 +15427,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "면요리",
+      "고기/구이"
+    ]
   },
   {
     "id": "3b0b23248891aa0e",
@@ -14664,7 +15497,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "779bc5453215d9c5",
@@ -14728,7 +15565,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "11e1973f448ef7a6",
@@ -14797,7 +15638,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "421fc97caaddfbc5",
@@ -14861,7 +15706,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "9407e6bd4e71b539",
@@ -14916,7 +15765,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "3a33f3bc732c6bae",
@@ -14981,7 +15835,13 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "국밥/찜/탕/찌개/조림",
+      "야식/주점"
+    ]
   },
   {
     "id": "19ae04f80e0e3ba6",
@@ -15041,7 +15901,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "0104c356b7c6428c",
@@ -15110,7 +15973,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "14d4b7be316bc8e7",
@@ -15174,7 +16040,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "3de8202985e65f35",
@@ -15239,7 +16109,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "94fd76dc2861933c",
@@ -15308,7 +16182,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "85e4327fdf0e8dda",
@@ -15373,7 +16251,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "49814996a90d2a3d",
@@ -15442,7 +16325,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "b218c9f269d44fa8",
@@ -15506,7 +16393,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "3a743fd9484606d1",
@@ -15565,7 +16455,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "2909b3dc166a5ee7",
@@ -15624,7 +16518,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "e81c1980fff43a29",
@@ -15679,7 +16576,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "야식/주점"
+    ]
   },
   {
     "id": "e6ac7de74abcd1d9",
@@ -15748,7 +16648,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "5c881a3751b1c6cf",
@@ -15808,7 +16712,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "6706deb8a748599b",
@@ -15868,7 +16775,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "561cc726687ccd61",
@@ -15928,7 +16838,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "cdf241640091abac",
@@ -15988,7 +16901,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "돈까스/일식"
+    ]
   },
   {
     "id": "c30f3543d3d24747",
@@ -16057,7 +16973,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "e7be983ffc863971",
@@ -16126,7 +17047,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "31d479a979a700cf",
@@ -16191,7 +17116,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식",
+      "면요리"
+    ]
   },
   {
     "id": "b77500c258104b51",
@@ -16256,7 +17185,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "3733c57e37212005",
@@ -16325,7 +17258,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b25a59f2207a9e10",
@@ -16385,7 +17321,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "cef7263a330f4e0f",
@@ -16445,7 +17384,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "7d9f7e5be4bb49db",
@@ -16490,7 +17432,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "9a94c05bdeca2d9e",
@@ -16550,7 +17495,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "86976639259e5d7f",
@@ -16614,7 +17562,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "6772d4141d54e74d",
@@ -16674,7 +17626,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "38f4e2e9e89a61b9",
@@ -16743,7 +17699,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "c34a81ea7ed1d578",
@@ -16798,7 +17758,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "d0c01cd4ef9821c3",
@@ -16863,7 +17827,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "분식/도시락"
+    ]
   },
   {
     "id": "035938bab3de179c",
@@ -16913,7 +17881,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "d3dbc3f83e7b9aed",
@@ -16968,7 +17940,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "51b657cc3416c67d",
@@ -17023,7 +17999,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "2a1bd22a9b5f938e",
@@ -17092,7 +18072,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "732120ab53b3f457",
@@ -17161,7 +18144,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "485ad1139b230bcf",
@@ -17221,7 +18208,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "0a4aaf8ee1103e4f",
@@ -17286,7 +18278,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "fe356412007caf0c",
@@ -17350,7 +18347,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "61791dbea82168f1",
@@ -17410,7 +18411,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "야식/주점"
+    ]
   },
   {
     "id": "69f92930ea1e00c4",
@@ -17459,7 +18463,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "고기/구이",
+      "마라탕/양꼬치"
+    ]
   },
   {
     "id": "75f31fc5eb51073b",
@@ -17519,7 +18527,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "b2b796461ee30ef2",
@@ -17579,7 +18590,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "2cd9e5b3f51e62e6",
@@ -17648,7 +18662,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "90e006413bc79cbc",
@@ -17713,7 +18730,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "f78b89beff94fd0e",
@@ -17763,7 +18783,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "9bb804e004dff7d8",
@@ -17813,7 +18837,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "0cc943f6a58888d0",
@@ -17862,7 +18889,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "656eff52d5fce811",
@@ -17927,7 +18959,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "34817ff59a6bc66d",
@@ -17991,7 +19028,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "0e6d7a1000b1c53b",
@@ -18050,7 +19091,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "39b2241021f9616c",
@@ -18114,7 +19159,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "e6339c85e31322fa",
@@ -18173,7 +19222,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "571770a25990ba97",
@@ -18232,7 +19286,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "회/초밥/선어/해산물"
+    ]
   },
   {
     "id": "d322f9f9a91b0bdb",
@@ -18297,7 +19354,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "c8633f33e72e2e0a",
@@ -18361,7 +19423,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "df16b7312c25da31",
@@ -18425,7 +19491,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "0199534cac937a52",
@@ -18479,7 +19549,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "65c908d7b367de45",
@@ -18548,7 +19621,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "fb28167259749571",
@@ -18617,7 +19694,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이"
+    ]
   },
   {
     "id": "3c3819748a5c2d63",
@@ -18681,7 +19762,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "9edba048ff8c3b2e",
@@ -18746,7 +19831,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "382dd89b36993ff8",
@@ -18810,7 +19899,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "7a91bd1d1f218c97",
@@ -18885,7 +19977,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "0fcde82a0f46ee28",
@@ -18960,7 +20055,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "43b4908cf2161b80",
@@ -19040,7 +20138,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "31ffaa41b54a57aa",
@@ -19100,7 +20201,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "90fed609e43aafb2",
@@ -19164,7 +20268,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "424a3dadd34b19fa",
@@ -19233,7 +20340,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "b22e961a2bed3729",
@@ -19302,7 +20413,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "면요리"
+    ]
   },
   {
     "id": "de1d344e8798f0dd",
@@ -19362,7 +20477,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "a638ac9c079a28c0",
@@ -19417,7 +20535,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "7c1c77a3d0c35a43",
@@ -19472,7 +20595,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "회/초밥/선어/해산물",
+      "돈까스/일식"
+    ]
   },
   {
     "id": "c68d21da9b32f1eb",
@@ -19557,7 +20684,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "4ae622b733f163c7",
@@ -19642,7 +20772,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "58228e47bba2b29c",
@@ -19727,7 +20860,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "c6b947813051ac38",
@@ -19812,7 +20948,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "1894da97ed277235",
@@ -19887,7 +21026,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "401e4210d0416b54",
@@ -19942,7 +21084,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "회/초밥/선어/해산물"
+    ]
   },
   {
     "id": "802d4c09e4ee1ae9",
@@ -20007,7 +21152,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "f3f6088916279991",
@@ -20072,7 +21221,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "bc6152833cd076f5",
@@ -20137,7 +21289,13 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이",
+      "야식/주점"
+    ]
   },
   {
     "id": "f58bf8f877dcacd5",
@@ -20196,7 +21354,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "21a676f860851a5a",
@@ -20260,7 +21422,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "fd823ad16136c904",
@@ -20279,7 +21445,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "기타"
+    ]
   },
   {
     "id": "98779281080288d1",
@@ -20329,7 +21498,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "0df36c0ba138ac89",
@@ -20389,7 +21563,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "82b2cd167c1e053b",
@@ -20439,7 +21617,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "bef7f3b6456df7fd",
@@ -20494,7 +21675,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "cfd74ce112f2b187",
@@ -20549,7 +21733,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "5768a9d8a72502ef",
@@ -20608,7 +21795,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "82fb6c389b7aced5",
@@ -20677,7 +21868,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "44a0e464d6d22c38",
@@ -20737,7 +21932,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "돈까스/일식"
+    ]
   },
   {
     "id": "4e43f1180007c10f",
@@ -20791,7 +21989,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "501b2c5aaa6005f2",
@@ -20856,7 +22057,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "0b952604bdf47c31",
@@ -20920,7 +22125,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "27fc5651d1d3feb0",
@@ -20984,7 +22193,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "5d45d58855f0c602",
@@ -21039,7 +22252,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "54fd901a0b754ee1",
@@ -21108,7 +22325,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "a4ba6805e73e7e76",
@@ -21168,7 +22389,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식",
+      "면요리"
+    ]
   },
   {
     "id": "36856e4f20cae7d0",
@@ -21227,7 +22452,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "09dc33ce2f8f08d3",
@@ -21291,7 +22520,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물"
+    ]
   },
   {
     "id": "77b1600313d1d6d4",
@@ -21360,7 +22593,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물"
+    ]
   },
   {
     "id": "2524c5a9954d4ba8",
@@ -21424,7 +22661,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "9b2419177903b1d8",
@@ -21493,7 +22735,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "102347a538ed090c",
@@ -21557,7 +22804,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식",
+      "면요리"
+    ]
   },
   {
     "id": "83a409add1950550",
@@ -21622,7 +22873,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "3c62ab40bf66608e",
@@ -21677,7 +22933,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "215d025987786df2",
@@ -21741,7 +23001,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "8c8ee85a0bc3b219",
@@ -21791,7 +23055,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b6c5400a34504bc0",
@@ -21858,7 +23125,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "96f341e2aced2187",
@@ -21918,7 +23188,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "ad437cdcefd55447",
@@ -21963,7 +23236,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "23e36eb3741524aa",
@@ -22017,7 +23293,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "bb9aef1788a685c6",
@@ -22081,7 +23361,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "7d656b9342aabd94",
@@ -22150,7 +23434,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "8df8f77db6d9a205",
@@ -22219,7 +23507,14 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이",
+      "야식/주점"
+    ]
   },
   {
     "id": "4663ccf86e9128fa",
@@ -22284,7 +23579,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "b88f6b8e8fd14ad3",
@@ -22344,7 +23642,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "37f1a033eac82aa2",
@@ -22403,7 +23704,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "면요리"
+    ]
   },
   {
     "id": "b6e9f49b01144bc8",
@@ -22462,7 +23768,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물"
+    ]
   },
   {
     "id": "cd2ecfcd707cd2c7",
@@ -22517,7 +23827,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "b9501772f0f6b1fb",
@@ -22584,6 +23898,11 @@
     "notionPageId": "2edda158dd2a807d823bc88d3d6d5ce2",
     "searchAliases": [
       "이순신갈비탕(청하대 영빈관) 여서점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
     ]
   },
   {
@@ -22644,7 +23963,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "회/초밥/선어/해산물",
+      "돈까스/일식"
+    ]
   },
   {
     "id": "2857b7140087f6ab",
@@ -22713,7 +24036,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "5ada4cec81d04ced",
@@ -22763,7 +24089,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "58063b75a96362b4",
@@ -22818,7 +24147,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "f65edfe1927ef379",
@@ -22883,7 +24215,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "f1fa55a4b8c7c428",
@@ -22943,7 +24278,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "0173191ff3ddab64",
@@ -22998,7 +24336,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "25ebed742b1238d5",
@@ -23058,7 +24399,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "9a8243a043f3735c",
@@ -23118,7 +24462,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "4cd9573bfca48b92",
@@ -23191,7 +24538,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "bc89627508bf7a16",
@@ -23251,7 +24601,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "b6fa10980521859b",
@@ -23311,7 +24664,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "da81c19f4ce50220",
@@ -23375,7 +24731,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "9abb1d4db21758ad",
@@ -23435,7 +24794,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "돈까스/일식"
+    ]
   },
   {
     "id": "9ab837d6e24d69df",
@@ -23480,7 +24842,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "60dbbe5071a2ebe6",
@@ -23544,7 +24909,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "66f78262c4f9aa55",
@@ -23604,7 +24973,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "f3cb61dd45ba9b8b",
@@ -23649,7 +25021,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "7ec91a7f6e875069",
@@ -23718,7 +25094,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "야식/주점"
+    ]
   },
   {
     "id": "420af240943ff849",
@@ -23783,7 +25162,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "f17f729605bb5945",
@@ -23848,7 +25230,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "87dcf0c9a9804bd2",
@@ -23908,7 +25295,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "852b5da8f5e3e3dc",
@@ -23973,7 +25363,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식",
+      "면요리"
+    ]
   },
   {
     "id": "0eea4a740e820fd3",
@@ -24037,7 +25431,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "야식/주점"
+    ]
   },
   {
     "id": "92f4faa988a87728",
@@ -24101,7 +25498,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "ddfe30e801fed73f",
@@ -24166,7 +25566,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "a1e8130ec540e37f",
@@ -24221,7 +25624,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "야식/주점"
+    ]
   },
   {
     "id": "f9a6f0eb9fba0696",
@@ -24290,7 +25697,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "a6f3cc0da6d5c044",
@@ -24354,7 +25765,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "치킨",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "217d38b37c2b4d5b",
@@ -24418,7 +25834,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "6fcebc9381432d73",
@@ -24491,7 +25911,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "728262018f22a2cc",
@@ -24562,7 +25985,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "b17cdef5234b021b",
@@ -24617,7 +26043,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "e9dc60119d9cdfb5",
@@ -24667,7 +26096,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "6059e7ea81c9f4d1",
@@ -24722,7 +26154,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "1bdc59414a5c8b64",
@@ -24772,7 +26207,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "83f635e7ea7d737e",
@@ -24841,7 +26279,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수",
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "6b13f2db6e79b4eb",
@@ -24910,7 +26352,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
+    ]
   },
   {
     "id": "20c107a437ec483e",
@@ -24979,7 +26426,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "5deb911df92c645a",
@@ -25039,7 +26490,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "3d91b86995f619d6",
@@ -25108,7 +26562,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "2d1d2bf163bd7e3f",
@@ -25181,7 +26638,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "ef2eacdbb6233f97",
@@ -25254,7 +26714,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "da66e7ae0cdf1907",
@@ -25317,7 +26780,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "793ce4c7d0f32994",
@@ -25390,7 +26856,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "5d4e5d274ebd1b7c",
@@ -25463,7 +26932,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "4526a5114ecaef34",
@@ -25536,7 +27008,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "e16359de9292f582",
@@ -25591,7 +27066,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "afb901f3a32de6e8",
@@ -25668,7 +27146,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "05634c81541f6bda",
@@ -25745,7 +27226,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "피자"
+    ]
   },
   {
     "id": "bf15349639417d6b",
@@ -25814,7 +27298,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "7af7ffc2da561850",
@@ -25883,7 +27371,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "7b221aa6623bd0a2",
@@ -25943,7 +27434,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "4621df767ea3905a",
@@ -26003,7 +27497,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "4391cea41df014b3",
@@ -26068,7 +27565,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "치킨",
+      "고기/구이"
+    ]
   },
   {
     "id": "06f2a251304b0a51",
@@ -26128,7 +27630,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "53bfb32926455221",
@@ -26193,7 +27700,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "8f8486e4cd5aaec3",
@@ -26248,7 +27758,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "중식"
+    ]
   },
   {
     "id": "9b760748be6ee430",
@@ -26317,7 +27831,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "43780265104bccba",
@@ -26377,7 +27894,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "6047251f50214125",
@@ -26446,7 +27967,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "b8c2dcaa9ef57af5",
@@ -26515,7 +28039,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "d19810627d63e95c",
@@ -26584,7 +28112,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
   },
   {
     "id": "abd3c4c1fae55d22",
@@ -26639,7 +28172,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "18503945dc9c16c8",
@@ -26699,7 +28236,13 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이",
+      "야식/주점"
+    ]
   },
   {
     "id": "a6ff0bcfc0afe5b6",
@@ -26768,7 +28311,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "야식/주점"
+    ]
   },
   {
     "id": "9586eb46ca401707",
@@ -26837,7 +28383,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "7777fc7f051bf178",
@@ -26901,7 +28450,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물"
+    ]
   },
   {
     "id": "35613e179e0c318b",
@@ -26970,7 +28523,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "a0e873ce4d21b431",
@@ -27025,7 +28582,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "5aa4432158274a35",
@@ -27085,7 +28645,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "면요리"
+    ]
   },
   {
     "id": "bb036844c501c40a",
@@ -27154,7 +28719,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "a037743d0ee273e2",
@@ -27227,7 +28795,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "cfde2617224f33a0",
@@ -27267,7 +28838,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "고기/구이"
+    ]
   },
   {
     "id": "7bc7239e6b509c44",
@@ -27322,7 +28897,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
   },
   {
     "id": "04910f606ba038a6",
@@ -27381,7 +28960,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "돈까스/일식"
+    ]
   },
   {
     "id": "dba6beeeb774318f",
@@ -27436,7 +29018,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "320d26d67b993c4a",
@@ -27495,7 +29080,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "ba870ddfedb99508",
@@ -27580,7 +29168,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "ddc27f852308889a",
@@ -27660,7 +29251,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "1921d1d5c7710872",
@@ -27720,7 +29314,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "08e5e26653436fef",
@@ -27789,7 +29386,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리",
+      "반찬"
+    ]
   },
   {
     "id": "768e4fe8150f5039",
@@ -27843,7 +29444,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리",
+      "반찬"
+    ]
   },
   {
     "id": "0ad5341dc696d4f1",
@@ -27907,7 +29512,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리",
+      "반찬"
+    ]
   },
   {
     "id": "d409f6d9118b7bad",
@@ -27979,7 +29588,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리",
+      "반찬"
+    ]
   },
   {
     "id": "84c118675c0caa4c",
@@ -28039,7 +29652,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "중식"
+    ]
   },
   {
     "id": "f7d93ad21c1a93d7",
@@ -28103,7 +29719,11 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39dda158dd2a809d98eff42484ee5c89",
-    "notionUrl": "https://app.notion.com/p/39dda158dd2a809d98eff42484ee5c89"
+    "notionUrl": "https://app.notion.com/p/39dda158dd2a809d98eff42484ee5c89",
+    "categories": [
+      "면요리",
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "1acf6756b7471125",
@@ -28167,7 +29787,11 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39dda158dd2a80c38359ee834ceb60d1",
-    "notionUrl": "https://app.notion.com/p/39dda158dd2a80c38359ee834ceb60d1"
+    "notionUrl": "https://app.notion.com/p/39dda158dd2a80c38359ee834ceb60d1",
+    "categories": [
+      "면요리",
+      "햄버거/샌드위치/토스트/핫도그"
+    ]
   },
   {
     "id": "8cb29ac81df85b54",
@@ -28219,7 +29843,10 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "da3da158dd2a82d388a5814cbff83624",
-    "notionUrl": "https://app.notion.com/p/da3da158dd2a82d388a5814cbff83624"
+    "notionUrl": "https://app.notion.com/p/da3da158dd2a82d388a5814cbff83624",
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "4e83618703e993b5",
@@ -28278,7 +29905,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨",
+      "분식/도시락"
+    ]
   },
   {
     "id": "91798b85e5a50244",
@@ -28337,7 +29968,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식"
+    ]
   },
   {
     "id": "144ed6ece1f4734a",
@@ -28401,7 +30035,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   },
   {
     "id": "411052fdc9de5d44",
@@ -28453,7 +30090,10 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39bda158dd2a800aa886faf1ca7f60e2",
-    "notionUrl": "https://app.notion.com/p/39bda158dd2a800aa886faf1ca7f60e2"
+    "notionUrl": "https://app.notion.com/p/39bda158dd2a800aa886faf1ca7f60e2",
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "e5b0545e92f03409",
@@ -28505,7 +30145,12 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39bda158dd2a8020babcde2ba358123c",
-    "notionUrl": "https://app.notion.com/p/39bda158dd2a8020babcde2ba358123c"
+    "notionUrl": "https://app.notion.com/p/39bda158dd2a8020babcde2ba358123c",
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "면요리"
+    ]
   },
   {
     "id": "98a1464075ea68e5",
@@ -28552,7 +30197,10 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39bda158dd2a80d2a756e8202b8142a4",
-    "notionUrl": "https://app.notion.com/p/39bda158dd2a80d2a756e8202b8142a4"
+    "notionUrl": "https://app.notion.com/p/39bda158dd2a80d2a756e8202b8142a4",
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "b58c688c90df4687",
@@ -28622,7 +30270,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "8dc7782b3cb4bdcf",
@@ -28679,7 +30330,11 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39ada158dd2a80bd848fddbad4702d86",
-    "notionUrl": "https://app.notion.com/p/39ada158dd2a80bd848fddbad4702d86"
+    "notionUrl": "https://app.notion.com/p/39ada158dd2a80bd848fddbad4702d86",
+    "categories": [
+      "한식",
+      "분식/도시락"
+    ]
   },
   {
     "id": "3bcce1dd4c36eee0",
@@ -28721,7 +30376,10 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39ada158dd2a8044a38be31ec2fde127",
-    "notionUrl": "https://app.notion.com/p/39ada158dd2a8044a38be31ec2fde127"
+    "notionUrl": "https://app.notion.com/p/39ada158dd2a8044a38be31ec2fde127",
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "5942ed8c00fa1037",
@@ -28768,7 +30426,13 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39ada158dd2a805899e1cb3b9802551f",
-    "notionUrl": "https://app.notion.com/p/39ada158dd2a805899e1cb3b9802551f"
+    "notionUrl": "https://app.notion.com/p/39ada158dd2a805899e1cb3b9802551f",
+    "categories": [
+      "한식",
+      "치킨",
+      "국밥/찜/탕/찌개/조림",
+      "면요리"
+    ]
   },
   {
     "id": "75dbdaa6383cd49c",
@@ -28837,7 +30501,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "c29fb9cd27867a9d",
@@ -28906,7 +30573,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "면요리"
+    ]
   },
   {
     "id": "02bed6e23cbbf188",
@@ -28970,7 +30642,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "925f6f828599eb4f",
@@ -29034,7 +30709,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "0bcf02e9bd40b7d0",
@@ -29103,7 +30781,12 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리",
+      "고기/구이",
+      "야식/주점"
+    ]
   },
   {
     "id": "0ee3922e77afa736",
@@ -29159,7 +30842,10 @@
     "pinPosition": null,
     "forceBottom": false,
     "notionPageId": "39bda158dd2a80528bd6d2f16b9c043d",
-    "notionUrl": "https://app.notion.com/p/39bda158dd2a80528bd6d2f16b9c043d"
+    "notionUrl": "https://app.notion.com/p/39bda158dd2a80528bd6d2f16b9c043d",
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "a7d684d2ce59e962",
@@ -29223,7 +30909,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "585904750de0000c",
@@ -29287,7 +30976,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리",
+      "야식/주점"
+    ]
   },
   {
     "id": "9e422525b203c97f",
@@ -29347,7 +31040,11 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이"
+    ]
   },
   {
     "id": "17d9bf1de3d671fd",
@@ -29392,7 +31089,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "0abd7147b7d6b1dd",
@@ -29471,7 +31171,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "d86586aaef8454c9",
@@ -29546,7 +31249,10 @@
     "managed": false,
     "sharedManaged": false,
     "pinPosition": null,
-    "forceBottom": false
+    "forceBottom": false,
+    "categories": [
+      "면요리"
+    ]
   },
   {
     "id": "14feb7cbd67ef7e2",
@@ -29630,6 +31336,9 @@
     "searchAliases": [
       "1인피자 미니8 여수점",
       "1인피자미니8여수점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -29724,6 +31433,9 @@
     "searchAliases": [
       "1인피자 피자먹다 여수여서점",
       "1인피자피자먹다여수여서점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -29813,6 +31525,9 @@
     "searchAliases": [
       "60계치킨 여수미평점",
       "60계치킨여수미평점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -29897,6 +31612,9 @@
     "searchAliases": [
       "88시장버거 여수신월점",
       "88시장버거여수신월점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -29991,6 +31709,9 @@
     "searchAliases": [
       "가마치통닭 여서점",
       "가마치통닭여서점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -30080,6 +31801,9 @@
     "searchAliases": [
       "가마치통닭 여수전남대점",
       "가마치통닭여수전남대점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -30174,6 +31898,10 @@
     "searchAliases": [
       "감탄떡볶이 문수점",
       "감탄떡볶이문수점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -30267,6 +31995,9 @@
     "searchAliases": [
       "계근상 여수본점(문수동)",
       "계근상여수본점문수동"
+    ],
+    "categories": [
+      "한식"
     ]
   },
   {
@@ -30355,6 +32086,9 @@
     "searchAliases": [
       "계동치킨 여문점(먹깨비,땡겨요로 주문시 음료스 서비스)",
       "계동치킨여문점먹깨비땡겨요로주문시음료스서비스"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -30447,6 +32181,9 @@
     "notionPageId": "31fda158dd2a8090854fcb00c928888a",
     "searchAliases": [
       "국민학교"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
     ]
   },
   {
@@ -30541,6 +32278,10 @@
     "searchAliases": [
       "굽네치킨&피자 문수점",
       "굽네치킨피자문수점"
+    ],
+    "categories": [
+      "치킨",
+      "피자"
     ]
   },
   {
@@ -30630,6 +32371,10 @@
     "searchAliases": [
       "굽네치킨&피자 여수미평점",
       "굽네치킨피자여수미평점"
+    ],
+    "categories": [
+      "치킨",
+      "피자"
     ]
   },
   {
@@ -30724,6 +32469,9 @@
     "searchAliases": [
       "금성칡냉면 미평점",
       "금성칡냉면미평점"
+    ],
+    "categories": [
+      "면요리"
     ]
   },
   {
@@ -30818,6 +32566,10 @@
     "searchAliases": [
       "금쪽갈비 여수점",
       "금쪽갈비여수점"
+    ],
+    "categories": [
+      "한식",
+      "고기/구이"
     ]
   },
   {
@@ -30912,6 +32664,10 @@
     "searchAliases": [
       "기영이 숯불두마리치킨 여수여서점",
       "기영이숯불두마리치킨여수여서점"
+    ],
+    "categories": [
+      "치킨",
+      "고기/구이"
     ]
   },
   {
@@ -31001,6 +32757,9 @@
     "searchAliases": [
       "김종구식 맛치킨 전기바베큐 옛날통닭 여서점",
       "김종구식맛치킨전기바베큐옛날통닭여서점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -31090,6 +32849,10 @@
     "searchAliases": [
       "김치찜은 못참지 미평점",
       "김치찜은못참지미평점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -31179,6 +32942,9 @@
     "searchAliases": [
       "까치식당 문수점",
       "까치식당문수점"
+    ],
+    "categories": [
+      "한식"
     ]
   },
   {
@@ -31258,6 +33024,10 @@
     "searchAliases": [
       "나도국밥 오림점",
       "나도국밥오림점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -31347,6 +33117,10 @@
     "searchAliases": [
       "내조국 국밥 여수관문점",
       "내조국국밥여수관문점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -31421,6 +33195,10 @@
     "searchAliases": [
       "내조국 국밥 터미널점",
       "내조국국밥터미널점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -31515,6 +33293,9 @@
     "searchAliases": [
       "네네치킨 둔덕미평점",
       "네네치킨둔덕미평점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -31604,6 +33385,9 @@
     "searchAliases": [
       "노랑통닭 여수봉산점",
       "노랑통닭여수봉산점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -31692,6 +33476,9 @@
     "searchAliases": [
       "늘 커피",
       "늘커피"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -31781,6 +33568,9 @@
     "searchAliases": [
       "다기야치킨 여문점",
       "다기야치킨여문점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -31864,6 +33654,10 @@
     "searchAliases": [
       "다정아구 미평",
       "다정아구미평"
+    ],
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물"
     ]
   },
   {
@@ -31958,6 +33752,10 @@
     "searchAliases": [
       "닭가대표 숯불직화구이치킨 여수대표점",
       "닭가대표숯불직화구이치킨여수대표점"
+    ],
+    "categories": [
+      "치킨",
+      "고기/구이"
     ]
   },
   {
@@ -32047,6 +33845,9 @@
     "searchAliases": [
       "당빙땡 여수점",
       "당빙땡여수점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -32141,6 +33942,10 @@
     "searchAliases": [
       "대박난쪽갈비 여수점",
       "대박난쪽갈비여수점"
+    ],
+    "categories": [
+      "한식",
+      "고기/구이"
     ]
   },
   {
@@ -32228,6 +34033,11 @@
     "notionPageId": "2e7da158dd2a80bd83f4fcd09685bf79",
     "searchAliases": [
       "대박삼겹김치찜"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
     ]
   },
   {
@@ -32317,6 +34127,9 @@
     "searchAliases": [
       "대정식당 미평점",
       "대정식당미평점"
+    ],
+    "categories": [
+      "한식"
     ]
   },
   {
@@ -32406,6 +34219,10 @@
     "searchAliases": [
       "대패가1900 문수점",
       "대패가1900문수점"
+    ],
+    "categories": [
+      "한식",
+      "고기/구이"
     ]
   },
   {
@@ -32495,6 +34312,9 @@
     "searchAliases": [
       "더벤티 미평점",
       "더벤티미평점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -32584,6 +34404,9 @@
     "searchAliases": [
       "덮덮밥 미평점",
       "덮덮밥미평점"
+    ],
+    "categories": [
+      "한식"
     ]
   },
   {
@@ -32666,6 +34489,9 @@
     "notionPageId": "348da158dd2a80898963f36f575a8cf7",
     "searchAliases": [
       "도란도란"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -32760,6 +34586,9 @@
     "searchAliases": [
       "도미노피자 문수점",
       "도미노피자문수점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -32849,6 +34678,9 @@
     "searchAliases": [
       "돈치킨 여수둔덕봉계점",
       "돈치킨여수둔덕봉계점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -32933,6 +34765,10 @@
     "searchAliases": [
       "두찜 여수 봉계점",
       "두찜여수봉계점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -33027,6 +34863,10 @@
     "searchAliases": [
       "두찜 여수국동점",
       "두찜여수국동점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -33111,6 +34951,10 @@
     "searchAliases": [
       "등뼈감자탕 미평점",
       "등뼈감자탕미평점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -33200,6 +35044,9 @@
     "searchAliases": [
       "뚜레쥬르 여수미평점",
       "뚜레쥬르여수미평점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -33294,6 +35141,9 @@
     "searchAliases": [
       "뚜레쥬르 여수여서점",
       "뚜레쥬르여수여서점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -33383,6 +35233,9 @@
     "searchAliases": [
       "라홍방마라탕 문수점",
       "라홍방마라탕문수점"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
     ]
   },
   {
@@ -33467,6 +35320,9 @@
     "searchAliases": [
       "라홍방마라탕 여수미평점",
       "라홍방마라탕여수미평점"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
     ]
   },
   {
@@ -33556,6 +35412,9 @@
     "searchAliases": [
       "롤링파스타 여서점",
       "롤링파스타여서점"
+    ],
+    "categories": [
+      "면요리"
     ]
   },
   {
@@ -33640,6 +35499,9 @@
     "searchAliases": [
       "롯데리아 국동점",
       "롯데리아국동점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -33729,6 +35591,9 @@
     "searchAliases": [
       "롯데리아 이마트점",
       "롯데리아이마트점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -33823,6 +35688,9 @@
     "searchAliases": [
       "롯데리아 중앙점",
       "롯데리아중앙점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -33917,6 +35785,9 @@
     "searchAliases": [
       "리얼펍살얼음맥주 여수문수점",
       "리얼펍살얼음맥주여수문수점"
+    ],
+    "categories": [
+      "야식/주점"
     ]
   },
   {
@@ -34010,6 +35881,9 @@
     "searchAliases": [
       "린차이나(먹깨비,땡겨요로 주문시 만두 서비스!!!)",
       "린차이나먹깨비땡겨요로주문시만두서비스!!!"
+    ],
+    "categories": [
+      "중식"
     ]
   },
   {
@@ -34103,6 +35977,10 @@
     "searchAliases": [
       "마선생 얼큰국밥",
       "마선생얼큰국밥"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -34197,6 +36075,9 @@
     "searchAliases": [
       "맘스터치 문수점",
       "맘스터치문수점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -34286,6 +36167,9 @@
     "searchAliases": [
       "맘스터치 여수미평점",
       "맘스터치여수미평점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -34363,6 +36247,9 @@
     "notionPageId": "31fda158dd2a803db0f0ea4cf62ff37a",
     "searchAliases": [
       "맛집남도밀면"
+    ],
+    "categories": [
+      "면요리"
     ]
   },
   {
@@ -34457,6 +36344,10 @@
     "searchAliases": [
       "미미꼬마김밥 여서점",
       "미미꼬마김밥여서점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -34546,6 +36437,9 @@
     "searchAliases": [
       "미치게 본점",
       "미치게본점"
+    ],
+    "categories": [
+      "한식"
     ]
   },
   {
@@ -34625,6 +36519,11 @@
     "searchAliases": [
       "미평햄버거 본점",
       "미평햄버거본점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락",
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -34719,6 +36618,9 @@
     "searchAliases": [
       "반올림피자 여수미평점",
       "반올림피자여수미평점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -34813,6 +36715,10 @@
     "searchAliases": [
       "배떡 여수점",
       "배떡여수점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -34897,6 +36803,9 @@
     "searchAliases": [
       "배스킨라빈스 여수미평점",
       "배스킨라빈스여수미평점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -34986,6 +36895,9 @@
     "searchAliases": [
       "배스킨라빈스 여수여서점",
       "배스킨라빈스여수여서점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -35068,6 +36980,11 @@
     "notionPageId": "33cda158dd2a8041bf7acb4e513dfc34",
     "searchAliases": [
       "백년족발"
+    ],
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
     ]
   },
   {
@@ -35155,6 +37072,10 @@
     "notionPageId": "2feda158dd2a80a1a745ca4fc21ec289",
     "searchAliases": [
       "백수초밥"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "돈까스/일식"
     ]
   },
   {
@@ -35248,6 +37169,10 @@
     "searchAliases": [
       "백억 흑미 꼬마김밥",
       "백억흑미꼬마김밥"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -35342,6 +37267,9 @@
     "searchAliases": [
       "본스치킨 미평점",
       "본스치킨미평점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -35436,6 +37364,10 @@
     "searchAliases": [
       "봉구스밥버거 문수점",
       "봉구스밥버거문수점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -35530,6 +37462,9 @@
     "searchAliases": [
       "봉명동내커피 여수문수점",
       "봉명동내커피여수문수점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -35623,6 +37558,10 @@
     "searchAliases": [
       "부대찌개 전쟁터",
       "부대찌개전쟁터"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -35717,6 +37656,9 @@
     "searchAliases": [
       "북촌손만두&피냉면 여수문수점",
       "북촌손만두피냉면여수문수점"
+    ],
+    "categories": [
+      "면요리"
     ]
   },
   {
@@ -35801,6 +37743,9 @@
     "searchAliases": [
       "불로만치킨바베큐 여서점",
       "불로만치킨바베큐여서점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -35890,6 +37835,9 @@
     "searchAliases": [
       "비비큐 여수여서점",
       "비비큐여수여서점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -35979,6 +37927,9 @@
     "searchAliases": [
       "빙동댕 여수문수점",
       "빙동댕여수문수점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -36073,6 +38024,10 @@
     "searchAliases": [
       "빵빵김밥 여서점",
       "빵빵김밥여서점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -36167,6 +38122,9 @@
     "searchAliases": [
       "빵위에치즈 여수점",
       "빵위에치즈여수점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -36256,6 +38214,9 @@
     "searchAliases": [
       "뽕뜨락피자 여수여서점",
       "뽕뜨락피자여수여서점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -36350,6 +38311,10 @@
     "searchAliases": [
       "삼첩분식 미평점",
       "삼첩분식미평점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -36434,6 +38399,10 @@
     "searchAliases": [
       "서영이네김밥 미평점",
       "서영이네김밥미평점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -36528,6 +38497,10 @@
     "searchAliases": [
       "서울깍두기 미평직영점",
       "서울깍두기미평직영점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -36615,6 +38588,10 @@
     "notionPageId": "2fcda158dd2a80db9819c2f9978a7854",
     "searchAliases": [
       "서울해장국"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -36699,6 +38676,10 @@
     "searchAliases": [
       "소풍 미평점",
       "소풍미평점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -36788,6 +38769,10 @@
     "searchAliases": [
       "손수김밥 양지점",
       "손수김밥양지점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -36882,6 +38867,9 @@
     "searchAliases": [
       "수해복마라탕 여수미평점",
       "수해복마라탕여수미평점"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
     ]
   },
   {
@@ -36971,6 +38959,9 @@
     "searchAliases": [
       "쉐프의 생 안심탕수육 문수점",
       "쉐프의생안심탕수육문수점"
+    ],
+    "categories": [
+      "중식"
     ]
   },
   {
@@ -37033,6 +39024,11 @@
     "notionPageId": "2f6da158dd2a80ab9c16d70647e1d012",
     "searchAliases": [
       "시민족발보쌈"
+    ],
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
     ]
   },
   {
@@ -37097,6 +39093,9 @@
     "searchAliases": [
       "시원밀면냉면 여수점",
       "시원밀면냉면여수점"
+    ],
+    "categories": [
+      "면요리"
     ]
   },
   {
@@ -37181,6 +39180,9 @@
     "searchAliases": [
       "써브웨이 여서점",
       "써브웨이여서점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -37270,6 +39272,9 @@
     "searchAliases": [
       "쑝쑝돈까스 여수미평점",
       "쑝쑝돈까스여수미평점"
+    ],
+    "categories": [
+      "돈까스/일식"
     ]
   },
   {
@@ -37357,6 +39362,10 @@
     "notionPageId": "34bda158dd2a809dbc2ef7f17fb284c6",
     "searchAliases": [
       "아구회관"
+    ],
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물"
     ]
   },
   {
@@ -37451,6 +39460,9 @@
     "searchAliases": [
       "아주커치킨 둔덕점",
       "아주커치킨둔덕점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -37545,6 +39557,9 @@
     "searchAliases": [
       "아주커치킨 문수점",
       "아주커치킨문수점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -37634,6 +39649,9 @@
     "searchAliases": [
       "아주커치킨 미평점",
       "아주커치킨미평점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -37713,6 +39731,10 @@
     "searchAliases": [
       "아차산매운떡볶이 여수점",
       "아차산매운떡볶이여수점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -37790,6 +39812,9 @@
     "notionPageId": "2edda158dd2a8043bb20d57e14f44c47",
     "searchAliases": [
       "앨리스토리커피"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -37867,6 +39892,10 @@
     "notionPageId": "31fda158dd2a80799ceff7d3d52bd6af",
     "searchAliases": [
       "양지골수육"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -37956,6 +39985,11 @@
     "searchAliases": [
       "양철북곱창 미평점",
       "양철북곱창미평점"
+    ],
+    "categories": [
+      "한식",
+      "고기/구이",
+      "야식/주점"
     ]
   },
   {
@@ -38044,6 +40078,9 @@
     "searchAliases": [
       "여수 돌산 꽈배기",
       "여수돌산꽈배기"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -38116,6 +40153,9 @@
     "notionPageId": "324da158dd2a807aa5facf215846d1b9",
     "searchAliases": [
       "여수대표치킨"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -38188,6 +40228,10 @@
     "notionPageId": "34cda158dd2a80aba984fe2caf1b1959",
     "searchAliases": [
       "여수숯불창고"
+    ],
+    "categories": [
+      "고기/구이",
+      "야식/주점"
     ]
   },
   {
@@ -38272,6 +40316,10 @@
     "searchAliases": [
       "여수싱싱회&육회 문수본점",
       "여수싱싱회육회문수본점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이"
     ]
   },
   {
@@ -38354,6 +40402,9 @@
     "notionPageId": "2ffda158dd2a8067bad6c8c600bfc3ba",
     "searchAliases": [
       "여수하늘"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -38436,6 +40487,10 @@
     "notionPageId": "2efda158dd2a803d86d0f0dbe18ab96e",
     "searchAliases": [
       "여수회포차"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "야식/주점"
     ]
   },
   {
@@ -38525,6 +40580,9 @@
     "searchAliases": [
       "여정식당 여문점",
       "여정식당여문점"
+    ],
+    "categories": [
+      "한식"
     ]
   },
   {
@@ -38609,6 +40667,9 @@
     "searchAliases": [
       "역전할머니맥주 봉산점",
       "역전할머니맥주봉산점"
+    ],
+    "categories": [
+      "야식/주점"
     ]
   },
   {
@@ -38688,6 +40749,9 @@
     "searchAliases": [
       "역전할머니맥주 여수미평점",
       "역전할머니맥주여수미평점"
+    ],
+    "categories": [
+      "야식/주점"
     ]
   },
   {
@@ -38772,6 +40836,10 @@
     "searchAliases": [
       "연변양꼬치구이 미평점",
       "연변양꼬치구이미평점"
+    ],
+    "categories": [
+      "고기/구이",
+      "마라탕/양꼬치"
     ]
   },
   {
@@ -38861,6 +40929,10 @@
     "searchAliases": [
       "오늘은 오므라이스 여수점",
       "오늘은오므라이스여수점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -38955,6 +41027,9 @@
     "searchAliases": [
       "오븐에꾸운닭 여문점",
       "오븐에꾸운닭여문점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -39044,6 +41119,10 @@
     "searchAliases": [
       "올떡볶이 여수봉계점",
       "올떡볶이여수봉계점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -39138,6 +41217,9 @@
     "searchAliases": [
       "외계인피자 여수점",
       "외계인피자여수점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -39232,6 +41314,9 @@
     "searchAliases": [
       "요거트월드 여서점",
       "요거트월드여서점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -39321,6 +41406,9 @@
     "searchAliases": [
       "요아정 여수여서점",
       "요아정여수여서점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -39410,6 +41498,9 @@
     "searchAliases": [
       "요이참치 여수점",
       "요이참치여수점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
     ]
   },
   {
@@ -39499,6 +41590,10 @@
     "searchAliases": [
       "용우동 여서점",
       "용우동여서점"
+    ],
+    "categories": [
+      "한식",
+      "면요리"
     ]
   },
   {
@@ -39576,6 +41671,9 @@
     "notionPageId": "2ebda158dd2a808babafd0d6f3b2a664",
     "searchAliases": [
       "우정통닭"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -39670,6 +41768,9 @@
     "searchAliases": [
       "우쿠야 여수여서점",
       "우쿠야여수여서점"
+    ],
+    "categories": [
+      "돈까스/일식"
     ]
   },
   {
@@ -39764,6 +41865,11 @@
     "searchAliases": [
       "원할머니보쌈족발 여수여서점",
       "원할머니보쌈족발여수여서점"
+    ],
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
     ]
   },
   {
@@ -39851,6 +41957,9 @@
     "notionPageId": "31fda158dd2a80db9bccc1971697c1b0",
     "searchAliases": [
       "유림식당"
+    ],
+    "categories": [
+      "한식"
     ]
   },
   {
@@ -39939,6 +42048,9 @@
     "searchAliases": [
       "윤가네 선어",
       "윤가네선어"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
     ]
   },
   {
@@ -40033,6 +42145,10 @@
     "searchAliases": [
       "을찌로국물떡볶이 국동점",
       "을찌로국물떡볶이국동점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -40122,6 +42238,10 @@
     "searchAliases": [
       "응큼떡볶이 여수점",
       "응큼떡볶이여수점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -40211,6 +42331,9 @@
     "searchAliases": [
       "이디야커피 국동점",
       "이디야커피국동점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -40293,6 +42416,10 @@
     "notionPageId": "339da158dd2a80cfa0cfd9ffbf01b5db",
     "searchAliases": [
       "이모야분식"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -40387,6 +42514,11 @@
     "searchAliases": [
       "인생아구찜 여수문수점",
       "인생아구찜여수문수점"
+    ],
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -40481,6 +42613,9 @@
     "searchAliases": [
       "자담치킨 여수미평점",
       "자담치킨여수미평점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -40575,6 +42710,11 @@
     "searchAliases": [
       "장충동왕족발 여수점",
       "장충동왕족발여수점"
+    ],
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
     ]
   },
   {
@@ -40669,6 +42809,11 @@
     "searchAliases": [
       "장충동B&F족발보쌈 여수점",
       "장충동bf족발보쌈여수점"
+    ],
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
     ]
   },
   {
@@ -40738,6 +42883,9 @@
     "searchAliases": [
       "정남옥 여수점",
       "정남옥여수점"
+    ],
+    "categories": [
+      "한식"
     ]
   },
   {
@@ -40827,6 +42975,10 @@
     "searchAliases": [
       "제육대가 여수미평점",
       "제육대가여수미평점"
+    ],
+    "categories": [
+      "한식",
+      "고기/구이"
     ]
   },
   {
@@ -40915,6 +43067,10 @@
     "searchAliases": [
       "제육에 진심을 담아",
       "제육에진심을담아"
+    ],
+    "categories": [
+      "한식",
+      "고기/구이"
     ]
   },
   {
@@ -40999,6 +43155,9 @@
     "searchAliases": [
       "조선다방 봉계점",
       "조선다방봉계점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -41086,6 +43245,11 @@
     "notionPageId": "31ada158dd2a80e3adc5ca227fad34f0",
     "searchAliases": [
       "족발자리"
+    ],
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
     ]
   },
   {
@@ -41173,6 +43337,11 @@
     "notionPageId": "303da158dd2a80f686dffa92a6fae9e3",
     "searchAliases": [
       "족팔계왕족발"
+    ],
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "야식/주점"
     ]
   },
   {
@@ -41262,6 +43431,10 @@
     "searchAliases": [
       "주가네김치찌개&찜 여수여서점",
       "주가네김치찌개찜여수여서점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -41354,6 +43527,9 @@
     "notionPageId": "2fcda158dd2a80ba8fbad2c798d4d7d5",
     "searchAliases": [
       "중국관"
+    ],
+    "categories": [
+      "중식"
     ]
   },
   {
@@ -41443,6 +43619,9 @@
     "searchAliases": [
       "지코바치킨 미평점",
       "지코바치킨미평점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -41531,6 +43710,12 @@
     "searchAliases": [
       "직화구이 바싹 족발닭발보쌈",
       "직화구이바싹족발닭발보쌈"
+    ],
+    "categories": [
+      "한식",
+      "족발/보쌈",
+      "고기/구이",
+      "야식/주점"
     ]
   },
   {
@@ -41625,6 +43810,9 @@
     "searchAliases": [
       "쫑포피자 문수점",
       "쫑포피자문수점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -41713,6 +43901,11 @@
     "searchAliases": [
       "찜콩 갈비찜 전문",
       "찜콩갈비찜전문"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
     ]
   },
   {
@@ -41801,6 +43994,9 @@
     "searchAliases": [
       "착한쭝식 여서점(먹깨비,땡겨요로 주문시 군만두 서비스!!)",
       "착한쭝식여서점먹깨비땡겨요로주문시군만두서비스!!"
+    ],
+    "categories": [
+      "중식"
     ]
   },
   {
@@ -41888,6 +44084,9 @@
     "notionPageId": "2fdda158dd2a80e7ab82c5ad30fff882",
     "searchAliases": [
       "천화마라탕"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
     ]
   },
   {
@@ -41977,6 +44176,10 @@
     "searchAliases": [
       "청년다방 여서점",
       "청년다방여서점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -42064,6 +44267,9 @@
     "notionPageId": "2fdda158dd2a807bb6f7e661f7de4ba1",
     "searchAliases": [
       "초이커피"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -42158,6 +44364,9 @@
     "searchAliases": [
       "촌닭두마리치킨 오림점",
       "촌닭두마리치킨오림점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -42241,6 +44450,9 @@
     "searchAliases": [
       "카페 브라운",
       "카페브라운"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -42323,6 +44535,9 @@
     "notionPageId": "2f5da158dd2a800798b5c885dd128d7c",
     "searchAliases": [
       "카페인"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -42405,6 +44620,9 @@
     "notionPageId": "2eada158dd2a8018b679e3cd24bed8fd",
     "searchAliases": [
       "커피샵붕어빵"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -42497,6 +44715,9 @@
     "notionPageId": "305da158dd2a80838fd4d7f52282e7d4",
     "searchAliases": [
       "커피어클락"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -42576,6 +44797,9 @@
     "searchAliases": [
       "컬투치킨 여수점",
       "컬투치킨여수점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -42670,6 +44894,9 @@
     "searchAliases": [
       "컴포즈커피 여수문수광장점",
       "컴포즈커피여수문수광장점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -42764,6 +44991,9 @@
     "searchAliases": [
       "컴포즈커피 여수여서점",
       "컴포즈커피여수여서점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -42846,6 +45076,9 @@
     "notionPageId": "319da158dd2a8048b165c3f3f91e5366",
     "searchAliases": [
       "케이키팩토리"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -42920,6 +45153,10 @@
     "searchAliases": [
       "콩불 여수중앙점",
       "콩불여수중앙점"
+    ],
+    "categories": [
+      "한식",
+      "고기/구이"
     ]
   },
   {
@@ -43004,6 +45241,10 @@
     "searchAliases": [
       "킹콩부대찌개 여수점",
       "킹콩부대찌개여수점"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
     ]
   },
   {
@@ -43098,6 +45339,9 @@
     "searchAliases": [
       "탕화쿵푸마라탕 여서점",
       "탕화쿵푸마라탕여서점"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
     ]
   },
   {
@@ -43192,6 +45436,9 @@
     "searchAliases": [
       "테그42 여수관문점",
       "테그42여수관문점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -43286,6 +45533,9 @@
     "searchAliases": [
       "틈 돈까스 미평점",
       "틈돈까스미평점"
+    ],
+    "categories": [
+      "돈까스/일식"
     ]
   },
   {
@@ -43358,6 +45608,9 @@
     "notionPageId": "2f0da158dd2a800a8208cf321c95487c",
     "searchAliases": [
       "포포샌드"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -43452,6 +45705,9 @@
     "searchAliases": [
       "푸라닭치킨 여수문수점",
       "푸라닭치킨여수문수점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -43546,6 +45802,11 @@
     "searchAliases": [
       "푸줏간 고기도시락 여수문수점",
       "푸줏간고기도시락여수문수점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락",
+      "고기/구이"
     ]
   },
   {
@@ -43640,6 +45901,9 @@
     "searchAliases": [
       "프랭크버거 미평점",
       "프랭크버거미평점"
+    ],
+    "categories": [
+      "햄버거/샌드위치/토스트/핫도그"
     ]
   },
   {
@@ -43729,6 +45993,9 @@
     "searchAliases": [
       "피나치공 국동점",
       "피나치공국동점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -43818,6 +46085,10 @@
     "searchAliases": [
       "피자나라치킨공주 여서점",
       "피자나라치킨공주여서점"
+    ],
+    "categories": [
+      "치킨",
+      "피자"
     ]
   },
   {
@@ -43897,6 +46168,9 @@
     "searchAliases": [
       "피자스쿨  미평점",
       "피자스쿨미평점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -43991,6 +46265,9 @@
     "searchAliases": [
       "피자스쿨 여문점",
       "피자스쿨여문점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -44075,6 +46352,9 @@
     "searchAliases": [
       "피자프렌드 미평점",
       "피자프렌드미평점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -44159,6 +46439,9 @@
     "searchAliases": [
       "하나옛날통닭 문수점",
       "하나옛날통닭문수점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -44238,6 +46521,9 @@
     "searchAliases": [
       "하이오커피 여수교동점",
       "하이오커피여수교동점"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
     ]
   },
   {
@@ -44312,6 +46598,10 @@
     "searchAliases": [
       "한솥도시락 여수전남대점",
       "한솥도시락여수전남대점"
+    ],
+    "categories": [
+      "한식",
+      "분식/도시락"
     ]
   },
   {
@@ -44399,6 +46689,10 @@
     "notionPageId": "2ecda158dd2a80898240d2cf0154d791",
     "searchAliases": [
       "향미진짬뽕"
+    ],
+    "categories": [
+      "중식",
+      "면요리"
     ]
   },
   {
@@ -44493,6 +46787,9 @@
     "searchAliases": [
       "호미스피자 여수점",
       "호미스피자여수점"
+    ],
+    "categories": [
+      "피자"
     ]
   },
   {
@@ -44587,6 +46884,9 @@
     "searchAliases": [
       "호식이두마리치킨 국동점",
       "호식이두마리치킨국동점"
+    ],
+    "categories": [
+      "치킨"
     ]
   },
   {
@@ -44676,6 +46976,9 @@
     "searchAliases": [
       "홍콩반점0410 여수문수점",
       "홍콩반점0410여수문수점"
+    ],
+    "categories": [
+      "중식"
     ]
   },
   {
@@ -44763,6 +47066,9 @@
     "notionPageId": "303da158dd2a800e8eede36b42da8ed8",
     "searchAliases": [
       "황금마차"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
     ]
   },
   {
@@ -44857,6 +47163,10 @@
     "searchAliases": [
       "황금아구 미평점",
       "황금아구미평점"
+    ],
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물"
     ]
   },
   {
@@ -44944,6 +47254,9 @@
     "notionPageId": "2f2da158dd2a804b8594cccfda46e39a",
     "searchAliases": [
       "회먹다"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
     ]
   },
   {
@@ -45039,7 +47352,10 @@
       "여서/ 문수",
       "치킨"
     ],
-    "photoMatchType": "approved-brand-shared-photo"
+    "photoMatchType": "approved-brand-shared-photo",
+    "categories": [
+      "치킨"
+    ]
   },
   {
     "id": "9ee73ce6168105ec",
@@ -45124,6 +47440,9 @@
       "국동",
       "카페/디저트/베이커리/아이스크림/빙수"
     ],
-    "photoMatchType": "approved-brand-shared-photo"
+    "photoMatchType": "approved-brand-shared-photo",
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
   }
 ]

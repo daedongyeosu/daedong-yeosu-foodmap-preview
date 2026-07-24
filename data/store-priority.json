@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "source": "꼬르륵 전체가게(1).xlsx",
   "matchingPolicy": "store-and-branch-name plus address neighborhood; phone numbers ignored",
   "managedStoreIds": [
@@ -154,6 +154,25 @@
     "7b221aa6623bd0a2"
   ],
   "sharedManagedStoreIds": [],
+  "categoryPriorityOverrides": {
+    "햄버거/샌드위치/토스트/핫도그": {
+      "scope": "all-neighborhoods",
+      "topStoreIds": [
+        "10db3b0db6ebf8c5",
+        "f8a71a5a2344ee7f"
+      ],
+      "bottomStoreIds": [
+        "6092aabddf5f7194",
+        "e0c6949efb48f4b2"
+      ],
+      "labels": {
+        "10db3b0db6ebf8c5": "맘스터치 문수점(여서·문수 권역)",
+        "f8a71a5a2344ee7f": "프랭크버거 미평점",
+        "6092aabddf5f7194": "롯데리아 중앙점",
+        "e0c6949efb48f4b2": "롯데리아 이마트점"
+      }
+    }
+  },
   "stats": {
     "operatingExcelRows": 246,
     "matchedExcelRows": 149,

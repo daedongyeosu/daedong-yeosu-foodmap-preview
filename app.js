@@ -185,6 +185,7 @@ let photoResolver = null;
 let addressDraft = null;
 let yeosuNeighborhoods = [];
 let neighborhoodByName = new Map();
+let categoryPriorityOverrides = {};
 let modalHistoryActive = false;
 let ignoreNextPop = false;
 
@@ -246,6 +247,30 @@ function imagePathFromValue(value) {
   return String(value.detail || value.card || value.src || value.url || '').trim();
 }
 function uniquePaths(values) { return [...new Set(values.map(imagePathFromValue).filter(Boolean))]; }
+function storeCategories(store) {
+  const explicit = Array.isArray(store?.categories) ? store.categories.map(value => String(value || '').trim()).filter(Boolean) : [];
+  return [...new Set(explicit.length ? explicit : [String(store?.cat || store?.category || '').trim()].filter(Boolean))];
+}
+function storeMatchesCategory(store, category) {
+  return category === '전체' || category === '추천' || storeCategories(store).includes(category);
+}
+function categoriesFromStores(list) {
+  const available = new Set((Array.isArray(list) ? list : []).flatMap(storeCategories));
+  const ordered = categories.filter(category => available.has(category));
+  return [...ordered, ...[...available].filter(category => !ordered.includes(category)).sort((a, b) => a.localeCompare(b, 'ko'))];
+}
+function applyCategoryPriorityOverrides(list, category) {
+  const input = Array.isArray(list) ? list : [];
+  const rule = categoryPriorityOverrides?.[String(category || '')];
+  if (!rule) return input;
+  const top = new Set((rule.topStoreIds || []).map(String));
+  const bottom = new Set((rule.bottomStoreIds || []).map(String));
+  return input.map((item, index) => {
+    const store = item?.store || item;
+    const id = String(store?.id || store?.store_id || '');
+    return {item, index, tier: top.has(id) ? 0 : bottom.has(id) ? 2 : 1};
+  }).sort((a, b) => a.tier - b.tier || a.index - b.index).map(row => row.item);
+}
 function normalizedStore(raw, index) {
   const sourceRoutes = Array.isArray(raw?.routes) ? raw.routes : [];
   const routes = sourceRoutes
@@ -262,8 +287,14 @@ function normalizedStore(raw, index) {
   const name = raw.name || '이름 없는 가게';
   const brandName = raw.brandName || '';
   const branchName = raw.branchName || '';
+  const primaryCategory = raw.category || raw.cat || '기타';
+  const categoryValues = [...new Set(
+    (Array.isArray(raw.categories) && raw.categories.length ? raw.categories : [primaryCategory])
+      .map(value => String(value || '').trim())
+      .filter(Boolean)
+  )];
   const searchAliases = canonicalSearchAliases(raw);
-  const searchIndex = normalize([name, raw.realBusinessName, brandName, branchName, area, raw.category, ...searchAliases, ...(raw.shopInShopNames || [])].filter(Boolean).join(' '));
+  const searchIndex = normalize([name, raw.realBusinessName, brandName, branchName, area, primaryCategory, ...categoryValues, ...searchAliases, ...(raw.shopInShopNames || [])].filter(Boolean).join(' '));
   const addressNeighborhoods=/여수시/.test(String(raw.address||''))?neighborhoodsFor(raw.address):[];
   const branchText=[branchName,name].filter(Boolean).join(' '), branchNeighborhoods=/점|지점|항|지구/.test(branchText)?neighborhoodsFor(branchText):[];
   const notionNeighborhoods=neighborhoodsFor(area);
@@ -274,7 +305,7 @@ function normalizedStore(raw, index) {
   return {
     id, store_id: id, name, realBusinessName: raw.realBusinessName || '',
     notionPageId: raw.notionPageId || '', notionUrl: raw.notionUrl || '', brandName, branchName, searchAliases, searchIndex,
-    shopInShopNames: raw.shopInShopNames || [], area, cat: raw.category || raw.cat || '기타',
+    shopInShopNames: raw.shopInShopNames || [], area, cat: primaryCategory, categories: categoryValues,
     address: raw.address || '', phone: raw.phone || '', naverMap: safeHref(raw.naverMap || ''),
     legacyImage: legacyImages[0] || '', legacyImages,
     tags: [raw.category, raw.district, raw.address, ...(raw.shopInShopNames || [])].filter(Boolean), routes,
@@ -497,10 +528,10 @@ function storeMatchesLocation(store, location) {
 }
 function filteredStores() {
   const brand = state.brandId ? BRAND_BY_ID[state.brandId] : null;
-  return stores.map(store => ({store, score: relevance(store, state.query), distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null}))
+  const list = stores.map(store => ({store, score: relevance(store, state.query), distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null}))
     .filter(item => item.score > 0)
     .filter(({store}) => state.sortByDistance || state.location === '여수시 전체' || storeMatchesLocation(store,state.location))
-    .filter(({store}) => state.category === '전체' || store.cat === state.category)
+    .filter(({store}) => storeMatchesCategory(store, state.category))
     .filter(({store}) => !brand || brandMatchesStore(store, brand))
     .sort((a, b) => {
       if (state.sortByDistance) {
@@ -516,6 +547,7 @@ function filteredStores() {
       if (a.store.sharedManaged !== b.store.sharedManaged) return a.store.sharedManaged ? -1 : 1;
       return b.score - a.score || a.store.name.localeCompare(b.store.name, 'ko');
     }).map(item => ({...item.store, distance: item.distance}));
+  return applyCategoryPriorityOverrides(list, state.category);
 }
 function miniRoutes(store) {
   const keys = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand', 'yogiyo', 'coupang', 'baemin'];
@@ -660,10 +692,11 @@ function appRegisteredStores(key) {
 }
 function appBrowserMarkup(key, selectedCategory = '추천') {
   const meta = APP_META[key], all = appRegisteredStores(key);
-  const categoriesForApp = [...new Set(all.map(store => store.cat).filter(Boolean))].sort((a,b) => {
+  const categoriesForApp = categoriesFromStores(all).sort((a,b) => {
     const ai=CATEGORY_PREFERRED.indexOf(a), bi=CATEGORY_PREFERRED.indexOf(b); return (ai<0?999:ai)-(bi<0?999:bi)||a.localeCompare(b,'ko');
   });
-  const list = selectedCategory === '추천' ? all : all.filter(store => store.cat === selectedCategory);
+  const filtered = selectedCategory === '추천' ? all : all.filter(store => storeMatchesCategory(store, selectedCategory));
+  const list = applyCategoryPriorityOverrides(filtered, selectedCategory);
   const chips = `<nav class="app-browser-category-chips" aria-label="음식 카테고리"><button type="button" data-app-category="추천" class="${selectedCategory === '추천' ? 'active' : ''}">추천</button>${categoriesForApp.map(category => `<button type="button" data-app-category="${escapeHtml(category)}" class="${selectedCategory === category ? 'active' : ''}">${categoryIcon(category, 'category-chip-icon')} ${escapeHtml(category)}</button>`).join('')}</nav>`;
   const cards = list.map(store => `<button type="button" class="app-browser-card" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}${Number.isFinite(store.appDistance) ? ` · ${store.appDistance < 1 ? `${Math.round(store.appDistance*1000)}m` : `${store.appDistance.toFixed(1)}km`}` : ''}</small><span class="app-browser-only-icon">${appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
   return `<section class="app-browser" data-app-key="${key}" data-app-category-current="${escapeHtml(selectedCategory)}"><header class="app-browser-head">${appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>${escapeHtml(meta.label)}에 실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div></section>`;
@@ -815,7 +848,7 @@ async function initialize() {
   searchableStores = canonicalStores;
   coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);
   stores = canonicalStores;
-  categories = [...new Set(stores.map(store => store.cat).filter(Boolean))].sort((a, b) => {
+  categories = [...new Set(stores.flatMap(storeCategories))].sort((a, b) => {
     const ai = CATEGORY_PREFERRED.indexOf(a), bi = CATEGORY_PREFERRED.indexOf(b);
     if (ai >= 0 || bi >= 0) return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi);
     return a.localeCompare(b, 'ko');
