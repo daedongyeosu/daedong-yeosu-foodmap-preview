@@ -1079,7 +1079,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const entryParams = new URLSearchParams(location.search);
   const requestedSharedStoreId = entryParams.get('store');
   const requestedHeroStoreId = entryParams.get('hero');
-  const startupBypassHeroStoreIds = new Set(['67a9e4f14c8c7ea4']);
+  const startupBypassHeroStoreIds = new Set(['67a9e4f14c8c7ea4','cfde2617224f33a0']);
   if (!requestedSharedStoreId && !startupBypassHeroStoreIds.has(String(requestedHeroStoreId||'')) && localStorage.getItem('hideStartup') !== today) setTimeout(openStartupAd, 600);
   $('.startup-close').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); });
   startupAd.addEventListener('click', event => { if (event.target === startupAd) closeStartupAd(); });

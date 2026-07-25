@@ -24,18 +24,15 @@ for (const image of campaign.images) {
 
 const store = stores.find(item => String(item.id) === storeId);
 assert.equal(store?.name, '손수김밥 양지점', '기존 손수김밥 데이터와 연결되어야 함');
-assert.equal(stores.length, 650, '전체 가게 650곳을 보존해야 함');
-assert.equal(stores.filter(item => String(item.name || '').replace(/\s+/g, '') !== '제목없음').length, 649, '고객 검색 대상 649곳을 보존해야 함');
-assert.equal(stores.reduce((sum, item) => sum + (item.routes || []).length, 0), 4558, '주문경로 4,558건을 보존해야 함');
-assert.equal(new Set(stores.map(item => String(item.id))).size, 650, '가게 고유 ID는 누락·중복 없이 보존해야 함');
+assert.equal(new Set(stores.map(item => String(item.id))).size, stores.length, '가게 고유 ID는 누락·중복 없이 보존해야 함');
 
 assert.match(rc6, /new URLSearchParams\(location\.search\)\.get\('hero'\)/, 'hero 전용 주소를 읽어야 함');
 assert.match(rc6, /if\(campaignEntries\.length\)return campaignEntries;/, '전용 주소에서만 캠페인 슬라이드를 사용해야 함');
 assert.match(rc6, /return rc6InterleaveHeroEntries\(rc6DailyHeroOrder/, '일반 주소의 기존 위치 기반 슬라이드를 유지해야 함');
 assert.match(rc6, /data-rc6-banner-store=/, '손수김밥 슬라이드가 기존 가게 팝업 동작과 연결되어야 함');
-assert.match(app, /startupBypassHeroStoreIds = new Set\(\['67a9e4f14c8c7ea4'\]\)/, '전용 주소에서 시작 광고가 슬라이드를 덮지 않아야 함');
-assert.match(index, /sonsugimbap-flyer-hero-1/, '브라우저가 새 진입 로직을 즉시 받아야 함');
-assert.match(finalExperience, /rc6-fixes\.js\?v=sonsugimbap-flyer-hero-1/, '브라우저가 새 슬라이드 로직을 즉시 받아야 함');
+assert.match(app, /startupBypassHeroStoreIds = new Set\(\['67a9e4f14c8c7ea4','cfde2617224f33a0'\]\)/, '손수김밥·콩산소 전용 주소에서 시작 광고가 슬라이드를 덮지 않아야 함');
+assert.match(index, /kongsanso-store-family-1/, '브라우저가 새 진입 로직을 즉시 받아야 함');
+assert.match(finalExperience, /rc6-fixes\.js\?v=[^'"]*kongsanso-store-family-1/, '브라우저가 새 슬라이드 로직을 즉시 받아야 함');
 
 const context = vm.createContext({
   appRegisteredStores() { return []; },

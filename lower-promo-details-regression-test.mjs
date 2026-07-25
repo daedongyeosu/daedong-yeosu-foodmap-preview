@@ -60,8 +60,8 @@ assert.ok(associationHeroTarget, '메인 여수 소상공인 소식 배너를 �
 assert.equal(associationUrl, associationHeroTarget.notionUrl, '하단 소상공인협회 알림이 메인 배너와 다른 주소를 사용합니다.');
 
 const totalRoutes = stores.reduce((sum, store) => sum + (store.routes || []).length, 0);
-assert.equal(stores.length, 698, '가게 데이터 수가 변경됐습니다.');
-assert.equal(totalRoutes, 4910, '주문링크 수가 변경됐습니다.');
+assert.equal(stores.length, 701, '콩산소 신규 카드 3개 외의 가게 데이터 수가 변경됐습니다.');
+assert.equal(totalRoutes, 4917, '콩산소 신규 링크 7개 외의 주문링크 수가 변경됐습니다.');
 
 console.log(JSON.stringify({
   riderSlideTitle: '배송기사님 모집',

@@ -27,6 +27,63 @@
         "19",
         "20"
       ]
+    },
+    "cfde2617224f33a0": {
+      "storeId": "cfde2617224f33a0",
+      "slug": "kongsanso-store-family",
+      "label": "콩산소 전용 대동여수음식지도",
+      "title": "콩산소",
+      "meta": "문수동 · 음식 연구소",
+      "slides": [
+        {
+          "storeId": "cfde2617224f33a0",
+          "image": "assets/campaigns/kongsanso-family/kongsanso/01-family-menu.webp",
+          "title": "콩산소",
+          "meta": "문수동 · 음식 연구소"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "assets/campaigns/kongsanso-family/cho-chef-pho/01-pho-set.webp",
+          "title": "조쉐프의 쌀국수",
+          "meta": "문수동 · 면요리"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/01-kimchi-jjim-set.webp",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "문수동 · 한식·김치찜"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "assets/campaigns/kongsanso-family/memil-makguksu/01-makguksu.webp",
+          "title": "메밀꽃 필 막국수",
+          "meta": "문수동 · 면요리"
+        },
+        {
+          "storeId": "3f441930b8d18783",
+          "image": "assets/store-photos/2822d52b9ee44f/02.webp",
+          "title": "1980밀면회관&냉면 문수점",
+          "meta": "문수동 · 면요리"
+        },
+        {
+          "storeId": "f3cb61dd45ba9b8b",
+          "image": "assets/notion-store-photos/f3cb61dd45ba9b/01.webp",
+          "title": "콩담은 콩나물 국밥 문수점",
+          "meta": "문수동 · 한식·국밥"
+        },
+        {
+          "storeId": "665953a0453afc52",
+          "image": "assets/campaigns/kongsanso-family/kim-gukbap/01-gukbap.webp",
+          "title": "김사장 국밥 문수점",
+          "meta": "문수동 · 한식·국밥"
+        },
+        {
+          "storeId": "7ed65c8f086f11f2",
+          "image": "assets/campaigns/kongsanso-family/kim-noodle-house/01-spicy-noodles.webp",
+          "title": "김사장 대박난 국수집 문수점",
+          "meta": "문수동 · 한식·면요리"
+        }
+      ]
     }
   }
 }
