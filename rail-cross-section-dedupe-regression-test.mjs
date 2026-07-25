@@ -3,6 +3,7 @@ import vm from 'node:vm';
 import {readFile} from 'node:fs/promises';
 
 const source = await readFile(new URL('./rc2-fixes.js', import.meta.url), 'utf8');
+const rc3Source = await readFile(new URL('./rc3-fixes.js', import.meta.url), 'utf8');
 const finalExperience = await readFile(new URL('./final-experience.js', import.meta.url), 'utf8');
 const indexHtml = await readFile(new URL('./index.html', import.meta.url), 'utf8');
 const stores = JSON.parse(await readFile(new URL('./data/stores.json', import.meta.url)));
@@ -44,12 +45,22 @@ assert.match(
 );
 assert.match(
   finalExperience,
-  /rc2-fixes\.js\?v=[^']*rail-cross-section-dedupe-1/,
+  /rc2-fixes\.js\?v=[^']*rail-local-repeat-fallback-1/,
   'RC2 중복 방지 코드의 캐시 버전이 갱신되지 않았습니다.'
 );
 assert.match(
+  finalExperience,
+  /rc3-fixes\.js\?v=[^']*rail-use-counts-1/,
+  'RC3 추천 화면이 섹션별 사용 횟수를 공유하지 않습니다.'
+);
+assert.match(
+  rc3Source,
+  /rc2RailCandidates\(spec, globallyUsed, 8, useCounts\)/,
+  '추천 섹션들이 가게별 사용 횟수를 공유하지 않습니다.'
+);
+assert.match(
   indexHtml,
-  /final-experience\.js\?v=[^"]*rail-cross-section-dedupe-1/,
+  /final-experience\.js\?v=[^"]*rail-local-repeat-fallback-1/,
   '첫 화면 추천 코드의 캐시 버전이 갱신되지 않았습니다.'
 );
 
@@ -75,6 +86,7 @@ const candidatesBySpec = {
 
 const context = {
   Set,
+  Map,
   String,
   Number,
   fxRankStores: spec => candidatesBySpec[spec.id],
@@ -102,6 +114,34 @@ assert.equal(
   visibleIds.filter(id => id === 'ungcheon-sashimi').length,
   1,
   '웅천횟집이 여러 추천 섹션에 반복 노출됩니다.'
+);
+
+const localFallbackCandidates = [
+  {id: 'local-used-a', brand: '가까운A', photo: 'local-a.jpg', rc6LocationBucket: 0, tier: 0},
+  {id: 'local-used-b', brand: '가까운B', photo: 'local-b.jpg', rc6LocationBucket: 0, tier: 1},
+  {id: 'near-unused-a', brand: '주변A', photo: 'near-a.jpg', rc6LocationBucket: 1, rc6SortDistance: 2, tier: 0},
+  {id: 'near-unused-b', brand: '주변B', photo: 'near-b.jpg', rc6LocationBucket: 1, rc6SortDistance: 1, tier: 0},
+  {id: 'far-unused', brand: '먼동네', photo: 'far.jpg', rc6LocationBucket: 1, rc6SortDistance: 8, tier: 1}
+];
+context.fxRankStores = () => localFallbackCandidates;
+const fallbackUsed = new Set(['local-used-a', 'local-used-b']);
+const fallbackUseCounts = new Map([['local-used-a', 1], ['local-used-b', 1]]);
+const fallbackCards = Array.from(context.rc2RailCandidates(
+  {id: 'appetite', pattern: /냉면|밀면|마라|떡볶이/},
+  fallbackUsed,
+  4,
+  fallbackUseCounts
+), store => store.id);
+
+assert.deepEqual(
+  fallbackCards,
+  ['near-unused-b', 'near-unused-a', 'local-used-a', 'local-used-b'],
+  '테마 섹션은 가까운 새 가게 두 곳 뒤에 이미 나온 같은 동네 가게를 제한적으로 다시 사용해야 합니다.'
+);
+assert.equal(new Set(fallbackCards).size, fallbackCards.length, '같은 추천 섹션 안에 가게가 중복됐습니다.');
+assert.ok(
+  [...fallbackUseCounts.values()].every(count => count <= 2),
+  '한 가게가 홈 추천 섹션 세 곳 이상에 노출됩니다.'
 );
 
 const managed = new Set((priority.managedStoreIds || []).map(String));
@@ -153,8 +193,9 @@ for (const neighborhood of neighborhoodData.neighborhoods) {
 console.log(JSON.stringify({
   status: 'PASS',
   rails,
+  localFallbackCards: fallbackCards,
   uniqueVisibleStores: new Set(visibleIds).size,
   auditedNeighborhoods: neighborhoodAudits.length,
   allNeighborhoodsUnique: neighborhoodAudits.every(item => item.visibleCards === item.uniqueCards),
-  rule: '한 섹션에서 사용한 가게 ID는 아래 홈 추천 섹션에서 다시 사용하지 않음'
+  rule: '같은 섹션은 중복 금지, 테마 섹션은 가까운 가게 부족 시 최대 두 섹션까지 재사용'
 }, null, 2));
