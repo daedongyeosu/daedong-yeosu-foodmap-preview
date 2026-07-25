@@ -6,7 +6,7 @@ const css = readFileSync('app.css', 'utf8');
 const html = readFileSync('index.html', 'utf8');
 const stores = JSON.parse(readFileSync('data/stores.json', 'utf8'));
 const riderImage = readFileSync('assets/promos/rider-recruitment-portrait-v2.webp');
-const merchantImage = readFileSync('assets/promos/merchant-recruitment.webp');
+const merchantImage = readFileSync('assets/promos/merchant-recruitment-portrait-v2.webp');
 
 function assertWebp(buffer, label) {
   assert.equal(buffer.subarray(0, 4).toString('ascii'), 'RIFF', `${label}가 RIFF 형식이 아닙니다.`);
@@ -18,7 +18,8 @@ assert.match(app, /const PROMO_CAROUSEL_DETAILS = \{/);
 assert.match(app, /rider:\s*\{[\s\S]*title: '배송기사님 모집'/);
 assert.match(app, /rider:\s*\{[\s\S]*image: 'assets\/promos\/rider-recruitment-portrait-v2\.webp'/);
 assert.match(app, /rider:\s*\{[\s\S]*imageWidth: 853,[\s\S]*imageHeight: 1844,[\s\S]*imageOnly: true/);
-assert.match(app, /store:\s*\{[\s\S]*image: 'assets\/promos\/merchant-recruitment\.webp'/);
+assert.match(app, /store:\s*\{[\s\S]*image: 'assets\/promos\/merchant-recruitment-portrait-v2\.webp'/);
+assert.match(app, /store:\s*\{[\s\S]*imageWidth: 853,[\s\S]*imageHeight: 1844,[\s\S]*imageOnly: true/);
 assert.match(app, /join:\s*\{[\s\S]*phone: '010-4797-7803'/);
 assert.match(app, /const description = promo\.kind === 'rider' \? '' : promo\.desc/);
 assert.match(app, /promo-cta">자세히보기 <small>\(화면터치\)<\/small>/);
@@ -43,8 +44,8 @@ assert.match(css, /\.promo-visually-hidden\{[\s\S]*clip:rect\(0,0,0,0\)/);
 assert.match(css, /\.promo-image-only-modal \.modal-card\{[\s\S]*max-height:calc\(100dvh - 8px\)/);
 assert.match(css, /\.promo-image-only-modal \.promo-detail-image-only img\{[\s\S]*max-height:calc\(100dvh - 16px\)/);
 assert.match(css, /\.promo-signup-detail strong\{/);
-assert.match(html, /app\.css\?v=[^"]*lower-promo-details-4/);
-assert.match(html, /app\.js\?v=[^"]*lower-promo-details-4/);
+assert.match(html, /app\.css\?v=[^"]*lower-promo-details-5/);
+assert.match(html, /app\.js\?v=[^"]*lower-promo-details-5/);
 
 assertWebp(riderImage, '배송기사 모집 광고');
 assertWebp(merchantImage, '가맹점 모집 광고');
@@ -57,7 +58,7 @@ console.log(JSON.stringify({
   riderSlideTitle: '배송기사님 모집',
   riderVeteranCopyRemovedFromSlide: true,
   riderImage: {width: 853, height: 1844, bytes: riderImage.length},
-  merchantImage: {width: 1760, height: 894, bytes: merchantImage.length},
+  merchantImage: {width: 853, height: 1844, bytes: merchantImage.length},
   signupPhone: '010-4797-7803',
   totalStores: stores.length,
   totalRoutes,
