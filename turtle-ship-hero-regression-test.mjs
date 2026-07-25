@@ -7,7 +7,7 @@ const finalCss = fs.readFileSync('final-experience.css', 'utf8');
 
 const checks = [
   ['새 거북선 장면이 홈 배경에 존재', html.includes('id="turtleShipHeroScene"')],
-  ['거북선 CSS·JS 캐시 버전 갱신', html.includes('turtle-ship-hero.css?v=community-intro-1') && html.includes('turtle-ship-hero.js?v=community-intro-1')],
+  ['거북선 CSS·JS 캐시 버전 갱신', html.includes('turtle-ship-hero.css?v=community-popup-1') && html.includes('turtle-ship-hero.js?v=community-popup-1')],
   ['버튼 유리판만 30%로 조정', html.includes('final-experience.css?v=category-first-paint-1-turtle-glass-1') && finalCss.includes('--order-glass:rgba(255,255,255,.30)') && finalCss.includes('backdrop-filter:blur(2px)')],
   ['북서향 후방 3/4 구도 명시', html.includes('data-heading="northwest-rear-three-quarter"')],
   ['북서향 모바일 압축 자산 사용', html.includes('turtle-ship-northwest-mobile-v4.webp')],
@@ -24,8 +24,8 @@ const checks = [
   ['간격 축소와 무관하게 기존 거북선 항로 높이 유지', js.includes('originalCourseOffset') && js.includes('? 56') && js.includes('Math.min(54, Math.max(41, window.innerWidth * 0.05))')],
   ['선미에서 용머리 방향으로 북서향 축소 이동', css.includes('translate3d(8%,-35%,0) scale(2.05)') && css.includes('translate3d(-38%,-89%,0) scale(.62)') && !css.includes('-153%')],
   ['16.8초 동안 후반까지 유유히 운항 뒤 자연스럽게 종료', css.includes('16.8s cubic-bezier(.22,.55,.2,1)') && css.includes('94%') && js.includes('setTimeout(markFinished, 17500)')],
-  ['먹글씨와 거북선 순서를 세션당 한 번만 실행', js.includes('daedongCommunityIntroPlayedV1') && js.includes('sequenceAlreadyPlayed') && js.includes('sessionStorage.setItem')],
-  ['먹글씨가 사라진 뒤 거북선 출항', js.includes('finishIntro') && /finishIntro[\s\S]*?sailWhenHomeIsClear/.test(js)],
+  ['안내 팝업과 거북선 순서를 세션당 한 번만 실행', js.includes('daedongCommunityIntroPlayedV2') && js.includes('sequenceAlreadyPlayed') && js.includes('sessionStorage.setItem')],
+  ['안내 팝업이 사라진 뒤 거북선 출항', js.includes('finishIntro') && /completeIntroClose[\s\S]*?sailWhenHomeIsClear/.test(js)],
   ['시작 광고·팝업이 닫힌 홈에서 운항', js.includes('homeIsClear') && js.includes('MutationObserver')],
   ['데이터·주문 이벤트와 분리', !/stores|routes|data-order-key|openStore|openModal/.test(js)]
 ];
