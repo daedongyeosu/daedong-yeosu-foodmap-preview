@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1-turtle-glass-1">
   <link rel="stylesheet" href="rc6-fixes.css?v=location-store-hero-1">
   <link rel="stylesheet" href="rc7-address-map.css?v=home-share-touch-3">
-  <link rel="stylesheet" href="turtle-ship-hero.css?v=community-intro-1">
+  <link rel="stylesheet" href="turtle-ship-hero.css?v=community-popup-1">
 </head>
 <body>
   <div id="app">
@@ -35,24 +35,23 @@
     <div class="weather-layer" aria-hidden="true"></div>
     <div class="bridge-light-layer" aria-hidden="true"></div>
     <div id="microFxLayer" class="micro-fx-layer" aria-hidden="true"></div>
-    <div id="communityIntro" class="community-intro" hidden aria-hidden="true">
-      <div class="community-intro-copy">
-        <p class="community-intro-stanza">
-          <span class="community-intro-line intro-line-1">여수에서 주문한다면,</span>
-          <span class="community-intro-line intro-line-2">여수를 한 번 더 생각해 주세요.</span>
+    <div id="communityIntro" class="community-intro" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="communityIntroTitle">
+      <div class="community-intro-card">
+        <button id="communityIntroClose" class="community-intro-close" type="button" aria-label="안내 닫기">×</button>
+        <p class="community-intro-kicker">여수의 맛을 오래 이어가는 주문</p>
+        <h2 id="communityIntroTitle">여수에서 주문한다면,</h2>
+        <p class="community-intro-lead">여수를 한 번 더 생각해 주세요.</p>
+        <div class="community-intro-guide">
+          <strong>가게바로주문 · 먹깨비 · 땡겨요</strong>
+          <span>브랜드앱 · 전화주문을 먼저 살펴보세요.</span>
+        </div>
+        <p class="community-intro-outcome">
+          오늘의 작은 선택이<br>
+          우리가 아끼는 여수의 맛을 내일로 이어갑니다.
         </p>
-        <p class="community-intro-stanza community-intro-guide">
-          <span class="community-intro-line intro-line-3">가게바로주문 · 먹깨비 · 땡겨요</span>
-          <span class="community-intro-line intro-line-4">브랜드앱 · 전화주문을 먼저 살펴보세요.</span>
-        </p>
-        <p class="community-intro-stanza">
-          <span class="community-intro-line intro-line-5">오늘의 작은 선택이</span>
-          <span class="community-intro-line intro-line-6">우리가 아끼는 여수의 맛을 내일로 이어갑니다.</span>
-        </p>
-        <p class="community-intro-stanza community-intro-heart">
-          <span class="community-intro-line intro-line-7">💚 여수의 가게를 응원하는</span>
-          <span class="community-intro-line intro-line-8">가장 쉬운 방법입니다.</span>
-        </p>
+        <p class="community-intro-heart">💚 여수의 가게를 응원하는<br><strong>가장 쉬운 방법입니다.</strong></p>
+        <p class="community-intro-auto">10초 후 자동으로 닫히며 거북선이 출항합니다.</p>
+        <div class="community-intro-progress" aria-hidden="true"><span></span></div>
       </div>
     </div>
     <div id="turtleShipHeroScene" class="turtle-ship-hero-scene" data-heading="northwest-rear-three-quarter" aria-hidden="true">
@@ -95,7 +94,7 @@
 
     <section class="section order-section">
       <div class="section-head">
-        <div class="section-head-copy"><h2>가게에 힘이 되는 주문방법</h2><p>가게바로주문·먹깨비·땡겨요·브랜드앱·전화주문을 먼저 살펴보세요.</p></div>
+        <div class="section-head-copy community-order-message"><h2>가게에 힘이 되는 주문방법</h2><p>가게바로주문·먹깨비·땡겨요·브랜드앱·전화주문을 먼저 살펴보세요.</p></div>
         <button class="text-btn" type="button" data-open="guide">이용안내 ›</button>
       </div>
       <div class="order-grid" aria-label="주문방법 선택">
@@ -172,6 +171,6 @@
   <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1" defer></script>
   <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1-popup-utility-links-1-selected-store-top-1" defer></script>
   <script src="store-list-horizontal-pager.js?v=1" defer></script>
-  <script src="turtle-ship-hero.js?v=community-intro-1" defer></script>
+  <script src="turtle-ship-hero.js?v=community-popup-1" defer></script>
 </body>
 </html>
