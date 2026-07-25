@@ -39,7 +39,7 @@ assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*backgroun
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*color:#082f49/);
 assert.match(css, /@media\(max-width:767px\) and \(max-height:720px\)/);
 
-assert.match(js, /daedongCommunityIntroPlayedV2/);
+assert.match(js, /daedongCommunityIntroPlayedV3/);
 assert.match(js, /const INTRO_DURATION = 10000/);
 assert.match(js, /sessionStorage\.getItem/);
 assert.match(js, /sessionStorage\.setItem/);
