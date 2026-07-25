@@ -25,3 +25,6 @@
 .home-share-action{border:0;background:#ff5a1f;color:#fff;box-shadow:0 8px 18px rgba(255,77,20,.2)}
 .home-share-status{min-height:20px!important;margin:10px 0 0!important;color:#d64d19!important;font-size:12px!important;font-weight:850;line-height:1.4}
 @media(max-width:360px){.home-share-toast{font-size:12px;white-space:normal}}
+.search-popup .searchbox{display:grid;grid-template-columns:minmax(0,1fr) clamp(82px,22vw,100px);gap:8px;padding:0 8px 0 14px}
+.search-popup #fxSearchInput{min-width:0}
+.search-popup #fxSearchRun{width:100%;min-width:0;padding:0 10px;white-space:nowrap;word-break:keep-all;writing-mode:horizontal-tb;line-height:1;font-size:clamp(15px,4vw,18px)}
