@@ -5214,12 +5214,20 @@
     "address": "",
     "phone": "",
     "naverMap": "",
-    "image": "assets/notion-store-photos/665953a0453afc/01.webp",
-    "img": "assets/notion-store-photos/665953a0453afc/01.webp",
+    "image": "assets/campaigns/kongsanso-family/kim-gukbap/01-gukbap.webp",
+    "img": "assets/campaigns/kongsanso-family/kim-gukbap/01-gukbap.webp",
     "images": [
       {
-        "card": "assets/notion-store-photos/665953a0453afc/01.webp",
-        "detail": "assets/notion-store-photos/665953a0453afc/01.webp"
+        "card": "assets/campaigns/kongsanso-family/kim-gukbap/01-gukbap.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-gukbap/01-gukbap.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/kim-gukbap/02-gukbap-pork-set.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-gukbap/02-gukbap-pork-set.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/kim-gukbap/03-family-set.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-gukbap/03-family-set.webp"
       }
     ],
     "routes": [
@@ -5273,12 +5281,20 @@
     "address": "",
     "phone": "",
     "naverMap": "",
-    "image": "assets/notion-store-photos/7ed65c8f086f11/01.webp",
-    "img": "assets/notion-store-photos/7ed65c8f086f11/01.webp",
+    "image": "assets/campaigns/kongsanso-family/kim-noodle-house/01-spicy-noodles.webp",
+    "img": "assets/campaigns/kongsanso-family/kim-noodle-house/01-spicy-noodles.webp",
     "images": [
       {
-        "card": "assets/notion-store-photos/7ed65c8f086f11/01.webp",
-        "detail": "assets/notion-store-photos/7ed65c8f086f11/01.webp"
+        "card": "assets/campaigns/kongsanso-family/kim-noodle-house/01-spicy-noodles.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-noodle-house/01-spicy-noodles.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/kim-noodle-house/02-cold-noodles.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-noodle-house/02-cold-noodles.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/kim-noodle-house/03-kimchi-set.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-noodle-house/03-kimchi-set.webp"
       }
     ],
     "routes": [
@@ -28825,6 +28841,11 @@
         "enabled": true
       },
       {
+        "name": "땡겨요",
+        "url": "https://bit.ly/47NPuEV",
+        "enabled": true
+      },
+      {
         "name": "CHAK 지역상품권",
         "url": "https://bit.ly/chak-yeosu",
         "enabled": true
@@ -52367,6 +52388,208 @@
     ],
     "categories": [
       "카페/디저트/베이커리/아이스크림/빙수"
+    ]
+  },
+  {
+    "id": "2017de4f9111f3ce",
+    "store_id": "2017de4f9111f3ce",
+    "name": "김사장 삼겹 통김치찜",
+    "realBusinessName": "김사장 삼겹 통김치찜",
+    "brandName": "김사장 삼겹 통김치찜",
+    "branchName": "",
+    "searchAliases": [
+      "김사장삼겹통김치찜",
+      "콩산소 김사장 삼겹 통김치찜"
+    ],
+    "shopInShopNames": [
+      "콩산소"
+    ],
+    "district": "문수동",
+    "category": "한식",
+    "address": "",
+    "phone": "",
+    "naverMap": "",
+    "image": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/01-kimchi-jjim-set.webp",
+    "img": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/01-kimchi-jjim-set.webp",
+    "images": [
+      {
+        "card": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/01-kimchi-jjim-set.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/01-kimchi-jjim-set.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/02-spicy-kimchi-stew.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/02-spicy-kimchi-stew.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/03-pork-kimchi-stew.webp",
+        "detail": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/03-pork-kimchi-stew.webp"
+      }
+    ],
+    "routes": [
+      {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4tDrZX6",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/49LSW3B",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_kongsanso_shop_in_shop",
+      "notionPageId": "33bda158dd2a80508ffbc6cc093d1ad3"
+    },
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림",
+      "고기/구이"
+    ]
+  },
+  {
+    "id": "1d691d8e74499d31",
+    "store_id": "1d691d8e74499d31",
+    "name": "조쉐프의 쌀국수",
+    "realBusinessName": "조쉐프의 쌀국수",
+    "brandName": "조쉐프의 쌀국수",
+    "branchName": "",
+    "searchAliases": [
+      "조쉐프쌀국수",
+      "조셰프의 쌀국수",
+      "조셰프쌀국수",
+      "콩산소 조쉐프의 쌀국수"
+    ],
+    "shopInShopNames": [
+      "콩산소"
+    ],
+    "district": "문수동",
+    "category": "면요리",
+    "address": "",
+    "phone": "",
+    "naverMap": "",
+    "image": "assets/campaigns/kongsanso-family/cho-chef-pho/01-pho-set.webp",
+    "img": "assets/campaigns/kongsanso-family/cho-chef-pho/01-pho-set.webp",
+    "images": [
+      {
+        "card": "assets/campaigns/kongsanso-family/cho-chef-pho/01-pho-set.webp",
+        "detail": "assets/campaigns/kongsanso-family/cho-chef-pho/01-pho-set.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/cho-chef-pho/02-side-dish.webp",
+        "detail": "assets/campaigns/kongsanso-family/cho-chef-pho/02-side-dish.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/cho-chef-pho/03-creamy-pho.webp",
+        "detail": "assets/campaigns/kongsanso-family/cho-chef-pho/03-creamy-pho.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/cho-chef-pho/04-spicy-pho.webp",
+        "detail": "assets/campaigns/kongsanso-family/cho-chef-pho/04-spicy-pho.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/cho-chef-pho/05-beef-pho.webp",
+        "detail": "assets/campaigns/kongsanso-family/cho-chef-pho/05-beef-pho.webp"
+      }
+    ],
+    "routes": [
+      {
+        "name": "먹깨비",
+        "url": "https://bit.ly/439Tn4a",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/4drnTv8",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_kongsanso_shop_in_shop",
+      "notionPageId": "33bda158dd2a80508ffbc6cc093d1ad3"
+    },
+    "categories": [
+      "면요리"
+    ]
+  },
+  {
+    "id": "93ae27237a8e75c4",
+    "store_id": "93ae27237a8e75c4",
+    "name": "메밀꽃 필 막국수",
+    "realBusinessName": "메밀꽃 필 막국수",
+    "brandName": "메밀꽃 필 막국수",
+    "branchName": "",
+    "searchAliases": [
+      "메밀꽃필막국수",
+      "메밀꽃필 막구수",
+      "콩산소 메밀꽃 필 막국수"
+    ],
+    "shopInShopNames": [
+      "콩산소"
+    ],
+    "district": "문수동",
+    "category": "면요리",
+    "address": "",
+    "phone": "",
+    "naverMap": "",
+    "image": "assets/campaigns/kongsanso-family/memil-makguksu/01-makguksu.webp",
+    "img": "assets/campaigns/kongsanso-family/memil-makguksu/01-makguksu.webp",
+    "images": [
+      {
+        "card": "assets/campaigns/kongsanso-family/memil-makguksu/01-makguksu.webp",
+        "detail": "assets/campaigns/kongsanso-family/memil-makguksu/01-makguksu.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/memil-makguksu/02-buckwheat-noodles.webp",
+        "detail": "assets/campaigns/kongsanso-family/memil-makguksu/02-buckwheat-noodles.webp"
+      },
+      {
+        "card": "assets/campaigns/kongsanso-family/memil-makguksu/03-spicy-makguksu.webp",
+        "detail": "assets/campaigns/kongsanso-family/memil-makguksu/03-spicy-makguksu.webp"
+      }
+    ],
+    "routes": [
+      {
+        "name": "먹깨비",
+        "url": "https://bit.ly/4dq4sTs",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://bit.ly/3Pacwjg",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_kongsanso_shop_in_shop",
+      "notionPageId": "33bda158dd2a80508ffbc6cc093d1ad3"
+    },
+    "categories": [
+      "면요리"
     ]
   }
 ]

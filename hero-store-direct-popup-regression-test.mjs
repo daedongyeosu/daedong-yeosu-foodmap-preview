@@ -23,7 +23,7 @@ assert.doesNotMatch(
 );
 assert.match(
   finalExperience,
-  /rc6-fixes\.js\?v=hero-store-direct-1/,
+  /rc6-fixes\.js\?v=(?:hero-store-direct-1|sonsugimbap-flyer-hero-1)/,
   'The corrected hero interaction script must bypass older cached copies.',
 );
 assert.match(
