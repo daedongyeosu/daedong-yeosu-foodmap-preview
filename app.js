@@ -947,9 +947,26 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#locationBtn').addEventListener('click', areaModal);
   $('#topFavoriteBtn').addEventListener('click', favoritesModal);
   $('#topRecentBtn').addEventListener('click', recentModal);
-  $('#promoTrack').addEventListener('click', event => {
+  const promoTrack = $('#promoTrack');
+  const promoShell = $('#promoCarousel .carousel-shell');
+  let promoTapStart = null;
+  let promoTapOpenedAt = -Infinity;
+  promoTrack.addEventListener('pointerdown', event => {
     const promo = event.target.closest('[data-promo-kind]');
-    if (promo) openPromoCarouselDetail(promo.dataset.promoKind);
+    promoTapStart = promo ? {kind: promo.dataset.promoKind, x: event.clientX, y: event.clientY} : null;
+  });
+  promoShell.addEventListener('pointerup', event => {
+    if (!promoTapStart) return;
+    const tap = promoTapStart;
+    promoTapStart = null;
+    if (Math.hypot(event.clientX - tap.x, event.clientY - tap.y) > 18) return;
+    promoTapOpenedAt = performance.now();
+    openPromoCarouselDetail(tap.kind);
+  });
+  promoShell.addEventListener('pointercancel', () => { promoTapStart = null; });
+  promoTrack.addEventListener('click', event => {
+    const promo = event.target.closest('[data-promo-kind]');
+    if (promo && performance.now() - promoTapOpenedAt > 500) openPromoCarouselDetail(promo.dataset.promoKind);
   });
   $('#promoTrack').addEventListener('keydown', event => {
     if (event.key !== 'Enter' && event.key !== ' ') return;
