@@ -15,6 +15,10 @@ const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
 const FX_HOME_SHARE_URL='https://preview.daedongmap.com/';
 const FX_HOME_SHARE_TEXT='여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.';
 const FX_STORE_SHARE_PARAM='store';
+const FX_HIDDEN_STORE_IDS=new Set([
+ '6092aabddf5f7194', // 롯데리아 중앙점
+ 'e0c6949efb48f4b2' // 롯데리아 이마트점
+]);
 window.DAEDONG_WEATHER_CONFIG=window.DAEDONG_WEATHER_CONFIG||{enabled:false,proxyUrl:'',cacheMinutes:18};
 
 let fxBrandData={stores:[],brands:[]};
@@ -33,7 +37,7 @@ const fxOriginalRenderStores=renderStores;
 const fxOriginalOpenStore=openStore;
 const fxOriginalAppRegisteredStores=appRegisteredStores;
 
-function fxVisible(store){return Boolean(store&&normalize(store.name)!=='제목없음'&&normalize(store.name)!=='이름없는가게');}
+function fxVisible(store){return Boolean(store&&store.customerVisible!==false&&!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(store.name)!=='제목없음'&&normalize(store.name)!=='이름없는가게');}
 function fxSvg(id,cls='ui-icon'){return `<svg class="${cls}" aria-hidden="true"><use href="assets/ui/ui-icons.svg#${id}"></use></svg>`;}
 function fxPlatform(){const ua=navigator.userAgent||'';if(/iphone|ipad|ipod/i.test(ua))return'ios';if(/android/i.test(ua))return'android';return'other';}
 function fxLowPower(){return Number(navigator.hardwareConcurrency||8)<=4||Number(navigator.deviceMemory||8)<=4;}
@@ -43,7 +47,7 @@ function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]
 function fxCardPhoto(store){const src=fxPhoto(store);return src?`<img src="${escapeHtml(src)}" alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
 function fxDistance(store){return state.coords&&store.lat!==null&&store.lng!==null?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;}
 
-normalizedStore=function(raw,index){const store=fxOriginalNormalizedStore(raw,index);store.customerVisible=normalize(raw.name)!=='제목없음';store.rawIndex=index;return store;};
+normalizedStore=function(raw,index){const store=fxOriginalNormalizedStore(raw,index);store.customerVisible=!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(raw.name)!=='제목없음';store.rawIndex=index;return store;};
 filteredStores=function(){return fxOriginalFilteredStores().filter(fxVisible);};
 appRegisteredStores=function(key){return fxOriginalAppRegisteredStores(key).filter(fxVisible);};
 
