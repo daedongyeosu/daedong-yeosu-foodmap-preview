@@ -915,7 +915,7 @@ async function initialize() {
     try { return normalizedStore(raw && typeof raw === 'object' ? raw : {}, index); }
     catch (error) { console.error('store-normalization-failed', raw?.store_id || raw?.id || index, error); return null; }
   }).filter(Boolean);
-  canonicalStores = allStores.filter(store => store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
+  canonicalStores = allStores.filter(store => store.customerVisible !== false && store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
   searchableStores = canonicalStores;
   coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);
   stores = canonicalStores;
