@@ -123,6 +123,16 @@ function fxEnhanceStoreDetail(store){const detail=$('#modalContent .store-detail
 openStore=function(store){if(!fxVisible(store))return;fxOriginalOpenStore(store);fxEnhanceStoreDetail(store);};
 
 function fxDiversifySearchPhotos(items){const remaining=[...items],result=[];if(remaining.length)result.push(remaining.shift());while(remaining.length){const previous=fxPhoto(result.at(-1).store),counts=new Map();remaining.forEach(item=>counts.set(fxPhoto(item.store),(counts.get(fxPhoto(item.store))||0)+1));let index=-1,best=-1;remaining.forEach((item,i)=>{const photo=fxPhoto(item.store),count=counts.get(photo)||0;if(photo!==previous&&count>best){index=i;best=count;}});if(index<0)index=0;result.push(remaining.splice(index,1)[0]);}return result;}
+function fxRankSearchMatches(matches){
+ const groups=new Map();
+ matches.forEach(item=>{if(!groups.has(item.score))groups.set(item.score,[]);groups.get(item.score).push(item);});
+ return [...groups.entries()].sort((a,b)=>b[0]-a[0]).flatMap(([,group])=>{
+  const byId=new Map(group.map(item=>[String(item.store.id),item]));
+  const stores=group.map(item=>item.store).sort((a,b)=>a.name.localeCompare(b.name,'ko'));
+  const ranked=typeof rc6RankCandidatesByCustomerLocation==='function'?rc6RankCandidatesByCustomerLocation(stores):stores;
+  return ranked.map(store=>byId.get(String(store.id))).filter(Boolean);
+ });
+}
 let fxSearchRenderToken=0;
 function fxSearchCard({store}){return `<button type="button" class="app-browser-card glass-action" data-search-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`;}
 function fxRenderSearchResults(query=''){
@@ -133,8 +143,8 @@ function fxRenderSearchResults(query=''){
  let readinessChecks=0;const render=()=>{
   if(token!==fxSearchRenderToken||!target.isConnected)return;
   if(!searchableStores.length&&readinessChecks++<100){setTimeout(render,50);return;}
-  const ranked=searchableStores.map(store=>({store,score:relevance(store,q)})).filter(item=>item.score>0).sort((a,b)=>b.score-a.score||a.store.name.localeCompare(b.store.name,'ko'));
-  const list=fxDiversifySearchPhotos(ranked);target.removeAttribute('aria-busy');if(!list.length){target.innerHTML='<p class="empty">검색 결과가 없습니다.</p>';return;}
+  const matches=searchableStores.map(store=>({store,score:relevance(store,q)})).filter(item=>item.score>0);
+  const list=fxRankSearchMatches(matches);target.removeAttribute('aria-busy');if(!list.length){target.innerHTML='<p class="empty">검색 결과가 없습니다.</p>';return;}
   target.setAttribute('aria-label',`${list.length}개 검색 결과`);let index=0;
   const append=()=>{if(token!==fxSearchRenderToken||!target.isConnected)return;const next=list.slice(index,index+36);target.insertAdjacentHTML('beforeend',next.map(fxSearchCard).join(''));index+=next.length;if(index===next.length){const card=target.closest('.modal-card');if(card)card.scrollTop=0;}if(index<list.length)requestAnimationFrame(append);};append();
  };setTimeout(render,0);
