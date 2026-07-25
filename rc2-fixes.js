@@ -271,9 +271,9 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
   for (const group of groups) {
     group.stores = rc2RandomizedRailStores(group.stores, spec, group.key);
   }
-  const addStore = (store, relaxDiversity = false, allowGlobalReuse = false) => {
+  const addStore = (store, relaxDiversity = false) => {
     const storeId = String(store.id);
-    if (selectedIds.has(storeId) || (!allowGlobalReuse && globallyUsed.has(storeId))) return;
+    if (selectedIds.has(storeId) || globallyUsed.has(storeId)) return;
     const brandKey = rc2BrandKey(store);
     const photoKey = fxPhoto(store);
     if (!relaxDiversity && (brandKeys.has(brandKey) || (photoKey && photoKeys.has(photoKey)))) return;
@@ -283,18 +283,16 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
     if (photoKey) photoKeys.add(photoKey);
     globallyUsed.add(storeId);
   };
-  const fillGroup = (group, allowGlobalReuse, relaxDiversity) => {
+  const fillGroup = (group, relaxDiversity) => {
     for (const store of group.stores) {
-      addStore(store, relaxDiversity, allowGlobalReuse);
+      addStore(store, relaxDiversity);
       if (result.length >= limit) return true;
     }
     return false;
   };
   for (const group of groups) {
-    if (fillGroup(group, false, false)) return result;
-    if (fillGroup(group, false, true)) return result;
-    if (fillGroup(group, true, false)) return result;
-    if (fillGroup(group, true, true)) return result;
+    if (fillGroup(group, false)) return result;
+    if (fillGroup(group, true)) return result;
   }
   return result;
 }
