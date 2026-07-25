@@ -22,7 +22,7 @@ assert.match(app, /store:\s*\{[\s\S]*image: 'assets\/promos\/merchant-recruitmen
 assert.match(app, /join:\s*\{[\s\S]*phone: '010-4797-7803'/);
 assert.match(app, /const description = promo\.kind === 'rider' \? '' : promo\.desc/);
 assert.match(app, /promo-cta">자세히보기 <small>\(화면터치\)<\/small>/);
-assert.match(app, /data-promo-kind=/);
+assert.match(app, /<button type="button" class="carousel-slide promo-card \$\{promo\.kind\} is-interactive" data-promo-kind=/);
 assert.match(app, /function openPromoCarouselDetail\(kind\)/);
 assert.match(app, /const heading = details\.imageOnly \? `<h2 id="modalTitle" class="promo-visually-hidden">/);
 assert.match(app, /promo-detail promo-detail-image-only/);
@@ -30,11 +30,12 @@ assert.match(app, /promo-detail-image-only'\)\) modal\.classList\.add\('promo-de
 assert.match(app, /promoTrack\.addEventListener\('pointerdown'/);
 assert.match(app, /promoShell\.addEventListener\('pointerup'/);
 assert.match(app, /Math\.hypot\(event\.clientX - tap\.x, event\.clientY - tap\.y\) > 18/);
-assert.match(app, /performance\.now\(\) - promoTapOpenedAt > 500/);
-assert.match(app, /promoTrack\.addEventListener\('click'/);
+assert.match(app, /performance\.now\(\) - promoTapOpenedAt <= 500/);
+assert.match(app, /promoShell\.addEventListener\('click'[\s\S]*promoTrack\.contains\(promo\)[\s\S]*\}, true\)/);
 assert.match(app, /#promoTrack'\)\.addEventListener\('keydown'/);
 assert.match(app, /promo-signup-detail/);
 
+assert.match(css, /\.promo-card\.is-interactive\{[\s\S]*appearance:none;[\s\S]*text-align:left/);
 assert.match(css, /\.promo-card \.promo-cta\{/);
 assert.match(css, /\.promo-detail-modal \.modal-card\{/);
 assert.match(css, /\.promo-detail img\{[\s\S]*object-fit:contain/);
@@ -42,8 +43,8 @@ assert.match(css, /\.promo-visually-hidden\{[\s\S]*clip:rect\(0,0,0,0\)/);
 assert.match(css, /\.promo-image-only-modal \.modal-card\{[\s\S]*max-height:calc\(100dvh - 8px\)/);
 assert.match(css, /\.promo-image-only-modal \.promo-detail-image-only img\{[\s\S]*max-height:calc\(100dvh - 16px\)/);
 assert.match(css, /\.promo-signup-detail strong\{/);
-assert.match(html, /app\.css\?v=[^"]*lower-promo-details-3/);
-assert.match(html, /app\.js\?v=[^"]*lower-promo-details-3/);
+assert.match(html, /app\.css\?v=[^"]*lower-promo-details-4/);
+assert.match(html, /app\.js\?v=[^"]*lower-promo-details-4/);
 
 assertWebp(riderImage, '배송기사 모집 광고');
 assertWebp(merchantImage, '가맹점 모집 광고');

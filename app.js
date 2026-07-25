@@ -546,7 +546,11 @@ function renderPromos() {
     const title = details?.title || promo.title;
     const description = promo.kind === 'rider' ? '' : promo.desc;
     const interactive = Boolean(details);
-    return `<article class="carousel-slide promo-card ${promo.kind}${interactive ? ' is-interactive' : ''}"${interactive ? ` data-promo-kind="${escapeHtml(promo.kind)}" role="button" tabindex="0" aria-label="${escapeHtml(`${title} 자세히보기`)}"` : ''}><b>${escapeHtml(title)}</b>${description ? `<span>${escapeHtml(description)}</span>` : ''}${details?.phone ? `<span class="promo-phone">가입 문의 ${escapeHtml(details.phone)}</span>` : ''}${interactive ? '<span class="promo-cta">자세히보기 <small>(화면터치)</small></span>' : ''}</article>`;
+    const content = `<b>${escapeHtml(title)}</b>${description ? `<span>${escapeHtml(description)}</span>` : ''}${details?.phone ? `<span class="promo-phone">가입 문의 ${escapeHtml(details.phone)}</span>` : ''}${interactive ? '<span class="promo-cta">자세히보기 <small>(화면터치)</small></span>' : ''}`;
+    if (interactive) {
+      return `<button type="button" class="carousel-slide promo-card ${promo.kind} is-interactive" data-promo-kind="${escapeHtml(promo.kind)}" aria-label="${escapeHtml(`${title} 자세히보기`)}">${content}</button>`;
+    }
+    return `<article class="carousel-slide promo-card ${promo.kind}">${content}</article>`;
   }).join('');
   promoCarousel = new InfiniteCarousel($('#promoCarousel'), {interval: 3500});
 }
@@ -970,10 +974,12 @@ document.addEventListener('DOMContentLoaded', () => {
     openPromoCarouselDetail(tap.kind);
   });
   promoShell.addEventListener('pointercancel', () => { promoTapStart = null; });
-  promoTrack.addEventListener('click', event => {
+  promoShell.addEventListener('click', event => {
     const promo = event.target.closest('[data-promo-kind]');
-    if (promo && performance.now() - promoTapOpenedAt > 500) openPromoCarouselDetail(promo.dataset.promoKind);
-  });
+    if (!promo || !promoTrack.contains(promo) || performance.now() - promoTapOpenedAt <= 500) return;
+    event.preventDefault();
+    openPromoCarouselDetail(promo.dataset.promoKind);
+  }, true);
   $('#promoTrack').addEventListener('keydown', event => {
     if (event.key !== 'Enter' && event.key !== ' ') return;
     const promo = event.target.closest('[data-promo-kind]');
