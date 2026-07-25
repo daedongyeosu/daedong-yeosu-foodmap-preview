@@ -99,8 +99,11 @@ const PROMOS = [
 const PROMO_CAROUSEL_DETAILS = {
   rider: {
     title: '배송기사님 모집',
-    image: 'assets/promos/rider-recruitment.webp',
-    imageAlt: '배달대행 배송원 모집 안내'
+    image: 'assets/promos/rider-recruitment-portrait-v2.webp',
+    imageAlt: '대동여수음식지도 배송기사 모집 안내',
+    imageWidth: 853,
+    imageHeight: 1844,
+    imageOnly: true
   },
   store: {
     image: 'assets/promos/merchant-recruitment.webp',
@@ -553,7 +556,9 @@ function openPromoCarouselDetail(kind) {
   if (!promo || !details) return;
   const title = details.title || promo.title;
   if (details.image) {
-    openModal(`<div class="promo-detail"><h2 id="modalTitle">${escapeHtml(title)}</h2><img src="${escapeHtml(details.image)}" alt="${escapeHtml(details.imageAlt)}" width="${kind === 'rider' ? '2048' : '1760'}" height="${kind === 'rider' ? '682' : '894'}" decoding="async"></div>`);
+    const heading = details.imageOnly ? `<h2 id="modalTitle" class="promo-visually-hidden">${escapeHtml(title)}</h2>` : `<h2 id="modalTitle">${escapeHtml(title)}</h2>`;
+    const detailClass = details.imageOnly ? 'promo-detail promo-detail-image-only' : 'promo-detail';
+    openModal(`<div class="${detailClass}">${heading}<img src="${escapeHtml(details.image)}" alt="${escapeHtml(details.imageAlt)}" width="${details.imageWidth || 1760}" height="${details.imageHeight || 894}" decoding="async"></div>`);
     return;
   }
   openModal(`<div class="promo-signup-detail"><h2 id="modalTitle">${escapeHtml(title)}</h2><p>${escapeHtml(promo.desc)}</p><strong>가입 문의 ${escapeHtml(details.phone)}</strong></div>`);
@@ -720,6 +725,7 @@ function classifyModal() {
   else if ($('#modalContent .community-guide')) modal.classList.add('community-guide-modal');
   else if ($('#modalContent .feedback-sheet')) modal.classList.add('feedback-modal');
   else if ($('#modalContent .address-single-sheet')) modal.classList.add('address-modal');
+  else if ($('#modalContent .promo-detail-image-only')) modal.classList.add('promo-detail-modal', 'promo-image-only-modal');
   else if ($('#modalContent .promo-detail')) modal.classList.add('promo-detail-modal');
   else if ($('#modalContent .promo-signup-detail')) modal.classList.add('promo-signup-modal');
 }
