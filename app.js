@@ -18,6 +18,7 @@ const SELECTED_ORDER_COMPAT_KEY = 'DaedongSelectedOrderApp';
 const ADDRESS_KEY = 'daedongDeliveryAddressV2';
 const ADDRESS_BOOK_KEY = 'daedongAddressBookV2';
 const FEEDBACK_FORM_URL = 'https://www.notion.so/8ae3728176e344fdaee3475a97d03740';
+const SMALL_BUSINESS_ASSOCIATION_URL = 'https://bit.ly/여수시소상공인연합회공지';
 
 const APP_META = {
   direct: {label: '가게바로주문', icon: '🏪'},
@@ -114,6 +115,11 @@ const PROMO_CAROUSEL_DETAILS = {
   },
   join: {
     phone: '010-4797-7803'
+  },
+  notice: {
+    externalUrl: SMALL_BUSINESS_ASSOCIATION_URL,
+    ariaLabel: '소상공인협회 공지 노션에서 자세히 보기',
+    showCta: false
   }
 };
 
@@ -549,9 +555,10 @@ function renderPromos() {
     const title = details?.title || promo.title;
     const description = promo.kind === 'rider' ? '' : promo.desc;
     const interactive = Boolean(details);
-    const content = `<b>${escapeHtml(title)}</b>${description ? `<span>${escapeHtml(description)}</span>` : ''}${details?.phone ? `<span class="promo-phone">가입 문의 ${escapeHtml(details.phone)}</span>` : ''}${interactive ? '<span class="promo-cta">자세히보기 <small>(화면터치)</small></span>' : ''}`;
+    const showCta = interactive && details.showCta !== false;
+    const content = `<b>${escapeHtml(title)}</b>${description ? `<span>${escapeHtml(description)}</span>` : ''}${details?.phone ? `<span class="promo-phone">가입 문의 ${escapeHtml(details.phone)}</span>` : ''}${showCta ? '<span class="promo-cta">자세히보기 <small>(화면터치)</small></span>' : ''}`;
     if (interactive) {
-      return `<button type="button" class="carousel-slide promo-card ${promo.kind} is-interactive" data-promo-kind="${escapeHtml(promo.kind)}" aria-label="${escapeHtml(`${title} 자세히보기`)}">${content}</button>`;
+      return `<button type="button" class="carousel-slide promo-card ${promo.kind} is-interactive" data-promo-kind="${escapeHtml(promo.kind)}" aria-label="${escapeHtml(details.ariaLabel || `${title} 자세히보기`)}">${content}</button>`;
     }
     return `<article class="carousel-slide promo-card ${promo.kind}">${content}</article>`;
   }).join('');
@@ -562,6 +569,15 @@ function openPromoCarouselDetail(kind) {
   const details = PROMO_CAROUSEL_DETAILS[kind];
   if (!promo || !details) return;
   const title = details.title || promo.title;
+  if (details.externalUrl) {
+    try {
+      const url = new URL(details.externalUrl, location.href);
+      if (url.protocol === 'https:') location.assign(url.href);
+    } catch (error) {
+      console.warn('Invalid lower promo URL', error);
+    }
+    return;
+  }
   if (details.image) {
     const heading = details.imageOnly ? `<h2 id="modalTitle" class="promo-visually-hidden">${escapeHtml(title)}</h2>` : `<h2 id="modalTitle">${escapeHtml(title)}</h2>`;
     const detailClass = details.imageOnly ? 'promo-detail promo-detail-image-only' : 'promo-detail';
