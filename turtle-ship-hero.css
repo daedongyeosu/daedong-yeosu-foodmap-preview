@@ -183,7 +183,7 @@
 }
 
 .community-intro.is-visible .community-intro-progress span{
-  animation:community-popup-progress 10s linear both;
+  animation:community-popup-progress 15s linear both;
 }
 
 @keyframes community-popup-backdrop-in{
@@ -220,9 +220,9 @@
 }
 
 .order-section .community-order-message h2{
-  color:#ffe95c;
+  color:#fff;
   font-weight:950;
-  text-shadow:0 2px 2px rgba(4,29,48,.96),0 0 10px rgba(255,190,38,.42);
+  text-shadow:0 2px 3px rgba(4,29,48,.98),0 0 10px rgba(4,29,48,.62);
 }
 
 .order-section .community-order-message p{
@@ -232,10 +232,12 @@
   border:0;
   border-radius:0;
   background:transparent;
-  color:#082f49;
+  color:#ffe95c;
+  font-size:clamp(15px,4vw,18px);
   font-weight:950;
+  line-height:1.45;
   letter-spacing:-.025em;
-  text-shadow:none;
+  text-shadow:0 2px 3px rgba(4,29,48,.98);
 }
 
 /*
