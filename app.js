@@ -96,6 +96,20 @@ const PROMOS = [
   {kind: 'new', title: '신규 오픈 가게 광고', desc: '새로 문을 연 여수 가게를 빠르게 알립니다.'},
   {kind: 'notice', title: '소상공인협회 알림', desc: '여수 소상공인에게 필요한 소식을 전합니다.'}
 ];
+const PROMO_CAROUSEL_DETAILS = {
+  rider: {
+    title: '배송기사님 모집',
+    image: 'assets/promos/rider-recruitment.webp',
+    imageAlt: '배달대행 배송원 모집 안내'
+  },
+  store: {
+    image: 'assets/promos/merchant-recruitment.webp',
+    imageAlt: '꼬르륵 배달대행 가맹점 모집 안내'
+  },
+  join: {
+    phone: '010-4797-7803'
+  }
+};
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -524,8 +538,25 @@ function renderHero() {
   heroCarousel = new InfiniteCarousel($('#heroCarousel'), {interval: 3500});
 }
 function renderPromos() {
-  $('#promoTrack').innerHTML = PROMOS.map(promo => `<article class="carousel-slide promo-card ${promo.kind}"><b>${promo.title}</b><span>${promo.desc}</span></article>`).join('');
+  $('#promoTrack').innerHTML = PROMOS.map(promo => {
+    const details = PROMO_CAROUSEL_DETAILS[promo.kind];
+    const title = details?.title || promo.title;
+    const description = promo.kind === 'rider' ? '' : promo.desc;
+    const interactive = Boolean(details);
+    return `<article class="carousel-slide promo-card ${promo.kind}${interactive ? ' is-interactive' : ''}"${interactive ? ` data-promo-kind="${escapeHtml(promo.kind)}" role="button" tabindex="0" aria-label="${escapeHtml(`${title} 자세히보기`)}"` : ''}><b>${escapeHtml(title)}</b>${description ? `<span>${escapeHtml(description)}</span>` : ''}${details?.phone ? `<span class="promo-phone">가입 문의 ${escapeHtml(details.phone)}</span>` : ''}${interactive ? '<span class="promo-cta">자세히보기 <small>(화면터치)</small></span>' : ''}</article>`;
+  }).join('');
   promoCarousel = new InfiniteCarousel($('#promoCarousel'), {interval: 3500});
+}
+function openPromoCarouselDetail(kind) {
+  const promo = PROMOS.find(item => item.kind === kind);
+  const details = PROMO_CAROUSEL_DETAILS[kind];
+  if (!promo || !details) return;
+  const title = details.title || promo.title;
+  if (details.image) {
+    openModal(`<div class="promo-detail"><h2 id="modalTitle">${escapeHtml(title)}</h2><img src="${escapeHtml(details.image)}" alt="${escapeHtml(details.imageAlt)}" width="${kind === 'rider' ? '2048' : '1760'}" height="${kind === 'rider' ? '682' : '894'}" decoding="async"></div>`);
+    return;
+  }
+  openModal(`<div class="promo-signup-detail"><h2 id="modalTitle">${escapeHtml(title)}</h2><p>${escapeHtml(promo.desc)}</p><strong>가입 문의 ${escapeHtml(details.phone)}</strong></div>`);
 }
 function appIcon(key, cls = '') {
   const meta = APP_META[key]; if (!meta) return '';
@@ -689,6 +720,8 @@ function classifyModal() {
   else if ($('#modalContent .community-guide')) modal.classList.add('community-guide-modal');
   else if ($('#modalContent .feedback-sheet')) modal.classList.add('feedback-modal');
   else if ($('#modalContent .address-single-sheet')) modal.classList.add('address-modal');
+  else if ($('#modalContent .promo-detail')) modal.classList.add('promo-detail-modal');
+  else if ($('#modalContent .promo-signup-detail')) modal.classList.add('promo-signup-modal');
 }
 function openModal(html) {
   const modal = $('#modal'), wasHidden = modal.hidden;
@@ -914,6 +947,17 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#locationBtn').addEventListener('click', areaModal);
   $('#topFavoriteBtn').addEventListener('click', favoritesModal);
   $('#topRecentBtn').addEventListener('click', recentModal);
+  $('#promoTrack').addEventListener('click', event => {
+    const promo = event.target.closest('[data-promo-kind]');
+    if (promo) openPromoCarouselDetail(promo.dataset.promoKind);
+  });
+  $('#promoTrack').addEventListener('keydown', event => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    const promo = event.target.closest('[data-promo-kind]');
+    if (!promo) return;
+    event.preventDefault();
+    openPromoCarouselDetail(promo.dataset.promoKind);
+  });
 
   const pop = $('#moreAppsPopover');
   $('#moreAppsBtn').addEventListener('click', event => { event.stopPropagation(); pop.hidden = !pop.hidden; });
