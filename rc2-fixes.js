@@ -254,7 +254,7 @@ function rc2RandomizedRailStores(stores, spec, groupKey) {
   return result;
 }
 
-function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
+function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map()) {
   const brandKeys = new Set();
   const photoKeys = new Set();
   const selectedIds = new Set();
@@ -263,17 +263,23 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
   for (const store of fxRankStores(spec)) {
     const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
     const tier = typeof rc6OwnershipTier === 'function' ? rc6OwnershipTier(store) : 2;
-    const key = String(bucket) + ':' + String(tier);
+    const key = `${bucket}:${tier}`;
     const last = groups[groups.length - 1];
-    if (!last || last.key !== key) groups.push({key, stores: [store]});
+    if (!last || last.key !== key) groups.push({key, bucket, stores: [store]});
     else last.stores.push(store);
   }
   for (const group of groups) {
     group.stores = rc2RandomizedRailStores(group.stores, spec, group.key);
   }
-  const addStore = (store, relaxDiversity = false) => {
+  const addStore = (store, relaxDiversity = false, allowReuse = false) => {
     const storeId = String(store.id);
-    if (selectedIds.has(storeId) || globallyUsed.has(storeId)) return;
+    const useCount = useCounts.get(storeId) || 0;
+    if (selectedIds.has(storeId)) return;
+    if (allowReuse) {
+      if (!spec.pattern || useCount < 1 || useCount >= 2) return;
+    } else if (globallyUsed.has(storeId) || useCount > 0) {
+      return;
+    }
     const brandKey = rc2BrandKey(store);
     const photoKey = fxPhoto(store);
     if (!relaxDiversity && (brandKeys.has(brandKey) || (photoKey && photoKeys.has(photoKey)))) return;
@@ -282,18 +288,39 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8) {
     brandKeys.add(brandKey);
     if (photoKey) photoKeys.add(photoKey);
     globallyUsed.add(storeId);
+    useCounts.set(storeId, useCount + 1);
   };
-  const fillGroup = (group, relaxDiversity) => {
+  const fillGroup = (group, relaxDiversity, allowReuse = false, target = limit) => {
     for (const store of group.stores) {
-      addStore(store, relaxDiversity);
-      if (result.length >= limit) return true;
+      addStore(store, relaxDiversity, allowReuse);
+      if (result.length >= target) return true;
     }
     return false;
   };
-  for (const group of groups) {
-    if (fillGroup(group, false)) return result;
-    if (fillGroup(group, true)) return result;
+  const fillGroups = (targetGroups, allowReuse = false, target = limit) => {
+    for (const group of targetGroups) {
+      if (fillGroup(group, false, allowReuse, target)) return true;
+      if (fillGroup(group, true, allowReuse, target)) return true;
+    }
+    return false;
+  };
+  const localGroups = groups.filter(group => group.bucket === 0);
+  const otherGroups = groups.filter(group => group.bucket !== 0);
+  if (spec.pattern && localGroups.length) {
+    if (fillGroups(localGroups)) return result;
+    const nearbyTarget = Math.min(limit, result.length + 2);
+    const nearbyStores = otherGroups.flatMap(group => group.stores).sort((a, b) => {
+      const aDistance = Number(a.rc6SortDistance ?? a.distance ?? a.rc6NeighborhoodDistance);
+      const bDistance = Number(b.rc6SortDistance ?? b.distance ?? b.rc6NeighborhoodDistance);
+      return (Number.isFinite(aDistance) ? aDistance : Infinity) - (Number.isFinite(bDistance) ? bDistance : Infinity);
+    });
+    fillGroups([{stores: nearbyStores}], false, nearbyTarget);
+    if (result.length >= limit) return result;
+    if (fillGroups(localGroups, true)) return result;
+    fillGroups(otherGroups);
+    return result;
   }
+  fillGroups(groups);
   return result;
 }
 
@@ -311,8 +338,9 @@ fxRenderRails = function rc2RenderRails() {
   }
   root.hidden = false;
   const globallyUsed = new Set();
+  const useCounts = new Map();
   root.innerHTML = fxSelectedRails().map(spec => {
-    const cards = rc2RailCandidates(spec, globallyUsed, 8);
+    const cards = rc2RailCandidates(spec, globallyUsed, 8, useCounts);
     const allCandidates = fxRankStores(spec);
     return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track">${cards.map(rc2RailCard).join('') || '<p class="empty">추천 가게를 확인 중입니다.</p>'}</div></section>`;
   }).join('');
