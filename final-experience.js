@@ -340,11 +340,11 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1-popup-utility-links-1-selected-store-top-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');

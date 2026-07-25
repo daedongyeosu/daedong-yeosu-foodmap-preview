@@ -62,7 +62,8 @@ for(const required of [
 ])if(!appSource.includes(required))throw new Error(`multi-neighborhood wiring missing: ${required}`);
 for(const required of [
  'const key = `${bucket}:${tier}`',
- 'addStore(store, true)',
+ 'addStore(store, relaxDiversity, allowReuse)',
+ 'useCount >= 2',
 ])if(!rc2Source.includes(required))throw new Error(`rail location-priority wiring missing: ${required}`);
 for(const required of [
  'neighborhoodFor(state.location)||neighborhoodFor(state.addressLabel)',

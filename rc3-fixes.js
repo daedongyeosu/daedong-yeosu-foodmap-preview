@@ -138,8 +138,9 @@ fxRenderRails = function rc3RenderRails() {
   root.hidden = false;
   try {
     const globallyUsed = new Set();
+    const useCounts = new Map();
     root.innerHTML = fxSelectedRails().map(spec => {
-      const cards = rc2RailCandidates(spec, globallyUsed, 8);
+      const cards = rc2RailCandidates(spec, globallyUsed, 8, useCounts);
       const allCandidates = fxRankStores(spec);
       return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">현재 표시할 추천 가게가 없습니다.</p>'}</div></section>`;
     }).join('');
