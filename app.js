@@ -407,6 +407,8 @@ class InfiniteCarousel {
     this.onChange = typeof onChange === 'function' ? onChange : null;
     this.timer = null;
     this.dragStart = null;
+    this.listeners = [];
+    this.destroyed = false;
     this.current = 0;
     this.original = [...this.track.children];
     this.count = this.original.length;
@@ -421,16 +423,24 @@ class InfiniteCarousel {
     }
     this.jump(false); this.renderDots();
   }
-  beginDrag(clientX) {
-    if (!Number.isFinite(clientX) || this.dragStart !== null) return;
-    this.dragStart = clientX;
+  listen(target, type, handler, options) {
+    if (!target?.addEventListener) return;
+    target.addEventListener(type, handler, options);
+    this.listeners.push({target, type, handler, options});
+  }
+  beginDrag(clientX, clientY) {
+    if (!Number.isFinite(clientX) || !Number.isFinite(clientY) || this.dragStart !== null) return;
+    this.dragStart = {x: clientX, y: clientY};
     this.stop();
   }
-  finishDrag(clientX) {
-    if (this.dragStart === null || !Number.isFinite(clientX)) return;
-    const delta = clientX - this.dragStart;
+  finishDrag(clientX, clientY) {
+    if (this.dragStart === null || !Number.isFinite(clientX) || !Number.isFinite(clientY)) return;
+    const deltaX = clientX - this.dragStart.x;
+    const deltaY = clientY - this.dragStart.y;
     this.dragStart = null;
-    if (Math.abs(delta) > 38) this.move(delta < 0 ? 1 : -1);
+    if (Math.abs(deltaX) > 38 && Math.abs(deltaX) > Math.abs(deltaY) * 1.15) {
+      this.move(deltaX < 0 ? 1 : -1);
+    }
     this.start();
   }
   cancelDrag() { this.dragStart = null; this.start(); }
@@ -438,26 +448,41 @@ class InfiniteCarousel {
     const bindArrow = (button, direction) => {
       if (!button) return;
       const stop = event => event.stopPropagation();
-      button.addEventListener('pointerdown', stop);
-      button.addEventListener('mousedown', stop);
-      button.addEventListener('touchstart', stop, {passive: true});
-      button.addEventListener('click', event => { event.stopPropagation(); this.stop(); this.move(direction); this.start(); });
+      this.listen(button, 'pointerdown', stop);
+      this.listen(button, 'mousedown', stop);
+      this.listen(button, 'touchstart', stop, {passive: true});
+      this.listen(button, 'click', event => { event.stopPropagation(); this.stop(); this.move(direction); this.start(); });
     };
     bindArrow(this.prev, -1);
     bindArrow(this.next, 1);
-    this.track.addEventListener('transitionend', () => this.normalizePosition());
-    this.shell.addEventListener('dragstart', event => event.preventDefault());
-    this.shell.addEventListener('pointerdown', event => { this.beginDrag(event.clientX); try { this.shell.setPointerCapture?.(event.pointerId); } catch {} });
-    this.shell.addEventListener('pointerup', event => this.finishDrag(event.clientX));
-    this.shell.addEventListener('pointercancel', () => this.cancelDrag());
-    this.shell.addEventListener('mousedown', event => this.beginDrag(event.clientX));
-    window.addEventListener('mouseup', event => this.finishDrag(event.clientX));
-    this.shell.addEventListener('touchstart', event => this.beginDrag(event.touches[0]?.clientX), {passive: true});
-    this.shell.addEventListener('touchend', event => this.finishDrag(event.changedTouches[0]?.clientX), {passive: true});
-    this.shell.addEventListener('touchcancel', () => this.cancelDrag(), {passive: true});
-    this.root.addEventListener('focusin', () => this.stop());
-    this.root.addEventListener('focusout', () => this.start());
-    this.dots?.addEventListener('click', event => { const button = event.target.closest('[data-slide]'); if (button) this.goTo(Number(button.dataset.slide)); });
+    this.listen(this.track, 'transitionend', () => this.normalizePosition());
+    this.listen(this.shell, 'dragstart', event => event.preventDefault());
+    if ('PointerEvent' in window) {
+      this.listen(this.shell, 'pointerdown', event => {
+        this.beginDrag(event.clientX, event.clientY);
+        try { this.shell.setPointerCapture?.(event.pointerId); } catch {}
+      });
+      this.listen(this.shell, 'pointerup', event => this.finishDrag(event.clientX, event.clientY));
+      this.listen(this.shell, 'pointercancel', () => this.cancelDrag());
+    } else {
+      this.listen(this.shell, 'mousedown', event => this.beginDrag(event.clientX, event.clientY));
+      this.listen(window, 'mouseup', event => this.finishDrag(event.clientX, event.clientY));
+      this.listen(this.shell, 'touchstart', event => {
+        const touch = event.touches[0];
+        this.beginDrag(touch?.clientX, touch?.clientY);
+      }, {passive: true});
+      this.listen(this.shell, 'touchend', event => {
+        const touch = event.changedTouches[0];
+        this.finishDrag(touch?.clientX, touch?.clientY);
+      }, {passive: true});
+      this.listen(this.shell, 'touchcancel', () => this.cancelDrag(), {passive: true});
+    }
+    this.listen(this.root, 'focusin', () => this.stop());
+    this.listen(this.root, 'focusout', () => this.start());
+    this.listen(this.dots, 'click', event => {
+      const button = event.target.closest('[data-slide]');
+      if (button) this.goTo(Number(button.dataset.slide));
+    });
   }
   logicalIndex() { return this.count <= 1 ? 0 : (this.current - 1 + this.count) % this.count; }
   renderDots() { if (!this.dots) return; this.dots.innerHTML = this.original.map((_, index) => `<button type="button" data-slide="${index}" aria-label="${index + 1}번째 슬라이드"></button>`).join(''); this.updateDots(); }
@@ -481,10 +506,17 @@ class InfiniteCarousel {
   }
   goTo(index) { if (this.count <= 1) return; this.current = Math.max(0, Math.min(this.count - 1, index)) + 1; this.jump(true); this.restart(); }
   normalizePosition() { this.normalizeCurrent(); }
-  start() { if (this.count <= 1 || this.timer || !(this.interval > 0)) return; this.timer = setInterval(() => this.move(1), this.interval); }
+  start() { if (this.destroyed || this.count <= 1 || this.timer || !(this.interval > 0)) return; this.timer = setInterval(() => this.move(1), this.interval); }
   stop() { if (this.timer) { clearInterval(this.timer); this.timer = null; } }
   restart() { this.stop(); this.start(); }
-  destroy() { this.stop(); clearTimeout(this.normalizeTimer); }
+  destroy() {
+    this.destroyed = true;
+    this.stop();
+    clearTimeout(this.normalizeTimer);
+    this.dragStart = null;
+    this.listeners.forEach(({target, type, handler, options}) => target.removeEventListener(type, handler, options));
+    this.listeners = [];
+  }
 }
 
 function renderHero() {
