@@ -106,8 +106,11 @@ const PROMO_CAROUSEL_DETAILS = {
     imageOnly: true
   },
   store: {
-    image: 'assets/promos/merchant-recruitment.webp',
-    imageAlt: '꼬르륵 배달대행 가맹점 모집 안내'
+    image: 'assets/promos/merchant-recruitment-portrait-v2.webp',
+    imageAlt: '대동여수음식지도 꼬르륵 배달대행 가맹점 모집 안내',
+    imageWidth: 853,
+    imageHeight: 1844,
+    imageOnly: true
   },
   join: {
     phone: '010-4797-7803'
