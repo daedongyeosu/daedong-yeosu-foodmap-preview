@@ -60,7 +60,7 @@ for(const required of ['둔덕동','미평동','화장동'])if(!audited.some(ite
 for(const required of [
  '...new Set([...branchNeighborhoods,...notionNeighborhoods])',
 ])if(!appSource.includes(required))throw new Error(`multi-neighborhood wiring missing: ${required}`);
-for(const required of [
+if(![
  'const key = `${bucket}:${tier}`',
  'addStore(store, relaxDiversity, allowReuse)',
  'useCount >= 2',

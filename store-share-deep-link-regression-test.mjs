@@ -14,7 +14,7 @@ assert.match(finalExperience,/const FX_HOME_SHARE_URL='https:\/\/preview\.daedon
 assert.match(finalExperience,/url\.searchParams\.set\(FX_STORE_SHARE_PARAM,String\(store\.id\)\)/,'가게 공유 URL에는 가게 ID가 포함되어야 합니다.');
 assert.match(finalExperience,/new URLSearchParams\(location\.search\)\.get\(FX_STORE_SHARE_PARAM\)/,'진입 URL에서 공유 가게 ID를 읽어야 합니다.');
 assert.match(finalExperience,/await fxOpenSharedStoreFromUrl\(\)/,'초기화가 끝난 뒤 공유된 가게를 열어야 합니다.');
-assert.match(app,/!requestedSharedStoreId && localStorage\.getItem\('hideStartup'\)/,'공유 가게 진입 때 시작 광고가 팝업을 덮으면 안 됩니다.');
+assert.match(app,/!requestedSharedStoreId && !startupBypassHeroStoreIds\.has\(String\(requestedHeroStoreId\|\|''\)\) && localStorage\.getItem\('hideStartup'\)/,'공유 가게 진입 때 시작 광고가 팝업을 덮으면 안 됩니다.');
 assert.match(rc2,/if \(share\) \{\s*event\.preventDefault\(\);\s*event\.stopImmediatePropagation\(\);/,'가게 공유 터치는 한 번만 처리되어야 합니다.');
 
 const sample=stores.find(store=>store.store_id||store.id);
