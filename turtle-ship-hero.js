@@ -5,7 +5,7 @@
  * 데이터·가게 목록·주문 경로·팝업 이벤트에는 연결하지 않는다.
  */
 (() => {
-  const SEQUENCE_SESSION_KEY = 'daedongCommunityIntroPlayedV2';
+  const SEQUENCE_SESSION_KEY = 'daedongCommunityIntroPlayedV3';
   const INTRO_DURATION = 10000;
   const INTRO_CLOSE_DURATION = 240;
   const intro = document.getElementById('communityIntro');

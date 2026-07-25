@@ -24,7 +24,7 @@ const checks = [
   ['간격 축소와 무관하게 기존 거북선 항로 높이 유지', js.includes('originalCourseOffset') && js.includes('? 56') && js.includes('Math.min(54, Math.max(41, window.innerWidth * 0.05))')],
   ['선미에서 용머리 방향으로 북서향 축소 이동', css.includes('translate3d(8%,-35%,0) scale(2.05)') && css.includes('translate3d(-38%,-89%,0) scale(.62)') && !css.includes('-153%')],
   ['16.8초 동안 후반까지 유유히 운항 뒤 자연스럽게 종료', css.includes('16.8s cubic-bezier(.22,.55,.2,1)') && css.includes('94%') && js.includes('setTimeout(markFinished, 17500)')],
-  ['안내 팝업과 거북선 순서를 세션당 한 번만 실행', js.includes('daedongCommunityIntroPlayedV2') && js.includes('sequenceAlreadyPlayed') && js.includes('sessionStorage.setItem')],
+  ['안내 팝업과 거북선 순서를 세션당 한 번만 실행', js.includes('daedongCommunityIntroPlayedV3') && js.includes('sequenceAlreadyPlayed') && js.includes('sessionStorage.setItem')],
   ['안내 팝업이 사라진 뒤 거북선 출항', js.includes('finishIntro') && /completeIntroClose[\s\S]*?sailWhenHomeIsClear/.test(js)],
   ['시작 광고·팝업이 닫힌 홈에서 운항', js.includes('homeIsClear') && js.includes('MutationObserver')],
   ['데이터·주문 이벤트와 분리', !/stores|routes|data-order-key|openStore|openModal/.test(js)]
