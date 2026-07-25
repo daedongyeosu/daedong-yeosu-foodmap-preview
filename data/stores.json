@@ -31149,7 +31149,7 @@
       },
       {
         "name": "요기요",
-        "url": "https://bit.ly/yo-비비큐미평둔덕점",
+        "url": "https://ws.yogiyo.co.kr/x9020g",
         "enabled": true
       },
       {
@@ -32441,7 +32441,7 @@
       },
       {
         "name": "요기요",
-        "url": "https://bit.ly/yo-금성칡냉면미평점",
+        "url": "https://ws.yogiyo.co.kr/bqwk0f",
         "enabled": true
       }
     ],
@@ -34376,7 +34376,7 @@
       },
       {
         "name": "요기요",
-        "url": "https://bit.ly/yo-덮덮밥미평점",
+        "url": "https://ws.yogiyo.co.kr/1sjf57f",
         "enabled": true
       }
     ],
@@ -35016,7 +35016,7 @@
       },
       {
         "name": "요기요",
-        "url": "https://bit.ly/yo-뚜레쥬르여수미평점",
+        "url": "https://ws.yogiyo.co.kr/stuy7dq",
         "enabled": true
       }
     ],
@@ -37229,7 +37229,7 @@
       },
       {
         "name": "요기요",
-        "url": "https://bit.ly/yo-본스치킨미평점",
+        "url": "https://ws.yogiyo.co.kr/2ovalx6",
         "enabled": true
       },
       {
@@ -47441,6 +47441,4306 @@
       "카페/디저트/베이커리/아이스크림/빙수"
     ],
     "photoMatchType": "approved-brand-shared-photo",
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
+  },
+  {
+    "id": "fbed2b2b3e8a7852",
+    "store_id": "fbed2b2b3e8a7852",
+    "notionPageId": "3a4da158dd2a8018bf48fe7a0cb546b2",
+    "notionUrl": "https://app.notion.com/p/3a4da158dd2a8018bf48fe7a0cb546b2",
+    "name": "쑝쑝돈까스 여수관문점",
+    "realBusinessName": "쑝쑝돈까스 여수관문점",
+    "brandName": "쑝쑝돈까스",
+    "branchName": "여수관문점",
+    "aliases": [
+      "쑝쑝돈까스 여수관문점",
+      "쑝쑝돈까스여수관문점"
+    ],
+    "searchAliases": [
+      "쑝쑝돈까스 여수관문점",
+      "쑝쑝돈까스여수관문점"
+    ],
+    "shopInShopNames": [],
+    "district": "관문동",
+    "category": "돈까스/일식",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/5iTO5jg2",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80f3933cc07a5cda9462",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=79754",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a8086988cd44c178a8325",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/a0a86ep",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=666756&dishId&key=3385447a-9ac4-43f5-b9db-d82c7fa4681d",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/i1000fTkr6DP8",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a4da158dd2a8018bf48fe7a0cb546b2"
+    },
+    "searchTerms": [
+      "쑝쑝돈까스 여수관문점",
+      "쑝쑝돈까스여수관문점",
+      "쑝쑝돈까스",
+      "여수관문점",
+      "관문동",
+      "돈까스/일식"
+    ],
+    "categories": [
+      "돈까스/일식"
+    ]
+  },
+  {
+    "id": "48fd29bda51143ce",
+    "store_id": "48fd29bda51143ce",
+    "notionPageId": "394da158dd2a80399f13deef3079bbb5",
+    "notionUrl": "https://app.notion.com/p/394da158dd2a80399f13deef3079bbb5",
+    "name": "디저트39 여수교동점",
+    "realBusinessName": "디저트39 여수교동점",
+    "brandName": "디저트39",
+    "branchName": "여수교동점",
+    "aliases": [
+      "디저트39 여수교동점",
+      "디저트39여수교동점"
+    ],
+    "searchAliases": [
+      "디저트39 여수교동점",
+      "디저트39여수교동점"
+    ],
+    "shopInShopNames": [],
+    "district": "교동",
+    "category": "카페/디저트/베이커리/아이스크림/빙수",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/FV7AVTQO",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/39cda158dd2a8082bd98fbb1b83c627b",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=179615",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?eKv7dRz=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/39cda158dd2a80e08d82fa8532bc7610",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/dp3ldp",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=423240&dishId&key=b1b1473f-942a-413e-9be5-fdb96d9ab681",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/I0000g17zFMOg",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "394da158dd2a80399f13deef3079bbb5"
+    },
+    "searchTerms": [
+      "디저트39 여수교동점",
+      "디저트39여수교동점",
+      "디저트39",
+      "여수교동점",
+      "교동",
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
+  },
+  {
+    "id": "3dddb9467dadd191",
+    "store_id": "3dddb9467dadd191",
+    "notionPageId": "39bda158dd2a80358e2be91882664524",
+    "notionUrl": "https://app.notion.com/p/39bda158dd2a80358e2be91882664524",
+    "name": "디저트39 여수웅천점",
+    "realBusinessName": "디저트39 여수웅천점",
+    "brandName": "디저트39",
+    "branchName": "여수웅천점",
+    "aliases": [
+      "디저트39 여수웅천점",
+      "디저트39여수웅천점"
+    ],
+    "searchAliases": [
+      "디저트39 여수웅천점",
+      "디저트39여수웅천점"
+    ],
+    "shopInShopNames": [],
+    "district": "웅천동",
+    "category": "카페/디저트/베이커리/아이스크림/빙수",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/F9NUFAEp",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/39dda158dd2a8054b8b3eae9bfa5e80a",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=157812",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?JdYyZ0v=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80259ce9f7b5469dd32d",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/v46pr8c",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=709693&dishId&key=71f3cc0e-763f-4234-933f-89bdff94027b",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/mp000hx9bAP8F",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "39bda158dd2a80358e2be91882664524"
+    },
+    "searchTerms": [
+      "디저트39 여수웅천점",
+      "디저트39여수웅천점",
+      "디저트39",
+      "여수웅천점",
+      "웅천동",
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
+  },
+  {
+    "id": "4573285075624a68",
+    "store_id": "4573285075624a68",
+    "notionPageId": "df5da158dd2a83e58c2a01a46661970c",
+    "notionUrl": "https://app.notion.com/p/df5da158dd2a83e58c2a01a46661970c",
+    "name": "이순신 베이커리 중앙점",
+    "realBusinessName": "이순신 베이커리 중앙점",
+    "brandName": "이순신 베이커리",
+    "branchName": "중앙점",
+    "aliases": [
+      "이순신 베이커리 중앙점",
+      "이순신베이커리중앙점"
+    ],
+    "searchAliases": [
+      "이순신 베이커리 중앙점",
+      "이순신베이커리중앙점"
+    ],
+    "shopInShopNames": [],
+    "district": "중앙동",
+    "category": "카페/디저트/베이커리/아이스크림/빙수",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/IMZOb2M4",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a8036b4c0c1e17837174c",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?zy50CRy=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80d586c9ecb93a6586b0",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "df5da158dd2a83e58c2a01a46661970c"
+    },
+    "searchTerms": [
+      "이순신 베이커리 중앙점",
+      "이순신베이커리중앙점",
+      "이순신 베이커리",
+      "중앙점",
+      "중앙동",
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
+  },
+  {
+    "id": "d2e817819bab165c",
+    "store_id": "d2e817819bab165c",
+    "notionPageId": "3a8da158dd2a80e59f32d7ff4c4c21c0",
+    "notionUrl": "https://app.notion.com/p/3a8da158dd2a80e59f32d7ff4c4c21c0",
+    "name": "라홍방마라탕 엑스포점",
+    "realBusinessName": "라홍방마라탕 엑스포점",
+    "brandName": "라홍방마라탕",
+    "branchName": "엑스포점",
+    "aliases": [
+      "라홍방마라탕 엑스포점",
+      "라홍방마라탕엑스포점"
+    ],
+    "searchAliases": [
+      "라홍방마라탕 엑스포점",
+      "라홍방마라탕엑스포점"
+    ],
+    "shopInShopNames": [],
+    "district": "덕충동",
+    "category": "마라탕/양꼬치",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xNLCia4y",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a80baaad9f5155eb78f3b",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=153733",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?4HnzftM=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a804ea798ca32b4cf09dd",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/g913nno",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=740957&dishId&key=f91bed3f-54cd-44ba-a316-9a4f01a9fe76",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/xV000DxDc69Ps",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a8da158dd2a80e59f32d7ff4c4c21c0"
+    },
+    "searchTerms": [
+      "라홍방마라탕 엑스포점",
+      "라홍방마라탕엑스포점",
+      "라홍방마라탕",
+      "엑스포점",
+      "덕충동",
+      "마라탕/양꼬치"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
+    ]
+  },
+  {
+    "id": "da46c2fa0f47744b",
+    "store_id": "da46c2fa0f47744b",
+    "notionPageId": "3a8da158dd2a809d8d49e6dd3d9db6fd",
+    "notionUrl": "https://app.notion.com/p/3a8da158dd2a809d8d49e6dd3d9db6fd",
+    "name": "호세야 오리바베큐 엑스포점",
+    "realBusinessName": "호세야 오리바베큐 엑스포점",
+    "brandName": "호세야 오리바베큐",
+    "branchName": "엑스포점",
+    "aliases": [
+      "호세야 오리바베큐 엑스포점",
+      "호세야오리바베큐엑스포점"
+    ],
+    "searchAliases": [
+      "호세야 오리바베큐 엑스포점",
+      "호세야오리바베큐엑스포점"
+    ],
+    "shopInShopNames": [],
+    "district": "덕충동",
+    "category": "고기/구이",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/5CW2HIDQ",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a80e3ac3bc1d879dcb3da",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=142673",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?Mse488T=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a80539c65f91813ed6d3b",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/xdvyw87",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=665244&dishId&key=7a315e5d-0bd8-4da8-9357-ef2eb38a57d0",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/kU000fwKsNao7",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a8da158dd2a809d8d49e6dd3d9db6fd"
+    },
+    "searchTerms": [
+      "호세야 오리바베큐 엑스포점",
+      "호세야오리바베큐엑스포점",
+      "호세야 오리바베큐",
+      "엑스포점",
+      "덕충동",
+      "고기/구이"
+    ],
+    "categories": [
+      "고기/구이"
+    ]
+  },
+  {
+    "id": "22e2a057e26bd409",
+    "store_id": "22e2a057e26bd409",
+    "notionPageId": "3a8da158dd2a8021b84cf188f57c9163",
+    "notionUrl": "https://app.notion.com/p/3a8da158dd2a8021b84cf188f57c9163",
+    "name": "해수부실내포차 덕충점",
+    "realBusinessName": "해수부실내포차 덕충점",
+    "brandName": "해수부실내포차",
+    "branchName": "덕충점",
+    "aliases": [
+      "해수부실내포차 덕충점",
+      "해수부실내포차덕충점"
+    ],
+    "searchAliases": [
+      "해수부실내포차 덕충점",
+      "해수부실내포차덕충점"
+    ],
+    "shopInShopNames": [],
+    "district": "덕충동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/5b03xeF2",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a80328ab0ece13cbd1998",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?Rq2BKtu=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a80d283d0d9c74e8ade4d",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/t60le08",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/8C000J3kdsMZn",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a8da158dd2a8021b84cf188f57c9163"
+    },
+    "searchTerms": [
+      "해수부실내포차 덕충점",
+      "해수부실내포차덕충점",
+      "해수부실내포차",
+      "덕충점",
+      "덕충동",
+      "회/초밥/선어/해산물",
+      "야식/주점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "야식/주점"
+    ]
+  },
+  {
+    "id": "b7237b31e79b28f7",
+    "store_id": "b7237b31e79b28f7",
+    "notionPageId": "3a8da158dd2a80cebd86ce646f2269ee",
+    "notionUrl": "https://app.notion.com/p/3a8da158dd2a80cebd86ce646f2269ee",
+    "name": "덕충아구찜 덕충점",
+    "realBusinessName": "덕충아구찜 덕충점",
+    "brandName": "덕충아구찜",
+    "branchName": "덕충점",
+    "aliases": [
+      "덕충아구찜 덕충점",
+      "덕충아구찜덕충점"
+    ],
+    "searchAliases": [
+      "덕충아구찜 덕충점",
+      "덕충아구찜덕충점"
+    ],
+    "shopInShopNames": [],
+    "district": "덕충동",
+    "category": "한식",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GalEtmVD",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a8065b5b3da0cfcbbf01f",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=162745",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?qupHCsc=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a8089831fdf05cfb9bb1c",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/0cy2da",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=287501&dishId&key=574e8284-984d-413b-a106-30239212fab1",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/bB000yjxb2qKb",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a8da158dd2a80cebd86ce646f2269ee"
+    },
+    "searchTerms": [
+      "덕충아구찜 덕충점",
+      "덕충아구찜덕충점",
+      "덕충아구찜",
+      "덕충점",
+      "덕충동",
+      "한식",
+      "회/초밥/선어/해산물",
+      "국밥/찜/탕/찌개/조림"
+    ],
+    "categories": [
+      "한식",
+      "회/초밥/선어/해산물",
+      "국밥/찜/탕/찌개/조림"
+    ]
+  },
+  {
+    "id": "254d63ce598f1e6c",
+    "store_id": "254d63ce598f1e6c",
+    "notionPageId": "3a8da158dd2a80f98b3ffcab6b863452",
+    "notionUrl": "https://app.notion.com/p/3a8da158dd2a80f98b3ffcab6b863452",
+    "name": "냉삼집 수정점",
+    "realBusinessName": "냉삼집 수정점",
+    "brandName": "냉삼집",
+    "branchName": "수정점",
+    "aliases": [
+      "냉삼집 수정점",
+      "냉삼집수정점"
+    ],
+    "searchAliases": [
+      "냉삼집 수정점",
+      "냉삼집수정점"
+    ],
+    "shopInShopNames": [],
+    "district": "수정동",
+    "category": "고기/구이",
+    "address": "",
+    "phone": "",
+    "naverMap": "",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a80858f7cfb6cc5e16d1b",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?jr9MVs3=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a804186a3c560cc26b96e",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=662816&dishId&key=4c65eac1-a1c7-48de-9683-8b07db3a02a6",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a8da158dd2a80f98b3ffcab6b863452"
+    },
+    "searchTerms": [
+      "냉삼집 수정점",
+      "냉삼집수정점",
+      "냉삼집",
+      "수정점",
+      "수정동",
+      "고기/구이"
+    ],
+    "categories": [
+      "고기/구이"
+    ]
+  },
+  {
+    "id": "f7f78ea24637cd25",
+    "store_id": "f7f78ea24637cd25",
+    "notionPageId": "3a8da158dd2a801487abe262eeb41af2",
+    "notionUrl": "https://app.notion.com/p/3a8da158dd2a801487abe262eeb41af2",
+    "name": "오동도 회포차 수정점",
+    "realBusinessName": "오동도 회포차 수정점",
+    "brandName": "오동도 회포차",
+    "branchName": "수정점",
+    "aliases": [
+      "오동도 회포차 수정점",
+      "오동도회포차수정점"
+    ],
+    "searchAliases": [
+      "오동도 회포차 수정점",
+      "오동도회포차수정점"
+    ],
+    "shopInShopNames": [],
+    "district": "수정동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GHve6T0y",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a8002bb42cd2f747b7814",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?HSEYpto=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80c99cc8dd5964a9b4f5",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/x2kua3",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=872277&dishId&key=f80bed57-3d89-4c8f-a227-e723d2f16ea9",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/4a000q3WU6su1",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a8da158dd2a801487abe262eeb41af2"
+    },
+    "searchTerms": [
+      "오동도 회포차 수정점",
+      "오동도회포차수정점",
+      "오동도 회포차",
+      "수정점",
+      "수정동",
+      "회/초밥/선어/해산물",
+      "야식/주점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "야식/주점"
+    ]
+  },
+  {
+    "id": "f15d5415fea714a7",
+    "store_id": "f15d5415fea714a7",
+    "notionPageId": "3a8da158dd2a803580bddc68a5e4b5be",
+    "notionUrl": "https://app.notion.com/p/3a8da158dd2a803580bddc68a5e4b5be",
+    "name": "여수바다닭강정 수정점",
+    "realBusinessName": "여수바다닭강정 수정점",
+    "brandName": "여수바다닭강정",
+    "branchName": "수정점",
+    "aliases": [
+      "여수바다닭강정 수정점",
+      "여수바다닭강정수정점"
+    ],
+    "searchAliases": [
+      "여수바다닭강정 수정점",
+      "여수바다닭강정수정점"
+    ],
+    "shopInShopNames": [],
+    "district": "수정동",
+    "category": "치킨",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xdp3ai7Q",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a80a6acdfd9f8ba1921e4",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=115562",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?PE1LzVa=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a8da158dd2a80f2b359dca9972a7e87",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=806646&dishId&key=0d1dd7de-292e-4585-b146-748dc57890ae",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/59000fcGPLrW8",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a8da158dd2a803580bddc68a5e4b5be"
+    },
+    "searchTerms": [
+      "여수바다닭강정 수정점",
+      "여수바다닭강정수정점",
+      "여수바다닭강정",
+      "수정점",
+      "수정동",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "3f9258729e128fa5",
+    "store_id": "3f9258729e128fa5",
+    "notionPageId": "3a6da158dd2a80acbc37e5cf6c0fc82e",
+    "notionUrl": "https://app.notion.com/p/3a6da158dd2a80acbc37e5cf6c0fc82e",
+    "name": "샐럽스프 엑스포점",
+    "realBusinessName": "샐럽스프 엑스포점",
+    "brandName": "샐럽스프",
+    "branchName": "엑스포점",
+    "aliases": [
+      "샐럽스프 엑스포점",
+      "샐럽스프엑스포점"
+    ],
+    "searchAliases": [
+      "샐럽스프 엑스포점",
+      "샐럽스프엑스포점"
+    ],
+    "shopInShopNames": [],
+    "district": "덕충동",
+    "category": "기타",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/FuzgGJxP",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80e8870dcebede41ca9d",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=115485",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?xqgq70V=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80f4a24fe87822ed15a5",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=802755&dishId&key=caaf8397-227a-403f-9ee6-337eb8bd2dbd",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/HE000fPfTnuHo",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a6da158dd2a80acbc37e5cf6c0fc82e"
+    },
+    "searchTerms": [
+      "샐럽스프 엑스포점",
+      "샐럽스프엑스포점",
+      "샐럽스프",
+      "엑스포점",
+      "덕충동",
+      "기타"
+    ],
+    "categories": [
+      "기타"
+    ]
+  },
+  {
+    "id": "195af7ec512059b2",
+    "store_id": "195af7ec512059b2",
+    "notionPageId": "3a6da158dd2a807a86bbdea79510c8a7",
+    "notionUrl": "https://app.notion.com/p/3a6da158dd2a807a86bbdea79510c8a7",
+    "name": "황제돈 공화점",
+    "realBusinessName": "황제돈 공화점",
+    "brandName": "황제돈",
+    "branchName": "공화점",
+    "aliases": [
+      "황제돈 공화점",
+      "황제돈공화점"
+    ],
+    "searchAliases": [
+      "황제돈 공화점",
+      "황제돈공화점"
+    ],
+    "shopInShopNames": [],
+    "district": "공화동",
+    "category": "고기/구이",
+    "address": "",
+    "phone": "",
+    "naverMap": "",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a806b9e91ff3ce2b89577",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=199207",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?S9otHvW=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a8098857ed9246805fa69",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/kvi7mf",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=964725&dishId&key=06f17040-4711-46ad-ab80-87101f5dec84",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a6da158dd2a807a86bbdea79510c8a7"
+    },
+    "searchTerms": [
+      "황제돈 공화점",
+      "황제돈공화점",
+      "황제돈",
+      "공화점",
+      "공화동",
+      "고기/구이"
+    ],
+    "categories": [
+      "고기/구이"
+    ]
+  },
+  {
+    "id": "b7c4fd748e132288",
+    "store_id": "b7c4fd748e132288",
+    "notionPageId": "3a6da158dd2a8072ba98deabcf03871c",
+    "notionUrl": "https://app.notion.com/p/3a6da158dd2a8072ba98deabcf03871c",
+    "name": "그집 닭한마리 덕충점",
+    "realBusinessName": "그집 닭한마리 덕충점",
+    "brandName": "그집 닭한마리",
+    "branchName": "덕충점",
+    "aliases": [
+      "그집 닭한마리 덕충점",
+      "그집닭한마리덕충점"
+    ],
+    "searchAliases": [
+      "그집 닭한마리 덕충점",
+      "그집닭한마리덕충점"
+    ],
+    "shopInShopNames": [],
+    "district": "덕충동",
+    "category": "한식",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GHLLdrKH",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80ee84f8e3188e5e76ca",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=217246",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?Eo8gCgv=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80b7b293f4d1189e5a4d",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/KZ000IWGeNfeu",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a6da158dd2a8072ba98deabcf03871c"
+    },
+    "searchTerms": [
+      "그집 닭한마리 덕충점",
+      "그집닭한마리덕충점",
+      "그집 닭한마리",
+      "덕충점",
+      "덕충동",
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ],
+    "categories": [
+      "한식",
+      "국밥/찜/탕/찌개/조림"
+    ]
+  },
+  {
+    "id": "796e9fd8e3672604",
+    "store_id": "796e9fd8e3672604",
+    "notionPageId": "3a6da158dd2a8071a165f5d8e83366b7",
+    "notionUrl": "https://app.notion.com/p/3a6da158dd2a8071a165f5d8e83366b7",
+    "name": "홍탕 덕충점",
+    "realBusinessName": "홍탕 덕충점",
+    "brandName": "홍탕",
+    "branchName": "덕충점",
+    "aliases": [
+      "홍탕 덕충점",
+      "홍탕덕충점"
+    ],
+    "searchAliases": [
+      "홍탕 덕충점",
+      "홍탕덕충점"
+    ],
+    "shopInShopNames": [],
+    "district": "덕충동",
+    "category": "마라탕/양꼬치",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/5DZqNHaV",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a803aafeeded68a19c8e3",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=10133",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?O8tUXsc=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a8015a288c35cb6d473da",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/7m663x",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=278680&dishId&key=e4e4b5c5-1fa2-4ee2-8c0e-e90263ff5467",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/oT000fwPUxLAG",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a6da158dd2a8071a165f5d8e83366b7"
+    },
+    "searchTerms": [
+      "홍탕 덕충점",
+      "홍탕덕충점",
+      "홍탕",
+      "덕충점",
+      "덕충동",
+      "마라탕/양꼬치"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
+    ]
+  },
+  {
+    "id": "3d802d86d994dbef",
+    "store_id": "3d802d86d994dbef",
+    "notionPageId": "3a6da158dd2a808d8d5ada26e613022e",
+    "notionUrl": "https://app.notion.com/p/3a6da158dd2a808d8d5ada26e613022e",
+    "name": "카페고운 덕충점",
+    "realBusinessName": "카페고운 덕충점",
+    "brandName": "카페고운",
+    "branchName": "덕충점",
+    "aliases": [
+      "카페고운 덕충점",
+      "카페고운덕충점"
+    ],
+    "searchAliases": [
+      "카페고운 덕충점",
+      "카페고운덕충점"
+    ],
+    "shopInShopNames": [],
+    "district": "덕충동",
+    "category": "카페/디저트/베이커리/아이스크림/빙수",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/5dhSKVN8",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a8093948ae60bbc446571",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?heebzhL=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80cfbcffd3b234e8bf29",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=901641&dishId&key=86f1f3c8-2ebf-4800-a397-64058ea00fd6",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/nn000x4fxOo6l",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a6da158dd2a808d8d5ada26e613022e"
+    },
+    "searchTerms": [
+      "카페고운 덕충점",
+      "카페고운덕충점",
+      "카페고운",
+      "덕충점",
+      "덕충동",
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
+  },
+  {
+    "id": "ab5f14369695f62a",
+    "store_id": "ab5f14369695f62a",
+    "notionPageId": "3a6da158dd2a80df96a5e7d669052044",
+    "notionUrl": "https://app.notion.com/p/3a6da158dd2a80df96a5e7d669052044",
+    "name": "먹기만회 공화점",
+    "realBusinessName": "먹기만회 공화점",
+    "brandName": "먹기만회",
+    "branchName": "공화점",
+    "aliases": [
+      "먹기만회 공화점",
+      "먹기만회공화점"
+    ],
+    "searchAliases": [
+      "먹기만회 공화점",
+      "먹기만회공화점"
+    ],
+    "shopInShopNames": [],
+    "district": "공화동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/G1wOzevL",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80c4a4fad90fee2e5a31",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=68760",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?2yOz4cP=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a809eb214d64d0b3a8867",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/siqme9",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=760995&dishId&key=449b13d1-ba7b-456f-be83-f8e66a7cdfa3",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/1f000eZaEOIvk",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a6da158dd2a80df96a5e7d669052044"
+    },
+    "searchTerms": [
+      "먹기만회 공화점",
+      "먹기만회공화점",
+      "먹기만회",
+      "공화점",
+      "공화동",
+      "회/초밥/선어/해산물"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
+    ]
+  },
+  {
+    "id": "868b9241b17148c9",
+    "store_id": "868b9241b17148c9",
+    "notionPageId": "3a6da158dd2a80d4a36ec8de3f9d924f",
+    "notionUrl": "https://app.notion.com/p/3a6da158dd2a80d4a36ec8de3f9d924f",
+    "name": "이집닭강정잘하네 공화점",
+    "realBusinessName": "이집닭강정잘하네 공화점",
+    "brandName": "이집닭강정잘하네",
+    "branchName": "공화점",
+    "aliases": [
+      "이집닭강정잘하네 공화점",
+      "이집닭강정잘하네공화점"
+    ],
+    "searchAliases": [
+      "이집닭강정잘하네 공화점",
+      "이집닭강정잘하네공화점"
+    ],
+    "shopInShopNames": [],
+    "district": "공화동",
+    "category": "치킨",
+    "address": "",
+    "phone": "",
+    "naverMap": "",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80409ad1d6e1eaa6777b",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=162457",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?bQSFahU=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80d6bb06fef968dfb1f3",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/y1dwi5z",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=847836&dishId&key=c3a0be53-45cf-4576-bc08-446f452a48bd",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/9P000ima537mT",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a6da158dd2a80d4a36ec8de3f9d924f"
+    },
+    "searchTerms": [
+      "이집닭강정잘하네 공화점",
+      "이집닭강정잘하네공화점",
+      "이집닭강정잘하네",
+      "공화점",
+      "공화동",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "41fe73cfd9f790fb",
+    "store_id": "41fe73cfd9f790fb",
+    "notionPageId": "3a6da158dd2a8017939cc2876e2362a7",
+    "notionUrl": "https://app.notion.com/p/3a6da158dd2a8017939cc2876e2362a7",
+    "name": "즐거운 생활 분식 공화점",
+    "realBusinessName": "즐거운 생활 분식 공화점",
+    "brandName": "즐거운 생활 분식",
+    "branchName": "공화점",
+    "aliases": [
+      "즐거운 생활 분식 공화점",
+      "즐거운생활분식공화점"
+    ],
+    "searchAliases": [
+      "즐거운 생활 분식 공화점",
+      "즐거운생활분식공화점"
+    ],
+    "shopInShopNames": [],
+    "district": "공화동",
+    "category": "분식/도시락",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xy7yv9yy",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a8043b638d6a447a5c977",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=78833",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?CZvMeo3=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a803eb985c1a645bf7cee",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/mibiy0",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/z5000ol5QF2YD",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a6da158dd2a8017939cc2876e2362a7"
+    },
+    "searchTerms": [
+      "즐거운 생활 분식 공화점",
+      "즐거운생활분식공화점",
+      "즐거운 생활 분식",
+      "공화점",
+      "공화동",
+      "분식/도시락"
+    ],
+    "categories": [
+      "분식/도시락"
+    ]
+  },
+  {
+    "id": "0533a8506dc3f667",
+    "store_id": "0533a8506dc3f667",
+    "notionPageId": "3a4da158dd2a8056a7a8faf8c0642811",
+    "notionUrl": "https://app.notion.com/p/3a4da158dd2a8056a7a8faf8c0642811",
+    "name": "우쿠야 공화점",
+    "realBusinessName": "우쿠야 공화점",
+    "brandName": "우쿠야",
+    "branchName": "공화점",
+    "aliases": [
+      "우쿠야 공화점",
+      "우쿠야공화점"
+    ],
+    "searchAliases": [
+      "우쿠야 공화점",
+      "우쿠야공화점"
+    ],
+    "shopInShopNames": [],
+    "district": "공화동",
+    "category": "돈까스/일식",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/FTX2WlDj",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a803391e2e40f917d8a53",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?sLtis2m=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a805b9d6fc8682fb79912",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/tmpwi39",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=825889&dishId&key=29590f27-1420-4f6d-b78b-27a972b1b4d5",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/nu000pRxXOB7v",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a4da158dd2a8056a7a8faf8c0642811"
+    },
+    "searchTerms": [
+      "우쿠야 공화점",
+      "우쿠야공화점",
+      "우쿠야",
+      "공화점",
+      "공화동",
+      "돈까스/일식",
+      "면요리"
+    ],
+    "categories": [
+      "돈까스/일식",
+      "면요리"
+    ]
+  },
+  {
+    "id": "9459e85dd2faf458",
+    "store_id": "9459e85dd2faf458",
+    "notionPageId": "3a4da158dd2a80f19268eb5fa91754c8",
+    "notionUrl": "https://app.notion.com/p/3a4da158dd2a80f19268eb5fa91754c8",
+    "name": "쑝쑝돈까스 여수학동점",
+    "realBusinessName": "쑝쑝돈까스 여수학동점",
+    "brandName": "쑝쑝돈까스",
+    "branchName": "여수학동점",
+    "aliases": [
+      "쑝쑝돈까스 여수학동점",
+      "쑝쑝돈까스여수학동점"
+    ],
+    "searchAliases": [
+      "쑝쑝돈까스 여수학동점",
+      "쑝쑝돈까스여수학동점"
+    ],
+    "shopInShopNames": [],
+    "district": "학동",
+    "category": "돈까스/일식",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xYvPOVX8",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80d18c9def862faeb10a",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=68219",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?dfw0nRA=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a4da158dd2a80d7b0baf61d516495c8",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/izfq1j",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=735091&dishId&key=6d4c8684-26f5-409d-ad48-53661a72f1e7",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/Zh000fb55JRBN",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a4da158dd2a80f19268eb5fa91754c8"
+    },
+    "searchTerms": [
+      "쑝쑝돈까스 여수학동점",
+      "쑝쑝돈까스여수학동점",
+      "쑝쑝돈까스",
+      "여수학동점",
+      "학동",
+      "돈까스/일식"
+    ],
+    "categories": [
+      "돈까스/일식"
+    ]
+  },
+  {
+    "id": "0c83f651d505339d",
+    "store_id": "0c83f651d505339d",
+    "notionPageId": "3a3da158dd2a80ee9890e580f65ffccb",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a80ee9890e580f65ffccb",
+    "name": "한솥도시락 여수죽림점",
+    "realBusinessName": "한솥도시락 여수죽림점",
+    "brandName": "한솥도시락",
+    "branchName": "여수죽림점",
+    "aliases": [
+      "한솥도시락 여수죽림점",
+      "한솥도시락여수죽림점"
+    ],
+    "searchAliases": [
+      "한솥도시락 여수죽림점",
+      "한솥도시락여수죽림점"
+    ],
+    "shopInShopNames": [],
+    "district": "죽림",
+    "category": "분식/도시락",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/FdCkbu29",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80c4b1ace0d1accc08cc",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=211474",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?9xkrpx8=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a806f878dc5066612d2ea",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/o7etcb",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=739736&dishId&key=52d9d427-e083-4e65-a728-647e93d12377",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/CT000gh0zuV8q",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a80ee9890e580f65ffccb"
+    },
+    "searchTerms": [
+      "한솥도시락 여수죽림점",
+      "한솥도시락여수죽림점",
+      "한솥도시락",
+      "여수죽림점",
+      "죽림",
+      "분식/도시락",
+      "한식"
+    ],
+    "categories": [
+      "분식/도시락",
+      "한식"
+    ]
+  },
+  {
+    "id": "161c7c3156aa5a34",
+    "store_id": "161c7c3156aa5a34",
+    "notionPageId": "3a4da158dd2a8023a392f10d97e33d4c",
+    "notionUrl": "https://app.notion.com/p/3a4da158dd2a8023a392f10d97e33d4c",
+    "name": "닭익는마을 공화점",
+    "realBusinessName": "닭익는마을 공화점",
+    "brandName": "닭익는마을",
+    "branchName": "공화점",
+    "aliases": [
+      "닭익는마을 공화점",
+      "닭익는마을공화점"
+    ],
+    "searchAliases": [
+      "닭익는마을 공화점",
+      "닭익는마을공화점"
+    ],
+    "shopInShopNames": [],
+    "district": "공화동",
+    "category": "치킨",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/FTX2WlDj",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80d0a59aef420a18c296",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?T8OM2aX=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80b7ae1ed6df70812b1b",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/89cn619",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=825923&dishId&key=47b60797-9ae7-42a8-912e-1bfa46d4025c",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/AM000q46ITL7w",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a4da158dd2a8023a392f10d97e33d4c"
+    },
+    "searchTerms": [
+      "닭익는마을 공화점",
+      "닭익는마을공화점",
+      "닭익는마을",
+      "공화점",
+      "공화동",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "f1aab01dd2cc00a9",
+    "store_id": "f1aab01dd2cc00a9",
+    "notionPageId": "3a3da158dd2a8049a078e4edc1b9fd0d",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a8049a078e4edc1b9fd0d",
+    "name": "한솥도시락 여수도원점",
+    "realBusinessName": "한솥도시락 여수도원점",
+    "brandName": "한솥도시락",
+    "branchName": "여수도원점",
+    "aliases": [
+      "한솥도시락 여수도원점",
+      "한솥도시락여수도원점"
+    ],
+    "searchAliases": [
+      "한솥도시락 여수도원점",
+      "한솥도시락여수도원점"
+    ],
+    "shopInShopNames": [],
+    "district": "학동",
+    "category": "분식/도시락",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/539skTgu",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a806581b6fc819fbe0ca7",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=218964",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?yJjQ7B6=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a809fa491e03eae332ae8",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/e1pnca",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=1044615&dishId&key=3f6fcc94-5f07-4e05-a703-e3978d3e0c88",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/Dk000IGfOUS3I",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a8049a078e4edc1b9fd0d"
+    },
+    "searchTerms": [
+      "한솥도시락 여수도원점",
+      "한솥도시락여수도원점",
+      "한솥도시락",
+      "여수도원점",
+      "학동",
+      "분식/도시락",
+      "한식"
+    ],
+    "categories": [
+      "분식/도시락",
+      "한식"
+    ]
+  },
+  {
+    "id": "7572d846695f056f",
+    "store_id": "7572d846695f056f",
+    "notionPageId": "3a3da158dd2a80c9a401f49dcb542343",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a80c9a401f49dcb542343",
+    "name": "한솥도시락 웅천점",
+    "realBusinessName": "한솥도시락 웅천점",
+    "brandName": "한솥도시락",
+    "branchName": "웅천점",
+    "aliases": [
+      "한솥도시락 웅천점",
+      "한솥도시락웅천점"
+    ],
+    "searchAliases": [
+      "한솥도시락 웅천점",
+      "한솥도시락웅천점"
+    ],
+    "shopInShopNames": [],
+    "district": "웅천동",
+    "category": "분식/도시락",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GJTtIv44",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80f8a3cddee548393a95",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=149171",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?tWnB6pw=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80898570db0d79131dbc",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/yj1qb6",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=736566&dishId&key=0c8d9979-df26-412f-a564-c68c8dd41770",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/rJ000gqxV9ZSi",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a80c9a401f49dcb542343"
+    },
+    "searchTerms": [
+      "한솥도시락 웅천점",
+      "한솥도시락웅천점",
+      "한솥도시락",
+      "웅천점",
+      "웅천동",
+      "분식/도시락",
+      "한식"
+    ],
+    "categories": [
+      "분식/도시락",
+      "한식"
+    ]
+  },
+  {
+    "id": "10e3f40c4e3c3bf4",
+    "store_id": "10e3f40c4e3c3bf4",
+    "notionPageId": "3a3da158dd2a8081b440e55eba71a9fc",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a8081b440e55eba71a9fc",
+    "name": "한솥도시락 여수문수점",
+    "realBusinessName": "한솥도시락 여수문수점",
+    "brandName": "한솥도시락",
+    "branchName": "여수문수점",
+    "aliases": [
+      "한솥도시락 여수문수점",
+      "한솥도시락여수문수점"
+    ],
+    "searchAliases": [
+      "한솥도시락 여수문수점",
+      "한솥도시락여수문수점"
+    ],
+    "shopInShopNames": [],
+    "district": "문수동",
+    "category": "분식/도시락",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GXgEJjqK",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a806abd16f55dc1c0de0e",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=68373",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?f4UqOCU=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a808d86b3feb07b26da60",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=736898&dishId&key=eee56ad3-2a0c-4f61-9fbe-36e87e051a81",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/gz000fKbJu1JK",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a8081b440e55eba71a9fc"
+    },
+    "searchTerms": [
+      "한솥도시락 여수문수점",
+      "한솥도시락여수문수점",
+      "한솥도시락",
+      "여수문수점",
+      "문수동",
+      "분식/도시락",
+      "한식"
+    ],
+    "categories": [
+      "분식/도시락",
+      "한식"
+    ]
+  },
+  {
+    "id": "263e2b82dba36e73",
+    "store_id": "263e2b82dba36e73",
+    "notionPageId": "3a3da158dd2a8025bf9add962a652ead",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a8025bf9add962a652ead",
+    "name": "한솥도시락 관문점",
+    "realBusinessName": "한솥도시락 관문점",
+    "brandName": "한솥도시락",
+    "branchName": "관문점",
+    "aliases": [
+      "한솥도시락 관문점",
+      "한솥도시락관문점"
+    ],
+    "searchAliases": [
+      "한솥도시락 관문점",
+      "한솥도시락관문점"
+    ],
+    "shopInShopNames": [],
+    "district": "관문동",
+    "category": "분식/도시락",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xKEvXlje",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80798870e449af9b5240",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=68932",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?8ypeEei=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80ff8e3cea766ef0ccf8",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/uof86uy",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=746270&dishId&key=47aedb03-8098-4bb2-94e7-21deb2f06948",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/8W000f4XdOkLD",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a8025bf9add962a652ead"
+    },
+    "searchTerms": [
+      "한솥도시락 관문점",
+      "한솥도시락관문점",
+      "한솥도시락",
+      "관문점",
+      "관문동",
+      "분식/도시락",
+      "한식"
+    ],
+    "categories": [
+      "분식/도시락",
+      "한식"
+    ]
+  },
+  {
+    "id": "f7e84eaba214227f",
+    "store_id": "f7e84eaba214227f",
+    "notionPageId": "3a3da158dd2a80f9b766f2a1db311eb9",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a80f9b766f2a1db311eb9",
+    "name": "처갓집양념치킨 돌산점",
+    "realBusinessName": "처갓집양념치킨 돌산점",
+    "brandName": "처갓집양념치킨",
+    "branchName": "돌산점",
+    "aliases": [
+      "처갓집양념치킨 돌산점",
+      "처갓집양념치킨돌산점"
+    ],
+    "searchAliases": [
+      "처갓집양념치킨 돌산점",
+      "처갓집양념치킨돌산점"
+    ],
+    "shopInShopNames": [],
+    "district": "돌산",
+    "category": "치킨",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/56X2LpXD",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a8053acbedb287d5f08e4",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=149614",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80fd8df8d5047b0da384",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/Eo000i9iowB4C",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a80f9b766f2a1db311eb9"
+    },
+    "searchTerms": [
+      "처갓집양념치킨 돌산점",
+      "처갓집양념치킨돌산점",
+      "처갓집양념치킨",
+      "돌산점",
+      "돌산",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "79a1a4e81b066de4",
+    "store_id": "79a1a4e81b066de4",
+    "notionPageId": "3a3da158dd2a8064bdbdefa11aab1db4",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a8064bdbdefa11aab1db4",
+    "name": "처갓집양념치킨 동정점",
+    "realBusinessName": "처갓집양념치킨 동정점",
+    "brandName": "처갓집양념치킨",
+    "branchName": "동정점",
+    "aliases": [
+      "처갓집양념치킨 동정점",
+      "처갓집양념치킨동정점"
+    ],
+    "searchAliases": [
+      "처갓집양념치킨 동정점",
+      "처갓집양념치킨동정점"
+    ],
+    "shopInShopNames": [],
+    "district": "고소동",
+    "category": "치킨",
+    "address": "전남 여수시 하멜로 18 (고소동)",
+    "phone": "",
+    "naverMap": "https://naver.me/x4FrkYTz",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a8098814ce2dd310f79fe",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=160485",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?930YYm6=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80f2818dee0cfbeb9566",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/7g0p5p",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=817169&dishId&key=0effec23-3fcd-4cb7-9fc9-70f8075b0648",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/8y000hURJCmQO",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a8064bdbdefa11aab1db4"
+    },
+    "searchTerms": [
+      "처갓집양념치킨 동정점",
+      "처갓집양념치킨동정점",
+      "처갓집양념치킨",
+      "동정점",
+      "고소동",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "71850f472f6ff7bd",
+    "store_id": "71850f472f6ff7bd",
+    "notionPageId": "3a3da158dd2a8022bbf6e9a67f803310",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a8022bbf6e9a67f803310",
+    "name": "해녀갯바구 종화점",
+    "realBusinessName": "해녀갯바구 종화점",
+    "brandName": "해녀갯바구",
+    "branchName": "종화점",
+    "aliases": [
+      "해녀갯바구 종화점",
+      "해녀갯바구종화점"
+    ],
+    "searchAliases": [
+      "해녀갯바구 종화점",
+      "해녀갯바구종화점"
+    ],
+    "shopInShopNames": [],
+    "district": "종화동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/x5Go11eF",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a8090ac77e63dcc7ed292",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?GqSskCD=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80abb71dfe552c1e0153",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/x9egur",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=776692&dishId&key=cfdab33e-70c6-46d9-840f-1e9bb2017c05",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/LD000tG1Mvzn7",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a8022bbf6e9a67f803310"
+    },
+    "searchTerms": [
+      "해녀갯바구 종화점",
+      "해녀갯바구종화점",
+      "해녀갯바구",
+      "종화점",
+      "종화동",
+      "회/초밥/선어/해산물"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
+    ]
+  },
+  {
+    "id": "3dc3c29b883e3114",
+    "store_id": "3dc3c29b883e3114",
+    "notionPageId": "3a3da158dd2a80c5a6e0f4e56ef38197",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a80c5a6e0f4e56ef38197",
+    "name": "닭이랑놀자 관문점",
+    "realBusinessName": "닭이랑놀자 관문점",
+    "brandName": "닭이랑놀자",
+    "branchName": "관문점",
+    "aliases": [
+      "닭이랑놀자 관문점",
+      "닭이랑놀자관문점"
+    ],
+    "searchAliases": [
+      "닭이랑놀자 관문점",
+      "닭이랑놀자관문점"
+    ],
+    "shopInShopNames": [],
+    "district": "관문동",
+    "category": "치킨",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/5QsDB5YA",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80cc929ae4dae14252d5",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=169028",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?FppweD4=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a80e4a55eddbd00bfced3",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/t6y9v6g",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=661403&dishId&key=5b04d630-5fd3-48b8-847b-a3b5f1233f5d",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/gx000fyB3mou5",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a80c5a6e0f4e56ef38197"
+    },
+    "searchTerms": [
+      "닭이랑놀자 관문점",
+      "닭이랑놀자관문점",
+      "닭이랑놀자",
+      "관문점",
+      "관문동",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "25c74532924be6f8",
+    "store_id": "25c74532924be6f8",
+    "notionPageId": "3a3da158dd2a807494b7c7b66c151400",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a807494b7c7b66c151400",
+    "name": "낭만포차18번 이순신해물삼합 종화점",
+    "realBusinessName": "낭만포차18번 이순신해물삼합 종화점",
+    "brandName": "낭만포차18번 이순신해물삼합",
+    "branchName": "종화점",
+    "aliases": [
+      "낭만포차18번 이순신해물삼합 종화점",
+      "낭만포차18번이순신해물삼합종화점"
+    ],
+    "searchAliases": [
+      "낭만포차18번 이순신해물삼합 종화점",
+      "낭만포차18번이순신해물삼합종화점"
+    ],
+    "shopInShopNames": [],
+    "district": "종화동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GEXh2B9m",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a8024bbb2dfbdb57dd0e1",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=157853",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?AAyvef8=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a8027a810c98f366b0169",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/de704fb",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=667167&dishId&key=981d2d28-b25c-4ddb-842b-0e978cef4188",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/vR000g2jK8HMR",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a807494b7c7b66c151400"
+    },
+    "searchTerms": [
+      "낭만포차18번 이순신해물삼합 종화점",
+      "낭만포차18번이순신해물삼합종화점",
+      "낭만포차18번 이순신해물삼합",
+      "종화점",
+      "종화동",
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ]
+  },
+  {
+    "id": "bd3ed43ab14af103",
+    "store_id": "bd3ed43ab14af103",
+    "notionPageId": "3a3da158dd2a803eb2befdd391e7130d",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a803eb2befdd391e7130d",
+    "name": "여수낭만포차23번 미스터 삼합왕 종화점",
+    "realBusinessName": "여수낭만포차23번 미스터 삼합왕 종화점",
+    "brandName": "여수낭만포차23번 미스터 삼합왕",
+    "branchName": "종화점",
+    "aliases": [
+      "여수낭만포차23번 미스터 삼합왕 종화점",
+      "여수낭만포차23번미스터삼합왕종화점"
+    ],
+    "searchAliases": [
+      "여수낭만포차23번 미스터 삼합왕 종화점",
+      "여수낭만포차23번미스터삼합왕종화점"
+    ],
+    "shopInShopNames": [],
+    "district": "종화동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xKEPfGl4",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a807592f4ee9b1cb85d4b",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=160857",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?mPBYtaX=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a3da158dd2a8061a756d5915b7f0c30",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/ctr38d",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=734056&dishId&key=6080ebac-81fd-4f83-8437-4dc638eac91d",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/m8000n2GuO0Py",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a803eb2befdd391e7130d"
+    },
+    "searchTerms": [
+      "여수낭만포차23번 미스터 삼합왕 종화점",
+      "여수낭만포차23번미스터삼합왕종화점",
+      "여수낭만포차23번 미스터 삼합왕",
+      "종화점",
+      "종화동",
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ]
+  },
+  {
+    "id": "748f09c865cab5a2",
+    "store_id": "748f09c865cab5a2",
+    "notionPageId": "508da158dd2a82358a4b01286fce405d",
+    "notionUrl": "https://app.notion.com/p/508da158dd2a82358a4b01286fce405d",
+    "name": "낭만24포차 종화점",
+    "realBusinessName": "낭만24포차 종화점",
+    "brandName": "낭만24포차",
+    "branchName": "종화점",
+    "aliases": [
+      "낭만24포차 종화점",
+      "낭만24포차종화점"
+    ],
+    "searchAliases": [
+      "낭만24포차 종화점",
+      "낭만24포차종화점"
+    ],
+    "shopInShopNames": [],
+    "district": "종화동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/Fuz5j54w",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80769fdff7a3de5ed8ad",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=177571",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?qn6NiK6=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a8083a380ca698acc993a",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/k6gebx",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=667263&dishId&key=a8ebc93b-9ea4-4e48-8b6d-f911077edbe2",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/in000toPvdvTC",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "508da158dd2a82358a4b01286fce405d"
+    },
+    "searchTerms": [
+      "낭만24포차 종화점",
+      "낭만24포차종화점",
+      "낭만24포차",
+      "종화점",
+      "종화동",
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ]
+  },
+  {
+    "id": "f9f16e11cb40d671",
+    "store_id": "f9f16e11cb40d671",
+    "notionPageId": "3a3da158dd2a80e896bcd4379bb93267",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a80e896bcd4379bb93267",
+    "name": "프레드피자 여수시청점",
+    "realBusinessName": "프레드피자 여수시청점",
+    "brandName": "프레드피자",
+    "branchName": "여수시청점",
+    "aliases": [
+      "프레드피자 여수시청점",
+      "프레드피자여수시청점"
+    ],
+    "searchAliases": [
+      "프레드피자 여수시청점",
+      "프레드피자여수시청점"
+    ],
+    "shopInShopNames": [],
+    "district": "학동",
+    "category": "피자",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GGCJkioe",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/39dda158dd2a803584abc2ed1776fd64",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=202074",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?ZHNN58y=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80b6827df75a4d81a867",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/10elqc",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=728675&dishId&key=49219636-a3fe-4db1-ac43-078896e78e56",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/h0000feh8c7ML",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a80e896bcd4379bb93267"
+    },
+    "searchTerms": [
+      "프레드피자 여수시청점",
+      "프레드피자여수시청점",
+      "프레드피자",
+      "여수시청점",
+      "학동",
+      "피자"
+    ],
+    "categories": [
+      "피자"
+    ]
+  },
+  {
+    "id": "b4991b954ffc2156",
+    "store_id": "b4991b954ffc2156",
+    "notionPageId": "3a3da158dd2a8032b501e7c04fa566f9",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a8032b501e7c04fa566f9",
+    "name": "프레드피자 여수해양공원점",
+    "realBusinessName": "프레드피자 여수해양공원점",
+    "brandName": "프레드피자",
+    "branchName": "여수해양공원점",
+    "aliases": [
+      "프레드피자 여수해양공원점",
+      "프레드피자여수해양공원점"
+    ],
+    "searchAliases": [
+      "프레드피자 여수해양공원점",
+      "프레드피자여수해양공원점"
+    ],
+    "shopInShopNames": [],
+    "district": "종화동",
+    "category": "피자",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GPlo1jJL",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80d3aed0dbe3206f55ee",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?tMMXk9X=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80a58cfdf11fadc7a915",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/kg240z",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=902215&dishId&key=77fe75cb-f501-4167-bcf1-5d86b4062daf",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/Ev000t3vS6MNj",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a8032b501e7c04fa566f9"
+    },
+    "searchTerms": [
+      "프레드피자 여수해양공원점",
+      "프레드피자여수해양공원점",
+      "프레드피자",
+      "여수해양공원점",
+      "종화동",
+      "피자"
+    ],
+    "categories": [
+      "피자"
+    ]
+  },
+  {
+    "id": "81f4a2d7ef343793",
+    "store_id": "81f4a2d7ef343793",
+    "notionPageId": "3a3da158dd2a80eebbe0d0c44e9f20b2",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a80eebbe0d0c44e9f20b2",
+    "name": "낭만밤바다포차 중앙점",
+    "realBusinessName": "낭만밤바다포차 중앙점",
+    "brandName": "낭만밤바다포차",
+    "branchName": "중앙점",
+    "aliases": [
+      "낭만밤바다포차 중앙점",
+      "낭만밤바다포차중앙점"
+    ],
+    "searchAliases": [
+      "낭만밤바다포차 중앙점",
+      "낭만밤바다포차중앙점"
+    ],
+    "shopInShopNames": [],
+    "district": "중앙동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/5Q378r20",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80aca095efd8120b4efe",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=155348",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?RT91cbq=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a8011a7a4d085874a07b0",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/e8o007y",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=730635&dishId&key=ce91ff2f-f0fc-464c-8236-85f9c5dd012e",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/ZB000fuyVl2Gh",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a80eebbe0d0c44e9f20b2"
+    },
+    "searchTerms": [
+      "낭만밤바다포차 중앙점",
+      "낭만밤바다포차중앙점",
+      "낭만밤바다포차",
+      "중앙점",
+      "중앙동",
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ]
+  },
+  {
+    "id": "f8e686cafd0b9bb4",
+    "store_id": "f8e686cafd0b9bb4",
+    "notionPageId": "3a2da158dd2a808a8a01d0a7318be65c",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a808a8a01d0a7318be65c",
+    "name": "동근이숯불두마리치킨 여수학동점",
+    "realBusinessName": "동근이숯불두마리치킨 여수학동점",
+    "brandName": "동근이숯불두마리치킨",
+    "branchName": "여수학동점",
+    "aliases": [
+      "동근이숯불두마리치킨 여수학동점",
+      "동근이숯불두마리치킨여수학동점"
+    ],
+    "searchAliases": [
+      "동근이숯불두마리치킨 여수학동점",
+      "동근이숯불두마리치킨여수학동점"
+    ],
+    "shopInShopNames": [],
+    "district": "학동",
+    "category": "치킨",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xMjyhebM",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80bbb245e1aa4c94e3eb",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?h9sG3Ci=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80e589f2f72a4f87666d",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/60zhp0",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=1042739&dishId&key=c5119ca0-2089-46fd-9cdd-b4e92b7b7292",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/zf000gvZR6sxa",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a808a8a01d0a7318be65c"
+    },
+    "searchTerms": [
+      "동근이숯불두마리치킨 여수학동점",
+      "동근이숯불두마리치킨여수학동점",
+      "동근이숯불두마리치킨",
+      "여수학동점",
+      "학동",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "60ea2342c71bd2f6",
+    "store_id": "60ea2342c71bd2f6",
+    "notionPageId": "3a2da158dd2a80edb1c4c73a042e54f1",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a80edb1c4c73a042e54f1",
+    "name": "동근이숯불두마리치킨 여수문수점",
+    "realBusinessName": "동근이숯불두마리치킨 여수문수점",
+    "brandName": "동근이숯불두마리치킨",
+    "branchName": "여수문수점",
+    "aliases": [
+      "동근이숯불두마리치킨 여수문수점",
+      "동근이숯불두마리치킨여수문수점"
+    ],
+    "searchAliases": [
+      "동근이숯불두마리치킨 여수문수점",
+      "동근이숯불두마리치킨여수문수점"
+    ],
+    "shopInShopNames": [],
+    "district": "문수동",
+    "category": "치킨",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/F8u8E4k1",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a800ca6dae0421ae29c7d",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?c1jSkWk=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80e7bcb2de96f3e4bd83",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/ibvqto",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=719423&dishId&key=b904d869-8224-42a4-87b3-5c2d8516a3e1",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/QA000fp3QbaiN",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a80edb1c4c73a042e54f1"
+    },
+    "searchTerms": [
+      "동근이숯불두마리치킨 여수문수점",
+      "동근이숯불두마리치킨여수문수점",
+      "동근이숯불두마리치킨",
+      "여수문수점",
+      "문수동",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "03cbdf3ceb09c568",
+    "store_id": "03cbdf3ceb09c568",
+    "notionPageId": "3a2da158dd2a803c966afb46d2971e73",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a803c966afb46d2971e73",
+    "name": "동근이숯불두마리치킨 여수해양공원점",
+    "realBusinessName": "동근이숯불두마리치킨 여수해양공원점",
+    "brandName": "동근이숯불두마리치킨",
+    "branchName": "여수해양공원점",
+    "aliases": [
+      "동근이숯불두마리치킨 여수해양공원점",
+      "동근이숯불두마리치킨여수해양공원점"
+    ],
+    "searchAliases": [
+      "동근이숯불두마리치킨 여수해양공원점",
+      "동근이숯불두마리치킨여수해양공원점"
+    ],
+    "shopInShopNames": [],
+    "district": "종화동",
+    "category": "치킨",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/5R4BvrZK",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a807fb1d5fc82b7490068",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=164131",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?Qiczqr3=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a8035a925cbc94787ff54",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/spgamn",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=815253&dishId&key=a15d90b4-01c0-440f-8323-68c1f02d9a25",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/P1000hjJsT51Z",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a803c966afb46d2971e73"
+    },
+    "searchTerms": [
+      "동근이숯불두마리치킨 여수해양공원점",
+      "동근이숯불두마리치킨여수해양공원점",
+      "동근이숯불두마리치킨",
+      "여수해양공원점",
+      "종화동",
+      "치킨"
+    ],
+    "categories": [
+      "치킨"
+    ]
+  },
+  {
+    "id": "d1c6934ccbb62ba6",
+    "store_id": "d1c6934ccbb62ba6",
+    "notionPageId": "3a2da158dd2a80cab508e6dca84248d5",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a80cab508e6dca84248d5",
+    "name": "라화쿵부마라탕 여수학동점",
+    "realBusinessName": "라화쿵부마라탕 여수학동점",
+    "brandName": "라화쿵부마라탕",
+    "branchName": "여수학동점",
+    "aliases": [
+      "라화쿵부마라탕 여수학동점",
+      "라화쿵부마라탕여수학동점"
+    ],
+    "searchAliases": [
+      "라화쿵부마라탕 여수학동점",
+      "라화쿵부마라탕여수학동점"
+    ],
+    "shopInShopNames": [],
+    "district": "학동",
+    "category": "마라탕/양꼬치",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/GalJYTe8",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80149839ff12883f5858",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=103625",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?iB6C3UG=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a805aa5a1e4d63ee3c8c8",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/rr93uor",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=651562&dishId&key=7ee8d94a-4d82-4f59-88dc-5e04ea64b5f3",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/pT000g72FHUMu",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a80cab508e6dca84248d5"
+    },
+    "searchTerms": [
+      "라화쿵부마라탕 여수학동점",
+      "라화쿵부마라탕여수학동점",
+      "라화쿵부마라탕",
+      "여수학동점",
+      "학동",
+      "마라탕/양꼬치"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
+    ]
+  },
+  {
+    "id": "52923eb8ddabd3e5",
+    "store_id": "52923eb8ddabd3e5",
+    "notionPageId": "3a2da158dd2a80dfa3f6efafcfb67355",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a80dfa3f6efafcfb67355",
+    "name": "라화쿵부마라탕 여수중앙점",
+    "realBusinessName": "라화쿵부마라탕 여수중앙점",
+    "brandName": "라화쿵부마라탕",
+    "branchName": "여수중앙점",
+    "aliases": [
+      "라화쿵부마라탕 여수중앙점",
+      "라화쿵부마라탕여수중앙점"
+    ],
+    "searchAliases": [
+      "라화쿵부마라탕 여수중앙점",
+      "라화쿵부마라탕여수중앙점"
+    ],
+    "shopInShopNames": [],
+    "district": "중앙동",
+    "category": "마라탕/양꼬치",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/G4GmjRhk",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80db948bc5a6b33c285b",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=68940",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?402kWHp=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80c6bbb9fb37fdbcf0fc",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/qnb2le",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=369667&dishId&key=56928193-11d2-401d-ab8f-b9cec53c63c4",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/qq000ji2huY3D",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a80dfa3f6efafcfb67355"
+    },
+    "searchTerms": [
+      "라화쿵부마라탕 여수중앙점",
+      "라화쿵부마라탕여수중앙점",
+      "라화쿵부마라탕",
+      "여수중앙점",
+      "중앙동",
+      "마라탕/양꼬치"
+    ],
+    "categories": [
+      "마라탕/양꼬치"
+    ]
+  },
+  {
+    "id": "6fd85c0f0694bb75",
+    "store_id": "6fd85c0f0694bb75",
+    "notionPageId": "3a3da158dd2a8031b7a7fcd048993037",
+    "notionUrl": "https://app.notion.com/p/3a3da158dd2a8031b7a7fcd048993037",
+    "name": "밀키샵 종화점",
+    "realBusinessName": "밀키샵 종화점",
+    "brandName": "밀키샵",
+    "branchName": "종화점",
+    "aliases": [
+      "밀키샵 종화점",
+      "밀키샵종화점"
+    ],
+    "searchAliases": [
+      "밀키샵 종화점",
+      "밀키샵종화점"
+    ],
+    "shopInShopNames": [],
+    "district": "종화동",
+    "category": "카페/디저트/베이커리/아이스크림/빙수",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xZVbo6yg",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a806ca3d9e507225f3116",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=145760",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?8eWa9W0=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a805e827ee523bfc668a7",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/laz25f4",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=660079&dishId&key=fbbd7b2c-5945-49b8-863b-f7e29ef2a037",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/4g000iHxS03Ng",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a3da158dd2a8031b7a7fcd048993037"
+    },
+    "searchTerms": [
+      "밀키샵 종화점",
+      "밀키샵종화점",
+      "밀키샵",
+      "종화점",
+      "종화동",
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ],
+    "categories": [
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ]
+  },
+  {
+    "id": "4168d1f57f8da02f",
+    "store_id": "4168d1f57f8da02f",
+    "notionPageId": "3a2da158dd2a8030abcef08aacef8edb",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a8030abcef08aacef8edb",
+    "name": "종포수산 중앙점",
+    "realBusinessName": "종포수산 중앙점",
+    "brandName": "종포수산",
+    "branchName": "중앙점",
+    "aliases": [
+      "종포수산 중앙점",
+      "종포수산중앙점"
+    ],
+    "searchAliases": [
+      "종포수산 중앙점",
+      "종포수산중앙점"
+    ],
+    "shopInShopNames": [],
+    "district": "중앙동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xwmJA8zW",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a803eaf35f4b6430ec94d",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=142677",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?5R9VBac=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80c989c8e33d08f1b8bb",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/g1clka",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=917752&dishId&key=c4d67a45-fb80-4f49-81e6-4fb0b04cd935",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/yW000fD2HXcIs",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a8030abcef08aacef8edb"
+    },
+    "searchTerms": [
+      "종포수산 중앙점",
+      "종포수산중앙점",
+      "종포수산",
+      "중앙점",
+      "중앙동",
+      "회/초밥/선어/해산물"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
+    ]
+  },
+  {
+    "id": "326a330d74e911b3",
+    "store_id": "326a330d74e911b3",
+    "notionPageId": "3a2da158dd2a80678c89f9fa0914553f",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a80678c89f9fa0914553f",
+    "name": "거북선상회 중앙점",
+    "realBusinessName": "거북선상회 중앙점",
+    "brandName": "거북선상회",
+    "branchName": "중앙점",
+    "aliases": [
+      "거북선상회 중앙점",
+      "거북선상회중앙점"
+    ],
+    "searchAliases": [
+      "거북선상회 중앙점",
+      "거북선상회중앙점"
+    ],
+    "shopInShopNames": [],
+    "district": "중앙동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xjgyA5gq",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80a8b0e6ed7650948055",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=162932",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?zNQXRZG=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80239781f8bc073ffdd4",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/gh1c3a",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=745714&dishId&key=dd38c221-47c2-4e87-96ec-5382945cdd11",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/2u000fuz9UtD0",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a80678c89f9fa0914553f"
+    },
+    "searchTerms": [
+      "거북선상회 중앙점",
+      "거북선상회중앙점",
+      "거북선상회",
+      "중앙점",
+      "중앙동",
+      "회/초밥/선어/해산물"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물"
+    ]
+  },
+  {
+    "id": "e7a98f90c3df0c2b",
+    "store_id": "e7a98f90c3df0c2b",
+    "notionPageId": "3a2da158dd2a805c8f56c93cee4701b1",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a805c8f56c93cee4701b1",
+    "name": "여수삼합당 중앙점",
+    "realBusinessName": "여수삼합당 중앙점",
+    "brandName": "여수삼합당",
+    "branchName": "중앙점",
+    "aliases": [
+      "여수삼합당 중앙점",
+      "여수삼합당중앙점"
+    ],
+    "searchAliases": [
+      "여수삼합당 중앙점",
+      "여수삼합당중앙점"
+    ],
+    "shopInShopNames": [],
+    "district": "중앙동",
+    "category": "회/초밥/선어/해산물",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/xLsRoh7L",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80349573e0b82e8d4316",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=71401",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?bUPscQ9=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a80f78393d61b5a2abeda",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/jwsedj",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=465699&dishId&key=0c2eaaa9-214d-44b4-b81d-631df37d8135",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/3e000vFAfn4Ir",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a805c8f56c93cee4701b1"
+    },
+    "searchTerms": [
+      "여수삼합당 중앙점",
+      "여수삼합당중앙점",
+      "여수삼합당",
+      "중앙점",
+      "중앙동",
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ],
+    "categories": [
+      "회/초밥/선어/해산물",
+      "고기/구이",
+      "야식/주점"
+    ]
+  },
+  {
+    "id": "be72c2b63750ea05",
+    "store_id": "be72c2b63750ea05",
+    "notionPageId": "3a2da158dd2a804abc5afe9a6cc5bc60",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a804abc5afe9a6cc5bc60",
+    "name": "여수 돌문어타코 중앙점",
+    "realBusinessName": "여수 돌문어타코 중앙점",
+    "brandName": "여수 돌문어타코",
+    "branchName": "중앙점",
+    "aliases": [
+      "여수 돌문어타코 중앙점",
+      "여수돌문어타코중앙점"
+    ],
+    "searchAliases": [
+      "여수 돌문어타코 중앙점",
+      "여수돌문어타코중앙점"
+    ],
+    "shopInShopNames": [],
+    "district": "중앙동",
+    "category": "분식/도시락",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/Fr7b3n9l",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/39cda158dd2a80eb9c3de9a8d1d2542e",
+        "enabled": true
+      },
+      {
+        "name": "먹깨비",
+        "url": "http://mukkebi.com/shop.php?data=172582",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?PJKvgtA=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a805a9b1fe6fbb2dba77c",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/7D000kbiy4zJO",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a804abc5afe9a6cc5bc60"
+    },
+    "searchTerms": [
+      "여수 돌문어타코 중앙점",
+      "여수돌문어타코중앙점",
+      "여수 돌문어타코",
+      "중앙점",
+      "중앙동",
+      "분식/도시락",
+      "회/초밥/선어/해산물"
+    ],
+    "categories": [
+      "분식/도시락",
+      "회/초밥/선어/해산물"
+    ]
+  },
+  {
+    "id": "70539594c1be1e4e",
+    "store_id": "70539594c1be1e4e",
+    "notionPageId": "3a2da158dd2a80238616dc5ae46ce824",
+    "notionUrl": "https://app.notion.com/p/3a2da158dd2a80238616dc5ae46ce824",
+    "name": "블루샥 여수이순신광장점",
+    "realBusinessName": "블루샥 여수이순신광장점",
+    "brandName": "블루샥",
+    "branchName": "여수이순신광장점",
+    "aliases": [
+      "블루샥 여수이순신광장점",
+      "블루샥여수이순신광장점"
+    ],
+    "searchAliases": [
+      "블루샥 여수이순신광장점",
+      "블루샥여수이순신광장점"
+    ],
+    "shopInShopNames": [],
+    "district": "중앙동",
+    "category": "카페/디저트/베이커리/아이스크림/빙수",
+    "address": "",
+    "phone": "",
+    "naverMap": "https://naver.me/FmfHkFKd",
+    "image": "",
+    "img": "",
+    "images": [],
+    "routes": [
+      {
+        "name": "가게바로주문",
+        "url": "https://app.notion.com/p/3a2da158dd2a8024b271cf3cbf50c88d",
+        "enabled": true
+      },
+      {
+        "name": "땡겨요",
+        "url": "https://fdofd.ddangyo.com/gateway1.html?60YgXzB=",
+        "enabled": true
+      },
+      {
+        "name": "CHAK 지역상품권",
+        "url": "https://bit.ly/chak-yeosu",
+        "enabled": true
+      },
+      {
+        "name": "전화주문",
+        "url": "https://app.notion.com/p/39bda158dd2a8059b260efe72d9c84af",
+        "enabled": true
+      },
+      {
+        "name": "요기요",
+        "url": "https://ws.yogiyo.co.kr/z2ieqy",
+        "enabled": true
+      },
+      {
+        "name": "쿠팡이츠",
+        "url": "https://web.coupangeats.com/share?storeId=650130&dishId&key=71c2b2a8-71de-4f74-b2f7-acb38df77320",
+        "enabled": true
+      },
+      {
+        "name": "배달의민족",
+        "url": "https://s.baemin.com/Io000gysHI5zh",
+        "enabled": true
+      }
+    ],
+    "latitude": null,
+    "longitude": null,
+    "coordinateStatus": "unverified",
+    "coordinateVerified": false,
+    "managed": false,
+    "sharedManaged": false,
+    "pinPosition": null,
+    "forceBottom": false,
+    "source": {
+      "type": "notion_new_store_sync",
+      "notionPageId": "3a2da158dd2a80238616dc5ae46ce824"
+    },
+    "searchTerms": [
+      "블루샥 여수이순신광장점",
+      "블루샥여수이순신광장점",
+      "블루샥",
+      "여수이순신광장점",
+      "중앙동",
+      "카페/디저트/베이커리/아이스크림/빙수"
+    ],
     "categories": [
       "카페/디저트/베이커리/아이스크림/빙수"
     ]
