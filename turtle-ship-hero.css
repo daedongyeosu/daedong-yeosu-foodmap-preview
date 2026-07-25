@@ -6,6 +6,106 @@
   display:none!important;
 }
 
+.community-intro[hidden]{
+  display:none!important;
+}
+
+/*
+ * 첫 진입 메시지는 팝업이 아닌 장식 레이어다.
+ * 화면과 버튼을 밀거나 터치를 막지 않으며, 기존 모달과 하단 메뉴 아래에 놓인다.
+ */
+.community-intro{
+  position:fixed;
+  inset:0;
+  z-index:45;
+  display:grid;
+  place-items:start center;
+  padding:clamp(150px,23vh,230px) 18px 88px;
+  pointer-events:none;
+  user-select:none;
+  overflow:hidden;
+}
+
+.community-intro-copy{
+  width:min(680px,calc(100vw - 36px));
+  color:#101820;
+  font-family:"Daedong Brush","Nanum Brush Script","Nanum Pen Script",cursive;
+  font-size:clamp(27px,6.5vw,43px);
+  font-weight:400;
+  line-height:1.12;
+  letter-spacing:-.045em;
+  text-align:center;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.98),
+    0 0 7px rgba(255,255,255,.96),
+    0 2px 14px rgba(255,255,255,.9);
+}
+
+.community-intro-stanza{
+  display:grid;
+  justify-items:center;
+  gap:2px;
+  margin:0 0 clamp(10px,1.7vh,17px);
+}
+
+.community-intro-line{
+  display:block;
+  max-width:100%;
+  opacity:0;
+  clip-path:inset(0 100% 0 0);
+  white-space:normal;
+}
+
+.community-intro-heart{
+  color:#0a7137;
+  font-size:.9em;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.98),
+    0 0 8px rgba(255,255,255,.98),
+    0 2px 14px rgba(255,255,255,.92);
+}
+
+.community-intro.is-writing{
+  animation:community-intro-fade 6s ease both;
+}
+
+.community-intro.is-writing .community-intro-line{
+  animation:community-ink-write var(--write-duration,520ms) cubic-bezier(.28,.08,.22,1) var(--write-delay,0ms) both;
+}
+
+.community-intro .intro-line-1{--write-delay:0ms;--write-duration:480ms}
+.community-intro .intro-line-2{--write-delay:430ms;--write-duration:650ms}
+.community-intro .intro-line-3{--write-delay:1150ms;--write-duration:520ms}
+.community-intro .intro-line-4{--write-delay:1620ms;--write-duration:690ms}
+.community-intro .intro-line-5{--write-delay:2380ms;--write-duration:430ms}
+.community-intro .intro-line-6{--write-delay:2760ms;--write-duration:760ms}
+.community-intro .intro-line-7{--write-delay:3600ms;--write-duration:570ms}
+.community-intro .intro-line-8{--write-delay:4120ms;--write-duration:530ms}
+
+@keyframes community-ink-write{
+  0%{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(-3px)}
+  12%{opacity:1}
+  100%{opacity:1;clip-path:inset(0 0 0 0);transform:translateX(0)}
+}
+
+@keyframes community-intro-fade{
+  0%,84%{opacity:1}
+  100%{opacity:0}
+}
+
+.brand-return-slogan{
+  position:relative;
+  z-index:2;
+  margin:-7px 12px 3px;
+  color:#0a3552;
+  font-size:12px;
+  font-weight:900;
+  line-height:1.35;
+  letter-spacing:-.02em;
+  text-align:center;
+  text-shadow:0 1px 4px rgba(255,255,255,.98);
+}
+
 /*
  * 거북선 때문에 주문 버튼이나 배너가 밀리지 않도록
  * 최초 열린 바다 보완 때의 간격으로 되돌린다.
@@ -97,6 +197,25 @@
 }
 
 @media(max-width:767px){
+  .community-intro{
+    padding-top:clamp(145px,20vh,185px);
+  }
+
+  .community-intro-copy{
+    width:calc(100vw - 26px);
+    font-size:clamp(25px,6.7vw,32px);
+  }
+
+  .community-intro-guide{
+    font-size:.8em;
+    line-height:1.2;
+  }
+
+  .brand-return-slogan{
+    margin-top:-6px;
+    font-size:11px;
+  }
+
   .turtle-ship-passage{
     height:28px;
   }
@@ -109,9 +228,26 @@
 }
 
 @media(prefers-reduced-motion:reduce){
+  .community-intro.is-writing{
+    animation:community-intro-accessible 2.6s ease both;
+  }
+
+  .community-intro.is-writing .community-intro-line{
+    animation:none!important;
+    opacity:1;
+    clip-path:none;
+    transform:none;
+  }
+
   .turtle-ship-hero-scene.is-sailing .turtle-ship-hero-voyage{
     animation:turtle-ship-hero-still 3.4s ease-out both;
   }
+}
+
+@keyframes community-intro-accessible{
+  0%{opacity:0}
+  12%,78%{opacity:1}
+  100%{opacity:0}
 }
 
 @keyframes turtle-ship-hero-still{
