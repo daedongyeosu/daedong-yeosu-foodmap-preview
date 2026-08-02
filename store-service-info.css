@@ -651,3 +651,33 @@ body.store-service-overview-open {
     margin-left: 10px;
   }
 }
+
+
+/* 주문앱별 혜택 출처를 고객이 카드와 전체 리스트에서 즉시 구분 */
+.store-service-card-payment,
+.store-service-overview-payments b {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.25;
+}
+
+.store-service-detail-benefit {
+  align-items: flex-start;
+}
+
+@media (max-width: 520px) {
+  .store-service-card-meta {
+    gap: 4px;
+  }
+
+  .store-service-card-payment {
+    min-height: 26px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .store-service-overview-payments b {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+}
