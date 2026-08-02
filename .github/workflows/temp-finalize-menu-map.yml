@@ -1,0 +1,95 @@
+name: Temporary Finalize Menu Map
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .temp-finalize-menu-map-trigger
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/dynamic-menu-map-buttons
+          fetch-depth: 0
+
+      - name: Apply direct menu-map integration
+        shell: bash
+        run: |
+          set -euo pipefail
+          protected_before="$(sha256sum data/stores.json | awk '{print $1}')"
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('store-menu-preview.js')
+          text = path.read_text(encoding='utf-8')
+          if 'const LEGACY_MENU_STORES = Object.freeze({' not in text:
+              old = '  const MENU_STORES = Object.freeze({\n'
+              if text.count(old) != 1:
+                  raise SystemExit('MENU_STORES declaration not found uniquely')
+              text = text.replace(old, '  const LEGACY_MENU_STORES = Object.freeze({\n', 1)
+          if '...(window.DAEDONG_DDANGYO_MENU_STORES || {})' not in text:
+              marker = '  });\n  const menuCache = new Map();\n'
+              replacement = '''  });
+  const MENU_STORES = Object.freeze({
+    ...(window.DAEDONG_DDANGYO_MENU_STORES || {}),
+    ...LEGACY_MENU_STORES
+  });
+  const menuCache = new Map();
+'''
+              if text.count(marker) != 1:
+                  raise SystemExit('menu block end not found uniquely')
+              text = text.replace(marker, replacement, 1)
+          path.write_text(text, encoding='utf-8')
+
+          index_path = Path('index.html')
+          index = index_path.read_text(encoding='utf-8')
+          index = index.replace('  <script src="store-menu-map-bridge.js?v=20260802-1" defer></script>\n', '')
+          index = index.replace('store-menu-preview.js?v=store-menu-14', 'store-menu-preview.js?v=store-menu-15')
+          index_path.write_text(index, encoding='utf-8')
+          PY
+
+          rm -f store-menu-map-bridge.js
+          rm -f .dynamic-menu-map-fix-trigger
+          rm -f .github/workflows/fix-dynamic-menu-map-buttons.yml
+          rm -f .finalize-dynamic-menu-map-trigger
+          rm -f .github/workflows/finalize-dynamic-menu-map.yml
+
+          node --check store-menu-preview.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const vm = require('vm');
+          const context = {window: {}};
+          vm.createContext(context);
+          vm.runInContext(fs.readFileSync('store-menu-content/ddangyo-menu-map.js', 'utf8'), context);
+          const generated = context.window.DAEDONG_DDANGYO_MENU_STORES || {};
+          if (Object.keys(generated).length !== 444) throw new Error('menu map count mismatch');
+          const target = generated['2b78b30bde243ae6'];
+          if (!target || target.itemCount !== 40) throw new Error('Barun Bossam map invalid');
+          const menu = JSON.parse(fs.readFileSync(target.path, 'utf8'));
+          if (menu.items.length !== 40) throw new Error('Barun Bossam menu invalid');
+          const preview = fs.readFileSync('store-menu-preview.js', 'utf8');
+          if (!preview.includes('window.DAEDONG_DDANGYO_MENU_STORES')) throw new Error('dynamic map not connected');
+          if (!preview.includes('...LEGACY_MENU_STORES')) throw new Error('legacy menus not preserved');
+          const index = fs.readFileSync('index.html', 'utf8');
+          if (index.includes('store-menu-map-bridge.js')) throw new Error('unsafe bridge remains');
+          if (!index.includes('store-menu-preview.js?v=store-menu-15')) throw new Error('cache version missing');
+          console.log(JSON.stringify({menuStores:444,barunBossamItems:40},null,2));
+          NODE
+          protected_after="$(sha256sum data/stores.json | awk '{print $1}')"
+          test "$protected_before" = "$protected_after"
+
+      - name: Commit fix branch
+        shell: bash
+        run: |
+          git config user.name "daedong-preview-bot"
+          git config user.email "preview-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Connect all generated menus directly to food preview"
+          git push origin HEAD:fix/dynamic-menu-map-buttons
