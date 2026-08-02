@@ -1,0 +1,99 @@
+{
+  "storeId": "ec69425551829f69",
+  "storeName": "까치식당 문수점",
+  "displayName": "까치식당 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2fb0fa68-eb09-4ce6-a61b-5e0e58d7be58.jpg",
+  "categories": [
+    "전체",
+    "메뉴 소개",
+    "반반 메뉴",
+    "사이드 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1289260-10000001",
+      "name": "아귀찜",
+      "description": "매운맛 가능",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/87ba3b6e-d458-4f30-8972-fb7e8f4495b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1289260-10000002",
+      "name": "아귀탕",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/9245a5c9-00a3-455c-8102-d65f8eb40941.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1289260-10000004",
+      "name": "반반찜",
+      "description": "소 : 아귀대창 1인+아귀 1인\n중 : 아귀대창 1인+아귀 2인\n대 : 아귀대창 2인+아귀 2인",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/8f973da2-76ed-4c83-9fcf-ae6f0b33cec5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1289260-10000005",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/dea77d47-dc40-44bb-917e-27fc64d4e216.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1289260-10000006",
+      "name": "칠성 사이다",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1289260-10000003",
+      "name": "대창찜",
+      "description": "매운맛 가능",
+      "category": "메뉴 소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1289260-10000007",
+      "name": "펩시 콜라",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1289260-10000008",
+      "name": "탐스 파인",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1289260",
+    "sourceUrls": [
+      "https://bit.ly/tk-까치식당",
+      "https://fdofd.ddangyo.com/gateway1.html?LEhME8d"
+    ],
+    "rawItemCount": 10,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

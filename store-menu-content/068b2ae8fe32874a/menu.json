@@ -1,0 +1,700 @@
+{
+  "storeId": "068b2ae8fe32874a",
+  "storeName": "1인피자 피자먹다 여수여서점",
+  "displayName": "1인피자 피자먹다 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/cd8afe10-0a22-4aa5-871d-f4fe518a8876.jpg",
+  "categories": [
+    "전체",
+    "세트 메뉴",
+    "피자(단품)",
+    "오직피자셑",
+    "[NEW] 피자&치킨 완벽한 한끼",
+    "[NEW] 치킨",
+    "[NEW] 프리미엄 골드",
+    "EATFLIX 시리즈[ 폭싹 먹었수다 ]",
+    "사이드",
+    "음료",
+    "추가메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1131475-10000141",
+      "name": "[1인] 피자&파스타 세트",
+      "description": "피자(택1) + 파스타(택1) + 캔음료(택1) + 곁들이(택1)",
+      "category": "세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/cd8afe10-0a22-4aa5-871d-f4fe518a8876.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000141"
+    },
+    {
+      "id": "ddangyo-1131475-10000140",
+      "name": "[2인] 둘이먹다",
+      "description": "피자(택2) + 사이드(택1) + 캔음료(택2) + 곁들이(택1)",
+      "category": "세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0ed128cb-dc47-4c6c-b0aa-02c2cffd85cd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000140"
+    },
+    {
+      "id": "ddangyo-1131475-10000152",
+      "name": "[국내산불고기]스위트 불고기피자",
+      "description": "피자먹다만의 특제소스로 양념한 불고기가 가득 들어간 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8bc7ed0e-6a0d-44b8-9457-5ba715c0154c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000152"
+    },
+    {
+      "id": "ddangyo-1131475-10000139",
+      "name": "[1인] 혼자먹다",
+      "description": "피자(택1) + 사이드(택1) + 캔음료(택1)",
+      "category": "세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bc7ebe62-e2a9-41b5-b295-aa032cd3fa2e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000139"
+    },
+    {
+      "id": "ddangyo-1131475-10000138",
+      "name": "[오직피자] 피자만 4판",
+      "description": "피자+피자+피자+피자(3~4인분) 단짠단짠 다양하게 골라담아 (양 L사이즈 정도 됨)",
+      "category": "오직피자셑",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a2fc71e3-6606-45de-9f34-16d369734a3b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000138"
+    },
+    {
+      "id": "ddangyo-1131475-10000124",
+      "name": "[WOW] 와우 세트",
+      "description": "피자 선택1+치킨 선택1+음료수 선택1",
+      "category": "[NEW] 피자&치킨 완벽한 한끼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000124"
+    },
+    {
+      "id": "ddangyo-1131475-10000126",
+      "name": "크리스피통다리살 1조각",
+      "description": "부드러운 통다리살에 비법 파우더를 입혀 겉은 바삭하고 속은 촉촉하게 튀겨낸 순살 치킨",
+      "category": "[NEW] 치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000126"
+    },
+    {
+      "id": "ddangyo-1131475-10000130",
+      "name": "[Gold] 골든콤비네이션피자",
+      "description": "콤비네이션과 체다치즈의 황금빛 조합",
+      "category": "[NEW] 프리미엄 골드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000130"
+    },
+    {
+      "id": "ddangyo-1131475-10000134",
+      "name": "[8가지맛] 플래터(Platter) A",
+      "description": "바질토마토+바질쉬림프베이컨 / 페페로니+고구마베이컨 / 더블치즈베이컨+스위트불고기 / 스위트고구마+달콤연유",
+      "category": "EATFLIX 시리즈[ 폭싹 먹었수다 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/abe8351c-22e9-4321-bcd8-89ad277e3274.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000134"
+    },
+    {
+      "id": "ddangyo-1131475-10000146",
+      "name": "[all치즈] 25cm마르게리따피자",
+      "description": "100% 자연산 모짜렐라 치즈와 특제 피자소스, 그리고 엑스트라버진 올리브도우",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b582ef25-6969-4a25-888c-316b71eeffdd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000146"
+    },
+    {
+      "id": "ddangyo-1131475-10000171",
+      "name": "트러플 머쉬룸 리조또(new)",
+      "description": "진한 트러플의 풍미와 버섯의 풍부한 식감이 어우러진 꾸덕한 크림 리조또",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000171"
+    },
+    {
+      "id": "ddangyo-1131475-10000187",
+      "name": "펩시 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ce8b69f8-9c87-4ef0-ae66-87bc9515792c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000187"
+    },
+    {
+      "id": "ddangyo-1131475-10000197",
+      "name": "피클",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/45d14911-03ad-4bb5-b8dc-c505cc3b108b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000197"
+    },
+    {
+      "id": "ddangyo-1131475-10000137",
+      "name": "[오직피자]피자만 3판",
+      "description": "피자+피자+피자(2~3인분) 세가지 맛 세가지 기쁨...",
+      "category": "오직피자셑",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/03d28c13-6c46-475f-b8a9-9b0b40e762d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000137"
+    },
+    {
+      "id": "ddangyo-1131475-10000125",
+      "name": "[Amazing]어메이징 피치감 세트",
+      "description": "피자 선택1+치킨 선택1+사이드메뉴 선택1+음료수 선택1",
+      "category": "[NEW] 피자&치킨 완벽한 한끼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000125"
+    },
+    {
+      "id": "ddangyo-1131475-10000127",
+      "name": "크리스피통다리살 4조각",
+      "description": "부드러운 통다리살에 비법 파우더를 입혀 겉은 바삭하고 속은 촉촉하게 튀겨낸 순살 치킨",
+      "category": "[NEW] 치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000127"
+    },
+    {
+      "id": "ddangyo-1131475-10000131",
+      "name": "[Gold] 골든페페로니피자",
+      "description": "페페로니와 체다치즈의 황금빛 조합",
+      "category": "[NEW] 프리미엄 골드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000131"
+    },
+    {
+      "id": "ddangyo-1131475-10000135",
+      "name": "[8가지맛] 플래터(Platter) B",
+      "description": "바질토마토+바질쉬림프베이컨 / 더블치즈베이컨+스위트불고기 / 스위트고구마+달콤연유 / (매운맛)핫스파이시불고기+(매운맛)치즈불닭",
+      "category": "EATFLIX 시리즈[ 폭싹 먹었수다 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/9425d160-3abe-4ba4-8dbb-ead87f7ce074.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000135"
+    },
+    {
+      "id": "ddangyo-1131475-10000147",
+      "name": "[기분좋은]달콤연유피자",
+      "description": "우울한 하루의 마무리는 달콤한 연유피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/21315bc7-55bf-4b8a-9850-12f82580e2e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000147"
+    },
+    {
+      "id": "ddangyo-1131475-10000172",
+      "name": "감자튀김",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f5c69263-3e05-4c5b-9b32-5d79d204cd20.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000172"
+    },
+    {
+      "id": "ddangyo-1131475-10000188",
+      "name": "펩시 제로 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/1604b151-6e42-4b25-bf44-332d8d6bcef5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000188"
+    },
+    {
+      "id": "ddangyo-1131475-10000198",
+      "name": "핫소스",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f97e42d0-ce8e-408e-9def-146a2bffd696.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000198"
+    },
+    {
+      "id": "ddangyo-1131475-10000128",
+      "name": "스노윙 통다리살 1조각",
+      "description": "바삭하고 부드러운 통다리살 치킨에 달콤 고소한 비법 스노윙 파우더를 솔솔 뿌린 순살 치킨",
+      "category": "[NEW] 치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000128"
+    },
+    {
+      "id": "ddangyo-1131475-10000132",
+      "name": "[Gold] 골든스위트불고기피자",
+      "description": "불고기와 체다치즈의 황금빛 조합",
+      "category": "[NEW] 프리미엄 골드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000132"
+    },
+    {
+      "id": "ddangyo-1131475-10000136",
+      "name": "[4가지맛+사이드] 플래터(Platter) C",
+      "description": "더블치즈베이컨+스위트불고기 / 스위트고구마+달콤연유 / 치즈미트오븐파스타+윙스틱2개+치킨텐더2개",
+      "category": "EATFLIX 시리즈[ 폭싹 먹었수다 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0cc1d4e1-ab4e-4c18-8b8a-2a32da476d50.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000136"
+    },
+    {
+      "id": "ddangyo-1131475-10000148",
+      "name": "[마법가루작렬]톡톡옥수수피자",
+      "description": "비밀레시피로 만든 시즈닝과 달콤한 옥수수콘이 만든 중독성있는 맛",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8a3ae8a0-5034-41f3-b760-7cb02bf1d647.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000148"
+    },
+    {
+      "id": "ddangyo-1131475-10000173",
+      "name": "아란치니",
+      "description": "맛있는 토마토소스와 모짜렐라치즈가 가득 들어있는 고소하고 바삭한 누룽지 식감에 디저트",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/16142283-5086-4355-82a5-f20dc7ac9a51.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000173"
+    },
+    {
+      "id": "ddangyo-1131475-10000189",
+      "name": "칠성사이다 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7f6c96ad-d859-46c0-82be-a9a1db667841.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000189"
+    },
+    {
+      "id": "ddangyo-1131475-10000199",
+      "name": "갈릭디핑소스",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b841bf89-6030-428a-89f9-d679509492f1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000199"
+    },
+    {
+      "id": "ddangyo-1131475-10000143",
+      "name": "트러플머쉬룸+웨스틴 피자",
+      "description": "신메뉴 피자 2판 (트러플머쉬룸 + 프리미엄웨스틴)",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000143"
+    },
+    {
+      "id": "ddangyo-1131475-10000129",
+      "name": "스노윙 통다리살 4조각",
+      "description": "바삭하고 부드러운 통다리살 치킨에 달콤 고소한 비법 스노윙 파우더를 솔솔 뿌린 순살 치킨",
+      "category": "[NEW] 치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000129"
+    },
+    {
+      "id": "ddangyo-1131475-10000133",
+      "name": "[Gold] 골든바삭포테이토베이컨피자",
+      "description": "포테이토베이컨과 체다치즈의 황금빛 조합",
+      "category": "[NEW] 프리미엄 골드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000133"
+    },
+    {
+      "id": "ddangyo-1131475-10000149",
+      "name": "[달콤부드러운] 스위트고구마피자",
+      "description": "피자먹다만의 달콤하고 특별한 고구마 레시피",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/89890852-cf04-40fe-9d24-2da36482acc2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000149"
+    },
+    {
+      "id": "ddangyo-1131475-10000174",
+      "name": "치킨텐더",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/47cfdf87-f958-4a49-b059-718c099df160.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000174"
+    },
+    {
+      "id": "ddangyo-1131475-10000190",
+      "name": "칠성사이다 제로 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/574a143c-4d0e-4a1e-a5f1-d04140abb121.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000190"
+    },
+    {
+      "id": "ddangyo-1131475-10000200",
+      "name": "양념치킨소스",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000200"
+    },
+    {
+      "id": "ddangyo-1131475-10000192",
+      "name": "탐스 제로 355ml(파인애플)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000192"
+    },
+    {
+      "id": "ddangyo-1131475-10000142",
+      "name": "수프 & 피자+감자튀김",
+      "description": "양송이 수프+신메뉴 피자 택1 + 감자튀김",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000142"
+    },
+    {
+      "id": "ddangyo-1131475-10000150",
+      "name": "[basic] 콤비네이션피자",
+      "description": "특제 피자소스와 다양한 프리미엄 토핑이 어우러진 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d0bfebee-d290-4406-a607-2d3c7f120829.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000150"
+    },
+    {
+      "id": "ddangyo-1131475-10000175",
+      "name": "윙스틱",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a475fd12-f79e-42f5-a786-2cac21f7b89d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000175"
+    },
+    {
+      "id": "ddangyo-1131475-10000201",
+      "name": "파마산",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/907e2fac-d553-4b78-9a39-9c591de9554d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000201"
+    },
+    {
+      "id": "ddangyo-1131475-10000191",
+      "name": "탐스 제로 355ml(사과)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/4ab6e800-e70d-4545-ad1b-6a808ab4d44c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000191"
+    },
+    {
+      "id": "ddangyo-1131475-10000151",
+      "name": "[미국식소시지] 페페로니피자",
+      "description": "프리미엄 페페로니가 피자위에 듬뿍",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5e15b2e1-5563-4604-947e-d086db4e1982.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000151"
+    },
+    {
+      "id": "ddangyo-1131475-10000176",
+      "name": "새우링",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bec5f291-a424-4c98-aad2-25c68b663254.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000176"
+    },
+    {
+      "id": "ddangyo-1131475-10000177",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f1a41533-bac1-4cb3-b17a-70a3570a8fca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000177"
+    },
+    {
+      "id": "ddangyo-1131475-10000193",
+      "name": "탐스 쥬시 355ml(오렌지)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/2d36c7fe-5170-4833-a8c8-9897a5339bd7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000193"
+    },
+    {
+      "id": "ddangyo-1131475-10000153",
+      "name": "[새콤달콤파인애플] 하와이언피자",
+      "description": "특제소스와 달콤한 파인애플의 조화",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/6318916a-aee6-4934-924b-dea8013780ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000153"
+    },
+    {
+      "id": "ddangyo-1131475-10000194",
+      "name": "탐스 쥬시 355ml(포도)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000194"
+    },
+    {
+      "id": "ddangyo-1131475-10000154",
+      "name": "[달콤고구마무스&베이컨] 고베피자",
+      "description": "달콤한 고구마와 베이컨 극강 조합",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/51daebc5-95b1-49e3-98ea-e45ef335afb0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000154"
+    },
+    {
+      "id": "ddangyo-1131475-10000179",
+      "name": "치즈미트오븐파스타",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b215b752-3b5c-44d2-99a8-4c4d82c3fc30.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000179"
+    },
+    {
+      "id": "ddangyo-1131475-10000195",
+      "name": "오렌지주스 400ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5b52ff3d-77bf-46f3-8120-a266006a3121.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000195"
+    },
+    {
+      "id": "ddangyo-1131475-10000155",
+      "name": "[해쉬브라운] 바삭포테이토베이컨피자",
+      "description": "바삭한 감자와 베이컨은 극강 조합",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/459df33c-4e94-4b01-b327-17fff5f26ff6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000155"
+    },
+    {
+      "id": "ddangyo-1131475-10000180",
+      "name": "크림오븐파스타",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/dca0fe81-167b-4da2-b0a2-0951a0b53d4e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000180"
+    },
+    {
+      "id": "ddangyo-1131475-10000196",
+      "name": "생수 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3751e414-4646-4d4c-8530-cba39bff96ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000196"
+    },
+    {
+      "id": "ddangyo-1131475-10000156",
+      "name": "[fresh]바질토마토피자",
+      "description": "바질페스토와 방울토마토, 하이멜트 치즈가 들어가 신선한 향과 맛을 느낄 수 있는 프리미엄 이탈리안 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/1675b34b-d21c-4cdb-9835-2710681efcd5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000156"
+    },
+    {
+      "id": "ddangyo-1131475-10000181",
+      "name": "치즈로제오븐파스타",
+      "description": "미트토핑이 곁들여진 로제소스와 치즈를 가득 올려 오븐에 구운 1인 파스타",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3cd90a81-29ae-4746-8e84-535800e6d60e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000181"
+    },
+    {
+      "id": "ddangyo-1131475-10000157",
+      "name": "[치즈폭탄] 트리플치즈폭탄피자",
+      "description": "모짜렐라, 고다치즈, 에멘탈, 크림치즈가 폭포수처럼 흘러넘친 치즈 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/afcf672f-f3c9-4c87-8b13-172d22f4ad56.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000157"
+    },
+    {
+      "id": "ddangyo-1131475-10000182",
+      "name": "톡톡콘치즈",
+      "description": "달콤한 마요네즈 소스와 톡톡튀는 옥수수",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5c735b94-9b35-4346-8f1b-771812bf2e64.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000182"
+    },
+    {
+      "id": "ddangyo-1131475-10000158",
+      "name": "[꾸덕]맥앤치즈피자",
+      "description": "꾸덕함의 왕. 맥 앤 치즈가 피자와 만났다, 바삭하고 두툼한 도우 위에 맥앤치즈가 듬뿍올라간 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/29138b55-2f2c-4899-82b8-1b31a4f844f6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000158"
+    },
+    {
+      "id": "ddangyo-1131475-10000183",
+      "name": "베이컨콘치즈",
+      "description": "달콤한 마요네즈 소스와 육즙가득 훈연 베이컨",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bd2cfedf-6a66-4e3d-8505-a98c07514fd8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000183"
+    },
+    {
+      "id": "ddangyo-1131475-10000159",
+      "name": "[풍미작렬] 더블치즈베이컨피자",
+      "description": "부드러운 식감과 풍부한 향이 가득한 에멘탈치즈와 모짜렐라치즈, 육즙가득 훈연의 향미가 돋보이는 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/10d15e98-2fcb-4bcf-a288-f8f85c5bbf75.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000159"
+    },
+    {
+      "id": "ddangyo-1131475-10000184",
+      "name": "고구마콘치즈",
+      "description": "달콤한 마요네즈 소스와 톡톡튀는 옥수수, 부드럽고 달콤한 고구마 무스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0ee2de77-d953-4181-a562-ddce3290594f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000184"
+    },
+    {
+      "id": "ddangyo-1131475-10000160",
+      "name": "[극강의매운맛] 치즈불닭피자",
+      "description": "매운 바베큐치킨과 특제소스가 만나 피자먹다 최강피자 (많이매워요)",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/aa3aaa78-3e93-4f77-aff8-6a910b3bbb8d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000160"
+    },
+    {
+      "id": "ddangyo-1131475-10000185",
+      "name": "맥앤치즈(사이드)",
+      "description": "꾸덕함과 고소함의 끝판왕. 한번 맛 보면 계속 먹게되는 치즈러버들의 취향 저격 메뉴",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/653e88de-4b7f-4e25-9992-6c34163b6c40.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000185"
+    },
+    {
+      "id": "ddangyo-1131475-10000161",
+      "name": "[맵단] 핫스파이시불고기피자",
+      "description": "맛있게 매운 소스위에 달콤짭짤한 불고기 토핑과 아삭한 식감의 야채토핑들이 가득한 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/892983dd-badf-468d-8a5c-ccd5d8436043.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000161"
+    },
+    {
+      "id": "ddangyo-1131475-10000186",
+      "name": "[사이드 듬뿍] 골든콤보박스",
+      "description": "감자튀김 + 치즈볼2개 + 새우링2개 + 윙스틱2개 + 치킨텐더2개",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ca8f17b5-564d-40a8-b115-6de48df369e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000186"
+    },
+    {
+      "id": "ddangyo-1131475-10000202",
+      "name": "양송이 스프",
+      "description": "크리미하고 부드러운 식감과 고ㅗ한 맛, 피자와 함께라면 더욱더 풍부한 맛을 살리는 수프",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000202"
+    },
+    {
+      "id": "ddangyo-1131475-10000162",
+      "name": "[바질페스토]바질쉬림프베이컨피자",
+      "description": "신선하고 향기로운 바질페스토와 쫄깃한 새우, 베이컨칩이 들어가 입안의 식감을 가득 채워주는 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c1216607-ff31-430b-bf0c-530c194dca7c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000162"
+    },
+    {
+      "id": "ddangyo-1131475-10000163",
+      "name": "[탱글뽀득] 롱소시지 피자",
+      "description": "프리미엄 소시지와 비밀 피자 레시피의 만남",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/106c0fd3-882a-4cc0-9173-5d04fa7c4746.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000163"
+    },
+    {
+      "id": "ddangyo-1131475-10000164",
+      "name": "[살사소스&새우] 통통새우피자",
+      "description": "통통한 새우와 피자먹다만의 비밀 소스로 구워낸 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d94a1d05-2ef3-4d4d-9239-f22fea29ca9e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000164"
+    },
+    {
+      "id": "ddangyo-1131475-10000165",
+      "name": "[직화블랙앵거스] 비프스테이크피자",
+      "description": "직화로 구워낸 블랙앵거스 스테이크와 특제 바비큐 소스",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/54fe8724-64a9-4d08-acc5-b6d8c1a2dd78.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000165"
+    },
+    {
+      "id": "ddangyo-1131475-10000166",
+      "name": "[WHITE]화이트쉬림프포테이토피자",
+      "description": "눈처럼 부드러운 크림소스위에 탱글한 새우와 담백하고 바삭한 감자, 짭쪼름한 베이컨이 어우러진 프리미엄 피자",
+      "category": "피자(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8d0f9d77-63bc-4fda-b8dc-4e5f1531b22f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000166"
+    },
+    {
+      "id": "ddangyo-1131475-10000167",
+      "name": "[버섯에 퐁당] 트러플머쉬룸피자",
+      "description": "새송이, 양송이, 포토벨로, 만가닥 4가지 버섯이 가득 들어간 피자위에 고급스러운 트러플 오일로 마무리한 프리미엄 피자",
+      "category": "피자(단품)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000167"
+    },
+    {
+      "id": "ddangyo-1131475-10000168",
+      "name": "[치즈에 퐁당] 프리미엄웨스틴피자",
+      "description": "에멘탈,고다,모짜렐라 치즈와 베이컨, 달달한 웨스틴 소스로 부드럽고 풍미가득한 피자",
+      "category": "피자(단품)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000168"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1131475",
+    "sourceUrls": [
+      "https://bit.ly/tk-1인피자피자먹다여수여서점",
+      "https://fdofd.ddangyo.com/gateway1.html?k6uvov0"
+    ],
+    "rawItemCount": 79,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

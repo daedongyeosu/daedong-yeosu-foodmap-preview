@@ -1,0 +1,520 @@
+{
+  "storeId": "4e5bc543b1be9f22",
+  "storeName": "역전할머니맥주 봉산점",
+  "displayName": "역전할머니맥주 봉산점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/fd323dfc-cbd6-4f8d-93e7-c24190d161db.jpg",
+  "categories": [
+    "전체",
+    "2023신메뉴",
+    "2022신메뉴",
+    "튀김류",
+    "2021신메뉴",
+    "마른안주",
+    "세트",
+    "사이드 메뉴",
+    "음료",
+    "주류메뉴",
+    "안주류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1235257-10000001",
+      "name": "고구마프라이즈",
+      "description": "달콤한  고구마프라이즈를 샤워딥 소스에~",
+      "category": "2023신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/eb66f470-fe12-4caa-9071-de3c695f44d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1235257-10000003",
+      "name": "통돈까스 김치우동",
+      "description": "",
+      "category": "2022신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/b6f34487-0f95-4b05-8194-e6e952f02aff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1235257-10000010",
+      "name": "순살 치킨",
+      "description": "치킨.. 치킨은 따로 설명할 단어가 없습니다. 사랑입니다.",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3eb7f27e-dabc-48e8-9a4d-c38f45f89461.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1235257-10000011",
+      "name": "양념 순살 치킨",
+      "description": "바삭한 치킨에 달콤매콤한 양념을 입혔어요",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7e730120-84b7-4558-8b66-58df38ea877d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1235257-10000002",
+      "name": "아이스오색황도",
+      "description": "",
+      "category": "2022신메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1235257-10000004",
+      "name": "할매네술국",
+      "description": "",
+      "category": "2021신메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1235257-10000007",
+      "name": "갈릭빠다포테이토",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/2615e242-afed-488c-8dcd-cced26950f31.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1235257-10000031",
+      "name": "오리지널오징어입",
+      "description": "1982년 누구도 먹지 않았던 오징어입! 그 오징어입을 주워다 팔게 된 안주가 이제는 역전할머니맥주의 인기 메뉴로 탄생하게 됩니다. 지금은 연예인이 즐겨먹는 간식으로 유명해졌지만 역전할머니맥주에서는 40년동안 사랑받은 안주입니다.",
+      "category": "마른안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1235257-10000040",
+      "name": "짜파구리 범벅세트",
+      "description": "",
+      "category": "세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1235257-10000042",
+      "name": "김",
+      "description": "10개",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1235257-10000047",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1235257-90000001",
+      "name": "생맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1235257-10000005",
+      "name": "버터구이오징어입",
+      "description": "",
+      "category": "2021신메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1235257-10000008",
+      "name": "30cm 롱 치즈돈까스",
+      "description": "30cm 롱~~한 사이즈의 돈까스에 치즈가 듬뿍!!",
+      "category": "튀김류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1235257-10000018",
+      "name": "살얼음파인애플",
+      "description": "샤베트같은 느낌의 맛!! 한병에 한숟가락 넣어먹어도 꾸르맛탱!! 강추입니다!!",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ec541631-cfb2-44a7-af1b-7f4f6650651f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1235257-10000032",
+      "name": "먹태",
+      "description": "",
+      "category": "마른안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1235257-10000041",
+      "name": "치즈라볶이 범벅세트",
+      "description": "",
+      "category": "세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1235257-10000043",
+      "name": "치즈",
+      "description": "1장",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1235257-10000048",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1235257-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1235257-10000006",
+      "name": "할매멘보샤",
+      "description": "",
+      "category": "2021신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/5915366b-c845-4b26-90a1-4ccab73fd920.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1235257-10000009",
+      "name": "양념 감자튀김",
+      "description": "바삭한 감자와 노란 치즈가 듬뿍!",
+      "category": "튀김류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1235257-10000019",
+      "name": "짜파구리",
+      "description": "언론에서 극찬한 매콤 달콤의 원조~",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1235257-10000044",
+      "name": "샐러드",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1235257-10000049",
+      "name": "환타파인",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1235257-90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1235257-10000020",
+      "name": "모듬 소세지",
+      "description": "#술안주#맥주안주#소세지들아 할맥으로 다 모여라!",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1235257-10000034",
+      "name": "튀김 쥐포",
+      "description": "",
+      "category": "마른안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1235257-10000045",
+      "name": "땅콩",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1235257-90000004",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1235257-10000021",
+      "name": "수제 소세지",
+      "description": "모듬소세지가 부담스럽다면 수제소세지로 단 둘이 오붓하게~",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1235257-10000035",
+      "name": "아귀포",
+      "description": "부드럽고 담백한 맛을 자랑하는 아귀포, 건어물계의 귀족",
+      "category": "마른안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1235257-10000046",
+      "name": "먹태소스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1235257-90000005",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1235257-10000036",
+      "name": "반건조 오징어",
+      "description": "내 여자의 턱선을 보호하라! 부드러운 육질을 느껴보세요",
+      "category": "마른안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1235257-90000006",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1235257-10000056",
+      "name": "갈릭소스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1235257-10000013",
+      "name": "마늘간장순살치킨",
+      "description": "",
+      "category": "튀김류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1235257-10000023",
+      "name": "치즈 라볶이",
+      "description": "국물떡볶이에 라면과 치즈가! 한끼 식사로도 충분해요",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1235257-10000037",
+      "name": "버터구이 오징어",
+      "description": "",
+      "category": "마른안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1235257-10000057",
+      "name": "양념소스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1235257-10000024",
+      "name": "어묵탕",
+      "description": "뜨끈한 국물에 오동통한 어묵이 푹 빠졌어요",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1235257-10000038",
+      "name": "참 쥐포",
+      "description": "쥐포가 이렇게 맛있어? 쫀득쫀득해요",
+      "category": "마른안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1235257-10000058",
+      "name": "마늘간장소스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1235257-10000015",
+      "name": "꼬꼬껍질말이",
+      "description": "",
+      "category": "튀김류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1235257-10000039",
+      "name": "노가리",
+      "description": "",
+      "category": "마른안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1235257-10000059",
+      "name": "칠리소스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1235257-10000060",
+      "name": "샤워딥소스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1235257-10000029",
+      "name": "짬뽕탕",
+      "description": "칼칼하고 얼큰한 국물 맛이 일품인 불짬뽕탕",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1235257-10000030",
+      "name": "얼큰수제비",
+      "description": "",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1235257-10000017",
+      "name": "할매네 바지락탕",
+      "description": "",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/ed5520cb-b252-45e2-bc13-6c2892d0bedb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1235257-10000022",
+      "name": "염통꼬치",
+      "description": "이거 안먹고 집에서 갑자기 염통꼬치 생각나면 큰일납니다!",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/c73de48f-227c-4d4f-891d-511d0bac651b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1235257-10000025",
+      "name": "고르곤졸라피자",
+      "description": "",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1235257-10000028",
+      "name": "숯불닭꼬지",
+      "description": "",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1235257",
+    "sourceUrls": [
+      "https://bit.ly/4pWtb5V",
+      "https://fdofd.ddangyo.com/gateway1.html?2OqmxHt"
+    ],
+    "rawItemCount": 58,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

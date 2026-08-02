@@ -1,0 +1,2111 @@
+{
+  "storeId": "30d2edbcabcca6ec",
+  "storeName": "뚜레쥬르 여수여서점",
+  "displayName": "뚜레쥬르 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/359b7f42-1140-4909-a15d-0067b872eeae.jpg",
+  "categories": [
+    "전체",
+    "신제품",
+    "샌드위치/샐러드",
+    "커피/음료",
+    "빕스 RMR",
+    "설렘한조각",
+    "롤케이크/카스텔라/쿠키세트 ",
+    "초콜릿/캔디",
+    "식사빵(빵&잼)",
+    "HMR(가정식/간편식)",
+    "크림빵(연유/초코/생크림)",
+    "파이/패스트리",
+    "간식빵(단팥/도넛/기타)",
+    "빙수",
+    "SLOW TLJ",
+    "케이크",
+    "조리빵 (고로케/소시지)",
+    "디저트"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1125745-30003044",
+      "name": "올디스 타코 고로케",
+      "description": "타코 스타일의 고기 내용물에 산뜻한 랜치 소스를 더하고, 겉면에 바삭한 나초칩 토핑으로 맛과 식감을 살린 고로케",
+      "category": "신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/4b292df4-d2b4-4e16-96f0-9a3f5c2fe80b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003044"
+    },
+    {
+      "id": "ddangyo-1125745-30000043",
+      "name": "BELT샌드위치",
+      "description": "부드러운 우유식빵에 베이컨,에그,양상추,토마토가 들어간 후레쉬 샌드위치",
+      "category": "샌드위치/샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/f8c1c93f-2d3f-4461-afff-82458ff907b1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1125745-30000250",
+      "name": "그랑드카페 아이스아메리카노",
+      "description": "뚜레쥬르만의 스페셜 고급원두를 적절한 비율로 블렌드 하여 커피 본연의 맛과 향을 살린 시원한 아메리카노 음료\n총 카페인 함량 : R사이즈 166mg/ L사이즈 249mg , 고카페인여부: O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/36c4854d-8b47-408a-bff5-8ee4e1d29d1e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000250"
+    },
+    {
+      "id": "ddangyo-1125745-30002808",
+      "name": "나시고랭 라이스",
+      "description": "뚜레쥬르에서 만나는 빕스 대표 볶음밥 : 탱글한 새우와 부드러운 스크램블 에그에 달콤하고 짭조름한 소스를 볶아 동남아의 풍미를 그대로 즐기는 라이스\n(냉동제품으로 조리 후 취식가능한 제품입니다.)",
+      "category": "빕스 RMR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/45536813-5611-4483-8ba9-32325561107f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002808"
+    },
+    {
+      "id": "ddangyo-1125745-30002980",
+      "name": "뚜초케(두바이스타일초코케이크)",
+      "description": "톡!하고 깨먹고, 바삭!하게 즐기고, 가득! 한입에 떠먹는 뚜레쥬르 두바이스타일 미니 초코 케이크(1개입)",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a76da8cb-0e67-4e98-9acb-69e3c49a98a6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002980"
+    },
+    {
+      "id": "ddangyo-1125745-30000660",
+      "name": "우리쌀 롤케이크",
+      "description": "국내산 쌀을 넣어 만든 시트에 고소한 콩고물 크림을 더해 부드러우면서 달콤한 맛의 여운이 남는 롤케이크",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/98013a5a-3257-4bd8-84d9-cd67307e5347.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000660"
+    },
+    {
+      "id": "ddangyo-1125745-30002581",
+      "name": "티라미수 아몬드 초콜릿(밀크)",
+      "description": "고소한 아몬드를 진한 치즈 풍미의 밀크 초콜릿으로 코팅한 티라미수 아몬드 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/47457c77-e5fb-40c6-9640-91bdc43df8a0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002581"
+    },
+    {
+      "id": "ddangyo-1125745-30000086",
+      "name": "데일리우유식빵",
+      "description": "더 부드럽고 더 촉촉해진 신선한 우유맛 가득한 뚜레쥬르 프리미엄 우유식빵 유통기한은 최적의 품질 유지기한이며, 판매가 허용되는 기한입니다. 취식 가능기한은 보관방법에 따라 달라질 수 있습니다.",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e3f75ebb-454f-40f5-8b27-14982abf6635.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000086"
+    },
+    {
+      "id": "ddangyo-1125745-30002761",
+      "name": "보양삼계죽",
+      "description": "향긋한 인삼, 잘 찢어낸 닭가슴살을 진한 닭육수에 정성으로 끓여낸 보양 삼계죽",
+      "category": "HMR(가정식/간편식)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002761"
+    },
+    {
+      "id": "ddangyo-1125745-30002354",
+      "name": "카스테라우유크림볼",
+      "description": "우리 쌀이 들어가 더 폭신하고 촉촉한 빵 속에 단짠 우유크림을 더해 한 알씩 나눠먹는 크림빵",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/09172031-a67f-4d8d-a7ed-b1cd46299813.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002354"
+    },
+    {
+      "id": "ddangyo-1125745-30002464",
+      "name": "한 장씩 뜯어먹는 32겹 브레드",
+      "description": "프랑스산 버터가 겹겹이 녹아 퍼지는 풍미! 티슈처럼 한 장, 한 장 뜯어지는 재미를 더한 달콤한 패스트리",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/3cbda37d-b0e6-4360-8286-38433843e795.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002464"
+    },
+    {
+      "id": "ddangyo-1125745-30002313",
+      "name": "아샷추 라지 (ICED)",
+      "description": "달콤한 복숭아 아이스티에 진한 에스프레소의 바디감이 더해진 더운 여름 당 충전 음료 \n총 카페인 함량 182mg, 고카페인여부 O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/14aadfec-cd9e-455a-95f5-cdd36781bcb2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002313"
+    },
+    {
+      "id": "ddangyo-1125745-30002762",
+      "name": "통단팥죽",
+      "description": "통 단팥을 그대로 끓여내 자연 단맛과 식감을 담아낸 통 단팥죽",
+      "category": "HMR(가정식/간편식)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002762"
+    },
+    {
+      "id": "ddangyo-1125745-30000412",
+      "name": "클래식롤케이크",
+      "description": "부드러운 시트에 버터 풍미가 가득한 크림과 달콤한 건포드를 더해 식감을 살린 촉촉한 롤케이크",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/787153b0-cd4e-4ea7-88b0-5dcb6d11fc88.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000412"
+    },
+    {
+      "id": "ddangyo-1125745-30002582",
+      "name": "티라미수 아몬드 초콜릿(화이트)",
+      "description": "고소한 아몬드를 진한 치즈 풍미의 화이트 초콜릿으로 코팅한 티라미수 아몬드 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/708068ab-8664-4f03-9ea5-283d4b1ece4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002582"
+    },
+    {
+      "id": "ddangyo-1125745-30003045",
+      "name": "행복한 에스끼떼 패스트리",
+      "description": "톡톡 터지는 옥수수 알갱이의 달콤 고소함과 바삭한 나초칩, 매콤짭잘한 맛이 어우러져 자꾸만 생각나는 맛의 패스트리",
+      "category": "신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/4b4e180b-c9e9-4521-85f6-b41c1a07fc83.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003045"
+    },
+    {
+      "id": "ddangyo-1125745-30000741",
+      "name": "클래식 딸기잼 맘모스",
+      "description": "소보로를 토핑한 부드러운 빵 사이에 버터크림과 딸기잼을 샌드한 대형제품",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/4b267a1e-5c75-4cb8-9b8e-2b29dd0de11f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000741"
+    },
+    {
+      "id": "ddangyo-1125745-30002809",
+      "name": "감바스 라이스",
+      "description": "뚜레쥬르에서 만나는 빕스 대표 볶음밥 : 탱글한 새우 , 갖가지 채소를 빕스 특제 알리올리오 소스와 함께 볶아 지중해의 풍미를 그대로 즐기는 라이스 \n(냉동제품으로 조리 후 취식가능한 제품입니다.)",
+      "category": "빕스 RMR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/8ee7fb44-dc2f-49ca-8bcf-cc2dde467f38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002809"
+    },
+    {
+      "id": "ddangyo-1125745-30000190",
+      "name": "소금버터롤",
+      "description": "프랑스산 발표 버터의 고소함과 소금의 건강한 찐맛의 조화에 술술 들어가는 식사빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/b86f050c-28c8-4f7b-98e6-736ae9bbeeac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000190"
+    },
+    {
+      "id": "ddangyo-1125745-30002359",
+      "name": "2배 더 진한 우유 식빵",
+      "description": "2배 더 진해진 우유 함량과 우유 탕종으로 보들보들한 빵 결 속에 진한 우유의 고소한 풍미를 가득 담은 우유 식빵",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/0ea6940d-d255-49de-8844-9d30c35c2ab7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002359"
+    },
+    {
+      "id": "ddangyo-1125745-30000413",
+      "name": "클래식딸기잼롤케이크",
+      "description": "부드러운 시트에 상큼한 딸기잼으로 달콤함을 더한 촉촉한 롤케이크",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/3d156f39-e561-45da-9f5d-c3fba93451ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000413"
+    },
+    {
+      "id": "ddangyo-1125745-30003051",
+      "name": "명란마요 소금버터롤",
+      "description": "버터의 고소함과 소금의 짭짤함이 어우러진 소금버터롤에 명란마요를 더해 감칠맛을 더한 제품",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/6b6c4979-7f81-4bc9-82fb-17fc59ed9713.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003051"
+    },
+    {
+      "id": "ddangyo-1125745-30003029",
+      "name": "겹겹이 에그타르트",
+      "description": "한 겹 한 겹 바삭한 패스트리에 달콤한 커스터드 크림을 가득 채운 에그타르트",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/dcc8aa97-af16-417a-9f69-ee821d1cfc98.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003029"
+    },
+    {
+      "id": "ddangyo-1125745-30002947",
+      "name": "치콜라 헤이즐넛 하트 초콜릿(레드)",
+      "description": "사랑하는 이에게 딱! 좋은 하트하트한 헤이즐넛 초콜릿 선물 세트",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2fd0aaed-c3ba-4f27-84bb-43f4285ac9f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002947"
+    },
+    {
+      "id": "ddangyo-1125745-30002696",
+      "name": "통단팥 가득 인절미 빙수(우유)",
+      "description": "우유 얼음 위에 고소한 콩가루와 쫀득한 인절미 떡, 달콤한 팥 토핑을 함께 즐기는 기본 빙수 (더알찬 통단팥)",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/21671476-68f8-46a0-9f7a-1826920a07e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002696"
+    },
+    {
+      "id": "ddangyo-1125745-30002688",
+      "name": "베이컨감자스프",
+      "description": "고소한 감자와 짭짜름한 베이컨을 가득 넣어 끓여낸 깊은 풍미의 크림 스프",
+      "category": "HMR(가정식/간편식)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b63e9af9-735b-4c5a-bf92-185cbe3f8040.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002688"
+    },
+    {
+      "id": "ddangyo-1125745-30002689",
+      "name": "양송이크림스프",
+      "description": "향긋한 양송이를 듬뿍 넣어 끓어낸 깊은 풍미의 크림 스프",
+      "category": "HMR(가정식/간편식)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/89705c9e-8e79-4e15-b583-2da9da8c6af9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002689"
+    },
+    {
+      "id": "ddangyo-1125745-30002577",
+      "name": "호두 연유 바게트",
+      "description": "바삭한 식감의 호두 바게트에 연유크림을 더해 달콤하게 즐기는 간식형 바게트",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/d93e5dd8-720a-4bad-97ff-d518c80e42e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002577"
+    },
+    {
+      "id": "ddangyo-1125745-30002257",
+      "name": "고단백하루견과곡물브레드",
+      "description": "고소한 빵에 견과류를 듬뿍 넣어 고소하고 \n담백한 맛을 느낄 수 있는 식사빵으로 \n그냥 먹기에도 좋고, 샌드위치 빵으로도 활용 가능한 고단백 건강빵",
+      "category": "SLOW TLJ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/5d028721-e5b0-4fa6-8ebe-526fe4ced9a9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002257"
+    },
+    {
+      "id": "ddangyo-1125745-30002948",
+      "name": "치콜라 헤이즐넛 하트 초콜릿(화이트)",
+      "description": "사랑하는 이에게 딱! 좋은 하트하트한 화이트 초콜릿 선물 세트",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/207b2b76-dd5e-4c65-a7a2-a9463cc08a3a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002948"
+    },
+    {
+      "id": "ddangyo-1125745-30003049",
+      "name": "쉬림프 스프링 누들 샐러드",
+      "description": "허브시즈닝한 새우, 게맛살과 아삭한 야채에 땅콩 드레싱으로 고소한 맛을 더한 시즈널 누들 샐러드",
+      "category": "샌드위치/샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5980358e-c6a8-4d85-bfb7-cc63a3308366.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003049"
+    },
+    {
+      "id": "ddangyo-1125745-30000411",
+      "name": "블루베리 잼&크림 롤케이크",
+      "description": "촉촉한 블루베리 시트에 달콤한 요거트 크림과 블루베리 잼을 더해 산뜻하게 즐기는 롤케이크",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/9f2427a2-aec3-45ab-91f0-f6d2c3a2af86.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000411"
+    },
+    {
+      "id": "ddangyo-1125745-30000713",
+      "name": "그대로 구워먹는 꿀 토스트 식빵",
+      "description": "꿀분말과 펄슈가를 넣어 은은한 단맛과 고소한 버터 풍미로 토스트 하였을 때 가장 맛있는 식빵",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8cbffda3-8b76-4bf7-801f-212dd7bf1b83.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000713"
+    },
+    {
+      "id": "ddangyo-1125745-30002782",
+      "name": "카라멜부케(13cm)",
+      "description": "촉촉한 화이트 시트에 카라멜 크림을 샌드하고, 그 위를 사랑스러운 핑크빛 장미와 리본으로 장식한 부케 모양의 미니 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8614521a-3b6a-41e2-9eff-84e47a5561bb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002782"
+    },
+    {
+      "id": "ddangyo-1125745-30002993",
+      "name": "후르츠 호밀 사워도우",
+      "description": "은은한 산미가 매력적인 발아 호밀이 들어간 사워도우에 대추야자, 건자두, 건포도를 더해 쫀득하고 달콤하게 즐기는 식사빵",
+      "category": "SLOW TLJ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/38ff49e3-9d21-4b6f-82a5-34d1587456ef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002993"
+    },
+    {
+      "id": "ddangyo-1125745-30002325",
+      "name": "쇼콜라갸또(조각)",
+      "description": "초코&블랙초코 시트에 진한 가나슈 초콜릿을 샌드하고 가나슈 초콜릿으로 코팅한 초코케이크",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/6a8b16c9-c8cc-41ad-a255-11642b6080e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002325"
+    },
+    {
+      "id": "ddangyo-1125745-30002812",
+      "name": "멕시코식 라이스",
+      "description": "뚜레쥬르에서 만나는 빕스 대표 볶음밥 : 소고기를 듬뿍 넣고 볼로네제 소스와 매콤한 할라피뇨를 함께 볶아 매콤하면서도 감칠맛 있는 멕시칸 라이스 \n(냉동제품으로 조리 후 취식가능한 제품입니다.)",
+      "category": "빕스 RMR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/3178714b-1dee-4368-9f9b-870d46aca1fa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002812"
+    },
+    {
+      "id": "ddangyo-1125745-30000722",
+      "name": "클래식 오브 치즈케이크(조각)",
+      "description": "엄선한 자연치즈의 진한 풍미가 그대로 살아있는 부드럽고 촉촉한 수플레 타입의 클래식 치즈 케이크",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/9b20cfe6-2e86-49b3-8116-382bdc5ba73c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000722"
+    },
+    {
+      "id": "ddangyo-1125745-30002968",
+      "name": "밀레니엄 초콜릿(밀크 트러플 크런치 넛)",
+      "description": "8개씩 개별 포장되어 있어 먹기 편한 트러플 크런치 넛 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/f9df2b78-a2ff-4387-956d-2f118d02c543.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002968"
+    },
+    {
+      "id": "ddangyo-1125745-30002945",
+      "name": "초코골드레이어(13cm)",
+      "description": "촉촉한 모카&초코 시트 사이 풍부한 마스카포네 생크림과 카라멜이 부드럽게 어우러진 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/7f096522-9d8e-44bd-950d-5385bc9c1d8a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002945"
+    },
+    {
+      "id": "ddangyo-1125745-30002924",
+      "name": "말차 딸기 롤케이크",
+      "description": "은은한 말차 시트에 새콤달콤한 딸기 크림과 잼을 더해 산뜻함을 가득 채운 롤케이크",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/09ae5e5a-df66-407c-b1a1-709b0c4d5c31.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002924"
+    },
+    {
+      "id": "ddangyo-1125745-30002813",
+      "name": "바비큐 포크 라이스",
+      "description": "뚜레쥬르에서 만나는 빕스 대표 볶음밥 : 고슬고슬하게 지은 밥에 빕스 오리지널 바비큐 소스로 감칠맛을 더하고 폴드포크와 다양한 채소 토핑으로 풍성히 즐길 수 있는 라이스 \n(냉동제품으로 조리 후 취식가능한 제품입니다.)",
+      "category": "빕스 RMR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/abc86ad6-05b7-4791-9664-ceea6c56d64f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002813"
+    },
+    {
+      "id": "ddangyo-1125745-30000122",
+      "name": "마담 얼그레이 크림번",
+      "description": "부드러운 생크림과 얼그레이 토핑을 더한 빵이 은은하게 어우러져 향긋한 홍차향을 느낄 수 있는 크림번",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/25892650-eef9-42bc-9341-559c84a79701.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000122"
+    },
+    {
+      "id": "ddangyo-1125745-30002645",
+      "name": "애플망고 빙수(망고)",
+      "description": "달콤한 애플망고 다이스와 패션후르츠가 어우러진 상큼달콤한 열대과일 빙수",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/5a321c11-8628-4ff8-b05a-aac8cdab04c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002645"
+    },
+    {
+      "id": "ddangyo-1125745-30003013",
+      "name": "피치 요거 롤케이크",
+      "description": "달콤한 요거트 크림에 복숭아 잼을 더해 상큼하게 즐길 수 있는 롤케이크",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1c168b51-0842-4323-b102-512dae22c59e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003013"
+    },
+    {
+      "id": "ddangyo-1125745-30002573",
+      "name": "바삭 마늘빵(5개입)",
+      "description": "마늘의 향긋함과 버터의 고소한 맛을 그대로 담은 바삭한 식감의 마늘 바게트",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/8a87c43a-21d1-44da-8cf1-4d969676f03b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002573"
+    },
+    {
+      "id": "ddangyo-1125745-30002992",
+      "name": "쫀득 쑥 단팥빵",
+      "description": "향긋한 쑥 풍미를 가득 담은 쫀득한 빵 안에 견과류가 듬뿍 들어간 무설탕 팥앙금으로 부담 없이 즐기는 단팥빵",
+      "category": "SLOW TLJ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d4fe7911-53b7-43f0-8bbf-cce88e15c754.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002992"
+    },
+    {
+      "id": "ddangyo-1125745-30002327",
+      "name": "쁘띠복숭아케이크",
+      "description": "촉촉한 화이트시트에 아삭아삭한 복숭아 생크림을 샌드하여 향긋한 복숭아맛을 가득 느낄 수 있는 디저트 케이크",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/56c08c02-948c-4a44-aabf-e6e405d30897.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002327"
+    },
+    {
+      "id": "ddangyo-1125745-30002969",
+      "name": "밀레니엄 골든넛 초콜릿",
+      "description": "부드러운 식감과 고소한 견과류의 풍미를 동시에 느낄 수 있는 인기있는 헤이즐넛 초콜릿 세트",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/5cb2a480-7e4c-4b54-8764-f543360f9585.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002969"
+    },
+    {
+      "id": "ddangyo-1125745-30002783",
+      "name": "러블리 블랙 포레스트(13cm)",
+      "description": "폭신한 초코 시트에 달콤한 초코 생크림과 향긋한 체리를 샌드한 초코 체리 케이크\n*상기 이미지는 계절 및 매장에 따라 디자인이 변경될 수 있습니다.",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/bb341a93-7323-4f30-95f3-5ea3868653f9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002783"
+    },
+    {
+      "id": "ddangyo-1125745-30002333",
+      "name": "초코행성 지구인 (12cm)",
+      "description": "헤이즐넛 크림과 초코 크림을 샌드하고 크런치 초코로 코팅해\n우주행성을 탐험하는 지구인의 모습을 귀엽게 표현한 쁘띠 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/bc61ed53-7d8b-4db2-af51-1d86e01458e8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002333"
+    },
+    {
+      "id": "ddangyo-1125745-30003022",
+      "name": "더 진해진 마늘 퐁당 바게트",
+      "description": "마늘 소스를 듬뿍 더해 마늘 본연의 풍미에 퐁당. 겉은 바삭, 속은 꾸덕하고 촉촉해 더욱 진하고 맛있는 마늘 바게트",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ee6def69-6a0a-451b-be5e-1335078dadcf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003022"
+    },
+    {
+      "id": "ddangyo-1125745-30002868",
+      "name": "초초모스 (소)",
+      "description": "초코에 초코를 더했다. 초코크럼블, 가나슈크림과 상큼한 라즈베리잼이 더해진 달콤함의 끝, 초코맘모스",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/0f490770-7423-47b2-a576-0d0aba841816.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002868"
+    },
+    {
+      "id": "ddangyo-1125745-30000152",
+      "name": "핫도그 패스트리",
+      "description": "육즙이 살아있는 짭조름한 그릴후랑크를 바삭한 패스트리에 통째로 올린 제품",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/1f17bcf3-a9fe-4180-bbfc-111e6648d5d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000152"
+    },
+    {
+      "id": "ddangyo-1125745-30000634",
+      "name": "착한빵식 통밀빵",
+      "description": "통밀을 넣어 고소 담백하고, 자체 개발 천연 발효종으로 풍미와 식감을 더한 식사빵\n그냥 먹기에도 좋고 샌드위치 빵으로도 활용 가능한 건강빵\n*푸드 업사이클링 재료인 밀기울이 완전히 분쇄되지 않아 씹힐 수 있으나, 이물이 아니오니 안심하시기 바랍니다.\n*컷팅여부는 점포별 다를수 있으니 문의부탁드립니다.",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/a38965f5-af69-4018-a28a-e2238e2fdad3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000634"
+    },
+    {
+      "id": "ddangyo-1125745-30000310",
+      "name": "쁘띠한라봉&오렌지케이크",
+      "description": "향긋한 한라봉 시트에 상큼한 오렌지와 한라봉맛 생크림을 샌드하여 입안 가득 상큼한 맛을 느낄 수 있는 디저트 케이크",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/033f9b85-f1a6-4a2c-b0c0-605b47d17e2f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000310"
+    },
+    {
+      "id": "ddangyo-1125745-30003056",
+      "name": "왁뿌 초코 휘낭시에",
+      "description": "초코 휘낭시에 위에 단짠한 소금 우유 크림과 진한 다크 초콜릿을 입혀 아그작한 식감을 살린 제품",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4db00c49-7d76-4692-84da-8d93d09805ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003056"
+    },
+    {
+      "id": "ddangyo-1125745-30002970",
+      "name": "밀레니엄 초콜릿(오션 스토리)",
+      "description": "한입에 쏙! 조개 모양 초콜릿에 감각적인 패키지가 눈에 띄는 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a4b845fd-9d03-48a9-8720-27b8f5c7ab82.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002970"
+    },
+    {
+      "id": "ddangyo-1125745-30003050",
+      "name": "왁뿌 탱글탱귤 브레드",
+      "description": "상큼한 레몬 커스터드와 향긋한 얼그레이 크림, 달콤한 귤 토핑을 더한 빵에 화이트 초콜릿을 입혀 아그작한 식감을 살린제품(*우리밀 함유제품)",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/a08127ee-ef05-484f-b73f-767ca64a43ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003050"
+    },
+    {
+      "id": "ddangyo-1125745-30000124",
+      "name": "밤이 듬뿍 맘모스(소)",
+      "description": "담백한 빵속에 달콤한 단팥앙금, 부드러운 크림, 아삭아삭 달콤한 밤과 고구마가 듬뿍 들어간 속이 꽉 찬 간식빵으로 고소한 땅콩소보로 토핑으로 마지막까지 맛있는 제품",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/f5cd8041-8e9b-4d80-a8c7-82a3f6a311a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000124"
+    },
+    {
+      "id": "ddangyo-1125745-30000389",
+      "name": "벌꿀 카스테라",
+      "description": "사양벌꿀을 더해 부드러운 달콤함을 느낄 수 있는 촉촉한 벌꿀 카스텔라",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b17c35ac-1ffa-4910-9061-620513aca36c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000389"
+    },
+    {
+      "id": "ddangyo-1125745-30002264",
+      "name": "쁘띠티라미수",
+      "description": "부드러운 치즈 무스와 달콤한 코코아 파우더가 잘 어울리는 티라미수",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/e0230edd-d924-4344-906a-ad9c028b2bb6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002264"
+    },
+    {
+      "id": "ddangyo-1125745-30002971",
+      "name": "밀레니엄 초콜릿(럭셔리 트러플 어쏘티드)",
+      "description": "알록달록 동글동글 귀여운 모양이 매력적인 다양한 맛의 트러플 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/6737468b-f24d-4deb-8ac7-08424c1427f9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002971"
+    },
+    {
+      "id": "ddangyo-1125745-30002700",
+      "name": "와르르 베리베리빙수(우유)",
+      "description": "네가지 타입의 믹스베리 토핑물을 우유 얼음위에 가득 올려 와르르 쏟아질 것만 같은 풍성함이 느껴지는 빙수",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8c283515-177f-4136-b879-ecbb5ee48775.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002700"
+    },
+    {
+      "id": "ddangyo-1125745-30000123",
+      "name": "겹겹이 연유크림 데니쉬",
+      "description": "겹겹이결이살아있는데니쉬에달콤한연유크림을듬뿍샌드한간식용빵",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/58214aba-2587-4ba6-a3b2-08453fc21161.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000123"
+    },
+    {
+      "id": "ddangyo-1125745-30000414",
+      "name": "제주첫물녹차카스테라",
+      "description": "제주에서 자란 녹차를 사용해 은은한 녹차향이 어우러져 깔끔하게 즐길 수 있는 카스텔라",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/69f10921-5fbb-42c3-be91-63991acfb549.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000414"
+    },
+    {
+      "id": "ddangyo-1125745-30000125",
+      "name": "밤이 듬뿍 맘모스(대)",
+      "description": "담백한 빵 속에 달콤한 단팥 앙금, 부드러운 크림, 아삭아삭 달콤한 밤과 고구마가 듬뿍 들어간 속이 꽉 찬 간식빵",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/0963282a-070f-4079-b298-f7798ccb96d1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000125"
+    },
+    {
+      "id": "ddangyo-1125745-30003014",
+      "name": "브라운 버터 카스테라",
+      "description": "이즈니 버터의 깊은 풍미에 흑설탕의 은은한 단맛을 더해 브라운 빛으로 완성한 부드럽고 촉촉한 카스테라",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f8b86f78-f850-4594-9613-e7e4cc0e4ed3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003014"
+    },
+    {
+      "id": "ddangyo-1125745-30000207",
+      "name": "겹겹이 데니쉬",
+      "description": "겹겹이 결이 살아있는 데니쉬에 설탕을 뿌려 구워내 달콤하게 즐길 수 있는 간식용 빵",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/cdfba557-56db-4f1b-b3d1-eb848f75f785.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000207"
+    },
+    {
+      "id": "ddangyo-1125745-30002742",
+      "name": "고식이섬유&저당 곡물식빵",
+      "description": "식이섬유가 풍부한 고대곡물 호라산밀과 밀기울로 만들어 건강함 UP, 촉촉한 식감과 고소한 풍미가 매력적인 곡물식빵",
+      "category": "SLOW TLJ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9fc7bd55-05c2-4d22-8c80-f09a5eec0289.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002742"
+    },
+    {
+      "id": "ddangyo-1125745-30002949",
+      "name": "벨지안 초콜릿(크리미 바닐라 씨쉘)_65g",
+      "description": "크리미한 바닐라 맛으로 선물하기 좋은 벨지안 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/f296d768-e912-4cd2-9f71-b9c80fd69708.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002949"
+    },
+    {
+      "id": "ddangyo-1125745-30000249",
+      "name": "그랑드카페 아메리카노(HOT)",
+      "description": "뚜레쥬르만의 스페셜 고급원두를 적절한 비율로 블렌드 하여 커피 본연의 맛과 향을 살린 따뜻한 아메리카노 음료\n총 카페인 함량 166mg, 고카페인여부 O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7e9db3d4-0534-44f3-a240-605f07042ca8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000249"
+    },
+    {
+      "id": "ddangyo-1125745-30002684",
+      "name": "THE 파운드",
+      "description": "고소한 견과류와 7가지 향긋한 건과일을 더해 다채로운 식감과 깊은 풍미를 한 층 더 담은 파운드",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f0d8543c-bd4a-4632-9b99-9fb41352926e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002684"
+    },
+    {
+      "id": "ddangyo-1125745-30002595",
+      "name": "벨지안 초콜릿(씨쉘)_65g",
+      "description": "벨기에 정통 초콜릿을 간편하게 즐길 수 있는 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2bad6e73-3321-4cb4-bd50-b2ae07e1965c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002595"
+    },
+    {
+      "id": "ddangyo-1125745-30000119",
+      "name": "진한 우유 크림빵",
+      "description": "물 대신 우유로만 반죽한 빵에 우유크림을 넣어 더 진한 우유의 맛을 느낄 수 있는 제품",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/f6572166-4476-41a9-a3cb-eeb7d32f2df0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000119"
+    },
+    {
+      "id": "ddangyo-1125745-30000159",
+      "name": "NEW 정통고로케",
+      "description": "바삭바삭하게 잘 튀겨진 빵 속에 다진 돼지고기와 표고버섯, 당근, 부추, 당면 등이 듬뿍 들어있는 오리지널 고로케",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/29e68ec7-ade2-4119-a67d-988767fe5c5b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000159"
+    },
+    {
+      "id": "ddangyo-1125745-30003002",
+      "name": "미트라자냐",
+      "description": "얇고 쫄깃한 라자냐면에 진한 볼로네제 소스와 모짜렐라 치즈를 듬뿍 올린 라자냐",
+      "category": "빕스 RMR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5e165400-4065-44f0-8b3e-90331dba1310.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003002"
+    },
+    {
+      "id": "ddangyo-1125745-30002641",
+      "name": "콩팥 담뿍 브레드",
+      "description": "세 가지 콩과 팥, 고구마를 듬뿍! 맛있는 건강함을 담뿍 담고 깨를 더해 고소하고 달콤하게 즐기는 간식빵",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/e302a9f0-44a8-41d0-b2e7-b142fd1150a0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002641"
+    },
+    {
+      "id": "ddangyo-1125745-30002585",
+      "name": "벨지안 초콜릿(하트)_65g",
+      "description": "벨기에 정통 초콜릿을 하트 모양으로 즐길 수 있는 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/fbb6dbec-4b93-411d-bd39-39f6b4d79c59.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002585"
+    },
+    {
+      "id": "ddangyo-1125745-30000251",
+      "name": "카페라떼 (HOT)",
+      "description": "에스프레소와 스팀우유가 어우러진 따뜻한 라떼 음료\n총 카페인 함량 :166mg, 고카페인여부: O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1dcda6e0-9f64-4ee8-a051-c4e02d054cf8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000251"
+    },
+    {
+      "id": "ddangyo-1125745-30000160",
+      "name": "추억의 사라다고로케",
+      "description": "바삭한 고로케속에 아삭아삭 맛있는 야채 사라다가 듬뿍 들어간 든든한 식사대용 빵",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/cd335791-9f39-44be-be59-280391452543.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000160"
+    },
+    {
+      "id": "ddangyo-1125745-30002685",
+      "name": "고소한 호두 파운드",
+      "description": "한 입 가득 퍼지는 호두의 고소함을 더해 견과의 풍부한 풍미를 가득 끌어올린 호두 파운드",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/bb2810d7-490f-4292-b66e-94e96d15ca8f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002685"
+    },
+    {
+      "id": "ddangyo-1125745-30002990",
+      "name": "치즈타임",
+      "description": "부드러운 시트 위로 크림치즈와 머랭을 더한 부드럽고 촉촉한 치즈 수플레",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b3be21a7-a857-4db3-ab0c-5e6137521ba1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002990"
+    },
+    {
+      "id": "ddangyo-1125745-30000639",
+      "name": "진한 크림치즈빵",
+      "description": "우유 초죽을 넣어 촉촉하면서 부드러운 식감을 살리고 크림치즈 본연의 맛을 살린 간식빵",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/d6eff8a5-7ab4-4455-880d-beb0b7d19b0b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000639"
+    },
+    {
+      "id": "ddangyo-1125745-30002950",
+      "name": "벨지안 초콜릿(씨쉘)_250g",
+      "description": "달콤하고 부드러운 필링이 가득 들어있는 벨지안 초콜릿 세트",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/11ad867f-7f48-41b0-b0c2-e11eb30b69d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002950"
+    },
+    {
+      "id": "ddangyo-1125745-30000800",
+      "name": "NEW 김치고로케",
+      "description": "바삭바삭하게 튀겨진 빵 속에 매콤 아삭한 김치와 깍두기, 당면이 듬뿍 들어있는 김치 고로케",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/cf561a6d-479c-4247-92c4-03331af896c6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000800"
+    },
+    {
+      "id": "ddangyo-1125745-30002991",
+      "name": "말차타임",
+      "description": "초코 시트 위에 은은한 말차의 풍미를 더한 촉촉한 말차 수플레",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/891bbde1-8b44-4542-bdbe-7bc3bbe0eed9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002991"
+    },
+    {
+      "id": "ddangyo-1125745-30000252",
+      "name": "아이스카페라떼",
+      "description": "에스프레소와 우유가 어우러진 시원한 라떼 음료\n총 카페인 함량 : R사이즈 166mg/ L사이즈 249mg , 고카페인여부: O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/3e2eabb5-10b7-45ed-a406-47186b4868c5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000252"
+    },
+    {
+      "id": "ddangyo-1125745-30000213",
+      "name": "치즈방앗간(3개)",
+      "description": "치즈가 쏙쏙 박힌 쫄깃한 빵에 크림치즈를 넣고 달콤한 꿀을 토핑하여 빵순이라면 지나칠 수 없는 빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/987788da-5f0f-4e93-92cb-003282bb13cc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000213"
+    },
+    {
+      "id": "ddangyo-1125745-30003054",
+      "name": "빅토리아의 정석",
+      "description": "부드러운 시트 사이에 요거트 크림과 상큼한 베리잼을 더해 달콤하게 즐길 수 있는 디저트",
+      "category": "설렘한조각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/592c7ce5-96e4-42c9-b97e-ee877e6b8609.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003054"
+    },
+    {
+      "id": "ddangyo-1125745-30000176",
+      "name": "몽블랑의 정석",
+      "description": "돌돌말린 패스트리에 달콤한 시럽을 뿌려 풍미를 살리고 우박설탕을 더하여 마지막까지 맛있게 먹을 수 있는 제품",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/d29a879b-a9d4-4256-a7ec-6be6123a3b2a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000176"
+    },
+    {
+      "id": "ddangyo-1125745-30000092",
+      "name": "마구마구 밤식빵(소)",
+      "description": "부드럽고 촉촉한 반죽에 밤다이스와 밤페이스트가 듬뿍 들어가 밤 맛의 풍부함을 한층 업그레이드한 제품",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/fee9db86-d106-435d-874b-7ca75d30f0f3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000092"
+    },
+    {
+      "id": "ddangyo-1125745-30000253",
+      "name": "카라멜마끼아또 (HOT)",
+      "description": "에스프레소에 스팀우유, 향긋한 바닐라, 그리고 달콤한 카라멜이 어우러진 달달한 커피 음료\n총 카페인 함량 :166mg, 고카페인여부: O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/22e75f79-eacd-4e21-ac8e-6fa7a31503a6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000253"
+    },
+    {
+      "id": "ddangyo-1125745-30002586",
+      "name": "벨지안 초콜릿(하트)_200g",
+      "description": "발렌타인데이에는 하트를! 한입에 쏙 먹기 좋은 하트 모양의 벨지안 밀크 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/c11553bc-8457-48ad-b7c7-c630f5881a3c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002586"
+    },
+    {
+      "id": "ddangyo-1125745-30000128",
+      "name": "빵 속에 리얼 초코",
+      "description": "달콤하고 진한 초코 가나슈가 부드러운 빵 속에 가득 채워져 간식으로 즐기기 좋은 제품",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/98c9c718-0e33-4311-8742-35244fa016dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000128"
+    },
+    {
+      "id": "ddangyo-1125745-30000214",
+      "name": "달콩찹쌀브레드",
+      "description": "고소한 곡물빵과 달콤한 콩, 쫄깃한 찰떡이 조화롭게 어우러지는 든든한 제품",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/9c660dfc-3d1b-40a7-837c-b02c5e21d7bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000214"
+    },
+    {
+      "id": "ddangyo-1125745-30002583",
+      "name": "벨지안 초콜릿(프랄린스)_200g",
+      "description": "사르르 녹는 초콜릿 크림이 가득 든 벨지안 프랄린 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/417e7e6a-9389-4094-893b-2c05a96fb600.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002583"
+    },
+    {
+      "id": "ddangyo-1125745-30000129",
+      "name": "슈크림빵",
+      "description": "부드럽고 풍부한 맛의 프리미엄 슈크림이 들어간 간식빵",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/1b67d224-976e-4d17-a57e-83b21c8ad77e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000129"
+    },
+    {
+      "id": "ddangyo-1125745-30000254",
+      "name": "아이스카라멜마끼아또",
+      "description": "에스프레소에 우유, 향긋한 바닐라, 그리고 달콤한 카라멜이 어우러진 시원하고 달달한 커피 음료\n총 카페인 함량 : R사이즈 166mg/ L사이즈 249mg , 고카페인여부: O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/50e8fb9d-f089-424c-9407-07314a501c7a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000254"
+    },
+    {
+      "id": "ddangyo-1125745-30000780",
+      "name": "한입 크런치 비스킷",
+      "description": "달달한 초코와 상큼한 딸기&요거트 두 가지 맛으로 구성된 한 입에 쏙 먹기 좋은 달콤바삭한 크런치 타입의 과자",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/5cbc524f-b702-4eb7-838c-913211a48731.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000780"
+    },
+    {
+      "id": "ddangyo-1125745-30000130",
+      "name": "후레쉬크림빵",
+      "description": "부드러운 빵속에 달콤한 연유 버터크림을 샌드하여 여성층의 인기가 높은 빵\n* 아몬드 토핑 여부는 점포별 상이할수 있습니다.",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/46fd9fb6-2c17-4640-8256-6e884275a1d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000130"
+    },
+    {
+      "id": "ddangyo-1125745-30002384",
+      "name": "고소한햄에그샌드위치",
+      "description": "담백하고 고소한 계란 필링을 듬뿍 담고 짭조름한 햄과 아삭한 당근, 오이로 식감까지 더한 샌드위치",
+      "category": "샌드위치/샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/bfddb981-647a-4fd7-a9ca-ea9bb75a3778.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002384"
+    },
+    {
+      "id": "ddangyo-1125745-30000255",
+      "name": "바닐라라떼 (HOT)",
+      "description": "에스프레소와 부드러운 스팀우유, 그리고 향긋한 바닐라 시럽이 어우러진 달달한 음료\n총 카페인 함량 :166mg, 고카페인여부: O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/88ae4b1b-da95-4da5-af2d-eae162379d2a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000255"
+    },
+    {
+      "id": "ddangyo-1125745-30002261",
+      "name": "고단백치킨페스토곡물샌드위치",
+      "description": "고소한 하루견과 곡물브레드와 담백한 닭가슴살과 바질페스토&썬드라이드 토마토의 맛있는 건강 밸런스 (오이포함)",
+      "category": "SLOW TLJ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/fa02ac89-2efc-4c0e-aca3-bbac906dafea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002261"
+    },
+    {
+      "id": "ddangyo-1125745-30002584",
+      "name": "벨지안 초콜릿(프랄린스 크림브륄레)_200g",
+      "description": "달콤한 커스터드 크림 위에 토치로 녹여낸 크림브륄레 맛을 녹여낸 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2f4e7a23-3529-4967-b950-615386472b0f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002584"
+    },
+    {
+      "id": "ddangyo-1125745-30000179",
+      "name": "오리지널 크라상",
+      "description": "버터가 듬뿍 들어가 고소한 풍미가 뛰어나고 한겹 한겹 정성으로 접어 만들어 패스트리의 결이 살아있는 오리지널 크라상",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ab3960ae-f8ad-4c99-b8a1-3fa53b91d2fd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000179"
+    },
+    {
+      "id": "ddangyo-1125745-30000702",
+      "name": "깨찰빵",
+      "description": "쫄깃한 타피오카전분과 고소한 검은깨 맛을 볼 수 있는 깨찰빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/0e3afba9-24e0-4c2e-8dad-4196d5273ac0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000702"
+    },
+    {
+      "id": "ddangyo-1125745-30000256",
+      "name": "아이스바닐라라떼",
+      "description": "에스프레소와 우유, 그리고 향긋한 바닐라 시럽이 어우러진 시원하고 달달한 음료\n총 카페인 함량 : R사이즈 166mg/ L사이즈 249mg , 고카페인여부: O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e5a4d351-ba46-42c2-ab68-c2c87858ab94.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000256"
+    },
+    {
+      "id": "ddangyo-1125745-30000220",
+      "name": "단팥빵",
+      "description": "통팥앙금을 사용하여 누구나 좋아하는 빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/1417035f-1ee8-4a9b-87ba-6f991500b485.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000220"
+    },
+    {
+      "id": "ddangyo-1125745-30000652",
+      "name": "TLJ 옥수수식빵",
+      "description": "촉촉하고 옥수수 맛이 풍부한 빵 속에 고소한 옥수수 알갱이가 톡톡 씹히는 식빵\n컷팅여부는 점포별 다를수 있으니 문의부탁드립니다.",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/e851dc22-a387-4593-921a-24f9b6eb468b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000652"
+    },
+    {
+      "id": "ddangyo-1125745-30002757",
+      "name": "새콤달콤 그대로 딸기칩",
+      "description": "국내산 딸기를 사용하여 그대로 동결건조한\n과육의 맛과 향을 그대로 살린 새콤달콤 딸기칩",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fb3610cd-0d92-41be-824a-2286815d0434.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002757"
+    },
+    {
+      "id": "ddangyo-1125745-30000221",
+      "name": "소보로빵",
+      "description": "고소한 땅콩과 소보로가 토핑된 간식빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/d832d5ea-eb23-48bd-929b-adfbc11ccb29.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000221"
+    },
+    {
+      "id": "ddangyo-1125745-30000168",
+      "name": "낙엽소시지브레드",
+      "description": "하나씩 떼어먹는 재미가 있는 낙엽모양의 소시지 브레드",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/028609d0-f544-437f-bcd8-44dd520ddb17.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000168"
+    },
+    {
+      "id": "ddangyo-1125745-30000099",
+      "name": "순수한 맛 순우유롤 (봉)",
+      "description": "보들보들한 빵 속에 순수하고 진한 우유의 맛을 그대로 담은 제품",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/2f7691db-61a6-4e93-a164-799222637cbf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000099"
+    },
+    {
+      "id": "ddangyo-1125745-30000347",
+      "name": "마스카포네 티라미수 케이크(18cm)",
+      "description": "부드러운 마스카포네 치즈와 진한 콜드브루를 담아 풍부한 풍미를 느낄 수 있는 티라미수 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/3a710d52-0296-4812-94dd-27431176c2b6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000347"
+    },
+    {
+      "id": "ddangyo-1125745-30002758",
+      "name": "달콤함 그대로 설아복숭아칩",
+      "description": "국내산 설아복숭아를 사용하여 그대로 동결건조한\n과육의 맛과 향을 그대로 살린 달콤 설아복숭아칩",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/bfd78eac-a887-4958-9abd-46510d928812.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002758"
+    },
+    {
+      "id": "ddangyo-1125745-30000467",
+      "name": "오리지널 커피번",
+      "description": "진하고 깊은 커피향과 버터 커스터드 내용물을 더해 한층 업그레이드한 커피번",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/85037fae-e671-495a-b995-99d4e4dfd3e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000467"
+    },
+    {
+      "id": "ddangyo-1125745-30000138",
+      "name": "부드러운후레쉬크림샌드빵",
+      "description": "달콤하고 부드러운 버터크림이 사이사이에 듬뿍 샌드된 부드러운 간식빵*크림속 검은 반점은 바닐라씨드임으로 안심하고 드시길 바랍니다.",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b4e5b0a9-7ac5-4d2a-944b-64ac7e01fa02.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000138"
+    },
+    {
+      "id": "ddangyo-1125745-30000169",
+      "name": "크로크무슈",
+      "description": "슬라이스치즈와 햄을 넣어 살짝 구운 토스트",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/68895fe8-1156-48ba-a2fe-d944b83573bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000169"
+    },
+    {
+      "id": "ddangyo-1125745-30000100",
+      "name": "촉촉 쫄깃 탕종식빵",
+      "description": "탕종을 넣어 더욱 촉촉하고 쫄깃한 식감과 은은한 단맛이 어우러지는 담백 식빵",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/5a4359f1-5283-451f-9785-c7468eccb84e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000100"
+    },
+    {
+      "id": "ddangyo-1125745-30000653",
+      "name": "딸기라떼",
+      "description": "톡톡 씹히는 달콤한 딸기 다이스와 고소한 우유의 조화가 돋보이는 과일라떼",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/7fff1d46-c7d2-451d-8df0-b8e480a5e2ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000653"
+    },
+    {
+      "id": "ddangyo-1125745-30000058",
+      "name": "레드타코치킨 샌드위치",
+      "description": "매콤한 치폴레소스 치킨과 아삭한 야채, 부드러운 치즈가 어우러진 콜드 샌드위치",
+      "category": "샌드위치/샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/57fc2f7b-b4f5-419a-9ef8-3dcae6ca1714.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000058"
+    },
+    {
+      "id": "ddangyo-1125745-30000223",
+      "name": "단팥소보로빵",
+      "description": "고소한 소보로 빵 속에 달콤한 단팥 앙금이 들어간 제품",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ee447e4b-febf-46f3-ae24-1aff2788e270.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000223"
+    },
+    {
+      "id": "ddangyo-1125745-30002221",
+      "name": "한입 우리콩 두부과자",
+      "description": "우리 콩, 우리 밀가루로 만든 고소하고 담백한 두부과자, 지퍼백 패키지로 간편하게 즐기기 좋은 간식형 제품",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/d53de4ec-f3d5-4f33-8325-8f0d6dbd74e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002221"
+    },
+    {
+      "id": "ddangyo-1125745-30000170",
+      "name": "피자토스트",
+      "description": "맛있는 피자토핑을 올린 피자토스트",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/e4af976f-a993-43e8-8b41-a6f24a2d47ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000170"
+    },
+    {
+      "id": "ddangyo-1125745-30000181",
+      "name": "카라멜애플파이",
+      "description": "바삭한 파이 속 달콤한 카라멜과 시나몬 풍미가 풍부한 사과 필링이 듬뿍 들어있는 제품",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/3fb79e1a-fbdc-444f-829c-c7e94c10d954.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000181"
+    },
+    {
+      "id": "ddangyo-1125745-30000350",
+      "name": "블루베리 라벤더 케이크(15cm)",
+      "description": "새콤달콤한 블루베리 크림과 산뜻한 라벤더티를 블루베리 가나슈와 함께 샌드한 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/479c3ebb-7e81-4177-857f-0d63813d6238.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000350"
+    },
+    {
+      "id": "ddangyo-1125745-30003057",
+      "name": "쁘띠 초코바나나 머핀",
+      "description": "한 입에 쏙! 먹을 수 있는 진하고 달콤한 초코 바나나 미니 머핀",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/2185d683-e806-46b0-a35b-4c632e419719.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003057"
+    },
+    {
+      "id": "ddangyo-1125745-30002756",
+      "name": "THE 부드러운 카스테라",
+      "description": "꿀을 넣어 더 부드럽고 촉촉하게 입안에서 사르르 녹는 카스테라",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/12c09206-a4b2-4bb1-a564-629edae52e8e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002756"
+    },
+    {
+      "id": "ddangyo-1125745-30000182",
+      "name": "새콤달콤유자파이",
+      "description": "바삭바삭한 파이 안에 유자크림이 들어가 더욱 상큼한 패스트리",
+      "category": "파이/패스트리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/b00d3115-7d20-4f79-9df4-085a06b76a6d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000182"
+    },
+    {
+      "id": "ddangyo-1125745-30002420",
+      "name": "뚜레쥬르가 만든 딸기잼(400g)",
+      "description": "국내산 딸기를 사용하여 신선한 딸기의 과육과 향을 그대로 살린 달콤상큼 뚜레쥬르 딸기잼",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/f3a88ead-aafc-45e5-9778-b57ec85dec96.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002420"
+    },
+    {
+      "id": "ddangyo-1125745-30000172",
+      "name": "(NEW)피자바게트",
+      "description": "바게트위에 신선한 야채 내용물과 토마토소스를 듬뿍얹어 구워낸 든든한 조리빵",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/997ddae9-842b-41f9-a4b7-6ae4d31d7d2c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000172"
+    },
+    {
+      "id": "ddangyo-1125745-30003058",
+      "name": "쁘띠 크림치즈 머핀",
+      "description": "한 입에 쏙! 먹을 수 있는 부드럽고 촉촉한 크림치즈 미니 머핀",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/24b4377f-a91b-4f60-853d-2d9c8877a929.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003058"
+    },
+    {
+      "id": "ddangyo-1125745-30000226",
+      "name": "완두앙금빵",
+      "description": "달콤하고 부드러운 완두앙금을 듬뿍 넣어, 남녀노소 좋아하는 간식빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/cddeebc0-32ba-41c7-ac49-3a255b4a1bf8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000226"
+    },
+    {
+      "id": "ddangyo-1125745-30000261",
+      "name": "사르르 우유 쉐이크",
+      "description": "빵과 잘 어울리는 부드럽고 고소한 우유쉐이크 , 깔끔한 뒷맛과 부담스럽지 않은 바디감으로 남녀노소 모두 선호하는 제품",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/a46c7a2f-e136-4551-9703-d6b032c15715.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000261"
+    },
+    {
+      "id": "ddangyo-1125745-30000144",
+      "name": "카페모카크림빵(소)",
+      "description": "부드럽고 달콤한 모카크림이 더해져 더 부드럽게 즐길 수 있는 모카향 가득 모카크림빵",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/2c4ddc5c-75c1-4c77-8f48-7aa03fbadc32.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000144"
+    },
+    {
+      "id": "ddangyo-1125745-30002425",
+      "name": "캐런스버터쿠키(454g)",
+      "description": "고소하고 담백한 맛과 부드러운 버터 풍미의 쿠키가 가득 들어 있어 선물로 제격인 쿠키 세트",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/b0df59c9-8b95-43c4-8d4f-35158811a9d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002425"
+    },
+    {
+      "id": "ddangyo-1125745-30002421",
+      "name": "뚜레쥬르가 만든 딸기잼(320g)",
+      "description": "국내산 딸기를 사용하여 신선한 딸기의 과육과 향을 그대로 살린 달콤상큼 뚜레쥬르 딸기잼",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/49500375-1f6f-424c-bcd7-2bfe5b11a942.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002421"
+    },
+    {
+      "id": "ddangyo-1125745-30000173",
+      "name": "NEW어니언소시지포카치아",
+      "description": "부드럽고 쫄깃한 포카치아와 머스터드, 크리스피 어니언이 토핑 된 소세지를 함께 즐길 수 있는 든든한 간식빵",
+      "category": "조리빵 (고로케/소시지)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/74ae1643-e325-480c-a10c-e8d32124eae9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000173"
+    },
+    {
+      "id": "ddangyo-1125745-30003052",
+      "name": "버즈와 함께 출동! 완두앙금빵",
+      "description": "토이스토리 캐릭터 버즈 라이트이어와 알린 출동! 부드럽고 촉촉한 빵 속에 달콤한 완두앙금이 들어있는 간식빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/088c2fdc-4dad-4f65-9355-49226be63cd8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003052"
+    },
+    {
+      "id": "ddangyo-1125745-30002321",
+      "name": "리얼초코소라빵",
+      "description": "소라모양의 빵에 진한 초코크림이 들어있는 간식빵",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/b01680a2-e0c5-4797-8a7f-f09fac5339d0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002321"
+    },
+    {
+      "id": "ddangyo-1125745-30000262",
+      "name": "사르르커피쉐이크",
+      "description": "고소하고 달콤한 우유쉐이크와 깊고 진한 에스프레소가 만나, 자꾸 끌리는 시원한 쉐이크 음료,\n총 카페인 함량 :83mg, 고카페인여부: O,\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/e31562f0-df23-43c2-86ef-090c8b17ef4d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000262"
+    },
+    {
+      "id": "ddangyo-1125745-30002422",
+      "name": "뚜레쥬르가 만든 딸기잼(130g)",
+      "description": "국내산 딸기를 사용하여 신선한 딸기의 과육과 향을 그대로 살린 달콤상큼 뚜레쥬르 딸기잼",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/1ec98b23-eff3-42a2-b538-252decbc9d83.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002422"
+    },
+    {
+      "id": "ddangyo-1125745-30002426",
+      "name": "캐런스버터쿠키(908g)",
+      "description": "고소하고 담백한 맛과 부드러운 버터 풍미의 쿠키가 가득 들어 있어 선물로 제격인 쿠키 세트",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/798ab4c3-41bf-449d-b7e8-e99a7f80a6f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002426"
+    },
+    {
+      "id": "ddangyo-1125745-30002460",
+      "name": "랏소_베리굿데이 (15cm)",
+      "description": "달콤한 연유 크림에 딸기 콤포트를 샌드하고, 딸기 맛 크림과 코코넛 분말로 마무리해 랏소베어를 표현한 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/c6791f21-1077-48d9-8a69-d5eb23cb8ac2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002460"
+    },
+    {
+      "id": "ddangyo-1125745-30002361",
+      "name": "딸기 스무디",
+      "description": "국내산 딸기가 듬뿍 들어간 새콤달콤하고 시원한 스무디 음료",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/22d59993-c4a8-43b8-8745-ab7a6be811c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002361"
+    },
+    {
+      "id": "ddangyo-1125745-30002423",
+      "name": "뚜레쥬르가 만든 블루베리잼(320g)",
+      "description": "블루베리 과육이 그대로 알알이 씹히는 뚜레쥬르 블루베리잼",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/5df8ce50-da4a-4c7f-acdd-d4f17e8b4e65.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002423"
+    },
+    {
+      "id": "ddangyo-1125745-30000142",
+      "name": "까까웨뜨",
+      "description": "바삭한 패스트리결을 얹은 부드러운 빵 속에 고소한 땅콩크림이 샌드된 간식빵",
+      "category": "크림빵(연유/초코/생크림)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/9c39a1ef-46c3-48d1-a9eb-b94a7251d0b5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000142"
+    },
+    {
+      "id": "ddangyo-1125745-30002986",
+      "name": "더 촉촉해진 연유 퐁당 밀크브레드",
+      "description": "달콤한 연유크림을 듬뿍 더해 촉촉함에 퐁당! 버터 한 조각을 올려 풍미를 더하고, 데워 먹으면 더욱 맛있는 간식빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/1666f68f-567e-4d9b-8119-9e5366ff6c7b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002986"
+    },
+    {
+      "id": "ddangyo-1125745-30002362",
+      "name": "망고 스무디",
+      "description": "애플망고 과육이 듬뿍 들어있는 망고 얼음을 통째로 갈아 달달하고 부드럽고 시원한 망고 스무디 음료",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/2dda687e-6f30-4c10-b04c-a4f80727bb79.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002362"
+    },
+    {
+      "id": "ddangyo-1125745-30002798",
+      "name": "우리쌀 전병 세트",
+      "description": "감칠맛의 김, 고소한 땅콩, 담백한 검은깨 맛으로 구성된 우리쌀 전병 세트",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/01fec4b8-753f-44c3-9fb7-8c2a6001be8f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002798"
+    },
+    {
+      "id": "ddangyo-1125745-30002974",
+      "name": "미에슈코 아모레따(피코 넛츠)_155g",
+      "description": "부드러운 필링 속에 견과류가 들어있어 고소하고 달콤한 넛츠 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4cb6aee2-ebc8-4189-9b23-415736466a40.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002974"
+    },
+    {
+      "id": "ddangyo-1125745-30000230",
+      "name": "크림치즈월넛브레드",
+      "description": "곡물빵에 부드럽고 달콤하나 크림치즈를 넣은 간식빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/1405392f-497c-4c9b-a0dc-e176e91c6831.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000230"
+    },
+    {
+      "id": "ddangyo-1125745-30002786",
+      "name": "피넛버터 크리미(340g)",
+      "description": "100% 땅콩으로만 만든 건강한 스프레드. 땅콩을 곱게 갈아 부드럽게 바르기 좋은 ‘크리미‘ 타입의 피넛버터\n* 무첨가물 제품으로, 원물 특성상 실온보관시 오일층이 생길 수 있습니다. 개봉 후 잘 섞어 냉장 보관해주세요.",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d181fd04-f641-4818-b1a5-c599a98eabfc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002786"
+    },
+    {
+      "id": "ddangyo-1125745-30003020",
+      "name": "수박 스무디",
+      "description": "여름제철 수박을 아낌없이 사용해 달콤 & 수분 가득하고 시원하게 즐기는 스무디",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2846408a-3940-4875-95c6-66e672e27779.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003020"
+    },
+    {
+      "id": "ddangyo-1125745-30003021",
+      "name": "자두 스무디",
+      "description": "상큼하고 깔끔한 자두를 사용해 달콤 & 수분 가득하고 시원하게 즐기는 스무디",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/18c109b8-f79b-4b83-9b36-38bb17e40b1f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003021"
+    },
+    {
+      "id": "ddangyo-1125745-30002681",
+      "name": "헬로카봇스타가디언케이크(21cm)",
+      "description": "헬로카봇 시즌 15의 메인 캐릭터! 스타가디언이 빅토리검을 활용해 전투하는 모습을 담은 초코 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/53f30d36-4895-4b18-9778-fd9d39b38944.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002681"
+    },
+    {
+      "id": "ddangyo-1125745-30002787",
+      "name": "피넛버터 크런치(340g)",
+      "description": "100% 땅콩으로만 만든 건강한 스프레드. 땅콩을 거칠게 갈아 고소한 원물이 느껴지는 ‘크런치‘ 타입의 피넛버터\n* 무첨가물 제품으로, 원물 특성상 실온보관시 오일층이 생길 수 있습니다. 개봉 후 잘 섞어 냉장 보관해주세요.",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/1e91d77e-653f-4d4d-85c4-06a7690ac7a6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002787"
+    },
+    {
+      "id": "ddangyo-1125745-30000234",
+      "name": "카페모카빵(소)",
+      "description": "진하고 부드러운 모카향 가득~ 우유나 커피와 함께하면 더욱 맛있는 뚜레쥬르 카페모카빵",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/0f1e2461-ee99-46fb-97d9-3a731bae8538.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000234"
+    },
+    {
+      "id": "ddangyo-1125745-30003053",
+      "name": "하츄핑의 하트 프린세스(18cm)",
+      "description": "달콤한 딸기크림 안에 촉촉한 초코시트와 초코크림으로 맛을 더한 제품으로, 프린세스 하츄핑 AI 영상 편지를 만들 수 있는 쿠폰이 동봉된 하트 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a0710530-eaf8-4c06-8f15-455409dc253e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003053"
+    },
+    {
+      "id": "ddangyo-1125745-30000267",
+      "name": "레몬에이드 (레귤러)",
+      "description": "진한 레몬농축액으로 만들어, 톡 쏘는 맛이 일품인 여름철 대표 음료 레몬에이드",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/51d5b8a4-76a6-49f3-8a1f-93ef50842f61.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000267"
+    },
+    {
+      "id": "ddangyo-1125745-30003016",
+      "name": "피넛 버터 선물세트",
+      "description": "100% 땅콩으로만 만든 건강한 스프레드! 2가지 타입의 피넛버터와 우드 나이프가 더해져 선물하기 좋은 세트 상품",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/224681a5-46f6-42fe-a12f-cafedf1e3340.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003016"
+    },
+    {
+      "id": "ddangyo-1125745-30002957",
+      "name": "하와이안 호스트 마우이 카라막스",
+      "description": "부드러운 밀크 초콜릿 코팅 안에 크리미한 카라멜과 마카다미아가 들어있는 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/c5907c0c-fd2a-4bbc-a8d7-759781278e52.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002957"
+    },
+    {
+      "id": "ddangyo-1125745-30002800",
+      "name": "삼색 양갱 세트 (디즈니)",
+      "description": "부드럽고 달달한 팥, 군고구마, 밤 맛의 양갱으로 구성된 선물 세트",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/da918314-4938-41df-beb6-5cf946d1ed11.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002800"
+    },
+    {
+      "id": "ddangyo-1125745-30002958",
+      "name": "하와이안 호스트 파운더스 컬렉션(밀크)",
+      "description": "부드러운 밀크 초콜릿 코팅 안에 고소한 마카다미아와 밀크 초콜릿이 가득 들어있는 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/775dc272-d444-4880-9bdf-8e2a8c224d18.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002958"
+    },
+    {
+      "id": "ddangyo-1125745-30003011",
+      "name": "다이아나핑과 이클립스핑의 매지컬 케이크(18cm)",
+      "description": "빙글빙글 돌아가는 다이아나핑 & 이클립스핑 아크릴 장식에 쿠앤크와 딸기 맛을 반반으로 담아 맛도 즐거움도 두 배로 커진 반반 생크림 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cbfcc1d3-a065-44a5-a94c-4aa34fec75c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003011"
+    },
+    {
+      "id": "ddangyo-1125745-30000268",
+      "name": "자몽에이드(레귤러)",
+      "description": "자몽과육이 톡톡터지는 시원한 탄산이 가득한 자몽에이드",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/0674b14f-be80-48c1-a929-6980eccea8ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000268"
+    },
+    {
+      "id": "ddangyo-1125745-30002386",
+      "name": "기본좋은 쌀 베이글",
+      "description": "국내산 쌀로 만든 쌀 탕종과 쌀 발효당으로 더 쫄깃하고 촉촉하게 구워낸 쌀 베이글",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/2e9689f4-b32a-47ca-9b25-92954cc01120.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002386"
+    },
+    {
+      "id": "ddangyo-1125745-30002802",
+      "name": "요거트 웨이퍼 샌드(디즈니)",
+      "description": "바삭바삭 얇게 구운 과자에 맛있는 요거트 크림이 샌드된 웨이퍼 샌드",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c5693c3d-4aea-40dc-b3d6-36e9641aba3f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002802"
+    },
+    {
+      "id": "ddangyo-1125745-30000074",
+      "name": "통밀후레쉬샌드위치",
+      "description": "부드러운 통밀브레드에 스모크햄과 치즈 신선한 야채가 어우러진 담백한 샌드위치",
+      "category": "샌드위치/샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/5e2aaeb1-5f6f-414b-9f6c-3ada7c702087.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000074"
+    },
+    {
+      "id": "ddangyo-1125745-30000269",
+      "name": "복숭아아이스티(레귤러)",
+      "description": "시원하게 즐기는 복숭아 홍차\n(총 카페인 함량 : R사이즈 12mg, L사이즈 17mg)\n어린이, 임산부, 카페인 민감자는 섭취에 주의해주시기 바랍니다.",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/42e5e09c-936e-4456-876e-1eb5963dfaa8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000269"
+    },
+    {
+      "id": "ddangyo-1125745-30002387",
+      "name": "기본좋은 올리브 베이글",
+      "description": "국내산 쌀 탕종과 발효당을 더한 반죽에 올리브를 더해 감칠맛은 더 올리고 쫄깃한 식감을 살려 구워낸 쌀 베이글",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/8cd5a2f6-a59b-47e0-8aed-dc24856af13f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002387"
+    },
+    {
+      "id": "ddangyo-1125745-30002819",
+      "name": "제주 한라봉차",
+      "description": "비타민C가 풍부한 제주산 한라봉 베이스로 달콤상큼하게 즐기는 과일차",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/268faa5a-82d7-41eb-ba87-0cef36f782d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002819"
+    },
+    {
+      "id": "ddangyo-1125745-30002603",
+      "name": "아벨로 밀크 헤이즐넛 초콜릿(하트형) 8구",
+      "description": "부드러운 식감과 고소한 견과류의 풍미를 동시에 느낄 수 있는 인기있는 헤이즐넛 하트형 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/62d6e0df-e56b-4c21-9006-251939206517.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002603"
+    },
+    {
+      "id": "ddangyo-1125745-30002803",
+      "name": "라즈베리 웨이퍼 샌드(디즈니)",
+      "description": "바삭바삭 얇게 구운 과자에 맛있는 라즈베리 크림이 샌드된 웨이퍼 샌드",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/b7f08b70-8c51-4b6a-af6b-cfdc2dc759f3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002803"
+    },
+    {
+      "id": "ddangyo-1125745-30002462",
+      "name": "백설공주_애플&망고케이크 (15cm)",
+      "description": "화이트 시트에 달콤한 애플 다이스와 애플 크림을 샌드하고 망고 크림으로 마무리해 드레스를 입은 백설공주를 표현한 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/c070af02-47dd-44b4-968f-7ddf0906e525.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002462"
+    },
+    {
+      "id": "ddangyo-1125745-30002820",
+      "name": "꿀배 모과차",
+      "description": "달콤한 배와 은은한 모과향으로 가을철 환절기에 즐기기 좋은 과일차",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/94947c2e-f900-444f-8a82-17c23ebc41bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002820"
+    },
+    {
+      "id": "ddangyo-1125745-30002804",
+      "name": "블루베리 요거트 웨이퍼 샌드(디즈니)",
+      "description": "바삭바삭 얇게 구운 과자에 맛있는 블루베리 요거트 크림이 샌드된 웨이퍼 샌드",
+      "category": "롤케이크/카스텔라/쿠키세트 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/a89e8d81-d3a8-4cd9-a256-6ccb28ea6d06.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002804"
+    },
+    {
+      "id": "ddangyo-1125745-30002604",
+      "name": "아벨로 밀크 헤이즐넛 초콜릿 12구",
+      "description": "부드러운 식감과 고소한 견과류의 풍미를 동시에 느낄 수 있는 인기있는 헤이즐넛 12구 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/ce046856-5a71-43de-8577-6b3b3a9b241e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002604"
+    },
+    {
+      "id": "ddangyo-1125745-30002579",
+      "name": "더 쫄깃해진 그때 그 도나쓰(5개입)",
+      "description": "국내산 쌀로 만든 쌀 탕종으로 더 부드럽고 쫄깃해진, 어릴 적 먹던 한입 쏙 미니 찹쌀 도나쓰",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/5a80f0dc-7e82-4a45-ab7b-dfbcbd104cbe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002579"
+    },
+    {
+      "id": "ddangyo-1125745-30002605",
+      "name": "아벨로 밀크 헤이즐넛 초콜릿 20구",
+      "description": "부드러운 식감과 고소한 견과류의 풍미를 동시에 느낄 수 있는 인기있는 헤이즐넛 20구 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/0a127da9-3e48-47cb-ae00-5c40543e9056.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002605"
+    },
+    {
+      "id": "ddangyo-1125745-30000076",
+      "name": "NEW아삭햄치즈패스트리",
+      "description": "고소한 패스트리에 아삭한 야채,햄과 치즈를 넣어 영양만점 한끼 식사 대용 샌드위치",
+      "category": "샌드위치/샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/251fe44c-b91d-4011-a51f-966b7d60b6d0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000076"
+    },
+    {
+      "id": "ddangyo-1125745-30002578",
+      "name": "쫄깃한 찹쌀도넛",
+      "description": "국내산 쌀로 만든 쌀 탕종으로 더 부드럽고 쫄깃해진 도넛 속 씹을수록 고소하고 달콤한 팥 앙금이 가득!",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/a38e9e6d-6b38-4e8a-82bb-92ce102241dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002578"
+    },
+    {
+      "id": "ddangyo-1125745-30002959",
+      "name": "벨라르도 헤이즐넛&초콜릿볼(16구)",
+      "description": "부드러운 식감과 고소한 견과류의 풍미를 동시에 느낄 수 있어 인기있는 헤이즐넛 16구 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/ede67186-fc92-400d-a81b-55423c49fc00.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002959"
+    },
+    {
+      "id": "ddangyo-1125745-30002633",
+      "name": "조청 왕꽈배기",
+      "description": "우리밀을 더해 더욱 부드럽고, 조청으로 은은한 단맛과 쌀크런치 토핑으로 씹는 재미까지 더한 추억의 왕꽈배기 (*우리밀 함유제품)",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7785a964-7fbd-4224-92a4-a57680c36db8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002633"
+    },
+    {
+      "id": "ddangyo-1125745-30002776",
+      "name": "바닐라 뚱카롱",
+      "description": "부드러운 바닐라 크림에 알록달록한 스프링클을 더한 바닐라 뚱카롱",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/1e1135db-01fe-4aaf-bb2d-670c6d1b510c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002776"
+    },
+    {
+      "id": "ddangyo-1125745-30002960",
+      "name": "벨라르도 헤이즐넛&초콜릿볼(21구)",
+      "description": "부드러운 식감과 고소한 견과류의 풍미를 동시에 느낄 수 있어 인기있는 헤이즐넛 21구 초콜릿",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/dc320884-7496-48aa-9c7b-9f72e28b3c19.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002960"
+    },
+    {
+      "id": "ddangyo-1125745-30002342",
+      "name": "생 초코초코 케이크(15cm)",
+      "description": "발로나 초콜릿으로 깊은 풍미가 느껴지는 초콜릿 케이크에 생크림을 듬뿍 올려 진하지만 부드러운 생 초콜릿 식감의 생크림 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/e3d4d1e0-d104-48b8-a7d9-25f4621cd98f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002342"
+    },
+    {
+      "id": "ddangyo-1125745-30000239",
+      "name": "옛날 꽈배기 도넛",
+      "description": "부드럽고 폭신한 식감의 달콤한 추억의 꽈배기",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/2f6a2af3-534e-42a7-b4f2-f467a3dad857.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000239"
+    },
+    {
+      "id": "ddangyo-1125745-30002704",
+      "name": "쿠키 바닐라 생크림 케이크(12cm)",
+      "description": "눈을 사로잡는 블랙 화이트 크림 레이어에 진하고 풍미깊은 가나슈와 달콤한 쿠키 크럼블을 샌딩한 바닐라 생크림 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/4ab2661d-3c6f-4faf-8a0e-971988690ce2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002704"
+    },
+    {
+      "id": "ddangyo-1125745-30000110",
+      "name": "필라델피아크림치즈플레인",
+      "description": "빵에 발라먹는 부드럽고 담백한 고급 크림치즈",
+      "category": "식사빵(빵&잼)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/c40252dc-85f1-4ee6-9387-0c20c5531e8b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000110"
+    },
+    {
+      "id": "ddangyo-1125745-30002777",
+      "name": "라즈베리 뚱카롱",
+      "description": "달콤한 라즈베리 크림에 딸기 다이스와 베리잼이 어우러진 뚱카롱",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/37f31216-8c0a-4436-9de1-df01520ef57f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002777"
+    },
+    {
+      "id": "ddangyo-1125745-30002962",
+      "name": "댄케이크 버터 쿠키_200g",
+      "description": "선물용으로 알맞은 부피감 있는 사이즈에 합리적인 가격의 버터 쿠키",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/7afef95b-7616-498c-8577-63f4bd4fb238.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002962"
+    },
+    {
+      "id": "ddangyo-1125745-30000240",
+      "name": "옛날 단팥 도넛",
+      "description": "부드럽고 폭신한 도넛 속 단팥 앙금이 듬뿍 들어있는 달콤한 추억의 도넛",
+      "category": "간식빵(단팥/도넛/기타)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/b2ced53c-7a81-4988-868c-57268ced7791.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000240"
+    },
+    {
+      "id": "ddangyo-1125745-30000360",
+      "name": "사르르 티라미수 생크림 쉬폰(11cm)",
+      "description": "풍미 좋은 커피시럽을 더한 푹신~한 모카쉬폰에 마스카포네 치즈 생크림 샌드하고 연유생크림으로 마무리한 티라미수 생크림 쉬폰",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/61965927-868b-4248-b103-d1d90204fbcc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000360"
+    },
+    {
+      "id": "ddangyo-1125745-30003018",
+      "name": "뚜레쥬르가만든오렌지주스(180ml)",
+      "description": "상큼한 오렌지 풍미가 가득한 뚜레쥬르만의 프리미엄 과일주스",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/1495dcda-b275-453b-82bc-c5847db25fbe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003018"
+    },
+    {
+      "id": "ddangyo-1125745-30002778",
+      "name": "쇼콜라 뚱카롱",
+      "description": "진한 초코 크림에 리얼 초코 가나슈를 더한 쇼콜라 뚱카롱",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/173f2974-2815-40e6-be28-85572456e65f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002778"
+    },
+    {
+      "id": "ddangyo-1125745-30000081",
+      "name": "V.E.L.T샌드위치",
+      "description": "담백하게 볶아낸 불고기에 아삭하고 신선한 토마토,계란,야채가 더해진 샌드위치",
+      "category": "샌드위치/샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/759a7a84-fc09-4e6b-8862-874cd2ee7140.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000081"
+    },
+    {
+      "id": "ddangyo-1125745-30002963",
+      "name": "댄케이크 초코 버터 쿠키_200g",
+      "description": "선물용으로 알맞은 부피감 있는 사이즈에 합리적인 가격의 초코 버터 쿠키",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/971ce9a7-ab27-4583-b9dd-09f5e008785f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002963"
+    },
+    {
+      "id": "ddangyo-1125745-30002779",
+      "name": "피스타치오 뚱카롱",
+      "description": "향긋한 피스타치오 크림에 로스팅한 피스타치오 다이스를 더한 뚱카롱",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/15553a6d-5b46-4c8f-9090-5cf8ccc90317.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002779"
+    },
+    {
+      "id": "ddangyo-1125745-30003019",
+      "name": "뚜레쥬르가만든사과주스(180ml)",
+      "description": "달콤한 사과 농축액이 들어간 뚜레쥬르만의 프리미엄 과일주스",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/61ce28c5-36b5-4838-b772-a4797c4afa1b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003019"
+    },
+    {
+      "id": "ddangyo-1125745-30002978",
+      "name": "캐빈디쉬더블프룻캔디(레몬)",
+      "description": "두 가지 맛을 한번에! 레몬 사탕 속 딸기 필링이 들어간 달콤 더블 프룻 캔디",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/6b34c037-1da7-492b-afb9-e04c11f1ad69.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002978"
+    },
+    {
+      "id": "ddangyo-1125745-30002330",
+      "name": "리얼브라우니",
+      "description": "다크초콜릿과 밀크초콜릿의 달콤한 맛을 느낄수 있는 쫀득한 식감의 브라우니",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/d7787405-9c31-4a3d-9a02-b1982e1bd4fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002330"
+    },
+    {
+      "id": "ddangyo-1125745-30002780",
+      "name": "리얼치즈브라우니",
+      "description": "달콤한 초코와 진한 크림치즈의 맛을 함께 느낄 수 있는 쫀득한 식감의 브라우니",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/49a7d3fb-6c12-44b1-af3d-5bd9a4717275.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002780"
+    },
+    {
+      "id": "ddangyo-1125745-30002621",
+      "name": "캐빈디쉬더블프룻캔디(체리)",
+      "description": "두 가지 맛을 한번에! 체리 사탕 속 라임 필링이 들어간 달콤 더블 프룻 캔디",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/e66354fd-f854-4569-b0e2-fa4b470a3a09.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002621"
+    },
+    {
+      "id": "ddangyo-1125745-30000283",
+      "name": "피지워터(500ml)",
+      "description": "부드러우면서도 고급스러운 맛이 특징이며, 다양한 미네랄 성분이 조화롭게 함유되어있는 프리미엄 천연암반수",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/1bdc1286-5af5-4035-b526-457f6fdfe54f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000283"
+    },
+    {
+      "id": "ddangyo-1125745-30002975",
+      "name": "캐빈디쉬 캔디(종합 과일)",
+      "description": "블랙베리, 레몬, 오렌지, 배, 체리 총 5가지 맛을 즐길 수 있는 캐빈디쉬 베스트셀러 캔디",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/0774a185-ae00-47b0-abf8-7778d2a7c740.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002975"
+    },
+    {
+      "id": "ddangyo-1125745-30003034",
+      "name": "우베치즈브라우니",
+      "description": "부드러운 크림치즈에 보랏빛 우베 한 스푼! 달콤한 화이트 초콜릿이 더해진 촉촉한 브라우니",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/7a647b9d-caec-41d0-99bb-ea2a1abfe346.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003034"
+    },
+    {
+      "id": "ddangyo-1125745-30002997",
+      "name": "더블초코 넛츠바",
+      "description": "캐슈넛, 아몬드, 땅콩에 달콤한 초코칩과 크리스피 볼을 넣은 고소한 초코 넛츠바",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/52a3884f-2d7a-4ad0-b9cf-5802dfb3e7e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002997"
+    },
+    {
+      "id": "ddangyo-1125745-30002976",
+      "name": "캐빈디쉬 하비 종합 과일 병 캔디_300g",
+      "description": "블랙베리, 레몬, 오렌지, 배, 체리 총 5가지 맛이 병에 들어 있어 선물로 좋은 캔디",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/01f7fee6-3902-4435-9188-4c15517bcba0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002976"
+    },
+    {
+      "id": "ddangyo-1125745-30002977",
+      "name": "캐빈디쉬 하비 종합 과일 병 캔디_966g",
+      "description": "블랙베리, 레몬, 오렌지, 배, 체리 총 5가지 맛이 부피감 있는 병에 들어 있어 선물로 좋은 캔디",
+      "category": "초콜릿/캔디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/f88b072b-de95-4c1d-a7a4-871c29abeac5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002977"
+    },
+    {
+      "id": "ddangyo-1125745-30002998",
+      "name": "크랜베리 넛츠바",
+      "description": "캐슈넛, 아몬드, 땅콩에 상큼한 크랜베리와 크리스피 볼을 넣은 고소한 넛츠바",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/dc478ce9-9abc-4796-8ea7-49e0a06d065d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002998"
+    },
+    {
+      "id": "ddangyo-1125745-30000325",
+      "name": "뚜레쥬르 초코칩머핀 (1봉)",
+      "description": "달콤한초코칩이 씹히는 진한 초코맛의 머핀",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/57445bae-2f95-4b15-ac51-4a3a5ef31805.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000325"
+    },
+    {
+      "id": "ddangyo-1125745-30003038",
+      "name": "리얼크림치즈머핀(1봉)",
+      "description": "부드럽고 촉촉하게 즐길 수 있는 크림치즈 머핀",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/cdddf58b-80de-41ad-81c7-1391a193bf43.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30003038"
+    },
+    {
+      "id": "ddangyo-1125745-30000327",
+      "name": "녹차 카스테라",
+      "description": "부드럽고 촉촉해 입안에서 살살 녹는 은은한 향의 녹차 카스테라",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/bb25f531-9264-4de8-ad19-1e3fec42d51d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000327"
+    },
+    {
+      "id": "ddangyo-1125745-30000328",
+      "name": "허니카스테라",
+      "description": "부드럽고 촉촉해 입안에서 살살 녹는 촉촉한 카스테라",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/aa118efc-1c91-4a0d-a68a-e349da9e4383.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000328"
+    },
+    {
+      "id": "ddangyo-1125745-30002702",
+      "name": "부드러운초코쉬폰 2호(18cm)",
+      "description": "달콤한 초코 가나슈와 초코 크림이 촉촉하고 폭신한 쉬폰과 만나 더욱 맛있어진 초코 쉬폰 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/937e5936-2b56-4ccb-bb40-a174ae045ad5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002702"
+    },
+    {
+      "id": "ddangyo-1125745-30002703",
+      "name": "부드러운블루베리쉬폰 2호(18cm)",
+      "description": "상큼한 블루베리 콤포트와 블루베리 크림이 촉촉하고 폭신한 쉬폰을 만나 더욱 맛있어진 블루베리 쉬폰 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7bbf80d8-4f82-4d7d-8bf5-7ffa6d1da4d0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002703"
+    },
+    {
+      "id": "ddangyo-1125745-30002343",
+      "name": "뚜레쥬르 올스타 케이크(18cm)",
+      "description": "복숭아, 고구마, 녹차, 초코, 4가지 베스트 케이크를 한번에! 입안이 더 즐거워지는 뚜레쥬르 올스타 케이크\n*상기 이미지는 계절 및 매장에 따라 디자인이 변경될 수 있습니다.",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/b0452eb2-bf71-4c4a-b07b-9880ffe2ac7d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002343"
+    },
+    {
+      "id": "ddangyo-1125745-30002344",
+      "name": "오,해피 복숭아 케이크(18cm)",
+      "description": "촉촉한 화이트시트에 아삭아삭한 복숭아와 복숭아 생크림을 샌드하여 향긋한 복숭아맛을 가득 느낄 수 있는 생크림 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/65d8a0ea-bfef-4c57-87e2-310eb5e814b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002344"
+    },
+    {
+      "id": "ddangyo-1125745-30002207",
+      "name": "헬로카봇 젤리스틱(사파리세이버)",
+      "description": "인기만점 헬로카봇 캐릭터인 사파리세이버 얼굴모양 딸기 젤리스틱",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/19de45c0-8d13-4dfb-867c-cceb9b9e1f3a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002207"
+    },
+    {
+      "id": "ddangyo-1125745-30000374",
+      "name": "오,해피 한라봉&오렌지 케이크(18cm)",
+      "description": "향긋한 한라봉 시트에 상큼한 오렌지와 한라봉맛 생크림을 샌드하여 입안 가득 상큼한 맛을 느낄 수 있는 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/d078816c-fc33-49da-9e93-70815fc5a44b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000374"
+    },
+    {
+      "id": "ddangyo-1125745-30002378",
+      "name": "더 고소한 호두 아몬드 케이크 (21cm)",
+      "description": "가을과 잘 어울리는 호두&아몬드 견과류 풍미를 담아 더 고소하게 즐기는 가을 신제품 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/6590a524-cc76-42c3-9a8d-5a3b69357f9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002378"
+    },
+    {
+      "id": "ddangyo-1125745-30002208",
+      "name": "헬로카봇 젤리스틱(펜타스톰X)",
+      "description": "인기만점 헬로카봇 캐릭터인 펜타스톰X 얼굴모양 오렌지 젤리스틱",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/31df283e-65c3-4243-94ba-c78f7b882ef2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002208"
+    },
+    {
+      "id": "ddangyo-1125745-30002346",
+      "name": "쇼콜라갸또(18cm)",
+      "description": "초코&블랙초코 시트에 진한 가나슈 초콜릿을 샌드하고 가나슈 초콜릿으로 코팅한 초코케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/b4fbca76-1425-4e24-83cd-b6390a6cf1b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002346"
+    },
+    {
+      "id": "ddangyo-1125745-30000335",
+      "name": "맛있게 뜯어먹는 순우유쉬폰",
+      "description": "국내산 우유와 달콤한 연유를 함유하여 더 촉촉하고 더 부드러운 쉬폰 케이크",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/36c0ad61-3f61-44dc-9918-425e2c56a0f2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000335"
+    },
+    {
+      "id": "ddangyo-1125745-30000749",
+      "name": "클래식 오브 치즈케이크(20cm)",
+      "description": "엄선한 자연치즈의 진한 풍미가 그대로 살아있는 부드럽고 촉촉한 수플레 타입의 클래식 치즈 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/61164239-6f85-4683-a0c1-52dd3d4eda21.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000749"
+    },
+    {
+      "id": "ddangyo-1125745-30000750",
+      "name": "진한 모카케이크(18cm)",
+      "description": "커피맛에 은은한 카라멜을 더해 부드럽고 달콤한 커피맛을 느낄수 있는 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/6dc423d7-6943-4753-9dc2-f729f8f9ada3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000750"
+    },
+    {
+      "id": "ddangyo-1125745-30002347",
+      "name": "진한 가나슈케이크(15cm)",
+      "description": "촉촉한 초코 시트에 진한 가나슈 크림을 샌드하고, 다양한 초콜릿 장식물로 풍성함까지 더한 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/9337d25c-bd68-45d8-90b2-7dfccb35ff76.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002347"
+    },
+    {
+      "id": "ddangyo-1125745-30002873",
+      "name": "클래식 밀크 초코 케이크 4호(25cm)",
+      "description": "진한 초코 크림에 밀크 초콜릿컬을 가득 토핑해 더욱 달콤해진 클래식 스타일 밀크 초코 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/4133ceeb-8056-4de6-bf20-4fcd030f7aac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002873"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1125745",
+    "sourceUrls": [
+      "https://bit.ly/tk-뚜레쥬르여수여서점",
+      "https://fdofd.ddangyo.com/gateway1.html?CXC0vRX"
+    ],
+    "rawItemCount": 233,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

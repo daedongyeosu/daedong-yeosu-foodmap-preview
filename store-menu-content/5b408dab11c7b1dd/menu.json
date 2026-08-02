@@ -1,0 +1,411 @@
+{
+  "storeId": "5b408dab11c7b1dd",
+  "storeName": "케이키팩토리",
+  "displayName": "케이키팩토리",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/1e785e95-6aa5-4ac9-84ec-17933d01ebce.jpg",
+  "categories": [
+    "전체",
+    "에그타르트(Egg tart)",
+    "휘낭시에(Financier)",
+    "브라우니 (Brownie)",
+    "두바이 디저트(Dubai)",
+    "티그레(Tigre)",
+    "사이드 디저트",
+    "유행디저트",
+    "디저트 세트 상품(Set)",
+    "케이크"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216479-10000023",
+      "name": "바닐라 에그타르트",
+      "description": "",
+      "category": "에그타르트(Egg tart)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/78e2ac74-d9ad-4470-be69-cbded0597232.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1216479-10000004",
+      "name": "플레인 휘낭시에",
+      "description": "구움과자의 근본. 기본중의 기본. 클래식함의 끝\n플레인 휘낭시에 입니다",
+      "category": "휘낭시에(Financier)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/14de45dd-4031-4b66-8f2f-acd0e642797a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1216479-10000005",
+      "name": "로투스 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/4a0c9e2a-284e-48e8-9a9f-5d5d1ceda1f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1216479-10000019",
+      "name": "꾸덕 발로나 초코 브라우니",
+      "description": "",
+      "category": "브라우니 (Brownie)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1216479-10000020",
+      "name": "두바이 초콜릿",
+      "description": "",
+      "category": "두바이 디저트(Dubai)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1216479-10000024",
+      "name": "바닐라 티그레",
+      "description": "",
+      "category": "티그레(Tigre)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1216479-10000025",
+      "name": "휘낭시에 러스크",
+      "description": "(맛 섞여있어요 특정 맛 지정불가합니다)",
+      "category": "사이드 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1216479-10000021",
+      "name": "두바이 휘낭시에",
+      "description": "",
+      "category": "두바이 디저트(Dubai)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1216479-10000040",
+      "name": "초코나무숲 브라우니",
+      "description": "",
+      "category": "브라우니 (Brownie)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1216479-10000042",
+      "name": "두바이초코타르트",
+      "description": "",
+      "category": "에그타르트(Egg tart)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1216479-10000043",
+      "name": "사브레 쿠키",
+      "description": "",
+      "category": "사이드 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1216479-10000096",
+      "name": "두바이 브라우니 샌드",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1216479-10000003",
+      "name": "저녁먹고 두바이 세트( 3종 )",
+      "description": "두바이 초콜릿 + 두바이 휘낭시에 + 두바이 티그레",
+      "category": "디저트 세트 상품(Set)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1216479-10000006",
+      "name": "오레오 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1216479-10000022",
+      "name": "두바이 티그레",
+      "description": "",
+      "category": "두바이 디저트(Dubai)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1216479-10000049",
+      "name": "바닐라 에그타르트 6구 / 할인가",
+      "description": "",
+      "category": "에그타르트(Egg tart)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1216479-10000097",
+      "name": "초코바나나 샌드",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1216479-10000007",
+      "name": "프렛젤 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1216479-10000059",
+      "name": "치즈초코 브라우니",
+      "description": "",
+      "category": "브라우니 (Brownie)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1216479-10000062",
+      "name": "두바이 쫀득쿠키(마시멜로우)",
+      "description": "갯수제한X",
+      "category": "두바이 디저트(Dubai)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1216479-10000100",
+      "name": "피스타치오 두바이  샌드",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000100"
+    },
+    {
+      "id": "ddangyo-1216479-10000008",
+      "name": "딥초코 휘낭시에",
+      "description": "(사진X- 사진속 휘낭시에는 솔티초코 )\n딥초코는  전체 초코입니다",
+      "category": "휘낭시에(Financier)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/0af3c0e9-9f24-44ce-9630-cad44116ba50.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1216479-10000098",
+      "name": "샤인머스켓 떠먹케 BEST",
+      "description": "",
+      "category": "케이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1216479-10000101",
+      "name": "복숭아 요거 치즈 샌드",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1216479-10000009",
+      "name": "아몬드 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/eef930db-027d-4161-868c-dc891eb6e47d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1216479-10000085",
+      "name": "흑임자 카다이프 브라우니",
+      "description": "",
+      "category": "브라우니 (Brownie)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1216479-10000099",
+      "name": "양쯔깐루 (우유크림) HOT맛나요!",
+      "description": "",
+      "category": "케이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000099"
+    },
+    {
+      "id": "ddangyo-1216479-10000102",
+      "name": "블루베리요거트 샌드",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000102"
+    },
+    {
+      "id": "ddangyo-1216479-10000010",
+      "name": "레몬 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1216479-10000088",
+      "name": "쑥 떡 쑥떡 브라우니",
+      "description": "",
+      "category": "브라우니 (Brownie)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1216479-10000103",
+      "name": "요거트 샤인머스켓",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    },
+    {
+      "id": "ddangyo-1216479-10000011",
+      "name": "코코넛 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/05d4c4fd-d5d1-4622-8079-d5b81c52bb67.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1216479-10000104",
+      "name": "요거 메론 치즈 샌드",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000104"
+    },
+    {
+      "id": "ddangyo-1216479-10000012",
+      "name": "솔티초코 휘낭시에",
+      "description": "솔티초코는 막대 2개 초코 스틱이 있습니다 \n사진속 휘낭시에는 딥초코입니다",
+      "category": "휘낭시에(Financier)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f9e801d3-c55a-49f0-83b7-fb4f5e3f19e7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1216479-10000067",
+      "name": "쫀득쿠키 ( 오레오+초코)",
+      "description": "",
+      "category": "사이드 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1216479-10000106",
+      "name": "씬 초코 쿠키",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000106"
+    },
+    {
+      "id": "ddangyo-1216479-10000013",
+      "name": "크림치즈 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1216479-10000068",
+      "name": "쫀득쿠키 (말차)",
+      "description": "",
+      "category": "사이드 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    },
+    {
+      "id": "ddangyo-1216479-10000107",
+      "name": "얼그레이 무화과 샌드",
+      "description": "",
+      "category": "유행디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000107"
+    },
+    {
+      "id": "ddangyo-1216479-10000014",
+      "name": "무화과 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b8a59a85-7f53-41eb-b388-ac665d009195.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1216479-10000015",
+      "name": "고구마 휘낭시에",
+      "description": "",
+      "category": "휘낭시에(Financier)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1216479-10000105",
+      "name": "두바이 스프레드",
+      "description": "",
+      "category": "두바이 디저트(Dubai)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000105"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216479",
+    "sourceUrls": [
+      "https://bit.ly/tk-케이키팩토리",
+      "https://fdofd.ddangyo.com/gateway1.html?ZNWT7x7"
+    ],
+    "rawItemCount": 45,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

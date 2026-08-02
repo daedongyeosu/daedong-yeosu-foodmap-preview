@@ -1,0 +1,291 @@
+{
+  "storeId": "13c8e99cd1a7d7a1",
+  "storeName": "하나옛날통닭 문수점",
+  "displayName": "하나옛날통닭 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/72d883cb-9b7f-47c4-88f5-81e006c01d9c.jpg",
+  "categories": [
+    "전체",
+    "옛날통닭 메뉴",
+    "사이드메뉴",
+    "조각닭 메뉴",
+    "추가메뉴",
+    "음료메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1135861-10000003",
+      "name": "옛날통닭 두마리",
+      "description": "",
+      "category": "옛날통닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/1e058916-6531-4ed0-a264-ce7a2802f703.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1135861-10000002",
+      "name": "옛날통닭 한마리",
+      "description": "",
+      "category": "옛날통닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3a738d0e-23b6-47cf-a0ad-59c98689ae80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1135861-10000012",
+      "name": "똥집튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4dc160e8-e402-483b-9b6b-c36e22bead89.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1135861-10000004",
+      "name": "후라이드",
+      "description": "",
+      "category": "조각닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/3b33b34c-c028-4fe6-8391-1d640f8edd34.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1135861-10000017",
+      "name": "무",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1135861-10000022",
+      "name": "콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1135861-90000001",
+      "name": "생맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1135861-10000005",
+      "name": "간장치킨",
+      "description": "",
+      "category": "조각닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/19145462-6d2d-4615-9a5c-c465e4535cb2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1135861-10000013",
+      "name": "닭발튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/00b04381-e8fa-4b63-86c4-dfc938c17d42.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1135861-10000018",
+      "name": "양배추 샐러드",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1135861-10000031",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1135861-90000002",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1135861-10000006",
+      "name": "양념치킨",
+      "description": "",
+      "category": "조각닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d189ca5b-59c8-404b-bb84-dcea616e2a77.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1135861-10000014",
+      "name": "똥집+닭발",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1135861-10000019",
+      "name": "고추핫소스",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1135861-10000023",
+      "name": "환타 파인",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1135861-90000003",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1135861-10000007",
+      "name": "매운양념",
+      "description": "",
+      "category": "조각닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/4a6ccae3-5018-4abe-b5e4-8e6b37ab564d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1135861-10000015",
+      "name": "새우튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/0a8fc78e-0a45-4c35-a246-ea14457cc484.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1135861-10000020",
+      "name": "치킨양념",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1135861-10000024",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1135861-90000004",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1135861-10000008",
+      "name": "반반",
+      "description": "후라이드반 +간장or매운or양념 반中 택1",
+      "category": "조각닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1135861-10000021",
+      "name": "겨자소스",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1135861-90000005",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1135861-10000009",
+      "name": "닭강정",
+      "description": "",
+      "category": "조각닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1135861-90000006",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1135861-10000010",
+      "name": "닭다리",
+      "description": "",
+      "category": "조각닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/9a777e29-7061-49a9-b4e4-a372290988c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1135861-10000011",
+      "name": "윙봉",
+      "description": "",
+      "category": "조각닭 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c6ff8cd9-87f7-462e-b67d-3c747bef2625.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1135861",
+    "sourceUrls": [
+      "https://bit.ly/3NO4ETU",
+      "https://fdofd.ddangyo.com/gateway1.html?KVESHip"
+    ],
+    "rawItemCount": 32,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

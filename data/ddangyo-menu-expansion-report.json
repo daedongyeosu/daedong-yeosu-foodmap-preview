@@ -1,0 +1,943 @@
+{
+  "generatedAt": "2026-08-02T13:42:49.831Z",
+  "previousMapCount": 446,
+  "generatedCount": 152,
+  "finalMapCount": 598,
+  "protectedLegacyIds": [
+    "a089d1d54720b48e",
+    "2f4c3cfb0866c4a4",
+    "dc638b23f8cf3c5b",
+    "7bc7239e6b509c44"
+  ],
+  "rejectedCrossStoreIds": [
+    "fa0bccb2d190a7c0",
+    "8d9df0fbb77ce9eb",
+    "9f89e6d7784cf4a2"
+  ],
+  "unresolved": [
+    {
+      "storeId": "08e5e26653436fef",
+      "storeName": "알토랑반찬 여수문수본점",
+      "error": "not-ddangyo-gateway:https://bit.ly/tk-%EC%95%8C%ED%86%A0%EB%9E%91%EB%B0%98%EC%B0%AC%EC%97%AC%EC%88%98%EB%AC%B8%EC%88%98%EB%B3%B8%EC%A0%90"
+    },
+    {
+      "storeId": "b016e6c2fc4217ea",
+      "storeName": "요아정 여수여서점",
+      "error": "gateway-code-missing:https://fdofd.ddangyo.com/gateway1.html"
+    }
+  ],
+  "generated": [
+    {
+      "storeId": "c97c66bc78a649ea",
+      "storeName": "교촌치킨 둔덕점",
+      "itemCount": 107,
+      "patstoNo": "1187217"
+    },
+    {
+      "storeId": "4b5980481e1d5f41",
+      "storeName": "박스터지는 두마리치킨 여수문수점",
+      "itemCount": 40,
+      "patstoNo": "1304058"
+    },
+    {
+      "storeId": "9407e6bd4e71b539",
+      "storeName": "수원왕갈비통닭 여서점",
+      "itemCount": 35,
+      "patstoNo": "1273822"
+    },
+    {
+      "storeId": "19ae04f80e0e3ba6",
+      "storeName": "순살 참잘튀기는집 여수점(여서동)",
+      "itemCount": 62,
+      "patstoNo": "1202217"
+    },
+    {
+      "storeId": "0df36c0ba138ac89",
+      "storeName": "제육대패 문수점",
+      "itemCount": 54,
+      "patstoNo": "1259761"
+    },
+    {
+      "storeId": "5768a9d8a72502ef",
+      "storeName": "조선제일 감자탕&뼈해장국 여서점",
+      "itemCount": 12,
+      "patstoNo": "1219681"
+    },
+    {
+      "storeId": "2857b7140087f6ab",
+      "storeName": "치코두마리파닭 여서점",
+      "itemCount": 106,
+      "patstoNo": "1202198"
+    },
+    {
+      "storeId": "0eea4a740e820fd3",
+      "storeName": "타코아찌 타코야끼전문점 문수점",
+      "itemCount": 45,
+      "patstoNo": "1164186"
+    },
+    {
+      "storeId": "a037743d0ee273e2",
+      "storeName": "정성집밥",
+      "itemCount": 26,
+      "patstoNo": "1316775"
+    },
+    {
+      "storeId": "cfde2617224f33a0",
+      "storeName": "콩산소 (음식 연구소)",
+      "itemCount": 45,
+      "patstoNo": "1136055"
+    },
+    {
+      "storeId": "dba6beeeb774318f",
+      "storeName": "베트남쌀국수 123 ZO",
+      "itemCount": 22,
+      "patstoNo": "1218502"
+    },
+    {
+      "storeId": "ba870ddfedb99508",
+      "storeName": "본죽&비빔밥 여수미평점",
+      "itemCount": 75,
+      "patstoNo": "1279791"
+    },
+    {
+      "storeId": "ddc27f852308889a",
+      "storeName": "본죽 여수국동점",
+      "itemCount": 65,
+      "patstoNo": "1280604"
+    },
+    {
+      "storeId": "1921d1d5c7710872",
+      "storeName": "모두의 죽 교동점(영업시간06시~02시까지)",
+      "itemCount": 34,
+      "patstoNo": "1176178"
+    },
+    {
+      "storeId": "0ad5341dc696d4f1",
+      "storeName": "맛있는 반찬",
+      "itemCount": 122,
+      "patstoNo": "1310278"
+    },
+    {
+      "storeId": "d409f6d9118b7bad",
+      "storeName": "황금손 반찬",
+      "itemCount": 100,
+      "patstoNo": "1328484"
+    },
+    {
+      "storeId": "84c118675c0caa4c",
+      "storeName": "바오탕수 여서점",
+      "itemCount": 45,
+      "patstoNo": "1176199"
+    },
+    {
+      "storeId": "d86586aaef8454c9",
+      "storeName": "조선밀면&냉면 여수여서점",
+      "itemCount": 34,
+      "patstoNo": "1176198"
+    },
+    {
+      "storeId": "068b2ae8fe32874a",
+      "storeName": "1인피자 피자먹다 여수여서점",
+      "itemCount": 74,
+      "patstoNo": "1131475"
+    },
+    {
+      "storeId": "fb798d3119a28415",
+      "storeName": "60계치킨 여수미평점",
+      "itemCount": 95,
+      "patstoNo": "1175761"
+    },
+    {
+      "storeId": "f0f1211ec16d7730",
+      "storeName": "88시장버거 여수신월점",
+      "itemCount": 35,
+      "patstoNo": "1220116"
+    },
+    {
+      "storeId": "361f855efc21c1c2",
+      "storeName": "가마치통닭 여서점",
+      "itemCount": 53,
+      "patstoNo": "1227008"
+    },
+    {
+      "storeId": "0f82d1d73f86371d",
+      "storeName": "가마치통닭 여수전남대점",
+      "itemCount": 53,
+      "patstoNo": "1242740"
+    },
+    {
+      "storeId": "7432d966de3f75ab",
+      "storeName": "감탄떡볶이 문수점",
+      "itemCount": 40,
+      "patstoNo": "1219409"
+    },
+    {
+      "storeId": "e57c51a4f6294349",
+      "storeName": "계근상 여수본점(문수동)",
+      "itemCount": 22,
+      "patstoNo": "1280754"
+    },
+    {
+      "storeId": "f6d0e57091aa21ab",
+      "storeName": "굽네치킨&피자 문수점",
+      "itemCount": 113,
+      "patstoNo": "1117239"
+    },
+    {
+      "storeId": "0836fdf722805702",
+      "storeName": "굽네치킨&피자 여수미평점",
+      "itemCount": 85,
+      "patstoNo": "1116909"
+    },
+    {
+      "storeId": "895a9425dc41ddf7",
+      "storeName": "금성칡냉면 미평점",
+      "itemCount": 8,
+      "patstoNo": "1224730"
+    },
+    {
+      "storeId": "450eb70e506c2de9",
+      "storeName": "금쪽갈비 여수점",
+      "itemCount": 15,
+      "patstoNo": "1230468"
+    },
+    {
+      "storeId": "f499191f0f57acc7",
+      "storeName": "기영이 숯불두마리치킨 여수여서점",
+      "itemCount": 67,
+      "patstoNo": "1204600"
+    },
+    {
+      "storeId": "cb6098165692c227",
+      "storeName": "김치찜은 못참지 미평점",
+      "itemCount": 28,
+      "patstoNo": "1216925"
+    },
+    {
+      "storeId": "ec69425551829f69",
+      "storeName": "까치식당 문수점",
+      "itemCount": 8,
+      "patstoNo": "1289260"
+    },
+    {
+      "storeId": "10b54f62f36e9854",
+      "storeName": "내조국 국밥 여수관문점",
+      "itemCount": 25,
+      "patstoNo": "1232420"
+    },
+    {
+      "storeId": "884d23981fd2429a",
+      "storeName": "네네치킨 둔덕미평점",
+      "itemCount": 58,
+      "patstoNo": "1195676"
+    },
+    {
+      "storeId": "a93abf2f62c2dd79",
+      "storeName": "노랑통닭 여수봉산점",
+      "itemCount": 57,
+      "patstoNo": "1267505"
+    },
+    {
+      "storeId": "83efed7d2768d111",
+      "storeName": "늘 커피",
+      "itemCount": 34,
+      "patstoNo": "1244259"
+    },
+    {
+      "storeId": "0d3062d5a5b94697",
+      "storeName": "다기야치킨 여문점",
+      "itemCount": 39,
+      "patstoNo": "1218475"
+    },
+    {
+      "storeId": "9e0a2da7ddfa3d93",
+      "storeName": "다정아구 미평",
+      "itemCount": 5,
+      "patstoNo": "1216935"
+    },
+    {
+      "storeId": "8a219b158c321627",
+      "storeName": "닭가대표 숯불직화구이치킨 여수대표점",
+      "itemCount": 46,
+      "patstoNo": "1137952"
+    },
+    {
+      "storeId": "eb850ecfb17945a7",
+      "storeName": "당빙땡 여수점",
+      "itemCount": 94,
+      "patstoNo": "1312282"
+    },
+    {
+      "storeId": "f31d8c5f04fb7b79",
+      "storeName": "대박난쪽갈비 여수점",
+      "itemCount": 14,
+      "patstoNo": "1231597"
+    },
+    {
+      "storeId": "5fd5f9ecd8251999",
+      "storeName": "대박삼겹김치찜",
+      "itemCount": 28,
+      "patstoNo": "1219915"
+    },
+    {
+      "storeId": "406b4a0b39f729fc",
+      "storeName": "대정식당 미평점",
+      "itemCount": 15,
+      "patstoNo": "1216977"
+    },
+    {
+      "storeId": "452526604d3b10c4",
+      "storeName": "더벤티 미평점",
+      "itemCount": 238,
+      "patstoNo": "1306057"
+    },
+    {
+      "storeId": "45dc9cf61ba55263",
+      "storeName": "덮덮밥 미평점",
+      "itemCount": 29,
+      "patstoNo": "1222912"
+    },
+    {
+      "storeId": "1ecbe36dd1efafed",
+      "storeName": "돈치킨 여수둔덕봉계점",
+      "itemCount": 43,
+      "patstoNo": "1292494"
+    },
+    {
+      "storeId": "9fb6e32d9f70edc1",
+      "storeName": "두찜 여수 봉계점",
+      "itemCount": 73,
+      "patstoNo": "1169819"
+    },
+    {
+      "storeId": "2dda90913b0b1a4c",
+      "storeName": "두찜 여수국동점",
+      "itemCount": 63,
+      "patstoNo": "1269274"
+    },
+    {
+      "storeId": "996f54c7c66ec979",
+      "storeName": "등뼈감자탕 미평점",
+      "itemCount": 19,
+      "patstoNo": "1170019"
+    },
+    {
+      "storeId": "d6602c793047b361",
+      "storeName": "뚜레쥬르 여수미평점",
+      "itemCount": 381,
+      "patstoNo": "1125372"
+    },
+    {
+      "storeId": "30d2edbcabcca6ec",
+      "storeName": "뚜레쥬르 여수여서점",
+      "itemCount": 230,
+      "patstoNo": "1125745"
+    },
+    {
+      "storeId": "3a6078da746f1953",
+      "storeName": "라홍방마라탕 문수점",
+      "itemCount": 15,
+      "patstoNo": "1208725"
+    },
+    {
+      "storeId": "cfe1c17e1840e7d3",
+      "storeName": "라홍방마라탕 여수미평점",
+      "itemCount": 21,
+      "patstoNo": "1219139"
+    },
+    {
+      "storeId": "f7167d017e7368e7",
+      "storeName": "롤링파스타 여서점",
+      "itemCount": 62,
+      "patstoNo": "1233611"
+    },
+    {
+      "storeId": "cabd6b395f6099e2",
+      "storeName": "롯데리아 국동점",
+      "itemCount": 111,
+      "patstoNo": "1260207"
+    },
+    {
+      "storeId": "6092aabddf5f7194",
+      "storeName": "롯데리아 중앙점",
+      "itemCount": 111,
+      "patstoNo": "1132406"
+    },
+    {
+      "storeId": "2bd8ea8779f87995",
+      "storeName": "리얼펍살얼음맥주 여수문수점",
+      "itemCount": 63,
+      "patstoNo": "1272402"
+    },
+    {
+      "storeId": "27ea3ca86eab89ec",
+      "storeName": "린차이나(먹깨비,땡겨요로 주문시 만두 서비스!!!)",
+      "itemCount": 78,
+      "patstoNo": "1329005"
+    },
+    {
+      "storeId": "ce5dccb3d6031316",
+      "storeName": "마선생 얼큰국밥",
+      "itemCount": 46,
+      "patstoNo": "1137996"
+    },
+    {
+      "storeId": "10db3b0db6ebf8c5",
+      "storeName": "맘스터치 문수점",
+      "itemCount": 72,
+      "patstoNo": "1137372"
+    },
+    {
+      "storeId": "1d729c41283c6026",
+      "storeName": "맘스터치 여수미평점",
+      "itemCount": 87,
+      "patstoNo": "1137375"
+    },
+    {
+      "storeId": "039652f6eff5f6d7",
+      "storeName": "맛집남도밀면",
+      "itemCount": 7,
+      "patstoNo": "1216938"
+    },
+    {
+      "storeId": "92c0c6cc2688ef0d",
+      "storeName": "미미꼬마김밥 여서점",
+      "itemCount": 18,
+      "patstoNo": "1221801"
+    },
+    {
+      "storeId": "7a151d290e01dc51",
+      "storeName": "미치게 본점",
+      "itemCount": 13,
+      "patstoNo": "1135899"
+    },
+    {
+      "storeId": "00720e7025646b7f",
+      "storeName": "미평햄버거 본점",
+      "itemCount": 30,
+      "patstoNo": "1133475"
+    },
+    {
+      "storeId": "720bbd7fb87816a7",
+      "storeName": "반올림피자 여수미평점",
+      "itemCount": 83,
+      "patstoNo": "1229557"
+    },
+    {
+      "storeId": "6286966a0169a76b",
+      "storeName": "배스킨라빈스 여수미평점",
+      "itemCount": 196,
+      "patstoNo": "1180380"
+    },
+    {
+      "storeId": "6c3386fc9f4a5b5b",
+      "storeName": "백수초밥",
+      "itemCount": 80,
+      "patstoNo": "1229072"
+    },
+    {
+      "storeId": "40c638502decc604",
+      "storeName": "백억 흑미 꼬마김밥",
+      "itemCount": 16,
+      "patstoNo": "1190857"
+    },
+    {
+      "storeId": "7c03a236a9c011b4",
+      "storeName": "봉구스밥버거 문수점",
+      "itemCount": 95,
+      "patstoNo": "1198511"
+    },
+    {
+      "storeId": "8d36892e33e3536b",
+      "storeName": "봉명동내커피 여수문수점",
+      "itemCount": 179,
+      "patstoNo": "1200597"
+    },
+    {
+      "storeId": "ba73ff085a9fe8a1",
+      "storeName": "부대찌개 전쟁터",
+      "itemCount": 28,
+      "patstoNo": "1241405"
+    },
+    {
+      "storeId": "c1a35b0c8903cd57",
+      "storeName": "북촌손만두&피냉면 여수문수점",
+      "itemCount": 45,
+      "patstoNo": "1301368"
+    },
+    {
+      "storeId": "450856a6b5fd4846",
+      "storeName": "비비큐 여수여서점",
+      "itemCount": 107,
+      "patstoNo": "1269182"
+    },
+    {
+      "storeId": "29413e4ca86793cf",
+      "storeName": "빙동댕 여수문수점",
+      "itemCount": 56,
+      "patstoNo": "1239770"
+    },
+    {
+      "storeId": "f14bc5ec109f3af0",
+      "storeName": "빵빵김밥 여서점",
+      "itemCount": 24,
+      "patstoNo": "1131747"
+    },
+    {
+      "storeId": "8d21bc80dd49679e",
+      "storeName": "빵위에치즈 여수점",
+      "itemCount": 52,
+      "patstoNo": "1164182"
+    },
+    {
+      "storeId": "aa0a00258c22f377",
+      "storeName": "뽕뜨락피자 여수여서점",
+      "itemCount": 52,
+      "patstoNo": "1131478"
+    },
+    {
+      "storeId": "9509311543276bbf",
+      "storeName": "삼첩분식 미평점",
+      "itemCount": 48,
+      "patstoNo": "1205978"
+    },
+    {
+      "storeId": "90cd1600c54ce7d0",
+      "storeName": "서영이네김밥 미평점",
+      "itemCount": 47,
+      "patstoNo": "1196603"
+    },
+    {
+      "storeId": "6daf3c1e0dfb68fe",
+      "storeName": "서울깍두기 미평직영점",
+      "itemCount": 30,
+      "patstoNo": "1166860"
+    },
+    {
+      "storeId": "944533e323d7707e",
+      "storeName": "서울해장국",
+      "itemCount": 6,
+      "patstoNo": "1194824"
+    },
+    {
+      "storeId": "a2f437f54b756898",
+      "storeName": "소풍 미평점",
+      "itemCount": 53,
+      "patstoNo": "1138450"
+    },
+    {
+      "storeId": "67a9e4f14c8c7ea4",
+      "storeName": "손수김밥 양지점",
+      "itemCount": 94,
+      "patstoNo": "1211956"
+    },
+    {
+      "storeId": "c59a5a8f5a91ce24",
+      "storeName": "수해복마라탕 여수미평점",
+      "itemCount": 9,
+      "patstoNo": "1174914"
+    },
+    {
+      "storeId": "1945b6a42e0da33c",
+      "storeName": "쉐프의 생 안심탕수육 문수점",
+      "itemCount": 19,
+      "patstoNo": "1164184"
+    },
+    {
+      "storeId": "8d9e961a6ffd106f",
+      "storeName": "쑝쑝돈까스 여수미평점",
+      "itemCount": 63,
+      "patstoNo": "1175209"
+    },
+    {
+      "storeId": "4d45e2363f0a18dd",
+      "storeName": "아구회관",
+      "itemCount": 7,
+      "patstoNo": "1216868"
+    },
+    {
+      "storeId": "cea43a5971a17628",
+      "storeName": "아주커치킨 미평점",
+      "itemCount": 52,
+      "patstoNo": "1133375"
+    },
+    {
+      "storeId": "da8665eac406cc04",
+      "storeName": "앨리스토리커피",
+      "itemCount": 52,
+      "patstoNo": "1220215"
+    },
+    {
+      "storeId": "170c2c5b7b5a24c1",
+      "storeName": "양지골수육",
+      "itemCount": 17,
+      "patstoNo": "1168376"
+    },
+    {
+      "storeId": "a60a8b15c1648b9b",
+      "storeName": "여수 돌산 꽈배기",
+      "itemCount": 37,
+      "patstoNo": "1238275"
+    },
+    {
+      "storeId": "b878080708bef825",
+      "storeName": "여수싱싱회&육회 문수본점",
+      "itemCount": 13,
+      "patstoNo": "1138455"
+    },
+    {
+      "storeId": "6739ddf6736ef934",
+      "storeName": "여수하늘",
+      "itemCount": 51,
+      "patstoNo": "1233303"
+    },
+    {
+      "storeId": "115416d8f8939ff3",
+      "storeName": "여정식당 여문점",
+      "itemCount": 9,
+      "patstoNo": "1299826"
+    },
+    {
+      "storeId": "4e5bc543b1be9f22",
+      "storeName": "역전할머니맥주 봉산점",
+      "itemCount": 54,
+      "patstoNo": "1235257"
+    },
+    {
+      "storeId": "a4eec3c764528112",
+      "storeName": "역전할머니맥주 여수미평점",
+      "itemCount": 82,
+      "patstoNo": "1284213"
+    },
+    {
+      "storeId": "9949709e121ff949",
+      "storeName": "연변양꼬치구이 미평점",
+      "itemCount": 52,
+      "patstoNo": "1310336"
+    },
+    {
+      "storeId": "a8218795099e637e",
+      "storeName": "오늘은 오므라이스 여수점",
+      "itemCount": 64,
+      "patstoNo": "1272994"
+    },
+    {
+      "storeId": "48033be58064b50c",
+      "storeName": "오븐에꾸운닭 여문점",
+      "itemCount": 37,
+      "patstoNo": "1175814"
+    },
+    {
+      "storeId": "b05ef0b1b1774d35",
+      "storeName": "올떡볶이 여수봉계점",
+      "itemCount": 35,
+      "patstoNo": "1221880"
+    },
+    {
+      "storeId": "3bfcc2140b2e0e0c",
+      "storeName": "요거트월드 여서점",
+      "itemCount": 90,
+      "patstoNo": "1279158"
+    },
+    {
+      "storeId": "c2aa469b555fbbf7",
+      "storeName": "요이참치 여수점",
+      "itemCount": 44,
+      "patstoNo": "1239878"
+    },
+    {
+      "storeId": "b1995040582014bf",
+      "storeName": "용우동 여서점",
+      "itemCount": 41,
+      "patstoNo": "1216862"
+    },
+    {
+      "storeId": "a4aaeb8049d4e9f9",
+      "storeName": "우쿠야 여수여서점",
+      "itemCount": 62,
+      "patstoNo": "1283726"
+    },
+    {
+      "storeId": "b6d8f721f526761f",
+      "storeName": "원할머니보쌈족발 여수여서점",
+      "itemCount": 44,
+      "patstoNo": "1257937"
+    },
+    {
+      "storeId": "2fb0f76b3d55052b",
+      "storeName": "윤가네 선어",
+      "itemCount": 19,
+      "patstoNo": "1216870"
+    },
+    {
+      "storeId": "52aac4b5adef4d89",
+      "storeName": "을찌로국물떡볶이 국동점",
+      "itemCount": 71,
+      "patstoNo": "1134614"
+    },
+    {
+      "storeId": "c26995210f249627",
+      "storeName": "응큼떡볶이 여수점",
+      "itemCount": 97,
+      "patstoNo": "1214477"
+    },
+    {
+      "storeId": "e412d7dea107cc59",
+      "storeName": "이디야커피 국동점",
+      "itemCount": 237,
+      "patstoNo": "1240667"
+    },
+    {
+      "storeId": "4ec7dd8e93675267",
+      "storeName": "이모야분식",
+      "itemCount": 28,
+      "patstoNo": "1135872"
+    },
+    {
+      "storeId": "11442d3b3328f951",
+      "storeName": "인생아구찜 여수문수점",
+      "itemCount": 58,
+      "patstoNo": "1176615"
+    },
+    {
+      "storeId": "75b59b6f39651fc8",
+      "storeName": "자담치킨 여수미평점",
+      "itemCount": 157,
+      "patstoNo": "1153558"
+    },
+    {
+      "storeId": "b929bcd743be8b12",
+      "storeName": "장충동왕족발 여수점",
+      "itemCount": 10,
+      "patstoNo": "1138557"
+    },
+    {
+      "storeId": "d5a91ccf9edca566",
+      "storeName": "장충동B&F족발보쌈 여수점",
+      "itemCount": 20,
+      "patstoNo": "1138779"
+    },
+    {
+      "storeId": "7c9ca9471d15acc4",
+      "storeName": "제육대가 여수미평점",
+      "itemCount": 16,
+      "patstoNo": "1175221"
+    },
+    {
+      "storeId": "f617bdb93ac0246f",
+      "storeName": "제육에 진심을 담아",
+      "itemCount": 33,
+      "patstoNo": "1303289"
+    },
+    {
+      "storeId": "76235bf473121cbe",
+      "storeName": "족발자리",
+      "itemCount": 25,
+      "patstoNo": "1133468"
+    },
+    {
+      "storeId": "295dc97b6abaf2e2",
+      "storeName": "중국관",
+      "itemCount": 62,
+      "patstoNo": "1199090"
+    },
+    {
+      "storeId": "7f48f499a367b2b8",
+      "storeName": "직화구이 바싹 족발닭발보쌈",
+      "itemCount": 28,
+      "patstoNo": "1134874"
+    },
+    {
+      "storeId": "7919e0b7f8d5b436",
+      "storeName": "쫑포피자 문수점",
+      "itemCount": 20,
+      "patstoNo": "1239485"
+    },
+    {
+      "storeId": "01f219eac1bdc294",
+      "storeName": "찜콩 갈비찜 전문",
+      "itemCount": 29,
+      "patstoNo": "1225148"
+    },
+    {
+      "storeId": "c6568ee1688504c7",
+      "storeName": "착한쭝식 여서점(먹깨비,땡겨요로 주문시 군만두 서비스!!)",
+      "itemCount": 22,
+      "patstoNo": "1313471"
+    },
+    {
+      "storeId": "e456f248cbe542a3",
+      "storeName": "청년다방 여서점",
+      "itemCount": 126,
+      "patstoNo": "1175481"
+    },
+    {
+      "storeId": "3d512878922a19db",
+      "storeName": "초이커피",
+      "itemCount": 70,
+      "patstoNo": "1208150"
+    },
+    {
+      "storeId": "884076b36adf9697",
+      "storeName": "촌닭두마리치킨 오림점",
+      "itemCount": 22,
+      "patstoNo": "1216979"
+    },
+    {
+      "storeId": "dddc8ea5032e3c62",
+      "storeName": "카페 브라운",
+      "itemCount": 71,
+      "patstoNo": "1226541"
+    },
+    {
+      "storeId": "478795eb80081c91",
+      "storeName": "커피어클락",
+      "itemCount": 35,
+      "patstoNo": "1219568"
+    },
+    {
+      "storeId": "2cddfb9ee60f0d7b",
+      "storeName": "컴포즈커피 여수문수광장점",
+      "itemCount": 132,
+      "patstoNo": "1270007"
+    },
+    {
+      "storeId": "68360b2d1b0e6457",
+      "storeName": "컴포즈커피 여수여서점",
+      "itemCount": 125,
+      "patstoNo": "1214585"
+    },
+    {
+      "storeId": "5b408dab11c7b1dd",
+      "storeName": "케이키팩토리",
+      "itemCount": 42,
+      "patstoNo": "1216479"
+    },
+    {
+      "storeId": "04036067da3dde5f",
+      "storeName": "킹콩부대찌개 여수점",
+      "itemCount": 34,
+      "patstoNo": "1226830"
+    },
+    {
+      "storeId": "ba7577041d64a394",
+      "storeName": "탕화쿵푸마라탕 여서점",
+      "itemCount": 12,
+      "patstoNo": "1216108"
+    },
+    {
+      "storeId": "fe09f5cbf190ca3d",
+      "storeName": "테그42 여수관문점",
+      "itemCount": 109,
+      "patstoNo": "1135719"
+    },
+    {
+      "storeId": "d9730ed96e5fbd9a",
+      "storeName": "틈 돈까스 미평점",
+      "itemCount": 31,
+      "patstoNo": "1190114"
+    },
+    {
+      "storeId": "0a231139875a51cc",
+      "storeName": "푸줏간 고기도시락 여수문수점",
+      "itemCount": 37,
+      "patstoNo": "1175079"
+    },
+    {
+      "storeId": "f8a71a5a2344ee7f",
+      "storeName": "프랭크버거 미평점",
+      "itemCount": 61,
+      "patstoNo": "1175279"
+    },
+    {
+      "storeId": "1d0648282bdf1385",
+      "storeName": "피나치공 국동점",
+      "itemCount": 52,
+      "patstoNo": "1227114"
+    },
+    {
+      "storeId": "d77bf57a99d5a355",
+      "storeName": "피자나라치킨공주 여서점",
+      "itemCount": 49,
+      "patstoNo": "1331300"
+    },
+    {
+      "storeId": "d696a7c25651c706",
+      "storeName": "피자스쿨  미평점",
+      "itemCount": 49,
+      "patstoNo": "1232691"
+    },
+    {
+      "storeId": "abb76aa470e26f7a",
+      "storeName": "피자스쿨 여문점",
+      "itemCount": 68,
+      "patstoNo": "1218446"
+    },
+    {
+      "storeId": "13c8e99cd1a7d7a1",
+      "storeName": "하나옛날통닭 문수점",
+      "itemCount": 29,
+      "patstoNo": "1135861"
+    },
+    {
+      "storeId": "e73b3aae78840798",
+      "storeName": "한솥도시락 여수전남대점",
+      "itemCount": 145,
+      "patstoNo": "1228947"
+    },
+    {
+      "storeId": "91622c10687d56dd",
+      "storeName": "향미진짬뽕",
+      "itemCount": 27,
+      "patstoNo": "1179824"
+    },
+    {
+      "storeId": "36419c4127ce96c4",
+      "storeName": "호미스피자 여수점",
+      "itemCount": 25,
+      "patstoNo": "1317809"
+    },
+    {
+      "storeId": "23f9cb364b06cd44",
+      "storeName": "호식이두마리치킨 국동점",
+      "itemCount": 48,
+      "patstoNo": "1145253"
+    },
+    {
+      "storeId": "1ed1cc571c81df01",
+      "storeName": "홍콩반점0410 여수문수점",
+      "itemCount": 60,
+      "patstoNo": "1258046"
+    },
+    {
+      "storeId": "4597954f924a4979",
+      "storeName": "황금마차",
+      "itemCount": 19,
+      "patstoNo": "1208489"
+    },
+    {
+      "storeId": "39f3c8acab504b00",
+      "storeName": "60계치킨 여수여서문수점",
+      "itemCount": 77,
+      "patstoNo": "1175656"
+    },
+    {
+      "storeId": "2017de4f9111f3ce",
+      "storeName": "김사장 삼겹 통김치찜",
+      "itemCount": 38,
+      "patstoNo": "1306660"
+    },
+    {
+      "storeId": "1d691d8e74499d31",
+      "storeName": "조쉐프의 쌀국수",
+      "itemCount": 35,
+      "patstoNo": "1326127"
+    },
+    {
+      "storeId": "93ae27237a8e75c4",
+      "storeName": "메밀꽃 필 막국수",
+      "itemCount": 42,
+      "patstoNo": "1233854"
+    }
+  ]
+}

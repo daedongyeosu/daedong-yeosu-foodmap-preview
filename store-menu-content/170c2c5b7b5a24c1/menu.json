@@ -1,0 +1,181 @@
+{
+  "storeId": "170c2c5b7b5a24c1",
+  "storeName": "양지골수육",
+  "displayName": "양지골수육",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/d631eeda-8f8e-4325-aaf3-12187b963a81.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "음료",
+    "주류메뉴",
+    "추가메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1168376-10000005",
+      "name": "(양지골)국물이찐한~사골 머리 국밥",
+      "description": "양지골의 기본 고기국밥 고기 듬뿍, 사골 육수로 진한 국밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/d631eeda-8f8e-4325-aaf3-12187b963a81.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1168376-10000007",
+      "name": "(양지골)들깨가듬뿍~ 뼈다귀 해장국",
+      "description": "푹 고와 살이 부들부들하고 들깨 가루가 듬뿍 들어간 뼈다귀 해장국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2186df8c-e951-4665-972c-9af1722f547a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1168376-10000004",
+      "name": "(양지골)얼큰 사골 순대 국밥",
+      "description": "순대 국밥의 얼큰함이 추가 된 순대국밥. 해장에는 최고",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ae67429d-93d1-49b3-8b25-3fd1137a2a28.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1168376-10000002",
+      "name": "(양지골)들깨가루듬뿍~우거지 감자탕",
+      "description": "직접 푹 고아서 뼈와 살이 잘~분리되는 감자탕. \n들깨가루와 우거지도 듬뿍~",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/8800fe78-fc58-432e-9998-46c3d59f431f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1168376-10000001",
+      "name": "(양지골)야들야들한~머리고기수육",
+      "description": "머리고기 듬뿍+부추,시금치 듬뿍",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5aecc917-85c0-4eaa-ba5c-ef358ccac8e7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1168376-10000012",
+      "name": "칠성사이다 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1168376-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1168376-10000010",
+      "name": "라면사리",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1168376-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1168376-10000003",
+      "name": "(양지골)얼큰 사골 머리 국밥",
+      "description": "고기국밥의 얼큰함이 추가된 국밥. 해장에는 최고",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/aa3d92b1-02f6-4a1b-bfe9-fd31d219fb6d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1168376-10000011",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/51718448-f639-4924-a508-0c1717b85c6e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1168376-90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1168376-90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1168376-90000005",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1168376-10000006",
+      "name": "(양지골)국물이찐한~사골 순대 국밥",
+      "description": "양지골의 기본 순대국밥 찰순대와 김치순대가 들어간, 사골 육수로 진한 순대국밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/5446aaba-04f7-4ca1-81c8-eccd62113a46.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1168376-90000006",
+      "name": "막걸리(페트)(750ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1168376-10000008",
+      "name": "(양지골)얼큰 뼈다귀해장국",
+      "description": "직접 푹 고아서 뼈와 살이 잘~분리되는 얼큰한~ 해장국. \n들깨가루와 우거지도 듬뿍~",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/dee4dabb-7e15-467b-8044-57bedbc38c87.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1168376",
+    "sourceUrls": [
+      "https://bit.ly/tk-양지골수육",
+      "https://fdofd.ddangyo.com/gateway1.html?9csDak9"
+    ],
+    "rawItemCount": 22,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

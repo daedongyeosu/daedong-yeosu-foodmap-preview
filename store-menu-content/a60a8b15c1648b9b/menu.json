@@ -1,0 +1,366 @@
+{
+  "storeId": "a60a8b15c1648b9b",
+  "storeName": "여수 돌산 꽈배기",
+  "displayName": "여수 돌산 꽈배기",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/237d0eae-9856-4006-aef9-58f3077934bd.jpg",
+  "categories": [
+    "전체",
+    "꽈배기/도너츠류",
+    "세트 메뉴",
+    "고로케류",
+    "핫도그류",
+    "COFFEE",
+    "ADE",
+    "SMOOTHIE",
+    "SHAKE",
+    "JUICE"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1238275-10000001",
+      "name": "꽈배기",
+      "description": "",
+      "category": "꽈배기/도너츠류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/237d0eae-9856-4006-aef9-58f3077934bd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1238275-10000002",
+      "name": "팥도너츠",
+      "description": "",
+      "category": "꽈배기/도너츠류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/a3677837-7ac0-48e3-8228-3f052ba1ed25.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1238275-10000004",
+      "name": "찹쌀팥도너츠",
+      "description": "",
+      "category": "꽈배기/도너츠류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/0f6fc9de-b968-42f8-9db8-6f722a44f5c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1238275-10000005",
+      "name": "찹쌀크림치즈도너츠",
+      "description": "",
+      "category": "꽈배기/도너츠류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/16cc7525-0b8c-4a46-a08e-2a6f74d5f943.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1238275-10000006",
+      "name": "수제미니찹쌀도너츠",
+      "description": "",
+      "category": "꽈배기/도너츠류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a6b9c3a2-0619-45b2-b883-1e71629330c4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1238275-10000007",
+      "name": "골고루(랜덤)세트",
+      "description": "저희 가게에서 가장 선호하는 맛으로 \n골고루 보내드리겠습니다(메뉴 선택안됨)",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1238275-10000008",
+      "name": "갓고로케",
+      "description": "",
+      "category": "고로케류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/8490ecdd-8bd7-474c-8126-d7a0920c3694.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1238275-10000012",
+      "name": "옛날핫도그",
+      "description": "",
+      "category": "핫도그류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/b5aa17bb-b9b1-47f5-9df3-a64deaaac8ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1238275-10000015",
+      "name": "아메리카노",
+      "description": "",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c7a6af65-c597-4f0f-9d5a-c06dbf4d6e4e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1238275-10000023",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "ADE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1238275-10000027",
+      "name": "망고스무디",
+      "description": "",
+      "category": "SMOOTHIE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1238275-10000030",
+      "name": "밀크쉐이크",
+      "description": "",
+      "category": "SHAKE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1238275-10000033",
+      "name": "딸기쥬스",
+      "description": "",
+      "category": "JUICE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1238275-10000009",
+      "name": "감자고로케",
+      "description": "",
+      "category": "고로케류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f9656a73-61f9-4bbd-8745-84ba69a67d60.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1238275-10000013",
+      "name": "치즈소세지핫도그",
+      "description": "",
+      "category": "핫도그류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1238275-10000016",
+      "name": "카페라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1238275-10000024",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "ADE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1238275-10000028",
+      "name": "딸기요거트스무디",
+      "description": "",
+      "category": "SMOOTHIE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1238275-10000031",
+      "name": "초코쉐이크",
+      "description": "",
+      "category": "SHAKE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1238275-10000034",
+      "name": "수박쥬스",
+      "description": "계절음료",
+      "category": "JUICE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1238275-10000003",
+      "name": "고구마도너츠",
+      "description": "",
+      "category": "꽈배기/도너츠류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1238275-10000010",
+      "name": "식빵고로케",
+      "description": "",
+      "category": "고로케류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1238275-10000014",
+      "name": "점보핫도그",
+      "description": "",
+      "category": "핫도그류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1238275-10000017",
+      "name": "카페모카",
+      "description": "",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1238275-10000025",
+      "name": "자몽에이드",
+      "description": "",
+      "category": "ADE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1238275-10000029",
+      "name": "블루베리요거트스무디",
+      "description": "",
+      "category": "SMOOTHIE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1238275-10000032",
+      "name": "쿠키앤크림쉐이크",
+      "description": "",
+      "category": "SHAKE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1238275-10000035",
+      "name": "오렌지쥬스",
+      "description": "",
+      "category": "JUICE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1238275-10000011",
+      "name": "야채샐러드빵",
+      "description": "",
+      "category": "고로케류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/56f1d6c4-4872-43cc-bfeb-2858257416bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1238275-10000018",
+      "name": "카라멜마끼아또",
+      "description": "",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1238275-10000026",
+      "name": "블루레몬에이드",
+      "description": "",
+      "category": "ADE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1238275-10000036",
+      "name": "복숭아아이스티",
+      "description": "",
+      "category": "JUICE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1238275-10000019",
+      "name": "바닐라라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1238275-10000037",
+      "name": "레몬아이스티",
+      "description": "",
+      "category": "JUICE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1238275-10000020",
+      "name": "초코라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1238275-10000021",
+      "name": "딸기라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1238275-10000022",
+      "name": "땅콩크림라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1238275",
+    "sourceUrls": [
+      "https://bit.ly/tk-여수돌산꽈배기",
+      "https://fdofd.ddangyo.com/gateway1.html?aHzVJ6L"
+    ],
+    "rawItemCount": 42,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

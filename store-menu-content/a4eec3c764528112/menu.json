@@ -1,0 +1,772 @@
+{
+  "storeId": "a4eec3c764528112",
+  "storeName": "역전할머니맥주 여수미평점",
+  "displayName": "역전할머니맥주 여수미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/eb065b20-84a7-4501-9d8c-467d5d3cc4d0.jpg",
+  "categories": [
+    "전체",
+    "할맥대표메뉴",
+    "25년 할맥 신메뉴 출시",
+    "탕/찌게류",
+    "마른안주",
+    "튀김안주",
+    "안주류",
+    "이거저거 추가추가",
+    "음료",
+    "주류메뉴",
+    "세트류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1284213-10000001",
+      "name": "치즈라볶이",
+      "description": "추억의 그 맛 국물떡볶이\n한 뚝배기에 꾹꾹 눌러 담았다",
+      "category": "할맥대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/eb065b20-84a7-4501-9d8c-467d5d3cc4d0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1284213-10000002",
+      "name": "짜파구리",
+      "description": "집에서 해먹는 짜파구리와는 차원이 다른 클라쓰",
+      "category": "할맥대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/81c15279-469f-447c-85ff-a76e7b33922a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1284213-10000004",
+      "name": "어묵탕",
+      "description": "간장+청양고추+고춧가루 소스제공",
+      "category": "할맥대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e46c457e-2629-4936-9337-fba8d3826163.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1284213-10000007",
+      "name": "물냉면",
+      "description": "",
+      "category": "25년 할맥 신메뉴 출시",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/8ba581e4-d604-4c63-97c0-a4d8e03163f3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1284213-10000016",
+      "name": "통돈까스김치우동",
+      "description": "칼칼한 김치와 통통한 통돈까스를 그대로 넣은 푸짐한 할매표 김치우동",
+      "category": "탕/찌게류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/2e247825-4bde-4231-bd6a-b9016f8a629b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1284213-10000024",
+      "name": "버터구이오징어",
+      "description": "마요네즈 + 황태디핑 + 청양고추 소스제공",
+      "category": "마른안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/ae0c56bc-5d78-43ac-bb26-21fd35ecd31d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1284213-10000033",
+      "name": "할멘보샤",
+      "description": "칠리소스 제공",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/d8034ec4-8fa8-4101-9871-4451733525c5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1284213-10000044",
+      "name": "모듬소세지",
+      "description": "케찹, 머스타드 소스제공",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/96e84c94-02dd-4d6f-bfa3-a9cbfff873e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1284213-10000052",
+      "name": "참치주먹밥 1pcs",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/5d773bd0-9870-44e7-b527-23283fe262cd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1284213-10000071",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1284213-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1284213-10000008",
+      "name": "불고기쌈냉면",
+      "description": "",
+      "category": "25년 할맥 신메뉴 출시",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/caef236d-2a5a-462e-b6b1-718e5b0322f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1284213-10000017",
+      "name": "얼큰수제비",
+      "description": "",
+      "category": "탕/찌게류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/eb92642f-0f22-415c-8693-c9cf28486902.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1284213-10000022",
+      "name": "치즈라볶이 범벅세트",
+      "description": "추억의 그 맛 국물떡볶이\n한 뚝배기에 꾹꾹 눌러 담았다",
+      "category": "세트류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f34fa0d3-336a-4402-ab9c-a0af80ca8456.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1284213-10000025",
+      "name": "반건조오징어",
+      "description": "마요네즈 + 황태디핑 + 청양고추 소스, 김 제공",
+      "category": "마른안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/deee309b-fafc-45c2-a7c8-eac2eca2944c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1284213-10000034",
+      "name": "30cm롱치즈돈까스",
+      "description": "돈까스 소스 2종 제공",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/63d3873a-5119-4161-8785-28e4f5eb4867.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1284213-10000053",
+      "name": "역전맛김",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1284213-10000072",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000072"
+    },
+    {
+      "id": "ddangyo-1284213-90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1284213-10000003",
+      "name": "시원한 황도",
+      "description": "",
+      "category": "할맥대표메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1284213-10000009",
+      "name": "비빔팝콘만두",
+      "description": "",
+      "category": "25년 할맥 신메뉴 출시",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1284213-10000023",
+      "name": "짜파구리 범벅세트",
+      "description": "집에서 해먹는 짜파구리와는 차원이 다른 클라쓰",
+      "category": "세트류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/6f6d994d-c238-4089-9061-4db6e3105819.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1284213-10000026",
+      "name": "버터구이오징어입",
+      "description": "마요네즈 + 황태디핑 + 청양고추 소스제공",
+      "category": "마른안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/6607eac7-a96d-40bc-8c8d-374a2e5c1bec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1284213-10000035",
+      "name": "마늘간장순살치킨",
+      "description": "샐러드 제공",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/0f8dfd5e-2b8d-4d0a-94c4-8a9465756ea4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1284213-10000046",
+      "name": "고르곤졸라피자",
+      "description": "진한 블루치즈의 풍미와 허니의 리얼 꿀조합",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/d7b6d474-cdb4-483a-8240-381c4a7717ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1284213-10000054",
+      "name": "역전 땅콩",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1284213-10000073",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000073"
+    },
+    {
+      "id": "ddangyo-1284213-90000003",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1284213-10000010",
+      "name": "4색전",
+      "description": "간장 + 청양고추 + 고춧가루 소스제공",
+      "category": "25년 할맥 신메뉴 출시",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c89c3d49-1099-4861-a187-1b27a1d1879c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1284213-10000019",
+      "name": "불짬뽕탕",
+      "description": "탱글탱글한 우동면에 푸짐한 해물들 넣고 팔팔 끓인 칼칼한 불맛 가득 짬뽕탕",
+      "category": "탕/찌게류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/7b7abc36-6523-4223-b327-6d9dbf57a430.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1284213-10000027",
+      "name": "아귀포",
+      "description": "마요네즈 + 황태디핑 + 청양고추 소스, 김 제공",
+      "category": "마른안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/4630bb97-4647-4a01-aee4-8b033e90145c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1284213-10000036",
+      "name": "양념순살치킨",
+      "description": "샐러드 제공",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e17fa8e0-947d-41d0-9366-ac83d0b93482.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1284213-10000047",
+      "name": "숯불닭꼬치",
+      "description": "통통하고 부드러운 닭 다리살에 불맛 가득한 데리야키 소스를 입혀 완성",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/23355703-18ef-4a3f-8fea-8ca1485cb38e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1284213-10000055",
+      "name": "다진 청양고추",
+      "description": "각종 탕에 얼큰함을 추가 가능 :)",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1284213-10000079",
+      "name": "치즈라볶이 파전세트",
+      "description": "",
+      "category": "세트류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1284213-90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1284213-10000005",
+      "name": "할매네바지락탕",
+      "description": "초장, 간장 + 청양고추 + 고춧가루 소스 제공",
+      "category": "할맥대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/12576b24-0e6f-42ac-9d9d-2678c7b4ce92.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1284213-10000011",
+      "name": "파전삼합",
+      "description": "간장 + 청양고추 + 고춧가루 소스 필요하신 고객님께선 요청사항에 꼭 기재 부탁드립니다.",
+      "category": "25년 할맥 신메뉴 출시",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/5caeb3a7-1855-403e-a6da-d0063ec55f62.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1284213-10000020",
+      "name": "할매네술국",
+      "description": "얼큰한 국물~ 안주로 일품\n해장 갬성도 덤 ~~",
+      "category": "탕/찌게류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/6c9b4dd9-2e7d-45d5-b814-4c8810d7bd9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1284213-10000028",
+      "name": "참쥐포",
+      "description": "마요네즈 + 황태디핑 + 청양고추 소스, 김 제공",
+      "category": "마른안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/50b44ed9-a483-4622-951f-e64b43404630.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1284213-10000037",
+      "name": "순살치킨",
+      "description": "치킨+감자튀김+고구마+양념소스제공",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/eef576d9-9928-45f7-b930-1f209b331585.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1284213-10000048",
+      "name": "염통꼬치",
+      "description": "청양고추 제공",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/81eb5b1b-9b81-4e22-bc9a-03b7ba684af5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1284213-10000056",
+      "name": "건어물 소스(마요네즈+데리야끼소스+청양고추)",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1284213-10000080",
+      "name": "짜빠구리 파전세트",
+      "description": "",
+      "category": "세트류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1284213-90000005",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1284213-10000006",
+      "name": "오징어입",
+      "description": "1982년 누구도 먹지 않았던 오징어입 그 오징어입을 주워다 팔게 된 안주가 이제는 역전할머니맥주의 인기 메뉴로 탄생하게 됩니다. 지금은 연예인이 즐겨먹는 간식으로 유명해졌지만 역전할머니맥주에서는 40년동안 사랑받은 안주입니다.",
+      "category": "할맥대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/ba5263a4-38cb-4930-a4dd-2d244a4c8d7a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1284213-10000038",
+      "name": "꼬꼬껍질말이",
+      "description": "마요네즈, 청양고추 제공",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/1d97696a-a710-4ea6-9aaa-9845fdae8de8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1284213-10000049",
+      "name": "살얼음파인애플",
+      "description": "입 안에서 사르르 녹아 시원하고 상큼한 파인애플 샤베트",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/1eec87ce-ce60-477e-8e10-3a8897ee9092.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1284213-10000057",
+      "name": "마법의 갈릭 소스 추가",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1284213-90000006",
+      "name": "카스 생맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1284213-10000089",
+      "name": "할매네된장술밥",
+      "description": "",
+      "category": "탕/찌게류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1284213-10000030",
+      "name": "튀김쥐포",
+      "description": "바삭하고 고소해서 한입\n나도 모르게 또 한입 ~",
+      "category": "마른안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/89b15bd9-f254-4810-abf7-bc07e85a491d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1284213-10000039",
+      "name": "갈릭빠다포테이토",
+      "description": "달달하고 진한 풍미의 갈릭버터와 포테이토의 환상궁합 ~",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/bd0b388d-3406-4e2a-a043-57a3fdb1ae4b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1284213-10000050",
+      "name": "아이스오색황도",
+      "description": "오미자에 풍덩 빠진 달콤하고 상큼한 황도의 매력",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/fdf45d7a-685b-4eff-9199-0537133e7b10.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1284213-10000058",
+      "name": "피클",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1284213-10000090",
+      "name": "순살감자탕",
+      "description": "",
+      "category": "탕/찌게류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1284213-10000031",
+      "name": "노가리",
+      "description": "",
+      "category": "마른안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/59a6aefe-dc3e-4acb-b36d-fec6be7a3fc9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1284213-10000040",
+      "name": "고구마프라이즈",
+      "description": "샤워딥 소스 제공",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/fe41da82-7d58-4cce-8d62-c8dfc72d467e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1284213-10000051",
+      "name": "수제소세지",
+      "description": "숯불향 입혀진 부드러운 식감에 담백한 수제수세지",
+      "category": "안주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/6a39791f-cbea-4c6a-a179-01b26b21ffac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1284213-10000059",
+      "name": "케찹",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1284213-10000015",
+      "name": "앙버터인절미",
+      "description": "인절미 + 팥 + 콩가루 + 꿀",
+      "category": "25년 할맥 신메뉴 출시",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/d8b6cd36-a37e-4a95-bd65-f44e2ede2b2b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1284213-10000032",
+      "name": "먹태",
+      "description": "마요네즈 + 황태디핑 + 청양고추 소스, 김 제공",
+      "category": "마른안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e5160e89-3b99-45ab-89f1-3edf37966868.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1284213-10000041",
+      "name": "양념감자튀김",
+      "description": "케찹, 체다치즈 소스 제공",
+      "category": "튀김안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/ad8c0bdb-3bbb-42d2-8cae-ad8114c6f106.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1284213-10000060",
+      "name": "머스타드",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1284213-10000084",
+      "name": "꼬꼬껍질말이",
+      "description": "",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1284213-10000061",
+      "name": "마요네즈",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000061"
+    },
+    {
+      "id": "ddangyo-1284213-10000081",
+      "name": "카다이프 새우튀김",
+      "description": "",
+      "category": "튀김안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000081"
+    },
+    {
+      "id": "ddangyo-1284213-10000085",
+      "name": "허니밤",
+      "description": "",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1284213-10000062",
+      "name": "마늘간장 소스",
+      "description": "순살치킨 찍먹 소스",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1284213-10000082",
+      "name": "콘소메 옥수수튀김",
+      "description": "",
+      "category": "튀김안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000082"
+    },
+    {
+      "id": "ddangyo-1284213-10000086",
+      "name": "석관동 닭떡볶이",
+      "description": "",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1284213-10000063",
+      "name": "양념치킨 소스",
+      "description": "순살치킨 찍먹 소스",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000063"
+    },
+    {
+      "id": "ddangyo-1284213-10000083",
+      "name": "비빔팝콘 만두",
+      "description": "",
+      "category": "튀김안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000083"
+    },
+    {
+      "id": "ddangyo-1284213-10000087",
+      "name": "페퍼로니 오꼬노미야끼",
+      "description": "",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1284213-10000064",
+      "name": "체다치즈 소스",
+      "description": "양념감자튀김 소스",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000064"
+    },
+    {
+      "id": "ddangyo-1284213-10000088",
+      "name": "페퍼로니 튀김",
+      "description": "",
+      "category": "안주류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1284213-10000065",
+      "name": "돈까스 소스",
+      "description": "30CM 롱치즈돈까스 소스",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1284213-10000066",
+      "name": "돈까스 [갈릭] 소스",
+      "description": "30CM 롱치즈돈까스 소스",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1284213-10000067",
+      "name": "칠리 소스",
+      "description": "새우마빡튀김 / 멘보샤 소스",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1284213-10000068",
+      "name": "샤워딥 소스",
+      "description": "고구마프라이즈 소스",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    },
+    {
+      "id": "ddangyo-1284213-10000069",
+      "name": "간장소스 (간장 + 고춧가루 + 청양고추)",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1284213-10000070",
+      "name": "특별 건어물 소스 (마요네즈 + 간장 + 청양고추)",
+      "description": "",
+      "category": "이거저거 추가추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000070"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1284213",
+    "sourceUrls": [
+      "https://bit.ly/4vsN1dh",
+      "https://fdofd.ddangyo.com/gateway1.html?eL3BGna"
+    ],
+    "rawItemCount": 85,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

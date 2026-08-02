@@ -1,0 +1,171 @@
+{
+  "storeId": "40c638502decc604",
+  "storeName": "백억 흑미 꼬마김밥",
+  "displayName": "백억 흑미 꼬마김밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b3acbd73-9c84-431a-aa33-8efac33bdeca.jpg",
+  "categories": [
+    "전체",
+    "백억 흑미 꼬마김밥",
+    "세트 메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1190857-10000001",
+      "name": "참치김밥 (6개)",
+      "description": "",
+      "category": "백억 흑미 꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b3acbd73-9c84-431a-aa33-8efac33bdeca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1190857-10000002",
+      "name": "야채, 깻잎김밥 (6개)",
+      "description": "",
+      "category": "백억 흑미 꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/4d3f1d27-6b57-4fc4-a042-8466648615ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1190857-10000003",
+      "name": "고추김밥 (6개)",
+      "description": "",
+      "category": "백억 흑미 꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/a374b8e8-a5e8-4dda-97d6-aada16e7a3aa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1190857-10000004",
+      "name": "모듬김밥 (야채,참치,고추)",
+      "description": "참치,깻잎,고추",
+      "category": "백억 흑미 꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/66917729-8aca-4d1c-a92d-4ed94f22fd7b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1190857-10000005",
+      "name": "(한우)불고기 김밥 (6개)",
+      "description": "",
+      "category": "백억 흑미 꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/51988e06-cc54-4bcc-a327-61d2260a6164.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1190857-10000006",
+      "name": "깻잎, 참치, 고추 (24개)",
+      "description": "",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1190857-10000010",
+      "name": "식혜 350ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1190857-10000007",
+      "name": "All 고추 (24개)",
+      "description": "",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1190857-10000011",
+      "name": "식혜 1.5L",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1190857-10000013",
+      "name": "All 불고기 (24개)",
+      "description": "",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1190857-10000008",
+      "name": "깻잎, 참치, 고추 (40개)",
+      "description": "",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1190857-10000009",
+      "name": "All 고추 (40개)",
+      "description": "",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1190857-10000012",
+      "name": "All 불고기 (40개)",
+      "description": "",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1190857-10000014",
+      "name": "땡초불고기김밥",
+      "description": "",
+      "category": "백억 흑미 꼬마김밥",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1190857-10000015",
+      "name": "땡초불고기김밥(24개)",
+      "description": "",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1190857-10000016",
+      "name": "땡초불고기김밥(40개)",
+      "description": "",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1190857",
+    "sourceUrls": [
+      "https://bit.ly/tk-백억흑미꼬마김밥",
+      "https://fdofd.ddangyo.com/gateway1.html?xLbT34A"
+    ],
+    "rawItemCount": 21,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

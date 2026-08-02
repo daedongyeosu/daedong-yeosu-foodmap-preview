@@ -1,0 +1,199 @@
+{
+  "storeId": "2fb0f76b3d55052b",
+  "storeName": "윤가네 선어",
+  "displayName": "윤가네 선어",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/6b064a1c-8304-44b5-8ae9-0d9d4511daf6.jpg",
+  "categories": [
+    "전체",
+    "주류",
+    "선어. 모듬회",
+    "음료",
+    "시원한 식혜  35000"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216870-10000051",
+      "name": "선어사시미모듬",
+      "description": "",
+      "category": "주류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/6b064a1c-8304-44b5-8ae9-0d9d4511daf6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1216870-10000034",
+      "name": "모듬전",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/55e98aed-90ec-47af-8996-c6402b02ddfd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1216870-10000026",
+      "name": "선어. 모듬 사시미",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1216870-10000042",
+      "name": "환타",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1216870-10000052",
+      "name": "코카콜라",
+      "description": "시원한 식혜",
+      "category": "시원한 식혜  35000",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1216870-10000027",
+      "name": "삼치 사시미와. 삼치 구이",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1216870-10000043",
+      "name": "시원한 식혜",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1216870-10000028",
+      "name": "병어 사시미",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1216870-10000044",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1216870-10000029",
+      "name": "삼치 사시미",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/812dc8b4-2504-4a62-8b9f-3ddccbce3df4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1216870-10000030",
+      "name": "노랑가오리",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1216870-10000032",
+      "name": "삼치 미역국",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/428f1595-d5c5-4b7f-8fab-4cdcdac6383a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1216870-10000033",
+      "name": "민어 사시미",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1216870-10000035",
+      "name": "참기름 접시밥",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1216870-10000036",
+      "name": "홍갓 김치",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1216870-10000037",
+      "name": "멍게",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1216870-10000038",
+      "name": "배추 김치",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1216870-10000039",
+      "name": "고등이. 구이 대짜",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/6e208a24-26e2-439a-bc74-bcdebef2cc51.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1216870-10000041",
+      "name": "직접키운 상추",
+      "description": "",
+      "category": "선어. 모듬회",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216870",
+    "sourceUrls": [
+      "https://bit.ly/tk-윤가네선어",
+      "https://fdofd.ddangyo.com/gateway1.html?t8APGWn"
+    ],
+    "rawItemCount": 21,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

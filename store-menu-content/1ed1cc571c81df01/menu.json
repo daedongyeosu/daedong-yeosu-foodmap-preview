@@ -1,0 +1,573 @@
+{
+  "storeId": "1ed1cc571c81df01",
+  "storeName": "홍콩반점0410 여수문수점",
+  "displayName": "홍콩반점0410 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/d3bc9629-49ff-4ee2-9544-a7f45d40c9aa.jpg",
+  "categories": [
+    "전체",
+    "면류",
+    "튀김류",
+    "지금 핫한 SNS 화제의 메뉴!",
+    "세트메뉴",
+    "밥류",
+    "나홀로 세트",
+    "사이드",
+    "음료",
+    "신제품 출시"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1258046-30000013",
+      "name": "짜장면",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9cda5414-a53a-4059-9d85-39f7530bd031.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000013"
+    },
+    {
+      "id": "ddangyo-1258046-30000015",
+      "name": "짬뽕(면 별도포장)",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/62997008-2787-4094-8315-1e55b1b93b77.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000015"
+    },
+    {
+      "id": "ddangyo-1258046-30000949",
+      "name": "탕수육(소)(소스 별도포장)",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/245d9870-3937-4653-a760-904e2582d423.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000949"
+    },
+    {
+      "id": "ddangyo-1258046-30000955",
+      "name": "[크림짬뽕끝판왕] 슈림프투움바",
+      "description": "",
+      "category": "지금 핫한 SNS 화제의 메뉴!",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/aee6be4f-6784-48ab-aa07-934ce8cfa8ab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000955"
+    },
+    {
+      "id": "ddangyo-1258046-30000939",
+      "name": "[진짜 차돌박이] 차돌짬뽕",
+      "description": "",
+      "category": "지금 핫한 SNS 화제의 메뉴!",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/928f730d-572c-4e6e-a880-97c5c1b33742.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000939"
+    },
+    {
+      "id": "ddangyo-1258046-30000892",
+      "name": "[3500원 인하] 2인세트",
+      "description": "식사 택2+탕수육 택1+군만두 택1",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/eb81e9f5-5a4d-4319-a9ee-501a7f249df9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000892"
+    },
+    {
+      "id": "ddangyo-1258046-30000919",
+      "name": "볶음밥(국물제공)",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/81bd9bc1-bee4-4aec-abe3-50225a0fc001.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000919"
+    },
+    {
+      "id": "ddangyo-1258046-30000965",
+      "name": "[나홀로] 탕짜세트",
+      "description": "",
+      "category": "나홀로 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5ad0e23d-708b-48c5-bdbf-3e641be935ea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000965"
+    },
+    {
+      "id": "ddangyo-1258046-30000030",
+      "name": "만능매운소스",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/87f44416-7bc3-4d34-88f4-2e865a877363.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000030"
+    },
+    {
+      "id": "ddangyo-1258046-30000039",
+      "name": "콜라(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/2e9416a2-1f54-41d1-b80f-f85bfa60bd5e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000039"
+    },
+    {
+      "id": "ddangyo-1258046-30000948",
+      "name": "탕수육(미니)(소스 별도)",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c7088f6e-0f39-4719-8146-d2119f23a0e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000948"
+    },
+    {
+      "id": "ddangyo-1258046-30000040",
+      "name": "제로콜라(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/a1291123-c9f1-4b7a-8185-e85da49b320c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000040"
+    },
+    {
+      "id": "ddangyo-1258046-30000031",
+      "name": "만능매운소스(5개)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c8b4a592-cf38-43e1-8af4-95f1741d59fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000031"
+    },
+    {
+      "id": "ddangyo-1258046-30000018",
+      "name": "짬뽕밥(밥 별도포장)",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/626ed5f6-e63d-45ae-a0dd-71043c08c11c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000018"
+    },
+    {
+      "id": "ddangyo-1258046-30000966",
+      "name": "[나홀로] 군만두세트",
+      "description": "",
+      "category": "나홀로 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/66849685-2498-445c-8410-5606ff99fca7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000966"
+    },
+    {
+      "id": "ddangyo-1258046-30000903",
+      "name": "식사1+탕수육 미니",
+      "description": "1인분(식사 택1+탕수육 미니)",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/bbd19932-69ca-4153-8b15-05a8da939f72.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000903"
+    },
+    {
+      "id": "ddangyo-1258046-30000014",
+      "name": "고추짜장",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/f6a121cb-8e4b-493a-b553-8ba3471a0400.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000014"
+    },
+    {
+      "id": "ddangyo-1258046-30000027",
+      "name": "계란프라이",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/62b6fca6-b81e-4ecb-8b79-0ad20e390799.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000027"
+    },
+    {
+      "id": "ddangyo-1258046-30000950",
+      "name": "탕수육(중)(소스 별도포장)",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b55c5b38-b741-4892-bcf9-125c5197e456.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000950"
+    },
+    {
+      "id": "ddangyo-1258046-30000940",
+      "name": "[진짜 차돌박이] 차돌짬뽕밥",
+      "description": "",
+      "category": "지금 핫한 SNS 화제의 메뉴!",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/cddd1be5-7178-4acf-a230-b2569efd8567.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000940"
+    },
+    {
+      "id": "ddangyo-1258046-30000967",
+      "name": "콩국수(파김치 제공)",
+      "description": "",
+      "category": "신제품 출시",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7dae199e-29c1-486c-94d6-aca3bc2e9d8e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000967"
+    },
+    {
+      "id": "ddangyo-1258046-30000019",
+      "name": "고추짬뽕밥(밥 별도포장)",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/1d61be91-174c-4523-99d7-21677744b0bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000019"
+    },
+    {
+      "id": "ddangyo-1258046-30000970",
+      "name": "크리스피어니언 토핑",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/7e13476b-7932-495d-a102-11792ec5487b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000970"
+    },
+    {
+      "id": "ddangyo-1258046-30000008",
+      "name": "고기짬뽕밥 (밥 별도포장)",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/63d92fe8-53cf-4439-941c-7165559f9382.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000008"
+    },
+    {
+      "id": "ddangyo-1258046-30000016",
+      "name": "고추짬뽕(면 별도포장)",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/6e2b5f4e-2937-4f7c-a06d-531fe765a020.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000016"
+    },
+    {
+      "id": "ddangyo-1258046-30000904",
+      "name": "식사2+탕수육 미니",
+      "description": "2인분(식사 택2+탕수육 미니)",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/288b85a0-b13a-4e79-9ab2-da4dbe4110a0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000904"
+    },
+    {
+      "id": "ddangyo-1258046-30000951",
+      "name": "탕수육(대)(소스 별도포장)",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ebdb7576-2340-4a95-8d59-523201951818.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000951"
+    },
+    {
+      "id": "ddangyo-1258046-30000924",
+      "name": "스프라이트(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a752e818-112b-478b-b422-50b5a70f252c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000924"
+    },
+    {
+      "id": "ddangyo-1258046-30000905",
+      "name": "요리세트",
+      "description": "식사 택1+요리류 택1+군만두 4개",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/7c178bba-1fd5-48a3-8e6e-1d4094ba01aa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000905"
+    },
+    {
+      "id": "ddangyo-1258046-30000956",
+      "name": "슈림프 투움바 짬뽕",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/6fc82537-99cb-42f3-b3d5-65fee27e0ca0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000956"
+    },
+    {
+      "id": "ddangyo-1258046-30000025",
+      "name": "연유꽃빵",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/bcdf9f78-5d5c-4fdb-8d3f-5b2ccc30105f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000025"
+    },
+    {
+      "id": "ddangyo-1258046-30000011",
+      "name": "단팥춘권",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/148177c5-2bc4-496e-8be6-fcc2e656e60f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000011"
+    },
+    {
+      "id": "ddangyo-1258046-30000908",
+      "name": "꿔바로우",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c8ebcd1d-9b92-4a03-b31c-d7742e091e9d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000908"
+    },
+    {
+      "id": "ddangyo-1258046-30000020",
+      "name": "짜장밥(국물제공)",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8174d4d1-9d99-43f2-b441-12b789c45861.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000020"
+    },
+    {
+      "id": "ddangyo-1258046-30000925",
+      "name": "제로 스프라이트(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/04ab8ae1-292a-415c-8d36-d33dfdc9f9af.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000925"
+    },
+    {
+      "id": "ddangyo-1258046-30000957",
+      "name": "차돌짬뽕(면 별도포장)",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/d35fb36a-8c2e-4dfa-a713-4fa78234ea7f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000957"
+    },
+    {
+      "id": "ddangyo-1258046-30000909",
+      "name": "깐풍기",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/102cc7cf-ade7-4798-8b58-0fb5f94d80a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000909"
+    },
+    {
+      "id": "ddangyo-1258046-30000942",
+      "name": "중화비빔밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/760cab52-d996-45cf-a0cf-2bfd9646f4ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000942"
+    },
+    {
+      "id": "ddangyo-1258046-30000009",
+      "name": "고기짜장",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/15f56d15-fb1b-4c87-8dfd-407f6bffb02a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000009"
+    },
+    {
+      "id": "ddangyo-1258046-30000953",
+      "name": "2인세트",
+      "description": "식사 택2+탕수육 택1+군만두 택1",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/775b4b8e-82d0-4328-9947-35bee5f14cff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000953"
+    },
+    {
+      "id": "ddangyo-1258046-30000021",
+      "name": "해쉬브라운(소스X)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/21ed105a-a8b8-40cd-ac29-22e3221ef33c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000021"
+    },
+    {
+      "id": "ddangyo-1258046-30000007",
+      "name": "고기짬뽕(면 별도포장)",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8e1f3125-ec73-4621-bda4-8f838de30708.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000007"
+    },
+    {
+      "id": "ddangyo-1258046-30000028",
+      "name": "단무지 추가",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/e58f61fe-429f-479b-be0d-61574b02f805.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000028"
+    },
+    {
+      "id": "ddangyo-1258046-30000893",
+      "name": "[2000원 인하] 쟁반짜장세트",
+      "description": "쟁반짜장+탕수육 택1+군만두 택1",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/24e30405-fe54-4362-9e85-792da317cd47.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000893"
+    },
+    {
+      "id": "ddangyo-1258046-30000898",
+      "name": "암바사(345ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ab276aa0-2eaf-403e-9410-a063fbd1b1bb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000898"
+    },
+    {
+      "id": "ddangyo-1258046-30000960",
+      "name": "파김치 한통",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c073c103-21ad-4a00-9f44-3f55be4bb5ab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000960"
+    },
+    {
+      "id": "ddangyo-1258046-30000046",
+      "name": "깐풍새우",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/22d1cf53-4d50-4a87-9017-4d06e8df681c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000046"
+    },
+    {
+      "id": "ddangyo-1258046-30000042",
+      "name": "환타(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/592f2e69-937a-4580-bb3d-03fba57e39e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000042"
+    },
+    {
+      "id": "ddangyo-1258046-30000017",
+      "name": "쟁반짜장(2인분)",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/7b01a9a2-11ac-4351-9cdc-480748877824.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000017"
+    },
+    {
+      "id": "ddangyo-1258046-30000958",
+      "name": "미니 크림새우",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/761d288d-4fac-4df4-aa25-e5f385527b47.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000958"
+    },
+    {
+      "id": "ddangyo-1258046-30000038",
+      "name": "초록매실(180ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c7ab2f60-2ae6-45a8-942c-9d832714d794.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000038"
+    },
+    {
+      "id": "ddangyo-1258046-30000906",
+      "name": "볶음짬뽕(1인분)",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a0615425-894c-4560-b981-e048d5dd72ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000906"
+    },
+    {
+      "id": "ddangyo-1258046-30000921",
+      "name": "짜장소스 1통",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/27110fb9-6690-4c19-9b7a-56ea1e9f230c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000921"
+    },
+    {
+      "id": "ddangyo-1258046-30000037",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/af5b5f8b-ad00-4adc-af15-580e53da65a5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000037"
+    },
+    {
+      "id": "ddangyo-1258046-30000907",
+      "name": "볶음짬뽕(2인분)",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4b667e72-bf30-49c8-84c1-51e55f007930.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000907"
+    },
+    {
+      "id": "ddangyo-1258046-30000959",
+      "name": "미니 깐풍새우",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/57673a00-5cf8-4535-9fa9-6d4941008a39.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000959"
+    },
+    {
+      "id": "ddangyo-1258046-30000897",
+      "name": "해물육교자",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b289914a-5f49-498e-a968-7bd92f41c4ed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000897"
+    },
+    {
+      "id": "ddangyo-1258046-30000943",
+      "name": "짬뽕국물",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ed3fca5c-5445-4bc3-a689-90d7c81449d8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000943"
+    },
+    {
+      "id": "ddangyo-1258046-30000024",
+      "name": "군만두",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/bdcf25e1-4f83-4e50-affe-11367954a6cd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000024"
+    },
+    {
+      "id": "ddangyo-1258046-30000026",
+      "name": "멘보샤",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/3196c9cc-fa7f-414e-832c-636525ac671c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000026"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1258046",
+    "sourceUrls": [
+      "https://bit.ly/tk-홍콩반점0410여수문수점",
+      "https://fdofd.ddangyo.com/gateway1.html?MD5mpkW"
+    ],
+    "rawItemCount": 66,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

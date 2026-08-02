@@ -1,0 +1,619 @@
+{
+  "storeId": "ddc27f852308889a",
+  "storeName": "본죽 여수국동점",
+  "displayName": "본죽 여수국동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/a3647886-1264-4458-8179-eca7f51e1135.jpg",
+  "categories": [
+    "전체",
+    "건강 영양죽",
+    "별미 해장죽",
+    "맞춤 반반쮺",
+    "진짜 전통죽",
+    "시그니처 전복죽",
+    "[시즌한정] 여름 별미",
+    "본죽반찬가게",
+    "간편식",
+    "원기 활력죽",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1280604-30000020",
+      "name": "쇠고기듬뿍야채죽(소고기1.5배)",
+      "description": "소고기 1.5배 (50% 증량)",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/bb16b3c6-8cb6-488a-8a0d-9a5fdf9de6a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000020"
+    },
+    {
+      "id": "ddangyo-1280604-30000036",
+      "name": "낙지김치죽 (해장)",
+      "description": "",
+      "category": "별미 해장죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/8bb9055f-3ad7-4411-bf39-39109bec05b5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000036"
+    },
+    {
+      "id": "ddangyo-1280604-30000005",
+      "name": "참깨계란새우쮺(본죽 반반죽)",
+      "description": "계란새우죽(반)&참깨계란새우죽(반)",
+      "category": "맞춤 반반쮺",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/10d1c3e6-1404-4c4b-b2e6-b53c8fe1f6c3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000005"
+    },
+    {
+      "id": "ddangyo-1280604-30000043",
+      "name": "단호박죽",
+      "description": "",
+      "category": "진짜 전통죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ba94441d-9a7b-41d6-b557-63aa0101e136.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1280604-30000006",
+      "name": "전복죽 (보양)",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b6e349c0-b1a8-4f26-9b91-52d4350867a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000006"
+    },
+    {
+      "id": "ddangyo-1280604-30000225",
+      "name": "우리 파주 장단콩 메밀콩국수",
+      "description": "콩국수, 김치, 소금(간 조절용)",
+      "category": "[시즌한정] 여름 별미",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/9e95fd22-d8bc-44e7-868c-7e24a82a5157.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000225"
+    },
+    {
+      "id": "ddangyo-1280604-30000033",
+      "name": "홍게품은죽",
+      "description": "",
+      "category": "별미 해장죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/c8b0ac0a-612a-4ee9-bbbb-99543bbe9814.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000033"
+    },
+    {
+      "id": "ddangyo-1280604-30000004",
+      "name": "푸팟퐁커리게살쮺 (카레)",
+      "description": "홍게품은죽(반)&푸팟퐁커리게살죽(반)",
+      "category": "맞춤 반반쮺",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/f4c1e02b-54f1-4c3e-bd06-66f3902d3555.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000004"
+    },
+    {
+      "id": "ddangyo-1280604-30000047",
+      "name": "[보들보들] 영양 계란찜",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4db760cf-5852-4b8c-b71e-49f10458361b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000047"
+    },
+    {
+      "id": "ddangyo-1280604-30000041",
+      "name": "동지팥죽(담백한 밥알팥죽)",
+      "description": "",
+      "category": "진짜 전통죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/254e2a7b-10c4-41b5-8eeb-2b080d8935f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000041"
+    },
+    {
+      "id": "ddangyo-1280604-30000069",
+      "name": "베이비본죽 한우참깨애호박죽 (후기 이유식)",
+      "description": "",
+      "category": "간편식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/0249fc2a-234f-48aa-9606-bbcfe529a792.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000069"
+    },
+    {
+      "id": "ddangyo-1280604-30000017",
+      "name": "삼계죽 (보양)",
+      "description": "현미죽으로 변경 추천",
+      "category": "원기 활력죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/8868e4d0-a542-444a-b983-72502f4e66c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000017"
+    },
+    {
+      "id": "ddangyo-1280604-30000021",
+      "name": "쇠고기야채죽",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/f2c3358d-928b-47b9-8d11-6b506ff57511.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000021"
+    },
+    {
+      "id": "ddangyo-1280604-30000034",
+      "name": "진홍게품은죽 (홍게다리살2배)",
+      "description": "",
+      "category": "별미 해장죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/31d5a71c-f6b3-4bb8-9bf5-3db5b1b77013.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000034"
+    },
+    {
+      "id": "ddangyo-1280604-30000070",
+      "name": "베이비본죽 한우야채진밥 (완료기 이유식)",
+      "description": "",
+      "category": "간편식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/09b5dc51-9adb-419d-8728-8d2c1b5b2cf2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000070"
+    },
+    {
+      "id": "ddangyo-1280604-30000007",
+      "name": "진전복죽 (전복2배)",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/01d21ad1-c694-4893-8209-c6431bf7bba8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000007"
+    },
+    {
+      "id": "ddangyo-1280604-30000015",
+      "name": "추어죽 (보양)",
+      "description": "",
+      "category": "원기 활력죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/bdd7bc23-1efb-4d4e-91a7-b36abc54e2ab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000015"
+    },
+    {
+      "id": "ddangyo-1280604-30000042",
+      "name": "단팥죽(달달한 새알팥죽)",
+      "description": "",
+      "category": "진짜 전통죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/56347466-77b2-4e22-823c-7ca5a054875b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000042"
+    },
+    {
+      "id": "ddangyo-1280604-30000008",
+      "name": "특전복죽 (전복3배)",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/1375c01d-25ee-463b-b600-45d7c699c16e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000008"
+    },
+    {
+      "id": "ddangyo-1280604-30000016",
+      "name": "불고기낙지죽 (불낙죽)",
+      "description": "",
+      "category": "원기 활력죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/c9372d1b-0c1f-4231-a402-4a7245c0962a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000016"
+    },
+    {
+      "id": "ddangyo-1280604-30000022",
+      "name": "쇠고기듬뿍버섯죽(소고기1.5배)",
+      "description": "소고기 1.5배 (50% 증량)",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9ebfc6cb-c654-4ea5-89fe-ff91d08aa290.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000022"
+    },
+    {
+      "id": "ddangyo-1280604-30000035",
+      "name": "특홍게품은죽 (홍게다리살3배)",
+      "description": "",
+      "category": "별미 해장죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/148ce0c8-0b66-469b-a890-3d12e46baa1e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000035"
+    },
+    {
+      "id": "ddangyo-1280604-30000049",
+      "name": "든든한끼 본쇠고기장조림(80g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/1a346ec5-3acc-4517-84f4-1684b0b74c0b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000049"
+    },
+    {
+      "id": "ddangyo-1280604-30000050",
+      "name": "든든한끼 본오징어초무침(80g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/6d4fd6b4-6558-4ac1-a21a-bf760505cb65.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000050"
+    },
+    {
+      "id": "ddangyo-1280604-30000023",
+      "name": "쇠고기버섯죽",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/dac97842-b7f1-4c01-bfc8-b104e185dc6d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000023"
+    },
+    {
+      "id": "ddangyo-1280604-30000044",
+      "name": "녹두죽",
+      "description": "",
+      "category": "진짜 전통죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/47921da4-f43a-427e-bebc-6f817ce24b90.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000044"
+    },
+    {
+      "id": "ddangyo-1280604-30000009",
+      "name": "전복내장죽",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/dc05abd8-37cf-4a59-85a9-1a99d753c5c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000009"
+    },
+    {
+      "id": "ddangyo-1280604-30000018",
+      "name": "자연송이쇠고기죽 (보양)",
+      "description": "",
+      "category": "원기 활력죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4c516c2a-500f-4d89-8755-3df8e2d6732e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000018"
+    },
+    {
+      "id": "ddangyo-1280604-30000051",
+      "name": "키즈장조림(80g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5c9b5fc9-88db-4101-ac42-8c3414ff437b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000051"
+    },
+    {
+      "id": "ddangyo-1280604-30000024",
+      "name": "새우죽",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/173871a4-7fca-4c6c-a5b5-5af3d7519cf5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000024"
+    },
+    {
+      "id": "ddangyo-1280604-30000019",
+      "name": "특자연송이쇠고기죽 (송이2배)",
+      "description": "",
+      "category": "원기 활력죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/461124f3-931d-45a5-b8ba-1f485df8d590.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000019"
+    },
+    {
+      "id": "ddangyo-1280604-30000045",
+      "name": "명품잣죽",
+      "description": "",
+      "category": "진짜 전통죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e2b7de01-9082-4c10-a574-19c7e7d73974.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000045"
+    },
+    {
+      "id": "ddangyo-1280604-30000037",
+      "name": "(배달앱 전용) 치즈 낙지김치죽",
+      "description": "",
+      "category": "별미 해장죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9dec7498-00ee-4975-ab6a-6cb4c48d6f4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000037"
+    },
+    {
+      "id": "ddangyo-1280604-30000010",
+      "name": "진전복내장죽 (전복2배)",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b8a1fc81-48e1-4934-9f66-42aa592d5389.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000010"
+    },
+    {
+      "id": "ddangyo-1280604-30000063",
+      "name": "단호박식혜 238ml (건강음료)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/481bc0fe-6984-408d-8a9c-87a71288b7f3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000063"
+    },
+    {
+      "id": "ddangyo-1280604-30000064",
+      "name": "우리 땅 청매실 100ml (건강음료)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/dd86b55c-a8a1-4efd-9963-ba3d55c695c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000064"
+    },
+    {
+      "id": "ddangyo-1280604-30000011",
+      "name": "특전복내장죽 (전복3배)",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9145b348-8e8f-4f67-9161-acd3d4b3300f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000011"
+    },
+    {
+      "id": "ddangyo-1280604-30000025",
+      "name": "특새우죽 (새우2배)",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b49bf10b-6900-44b9-8d6a-fe666da55b68.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000025"
+    },
+    {
+      "id": "ddangyo-1280604-30000038",
+      "name": "신짬뽕죽 (해장)",
+      "description": "",
+      "category": "별미 해장죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/955b2dc5-fc9f-45f6-a130-56e81c1dbcb7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000038"
+    },
+    {
+      "id": "ddangyo-1280604-30000046",
+      "name": "흑임자죽",
+      "description": "",
+      "category": "진짜 전통죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/753eeb9e-cd79-4258-9cab-20a50488db8a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000046"
+    },
+    {
+      "id": "ddangyo-1280604-30000052",
+      "name": "든든한끼 본버터 쇠고기장조림(70g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/492e8e6e-5e80-44b0-9dfa-4cd27855ccb2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000052"
+    },
+    {
+      "id": "ddangyo-1280604-30000039",
+      "name": "(배달앱 전용) 치즈 신짬뽕죽",
+      "description": "",
+      "category": "별미 해장죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/2c707360-08ab-4492-aec8-c6b90bce2fb0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000039"
+    },
+    {
+      "id": "ddangyo-1280604-30000012",
+      "name": "트러플전복죽",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/add60b38-6d17-4524-9519-20daf0f3d50c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000012"
+    },
+    {
+      "id": "ddangyo-1280604-30000053",
+      "name": "본쇠고기장조림(300g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d06a0294-c721-4494-8c42-7b649e63baa3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000053"
+    },
+    {
+      "id": "ddangyo-1280604-30000065",
+      "name": "양배추사과즙 100ml (건강음료)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/144edc22-2af3-4e69-ae79-453fc51f56ee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000065"
+    },
+    {
+      "id": "ddangyo-1280604-30000026",
+      "name": "해물죽",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/a83a12ce-724a-4d6c-b0bb-fb14cd0f52f5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000026"
+    },
+    {
+      "id": "ddangyo-1280604-30000013",
+      "name": "특트러플전복죽 (전복2배)",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/8ac58e8a-fa5c-4737-b39d-9db8c31ce328.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000013"
+    },
+    {
+      "id": "ddangyo-1280604-30000066",
+      "name": "진짜배즙 100ml (건강음료)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/19b98ead-0f8d-4b12-99cb-df6fa7d9c5e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000066"
+    },
+    {
+      "id": "ddangyo-1280604-30000054",
+      "name": "본메추리알쇠고기장조림(150g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/f819fa8c-6da8-4590-8cfa-c57793dd5d88.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000054"
+    },
+    {
+      "id": "ddangyo-1280604-30000027",
+      "name": "특해물죽 (해물2배)",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/68053395-f764-4650-aeeb-d60d77997048.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000027"
+    },
+    {
+      "id": "ddangyo-1280604-30000028",
+      "name": "통영굴버섯죽",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/61db5aec-4786-4b9f-93ca-a2f0b2cc2fdb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000028"
+    },
+    {
+      "id": "ddangyo-1280604-30000067",
+      "name": "뽀로로 홍삼쏙쏙 100ml (건강음료)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4e3700c6-0753-4280-9bce-86057de1f1ed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000067"
+    },
+    {
+      "id": "ddangyo-1280604-30000014",
+      "name": "삼계전복죽 (보양)",
+      "description": "",
+      "category": "시그니처 전복죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/fac1a573-5aa6-4acf-9388-4833de364660.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000014"
+    },
+    {
+      "id": "ddangyo-1280604-30000068",
+      "name": "본매실골드 500ml (건강음료)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5994c9a8-61ca-4722-aea9-65493a4bd9cd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000068"
+    },
+    {
+      "id": "ddangyo-1280604-30000056",
+      "name": "본비트동치미(1kg)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/872c23a3-94db-4421-bc27-6df9c7d168e9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000056"
+    },
+    {
+      "id": "ddangyo-1280604-30000029",
+      "name": "특통영굴버섯죽 (굴2배)",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/f2895d95-eb39-4e96-b1cb-5a8ef5c7d662.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000029"
+    },
+    {
+      "id": "ddangyo-1280604-30000030",
+      "name": "7가지야채죽",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5ca5dcb2-88aa-48c3-b4ab-9255612da7ee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000030"
+    },
+    {
+      "id": "ddangyo-1280604-30000057",
+      "name": "본죽오징어젓갈(130g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/0808847b-278c-4194-bfbd-858f3f3d5c5a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000057"
+    },
+    {
+      "id": "ddangyo-1280604-30000031",
+      "name": "참치야채죽",
+      "description": "",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/de945ec5-7fdc-4b3e-9f4b-837914f69723.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000031"
+    },
+    {
+      "id": "ddangyo-1280604-30000032",
+      "name": "흰죽",
+      "description": "흰죽, 간장 2개, 동치미",
+      "category": "건강 영양죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/32fd34f3-27c5-42f0-8f3e-31602d7125d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000032"
+    },
+    {
+      "id": "ddangyo-1280604-30000048",
+      "name": "본메추리알장조림(400g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/285227fd-51fb-400d-9a31-6ac27085fac8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000048"
+    },
+    {
+      "id": "ddangyo-1280604-30000071",
+      "name": "시그니처 통단팥죽 270g (간편식)",
+      "description": "",
+      "category": "간편식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/0a496200-bc8c-4216-8043-4d913f6c894d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000071"
+    },
+    {
+      "id": "ddangyo-1280604-30000072",
+      "name": "시그니처 단호박죽 270g (간편식)",
+      "description": "",
+      "category": "간편식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5cfa0a17-dd52-43fa-9c85-4e60151d7f86.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000072"
+    },
+    {
+      "id": "ddangyo-1280604-30000055",
+      "name": "본오징어초무침(150g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/2e45e6a7-fc2d-4b5c-b874-79ac6c162af0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000055"
+    },
+    {
+      "id": "ddangyo-1280604-30000058",
+      "name": "본죽낙지젓갈(130g)",
+      "description": "",
+      "category": "본죽반찬가게",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/bbb9b385-fabe-4a97-8500-0f20cf6d1040.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000058"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1280604",
+    "sourceUrls": [
+      "https://bit.ly/4qZuGBQ",
+      "https://fdofd.ddangyo.com/gateway1.html?PXtXTBR"
+    ],
+    "rawItemCount": 69,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

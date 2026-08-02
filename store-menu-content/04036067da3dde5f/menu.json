@@ -1,0 +1,335 @@
+{
+  "storeId": "04036067da3dde5f",
+  "storeName": "킹콩부대찌개 여수점",
+  "displayName": "킹콩부대찌개 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/44a41d4b-d291-4cfc-bc51-213ab4b936cb.jpg",
+  "categories": [
+    "전체",
+    "단품메뉴 [비조리]",
+    "음료",
+    "세트 메뉴",
+    "사리류 및 추가",
+    "곁들임 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1226830-30000054",
+      "name": "[비조리] 리얼 햄가득 부대찌개",
+      "description": "",
+      "category": "단품메뉴 [비조리]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/3aa81f3b-5d76-4c7d-8662-01361d935974.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000054"
+    },
+    {
+      "id": "ddangyo-1226830-30000052",
+      "name": "[비조리] 섞어 부대찌개",
+      "description": "",
+      "category": "단품메뉴 [비조리]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d228b1d9-299e-4eac-85f8-7d4653eb0ddc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000052"
+    },
+    {
+      "id": "ddangyo-1226830-30000051",
+      "name": "[비조리] 킹콩 부대찌개",
+      "description": "",
+      "category": "단품메뉴 [비조리]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/dee86dbf-fa2a-436c-8077-1252f01b7d72.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000051"
+    },
+    {
+      "id": "ddangyo-1226830-30000043",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1226830-30000005",
+      "name": "[비조리] 부대찌개 1인 세트",
+      "description": "부대찌개 1인+세트 사리/곁들임+음료",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000005"
+    },
+    {
+      "id": "ddangyo-1226830-30000016",
+      "name": "모듬사리",
+      "description": "햄 3종류 + 떡사리 + 두부 + 물만두 + 당면",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6878f760-13d6-4b4d-9d25-323258b77421.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000016"
+    },
+    {
+      "id": "ddangyo-1226830-30000033",
+      "name": "킹콩 왕돈까스",
+      "description": "돈까스 + 밥",
+      "category": "곁들임 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000033"
+    },
+    {
+      "id": "ddangyo-1226830-30000042",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000042"
+    },
+    {
+      "id": "ddangyo-1226830-30000006",
+      "name": "[비조리] 부대찌개 2인 세트",
+      "description": "부대찌개 2인+세트 사리/곁들임+음료",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000006"
+    },
+    {
+      "id": "ddangyo-1226830-30000017",
+      "name": "햄사리",
+      "description": "햄 3종류",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f3461946-0ec8-4d3e-9394-233b30f1b13b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000017"
+    },
+    {
+      "id": "ddangyo-1226830-30000034",
+      "name": "함박 스테이크",
+      "description": "함박 스테이크 + 모닝빵",
+      "category": "곁들임 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000034"
+    },
+    {
+      "id": "ddangyo-1226830-30000007",
+      "name": "[비조리] 부대찌개 3인 세트",
+      "description": "부대찌개 3인+세트 사리/곁들임+음료",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000007"
+    },
+    {
+      "id": "ddangyo-1226830-30000018",
+      "name": "[조리]탕수육사리",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/77b01156-3792-4a65-998f-f4a1c93d5fab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000018"
+    },
+    {
+      "id": "ddangyo-1226830-30000035",
+      "name": "맥앤치즈 후라이",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000035"
+    },
+    {
+      "id": "ddangyo-1226830-30000040",
+      "name": "감자튀김",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000040"
+    },
+    {
+      "id": "ddangyo-1226830-30000008",
+      "name": "[비조리] 부대찌개 4인 세트",
+      "description": "부대찌개 4인+세트 사리/곁들임+음료",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000008"
+    },
+    {
+      "id": "ddangyo-1226830-30000019",
+      "name": "[조리]돈까스사리",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a26f0db8-3edc-4d4e-86f8-7eac3f6fe413.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000019"
+    },
+    {
+      "id": "ddangyo-1226830-30000021",
+      "name": "양파절임(180g)",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/98b2726c-b7df-4efd-80b6-bd51da16b57a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000021"
+    },
+    {
+      "id": "ddangyo-1226830-30000055",
+      "name": "[비조리] 텍사스부대찌개",
+      "description": "텍사스부대찌개",
+      "category": "단품메뉴 [비조리]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/4cac7a64-bd62-429d-9b30-9483e5acba86.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000055"
+    },
+    {
+      "id": "ddangyo-1226830-30000041",
+      "name": "매콤 만두튀김",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000041"
+    },
+    {
+      "id": "ddangyo-1226830-30000022",
+      "name": "마카로니무침(150g)",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/604d0d01-efbe-438b-9a1c-dcfa83f25551.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000022"
+    },
+    {
+      "id": "ddangyo-1226830-30000036",
+      "name": "[NEW]치킨스틱",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000036"
+    },
+    {
+      "id": "ddangyo-1226830-30000037",
+      "name": "[NEW]오징어꿔바로우",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000037"
+    },
+    {
+      "id": "ddangyo-1226830-30000023",
+      "name": "물만두(100g)",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/df937eab-663b-4a3f-a0ac-05387a055d21.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000023"
+    },
+    {
+      "id": "ddangyo-1226830-30000024",
+      "name": "우삼겹사리(100g)",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/be7c29d4-0342-4b6d-b13b-8e5901ec6faf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000024"
+    },
+    {
+      "id": "ddangyo-1226830-30000025",
+      "name": "누들밀떡사리(100g)",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/85f9934a-cbdc-4360-945b-20e0e840f747.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000025"
+    },
+    {
+      "id": "ddangyo-1226830-30000026",
+      "name": "당면사리(100g)",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e3290159-4c19-4d75-9003-35c61f0d7025.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000026"
+    },
+    {
+      "id": "ddangyo-1226830-30000027",
+      "name": "베이키드빈스(50g)",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/232a2558-d377-45c8-b528-16942845f108.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000027"
+    },
+    {
+      "id": "ddangyo-1226830-30000028",
+      "name": "두부(8P)",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d0b05a50-dd2f-485d-a2d7-8b4bdd1bc9ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000028"
+    },
+    {
+      "id": "ddangyo-1226830-30000029",
+      "name": "검은콩사리면",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/833ad59b-41a6-4f5c-851c-75bad3af00a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000029"
+    },
+    {
+      "id": "ddangyo-1226830-30000058",
+      "name": "감자사리면",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/6828050f-e46e-4d3f-99ce-21ae489816f9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000058"
+    },
+    {
+      "id": "ddangyo-1226830-30000031",
+      "name": "우동사리",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e53093ea-6035-4565-8edd-c0875a68260c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000031"
+    },
+    {
+      "id": "ddangyo-1226830-30000032",
+      "name": "공기밥",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ec932e74-2957-4885-90ed-7620165606c0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000032"
+    },
+    {
+      "id": "ddangyo-1226830-30000020",
+      "name": "맥앤치즈토핑",
+      "description": "",
+      "category": "사리류 및 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000020"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1226830",
+    "sourceUrls": [
+      "https://bit.ly/4k2Ujik",
+      "https://fdofd.ddangyo.com/gateway1.html?UmvE17n"
+    ],
+    "rawItemCount": 37,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

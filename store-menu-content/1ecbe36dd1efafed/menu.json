@@ -1,0 +1,421 @@
+{
+  "storeId": "1ecbe36dd1efafed",
+  "storeName": "돈치킨 여수둔덕봉계점",
+  "displayName": "돈치킨 여수둔덕봉계점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/9903fa43-cd12-4089-9a2e-adca008c4b61.jpg",
+  "categories": [
+    "전체",
+    "한마리치킨",
+    "[DF] 돈치킨 직화메뉴(면사리 출시)",
+    "야무진 시리즈(두마리치킨)",
+    "사이드 메뉴",
+    "야심찬 시리즈",
+    "순살치킨",
+    "통다리,통날개 치킨",
+    "시카고피자",
+    "음료, 소스류",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1292494-10000045",
+      "name": "구운치킨",
+      "description": "타사대비 큰11호 계육을 시즈닝하여 숙성 후 스팀오븐에 구워 육즙은 가득 기름기는 쓱 빠진 대표메뉴",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/9903fa43-cd12-4089-9a2e-adca008c4b61.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1292494-10000040",
+      "name": "[DF] 구운마늘치킨",
+      "description": "[DF] 마늘의 알싸한 맛과 간장소스의 달콤한 맛이 조화로운 한국식 마늘치킨",
+      "category": "[DF] 돈치킨 직화메뉴(면사리 출시)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a42d36f9-9397-40e6-b31f-c129a605f111.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1292494-10000044",
+      "name": "구운치킨+구운치킨",
+      "description": "11호 계육 두마리 구성으로 맛과 양 가성비 끝판왕 세트메뉴 원하는 맛 자유롭게 선택가능\n9호에서 11호계육으로 업그레이드 되면서 가격이 소폭 인상되었습니다.",
+      "category": "야무진 시리즈(두마리치킨)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3a988e7b-91da-48c3-857a-dd23939c078a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1292494-10000038",
+      "name": "[DF] 바블링 골드 치킨",
+      "description": "치킨+떡조합에 바베큐소스의 직화향과 마요라치소스가 드리즐되어 꾸덕한 소스와 함께 즐기는 치킨",
+      "category": "[DF] 돈치킨 직화메뉴(면사리 출시)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1292494-10000027",
+      "name": "치즈볼",
+      "description": "주~욱 늘어나는 고소한 치즈볼",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/384893af-a2d6-45d7-a2fd-6a1f68768ecc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1292494-10000008",
+      "name": "야심찬 세트A(구운치킨+리얼 시카고피자)",
+      "description": "구운치킨+리얼 시카고피자\n부드러운 구운 치킨에 치즈폭탄 시카고 피자를 즐길 수 있는 메뉴",
+      "category": "야심찬 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/64e6d1d3-d043-4d93-821e-01564aed3bb3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1292494-10000010",
+      "name": "구운 순살 치즈 불닭",
+      "description": "부드러운 통다리 순살과 매콤한 양념, 고소한 치즈의 완벽한 삼합",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/2c742622-6de1-492b-962a-8a92159355f9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1292494-10000013",
+      "name": "구운 통다리 치킨",
+      "description": "국내산 통다리로 950g 이상 대용량 가성비 치킨",
+      "category": "통다리,통날개 치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1292494-10000023",
+      "name": "리얼 시카고피자",
+      "description": "리얼 시카고피자\n고소하고 달콤한 스위트리코차티츠와 커스터드 크림 베이스로 아라비아따소스로 느끼함을 잡고 고급 썬드라이드 토마토를 토핑한 리얼 시카고 피자",
+      "category": "시카고피자",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1292494-10000029",
+      "name": "매운소스(봉) 추가-30g",
+      "description": "매운 소스를 작은 봉으로 추가 하는 메뉴",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1292494-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1292494-10000046",
+      "name": "핫로스트치킨",
+      "description": "구운치킨 최초로 깔끔하게 매콤한 매직핫 시즈닝으로 염지한 치킨",
+      "category": "한마리치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1292494-10000047",
+      "name": "구운 순살 치킨",
+      "description": "800g이 넘는 통다리 순살로, 담백한 맛과 양 모두 잡은 치킨",
+      "category": "순살치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1292494-10000028",
+      "name": "케이준 양념감자",
+      "description": "짭쪼롬하고 고소한 케이준 감자",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1292494-10000039",
+      "name": "[DF] 청양숯불바베큐 치킨",
+      "description": "[DF] 치킨+떡조합에 청양의 깔끔한 매콤함과 숯불의 풍미로 맛, 향, 가성비 모두 갖춘 메뉴 신라면보다 조금 더 매운 맵기",
+      "category": "[DF] 돈치킨 직화메뉴(면사리 출시)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1292494-10000009",
+      "name": "야심찬 세트B(구운치킨+리얼 시카고피자+떡볶이)",
+      "description": "구운치킨+리얼시카고피자+떡볶이\n부드러운 구운치킨에 치즈폭탄 시카고 피자와 떡볶이를 동시에 즐길 수 있는 갓성비 메뉴",
+      "category": "야심찬 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5baf3527-0d54-433d-b69f-38ccf28108c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1292494-10000014",
+      "name": "구운 통날개 치킨",
+      "description": "국새나 통날개(윙+봉)로 950g 이상 대용량 가성비 치킨",
+      "category": "통다리,통날개 치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1292494-10000024",
+      "name": "베이컨포테이토 시카고피자",
+      "description": "베이컨포테이토 시카고피자\n허브토마토소스와 치즈케이크무스 베이스로, 고소한 베이컨과 웨지감자를 올려 담백하고 리치한 치즈의 조화",
+      "category": "시카고피자",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1292494-10000030",
+      "name": "마늘소스(봉) 추가-30g",
+      "description": "마늘 소스를 작은 봉으로 추가 하는 메뉴",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1292494-90000002",
+      "name": "처음처럼(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1292494-10000048",
+      "name": "구운 통다리+통날개 치킨",
+      "description": "구운 통다리+통날개 치킨 \n골라서 먹는 특수 부위 치킨",
+      "category": "통다리,통날개 치킨",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1292494-10000011",
+      "name": "구운 순살 파닭 치킨",
+      "description": "부드러운 통다리살과 특제 파닭소스, 넉넉한 파채로 사랑받는 인기메뉴",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/dcc91136-8e06-47be-978e-053eef482503.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1292494-10000025",
+      "name": "치바로우 (소)",
+      "description": "육즙 팡팡 터지는 야들야들한 속살에 바삭한 식감을 새콤달콤한 소스에 찍어 먹는 맛있는 치바로우 200g.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a968432d-e73b-488d-a3ab-b01b47d9473e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1292494-10000043",
+      "name": "야심찬 세트C(구운치킨+국물 떡볶이)",
+      "description": "오리지널 구운치킨+국물 떡볶이\n구운치킨과 매콤한 국물 떡볶이를 동시에 즐길 수 있는 세트메뉴",
+      "category": "야심찬 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8e2ee7a4-20c4-427e-99f0-f19c9cd167ed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1292494-10000031",
+      "name": "무추가",
+      "description": "치킨무 추가",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1292494-90000003",
+      "name": "테라 생맥주(1000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1292494-10000026",
+      "name": "치바로우 (대)",
+      "description": "육즙 팡팡 터지는 야들야들한 속살에 바삭한 식감을 새콤달콤한 소스에 찍어 먹는 맛있는 치바로우 400g.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/515c2f71-c58d-4ca7-9ad6-fa15dd49e63c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1292494-10000041",
+      "name": "[DF] 구운핫치킨",
+      "description": "[DF] 부드럽고 쫄깃하면서 화끈하게 매운 맛이 일품. 진정한 핫치킨 맛의 진수가 담겨 있습니다. 신라면과 불닭 사이의 맵기",
+      "category": "[DF] 돈치킨 직화메뉴(면사리 출시)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0491303a-0726-48d4-8e59-0aeb7434e0c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1292494-10000012",
+      "name": "구운 순살 치즈 치킨",
+      "description": "부드러운 통다리살과 고소한 치즈의 완벽 조화",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c7fa4f3a-fa61-4a1f-afe8-05014b53e57b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1292494-10000032",
+      "name": "콜라 500ml",
+      "description": "콜라 추가 주문",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1292494-90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1292494-10000042",
+      "name": "[DF] 구운바베큐치킨",
+      "description": "[DF] 기본 바베큐 립 소스에 천연 허브향을 가미한 핫소스로 한 번 더 요리한 정통 바베큐 치킨",
+      "category": "[DF] 돈치킨 직화메뉴(면사리 출시)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c1471f92-1f89-4a65-b182-5b24731877ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1292494-10000049",
+      "name": "야무진 떡볶이",
+      "description": "야무진 떡볶이\n특제소스로 만든 떡볶이 단품",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ab8545a7-7ba2-4644-b544-957615213329.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1292494-10000033",
+      "name": "사이다 500ml",
+      "description": "사이다 추가 주문",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1292494-90000005",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1292494-10000050",
+      "name": "국내산 양배추샐러드",
+      "description": "1000ml 대용량 용기에 얇게 채썬 양배추와 특제 케요네즈 소스가 듬뿍",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1292494-10000034",
+      "name": "콜라 1.25L",
+      "description": "콜라 추가 주문",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1292494-10000035",
+      "name": "사이다 1.25L",
+      "description": "사이다 추가 주문",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1292494-10000051",
+      "name": "제로콜라 500ml 추가",
+      "description": "제로콜라로 변경",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1292494-10000052",
+      "name": "제로사이다 500ml 추가",
+      "description": "제로사이다 추가",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1292494-10000053",
+      "name": "피자핫소스 추가",
+      "description": "",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1292494-10000054",
+      "name": "파마산치즈가루 추가",
+      "description": "",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1292494-10000055",
+      "name": "피클추가",
+      "description": "",
+      "category": "음료, 소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1292494",
+    "sourceUrls": [
+      "https://bit.ly/tk-돈치킨여수둔덕봉계점",
+      "https://fdofd.ddangyo.com/gateway1.html?CsyFKfy"
+    ],
+    "rawItemCount": 46,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

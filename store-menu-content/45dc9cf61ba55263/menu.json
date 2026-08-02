@@ -1,0 +1,291 @@
+{
+  "storeId": "45dc9cf61ba55263",
+  "storeName": "덮덮밥 미평점",
+  "displayName": "덮덮밥 미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/07b420e2-693e-4103-8537-b27167473602.jpg",
+  "categories": [
+    "전체",
+    "[시그니처 덮밥]",
+    "[레드 덮밥]",
+    "[덮덮밥 특선]",
+    "[세트메뉴]",
+    "[음료]",
+    "[사이드]"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1222912-30000007",
+      "name": "야들야들 대패덮밥",
+      "description": "한입 크기의 야들한 대패삼겹을 올린 덮밥",
+      "category": "[시그니처 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0ab8dacf-4cea-48a8-8477-5fa151375471.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000007"
+    },
+    {
+      "id": "ddangyo-1222912-30000040",
+      "name": "쫄깃야들 우삼겹 덮밥",
+      "description": "한입 크기의 쫄깃한 우삼겹을 올린 덮밥",
+      "category": "[시그니처 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3d73747e-52b4-4153-84f9-cdbfb3811661.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000040"
+    },
+    {
+      "id": "ddangyo-1222912-30000096",
+      "name": "풍미가득 대창덮밥",
+      "description": "직화로 구운 통통한 대창 & 매콤한 소스",
+      "category": "[시그니처 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5635518b-11c3-47e9-82ce-27535fb081f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000096"
+    },
+    {
+      "id": "ddangyo-1222912-30000009",
+      "name": "육즙가득 항정살덮밥",
+      "description": "덮덮밥 대표메뉴 육즙가득 항정살 덮밥",
+      "category": "[시그니처 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6f87e40a-50e1-4134-aa2f-7aabda64d122.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000009"
+    },
+    {
+      "id": "ddangyo-1222912-30000008",
+      "name": "단짠단짠 갈비덮밥",
+      "description": "남녀노소 사랑하는 단짠 갈비양념 덮밥",
+      "category": "[시그니처 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/4ea90efd-ef20-4092-b289-61fff25f82cc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000008"
+    },
+    {
+      "id": "ddangyo-1222912-30000012",
+      "name": "[레드] 매콤야들 대패덮밥",
+      "description": "한입 크기의 매콤한 대패삼겹을 올린 덮밥",
+      "category": "[레드 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9a0f2118-743c-4bf4-aa10-37aff779137e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000012"
+    },
+    {
+      "id": "ddangyo-1222912-30000185",
+      "name": "(우마이) 철판 야끼소바",
+      "description": "대패삼겹과 아삭한 양배추,숙주로 볶은 철판면",
+      "category": "[덮덮밥 특선]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a12b831f-9825-4dac-8487-7c35ef7de1c3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000185"
+    },
+    {
+      "id": "ddangyo-1222912-30000001",
+      "name": "1인 [덮밥] 세트",
+      "description": "덮밥 + 사이드 튀김",
+      "category": "[세트메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/ac3bb8d9-600b-4af2-8ee6-adf342870de8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000001"
+    },
+    {
+      "id": "ddangyo-1222912-30000172",
+      "name": "콜라 355ml",
+      "description": "",
+      "category": "[음료]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000172"
+    },
+    {
+      "id": "ddangyo-1222912-30000018",
+      "name": "순살 가라아게",
+      "description": "겉바속촉의 진리 순살 가라아게",
+      "category": "[사이드]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/64086a55-a5f6-41d3-8d69-372a68c4160d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000018"
+    },
+    {
+      "id": "ddangyo-1222912-30000099",
+      "name": "매콤숯불 제육덮밥",
+      "description": "특제 고추장소스로 만든 한국인의 밥도둑",
+      "category": "[시그니처 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/7af7bba4-2dd2-457e-becc-6256e477ee0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000099"
+    },
+    {
+      "id": "ddangyo-1222912-30000184",
+      "name": "1인 [철판 야끼소바] 세트",
+      "description": "(우마이) 철판 야끼소바 + 사이드 튀김",
+      "category": "[세트메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4feea7f9-4664-4eb2-ad56-6be6ac425667.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000184"
+    },
+    {
+      "id": "ddangyo-1222912-30000019",
+      "name": "닭껍질 튀김",
+      "description": "바삭매콤하게 튀긴 닭껍질 튀김",
+      "category": "[사이드]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a1aa02e1-0eba-4a9b-9eed-d6939483d42d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000019"
+    },
+    {
+      "id": "ddangyo-1222912-30000182",
+      "name": "(NEW) 사르르탱글 막창덮밥",
+      "description": "입에 넣는 순간 사르르 녹는 부드러운 막창",
+      "category": "[덮덮밥 특선]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4b71a16e-51e2-4753-a3d4-76672616c673.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000182"
+    },
+    {
+      "id": "ddangyo-1222912-30000043",
+      "name": "[레드] 매콤쫄깃 우삼겹 덮밥",
+      "description": "한입 크기의 매콤한 우삼겹을 올린 덮밥",
+      "category": "[레드 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ae5bef54-8023-4347-ad45-c1f589db65d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1222912-30000025",
+      "name": "고기듬뿍 교자만두",
+      "description": "육즙 가득 국내산 돼지고기로 꽉찬 만두",
+      "category": "[사이드]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ba76281c-05d2-474a-bf8d-5de560a7ea38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000025"
+    },
+    {
+      "id": "ddangyo-1222912-30000013",
+      "name": "[레드] 매콤단짠 갈비덮밥",
+      "description": "단짠한 갈비양념에 매콤함을 더한 덮밥",
+      "category": "[레드 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/7adb8dd2-5d59-422e-8eee-b8a4ff76f6eb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000013"
+    },
+    {
+      "id": "ddangyo-1222912-30000183",
+      "name": "매콤탱글 불막창덮밥",
+      "description": "불향 가득 매콤하게 볶아낸 탱글한 불막창",
+      "category": "[덮덮밥 특선]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2501bc8b-a4e9-4cd3-a6f7-ed9743b6b69b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000183"
+    },
+    {
+      "id": "ddangyo-1222912-30000129",
+      "name": "1인 [시원 메밀소바] 세트",
+      "description": "시원 메밀소바 & 새우튀김 + 사이드 튀김",
+      "category": "[세트메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/49270071-a2a2-49bd-9bb8-5cfe31970d18.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000129"
+    },
+    {
+      "id": "ddangyo-1222912-30000175",
+      "name": "사이다 355ml",
+      "description": "",
+      "category": "[음료]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000175"
+    },
+    {
+      "id": "ddangyo-1222912-30000014",
+      "name": "[레드] 매콤육즙 항정살덮밥",
+      "description": "매콤양념에 구운 육즙가득 항정살 덮밥",
+      "category": "[레드 덮밥]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/dfa3c83a-ea98-48f0-a47b-2ab8acfff0a3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000014"
+    },
+    {
+      "id": "ddangyo-1222912-30000051",
+      "name": "탱글한 새우튀김",
+      "description": "바삭고소하게 튀긴 새우튀김",
+      "category": "[사이드]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c77a539f-b516-4fa6-bfb1-d0a7f94463dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000051"
+    },
+    {
+      "id": "ddangyo-1222912-30000092",
+      "name": "1인 [고깃집 철판볶음밥] 세트",
+      "description": "철판 볶음밥 + 사이드 튀김",
+      "category": "[세트메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/c68df104-4926-4477-a07c-8a5a4109a125.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000092"
+    },
+    {
+      "id": "ddangyo-1222912-30000111",
+      "name": "[고깃집] 철판볶음밥",
+      "description": "감칠맛 가득 매콤 고소한 고깃집ST 볶음밥",
+      "category": "[덮덮밥 특선]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/c7f5442b-1e7f-4d36-b6ad-b386dd599636.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000111"
+    },
+    {
+      "id": "ddangyo-1222912-30000022",
+      "name": "맛감자",
+      "description": "감자튀김 중 가장 맛있는 건 맛감자",
+      "category": "[사이드]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/715c6f9a-4d5c-47fa-b862-8bd186f8fd62.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000022"
+    },
+    {
+      "id": "ddangyo-1222912-30000130",
+      "name": "시원 메밀소바 & 새우튀김",
+      "description": "히야시 소바에 탱글한 새우튀김 토핑",
+      "category": "[덮덮밥 특선]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4d63e607-4c54-415e-9017-c41166c4bf21.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000130"
+    },
+    {
+      "id": "ddangyo-1222912-30000095",
+      "name": "가래떡꼬치",
+      "description": "남녀노소 좋아하는 추억의 가래떡꼬치",
+      "category": "[사이드]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0b17e37d-901a-4893-90b7-6def1e2ca2a1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000095"
+    },
+    {
+      "id": "ddangyo-1222912-30000004",
+      "name": "바삭 치킨마요컵밥 도시락",
+      "description": "가라아게로 가득 채운 치킨마요컵밥",
+      "category": "[덮덮밥 특선]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6859b355-0e3a-47ad-bbbc-de90044bde2c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000004"
+    },
+    {
+      "id": "ddangyo-1222912-30000050",
+      "name": "탱글 새우마요컵밥 도시락",
+      "description": "새우튀김으로 채운 새우마요컵밥",
+      "category": "[덮덮밥 특선]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/2fc4b90c-054c-4d1b-83fb-a005bf88baaf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000050"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1222912",
+    "sourceUrls": [
+      "https://bit.ly/tk-덮덮밥미평점",
+      "https://fdofd.ddangyo.com/gateway1.html?WYMBZ23"
+    ],
+    "rawItemCount": 34,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,499 @@
+{
+  "storeId": "aa0a00258c22f377",
+  "storeName": "뽕뜨락피자 여수여서점",
+  "displayName": "뽕뜨락피자 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/b24e7113-2db2-4469-8f60-329a861bc701.jpg",
+  "categories": [
+    "전체",
+    "클래식피자",
+    "커스터마이징",
+    "러블리피자",
+    "NEW신메뉴",
+    "사이드 / 파스타",
+    "음료 / 추가",
+    "토핑 추가"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1131478-10000015",
+      "name": "스윗고구마",
+      "description": "새콤달콤한 랠리쉬피클이 씹히는 화이트소스에 달달한 고구마무스와 직화로 구운 멜팅치즈의 맛있는 만남",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/b24e7113-2db2-4469-8f60-329a861bc701.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1131478-10000004",
+      "name": "포마이피자",
+      "description": "9가지 소스중 한가지,16가지 토핑중 네가지를 골라골라~내 입맛에 딱 맞춘 나만의 커스텀피자",
+      "category": "커스터마이징",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/36fb8719-b7f5-4623-b2f4-7d99facbceb1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1131478-10000008",
+      "name": "모모스테키",
+      "description": "육즙이 뿜뿜하는 3cm 두께의 블랙앵거스스테이크와 직화로 구워 청키한 스퀘어 하이멜트치즈, 씹히는 맛이 즐거운 다이스단호박의 특급 네모네모 콜라보",
+      "category": "러블리피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/5a6c6090-c9d8-4e1d-a7fb-8d80b830e3ea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1131478-10000054",
+      "name": "베이컨폭탄피자",
+      "description": "모짜렐라치즈와 체다치즈위에베이컨 토핑이 두배로 올라간 피자",
+      "category": "클래식피자",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1131478-10000001",
+      "name": "맥앤치즈피자",
+      "description": "꾸덕 고소함의 끝판왕인 맥 앤 치즈가 짭짤한 베이컨을 만나 한번 맛보면 계속 먹게 되는 취향 저격 메뉴",
+      "category": "NEW신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e823d685-dc6d-4765-b4f8-5bfbf0e05fd4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1131478-10000005",
+      "name": "바베큐골드포크",
+      "description": "아낌없이 토핑한 폴드포크와 싱싱한새우, 에멘탈치즈의 만남",
+      "category": "러블리피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/8d37adac-d479-4d66-8468-63ca47ec95d1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1131478-10000021",
+      "name": "콘치즈",
+      "description": "달콤한 마요네즈 소스와 톡톡튀는 옥수수",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d45493ff-09de-4611-bb38-6fb54ff757b6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1131478-10000033",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료 / 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1131478-10000042",
+      "name": "치즈 100g",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1131478-10000034",
+      "name": "사이다",
+      "description": "",
+      "category": "음료 / 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1131478-10000055",
+      "name": "까르보핫치킨피자",
+      "description": "고소한 크림 가득한 파스타와 매콤한 치킨을 가득  토핑한  피자",
+      "category": "클래식피자",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1131478-10000006",
+      "name": "관자네온새우",
+      "description": "탱글쫄깃한 여수 관자에 통통한 새우가 달달한 큐브 단호박으로 장식한 녹진~한 크림치즈를 덮었다 선선한 초여름 밤에 시원한 맥주와 잘 어울리는 해산물 피자",
+      "category": "러블리피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/345ac1b3-59ba-4495-877f-03d6a51b68bb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1131478-10000022",
+      "name": "치즈볼(5pcs)",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/8fb56b47-f2ed-473c-882b-b36871a390e2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1131478-10000043",
+      "name": "체다치즈 80g",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1131478-10000056",
+      "name": "로제미트피자",
+      "description": "풍미 넘치는 로제파스타와 미트토핑으로 가득채운 피자",
+      "category": "클래식피자",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1131478-10000007",
+      "name": "쓰리고(3GO)",
+      "description": "피자 한 판에 안창살 스테이크 원고 차슈 스테이크 투고 스파이시치킨스테이크 쓰리고 파인애플로 싹쓸이",
+      "category": "러블리피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/82b821fe-956a-4638-af51-ceb66b20e281.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1131478-10000023",
+      "name": "스파이시치킨스테이크",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/bf9e0177-fbe2-4d6b-a58e-009f443986d0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1131478-10000035",
+      "name": "핫소스",
+      "description": "",
+      "category": "음료 / 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/dc6fe966-5971-4f62-b645-32b5944e0205.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1131478-10000044",
+      "name": "베이컨 11pcs",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1131478-10000009",
+      "name": "멜팅치즈",
+      "description": "100% 자연산 모차렐라, 고다, 하이멜트 치즈3종의 풍미를 제대로 느껴보자",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/e77a9042-fc44-4a86-bbd5-cbd4b43540c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1131478-10000036",
+      "name": "치즈가루",
+      "description": "",
+      "category": "음료 / 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/2534cd6e-f186-44c8-8a58-7fe33d547034.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1131478-10000045",
+      "name": "고구마무스 원형1줄",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1131478-10000010",
+      "name": "슈프림콤비",
+      "description": "피자의 기본중의 기본 다양한 재료들이 한판에 가득가득 기막힌 콤비네이션",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/6446c011-896c-4259-8a79-63ff82edb003.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1131478-10000025",
+      "name": "버팔로스틱",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/b244bb08-68ef-4870-b046-e80fe525bbca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1131478-10000037",
+      "name": "갈릭디핑소스",
+      "description": "",
+      "category": "음료 / 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f4b539ec-4fbf-4786-b8f4-6609679187c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1131478-10000046",
+      "name": "포테이토 11pcs",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1131478-10000011",
+      "name": "페페로니",
+      "description": "모짜렐라, 고다 치즈 위에 선홍빛의 맛깔스러운 페페로니가 듬뿍",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/1266b27a-b02d-4c23-8685-6c68e5419b09.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1131478-10000026",
+      "name": "치킨텐더",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/229f188e-72f5-4235-932c-1e4c99c11b6e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1131478-10000038",
+      "name": "살사소스",
+      "description": "",
+      "category": "음료 / 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7d20aec6-105a-45b5-8777-f1770a1d281b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1131478-10000047",
+      "name": "페페로니 11pcs",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1131478-10000012",
+      "name": "불고기",
+      "description": "한국인의 입맛을 사로잡는 불고기와 피자의 기막힌 궁합",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/70ad9b62-1b49-43e4-9dda-c2fa6f974d0d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1131478-10000027",
+      "name": "새우링",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/5b590763-3e94-4f8b-b81e-1542f5e8b73c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1131478-10000048",
+      "name": "파인애플 11pcs",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1131478-10000013",
+      "name": "차슈 (불갈비)",
+      "description": "불 맛나는 돼지고기, 달짝지근한 데리야끼소스의 완벽한 만남",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/bb019b1e-a40f-44cf-98d1-9b565f93a630.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1131478-10000028",
+      "name": "미트소스파스타",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/f095aae2-7eb7-47de-b950-52a9802ad0a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1131478-10000049",
+      "name": "새우 8pcs",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1131478-10000014",
+      "name": "웨지포테이토",
+      "description": "담백하고 포슬포슬한 웨지감자와 크리미한 특제마요소스의 만남",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/f03c1c78-2127-43bb-b153-fb149f5dbfce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1131478-10000029",
+      "name": "모짜렐라오븐파스타",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/c22bb709-27d6-4af7-941e-33b6fa643b57.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1131478-10000041",
+      "name": "피클",
+      "description": "",
+      "category": "음료 / 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1131478-10000050",
+      "name": "불고기 50g",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1131478-10000057",
+      "name": "불갈비파스타",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1131478-10000051",
+      "name": "옥수수 50g",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1131478-10000030",
+      "name": "베이컨크림파스타",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/d3d857bc-3ce3-4dc5-a1f9-ef1c8bb6f664.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1131478-10000016",
+      "name": "리치킨BBQ",
+      "description": "부드러운 닭가슴살 치킨텐더와 매콤한 피칸테소스, 달콤한 고구마무스의 매콤달콤한 만남 뽕뜨락피자의 넘버 투 시그니쳐 메뉴",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/5894c3eb-0771-452d-acf2-660bd2031278.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1131478-10000052",
+      "name": "올리브 50g",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1131478-10000017",
+      "name": "스파이시쉬림프",
+      "description": "살이 통통한 케이준 새우와 매콤한 피칸테소스의 환상적인 조화",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/41f2297c-cf60-4a2e-bc55-8de1a21c298c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1131478-10000031",
+      "name": "쉬림프미트파스타",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/a0f8d624-3f6d-4adb-bf5c-57dca4bf630a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1131478-10000053",
+      "name": "미트토핑 50g",
+      "description": "",
+      "category": "토핑 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1131478-10000032",
+      "name": "쉬림프크림파스타",
+      "description": "",
+      "category": "사이드 / 파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/34a38108-b5c6-47f9-b22d-c5673c3979c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1131478-10000018",
+      "name": "베이컨포테이토",
+      "description": "담백한 웨지감자와 고소한 베이컨이 가득~ 전 국민이 사랑하는 베스트메뉴",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/27c2aaaa-dc25-4152-a95a-ddf42bbaf02d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1131478-10000019",
+      "name": "콰트로",
+      "description": "뽕뜨락의 프리미엄 Top4를 한 판에 즐겨보자",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/383b290b-c8a0-46da-882a-89118ef70a16.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1131478-10000020",
+      "name": "치킨in볼케이노",
+      "description": "매운 치포틀소스 와 불타는 치킨스테이크의 만남",
+      "category": "클래식피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/b5225154-3c5c-458a-b882-248e62d052d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1131478",
+    "sourceUrls": [
+      "https://bit.ly/4nVqW3y",
+      "https://fdofd.ddangyo.com/gateway1.html?bkERQXt"
+    ],
+    "rawItemCount": 55,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

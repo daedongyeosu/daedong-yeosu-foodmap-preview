@@ -1,0 +1,110 @@
+{
+  "storeId": "c59a5a8f5a91ce24",
+  "storeName": "수해복마라탕 여수미평점",
+  "displayName": "수해복마라탕 여수미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c5f6773a-6f8d-4231-90eb-0cebb5d5da6c.jpg",
+  "categories": [
+    "전체",
+    "마라탕",
+    "마라샹궈",
+    "꿔바로우",
+    "밥",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1174914-10000001",
+      "name": "+NEW인기+셀프 마라탕 [골라먹기]",
+      "description": "기본 구성 100g/1800원+ [소고기/양고기/꼬치류]추가",
+      "category": "마라탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a263e83f-e077-4424-b264-8aa7be74c489.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1174914-10000003",
+      "name": "+ NEW 짱  + 셀프 마라샹궈  [골라먹기]",
+      "description": "샹궈 ~ 야채류&면류&두부류&완자(1꼬치/1000원) +(100g/3000원)추가[소고기/양고기]",
+      "category": "마라샹궈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/514536e9-244d-4632-a647-30b6e91728cb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1174914-10000004",
+      "name": "꿔바로우",
+      "description": "100% 감자전분을 사용합니다.",
+      "category": "꿔바로우",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b3f7559a-733f-49ad-bfbb-7f581fc86d0f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1174914-10000005",
+      "name": "밥",
+      "description": "",
+      "category": "밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/37de3e4d-a352-45ef-ac6c-5b72d7a8de27.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1174914-10000006",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1174914-10000002",
+      "name": "기본 마라탕",
+      "description": "야채&두부&면을 조합하여 고를 필요없이 편하게 먹을수 있는 마라탕",
+      "category": "마라탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a263e83f-e077-4424-b264-8aa7be74c489.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1174914-10000007",
+      "name": "사이다",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1174914-10000008",
+      "name": "빙홍차",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1174914-10000009",
+      "name": "빙당설리",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1174914",
+    "sourceUrls": [
+      "https://bit.ly/tk-수해복마라탕여수미평점",
+      "https://fdofd.ddangyo.com/gateway1.html?DugRMuQ"
+    ],
+    "rawItemCount": 12,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

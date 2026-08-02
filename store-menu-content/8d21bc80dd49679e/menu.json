@@ -1,0 +1,503 @@
+{
+  "storeId": "8d21bc80dd49679e",
+  "storeName": "빵위에치즈 여수점",
+  "displayName": "빵위에치즈 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/af7d5775-a780-49db-b705-ebf276409d1c.jpg",
+  "categories": [
+    "전체",
+    "두판 피자세트",
+    "클래식 메뉴",
+    "스페셜 메뉴",
+    "프리미엄 메뉴",
+    "기타메뉴",
+    "사이드메뉴",
+    "음료",
+    "세트메뉴",
+    "반반피자",
+    "투게더박스",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1164182-30000142",
+      "name": "피자 M + 피자 M",
+      "description": "",
+      "category": "두판 피자세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/76f19996-7789-4cea-be22-0fbfbcc7f619.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000142"
+    },
+    {
+      "id": "ddangyo-1164182-30000098",
+      "name": "빵치 포테이토",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/1424e710-2fe6-44ee-9029-4a573cd925de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000098"
+    },
+    {
+      "id": "ddangyo-1164182-30000118",
+      "name": "빵치 베스트4",
+      "description": "",
+      "category": "스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/1f731eb3-3509-463a-ac70-3efabb5f09c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000118"
+    },
+    {
+      "id": "ddangyo-1164182-30000104",
+      "name": "빵치 슈퍼디럭스",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/1dfe7dbe-774f-45de-8590-7ef380092664.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000104"
+    },
+    {
+      "id": "ddangyo-1164182-30000097",
+      "name": "빵치 고르곤졸라(씬도우변경 불가)",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/335b049c-d590-435a-bb80-66dd850fcf0d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000097"
+    },
+    {
+      "id": "ddangyo-1164182-30000112",
+      "name": "새우의 정석",
+      "description": "",
+      "category": "프리미엄 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/b4f71cbc-14a5-4ae0-8cb0-1699176cc8bd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000112"
+    },
+    {
+      "id": "ddangyo-1164182-30000132",
+      "name": "매콤 쓰리라차마요(NEW)",
+      "description": "",
+      "category": "기타메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/216026ce-6238-4edc-b41a-2827f48fc2e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000132"
+    },
+    {
+      "id": "ddangyo-1164182-30000119",
+      "name": "버팔로윙&봉",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/f58dedbd-36ab-46af-b4a6-54c5e8417f59.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000119"
+    },
+    {
+      "id": "ddangyo-1164182-30000130",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9037e2d2-3582-44d4-a7b8-20bd934c069a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000130"
+    },
+    {
+      "id": "ddangyo-1164182-30000088",
+      "name": "[세트1번] 피자 M + 사이드 1 + 음료 1",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/0e93cf56-d146-42da-a645-3322db34e356.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000088"
+    },
+    {
+      "id": "ddangyo-1164182-30000094",
+      "name": "반반피자 M",
+      "description": "",
+      "category": "반반피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9b726ac1-34bf-4038-981a-e2e78d3eacb4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000094"
+    },
+    {
+      "id": "ddangyo-1164182-30000096",
+      "name": "투게더박스",
+      "description": "",
+      "category": "투게더박스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/7d362581-4f99-404c-8a1b-7c8e2fd61391.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000096"
+    },
+    {
+      "id": "ddangyo-1164182-90000001",
+      "name": "테라(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1164182-30000120",
+      "name": "버팔로윙&봉",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/598f9a55-01f7-41c7-841b-68b8b1019439.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000120"
+    },
+    {
+      "id": "ddangyo-1164182-30000133",
+      "name": "갈릭디핑소스",
+      "description": "",
+      "category": "기타메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/efcecaf9-a898-4ced-a6a8-d5b604a2ac58.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000133"
+    },
+    {
+      "id": "ddangyo-1164182-30000131",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/c3209ab1-1601-4422-a884-5a6c9b4837b1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000131"
+    },
+    {
+      "id": "ddangyo-1164182-30000113",
+      "name": "그릴드 핫치킨",
+      "description": "",
+      "category": "프리미엄 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/53b2805c-2b06-4aed-93ea-d8969b476590.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000113"
+    },
+    {
+      "id": "ddangyo-1164182-30000089",
+      "name": "[세트2번] 피자 L + 사이드 1 + 음료 1",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/c53e9dd5-c1db-4d07-9649-6edace864407.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000089"
+    },
+    {
+      "id": "ddangyo-1164182-30000095",
+      "name": "반반피자 L",
+      "description": "",
+      "category": "반반피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/46b68cfd-3f5b-4f38-9fdb-194e8d737d72.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000095"
+    },
+    {
+      "id": "ddangyo-1164182-90000002",
+      "name": "카스 프레시(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1164182-30000134",
+      "name": "피클",
+      "description": "",
+      "category": "기타메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/cb50d449-11e2-4fda-a89c-8f76d261e649.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000134"
+    },
+    {
+      "id": "ddangyo-1164182-30000099",
+      "name": "빵치 치즈만",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/14b07457-6d0d-477c-9029-29e2e11ccd31.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000099"
+    },
+    {
+      "id": "ddangyo-1164182-30000114",
+      "name": "미트로니",
+      "description": "",
+      "category": "프리미엄 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/13f0faf3-b2fd-40b9-88e5-0fc5054d2a83.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000114"
+    },
+    {
+      "id": "ddangyo-1164182-30000090",
+      "name": "[세트3번] 피자 M + 사이드 2 + 음료 1",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/06732bc6-052b-4931-8687-acdb4a019117.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000090"
+    },
+    {
+      "id": "ddangyo-1164182-10000006",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1164182-30000135",
+      "name": "핫소스",
+      "description": "",
+      "category": "기타메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/4081993b-6349-4092-b5ab-1daf6df889a1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000135"
+    },
+    {
+      "id": "ddangyo-1164182-30000100",
+      "name": "빵치 페퍼로니",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/5ad0aced-7f75-4ec2-9d65-1326d0393e24.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000100"
+    },
+    {
+      "id": "ddangyo-1164182-30000143",
+      "name": "피자 L+ 피자 L",
+      "description": "",
+      "category": "두판 피자세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/0c635a3c-d882-4682-82a4-5e51e8d5ec1d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000143"
+    },
+    {
+      "id": "ddangyo-1164182-30000091",
+      "name": "[세트4번] 피자 L + 사이드 2 + 음료 1",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/992bb196-0ec0-4f03-9e76-e66f4c9dd92f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000091"
+    },
+    {
+      "id": "ddangyo-1164182-90000004",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1164182-30000123",
+      "name": "[미니]베이컨 토마토 스파게티",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9adbad78-2676-42ee-9159-e3150c9f5930.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000123"
+    },
+    {
+      "id": "ddangyo-1164182-30000101",
+      "name": "빵치 자색 고구마 소보루",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/f6a9678e-221f-4f56-8574-ef60261502d4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000101"
+    },
+    {
+      "id": "ddangyo-1164182-30000136",
+      "name": "파마산치즈가루",
+      "description": "",
+      "category": "기타메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/4a4ccf53-d926-4f14-9c38-8cefad320aea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000136"
+    },
+    {
+      "id": "ddangyo-1164182-30000092",
+      "name": "[세트5번] 피자 M + 오븐치킨한마리 + 음료 1",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/71003df1-8d93-4f6f-a789-dc3e9130140a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000092"
+    },
+    {
+      "id": "ddangyo-1164182-30000124",
+      "name": "[미니]트러플 까브로나라",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/38729328-66a3-450a-9b3b-bd7dda3c7947.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000124"
+    },
+    {
+      "id": "ddangyo-1164182-30000137",
+      "name": "꿀 추가",
+      "description": "",
+      "category": "기타메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/abb868d1-bf61-4db6-a189-de6742d5df2c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000137"
+    },
+    {
+      "id": "ddangyo-1164182-30000141",
+      "name": "(NEW)크런치 슈림프",
+      "description": "",
+      "category": "프리미엄 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/e8d36d3d-e449-4bc3-9e5d-ba16a55ac15b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000141"
+    },
+    {
+      "id": "ddangyo-1164182-30000102",
+      "name": "빵치 미트베이컨 체다",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/a8383119-b5ac-48f2-ba96-54e4de387b16.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000102"
+    },
+    {
+      "id": "ddangyo-1164182-30000093",
+      "name": "[세트6번] 피자 L + 오븐치킨한마리 + 음료 1",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/77974f32-916b-42f3-85a1-2e35f3c08f15.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000093"
+    },
+    {
+      "id": "ddangyo-1164182-30000125",
+      "name": "[미니]매콤 아라비아따 스파게티",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/414acd21-9a89-4436-bed7-9b63df155973.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000125"
+    },
+    {
+      "id": "ddangyo-1164182-30000103",
+      "name": "빵치 하와이언 스위트",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/e64ebb03-56c7-4196-9222-c5624e71d85c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000103"
+    },
+    {
+      "id": "ddangyo-1164182-10000001",
+      "name": "크런치 불고기",
+      "description": "",
+      "category": "프리미엄 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1164182-30000126",
+      "name": "매콤 점보닭다리",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/fd7d5582-0866-42f9-8fda-a381b12f0cb9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000126"
+    },
+    {
+      "id": "ddangyo-1164182-10000002",
+      "name": "크리미 슈림프",
+      "description": "",
+      "category": "프리미엄 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1164182-30000105",
+      "name": "빵치 허니스윗콘(씬도우변경 불가)",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/fcb3362a-6dd6-4740-b3af-3ed80ce74e2c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000105"
+    },
+    {
+      "id": "ddangyo-1164182-30000127",
+      "name": "국내산 오븐치킨 반마리",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/6747baf5-08f2-45be-afff-64e761e7009b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000127"
+    },
+    {
+      "id": "ddangyo-1164182-30000128",
+      "name": "국내산 오븐치킨 한마리",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/2c770cca-34dc-4532-a706-9230b92efd64.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000128"
+    },
+    {
+      "id": "ddangyo-1164182-30000138",
+      "name": "빵치 수제불고기",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/d437cebb-af06-43f3-87eb-856d780cf34f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000138"
+    },
+    {
+      "id": "ddangyo-1164182-30000139",
+      "name": "빵치 매운 수제불고기",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/01c3eaf7-fc2f-4ecf-8dff-e39905817287.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000139"
+    },
+    {
+      "id": "ddangyo-1164182-30000109",
+      "name": "빵치 베이컨 할라피뇨",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/5c4c2755-dd54-4b17-b225-d91c97bd10c0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000109"
+    },
+    {
+      "id": "ddangyo-1164182-30000110",
+      "name": "바질리카 피자",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/3da54ad7-1fdb-4214-96de-18c6cdfd195d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000110"
+    },
+    {
+      "id": "ddangyo-1164182-30000084",
+      "name": "꿀고구마",
+      "description": "",
+      "category": "클래식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/d5259152-a40c-47fc-8105-e0266c3fb3db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000084"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1164182",
+    "sourceUrls": [
+      "https://bit.ly/tk-빵위에치즈여수점",
+      "https://fdofd.ddangyo.com/gateway1.html?RbHRdSx"
+    ],
+    "rawItemCount": 56,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

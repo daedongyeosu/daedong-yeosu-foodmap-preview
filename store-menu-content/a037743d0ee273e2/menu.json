@@ -1,0 +1,264 @@
+{
+  "storeId": "a037743d0ee273e2",
+  "storeName": "정성집밥",
+  "displayName": "정성집밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/62ead72a-a074-4dea-9e76-efce3d5f73cd.JPG",
+  "categories": [
+    "전체",
+    "기본메뉴",
+    "단품메뉴",
+    "혼술안주 단일메뉴",
+    "사이드메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1316775-10000001",
+      "name": "돼지김치찌개",
+      "description": "공기밥1+계란후라이1",
+      "category": "기본메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/75068534-c469-4c23-86a1-6adf5bb6be80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1316775-10000002",
+      "name": "돼지짜글이",
+      "description": "공기밥1+계란후라이1",
+      "category": "기본메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/e6e8e307-431e-4607-b5bd-fdadbc9d0493.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1316775-10000003",
+      "name": "부대찌개",
+      "description": "공기밥1+계란후라이1",
+      "category": "기본메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/824e4756-4831-4fd7-bf62-c4f1d928bc5b.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1316775-10000004",
+      "name": "참치김치찌개",
+      "description": "공기밥1+계란후라이1",
+      "category": "기본메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a3bdbf00-1d24-4bbd-b624-61d4ae28b288.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1316775-10000008",
+      "name": "돼지김치찌개만",
+      "description": "밥, 반찬X",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1316775-10000014",
+      "name": "제육볶음",
+      "description": "",
+      "category": "혼술안주 단일메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1316775-10000015",
+      "name": "고기왕만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1316775-10000020",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1316775-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1316775-10000009",
+      "name": "돼지짜글이만",
+      "description": "밥, 반찬X",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1316775-10000016",
+      "name": "김치왕만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1316775-10000021",
+      "name": "제로 콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1316775-90000002",
+      "name": "소주 (진로)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1316775-10000010",
+      "name": "참치김치찌개만",
+      "description": "밥, 반찬X",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1316775-10000017",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1316775-10000022",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1316775-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1316775-10000011",
+      "name": "부대찌개만",
+      "description": "밥, 반찬X",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1316775-10000018",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1316775-10000023",
+      "name": "생수",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1316775-10000005",
+      "name": "소불고기",
+      "description": "",
+      "category": "기본메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3ac648a7-56b3-40c4-b9bc-95051f72ccbf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1316775-10000012",
+      "name": "차돌된장찌개만 [밥, 반찬X]",
+      "description": "",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1316775-10000019",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1316775-10000006",
+      "name": "차돌된장찌개",
+      "description": "",
+      "category": "기본메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/9245b8ad-2ed8-46b9-a0e1-7928affe251d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1316775-10000013",
+      "name": "차돌육개장만",
+      "description": "",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1316775-10000007",
+      "name": "해물순두부",
+      "description": "",
+      "category": "기본메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/6fa75bb1-7dc3-40ba-8018-c063d2a74569.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1316775",
+    "sourceUrls": [
+      "https://bit.ly/tk-정성집밥",
+      "https://fdofd.ddangyo.com/gateway1.html?7FahAp3"
+    ],
+    "rawItemCount": 30,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

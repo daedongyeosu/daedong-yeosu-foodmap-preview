@@ -1,0 +1,1017 @@
+{
+  "storeId": "fe09f5cbf190ca3d",
+  "storeName": "테그42 여수관문점",
+  "displayName": "테그42 여수관문점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bf9d91f9-f97b-4d0b-a947-1bdb753f8d7d.jpg",
+  "categories": [
+    "전체",
+    "프리미엄 토스트",
+    "테그밀크 & 커피",
+    "테그42세트메뉴",
+    "NEW 테그42 에그버거",
+    "테그42 여수관문점 세트추천메뉴",
+    "테그42핫도그",
+    "NEW 테그42에그버거 세트",
+    "테그42 핫도그세트",
+    "테그음료",
+    "스무디&쉐이크",
+    "탄산음료",
+    "스프 & 샐러드 & 사이드"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1135719-10000097",
+      "name": "(BEST) 에그햄치즈 토스트",
+      "description": "스모크햄+체다치즈+에그오믈렛+청상추+마요&칠리소스",
+      "category": "프리미엄 토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/557eb390-b8f6-4f75-b0a1-a0a603a7a41e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1135719-10000129",
+      "name": "아메리카노",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e72759d3-cba3-464f-b189-a3733748a6a5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000129"
+    },
+    {
+      "id": "ddangyo-1135719-10000118",
+      "name": "(BEST)에그햄치즈 토스트 세트",
+      "description": "스모크햄+체다치즈+에그오물렛+청상추+마요&칠리소스\n아메리카노 & 캔 음료 택1\n해쉬브라운 & 미니핫도그 & 치즈스틱 택1",
+      "category": "테그42세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5125249c-c79e-407c-9c95-27a13f4e3f63.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000118"
+    },
+    {
+      "id": "ddangyo-1135719-10000099",
+      "name": "BIG볼케이노 토스트(에그BIG볼케이노 샌드위치",
+      "description": "치킨바베큐 + 베이컨 + 바베큐&쓰리라차마요소스",
+      "category": "프리미엄 토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/616fcf7b-e488-4e2f-bf78-99b0a66982dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000099"
+    },
+    {
+      "id": "ddangyo-1135719-10000088",
+      "name": "핫바베큐 치킨 에그버거",
+      "description": "브리오슈번+청상추+치킨커틀렛+스크램블에그+테그핫바베큐소스+테그칠리소스+쓰리라차마요소스",
+      "category": "NEW 테그42 에그버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/18ede0f7-29e0-4f43-af53-dafb6df3680a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1135719-10000089",
+      "name": "더블치즈 베이컨 에그 버거",
+      "description": "브리오슈번+청상추+아메리칸 치즈+스크램블 에그+베이컨+버거소스+테그칠리소스+테그치즈소스+양파후레이크",
+      "category": "NEW 테그42 에그버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/7b662e5c-81df-4f4f-aea5-3844085a706f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1135719-10000085",
+      "name": "연인세트메뉴",
+      "description": "빅시그니처토스트+햄치즈토스트+사이드메뉴택2+음료메뉴택2",
+      "category": "테그42 여수관문점 세트추천메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1135719-10000094",
+      "name": "추억의토스트",
+      "description": "빵+마요네즈+양배추+계란+케찹+설탕",
+      "category": "프리미엄 토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/18bc6069-9746-4871-b544-3530493c579e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000094"
+    },
+    {
+      "id": "ddangyo-1135719-10000101",
+      "name": "아메리칸핫도그",
+      "description": "번+소세지+각종소스+피클+적양파+양파후레이크",
+      "category": "테그42핫도그",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f795b179-1916-4e03-bd8b-8fb65b20ca1c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1135719-10000105",
+      "name": "핫바베큐 치킨 에그버거 세트",
+      "description": "브리오슈번+청상추+치킨커틀렛+스크램블에그+테그핫바베큐소스+테그칠리소스+쓰리라차마요소스\n+사이드메뉴택1+음료메뉴택1",
+      "category": "NEW 테그42에그버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/da6e2cb4-057d-4789-9958-d29ac0a78d82.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000105"
+    },
+    {
+      "id": "ddangyo-1135719-10000111",
+      "name": "아메리칸 핫도그 세트",
+      "description": "핫도그+사이드메뉴 택1+ 음료메뉴 택1",
+      "category": "테그42 핫도그세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000111"
+    },
+    {
+      "id": "ddangyo-1135719-10000115",
+      "name": "추억의토스트 세트",
+      "description": "추억의토스트+사이드메뉴택1+음료메뉴택1",
+      "category": "테그42세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a90da724-6d8b-4b70-a83f-d5dda2cf6a8a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000115"
+    },
+    {
+      "id": "ddangyo-1135719-10000122",
+      "name": "테그 딸기밀크ICE",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/1435786a-107a-4d42-8c7d-1d016fce03ee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000122"
+    },
+    {
+      "id": "ddangyo-1135719-10000147",
+      "name": "NEW 수박주스(여름한정)",
+      "description": "",
+      "category": "테그음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000147"
+    },
+    {
+      "id": "ddangyo-1135719-10000160",
+      "name": "플레인요거트스무디ICE",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000160"
+    },
+    {
+      "id": "ddangyo-1135719-10000183",
+      "name": "델몬트오렌지400ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000183"
+    },
+    {
+      "id": "ddangyo-1135719-10000202",
+      "name": "타코야끼(8알)",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000202"
+    },
+    {
+      "id": "ddangyo-1135719-10000086",
+      "name": "친구세트",
+      "description": "빅시그처+핫바베큐 치킨 에그버거+사이드메뉴택2+음료메뉴택2",
+      "category": "테그42 여수관문점 세트추천메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1135719-10000102",
+      "name": "비프칠리 핫도그",
+      "description": "번+각종소스+소세지+피클+적양파+양파후레이크",
+      "category": "테그42핫도그",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000102"
+    },
+    {
+      "id": "ddangyo-1135719-10000106",
+      "name": "더블치즈 베이컨 에그버거 세트",
+      "description": "브리오슈번+청상추+아메리칸 치즈+스크램블 에그+베이컨+버거소스+테그칠리소스+테그치즈소스+양파후레이크+사이드메뉴택1+음료메뉴택1",
+      "category": "NEW 테그42에그버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bce7bfdf-41a9-47d8-9fde-4eddf60beece.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000106"
+    },
+    {
+      "id": "ddangyo-1135719-10000112",
+      "name": "비프칠리 핫도그 세트",
+      "description": "핫도그+ 사이드메뉴 택1+ 음료  택1",
+      "category": "테그42 핫도그세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000112"
+    },
+    {
+      "id": "ddangyo-1135719-10000116",
+      "name": "에그마요토스트세트(차가운 에그포테이토샐러드가 들어갑니다",
+      "description": "에그마요토스트+사이드메뉴택1+음료메뉴택1\n에그마요토스트에 계란오물렛대신 에그포테이토 샐러드가 들어갑니다",
+      "category": "테그42세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/dd054112-0050-4a81-93ef-36b833ce52ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000116"
+    },
+    {
+      "id": "ddangyo-1135719-10000123",
+      "name": "테그초코밀크ICE",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9c56391c-b176-4262-9dc5-39e05fea0f0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000123"
+    },
+    {
+      "id": "ddangyo-1135719-10000148",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "테그음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000148"
+    },
+    {
+      "id": "ddangyo-1135719-10000161",
+      "name": "딸기요거트스무디ICE",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000161"
+    },
+    {
+      "id": "ddangyo-1135719-10000173",
+      "name": "츄러스(5개)",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000173"
+    },
+    {
+      "id": "ddangyo-1135719-10000184",
+      "name": "미닛메이드 토마토350ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000184"
+    },
+    {
+      "id": "ddangyo-1135719-10000087",
+      "name": "츄러스세트(아메리카노)",
+      "description": "",
+      "category": "테그42 여수관문점 세트추천메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1135719-10000090",
+      "name": "로제크랩 에그버거",
+      "description": "브리오슈번+청상추+크래미+스크램블에그+양파슬라이스+테그로제소스+테그칠리소스+테그 밀키마요소스",
+      "category": "NEW 테그42 에그버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3b434239-434a-4b8e-8e1b-293ed9587360.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1135719-10000096",
+      "name": "에그마요토스트(차가운 에그포테이토샐러드가 들어갑니다)",
+      "description": "빵+칠리소스+청상추+에그포테이토+마요소스\n계란오물렛대신 에그포테이토가 들어갑니다",
+      "category": "프리미엄 토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/84cd5c3b-d269-4ab2-bf97-b3c0896a9537.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1135719-10000103",
+      "name": "에그명란마요 핫도그",
+      "description": "번+각종소스+소세지+ 에그포테이토샐러드+명란마요",
+      "category": "테그42핫도그",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/65f6f701-6672-45ad-8ab7-9adc18e245ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    },
+    {
+      "id": "ddangyo-1135719-10000107",
+      "name": "로제크랩 에그버거 세트",
+      "description": "브리오슈번+청상추+크래미+스크램블에그+양파슬라이스+테그로제소스+테그칠리소스+테그 밀키마요소스+사이드메뉴택1+음료메뉴택1",
+      "category": "NEW 테그42에그버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4406f29c-76f6-4792-9d85-714c24ce645e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000107"
+    },
+    {
+      "id": "ddangyo-1135719-10000113",
+      "name": "에그명란마요 핫도그세트",
+      "description": "핫도그+ 사이드메뉴 택1+음료메뉴 택1",
+      "category": "테그42 핫도그세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000113"
+    },
+    {
+      "id": "ddangyo-1135719-10000124",
+      "name": "테그바나나밀크ICE",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d2d18d95-4558-4da5-ac95-36ea6f98e358.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000124"
+    },
+    {
+      "id": "ddangyo-1135719-10000149",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "테그음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000149"
+    },
+    {
+      "id": "ddangyo-1135719-10000162",
+      "name": "망고요거트스무디 ICE",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000162"
+    },
+    {
+      "id": "ddangyo-1135719-10000172",
+      "name": "NEW소떡소떡",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000172"
+    },
+    {
+      "id": "ddangyo-1135719-10000185",
+      "name": "콜라 355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000185"
+    },
+    {
+      "id": "ddangyo-1135719-10000091",
+      "name": "바삭 불고기 에그버거",
+      "description": "브리오슈번+청상추+석쇠불고기+스크램블에그+데리야끼소스+테그칠리소스+테그밀키마요소스+양파후레이크",
+      "category": "NEW 테그42 에그버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/8ab166cc-dfe9-460d-a782-610d6c4ef7c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1135719-10000104",
+      "name": "핫바베큐핫도그",
+      "description": "핫도그빵+마요네즈+소세지+적양파+데리야끼소스+바베큐소스+양파후레이크",
+      "category": "테그42핫도그",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5f4da887-d6f1-4660-ba65-72d54880b812.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000104"
+    },
+    {
+      "id": "ddangyo-1135719-10000108",
+      "name": "바삭불고기 에그버거 세트",
+      "description": "브리오슈번+청상추+석쇠불고기+스크램블에그+데리야끼소스+테그칠리소스+테그밀키마요소스+양파후레이크+사이드메뉴택1+음료메뉴택1",
+      "category": "NEW 테그42에그버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e306708c-26cb-47f8-ae18-769613c5c95d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000108"
+    },
+    {
+      "id": "ddangyo-1135719-10000114",
+      "name": "NEW핫바베큐핫도그 세트",
+      "description": "핫바베큐핫도그+사이드메뉴택1+음료메뉴택1",
+      "category": "테그42 핫도그세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000114"
+    },
+    {
+      "id": "ddangyo-1135719-10000125",
+      "name": "초콜릿밀크 (HOT)",
+      "description": "테그42만의 특별한 초콜릿 레시피",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/649a562f-9ca9-45f0-a421-7ff19f035781.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000125"
+    },
+    {
+      "id": "ddangyo-1135719-10000150",
+      "name": "애플에이드",
+      "description": "",
+      "category": "테그음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/76edefb2-f373-4446-b92e-c9105d3b3609.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000150"
+    },
+    {
+      "id": "ddangyo-1135719-10000163",
+      "name": "블루베리요거트스무디ICE",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000163"
+    },
+    {
+      "id": "ddangyo-1135719-10000186",
+      "name": "코카콜라ZERO 355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/5efd028e-d54c-4b8b-bf97-3e77ea110c08.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000186"
+    },
+    {
+      "id": "ddangyo-1135719-10000204",
+      "name": "쌀떡꼬치(기본소스양념)",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000204"
+    },
+    {
+      "id": "ddangyo-1135719-10000092",
+      "name": "명란 쉬림프 에그버거",
+      "description": "브리오슈번 +청상추 +새우커틀릿+스크램블에그+테그명란마요소스+테그칠리소스+테그밀키마요소스",
+      "category": "NEW 테그42 에그버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/7f314628-4183-4e10-b103-34326e8c5375.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1135719-10000098",
+      "name": "해쉬에그( 해쉬에그샌드위치)",
+      "description": "에그포테이토샐러드 + 해쉬브라운 + 칠리소스 +\n밀키마요 + 청상추",
+      "category": "프리미엄 토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/8773d7ed-6a68-4f9b-9fe2-2abd6b0397fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1135719-10000109",
+      "name": "명란 쉬림프 에그버거 세트",
+      "description": "브리오슈번 +청상추 +새우커틀릿+스크램블에그+테그명란마요소스+테그칠리소스+테그밀키마요소스+사이드메뉴택1+음료메뉴택1",
+      "category": "NEW 테그42에그버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/2fcac583-db2e-48ee-b9b0-cb5da1affa02.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000109"
+    },
+    {
+      "id": "ddangyo-1135719-10000119",
+      "name": "NEW 해쉬에그 토스트세트",
+      "description": "에그포테이토샐러드 + 해쉬브라운 + 칠리소스 +밀키마요 + 청상추                             \n치킨너겟4조각 or 치즈스틱 2조각 or 해쉬브라운 1조각 택1  아메리카노 or 캔 음료 택 1",
+      "category": "테그42세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000119"
+    },
+    {
+      "id": "ddangyo-1135719-10000126",
+      "name": "테그 밀크 (크림)",
+      "description": "은은한 바디감과 스위트함\n테그42만의 수제 크림 밀크",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000126"
+    },
+    {
+      "id": "ddangyo-1135719-10000151",
+      "name": "망고에이드",
+      "description": "",
+      "category": "테그음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4e8d7840-f6a2-4e75-9af7-4280a25d99db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000151"
+    },
+    {
+      "id": "ddangyo-1135719-10000164",
+      "name": "오레오쉐이크",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000164"
+    },
+    {
+      "id": "ddangyo-1135719-10000170",
+      "name": "NEW 콜팝 (콘버터,어니언,체다치즈,양념치킨)",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000170"
+    },
+    {
+      "id": "ddangyo-1135719-10000187",
+      "name": "펩시제로 355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000187"
+    },
+    {
+      "id": "ddangyo-1135719-10000197",
+      "name": "로제핫도그",
+      "description": "",
+      "category": "테그42핫도그",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a91a06cf-02cf-4331-a68c-fad4f312a755.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000197"
+    },
+    {
+      "id": "ddangyo-1135719-10000199",
+      "name": "로제핫도그세트",
+      "description": "핫도그번+마요네즈+소세지+양배추+로제소스+밀키소스+파슬리+사이드택1+음료택1",
+      "category": "테그42 핫도그세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000199"
+    },
+    {
+      "id": "ddangyo-1135719-10000093",
+      "name": "바질 갈릭 쉬림프 에그버거",
+      "description": "브리오슈번 +청상추 +새우커틀릿 +크래미+스크램블에그 +테그바질마요소스+테그갈릭소스",
+      "category": "NEW 테그42 에그버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/05d8215f-f986-4c3c-975a-8862fcff9138.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000093"
+    },
+    {
+      "id": "ddangyo-1135719-10000110",
+      "name": "바질 갈릭 쉬림프 에그버거 세트",
+      "description": "브리오슈번 +청상추 +새우커틀릿 +크래미+스크램블에그 +테그바질마요소스+테그갈릭소스+사이드메뉴택1+음료메뉴택1",
+      "category": "NEW 테그42에그버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ead36379-e296-44d0-80dd-b96eebd1efd5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000110"
+    },
+    {
+      "id": "ddangyo-1135719-10000120",
+      "name": "BIG볼케이노 토스트 세트",
+      "description": "치킨바베큐 + 베이컨 + 바베큐&쓰리라차마요소스                          치킨너겟4조각 or 치즈스틱 2조각 or 해쉬브라운 1조각 택1                                  아메리카노 or 캔 음료 택 1",
+      "category": "테그42세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/dcc865f6-93a6-4285-8476-10f4086f3378.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000120"
+    },
+    {
+      "id": "ddangyo-1135719-10000127",
+      "name": "우유",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000127"
+    },
+    {
+      "id": "ddangyo-1135719-10000152",
+      "name": "매실에이드",
+      "description": "",
+      "category": "테그음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000152"
+    },
+    {
+      "id": "ddangyo-1135719-10000171",
+      "name": "NEW팝콘치킨(콜팝대버전150g)음료X",
+      "description": "기존콜팝대버전 팝콘치킨150g제공",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b0c1ef5c-4d45-46c6-beb1-23e6a749b138.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000171"
+    },
+    {
+      "id": "ddangyo-1135719-10000188",
+      "name": "제로 스프라이트 355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000188"
+    },
+    {
+      "id": "ddangyo-1135719-10000203",
+      "name": "미숫가루쉐이크",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000203"
+    },
+    {
+      "id": "ddangyo-1135719-10000100",
+      "name": "BEST)빅시그니처 토스트(에그빅시그니처 샌드위치)",
+      "description": "더블치즈베이컨+에그햄치즈",
+      "category": "프리미엄 토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/39322dfd-96e1-4399-af94-801dc493931d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000100"
+    },
+    {
+      "id": "ddangyo-1135719-10000121",
+      "name": "BEST빅시그니처 토스트 세트(에그빅시그니처 샌드위치)",
+      "description": "더블치즈베이컨+에그햄치즈\n아메리카노 & 캔 음료 택1\n해쉬브라운 & 미니 핫도그 & 치즈스틱",
+      "category": "테그42세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bd775335-b740-4b8b-8818-339c8faedc12.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000121"
+    },
+    {
+      "id": "ddangyo-1135719-10000128",
+      "name": "퓨어밀크티",
+      "description": "아쌈과 실론의 향이 가득한 테그42 오리지널 밀크티",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/df1f73f9-b3d6-4e8f-9306-412a6372c7a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000128"
+    },
+    {
+      "id": "ddangyo-1135719-10000165",
+      "name": "(사장님추천)고소한 누룽지쉐이크",
+      "description": "시원한 쉐이크에 고소담백한 누룽지의 조화",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000165"
+    },
+    {
+      "id": "ddangyo-1135719-10000174",
+      "name": "(강력추천)코울슬로",
+      "description": "양배추 당근 청피망 양파 옥수수가 들어간  수제 코울슬로",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000174"
+    },
+    {
+      "id": "ddangyo-1135719-10000189",
+      "name": "스프라이트 355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/7cb60589-8a64-4c4a-b375-67f4c3d41b0e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000189"
+    },
+    {
+      "id": "ddangyo-1135719-10000166",
+      "name": "바닐라밀크쉐이크",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000166"
+    },
+    {
+      "id": "ddangyo-1135719-10000175",
+      "name": "에그포테이토 샐러드(s)",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/55630c54-c6bd-4be2-aa89-59302e34f399.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000175"
+    },
+    {
+      "id": "ddangyo-1135719-10000190",
+      "name": "웰치스 포도 355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000190"
+    },
+    {
+      "id": "ddangyo-1135719-10000196",
+      "name": "콘치즈마요 토스트",
+      "description": "",
+      "category": "프리미엄 토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b98e505c-1e9f-49b0-bcd7-0e2532844926.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000196"
+    },
+    {
+      "id": "ddangyo-1135719-10000198",
+      "name": "콘치즈마요토스트세트",
+      "description": "브리오슈+슬라이스치즈+콘마요토핑물+밀키소스+파슬리+사이드택1+음료택1",
+      "category": "테그42세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/58c36643-9974-4c5a-94e0-07e3ead3f87c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000198"
+    },
+    {
+      "id": "ddangyo-1135719-10000130",
+      "name": "롱 ICE아메리카노(1L 커피)",
+      "description": "재활용이 가능한 리유저블컵에 킹사이즈의 대용량 커피",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b3135623-f1d5-408e-aac1-eefc9e146c60.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000130"
+    },
+    {
+      "id": "ddangyo-1135719-10000167",
+      "name": "딸기밀크 쉐이크",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000167"
+    },
+    {
+      "id": "ddangyo-1135719-10000176",
+      "name": "마시는컵스프(콘, 포르치니)",
+      "description": "236ml",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/8247fa4e-ef36-4371-8d00-e49ac2299fa7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000176"
+    },
+    {
+      "id": "ddangyo-1135719-10000191",
+      "name": "환타오렌지355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000191"
+    },
+    {
+      "id": "ddangyo-1135719-10000131",
+      "name": "카페라떼",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f002db61-ede8-4209-802f-029bcb743f22.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000131"
+    },
+    {
+      "id": "ddangyo-1135719-10000168",
+      "name": "초콜릿밀크 쉐이크",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000168"
+    },
+    {
+      "id": "ddangyo-1135719-10000177",
+      "name": "NEW치즈볼(시즈닝선택가능)",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/42dc2208-24db-4d15-aeb5-64128b2cb5fd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000177"
+    },
+    {
+      "id": "ddangyo-1135719-10000192",
+      "name": "환타파인 355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000192"
+    },
+    {
+      "id": "ddangyo-1135719-10000132",
+      "name": "연유라떼",
+      "description": "고급스러운 달콤함 연유라떼",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/04098c27-301c-4b7e-871a-f1ee7955e1be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000132"
+    },
+    {
+      "id": "ddangyo-1135719-10000169",
+      "name": "커피밀크 쉐이크",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000169"
+    },
+    {
+      "id": "ddangyo-1135719-10000178",
+      "name": "케이준감자튀김",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/85ec1ac0-651a-44d8-883b-bad61f8e79ee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000178"
+    },
+    {
+      "id": "ddangyo-1135719-10000193",
+      "name": "환타포도 355ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000193"
+    },
+    {
+      "id": "ddangyo-1135719-10000133",
+      "name": "리치크림라떼",
+      "description": "은은한 달콤함과 부드러운 바디감 크림라떼",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d3005fd6-cef6-468f-9eb9-5ccc63cc0ce2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000133"
+    },
+    {
+      "id": "ddangyo-1135719-10000158",
+      "name": "아이스티",
+      "description": "아이스티",
+      "category": "테그음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ddc5f91c-eff7-4d8c-9a31-b9f78684877b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000158"
+    },
+    {
+      "id": "ddangyo-1135719-10000179",
+      "name": "해쉬브라운 1EA",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/7b0e8716-faf5-4e69-b627-06c42c703347.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000179"
+    },
+    {
+      "id": "ddangyo-1135719-10000194",
+      "name": "씨그램 350ml",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000194"
+    },
+    {
+      "id": "ddangyo-1135719-10000205",
+      "name": "NEW 팥빙수쉐이크",
+      "description": "",
+      "category": "스무디&쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000205"
+    },
+    {
+      "id": "ddangyo-1135719-10000134",
+      "name": "카라멜마끼야또",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000134"
+    },
+    {
+      "id": "ddangyo-1135719-10000159",
+      "name": "아샷추",
+      "description": "",
+      "category": "테그음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/59cabb32-1a6a-41ac-a401-11439195db78.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000159"
+    },
+    {
+      "id": "ddangyo-1135719-10000180",
+      "name": "치즈스틱 2개",
+      "description": "치즈스틱 2개",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9ebad6d6-4e1e-492a-95f8-b9becefe2564.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000180"
+    },
+    {
+      "id": "ddangyo-1135719-10000195",
+      "name": "웰치스제로355",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000195"
+    },
+    {
+      "id": "ddangyo-1135719-10000135",
+      "name": "흑당라떼lCE",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000135"
+    },
+    {
+      "id": "ddangyo-1135719-10000181",
+      "name": "치킨너겟4조각",
+      "description": "",
+      "category": "스프 & 샐러드 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/13b2f2f5-9c65-459e-8aa1-baf12c612705.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000181"
+    },
+    {
+      "id": "ddangyo-1135719-10000200",
+      "name": "체리콕에이드",
+      "description": "",
+      "category": "테그음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000200"
+    },
+    {
+      "id": "ddangyo-1135719-10000136",
+      "name": "바닐라라떼",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/71c871a9-a91e-47ae-9de4-bec6f34cd9cf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000136"
+    },
+    {
+      "id": "ddangyo-1135719-10000137",
+      "name": "카페모카",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d9536369-888d-4096-8d2d-d5d8482b3c00.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000137"
+    },
+    {
+      "id": "ddangyo-1135719-10000138",
+      "name": "토피넛 오곡라떼",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000138"
+    },
+    {
+      "id": "ddangyo-1135719-10000139",
+      "name": "초당옥수수밀크ICE",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9f35fda9-99b9-4d45-afdd-5a59d0b3980d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000139"
+    },
+    {
+      "id": "ddangyo-1135719-10000143",
+      "name": "매실차HOT",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000143"
+    },
+    {
+      "id": "ddangyo-1135719-10000144",
+      "name": "유자차hot",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000144"
+    },
+    {
+      "id": "ddangyo-1135719-10000145",
+      "name": "흑당밀크티ICE",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000145"
+    },
+    {
+      "id": "ddangyo-1135719-10000201",
+      "name": "ICE미숫가루라떼(미숫가루+우유)",
+      "description": "",
+      "category": "테그밀크 & 커피",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000201"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1135719",
+    "sourceUrls": [
+      "https://bit.ly/테그42땡겨요-카페디저트",
+      "https://fdofd.ddangyo.com/gateway1.html?rVQamAi"
+    ],
+    "rawItemCount": 115,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "storeId": "f31d8c5f04fb7b79",
+  "storeName": "대박난쪽갈비 여수점",
+  "displayName": "대박난쪽갈비 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/73d97337-82a7-49e3-b314-f54dcf0db80a.jpg",
+  "categories": [
+    "전체",
+    "배달메뉴",
+    "주류메뉴",
+    "콜라 환타 사이다"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1231597-10000001",
+      "name": "양념구이",
+      "description": "순한맛 / 적당히매운맛 / 아주매운맛 선택가능",
+      "category": "배달메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5a6741ec-d109-45d5-95c4-f9b720df591e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1231597-10000002",
+      "name": "족발양념",
+      "description": "",
+      "category": "배달메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e410dff7-bbc8-42ed-a0b7-40516eada888.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1231597-10000004",
+      "name": "소금구이",
+      "description": "",
+      "category": "배달메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e1a5af98-ee0f-449f-8c3f-8c70607cee48.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1231597-10000003",
+      "name": "반/반(선택)  소금반/양념반",
+      "description": "소금반 / 양념반",
+      "category": "배달메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f18a7a3a-1d92-4388-bbb1-a4b5d39d19ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1231597-90000001",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1231597-10000009",
+      "name": "콜라",
+      "description": "",
+      "category": "콜라 환타 사이다",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1231597-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1231597-10000010",
+      "name": "파인",
+      "description": "",
+      "category": "콜라 환타 사이다",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1231597-10000011",
+      "name": "사이다",
+      "description": "",
+      "category": "콜라 환타 사이다",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1231597-10000012",
+      "name": "오렌지",
+      "description": "",
+      "category": "콜라 환타 사이다",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1231597-10000005",
+      "name": "김치볶음밥",
+      "description": "",
+      "category": "배달메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/0e86bec4-f828-4361-99ef-947d420f6ce9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1231597-10000006",
+      "name": "추억의도시락",
+      "description": "",
+      "category": "배달메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/cb48ddd9-c72c-4681-ad17-a519b1b14f3e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1231597-10000007",
+      "name": "계란찜",
+      "description": "",
+      "category": "배달메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/ff74b4a9-5b9a-4b8a-a4a4-38f7f2c9f60d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1231597-10000008",
+      "name": "공기밥",
+      "description": "",
+      "category": "배달메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5ffa8a37-1cf6-413a-ae38-13553c24b225.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1231597",
+    "sourceUrls": [
+      "https://bit.ly/tk-대박난쪽갈비여수점",
+      "https://fdofd.ddangyo.com/gateway1.html?Om8eu9m"
+    ],
+    "rawItemCount": 18,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

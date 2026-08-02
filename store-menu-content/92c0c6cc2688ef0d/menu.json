@@ -1,0 +1,189 @@
+{
+  "storeId": "92c0c6cc2688ef0d",
+  "storeName": "미미꼬마김밥 여서점",
+  "displayName": "미미꼬마김밥 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/cfc22582-8a60-4daa-8099-6786b117c178.jpg",
+  "categories": [
+    "전체",
+    "메뉴",
+    "음료수",
+    "Cafe 음료 (모든 메뉴 아이스)"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1221801-10000152",
+      "name": "미미꼬마김밥",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/5719b669-bbd6-45e1-ae3e-a12b9289e980.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000152"
+    },
+    {
+      "id": "ddangyo-1221801-10000156",
+      "name": "모듬꼬마김밥",
+      "description": "미미/땡초참치/참치",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/66917729-8aca-4d1c-a92d-4ed94f22fd7b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000156"
+    },
+    {
+      "id": "ddangyo-1221801-10000157",
+      "name": "어묵탕",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/9db203e5-d2a8-4202-8c9a-3ac3f25d3931.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000157"
+    },
+    {
+      "id": "ddangyo-1221801-10000162",
+      "name": "환타355ml",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000162"
+    },
+    {
+      "id": "ddangyo-1221801-10000166",
+      "name": "아이스아메리카노",
+      "description": "",
+      "category": "Cafe 음료 (모든 메뉴 아이스)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000166"
+    },
+    {
+      "id": "ddangyo-1221801-10000153",
+      "name": "땡초참치꼬마김밥",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2668fbd0-30d9-40fa-a981-256cc4088907.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000153"
+    },
+    {
+      "id": "ddangyo-1221801-10000163",
+      "name": "사이다(칠성)355ml",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000163"
+    },
+    {
+      "id": "ddangyo-1221801-10000167",
+      "name": "라떼(카페,바닐라,카라멜,초코,바나나)",
+      "description": "",
+      "category": "Cafe 음료 (모든 메뉴 아이스)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000167"
+    },
+    {
+      "id": "ddangyo-1221801-10000154",
+      "name": "참치꼬마김밥",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2668fbd0-30d9-40fa-a981-256cc4088907.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000154"
+    },
+    {
+      "id": "ddangyo-1221801-10000164",
+      "name": "콜라355ml",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000164"
+    },
+    {
+      "id": "ddangyo-1221801-10000168",
+      "name": "아이스티(복숭아,청포도,오미자,레몬,자몽)",
+      "description": "",
+      "category": "Cafe 음료 (모든 메뉴 아이스)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000168"
+    },
+    {
+      "id": "ddangyo-1221801-10000155",
+      "name": "치즈꼬마김밥",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2668fbd0-30d9-40fa-a981-256cc4088907.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000155"
+    },
+    {
+      "id": "ddangyo-1221801-10000165",
+      "name": "잔치집식혜240ml",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000165"
+    },
+    {
+      "id": "ddangyo-1221801-10000169",
+      "name": "에이드(레몬,체리)",
+      "description": "",
+      "category": "Cafe 음료 (모든 메뉴 아이스)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000169"
+    },
+    {
+      "id": "ddangyo-1221801-10000158",
+      "name": "떡볶이",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/64251402-3073-49d0-b987-7e0cd51d0497.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000158"
+    },
+    {
+      "id": "ddangyo-1221801-10000159",
+      "name": "미미로제떡볶이",
+      "description": "로제떡볶이에는 순한맛이 없어요. 중간맛과 매운맛 둘중에 선택해 주시면 맛있게 조리해드리겠습니다.",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/1dfd7c37-daf0-451d-b795-770cafe83c1a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000159"
+    },
+    {
+      "id": "ddangyo-1221801-10000160",
+      "name": "쫄면",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/38a2bb61-362c-4c6f-b0b7-322da62e923d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000160"
+    },
+    {
+      "id": "ddangyo-1221801-10000161",
+      "name": "우동",
+      "description": "",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000161"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1221801",
+    "sourceUrls": [
+      "https://bit.ly/tk-미미꼬마김밥여서점",
+      "https://fdofd.ddangyo.com/gateway1.html?NySXjyY"
+    ],
+    "rawItemCount": 21,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

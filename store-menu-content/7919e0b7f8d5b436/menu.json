@@ -1,0 +1,208 @@
+{
+  "storeId": "7919e0b7f8d5b436",
+  "storeName": "쫑포피자 문수점",
+  "displayName": "쫑포피자 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/041e1b2a-d639-4b65-a4d2-d05e6ea87d63.jpg",
+  "categories": [
+    "전체",
+    "피자",
+    "세트메뉴",
+    "사이드",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1239485-10000001",
+      "name": "치즈 피자",
+      "description": "모짜렐라, 체다치즈, 파인애플의 향연",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0babf790-ea59-4350-a570-60e2ea8ea127.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1239485-10000002",
+      "name": "불고기피자",
+      "description": "단짠 단짠 푸짐한 불고기피자",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/18f576b6-65bf-4a29-b3f3-fd796d11e516.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1239485-10000003",
+      "name": "갈릭비프피자",
+      "description": "짭잘한 비프 스테이크에  달달한 고구마 무스위에 마늘칩 토핑~",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e668a297-20f9-4e69-a0f4-93260598af31.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1239485-10000010",
+      "name": "피자1.5인용(9인치)+ 사이드메뉴1+ 음료355ml",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1239485-10000016",
+      "name": "치즈오븐 스파게티",
+      "description": "치즈가 듬뿍~~ 치즈오븐 파스타 ~",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1239485-10000018",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/fa91b9d1-d449-421b-a7f6-27d6e28039b9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1239485-10000011",
+      "name": "피자 L + 사이드메뉴1+ 음료500ml",
+      "description": "피자(L)단품 + 사이드메뉴+음료500ml, 2천원 할인 적용",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1239485-10000017",
+      "name": "치킨윙봉(6조각)",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1239485-10000019",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e83de312-28f2-4a7d-b480-aaf7451c3ed1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1239485-10000021",
+      "name": "페퍼로니만 피자",
+      "description": "피자 + 피클, 갈릭디핑,치즈가루,핫소스",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/f8d86761-c0bd-40d4-b229-b940d939f114.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1239485-10000012",
+      "name": "반반1.5인용(9인치)+ 사이드메뉴1+ 음료355ml",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1239485-10000020",
+      "name": "코카콜라(제로)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/76cafa06-02e8-407e-8ce4-0228e79d7888.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1239485-10000013",
+      "name": "반반피자 L + 사이드메뉴1+ 음료500ml",
+      "description": "반반피자L + 사이드메뉴1 + 음료500ML, 2천원 할인",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/74b1a067-1592-4395-9898-be6038a424be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1239485-10000004",
+      "name": "고마새우 피자",
+      "description": "마늘향을 입힌 담백한 새우에 달달한 고구마",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/83d4191e-5f0a-4915-b842-64935f41473d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1239485-10000014",
+      "name": "두판피자 Large + 음료 大사이즈",
+      "description": "피자L(선택1) + 피자L(선택2)+음료(대 사이즈)",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b879d61b-e3c7-475b-aa09-ee7436605ece.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1239485-10000015",
+      "name": "두판피자1.5인용(9인치) + 음료500ml",
+      "description": "1.5인용 피자 2판 + 음료500",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b879d61b-e3c7-475b-aa09-ee7436605ece.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1239485-10000006",
+      "name": "베이컨 포테이토 피자",
+      "description": "베이컨과 포테이토 샤워크림의 완벽한 조합",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/0e31bfd5-a607-43f0-bc11-68320c2e5836.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1239485-10000007",
+      "name": "페퍼로니 하와이안피자",
+      "description": "페페로니와 달달한 파인애플",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/b9337e09-c684-411e-80e1-31993762922a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1239485-10000008",
+      "name": "페퍼리뇨 피자",
+      "description": "페퍼로니와 할라피뇨의 조합 한번 먹으면 재주문률 1위",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c871581f-601b-4b90-9ad8-423c2bab7745.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1239485-10000009",
+      "name": "하프 앤 하프",
+      "description": "반 반 피자~",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/74b1a067-1592-4395-9898-be6038a424be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1239485",
+    "sourceUrls": [
+      "https://bit.ly/tk-쫑포피자문수점",
+      "https://fdofd.ddangyo.com/gateway1.html?YtcpZfv"
+    ],
+    "rawItemCount": 23,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

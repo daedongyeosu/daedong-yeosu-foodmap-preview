@@ -1,0 +1,164 @@
+{
+  "storeId": "3a6078da746f1953",
+  "storeName": "라홍방마라탕 문수점",
+  "displayName": "라홍방마라탕 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/894ff359-6828-460d-9fad-de078e68bdb9.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "중국음료",
+    "캔음료355ml",
+    "리뷰 이벤트 참여",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1208725-10000001",
+      "name": "마라탕",
+      "description": "재료를 자유롭게 선택할수 잇으나 \n선택하신 품목을 평균으로 넣어드립니다.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/c2889109-7cd7-4040-a841-c9767a9b0f77.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1208725-10000002",
+      "name": "마라샹궈",
+      "description": "재료를 자유롭게 선택할수 잇으나 \n선택하신 품목을 평균으로 넣어드립니다.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/816f4be7-4c92-4a5b-a010-bcb6fe128109.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1208725-10000003",
+      "name": "꿔바로우",
+      "description": "새콤 달콤한 소스에 바삭하고 쫄깃한~\n탕수육 친구 꿔바로우",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d3dc63f8-18f0-4456-8553-06b0b086a560.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1208725-10000004",
+      "name": "계란볶음밥",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7e3a76ba-64cf-4ed2-bba4-6f50db6956b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1208725-10000005",
+      "name": "차파이",
+      "description": "",
+      "category": "중국음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7dcd3025-7088-4f84-ad05-36764b53deb8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1208725-10000007",
+      "name": "코카콜라",
+      "description": "355ML",
+      "category": "캔음료355ml",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/91045e52-a81a-4116-9157-7cdeb409f802.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1208725-10000014",
+      "name": "리뷰 이벤트",
+      "description": "",
+      "category": "리뷰 이벤트 참여",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1208725-90000001",
+      "name": "칭따오(병)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1208725-10000006",
+      "name": "빙홍차",
+      "description": "",
+      "category": "중국음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1208725-10000008",
+      "name": "환타파인",
+      "description": "355ML",
+      "category": "캔음료355ml",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1208725-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1208725-10000009",
+      "name": "칠성사이다",
+      "description": "355ML",
+      "category": "캔음료355ml",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1208725-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1208725-10000015",
+      "name": "펩시제로슈거",
+      "description": "355ML",
+      "category": "캔음료355ml",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1208725-10000016",
+      "name": "밀키스",
+      "description": "355ML",
+      "category": "캔음료355ml",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1208725",
+    "sourceUrls": [
+      "https://bit.ly/tk-라홍방마라탕문수점",
+      "https://fdofd.ddangyo.com/gateway1.html?6pgd2LX"
+    ],
+    "rawItemCount": 19,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

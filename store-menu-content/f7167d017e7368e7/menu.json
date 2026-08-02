@@ -1,0 +1,591 @@
+{
+  "storeId": "f7167d017e7368e7",
+  "storeName": "롤링파스타 여서점",
+  "displayName": "롤링파스타 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/99aed3cf-5159-4550-8484-fde9fef50c0b.jpg",
+  "categories": [
+    "전체",
+    "파스타",
+    "메인",
+    "피자",
+    "세트",
+    "라이스",
+    "샐러드",
+    "음료",
+    "사이드",
+    "신메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1233611-30000132",
+      "name": "불닭 크림 파스타(면170g)",
+      "description": "매콤한 불닭 소스에 닭가슴살과 크림소스를 더한 롤링파스타만의 불닭 크림 파스타.\n(눈꽃치즈 추가 추천!)",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/ac7414d6-4376-4aba-8e6a-60bc1200167a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000132"
+    },
+    {
+      "id": "ddangyo-1233611-30000133",
+      "name": "불닭 토마토 파스타(면170g)",
+      "description": "매콤한 불닭소스에 닭가슴살과 토마토소스를 더해 깔끔하게 완성한 불닭 토마토 파스타. \n(눈꽃치즈 추가 추천!)",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/b0b816b7-7310-4172-957f-d6f831d4b4f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000133"
+    },
+    {
+      "id": "ddangyo-1233611-30000094",
+      "name": "롤링 함박 스테이크",
+      "description": "비법 데미그라스 소스를 듬뿍! 계란후라이를 올려 더 부드럽고 촉촉한 함박 스테이크",
+      "category": "메인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/4e7c5871-f1e4-4d4f-866c-69779b21d14d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000094"
+    },
+    {
+      "id": "ddangyo-1233611-30000023",
+      "name": "찹스테이크",
+      "description": "소고기와 신선한 채소를 데미글라스 소스와 함께 볶아낸 찹스테이크",
+      "category": "메인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/bfc87128-c92f-4ff1-af40-69bdf7e41f10.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000023"
+    },
+    {
+      "id": "ddangyo-1233611-30000027",
+      "name": "고르곤졸라 피자(S)",
+      "description": "고르곤졸라 치즈로 만든 피자를 달콤한 꿀에 찍어먹는 메뉴\n(고르곤졸라는 3대 블루치즈로 푸른빛을 띨 수 있습니다)",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/fdd06190-843f-4822-a553-d282c16c3041.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000027"
+    },
+    {
+      "id": "ddangyo-1233611-30000026",
+      "name": "마르게리따 피자(S)",
+      "description": "토마토 소스와 모짜렐라 치즈 위 바질페스토를 토핑하여 담백한 맛의 피자",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa0f82a5-35d4-4229-9814-5591424453f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000026"
+    },
+    {
+      "id": "ddangyo-1233611-30000166",
+      "name": "시크릿 쉬림프 알리오 세트",
+      "description": "쉬림프 알리오 올리오 기본 구성 + 피자 (택1)+샐러드 (택1)\n배달에서만 만날 수 있는 시크릿 조합! 파스타에 피자,샐러드를 곁들여 더 맛있게!(배달전용)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/264cb1f4-4082-4ec8-a8c6-4c4016648370.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000166"
+    },
+    {
+      "id": "ddangyo-1233611-30000143",
+      "name": "[매콤]페페 파스타",
+      "description": "치즈의 부드러움과 후추의 깊은 향, 동그란 리가토니 면에 꾸덕한 크림이 어우러진 풍미 가득한 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1197f7b6-0c22-4576-ac0c-2de7b5383b36.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000143"
+    },
+    {
+      "id": "ddangyo-1233611-30000020",
+      "name": "스테이크 필라프(밥300g)",
+      "description": "두툼한 스테이크와 다양한 야채를 함께 볶아낸 담백한 맛의 필라프",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c37c0035-a236-4861-adf9-b0583978359c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000020"
+    },
+    {
+      "id": "ddangyo-1233611-30000032",
+      "name": "그린샐러드",
+      "description": "신선한 채소와 크루통에 이탈리안 드레싱이 더해진 샐러드",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7682adb3-d951-4df6-8d41-b8b597466d97.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000032"
+    },
+    {
+      "id": "ddangyo-1233611-30000041",
+      "name": "콜라(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/7083de15-1138-41df-b9e7-854ace29d93f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000041"
+    },
+    {
+      "id": "ddangyo-1233611-30000144",
+      "name": "토마토 파스타(면170g)",
+      "description": "그라나 파다노 치즈를 듬뿍 갈아올린 베이직 토마토 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1365db26-c955-43e9-88de-8a4847883632.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000144"
+    },
+    {
+      "id": "ddangyo-1233611-30000060",
+      "name": "리코타치즈샐러드",
+      "description": "신선한 채소, 리코타 치즈, 고소한 호두와 크루통에 발사믹 드레싱과 달콤한 꿀이 더해진 샐러드",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/748eab51-e15a-4c36-857d-ca34f5eef6d0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000060"
+    },
+    {
+      "id": "ddangyo-1233611-30000083",
+      "name": "제로콜라(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/94909677-6cfa-49a8-a8f0-ef74b3ea9c3b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000083"
+    },
+    {
+      "id": "ddangyo-1233611-30000167",
+      "name": "시크릿 바질 쉬림프 알리오 세트",
+      "description": "바질 쉬림프 알리오 올리오 기본 구성 + 피자 (택1)+샐러드 (택1)\n배달에서만 만날 수 있는 시크릿 조합! 파스타에 피자,샐러드를 곁들여 더 맛있게!(배달전용)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1a1928c0-6ff9-459f-ac4c-6f1666b1c2f6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000167"
+    },
+    {
+      "id": "ddangyo-1233611-30000057",
+      "name": "불고기 필라프 기본맛(밥300g)",
+      "description": "진짜 불맛나는 불고기와 다양한 야채를 함께 볶아낸 필라프",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/5a00b518-88d9-4ec9-9fec-c919e0c15e6a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000057"
+    },
+    {
+      "id": "ddangyo-1233611-30000126",
+      "name": "머쉬룸 스프",
+      "description": "부드러운 크림 머쉬룸 풍미가 어우러진 따듯한 머쉬룸 스프 , 베이컨칩과 크루통까지",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a1738c52-a0d3-45fb-9e32-5e6e3aefef5d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000126"
+    },
+    {
+      "id": "ddangyo-1233611-30000029",
+      "name": "마르게리따 피자(M)",
+      "description": "토마토 소스와 모짜렐라 치즈 위 바질페스토를 토핑하여 담백한 맛의 피자",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c633ff56-eca9-4bed-b084-2e1c6d1701c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000029"
+    },
+    {
+      "id": "ddangyo-1233611-30000042",
+      "name": "사이다(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/4cd76188-2ccb-4990-a89e-e2c031ca0c08.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000042"
+    },
+    {
+      "id": "ddangyo-1233611-30000145",
+      "name": "[매콤]알리오 올리오(면170g)",
+      "description": "올리브유에 마늘의 풍부한 향을 더하고 고추로 느끼함을 잡은 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5e1b00db-bbd7-49c5-b4d8-ff4bc44cfe6d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000145"
+    },
+    {
+      "id": "ddangyo-1233611-30000058",
+      "name": "[매콤]불고기 필라프 매콤한맛(밥300g)",
+      "description": "진짜 불맛나는 불고기와 다양한 야채를 함께 볶아낸 필라프",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/a85a10c1-9195-4b8c-a48c-e57be166ae03.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000058"
+    },
+    {
+      "id": "ddangyo-1233611-30000002",
+      "name": "롤링파스타 1인 세트",
+      "description": "메뉴 (택1) +샐러드 (택1) + 음료 (1택)\n\n가성비의 끝판왕. 나홀로 롤링파스타 1인 세트메뉴 (배달전용)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/9d6c5a47-8818-474f-a5d6-4a0040eb688f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000002"
+    },
+    {
+      "id": "ddangyo-1233611-30000146",
+      "name": "[매콤]버터 갈릭 파스타(면170g)",
+      "description": "버터와 마늘의 고소한 풍미를 그대로. 한 번 맛보면 자꾸 생각나는 매력적인 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/09efe304-a351-4ecc-b307-7ba897ad136a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000146"
+    },
+    {
+      "id": "ddangyo-1233611-30000170",
+      "name": "[매콤]청양 불고기 파스타(면170g)",
+      "description": "단짠매력의 불고기를 매콤한 청양과 함께 볶아낸 오일 파스타",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/47325b02-f2fc-45b5-835e-f50be160af02.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000170"
+    },
+    {
+      "id": "ddangyo-1233611-30000113",
+      "name": "[매콤]쉬림프 필라프(밥300g)",
+      "description": "통통한 새우와 버터라이스의 고소함 폭발! 계속 끌리는 담백한 맛의 필라프",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/94b74747-8a6a-4162-b448-d7b30093c4bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000113"
+    },
+    {
+      "id": "ddangyo-1233611-30000030",
+      "name": "고르곤졸라 피자(M)",
+      "description": "고르곤졸라 치즈로 만든 피자를 달콤한 꿀에 찍어먹는 메뉴\n(고르곤졸라는 3대 블루치즈로 푸른빛을 띨 수 있습니다)",
+      "category": "피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/2d1bce7d-84d3-4c39-9281-81604f7b158c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000030"
+    },
+    {
+      "id": "ddangyo-1233611-30000024",
+      "name": "버섯 크림 뇨끼",
+      "description": "뇨끼와 버섯 그리고 크림소스가 부드럽게 입안에 녹아드는 메뉴",
+      "category": "메인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/56146a90-1482-4e8c-a3c2-34b556828e4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000024"
+    },
+    {
+      "id": "ddangyo-1233611-30000084",
+      "name": "제로사이다(355ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/f1af3e55-b69c-481c-b6de-0508275ed484.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000084"
+    },
+    {
+      "id": "ddangyo-1233611-30000085",
+      "name": "한라봉 감귤주스(320ml)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/e967d8ca-87c4-4cea-9957-613f524556a6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000085"
+    },
+    {
+      "id": "ddangyo-1233611-30000003",
+      "name": "롤링파스타 2인 세트",
+      "description": "메뉴 (택2) + 피자 (택1) + 음료 (택2) br\n둘이서 알차고 푸짐하게 즐기는  롤링파스타 2인 세트메뉴 (배달전용)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/1068f77f-116d-4fd8-be69-8f8bcd9c46b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000003"
+    },
+    {
+      "id": "ddangyo-1233611-30000036",
+      "name": "올리브 브레드",
+      "description": "부드러운 빵 사이로 올리브가 송송 박혀 씹히는 맛이 좋은 브레드",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5b1ac6b6-a49f-4fe2-8d92-21070208c7a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000036"
+    },
+    {
+      "id": "ddangyo-1233611-30000114",
+      "name": "[매콤]우삼겹 필라프(밥300g)",
+      "description": "감칠맛이 가득한 우삼겹과 매콤한 소스를 함께 볶아낸 K-스타일 필라프",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9802c332-7f27-4e5d-b98a-f46204ccb966.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000114"
+    },
+    {
+      "id": "ddangyo-1233611-30000147",
+      "name": "[매콤]봉골레 파스타(면170g)",
+      "description": "조개의 시원한 맛과 함께 마늘의 알싸함과 버터의 크리미함이 어우러진 롤링파스타 만의 봉골레 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/e1abd7f2-ad78-4712-92ea-c28737d5bb1f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000147"
+    },
+    {
+      "id": "ddangyo-1233611-30000171",
+      "name": "불고기 크림 파스타(면170g)",
+      "description": "고소하고 부드러운 크림과 단짠매력의 불고기로 풍미를 더한 파스타",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5d137448-3a3f-4a7b-8b9d-4b480c8ab765.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000171"
+    },
+    {
+      "id": "ddangyo-1233611-30000148",
+      "name": "[매콤]매운 우삼겹 오일 파스타(면170g)",
+      "description": "매콤한 오일 소스에 우삼겹의 고소한 풍미를 더한 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/99b5cbd8-6a9e-4494-9471-0fbc304a6f36.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000148"
+    },
+    {
+      "id": "ddangyo-1233611-30000062",
+      "name": "[매콤]우삼겹도리아(밥200g)",
+      "description": "우삼겹의 고소한 육즙과 매콤한 크림 소스가 치즈와 함께 밸런스를 이루는 도리아",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/c26e0086-9624-4af4-b688-5e3037a660f6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000062"
+    },
+    {
+      "id": "ddangyo-1233611-30000043",
+      "name": "피치 레몬 아이스티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/28202ee6-6c54-4844-a7c6-c09a19c0d0bd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1233611-30000061",
+      "name": "체리코크",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/c0cef5d5-833c-476f-8002-1bd731eb0300.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000061"
+    },
+    {
+      "id": "ddangyo-1233611-30000149",
+      "name": "[매콤]씨푸드 오일 파스타(면170g)",
+      "description": "새우, 오징어, 바지락 등의 다양한 해물에 비법 소스를 넣어 감칠맛을 더한 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/681e5d7d-4265-4c67-954b-2aeeb18bde9c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000149"
+    },
+    {
+      "id": "ddangyo-1233611-30000076",
+      "name": "[매콤]베이컨김치도리아(300g)",
+      "description": "고소한 베이컨과 김치볶음밥의 풍미가 치즈와 함께 밸런스를 이루는 매력적인 맛의 한국식 도리아",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/a5f9daf7-ffe1-47c1-95c6-90661ba315bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000076"
+    },
+    {
+      "id": "ddangyo-1233611-30000049",
+      "name": "갈릭스틱",
+      "description": "달콤한 갈릭소스를 발라 오븐에 구운 바삭한 갈릭브레드",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/835ee6f1-6b64-4806-b7c0-f2015e3f0a8a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000049"
+    },
+    {
+      "id": "ddangyo-1233611-30000115",
+      "name": "로제 크림 쉬림프 도리아(밥200g)",
+      "description": "로제 크림에 퐁당 빠진 새우를 쭉 늘어나는 치즈와 함께 즐기는 부드러운 도리아",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/c5962d6d-dea1-434e-abfe-ed1d59256c6d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000115"
+    },
+    {
+      "id": "ddangyo-1233611-30000129",
+      "name": "티라미수",
+      "description": "부드러운 마스카포네 크림과 진한 에스프레소 향이 어우러진 정통 티라미수",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7c87992a-2876-436c-9dc9-ef19d3a957ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000129"
+    },
+    {
+      "id": "ddangyo-1233611-30000116",
+      "name": "베이컨 크림 리조또(밥200g)",
+      "description": "입안 가득 퍼지는 부드러운 크림과 구운 베이컨의 풍미가 일품인 리조또",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e30000ac-3c69-4cf9-ae7f-1f0c3601e1c3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000116"
+    },
+    {
+      "id": "ddangyo-1233611-30000044",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/13515d31-4cee-46a9-94ac-e11433ca7d51.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000044"
+    },
+    {
+      "id": "ddangyo-1233611-30000040",
+      "name": "피클",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a7958bfc-8414-411a-9b38-0525f9f14144.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000040"
+    },
+    {
+      "id": "ddangyo-1233611-30000134",
+      "name": "[매콤]쉬림프 토마토 리조또(밥200g)",
+      "description": "통통한 새우에 진한 토마토소스와 빼쉐 소스가 어우러져 매콤하고 감칠맛 가득한 리조또",
+      "category": "라이스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/c43cfa2b-48ed-4e5a-926b-6dfb22168c19.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000134"
+    },
+    {
+      "id": "ddangyo-1233611-30000045",
+      "name": "자몽에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/3421fe91-536b-4081-90f8-471653650059.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000045"
+    },
+    {
+      "id": "ddangyo-1233611-30000152",
+      "name": "토마토 미트 파스타(면170g)",
+      "description": "깊은 감칠맛의 진한 토마토소스와 다진 소고기가 어우러져, 풍부한 식감과 조화로운 균형을 이룬 클래식 미트 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/e4ab874e-3f36-4695-9400-98ff9587da28.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000152"
+    },
+    {
+      "id": "ddangyo-1233611-30000047",
+      "name": "복숭아에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/7a1baf69-cc54-4983-a1e6-bcd5a09fe7f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000047"
+    },
+    {
+      "id": "ddangyo-1233611-30000153",
+      "name": "치즈 듬뿍 오븐 파스타(면170g)",
+      "description": "진한 비프 토마토 소스에 고소한 치즈를 듬뿍 올려 오븐에 구워낸 '겉바속촉' 오븐파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d48dbb01-cc5d-4b59-be27-710c6ee5f425.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000153"
+    },
+    {
+      "id": "ddangyo-1233611-30000154",
+      "name": "로제 크림 쉬림프 파스타(면170g)",
+      "description": "고소하고 부드러운 크림에 베이컨칩으로 풍미를 살린 크림 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5eaa616f-abea-438e-a5eb-d0401171013a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000154"
+    },
+    {
+      "id": "ddangyo-1233611-30000155",
+      "name": "까르보나라(면170g)",
+      "description": "우삼겹, 새송이, 마늘 등의 식재료와 매콤한 토마토 소스가 어우러져 다채로운 맛을 선사하는 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/36b65847-c3e6-4c46-b726-faf44e2717b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000155"
+    },
+    {
+      "id": "ddangyo-1233611-30000156",
+      "name": "[매콤]매운 크림 파스타(면170g)",
+      "description": "매운 크림과 우삼겹의 농후한 육즙이 어우러져 특제소스와 고추로 매운맛을 내어 감칠맛을 더한 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/feb1cbc8-c242-47ee-9859-ff06db974ce9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000156"
+    },
+    {
+      "id": "ddangyo-1233611-30000157",
+      "name": "[매콤]쉬림프 알리오 올리오(면170g)",
+      "description": "엑스트라 버진 올리브 오일과 새우를 듬뿍 넣어 깔끔하면서도 깊은 감칠맛을 선사하는 오일 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/4ebc4083-6f30-4799-ad29-2a7f5bbbde25.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000157"
+    },
+    {
+      "id": "ddangyo-1233611-30000158",
+      "name": "[매콤]매운 우삼겹 토마토 파스타(면170g)",
+      "description": "우삼겹, 새송이, 마늘 등의 식재료와 매콤한 토마토 소스가 어우러져 다채로운 맛을 선사하는 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/56ffdaff-1d83-4c62-b9e3-e1f7f2ec7a72.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000158"
+    },
+    {
+      "id": "ddangyo-1233611-30000159",
+      "name": "해물 토마토 파스타(면170g)",
+      "description": "새우, 오징어, 바지락 등의 해물로 토마토 소스에 풍미를 더한 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/138dec1a-df85-4d33-a484-c89d9318e9d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000159"
+    },
+    {
+      "id": "ddangyo-1233611-30000160",
+      "name": "해물 크림 파스타(면170g)",
+      "description": "새우, 오징어, 바지락 등의 해물을 넣어 크림소스에 깊은맛을 더한 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/bd1ae76c-f877-4af9-91da-e1844e60a29f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000160"
+    },
+    {
+      "id": "ddangyo-1233611-30000161",
+      "name": "[매콤]바질 페스토 크림 파스타(면170g)",
+      "description": "향긋한 바질페스토에 부드러운 크림으로 맛을 낸 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/b68881b9-a11e-4073-be59-ac13e06672da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000161"
+    },
+    {
+      "id": "ddangyo-1233611-30000162",
+      "name": "[매콤]스테이크 크림 파스타(면170g)",
+      "description": "데미 소스가 뿌려진 고소한 크림 파스타에 큐브 스테이크를 올린 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/35ee4a01-62eb-42e7-99b1-58d844a69387.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000162"
+    },
+    {
+      "id": "ddangyo-1233611-30000164",
+      "name": "[매콤]바질 쉬림프 알리오 올리오(면170g)",
+      "description": "향긋한 바질 오일과 통통한 새우가 어우러져 풍미 가득한 프리미엄 오일 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1f6a0755-e93d-453c-9aa8-498130db757c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000164"
+    },
+    {
+      "id": "ddangyo-1233611-30000165",
+      "name": "[매콤]빼쉐 파스타(면170g)",
+      "description": "토마토 소스에 해산물이 가득 들어간 매콤하고 깔끔한 국물 파스타",
+      "category": "파스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0b80ea89-0088-45f9-b8ac-ceb6ee6ac3de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000165"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1233611",
+    "sourceUrls": [
+      "https://bit.ly/tk-롤링파스타여서점",
+      "https://fdofd.ddangyo.com/gateway1.html?qQ8RBtq"
+    ],
+    "rawItemCount": 68,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

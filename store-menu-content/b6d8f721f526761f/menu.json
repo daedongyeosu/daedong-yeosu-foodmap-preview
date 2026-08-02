@@ -1,0 +1,429 @@
+{
+  "storeId": "b6d8f721f526761f",
+  "storeName": "원할머니보쌈족발 여수여서점",
+  "displayName": "원할머니보쌈족발 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/3536b599-aac7-44ad-a0c1-c583c8301a7c.jpg",
+  "categories": [
+    "전체",
+    "보쌈메뉴",
+    "세트메뉴",
+    "족발메뉴",
+    "1인보쌈",
+    "명품도시락",
+    "사이드메뉴",
+    "신메뉴",
+    "추가메뉴",
+    "100% 원물과즙"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1257937-30000293",
+      "name": "[원할머니대표] 모둠보쌈 (보쌈+무김치+보쌈김치)",
+      "description": "보쌈고기+보쌈김치+무김치+쌈떡+쌈무+절임배추+치커리샐러드+콩나물국",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/7af7d916-3761-4400-900a-b79cec91adbf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000293"
+    },
+    {
+      "id": "ddangyo-1257937-30000361",
+      "name": "[BEST] 50주년 보족세트 (보쌈+족발+새콤비빔면)",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/6732ab18-90b5-49ef-890e-8ea969c59ba2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000361"
+    },
+    {
+      "id": "ddangyo-1257937-30000021",
+      "name": "[가성비] 실속원쌈 (보쌈+무김치+보쌈김치+쟁반무침면)",
+      "description": "보쌈고기+보쌈김치+무김치+절임배추+쌈떡+쌈무+쟁반무침면+치커리샐러드+콩나물국",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b1aba216-a7fc-4142-8c2a-79b7ee26beb6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000021"
+    },
+    {
+      "id": "ddangyo-1257937-30000134",
+      "name": "[배추김치] 맛보쌈 (보쌈+보쌈김치)",
+      "description": "보쌈고기+보쌈김치+치커리샐러드+콩나물국",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/0daa001c-ec0e-454d-b9f7-6a3e044d48da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000134"
+    },
+    {
+      "id": "ddangyo-1257937-30000016",
+      "name": "[국내산 한족] 부드러운족발 (족발+새콤비빔면)",
+      "description": "족발+쌈야채+치커리샐러드+콩나물국",
+      "category": "족발메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5f02b09b-d140-4cb7-8e7d-5eed3d6a8858.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000016"
+    },
+    {
+      "id": "ddangyo-1257937-30000008",
+      "name": "[든든하게] 1인보쌈 (보쌈+무김치)",
+      "description": "보쌈고기(150g)+무김치+치커리샐러드+쌈떡+콩나물국/공기밥미포함",
+      "category": "1인보쌈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/63453247-98af-4b32-8598-42b46424d180.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000008"
+    },
+    {
+      "id": "ddangyo-1257937-30000414",
+      "name": "[세트] 보쌈도시락 + 100%원물과즙(레몬즙/매실즙)",
+      "description": "",
+      "category": "명품도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/1ded6bbb-a1b6-4c3a-949b-a6dd7983a88d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000414"
+    },
+    {
+      "id": "ddangyo-1257937-30000296",
+      "name": "[마늘듬뿍] 의성마늘떡보쌈 (보쌈+무김치+마늘소스)",
+      "description": "보쌈고기+무김치+쌈떡+절임배추+치커리샐러드+의성마늘소스+콩나물국",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/317d2cbf-e912-4ed5-94f0-b636f86bd4da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000296"
+    },
+    {
+      "id": "ddangyo-1257937-30000415",
+      "name": "[세트] 제육도시락 + 100%원물과즙(레몬즙/매실즙)",
+      "description": "",
+      "category": "명품도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/048270b2-e0fc-4ce3-af4a-a851f157436f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000415"
+    },
+    {
+      "id": "ddangyo-1257937-30000180",
+      "name": "[마늘듬뿍] 의성마늘족발 (족발+새콤비빔면+마늘소스)",
+      "description": "족발+쌈야채+치커리샐러드+콩나물국+의성마늘소스",
+      "category": "족발메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/7e37695f-e6d9-4341-9f88-bdbc6313d9dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000180"
+    },
+    {
+      "id": "ddangyo-1257937-30000407",
+      "name": "열무막국수(냉면국수)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5c41e8fc-2f12-4016-a4d9-13ad63269858.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000407"
+    },
+    {
+      "id": "ddangyo-1257937-30000406",
+      "name": "[여름한정] 열무막국수보쌈세트",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b19c55c8-9401-4e82-8aec-30bfdeeac58e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000406"
+    },
+    {
+      "id": "ddangyo-1257937-30000250",
+      "name": "쌈무",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/ca5789d1-6e1e-4aca-983c-46f8fc605fc8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000250"
+    },
+    {
+      "id": "ddangyo-1257937-30000364",
+      "name": "[BEST] 50주년 불족세트 (보쌈+불족발+새콤비빔면)",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/d1e805e2-190a-40e8-a4af-5f58f3d64edd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000364"
+    },
+    {
+      "id": "ddangyo-1257937-30000393",
+      "name": "[辛메뉴] 반반 실비&보쌈김치 보쌈",
+      "description": "보쌈고기+실비김치+보쌈김치+주먹밥",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/1c8dff33-d7f7-4838-b1af-8b97c20eeb65.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000393"
+    },
+    {
+      "id": "ddangyo-1257937-30000251",
+      "name": "절임배추",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000251"
+    },
+    {
+      "id": "ddangyo-1257937-30000394",
+      "name": "[辛메뉴] 1인 실비김치 보쌈",
+      "description": "보쌈고기+실비김치+주먹밥",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/9f0f39f7-6ea7-4e1b-be67-a4fac4c15dca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000394"
+    },
+    {
+      "id": "ddangyo-1257937-30000252",
+      "name": "쌈떡(호박,쑥,백년초)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/269efa93-f2da-4a27-9e2a-74ecc4f0a2c0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000252"
+    },
+    {
+      "id": "ddangyo-1257937-30000164",
+      "name": "[2인세트] 커플원쌈 (보쌈+무김치+쟁반무침면)",
+      "description": "보쌈고기+무김치+절임배추+쌈떡+쌈무+새싹쟁반무침면+치커리샐러드+콩나물국",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b378215c-6478-4dca-b07b-98b41bd8ec78.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000164"
+    },
+    {
+      "id": "ddangyo-1257937-30000135",
+      "name": "[무김치] 솜씨보쌈 (보쌈+무김치)",
+      "description": "보쌈고기+무김치+쌈떡+쌈무+절임배추+치커리샐러드+콩나물국",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/18e70943-fc86-4541-bbdc-789bd4eff1dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000135"
+    },
+    {
+      "id": "ddangyo-1257937-30000182",
+      "name": "[화끈하게] 매운火족발 (매운족발+새콤비빔면+쌈야채)",
+      "description": "매운화족발+쌈야채+치커리샐러드+콩나물국",
+      "category": "족발메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/68d4fc21-137d-4656-acaf-4473c4e6566f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000182"
+    },
+    {
+      "id": "ddangyo-1257937-30000368",
+      "name": "[화끈하게] 매운火보쌈 (매운보쌈+쌈야채)",
+      "description": "매운화보쌈+치커리샐러드+쌈무+쌈야채+콩나물국",
+      "category": "보쌈메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000368"
+    },
+    {
+      "id": "ddangyo-1257937-30000395",
+      "name": "[辛메뉴] 실비김치 추가",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/8b0a3a33-d952-4d4a-b25b-97e19141034f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000395"
+    },
+    {
+      "id": "ddangyo-1257937-30000183",
+      "name": "[고민될땐] 반반족발 (족발+매운족발+새콤비빔면)",
+      "description": "족발+매운화족발+쌈야채+치커리샐러드+콩나물국",
+      "category": "족발메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/1a5427db-3b7e-448c-af22-7d4b4adb0e4f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000183"
+    },
+    {
+      "id": "ddangyo-1257937-30000253",
+      "name": "의성마늘소스",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/09c31282-dadc-4555-ad7d-fff848692fab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000253"
+    },
+    {
+      "id": "ddangyo-1257937-30000254",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/9f5bbb16-0954-4a9c-9d12-4935bdc16dc0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000254"
+    },
+    {
+      "id": "ddangyo-1257937-30000136",
+      "name": "[고민될땐] 반반보쌈 (보쌈+매운보쌈+무김치)",
+      "description": "보쌈고기+매운화보쌈+무김치+치커리샐러드+쌈채소+콩나물국",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/784907c2-57a1-4e02-a446-2cf683fbd539.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000136"
+    },
+    {
+      "id": "ddangyo-1257937-30000387",
+      "name": "어리굴젓 150g [겨울한정]",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/944227bb-3da6-4dc1-9a16-f4e664f19e31.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000387"
+    },
+    {
+      "id": "ddangyo-1257937-30000408",
+      "name": "[1+1] 레몬즙 1포 + 매실즙 1포 (정가 3,000원)",
+      "description": "레몬즙 1포 + 매실즙 1포",
+      "category": "100% 원물과즙",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9d76be9d-a938-43c6-afb4-f75327a647bd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000408"
+    },
+    {
+      "id": "ddangyo-1257937-30000409",
+      "name": "[1+1] 레몬즙 1박스 + 매실즙 1박스 (정가 42,000원)",
+      "description": "레몬즙 1박스 + 매실즙 1박스",
+      "category": "100% 원물과즙",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/fd6fa55b-e124-4609-b168-a913209aeeb7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000409"
+    },
+    {
+      "id": "ddangyo-1257937-30000410",
+      "name": "[할인] 먹끼전후 유기농 레몬즙 1포 (정가 1,500원)",
+      "description": "1포 : 20ml",
+      "category": "100% 원물과즙",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2c181cc2-e3cc-48fe-9127-7424a79e3bc9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000410"
+    },
+    {
+      "id": "ddangyo-1257937-30000411",
+      "name": "[할인] 먹끼전후 유기농 레몬즙 1박스 (정가 21,000원)",
+      "description": "1박스 : 14포",
+      "category": "100% 원물과즙",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/23a2797f-55b7-4566-b233-5d0e5b74c73f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000411"
+    },
+    {
+      "id": "ddangyo-1257937-30000210",
+      "name": "1인실속비빔면",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000210"
+    },
+    {
+      "id": "ddangyo-1257937-30000412",
+      "name": "[할인] 먹끼전후 국내산 매실즙 1포 (정가 1,500원)",
+      "description": "1포 : 20ml",
+      "category": "100% 원물과즙",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c25364f9-46f2-469f-9a97-54562c92ca50.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000412"
+    },
+    {
+      "id": "ddangyo-1257937-30000302",
+      "name": "새싹쟁반무침면 (냉면보다 쫄깃한~)",
+      "description": "수경재배한 신선한 새싹채소와 쫄깃한 메밀면을 새콤달콤한 특제소스에 버무린 인기 메뉴입니다.",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/c93e25e4-d336-49f9-9e2f-9de878acea41.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000302"
+    },
+    {
+      "id": "ddangyo-1257937-30000211",
+      "name": "들기름막국수 (냉면보다 담백 고소한~)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/18c907d6-5945-42a8-a4ff-0910015166ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000211"
+    },
+    {
+      "id": "ddangyo-1257937-30000413",
+      "name": "[할인] 먹끼전후 국내산 매실즙 1박스 (정가 21,000원)",
+      "description": "1박스 : 14포",
+      "category": "100% 원물과즙",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4624f71e-3eaa-4d4d-8cad-e01de5f2106e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000413"
+    },
+    {
+      "id": "ddangyo-1257937-30000212",
+      "name": "비빔막국수 (냉면보다 맛있는~)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/79b89536-14e1-43a4-8509-fd601583ba20.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000212"
+    },
+    {
+      "id": "ddangyo-1257937-30000256",
+      "name": "콩나물국",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/ae3596e5-2558-4674-99a0-95e17d34edf7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000256"
+    },
+    {
+      "id": "ddangyo-1257937-30000257",
+      "name": "새우젓",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/929cc591-4feb-468b-8a98-fd291dd1defb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000257"
+    },
+    {
+      "id": "ddangyo-1257937-30000258",
+      "name": "쌈장",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/6bef362f-d1c8-463a-80c1-e00ccad8ed28.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000258"
+    },
+    {
+      "id": "ddangyo-1257937-30000216",
+      "name": "장조림주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/2ceba0fe-ee15-4238-b6a3-ff103b353bd6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000216"
+    },
+    {
+      "id": "ddangyo-1257937-30000367",
+      "name": "치커리샐러드",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000367"
+    },
+    {
+      "id": "ddangyo-1257937-30000213",
+      "name": "부꾸미",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/e5eb7275-64e6-4f03-86e7-43a071af0e4b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000213"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1257937",
+    "sourceUrls": [
+      "https://bit.ly/tk-원할머니보쌈족발여수여서점",
+      "https://fdofd.ddangyo.com/gateway1.html?uowYtPA"
+    ],
+    "rawItemCount": 49,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "storeId": "406b4a0b39f729fc",
+  "storeName": "대정식당 미평점",
+  "displayName": "대정식당 미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/87ba3b6e-d458-4f30-8972-fb7e8f4495b8.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "사이드메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216977-10000008",
+      "name": "아귀찜",
+      "description": "공기밥 별도",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/87ba3b6e-d458-4f30-8972-fb7e8f4495b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1216977-10000004",
+      "name": "낙지볶음",
+      "description": "공기밥 별도",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8b9a3971-3af9-4779-ab1f-dd7be59891e7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1216977-10000003",
+      "name": "아귀탕",
+      "description": "국내산",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/4fa4a461-c55c-424e-8e02-0dc1292cb24e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1216977-10000007",
+      "name": "서대회무침",
+      "description": "공기밥 별도",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f67445d7-c686-4900-aa1d-0dffde26fd22.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1216977-10000001",
+      "name": "김치찌개",
+      "description": "국내산",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/cf912975-a40c-45e8-b9bb-f6b036472f58.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1216977-10000012",
+      "name": "사이다",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1216977-10000002",
+      "name": "장어탕",
+      "description": "국내산",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1216977-10000013",
+      "name": "콜라",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1216977-10000014",
+      "name": "환타",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1216977-10000015",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1216977-10000005",
+      "name": "갈치조림",
+      "description": "국내산\n갈치조림은 2인분이상 주문 가능합니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/10b9a4d4-116e-47b0-aea5-fae4a43e5bef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1216977-10000006",
+      "name": "대창찜",
+      "description": "공기밥 별도",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1216977-10000009",
+      "name": "갑오징어회무침",
+      "description": "공기밥 별도",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1216977-10000010",
+      "name": "아구+대창찜(반반)",
+      "description": "공기밥 별도",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1216977-10000011",
+      "name": "오징어회무침",
+      "description": "오징어 익혀서 나갑니다",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216977",
+    "sourceUrls": [
+      "https://bit.ly/tk-대정식당",
+      "https://fdofd.ddangyo.com/gateway1.html?AVgnexC"
+    ],
+    "rawItemCount": 19,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

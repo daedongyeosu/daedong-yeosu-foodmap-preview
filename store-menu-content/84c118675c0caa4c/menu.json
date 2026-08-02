@@ -1,0 +1,437 @@
+{
+  "storeId": "84c118675c0caa4c",
+  "storeName": "바오탕수 여서점",
+  "displayName": "바오탕수 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7593936a-5aec-4304-8570-8ce6794d19f7.jpg",
+  "categories": [
+    "전체",
+    "[고민된다면] 반반탕수육 [소스 2가지 선택]",
+    "[겉바속촉~] 바오탕수육 [소스별도제공]",
+    "[가성비 대박만족~] 바오 알뜰세트",
+    "[요즘 대세~ 김.치.탕] 김치치즈탕수육",
+    "사이드 메뉴",
+    "탕수육 소스 추가 선택",
+    "음료",
+    "신기동 시전동 추가배달비"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1176199-10000010",
+      "name": "[고민된다면] 반반탕수육 [소스 2가지 선택]",
+      "description": "[내 맘대로~2가지맛 소스선택] \n바오탕수육 & 바오탕수육소스 &  특제마늘간장소스 & 기본음료수 &  젓가락 을 기본으로 제공하고 있습니다.",
+      "category": "[고민된다면] 반반탕수육 [소스 2가지 선택]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7593936a-5aec-4304-8570-8ce6794d19f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1176199-10000007",
+      "name": "[매콤, 달콤, 새콤 3가지 맛을 한번에 ] 사천탕수육",
+      "description": "바오탕수육 + 사천탕수육소스 + 특제마늘간장소스 + 기본음료수 + 젓가락이 기본 제공됩니다.",
+      "category": "[겉바속촉~] 바오탕수육 [소스별도제공]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/99d3c5ad-f118-49fd-b38e-ee5c8e914681.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1176199-10000004",
+      "name": "[우스타소스로 감칠맛을 내서 더욱 맛있는] 까망탕수육",
+      "description": "바오탕수육 + 까망탕수육소스 + 특제마늘간장소스 + 음료수 + 젓가락을 기본으로 제공합니다.",
+      "category": "[겉바속촉~] 바오탕수육 [소스별도제공]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/bf768dd1-bb98-4a1e-a9fe-98fbe3d8bb13.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1176199-10000001",
+      "name": "[가성비 대박~] 바오 알뜰세트 A",
+      "description": "김치치즈탕수육 1인 & 바오탕수육 1인 & 바오탕수육 소스 & 특제마늘간장소스 1개 & 기본음료수 & 젓가락이 기본제공됩니다.",
+      "category": "[가성비 대박만족~] 바오 알뜰세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1176199-10000003",
+      "name": "[토마토베이스로 맛을 낸 새콤달콤]  빨강탕수육",
+      "description": "바오탕수육 + 빨강탕수육소스 + 특제마늘간장소스 + 기본음료수 + 젓가락을 기본으로 제공합니다.",
+      "category": "[겉바속촉~] 바오탕수육 [소스별도제공]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/d61d1a11-a641-4041-ae3d-0e10a5a82f9f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1176199-10000011",
+      "name": "[요즘 대세~김.치.탕] 김치치즈탕수육",
+      "description": "김치치즈탕수육 &  기본음료수 & 젓가락 을 기본으로 제공하고 있습니다.\n\n새콤달콤의 정석~ 본연의 김치치즈 탕수육을 느껴보세요",
+      "category": "[요즘 대세~ 김.치.탕] 김치치즈탕수육",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1176199-10000013",
+      "name": "꽈리고추튀김",
+      "description": "꽈리고추튀김과 바오탕수육의 환상적인 궁합",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1176199-10000034",
+      "name": "특제 마늘간장소스 추가",
+      "description": "",
+      "category": "탕수육 소스 추가 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1176199-10000042",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1176199-10000049",
+      "name": "신기동 신기동 배달비추가",
+      "description": "",
+      "category": "신기동 시전동 추가배달비",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1176199-10000002",
+      "name": "[가성비 대박~] 바오 알뜰세트 B",
+      "description": "김치치즈탕수육 [적당하게 2인] + 바오탕수육 [적당하게 2인] + 바오탕수육소스 + 특제마늘간장소스 + 기본음료수 + 젓가락 이 기본제공됩니다.",
+      "category": "[가성비 대박만족~] 바오 알뜰세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1176199-10000012",
+      "name": "[사천] 김치치츠탕수육",
+      "description": "[사천] 김치치즈탕수육  & 기본음료수 &  젓가락 을 기본으로 제공하고 있습니다.\n\n매콤한 맛으로 돌아왔다~ 맛있게 매콤한~사천김치치즈탕수",
+      "category": "[요즘 대세~ 김.치.탕] 김치치즈탕수육",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1176199-10000014",
+      "name": "두툼한 왕새우튀김",
+      "description": "싱싱하고 두툼한 왕새우만을 깨끗한 기름에 바로 튀겨 맛있는 새우튀김입니다.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/772ddcea-1e5f-4631-a893-40b28df5047b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1176199-10000035",
+      "name": "빨강소스 300g",
+      "description": "토마토베이스로 맛을 낸 새콤달콤~",
+      "category": "탕수육 소스 추가 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1176199-10000043",
+      "name": "사이다 350ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1176199-10000005",
+      "name": "[누구나 좋아하는 중국집 느낌의 소스] 아는맛 탕수육",
+      "description": "바오탕수육 + 아는맛탕수육소스 + 특제마늘간장소스 + 기본음료수 + 젓가락이 기본제공됩니다.",
+      "category": "[겉바속촉~] 바오탕수육 [소스별도제공]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7593936a-5aec-4304-8570-8ce6794d19f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1176199-10000015",
+      "name": "고구마치즈스틱",
+      "description": "고구마와치즈의 환상적인 맛~",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5ddece62-e61b-4ff4-94e3-22247dc46b17.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1176199-10000036",
+      "name": "까망소스 300g",
+      "description": "우스타 소스로 감칠맛을 낸~",
+      "category": "탕수육 소스 추가 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1176199-10000044",
+      "name": "탐스 파인 제로 350ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1176199-10000006",
+      "name": "[매콤하게 맛있는~ 먹을수록 중독되는 소스] 양념탕수육",
+      "description": "바오탕수육 + 양념탕수육소스 + 특제마늘간장소스 + 음료수 + 젓가락을 기본으로 제공합니다.",
+      "category": "[겉바속촉~] 바오탕수육 [소스별도제공]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/44a78abd-d2a5-46ac-aa2d-495a7817da99.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1176199-10000016",
+      "name": "치즈스틱",
+      "description": "스틱안에 치즈가 쏙~ 쫄깃한 치즈스틱",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5ddece62-e61b-4ff4-94e3-22247dc46b17.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1176199-10000037",
+      "name": "아는맛 소스 300g",
+      "description": "누구나 좋아하는 중국집 느낌의 소스",
+      "category": "탕수육 소스 추가 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1176199-10000045",
+      "name": "탐스 청포도석류 제로 350ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1176199-10000017",
+      "name": "쫄깃한 방앗간떡 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/2761f37c-cf24-431a-a274-dc26d2bbc17c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1176199-10000038",
+      "name": "사천 [매콤] 소스 300g",
+      "description": "매콤,달콤,새콤 3가지 맛을 동시에~",
+      "category": "탕수육 소스 추가 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1176199-10000008",
+      "name": "[바오의 스페셜메뉴] 꽈리고추탕수육",
+      "description": "바오탕수육 + 꽈리고추튀김 + 청양결백마늘간장소스 + 특제마늘간장소스 + 기본음료수 + 젓가락이 기본 제공됩니다.",
+      "category": "[겉바속촉~] 바오탕수육 [소스별도제공]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1176199-10000018",
+      "name": "달달한 고구마튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ad2f08ed-6493-4d29-bc5f-047774288530.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1176199-10000039",
+      "name": "사천 [매운] 소스 300g",
+      "description": "매콤,달콤,새콤 3가지 맛을 동시에~",
+      "category": "탕수육 소스 추가 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1176199-10000009",
+      "name": "[바오의 스페셜메뉴] 청양결백마늘간장탕수육&파채서비스",
+      "description": "바오탕수육 + 청양결백마늘간장소스 + 특제마늘간장소스 + 신선한 파채 + 기본음료수 + 젓가락을 기본으로 제공하고 있습니다.",
+      "category": "[겉바속촉~] 바오탕수육 [소스별도제공]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1176199-10000019",
+      "name": "모듬감자튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/59a9262c-5e1a-46a8-8d22-5e8a23f6a707.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1176199-10000040",
+      "name": "사천 [아주매운] 소스 300g",
+      "description": "매콤,달콤,새콤 3가지 맛을 동시에~",
+      "category": "탕수육 소스 추가 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1176199-10000020",
+      "name": "치즈볼(5개)",
+      "description": "아이들이 좋아하는",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/6f9d58fa-c280-453c-b8a9-1e3d15fd4859.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1176199-10000041",
+      "name": "청양결백마늘간장소스 200g",
+      "description": "바오가 개발한 특제 간장소스에 청양고추와 다진마늘로 맛을 내 더욱 특별한 소스",
+      "category": "탕수육 소스 추가 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1176199-10000021",
+      "name": "김치볶음밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/22171b40-dc6d-41b9-9a1d-47f8f156cb90.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1176199-10000022",
+      "name": "(색깔부터)고추만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1176199-10000023",
+      "name": "(김치쏙쏙) 김치손만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/794dd194-ffea-41e5-82c5-a91a08f6247c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1176199-10000024",
+      "name": "(기본중에 기본) 고기손만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3400abc5-d9a1-46d0-b78f-181011d90eff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1176199-10000026",
+      "name": "(새우와부추가득) 왕어혈교 딤섬",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1176199-10000027",
+      "name": "(속꽉찬) 왕하가우 딤섬",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/08d0bdcf-c01e-488c-a50b-48a22afadc03.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1176199-10000028",
+      "name": "(새우가쏙쏙쏙) 새우잎새만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b735ccf0-227c-45b6-9b04-bb1e5b2bdc93.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1176199-10000029",
+      "name": "(갈비맛이일품) 갈비잎새만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1176199-10000030",
+      "name": "(김치가꽉찬) 김치잎새만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/136f943a-ec2b-42bc-8516-f3f927ab84ed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1176199-10000031",
+      "name": "(고기가꽉찬) 고기잎새만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/2c587eec-886a-4c6e-bf38-70000976a722.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1176199-10000032",
+      "name": "(김치가왕많은) 김치왕손만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/dd728e3a-ad79-4b56-9aa8-17ea5cc217a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1176199-10000033",
+      "name": "(고기가왕많은) 고기왕손만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/cf71dd31-f983-481f-9a8b-eb1251d4038e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1176199",
+    "sourceUrls": [
+      "https://bit.ly/tk-바오탕수",
+      "https://fdofd.ddangyo.com/gateway1.html?zxaiPsN"
+    ],
+    "rawItemCount": 48,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

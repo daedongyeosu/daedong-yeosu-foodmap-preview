@@ -1,0 +1,90 @@
+{
+  "storeId": "039652f6eff5f6d7",
+  "storeName": "맛집남도밀면",
+  "displayName": "맛집남도밀면",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/9246f5b5-ce30-4b63-8d00-d26581336982.jpg",
+  "categories": [
+    "전체",
+    "사계절메뉴",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216938-10000001",
+      "name": "비빔밀면",
+      "description": "",
+      "category": "사계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/943f5a82-f5fd-432a-a5cf-2c4fe057a34f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1216938-10000002",
+      "name": "물밀면",
+      "description": "",
+      "category": "사계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/efd800d9-6b99-4ba2-a725-e13820c8a049.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1216938-10000003",
+      "name": "돈불(간장제육볶음)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/fcd666f8-7083-4b03-a285-ffc22d28d31b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1216938-10000004",
+      "name": "고기만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ad54f513-5fa3-4d2c-89be-9877a62286bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1216938-10000006",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1216938-10000007",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1216938-10000005",
+      "name": "갈비만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/0594eef2-423b-4102-8770-d2b805a5630a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216938",
+    "sourceUrls": [
+      "https://bit.ly/tk-맛집남도밀면",
+      "https://fdofd.ddangyo.com/gateway1.html?sXhf65y"
+    ],
+    "rawItemCount": 11,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "storeId": "90cd1600c54ce7d0",
+  "storeName": "서영이네김밥 미평점",
+  "displayName": "서영이네김밥 미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e7c310aa-5876-42e8-bfc8-1a03e2ae36dd.jpg",
+  "categories": [
+    "전체",
+    "김밥",
+    "분식류",
+    "밥류",
+    "돈까스류",
+    "음료",
+    "찌계류",
+    "면류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1196603-10000004",
+      "name": "참치김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a01e010d-7415-4f6b-bae6-ba48a3e1c43e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1196603-10000001",
+      "name": "기본김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/32ff7242-2098-49fd-9b96-a949d9db0167.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1196603-10000011",
+      "name": "라볶이",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b249378a-ffb2-437e-b397-b3f6526853fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1196603-10000010",
+      "name": "떡볶이",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f67bbcf3-8c8e-444b-86e3-03d75697a265.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1196603-10000002",
+      "name": "꼬마김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/924d48c1-417d-4fac-8990-ab8891274423.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1196603-10000013",
+      "name": "오무라이스",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa8cdbe1-3cdd-4ec8-b6c0-a2f7ffd694b9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1196603-10000018",
+      "name": "돈까스",
+      "description": "",
+      "category": "돈까스류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ff98dd7c-4072-4764-a49e-1eadc3f50c9d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1196603-10000021",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/5e484921-79bc-4813-a74a-8ce306cad9a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1196603-10000037",
+      "name": "육계장",
+      "description": "",
+      "category": "찌계류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1196603-10000045",
+      "name": "비빔국수",
+      "description": "",
+      "category": "면류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1196603-10000032",
+      "name": "치즈 떡볶이",
+      "description": "",
+      "category": "분식류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1196603-10000014",
+      "name": "김치볶음밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/0e86bec4-f828-4361-99ef-947d420f6ce9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1196603-10000019",
+      "name": "치즈돈까스",
+      "description": "",
+      "category": "돈까스류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/96894b9f-8b59-4a1e-b0c9-97ee180ea7d0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1196603-10000026",
+      "name": "코카콜라  제로",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/4e2849b8-feab-4422-80cf-a052563bf01f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1196603-10000038",
+      "name": "갈비탕",
+      "description": "",
+      "category": "찌계류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1196603-10000046",
+      "name": "쫄면",
+      "description": "",
+      "category": "면류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1196603-10000003",
+      "name": "참치매운 꼬마김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/62fff605-50bf-41ab-bb0a-f95e7a4f4a39.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1196603-10000015",
+      "name": "김치참치볶음밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4c0ee363-4f17-4aaf-b16a-24d10f60c583.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1196603-10000020",
+      "name": "고구마 치즈 돈까스",
+      "description": "",
+      "category": "돈까스류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/34c720d6-896b-45f9-b3bb-e5b9412a424f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1196603-10000022",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/e5619ca0-180a-45ce-8677-7624c62fdd7a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1196603-10000040",
+      "name": "김치찌개",
+      "description": "",
+      "category": "찌계류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1196603-10000047",
+      "name": "라면",
+      "description": "",
+      "category": "면류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1196603-10000033",
+      "name": "치즈 라볶이",
+      "description": "",
+      "category": "분식류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1196603-10000025",
+      "name": "스프라이트 제로",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1196603-10000041",
+      "name": "참치찌개",
+      "description": "",
+      "category": "찌계류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1196603-10000048",
+      "name": "떡라면",
+      "description": "",
+      "category": "면류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1196603-10000057",
+      "name": "떡갈비",
+      "description": "",
+      "category": "돈까스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1196603-10000005",
+      "name": "돈까스 김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/71c1a745-f158-4f09-8cd0-1f8a93baf877.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1196603-10000017",
+      "name": "제육덮밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/109fbf88-8337-4e47-8c35-ccffc869f63b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1196603-10000023",
+      "name": "환타파인",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1196603-10000049",
+      "name": "만두라면",
+      "description": "",
+      "category": "면류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1196603-10000060",
+      "name": "쫄볶이",
+      "description": "",
+      "category": "분식류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1196603-10000006",
+      "name": "새우김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/1c27b5bb-1cd5-4e88-abcd-92e302531e0a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1196603-10000012",
+      "name": "오뎅탕",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/cf00fa30-45d7-4ed6-869b-feb0ac67912e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1196603-10000024",
+      "name": "환타오렌지",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1196603-10000042",
+      "name": "해물볶음밥",
+      "description": "",
+      "category": "밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1196603-10000050",
+      "name": "치즈라면",
+      "description": "",
+      "category": "면류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1196603-10000007",
+      "name": "진미채 김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/a9d615d7-7009-46b9-875c-8e79b8abe94f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1196603-10000043",
+      "name": "치킨볶음밥",
+      "description": "",
+      "category": "밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1196603-10000054",
+      "name": "환타 포도",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1196603-10000008",
+      "name": "치즈김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f9a3a18c-ab64-49d9-aae7-ecf6b9dc1ea6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1196603-10000044",
+      "name": "햄계란볶음밥",
+      "description": "",
+      "category": "밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1196603-10000031",
+      "name": "참치매운김밥",
+      "description": "",
+      "category": "김밥",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1196603-10000056",
+      "name": "꼬마3줄+매운꼬마3줄",
+      "description": "",
+      "category": "김밥",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1196603-10000028",
+      "name": "생수500ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1196603-10000058",
+      "name": "꼬마매운어묵",
+      "description": "",
+      "category": "김밥",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1196603-10000059",
+      "name": "꼬마진미채",
+      "description": "",
+      "category": "김밥",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1196603",
+    "sourceUrls": [
+      "https://bit.ly/tk-서영이네김밥미평점",
+      "https://fdofd.ddangyo.com/gateway1.html?bS5YH4B"
+    ],
+    "rawItemCount": 52,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}
