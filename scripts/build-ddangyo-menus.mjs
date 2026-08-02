@@ -2,11 +2,11 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {clean, unique, normalizeName, readJsonIfExists} from './ddangyo-package-utils.mjs';
 
-const inputPath = process.argv[2] || 'ddangyo-final-classification-output/final-stores.json';
+const inputPath = process.argv[2] || 'ddangyo-final-ready-output/final-stores.json';
 const outputDir = path.resolve('ddangyo-package-output');
 await fs.mkdir(path.join(outputDir, 'store-menu-content'), {recursive: true});
 const rows = JSON.parse(await fs.readFile(inputPath, 'utf8'));
-const unresolved = rows.filter(row => row?.error || row?.match?.status !== 'existing' || !row?.match?.storeId);
+const unresolved = rows.filter(row => row?.error || !['existing', 'new'].includes(row?.match?.status) || !row?.match?.storeId);
 if (unresolved.length) throw new Error(`unresolved stores: ${unresolved.length}`);
 
 function sourceMenuId(item) {
@@ -102,6 +102,8 @@ try { currentMap = parseMenuMap(await fs.readFile('store-menu-content/ddangyo-me
 const menuMap = {...currentMap};
 const stats = {
   stores: rows.length,
+  existingStores: rows.filter(row => row.match.status === 'existing').length,
+  newStores: rows.filter(row => row.match.status === 'new').length,
   menuFiles: 0,
   sourceMenuItems: 0,
   itemsAdded: 0,
