@@ -1,4 +1,3 @@
-import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
@@ -11,13 +10,27 @@ const rows = JSON.parse(await fs.readFile(inputPath, 'utf8'));
 const clean = value => String(value ?? '').trim().replace(/\s+/g, ' ');
 function compact(value) {
   return clean(value).normalize('NFKC').toLocaleLowerCase('ko-KR')
-    .replace(/피나치공/g, '피자나라치킨공주').replace(/only/g, '온리').replace(/bbq/g, '비비큐').replace(/&/g, '앤')
+    .replace(/피나치공/g, '피자나라치킨공주')
+    .replace(/only/g, '온리')
+    .replace(/bbq/g, '비비큐')
+    .replace(/&/g, '앤')
     .replace(/[\s·()\-_/.,'"\[\]]/g, '');
 }
 function addressKey(value) {
-  return clean(value).replace(/^대한민국\s*/, '').replace(/^전라남도\s*/, '전남 ').replace(/전남광주통합특별시/g, '전남')
-    .replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+(?:지하\s*)?\d+층(?:\s+.*)?$/i, '').replace(/\s+\d+(?:호|동)(?:\s+.*)?$/i, '')
-    .toLocaleLowerCase('ko-KR').replace(/^(전남|전라남도)\s*/, '').replace(/^여수시\s*/, '').replace(/[\s,·]/g, '');
+  return clean(value)
+    .replace(/^대한민국\s*/, '')
+    .replace(/^전라남도\s*/, '전남 ')
+    .replace(/전남광주통합특별시/g, '전남')
+    .replace(/\s*\([^)]*\)\s*/g, ' ')
+    .replace(/\s+(?:지하\s*)?\d+층(?:\s+.*)?$/i, '')
+    .replace(/\s+\d+(?:호|동)(?:\s+.*)?$/i, '')
+    .toLocaleLowerCase('ko-KR')
+    .replace(/^(전남|전라남도)\s*/, '')
+    .replace(/^여수시\s*/, '')
+    .replace(/[\s,·]/g, '');
+}
+function hasRoadAddress(value) {
+  return /[가-힣A-Za-z0-9]+(?:대로|로|길)\s*\d+(?:-\d+)?/.test(clean(value));
 }
 function longestCommonSubstring(a, b) {
   const previous = new Array(b.length + 1).fill(0);
@@ -41,26 +54,34 @@ function sameBusinessName(left, right) {
   const common = longestCommonSubstring(a, b);
   return common >= 3 && common / Math.min(a.length, b.length) >= 0.55;
 }
-function newStoreId(patstoNo) {
-  return crypto.createHash('sha256').update(`ddangyo:${patstoNo}`).digest('hex').slice(0, 16);
+function sameBrandWithMissingCurrentAddress(left, right, candidateAddress) {
+  if (hasRoadAddress(candidateAddress)) return false;
+  const a = compact(left), b = compact(right);
+  if (!a || !b) return false;
+  const common = longestCommonSubstring(a, b);
+  return common >= 3;
 }
 
 let restoredExisting = 0;
-let newStores = 0;
 const output = rows.map(row => {
   if (row?.error || row?.match?.status === 'existing') return row;
   const rejected = row.rejectedMatch;
   if (rejected?.status === 'existing' && rejected?.storeId) {
     const candidate = rejected.candidate || {};
-    const sameAddress = addressKey(candidate.address) && addressKey(candidate.address) === addressKey(row.address);
+    const sameAddress = Boolean(addressKey(candidate.address)) && addressKey(candidate.address) === addressKey(row.address);
     const sameName = sameBusinessName(candidate.storeName, row.name);
-    if (sameAddress || sameName) {
+    const sameBrandMissingAddress = sameBrandWithMissingCurrentAddress(candidate.storeName, row.name, candidate.address);
+    if (sameAddress || sameName || sameBrandMissingAddress) {
       restoredExisting += 1;
       return {
         ...row,
         match: {
           status: 'existing',
-          method: sameAddress ? 'restored-existing-same-address' : 'restored-existing-same-business-name',
+          method: sameAddress
+            ? 'restored-existing-same-address'
+            : sameName
+              ? 'restored-existing-same-business-name'
+              : 'restored-existing-same-brand-current-address-missing',
           storeId: rejected.storeId,
           candidate,
           rejectedConflictCheck: row.match
@@ -68,23 +89,11 @@ const output = rows.map(row => {
       };
     }
   }
-  if (row.match?.status === 'new') {
-    newStores += 1;
-    return {
-      ...row,
-      match: {
-        ...row.match,
-        storeId: newStoreId(row.patstoNo),
-        isNew: true,
-        naverEligible: row.match.naverEligible !== false
-      }
-    };
-  }
   return row;
 });
 
 const valid = output.filter(row => row && !row.error);
-const targetCounts = valid.filter(row => ['existing', 'new'].includes(row.match?.status) && row.match?.storeId).reduce((map, row) => {
+const targetCounts = valid.filter(row => row.match?.status === 'existing' && row.match?.storeId).reduce((map, row) => {
   const id = row.match.storeId;
   if (!map[id]) map[id] = [];
   map[id].push({patstoNo: row.patstoNo, name: row.name});
@@ -99,7 +108,6 @@ const summary = {
   review: valid.filter(row => row.match?.status === 'review').length,
   failures: output.filter(row => row?.error).length,
   restoredExisting,
-  deterministicNewStoreIds: newStores,
   duplicateTargetStoreIds: Object.keys(duplicateTargets).length,
   duplicateTargets
 };
