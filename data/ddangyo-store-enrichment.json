@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "batchId": "ddangyo-chicken-batch-01",
-  "generatedAt": "2026-08-02T06:38:06.875Z",
+  "generatedAt": "2026-08-02T06:41:53.191Z",
   "policy": {
     "mode": "add-missing-only",
     "identity": "verified-address-and-existing-store-id",
