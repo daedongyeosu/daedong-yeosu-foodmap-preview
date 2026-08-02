@@ -1,0 +1,106 @@
+name: Direct Menu Map Final
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .direct-menu-map-final-trigger
+      - .github/workflows/direct-menu-map-final.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out fix branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/direct-menu-map-final
+          fetch-depth: 0
+
+      - name: Integrate all generated menus directly
+        shell: bash
+        run: |
+          set -euo pipefail
+          protected_before="$(sha256sum data/stores.json | awk '{print $1}')"
+          python - <<'PY'
+          from pathlib import Path
+          preview_path = Path('store-menu-preview.js')
+          text = preview_path.read_text(encoding='utf-8')
+          old_decl = "  const MENU_STORES = Object.freeze({\n"
+          if text.count(old_decl) != 1:
+              raise SystemExit(f'expected one legacy MENU_STORES declaration, got {text.count(old_decl)}')
+          text = text.replace(old_decl, "  const LEGACY_MENU_STORES = Object.freeze({\n", 1)
+          marker = "  });\n  const menuCache = new Map();\n"
+          replacement = """  });
+  const MENU_STORES = Object.freeze({
+    ...(window.DAEDONG_DDANGYO_MENU_STORES || {}),
+    ...LEGACY_MENU_STORES
+  });
+  const menuCache = new Map();
+"""
+          if text.count(marker) != 1:
+              raise SystemExit(f'expected one menu-map ending, got {text.count(marker)}')
+          text = text.replace(marker, replacement, 1)
+          preview_path.write_text(text, encoding='utf-8')
+          index_path = Path('index.html')
+          index = index_path.read_text(encoding='utf-8')
+          index = index.replace('  <script src="store-menu-map-bridge.js?v=20260802-1" defer></script>\n', '')
+          index = index.replace('store-menu-content/ddangyo-menu-map.js?v=20260802-4', 'store-menu-content/ddangyo-menu-map.js?v=20260802-444-2')
+          index = index.replace('store-menu-preview.js?v=store-menu-15', 'store-menu-preview.js?v=store-menu-16')
+          index_path.write_text(index, encoding='utf-8')
+          PY
+          rm -f store-menu-map-bridge.js
+          node --check store-menu-preview.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const vm = require('vm');
+          const context = {window: {}};
+          vm.createContext(context);
+          vm.runInContext(fs.readFileSync('store-menu-content/ddangyo-menu-map.js', 'utf8'), context);
+          const map = context.window.DAEDONG_DDANGYO_MENU_STORES || {};
+          const entries = Object.entries(map);
+          if (entries.length !== 444) throw new Error(`expected 444, got ${entries.length}`);
+          const enrichment = JSON.parse(fs.readFileSync('data/ddangyo-store-enrichment.json', 'utf8'));
+          const known = new Set((enrichment.stores || []).map(row => String(row.targetStoreId)));
+          const base = JSON.parse(fs.readFileSync('data/stores.json', 'utf8'));
+          const rows = Array.isArray(base) ? base : (base.stores || base.data || []);
+          rows.forEach(row => known.add(String(row.id || row.store_id || row.storeId || '')));
+          const names = new Map();
+          let totalItems = 0;
+          for (const [id, entry] of entries) {
+            if (!known.has(id)) throw new Error(`unknown menu store ID ${id}`);
+            if (!entry?.path || !fs.existsSync(entry.path)) throw new Error(`missing menu file ${id}`);
+            const menu = JSON.parse(fs.readFileSync(entry.path, 'utf8'));
+            if (String(menu.storeId) !== id) throw new Error(`storeId mismatch ${id}/${menu.storeId}`);
+            if (!Array.isArray(menu.items) || menu.items.length !== Number(entry.itemCount)) throw new Error(`item count mismatch ${id}`);
+            totalItems += menu.items.length;
+            names.set(menu.storeName || menu.displayName || '', {id, count: menu.items.length});
+          }
+          for (const name of ['황금아구 미평점', '바른보쌈1990 여수웅천점']) {
+            if (!names.get(name)?.count) throw new Error(`${name} missing`);
+          }
+          const preview = fs.readFileSync('store-menu-preview.js', 'utf8');
+          if (!preview.includes('...(window.DAEDONG_DDANGYO_MENU_STORES || {})')) throw new Error('direct map merge absent');
+          if (!preview.includes('...LEGACY_MENU_STORES')) throw new Error('legacy map absent');
+          const index = fs.readFileSync('index.html', 'utf8');
+          if (index.includes('store-menu-map-bridge.js')) throw new Error('bridge still loaded');
+          if (!index.includes('ddangyo-menu-map.js?v=20260802-444-2')) throw new Error('new map cache absent');
+          console.log(JSON.stringify({menuStores: entries.length,totalItems,required:Object.fromEntries(['황금아구 미평점','바른보쌈1990 여수웅천점'].map(name=>[name,names.get(name)]))},null,2));
+          NODE
+          protected_after="$(sha256sum data/stores.json | awk '{print $1}')"
+          test "$protected_before" = "$protected_after"
+
+      - name: Remove temporary files and commit branch
+        run: |
+          rm -f .direct-menu-map-final-trigger
+          rm -f .github/workflows/direct-menu-map-final.yml
+          git config user.name "daedong-preview-bot"
+          git config user.email "preview-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Directly connect and verify all 444 food previews"
+          git push origin HEAD:fix/direct-menu-map-final
