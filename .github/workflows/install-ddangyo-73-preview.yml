@@ -3,7 +3,7 @@ name: Install Ddangyo 73 Preview
 on:
   push:
     branches:
-      - work/ddangyo-73-preview
+      - work/ddangyo-73-preview-v2
     paths:
       - .github/workflows/install-ddangyo-73-preview.yml
   pull_request:
@@ -27,7 +27,7 @@ jobs:
       - name: Check out preview branch
         uses: actions/checkout@v4
         with:
-          ref: work/ddangyo-73-preview
+          ref: work/ddangyo-73-preview-v2
           fetch-depth: 1
 
       - name: Check out verified Ddangyo extraction branch
@@ -83,4 +83,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "땡겨요 73개 가게와 음식보기 preview 반영"
-          git push origin HEAD:work/ddangyo-73-preview
+          git push origin HEAD:work/ddangyo-73-preview-v2
