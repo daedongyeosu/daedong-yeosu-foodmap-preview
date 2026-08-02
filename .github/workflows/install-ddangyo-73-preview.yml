@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: install-ddangyo-73-preview
+  group: install-ddangyo-73-preview-${{ github.event_name }}
   cancel-in-progress: true
 
 jobs:
