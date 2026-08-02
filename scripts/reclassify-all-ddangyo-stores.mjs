@@ -19,16 +19,35 @@ function compact(value) {
   return text(value).normalize('NFKC').toLocaleLowerCase('ko-KR')
     .replace(/피나치공/g, '피자나라치킨공주')
     .replace(/only/g, '온리')
+    .replace(/bbq/g, '비비큐')
     .replace(/&/g, '앤')
     .replace(/[\s·()\-_/.,'"\[\]]/g, '');
 }
-function branchLoose(value) {
+function looseName(value) {
   return compact(text(value)
     .replace(/\([^)]*\)/g, ' ')
-    .replace(/여수시?/g, '')
-    .replace(/전남/g, '')
     .replace(/샵인샵|샵인점/g, '')
-    .replace(/치킨&피자/g, '치킨피자'));
+    .replace(/치킨&피자/g, '치킨피자'))
+    .replace(/여수/g, '');
+}
+const GENERIC_NAME_KEYS = new Set(['', '점', '본점', '여수', '여수점', '치킨', '피자', '카페', '식당', '분식']);
+function meaningful(key) { return key.length >= 4 && !GENERIC_NAME_KEYS.has(key); }
+function containsMeaningful(left, right) {
+  if (!meaningful(left) || !meaningful(right)) return false;
+  const shorter = left.length <= right.length ? left : right;
+  const longer = left.length <= right.length ? right : left;
+  return shorter.length >= 4 && longer.includes(shorter);
+}
+function compatibleName(left, right) {
+  const a = compact(left), b = compact(right);
+  if (!a || !b) return false;
+  if (a === b || containsMeaningful(a, b)) return true;
+  const la = looseName(left), lb = looseName(right);
+  return Boolean(meaningful(la) && meaningful(lb) && (la === lb || containsMeaningful(la, lb)));
+}
+function exactName(left, right) {
+  const a = compact(left), b = compact(right);
+  return Boolean(a && b && a === b);
 }
 function cleanAddress(value) {
   return text(value)
@@ -70,13 +89,11 @@ function routePhone(row) {
   }
   return '';
 }
+function tokenFromUrl(value) {
+  return String(value || '').match(/fdofd\.ddangyo\.com\/gateway1\.html\?([A-Za-z0-9]+)/)?.[1] || '';
+}
 function routeTokens(row) {
-  const found = [];
-  for (const route of row?.routes || []) {
-    const match = String(route?.url || '').match(/fdofd\.ddangyo\.com\/gateway1\.html\?([A-Za-z0-9]+)/);
-    if (match) found.push(match[1]);
-  }
-  return found;
+  return (row?.routes || []).map(route => tokenFromUrl(route?.url)).filter(Boolean);
 }
 function arrayValues(value) {
   if (!value) return [];
@@ -87,8 +104,8 @@ function arrayValues(value) {
 function namesOf(row) {
   const values = [
     row?.name, row?.realBusinessName, row?.brandName, row?.branchName,
-    ...(arrayValues(row?.searchAliases)), ...(arrayValues(row?.aliases)),
-    ...(arrayValues(row?.shopInShopNames)), ...(arrayValues(row?.storeAliases))
+    ...arrayValues(row?.searchAliases), ...arrayValues(row?.aliases),
+    ...arrayValues(row?.shopInShopNames), ...arrayValues(row?.storeAliases)
   ];
   if (row?.brandName && row?.branchName) values.push(`${row.brandName} ${row.branchName}`);
   return [...new Set(values.map(text).filter(Boolean))];
@@ -104,7 +121,7 @@ function numberOrNull(value) {
   const num = Number(value);
   return Number.isFinite(num) ? num : null;
 }
-function coordinateOf(row, coordinate) {
+function coordinateOf(row, coordinate = {}) {
   const lat = numberOrNull(row?.lat ?? row?.latitude ?? coordinate?.lat ?? coordinate?.latitude);
   const lng = numberOrNull(row?.lng ?? row?.longitude ?? coordinate?.lng ?? coordinate?.longitude);
   return lat !== null && lng !== null ? {lat, lng} : null;
@@ -117,24 +134,11 @@ function distanceMeters(a, b) {
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
   return R * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
 }
-function compatibleName(left, right) {
-  const a = compact(left), b = compact(right);
-  const la = branchLoose(left), lb = branchLoose(right);
-  if (!a || !b) return false;
-  return a === b || a.includes(b) || b.includes(a) || (la && lb && (la === lb || la.includes(lb) || lb.includes(la)));
-}
-function exactName(left, right) {
-  const a = compact(left), b = compact(right);
-  return Boolean(a && b && a === b);
-}
 function anyCompatible(existing, incoming) {
   return existing.names.some(name => compatibleName(name, incoming.name));
 }
-function anyExact(existing, incoming) {
-  return existing.names.some(name => exactName(name, incoming.name));
-}
 function summarize(row) {
-  return {storeId: row.id, storeName: row.primaryName, address: row.address, phone: row.phone, names: row.names.slice(0, 12)};
+  return {storeId: row.id, storeName: row.primaryName, address: row.address, phone: row.phone, virtual: Boolean(row.virtual), names: row.names.slice(0, 12)};
 }
 
 const indexed = stores.map(row => {
@@ -142,18 +146,31 @@ const indexed = stores.map(row => {
   const coordinate = coordinatesRecord(id);
   const address = cleanAddress(row?.address || row?.roadAddress || coordinate?.matchedAddress || coordinate?.inputAddress || '');
   return {
-    id,
-    raw: row,
+    id, raw: row, virtual: false,
     primaryName: text(row?.name || row?.realBusinessName || ''),
-    names: namesOf(row),
-    address,
-    addressKey: addressKey(address),
-    roadSignature: roadSignature(address),
+    names: namesOf(row), address,
+    addressKey: addressKey(address), roadSignature: roadSignature(address),
     phone: validPhone(row?.phone) || routePhone(row),
-    tokens: routeTokens(row),
-    coordinate: coordinateOf(row, coordinate)
+    tokens: routeTokens(row), coordinate: coordinateOf(row, coordinate)
   };
 }).filter(row => row.id);
+
+const preliminaryIds = new Set(indexed.map(row => row.id));
+for (const row of existingEnrichment.stores || []) {
+  const id = text(row?.targetStoreId);
+  if (!id || preliminaryIds.has(id)) continue;
+  const address = cleanAddress(row?.address || '');
+  indexed.push({
+    id, raw: row, virtual: true,
+    primaryName: text(row?.name || ''),
+    names: [text(row?.name || '')].filter(Boolean),
+    address, addressKey: addressKey(address), roadSignature: roadSignature(address),
+    phone: validPhone(row?.phone),
+    tokens: [tokenFromUrl(row?.ddangyoUrl), ...(row?.sourceUrls || []).map(tokenFromUrl)].filter(Boolean),
+    coordinate: coordinateOf(row)
+  });
+  preliminaryIds.add(id);
+}
 
 const byId = new Map(indexed.map(row => [row.id, row]));
 const byToken = new Map();
@@ -165,26 +182,32 @@ const patstoMap = new Map();
 for (const row of existingEnrichment.stores || []) {
   const patstoNo = text(row?.patstoNo);
   const id = text(row?.targetStoreId);
-  if (patstoNo && id && byId.has(id)) patstoMap.set(patstoNo, id);
+  if (patstoNo && id) patstoMap.set(patstoNo, id);
 }
 
 function decide(incoming) {
   const patstoNo = text(incoming?.patstoNo);
   const knownId = patstoMap.get(patstoNo);
-  if (knownId) return {status: 'existing', method: 'known-patsto-map', storeId: knownId, candidate: summarize(byId.get(knownId))};
+  if (knownId) {
+    const candidate = byId.get(knownId);
+    return {status: 'existing', method: 'known-patsto-map', storeId: knownId, candidate: candidate ? summarize(candidate) : {storeId: knownId, virtual: true}};
+  }
 
-  const tokenMatches = [...new Set((incoming?.tokens || []).flatMap(token => (byToken.get(token) || []).map(row => row.id)))].map(id => byId.get(id));
+  const tokenMatches = [...new Set((incoming?.tokens || []).flatMap(token => (byToken.get(token) || []).map(row => row.id)))].map(id => byId.get(id)).filter(Boolean);
   if (tokenMatches.length === 1) return {status: 'existing', method: 'existing-ddangyo-token', storeId: tokenMatches[0].id, candidate: summarize(tokenMatches[0])};
-  if (tokenMatches.length > 1) return {status: 'review', method: 'ambiguous-ddangyo-token', candidates: tokenMatches.map(summarize)};
+  if (tokenMatches.length > 1) {
+    const named = tokenMatches.filter(row => anyCompatible(row, incoming));
+    if (named.length === 1) return {status: 'existing', method: 'shared-token-compatible-name', storeId: named[0].id, candidate: summarize(named[0])};
+    return {status: 'review', method: 'ambiguous-ddangyo-token', candidates: tokenMatches.map(summarize)};
+  }
 
   const targetAddress = addressKey(incoming?.address);
   const targetRoad = roadSignature(incoming?.address);
   const targetPhone = validPhone(incoming?.phone);
-  const targetCoordinate = coordinateOf(incoming, {});
+  const targetCoordinate = coordinateOf(incoming);
 
   if (targetPhone) {
-    const phoneMatches = indexed.filter(row => row.phone === targetPhone);
-    const named = phoneMatches.filter(row => anyCompatible(row, incoming));
+    const named = indexed.filter(row => row.phone === targetPhone && anyCompatible(row, incoming));
     if (named.length === 1) return {status: 'existing', method: 'same-phone-compatible-name', storeId: named[0].id, candidate: summarize(named[0])};
     if (named.length > 1) return {status: 'review', method: 'same-phone-multiple-compatible', candidates: named.map(summarize)};
   }
@@ -194,21 +217,17 @@ function decide(incoming) {
     const named = addressMatches.filter(row => anyCompatible(row, incoming));
     if (named.length === 1) return {status: 'existing', method: 'exact-address-compatible-name', storeId: named[0].id, candidate: summarize(named[0])};
     if (named.length > 1) return {status: 'review', method: 'exact-address-multiple-compatible', candidates: named.map(summarize)};
-    if (addressMatches.length) {
-      return {status: 'new', method: 'shared-address-distinct-shop-in-shop', naverEligible: false, sharedAddressCandidates: addressMatches.map(summarize)};
-    }
+    if (addressMatches.length) return {status: 'new', method: 'shared-address-distinct-shop-in-shop', naverEligible: false, sharedAddressCandidates: addressMatches.map(summarize)};
   }
 
   if (targetRoad) {
-    const roadMatches = indexed.filter(row => row.roadSignature && row.roadSignature === targetRoad);
-    const named = roadMatches.filter(row => anyCompatible(row, incoming));
+    const named = indexed.filter(row => row.roadSignature && row.roadSignature === targetRoad && anyCompatible(row, incoming));
     if (named.length === 1) return {status: 'existing', method: 'same-road-compatible-name', storeId: named[0].id, candidate: summarize(named[0])};
     if (named.length > 1) return {status: 'review', method: 'same-road-multiple-compatible', candidates: named.map(summarize)};
   }
 
   if (targetCoordinate) {
-    const near = indexed
-      .map(row => ({row, distance: distanceMeters(targetCoordinate, row.coordinate)}))
+    const near = indexed.map(row => ({row, distance: distanceMeters(targetCoordinate, row.coordinate)}))
       .filter(item => item.distance <= 80 && anyCompatible(item.row, incoming))
       .sort((a, b) => a.distance - b.distance);
     if (near.length === 1 || (near.length > 1 && near[1].distance - near[0].distance > 30)) {
@@ -225,9 +244,7 @@ function decide(incoming) {
   if (exact.length > 1) return {status: 'review', method: 'multiple-exact-name', candidates: exact.map(summarize)};
 
   const compatible = indexed.filter(row => anyCompatible(row, incoming));
-  if (compatible.length === 1 && !compatible[0].address) {
-    return {status: 'existing', method: 'unique-compatible-name-current-address-missing', storeId: compatible[0].id, candidate: summarize(compatible[0])};
-  }
+  if (compatible.length === 1 && !compatible[0].address) return {status: 'existing', method: 'unique-compatible-name-current-address-missing', storeId: compatible[0].id, candidate: summarize(compatible[0])};
   if (compatible.length === 1) return {status: 'review', method: 'unique-compatible-name-address-unconfirmed', candidate: summarize(compatible[0]), ddangyoAddress: cleanAddress(incoming?.address)};
   if (compatible.length > 1) return {status: 'review', method: 'multiple-compatible-name', candidates: compatible.slice(0, 20).map(summarize)};
 
@@ -239,6 +256,8 @@ const valid = reclassified.filter(row => row && !row.error);
 const summary = {
   generatedAt: new Date().toISOString(),
   inputStores: extracted.length,
+  indexedCurrentStores: indexed.length,
+  virtualPreviewStores: indexed.filter(row => row.virtual).length,
   existing: valid.filter(row => row.match?.status === 'existing').length,
   newStores: valid.filter(row => row.match?.status === 'new').length,
   review: valid.filter(row => row.match?.status === 'review').length,
