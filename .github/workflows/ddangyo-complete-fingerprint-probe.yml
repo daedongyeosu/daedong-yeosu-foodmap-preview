@@ -1,12 +1,13 @@
 name: Ddangyo Complete Fingerprint Probe
 
 on:
-  push:
+  pull_request:
     branches:
       - main
     paths:
-      - .ddangyo-complete-fingerprint-trigger
       - scripts/ddangyo-complete-fingerprint-probe.mjs
+      - .github/workflows/ddangyo-complete-fingerprint-probe.yml
+      - .ddangyo-complete-fingerprint-trigger
 
 permissions:
   contents: read
@@ -16,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Check out preview main
+      - name: Check out preview branch
         uses: actions/checkout@v4
 
       - name: Probe Ddangyo hours and benefits fields
