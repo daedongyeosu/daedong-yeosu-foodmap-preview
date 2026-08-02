@@ -1,12 +1,13 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v1';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v2';
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
   '/app-icon.svg',
   '/assets/logo.png'
 ];
+const APP_SHELL_PATHS = new Set(APP_SHELL.map(value => new URL(value, self.location.origin).pathname));
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -19,10 +20,9 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(
-        keys.filter(key => key.startsWith('daedong-yeosu-app-shell-') && key !== CACHE_NAME)
-          .map(key => caches.delete(key))
-      ))
+      .then(keys => Promise.all(keys
+        .filter(key => key !== CACHE_NAME)
+        .map(key => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });
@@ -34,7 +34,7 @@ self.addEventListener('fetch', event => {
 
   if (event.request.mode === 'navigate') {
     event.respondWith(
-      fetch(event.request)
+      fetch(event.request, {cache: 'no-store'})
         .then(response => {
           const copy = response.clone();
           caches.open(CACHE_NAME).then(cache => cache.put('/', copy));
@@ -45,8 +45,16 @@ self.addEventListener('fetch', event => {
     return;
   }
 
+  if (APP_SHELL_PATHS.has(requestUrl.pathname)) {
+    event.respondWith(
+      caches.match(event.request)
+        .then(cached => cached || fetch(event.request))
+    );
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request)
-      .then(cached => cached || fetch(event.request))
+    fetch(event.request, {cache: 'no-store'})
+      .catch(() => caches.match(event.request))
   );
 });
