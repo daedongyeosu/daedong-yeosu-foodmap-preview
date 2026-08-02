@@ -55,7 +55,7 @@ jobs:
           if (newRows.some(row => row.chakUrl !== 'https://bit.ly/chak-yeosu')) throw new Error('CHAK missing');
           if (newRows.some(row => row.naverMap && row.naverStatus !== 'verified')) throw new Error('unverified Naver map');
           if (newRows.some(row => row.naverMap && !row.naverMap.startsWith('https://map.naver.com/p/entry/place/'))) throw new Error('invalid Naver map URL');
-          if (services.stats?.resolver !== 'mobile-naver-search-browser') throw new Error('browser resolver missing');
+          if (services.stats?.resolver !== 'mobile-naver-search-browser-v2') throw new Error('browser resolver v2 missing');
           console.log(JSON.stringify(enrichment.serviceStats, null, 2));
           NODE
 
