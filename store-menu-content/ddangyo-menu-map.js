@@ -2219,5 +2219,15 @@ window.DAEDONG_DDANGYO_MENU_STORES = Object.freeze({
     "path": "store-menu-content/4573285075624a68/menu.json",
     "entryImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/e2ca5eb0-cd03-4ca8-8963-be23b5702512.jpg",
     "itemCount": 21
+  },
+  "f7385d8006310630": {
+    "path": "store-menu-content/f7385d8006310630/menu.json",
+    "entryImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dc1b9d24-b191-457d-84b1-2b4f115729c3.jpg",
+    "itemCount": 55
+  },
+  "6390834d3238c3eb": {
+    "path": "store-menu-content/6390834d3238c3eb/menu.json",
+    "entryImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ec330ef9-9646-4a46-aa9a-d21e7bbb6524.jpg",
+    "itemCount": 17
   }
 });
