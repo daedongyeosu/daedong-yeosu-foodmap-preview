@@ -1,0 +1,232 @@
+{
+  "storeId": "96f685b4e5df6f21",
+  "storeName": "오빠통닭 여수학동점",
+  "displayName": "오빠통닭 여수학동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/feee3d59-c0a4-4b04-aac5-38f538e0ed5b.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "부위별메뉴",
+    "순살메뉴",
+    "추가메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1219419-10000005",
+      "name": "옛날 반반",
+      "description": "겉은 바삭 속은 촉촉한 통닭을 다양한 맛으로 먹고 싶을 땐 옛날 반반",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/7f3c29b4-ab70-4c2b-a35e-d363ca375d32.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000001",
+      "name": "옛날통닭 大",
+      "description": "겉은 바삭 속은 촉촉 기본에 충실한 오빠통닭의 시그니처 메뉴 옛날 후라이드",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/049a4819-a6f2-4d42-a1b9-500dbc1dccde.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000008",
+      "name": "다리+날개",
+      "description": "겉은 바삭 속은 촉촉 오빠통닭의 시그니처 메뉴 다리+날개",
+      "category": "부위별메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a13aec3-9eb0-4ed8-88c8-851389259be4.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000015",
+      "name": "똥집튀김",
+      "description": "바삭함은 기본 맛과 양까지 잡은 오빠통닭의 시그니처 메뉴 똥집튀김",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a0444f8-51c9-428a-9c63-2515a640d30e.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000013",
+      "name": "옛날순살반반",
+      "description": "겉은 바삭 속은 촉촉한 100% 국내산 닭다리 살을 다양한 맛으로 먹고 싶을 땐 옛날 순살반반",
+      "category": "순살메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c5be71d8-d652-4ba5-8398-7046af2cee4e.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000006",
+      "name": "닭다리 통닭",
+      "description": "겉은 바삭 속은 촉촉 오빠통닭 닭다리",
+      "category": "부위별메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/8e94eced-58c1-4daa-b961-626bec91f0be.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000009",
+      "name": "옛날순살",
+      "description": "겉은 바삭 속은 촉촉 기본에 충실한 100% 국내산 닭다리 살 옛날 순살 후라이드",
+      "category": "순살메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0861cdd1-63dc-4012-923c-b1d477174b36.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000021",
+      "name": "코카콜라 1.25 사이즈업",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/a36d38df-26a5-4152-af72-9bfe6f06a1af.jpg"
+    },
+    {
+      "id": "ddangyo-1219419-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1219419-10000002",
+      "name": "옛날양념 大",
+      "description": "바삭함은 기본 통닭에 달콤함을 더한 옛날 양념",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/14aafe26-0833-4977-bf7f-bcc0d29df23f.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000007",
+      "name": "날개 통닭",
+      "description": "겉은 바삭 속은 촉촉 오빠통닭 날개",
+      "category": "부위별메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c8e3c715-fc7b-473d-ae44-333525b4f0ba.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000010",
+      "name": "옛날순살양념",
+      "description": "바삭함은 기본 달콤한 양념소스를 곁들인 100% 국내산 닭다리 살 옛날 순살양념",
+      "category": "순살메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5c954f7a-3de1-4a20-abb5-b7f364b8d8b9.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000016",
+      "name": "고구마튀김",
+      "description": "꿀고구마를 바삭하고 맛있게 튀긴 고구마튀김",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/df231291-cb13-4bf6-a5a6-3800cc8b4f78.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000022",
+      "name": "코카 콜라 1.25L 추가",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/79274ea8-606a-4a46-84a5-c0c40e497e5c.jpg"
+    },
+    {
+      "id": "ddangyo-1219419-90000002",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1219419-10000003",
+      "name": "옛날간장 大",
+      "description": "바삭함은 기본 마늘 간장소스를 첨가해 더 맛있는 옛날 간장",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1df54b6a-1609-4de3-bd69-653038c9d07d.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000011",
+      "name": "옛날순살간장",
+      "description": "바삭함은 기본 마늘 간장소스를 첨가해 더 맛있는 100% 국내산 닭다리 살 옛날 순살간장",
+      "category": "순살메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6fdff481-a864-4dc2-9bfb-475c52c59bea.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000017",
+      "name": "떡튀김",
+      "description": "떡을 바삭하고 맛있게 튀긴 떡튀김",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/870b3c68-c1f8-4761-828c-c880180b95e3.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000023",
+      "name": "코카콜라 500ml 추가",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/077d3033-51c4-4adb-a1e1-669e1e67eea8.jpg"
+    },
+    {
+      "id": "ddangyo-1219419-90000003",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1219419-10000004",
+      "name": "옛날매운양념 大",
+      "description": "바삭함은 기본 맛있게 매운 칼칼함이 끌릴 땐 옛날 매운양념",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/d79bd685-766f-4ea0-8a7d-7ac3700897fe.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000012",
+      "name": "순살매운양념",
+      "description": "바삭함은 기본 맛있게 매운 칼칼함이 끌릴 땐 100% 국내산 닭다리 살 옛날 순살 매운양념",
+      "category": "순살메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4494e4e8-a15c-444f-b8de-91518b388d6b.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000018",
+      "name": "양배추샐러드",
+      "description": "남녀노소 누구나 사랑하는 양배추 + 케찹 + 마요네즈",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6c03a6b6-245b-4242-8740-3f6f1f705f20.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000024",
+      "name": "제로 콜라 1.25 L변경",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/24879bb6-c262-4522-871d-ce3e317f872f.jpg"
+    },
+    {
+      "id": "ddangyo-1219419-10000019",
+      "name": "치킨무",
+      "description": "치킨의 친구",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/87f5598b-166e-47b2-a327-ff103041abab.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000025",
+      "name": "제로 콜라 500ml 추가",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6d3b0f48-5585-4c65-8beb-11b91c88698e.jpg"
+    },
+    {
+      "id": "ddangyo-1219419-10000014",
+      "name": "순살 유린기 통닭",
+      "description": "",
+      "category": "순살메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1501c1df-7bc5-444f-9ce0-5a1094e9cd02.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000020",
+      "name": "양념소스",
+      "description": "달콤한 오빠통닭 양념소스",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e7e83489-4f8e-407e-9a18-95b44ea1130f.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000026",
+      "name": "제로 콜라 1.25 L추가",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/bc1e508a-9bbb-4a57-9d4b-ba70aff3ee09.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1219419",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?chdPUvz"
+    ],
+    "rawItemCount": 34,
+    "duplicateItemsRemoved": 5
+  }
+}

@@ -1,0 +1,505 @@
+{
+  "storeId": "f65edfe1927ef379",
+  "storeName": "치킨마루 여수봉계점",
+  "displayName": "치킨마루 여수봉계점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ffd88e3f-65ae-4374-86bb-a4e3226b303e.jpg",
+  "categories": [
+    "전체",
+    "신메뉴",
+    "크리스피치킨시리즈",
+    "[닭다리살] 순살",
+    "콤보&윙봉",
+    "반/반 메뉴",
+    "2마리 세트 메뉴",
+    "사이드 메뉴",
+    "추가 메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1247559-30000007",
+      "name": "크리스피 치킨",
+      "description": "크리스피치킨 1마리(뼈)+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/dea659d5-e862-4a9b-87a7-e922550720ec.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000030",
+      "name": "크리스피 반/반치킨",
+      "description": "크리스피 반/반 치킨+각무1+음료500ml",
+      "category": "반/반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/232fbfaf-ae11-4793-8697-71f2aabde791.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000028",
+      "name": "츄리블 세트(반/반/반)",
+      "description": "내 맘대로(반/반/반)+각무1+음료500ml",
+      "category": "반/반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/a365d937-f4e4-4a6d-b3ab-ce86a186c0d5.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000031",
+      "name": "[닭다리살] 순살 반/반",
+      "description": "순살 반/반+각무1+음료500ml",
+      "category": "반/반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f04db0da-c6ca-4067-8c3b-9653addef88f.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000025",
+      "name": "마루콤보",
+      "description": "마루 콤보(윙봉+다리)+각무1+음료500ml",
+      "category": "콤보&윙봉",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b285d6e2-9cde-4a3e-9e96-64060fe20baf.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000035",
+      "name": "크리스피 2마리 세트",
+      "description": "크리스피+크리스피+각무2+음료500ml",
+      "category": "2마리 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/664b8131-4867-4839-b5b5-95c3366b7188.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000056",
+      "name": "콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1247559-30000065",
+      "name": "고추바삭똥집",
+      "description": "청양고추의 알싸함과 깻잎의 향긋함이 어우러지는 매콤쫄깃 바삭한 고추똥집",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/4f85668b-dca9-46b8-970c-61083d69d0a3.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000016",
+      "name": "순살후라이드",
+      "description": "순살후라이드1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b9a4276c-7a18-41f1-8f29-4faef93cb288.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000048",
+      "name": "각무",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/8f57defe-cf11-43cd-86f3-3e47f50f8299.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000001",
+      "name": "목살로망 페퍼콕콕",
+      "description": "목살로망 페퍼콕콕 1마리+마요라차 소스+각무1+음료500ml",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/53f669d6-cc9d-447d-b7ae-5e58c6197dda.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-90000001",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1247559-30000026",
+      "name": "마루스틱",
+      "description": "마루스틱(닭다리)+각무1+음료500ml",
+      "category": "콤보&윙봉",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/90342565-9daf-452e-b026-a8d2e752fec6.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000029",
+      "name": "[닭다리살]순살 츄리플 세트(반/반/반)",
+      "description": "순살을 내맘대로(반/반/반)+각무1+음료500ml",
+      "category": "반/반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/0b4fc630-ab23-4c00-a3c7-f2cc43fc3ddb.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000017",
+      "name": "순살 양념치킨",
+      "description": "순살양념치킨 1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/4e380c32-a3c7-4d55-84c2-034a21e6eac2.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000008",
+      "name": "더블링 간장",
+      "description": "더블링 간장 1마리+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e1b57d72-07b7-48b3-8134-6476de26bd25.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000036",
+      "name": "[닭다리살] 순살 2마리 세트",
+      "description": "순살+순살+각무2+음료500ml",
+      "category": "2마리 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/cd6d21b5-2ebd-453c-9bcf-7d7b5e8f6b08.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000049",
+      "name": "어니언딥핑 소스",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/95e2fc76-6b1d-46c0-81ec-918441f73e66.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000002",
+      "name": "목살로망 할라마요",
+      "description": "목살로망 할라마요 1마리+각무1+음료500ml",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/a3c91038-758d-401f-ab76-26cd97669766.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000057",
+      "name": "제로콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1247559-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1247559-30000058",
+      "name": "사이다 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1247559-30000050",
+      "name": "양념 컵실러 소스",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/0aa96990-d3cf-4b8f-a33a-e5c828fd9012.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000009",
+      "name": "더블링 양념",
+      "description": "더블링 양념 1마리+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ad1402f6-9cb1-4a09-bdce-645fdb01aaef.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000003",
+      "name": "핫 크리스피",
+      "description": "핫크리스피 치킨+각무1+음료500ml",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/49893cad-72ed-4e03-ad82-3e77eaa8066d.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000018",
+      "name": "순살 마늘간장치킨",
+      "description": "순살마늘간장치킨 1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/5c91b735-2263-41e2-9469-9b942dc51235.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000027",
+      "name": "윙봉 후라이드",
+      "description": "윙봉 후라이드+각무1+음료500ml",
+      "category": "콤보&윙봉",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/2e64b5fc-eafc-49df-aa09-79bc3787d2a2.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000037",
+      "name": "크리스피 뼈+순살 세트",
+      "description": "크리스피+순살+각무2+음료500ml",
+      "category": "2마리 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8fe6725d-42e2-494a-b1b2-9ea5e6f1c97f.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1247559-30000019",
+      "name": "순살 할라마요 치킨",
+      "description": "순살 할라마요 치킨 1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/76695916-9823-4ed1-b110-0d39a0fe5a87.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000038",
+      "name": "꽉찬 치즈스틱(2개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/1b67de3e-0330-4aea-bc92-495ea869efbc.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000004",
+      "name": "핫 순살크리스피",
+      "description": "순살 핫크리스피+각무1+음료500ml",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e478d8d2-c36a-4ecf-b16f-680925e3dc85.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000010",
+      "name": "눈꽃치즈팡",
+      "description": "눈꽃치즈팡 1마리+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/df240187-e888-4373-8505-dd567d5fb91f.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000051",
+      "name": "머스타드 컵실러 소스",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/b597d282-3fcd-4cdd-a1e9-f6f8ae6d6e71.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000059",
+      "name": "콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1247559-90000004",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1247559-30000060",
+      "name": "사이다 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1247559-30000005",
+      "name": "할라마요 치킨",
+      "description": "크리스피 할라마요 치킨 1마리+각무1+음료500ml",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/bbeb7b44-4078-4d16-bd86-7e469eb89fc8.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000011",
+      "name": "마늘간장치킨",
+      "description": "마늘간장 치킨 1마리+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/0d069b8d-34f4-4158-932b-8246abe32122.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000020",
+      "name": "순살 더블링간장",
+      "description": "순살 더블링간장 1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/bb0096b9-f30e-4b46-8fe0-8eb711944a1b.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000032",
+      "name": "윙봉 반/반",
+      "description": "윙봉 반/반+각무1+음료500ml",
+      "category": "반/반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/6fb2bd81-59f4-4754-b542-1b906dfe647b.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000039",
+      "name": "케이준 감자",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b86d744e-2823-411d-8691-9ea122c03e51.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000052",
+      "name": "마늘간장 컵실러 소스",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/41b903f8-295d-41b5-abac-441bc76f51e2.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-90000005",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1247559-30000012",
+      "name": "양념치킨",
+      "description": "양념치킨 1마리+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/32421384-7f59-4caa-8a61-db52ca5f1357.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000053",
+      "name": "핫마늘간장 컵실러 소스",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/d0356bcb-b2eb-4034-a062-b2972cde11b0.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000040",
+      "name": "모둠감자",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/eb659d12-02ab-4c37-8550-0b008a7b445e.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000033",
+      "name": "스틱 반/반",
+      "description": "스틱 반/반+각무1+음료500ml",
+      "category": "반/반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/42f26b7c-f3a0-488b-a710-db109ba4354f.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000021",
+      "name": "순살 더블링양념",
+      "description": "순살 더블링양념 1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/2d46e7b6-7a23-4c6f-a6b4-300b5f95d58a.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000006",
+      "name": "순살 할라마요 치킨",
+      "description": "순살 할라마요 치킨 1마리+각무1+음료500ml",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/6674c6a4-226b-4bfb-adbd-cc12bc3c0118.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-90000006",
+      "name": "테라 생맥주(500cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1247559-30000054",
+      "name": "핫고추장 컵실러 소스",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/16e0f5dc-4e60-451e-990a-2c63531c9ca8.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000013",
+      "name": "레다핫치킨",
+      "description": "레디핫 치킨 1마리+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/23ab79dd-ea21-41bd-b765-3a70d481bec9.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000034",
+      "name": "콤보 반/반",
+      "description": "콤보 반/반+각무1+음료500ml",
+      "category": "반/반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/df546789-9d6a-404a-9ede-2b43f7a3d4bf.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000022",
+      "name": "순살 눈꽃치즈팡",
+      "description": "순살 눈꽃치즈팡 1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/2e7647dd-6ee5-4e07-b425-fe146b3730c8.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000041",
+      "name": "감자모짜",
+      "description": "감자모짜오리지널3개",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/36ad17ad-66ea-497b-b80b-3a64eac46e47.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000023",
+      "name": "순살 레디핫치킨",
+      "description": "순살 레디핫치킨 1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/51d9c3db-1773-4968-99ad-b8fe3767818d.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000055",
+      "name": "마요라차 컵실러 소스",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/4d107ffd-60fb-45f9-82a6-43475a319da3.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000042",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/279038dc-5b20-401f-9242-ef1c259a5cc1.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000014",
+      "name": "쏘이츄치킨",
+      "description": "쏘이츄치킨 1마리+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/2d922f75-c5ec-43e4-89c3-4a382fb9cdaf.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000043",
+      "name": "치즈볼",
+      "description": "4개",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/18dcc241-031b-4db7-8266-115d0a824952.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000024",
+      "name": "순살 쏘이츄치킨",
+      "description": "순살 쏘이츄치킨 1마리+각무1+음료500ml",
+      "category": "[닭다리살] 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/31ba1add-6bb3-4d21-a87b-ee286a55a490.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000015",
+      "name": "맛짱똥집 후라이드",
+      "description": "맛짱똥집 후라이드+각무1+음료500ml",
+      "category": "크리스피치킨시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/55ee8888-6433-4ca7-9220-8e50dae66dd4.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000044",
+      "name": "로제볼",
+      "description": "4개",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/efac6911-65fb-47e9-869f-c2c23950ed99.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000045",
+      "name": "통새우치킨볼(5개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/57677e89-7d9a-4d02-9294-ee1961ed4da6.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000046",
+      "name": "찹쌀 오징어튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ae847418-d17b-4050-9772-422f32f72127.jpg"
+    },
+    {
+      "id": "ddangyo-1247559-30000047",
+      "name": "츄러스(5개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e93d9bbe-cc7e-468e-9f13-5c8b6b4e6d84.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1247559",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?LShgUuJ"
+    ],
+    "rawItemCount": 72,
+    "duplicateItemsRemoved": 5
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "storeId": "f0b4ebfd7df44a75",
+  "storeName": "꾸브라꼬숯불치킨 여천점",
+  "displayName": "꾸브라꼬숯불치킨 여천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6015e149-2a2c-4b60-8826-7b199c708194.jpg",
+  "categories": [
+    "전체",
+    "할인메뉴",
+    "신메뉴",
+    "취향존중 세트",
+    "꾸브라꼬 취향사리 세트",
+    "숯불구이류",
+    "후라이드류",
+    "반반 메뉴",
+    "꾸브라꼬 솔로세트",
+    "추천 세트 메뉴",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1218405-30000276",
+      "name": "한화 승리 저당양념꾸브대파세트",
+      "description": "",
+      "category": "할인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/51278a5d-6833-4161-908a-03192c8cdee3.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000277",
+      "name": "한화 우승 양념꾸브우동세트",
+      "description": "",
+      "category": "할인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d0655612-02c6-44d1-a237-927fcff24096.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000271",
+      "name": "저당양념꾸브",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/85e90ae3-e73f-4023-a292-5e85d4895c81.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000152",
+      "name": "우동사리 세트",
+      "description": "",
+      "category": "꾸브라꼬 취향사리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/13c42f0e-e7e4-4e10-9f96-9a6958620433.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000134",
+      "name": "취향존중 두마리 세트",
+      "description": "",
+      "category": "취향존중 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/84fdf34f-0785-452b-b5fe-457e1875aaa2.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000235",
+      "name": "로제꾸브",
+      "description": "",
+      "category": "숯불구이류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/4f02cdf6-f5b8-46f6-8f6b-fdd36414bc06.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000147",
+      "name": "반반꾸브",
+      "description": "",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/efa09ff5-214f-4cd2-9c92-7383f94bd18c.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000139",
+      "name": "양념꾸브",
+      "description": "",
+      "category": "숯불구이류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3192c419-22c5-4974-a56a-3e5b0394d77a.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000144",
+      "name": "170도 후라이드",
+      "description": "",
+      "category": "후라이드류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/dccdd758-d688-433f-a686-6fd5d7308a7a.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000155",
+      "name": "마늘통통 똥집튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/b3042f0c-e801-4adf-8500-4118dd38ea87.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000267",
+      "name": "[NEW] 양념꾸브 + 갓튀긴 닭다리",
+      "description": "",
+      "category": "추천 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/735ee315-8d06-44b2-9923-2a9462499fcb.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000272",
+      "name": "저당양념꾸브 대파사리세트",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e2236344-e294-4638-8512-74afa2bee29b.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000273",
+      "name": "꾸브라꼬 솔로세트(우동사리)",
+      "description": "",
+      "category": "꾸브라꼬 솔로세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c362f435-5237-45bd-ae9c-207529277a8b.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000278",
+      "name": "무뼈닭발사리 세트",
+      "description": "",
+      "category": "꾸브라꼬 취향사리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/327e49f7-8bcc-4828-b78f-619f7f8390ba.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000145",
+      "name": "170도 양념치킨",
+      "description": "",
+      "category": "후라이드류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9c3da017-b4d0-4f91-93da-e51be7a50681.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000156",
+      "name": "흑미 치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/bce3e554-da22-40a5-b856-145fca09cede.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000148",
+      "name": "170도 반반치킨",
+      "description": "",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d93a4861-7834-4e6f-a709-e09a13a5c22e.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000135",
+      "name": "취향존중 순살 두마리 세트",
+      "description": "",
+      "category": "취향존중 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/eebb4f90-53cd-407d-8b39-18bcd4539323.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000140",
+      "name": "데리꾸브",
+      "description": "",
+      "category": "숯불구이류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/390ced8c-1f4d-4d1e-83a2-e098266f7d74.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000242",
+      "name": "대파사리세트",
+      "description": "",
+      "category": "꾸브라꼬 취향사리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/b7793cc7-64ca-4aa6-b035-330edead0579.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000274",
+      "name": "꾸브라꼬 솔로세트(라면사리)",
+      "description": "",
+      "category": "꾸브라꼬 솔로세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/121c4836-95aa-44a1-bd33-bd309d89d372.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000268",
+      "name": "[NEW] 포장마차 떡볶이 + 갓튀긴 닭다리",
+      "description": "",
+      "category": "추천 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2fb504a1-0dd3-4817-bfd9-87061396e830.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000141",
+      "name": "소금꾸브",
+      "description": "",
+      "category": "숯불구이류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/f1f51241-d028-48c5-b155-94654ba91ce3.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000232",
+      "name": "까르보꾸브",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/60a4a05d-524f-47df-a21b-192190102292.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000275",
+      "name": "꾸브라꼬 솔로세트(밥)",
+      "description": "",
+      "category": "꾸브라꼬 솔로세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/9e4d1a28-b8be-4edd-bf4e-f7ad7f38ba4b.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000157",
+      "name": "포장마차 떡볶이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d87c5e8b-f2a2-4129-82e8-2e02c6e97cba.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000146",
+      "name": "170도 마늘간장",
+      "description": "",
+      "category": "후라이드류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/86e7fef0-a85d-4321-85e4-d34ac4947469.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000243",
+      "name": "분모자사리세트",
+      "description": "",
+      "category": "꾸브라꼬 취향사리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/8dc34dae-ab74-4582-9cc8-1b54b3ed3712.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000151",
+      "name": "꾸브라꼬 치떡세트",
+      "description": "",
+      "category": "추천 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/a6e132e5-d7de-471b-b3ed-7e5670ea56ed.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000233",
+      "name": "로제꾸브",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/4f02cdf6-f5b8-46f6-8f6b-fdd36414bc06.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000244",
+      "name": "뉴진면사리세트",
+      "description": "",
+      "category": "꾸브라꼬 취향사리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/98f22a89-971f-41ce-a4da-c5790705e631.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000142",
+      "name": "버터꾸브",
+      "description": "",
+      "category": "숯불구이류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/aec5d134-6125-4139-90dc-cb70a21b2f45.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000245",
+      "name": "치즈볼 세트",
+      "description": "",
+      "category": "꾸브라꼬 취향사리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/9716f8be-4ec1-4d4f-8815-da657348fb65.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000143",
+      "name": "마라꾸브",
+      "description": "",
+      "category": "숯불구이류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9ce5c201-9cb4-44fb-ad2a-d7d0d8f55bca.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000159",
+      "name": "우동사리볶음",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/a593d811-e94d-4ea2-9ef2-8791aaf8b792.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000246",
+      "name": "김말이 세트",
+      "description": "",
+      "category": "꾸브라꼬 취향사리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/470a0323-99a2-46dd-9612-496b736be9d0.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000234",
+      "name": "까르보꾸브",
+      "description": "",
+      "category": "숯불구이류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/60a4a05d-524f-47df-a21b-192190102292.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000269",
+      "name": "갓튀긴 닭다리",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e7360dfa-4d4a-41af-9625-f0d0b4fe50fe.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000247",
+      "name": "라면사리세트",
+      "description": "",
+      "category": "꾸브라꼬 취향사리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/6bf803b5-9b46-407e-8814-614e01cefac2.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000160",
+      "name": "새우링",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/87290153-de9d-4f49-b898-8411d6d79660.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000161",
+      "name": "김말이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/152b65f8-e5f6-4088-99af-87df50c76341.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000162",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3eee10bd-1f01-459f-9098-597b8fa17ace.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000164",
+      "name": "떡튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/dc0039a9-8587-4875-a0e9-9cb2ca7fb825.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000240",
+      "name": "데운 즉석밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/7d942420-ee9b-48b2-9076-0bd30751bfe5.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000241",
+      "name": "안데운 즉석밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/20a42f4f-bba8-445d-8bab-72ae5250ed01.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000236",
+      "name": "눈꽃치즈",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8ab2f3bb-32ec-4048-8354-d67569476d63.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000168",
+      "name": "감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a252791b-15cd-4b53-b186-1be461d3d92a.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000227",
+      "name": "코카-콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3bd6ecb7-2bf5-44d5-acaf-1c119dd22cf8.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000169",
+      "name": "맛감자",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/c92ecedb-50eb-45f7-9254-ba11a7cbe035.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000170",
+      "name": "양념감자",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/1392ab0d-ef0b-44fb-8dab-2e0b693f1fbd.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000228",
+      "name": "코카-콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/506a478c-f03c-4816-88e3-cba7f9819ac2.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000237",
+      "name": "미니핫도그",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4b189e60-1368-4a79-bf43-4cbca6513fcd.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000175",
+      "name": "양념꾸브디핑소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/a9798e71-75ef-4851-9d64-a1e7cc9111f2.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000176",
+      "name": "양념치킨디핑소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/2d7db4c8-ffae-4414-ac95-a727d2490c99.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000181",
+      "name": "치킨무",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/fba554d5-3893-4ed4-b858-000ab9e0867f.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1218405",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?1iMTpT9"
+    ],
+    "rawItemCount": 62,
+    "duplicateItemsRemoved": 7
+  }
+}

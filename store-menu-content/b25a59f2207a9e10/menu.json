@@ -1,0 +1,302 @@
+{
+  "storeId": "b25a59f2207a9e10",
+  "storeName": "아주커치킨 무선점",
+  "displayName": "아주커치킨 무선점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/51c8b6c6-b43b-4acd-aec7-4d0883ebf4ce.jpg",
+  "categories": [
+    "전체",
+    "신메뉴",
+    "세트메뉴",
+    "오리지날",
+    "반반치킨",
+    "윙봉치킨",
+    "순살치킨",
+    "the바삭_치킨",
+    "사이드",
+    "음료.소스.무,햇반"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1250775-10000007",
+      "name": "후라이드치킨",
+      "description": "깨끗하고 고소한 맛",
+      "category": "오리지날",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000008",
+      "name": "양념치킨",
+      "description": "입맛에 쏙 맞는 달콤달달한 맛",
+      "category": "오리지날",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/750c72d3-a74e-4c83-ab51-2ebba8fd024a.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000009",
+      "name": "간장치킨",
+      "description": "자꾸자꾸 먹고싶은 달콤 짭조름한 맛",
+      "category": "오리지날",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/6d682888-8013-4f61-a9d1-e0ae776a9b61.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000001",
+      "name": "the바삭치킨",
+      "description": "(((((추천))))) 오리지날 후라이드에 바삭핵무기를 장착한 바삭~ 끝판왕",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000003",
+      "name": "the바삭 치킨+사이드메뉴",
+      "description": "바삭파우더를 입혀 바삭함이 업그레이 된 맛",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000011",
+      "name": "뼈 반반치킨",
+      "description": "아주커치킨을 반반메뉴로 즐겨보세요~",
+      "category": "반반치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000014",
+      "name": "윙봉 후라이드",
+      "description": "깨끗하고 고소한 맛",
+      "category": "윙봉치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000018",
+      "name": "순살후라이드",
+      "description": "매일 새기름으로 조리한 닭다리 순살치킨",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/ba1eea7d-9712-493d-aa0e-1cc0f9be4bf9.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000022",
+      "name": "the바삭치킨",
+      "description": "오리지날 후라이드에 바삭핵무기를 장착한 바삭~ 끝판왕",
+      "category": "the바삭_치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000025",
+      "name": "케이준감자튀김",
+      "description": "매일 새기름으로 튀겨 식어도 바삭한 케이준 프라이~",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000032",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료.소스.무,햇반",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000002",
+      "name": "윙봉치킨",
+      "description": "윙봉도 아주커",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002120.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000004",
+      "name": "아주커치킨+사이드메뉴",
+      "description": "아주커치킨과 사이드메뉴 택1",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000012",
+      "name": "윙봉 반반치킨",
+      "description": "윙봉도 아주커",
+      "category": "반반치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000015",
+      "name": "윙봉 양념",
+      "description": "달콤 달달한 맛",
+      "category": "윙봉치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000019",
+      "name": "순살양념",
+      "description": "마늘과고추,양파..신선한 재료의 꿀맛 같은 조화",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000023",
+      "name": "the바삭 윙봉치킨",
+      "description": "(((추천)))오리지날 후라이드에 바삭핵무기를 장착한 바삭~ 끝판왕",
+      "category": "the바삭_치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000026",
+      "name": "뿌려뿌려 케이준감자튀김",
+      "description": "마법의 뿌려시즈닝에 바삭한 케이준이 더해져 멈출수 없다~",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000033",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료.소스.무,햇반",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000005",
+      "name": "순살치킨+사이드메뉴",
+      "description": "닭다리살100% 순살 + 사이드메뉴 택1",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000013",
+      "name": "순살 반반치킨",
+      "description": "야들야들순살을~ 고민없이 반반 즐긴다~",
+      "category": "반반치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/edc4730e-1da6-4f91-a699-da101540e0a8.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000016",
+      "name": "윙봉 간장",
+      "description": "[추천]달콤 짭조름한 맛",
+      "category": "윙봉치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000020",
+      "name": "순살간장",
+      "description": "짜지 않은 간장이라 건강에 더 좋은 웰빙 닭다리 순살",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/fce79ac6-bb59-4a20-b6d0-18a7c1e5f427.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000024",
+      "name": "the바삭 순살치킨",
+      "description": "속은 부드러운 닭다리살 순살/겉은 빠삭한 튀김옷 최강조합ii 더바삭한순살치킨",
+      "category": "the바삭_치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000027",
+      "name": "아주커 치즈볼",
+      "description": "한입 베어물면 진한 치즈가~쫘악~",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/8caf090f-16bb-4314-908e-9b2a4fd57489.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000034",
+      "name": "제로콜라 500ml",
+      "description": "",
+      "category": "음료.소스.무,햇반",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000006",
+      "name": "윙봉치킨+사이드메뉴",
+      "description": "맛있는 윙봉부위에 사이드택1",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000010",
+      "name": "매콤양념치킨",
+      "description": "달콤한맛과 화끈하게 매운맛의 만남",
+      "category": "오리지날",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/7eea6ffe-0d9a-41a5-8106-7e3b7824727e.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000017",
+      "name": "윙봉 매콤양념",
+      "description": "달콤한 맛과 매운맛의 만남",
+      "category": "윙봉치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000021",
+      "name": "순살매콤양념",
+      "description": "화끈한 맛을 즐기고 싶을때 맛있게 매운순살",
+      "category": "순살치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000028",
+      "name": "츄러스 치즈볼",
+      "description": "은은한 시나몬향이 달콤달콤 치즈와 어울어져 더 맛있다",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/8caf090f-16bb-4314-908e-9b2a4fd57489.jpg"
+    },
+    {
+      "id": "ddangyo-1250775-10000035",
+      "name": "제로콜라 1.25L",
+      "description": "",
+      "category": "음료.소스.무,햇반",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000029",
+      "name": "뿌려뿌려 치즈볼",
+      "description": "마법의 뿌려시즈닝에 한입 깨물면 진득한 치즈가 쫘악",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000036",
+      "name": "양념소스",
+      "description": "",
+      "category": "음료.소스.무,햇반",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000030",
+      "name": "츄러스 롤링소떡",
+      "description": "따로먹기싫어~소세지와 떡이 한입에쏙~쌀떡과 짭짤한 소세지의 완벽한 조합~",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000037",
+      "name": "매콤소스",
+      "description": "",
+      "category": "음료.소스.무,햇반",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000031",
+      "name": "뿌려뿌려 롤링소떡",
+      "description": "따로먹기싫어~소세지와 떡이 한입에쏙~쌀떡과 짭짤한 소세지의 완벽한 조합~",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000038",
+      "name": "치킨무",
+      "description": "",
+      "category": "음료.소스.무,햇반",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1250775-10000039",
+      "name": "햇반 200g",
+      "description": "직접 데워서 드셔야해요",
+      "category": "음료.소스.무,햇반",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1250775",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?MFgCs9y"
+    ],
+    "rawItemCount": 42,
+    "duplicateItemsRemoved": 3
+  }
+}

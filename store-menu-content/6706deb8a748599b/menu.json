@@ -1,0 +1,368 @@
+{
+  "storeId": "6706deb8a748599b",
+  "storeName": "쌀통닭 무선점",
+  "displayName": "쌀통닭 무선점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/11697548-e1fb-43ad-99dd-d0ed63cfe108.jpg",
+  "categories": [
+    "전체",
+    "밀가루 없는 국내산 쌀 100%",
+    "세트메뉴",
+    "두 마리 세트(세트라 작은닭 아니에요: )",
+    "사이드 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1193774-10000004",
+      "name": "[쌀가루100%]쌀통닭 전체(뼈) 반반 + 샐러드",
+      "description": "반반 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml)",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/bd5a7568-4c0a-4c7a-94ba-3bbf714f11d1.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000005",
+      "name": "[쌀가루100%]쌀통닭 순살 후라이드 + 샐러드",
+      "description": "후라이드 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 순한맛소스 + 소금",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/656cb873-844c-4938-b384-afcd1249eece.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000003",
+      "name": "[쌀가루100%]쌀통닭 후라이드 + 샐러드",
+      "description": "후라이드 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 순한맛소스 + 소금",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c7ccfb94-9347-4228-b4d8-3b87f2e62406.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000006",
+      "name": "[쌀가루100%]쌀통닭 순살 반반 + 샐러드",
+      "description": "순살 반반 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 소금",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/916dc0b7-95a6-4c15-9fb5-642e7fb31585.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000020",
+      "name": "치킨떡볶이세트(후라이드) + 샐러드",
+      "description": "후라이드 한마리+국물떡볶이+샐러드",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1e004e5e-3e21-4194-a540-3f9f9ed8a433.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000026",
+      "name": "두 마리 세트 뼈(전체) :: 1.25 콜라 지급",
+      "description": "뼈 두 마리 / 1.25펩시콜라 제로체크시 캔으로2개 / 무2개 / 양배추샐러드2개",
+      "category": "두 마리 세트(세트라 작은닭 아니에요: )",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/95595e00-47de-41fb-8db6-b3ff0d9a5531.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000028",
+      "name": "국물 떡볶이",
+      "description": "국물떡볶이 :D",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/185497f8-4d25-4aab-8961-509eb30f09be.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000021",
+      "name": "치킨떡볶이세트(양념반+후라이드반) + 샐러드",
+      "description": "국물떡볶이+양념반후라이드반+샐러드",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000027",
+      "name": "두 마리 세트 순살 : : 1.25 콜라 지급",
+      "description": "순살 두 마리 / 1.25펩시콜라 제로체크시 캔으로2개 / 무2개 / 양배추샐러드2개",
+      "category": "두 마리 세트(세트라 작은닭 아니에요: )",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/53613bcd-0c52-4105-a501-396331459666.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000029",
+      "name": "킹도그(1개) 사이즈가 커졌습니다 :D",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/acfe6f57-ffa6-441d-bdab-7146d0d4ab19.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000022",
+      "name": "똥집세트 (후라이드세트) + 샐러드",
+      "description": "후라이드한마리+똥집小+새우칩+치킨무+소금+콜라 마늘똥집으로 변경시 2000원 추가",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/16f8c627-eb06-41c1-8d10-c109a600604e.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000030",
+      "name": "단짠치즈볼(10개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fbff81e7-7b13-4fa5-ab59-fb5aa555da20.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000023",
+      "name": "똥집세트 (양념반+후라이드반) + 샐러드",
+      "description": "후라이드반+양념반+똥집小+치킨무 마늘똥집으로 변경시 2000원 추가",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8e1b98a5-9584-43bc-94b0-016413bb06e7.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000031",
+      "name": "김말이튀김 (3개)",
+      "description": "빠삭빠삭한 김말이 튀김 3개",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/714dd2b8-7fe2-46f3-bce4-38bc638a2cd2.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000007",
+      "name": "[쌀가루100%]쌀통닭 날개(윙봉) 후라이드 + 샐러드",
+      "description": "후라이드 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 순한맛소스 + 소금",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6b0376f1-4e16-4aff-bc31-11bae10ba003.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000024",
+      "name": "똥집세트 (양념한마리 세트) + 샐러드",
+      "description": "양념한마리 + 똥집 小",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000032",
+      "name": "빠삭빠삭 야채튀김 (3개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7f75aab6-ed46-4c4c-a2d5-28be119439ba.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000008",
+      "name": "[밀가루X:]쌀통닭 날개(윙봉) 반반 + 샐러드",
+      "description": "",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000025",
+      "name": "치킨떡볶이세트(양념한마리) + 샐러드",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000033",
+      "name": "오징어튀김 (2개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/05fa5652-0add-486d-b0d2-4e83d8ad1024.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000009",
+      "name": "[밀가루X:]쌀통닭 양념반 + 양념반",
+      "description": "쌀통닭 양념반 + 양념반 + 샐러드",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/141aae9a-3056-4d53-a4db-9d85fa880193.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000034",
+      "name": "고구마튀김 (2개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/34819258-943c-4733-b46e-23d59a52d946.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000010",
+      "name": "쌀통닭 양념 + 샐러드",
+      "description": "양념 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml)",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/99929e8d-61dd-437e-aef5-114182c3940c.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000035",
+      "name": "만두튀김 (3개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1302d70a-87eb-476e-b9fb-366dbffb994c.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000011",
+      "name": "쌀통닭 간장 + 샐러드",
+      "description": "양념 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml)",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/261b6e46-89f9-42ed-9901-5deabeab499a.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000036",
+      "name": "새우튀김 (2개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/748a7ba7-431e-4745-af7b-53793e98f79b.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000012",
+      "name": "쌀통닭 잠발라야 + 샐러드",
+      "description": "양념 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml)",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4c86c202-ccc8-4ced-a991-37a957a1df33.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000037",
+      "name": "스틱감자",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d90ac66c-0715-48f4-a547-6fee6283bc60.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000013",
+      "name": "쌀통닭 땡초마늘 + 샐러드",
+      "description": "양념 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml)",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6dc3ad72-c33b-4f72-ace2-fb25cf3ab607.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000038",
+      "name": "버터갈릭 스틱감자",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/be584734-7f3b-43df-a6dc-1018266b5c0d.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000014",
+      "name": "콘소미 치킨 + 샐러드",
+      "description": "콘소미치킨 + 샐러드",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fc8dc432-679f-42a4-93c3-d21c10cc8713.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000039",
+      "name": "모듬감자",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ddb03322-46f4-4611-9a90-4688edfe9bdb.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000015",
+      "name": "레드썬 치킨 + 샐러드",
+      "description": "레드썬 치킨 + 샐러드",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/59f71912-2213-4d19-afd3-7322e0f7f211.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000040",
+      "name": "치킨무 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0a9e7be1-e002-4897-bef5-87edccb50ee7.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000016",
+      "name": "쌀통닭 1980양념 (얇은피) + 샐러드",
+      "description": "양념 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml)",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7533b214-5f7f-4d13-a1e0-3ce82b645918.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000041",
+      "name": "양념소스 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000017",
+      "name": "똥집 + 샐러드",
+      "description": "똥집 + 치킨무 + 샐러드 + 캔콜라(355ml)",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a06b8dd7-e75b-4a5a-a138-c122d2b6bd77.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000042",
+      "name": "뚱캔 코카 콜라 추가(355ml)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/751a33b2-6b17-448b-b503-9510e973dec8.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000018",
+      "name": "불닭발 + 샐러드",
+      "description": "불닭발 1인분 + 치킨무 + 샐러드 + 캔콜라(355ml)",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9e145230-c664-4fb3-b264-48b6096ea763.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000043",
+      "name": "뚱캔 콜라 제로 추가(355ml)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000019",
+      "name": "반마리 추가 [추가만 가능해요]",
+      "description": "반마리 추가",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/070fb259-83ef-4f39-bfee-513cd2aa736b.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000044",
+      "name": "콜라 패트 추가 1.25L",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000045",
+      "name": "제로콜라 패트 추가 1.25L",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000046",
+      "name": "뚱캔 스프라이트 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000047",
+      "name": "뚱캔 스프라이트 제로 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000048",
+      "name": "스프라이트 패트 추가 1.5L",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7506f533-2d04-4b19-ad10-dc22b09567be.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000054",
+      "name": "쌩맥주 1000cc",
+      "description": "쌩맥주임니다",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000055",
+      "name": "카스 병맥주",
+      "description": "카스병맥주",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1193774-10000056",
+      "name": "참이슬",
+      "description": "참이슬",
+      "category": "사이드 메뉴",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1193774",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?oZrHJMN",
+      "https://fdofd.ddangyo.com/gateway1.html?2uVT3uw"
+    ],
+    "rawItemCount": 53,
+    "duplicateItemsRemoved": 4
+  }
+}

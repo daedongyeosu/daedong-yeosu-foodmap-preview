@@ -1,0 +1,178 @@
+{
+  "storeId": "8f4cfdc693976989",
+  "storeName": "우정통닭",
+  "displayName": "우정통닭",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "일반메뉴",
+    "음료",
+    "신기동 시전동. 추가배달비"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1217203-10000003",
+      "name": "후라이드반+양념치킨반",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
+    },
+    {
+      "id": "ddangyo-1217203-10000001",
+      "name": "후라이드",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2eb650e8-5b08-4381-9d28-8d38fa4fc410.jpg"
+    },
+    {
+      "id": "ddangyo-1217203-10000005",
+      "name": "백숙",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/006c0604-415c-4ce6-8250-73b8f3cbc69c.jpg"
+    },
+    {
+      "id": "ddangyo-1217203-10000004",
+      "name": "산오징어",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000020",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000027",
+      "name": "신기동 신기동 추가배달비",
+      "description": "",
+      "category": "신기동 시전동. 추가배달비",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000002",
+      "name": "양념치킨",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2e2a8e94-63ed-4293-b557-d37f1ff319e2.jpg"
+    },
+    {
+      "id": "ddangyo-1217203-10000021",
+      "name": "킨사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000006",
+      "name": "강도다리",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000007",
+      "name": "전어 사사미",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/aa5b929f-095e-4386-ab3c-ca7556e41592.jpg"
+    },
+    {
+      "id": "ddangyo-1217203-10000008",
+      "name": "전어 회무침",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000009",
+      "name": "전어 구이",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000010",
+      "name": "삼치",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000011",
+      "name": "줄돔",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000012",
+      "name": "감성돔",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000013",
+      "name": "쥐치",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000014",
+      "name": "광어",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/3ee678df-38de-41ca-9732-aba2c3d93c80.JPG"
+    },
+    {
+      "id": "ddangyo-1217203-10000015",
+      "name": "농어",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000016",
+      "name": "우럭",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/c0cbd1e6-36f0-4d5a-8ea5-79ac12fbc11a.JPG"
+    },
+    {
+      "id": "ddangyo-1217203-10000017",
+      "name": "우럭탕",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/87f3a3e9-a068-4361-9388-c39c5e82aa5f.jpg"
+    },
+    {
+      "id": "ddangyo-1217203-10000018",
+      "name": "우럭구이",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1217203-10000019",
+      "name": "특모듬사시미",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0fbffce4-6eeb-442c-9c02-ea1786eeaa95.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1217203",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?9RD9885"
+    ],
+    "rawItemCount": 25,
+    "duplicateItemsRemoved": 3
+  }
+}

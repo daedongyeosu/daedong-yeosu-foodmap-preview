@@ -1,0 +1,316 @@
+{
+  "storeId": "8c8ee85a0bc3b219",
+  "storeName": "처갓집양념치킨 무선점",
+  "displayName": "처갓집양념치킨 무선점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d7ee48e4-2cc0-4dfe-8e35-a49660245930.jpg",
+  "categories": [
+    "전체",
+    "신메뉴",
+    "한마리치킨",
+    "반반치킨",
+    "순살한마리치킨",
+    "순살반반",
+    "부위별치킨",
+    "사이드메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1211697-10000005",
+      "name": "후라이드치킨",
+      "description": "국내산 신선육에 독특한 맛의 파우더를 입혀 바삭하고 고소하게 튀겨낸 처갓집양념치킨의 인기메뉴",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d7ee48e4-2cc0-4dfe-8e35-a49660245930.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000006",
+      "name": "허니올리고당야채양념치킨",
+      "description": "물엿이나 설탕대신 올리고당과 벌꿀 ,생야채를 기반으로 맛을낸 양념소스가 어우러진 처갓집 대표메뉴",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/216b072c-955d-448a-b155-54cc6e7a9120.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000008",
+      "name": "슈프림양념치킨",
+      "description": "바삭한 후라이드 치킨위에 허니올리고당이 야채양념과 신비의 하얀 소스가 뿌려진 이색적인 양념치킨",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/617e2c0c-d7ca-4144-abda-5aaf0970046e.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000001",
+      "name": "슈프림양념치킨 블랙라벨",
+      "description": "가다랑어포로 맛을 낸 자연숙성 블랙소스의 깊은 풍미에 슈프림양념의 단짠 매력을 더한 프리미엄 양념치킨",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/53b07600-22b1-4277-aade-8d4e0598c666.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000015",
+      "name": "순살후라이드치킨",
+      "description": "국내산 신선육에 독특한 맛의 파우더를 입혀 바삭하고 고소하게 튀겨낸 처갓집 양념치킨의 인기메뉴",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000026",
+      "name": "반반치킨",
+      "description": "",
+      "category": "반반치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/de8b58c1-5edc-4a09-8f57-fc5dbadae3cf.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000027",
+      "name": "순살반반",
+      "description": "순살반반 두 종류 선택",
+      "category": "순살반반",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000028",
+      "name": "부위별 치킨( 치킨 및 부위 선택)",
+      "description": "치킨 및 부위 선택",
+      "category": "부위별치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000031",
+      "name": "슈프림골드치즈볼(5개)",
+      "description": "입안 가득 터지는 모짜렐라 &고다치즈 여기에 슈프림 골드치즈를 한번더",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/528a2ff8-8490-4eb1-a1e8-91beafcd6a41.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000038",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-90000001",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1211697-10000002",
+      "name": "순살 슈프림양념치킨 블랙라벨",
+      "description": "가다랑어포로 맛을 낸 자연숙성 블랙소스의 깊은 풍미에 슈프림양념의 단짠 매력을 더한 프리미엄 양념치킨",
+      "category": "신메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000016",
+      "name": "순살허니올리고당양념치킨",
+      "description": "물엿이나 설탕 대신 올리고당과 벌꿀,생야채를 기반으로 맛을 낸 양념소스가 어우러진 처갓집 대표메뉴",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000029",
+      "name": "부위별 반반",
+      "description": "치킨 및 부위 선택",
+      "category": "부위별치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000032",
+      "name": "라이스치즈볼(5개)",
+      "description": "바삭 쫀득입안 가득 터지는 모짜렐라 &고다치즈",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/cc6ead89-2c4c-43ad-8a72-6199d076dce8.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000039",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-90000002",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1211697-10000040",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-90000003",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1211697-10000018",
+      "name": "순살 슈프림양념치킨",
+      "description": "바삭한 후라이드 치킨 위에 허니올리고당 야채양념과 신비의 하얀 소스가 뿌려진 이색적인 양념치킨",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000034",
+      "name": "치킨무",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-90000004",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1211697-10000009",
+      "name": "핫슈프림양념치킨",
+      "description": "처갓집양념치킨의 특제 핫소스에 부드러운 화이트소스가 한번 더 해진 치킨",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/6dc61879-5a05-412a-a26b-8426b2beb72a.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000019",
+      "name": "순살 핫슈프림양념치킨",
+      "description": "처갓집양념치킨의 특제 핫소스에 부드러운 화이트소스가 한번 더 해진 치킨",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000035",
+      "name": "양념소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-90000005",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1211697-10000010",
+      "name": "치즈슈프림양념치킨",
+      "description": "바삭한 후라이드 치킨위에 허니올리고당 야채양념과 깊고 진한 치즈소스를 한번 더 뿌려낸 세상에 없던 치즈 치킨",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/dceef03d-9c13-4a57-8de6-c0ad627fbaff.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000020",
+      "name": "순살 치즈슈프림양념치킨",
+      "description": "바삭한 후라이드 치킨위에 허니올리고당 야채양념과 깊고 진한 치즈소스를 한번 더 뿌려낸 세상에 없던 치즈 치킨",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-90000006",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1211697-10000011",
+      "name": "슈프림골드양념치킨",
+      "description": "새하얀 슈프림 소스에 금빛 치즈가루가 한번 더",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5de5fa91-89d3-4543-9083-f5a66b1a6d02.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000021",
+      "name": "순살 슈프림골드양념치킨",
+      "description": "새하얀 슈프림 소스에 금빛 치즈가루가 한번 더",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000037",
+      "name": "양배추셀러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-90000007",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1211697-10000012",
+      "name": "와락 (간장) 치킨",
+      "description": "바삭하게 튀김 치킨을 깊은 불에서 간장소스와 함께 강한 불로 볶아내어 달콤짭쪼름한 맛과 향을 느낄수 있는 치킨",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/3f247d9e-fe82-421f-b154-6e9f15af4b7d.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000022",
+      "name": "순살 와락 (간장) 치킨",
+      "description": "바삭하게 튀긴 치킨을 깊은 볼에서 간장소스와 함께 강한 볼로 볶아내어 달콤짭쪼름한 맛과 향을 느낄수 있는 치킨",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000013",
+      "name": "100%청양산고추치킨",
+      "description": "100% 청양산 햇고추만을 사용하여 깊고 진한 매운맛이 특징",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/6adfa6b8-56ab-456e-941f-02e1db0b61b0.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000023",
+      "name": "순살100%청양산고추치킨",
+      "description": "100% 청양산 햇고추만을 사용하여 깊고 진한 매운맛이 특징",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000014",
+      "name": "매운불양념치킨",
+      "description": "캡사이신이 아닌 청양고추의 진하고 깊은 매운맛에 양념치킨의 달콤함까지 겸비한 색다른 양념치킨",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/b4dc3cab-ce90-413b-862a-ba1eda74337a.jpg"
+    },
+    {
+      "id": "ddangyo-1211697-10000024",
+      "name": "순살 매운불양념치킨",
+      "description": "캡사이신이 아닌 청양고추의 진하고 깊은 매운맛에 양념치킨의 달콤함까지 겸비한 색다른 양념치킨",
+      "category": "순살한마리치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1211697-10000025",
+      "name": "순살 닭강정",
+      "description": "살코기만을 프라이드하여 달콤살콤한 양념소스로 졸여내여 먹기에도 편하고 맛에서도 훌륭한 우리 아이 영양 간식",
+      "category": "순살한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/29b5b476-dc00-4c2c-a52c-6f1170534e05.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1211697",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?i0fxfXs"
+    ],
+    "rawItemCount": 43,
+    "duplicateItemsRemoved": 3
+  }
+}

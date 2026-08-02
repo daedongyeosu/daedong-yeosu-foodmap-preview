@@ -1,0 +1,458 @@
+{
+  "storeId": "1a9ef3c649eefc17",
+  "storeName": "기영이숯불두마리치킨 여수여천점",
+  "displayName": "기영이숯불두마리치킨 여수여천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b0ebbecb-b831-4e07-a28c-4f8621dc95e6.jpg",
+  "categories": [
+    "전체",
+    "박지훈 굿즈세트",
+    "박지훈 추천 SET",
+    "신메뉴",
+    "기영이 원조 스페셜 메뉴",
+    "기영이 시그니처",
+    "반반세트",
+    "메인(숯불치킨)",
+    "가성비甲 두마리 세트",
+    "사이드",
+    "찍먹소스",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1297094-30000066",
+      "name": "돼껍누들 양념숯불치킨",
+      "description": "",
+      "category": "기영이 원조 스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/18a01f95-0559-496a-a0cd-1e9b5a413dc0.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000069",
+      "name": "막창누들숯불치킨",
+      "description": "",
+      "category": "기영이 원조 스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/e69063ab-71c2-4418-bd6b-127b297355a5.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000001",
+      "name": "[기영이] 순살 반반숯불치킨(2가지 맛선택)",
+      "description": "",
+      "category": "반반세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/1f737dc2-c293-462b-bf4c-cbca654a908d.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000062",
+      "name": "빨간양념 숯불치킨",
+      "description": "",
+      "category": "기영이 시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/79da7b1c-d5ae-46cd-8672-88d58568236c.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000061",
+      "name": "까만양념 숯불치킨",
+      "description": "",
+      "category": "기영이 시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/9d72dedd-a8d5-4a5e-89db-c8383868b1d3.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000011",
+      "name": "[기영이] 두마리세트(2가지 맛 선택)",
+      "description": "",
+      "category": "가성비甲 두마리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4f74e45c-d94d-4525-acda-b7961909821b.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000054",
+      "name": "스리라차마요소스",
+      "description": "",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/f44d8a38-ba76-4b4b-bccb-352e507319c7.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000165",
+      "name": "[박지훈 포스터] 열라 숯불치킨",
+      "description": "",
+      "category": "박지훈 굿즈세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3d69e4c3-5520-4aef-8b4b-df52bba64ea0.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000168",
+      "name": "[HOT]열라만두",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e0df1577-d9b2-45f7-91ac-b03f9330591f.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000132",
+      "name": "저당 빨간양념 숯불치킨",
+      "description": "",
+      "category": "메인(숯불치킨)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2dda93b1-5594-4631-aa53-09974275f3d3.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000166",
+      "name": "[NEW]열라 숯불치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/95263d61-ad7f-4afd-85cc-6bd56fd06ab9.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1297094-30000145",
+      "name": "[박지훈 초복 추천메뉴] 오지치즈 숯불치킨 set (치즈볼5+통마늘칩)",
+      "description": "오지치즈 숯불치킨+치즈볼5개+통마늘칩(굿즈 미제공)",
+      "category": "박지훈 추천 SET",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/3d321ad8-f8e5-4a28-bd13-35f34d4790de.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000095",
+      "name": "[소금+양념] 순살 반반숯불치킨",
+      "description": "",
+      "category": "반반세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/23d7a57a-a3a5-4779-bd66-30822ecec88d.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000156",
+      "name": "후라이드 통닭다리",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5b2a4cba-5fe2-44b3-8349-6b26bae980c6.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000127",
+      "name": "바베큐양념 숯불치킨",
+      "description": "",
+      "category": "메인(숯불치킨)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a65a0de9-1dc7-468f-b003-730f3f20ddfe.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000167",
+      "name": "[NEW]열라만두 숯불치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/167e044d-5448-47cb-b02b-cafcfdd4f08c.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000158",
+      "name": "[박지훈 포스터] 오지치즈 숯불치킨",
+      "description": "",
+      "category": "박지훈 굿즈세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ea5c75a5-cfb2-45fd-9061-01e35bd1e014.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-90000002",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1297094-30000133",
+      "name": "[기영이] 두마리세트(숯불치킨+옛날통닭한마리)",
+      "description": "숯불치킨+옛날통닭 반마리 2개",
+      "category": "가성비甲 두마리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/819ed85d-a7e7-4b38-8f0e-3cefe29344ad.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000146",
+      "name": "[박지훈 중복 추천메뉴] 돼껍누들 양념숯불치킨 set (치즈볼5+통마늘칩)",
+      "description": "돼껍누들 숯불치킨+치즈볼5개+통마늘칩(굿즈 미제공)",
+      "category": "박지훈 추천 SET",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/cfa311e7-3555-4391-8a49-5e5570260ecc.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000159",
+      "name": "[박지훈 포스터] 돼껍누들 양념숯불치킨",
+      "description": "",
+      "category": "박지훈 굿즈세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/01d9de4f-03fe-45f7-b235-ec9f30443085.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000126",
+      "name": "[NEW]오지치즈 숯불치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/cd98e475-73c0-402b-a582-4e79f545409d.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000125",
+      "name": "갈비양념 숯불치킨",
+      "description": "",
+      "category": "메인(숯불치킨)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/042a07b3-7e94-429e-8deb-ab1dee6af161.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000096",
+      "name": "[양념+양념] 순살 반반숯불치킨",
+      "description": "",
+      "category": "반반세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/2b4b37fd-aec4-431b-ba62-414fcd78587b.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1297094-30000147",
+      "name": "[박지훈 말복 추천메뉴] 양념숯불치킨 + 면사리(택1) set",
+      "description": "양념숯불치킨 + 면사리(택1)(굿즈 미제공)",
+      "category": "박지훈 추천 SET",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1e4335d8-0c00-4624-a861-c07ef3544b7e.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000052",
+      "name": "핫소금 통마늘 숯불치킨(매운)",
+      "description": "",
+      "category": "메인(숯불치킨)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/73ee474f-cf6c-4d4b-9d03-3e2f9b0867d0.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000060",
+      "name": "버터크림 소스",
+      "description": "",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/2fdef782-a3dc-4d84-9583-be33e9764407.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000002",
+      "name": "[美친한상차림]순살 반반 숯불치킨 세트(2가지 맛선택)",
+      "description": "순살 반반치킨 1~2인분+우동사리+셀프주먹밥or계란볶음밥",
+      "category": "반반세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ca90bedc-5abf-4dab-85a5-af867d3114ac.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000160",
+      "name": "[박지훈 포스터] 바베큐양념 숯불치킨",
+      "description": "",
+      "category": "박지훈 굿즈세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a0b20d9e-0114-4c82-abe5-c264835ba758.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1297094-30000161",
+      "name": "[박지훈 포스터] 순살 반반 숯불치킨",
+      "description": "",
+      "category": "박지훈 굿즈세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/de37b9c4-69bf-4eb8-9ad9-aa60aa2185f9.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-90000005",
+      "name": "켈리 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1297094-30000055",
+      "name": "마요네즈 소스",
+      "description": "",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/0149925f-95a9-4de9-a1c0-61a83af249e4.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000103",
+      "name": "버터시즈닝 콘립(2조각)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a0cee480-4073-48ab-aaba-54fae9078a9b.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000162",
+      "name": "[박지훈 포스터] 빨간양념 숯불치킨",
+      "description": "",
+      "category": "박지훈 굿즈세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a2ee8a06-4f63-4577-9a65-93c9a8b8c130.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000008",
+      "name": "슈프림 빨간양념 숯불치킨",
+      "description": "",
+      "category": "메인(숯불치킨)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/151e05a8-ac76-4660-a210-94bf90b9d00d.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-90000006",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1297094-30000084",
+      "name": "버터갈릭 숯불치킨",
+      "description": "",
+      "category": "메인(숯불치킨)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e0ae2657-e659-4dbd-9ba9-11e865945bed.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000163",
+      "name": "[박지훈 포스터] 까만양념 숯불치킨",
+      "description": "",
+      "category": "박지훈 굿즈세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c2c629ad-6eb2-44b2-bed4-db642deeb8c3.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000073",
+      "name": "옛날통닭 반마리",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/51c4393e-9ee3-4eb0-a4cd-ae057eb3235a.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000164",
+      "name": "[박지훈 포스터] 저당 빨간양념 숯불치킨",
+      "description": "",
+      "category": "박지훈 굿즈세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/588b437e-d9e6-47b4-beb5-7ca8bb8291ed.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000072",
+      "name": "모치치 (모짜렐라 치즈 치킨)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/18a46a6c-be02-4d89-969d-79d24faed7d9.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000057",
+      "name": "버터크림 양념감자튀김 (소스제공)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/8c72bc56-d437-41a6-9a06-2447ea6a5e0d.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000056",
+      "name": "맛감자",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/6457e250-75e4-4873-8952-4cc65f46f942.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000004",
+      "name": "[담백숙성]소금 통마늘 숯불치킨",
+      "description": "",
+      "category": "기영이 시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/68a76c2f-4ddf-42d3-8377-cd00134079db.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000046",
+      "name": "계란볶음밥",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/fb13edb8-c53b-48f9-a359-bfde26738d7b.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000048",
+      "name": "겉바속촉 가지튀김",
+      "description": "원물크기에 따라 수량 및 중량 변경될 수 있습니다",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/58795ac1-73ae-4e1d-8a05-6c0c960439ee.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000039",
+      "name": "김말이",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/2bb4bd2a-80bd-43cc-81fd-308da8dcc30a.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000036",
+      "name": "셀프마요 주먹밥",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3589d48e-82b6-45fd-af5e-3a199826b5c1.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000033",
+      "name": "감자튀김",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7756f648-bc8f-4a30-96d6-95d62637f293.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000019",
+      "name": "통새우튀김",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b7c2df6a-52d9-4c64-b198-ff59b190524c.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000022",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3a37cfe6-8c39-4c39-b341-0ee486e9922b.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000024",
+      "name": "대구식 납작만두",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/e73a1762-ad41-4da7-bce9-cb8a4212402c.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000025",
+      "name": "튀김오뎅",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6608caa6-a815-4230-a2f6-0bece6f4af4b.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000038",
+      "name": "치즈 비엔나",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/71de159b-e989-4a1b-a009-39665a8104a8.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000026",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/979fd53d-df3f-478c-824d-e7591ebfe306.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000100",
+      "name": "비트쌈무",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c7952bd8-603f-4034-bf48-8207631cc272.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000101",
+      "name": "비트 치킨무",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b139dfca-b1a1-4592-b975-be860e8e4cf3.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1297094",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?LZJOYiQ",
+      "https://fdofd.ddangyo.com/gateway1.html?m6K22Qq"
+    ],
+    "rawItemCount": 65,
+    "duplicateItemsRemoved": 5
+  }
+}

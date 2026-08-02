@@ -1,0 +1,268 @@
+{
+  "storeId": "c6691689edefed72",
+  "storeName": "수원왕갈비통닭 여수점",
+  "displayName": "수원왕갈비통닭 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cab8588e-2757-4691-b3de-32ab4353d23f.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1273822-10000001",
+      "name": "[반&반] 후라이드치킨반마리+(선택1) 반마리~(순살)",
+      "description": "후라이드치킨 반마리+(선택) 치킨 반마리",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/c3a15e83-18c3-4f65-bbf9-2fba00a3ee46.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000003",
+      "name": "[달콤]양념치킨(순살)",
+      "description": "남녀노소 모두 즐기는 매콤달콤한 양념치킨",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e2266890-86ae-4475-84c4-846855e250cd.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000011",
+      "name": "크리스피 왕새우튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/3d4eda4e-1c59-4199-90c1-8cea1d9baf1a.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000032",
+      "name": "마시는유산균 쿨피스캔 (350ml)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000002",
+      "name": "수원왕갈비통닭(순살)",
+      "description": "`극한직업` 영화속 이하늬가 먹고 반한 그 맛~ 지금까지 이런 맛은 없었다. 갈비인가~통닭인가~",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/3d98768f-293d-42a4-89dc-090c43d71517.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000012",
+      "name": "모짜렐라 치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001993.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000033",
+      "name": "생수",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000013",
+      "name": "날치알 주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/bae8524b-8d44-4545-ac0a-55593aee76f1.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000034",
+      "name": "환타파인500 ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000004",
+      "name": "[신세계]마늘간장치킨~순살",
+      "description": "마늘을 듬뿍넣은 마늘간장소스가 일품인 마늘간장치킨",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/63a057fa-d40b-4a4b-bad7-b66771f6a566.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000014",
+      "name": "계란비벼밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000035",
+      "name": "사이다(스프라이트)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000005",
+      "name": "[양념좋아] 수원왕갈비통닭반+마늘간장반",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000015",
+      "name": "김말이튀김(10개)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000006",
+      "name": "[양념조아]수원왕갈비통닭반+양념치킨반",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000016",
+      "name": "치킨무추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000007",
+      "name": "[남녀노소]꿀떡 닭강정",
+      "description": "달콤한 닭강정 소스와 부드러운 치킨의 만남",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000017",
+      "name": "모듬튀김: 왕새우3+김말이4+만두5",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000008",
+      "name": "마늘간장치킨반+양념치킨반",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000018",
+      "name": "떡사리추가(12개)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000009",
+      "name": "[치즈시즈닝 치킨]",
+      "description": "순살~ 치즈시즈닝의 진한맛~",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f77c7dbd-b50d-40c1-ae66-c4d59ff8eecc.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000019",
+      "name": "직화 오돌뼈볶음400g (단품)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000010",
+      "name": "직화 오돌뼈볶음400g",
+      "description": "오돌뼈볶음 +양배추셀러드+쿨피스",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/08859cc1-d37d-46bb-87c3-39fc8d5f41b2.jpg"
+    },
+    {
+      "id": "ddangyo-1273822-10000020",
+      "name": "양념치킨소스(대)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000021",
+      "name": "양배추셀러드추가(대)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000022",
+      "name": "[단백질보충]계란후라이4개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000023",
+      "name": "떡볶이사리추가12개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000024",
+      "name": "꿀떡~ 닭강정(반마리)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000025",
+      "name": "계란찜추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000026",
+      "name": "튀김만두10개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000027",
+      "name": "고구마치즈스틱 5개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000028",
+      "name": "치즈가들어간~치즈소떡",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000029",
+      "name": "고구마튀김5~6개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000030",
+      "name": "통닭발 후라이드튀김12p",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273822-10000031",
+      "name": "흑미공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1273822",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?gOaJqWQ"
+    ],
+    "rawItemCount": 37,
+    "duplicateItemsRemoved": 2
+  }
+}

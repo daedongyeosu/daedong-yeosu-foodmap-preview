@@ -1,0 +1,276 @@
+{
+  "storeId": "b2b796461ee30ef2",
+  "storeName": "예원닭강정 여수1호점",
+  "displayName": "예원닭강정 여수1호점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg",
+  "categories": [
+    "전체",
+    "닭강정",
+    "반반메뉴",
+    "사이드메뉴",
+    "음료추가"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138825-10000004",
+      "name": "오리지널닭강정",
+      "description": "",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000024",
+      "name": "[ 강력추천 ] 염통꼬치",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/15463911-2af8-45ef-9d9a-98404b83c6ec.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000001",
+      "name": "후라이드 닭강정",
+      "description": "",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000009",
+      "name": "후라이드 반 + 오리지널 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/edc4730e-1da6-4f91-a699-da101540e0a8.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000023",
+      "name": "타 코 야 끼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/5402fe2b-3131-4d79-a3aa-c96b4bca5c68.JPG"
+    },
+    {
+      "id": "ddangyo-1138825-10000038",
+      "name": "코카콜라 500ml 추가",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/71c56bad-8d88-4852-8408-46d91059c260.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000010",
+      "name": "후라이드 반 + 간장 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000039",
+      "name": "코카콜라 1.25L 추가",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/5b5d58c9-80c3-432a-a292-66317cc82dee.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000011",
+      "name": "후라이드 반 + 마늘 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000040",
+      "name": "스프라이트 500ml 추가",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/a5e24ecb-f8f0-4839-9052-8f577cc15510.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000012",
+      "name": "후라이드 반 + 매운 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000041",
+      "name": "스프라이트 1.25L 추가",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/fab9a5a4-496a-41d7-b34c-0304013cc6aa.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000005",
+      "name": "마늘닭강정",
+      "description": "",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/bf50f4d6-64d7-447f-8502-3558859e7fa7.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000013",
+      "name": "오리지날 반+간장 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000042",
+      "name": "써핑쿨 大 추가",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000006",
+      "name": "매운닭강정",
+      "description": "",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/820ba696-e939-4fa0-b6a1-a55b41675581.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000014",
+      "name": "오리지널 반+마늘 반",
+      "description": "오리지널닭강정+마늘닭강정",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000028",
+      "name": "콩고물 노란 인절미",
+      "description": "고소하고 달콤한 인절미",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7e32debe-f644-4c18-8602-db4cafff42b8.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000007",
+      "name": "간장닭강정",
+      "description": "",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/00d39062-bd73-4ed2-832f-ccb8420c7432.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000015",
+      "name": "오리지날 반+매운 반",
+      "description": "오리지널닭강정+매운닭강정",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000008",
+      "name": "고추간장닭강정",
+      "description": "",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/cf070bb3-74ff-4523-a4ec-d99191f36a38.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000016",
+      "name": "오리지날 반+고추간장 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000030",
+      "name": "얼큰한 어묵탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/700936c6-5a3b-47d2-b911-def2f98dad5d.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000017",
+      "name": "마늘 반+매운 반",
+      "description": "마늘닭강정+매운닭강정",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000031",
+      "name": "모듬튀김세트",
+      "description": "새우까스 1개 & 야채튀김 1개 + 김말이2개 & 꼬마 김말이 4개 만두2개 + 튀김어묵 2개 + 핫도그 1개 + 오징어 튀김 1개",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/232ca1e2-a29a-4800-9428-3080646ea94d.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000018",
+      "name": "간장 반+마늘 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000032",
+      "name": "김가루밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/34dfb6b6-5dfa-43b2-b4af-dd4220bc9654.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000019",
+      "name": "간장 반+매운 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000033",
+      "name": "날치알밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/1ccf657b-5e9a-429e-b284-bebdcbac6a91.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000020",
+      "name": "간장 반+고추간장 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000034",
+      "name": "참치마요밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/bc240c76-6b3c-4d8b-85b6-cfd404ab1979.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000021",
+      "name": "고추간장 반+마늘 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000035",
+      "name": "스팸마요밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/e3816937-860f-4d8c-aed3-5d3a7ee1521d.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000022",
+      "name": "고추간장 반+매운 반",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138825-10000036",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg"
+    },
+    {
+      "id": "ddangyo-1138825-10000037",
+      "name": "떡추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/b19f1914-3e26-436d-b8d4-c717021ca1a9.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1138825",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?Why0WW1"
+    ],
+    "rawItemCount": 38,
+    "duplicateItemsRemoved": 2
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "storeId": "724adc8d9593fe05",
+  "storeName": "가마치통닭 여수죽림점",
+  "displayName": "가마치통닭 여수죽림점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/cac343c4-c12f-46c0-917e-b6f201102e07.jpg",
+  "categories": [
+    "전체",
+    "[신메뉴]빠사삭치킨",
+    "안심텐더",
+    "신메뉴",
+    "배달료",
+    "통닭",
+    "콤보",
+    "순살",
+    "사이드메뉴",
+    "음료",
+    "소스/포장무",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1171853-10000013",
+      "name": "두마리통닭",
+      "description": "(두마리) 바삭하고 촉촉한 가마치 대표메뉴",
+      "category": "통닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/59de457c-db51-46d5-9477-d3adccb9802a.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000012",
+      "name": "한마리통닭",
+      "description": "바삭하고 촉촉한 가마치 대표메뉴",
+      "category": "통닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/9091279a-16a2-4313-ba96-be7a6ea2c60a.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000032",
+      "name": "똥집튀김",
+      "description": "고소하고 쫄깃한 가마치 인기메뉴",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/ce4815bf-6749-446e-87dd-533bf8bcfa63.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000021",
+      "name": "가마치후라이드콤보",
+      "description": "통다리와 통날개의 부드러움만 담은 가마치콤보",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/595b841d-df81-474d-869f-be52f93b80e8.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000034",
+      "name": "닭발튀김",
+      "description": "자꾸 손이 가는 고소한 닭발튀김",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4fcd245b-545a-4771-b292-6fe419c8b866.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000001",
+      "name": "빠사삭후라이드치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/e2d23cc0-9065-4dfb-8b17-df26e6b05a93.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000008",
+      "name": "(NEW) 청양맵간장순살",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/13b42784-9e75-45f0-a822-3996b17d9f57.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000011",
+      "name": "여수현천승마장",
+      "description": "",
+      "category": "배달료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000020",
+      "name": "가마치반반콤보",
+      "description": "후라이드 + (양념/치즈/간장마늘) 중 택1",
+      "category": "콤보",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000026",
+      "name": "순살닭강정+떡",
+      "description": "뼈닭강정 먹기 번거로우신 분~",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/b1467e23-451d-4eba-94c0-b61748c8706d.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000044",
+      "name": "코카콜라355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/0b6c8e20-f0f2-4fd1-a64c-7e87d7357348.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000049",
+      "name": "치킨양념맛 소스",
+      "description": "",
+      "category": "소스/포장무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1171853-10000062",
+      "name": "안심텐더",
+      "description": "",
+      "category": "안심텐더",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000002",
+      "name": "빠사삭반반치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000009",
+      "name": "(NEW) 청양맵간장콤보",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/1ce17acf-a302-4fc1-8760-63ee3e8b419e.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000027",
+      "name": "후라이드순살",
+      "description": "누구나 좋아하는 가마치 순살 후라이드",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/729b03a3-645d-4703-b855-c958f6294291.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000033",
+      "name": "간장똥집튀김",
+      "description": "고소하고 쫄깃한 똥집에 간장을 더한 가마치 인기메뉴",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/49c1783a-8848-418c-a496-334d4aea146f.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000045",
+      "name": "코카콜라제로 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2df0d8ae-08aa-4469-aafe-746edb517cb7.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000050",
+      "name": "고추핫 소스",
+      "description": "",
+      "category": "소스/포장무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1171853-10000063",
+      "name": "간장안심텐더",
+      "description": "",
+      "category": "안심텐더",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000003",
+      "name": "빠사삭양념치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000022",
+      "name": "가마치마늘간장콤보",
+      "description": "통다리와 통날개의 부드러움에 마늘간장의 풍미를 더하다",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/86517770-7a81-4231-a448-6b5b288f3a67.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000028",
+      "name": "간장순살",
+      "description": "부드러운 순살에 마늘간장의 풍미를 더하다",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/51d97f38-1e5c-434d-bc87-43c868e08b98.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000046",
+      "name": "코카콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/597833d2-0997-4b20-8719-d0fd208cc934.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000051",
+      "name": "간장마늘 소스",
+      "description": "",
+      "category": "소스/포장무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-90000003",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1171853-10000064",
+      "name": "양념안심텐더",
+      "description": "",
+      "category": "안심텐더",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000004",
+      "name": "빠사삭마늘간장치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000023",
+      "name": "가마치양념콤보",
+      "description": "통다리와 통날개의 부드러움과 매콤달콤한 소스의 만남",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/bd171155-e372-4576-9f2c-19369c5dcdd6.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000029",
+      "name": "양념순살",
+      "description": "매콤달콤 먹을수록 당기는 가마치 양념순살",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/7762c2a8-2a3c-486c-ab6d-ef2387e34a53.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000035",
+      "name": "무뼈매운닭발볶음",
+      "description": "쫄깃하고 매콤한 가마치 무뼈매운닭발",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/114a7627-6615-4184-81ee-694ed032db4f.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000047",
+      "name": "스프라이트 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/921d3b2f-899d-4763-b213-c713c64dc437.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000052",
+      "name": "겨자 소스",
+      "description": "",
+      "category": "소스/포장무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-90000004",
+      "name": "진로 제로슈거(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1171853-10000065",
+      "name": "치즈안심텐더",
+      "description": "",
+      "category": "안심텐더",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000005",
+      "name": "빠사삭청양맵간장치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000024",
+      "name": "가마치즈콤보",
+      "description": "통다리와 통날개의 부드러움과 고소한 치즈의 맛을 함께",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/0c7bbd0d-97e2-4c4c-98c3-d3df4b8fdc32.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000030",
+      "name": "가마치즈순살",
+      "description": "고소한 풍미가 가득 가마치즈 순살",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/12fe2d6c-8291-4c4b-84b2-e034f0fc59fc.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000036",
+      "name": "모듬감자튀김",
+      "description": "다양하게 즐겨요 가마치 모듬감자튀김",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/1da02188-f03c-4084-b011-f0cfe098019a.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000048",
+      "name": "코카콜라제로 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/f06186bd-a4aa-4c38-b234-14da1fb3f3f5.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000053",
+      "name": "치즈머스터드 소스",
+      "description": "",
+      "category": "소스/포장무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-90000005",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1171853-10000066",
+      "name": "깐풍안심텐더",
+      "description": "",
+      "category": "안심텐더",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000006",
+      "name": "빠사삭치즈치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000037",
+      "name": "막대감자튀김(케이준)",
+      "description": "고소하고 짭짤한 감자를 막대로 즐기자",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/21c110e7-2ef4-4c0b-8535-0f0ae5e2b842.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000054",
+      "name": "포장무",
+      "description": "",
+      "category": "소스/포장무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000067",
+      "name": "청양맵간장안심텐더",
+      "description": "",
+      "category": "안심텐더",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-10000038",
+      "name": "치즈막대감자튀김(케이준)",
+      "description": "막대감자에 치즈가루 솔솔",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/9eb4a951-e54a-4598-9ad8-683a199bd72d.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000055",
+      "name": "샐러드",
+      "description": "",
+      "category": "소스/포장무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1171853-90000007",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1171853-10000039",
+      "name": "가마치즈볼 (5개)",
+      "description": "바삭한 튀김 속 쫄깃한 치즈가 한가득",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/46ceba36-5c57-4e9a-8104-1f48461bccce.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000040",
+      "name": "스노윙가마치즈볼 (5개)",
+      "description": "치즈볼에 치즈를 더하다 고소함 두배",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/09f446c9-d6cd-4570-8737-d4e02b004a1a.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000042",
+      "name": "오뎅탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/ed1d06f0-23d7-45c1-97c4-14ed6eb7c7c6.jpg"
+    },
+    {
+      "id": "ddangyo-1171853-10000043",
+      "name": "국물떡볶이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/5fe90bee-0109-456e-882f-4e246602f99d.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1171853",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?szNA6iZ"
+    ],
+    "rawItemCount": 61,
+    "duplicateItemsRemoved": 5
+  }
+}

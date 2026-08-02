@@ -1,0 +1,308 @@
+{
+  "storeId": "60ea2342c71bd2f6",
+  "storeName": "동근이숯불두마리치킨 문수점",
+  "displayName": "동근이숯불두마리치킨 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/5fd25436-acac-4c57-a1ae-0907907ca6b1.jpg",
+  "categories": [
+    "전체",
+    "추가 배달료 지역 체크란",
+    "숯불메뉴",
+    "한마리메뉴",
+    "두마리세트메뉴",
+    "사이드메뉴",
+    "소스",
+    "음료",
+    "Zㅣ뷰 이벤트~!"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175120-10000007",
+      "name": "[사장추천] 순살숯불양념구이+펩시245ml",
+      "description": "우동사리와 찰떡궁합 떡사리 10p + 무 1개 + 펩시 245ml",
+      "category": "숯불메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d00056e5-15f9-4f0e-a855-bc8d73c023a9.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000017",
+      "name": "세트2 숯불양념구이+숯불소금구이+콜라500ml",
+      "description": "숯불양념구이 + 숯불소금구이 + 콜라500ml",
+      "category": "두마리세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/f55ef9dd-5f9f-4714-b196-0779f250ab3c.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000018",
+      "name": "세트3 숯불양념구이+후라이드(간장.양념)+콜라500ml",
+      "description": "숯불양념구이(소금구이변경가능) + 후라이드(간장or양념변경가능) + 콜라500ml",
+      "category": "두마리세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/8adda212-cbdd-4fb3-9cba-3ddaa85dbfd1.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000016",
+      "name": "세트1 숯불양념구이두마리+콜라500ml",
+      "description": "숯불양념구이 두마리세트 + 콜라500ml",
+      "category": "두마리세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/a3f71760-6a8f-4ae8-98ae-c507a36f3a8e.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000008",
+      "name": "[사장추천] 숯불양념구이 +펩시245ml",
+      "description": "우동사리와 찰떡궁합 떡사리 10p + 무 1개 + 펩시 245ml",
+      "category": "숯불메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/c11a3eef-448b-4e28-97f3-a70e277bdfcd.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000001",
+      "name": "신기동,우림필유,롯데첨단,우미타운",
+      "description": "",
+      "category": "추가 배달료 지역 체크란",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000006",
+      "name": "[LA갈비양념] 숯불라갈비맛치킨 + 펩시245ml",
+      "description": "숯불라갈비맛치킨 + 펩시245ml + 치킨무",
+      "category": "숯불메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000011",
+      "name": "[방금 갓 튀긴 ] 후라이드치킨 +펩시245ml",
+      "description": "바사삭 크리스피 후라이드, 양념소스 1개 + 머스타드 1게 + 소금 1개 +무 1개 + 펩시 245ml",
+      "category": "한마리메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/7f8859ec-739c-430b-8594-85062f82fff0.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000015",
+      "name": "[맛잘알 세트 출시] 숯불라갈비치킨 + 내맘대로 치킨",
+      "description": "숯불갈비맛치킨 + 내가 원하는 원픽메뉴 + 콜라500ml",
+      "category": "두마리세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000022",
+      "name": "우동사리 추가(숯불 양념 구이에만 가능)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000032",
+      "name": "치킨양념소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000034",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000035",
+      "name": "우동사리(양념구이만 가능)",
+      "description": "",
+      "category": "Zㅣ뷰 이벤트~!",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000002",
+      "name": "둔덕동 라온유,남해화학,여도아파트,용수마을,무선방면",
+      "description": "",
+      "category": "추가 배달료 지역 체크란",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000012",
+      "name": "[단짠단짠] 간장소스치킨 +펩시245ml",
+      "description": "달콤짭짤 간장맛, 중독성 100% 무 1개 + 펩시 245ml",
+      "category": "한마리메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/a7180455-f2d6-44b1-9389-02cc1ea12402.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000023",
+      "name": "라면사리 추가(숯불 양념 구이에만 가능)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000033",
+      "name": "머스타드소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000036",
+      "name": "맛감자",
+      "description": "",
+      "category": "Zㅣ뷰 이벤트~!",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000003",
+      "name": "서교동,광무동,소호동,선원동,충무동,화장동,군자동",
+      "description": "",
+      "category": "추가 배달료 지역 체크란",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000013",
+      "name": "[옛날그맛] 양념치킨 +펩시245ml",
+      "description": "옛날에 먹던 그 맛의 양념치킨 무 1개 + 펩시 245ml",
+      "category": "한마리메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/5d797a9e-b8e0-4956-9db3-0c80fd3c0f2a.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000024",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/6f1b6183-65fd-488a-9e47-271f21ad0505.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000037",
+      "name": "떡튀김 10P",
+      "description": "",
+      "category": "Zㅣ뷰 이벤트~!",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000004",
+      "name": "만흥동,주삼동",
+      "description": "",
+      "category": "추가 배달료 지역 체크란",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000009",
+      "name": "[다이어트, 운동인 강추] 숯불소금구이 +펩시245ml",
+      "description": "단백한 맛이 일품, 술안주&식사메뉴 안성맞춤 양념소스 1게 + 머스타드 1개 + 소금 1개 + 무 1개 + 펩시 245ml",
+      "category": "숯불메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/fd6093f7-1585-4739-8940-43632e9f4a14.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000014",
+      "name": "[치즈솔솔] 눈꽃 치즈 치킨 + 펩시245ml",
+      "description": "치즈의 달콤함, 동근이 최애 치킨, 무 1개 + 펩시 245ml",
+      "category": "한마리메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/ad380f4a-66c6-494f-a10c-1140d417712d.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000025",
+      "name": "맛감자 25P",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/70da6f32-2357-44c0-bf56-c7e1102dbb4a.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000038",
+      "name": "새우링",
+      "description": "",
+      "category": "Zㅣ뷰 이벤트~!",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000005",
+      "name": "세무서 방면",
+      "description": "",
+      "category": "추가 배달료 지역 체크란",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000010",
+      "name": "[사장추천] 숯불매화양념구이 +펩시245ml",
+      "description": "특별한 조리법, 풍미와 불향을 끌어올리기 위한 화구 손수웍 조리, 무 1개 + 펩시 245ml 무 1개 + 콜라 245ml",
+      "category": "숯불메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/082a6cfc-8770-4d05-8556-d9db80fb69da.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000019",
+      "name": "세트4 숯불양념구이+12월의눈꽃치즈치킨+콜라500ml",
+      "description": "숯불양념 또는 숯불소금구이 + 12월의 눈꽃치즈치킨 + 콜라500ml",
+      "category": "두마리세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4bf06142-b786-42d1-a3cb-89991bc00c5f.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000026",
+      "name": "눈꽃치즈감자 25P",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/399aab15-2b64-4d93-8989-f2a3f5fa2bb0.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000039",
+      "name": "고구마 치즈스틱",
+      "description": "",
+      "category": "Zㅣ뷰 이벤트~!",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000020",
+      "name": "세트5 숯불매화양념구이+후라이드치킨+콜라500ml",
+      "description": "숯불매화양념구이 + 후라이드(간장,양념교환가능)+ 콜라500ml",
+      "category": "두마리세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/3e9e2fdf-3381-4ef3-bee4-2ea63b33a93f.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000027",
+      "name": "새우링",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/aa882115-32df-4847-8cd8-c06684828ca0.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000040",
+      "name": "치즈볼",
+      "description": "",
+      "category": "Zㅣ뷰 이벤트~!",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000021",
+      "name": "세트6 숯불매화양념구이+숯불양념구이+콜라500ml",
+      "description": "숯불매화양념구이 + 숯불양념구이 + 콜라500ml",
+      "category": "두마리세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/c00bda82-de8c-44fd-9e91-d93a5d240aa0.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000028",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/372afe53-5c55-41b8-ad8c-af6e497b75b5.jpg"
+    },
+    {
+      "id": "ddangyo-1175120-10000029",
+      "name": "떡튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000030",
+      "name": "즉석밥",
+      "description": "치밥의 필수품",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175120-10000031",
+      "name": "치킨무",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175120",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?d4AymKz"
+    ],
+    "rawItemCount": 45,
+    "duplicateItemsRemoved": 5
+  }
+}
