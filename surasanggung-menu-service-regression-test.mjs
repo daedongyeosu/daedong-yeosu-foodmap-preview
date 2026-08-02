@@ -50,7 +50,7 @@ assert.equal(store.routes.find(route => route.name === '전화주문')?.url, 'ht
 
 const info = service.stores[menu.storeId];
 assert.ok(info);
-assert.equal(service.version, 4);
+assert.equal(service.version, 5);
 assert.deepEqual(service.deliveryBenefits, [{
   key: 'free-delivery',
   label: '무료배달 가능',
@@ -72,13 +72,14 @@ assert.deepEqual(info.hours.closures[0], {
   weekday: 'wed',
   label: '매월 둘째 수요일'
 });
-assert.deepEqual(info.payments, [{
+assert.deepEqual(info.payments.filter(payment => payment.status === 'accepted'), [{
   key: 'yeosu-seomseom-pay',
   status: 'accepted',
   appKeys: ['mukkebi', 'ddangyo'],
   appLabel: '먹깨비·땡겨요'
 }]);
-assert.ok(!info.payments.some(payment => ['high-oil-support', 'onnuri-gift-certificate'].includes(payment.key)));
+assert.ok(info.payments.filter(payment => ['high-oil-support', 'onnuri-gift-certificate', 'ddangyo-coupon', 'ddangyo-timesale'].includes(payment.key))
+  .every(payment => payment.status === 'unavailable'));
 
 const onnuriStore = service.stores.dc42166bad88a929;
 assert.ok(onnuriStore.payments.some(payment => payment.key === 'onnuri-gift-certificate' && payment.status === 'accepted'));

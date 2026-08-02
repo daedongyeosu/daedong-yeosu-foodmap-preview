@@ -139,8 +139,8 @@ for (const target of targets) {
   assert.equal(menu.items.length, target.itemCount);
   if (target.hoursLine) assert.ok(info.hours.displayLines.includes(target.hoursLine));
   if (info) {
-    assert.deepEqual((info.payments || []).map(item => item.key).sort(), [...target.paymentKeys].sort());
-    assert.deepEqual((info.delivery || []).map(item => item.key).sort(), [...target.deliveryKeys].sort());
+    assert.deepEqual((info.payments || []).filter(item => item.status === 'accepted').map(item => item.key).sort(), [...target.paymentKeys].sort());
+    assert.deepEqual((info.delivery || []).filter(item => item.status === 'available').map(item => item.key).sort(), [...target.deliveryKeys].sort());
   }
 }
 

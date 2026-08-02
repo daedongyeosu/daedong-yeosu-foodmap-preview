@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T09:56:24.483Z",
+  "generatedAt": "2026-08-02T20:52:13.904Z",
   "sourceApp": "ddangyo",
   "stores": {
     "f0b4ebfd7df44a75": [
@@ -921,6 +921,148 @@
         "benefitAmount": 4000,
         "benefitRate": 0,
         "minimumOrderAmount": 20000,
+        "startsAt": "20260801",
+        "endsAt": "20260831",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "a93abf2f62c2dd79": [
+      {
+        "id": "C_2000_20260722_0800_001",
+        "label": "할인쿠폰",
+        "benefitAmount": 2000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 20000,
+        "startsAt": "20260722",
+        "endsAt": "20260805",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "9fb6e32d9f70edc1": [
+      {
+        "id": "PLATFORM_B_B000129_202607_001",
+        "label": "두찜 5,000원 할인",
+        "benefitAmount": 5000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 25000,
+        "startsAt": "20260801",
+        "endsAt": "20260831",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "2dda90913b0b1a4c": [
+      {
+        "id": "PLATFORM_B_B000129_202607_001",
+        "label": "두찜 5,000원 할인",
+        "benefitAmount": 5000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 25000,
+        "startsAt": "20260801",
+        "endsAt": "20260831",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "30d2edbcabcca6ec": [
+      {
+        "id": "PLATFORM_B_B000093_202607_002",
+        "label": "뚜레쥬르 4,000원 할인",
+        "benefitAmount": 4000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 18000,
+        "startsAt": "20260801",
+        "endsAt": "20260823",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "8d9e961a6ffd106f": [
+      {
+        "id": "C_1000_20260706_1456_001",
+        "label": "할인쿠폰",
+        "benefitAmount": 1000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 11900,
+        "startsAt": "20260706",
+        "endsAt": "20260805",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "36419c4127ce96c4": [
+      {
+        "id": "C_6000_20260729_1304_001",
+        "label": "할인쿠폰",
+        "benefitAmount": 6000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 20000,
+        "startsAt": "20260729",
+        "endsAt": "20260828",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "1ed1cc571c81df01": [
+      {
+        "id": "C_1000_20260722_2013_001",
+        "label": "할인쿠폰",
+        "benefitAmount": 1000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 19000,
+        "startsAt": "20260722",
+        "endsAt": "20260821",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "dc638b23f8cf3c5b": [
+      {
+        "id": "PLATFORM_B_B000200_202607_001",
+        "label": "도미노피자 8,000원 할인",
+        "benefitAmount": 8000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 21900,
+        "startsAt": "20260801",
+        "endsAt": "20260831",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      },
+      {
+        "id": "PLATFORM_B_B000200_202607_002",
+        "label": "도미노피자 7,000원 할인",
+        "benefitAmount": 7000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 21900,
         "startsAt": "20260801",
         "endsAt": "20260831",
         "appKeys": [

@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'store-service-info.json?v=store-service-9';
+  const DATA_URL = 'store-service-info.json?v=store-service-10-ddangyo-coverage';
   const MENU_SEARCH_URL = 'data/store-menu-search-index.json?v=menu-search-2';
   const HISTORY_KEY = 'daedongStoreServiceOverview';
   const CLOSING_SOON_MINUTES = 60;
@@ -321,6 +321,18 @@
     return [...paymentLabels(info), ...deliveryLabels(info)];
   }
 
+  function hasVerifiedBenefitStatus(info) {
+    return [...(info?.payments || []), ...(info?.delivery || [])].some(item => (
+      ['accepted', 'available', 'unavailable'].includes(item?.status)
+    ));
+  }
+
+  function emptyBenefitLabel(info) {
+    return hasVerifiedBenefitStatus(info)
+      ? '표시된 주문앱 기준 · 현재 확인된 혜택 없음'
+      : '주문앱별 혜택 미확인';
+  }
+
   function acceptsBenefit(info, key) {
     const acceptsPayment = (info?.payments || []).some(payment => (
       payment.key === key && payment.status === 'accepted'
@@ -341,7 +353,7 @@
     return `<span class="${className}${deliveryClass}" data-benefit-app="${escapeHtml((benefit.appKeys || []).join('-'))}">✓ ${escapeHtml(scopedBenefitLabel(benefit))}</span>`;
   }
 
-  function cardMetaMarkup(status, benefits) {
+  function cardMetaMarkup(status, benefits, info) {
     return `
       <span class="store-service-status is-${escapeHtml(status.state)}">
         <i aria-hidden="true"></i>${escapeHtml(status.label)}
@@ -349,7 +361,7 @@
       <span class="store-service-card-hours">${escapeHtml(status.detail)}</span>
       ${benefits.length
         ? benefits.slice(0, 3).map(benefit => benefitBadgeMarkup(benefit, 'store-service-card-payment')).join('')
-        : '<span class="store-service-card-unknown">주문앱별 혜택 미확인</span>'}
+        : `<span class="store-service-card-unknown">${escapeHtml(emptyBenefitLabel(info))}</span>`}
     `;
   }
 
@@ -385,11 +397,22 @@
   function detailBenefitMarkup(item) {
     const isDelivery = item.kind === 'delivery';
     const appLabel = item.appLabel || '적용 주문앱 미확인';
-    const stateLabel = item.state === 'available'
-      ? (isDelivery ? `${appLabel} · 무료배달 확인` : `${appLabel} · ${item.label} 사용 가능 확인`)
-      : item.state === 'unavailable'
-        ? (isDelivery ? `${appLabel} · 무료배달 불가 확인` : `${appLabel} · ${item.label} 사용 불가 확인`)
-        : (isDelivery ? `${appLabel} · 무료배달 여부 미확인` : `${appLabel} · ${item.label} 미확인`);
+    let stateLabel;
+    if (item.key === 'ddangyo-coupon') {
+      stateLabel = item.state === 'available'
+        ? `${appLabel} · 쿠폰 있음 확인`
+        : item.state === 'unavailable' ? `${appLabel} · 현재 쿠폰 없음 확인` : `${appLabel} · 쿠폰 미확인`;
+    } else if (item.key === 'ddangyo-timesale') {
+      stateLabel = item.state === 'available'
+        ? `${appLabel} · 타임세일 진행 확인`
+        : item.state === 'unavailable' ? `${appLabel} · 현재 타임세일 없음 확인` : `${appLabel} · 타임세일 미확인`;
+    } else {
+      stateLabel = item.state === 'available'
+        ? (isDelivery ? `${appLabel} · 무료배달 확인` : `${appLabel} · ${item.label} 사용 가능 확인`)
+        : item.state === 'unavailable'
+          ? (isDelivery ? `${appLabel} · 무료배달 없음 확인` : `${appLabel} · ${item.label} 사용 불가 확인`)
+          : (isDelivery ? `${appLabel} · 무료배달 여부 미확인` : `${appLabel} · ${item.label} 미확인`);
+    }
     const symbol = item.state === 'available' ? '✓' : item.state === 'unavailable' ? '×' : '?';
     return `
       <span class="store-service-detail-benefit is-${escapeHtml(item.state)}${isDelivery ? ' is-delivery' : ''}">
@@ -439,7 +462,7 @@
       const meta = document.createElement('div');
       meta.className = 'store-service-card-meta';
       meta.dataset.storeServiceCardMeta = '';
-      meta.innerHTML = cardMetaMarkup(status, benefits);
+      meta.innerHTML = cardMetaMarkup(status, benefits, info);
       const copy = card.querySelector('.store-info');
       const routes = copy?.querySelector('.miniapps');
       if (routes) routes.before(meta);
@@ -763,7 +786,7 @@ function overviewSearchText(entry) {
                 const deliveryClass = benefit.kind === 'delivery' ? ' class="is-delivery"' : '';
                 return `<b${deliveryClass}>✓ ${escapeHtml(scopedBenefitLabel(benefit))}</b>`;
               }).join('')
-              : '<b class="is-unknown">주문앱별 혜택 미확인</b>'}
+              : `<b class="is-unknown">${escapeHtml(emptyBenefitLabel(entry.info))}</b>`}
             ${verified ? `<small>${escapeHtml(verified)}</small>` : ''}
           </span>
           <i aria-hidden="true">›</i>
