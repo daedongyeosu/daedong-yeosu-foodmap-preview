@@ -1,0 +1,105 @@
+name: Refresh 444 Menu Map Cache
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .refresh-444-menu-map-cache-trigger
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Validate all 444 menu connections
+        run: |
+          set -euo pipefail
+          protected_before="$(sha256sum data/stores.json | awk '{print $1}')"
+          node - <<'NODE'
+          const fs = require('fs');
+          const vm = require('vm');
+          const context = {window: {}};
+          vm.createContext(context);
+          vm.runInContext(fs.readFileSync('store-menu-content/ddangyo-menu-map.js', 'utf8'), context);
+          const map = context.window.DAEDONG_DDANGYO_MENU_STORES || {};
+          const entries = Object.entries(map);
+          if (entries.length !== 444) throw new Error(`expected 444 menu entries, got ${entries.length}`);
+
+          const enrichment = JSON.parse(fs.readFileSync('data/ddangyo-store-enrichment.json', 'utf8'));
+          const enrichmentIds = new Set((enrichment.stores || []).map(row => String(row.targetStoreId)));
+          const base = JSON.parse(fs.readFileSync('data/stores.json', 'utf8'));
+          const baseRows = Array.isArray(base) ? base : (base.stores || base.data || []);
+          const baseIds = new Set(baseRows.map(row => String(row.id || row.store_id || row.storeId || '')));
+          const knownIds = new Set([...baseIds, ...enrichmentIds]);
+
+          const names = new Map();
+          const missingIds = [];
+          const missingFiles = [];
+          const mismatches = [];
+          let totalItems = 0;
+          for (const [id, entry] of entries) {
+            if (!knownIds.has(id)) missingIds.push(id);
+            if (!entry?.path || !fs.existsSync(entry.path)) {
+              missingFiles.push({id, path: entry?.path || ''});
+              continue;
+            }
+            const menu = JSON.parse(fs.readFileSync(entry.path, 'utf8'));
+            if (String(menu.storeId) !== id || !Array.isArray(menu.items) || menu.items.length !== Number(entry.itemCount)) {
+              mismatches.push({id, fileId: menu.storeId, mapCount: entry.itemCount, fileCount: menu.items?.length});
+            }
+            totalItems += menu.items?.length || 0;
+            names.set(menu.storeName || menu.displayName || '', {id, count: menu.items?.length || 0});
+          }
+          if (missingIds.length) throw new Error(`menu IDs absent from store/enrichment IDs: ${JSON.stringify(missingIds.slice(0, 20))}`);
+          if (missingFiles.length) throw new Error(`missing menu files: ${JSON.stringify(missingFiles.slice(0, 20))}`);
+          if (mismatches.length) throw new Error(`menu map mismatches: ${JSON.stringify(mismatches.slice(0, 20))}`);
+          for (const name of ['황금아구 미평점', '바른보쌈1990 여수웅천점']) {
+            const row = names.get(name);
+            if (!row || row.count < 1) throw new Error(`${name} menu connection missing`);
+          }
+          console.log(JSON.stringify({menuStores: entries.length, totalItems, checkedNames: Object.fromEntries(['황금아구 미평점','바른보쌈1990 여수웅천점'].map(name => [name, names.get(name)]))}, null, 2));
+          NODE
+
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+          replacements = {
+              'store-menu-content/ddangyo-menu-map.js?v=20260802-4': 'store-menu-content/ddangyo-menu-map.js?v=20260802-444-1',
+              'store-menu-map-bridge.js?v=20260802-1': 'store-menu-map-bridge.js?v=20260802-444-1',
+              'store-menu-preview.js?v=store-menu-15': 'store-menu-preview.js?v=store-menu-16'
+          }
+          for old, new in replacements.items():
+              if old not in text:
+                  raise SystemExit(f'missing cache token: {old}')
+              text = text.replace(old, new, 1)
+          path.write_text(text, encoding='utf-8')
+          PY
+
+          protected_after="$(sha256sum data/stores.json | awk '{print $1}')"
+          test "$protected_before" = "$protected_after"
+          grep -q 'ddangyo-menu-map.js?v=20260802-444-1' index.html
+          grep -q 'store-menu-map-bridge.js?v=20260802-444-1' index.html
+          grep -q 'store-menu-preview.js?v=store-menu-16' index.html
+
+      - name: Remove temporary workflow files
+        run: |
+          rm -f .refresh-444-menu-map-cache-trigger
+          rm -f .github/workflows/refresh-444-menu-map-cache.yml
+
+      - name: Commit verified cache refresh
+        run: |
+          git config user.name "daedong-preview-bot"
+          git config user.email "preview-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Force-load verified 444-store menu map"
+          git push origin HEAD:main
