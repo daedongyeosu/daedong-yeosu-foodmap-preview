@@ -1105,7 +1105,13 @@ function allCategoriesModal() {
 function getSavedAddress() { return normalizeOutsideYeosuCurrent(readLocalJson(ADDRESS_KEY, null)); }
 function getAddressBook() { return readLocalJson(ADDRESS_BOOK_KEY, []).map(normalizeOutsideYeosuCurrent); }
 function saveAddressBook(list) { writeLocalJson(ADDRESS_BOOK_KEY, list.slice(0, 12)); }
-function shortAddress(text = '') { const value = String(text).trim() || '여수시 전체'; return value.length > 18 ? `${value.slice(0,18)}…` : value; }
+function shortAddress(text = '', area = '') {
+  const value = String(text).trim() || '여수시 전체';
+  const neighborhood = neighborhoodFor(area) || neighborhoodFor(value);
+  if (neighborhood) return `여수시 ${neighborhood}`;
+  const shortened = value.replace(/^(?:(?:전남광주|광주전남)통합특별시|전라남도|전남|광주광역시)\s*/u, '').trim() || value;
+  return shortened.length > 18 ? `${shortened.slice(0, 18)}…` : shortened;
+}
 function saveLocationState(label, coords = null, sortByDistance = false, meta = {}) {
   const region = analyticsCoarseRegion(meta);
   const saved = {label, area:meta.area || label, address:meta.address || label, detail:meta.detail || '', type:meta.type || 'recent', coords, sortByDistance, ...region, savedAt:new Date().toISOString()};
@@ -1140,7 +1146,7 @@ function commitAddressSelection() {
   const item={type:addressDraft?.type||'recent',address:base,detail,label:full,area,coords,sortByDistance,...analyticsCoarseRegion(addressDraft),createdAt:new Date().toISOString()};
   writeLocalJson(ADDRESS_KEY,item); saveAddressBook([item,...getAddressBook().filter(old=>old.label!==item.label||old.type!==item.type)]);
   state.location=item.area||'여수시 전체'; state.addressLabel=item.label; state.coords=coords; state.sortByDistance=sortByDistance;
-  saveLocationState(item.label,coords,sortByDistance,item); $('#locationText').textContent=shortAddress(item.label); hardClose(); setTimeout(showHomeAfterAddressCommit,60);
+  saveLocationState(item.label,coords,sortByDistance,item); $('#locationText').textContent=shortAddress(item.label,item.area); hardClose(); setTimeout(showHomeAfterAddressCommit,60);
 }
 function useCurrentLocation() {
   const button=$('#gpsLocationBtn'); if(!button)return;
@@ -1223,7 +1229,7 @@ async function initialize() {
     return a.localeCompare(b, 'ko');
   });
   hydrateSelectedOrderApp();
-  $('#locationText').textContent = shortAddress(state.addressLabel || state.location);
+  $('#locationText').textContent = shortAddress(state.addressLabel || state.location, state.location);
   renderCategories(); renderStores();
 }
 function resetFilters() {

@@ -531,7 +531,6 @@
         <div class="store-finder-location">
           <span aria-hidden="true">📍</span>
           <b data-store-finder-location-label>주소를 설정하면 가까운 순</b>
-          <button type="button" data-store-service-address-change>주소 변경</button>
         </div>
         <nav aria-label="빠른 가게 찾기 조건">
           <button type="button" data-store-service-quick-status="open">🟢 지금 영업 중 <b data-store-finder-open-count></b></button>
@@ -1125,10 +1124,6 @@ document.addEventListener('input', event => {
     const opener = event.target.closest('[data-store-service-overview-open], [data-store-service-search-open]');
     if (opener) {
       showOverview(opener);
-      return;
-    }
-    if (event.target.closest('[data-store-service-address-change]')) {
-      document.querySelector('#locationBtn')?.click();
       return;
     }
     const quickStatus = event.target.closest('[data-store-service-quick-status]');
