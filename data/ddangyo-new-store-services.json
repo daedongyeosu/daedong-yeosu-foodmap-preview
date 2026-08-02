@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-02T06:47:20.816Z",
+  "generatedAt": "2026-08-02T06:54:01.622Z",
   "policy": {
     "chak": "apply-to-all-new-stores",
     "naver": "exact-road-signature-and-compatible-business-name-only",
@@ -23,39 +23,31 @@
         "attempts": [
           {
             "query": "메고지고 여수죽림점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"메고지고 여수죽림점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"6477a8f3-e7a9-4691-9c4d-0a7c35d925f7\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653203267}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "메고지고 여수죽림점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"메고지고 여수죽림점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"c4d24dd2-ca52-40f3-9f54-82becd97570a\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653203604}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "메고지고 여수죽림점 전남 여수시 죽림3길 5-14",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"메고지고 여수죽림점 전남 여수시 죽림3길 5-14\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"ee41ccfc-e61f-4e87-9e58-0c66efe35a22\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653203941}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 죽림3길 5-14",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 죽림3길 5-14\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"2ca223d1-0c18-4fe3-b432-dac0c97ddae2\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653204265}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -80,39 +72,31 @@
         "attempts": [
           {
             "query": "순살 참잘튀기는집 여수점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"순살 참잘튀기는집 여수점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"0bddb4a0-d087-4d05-9b2a-43157b4e442a\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653204755}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "순살 참잘튀기는집 여수점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"순살 참잘튀기는집 여수점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"d27b8006-57bf-4c46-947f-dca9b9f1602b\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653205088}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "순살 참잘튀기는집 여수점 전남 여수시 여서로 136",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"순살 참잘튀기는집 여수점 전남 여수시 여서로 136\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"7369f32c-3ee6-4b97-be44-9f9ce57e1e2e\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653205417}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 여서로 136",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 여서로 136\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"04eccaac-26a2-444c-ae3b-157a4e85bfc3\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653205740}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -137,39 +121,31 @@
         "attempts": [
           {
             "query": "치코두마리파닭",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"치코두마리파닭\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"1a03df68-3183-48a6-9718-a7122dea4ef9\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653206223}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "치코두마리파닭 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"치코두마리파닭 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"72f6b957-0932-446a-b729-b8b85ca887e9\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653206557}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "치코두마리파닭 전남 여수시 여서로 136",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"치코두마리파닭 전남 여수시 여서로 136\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"e37ee325-5ffb-4800-b9ad-e2e613a278e2\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653206878}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 여서로 136",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 여서로 136\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"71c9540c-a07f-463e-9d7d-6f48c4870c1e\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653207202}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -194,39 +170,31 @@
         "attempts": [
           {
             "query": "수원왕갈비통닭 여수점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"수원왕갈비통닭 여수점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"7e8b4a85-b90d-473f-8156-387f9b6ef598\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653207679}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "수원왕갈비통닭 여수점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"수원왕갈비통닭 여수점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"e1343634-23ec-42e9-ab4c-bc631126e46a\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653208006}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "수원왕갈비통닭 여수점 전남 여수시 여문문화2길 18",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"수원왕갈비통닭 여수점 전남 여수시 여문문화2길 18\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"459dd061-9620-4f01-bf43-10eb78729bf3\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653208330}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 여문문화2길 18",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 여문문화2길 18\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"5c29c5b2-f2e5-4b56-98fe-a0e01d9d8019\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653208653}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -251,39 +219,31 @@
         "attempts": [
           {
             "query": "돈스토리",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"돈스토리\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"ef4f2806-938d-4211-8ce7-9307126f13f7\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653209132}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "돈스토리 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"돈스토리 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"3bbe649f-ff5f-418e-8406-b8d9f56adca6\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653209464}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "돈스토리 전남 여수시 소호로 481-1",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"돈스토리 전남 여수시 소호로 481-1\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"115ada62-f0e1-4b89-b640-bb2b1cf35312\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653209788}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 소호로 481-1",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 소호로 481-1\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"c5c90803-accc-4887-8ad1-c4954d806bfd\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653210109}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -308,39 +268,31 @@
         "attempts": [
           {
             "query": "피나치공 무선점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"피나치공 무선점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"0923cc87-dc0b-4685-a2e6-0f05718cd920\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653210592}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "피나치공 무선점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"피나치공 무선점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"934a433e-8d90-4e3f-94cd-256b1cd68041\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653210920}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "피나치공 무선점 전남 여수시 화산2길 30",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"피나치공 무선점 전남 여수시 화산2길 30\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"0d712695-842f-4f5f-b4cc-2fb523acb18c\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653211243}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 화산2길 30",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 화산2길 30\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"dc2fb1ce-f6c7-4c63-aa02-97fa39698d2e\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653211566}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -365,39 +317,31 @@
         "attempts": [
           {
             "query": "배떡 안산점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"배떡 안산점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"644947b6-1e72-47e3-a3a7-43a7c2667194\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653212047}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "배떡 안산점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"배떡 안산점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"f1fc663c-ed7b-4f9b-8eda-00c3e0a4f164\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653212373}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "배떡 안산점 전남 여수시 안산2길 6",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"배떡 안산점 전남 여수시 안산2길 6\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"d481f59a-1168-4703-9a40-1672900ad14e\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653212707}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 안산2길 6",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 안산2길 6\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"3512333e-2e68-49af-9408-7b022ef30dc6\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653213025}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -422,39 +366,31 @@
         "attempts": [
           {
             "query": "치킨먹고 인생피자",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"치킨먹고 인생피자\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"1476f53a-15a5-4f81-9fc5-661b7deb1715\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653213518}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "치킨먹고 인생피자 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"치킨먹고 인생피자 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"b51ef389-f17a-48aa-adb1-bb022d7f58d8\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653213850}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "치킨먹고 인생피자 전남 여수시 화산로 39",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"치킨먹고 인생피자 전남 여수시 화산로 39\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"727b6648-45b7-4912-858d-6401496db93d\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653214180}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 화산로 39",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 화산로 39\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"31f756a9-b8c8-41dd-8153-29df14f4f43e\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653214500}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -479,39 +415,31 @@
         "attempts": [
           {
             "query": "촌닭이두마리 무선점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"촌닭이두마리 무선점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"cc43b03b-b2b9-49e0-b9b4-14ccb217c13f\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653214982}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "촌닭이두마리 무선점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"촌닭이두마리 무선점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"b3d23771-e240-4ef9-be97-4011617b9cd7\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653215315}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "촌닭이두마리 무선점 전남 여수시 성산로 2",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"촌닭이두마리 무선점 전남 여수시 성산로 2\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"2efe60f4-1c27-499c-838c-c2d29f58c564\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653215641}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 성산로 2",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 성산로 2\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"f3e94255-e604-4a47-b572-8ee527d4262f\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653215966}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -536,39 +464,31 @@
         "attempts": [
           {
             "query": "오빠통닭 여수학동점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"오빠통닭 여수학동점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"34f7dd09-15c1-45d1-9d23-daf76bdd82e4\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653216449}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "오빠통닭 여수학동점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"오빠통닭 여수학동점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"378e32c4-c50b-45c6-95ba-49870a600e3a\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653216781}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "오빠통닭 여수학동점 전남 여수시 시청동5길 21-2",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"오빠통닭 여수학동점 전남 여수시 시청동5길 21-2\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"cfb1f6d7-1f5d-413d-afe1-c5c29c5a76a9\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653217106}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 시청동5길 21-2",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 시청동5길 21-2\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"01c89278-095d-4e61-b8e5-e14d9af52c5d\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653217433}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -593,39 +513,31 @@
         "attempts": [
           {
             "query": "갓튀긴후라이드 여수학동점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"갓튀긴후라이드 여수학동점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"1025c98a-98b6-4257-bc1e-6187d628d1e3\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653217914}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "갓튀긴후라이드 여수학동점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"갓튀긴후라이드 여수학동점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"c82022a1-93c8-4cbe-9cbf-1107a8354434\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653218232}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "갓튀긴후라이드 여수학동점 전남 여수시 무선로 6",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"갓튀긴후라이드 여수학동점 전남 여수시 무선로 6\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"921f0f91-bb68-4659-9bf2-fc05c6678347\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653218558}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 무선로 6",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 무선로 6\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"846892ec-fe41-42dc-bf19-18f40a27aa0f\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653218882}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -650,39 +562,31 @@
         "attempts": [
           {
             "query": "땅땅치킨 죽림무선점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"땅땅치킨 죽림무선점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"7f7f790c-99e0-4113-8edf-9257572b79f9\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653219371}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "땅땅치킨 죽림무선점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"땅땅치킨 죽림무선점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"a34ec95d-cae0-44a5-a7e7-49e3b444a3f9\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653219693}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "땅땅치킨 죽림무선점 전남 여수시 죽림3길 15-16",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"땅땅치킨 죽림무선점 전남 여수시 죽림3길 15-16\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"9becbc39-d030-4597-aa38-1346acd73a62\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653220017}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 죽림3길 15-16",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 죽림3길 15-16\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"71a6093c-f18b-48a8-abd9-e45fafbff9ea\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653220367}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -707,39 +611,31 @@
         "attempts": [
           {
             "query": "불로만치킨바베큐 학동점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"불로만치킨바베큐 학동점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"8bd85147-7d2b-40f3-b6e1-dd7ade59fbb6\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653220852}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "불로만치킨바베큐 학동점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"불로만치킨바베큐 학동점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"86df4176-055a-4a7b-adaf-da637d8e413c\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653221170}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "불로만치킨바베큐 학동점 전남 여수시 시청동5길 20",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"불로만치킨바베큐 학동점 전남 여수시 시청동5길 20\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"a2e0bcb2-24f6-46ff-b7e7-c1547cc04209\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653221492}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 시청동5길 20",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 시청동5길 20\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"0fbc2ec4-22ba-43b7-b4de-35ad913e6d83\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653221814}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
@@ -764,39 +660,31 @@
         "attempts": [
           {
             "query": "폭탄치밥 여수여천점",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"폭탄치밥 여수여천점\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"48188abe-4199-4409-97f7-4830ce408ffb\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653222310}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "폭탄치밥 여수여천점 여수",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"폭탄치밥 여수여천점 여수\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"e9ddb5a5-400a-4303-98c2-501e63c3a2ed\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653222635}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "폭탄치밥 여수여천점 전남 여수시 신기남3길 2-5",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"폭탄치밥 여수여천점 전남 여수시 신기남3길 2-5\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"4962ef5c-7406-49b5-a2c2-dd15c102fb21\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653222967}}}"
+            "rootKeys": [],
+            "preview": ""
           },
           {
             "query": "전남 여수시 신기남3길 2-5",
-            "status": "ok",
+            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [
-              "result"
-            ],
-            "preview": "{\"result\":{\"type\":\"all\",\"metaInfo\":{\"pageId\":\"ncaptcha-all-search-no-result\",\"sessionId\":null,\"rcode\":\"\",\"searchedQuery\":\"전남 여수시 신기남3길 2-5\",\"displayCorrectAnswer\":false},\"address\":null,\"place\":null,\"bus\":null,\"ncaptcha\":{\"uuid\":\"845ab4c7-c8b8-44cd-85e8-859b8ccbd196\",\"ip\":\"172.171.6.114\",\"confirmRules\":\"CE_EMPTY_TOKEN\",\"timestamp\":1785653223302}}}"
+            "rootKeys": [],
+            "preview": ""
           }
         ],
         "exactMatches": [],
