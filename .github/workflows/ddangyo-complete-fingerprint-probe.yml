@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - scripts/ddangyo-complete-fingerprint-probe.mjs
+      - scripts/collect-all-historical-ddangyo-links.mjs
       - .github/workflows/ddangyo-complete-fingerprint-probe.yml
       - .ddangyo-complete-fingerprint-trigger
 
@@ -15,19 +16,43 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
-      - name: Check out preview branch
+      - name: Check out preview full history
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: preview
 
-      - name: Probe Ddangyo hours and benefits fields
+      - name: Check out production full history
+        uses: actions/checkout@v4
+        with:
+          repository: daedongyeosu/daedong-yeosu-foodmap
+          ref: main
+          fetch-depth: 0
+          path: production
+
+      - name: Collect every historical Ddangyo link from both repositories
+        run: node preview/scripts/collect-all-historical-ddangyo-links.mjs preview production
+
+      - name: Probe current Ddangyo hours and benefits fields
+        working-directory: preview
         run: node scripts/ddangyo-complete-fingerprint-probe.mjs
 
-      - name: Upload probe output
+      - name: Upload historical link inventory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-historical-ddangyo-links
+          path: ddangyo-historical-links-output
+          if-no-files-found: error
+          retention-days: 2
+
+      - name: Upload field probe output
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ddangyo-complete-fingerprint-probe
-          path: ddangyo-complete-fingerprint-probe-output
+          path: preview/ddangyo-complete-fingerprint-probe-output
           if-no-files-found: error
-          retention-days: 1
+          retention-days: 2
