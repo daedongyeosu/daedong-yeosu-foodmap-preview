@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-02T06:38:06.840Z",
+  "policy": {
+    "chak": "apply-to-all-new-stores",
+    "naver": "exact-name-and-road-address-match-only",
+    "shopInShopWithoutExactListing": "omit"
+  },
+  "stores": [
+    {
+      "targetStoreId": "4c3111774c7675bf",
+      "patstoNo": "1330186",
+      "name": "메고지고 여수죽림점",
+      "address": "전남 여수시 죽림3길 5-14 1층 101호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "메고지고 여수죽림점 전남 여수시 죽림3길 5-14",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "5b5b717a812bd696",
+      "patstoNo": "1202217",
+      "name": "순살 참잘튀기는집 여수점",
+      "address": "전남 여수시 여서로 136 20동 지하 제104호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "순살 참잘튀기는집 여수점 전남 여수시 여서로 136",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "1148392333495328",
+      "patstoNo": "1202198",
+      "name": "치코두마리파닭",
+      "address": "전남 여수시 여서로 136 20동 지하 제104호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "치코두마리파닭 전남 여수시 여서로 136",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "c6691689edefed72",
+      "patstoNo": "1273822",
+      "name": "수원왕갈비통닭 여수점",
+      "address": "전남 여수시 여문문화2길 18 1층",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "수원왕갈비통닭 여수점 전남 여수시 여문문화2길 18",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "bdc3a5388ee5f856",
+      "patstoNo": "1311033",
+      "name": "돈스토리",
+      "address": "전남 여수시 소호로 481-1",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "돈스토리 전남 여수시 소호로 481-1",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "42a229180e49ce16",
+      "patstoNo": "1233526",
+      "name": "피나치공 무선점",
+      "address": "전남 여수시 화산2길 30",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "피나치공 무선점 전남 여수시 화산2길 30",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "f3b9106bedb95e91",
+      "patstoNo": "1258176",
+      "name": "배떡 안산점",
+      "address": "전남 여수시 안산2길 6",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "배떡 안산점 전남 여수시 안산2길 6",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "942c34c599bfe9d7",
+      "patstoNo": "1171587",
+      "name": "치킨먹고 인생피자",
+      "address": "전남 여수시 화산로 39",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "치킨먹고 인생피자 전남 여수시 화산로 39",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "f53db01b1aecc2e8",
+      "patstoNo": "1232932",
+      "name": "촌닭이두마리 무선점",
+      "address": "전남 여수시 성산로 2 1층",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "촌닭이두마리 무선점 전남 여수시 성산로 2",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "96f685b4e5df6f21",
+      "patstoNo": "1219419",
+      "name": "오빠통닭 여수학동점",
+      "address": "전남 여수시 시청동5길 21-2 1층",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "오빠통닭 여수학동점 전남 여수시 시청동5길 21-2",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "909ebb59ee179171",
+      "patstoNo": "1314556",
+      "name": "갓튀긴후라이드 여수학동점",
+      "address": "전남 여수시 무선로 6 1층 110호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "갓튀긴후라이드 여수학동점 전남 여수시 무선로 6",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "fa10e18c99e71bc4",
+      "patstoNo": "1232918",
+      "name": "땅땅치킨 죽림무선점",
+      "address": "전남 여수시 죽림3길 15-16 102호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "땅땅치킨 죽림무선점 전남 여수시 죽림3길 15-16",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "6c9c4dfd6cbb88c0",
+      "patstoNo": "1324646",
+      "name": "불로만치킨바베큐 학동점",
+      "address": "전남 여수시 시청동5길 20 106호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "불로만치킨바베큐 학동점 전남 여수시 시청동5길 20",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "cddefac029bc4e71",
+      "patstoNo": "1188831",
+      "name": "폭탄치밥 여수여천점",
+      "address": "전남 여수시 신기남3길 2-5 1층",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "폭탄치밥 여수여천점 전남 여수시 신기남3길 2-5",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "9f44c322e138441a",
+      "patstoNo": "1165647",
+      "name": "푸라닭 여수무선점",
+      "address": "전남 여수시 화산로 64",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "푸라닭 여수무선점 전남 여수시 화산로 64",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "f278d31f15ae9df1",
+      "patstoNo": "1332276",
+      "name": "한앤둘치킨 여수시청점",
+      "address": "전남 여수시 시청동1길 29 105호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "한앤둘치킨 여수시청점 전남 여수시 시청동1길 29",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "5b27fc76ce6d1647",
+      "patstoNo": "1124860",
+      "name": "치킨플러스 여수1호점",
+      "address": "전남 여수시 무선중앙로 50",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "치킨플러스 여수1호점 전남 여수시 무선중앙로 50",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "00fbc13449fdd3ce",
+      "patstoNo": "1319411",
+      "name": "1키로공룡닭강정 여수여천점",
+      "address": "전남 여수시 시청로 59",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "1키로공룡닭강정 여수여천점 전남 여수시 시청로 59",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "fa73c7d5be835580",
+      "patstoNo": "1323603",
+      "name": "ONLY 후라이드 여수학동점",
+      "address": "전남 여수시 시청동2길 8",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "ONLY 후라이드 여수학동점 전남 여수시 시청동2길 8",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "476ebcb070b7d20e",
+      "patstoNo": "1120308",
+      "name": "푸라닭 여수학동점",
+      "address": "전남 여수시 시청동1길 17 103호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "푸라닭 여수학동점 전남 여수시 시청동1길 17",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "38e443f6edc5d734",
+      "patstoNo": "1216979",
+      "name": "촌닭이두마리 오림점",
+      "address": "전남 여수시 오림2길 17 1층",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "촌닭이두마리 오림점 전남 여수시 오림2길 17",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "c143aca89697f5aa",
+      "patstoNo": "1323599",
+      "name": "후라이드 참 맛있는집 여수학동점",
+      "address": "전남 여수시 시청동2길 8",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "후라이드 참 맛있는집 여수학동점 전남 여수시 시청동2길 8",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "70d308ee26f63df0",
+      "patstoNo": "1206834",
+      "name": "새우치킨덤 여천점",
+      "address": "전남 여수시 신기남3길 1 1층",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "새우치킨덤 여천점 전남 여수시 신기남3길 1",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "47e6097097991cae",
+      "patstoNo": "1120495",
+      "name": "푸라닭 여수웅천점",
+      "address": "전남 여수시 웅남2길 24 1층",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "푸라닭 여수웅천점 전남 여수시 웅남2길 24",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "ee32d1ee50f7afba",
+      "patstoNo": "1304058",
+      "name": "박스터지는 두마리치킨 (샵인점)",
+      "address": "전남 여수시 여문2로 73 1층 9호",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "박스터지는 두마리치킨 (샵인점) 전남 여수시 여문2로 73",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "ad7e6329179b4c3e",
+      "patstoNo": "1188818",
+      "name": "닥엔돈스 직화바베큐치킨 여수여천점",
+      "address": "전남 여수시 신기남3길 2-5 1층",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "닥엔돈스 직화바베큐치킨 여수여천점 전남 여수시 신기남3길 2-5",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    },
+    {
+      "targetStoreId": "764ac01669937810",
+      "patstoNo": "1323595",
+      "name": "골목포차&치킨",
+      "address": "전남 여수시 시청동2길 8",
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverMap": "",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "query": "골목포차&치킨 전남 여수시 시청동2길 8",
+        "exactMatches": [],
+        "candidates": [],
+        "naverMap": ""
+      }
+    }
+  ],
+  "stats": {
+    "newStores": 27,
+    "chakRoutes": 27,
+    "naverVerified": 0,
+    "naverOmitted": 27
+  }
+}
