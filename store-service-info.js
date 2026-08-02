@@ -40,6 +40,7 @@
   let menuSearchData = {stores: {}};
   let menuSearchState = 'idle';
   let menuSearchPromise = null;
+  let renderedSourceCount = 0;
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({
     '&': '&amp;',
@@ -742,8 +743,8 @@ function overviewSearchText(entry) {
       ['all', '전체', null],
       ['open', '지금 영업 중', counts.openNow],
       ['closing-soon', '곧 종료', counts['closing-soon']],
-      ['closed', '영업 종료', counts.closed],
-      ['unknown', '시간 미확인', counts.unknown]
+      ['closed', '영업 종료', null],
+      ['unknown', '시간 미확인', null]
     ];
   }
 
@@ -810,6 +811,9 @@ function overviewSearchText(entry) {
         : `‘${query}’ 검색 결과 ${entries.length}곳`;
     }
     if (activeStatus === 'open') return `지금 영업 중 ${entries.length}곳`;
+    if (activeStatus === 'closing-soon') return `곧 종료 ${entries.length}곳`;
+    if (activeStatus === 'closed') return '영업 종료 가게';
+    if (activeStatus === 'unknown') return '영업시간 미확인 가게';
     const isEntireStoreList = locationMode !== 'selected'
       && activeStatus === 'all'
       && activeBenefit === 'all';
@@ -840,9 +844,10 @@ function overviewSearchText(entry) {
       ...(serviceData.programs || []).map(program => [program.key, `${program.appLabel || '적용 주문앱 미확인'} ${program.label}`]),
       ...(serviceData.deliveryBenefits || []).map(benefit => [benefit.key, `${benefit.appLabel || '적용 주문앱 미확인'} ${benefit.label}`])
     ];
+    renderedSourceCount = allEntries.length;
 
     return `
-      <section class="store-service-overview" role="dialog" aria-modal="true" aria-labelledby="storeServiceOverviewTitle" data-store-service-source-count="${allEntries.length}">
+      <section class="store-service-overview" role="dialog" aria-modal="true" aria-labelledby="storeServiceOverviewTitle">
         <header>
           <div>
             <span>통합 가게 찾기</span>
@@ -1208,8 +1213,7 @@ document.addEventListener('input', event => {
     decorateStoreCards();
     decorateStoreDetails();
     const overlay = document.querySelector('[data-store-service-overview-overlay]');
-    const renderedCount = Number(overlay?.querySelector('[data-store-service-source-count]')?.dataset.storeServiceSourceCount);
-    if (overlay && !overlay.hidden && renderedCount !== sourceStores().length) renderOverview();
+    if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
   }).observe(document.documentElement, {childList: true, subtree: true});
 
   window.setInterval(() => {
