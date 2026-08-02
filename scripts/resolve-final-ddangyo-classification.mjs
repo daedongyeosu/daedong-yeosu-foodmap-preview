@@ -59,7 +59,10 @@ function sameBrandWithMissingCurrentAddress(left, right, candidateAddress) {
   const a = compact(left), b = compact(right);
   if (!a || !b) return false;
   const common = longestCommonSubstring(a, b);
-  return common >= 3;
+  if (common >= 3) return true;
+  const shorter = a.length <= b.length ? a : b;
+  const longer = a.length <= b.length ? b : a;
+  return shorter.length >= 2 && longer.startsWith(shorter);
 }
 
 let restoredExisting = 0;
