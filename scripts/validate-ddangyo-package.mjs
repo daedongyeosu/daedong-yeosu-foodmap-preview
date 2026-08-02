@@ -48,7 +48,7 @@ for (const dir of dirs) {
 }
 if (checkedMenus !== 444) throw new Error(`checked menu files ${checkedMenus}`);
 
-const newEnrichmentRows = enrichment.stores.filter(row => row.isNew === true && row.patstoNo === '1330184');
+const newEnrichmentRows = enrichment.stores.filter(row => row.isNew === true && row.patstoNo === '1209099');
 if (newEnrichmentRows.length !== 1) throw new Error(`expected one MegaMGC new store record, got ${newEnrichmentRows.length}`);
 const newStore = newEnrichmentRows[0];
 if (newStore.name !== '메가MGC커피 여수교동점') throw new Error(`unexpected new store ${newStore.name}`);
