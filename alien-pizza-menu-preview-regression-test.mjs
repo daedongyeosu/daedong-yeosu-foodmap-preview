@@ -41,7 +41,7 @@ assert.equal(
 );
 
 assert.match(index, /store-menu-preview\.css\?v=store-menu-14/);
-assert.match(index, /store-menu-preview\.js\?v=store-menu-16/);
+assert.match(index, /store-menu-preview\.js\?v=store-menu-17/);
 assert.match(script, /data-store-menu-preview/);
 assert.match(script, /가게바로주문 결제하기/);
 assert.match(script, /통화 중에도 이 메뉴를 계속 볼 수 있어요/);

@@ -458,7 +458,7 @@
     }, 500);
   }
 
-  async function openMenuPreview(storeId, trigger) {
+  async function openMenuPreview(storeId, trigger, options = {}) {
     const store = storeById(storeId);
     if (!store || document.body.classList.contains('store-menu-open')) return;
     lastFocused = trigger || document.activeElement;
@@ -481,8 +481,22 @@
       activeStore = store;
       activeMenu = menu;
       overlay.innerHTML = previewMarkup(menu, store);
+      const preview = overlay.querySelector('.store-menu-preview');
       const scrollRoot = overlay.querySelector('.store-menu-scroll');
       scrollRoot?.addEventListener('scroll', () => handleMenuScroll(scrollRoot), {passive: true});
+      const requestedQuery = String(options.query || '').trim();
+      if (requestedQuery && preview) {
+        const input = preview.querySelector('[data-menu-search]');
+        if (input) input.value = requestedQuery;
+        if (window.matchMedia('(max-width: 720px)').matches) enterMenuSearch(preview);
+        else filterMenus(preview, {revealResults: true});
+      }
+      const requestedMenuId = String(options.menuId || '');
+      if (requestedMenuId && preview) {
+        const card = [...preview.querySelectorAll('[data-menu-card]')]
+          .find(item => String(item.dataset.menuId || '') === requestedMenuId && !item.hidden);
+        if (card) window.requestAnimationFrame(() => openMenuOrderSheet(card));
+      }
       overlay.querySelector('[data-menu-preview-close]')?.focus();
     } catch (error) {
       overlay.innerHTML = `
@@ -816,6 +830,11 @@
       }
       showMenuChrome(preview);
     }
+  });
+
+  window.daedongMenuPreview = Object.freeze({
+    open: (storeId, options = {}) => openMenuPreview(storeId, null, options),
+    has: storeId => Boolean(MENU_STORES[String(storeId)])
   });
 
   new MutationObserver(ensureMenuEntryButton).observe(document.documentElement, {childList: true, subtree: true});

@@ -104,10 +104,10 @@ assert.equal(sha256('data/stores.json'), '2b976a0e05ad494e6723bc191962e1d8c66e8e
 assert.equal(sha256('data/store-priority.json'), '2b91fa849797306d5f7d8e49de1d82bfbf28f85a235fee7cf0448104847b93f9');
 assert.equal(sha256('data/store-coordinates.json'), '22f21699710ccd27de9dc73d4521fb79fac13c2a209be73e8e34519f58f087f1');
 
-assert.match(index, /store-service-info\.css\?v=store-service-7/);
-assert.match(index, /store-service-info\.js\?v=store-service-9/);
+assert.match(index, /store-service-info\.css\?v=store-service-8-unified-menu-search-1/);
+assert.match(index, /store-service-info\.js\?v=store-service-10-unified-menu-search-1/);
 assert.match(index, /store-menu-preview\.css\?v=store-menu-14/);
-assert.match(index, /store-menu-preview\.js\?v=store-menu-16/);
+assert.match(index, /store-menu-preview\.js\?v=store-menu-17/);
 assert.match(menuScript, /store-menu-content\/surasanggung\/menu\.json/);
 assert.match(menuScript, /itemCount: 46/);
 assert.match(menuScript, /음식 사진은 실제 조리된 음식과 다를 수 있습니다/);

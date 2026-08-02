@@ -64,6 +64,71 @@ body.store-service-overview-open {
   font-style: normal;
 }
 
+.store-finder-quick {
+  margin: -4px 16px 15px;
+  padding: 10px 12px 12px;
+  color: #173357;
+  background: rgba(255, 255, 255, .88);
+  border: 1px solid rgba(207, 222, 240, .96);
+  border-radius: 16px;
+  box-shadow: 0 7px 20px rgba(21, 49, 86, .07);
+  backdrop-filter: blur(7px);
+}
+
+.store-finder-location {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+}
+
+.store-finder-location b {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.store-finder-location button {
+  padding: 4px 7px;
+  color: #5a687d;
+  background: transparent;
+  border: 0;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.store-finder-quick nav {
+  margin-top: 9px;
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.store-finder-quick nav::-webkit-scrollbar {
+  display: none;
+}
+
+.store-finder-quick nav button {
+  min-height: 38px;
+  padding: 0 12px;
+  flex: 0 0 auto;
+  color: #324863;
+  background: #f7f9fc;
+  border: 1px solid #dce3ec;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.store-finder-quick nav button:first-child {
+  color: #17643a;
+  background: #eaf8ef;
+  border-color: #c8e9d4;
+}
+
 .store-service-card-meta {
   margin: 7px 0 8px;
   display: flex;
@@ -490,6 +555,14 @@ body.store-service-overview-open {
   gap: 9px;
 }
 
+.store-service-overview-group {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dfe4ec;
+  border-radius: 17px;
+  box-shadow: 0 6px 18px rgba(18, 42, 74, .05);
+}
+
 .store-service-overview-card {
   width: 100%;
   min-height: 98px;
@@ -501,9 +574,9 @@ body.store-service-overview-open {
   color: #14294b;
   text-align: left;
   background: #fff;
-  border: 1px solid #dfe4ec;
-  border-radius: 17px;
-  box-shadow: 0 6px 18px rgba(18, 42, 74, .05);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .store-service-overview-card-main {
@@ -571,6 +644,116 @@ body.store-service-overview-open {
   font-style: normal;
 }
 
+.store-service-menu-loading {
+  margin: 0;
+  padding: 18px;
+  color: #53627a;
+  text-align: center;
+  background: #eef5ff;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.store-service-menu-matches {
+  padding: 12px;
+  background: linear-gradient(180deg, #fff9f5, #fff);
+  border-top: 1px solid #f0e1d9;
+}
+
+.store-service-menu-matches > header {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.store-service-menu-matches > header b {
+  color: #9a3f1d;
+  font-size: 13px;
+}
+
+.store-service-menu-matches > header span {
+  color: #7a665e;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.store-service-menu-matches > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.store-service-menu-matches > div > button {
+  min-width: 0;
+  min-height: 76px;
+  padding: 7px;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 12px;
+  align-items: center;
+  gap: 8px;
+  color: #14294b;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #eadfd9;
+  border-radius: 12px;
+}
+
+.store-service-menu-matches img,
+.store-service-menu-image-empty {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  display: grid;
+  place-items: center;
+  color: #a1715f;
+  background: #f7ece6;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.store-service-menu-matches > div > button > span:nth-child(2) {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.store-service-menu-matches small {
+  overflow: hidden;
+  color: #8c6d60;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.store-service-menu-matches strong {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.store-service-menu-matches i {
+  font-style: normal;
+}
+
+.store-service-menu-all {
+  width: 100%;
+  min-height: 40px;
+  margin-top: 8px;
+  color: #9a3f1d;
+  background: #fff2eb;
+  border: 1px solid #f1c9b7;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
 .store-service-overview-empty {
   padding: 40px 16px;
   display: grid;
@@ -610,6 +793,10 @@ body.store-service-overview-open {
     margin-top: -7px;
   }
 
+  .store-finder-quick {
+    margin-top: -7px;
+  }
+
   .store-service-overview-overlay {
     padding: 0;
     place-items: end center;
@@ -643,10 +830,19 @@ body.store-service-overview-open {
   .store-service-overview-card-main strong {
     font-size: 15px;
   }
+
+  .store-service-menu-matches > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 380px) {
   .store-service-search-entry {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .store-finder-quick {
     margin-right: 10px;
     margin-left: 10px;
   }
