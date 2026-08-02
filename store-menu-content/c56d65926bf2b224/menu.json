@@ -14,37 +14,22 @@
     "세트메뉴",
     "사이드",
     "음료.소스.무",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1173653-10000014",
       "name": "반반치킨(순살)",
       "description": "야들야들순살을~ 고민없이 반반 즐긴다~",
-      "category": "대표메뉴",
+      "category": "반반치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/edc4730e-1da6-4f91-a699-da101540e0a8.jpg"
     },
     {
       "id": "ddangyo-1173653-10000013",
       "name": "반반치킨(뼈)",
       "description": "아주커치킨을 반반메뉴로 즐겨보세요~",
-      "category": "대표메뉴",
+      "category": "반반치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
-    },
-    {
-      "id": "ddangyo-1173653-10000001",
-      "name": "후라이드치킨",
-      "description": "소금+소스+무+코카콜라500ml",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg"
-    },
-    {
-      "id": "ddangyo-1173653-10000015",
-      "name": "순살후라이드",
-      "description": "매일 새기름으로 조리한 닭다리 순살치킨",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
     },
     {
       "id": "ddangyo-1173653-10000001",
@@ -52,6 +37,13 @@
       "description": "소금+소스+무+코카콜라500ml",
       "category": "뼈 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg"
+    },
+    {
+      "id": "ddangyo-1173653-10000015",
+      "name": "순살후라이드",
+      "description": "매일 새기름으로 조리한 닭다리 순살치킨",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
     },
     {
       "id": "ddangyo-1173653-10000006",
@@ -66,20 +58,6 @@
       "description": "윙 + 봉 후라이드",
       "category": "윙봉세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/10965111-b851-4ef1-a99e-7e28911a6bd8.jpg"
-    },
-    {
-      "id": "ddangyo-1173653-10000013",
-      "name": "반반치킨(뼈)",
-      "description": "아주커치킨을 반반메뉴로 즐겨보세요~",
-      "category": "반반치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
-    },
-    {
-      "id": "ddangyo-1173653-10000015",
-      "name": "순살후라이드",
-      "description": "매일 새기름으로 조리한 닭다리 순살치킨",
-      "category": "순살치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
     },
     {
       "id": "ddangyo-1173653-10000020",
@@ -130,13 +108,6 @@
       "description": "윙+봉 으로 23~25 조각 (추천메뉴)후라이드+간장",
       "category": "윙봉세트",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1173653-10000014",
-      "name": "반반치킨(순살)",
-      "description": "야들야들순살을~ 고민없이 반반 즐긴다~",
-      "category": "반반치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/edc4730e-1da6-4f91-a699-da101540e0a8.jpg"
     },
     {
       "id": "ddangyo-1173653-10000016",
@@ -410,6 +381,8 @@
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?h3rPiwO",
       "https://fdofd.ddangyo.com/gateway1.html?VQ4zuwg"
-    ]
+    ],
+    "rawItemCount": 54,
+    "duplicateItemsRemoved": 4
   }
 }

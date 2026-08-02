@@ -12,51 +12,15 @@
     "100%닭다리살",
     "튼실한 통새우",
     "사이드메뉴",
-    "음료",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
       "id": "ddangyo-1206834-10000001",
       "name": "두가지(반반)세트",
       "description": "한마리(중) 두가지(반반)세트메뉴",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ab825b17-3dcf-41cd-b02b-14ded9ab3905.jpg"
-    },
-    {
-      "id": "ddangyo-1206834-10000004",
-      "name": "국물떡볶이 세트",
-      "description": "국물 떡볶이는 환상적인 콜라보",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32292a60-2fef-4c35-b391-567ee2c6d124.jpg"
-    },
-    {
-      "id": "ddangyo-1206834-10000005",
-      "name": "닭순살 후라이드",
-      "description": "마지막 한조각까지 바삭바삭한 식감이 일품~",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg"
-    },
-    {
-      "id": "ddangyo-1206834-10000001",
-      "name": "두가지(반반)세트",
-      "description": "한마리(중) 두가지(반반)세트메뉴",
       "category": "두가지(반반)세트메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ab825b17-3dcf-41cd-b02b-14ded9ab3905.jpg"
-    },
-    {
-      "id": "ddangyo-1206834-10000002",
-      "name": "오징어다리 튀김세트",
-      "description": "오징어의 맛을 그대로 바삭함과 고소함이 일품",
-      "category": "오징어다리튀김 세트메뉴",
-      "image": ""
-    },
-    {
-      "id": "ddangyo-1206834-10000003",
-      "name": "닭똥집 튀김세트",
-      "description": "매콤하고 겉은바삭 속은 쫄깃한 닭똥집의 중독적인 맛",
-      "category": "닭똥집튀김 세트메뉴",
-      "image": ""
     },
     {
       "id": "ddangyo-1206834-10000004",
@@ -71,6 +35,20 @@
       "description": "마지막 한조각까지 바삭바삭한 식감이 일품~",
       "category": "100%닭다리살",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000002",
+      "name": "오징어다리 튀김세트",
+      "description": "오징어의 맛을 그대로 바삭함과 고소함이 일품",
+      "category": "오징어다리튀김 세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000003",
+      "name": "닭똥집 튀김세트",
+      "description": "매콤하고 겉은바삭 속은 쫄깃한 닭똥집의 중독적인 맛",
+      "category": "닭똥집튀김 세트메뉴",
+      "image": ""
     },
     {
       "id": "ddangyo-1206834-10000013",
@@ -281,6 +259,8 @@
     "patstoNo": "1206834",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?DoRPe5P"
-    ]
+    ],
+    "rawItemCount": 37,
+    "duplicateItemsRemoved": 3
   }
 }

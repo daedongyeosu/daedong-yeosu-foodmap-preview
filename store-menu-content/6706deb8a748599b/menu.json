@@ -8,37 +8,22 @@
     "밀가루 없는 국내산 쌀 100%",
     "세트메뉴",
     "두 마리 세트(세트라 작은닭 아니에요: )",
-    "사이드 메뉴",
-    "대표메뉴"
+    "사이드 메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1193774-10000004",
       "name": "[쌀가루100%]쌀통닭 전체(뼈) 반반 + 샐러드",
       "description": "반반 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml)",
-      "category": "대표메뉴",
+      "category": "밀가루 없는 국내산 쌀 100%",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/bd5a7568-4c0a-4c7a-94ba-3bbf714f11d1.jpg"
     },
     {
       "id": "ddangyo-1193774-10000005",
       "name": "[쌀가루100%]쌀통닭 순살 후라이드 + 샐러드",
       "description": "후라이드 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 순한맛소스 + 소금",
-      "category": "대표메뉴",
+      "category": "밀가루 없는 국내산 쌀 100%",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/656cb873-844c-4938-b384-afcd1249eece.jpg"
-    },
-    {
-      "id": "ddangyo-1193774-10000003",
-      "name": "[쌀가루100%]쌀통닭 후라이드 + 샐러드",
-      "description": "후라이드 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 순한맛소스 + 소금",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c7ccfb94-9347-4228-b4d8-3b87f2e62406.jpg"
-    },
-    {
-      "id": "ddangyo-1193774-10000006",
-      "name": "[쌀가루100%]쌀통닭 순살 반반 + 샐러드",
-      "description": "순살 반반 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 소금",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/916dc0b7-95a6-4c15-9fb5-642e7fb31585.jpg"
     },
     {
       "id": "ddangyo-1193774-10000003",
@@ -46,6 +31,13 @@
       "description": "후라이드 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 순한맛소스 + 소금",
       "category": "밀가루 없는 국내산 쌀 100%",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c7ccfb94-9347-4228-b4d8-3b87f2e62406.jpg"
+    },
+    {
+      "id": "ddangyo-1193774-10000006",
+      "name": "[쌀가루100%]쌀통닭 순살 반반 + 샐러드",
+      "description": "순살 반반 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 소금",
+      "category": "밀가루 없는 국내산 쌀 100%",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/916dc0b7-95a6-4c15-9fb5-642e7fb31585.jpg"
     },
     {
       "id": "ddangyo-1193774-10000020",
@@ -69,13 +61,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/185497f8-4d25-4aab-8961-509eb30f09be.jpg"
     },
     {
-      "id": "ddangyo-1193774-10000004",
-      "name": "[쌀가루100%]쌀통닭 전체(뼈) 반반 + 샐러드",
-      "description": "반반 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml)",
-      "category": "밀가루 없는 국내산 쌀 100%",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/bd5a7568-4c0a-4c7a-94ba-3bbf714f11d1.jpg"
-    },
-    {
       "id": "ddangyo-1193774-10000021",
       "name": "치킨떡볶이세트(양념반+후라이드반) + 샐러드",
       "description": "국물떡볶이+양념반후라이드반+샐러드",
@@ -97,13 +82,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/acfe6f57-ffa6-441d-bdab-7146d0d4ab19.jpg"
     },
     {
-      "id": "ddangyo-1193774-10000005",
-      "name": "[쌀가루100%]쌀통닭 순살 후라이드 + 샐러드",
-      "description": "후라이드 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 순한맛소스 + 소금",
-      "category": "밀가루 없는 국내산 쌀 100%",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/656cb873-844c-4938-b384-afcd1249eece.jpg"
-    },
-    {
       "id": "ddangyo-1193774-10000022",
       "name": "똥집세트 (후라이드세트) + 샐러드",
       "description": "후라이드한마리+똥집小+새우칩+치킨무+소금+콜라 마늘똥집으로 변경시 2000원 추가",
@@ -116,13 +94,6 @@
       "description": "",
       "category": "사이드 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fbff81e7-7b13-4fa5-ab59-fb5aa555da20.jpg"
-    },
-    {
-      "id": "ddangyo-1193774-10000006",
-      "name": "[쌀가루100%]쌀통닭 순살 반반 + 샐러드",
-      "description": "순살 반반 한마리 + 치킨무 + 샐러드 + 캔콜라(355ml) + 소금",
-      "category": "밀가루 없는 국내산 쌀 100%",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/916dc0b7-95a6-4c15-9fb5-642e7fb31585.jpg"
     },
     {
       "id": "ddangyo-1193774-10000023",
@@ -390,6 +361,8 @@
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?oZrHJMN",
       "https://fdofd.ddangyo.com/gateway1.html?2uVT3uw"
-    ]
+    ],
+    "rawItemCount": 53,
+    "duplicateItemsRemoved": 4
   }
 }

@@ -8,35 +8,19 @@
     "[11가지] 맛 100% 닭다리살 큰손닭강정",
     "마라 중독 큰손강정",
     "[ 큰손 ] 시그니처 대표메뉴",
-    "[ 진짜자신있습니다 ] 왕새우 한번드셔보~새우",
     "[할인] 온가족 배터지는 닭강정 두 마리 세트",
     "[ 큰손 ] 갓성비 사이드 메뉴",
     "[ 치킨 무 / 소스 ]",
     "[ 음료수 ]",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1317034-10000004",
       "name": "[3~4인 반반세트] 11가지 맛 선택 닭다리살 닭강정",
       "description": "치킨무 와 음료(500ml) 그리고, 특大 사이즈 닭강정 (반반 두 박스)이 포함된 3인 세트 (생 닭다리살 800G) 치킨무 와 음료 그리고, 특大 사이즈 닭강정, 식사가 가능한 배 터지는 3인 세트 입니다",
-      "category": "대표메뉴",
+      "category": "[11가지] 맛 100% 닭다리살 큰손닭강정",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cab09b99-39b2-4732-9df4-b80b035f3bcf.jpg"
-    },
-    {
-      "id": "ddangyo-1317034-10000001",
-      "name": "[1인 세트]바삭한 순살치킨 11가지맛 닭강정",
-      "description": "치킨무 포함 + 닭강정 + 쌀떡이 포함된 1~2인 세트 입니다.",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6bc6d01a-3f09-4b78-84b8-d3783e3eb3ad.jpg"
-    },
-    {
-      "id": "ddangyo-1317034-10000011",
-      "name": "[특 大 두 마리 세트] 양 많은 순살닭강정",
-      "description": "치킨무2개 + 음료(1.25L) + 특大 닭강정 두 마리 (생 닭다리살 800G) X 2 + 쌀떡(기본26p) + 사이드 6종 중 택1 오늘의치킨 닭강정 풀세트 입니다. 생닭다리살만 1600G이 들어가는 배 터지는 두 마리 세트 입니다 두가지맛 선택 가능합니다",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/38ce74e9-cd85-400d-9203-ffa5cb477958.jpg"
     },
     {
       "id": "ddangyo-1317034-10000001",
@@ -44,6 +28,13 @@
       "description": "치킨무 포함 + 닭강정 + 쌀떡이 포함된 1~2인 세트 입니다.",
       "category": "[11가지] 맛 100% 닭다리살 큰손닭강정",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6bc6d01a-3f09-4b78-84b8-d3783e3eb3ad.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000011",
+      "name": "[특 大 두 마리 세트] 양 많은 순살닭강정",
+      "description": "치킨무2개 + 음료(1.25L) + 특大 닭강정 두 마리 (생 닭다리살 800G) X 2 + 쌀떡(기본26p) + 사이드 6종 중 택1 오늘의치킨 닭강정 풀세트 입니다. 생닭다리살만 1600G이 들어가는 배 터지는 두 마리 세트 입니다 두가지맛 선택 가능합니다",
+      "category": "[할인] 온가족 배터지는 닭강정 두 마리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/38ce74e9-cd85-400d-9203-ffa5cb477958.jpg"
     },
     {
       "id": "ddangyo-1317034-10000043",
@@ -125,13 +116,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/7987c822-b62c-458d-a959-549794a925aa.jpg"
     },
     {
-      "id": "ddangyo-1317034-10000011",
-      "name": "[특 大 두 마리 세트] 양 많은 순살닭강정",
-      "description": "치킨무2개 + 음료(1.25L) + 특大 닭강정 두 마리 (생 닭다리살 800G) X 2 + 쌀떡(기본26p) + 사이드 6종 중 택1 오늘의치킨 닭강정 풀세트 입니다. 생닭다리살만 1600G이 들어가는 배 터지는 두 마리 세트 입니다 두가지맛 선택 가능합니다",
-      "category": "[할인] 온가족 배터지는 닭강정 두 마리 세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/38ce74e9-cd85-400d-9203-ffa5cb477958.jpg"
-    },
-    {
       "id": "ddangyo-1317034-10000013",
       "name": "[핫 치즈] 빅순살 2~3인세트(대)",
       "description": "핫치즈 큰손순살(대) + 쌀떡(10) + 치킨무로 구성된 2~3인세트입니다.",
@@ -201,13 +185,6 @@
       "description": "",
       "category": "[ 음료수 ]",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9b09ad1b-622d-4873-bb13-53ad0296364d.jpg"
-    },
-    {
-      "id": "ddangyo-1317034-10000004",
-      "name": "[3~4인 반반세트] 11가지 맛 선택 닭다리살 닭강정",
-      "description": "치킨무 와 음료(500ml) 그리고, 특大 사이즈 닭강정 (반반 두 박스)이 포함된 3인 세트 (생 닭다리살 800G) 치킨무 와 음료 그리고, 특大 사이즈 닭강정, 식사가 가능한 배 터지는 3인 세트 입니다",
-      "category": "[11가지] 맛 100% 닭다리살 큰손닭강정",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cab09b99-39b2-4732-9df4-b80b035f3bcf.jpg"
     },
     {
       "id": "ddangyo-1317034-10000015",
@@ -320,6 +297,8 @@
     "patstoNo": "1317034",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?agaDVy9"
-    ]
+    ],
+    "rawItemCount": 42,
+    "duplicateItemsRemoved": 3
   }
 }

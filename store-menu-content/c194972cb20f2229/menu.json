@@ -96,13 +96,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1115465-30001046",
-      "name": "베스트 Pick 뼈 한마리",
-      "description": "뼈 한마리 (맛선택)+치킨무+소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5364c83b-a26d-44f6-ba17-2076e4745425.jpg"
-    },
-    {
       "id": "ddangyo-1115465-30001024",
       "name": "(SET) 피자+장각 시리즈 반마리",
       "description": "피자(택1+)장각 시리즈 3종(택1), (소스/각무 미제공, 별도 구매)",
@@ -164,13 +157,6 @@
       "description": "오리지널 반+갈비천왕 반+매콤소스+왕중왕소스+치킨무",
       "category": "굽네 반반 & 색다른 시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d1275dde-d338-4b42-a900-3a0e916b88a9.jpg"
-    },
-    {
-      "id": "ddangyo-1115465-30001049",
-      "name": "헬시 Pick 닭가슴살",
-      "description": "닭가슴살 부위 (맛선택)+치킨무+소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0424e79d-17f6-4fc0-b5ab-2731f0dd56b6.jpg"
     },
     {
       "id": "ddangyo-1115465-30001051",
@@ -250,25 +236,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/39344f36-0a25-4a47-b345-1a9a1a8210c1.jpg"
     },
     {
-      "id": "ddangyo-1115465-30001053",
-      "name": "(New) 굽네 순살 시카고 피자 시리즈",
-      "description": "(New) 굽네 순살 시카고 피자 시리즈(택1)＋피클＋갈릭디핑+핫소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0fea8653-a201-43a5-991c-aa0fe2023093.jpg"
-    },
-    {
       "id": "ddangyo-1115465-30000041",
       "name": "핫소스",
       "description": "",
       "category": "치킨무 & 피클 & 피자소스",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1115465-30001052",
-      "name": "(New) 치킨베이크",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/270d193b-d7a8-4082-9cc3-dc323942466b.jpg"
     },
     {
       "id": "ddangyo-1115465-30000030",
@@ -654,6 +626,8 @@
     "patstoNo": "1115465",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?czycr95"
-    ]
+    ],
+    "rawItemCount": 90,
+    "duplicateItemsRemoved": 4
   }
 }

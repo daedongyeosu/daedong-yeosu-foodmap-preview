@@ -11,22 +11,21 @@
     "사이드 메뉴",
     "밀키트(집에서 만들어 먹기)",
     "음료",
-    "답례떡",
-    "대표메뉴"
+    "답례떡"
   ],
   "items": [
     {
       "id": "ddangyo-1330186-10000024",
       "name": "콩고물 인절미",
       "description": "한 입 크기 고소한 콩고물을 바른 진짜 전통 인절미",
-      "category": "대표메뉴",
+      "category": "찹쌀떡",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/58c8b68a-82f7-46f3-b8f7-c1901f10ff56.jpg"
     },
     {
       "id": "ddangyo-1330186-10000045",
       "name": "팥 시루떡(찹쌀)",
       "description": "쫀~득하고 맛있는 어른들 간식으로 최고",
-      "category": "대표메뉴",
+      "category": "찹쌀떡",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/bd631bf0-6132-4bf2-b9f3-d9da9dded43c.jpg"
     },
     {
@@ -534,13 +533,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1330186-10000024",
-      "name": "콩고물 인절미",
-      "description": "한 입 크기 고소한 콩고물을 바른 진짜 전통 인절미",
-      "category": "찹쌀떡",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/58c8b68a-82f7-46f3-b8f7-c1901f10ff56.jpg"
-    },
-    {
       "id": "ddangyo-1330186-10000091",
       "name": "뻥이랑(뻥튀기과자)",
       "description": "",
@@ -695,13 +687,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1330186-10000045",
-      "name": "팥 시루떡(찹쌀)",
-      "description": "쫀~득하고 맛있는 어른들 간식으로 최고",
-      "category": "찹쌀떡",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/bd631bf0-6132-4bf2-b9f3-d9da9dded43c.jpg"
-    },
-    {
       "id": "ddangyo-1330186-10000046",
       "name": "흑임자 구름떡",
       "description": "고소한 흑임자 가루와 견과류, 쫄깃한 찹쌀떡의 조화",
@@ -805,6 +790,8 @@
     "patstoNo": "1330186",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?8rrtFnv"
-    ]
+    ],
+    "rawItemCount": 112,
+    "duplicateItemsRemoved": 2
   }
 }

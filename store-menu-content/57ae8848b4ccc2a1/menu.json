@@ -13,51 +13,43 @@
     "튀김메뉴",
     "마른안주",
     "식사메뉴",
-    "볶음메뉴",
-    "대표메뉴"
+    "볶음메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1216976-10000001",
       "name": "[본스] 오리지널 한마리",
       "description": "자체 개발한 시즈닝으로 24시간 숙성시킨 닭 한마리를 오븐에서 구워 담백한 본스대표치킨 (소스 2개 제공)",
-      "category": "대표메뉴",
+      "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/81e4a294-0088-4f0b-9a63-03a60462132f.jpg"
     },
     {
       "id": "ddangyo-1216976-10000010",
       "name": "[본스] 순살",
       "description": "",
-      "category": "대표메뉴",
+      "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/527b4664-410c-4602-b442-71f414623b1e.jpg"
     },
     {
       "id": "ddangyo-1216976-10000004",
       "name": "[본스] 오븐 통다리",
       "description": "닭다리의 쫄깃하고 부드러운 속살이 지방단백질의 조화를 이뤄 모두의 영양간식으로 일품",
-      "category": "대표메뉴",
+      "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b7d49b38-4e8f-44c1-8f4b-3b2b628a6b14.jpg"
     },
     {
       "id": "ddangyo-1216976-10000011",
       "name": "[본스] 순살 바베큐양념",
       "description": "",
-      "category": "대표메뉴",
+      "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e97c9b62-5848-4e74-b041-f47494e7c87c.jpg"
     },
     {
       "id": "ddangyo-1216976-10000002",
       "name": "[본스] 바베큐 양념치킨",
       "description": "오븐에 굽고 참숯향이 가득한 바베큐소스에 졸인 숯불바베큐는 최고의 안주입니다.",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1927adfe-d233-4dea-83e3-ad3220da8491.jpg"
-    },
-    {
-      "id": "ddangyo-1216976-10000001",
-      "name": "[본스] 오리지널 한마리",
-      "description": "자체 개발한 시즈닝으로 24시간 숙성시킨 닭 한마리를 오븐에서 구워 담백한 본스대표치킨 (소스 2개 제공)",
       "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/81e4a294-0088-4f0b-9a63-03a60462132f.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1927adfe-d233-4dea-83e3-ad3220da8491.jpg"
     },
     {
       "id": "ddangyo-1216976-10000016",
@@ -114,13 +106,6 @@
       "description": "",
       "category": "볶음메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1216976-10000002",
-      "name": "[본스] 바베큐 양념치킨",
-      "description": "오븐에 굽고 참숯향이 가득한 바베큐소스에 졸인 숯불바베큐는 최고의 안주입니다.",
-      "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1927adfe-d233-4dea-83e3-ad3220da8491.jpg"
     },
     {
       "id": "ddangyo-1216976-10000018",
@@ -226,13 +211,6 @@
       "description": "",
       "category": "볶음메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1216976-10000004",
-      "name": "[본스] 오븐 통다리",
-      "description": "닭다리의 쫄깃하고 부드러운 속살이 지방단백질의 조화를 이뤄 모두의 영양간식으로 일품",
-      "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b7d49b38-4e8f-44c1-8f4b-3b2b628a6b14.jpg"
     },
     {
       "id": "ddangyo-1216976-10000023",
@@ -459,25 +437,11 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1216976-10000010",
-      "name": "[본스] 순살",
-      "description": "",
-      "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/527b4664-410c-4602-b442-71f414623b1e.jpg"
-    },
-    {
       "id": "ddangyo-1216976-10000029",
       "name": "야채 세러드",
       "description": "",
       "category": "사이드",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1216976-10000011",
-      "name": "[본스] 순살 바베큐양념",
-      "description": "",
-      "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e97c9b62-5848-4e74-b041-f47494e7c87c.jpg"
     },
     {
       "id": "ddangyo-1216976-10000012",
@@ -514,6 +478,8 @@
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?s3saAXs",
       "https://fdofd.ddangyo.com/gateway1.html?1grBeHv"
-    ]
+    ],
+    "rawItemCount": 70,
+    "duplicateItemsRemoved": 5
   }
 }

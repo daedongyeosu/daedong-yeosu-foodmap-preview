@@ -6,7 +6,6 @@
   "categories": [
     "전체",
     "신메뉴",
-    "리뷰이벤트",
     "쯔란 메뉴",
     "뼈한마리",
     "순살한마리",
@@ -15,50 +14,49 @@
     "부분육 메뉴",
     "사이드메뉴",
     "소스,추가메뉴",
-    "음료메뉴",
-    "대표메뉴"
+    "음료메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1179539-30002192",
       "name": "쯔란윙봉",
       "description": "",
-      "category": "대표메뉴",
+      "category": "쯔란 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e352255f-2895-4987-b541-0357eada7556.jpg"
     },
     {
       "id": "ddangyo-1179539-30000098",
       "name": "크랑이치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "뼈한마리",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/b1a6247f-c3c0-490c-8618-87724894289f.jpg"
     },
     {
       "id": "ddangyo-1179539-30000001",
       "name": "크크크치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "뼈한마리",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2a207038-3c11-4343-bc3e-d28c9b18bc1b.jpg"
     },
     {
       "id": "ddangyo-1179539-30000002",
       "name": "간지치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "뼈한마리",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/bffdf7be-bfe3-42e6-a618-12455e864878.jpg"
     },
     {
       "id": "ddangyo-1179539-30000004",
       "name": "고추치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "뼈한마리",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0352994c-efce-42b7-88d4-e4a673beadbe.jpg"
     },
     {
       "id": "ddangyo-1179539-30000003",
       "name": "후라이드",
       "description": "",
-      "category": "대표메뉴",
+      "category": "뼈한마리",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/cb58dfd6-6c35-491f-9c65-9c7925c8c616.jpg"
     },
     {
@@ -90,20 +88,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/34722c50-52b9-4a02-aac1-63a1f72de0c4.jpg"
     },
     {
-      "id": "ddangyo-1179539-30002192",
-      "name": "쯔란윙봉",
-      "description": "",
-      "category": "쯔란 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e352255f-2895-4987-b541-0357eada7556.jpg"
-    },
-    {
-      "id": "ddangyo-1179539-30000001",
-      "name": "크크크치킨",
-      "description": "",
-      "category": "뼈한마리",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2a207038-3c11-4343-bc3e-d28c9b18bc1b.jpg"
-    },
-    {
       "id": "ddangyo-1179539-30000030",
       "name": "봉 15조각",
       "description": "콜라,무 미포함",
@@ -123,13 +107,6 @@
       "description": "",
       "category": "쯔란 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4c325c30-599e-4aa0-8cc1-b2daf5bca592.jpg"
-    },
-    {
-      "id": "ddangyo-1179539-30000098",
-      "name": "크랑이치킨",
-      "description": "",
-      "category": "뼈한마리",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/b1a6247f-c3c0-490c-8618-87724894289f.jpg"
     },
     {
       "id": "ddangyo-1179539-30000102",
@@ -258,13 +235,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/1863f075-850b-4787-97d7-7d860cbf1ee5.jpg"
     },
     {
-      "id": "ddangyo-1179539-30000002",
-      "name": "간지치킨",
-      "description": "",
-      "category": "뼈한마리",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/bffdf7be-bfe3-42e6-a618-12455e864878.jpg"
-    },
-    {
       "id": "ddangyo-1179539-30000101",
       "name": "순살 푸하핫치킨",
       "description": "",
@@ -277,13 +247,6 @@
       "description": "",
       "category": "소스,추가메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/020b7b14-086a-48ac-bf01-1aa44ada0482.jpg"
-    },
-    {
-      "id": "ddangyo-1179539-30000003",
-      "name": "후라이드",
-      "description": "",
-      "category": "뼈한마리",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/cb58dfd6-6c35-491f-9c65-9c7925c8c616.jpg"
     },
     {
       "id": "ddangyo-1179539-30000016",
@@ -333,13 +296,6 @@
       "description": "",
       "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4d262826-e898-4e5e-8357-0afbaba4a8ea.jpg"
-    },
-    {
-      "id": "ddangyo-1179539-30000004",
-      "name": "고추치킨",
-      "description": "",
-      "category": "뼈한마리",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0352994c-efce-42b7-88d4-e4a673beadbe.jpg"
     },
     {
       "id": "ddangyo-1179539-30000146",
@@ -571,6 +527,8 @@
     "patstoNo": "1179539",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?Sb9qXy6"
-    ]
+    ],
+    "rawItemCount": 78,
+    "duplicateItemsRemoved": 6
   }
 }

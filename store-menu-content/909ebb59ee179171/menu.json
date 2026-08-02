@@ -13,58 +13,29 @@
     "SIDE 메뉴",
     "추가메뉴",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1314556-10000005",
       "name": "갓튀긴후라이드",
       "description": "갓튀긴 후라이드만의 매콤함과 짭짤함으로 튀김의 느끼함을 잡은 후라이드 중에 후라이드",
-      "category": "대표메뉴",
+      "category": "한마리 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/20064702-7a54-46ff-aa2e-31bc43c8046a.jpg"
     },
     {
       "id": "ddangyo-1314556-10000018",
       "name": "갓 튀긴 두마리",
       "description": "배달 시 콜라 1.25L는 기본 제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요 ~",
-      "category": "대표메뉴",
+      "category": "두마리 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5badfc65-d27d-4a85-946e-b87a7c73541e.jpg"
     },
     {
       "id": "ddangyo-1314556-10000016",
       "name": "반반치킨 + 똥집",
       "description": "배달 주문시 콜라 500ml는 기본제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요~",
-      "category": "대표메뉴",
+      "category": "반반 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/7753bf84-bd2c-4904-b8b0-61c73284ea34.jpg"
-    },
-    {
-      "id": "ddangyo-1314556-10000015",
-      "name": "반반치킨 + 양념감자튀김",
-      "description": "배달 주문시 콜라 500ml는 기본제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요~",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/25f716fd-b8f5-4240-96d5-a96018d123c4.jpg"
-    },
-    {
-      "id": "ddangyo-1314556-10000008",
-      "name": "양념치킨",
-      "description": "단짠의 환상적인 조화. 후라이드의 고유의 맛과 소스의 달콤함이 어우러져 입안을 가득 메우는 전통적인 양념치킨",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/bd36c616-cd06-4921-acd7-377c975cc88d.jpg"
-    },
-    {
-      "id": "ddangyo-1314556-10000001",
-      "name": "듬뿍 슈뿌림",
-      "description": "갓튀긴 후라이드의 듬뿍 시리즈 첫번째™ 달콤한 양념 위에 화이트 고소함이 듬뿍 ~",
-      "category": "듬뿍 시리즈™",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6c81b85b-8f65-4aa1-830e-af5675f362b8.jpg"
-    },
-    {
-      "id": "ddangyo-1314556-10000005",
-      "name": "갓튀긴후라이드",
-      "description": "갓튀긴 후라이드만의 매콤함과 짭짤함으로 튀김의 느끼함을 잡은 후라이드 중에 후라이드",
-      "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/20064702-7a54-46ff-aa2e-31bc43c8046a.jpg"
     },
     {
       "id": "ddangyo-1314556-10000015",
@@ -74,11 +45,18 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/25f716fd-b8f5-4240-96d5-a96018d123c4.jpg"
     },
     {
-      "id": "ddangyo-1314556-10000018",
-      "name": "갓 튀긴 두마리",
-      "description": "배달 시 콜라 1.25L는 기본 제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요 ~",
-      "category": "두마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5badfc65-d27d-4a85-946e-b87a7c73541e.jpg"
+      "id": "ddangyo-1314556-10000008",
+      "name": "양념치킨",
+      "description": "단짠의 환상적인 조화. 후라이드의 고유의 맛과 소스의 달콤함이 어우러져 입안을 가득 메우는 전통적인 양념치킨",
+      "category": "한마리 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/bd36c616-cd06-4921-acd7-377c975cc88d.jpg"
+    },
+    {
+      "id": "ddangyo-1314556-10000001",
+      "name": "듬뿍 슈뿌림",
+      "description": "갓튀긴 후라이드의 듬뿍 시리즈 첫번째™ 달콤한 양념 위에 화이트 고소함이 듬뿍 ~",
+      "category": "듬뿍 시리즈™",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6c81b85b-8f65-4aa1-830e-af5675f362b8.jpg"
     },
     {
       "id": "ddangyo-1314556-10000021",
@@ -129,13 +107,6 @@
       "description": "닭다리 4개 + 통날개 7개로 이루어진 콤보 메뉴",
       "category": "한마리 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5ff07017-d582-456a-b29e-57d957232723.jpg"
-    },
-    {
-      "id": "ddangyo-1314556-10000016",
-      "name": "반반치킨 + 똥집",
-      "description": "배달 주문시 콜라 500ml는 기본제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요~",
-      "category": "반반 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/7753bf84-bd2c-4904-b8b0-61c73284ea34.jpg"
     },
     {
       "id": "ddangyo-1314556-10000019",
@@ -234,13 +205,6 @@
       "description": "갓튀긴 후라이드의 듬뿍 시리즈 다섯번째™ 부드럽고 찐한 화이트 소스에 풍부한 양파까지 듬~뿍",
       "category": "듬뿍 시리즈™",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f2326a59-a613-4415-8487-c7710344ed54.jpg"
-    },
-    {
-      "id": "ddangyo-1314556-10000008",
-      "name": "양념치킨",
-      "description": "단짠의 환상적인 조화. 후라이드의 고유의 맛과 소스의 달콤함이 어우러져 입안을 가득 메우는 전통적인 양념치킨",
-      "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/bd36c616-cd06-4921-acd7-377c975cc88d.jpg"
     },
     {
       "id": "ddangyo-1314556-10000024",
@@ -465,6 +429,8 @@
     "patstoNo": "1314556",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?ktXdR4d"
-    ]
+    ],
+    "rawItemCount": 63,
+    "duplicateItemsRemoved": 5
   }
 }

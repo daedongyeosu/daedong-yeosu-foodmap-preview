@@ -20,51 +20,49 @@
     "싱글윙시리즈",
     "반마리",
     "사이드메뉴",
-    "소스 및 무",
-    "음료",
-    "대표메뉴"
+    "소스 및 무"
   ],
   "items": [
     {
       "id": "ddangyo-1224280-30000022",
       "name": "반반한마리[간장+레드]",
       "description": "마늘 간장 맛과 매콤한 레드맛이 함께 어우러진 한 마리 치킨[10호 닭 (951~1,050g)]",
-      "category": "대표메뉴",
+      "category": "반반시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c1966f29-c11f-46b3-8a42-9045ae7a6730.jpg"
     },
     {
       "id": "ddangyo-1224280-30000016",
       "name": "간장한마리",
       "description": "교촌만의 차별화된 마늘과 간장 소스의 풍부한 맛이 어우러진 한 마리 치킨[10호 닭 (951~1,050g)]",
-      "category": "대표메뉴",
+      "category": "간장시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/47957a23-ed10-4015-b8ff-bd46c11de448.jpg"
     },
     {
       "id": "ddangyo-1224280-30000009",
       "name": "허니한마리",
       "description": "달콤 바삭한 맛이 일품인 한 마리 치킨[10호 닭 (951~1,050g)]",
-      "category": "대표메뉴",
+      "category": "허니시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/97c32074-a22c-4ae4-bb67-606c4fc4211f.jpg"
     },
     {
       "id": "ddangyo-1224280-30000012",
       "name": "레드한마리",
       "description": "국내산 청양 홍고추의 매콤함이 일품인 한 마리 치킨[10호 닭 (951~1,050g)]",
-      "category": "대표메뉴",
+      "category": "레드시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3a944c95-e2c1-4a0f-9253-3d77eb818b1d.jpg"
     },
     {
       "id": "ddangyo-1224280-30000391",
       "name": "반반윙박스20pcs[간장+레드]",
       "description": "마늘 간장 맛과 매콤한 레드맛이 함께 어우러진 윙 메뉴[윙+봉 20조각]",
-      "category": "대표메뉴",
+      "category": "[NEW]반반윙박스20pcs",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2a667924-2fe0-4af7-a9ee-51e253eafe49.jpg"
     },
     {
       "id": "ddangyo-1224280-30000368",
       "name": "허니갈릭윙박스16pcs",
       "description": "꿀의 달콤함과 마늘의 알싸함이 조화로운 윙 메뉴[윙+봉 16조각]",
-      "category": "대표메뉴",
+      "category": "윙박스16pcs",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/20bbf34b-0900-4e8c-8cad-e589ba5e47b2.jpg"
     },
     {
@@ -82,32 +80,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/21131f7d-c809-4a57-bfef-1c0742e57c6b.jpg"
     },
     {
-      "id": "ddangyo-1224280-30000368",
-      "name": "허니갈릭윙박스16pcs",
-      "description": "꿀의 달콤함과 마늘의 알싸함이 조화로운 윙 메뉴[윙+봉 16조각]",
-      "category": "윙박스16pcs",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/20bbf34b-0900-4e8c-8cad-e589ba5e47b2.jpg"
-    },
-    {
-      "id": "ddangyo-1224280-30000022",
-      "name": "반반한마리[간장+레드]",
-      "description": "마늘 간장 맛과 매콤한 레드맛이 함께 어우러진 한 마리 치킨[10호 닭 (951~1,050g)]",
-      "category": "반반시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c1966f29-c11f-46b3-8a42-9045ae7a6730.jpg"
-    },
-    {
       "id": "ddangyo-1224280-30000274",
       "name": "허니옥수수순살 국물맵떡세트",
       "description": "허니옥수수 순살(안심, 정육)과 국물맵떡S의 찰떡궁합 세트메뉴[정육+안심, 조리 전 중량 500g]",
       "category": "허니옥수수",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3a983490-eb2e-4244-a7bb-13c94e5aee77.jpg"
-    },
-    {
-      "id": "ddangyo-1224280-30000391",
-      "name": "반반윙박스20pcs[간장+레드]",
-      "description": "마늘 간장 맛과 매콤한 레드맛이 함께 어우러진 윙 메뉴[윙+봉 20조각]",
-      "category": "[NEW]반반윙박스20pcs",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2a667924-2fe0-4af7-a9ee-51e253eafe49.jpg"
     },
     {
       "id": "ddangyo-1224280-30000375",
@@ -143,27 +120,6 @@
       "description": "꿀의 달콤함과 마늘의 알싸함이 조화로운 윙 메뉴[윙+봉 20조각]",
       "category": "[NEW]윙박스20pcs",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/7bcb129c-47e5-447c-b4b6-e3eda8b4295a.jpg"
-    },
-    {
-      "id": "ddangyo-1224280-30000012",
-      "name": "레드한마리",
-      "description": "국내산 청양 홍고추의 매콤함이 일품인 한 마리 치킨[10호 닭 (951~1,050g)]",
-      "category": "레드시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3a944c95-e2c1-4a0f-9253-3d77eb818b1d.jpg"
-    },
-    {
-      "id": "ddangyo-1224280-30000009",
-      "name": "허니한마리",
-      "description": "달콤 바삭한 맛이 일품인 한 마리 치킨[10호 닭 (951~1,050g)]",
-      "category": "허니시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/97c32074-a22c-4ae4-bb67-606c4fc4211f.jpg"
-    },
-    {
-      "id": "ddangyo-1224280-30000016",
-      "name": "간장한마리",
-      "description": "교촌만의 차별화된 마늘과 간장 소스의 풍부한 맛이 어우러진 한 마리 치킨[10호 닭 (951~1,050g)]",
-      "category": "간장시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/47957a23-ed10-4015-b8ff-bd46c11de448.jpg"
     },
     {
       "id": "ddangyo-1224280-30000407",
@@ -822,6 +778,8 @@
     "patstoNo": "1224280",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?JmfKHwo"
-    ]
+    ],
+    "rawItemCount": 113,
+    "duplicateItemsRemoved": 6
   }
 }

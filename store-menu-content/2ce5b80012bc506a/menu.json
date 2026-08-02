@@ -15,29 +15,28 @@
     "음료",
     "기타",
     "미니텐더 (kid`s 베스트)",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1233921-10000012",
       "name": "한마리",
       "description": "",
-      "category": "대표메뉴",
+      "category": "옛날통닭",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f004b176-f18b-430c-b68a-a890e8c07200.jpg"
     },
     {
       "id": "ddangyo-1233921-10000013",
       "name": "두마리",
       "description": "",
-      "category": "대표메뉴",
+      "category": "옛날통닭",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/d197b091-7153-4df4-a92c-9c9c208cf113.jpg"
     },
     {
       "id": "ddangyo-1233921-10000027",
       "name": "똥집튀김",
       "description": "",
-      "category": "대표메뉴",
+      "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7a9185db-8130-4a7c-ba18-4a169af94012.jpg"
     },
     {
@@ -63,13 +62,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1233921-10000012",
-      "name": "한마리",
-      "description": "",
-      "category": "옛날통닭",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f004b176-f18b-430c-b68a-a890e8c07200.jpg"
-    },
-    {
       "id": "ddangyo-1233921-10000014",
       "name": "조각닭 후라이드",
       "description": "",
@@ -89,13 +81,6 @@
       "description": "",
       "category": "가마치콤보",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ffaa51e2-6323-4ef4-994f-6bc6e8504bec.jpg"
-    },
-    {
-      "id": "ddangyo-1233921-10000027",
-      "name": "똥집튀김",
-      "description": "",
-      "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7a9185db-8130-4a7c-ba18-4a169af94012.jpg"
     },
     {
       "id": "ddangyo-1233921-10000039",
@@ -139,13 +124,6 @@
       "description": "옛날통닭 한마리+ 똥집 or 닭발튀김(택 1)+ 음료 500ml+ 무 or 소스(택 1)",
       "category": "세트메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1233921-10000013",
-      "name": "두마리",
-      "description": "",
-      "category": "옛날통닭",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/d197b091-7153-4df4-a92c-9c9c208cf113.jpg"
     },
     {
       "id": "ddangyo-1233921-10000015",
@@ -423,6 +401,8 @@
     "patstoNo": "1233921",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?00RUe3y"
-    ]
+    ],
+    "rawItemCount": 56,
+    "duplicateItemsRemoved": 3
   }
 }

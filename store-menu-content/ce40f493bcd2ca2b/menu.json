@@ -11,49 +11,11 @@
     "노랑 통닭 치킨메뉴",
     "반해줘세트",
     "세트 메뉴(오리지널)",
-    "치밥 메뉴",
-    "똥집 세트",
     "사이드",
     "소스추가",
-    "기타 추가",
-    "대표메뉴"
+    "기타 추가"
   ],
   "items": [
-    {
-      "id": "ddangyo-1171956-30002540",
-      "name": "대파 간장 치킨",
-      "description": "대파간장치킨 + 치킨무",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/87acfce0-89ba-493c-a413-6e5d70172738.jpg"
-    },
-    {
-      "id": "ddangyo-1171956-30002529",
-      "name": "우도 땅콩 치킨",
-      "description": "우도땅콩치킨 + 치킨무 + 청귤소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5be69997-e499-4288-83fd-7ab1a825981f.jpg"
-    },
-    {
-      "id": "ddangyo-1171956-30002189",
-      "name": "엄청 큰 반반 치킨",
-      "description": "엄청 큰 반반 치킨 + 치킨무(후라이드 포함시 + 콩가루 소금 + 양념소스)",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d7af9c60-332d-472b-a451-4e5a034f1d9e.jpg"
-    },
-    {
-      "id": "ddangyo-1171956-30002176",
-      "name": "알싸한 마늘 치킨",
-      "description": "알싸한 마늘 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 알싸한 마늘소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4d4eda8a-6b5e-48b2-a0b4-dfd81b5fc41e.jpg"
-    },
-    {
-      "id": "ddangyo-1171956-30002175",
-      "name": "노랑 3종 세트",
-      "description": "노랑 3종 세트 + 콩가루 소금 + 양념치킨소스 + 치킨무",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2af947d3-fbcd-4279-a365-4ef8600aada1.jpg"
-    },
     {
       "id": "ddangyo-1171956-30002540",
       "name": "대파 간장 치킨",
@@ -62,11 +24,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/87acfce0-89ba-493c-a413-6e5d70172738.jpg"
     },
     {
-      "id": "ddangyo-1171956-30002509",
-      "name": "땅콩크림꽈배기(3PCS)",
-      "description": "",
-      "category": "사이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/14205bc5-eee9-4d50-9953-8b1a869e7965.jpg"
+      "id": "ddangyo-1171956-30002529",
+      "name": "우도 땅콩 치킨",
+      "description": "우도땅콩치킨 + 치킨무 + 청귤소스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5be69997-e499-4288-83fd-7ab1a825981f.jpg"
     },
     {
       "id": "ddangyo-1171956-30002189",
@@ -74,6 +36,27 @@
       "description": "엄청 큰 반반 치킨 + 치킨무(후라이드 포함시 + 콩가루 소금 + 양념소스)",
       "category": "노랑 반반 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d7af9c60-332d-472b-a451-4e5a034f1d9e.jpg"
+    },
+    {
+      "id": "ddangyo-1171956-30002176",
+      "name": "알싸한 마늘 치킨",
+      "description": "알싸한 마늘 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 알싸한 마늘소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4d4eda8a-6b5e-48b2-a0b4-dfd81b5fc41e.jpg"
+    },
+    {
+      "id": "ddangyo-1171956-30002175",
+      "name": "노랑 3종 세트",
+      "description": "노랑 3종 세트 + 콩가루 소금 + 양념치킨소스 + 치킨무",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2af947d3-fbcd-4279-a365-4ef8600aada1.jpg"
+    },
+    {
+      "id": "ddangyo-1171956-30002509",
+      "name": "땅콩크림꽈배기(3PCS)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/14205bc5-eee9-4d50-9953-8b1a869e7965.jpg"
     },
     {
       "id": "ddangyo-1171956-30002251",
@@ -174,13 +157,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1171956-30002529",
-      "name": "우도 땅콩 치킨",
-      "description": "우도땅콩치킨 + 치킨무 + 청귤소스",
-      "category": "신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5be69997-e499-4288-83fd-7ab1a825981f.jpg"
-    },
-    {
       "id": "ddangyo-1171956-30002191",
       "name": "웰빙 파닭 후라이드 반반 치킨",
       "description": "웰빙 파닭 후라이드 반반 치킨 + 치킨무(후라이드 포함시 + 콩가루 소금 + 양념소스)",
@@ -216,13 +192,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d74b7eb2-e2e7-4e27-9906-d03721174618.jpg"
     },
     {
-      "id": "ddangyo-1171956-30002175",
-      "name": "노랑 3종 세트",
-      "description": "노랑 3종 세트 + 콩가루 소금 + 양념치킨소스 + 치킨무",
-      "category": "노랑 통닭 치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2af947d3-fbcd-4279-a365-4ef8600aada1.jpg"
-    },
-    {
       "id": "ddangyo-1171956-30002263",
       "name": "감자 오리지널 세트 (오리지널 치킨+모둠감자튀김+음료)",
       "description": "오리지널 치킨+모둠감자튀김+음료1.25L",
@@ -249,13 +218,6 @@
       "description": "오리지널 치킨+노랑칩스+음료1.25L",
       "category": "세트 메뉴(오리지널)",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1171956-30002176",
-      "name": "알싸한 마늘 치킨",
-      "description": "알싸한 마늘 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 알싸한 마늘소스",
-      "category": "노랑 통닭 치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4d4eda8a-6b5e-48b2-a0b4-dfd81b5fc41e.jpg"
     },
     {
       "id": "ddangyo-1171956-30002313",
@@ -508,6 +470,8 @@
     "patstoNo": "1171956",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?3ymeMR3"
-    ]
+    ],
+    "rawItemCount": 69,
+    "duplicateItemsRemoved": 5
   }
 }

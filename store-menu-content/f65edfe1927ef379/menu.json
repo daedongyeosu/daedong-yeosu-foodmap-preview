@@ -14,44 +14,36 @@
     "사이드 메뉴",
     "추가 메뉴",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1247559-30000007",
       "name": "크리스피 치킨",
       "description": "크리스피치킨 1마리(뼈)+각무1+음료500ml",
-      "category": "대표메뉴",
+      "category": "크리스피치킨시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/dea659d5-e862-4a9b-87a7-e922550720ec.jpg"
     },
     {
       "id": "ddangyo-1247559-30000030",
       "name": "크리스피 반/반치킨",
       "description": "크리스피 반/반 치킨+각무1+음료500ml",
-      "category": "대표메뉴",
+      "category": "반/반 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/232fbfaf-ae11-4793-8697-71f2aabde791.jpg"
     },
     {
       "id": "ddangyo-1247559-30000028",
       "name": "츄리블 세트(반/반/반)",
       "description": "내 맘대로(반/반/반)+각무1+음료500ml",
-      "category": "대표메뉴",
+      "category": "반/반 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/a365d937-f4e4-4a6d-b3ab-ce86a186c0d5.jpg"
     },
     {
       "id": "ddangyo-1247559-30000031",
       "name": "[닭다리살] 순살 반/반",
       "description": "순살 반/반+각무1+음료500ml",
-      "category": "대표메뉴",
+      "category": "반/반 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f04db0da-c6ca-4067-8c3b-9653addef88f.jpg"
-    },
-    {
-      "id": "ddangyo-1247559-30000025",
-      "name": "마루콤보",
-      "description": "마루 콤보(윙봉+다리)+각무1+음료500ml",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b285d6e2-9cde-4a3e-9e96-64060fe20baf.jpg"
     },
     {
       "id": "ddangyo-1247559-30000025",
@@ -59,13 +51,6 @@
       "description": "마루 콤보(윙봉+다리)+각무1+음료500ml",
       "category": "콤보&윙봉",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b285d6e2-9cde-4a3e-9e96-64060fe20baf.jpg"
-    },
-    {
-      "id": "ddangyo-1247559-30000007",
-      "name": "크리스피 치킨",
-      "description": "크리스피치킨 1마리(뼈)+각무1+음료500ml",
-      "category": "크리스피치킨시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/dea659d5-e862-4a9b-87a7-e922550720ec.jpg"
     },
     {
       "id": "ddangyo-1247559-30000035",
@@ -108,13 +93,6 @@
       "description": "목살로망 페퍼콕콕 1마리+마요라차 소스+각무1+음료500ml",
       "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/53f669d6-cc9d-447d-b7ae-5e58c6197dda.jpg"
-    },
-    {
-      "id": "ddangyo-1247559-30000028",
-      "name": "츄리블 세트(반/반/반)",
-      "description": "내 맘대로(반/반/반)+각무1+음료500ml",
-      "category": "반/반 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/a365d937-f4e4-4a6d-b3ab-ce86a186c0d5.jpg"
     },
     {
       "id": "ddangyo-1247559-90000001",
@@ -231,13 +209,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/2e64b5fc-eafc-49df-aa09-79bc3787d2a2.jpg"
     },
     {
-      "id": "ddangyo-1247559-30000030",
-      "name": "크리스피 반/반치킨",
-      "description": "크리스피 반/반 치킨+각무1+음료500ml",
-      "category": "반/반 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/232fbfaf-ae11-4793-8697-71f2aabde791.jpg"
-    },
-    {
       "id": "ddangyo-1247559-30000037",
       "name": "크리스피 뼈+순살 세트",
       "description": "크리스피+순살+각무2+음료500ml",
@@ -251,13 +222,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1247559-30000031",
-      "name": "[닭다리살] 순살 반/반",
-      "description": "순살 반/반+각무1+음료500ml",
-      "category": "반/반 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f04db0da-c6ca-4067-8c3b-9653addef88f.jpg"
     },
     {
       "id": "ddangyo-1247559-30000019",
@@ -534,6 +498,8 @@
     "patstoNo": "1247559",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?LShgUuJ"
-    ]
+    ],
+    "rawItemCount": 72,
+    "duplicateItemsRemoved": 5
   }
 }

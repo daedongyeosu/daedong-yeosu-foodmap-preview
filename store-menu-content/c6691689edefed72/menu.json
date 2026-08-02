@@ -7,30 +7,22 @@
     "전체",
     "메뉴소개",
     "사이드메뉴",
-    "음료",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
       "id": "ddangyo-1273822-10000001",
       "name": "[반&반] 후라이드치킨반마리+(선택1) 반마리~(순살)",
       "description": "후라이드치킨 반마리+(선택) 치킨 반마리",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/c3a15e83-18c3-4f65-bbf9-2fba00a3ee46.jpg"
     },
     {
       "id": "ddangyo-1273822-10000003",
       "name": "[달콤]양념치킨(순살)",
       "description": "남녀노소 모두 즐기는 매콤달콤한 양념치킨",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e2266890-86ae-4475-84c4-846855e250cd.jpg"
-    },
-    {
-      "id": "ddangyo-1273822-10000001",
-      "name": "[반&반] 후라이드치킨반마리+(선택1) 반마리~(순살)",
-      "description": "후라이드치킨 반마리+(선택) 치킨 반마리",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/c3a15e83-18c3-4f65-bbf9-2fba00a3ee46.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e2266890-86ae-4475-84c4-846855e250cd.jpg"
     },
     {
       "id": "ddangyo-1273822-10000011",
@@ -66,13 +58,6 @@
       "description": "",
       "category": "음료",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1273822-10000003",
-      "name": "[달콤]양념치킨(순살)",
-      "description": "남녀노소 모두 즐기는 매콤달콤한 양념치킨",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e2266890-86ae-4475-84c4-846855e250cd.jpg"
     },
     {
       "id": "ddangyo-1273822-10000013",
@@ -276,6 +261,8 @@
     "patstoNo": "1273822",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?gOaJqWQ"
-    ]
+    ],
+    "rawItemCount": 37,
+    "duplicateItemsRemoved": 2
   }
 }

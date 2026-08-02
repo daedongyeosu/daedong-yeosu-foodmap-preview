@@ -8,37 +8,29 @@
     "메뉴소개",
     "반마리 메뉴",
     "사이드메뉴",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1169335-10000001",
       "name": "한마리 치킨",
       "description": "치킨무 ,콜라500ml ,순한맛(소스) 기본구성입니다",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/cce74f2e-af1a-4e41-be05-2525d16f82c1.jpg"
     },
     {
       "id": "ddangyo-1169335-10000002",
       "name": "다리날개 치킨",
       "description": "치킨무 ,콜라500ml ,순한맛(소스) 기본구성입니다",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/10965111-b851-4ef1-a99e-7e28911a6bd8.jpg"
     },
     {
       "id": "ddangyo-1169335-10000003",
       "name": "날개 치킨",
       "description": "치킨무 ,콜라500ml ,순한맛(소스) 기본구성입니다",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/833b8bc2-0859-441e-b58d-e9419292e095.jpg"
-    },
-    {
-      "id": "ddangyo-1169335-10000001",
-      "name": "한마리 치킨",
-      "description": "치킨무 ,콜라500ml ,순한맛(소스) 기본구성입니다",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/cce74f2e-af1a-4e41-be05-2525d16f82c1.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/833b8bc2-0859-441e-b58d-e9419292e095.jpg"
     },
     {
       "id": "ddangyo-1169335-10000007",
@@ -63,13 +55,6 @@
       "adultOnly": true
     },
     {
-      "id": "ddangyo-1169335-10000002",
-      "name": "다리날개 치킨",
-      "description": "치킨무 ,콜라500ml ,순한맛(소스) 기본구성입니다",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/10965111-b851-4ef1-a99e-7e28911a6bd8.jpg"
-    },
-    {
       "id": "ddangyo-1169335-10000008",
       "name": "날개 반마리",
       "description": "치킨무o콜라x",
@@ -90,13 +75,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1169335-10000003",
-      "name": "날개 치킨",
-      "description": "치킨무 ,콜라500ml ,순한맛(소스) 기본구성입니다",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/833b8bc2-0859-441e-b58d-e9419292e095.jpg"
     },
     {
       "id": "ddangyo-1169335-10000009",
@@ -251,6 +229,8 @@
     "patstoNo": "1169335",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?J1z92gs"
-    ]
+    ],
+    "rawItemCount": 32,
+    "duplicateItemsRemoved": 3
   }
 }

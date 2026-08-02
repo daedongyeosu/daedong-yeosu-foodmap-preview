@@ -5,47 +5,42 @@
   "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/678bfdae-d2fc-4496-8085-c1a871f105b2.png",
   "categories": [
     "전체",
-    "신메뉴[크리스피킹]",
-    "[신메뉴] 콘소메",
     "세트",
-    "[신메뉴]맵쇼킹",
     "순살",
     "그릴 후라이드",
-    "신메뉴 [바삭허니시리즈]",
     "치킨",
     "윙,봉,다리",
     "사이드메뉴",
     "소스",
-    "음료",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
       "id": "ddangyo-1282239-30000086",
       "name": "그릴후라이드순살",
       "description": "",
-      "category": "대표메뉴",
+      "category": "그릴 후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/2c96c018-9221-4bc6-aec2-e23b48811aa0.jpg"
     },
     {
       "id": "ddangyo-1282239-30000087",
       "name": "그릴후라이드콤보",
       "description": "통다리(2ea)+통날개(4ea)",
-      "category": "대표메뉴",
+      "category": "그릴 후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/af055cae-bb57-4f9d-aa12-fd9e54acb1ea.jpg"
     },
     {
       "id": "ddangyo-1282239-30000088",
       "name": "그릴후라이드통다리",
       "description": "통다리(4ea)",
-      "category": "대표메뉴",
+      "category": "그릴 후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/12a50761-f22a-4acf-b753-2b653c14abd4.jpg"
     },
     {
       "id": "ddangyo-1282239-30000089",
       "name": "그릴후라이드윙",
       "description": "윙(8ea)+봉(8ea)",
-      "category": "대표메뉴",
+      "category": "그릴 후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/e2567da4-d4cf-491a-969a-6a50c1d807e1.jpg"
     },
     {
@@ -245,13 +240,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/a1b2209e-f7c8-4c6b-a2bb-e6fd5098eb52.jpg"
     },
     {
-      "id": "ddangyo-1282239-30000086",
-      "name": "그릴후라이드순살",
-      "description": "",
-      "category": "그릴 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/2c96c018-9221-4bc6-aec2-e23b48811aa0.jpg"
-    },
-    {
       "id": "ddangyo-1282239-30000010",
       "name": "양념순살",
       "description": "",
@@ -280,13 +268,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/5c0f27b4-d5ca-497b-ba3e-0958f1b9cc09.jpg"
     },
     {
-      "id": "ddangyo-1282239-30000087",
-      "name": "그릴후라이드콤보",
-      "description": "통다리(2ea)+통날개(4ea)",
-      "category": "그릴 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/af055cae-bb57-4f9d-aa12-fd9e54acb1ea.jpg"
-    },
-    {
       "id": "ddangyo-1282239-30000022",
       "name": "양념치킨",
       "description": "",
@@ -308,13 +289,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/523a6626-10ba-419d-bfca-f2c6dc5e57c4.jpg"
     },
     {
-      "id": "ddangyo-1282239-30000088",
-      "name": "그릴후라이드통다리",
-      "description": "통다리(4ea)",
-      "category": "그릴 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/12a50761-f22a-4acf-b753-2b653c14abd4.jpg"
-    },
-    {
       "id": "ddangyo-1282239-30000051",
       "name": "부어소떡",
       "description": "",
@@ -334,13 +308,6 @@
       "description": "",
       "category": "순살",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/9ffa23f3-6518-4e84-8362-32122119b7d1.jpg"
-    },
-    {
-      "id": "ddangyo-1282239-30000089",
-      "name": "그릴후라이드윙",
-      "description": "윙(8ea)+봉(8ea)",
-      "category": "그릴 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/e2567da4-d4cf-491a-969a-6a50c1d807e1.jpg"
     },
     {
       "id": "ddangyo-1282239-30000052",
@@ -425,6 +392,8 @@
     "patstoNo": "1282239",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?bMUAAyS"
-    ]
+    ],
+    "rawItemCount": 57,
+    "duplicateItemsRemoved": 4
   }
 }

@@ -11,67 +11,9 @@
     "건어물 안주류",
     "음료",
     "추가메뉴",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
-    {
-      "id": "ddangyo-1212165-10000014",
-      "name": "바싹옛날통닭",
-      "description": "옛날통닭+소금, 치킨무 별도 주문",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/b449c06b-1dfb-4708-a8a7-cd72b98e4aa4.jpg"
-    },
-    {
-      "id": "ddangyo-1212165-10000021",
-      "name": "식맛똥집튀김",
-      "description": "국내산 닭근위와 청양고추를 적당한 크기로 자른후 바싹하게 튀겨낸 똥집튀김 (점장 최애 매뉴)",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0d637dd8-77e2-41b4-8dfa-3eb0b85582a6.jpg"
-    },
-    {
-      "id": "ddangyo-1212165-10000001",
-      "name": "바싹옛날통닭+어묵듬뿍국물떡볶이",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/792608e9-759d-4968-9e37-8ce4dca6d6fb.jpg"
-    },
-    {
-      "id": "ddangyo-1212165-10000022",
-      "name": "어묵듬뿍국물떡볶이",
-      "description": "밀떡과 도미살 어묵이 듬뿍 들어간 쫀득달콤한 국물 떡볶이",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/975651c7-7151-4b41-a715-3d1ac511fb4a.jpg"
-    },
-    {
-      "id": "ddangyo-1212165-10000016",
-      "name": "누룽지통닭 한마리",
-      "description": "치킨무, 어묵꼬치,바베큐소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/8ec62dbe-e401-4099-82f9-70f81a97288e.jpg"
-    },
-    {
-      "id": "ddangyo-1212165-10000015",
-      "name": "찹쌀통닭(전기구이)",
-      "description": "찹쌀통닭+바베큐소스+소금, 치킨무 별도 주문",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ffc511ad-b10e-401a-8e47-6347f4e1ef00.jpg"
-    },
-    {
-      "id": "ddangyo-1212165-10000001",
-      "name": "바싹옛날통닭+어묵듬뿍국물떡볶이",
-      "description": "",
-      "category": "어묵듬뿍국물떡볶이세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/792608e9-759d-4968-9e37-8ce4dca6d6fb.jpg"
-    },
-    {
-      "id": "ddangyo-1212165-90000003",
-      "name": "카스 생맥주",
-      "description": "",
-      "category": "주류메뉴",
-      "image": "",
-      "adultOnly": true
-    },
     {
       "id": "ddangyo-1212165-10000014",
       "name": "바싹옛날통닭",
@@ -85,6 +27,42 @@
       "description": "국내산 닭근위와 청양고추를 적당한 크기로 자른후 바싹하게 튀겨낸 똥집튀김 (점장 최애 매뉴)",
       "category": "스페셜메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0d637dd8-77e2-41b4-8dfa-3eb0b85582a6.jpg"
+    },
+    {
+      "id": "ddangyo-1212165-10000001",
+      "name": "바싹옛날통닭+어묵듬뿍국물떡볶이",
+      "description": "",
+      "category": "어묵듬뿍국물떡볶이세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/792608e9-759d-4968-9e37-8ce4dca6d6fb.jpg"
+    },
+    {
+      "id": "ddangyo-1212165-10000022",
+      "name": "어묵듬뿍국물떡볶이",
+      "description": "밀떡과 도미살 어묵이 듬뿍 들어간 쫀득달콤한 국물 떡볶이",
+      "category": "스페셜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/975651c7-7151-4b41-a715-3d1ac511fb4a.jpg"
+    },
+    {
+      "id": "ddangyo-1212165-10000016",
+      "name": "누룽지통닭 한마리",
+      "description": "치킨무, 어묵꼬치,바베큐소스",
+      "category": "식맛치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/8ec62dbe-e401-4099-82f9-70f81a97288e.jpg"
+    },
+    {
+      "id": "ddangyo-1212165-10000015",
+      "name": "찹쌀통닭(전기구이)",
+      "description": "찹쌀통닭+바베큐소스+소금, 치킨무 별도 주문",
+      "category": "식맛치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ffc511ad-b10e-401a-8e47-6347f4e1ef00.jpg"
+    },
+    {
+      "id": "ddangyo-1212165-90000003",
+      "name": "카스 생맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
     },
     {
       "id": "ddangyo-1212165-10000025",
@@ -113,20 +91,6 @@
       "description": "",
       "category": "어묵듬뿍국물떡볶이세트",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1212165-10000015",
-      "name": "찹쌀통닭(전기구이)",
-      "description": "찹쌀통닭+바베큐소스+소금, 치킨무 별도 주문",
-      "category": "식맛치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ffc511ad-b10e-401a-8e47-6347f4e1ef00.jpg"
-    },
-    {
-      "id": "ddangyo-1212165-10000022",
-      "name": "어묵듬뿍국물떡볶이",
-      "description": "밀떡과 도미살 어묵이 듬뿍 들어간 쫀득달콤한 국물 떡볶이",
-      "category": "스페셜메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/975651c7-7151-4b41-a715-3d1ac511fb4a.jpg"
     },
     {
       "id": "ddangyo-1212165-10000026",
@@ -171,13 +135,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1212165-10000016",
-      "name": "누룽지통닭 한마리",
-      "description": "치킨무, 어묵꼬치,바베큐소스",
-      "category": "식맛치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/8ec62dbe-e401-4099-82f9-70f81a97288e.jpg"
     },
     {
       "id": "ddangyo-1212165-10000023",
@@ -355,6 +312,8 @@
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?W3C2xOs",
       "https://fdofd.ddangyo.com/gateway1.html?vYrFYv3"
-    ]
+    ],
+    "rawItemCount": 47,
+    "duplicateItemsRemoved": 6
   }
 }

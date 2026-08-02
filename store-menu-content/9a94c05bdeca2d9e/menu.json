@@ -13,44 +13,36 @@
     "세트메뉴",
     "the바삭_치킨",
     "사이드",
-    "음료.소스.무,햇반",
-    "대표메뉴"
+    "음료.소스.무,햇반"
   ],
   "items": [
     {
       "id": "ddangyo-1130868-10000005",
       "name": "후라이드치킨",
       "description": "깨끗하고 고소한 맛",
-      "category": "대표메뉴",
+      "category": "오리지날",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg"
     },
     {
       "id": "ddangyo-1130868-10000006",
       "name": "양념치킨",
       "description": "입맛에 쏙 맞는 달콤달달한 맛",
-      "category": "대표메뉴",
+      "category": "오리지날",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa6bbf0a-1c10-4473-a6d8-bfabf7585c96.jpg"
     },
     {
       "id": "ddangyo-1130868-10000019",
       "name": "순살후라이드",
       "description": "매일 새기름으로 조리한 닭다리 순살치킨",
-      "category": "대표메뉴",
+      "category": "순살치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
     },
     {
       "id": "ddangyo-1130868-10000002",
       "name": "윙봉_치킨",
       "description": "윙봉도 아주커",
-      "category": "대표메뉴",
+      "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002121.jpg"
-    },
-    {
-      "id": "ddangyo-1130868-10000005",
-      "name": "후라이드치킨",
-      "description": "깨끗하고 고소한 맛",
-      "category": "오리지날",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg"
     },
     {
       "id": "ddangyo-1130868-10000010",
@@ -95,20 +87,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/64654887-9667-44c3-8837-4b738239a5fb.jpg"
     },
     {
-      "id": "ddangyo-1130868-10000002",
-      "name": "윙봉_치킨",
-      "description": "윙봉도 아주커",
-      "category": "신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002121.jpg"
-    },
-    {
-      "id": "ddangyo-1130868-10000006",
-      "name": "양념치킨",
-      "description": "입맛에 쏙 맞는 달콤달달한 맛",
-      "category": "오리지날",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa6bbf0a-1c10-4473-a6d8-bfabf7585c96.jpg"
-    },
-    {
       "id": "ddangyo-1130868-10000011",
       "name": "뼈_반반치킨",
       "description": "",
@@ -121,13 +99,6 @@
       "description": "깨끗하고 고소한 맛",
       "category": "윙봉치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002120.jpg"
-    },
-    {
-      "id": "ddangyo-1130868-10000019",
-      "name": "순살후라이드",
-      "description": "매일 새기름으로 조리한 닭다리 순살치킨",
-      "category": "순살치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
     },
     {
       "id": "ddangyo-1130868-10000030",
@@ -359,6 +330,8 @@
     "patstoNo": "1130868",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?TQXhH05"
-    ]
+    ],
+    "rawItemCount": 48,
+    "duplicateItemsRemoved": 4
   }
 }

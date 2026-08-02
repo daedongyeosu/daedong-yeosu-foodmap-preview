@@ -16,36 +16,35 @@
     "피자",
     "사이드메뉴",
     "소스&치킨무",
-    "음료",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
       "id": "ddangyo-1124482-30000011",
       "name": "황금올리브치킨™",
       "description": "기본 소스는 미포함이며, 옵션 추가 가능합니다/겉은 바삭 육즙 가득한 부드러운 속살이 환상적인 건강한 치킨 비비큐의 시그니처 메뉴 후라이드의 대명사 황금올리브치킨™ [땅콩 알러지 주의]",
-      "category": "대표메뉴",
+      "category": "후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8eb1cec3-f543-4be5-9149-2faf665267ef.jpg"
     },
     {
       "id": "ddangyo-1124482-30000177",
       "name": "[황.양.반] 황올 반+양념 반",
       "description": "기본 소스는 미포함이며, 옵션 추가 가능합니다/겉바속촉 황금올리브치킨™과 부드러운 단맛이 매력적인 양념치킨의 조합 [땅콩 알러지 주의]",
-      "category": "대표메뉴",
+      "category": "반반",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/2a3b9678-750c-4606-a2e3-80c641f0247e.jpg"
     },
     {
       "id": "ddangyo-1124482-30000040",
       "name": "자메이카 통다리구이",
       "description": "치킨 부위 중 가장 맛있는 엉치살이 붙은 통다리만을 골라, 카리브해 서인도제도의 신비의 나라인 자메이카의 300년 전통 저크 소스를 바른 뒤, 2번 구워내어 매콤 달콤한 맛과 깊은 신비를 느낄 수 있는 치킨, 바비큐의 절정 통다리구이",
-      "category": "대표메뉴",
+      "category": "구이",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ca6e2488-0ab3-49bf-af8e-29ba53364dd4.jpg"
     },
     {
       "id": "ddangyo-1124482-30000179",
       "name": "황금올리브치킨™양념",
       "description": "옛날 치킨 컨셉의 얇은 튀김옷에 사과 퓨레, 당근 등의 천연재료를 가미하여 부드러운 단맛이 매력적인 BBQ의 새로운 양념치킨 [땅콩 알러지 주의]",
-      "category": "대표메뉴",
+      "category": "양념",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/19c973bc-1563-4b3f-9f41-c85cbd400460.jpg"
     },
     {
@@ -54,13 +53,6 @@
       "description": "(7/16~소진시) 필릭스 굿즈 증정 : 럭키드로우(랜덤) 또는 럭키포토(랜덤) 중 1종 선택 * 매장별 운영 상황 및 굿즈 재고에 따라 제공 여부가 상이하므로, 이용 전 매장에 문의해 주시기 바랍니다. 마지막 한입까지 바삭하게 씹히는 특제 플레이크와, 캐러멜라이즈드 어니언의 깊은 감칠맛을 더한 치킨",
       "category": "필릭스 PICK",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3c9a3787-bf5d-4902-bd52-7fe469c9c1f7.jpg"
-    },
-    {
-      "id": "ddangyo-1124482-30000177",
-      "name": "[황.양.반] 황올 반+양념 반",
-      "description": "기본 소스는 미포함이며, 옵션 추가 가능합니다/겉바속촉 황금올리브치킨™과 부드러운 단맛이 매력적인 양념치킨의 조합 [땅콩 알러지 주의]",
-      "category": "반반",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/2a3b9678-750c-4606-a2e3-80c641f0247e.jpg"
     },
     {
       "id": "ddangyo-1124482-30000266",
@@ -89,13 +81,6 @@
       "description": "입에 촤악~감기는 자메이카 맵단 소스",
       "category": "소스&치킨무",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/970550b8-edb6-4394-85d9-9531536d6353.jpg"
-    },
-    {
-      "id": "ddangyo-1124482-30000011",
-      "name": "황금올리브치킨™",
-      "description": "기본 소스는 미포함이며, 옵션 추가 가능합니다/겉은 바삭 육즙 가득한 부드러운 속살이 환상적인 건강한 치킨 비비큐의 시그니처 메뉴 후라이드의 대명사 황금올리브치킨™ [땅콩 알러지 주의]",
-      "category": "후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8eb1cec3-f543-4be5-9149-2faf665267ef.jpg"
     },
     {
       "id": "ddangyo-1124482-30000054",
@@ -180,13 +165,6 @@
       "description": "BBQ의 전통간장소스로 맛을 낸 매콤 달콤 짭짤의 하모니 치킨을 더 완벽하게 만드는 간장소스가 입안 가득 감칠맛을 더해줘서 먹는 순간 멜로디가 나오는 그 맛 피복은 글레이징 되어 바삭하며 시간이 지나도 바삭한 식감이 오래 유지되는 치킨 [땅콩 알러지 주의]",
       "category": "양념",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/f69b071b-9aa1-40de-9bb8-5b000dc23d6f.jpg"
-    },
-    {
-      "id": "ddangyo-1124482-30000040",
-      "name": "자메이카 통다리구이",
-      "description": "치킨 부위 중 가장 맛있는 엉치살이 붙은 통다리만을 골라, 카리브해 서인도제도의 신비의 나라인 자메이카의 300년 전통 저크 소스를 바른 뒤, 2번 구워내어 매콤 달콤한 맛과 깊은 신비를 느낄 수 있는 치킨, 바비큐의 절정 통다리구이",
-      "category": "구이",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ca6e2488-0ab3-49bf-af8e-29ba53364dd4.jpg"
     },
     {
       "id": "ddangyo-1124482-30001075",
@@ -383,13 +361,6 @@
       "description": "아삭한 고추에 새우와 돈육을 채워 바삭하게 튀긴, 감칠맛과 육즙이 풍부한 BBQ 프리미엄 사이드 메뉴!",
       "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/04f4f058-e070-4db0-a896-df5b1dcfae38.jpg"
-    },
-    {
-      "id": "ddangyo-1124482-30000179",
-      "name": "황금올리브치킨™양념",
-      "description": "옛날 치킨 컨셉의 얇은 튀김옷에 사과 퓨레, 당근 등의 천연재료를 가미하여 부드러운 단맛이 매력적인 BBQ의 새로운 양념치킨 [땅콩 알러지 주의]",
-      "category": "양념",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/19c973bc-1563-4b3f-9f41-c85cbd400460.jpg"
     },
     {
       "id": "ddangyo-1124482-30000176",
@@ -908,6 +879,8 @@
     "patstoNo": "1124482",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?KXMaAWm"
-    ]
+    ],
+    "rawItemCount": 126,
+    "duplicateItemsRemoved": 4
   }
 }

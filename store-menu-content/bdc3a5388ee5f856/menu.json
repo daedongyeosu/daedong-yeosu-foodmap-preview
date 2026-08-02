@@ -7,29 +7,28 @@
     "전체",
     "세트메뉴",
     "메뉴소개",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1311033-10000003",
       "name": "대만족 삼겹보쌈",
       "description": "보쌈+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/75768c42-4166-41ed-b681-f869c519f1b2.jpg"
     },
     {
       "id": "ddangyo-1311033-10000004",
       "name": "야들야들 건강족발",
       "description": "족발+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라 500ml",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a85255c2-8577-49fc-aa07-dfd9e47561e8.jpg"
     },
     {
       "id": "ddangyo-1311033-10000006",
       "name": "맛있게매운 불족발",
       "description": "족발+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/9c3287b0-60c6-4bc1-a125-19c770a30360.jpg"
     },
     {
@@ -48,13 +47,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1311033-10000003",
-      "name": "대만족 삼겹보쌈",
-      "description": "보쌈+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/75768c42-4166-41ed-b681-f869c519f1b2.jpg"
-    },
-    {
       "id": "ddangyo-1311033-90000002",
       "name": "잎새주(병)(360ml)",
       "description": "",
@@ -68,13 +60,6 @@
       "description": "불족보쌈+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
       "category": "세트메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1311033-10000004",
-      "name": "야들야들 건강족발",
-      "description": "족발+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라 500ml",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a85255c2-8577-49fc-aa07-dfd9e47561e8.jpg"
     },
     {
       "id": "ddangyo-1311033-90000003",
@@ -98,13 +83,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1311033-10000006",
-      "name": "맛있게매운 불족발",
-      "description": "족발+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/9c3287b0-60c6-4bc1-a125-19c770a30360.jpg"
     },
     {
       "id": "ddangyo-1311033-10000007",
@@ -161,6 +139,8 @@
     "patstoNo": "1311033",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?5z5oUHy"
-    ]
+    ],
+    "rawItemCount": 20,
+    "duplicateItemsRemoved": 3
   }
 }

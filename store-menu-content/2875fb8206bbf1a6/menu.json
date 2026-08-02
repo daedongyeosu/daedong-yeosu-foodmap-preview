@@ -6,9 +6,7 @@
   "categories": [
     "전체",
     "할인메뉴",
-    "이글스 세트",
     "네네 시그니처시리즈",
-    "네네 신메뉴",
     "네네 양념시리즈",
     "네네 간장시리즈",
     "네네 후라이드시리즈",
@@ -16,8 +14,7 @@
     "네네 사이드",
     "네네 반반반시리즈",
     "음료",
-    "소스",
-    "대표메뉴"
+    "소스"
   ],
   "items": [
     {
@@ -31,35 +28,35 @@
       "id": "ddangyo-1227865-30000247",
       "name": "치즈스노윙",
       "description": "",
-      "category": "대표메뉴",
+      "category": "네네 시그니처시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/d3e3d9d7-473b-48e6-a9b9-4d799fa8ed6b.jpg"
     },
     {
       "id": "ddangyo-1227865-30000249",
       "name": "오리엔탈파닭",
       "description": "",
-      "category": "대표메뉴",
+      "category": "네네 시그니처시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/a7ceecbf-c67f-4c3a-9d1a-c883a659202d.jpg"
     },
     {
       "id": "ddangyo-1227865-30000250",
       "name": "레드마블치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "네네 양념시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9c35a0b6-3cd1-4425-9824-bb65b54dcf0f.jpg"
     },
     {
       "id": "ddangyo-1227865-30000253",
       "name": "청양마요치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "네네 양념시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/4022ff49-b7fc-4b3d-8d32-20f1ea923fdd.jpg"
     },
     {
       "id": "ddangyo-1227865-30000271",
       "name": "반반",
       "description": "",
-      "category": "대표메뉴",
+      "category": "네네 반반시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/b1f52555-efdf-4286-8489-da1a7f95e1d7.jpg"
     },
     {
@@ -68,13 +65,6 @@
       "description": "",
       "category": "네네 후라이드시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/792d6a13-5726-4686-a417-2817eca97197.jpg"
-    },
-    {
-      "id": "ddangyo-1227865-30000250",
-      "name": "레드마블치킨",
-      "description": "",
-      "category": "네네 양념시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9c35a0b6-3cd1-4425-9824-bb65b54dcf0f.jpg"
     },
     {
       "id": "ddangyo-1227865-30000245",
@@ -89,20 +79,6 @@
       "description": "",
       "category": "네네 반반반시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/b4fe20d4-f967-4f62-9959-16f505eef721.jpg"
-    },
-    {
-      "id": "ddangyo-1227865-30000271",
-      "name": "반반",
-      "description": "",
-      "category": "네네 반반시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/b1f52555-efdf-4286-8489-da1a7f95e1d7.jpg"
-    },
-    {
-      "id": "ddangyo-1227865-30000330",
-      "name": "이글스 파닭세트(오리엔탈파닭+소떡소떡)",
-      "description": "",
-      "category": "이글스 세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/526c2d3e-64f6-4899-8449-2628305719a3.jpg"
     },
     {
       "id": "ddangyo-1227865-30000261",
@@ -154,13 +130,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1227865-30000247",
-      "name": "치즈스노윙",
-      "description": "",
-      "category": "네네 시그니처시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/d3e3d9d7-473b-48e6-a9b9-4d799fa8ed6b.jpg"
-    },
-    {
       "id": "ddangyo-1227865-30000252",
       "name": "레드마요치킨",
       "description": "",
@@ -173,13 +142,6 @@
       "description": "",
       "category": "네네 후라이드시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/5bb50d76-fc70-44d5-ac7e-35d52fbba321.jpg"
-    },
-    {
-      "id": "ddangyo-1227865-30000253",
-      "name": "청양마요치킨",
-      "description": "",
-      "category": "네네 양념시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/4022ff49-b7fc-4b3d-8d32-20f1ea923fdd.jpg"
     },
     {
       "id": "ddangyo-1227865-30000306",
@@ -222,13 +184,6 @@
       "description": "",
       "category": "네네 양념시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9a2b3023-cbfa-43fa-82ef-5f6f44ea5791.jpg"
-    },
-    {
-      "id": "ddangyo-1227865-30000249",
-      "name": "오리엔탈파닭",
-      "description": "",
-      "category": "네네 시그니처시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/a7ceecbf-c67f-4c3a-9d1a-c883a659202d.jpg"
     },
     {
       "id": "ddangyo-1227865-30000276",
@@ -418,6 +373,8 @@
     "patstoNo": "1227865",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?n8F0Vm2"
-    ]
+    ],
+    "rawItemCount": 56,
+    "duplicateItemsRemoved": 6
   }
 }

@@ -14,29 +14,28 @@
     "사이드",
     "음료메뉴",
     "배달비 추가",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1172770-10000002",
       "name": "오리날개 양념파",
       "description": "양념파+파소스+양념소스+치킨 무",
-      "category": "대표메뉴",
+      "category": "오리날개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/96c58d1a-0ef7-4ac6-a79c-d5e3cb733fc7.jpg"
     },
     {
       "id": "ddangyo-1172770-10000032",
       "name": "타코야키 오리지날",
       "description": "클래식한 델리소스와 마요소스위 가쓰오부시가 가득",
-      "category": "대표메뉴",
+      "category": "타코야키",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/5e5704f9-79ed-4e4f-92b3-61ca9bcf7b5f.jpg"
     },
     {
       "id": "ddangyo-1172770-10000006",
       "name": "오리목살파",
       "description": "목살파+파소스+양념소스+치킨 무",
-      "category": "대표메뉴",
+      "category": "오리목살",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/cea4ad45-e279-405d-bdbd-2f53a8e756f3.jpg"
     },
     {
@@ -45,13 +44,6 @@
       "description": "오리지널+파소스+양념소스+치킨 무",
       "category": "오리날개",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1172770-10000006",
-      "name": "오리목살파",
-      "description": "목살파+파소스+양념소스+치킨 무",
-      "category": "오리목살",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/cea4ad45-e279-405d-bdbd-2f53a8e756f3.jpg"
     },
     {
       "id": "ddangyo-1172770-10000010",
@@ -73,13 +65,6 @@
       "description": "",
       "category": "소스추가",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1172770-10000032",
-      "name": "타코야키 오리지날",
-      "description": "클래식한 델리소스와 마요소스위 가쓰오부시가 가득",
-      "category": "타코야키",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/5e5704f9-79ed-4e4f-92b3-61ca9bcf7b5f.jpg"
     },
     {
       "id": "ddangyo-1172770-10000046",
@@ -109,13 +94,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1172770-10000002",
-      "name": "오리날개 양념파",
-      "description": "양념파+파소스+양념소스+치킨 무",
-      "category": "오리날개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/96c58d1a-0ef7-4ac6-a79c-d5e3cb733fc7.jpg"
     },
     {
       "id": "ddangyo-1172770-10000007",
@@ -499,6 +477,8 @@
     "patstoNo": "1172770",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?n8fubo6"
-    ]
+    ],
+    "rawItemCount": 67,
+    "duplicateItemsRemoved": 3
   }
 }

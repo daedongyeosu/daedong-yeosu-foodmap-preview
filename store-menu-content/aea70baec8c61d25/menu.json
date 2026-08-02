@@ -15,51 +15,43 @@
     "똥집 세트",
     "사이드",
     "소스추가",
-    "기타 추가",
-    "대표메뉴"
+    "기타 추가"
   ],
   "items": [
     {
       "id": "ddangyo-1177925-30002540",
       "name": "대파 간장 치킨",
       "description": "대파간장치킨 + 치킨무",
-      "category": "대표메뉴",
+      "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/87acfce0-89ba-493c-a413-6e5d70172738.jpg"
     },
     {
       "id": "ddangyo-1177925-30002529",
       "name": "우도 땅콩 치킨",
       "description": "우도땅콩치킨 + 치킨무 + 청귤소스",
-      "category": "대표메뉴",
+      "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5be69997-e499-4288-83fd-7ab1a825981f.jpg"
     },
     {
       "id": "ddangyo-1177925-30002189",
       "name": "엄청 큰 반반 치킨",
       "description": "엄청 큰 반반 치킨 + 치킨무(후라이드 포함시 + 콩가루 소금 + 양념소스)",
-      "category": "대표메뉴",
+      "category": "노랑 반반 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d7af9c60-332d-472b-a451-4e5a034f1d9e.jpg"
     },
     {
       "id": "ddangyo-1177925-30002176",
       "name": "알싸한 마늘 치킨",
       "description": "알싸한 마늘 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 알싸한 마늘소스",
-      "category": "대표메뉴",
+      "category": "노랑 통닭 치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4d4eda8a-6b5e-48b2-a0b4-dfd81b5fc41e.jpg"
     },
     {
       "id": "ddangyo-1177925-30002175",
       "name": "노랑 3종 세트",
       "description": "노랑 3종 세트 + 콩가루 소금 + 양념치킨소스 + 치킨무",
-      "category": "대표메뉴",
+      "category": "노랑 통닭 치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2af947d3-fbcd-4279-a365-4ef8600aada1.jpg"
-    },
-    {
-      "id": "ddangyo-1177925-30002540",
-      "name": "대파 간장 치킨",
-      "description": "대파간장치킨 + 치킨무",
-      "category": "신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/87acfce0-89ba-493c-a413-6e5d70172738.jpg"
     },
     {
       "id": "ddangyo-1177925-30002279",
@@ -81,13 +73,6 @@
       "description": "",
       "category": "사이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/14205bc5-eee9-4d50-9953-8b1a869e7965.jpg"
-    },
-    {
-      "id": "ddangyo-1177925-30002189",
-      "name": "엄청 큰 반반 치킨",
-      "description": "엄청 큰 반반 치킨 + 치킨무(후라이드 포함시 + 콩가루 소금 + 양념소스)",
-      "category": "노랑 반반 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d7af9c60-332d-472b-a451-4e5a034f1d9e.jpg"
     },
     {
       "id": "ddangyo-1177925-30002437",
@@ -188,13 +173,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/b8eb1ac4-fded-4698-9ea9-6002db3bd560.jpg"
     },
     {
-      "id": "ddangyo-1177925-30002529",
-      "name": "우도 땅콩 치킨",
-      "description": "우도땅콩치킨 + 치킨무 + 청귤소스",
-      "category": "신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5be69997-e499-4288-83fd-7ab1a825981f.jpg"
-    },
-    {
       "id": "ddangyo-1177925-30002301",
       "name": "갈릭인더딥소스",
       "description": "알싸한 마늘 큐브, 달달한 요거트, 고소한 마요네즈로 만든 딥한 반전의 소스",
@@ -223,13 +201,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1177925-30002175",
-      "name": "노랑 3종 세트",
-      "description": "노랑 3종 세트 + 콩가루 소금 + 양념치킨소스 + 치킨무",
-      "category": "노랑 통닭 치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2af947d3-fbcd-4279-a365-4ef8600aada1.jpg"
-    },
-    {
       "id": "ddangyo-1177925-30002512",
       "name": "모둠튀김",
       "description": "",
@@ -249,13 +220,6 @@
       "description": "",
       "category": "사이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/887dfbef-a715-4608-8a12-576136dc15a8.jpg"
-    },
-    {
-      "id": "ddangyo-1177925-30002176",
-      "name": "알싸한 마늘 치킨",
-      "description": "알싸한 마늘 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 알싸한 마늘소스",
-      "category": "노랑 통닭 치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4d4eda8a-6b5e-48b2-a0b4-dfd81b5fc41e.jpg"
     },
     {
       "id": "ddangyo-1177925-30002264",
@@ -515,6 +479,8 @@
     "patstoNo": "1177925",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?CbMsswm"
-    ]
+    ],
+    "rawItemCount": 70,
+    "duplicateItemsRemoved": 5
   }
 }

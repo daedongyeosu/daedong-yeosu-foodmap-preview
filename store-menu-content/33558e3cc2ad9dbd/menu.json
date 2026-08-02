@@ -75,13 +75,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/08418cda-5b52-4a3b-addc-5e5785d49e63.jpg"
     },
     {
-      "id": "ddangyo-1115976-30001055",
-      "name": "굽네 양념 강정",
-      "description": "굽네 양념 강정(소스, 음료 미제공)",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b99a4d25-afb2-470e-903f-b0d145468062.jpg"
-    },
-    {
       "id": "ddangyo-1115976-30000001",
       "name": "(SET) 치킨+피자+콜라1.25L",
       "description": "치킨(택1)+피자(택1)+콜라1.25L",
@@ -175,13 +168,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/8098e611-c88f-4f78-8bb6-d3bb52047db5.jpg"
     },
     {
-      "id": "ddangyo-1115976-30001049",
-      "name": "헬시 Pick 닭가슴살",
-      "description": "닭가슴살 부위 (맛선택)+치킨무+소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0424e79d-17f6-4fc0-b5ab-2731f0dd56b6.jpg"
-    },
-    {
       "id": "ddangyo-1115976-30000394",
       "name": "고추바사삭",
       "description": "고추바사삭+고블링소스+마블링소스+치킨무",
@@ -231,25 +217,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4d476ed2-5e99-43b1-8e98-356eeafae9bd.jpg"
     },
     {
-      "id": "ddangyo-1115976-30001053",
-      "name": "(New) 굽네 순살 시카고 피자 시리즈",
-      "description": "(New) 굽네 순살 시카고 피자 시리즈(택1)＋피클＋갈릭디핑+핫소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0fea8653-a201-43a5-991c-aa0fe2023093.jpg"
-    },
-    {
       "id": "ddangyo-1115976-30000041",
       "name": "핫소스",
       "description": "",
       "category": "치킨무 & 피클 & 피자소스",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1115976-30001052",
-      "name": "(New) 치킨베이크",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/270d193b-d7a8-4082-9cc3-dc323942466b.jpg"
     },
     {
       "id": "ddangyo-1115976-30000030",
@@ -559,6 +531,8 @@
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?s64ZuPD",
       "https://fdofd.ddangyo.com/gateway1.html?wOxD8Lf"
-    ]
+    ],
+    "rawItemCount": 76,
+    "duplicateItemsRemoved": 4
   }
 }

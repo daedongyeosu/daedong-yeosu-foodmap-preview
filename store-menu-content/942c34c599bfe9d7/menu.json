@@ -12,22 +12,21 @@
     "셋트메뉴",
     "사이드메뉴",
     "음료메뉴",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1171587-10000014",
       "name": "[인기최고] 불고기피자",
       "description": "스크린 or 치즈크러스트피자L+콜라500ml+피클+핫소스",
-      "category": "대표메뉴",
+      "category": "일반피자",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d68ead23-bae6-4341-b05a-9972432b8920.jpg"
     },
     {
       "id": "ddangyo-1171587-10000036",
       "name": "치즈오븐스파게티",
       "description": "요리가 완료되는 시간과 배달대행업체에서 픽업하는 시간이 맞지 않을 경우, 스파게티의 치즈가 굳을 수 있기 때문에 배달딜레이로 치즈가 굳었을 땐 전자렌지에 2분정도만 데워주시면 더욱 맛있게 드실 수 있습니다. :)",
-      "category": "대표메뉴",
+      "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/cfe97320-e7c4-45ae-9761-a9ff097c7120.jpg"
     },
     {
@@ -102,13 +101,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1171587-10000014",
-      "name": "[인기최고] 불고기피자",
-      "description": "스크린 or 치즈크러스트피자L+콜라500ml+피클+핫소스",
-      "category": "일반피자",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d68ead23-bae6-4341-b05a-9972432b8920.jpg"
-    },
-    {
       "id": "ddangyo-1171587-10000023",
       "name": "[만족최고] 양념치킨",
       "description": "양념치킨1마리+500ml+치킨무",
@@ -121,13 +113,6 @@
       "description": "바이트피자L+후라이드1마리+치즈오븐스파게티+콜라1,25L (방문포장 찰치즈볼 5개 서비스)",
       "category": "셋트메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1171587-10000036",
-      "name": "치즈오븐스파게티",
-      "description": "요리가 완료되는 시간과 배달대행업체에서 픽업하는 시간이 맞지 않을 경우, 스파게티의 치즈가 굳을 수 있기 때문에 배달딜레이로 치즈가 굳었을 땐 전자렌지에 2분정도만 데워주시면 더욱 맛있게 드실 수 있습니다. :)",
-      "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/cfe97320-e7c4-45ae-9761-a9ff097c7120.jpg"
     },
     {
       "id": "ddangyo-1171587-10000048",
@@ -420,6 +405,8 @@
     "patstoNo": "1171587",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?C7u3wNg"
-    ]
+    ],
+    "rawItemCount": 56,
+    "duplicateItemsRemoved": 2
   }
 }

@@ -7,37 +7,35 @@
     "전체",
     "치킨",
     "사이드",
-    "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1175790-30000004",
       "name": "뼈 양념치킨(보통맛)",
       "description": "",
-      "category": "대표메뉴",
+      "category": "치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a45f6898-cff2-4536-9f03-2056b958f626.jpg"
     },
     {
       "id": "ddangyo-1175790-30000001",
       "name": "뼈 소금구이치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/1e7f345f-91ba-4f64-a6f5-ee86ac1ec6e8.jpg"
     },
     {
       "id": "ddangyo-1175790-30000007",
       "name": "순살양념(보통맛)",
       "description": "",
-      "category": "대표메뉴",
+      "category": "치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/88f89350-aa68-4421-ac2b-06784a8d03f4.jpg"
     },
     {
       "id": "ddangyo-1175790-30000002",
       "name": "순살소금구이치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/929a623e-8010-4ae3-96c0-30c4acdfed1f.jpg"
     },
     {
@@ -54,13 +52,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1175790-30000007",
-      "name": "순살양념(보통맛)",
-      "description": "",
-      "category": "치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/88f89350-aa68-4421-ac2b-06784a8d03f4.jpg"
     },
     {
       "id": "ddangyo-1175790-90000002",
@@ -92,13 +83,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1175790-30000004",
-      "name": "뼈 양념치킨(보통맛)",
-      "description": "",
-      "category": "치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a45f6898-cff2-4536-9f03-2056b958f626.jpg"
-    },
-    {
       "id": "ddangyo-1175790-30000005",
       "name": "뼈 양념치킨(매운맛)",
       "description": "",
@@ -111,20 +95,6 @@
       "description": "",
       "category": "사이드",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1175790-30000001",
-      "name": "뼈 소금구이치킨",
-      "description": "",
-      "category": "치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/1e7f345f-91ba-4f64-a6f5-ee86ac1ec6e8.jpg"
-    },
-    {
-      "id": "ddangyo-1175790-30000002",
-      "name": "순살소금구이치킨",
-      "description": "",
-      "category": "치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/929a623e-8010-4ae3-96c0-30c4acdfed1f.jpg"
     },
     {
       "id": "ddangyo-1175790-30000009",
@@ -350,6 +320,8 @@
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?AkdMHga",
       "https://fdofd.ddangyo.com/gateway1.html?P8J3tN8"
-    ]
+    ],
+    "rawItemCount": 47,
+    "duplicateItemsRemoved": 4
   }
 }

@@ -9,20 +9,17 @@
     "[New] 치토스치즈볼 출시",
     "양념은 멕시카나",
     "[New] 감칠맛과 매콤함의 밸런스!",
-    "한화이글스 파튀세트",
     "감튀파튀",
     "통모짜렐라 치즈 한가득 \"치필링\"",
     "전 세계적 치토스, 전 세대의 치킨 속으로",
     "100%국내산,신선 콤보 (닭다리5&윙5,봉5개)",
     "한마리치킨",
     "반반치킨",
-    "투마리세트",
     "순살세트 (1125g,조리 전 기준)",
     "부위별 메뉴",
     "사이드",
     "소스",
-    "음료",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
@@ -40,53 +37,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d367af04-51b1-4ce4-b45d-5f9971d9d7d5.jpg"
     },
     {
-      "id": "ddangyo-1341048-30000277",
-      "name": "와삭칸+치토스치즈볼 세트",
-      "description": "와삭칸, 치토스치즈볼, 음료 1.25L",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d367af04-51b1-4ce4-b45d-5f9971d9d7d5.jpg"
-    },
-    {
       "id": "ddangyo-1341048-30000017",
       "name": "시그니처 양념치킨",
       "description": "오리지날 양념 맛이 살아있는 멕시카나의 시그니처 메뉴!",
-      "category": "대표메뉴",
+      "category": "양념은 멕시카나",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/48bfc5c4-74f2-4dc5-bb62-9d238f46705d.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000273",
-      "name": "고추화삭",
-      "description": "고추 부각과 곡물 그래놀라 크럼으로 씹을 수록 터지는 바삭함!",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/28751458-373d-4da0-b158-ed57184b7d50.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000215",
-      "name": "치필링",
-      "description": "[치즈치킨의 원조] 통모짜렐라 치즈 한가득 쭉~먹",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/89cd3ced-fc31-4a32-ad13-1a09b35e81fe.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000092",
-      "name": "치토스치킨",
-      "description": "국내 유일 치토스 공식 라이선스! 치즈맛 함량이 20%로 업그레이드된 달콤짭짤매콤 시즈닝 치킨",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/dbd9496e-4683-4c29-afe1-e816c32ec7b2.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000089",
-      "name": "반반치킨",
-      "description": "반반 두 종류 선택",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/a1ddd9ca-fd80-41e5-a729-c54bfe192766.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000016",
-      "name": "후라이드치킨",
-      "description": "바삭바삭~ 소리까지 맛있는 오리지날 후라이드치킨",
-      "category": "한마리치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/77afc699-1563-403b-8ab0-d4dd412cd011.jpg"
     },
     {
       "id": "ddangyo-1341048-30000273",
@@ -96,11 +51,32 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/28751458-373d-4da0-b158-ed57184b7d50.jpg"
     },
     {
-      "id": "ddangyo-1341048-30000270",
-      "name": "어묵퐁당+멕시감튀파튀",
-      "description": "한화이글스 승리기원 파튀세트",
-      "category": "한화이글스 파튀세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/464a7a74-4018-4a64-bb6b-d9b4ce6be106.jpg"
+      "id": "ddangyo-1341048-30000215",
+      "name": "치필링",
+      "description": "[치즈치킨의 원조] 통모짜렐라 치즈 한가득 쭉~먹",
+      "category": "통모짜렐라 치즈 한가득 \"치필링\"",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/89cd3ced-fc31-4a32-ad13-1a09b35e81fe.jpg"
+    },
+    {
+      "id": "ddangyo-1341048-30000092",
+      "name": "치토스치킨",
+      "description": "국내 유일 치토스 공식 라이선스! 치즈맛 함량이 20%로 업그레이드된 달콤짭짤매콤 시즈닝 치킨",
+      "category": "전 세계적 치토스, 전 세대의 치킨 속으로",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/dbd9496e-4683-4c29-afe1-e816c32ec7b2.jpg"
+    },
+    {
+      "id": "ddangyo-1341048-30000089",
+      "name": "반반치킨",
+      "description": "반반 두 종류 선택",
+      "category": "반반치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/a1ddd9ca-fd80-41e5-a729-c54bfe192766.jpg"
+    },
+    {
+      "id": "ddangyo-1341048-30000016",
+      "name": "후라이드치킨",
+      "description": "바삭바삭~ 소리까지 맛있는 오리지날 후라이드치킨",
+      "category": "한마리치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/77afc699-1563-403b-8ab0-d4dd412cd011.jpg"
     },
     {
       "id": "ddangyo-1341048-30000268",
@@ -117,46 +93,11 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1341048-30000089",
-      "name": "반반치킨",
-      "description": "반반 두 종류 선택",
-      "category": "반반치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/a1ddd9ca-fd80-41e5-a729-c54bfe192766.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000092",
-      "name": "치토스치킨",
-      "description": "국내 유일 치토스 공식 라이선스! 치즈맛 함량이 20%로 업그레이드된 달콤짭짤매콤 시즈닝 치킨",
-      "category": "전 세계적 치토스, 전 세대의 치킨 속으로",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/dbd9496e-4683-4c29-afe1-e816c32ec7b2.jpg"
-    },
-    {
       "id": "ddangyo-1341048-30000233",
       "name": "올리브렌치링(40g)",
       "description": "올리브가 들어간 프레쉬한 소스",
       "category": "소스",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/57644fc2-ba26-463b-aab9-f700d33843f4.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000017",
-      "name": "시그니처 양념치킨",
-      "description": "오리지날 양념 맛이 살아있는 멕시카나의 시그니처 메뉴!",
-      "category": "양념은 멕시카나",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/48bfc5c4-74f2-4dc5-bb62-9d238f46705d.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000215",
-      "name": "치필링",
-      "description": "[치즈치킨의 원조] 통모짜렐라 치즈 한가득 쭉~먹",
-      "category": "통모짜렐라 치즈 한가득 \"치필링\"",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/89cd3ced-fc31-4a32-ad13-1a09b35e81fe.jpg"
-    },
-    {
-      "id": "ddangyo-1341048-30000277",
-      "name": "와삭칸+치토스치즈볼 세트",
-      "description": "와삭칸, 치토스치즈볼, 음료 1.25L",
-      "category": "[New] 치토스치즈볼 출시",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d367af04-51b1-4ce4-b45d-5f9971d9d7d5.jpg"
     },
     {
       "id": "ddangyo-1341048-30000274",
@@ -521,6 +462,8 @@
     "patstoNo": "1341048",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?h3e2OiA"
-    ]
+    ],
+    "rawItemCount": 70,
+    "duplicateItemsRemoved": 8
   }
 }

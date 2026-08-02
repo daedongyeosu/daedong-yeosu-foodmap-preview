@@ -8,30 +8,22 @@
     "메뉴",
     "사이드",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1323595-10000001",
       "name": "골목제육볶음+달걀찜",
       "description": "",
-      "category": "대표메뉴",
+      "category": "메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dea7480a-6600-4a69-b7e7-e07eecddac41.jpg"
     },
     {
       "id": "ddangyo-1323595-10000002",
       "name": "닭매운탕(수제비)",
       "description": "콩나물+무",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b1f1216c-3628-48cb-9b75-6a9497c7e4fb.jpg"
-    },
-    {
-      "id": "ddangyo-1323595-10000001",
-      "name": "골목제육볶음+달걀찜",
-      "description": "",
       "category": "메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dea7480a-6600-4a69-b7e7-e07eecddac41.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b1f1216c-3628-48cb-9b75-6a9497c7e4fb.jpg"
     },
     {
       "id": "ddangyo-1323595-10000006",
@@ -54,13 +46,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1323595-10000002",
-      "name": "닭매운탕(수제비)",
-      "description": "콩나물+무",
-      "category": "메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b1f1216c-3628-48cb-9b75-6a9497c7e4fb.jpg"
     },
     {
       "id": "ddangyo-1323595-10000007",
@@ -165,6 +150,8 @@
     "patstoNo": "1323595",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?24Ffc62"
-    ]
+    ],
+    "rawItemCount": 20,
+    "duplicateItemsRemoved": 2
   }
 }

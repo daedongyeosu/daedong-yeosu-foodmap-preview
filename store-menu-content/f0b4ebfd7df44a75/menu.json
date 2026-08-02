@@ -6,7 +6,6 @@
   "categories": [
     "전체",
     "할인메뉴",
-    "한화이글스 세트",
     "신메뉴",
     "취향존중 세트",
     "꾸브라꼬 취향사리 세트",
@@ -16,8 +15,7 @@
     "꾸브라꼬 솔로세트",
     "추천 세트 메뉴",
     "사이드메뉴",
-    "음료",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
@@ -38,36 +36,15 @@
       "id": "ddangyo-1218405-30000271",
       "name": "저당양념꾸브",
       "description": "",
-      "category": "대표메뉴",
+      "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/85e90ae3-e73f-4023-a292-5e85d4895c81.jpg"
     },
     {
       "id": "ddangyo-1218405-30000152",
       "name": "우동사리 세트",
       "description": "",
-      "category": "대표메뉴",
+      "category": "꾸브라꼬 취향사리 세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/13c42f0e-e7e4-4e10-9f96-9a6958620433.jpg"
-    },
-    {
-      "id": "ddangyo-1218405-30000134",
-      "name": "취향존중 두마리 세트",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/84fdf34f-0785-452b-b5fe-457e1875aaa2.jpg"
-    },
-    {
-      "id": "ddangyo-1218405-30000235",
-      "name": "로제꾸브",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/4f02cdf6-f5b8-46f6-8f6b-fdd36414bc06.jpg"
-    },
-    {
-      "id": "ddangyo-1218405-30000147",
-      "name": "반반꾸브",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/efa09ff5-214f-4cd2-9c92-7383f94bd18c.jpg"
     },
     {
       "id": "ddangyo-1218405-30000134",
@@ -75,6 +52,20 @@
       "description": "",
       "category": "취향존중 세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/84fdf34f-0785-452b-b5fe-457e1875aaa2.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000235",
+      "name": "로제꾸브",
+      "description": "",
+      "category": "숯불구이류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/4f02cdf6-f5b8-46f6-8f6b-fdd36414bc06.jpg"
+    },
+    {
+      "id": "ddangyo-1218405-30000147",
+      "name": "반반꾸브",
+      "description": "",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/efa09ff5-214f-4cd2-9c92-7383f94bd18c.jpg"
     },
     {
       "id": "ddangyo-1218405-30000139",
@@ -89,13 +80,6 @@
       "description": "",
       "category": "후라이드류",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/dccdd758-d688-433f-a686-6fd5d7308a7a.jpg"
-    },
-    {
-      "id": "ddangyo-1218405-30000147",
-      "name": "반반꾸브",
-      "description": "",
-      "category": "반반 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/efa09ff5-214f-4cd2-9c92-7383f94bd18c.jpg"
     },
     {
       "id": "ddangyo-1218405-30000155",
@@ -126,25 +110,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c362f435-5237-45bd-ae9c-207529277a8b.jpg"
     },
     {
-      "id": "ddangyo-1218405-30000276",
-      "name": "한화 승리 저당양념꾸브대파세트",
-      "description": "",
-      "category": "한화이글스 세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/51278a5d-6833-4161-908a-03192c8cdee3.jpg"
-    },
-    {
       "id": "ddangyo-1218405-30000278",
       "name": "무뼈닭발사리 세트",
       "description": "",
       "category": "꾸브라꼬 취향사리 세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/327e49f7-8bcc-4828-b78f-619f7f8390ba.jpg"
-    },
-    {
-      "id": "ddangyo-1218405-30000271",
-      "name": "저당양념꾸브",
-      "description": "",
-      "category": "신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/85e90ae3-e73f-4023-a292-5e85d4895c81.jpg"
     },
     {
       "id": "ddangyo-1218405-30000145",
@@ -201,13 +171,6 @@
       "description": "",
       "category": "추천 세트 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2fb504a1-0dd3-4817-bfd9-87061396e830.jpg"
-    },
-    {
-      "id": "ddangyo-1218405-30000277",
-      "name": "한화 우승 양념꾸브우동세트",
-      "description": "",
-      "category": "한화이글스 세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d0655612-02c6-44d1-a237-927fcff24096.jpg"
     },
     {
       "id": "ddangyo-1218405-30000141",
@@ -320,20 +283,6 @@
       "description": "",
       "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e7360dfa-4d4a-41af-9625-f0d0b4fe50fe.jpg"
-    },
-    {
-      "id": "ddangyo-1218405-30000235",
-      "name": "로제꾸브",
-      "description": "",
-      "category": "숯불구이류",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/4f02cdf6-f5b8-46f6-8f6b-fdd36414bc06.jpg"
-    },
-    {
-      "id": "ddangyo-1218405-30000152",
-      "name": "우동사리 세트",
-      "description": "",
-      "category": "꾸브라꼬 취향사리 세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/13c42f0e-e7e4-4e10-9f96-9a6958620433.jpg"
     },
     {
       "id": "ddangyo-1218405-30000247",
@@ -460,6 +409,8 @@
     "patstoNo": "1218405",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?1iMTpT9"
-    ]
+    ],
+    "rawItemCount": 62,
+    "duplicateItemsRemoved": 7
   }
 }

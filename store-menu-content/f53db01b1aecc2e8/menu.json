@@ -8,29 +8,28 @@
     "촌닭이두마리 메뉴",
     "무/소스",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1232932-10000002",
       "name": "촌닭한마리",
       "description": "",
-      "category": "대표메뉴",
+      "category": "촌닭이두마리 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg"
     },
     {
       "id": "ddangyo-1232932-10000003",
       "name": "윙봉",
       "description": "",
-      "category": "대표메뉴",
+      "category": "촌닭이두마리 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/422f0879-1bf3-4bfe-8b5d-eea2b4211dba.jpg"
     },
     {
       "id": "ddangyo-1232932-10000005",
       "name": "똥집",
       "description": "",
-      "category": "대표메뉴",
+      "category": "촌닭이두마리 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/519818ba-027d-45ea-b632-42b19c6348c1.jpg"
     },
     {
@@ -63,13 +62,6 @@
       "adultOnly": true
     },
     {
-      "id": "ddangyo-1232932-10000002",
-      "name": "촌닭한마리",
-      "description": "",
-      "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg"
-    },
-    {
       "id": "ddangyo-1232932-10000012",
       "name": "치킨양념소스",
       "description": "",
@@ -90,13 +82,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1232932-10000003",
-      "name": "윙봉",
-      "description": "",
-      "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/422f0879-1bf3-4bfe-8b5d-eea2b4211dba.jpg"
     },
     {
       "id": "ddangyo-1232932-10000013",
@@ -134,13 +119,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1232932-10000005",
-      "name": "똥집",
-      "description": "",
-      "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/519818ba-027d-45ea-b632-42b19c6348c1.jpg"
     },
     {
       "id": "ddangyo-1232932-10000015",
@@ -214,6 +192,8 @@
     "patstoNo": "1232932",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?DLnSWu2"
-    ]
+    ],
+    "rawItemCount": 27,
+    "duplicateItemsRemoved": 3
   }
 }

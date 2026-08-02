@@ -10,44 +10,15 @@
     "순살메뉴",
     "추가메뉴",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1219419-10000005",
       "name": "옛날 반반",
       "description": "겉은 바삭 속은 촉촉한 통닭을 다양한 맛으로 먹고 싶을 땐 옛날 반반",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/7f3c29b4-ab70-4c2b-a35e-d363ca375d32.png"
-    },
-    {
-      "id": "ddangyo-1219419-10000001",
-      "name": "옛날통닭 大",
-      "description": "겉은 바삭 속은 촉촉 기본에 충실한 오빠통닭의 시그니처 메뉴 옛날 후라이드",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/049a4819-a6f2-4d42-a1b9-500dbc1dccde.png"
-    },
-    {
-      "id": "ddangyo-1219419-10000008",
-      "name": "다리+날개",
-      "description": "겉은 바삭 속은 촉촉 오빠통닭의 시그니처 메뉴 다리+날개",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a13aec3-9eb0-4ed8-88c8-851389259be4.png"
-    },
-    {
-      "id": "ddangyo-1219419-10000015",
-      "name": "똥집튀김",
-      "description": "바삭함은 기본 맛과 양까지 잡은 오빠통닭의 시그니처 메뉴 똥집튀김",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a0444f8-51c9-428a-9c63-2515a640d30e.png"
-    },
-    {
-      "id": "ddangyo-1219419-10000013",
-      "name": "옛날순살반반",
-      "description": "겉은 바삭 속은 촉촉한 100% 국내산 닭다리 살을 다양한 맛으로 먹고 싶을 땐 옛날 순살반반",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c5be71d8-d652-4ba5-8398-7046af2cee4e.png"
     },
     {
       "id": "ddangyo-1219419-10000001",
@@ -55,6 +26,27 @@
       "description": "겉은 바삭 속은 촉촉 기본에 충실한 오빠통닭의 시그니처 메뉴 옛날 후라이드",
       "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/049a4819-a6f2-4d42-a1b9-500dbc1dccde.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000008",
+      "name": "다리+날개",
+      "description": "겉은 바삭 속은 촉촉 오빠통닭의 시그니처 메뉴 다리+날개",
+      "category": "부위별메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a13aec3-9eb0-4ed8-88c8-851389259be4.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000015",
+      "name": "똥집튀김",
+      "description": "바삭함은 기본 맛과 양까지 잡은 오빠통닭의 시그니처 메뉴 똥집튀김",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a0444f8-51c9-428a-9c63-2515a640d30e.png"
+    },
+    {
+      "id": "ddangyo-1219419-10000013",
+      "name": "옛날순살반반",
+      "description": "겉은 바삭 속은 촉촉한 100% 국내산 닭다리 살을 다양한 맛으로 먹고 싶을 땐 옛날 순살반반",
+      "category": "순살메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c5be71d8-d652-4ba5-8398-7046af2cee4e.png"
     },
     {
       "id": "ddangyo-1219419-10000006",
@@ -69,13 +61,6 @@
       "description": "겉은 바삭 속은 촉촉 기본에 충실한 100% 국내산 닭다리 살 옛날 순살 후라이드",
       "category": "순살메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0861cdd1-63dc-4012-923c-b1d477174b36.png"
-    },
-    {
-      "id": "ddangyo-1219419-10000015",
-      "name": "똥집튀김",
-      "description": "바삭함은 기본 맛과 양까지 잡은 오빠통닭의 시그니처 메뉴 똥집튀김",
-      "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a0444f8-51c9-428a-9c63-2515a640d30e.png"
     },
     {
       "id": "ddangyo-1219419-10000021",
@@ -143,13 +128,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1df54b6a-1609-4de3-bd69-653038c9d07d.png"
     },
     {
-      "id": "ddangyo-1219419-10000008",
-      "name": "다리+날개",
-      "description": "겉은 바삭 속은 촉촉 오빠통닭의 시그니처 메뉴 다리+날개",
-      "category": "부위별메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a13aec3-9eb0-4ed8-88c8-851389259be4.png"
-    },
-    {
       "id": "ddangyo-1219419-10000011",
       "name": "옛날순살간장",
       "description": "바삭함은 기본 마늘 간장소스를 첨가해 더 맛있는 100% 국내산 닭다리 살 옛날 순살간장",
@@ -207,20 +185,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/24879bb6-c262-4522-871d-ce3e317f872f.jpg"
     },
     {
-      "id": "ddangyo-1219419-10000005",
-      "name": "옛날 반반",
-      "description": "겉은 바삭 속은 촉촉한 통닭을 다양한 맛으로 먹고 싶을 땐 옛날 반반",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/7f3c29b4-ab70-4c2b-a35e-d363ca375d32.png"
-    },
-    {
-      "id": "ddangyo-1219419-10000013",
-      "name": "옛날순살반반",
-      "description": "겉은 바삭 속은 촉촉한 100% 국내산 닭다리 살을 다양한 맛으로 먹고 싶을 땐 옛날 순살반반",
-      "category": "순살메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c5be71d8-d652-4ba5-8398-7046af2cee4e.png"
-    },
-    {
       "id": "ddangyo-1219419-10000019",
       "name": "치킨무",
       "description": "치킨의 친구",
@@ -261,6 +225,8 @@
     "patstoNo": "1219419",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?chdPUvz"
-    ]
+    ],
+    "rawItemCount": 34,
+    "duplicateItemsRemoved": 5
   }
 }

@@ -17,50 +17,49 @@
     "떡볶이",
     "사이드메뉴",
     "음료",
-    "소스 및 기타",
-    "대표메뉴"
+    "소스 및 기타"
   ],
   "items": [
     {
       "id": "ddangyo-1124860-30000437",
       "name": "[크리스피후라이드]",
       "description": "",
-      "category": "대표메뉴",
+      "category": "크리스피",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/61a9499c-8443-4b58-a526-1dc9b239e068.jpg"
     },
     {
       "id": "ddangyo-1124860-30000439",
       "name": "[고르곤졸라 맛있는치킨 주세요]",
       "description": "",
-      "category": "대표메뉴",
+      "category": "시그니처",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/7e4c25ba-d1d4-42ab-a799-3ea475a4a41c.jpg"
     },
     {
       "id": "ddangyo-1124860-30000441",
       "name": "[포테이토크런치 치킨]",
       "description": "",
-      "category": "대표메뉴",
+      "category": "시그니처",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/28097b42-3fbb-4b8b-b2ce-771c4d10979d.jpg"
     },
     {
       "id": "ddangyo-1124860-30000442",
       "name": "[딥치즈나초 치킨]",
       "description": "",
-      "category": "대표메뉴",
+      "category": "시그니처",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/ab32d493-66ad-45db-9362-6b07c51c40ab.jpg"
     },
     {
       "id": "ddangyo-1124860-30000438",
       "name": "[스노우치즈크런치 치킨]",
       "description": "",
-      "category": "대표메뉴",
+      "category": "크리스피",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/870985ed-3182-4d6c-b840-11e283ebe005.jpg"
     },
     {
       "id": "ddangyo-1124860-30000440",
       "name": "[소이파파]",
       "description": "",
-      "category": "대표메뉴",
+      "category": "시그니처",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/c3c534c6-4082-4ed9-91e6-398911ffc814.jpg"
     },
     {
@@ -76,13 +75,6 @@
       "description": "",
       "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/dae98d6b-a660-4c51-bd6e-e97d8998746c.jpg"
-    },
-    {
-      "id": "ddangyo-1124860-30000437",
-      "name": "[크리스피후라이드]",
-      "description": "",
-      "category": "크리스피",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/61a9499c-8443-4b58-a526-1dc9b239e068.jpg"
     },
     {
       "id": "ddangyo-1124860-30000443",
@@ -141,13 +133,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/ab585089-f5bf-4e66-a33d-e4202eb2821b.jpg"
     },
     {
-      "id": "ddangyo-1124860-30000439",
-      "name": "[고르곤졸라 맛있는치킨 주세요]",
-      "description": "",
-      "category": "시그니처",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/7e4c25ba-d1d4-42ab-a799-3ea475a4a41c.jpg"
-    },
-    {
       "id": "ddangyo-1124860-30000620",
       "name": "두마리세트(뼈+뼈)",
       "description": "",
@@ -190,13 +175,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/ad979e67-0b76-47eb-b532-cd76b5677ae4.jpg"
     },
     {
-      "id": "ddangyo-1124860-30000438",
-      "name": "[스노우치즈크런치 치킨]",
-      "description": "",
-      "category": "크리스피",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/870985ed-3182-4d6c-b840-11e283ebe005.jpg"
-    },
-    {
       "id": "ddangyo-1124860-30000456",
       "name": "반반 메가치킨(15호)",
       "description": "",
@@ -216,13 +194,6 @@
       "description": "",
       "category": "두마리세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/d8190531-daf9-4ece-b0db-ca176b2aee87.jpg"
-    },
-    {
-      "id": "ddangyo-1124860-30000441",
-      "name": "[포테이토크런치 치킨]",
-      "description": "",
-      "category": "시그니처",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/28097b42-3fbb-4b8b-b2ce-771c4d10979d.jpg"
     },
     {
       "id": "ddangyo-1124860-30000501",
@@ -260,13 +231,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1124860-30000442",
-      "name": "[딥치즈나초 치킨]",
-      "description": "",
-      "category": "시그니처",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/ab32d493-66ad-45db-9362-6b07c51c40ab.jpg"
-    },
-    {
       "id": "ddangyo-1124860-30000446",
       "name": "[핫쵸킹]",
       "description": "",
@@ -293,13 +257,6 @@
       "description": "",
       "category": "음료",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1124860-30000440",
-      "name": "[소이파파]",
-      "description": "",
-      "category": "시그니처",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/c3c534c6-4082-4ed9-91e6-398911ffc814.jpg"
     },
     {
       "id": "ddangyo-1124860-30000447",
@@ -629,6 +586,8 @@
     "patstoNo": "1124860",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?6Dy6MpV"
-    ]
+    ],
+    "rawItemCount": 86,
+    "duplicateItemsRemoved": 6
   }
 }

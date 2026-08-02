@@ -8,37 +8,29 @@
     "메뉴소개",
     "후식",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1238086-10000001",
       "name": "숯불토종닭구이",
       "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2691a4c1-01f1-4114-94b1-3b7cd1225fb9.jpg"
     },
     {
       "id": "ddangyo-1238086-10000002",
       "name": "닭목살구이",
       "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0d75e7e7-4610-41ee-93fb-f5b71b86d343.jpg"
     },
     {
       "id": "ddangyo-1238086-10000008",
       "name": "물냉면",
       "description": "야콘면 + 삶은 달걀+ 오이+숙성육수+ 사랑과정성",
-      "category": "대표메뉴",
+      "category": "후식",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/33717844-f94e-49d0-86ab-1fb7704ddc40.jpg"
-    },
-    {
-      "id": "ddangyo-1238086-10000001",
-      "name": "숯불토종닭구이",
-      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2691a4c1-01f1-4114-94b1-3b7cd1225fb9.jpg"
     },
     {
       "id": "ddangyo-1238086-10000006",
@@ -61,13 +53,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1238086-10000002",
-      "name": "닭목살구이",
-      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0d75e7e7-4610-41ee-93fb-f5b71b86d343.jpg"
     },
     {
       "id": "ddangyo-1238086-10000007",
@@ -97,13 +82,6 @@
       "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
       "category": "메뉴소개",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1238086-10000008",
-      "name": "물냉면",
-      "description": "야콘면 + 삶은 달걀+ 오이+숙성육수+ 사랑과정성",
-      "category": "후식",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/33717844-f94e-49d0-86ab-1fb7704ddc40.jpg"
     },
     {
       "id": "ddangyo-1238086-10000017",
@@ -178,6 +156,8 @@
     "patstoNo": "1238086",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?cheVei2"
-    ]
+    ],
+    "rawItemCount": 22,
+    "duplicateItemsRemoved": 3
   }
 }

@@ -8,37 +8,29 @@
     "치킨메뉴",
     "추가선택",
     "튀김류",
-    "음료",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
       "id": "ddangyo-1216979-10000002",
       "name": "닭두마리",
       "description": "",
-      "category": "대표메뉴",
+      "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0be9f7e3-1240-4888-bd46-7febdd75cbc8.jpg"
     },
     {
       "id": "ddangyo-1216979-10000013",
       "name": "똥집튀김",
       "description": "",
-      "category": "대표메뉴",
+      "category": "튀김류",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ec4c9e5-1adf-4bda-8576-964d7a7bbac3.jpg"
     },
     {
       "id": "ddangyo-1216979-10000004",
       "name": "매운 통닭",
       "description": "",
-      "category": "대표메뉴",
+      "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55ea4d45-50ec-4003-b981-d7f2eb20eb30.jpg"
-    },
-    {
-      "id": "ddangyo-1216979-10000001",
-      "name": "닭한마리",
-      "description": "8,000원의 행복~ 바삭바삭 촉촉한 닭다리를 혼자서 2개나 먹을 수 있다니 .. 1인1닭 강.력.추.천",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/af6101c4-23bc-450e-89d5-6be3bd8261d6.jpg"
     },
     {
       "id": "ddangyo-1216979-10000001",
@@ -55,25 +47,11 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1216979-10000013",
-      "name": "똥집튀김",
-      "description": "",
-      "category": "튀김류",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ec4c9e5-1adf-4bda-8576-964d7a7bbac3.jpg"
-    },
-    {
       "id": "ddangyo-1216979-10000021",
       "name": "콜라",
       "description": "",
       "category": "음료",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1216979-10000002",
-      "name": "닭두마리",
-      "description": "",
-      "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0be9f7e3-1240-4888-bd46-7febdd75cbc8.jpg"
     },
     {
       "id": "ddangyo-1216979-10000009",
@@ -116,13 +94,6 @@
       "description": "",
       "category": "튀김류",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/08ca06a6-6667-4c43-9f81-bda76d3ea292.jpg"
-    },
-    {
-      "id": "ddangyo-1216979-10000004",
-      "name": "매운 통닭",
-      "description": "",
-      "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55ea4d45-50ec-4003-b981-d7f2eb20eb30.jpg"
     },
     {
       "id": "ddangyo-1216979-10000011",
@@ -200,6 +171,8 @@
     "patstoNo": "1216979",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?x9nuAxX"
-    ]
+    ],
+    "rawItemCount": 26,
+    "duplicateItemsRemoved": 4
   }
 }

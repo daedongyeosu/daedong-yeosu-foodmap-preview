@@ -6,17 +6,14 @@
   "categories": [
     "전체",
     "할인메뉴",
-    "'KBO '한화이글스' 콜라보 프로모션",
     "땅땅치킨 신메뉴",
     "세트 메뉴",
-    "내맘대로 피치세트",
     "후라이드 메뉴",
     "오븐 메뉴",
     "피자 메뉴",
     "사이드 메뉴",
     "무&소스",
-    "음료 메뉴",
-    "대표메뉴"
+    "음료 메뉴"
   ],
   "items": [
     {
@@ -37,35 +34,35 @@
       "id": "ddangyo-1232918-30000268",
       "name": "5. 허브순살치킨+후왕",
       "description": "100% 닭다리살 달콤한 허브순살치킨과 바삭한 '봉치킨' 후왕의 만남",
-      "category": "대표메뉴",
+      "category": "땅땅치킨 신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/bb7b6a55-6709-43eb-b582-3ee95930592b.jpg"
     },
     {
       "id": "ddangyo-1232918-30000269",
       "name": "6. 허브순살치킨+매콤양념치킨",
       "description": "100% 닭다리살 달콤한 허브순살치킨과 매콤양념치킨의 반전 매력의 만남",
-      "category": "대표메뉴",
+      "category": "땅땅치킨 신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/987d074d-4501-46fd-be7a-f568375429fd.jpg"
     },
     {
       "id": "ddangyo-1232918-30000079",
       "name": "3. 땅땅불갈비+허브순살치킨",
       "description": "담백한 땅땅불갈비와 달콤한 허브순살치킨의 만남",
-      "category": "대표메뉴",
+      "category": "세트 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/13fc0520-ce1b-4c72-831f-703092141181.jpg"
     },
     {
       "id": "ddangyo-1232918-30000257",
       "name": "와삭페퍼윙봉",
       "description": "겉은 바삭, 속은 촉촉! 한입 와삭, 입안에 퍼지는 은은한 페퍼의 매력",
-      "category": "대표메뉴",
+      "category": "후라이드 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/12e4557b-f655-49e3-9f6b-33fb186a41bc.jpg"
     },
     {
       "id": "ddangyo-1232918-30000264",
       "name": "카라멜크런치치킨",
       "description": "첫 입에서 느껴지는 카라멜의 달콤한 풍미, 바삭한 크런치의 식감! 한 입 더 생각나는 단짠의 완벽한 조화",
-      "category": "대표메뉴",
+      "category": "후라이드 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5966b522-b4ea-4a32-8537-3ee9d898ee33.jpg"
     },
     {
@@ -76,25 +73,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/d8744f8f-9452-4b90-8db7-2adbfb5660ee.jpg"
     },
     {
-      "id": "ddangyo-1232918-30000268",
-      "name": "5. 허브순살치킨+후왕",
-      "description": "100% 닭다리살 달콤한 허브순살치킨과 바삭한 '봉치킨' 후왕의 만남",
-      "category": "땅땅치킨 신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/bb7b6a55-6709-43eb-b582-3ee95930592b.jpg"
-    },
-    {
       "id": "ddangyo-1232918-30000164",
       "name": "땅땅무",
       "description": "",
       "category": "무&소스",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1232918-30000275",
-      "name": "필승불패 최강콤보1 (허브순살치킨+후왕)",
-      "description": "닭다리살 100% 허브순살치킨과 바삭한 후왕의 단짠 조합, 두 가지 맛을 한 번에 즐기는 홈런급 구성. 먹으면서 응원하면, 오늘은 이긴다.",
-      "category": "'KBO '한화이글스' 콜라보 프로모션",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/bb47b6f1-641b-4399-952a-73b9d5f7000e.jpg"
     },
     {
       "id": "ddangyo-1232918-30000279",
@@ -125,20 +108,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1232918-30000277",
-      "name": "필승불패 최강콤보2 (허브순살치킨+매콤양념치킨)",
-      "description": "닭다리살 100% 허브순살치킨과 매콤양념치킨의 반전 조합, 두 가지 맛을 한 번에 즐기는 홈런급 구성. 먹으면서 응원하면, 오늘은 이긴다.",
-      "category": "'KBO '한화이글스' 콜라보 프로모션",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4c7aeb36-43c2-4928-80a9-a865ccb72aeb.jpg"
-    },
-    {
-      "id": "ddangyo-1232918-30000269",
-      "name": "6. 허브순살치킨+매콤양념치킨",
-      "description": "100% 닭다리살 달콤한 허브순살치킨과 매콤양념치킨의 반전 매력의 만남",
-      "category": "땅땅치킨 신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/987d074d-4501-46fd-be7a-f568375429fd.jpg"
-    },
-    {
       "id": "ddangyo-1232918-30000071",
       "name": "매콤찹스",
       "description": "다져진 고추와 순 닭다리살이 만나 새로운 매콤함의 조화",
@@ -158,13 +127,6 @@
       "description": "겉바속촉 모짜렐라치즈와 크림치즈가 가득차있는 모짜치즈볼",
       "category": "사이드 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5e0d90fe-58b7-48b4-b0d2-33cdb5072240.jpg"
-    },
-    {
-      "id": "ddangyo-1232918-30000079",
-      "name": "3. 땅땅불갈비+허브순살치킨",
-      "description": "담백한 땅땅불갈비와 달콤한 허브순살치킨의 만남",
-      "category": "세트 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/13fc0520-ce1b-4c72-831f-703092141181.jpg"
     },
     {
       "id": "ddangyo-1232918-30000064",
@@ -314,13 +276,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5f2f785b-323a-41bd-b5cf-f20378753cb3.jpg"
     },
     {
-      "id": "ddangyo-1232918-30000264",
-      "name": "카라멜크런치치킨",
-      "description": "첫 입에서 느껴지는 카라멜의 달콤한 풍미, 바삭한 크런치의 식감! 한 입 더 생각나는 단짠의 완벽한 조화",
-      "category": "후라이드 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5966b522-b4ea-4a32-8537-3ee9d898ee33.jpg"
-    },
-    {
       "id": "ddangyo-1232918-30000069",
       "name": "후왕",
       "description": "후라이드의 끝판왕 바삭한 식감의 순도 100% 봉 치킨",
@@ -333,13 +288,6 @@
       "description": "",
       "category": "음료 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/22a355be-a04d-4dba-bc15-6df74197c713.jpg"
-    },
-    {
-      "id": "ddangyo-1232918-30000257",
-      "name": "와삭페퍼윙봉",
-      "description": "겉은 바삭, 속은 촉촉! 한입 와삭, 입안에 퍼지는 은은한 페퍼의 매력",
-      "category": "후라이드 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/12e4557b-f655-49e3-9f6b-33fb186a41bc.jpg"
     },
     {
       "id": "ddangyo-1232918-30000100",
@@ -361,6 +309,8 @@
     "patstoNo": "1232918",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?KVGcLcX"
-    ]
+    ],
+    "rawItemCount": 48,
+    "duplicateItemsRemoved": 7
   }
 }

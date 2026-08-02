@@ -14,45 +14,9 @@
     "반반미니족발",
     "1인분메뉴",
     "사이드메뉴",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
-    {
-      "id": "ddangyo-1133217-10000001",
-      "name": "직화양념쪽갈비",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/a6ac6887-de5c-4017-bb69-70d330d59a33.jpg"
-    },
-    {
-      "id": "ddangyo-1133217-10000005",
-      "name": "직화양념쪽갈비+데리(간장)쪽갈비",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/d0aedde0-7909-4b43-b029-52fc2585363b.jpg"
-    },
-    {
-      "id": "ddangyo-1133217-10000003",
-      "name": "허브소금쪽갈비",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/ae8d4763-edb1-4686-bd16-cc9ee8bf5dfe.jpg"
-    },
-    {
-      "id": "ddangyo-1133217-10000029",
-      "name": "셀프날치참치마요 주먹밥",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/6a370ac4-b320-4901-abd0-0cf3c8d1bf85.jpg"
-    },
-    {
-      "id": "ddangyo-1133217-10000006",
-      "name": "직화양념쪽갈비+허브소금쪽갈비",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/ac8e6816-f52c-4edb-a87d-401f8eeda0a2.jpg"
-    },
     {
       "id": "ddangyo-1133217-10000001",
       "name": "직화양념쪽갈비",
@@ -61,18 +25,39 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/a6ac6887-de5c-4017-bb69-70d330d59a33.jpg"
     },
     {
-      "id": "ddangyo-1133217-10000004",
-      "name": "[New ] 양념껍쪽(돼지껍데기+쪽갈비)",
-      "description": "양념돼지껍데기 + 양념쪽갈비",
-      "category": "[심쿵한] 신메뉴 쪽갈비",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/af964d59-6938-4e39-aa41-89554aa49eaa.jpg"
-    },
-    {
       "id": "ddangyo-1133217-10000005",
       "name": "직화양념쪽갈비+데리(간장)쪽갈비",
       "description": "",
       "category": "반반쪽갈비",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/d0aedde0-7909-4b43-b029-52fc2585363b.jpg"
+    },
+    {
+      "id": "ddangyo-1133217-10000003",
+      "name": "허브소금쪽갈비",
+      "description": "",
+      "category": "단품쪽갈비",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/ae8d4763-edb1-4686-bd16-cc9ee8bf5dfe.jpg"
+    },
+    {
+      "id": "ddangyo-1133217-10000029",
+      "name": "셀프날치참치마요 주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/6a370ac4-b320-4901-abd0-0cf3c8d1bf85.jpg"
+    },
+    {
+      "id": "ddangyo-1133217-10000006",
+      "name": "직화양념쪽갈비+허브소금쪽갈비",
+      "description": "",
+      "category": "반반쪽갈비",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/ac8e6816-f52c-4edb-a87d-401f8eeda0a2.jpg"
+    },
+    {
+      "id": "ddangyo-1133217-10000004",
+      "name": "[New ] 양념껍쪽(돼지껍데기+쪽갈비)",
+      "description": "양념돼지껍데기 + 양념쪽갈비",
+      "category": "[심쿵한] 신메뉴 쪽갈비",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/af964d59-6938-4e39-aa41-89554aa49eaa.jpg"
     },
     {
       "id": "ddangyo-1133217-10000008",
@@ -132,13 +117,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/5d813399-329e-4c68-80c2-e1a0d999d19e.jpg"
     },
     {
-      "id": "ddangyo-1133217-10000006",
-      "name": "직화양념쪽갈비+허브소금쪽갈비",
-      "description": "",
-      "category": "반반쪽갈비",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/ac8e6816-f52c-4edb-a87d-401f8eeda0a2.jpg"
-    },
-    {
       "id": "ddangyo-1133217-10000009",
       "name": "세트 2A(직화양념쪽갈비+모듬크런치)",
       "description": "직화양념쪽갈비+모듬크런치(순살크런치+윙봉크런치)",
@@ -180,13 +158,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1133217-10000003",
-      "name": "허브소금쪽갈비",
-      "description": "",
-      "category": "단품쪽갈비",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/ae8d4763-edb1-4686-bd16-cc9ee8bf5dfe.jpg"
     },
     {
       "id": "ddangyo-1133217-10000007",
@@ -251,13 +222,6 @@
       "description": "순살크런치+윙봉크런치",
       "category": "치킨메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1133217-10000029",
-      "name": "셀프날치참치마요 주먹밥",
-      "description": "",
-      "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/6a370ac4-b320-4901-abd0-0cf3c8d1bf85.jpg"
     },
     {
       "id": "ddangyo-1133217-10000012",
@@ -349,6 +313,8 @@
     "patstoNo": "1133217",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?7Mram6G"
-    ]
+    ],
+    "rawItemCount": 46,
+    "duplicateItemsRemoved": 5
   }
 }

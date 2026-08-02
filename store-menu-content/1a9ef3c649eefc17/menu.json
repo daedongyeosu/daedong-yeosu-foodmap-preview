@@ -8,55 +8,29 @@
     "박지훈 굿즈세트",
     "박지훈 추천 SET",
     "신메뉴",
-    "시그니처 장각구이",
     "기영이 원조 스페셜 메뉴",
     "기영이 시그니처",
     "반반세트",
-    "꿀조합 세트",
     "메인(숯불치킨)",
     "가성비甲 두마리 세트",
-    "마른 안주",
     "사이드",
     "찍먹소스",
-    "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1297094-30000066",
       "name": "돼껍누들 양념숯불치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "기영이 원조 스페셜 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/18a01f95-0559-496a-a0cd-1e9b5a413dc0.jpg"
     },
     {
       "id": "ddangyo-1297094-30000069",
       "name": "막창누들숯불치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "기영이 원조 스페셜 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/e69063ab-71c2-4418-bd6b-127b297355a5.jpg"
-    },
-    {
-      "id": "ddangyo-1297094-30000001",
-      "name": "[기영이] 순살 반반숯불치킨(2가지 맛선택)",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/1f737dc2-c293-462b-bf4c-cbca654a908d.jpg"
-    },
-    {
-      "id": "ddangyo-1297094-30000062",
-      "name": "빨간양념 숯불치킨",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/79da7b1c-d5ae-46cd-8672-88d58568236c.jpg"
-    },
-    {
-      "id": "ddangyo-1297094-30000061",
-      "name": "까만양념 숯불치킨",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/9d72dedd-a8d5-4a5e-89db-c8383868b1d3.jpg"
     },
     {
       "id": "ddangyo-1297094-30000001",
@@ -64,6 +38,20 @@
       "description": "",
       "category": "반반세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/1f737dc2-c293-462b-bf4c-cbca654a908d.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000062",
+      "name": "빨간양념 숯불치킨",
+      "description": "",
+      "category": "기영이 시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/79da7b1c-d5ae-46cd-8672-88d58568236c.jpg"
+    },
+    {
+      "id": "ddangyo-1297094-30000061",
+      "name": "까만양념 숯불치킨",
+      "description": "",
+      "category": "기영이 시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/9d72dedd-a8d5-4a5e-89db-c8383868b1d3.jpg"
     },
     {
       "id": "ddangyo-1297094-30000011",
@@ -106,13 +94,6 @@
       "description": "",
       "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/95263d61-ad7f-4afd-85cc-6bd56fd06ab9.jpg"
-    },
-    {
-      "id": "ddangyo-1297094-30000069",
-      "name": "막창누들숯불치킨",
-      "description": "",
-      "category": "기영이 원조 스페셜 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/e69063ab-71c2-4418-bd6b-127b297355a5.jpg"
     },
     {
       "id": "ddangyo-1297094-90000001",
@@ -163,13 +144,6 @@
       "description": "",
       "category": "박지훈 굿즈세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ea5c75a5-cfb2-45fd-9061-01e35bd1e014.jpg"
-    },
-    {
-      "id": "ddangyo-1297094-30000066",
-      "name": "돼껍누들 양념숯불치킨",
-      "description": "",
-      "category": "기영이 원조 스페셜 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/18a01f95-0559-496a-a0cd-1e9b5a413dc0.jpg"
     },
     {
       "id": "ddangyo-1297094-90000002",
@@ -359,13 +333,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/18a46a6c-be02-4d89-969d-79d24faed7d9.jpg"
     },
     {
-      "id": "ddangyo-1297094-30000062",
-      "name": "빨간양념 숯불치킨",
-      "description": "",
-      "category": "기영이 시그니처",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/79da7b1c-d5ae-46cd-8672-88d58568236c.jpg"
-    },
-    {
       "id": "ddangyo-1297094-30000057",
       "name": "버터크림 양념감자튀김 (소스제공)",
       "description": "",
@@ -378,13 +345,6 @@
       "description": "",
       "category": "사이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/6457e250-75e4-4873-8952-4cc65f46f942.jpg"
-    },
-    {
-      "id": "ddangyo-1297094-30000061",
-      "name": "까만양념 숯불치킨",
-      "description": "",
-      "category": "기영이 시그니처",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/9d72dedd-a8d5-4a5e-89db-c8383868b1d3.jpg"
     },
     {
       "id": "ddangyo-1297094-30000004",
@@ -491,6 +451,8 @@
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?LZJOYiQ",
       "https://fdofd.ddangyo.com/gateway1.html?m6K22Qq"
-    ]
+    ],
+    "rawItemCount": 65,
+    "duplicateItemsRemoved": 5
   }
 }

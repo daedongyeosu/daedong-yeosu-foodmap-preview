@@ -7,30 +7,22 @@
     "전체",
     "치밥메뉴",
     "사이드메뉴",
-    "주류",
-    "대표메뉴"
+    "주류"
   ],
   "items": [
     {
       "id": "ddangyo-1188831-10000001",
       "name": "바베큐양념치밥 도시락(간장계란밥)",
       "description": "순살을 오븐에 구워 바베큐소스로 쫄인 치밥의 원조",
-      "category": "대표메뉴",
+      "category": "치밥메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/603ad8a2-71a0-4bd4-8f59-5de9789c0d21.jpg"
     },
     {
       "id": "ddangyo-1188831-10000008",
       "name": "눈꽃치즈치밥 도시락(간장계란밥)",
       "description": "모짜렐라 치즈와 고다치즈의 풍미를 치밥과 함께~",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/30cdda7d-d0bb-4cac-b34e-ed69ff5c0afa.jpg"
-    },
-    {
-      "id": "ddangyo-1188831-10000001",
-      "name": "바베큐양념치밥 도시락(간장계란밥)",
-      "description": "순살을 오븐에 구워 바베큐소스로 쫄인 치밥의 원조",
       "category": "치밥메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/603ad8a2-71a0-4bd4-8f59-5de9789c0d21.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/30cdda7d-d0bb-4cac-b34e-ed69ff5c0afa.jpg"
     },
     {
       "id": "ddangyo-1188831-10000012",
@@ -138,13 +130,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5ffa8a37-1cf6-413a-ae38-13553c24b225.jpg"
     },
     {
-      "id": "ddangyo-1188831-10000008",
-      "name": "눈꽃치즈치밥 도시락(간장계란밥)",
-      "description": "모짜렐라 치즈와 고다치즈의 풍미를 치밥과 함께~",
-      "category": "치밥메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/30cdda7d-d0bb-4cac-b34e-ed69ff5c0afa.jpg"
-    },
-    {
       "id": "ddangyo-1188831-10000019",
       "name": "콜라",
       "description": "",
@@ -178,6 +163,8 @@
     "patstoNo": "1188831",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?Z9BzWOD"
-    ]
+    ],
+    "rawItemCount": 23,
+    "duplicateItemsRemoved": 2
   }
 }

@@ -8,51 +8,43 @@
     "명품 후라이드",
     "행복 2배 세트메뉴",
     "플러스메뉴",
-    "음료",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
       "id": "ddangyo-1332276-10000001",
       "name": "맛있는 치킨 후라이드치킨",
       "description": "한마리반(다리3/날개3) +무1 + 소스2종",
-      "category": "대표메뉴",
+      "category": "명품 후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
     },
     {
       "id": "ddangyo-1332276-10000002",
       "name": "양념치킨",
       "description": "한마리 반(다리3/날개3) + 무 + 소스",
-      "category": "대표메뉴",
+      "category": "명품 후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa6bbf0a-1c10-4473-a6d8-bfabf7585c96.jpg"
     },
     {
       "id": "ddangyo-1332276-10000003",
       "name": "맛있는 단짠 간장치킨",
       "description": "실패없는 라떼메뉴 : 한마리반(다리3/날개3) + 무1",
-      "category": "대표메뉴",
+      "category": "명품 후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/3bb6baaf-dcfd-422f-acd5-e57994ed7d01.jpg"
     },
     {
       "id": "ddangyo-1332276-10000004",
       "name": "불닭치킨",
       "description": "한마리 반(다리3/날개3) + 무",
-      "category": "대표메뉴",
+      "category": "명품 후라이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0353b770-5149-4547-b8e7-158f37004dd7.jpg"
     },
     {
       "id": "ddangyo-1332276-10000005",
       "name": "반반치킨",
       "description": "한마리 반(다리3/날개3) + 무 + 소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/73280fb0-212e-47a9-a6fa-507bcfcc35bb.jpg"
-    },
-    {
-      "id": "ddangyo-1332276-10000001",
-      "name": "맛있는 치킨 후라이드치킨",
-      "description": "한마리반(다리3/날개3) +무1 + 소스2종",
       "category": "명품 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/73280fb0-212e-47a9-a6fa-507bcfcc35bb.jpg"
     },
     {
       "id": "ddangyo-1332276-10000020",
@@ -83,13 +75,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/b938b04f-79b3-4074-9e46-11c3e2c2df96.jpg"
     },
     {
-      "id": "ddangyo-1332276-10000002",
-      "name": "양념치킨",
-      "description": "한마리 반(다리3/날개3) + 무 + 소스",
-      "category": "명품 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa6bbf0a-1c10-4473-a6d8-bfabf7585c96.jpg"
-    },
-    {
       "id": "ddangyo-1332276-10000021",
       "name": "행복두배세트) 가성비 후라이드+양념치킨",
       "description": "두마리치킨(다리4/날개4) + 무1 + 소스2종",
@@ -111,13 +96,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1332276-10000003",
-      "name": "맛있는 단짠 간장치킨",
-      "description": "실패없는 라떼메뉴 : 한마리반(다리3/날개3) + 무1",
-      "category": "명품 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/3bb6baaf-dcfd-422f-acd5-e57994ed7d01.jpg"
-    },
-    {
       "id": "ddangyo-1332276-10000022",
       "name": "행복두배세트) 순살후라이드+순살후라이드",
       "description": "",
@@ -132,25 +110,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/0ed2724b-0211-44f3-958b-9d23609d7f7f.jpg"
     },
     {
-      "id": "ddangyo-1332276-10000004",
-      "name": "불닭치킨",
-      "description": "한마리 반(다리3/날개3) + 무",
-      "category": "명품 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0353b770-5149-4547-b8e7-158f37004dd7.jpg"
-    },
-    {
       "id": "ddangyo-1332276-10000023",
       "name": "치킨골뱅이",
       "description": "후라이드반마리 + 매콤골뱅이소면 + 무1 + 소스2종",
       "category": "행복 2배 세트메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1332276-10000005",
-      "name": "반반치킨",
-      "description": "한마리 반(다리3/날개3) + 무 + 소스",
-      "category": "명품 후라이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/73280fb0-212e-47a9-a6fa-507bcfcc35bb.jpg"
     },
     {
       "id": "ddangyo-1332276-10000028",
@@ -298,6 +262,8 @@
     "patstoNo": "1332276",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?BC2YUSz"
-    ]
+    ],
+    "rawItemCount": 40,
+    "duplicateItemsRemoved": 5
   }
 }

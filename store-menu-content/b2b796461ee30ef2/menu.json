@@ -8,22 +8,21 @@
     "닭강정",
     "반반메뉴",
     "사이드메뉴",
-    "음료추가",
-    "대표메뉴"
+    "음료추가"
   ],
   "items": [
     {
       "id": "ddangyo-1138825-10000004",
       "name": "오리지널닭강정",
       "description": "",
-      "category": "대표메뉴",
+      "category": "닭강정",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg"
     },
     {
       "id": "ddangyo-1138825-10000024",
       "name": "[ 강력추천 ] 염통꼬치",
       "description": "",
-      "category": "대표메뉴",
+      "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/15463911-2af8-45ef-9d9a-98404b83c6ec.jpg"
     },
     {
@@ -62,13 +61,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1138825-10000024",
-      "name": "[ 강력추천 ] 염통꼬치",
-      "description": "",
-      "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/15463911-2af8-45ef-9d9a-98404b83c6ec.jpg"
-    },
-    {
       "id": "ddangyo-1138825-10000039",
       "name": "코카콜라 1.25L 추가",
       "description": "",
@@ -88,13 +80,6 @@
       "description": "",
       "category": "음료추가",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/a5e24ecb-f8f0-4839-9052-8f577cc15510.jpg"
-    },
-    {
-      "id": "ddangyo-1138825-10000004",
-      "name": "오리지널닭강정",
-      "description": "",
-      "category": "닭강정",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg"
     },
     {
       "id": "ddangyo-1138825-10000012",
@@ -284,6 +269,8 @@
     "patstoNo": "1138825",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?Why0WW1"
-    ]
+    ],
+    "rawItemCount": 38,
+    "duplicateItemsRemoved": 2
   }
 }

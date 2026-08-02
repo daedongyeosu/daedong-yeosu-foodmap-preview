@@ -13,51 +13,15 @@
     "프리미엄 세트",
     "피자단품",
     "치킨단품",
-    "사이드 메뉴",
-    "대표메뉴"
+    "사이드 메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1233526-30000082",
       "name": "[강추] 뿌리공 피치세트",
       "description": "",
-      "category": "대표메뉴",
+      "category": "25년을 기다린 특급 신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/08f16349-532b-4ca5-aec7-257f7a655ed8.jpg"
-    },
-    {
-      "id": "ddangyo-1233526-30000085",
-      "name": "[가성비] 모쏠탈출 (1인)세트",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b1809da2-cf20-479f-a150-586d4aa21b2e.jpg"
-    },
-    {
-      "id": "ddangyo-1233526-30000086",
-      "name": "[인기] 콤비네이션 피치세트",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/cb63ee4d-db98-4d7f-926b-93b70e96644d.jpg"
-    },
-    {
-      "id": "ddangyo-1233526-30000089",
-      "name": "[추천] 순살닭다리 피치세트",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/81526926-6236-4438-a618-c3af3e502efa.jpg"
-    },
-    {
-      "id": "ddangyo-1233526-30000091",
-      "name": "[인기] 더블포테이토 피치세트",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/6d728d6f-84b8-4009-a113-0584d778ca75.jpg"
-    },
-    {
-      "id": "ddangyo-1233526-30000092",
-      "name": "[인기] 고구마 피치세트",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ccd1ec82-dd8f-4a0a-abd3-09ca8c12f10a.jpg"
     },
     {
       "id": "ddangyo-1233526-30000085",
@@ -67,25 +31,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b1809da2-cf20-479f-a150-586d4aa21b2e.jpg"
     },
     {
-      "id": "ddangyo-1233526-30000100",
-      "name": "[단품] 콤비네이션 피자",
-      "description": "",
-      "category": "피자단품",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/53043f90-9903-4c99-b932-1e48ddbc7402.jpg"
-    },
-    {
       "id": "ddangyo-1233526-30000086",
       "name": "[인기] 콤비네이션 피치세트",
       "description": "",
       "category": "근본 피치세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/cb63ee4d-db98-4d7f-926b-93b70e96644d.jpg"
-    },
-    {
-      "id": "ddangyo-1233526-30000082",
-      "name": "[강추] 뿌리공 피치세트",
-      "description": "",
-      "category": "25년을 기다린 특급 신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/08f16349-532b-4ca5-aec7-257f7a655ed8.jpg"
     },
     {
       "id": "ddangyo-1233526-30000089",
@@ -100,6 +50,20 @@
       "description": "",
       "category": "스페셜 세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/6d728d6f-84b8-4009-a113-0584d778ca75.jpg"
+    },
+    {
+      "id": "ddangyo-1233526-30000092",
+      "name": "[인기] 고구마 피치세트",
+      "description": "",
+      "category": "스페셜 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ccd1ec82-dd8f-4a0a-abd3-09ca8c12f10a.jpg"
+    },
+    {
+      "id": "ddangyo-1233526-30000100",
+      "name": "[단품] 콤비네이션 피자",
+      "description": "",
+      "category": "피자단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/53043f90-9903-4c99-b932-1e48ddbc7402.jpg"
     },
     {
       "id": "ddangyo-1233526-30000108",
@@ -121,13 +85,6 @@
       "description": "",
       "category": "사이드 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/845a404a-539c-4c1d-8205-dd0efc30f0ad.jpg"
-    },
-    {
-      "id": "ddangyo-1233526-30000092",
-      "name": "[인기] 고구마 피치세트",
-      "description": "",
-      "category": "스페셜 세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ccd1ec82-dd8f-4a0a-abd3-09ca8c12f10a.jpg"
     },
     {
       "id": "ddangyo-1233526-30000109",
@@ -422,6 +379,8 @@
     "patstoNo": "1233526",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?C5v1Sz5"
-    ]
+    ],
+    "rawItemCount": 57,
+    "duplicateItemsRemoved": 6
   }
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "batchId": "ddangyo-chicken-batch-01",
-  "generatedAt": "2026-08-02T05:48:50.116Z",
+  "generatedAt": "2026-08-02T06:01:18.806Z",
   "policy": {
     "mode": "add-missing-only",
     "identity": "verified-address-and-existing-store-id",
@@ -16,7 +16,8 @@
       "baemin"
     ],
     "naver": "exact-store-and-address-only",
-    "pricesVisible": false
+    "pricesVisible": false,
+    "duplicateMenuPolicy": "same source menu id appears once; prefer specific category over representative category"
   },
   "stores": [
     {

@@ -8,30 +8,15 @@
     "메뉴소개",
     "일반메뉴",
     "음료",
-    "신기동 시전동. 추가배달비",
-    "대표메뉴"
+    "신기동 시전동. 추가배달비"
   ],
   "items": [
     {
       "id": "ddangyo-1217203-10000003",
       "name": "후라이드반+양념치킨반",
       "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
-    },
-    {
-      "id": "ddangyo-1217203-10000001",
-      "name": "후라이드",
-      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2eb650e8-5b08-4381-9d28-8d38fa4fc410.jpg"
-    },
-    {
-      "id": "ddangyo-1217203-10000005",
-      "name": "백숙",
-      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/006c0604-415c-4ce6-8250-73b8f3cbc69c.jpg"
     },
     {
       "id": "ddangyo-1217203-10000001",
@@ -39,6 +24,13 @@
       "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
       "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2eb650e8-5b08-4381-9d28-8d38fa4fc410.jpg"
+    },
+    {
+      "id": "ddangyo-1217203-10000005",
+      "name": "백숙",
+      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
+      "category": "일반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/006c0604-415c-4ce6-8250-73b8f3cbc69c.jpg"
     },
     {
       "id": "ddangyo-1217203-10000004",
@@ -69,25 +61,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2e2a8e94-63ed-4293-b557-d37f1ff319e2.jpg"
     },
     {
-      "id": "ddangyo-1217203-10000005",
-      "name": "백숙",
-      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
-      "category": "일반메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/006c0604-415c-4ce6-8250-73b8f3cbc69c.jpg"
-    },
-    {
       "id": "ddangyo-1217203-10000021",
       "name": "킨사이다",
       "description": "",
       "category": "음료",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1217203-10000003",
-      "name": "후라이드반+양념치킨반",
-      "description": "통닭반마리는 단품 주문 안됩니다. 메인메뉴 주문시 추가선택으로만 가능합니다",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
     },
     {
       "id": "ddangyo-1217203-10000006",
@@ -193,6 +171,8 @@
     "patstoNo": "1217203",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?9RD9885"
-    ]
+    ],
+    "rawItemCount": 25,
+    "duplicateItemsRemoved": 3
   }
 }

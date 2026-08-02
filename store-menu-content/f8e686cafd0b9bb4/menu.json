@@ -9,29 +9,28 @@
     "한마리 메뉴",
     "사이드메뉴",
     "소스",
-    "음료수",
-    "대표메뉴"
+    "음료수"
   ],
   "items": [
     {
       "id": "ddangyo-1353897-10000004",
       "name": "내 맘대로 2마리 세트",
       "description": "내가 원하는 메뉴 두마리를 선택하는 가성비 갑 세트 메뉴(콜라미제공)",
-      "category": "대표메뉴",
+      "category": "사장님 강추 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6113e481-4ef1-4165-a662-032d923f7735.jpg"
     },
     {
       "id": "ddangyo-1353897-10000007",
       "name": "순살숯불불모자치킨",
       "description": "매화양념구이+분모자8p (콜라미제공)",
-      "category": "대표메뉴",
+      "category": "사장님 강추 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/aec4c6fa-22e1-4026-9ecb-e2505b264075.jpg"
     },
     {
       "id": "ddangyo-1353897-10000010",
       "name": "(후라이드도잘해요)후라이드치킨",
       "description": "떡 튀김 10p+양념소스 1개+머스타드 1개 (콜라미제공)",
-      "category": "대표메뉴",
+      "category": "한마리 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3fe5d143-1e9f-4123-b229-e4d67ff32c3c.jpg"
     },
     {
@@ -40,13 +39,6 @@
       "description": "분모자 10p+ 향취고추토핑(콜라미제공)",
       "category": "사장님 강추 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a2f4900a-faa9-45a1-9be7-02835461825f.jpg"
-    },
-    {
-      "id": "ddangyo-1353897-10000010",
-      "name": "(후라이드도잘해요)후라이드치킨",
-      "description": "떡 튀김 10p+양념소스 1개+머스타드 1개 (콜라미제공)",
-      "category": "한마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3fe5d143-1e9f-4123-b229-e4d67ff32c3c.jpg"
     },
     {
       "id": "ddangyo-1353897-10000026",
@@ -126,13 +118,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/21680fb4-b06b-4aa0-a403-a605bb475920.jpg"
     },
     {
-      "id": "ddangyo-1353897-10000004",
-      "name": "내 맘대로 2마리 세트",
-      "description": "내가 원하는 메뉴 두마리를 선택하는 가성비 갑 세트 메뉴(콜라미제공)",
-      "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6113e481-4ef1-4165-a662-032d923f7735.jpg"
-    },
-    {
       "id": "ddangyo-1353897-10000013",
       "name": "양념치킨",
       "description": "떡 튀김 10p (콜라미제공)",
@@ -210,13 +195,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/784cba2c-fe03-4e97-86bf-46b43196985a.jpg"
     },
     {
-      "id": "ddangyo-1353897-10000007",
-      "name": "순살숯불불모자치킨",
-      "description": "매화양념구이+분모자8p (콜라미제공)",
-      "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/aec4c6fa-22e1-4026-9ecb-e2505b264075.jpg"
-    },
-    {
       "id": "ddangyo-1353897-10000021",
       "name": "맛있는 치즈스틱",
       "description": "맛있는 치즈스틱",
@@ -278,6 +256,8 @@
     "patstoNo": "1353897",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?eRKUQXj"
-    ]
+    ],
+    "rawItemCount": 37,
+    "duplicateItemsRemoved": 3
   }
 }

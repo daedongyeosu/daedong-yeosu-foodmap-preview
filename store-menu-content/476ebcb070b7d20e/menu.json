@@ -12,58 +12,50 @@
     "치킨(단품)",
     "사이드 메뉴",
     "추가메뉴",
-    "음료추가",
-    "대표메뉴"
+    "음료추가"
   ],
   "items": [
     {
       "id": "ddangyo-1120308-30002225",
       "name": "마마치",
       "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로 느껴보세요!",
-      "category": "대표메뉴",
+      "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/782d926e-9b41-438b-9d08-59b5964417ac.jpg"
     },
     {
       "id": "ddangyo-1120308-30002226",
       "name": "순(다리)살 마마치",
       "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로! 100% 국내산 통다리살 순살로 즐겨보세요.",
-      "category": "대표메뉴",
+      "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0296e03d-bb2f-4d0c-8330-95e7c75d05a4.jpg"
     },
     {
       "id": "ddangyo-1120308-30002229",
       "name": "순(다리)살 반.반.반 플래터",
       "description": "100% 국내산 통다리살 순살로 즐기는 반.반.반 플래터 치킨 취향은 포기 못하니까! 세 가지 맛을 한번에 담은 1.5마리 구성으로 양은 푸짐하게! 취향 따라 골라 먹는 재미까지 완벽하게! 나만의 반반반 치킨 플래터!",
-      "category": "대표메뉴",
+      "category": "반.반.반 플래터",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/99a3a376-c6cd-458a-a8fd-15998f1bc085.jpg"
     },
     {
       "id": "ddangyo-1120308-30002219",
       "name": "마요피뇨",
       "description": "안성재 셰프로 완성된 쾌락적 미식경험! 마요 맛집 푸라닭의 새로운 마요 치킨. 특제 마요소스에 사워크림 드리즐, 크루통과 할라피뇨 토핑이 선사하는 다채로운 맛과 식감의 레이어",
-      "category": "대표메뉴",
+      "category": "셰프의 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/fc93dea4-0b68-4f51-976c-5464aa02d4a4.jpg"
     },
     {
       "id": "ddangyo-1120308-30002129",
       "name": "[대표] 고추마요 치킨",
       "description": "마요 강자 푸라닭의 대표메뉴. 고추마요 소스와 할라피뇨의 환상적인 조합",
-      "category": "대표메뉴",
+      "category": "치킨(단품)",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ac942fd2-219e-494a-8611-574d5f8266ed.jpg"
     },
     {
       "id": "ddangyo-1120308-30002127",
       "name": "[인기] 씬 후라이드",
       "description": "가장 얇고 담백한 튀김옷의 후라이드",
-      "category": "대표메뉴",
+      "category": "치킨(단품)",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/9e47a82b-a4d4-4fe4-8796-a43f9fdf7c32.jpg"
-    },
-    {
-      "id": "ddangyo-1120308-30002225",
-      "name": "마마치",
-      "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로 느껴보세요!",
-      "category": "신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/782d926e-9b41-438b-9d08-59b5964417ac.jpg"
     },
     {
       "id": "ddangyo-1120308-30002206",
@@ -101,13 +93,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/868aea1b-fdba-40f3-9355-350430df56b0.jpg"
     },
     {
-      "id": "ddangyo-1120308-30002219",
-      "name": "마요피뇨",
-      "description": "안성재 셰프로 완성된 쾌락적 미식경험! 마요 맛집 푸라닭의 새로운 마요 치킨. 특제 마요소스에 사워크림 드리즐, 크루통과 할라피뇨 토핑이 선사하는 다채로운 맛과 식감의 레이어",
-      "category": "셰프의 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/fc93dea4-0b68-4f51-976c-5464aa02d4a4.jpg"
-    },
-    {
       "id": "ddangyo-1120308-30002197",
       "name": "[인기] 블랙치즈볼 (5구)",
       "description": "(5개입) 체다와 모짜렐라 치즈를 듬뿍담아 푸라닭만의 블랙으로 탄생한 치즈볼",
@@ -127,27 +112,6 @@
       "description": "(5개입) 달콤새콤 부드러운 크림치즈 필링이 가득",
       "category": "사이드 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/1710b4f5-fa8c-4a5d-b4f5-1d4925c9d4df.jpg"
-    },
-    {
-      "id": "ddangyo-1120308-30002226",
-      "name": "순(다리)살 마마치",
-      "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로! 100% 국내산 통다리살 순살로 즐겨보세요.",
-      "category": "신메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0296e03d-bb2f-4d0c-8330-95e7c75d05a4.jpg"
-    },
-    {
-      "id": "ddangyo-1120308-30002229",
-      "name": "순(다리)살 반.반.반 플래터",
-      "description": "100% 국내산 통다리살 순살로 즐기는 반.반.반 플래터 치킨 취향은 포기 못하니까! 세 가지 맛을 한번에 담은 1.5마리 구성으로 양은 푸짐하게! 취향 따라 골라 먹는 재미까지 완벽하게! 나만의 반반반 치킨 플래터!",
-      "category": "반.반.반 플래터",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/99a3a376-c6cd-458a-a8fd-15998f1bc085.jpg"
-    },
-    {
-      "id": "ddangyo-1120308-30002129",
-      "name": "[대표] 고추마요 치킨",
-      "description": "마요 강자 푸라닭의 대표메뉴. 고추마요 소스와 할라피뇨의 환상적인 조합",
-      "category": "치킨(단품)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ac942fd2-219e-494a-8611-574d5f8266ed.jpg"
     },
     {
       "id": "ddangyo-1120308-30002220",
@@ -267,13 +231,6 @@
       "description": "100% 국내산 통다리살 순다리살로 즐기는 '한식 러버' 이태리 셰프가 발견한 '파불고기'의 재해석. 불향 입은 특제 불고기 소스에 향긋바삭한 파채 튀김의 만남으로 더 프리미엄하게 즐기는 치킨 요리",
       "category": "셰프의 치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b9114011-5cf1-4a05-8993-3bc85eb5bde0.jpg"
-    },
-    {
-      "id": "ddangyo-1120308-30002127",
-      "name": "[인기] 씬 후라이드",
-      "description": "가장 얇고 담백한 튀김옷의 후라이드",
-      "category": "치킨(단품)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/9e47a82b-a4d4-4fe4-8796-a43f9fdf7c32.jpg"
     },
     {
       "id": "ddangyo-1120308-30002150",
@@ -491,6 +448,8 @@
     "patstoNo": "1120308",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?fNFjCFg"
-    ]
+    ],
+    "rawItemCount": 67,
+    "duplicateItemsRemoved": 6
   }
 }

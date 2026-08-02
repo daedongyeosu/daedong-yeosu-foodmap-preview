@@ -12,37 +12,29 @@
     "다리/날개치킨",
     "사이드메뉴",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1249658-10000001",
       "name": "매실 후라이드치킨",
       "description": "치킨 + 양배추 샐러드 + 무 + 음료 (500ml)",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
     },
     {
       "id": "ddangyo-1249658-10000002",
       "name": "매실 양념치킨",
       "description": "매실닭만을 사용하여 육질이 부드럽고 쫄깃하며, 화학조미료를 일절 사용치 않고 칼슘과 단백질이 첨가된 건강치킨입니다.",
-      "category": "대표메뉴",
+      "category": "메뉴소개",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d6dd1cd2-55da-4e38-af2b-b73e14fde376.jpg"
     },
     {
       "id": "ddangyo-1249658-10000010",
       "name": "순살 파닭",
       "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e531a56e-409e-4c85-b281-8ab13971a6ed.jpg"
-    },
-    {
-      "id": "ddangyo-1249658-10000001",
-      "name": "매실 후라이드치킨",
-      "description": "치킨 + 양배추 샐러드 + 무 + 음료 (500ml)",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e531a56e-409e-4c85-b281-8ab13971a6ed.jpg"
     },
     {
       "id": "ddangyo-1249658-10000012",
@@ -93,13 +85,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1249658-10000002",
-      "name": "매실 양념치킨",
-      "description": "매실닭만을 사용하여 육질이 부드럽고 쫄깃하며, 화학조미료를 일절 사용치 않고 칼슘과 단백질이 첨가된 건강치킨입니다.",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d6dd1cd2-55da-4e38-af2b-b73e14fde376.jpg"
     },
     {
       "id": "ddangyo-1249658-10000013",
@@ -364,13 +349,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1249658-10000010",
-      "name": "순살 파닭",
-      "description": "",
-      "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e531a56e-409e-4c85-b281-8ab13971a6ed.jpg"
-    },
-    {
       "id": "ddangyo-1249658-10000035",
       "name": "매실 다리, 날개치킨 양념+핫양념",
       "description": "",
@@ -390,6 +368,8 @@
     "patstoNo": "1249658",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?7qEHjBv"
-    ]
+    ],
+    "rawItemCount": 52,
+    "duplicateItemsRemoved": 3
   }
 }

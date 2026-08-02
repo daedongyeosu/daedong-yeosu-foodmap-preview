@@ -6,7 +6,6 @@
   "categories": [
     "전체",
     "할인메뉴",
-    "[자담x한화] 불꽃투혼 응원세트",
     "자담치킨 신메뉴",
     "반반치킨 메뉴",
     "1인분 메뉴",
@@ -18,13 +17,8 @@
     "스틱치킨 메뉴",
     "윙봉스치킨 메뉴",
     "3반세트메뉴",
-    "반마리 메뉴",
-    "피자메뉴",
     "사이드 메뉴",
-    "안주 메뉴",
-    "소스",
-    "음료",
-    "대표메뉴"
+    "소스"
   ],
   "items": [
     {
@@ -52,42 +46,42 @@
       "id": "ddangyo-1154876-30000472",
       "name": "맵쏘이킥치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "시그니처 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/eee32224-4f5c-40ac-beb8-cee2a6a97689.jpg"
     },
     {
       "id": "ddangyo-1154876-30000474",
       "name": "허니팝치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "오리지널 치킨 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/67a39a0f-5992-4da7-95cd-55629a56cfdd.jpg"
     },
     {
       "id": "ddangyo-1154876-30000005",
       "name": "맵슐랭치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "시그니처 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ba22d461-aad0-4cc0-8e35-ed14dd44f2af.jpg"
     },
     {
       "id": "ddangyo-1154876-30000375",
       "name": "왓더핫치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "오리지널 치킨 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/84ef0b3e-b27f-445c-9d3e-45b0558f3de8.jpg"
     },
     {
       "id": "ddangyo-1154876-30000380",
       "name": "마튀니치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "시그니처 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/549e9c9f-37f4-4710-9dff-db4b232473bf.jpg"
     },
     {
       "id": "ddangyo-1154876-30000535",
       "name": "치즈핑치킨",
       "description": "",
-      "category": "대표메뉴",
+      "category": "시그니처 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/2f50e7c6-b525-4119-9656-17d82c91ca94.jpg"
     },
     {
@@ -124,20 +118,6 @@
       "description": "다리 4조각+윙 6조각+봉 6조각",
       "category": "콤보치킨 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/d9f2dac5-b242-4695-a994-317e93838820.jpg"
-    },
-    {
-      "id": "ddangyo-1154876-30000838",
-      "name": "뿌슐랭+콘립너겟 한화타선폭발세트",
-      "description": "뿌슐랭치킨 + 콘립너겟",
-      "category": "[자담x한화] 불꽃투혼 응원세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9ffbc075-38df-4f5d-971c-f06cf32d31ba.jpg"
-    },
-    {
-      "id": "ddangyo-1154876-30000005",
-      "name": "맵슐랭치킨",
-      "description": "",
-      "category": "시그니처 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ba22d461-aad0-4cc0-8e35-ed14dd44f2af.jpg"
     },
     {
       "id": "ddangyo-1154876-30000802",
@@ -210,13 +190,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/3764df7d-d46b-4785-bf47-c632b0c66814.jpg"
     },
     {
-      "id": "ddangyo-1154876-30000839",
-      "name": "맵슐랭+모둠감자튀김 한화최강세트",
-      "description": "맵슐랭치킨 + 모둠감자튀김",
-      "category": "[자담x한화] 불꽃투혼 응원세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2bf115fd-0c66-4556-b0f9-f65589fdc45e.jpg"
-    },
-    {
       "id": "ddangyo-1154876-30000397",
       "name": "양념스틱치킨",
       "description": "다리 10조각",
@@ -280,13 +253,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/32a27aaf-93b4-4f37-b2a4-d3a23fcad516.jpg"
     },
     {
-      "id": "ddangyo-1154876-30000840",
-      "name": "불패+치즈볼 한화무적세트",
-      "description": "불패치킨 + 치즈볼",
-      "category": "[자담x한화] 불꽃투혼 응원세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a29a7cfe-b6cf-41b6-aa96-5d942ccbd0cb.jpg"
-    },
-    {
       "id": "ddangyo-1154876-30000806",
       "name": "순살+감튀(L)세트",
       "description": "순살치킨+감자스틱300g",
@@ -320,13 +286,6 @@
       "description": "후라이드콤보반+양념콤보반+1가지맛선택",
       "category": "3반세트메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f16f36ea-05b9-42b8-9d60-179aa1983b9e.jpg"
-    },
-    {
-      "id": "ddangyo-1154876-30000472",
-      "name": "맵쏘이킥치킨",
-      "description": "",
-      "category": "시그니처 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/eee32224-4f5c-40ac-beb8-cee2a6a97689.jpg"
     },
     {
       "id": "ddangyo-1154876-30000398",
@@ -425,13 +384,6 @@
       "description": "다리 4조각+윙 6조각+봉 6조각",
       "category": "콤보치킨 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/9042a4ce-227e-4ec7-9887-a4f699d660a3.jpg"
-    },
-    {
-      "id": "ddangyo-1154876-30000380",
-      "name": "마튀니치킨",
-      "description": "",
-      "category": "시그니처 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/549e9c9f-37f4-4710-9dff-db4b232473bf.jpg"
     },
     {
       "id": "ddangyo-1154876-30000399",
@@ -539,13 +491,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1154876-30000375",
-      "name": "왓더핫치킨",
-      "description": "",
-      "category": "오리지널 치킨 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/84ef0b3e-b27f-445c-9d3e-45b0558f3de8.jpg"
-    },
-    {
       "id": "ddangyo-1154876-30000819",
       "name": "핫후라이드+치즈볼7개",
       "description": "핫후라이드+치즈볼 7개",
@@ -621,13 +566,6 @@
       "description": "",
       "category": "오리지널 치킨 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/409780e8-a32b-44d2-bb49-d1dc6a7644ec.jpg"
-    },
-    {
-      "id": "ddangyo-1154876-30000535",
-      "name": "치즈핑치킨",
-      "description": "",
-      "category": "시그니처 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/2f50e7c6-b525-4119-9656-17d82c91ca94.jpg"
     },
     {
       "id": "ddangyo-1154876-30000100",
@@ -880,13 +818,6 @@
       "description": "",
       "category": "윙봉스치킨 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/3ce44221-edae-4f1d-8ce6-1b4540210a86.jpg"
-    },
-    {
-      "id": "ddangyo-1154876-30000474",
-      "name": "허니팝치킨",
-      "description": "",
-      "category": "오리지널 치킨 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/67a39a0f-5992-4da7-95cd-55629a56cfdd.jpg"
     },
     {
       "id": "ddangyo-1154876-30000475",
@@ -1251,6 +1182,8 @@
     "patstoNo": "1154876",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?neqPkqv"
-    ]
+    ],
+    "rawItemCount": 174,
+    "duplicateItemsRemoved": 9
   }
 }

@@ -12,51 +12,48 @@
     "치떡 킹 떡볶이",
     "떡볶이세트",
     "킹 떡볶이세트",
-    "1인분 떡볶이",
     "곱창,막창볶음",
     "혼밥세트",
     "세트",
     "치킨",
     "튀김류",
     "사이드",
-    "음료",
-    "배떡다방",
-    "대표메뉴"
+    "음료"
   ],
   "items": [
     {
       "id": "ddangyo-1258176-30000131",
       "name": "마라로제떡볶이",
       "description": "푸주＋건두부＋비엔나＋베이컨",
-      "category": "대표메뉴",
+      "category": "떡볶이",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/21cc77e1-fbdb-45c0-ab18-ec101c7af5be.jpg"
     },
     {
       "id": "ddangyo-1258176-30000132",
       "name": "마라떡볶이",
       "description": "푸주＋건두부＋비엔나＋베이컨",
-      "category": "대표메뉴",
+      "category": "떡볶이",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/24a32dc1-5d56-424e-8904-f15f9bb0ba7b.jpg"
     },
     {
       "id": "ddangyo-1258176-30000133",
       "name": "로제떡볶이",
       "description": "메추리알＋비엔나＋베이컨",
-      "category": "대표메뉴",
+      "category": "떡볶이",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/9005ab78-a8ab-4303-be18-b1e7ca07fcae.jpg"
     },
     {
       "id": "ddangyo-1258176-30000138",
       "name": "국물떡볶이",
       "description": "오뎅+파",
-      "category": "대표메뉴",
+      "category": "떡볶이",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/fadf486a-97fc-47eb-b0be-910ea199fb7e.jpg"
     },
     {
       "id": "ddangyo-1258176-30000139",
       "name": "짜장떡볶이",
       "description": "오뎅+파",
-      "category": "대표메뉴",
+      "category": "떡볶이",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/7fe5a4cd-0b30-4752-8815-edc2b6558cfe.jpg"
     },
     {
@@ -403,13 +400,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/1520287c-9ce5-4b0c-8076-562db76e7ba9.jpg"
     },
     {
-      "id": "ddangyo-1258176-30000131",
-      "name": "마라로제떡볶이",
-      "description": "푸주＋건두부＋비엔나＋베이컨",
-      "category": "떡볶이",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/21cc77e1-fbdb-45c0-ab18-ec101c7af5be.jpg"
-    },
-    {
       "id": "ddangyo-1258176-30000169",
       "name": "치떡 킹 분모자떡볶이 세트",
       "description": "분모자떡볶이+(후라이드순살치킨(330g)+음료",
@@ -438,13 +428,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1258176-30000132",
-      "name": "마라떡볶이",
-      "description": "푸주＋건두부＋비엔나＋베이컨",
-      "category": "떡볶이",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/24a32dc1-5d56-424e-8904-f15f9bb0ba7b.jpg"
-    },
-    {
       "id": "ddangyo-1258176-30000192",
       "name": "킹 소곱창떡볶이 세트",
       "description": "소곱창떡볶이+튀김세트(AorB)+(콜라500mlor사이다500mlor쿨피스930)",
@@ -471,13 +454,6 @@
       "description": "",
       "category": "튀김류",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/f9c5fa0d-c8bc-40a3-b2fa-671561bcc038.jpg"
-    },
-    {
-      "id": "ddangyo-1258176-30000133",
-      "name": "로제떡볶이",
-      "description": "메추리알＋비엔나＋베이컨",
-      "category": "떡볶이",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/9005ab78-a8ab-4303-be18-b1e7ca07fcae.jpg"
     },
     {
       "id": "ddangyo-1258176-30000148",
@@ -739,13 +715,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/abce8e6e-16f1-4b29-8fc3-82e60756d088.jpg"
     },
     {
-      "id": "ddangyo-1258176-30000138",
-      "name": "국물떡볶이",
-      "description": "오뎅+파",
-      "category": "떡볶이",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/fadf486a-97fc-47eb-b0be-910ea199fb7e.jpg"
-    },
-    {
       "id": "ddangyo-1258176-30000216",
       "name": "미니고추3개",
       "description": "",
@@ -779,13 +748,6 @@
       "description": "",
       "category": "사이드",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/56bf3115-9929-432f-a9f7-37558c8a83c0.jpg"
-    },
-    {
-      "id": "ddangyo-1258176-30000139",
-      "name": "짜장떡볶이",
-      "description": "오뎅+파",
-      "category": "떡볶이",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/7fe5a4cd-0b30-4752-8815-edc2b6558cfe.jpg"
     },
     {
       "id": "ddangyo-1258176-30000218",
@@ -870,6 +832,8 @@
     "patstoNo": "1258176",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?CRqRegz"
-    ]
+    ],
+    "rawItemCount": 120,
+    "duplicateItemsRemoved": 5
   }
 }

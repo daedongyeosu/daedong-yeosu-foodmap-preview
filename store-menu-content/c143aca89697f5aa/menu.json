@@ -11,22 +11,21 @@
     "같이 먹으면 더욱 맛있는 ~",
     "음료 ~",
     "소스 ~",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1323599-10000007",
       "name": "놓치면 후회~바삭후라이드",
       "description": "펩시콜라355ml+ 치킨무+ 특제소스+ 소금",
-      "category": "대표메뉴",
+      "category": "크리스피치킨 ~",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c27d54f8-a8ac-4a3b-96f3-500e303e07c7.jpg"
     },
     {
       "id": "ddangyo-1323599-10000008",
       "name": "기쁨 바삭 양념치킨",
       "description": "펩시콜라355ml+ 치킨무",
-      "category": "대표메뉴",
+      "category": "크리스피치킨 ~",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/a2c7334e-398f-431a-ae08-339a593b6f82.jpg"
     },
     {
@@ -35,13 +34,6 @@
       "description": "반반치킨 1마리+ 콜라355ml+ 치킨무1개+ 소금",
       "category": "세트메뉴 ~",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/810645bf-c4ce-48e4-8656-35b1e97d2dfd.jpg"
-    },
-    {
-      "id": "ddangyo-1323599-10000007",
-      "name": "놓치면 후회~바삭후라이드",
-      "description": "펩시콜라355ml+ 치킨무+ 특제소스+ 소금",
-      "category": "크리스피치킨 ~",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c27d54f8-a8ac-4a3b-96f3-500e303e07c7.jpg"
     },
     {
       "id": "ddangyo-1323599-10000013",
@@ -85,13 +77,6 @@
       "description": "치킨1마리+ 맵달떡볶이+ 콜라355ml+ 치킨무1개+ 소금",
       "category": "세트메뉴 ~",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1323599-10000008",
-      "name": "기쁨 바삭 양념치킨",
-      "description": "펩시콜라355ml+ 치킨무",
-      "category": "크리스피치킨 ~",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/a2c7334e-398f-431a-ae08-339a593b6f82.jpg"
     },
     {
       "id": "ddangyo-1323599-10000015",
@@ -266,6 +251,8 @@
     "patstoNo": "1323599",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?O103ro4"
-    ]
+    ],
+    "rawItemCount": 34,
+    "duplicateItemsRemoved": 2
   }
 }

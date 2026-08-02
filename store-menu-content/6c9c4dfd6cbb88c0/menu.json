@@ -12,29 +12,28 @@
     "틈새메뉴",
     "후라이드 메뉴",
     "음료수",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1324646-10000008",
       "name": "한식바베큐 (뼈)",
       "description": "",
-      "category": "대표메뉴",
+      "category": "바베큐 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/8bd25be3-d573-4bbc-8200-cb791dd2a441.jpg"
     },
     {
       "id": "ddangyo-1324646-10000010",
       "name": "소금구이바베큐 (뼈)",
       "description": "",
-      "category": "대표메뉴",
+      "category": "바베큐 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ffde45d-14fa-4132-88b8-456a9a2faf5b.jpg"
     },
     {
       "id": "ddangyo-1324646-10000042",
       "name": "순살 후라이드",
       "description": "",
-      "category": "대표메뉴",
+      "category": "후라이드 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/8e5b53c7-3109-4fcd-922d-6729e43f1fa9.jpg"
     },
     {
@@ -43,13 +42,6 @@
       "description": "",
       "category": "바베큐(순살) 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2b4ad9a3-08d7-489f-a23b-75403c3755e2.jpg"
-    },
-    {
-      "id": "ddangyo-1324646-10000008",
-      "name": "한식바베큐 (뼈)",
-      "description": "",
-      "category": "바베큐 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/8bd25be3-d573-4bbc-8200-cb791dd2a441.jpg"
     },
     {
       "id": "ddangyo-1324646-10000013",
@@ -130,13 +122,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1324646-10000042",
-      "name": "순살 후라이드",
-      "description": "",
-      "category": "후라이드 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/8e5b53c7-3109-4fcd-922d-6729e43f1fa9.jpg"
-    },
-    {
       "id": "ddangyo-1324646-10000044",
       "name": "스프라이트",
       "description": "",
@@ -157,13 +142,6 @@
       "description": "",
       "category": "바베큐(순살) 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ae394305-2f51-4619-ba0c-37fdbfce8fff.jpg"
-    },
-    {
-      "id": "ddangyo-1324646-10000010",
-      "name": "소금구이바베큐 (뼈)",
-      "description": "",
-      "category": "바베큐 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ffde45d-14fa-4132-88b8-456a9a2faf5b.jpg"
     },
     {
       "id": "ddangyo-1324646-10000015",
@@ -406,6 +384,8 @@
     "patstoNo": "1324646",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?kUUZmfn"
-    ]
+    ],
+    "rawItemCount": 54,
+    "duplicateItemsRemoved": 3
   }
 }

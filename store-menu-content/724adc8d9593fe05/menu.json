@@ -15,43 +15,42 @@
     "사이드메뉴",
     "음료",
     "소스/포장무",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1171853-10000013",
       "name": "두마리통닭",
       "description": "(두마리) 바삭하고 촉촉한 가마치 대표메뉴",
-      "category": "대표메뉴",
+      "category": "통닭",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/59de457c-db51-46d5-9477-d3adccb9802a.jpg"
     },
     {
       "id": "ddangyo-1171853-10000012",
       "name": "한마리통닭",
       "description": "바삭하고 촉촉한 가마치 대표메뉴",
-      "category": "대표메뉴",
+      "category": "통닭",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/9091279a-16a2-4313-ba96-be7a6ea2c60a.jpg"
     },
     {
       "id": "ddangyo-1171853-10000032",
       "name": "똥집튀김",
       "description": "고소하고 쫄깃한 가마치 인기메뉴",
-      "category": "대표메뉴",
+      "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/ce4815bf-6749-446e-87dd-533bf8bcfa63.jpg"
     },
     {
       "id": "ddangyo-1171853-10000021",
       "name": "가마치후라이드콤보",
       "description": "통다리와 통날개의 부드러움만 담은 가마치콤보",
-      "category": "대표메뉴",
+      "category": "콤보",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/595b841d-df81-474d-869f-be52f93b80e8.jpg"
     },
     {
       "id": "ddangyo-1171853-10000034",
       "name": "닭발튀김",
       "description": "자꾸 손이 가는 고소한 닭발튀김",
-      "category": "대표메뉴",
+      "category": "사이드메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4fcd245b-545a-4771-b292-6fe419c8b866.jpg"
     },
     {
@@ -76,13 +75,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1171853-10000012",
-      "name": "한마리통닭",
-      "description": "바삭하고 촉촉한 가마치 대표메뉴",
-      "category": "통닭",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/9091279a-16a2-4313-ba96-be7a6ea2c60a.jpg"
-    },
-    {
       "id": "ddangyo-1171853-10000020",
       "name": "가마치반반콤보",
       "description": "후라이드 + (양념/치즈/간장마늘) 중 택1",
@@ -95,13 +87,6 @@
       "description": "뼈닭강정 먹기 번거로우신 분~",
       "category": "순살",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/b1467e23-451d-4eba-94c0-b61748c8706d.jpg"
-    },
-    {
-      "id": "ddangyo-1171853-10000032",
-      "name": "똥집튀김",
-      "description": "고소하고 쫄깃한 가마치 인기메뉴",
-      "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/ce4815bf-6749-446e-87dd-533bf8bcfa63.jpg"
     },
     {
       "id": "ddangyo-1171853-10000044",
@@ -145,20 +130,6 @@
       "description": "",
       "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/1ce17acf-a302-4fc1-8760-63ee3e8b419e.jpg"
-    },
-    {
-      "id": "ddangyo-1171853-10000013",
-      "name": "두마리통닭",
-      "description": "(두마리) 바삭하고 촉촉한 가마치 대표메뉴",
-      "category": "통닭",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/59de457c-db51-46d5-9477-d3adccb9802a.jpg"
-    },
-    {
-      "id": "ddangyo-1171853-10000021",
-      "name": "가마치후라이드콤보",
-      "description": "통다리와 통날개의 부드러움만 담은 가마치콤보",
-      "category": "콤보",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/595b841d-df81-474d-869f-be52f93b80e8.jpg"
     },
     {
       "id": "ddangyo-1171853-10000027",
@@ -223,13 +194,6 @@
       "description": "부드러운 순살에 마늘간장의 풍미를 더하다",
       "category": "순살",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/51d97f38-1e5c-434d-bc87-43c868e08b98.jpg"
-    },
-    {
-      "id": "ddangyo-1171853-10000034",
-      "name": "닭발튀김",
-      "description": "자꾸 손이 가는 고소한 닭발튀김",
-      "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4fcd245b-545a-4771-b292-6fe419c8b866.jpg"
     },
     {
       "id": "ddangyo-1171853-10000046",
@@ -458,6 +422,8 @@
     "patstoNo": "1171853",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?szNA6iZ"
-    ]
+    ],
+    "rawItemCount": 61,
+    "duplicateItemsRemoved": 5
   }
 }

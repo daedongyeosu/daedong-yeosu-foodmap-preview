@@ -8,44 +8,29 @@
     "치킨메뉴",
     "닭강정",
     "안주메뉴",
-    "소스& 음료수",
-    "대표메뉴"
+    "소스& 음료수"
   ],
   "items": [
     {
       "id": "ddangyo-1243595-10000001",
       "name": "후라이드 치킨",
       "description": "멕시칸만의 시즈닝으로 숙성된 고소하고 부드러운 속살의 일품치킨",
-      "category": "대표메뉴",
+      "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce8cd8f6-6344-4483-90e4-c328eae397e7.jpg"
     },
     {
       "id": "ddangyo-1243595-10000002",
       "name": "양념치킨",
       "description": "옛날 양념 맛 그대로",
-      "category": "대표메뉴",
+      "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/86f85f74-8847-4f8e-b8ad-9819f35ad52a.jpg"
     },
     {
       "id": "ddangyo-1243595-10000003",
       "name": "간장치킨",
       "description": "한번 드시면 또 찾는 단짠 단짠",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ab7299c0-9149-4e0b-8f3a-fff7c64db3dd.jpg"
-    },
-    {
-      "id": "ddangyo-1243595-10000009",
-      "name": "순살닭강정",
-      "description": "바삭하게 튀겨낸 치킨을 달콤한 멕시칸만의 닭강정 소스로 버무린 특제치킨~~",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7e730120-84b7-4558-8b66-58df38ea877d.jpg"
-    },
-    {
-      "id": "ddangyo-1243595-10000001",
-      "name": "후라이드 치킨",
-      "description": "멕시칸만의 시즈닝으로 숙성된 고소하고 부드러운 속살의 일품치킨",
       "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce8cd8f6-6344-4483-90e4-c328eae397e7.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ab7299c0-9149-4e0b-8f3a-fff7c64db3dd.jpg"
     },
     {
       "id": "ddangyo-1243595-10000009",
@@ -69,13 +54,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1243595-10000002",
-      "name": "양념치킨",
-      "description": "옛날 양념 맛 그대로",
-      "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/86f85f74-8847-4f8e-b8ad-9819f35ad52a.jpg"
-    },
-    {
       "id": "ddangyo-1243595-10000010",
       "name": "반반 순살 닭강정",
       "description": "",
@@ -95,13 +73,6 @@
       "description": "",
       "category": "소스& 음료수",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1243595-10000003",
-      "name": "간장치킨",
-      "description": "한번 드시면 또 찾는 단짠 단짠",
-      "category": "치킨메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ab7299c0-9149-4e0b-8f3a-fff7c64db3dd.jpg"
     },
     {
       "id": "ddangyo-1243595-10000011",
@@ -235,6 +206,8 @@
     "patstoNo": "1243595",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?6G9uvGV"
-    ]
+    ],
+    "rawItemCount": 31,
+    "duplicateItemsRemoved": 4
   }
 }

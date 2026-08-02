@@ -17,43 +17,42 @@
     "찍먹소스",
     "치킨무&피클&피자소스",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1116799-10000124",
       "name": "[치피콜세트] 치킨+ 피자+콜라",
       "description": "내맘대로치킨+피자+코카콜라500ml(변경가능옵션) 입맛에 따라 골라골라~~ 치킨, 피자를 한번에",
-      "category": "대표메뉴",
+      "category": "세트메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/14427c59-93b3-4a06-bf1b-b93f33111599.jpg"
     },
     {
       "id": "ddangyo-1116799-10000081",
       "name": "반반치킨 (반마리 +반마리 )",
       "description": "행복두배 인기 메뉴를 반반으로 드세요. 맛있는거 옆에 맛있는거~~ 한마리로 행복은 두배~~~",
-      "category": "대표메뉴",
+      "category": "치킨 시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/b6f7768a-f7e5-4ae6-a803-e5c381083082.jpg"
     },
     {
       "id": "ddangyo-1116799-10000083",
       "name": "오리 지널",
       "description": "기름기 쫙 뺀 담백하고 촉촉한 치킨에 굽네만의 시그니처 시즈닝으로 풍미를 더한 오븐구이 치킨의 원조",
-      "category": "대표메뉴",
+      "category": "치킨 시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/601c2181-16d7-4db4-895c-85dc2d8ca7db.jpg"
     },
     {
       "id": "ddangyo-1116799-10000091",
       "name": "굽네 불닭발",
       "description": "튤립 닭발은 오븐구이로 즐기는 찐찐 시그니처",
-      "category": "대표메뉴",
+      "category": "치킨 시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/65afe33f-e724-4a12-b990-7b7dfa87379c.jpg"
     },
     {
       "id": "ddangyo-1116799-10000082",
       "name": "[1초치킨] 고추바사삭",
       "description": "(고추바사삭 + 소스2+각무 ) 1초에 한마리 팔리는 국민치킨 청양고추의 은은한 알싸함과 최강의 조합",
-      "category": "대표메뉴",
+      "category": "치킨 시리즈",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/8b7a09eb-291d-44e2-97b2-34fb690e13dd.jpg"
     },
     {
@@ -63,13 +62,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1116799-10000081",
-      "name": "반반치킨 (반마리 +반마리 )",
-      "description": "행복두배 인기 메뉴를 반반으로 드세요. 맛있는거 옆에 맛있는거~~ 한마리로 행복은 두배~~~",
-      "category": "치킨 시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/b6f7768a-f7e5-4ae6-a803-e5c381083082.jpg"
     },
     {
       "id": "ddangyo-1116799-10000094",
@@ -157,13 +149,6 @@
       "adultOnly": true
     },
     {
-      "id": "ddangyo-1116799-10000082",
-      "name": "[1초치킨] 고추바사삭",
-      "description": "(고추바사삭 + 소스2+각무 ) 1초에 한마리 팔리는 국민치킨 청양고추의 은은한 알싸함과 최강의 조합",
-      "category": "치킨 시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/8b7a09eb-291d-44e2-97b2-34fb690e13dd.jpg"
-    },
-    {
       "id": "ddangyo-1116799-10000095",
       "name": "(1인세트) 싱글피자+파스타",
       "description": "혼자서도 피자와 파스타를 동시에~ (치킨X)",
@@ -197,13 +182,6 @@
       "description": "굽네만의 스타일로 만든 고급 바베큐 등갈비 ~",
       "category": "단골들만 안다는 숨은 찐 메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/79ab87bd-7c61-472c-94ef-68defa2099a5.jpg"
-    },
-    {
-      "id": "ddangyo-1116799-10000124",
-      "name": "[치피콜세트] 치킨+ 피자+콜라",
-      "description": "내맘대로치킨+피자+코카콜라500ml(변경가능옵션) 입맛에 따라 골라골라~~ 치킨, 피자를 한번에",
-      "category": "세트메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/14427c59-93b3-4a06-bf1b-b93f33111599.jpg"
     },
     {
       "id": "ddangyo-1116799-10000131",
@@ -240,13 +218,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1116799-10000083",
-      "name": "오리 지널",
-      "description": "기름기 쫙 뺀 담백하고 촉촉한 치킨에 굽네만의 시그니처 시즈닝으로 풍미를 더한 오븐구이 치킨의 원조",
-      "category": "치킨 시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/601c2181-16d7-4db4-895c-85dc2d8ca7db.jpg"
     },
     {
       "id": "ddangyo-1116799-10000096",
@@ -530,13 +501,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/66a4bdab-6cb1-4de4-8620-57a713e01181.jpg"
     },
     {
-      "id": "ddangyo-1116799-10000091",
-      "name": "굽네 불닭발",
-      "description": "튤립 닭발은 오븐구이로 즐기는 찐찐 시그니처",
-      "category": "치킨 시리즈",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/65afe33f-e724-4a12-b990-7b7dfa87379c.jpg"
-    },
-    {
       "id": "ddangyo-1116799-10000140",
       "name": "햇반",
       "description": "",
@@ -584,6 +548,8 @@
     "patstoNo": "1116799",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?QktNckc"
-    ]
+    ],
+    "rawItemCount": 79,
+    "duplicateItemsRemoved": 5
   }
 }

@@ -13,29 +13,28 @@
     "부위별치킨",
     "사이드메뉴",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1211697-10000005",
       "name": "후라이드치킨",
       "description": "국내산 신선육에 독특한 맛의 파우더를 입혀 바삭하고 고소하게 튀겨낸 처갓집양념치킨의 인기메뉴",
-      "category": "대표메뉴",
+      "category": "한마리치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d7ee48e4-2cc0-4dfe-8e35-a49660245930.jpg"
     },
     {
       "id": "ddangyo-1211697-10000006",
       "name": "허니올리고당야채양념치킨",
       "description": "물엿이나 설탕대신 올리고당과 벌꿀 ,생야채를 기반으로 맛을낸 양념소스가 어우러진 처갓집 대표메뉴",
-      "category": "대표메뉴",
+      "category": "한마리치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/216b072c-955d-448a-b155-54cc6e7a9120.jpg"
     },
     {
       "id": "ddangyo-1211697-10000008",
       "name": "슈프림양념치킨",
       "description": "바삭한 후라이드 치킨위에 허니올리고당이 야채양념과 신비의 하얀 소스가 뿌려진 이색적인 양념치킨",
-      "category": "대표메뉴",
+      "category": "한마리치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/617e2c0c-d7ca-4144-abda-5aaf0970046e.jpg"
     },
     {
@@ -44,13 +43,6 @@
       "description": "가다랑어포로 맛을 낸 자연숙성 블랙소스의 깊은 풍미에 슈프림양념의 단짠 매력을 더한 프리미엄 양념치킨",
       "category": "신메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/53b07600-22b1-4277-aade-8d4e0598c666.jpg"
-    },
-    {
-      "id": "ddangyo-1211697-10000005",
-      "name": "후라이드치킨",
-      "description": "국내산 신선육에 독특한 맛의 파우더를 입혀 바삭하고 고소하게 튀겨낸 처갓집양념치킨의 인기메뉴",
-      "category": "한마리치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d7ee48e4-2cc0-4dfe-8e35-a49660245930.jpg"
     },
     {
       "id": "ddangyo-1211697-10000015",
@@ -110,13 +102,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1211697-10000006",
-      "name": "허니올리고당야채양념치킨",
-      "description": "물엿이나 설탕대신 올리고당과 벌꿀 ,생야채를 기반으로 맛을낸 양념소스가 어우러진 처갓집 대표메뉴",
-      "category": "한마리치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/216b072c-955d-448a-b155-54cc6e7a9120.jpg"
-    },
-    {
       "id": "ddangyo-1211697-10000016",
       "name": "순살허니올리고당양념치킨",
       "description": "물엿이나 설탕 대신 올리고당과 벌꿀,생야채를 기반으로 맛을 낸 양념소스가 어우러진 처갓집 대표메뉴",
@@ -166,13 +151,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1211697-10000008",
-      "name": "슈프림양념치킨",
-      "description": "바삭한 후라이드 치킨위에 허니올리고당이 야채양념과 신비의 하얀 소스가 뿌려진 이색적인 양념치킨",
-      "category": "한마리치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/617e2c0c-d7ca-4144-abda-5aaf0970046e.jpg"
     },
     {
       "id": "ddangyo-1211697-10000018",
@@ -331,6 +309,8 @@
     "patstoNo": "1211697",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?i0fxfXs"
-    ]
+    ],
+    "rawItemCount": 43,
+    "duplicateItemsRemoved": 3
   }
 }

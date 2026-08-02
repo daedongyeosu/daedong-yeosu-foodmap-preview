@@ -8,44 +8,15 @@
     "직화 순살바베큐치킨 단품",
     "직화 순살바베큐치킨 세트",
     "사이드메뉴",
-    "주류",
-    "대표메뉴"
+    "주류"
   ],
   "items": [
     {
       "id": "ddangyo-1188818-10000026",
       "name": "[직화] 순살양념바베큐치킨+우동사리",
       "description": "",
-      "category": "대표메뉴",
+      "category": "직화 순살바베큐치킨 단품",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/df7c0f2e-245d-4c45-a5ad-8a634b92d137.jpg"
-    },
-    {
-      "id": "ddangyo-1188818-10000025",
-      "name": "[직화] 순살양념바베큐치킨",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/3a5e1317-d2a3-4c22-8ea6-1e30565bff81.jpg"
-    },
-    {
-      "id": "ddangyo-1188818-10000027",
-      "name": "[직화] 순살간장바베큐치킨",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9eb785f5-c869-40ae-a005-9d1dfe9a7260.jpg"
-    },
-    {
-      "id": "ddangyo-1188818-10000029",
-      "name": "[직화] 순살허브소금바베큐치킨",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/6fee24f9-31a0-4300-b8a8-49178b64e860.jpg"
-    },
-    {
-      "id": "ddangyo-1188818-10000030",
-      "name": "[치즈가득] 직화 치즈순살양념바베큐치킨",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9b7dceef-7c87-457b-9af5-08e989bd18d9.jpg"
     },
     {
       "id": "ddangyo-1188818-10000025",
@@ -53,6 +24,27 @@
       "description": "",
       "category": "직화 순살바베큐치킨 단품",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/3a5e1317-d2a3-4c22-8ea6-1e30565bff81.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000027",
+      "name": "[직화] 순살간장바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9eb785f5-c869-40ae-a005-9d1dfe9a7260.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000029",
+      "name": "[직화] 순살허브소금바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/6fee24f9-31a0-4300-b8a8-49178b64e860.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000030",
+      "name": "[치즈가득] 직화 치즈순살양념바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9b7dceef-7c87-457b-9af5-08e989bd18d9.jpg"
     },
     {
       "id": "ddangyo-1188818-10000032",
@@ -76,13 +68,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1188818-10000026",
-      "name": "[직화] 순살양념바베큐치킨+우동사리",
-      "description": "",
-      "category": "직화 순살바베큐치킨 단품",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/df7c0f2e-245d-4c45-a5ad-8a634b92d137.jpg"
-    },
-    {
       "id": "ddangyo-1188818-10000033",
       "name": "직화 순살양념바베큐치킨+ 직화 순살허브소금바베큐치킨",
       "description": "",
@@ -102,13 +87,6 @@
       "description": "",
       "category": "주류",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1188818-10000027",
-      "name": "[직화] 순살간장바베큐치킨",
-      "description": "",
-      "category": "직화 순살바베큐치킨 단품",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9eb785f5-c869-40ae-a005-9d1dfe9a7260.jpg"
     },
     {
       "id": "ddangyo-1188818-10000034",
@@ -146,25 +124,11 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1188818-10000029",
-      "name": "[직화] 순살허브소금바베큐치킨",
-      "description": "",
-      "category": "직화 순살바베큐치킨 단품",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/6fee24f9-31a0-4300-b8a8-49178b64e860.jpg"
-    },
-    {
       "id": "ddangyo-1188818-10000039",
       "name": "셀프참치마요주먹밥",
       "description": "",
       "category": "사이드메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1188818-10000030",
-      "name": "[치즈가득] 직화 치즈순살양념바베큐치킨",
-      "description": "",
-      "category": "직화 순살바베큐치킨 단품",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9b7dceef-7c87-457b-9af5-08e989bd18d9.jpg"
     },
     {
       "id": "ddangyo-1188818-10000040",
@@ -221,6 +185,8 @@
     "patstoNo": "1188818",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?n5AXW9n"
-    ]
+    ],
+    "rawItemCount": 29,
+    "duplicateItemsRemoved": 5
   }
 }

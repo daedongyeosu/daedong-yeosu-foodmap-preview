@@ -12,36 +12,35 @@
     "사이드메뉴",
     "세트메뉴",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1175098-10000003",
       "name": "반반치킨",
       "description": "온가족이 취향대로 골라먹는~~",
-      "category": "대표메뉴",
+      "category": "오리지널",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
     },
     {
       "id": "ddangyo-1175098-10000012",
       "name": "순살반반",
       "description": "",
-      "category": "대표메뉴",
+      "category": "순살치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/edc4730e-1da6-4f91-a699-da101540e0a8.jpg"
     },
     {
       "id": "ddangyo-1175098-10000002",
       "name": "후라이드치킨",
       "description": "엄마가 튀겨주신 줄 알았다구요~ 매일 새기름으로 깨끗한 맛",
-      "category": "대표메뉴",
+      "category": "오리지널",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2eb650e8-5b08-4381-9d28-8d38fa4fc410.jpg"
     },
     {
       "id": "ddangyo-1175098-10000008",
       "name": "순살치킨",
       "description": "기다리고 기다렸다 내가 찾는 바로 그 순살",
-      "category": "대표메뉴",
+      "category": "순살치킨",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/7929a76e-47e4-430f-bef1-8bbb5aec47e9.JPG"
     },
     {
@@ -57,20 +56,6 @@
       "description": "버터풍미가득버터링치킨",
       "category": "신메뉴[NEW]주목i주목i",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1175098-10000002",
-      "name": "후라이드치킨",
-      "description": "엄마가 튀겨주신 줄 알았다구요~ 매일 새기름으로 깨끗한 맛",
-      "category": "오리지널",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2eb650e8-5b08-4381-9d28-8d38fa4fc410.jpg"
-    },
-    {
-      "id": "ddangyo-1175098-10000008",
-      "name": "순살치킨",
-      "description": "기다리고 기다렸다 내가 찾는 바로 그 순살",
-      "category": "순살치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/7929a76e-47e4-430f-bef1-8bbb5aec47e9.JPG"
     },
     {
       "id": "ddangyo-1175098-10000013",
@@ -107,13 +92,6 @@
       "description": "",
       "category": "음료",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/af9b46cd-65af-426a-913a-ebb3fc9305c9.jpg"
-    },
-    {
-      "id": "ddangyo-1175098-10000003",
-      "name": "반반치킨",
-      "description": "온가족이 취향대로 골라먹는~~",
-      "category": "오리지널",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
     },
     {
       "id": "ddangyo-1175098-10000009",
@@ -259,13 +237,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d9959ea2-0282-4467-b12d-ecaff448d95b.jpg"
     },
     {
-      "id": "ddangyo-1175098-10000012",
-      "name": "순살반반",
-      "description": "",
-      "category": "순살치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/edc4730e-1da6-4f91-a699-da101540e0a8.jpg"
-    },
-    {
       "id": "ddangyo-1175098-10000017",
       "name": "매운양념윙봉",
       "description": "",
@@ -328,6 +299,8 @@
     "patstoNo": "1175098",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?XTVAJ3q"
-    ]
+    ],
+    "rawItemCount": 43,
+    "duplicateItemsRemoved": 4
   }
 }

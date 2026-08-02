@@ -12,44 +12,29 @@
     "닭강정세트",
     "행복세트",
     "스페셜메뉴",
-    "사이드메뉴",
-    "대표메뉴"
+    "사이드메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1214086-10000016",
       "name": "세트 1.후라이드1마리+피자R+콜라",
       "description": "양념,무우,피클,소금,머스타드소스,핫소스,콜라500ml치킨양념변경시, 양념,소금,머스타드제외 반반양념변경시 양념제외",
-      "category": "대표메뉴",
+      "category": "일반세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/33bc1697-68d3-4151-ad89-4d67f73cd0c4.jpg"
     },
     {
       "id": "ddangyo-1214086-10000017",
       "name": "세트 2.후라이드1마리+피자L+콜라大",
       "description": "양념,무우,피클,소금,머스타드소스,핫소스,콜라1.25l치킨양념변경시, 양념,소금,머스타드제외 반반양념변경시 양념제외",
-      "category": "대표메뉴",
+      "category": "일반세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/33bc1697-68d3-4151-ad89-4d67f73cd0c4.jpg"
     },
     {
       "id": "ddangyo-1214086-10000002",
       "name": "불고기피자",
       "description": "핫소스,피클,핫소스,콜라500ml(R),1.25l(L)",
-      "category": "대표메뉴",
+      "category": "피자메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d68ead23-bae6-4341-b05a-9972432b8920.jpg"
-    },
-    {
-      "id": "ddangyo-1214086-10000001",
-      "name": "콤비네이션피자",
-      "description": "핫소스,피클,콜라500ml(R),1.25l(L)",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/ad18fa8d-1314-4492-8b58-ca85282013c4.jpg"
-    },
-    {
-      "id": "ddangyo-1214086-10000033",
-      "name": "스파게티",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/cfe97320-e7c4-45ae-9761-a9ff097c7120.jpg"
     },
     {
       "id": "ddangyo-1214086-10000001",
@@ -59,18 +44,18 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/ad18fa8d-1314-4492-8b58-ca85282013c4.jpg"
     },
     {
+      "id": "ddangyo-1214086-10000033",
+      "name": "스파게티",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/cfe97320-e7c4-45ae-9761-a9ff097c7120.jpg"
+    },
+    {
       "id": "ddangyo-1214086-10000008",
       "name": "후라이드치킨",
       "description": "양념,무우,소금,머스타드소스,콜라500ml",
       "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2eb650e8-5b08-4381-9d28-8d38fa4fc410.jpg"
-    },
-    {
-      "id": "ddangyo-1214086-10000016",
-      "name": "세트 1.후라이드1마리+피자R+콜라",
-      "description": "양념,무우,피클,소금,머스타드소스,핫소스,콜라500ml치킨양념변경시, 양념,소금,머스타드제외 반반양념변경시 양념제외",
-      "category": "일반세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/33bc1697-68d3-4151-ad89-4d67f73cd0c4.jpg"
     },
     {
       "id": "ddangyo-1214086-10000020",
@@ -101,32 +86,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/dda841d4-68bc-46a0-8a69-728a390d6d40.jpg"
     },
     {
-      "id": "ddangyo-1214086-10000033",
-      "name": "스파게티",
-      "description": "",
-      "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/cfe97320-e7c4-45ae-9761-a9ff097c7120.jpg"
-    },
-    {
-      "id": "ddangyo-1214086-10000002",
-      "name": "불고기피자",
-      "description": "핫소스,피클,핫소스,콜라500ml(R),1.25l(L)",
-      "category": "피자메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d68ead23-bae6-4341-b05a-9972432b8920.jpg"
-    },
-    {
       "id": "ddangyo-1214086-10000009",
       "name": "순살파닭",
       "description": "겨자소스,무우,콜라500ml",
       "category": "치킨메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e531a56e-409e-4c85-b281-8ab13971a6ed.jpg"
-    },
-    {
-      "id": "ddangyo-1214086-10000017",
-      "name": "세트 2.후라이드1마리+피자L+콜라大",
-      "description": "양념,무우,피클,소금,머스타드소스,핫소스,콜라1.25l치킨양념변경시, 양념,소금,머스타드제외 반반양념변경시 양념제외",
-      "category": "일반세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/33bc1697-68d3-4151-ad89-4d67f73cd0c4.jpg"
     },
     {
       "id": "ddangyo-1214086-10000021",
@@ -288,6 +252,8 @@
     "patstoNo": "1214086",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?nf2nuG5"
-    ]
+    ],
+    "rawItemCount": 38,
+    "duplicateItemsRemoved": 5
   }
 }

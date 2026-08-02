@@ -36,13 +36,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32292a60-2fef-4c35-b391-567ee2c6d124.jpg"
     },
     {
-      "id": "ddangyo-1304058-10000001",
-      "name": "박스터지는 두마리 순살치킨",
-      "description": "두마리치킨+감자튀김+치킨무+케찹+머스카드+음료355ml",
-      "category": "대표메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/34da1ad9-d5cc-4798-88bd-5fbd14c90d78.jpg"
-    },
-    {
       "id": "ddangyo-1304058-10000007",
       "name": "[순살만폭격]'2마리 3가지맛 순살치킨'",
       "description": "순살치킨두마리+3가지맛+감자튀김+치킨무+소금+케찹+머스타드++음료",
@@ -78,13 +71,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1304058-10000002",
-      "name": "[ 박스가 다 터져~ ] '박스터지는 한마리 순살치킨'",
-      "description": "치킨한마리+감자튀김+치킨무+케찹+머스타드+음료",
-      "category": "대표메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg"
-    },
-    {
       "id": "ddangyo-1304058-10000009",
       "name": "[JMT파닭] 파닭파닭 한마리 순살반반",
       "description": "한마리치킨+감자튀김+소스류+파채+파채소스+음료 뚱캔",
@@ -111,13 +97,6 @@
       "description": "",
       "category": "음료",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1304058-10000003",
-      "name": "[feat.남포동떡볶이]'치떡세트(치킨+떡볶이)'",
-      "description": "한마리치킨+부산떡볶이+감자튀김+치킨무+케찹+머스타드+음료",
-      "category": "대표메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32292a60-2fef-4c35-b391-567ee2c6d124.jpg"
     },
     {
       "id": "ddangyo-1304058-10000012",
@@ -321,6 +300,8 @@
     "patstoNo": "1304058",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?BQEZsix"
-    ]
+    ],
+    "rawItemCount": 43,
+    "duplicateItemsRemoved": 3
   }
 }

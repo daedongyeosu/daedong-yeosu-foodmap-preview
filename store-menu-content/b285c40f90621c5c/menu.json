@@ -8,7 +8,6 @@
     "신메뉴",
     "미니언즈 굿즈 세트",
     "bhc 세트",
-    "bhc 치킨 버거",
     "쏘이갈릭킹",
     "스윗칠리킹",
     "콰삭킹",
@@ -24,43 +23,42 @@
     "콜팝&피자",
     "사이드&소스",
     "음료",
-    "주류메뉴",
-    "대표메뉴"
+    "주류메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1315709-30000013",
       "name": "뿌링클 콤보",
       "description": "뿌링뿌링! 세상에 없던 마법의 맛 뿌링클, 퍽퍽한 닭가슴살 없이 윙, 봉, 닭다리만 담은 콤보[조각수:다리 5조각,윙 5조각,봉 5조각]",
-      "category": "대표메뉴",
+      "category": "뿌링클",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/132da6fa-35ea-4ffa-a111-33a4dd9b85ac.jpg"
     },
     {
       "id": "ddangyo-1315709-30000325",
       "name": "HOT후라이드 콤보",
       "description": "명불허전! 바삭함, 고소함 가득! 매콤하게 튀긴 매운 맛 후라이드 치킨의 정석, 퍽퍽한 닭가슴살 없이 윙, 봉, 닭다리만 담은 콤보 *HOT후라이드 시즈닝으로 인해 튀김 성상이 어둡게 나타날 수 있습니다.[조각수:다리 5조각,윙 5조각,봉 5조각]",
-      "category": "대표메뉴",
+      "category": "후라이드&양념",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/9efd35a7-9df5-4d98-ab7e-68c3e3054be1.jpg"
     },
     {
       "id": "ddangyo-1315709-30000037",
       "name": "뿌링클",
       "description": "뿌링뿌링! 세상에 없던 마법의 맛 뿌링클[중량:10호(951g~1,050g)(조리 전 중량입니다.)]",
-      "category": "대표메뉴",
+      "category": "뿌링클",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/45909ad9-e953-468b-9c40-a965a6a969bf.jpg"
     },
     {
       "id": "ddangyo-1315709-30000038",
       "name": "뿌링클순살",
       "description": "뿌링뿌링! 세상에 없던 마법의 맛 뿌링클! 오직 닭가슴살로만 구성된 촉촉한 순살[중량:600g이상(FLASH FRIED)]",
-      "category": "대표메뉴",
+      "category": "뿌링클",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/0d37a4a5-29ea-467a-8f91-aafa4f51a6a3.jpg"
     },
     {
       "id": "ddangyo-1315709-30000053",
       "name": "HOT후라이드",
       "description": "명불허전! 바삭함, 고소함 가득! 매콤하게 튀긴 매운 맛 후라이드 치킨의 정석 *HOT후라이드 시즈닝으로 인해 튀김 성상이 어둡게 나타날 수 있습니다.[중량:10호(951g~1,050g)(조리 전 중량입니다.)]",
-      "category": "대표메뉴",
+      "category": "후라이드&양념",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e3229365-4c66-4e94-9130-75ecd2b66894.jpg"
     },
     {
@@ -167,13 +165,6 @@
       "description": "깊고 매콤한 쏘~스와 바삭한 통마늘칩이 어우러진 치킨[중량:10호(951g~1,050g)(조리 전 중량입니다.)]",
       "category": "쏘마치",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/5167e914-a474-4613-86c3-11ed66fc0e71.jpg"
-    },
-    {
-      "id": "ddangyo-1315709-30000037",
-      "name": "뿌링클",
-      "description": "뿌링뿌링! 세상에 없던 마법의 맛 뿌링클[중량:10호(951g~1,050g)(조리 전 중량입니다.)]",
-      "category": "뿌링클",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/45909ad9-e953-468b-9c40-a965a6a969bf.jpg"
     },
     {
       "id": "ddangyo-1315709-30000633",
@@ -338,13 +329,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/cf674cdb-1453-48ef-88ff-4d3d439ae4ea.jpg"
     },
     {
-      "id": "ddangyo-1315709-30000013",
-      "name": "뿌링클 콤보",
-      "description": "뿌링뿌링! 세상에 없던 마법의 맛 뿌링클, 퍽퍽한 닭가슴살 없이 윙, 봉, 닭다리만 담은 콤보[조각수:다리 5조각,윙 5조각,봉 5조각]",
-      "category": "뿌링클",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/132da6fa-35ea-4ffa-a111-33a4dd9b85ac.jpg"
-    },
-    {
       "id": "ddangyo-1315709-30000834",
       "name": "[NEW] 커링클 3&7콤보",
       "description": "은은한 커리향과 부드러운 크림의 풍미가 어우러진 달콤 매콤 시즈닝 치킨에 새콤달콤한 허니버터요거트소스를 곁들여 더욱 다채롭게 즐길 수 있는 치킨 *허니 버터 요거트 소스와 함께 제공됩니다.[조각수:윙 7조각,봉 7조각,다리 3조각]",
@@ -441,13 +425,6 @@
       "description": "명불허전! 바삭하고 고소하게 정직하게 튀겨낸 bhc 후라이드 치킨의 정석, 퍽퍽한 닭가슴살 없이 윙, 봉, 닭다리만 담은 콤보[조각수:다리 5조각,윙 5조각,봉 5조각]",
       "category": "후라이드&양념",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ffdf7915-6ac8-4f7a-9a42-e6eff90da213.jpg"
-    },
-    {
-      "id": "ddangyo-1315709-30000038",
-      "name": "뿌링클순살",
-      "description": "뿌링뿌링! 세상에 없던 마법의 맛 뿌링클! 오직 닭가슴살로만 구성된 촉촉한 순살[중량:600g이상(FLASH FRIED)]",
-      "category": "뿌링클",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/0d37a4a5-29ea-467a-8f91-aafa4f51a6a3.jpg"
     },
     {
       "id": "ddangyo-1315709-30000042",
@@ -723,13 +700,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d5bd2c0f-514f-4cae-be4f-f46f05d9948c.jpg"
     },
     {
-      "id": "ddangyo-1315709-30000053",
-      "name": "HOT후라이드",
-      "description": "명불허전! 바삭함, 고소함 가득! 매콤하게 튀긴 매운 맛 후라이드 치킨의 정석 *HOT후라이드 시즈닝으로 인해 튀김 성상이 어둡게 나타날 수 있습니다.[중량:10호(951g~1,050g)(조리 전 중량입니다.)]",
-      "category": "후라이드&양념",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e3229365-4c66-4e94-9130-75ecd2b66894.jpg"
-    },
-    {
       "id": "ddangyo-1315709-30000797",
       "name": "찍먹 꿀조합 세트",
       "description": "콰삭슈림프+분모자로제떡볶이+달콤바삭치즈볼+콜라1.25L 구성",
@@ -763,13 +733,6 @@
       "description": "[치킨 반마리 제공] 명불허전, 바삭함, 고소함 가득, 정직하게 튀긴 후라이드 치킨의 정석＋뿌링클라이스＋콜라500ml[중량:10호1/2(476g~525g)(조리 전 중량입니다.)]",
       "category": "[반마리] 혼치세트",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/84bf56a8-b211-40a4-961f-e36654872652.jpg"
-    },
-    {
-      "id": "ddangyo-1315709-30000325",
-      "name": "HOT후라이드 콤보",
-      "description": "명불허전! 바삭함, 고소함 가득! 매콤하게 튀긴 매운 맛 후라이드 치킨의 정석, 퍽퍽한 닭가슴살 없이 윙, 봉, 닭다리만 담은 콤보 *HOT후라이드 시즈닝으로 인해 튀김 성상이 어둡게 나타날 수 있습니다.[조각수:다리 5조각,윙 5조각,봉 5조각]",
-      "category": "후라이드&양념",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/9efd35a7-9df5-4d98-ab7e-68c3e3054be1.jpg"
     },
     {
       "id": "ddangyo-1315709-30000839",
@@ -1113,6 +1076,8 @@
     "patstoNo": "1315709",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?RjTqfSx"
-    ]
+    ],
+    "rawItemCount": 154,
+    "duplicateItemsRemoved": 5
   }
 }

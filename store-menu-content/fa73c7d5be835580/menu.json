@@ -5,7 +5,6 @@
   "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d5c31fbf-1913-4432-a57b-63d932841a3d.jpg",
   "categories": [
     "전체",
-    "ONLY 대표메뉴",
     "ONLY 치킨두마리메뉴",
     "사이드 메뉴",
     "음료 추가선택",
@@ -26,20 +25,6 @@
       "description": "(소금 제공 / 소스, 치킨무, 콜라 미제공 (별도구입))",
       "category": "대표메뉴",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/f08939ec-3f9e-45aa-aab7-6c78faa34d91.jpg"
-    },
-    {
-      "id": "ddangyo-1323603-10000015",
-      "name": "Only 핫크리스피 뼈 두마리 세트",
-      "description": "치킨 두마리 세트 (소금 제공 / 소스, 치킨무, 콜라 미제공(별도구입))",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/20f0e459-c5aa-4e89-a9b0-fb62540ab06c.jpg"
-    },
-    {
-      "id": "ddangyo-1323603-10000013",
-      "name": "Only 핫 크리스피 치킨",
-      "description": "(소금 제공 / 소스, 치킨무, 콜라 미제공 (별도구입))",
-      "category": "ONLY 대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/f36a7f40-e2c7-4e89-9b08-6692cb53bf19.jpg"
     },
     {
       "id": "ddangyo-1323603-10000015",
@@ -69,13 +54,6 @@
       "category": "주류메뉴",
       "image": "",
       "adultOnly": true
-    },
-    {
-      "id": "ddangyo-1323603-10000014",
-      "name": "Only 핫 크리스피 순살 치킨",
-      "description": "(소금 제공 / 소스, 치킨무, 콜라 미제공 (별도구입))",
-      "category": "ONLY 대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/f08939ec-3f9e-45aa-aab7-6c78faa34d91.jpg"
     },
     {
       "id": "ddangyo-1323603-10000016",
@@ -180,6 +158,8 @@
     "patstoNo": "1323603",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?bD5tpYT"
-    ]
+    ],
+    "rawItemCount": 22,
+    "duplicateItemsRemoved": 3
   }
 }

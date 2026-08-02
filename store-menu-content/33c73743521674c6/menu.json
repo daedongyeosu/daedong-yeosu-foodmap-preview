@@ -103,25 +103,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a75d7782-fb56-42bb-a26d-22d53ef0880d.jpg"
     },
     {
-      "id": "ddangyo-1340556-30001055",
-      "name": "굽네 양념 강정",
-      "description": "굽네 양념 강정(소스, 음료 미제공)",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b99a4d25-afb2-470e-903f-b0d145468062.jpg"
-    },
-    {
       "id": "ddangyo-1340556-30000038",
       "name": "치킨무",
       "description": "",
       "category": "치킨무 & 피클 & 피자소스",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1340556-30001046",
-      "name": "베스트 Pick 뼈 한마리",
-      "description": "뼈 한마리 (맛선택)+치킨무+소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5364c83b-a26d-44f6-ba17-2076e4745425.jpg"
     },
     {
       "id": "ddangyo-1340556-30001024",
@@ -187,13 +173,6 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d1275dde-d338-4b42-a900-3a0e916b88a9.jpg"
     },
     {
-      "id": "ddangyo-1340556-30001049",
-      "name": "헬시 Pick 닭가슴살",
-      "description": "닭가슴살 부위 (맛선택)+치킨무+소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0424e79d-17f6-4fc0-b5ab-2731f0dd56b6.jpg"
-    },
-    {
       "id": "ddangyo-1340556-30001051",
       "name": "치.베 SET (치킨+치킨 베이크)",
       "description": "치킨(택1)+치킨 베이크",
@@ -257,25 +236,11 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/39344f36-0a25-4a47-b345-1a9a1a8210c1.jpg"
     },
     {
-      "id": "ddangyo-1340556-30001053",
-      "name": "(New) 굽네 순살 시카고 피자 시리즈",
-      "description": "(New) 굽네 순살 시카고 피자 시리즈(택1)＋피클＋갈릭디핑+핫소스",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0fea8653-a201-43a5-991c-aa0fe2023093.jpg"
-    },
-    {
       "id": "ddangyo-1340556-30000041",
       "name": "핫소스",
       "description": "",
       "category": "치킨무 & 피클 & 피자소스",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1340556-30001052",
-      "name": "(New) 치킨베이크",
-      "description": "",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/270d193b-d7a8-4082-9cc3-dc323942466b.jpg"
     },
     {
       "id": "ddangyo-1340556-30000030",
@@ -640,6 +605,8 @@
     "patstoNo": "1340556",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?bGje9zQ"
-    ]
+    ],
+    "rawItemCount": 88,
+    "duplicateItemsRemoved": 5
   }
 }

@@ -13,29 +13,28 @@
     "순살치킨",
     "the바삭_치킨",
     "사이드",
-    "음료.소스.무,햇반",
-    "대표메뉴"
+    "음료.소스.무,햇반"
   ],
   "items": [
     {
       "id": "ddangyo-1250775-10000007",
       "name": "후라이드치킨",
       "description": "깨끗하고 고소한 맛",
-      "category": "대표메뉴",
+      "category": "오리지날",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
     },
     {
       "id": "ddangyo-1250775-10000008",
       "name": "양념치킨",
       "description": "입맛에 쏙 맞는 달콤달달한 맛",
-      "category": "대표메뉴",
+      "category": "오리지날",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/750c72d3-a74e-4c83-ab51-2ebba8fd024a.jpg"
     },
     {
       "id": "ddangyo-1250775-10000009",
       "name": "간장치킨",
       "description": "자꾸자꾸 먹고싶은 달콤 짭조름한 맛",
-      "category": "대표메뉴",
+      "category": "오리지날",
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/6d682888-8013-4f61-a9d1-e0ae776a9b61.jpg"
     },
     {
@@ -51,13 +50,6 @@
       "description": "바삭파우더를 입혀 바삭함이 업그레이 된 맛",
       "category": "세트메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1250775-10000007",
-      "name": "후라이드치킨",
-      "description": "깨끗하고 고소한 맛",
-      "category": "오리지날",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
     },
     {
       "id": "ddangyo-1250775-10000011",
@@ -116,13 +108,6 @@
       "image": ""
     },
     {
-      "id": "ddangyo-1250775-10000008",
-      "name": "양념치킨",
-      "description": "입맛에 쏙 맞는 달콤달달한 맛",
-      "category": "오리지날",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/750c72d3-a74e-4c83-ab51-2ebba8fd024a.jpg"
-    },
-    {
       "id": "ddangyo-1250775-10000012",
       "name": "윙봉 반반치킨",
       "description": "윙봉도 아주커",
@@ -170,13 +155,6 @@
       "description": "닭다리살100% 순살 + 사이드메뉴 택1",
       "category": "세트메뉴",
       "image": ""
-    },
-    {
-      "id": "ddangyo-1250775-10000009",
-      "name": "간장치킨",
-      "description": "자꾸자꾸 먹고싶은 달콤 짭조름한 맛",
-      "category": "오리지날",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/6d682888-8013-4f61-a9d1-e0ae776a9b61.jpg"
     },
     {
       "id": "ddangyo-1250775-10000013",
@@ -317,6 +295,8 @@
     "patstoNo": "1250775",
     "sourceUrls": [
       "https://fdofd.ddangyo.com/gateway1.html?MFgCs9y"
-    ]
+    ],
+    "rawItemCount": 42,
+    "duplicateItemsRemoved": 3
   }
 }
