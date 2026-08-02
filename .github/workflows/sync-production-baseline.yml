@@ -98,25 +98,31 @@ jobs:
         run: |
           set -e
           for file in app.js final-experience.js styles.css store-menu-preview.js store-menu-preview.css store-service-info.js store-service-info.json data/stores.json; do
+            echo "checking production match: $file"
             test -f "preview/$file"
             test "$(sha256sum "preview/$file" | cut -d' ' -f1)" = "$(sha256sum "production/$file" | cut -d' ' -f1)"
           done
 
+          echo 'checking preview domain and scripts'
           grep -q 'preview.daedongmap.com' preview/CNAME
           grep -q 'store-service-info.js' preview/index.html
           grep -q 'ddangyo-menu-map.js?v=20260802-3' preview/index.html
           grep -q 'ddangyo-preview-runtime.js?v=20260802-3' preview/index.html
-          grep -q '여수섬섬페이' preview/store-service-info.js
-          grep -q '고유가 피해지원금' preview/store-service-info.js
-          grep -q '온누리상품권' preview/store-service-info.js
-          grep -q '무료배달' preview/store-service-info.js
 
+          echo 'checking service labels in service data'
+          grep -q '여수섬섬페이' preview/store-service-info.json
+          grep -q '고유가 피해지원금' preview/store-service-info.json
+          grep -q '온누리상품권' preview/store-service-info.json
+          grep -q '무료배달' preview/store-service-info.json
+
+          echo 'checking JavaScript syntax'
           node --check preview/app.js
           node --check preview/final-experience.js
           node --check preview/store-menu-preview.js
           node --check preview/store-service-info.js
           node --check preview/ddangyo-preview-runtime.js
 
+          echo 'checking preserved preview-only data'
           node - <<'NODE'
           const fs = require('fs');
           const enrichment = JSON.parse(fs.readFileSync('preview/data/ddangyo-store-enrichment.json', 'utf8'));
