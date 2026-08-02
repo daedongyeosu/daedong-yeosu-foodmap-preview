@@ -8,6 +8,7 @@ on:
       - scripts/ddangyo-complete-fingerprint-probe.mjs
       - scripts/collect-all-historical-ddangyo-links.mjs
       - scripts/extract-all-historical-ddangyo.mjs
+      - scripts/reclassify-all-ddangyo-stores.mjs
       - .github/workflows/ddangyo-complete-fingerprint-probe.yml
       - .ddangyo-complete-fingerprint-trigger
 
@@ -48,6 +49,10 @@ jobs:
         working-directory: preview
         run: node scripts/extract-all-historical-ddangyo.mjs ../ddangyo-historical-links-output/all-historical-ddangyo-links.json
 
+      - name: Reclassify existing, new and shop-in-shop stores conservatively
+        working-directory: preview
+        run: node scripts/reclassify-all-ddangyo-stores.mjs ddangyo-all-extraction-output/all-stores-normalized.json
+
       - name: Upload historical link inventory
         if: always()
         uses: actions/upload-artifact@v4
@@ -72,5 +77,14 @@ jobs:
         with:
           name: ddangyo-all-historical-extraction
           path: preview/ddangyo-all-extraction-output
+          if-no-files-found: error
+          retention-days: 2
+
+      - name: Upload conservative reclassification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ddangyo-reclassification-report
+          path: preview/ddangyo-reclassification-output
           if-no-files-found: error
           retention-days: 2
