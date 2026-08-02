@@ -6,12 +6,18 @@ on:
       - work/sync-production-baseline-preview
     paths:
       - .sync-production-baseline-trigger
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .sync-production-baseline-trigger
+      - .github/workflows/sync-production-baseline.yml
 
 permissions:
   contents: write
 
 concurrency:
-  group: sync-production-baseline-preview
+  group: sync-production-baseline-preview-${{ github.event_name }}
   cancel-in-progress: true
 
 jobs:
@@ -135,4 +141,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "운영본 최신 화면과 기능을 preview 기준으로 동기화"
+          git pull --rebase origin work/sync-production-baseline-preview
           git push origin HEAD:work/sync-production-baseline-preview
