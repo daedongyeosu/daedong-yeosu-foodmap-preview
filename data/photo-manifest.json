@@ -3321,6 +3321,150 @@
       "blocked": false,
       "photoMatchType": "approved-brand-shared-photo",
       "brandName": "더벤티"
+    },
+    {
+      "storeId": "872490dd640b131e",
+      "src": "assets/notion-store-photos/872490dd640b13/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/872490dd640b13/02.png",
+        "assets/notion-store-photos/872490dd640b13/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/872490dd640b13/01.png",
+        "assets/notion-store-photos/872490dd640b13/02.png",
+        "assets/notion-store-photos/872490dd640b13/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "930c1a4b916bca86",
+      "src": "assets/notion-store-photos/930c1a4b916bca/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/930c1a4b916bca/02.png",
+        "assets/notion-store-photos/930c1a4b916bca/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/930c1a4b916bca/01.png",
+        "assets/notion-store-photos/930c1a4b916bca/02.png",
+        "assets/notion-store-photos/930c1a4b916bca/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "b16e0ede6fecba9f",
+      "src": "assets/notion-store-photos/b16e0ede6fecba/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/b16e0ede6fecba/02.png",
+        "assets/notion-store-photos/b16e0ede6fecba/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/b16e0ede6fecba/01.png",
+        "assets/notion-store-photos/b16e0ede6fecba/02.png",
+        "assets/notion-store-photos/b16e0ede6fecba/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "32ec3ea301742ddb",
+      "src": "assets/notion-store-photos/32ec3ea301742d/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/32ec3ea301742d/02.png",
+        "assets/notion-store-photos/32ec3ea301742d/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/32ec3ea301742d/01.png",
+        "assets/notion-store-photos/32ec3ea301742d/02.png",
+        "assets/notion-store-photos/32ec3ea301742d/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "05a9fdb9f37f4b6b",
+      "src": "assets/notion-store-photos/05a9fdb9f37f4b/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/05a9fdb9f37f4b/02.png",
+        "assets/notion-store-photos/05a9fdb9f37f4b/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/05a9fdb9f37f4b/01.png",
+        "assets/notion-store-photos/05a9fdb9f37f4b/02.png",
+        "assets/notion-store-photos/05a9fdb9f37f4b/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "583b73eefcde37d3",
+      "src": "assets/notion-store-photos/583b73eefcde37/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/583b73eefcde37/02.png",
+        "assets/notion-store-photos/583b73eefcde37/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/583b73eefcde37/01.png",
+        "assets/notion-store-photos/583b73eefcde37/02.png",
+        "assets/notion-store-photos/583b73eefcde37/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "7326368b3b8fa58d",
+      "src": "assets/notion-store-photos/7326368b3b8fa5/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/7326368b3b8fa5/02.png",
+        "assets/notion-store-photos/7326368b3b8fa5/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/7326368b3b8fa5/01.png",
+        "assets/notion-store-photos/7326368b3b8fa5/02.png",
+        "assets/notion-store-photos/7326368b3b8fa5/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "3b2d10ecff23d43d",
+      "src": "assets/notion-store-photos/3b2d10ecff23d4/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/3b2d10ecff23d4/02.png",
+        "assets/notion-store-photos/3b2d10ecff23d4/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/3b2d10ecff23d4/01.png",
+        "assets/notion-store-photos/3b2d10ecff23d4/02.png",
+        "assets/notion-store-photos/3b2d10ecff23d4/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
+    },
+    {
+      "storeId": "5a608be7da577923",
+      "src": "assets/notion-store-photos/5a608be7da5779/01.png",
+      "additionalSrcs": [
+        "assets/notion-store-photos/5a608be7da5779/02.png",
+        "assets/notion-store-photos/5a608be7da5779/03.png"
+      ],
+      "gallery": [
+        "assets/notion-store-photos/5a608be7da5779/01.png",
+        "assets/notion-store-photos/5a608be7da5779/02.png",
+        "assets/notion-store-photos/5a608be7da5779/03.png"
+      ],
+      "source": "notion-new-store-sync",
+      "classification": "food",
+      "blocked": false
     }
   ]
 }

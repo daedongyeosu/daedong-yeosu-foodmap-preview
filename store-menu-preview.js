@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const LEGACY_MENU_STORES = {
+  const MENU_STORES = Object.freeze({
     a089d1d54720b48e: Object.freeze({
       path: 'store-menu-content/a089d1d54720b48e/menu.json',
       entryImage: 'store-menu-content/a089d1d54720b48e/main.jpg',
@@ -22,10 +22,6 @@
       entryImage: 'store-menu-content/surasanggung/main.jpg',
       itemCount: 46
     })
-  };
-  const MENU_STORES = Object.freeze({
-    ...LEGACY_MENU_STORES,
-    ...(window.DAEDONG_DDANGYO_MENU_STORES || {})
   });
   const menuCache = new Map();
   let activeStore = null;

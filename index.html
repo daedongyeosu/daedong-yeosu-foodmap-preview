@@ -10,10 +10,13 @@
   <meta property="og:site_name" content="대동여수음식지도">
   <meta property="og:title" content="대동여수음식지도">
   <meta property="og:description" content="여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.">
-  <meta property="og:url" content="https://preview.daedongmap.com/">
-  <meta property="og:image" content="https://preview.daedongmap.com/assets/logo.png">
+  <meta property="og:url" content="https://daedongmap.com/">
+  <meta property="og:image" content="https://daedongmap.com/assets/logo.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://preview.daedongmap.com/">
+  <link rel="canonical" href="https://daedongmap.com/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/app-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
   <title>대동여수음식지도</title>
   <link rel="preload" as="image" href="images/01.png">
   <link rel="preload" as="image" href="assets/ui/category-icons-color.svg?v=category-first-paint-1">
@@ -24,11 +27,13 @@
   <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
   <link rel="stylesheet" href="app.css?v=selected-category-label-1-external-app-text-1-legacy-rail-button-hidden-1-lower-promo-details-5">
   <link rel="stylesheet" href="store-list-horizontal-pager.css?v=1">
-  <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1-turtle-glass-1-search-button-horizontal-1">
+  <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1-turtle-glass-1-search-button-horizontal-1-store-share-copy-2">
   <link rel="stylesheet" href="rc6-fixes.css?v=location-store-hero-1">
-  <link rel="stylesheet" href="rc7-address-map.css?v=home-share-touch-3">
+  <link rel="stylesheet" href="rc7-address-map.css?v=home-share-touch-3-inapp-location-recovery-1">
   <link rel="stylesheet" href="turtle-ship-hero.css?v=message-colors-popup-15s-1">
-  <link rel="stylesheet" href="store-menu-preview.css?v=ddangyo-73-1">
+  <link rel="stylesheet" href="store-service-info.css?v=store-service-5">
+  <link rel="stylesheet" href="store-menu-preview.css?v=store-menu-14">
+  <link rel="stylesheet" href="mukkebi-summer-event.css?v=20260801-1">
 </head>
 <body>
   <div id="app">
@@ -159,7 +164,7 @@
       </div>
     </section>
 
-    <footer class="legal"><button type="button" data-open="guide">이용안내</button><button type="button">개인정보처리방침</button><button type="button">광고 문의</button></footer>
+    <footer class="legal"><button type="button" data-open="guide">이용안내</button><button type="button" onclick="window.location.href='/privacy/'">개인정보처리방침</button><button type="button">광고 문의</button></footer>
     <div class="build-mark">대동여수음식지도 RC6 온라인 검수 후보</div>
   </div>
 
@@ -167,14 +172,39 @@
   <div id="overlay" class="overlay" hidden></div>
   <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button class="modal-close" type="button" aria-label="닫기">×</button><div id="modalContent"></div></div></div>
   <div id="startupAd" class="startup-ad" hidden><div class="startup-card"><button class="startup-close" type="button" aria-label="닫기">×</button><small>대동여수음식지도 안내</small><h2>배달기사·가맹점 모집</h2><p>기사 모집, 가게 모집, 주문앱 가입 안내, 신규 오픈 가게와 소상공인 소식을 알립니다.</p><div class="startup-actions"><button id="startupDetails" class="primary-btn" type="button">자세히 보기</button><button id="hideToday" type="button">오늘 그만 보기</button></div></div></div>
+  <div id="mukkebiSummerEvent" class="mukkebi-summer-event" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mukkebiSummerTitle">
+    <div class="mukkebi-summer-card">
+      <button id="mukkebiSummerClose" class="mukkebi-summer-close" type="button" aria-label="먹깨비 이벤트 안내 닫기">×</button>
+      <div class="mukkebi-summer-head">
+        <p class="mukkebi-summer-partners">여수시 · 전남신용보증재단 · 먹깨비</p>
+        <p class="mukkebi-summer-kicker">여수시 여름휴가 기념</p>
+        <h2 id="mukkebiSummerTitle">3천 원 할인</h2>
+        <p class="mukkebi-summer-period">08.01.(토) ~ 08.31.(월)</p>
+      </div>
+      <div class="mukkebi-summer-body">
+        <p class="mukkebi-summer-condition"><strong>12,000원 이상 주문 시</strong><span>3천 원 즉시 할인</span></p>
+        <ul class="mukkebi-summer-details">
+          <li>일 선착순 500매</li>
+          <li>총 선착순 6,300매</li>
+          <li>1일 1회</li>
+          <li>예산 소진 시 조기 종료</li>
+        </ul>
+        <button id="mukkebiSummerOrder" class="mukkebi-summer-order" type="button">먹깨비로 주문하기</button>
+        <button id="mukkebiSummerHideToday" class="mukkebi-summer-hide" type="button">오늘 하루 보지 않기</button>
+      </div>
+    </div>
+  </div>
   <noscript><p class="noscript">대동여수음식지도를 이용하려면 자바스크립트를 켜주세요.</p></noscript>
   <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
-  <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1-hero-forward-only-1-lower-promo-details-6-lotteria-hidden-1-kongsanso-store-family-1" defer></script>
-  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-multi-category-1-hamburger-priority-1-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-1-lotteria-hidden-1-kongsanso-store-family-1" defer></script>
+  <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-hero-forward-only-1-lower-promo-details-6-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-startup-popup-disabled-1-anonymous-analytics-1-coarse-region-1-owner-exclusion-1-outside-yeosu-full-list-1" defer></script>
+  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1" defer></script>
   <script src="store-list-horizontal-pager.js?v=1" defer></script>
   <script src="turtle-ship-hero.js?v=message-colors-popup-15s-1" defer></script>
-  <script src="store-menu-content/ddangyo-menu-map.js?v=20260802-1" defer></script>
-  <script src="ddangyo-preview-runtime.js?v=20260802-1" defer></script>
-  <script src="store-menu-preview.js?v=ddangyo-73-1" defer></script>
+  <script src="store-service-info.js?v=store-service-5" defer></script>
+  <script src="store-menu-content/ddangyo-menu-map.js?v=20260802-3" defer></script>
+  <script src="ddangyo-preview-runtime.js?v=20260802-3" defer></script>
+  <script src="store-menu-preview.js?v=store-menu-14" defer></script>
+  <script src="pwa-register.js?v=android-pwa-1" defer></script>
+  <script src="mukkebi-summer-event.js?v=20260801-1" defer></script>
 </body>
 </html>

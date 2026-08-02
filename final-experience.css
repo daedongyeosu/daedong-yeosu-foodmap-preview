@@ -23,7 +23,16 @@
 .home-share-actions{display:grid;gap:9px}
 .home-share-actions button{width:100%;min-height:54px;border-radius:15px;font-weight:900;font-size:16px;touch-action:manipulation}
 .home-share-action{border:0;background:#ff5a1f;color:#fff;box-shadow:0 8px 18px rgba(255,77,20,.2)}
+.home-share-secondary{border:1px solid #cfdbe4;background:#fff;color:#082f52}
 .home-share-status{min-height:20px!important;margin:10px 0 0!important;color:#d64d19!important;font-size:12px!important;font-weight:850;line-height:1.4}
+.store-share-sheet{text-align:left}
+.store-share-sheet>p{text-align:center}
+.store-share-preview img{border-radius:14px;object-fit:cover}
+.store-share-url-label{display:block;margin:2px 0 7px;color:#082f52;font-size:13px;font-weight:900}
+.store-share-url-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:stretch;margin-bottom:10px}
+.store-share-url{min-width:0;height:52px;padding:0 12px;border:1px solid #cfdbe4;border-radius:14px;background:#f8fafc;color:#173557;font-size:13px}
+.store-share-copy{min-width:92px;border:0;border-radius:14px;background:#ff5a1f;color:#fff;font-size:15px;font-weight:900;touch-action:manipulation}
+@media(max-width:420px){.store-share-url-row{grid-template-columns:1fr}.store-share-copy{min-height:50px}.store-share-url{font-size:12px}}
 @media(max-width:360px){.home-share-toast{font-size:12px;white-space:normal}}
 .search-popup .searchbox{display:grid;grid-template-columns:minmax(0,1fr) clamp(82px,22vw,100px);gap:8px;padding:0 8px 0 14px}
 .search-popup #fxSearchInput{min-width:0}
