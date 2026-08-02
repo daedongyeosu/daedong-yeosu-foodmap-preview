@@ -1,0 +1,184 @@
+name: Fix Store Service Korean IME Search
+
+on:
+  push:
+    branches:
+      - fix/store-service-korean-ime-search
+    paths:
+      - .store-service-korean-ime-fix-trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out fix branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/store-service-korean-ime-search
+          fetch-depth: 0
+
+      - name: Patch Korean composition and food-category search
+        shell: bash
+        run: |
+          set -euo pipefail
+          protected_before="$(sha256sum data/stores.json | awk '{print $1}')"
+
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('store-service-info.js')
+          text = path.read_text(encoding='utf-8')
+
+          state_needle = "  let overviewQuery = '';\n"
+          if text.count(state_needle) != 1:
+              raise SystemExit('overviewQuery state location was not unique')
+          text = text.replace(
+              state_needle,
+              state_needle + "  let overviewQueryComposing = false;\n",
+              1,
+          )
+
+          helper_marker = "  function filteredOverviewEntries() {\n"
+          if text.count(helper_marker) != 1:
+              raise SystemExit('filteredOverviewEntries marker was not unique')
+          helper = """  function searchTextValues(value) {
+            if (Array.isArray(value)) return value.flatMap(searchTextValues);
+            if (value && typeof value === 'object') return Object.values(value).flatMap(searchTextValues);
+            return [String(value || '')];
+          }
+
+          function overviewSearchText(entry) {
+            const store = entry.store || {};
+            return searchTextValues([
+              store.name,
+              store.realBusinessName,
+              store.brandName,
+              store.branchName,
+              entry.area,
+              store.area,
+              store.neighborhood,
+              store.category,
+              store.cat,
+              store.categories,
+              store.foodCategories,
+              store.menuCategories,
+              store.tags,
+              store.keywords,
+              store.searchAliases,
+              store.shopInShopNames,
+              store.storeAliases,
+              store.aliases,
+              store.searchIndex
+            ]).filter(Boolean).join(' ');
+          }
+
+          """
+          text = text.replace(helper_marker, helper + helper_marker, 1)
+
+          old_filter = "      if (query && !normalize(`${entry.store?.name || ''} ${entry.area} ${(entry.store?.cat || []).join?.(' ') || entry.store?.cat || ''}`).includes(query)) {\n"
+          new_filter = "      if (query && !normalize(overviewSearchText(entry)).includes(query)) {\n"
+          if text.count(old_filter) != 1:
+              raise SystemExit('primary overview query filter was not found exactly once')
+          text = text.replace(old_filter, new_filter, 1)
+
+          old_counts_filter = "      && (!overviewQuery || normalize(`${entry.store?.name || ''} ${entry.area} ${(entry.store?.cat || []).join?.(' ') || entry.store?.cat || ''}`).includes(normalize(overviewQuery)))\n"
+          new_counts_filter = "      && (!overviewQuery || normalize(overviewSearchText(entry)).includes(normalize(overviewQuery)))\n"
+          if text.count(old_counts_filter) != 1:
+              raise SystemExit('overview status-count query filter was not found exactly once')
+          text = text.replace(old_counts_filter, new_counts_filter, 1)
+
+          text = text.replace(
+              'placeholder="가게명·메뉴·동네 검색"',
+              'placeholder="가게명·음식종류·동네 검색"',
+              1,
+          )
+
+          old_input = """  document.addEventListener('input', event => {
+            if (!event.target.matches('[data-store-service-query]')) return;
+            overviewQuery = event.target.value;
+            renderOverview({focusQuery: true});
+          });
+          """
+          new_input = """  document.addEventListener('compositionstart', event => {
+            if (!event.target.matches('[data-store-service-query]')) return;
+            overviewQueryComposing = true;
+          });
+
+          document.addEventListener('compositionend', event => {
+            if (!event.target.matches('[data-store-service-query]')) return;
+            overviewQueryComposing = false;
+            overviewQuery = event.target.value;
+            renderOverview({focusQuery: true});
+          });
+
+          document.addEventListener('input', event => {
+            if (!event.target.matches('[data-store-service-query]')) return;
+            overviewQuery = event.target.value;
+            if (overviewQueryComposing || event.isComposing || event.inputType === 'insertCompositionText') return;
+            renderOverview({focusQuery: true});
+          });
+          """
+          if text.count(old_input) != 1:
+              raise SystemExit('original overview input listener was not found exactly once')
+          text = text.replace(old_input, new_input, 1)
+
+          required = [
+              'overviewQueryComposing',
+              "document.addEventListener('compositionstart'",
+              "document.addEventListener('compositionend'",
+              'event.isComposing',
+              "event.inputType === 'insertCompositionText'",
+              'function overviewSearchText(entry)',
+              'store.categories',
+              'store.searchAliases',
+              'store.shopInShopNames',
+              'store.searchIndex',
+              '가게명·음식종류·동네 검색',
+          ]
+          for token in required:
+              if token not in text:
+                  raise SystemExit(f'missing required token: {token}')
+
+          path.write_text(text, encoding='utf-8')
+
+          index_path = Path('index.html')
+          index = index_path.read_text(encoding='utf-8')
+          old_version = 'store-service-info.js?v=store-service-7'
+          new_version = 'store-service-info.js?v=store-service-8'
+          if index.count(old_version) != 1:
+              raise SystemExit('store-service-info.js cache version was not found exactly once')
+          index_path.write_text(index.replace(old_version, new_version, 1), encoding='utf-8')
+          PY
+
+          node --check store-service-info.js
+          protected_after="$(sha256sum data/stores.json | awk '{print $1}')"
+          test "$protected_before" = "$protected_after"
+
+          python - <<'PY'
+          from pathlib import Path
+          text = Path('store-service-info.js').read_text(encoding='utf-8')
+          assert text.count('normalize(overviewSearchText(entry))') == 2
+          assert '가게명·음식종류·동네 검색' in text
+          assert "store-service-info.js?v=store-service-8" in Path('index.html').read_text(encoding='utf-8')
+          print('Korean IME and expanded food-category search checks passed')
+          PY
+
+      - name: Remove temporary workflow machinery
+        shell: bash
+        run: |
+          rm -f .store-service-korean-ime-fix-trigger
+          rm -f .github/workflows/store-service-korean-ime-fix.yml
+
+      - name: Commit preview-only fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "daedong-preview-bot"
+          git config user.email "preview-bot@users.noreply.github.com"
+          git add store-service-info.js index.html .github/workflows/store-service-korean-ime-fix.yml .store-service-korean-ime-fix-trigger
+          git commit -m "Fix Korean IME and food-type search in service finder"
+          git push origin HEAD:fix/store-service-korean-ime-search
