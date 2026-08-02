@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-1';
+  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-2';
   const WAIT_TIMEOUT_MS = 30000;
   const POLL_MS = 80;
 
@@ -46,24 +46,48 @@
     });
   }
 
-  function hasDdangyoRoute(store) {
+  function hasRoute(store, key, nameText) {
     return (store.routes || []).some(route => {
-      const key = String(route?.key || '').toLowerCase();
-      const name = String(route?.name || '').replace(/\s/g, '');
-      return key === 'ddangyo' || name.includes('땡겨요');
+      const routeKey = String(route?.key || '').toLowerCase();
+      const routeName = String(route?.name || '').replace(/\s/g, '');
+      return routeKey === key || routeName.includes(nameText);
     });
   }
 
   function addDdangyoRoute(store, url, report) {
     const href = safeUrl(url);
     if (!href) return;
-    if (hasDdangyoRoute(store)) {
+    if (hasRoute(store, 'ddangyo', '땡겨요')) {
       report.preservedDdangyoRoutes += 1;
       return;
     }
     if (!Array.isArray(store.routes)) store.routes = [];
     store.routes.push({name: '땡겨요', key: 'ddangyo', url: href, enabled: true, source: 'ddangyo-preview-batch'});
     report.addedDdangyoRoutes += 1;
+  }
+
+  function addChakRoute(store, url, report) {
+    const href = safeUrl(url);
+    if (!href) return;
+    if (hasRoute(store, 'chak', 'CHAK지역상품권')) {
+      report.preservedChakRoutes += 1;
+      return;
+    }
+    if (!Array.isArray(store.routes)) store.routes = [];
+    store.routes.push({name: 'CHAK 지역상품권', key: 'chak', url: href, enabled: true, source: 'ddangyo-new-store-services'});
+    report.addedChakRoutes += 1;
+  }
+
+  function addVerifiedNaverMap(store, row, report) {
+    const href = row.naverStatus === 'verified' ? safeUrl(row.naverMap) : '';
+    if (!href) return;
+    if (store.naverMap && store.naverMap !== '#') {
+      report.preservedNaverMaps += 1;
+      return;
+    }
+    store.naverMap = href;
+    store.naverMapSource = 'naver-exact-name-address-match';
+    report.addedNaverMaps += 1;
   }
 
   function refreshSearch(store, row) {
@@ -123,6 +147,8 @@
     }
 
     addDdangyoRoute(store, row.ddangyoUrl, report);
+    addChakRoute(store, row.chakUrl, report);
+    addVerifiedNaverMap(store, row, report);
     refreshSearch(store, row);
     store.ddangyoPatstoNo = String(row.patstoNo || '');
   }
@@ -130,10 +156,13 @@
   function rawNewStore(row) {
     const phone = row.phoneSource === 'ddangyo' ? safePhone(row.phone) : '';
     const routeUrl = safeUrl(row.ddangyoUrl);
+    const chakUrl = safeUrl(row.chakUrl);
+    const naverMap = row.naverStatus === 'verified' ? safeUrl(row.naverMap) : '';
     const images = unique([row.mainImage, ...(row.shopImages || [])]);
     const routes = [];
-    if (routeUrl) routes.push({name: '땡겨요', url: routeUrl, enabled: true, source: 'ddangyo'});
-    if (phone) routes.push({name: '전화주문', url: `tel:${phone}`, enabled: true, source: 'ddangyo'});
+    if (routeUrl) routes.push({name: '땡겨요', key: 'ddangyo', url: routeUrl, enabled: true, source: 'ddangyo'});
+    if (chakUrl) routes.push({name: 'CHAK 지역상품권', key: 'chak', url: chakUrl, enabled: true, source: 'ddangyo-new-store-services'});
+    if (phone) routes.push({name: '전화주문', key: 'phone', url: `tel:${phone}`, enabled: true, source: 'ddangyo'});
     return {
       id: row.targetStoreId,
       store_id: row.targetStoreId,
@@ -148,7 +177,8 @@
       categories: [row.category || '치킨'],
       address: row.address,
       phone,
-      naverMap: '',
+      naverMap,
+      naverMapSource: naverMap ? 'naver-exact-name-address-match' : '',
       image: images[0] || '',
       img: images[0] || '',
       images: images.map(image => ({card: image, detail: image})),
@@ -176,6 +206,8 @@
     if (typeof searchableStores !== 'undefined') appendUnique(searchableStores, store);
     if (typeof stores !== 'undefined') appendUnique(stores, store);
     report.createdStores += 1;
+    if (row.chakUrl) report.addedChakRoutes += 1;
+    if (row.naverStatus === 'verified' && row.naverMap) report.addedNaverMaps += 1;
     return store;
   }
 
@@ -206,7 +238,11 @@
       preservedPhones: 0,
       addedCoordinates: 0,
       addedDdangyoRoutes: 0,
-      preservedDdangyoRoutes: 0
+      preservedDdangyoRoutes: 0,
+      addedChakRoutes: 0,
+      preservedChakRoutes: 0,
+      addedNaverMaps: 0,
+      preservedNaverMaps: 0
     };
 
     for (const row of rows) {

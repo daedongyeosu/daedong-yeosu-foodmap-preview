@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "batchId": "ddangyo-chicken-batch-01",
-  "generatedAt": "2026-08-02T06:01:18.806Z",
+  "generatedAt": "2026-08-02T07:09:29.506Z",
   "policy": {
     "mode": "add-missing-only",
     "identity": "verified-address-and-existing-store-id",
@@ -38,11 +38,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?8rrtFnv",
       "phone": "01051442818",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/2014808792",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/2014808792",
+        "candidate": {
+          "placeId": "2014808792",
+          "name": "메고지고 여수죽림점",
+          "roadAddress": "죽림3길 5-14",
+          "address": "전남광주통합특별시 여수시 소라면 죽림3길 5-14"
+        },
+        "roadSignature": "죽림3길5-14",
+        "attempts": [
+          {
+            "query": "메고지고 여수죽림점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%A9%94%EA%B3%A0%EC%A7%80%EA%B3%A0%20%EC%97%AC%EC%88%98%EC%A3%BD%EB%A6%BC%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "2014808792",
+            "name": "메고지고 여수죽림점",
+            "roadAddress": "죽림3길 5-14",
+            "address": "전남광주통합특별시 여수시 소라면 죽림3길 5-14"
+          }
+        ]
       }
     },
     {
@@ -331,6 +359,30 @@
         "method": "manual-verified-new-shop-in-shop",
         "naverEligible": false,
         "reason": "순살 참잘튀기는집 is distinct from the current 탕참 store at the same address"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "여서로136",
+        "attempts": [
+          {
+            "query": "순살 참잘튀기는집 여수점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%88%9C%EC%82%B4%20%EC%B0%B8%EC%9E%98%ED%8A%80%EA%B8%B0%EB%8A%94%EC%A7%91%20%EC%97%AC%EC%88%98%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": [
+          {
+            "placeId": "1109161413",
+            "name": "순살 참잘튀기는집 여수점",
+            "roadAddress": "전남광주 여수시 여서로 146-2 현대건설아파트",
+            "address": "전남광주 여수시 여서동 489-1"
+          }
+        ]
       }
     },
     {
@@ -358,6 +410,53 @@
         "method": "manual-verified-new-shop-in-shop",
         "naverEligible": false,
         "reason": "치코두마리파닭 is distinct from the current 탕참 store at the same address"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "여서로136",
+        "attempts": [
+          {
+            "query": "치코두마리파닭 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%EC%BD%94%EB%91%90%EB%A7%88%EB%A6%AC%ED%8C%8C%EB%8B%AD%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "치코두마리파닭",
+            "candidateCount": 4,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%EC%BD%94%EB%91%90%EB%A7%88%EB%A6%AC%ED%8C%8C%EB%8B%AD"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": [
+          {
+            "placeId": "2029136931",
+            "name": "치코파닭두마리",
+            "roadAddress": "평거로13번길 25 1층",
+            "address": "경상남도 진주시 평거로13번길 25 1층"
+          },
+          {
+            "placeId": "2087523200",
+            "name": "치코파닭두마리",
+            "roadAddress": "평거로13번길 25 1층",
+            "address": "경상남도 진주시 평거로13번길 25 1층"
+          },
+          {
+            "placeId": "1146576797",
+            "name": "치코파닭두마리",
+            "roadAddress": "평거로13번길 25 1층",
+            "address": "경상남도 진주시 평거로13번길 25 1층"
+          },
+          {
+            "placeId": "2080928000",
+            "name": "치코파닭두마리",
+            "roadAddress": "평거로13번길 25 1층",
+            "address": "경상남도 진주시 평거로13번길 25 1층"
+          }
+        ]
       }
     },
     {
@@ -559,6 +658,33 @@
         "method": "manual-verified-new-shop-in-shop",
         "naverEligible": false,
         "reason": "distinct Ddangyo shop at a shared address; no same-name current store"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "여문문화2길18",
+        "attempts": [
+          {
+            "query": "수원왕갈비통닭 여수점 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%88%98%EC%9B%90%EC%99%95%EA%B0%88%EB%B9%84%ED%86%B5%EB%8B%AD%20%EC%97%AC%EC%88%98%EC%A0%90%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "수원왕갈비통닭 여수점",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%88%98%EC%9B%90%EC%99%95%EA%B0%88%EB%B9%84%ED%86%B5%EB%8B%AD%20%EC%97%AC%EC%88%98%EC%A0%90"
+          },
+          {
+            "query": "수원왕갈비통닭 여수점 전남 여수시 여문문화2길 18",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%88%98%EC%9B%90%EC%99%95%EA%B0%88%EB%B9%84%ED%86%B5%EB%8B%AD%20%EC%97%AC%EC%88%98%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%97%AC%EB%AC%B8%EB%AC%B8%ED%99%942%EA%B8%B8%2018"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": []
       }
     },
     {
@@ -579,11 +705,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?5z5oUHy",
       "phone": "0616850003",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1004135490",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1004135490",
+        "candidate": {
+          "placeId": "1004135490",
+          "name": "돈스토리 여수",
+          "roadAddress": "전남광주 여수시 소호로 481-1 1층",
+          "address": "전남광주 여수시 소호동 358-6"
+        },
+        "roadSignature": "소호로481-1",
+        "attempts": [
+          {
+            "query": "돈스토리 여수",
+            "candidateCount": 25,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%8F%88%EC%8A%A4%ED%86%A0%EB%A6%AC%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1004135490",
+            "name": "돈스토리 여수",
+            "roadAddress": "전남광주 여수시 소호로 481-1 1층",
+            "address": "전남광주 여수시 소호동 358-6"
+          }
+        ]
       }
     },
     {
@@ -604,11 +758,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?C5v1Sz5",
       "phone": "0616847083",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1116933955",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1116933955",
+        "candidate": {
+          "placeId": "1116933955",
+          "name": "피나치공",
+          "roadAddress": "전남광주 여수시 화산2길 30 1층",
+          "address": "전남광주 여수시 화장동 737-22"
+        },
+        "roadSignature": "화산2길30",
+        "attempts": [
+          {
+            "query": "피나치공 무선점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%94%BC%EB%82%98%EC%B9%98%EA%B3%B5%20%EB%AC%B4%EC%84%A0%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1116933955",
+            "name": "피나치공",
+            "roadAddress": "전남광주 여수시 화산2길 30 1층",
+            "address": "전남광주 여수시 화장동 737-22"
+          }
+        ]
       }
     },
     {
@@ -629,11 +811,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?CRqRegz",
       "phone": "0616915988",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1937550407",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1937550407",
+        "candidate": {
+          "placeId": "1937550407",
+          "name": "배떡",
+          "roadAddress": "전남광주 여수시 안산2길 6 1층",
+          "address": "전남광주 여수시 안산동 470-14"
+        },
+        "roadSignature": "안산2길6",
+        "attempts": [
+          {
+            "query": "배떡 안산점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B0%B0%EB%96%A1%20%EC%95%88%EC%82%B0%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1937550407",
+            "name": "배떡",
+            "roadAddress": "전남광주 여수시 안산2길 6 1층",
+            "address": "전남광주 여수시 안산동 470-14"
+          }
+        ]
       }
     },
     {
@@ -827,11 +1037,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?C7u3wNg",
       "phone": "0616869321",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1044098719",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1044098719",
+        "candidate": {
+          "placeId": "1044098719",
+          "name": "치킨먹고인생피자",
+          "roadAddress": "전남광주 여수시 화산로 39 치킨먹고인생피자",
+          "address": "전남광주 여수시 화장동 772-12"
+        },
+        "roadSignature": "화산로39",
+        "attempts": [
+          {
+            "query": "치킨먹고 인생피자 여수",
+            "candidateCount": 25,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%ED%82%A8%EB%A8%B9%EA%B3%A0%20%EC%9D%B8%EC%83%9D%ED%94%BC%EC%9E%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1044098719",
+            "name": "치킨먹고인생피자",
+            "roadAddress": "전남광주 여수시 화산로 39 치킨먹고인생피자",
+            "address": "전남광주 여수시 화장동 772-12"
+          }
+        ]
       }
     },
     {
@@ -910,11 +1148,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?DLnSWu2",
       "phone": "0619216177",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1288656570",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1288656570",
+        "candidate": {
+          "placeId": "1288656570",
+          "name": "촌닭이두마리 무선점",
+          "roadAddress": "전남광주 여수시 성산로 2",
+          "address": "전남광주 여수시 화장동 883-1"
+        },
+        "roadSignature": "성산로2",
+        "attempts": [
+          {
+            "query": "촌닭이두마리 무선점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B4%8C%EB%8B%AD%EC%9D%B4%EB%91%90%EB%A7%88%EB%A6%AC%20%EB%AC%B4%EC%84%A0%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1288656570",
+            "name": "촌닭이두마리 무선점",
+            "roadAddress": "전남광주 여수시 성산로 2",
+            "address": "전남광주 여수시 화장동 883-1"
+          }
+        ]
       }
     },
     {
@@ -935,11 +1201,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?chdPUvz",
       "phone": "0616863829",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1132181101",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1132181101",
+        "candidate": {
+          "placeId": "1132181101",
+          "name": "오빠통닭 여수학동점",
+          "roadAddress": "전남광주 여수시 시청동5길 21-2 1층",
+          "address": "전남광주 여수시 학동 89-2"
+        },
+        "roadSignature": "시청동5길21-2",
+        "attempts": [
+          {
+            "query": "오빠통닭 여수학동점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%98%A4%EB%B9%A0%ED%86%B5%EB%8B%AD%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1132181101",
+            "name": "오빠통닭 여수학동점",
+            "roadAddress": "전남광주 여수시 시청동5길 21-2 1층",
+            "address": "전남광주 여수시 학동 89-2"
+          }
+        ]
       }
     },
     {
@@ -960,11 +1254,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?ktXdR4d",
       "phone": "0616811768",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1416796766",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1416796766",
+        "candidate": {
+          "placeId": "1416796766",
+          "name": "갓튀긴후라이드 여수학동점",
+          "roadAddress": "전남광주 여수시 무선로 6 110호",
+          "address": "전남광주 여수시 학동 61"
+        },
+        "roadSignature": "무선로6",
+        "attempts": [
+          {
+            "query": "갓튀긴후라이드 여수학동점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EA%B0%93%ED%8A%80%EA%B8%B4%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1416796766",
+            "name": "갓튀긴후라이드 여수학동점",
+            "roadAddress": "전남광주 여수시 무선로 6 110호",
+            "address": "전남광주 여수시 학동 61"
+          }
+        ]
       }
     },
     {
@@ -1014,11 +1336,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?KVGcLcX",
       "phone": "0616859987",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1429100955",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1429100955",
+        "candidate": {
+          "placeId": "1429100955",
+          "name": "땅땅치킨 죽림무선점",
+          "roadAddress": "전남광주 여수시 소라면 죽림3길 15-16",
+          "address": "전남광주 여수시 소라면 죽림리 1195-9"
+        },
+        "roadSignature": "죽림3길15-16",
+        "attempts": [
+          {
+            "query": "땅땅치킨 죽림무선점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%95%85%EB%95%85%EC%B9%98%ED%82%A8%20%EC%A3%BD%EB%A6%BC%EB%AC%B4%EC%84%A0%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1429100955",
+            "name": "땅땅치킨 죽림무선점",
+            "roadAddress": "전남광주 여수시 소라면 죽림3길 15-16",
+            "address": "전남광주 여수시 소라면 죽림리 1195-9"
+          }
+        ]
       }
     },
     {
@@ -1039,13 +1389,41 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?kUUZmfn",
       "phone": "0618072220",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1266529539",
       "naverEligible": false,
       "sourceMatch": {
         "status": "new",
         "method": "manual-verified-new-shop-in-shop",
         "naverEligible": false,
         "reason": "불로만치킨바베큐 is distinct from the current 김종구식 맛치킨 store at the same address"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1266529539",
+        "candidate": {
+          "placeId": "1266529539",
+          "name": "불로만치킨바베큐 학동점",
+          "roadAddress": "전남광주 여수시 시청동5길 20 106호",
+          "address": "전남광주 여수시 학동 90-1"
+        },
+        "roadSignature": "시청동5길20",
+        "attempts": [
+          {
+            "query": "불로만치킨바베큐 학동점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B6%88%EB%A1%9C%EB%A7%8C%EC%B9%98%ED%82%A8%EB%B0%94%EB%B2%A0%ED%81%90%20%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1266529539",
+            "name": "불로만치킨바베큐 학동점",
+            "roadAddress": "전남광주 여수시 시청동5길 20 106호",
+            "address": "전남광주 여수시 학동 90-1"
+          }
+        ]
       }
     },
     {
@@ -1073,6 +1451,33 @@
         "method": "manual-verified-new-shop-in-shop",
         "naverEligible": false,
         "reason": "폭탄치밥 is distinct from the current 닥엔돈스 store at the same address"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "신기남3길2-5",
+        "attempts": [
+          {
+            "query": "폭탄치밥 여수여천점 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%8F%AD%ED%83%84%EC%B9%98%EB%B0%A5%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "폭탄치밥 여수여천점",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%8F%AD%ED%83%84%EC%B9%98%EB%B0%A5%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90"
+          },
+          {
+            "query": "폭탄치밥 여수여천점 전남 여수시 신기남3길 2-5",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%8F%AD%ED%83%84%EC%B9%98%EB%B0%A5%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%A0%EA%B8%B0%EB%82%A83%EA%B8%B8%202-5"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": []
       }
     },
     {
@@ -1093,11 +1498,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?OH8fFct",
       "phone": "0616919206",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1066505162",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1066505162",
+        "candidate": {
+          "placeId": "1066505162",
+          "name": "푸라닭 여수무선점",
+          "roadAddress": "전남광주 여수시 화산로 64",
+          "address": "전남광주 여수시 화장동 775-6"
+        },
+        "roadSignature": "화산로64",
+        "attempts": [
+          {
+            "query": "푸라닭 여수무선점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%91%B8%EB%9D%BC%EB%8B%AD%20%EC%97%AC%EC%88%98%EB%AC%B4%EC%84%A0%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1066505162",
+            "name": "푸라닭 여수무선점",
+            "roadAddress": "전남광주 여수시 화산로 64",
+            "address": "전남광주 여수시 화장동 775-6"
+          }
+        ]
       }
     },
     {
@@ -1321,11 +1754,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?BC2YUSz",
       "phone": "0616855080",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/2064617732",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/2064617732",
+        "candidate": {
+          "placeId": "2064617732",
+          "name": "한앤둘치킨",
+          "roadAddress": "전남광주 여수시 시청동1길 29 105호",
+          "address": "전남광주 여수시 학동 175-9"
+        },
+        "roadSignature": "시청동1길29",
+        "attempts": [
+          {
+            "query": "한앤둘치킨 여수시청점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%95%9C%EC%95%A4%EB%91%98%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%EC%B2%AD%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "2064617732",
+            "name": "한앤둘치킨",
+            "roadAddress": "전남광주 여수시 시청동1길 29 105호",
+            "address": "전남광주 여수시 학동 175-9"
+          }
+        ]
       }
     },
     {
@@ -1351,6 +1812,33 @@
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "무선중앙로50",
+        "attempts": [
+          {
+            "query": "치킨플러스 여수1호점 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%ED%82%A8%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%97%AC%EC%88%981%ED%98%B8%EC%A0%90%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "치킨플러스 여수1호점",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%ED%82%A8%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%97%AC%EC%88%981%ED%98%B8%EC%A0%90"
+          },
+          {
+            "query": "치킨플러스 여수1호점 전남 여수시 무선중앙로 50",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%ED%82%A8%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%97%AC%EC%88%981%ED%98%B8%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EB%AC%B4%EC%84%A0%EC%A4%91%EC%95%99%EB%A1%9C%2050"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": []
       }
     },
     {
@@ -1376,6 +1864,33 @@
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "시청로59",
+        "attempts": [
+          {
+            "query": "1키로공룡닭강정 여수여천점 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=1%ED%82%A4%EB%A1%9C%EA%B3%B5%EB%A3%A1%EB%8B%AD%EA%B0%95%EC%A0%95%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "1키로공룡닭강정 여수여천점",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=1%ED%82%A4%EB%A1%9C%EA%B3%B5%EB%A3%A1%EB%8B%AD%EA%B0%95%EC%A0%95%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90"
+          },
+          {
+            "query": "1키로공룡닭강정 여수여천점 전남 여수시 시청로 59",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=1%ED%82%A4%EB%A1%9C%EA%B3%B5%EB%A3%A1%EB%8B%AD%EA%B0%95%EC%A0%95%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%9C%EC%B2%AD%EB%A1%9C%2059"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": []
       }
     },
     {
@@ -1430,6 +1945,33 @@
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "시청동2길8",
+        "attempts": [
+          {
+            "query": "ONLY 후라이드 여수학동점 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=ONLY%20%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "ONLY 후라이드 여수학동점",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=ONLY%20%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90"
+          },
+          {
+            "query": "ONLY 후라이드 여수학동점 전남 여수시 시청동2길 8",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=ONLY%20%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%9C%EC%B2%AD%EB%8F%992%EA%B8%B8%208"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": []
       }
     },
     {
@@ -1600,6 +2142,30 @@
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "시청동1길17",
+        "attempts": [
+          {
+            "query": "푸라닭 여수학동점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%91%B8%EB%9D%BC%EB%8B%AD%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": [
+          {
+            "placeId": "38642666",
+            "name": "푸라닭 여수학동점",
+            "roadAddress": "전남광주 여수시 시청동1길 29",
+            "address": "전남광주 여수시 학동 175-9"
+          }
+        ]
       }
     },
     {
@@ -1649,11 +2215,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?x9nuAxX",
       "phone": "0616550934",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/1369647400",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/1369647400",
+        "candidate": {
+          "placeId": "1369647400",
+          "name": "촌닭이두마리 오림점",
+          "roadAddress": "오림2길 17 1층",
+          "address": "전남광주통합특별시 여수시 오림2길 17 1층"
+        },
+        "roadSignature": "오림2길17",
+        "attempts": [
+          {
+            "query": "촌닭이두마리 오림점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B4%8C%EB%8B%AD%EC%9D%B4%EB%91%90%EB%A7%88%EB%A6%AC%20%EC%98%A4%EB%A6%BC%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "1369647400",
+            "name": "촌닭이두마리 오림점",
+            "roadAddress": "오림2길 17 1층",
+            "address": "전남광주통합특별시 여수시 오림2길 17 1층"
+          }
+        ]
       }
     },
     {
@@ -1679,6 +2273,35 @@
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "시청동2길8",
+        "attempts": [
+          {
+            "query": "후라이드 참 맛있는집 여수학동점 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%B0%B8%20%EB%A7%9B%EC%9E%88%EB%8A%94%EC%A7%91%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "후라이드 참 맛있는집 여수학동점",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%B0%B8%20%EB%A7%9B%EC%9E%88%EB%8A%94%EC%A7%91%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": [
+          {
+            "placeId": "37000898",
+            "name": "못참아그파닭&탕수육",
+            "roadAddress": "전남광주 여수시 선원3길 6-16",
+            "address": "전남광주 여수시 선원동 150-41"
+          }
+        ]
       }
     },
     {
@@ -1706,6 +2329,33 @@
         "method": "manual-verified-new-shop-in-shop",
         "naverEligible": false,
         "reason": "새우치킨덤 is distinct from the current 여수오리날개튀김 store at the same address"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "신기남3길1",
+        "attempts": [
+          {
+            "query": "새우치킨덤 여천점 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%83%88%EC%9A%B0%EC%B9%98%ED%82%A8%EB%8D%A4%20%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "새우치킨덤 여천점",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%83%88%EC%9A%B0%EC%B9%98%ED%82%A8%EB%8D%A4%20%EC%97%AC%EC%B2%9C%EC%A0%90"
+          },
+          {
+            "query": "새우치킨덤 여천점 전남 여수시 신기남3길 1",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%83%88%EC%9A%B0%EC%B9%98%ED%82%A8%EB%8D%A4%20%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%A0%EA%B8%B0%EB%82%A83%EA%B8%B8%201"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": []
       }
     },
     {
@@ -1784,11 +2434,39 @@
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?CvS9WdS",
       "phone": "0616921799",
       "phoneSource": "ddangyo",
-      "naverMap": "",
+      "naverMap": "https://map.naver.com/p/entry/place/37837641",
       "naverEligible": true,
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "verified",
+      "naverEvidence": {
+        "status": "verified",
+        "naverMap": "https://map.naver.com/p/entry/place/37837641",
+        "candidate": {
+          "placeId": "37837641",
+          "name": "푸라닭 여수웅천점",
+          "roadAddress": "전남광주 여수시 웅남2길 24",
+          "address": "전남광주 여수시 웅천동 1676-11"
+        },
+        "roadSignature": "웅남2길24",
+        "attempts": [
+          {
+            "query": "푸라닭 여수웅천점 여수",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%91%B8%EB%9D%BC%EB%8B%AD%20%EC%97%AC%EC%88%98%EC%9B%85%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
+          }
+        ],
+        "sameAddressCandidates": [
+          {
+            "placeId": "37837641",
+            "name": "푸라닭 여수웅천점",
+            "roadAddress": "전남광주 여수시 웅남2길 24",
+            "address": "전남광주 여수시 웅천동 1676-11"
+          }
+        ]
       }
     },
     {
@@ -1932,6 +2610,33 @@
         "method": "manual-verified-new-shop-in-shop",
         "naverEligible": false,
         "reason": "distinct shop-in-shop at a shared address; no same-name current store"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "여문2로73",
+        "attempts": [
+          {
+            "query": "박스터지는 두마리치킨 (샵인점) 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B0%95%EC%8A%A4%ED%84%B0%EC%A7%80%EB%8A%94%20%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8%20%28%EC%83%B5%EC%9D%B8%EC%A0%90%29%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "박스터지는 두마리치킨 (샵인점)",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B0%95%EC%8A%A4%ED%84%B0%EC%A7%80%EB%8A%94%20%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8%20%28%EC%83%B5%EC%9D%B8%EC%A0%90%29"
+          },
+          {
+            "query": "박스터지는 두마리치킨 (샵인점) 전남 여수시 여문2로 73",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B0%95%EC%8A%A4%ED%84%B0%EC%A7%80%EB%8A%94%20%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8%20%28%EC%83%B5%EC%9D%B8%EC%A0%90%29%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%97%AC%EB%AC%B82%EB%A1%9C%2073"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": []
       }
     },
     {
@@ -2017,6 +2722,33 @@
         "method": "manual-verified-new-shop-in-shop",
         "naverEligible": false,
         "reason": "닥엔돈스 직화바베큐치킨 is a separate shop-in-shop from 닥엔돈스 쪽갈비"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "신기남3길2-5",
+        "attempts": [
+          {
+            "query": "닥엔돈스 직화바베큐치킨 여수여천점 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%8B%A5%EC%97%94%EB%8F%88%EC%8A%A4%20%EC%A7%81%ED%99%94%EB%B0%94%EB%B2%A0%ED%81%90%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "닥엔돈스 직화바베큐치킨 여수여천점",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%8B%A5%EC%97%94%EB%8F%88%EC%8A%A4%20%EC%A7%81%ED%99%94%EB%B0%94%EB%B2%A0%ED%81%90%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90"
+          },
+          {
+            "query": "닥엔돈스 직화바베큐치킨 여수여천점 전남 여수시 신기남3길 2-5",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%8B%A5%EC%97%94%EB%8F%88%EC%8A%A4%20%EC%A7%81%ED%99%94%EB%B0%94%EB%B2%A0%ED%81%90%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%A0%EA%B8%B0%EB%82%A83%EA%B8%B8%202-5"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": []
       }
     },
     {
@@ -2042,7 +2774,66 @@
       "sourceMatch": {
         "status": "new",
         "method": "no-address-or-unique-name-match"
+      },
+      "chakUrl": "https://bit.ly/chak-yeosu",
+      "naverStatus": "no-exact-match",
+      "naverEvidence": {
+        "status": "no-exact-match",
+        "naverMap": "",
+        "roadSignature": "시청동2길8",
+        "attempts": [
+          {
+            "query": "골목포차&치킨 여수",
+            "candidateCount": 0,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EA%B3%A8%EB%AA%A9%ED%8F%AC%EC%B0%A8%26%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98"
+          },
+          {
+            "query": "골목포차&치킨",
+            "candidateCount": 5,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EA%B3%A8%EB%AA%A9%ED%8F%AC%EC%B0%A8%26%EC%B9%98%ED%82%A8"
+          }
+        ],
+        "exactMatches": [],
+        "sameAddressCandidates": [],
+        "candidates": [
+          {
+            "placeId": "1382569759",
+            "name": "골목포차",
+            "roadAddress": "한강대로15길 12-7 1층",
+            "address": "서울특별시 용산구 한강대로15길 12-7 1층"
+          },
+          {
+            "placeId": "1919868225",
+            "name": "골목포차",
+            "roadAddress": "한강대로15길 12-7 1층",
+            "address": "서울특별시 용산구 한강대로15길 12-7 1층"
+          },
+          {
+            "placeId": "2001029777",
+            "name": "골목포차",
+            "roadAddress": "한강대로15길 12-7 1층",
+            "address": "서울특별시 용산구 한강대로15길 12-7 1층"
+          },
+          {
+            "placeId": "2089663875",
+            "name": "골목포차",
+            "roadAddress": "한강대로15길 12-7 1층",
+            "address": "서울특별시 용산구 한강대로15길 12-7 1층"
+          },
+          {
+            "placeId": "2019041579",
+            "name": "골목포차",
+            "roadAddress": "한강대로15길 12-7 1층",
+            "address": "서울특별시 용산구 한강대로15길 12-7 1층"
+          }
+        ]
       }
     }
-  ]
+  ],
+  "serviceStats": {
+    "newStores": 27,
+    "chakRoutes": 27,
+    "naverVerified": 14,
+    "naverOmitted": 13
+  }
 }
