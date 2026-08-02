@@ -21662,55 +21662,55 @@
         "weekly": {
           "sun": [
             {
-              "open": "00:00",
-              "close": "00:00"
+              "open": "10:00",
+              "close": "02:00"
             }
           ],
           "mon": [
             {
-              "open": "00:00",
-              "close": "00:00"
+              "open": "10:00",
+              "close": "02:00"
             }
           ],
           "tue": [
             {
-              "open": "00:00",
-              "close": "00:00"
+              "open": "10:00",
+              "close": "02:00"
             }
           ],
           "wed": [
             {
-              "open": "00:00",
-              "close": "00:00"
+              "open": "10:00",
+              "close": "02:00"
             }
           ],
           "thu": [
             {
-              "open": "00:00",
-              "close": "00:00"
+              "open": "10:00",
+              "close": "02:00"
             }
           ],
           "fri": [
             {
-              "open": "00:00",
-              "close": "00:00"
+              "open": "10:00",
+              "close": "02:00"
             }
           ],
           "sat": [
             {
-              "open": "00:00",
-              "close": "00:00"
+              "open": "10:00",
+              "close": "02:00"
             }
           ]
         },
         "closures": [],
         "displayLines": [
-          "매일 24시간영업",
-          "브레이크 타임 매일 오전 02:00 ~ 오전 10:00"
+          "매일 오전 10:00 ~ 익일 오전 02:00",
+          "땡겨요 브레이크 타임 매일 오전 02:00 ~ 오전 10:00 반영"
         ],
         "sourceApp": "ddangyo"
       },
-      "verifiedAt": "2026-08-02",
+      "verifiedAt": "2026-08-03",
       "sourceLabel": "땡겨요 화면 확인",
       "payments": [],
       "delivery": [],
@@ -21719,7 +21719,7 @@
         "businessHoursAppliedAsCommonStoreHours": true,
         "currentStatus": "준비중",
         "currentEndTime": "240000",
-        "verifiedAt": "2026-08-02"
+        "verifiedAt": "2026-08-03"
       }
     },
     "dfb50765a5f3a8ab": {
