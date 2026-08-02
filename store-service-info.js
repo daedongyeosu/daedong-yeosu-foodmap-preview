@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'store-service-info.json';
+  const DATA_URL = 'store-service-info.json?v=store-service-6';
   const HISTORY_KEY = 'daedongStoreServiceOverview';
   const CLOSING_SOON_MINUTES = 60;
   const WEEK_KEYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
