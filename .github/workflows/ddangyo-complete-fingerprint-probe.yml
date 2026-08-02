@@ -7,16 +7,21 @@ on:
     paths:
       - scripts/ddangyo-complete-fingerprint-probe.mjs
       - scripts/collect-all-historical-ddangyo-links.mjs
+      - scripts/extract-all-historical-ddangyo.mjs
       - .github/workflows/ddangyo-complete-fingerprint-probe.yml
       - .ddangyo-complete-fingerprint-trigger
 
 permissions:
   contents: read
 
+concurrency:
+  group: ddangyo-complete-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 55
     steps:
       - name: Check out preview full history
         uses: actions/checkout@v4
@@ -35,9 +40,13 @@ jobs:
       - name: Collect every historical Ddangyo link from both repositories
         run: node preview/scripts/collect-all-historical-ddangyo-links.mjs preview production
 
-      - name: Probe current Ddangyo hours and benefits fields
+      - name: Probe exact hours and coupon request formats
         working-directory: preview
         run: node scripts/ddangyo-complete-fingerprint-probe.mjs
+
+      - name: Extract every historical Ddangyo store
+        working-directory: preview
+        run: node scripts/extract-all-historical-ddangyo.mjs ../ddangyo-historical-links-output/all-historical-ddangyo-links.json
 
       - name: Upload historical link inventory
         if: always()
@@ -54,5 +63,14 @@ jobs:
         with:
           name: ddangyo-complete-fingerprint-probe
           path: preview/ddangyo-complete-fingerprint-probe-output
+          if-no-files-found: error
+          retention-days: 2
+
+      - name: Upload complete extraction output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ddangyo-all-historical-extraction
+          path: preview/ddangyo-all-extraction-output
           if-no-files-found: error
           retention-days: 2
