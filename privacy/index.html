@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ff5a1f">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="대동여수음식지도 개인정보처리방침">
+  <title>개인정보처리방침 | 대동여수음식지도</title>
+  <style>
+    :root {
+      --ink: #102b3f;
+      --muted: #607483;
+      --line: #dce8ee;
+      --paper: #ffffff;
+      --wash: #f4f9fb;
+      --brand: #ff5a1f;
+      --brand-soft: #fff1ea;
+      --navy: #073c5a;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--wash); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #eef8fc 0, #f8fbfc 22rem, #f4f9fb 100%);
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.75;
+      word-break: keep-all;
+    }
+    a { color: inherit; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(220, 232, 238, .9);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(12px);
+    }
+    .topbar-inner {
+      width: min(940px, calc(100% - 32px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -.04em;
+    }
+    .brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--navy);
+      background: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    main {
+      width: min(940px, calc(100% - 32px));
+      margin: 32px auto 64px;
+    }
+    .hero {
+      padding: clamp(28px, 6vw, 54px);
+      border: 1px solid #cfe4ee;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffffff 0%, #eef9fd 100%);
+      box-shadow: 0 22px 54px rgba(7, 60, 90, .08);
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--brand);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 7vw, 56px);
+      line-height: 1.15;
+      letter-spacing: -.055em;
+    }
+    .lead {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: clamp(16px, 2.5vw, 19px);
+    }
+    .date {
+      display: inline-flex;
+      margin-top: 22px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: #b93b0d;
+      background: var(--brand-soft);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 18px 0 28px;
+    }
+    .summary div {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+    }
+    .summary strong { display: block; color: var(--navy); }
+    .summary span { color: var(--muted); font-size: 14px; }
+    article {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 18px 42px rgba(7, 60, 90, .06);
+    }
+    section {
+      padding: 30px clamp(22px, 5vw, 48px);
+      border-top: 1px solid var(--line);
+    }
+    section:first-child { border-top: 0; }
+    h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: clamp(21px, 3.6vw, 27px);
+      line-height: 1.35;
+      letter-spacing: -.035em;
+    }
+    h3 { margin: 22px 0 8px; font-size: 17px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0; padding-left: 22px; }
+    li + li { margin-top: 8px; }
+    .table-wrap { overflow-x: auto; margin-top: 14px; }
+    table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 14px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--navy); background: #eef7fa; }
+    .notice {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--brand);
+      border-radius: 10px;
+      background: var(--brand-soft);
+    }
+    .contact {
+      padding: 22px;
+      border-radius: 18px;
+      background: var(--navy);
+      color: #fff;
+    }
+    .contact a { color: #fff; font-weight: 900; }
+    footer {
+      padding: 28px 0 48px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+    @media (max-width: 720px) {
+      .topbar-inner, main { width: min(100% - 22px, 940px); }
+      .topbar-inner { min-height: 64px; }
+      .brand span { font-size: 14px; }
+      .brand img { width: 38px; height: 38px; }
+      .back { padding: 0 12px; }
+      main { margin-top: 18px; }
+      .hero, article { border-radius: 22px; }
+      .summary { grid-template-columns: 1fr; }
+      section { padding: 25px 20px; }
+      body { word-break: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="대동여수음식지도 홈으로 이동">
+        <img src="../assets/logo.png" alt="대동여수음식지도 로고">
+        <span>대동여수음식지도</span>
+      </a>
+      <a class="back" href="/">홈으로 돌아가기</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p class="eyebrow">PRIVACY POLICY</p>
+      <h1>개인정보처리방침</h1>
+      <p class="lead">대동여수음식지도는 필요한 정보만 최소한으로 사용하고, 위치정보를 사용자가 기대하는 서비스 기능에 한정해 처리합니다.</p>
+      <span class="date">시행일 2026년 7월 29일</span>
+    </div>
+
+    <div class="summary" aria-label="개인정보 처리 핵심 안내">
+      <div><strong>회원가입 없음</strong><span>서비스 이용을 위해 이름·전화번호 로그인을 요구하지 않습니다.</span></div>
+      <div><strong>위치 선택 가능</strong><span>현재 위치를 거부해도 주소 검색과 지도 선택을 사용할 수 있습니다.</span></div>
+      <div><strong>정확한 주소 비공개</strong><span>관리자 통계에는 동 단위 또는 여수 외 지역처럼 대략적인 지역만 표시합니다.</span></div>
+    </div>
+
+    <article>
+      <section>
+        <h2>1. 적용 범위와 운영자</h2>
+        <p>이 방침은 웹사이트와 Android 앱으로 제공되는 <strong>대동여수음식지도</strong>(이하 “서비스”)에 적용됩니다.</p>
+        <ul>
+          <li>서비스 운영자: 김민태</li>
+          <li>웹사이트: <a href="https://daedongmap.com/">https://daedongmap.com/</a></li>
+          <li>문의 이메일: <a href="mailto:sisakim@naver.com">sisakim@naver.com</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2. 처리하는 정보와 이용 목적</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>구분</th><th>처리하는 정보</th><th>이용 목적</th><th>보관 기준</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현재 위치</td>
+                <td>사용자가 위치 버튼을 누르고 허용한 경우의 기기 위치</td>
+                <td>가까운 음식점 표시, 거리 계산, 지도 위치 맞춤</td>
+                <td>해당 기능을 제공하는 동안만 사용하며 정확한 좌표를 운영 통계에 저장하지 않습니다.</td>
+              </tr>
+              <tr>
+                <td>기기 내 저장 정보</td>
+                <td>선택한 배달 위치, 찜한 가게, 최근 방문 가게 등</td>
+                <td>다음 방문 때 사용자의 설정과 목록을 다시 보여주기</td>
+                <td>브라우저 또는 앱의 저장공간에 보관되며 사용자가 데이터·캐시를 삭제하거나 초기화할 때까지 유지될 수 있습니다.</td>
+              </tr>
+              <tr>
+                <td>익명 이용 통계</td>
+                <td>페이지 방문, 가게 열람, 주문경로 버튼 클릭, 가게 QR·공유 링크 유입, 날짜, 대략적인 지역 구분</td>
+                <td>가게별 이용 현황 확인, 서비스 개선, 홍보 효과 측정</td>
+                <td>수집일로부터 최대 12개월 보관한 뒤 삭제하거나 개인을 식별할 수 없는 집계 정보로 전환합니다.</td>
+              </tr>
+              <tr>
+                <td>기술 정보</td>
+                <td>접속 시 자동 생성될 수 있는 IP 주소, 브라우저·기기 종류, 접속 시각, 오류 기록</td>
+                <td>서비스 제공, 보안, 장애 확인</td>
+                <td>서비스 제공업체의 보안·운영 정책 및 관계 법령에 필요한 기간 동안 보관될 수 있습니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="notice"><strong>관리자 통계에는 사용자의 정확한 좌표나 상세 주소를 표시하지 않습니다.</strong> 여수시 안에서는 동 단위, 여수시 밖에서는 시·군·구 또는 “여수 외 지역”처럼 대략적인 지역 구분만 사용합니다. 운영자 자신의 확인용 접속은 가능한 범위에서 통계에서 제외합니다.</p>
+      </section>
+
+      <section>
+        <h2>3. 위치 권한 사용</h2>
+        <ul>
+          <li>위치정보는 사용자가 현재 위치 기능을 직접 선택했을 때 전면에서만 요청합니다.</li>
+          <li>서비스는 백그라운드에서 지속적으로 위치를 추적하지 않습니다.</li>
+          <li>사용자는 위치 권한을 허용하지 않아도 주소 검색, 저장된 주소 선택, 지도에서 위치 지정 기능을 이용할 수 있습니다.</li>
+          <li>Android 설정 또는 브라우저의 사이트 설정에서 언제든 위치 권한을 변경하거나 철회할 수 있습니다.</li>
+          <li>위치정보는 광고 목적으로 판매하지 않습니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. 외부 서비스와 정보 공유</h2>
+        <p>서비스는 음식점의 주문 방법과 지도 정보를 한곳에서 찾도록 돕기 위해 먹깨비, 땡겨요, 배달의민족, 쿠팡이츠, 요기요, 온동네, 브랜드 앱, 전화, 지도 등 외부 서비스로 연결될 수 있습니다.</p>
+        <ul>
+          <li>사용자가 외부 링크를 누르면 해당 업체의 앱 또는 웹사이트로 이동하며, 이동한 뒤의 정보 처리는 해당 업체의 개인정보처리방침이 적용됩니다.</li>
+          <li>해당 가게 또는 주문 화면을 열기 위해 가게 식별값이나 유입경로 같은 링크 정보가 외부 서비스에 전달될 수 있습니다.</li>
+          <li>서비스는 개인정보를 판매하지 않으며, 법령상 의무가 있거나 사용자가 별도로 동의한 경우를 제외하고 개인을 식별할 수 있는 정보를 제3자에게 제공하지 않습니다.</li>
+          <li>웹사이트 제공 과정에서 GitHub Pages 등 호스팅·인프라 제공업체가 기술적 접속 기록을 처리할 수 있습니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. 보유 기간과 파기</h2>
+        <p>개인정보는 이용 목적을 달성하면 지체 없이 삭제하거나 복구하기 어려운 방법으로 파기합니다. 관계 법령에서 일정 기간 보관을 요구하는 경우에는 해당 기간 동안 분리해 보관할 수 있습니다.</p>
+        <ul>
+          <li>기기 내 저장 정보: 사용자가 앱 데이터·브라우저 저장정보를 삭제하거나 기능을 초기화할 때 삭제</li>
+          <li>익명 클릭·유입·대략적 지역 통계: 수집일로부터 최대 12개월 후 삭제 또는 비식별 집계</li>
+          <li>문의 과정에서 사용자가 제공한 연락정보와 내용: 문의 처리 완료 후 3개월 이내 삭제(분쟁 대응 또는 법령상 보관 의무가 있는 경우 제외)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. 사용자의 권리와 선택</h2>
+        <ul>
+          <li>위치 권한을 허용하거나 거부하고, 나중에 철회할 수 있습니다.</li>
+          <li>브라우저 또는 Android 설정에서 저장정보·캐시를 삭제할 수 있습니다.</li>
+          <li>본인과 관련된 정보의 열람, 정정, 삭제 또는 처리 정지를 요청할 수 있습니다.</li>
+          <li>익명 통계는 이름·전화번호 같은 식별정보와 연결하지 않으므로 특정 개인의 기록을 찾아 삭제하기 어려울 수 있습니다.</li>
+        </ul>
+        <p>권리 행사는 아래 이메일로 요청해 주세요. 본인 확인이 필요한 경우 필요한 범위에서 확인 절차를 진행할 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>7. 안전성 확보 조치</h2>
+        <p>서비스는 전송구간 암호화(HTTPS), 접근 권한 제한, 정확한 위치정보의 통계 저장 방지, 관리자용 정보와 공개 정보의 분리 등 합리적인 보호조치를 적용합니다. 다만 인터넷을 통한 전송과 저장 방식은 절대적인 안전을 보장할 수 없으므로, 문제가 확인되면 영향을 줄이기 위한 조치를 신속히 진행합니다.</p>
+      </section>
+
+      <section>
+        <h2>8. 서비스 성격과 상표 안내</h2>
+        <p>대동여수음식지도는 여수시 또는 배달의민족, 쿠팡이츠, 요기요, 먹깨비, 땡겨요 등 외부 주문 플랫폼의 공식 서비스나 후원 서비스가 아닙니다. 주문계약, 결제, 취소, 환불, 배달 및 상품 관련 책임은 실제 가게와 해당 주문 플랫폼의 정책에 따릅니다. 각 회사명·서비스명·상표의 권리는 해당 권리자에게 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>9. 개인정보 관련 문의</h2>
+        <div class="contact">
+          <strong>개인정보 보호 문의</strong><br>
+          운영자: 김민태<br>
+          이메일: <a href="mailto:sisakim@naver.com">sisakim@naver.com</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>10. 방침 변경</h2>
+        <p>서비스 기능 또는 관계 법령이 변경되어 이 방침을 수정하는 경우, 시행일과 주요 변경 내용을 이 페이지 또는 서비스 안에서 안내합니다.</p>
+      </section>
+    </article>
+
+    <footer>© 2026 대동여수음식지도. All rights reserved.</footer>
+  </main>
+</body>
+</html>

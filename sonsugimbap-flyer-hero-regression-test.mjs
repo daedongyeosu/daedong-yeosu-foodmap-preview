@@ -7,6 +7,7 @@ const campaignData = JSON.parse(fs.readFileSync(campaignPath, 'utf8'));
 const bannerTargets = JSON.parse(fs.readFileSync('data/banner-targets.json', 'utf8'));
 const stores = JSON.parse(fs.readFileSync('data/stores.json', 'utf8'));
 const rc6 = fs.readFileSync('rc6-fixes.js', 'utf8');
+const rc6Css = fs.readFileSync('rc6-fixes.css', 'utf8');
 const app = fs.readFileSync('app.js', 'utf8');
 const index = fs.readFileSync('index.html', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
@@ -16,6 +17,7 @@ const campaign = campaignData.campaigns?.[storeId];
 assert(campaign, '손수김밥 전단지 전용 캠페인이 등록되어야 함');
 assert.equal(campaign.storeId, storeId, '캠페인은 기존 손수김밥 고유 ID를 그대로 사용해야 함');
 assert.equal(campaign.images.length, 14, '제공받은 손수김밥 사진 14장을 모두 사용해야 함');
+assert.deepEqual(campaign.copySlides, [1, 5, 9, 13], '손수김밥 문구는 1·5·9·13번째 사진에만 띄엄띄엄 표시해야 함');
 assert.deepEqual(campaign.specialBannerKeys, ['18', '19', '20'], '소상공인 공지·힐링요트·오마카세 우미 순서를 유지해야 함');
 for (const image of campaign.images) {
   assert(fs.existsSync(image), `캠페인 이미지가 존재해야 함: ${image}`);
@@ -49,7 +51,7 @@ vm.runInContext(
   `${rc6}
    rc6HeroCampaigns=${JSON.stringify(campaignData)};
    rc6BannerTargets=${JSON.stringify(bannerTargets)};
-   globalThis.campaignEntries=rc6CampaignHeroEntries().map(item=>({key:item.key,kind:item.kind,storeId:item.store?.id||''}));`,
+   globalThis.campaignEntries=rc6CampaignHeroEntries().map(item=>({key:item.key,kind:item.kind,storeId:item.store?.id||'',showCopy:item.campaignShowCopy}));`,
   context,
 );
 assert.equal(context.campaignEntries.length, 17, '손수김밥 14장과 지역 소식 3장을 모두 순환해야 함');
@@ -59,5 +61,13 @@ assert.deepEqual(
   ['notion', 'notion', 'notion'],
   '지역 소식 3개는 손수김밥 사진 사이에 분산되어야 함',
 );
+
+assert.deepEqual(
+  context.campaignEntries.filter(item => item.kind === 'store').map(item => item.showCopy),
+  [true, false, false, false, true, false, false, false, true, false, false, false, true, false],
+  '손수김밥 이름은 14장 중 4장에만 띄엄띄엄 보여야 함',
+);
+assert.match(rc6, /rc6-campaign-photo-only/, '글자 없는 손수김밥 사진에는 전용 사진 모드가 적용되어야 함');
+assert.match(rc6Css, /\.rc6-store-hero-media\.rc6-campaign-photo-only::after\{display:none\}/, '글자 없는 사진에서는 어두운 덮개를 제거해야 함');
 
 console.log('PASS 손수김밥 전단지 전용 메인슬라이드');

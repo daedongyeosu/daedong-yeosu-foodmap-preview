@@ -1,0 +1,30 @@
+{
+  "id": "/",
+  "name": "대동여수음식지도",
+  "short_name": "대동여수음식지도",
+  "description": "여수 음식점과 이용 가능한 주문방법을 한눈에 확인하는 대동여수음식지도",
+  "lang": "ko-KR",
+  "dir": "ltr",
+  "start_url": "/?source=android-app",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#ff5a1f",
+  "categories": ["food", "lifestyle", "navigation"],
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo.png",
+      "sizes": "1536x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

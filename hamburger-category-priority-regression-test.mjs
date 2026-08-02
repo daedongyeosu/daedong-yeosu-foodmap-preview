@@ -30,7 +30,7 @@ assert.equal(rule.scope, 'all-neighborhoods', 'hamburger override must apply in 
 assert.deepEqual(rule.topStoreIds, TOP_IDS, 'hamburger top-store IDs changed');
 assert.deepEqual(rule.bottomStoreIds, BOTTOM_IDS, 'hamburger bottom-store IDs changed');
 assert.equal(new Set([...TOP_IDS, ...BOTTOM_IDS]).size, 4, 'category priority IDs overlap');
-assert.equal(Object.keys(priority.categoryPriorityOverrides).length, 1, 'an unrelated category override was added');
+assert.equal(Object.keys(priority.categoryPriorityOverrides).length, 1, 'an unrelated data-driven category override was added');
 
 for (const [id, name] of EXPECTED_NAMES) {
   const store = byId.get(id);
@@ -97,9 +97,9 @@ for (const [name, source, required] of [
   ['app.js', appSource, 'function applyCategoryPriorityOverrides(list, category)'],
   ['rc2-fixes.js', rc2Source, 'applyCategoryPriorityOverrides(filtered, selectedCategory)'],
   ['rc3-fixes.js', rc3Source, 'applyCategoryPriorityOverrides(list.sort'],
-  ['rc6-fixes.js', rc6Source, 'categoryPriorityOverrides=rc6StorePriority.categoryPriorityOverrides||{}'],
+  ['rc6-fixes.js', rc6Source, '...(rc6StorePriority.categoryPriorityOverrides||{})'],
   ['rc6-fixes.js', rc6Source, 'applyCategoryPriorityOverrides(rc6DiversifyStoresByTier'],
-  ['rc6-fixes.js', rc6Source, 'filteredStores=()=>applyCategoryPriorityOverrides'],
+  ['rc6-fixes.js', rc6Source, 'filteredStores=()=>{const base=originalFiltered()'],
   ['rc6-fixes.js', rc6Source, 'applyCategoryPriorityOverrides(rc6RankCandidatesByCustomerLocation']
 ]) assert(source.includes(required), `${name}: hamburger priority wiring missing: ${required}`);
 assert(finalSource.includes('applyCategoryPriorityOverrides(filtered,selectedCategory)'), 'final app browser priority wiring missing');
@@ -110,8 +110,8 @@ assert.match(finalSource, /rc3-fixes\.js\?v=[^"']*hamburger-priority-1/, 'rc3 ca
 assert.match(finalSource, /rc6-fixes\.js\?v=[^"']*hamburger-priority-1/, 'rc6 cache version missing');
 
 const routeCount = stores.reduce((sum, store) => sum + (store.routes || []).length, 0);
-assert.equal(stores.length, 650, 'store count changed');
-assert.equal(routeCount, 4558, 'order-route count changed');
+assert.equal(stores.length, 701, 'store count changed');
+assert.equal(routeCount, 4917, 'order-route count changed');
 
 console.log(JSON.stringify({
   category: CATEGORY,

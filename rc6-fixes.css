@@ -27,6 +27,7 @@
 .rc6-store-hero-media{position:relative;display:block;width:100%;height:285px;overflow:hidden;background:#082f4b}
 .rc6-store-hero-media>img{display:block;width:100%;height:100%!important;object-fit:cover;object-position:center}
 .rc6-store-hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,23,38,.88) 0%,rgba(4,35,56,.68) 42%,rgba(4,32,51,.16) 72%,rgba(3,24,39,.08) 100%)}
+.rc6-store-hero-media.rc6-campaign-photo-only::after{display:none}
 .rc6-store-hero-copy{position:absolute;z-index:1;left:clamp(22px,6vw,68px);top:50%;transform:translateY(-50%);width:min(66%,620px);display:flex;flex-direction:column;align-items:flex-start;color:#fff;text-align:left;text-shadow:0 2px 12px rgba(0,0,0,.48)}
 .rc6-store-hero-copy small{display:inline-flex;max-width:100%;padding:7px 13px;border-radius:999px;background:#ff6a2a;color:#fff;font-size:clamp(12px,2.4vw,20px);font-weight:900;line-height:1.15;text-shadow:none}
 .rc6-store-hero-copy strong{display:block;margin-top:12px;max-width:100%;font-size:clamp(24px,5vw,52px);line-height:1.12;letter-spacing:-.04em;word-break:keep-all;overflow-wrap:anywhere}

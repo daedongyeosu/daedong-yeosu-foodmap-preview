@@ -19,6 +19,31 @@ const ADDRESS_KEY = 'daedongDeliveryAddressV2';
 const ADDRESS_BOOK_KEY = 'daedongAddressBookV2';
 const FEEDBACK_FORM_URL = 'https://www.notion.so/8ae3728176e344fdaee3475a97d03740';
 const SMALL_BUSINESS_ASSOCIATION_URL = 'https://bit.ly/여수시소상공인연합회공지';
+const ANALYTICS_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/events';
+const ANALYTICS_SESSION_KEY = 'daedongAnalyticsSessionV1';
+const ANALYTICS_OWNER_EXCLUSION_KEY = 'daedongAnalyticsOwnerExcludedV1';
+const ANALYTICS_OWNER_MODE_PARAM = 'owner_stats';
+const ANALYTICS_REGION_1_ALIASES = new Map([
+  ['서울', '서울특별시'], ['서울시', '서울특별시'], ['서울특별시', '서울특별시'],
+  ['부산', '부산광역시'], ['부산시', '부산광역시'], ['부산광역시', '부산광역시'],
+  ['대구', '대구광역시'], ['대구시', '대구광역시'], ['대구광역시', '대구광역시'],
+  ['인천', '인천광역시'], ['인천시', '인천광역시'], ['인천광역시', '인천광역시'],
+  ['광주', '광주광역시'], ['광주시', '광주광역시'], ['광주광역시', '광주광역시'],
+  ['대전', '대전광역시'], ['대전시', '대전광역시'], ['대전광역시', '대전광역시'],
+  ['울산', '울산광역시'], ['울산시', '울산광역시'], ['울산광역시', '울산광역시'],
+  ['세종', '세종특별자치시'], ['세종시', '세종특별자치시'], ['세종특별자치시', '세종특별자치시'],
+  ['경기', '경기도'], ['경기도', '경기도'],
+  ['강원', '강원특별자치도'], ['강원도', '강원특별자치도'], ['강원특별자치도', '강원특별자치도'],
+  ['충북', '충청북도'], ['충청북도', '충청북도'],
+  ['충남', '충청남도'], ['충청남도', '충청남도'],
+  ['전북', '전북특별자치도'], ['전라북도', '전북특별자치도'], ['전북특별자치도', '전북특별자치도'],
+  ['전남', '전라남도'], ['전라남도', '전라남도'],
+  ['경북', '경상북도'], ['경상북도', '경상북도'],
+  ['경남', '경상남도'], ['경상남도', '경상남도'],
+  ['제주', '제주특별자치도'], ['제주도', '제주특별자치도'], ['제주특별자치도', '제주특별자치도']
+]);
+let analyticsFallbackVisitorId = '';
+let analyticsFallbackSessionId = '';
 
 const APP_META = {
   direct: {label: '가게바로주문', icon: '🏪'},
@@ -150,6 +175,178 @@ function visitorKey() {
   if (!key) { key = globalThis.crypto?.randomUUID?.() || `visitor-${Date.now()}-${Math.random().toString(36).slice(2)}`; localStorage.setItem(VISITOR_KEY, key); }
   return key;
 }
+function analyticsRandomId(prefix) {
+  return globalThis.crypto?.randomUUID?.() || `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+function analyticsVisitorId() {
+  try { return visitorKey(); }
+  catch {
+    if (!analyticsFallbackVisitorId) analyticsFallbackVisitorId = analyticsRandomId('visitor');
+    return analyticsFallbackVisitorId;
+  }
+}
+function analyticsSessionId() {
+  try {
+    let value = sessionStorage.getItem(ANALYTICS_SESSION_KEY);
+    if (!value) { value = analyticsRandomId('session'); sessionStorage.setItem(ANALYTICS_SESSION_KEY, value); }
+    return value;
+  } catch {
+    if (!analyticsFallbackSessionId) analyticsFallbackSessionId = analyticsRandomId('session');
+    return analyticsFallbackSessionId;
+  }
+}
+function analyticsOwnerExcluded() {
+  try { return localStorage.getItem(ANALYTICS_OWNER_EXCLUSION_KEY) === '1'; }
+  catch { return false; }
+}
+function applyAnalyticsOwnerMode() {
+  const params = new URLSearchParams(location.search);
+  const mode = String(params.get(ANALYTICS_OWNER_MODE_PARAM) || '').trim().toLowerCase();
+  if (mode !== 'exclude' && mode !== 'include') return;
+  try {
+    if (mode === 'exclude') localStorage.setItem(ANALYTICS_OWNER_EXCLUSION_KEY, '1');
+    else localStorage.removeItem(ANALYTICS_OWNER_EXCLUSION_KEY);
+  } catch {}
+  params.delete(ANALYTICS_OWNER_MODE_PARAM);
+  const query = params.toString();
+  const cleanUrl = `${location.pathname}${query ? `?${query}` : ''}${location.hash}`;
+  try { history.replaceState(history.state, '', cleanUrl); } catch {}
+}
+function analyticsEntryContext() {
+  const params = new URLSearchParams(location.search);
+  const explicit = String(params.get('source') || params.get('utm_source') || '').trim().toLowerCase();
+  const storeId = String(params.get('hero') || params.get('store') || '').trim();
+  let entrySource = 'direct';
+  if (explicit === 'bitly' || explicit === 'legacy-bitly') entrySource = 'legacy-bitly';
+  else if (explicit === 'store_qr_legacy') entrySource = 'store_qr_legacy';
+  else if (explicit === 'store_qr') entrySource = 'store_qr';
+  else if (params.has('hero')) entrySource = 'store_qr';
+  else if (params.has('store')) entrySource = 'shared_link';
+  else {
+    try {
+      const referrerHost = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : '';
+      if (referrerHost === 'bit.ly' || referrerHost.endsWith('.bitly.com')) entrySource = 'legacy-bitly';
+    } catch {}
+  }
+  return {entrySource, storeId};
+}
+function analyticsRegionPart(value, depth) {
+  const region = String(value || '').trim().replace(/\s+/g, ' ').slice(0, 40);
+  if (!region || !/^[가-힣0-9·\s-]+$/.test(region)) return '';
+  if (depth === 1) return ANALYTICS_REGION_1_ALIASES.get(region) || '';
+  if (depth === 2) return /(?:시|군|구)$/.test(region) ? region : '';
+  return /(?:동|읍|면|리|가)$/.test(region) ? region : '';
+}
+function analyticsCoarseRegion(input = {}) {
+  const text = [input.address, input.label, input.area].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();
+  let region1 = analyticsRegionPart(input.region1, 1);
+  let region2 = analyticsRegionPart(input.region2, 2);
+  let region3 = analyticsRegionPart(input.region3, 3);
+  if (!region1) {
+    region1 = ANALYTICS_REGION_1_ALIASES.get(text.split(/\s+/)[0]) || '';
+  }
+  if (!region2) {
+    const match = text.match(/([가-힣]+시(?:\s+[가-힣]+구)?|[가-힣]+군|[가-힣]+구)(?=\s|$)/);
+    region2 = analyticsRegionPart(match?.[1], 2);
+  }
+  if (!region3) {
+    const matches = [...text.matchAll(/([가-힣0-9]+(?:동|읍|면|리|가))(?=\s|$)/g)];
+    region3 = analyticsRegionPart(matches.at(-1)?.[1], 3);
+  }
+  const area = analyticsRegionPart(input.area, 3);
+  if (!region3 && area) region3 = area;
+  if (region3 && !region2 && (text.includes('여수') || input.area === region3)) {
+    region1 ||= '전라남도';
+    region2 = '여수시';
+  }
+  const rawSource = String(input.regionSource || '').trim();
+  const allowedSources = new Set(['address_search', 'browser_geolocation', 'map_selection', 'saved_address']);
+  const regionSource = allowedSources.has(rawSource)
+    ? rawSource
+    : input.type === 'current'
+      ? 'browser_geolocation'
+      : input.type === 'map'
+        ? 'map_selection'
+        : input.type === 'postcode'
+          ? 'address_search'
+          : 'saved_address';
+  return {region1, region2, region3, regionSource};
+}
+function analyticsRegionContext() {
+  const selected = readLocalJson(ADDRESS_KEY, null) || readLocalJson('savedLocation', null) || {};
+  return analyticsCoarseRegion(selected);
+}
+function sendAnalyticsEvent(eventType, details = {}) {
+  if (analyticsOwnerExcluded()) return;
+  const entry = analyticsEntryContext();
+  const region = analyticsRegionContext();
+  const payload = {
+    eventId: analyticsRandomId('event'),
+    eventType,
+    visitorId: analyticsVisitorId(),
+    sessionId: analyticsSessionId(),
+    entrySource: entry.entrySource,
+    storeId: String(details.storeId || '').slice(0, 80),
+    storeName: String(details.storeName || '').slice(0, 120),
+    channel: String(details.channel || '').slice(0, 40),
+    surface: String(details.surface || '').slice(0, 60),
+    region1: region.region1,
+    region2: region.region2,
+    region3: region.region3,
+    regionSource: region.regionSource,
+    clientTime: new Date().toISOString()
+  };
+  const body = JSON.stringify(payload);
+  try {
+    if (navigator.sendBeacon?.(ANALYTICS_ENDPOINT, new Blob([body], {type: 'text/plain;charset=UTF-8'}))) return;
+  } catch {}
+  try {
+    fetch(ANALYTICS_ENDPOINT, {
+      method: 'POST',
+      body,
+      headers: {'Content-Type': 'text/plain;charset=UTF-8'},
+      mode: 'cors',
+      credentials: 'omit',
+      keepalive: true
+    }).catch(() => {});
+  } catch {}
+}
+function analyticsStoreForElement(element) {
+  const id = String(
+    element?.dataset?.phoneRouteStoreId ||
+    element?.dataset?.storeId ||
+    element?.closest?.('[data-store-id]')?.dataset?.storeId ||
+    $('#modal')?.dataset?.activeStoreId ||
+    ''
+  );
+  const store = stores.find(item => String(item.id) === id);
+  return {storeId: id, storeName: store?.name || ''};
+}
+function analyticsChannelForElement(element) {
+  const raw = String(
+    element?.dataset?.routeKey ||
+    element?.dataset?.communityOriginal ||
+    element?.dataset?.detailOnly ||
+    element?.dataset?.finalAppChannel ||
+    (element?.hasAttribute?.('data-phone-route-store-id') || element?.hasAttribute?.('data-rc3-final-phone') ? 'phone' : '')
+  );
+  return raw === 'happy' ? 'happyorder' : raw;
+}
+function trackAnalyticsRouteClick(event) {
+  if (!(event.target instanceof Element)) return;
+  const route = event.target.closest(
+    'a[data-route-key],a[data-community-original],a[data-final-app-channel],a[data-detail-only],a[data-phone-route-store-id],a[data-rc3-final-phone]'
+  );
+  if (!route) return;
+  const channel = analyticsChannelForElement(route);
+  if (!channel) return;
+  const store = analyticsStoreForElement(route);
+  sendAnalyticsEvent(['naver', 'chak'].includes(channel) ? 'utility_click' : 'order_click', {
+    ...store,
+    channel,
+    surface: route.closest('#feeGuidePanel') ? 'order_guide' : 'store_detail'
+  });
+}
 function selectedOrderSnapshot() {
   const candidates = [window.DaedongSelectedOrderApp, readLocalJson(SELECTED_EXTERNAL_KEY, null), readLocalJson(SELECTED_ORDER_COMPAT_KEY, null)];
   const selected = candidates.find(item => item && EXTERNAL_APP_KEYS.includes(item.key || item.appKey) && item.storeId && item.url);
@@ -176,9 +373,25 @@ function rememberSelectedExternal(store, key) {
 }
 function hydrateSelectedOrderApp() { const selected = selectedOrderSnapshot(); if (selected) window.DaedongSelectedOrderApp = selected; }
 
+function isExplicitOutsideYeosuCurrent(item = {}) {
+  if (String(item.type || '').trim() !== 'current') return false;
+  const region2 = String(item.region2 || '').trim();
+  return Boolean(region2) && !/(?:여수|yeosu)/i.test(region2);
+}
+function normalizeOutsideYeosuCurrent(item) {
+  if (!item || typeof item !== 'object' || !isExplicitOutsideYeosuCurrent(item)) return item;
+  return {
+    ...item,
+    label: '여수 외 지역 · 전체 가게 보기',
+    address: '여수 외 지역 · 전체 가게 보기',
+    area: '여수시 전체',
+    coords: null,
+    sortByDistance: false
+  };
+}
 function loadSavedLocation() {
   try {
-    const saved = JSON.parse(localStorage.getItem('savedLocation') || 'null');
+    const saved = normalizeOutsideYeosuCurrent(JSON.parse(localStorage.getItem('savedLocation') || 'null'));
     if (!saved || typeof saved !== 'object') return null;
     const lat = Number(saved.coords?.lat), lng = Number(saved.coords?.lng);
     return {
@@ -192,6 +405,28 @@ function loadSavedLocation() {
   } catch { return null; }
 }
 const savedLocation = loadSavedLocation();
+const LOCATION_CATEGORY_PRIORITY_OVERRIDES = {
+  "피자": {
+    "scope": "selected-neighborhoods",
+    "neighborhoods": [
+      "여서동",
+      "문수동",
+      "오림동"
+    ],
+    "orderedStoreIds": [
+      "dc638b23f8cf3c5b",
+      "a089d1d54720b48e",
+      "abb76aa470e26f7a"
+    ],
+    "rotation": "time-cycle",
+    "rotationIntervalMs": 60000,
+    "labels": {
+      "dc638b23f8cf3c5b": "도미노피자 문수점",
+      "a089d1d54720b48e": "외계인피자 여수점",
+      "abb76aa470e26f7a": "피자스쿨 여문점"
+    }
+  }
+};
 const state = {
   query: '', category: '전체', brandId: '', visibleCount: 40,
   location: savedLocation?.area || localStorage.getItem('location') || '여수시 전체',
@@ -212,7 +447,7 @@ let photoResolver = null;
 let addressDraft = null;
 let yeosuNeighborhoods = [];
 let neighborhoodByName = new Map();
-let categoryPriorityOverrides = {};
+let categoryPriorityOverrides = {...LOCATION_CATEGORY_PRIORITY_OVERRIDES};
 let modalHistoryActive = false;
 let ignoreNextPop = false;
 
@@ -286,16 +521,45 @@ function categoriesFromStores(list) {
   const ordered = categories.filter(category => available.has(category));
   return [...ordered, ...[...available].filter(category => !ordered.includes(category)).sort((a, b) => a.localeCompare(b, 'ko'))];
 }
+function customerNeighborhoodForPriority() {
+  const selected = neighborhoodFor(state.location) || neighborhoodFor(state.addressLabel);
+  if (selected || !state.coords) return selected;
+  return yeosuNeighborhoods
+    .map(item => ({name: item.name, point: neighborhoodPoint(item.name)}))
+    .filter(item => item.point)
+    .map(item => ({...item, distance: haversine(state.coords, item.point)}))
+    .sort((a, b) => a.distance - b.distance)[0]?.name || '';
+}
+function categoryPriorityRule(category) {
+  const rule = categoryPriorityOverrides?.[String(category || '')];
+  if (!rule) return null;
+  const scopedNeighborhoods = (rule.neighborhoods || []).map(String);
+  if (scopedNeighborhoods.length && !scopedNeighborhoods.includes(customerNeighborhoodForPriority())) return null;
+  return rule;
+}
+function categoryPriorityOrderedIdsForRule(rule, now = Date.now()) {
+  const ids = (rule?.orderedStoreIds || []).map(String);
+  if (rule?.rotation !== 'time-cycle' || ids.length < 2) return ids;
+  const interval = Math.max(1000, Number(rule.rotationIntervalMs) || 60000);
+  const offset = Math.floor(Number(now) / interval) % ids.length;
+  return [...ids.slice(offset), ...ids.slice(0, offset)];
+}
+function categoryPriorityOrderedStoreIds(category) {
+  return categoryPriorityOrderedIdsForRule(categoryPriorityRule(category));
+}
 function applyCategoryPriorityOverrides(list, category) {
   const input = Array.isArray(list) ? list : [];
-  const rule = categoryPriorityOverrides?.[String(category || '')];
+  const rule = categoryPriorityRule(category);
   if (!rule) return input;
+  const ordered = new Map(categoryPriorityOrderedIdsForRule(rule).map((id, index) => [id, index]));
   const top = new Set((rule.topStoreIds || []).map(String));
   const bottom = new Set((rule.bottomStoreIds || []).map(String));
   return input.map((item, index) => {
     const store = item?.store || item;
     const id = String(store?.id || store?.store_id || '');
-    return {item, index, tier: top.has(id) ? 0 : bottom.has(id) ? 2 : 1};
+    const orderedRank = ordered.get(id);
+    const tier = orderedRank !== undefined ? orderedRank : ordered.size + (top.has(id) ? 0 : bottom.has(id) ? 2 : 1);
+    return {item, index, tier};
   }).sort((a, b) => a.tier - b.tier || a.index - b.index).map(row => row.item);
 }
 function normalizedStore(raw, index) {
@@ -838,12 +1102,13 @@ function brandsModal() {
 function allCategoriesModal() {
   openModal(`<h2 id="modalTitle">전체 음식 카테고리</h2><div class="all-category-list">${categories.map(name => `<button type="button" data-modal-cat="${escapeHtml(name)}">${categoryIcon(name, 'category-modal-icon')}<b>${escapeHtml(name)}</b></button>`).join('')}</div>`);
 }
-function getSavedAddress() { return readLocalJson(ADDRESS_KEY, null); }
-function getAddressBook() { return readLocalJson(ADDRESS_BOOK_KEY, []); }
+function getSavedAddress() { return normalizeOutsideYeosuCurrent(readLocalJson(ADDRESS_KEY, null)); }
+function getAddressBook() { return readLocalJson(ADDRESS_BOOK_KEY, []).map(normalizeOutsideYeosuCurrent); }
 function saveAddressBook(list) { writeLocalJson(ADDRESS_BOOK_KEY, list.slice(0, 12)); }
 function shortAddress(text = '') { const value = String(text).trim() || '여수시 전체'; return value.length > 18 ? `${value.slice(0,18)}…` : value; }
 function saveLocationState(label, coords = null, sortByDistance = false, meta = {}) {
-  const saved = {label, area:meta.area || label, address:meta.address || label, detail:meta.detail || '', type:meta.type || 'recent', coords, sortByDistance, savedAt:new Date().toISOString()};
+  const region = analyticsCoarseRegion(meta);
+  const saved = {label, area:meta.area || label, address:meta.address || label, detail:meta.detail || '', type:meta.type || 'recent', coords, sortByDistance, ...region, savedAt:new Date().toISOString()};
   localStorage.setItem('savedLocation', JSON.stringify(saved)); localStorage.setItem('location', saved.area);
 }
 function addressAreas() { return ['여수시 전체', ...new Set(stores.map(store => store.area).filter(Boolean))].sort((a,b)=>a==='여수시 전체'?-1:a.localeCompare(b,'ko')); }
@@ -867,12 +1132,12 @@ function areaModal() {
   openModal(`<section class="address-single-sheet" data-address-single><header><h2 id="modalTitle">배달 주소 설정</h2><p>주소 검색·상세주소·최근주소·현재 위치·선택 완료를 이 화면에서 한 번에 처리합니다.</p></header><div class="address-search-row"><div class="searchbox"><input id="addressSearchInput" placeholder="예: 여서동, 웅천동, 쌍봉로 368" autocomplete="street-address"><button id="clearAddressSearch" class="input-clear" type="button" hidden>×</button></div><button id="addressSearchBtn" type="button">주소검색</button></div><div id="addressSearchResults" class="address-search-results"></div><button id="gpsLocationBtn" class="current-location-btn" type="button">⌖ <span>현재 위치 사용</span></button><div id="addressSelectedPreview" class="address-selected-preview"></div><label class="address-detail-label">상세주소<input id="addressDetailInput" value="${escapeHtml(addressDraft?.detail || '')}" placeholder="동·호수, 건물명, 상세 위치" autocomplete="address-line2"></label><section class="address-recent"><div class="address-section-title"><h3>최근 주소</h3><span>최대 12개 저장</span></div><div class="address-recent-list">${recent.length?recent.map((item,index)=>`<button type="button" data-address-recent="${index}"><span>${item.type==='current'?'⌖':'📍'}</span><b>${escapeHtml(item.label||item.address)}</b><small>${escapeHtml([item.address,item.detail].filter(Boolean).join(' '))}</small></button>`).join(''):'<p class="address-empty">아직 저장된 주소가 없습니다.</p>'}</div></section><button id="addressConfirmBtn" class="address-confirm-btn" type="button">이 주소로 선택 완료</button></section>`);
   $('#addressSearchInput').value = addressDraft?.address || ''; renderAddressResults(addressDraft?.address || ''); renderAddressDraft();
 }
-function chooseAddressBase(value, extra={}) { addressDraft={...(addressDraft||{}),address:String(value).trim(),area:extra.area||addressAreaFor(value),coords:extra.coords||null,sortByDistance:Boolean(extra.sortByDistance),type:extra.type||'recent'}; renderAddressDraft(); }
+function chooseAddressBase(value, extra={}) { addressDraft={...(addressDraft||{}),address:String(value).trim(),area:extra.area||addressAreaFor(value),coords:extra.coords||null,sortByDistance:Boolean(extra.sortByDistance),type:extra.type||'recent',region1:extra.region1||'',region2:extra.region2||'',region3:extra.region3||'',regionSource:extra.regionSource||''}; renderAddressDraft(); }
 function commitAddressSelection() {
   const base=String(addressDraft?.address || $('#addressSearchInput')?.value || '').trim(); if(!base){$('#addressSearchInput')?.focus();return;}
   const detail=String($('#addressDetailInput')?.value||'').trim(), full=[base,detail].filter(Boolean).join(' '), coords=addressDraft?.coords||null, sortByDistance=Boolean(addressDraft?.sortByDistance&&coords);
   const inferredArea=addressAreaFor(base), area=inferredArea!=='여수시 전체'?inferredArea:(addressDraft?.area||'여수시 전체');
-  const item={type:addressDraft?.type||'recent',address:base,detail,label:full,area,coords,sortByDistance,createdAt:new Date().toISOString()};
+  const item={type:addressDraft?.type||'recent',address:base,detail,label:full,area,coords,sortByDistance,...analyticsCoarseRegion(addressDraft),createdAt:new Date().toISOString()};
   writeLocalJson(ADDRESS_KEY,item); saveAddressBook([item,...getAddressBook().filter(old=>old.label!==item.label||old.type!==item.type)]);
   state.location=item.area||'여수시 전체'; state.addressLabel=item.label; state.coords=coords; state.sortByDistance=sortByDistance;
   saveLocationState(item.label,coords,sortByDistance,item); $('#locationText').textContent=shortAddress(item.label); hardClose(); setTimeout(showHomeAfterAddressCommit,60);
@@ -905,6 +1170,7 @@ function openCommunityChoice(store, key, options = {}) {
 }
 function openStore(store) {
   addRecentStore(store);
+  sendAnalyticsEvent('store_open', {storeId: store.id, storeName: store.name, surface: 'store_detail'});
   const selectedRoute = selectedExternalForStore(store);
   const quick = [];
   if (store.naverMap && store.naverMap !== '#') quick.push(`<a class="detail-quick-link" data-detail-only="naver" href="${escapeHtml(store.naverMap)}" target="_blank" rel="noopener"><span class="quick-icon">🗺️</span><span>네이버지도</span></a>`);
@@ -965,6 +1231,10 @@ function resetFilters() {
 
 document.addEventListener('error', event => { if (event.target instanceof HTMLImageElement) handleImageError(event.target); }, true);
 document.addEventListener('DOMContentLoaded', () => {
+  applyAnalyticsOwnerMode();
+  const entry = analyticsEntryContext();
+  sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: entry.storeId ? 'store_entry' : 'home'});
+  document.addEventListener('click', trackAnalyticsRouteClick, true);
   initialize();
   $('#mainSearch').addEventListener('input', () => $('#clearMainSearch').hidden = !$('#mainSearch').value);
   $('#mainSearch').addEventListener('keydown', event => { if (event.key === 'Enter') $('#searchBtn').click(); });
@@ -1080,7 +1350,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const requestedSharedStoreId = entryParams.get('store');
   const requestedHeroStoreId = entryParams.get('hero');
   const startupBypassHeroStoreIds = new Set(['67a9e4f14c8c7ea4','cfde2617224f33a0']);
-  if (!requestedSharedStoreId && !startupBypassHeroStoreIds.has(String(requestedHeroStoreId||'')) && localStorage.getItem('hideStartup') !== today) setTimeout(openStartupAd, 600);
+  const startupAdEnabled = false; // Opening-day decision: keep the recruitment startup popup disabled.
+  if (startupAdEnabled && !requestedSharedStoreId && !startupBypassHeroStoreIds.has(String(requestedHeroStoreId||'')) && localStorage.getItem('hideStartup') !== today) setTimeout(openStartupAd, 600);
   $('.startup-close').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); });
   startupAd.addEventListener('click', event => { if (event.target === startupAd) closeStartupAd(); });
   $('.startup-card').addEventListener('click', event => event.stopPropagation());

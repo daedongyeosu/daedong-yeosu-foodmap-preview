@@ -1,0 +1,1358 @@
+{
+  "version": 2,
+  "updatedAt": "2026-07-31",
+  "programs": [
+    {
+      "key": "yeosu-seomseom-pay",
+      "label": "여수섬섬페이"
+    },
+    {
+      "key": "high-oil-support",
+      "label": "고유가 피해지원금"
+    },
+    {
+      "key": "onnuri-gift-certificate",
+      "label": "온누리상품권"
+    }
+  ],
+  "stores": {
+    "0104c356b7c6428c": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "0173191ff3ddab64": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "03809451afc7b09b": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "0836fdf722805702": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "0abd7147b7d6b1dd": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "0bf8b6178a1596ca": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "0eea4a740e820fd3": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "0f82d1d73f86371d": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "11442d3b3328f951": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "115416d8f8939ff3": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "13c8e99cd1a7d7a1": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "19ae04f80e0e3ba6": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "1d0648282bdf1385": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "23f9cb364b06cd44": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "2857b7140087f6ab": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "2cddfb9ee60f0d7b": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "315dee55700b0a02": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "33c73743521674c6": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "361f855efc21c1c2": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "36d31c0f01bd0e9a": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "372fc26c2137b79f": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "3733c57e37212005": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "374ad657608d7b20": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "39f3c8acab504b00": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "3a6078da746f1953": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "3bfcc2140b2e0e0c": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "3d512878922a19db": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "3dddb9467dadd191": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "411052fdc9de5d44": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "450856a6b5fd4846": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "452526604d3b10c4": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "45dc9cf61ba55263": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "onnuri-gift-certificate",
+          "status": "accepted"
+        },
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "48033be58064b50c": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "49814996a90d2a3d": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "4ae622b733f163c7": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "4c6d5dcf82e3e56b": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "4cacbf0f8d535667": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "57ae8848b4ccc2a1": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "5b408dab11c7b1dd": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "6047251f50214125": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "6092aabddf5f7194": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "60ea2342c71bd2f6": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "6286966a0169a76b": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "6390834d3238c3eb": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "656eff52d5fce811": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "6721d86f9ff6f74b": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "6739ddf6736ef934": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "68360b2d1b0e6457": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "687febad1f2bf0dd": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "6d48c7e2bca79c18": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "6fd217d22e3ad371": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "75b59b6f39651fc8": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "7bc7239e6b509c44": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "가게 주문화면 확인",
+      "hours": {
+        "timezone": "Asia/Seoul",
+        "displayLines": [
+          "월–토 11:00–다음 날 01:00",
+          "일요일 15:00–다음 날 01:00",
+          "매월 둘째 수요일 휴무"
+        ],
+        "weekly": {
+          "mon": [
+            {
+              "open": "11:00",
+              "close": "01:00"
+            }
+          ],
+          "tue": [
+            {
+              "open": "11:00",
+              "close": "01:00"
+            }
+          ],
+          "wed": [
+            {
+              "open": "11:00",
+              "close": "01:00"
+            }
+          ],
+          "thu": [
+            {
+              "open": "11:00",
+              "close": "01:00"
+            }
+          ],
+          "fri": [
+            {
+              "open": "11:00",
+              "close": "01:00"
+            }
+          ],
+          "sat": [
+            {
+              "open": "11:00",
+              "close": "01:00"
+            }
+          ],
+          "sun": [
+            {
+              "open": "15:00",
+              "close": "01:00"
+            }
+          ]
+        },
+        "closures": [
+          {
+            "type": "monthly-weekday",
+            "nth": 2,
+            "weekday": "wed",
+            "label": "매월 둘째 수요일"
+          }
+        ]
+      },
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "7d9f7e5be4bb49db": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "7ec91a7f6e875069": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "815c0895b7dcfaa8": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "84fc553896d0b051": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "884076b36adf9697": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "884d23981fd2429a": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "8a219b158c321627": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "8c8ee85a0bc3b219": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "8cf43f95e569fe29": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "8d23a7a6daaa7c6d": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "onnuri-gift-certificate",
+          "status": "accepted"
+        },
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "8d36892e33e3536b": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "8f4cfdc693976989": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "9407e6bd4e71b539": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "9509311543276bbf": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "onnuri-gift-certificate",
+          "status": "accepted"
+        },
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "9846929c4427576a": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "9af017d533d36ab4": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "adf7b4ab161ec9d2": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "aef73537733e9387": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "afe9497576e46e1e": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "b016e6c2fc4217ea": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "b2b796461ee30ef2": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "b373a08350017273": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "b5e31af3d61fc8fe": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "b6c5400a34504bc0": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "b9ea332bb64a02e8": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "be72c2b63750ea05": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "bee72f182a400ed4": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "onnuri-gift-certificate",
+          "status": "accepted"
+        },
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "c26995210f249627": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "c30f3543d3d24747": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "c443f150b874d4d2": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "c56d65926bf2b224": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "c68d21da9b32f1eb": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "c97c66bc78a649ea": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "cfd74ce112f2b187": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "d0400d97c15c0a02": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "d0c01cd4ef9821c3": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ],
+      "delivery": [
+        {
+          "key": "free-delivery",
+          "status": "available",
+          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+        }
+      ]
+    },
+    "d14f1e6669383a88": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "onnuri-gift-certificate",
+          "status": "accepted"
+        },
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "d6602c793047b361": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "d86fa53d88c8d127": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "da81c19f4ce50220": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "dc42166bad88a929": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "onnuri-gift-certificate",
+          "status": "accepted"
+        },
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "e66f136d0e468b6e": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        },
+        {
+          "key": "high-oil-support",
+          "status": "accepted"
+        }
+      ]
+    },
+    "ec69425551829f69": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "onnuri-gift-certificate",
+          "status": "accepted"
+        },
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "f499191f0f57acc7": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "f65edfe1927ef379": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "f6d0e57091aa21ab": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "fa5bca3967c25462": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "fb798d3119a28415": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    },
+    "fe09f5cbf190ca3d": {
+      "verifiedAt": "2026-07-31",
+      "sourceLabel": "배달앱 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted"
+        }
+      ]
+    }
+  },
+  "deliveryBenefits": [
+    {
+      "key": "free-delivery",
+      "label": "무료배달 가능"
+    }
+  ]
+}

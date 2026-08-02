@@ -1,0 +1,78 @@
+'use strict';
+
+(() => {
+  const eventLayer = document.getElementById('mukkebiSummerEvent');
+  const closeButton = document.getElementById('mukkebiSummerClose');
+  const hideTodayButton = document.getElementById('mukkebiSummerHideToday');
+  const orderButton = document.getElementById('mukkebiSummerOrder');
+  const communityIntro = document.getElementById('communityIntro');
+  const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDate';
+  const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
+  let opened = false;
+
+  if (!eventLayer) return;
+
+  function localDateKey() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function hiddenToday() {
+    try { return localStorage.getItem(HIDE_DATE_KEY) === localDateKey(); }
+    catch { return false; }
+  }
+
+  function canOpen() {
+    if (opened || Date.now() >= EVENT_END || hiddenToday()) return false;
+    if (new URLSearchParams(location.search).has('store')) return false;
+    const modal = document.getElementById('modal');
+    const startupAd = document.getElementById('startupAd');
+    return (communityIntro?.hidden ?? true) && (modal?.hidden ?? true) && (startupAd?.hidden ?? true);
+  }
+
+  function openEvent() {
+    if (!canOpen()) return;
+    opened = true;
+    eventLayer.hidden = false;
+    eventLayer.setAttribute('aria-hidden', 'false');
+    closeButton?.focus({preventScroll:true});
+  }
+
+  function closeEvent() {
+    eventLayer.hidden = true;
+    eventLayer.setAttribute('aria-hidden', 'true');
+  }
+
+  function waitUntilExistingPopupCloses() {
+    if (canOpen()) window.setTimeout(openEvent, 220);
+  }
+
+  closeButton?.addEventListener('click', closeEvent);
+  hideTodayButton?.addEventListener('click', () => {
+    try { localStorage.setItem(HIDE_DATE_KEY, localDateKey()); }
+    catch {}
+    closeEvent();
+  });
+  orderButton?.addEventListener('click', () => {
+    closeEvent();
+    const mukkebiButton = document.querySelector('[data-order-key="mukkebi"]');
+    if (mukkebiButton instanceof HTMLElement) window.setTimeout(() => mukkebiButton.click(), 80);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !eventLayer.hidden) closeEvent();
+  });
+
+  const observer = new MutationObserver(waitUntilExistingPopupCloses);
+  for (const layer of [communityIntro, document.getElementById('modal'), document.getElementById('startupAd')]) {
+    if (layer) observer.observe(layer, {attributes:true, attributeFilter:['hidden']});
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => window.setTimeout(waitUntilExistingPopupCloses, 1100), {once:true});
+  } else {
+    window.setTimeout(waitUntilExistingPopupCloses, 1100);
+  }
+})();
