@@ -23,6 +23,6 @@ assert.doesNotMatch(runtime, /땡겨요 화면 재확인/);
 assert.doesNotMatch(runtime, /사진으로 받은 정보는 가게를 확인한 뒤 검토·승인하여 반영합니다/);
 assert.doesNotMatch(runtime, /표시된 주문앱 기준/);
 assert.match(runtime, /주문 전 해당 주문앱에서 다시 확인해 주세요/);
-assert.match(html, /store-service-12-customer-search-ux-1/);
+assert.match(html, /store-service-13-sensitive-counts-hidden-1/);
 
 console.log(`PASS: 고객용 혜택 검색 UX 및 내부 문구 비노출 (${onnuriStores.length}곳 온누리상품권 사용 가능)`);
