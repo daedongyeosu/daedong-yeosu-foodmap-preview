@@ -513,12 +513,14 @@
       const location = typeof state !== 'undefined' ? String(state.location || '') : '';
       const hasLocation = location && location !== '여수시 전체';
       const label = entry.querySelector('[data-store-finder-location-label]');
-      if (label) label.textContent = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
+      const nextLabel = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
+      if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
       const count = sourceStores().reduce((total, store) => (
         ['open', 'closing-soon'].includes(storeStatus(serviceData.stores?.[storeIdOf(store)]).state) ? total + 1 : total
       ), 0);
       const countNode = entry.querySelector('[data-store-finder-open-count]');
-      if (countNode) countNode.textContent = String(count);
+      const nextCount = String(count);
+      if (countNode && countNode.textContent !== nextCount) countNode.textContent = nextCount;
     }
   }
 

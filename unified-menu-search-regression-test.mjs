@@ -52,6 +52,8 @@ assert.match(serviceScript, /가게의 \$\{escapeHtml\(menuSpec\?\.label/);
 assert.match(serviceScript, /data-store-service-quick-status="open"/);
 assert.match(serviceScript, /data-store-service-quick-benefit/);
 assert.match(serviceScript, /data-store-service-quick-location="all"/);
+assert.match(serviceScript, /label && label\.textContent !== nextLabel/);
+assert.match(serviceScript, /countNode && countNode\.textContent !== nextCount/);
 assert.match(serviceScript, /메뉴·가게·혜택 한 번에 찾기/);
 assert.match(serviceScript, /지금 영업 중 \$\{entries\.length\}곳/);
 assert.doesNotMatch(serviceScript, /\$\{entries\.length\}개 가게/);
@@ -61,7 +63,7 @@ assert.match(menuScript, /window\.daedongMenuPreview = Object\.freeze/);
 assert.match(menuScript, /open: \(storeId, options = \{\}\) => openMenuPreview/);
 assert.match(serviceStyle, /\.store-finder-quick/);
 assert.match(serviceStyle, /\.store-service-menu-matches/);
-assert.match(html, /store-service-10-unified-menu-search-1/);
+assert.match(html, /store-service-11-unified-menu-search-2-freeze-fix-1/);
 assert.match(html, /store-menu-17-direct-coming-soon-1-unified-menu-search-1/);
 assert.match(html, /unified-menu-search-1/);
 
