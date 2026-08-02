@@ -1,0 +1,286 @@
+{
+  "storeId": "70d308ee26f63df0",
+  "storeName": "새우치킨덤 여천점",
+  "displayName": "새우치킨덤 여천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/062694d9-c090-4201-9375-b17eccf301ca.jpg",
+  "categories": [
+    "전체",
+    "두가지(반반)세트메뉴",
+    "오징어다리튀김 세트메뉴",
+    "닭똥집튀김 세트메뉴",
+    "국물 떡볶이 세트메뉴",
+    "100%닭다리살",
+    "튼실한 통새우",
+    "사이드메뉴",
+    "음료",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1206834-10000001",
+      "name": "두가지(반반)세트",
+      "description": "한마리(중) 두가지(반반)세트메뉴",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ab825b17-3dcf-41cd-b02b-14ded9ab3905.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000004",
+      "name": "국물떡볶이 세트",
+      "description": "국물 떡볶이는 환상적인 콜라보",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32292a60-2fef-4c35-b391-567ee2c6d124.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000005",
+      "name": "닭순살 후라이드",
+      "description": "마지막 한조각까지 바삭바삭한 식감이 일품~",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000001",
+      "name": "두가지(반반)세트",
+      "description": "한마리(중) 두가지(반반)세트메뉴",
+      "category": "두가지(반반)세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ab825b17-3dcf-41cd-b02b-14ded9ab3905.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000002",
+      "name": "오징어다리 튀김세트",
+      "description": "오징어의 맛을 그대로 바삭함과 고소함이 일품",
+      "category": "오징어다리튀김 세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000003",
+      "name": "닭똥집 튀김세트",
+      "description": "매콤하고 겉은바삭 속은 쫄깃한 닭똥집의 중독적인 맛",
+      "category": "닭똥집튀김 세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000004",
+      "name": "국물떡볶이 세트",
+      "description": "국물 떡볶이는 환상적인 콜라보",
+      "category": "국물 떡볶이 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32292a60-2fef-4c35-b391-567ee2c6d124.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000005",
+      "name": "닭순살 후라이드",
+      "description": "마지막 한조각까지 바삭바삭한 식감이 일품~",
+      "category": "100%닭다리살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000013",
+      "name": "통새우 후라이드",
+      "description": "바삭탱글 기가막힌 새우후라이드",
+      "category": "튼실한 통새우",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000021",
+      "name": "리얼오징어다리튀김",
+      "description": "오징어의 맛을 그대로 바삭함과 고소함이 일품",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0378dc46-554f-4264-94c2-e54b3f1418d8.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000033",
+      "name": "코카콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7a2b3560-8350-4881-872a-2a2874b5055e.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000006",
+      "name": "닭순살 양념",
+      "description": "오리지널 양념맛이 살아있는 대표적인 메뉴",
+      "category": "100%닭다리살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000014",
+      "name": "통새우 양념",
+      "description": "통새우와 감칠맛나는 양념의 묘한이끌림",
+      "category": "튼실한 통새우",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000022",
+      "name": "닭똥집튀김",
+      "description": "매콤하고 겉은바삭 속은 쫄깃한 닭똥집의 중독적인 맛",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4dc160e8-e402-483b-9b6b-c36e22bead89.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000034",
+      "name": "코카콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b50f3d36-de7e-4390-824a-be75a9561e79.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000007",
+      "name": "닭순살 프림양념",
+      "description": "양념위에 특제 프림소스를 뿌려 달콤하고 크리미한 맛이 일품",
+      "category": "100%닭다리살",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000015",
+      "name": "통새우 프림양념",
+      "description": "부드러운 프림소스와 달콤한양념 통새우",
+      "category": "튼실한 통새우",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000023",
+      "name": "국물떡볶이",
+      "description": "매콤달콤 오리지널 국물떡볶이",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/64251402-3073-49d0-b987-7e0cd51d0497.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000008",
+      "name": "닭순살 블랙페퍼",
+      "description": "달~콤 짭조름한 간장과 알~싸한 후추의 만남",
+      "category": "100%닭다리살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/dabecca8-2443-4e35-8bf2-4a0fe49cccfe.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000016",
+      "name": "통새우 블랙페퍼",
+      "description": "단짠단짠 하면서 알싸한 블랙페퍼",
+      "category": "튼실한 통새우",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000024",
+      "name": "새우쌀롤",
+      "description": "바삭바삭한 식감의 새우쌀롤",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ec2b462f-18fa-4c3c-820d-1720773f4c9f.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000009",
+      "name": "닭순살 퓨전깐풍",
+      "description": "매콤.달콤.새콤 완벽한 맛의 삼위일체 시그니처메뉴",
+      "category": "100%닭다리살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/38f87350-a24c-44c9-b0a7-8cd7cd48d413.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000017",
+      "name": "통새우 퓨전깐풍",
+      "description": "새우치킨덤 시그니처 메뉴 특제 퓨전깐풍",
+      "category": "튼실한 통새우",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000025",
+      "name": "새우볼",
+      "description": "씹을수록 탱글탱글한 새우볼",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b7f55615-bc2f-4c83-9b5a-8d069a28c114.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000010",
+      "name": "닭순살 고추마요",
+      "description": "한번 먹어보면 빠져나올 수 없는 마성의 매력을 가진 고추마요",
+      "category": "100%닭다리살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/9a82e128-ef99-4257-b52b-d21cf24c1fdb.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000018",
+      "name": "통새우 고추마요",
+      "description": "한번 맛보면 계속생각나는 고추마요",
+      "category": "튼실한 통새우",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000026",
+      "name": "멘보샤",
+      "description": "겉은 바삭 속은 탱글 식감최고 멘보샤",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/53747ccd-4413-4d65-9713-456d8b7c6efe.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000011",
+      "name": "닭순살 레드핫",
+      "description": "입안에서 은은하게 매콤해지는 매력적인 레드핫",
+      "category": "100%닭다리살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/056e1bb7-a0f6-40b5-bf06-1154b624245a.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000019",
+      "name": "통새우 레드핫",
+      "description": "깔끔하고 중독적인 매콤함 일품",
+      "category": "튼실한 통새우",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000027",
+      "name": "스틱감자",
+      "description": "고소하고 담백한맛의 감자튀김",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/e79cb39e-01eb-43b1-90c9-fe3f71dc232f.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000012",
+      "name": "닭순살 프림레드핫",
+      "description": "레드핫위에 특제 프림소스를 뿌려 매콤달콤 환상 벨런스",
+      "category": "100%닭다리살",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000020",
+      "name": "통새우 프림레드핫",
+      "description": "매콤한 핫소스에 프림소스로 부드럽게 매콤함",
+      "category": "튼실한 통새우",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000028",
+      "name": "맛감자",
+      "description": "사각사각 감자 알갱이가 씹히는 감자튀김",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f04613b2-3b96-4ffc-92ff-42c09eaa60a2.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000029",
+      "name": "치킨무",
+      "description": "새콤달콤 맛있는 치킨무",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/346f18d7-a13e-4100-856a-1583a5726362.jpg"
+    },
+    {
+      "id": "ddangyo-1206834-10000030",
+      "name": "미니양념소스",
+      "description": "오리지널 양념소스",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000031",
+      "name": "미니매콤소스",
+      "description": "맛있게 매운 매콤소스",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1206834-10000032",
+      "name": "미니프림소스",
+      "description": "부드럽고 새콤한 프림소스",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1206834",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?DoRPe5P"
+    ]
+  }
+}

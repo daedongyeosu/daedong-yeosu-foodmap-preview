@@ -1,0 +1,325 @@
+{
+  "storeId": "420af240943ff849",
+  "storeName": "큰손닭강정 여수본점",
+  "displayName": "큰손닭강정 여수본점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9feb9739-28f6-45cb-a7f0-4eded9ad4363.jpg",
+  "categories": [
+    "전체",
+    "[11가지] 맛 100% 닭다리살 큰손닭강정",
+    "마라 중독 큰손강정",
+    "[ 큰손 ] 시그니처 대표메뉴",
+    "[ 진짜자신있습니다 ] 왕새우 한번드셔보~새우",
+    "[할인] 온가족 배터지는 닭강정 두 마리 세트",
+    "[ 큰손 ] 갓성비 사이드 메뉴",
+    "[ 치킨 무 / 소스 ]",
+    "[ 음료수 ]",
+    "주류메뉴",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1317034-10000004",
+      "name": "[3~4인 반반세트] 11가지 맛 선택 닭다리살 닭강정",
+      "description": "치킨무 와 음료(500ml) 그리고, 특大 사이즈 닭강정 (반반 두 박스)이 포함된 3인 세트 (생 닭다리살 800G) 치킨무 와 음료 그리고, 특大 사이즈 닭강정, 식사가 가능한 배 터지는 3인 세트 입니다",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cab09b99-39b2-4732-9df4-b80b035f3bcf.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000001",
+      "name": "[1인 세트]바삭한 순살치킨 11가지맛 닭강정",
+      "description": "치킨무 포함 + 닭강정 + 쌀떡이 포함된 1~2인 세트 입니다.",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6bc6d01a-3f09-4b78-84b8-d3783e3eb3ad.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000011",
+      "name": "[특 大 두 마리 세트] 양 많은 순살닭강정",
+      "description": "치킨무2개 + 음료(1.25L) + 특大 닭강정 두 마리 (생 닭다리살 800G) X 2 + 쌀떡(기본26p) + 사이드 6종 중 택1 오늘의치킨 닭강정 풀세트 입니다. 생닭다리살만 1600G이 들어가는 배 터지는 두 마리 세트 입니다 두가지맛 선택 가능합니다",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/38ce74e9-cd85-400d-9203-ffa5cb477958.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000001",
+      "name": "[1인 세트]바삭한 순살치킨 11가지맛 닭강정",
+      "description": "치킨무 포함 + 닭강정 + 쌀떡이 포함된 1~2인 세트 입니다.",
+      "category": "[11가지] 맛 100% 닭다리살 큰손닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6bc6d01a-3f09-4b78-84b8-d3783e3eb3ad.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000043",
+      "name": "[제로] 펩시 500ml",
+      "description": "",
+      "category": "[ 음료수 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/aafc7e47-b56f-48f1-962c-e0bfabe176d9.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000046",
+      "name": "[마라중독] 마라닭강정",
+      "description": "치킨무 + 닭강정 + 쌀떡",
+      "category": "마라 중독 큰손강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8dee1228-1773-4f58-9fa3-33ab58d5f1e8.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1317034-10000010",
+      "name": "[大 두 마리 세트] 특제소스 수제명품닭강정 큰손닭강정",
+      "description": "치킨무2개 + 음료(1.25L) + 大 닭강정 두 마리 (생 닭다리살 600G) X 2 + 쌀떡(기본20p) + 사이드 6종 중 택1 오늘의치킨 닭강정 풀세트 입니다. 생닭다리살만 1200G이 들어가는 배 터지는 두 마리 세트 입니다 두 가지맛 선택 가능합니다",
+      "category": "[할인] 온가족 배터지는 닭강정 두 마리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/9605396b-8158-4cb7-a027-d285f6eb42c9.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000012",
+      "name": "[핫 치즈] 빅순살 1인세트(중)",
+      "description": "핫치즈 큰손순살(중) + 쌀떡(7) + 치킨무로 구성된 1인세트입니다",
+      "category": "[ 큰손 ] 시그니처 대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/dbb16d20-8c49-4595-a50e-22750fba3999.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000016",
+      "name": "[혜자스러운] 잡채만두 튀김",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cab4d7a8-827c-4fbe-819b-9625a5ba2ec4.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000029",
+      "name": "치킨 무 추가선택",
+      "description": "",
+      "category": "[ 치킨 무 / 소스 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/741d2095-aa01-4042-aded-61d2a149fc99.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000037",
+      "name": "[제로] 펩시",
+      "description": "",
+      "category": "[ 음료수 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e80fc6b8-0b35-4db4-869a-92859b8584eb.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-90000006",
+      "name": "카스(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1317034-10000047",
+      "name": "[마라중독] 마라닭강정",
+      "description": "치킨무 + 닭강정 + 쌀떡 + 음료가 포함된 3~4인 세트 입니다",
+      "category": "마라 중독 큰손강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/33bed12f-c0e6-4cc4-9b63-45e24b7a0553.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000002",
+      "name": "[2~3인 세트] 11가지 맛 선택 닭다리살 닭강정",
+      "description": "치킨무 + 닭강정 + 쌀떡이 포함된 2~3인 세트 입니다",
+      "category": "[11가지] 맛 100% 닭다리살 큰손닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/7987c822-b62c-458d-a959-549794a925aa.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000011",
+      "name": "[특 大 두 마리 세트] 양 많은 순살닭강정",
+      "description": "치킨무2개 + 음료(1.25L) + 특大 닭강정 두 마리 (생 닭다리살 800G) X 2 + 쌀떡(기본26p) + 사이드 6종 중 택1 오늘의치킨 닭강정 풀세트 입니다. 생닭다리살만 1600G이 들어가는 배 터지는 두 마리 세트 입니다 두가지맛 선택 가능합니다",
+      "category": "[할인] 온가족 배터지는 닭강정 두 마리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/38ce74e9-cd85-400d-9203-ffa5cb477958.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000013",
+      "name": "[핫 치즈] 빅순살 2~3인세트(대)",
+      "description": "핫치즈 큰손순살(대) + 쌀떡(10) + 치킨무로 구성된 2~3인세트입니다.",
+      "category": "[ 큰손 ] 시그니처 대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cb8b2c20-0d76-411a-9aa2-acd7a62be2d8.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000017",
+      "name": "[떡볶이] 쌀떡 추가",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f9b5a972-02a3-4771-aad5-908512362c45.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000030",
+      "name": "순한맛(빨간양념) 추가선택",
+      "description": "",
+      "category": "[ 치킨 무 / 소스 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cdccbb33-2c35-4aea-a345-57889f0763c9.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000041",
+      "name": "펩시 500ml",
+      "description": "",
+      "category": "[ 음료수 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/75cfbec8-16c1-43c1-985b-87ee8a4af9e7.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-90000002",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1317034-10000003",
+      "name": "[3~4인 단품세트] 11가지 맛 선택 닭다리살 닭강정",
+      "description": "치킨무 와 음료(500ml) 그리고, 특大 사이즈 닭강정이 포함된 3인 세트(생 닭다리살 800G) 치킨무 와 음료 그리고, 특大 사이즈 닭강정, 식사가 가능한 배 터지는 3인 세트 입니다.",
+      "category": "[11가지] 맛 100% 닭다리살 큰손닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/dd399413-cc2e-4141-b1c8-710641cb37cb.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000014",
+      "name": "[핫 치즈] 빅순살 3~4인세트(특대)",
+      "description": "핫치즈 큰손순살(특대) + 쌀떡(13) + 치킨무 + 음료 500ml로 구성된 3~4인세트입니다",
+      "category": "[ 큰손 ] 시그니처 대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4adc0662-fb26-4cc0-9143-ccb2d8f57b97.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000018",
+      "name": "[감자튀김] 웨지감자",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cbf982b3-4a7c-4e5d-9dff-cc8e764bc846.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000031",
+      "name": "매운맛(빨간양념) 추가선택",
+      "description": "",
+      "category": "[ 치킨 무 / 소스 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/828c3022-7438-42eb-a3cd-8b3e67670b33.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000038",
+      "name": "펩시",
+      "description": "",
+      "category": "[ 음료수 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9b09ad1b-622d-4873-bb13-53ad0296364d.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000004",
+      "name": "[3~4인 반반세트] 11가지 맛 선택 닭다리살 닭강정",
+      "description": "치킨무 와 음료(500ml) 그리고, 특大 사이즈 닭강정 (반반 두 박스)이 포함된 3인 세트 (생 닭다리살 800G) 치킨무 와 음료 그리고, 특大 사이즈 닭강정, 식사가 가능한 배 터지는 3인 세트 입니다",
+      "category": "[11가지] 맛 100% 닭다리살 큰손닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cab09b99-39b2-4732-9df4-b80b035f3bcf.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000015",
+      "name": "[핫 치즈] 반반 빅순살 3~4인세트",
+      "description": "핫치즈 큰손순살 3~4인세트(특대) 핫치즈 큰손순살(중) + 닭강정(중) + 쌀떡(13) + 치킨무 + 음료 500ml로 구성된 3~4인 반반세트 입니다.",
+      "category": "[ 큰손 ] 시그니처 대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2a5c1e5a-dd52-4391-81c4-b01e3882c89c.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000019",
+      "name": "[치즈가득] 완전쫀듯 찹쌀치즈볼(3가지 시즈닝맛 선택)",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f5df6e37-7726-4995-8fe4-33b885511bce.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000032",
+      "name": "최강 매운맛(많이 매워요) 추가선택",
+      "description": "",
+      "category": "[ 치킨 무 / 소스 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b5afac1b-bef3-43fa-bf70-536d2fefa64a.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000042",
+      "name": "칠성사이다 500ml",
+      "description": "",
+      "category": "[ 음료수 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d4a38c29-745f-42dc-a0b3-33782feaa807.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000040",
+      "name": "[1인 세트] 11가지 맛 선택 닭다리살 닭강정",
+      "description": "치킨무 미포함+닭강정+쌀떡이 포함된 1인 세트 입니다",
+      "category": "[11가지] 맛 100% 닭다리살 큰손닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ba54c186-4ded-4b4b-b097-f9ef3126e580.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000020",
+      "name": "[패스트푸드] 치즈스틱",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ad5d5da1-5599-45f0-a647-1404ad1854ba.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000033",
+      "name": "뿌리링시즈닝 추가선택",
+      "description": "",
+      "category": "[ 치킨 무 / 소스 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2139a788-011f-4f58-bf34-dbfc5930cc9c.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000039",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "[ 음료수 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/67f6a920-476e-4bd5-a785-5b7dc0986bda.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000021",
+      "name": "[치즈폭탄] 고구마치즈스틱",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f2c24498-197e-483d-ba5e-17cbfd7ca99d.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000034",
+      "name": "치즈시즈닝 추가선택",
+      "description": "",
+      "category": "[ 치킨 무 / 소스 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/a3699628-425b-421d-a2f0-6932fd74406b.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000022",
+      "name": "[야심찬 신메뉴] 치폴레 뿌린 감자 250g",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1b7f5555-01c5-41d3-9b62-4277b78b9716.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000035",
+      "name": "허니 버터 맛 추가선택",
+      "description": "",
+      "category": "[ 치킨 무 / 소스 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/dfba0a7d-0a39-4196-a210-969eada3f522.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000036",
+      "name": "소금 추가",
+      "description": "",
+      "category": "[ 치킨 무 / 소스 ]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a0ed9eef-3323-44e3-be43-7c49330df985.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000027",
+      "name": "[휴게소 명품] 소떡소떡 (6가지 맛 선택)",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5bac2f6c-34e5-480d-b071-e42dd30a4556.jpg"
+    },
+    {
+      "id": "ddangyo-1317034-10000044",
+      "name": "[쫀득치즈폭탄] 칠리스 치즈스틱 2p",
+      "description": "",
+      "category": "[ 큰손 ] 갓성비 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/96e83e47-89b7-4768-a357-c79f9f8e4227.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1317034",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?agaDVy9"
+    ]
+  }
+}

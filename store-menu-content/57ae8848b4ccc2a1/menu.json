@@ -1,0 +1,519 @@
+{
+  "storeId": "57ae8848b4ccc2a1",
+  "storeName": "본스치킨 여수미평점",
+  "displayName": "본스치킨 여수미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/81e4a294-0088-4f0b-9a63-03a60462132f.jpg",
+  "categories": [
+    "전체",
+    "치킨메뉴",
+    "계절메뉴",
+    "불고기 피자(미국산,외국산)",
+    "사이드",
+    "안주스페셜",
+    "튀김메뉴",
+    "마른안주",
+    "식사메뉴",
+    "볶음메뉴",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216976-10000001",
+      "name": "[본스] 오리지널 한마리",
+      "description": "자체 개발한 시즈닝으로 24시간 숙성시킨 닭 한마리를 오븐에서 구워 담백한 본스대표치킨 (소스 2개 제공)",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/81e4a294-0088-4f0b-9a63-03a60462132f.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000010",
+      "name": "[본스] 순살",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/527b4664-410c-4602-b442-71f414623b1e.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000004",
+      "name": "[본스] 오븐 통다리",
+      "description": "닭다리의 쫄깃하고 부드러운 속살이 지방단백질의 조화를 이뤄 모두의 영양간식으로 일품",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b7d49b38-4e8f-44c1-8f4b-3b2b628a6b14.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000011",
+      "name": "[본스] 순살 바베큐양념",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e97c9b62-5848-4e74-b041-f47494e7c87c.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000002",
+      "name": "[본스] 바베큐 양념치킨",
+      "description": "오븐에 굽고 참숯향이 가득한 바베큐소스에 졸인 숯불바베큐는 최고의 안주입니다.",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1927adfe-d233-4dea-83e3-ad3220da8491.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000001",
+      "name": "[본스] 오리지널 한마리",
+      "description": "자체 개발한 시즈닝으로 24시간 숙성시킨 닭 한마리를 오븐에서 구워 담백한 본스대표치킨 (소스 2개 제공)",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/81e4a294-0088-4f0b-9a63-03a60462132f.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000016",
+      "name": "석화 굴찜 (국산)",
+      "description": "면장갑, 초장제공 칼은 미포함",
+      "category": "계절메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000017",
+      "name": "고구마피자(미국산,외국산)",
+      "description": "",
+      "category": "불고기 피자(미국산,외국산)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/39d4b200-a9e0-4d23-abd9-e78e0824ad1f.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000020",
+      "name": "치킨무 (추가)",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000030",
+      "name": "모듬소세지",
+      "description": "",
+      "category": "안주스페셜",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/aaa38f64-37a2-4fa2-8c37-51cbfea6f394.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000039",
+      "name": "일반 새우튀김 5개(베트남산)",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000043",
+      "name": "마른 오징어",
+      "description": "마른오징어 한마리",
+      "category": "마른안주",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000051",
+      "name": "햇반",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000060",
+      "name": "번데기 볶음",
+      "description": "",
+      "category": "볶음메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000002",
+      "name": "[본스] 바베큐 양념치킨",
+      "description": "오븐에 굽고 참숯향이 가득한 바베큐소스에 졸인 숯불바베큐는 최고의 안주입니다.",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1927adfe-d233-4dea-83e3-ad3220da8491.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000018",
+      "name": "미니족발 (아주매운맛)",
+      "description": "",
+      "category": "불고기 피자(미국산,외국산)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000021",
+      "name": "중간 매운맛 소스",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000031",
+      "name": "돼지껍데기",
+      "description": "",
+      "category": "안주스페셜",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000040",
+      "name": "대왕 새우튀김 5개(베트남 산)",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000044",
+      "name": "반건 오징어",
+      "description": "반건오징어 한마리",
+      "category": "마른안주",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000052",
+      "name": "우동",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000061",
+      "name": "닭똥집 볶음(국산)",
+      "description": "매콤한 닭똥집 볶음입니다(추천)",
+      "category": "볶음메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000003",
+      "name": "[본스] 오리지널 반+양념 반",
+      "description": "오리지널 반마리와 양념반마리를 동시에 즐길수 있습니다 (소스 1개 제공) 양념 맛 선택가능 : 달콤양념, 중간매운맛, 아주매운맛, 흑초간장맛, 갈릭맛(택 1) 소스 맛 선택가능 : 달콤양념, 중간매운맛, 아주매운맛, 갈릭캐롯맛(추천), 허니머스타드 (택 1)",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/64e4ff27-e6a0-4001-80d7-ccf32b3a84af.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000019",
+      "name": "불고기피자(미국산,외국산,)",
+      "description": "",
+      "category": "불고기 피자(미국산,외국산)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/7639a0bb-bd5a-471b-9411-bfd34ddc5624.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000022",
+      "name": "아주 매운맛 소스",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000032",
+      "name": "무뼈 닭발",
+      "description": "",
+      "category": "안주스페셜",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000041",
+      "name": "모듬감자튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/40960783-10b7-45b1-aabf-92f4f13c2c94.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000045",
+      "name": "노가리(러시아산) 4마리",
+      "description": "",
+      "category": "마른안주",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000053",
+      "name": "김치우동",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000062",
+      "name": "낚지볶음(국산)",
+      "description": "",
+      "category": "볶음메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000004",
+      "name": "[본스] 오븐 통다리",
+      "description": "닭다리의 쫄깃하고 부드러운 속살이 지방단백질의 조화를 이뤄 모두의 영양간식으로 일품",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b7d49b38-4e8f-44c1-8f4b-3b2b628a6b14.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000023",
+      "name": "갈릿캐롯소스",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000033",
+      "name": "뼈있는 닭발",
+      "description": "",
+      "category": "안주스페셜",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/8272652e-49bd-46c4-a18a-7d87e0509de8.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000042",
+      "name": "황금치즈볼 5개(찹쌀분말국산,외국산)",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/048244a3-1e4d-4bb7-893a-68c818215594.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000046",
+      "name": "나막스(국산)",
+      "description": "",
+      "category": "마른안주",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000054",
+      "name": "새우볶음밥",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000063",
+      "name": "은행볶음(국산)",
+      "description": "",
+      "category": "볶음메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000005",
+      "name": "[본스] 통다리 양념",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/877f6d4b-1b1f-486a-98dc-3297e7a9a0c0.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000024",
+      "name": "허니머스타드 소스",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000034",
+      "name": "골뱅이소면무침",
+      "description": "",
+      "category": "안주스페셜",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a8a7b642-c313-44ff-9b8b-695c64b169ca.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000047",
+      "name": "북어포(중국산)",
+      "description": "",
+      "category": "마른안주",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000055",
+      "name": "계란탕",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000064",
+      "name": "염통 꼬치(7개)",
+      "description": "",
+      "category": "볶음메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000006",
+      "name": "[본스] 통다리 오리지널 반+양념 반",
+      "description": "오리지널 통다리 반마리와 양념 통다리 반마리를 같이 즐길수 있는 메뉴입니다 (소스 1개 기본 제공, 양념 맛 선택 가능)",
+      "category": "치킨메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000025",
+      "name": "콜라1.25L 사이즈업",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000035",
+      "name": "두부 김치",
+      "description": "",
+      "category": "안주스페셜",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000048",
+      "name": "한치(베트남 산)",
+      "description": "",
+      "category": "마른안주",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000056",
+      "name": "오뎅탕",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000065",
+      "name": "닭껍질 꼬치(5개)",
+      "description": "",
+      "category": "볶음메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000007",
+      "name": "[본스] 오븐 통날개",
+      "description": "콜라겐이 풍부한 날개와 쫄깃하고 부드러운 닭다리를 오븐에서 바싹하게 구워 담백한 메뉴입니다.",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f96865c1-3e80-43cf-b431-365b04e590f9.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000026",
+      "name": "사이다 1.25L 사이즈업",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000036",
+      "name": "김치찌개",
+      "description": "",
+      "category": "안주스페셜",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000049",
+      "name": "알포(국산)",
+      "description": "",
+      "category": "마른안주",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000057",
+      "name": "육계장",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000008",
+      "name": "[본스] 통날개 양념",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/78eaf2e5-be40-4c11-9a86-8863ba7c3f64.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000027",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/bfba52f0-240a-44c2-aec7-4c4091b00955.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000037",
+      "name": "제육볶음",
+      "description": "",
+      "category": "안주스페셜",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000050",
+      "name": "육포(미국산)",
+      "description": "",
+      "category": "마른안주",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000058",
+      "name": "부대찌개",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000009",
+      "name": "[본스] 통날개반+양념날개반",
+      "description": "오리지널 통날개 반마리와 양념 통날개 반마리를 같이 즐길 수 있는 메뉴입니다 (소스 1개 기본 제공, 양념맛 선택가능)",
+      "category": "치킨메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000028",
+      "name": "본스새우볼",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ec670a66-36c8-4a68-83bb-5e2808765510.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000038",
+      "name": "황도",
+      "description": "",
+      "category": "안주스페셜",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000059",
+      "name": "해물누룽지탕",
+      "description": "",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000010",
+      "name": "[본스] 순살",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/527b4664-410c-4602-b442-71f414623b1e.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000029",
+      "name": "야채 세러드",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000011",
+      "name": "[본스] 순살 바베큐양념",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e97c9b62-5848-4e74-b041-f47494e7c87c.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000012",
+      "name": "[본스] 다리반+날개반",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000013",
+      "name": "[본스] 다리반+양념날개반",
+      "description": "다리반마리와 양념날개반마리로 구성된 메뉴입니다 (양념메뉴 선택가능, 소스 1개 제공)",
+      "category": "치킨메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216976-10000014",
+      "name": "[본스] 크런치",
+      "description": "바삭하게 구운 본스치킨에 바닐라향을 입힌 새로운 크런치 치킨",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/60556eff-fb7e-49af-84cc-a089b6a79b97.jpg"
+    },
+    {
+      "id": "ddangyo-1216976-10000015",
+      "name": "[본스] 파닭",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216976",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?s3saAXs",
+      "https://fdofd.ddangyo.com/gateway1.html?1grBeHv"
+    ]
+  }
+}

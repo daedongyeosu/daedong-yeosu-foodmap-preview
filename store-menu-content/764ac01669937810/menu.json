@@ -1,0 +1,170 @@
+{
+  "storeId": "764ac01669937810",
+  "storeName": "골목포차&치킨",
+  "displayName": "골목포차&치킨",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/25d7cd39-b09a-47a8-a262-fa387e8509a3.jpg",
+  "categories": [
+    "전체",
+    "메뉴",
+    "사이드",
+    "음료",
+    "주류메뉴",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1323595-10000001",
+      "name": "골목제육볶음+달걀찜",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dea7480a-6600-4a69-b7e7-e07eecddac41.jpg"
+    },
+    {
+      "id": "ddangyo-1323595-10000002",
+      "name": "닭매운탕(수제비)",
+      "description": "콩나물+무",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b1f1216c-3628-48cb-9b75-6a9497c7e4fb.jpg"
+    },
+    {
+      "id": "ddangyo-1323595-10000001",
+      "name": "골목제육볶음+달걀찜",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dea7480a-6600-4a69-b7e7-e07eecddac41.jpg"
+    },
+    {
+      "id": "ddangyo-1323595-10000006",
+      "name": "달걀찜",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e77c8c2d-838a-44cb-8748-4e396a3f8568.jpg"
+    },
+    {
+      "id": "ddangyo-1323595-10000008",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323595-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323595-10000002",
+      "name": "닭매운탕(수제비)",
+      "description": "콩나물+무",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b1f1216c-3628-48cb-9b75-6a9497c7e4fb.jpg"
+    },
+    {
+      "id": "ddangyo-1323595-10000007",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/1f71c3ee-b08b-4c0b-ad7d-61844c8cf1ae.jpg"
+    },
+    {
+      "id": "ddangyo-1323595-10000009",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323595-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323595-10000003",
+      "name": "닭한마리(칼국수)",
+      "description": "감자+애호박+떡",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1860410d-c256-4a05-a93d-4b960d178a47.jpg"
+    },
+    {
+      "id": "ddangyo-1323595-10000010",
+      "name": "탐스제로",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323595-90000003",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323595-10000004",
+      "name": "뼈없는양념 돼지꼬리볶음",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b2c60ba8-950f-4e30-9153-c247bd136014.jpg"
+    },
+    {
+      "id": "ddangyo-1323595-10000011",
+      "name": "펩시제로",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323595-90000004",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323595-10000005",
+      "name": "골목치킨",
+      "description": "양념+치킨무+콜라355ml",
+      "category": "메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323595-90000005",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323595-90000006",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323595-90000007",
+      "name": "켈리 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1323595",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?24Ffc62"
+    ]
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "storeId": "ee32d1ee50f7afba",
+  "storeName": "박스터지는 두마리치킨 (샵인점)",
+  "displayName": "박스터지는 두마리치킨 (샵인점)",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/84eef41a-12ec-480b-a843-d37645113bcd.jpg",
+  "categories": [
+    "전체",
+    "대표메뉴소개",
+    "[순살만]두마리 반+반+반 치킨",
+    "한마리 반+반 치킨",
+    "사이드메뉴",
+    "소스류 추가",
+    "음료",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1304058-10000001",
+      "name": "박스터지는 두마리 순살치킨",
+      "description": "두마리치킨+감자튀김+치킨무+케찹+머스카드+음료355ml",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/34da1ad9-d5cc-4798-88bd-5fbd14c90d78.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000002",
+      "name": "[ 박스가 다 터져~ ] '박스터지는 한마리 순살치킨'",
+      "description": "치킨한마리+감자튀김+치킨무+케찹+머스타드+음료",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000003",
+      "name": "[feat.남포동떡볶이]'치떡세트(치킨+떡볶이)'",
+      "description": "한마리치킨+부산떡볶이+감자튀김+치킨무+케찹+머스타드+음료",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32292a60-2fef-4c35-b391-567ee2c6d124.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000001",
+      "name": "박스터지는 두마리 순살치킨",
+      "description": "두마리치킨+감자튀김+치킨무+케찹+머스카드+음료355ml",
+      "category": "대표메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/34da1ad9-d5cc-4798-88bd-5fbd14c90d78.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000007",
+      "name": "[순살만폭격]'2마리 3가지맛 순살치킨'",
+      "description": "순살치킨두마리+3가지맛+감자튀김+치킨무+소금+케찹+머스타드++음료",
+      "category": "[순살만]두마리 반+반+반 치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000008",
+      "name": "[한마리 두가지맛] 한마리 순살 반반",
+      "description": "한마리순살치킨+감자튀김+치킨무+소스류+음료 뚱캔",
+      "category": "한마리 반+반 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/edc4730e-1da6-4f91-a699-da101540e0a8.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000010",
+      "name": "닭껍질 후라이드'",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3bf7a4e6-dcd3-4ff9-9b2a-c984438833d7.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000027",
+      "name": "치킨무 추가",
+      "description": "",
+      "category": "소스류 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000034",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000002",
+      "name": "[ 박스가 다 터져~ ] '박스터지는 한마리 순살치킨'",
+      "description": "치킨한마리+감자튀김+치킨무+케찹+머스타드+음료",
+      "category": "대표메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000009",
+      "name": "[JMT파닭] 파닭파닭 한마리 순살반반",
+      "description": "한마리치킨+감자튀김+소스류+파채+파채소스+음료 뚱캔",
+      "category": "한마리 반+반 치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000011",
+      "name": "부산 남포동 떡볶이'",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b3718d69-aadd-4fa0-b5c0-d7152c4aa80f.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000028",
+      "name": "허니머스타드 추가",
+      "description": "",
+      "category": "소스류 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000035",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000003",
+      "name": "[feat.남포동떡볶이]'치떡세트(치킨+떡볶이)'",
+      "description": "한마리치킨+부산떡볶이+감자튀김+치킨무+케찹+머스타드+음료",
+      "category": "대표메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32292a60-2fef-4c35-b391-567ee2c6d124.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000012",
+      "name": "모듬튀김 4p '",
+      "description": "모듬튀김 + 간장",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000029",
+      "name": "마요네즈 추가",
+      "description": "",
+      "category": "소스류 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000036",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000004",
+      "name": "[파닭파닭파닭]'특제소스 파닭 두마리 순살치킨",
+      "description": "두마리치킨+감자튀김+파채+치킨무+케찹+머스타드+음료",
+      "category": "대표메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1645adb8-7d87-42ef-ab7c-f179dddf6294.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000013",
+      "name": "간장계란밥(계란두개)'",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000030",
+      "name": "케첩 추가",
+      "description": "",
+      "category": "소스류 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000037",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000005",
+      "name": "[파닭도터져] '파닭파닭 한마리 순살치킨'",
+      "description": "치킨한마리+감자튀김+파채+치킨무+케찹+머스타드+음료",
+      "category": "대표메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b9cb7750-b5df-4dfb-9e69-eae7801bf462.jpg"
+    },
+    {
+      "id": "ddangyo-1304058-10000014",
+      "name": "바사삭 새우튀김 2p '",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000031",
+      "name": "소금 추가",
+      "description": "",
+      "category": "소스류 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000038",
+      "name": "펩시콜라 ZERO",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000006",
+      "name": "[겉바속촉]'똥집후라이드300g+감자튀김 100g'",
+      "description": "똥집후라이드+감자튀김+치킨무+케찹+머스타드+소스류",
+      "category": "대표메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000015",
+      "name": "핫핫 고추튀김 2p '",
+      "description": "이거슨 별미",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000032",
+      "name": "양념치킨소스 추가",
+      "description": "",
+      "category": "소스류 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000039",
+      "name": "칠성사이다 ZERO",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000016",
+      "name": "꿔바로우 오징어튀김 2p '",
+      "description": "오징어튀김계의 신상 다크호스",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000033",
+      "name": "별미 파채추가'",
+      "description": "",
+      "category": "소스류 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000040",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000017",
+      "name": "달달한 고구마튀김 2p '",
+      "description": "아이들이 참 좋아하는 고구마튀김이예요~~",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000018",
+      "name": "고소한 김말이튀김 3p '",
+      "description": "김말이 알쥬 그거 맞아유 두개는 아쉬우니 세개",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000019",
+      "name": "쭉~쭉~치즈볼 '",
+      "description": "쫀~~득한 치즈볼이 다섯개",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000020",
+      "name": "날치알 많은 날치알주먹밥'",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000021",
+      "name": "참치듬뿍 참치주먹밥'",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000022",
+      "name": "쉐쉐 양념감자'",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000023",
+      "name": "쭉쭉 치즈스틱'",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000024",
+      "name": "튀김만두(고기5p)",
+      "description": "간장 + 양배추샐러드",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000025",
+      "name": "튀김만두(김치불닭5p)",
+      "description": "간장 + 양배추샐러드",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1304058-10000026",
+      "name": "튀김만두(불닭김치3p+고기3p)",
+      "description": "간장 + 양배추샐러드",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1304058",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?BQEZsix"
+    ]
+  }
+}

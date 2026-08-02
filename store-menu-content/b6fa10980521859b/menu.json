@@ -1,0 +1,395 @@
+{
+  "storeId": "b6fa10980521859b",
+  "storeName": "치킨아이 학동점",
+  "displayName": "치킨아이 학동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "반반메뉴",
+    "순살 반반메뉴",
+    "반반반메뉴",
+    "다리/날개치킨",
+    "사이드메뉴",
+    "음료",
+    "주류메뉴",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1249658-10000001",
+      "name": "매실 후라이드치킨",
+      "description": "치킨 + 양배추 샐러드 + 무 + 음료 (500ml)",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000002",
+      "name": "매실 양념치킨",
+      "description": "매실닭만을 사용하여 육질이 부드럽고 쫄깃하며, 화학조미료를 일절 사용치 않고 칼슘과 단백질이 첨가된 건강치킨입니다.",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d6dd1cd2-55da-4e38-af2b-b73e14fde376.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000010",
+      "name": "순살 파닭",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e531a56e-409e-4c85-b281-8ab13971a6ed.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000001",
+      "name": "매실 후라이드치킨",
+      "description": "치킨 + 양배추 샐러드 + 무 + 음료 (500ml)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000012",
+      "name": "후라이드+양념",
+      "description": "",
+      "category": "반반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000018",
+      "name": "순살후라이드+양념",
+      "description": "",
+      "category": "순살 반반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/dd6b0a7f-d613-41bf-baf5-c4eb730c1719.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000024",
+      "name": "후라이드+양념+간장",
+      "description": "",
+      "category": "반반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000026",
+      "name": "매실 다리, 날개치킨 후라이드",
+      "description": "매실 날개, 다리치킨은 매실닭의 날개,다리만을 모아 다이어트및 부위별치킨을 원하시는 분께 좋습니다.",
+      "category": "다리/날개치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/10965111-b851-4ef1-a99e-7e28911a6bd8.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000036",
+      "name": "양배추 샐러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000043",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dec1b580-76be-49bd-ad46-12acecf2a6e6.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1249658-10000002",
+      "name": "매실 양념치킨",
+      "description": "매실닭만을 사용하여 육질이 부드럽고 쫄깃하며, 화학조미료를 일절 사용치 않고 칼슘과 단백질이 첨가된 건강치킨입니다.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d6dd1cd2-55da-4e38-af2b-b73e14fde376.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000013",
+      "name": "후라이드+간장",
+      "description": "",
+      "category": "반반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/91666cd6-2b5c-4ffd-8f28-c0630e8559cf.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000019",
+      "name": "순살후라이드+간장",
+      "description": "",
+      "category": "순살 반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000025",
+      "name": "양념+간장+핫양념",
+      "description": "",
+      "category": "반반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000027",
+      "name": "매실 다리, 날개치킨 양념",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000037",
+      "name": "떡 한팩",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000044",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5509aefd-2625-4dd9-bb82-abbc7828e8dd.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1249658-10000003",
+      "name": "매실 간장치킨",
+      "description": "매실닭만을 사용하여 천연재료로 만든 데리 간장소스로 버무린 데리킹치킨은 담백하고 짭짤한 맛이 일품입니다.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/6d682888-8013-4f61-a9d1-e0ae776a9b61.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000014",
+      "name": "후라이드+핫양념",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000020",
+      "name": "순살후라이드+핫양념",
+      "description": "",
+      "category": "순살 반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000028",
+      "name": "매실 다리, 날개치킨 간장",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000038",
+      "name": "무",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000045",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1249658-10000004",
+      "name": "매실 핫양념치킨",
+      "description": "화학조미료가 첨가 되지 않은 달콤함과 매운맛의 환상적인 조화",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa6bbf0a-1c10-4473-a6d8-bfabf7585c96.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000015",
+      "name": "양념+간장",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000021",
+      "name": "순살양념+간장",
+      "description": "",
+      "category": "순살 반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000029",
+      "name": "매실 다리, 날개치킨 핫양념",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000039",
+      "name": "머스타드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-90000004",
+      "name": "카스 생맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1249658-10000005",
+      "name": "순살 후라이드치킨",
+      "description": "순 닭다리 살만을 사용하여 쫄깃하고 부드러운 맛이 어린이 영양간식으로 아주 좋습니다.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000016",
+      "name": "핫양념+간장",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000022",
+      "name": "순살 핫양념+간장",
+      "description": "",
+      "category": "순살 반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000030",
+      "name": "매실 다리, 날개치킨 후라이드+양념",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000040",
+      "name": "양념소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000006",
+      "name": "순살 양념치킨",
+      "description": "순 닭다리 살만을 사용하여 쫄깃하고 부드러운 맛이 어린이 영양간식으로 아주 좋습니다.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000017",
+      "name": "양념+핫양념",
+      "description": "",
+      "category": "반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000023",
+      "name": "순살 양념+핫양념",
+      "description": "",
+      "category": "순살 반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000031",
+      "name": "매실 다리, 날개치킨 후라이드+간장",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000041",
+      "name": "파채 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000007",
+      "name": "순살 간장치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/fce79ac6-bb59-4a20-b6d0-18a7c1e5f427.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000032",
+      "name": "매실 다리, 날개치킨 후라이드+핫양념",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000042",
+      "name": "파닭소스추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000008",
+      "name": "순살 강정치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9cd89a05-a25f-4816-9b39-d37122b4c72f.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000033",
+      "name": "매실 다리, 날개치킨 양념+간장",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000009",
+      "name": "순살 핫양념치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000034",
+      "name": "매실 다리, 날개치킨 핫양념+간장",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000010",
+      "name": "순살 파닭",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e531a56e-409e-4c85-b281-8ab13971a6ed.jpg"
+    },
+    {
+      "id": "ddangyo-1249658-10000035",
+      "name": "매실 다리, 날개치킨 양념+핫양념",
+      "description": "",
+      "category": "다리/날개치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1249658-10000011",
+      "name": "순살 핫강정치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1249658",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?7qEHjBv"
+    ]
+  }
+}

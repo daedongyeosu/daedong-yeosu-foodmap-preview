@@ -1,0 +1,183 @@
+{
+  "storeId": "51b657cc3416c67d",
+  "storeName": "여수강촌토종닭숯불구이 죽림직영점",
+  "displayName": "여수강촌토종닭숯불구이 죽림직영점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2691a4c1-01f1-4114-94b1-3b7cd1225fb9.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "후식",
+    "음료",
+    "주류메뉴",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1238086-10000001",
+      "name": "숯불토종닭구이",
+      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2691a4c1-01f1-4114-94b1-3b7cd1225fb9.jpg"
+    },
+    {
+      "id": "ddangyo-1238086-10000002",
+      "name": "닭목살구이",
+      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0d75e7e7-4610-41ee-93fb-f5b71b86d343.jpg"
+    },
+    {
+      "id": "ddangyo-1238086-10000008",
+      "name": "물냉면",
+      "description": "야콘면 + 삶은 달걀+ 오이+숙성육수+ 사랑과정성",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/33717844-f94e-49d0-86ab-1fb7704ddc40.jpg"
+    },
+    {
+      "id": "ddangyo-1238086-10000001",
+      "name": "숯불토종닭구이",
+      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2691a4c1-01f1-4114-94b1-3b7cd1225fb9.jpg"
+    },
+    {
+      "id": "ddangyo-1238086-10000006",
+      "name": "공기밥",
+      "description": "",
+      "category": "후식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/1f71c3ee-b08b-4c0b-ad7d-61844c8cf1ae.jpg"
+    },
+    {
+      "id": "ddangyo-1238086-10000015",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238086-90000001",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1238086-10000002",
+      "name": "닭목살구이",
+      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0d75e7e7-4610-41ee-93fb-f5b71b86d343.jpg"
+    },
+    {
+      "id": "ddangyo-1238086-10000007",
+      "name": "비빔냉면",
+      "description": "야콘면 + 삶은 달갈 + 오이 + 숙성 육수 + 사랑과 정성",
+      "category": "후식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/40982107-13ee-46d0-83d5-f6bdf1609565.jpg"
+    },
+    {
+      "id": "ddangyo-1238086-10000016",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238086-90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1238086-10000003",
+      "name": "닭안창살",
+      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238086-10000008",
+      "name": "물냉면",
+      "description": "야콘면 + 삶은 달걀+ 오이+숙성육수+ 사랑과정성",
+      "category": "후식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/33717844-f94e-49d0-86ab-1fb7704ddc40.jpg"
+    },
+    {
+      "id": "ddangyo-1238086-10000017",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238086-90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1238086-10000004",
+      "name": "숯불토종닭구이 반마리 + 닭목살 (중)",
+      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238086-10000018",
+      "name": "탐스파인애플",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238086-90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1238086-10000005",
+      "name": "숯불토종닭구이 반마리+닭 안창살 (중)",
+      "description": "깻잎 장아찌 + 양파 장아찌 + 마늘 + 쌈장 + 생양파 + 특제양파소스 + 매운소스 +참기름장 + 상추 +고추+사랑과 정성",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238086-10000019",
+      "name": "탐스오렌지",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238086-90000005",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1238086-90000006",
+      "name": "켈리 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1238086",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?cheVei2"
+    ]
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "storeId": "476ebcb070b7d20e",
+  "storeName": "푸라닭 여수학동점",
+  "displayName": "푸라닭 여수학동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+  "categories": [
+    "전체",
+    "신메뉴",
+    "반반 메뉴",
+    "반.반.반 플래터",
+    "셰프의 치킨",
+    "치킨(단품)",
+    "사이드 메뉴",
+    "추가메뉴",
+    "음료추가",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1120308-30002225",
+      "name": "마마치",
+      "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로 느껴보세요!",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/782d926e-9b41-438b-9d08-59b5964417ac.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002226",
+      "name": "순(다리)살 마마치",
+      "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로! 100% 국내산 통다리살 순살로 즐겨보세요.",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0296e03d-bb2f-4d0c-8330-95e7c75d05a4.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002229",
+      "name": "순(다리)살 반.반.반 플래터",
+      "description": "100% 국내산 통다리살 순살로 즐기는 반.반.반 플래터 치킨 취향은 포기 못하니까! 세 가지 맛을 한번에 담은 1.5마리 구성으로 양은 푸짐하게! 취향 따라 골라 먹는 재미까지 완벽하게! 나만의 반반반 치킨 플래터!",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/99a3a376-c6cd-458a-a8fd-15998f1bc085.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002219",
+      "name": "마요피뇨",
+      "description": "안성재 셰프로 완성된 쾌락적 미식경험! 마요 맛집 푸라닭의 새로운 마요 치킨. 특제 마요소스에 사워크림 드리즐, 크루통과 할라피뇨 토핑이 선사하는 다채로운 맛과 식감의 레이어",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/fc93dea4-0b68-4f51-976c-5464aa02d4a4.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002129",
+      "name": "[대표] 고추마요 치킨",
+      "description": "마요 강자 푸라닭의 대표메뉴. 고추마요 소스와 할라피뇨의 환상적인 조합",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ac942fd2-219e-494a-8611-574d5f8266ed.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002127",
+      "name": "[인기] 씬 후라이드",
+      "description": "가장 얇고 담백한 튀김옷의 후라이드",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/9e47a82b-a4d4-4fe4-8796-a43f9fdf7c32.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002225",
+      "name": "마마치",
+      "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로 느껴보세요!",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/782d926e-9b41-438b-9d08-59b5964417ac.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002206",
+      "name": "치즈인이유",
+      "description": "크런치함을 담은 치즈&갈릭 시즈닝과 부드럽고 달콤한 큐브 치즈케이크 토핑의 조화. 어니언랜치디핑소스까지 함께 곁들이면 이게 바로 치즈 인 이유",
+      "category": "치킨(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/04434935-0613-48f7-8b65-cf375c82f356.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002124",
+      "name": "내.완.반",
+      "description": "최대 45가지 반반 구성 내 마음대로 구성하는 '내가 원하는 가장 완벽한 반반'",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8ae7b8c8-95ab-4436-bdb6-edb0eb848950.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002228",
+      "name": "반.반.반 플래터",
+      "description": "치킨 취향은 포기 못하니까! 세 가지 맛을 한번에 담은 1.5마리 구성으로 양은 푸짐하게! 취향 따라 골라 먹는 재미까지 완벽하게! 나만의 반반반 치킨 플래터!",
+      "category": "반.반.반 플래터",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/602ce2e8-9051-40bb-b528-dc9c07c4add4.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002163",
+      "name": "치자치킨무 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/a7b02727-5823-48d9-92e0-3346bff439bc.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002169",
+      "name": "코카콜라 245ML(추가)",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/868aea1b-fdba-40f3-9355-350430df56b0.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002219",
+      "name": "마요피뇨",
+      "description": "안성재 셰프로 완성된 쾌락적 미식경험! 마요 맛집 푸라닭의 새로운 마요 치킨. 특제 마요소스에 사워크림 드리즐, 크루통과 할라피뇨 토핑이 선사하는 다채로운 맛과 식감의 레이어",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/fc93dea4-0b68-4f51-976c-5464aa02d4a4.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002197",
+      "name": "[인기] 블랙치즈볼 (5구)",
+      "description": "(5개입) 체다와 모짜렐라 치즈를 듬뿍담아 푸라닭만의 블랙으로 탄생한 치즈볼",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/873aeafc-7a27-4cbd-b589-f3b751e65d92.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002164",
+      "name": "고추마요소스 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/78098f73-1c05-4df0-9eb9-c30e0d5397d0.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002148",
+      "name": "크림치즈볼 (5구)",
+      "description": "(5개입) 달콤새콤 부드러운 크림치즈 필링이 가득",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/1710b4f5-fa8c-4a5d-b4f5-1d4925c9d4df.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002226",
+      "name": "순(다리)살 마마치",
+      "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로! 100% 국내산 통다리살 순살로 즐겨보세요.",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0296e03d-bb2f-4d0c-8330-95e7c75d05a4.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002229",
+      "name": "순(다리)살 반.반.반 플래터",
+      "description": "100% 국내산 통다리살 순살로 즐기는 반.반.반 플래터 치킨 취향은 포기 못하니까! 세 가지 맛을 한번에 담은 1.5마리 구성으로 양은 푸짐하게! 취향 따라 골라 먹는 재미까지 완벽하게! 나만의 반반반 치킨 플래터!",
+      "category": "반.반.반 플래터",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/99a3a376-c6cd-458a-a8fd-15998f1bc085.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002129",
+      "name": "[대표] 고추마요 치킨",
+      "description": "마요 강자 푸라닭의 대표메뉴. 고추마요 소스와 할라피뇨의 환상적인 조합",
+      "category": "치킨(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ac942fd2-219e-494a-8611-574d5f8266ed.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002220",
+      "name": "순(다리)살 마요피뇨",
+      "description": "100% 국내산 통다리살 순살로 즐기는 마요피뇨! 안성재 셰프로 완성된 쾌락적 미식경험. 특제 마요소스에 사워크림 드리즐, 크루통과 할라피뇨 토핑이 선사하는 다채로운 맛과 식감의 레이어",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/b6eefa20-0f90-4184-a3c3-c31dcf4e8171.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002125",
+      "name": "순(다리)살 내.완.반",
+      "description": "최대 45가지 반반 구성 내 마음대로 구성하는 '내가 원하는 가장 완벽한 반반'",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/1452d7b9-c93a-4f9c-93b4-2eb392a95dd3.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002149",
+      "name": "베이컨 감자볼 (5구)",
+      "description": "(5개입) 리얼 감자 & 리얼 베이컨 특제 필링이 가득",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/400aef58-13ce-485c-9ab7-fa6f0c3d7e24.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002227",
+      "name": "마마치 윙콤보",
+      "description": "마늘마니치킨. 급이 다른 한국인의 마늘 사랑을 응원합니다. 그저그런 알싸한 마늘맛 치킨이 아닌 국내산 마늘의 풍미와 감칠맛을 MAX로 담은 진정한 마늘 치킨입니다. 달콤한 특제 마늘소스를 버무린 치킨에 굵게 다진 리얼 마늘토핑을 수북하게 마니마니 쌓아 올려 마늘 맛의 깊이를 제대로! 100% 국내산 윙콤보로 즐겨보세요.",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/ddf4a958-cad3-4b32-878e-fda26918db79.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002165",
+      "name": "달콤양념소스 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/934136c3-6770-4639-bb69-b804fd7377fd.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002171",
+      "name": "코카콜라 500ML(추가)",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/875bdf62-54ab-4baf-99d3-3ac7040441ce.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002126",
+      "name": "내.완.반 윙콤보",
+      "description": "최대 45가지 반반 구성 내 마음대로 구성하는 '내가 원하는 가장 완벽한 반반'",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e4eae15c-d0ae-4e5d-a474-24bc0ad8fea5.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002221",
+      "name": "마요피뇨 윙콤보",
+      "description": "100% 국내산 윙콤보로 즐기는 마요피뇨! 안성재 셰프로 완성된 쾌락적 미식경험. 특제 마요소스에 사워크림 드리즐, 크루통과 할라피뇨 토핑이 선사하는 다채로운 맛과 식감의 레이어",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4a2c4891-5c7b-4e62-a257-dfc49d43a537.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002183",
+      "name": "[추천] 블랙알리오",
+      "description": "다 같은 블랙이 아니다. 깊고 진한 간장과 담백한 마늘의 조화로 독보적인 맛",
+      "category": "치킨(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/aae8f879-104a-44a6-a0f6-0b4436deaee2.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002139",
+      "name": "[인기조합] 블랙마요",
+      "description": "블랙알리오(반마리) + 고추마요 치킨(반마리)",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/5fe94702-92ba-4711-ac6b-8a34dac3c052.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002172",
+      "name": "코카콜라 1.25L(추가)",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/b91867b6-58f8-4e8f-a747-b11f8dd883d7.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002154",
+      "name": "[추천] 빅치즈스틱",
+      "description": "기존의 단순한 치즈 스틱은 NO 크기는 BIG 체다 치즈와 모짜렐라 치즈의 고소한 맛을 느껴보세요",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/4f327b53-3c54-4103-9630-5709c36438f5.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002215",
+      "name": "파불로 치킨",
+      "description": "'한식 러버' 이태리 셰프가 발견한 '파불고기'의 재해석. 불향 입은 특제 불고기 소스에 향긋바삭한 파채 튀김의 만남으로 더 프리미엄하게 즐기는 치킨 요리",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0641ac25-50b6-4191-903f-6ab8f3ddebaf.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002130",
+      "name": "콘소메이징",
+      "description": "인기에는 이유가 있다. 단짠단짠 콘소메 시즈닝에 리얼 군옥수수 토핑까지",
+      "category": "치킨(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/c4131fff-e2f6-4db7-adb6-bcfeb946c65f.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002166",
+      "name": "악마소스 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/768c1409-4aad-4bfe-b0b1-b7a7e8de2690.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002141",
+      "name": "[인기조합] 블랙마불로",
+      "description": "블랙알리오(반마리) + 마불로 악마(반마리)",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/8c59f517-44b5-436b-9db7-675e31603e67.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002216",
+      "name": "순(다리)살 파불로",
+      "description": "100% 국내산 통다리살 순다리살로 즐기는 '한식 러버' 이태리 셰프가 발견한 '파불고기'의 재해석. 불향 입은 특제 불고기 소스에 향긋바삭한 파채 튀김의 만남으로 더 프리미엄하게 즐기는 치킨 요리",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b9114011-5cf1-4a05-8993-3bc85eb5bde0.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002127",
+      "name": "[인기] 씬 후라이드",
+      "description": "가장 얇고 담백한 튀김옷의 후라이드",
+      "category": "치킨(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/9e47a82b-a4d4-4fe4-8796-a43f9fdf7c32.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002150",
+      "name": "[인기] 3색볼",
+      "description": "블랙치즈볼 + 크림치즈볼 + 베이컨 감자볼 / 세 가지 맛을 한 번에 즐길 수 있는 실속 사이드 메뉴",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/07821830-bc2a-483c-983f-05b43b742a19.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002128",
+      "name": "달콤양념 치킨",
+      "description": "깔끔하고 달콤한 오리지널 양념치킨",
+      "category": "치킨(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/d8a049a5-fddb-4cb5-9f4d-e219b70c225e.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002198",
+      "name": "레귤러컷",
+      "description": "생생한 감자를 두껍게 채썰어 기름에 튀긴 레귤러 컷",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/9dedb83f-5c99-4d3f-b36d-1f84e52dfb48.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002217",
+      "name": "파불로 윙콤보",
+      "description": "100% 국내산 윙콤보로 즐기는 '한식 러버' 이태리 셰프가 발견한 '파불고기'의 재해석. 불향 입은 특제 불고기 소스에 향긋바삭한 파채 튀김의 만남으로 더 프리미엄하게 즐기는 치킨 요리",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0df9c672-3d5d-44b6-8b4a-c848c4327611.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002133",
+      "name": "마불로 악마",
+      "description": "(마)늘과 (불) 맛으로 꽉 찬 매운맛의 신세계",
+      "category": "치킨(단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/08a43a7f-7c81-473b-8003-7dad51353092.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002153",
+      "name": "[추천] 기름떡볶이",
+      "description": "한입 먹기좋은 떡을 튀겨내어 푸라닭 특제 소스에 버무린 떡볶이",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e3ce77c2-b61c-4184-868f-dfcc67f3bd90.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002174",
+      "name": "제로콜라 500ML(추가)",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/23217721-060a-48ab-bc59-d657fc04d791.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002194",
+      "name": "홍고추마요소스 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/8d8bab0b-e1c3-423b-8bc3-d84fe3353709.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002175",
+      "name": "제로콜라 1.25L(추가)",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1120308-30002156",
+      "name": "코울슬로",
+      "description": "양배추, 당근, 양파, 스위트콘 등 신선한 채소를 새콤달콤한 홀그레인 코울슬로 마요 소스에 버무려 간편하게 먹는 프리미엄 샐러드",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/0563f3bd-a1ac-4317-a2fb-4fd5ad62b96a.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002186",
+      "name": "타코볼 (4구)",
+      "description": "푸라닭 시그니처 소스로 맛을 더한 푸라닭 스타일의 타코야기. 부드럽고 쫄깃하게 한입에 쏙.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/dba5387b-2df7-407a-88af-63a90cd90702.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002176",
+      "name": "스프라이트 245ML(추가)",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/d5ae9e95-fd09-4b1e-addd-7112014c11ea.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002196",
+      "name": "어니언랜치소스 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/b898875b-275f-4d68-b904-2aa562554f54.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002222",
+      "name": "일품깐풍",
+      "description": "중식 셰프의 '火의 기술'로 탄생한 혀끝까지 매콤한 깐풍 치킨. 향취고추, 볶음땅콩, 특제소스로 매콤함과 식감 모두를 품은 프리미엄 깐풍요리. [땅콩 알러지 주의]",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/4bcb2a07-f3f4-4530-9d10-a975d63cec10.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002167",
+      "name": "고추마요소스 보틀(240g)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/8a3a9ad3-95fd-4aad-8e01-a6a980a1b75f.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002158",
+      "name": "꼬친 새우",
+      "description": "허브와 갈릭으로 맛을 낸 푸라닭의 매력만점 새우꼬치. 탱글 탱글한 새우가 바삭한 튀김 옷을 입었다. 바삭통통한 푸라닭의 새로운 식감에 꽂혀보새우",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/4301c752-291d-4a90-b8d6-126c2d194c8b.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002152",
+      "name": "[HIT] 후라잉닭발",
+      "description": "매콤쫄깃한 무뼈닭발을 바삭하게 튀겨낸 푸라닭 스타일 튀김 요리",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/c296a771-41a8-4220-ba9e-329bc3123a48.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002178",
+      "name": "스프라이트 500ML(추가)",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/e79b40b9-967c-4e8d-8cc3-beb55667ab8b.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002223",
+      "name": "순(다리)살 일품깐풍",
+      "description": "중식 셰프의 火의 기술'로 탄생한 혀끝까지 매콤한 깐풍 치킨. 향취고추, 볶음땅콩, 특제소스가 더해진 푸라닭 스타일 프리미엄 깐풍요리를 100% 통다리살 순살로 즐겨보세요. [땅콩 알러지 주의]",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/6afdd3ef-e8a9-4e36-992a-da0a24a5f742.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002168",
+      "name": "즉석밥 (비조리)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1120308-30002224",
+      "name": "일품깐풍 윙콤보",
+      "description": "중식 셰프의 '火의 기술'로 탄생한 혀끝까지 매콤한 깐풍 치킨. 향취고추, 볶음땅콩, 특제소스가 더해진 푸라닭 스타일 프리미엄 깐풍요리를 100% 국내산 윙콤보로 즐겨보세요. [땅콩 알러지 주의]",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/ee452340-221b-45b0-8695-a9c54e6c4b37.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002179",
+      "name": "스프라이트 1.5L(추가)",
+      "description": "",
+      "category": "음료추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/50a96343-5e5e-4e5d-bed2-eb5cd788825e.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002160",
+      "name": "모둠감자",
+      "description": "감자 모두 모아 모둠 감자. 바삭하고 통통한 감자가 가득한 메뉴",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e0a82162-e063-456f-8288-160b8cd62e47.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002202",
+      "name": "나폴리 투움바",
+      "description": "쫀득한 뇨끼와 풍미가득 파마산 치즈로 맛을 더한 독보적 투움바. 1등 셰프의 터치로 더 완벽해진 투움바를 만나보세요.",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/4dbc7192-8a4e-44a4-8275-81522ade5877.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002199",
+      "name": "지파이",
+      "description": "입안 가득 들어오는 겉바속촉 식감에 알싸한 후추가 선사하는 강력한 풍미, 푸라닭이 선사하는 지파이의 매력에 푹 빠져보세요.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/02/051b9144-bbcc-4ab0-85c3-b4a6b032ed02.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002188",
+      "name": "[비조리] 유미네 국물 떡볶이 오리지널",
+      "description": "국제 식품 인증 2 Star가 보장하는 믿먹 떡볶이. 푸라닭 치킨 X 유미네 떡볶이, 매콤달콤쫄깃함과 중독성이 있는 감칠맛은 기본. 해당 제품은 비조리 상태로 제공됩니다.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/a32521bd-5016-4bee-8a20-9256a9a28d80.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002204",
+      "name": "순(다리)살 나폴리 투움바",
+      "description": "쫀득한 뇨끼와 풍미가득 파마산 치즈로 맛을 더한 독보적 투움바. 1등 셰프의 터치로 더 완벽해진 투움바를 촉촉한 100% 통다리살 순살로 즐겨보세요.",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/6525c7c2-8b23-4092-ae36-2b63b19f9f67.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002203",
+      "name": "나폴리 투움바 윙콤보",
+      "description": "쫀득한 뇨끼와 풍미가득 파마산 치즈로 맛을 더한 독보적 투움바. 1등 셰프의 터치로 더 완벽해진 투움바를 촉촉한 100% 국내산 윙콤보로 즐겨보세요.",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/94cf2e29-4cac-495a-ae07-39170b4220be.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002205",
+      "name": "블랙투움바",
+      "description": "푸라닭의 대표메뉴 블랙알리오와 셰프의 터치로 더 완벽해진 투움바를 반반 구성으로 즐겨보세요.",
+      "category": "셰프의 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ae6d3a81-8b46-4fdf-b6a3-d6397a287685.jpg"
+    },
+    {
+      "id": "ddangyo-1120308-30002155",
+      "name": "블랙치즈스틱 (4개)",
+      "description": "흑미와 라이스 펍으로 멋을 낸 치즈스틱 한입 가득 100% 모짜렐라 치즈 풍미를 느껴보세요.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/3d19080d-142c-45bc-89bf-f9594c9809dd.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1120308",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?fNFjCFg"
+    ]
+  }
+}

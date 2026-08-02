@@ -1,0 +1,2047 @@
+{
+  "schemaVersion": 1,
+  "batchId": "ddangyo-chicken-batch-01",
+  "generatedAt": "2026-08-02T05:48:50.116Z",
+  "policy": {
+    "mode": "add-missing-only",
+    "identity": "verified-address-and-existing-store-id",
+    "phonePriority": [
+      "ddangyo",
+      "mukkebi",
+      "naver"
+    ],
+    "prohibitedPhoneSources": [
+      "yogiyo",
+      "coupang-eats",
+      "baemin"
+    ],
+    "naver": "exact-store-and-address-only",
+    "pricesVisible": false
+  },
+  "stores": [
+    {
+      "targetStoreId": "4c3111774c7675bf",
+      "isNew": true,
+      "patstoNo": "1330186",
+      "name": "메고지고 여수죽림점",
+      "address": "전남 여수시 죽림3길 5-14 1층 101호",
+      "latitude": "34.76422766408857",
+      "longitude": "127.63813261740627",
+      "category": "카페/디저트",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/35cb697c-2b54-47f8-8ee9-6fa99a128c86.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/35cb697c-2b54-47f8-8ee9-6fa99a128c86.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/58c8b68a-82f7-46f3-b8f7-c1901f10ff56.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/bd631bf0-6132-4bf2-b9f3-d9da9dded43c.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?8rrtFnv",
+      "phone": "01051442818",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "6706deb8a748599b",
+      "isNew": false,
+      "patstoNo": "1193774",
+      "name": "쌀통닭 무선점",
+      "address": "전남 여수시 화산2길 7 1층",
+      "latitude": "34.77383648809921",
+      "longitude": "127.64830716415082",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/11697548-e1fb-43ad-99dd-d0ed63cfe108.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/11697548-e1fb-43ad-99dd-d0ed63cfe108.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3f22d728-d2fd-42d0-a84c-c80c1cece10e.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4fcacd06-c007-429a-870b-b8d39206c92e.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?oZrHJMN",
+      "phone": "0616915235",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "6706deb8a748599b",
+        "storeName": "쌀통닭 무선점",
+        "address": "전남 여수시 화산2길 7",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "1a9ef3c649eefc17",
+      "isNew": false,
+      "patstoNo": "1297094",
+      "name": "기영이숯불두마리치킨 여수여천점",
+      "address": "전남 여수시 안산1길 186-25",
+      "latitude": "34.76052554574959",
+      "longitude": "127.65198027173292",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b0ebbecb-b831-4e07-a28c-4f8621dc95e6.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b0ebbecb-b831-4e07-a28c-4f8621dc95e6.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/33fa7111-d2b7-4535-8da2-aa2f5bd0870c.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/088c010f-d41d-4cc3-8ccc-c24f72df4a52.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?LZJOYiQ",
+      "phone": "0616926307",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "1a9ef3c649eefc17",
+        "storeName": "기영이숯불두마리치킨 여천점(안산동)",
+        "address": "전남 여수시 안산1길 186-25",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "c56d65926bf2b224",
+      "isNew": false,
+      "patstoNo": "1173653",
+      "name": "아주커치킨 둔덕점",
+      "address": "전남 여수시 쌍봉로 363",
+      "latitude": "34.768628146386455",
+      "longitude": "127.69424454119691",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/51c8b6c6-b43b-4acd-aec7-4d0883ebf4ce.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/51c8b6c6-b43b-4acd-aec7-4d0883ebf4ce.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/04edae59-5889-434a-ab96-edba675a62bf.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b8dd0daf-9528-4418-b221-e1c724aa02fe.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?h3rPiwO",
+      "phone": "0616520116",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "unique-exact-name-current-address-missing",
+        "storeId": "c56d65926bf2b224",
+        "storeName": "아주커치킨 둔덕점",
+        "address": "",
+        "coordinateStatus": ""
+      }
+    },
+    {
+      "targetStoreId": "b6fa10980521859b",
+      "isNew": false,
+      "patstoNo": "1249658",
+      "name": "치킨아이 학동점",
+      "address": "전남 여수시 학동서5길 10 102호",
+      "latitude": "34.76247710755619",
+      "longitude": "127.6565251535917",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2664dc9e-67d1-4e03-a50e-23cacab7e2f1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d6dd1cd2-55da-4e38-af2b-b73e14fde376.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e531a56e-409e-4c85-b281-8ab13971a6ed.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?7qEHjBv",
+      "phone": "0616857879",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "b6fa10980521859b",
+        "storeName": "치킨아이 학동점",
+        "address": "전남 여수시 학동서5길 10",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "420af240943ff849",
+      "isNew": false,
+      "patstoNo": "1317034",
+      "name": "큰손닭강정 여수본점",
+      "address": "전남 여수시 쌍봉로 35-2 1층",
+      "latitude": "34.76670859737358",
+      "longitude": "127.6599815166996",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9feb9739-28f6-45cb-a7f0-4eded9ad4363.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9feb9739-28f6-45cb-a7f0-4eded9ad4363.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c4ea1993-32cb-4c0f-a4b1-7fbb7d99f016.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/1897bf9d-89e6-43b6-9668-c05861a60bf0.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?agaDVy9",
+      "phone": "01098833805",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "420af240943ff849",
+        "storeName": "큰손닭강정 여수본점(학동)",
+        "address": "전남 여수시 쌍봉로 35-2",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "d0c01cd4ef9821c3",
+      "isNew": false,
+      "patstoNo": "1172770",
+      "name": "여수오리날개튀김 여천점",
+      "address": "전남 여수시 신기남3길 1",
+      "latitude": "34.76000975417978",
+      "longitude": "127.67225527409167",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/96c58d1a-0ef7-4ac6-a79c-d5e3cb733fc7.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/96c58d1a-0ef7-4ac6-a79c-d5e3cb733fc7.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/5e5704f9-79ed-4e4f-92b3-61ca9bcf7b5f.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/cea4ad45-e279-405d-bdbd-2f53a8e756f3.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?n8fubo6",
+      "phone": "0618103351",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "d0c01cd4ef9821c3",
+        "storeName": "여수 오리날개 튀김 여천점(신기동)",
+        "address": "전남 여수시 신기남3길 1",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "5535998cfac3846a",
+      "isNew": false,
+      "patstoNo": "1212165",
+      "name": "김종구식 맛치킨 전기바베큐 옛날통닭 여수학동점",
+      "address": "전남 여수시 시청동5길 20 113,114호",
+      "latitude": "34.75800854395782",
+      "longitude": "127.66580845871141",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/72d883cb-9b7f-47c4-88f5-81e006c01d9c.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/72d883cb-9b7f-47c4-88f5-81e006c01d9c.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/b449c06b-1dfb-4708-a8a7-cd72b98e4aa4.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0d637dd8-77e2-41b4-8dfa-3eb0b85582a6.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?W3C2xOs",
+      "phone": "0616838644",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "5535998cfac3846a",
+        "storeName": "김종구식 맛치킨 전기바베큐 옛날통닭 학동점",
+        "ddangyoAddress": "전남 여수시 시청동5길 20 113,114호",
+        "reason": "same brand and 학동 branch; Ddangyo includes 여수 in branch name"
+      }
+    },
+    {
+      "targetStoreId": "4059491d8dbb4159",
+      "isNew": false,
+      "patstoNo": "1124482",
+      "name": "BBQ 여수무선점",
+      "address": "전남 여수시 무선중앙로 53 1층",
+      "latitude": "34.77314931817006",
+      "longitude": "127.65011002484093",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/79519cf1-a824-4f73-8255-1d9cba8c1d65.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/79519cf1-a824-4f73-8255-1d9cba8c1d65.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b53b81a2-6fd6-4725-84bd-aea5a6335936.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/5a42fab2-9aef-415f-a2c7-b6d812ebdf2f.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?KXMaAWm",
+      "phone": "0616921959",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "4059491d8dbb4159",
+        "storeName": "비비큐 여수무선점",
+        "address": "전남 여수시 무선중앙로 53",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "33558e3cc2ad9dbd",
+      "isNew": false,
+      "patstoNo": "1115976",
+      "name": "굽네치킨&피자 여수여천점",
+      "address": "전남 여수시 망마로 102",
+      "latitude": "34.757051780898365",
+      "longitude": "127.67320739324762",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4445816c-d436-44a7-a901-4ef6c6858b2d.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f1325628-70dd-43e2-bac0-679c3a3729fd.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?s64ZuPD",
+      "phone": "0616860017",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "33558e3cc2ad9dbd",
+        "storeName": "굽네치킨&피자 여천점(신기동)",
+        "address": "전남 여수시 망마로 102",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "5b5b717a812bd696",
+      "isNew": true,
+      "patstoNo": "1202217",
+      "name": "순살 참잘튀기는집 여수점",
+      "address": "전남 여수시 여서로 136 20동 지하 제104호",
+      "latitude": "34.748401147447446",
+      "longitude": "127.69701835763331",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/aa50f1d2-7d12-4838-ae33-fac17db9c580.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/aa50f1d2-7d12-4838-ae33-fac17db9c580.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/538eb125-5312-42dc-bcfd-85134f3a8ed1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/6358d632-ce35-465a-a277-eae38305b5fd.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?5v5g0Sx",
+      "phone": "0616549921",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": false,
+      "sourceMatch": {
+        "status": "new",
+        "method": "manual-verified-new-shop-in-shop",
+        "naverEligible": false,
+        "reason": "순살 참잘튀기는집 is distinct from the current 탕참 store at the same address"
+      }
+    },
+    {
+      "targetStoreId": "1148392333495328",
+      "isNew": true,
+      "patstoNo": "1202198",
+      "name": "치코두마리파닭",
+      "address": "전남 여수시 여서로 136 20동 지하 제104호",
+      "latitude": "34.748401147447446",
+      "longitude": "127.69701835763331",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/1d4b3542-e163-447f-bf90-f1b959cb9634.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/1d4b3542-e163-447f-bf90-f1b959cb9634.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/8d296f6d-2f68-473f-93b7-06ba596d7de3.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b248991d-29f0-4b10-bcdb-94f33b1f9756.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?40ACKvK",
+      "phone": "0616549921",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": false,
+      "sourceMatch": {
+        "status": "new",
+        "method": "manual-verified-new-shop-in-shop",
+        "naverEligible": false,
+        "reason": "치코두마리파닭 is distinct from the current 탕참 store at the same address"
+      }
+    },
+    {
+      "targetStoreId": "fa5bca3967c25462",
+      "isNew": false,
+      "patstoNo": "1175790",
+      "name": "지코바치킨 미평점",
+      "address": "전남 여수시 미평남5길 20 1층",
+      "latitude": "34.76565697430089",
+      "longitude": "127.7054054323632",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f54a50cf-d19f-4837-b6be-ba879580fdef.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f54a50cf-d19f-4837-b6be-ba879580fdef.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a1ca04ab-4b17-491b-9aaa-6fce1d278272.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/c9b9eafc-b4e9-4875-aee9-012bfc44f18c.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?AkdMHga",
+      "phone": "0616535077",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "unique-exact-name-current-address-missing",
+        "storeId": "fa5bca3967c25462",
+        "storeName": "지코바치킨 미평점",
+        "address": "",
+        "coordinateStatus": ""
+      }
+    },
+    {
+      "targetStoreId": "6d48c7e2bca79c18",
+      "isNew": false,
+      "patstoNo": "1169335",
+      "name": "계동치킨 여문점",
+      "address": "전남 여수시 여서동1길 28 1층",
+      "latitude": "34.75377670586033",
+      "longitude": "127.70699637131918",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/cce74f2e-af1a-4e41-be05-2525d16f82c1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/10965111-b851-4ef1-a99e-7e28911a6bd8.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?J1z92gs",
+      "phone": "0616538886",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "6d48c7e2bca79c18",
+        "storeName": "계동치킨 여문점(먹깨비,땡겨요로 주문시 음료스 서비스)",
+        "ddangyoAddress": "전남 여수시 여서동1길 28 1층",
+        "reason": "same unique store name; current address missing"
+      }
+    },
+    {
+      "targetStoreId": "9846929c4427576a",
+      "isNew": false,
+      "patstoNo": "1120968",
+      "name": "푸라닭 여수문수점",
+      "address": "전남 여수시 문수로 32 1층",
+      "latitude": "34.7510729564498",
+      "longitude": "127.70019556722117",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/449007f3-28ff-4d61-872f-18a19d0d7ee1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/cc3c528f-5991-4036-be3d-60d2e0bb5bbb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?LGe0H32",
+      "phone": "0616519206",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "9846929c4427576a",
+        "storeName": "푸라닭치킨 여수문수점",
+        "ddangyoAddress": "전남 여수시 문수로 32 1층",
+        "reason": "same 푸라닭 문수 branch; current name includes 치킨"
+      }
+    },
+    {
+      "targetStoreId": "b2b796461ee30ef2",
+      "isNew": false,
+      "patstoNo": "1138825",
+      "name": "예원닭강정 여수1호점",
+      "address": "전남 여수시 문수7길 33-6 1층",
+      "latitude": "34.75494038467196",
+      "longitude": "127.6947491838139",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/820ba696-e939-4fa0-b6a1-a55b41675581.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/236bab00-92f2-4796-b876-53d06b95ba62.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?Why0WW1",
+      "phone": "0616548284",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "b2b796461ee30ef2",
+        "storeName": "예원닭강정 여수1호점(문수동)",
+        "ddangyoAddress": "전남 여수시 문수7길 33-6 1층",
+        "reason": "same unique store name; current address missing"
+      }
+    },
+    {
+      "targetStoreId": "57ae8848b4ccc2a1",
+      "isNew": false,
+      "patstoNo": "1216976",
+      "name": "본스치킨 여수미평점",
+      "address": "전남 여수시 미평로 82",
+      "latitude": "34.770093828859274",
+      "longitude": "127.70950429984951",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/81e4a294-0088-4f0b-9a63-03a60462132f.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/81e4a294-0088-4f0b-9a63-03a60462132f.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/527b4664-410c-4602-b442-71f414623b1e.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b7d49b38-4e8f-44c1-8f4b-3b2b628a6b14.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?s3saAXs",
+      "phone": "0616550992",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "57ae8848b4ccc2a1",
+        "storeName": "본스치킨 미평점",
+        "ddangyoAddress": "전남 여수시 미평로 82",
+        "reason": "same brand and 미평 branch; Ddangyo includes 여수"
+      }
+    },
+    {
+      "targetStoreId": "e66f136d0e468b6e",
+      "isNew": false,
+      "patstoNo": "1175098",
+      "name": "아주커치킨 문수점",
+      "address": "전남 여수시 허문정1길 60 1층",
+      "latitude": "34.749823944713455",
+      "longitude": "127.69399943505495",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/04edae59-5889-434a-ab96-edba675a62bf.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/04edae59-5889-434a-ab96-edba675a62bf.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/edc4730e-1da6-4f91-a699-da101540e0a8.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?XTVAJ3q",
+      "phone": "0616536692",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "unique-exact-name-current-address-missing",
+        "storeId": "e66f136d0e468b6e",
+        "storeName": "아주커치킨 문수점",
+        "address": "",
+        "coordinateStatus": ""
+      }
+    },
+    {
+      "targetStoreId": "c6691689edefed72",
+      "isNew": true,
+      "patstoNo": "1273822",
+      "name": "수원왕갈비통닭 여수점",
+      "address": "전남 여수시 여문문화2길 18 1층",
+      "latitude": "34.75416886706995",
+      "longitude": "127.70457802793958",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cab8588e-2757-4691-b3de-32ab4353d23f.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cab8588e-2757-4691-b3de-32ab4353d23f.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4cf06f98-a5c8-4124-83a9-b26ad7e36072.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ed595fe3-19ae-4c17-bb28-140d3f1ed6b8.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?gOaJqWQ",
+      "phone": "0616526851",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": false,
+      "sourceMatch": {
+        "status": "new",
+        "method": "manual-verified-new-shop-in-shop",
+        "naverEligible": false,
+        "reason": "distinct Ddangyo shop at a shared address; no same-name current store"
+      }
+    },
+    {
+      "targetStoreId": "bdc3a5388ee5f856",
+      "isNew": true,
+      "patstoNo": "1311033",
+      "name": "돈스토리",
+      "address": "전남 여수시 소호로 481-1",
+      "latitude": "34.745523171229806",
+      "longitude": "127.6533247707223",
+      "category": "족발/보쌈",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/b85bccf6-4864-41fd-b095-c2b99201fabf.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/b85bccf6-4864-41fd-b095-c2b99201fabf.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/75768c42-4166-41ed-b681-f869c519f1b2.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a85255c2-8577-49fc-aa07-dfd9e47561e8.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?5z5oUHy",
+      "phone": "0616850003",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "42a229180e49ce16",
+      "isNew": true,
+      "patstoNo": "1233526",
+      "name": "피나치공 무선점",
+      "address": "전남 여수시 화산2길 30",
+      "latitude": "34.773028522334826",
+      "longitude": "127.64596682263942",
+      "category": "피자",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/fa0c322f-3661-4b33-bd84-7a506ca8c4cd.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/fa0c322f-3661-4b33-bd84-7a506ca8c4cd.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/4b3c7d36-490f-459d-a25a-62df4a94e6d2.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/8baaf2f2-a498-4427-810d-629bfde58431.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?C5v1Sz5",
+      "phone": "0616847083",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "f3b9106bedb95e91",
+      "isNew": true,
+      "patstoNo": "1258176",
+      "name": "배떡 안산점",
+      "address": "전남 여수시 안산2길 6",
+      "latitude": "34.76050310282457",
+      "longitude": "127.6482288924478",
+      "category": "분식",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/7f0cca89-d4b1-48c6-8f44-d2e3cf6caa6a.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/7f0cca89-d4b1-48c6-8f44-d2e3cf6caa6a.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/fb7cd41c-86dd-479c-a624-b68364dbd774.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/135fafb2-ea8f-46fa-b43e-69186641f0cb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?CRqRegz",
+      "phone": "0616915988",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "c938cc2ee278ce23",
+      "isNew": false,
+      "patstoNo": "1179301",
+      "name": "배떡 여수점",
+      "address": "전남 여수시 문수7길 33-6 1층",
+      "latitude": "34.75494038467196",
+      "longitude": "127.6947491838139",
+      "category": "분식",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/7f0cca89-d4b1-48c6-8f44-d2e3cf6caa6a.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/7f0cca89-d4b1-48c6-8f44-d2e3cf6caa6a.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/fb7cd41c-86dd-479c-a624-b68364dbd774.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/09/135fafb2-ea8f-46fa-b43e-69186641f0cb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?Dg0bqrG",
+      "phone": "0616548284",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "unique-exact-name-current-address-missing",
+        "storeId": "c938cc2ee278ce23",
+        "storeName": "배떡 여수점",
+        "address": "",
+        "coordinateStatus": ""
+      }
+    },
+    {
+      "targetStoreId": "2875fb8206bbf1a6",
+      "isNew": false,
+      "patstoNo": "1227865",
+      "name": "네네치킨 무선지구점",
+      "address": "전남 여수시 무선3길 6 1층",
+      "latitude": "34.77210904797403",
+      "longitude": "127.65275515912224",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/b54d7543-b832-45a4-953c-a33f882d4e44.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/b54d7543-b832-45a4-953c-a33f882d4e44.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/b15d6efc-970a-42c5-9f3c-ac6e30490173.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/4d6168a3-9405-49b2-8727-2e3afc130c0c.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?n8F0Vm2",
+      "phone": "01048418668",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "2875fb8206bbf1a6",
+        "storeName": "네네치킨 무선지구점(선원동)",
+        "address": "전남 여수시 무선3길 6",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "60ea2342c71bd2f6",
+      "isNew": false,
+      "patstoNo": "1175120",
+      "name": "동근이숯불두마리치킨 문수점",
+      "address": "전남 여수시 문수로 35-1 1층",
+      "latitude": "34.75169119254194",
+      "longitude": "127.70006771469285",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/5fd25436-acac-4c57-a1ae-0907907ca6b1.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/5fd25436-acac-4c57-a1ae-0907907ca6b1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/9d64ab85-ac42-4c80-a2f0-e98eeb660048.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/ff4bfde6-ddd3-466a-9a2e-54394f09ffdf.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?d4AymKz",
+      "phone": "0616548292",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "unique-normalized-name-current-address-missing",
+        "storeId": "60ea2342c71bd2f6",
+        "storeName": "동근이숯불두마리치킨 여수문수점",
+        "address": "",
+        "coordinateStatus": ""
+      }
+    },
+    {
+      "targetStoreId": "9a94c05bdeca2d9e",
+      "isNew": false,
+      "patstoNo": "1130868",
+      "name": "아주커 치킨 여천학동점",
+      "address": "전남 여수시 쌍봉로 58 110호",
+      "latitude": "34.76621627568129",
+      "longitude": "127.66224945990814",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa6bbf0a-1c10-4473-a6d8-bfabf7585c96.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?TQXhH05",
+      "phone": "0616831192",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "9a94c05bdeca2d9e",
+        "storeName": "아주커치킨 학동점",
+        "ddangyoAddress": "전남 여수시 쌍봉로 58 110호",
+        "reason": "same 아주커 학동 branch; Ddangyo uses 여천학동"
+      }
+    },
+    {
+      "targetStoreId": "b978240417a18e51",
+      "isNew": false,
+      "patstoNo": "1282239",
+      "name": "부어치킨 학동점",
+      "address": "전남 여수시 학동2길 19 1층",
+      "latitude": "34.76503018414023",
+      "longitude": "127.66522384046294",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/678bfdae-d2fc-4496-8085-c1a871f105b2.png",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/678bfdae-d2fc-4496-8085-c1a871f105b2.png",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a3db6a05-c8de-4df1-b766-636f9e4a4630.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?bMUAAyS",
+      "phone": "0616810763",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "b978240417a18e51",
+        "storeName": "부어치킨 여수학동점",
+        "address": "전남 여수시 학동2길 19",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "f8e686cafd0b9bb4",
+      "isNew": false,
+      "patstoNo": "1353897",
+      "name": "동근이숯불두마리치킨 여수학동점",
+      "address": "전남 여수시 선소로 62 4동 2층 205호",
+      "latitude": "34.75813493655513",
+      "longitude": "127.66740331131005",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d2e8bca2-2e5f-4ad2-95e2-3738528db977.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d2e8bca2-2e5f-4ad2-95e2-3738528db977.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/37f24053-9491-462e-841e-4ee4575a7cfd.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/70d02a4e-d612-4901-ade7-f63d934f77b7.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?eRKUQXj",
+      "phone": "01093488965",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "unique-exact-name-current-address-missing",
+        "storeId": "f8e686cafd0b9bb4",
+        "storeName": "동근이숯불두마리치킨 여수학동점",
+        "address": "",
+        "coordinateStatus": ""
+      }
+    },
+    {
+      "targetStoreId": "942c34c599bfe9d7",
+      "isNew": true,
+      "patstoNo": "1171587",
+      "name": "치킨먹고 인생피자",
+      "address": "전남 여수시 화산로 39",
+      "latitude": "34.772509788138436",
+      "longitude": "127.64269946997692",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/272bc6fa-9726-4e18-9671-be3feccb7559.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/272bc6fa-9726-4e18-9671-be3feccb7559.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/5a602b05-68ef-4190-a826-52a5b50a0a2c.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/0c9598dd-ba17-46a6-93bb-90b8b8bc2e02.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?C7u3wNg",
+      "phone": "0616869321",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "f0b4ebfd7df44a75",
+      "isNew": false,
+      "patstoNo": "1218405",
+      "name": "꾸브라꼬숯불치킨 여천점",
+      "address": "전남 여수시 신기남1길 26-2",
+      "latitude": "34.75943603977778",
+      "longitude": "127.66946602431621",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6015e149-2a2c-4b60-8826-7b199c708194.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6015e149-2a2c-4b60-8826-7b199c708194.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/57e89702-eb56-4d99-93e1-604c8f386414.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5b2ee24d-e24c-46e9-8391-30e3d4923489.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?1iMTpT9",
+      "phone": "0619219249",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "f0b4ebfd7df44a75",
+        "storeName": "꾸브라꼬 숯불치킨 여천 신기동점",
+        "address": "전남 여수시 신기남1길 26-2",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "b25a59f2207a9e10",
+      "isNew": false,
+      "patstoNo": "1250775",
+      "name": "아주커치킨 무선점",
+      "address": "전남 여수시 성산로 21",
+      "latitude": "34.77398269785791",
+      "longitude": "127.64000441981447",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/51c8b6c6-b43b-4acd-aec7-4d0883ebf4ce.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/51c8b6c6-b43b-4acd-aec7-4d0883ebf4ce.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/04edae59-5889-434a-ab96-edba675a62bf.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b8dd0daf-9528-4418-b221-e1c724aa02fe.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?MFgCs9y",
+      "phone": "01036182844",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "b25a59f2207a9e10",
+        "storeName": "아주커치킨 무선점",
+        "address": "전남 여수시 성산로 21",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "f53db01b1aecc2e8",
+      "isNew": true,
+      "patstoNo": "1232932",
+      "name": "촌닭이두마리 무선점",
+      "address": "전남 여수시 성산로 2 1층",
+      "latitude": "34.772948148107034",
+      "longitude": "127.6385585908969",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/422f0879-1bf3-4bfe-8b5d-eea2b4211dba.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/519818ba-027d-45ea-b632-42b19c6348c1.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?DLnSWu2",
+      "phone": "0619216177",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "96f685b4e5df6f21",
+      "isNew": true,
+      "patstoNo": "1219419",
+      "name": "오빠통닭 여수학동점",
+      "address": "전남 여수시 시청동5길 21-2 1층",
+      "latitude": "34.757631472321506",
+      "longitude": "127.66621289062104",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/feee3d59-c0a4-4b04-aac5-38f538e0ed5b.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/feee3d59-c0a4-4b04-aac5-38f538e0ed5b.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2f4d2fe1-0610-4674-abcd-64befdf5f3e5.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2dcca040-87cd-441b-9ec0-c7cdcffad3c8.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?chdPUvz",
+      "phone": "0616863829",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "909ebb59ee179171",
+      "isNew": true,
+      "patstoNo": "1314556",
+      "name": "갓튀긴후라이드 여수학동점",
+      "address": "전남 여수시 무선로 6 1층 110호",
+      "latitude": "34.76135233604175",
+      "longitude": "127.65636138887125",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/84971917-b475-4e17-9549-e40210f4b500.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/84971917-b475-4e17-9549-e40210f4b500.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/80c52658-8bfa-4023-907b-0f4c9299a94d.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/0c6da4c0-53da-4604-b866-710233fd7f8d.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?ktXdR4d",
+      "phone": "0616811768",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "f65edfe1927ef379",
+      "isNew": false,
+      "patstoNo": "1247559",
+      "name": "치킨마루 여수봉계점",
+      "address": "전남 여수시 좌수영로 682-25 1층 2호",
+      "latitude": "34.784261676019405",
+      "longitude": "127.69241822052018",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ffd88e3f-65ae-4374-86bb-a4e3226b303e.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ffd88e3f-65ae-4374-86bb-a4e3226b303e.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/699ef533-e219-4082-ac00-c6bf36c9adc9.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/4409cf6f-b0a3-400f-88e2-db951dc23283.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?LShgUuJ",
+      "phone": "0616829998",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "f65edfe1927ef379",
+        "storeName": "치킨마루 여수봉계점",
+        "address": "전남 여수시 좌수영로 682-25",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "fa10e18c99e71bc4",
+      "isNew": true,
+      "patstoNo": "1232918",
+      "name": "땅땅치킨 죽림무선점",
+      "address": "전남 여수시 죽림3길 15-16 102호",
+      "latitude": "34.763892212646255",
+      "longitude": "127.63830303932998",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/256c4ab9-3fc5-4a53-8d81-eb313fa32947.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/256c4ab9-3fc5-4a53-8d81-eb313fa32947.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/7875f4b8-4eb6-4a6f-8384-d6910ae5d605.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/b4fdf0bc-9606-4b1c-b9e1-e0708b0e4df3.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?KVGcLcX",
+      "phone": "0616859987",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "6c9c4dfd6cbb88c0",
+      "isNew": true,
+      "patstoNo": "1324646",
+      "name": "불로만치킨바베큐 학동점",
+      "address": "전남 여수시 시청동5길 20 106호",
+      "latitude": "34.75800854395782",
+      "longitude": "127.66580845871141",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7b1425c7-0532-477d-8493-ada89bed024e.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7b1425c7-0532-477d-8493-ada89bed024e.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/18b19b78-5ada-47ff-892c-36a4b4235bf1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/8e5b53c7-3109-4fcd-922d-6729e43f1fa9.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?kUUZmfn",
+      "phone": "0618072220",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": false,
+      "sourceMatch": {
+        "status": "new",
+        "method": "manual-verified-new-shop-in-shop",
+        "naverEligible": false,
+        "reason": "불로만치킨바베큐 is distinct from the current 김종구식 맛치킨 store at the same address"
+      }
+    },
+    {
+      "targetStoreId": "cddefac029bc4e71",
+      "isNew": true,
+      "patstoNo": "1188831",
+      "name": "폭탄치밥 여수여천점",
+      "address": "전남 여수시 신기남3길 2-5 1층",
+      "latitude": "34.76069702539302",
+      "longitude": "127.67221112140886",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/603ad8a2-71a0-4bd4-8f59-5de9789c0d21.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/603ad8a2-71a0-4bd4-8f59-5de9789c0d21.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/30cdda7d-d0bb-4cac-b34e-ed69ff5c0afa.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/1115a155-71f6-4f38-a5cd-361cc913a4c1.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?Z9BzWOD",
+      "phone": "0616848292",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": false,
+      "sourceMatch": {
+        "status": "new",
+        "method": "manual-verified-new-shop-in-shop",
+        "naverEligible": false,
+        "reason": "폭탄치밥 is distinct from the current 닥엔돈스 store at the same address"
+      }
+    },
+    {
+      "targetStoreId": "9f44c322e138441a",
+      "isNew": true,
+      "patstoNo": "1165647",
+      "name": "푸라닭 여수무선점",
+      "address": "전남 여수시 화산로 64",
+      "latitude": "34.77300157315921",
+      "longitude": "127.64539917740696",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/449007f3-28ff-4d61-872f-18a19d0d7ee1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/cc3c528f-5991-4036-be3d-60d2e0bb5bbb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?OH8fFct",
+      "phone": "0616919206",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "1894da97ed277235",
+      "isNew": false,
+      "patstoNo": "1154876",
+      "name": "자담치킨 학동점",
+      "address": "전남 여수시 소호로 658 부영상가 1층 1호",
+      "latitude": "34.75978373830234",
+      "longitude": "127.65640169377848",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/d6a35d40-dd34-469d-829f-aee982b4d2f2.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/d6a35d40-dd34-469d-829f-aee982b4d2f2.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/05341566-faff-4598-966b-6fd7c50947bb.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/f4ea0991-8a94-428e-afcb-32d80d98c5eb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?neqPkqv",
+      "phone": "0616819200",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "1894da97ed277235",
+        "storeName": "자담치킨 여수학동점",
+        "ddangyoAddress": "전남 여수시 소호로 658 부영상가 1층 1호",
+        "reason": "same exact branch; current sources and Ddangyo confirm 소호로 658 while stored coordinate 662 is stale"
+      }
+    },
+    {
+      "targetStoreId": "e53db0006339f439",
+      "isNew": false,
+      "patstoNo": "1179539",
+      "name": "60계치킨 여수웅천점",
+      "address": "전남 여수시 예울마루로 37-53 1층 101,102호",
+      "latitude": "34.746262033154956",
+      "longitude": "127.67087342776414",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/11afbfe8-09c3-4815-a2f6-37ec50069d41.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/11afbfe8-09c3-4815-a2f6-37ec50069d41.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/10463c8e-57ee-4362-9b29-18a028bcf7b0.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/b185b1c9-6704-4f00-8ac5-886880fbefbb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?Sb9qXy6",
+      "phone": "0616866082",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "e53db0006339f439",
+        "storeName": "60계치킨 웅천점",
+        "ddangyoAddress": "전남 여수시 예울마루로 37-53 1층 101,102호",
+        "reason": "same road address and normalized branch name"
+      }
+    },
+    {
+      "targetStoreId": "183a9d859fd9518d",
+      "isNew": false,
+      "patstoNo": "1341048",
+      "name": "멕시카나 무선죽림점",
+      "address": "전남 여수시 무선6길 24 1층",
+      "latitude": "34.77451561632668",
+      "longitude": "127.6517239349961",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/d83a6a6a-fa92-4b93-811a-99d35357f476.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/d83a6a6a-fa92-4b93-811a-99d35357f476.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c2b58682-09f5-48d0-85ba-a0017ce6bc7c.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/7410d7bd-53c7-4831-b897-5fdb1fcb116b.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?h3e2OiA",
+      "phone": "0616821239",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "183a9d859fd9518d",
+        "storeName": "멕시카나치킨 무선죽림점",
+        "address": "전남 여수시 무선6길 24",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "b285c40f90621c5c",
+      "isNew": false,
+      "patstoNo": "1315709",
+      "name": "BHC 여수소호점",
+      "address": "전남 여수시 소호5길 6-6",
+      "latitude": "34.74409442517739",
+      "longitude": "127.65141356563703",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9e960047-9520-4282-b463-0ec1ba3c9f85.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9e960047-9520-4282-b463-0ec1ba3c9f85.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/34c959c0-ed1d-4f01-b660-708d0e0c0398.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a4764e24-dc6b-4264-bba9-aebf04696300.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?RjTqfSx",
+      "phone": "0616821192",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "b285c40f90621c5c",
+        "storeName": "BHC 여수소호점",
+        "address": "전남 여수시 소호5길 6-6",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "ce40f493bcd2ca2b",
+      "isNew": false,
+      "patstoNo": "1171956",
+      "name": "노랑통닭 죽림점",
+      "address": "전남 여수시 죽림로 67 1층",
+      "latitude": "34.76562137212119",
+      "longitude": "127.63686331828127",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/26f71377-3ea4-4ea1-9254-1f49a00bfc67.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/26f71377-3ea4-4ea1-9254-1f49a00bfc67.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5a2d2fe1-6613-4b97-ab89-f95b9552e925.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/6b39c4b7-1d0a-47b7-b6d8-870288d68e51.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?3ymeMR3",
+      "phone": "0616869288",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "ce40f493bcd2ca2b",
+        "storeName": "노랑통닭 죽림점",
+        "ddangyoAddress": "전남 여수시 죽림로 67 1층",
+        "reason": "same road address; Ddangyo omits 소라면"
+      }
+    },
+    {
+      "targetStoreId": "72e0104c30277686",
+      "isNew": false,
+      "patstoNo": "1147605",
+      "name": "굽네치킨&피자 여수죽림점",
+      "address": "전남 여수시 죽림중앙로 33",
+      "latitude": "34.763756931915914",
+      "longitude": "127.63662987009195",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4445816c-d436-44a7-a901-4ef6c6858b2d.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f1325628-70dd-43e2-bac0-679c3a3729fd.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?oOKK91R",
+      "phone": "0616929494",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "72e0104c30277686",
+        "storeName": "굽네치킨&피자 죽림점",
+        "ddangyoAddress": "전남 여수시 죽림중앙로 33",
+        "reason": "same brand and 죽림 branch; Ddangyo includes 여수"
+      }
+    },
+    {
+      "targetStoreId": "c194972cb20f2229",
+      "isNew": false,
+      "patstoNo": "1115465",
+      "name": "굽네치킨&피자 여수무선점",
+      "address": "전남 여수시 화산1길 7",
+      "latitude": "34.77288560198496",
+      "longitude": "127.64917384770305",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4445816c-d436-44a7-a901-4ef6c6858b2d.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f1325628-70dd-43e2-bac0-679c3a3729fd.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?czycr95",
+      "phone": "0616926767",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "c194972cb20f2229",
+        "storeName": "굽네치킨&피자 무선점(화장동)",
+        "address": "전남 여수시 화산1길 7",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "f278d31f15ae9df1",
+      "isNew": true,
+      "patstoNo": "1332276",
+      "name": "한앤둘치킨 여수시청점",
+      "address": "전남 여수시 시청동1길 29 105호",
+      "latitude": "34.75829083955414",
+      "longitude": "127.66308699862925",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7924c34c-efa0-43bb-b203-f143e1b34626.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7924c34c-efa0-43bb-b203-f143e1b34626.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/3de34aae-82ae-48de-84c6-e0e068306ebd.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b8dd0daf-9528-4418-b221-e1c724aa02fe.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?BC2YUSz",
+      "phone": "0616855080",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "5b27fc76ce6d1647",
+      "isNew": true,
+      "patstoNo": "1124860",
+      "name": "치킨플러스 여수1호점",
+      "address": "전남 여수시 무선중앙로 50",
+      "latitude": "34.77317097807744",
+      "longitude": "127.64959345529286",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/3ed2baf6-3fd9-4204-9cf3-a6be514ffee8.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/3ed2baf6-3fd9-4204-9cf3-a6be514ffee8.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c9d8dc8c-9337-4f0a-8033-6f9aa280b6d7.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/9e9fa439-86f9-449b-91c4-794c0dd89239.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?6Dy6MpV",
+      "phone": "0616853492",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "00fbc13449fdd3ce",
+      "isNew": true,
+      "patstoNo": "1319411",
+      "name": "1키로공룡닭강정 여수여천점",
+      "address": "전남 여수시 시청로 59",
+      "latitude": "34.76700466979076",
+      "longitude": "127.66243017826413",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/eb6cc6bb-46c2-4bd4-a198-66297c94c096.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/eb6cc6bb-46c2-4bd4-a198-66297c94c096.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/cf070bb3-74ff-4523-a4ec-d99191f36a38.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/63a057fa-d40b-4a4b-bad7-b66771f6a566.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?zyC7mcw",
+      "phone": "0616830504",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "d6e14895fe474fb3",
+      "isNew": false,
+      "patstoNo": "1214086",
+      "name": "드피치 피자&치킨",
+      "address": "전남 여수시 무선중앙로 76",
+      "latitude": "34.77248721905409",
+      "longitude": "127.65217363815083",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/33bc1697-68d3-4151-ad89-4d67f73cd0c4.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/33bc1697-68d3-4151-ad89-4d67f73cd0c4.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d68ead23-bae6-4341-b05a-9972432b8920.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/ad18fa8d-1314-4492-8b58-ca85282013c4.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?nf2nuG5",
+      "phone": "0616869289",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "d6e14895fe474fb3",
+        "storeName": "드피치 피자&치킨 선원동점",
+        "address": "전남 여수시 무선중앙로 76",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "fa73c7d5be835580",
+      "isNew": true,
+      "patstoNo": "1323603",
+      "name": "ONLY 후라이드 여수학동점",
+      "address": "전남 여수시 시청동2길 8",
+      "latitude": "34.76000853815014",
+      "longitude": "127.66452067680886",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d5c31fbf-1913-4432-a57b-63d932841a3d.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d5c31fbf-1913-4432-a57b-63d932841a3d.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/f36a7f40-e2c7-4e89-9b08-6692cb53bf19.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/f3841c3d-7e64-41ca-99c3-cae1ed7d61d3.JPG"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?bD5tpYT",
+      "phone": "01076851667",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "c6b947813051ac38",
+      "isNew": false,
+      "patstoNo": "1159213",
+      "name": "자담치킨 여수죽림점",
+      "address": "전남 여수시 죽림중앙로 7-39 111호",
+      "latitude": "34.761712413601",
+      "longitude": "127.63379068311131",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/d6a35d40-dd34-469d-829f-aee982b4d2f2.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/d6a35d40-dd34-469d-829f-aee982b4d2f2.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/05341566-faff-4598-966b-6fd7c50947bb.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/f4ea0991-8a94-428e-afcb-32d80d98c5eb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?CJ7Lfgw",
+      "phone": "0616831119",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "c6b947813051ac38",
+        "storeName": "자담치킨 여수죽림점",
+        "ddangyoAddress": "전남 여수시 죽림중앙로 7-39 111호",
+        "reason": "same road address; Ddangyo omits 소라면"
+      }
+    },
+    {
+      "targetStoreId": "8e930495e2e94c21",
+      "isNew": false,
+      "patstoNo": "1224280",
+      "name": "교촌치킨 죽림무선점",
+      "address": "전남 여수시 죽림로 19 1층",
+      "latitude": "34.762590724150215",
+      "longitude": "127.63956833510385",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/30f785a6-5e47-45cb-82f6-aaebbb05c020.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/30f785a6-5e47-45cb-82f6-aaebbb05c020.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/9773adc4-45a3-4d48-bfb8-ab5f39f1bf36.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/6b07fff6-4bea-4c2a-a201-bdb1a871fee6.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?JmfKHwo",
+      "phone": "0616921991",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "8e930495e2e94c21",
+        "storeName": "교촌치킨 죽림무선점",
+        "ddangyoAddress": "전남 여수시 죽림로 19 1층",
+        "reason": "same road address; Ddangyo omits 소라면"
+      }
+    },
+    {
+      "targetStoreId": "2ce5b80012bc506a",
+      "isNew": false,
+      "patstoNo": "1233921",
+      "name": "가마치통닭 무선점",
+      "address": "전남 여수시 무선중앙로 65 1층",
+      "latitude": "34.77280122201385",
+      "longitude": "127.65113123801314",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/1c39a769-f38f-489e-8e33-09a8153cf009.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/1c39a769-f38f-489e-8e33-09a8153cf009.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e1e311f4-2a9e-4420-84cb-4d4be2503375.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8b07f2f3-8a13-4ce4-97a8-d17228dc4aae.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?00RUe3y",
+      "phone": "0616916660",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "shared-address-and-compatible-name",
+        "storeId": "2ce5b80012bc506a",
+        "storeName": "가마치통닭 무선점",
+        "address": "전남 여수시 무선중앙로 65",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "8c8ee85a0bc3b219",
+      "isNew": false,
+      "patstoNo": "1211697",
+      "name": "처갓집양념치킨 무선점",
+      "address": "전남 여수시 성산6길 53-9 1층",
+      "latitude": "34.774083150687574",
+      "longitude": "127.64378589075078",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d7ee48e4-2cc0-4dfe-8e35-a49660245930.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d7ee48e4-2cc0-4dfe-8e35-a49660245930.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/216b072c-955d-448a-b155-54cc6e7a9120.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/617e2c0c-d7ca-4144-abda-5aaf0970046e.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?i0fxfXs",
+      "phone": "0616829982",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "8c8ee85a0bc3b219",
+        "storeName": "처갓집양념치킨 무선점",
+        "address": "전남 여수시 성산6길 53-9",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "724adc8d9593fe05",
+      "isNew": false,
+      "patstoNo": "1171853",
+      "name": "가마치통닭 여수죽림점",
+      "address": "전남 여수시 죽림로 47 1층",
+      "latitude": "34.764687502254105",
+      "longitude": "127.6386305194371",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/cac343c4-c12f-46c0-917e-b6f201102e07.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/cac343c4-c12f-46c0-917e-b6f201102e07.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/84b11c75-1ad0-4052-b1bc-0a5f04bb51c5.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/49e40d83-ccdd-41d7-a94b-5c575b9d4e70.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?szNA6iZ",
+      "phone": "0619200706",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "724adc8d9593fe05",
+        "storeName": "가마치통닭 죽림점",
+        "ddangyoAddress": "전남 여수시 죽림로 47 1층",
+        "reason": "same brand and 죽림 branch; Ddangyo includes 여수"
+      }
+    },
+    {
+      "targetStoreId": "476ebcb070b7d20e",
+      "isNew": true,
+      "patstoNo": "1120308",
+      "name": "푸라닭 여수학동점",
+      "address": "전남 여수시 시청동1길 17 103호",
+      "latitude": "34.759227543298024",
+      "longitude": "127.6637559762119",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/449007f3-28ff-4d61-872f-18a19d0d7ee1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/cc3c528f-5991-4036-be3d-60d2e0bb5bbb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?fNFjCFg",
+      "phone": "0616857008",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "87fd57845e1c58b5",
+      "isNew": false,
+      "patstoNo": "1171100",
+      "name": "60계치킨 여수죽림점",
+      "address": "전남 여수시 죽림2길 38-12",
+      "latitude": "34.76148396799858",
+      "longitude": "127.63928706135515",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/11afbfe8-09c3-4815-a2f6-37ec50069d41.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/11afbfe8-09c3-4815-a2f6-37ec50069d41.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/10463c8e-57ee-4362-9b29-18a028bcf7b0.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/b185b1c9-6704-4f00-8ac5-886880fbefbb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?fG2C2oa",
+      "phone": "0616915070",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "87fd57845e1c58b5",
+        "storeName": "60계치킨 죽림점",
+        "ddangyoAddress": "전남 여수시 죽림2길 38-12",
+        "reason": "same brand and 죽림 branch; Ddangyo includes 여수"
+      }
+    },
+    {
+      "targetStoreId": "38e443f6edc5d734",
+      "isNew": true,
+      "patstoNo": "1216979",
+      "name": "촌닭이두마리 오림점",
+      "address": "전남 여수시 오림2길 17 1층",
+      "latitude": "34.756688972000305",
+      "longitude": "127.71578005485703",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0be9f7e3-1240-4888-bd46-7febdd75cbc8.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0be9f7e3-1240-4888-bd46-7febdd75cbc8.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ec4c9e5-1adf-4bda-8576-964d7a7bbac3.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55ea4d45-50ec-4003-b981-d7f2eb20eb30.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?x9nuAxX",
+      "phone": "0616550934",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "c143aca89697f5aa",
+      "isNew": true,
+      "patstoNo": "1323599",
+      "name": "후라이드 참 맛있는집 여수학동점",
+      "address": "전남 여수시 시청동2길 8",
+      "latitude": "34.76000853815014",
+      "longitude": "127.66452067680886",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/538eb125-5312-42dc-bcfd-85134f3a8ed1.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/538eb125-5312-42dc-bcfd-85134f3a8ed1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/0e647e9e-2a77-4cf6-9795-60a3c481ec6b.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/04edae59-5889-434a-ab96-edba675a62bf.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?O103ro4",
+      "phone": "01076851667",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "70d308ee26f63df0",
+      "isNew": true,
+      "patstoNo": "1206834",
+      "name": "새우치킨덤 여천점",
+      "address": "전남 여수시 신기남3길 1 1층",
+      "latitude": "34.760028",
+      "longitude": "127.672301",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/062694d9-c090-4201-9375-b17eccf301ca.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/062694d9-c090-4201-9375-b17eccf301ca.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ab825b17-3dcf-41cd-b02b-14ded9ab3905.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32292a60-2fef-4c35-b391-567ee2c6d124.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?DoRPe5P",
+      "phone": "0616830225",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": false,
+      "sourceMatch": {
+        "status": "new",
+        "method": "manual-verified-new-shop-in-shop",
+        "naverEligible": false,
+        "reason": "새우치킨덤 is distinct from the current 여수오리날개튀김 store at the same address"
+      }
+    },
+    {
+      "targetStoreId": "486bad289ae76e54",
+      "isNew": false,
+      "patstoNo": "1243595",
+      "name": "멕시칸치킨 학동점",
+      "address": "전남 여수시 학동1길 16-11 1층",
+      "latitude": "34.76492686202058",
+      "longitude": "127.66494014998757",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce8cd8f6-6344-4483-90e4-c328eae397e7.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/86f85f74-8847-4f8e-b8ad-9819f35ad52a.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?6G9uvGV",
+      "phone": "0619218789",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "486bad289ae76e54",
+        "storeName": "멕시칸치킨 학동점",
+        "address": "전남 여수시 학동1길 16-11",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "aea70baec8c61d25",
+      "isNew": false,
+      "patstoNo": "1177925",
+      "name": "노랑통닭 여수웅천점",
+      "address": "전남 여수시 웅천로 108 웅천파로스타워 104호",
+      "latitude": "34.74142846463607",
+      "longitude": "127.67536768390865",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/26f71377-3ea4-4ea1-9254-1f49a00bfc67.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/26f71377-3ea4-4ea1-9254-1f49a00bfc67.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5a2d2fe1-6613-4b97-ab89-f95b9552e925.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/6b39c4b7-1d0a-47b7-b6d8-870288d68e51.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?CbMsswm",
+      "phone": "06169208609",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "aea70baec8c61d25",
+        "storeName": "노랑통닭 웅천점",
+        "ddangyoAddress": "전남 여수시 웅천로 108 웅천파로스타워 104호",
+        "reason": "same brand and 웅천 branch; Ddangyo includes 여수"
+      }
+    },
+    {
+      "targetStoreId": "47e6097097991cae",
+      "isNew": true,
+      "patstoNo": "1120495",
+      "name": "푸라닭 여수웅천점",
+      "address": "전남 여수시 웅남2길 24 1층",
+      "latitude": "34.7482391227445",
+      "longitude": "127.67451389288007",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/53196539-f6ec-450c-b8de-fddfd8429123.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/449007f3-28ff-4d61-872f-18a19d0d7ee1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/cc3c528f-5991-4036-be3d-60d2e0bb5bbb.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?CvS9WdS",
+      "phone": "0616921799",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    },
+    {
+      "targetStoreId": "043d814d4c3c1e13",
+      "isNew": false,
+      "patstoNo": "1264293",
+      "name": "BHC 여수문수점",
+      "address": "전남 여수시 문수로 15 1층",
+      "latitude": "34.74981536937096",
+      "longitude": "127.69906762721163",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9e960047-9520-4282-b463-0ec1ba3c9f85.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9e960047-9520-4282-b463-0ec1ba3c9f85.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/34c959c0-ed1d-4f01-b660-708d0e0c0398.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a4764e24-dc6b-4264-bba9-aebf04696300.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?uQ3cazC",
+      "phone": "0616535595",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "043d814d4c3c1e13",
+        "storeName": "BHC 여수문수점",
+        "address": "전남 여수시 문수로 15",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "33c73743521674c6",
+      "isNew": false,
+      "patstoNo": "1340556",
+      "name": "굽네치킨&피자 여수웅천점",
+      "address": "전남 여수시 웅천로 19-9 103호",
+      "latitude": "34.74843616863402",
+      "longitude": "127.67804314245119",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4445816c-d436-44a7-a901-4ef6c6858b2d.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f1325628-70dd-43e2-bac0-679c3a3729fd.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?bGje9zQ",
+      "phone": "0616859294",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "33c73743521674c6",
+        "storeName": "굽네치킨&피자 웅천점",
+        "address": "전남 여수시 웅천로 19-9",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "6fd217d22e3ad371",
+      "isNew": false,
+      "patstoNo": "1116799",
+      "name": "굽네치킨&피자 여수여서점",
+      "address": "전남 여수시 여문1로 28 1층",
+      "latitude": "34.75143213573",
+      "longitude": "127.70594249986303",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/77da67f3-a97f-4570-9b2e-7cf1c627a780.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/77da67f3-a97f-4570-9b2e-7cf1c627a780.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/371aaf8a-bb8d-4383-8738-9e908c67aaee.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/810b3fb2-8159-4d1d-8a0b-3369be51bdd3.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?QktNckc",
+      "phone": "0616543633",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "6fd217d22e3ad371",
+        "storeName": "굽네치킨&피자 여서점",
+        "address": "전남 여수시 여문1로 28",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "8f4cfdc693976989",
+      "isNew": false,
+      "patstoNo": "1217203",
+      "name": "우정통닭",
+      "address": "전남 여수시 여문2로 69 101,102호",
+      "latitude": "34.75414926597285",
+      "longitude": "127.69256633940023",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2eb650e8-5b08-4381-9d28-8d38fa4fc410.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?9RD9885",
+      "phone": "0616525959",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "unique-exact-name-current-address-missing",
+        "storeId": "8f4cfdc693976989",
+        "storeName": "우정통닭",
+        "address": "",
+        "coordinateStatus": ""
+      }
+    },
+    {
+      "targetStoreId": "ee32d1ee50f7afba",
+      "isNew": true,
+      "patstoNo": "1304058",
+      "name": "박스터지는 두마리치킨 (샵인점)",
+      "address": "전남 여수시 여문2로 73 1층 9호",
+      "latitude": "34.75466163779792",
+      "longitude": "127.69298641854702",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/84eef41a-12ec-480b-a843-d37645113bcd.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/84eef41a-12ec-480b-a843-d37645113bcd.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/18fb1401-dc6c-444d-89d2-6a545603354a.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?BQEZsix",
+      "phone": "01082865619",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": false,
+      "sourceMatch": {
+        "status": "new",
+        "method": "manual-verified-new-shop-in-shop",
+        "naverEligible": false,
+        "reason": "distinct shop-in-shop at a shared address; no same-name current store"
+      }
+    },
+    {
+      "targetStoreId": "b9ea332bb64a02e8",
+      "isNew": false,
+      "patstoNo": "1133217",
+      "name": "닥엔돈스 여천점",
+      "address": "전남 여수시 신기남3길 2-5 1층",
+      "latitude": "34.76069702539302",
+      "longitude": "127.67221112140886",
+      "category": "한식",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/7da8a91a-57ac-4df6-8f00-ee576a991896.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/7da8a91a-57ac-4df6-8f00-ee576a991896.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/eeb21b0e-19cd-467e-b1ec-4ae4b033e665.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/d0aedde0-7909-4b43-b029-52fc2585363b.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?7Mram6G",
+      "phone": "0616848292",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "exact-base-address",
+        "storeId": "b9ea332bb64a02e8",
+        "storeName": "닥엔돈스 쪽갈비 여천점(신기동)",
+        "address": "전남 여수시 신기남3길 2-5",
+        "coordinateStatus": "verified"
+      }
+    },
+    {
+      "targetStoreId": "51b657cc3416c67d",
+      "isNew": false,
+      "patstoNo": "1238086",
+      "name": "여수강촌토종닭숯불구이 죽림직영점",
+      "address": "전남 여수시 죽림4길 2-17",
+      "latitude": "34.76451404770236",
+      "longitude": "127.63604337138361",
+      "category": "한식",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2691a4c1-01f1-4114-94b1-3b7cd1225fb9.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2691a4c1-01f1-4114-94b1-3b7cd1225fb9.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0d75e7e7-4610-41ee-93fb-f5b71b86d343.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/33717844-f94e-49d0-86ab-1fb7704ddc40.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?cheVei2",
+      "phone": "01093506979",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "existing",
+        "method": "manual-verified-existing",
+        "storeId": "51b657cc3416c67d",
+        "storeName": "여수강촌토종닭숯불구이 죽림직영점",
+        "ddangyoAddress": "전남 여수시 죽림4길 2-17",
+        "reason": "same road address; Ddangyo omits 소라면"
+      }
+    },
+    {
+      "targetStoreId": "ad7e6329179b4c3e",
+      "isNew": true,
+      "patstoNo": "1188818",
+      "name": "닥엔돈스 직화바베큐치킨 여수여천점",
+      "address": "전남 여수시 신기남3길 2-5 1층",
+      "latitude": "34.76069702539302",
+      "longitude": "127.67221112140886",
+      "category": "한식",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/2e238d45-dbc7-4196-ab92-13cab4356a2e.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/2e238d45-dbc7-4196-ab92-13cab4356a2e.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/498e6624-c7eb-4d96-8bf1-fcd98e9cc6bc.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/df7c0f2e-245d-4c45-a5ad-8a634b92d137.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?n5AXW9n",
+      "phone": "0616848292",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": false,
+      "sourceMatch": {
+        "status": "new",
+        "method": "manual-verified-new-shop-in-shop",
+        "naverEligible": false,
+        "reason": "닥엔돈스 직화바베큐치킨 is a separate shop-in-shop from 닥엔돈스 쪽갈비"
+      }
+    },
+    {
+      "targetStoreId": "764ac01669937810",
+      "isNew": true,
+      "patstoNo": "1323595",
+      "name": "골목포차&치킨",
+      "address": "전남 여수시 시청동2길 8",
+      "latitude": "34.76000853815014",
+      "longitude": "127.66452067680886",
+      "category": "한식",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/25d7cd39-b09a-47a8-a262-fa387e8509a3.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/25d7cd39-b09a-47a8-a262-fa387e8509a3.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/4181727a-f70d-4e56-9be0-6f61562b6d22.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5e4f369c-c93c-41db-b022-726e6209c245.jpg"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?24Ffc62",
+      "phone": "01076851667",
+      "phoneSource": "ddangyo",
+      "naverMap": "",
+      "naverEligible": true,
+      "sourceMatch": {
+        "status": "new",
+        "method": "no-address-or-unique-name-match"
+      }
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "storeId": "486bad289ae76e54",
+  "storeName": "멕시칸치킨 학동점",
+  "displayName": "멕시칸치킨 학동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/586df54a-7e47-4c58-a401-d07837ff26b8.jpg",
+  "categories": [
+    "전체",
+    "치킨메뉴",
+    "닭강정",
+    "안주메뉴",
+    "소스& 음료수",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1243595-10000001",
+      "name": "후라이드 치킨",
+      "description": "멕시칸만의 시즈닝으로 숙성된 고소하고 부드러운 속살의 일품치킨",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce8cd8f6-6344-4483-90e4-c328eae397e7.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000002",
+      "name": "양념치킨",
+      "description": "옛날 양념 맛 그대로",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/86f85f74-8847-4f8e-b8ad-9819f35ad52a.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000003",
+      "name": "간장치킨",
+      "description": "한번 드시면 또 찾는 단짠 단짠",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ab7299c0-9149-4e0b-8f3a-fff7c64db3dd.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000009",
+      "name": "순살닭강정",
+      "description": "바삭하게 튀겨낸 치킨을 달콤한 멕시칸만의 닭강정 소스로 버무린 특제치킨~~",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7e730120-84b7-4558-8b66-58df38ea877d.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000001",
+      "name": "후라이드 치킨",
+      "description": "멕시칸만의 시즈닝으로 숙성된 고소하고 부드러운 속살의 일품치킨",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce8cd8f6-6344-4483-90e4-c328eae397e7.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000009",
+      "name": "순살닭강정",
+      "description": "바삭하게 튀겨낸 치킨을 달콤한 멕시칸만의 닭강정 소스로 버무린 특제치킨~~",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7e730120-84b7-4558-8b66-58df38ea877d.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000014",
+      "name": "어묵탕",
+      "description": "",
+      "category": "안주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/5ae5ea07-321a-4550-8071-81d83e1bb694.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000017",
+      "name": "양념소스",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000002",
+      "name": "양념치킨",
+      "description": "옛날 양념 맛 그대로",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/86f85f74-8847-4f8e-b8ad-9819f35ad52a.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000010",
+      "name": "반반 순살 닭강정",
+      "description": "",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/34da1ad9-d5cc-4798-88bd-5fbd14c90d78.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000015",
+      "name": "먹태",
+      "description": "",
+      "category": "안주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/264ac897-a024-47f1-b416-6f3af7cc3c4f.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000018",
+      "name": "매운소스",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000003",
+      "name": "간장치킨",
+      "description": "한번 드시면 또 찾는 단짠 단짠",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ab7299c0-9149-4e0b-8f3a-fff7c64db3dd.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000011",
+      "name": "매운(HOT) 닭강정",
+      "description": "울 집 효녀",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a1a505ca-d5f6-458c-a747-6bb7de2a018a.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000016",
+      "name": "무뼈닭발",
+      "description": "",
+      "category": "안주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/4df3a871-835f-44cf-b93a-e823f0b839cd.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000019",
+      "name": "파닭소스",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000004",
+      "name": "후라이드+양념치킨",
+      "description": "바삭함도 맛보고 옛맛도 맛보고",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000012",
+      "name": "순살파닭",
+      "description": "뼈 없는 순살의 쫄깃한 맛~ 향긋한 파와 소스까지~ 바삭하고 부드러운 식감이 최고인 치킨",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e531a56e-409e-4c85-b281-8ab13971a6ed.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000020",
+      "name": "무",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000005",
+      "name": "매운(HOT) 양념치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa6bbf0a-1c10-4473-a6d8-bfabf7585c96.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000013",
+      "name": "떡추가",
+      "description": "",
+      "category": "닭강정",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000021",
+      "name": "양배추샐러드",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000006",
+      "name": "윙봉",
+      "description": "드시면 날아가요~",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/833b8bc2-0859-441e-b58d-e9419292e095.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000022",
+      "name": "파채",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000007",
+      "name": "양념 윙봉",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000023",
+      "name": "콜라 355ml",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000008",
+      "name": "파닭",
+      "description": "듬뿍 올려진 파채, 매콤달콤한 소스와 함께 먹는 일품치킨",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/081ce11c-d6f6-4bf5-9f24-3f2901d163b0.jpg"
+    },
+    {
+      "id": "ddangyo-1243595-10000024",
+      "name": "사이다 355ml",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000025",
+      "name": "탐스제로 파인맛 355ml",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000026",
+      "name": "펩시콜라1.25L",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1243595-10000027",
+      "name": "펩시콜라500ml",
+      "description": "",
+      "category": "소스& 음료수",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1243595",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?6G9uvGV"
+    ]
+  }
+}

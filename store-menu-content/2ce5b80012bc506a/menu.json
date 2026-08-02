@@ -1,0 +1,428 @@
+{
+  "storeId": "2ce5b80012bc506a",
+  "storeName": "가마치통닭 무선점",
+  "displayName": "가마치통닭 무선점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/1c39a769-f38f-489e-8e33-09a8153cf009.jpg",
+  "categories": [
+    "전체",
+    "신메뉴",
+    "세트메뉴",
+    "옛날통닭",
+    "조각닭",
+    "순살",
+    "가마치콤보",
+    "사이드메뉴",
+    "음료",
+    "기타",
+    "미니텐더 (kid`s 베스트)",
+    "주류메뉴",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1233921-10000012",
+      "name": "한마리",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f004b176-f18b-430c-b68a-a890e8c07200.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000013",
+      "name": "두마리",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/d197b091-7153-4df4-a92c-9c9c208cf113.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000027",
+      "name": "똥집튀김",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7a9185db-8130-4a7c-ba18-4a169af94012.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1233921-10000001",
+      "name": "(NEW) 청양맵간장순살",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/aad1790f-658e-49cc-930e-40220c02b13e.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000007",
+      "name": "혼닭세트",
+      "description": "옛날통닭 한마리 + 치즈볼3개 + 음료 500ml + 샐러드+무 + 소스택1",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-10000012",
+      "name": "한마리",
+      "description": "",
+      "category": "옛날통닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f004b176-f18b-430c-b68a-a890e8c07200.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000014",
+      "name": "조각닭 후라이드",
+      "description": "",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/9fa9cd8b-bbb4-49fc-b274-1a561f89c55b.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000019",
+      "name": "순살후라이드",
+      "description": "",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/2a6c1da9-bcdf-4454-8121-414e2ac589d5.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000023",
+      "name": "후라이드콤보",
+      "description": "",
+      "category": "가마치콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ffaa51e2-6323-4ef4-994f-6bc6e8504bec.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000027",
+      "name": "똥집튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7a9185db-8130-4a7c-ba18-4a169af94012.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000039",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/df07f2aa-daa8-46d7-a7c8-11031002aff2.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000043",
+      "name": "소스",
+      "description": "",
+      "category": "기타",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-10000047",
+      "name": "미니텐더",
+      "description": "",
+      "category": "미니텐더 (kid`s 베스트)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1233921-10000002",
+      "name": "(NEW) 허니마늘순살파닭",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7f57319b-6711-4513-a00d-43dd096bef0f.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000008",
+      "name": "1~2인 세트( 한마리+ 똥집 or 닭발튀김 )",
+      "description": "옛날통닭 한마리+ 똥집 or 닭발튀김(택 1)+ 음료 500ml+ 무 or 소스(택 1)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-10000013",
+      "name": "두마리",
+      "description": "",
+      "category": "옛날통닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/d197b091-7153-4df4-a92c-9c9c208cf113.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000015",
+      "name": "조각닭 간장",
+      "description": "",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/70ae2cca-3fc1-42e0-a398-a2bc098e029f.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000020",
+      "name": "순살간장",
+      "description": "",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/1b389012-43ab-443e-820d-bab1f83f0bc4.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000024",
+      "name": "간장콤보",
+      "description": "",
+      "category": "가마치콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/eb2e253b-53d1-435d-aa5c-e05ce74df016.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000028",
+      "name": "간장똥집튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/affb68b2-f9a7-4efa-9ce9-0474922b856a.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000040",
+      "name": "코카콜라(제로)",
+      "description": "코카콜라(제로) 200ml : 2.000",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/52980879-09eb-4472-8ad7-29356d7e109e.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000044",
+      "name": "무",
+      "description": "",
+      "category": "기타",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1233921-10000003",
+      "name": "(NEW) 청양맵간장콤보",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/38c7fc93-996e-4bbd-ae5f-5bd736f75af2.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000009",
+      "name": "2~3인 세트( 두마리+ 똥집 or 닭발튀김 )",
+      "description": "옛날통닭 두마리+ 똥집튀김 or 닭발튀김(택 1)+ 음료 1.25L+ 무+ 소스",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-10000016",
+      "name": "조각닭 양념",
+      "description": "",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ea553c53-8dea-480b-9678-8f8d444b64e2.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000021",
+      "name": "순살양념",
+      "description": "",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e7b7e548-1124-4051-b0aa-b422cd542c0b.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000025",
+      "name": "양념콤보",
+      "description": "",
+      "category": "가마치콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7220b7e5-1d7b-46b9-a90b-b89cb506347f.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000029",
+      "name": "닭발튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/6b9bbf9d-7880-4722-b7db-0f87ff53c5c2.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000041",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/26866023-b92a-4db9-a77e-73bc76212022.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000045",
+      "name": "햇반",
+      "description": "",
+      "category": "기타",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-90000004",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1233921-10000004",
+      "name": "(NEW) 허니마늘파닭콤보",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/0bd88f64-33c8-4d84-9e22-3d3e14dd33ef.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000010",
+      "name": "순살세트( 순살+치즈볼 )",
+      "description": "순살후라이드+ 치즈볼 5p+ 음료 500ml+ 무 or 소스",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-10000017",
+      "name": "조각닭 치즈",
+      "description": "",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/65cdce96-7d98-4516-9721-03136c08ff14.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000022",
+      "name": "순살치즈",
+      "description": "",
+      "category": "순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/81817c26-d8b3-4c4c-83f0-e8a329eca2dc.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000026",
+      "name": "치즈콤보",
+      "description": "",
+      "category": "가마치콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/40d1971a-5c42-439a-9874-5cd97c09a33e.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000030",
+      "name": "매운무뼈닭발튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-10000042",
+      "name": "환타(파인애플)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-10000046",
+      "name": "양배추샐러드",
+      "description": "",
+      "category": "기타",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-90000005",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1233921-10000005",
+      "name": "(NEW) 청양맵간장치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/21b65397-afdc-434e-81d1-dd33d79f764b.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000011",
+      "name": "조각닭세트( 조각닭+똥집 or 닭발튀김)",
+      "description": "조각닭 후라이드+ 똥집튀김 or 닭발튀김+ 음료 500ml+ 무 + 소스",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1233921-10000018",
+      "name": "순살 닭강정",
+      "description": "",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/fa2154c0-33ec-4db7-8757-720b719cdafc.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000031",
+      "name": "매운무뼈닭발볶음",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/424ed36b-3d39-4004-bd84-8618f5bddf35.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-90000006",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1233921-10000006",
+      "name": "(NEW) 허니마늘파닭치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/43b50560-9355-4349-8996-0c398b8c6788.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000032",
+      "name": "모듬감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/894223cf-e94d-4230-af01-998fc9c272a8.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000033",
+      "name": "가마치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7c9c4cd9-1b1e-4d03-a674-4094c7464e75.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000034",
+      "name": "뿌링클 가마치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/45f43089-c6b7-4a16-9c08-efa50a4ef94a.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000035",
+      "name": "미니소떡소떡 2개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/6bfd5aa8-f306-442e-a0ac-b3e377a9f514.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000036",
+      "name": "떡볶이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/057e131c-0edc-4cc3-bf93-14de9624a386.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000037",
+      "name": "어묵탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b9ebdbe8-1957-459a-ad09-946321f24ee8.jpg"
+    },
+    {
+      "id": "ddangyo-1233921-10000038",
+      "name": "케이준 감자튀김 (200g)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/74801000-2115-4fc4-9596-01cea6ca6ce2.jpg"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1233921",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?00RUe3y"
+    ]
+  }
+}

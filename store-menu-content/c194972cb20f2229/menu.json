@@ -1,0 +1,659 @@
+{
+  "storeId": "c194972cb20f2229",
+  "storeName": "굽네치킨&피자 여수무선점",
+  "displayName": "굽네치킨&피자 여수무선점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/087204fb-c88f-4336-8834-02770dc3bb2a.jpg",
+  "categories": [
+    "전체",
+    "굽블링",
+    "대표메뉴",
+    "세트메뉴",
+    "반마리 세트",
+    "굽네치킨 시리즈",
+    "굽네피자 시리즈",
+    "굽네 반반 & 색다른 시리즈",
+    "사이드 메뉴",
+    "찍먹소스",
+    "치킨무 & 피클 & 피자소스",
+    "음료 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1115465-30001046",
+      "name": "베스트 Pick 뼈 한마리",
+      "description": "뼈 한마리 (맛선택)+치킨무+소스",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5364c83b-a26d-44f6-ba17-2076e4745425.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001049",
+      "name": "헬시 Pick 닭가슴살",
+      "description": "닭가슴살 부위 (맛선택)+치킨무+소스",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0424e79d-17f6-4fc0-b5ab-2731f0dd56b6.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001053",
+      "name": "(New) 굽네 순살 시카고 피자 시리즈",
+      "description": "(New) 굽네 순살 시카고 피자 시리즈(택1)＋피클＋갈릭디핑+핫소스",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0fea8653-a201-43a5-991c-aa0fe2023093.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001052",
+      "name": "(New) 치킨베이크",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/270d193b-d7a8-4082-9cc3-dc323942466b.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000001",
+      "name": "(SET) 치킨+피자+콜라1.25L",
+      "description": "치킨(택1)+피자(택1)+콜라1.25L",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/49b88e48-7eba-4d8e-93de-8318b541c91d.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000350",
+      "name": "코카-콜라 245ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000003",
+      "name": "New 오리지널",
+      "description": "오리지널+달콤소스+매콤소스+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/abe52a7f-efbf-41c3-ad8c-73fb63604bc4.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000385",
+      "name": "(SET) 피자+치킨 반마리",
+      "description": "피자(택1)+반마리(택1), (소스/각무 미제공, 별도 구매)",
+      "category": "반마리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/08418cda-5b52-4a3b-addc-5e5785d49e63.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001045",
+      "name": "[굽블링] 굽네 한마리 치킨만(무/소스 미제공)",
+      "description": "치킨만' 제공됩니다.",
+      "category": "굽블링",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ce39a027-86e9-43ab-be4c-1cb133266b0c.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001054",
+      "name": "시카고 피자 시리즈",
+      "description": "시카고 피자(택 1)+피클+갈릭디핑+핫소스",
+      "category": "굽네피자 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a75d7782-fb56-42bb-a26d-22d53ef0880d.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000038",
+      "name": "치킨무",
+      "description": "",
+      "category": "치킨무 & 피클 & 피자소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30001046",
+      "name": "베스트 Pick 뼈 한마리",
+      "description": "뼈 한마리 (맛선택)+치킨무+소스",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5364c83b-a26d-44f6-ba17-2076e4745425.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001024",
+      "name": "(SET) 피자+장각 시리즈 반마리",
+      "description": "피자(택1+)장각 시리즈 3종(택1), (소스/각무 미제공, 별도 구매)",
+      "category": "반마리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e1b3344a-6b12-41da-9750-e1de545877fd.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000002",
+      "name": "(SET) 치킨+치킨+콜라1.25L",
+      "description": "치킨(택2)+콜라1.25L",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/701163df-ea09-48b0-a042-33e9b67349fe.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000021",
+      "name": "New 오리지널 반 + 볼케이노 반",
+      "description": "오리지널 반+볼케이노 반+달콤소스+마그마소스+치킨무",
+      "category": "굽네 반반 & 색다른 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a2d12656-d393-43d3-a973-024e3b9266f9.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000027",
+      "name": "매콤소스",
+      "description": "고추장 베이스에 베트남 고추를 사용하여 매콤함을 강조한 맛",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b4e005fa-a34e-4d62-a0e5-05166e9a5b75.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000395",
+      "name": "바질&토마토피자 (S)",
+      "description": "바질&토마토피자 단품제공 (구성품 미포함)",
+      "category": "굽네피자 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/cfd48843-a222-4f10-bd9c-dc3ff7b67fea.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000393",
+      "name": "New 오리지널 곱빼기(1.5마리)",
+      "description": "오리지널(1.5마리)+달콤소스+매콤소스+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/58ec9988-a547-44a7-a6fb-41677378cf26.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000039",
+      "name": "피클",
+      "description": "",
+      "category": "치킨무 & 피클 & 피자소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000394",
+      "name": "고추바사삭",
+      "description": "고추바사삭+고블링소스+마블링소스+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e2bfb4a9-cf6b-46c8-b999-393d18f52752.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000022",
+      "name": "New 오리지널 + 갈비천왕 반",
+      "description": "오리지널 반+갈비천왕 반+매콤소스+왕중왕소스+치킨무",
+      "category": "굽네 반반 & 색다른 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d1275dde-d338-4b42-a900-3a0e916b88a9.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001049",
+      "name": "헬시 Pick 닭가슴살",
+      "description": "닭가슴살 부위 (맛선택)+치킨무+소스",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0424e79d-17f6-4fc0-b5ab-2731f0dd56b6.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001051",
+      "name": "치.베 SET (치킨+치킨 베이크)",
+      "description": "치킨(택1)+치킨 베이크",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/8098e611-c88f-4f78-8bb6-d3bb52047db5.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000028",
+      "name": "달콤소스",
+      "description": "고추장 베이스에 다진 야채를 사용하여 은은하게 달콤한 맛",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/70971fb8-c5aa-42f1-95a3-2fdb2c0c8b3b.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001025",
+      "name": "(SET) 싱글피자+장각 시리즈 반마리",
+      "description": "싱글피자(택1)+장각 시리즈 3종(택1), (소스/각무/피클 미제공, 별도 구매)",
+      "category": "반마리 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/74f68e99-a56a-4fd0-ae46-45da1da10012.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000352",
+      "name": "코카-콜라 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/df4c7f6c-368c-4f04-874a-9540c02d6b63.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000190",
+      "name": "미니붕어빵 (팥)",
+      "description": "부드러운 단팥 앙금으로 가득 채운 달콤한 미니붕어빵(8개)",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/98a88712-b169-4898-829d-b029899c36db.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000040",
+      "name": "갈릭디핑 소스",
+      "description": "",
+      "category": "치킨무 & 피클 & 피자소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000899",
+      "name": "트리플포테이토피자 (M)",
+      "description": "트리플포테이토피자 단품제공 (구성품 미포함)",
+      "category": "굽네피자 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4d476ed2-5e99-43b1-8e98-356eeafae9bd.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000029",
+      "name": "마블링소스",
+      "description": "마요네즈, 스리라차 베이스의 부드러운 맛",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2ca37184-fa7f-40ae-ad0d-ad4bafd44e80.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000191",
+      "name": "미니붕어빵 (우유크림)",
+      "description": "달콤한 우유크림에 바닐라빈을 넣어 더욱 진해진 앙금으로 가득 채운 미니붕어빵(8개)",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/2d87601a-b79a-4764-b635-2f3c68941ed5.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000392",
+      "name": "고추바사삭 곱빼기(1.5마리)",
+      "description": "고추바사삭(1.5마리)+고블링소스+마블링소스+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/148cfd6e-367b-40bb-afb9-981fb2afa2a5.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000353",
+      "name": "코카-콜라 1.25L",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/39344f36-0a25-4a47-b345-1a9a1a8210c1.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001053",
+      "name": "(New) 굽네 순살 시카고 피자 시리즈",
+      "description": "(New) 굽네 순살 시카고 피자 시리즈(택1)＋피클＋갈릭디핑+핫소스",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0fea8653-a201-43a5-991c-aa0fe2023093.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000041",
+      "name": "핫소스",
+      "description": "",
+      "category": "치킨무 & 피클 & 피자소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30001052",
+      "name": "(New) 치킨베이크",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/270d193b-d7a8-4082-9cc3-dc323942466b.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000030",
+      "name": "고블링소스",
+      "description": "이국적인 향이 나는 할라피뇨 고추맛",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b6950c8a-070d-4fd1-99a3-7da15c04b103.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000008",
+      "name": "볼케이노",
+      "description": "볼케이노+마그마소스+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/39a33727-c74b-4abe-abeb-0dfa9a3bc507.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000192",
+      "name": "미니붕어빵 (반반)",
+      "description": "부드러운 단팥 앙금, 달콤한 우유크림 앙금 둘 다 놓칠 수 없다면, 반반으로 즐겨보세요!(팥 4개, 우유크림 4개)",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/cb9ffd3d-a8c4-4ff8-975f-ec60f8a66908.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000354",
+      "name": "콜라 245ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000904",
+      "name": "폭립",
+      "description": "폭립+치킨무",
+      "category": "굽네 반반 & 색다른 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/bce223e1-53ff-4f7f-b20c-ba274972cd1f.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000026",
+      "name": "불닭발",
+      "description": "불닭발+치킨무",
+      "category": "굽네 반반 & 색다른 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/205fedd2-9cac-4d46-b0eb-4c11011a1dfb.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000902",
+      "name": "갈비천왕 플러스 피자 (M)",
+      "description": "갈비천왕플러스피자 단품제공 (구성품 미포함)",
+      "category": "굽네피자 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/708c39eb-d3ea-4d05-bddd-617b9d953a24.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000009",
+      "name": "갈비천왕",
+      "description": "갈비천왕+왕중왕소스+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/27e11940-0fa9-4847-b67b-ebeea1667450.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000356",
+      "name": "콜라 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000348",
+      "name": "요블링소스",
+      "description": "마요네즈 베이스의 랜치소스맛",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/e6275ddf-9292-498a-8298-1ad8694f52c5.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000048",
+      "name": "웨지감자(국내산)",
+      "description": "국내산 감자를 반달 모양으로 도톰하게 썰어 바삭하게 구운 웨지감자(NON GMO)",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d6007e94-a16e-43f3-9fa1-9a33eb5de2cb.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000903",
+      "name": "(SET) 피자+파스타",
+      "description": "피자(M)(택1)+파스타(택1), (피클,소스 미제공)",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/cacae6b0-2703-4a0f-a7b0-afbe3a38101a.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000132",
+      "name": "오븐바사삭",
+      "description": "오븐바사삭+소스1종+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/dca0c55a-cd27-4516-be08-d8336d370bb7.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000357",
+      "name": "콜라 1.25L",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000011",
+      "name": "양념히어로",
+      "description": "양념히어로+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f02eb7e1-081d-44f8-ad3f-af2f267beee0.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000346",
+      "name": "갈릭버터 웨지감자 (국내산)",
+      "description": "오븐에 구운 국내산 웨지감자에 갈릭버터 소스 가득~ 크리미한 갈릭버터 웨지감자",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/01/53e407ab-047f-4507-b553-24a4dfeee76b.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000147",
+      "name": "(SET) 치킨+싱글피자",
+      "description": "치킨(택1)+싱글피자(택1)",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/10/8e3ba4d3-a985-4d9f-90f8-1b7511ddb1e4.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000119",
+      "name": "남해마늘바사삭",
+      "description": "남해마늘바사삭+소스택1+치킨무",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/20747300-2276-45d3-877d-f4a50c2e58a6.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000358",
+      "name": "코카-제로 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/09fd454a-0433-4231-9853-019307900e1f.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000896",
+      "name": "(SET) 치킨+맵달떡볶이",
+      "description": "치킨(택1)+맵달떡볶이",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/150d4f13-0a07-4cfd-b8f8-0a7a6563ea0c.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000892",
+      "name": "콰트로 치즈 웨지감자(국내산)",
+      "description": "(New) 콰트로 치즈 시즈닝을 솔솔 뿌려 진한 치즈 맛이 더해진 웨지감자",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/bd2e3ec7-6630-40e8-881a-035726d8c8d5.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000359",
+      "name": "코카-제로 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000050",
+      "name": "케이준감자",
+      "description": "짭쪼름하고 고소한 케이준 양념으로 오븐에서 바삭하게 구운 케이준 감자",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8308f9bd-40af-4a14-83eb-23c0f13079f2.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001013",
+      "name": "굽네 장각구이",
+      "description": "굽네 장각구이(4조각)+치킨무+추블링살사+요블링소스",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/24259ac2-504c-42cc-ade0-2dc510d6510b.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000360",
+      "name": "코카-제로 1.25L",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/40a0506c-d03b-4087-a8ba-2feb3e458869.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001022",
+      "name": "볼케이노 장각",
+      "description": "볼케이노 장각(4조각)+치킨무+마그마소스",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/f23799f9-dc2e-4059-930d-6860c9b762ce.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000033",
+      "name": "마그마소스",
+      "description": "숯불 바비큐 양념맛",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f299191e-9af0-46e4-8f55-2dcbc982d7fd.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000361",
+      "name": "제로콜라 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000894",
+      "name": "콰트로 치즈 케이준감자",
+      "description": "(New) 콰트로 치즈 시즈닝을 솔솔 뿌려 진한 치즈 맛이 더해진 케이준 감자",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/37b719db-3526-40e5-960f-ac69813f0a61.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30001023",
+      "name": "오리지널 장각",
+      "description": "오리지널 장각(4조각)+치킨무+달콤소스+매콤소스",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/70d91c18-ae1d-4674-a561-e166253338a7.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000034",
+      "name": "왕중왕소스",
+      "description": "간장 양념 갈비맛",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/95613630-123f-4316-bc2a-9a59784031fa.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000036",
+      "name": "치트킹 (콘스프맛)",
+      "description": "뿌려도 먹고 찍어도 먹는 만능 시즈닝!부드러운 콘스프&체다 치즈 조합의 치트킹",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2eebb656-9006-42ea-bafb-fd2fa3142495.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000362",
+      "name": "제로콜라 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30001035",
+      "name": "굽네 추추 치킨 스테이크 2 SET",
+      "description": "추추 치킨 스테이크 2 SET (4조각)+피클 1개",
+      "category": "굽네치킨 시리즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/64e59ee8-3ab5-4d10-a28f-e798f431e4d4.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000125",
+      "name": "모짜치즈볼",
+      "description": "오븐에서 구워 겉은 바삭, 속은 모짜렐라 치즈가 가득",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/fcd5abd3-d2c3-4cb7-9b6e-63f2e1750df7.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000363",
+      "name": "제로콜라 1.25L",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000042",
+      "name": "콰트로모짜치즈볼",
+      "description": "콰트로 치즈 시즈닝이 모짜 치즈볼 위에 솔솔, 진한 치즈 맛이 더해진 치즈볼",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/14eef5f0-c16e-4a2a-806e-50b2e356c55a.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000037",
+      "name": "치트킹 (매콤치즈맛)",
+      "description": "뿌려도 먹고 찍어도 먹는 만능 시즈닝! 고추의 매콤함&진한 블루치즈 조합의 치트킹",
+      "category": "찍먹소스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f4610e64-b512-4f69-bf1f-4d7daccbf6f8.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000905",
+      "name": "볼로네제 파스타",
+      "description": "다진 소고기를 넣은 깊은 맛의 토마토 소스에 모짜렐라 치즈를 더해 풍미 가득한 볼로네제 파스타",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b5635993-beb8-4430-9464-56742792f5cd.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000365",
+      "name": "스프라이트 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/8d736577-d0d6-4e06-b86b-32cf1b70c139.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000906",
+      "name": "까르보나라 파스타",
+      "description": "베이컨과 양송이에 고소한 치즈를 곁들인 크리미한 까르보나라 파스타",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7d5dd052-f2b0-4275-afb0-3ffe1de93516.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000895",
+      "name": "맵달떡볶이",
+      "description": "(2~3인분) 매콤하게 때론 달콤하게, 나를 위로하는 소울푸드",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/60ee84cf-dfa7-4f45-9d16-e5bf4756f1a3.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000366",
+      "name": "스프라이트 1.5L",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/76a11f84-aae4-42ff-ad5b-b658e7e850b7.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000897",
+      "name": "치즈맵달떡볶이",
+      "description": "(2~3인분) 맵달떡볶이에 모짜렐라치즈가 한가득",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000046",
+      "name": "바게트볼(갈릭크림)1개",
+      "description": "리얼크림치즈 듬뿍 입안에서 샤르르 디저트!",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b3e55933-697d-49e9-90a2-58a8af31ffc8.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000047",
+      "name": "바게트볼(갈릭크림)2개",
+      "description": "리얼크림치즈 듬뿍 입안에서 샤르르 디저트!",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000907",
+      "name": "에그타르트 (2개)",
+      "description": "맛도 사이즈도 UP, 바삭한 패스츄리에 달콤하고 부드러운 바닐라 커스터드 크림 가득한 에그타르트",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7a7e5edf-b223-48ed-a3d9-207240415996.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000064",
+      "name": "볼케이노 치즈치밥",
+      "description": "매콤불맛 볼케이노 소스를 버무리고 고소한 치즈를 토핑한 치밥",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/cc83de0f-d599-4fd5-990c-b814e72949ff.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000065",
+      "name": "갈비천왕 치즈치밥",
+      "description": "단짠단짠 갈비천왕 소스를 버무리고 고소한 치즈를 토핑한 치밥",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/37e0d6f8-9cd7-4cdb-840f-108241f05a60.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000066",
+      "name": "매콤치즈소떡소떡",
+      "description": "매콤한 소스를 발라 구운 소떡소떡에 치즈가루가 사르르~",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/051bc9e7-22c5-42e8-bc66-42d861848f1c.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000124",
+      "name": "남해구운마늘 (8알)",
+      "description": "오븐에 구워 고소한 남해마늘",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2a4d98ea-948b-4f8c-b428-624bcd8d9f34.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000070",
+      "name": "즉석밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1115465-30000397",
+      "name": "(토핑) 떡사리",
+      "description": "볼케이노/갈비천왕/불금치킨과 잘 어울리는 떡사리 토핑",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/ea0cb7bc-3ecb-4ef3-8e65-197338afc6ef.jpg"
+    },
+    {
+      "id": "ddangyo-1115465-30000378",
+      "name": "오란씨",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1115465",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?czycr95"
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "storeId": "c143aca89697f5aa",
+  "storeName": "후라이드 참 맛있는집 여수학동점",
+  "displayName": "후라이드 참 맛있는집 여수학동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/538eb125-5312-42dc-bcfd-85134f3a8ed1.jpg",
+  "categories": [
+    "전체",
+    "세트메뉴 ~",
+    "크리스피치킨 ~",
+    "떡볶이 맛집 ~",
+    "같이 먹으면 더욱 맛있는 ~",
+    "음료 ~",
+    "소스 ~",
+    "주류메뉴",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1323599-10000007",
+      "name": "놓치면 후회~바삭후라이드",
+      "description": "펩시콜라355ml+ 치킨무+ 특제소스+ 소금",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c27d54f8-a8ac-4a3b-96f3-500e303e07c7.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000008",
+      "name": "기쁨 바삭 양념치킨",
+      "description": "펩시콜라355ml+ 치킨무",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/a2c7334e-398f-431a-ae08-339a593b6f82.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000001",
+      "name": "반반치킨(후라이드+양념 고민끝)",
+      "description": "반반치킨 1마리+ 콜라355ml+ 치킨무1개+ 소금",
+      "category": "세트메뉴 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/810645bf-c4ce-48e4-8656-35b1e97d2dfd.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000007",
+      "name": "놓치면 후회~바삭후라이드",
+      "description": "펩시콜라355ml+ 치킨무+ 특제소스+ 소금",
+      "category": "크리스피치킨 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c27d54f8-a8ac-4a3b-96f3-500e303e07c7.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000013",
+      "name": "맵달 떡볶이",
+      "description": "후참만의 특별 떡볶이 레시피",
+      "category": "떡볶이 맛집 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/82dde636-7a26-4ceb-95ab-292b5bccfec1.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000014",
+      "name": "감자튀김",
+      "description": "치즈시즈닝, 어니언, 노솔트 중 선택 가능",
+      "category": "같이 먹으면 더욱 맛있는 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1078453d-f708-4f8b-8c00-6233d3cabfc9.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000018",
+      "name": "펩시콜라 355ml",
+      "description": "",
+      "category": "음료 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000022",
+      "name": "양념 컵소스",
+      "description": "",
+      "category": "소스 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323599-10000002",
+      "name": "한번먹으면 반하는 치떡세트~",
+      "description": "치킨1마리+ 맵달떡볶이+ 콜라355ml+ 치킨무1개+ 소금",
+      "category": "세트메뉴 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000008",
+      "name": "기쁨 바삭 양념치킨",
+      "description": "펩시콜라355ml+ 치킨무",
+      "category": "크리스피치킨 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/a2c7334e-398f-431a-ae08-339a593b6f82.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000015",
+      "name": "야끼군만두 5개",
+      "description": "",
+      "category": "같이 먹으면 더욱 맛있는 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f29997fb-cfb9-4d7f-a5ba-1d3c25447ce7.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000019",
+      "name": "펩시콜라 1.25L",
+      "description": "",
+      "category": "음료 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000023",
+      "name": "매운양념 컵소스",
+      "description": "",
+      "category": "소스 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323599-90000007",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323599-10000003",
+      "name": "8000원개업행사~2마리가성비 찐",
+      "description": "치킨2마리+ 콜라355ml+ 치킨무1개+ 소금",
+      "category": "세트메뉴 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000009",
+      "name": "허니~ 간장치킨",
+      "description": "펩시콜라355ml+ 치킨무",
+      "category": "크리스피치킨 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/35677b10-aef1-4979-84e5-818f69569944.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000016",
+      "name": "떡튀김(20개)",
+      "description": "쫄깃쫄깃 듬뿍주는 구멍쌀떡",
+      "category": "같이 먹으면 더욱 맛있는 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e5b845d4-25cb-4397-9ec4-b7550300509d.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000020",
+      "name": "제로펩시콜라 355ml",
+      "description": "",
+      "category": "음료 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000024",
+      "name": "허니간장 컵소스",
+      "description": "",
+      "category": "소스 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000004",
+      "name": "치킨3마리 갓성비~세트(15000원할인)",
+      "description": "치킨3마리+ 콜라1.25ml+ 치킨무2개+ 소금",
+      "category": "세트메뉴 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323599-10000010",
+      "name": "매운양념(매콤주의)",
+      "description": "펩시콜라355ml+ 치킨무",
+      "category": "크리스피치킨 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/19d7fbe0-6b7c-4cbf-b0af-314377a85b19.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000017",
+      "name": "치킨무",
+      "description": "가게에서 조미료 없이 직접만든 치킨무",
+      "category": "같이 먹으면 더욱 맛있는 ~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/346f18d7-a13e-4100-856a-1583a5726362.jpg"
+    },
+    {
+      "id": "ddangyo-1323599-10000021",
+      "name": "제로펩시콜라 1.25L",
+      "description": "",
+      "category": "음료 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000025",
+      "name": "어니언크리미 컵소스",
+      "description": "",
+      "category": "소스 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323599-10000005",
+      "name": "골라먹는 4가지맛 치킨(두마리세트)",
+      "description": "네가지맛(2마리)+ 콜라355ml+ 치킨무1개+ 소금",
+      "category": "세트메뉴 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000011",
+      "name": "양념 슈프림 치킨(신메뉴)",
+      "description": "펩시콜라500ml+ 치킨무+ 오픈 기념 서비스",
+      "category": "크리스피치킨 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-10000006",
+      "name": "치감세트 (치킨+감자튀김)",
+      "description": "치킨1마리+ 감자튀김(맛선택)+ 콜라355ml+ 치킨무1개+ 오픈 기념 서비스",
+      "category": "세트메뉴 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-90000005",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1323599-10000012",
+      "name": "매운양념 슈프림 치킨(신메뉴)",
+      "description": "펩시콜라355ml+ 치킨무",
+      "category": "크리스피치킨 ~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1323599-90000006",
+      "name": "켈리 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1323599",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?O103ro4"
+    ]
+  }
+}

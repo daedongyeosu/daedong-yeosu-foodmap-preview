@@ -1,0 +1,226 @@
+{
+  "storeId": "ad7e6329179b4c3e",
+  "storeName": "닥엔돈스 직화바베큐치킨 여수여천점",
+  "displayName": "닥엔돈스 직화바베큐치킨 여수여천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/2e238d45-dbc7-4196-ab92-13cab4356a2e.jpg",
+  "categories": [
+    "전체",
+    "직화 순살바베큐치킨 단품",
+    "직화 순살바베큐치킨 세트",
+    "사이드메뉴",
+    "주류",
+    "대표메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1188818-10000026",
+      "name": "[직화] 순살양념바베큐치킨+우동사리",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/df7c0f2e-245d-4c45-a5ad-8a634b92d137.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000025",
+      "name": "[직화] 순살양념바베큐치킨",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/3a5e1317-d2a3-4c22-8ea6-1e30565bff81.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000027",
+      "name": "[직화] 순살간장바베큐치킨",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9eb785f5-c869-40ae-a005-9d1dfe9a7260.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000029",
+      "name": "[직화] 순살허브소금바베큐치킨",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/6fee24f9-31a0-4300-b8a8-49178b64e860.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000030",
+      "name": "[치즈가득] 직화 치즈순살양념바베큐치킨",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9b7dceef-7c87-457b-9af5-08e989bd18d9.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000025",
+      "name": "[직화] 순살양념바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/3a5e1317-d2a3-4c22-8ea6-1e30565bff81.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000032",
+      "name": "직화 순살양념바베큐치킨+ 직화 순살간장바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/18a52c54-4e26-4fc6-b4d6-4a0b7072a84c.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000035",
+      "name": "케이준양념감자 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000049",
+      "name": "참이슬",
+      "description": "",
+      "category": "주류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000026",
+      "name": "[직화] 순살양념바베큐치킨+우동사리",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/df7c0f2e-245d-4c45-a5ad-8a634b92d137.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000033",
+      "name": "직화 순살양념바베큐치킨+ 직화 순살허브소금바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000036",
+      "name": "똥집후라이드 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000050",
+      "name": "잎새주",
+      "description": "",
+      "category": "주류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000027",
+      "name": "[직화] 순살간장바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9eb785f5-c869-40ae-a005-9d1dfe9a7260.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000034",
+      "name": "직화 순살간장바베큐치킨+ 직화 순살허브소금바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/6abed6c8-43c9-4f04-a54c-e3550b1cc596.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000037",
+      "name": "크림치즈볼(4개) 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000051",
+      "name": "카스",
+      "description": "",
+      "category": "주류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000028",
+      "name": "[직화] 순살간장바베큐치킨+우동사리",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/6e60cbc8-4765-43e2-8678-7bcc7b417d95.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000038",
+      "name": "왕새우튀김(3마리) 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000029",
+      "name": "[직화] 순살허브소금바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/6fee24f9-31a0-4300-b8a8-49178b64e860.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000039",
+      "name": "셀프참치마요주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000030",
+      "name": "[치즈가득] 직화 치즈순살양념바베큐치킨",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9b7dceef-7c87-457b-9af5-08e989bd18d9.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000040",
+      "name": "모짜렐라치즈 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000031",
+      "name": "[치밥원조] 순살바베큐치킨+우동사리",
+      "description": "",
+      "category": "직화 순살바베큐치킨 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/7f7088dd-e86a-46e3-9824-2846a1ba1835.jpg"
+    },
+    {
+      "id": "ddangyo-1188818-10000041",
+      "name": "우동사리 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000042",
+      "name": "떡사리 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000043",
+      "name": "공기밥 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000044",
+      "name": "콜라 1.25 리터로 변경",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1188818-10000045",
+      "name": "포장무 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1188818",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?n5AXW9n"
+    ]
+  }
+}
