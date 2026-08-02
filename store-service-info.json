@@ -1,18 +1,31 @@
 {
-  "version": 2,
-  "updatedAt": "2026-07-31",
+  "version": 3,
+  "updatedAt": "2026-08-02",
   "programs": [
     {
       "key": "yeosu-seomseom-pay",
-      "label": "여수섬섬페이"
+      "label": "여수섬섬페이",
+      "appKeys": [
+        "mukkebi",
+        "ddangyo"
+      ],
+      "appLabel": "먹깨비·땡겨요"
     },
     {
       "key": "high-oil-support",
-      "label": "고유가 피해지원금"
+      "label": "고유가 피해지원금",
+      "appKeys": [
+        "ddangyo"
+      ],
+      "appLabel": "땡겨요"
     },
     {
       "key": "onnuri-gift-certificate",
-      "label": "온누리상품권"
+      "label": "온누리상품권",
+      "appKeys": [
+        "ddangyo"
+      ],
+      "appLabel": "땡겨요"
     }
   ],
   "stores": {
@@ -22,7 +35,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -32,7 +50,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -42,11 +65,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -56,7 +88,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -66,11 +103,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -80,11 +126,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -94,7 +149,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -104,14 +164,23 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -121,14 +190,22 @@
       "payments": [
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -138,7 +215,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -148,7 +230,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -158,11 +245,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -172,7 +268,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -182,7 +283,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -192,11 +298,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -206,11 +321,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -220,11 +344,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -234,7 +367,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -244,7 +382,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -254,7 +397,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -264,7 +412,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -274,7 +427,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -284,14 +442,23 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -301,7 +468,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -311,14 +483,22 @@
       "payments": [
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -328,7 +508,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -338,11 +523,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -352,11 +546,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -366,7 +569,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -376,11 +584,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -390,18 +607,31 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -411,11 +641,20 @@
       "payments": [
         {
           "key": "onnuri-gift-certificate",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         },
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -425,7 +664,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -435,14 +679,22 @@
       "payments": [
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -452,7 +704,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -462,7 +719,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -472,11 +734,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -486,7 +757,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -496,7 +772,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -506,11 +787,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -520,7 +810,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -530,7 +825,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -540,11 +840,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -554,14 +863,22 @@
       "payments": [
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -571,7 +888,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -581,7 +903,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -591,11 +918,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -605,11 +941,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -619,11 +964,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -633,7 +987,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -643,11 +1002,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -657,14 +1025,23 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -734,7 +1111,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -744,11 +1126,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -758,7 +1149,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -768,11 +1164,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -782,18 +1187,31 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -803,14 +1221,23 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -820,7 +1247,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -830,7 +1262,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -840,7 +1277,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -850,7 +1292,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -860,11 +1307,20 @@
       "payments": [
         {
           "key": "onnuri-gift-certificate",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         },
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -874,11 +1330,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -888,7 +1353,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -898,11 +1368,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -912,11 +1391,20 @@
       "payments": [
         {
           "key": "onnuri-gift-certificate",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         },
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -926,7 +1414,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -936,14 +1429,23 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -953,7 +1455,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -963,7 +1470,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -973,11 +1485,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -987,7 +1508,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -997,11 +1523,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1011,7 +1546,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1021,11 +1561,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1035,7 +1584,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1045,7 +1599,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1055,7 +1614,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1065,11 +1629,20 @@
       "payments": [
         {
           "key": "onnuri-gift-certificate",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         },
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1079,7 +1652,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1089,7 +1667,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1099,7 +1682,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1109,7 +1697,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1119,7 +1712,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1129,11 +1727,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1143,11 +1750,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1157,11 +1773,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1171,18 +1796,31 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ],
       "delivery": [
         {
           "key": "free-delivery",
           "status": "available",
-          "note": "배달앱 표시 기준 · 거리·주문금액 등에 따라 달라질 수 있음"
+          "note": "땡겨요 표시 기준 · 거리·주문금액·시간 등에 따라 달라질 수 있음",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1192,15 +1830,28 @@
       "payments": [
         {
           "key": "onnuri-gift-certificate",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         },
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1210,11 +1861,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1224,11 +1884,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1238,11 +1907,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1252,11 +1930,20 @@
       "payments": [
         {
           "key": "onnuri-gift-certificate",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         },
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1266,11 +1953,20 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         },
         {
           "key": "high-oil-support",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         }
       ]
     },
@@ -1280,11 +1976,20 @@
       "payments": [
         {
           "key": "onnuri-gift-certificate",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
         },
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1294,7 +1999,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1304,7 +2014,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1314,7 +2029,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1324,7 +2044,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1334,7 +2059,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     },
@@ -1344,7 +2074,12 @@
       "payments": [
         {
           "key": "yeosu-seomseom-pay",
-          "status": "accepted"
+          "status": "accepted",
+          "appKeys": [
+            "mukkebi",
+            "ddangyo"
+          ],
+          "appLabel": "먹깨비·땡겨요"
         }
       ]
     }
@@ -1352,7 +2087,15 @@
   "deliveryBenefits": [
     {
       "key": "free-delivery",
-      "label": "무료배달 가능"
+      "label": "무료배달 가능",
+      "appKeys": [
+        "ddangyo"
+      ],
+      "appLabel": "땡겨요"
     }
-  ]
+  ],
+  "scopePolicy": {
+    "unit": "store-order-app-benefit",
+    "notice": "상품권·쿠폰·무료배달은 표시된 주문앱에서 확인한 정보이며 다른 주문앱에는 적용되지 않을 수 있습니다."
+  }
 }

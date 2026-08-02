@@ -194,26 +194,49 @@
     return String(store?.area || store?.neighborhood || '동네 미확인').trim() || '동네 미확인';
   }
 
+  function benefitScope(entry, definition) {
+    const appKeys = Array.isArray(entry?.appKeys) && entry.appKeys.length
+      ? entry.appKeys
+      : Array.isArray(definition?.appKeys) ? definition.appKeys : [];
+    const appLabel = String(entry?.appLabel || definition?.appLabel || '').trim()
+      || '적용 주문앱 미확인';
+    return {appKeys, appLabel};
+  }
+
+  function scopedBenefitLabel(benefit) {
+    return `${benefit.appLabel || '적용 주문앱 미확인'} ${benefit.label}`.trim();
+  }
+
   function paymentLabels(info) {
-    const programMap = new Map((serviceData.programs || []).map(program => [program.key, program.label]));
+    const programMap = new Map((serviceData.programs || []).map(program => [program.key, program]));
     return (info?.payments || [])
       .filter(payment => payment.status === 'accepted')
-      .map(payment => ({
-        key: payment.key,
-        label: programMap.get(payment.key) || payment.key,
-        kind: 'payment'
-      }));
+      .map(payment => {
+        const definition = programMap.get(payment.key) || {key: payment.key, label: payment.key};
+        const scope = benefitScope(payment, definition);
+        return {
+          key: payment.key,
+          label: definition.label || payment.key,
+          kind: 'payment',
+          ...scope
+        };
+      });
   }
 
   function deliveryLabels(info) {
-    const deliveryMap = new Map((serviceData.deliveryBenefits || []).map(benefit => [benefit.key, benefit.label]));
+    const deliveryMap = new Map((serviceData.deliveryBenefits || []).map(benefit => [benefit.key, benefit]));
     return (info?.delivery || [])
       .filter(benefit => benefit.status === 'available')
-      .map(benefit => ({
-        key: benefit.key,
-        label: deliveryMap.get(benefit.key) || benefit.key,
-        kind: 'delivery'
-      }));
+      .map(benefit => {
+        const definition = deliveryMap.get(benefit.key) || {key: benefit.key, label: benefit.key};
+        const scope = benefitScope(benefit, definition);
+        return {
+          key: benefit.key,
+          label: definition.label || benefit.key,
+          kind: 'delivery',
+          ...scope
+        };
+      });
   }
 
   function benefitLabels(info) {
@@ -237,7 +260,7 @@
 
   function benefitBadgeMarkup(benefit, className) {
     const deliveryClass = benefit.kind === 'delivery' ? ' is-delivery' : '';
-    return `<span class="${className}${deliveryClass}">✓ ${escapeHtml(benefit.label)}</span>`;
+    return `<span class="${className}${deliveryClass}" data-benefit-app="${escapeHtml((benefit.appKeys || []).join('-'))}">✓ ${escapeHtml(scopedBenefitLabel(benefit))}</span>`;
   }
 
   function cardMetaMarkup(status, benefits) {
@@ -248,30 +271,34 @@
       <span class="store-service-card-hours">${escapeHtml(status.detail)}</span>
       ${benefits.length
         ? benefits.slice(0, 3).map(benefit => benefitBadgeMarkup(benefit, 'store-service-card-payment')).join('')
-        : '<span class="store-service-card-unknown">결제·혜택 미확인</span>'}
+        : '<span class="store-service-card-unknown">주문앱별 혜택 미확인</span>'}
     `;
   }
 
   function detailBenefitItems(info) {
-    const payments = new Map((info?.payments || []).map(payment => [payment.key, payment.status]));
-    const delivery = new Map((info?.delivery || []).map(benefit => [benefit.key, benefit.status]));
+    const payments = new Map((info?.payments || []).map(payment => [payment.key, payment]));
+    const delivery = new Map((info?.delivery || []).map(benefit => [benefit.key, benefit]));
     return [
       ...(serviceData.programs || []).map(program => {
-        const value = payments.get(program.key);
+        const entry = payments.get(program.key);
+        const value = entry?.status;
         return {
           key: program.key,
           label: program.label,
           kind: 'payment',
-          state: value === 'accepted' ? 'available' : value === 'unavailable' ? 'unavailable' : 'unknown'
+          state: value === 'accepted' ? 'available' : value === 'unavailable' ? 'unavailable' : 'unknown',
+          ...benefitScope(entry, program)
         };
       }),
       ...(serviceData.deliveryBenefits || []).map(benefit => {
-        const value = delivery.get(benefit.key);
+        const entry = delivery.get(benefit.key);
+        const value = entry?.status;
         return {
           key: benefit.key,
           label: benefit.label,
           kind: 'delivery',
-          state: value === 'available' ? 'available' : value === 'unavailable' ? 'unavailable' : 'unknown'
+          state: value === 'available' ? 'available' : value === 'unavailable' ? 'unavailable' : 'unknown',
+          ...benefitScope(entry, benefit)
         };
       })
     ];
@@ -279,11 +306,12 @@
 
   function detailBenefitMarkup(item) {
     const isDelivery = item.kind === 'delivery';
+    const appLabel = item.appLabel || '적용 주문앱 미확인';
     const stateLabel = item.state === 'available'
-      ? (isDelivery ? item.label : `${item.label} 사용 가능`)
+      ? (isDelivery ? `${appLabel} · 무료배달 확인` : `${appLabel} · ${item.label} 사용 가능 확인`)
       : item.state === 'unavailable'
-        ? (isDelivery ? '무료배달 불가' : `${item.label} 사용 불가`)
-        : (isDelivery ? '무료배달 여부 미확인' : `${item.label} 미확인`);
+        ? (isDelivery ? `${appLabel} · 무료배달 불가 확인` : `${appLabel} · ${item.label} 사용 불가 확인`)
+        : (isDelivery ? `${appLabel} · 무료배달 여부 미확인` : `${appLabel} · ${item.label} 미확인`);
     const symbol = item.state === 'available' ? '✓' : item.state === 'unavailable' ? '×' : '?';
     return `
       <span class="store-service-detail-benefit is-${escapeHtml(item.state)}${isDelivery ? ' is-delivery' : ''}">
@@ -299,7 +327,7 @@
       <header>
         <div>
           <span>가게 이용정보</span>
-          <h3>영업시간·상품권·무료배달</h3>
+          <h3>영업시간·주문앱별 혜택</h3>
         </div>
         <span class="store-service-status is-${escapeHtml(status.state)}">
           <i aria-hidden="true"></i>${escapeHtml(status.label)}
@@ -314,11 +342,11 @@
           ? displayLines.map(line => `<span>${escapeHtml(line)}</span>`).join('')
           : '<span class="is-unknown">확인된 영업시간이 없습니다.</span>'}
       </div>
-      <div class="store-service-detail-benefits" aria-label="상품권 및 무료배달 확인 상태">
+      <div class="store-service-detail-benefits" aria-label="주문앱별 상품권 및 무료배달 확인 상태">
         ${detailBenefitItems(info).map(detailBenefitMarkup).join('')}
       </div>
       <footer>
-        <span>회색 미확인은 사용 불가가 아니라 아직 확인되지 않은 정보입니다.</span>
+        <span>상품권·쿠폰·무료배달은 표시된 주문앱에서 확인한 정보이며 다른 주문앱에는 적용되지 않을 수 있습니다. 회색 미확인은 사용 불가가 아니라 아직 확인되지 않은 정보입니다.</span>
         ${verified ? `<small>${escapeHtml(verified)}</small>` : ''}
       </footer>
     `;
@@ -391,8 +419,8 @@
         entry.innerHTML = `
           <button type="button" data-store-service-search-open>
             <span aria-hidden="true">◷</span>
-            <b>지금 영업하는 가게·결제·배달혜택 찾기</b>
-            <small>섬섬페이 · 고유가 지원금 · 온누리상품권 · 무료배달</small>
+            <b>지금 영업하는 가게·주문앱별 혜택 찾기</b>
+            <small>먹깨비·땡겨요 섬섬페이 · 땡겨요 지원금·온누리·무료배달</small>
             <i aria-hidden="true">›</i>
           </button>
         `;
@@ -564,7 +592,7 @@
           ${entry.benefits.length
             ? entry.benefits.map(benefit => {
               const deliveryClass = benefit.kind === 'delivery' ? ' class="is-delivery"' : '';
-              return `<b${deliveryClass}>✓ ${escapeHtml(benefit.label)}</b>`;
+              return `<b${deliveryClass}>✓ ${escapeHtml(scopedBenefitLabel(benefit))}</b>`;
             }).join('')
             : '<b class="is-unknown">결제·혜택 미확인</b>'}
           ${verified ? `<small>${escapeHtml(verified)}</small>` : ''}
@@ -587,8 +615,8 @@
     const areas = availableAreas();
     const benefitFilters = [
       ['all', '전체 혜택'],
-      ...(serviceData.programs || []).map(program => [program.key, program.label]),
-      ...(serviceData.deliveryBenefits || []).map(benefit => [benefit.key, benefit.label])
+      ...(serviceData.programs || []).map(program => [program.key, `${program.appLabel || '적용 주문앱 미확인'} ${program.label}`]),
+      ...(serviceData.deliveryBenefits || []).map(benefit => [benefit.key, `${benefit.appLabel || '적용 주문앱 미확인'} ${benefit.label}`])
     ];
     const isEntireStoreList = (
       locationMode !== 'selected'
@@ -602,13 +630,13 @@
         <header>
           <div>
             <span>가게 검색</span>
-            <h2 id="storeServiceOverviewTitle">영업시간·결제·배달혜택 찾기</h2>
+            <h2 id="storeServiceOverviewTitle">영업시간·주문앱별 혜택 찾기</h2>
           </div>
           <button type="button" data-store-service-overview-close aria-label="영업시간·결제·배달혜택 찾기 닫기">×</button>
         </header>
 
         <p class="store-service-overview-lead">
-          현재 위치에서 가까운 동네부터 볼 수 있습니다. 회색 ‘미확인’은 사용 불가가 아니라 아직 확인되지 않은 정보입니다.
+          현재 위치에서 가까운 동네부터 볼 수 있습니다. 상품권·쿠폰·무료배달은 배지에 표시된 주문앱 기준이며 다른 주문앱에는 적용되지 않을 수 있습니다.
         </p>
 
         <label class="store-service-overview-search">
