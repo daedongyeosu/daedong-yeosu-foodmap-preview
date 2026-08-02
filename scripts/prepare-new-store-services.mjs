@@ -13,17 +13,19 @@ const output = newStores.map(row => ({
   patstoNo: row.patstoNo,
   name: row.name,
   address: row.address,
+  latitude: row.latitude || '',
+  longitude: row.longitude || '',
   chakUrl: 'https://bit.ly/chak-yeosu',
   naverMap: '',
   naverStatus: 'pending-exact-name-address-match'
 }));
 
 await fs.writeFile('data/ddangyo-new-store-services.json', JSON.stringify({
-  schemaVersion: 1,
+  schemaVersion: 2,
   generatedAt: new Date().toISOString(),
   policy: {
     chak: 'apply-to-all-new-stores',
-    naver: 'exact-name-and-road-address-match-only',
+    naver: 'exact-road-signature-and-compatible-business-name-only',
     shopInShopWithoutExactListing: 'omit'
   },
   stores: output
