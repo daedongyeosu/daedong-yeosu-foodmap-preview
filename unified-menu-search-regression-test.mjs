@@ -63,7 +63,7 @@ assert.match(menuScript, /window\.daedongMenuPreview = Object\.freeze/);
 assert.match(menuScript, /open: \(storeId, options = \{\}\) => openMenuPreview/);
 assert.match(serviceStyle, /\.store-finder-quick/);
 assert.match(serviceStyle, /\.store-service-menu-matches/);
-assert.match(html, /store-service-11-unified-menu-search-2-freeze-fix-1/);
+assert.match(html, /store-service-12-customer-search-ux-1/);
 assert.match(html, /store-menu-17-direct-coming-soon-1-unified-menu-search-1/);
 assert.match(html, /unified-menu-search-1/);
 

@@ -329,7 +329,7 @@
 
   function emptyBenefitLabel(info) {
     return hasVerifiedBenefitStatus(info)
-      ? '표시된 주문앱 기준 · 현재 확인된 혜택 없음'
+      ? '현재 확인된 주문앱 혜택 없음'
       : '주문앱별 혜택 미확인';
   }
 
@@ -341,11 +341,6 @@
       benefit.key === key && benefit.status === 'available'
     ));
     return acceptsPayment || offersDelivery;
-  }
-
-  function verifiedLabel(info) {
-    const date = String(info?.verifiedAt || '').replaceAll('-', '.');
-    return [info?.sourceLabel, '표시된 주문앱 기준', date ? `${date} 확인` : ''].filter(Boolean).join(' · ');
   }
 
   function benefitBadgeMarkup(benefit, className) {
@@ -423,7 +418,6 @@
 
   function detailPanelMarkup(info, status) {
     const displayLines = Array.isArray(info?.hours?.displayLines) ? info.hours.displayLines : [];
-    const verified = verifiedLabel(info);
     return `
       <header>
         <div>
@@ -447,8 +441,7 @@
         ${detailBenefitItems(info).map(detailBenefitMarkup).join('')}
       </div>
       <footer>
-        <span>상품권·쿠폰·무료배달은 표시된 주문앱에서 확인한 정보이며 다른 주문앱에는 적용되지 않을 수 있습니다. 회색 미확인은 사용 불가가 아니라 아직 확인되지 않은 정보입니다.</span>
-        ${verified ? `<small>${escapeHtml(verified)}</small>` : ''}
+        <span>상품권·쿠폰·무료배달은 혜택 옆에 적힌 주문앱에서 이용할 수 있습니다. 미확인은 아직 사용 가능 여부가 확인되지 않은 정보입니다.</span>
       </footer>
     `;
   }
@@ -667,9 +660,23 @@ function overviewSearchText(entry) {
     store.shopInShopNames,
     store.storeAliases,
     store.aliases,
-    store.searchIndex
+    store.searchIndex,
+    (entry.benefits || []).map(benefit => scopedBenefitLabel(benefit))
   ]).filter(Boolean).join(' ');
 }
+
+  function benefitDefinitionForQuery(query) {
+    const compact = normalize(query);
+    if (!compact) return null;
+    return [
+      ...(serviceData.programs || []),
+      ...(serviceData.deliveryBenefits || [])
+    ].find(definition => {
+      const label = normalize(definition.label);
+      const searchable = normalize(`${definition.label || ''} ${definition.appLabel || ''} ${definition.key || ''}`);
+      return searchable.includes(compact) || (label && compact.includes(label));
+    }) || null;
+  }
 
   function entryMatchesQuery(entry) {
     const raw = String(overviewQuery || '').trim();
@@ -741,7 +748,6 @@ function overviewSearchText(entry) {
   }
 
   function overviewCardMarkup(entry) {
-    const verified = verifiedLabel(entry.info);
     const menuSpec = menuSearchSpec(overviewQuery);
     const menuMatches = entry.menuMatches || [];
     const menuPreview = menuMatches.slice(0, MENU_MATCH_PREVIEW_LIMIT);
@@ -787,13 +793,35 @@ function overviewSearchText(entry) {
                 return `<b${deliveryClass}>✓ ${escapeHtml(scopedBenefitLabel(benefit))}</b>`;
               }).join('')
               : `<b class="is-unknown">${escapeHtml(emptyBenefitLabel(entry.info))}</b>`}
-            ${verified ? `<small>${escapeHtml(verified)}</small>` : ''}
           </span>
           <i aria-hidden="true">›</i>
         </button>
         ${menuMarkup}
       </article>
     `;
+  }
+
+  function overviewResultLabel(entries) {
+    const query = String(overviewQuery || '').trim();
+    if (query) {
+      const benefit = benefitDefinitionForQuery(query);
+      return benefit
+        ? `${benefit.label} 사용 가능 ${entries.length}곳`
+        : `‘${query}’ 검색 결과 ${entries.length}곳`;
+    }
+    if (activeStatus === 'open') return `지금 영업 중 ${entries.length}곳`;
+    const isEntireStoreList = locationMode !== 'selected'
+      && activeStatus === 'all'
+      && activeBenefit === 'all';
+    return isEntireStoreList ? '전체 가게' : `조건에 맞는 가게 ${entries.length}곳`;
+  }
+
+  function overviewListMarkup(entries) {
+    if (overviewQuery && menuSearchState === 'loading') {
+      return `${entries.map(overviewCardMarkup).join('')}<p class="store-service-menu-loading">등록된 메뉴판을 함께 검색하고 있습니다…</p>`;
+    }
+    if (entries.length) return entries.map(overviewCardMarkup).join('');
+    return '<p class="store-service-overview-empty">이 조건으로 확인되는 가게가 아직 없습니다.<small>다른 검색어·영업상태·혜택·지역범위를 선택해 보세요.</small></p>';
   }
 
   function overviewMarkup() {
@@ -812,12 +840,6 @@ function overviewSearchText(entry) {
       ...(serviceData.programs || []).map(program => [program.key, `${program.appLabel || '적용 주문앱 미확인'} ${program.label}`]),
       ...(serviceData.deliveryBenefits || []).map(benefit => [benefit.key, `${benefit.appLabel || '적용 주문앱 미확인'} ${benefit.label}`])
     ];
-    const isEntireStoreList = (
-      locationMode !== 'selected'
-      && activeStatus === 'all'
-      && activeBenefit === 'all'
-      && !overviewQuery
-    );
 
     return `
       <section class="store-service-overview" role="dialog" aria-modal="true" aria-labelledby="storeServiceOverviewTitle" data-store-service-source-count="${allEntries.length}">
@@ -830,14 +852,19 @@ function overviewSearchText(entry) {
         </header>
 
         <p class="store-service-overview-lead">
-          음식 이름을 검색하면 해당 메뉴가 있는 가게와 일치 메뉴를 함께 보여드립니다. 상품권·쿠폰·무료배달은 배지에 표시된 주문앱 기준입니다.
+          메뉴·가게·동네·혜택을 검색할 수 있습니다. 상품권·쿠폰·무료배달은 각 혜택 배지에 적힌 앱에서 이용할 수 있습니다.
         </p>
 
-        <label class="store-service-overview-search">
+        <form class="store-service-overview-search" data-store-service-search-form role="search">
           <span aria-hidden="true">⌕</span>
-          <input type="search" value="${escapeHtml(overviewQuery)}" data-store-service-query placeholder="메뉴·가게명·동네 검색 (예: 팥빙수)" aria-label="메뉴·가게명·동네 통합 검색">
-          ${overviewQuery ? '<button type="button" data-store-service-query-clear aria-label="검색어 지우기">×</button>' : ''}
-        </label>
+          <input type="search" value="${escapeHtml(overviewQuery)}" data-store-service-query placeholder="메뉴·가게·동네·혜택 검색" aria-label="메뉴·가게·동네·혜택 통합 검색" enterkeyhint="search" autocomplete="off">
+          <button type="button" data-store-service-query-clear aria-label="검색어 지우기" ${overviewQuery ? '' : 'hidden'}>×</button>
+        </form>
+
+        <div class="store-service-overview-result" aria-live="polite">
+          <b>${escapeHtml(overviewResultLabel(entries))}</b>
+          <span>${escapeHtml(locationDescription())}</span>
+        </div>
 
         <section class="store-service-filter-block" aria-labelledby="storeServiceLocationLabel">
           <div class="store-service-filter-title">
@@ -882,28 +909,43 @@ function overviewSearchText(entry) {
           </nav>
         </section>
 
-        <div class="store-service-overview-result" aria-live="polite">
-          <b>${overviewQuery ? '검색 결과' : activeStatus === 'open' ? `지금 영업 중 ${entries.length}곳` : isEntireStoreList ? '전체 가게' : '조건에 맞는 가게'}</b>
-          <span>${escapeHtml(locationDescription())}</span>
-        </div>
-
         <div class="store-service-overview-list">
-          ${overviewQuery && menuSearchState === 'loading'
-            ? '<p class="store-service-menu-loading">등록된 메뉴판을 함께 검색하고 있습니다…</p>'
-            : ''}
-          ${entries.length
-            ? entries.map(overviewCardMarkup).join('')
-            : overviewQuery && menuSearchState === 'loading'
-              ? ''
-              : '<p class="store-service-overview-empty">이 조건으로 확인되는 가게가 아직 없습니다.<small>다른 검색어·영업상태·혜택·지역범위를 선택해 보세요.</small></p>'}
+          ${overviewListMarkup(entries)}
         </div>
 
         <footer>
-          <p>사진으로 받은 정보는 가게를 확인한 뒤 검토·승인하여 반영합니다.</p>
-          <small>영업시간과 사용 가능 여부는 바뀔 수 있습니다. 무료배달은 거리·주문금액·시간에 따라 달라질 수 있으므로 주문 전 다시 확인해 주세요.</small>
+          <small>영업시간과 혜택은 바뀔 수 있습니다. 주문 전 해당 주문앱에서 다시 확인해 주세요.</small>
         </footer>
       </section>
     `;
+  }
+
+  function refreshOverviewQueryResults({scrollToResults = false} = {}) {
+    const overlay = document.querySelector('[data-store-service-overview-overlay]');
+    if (!overlay || overlay.hidden) return;
+    const requestedQuery = overviewQuery;
+    if (overviewQuery && !benefitDefinitionForQuery(overviewQuery) && menuSearchState === 'idle') {
+      ensureMenuSearchData().then(() => {
+        if (overviewQuery === requestedQuery) refreshOverviewQueryResults();
+      });
+    }
+    const entries = filteredOverviewEntries();
+    const result = overlay.querySelector('.store-service-overview-result');
+    const list = overlay.querySelector('.store-service-overview-list');
+    const clear = overlay.querySelector('[data-store-service-query-clear]');
+    if (result) {
+      result.querySelector('b').textContent = overviewResultLabel(entries);
+      result.querySelector('span').textContent = locationDescription();
+    }
+    if (list) list.innerHTML = overviewListMarkup(entries);
+    if (clear) clear.hidden = !String(overviewQuery || '').trim();
+    if (scrollToResults) {
+      overlay.querySelector('[data-store-service-query]')?.blur();
+      window.requestAnimationFrame(() => {
+        const target = list?.querySelector('.store-service-overview-group, .store-service-overview-empty');
+        target?.scrollIntoView({block: 'start'});
+      });
+    }
   }
 
   function ensureOverviewOverlay() {
@@ -918,7 +960,7 @@ function overviewSearchText(entry) {
   }
 
   function renderOverview({focusQuery = false, focusSection = ''} = {}) {
-    if (overviewQuery && menuSearchState === 'idle') {
+    if (overviewQuery && !benefitDefinitionForQuery(overviewQuery) && menuSearchState === 'idle') {
       const requestedQuery = overviewQuery;
       ensureMenuSearchData().then(() => {
         const currentOverlay = document.querySelector('[data-store-service-overview-overlay]');
@@ -1033,15 +1075,24 @@ document.addEventListener('compositionend', event => {
   if (!event.target.matches('[data-store-service-query]')) return;
   overviewQueryComposing = false;
   overviewQuery = event.target.value;
-  renderOverview({focusQuery: true});
+  refreshOverviewQueryResults();
 });
 
 document.addEventListener('input', event => {
   if (!event.target.matches('[data-store-service-query]')) return;
   overviewQuery = event.target.value;
-  if (overviewQueryComposing || event.isComposing || event.inputType === 'insertCompositionText') return;
-  renderOverview({focusQuery: true});
+  refreshOverviewQueryResults();
 });
+
+  document.addEventListener('submit', event => {
+    const form = event.target.closest('[data-store-service-search-form]');
+    if (!form) return;
+    event.preventDefault();
+    const input = form.querySelector('[data-store-service-query]');
+    overviewQueryComposing = false;
+    overviewQuery = input?.value || '';
+    refreshOverviewQueryResults({scrollToResults: true});
+  });
 
   document.addEventListener('change', event => {
     if (!event.target.matches('[data-store-service-area]')) return;
@@ -1081,7 +1132,10 @@ document.addEventListener('input', event => {
     }
     if (event.target.closest('[data-store-service-query-clear]')) {
       overviewQuery = '';
-      renderOverview({focusQuery: true});
+      const input = document.querySelector('[data-store-service-query]');
+      if (input) input.value = '';
+      refreshOverviewQueryResults();
+      input?.focus();
       return;
     }
     const statusFilter = event.target.closest('[data-store-service-status]');

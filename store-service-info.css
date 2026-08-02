@@ -418,7 +418,7 @@ body.store-service-overview-open {
 
 .store-service-overview-search {
   min-height: 48px;
-  margin-bottom: 13px;
+  margin: 0 0 8px;
   padding: 0 13px;
   display: flex;
   align-items: center;
@@ -529,11 +529,15 @@ body.store-service-overview-open {
 }
 
 .store-service-overview-result {
-  margin: 15px 2px 10px;
+  min-height: 34px;
+  margin: 0 2px 13px;
+  padding: 7px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  background: #eef5ff;
+  border-radius: 11px;
 }
 
 .store-service-overview-result b {
@@ -774,12 +778,6 @@ body.store-service-overview-open {
   color: #647087;
   border-top: 1px solid #dde2ea;
   line-height: 1.5;
-}
-
-.store-service-overview > footer p {
-  margin: 0 0 4px;
-  color: #263c5b;
-  font-weight: 750;
 }
 
 @media (max-width: 720px) {
