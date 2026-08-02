@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "batchId": "all-historical-ddangyo-fingerprint",
-  "generatedAt": "2026-08-02T09:56:24.637Z",
+  "generatedAt": "2026-08-02T12:22:55.835Z",
   "policy": {
     "mode": "add-missing-only",
     "identity": "verified-address-and-existing-store-id",
@@ -24859,6 +24859,111 @@
         "onnuri": false,
         "freeDelivery": false
       }
+    },
+    {
+      "targetStoreId": "f7385d8006310630",
+      "isNew": false,
+      "patstoNo": "1133381",
+      "name": "국민학교",
+      "address": "전남 여수시 미평로 43",
+      "latitude": "34.7669536515112",
+      "longitude": "127.7078583595082",
+      "category": "한식",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dc1b9d24-b191-457d-84b1-2b4f115729c3.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dc1b9d24-b191-457d-84b1-2b4f115729c3.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/2b196855-8eb3-4c0a-a404-680713f88e2a.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/fb8122b4-fa28-4ddd-b09b-9585921f5daa.jpg"
+      ],
+      "sourceUrls": [
+        "https://bit.ly/tk-국민학교",
+        "https://fdofd.ddangyo.com/gateway1.html?DaKwtU4"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?DaKwtU4",
+      "phone": "0616521272",
+      "phoneSource": "ddangyo",
+      "sourceMatch": {
+        "status": "existing",
+        "method": "existing-ddangyo-route-shortlink",
+        "storeId": "f7385d8006310630",
+        "candidate": {
+          "storeId": "f7385d8006310630",
+          "storeName": "국민학교",
+          "address": "",
+          "phone": "",
+          "virtual": false,
+          "names": [
+            "국민학교"
+          ]
+        }
+      },
+      "hoursSource": "ddangyo-common-store-hours",
+      "benefitsSource": "ddangyo-app-scoped",
+      "completeFingerprint": {
+        "address": true,
+        "phone": true,
+        "images": 3,
+        "menus": 55,
+        "weeklyHours": 1,
+        "closures": 0,
+        "coupons": 0,
+        "seomseomPay": true,
+        "onnuri": false,
+        "freeDelivery": false
+      }
+    },
+    {
+      "targetStoreId": "6390834d3238c3eb",
+      "isNew": false,
+      "patstoNo": "1175753",
+      "name": "황금아구 미평점",
+      "address": "전남 여수시 미평3길 48 1층",
+      "latitude": "34.769184994883254",
+      "longitude": "127.70395047449985",
+      "category": "찜/탕",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ec330ef9-9646-4a46-aa9a-d21e7bbb6524.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ec330ef9-9646-4a46-aa9a-d21e7bbb6524.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/87ba3b6e-d458-4f30-8972-fb7e8f4495b8.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/418dd2ea-e033-4aef-9198-59bd78b3b571.jpg"
+      ],
+      "sourceUrls": [
+        "https://bit.ly/tk-황금아구",
+        "https://fdofd.ddangyo.com/gateway1.html?F46J007"
+      ],
+      "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?F46J007",
+      "phone": "0616523999",
+      "phoneSource": "ddangyo",
+      "sourceMatch": {
+        "status": "existing",
+        "method": "existing-ddangyo-route-shortlink",
+        "storeId": "6390834d3238c3eb",
+        "candidate": {
+          "storeId": "6390834d3238c3eb",
+          "storeName": "황금아구 미평점",
+          "address": "",
+          "phone": "",
+          "virtual": false,
+          "names": [
+            "황금아구 미평점",
+            "황금아구미평점"
+          ]
+        }
+      },
+      "hoursSource": "ddangyo-common-store-hours",
+      "benefitsSource": "ddangyo-app-scoped",
+      "completeFingerprint": {
+        "address": true,
+        "phone": true,
+        "images": 3,
+        "menus": 17,
+        "weeklyHours": 1,
+        "closures": 1,
+        "coupons": 0,
+        "seomseomPay": true,
+        "onnuri": false,
+        "freeDelivery": true
+      }
     }
   ],
   "serviceStats": {
@@ -24868,12 +24973,12 @@
     "naverOmitted": 13
   },
   "completeFingerprintStats": {
-    "extractedStores": 444,
-    "existingStores": 444,
+    "extractedStores": 446,
+    "existingStores": 446,
     "newStores": 0,
-    "createdRecords": 371,
+    "createdRecords": 373,
     "updatedRecords": 73,
     "newStoreRecords": 0,
-    "totalRecords": 444
+    "totalRecords": 446
   }
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-4';
+  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-5';
   const WAIT_TIMEOUT_MS = 30000;
   const POLL_MS = 80;
 

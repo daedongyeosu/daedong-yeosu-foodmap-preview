@@ -50,7 +50,7 @@ assert.equal(
 );
 
 assert.match(index, /store-menu-preview\.css\?v=store-menu-14/);
-assert.match(index, /store-menu-preview\.js\?v=store-menu-14/);
+assert.match(index, /store-menu-preview\.js\?v=store-menu-16/);
 assert.match(script, /itemCount: 70/);
 assert.match(script, /featuredCategories/);
 assert.match(script, /가게바로주문 결제하기/);
