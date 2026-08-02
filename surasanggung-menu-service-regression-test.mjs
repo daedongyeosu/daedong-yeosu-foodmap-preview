@@ -105,7 +105,7 @@ assert.equal(sha256('data/store-priority.json'), '2b91fa849797306d5f7d8e49de1d82
 assert.equal(sha256('data/store-coordinates.json'), '22f21699710ccd27de9dc73d4521fb79fac13c2a209be73e8e34519f58f087f1');
 
 assert.match(index, /store-service-info\.css\?v=store-service-8-unified-menu-search-1/);
-assert.match(index, /store-service-info\.js\?v=store-service-10-unified-menu-search-1/);
+assert.match(index, /store-service-info\.js\?v=store-service-11-unified-menu-search-2-freeze-fix-1/);
 assert.match(index, /store-menu-preview\.css\?v=store-menu-14/);
 assert.match(index, /store-menu-preview\.js\?v=store-menu-17/);
 assert.match(menuScript, /store-menu-content\/surasanggung\/menu\.json/);
