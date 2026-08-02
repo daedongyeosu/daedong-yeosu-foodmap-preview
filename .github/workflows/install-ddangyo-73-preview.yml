@@ -77,6 +77,7 @@ jobs:
         if: github.event_name == 'push'
         run: |
           rm -rf _source
+          rm -rf data/ddangyo-preview
           rm -f install-ddangyo-preview.mjs existing-stores.json new-stores.json
           rm -f .github/workflows/install-ddangyo-73-preview.yml
           git config user.name "github-actions[bot]"
