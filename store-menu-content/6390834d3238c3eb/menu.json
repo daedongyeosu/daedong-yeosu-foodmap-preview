@@ -1,0 +1,159 @@
+{
+  "storeId": "6390834d3238c3eb",
+  "storeName": "황금아구 미평점",
+  "displayName": "황금아구 미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ec330ef9-9646-4a46-aa9a-d21e7bbb6524.jpg",
+  "categories": [
+    "전체",
+    "주메뉴",
+    "추가메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175753-10000001",
+      "sourceMenuId": "10000001",
+      "name": "아구찜",
+      "description": "",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/87ba3b6e-d458-4f30-8972-fb7e8f4495b8.jpg"
+    },
+    {
+      "id": "ddangyo-1175753-10000006",
+      "sourceMenuId": "10000006",
+      "name": "대창추가(초장,와사비장포함)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175753-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1175753-10000002",
+      "sourceMenuId": "10000002",
+      "name": "아구탕",
+      "description": "",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/418dd2ea-e033-4aef-9198-59bd78b3b571.jpg"
+    },
+    {
+      "id": "ddangyo-1175753-10000007",
+      "sourceMenuId": "10000007",
+      "name": "미더덕(150g) 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175753-90000002",
+      "sourceMenuId": "90000002",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1175753-10000003",
+      "sourceMenuId": "10000003",
+      "name": "대창찜(초장,와사비장포함)",
+      "description": "",
+      "category": "주메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175753-10000008",
+      "sourceMenuId": "10000008",
+      "name": "공기밥",
+      "description": "김가루 미포함",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/37de3e4d-a352-45ef-ac6c-5b72d7a8de27.jpg"
+    },
+    {
+      "id": "ddangyo-1175753-90000003",
+      "sourceMenuId": "90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1175753-10000004",
+      "sourceMenuId": "10000004",
+      "name": "아구수육(초장,와사비장포함)",
+      "description": "",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0bd9ff7d-b8db-40ad-bf20-591ed675b4ce.jpg"
+    },
+    {
+      "id": "ddangyo-1175753-10000009",
+      "sourceMenuId": "10000009",
+      "name": "코카콜라 500ml",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/25ee5732-c933-4602-9f7c-b9a221903a7c.jpg"
+    },
+    {
+      "id": "ddangyo-1175753-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1175753-10000005",
+      "sourceMenuId": "10000005",
+      "name": "서대회무침",
+      "description": "",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5b62c816-9721-4c23-9d13-b1ca3a2490e7.jpg"
+    },
+    {
+      "id": "ddangyo-1175753-10000010",
+      "sourceMenuId": "10000010",
+      "name": "칠성사이다 500ml",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175753-90000005",
+      "sourceMenuId": "90000005",
+      "name": "서울 장수생막걸리(페트)(750ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1175753-10000011",
+      "sourceMenuId": "10000011",
+      "name": "환타(파인) 500ml",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175753-90000006",
+      "sourceMenuId": "90000006",
+      "name": "국순당 생막걸리(페트)(750ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}
