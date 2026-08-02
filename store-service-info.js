@@ -33,6 +33,7 @@
   let locationMode = 'nearby';
   let selectedArea = '';
   let overviewQuery = '';
+  let overviewQueryComposing = false;
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({
     '&': '&amp;',
@@ -521,10 +522,41 @@
     });
   }
 
+  function searchTextValues(value) {
+  if (Array.isArray(value)) return value.flatMap(searchTextValues);
+  if (value && typeof value === 'object') return Object.values(value).flatMap(searchTextValues);
+  return [String(value || '')];
+}
+
+function overviewSearchText(entry) {
+  const store = entry.store || {};
+  return searchTextValues([
+    store.name,
+    store.realBusinessName,
+    store.brandName,
+    store.branchName,
+    entry.area,
+    store.area,
+    store.neighborhood,
+    store.category,
+    store.cat,
+    store.categories,
+    store.foodCategories,
+    store.menuCategories,
+    store.tags,
+    store.keywords,
+    store.searchAliases,
+    store.shopInShopNames,
+    store.storeAliases,
+    store.aliases,
+    store.searchIndex
+  ]).filter(Boolean).join(' ');
+}
+
   function filteredOverviewEntries() {
     const query = normalize(overviewQuery);
     const scoped = overviewEntries().filter(entry => {
-      if (query && !normalize(`${entry.store?.name || ''} ${entry.area} ${(entry.store?.cat || []).join?.(' ') || entry.store?.cat || ''}`).includes(query)) {
+      if (query && !normalize(overviewSearchText(entry)).includes(query)) {
         return false;
       }
       if (locationMode === 'selected' && entry.area !== ensureSelectedArea()) return false;
@@ -608,7 +640,7 @@
     const locationAndBenefitEntries = allEntries.filter(entry => (
       (locationMode !== 'selected' || entry.area === selectedArea)
       && (activeBenefit === 'all' || acceptsBenefit(entry.info, activeBenefit))
-      && (!overviewQuery || normalize(`${entry.store?.name || ''} ${entry.area} ${(entry.store?.cat || []).join?.(' ') || entry.store?.cat || ''}`).includes(normalize(overviewQuery)))
+      && (!overviewQuery || normalize(overviewSearchText(entry)).includes(normalize(overviewQuery)))
     ));
     const counts = statusCounts(locationAndBenefitEntries);
     const entries = filteredOverviewEntries();
@@ -641,7 +673,7 @@
 
         <label class="store-service-overview-search">
           <span aria-hidden="true">⌕</span>
-          <input type="search" value="${escapeHtml(overviewQuery)}" data-store-service-query placeholder="가게명·메뉴·동네 검색" aria-label="영업시간 및 결제·배달혜택 가게 검색">
+          <input type="search" value="${escapeHtml(overviewQuery)}" data-store-service-query placeholder="가게명·음식종류·동네 검색" aria-label="영업시간 및 결제·배달혜택 가게 검색">
           ${overviewQuery ? '<button type="button" data-store-service-query-clear aria-label="검색어 지우기">×</button>' : ''}
         </label>
 
@@ -798,11 +830,24 @@
     showOverview
   });
 
-  document.addEventListener('input', event => {
-    if (!event.target.matches('[data-store-service-query]')) return;
-    overviewQuery = event.target.value;
-    renderOverview({focusQuery: true});
-  });
+  document.addEventListener('compositionstart', event => {
+  if (!event.target.matches('[data-store-service-query]')) return;
+  overviewQueryComposing = true;
+});
+
+document.addEventListener('compositionend', event => {
+  if (!event.target.matches('[data-store-service-query]')) return;
+  overviewQueryComposing = false;
+  overviewQuery = event.target.value;
+  renderOverview({focusQuery: true});
+});
+
+document.addEventListener('input', event => {
+  if (!event.target.matches('[data-store-service-query]')) return;
+  overviewQuery = event.target.value;
+  if (overviewQueryComposing || event.isComposing || event.inputType === 'insertCompositionText') return;
+  renderOverview({focusQuery: true});
+});
 
   document.addEventListener('change', event => {
     if (!event.target.matches('[data-store-service-area]')) return;
