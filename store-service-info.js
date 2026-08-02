@@ -55,6 +55,21 @@
     .replace(/\s+/g, '')
     .toLowerCase();
 
+  function formatCustomerHours24(value) {
+    const convert = (period, rawHour, rawMinute) => {
+      const marker = String(period || '').replace(/\./g, '').toLowerCase();
+      let hour = Number(rawHour);
+      if (marker === '오전' || marker === 'am') hour %= 12;
+      else if (marker === '오후' || marker === 'pm') hour = (hour % 12) + 12;
+      else if (marker === '낮') hour = hour === 12 ? 12 : (hour % 12) + 12;
+      else if (marker === '밤') hour = hour === 12 ? 24 : hour <= 5 ? hour : (hour % 12) + 12;
+      return `${String(hour).padStart(2, '0')}:${String(rawMinute).padStart(2, '0')}`;
+    };
+    return String(value ?? '')
+      .replace(/(오전|오후|낮|밤)\s*(\d{1,2})\s*:\s*(\d{2})/g, (_, period, hour, minute) => convert(period, hour, minute))
+      .replace(/\b(\d{1,2})\s*:\s*(\d{2})\s*(AM|PM)\b/gi, (_, hour, minute, period) => convert(period, hour, minute));
+  }
+
   const MENU_FAMILIES = [
     {key: '빙수', label: '빙수', matches: value => value.includes('빙수'), terms: ['빙수']},
     {key: '족발', label: '족발', matches: value => value.includes('족발') || value.includes('불족'), terms: ['족발', '불족', '냉채족']},
@@ -354,7 +369,7 @@
       <span class="store-service-status is-${escapeHtml(status.state)}">
         <i aria-hidden="true"></i>${escapeHtml(status.label)}
       </span>
-      <span class="store-service-card-hours">${escapeHtml(status.detail)}</span>
+      <span class="store-service-card-hours">${escapeHtml(formatCustomerHours24(status.detail))}</span>
       ${benefits.length
         ? benefits.slice(0, 3).map(benefit => benefitBadgeMarkup(benefit, 'store-service-card-payment')).join('')
         : `<span class="store-service-card-unknown">${escapeHtml(emptyBenefitLabel(info))}</span>`}
@@ -430,12 +445,12 @@
         </span>
       </header>
       <p class="store-service-detail-today">
-        <b>${escapeHtml(status.detail)}</b>
-        <span>${escapeHtml(status.today)}</span>
+        <b>${escapeHtml(formatCustomerHours24(status.detail))}</b>
+        <span>${escapeHtml(formatCustomerHours24(status.today))}</span>
       </p>
       <div class="store-service-detail-hours">
         ${displayLines.length
-          ? displayLines.map(line => `<span>${escapeHtml(line)}</span>`).join('')
+          ? displayLines.map(line => `<span>${escapeHtml(formatCustomerHours24(line))}</span>`).join('')
           : '<span class="is-unknown">확인된 영업시간이 없습니다.</span>'}
       </div>
       <div class="store-service-detail-benefits" aria-label="주문앱별 상품권 및 무료배달 확인 상태">
@@ -782,7 +797,7 @@ function overviewSearchText(entry) {
         <button type="button" class="store-service-overview-card" data-store-service-store-id="${escapeHtml(entry.storeId)}">
           <span class="store-service-overview-card-main">
             <strong>${escapeHtml(entry.store?.name || '가게 정보')}</strong>
-            <small>${escapeHtml(entry.area)} · ${escapeHtml(entry.status.today)}</small>
+            <small>${escapeHtml(entry.area)} · ${escapeHtml(formatCustomerHours24(entry.status.today))}</small>
           </span>
           <span class="store-service-status is-${escapeHtml(entry.status.state)}">
             <i aria-hidden="true"></i>${escapeHtml(entry.status.label)}
