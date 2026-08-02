@@ -1965,11 +1965,19 @@
       ]
     },
     "6390834d3238c3eb": {
-      "verifiedAt": "2026-07-31",
-      "sourceLabel": "배달앱 화면 확인",
+      "verifiedAt": "2026-08-02",
+      "sourceLabel": "땡겨요 화면 확인",
       "payments": [
         {
           "key": "high-oil-support",
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
+        },
+        {
+          "key": "yeosu-seomseom-pay",
           "status": "accepted",
           "appKeys": [
             "ddangyo"
@@ -1987,7 +1995,63 @@
           ],
           "appLabel": "땡겨요"
         }
-      ]
+      ],
+      "hours": {
+        "weekly": {
+          "sun": [],
+          "mon": [
+            {
+              "open": "10:50",
+              "close": "21:00"
+            }
+          ],
+          "tue": [
+            {
+              "open": "10:50",
+              "close": "21:00"
+            }
+          ],
+          "wed": [
+            {
+              "open": "10:50",
+              "close": "21:00"
+            }
+          ],
+          "thu": [
+            {
+              "open": "10:50",
+              "close": "21:00"
+            }
+          ],
+          "fri": [
+            {
+              "open": "10:50",
+              "close": "21:00"
+            }
+          ],
+          "sat": [
+            {
+              "open": "10:50",
+              "close": "21:00"
+            }
+          ]
+        },
+        "closures": [],
+        "displayLines": [
+          "매일 오전 10:50 ~ 오후 09:00",
+          "휴무 매주 일요일",
+          "브레이크 타임 평일 오후 03:00 ~ 오후 05:00",
+          "브레이크 타임 토요일 오후 03:00 ~ 오후 05:00"
+        ],
+        "sourceApp": "ddangyo"
+      },
+      "ddangyo": {
+        "patstoNo": "1175753",
+        "businessHoursAppliedAsCommonStoreHours": true,
+        "currentStatus": "정기휴일",
+        "currentEndTime": "210000",
+        "verifiedAt": "2026-08-02"
+      }
     },
     "656eff52d5fce811": {
       "verifiedAt": "2026-08-02",
@@ -36192,6 +36256,79 @@
         "patstoNo": "1319411",
         "businessHoursAppliedAsCommonStoreHours": true,
         "currentStatus": "준비중",
+        "currentEndTime": "240000",
+        "verifiedAt": "2026-08-02"
+      }
+    },
+    "f7385d8006310630": {
+      "hours": {
+        "weekly": {
+          "sun": [
+            {
+              "open": "15:00",
+              "close": "01:00"
+            }
+          ],
+          "mon": [
+            {
+              "open": "15:00",
+              "close": "01:00"
+            }
+          ],
+          "tue": [
+            {
+              "open": "15:00",
+              "close": "01:00"
+            }
+          ],
+          "wed": [
+            {
+              "open": "15:00",
+              "close": "01:00"
+            }
+          ],
+          "thu": [
+            {
+              "open": "15:00",
+              "close": "01:00"
+            }
+          ],
+          "fri": [
+            {
+              "open": "15:00",
+              "close": "01:00"
+            }
+          ],
+          "sat": [
+            {
+              "open": "15:00",
+              "close": "01:00"
+            }
+          ]
+        },
+        "closures": [],
+        "displayLines": [
+          "매일 오후 03:00 ~ 익일 오전 01:00"
+        ],
+        "sourceApp": "ddangyo"
+      },
+      "verifiedAt": "2026-08-02",
+      "sourceLabel": "땡겨요 화면 확인",
+      "payments": [
+        {
+          "key": "yeosu-seomseom-pay",
+          "status": "accepted",
+          "appKeys": [
+            "ddangyo"
+          ],
+          "appLabel": "땡겨요"
+        }
+      ],
+      "delivery": [],
+      "ddangyo": {
+        "patstoNo": "1133381",
+        "businessHoursAppliedAsCommonStoreHours": true,
+        "currentStatus": "영업중",
         "currentEndTime": "240000",
         "verifiedAt": "2026-08-02"
       }
