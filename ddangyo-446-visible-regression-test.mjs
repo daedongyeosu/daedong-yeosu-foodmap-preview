@@ -9,7 +9,7 @@ const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file))
 
 const protectedHashes = {
   'data/stores.json': '2b976a0e05ad494e6723bc191962e1d8c66e8e1d93f98e6f0750baf25bdc6630',
-  'app.js': '3afb268935765cd7d775c75e6d6387c949e2f0d8b0515e3a814c34bef7853b1c',
+  'app.js': '77eda9d0f74951b10e123bd3d5a9c305fdd8fdbeee0cc5d5ed620a757250e1bd',
   'store-menu-content/a089d1d54720b48e/menu.json': 'bacf5a6edbc8a9adedd9a0a6c1ef5685a6a5187b7da0cb93c5393f2b0f650878',
   'store-menu-content/domino/menu.json': '6d8307775d014a278d4a3401c6517e63cf1bdd00f75ffb9f7cea0fc6e92d26db',
   'store-menu-content/surasanggung/menu.json': '0f874cbc664814bc18fc228afa157f9d69919608548c4c626b8d733ffe697ca7'

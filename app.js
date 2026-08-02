@@ -1152,6 +1152,9 @@ function myPage() {
   openModal(`<h2 id="modalTitle">마이페이지</h2><p>로그인 없이 이 기기에 저장된 정보입니다.</p><div class="my-list"><button type="button" data-open-favorites>♡ 찜한 가게</button><button type="button" data-open-recent>◷ 최근 방문 가게</button><button type="button">📍 저장 지역 — ${escapeHtml(state.location)}</button><button type="button" data-open-guide>❓ 주문방법 안내</button><button type="button">✉ 광고 문의</button></div>`);
 }
 function routeLink(route, extraClass = '') {
+  if (route.key === 'direct') {
+    return `<button class="detail-route ${extraClass} detail-route-coming-soon" type="button" disabled data-route-key="direct" aria-label="가게바로주문 준비중">${appIcon(route.key, 'detail-route-icon')}<span>${escapeHtml(route.name)}<small>(준비중)</small></span><b aria-hidden="true">준비중</b></button>`;
+  }
   return `<a class="detail-route ${extraClass}" href="${escapeHtml(route.url)}" ${String(route.url).startsWith('http') ? 'target="_blank" rel="noopener"' : ''} data-route-key="${escapeHtml(route.key)}">${appIcon(route.key, 'detail-route-icon')}<span>${escapeHtml(route.name)}</span><b>›</b></a>`;
 }
 function orderAppContinueLabel(key, fallback = '') {

@@ -194,6 +194,15 @@
       const href = escapeMenuHtml(rawHref);
       const external = rawHref && !rawHref.startsWith('tel:') ? ' target="_blank" rel="noopener"' : '';
       const emphasis = key === 'direct' ? ' menu-order-card-direct' : key === 'phone' ? ' menu-order-card-phone' : '';
+      if (key === 'direct') {
+        return `
+          <button class="menu-order-card${emphasis} menu-order-card-coming-soon" type="button" disabled data-menu-order="direct" aria-label="가게바로주문 준비중">
+            <span class="menu-order-icon">${channelIcon(key, channel)}</span>
+            <span><b>가게바로주문</b><small>(준비중)</small></span>
+            <strong>준비중</strong>
+          </button>
+        `;
+      }
       return `
         <a class="menu-order-card${emphasis}" href="${href}"${external} data-menu-order="${key}">
           <span class="menu-order-icon">${channelIcon(key, channel)}</span>
@@ -265,6 +274,13 @@
             const external = rawHref.startsWith('tel:') ? '' : ' target="_blank" rel="noopener"';
             const icon = channelIcon(key, channel);
             const compatibilityClass = key === 'direct' ? ' primary' : key === 'phone' ? ' phone' : '';
+            if (key === 'direct') {
+              return `
+                <button class="is-direct${compatibilityClass} is-coming-soon" type="button" disabled data-menu-sticky-order="direct" aria-label="가게바로주문 준비중">
+                  ${icon}<b>가게바로주문 <small>(준비중)</small></b>
+                </button>
+              `;
+            }
             return `
               <a class="is-${escapeMenuHtml(key)}${compatibilityClass}" href="${escapeMenuHtml(rawHref)}"${external} data-menu-sticky-order="${escapeMenuHtml(key)}">
                 ${icon}<b>${escapeMenuHtml(label)}</b>

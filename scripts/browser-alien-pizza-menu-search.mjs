@@ -53,13 +53,16 @@ try {
   await check(page.locator('[data-menu-card]:visible mark').count().then(count => count > 0), '메뉴명에서 일치 검색어 강조');
   await check(page.locator('[data-menu-card]:visible').boundingBox().then(box => Boolean(box && box.y < 500)), '키보드 위에서도 첫 검색 결과가 보이는 위치에 표시');
   await check(page.locator('[data-menu-card]:visible .store-menu-card-action').evaluate(node => getComputedStyle(node).display !== 'none'), '검색 결과에 주문 연결 동작 표시');
-  const directOrderHref = await page.locator('.store-menu-sticky-actions .primary').getAttribute('href');
+  await check(page.locator('.store-menu-sticky-actions .primary').isDisabled(), '하단 가게바로주문 준비중 비활성화');
+  await check(page.locator('.store-menu-sticky-actions .primary').getAttribute('href').then(value => value === null), '비활성 가게바로주문 이동주소 미노출');
   await page.locator('[data-menu-card]:visible').click();
   await check(page.locator('[data-menu-order-sheet]').evaluate(node => !node.hidden), '검색 결과 메뉴 터치 시 주문방법 선택창 열림');
   await check(page.locator('[data-selected-menu-name]').innerText().then(value => value.includes('베지테리언')), '선택한 메뉴명을 주문방법 선택창에 유지');
   await check(page.locator('[data-selected-menu-image]').getAttribute('src').then(value => Boolean(value)), '선택한 메뉴 사진을 주문방법 선택창에 유지');
   await check(page.locator('[data-menu-order-sheet] .menu-order-more-tip').innerText().then(value => value.includes('다른 메뉴도 함께 주문할 수 있어요')), '주문앱에서 다른 메뉴도 추가할 수 있음을 안내');
-  await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').getAttribute('href').then(value => value === directOrderHref), '기존 가게바로주문 링크 그대로 연결');
+  await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').isDisabled(), '주문방법 선택창 가게바로주문 준비중 비활성화');
+  await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').innerText().then(value => value.includes('준비중')), '주문방법 선택창 준비중 표시');
+  await check(page.evaluate(() => fxStoreById('a089d1d54720b48e').routes.find(route => route.key === 'direct')?.url === 'https://bit.ly/auto-외계인피자여수점'), '원본 가게바로주문 주소 보존');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"] .menu-order-icon svg path').count().then(count => count === 2), '가게바로주문 아이콘을 외부 파일 없이 표시');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="phone"]').getAttribute('href').then(value => String(value).startsWith('tel:')), '전화주문 링크 제공');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="phone"] .menu-order-icon svg circle').count().then(count => count === 1), '전화주문 아이콘을 주문방법 선택창에 표시');

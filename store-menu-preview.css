@@ -443,6 +443,8 @@ body.store-menu-open {
   background: #f8f9fb;
   border: 1px solid #dde2ea;
   border-radius: 17px;
+  font: inherit;
+  text-align: left;
 }
 .menu-order-card-direct {
   color: #fff;
@@ -453,6 +455,18 @@ body.store-menu-open {
   color: #fff;
   background: #102649;
   border-color: #102649;
+}
+.menu-order-card-coming-soon,
+.menu-order-card-coming-soon:disabled {
+  opacity: 1;
+  cursor: default;
+  color: #69758a;
+  background: #f1f3f6;
+  border-color: #dfe4eb;
+}
+.menu-order-card-coming-soon > strong {
+  font-size: 11px;
+  white-space: nowrap;
 }
 .menu-order-icon {
   width: 54px;
@@ -629,6 +643,22 @@ body.store-menu-open {
 }
 .store-menu-sticky-actions > nav > button {
   cursor: pointer;
+}
+.store-menu-sticky-actions > nav > button.is-direct,
+.store-menu-sticky-actions > nav > button.is-direct:disabled {
+  opacity: 1;
+  cursor: default;
+  color: #69758a;
+  background: #f1f3f6;
+  border-color: #d8e1ec;
+}
+.store-menu-sticky-actions > nav > button.is-direct b {
+  display: grid;
+  gap: 1px;
+  white-space: normal;
+}
+.store-menu-sticky-actions > nav > button.is-direct small {
+  font-size: 8px;
 }
 .store-menu-sticky-actions > nav > a.is-direct {
   color: #fff;
