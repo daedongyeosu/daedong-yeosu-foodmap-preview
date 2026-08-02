@@ -1,0 +1,339 @@
+{
+  "storeId": "d86586aaef8454c9",
+  "storeName": "조선밀면&냉면 여수여서점",
+  "displayName": "조선밀면&냉면 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4e87c9ce-975c-4a55-b272-2e077b2287c5.jpg",
+  "categories": [
+    "전체",
+    "밀면류",
+    "사이드 및 만두류",
+    "냉면류",
+    "A. 1인 세트",
+    "B. 1인 스폐셜세트",
+    "C. 2인 세트",
+    "만두 세트류",
+    "음료수류",
+    "신기동 시전동 추가배달비"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1176198-10000001",
+      "name": "물밀면",
+      "description": "",
+      "category": "밀면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/efd800d9-6b99-4ba2-a725-e13820c8a049.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1176198-10000003",
+      "name": "물비빔밀면",
+      "description": "육수가 소량으로 들어가있어 비벼서 드시면됩니다",
+      "category": "밀면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6e1ee449-4d4a-4b30-93ba-b8dda4101a05.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1176198-10000002",
+      "name": "비빔밀면",
+      "description": "",
+      "category": "밀면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7ea25cb4-216c-49cc-bc24-70455d3d45d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1176198-10000018",
+      "name": "(고기가왕많은) 고기왕손만두",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7dab2383-74d8-49f2-9fff-60b17a40a246.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1176198-10000005",
+      "name": "물냉면",
+      "description": "",
+      "category": "냉면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/33717844-f94e-49d0-86ab-1fb7704ddc40.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1176198-10000011",
+      "name": "물밀면+1인 직화간장불고기",
+      "description": "",
+      "category": "A. 1인 세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1176198-10000013",
+      "name": "물밀면+1인직화간장불고기+왕손만두2EA",
+      "description": "",
+      "category": "B. 1인 스폐셜세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1176198-10000015",
+      "name": "물밀면+물밀면+2인직화간장불고기+왕손만두4EA",
+      "description": "",
+      "category": "C. 2인 세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1176198-10000017",
+      "name": "직화간장불고기",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/bc4c9eb9-b6fc-44d4-8c44-8c74a42c4aeb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1176198-10000030",
+      "name": "만두a세트(왕만두+왕손+잎새만두)",
+      "description": "고기손4+김치손4+김치왕손2+새우만두4+고추만두4+고기왕손2",
+      "category": "만두 세트류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1176198-10000033",
+      "name": "콜라",
+      "description": "",
+      "category": "음료수류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1176198-10000040",
+      "name": "신기동 신기동 배달비추가",
+      "description": "",
+      "category": "신기동 시전동 추가배달비",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1176198-10000006",
+      "name": "비빔냉면",
+      "description": "",
+      "category": "냉면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/40982107-13ee-46d0-83d5-f6bdf1609565.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1176198-10000012",
+      "name": "물냉면+1인 직화간장불고기",
+      "description": "",
+      "category": "A. 1인 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/28c90624-134b-48c8-8fd4-52263e1888fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1176198-10000014",
+      "name": "물냉면+1인직화간장불고기+왕손만두 2EA",
+      "description": "",
+      "category": "B. 1인 스폐셜세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1176198-10000016",
+      "name": "물냉면+물냉면+2인직화간장불고기+왕손만두4EA",
+      "description": "",
+      "category": "C. 2인 세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1176198-10000031",
+      "name": "(잎새나라 딤섬천국) b세트",
+      "description": "고기잎새4+김치잎새4+갈비잎새4+새우잎새4+왕하가우2+왕어혈교2+관자쇼마이2",
+      "category": "만두 세트류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1176198-10000034",
+      "name": "사이다 350ml",
+      "description": "",
+      "category": "음료수류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1176198-10000007",
+      "name": "물비빔냉면",
+      "description": "육수가 소량으로 들어가있어 비벼서 드시면됩니다",
+      "category": "냉면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/76d77869-eb30-4cff-952d-684ada1adc78.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1176198-10000019",
+      "name": "(김치가왕많은) 김치왕손만두",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/dd728e3a-ad79-4b56-9aa8-17ea5cc217a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1176198-10000032",
+      "name": "(딤섬세상)c세트",
+      "description": "왕하가우6+왕어혈교6+관자쇼마이6",
+      "category": "만두 세트류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1176198-10000035",
+      "name": "탐스 파인 제로 350ml",
+      "description": "",
+      "category": "음료수류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1176198-10000004",
+      "name": "불비빔밀면",
+      "description": "",
+      "category": "밀면류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1176198-10000008",
+      "name": "불비빔냉면",
+      "description": "",
+      "category": "냉면류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1176198-10000020",
+      "name": "(기본중에 기본) 고기손만두",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/dc7965c8-2b53-4a29-aad6-98da8d1f2b65.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1176198-10000036",
+      "name": "탐스 청포도석류 제로 350ml",
+      "description": "",
+      "category": "음료수류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1176198-10000021",
+      "name": "(김치쏙쏙) 김치손만두",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/4155cdfc-ee52-4a13-9215-de929bf1f067.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1176198-10000022",
+      "name": "(고기가꽉찬) 고기잎새만두",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/46460d12-12f3-49d3-a668-098c753e7201.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1176198-10000023",
+      "name": "(김치가꽉찬) 김치잎새만두",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1176198-10000024",
+      "name": "(갈비맛이일품) 갈비잎새만두",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1176198-10000025",
+      "name": "(색깔부터)고추만두",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1176198-10000026",
+      "name": "(새우가쏙쏙쏙) 새우잎새만두",
+      "description": "갈은새우  갈은돼지고기  야채",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/16caa833-4b0c-4406-90b8-d24977e1cb3f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1176198-10000027",
+      "name": "(속꽉찬) 왕하가우 딤섬",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/51cf47b2-4136-4a69-8a6f-b886dfd07f9d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1176198-10000028",
+      "name": "(새우와부추가득) 왕어혈교 딤섬",
+      "description": "",
+      "category": "사이드 및 만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/51cf47b2-4136-4a69-8a6f-b886dfd07f9d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1176198",
+    "sourceUrls": [
+      "https://bit.ly/3OF16Dq",
+      "https://fdofd.ddangyo.com/gateway1.html?GUqsuAT"
+    ],
+    "rawItemCount": 38,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

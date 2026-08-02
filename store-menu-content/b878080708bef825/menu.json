@@ -1,0 +1,146 @@
+{
+  "storeId": "b878080708bef825",
+  "storeName": "여수싱싱회&육회 문수본점",
+  "displayName": "여수싱싱회&육회 문수본점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/150246f2-eba8-481c-a224-6e244e795944.jpg",
+  "categories": [
+    "전체",
+    "육회",
+    "세트메뉴",
+    "회",
+    "side",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138455-10000004",
+      "name": "육회  (당일 도축 한우암소)",
+      "description": "치즈+노른자+소고기 무국은 서비스~",
+      "category": "육회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/150246f2-eba8-481c-a224-6e244e795944.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1138455-10000005",
+      "name": "육사시미  (당일 도축 한우암소)",
+      "description": "치즈+노른자+소고기 무국 은 서비스~",
+      "category": "육회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c18b6b2a-2b62-4b91-9437-b5ec0ec65dc2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1138455-10000001",
+      "name": "광어랑 육회랑",
+      "description": "광어회+육회+노른자+치즈\n매운탕 과 소고기 뭇국 중 선택하셔서 요청사항에 적어 주세요.없을시 임의로 나갑니다.",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1138455-10000003",
+      "name": "광어",
+      "description": "",
+      "category": "회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/33e0cb5a-3086-4463-ac01-a7f96f6c5fee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1138455-10000007",
+      "name": "물회(광어회)",
+      "description": "광어회",
+      "category": "side",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b3af06ca-c1fc-4d21-a136-482a50cc8f63.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1138455-10000011",
+      "name": "칠성사이다355ml",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1138455-10000002",
+      "name": "광어랑 육사시미",
+      "description": "광어회+육사시미+노른자+치즈\n매운탕과 뭇국중 선택하여 요청사항에 적어 주세요.\n없을시 임의로 나갑니다.",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1138455-10000008",
+      "name": "육회비빔밥",
+      "description": "",
+      "category": "side",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b613fafe-43ff-493b-bd6e-02ef6325fd81.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1138455-10000012",
+      "name": "펩시콜라355ml",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1138455-10000006",
+      "name": "육회+육사시미",
+      "description": "치즈+노른자+소고기 무국 은 써비스~",
+      "category": "육회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b9b13f29-3fcc-476d-945f-66231d2b7849.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1138455-10000009",
+      "name": "회덮밥",
+      "description": "",
+      "category": "side",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/bc25e4b2-68ca-486a-8ca9-f3fcafab7c7b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1138455-10000015",
+      "name": "참이슬",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1138455-10000016",
+      "name": "카스",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1138455",
+    "sourceUrls": [
+      "https://bit.ly/tk-여수싱싱회육회문수본점",
+      "https://fdofd.ddangyo.com/gateway1.html?cHnGOTe"
+    ],
+    "rawItemCount": 15,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

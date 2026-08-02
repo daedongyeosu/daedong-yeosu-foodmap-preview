@@ -1,0 +1,413 @@
+{
+  "storeId": "93ae27237a8e75c4",
+  "storeName": "메밀꽃 필 막국수",
+  "displayName": "메밀꽃 필 막국수",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/05070b23-26f7-41fa-b57e-ccd7e5ca7aff.jpg",
+  "categories": [
+    "전체",
+    "메밀꽃 시그니처 메뉴",
+    "메밀꽃 김치찜은 국내산 배추만 사용합니다.",
+    "메밀꽃 콩나물국밥 메뉴",
+    "배달비 추가 지역 선택",
+    "메밀꽃 막국수 세트 메뉴",
+    "메밀꽃 사이드 메뉴",
+    "메밀꽃 도시락 메뉴",
+    "음료수",
+    "약속해요",
+    "[신메뉴 출시] 쌀국수 메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1233854-10000003",
+      "name": "속풀이 메밀꽃 물막국수",
+      "description": "막국수만 나갑니다.",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/682d84aa-3e3f-4690-b348-58c4d52bf393.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1233854-10000004",
+      "name": "속풀이 메밀꽃 비빔 막국수",
+      "description": "막국수만 나갑니다.",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/1a04b6ea-53c7-4865-9fc0-2188dc8fd120.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1233854-10000032",
+      "name": "1인분 삼겹 통김치찜",
+      "description": "삼겹 통김치찜,애기 계란찜,공기밥,두부3p\n통김치찜으로 나갑니다.불편하신 분들은 요청사항에 김치를 잘라달라고 적어주세요.",
+      "category": "메밀꽃 김치찜은 국내산 배추만 사용합니다.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2a23d547-59e4-4966-a5f6-b88cc2761043.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1233854-10000033",
+      "name": "2인분 삼겹 통김치찜",
+      "description": "삼겹 통김치찜,계란찜,공기밥 2개, 두부6p\n통김치찜으로 나갑니다.불편하신 분은 요청사항에 잘라달라고 적어주세요.",
+      "category": "메밀꽃 김치찜은 국내산 배추만 사용합니다.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b4536d3f-c542-4f1a-a26f-858e1f0efc25.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1233854-10000008",
+      "name": "해장 콩나물국밥 얼큰",
+      "description": "",
+      "category": "메밀꽃 콩나물국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5e26e398-5a9c-4abc-83df-0e75db99292b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1233854-10000009",
+      "name": "해장 콩나물국밥 담백",
+      "description": "",
+      "category": "메밀꽃 콩나물국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5c1430e5-d2c9-4b67-92f7-bd186d8d9cba.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1233854-10000001",
+      "name": "시전동(신기동)",
+      "description": "",
+      "category": "배달비 추가 지역 선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1233854-10000002",
+      "name": "1인  메밀꽃 막국수 세트",
+      "description": "메뉴+사이드.",
+      "category": "메밀꽃 막국수 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/5bf3e517-4be0-46dc-a61b-26ca51875295.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1233854-10000013",
+      "name": "쫀득 감자 찐만두 8알 +간장",
+      "description": "감자만두 8개,간장",
+      "category": "메밀꽃 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/43672714-9441-4fdd-956e-859b12aa8304.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1233854-10000015",
+      "name": "1인 한돈떡갈비 도시락",
+      "description": "",
+      "category": "메밀꽃 도시락 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/33b73abd-39af-4544-aa5b-196bb5d26f3a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1233854-10000017",
+      "name": "코카콜라 (355ml)",
+      "description": "",
+      "category": "음료수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/7f435bf3-cd2e-4900-aca2-b87587a179d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1233854-10000031",
+      "name": "진한 콩국수(소면,깍두기)",
+      "description": "콩국수만 나갑니다. 기본 간은 되어 있습니다. 설탕,소금 필요하신 분은 가게 오청사항에 기재해주세요.",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0bc12a36-ad9c-44c9-a4b3-38086be02593.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1233854-10000041",
+      "name": "[착한가격] 수제떡갈비 (1p)",
+      "description": "",
+      "category": "약속해요",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1233854-10000046",
+      "name": "쌀국수+나시고랭(볶음밥) 2인 세트",
+      "description": "쌀국수.단무지,양파지",
+      "category": "[신메뉴 출시] 쌀국수 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/fabb6205-9876-4b67-aed3-6547afed3493.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1233854-90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1233854-10000014",
+      "name": "두툼 고기 찐왕만두 5알 +간장",
+      "description": "고기왕만두 5개,간장",
+      "category": "메밀꽃 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/105a8359-dc50-46a4-9de6-4fbc85addce4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1233854-10000018",
+      "name": "제로콜라 (355ml)",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1233854-10000047",
+      "name": "1인 쌀국수 & 튀김 세트",
+      "description": "쌀국수.단무지.양파지",
+      "category": "[신메뉴 출시] 쌀국수 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1fa11d4e-76a6-47b4-87ef-2ce98c32ab0d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1233854-10000052",
+      "name": "메밀 콩국수(메밀면,깍두기)",
+      "description": "대두콩국수,깍두기,설탕&소금",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1233854-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1233854-10000010",
+      "name": "산소 콩나물 돼지 김치찌개",
+      "description": "",
+      "category": "메밀꽃 콩나물국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0b57715d-26b1-4dfb-8997-f668b0398df3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1233854-10000019",
+      "name": "스프라이트(355ml)",
+      "description": "",
+      "category": "음료수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e773af7a-95bb-4afa-bdea-349123c86b93.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1233854-10000048",
+      "name": "[첫주문 대박] 소고기 쌀국수",
+      "description": "쌀국수,단무지,양파집",
+      "category": "[신메뉴 출시] 쌀국수 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/15fab213-fd36-4c56-82cc-21c010dc253b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1233854-10000053",
+      "name": "바삭 감자 튀김만두 8알 +와사비 간장",
+      "description": "",
+      "category": "메밀꽃 사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1233854-90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1233854-10000058",
+      "name": "비빔국수(소면,깍두기,국물)",
+      "description": "",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1233854-10000005",
+      "name": "열무 물국수(소면,깍두기)",
+      "description": "열무국수만  나갑니다.",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/c3e252c4-e5a8-4b22-a650-20ff3bb085ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1233854-10000012",
+      "name": "갈비살 한돈떡갈비 (2p)",
+      "description": "떡갈비,3찬 반찬,공기밥,콩나물국물",
+      "category": "메밀꽃 콩나물국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4c3d3f98-45fd-4387-8c2e-79e0aa948eea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1233854-10000020",
+      "name": "환타 파인(355ml)",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1233854-10000049",
+      "name": "[재주문 90%]매운 소고기 쌀국수",
+      "description": "쌀국수.단무지,양파지",
+      "category": "[신메뉴 출시] 쌀국수 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/805d6802-e49a-4560-8b71-f80e27923d50.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1233854-90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1233854-10000054",
+      "name": "바삭 고기 튀김왕만두 5알 +와사비 간장",
+      "description": "",
+      "category": "메밀꽃 사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1233854-10000011",
+      "name": "뒷다리살 수제 떡갈비 (2p)",
+      "description": "떡갈비 (2p),3찬 반찬,공기밥,콩나물국물",
+      "category": "메밀꽃 콩나물국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/21b045ee-4d02-44ac-b167-c93051518248.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1233854-10000021",
+      "name": "쿨피스 파인(350ml)",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1233854-10000050",
+      "name": "퓨전식 마라 쌀국수",
+      "description": "쌀국수,단무지.양파지",
+      "category": "[신메뉴 출시] 쌀국수 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e3ac2970-71d3-4aa9-85ed-0a2d35ad5d8f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1233854-10000055",
+      "name": "열무비빔국수(소면,깍두기)",
+      "description": "",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1233854-10000022",
+      "name": "암바사(345ml)",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1233854-10000029",
+      "name": "해장 물냉면",
+      "description": "냉면,양념장,겨자,식초",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a4a465bc-d75d-4e42-809c-ee1508aea877.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1233854-10000051",
+      "name": "[육수맛 대박] 우육탕 쌀국수",
+      "description": "쌀국수,단무지,양파지",
+      "category": "[신메뉴 출시] 쌀국수 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9fdba66c-3bc3-48b7-9cad-34b545869157.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1233854-10000030",
+      "name": "해장 비빔냉면",
+      "description": "냉면,냉면육수,겨자,식초",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3e57c0a3-9b74-4bef-a706-ddc2e4482e90.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1233854-10000056",
+      "name": "해장 물비빔냉면",
+      "description": "",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1233854-10000057",
+      "name": "메밀 물비빔막국수",
+      "description": "",
+      "category": "메밀꽃 시그니처 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1233854",
+    "sourceUrls": [
+      "https://bit.ly/3Pacwjg",
+      "https://fdofd.ddangyo.com/gateway1.html?EQe8Vk3"
+    ],
+    "rawItemCount": 48,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

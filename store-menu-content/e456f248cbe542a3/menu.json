@@ -1,0 +1,1171 @@
+{
+  "storeId": "e456f248cbe542a3",
+  "storeName": "청년다방 여서점",
+  "displayName": "청년다방 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/1be9913e-c248-4304-aede-8627d8f58abc.jpg",
+  "categories": [
+    "전체",
+    "청년세트",
+    "단품떡볶이",
+    "수제돈가스",
+    "사이드메뉴",
+    "1인세트",
+    "바삭튀김",
+    "든든식사",
+    "치킨세트",
+    "음료",
+    "돈가스세트",
+    "1인단품",
+    "토핑사리",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175481-30000210",
+      "name": "불향차돌청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/392579e0-a64d-43d8-bf14-a6da23878372.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000210"
+    },
+    {
+      "id": "ddangyo-1175481-30001009",
+      "name": "크림차돌떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/7deaaf8d-0c12-4e90-9b9e-ca0f9e40ae6d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001009"
+    },
+    {
+      "id": "ddangyo-1175481-30000317",
+      "name": "경양식돈가스",
+      "description": "",
+      "category": "수제돈가스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/720f667b-ac9d-4673-aaae-c7362eb3989b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000317"
+    },
+    {
+      "id": "ddangyo-1175481-30000322",
+      "name": "치즈돈가스",
+      "description": "",
+      "category": "수제돈가스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/4d7adafd-15de-4065-9c3e-3b7ed30f154f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000322"
+    },
+    {
+      "id": "ddangyo-1175481-30000238",
+      "name": "통통순살치킨",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/4d186d10-b32d-4a4a-8813-50f10cfe9efa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000238"
+    },
+    {
+      "id": "ddangyo-1175481-30000239",
+      "name": "허니간장순살치킨",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/e041458b-a632-429c-9b3a-49c5f1649ae2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000239"
+    },
+    {
+      "id": "ddangyo-1175481-30000206",
+      "name": "1인떡튀순세트",
+      "description": "",
+      "category": "1인세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/c8627c3f-f655-493f-9565-c6f1cfc78d22.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000206"
+    },
+    {
+      "id": "ddangyo-1175481-30000253",
+      "name": "튀김만두(1개)",
+      "description": "",
+      "category": "바삭튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/8b11f1a5-f06a-480e-8da2-85af8aef477f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000253"
+    },
+    {
+      "id": "ddangyo-1175481-30000248",
+      "name": "치킨마요컵밥",
+      "description": "",
+      "category": "든든식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/e0d36683-9ff7-4ca3-967b-42f350cdb00a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000248"
+    },
+    {
+      "id": "ddangyo-1175481-30000211",
+      "name": "떡튀순청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/e00781a4-0034-46cc-b998-b96bf1238fcb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000211"
+    },
+    {
+      "id": "ddangyo-1175481-30000219",
+      "name": "떡튀순치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/dff4e786-3d54-4362-8ef9-f62da3f606ed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000219"
+    },
+    {
+      "id": "ddangyo-1175481-30000283",
+      "name": "아메리카노",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/e504a4db-409b-4663-a9d3-c9430919a173.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000283"
+    },
+    {
+      "id": "ddangyo-1175481-30000227",
+      "name": "떡튀순떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/0f77462f-cc2f-445b-9c77-08d483c8564c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000227"
+    },
+    {
+      "id": "ddangyo-1175481-30000308",
+      "name": "떡튀순돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e64d2ec6-d8da-4463-ae35-6a58dec64fab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000308"
+    },
+    {
+      "id": "ddangyo-1175481-30000235",
+      "name": "1인떡튀순떡볶이",
+      "description": "",
+      "category": "1인단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/0006a135-c2e7-4b63-ba57-897cb1ced83f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000235"
+    },
+    {
+      "id": "ddangyo-1175481-30000263",
+      "name": "갈릭시즈닝",
+      "description": "",
+      "category": "토핑사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000263"
+    },
+    {
+      "id": "ddangyo-1175481-90000001",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1175481-30001006",
+      "name": "대패삼겹청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/0f88fee4-7040-485c-88e0-d33d20fdecbb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001006"
+    },
+    {
+      "id": "ddangyo-1175481-30001007",
+      "name": "대패삼겹돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/43ba0392-542f-47d7-a415-4b584c0d690a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001007"
+    },
+    {
+      "id": "ddangyo-1175481-30000249",
+      "name": "참치마요컵밥",
+      "description": "",
+      "category": "든든식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/eedb8cae-4265-43b2-9f17-2423a0b1b598.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000249"
+    },
+    {
+      "id": "ddangyo-1175481-30000264",
+      "name": "단무지 추가",
+      "description": "",
+      "category": "토핑사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000264"
+    },
+    {
+      "id": "ddangyo-1175481-30001008",
+      "name": "대패삼겹치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/4ba44f4a-f98c-4d2c-a3fb-1ca58deb6482.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001008"
+    },
+    {
+      "id": "ddangyo-1175481-30000205",
+      "name": "1인차돌세트",
+      "description": "",
+      "category": "1인세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/fbf3560c-5199-4dd7-b67e-cf6fed96aa36.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000205"
+    },
+    {
+      "id": "ddangyo-1175481-30000320",
+      "name": "멕시칸돈가스",
+      "description": "",
+      "category": "수제돈가스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f5f6b514-53f5-416f-ac9c-c6d4ce4d8bda.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000320"
+    },
+    {
+      "id": "ddangyo-1175481-30000284",
+      "name": "통큰커피",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/09082265-b0e0-4d2b-a41b-1a1fe71aaf96.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000284"
+    },
+    {
+      "id": "ddangyo-1175481-30001005",
+      "name": "대패삼겹떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/9b673cde-bc1e-47b5-ab05-154c0707d74f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001005"
+    },
+    {
+      "id": "ddangyo-1175481-30000254",
+      "name": "김말이튀김(1개)",
+      "description": "",
+      "category": "바삭튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/750d6333-95a9-4b4b-9154-2d4bc3aa934f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000254"
+    },
+    {
+      "id": "ddangyo-1175481-30000200",
+      "name": "1인차돌떡볶이",
+      "description": "",
+      "category": "1인단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/16506987-76e9-4ee5-b6e7-04258399dedb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000200"
+    },
+    {
+      "id": "ddangyo-1175481-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1175481-30000265",
+      "name": "버터갈릭소스 추가",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/c6bbe784-cd66-41c3-a483-20880949195c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000265"
+    },
+    {
+      "id": "ddangyo-1175481-30000207",
+      "name": "1인오짱세트",
+      "description": "",
+      "category": "1인세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/62ded06d-65c5-442e-8721-c4ffec24bc11.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000207"
+    },
+    {
+      "id": "ddangyo-1175481-30000236",
+      "name": "1인오짱떡볶이",
+      "description": "",
+      "category": "1인단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/06cbf372-82ff-447b-8559-7314476e7c8d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000236"
+    },
+    {
+      "id": "ddangyo-1175481-30000240",
+      "name": "모듬튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/1283b900-6fda-4b2b-8912-72e17fd59983.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000240"
+    },
+    {
+      "id": "ddangyo-1175481-30001053",
+      "name": "마라치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/54998c05-b642-4dd4-bc5d-ea4ce6dd4ee2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001053"
+    },
+    {
+      "id": "ddangyo-1175481-30000250",
+      "name": "날치알볶음밥",
+      "description": "",
+      "category": "든든식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/2a9471c7-eb63-4626-b0e7-64f42587711f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000250"
+    },
+    {
+      "id": "ddangyo-1175481-30001052",
+      "name": "마라돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/aad43638-e4ea-46fc-a56e-6a97b136c98b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001052"
+    },
+    {
+      "id": "ddangyo-1175481-30001051",
+      "name": "마라청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/00eab2fc-ed6f-40a7-8835-eea39239d979.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001051"
+    },
+    {
+      "id": "ddangyo-1175481-30000285",
+      "name": "카페라떼",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/8de8bd05-5cbf-482b-b9a6-2f758bb1a6d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000285"
+    },
+    {
+      "id": "ddangyo-1175481-30000318",
+      "name": "파인스윗돈가스",
+      "description": "",
+      "category": "수제돈가스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/7cec89d7-b74b-48ca-ab27-899403e73efa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000318"
+    },
+    {
+      "id": "ddangyo-1175481-90000003",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1175481-30000256",
+      "name": "야채튀김(1개)",
+      "description": "",
+      "category": "바삭튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/10830602-1bc7-42de-b400-8e66be9faa39.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000256"
+    },
+    {
+      "id": "ddangyo-1175481-30000237",
+      "name": "1인치즈폭포떡볶이",
+      "description": "",
+      "category": "1인단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d134919a-d5bd-46b7-80c2-d0507e65bd50.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000237"
+    },
+    {
+      "id": "ddangyo-1175481-30000266",
+      "name": "쓰리라차마요소스 추가",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/d41ccb74-a2dc-449f-b793-5e537bda26b5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000266"
+    },
+    {
+      "id": "ddangyo-1175481-30001049",
+      "name": "마라떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/95f9de19-b92c-4f8c-8eb2-41f87e332192.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001049"
+    },
+    {
+      "id": "ddangyo-1175481-30000309",
+      "name": "불향차돌돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/bb235147-ff67-4d93-8e1d-6702de346477.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000309"
+    },
+    {
+      "id": "ddangyo-1175481-30001027",
+      "name": "말차버터갈릭감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/e11c23b9-1764-4f08-aa25-b9b8bdb03106.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001027"
+    },
+    {
+      "id": "ddangyo-1175481-30000319",
+      "name": "스파이시돈가스",
+      "description": "",
+      "category": "수제돈가스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a7c36cdf-4213-4f79-a04d-1fd59b5cbd0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000319"
+    },
+    {
+      "id": "ddangyo-1175481-30000286",
+      "name": "바닐라라떼",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/55e6d8e8-79d1-4818-9bb6-7841c5540ebf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000286"
+    },
+    {
+      "id": "ddangyo-1175481-30001014",
+      "name": "치즈밥",
+      "description": "",
+      "category": "든든식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/0d4c19e5-fd29-4178-9d00-16ffa594bcdf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001014"
+    },
+    {
+      "id": "ddangyo-1175481-30000218",
+      "name": "불향차돌치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/dd6527e9-1e60-4563-b097-07668fe74623.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000218"
+    },
+    {
+      "id": "ddangyo-1175481-30000208",
+      "name": "1인치즈폭포세트",
+      "description": "",
+      "category": "1인세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ba35cde0-92ea-4df3-9e87-0c75a3a3f6ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000208"
+    },
+    {
+      "id": "ddangyo-1175481-30000287",
+      "name": "카라멜마끼아또",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/4a9cc31a-2e6e-4001-9ac3-850de7427325.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000287"
+    },
+    {
+      "id": "ddangyo-1175481-30000241",
+      "name": "버터갈릭감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/3093c79f-bd16-4f51-8031-65ec2955b377.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000241"
+    },
+    {
+      "id": "ddangyo-1175481-30000220",
+      "name": "통큰오짱치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/0ad9f55b-3f8a-4e7d-b084-c4a6ff0f2e1c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000220"
+    },
+    {
+      "id": "ddangyo-1175481-30000257",
+      "name": "고구마튀김(1개)",
+      "description": "",
+      "category": "바삭튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5e08179b-2aa1-428e-956f-5425fcc078ef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000257"
+    },
+    {
+      "id": "ddangyo-1175481-30001015",
+      "name": "김가루주먹밥",
+      "description": "",
+      "category": "든든식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/3a889846-5fd0-4b92-9bcc-e9c7f296cfbc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001015"
+    },
+    {
+      "id": "ddangyo-1175481-30000267",
+      "name": "어묵토핑",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/9ba77c0d-75e1-45ed-9d54-98db5c17db91.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000267"
+    },
+    {
+      "id": "ddangyo-1175481-30000226",
+      "name": "불향차돌떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/922a4e20-278c-4e47-99ea-eee2a0307e28.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000226"
+    },
+    {
+      "id": "ddangyo-1175481-30000321",
+      "name": "반반돈가스(경양식+스파이시)",
+      "description": "",
+      "category": "수제돈가스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/772e2d3a-b635-4aa2-b7da-c6ccae4bcb69.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000321"
+    },
+    {
+      "id": "ddangyo-1175481-30000310",
+      "name": "통큰오짱돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0d1c2b25-14ab-4816-9150-b77d062ecce8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000310"
+    },
+    {
+      "id": "ddangyo-1175481-30000212",
+      "name": "통큰오짱청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/4a95954a-5cdc-4ea6-b7c9-74ffe659aed3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000212"
+    },
+    {
+      "id": "ddangyo-1175481-30000311",
+      "name": "마라로제돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9df97420-4cc5-497c-8493-31fdcf9e7cae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000311"
+    },
+    {
+      "id": "ddangyo-1175481-30000221",
+      "name": "마라로제치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/dd1d4bd2-3d11-4368-b3cf-1a29e209ad56.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000221"
+    },
+    {
+      "id": "ddangyo-1175481-30000288",
+      "name": "복숭커피",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/dd586ef8-68f3-4ab0-b6ac-fa64f1319f89.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000288"
+    },
+    {
+      "id": "ddangyo-1175481-30000252",
+      "name": "공기밥",
+      "description": "",
+      "category": "든든식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/a6dffe33-f710-4f56-993a-9a18bc9ec16e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000252"
+    },
+    {
+      "id": "ddangyo-1175481-30000242",
+      "name": "핫버터갈릭옥수수튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/f175684f-b1fe-4a81-9bc5-7eedbfb197db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000242"
+    },
+    {
+      "id": "ddangyo-1175481-30001056",
+      "name": "날치알",
+      "description": "",
+      "category": "토핑사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30001056"
+    },
+    {
+      "id": "ddangyo-1175481-30000228",
+      "name": "통큰오짱떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/cba3685a-48f8-40b4-b3a2-ed1ec090fff7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000228"
+    },
+    {
+      "id": "ddangyo-1175481-30000258",
+      "name": "모짜치즈볼(1개)",
+      "description": "",
+      "category": "바삭튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/4af1acb2-6755-494c-99cd-99dcd2b4cfaa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000258"
+    },
+    {
+      "id": "ddangyo-1175481-30000213",
+      "name": "마라로제청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/1d240629-a91f-4207-9eb5-eaede61b1d61.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000213"
+    },
+    {
+      "id": "ddangyo-1175481-30000269",
+      "name": "파채토핑",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/fa900e5c-389d-432c-b633-053ebbc9ba20.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000269"
+    },
+    {
+      "id": "ddangyo-1175481-30000215",
+      "name": "치즈폭포순살청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/c5c280e6-f8a4-40ec-ae37-ae40d05ff20a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000215"
+    },
+    {
+      "id": "ddangyo-1175481-30000223",
+      "name": "치즈폭포치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/ff034f0a-6560-4a35-b19d-7a96febd6186.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000223"
+    },
+    {
+      "id": "ddangyo-1175481-30000229",
+      "name": "마라로제떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/f4da094e-d991-4bf8-abb8-20cbac0420c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000229"
+    },
+    {
+      "id": "ddangyo-1175481-30000244",
+      "name": "꼬지어묵탕(5꼬지)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/c9ba7b2c-f631-4d20-80ce-6ddaba961bc0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000244"
+    },
+    {
+      "id": "ddangyo-1175481-30000289",
+      "name": "통큰복숭커피",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/90da7143-a8eb-4404-9ad6-ca7a453663de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000289"
+    },
+    {
+      "id": "ddangyo-1175481-30000313",
+      "name": "치즈폭포돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f8d42afb-dea8-4c79-9e6d-55433cf816d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000313"
+    },
+    {
+      "id": "ddangyo-1175481-30001011",
+      "name": "크림차돌돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/8d42cf45-6cbf-4ed8-b525-373ae9e70fdc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001011"
+    },
+    {
+      "id": "ddangyo-1175481-30000231",
+      "name": "치즈폭포순살떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/0b4a15df-bf2e-4bda-a0cf-ca3532e9daed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000231"
+    },
+    {
+      "id": "ddangyo-1175481-30000260",
+      "name": "오징어튀김(1개)",
+      "description": "",
+      "category": "바삭튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/3c11ca26-9329-49e4-bb02-aa649a753a14.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000260"
+    },
+    {
+      "id": "ddangyo-1175481-30000271",
+      "name": "비엔나햄(8개)",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/c2c43035-4413-464a-992e-ebd8c75aa8bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000271"
+    },
+    {
+      "id": "ddangyo-1175481-30000290",
+      "name": "카페모카",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/8e5281e3-f143-41f2-9072-7c3326922ada.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000290"
+    },
+    {
+      "id": "ddangyo-1175481-30001012",
+      "name": "크림차돌치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/b8e9f570-af21-4409-b9a4-dcb7455fffd7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001012"
+    },
+    {
+      "id": "ddangyo-1175481-30001010",
+      "name": "크림차돌청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/6177381a-58a2-480b-870d-e6274c3d34ab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001010"
+    },
+    {
+      "id": "ddangyo-1175481-30001026",
+      "name": "말차크림차돌치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/5c41435e-f802-4210-a839-6df1f47626d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001026"
+    },
+    {
+      "id": "ddangyo-1175481-30001025",
+      "name": "말차크림차돌돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/297aecb1-3262-4860-8b75-0a1bba8d2ba4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001025"
+    },
+    {
+      "id": "ddangyo-1175481-30000245",
+      "name": "찰순대(조리전 250g)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/2830b223-6e1b-40e3-ad77-63a59f7690e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000245"
+    },
+    {
+      "id": "ddangyo-1175481-30001024",
+      "name": "말차크림차돌청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/56b531c9-59e3-4143-b34c-2e5cff54e0ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001024"
+    },
+    {
+      "id": "ddangyo-1175481-30000272",
+      "name": "메추리알(6개)",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/ff8ed2df-2d93-4faa-ab15-b4db7d70e09e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000272"
+    },
+    {
+      "id": "ddangyo-1175481-30001028",
+      "name": "아이스말차",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/f77aefdf-350a-4ea7-b158-82174458c288.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001028"
+    },
+    {
+      "id": "ddangyo-1175481-30000216",
+      "name": "차새대청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/cf98b090-ce40-4028-afa3-7358e7c8abd0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000216"
+    },
+    {
+      "id": "ddangyo-1175481-30001021",
+      "name": "감자후레이크",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/3efc3738-413a-4981-8bd8-8a38fbe7420e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001021"
+    },
+    {
+      "id": "ddangyo-1175481-30001023",
+      "name": "말차크림차돌떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/cb1492c6-1564-4fe7-963e-5c88390dc804.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001023"
+    },
+    {
+      "id": "ddangyo-1175481-30001029",
+      "name": "아이스말차라떼",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/786c6498-4b96-48f2-bf48-35c209489c5e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001029"
+    },
+    {
+      "id": "ddangyo-1175481-30001055",
+      "name": "통모짜렐라튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/bd4af4e1-b8fe-4267-9313-7c9481af74d1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001055"
+    },
+    {
+      "id": "ddangyo-1175481-30000224",
+      "name": "차새대치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/036a74ed-9ee8-4ffd-84bf-710c8525716d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000224"
+    },
+    {
+      "id": "ddangyo-1175481-30000314",
+      "name": "차새대돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5b5cae05-30b4-4ab0-bff0-2f4a17633144.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000314"
+    },
+    {
+      "id": "ddangyo-1175481-30001032",
+      "name": "비조리돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/866cedb5-0906-443a-8a53-0152d3890f25.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001032"
+    },
+    {
+      "id": "ddangyo-1175481-30001031",
+      "name": "비조리청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/0d2d010b-b27a-4108-beb3-97f855f0ec80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001031"
+    },
+    {
+      "id": "ddangyo-1175481-30001057",
+      "name": "두부피롤(2개)",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/79927be1-da68-4d5d-8c32-62554856ea33.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001057"
+    },
+    {
+      "id": "ddangyo-1175481-30001016",
+      "name": "반반핫도그",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/2b8192b8-4d87-436e-8fca-e39d8d34ed5e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001016"
+    },
+    {
+      "id": "ddangyo-1175481-30000232",
+      "name": "차새대떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/25a6fb77-357a-4ebe-b752-e03ddf3b6911.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000232"
+    },
+    {
+      "id": "ddangyo-1175481-30000291",
+      "name": "아이스티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/29e12e22-199a-4dc7-9445-991b383b4c93.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000291"
+    },
+    {
+      "id": "ddangyo-1175481-30001033",
+      "name": "비조리치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2dc2a909-7798-4384-8f7b-f660a4d6553c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001033"
+    },
+    {
+      "id": "ddangyo-1175481-30001019",
+      "name": "기본돈가스세트",
+      "description": "",
+      "category": "돈가스세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/02e4345c-c677-466e-97c9-e4d86580f5ee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001019"
+    },
+    {
+      "id": "ddangyo-1175481-30001020",
+      "name": "기본치킨세트",
+      "description": "",
+      "category": "치킨세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/3017c681-2e77-4445-b5a8-1801d5169d80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001020"
+    },
+    {
+      "id": "ddangyo-1175481-30001022",
+      "name": "엔젤치즈",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/b6dcae42-3e5d-4d34-9760-cff0c8d9ac01.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001022"
+    },
+    {
+      "id": "ddangyo-1175481-30000292",
+      "name": "통큰아이스티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/02c15e82-873e-42f6-a1db-4922692060bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000292"
+    },
+    {
+      "id": "ddangyo-1175481-30001018",
+      "name": "기본청년세트",
+      "description": "",
+      "category": "청년세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/cf392d0f-74d7-4fb3-a210-d7009f18d028.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001018"
+    },
+    {
+      "id": "ddangyo-1175481-30000294",
+      "name": "에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/b4c072d7-fc20-4829-8992-f6bc5cda4088.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000294"
+    },
+    {
+      "id": "ddangyo-1175481-30000276",
+      "name": "치즈블럭(130g)",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/a9272166-90ba-43e3-bf7b-50312f0436d4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000276"
+    },
+    {
+      "id": "ddangyo-1175481-30001030",
+      "name": "비조리떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/93217ba1-e157-4cfe-8c58-882210e91d11.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001030"
+    },
+    {
+      "id": "ddangyo-1175481-30000295",
+      "name": "통큰에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/ec2d4494-44a3-48dd-9fb9-8c460fb2bfd8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000295"
+    },
+    {
+      "id": "ddangyo-1175481-30000279",
+      "name": "순살치킨토핑",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/8ae0192a-e869-428d-8d5b-501942c6b93e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000279"
+    },
+    {
+      "id": "ddangyo-1175481-30001017",
+      "name": "기본떡볶이",
+      "description": "",
+      "category": "단품떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/c7483dbb-fb54-4d4c-ab68-d93f008e1d1f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30001017"
+    },
+    {
+      "id": "ddangyo-1175481-30000296",
+      "name": "초코",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/6141b66d-b27c-4580-afb8-945ab896fd44.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000296"
+    },
+    {
+      "id": "ddangyo-1175481-30000280",
+      "name": "차돌토핑",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/eb08f172-7171-4ace-ab5b-0b52d487d323.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000280"
+    },
+    {
+      "id": "ddangyo-1175481-30000297",
+      "name": "미숫가루",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/0272d3f4-33d5-4521-ada7-8707be5b26d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000297"
+    },
+    {
+      "id": "ddangyo-1175481-30000281",
+      "name": "오짱토핑",
+      "description": "",
+      "category": "토핑사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/d8955ac8-8ce3-49aa-9b16-3c79d0e83459.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000281"
+    },
+    {
+      "id": "ddangyo-1175481-30000298",
+      "name": "쿨다방",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/0a0b683b-9934-43ee-9d09-cd17ba0cad0e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000298"
+    },
+    {
+      "id": "ddangyo-1175481-30000299",
+      "name": "콜라(캔)355ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000299"
+    },
+    {
+      "id": "ddangyo-1175481-30000300",
+      "name": "사이다(캔)355ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000300"
+    },
+    {
+      "id": "ddangyo-1175481-30000301",
+      "name": "콜라(pet)500ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000301"
+    },
+    {
+      "id": "ddangyo-1175481-30000302",
+      "name": "사이다(pet)500ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000302"
+    },
+    {
+      "id": "ddangyo-1175481-30000303",
+      "name": "콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000303"
+    },
+    {
+      "id": "ddangyo-1175481-30000304",
+      "name": "사이다 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000304"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175481",
+    "sourceUrls": [
+      "https://bit.ly/3Z57KF2",
+      "https://fdofd.ddangyo.com/gateway1.html?7BACxOW"
+    ],
+    "rawItemCount": 132,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "storeId": "7432d966de3f75ab",
+  "storeName": "감탄떡볶이 문수점",
+  "displayName": "감탄떡볶이 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/fca6cb68-ec54-4087-bb8c-dbd717fc00c4.jpg",
+  "categories": [
+    "전체",
+    "스페셜 메뉴",
+    "SET MENU",
+    "사이드메뉴",
+    "음료메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1219409-10000005",
+      "name": "감탄 쌀떡볶이(2인분시개별 포장  요청사항기입)",
+      "description": "",
+      "category": "스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/fca6cb68-ec54-4087-bb8c-dbd717fc00c4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1219409-10000006",
+      "name": "쌀떡 밀떡 섞어(2인분시개별포장 요청사항기입),",
+      "description": "",
+      "category": "스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f08531ed-e791-465f-92d2-fbfca5c3793f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1219409-10000007",
+      "name": "더블치즈떡볶이(눈꽃치즈+체다치즈)",
+      "description": "",
+      "category": "스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f8df57ea-7d5e-4663-a4c8-c395f21d95c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1219409-10000008",
+      "name": "찰순대(2인분시개별포장 요청사항기입)",
+      "description": "내장 선택가능",
+      "category": "스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5d5612db-d39e-47e4-b716-cc3991406b80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1219409-10000009",
+      "name": "수제 바삭튀김 (야채빼구 튀김선택가능) 5개",
+      "description": "(김말이1고구마1오징어1야채튀김1새우튀김1)야채튀김빼구 선택 가능",
+      "category": "스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/edf8c449-4fb2-4ce8-ac99-ea65830937fc.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1219409-10000001",
+      "name": "허브탕수육세트",
+      "description": "허브탕수육(냉동)+떡볶이+순대+튀김",
+      "category": "SET MENU",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1219409-10000004",
+      "name": "떡볶이국물(떡5+어묵2)  떡볶이 소스가 더비싸요",
+      "description": "",
+      "category": "스페셜 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1219409-10000013",
+      "name": "김가루+밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1219409-10000036",
+      "name": "쿨피스450ml",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1219409-10000002",
+      "name": "칠리탕수육세트",
+      "description": "칠리탕수육(냉동)+떡볶이+순대+튀김",
+      "category": "SET MENU",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1219409-10000014",
+      "name": "우동",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/15c6368a-7252-431c-bcb8-44650ac271b3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1219409-10000003",
+      "name": "신기동",
+      "description": "",
+      "category": "SET MENU",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1219409-10000015",
+      "name": "새우튀김우동",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/1af69dee-cd5c-49ed-af27-905072b3c504.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1219409-10000016",
+      "name": "어묵우동",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/775fd476-c6bc-41ac-956b-3ea736275bc4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1219409-10000039",
+      "name": "식혜",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1219409-10000017",
+      "name": "잔치쌀면(소면)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/a32ae2f5-b06f-47d0-8115-057af55a946e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1219409-10000040",
+      "name": "코카콜라355ml",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1219409-10000018",
+      "name": "어묵잔치쌀면(소면)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1219409-10000041",
+      "name": "칠성사이다355ml",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1219409-10000010",
+      "name": "냉동튀김(김말이2,만두2,우유튀김2,납작만두3)",
+      "description": "김말이2개 만두2개 우유튀김2개 당면만두3개",
+      "category": "스페셜 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1219409-10000019",
+      "name": "감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1078453d-f708-4f8b-8c00-6233d3cabfc9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1219409-10000042",
+      "name": "밀키스355ml",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1219409-10000011",
+      "name": "허브탕수육",
+      "description": "",
+      "category": "스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/3588d06f-bdc1-4fb3-8b6d-bdc88a6e186f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1219409-10000020",
+      "name": "떡강정",
+      "description": "간장소스,양념소스 2개섞어서뿌리거나 찍어드시면 맛있어요",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/ffc1b3fa-8357-4d02-ae32-84e5dbfde1c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1219409-10000043",
+      "name": "펩시 제로(뚱캔)",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1219409-10000012",
+      "name": "칠리탕수육",
+      "description": "",
+      "category": "스페셜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e5f09b8f-e061-400e-baed-d29503181273.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1219409-10000022",
+      "name": "닭꼬치",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/b4b498c1-3058-4dfb-a210-ce433540f7f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1219409-10000023",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/06e22418-9914-4b5a-a3cf-d2127222fdc4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1219409-10000024",
+      "name": "우유 튀김 3개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1219409-10000025",
+      "name": "납작만두2개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7cc08045-22ce-459a-8c1c-cba3191f664b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1219409-10000026",
+      "name": "고추튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c20ff2d3-e80d-41d7-953b-4311d0ef36df.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1219409-10000027",
+      "name": "김말이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1219409-10000028",
+      "name": "수제 고구마튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1219409-10000029",
+      "name": "수제 야채튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1219409-10000030",
+      "name": "만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1219409-10000031",
+      "name": "냉동새우튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1219409-10000032",
+      "name": "가래떡꼬치",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1219409-10000033",
+      "name": "수제 오징어튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1219409-10000034",
+      "name": "모둠어묵탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1219409-10000035",
+      "name": "부산어묵",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7100eadd-4711-4ead-bae4-64bd9d1feb12.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1219409",
+    "sourceUrls": [
+      "https://bit.ly/tk-감탄떡볶이문수점",
+      "https://fdofd.ddangyo.com/gateway1.html?D4qVAac"
+    ],
+    "rawItemCount": 45,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

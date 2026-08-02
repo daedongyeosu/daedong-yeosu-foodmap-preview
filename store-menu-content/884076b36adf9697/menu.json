@@ -1,0 +1,226 @@
+{
+  "storeId": "884076b36adf9697",
+  "storeName": "촌닭두마리치킨 오림점",
+  "displayName": "촌닭두마리치킨 오림점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0be9f7e3-1240-4888-bd46-7febdd75cbc8.jpg",
+  "categories": [
+    "전체",
+    "치킨메뉴",
+    "튀김류",
+    "추가선택",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216979-10000002",
+      "name": "닭두마리",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0be9f7e3-1240-4888-bd46-7febdd75cbc8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1216979-10000013",
+      "name": "똥집튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ec4c9e5-1adf-4bda-8576-964d7a7bbac3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1216979-10000004",
+      "name": "매운 통닭",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55ea4d45-50ec-4003-b981-d7f2eb20eb30.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1216979-10000001",
+      "name": "닭한마리",
+      "description": "8,000원의 행복~ 바삭바삭 촉촉한 닭다리를 혼자서 \n2개나 먹을 수 있다니 .. 1인1닭 강.력.추.천",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/af6101c4-23bc-450e-89d5-6be3bd8261d6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1216979-10000008",
+      "name": "머스타드 소스",
+      "description": "",
+      "category": "추가선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1216979-10000021",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1216979-10000009",
+      "name": "매운소스",
+      "description": "",
+      "category": "추가선택",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/4d5d3812-74f7-44d3-a19a-de4240506da8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1216979-10000014",
+      "name": "오징어튀김 (외국산)",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/6aaace5a-f702-4846-abc4-d744d1e65de2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1216979-10000022",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1216979-10000003",
+      "name": "마늘 통닭",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/e6c97a30-8ff2-4dc3-b00b-a3908ea4f003.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1216979-10000010",
+      "name": "양념치킨 소스",
+      "description": "",
+      "category": "추가선택",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/4d5d3812-74f7-44d3-a19a-de4240506da8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1216979-10000015",
+      "name": "새우튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/08ca06a6-6667-4c43-9f81-bda76d3ea292.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1216979-10000011",
+      "name": "와사비소스",
+      "description": "",
+      "category": "추가선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1216979-10000016",
+      "name": "닭발튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a5664209-4ba6-4ea8-a18a-2f72ce4b569d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1216979-10000005",
+      "name": "윙봉",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002120.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1216979-10000012",
+      "name": "무",
+      "description": "",
+      "category": "추가선택",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1216979-10000017",
+      "name": "똥집+닭발 튀김 세트",
+      "description": "",
+      "category": "튀김류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1216979-10000006",
+      "name": "양념치킨",
+      "description": "조각 양념 치킨",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/056e1bb7-a0f6-40b5-bf06-1154b624245a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1216979-10000018",
+      "name": "고추튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c20ff2d3-e80d-41d7-953b-4311d0ef36df.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1216979-10000007",
+      "name": "후라이드치킨",
+      "description": "조각 후라이드 치킨",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1216979-10000019",
+      "name": "닭껍질튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1216979-10000020",
+      "name": "김말이튀김",
+      "description": "김말이(10개)",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/569949b5-4227-405b-b044-ba140b05ebbd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216979",
+    "sourceUrls": [
+      "https://bit.ly/tk-촌닭두마리치킨오림점",
+      "https://fdofd.ddangyo.com/gateway1.html?7HcSnRp"
+    ],
+    "rawItemCount": 26,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

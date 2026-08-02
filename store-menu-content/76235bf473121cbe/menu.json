@@ -1,0 +1,252 @@
+{
+  "storeId": "76235bf473121cbe",
+  "storeName": "족발자리",
+  "displayName": "족발자리",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/79a96d8b-68b8-4a4c-94e5-f471e9c77762.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "사이드메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1133468-10000001",
+      "name": "명품족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/79a96d8b-68b8-4a4c-94e5-f471e9c77762.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1133468-10000002",
+      "name": "명품 족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/028ffd94-5bc3-4f49-8547-4e2ec73e62c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1133468-10000009",
+      "name": "반반족발",
+      "description": "(불족+명품족발)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/89853686-1aa3-43c5-b9dc-bd89de161324.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1133468-10000019",
+      "name": "쟁반막국수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1133468-90000001",
+      "name": "카스 프레시(병)(330ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1133468-10000020",
+      "name": "주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1133468-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1133468-10000003",
+      "name": "쫄깃한 족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b194d405-8c13-4378-9b6c-ce13e04ddebb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1133468-10000021",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1133468-90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1133468-10000004",
+      "name": "쫄깃한족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1bdb3c50-4191-4fb2-92ab-60d202c0c678.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1133468-10000022",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1133468-10000005",
+      "name": "냉채족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a1736865-e8a3-4059-8a5f-df7ae8e084fc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1133468-10000006",
+      "name": "냉채 족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/54f1d971-c925-47a2-acd8-10623babc70a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1133468-10000007",
+      "name": "명품보쌈",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/be263509-3f08-4e9e-bd2a-9254330a9014.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1133468-10000008",
+      "name": "명품 보쌈",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/112e1100-9478-4b97-9224-a36b44496b4d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1133468-10000010",
+      "name": "반반 족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d55104d0-296d-48c4-9d17-871c08656b19.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1133468-10000011",
+      "name": "족보세트",
+      "description": "(명품족발+보쌈)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/29adad97-270c-4214-a17f-bd0d83e4cf7e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1133468-10000012",
+      "name": "족보 세트",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ea4a0ce0-ddc6-45b4-b607-34365f427ef8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1133468-10000013",
+      "name": "직화 매운 불족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/8562c0ce-5ecb-4b34-b753-698f6bde709a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1133468-10000014",
+      "name": "직화매운불족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/fe298f1d-87de-4f49-a0cd-9da01615310a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1133468-10000015",
+      "name": "직화 미니 불족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1133468-10000016",
+      "name": "직화미니불족발",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1133468-10000017",
+      "name": "명품 야채족발(대)",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1133468-10000018",
+      "name": "명품야채족발(중)",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1133468",
+    "sourceUrls": [
+      "https://bit.ly/tk-족발자리",
+      "https://fdofd.ddangyo.com/gateway1.html?4dytRw4"
+    ],
+    "rawItemCount": 28,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

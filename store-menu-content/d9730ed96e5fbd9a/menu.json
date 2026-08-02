@@ -1,0 +1,308 @@
+{
+  "storeId": "d9730ed96e5fbd9a",
+  "storeName": "틈 돈까스 미평점",
+  "displayName": "틈 돈까스 미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/af5b181e-101d-4b4a-9256-f30727e42e3e.jpg",
+  "categories": [
+    "전체",
+    "돈까스",
+    "연어",
+    "덮밥/우동",
+    "사이드/음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1190114-10000001",
+      "name": "안심돈까스",
+      "description": "",
+      "category": "돈까스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/af5b181e-101d-4b4a-9256-f30727e42e3e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1190114-10000002",
+      "name": "등심돈까스",
+      "description": "",
+      "category": "돈까스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/4a0c8cd7-9202-487a-bbe9-1d0a0787beed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1190114-10000003",
+      "name": "치즈돈까스",
+      "description": "",
+      "category": "돈까스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/e813389e-4da4-43b8-804b-9e3c13e573f3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1190114-10000009",
+      "name": "연어덮밥",
+      "description": "",
+      "category": "연어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7a946175-28e9-4ca4-b208-5332baaccdc8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1190114-10000011",
+      "name": "소불고기덮밥",
+      "description": "",
+      "category": "덮밥/우동",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/433998b9-c2a5-4e4c-a4cf-a66f420d9a2f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1190114-10000019",
+      "name": "왕새우튀김",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ac9b3a55-6bbd-40c1-8e08-11c46ab224ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1190114-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1190114-10000010",
+      "name": "연어장 덮밥",
+      "description": "노른자는 풀어서 연어에 찍어 드세요~",
+      "category": "연어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/56a37604-cf45-42b2-95d3-a6d81ddcb532.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1190114-10000012",
+      "name": "돼지불고기덮밥",
+      "description": "",
+      "category": "덮밥/우동",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/eec6a7ef-4371-4c77-ac0e-d6e351edc154.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1190114-10000020",
+      "name": "코카콜라",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/086e443b-a523-4b1d-b085-d7e5e90f46f2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1190114-90000002",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1190114-10000013",
+      "name": "돈까스 덮밥",
+      "description": "",
+      "category": "덮밥/우동",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/1e659947-9d11-4626-b46b-8fb0bacd67e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1190114-10000021",
+      "name": "펩시제로",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1190114-10000004",
+      "name": "매운돈까스",
+      "description": "",
+      "category": "돈까스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/47149dab-18f0-49cc-a26e-be077d738b5a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1190114-10000014",
+      "name": "새우튀김덮밥",
+      "description": "",
+      "category": "덮밥/우동",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/b7bdf53b-c11e-4dbc-8464-92fde26af583.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1190114-10000022",
+      "name": "스프라이트",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/ea2d1d50-128c-43f5-8ff2-2706497d122e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1190114-10000005",
+      "name": "매운치즈돈까스",
+      "description": "",
+      "category": "돈까스",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1190114-10000015",
+      "name": "치킨가라아게덮밥",
+      "description": "",
+      "category": "덮밥/우동",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/cfe30a47-3871-4dd6-a63a-3be67e3e47af.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1190114-10000023",
+      "name": "환타",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1190114-10000006",
+      "name": "안심 반 치즈 반",
+      "description": "",
+      "category": "돈까스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/8d761415-1eae-4c3e-aaa0-c5d9dd89f318.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1190114-10000016",
+      "name": "야끼소바",
+      "description": "",
+      "category": "덮밥/우동",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a088a3c5-a72a-49ad-afb9-6bc1512bd7ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1190114-10000024",
+      "name": "게살튀김",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1190114-10000007",
+      "name": "안심 반 등심 반",
+      "description": "",
+      "category": "돈까스",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1190114-10000017",
+      "name": "우동",
+      "description": "고춧가루가 들어갑니다.원치 않으시면 요청사항에 적어주세요",
+      "category": "덮밥/우동",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9237efb8-4cee-4b3b-b4f6-32ed638d5191.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1190114-10000025",
+      "name": "치킨 가라아게",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/8ed3e7c1-3e62-48ac-bbcc-a3d5ecc29601.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1190114-10000008",
+      "name": "야끼소바",
+      "description": "",
+      "category": "돈까스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a088a3c5-a72a-49ad-afb9-6bc1512bd7ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1190114-10000018",
+      "name": "냉모밀",
+      "description": "",
+      "category": "덮밥/우동",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/d7cddb7a-d311-4925-aa94-eea8b5518103.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1190114-10000026",
+      "name": "고구마 치즈 고로케",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7793b1ac-7ef1-4a01-839f-a7c70ccfd51d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1190114-10000027",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1190114-10000030",
+      "name": "카레 추가",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1190114-10000031",
+      "name": "매운 소스 추가",
+      "description": "",
+      "category": "사이드/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1190114",
+    "sourceUrls": [
+      "https://bit.ly/tk-틈돈까스미평점",
+      "https://fdofd.ddangyo.com/gateway1.html?4aucpAX"
+    ],
+    "rawItemCount": 35,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

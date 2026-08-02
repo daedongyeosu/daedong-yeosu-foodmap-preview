@@ -1,0 +1,292 @@
+{
+  "storeId": "01f219eac1bdc294",
+  "storeName": "찜콩 갈비찜 전문",
+  "displayName": "찜콩 갈비찜 전문",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/24fe2400-d2a2-4a9b-ad9d-1b66be1ed596.jpg",
+  "categories": [
+    "전체",
+    "메뉴 (공기밥 별도)",
+    "갈비찜 세트메뉴",
+    "전",
+    "식사류 (공기밥 별도)",
+    "사리",
+    "음료수",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1225148-10000003",
+      "name": "1인분 돼지갈비찜",
+      "description": "식재료값 상승으로 반찬은 10월1일부터 단무지만 제공합니다..당면, 떡, 비엔나 기본사리 나갑니다~ 사리 추가 하실분들은 밑에서 선택해주세요(공기밥은 미포함입니다.)",
+      "category": "메뉴 (공기밥 별도)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55e7fdcf-3a8c-4f60-a14c-7430573e71f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1225148-10000001",
+      "name": "매운돼지갈비찜",
+      "description": "식재료값 상승으로 반찬은 10월1일부터 단무지만 제공합니다..당면, 떡, 비엔나 기본사리 나갑니다~ 사리 추가 하실분들은 밑에서 선택해주세요(공기밥은 미포함입니다.)",
+      "category": "메뉴 (공기밥 별도)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/b7056199-c859-4fde-a3c7-68c8ceb70d57.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1225148-10000004",
+      "name": "갈비찜 세트",
+      "description": "갈비찜+주먹밥+계란찜+음료수(뚱캔)",
+      "category": "갈비찜 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/1b4ad1a9-ac36-45e7-b86f-baaf621b257f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1225148-10000006",
+      "name": "한입 김치전",
+      "description": "한입 김치전(미니 간장 포함)",
+      "category": "전",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/5f8547c0-a7c5-4574-b56e-0e7fcc92cc18.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1225148-10000002",
+      "name": "간장돼지갈비찜",
+      "description": "식재료값 상승으로 반찬은 10월1일부터 단무지만 제공합니다..당면, 떡, 비엔나 기본사리 나갑니다~ 사리 추가 하실분들은 밑에서 선택해주세요(공기밥은 미포함입니다.)",
+      "category": "메뉴 (공기밥 별도)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/b384aa78-3316-42f8-bd44-900133986dbb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1225148-10000005",
+      "name": "공기밥",
+      "description": "",
+      "category": "식사류 (공기밥 별도)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/51718448-f639-4924-a508-0c1717b85c6e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1225148-10000009",
+      "name": "콘치즈떡",
+      "description": "",
+      "category": "사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1225148-10000016",
+      "name": "사이다",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1225148-90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1225148-10000007",
+      "name": "한입 부추전",
+      "description": "한입 부추전(미니 간장 포함)",
+      "category": "전",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/9426edd4-71f8-4388-95c0-4e2a2dd58601.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1225148-10000010",
+      "name": "당면",
+      "description": "",
+      "category": "사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1225148-10000017",
+      "name": "환타(포도)",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1225148-90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1225148-10000008",
+      "name": "옛날소세지(분홍소세지)",
+      "description": "",
+      "category": "전",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1225148-10000011",
+      "name": "우동사리",
+      "description": "",
+      "category": "사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dc7f23e0-ef46-428b-a392-e5cc9d77b08d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1225148-10000018",
+      "name": "환타(오렌지)",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1225148-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1225148-10000012",
+      "name": "치즈",
+      "description": "",
+      "category": "사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1225148-10000019",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1225148-90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1225148-10000013",
+      "name": "만두",
+      "description": "",
+      "category": "사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1225148-10000020",
+      "name": "밀키스",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1225148-90000005",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1225148-10000014",
+      "name": "떡",
+      "description": "",
+      "category": "사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1225148-10000021",
+      "name": "수미네잔치집식혜",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1225148-10000015",
+      "name": "비엔나소시지",
+      "description": "",
+      "category": "사리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1225148-10000022",
+      "name": "펩시제로(라임)",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1225148-10000023",
+      "name": "쿨피스(복숭아뚱캔)",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1225148-10000024",
+      "name": "생수",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1225148",
+    "sourceUrls": [
+      "https://bit.ly/3LXtlMI",
+      "https://fdofd.ddangyo.com/gateway1.html?wL0uuDW"
+    ],
+    "rawItemCount": 34,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

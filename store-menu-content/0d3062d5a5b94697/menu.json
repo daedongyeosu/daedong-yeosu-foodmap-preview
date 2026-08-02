@@ -1,0 +1,382 @@
+{
+  "storeId": "0d3062d5a5b94697",
+  "storeName": "다기야치킨 여문점",
+  "displayName": "다기야치킨 여문점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/577515c5-4879-487a-9584-b7c38f7effda.jpg",
+  "categories": [
+    "전체",
+    "에코 메뉴",
+    "스탠다드 메뉴",
+    "양념 메뉴",
+    "다기야 추천 반반 메뉴",
+    "사이드메뉴",
+    "세트 메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1218475-10000078",
+      "name": "냉채 치킨",
+      "description": "어디에도 없는 다기야만의 메뉴.\n톡 쏘는 겨자소스~ 칼로리는 안심~ 푸짐한 야채에 반해버릴지도 몰라요",
+      "category": "에코 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000078"
+    },
+    {
+      "id": "ddangyo-1218475-10000083",
+      "name": "오리지널 치킨",
+      "description": "믿고 먹는 오리지널치킨~\n오븐에구워 기름기 쪽~ 칼로리는 안심~",
+      "category": "스탠다드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/0883c7cb-55c6-4a12-9840-333f64408706.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000083"
+    },
+    {
+      "id": "ddangyo-1218475-10000089",
+      "name": "[매워요] 숯불 양념 치킨",
+      "description": "지코0 소스보다 이 숯불소스가 더 맛있다는거 안비밀~",
+      "category": "양념 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5cd48bbb-3665-404f-a146-8e4021efc3d8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1218475-10000095",
+      "name": "숯불 양념 치킨 반/오리지널 치킨 반",
+      "description": "",
+      "category": "다기야 추천 반반 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000095"
+    },
+    {
+      "id": "ddangyo-1218475-10000100",
+      "name": "체들포테이토",
+      "description": "기름말고 오븐에 구운 감튀로 칼로리 걱정 BYE~",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7b27e491-650f-47fb-9544-983f208b1642.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000100"
+    },
+    {
+      "id": "ddangyo-1218475-10000108",
+      "name": "A세트",
+      "description": "오리지널 치킨+체들포테이토/갈릭치즈또띠아/ 중 택1",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000108"
+    },
+    {
+      "id": "ddangyo-1218475-90000006",
+      "name": "생맥주(카스)1000cc",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1218475-10000079",
+      "name": "새우치킨",
+      "description": "새우와 치킨의 이 조합은 옳아요. \n매콤새콤달콤 중화풍 소스에 빠져보세요~",
+      "category": "에코 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1218475-10000084",
+      "name": "오리지널 순살",
+      "description": "100%국내산 순살로 야들야들 입에서 녹아요~\n아이들 메뉴로 추천~",
+      "category": "스탠다드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/758c60a3-588d-439f-8512-933f2ca477c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1218475-10000090",
+      "name": "스파이시 간장치킨",
+      "description": "단짠단짠 간장소스+청양고추. \n이 치명적 매력에 빠져볼테야~",
+      "category": "양념 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1218475-10000096",
+      "name": "스파이시 간장치킨 반/오리지널 치킨 반",
+      "description": "",
+      "category": "다기야 추천 반반 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1218475-10000101",
+      "name": "갈릭치즈또띠아",
+      "description": "치킨만으로 부족한가~ \n그렇다면 이맛있는 피자를 장바구니 담으라구~",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1218475-10000109",
+      "name": "B세트",
+      "description": "시즈닝메뉴 중 택1+체들포테이토/갈릭치즈또띠아/ 중 택1",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000109"
+    },
+    {
+      "id": "ddangyo-1218475-90000001",
+      "name": "맥주 (카스)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1218475-10000080",
+      "name": "철판 치즈 닭갈비",
+      "description": "고소~한 치즈가 핵폭탄 급",
+      "category": "에코 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/a884f2be-2ff6-46d0-b331-0aec65442e93.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1218475-10000085",
+      "name": "오리지널 날개",
+      "description": "속 부데끼는거 싫다면~ \n이거 야식으로 추천~",
+      "category": "스탠다드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/1f5bbdb0-67f6-4522-963f-a5242a631038.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1218475-10000091",
+      "name": "갈릭네오 치킨",
+      "description": "알싸한 마늘소스맛에 반했어~",
+      "category": "양념 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1218475-10000097",
+      "name": "갈릭네오 치킨 반/베이크 치킨 반",
+      "description": "",
+      "category": "다기야 추천 반반 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1218475-10000102",
+      "name": "부산어묵국물떡볶이",
+      "description": "풍미가 살아있는 오리지널 부산어묵을 사용한 매콤달콤 떡볶이",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/87ddee06-289e-43cd-bcf4-969d1cd525d6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000102"
+    },
+    {
+      "id": "ddangyo-1218475-10000110",
+      "name": "C세트",
+      "description": "쭈꾸미치킨/철판치즈닭갈비 중 택1+계란밥+치즈계란밥",
+      "category": "세트 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000110"
+    },
+    {
+      "id": "ddangyo-1218475-90000005",
+      "name": "맥주 (테라)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1218475-10000081",
+      "name": "쭈꾸미 치킨",
+      "description": "자연산 쭈꾸미와 치킨의 매콤한 만남~",
+      "category": "에코 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000081"
+    },
+    {
+      "id": "ddangyo-1218475-10000086",
+      "name": "베이크치킨",
+      "description": "",
+      "category": "스탠다드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1218475-10000092",
+      "name": "옛날 양념 치킨",
+      "description": "깔끔하고 맛있어~\n어린시절 먹던 딱 그 레트로풍 소스~",
+      "category": "양념 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/056e1bb7-a0f6-40b5-bf06-1154b624245a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1218475-10000098",
+      "name": "옛날 양념 치킨 반/베이크 치킨 반",
+      "description": "",
+      "category": "다기야 추천 반반 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1218475-10000103",
+      "name": "마른안주",
+      "description": "입이 심심할땐 마른안주가 최고지~\n반건조오징어, 아귀포, 견과류",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    },
+    {
+      "id": "ddangyo-1218475-90000002",
+      "name": "소주 (참이슬)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1218475-10000082",
+      "name": "올리브 양파치킨",
+      "description": "치킨과 양파크림소스의 절묘한 꿀조합~\n한번 먹으면 반할 수밖에 없다~",
+      "category": "에코 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b026fc5f-a3bd-4fa5-a437-7f556a1be84c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000082"
+    },
+    {
+      "id": "ddangyo-1218475-10000087",
+      "name": "베이크 순살",
+      "description": "100%국내산 순살로 야들야들 입에서 녹아요~\n아이들 메뉴로 추천~",
+      "category": "스탠다드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1218475-10000093",
+      "name": "[매워요] 다기핫 땡초치킨",
+      "description": "맵부심러들 다 모여~",
+      "category": "양념 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000093"
+    },
+    {
+      "id": "ddangyo-1218475-10000099",
+      "name": "다기핫 치킨 반/베이크 치킨 반",
+      "description": "",
+      "category": "다기야 추천 반반 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000099"
+    },
+    {
+      "id": "ddangyo-1218475-10000104",
+      "name": "날치알밥",
+      "description": "후리가케의 고소함과 톡톡 터지는 날치알의 즐거움을 느낄 수 있는 식사메뉴",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/b834818c-7e73-48c3-9796-ebfd2bec7f64.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000104"
+    },
+    {
+      "id": "ddangyo-1218475-90000003",
+      "name": "소주 (진로)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1218475-10000088",
+      "name": "베이크 날개",
+      "description": "속 부데끼는거 싫다면~ \n이거 야식으로 추천~",
+      "category": "스탠다드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/577515c5-4879-487a-9584-b7c38f7effda.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1218475-10000094",
+      "name": "깐풍치킨",
+      "description": "깊은 풍미와 감칠맛의 중화풍 치킨요리~",
+      "category": "양념 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f7b85d97-2d2b-4297-9a97-d1d21e46bee2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000094"
+    },
+    {
+      "id": "ddangyo-1218475-10000105",
+      "name": "계란밥",
+      "description": "고슬고슬한 밥 위에 얹어진 프라이드 에그를 고소한 간장소스와 비벼 먹을 수 있는 메뉴",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000105"
+    },
+    {
+      "id": "ddangyo-1218475-90000004",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1218475-10000106",
+      "name": "치즈계란밥",
+      "description": "고슬고슬한 밥 위에 얹어진 프라이드 에그를 고소한 간장소스와 비벼 먹을 수 있는 메뉴",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000106"
+    },
+    {
+      "id": "ddangyo-1218475-10000107",
+      "name": "음료수(콜라.사이다.환타) 500ml",
+      "description": "음료",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000107"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1218475",
+    "sourceUrls": [
+      "https://bit.ly/tk-다기야치킨여문점",
+      "https://fdofd.ddangyo.com/gateway1.html?Cut8stu"
+    ],
+    "rawItemCount": 39,
+    "duplicateItemsRemoved": 0
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

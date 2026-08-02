@@ -1,0 +1,447 @@
+{
+  "storeId": "ce5dccb3d6031316",
+  "storeName": "마선생 얼큰국밥",
+  "displayName": "마선생 얼큰국밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/03b7035c-1347-4594-9958-710a308add87.jpg",
+  "categories": [
+    "전체",
+    "[마선생] 든든한 메인 식사",
+    "[마선생] 계절메뉴",
+    "[마선생] 백반 정식",
+    "[마선생] 추가메뉴",
+    "[마선생] 1인세트메뉴",
+    "[마선생] 2인세트메뉴",
+    "[마선생] 같이 먹으면 꿀조합",
+    "[마선생] 음료메뉴",
+    "[마선생] 담백한 식사류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1137996-30000016",
+      "name": "[속풀이해장용]얼큰이국밥",
+      "description": "메인식사+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 든든한 메인 식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/013be429-3c3d-49a5-8f11-657ed616a7ad.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000016"
+    },
+    {
+      "id": "ddangyo-1137996-30000036",
+      "name": "시원한 물냉면",
+      "description": "",
+      "category": "[마선생] 계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4ef80d2d-477a-40b9-a876-a9436b339f9c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000036"
+    },
+    {
+      "id": "ddangyo-1137996-30000028",
+      "name": "[1인용]직화양념불고기 백반",
+      "description": "양념불고기+(미니)육수+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)+양파장",
+      "category": "[마선생] 백반 정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ecc4624c-d148-4055-a55c-ff27a8989ee3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000028"
+    },
+    {
+      "id": "ddangyo-1137996-30000056",
+      "name": "추가) 공기밥",
+      "description": "",
+      "category": "[마선생] 추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000056"
+    },
+    {
+      "id": "ddangyo-1137996-30000009",
+      "name": "떡갈비 1인 세트",
+      "description": "떡갈비+메인식사(1)+공기밥(1)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 1인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4fc4d90d-8788-4c55-a567-741962f9e5d4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000009"
+    },
+    {
+      "id": "ddangyo-1137996-30000002",
+      "name": "떡갈비 2인 세트",
+      "description": "떡갈비+메인식사(2)+공기밥(2)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 2인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/d11eda3d-ed9f-4e6f-a24b-23d7853f799c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000002"
+    },
+    {
+      "id": "ddangyo-1137996-30000039",
+      "name": "마선생 떡갈비",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1a012773-1582-45f4-a621-689ebfe313d6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000039"
+    },
+    {
+      "id": "ddangyo-1137996-30000040",
+      "name": "마선생 편육",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/df96b443-fa78-463c-b7ac-758d8bd609d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000040"
+    },
+    {
+      "id": "ddangyo-1137996-30000057",
+      "name": "추가) 국밥육수",
+      "description": "",
+      "category": "[마선생] 추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e7432432-38bd-4031-9ba2-06ae33422145.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000057"
+    },
+    {
+      "id": "ddangyo-1137996-30000037",
+      "name": "매콤달콤 비빔냉면",
+      "description": "",
+      "category": "[마선생] 계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/25674619-a771-45b1-af61-863b9bba5451.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000037"
+    },
+    {
+      "id": "ddangyo-1137996-30000003",
+      "name": "만두 2인 세트",
+      "description": "선택만두+메인식사(2)+공기밥(2)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 2인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e3f9b0af-9546-47ed-96a6-d44b96a1c21c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000003"
+    },
+    {
+      "id": "ddangyo-1137996-30000010",
+      "name": "만두 1인 세트",
+      "description": "선택만두+메인식사(1)+공기밥(1)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 1인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/acc8e42f-7cb2-4215-ab9b-8ffbfa5a44b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000010"
+    },
+    {
+      "id": "ddangyo-1137996-30000029",
+      "name": "[1인용]직화간장불고기 백반",
+      "description": "간장불고기+(미니)육수+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)+양파장",
+      "category": "[마선생] 백반 정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/d55f0f62-7463-4ed4-a1a1-a5c5fb695031.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000029"
+    },
+    {
+      "id": "ddangyo-1137996-30000017",
+      "name": "[한끼든든]돼지국밥",
+      "description": "돼지국밥+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 든든한 메인 식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/23345f7a-1217-4042-897b-d9385195829b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000017"
+    },
+    {
+      "id": "ddangyo-1137996-30000004",
+      "name": "편육 2인 세트",
+      "description": "편육+메인식사(2)+공기밥(2)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 2인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/882fb5b9-3be7-4606-98ba-b168507b3bac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000004"
+    },
+    {
+      "id": "ddangyo-1137996-30000011",
+      "name": "편육 1인 세트",
+      "description": "편육+메인식사(1)+공기밥(1)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 1인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/22fc4ffb-46d4-46b7-b00e-223144dad649.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000011"
+    },
+    {
+      "id": "ddangyo-1137996-30000018",
+      "name": "[속이꽉찬]병천순대국밥",
+      "description": "병천순대국밥+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 든든한 메인 식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/17d328a1-8fcf-46c7-838a-39f77644a7e5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000018"
+    },
+    {
+      "id": "ddangyo-1137996-30000041",
+      "name": "김치만두",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/a322a7fc-7f75-48f9-82d1-738b3e0c1996.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000041"
+    },
+    {
+      "id": "ddangyo-1137996-30000012",
+      "name": "병천순대 1인 세트",
+      "description": "병천순대+메인식사(1)+공기밥(1)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 1인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/17f56c68-d9d5-4c9e-bf81-36195c049d20.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000012"
+    },
+    {
+      "id": "ddangyo-1137996-30000005",
+      "name": "병천순대 2인 세트",
+      "description": "병천순대+메인식사(2)+공기밥(2)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 2인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2b5fd6a2-471f-43f3-a81f-e26149b16b2c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000005"
+    },
+    {
+      "id": "ddangyo-1137996-30000059",
+      "name": "추가) 2찬",
+      "description": "",
+      "category": "[마선생] 추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5f37b84a-8237-48b5-98a7-51572b818220.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000059"
+    },
+    {
+      "id": "ddangyo-1137996-30000042",
+      "name": "수제왕만두",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/3c82ea61-79eb-4f4a-a7dd-987c5056f1a6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000042"
+    },
+    {
+      "id": "ddangyo-1137996-30000019",
+      "name": "[쫀득한]찰순대국밥",
+      "description": "찰순대국밥+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 든든한 메인 식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f2dce04a-5cbc-4b4b-9ef2-0143760da739.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000019"
+    },
+    {
+      "id": "ddangyo-1137996-30000006",
+      "name": "양념직화불고기 2인 세트",
+      "description": "양념직화불고기+메인식사(2)+공기밥(2)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)+양파장",
+      "category": "[마선생] 2인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5037d57f-d23c-40ea-85ab-4f85950ed572.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000006"
+    },
+    {
+      "id": "ddangyo-1137996-30000060",
+      "name": "추가) 5찬",
+      "description": "",
+      "category": "[마선생] 추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cc5c5697-17f7-41a2-b234-06c96c5b6af8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000060"
+    },
+    {
+      "id": "ddangyo-1137996-30000080",
+      "name": "코카콜라 355ml",
+      "description": "",
+      "category": "[마선생] 음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/24469c28-42b1-4d94-a4c8-5897a46c7292.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000080"
+    },
+    {
+      "id": "ddangyo-1137996-30000020",
+      "name": "[야들순살]살코기국밥",
+      "description": "살코기국밥+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 든든한 메인 식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b25301f7-2442-4895-a2ed-e67905b04744.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000020"
+    },
+    {
+      "id": "ddangyo-1137996-30000013",
+      "name": "양념직화불고기 1인 세트",
+      "description": "양념직화불고기+메인식사(1)+공기밥(1) +2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)+양파장",
+      "category": "[마선생] 1인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/db3ee6c7-2e78-4aef-833f-63657e10858a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000013"
+    },
+    {
+      "id": "ddangyo-1137996-30000043",
+      "name": "갈비만두",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/caa14d9e-62d3-4cda-8241-0b8d1012c3ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1137996-30000044",
+      "name": "섞어만두",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6615a58d-f300-4dc2-8c38-d32dda856647.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000044"
+    },
+    {
+      "id": "ddangyo-1137996-30000021",
+      "name": "[풍부한육향]내장국밥",
+      "description": "내장국밥+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 든든한 메인 식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/63445d12-04fe-4ad1-8ffb-d5f6507add7c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000021"
+    },
+    {
+      "id": "ddangyo-1137996-30000081",
+      "name": "코카콜라 500ml",
+      "description": "",
+      "category": "[마선생] 음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/bcc5387a-0405-4123-bf0c-98c809b7c91d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000081"
+    },
+    {
+      "id": "ddangyo-1137996-30000014",
+      "name": "간장직화불고기 1인 세트",
+      "description": "간장직화불고기+메인식사(1)+공기밥(1) +2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)+양파장",
+      "category": "[마선생] 1인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/170b3481-0eba-4dea-ab4b-a2bb48f97a7d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000014"
+    },
+    {
+      "id": "ddangyo-1137996-30000007",
+      "name": "간장직화불고기 2인 세트",
+      "description": "간장직화불고기+메인식사(2)+공기밥(2)+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)+양파장",
+      "category": "[마선생] 2인세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/80bf28de-5878-4021-9708-52498cb7a26b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000007"
+    },
+    {
+      "id": "ddangyo-1137996-30000061",
+      "name": "추가) 깍두기",
+      "description": "",
+      "category": "[마선생] 추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/04408dab-125f-4634-a3d3-ca35c9f36699.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000061"
+    },
+    {
+      "id": "ddangyo-1137996-30000045",
+      "name": "찰순대 한접시",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/017ec086-8110-4800-a316-7e78843b5bfc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000045"
+    },
+    {
+      "id": "ddangyo-1137996-30000082",
+      "name": "코카콜라 1.25L",
+      "description": "",
+      "category": "[마선생] 음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c875731d-3785-44b3-a749-0128723ba21a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000082"
+    },
+    {
+      "id": "ddangyo-1137996-30000022",
+      "name": "[전부듬뿍]모둠국밥",
+      "description": "모둠국밥+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 든든한 메인 식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b92e07b7-f712-4732-82d4-69d9bb6f5d0b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000022"
+    },
+    {
+      "id": "ddangyo-1137996-30000026",
+      "name": "[사골]왕만두국",
+      "description": "왕만두국+공기밥+2찬(깍두기+부추)+5찬(양파+마늘+청양고추+쌈장+새우젓+국밥양념장)",
+      "category": "[마선생] 담백한 식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/a9a85c21-f7f5-4e91-a3eb-834a3ad1f04e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000026"
+    },
+    {
+      "id": "ddangyo-1137996-30000063",
+      "name": "추가) 부추",
+      "description": "",
+      "category": "[마선생] 추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/35c2ad08-1ca9-4c7e-bfe1-7a5760a111ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000063"
+    },
+    {
+      "id": "ddangyo-1137996-30000046",
+      "name": "병천순대 한접시",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5bbf8d39-4077-428d-a738-d371cee19f51.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000046"
+    },
+    {
+      "id": "ddangyo-1137996-30000047",
+      "name": "[맛보기]양념직화불고기",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b92c8eb4-e08b-4dba-8d5c-2dcae566a1d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000047"
+    },
+    {
+      "id": "ddangyo-1137996-30000048",
+      "name": "[맛보기]간장직화불고기",
+      "description": "",
+      "category": "[마선생] 같이 먹으면 꿀조합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5139b75e-f51f-4ef9-a6f7-027dced2e767.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000048"
+    },
+    {
+      "id": "ddangyo-1137996-30000098",
+      "name": "칠성사이다 355ml",
+      "description": "",
+      "category": "[마선생] 음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000098"
+    },
+    {
+      "id": "ddangyo-1137996-30000099",
+      "name": "칠성사이다 500ml",
+      "description": "",
+      "category": "[마선생] 음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000099"
+    },
+    {
+      "id": "ddangyo-1137996-30000100",
+      "name": "칠성사이다 1.25L",
+      "description": "",
+      "category": "[마선생] 음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000100"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1137996",
+    "sourceUrls": [
+      "https://bit.ly/tk-masun",
+      "https://fdofd.ddangyo.com/gateway1.html?hpZFqEY"
+    ],
+    "rawItemCount": 47,
+    "duplicateItemsRemoved": 1
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

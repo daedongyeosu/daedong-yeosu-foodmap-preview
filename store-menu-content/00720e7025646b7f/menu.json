@@ -1,0 +1,296 @@
+{
+  "storeId": "00720e7025646b7f",
+  "storeName": "미평햄버거 본점",
+  "displayName": "미평햄버거 본점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/51232dbf-95a6-4987-980d-c1e5375f4370.jpg",
+  "categories": [
+    "전체",
+    "미평햄버거 메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1133475-10000005",
+      "name": "김밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/57bfd200-f81a-4100-8a00-88bb67c6b82f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1133475-10000001",
+      "name": "햄버거",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/51232dbf-95a6-4987-980d-c1e5375f4370.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1133475-10000003",
+      "name": "순대",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/edf830a3-be41-4bd8-893a-bf252c064353.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1133475-10000004",
+      "name": "떡볶이",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/556904d7-701a-42d6-950b-e53bbe662f75.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1133475-10000002",
+      "name": "샌드위치",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/be72db2c-244b-439a-98c9-a8adc1697a5f.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1133475-10000022",
+      "name": "코카콜라 1.25L(페트)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/d2b354a7-7ba3-4e43-96a0-6dc87471e464.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1133475-10000023",
+      "name": "칠성사이다 1.25L(페트)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1133475-10000024",
+      "name": "코카콜라 355ml(캔)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/9c47db53-6f28-4890-a561-6bebee4e67a8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1133475-10000025",
+      "name": "칠성사이다 355ml(캔)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1133475-10000026",
+      "name": "환타 파인애플 355ml(캔)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1133475-10000006",
+      "name": "참치김밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a01e010d-7415-4f6b-bae6-ba48a3e1c43e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1133475-10000027",
+      "name": "펩시콜라제로",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1133475-10000007",
+      "name": "김치김밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/4b652829-504a-42e8-b611-08d650e52c7e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1133475-10000008",
+      "name": "소고기김밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1133475-10000009",
+      "name": "고추김밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1133475-10000010",
+      "name": "치즈김밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1133475-10000011",
+      "name": "비빔밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/96a21c0f-f43e-4093-aa60-cc34071f25b3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1133475-10000012",
+      "name": "가락국수",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1133475-10000013",
+      "name": "비빔국수",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/cf1c9040-4b00-45c5-89ee-a0e231db72aa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1133475-10000014",
+      "name": "쫄면",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/6d68d812-ab7b-4aaa-9d99-6d7feeeb0fe2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1133475-10000015",
+      "name": "찐만두",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/33ddb9dd-5879-4ae0-bd9c-ca568d5d61f6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1133475-10000016",
+      "name": "비빔만두",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/90bf5606-cbc8-419a-862d-ad5f676064ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1133475-10000017",
+      "name": "곱창볶음",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1133475-10000018",
+      "name": "오뎅",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/12149eec-65eb-4678-9f4d-b561f527c916.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1133475-10000019",
+      "name": "공기밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1133475-10000020",
+      "name": "계란",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1133475-10000021",
+      "name": "양푼비빔밥",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1133475-10000028",
+      "name": "비빔냉면",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1133475-10000029",
+      "name": "물냉면",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1133475-10000030",
+      "name": "냉쫄면",
+      "description": "",
+      "category": "미평햄버거 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1133475",
+    "sourceUrls": [
+      "https://bit.ly/4168oDa",
+      "https://fdofd.ddangyo.com/gateway1.html?7FXiR4Y"
+    ],
+    "rawItemCount": 35,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

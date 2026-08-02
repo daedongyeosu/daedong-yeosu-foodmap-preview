@@ -1,0 +1,755 @@
+{
+  "storeId": "6c3386fc9f4a5b5b",
+  "storeName": "백수초밥",
+  "displayName": "백수초밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/76834d01-797e-4b9b-aeea-99c1eeec1d20.jpg",
+  "categories": [
+    "전체",
+    "모듬초밥 ( 선택이 어려울때 다양함을 즐기세요",
+    "정식류 (혼술 혼밥을 함께 해결하세요. )",
+    "초밥류",
+    "사시미류",
+    "구이류",
+    "단품초밥 8P",
+    "5P 메뉴.",
+    "주류메뉴",
+    "면류.",
+    "튀김류",
+    "음료."
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1229072-10000006",
+      "name": "모듬초밥 (오늘은 럭셔리 하게.)",
+      "description": "야채샐러드\n초밥 10p(참다랑어 속살2p 전복2p 소고기2p 도미2p 광어2p)\n튀김 (새우1 고구마2)\n장국 단무지",
+      "category": "모듬초밥 ( 선택이 어려울때 다양함을 즐기세요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/76c04b99-8722-49fa-9654-1a534caeb9ef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1229072-10000007",
+      "name": "모듬초밥. (그래 연어가 빠지면 서운하지. )",
+      "description": "야채 샐러드\n초밥10p(소고기2p 연어3p도미2p 광어3p)\n튀김 (새우튀김1p 고구마2p)",
+      "category": "모듬초밥 ( 선택이 어려울때 다양함을 즐기세요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/72ce4e7b-6d35-4e33-a597-ef19feef0ced.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1229072-10000008",
+      "name": "모듬초밥 (난 생선이 좋아)",
+      "description": "야채샐러드\n초밥10p(연어3p 광어3p도미2p새우2p)\n튀김 (새우튀김1p 고구마2p )\n단무지 락교 장국",
+      "category": "모듬초밥 ( 선택이 어려울때 다양함을 즐기세요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/e90339f3-8caf-4641-ad56-7bc005899328.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1229072-10000001",
+      "name": "봄 정식",
+      "description": "연어샐러드\n사시미12p (참다랑어 벳살4p. 속살4p 광어4p)\n튀김 (인삼1고구마 새우 )\n초밥 8p(소고기. 전복. 광어. 참돔. )\n초밥 8P (전복2p 소고기2p 광어2p 도미2p)\n튀김(인삼튀김1 새우튀김1 고구마2)",
+      "category": "정식류 (혼술 혼밥을 함께 해결하세요. )",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1229072-10000005",
+      "name": "모듬 초밥 (나에게 주는 선물 )참다랑어 뱃살2p전복2",
+      "description": "야채샐러드\n초밥 10p(참다랑어 뱃살 2p 전복2p 소고기2p 도미2p 광어2p)\n튀김 (새우튀김 1p고구마 튀김2p )\n장국 단무지",
+      "category": "모듬초밥 ( 선택이 어려울때 다양함을 즐기세요",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1229072-10000011",
+      "name": "참다랑어 뱃살 초밥",
+      "description": "야채 샐러드\n초밥10p (참다랑어 뱃살)",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1229072-10000028",
+      "name": "참다랑어",
+      "description": "",
+      "category": "사시미류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1229072-10000031",
+      "name": "도미머리구이",
+      "description": "",
+      "category": "구이류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1229072-10000033",
+      "name": "참다랑어뱃살",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1229072-10000046",
+      "name": "참다랑어 뱃살초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1229072-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1229072-10000059",
+      "name": "우동",
+      "description": "",
+      "category": "면류.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1229072-10000066",
+      "name": "새우튀김",
+      "description": "새우5고구마5",
+      "category": "튀김류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1229072-10000069",
+      "name": "코카 콜라",
+      "description": "",
+      "category": "음료.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/fff78a10-ca37-4e58-a101-c4bf5becc264.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1229072-10000002",
+      "name": "여름 정식",
+      "description": "연어샐러드\n사시미 12p ( 참다랑어 속살4p 광어4p 연어4p)\n초밥 8P ( 소고기2p 전복1p 연어1p 광어2p 도미2p)\n튀김 (인삼1p 새우1p 고구마2p)",
+      "category": "정식류 (혼술 혼밥을 함께 해결하세요. )",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1229072-10000012",
+      "name": "참다랑어 아카미",
+      "description": "",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1229072-10000029",
+      "name": "생선회",
+      "description": "광어+연어+참돔",
+      "category": "사시미류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1229072-10000032",
+      "name": "연어머리구이",
+      "description": "",
+      "category": "구이류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1229072-10000034",
+      "name": "참다랑어 속살",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1229072-10000047",
+      "name": "참다랑어 속살초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1229072-90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1229072-10000060",
+      "name": "베이컨 볶음우동",
+      "description": "",
+      "category": "면류.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1229072-10000067",
+      "name": "새우 튀김",
+      "description": "새우 7고구마7",
+      "category": "튀김류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1229072-10000070",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/723cc57c-aa09-4142-81a0-a3452bff270c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000070"
+    },
+    {
+      "id": "ddangyo-1229072-10000003",
+      "name": "가을 정식",
+      "description": "연어샐러드\n사시미12p(광어4p 연어4p 참다랑어 속살4p)\n초밥8P (광어2p 도미2p 연어2p 소고기2p)\n튀김 (새우1p 고구마2p 인삼1p)",
+      "category": "정식류 (혼술 혼밥을 함께 해결하세요. )",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1229072-10000013",
+      "name": "도미 초밥",
+      "description": "야채 샐러드 \n초밥 10p (도미)\n튀김 (새우1p 고구마2p)\n단무지 락교 장국",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1229072-10000030",
+      "name": "연어사시미",
+      "description": "",
+      "category": "사시미류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b0bec7a3-d395-4956-8482-6a766d202a45.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1229072-10000035",
+      "name": "소고기 초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9eb61eb9-b349-4a5c-a9f9-0abe8056e8ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1229072-10000048",
+      "name": "소고기 초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1229072-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1229072-10000061",
+      "name": "훈제오리 볶음우동",
+      "description": "",
+      "category": "면류.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000061"
+    },
+    {
+      "id": "ddangyo-1229072-10000068",
+      "name": "인삼 튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    },
+    {
+      "id": "ddangyo-1229072-10000071",
+      "name": "환타",
+      "description": "",
+      "category": "음료.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1229072-10000004",
+      "name": "겨울 정식",
+      "description": "연어샐러드\n사시미 12p(광어4p 연어4p참치 속살4p)\n초밥 8P (광어2p 참돔2p 연어2p 새우1p 소라1p)\n튀김 ( 새우1p 고구마 2p)",
+      "category": "정식류 (혼술 혼밥을 함께 해결하세요. )",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1229072-10000014",
+      "name": "광어 초밥",
+      "description": "야채샐러드\n초밥10p (광어)\n튀김 (새우1p 고구마2)\n단무지 락교 장국",
+      "category": "초밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/36051d4b-90fa-489c-af2b-568326180e12.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1229072-10000036",
+      "name": "전복초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a3ff216e-f70a-4c7f-b1ef-eeecdde52313.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1229072-10000049",
+      "name": "전복초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1229072-90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1229072-10000062",
+      "name": "새우 볶음우동",
+      "description": "",
+      "category": "면류.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1229072-10000009",
+      "name": "모듬초밥 (그래 오늘은 골고루 먹자 )",
+      "description": "야채 샐러드\n초밥 10p (광어2p 도미2p 연어2p 새우1p 소라1p 계란1p 유부1p)튀김\n튀김 (새우튀김1p고구마2p)",
+      "category": "모듬초밥 ( 선택이 어려울때 다양함을 즐기세요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0eb30ae5-c0b4-49cc-80a3-ae68d24b57e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1229072-10000015",
+      "name": "연어 초밥",
+      "description": "야채샐러드\n초밥10p (연어)\n튀김 (새우1 고구마2)\n락교 단무지 장국",
+      "category": "초밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/71106a6f-70bd-46a5-9ca6-6dde8bada884.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1229072-10000037",
+      "name": "도미초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/57eb6833-ff66-424f-96e3-8230fd1006c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1229072-10000050",
+      "name": "도미초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1229072-90000005",
+      "name": "한맥(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1229072-10000063",
+      "name": "소고기 볶음우동",
+      "description": "",
+      "category": "면류.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000063"
+    },
+    {
+      "id": "ddangyo-1229072-90000009",
+      "name": "청하(병)(300ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000009"
+    },
+    {
+      "id": "ddangyo-1229072-10000010",
+      "name": "점심 메뉴",
+      "description": "야채샐러드\n초밥 10p(광어2p 연어2p 소라2p새우2p계란1p유부1p) 튀김 고구마2 새우1",
+      "category": "모듬초밥 ( 선택이 어려울때 다양함을 즐기세요",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1229072-10000016",
+      "name": "소고기 초밥",
+      "description": "야채샐러드 \n초밥10p (소고기)\n튀김 (새우1p고구마2p)\n단무지 락교 장국",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1229072-10000038",
+      "name": "광어초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a4e15ea5-7124-4cce-a776-2f8437ae1c74.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1229072-10000051",
+      "name": "광어 초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1229072-10000064",
+      "name": "돈가스",
+      "description": "",
+      "category": "면류.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000064"
+    },
+    {
+      "id": "ddangyo-1229072-90000006",
+      "name": "하쿠쯔루 마루(팩)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1229072-10000017",
+      "name": "전복 초밥",
+      "description": "야채샐러드\n초밥10p(전복)\n튀김 (새우1p 고구마2p)\n단무지 락교 장국",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1229072-10000039",
+      "name": "연어초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d52f0de6-0508-4c9b-93bc-9c906d5f8cc5.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1229072-10000052",
+      "name": "연어초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1229072-10000065",
+      "name": "회덮밥",
+      "description": "",
+      "category": "면류.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1229072-90000007",
+      "name": "하쿠쯔루 죠센 탄레이 준마이(팩)(900ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000007"
+    },
+    {
+      "id": "ddangyo-1229072-10000018",
+      "name": "새우장 초밥",
+      "description": "샐러드\n초밥(10p 새우장 )\n튀김 (새우1 고구마2)\n락교 단무지 장국",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1229072-10000040",
+      "name": "새우장초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1229072-10000053",
+      "name": "새우장 초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1229072-90000008",
+      "name": "하나 기자쿠라 준마이긴죠(병)(720ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000008"
+    },
+    {
+      "id": "ddangyo-1229072-10000019",
+      "name": "장어초밥",
+      "description": "샐러드\n초밥 (장어10p)\n튀김 (새우1p 고구마2p)\n락교 단무지 장국",
+      "category": "초밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8ec8fcf6-6558-4504-88b7-3555c2f7d2a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1229072-10000041",
+      "name": "계란초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/7b1ce4b2-097c-43e8-bf63-4a94076b824f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1229072-10000054",
+      "name": "유부초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1229072-10000020",
+      "name": "광어 연어",
+      "description": "샐러드\n초밥 (광어5p 연어5)\n튀김 (새우1 고구마2)\n단무지 락교 장국",
+      "category": "초밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/cc439b2c-84ad-43b1-9250-0638541b4316.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1229072-10000042",
+      "name": "유부초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/50f8d2db-dd1e-40ea-967a-bee3c291b8e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1229072-10000055",
+      "name": "계란초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1229072-10000021",
+      "name": "광어 도미(튀김 고구마2 새우1)",
+      "description": "",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1229072-10000043",
+      "name": "새우초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1229072-10000056",
+      "name": "새우초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1229072-10000022",
+      "name": "도미 연어 (튀김 고구마2 새우1)",
+      "description": "",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1229072-10000044",
+      "name": "장어초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/67e99387-875d-43b6-bb5e-d50fa441704a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1229072-10000057",
+      "name": "장어초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1229072-10000023",
+      "name": "소고기 전복 (튀김 고구마2새우1)",
+      "description": "",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1229072-10000045",
+      "name": "소라초밥",
+      "description": "",
+      "category": "단품초밥 8P",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/0c1e9528-be0a-4297-b70c-51100bba6f20.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1229072-10000058",
+      "name": "소라초밥",
+      "description": "",
+      "category": "5P 메뉴.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1229072-10000024",
+      "name": "소라초밥(튀김새우1고구마2)",
+      "description": "",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1229072-10000025",
+      "name": "새우초밥(튀김. 새우1고구마2)",
+      "description": "",
+      "category": "초밥류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1229072-10000026",
+      "name": "유부 초밥",
+      "description": "",
+      "category": "초밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/50f8d2db-dd1e-40ea-967a-bee3c291b8e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1229072-10000027",
+      "name": "계란초밥",
+      "description": "",
+      "category": "초밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/ef272fab-4d81-44aa-9e5a-3c72af2c3b09.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1229072",
+    "sourceUrls": [
+      "https://bit.ly/tk-백수초밥",
+      "https://fdofd.ddangyo.com/gateway1.html?avB5Eo6"
+    ],
+    "rawItemCount": 83,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,1164 @@
+{
+  "storeId": "68360b2d1b0e6457",
+  "storeName": "컴포즈커피 여수여서점",
+  "displayName": "컴포즈커피 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4e7d6eed-ccf9-49a9-beea-20f2095d8cde.jpg",
+  "categories": [
+    "전체",
+    "커피",
+    "[스페셜 컴포즈콤보]",
+    "[내맘대로 컴포즈콤보]",
+    "세트메뉴",
+    "디카페인",
+    "베버리지",
+    "밀크쉐이크",
+    "스무디/프라페",
+    "에이드/주스",
+    "티",
+    "티:베버리지",
+    "디저트",
+    "추가 사항",
+    "시즌메뉴",
+    "[베스트 컴포즈콤보]"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1214585-10000042",
+      "name": "빅포즈 아메리카노",
+      "description": "진한 에스프레소에 물과 얼음을 더하여 컴포즈커피의 고소함과 커피 특유의 쓴맛을 초콜릿티하게 표현한 음료",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f9068d3e-9feb-418c-9608-103f4556fc11.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1214585-10000044",
+      "name": "아메리카노",
+      "description": "진한 에스프레소에 물과 얼음을 더하여 컴포즈커피의 고소함과 커피 특유의 쓴맛을 초콜릿티하게 표현한 음료",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f9068d3e-9feb-418c-9608-103f4556fc11.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1214585-10000047",
+      "name": "바닐라라떼",
+      "description": "바닐라향과 부드러운 카페라떼의 조화",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/f273b7f7-c9af-46fd-a30a-c18b4b41db6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1214585-10000055",
+      "name": "아인슈페너라떼",
+      "description": "카페라떼와 컴포즈커피 시그니처 크림이 어우러지는 음료",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2ca8c604-c363-4b0c-8f00-c2372aef9446.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1214585-10000021",
+      "name": "리얼믹스커피인가 봄",
+      "description": "리얼믹스커피 + 벚꽃팝콘",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1214585-10000030",
+      "name": "커피 내 맘대로 컴보",
+      "description": "커피 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1214585-10000039",
+      "name": "커피 & 와플",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1214585-10000060",
+      "name": "디카페인 콜드브루",
+      "description": "부드럽고 밸런스가 좋은 디카페인 더치커피",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f9068d3e-9feb-418c-9608-103f4556fc11.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1214585-10000062",
+      "name": "곡물라떼",
+      "description": "풍부한 곡물과 우유가 어우러져 고소한 곡물라떼",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c1f178a9-a515-4c0a-9c2e-f19ac185ed13.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1214585-10000073",
+      "name": "플레인밀크쉐이크",
+      "description": "우유와 상하목장이 더해져 부드러움이 가득한 밀크쉐이크",
+      "category": "밀크쉐이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f7b73cd5-b45c-4c5c-8f84-9a28d139c152.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000073"
+    },
+    {
+      "id": "ddangyo-1214585-10000079",
+      "name": "딸기스무디",
+      "description": "딸기의 과육향이 풍부하게 느껴지는 블렌딩 음료",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4491fc2e-79d5-4d39-a106-bd91074ffa24.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1214585-10000092",
+      "name": "자몽에이드",
+      "description": "자몽 과육과 탄산이 만나 청량감이 가득한 음료",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/100ee703-c988-499b-940f-cf332a15022c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1214585-10000104",
+      "name": "페퍼민트",
+      "description": "시원한 페퍼민트 향을 담은 허브티",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000770.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000104"
+    },
+    {
+      "id": "ddangyo-1214585-10000109",
+      "name": "아이스티",
+      "description": "홍차에 복숭아의 달콤함을 더한 아이스티",
+      "category": "티:베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/59dcd816-5f11-4caf-9695-d206b706b5db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000109"
+    },
+    {
+      "id": "ddangyo-1214585-10000117",
+      "name": "이즈니버터소금빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/319ac829-313b-4488-84a6-db7a7dc8212a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000117"
+    },
+    {
+      "id": "ddangyo-1214585-10000138",
+      "name": "에스프레소 샷 추가",
+      "description": "단품 주문 불가 / 추가사항 주문 시 매장 요청란에 추가사항이 필요한 음료명을 적어주시길 부탁드립니다.",
+      "category": "추가 사항",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000138"
+    },
+    {
+      "id": "ddangyo-1214585-10000002",
+      "name": "빅포즈 리얼믹스커피",
+      "description": "누구나 사랑하는 부드럽고 달콤한 리얼믹스커피",
+      "category": "시즌메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1214585-10000022",
+      "name": "바나나 리얼믹스커피인가 봄",
+      "description": "바나나 리얼믹스커피 + 벚꽃팝콘",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1214585-10000031",
+      "name": "콜드브루 내 맘대로 컴보",
+      "description": "콜드브루 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1214585-10000040",
+      "name": "커피 2잔 & 와플",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1214585-10000043",
+      "name": "에스프레소",
+      "description": "비터홀릭 원두의 풍성한 크레마가 입안 가득히 느껴지며 고소 쌉쌀함이 담긴 음료 (HOT컵으로 기본 제공 됩니다.)",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/ca243e3c-a7db-45b4-a072-3205ceb998ea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1214585-10000061",
+      "name": "디카페인 콜드브루라떼",
+      "description": "부드러운 디카페인 더치커피에 고소한 우유를 넣은 라떼",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/f273b7f7-c9af-46fd-a30a-c18b4b41db6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000061"
+    },
+    {
+      "id": "ddangyo-1214585-10000063",
+      "name": "고구마라떼",
+      "description": "자색 고구마와 우유가 어우러져 달콤한 고구마라떼",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/3f463e6a-3948-4915-b95c-12680425dbd6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000063"
+    },
+    {
+      "id": "ddangyo-1214585-10000074",
+      "name": "캔디소다밀크쉐이크",
+      "description": "캔디소다의 시원하고 부드러운 향이 더해진 밀크쉐이크",
+      "category": "밀크쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000074"
+    },
+    {
+      "id": "ddangyo-1214585-10000080",
+      "name": "망고스무디",
+      "description": "망고의 과육향이 풍부하게 느껴지는 블렌딩 음료",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a14ddbf6-7f5e-4c32-9a54-f60a28367ebb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1214585-10000093",
+      "name": "레몬에이드",
+      "description": "레몬 과육과 탄산이 만나 청량감이 가득한 음료",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/da7bb6cd-ef6b-4b19-aa9c-dd8a4cceaa98.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000093"
+    },
+    {
+      "id": "ddangyo-1214585-10000105",
+      "name": "캐모마일",
+      "description": "향기로운 국화향을 담은 허브티",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/cc442170-6bb7-4145-8034-3adb206dc08b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000105"
+    },
+    {
+      "id": "ddangyo-1214585-10000110",
+      "name": "빅포즈 아이스티",
+      "description": "",
+      "category": "티:베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/59dcd816-5f11-4caf-9695-d206b706b5db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000110"
+    },
+    {
+      "id": "ddangyo-1214585-10000118",
+      "name": "커피콩빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c95b7ac7-74b9-4220-9aee-5f5ea7cadfb5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000118"
+    },
+    {
+      "id": "ddangyo-1214585-10000139",
+      "name": "휘핑크림 추가",
+      "description": "단품 주문 불가 / 추가사항 주문 시 매장 요청란에 추가사항이 필요한 음료명을 적어주시길 부탁드립니다.",
+      "category": "추가 사항",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000139"
+    },
+    {
+      "id": "ddangyo-1214585-10000017",
+      "name": "커피엔 역시 커피빵",
+      "description": "아이스아메리카노 + 커피콩빵",
+      "category": "[베스트 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1214585-10000023",
+      "name": "레몬 사샷추인가 봄",
+      "description": "레몬 사샷추 + 벚꽃팝콘",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1214585-10000032",
+      "name": "베버리지 내 맘대로 컴보",
+      "description": "베버리지 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1214585-10000064",
+      "name": "그린티라떼",
+      "description": "진한 말차와 우유가 어우러져 부드럽게 마실 수 있는 녹차라떼",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3c3eb9b1-b9f3-402c-ba1b-98f75469de9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000064"
+    },
+    {
+      "id": "ddangyo-1214585-10000075",
+      "name": "팥절미밀크쉐이크",
+      "description": "팥과 인절미 떡을 더해 팥빙수를 마시는 듯한 밀크쉐이크",
+      "category": "밀크쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000075"
+    },
+    {
+      "id": "ddangyo-1214585-10000081",
+      "name": "블루베리스무디",
+      "description": "블루베리의 과육향이 풍부하게 느껴지는 블렌딩 음료",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/70381009-55cb-4296-aaec-6077a9f623cb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000081"
+    },
+    {
+      "id": "ddangyo-1214585-10000094",
+      "name": "망고에이드",
+      "description": "망고 과육과 탄산이 만나 청량감이 가득한 음료",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/632481d3-8fa5-47fb-9dc7-482475d339d1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000094"
+    },
+    {
+      "id": "ddangyo-1214585-10000106",
+      "name": "히비스커스",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/a648444a-7a11-417e-968c-76c855ba575f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000106"
+    },
+    {
+      "id": "ddangyo-1214585-10000111",
+      "name": "자몽허니과일티",
+      "description": "자몽청이 들어가 달콤 쌉쌀함이 가득한 과일 티",
+      "category": "티:베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/7733d3ee-b1ab-48ad-9b8a-ba24b50539da.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000111"
+    },
+    {
+      "id": "ddangyo-1214585-10000119",
+      "name": "팥 미니붕어빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a1e45e86-c88a-4b7b-8ab7-fafbe3beec2e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000119"
+    },
+    {
+      "id": "ddangyo-1214585-10000140",
+      "name": "바닐라시럽 추가",
+      "description": "단품 주문 불가 / 추가사항 주문 시 매장 요청란에 추가사항이 필요한 음료명을 적어주시길 부탁드립니다.",
+      "category": "추가 사항",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000140"
+    },
+    {
+      "id": "ddangyo-1214585-10000018",
+      "name": "묻고 더블샷으로가",
+      "description": "커피밀크쉐이크 + 더블샷카라멜팝콘",
+      "category": "[베스트 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1214585-10000024",
+      "name": "오렌지 사샷추인가 봄",
+      "description": "오렌지 사샷추 + 벚꽃팝콘",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1214585-10000033",
+      "name": "밀크쉐이크 내 맘대로 컴보",
+      "description": "밀크쉐이크 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1214585-10000045",
+      "name": "카페라떼",
+      "description": "진한 에스프레소에 우유를 더하여 부드럽게 마실 수 있는 음료",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/f273b7f7-c9af-46fd-a30a-c18b4b41db6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1214585-10000065",
+      "name": "더블초코라떼",
+      "description": "진한 초콜릿과 우유가 어우러져 달콤한 초코라떼 (휘핑크림 없이 주문 가능)",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2f7b46a3-c08c-4e2b-8962-9b0e63cbd721.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1214585-10000076",
+      "name": "쿠키밀크쉐이크",
+      "description": "달콤한 캐러멜과 커피 쿠키가 더해진 밀크쉐이크",
+      "category": "밀크쉐이크",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000076"
+    },
+    {
+      "id": "ddangyo-1214585-10000082",
+      "name": "유자스무디",
+      "description": "상큼한 유자향이 더해진 시원한 블렌딩 음료",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/67d5431a-3381-4e1c-a097-4b3428fa9282.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000082"
+    },
+    {
+      "id": "ddangyo-1214585-10000095",
+      "name": "유자에이드",
+      "description": "유자청과 탄산이 만나 청량감이 가득한 음료",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e4fc193b-dde9-4bf5-b0f3-a1abe59e3e70.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000095"
+    },
+    {
+      "id": "ddangyo-1214585-10000107",
+      "name": "블랙퍼스트",
+      "description": "진한 향과 카페인으로 아침에 마시는 홍차",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000107"
+    },
+    {
+      "id": "ddangyo-1214585-10000112",
+      "name": "레몬허니과일티",
+      "description": "레몬청이 들어가 달콤 상콤함이 가득한 과일 티",
+      "category": "티:베버리지",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000112"
+    },
+    {
+      "id": "ddangyo-1214585-10000120",
+      "name": "슈크림 미니붕어빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/39917077-75bb-49f7-957f-97c3e1cdc7eb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000120"
+    },
+    {
+      "id": "ddangyo-1214585-10000141",
+      "name": "헤이즐넛시럽 추가",
+      "description": "단품 주문 불가 / 추가사항 주문 시 매장 요청란에 추가사항이 필요한 음료명을 적어주시길 부탁드립니다.",
+      "category": "추가 사항",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000141"
+    },
+    {
+      "id": "ddangyo-1214585-10000019",
+      "name": "쫀득카노",
+      "description": "아이스아메리카노 + 쫀득쿠키",
+      "category": "[베스트 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1214585-10000025",
+      "name": "콜드브루 레몬 사샷추인가 봄",
+      "description": "레몬 사샷추 콜드브루 + 벚꽃팝콘",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1214585-10000034",
+      "name": "스무디 내 맘대로 컴보",
+      "description": "스무디 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1214585-10000046",
+      "name": "카푸치노",
+      "description": "풍부한 거품의 스팀밀크와 향긋한 시나몬 향을 느낄 수 있는 음료 (시나몬 없이 주문 가능)",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a449dd14-61ff-4384-b767-8d658f4aef6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1214585-10000077",
+      "name": "커피밀크쉐이크",
+      "description": "밀크쉐이크에 진한 에스프레소를 부어 달콤쌉쌀함이 어우러지는 음료",
+      "category": "밀크쉐이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c87a4426-2739-4936-b846-745b366464c9.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000077"
+    },
+    {
+      "id": "ddangyo-1214585-10000083",
+      "name": "딸기요거트스무디",
+      "description": "딸기와 새콤달콤한 요거트가 잘 어우러진 블렌딩 음료",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d323ec33-add6-45da-b37e-7399f75ba808.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000083"
+    },
+    {
+      "id": "ddangyo-1214585-10000096",
+      "name": "블루레몬에이드",
+      "description": "레몬에이드에 블루색으로 시원함을 더한 음료",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/e1753792-825d-4112-9646-768c1afe27f5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1214585-10000108",
+      "name": "얼그레이",
+      "description": "베르가못(감귤류의 한 종류) 향을 담은 홍차",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a5c95b4d-dbeb-4962-97cf-ce55ba826686.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000108"
+    },
+    {
+      "id": "ddangyo-1214585-10000113",
+      "name": "유자허니과일티",
+      "description": "유자청이 들어가 상콤 쌉쌀함이 가득한 과일 티",
+      "category": "티:베버리지",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000113"
+    },
+    {
+      "id": "ddangyo-1214585-10000121",
+      "name": "감자빵",
+      "description": "비조리로 선택하실 경우, 냉동상태로 제공됩니다. 섭취 전 전자레인지로 2분 30초 조리 후 드시길 바랍니다.",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a4830f27-d863-4b78-b534-bc6d6bc95420.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000121"
+    },
+    {
+      "id": "ddangyo-1214585-10000142",
+      "name": "펄 추가",
+      "description": "단품 주문 불가 / 추가사항 주문 시 매장 요청란에 추가사항이 필요한 음료명을 적어주시길 부탁드립니다.",
+      "category": "추가 사항",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000142"
+    },
+    {
+      "id": "ddangyo-1214585-10000020",
+      "name": "모닝 컴포즈콤보",
+      "description": "음료 12종 중 선택 1 + 토핑 6종 중 선택 1\n모닝콤보 디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다. 비조리 선택 시 전자레인지로 2분 30초 조리 후 섭취 부탁드립니다.",
+      "category": "[베스트 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1214585-10000026",
+      "name": "콜드브루 오렌지 사샷추인가 봄",
+      "description": "오렌지 사샷추 콜드브루 + 벚꽃팝콘",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1214585-10000035",
+      "name": "프라페 내 맘대로 컴보",
+      "description": "프라페 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1214585-10000067",
+      "name": "민트초코오레오라떼",
+      "description": "시원한 민트와 초코쿠키 토핑이 더해진 음료 (휘핑크림 없이 주문 가능)",
+      "category": "베버리지",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1214585-10000084",
+      "name": "망고요거트스무디",
+      "description": "망고와 새콤달콤한 요거트가 잘 어우러진 블렌딩 음료",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/529e6e7b-8bcb-4094-b393-50694ea1cf3e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1214585-10000097",
+      "name": "청포도에이드",
+      "description": "청포도 과육과 탄산이 만나 청량감이 가득한 음료",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/84c95f8e-3b92-4434-8593-62f2c47b45d8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1214585-10000114",
+      "name": "자몽허니블랙티",
+      "description": "진한 홍차와 자몽 과육이 어우러진 음료",
+      "category": "티:베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/7733d3ee-b1ab-48ad-9b8a-ba24b50539da.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000114"
+    },
+    {
+      "id": "ddangyo-1214585-10000122",
+      "name": "고구마빵",
+      "description": "비조리로 선택하실 경우, 냉동상태로 제공됩니다. 섭취 전 전자레인지로 2분 30초 조리 후 드시길 바랍니다.",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6a885845-80f4-4160-bfbd-03dd6c44de21.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000122"
+    },
+    {
+      "id": "ddangyo-1214585-10000143",
+      "name": "우유 100ml 추가",
+      "description": "단품 주문 불가 / 추가사항 주문 시 매장 요청란에 추가사항이 필요한 음료명을 적어주시길 부탁드립니다.",
+      "category": "추가 사항",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000143"
+    },
+    {
+      "id": "ddangyo-1214585-10000007",
+      "name": "제로 바나나 리얼믹스커피",
+      "description": "제로슈가로 부담없이 즐길수 있는 바나나 리얼믹스커피",
+      "category": "시즌메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1214585-10000027",
+      "name": "붕어는 T입니다",
+      "description": "아이스밀크티 + 팥 미니붕어빵",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1214585-10000036",
+      "name": "에이드/주스 내 맘대로 컴보",
+      "description": "에이드/주스 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1214585-10000048",
+      "name": "헤이즐넛라떼",
+      "description": "헤이즐넛 향과 부드러운 카페라떼의 조화",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/f273b7f7-c9af-46fd-a30a-c18b4b41db6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1214585-10000068",
+      "name": "흑당밀크",
+      "description": "달콤 쌉쌀한 흑당과 부드러운 우유의 조화 (펄이 기본 제공되지 않습니다.)",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/e9d8cdb1-2811-4f51-8650-03b0fdc616b0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    },
+    {
+      "id": "ddangyo-1214585-10000085",
+      "name": "블루베리요거트스무디",
+      "description": "블루베리와 새콤달콤한 요거트가 잘 어우러진 블렌딩 음료",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/d0231122-cff3-45d1-afb1-261d9b2a636f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1214585-10000098",
+      "name": "패션후르츠에이드",
+      "description": "패션후르츠 과육과 탄산이 만나 청량감이 가득한 음료 (씨가 포함되어 있습니다.)",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d42be61e-5206-4431-900b-4229396b1c71.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1214585-10000115",
+      "name": "아망추",
+      "description": "",
+      "category": "티:베버리지",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000115"
+    },
+    {
+      "id": "ddangyo-1214585-10000123",
+      "name": "메이플크룽지",
+      "description": "바삭한 식감과 달콤한 메이플 시럽이 어우러진 크룽지",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/4de132d8-de3a-4ab0-b27c-da548c9867f3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000123"
+    },
+    {
+      "id": "ddangyo-1214585-10000144",
+      "name": "오트음료 100ml 추가",
+      "description": "단품 주문 불가 / 추가사항 주문 시 매장 요청란에 추가사항이 필요한 음료명을 적어주시길 부탁드립니다.",
+      "category": "추가 사항",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000144"
+    },
+    {
+      "id": "ddangyo-1214585-10000028",
+      "name": "아아~초코볼~",
+      "description": "아이스아메리카노 + 초코볼",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1214585-10000037",
+      "name": "티 내 맘대로 컴보",
+      "description": "티 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1214585-10000049",
+      "name": "카라멜마끼아또",
+      "description": "달콤한 카라멜과 부드러운 카페라떼의 조화",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8fa1fa71-b452-4f0e-872e-c776559d3d2d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1214585-10000069",
+      "name": "밀크티",
+      "description": "진한 홍차 향과 부드러운 우유의 조화",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/462ba737-8227-436b-8ab0-3ab3b2570afd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1214585-10000086",
+      "name": "플레인요거트스무디",
+      "description": "새콤달콤한 요거트의 향과 맛이 느껴지는 블렌딩 음료",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f7b73cd5-b45c-4c5c-8f84-9a28d139c152.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1214585-10000099",
+      "name": "키위주스",
+      "description": "키위를 사용한 과일주스",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/07/dc383fd9-9823-43fc-b724-30d296878292.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000099"
+    },
+    {
+      "id": "ddangyo-1214585-10000116",
+      "name": "빅포즈 아망추",
+      "description": "",
+      "category": "티:베버리지",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000116"
+    },
+    {
+      "id": "ddangyo-1214585-10000145",
+      "name": "아몬드브리즈 100ml 추가",
+      "description": "단품 주문 불가 / 추가사항 주문 시 매장 요청란에 추가사항이 필요한 음료명을 적어주시길 부탁드립니다.",
+      "category": "추가 사항",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000145"
+    },
+    {
+      "id": "ddangyo-1214585-10000009",
+      "name": "레몬 사샷추",
+      "description": "새콤달콤한 레몬과 에스프레소가 어우러져 컴포즈만의 독특한 풍미를 느낄수 있는 프룻츠커피",
+      "category": "시즌메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1214585-10000029",
+      "name": "멜로드라마 쉐이크",
+      "description": "커피밀크쉐이크 + 초코마시멜로",
+      "category": "[스페셜 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1214585-10000038",
+      "name": "티:베버리지 내 맘대로 컴보",
+      "description": "티:베버리지 음료 중 선택 1 + 토핑 17종 중 선택 1 \n디저트 중 감자빵, 고구마빵은 비조리 선택 가능합니다.\n(비조리 선택 시 2분 30초 전자레인지 조리 후 섭취부탁드립니다.)",
+      "category": "[내맘대로 컴포즈콤보]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1214585-10000050",
+      "name": "카페모카",
+      "description": "달콤한 초콜릿과 부드러운 카페라떼의 조화 (휘핑크림 없이 주문 가능)",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5064fdc1-3ea5-4e60-b4a0-460596b1fbe1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1214585-10000070",
+      "name": "딸기라떼",
+      "description": "딸기의 과육과 달콤함 그리고 고소한 우유의 조화",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/28e38729-0f45-4748-b1e4-cc6bb974b804.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000070"
+    },
+    {
+      "id": "ddangyo-1214585-10000087",
+      "name": "리얼초코자바칩프라페",
+      "description": "모카 소스와 자바칩 초콜릿이 블렌딩되어 달콤함을 느낄 수 있는 음료 (휘핑크림 없이 주문 가능)",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/439b3fad-ad21-42d6-8fc6-2d26e731ab0d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1214585-10000125",
+      "name": "사과생크림와플",
+      "description": "바삭한 와플에 사과잼과 휘핑크림을 토핑 한 와플",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000125"
+    },
+    {
+      "id": "ddangyo-1214585-10000010",
+      "name": "빅포즈 레몬 사샷추",
+      "description": "새콤달콤한 레몬과 에스프레소가 어우러져 컴포즈만의 독특한 풍미를 느낄수 있는 프룻츠커피",
+      "category": "시즌메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1214585-10000051",
+      "name": "아샷추",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/59dcd816-5f11-4caf-9695-d206b706b5db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1214585-10000071",
+      "name": "망고라떼",
+      "description": "망고의 과육과 달콤함 그리고 고소한 우유의 조화",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/23044ad3-643b-49ca-842a-da4e0f51db15.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1214585-10000088",
+      "name": "쿠키초코프라페",
+      "description": "초콜릿 음료 베이스에 초코쿠키 토핑이 더해져 풍부한 블렌딩 음료 (휘핑크림 없이 주문 가능)",
+      "category": "스무디/프라페",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1214585-10000101",
+      "name": "오렌지당근주스",
+      "description": "오렌지, 사과, 당근을 넣은 건강 과일주스",
+      "category": "에이드/주스",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1214585-10000126",
+      "name": "시나몬카라멜와플",
+      "description": "바삭한 와플에 카라멜과 시나몬 파우더를 토핑 한 와플",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000126"
+    },
+    {
+      "id": "ddangyo-1214585-10000011",
+      "name": "오렌지 사샷추",
+      "description": "부드러운 오렌지의 풍미와 에스프레소가 어우러진 프룻츠커피의 정석",
+      "category": "시즌메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1214585-10000052",
+      "name": "빅포즈 아샷추",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/59dcd816-5f11-4caf-9695-d206b706b5db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1214585-10000072",
+      "name": "블루베리라떼",
+      "description": "블루베리의 과육과 달콤함 그리고 고소한 우유의 조화",
+      "category": "베버리지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/10c5e308-c594-47ea-9b3f-24586ab5ecd6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000072"
+    },
+    {
+      "id": "ddangyo-1214585-10000089",
+      "name": "민트초코오레오프라페",
+      "description": "시원한 민트와 초코쿠키 토핑이 더해진 블렌딩 음료 (휘핑크림 없이 주문 가능)",
+      "category": "스무디/프라페",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1214585-10000127",
+      "name": "오레오생크림와플",
+      "description": "바삭한 와플에 초콜릿과 쿠키 크럼을 토핑 한 와플",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000127"
+    },
+    {
+      "id": "ddangyo-1214585-10000012",
+      "name": "빅포즈 오렌지 사샷추",
+      "description": "부드러운 오렌지의 풍미와 에스프레소가 어우러진 프룻츠커피의 정석",
+      "category": "시즌메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1214585-10000053",
+      "name": "돌체라떼",
+      "description": "달콤한 연유와 부드러운 카페라떼의 조화",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/f273b7f7-c9af-46fd-a30a-c18b4b41db6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1214585-10000090",
+      "name": "그린티프라페",
+      "description": "진한 말차와 우유를 블렌딩하여 부드럽게 마실 수 있는 블렌딩 음료 (휘핑크림 없이 주문 가능)",
+      "category": "스무디/프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9db51956-b34c-43e0-89d5-09c7bc942874.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1214585-10000103",
+      "name": "국내산 딸기주스",
+      "description": "",
+      "category": "에이드/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/a0f7970e-eb75-4ecd-a9e1-25323589b165.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    },
+    {
+      "id": "ddangyo-1214585-10000013",
+      "name": "레몬 사샷추 콜드브루",
+      "description": "새콤달콤한 레몬과 부드러운 콜드브루가 어우러진 레몬 사샷추",
+      "category": "시즌메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1214585-10000054",
+      "name": "흑당카페라떼",
+      "description": "달콤 쌉쌀한 흑당과 부드러운 카페라떼의 조화 (펄이 기본 제공되지 않습니다.)",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/e9d8cdb1-2811-4f51-8650-03b0fdc616b0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1214585-10000091",
+      "name": "모카자바칩프라페",
+      "description": "자바칩 프라페와 에스프레소 샷을 함께 즐길 수 있는 음료 (휘핑크림 없이 주문 가능)",
+      "category": "스무디/프라페",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1214585-10000014",
+      "name": "오렌지 사샷추 콜드브루",
+      "description": "부드러운 오렌지의 풍미와 콜드브루가 어우러진 부드러운 커피의 정석",
+      "category": "시즌메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1214585-10000056",
+      "name": "달고나라떼",
+      "description": "달콤한 카페라떼 위의 달고나",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b94078f4-9bbf-4635-b3a6-7ed4002a78bd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1214585-10000057",
+      "name": "콜드브루",
+      "description": "찬물로 추출하여 풍부한 향을 가진 더치 아메리카노",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f9068d3e-9feb-418c-9608-103f4556fc11.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1214585-10000058",
+      "name": "콜드브루라떼",
+      "description": "찬물로 추출하여 풍부한 향을 가진 더치와 부드러운 우유의 조화",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/f273b7f7-c9af-46fd-a30a-c18b4b41db6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1214585-10000059",
+      "name": "아인슈페너",
+      "description": "풍부한 향을 가진 더치커피와 컴포즈커피 시그니처 크림을 동시에 느낄 수 있는 음료",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/b619db82-235d-4ff2-9458-33b2e7d0d543.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1214585-10000134",
+      "name": "산딸기마카롱",
+      "description": "산딸기 향이 담긴 마카롱",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000134"
+    },
+    {
+      "id": "ddangyo-1214585-10000135",
+      "name": "초코마카롱",
+      "description": "초콜릿 향이 담긴 마카롱",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000135"
+    },
+    {
+      "id": "ddangyo-1214585-10000136",
+      "name": "뉴욕치즈케익",
+      "description": "진한 치즈향과 부드럽게 구워진 치즈케이크",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000136"
+    },
+    {
+      "id": "ddangyo-1214585-10000137",
+      "name": "티라미수",
+      "description": "진한 커피향과 초코 향이 더해진 부드러운 케이크",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000137"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1214585",
+    "sourceUrls": [
+      "https://bit.ly/tk-컴포즈커피여수여서점",
+      "https://fdofd.ddangyo.com/gateway1.html?WSZ5uv7"
+    ],
+    "rawItemCount": 129,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

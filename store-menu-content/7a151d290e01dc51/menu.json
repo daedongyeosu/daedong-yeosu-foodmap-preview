@@ -1,0 +1,144 @@
+{
+  "storeId": "7a151d290e01dc51",
+  "storeName": "미치게 본점",
+  "displayName": "미치게 본점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/fd72a704-5856-4c4a-9ff1-aabd8ec3443c.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "음료메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1135899-10000001",
+      "name": "특A급 (프리모리)대게",
+      "description": "게볶음밥+컵라면+콩나물국(랜덤)+깍두기+타르타르소스+칠리소스+와사비+양파짱아찌+곱창김+게포크+음료수",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/fd72a704-5856-4c4a-9ff1-aabd8ec3443c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1135899-10000002",
+      "name": "킹크랩(레드)",
+      "description": "게볶음밥+컵라면+시레기된장국+깍두기+타르타르소스+칠리소스+와사비+양파짱아찌+곱창김+게포크+음료수",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/e7114ff4-fd98-459b-8d31-c19c4abc00c0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1135899-10000004",
+      "name": "홍게살물회",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/de345c1b-dcbf-4f45-99ad-223decc160be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1135899-10000005",
+      "name": "동해 오징어순대",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/6d29e8f5-1186-4fe1-bab1-4593dc056915.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1135899-10000006",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1135899-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1135899-10000007",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1135899-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1135899-10000003",
+      "name": "달달한 국내산 영덕대게찜",
+      "description": "(1마리 400~500g)\n영덕대게는 구성품 없이 쪄서 손질만 해드립니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/88d64646-0fae-4186-afdf-90e91d9b23c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1135899-10000008",
+      "name": "환타",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1135899-90000003",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1135899-90000004",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1135899-90000005",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1135899",
+    "sourceUrls": [
+      "https://bit.ly/tk-미치게본점",
+      "https://fdofd.ddangyo.com/gateway1.html?p4mQHOF"
+    ],
+    "rawItemCount": 17,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

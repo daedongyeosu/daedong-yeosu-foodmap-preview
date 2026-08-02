@@ -1,0 +1,70 @@
+{
+  "storeId": "9e0a2da7ddfa3d93",
+  "storeName": "다정아구 미평",
+  "displayName": "다정아구 미평",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/4fa4a461-c55c-424e-8e02-0dc1292cb24e.jpg",
+  "categories": [
+    "전체",
+    "메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216935-10000001",
+      "name": "아구탕",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/4fa4a461-c55c-424e-8e02-0dc1292cb24e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1216935-10000002",
+      "name": "아구찜",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3199f6b8-f245-43d1-9cc1-38efe757869e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1216935-10000003",
+      "name": "서대회",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a8168139-32af-4022-9c75-b08976b4975f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1216935-10000004",
+      "name": "음료수",
+      "description": "",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1216935-10000005",
+      "name": "공기밥 별도",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/dea77d47-dc40-44bb-917e-27fc64d4e216.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216935",
+    "sourceUrls": [
+      "https://bit.ly/tk-다정아구",
+      "https://fdofd.ddangyo.com/gateway1.html?Ojgndjp"
+    ],
+    "rawItemCount": 8,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "storeId": "6daf3c1e0dfb68fe",
+  "storeName": "서울깍두기 미평직영점",
+  "displayName": "서울깍두기 미평직영점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/415fec58-5b89-44f6-9dd2-3098ad3ea8ed.jpg",
+  "categories": [
+    "전체",
+    "메뉴",
+    "추가 배달료",
+    "음료",
+    "사이드메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1166860-10000002",
+      "name": "진국설렁탕",
+      "description": "설렁탕+소면사리+공기밥+깍두기+양파,고추+소금",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/16adb72a-a76e-46a5-99a7-06e17c3809a9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1166860-10000003",
+      "name": "왕갈비탕",
+      "description": "왕갈비탕+당면사리+공기밥+깍두기+양파,고추+고기소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/36a09b3e-7e5e-4a0b-bc4d-f8c1e54896a8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1166860-10000007",
+      "name": "꼬리곰탕",
+      "description": "꼬리곰탕+공기밥+깍두기+양파,고추+야채소스+소금",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/349b5d19-7b00-4d00-b3ac-d3e8cf24f765.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1166860-10000014",
+      "name": "사골삼계탕",
+      "description": "사골삼계탕,소금,깍두기,양파,고추",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/cc08826c-9776-481e-9707-d2dc8e0dc436.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1166860-10000004",
+      "name": "옛날갈비탕 리뉴얼(왕갈비1대+소목뼈1대)",
+      "description": "옛날갈비탕+당면사리+공기밥+깍두기+양파,고추+고기소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/cb2d81fe-052d-4ac5-9301-cd0dce4bb02b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1166860-10000001",
+      "name": "추가 배달료",
+      "description": "(둔덕동 라온유아파트/한려아파트/여도아파트:500원)\n(광무동 럭키아파트:1000원)",
+      "category": "추가 배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1166860-10000015",
+      "name": "음료수500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/db321852-537d-4445-838d-414dccd93329.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1166860-10000016",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1166860-90000001",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1166860-10000017",
+      "name": "깍두기",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/d85726c6-0313-433b-89a3-ec25244f465b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1166860-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1166860-10000018",
+      "name": "소면사리(2개)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/b34eecd5-1f33-4f0c-8496-320f3b8713a9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1166860-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1166860-10000019",
+      "name": "오징어무말랭이젓갈(오말랭이)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/dcb724a2-a98e-4791-9818-47307b49dec3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1166860-90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1166860-10000005",
+      "name": "소뼈다귀탕",
+      "description": "소뼈다귀탕+당면사리+공기밥+깍두기+양파,고추+쌈장+고기소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f78133ad-06b3-4cd0-88bd-e3a307ecb236.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1166860-10000020",
+      "name": "육수추가(설렁탕육수)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1166860-90000005",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1166860-10000006",
+      "name": "도가니탕",
+      "description": "도가니탕+공기밥+깍두기+양파,고추+야채소스+소금",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/0f6322c8-fbf6-4011-86a6-6eacd46db50d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1166860-10000021",
+      "name": "육전",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/2e7bc46c-0185-4b35-acca-f74df7f8fcc7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1166860-90000006",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1166860-90000007",
+      "name": "별빛청하 스파클링(병)(300ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000007"
+    },
+    {
+      "id": "ddangyo-1166860-10000008",
+      "name": "꼬도탕(꼬리+도가니)",
+      "description": "꼬도탕(꼬리+도가니)+공기밥+깍두기+양파,고추+야채소스+소금",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/de5a467f-22c5-4985-a88a-40073e6af132.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1166860-90000008",
+      "name": "일품진로(병)(375ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000008"
+    },
+    {
+      "id": "ddangyo-1166860-10000009",
+      "name": "얼큰사골육개장",
+      "description": "사골육개장+공기밥+깍두기+양파,고추",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/501f31af-cf70-4771-ae2f-b5d0b96c7d22.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1166860-10000010",
+      "name": "모듬수육전골(왕갈비+꼬리+도가니+뽈살)",
+      "description": "모듬수육전골(왕갈비+꼬리+도가니+뽈살)+깍두기+양파,고추+야채소스+고기소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/ba681889-a72c-461f-8514-710638199920.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1166860-10000011",
+      "name": "꼬도수육(전골)",
+      "description": "꼬도수육전골(꼬리+도가니)+깍두기+양파,고추+야채소스+고기소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/890ca50d-9888-4f26-93f1-9bca792e4959.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1166860-10000012",
+      "name": "도가니수육(전골)",
+      "description": "도가니수육전골+깍두기+양파,고추+야채소스+고기소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/eef6b6da-8a5c-4ae9-bba2-040976157979.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1166860-10000013",
+      "name": "꼬리수육(전골)",
+      "description": "꼬리수육전골+깍두기+양파,고추+야채소스+고기소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/79d31747-157a-4c4d-a166-7d655e368f1e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1166860-10000027",
+      "name": "매운소뼈찜(전골)",
+      "description": "매운소뼈찜+깍두기+배추김치+양파,고추+고기소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6007afe4-165c-4a46-adb4-6e318edbcef0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1166860",
+    "sourceUrls": [
+      "https://bit.ly/tk-서울깍두기미평직영점",
+      "https://fdofd.ddangyo.com/gateway1.html?7uXuNGw"
+    ],
+    "rawItemCount": 35,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

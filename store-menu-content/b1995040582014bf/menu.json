@@ -1,0 +1,402 @@
+{
+  "storeId": "b1995040582014bf",
+  "storeName": "용우동 여서점",
+  "displayName": "용우동 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f52b60d6-5fef-4aa5-b51e-d32c96d8531f.jpg",
+  "categories": [
+    "전체",
+    "짜글이의 맛",
+    "우동의 맛",
+    "덮밥의 맛",
+    "면의 맛",
+    "밥 맛",
+    "돈까스의 맛",
+    "오므라이스의 맛",
+    "볶음밥의 맛",
+    "간식의 맛"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216862-10000088",
+      "name": "김치짜글이",
+      "description": "",
+      "category": "짜글이의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f52b60d6-5fef-4aa5-b51e-d32c96d8531f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1216862-10000060",
+      "name": "용우동",
+      "description": "고추가루가 기본으로 들어갑니당\n불필요하신분은 요청사항에 적어주세용",
+      "category": "우동의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3b7ac7cf-b9cb-414b-a56b-6bd7ed74084f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1216862-10000078",
+      "name": "매운치즈삼겹살덮밥",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "덮밥의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f0bbf7c8-d86e-4bc2-a382-f8a00d6eceab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000078"
+    },
+    {
+      "id": "ddangyo-1216862-10000048",
+      "name": "신선야채쫄면",
+      "description": "소스더필요하신분은요청사항에적어주세요         \n   국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "면의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/739c8bc6-b6cf-44b8-9a9f-a61e1da965ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1216862-10000056",
+      "name": "김치알밥",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "밥 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1216862-10000069",
+      "name": "등심돈까스",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "돈까스의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1a4ead16-fcd9-48b6-912d-1d60d7e56a65.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1216862-10000073",
+      "name": "오무라이스",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "오므라이스의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000073"
+    },
+    {
+      "id": "ddangyo-1216862-10000077",
+      "name": "중화불덮밥",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "덮밥의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000077"
+    },
+    {
+      "id": "ddangyo-1216862-10000084",
+      "name": "새우볶음밥",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "볶음밥의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/8965cea8-675c-46bc-addd-a391d0c31551.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1216862-10000092",
+      "name": "튀김범벅떡볶이",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "간식의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/570dcae5-feca-436c-9fb1-21112bdd61b5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1216862-10000057",
+      "name": "순두부찌개",
+      "description": "",
+      "category": "밥 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/4ffe0e75-669a-49a1-bf27-84ec74ea0f82.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1216862-10000061",
+      "name": "새우튀김우동",
+      "description": "고추가루가 기본으로 들어갑니당\n불필요하신분은 요청사항에 적어주세용",
+      "category": "우동의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000061"
+    },
+    {
+      "id": "ddangyo-1216862-10000070",
+      "name": "치즈돈까스",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "돈까스의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5f3e5833-84e1-4c92-bde0-70566646f63b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000070"
+    },
+    {
+      "id": "ddangyo-1216862-10000074",
+      "name": "돈까스 오무라이스",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "오므라이스의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000074"
+    },
+    {
+      "id": "ddangyo-1216862-10000085",
+      "name": "김치볶음밥",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "볶음밥의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/50493d63-b329-478f-a870-a88a3acd0ea8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1216862-10000089",
+      "name": "불고기짜글이",
+      "description": "",
+      "category": "짜글이의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/fab6298a-e145-4bb5-8227-7a97ca63b345.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1216862-10000093",
+      "name": "왕교자튀김만두",
+      "description": "",
+      "category": "간식의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f73099e2-bdc1-48fd-aac2-5f6c6488f04a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000093"
+    },
+    {
+      "id": "ddangyo-1216862-10000050",
+      "name": "물냉면",
+      "description": "물냉면은 소스(다대기)가 나가지 않습니다.\n 원하시면 요청사항에 물냉면 소스 주세요라고 \n  말해주세요",
+      "category": "면의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c1b9002a-b007-4940-a317-b075e5e48ce5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1216862-10000058",
+      "name": "양푼이비빔밥",
+      "description": "소스더필요하신분은요청사항에적어주세요\n국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "밥 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1216862-10000062",
+      "name": "스페셜어묵우동",
+      "description": "고추가루가 기본으로 들어갑니당\n불필요하신분은 요청사항에 적어주세용",
+      "category": "우동의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/2cccfd04-c8c2-4118-a75d-2d9939137fed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1216862-10000071",
+      "name": "고구마치즈돈까스",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "돈까스의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1216862-10000079",
+      "name": "콘치즈닭갈비",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "덮밥의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1216862-10000086",
+      "name": "새우볶음밥돈까스세트",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "볶음밥의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1216862-10000090",
+      "name": "제육짜글이",
+      "description": "",
+      "category": "짜글이의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1216862-10000051",
+      "name": "비빔냉면",
+      "description": "",
+      "category": "면의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/8f5a5207-408b-4f77-a9da-e0aaecd2e74d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1216862-10000059",
+      "name": "육개장",
+      "description": "",
+      "category": "밥 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d2de420b-afbc-4f8a-b64f-9a3b435cc17a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1216862-10000063",
+      "name": "해물짬뽕우동+밥",
+      "description": "",
+      "category": "우동의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5ff18ee8-9c1a-4791-86ca-e8cd9db3e4d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000063"
+    },
+    {
+      "id": "ddangyo-1216862-10000072",
+      "name": "왕돈까스",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "돈까스의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3d3afdfa-b059-4ed5-9f92-f28580984b0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000072"
+    },
+    {
+      "id": "ddangyo-1216862-10000080",
+      "name": "치킨마요",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "덮밥의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1216862-10000087",
+      "name": "김치볶음밥돈까스세트",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "볶음밥의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1216862-10000091",
+      "name": "소고기된장짜글이",
+      "description": "",
+      "category": "짜글이의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1216862-10000052",
+      "name": "냉모밀",
+      "description": "",
+      "category": "면의 맛",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e4277567-6484-4a92-95ca-abbd8e0f050d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1216862-10000064",
+      "name": "제육볶음우동+밥",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "우동의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000064"
+    },
+    {
+      "id": "ddangyo-1216862-10000081",
+      "name": "제육덮밥",
+      "description": "국물필요하신분들은 요청사항에\n꼭적어주세용\n국물용기가샌다는분들이많아서  \n필요하신분들만  보내드려요",
+      "category": "덮밥의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000081"
+    },
+    {
+      "id": "ddangyo-1216862-10000096",
+      "name": "공기밥",
+      "description": "",
+      "category": "간식의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1216862-10000065",
+      "name": "우동알밥세트",
+      "description": "고추가루가 기본으로 들어갑니당\n불필요하신분은 요청사항에 적어주세용",
+      "category": "우동의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1216862-10000097",
+      "name": "음료수",
+      "description": "(355ml) 다른 사이즈는 없습니다",
+      "category": "간식의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1216862-10000066",
+      "name": "우동돈까스세트",
+      "description": "밥은 제공되지 않아요ㅠㅠ\n고추가루가 기본으로 들어갑니당\n불필요하신분은 요청사항에 적어주세용",
+      "category": "우동의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1216862-10000083",
+      "name": "쭈꾸미덮밥",
+      "description": "",
+      "category": "덮밥의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000083"
+    },
+    {
+      "id": "ddangyo-1216862-10000067",
+      "name": "소고기짬뽕+밥",
+      "description": "",
+      "category": "우동의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1216862-10000068",
+      "name": "해물백짬뽕+밥",
+      "description": "",
+      "category": "우동의 맛",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216862",
+    "sourceUrls": [
+      "https://bit.ly/3PPFEfQ",
+      "https://fdofd.ddangyo.com/gateway1.html?a264v4J"
+    ],
+    "rawItemCount": 44,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

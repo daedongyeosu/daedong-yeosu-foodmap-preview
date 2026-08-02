@@ -1,0 +1,340 @@
+{
+  "storeId": "1921d1d5c7710872",
+  "storeName": "모두의 죽 교동점(영업시간06시~02시까지)",
+  "displayName": "모두의 죽 교동점(영업시간06시~02시까지)",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/492326b8-a179-422d-b941-eb4fe47a5c2d.jpg",
+  "categories": [
+    "전체",
+    "[추천] 입맛대로 2가지",
+    "죽",
+    "1人 죽세트",
+    "입맛대로 3가지",
+    "2人 커플SET",
+    "모두의해장",
+    "모두의분식",
+    "모두의카페",
+    "모두의반찬",
+    "[][기력회복 보양식][]"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1176178-10000087",
+      "name": "입맛대로 2가지",
+      "description": "죽2그릇(500gx2)",
+      "category": "[추천] 입맛대로 2가지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6722c783-4a97-4859-a833-8833f8587819.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1176178-10000092",
+      "name": "힘이불끈 완도전복죽",
+      "description": "바다의 산삼으로 불리는 완도산 전복을 그대로 담은 전복죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d66d6c38-eadc-4b29-bfb4-4dc916fa5190.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1176178-10000093",
+      "name": "든든한 소고기죽",
+      "description": "담백하고 부드러운 다진 소고기와 신선한 야채를 넣은 영양 가득 한끼 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c481231b-c761-45ec-9906-038578a0b028.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000093"
+    },
+    {
+      "id": "ddangyo-1176178-10000100",
+      "name": "동지팥죽)행운을 드리는달콤한 팥죽(새알2알)",
+      "description": "팥 본연의 맛과 식감을 살린 전통 팥죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/aba9b6d5-dd77-4318-81bf-fd45845b5186.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000100"
+    },
+    {
+      "id": "ddangyo-1176178-10000102",
+      "name": "부드러운 녹두죽",
+      "description": "천연 해독제로 불리는 녹두를 곱게 갈아 은은하게 고소한 건강죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/754c0d01-6616-4fa9-b288-278eb6ab2441.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000102"
+    },
+    {
+      "id": "ddangyo-1176178-10000088",
+      "name": "죽한그릇+음료+3종반찬",
+      "description": "죽 500g+음료+3종반찬",
+      "category": "1人 죽세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3f2ff6b6-936e-4e83-b073-3634773e173a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1176178-10000090",
+      "name": "입맛대로 3가지",
+      "description": "죽3그릇(500gx3)",
+      "category": "입맛대로 3가지",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/851ec6ae-76dc-4f00-97d5-44bfda793ca5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1176178-10000091",
+      "name": "죽2그릇+음료2+곁들임",
+      "description": "죽2그릇(500gx2)+음료2+사이드",
+      "category": "2人 커플SET",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f829afcc-acd1-4270-a0f5-f2bdb08ff074.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1176178-10000104",
+      "name": "진한 전통 육개장",
+      "description": "얼큰하고 깊은 국물에 푸짐한 고기와 채소를 담아 진하게 끓인 정통 육개장(밥 포함)",
+      "category": "모두의해장",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000104"
+    },
+    {
+      "id": "ddangyo-1176178-10000108",
+      "name": "쫀득 김치만두",
+      "description": "투명하고 쫀득한 감자피로 만든 김치만두",
+      "category": "모두의분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/1bc49334-3cdb-46ea-a83a-19d38f3cf638.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000108"
+    },
+    {
+      "id": "ddangyo-1176178-10000111",
+      "name": "얼음동동식혜 식후땡 500ml",
+      "description": "",
+      "category": "모두의카페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c813c9cd-f64d-40cf-b3d0-25ee26c04fce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000111"
+    },
+    {
+      "id": "ddangyo-1176178-10000113",
+      "name": "더 푸짐한 잡채",
+      "description": "기존 잡채보다 고명이 더 푸짐해진 고소한 잡채",
+      "category": "모두의반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/81bb77e3-bcd2-45bd-bfce-0aedfc833808.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000113"
+    },
+    {
+      "id": "ddangyo-1176178-10000119",
+      "name": "반계탕+영양만점 닭죽",
+      "description": "깊게 우려낸 반계탕 반계탕 750g+보양의 대가 삼계죽 500g(기본반찬 미제공)",
+      "category": "[][기력회복 보양식][]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e082b357-42f8-44ea-a5a9-5fe978ea31d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000119"
+    },
+    {
+      "id": "ddangyo-1176178-10000089",
+      "name": "죽한그릇+음료+곁들임",
+      "description": "죽 500g+음료+사이드",
+      "category": "1人 죽세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/edba443d-c484-43dc-90fd-a4f30c5342d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1176178-10000105",
+      "name": "진한 사골 설렁탕",
+      "description": "오랜 시간 우려낸 깊고 진한 사골육수의 담백한 설렁탕 (밥 포함)",
+      "category": "모두의해장",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000105"
+    },
+    {
+      "id": "ddangyo-1176178-10000109",
+      "name": "쫀득 고기만두",
+      "description": "투명하고 쫀득한 감자피로 만든 고기만두",
+      "category": "모두의분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/7316a7a1-9835-418b-8ccc-8a9469c29fd7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000109"
+    },
+    {
+      "id": "ddangyo-1176178-10000112",
+      "name": "혈당 뚝 여주차 500ml",
+      "description": "비타민C가 풍부한 여주를 담은 몸에 좋은 여주차",
+      "category": "모두의카페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/80541e01-5dab-4c07-8494-f01e972a06d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000112"
+    },
+    {
+      "id": "ddangyo-1176178-10000114",
+      "name": "보들보들 계란찜",
+      "description": "푸딩같이 부드러운 계란찜",
+      "category": "모두의반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/38af4368-2c29-4e71-a8e4-ad4aa6194634.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000114"
+    },
+    {
+      "id": "ddangyo-1176178-10000120",
+      "name": "반계탕",
+      "description": "국내산 영계와 깊게 우려낸 진한 국물, 건강하고 든든한 반계탕 (용량750g)(기본반찬 미제공)",
+      "category": "[][기력회복 보양식][]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b8f90f32-e93e-4707-9e67-2deb8c136989.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000120"
+    },
+    {
+      "id": "ddangyo-1176178-10000094",
+      "name": "영양만점 닭죽",
+      "description": "기력회복에 좋은 인삼과 단백질이 풍부한 닭고기로 어우러진 영양 닭죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/dbc6743a-cb9e-417d-b025-1738c18a83a8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000094"
+    },
+    {
+      "id": "ddangyo-1176178-10000106",
+      "name": "전통 나주 맑은곰탕",
+      "description": "깔끔하고 맑은 국물에 부드러운 소고기를 담아낸 나주식 곰탕(밥 포함)",
+      "category": "모두의해장",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000106"
+    },
+    {
+      "id": "ddangyo-1176178-10000110",
+      "name": "갈비만두",
+      "description": "달콤한 갈비소스로 맛을 낸 갈비만두 (+미니간장제공)",
+      "category": "모두의분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/605541b1-729d-467f-98a3-008dc25f7f66.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000110"
+    },
+    {
+      "id": "ddangyo-1176178-10000115",
+      "name": "3종 반찬",
+      "description": "김치+메추리알조림+오징어젓갈 3종",
+      "category": "모두의반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/97846463-4722-477e-89b8-364a032597c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000115"
+    },
+    {
+      "id": "ddangyo-1176178-10000095",
+      "name": "몽글몽글 계란야채죽",
+      "description": "몽글몽글 풀어진 계란에 참기름의 고소한 향이 솔솔 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3a197829-f523-4a1b-99fa-4b8fe6b99f4c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000095"
+    },
+    {
+      "id": "ddangyo-1176178-10000107",
+      "name": "시원한 황태해장국",
+      "description": "구수한 황태와 시원한 국물로 속까지 편안하게 풀어주는 해장국(밥 포함)",
+      "category": "모두의해장",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000107"
+    },
+    {
+      "id": "ddangyo-1176178-10000116",
+      "name": "밥도둑 메추리알조림",
+      "description": "입맛을 돋궈줄 감칠맛나는 메추리알 장조림",
+      "category": "모두의반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6c2b68f7-f572-43aa-a39f-7a546283c0f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000116"
+    },
+    {
+      "id": "ddangyo-1176178-10000096",
+      "name": "입맛살려 낙지김치죽",
+      "description": "속이 풀리는 칼칼하고 얼큰한 해장에 좋은 낙지김치죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/8da174dd-ccbd-45eb-aaaf-c73c95825caa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1176178-10000117",
+      "name": "오징어젓갈",
+      "description": "적당한 크기로 썰은 맛깔스러운 오징어젓갈",
+      "category": "모두의반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/badfe7f5-31f2-4c5f-9161-9f25d3aeeb88.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000117"
+    },
+    {
+      "id": "ddangyo-1176178-10000097",
+      "name": "신선함 가득 야채죽",
+      "description": "잘게 다진 야채로 목 넘김이 편안한 국민 야채죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/eddc504e-5606-4a3f-96b9-69e784d3ad0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1176178-10000118",
+      "name": "후리가케",
+      "description": "후리가케로 입맛에 맞게 간을 맞춰드세요",
+      "category": "모두의반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ae7455b4-fb00-47f8-a003-c532d93c893b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000118"
+    },
+    {
+      "id": "ddangyo-1176178-10000098",
+      "name": "영양조화 소고기미역죽",
+      "description": "고단백 소고기와 피를 맑게 해주고 칼슘무기질이 풍부한 미역이 들어간 건강죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c36dfc87-c4b8-43f5-9118-216a37ffe19e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1176178-10000099",
+      "name": "고소함가득 참치죽",
+      "description": "오메가3와 비타민이 풍부한 참치를 넣어 균형 있는 영양을 충족해주는 참치죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/fcfcfa21-3ae0-4aec-8880-86fcfe0bfaf6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000099"
+    },
+    {
+      "id": "ddangyo-1176178-10000101",
+      "name": "해장 엔 짬뽕죽",
+      "description": "각종 해산물과 콩나물을 넣어 시원하고 화끈하게 칼칼한 별미 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/efccd440-d4ea-40c4-bd30-207a059a649b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1176178-10000103",
+      "name": "황금빛달콤 호박죽",
+      "description": "식이섬유가 풍부한 비타민 가득 달달 호박죽 (용량: 500g / 반찬 별도구매)",
+      "category": "죽",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/fac00b62-489d-4cfe-92d4-e0d350329ba8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1176178",
+    "sourceUrls": [
+      "https://bit.ly/48A9g71",
+      "https://fdofd.ddangyo.com/gateway1.html?pEMHX4v"
+    ],
+    "rawItemCount": 39,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

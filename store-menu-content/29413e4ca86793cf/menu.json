@@ -1,0 +1,539 @@
+{
+  "storeId": "29413e4ca86793cf",
+  "storeName": "빙동댕 여수문수점",
+  "displayName": "빙동댕 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1389f31a-a703-4f88-aed3-4be78b5da4e6.jpg",
+  "categories": [
+    "전체",
+    "Big size 빙수15종",
+    "(New) 수제 요거트빙수 출시",
+    "Big size 치즈큐브 빙수 4종",
+    "대표메뉴",
+    "프랑스산 최고급생지 크로플 14종",
+    "NEW 고당도 제철과일 빙수",
+    "COLD BREW (only ice)",
+    "COFFEE",
+    "ADE",
+    "NON COFFEE",
+    "TEA"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1239770-10000005",
+      "name": "Big size 인절미빙수",
+      "description": "(팥X)콩고물 + 연유 + 인절미떡 + 아몬드",
+      "category": "Big size 빙수15종",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000502.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1239770-10000006",
+      "name": "Big size 그린티 빙수",
+      "description": "팥 + 녹차파우더 + 녹차시럽 + 아몬드 + 연유",
+      "category": "Big size 빙수15종",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/73e3b6ba-9086-4791-b27c-05cfcf46bdaf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1239770-10000014",
+      "name": "Big size 망고빙수",
+      "description": "망고 + 망고시럽 + 연유 + 아이스크림",
+      "category": "Big size 빙수15종",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000200.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1239770-10000001",
+      "name": "(NEW)라즈베리 요거트빙수",
+      "description": "씹는맛이 즐거운 라즈베리 듬뿍 + 수제 베리시럽 + 수제 요거트소스(요거트 소스는 따로제공)",
+      "category": "(New) 수제 요거트빙수 출시",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1239770-10000004",
+      "name": "Big size 눈꽃팥빙수",
+      "description": "팥 듬뿍 + 연유 + 인절미떡",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1239770-10000017",
+      "name": "Big size 순수우유 치즈큐브 빙수",
+      "description": "치즈큐브 듬뿍 + 아몬드 + 연유",
+      "category": "Big size 치즈큐브 빙수 4종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1239770-10000022",
+      "name": "Big size 반반빙수(아이스크림X)",
+      "description": "전메뉴 반반가능(우유 눈꽃빙수입니다)",
+      "category": "대표메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1239770-10000023",
+      "name": "플레인크로플",
+      "description": "",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/d6957d1f-9cd3-47e4-a570-562399af977b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1239770-10000035",
+      "name": "Big size 수박(제철과일)빙수",
+      "description": "수박듬뿍 + 수박시럽 + 연유",
+      "category": "NEW 고당도 제철과일 빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1239770-10000036",
+      "name": "[NEW]디카페인 콜드브루(아이스만가능)",
+      "description": "",
+      "category": "COLD BREW (only ice)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1239770-10000039",
+      "name": "수제크림라떼(ice)",
+      "description": "",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1239770-10000045",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "ADE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1239770-10000049",
+      "name": "논산딸기라떼",
+      "description": "씨가 톡톡 씹히는 딸기라떼 너무맛있어요.",
+      "category": "NON COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1239770-10000053",
+      "name": "아이스티(Ice)",
+      "description": "",
+      "category": "TEA",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1239770-10000002",
+      "name": "(NEW) 블루베리요거트 빙수",
+      "description": "직접개발한 수제요거트소스와 달콤한 블루베리의 조합 너무 맛있어요 ㅎㅎ(요거트소스 따로제공)",
+      "category": "(New) 수제 요거트빙수 출시",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000337.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1239770-10000018",
+      "name": "Big size 논산(냉동)딸기 치즈큐브 빙수",
+      "description": "논산(냉동)딸기 + 치즈큐브 + 딸기시럽 + 연유",
+      "category": "Big size 치즈큐브 빙수 4종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1239770-10000024",
+      "name": "미니크로플2개 + 수제생크림",
+      "description": "",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1239770-10000037",
+      "name": "[NEW]디카페인 카페라떼(아이스만가능)",
+      "description": "",
+      "category": "COLD BREW (only ice)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1239770-10000040",
+      "name": "아메리카노",
+      "description": "아이스만 가능",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/7cdeee57-9805-4ce8-84c5-78a5b320e6f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1239770-10000046",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "ADE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1239770-10000050",
+      "name": "초코라떼",
+      "description": "아이스만 가능",
+      "category": "NON COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1239770-10000054",
+      "name": "얼그레이",
+      "description": "",
+      "category": "TEA",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1239770-10000003",
+      "name": "(NEW) 복숭아요거트 빙수",
+      "description": "직접개발한 수제요거트소스와 달달한 백도복숭아 조합 너무맛있어요 ㅎㅎ(요거트소스 따로제공)",
+      "category": "(New) 수제 요거트빙수 출시",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1239770-10000019",
+      "name": "Big size 망고 치즈큐브 빙수",
+      "description": "망고 + 치즈큐브 + 망고시럽 + 연유",
+      "category": "Big size 치즈큐브 빙수 4종",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ebb02232-4ae9-4555-a988-efa279b80b3a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1239770-10000025",
+      "name": "인절미 크로플",
+      "description": "",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1239770-10000038",
+      "name": "[NEW]디카페인 돌체라떼(아이스만가능)",
+      "description": "",
+      "category": "COLD BREW (only ice)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1239770-10000041",
+      "name": "카페라떼",
+      "description": "아이스만 가능",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1239770-10000047",
+      "name": "자몽에이드",
+      "description": "",
+      "category": "ADE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1239770-10000051",
+      "name": "로얄밀크티",
+      "description": "아이스만 가능",
+      "category": "NON COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1239770-10000055",
+      "name": "페퍼민트",
+      "description": "",
+      "category": "TEA",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1239770-10000007",
+      "name": "Big size 초코나무 숲",
+      "description": "녹차파우더 + 쿠키분태 + 브라우니 + 녹차시럽 + 연유",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1239770-10000020",
+      "name": "블루베리치즈큐브 빙수",
+      "description": "블루베리듬뿍 + 치즈큐브 + 블루베리시럽 + 연유",
+      "category": "Big size 치즈큐브 빙수 4종",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/5aa08c42-a759-476f-b251-e9aa4d4650fa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1239770-10000026",
+      "name": "수제슈크림 크로플",
+      "description": "직접 만든 수제크림 입니다",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1239770-10000042",
+      "name": "바닐라빈 라떼",
+      "description": "아이스만 가능",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1239770-10000048",
+      "name": "패션후르츠에이드",
+      "description": "",
+      "category": "ADE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1239770-10000052",
+      "name": "녹차라떼",
+      "description": "아이스만 가능",
+      "category": "NON COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1239770-10000056",
+      "name": "캐모마일",
+      "description": "",
+      "category": "TEA",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1239770-10000008",
+      "name": "Big size 죠리퐁브라우니빙수",
+      "description": "죠리퐁가득 + 브라우니 + 연유 + 초코소스 + 아이스크림",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1239770-10000021",
+      "name": "Big size 블루베리치즈크럼블 빙수",
+      "description": "블루베리듬뿍 + 치즈큐브 + 치즈크럼블 + 생크림 + 블루베리시럽 + 연유",
+      "category": "Big size 치즈큐브 빙수 4종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1239770-10000027",
+      "name": "티라미수 크로플",
+      "description": "최고의 비율로 만든 수제크림입니다.",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1239770-10000043",
+      "name": "돌체라떼",
+      "description": "아이스만 가능",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1239770-10000009",
+      "name": "Big size 초코오레오빙수",
+      "description": "쿠키크럼 + 오레오쿠키 + 초코소스 + 연유 + 아이스크림",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1239770-10000028",
+      "name": "돼지바 크로플",
+      "description": "",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1239770-10000044",
+      "name": "카페모카",
+      "description": "아이스만 가능",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/21a0e573-ce79-4001-bee3-e0355d81807c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1239770-10000010",
+      "name": "Big size 돼지바빙수",
+      "description": "돼지바쿠키크럼 + 딸기시럽 + 초코소스 + 연유 + 아이스크림",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1239770-10000029",
+      "name": "생크림초코쿠키 크로플",
+      "description": "",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1239770-10000011",
+      "name": "Big size 트리플 초코빙수",
+      "description": "(코코볼,죠리퐁,오레오) + 초코소스 + 연유 + 아이스크림",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1239770-10000030",
+      "name": "생크림딸기잼 크로플",
+      "description": "",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1239770-10000012",
+      "name": "Big size 논산딸기(냉동)빙수",
+      "description": "논산냉동딸기(맛좋아요) + 딸기시럽 + 연유 + 아이스크림",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1239770-10000031",
+      "name": "생크림망고잼 크로플",
+      "description": "",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1239770-10000013",
+      "name": "Big size 백도복숭아빙수",
+      "description": "백도 + 복숭아 시럽 + 연유 + 아이스크림",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1239770-10000032",
+      "name": "생크림카야잼 크로플",
+      "description": "",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1239770-10000033",
+      "name": "카야버터크로플",
+      "description": "최고급 고메버터사용",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1239770-10000015",
+      "name": "Big size 아이스홍시 빙수",
+      "description": "홍시듬뿍 + 연유",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1239770-10000034",
+      "name": "앙버터 크로플",
+      "description": "최고급 고메버터사용",
+      "category": "프랑스산 최고급생지 크로플 14종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1239770-10000016",
+      "name": "Big size 봉봉(포도)빙수",
+      "description": "깐포도 + 청포도 시럽 + 연유",
+      "category": "Big size 빙수15종",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1239770",
+    "sourceUrls": [
+      "https://bit.ly/4kcX9la",
+      "https://fdofd.ddangyo.com/gateway1.html?M8HTM53"
+    ],
+    "rawItemCount": 59,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "storeId": "a93abf2f62c2dd79",
+  "storeName": "노랑통닭 여수봉산점",
+  "displayName": "노랑통닭 여수봉산점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/26f71377-3ea4-4ea1-9254-1f49a00bfc67.jpg",
+  "categories": [
+    "전체",
+    "신메뉴",
+    "노랑 반반 치킨",
+    "노랑 통닭 치킨메뉴",
+    "소스추가",
+    "사이드 신메뉴",
+    "반해줘세트",
+    "사이드",
+    "주류메뉴",
+    "기타 추가"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1267505-30002540",
+      "name": "대파 간장 치킨",
+      "description": "대파간장치킨 + 치킨무",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/87acfce0-89ba-493c-a413-6e5d70172738.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002540"
+    },
+    {
+      "id": "ddangyo-1267505-30002529",
+      "name": "우도 땅콩 치킨",
+      "description": "우도땅콩치킨 + 치킨무 + 청귤소스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5be69997-e499-4288-83fd-7ab1a825981f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002529"
+    },
+    {
+      "id": "ddangyo-1267505-30002189",
+      "name": "엄청 큰 반반 치킨",
+      "description": "엄청 큰 반반 치킨 + 치킨무(후라이드 포함시 + 콩가루 소금 + 양념소스)",
+      "category": "노랑 반반 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d7af9c60-332d-472b-a451-4e5a034f1d9e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002189"
+    },
+    {
+      "id": "ddangyo-1267505-30002176",
+      "name": "알싸한 마늘 치킨",
+      "description": "알싸한 마늘 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 알싸한 마늘소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4d4eda8a-6b5e-48b2-a0b4-dfd81b5fc41e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002176"
+    },
+    {
+      "id": "ddangyo-1267505-30002175",
+      "name": "노랑 3종 세트",
+      "description": "노랑 3종 세트 + 콩가루 소금 + 양념치킨소스 + 치킨무",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2af947d3-fbcd-4279-a365-4ef8600aada1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002175"
+    },
+    {
+      "id": "ddangyo-1267505-30002299",
+      "name": "알싸한 마늘소스",
+      "description": "알싸한 마늘향을 그대로 살린 한국인 취향 저격 마늘소스",
+      "category": "소스추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002299"
+    },
+    {
+      "id": "ddangyo-1267505-30002542",
+      "name": "맵싸한 똥집감자튀김",
+      "description": "",
+      "category": "사이드 신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5aead695-41ee-4662-a45b-0f97a1de7565.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002542"
+    },
+    {
+      "id": "ddangyo-1267505-30002251",
+      "name": "반해줘[후라이드+눈꽃치즈+김말이+치즈볼+콜라]세트",
+      "description": "후라이드 치킨(하프)+눈꽃치즈떡볶이 +김말이(8EA)+오리지널 치즈볼(5EA)+콜라1.25ℓ",
+      "category": "반해줘세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/45f14da9-10c8-47ae-b269-3837c616c062.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002251"
+    },
+    {
+      "id": "ddangyo-1267505-30002509",
+      "name": "땅콩크림꽈배기(3PCS)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/14205bc5-eee9-4d50-9953-8b1a869e7965.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002509"
+    },
+    {
+      "id": "ddangyo-1267505-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1267505-30002541",
+      "name": "대파 간장 치킨 반반(후라반간장반)",
+      "description": "대파간장치킨 후라이드반 간장반 + 치킨무 + 콩가루소금 + 양념소스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4aaa2a3b-55c3-427a-be3b-d6a94b2f61ee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002541"
+    },
+    {
+      "id": "ddangyo-1267505-30002510",
+      "name": "통통 오징어스틱(3PCS)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/1c4b5408-ce46-494d-9f4a-12b14bf2b48d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002510"
+    },
+    {
+      "id": "ddangyo-1267505-30002252",
+      "name": "반해줘[알싸한마늘+눈꽃치즈+김말이+치즈볼+콜라]세트",
+      "description": "알싸한 마늘치킨(하프)+눈꽃치즈떡볶이+김말이(8EA)+오리지널 치즈볼(5EA)+콜라1.25ℓ",
+      "category": "반해줘세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/fad12113-3a92-425a-8740-e659ecf7727e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002252"
+    },
+    {
+      "id": "ddangyo-1267505-30002190",
+      "name": "맵싸한 반반 치킨",
+      "description": "맵싸한 반반 치킨 + 치킨무 + 노랑 맵싸한 디핑 소스(후라이드 포함시 + 콩가루 소금 + 양념소스)",
+      "category": "노랑 반반 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/263c0b2c-3a15-43c9-b061-4e4b94aa426c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002190"
+    },
+    {
+      "id": "ddangyo-1267505-30002300",
+      "name": "칼칼한 청양소스",
+      "description": "매콤, 새콤, 칼칼한 고추 소스",
+      "category": "소스추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002300"
+    },
+    {
+      "id": "ddangyo-1267505-30002311",
+      "name": "통마늘(10EA)추가",
+      "description": "",
+      "category": "기타 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002311"
+    },
+    {
+      "id": "ddangyo-1267505-30002543",
+      "name": "모짜체다치즈볼",
+      "description": "",
+      "category": "사이드 신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6bdbffb1-b970-499e-b9ad-c31a90a8e2df.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002543"
+    },
+    {
+      "id": "ddangyo-1267505-30002167",
+      "name": "갈릭 인 더 딥",
+      "description": "갈릭 인 더 딥 + 갈릭 인 더 딥 소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/34933924-2eb4-4c55-9a2b-ce740c8d0043.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002167"
+    },
+    {
+      "id": "ddangyo-1267505-90000002",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1267505-30002191",
+      "name": "웰빙 파닭 후라이드 반반 치킨",
+      "description": "웰빙 파닭 후라이드 반반 치킨 + 치킨무(후라이드 포함시 + 콩가루 소금 + 양념소스)",
+      "category": "노랑 반반 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/5936eb7b-cec9-401f-be78-9f284df41fd1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002191"
+    },
+    {
+      "id": "ddangyo-1267505-30002253",
+      "name": "반해줘[칼칼한청양+눈꽃치즈+김말이+치즈볼+콜라]세트",
+      "description": "칼칼한 청양치킨(하프)+눈꽃치즈떡볶이 +김말이(8EA)+오리지널 치즈볼(5EA)+콜라1.25ℓ",
+      "category": "반해줘세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/64dd01d9-f147-4762-8856-944e3a088367.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002253"
+    },
+    {
+      "id": "ddangyo-1267505-30002511",
+      "name": "통통 오징어스틱(6PCS)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/b8eb1ac4-fded-4698-9ea9-6002db3bd560.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002511"
+    },
+    {
+      "id": "ddangyo-1267505-30002301",
+      "name": "갈릭인더딥소스",
+      "description": "알싸한 마늘 큐브, 달달한 요거트, 고소한 마요네즈로 만든 딥한 반전의 소스",
+      "category": "소스추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/bef755a3-f790-4090-866d-121823405fcf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002301"
+    },
+    {
+      "id": "ddangyo-1267505-30002174",
+      "name": "엄청 큰 후라이드 치킨",
+      "description": "엄청 큰 후라이드 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/60f6df6c-d7cc-4910-8168-1a875c1de62e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002174"
+    },
+    {
+      "id": "ddangyo-1267505-90000003",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1267505-30002302",
+      "name": "맵싸한 디핑소스",
+      "description": "매운맛을 더 맛있게! 어디에도 잘 어울리는 매운맛 소스",
+      "category": "소스추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d74b7eb2-e2e7-4e27-9906-d03721174618.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002302"
+    },
+    {
+      "id": "ddangyo-1267505-30002512",
+      "name": "모둠튀김",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e96171c4-c95e-474b-8c97-ae99b5f87de3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002512"
+    },
+    {
+      "id": "ddangyo-1267505-90000004",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1267505-30002513",
+      "name": "떡볶이 모둠튀김 세트",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/887dfbef-a715-4608-8a12-576136dc15a8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002513"
+    },
+    {
+      "id": "ddangyo-1267505-30002313",
+      "name": "콩가루 소금(2EA)",
+      "description": "고소한 콩가루가 들어간 노랑통닭만의 맛있는 소금",
+      "category": "기타 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002313"
+    },
+    {
+      "id": "ddangyo-1267505-30002303",
+      "name": "대파올리브마요소스",
+      "description": "은은한 대파향을 더해 깔끔하게 모든 치킨에 어울리는 대파올리브마요소스",
+      "category": "소스추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/f623f1e9-4bdd-4b7d-a4cc-635b33a49fd1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002303"
+    },
+    {
+      "id": "ddangyo-1267505-90000005",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1267505-30002179",
+      "name": "칼칼한 청양 치킨",
+      "description": "칼칼한 청양 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 칼칼한 청양소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/df360d13-a975-424c-9317-42c142007b97.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002179"
+    },
+    {
+      "id": "ddangyo-1267505-30002544",
+      "name": "떡 튀김 추가(200g)",
+      "description": "",
+      "category": "기타 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002544"
+    },
+    {
+      "id": "ddangyo-1267505-30002304",
+      "name": "노랑토마토칠리소스",
+      "description": "매콤한 토마토살사의 풍미를 그대로 느낄 수 있는 특제 디핑소스",
+      "category": "소스추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/ab4288af-3b7b-4f05-92a3-a1ef011ff763.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002304"
+    },
+    {
+      "id": "ddangyo-1267505-30002180",
+      "name": "뿌리노랑 치킨",
+      "description": "뿌리노랑 치킨 + 치킨무 + 대파올리브마요소스 또는 노랑토마토칠리소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/7806115f-f3fc-4ed0-a92c-92af1c77472a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002180"
+    },
+    {
+      "id": "ddangyo-1267505-30002305",
+      "name": "양념소스",
+      "description": "없으면 서운한 오리지널 양념소스",
+      "category": "소스추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002305"
+    },
+    {
+      "id": "ddangyo-1267505-30002533",
+      "name": "양념소스(2EA)",
+      "description": "양념소스(2EA)",
+      "category": "소스추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002533"
+    },
+    {
+      "id": "ddangyo-1267505-30002181",
+      "name": "바삭 누룽지 치킨",
+      "description": "바삭 누룽지 치킨 + 치킨무",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d484c437-68ba-45d9-bcc6-fa23fb50b061.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002181"
+    },
+    {
+      "id": "ddangyo-1267505-30002172",
+      "name": "통살새우튀김(6EA)",
+      "description": "통살새우튀김(6EA) + 대파올리브마요소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2218276f-93e2-469e-9a12-99c35c3036ef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002172"
+    },
+    {
+      "id": "ddangyo-1267505-30002182",
+      "name": "맵싸한 후라이드 치킨",
+      "description": "맵싸한 후라이드 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 노랑 맵싸한 디핑 소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/c6699d1d-7efe-4bf6-9dd3-a8c500910733.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002182"
+    },
+    {
+      "id": "ddangyo-1267505-30002173",
+      "name": "통살새우튀김(3EA)",
+      "description": "통살새우튀김(3EA) + 대파올리브마요소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/a12dd8c2-530c-42a0-9e99-d6db203c08d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002173"
+    },
+    {
+      "id": "ddangyo-1267505-30002183",
+      "name": "맵싸한 양념 치킨",
+      "description": "맵싸한 양념 치킨 + 치킨무 + 노랑 맵싸한 디핑 소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/486ae1a4-31d9-4234-b718-886db75c8559.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002183"
+    },
+    {
+      "id": "ddangyo-1267505-30002184",
+      "name": "맵싸한 깐풍 치킨",
+      "description": "맵싸한 깐풍 치킨 + 치킨무 + 노랑 맵싸한 디핑 소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/607c7d04-3003-4b87-b279-0de4cf3c92c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002184"
+    },
+    {
+      "id": "ddangyo-1267505-30002281",
+      "name": "노랑치즈볼(5EA)",
+      "description": "노랑치즈볼",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/fe48f2cc-d248-44ec-99ad-e5d7448ce8da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002281"
+    },
+    {
+      "id": "ddangyo-1267505-30002534",
+      "name": "청귤 소스",
+      "description": "청귤소스",
+      "category": "소스추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/89f571bb-367e-4da0-b71e-a986d84bec34.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002534"
+    },
+    {
+      "id": "ddangyo-1267505-30002309",
+      "name": "케찹(2EA)",
+      "description": "어디에도 어울리는 만능 케찹",
+      "category": "소스추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30002309"
+    },
+    {
+      "id": "ddangyo-1267505-30002185",
+      "name": "맵싸한 3종 치킨",
+      "description": "맵싸한 3종 치킨 + 콩가루 소금 + 양념치킨소스 + 치킨무 + 노랑 맵싸한 디핑 소스",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/f8d3f72b-0c93-415d-a159-be2be40b9665.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002185"
+    },
+    {
+      "id": "ddangyo-1267505-30002186",
+      "name": "엄청 큰 양념 치킨",
+      "description": "엄청 큰 양념 치킨 + 치킨무",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/74103485-78aa-4c63-be3d-9f2b9ac93ed8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002186"
+    },
+    {
+      "id": "ddangyo-1267505-30002187",
+      "name": "엄청 큰 깐풍 치킨",
+      "description": "엄청 큰 깐풍 치킨 + 치킨무",
+      "category": "노랑 통닭 치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/c2e1f96b-72c9-42c1-bcd4-6d9e4ec9644f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002187"
+    },
+    {
+      "id": "ddangyo-1267505-30002441",
+      "name": "김말이(6EA)",
+      "description": "김말이",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/4bbd6a56-9900-4033-89ec-63e9d50a4ebb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002441"
+    },
+    {
+      "id": "ddangyo-1267505-30002442",
+      "name": "김말이(10EA)",
+      "description": "김말이",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/059894fa-ec74-4975-b82f-a6d551358fcf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002442"
+    },
+    {
+      "id": "ddangyo-1267505-30002286",
+      "name": "모둠감자튀김",
+      "description": "모둠감자튀김 + 토마토케찹",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d49aa1f2-3043-4769-9dcd-822a039781c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002286"
+    },
+    {
+      "id": "ddangyo-1267505-30002288",
+      "name": "눈꽃치즈 떡볶이",
+      "description": "눈꽃치즈 떡볶이",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/c7690fc7-683c-4aa3-94a4-f348ddd48d31.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002288"
+    },
+    {
+      "id": "ddangyo-1267505-30002291",
+      "name": "맵싸한 특수부위 3종",
+      "description": "맵싸한 특수부위 3종 + 노랑 맵싸한 디핑소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/9ad57e21-832b-4d24-9a0e-c7fee7aaa573.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002291"
+    },
+    {
+      "id": "ddangyo-1267505-30002292",
+      "name": "똥집 감자튀김",
+      "description": "똥집 감자튀김 + 양념치킨소스 +콩가루 소금 + 치킨무",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/05991ede-a393-4a3c-8b4f-5ac9d362518b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002292"
+    },
+    {
+      "id": "ddangyo-1267505-30002293",
+      "name": "깐풍 똥집 감자튀김",
+      "description": "깐풍 똥집 감자튀김 + 치킨무",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/3ef43ca7-12e3-4f17-84aa-d0250c0cb418.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30002293"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1267505",
+    "sourceUrls": [
+      "https://bit.ly/4r9LRjF",
+      "https://fdofd.ddangyo.com/gateway1.html?H0TkPiH"
+    ],
+    "rawItemCount": 62,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

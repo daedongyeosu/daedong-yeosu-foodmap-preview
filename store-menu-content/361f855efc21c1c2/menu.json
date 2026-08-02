@@ -1,0 +1,509 @@
+{
+  "storeId": "361f855efc21c1c2",
+  "storeName": "가마치통닭 여서점",
+  "displayName": "가마치통닭 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f3d5f5cd-2bf1-4bec-ab62-c35539068d96.jpg",
+  "categories": [
+    "전체",
+    "옛날통닭, 조각닭, 순살",
+    "콤보 (왕 닭다리 4개, 날개 4개)",
+    "사이드 메뉴",
+    "신메뉴",
+    "똥집튀김 set",
+    "닭발튀김 set",
+    "추가 메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1227008-10000008",
+      "name": "가마치 한마리",
+      "description": "바삭하고 촉촉한 가마치 대표메뉴",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7cb11039-713a-4d4c-9bf6-cdcf488d420a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1227008-10000019",
+      "name": "가마치 콤보 (후라이드)",
+      "description": "통다리와 통날개의 부드러움만 담긴 가마치 콤보",
+      "category": "콤보 (왕 닭다리 4개, 날개 4개)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/9bfc31f7-53da-45ab-aa25-fef0fdca2227.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1227008-10000042",
+      "name": "콘크런치오징어",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/50e3b369-9ebd-4391-8c7d-f8b3cb25bce3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1227008-10000036",
+      "name": "떡볶이",
+      "description": "매콤달콤한 가마치 떡볶이",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/dbebd2b0-bafc-4439-b798-0a32786e7166.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1227008-10000001",
+      "name": "허니마늘파닭 한마리통닭",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/99fb76da-52e3-4ead-86b1-362bee160b61.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1227008-10000024",
+      "name": "똥집튀김 + 가마치즈볼",
+      "description": "똥집튀김 + 가마치즈볼(5개)",
+      "category": "똥집튀김 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1227008-10000028",
+      "name": "닭발튀김 + 가마치즈볼",
+      "description": "닭발튀김 + 가마치즈볼(5개)",
+      "category": "닭발튀김 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1227008-10000032",
+      "name": "모듬감자튀김",
+      "description": "바삭한 가마치 감자튀김",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/c3a83f82-573a-4b53-ade0-b00a829907e3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1227008-10000043",
+      "name": "샐러드",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1227008-90000001",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1227008-10000002",
+      "name": "(NEW) 청양맵간장순살",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8efaa611-14cc-43d8-ae7a-c2ece4d9f552.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1227008-10000009",
+      "name": "치킨 (후라이드)",
+      "description": "겉은 바삭 속은 촉촉 후라이드 치킨",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/183665a8-34c1-4304-83b9-78cc285ed999.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1227008-10000020",
+      "name": "가마치 양념 콤보",
+      "description": "통다리와 통날개의 부드러움과 매콤달콤한 소스의 만남",
+      "category": "콤보 (왕 닭다리 4개, 날개 4개)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/95680710-2982-4ba2-9bd2-426bac36899f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1227008-10000025",
+      "name": "간장똥집 + 가마치즈볼",
+      "description": "간장똥집 + 가마치즈볼(5개)",
+      "category": "똥집튀김 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1227008-10000029",
+      "name": "양념닭발튀김 + 가마치즈볼",
+      "description": "양념닭발튀김 + 가마치즈볼(5개)",
+      "category": "닭발튀김 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1227008-10000033",
+      "name": "막대감자튀김",
+      "description": "겉은 바삭 속은 촉촉",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/cdfe3d44-247d-4b42-8b0c-1958742c37f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1227008-10000044",
+      "name": "무",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1227008-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1227008-10000003",
+      "name": "허니마늘파닭 순살",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/0cb7f29e-1806-42d3-8fe1-0adfa02ede14.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1227008-10000010",
+      "name": "양념 치킨",
+      "description": "가마치 양념 치킨",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/4a38cca9-6e6f-4d38-a500-5e8f29e62e90.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1227008-10000021",
+      "name": "가마치 마늘간장 콤보",
+      "description": "통다리와 통날개의 부드러움에 마늘간장의 풍미를 더하다",
+      "category": "콤보 (왕 닭다리 4개, 날개 4개)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f7f3b378-9acb-41a9-8822-cf06bfb4f512.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1227008-10000026",
+      "name": "똥집튀김 + 스노윙가마치즈볼",
+      "description": "똥집튀김 + 스노윙가마치즈볼(5개)",
+      "category": "똥집튀김 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1227008-10000030",
+      "name": "닭발튀김 + 스노윙가마치즈볼",
+      "description": "닭발튀김 + 스노윙가마치즈볼(5개)",
+      "category": "닭발튀김 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1227008-10000034",
+      "name": "가마치즈 막대감자",
+      "description": "바삭함과 고소함을 동시에",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/03dab205-5909-43f8-9881-a1f3609fb8ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1227008-10000045",
+      "name": "소스",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1227008-90000003",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1227008-10000004",
+      "name": "청양맵간장 콤보",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b0173f9b-dbed-47a8-b253-03fac76c16ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1227008-10000011",
+      "name": "간장 치킨",
+      "description": "달콤 고소한 가마치 간장 치킨",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7d08d3b7-0366-4892-ae1e-b7e9a689ac25.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1227008-10000027",
+      "name": "간장똥집 + 스노윙가마치즈볼",
+      "description": "간장똥집튀김 + 스노윙가마치즈볼(5개)",
+      "category": "똥집튀김 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1227008-10000031",
+      "name": "양념닭발튀김 + 스노윙가마치즈볼",
+      "description": "양념닭발튀김 + 스노윙가마치즈볼(5개)",
+      "category": "닭발튀김 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1227008-10000035",
+      "name": "무뼈매운닭발",
+      "description": "쫄깃하고 매콤한 가마치 무뼈매운닭발",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/d38bed0d-cd4b-4f98-a2bc-b3d0fe0a5ee6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1227008-10000046",
+      "name": "코카콜라",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/fde03b5d-dd52-4d2a-9fac-b2215e89bedd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1227008-90000004",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1227008-10000005",
+      "name": "허니마늘파닭 콤보",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e7f7d73e-db82-4f67-a632-f10d5557b1d8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1227008-10000023",
+      "name": "가마치 치즈 콤보",
+      "description": "통다리와 통날개의 부드러움과 고소한 치즈의 맛을 함께",
+      "category": "콤보 (왕 닭다리 4개, 날개 4개)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/42250a0b-8681-4c72-92f1-4282ee7d8e3e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1227008-10000047",
+      "name": "제로콜라",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1227008-90000005",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1227008-10000006",
+      "name": "청양맵간장 치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/4aed6392-de44-4578-92fb-6c2d4ea177ba.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1227008-10000013",
+      "name": "치즈 치킨",
+      "description": "고소한 풍미의 가마치즈치킨",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e35a168d-cc4c-4dbb-8096-6ec333380fc2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1227008-10000037",
+      "name": "어묵탕",
+      "description": "시원한 가마치 어묵탕",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/b55440bf-f7de-4658-84d5-446e0b5a2bb3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1227008-10000048",
+      "name": "스프라이트",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f5d76a7f-c0fb-4bd0-96ae-62e4d47d8540.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1227008-90000006",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1227008-10000007",
+      "name": "허니마늘파닭 치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/c93d36b5-a5cb-418a-bd05-f27698b8c3ab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1227008-10000014",
+      "name": "가마치 순살 (후라이드)",
+      "description": "겉은 바삭 속은 촉촉",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/9dcf5061-605a-49a5-8c6f-1883b74715e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1227008-10000038",
+      "name": "미니텐더",
+      "description": "부드러운 닭안심을 사용해 바삭하게 튀겨낸 미니텐더",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ecb3232d-1df2-47da-b85f-c8fbf230f72c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1227008-10000049",
+      "name": "환타(오렌지)",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1227008-10000015",
+      "name": "가마치양념 순살",
+      "description": "겉은 바삭 속은 촉촉",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/a36cd7d2-4691-4490-8691-06b9fec1fa54.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1227008-10000039",
+      "name": "가마 치즈볼",
+      "description": "쫄깃한 치즈가 한가득",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/759c9347-3b23-4e13-96cd-e9ed6dc41e7e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1227008-10000050",
+      "name": "환타(파인애플)",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1227008-10000016",
+      "name": "가마치간장 순살",
+      "description": "맛있는 순살 간장",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/bc92f8d2-daf7-4d07-86e0-9b6396ee2417.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1227008-10000040",
+      "name": "스노윙 가마치즈볼",
+      "description": "치즈 풍미로 고소함 두배",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e4db5225-7e3e-40ff-b148-6805801c6cd6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1227008-10000041",
+      "name": "소떡소떡",
+      "description": "닭가슴살 소시지와 쫀득한 떡을 동시에",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/66c7bbd2-d390-439c-b086-c3fc41ce4c18.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1227008-10000018",
+      "name": "가마치 치즈 순살",
+      "description": "고소한 풍미의 가마치즈순살",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ce26f8f8-9ab9-46d6-8667-bbffb4d63052.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1227008",
+    "sourceUrls": [
+      "https://bit.ly/tk-가마치통닭여서점",
+      "https://fdofd.ddangyo.com/gateway1.html?30QNO1C"
+    ],
+    "rawItemCount": 57,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

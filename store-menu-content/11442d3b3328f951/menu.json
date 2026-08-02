@@ -1,0 +1,555 @@
+{
+  "storeId": "11442d3b3328f951",
+  "storeName": "인생아구찜 여수문수점",
+  "displayName": "인생아구찜 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/fb88d30a-277f-4a0a-8100-6aab64c7ac81.jpg",
+  "categories": [
+    "전체",
+    "찜메뉴",
+    "야채추가",
+    "음료메뉴",
+    "세트메뉴",
+    "탕 메뉴",
+    "반찬류",
+    "사이드메뉴",
+    "해산물추가",
+    "소스 추가"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1176615-30000411",
+      "name": "[주문수1위]살마니아구찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/27330a7f-518c-493f-b142-c7c792cadd36.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000411"
+    },
+    {
+      "id": "ddangyo-1176615-30000412",
+      "name": "콜라겐아구찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c76f15f1-df80-43b0-9e2b-3586d304f8a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000412"
+    },
+    {
+      "id": "ddangyo-1176615-30000413",
+      "name": "영양만점 알곤이찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/1ee03eef-570f-4b34-a327-796e32f8c654.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000413"
+    },
+    {
+      "id": "ddangyo-1176615-30000416",
+      "name": "종합영양제 해물아구찜(인기)",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/11e0b189-7038-41d5-afa1-35fd2b59d215.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000416"
+    },
+    {
+      "id": "ddangyo-1176615-30000417",
+      "name": "강력추천 인생해물찜(아구없는)",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/5c7886cc-2e96-43af-9023-0d0c393fbe6f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000417"
+    },
+    {
+      "id": "ddangyo-1176615-30000418",
+      "name": "자연산 통문어 황제해물찜(아구없는)",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/43c46fa9-2f46-4af3-b71f-a2941e8a1120.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000418"
+    },
+    {
+      "id": "ddangyo-1176615-30000454",
+      "name": "미나리(향긋)",
+      "description": "",
+      "category": "야채추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000454"
+    },
+    {
+      "id": "ddangyo-1176615-30000465",
+      "name": "펩시제로(500ml)",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000465"
+    },
+    {
+      "id": "ddangyo-1176615-30000427",
+      "name": "1인 콜라겐아구찜 + 셀프 날치알 주먹밥 정식",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/2bdfae76-e1bc-4ce2-9fe3-b8bf2fdfe7c4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000427"
+    },
+    {
+      "id": "ddangyo-1176615-30000430",
+      "name": "[몸보신] 아구지리탕",
+      "description": "",
+      "category": "탕 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/1d2b6dd4-e1c1-45e6-9692-80d6094f2254.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000430"
+    },
+    {
+      "id": "ddangyo-1176615-30000460",
+      "name": "인생비트무[절임무] 추가",
+      "description": "",
+      "category": "반찬류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000460"
+    },
+    {
+      "id": "ddangyo-1176615-30000457",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000457"
+    },
+    {
+      "id": "ddangyo-1176615-30000434",
+      "name": "알 추가 (200g)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000434"
+    },
+    {
+      "id": "ddangyo-1176615-30000462",
+      "name": "인생초고추장 소스",
+      "description": "",
+      "category": "소스 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000462"
+    },
+    {
+      "id": "ddangyo-1176615-30000461",
+      "name": "인생김[미니도시락김] 추가",
+      "description": "",
+      "category": "반찬류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000461"
+    },
+    {
+      "id": "ddangyo-1176615-30000455",
+      "name": "반건조 파 추가 (풍미 작렬)",
+      "description": "",
+      "category": "야채추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000455"
+    },
+    {
+      "id": "ddangyo-1176615-30000466",
+      "name": "사이다(1.25L)",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000466"
+    },
+    {
+      "id": "ddangyo-1176615-30000463",
+      "name": "인생와사비간장 소스",
+      "description": "",
+      "category": "소스 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000463"
+    },
+    {
+      "id": "ddangyo-1176615-30000458",
+      "name": "볶음밥 재료",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000458"
+    },
+    {
+      "id": "ddangyo-1176615-30000428",
+      "name": "1인 살마니아구찜 + 셀프 날치알 주먹밥 정식",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/63b77ddb-4952-49f6-8b25-f96624b609cc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000428"
+    },
+    {
+      "id": "ddangyo-1176615-30000431",
+      "name": "[맵칼한 몸보신] 아구매운탕",
+      "description": "",
+      "category": "탕 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/3f1a61a2-34ca-4a6e-beac-2813d7d1aa2c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000431"
+    },
+    {
+      "id": "ddangyo-1176615-30000435",
+      "name": "알 추가 2배 (400g)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000435"
+    },
+    {
+      "id": "ddangyo-1176615-30000429",
+      "name": "1인 알곤이찜 + 셀프 날치알 주먹밥 set",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c9edef40-1d57-41ef-b212-dad6069d088e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000429"
+    },
+    {
+      "id": "ddangyo-1176615-30000467",
+      "name": "제로 사이다(500ml)",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000467"
+    },
+    {
+      "id": "ddangyo-1176615-30000432",
+      "name": "[영양만점] 알탕(추천)",
+      "description": "",
+      "category": "탕 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/4e43390f-509b-46fc-8eca-43abaddb0cd7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000432"
+    },
+    {
+      "id": "ddangyo-1176615-30000459",
+      "name": "셀프 날치알 주먹밥(사장 추천)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000459"
+    },
+    {
+      "id": "ddangyo-1176615-30000456",
+      "name": "콩나물(200g) 추가",
+      "description": "",
+      "category": "야채추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000456"
+    },
+    {
+      "id": "ddangyo-1176615-30000464",
+      "name": "인생와사비마요 소스",
+      "description": "",
+      "category": "소스 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000464"
+    },
+    {
+      "id": "ddangyo-1176615-30000436",
+      "name": "고니(이리) 추가 (350g)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000436"
+    },
+    {
+      "id": "ddangyo-1176615-30000437",
+      "name": "고니(이리) 추가 2배 (700g)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000437"
+    },
+    {
+      "id": "ddangyo-1176615-30000414",
+      "name": "고소담백 알찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/feb40358-b98d-487c-b69a-6208182baf86.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000414"
+    },
+    {
+      "id": "ddangyo-1176615-30000433",
+      "name": "[신메뉴 출시] 인생해물탕",
+      "description": "",
+      "category": "탕 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/ad049988-6cd2-4c66-a115-c6051eafb13e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000433"
+    },
+    {
+      "id": "ddangyo-1176615-30000468",
+      "name": "펩시(1.25L)",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000468"
+    },
+    {
+      "id": "ddangyo-1176615-30000469",
+      "name": "제로펩시(1.25L)",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000469"
+    },
+    {
+      "id": "ddangyo-1176615-30000415",
+      "name": "탱글탱글 곤이(이리)찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/a2c16a08-f6a2-4ddd-bb18-b182436c8a91.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000415"
+    },
+    {
+      "id": "ddangyo-1176615-30000438",
+      "name": "알 (100g) 고니 이리 (200g) 추가",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000438"
+    },
+    {
+      "id": "ddangyo-1176615-30000439",
+      "name": "콜라겐아구(500g)추가",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000439"
+    },
+    {
+      "id": "ddangyo-1176615-30000440",
+      "name": "살마니아구(500g)추가",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000440"
+    },
+    {
+      "id": "ddangyo-1176615-30000441",
+      "name": "낙지추가(몸보신)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000441"
+    },
+    {
+      "id": "ddangyo-1176615-30000442",
+      "name": "쭈꾸미 추가 5마리(식감 최고)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000442"
+    },
+    {
+      "id": "ddangyo-1176615-30000419",
+      "name": "기력충전 아낙찜(인기)",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/faed56ea-936a-4023-adde-118975a22f51.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000419"
+    },
+    {
+      "id": "ddangyo-1176615-30000443",
+      "name": "새우추가(7마리 신선함)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000443"
+    },
+    {
+      "id": "ddangyo-1176615-30000420",
+      "name": "키토산 대하찜(인기)",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/d4bef31a-1c43-409b-823e-a27c95ea5f04.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000420"
+    },
+    {
+      "id": "ddangyo-1176615-30000421",
+      "name": "오감만족 아쭈찜(식감 최고)",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/9fa8c9d6-0fe0-48a1-b00d-5125ce98be9f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000421"
+    },
+    {
+      "id": "ddangyo-1176615-30000444",
+      "name": "꽃게 추가(2미 4조각)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000444"
+    },
+    {
+      "id": "ddangyo-1176615-30000422",
+      "name": "활력충전 낙지찜(몸보신)",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/bcf7058f-522a-48a8-8646-c03d26fb9ccc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000422"
+    },
+    {
+      "id": "ddangyo-1176615-30000445",
+      "name": "오징어 몸통 추가(1미)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000445"
+    },
+    {
+      "id": "ddangyo-1176615-30000423",
+      "name": "천연 피로회복제 쭈꾸미찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c7588e2d-2ae0-4e8b-828a-7684178a0cea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000423"
+    },
+    {
+      "id": "ddangyo-1176615-30000446",
+      "name": "오징어 몸통 추가(2미)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000446"
+    },
+    {
+      "id": "ddangyo-1176615-30000447",
+      "name": "대왕 쭈꾸미(신메뉴 사장 강추 제철 음식)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000447"
+    },
+    {
+      "id": "ddangyo-1176615-30000424",
+      "name": "오도독 만득이찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/53964984-756e-4ddf-8b96-982687d8a7d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000424"
+    },
+    {
+      "id": "ddangyo-1176615-30000425",
+      "name": "가오리찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e1111552-a3ae-4340-8b80-506dc2cb8b8c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000425"
+    },
+    {
+      "id": "ddangyo-1176615-30000448",
+      "name": "최고급 갑오징어 추가 (1미)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000448"
+    },
+    {
+      "id": "ddangyo-1176615-30000449",
+      "name": "황제 통문어 추가 (1미)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000449"
+    },
+    {
+      "id": "ddangyo-1176615-30000426",
+      "name": "대구뽈찜",
+      "description": "",
+      "category": "찜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/fedafdaa-dde4-418d-97c6-0bf1e7a12ace.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000426"
+    },
+    {
+      "id": "ddangyo-1176615-30000450",
+      "name": "전복 추가 (2미)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000450"
+    },
+    {
+      "id": "ddangyo-1176615-30000452",
+      "name": "위소라 슬라이스 (250g) 추가",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000452"
+    },
+    {
+      "id": "ddangyo-1176615-30000453",
+      "name": "만득이(오도독)",
+      "description": "",
+      "category": "해산물추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000453"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1176615",
+    "sourceUrls": [
+      "https://bit.ly/tk-인생아구찜여수문수점",
+      "https://fdofd.ddangyo.com/gateway1.html?uNy1K7p"
+    ],
+    "rawItemCount": 64,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

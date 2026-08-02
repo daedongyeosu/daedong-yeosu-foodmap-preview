@@ -24,12 +24,36 @@ assert.equal(stores.length, 710, '기존 710개 가게 수를 보존해야 합�
 const mapContext = {window: {}};
 vm.runInNewContext(read('store-menu-content/ddangyo-menu-map.js'), mapContext);
 const menuMap = mapContext.window.DAEDONG_DDANGYO_MENU_STORES;
-assert.equal(Object.keys(menuMap).length, 446, '땡겨요 메뉴 지도는 446곳이어야 합니다.');
+const menuMapIds = Object.keys(menuMap);
+assert.equal(menuMapIds.length, 598, '땡겨요 메뉴 지도는 598곳이어야 합니다.');
 
 const enrichment = json('data/ddangyo-store-enrichment.json');
 assert.equal(enrichment.stores.length, 446);
-assert.deepEqual(new Set(Object.keys(menuMap)), new Set(enrichment.stores.map(row => row.targetStoreId)));
+assert.equal(enrichment.stores.filter(row => row.isNew).length, 27, '신규 땡겨요 가게는 27곳이어야 합니다.');
+assert.ok(enrichment.stores.every(row => menuMap[row.targetStoreId]), '기존 446곳 메뉴 연결을 모두 보존해야 합니다.');
+
+const allStoreIds = new Set([
+  ...stores.map(store => String(store.id || store.store_id)),
+  ...enrichment.stores.filter(row => row.isNew).map(row => row.targetStoreId)
+]);
+assert.equal(allStoreIds.size, 737, '기존 710곳과 신규 27곳의 내부 총합은 737곳이어야 합니다.');
+
+const expansion = json('data/ddangyo-menu-expansion-report.json');
+assert.equal(expansion.previousMapCount, 446);
+assert.equal(expansion.generatedCount, 152);
+assert.equal(expansion.finalMapCount, 598);
+assert.deepEqual(expansion.rejectedCrossStoreIds.sort(), [
+  '8d9df0fbb77ce9eb',
+  '9f89e6d7784cf4a2',
+  'fa0bccb2d190a7c0'
+]);
+assert.deepEqual(expansion.unresolved.map(row => row.storeId).sort(), [
+  '08e5e26653436fef',
+  'b016e6c2fc4217ea'
+]);
+
 for (const [storeId, entry] of Object.entries(menuMap)) {
+  assert.ok(allStoreIds.has(storeId), `${storeId}는 현재 737개 가게 목록에 존재해야 합니다.`);
   assert.ok(fs.existsSync(entry.path), `${storeId} 메뉴 파일이 없습니다.`);
   const menu = json(entry.path);
   assert.equal(menu.storeId, storeId);
@@ -38,12 +62,33 @@ for (const [storeId, entry] of Object.entries(menuMap)) {
   assert.ok(menu.items.every(item => !('price' in item) && !('menu_unitprc' in item)), `${storeId} 가격 노출`);
 }
 
+const legacyMenuIds = ['a089d1d54720b48e', '2f4c3cfb0866c4a4', 'dc638b23f8cf3c5b', '7bc7239e6b509c44'];
+const visibleMenuIds = new Set([...menuMapIds, ...legacyMenuIds]);
+assert.equal(visibleMenuIds.size, 600, '음식보기 가능한 가게는 중복 제외 600곳이어야 합니다.');
+
+const runtimeDdangyoIds = new Set();
+for (const store of stores) {
+  if ((store.routes || []).some(route => route.key === 'ddangyo' || String(route.name || '').replace(/\s/g, '').includes('땡겨요'))) {
+    runtimeDdangyoIds.add(String(store.id || store.store_id));
+  }
+}
+for (const row of enrichment.stores) runtimeDdangyoIds.add(row.targetStoreId);
+assert.equal(runtimeDdangyoIds.size, 605, '땡겨요 주문경로 가게는 605곳이어야 합니다.');
+assert.deepEqual([...runtimeDdangyoIds].filter(id => !visibleMenuIds.has(id)).sort(), [
+  '08e5e26653436fef',
+  '8d9df0fbb77ce9eb',
+  '9f89e6d7784cf4a2',
+  'b016e6c2fc4217ea',
+  'fa0bccb2d190a7c0'
+]);
+
 const previewSource = read('store-menu-preview.js');
 assert.match(previewSource, /const LEGACY_MENU_STORES = Object\.freeze/);
 assert.match(previewSource, /\.\.\.\(window\.DAEDONG_DDANGYO_MENU_STORES \|\| \{\}\),\s*\.\.\.LEGACY_MENU_STORES/s);
 const html = read('index.html');
 assert.doesNotMatch(html, /store-menu-map-bridge\.js/);
 assert.ok(html.indexOf('ddangyo-menu-map.js') < html.indexOf('store-menu-preview.js'));
+assert.match(html, /ddangyo-menu-map\.js\?v=20260802-6/);
 assert.ok(!fs.existsSync('store-menu-map-bridge.js'));
 
 const service = json('store-service-info.json');
@@ -67,6 +112,16 @@ const targets = [
     hoursLine: '휴무 매주 일요일',
     paymentKeys: ['high-oil-support', 'yeosu-seomseom-pay'],
     deliveryKeys: ['free-delivery']
+  },
+  {
+    id: '884d23981fd2429a',
+    name: '네네치킨 둔덕미평점',
+    patstoNo: '',
+    shortUrl: 'https://bit.ly/tk-네네치킨둔덕미평점',
+    itemCount: 58,
+    hoursLine: '',
+    paymentKeys: ['yeosu-seomseom-pay'],
+    deliveryKeys: []
   }
 ];
 
@@ -77,12 +132,21 @@ for (const target of targets) {
   const info = service.stores[target.id];
   assert.equal(baseStore.name, target.name);
   assert.ok(baseStore.routes.some(route => route.name === '땡겨요' && route.url === target.shortUrl));
-  assert.equal(row.patstoNo, target.patstoNo);
-  assert.ok(row.sourceUrls.includes(target.shortUrl), '기존 땡겨요 단축 경로를 보존해야 합니다.');
+  if (row) {
+    assert.equal(row.patstoNo, target.patstoNo);
+    assert.ok(row.sourceUrls.includes(target.shortUrl), '기존 땡겨요 단축 경로를 보존해야 합니다.');
+  }
   assert.equal(menu.items.length, target.itemCount);
-  assert.ok(info.hours.displayLines.includes(target.hoursLine));
-  assert.deepEqual(info.payments.map(item => item.key).sort(), [...target.paymentKeys].sort());
-  assert.deepEqual(info.delivery.map(item => item.key).sort(), [...target.deliveryKeys].sort());
+  if (target.hoursLine) assert.ok(info.hours.displayLines.includes(target.hoursLine));
+  if (info) {
+    assert.deepEqual((info.payments || []).map(item => item.key).sort(), [...target.paymentKeys].sort());
+    assert.deepEqual((info.delivery || []).map(item => item.key).sort(), [...target.deliveryKeys].sort());
+  }
 }
 
-console.log('PASS: 710개 원본·기존 메뉴 자산 보존, 땡겨요 446곳 직접 메뉴 연결, 국민학교·황금아구 이용정보 병합');
+const nene = json(menuMap['884d23981fd2429a'].path);
+assert.equal(nene.source.patstoNo, '1195676');
+assert.equal(nene.storeName, '네네치킨 둔덕미평점');
+assert.equal(nene.items.length, 58);
+
+console.log('PASS: 710개 원본 + 신규 27개 = 737개 보존, 땡겨요 메뉴맵 598곳·음식보기 600곳 연결, 네네치킨 58개 확인');

@@ -1,0 +1,88 @@
+{
+  "storeId": "4d45e2363f0a18dd",
+  "storeName": "아구회관",
+  "displayName": "아구회관",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/6597d525-6c13-4015-9aab-67a4abd88bf8.jpg",
+  "categories": [
+    "전체",
+    "메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216868-10000001",
+      "name": "[콜라겐 가득] 아구찜",
+      "description": "아구찜 + 오늘의 반찬 5종 (엄마가 담근 김치 포함) + 아구회관 시그니처 부추전",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/6597d525-6c13-4015-9aab-67a4abd88bf8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1216868-10000004",
+      "name": "[속 시원한] 아구탕",
+      "description": "아구탕 + 오늘의 반찬 5종 (엄마가 담근 김치 포함) + 아구회관 시그니처 부추전",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/9245a5c9-00a3-455c-8102-d65f8eb40941.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1216868-10000006",
+      "name": "[새콤달콤] 서대회 무침",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/93e1d3d9-cb95-428a-a52f-0d6f993a256d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1216868-10000007",
+      "name": "[색소무첨가] 왕족발",
+      "description": "왕족발  + 오늘의 반찬 5종 (엄마가 담근 김치 포함) + 아구회관 시그니처 부추전 + 양념장+ 쌈채소 + 백김치(김치는 엄마가 만들어요)",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c7453864-9aa8-436f-9d76-b5d89299d297.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1216868-10000003",
+      "name": "[오동통통] 알찜",
+      "description": "알찜 + 오늘의 반찬 5종 (엄마가 담근 김치 포함) + 시그니처 부추전",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/39a36ad7-6dc0-4c52-924a-0c697fd3d5ba.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1216868-10000005",
+      "name": "[쫄깃쫄깃] 대창찜",
+      "description": "대창찜 + 오늘의 반찬 5종 + 전",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1216868-10000008",
+      "name": "[밥 한 술 떠야지] 공기밥",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/5e6f2862-6874-444c-95a1-c1a09a5e5e3f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1216868",
+    "sourceUrls": [
+      "https://bit.ly/tk-아구회관",
+      "https://fdofd.ddangyo.com/gateway1.html?ttrV1No"
+    ],
+    "rawItemCount": 11,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

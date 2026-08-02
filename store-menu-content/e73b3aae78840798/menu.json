@@ -1,0 +1,1352 @@
+{
+  "storeId": "e73b3aae78840798",
+  "storeName": "한솥도시락 여수전남대점",
+  "displayName": "한솥도시락 여수전남대점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/060f4c7a-45ac-451f-9a4e-78bbde0ad294.jpg",
+  "categories": [
+    "전체",
+    "마요",
+    "고기고기",
+    "프리미엄",
+    "스페셜",
+    "집반찬",
+    "실속반찬",
+    "찌개",
+    "신메뉴",
+    "밥",
+    "스낵",
+    "프리즈드라이 국",
+    "라면류",
+    "미니반찬",
+    "모둠",
+    "세트",
+    "치킨",
+    "매일 한정 메뉴",
+    "볶음밥",
+    "음료류",
+    "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+    "비빔밥",
+    "덮밥",
+    "요일별 한정 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1228947-30000254",
+      "name": "빅치킨마요",
+      "description": "빅커플소스+조미김",
+      "category": "마요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/f0607cf2-bdc6-4c08-a6a4-a4ff7fa282b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000254"
+    },
+    {
+      "id": "ddangyo-1228947-30000226",
+      "name": "(BEST)돈까스도련님 고기고기",
+      "description": "",
+      "category": "고기고기",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/bda0a7e4-605b-41d8-b921-be445b6149a6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000226"
+    },
+    {
+      "id": "ddangyo-1228947-30000220",
+      "name": "(BEST)진달래 도시락",
+      "description": "",
+      "category": "프리미엄",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/3df44d96-95e2-41b2-9155-8da85f14ec5a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000220"
+    },
+    {
+      "id": "ddangyo-1228947-30000217",
+      "name": "(BEST)해바라기 도시락",
+      "description": "",
+      "category": "프리미엄",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/8e3489cd-f14c-481c-b52f-b875ccd48447.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000217"
+    },
+    {
+      "id": "ddangyo-1228947-30000426",
+      "name": "스페셜 송정식 떡갈비 도시락",
+      "description": "밥+송정식떡갈비+제육볶음+메밀전병+미니오색전+반달돈까스+치킨가라아게+양식소스",
+      "category": "스페셜",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/df39397e-ac38-499e-a222-01234769437c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000426"
+    },
+    {
+      "id": "ddangyo-1228947-30000541",
+      "name": "맛김치(180g)",
+      "description": "맛김치",
+      "category": "집반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/7fa4fc4d-c672-4011-bc18-879356d910c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000541"
+    },
+    {
+      "id": "ddangyo-1228947-30000282",
+      "name": "(추천)반찬 토네이도소세지(2개)",
+      "description": "토네이도소세지 2개 + 케챱",
+      "category": "실속반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/aef9f566-8dd7-4598-8ae8-ac10fff90272.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000282"
+    },
+    {
+      "id": "ddangyo-1228947-30000273",
+      "name": "(추천)부대찌개(밥포함)",
+      "description": "부대찌개+계란 후라이",
+      "category": "찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/210fc3c5-f633-450d-bd10-b1e2769b9399.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000273"
+    },
+    {
+      "id": "ddangyo-1228947-30000556",
+      "name": "낙지제육 비빔밥",
+      "description": "밥+낙지볶음+제육+지단채+치커리+비빔밥용당근+일회용참기름",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/9317c33a-05d5-405a-b2fa-bf0313f99314.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000556"
+    },
+    {
+      "id": "ddangyo-1228947-30000371",
+      "name": "한솥밥",
+      "description": "",
+      "category": "밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/7e87fb32-ea00-4902-9eb4-c31442294bc8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000371"
+    },
+    {
+      "id": "ddangyo-1228947-30000300",
+      "name": "미니 찹쌀탕수육+탕수육 소스",
+      "description": "찹쌀탕수육+탕수육소스",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/38cde266-f434-425f-bcfc-458487d7a3a0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000300"
+    },
+    {
+      "id": "ddangyo-1228947-30000544",
+      "name": "김치 콩나물국",
+      "description": "",
+      "category": "프리즈드라이 국",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/a1db4d5a-0a57-4779-9aec-052cb30d5424.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000544"
+    },
+    {
+      "id": "ddangyo-1228947-30000361",
+      "name": "육개장사발면",
+      "description": "",
+      "category": "라면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/d62b3bd3-1de6-4477-8abb-6ee1dac37962.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000361"
+    },
+    {
+      "id": "ddangyo-1228947-30000307",
+      "name": "미니반찬 김치",
+      "description": "",
+      "category": "미니반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/5bb050f4-7374-406d-aa4a-88a9290d4e5b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000307"
+    },
+    {
+      "id": "ddangyo-1228947-30000240",
+      "name": "(BEST)돈까스도련님",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/f5a51112-9648-41d8-8f2c-369d9d8a15d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000240"
+    },
+    {
+      "id": "ddangyo-1228947-30000221",
+      "name": "치킨마요 부대찌개 정식",
+      "description": "치킨마요+부대찌개",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/04fcc9c8-2807-4847-95f9-3a9162d11c84.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000221"
+    },
+    {
+      "id": "ddangyo-1228947-30000252",
+      "name": "치킨마요",
+      "description": "커플소스+조미김",
+      "category": "마요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/ebbbd00e-6fbb-4229-ace8-946b31cd428a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000252"
+    },
+    {
+      "id": "ddangyo-1228947-30000408",
+      "name": "크림 닭강정(소)",
+      "description": "닭강정(튀긴 후 중량 85g)+닭강정소스+크림소스\n\n※ 조리 후 치킨만의 중량(g)입니다.(소스 중량 미포함)",
+      "category": "치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a04baa21-1de9-48d4-81fc-60611eb4e34c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000408"
+    },
+    {
+      "id": "ddangyo-1228947-30000568",
+      "name": "[매일 한정] 단품 부대찌개",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f56cf4ec-b3d2-43d8-9c39-1f756206dd1a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000568"
+    },
+    {
+      "id": "ddangyo-1228947-30000286",
+      "name": "(추천)반찬 치킨(5개)",
+      "description": "양식소스",
+      "category": "실속반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/6e724068-fdb6-4391-9513-e63e6104b9fc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000286"
+    },
+    {
+      "id": "ddangyo-1228947-30000268",
+      "name": "김치볶음밥",
+      "description": "계란후라이 + 조미김",
+      "category": "볶음밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/c909b9fd-e2d8-40cc-b6bb-4623829766f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000268"
+    },
+    {
+      "id": "ddangyo-1228947-30000227",
+      "name": "(추천)새치 고기고기",
+      "description": "",
+      "category": "고기고기",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/acdd9ddf-b091-4192-beda-17ab28e991ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000227"
+    },
+    {
+      "id": "ddangyo-1228947-30000372",
+      "name": "현미밥",
+      "description": "",
+      "category": "밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/ea472876-14da-43b2-a491-9ac0bfa2d27a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000372"
+    },
+    {
+      "id": "ddangyo-1228947-30000542",
+      "name": "볶음김치(180g)",
+      "description": "볶음김치",
+      "category": "집반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/225c649a-a1a1-44eb-b4a6-da65111046bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000542"
+    },
+    {
+      "id": "ddangyo-1228947-30000369",
+      "name": "김치사발면",
+      "description": "",
+      "category": "라면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/c75b857f-e8d0-4330-97b7-84774fb91a69.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000369"
+    },
+    {
+      "id": "ddangyo-1228947-30000409",
+      "name": "크림 닭강정(중)",
+      "description": "닭강정(튀긴 후 중량 260g)+닭강정소스+크림소스\n\n※ 조리 후 치킨만의 중량(g)입니다.(소스 중량 미포함)",
+      "category": "치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b6eac765-2070-44c4-a039-1eaa6a73d3a3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000409"
+    },
+    {
+      "id": "ddangyo-1228947-30000569",
+      "name": "[매일 한정] 단품 묵은지 김치찌개",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e96e4ae1-e4a4-4617-880f-b1a706feb0bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000569"
+    },
+    {
+      "id": "ddangyo-1228947-30000301",
+      "name": "(추천)뉴 감자고로케(120g)",
+      "description": "케찹",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/b6029ade-25d9-481b-b1dd-77948a7625ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000301"
+    },
+    {
+      "id": "ddangyo-1228947-30000342",
+      "name": "미니콜라 190ml",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a9f71bf8-d2f1-4d9f-ba9e-6f631414018f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000342"
+    },
+    {
+      "id": "ddangyo-1228947-30000427",
+      "name": "스페셜 숯불직화 진달래 도시락",
+      "description": "밥+반달돈까스+새우후라이+치킨가라아게+숯불직화구이+대파슬라이스+양식소스+라유소스",
+      "category": "스페셜",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/2595884f-5f2f-4bd4-95d4-27522b9601ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000427"
+    },
+    {
+      "id": "ddangyo-1228947-30000232",
+      "name": "제육 돈까스 도련님",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/061c8d93-15b7-45ea-8e1f-79e7435c75db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000232"
+    },
+    {
+      "id": "ddangyo-1228947-30000557",
+      "name": "회오리 감자",
+      "description": "회오리 감자+허니버터 시즈닝",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/86d5c534-4ee9-4d59-8961-b03032adf681.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000557"
+    },
+    {
+      "id": "ddangyo-1228947-30000211",
+      "name": "사골계란국",
+      "description": "",
+      "category": "프리즈드라이 국",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/03f685e3-af22-4f94-ad9f-24ac7fd916e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000211"
+    },
+    {
+      "id": "ddangyo-1228947-30000274",
+      "name": "(BEST)묵은지김치찌개(밥포함)",
+      "description": "",
+      "category": "찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cdcb44b7-f48d-48ea-88e4-9279fd184533.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000274"
+    },
+    {
+      "id": "ddangyo-1228947-30000310",
+      "name": "미니반찬 볶음김치",
+      "description": "",
+      "category": "미니반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/ec2eeec6-79a3-4a97-93be-77284c8cb1ea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000310"
+    },
+    {
+      "id": "ddangyo-1228947-30000302",
+      "name": "케이준후라이(90g)",
+      "description": "케찹",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/31b84151-be3c-480d-913d-ff036e311a65.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000302"
+    },
+    {
+      "id": "ddangyo-1228947-30000308",
+      "name": "미니반찬 무말랭이",
+      "description": "",
+      "category": "미니반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/cbfd646c-1e64-45e1-b312-c6e1a4a5bebe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000308"
+    },
+    {
+      "id": "ddangyo-1228947-30000319",
+      "name": "치킨마요소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e04294a2-92ce-43aa-9f9e-344d5f4906a0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000319"
+    },
+    {
+      "id": "ddangyo-1228947-30000558",
+      "name": "미니 찹쌀탕수육+칠리소스",
+      "description": "찹쌀탕수육+칠리소스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d06fee86-65f0-45d5-bd6a-aa4b703e3022.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000558"
+    },
+    {
+      "id": "ddangyo-1228947-30000384",
+      "name": "단품 부대찌개(밥 미포함)",
+      "description": "부대찌개",
+      "category": "찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/0ce3d73c-5776-4ba2-9a1a-e14280bca548.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000384"
+    },
+    {
+      "id": "ddangyo-1228947-30000228",
+      "name": "돈치 고기고기",
+      "description": "",
+      "category": "고기고기",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e09e62b9-2192-4884-8128-fb8aba1e97a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000228"
+    },
+    {
+      "id": "ddangyo-1228947-30000362",
+      "name": "신라면(소)",
+      "description": "",
+      "category": "라면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/389f6f33-3613-461f-ba17-687885bdfdde.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000362"
+    },
+    {
+      "id": "ddangyo-1228947-30000237",
+      "name": "칠리 찹쌀탕수육도련님",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/f7995685-3cb4-4b53-a37a-ae0ba308de04.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000237"
+    },
+    {
+      "id": "ddangyo-1228947-30000428",
+      "name": "스페셜 해바라기 도시락",
+      "description": "밥+소불고기+제육볶음+점보통닭다리+통새우카츠+제육볶음+소불고기+반달돈까스+치킨가라아게+양식소스+타르타르소스",
+      "category": "스페셜",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/1d890a9f-e4e7-4966-9993-d81a1ab681cf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000428"
+    },
+    {
+      "id": "ddangyo-1228947-30000570",
+      "name": "[매일 한정] 미니 찹쌀탕수육+탕수육소스",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/97385929-7136-4366-a0ea-26ff7a56da91.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000570"
+    },
+    {
+      "id": "ddangyo-1228947-30000489",
+      "name": "한솥 닭강정(소)",
+      "description": "85g\n※ 조리 후 치킨만의 중량(g)입니다.(소스 중량 미포함)",
+      "category": "치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/e48d1697-c4fc-4cdd-a566-247594a7297b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000489"
+    },
+    {
+      "id": "ddangyo-1228947-30000212",
+      "name": "청양사골계란국",
+      "description": "",
+      "category": "프리즈드라이 국",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/d7b324e5-3816-4763-a21b-b615f90be928.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000212"
+    },
+    {
+      "id": "ddangyo-1228947-30000543",
+      "name": "무말랭이(180g)",
+      "description": "무말랭이",
+      "category": "집반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cdec8f82-ffa3-4d45-a25e-d3ac3529583c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000543"
+    },
+    {
+      "id": "ddangyo-1228947-30000429",
+      "name": "스페셜 한우 함박스테이크 도시락",
+      "description": "밥+한우함박스테이크+토네이도소세지+해시포테이토스틱+그린빈+제육볶음+파슬리",
+      "category": "스페셜",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/71fa58a2-0550-43a7-a00f-f5461cd209de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000429"
+    },
+    {
+      "id": "ddangyo-1228947-30000383",
+      "name": "단품 묵은지 김치찌개(밥 미포함)",
+      "description": "",
+      "category": "찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/83b83196-8738-4249-8358-fe05abb91297.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000383"
+    },
+    {
+      "id": "ddangyo-1228947-30000224",
+      "name": "(BEST)빅치킨마요 부대찌개 정식",
+      "description": "빅치킨마요+부대찌개",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/1514c4cb-1540-4d34-b75f-baf0d5c38717.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000224"
+    },
+    {
+      "id": "ddangyo-1228947-30000571",
+      "name": "[매일 한정] 미니 찹쌀탕수육+칠리소스",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bc0595b2-0bb7-4abd-8608-df3f58ad0675.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000571"
+    },
+    {
+      "id": "ddangyo-1228947-30000245",
+      "name": "왕카레돈까스 덮밥",
+      "description": "밥+카레+반달 돈까스+돈부리소스+깐양파+계란+쪽파",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/c4c1eb48-43ca-4ee5-a67c-92a40bf615e3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000245"
+    },
+    {
+      "id": "ddangyo-1228947-30000256",
+      "name": "(BEST)메가치킨마요",
+      "description": "커플소스 2개+조미김",
+      "category": "마요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/b1aae7a1-614b-4e19-a9f4-eeb721df3fc1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000256"
+    },
+    {
+      "id": "ddangyo-1228947-30000261",
+      "name": "참치야채감초고추장",
+      "description": "감초볶음고추장소스+마요소스",
+      "category": "비빔밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/2e7148dd-14ae-4deb-89a0-5d395193db68.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000261"
+    },
+    {
+      "id": "ddangyo-1228947-30000270",
+      "name": "(BEST)스팸 김치볶음밥",
+      "description": "계란후라이 + 조미김 + 스팸 1조각",
+      "category": "볶음밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/2e935b79-8c13-4736-8293-f76a25ed9fde.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000270"
+    },
+    {
+      "id": "ddangyo-1228947-30000285",
+      "name": "(BEST)반찬 돈까스도련님",
+      "description": "양식소스",
+      "category": "실속반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/5d467f58-a4cc-4368-a304-b4799678d7de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000285"
+    },
+    {
+      "id": "ddangyo-1228947-30000213",
+      "name": "완도 미역국",
+      "description": "",
+      "category": "프리즈드라이 국",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/ae773e54-a0bc-441d-8a06-5bc5105cb930.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000213"
+    },
+    {
+      "id": "ddangyo-1228947-30000299",
+      "name": "미니찹쌀핫도그(4개입)",
+      "description": "미니찹쌀핫도그4개+케찹",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/8f4a2f28-b4b7-4d89-a2e6-35b430e05f79.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000299"
+    },
+    {
+      "id": "ddangyo-1228947-30000311",
+      "name": "김",
+      "description": "",
+      "category": "미니반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/ecd40b38-90b8-4620-841a-2242f2d4b910.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000311"
+    },
+    {
+      "id": "ddangyo-1228947-30000320",
+      "name": "빅치킨마요소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/af243bbd-0c22-4a04-ba86-8a250cfc7a16.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000320"
+    },
+    {
+      "id": "ddangyo-1228947-30000497",
+      "name": "코카콜라 355ml",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/931502d7-2627-492b-b106-f29a507ba854.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000497"
+    },
+    {
+      "id": "ddangyo-1228947-30000496",
+      "name": "더블 돈까스도련님",
+      "description": "밥+반달 돈까스+햄버그 스테이크+치킨 가라아게",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ecf50ff7-014b-42b0-a36e-96723d7bb5c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000496"
+    },
+    {
+      "id": "ddangyo-1228947-30000490",
+      "name": "한솥 닭강정(중)",
+      "description": "260g\n※ 조리 후 치킨만의 중량(g)입니다.(소스 중량 미포함)",
+      "category": "치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/d5fb0dfd-2ac6-4ab0-8351-b4382584521d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000490"
+    },
+    {
+      "id": "ddangyo-1228947-30000365",
+      "name": "진라면 매운맛(소)",
+      "description": "",
+      "category": "라면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/dac3a8ec-733f-4723-bff6-e976698bdad9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000365"
+    },
+    {
+      "id": "ddangyo-1228947-30000553",
+      "name": "왕김치돈까스 덮밥",
+      "description": "밥+김치소스+반달 돈까스+돈부리소스+깐양파+계란+쪽파",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/72499c6b-4997-4b8c-8b11-67dbeb5b6678.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000553"
+    },
+    {
+      "id": "ddangyo-1228947-30000287",
+      "name": "반찬 돈까스",
+      "description": "",
+      "category": "실속반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/e2440a48-d540-4172-8fd8-071d6c5ec79e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000287"
+    },
+    {
+      "id": "ddangyo-1228947-30000340",
+      "name": "코카콜라 500ml",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/f7a6ab98-90a1-4c94-9092-0b348d77eadf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000340"
+    },
+    {
+      "id": "ddangyo-1228947-30000262",
+      "name": "(추천)시골제육두부강된장비빔밥",
+      "description": "두부강된장소스",
+      "category": "비빔밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/fb08d3e6-ca2b-4443-b214-cf0f4099bc9c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000262"
+    },
+    {
+      "id": "ddangyo-1228947-30000214",
+      "name": "매콤 해물 된장국",
+      "description": "",
+      "category": "프리즈드라이 국",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e11cb329-593b-48bf-a55c-e7092b5fcec1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000214"
+    },
+    {
+      "id": "ddangyo-1228947-30000495",
+      "name": "더블 칠리 찹쌀탕수육도련님",
+      "description": "밥+반달 돈까스+찹쌀탕수육",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/23bffe92-1c36-471c-b648-9685b42d1c58.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000495"
+    },
+    {
+      "id": "ddangyo-1228947-30000387",
+      "name": "제육 많이 덮밥",
+      "description": "밥+제육볶음+쪽파",
+      "category": "덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/68914060-e06b-40bb-9844-1bbce8623eaa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000387"
+    },
+    {
+      "id": "ddangyo-1228947-30000259",
+      "name": "스팸마요",
+      "description": "커플소스 1개 + 조미김 1개",
+      "category": "마요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/d5357b7b-d258-44f5-b51e-18b2c2a28a7c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000259"
+    },
+    {
+      "id": "ddangyo-1228947-30000572",
+      "name": "[매일 한정] 토네이도 소세지",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d1ca8f5c-1245-4cac-a645-6cb08d5b48a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000572"
+    },
+    {
+      "id": "ddangyo-1228947-30000375",
+      "name": "제주녹차 미니꿀호떡",
+      "description": "제주녹차 미니꿀호떡 3개",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/26bfbaf5-86ad-4a45-9fce-0707befcf02f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000375"
+    },
+    {
+      "id": "ddangyo-1228947-30000315",
+      "name": "양념치킨소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/541c91a6-69d5-4b53-b989-8417e9954172.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000315"
+    },
+    {
+      "id": "ddangyo-1228947-30000316",
+      "name": "케이준소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/f404e59d-5e53-4d36-8134-66d3c7a665c0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000316"
+    },
+    {
+      "id": "ddangyo-1228947-30000554",
+      "name": "왕카레치킨 덮밥",
+      "description": "밥+카레+치킨까스+돈부리소스+깐양파+계란+쪽파",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5baf6b7e-7634-4581-ad52-2fc8e942e77b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000554"
+    },
+    {
+      "id": "ddangyo-1228947-30000215",
+      "name": "미소 된장국",
+      "description": "",
+      "category": "프리즈드라이 국",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/d3034c66-0024-4590-8f87-479fcdf90edb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000215"
+    },
+    {
+      "id": "ddangyo-1228947-30000230",
+      "name": "송정식 떡갈비 도시락",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/61704a09-be4f-4598-af62-44f5be21c3e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000230"
+    },
+    {
+      "id": "ddangyo-1228947-30000573",
+      "name": "[매일 한정] 청양 토네이도 소세지",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/77bc47a3-04de-4843-8b17-18e9599184a1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000573"
+    },
+    {
+      "id": "ddangyo-1228947-30000283",
+      "name": "반찬 제육볶음(130g)",
+      "description": "",
+      "category": "실속반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/526a3529-b55f-40cf-a292-dadac30beff0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000283"
+    },
+    {
+      "id": "ddangyo-1228947-30000263",
+      "name": "(BEST)소불고기감초고추장비빔밥",
+      "description": "감초볶음고추장소스+참기름",
+      "category": "비빔밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6506e317-ce61-4ca9-82b5-28f5f5332315.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000263"
+    },
+    {
+      "id": "ddangyo-1228947-30000388",
+      "name": "빅 제육 많이 덮밥",
+      "description": "밥+제육볶음+쪽파",
+      "category": "덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/75899f2c-3d1c-4f2e-8040-7cd84a527665.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000388"
+    },
+    {
+      "id": "ddangyo-1228947-30000298",
+      "name": "해시 포테이토 스틱",
+      "description": "해시포테이토스틱5개+토마토케찹1개",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/23220b8c-422e-4027-adba-f71f201aaeb4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000298"
+    },
+    {
+      "id": "ddangyo-1228947-30000345",
+      "name": "미니사이다 190ml",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/278f167e-f58d-43f2-9902-49f54a3479d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000345"
+    },
+    {
+      "id": "ddangyo-1228947-30000216",
+      "name": "황태 해장국",
+      "description": "",
+      "category": "프리즈드라이 국",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/35277f31-b991-4aaf-a15f-2544c9cf267c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000216"
+    },
+    {
+      "id": "ddangyo-1228947-30000574",
+      "name": "[매일 한정] 스팸",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/002dd7d9-b9f7-47d2-b548-75f1a77f4a97.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000574"
+    },
+    {
+      "id": "ddangyo-1228947-30000253",
+      "name": "참치마요",
+      "description": "커플소스+조미김",
+      "category": "마요",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/1a97f756-3ee5-4d77-aa59-133167444f13.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000253"
+    },
+    {
+      "id": "ddangyo-1228947-30000284",
+      "name": "반찬 고기고기",
+      "description": "",
+      "category": "실속반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/4ffe48be-b366-4f58-8a3e-933611845e90.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000284"
+    },
+    {
+      "id": "ddangyo-1228947-30000218",
+      "name": "매화 고등어",
+      "description": "밥+제육볶음+소불고기+새우후라이 2개+고등어구이 2개+레몬",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/14c72264-de07-4267-accb-b08ce909cf62.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000218"
+    },
+    {
+      "id": "ddangyo-1228947-30000242",
+      "name": "(추천)오리지널 치즈 닭갈비 덮밥",
+      "description": "밥+닭갈비 덮밥소스+3종 믹스치즈+치커리+김가루",
+      "category": "덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e49157d7-ea98-4073-8592-1b759f489568.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000242"
+    },
+    {
+      "id": "ddangyo-1228947-30000321",
+      "name": "양식소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/51e28b5a-6de7-4fbc-b171-8337a9f08252.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000321"
+    },
+    {
+      "id": "ddangyo-1228947-30000278",
+      "name": "(BEST)후라이드 순살(중)+케이준소스,양념치킨소스",
+      "description": "250g",
+      "category": "치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/7fdb84e3-c1c7-4285-91e8-4a9c879d82bd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000278"
+    },
+    {
+      "id": "ddangyo-1228947-30000322",
+      "name": "칠리소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/4c858a25-42c8-4da8-abdc-c10d6d686af6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000322"
+    },
+    {
+      "id": "ddangyo-1228947-30000243",
+      "name": "(추천)핫 치즈 닭갈비 덮밥",
+      "description": "밥+닭갈비 덮밥소스+3종 믹스치즈+치커리+김가루",
+      "category": "덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/662bc247-840e-435a-bd7d-d7c6ffb34b51.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000243"
+    },
+    {
+      "id": "ddangyo-1228947-30000279",
+      "name": "후라이드 순살(소)+양념치킨소스",
+      "description": "125g",
+      "category": "치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/776d98b0-05b8-40bc-b0dd-e052faa2564f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000279"
+    },
+    {
+      "id": "ddangyo-1228947-30000292",
+      "name": "단품 카레",
+      "description": "",
+      "category": "실속반찬",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/88559663-70a1-4c0d-8a08-a1b38162d457.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000292"
+    },
+    {
+      "id": "ddangyo-1228947-30000296",
+      "name": "해시 포테이토 스틱+허니버터시즈닝",
+      "description": "해시포테이토스틱5개+허니버터시즈닝1개",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/98bc6fea-a0dc-4fbd-b66d-3dc2c801d8ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000296"
+    },
+    {
+      "id": "ddangyo-1228947-30000373",
+      "name": "한우 함박스테이크 & 토네이도소세지",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/5bc2a507-83e9-4235-a548-0ebb928fa61f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000373"
+    },
+    {
+      "id": "ddangyo-1228947-30000551",
+      "name": "매화 연어",
+      "description": "밥+제육볶음+소불고기+새우후라이 2개+연어구이 1개+레몬",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/16d51070-1a75-4304-8263-c00c06e27e25.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000551"
+    },
+    {
+      "id": "ddangyo-1228947-30000566",
+      "name": "[일요일 한정] 더블 칠리찹쌀탕수육도련님",
+      "description": "",
+      "category": "요일별 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/efb600d9-5a32-4e0b-86ad-c48fd1b1efe9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000566"
+    },
+    {
+      "id": "ddangyo-1228947-30000575",
+      "name": "[매일 한정] 치킨 2조각",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/89a95be9-d410-44dc-9ecc-e7f67f586bd3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000575"
+    },
+    {
+      "id": "ddangyo-1228947-30000280",
+      "name": "후라이드 순살(소)+케이준소스",
+      "description": "125g",
+      "category": "치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/27c5975e-2a15-4219-bdf9-c256e9186734.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000280"
+    },
+    {
+      "id": "ddangyo-1228947-30000297",
+      "name": "해시 포테이토 스틱+치즈버터시즈닝",
+      "description": "해시포테이토스틱5개+치즈버터시즈닝1개",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/9c95f7a0-8b2d-458d-a462-563b7b43b999.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000297"
+    },
+    {
+      "id": "ddangyo-1228947-30000323",
+      "name": "마요소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/833a63e5-ff92-4f79-96b2-fdc984ef9435.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000323"
+    },
+    {
+      "id": "ddangyo-1228947-30000567",
+      "name": "[일요일 한정] 돈까스 카레",
+      "description": "",
+      "category": "요일별 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/564d450a-6091-43f0-9bce-b48d1c63bc35.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000567"
+    },
+    {
+      "id": "ddangyo-1228947-30000576",
+      "name": "[매일 한정] 코카콜라 355ml",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/57f7af98-a4c5-44bb-87c9-e17c7c483c86.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000576"
+    },
+    {
+      "id": "ddangyo-1228947-30000374",
+      "name": "한우 함박스테이크 & 청양 토네이도소세지",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/bf4b25d6-c538-45df-be44-e9a42612ff06.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000374"
+    },
+    {
+      "id": "ddangyo-1228947-30000313",
+      "name": "허니버터시즈닝",
+      "description": "",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/972b73aa-e140-4c4e-9855-a927da9a6cf5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000313"
+    },
+    {
+      "id": "ddangyo-1228947-30000577",
+      "name": "[매일 한정] 펩시제로(라임) 355ml",
+      "description": "",
+      "category": "매일 한정 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9f1d4ab4-449e-4f03-b5cc-36b63f1ffaf3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000577"
+    },
+    {
+      "id": "ddangyo-1228947-30000235",
+      "name": "(BEST)동백",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/97082e1e-d38e-44a4-92c8-2f46f89faf06.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000235"
+    },
+    {
+      "id": "ddangyo-1228947-30000272",
+      "name": "(BEST)돈까스 카레",
+      "description": "",
+      "category": "덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/e7d6608b-b3b6-41a0-abea-6d11ebe06f8c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000272"
+    },
+    {
+      "id": "ddangyo-1228947-30000343",
+      "name": "칠성사이다 500ml",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/8c8da20b-2820-4100-81bf-5b1a3891932f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000343"
+    },
+    {
+      "id": "ddangyo-1228947-30000324",
+      "name": "타르타르소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/4c009334-4ad6-459d-9331-691ff2129c4d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000324"
+    },
+    {
+      "id": "ddangyo-1228947-30000538",
+      "name": "오향 청양 소보로덮밥",
+      "description": "밥+돈불고기 토핑+청양고추+쪽파+오향덮밥소스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4909b2af-cb24-4477-844e-06824d907a6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000538"
+    },
+    {
+      "id": "ddangyo-1228947-30000314",
+      "name": "치즈버터시즈닝",
+      "description": "",
+      "category": "스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/0c299903-e237-4eac-8a01-62381a07cb82.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000314"
+    },
+    {
+      "id": "ddangyo-1228947-30000236",
+      "name": "(추천)돈치스팸",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/f5b6e054-fb95-4ea2-88ee-178867cd10be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000236"
+    },
+    {
+      "id": "ddangyo-1228947-30000247",
+      "name": "돈까스 덮밥",
+      "description": "",
+      "category": "덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/b04251b2-1098-411f-b819-8be007176823.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000247"
+    },
+    {
+      "id": "ddangyo-1228947-30000318",
+      "name": "볶음고추장",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/cf2908ac-0dec-4519-b979-a52ad9485c96.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000318"
+    },
+    {
+      "id": "ddangyo-1228947-30000555",
+      "name": "소이 청양 소보로덮밥",
+      "description": "밥+돈불고기 토핑+청양고추+쪽파+덮밥용 소이소스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/e889eaeb-b532-4019-bb27-f6c416f5d78d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000555"
+    },
+    {
+      "id": "ddangyo-1228947-30000338",
+      "name": "웰치스포도 355ml",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/573d7134-2696-473b-90c5-afda7970ca08.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000338"
+    },
+    {
+      "id": "ddangyo-1228947-30000545",
+      "name": "열무 두부강된장 비빔밥",
+      "description": "밥+치커리+당근채+열무김치+무생채+계란후라이+두부강된장소스+김",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/62863349-a0a0-4d27-9de4-dd2bce72fca9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000545"
+    },
+    {
+      "id": "ddangyo-1228947-30000325",
+      "name": "감초볶음고추장소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/6187e916-a364-4468-a240-4aa7b5f5497c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000325"
+    },
+    {
+      "id": "ddangyo-1228947-30000244",
+      "name": "(BEST)숯불직화구이 덮밥",
+      "description": "덮밥용 소이소스+라유소스",
+      "category": "덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/6a95a5d1-7319-4679-b5b7-0a0557e20c7e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000244"
+    },
+    {
+      "id": "ddangyo-1228947-30000238",
+      "name": "치킨제육",
+      "description": "",
+      "category": "모둠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/af14a826-e4b5-4380-942b-d22bee119526.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000238"
+    },
+    {
+      "id": "ddangyo-1228947-30000546",
+      "name": "열무 감초고추장 비빔밥",
+      "description": "밥+치커리+당근채+열무김치+무생채+계란후라이+감초고추장소스+참기름+김",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/683add3c-f3df-4f6e-bef4-118df82bbe8d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000546"
+    },
+    {
+      "id": "ddangyo-1228947-30000331",
+      "name": "참기름",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/7da0067d-b744-4cf9-9ceb-d68e4f125c01.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000331"
+    },
+    {
+      "id": "ddangyo-1228947-30000327",
+      "name": "토마토케찹",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/d89515c8-cf58-4324-ac00-442d1bbd94dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000327"
+    },
+    {
+      "id": "ddangyo-1228947-30000547",
+      "name": "미니반찬 무생채",
+      "description": "무생채",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5956ba28-63ec-4015-a774-cde8930a29ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000547"
+    },
+    {
+      "id": "ddangyo-1228947-30000328",
+      "name": "돈부리소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/c4433873-bbb3-4b5a-b11f-0cb03f0f3f5a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000328"
+    },
+    {
+      "id": "ddangyo-1228947-30000548",
+      "name": "미니반찬 열무김치",
+      "description": "열무김치",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ae90f3dd-e719-4e46-9599-d58d550d8e58.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000548"
+    },
+    {
+      "id": "ddangyo-1228947-30000349",
+      "name": "피크닉(사과맛)",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/08f8d03d-5cc7-4968-83b3-c65d8115349d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000349"
+    },
+    {
+      "id": "ddangyo-1228947-30000540",
+      "name": "꿀 치즈스틱",
+      "description": "라이스 찰 치즈스틱+꿀 소스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/9f013101-2624-42e7-8247-f2dccaa8eb7c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000540"
+    },
+    {
+      "id": "ddangyo-1228947-30000329",
+      "name": "덮밥용 소이소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/c3342d09-be22-456f-9412-c7cfa94349fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000329"
+    },
+    {
+      "id": "ddangyo-1228947-30000330",
+      "name": "라유소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e0c0e45b-3596-4b60-9126-72d74de45532.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000330"
+    },
+    {
+      "id": "ddangyo-1228947-30000537",
+      "name": "소불고기 냉이강된장 비빔밥",
+      "description": "밥+소불고기+두부강정+냉이강된장소스+치커리+일회용김+비빔밥용 당근+지단채",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c95c3235-061b-44fe-a1d1-f509af47240b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000537"
+    },
+    {
+      "id": "ddangyo-1228947-30000332",
+      "name": "미니탕수육소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e6d9b302-3d99-4b08-bfde-ec0db5a1f0c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000332"
+    },
+    {
+      "id": "ddangyo-1228947-30000326",
+      "name": "두부강된장소스",
+      "description": "",
+      "category": "소스류 (소스류는 최대 10까지 주문 가능합니다)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/452b18d1-a181-469b-b58a-46bfbfb94acd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000326"
+    },
+    {
+      "id": "ddangyo-1228947-30000536",
+      "name": "카츠카츠 고기고기",
+      "description": "밥+소불고기+제육볶음+치킨까스+반달돈까스+콘샐러드+맛김치+칠리소스+양식소스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5b043690-34f5-4810-b798-eb13b191102a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000536"
+    },
+    {
+      "id": "ddangyo-1228947-30000403",
+      "name": "야쿠르트1971 제로 190ml",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d661f5f7-beb0-483a-b0d0-9e745e0c2388.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000403"
+    },
+    {
+      "id": "ddangyo-1228947-30000350",
+      "name": "델몬트드링크(오렌지)",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/26088640-c621-4546-86e7-596181681661.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000350"
+    },
+    {
+      "id": "ddangyo-1228947-30000354",
+      "name": "미니생수",
+      "description": "",
+      "category": "음료류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/b8d0fc13-014d-4e8f-95d1-e982c8004b66.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000354"
+    },
+    {
+      "id": "ddangyo-1228947-30000431",
+      "name": "돼지불백 덮밥",
+      "description": "밥+지단채+간장돼지불고기+대파슬라이스+커플소스+생와사비",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/b0247230-7cef-4118-8505-736435a7b404.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000431"
+    },
+    {
+      "id": "ddangyo-1228947-30000434",
+      "name": "김치볶음밥&돼지불백",
+      "description": "김치볶음밥+계란후라이+간장돼지불고기+대파슬라이스슬라이스",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/2e5d8c8d-dbd9-4494-aaba-9843efaf6a24.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000434"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1228947",
+    "sourceUrls": [
+      "https://bit.ly/41jlTzt",
+      "https://fdofd.ddangyo.com/gateway1.html?G9j6sp4"
+    ],
+    "rawItemCount": 150,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

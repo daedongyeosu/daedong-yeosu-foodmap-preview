@@ -1,0 +1,198 @@
+{
+  "storeId": "996f54c7c66ec979",
+  "storeName": "등뼈감자탕 미평점",
+  "displayName": "등뼈감자탕 미평점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6959dde9-5df8-4834-b148-2c3b9ea56599.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개 (탕류는 반조리형태 입니다.)",
+    "추가메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1170019-10000001",
+      "name": "감자탕",
+      "description": "등뼈와 우거지로 구성 (공기밥 별도)",
+      "category": "메뉴소개 (탕류는 반조리형태 입니다.)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/89c7bfbb-aa67-4849-ae7c-4095f98cde8d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1170019-10000003",
+      "name": "묵은지감자탕",
+      "description": "등뼈와 국내산 묵은지로 구성(공기밥 별도)",
+      "category": "메뉴소개 (탕류는 반조리형태 입니다.)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/be82a6f4-b1b8-4061-89bb-6c56d8b1acc0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1170019-10000002",
+      "name": "간장뼈찜",
+      "description": "등뼈와 떡, 넙적당면, 신선한 각종 야채로 구성(공기밥 별도)",
+      "category": "메뉴소개 (탕류는 반조리형태 입니다.)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0d72a747-0d3d-44fb-a225-12957a4cc700.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1170019-10000007",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1170019-90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1170019-10000008",
+      "name": "뼈 추가(감자탕)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1170019-90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1170019-10000009",
+      "name": "묵은지 추가(탕류에가능해요.)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/fc0ca15f-06cb-4802-a793-983377d90e48.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1170019-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1170019-10000004",
+      "name": "묵은지감자탕",
+      "description": "묵은지 특유의 숙성된 깊고 그윽한 맛을 느낄 수 있습니다.",
+      "category": "메뉴소개 (탕류는 반조리형태 입니다.)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/377b67a0-a5f4-46e5-9293-659fe79fb089.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1170019-10000010",
+      "name": "라면사리(탕류에가능해요.)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/27080b3b-5ab4-4669-8707-4395c52c2879.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1170019-90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1170019-10000005",
+      "name": "묵은지감자탕",
+      "description": "묵은지 특유의 숙성된 깊고 그윽한 맛을 느낄 수 있습니다.",
+      "category": "메뉴소개 (탕류는 반조리형태 입니다.)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/f1801f4c-cf37-42ed-a7b3-d11a3c8b58b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1170019-10000011",
+      "name": "당면사리(탕류,우리뼈찜에가능해요.)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/467af325-f9f1-40c2-9cca-44835b1a37f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1170019-90000005",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1170019-10000006",
+      "name": "묵은지감자탕",
+      "description": "묵은지 특유의 숙성된 깊고 그윽한 맛을 느낄 수 있습니다.",
+      "category": "메뉴소개 (탕류는 반조리형태 입니다.)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/377b67a0-a5f4-46e5-9293-659fe79fb089.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1170019-10000012",
+      "name": "수제비 추가(탕류에가능해요.)",
+      "description": "뼈찜같은 경우 넣어서 드실수 없습니다.",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/e569fdf3-ad5c-4126-b436-517cf6805a82.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1170019-10000013",
+      "name": "콜라",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1170019-10000014",
+      "name": "스프라이트",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1170019",
+    "sourceUrls": [
+      "https://bit.ly/4ttNpXW",
+      "https://fdofd.ddangyo.com/gateway1.html?rtgUaJg"
+    ],
+    "rawItemCount": 22,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

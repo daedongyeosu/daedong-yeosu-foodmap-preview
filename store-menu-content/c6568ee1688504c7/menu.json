@@ -1,0 +1,225 @@
+{
+  "storeId": "c6568ee1688504c7",
+  "storeName": "착한쭝식 여서점(먹깨비,땡겨요로 주문시 군만두 서비스!!)",
+  "displayName": "착한쭝식 여서점(먹깨비,땡겨요로 주문시 군만두 서비스!!)",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/b0b5c521-3162-4b30-ba9c-8eb7054468b1.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "일품요리",
+    "음료메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1313471-10000001",
+      "name": "옛날짜장",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/83f3b585-a129-4143-a1f6-b1790dd7c9c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1313471-10000002",
+      "name": "짬뽕",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/adc9abd3-84c2-48ec-9f2d-726070ad8eae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1313471-10000003",
+      "name": "불짜장",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/416f30b2-29aa-40e0-96ff-ccb2771d290b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1313471-10000012",
+      "name": "군만두",
+      "description": "",
+      "category": "일품요리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9781b02e-19bb-4a25-a165-0db2870857ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1313471-10000019",
+      "name": "사이다",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1313471-10000020",
+      "name": "환타",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1313471-10000013",
+      "name": "미니탕수육",
+      "description": "",
+      "category": "일품요리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/0a359baa-c73e-4ecb-a12e-9a31b229a839.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1313471-10000014",
+      "name": "국내산 등심 찹쌀 탕수육",
+      "description": "",
+      "category": "일품요리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9fad5424-7a1c-4696-b0ce-dad031ae1e23.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1313471-10000021",
+      "name": "콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1313471-10000004",
+      "name": "불짬뽕",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aaa05f0d-e390-440a-b17e-1a97b0dc0626.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1313471-10000015",
+      "name": "미니 깐풍육",
+      "description": "",
+      "category": "일품요리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1313471-10000005",
+      "name": "우삼겹 짬뽕",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5e4c6b53-d8fa-4382-9e02-3baeefbd2985.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1313471-10000016",
+      "name": "미니 깐풍새우",
+      "description": "",
+      "category": "일품요리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1313471-10000006",
+      "name": "부대짬뽕",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1313471-10000017",
+      "name": "미니 크림새우",
+      "description": "",
+      "category": "일품요리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1313471-10000007",
+      "name": "볶음밥",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/ea635fe5-b527-40b3-8edb-8359769dd383.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1313471-10000018",
+      "name": "미니 깐쇼새우",
+      "description": "",
+      "category": "일품요리",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1313471-10000008",
+      "name": "돈까스+짜장",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1313471-10000009",
+      "name": "돈까스+짬뽕",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1313471-10000010",
+      "name": "간짜장",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d2616f62-3112-4919-97c4-624f0249da16.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1313471-10000011",
+      "name": "공기밥",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1313471-10000022",
+      "name": "국내산 검은콩 콩국수",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1313471",
+    "sourceUrls": [
+      "https://bit.ly/41zFxXX",
+      "https://fdofd.ddangyo.com/gateway1.html?3zhebDt"
+    ],
+    "rawItemCount": 25,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}
