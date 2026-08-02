@@ -1,6 +1,12 @@
 name: Fix Dynamic Menu Map Buttons
 
 on:
+  push:
+    branches:
+      - fix/dynamic-menu-map-buttons
+    paths:
+      - .dynamic-menu-map-fix-trigger
+      - .github/workflows/fix-dynamic-menu-map-buttons.yml
   pull_request:
     branches:
       - main
