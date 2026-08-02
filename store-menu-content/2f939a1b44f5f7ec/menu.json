@@ -1,0 +1,202 @@
+{
+  "storeId": "2f939a1b44f5f7ec",
+  "storeName": "골목낙곱새 1977 여수봉강점",
+  "displayName": "골목낙곱새 1977 여수봉강점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/04fad5d7-b822-4e60-b2f0-8c9e5a518670.jpg",
+  "categories": [
+    "전체",
+    "[시그니처] 골목 낙곱새 (중/대)",
+    "1인 낙곱새 메뉴",
+    "사이드 메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1319642-10000005",
+      "sourceMenuId": "10000005",
+      "name": "'탁월한 선택' 골목 낙곱새(낙지+소대창+새우)",
+      "description": "낙지 + 소대창 + 새우 + 수제비 + 밀떡 + 당면 사리 + 대파 + 양파 + 쌈무 구성입니다.",
+      "category": "[시그니처] 골목 낙곱새 (중/대)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/bdbe29d6-1ef1-4d38-9ebe-ea5bb1acc6db.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000006",
+      "sourceMenuId": "10000006",
+      "name": "'담백한' 골목 낙곱닭(낙지+소대창+닭다리살)",
+      "description": "낙지 + 소대창 + 닭다리살 + 수제비 + 밀떡 + 당면 사리 + 대파 + 양파 + 쌈무 구성입니다.",
+      "category": "[시그니처] 골목 낙곱새 (중/대)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9a6bf704-bb45-4b79-8129-594f0f2b390e.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000007",
+      "sourceMenuId": "10000007",
+      "name": "'육향 가득' 골목 낙우새(낙지+우삼겹+새우)",
+      "description": "낙지 + 우삼겹 + 새우 + 수제비 + 밀떡 + 당면 사리 + 대파 + 양파 + 쌈무 구성입니다.",
+      "category": "[시그니처] 골목 낙곱새 (중/대)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/7ecd742e-fd15-4ee9-a414-3f86a83a11f6.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000008",
+      "sourceMenuId": "10000008",
+      "name": "'바다향 가득' 골목 낙새(낙지+새우)",
+      "description": "낙지 + 새우 + 수제비 + 밀떡 + 당면 사리 + 대파 + 양파 + 쌈무 구성입니다.",
+      "category": "[시그니처] 골목 낙곱새 (중/대)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/68377581-0fc0-4a82-9498-7527accbb2d8.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000001",
+      "sourceMenuId": "10000001",
+      "name": "1인 골목 낙곱새(낙지+소대창+새우) 공기밥 포함",
+      "description": "낙지 + 소대창 + 새우 + 수제비 + 밀떡 + 당면 사리 + 대파 + 양파 + 공기밥 + 쌈무 구성입니다.",
+      "category": "1인 낙곱새 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/d4c3cabd-9c0b-4a2e-93be-5f948f18d956.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000002",
+      "sourceMenuId": "10000002",
+      "name": "1인 골목 낙곱닭(낙지+소대창+닭다리살) 공기밥 포함",
+      "description": "낙지 + 소대창 + 닭다리살 + 밀떡 + 당면 사리 + 대파 + 양파 + 공기밥 + 쌈무 구성입니다.",
+      "category": "1인 낙곱새 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/41f033cd-1506-4080-aa37-aaf38e8c6c75.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000009",
+      "sourceMenuId": "10000009",
+      "name": "셀프볶음밥(밥+김가루+알밥단무지+참기름+마요네즈)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ead1fc4b-603a-445d-bc65-230dcc3745f9.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000022",
+      "sourceMenuId": "10000022",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1319642-10000010",
+      "sourceMenuId": "10000010",
+      "name": "파김치 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c01eac6c-0254-4510-8252-1bd389f71680.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000023",
+      "sourceMenuId": "10000023",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1319642-10000003",
+      "sourceMenuId": "10000003",
+      "name": "1인 골목 낙우새(낙지+우삼겹+새우) 공기밥 포함",
+      "description": "낙지 + 우삼겹 + 새우 + 수제비 + 밀떡 + 당면 사리 + 대파 + 양파 + 공기밥 + 쌈무 구성입니다.",
+      "category": "1인 낙곱새 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b57f1f60-db90-43d9-9bf2-3bbabf1fffc4.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000011",
+      "sourceMenuId": "10000011",
+      "name": "모짜렐라 치즈 (따로드립니다) 50g",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/4bf80c6a-1afc-49ba-ab49-a963de79c0ff.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000004",
+      "sourceMenuId": "10000004",
+      "name": "1인 골목 낙새(낙지+새우) 공기밥 포함",
+      "description": "낙지 + 새우 + 수제비 + 밀떡 + 당면 사리 + 대파 + 양파 + 공기밥 + 쌈무 구성입니다.",
+      "category": "1인 낙곱새 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b5da6d45-5545-4c4f-8cab-e33fdcfe6dbe.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000012",
+      "sourceMenuId": "10000012",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/3fb636d5-580d-48d3-88ca-2234a391efc1.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000013",
+      "sourceMenuId": "10000013",
+      "name": "계란말이",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6d3dedb5-31ed-4fd9-a92c-daff3b2c575a.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000014",
+      "sourceMenuId": "10000014",
+      "name": "수제돈가스&수제소스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/4214b52d-0b73-4fbe-b9bb-2aaed4f88851.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000015",
+      "sourceMenuId": "10000015",
+      "name": "사골물만두",
+      "description": "사골을 우린 육수에 삶아 구수한 풍미가 일품인 아하~ 물만두.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/807bd0ff-c132-4926-8087-306b5205cf49.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000016",
+      "sourceMenuId": "10000016",
+      "name": "갈비만두(5개)",
+      "description": "직접 구운 갈비를 넣어 빚었습니다. 달콤한 갈비의 육즙이 가득.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/225f841b-ed44-4b59-81db-fd4b944b356f.JPG"
+    },
+    {
+      "id": "ddangyo-1319642-10000017",
+      "sourceMenuId": "10000017",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/ff74b4a9-5b9a-4b8a-a4a4-38f7f2c9f60d.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000018",
+      "sourceMenuId": "10000018",
+      "name": "리챔3개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b29d4308-a1ca-4b7e-823c-07f588598bc6.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000019",
+      "sourceMenuId": "10000019",
+      "name": "떡갈비",
+      "description": "떡갈비 반죽에 쌀떡을 넣어 구워내 고기의 육즙과 쌀떡의 쫄깃함을 느낄 수 있습니다.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f25d3870-8701-470a-bfb5-f7973ac51adb.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000020",
+      "sourceMenuId": "10000020",
+      "name": "김가루밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/3066cd72-d4cf-4144-80ef-8be1782bfb1e.jpg"
+    },
+    {
+      "id": "ddangyo-1319642-10000021",
+      "sourceMenuId": "10000021",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/beb878ad-e96a-48db-9563-d7c5eb8199df.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

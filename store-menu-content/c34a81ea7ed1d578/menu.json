@@ -1,0 +1,310 @@
+{
+  "storeId": "c34a81ea7ed1d578",
+  "storeName": "김치찜 참 잘하는집 여수점",
+  "displayName": "김치찜 참 잘하는집 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ea357374-f4f9-4ac3-b58e-1e62b916ee93.jpg",
+  "categories": [
+    "전체",
+    "1인 단품",
+    "1인 세트메뉴 (2인분같은 1인분 등장)",
+    "2~3인 세트메뉴 (100% HACCP 인증)",
+    "2~3인 단품만(100% HACCP 인증)",
+    "반반 메뉴",
+    "[얼큰한 된장찌개]",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1288999-10000005",
+      "sourceMenuId": "10000005",
+      "name": "[참맛있는] 1인 삼겹 김치찜 단품",
+      "description": "(단품) 오직 삼겹[160g] 김치찜 단품만 제공 / 밥X 반찬X 수저O",
+      "category": "1인 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/f3970280-ade1-450a-85fa-393e25a8bc10.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000006",
+      "sourceMenuId": "10000006",
+      "name": "[참잘하는] 1인 대패삼겹 김치찜 단품",
+      "description": "(단품) 오직 대패[160g] 김치찜 단품만 제공 / 밥X 반찬X 수저O",
+      "category": "1인 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/f7918bdb-a0b2-4432-934b-99b4ea345d95.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000007",
+      "sourceMenuId": "10000007",
+      "name": "[참잘하는] 1인 우삼겹 김치찜 단품",
+      "description": "(단품) 오직 우삼겹[160g] 김치찜 단품만 제공 / 밥X 반찬X 수저O",
+      "category": "1인 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/6c5b8ec4-1031-4c4f-8480-d99f63847800.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[참잘하는] 1인 스팸(리챔)김치찜 단품",
+      "description": "(단품) 오직 스팸[160g] 김치찜 단품만 제공 / 밥X 반찬X 수저O",
+      "category": "1인 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/2a5835bb-0e9a-4f75-98c9-79dfdcf0413d.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000009",
+      "sourceMenuId": "10000009",
+      "name": "[찌개는역시] 1인 김치찌개 단품",
+      "description": "(단품) 오직 삼겹김치찌개 단품만 제공 / 밥X 반찬X",
+      "category": "1인 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/9025ac8f-0617-413d-8457-acfa283ce518.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000001",
+      "sourceMenuId": "10000001",
+      "name": "1인 김치찜 세트",
+      "description": "1인 김치찜+공기밥+메추리알+두부4p+김",
+      "category": "1인 세트메뉴 (2인분같은 1인분 등장)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/82df080d-9c01-4e7a-ad67-b622902ba406.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000003",
+      "sourceMenuId": "10000003",
+      "name": "[푸짐한 고기양] 2~3인 김치찜 세트",
+      "description": "김치찜+메추리알+[공기밥3개(밥밥밥set)] 김치찜+메추리알+[공기밥2개+김2개(밥밥김김set)]",
+      "category": "2~3인 세트메뉴 (100% HACCP 인증)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/200526f1-a2cf-412e-80f3-3dec94ab3574.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000010",
+      "sourceMenuId": "10000010",
+      "name": "삼겹 김치찜 단품",
+      "description": "(단품) 오직 삼겹[400g] 김치찜 단품만 제공 / 밥X 반찬X 수저O",
+      "category": "2~3인 단품만(100% HACCP 인증)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/3aa2a812-9e16-4d46-a232-ca3f6d75f93e.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000015",
+      "sourceMenuId": "10000015",
+      "name": "[참맛있는] 1인 반반 김치찜 세트",
+      "description": "1인 반반김치찜+공기밥+메추리알+두부4p+김",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/277a6c34-6488-4db7-a543-beb4a4509c54.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000017",
+      "sourceMenuId": "10000017",
+      "name": "얼큰 우삼겹 된장찌개(밥X)",
+      "description": "",
+      "category": "[얼큰한 된장찌개]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000036",
+      "sourceMenuId": "10000036",
+      "name": "메추리알",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/1397e2aa-f90d-4b9b-a19b-98825def59ad.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000051",
+      "sourceMenuId": "10000051",
+      "name": "펩시 콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000002",
+      "sourceMenuId": "10000002",
+      "name": "[NEW 레시피] 1인 김치찌개 세트",
+      "description": "고기김치찌개+공기밥+메추리알+두부4p +김",
+      "category": "1인 세트메뉴 (2인분같은 1인분 등장)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/edaf2978-3b5d-4712-a6d7-2e4e72968b36.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[NEW 레시피] 2~3인 김치찌개 세트",
+      "description": "찌개 + 두부 + 밥 + 김 + 메추리알",
+      "category": "2~3인 세트메뉴 (100% HACCP 인증)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/54115a31-8f50-4db3-97e4-b2b7fa720a01.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000011",
+      "sourceMenuId": "10000011",
+      "name": "[참잘하는] 대패삼겹 김치찜 단품",
+      "description": "(단품) 오직 대패[400g] 김치찜 단품만 제공 / 밥X 반찬X 수저O",
+      "category": "2~3인 단품만(100% HACCP 인증)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/84aaaab3-0a84-48c4-966c-e3cba777b695.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000016",
+      "sourceMenuId": "10000016",
+      "name": "[슈퍼가성비] 2~3인 반반 김치찜 세트",
+      "description": "반반김치찜+메추리알+[공기밥3개(밥밥밥set)] 반반김치찜+메추리알+[공기밥2개+김2개(밥밥김김set)]",
+      "category": "반반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/1dc7035b-7e08-49d0-9497-cc7a04b370a7.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000018",
+      "sourceMenuId": "10000018",
+      "name": "얼큰 우삼겹 된장찌개 + 흑미밥",
+      "description": "",
+      "category": "[얼큰한 된장찌개]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000037",
+      "sourceMenuId": "10000037",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/10be2547-acda-4ad9-b890-bb6eebde8fa5.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000052",
+      "sourceMenuId": "10000052",
+      "name": "사이다 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000012",
+      "sourceMenuId": "10000012",
+      "name": "[참잘하는] 우삼겹 김치찜 단품",
+      "description": "(단품) 오직 우삼겹[400g] 김치찜 단품만 제공 / 밥X 반찬X 수저O",
+      "category": "2~3인 단품만(100% HACCP 인증)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/a95a72a6-dbc4-4b8c-9061-a2c3846a894f.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000038",
+      "sourceMenuId": "10000038",
+      "name": "김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/290e7eb1-44a4-4e97-8ca1-26d3533d5607.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000053",
+      "sourceMenuId": "10000053",
+      "name": "펩시 콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000013",
+      "sourceMenuId": "10000013",
+      "name": "[참잘하는] 스팸(리챔) 김치찜 단품",
+      "description": "(단품) 오직 스팸[400g] 김치찜 단품만 제공 / 밥X 반찬X 수저O",
+      "category": "2~3인 단품만(100% HACCP 인증)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/e4050272-9573-4ebe-abe5-18004cf6c596.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000039",
+      "sourceMenuId": "10000039",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/a0fe5899-3cd0-4edd-8303-6668fa6fd9ca.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000054",
+      "sourceMenuId": "10000054",
+      "name": "사이다 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000014",
+      "sourceMenuId": "10000014",
+      "name": "[NEW레시피] 2~3인 김치찌개 단품",
+      "description": "오직 삼겹찌개 단품만 제공 / 밥X 반찬 X",
+      "category": "2~3인 단품만(100% HACCP 인증)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/ac9fa8e0-1f11-4898-9515-12e2facbbd97.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000040",
+      "sourceMenuId": "10000040",
+      "name": "쌈무 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000041",
+      "sourceMenuId": "10000041",
+      "name": "모짜렐라 콘치즈",
+      "description": "각종 양념에 버무린 콘샐러드와 품질좋은 모짜렐라 치즈와의 만남",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000042",
+      "sourceMenuId": "10000042",
+      "name": "미니 계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/ae36a7c9-fac3-4460-894e-a708896d822f.jpg"
+    },
+    {
+      "id": "ddangyo-1288999-10000044",
+      "sourceMenuId": "10000044",
+      "name": "소시지구이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000045",
+      "sourceMenuId": "10000045",
+      "name": "두부김치",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000046",
+      "sourceMenuId": "10000046",
+      "name": "파김치",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000047",
+      "sourceMenuId": "10000047",
+      "name": "납작만두(토핑)",
+      "description": "5장",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000048",
+      "sourceMenuId": "10000048",
+      "name": "엄지 물만두 튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000049",
+      "sourceMenuId": "10000049",
+      "name": "고기왕만두튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1288999-10000050",
+      "sourceMenuId": "10000050",
+      "name": "숯불갈비만두튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

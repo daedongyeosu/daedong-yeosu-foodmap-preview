@@ -1,0 +1,202 @@
+{
+  "storeId": "a3297f2e48bf9793",
+  "storeName": "마형제 족발보쌈 여수학동점",
+  "displayName": "마형제 족발보쌈 여수학동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6d46bbae-ca5a-4529-8ea0-a020b80bbfff.jpg",
+  "categories": [
+    "전체",
+    "[전메뉴 새콤달콤 막국수 리뷰 이벤트]",
+    "[마형제 부드러운 보쌈 메뉴]",
+    "[사이드 메뉴]",
+    "[음료메뉴]"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1320845-10000001",
+      "sourceMenuId": "10000001",
+      "name": "[ 뼈없이 먹기편한 ] 마형제 순살 족발",
+      "description": "최고 가성비구성 : 족발 + 선택 1개(쌈장 or 새우젓)",
+      "category": "[전메뉴 새콤달콤 막국수 리뷰 이벤트]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/3840d893-d22b-41ab-b7b7-e0c85233bc34.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000002",
+      "sourceMenuId": "10000002",
+      "name": "[ 인기TOP1 ] 직화 순살 불족발",
+      "description": "최고 가성비구성 : 불족발 + 선택 1개(쌈장 or 새우젓) (불족맵기는 신라면에서 불닭볶음면 사이입니다)",
+      "category": "[전메뉴 새콤달콤 막국수 리뷰 이벤트]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/06d46e69-9efc-4a8f-b648-2fd897569c97.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[ 완전 강추 ] 순살족보세트(족발+보쌈)",
+      "description": "최고 가성비구성 : 반반 족보(족발/보쌈) + 선택 1개(쌈장 or 새우젓) (불족맵기는 신라면에서 불닭볶음면 사이입니다)",
+      "category": "[전메뉴 새콤달콤 막국수 리뷰 이벤트]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ea4a0ce0-ddc6-45b4-b607-34365f427ef8.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000006",
+      "sourceMenuId": "10000006",
+      "name": "[ 부드러운 ] 마형제 보쌈 (중/대)",
+      "description": "최고 가성비구성 : 보쌈 + 선택 1개(쌈장 or 새우젓)",
+      "category": "[마형제 부드러운 보쌈 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000008",
+      "sourceMenuId": "10000008",
+      "name": "새콤달콤 막국수",
+      "description": "특제소스로 항상 인기 많은 족발의 찰떡궁합",
+      "category": "[사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/44b5e322-b410-4512-bb43-abcc77003fdc.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000020",
+      "sourceMenuId": "10000020",
+      "name": "펩시",
+      "description": "",
+      "category": "[음료메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000007",
+      "sourceMenuId": "10000007",
+      "name": "[ 달콤알싸한 ] 마형제 마늘 보쌈 (중/대)",
+      "description": "최고 가성비구성 : 마늘 보쌈 + 선택 1개(쌈장 or 새우젓)",
+      "category": "[마형제 부드러운 보쌈 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000009",
+      "sourceMenuId": "10000009",
+      "name": "후리가케 주먹밥",
+      "description": "고소하고 감칠맛 넘치는 환상의 주먹밥",
+      "category": "[사이드 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000021",
+      "sourceMenuId": "10000021",
+      "name": "제로 펩시",
+      "description": "",
+      "category": "[음료메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000003",
+      "sourceMenuId": "10000003",
+      "name": "[ 족발+불족 ] 순살 반반 족발",
+      "description": "최고 가성비구성 : 반반족발 + 선택 1개(쌈장 or 새우젓) (불족맵기는 신라면에서 불닭볶음면 사이입니다)",
+      "category": "[전메뉴 새콤달콤 막국수 리뷰 이벤트]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000010",
+      "sourceMenuId": "10000010",
+      "name": "무말랭이",
+      "description": "아삭하고 어디에나 잘 어울리는 반찬",
+      "category": "[사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/e377bae1-e50d-4b84-8937-bdf40d91c7ac.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000022",
+      "sourceMenuId": "10000022",
+      "name": "사이다",
+      "description": "",
+      "category": "[음료메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000011",
+      "sourceMenuId": "10000011",
+      "name": "파김치",
+      "description": "김치보다 많이 찾는 인기 최고 파김치",
+      "category": "[사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/a959721d-7c57-45f1-97b0-029266d2253b.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000023",
+      "sourceMenuId": "10000023",
+      "name": "제로 사이다",
+      "description": "",
+      "category": "[음료메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000005",
+      "sourceMenuId": "10000005",
+      "name": "[ 달콤알싸한 ] 마늘 순살 족발",
+      "description": "최고 가성비구성 : 마늘 족발 + 선택 1개(쌈장 or 새우젓)",
+      "category": "[전메뉴 새콤달콤 막국수 리뷰 이벤트]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/6e812bd9-721d-482d-9b06-0368e9504b96.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000012",
+      "sourceMenuId": "10000012",
+      "name": "쌈채소 (상추5장+깻잎5장)",
+      "description": "신선한 상추, 깻잎으로 고기를 더욱 맛있게 해주는 메뉴",
+      "category": "[사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002265.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000013",
+      "sourceMenuId": "10000013",
+      "name": "청양고추",
+      "description": "맛있게 매운 한국인의 고기 필수 메뉴",
+      "category": "[사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/36359dcd-4413-473d-9af5-491e6b374f13.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000014",
+      "sourceMenuId": "10000014",
+      "name": "편마늘",
+      "description": "알싸한 국내산 마늘로 먹기 좋게 썰어 놓은 메뉴",
+      "category": "[사이드 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000015",
+      "sourceMenuId": "10000015",
+      "name": "불족소스",
+      "description": "신라면보다 살짝 매운 누구나 먹기 좋은 맵기",
+      "category": "[사이드 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000016",
+      "sourceMenuId": "10000016",
+      "name": "마늘소스",
+      "description": "달콤하고 알싸한 마늘소스를 맛보면 계속 생각나는 인기 많은 소스",
+      "category": "[사이드 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000017",
+      "sourceMenuId": "10000017",
+      "name": "새우젓",
+      "description": "",
+      "category": "[사이드 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320845-10000018",
+      "sourceMenuId": "10000018",
+      "name": "쌈장",
+      "description": "",
+      "category": "[사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/63b65542-5883-490b-889b-8ca02410ccde.jpg"
+    },
+    {
+      "id": "ddangyo-1320845-10000019",
+      "sourceMenuId": "10000019",
+      "name": "공기밥",
+      "description": "",
+      "category": "[사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

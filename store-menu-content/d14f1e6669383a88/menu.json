@@ -1,0 +1,1303 @@
+{
+  "storeId": "d14f1e6669383a88",
+  "storeName": "메가MGC커피 여수교동점",
+  "displayName": "메가MGC커피 여수교동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9698789c-fcd1-43ac-9010-b019f751eb39.jpg",
+  "categories": [
+    "전체",
+    "커피",
+    "티",
+    "신메뉴",
+    "스무디&프라페",
+    "콜드브루",
+    "라떼",
+    "에이드&주스",
+    "디카페인",
+    "디저트"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1209099-30000464",
+      "sourceMenuId": "30000464",
+      "name": "(ICE)아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e30c174e-746d-4aa7-bd5f-f6f7f6d82095.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000462",
+      "sourceMenuId": "30000462",
+      "name": "(ICE)메가리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b286134a-3c0c-43d4-ac3d-c21095e18173.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000475",
+      "sourceMenuId": "30000475",
+      "name": "(ICE)카페라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d2033f53-643d-4834-841b-125d988ea934.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000576",
+      "sourceMenuId": "30000576",
+      "name": "복숭아아이스티",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1592c401-5f76-46ef-b782-69da942152b7.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000481",
+      "sourceMenuId": "30000481",
+      "name": "(ICE)바닐라라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/25f19de9-1c26-4b6c-86b1-5b149962e134.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000441",
+      "sourceMenuId": "30000441",
+      "name": "딸기라떼",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a5cb28b6-0641-403c-b9f7-105c1cb76e9e.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000459",
+      "sourceMenuId": "30000459",
+      "name": "(ICE)할메가커피",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/de614e71-fdf4-4f15-bfb6-56f80667ed95.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000646",
+      "sourceMenuId": "30000646",
+      "name": "복숭아 퐁당 요거트 스무디",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/426b6198-8338-43a5-8b9c-8d35e640e56e.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000528",
+      "sourceMenuId": "30000528",
+      "name": "코코넛커피 스무디",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/09168590-30ed-4c02-8ac3-91ff130bc6c4.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000518",
+      "sourceMenuId": "30000518",
+      "name": "(HOT)콜드브루오리지널",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d8deba0e-07a9-4c3f-9280-d7fc53711d07.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000559",
+      "sourceMenuId": "30000559",
+      "name": "(ICE)오레오초코라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/3b5cc7f6-cf9d-4d9a-9f48-92f9d02eb35a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000547",
+      "sourceMenuId": "30000547",
+      "name": "딸기바나나주스",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/97fd0792-d76b-450c-ab50-ea869dd7ced8.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000490",
+      "sourceMenuId": "30000490",
+      "name": "(ICE)디카페인메가리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e2eaac3a-6f76-45b8-b9a2-8c137d1a8ea1.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000647",
+      "sourceMenuId": "30000647",
+      "name": "멋쟁이 토마토 스무디",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ede2f66d-1daa-4b48-8988-52ba391c4a25.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000460",
+      "sourceMenuId": "30000460",
+      "name": "(ICE)왕할메가커피",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c060a606-cb77-409c-a2ed-095f4eedc4d9.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000529",
+      "sourceMenuId": "30000529",
+      "name": "초코허니퐁크러쉬",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bae96470-946c-4430-bc4f-f22282fe3c2a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000577",
+      "sourceMenuId": "30000577",
+      "name": "(HOT)사과유자차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/fd85afcd-f9cc-4b8a-9dfa-cb50677f1607.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000560",
+      "sourceMenuId": "30000560",
+      "name": "핫초코",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/7dee89cb-0620-45c9-9d48-05de2c79d9c9.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000491",
+      "sourceMenuId": "30000491",
+      "name": "(HOT)디카페인아메리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/267ee306-42b3-4f64-b0f9-903c686ca5a8.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000519",
+      "sourceMenuId": "30000519",
+      "name": "(ICE)콜드브루오리지널",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/97479c33-bcda-4fa1-b5b3-caeedde124bd.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000548",
+      "sourceMenuId": "30000548",
+      "name": "딸기주스",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d6dabe85-1e95-4f10-be5c-25b25cc4aba2.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000461",
+      "sourceMenuId": "30000461",
+      "name": "(ICE)할메가미숫커피",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/f5faf8fc-20ba-4053-b411-6b103e4b386e.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000648",
+      "sourceMenuId": "30000648",
+      "name": "포도녹차 젤리 크러쉬",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c4ddf1fd-139f-4f6e-9806-28d5a27d3009.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000561",
+      "sourceMenuId": "30000561",
+      "name": "아이스초코",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/11f5b865-6b59-41dd-ad5f-6bddd6813e64.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000578",
+      "sourceMenuId": "30000578",
+      "name": "(ICE)사과유자차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/0fff2dbb-8ca3-41b3-a5fa-abac497adc2a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000549",
+      "sourceMenuId": "30000549",
+      "name": "블루베리플럼주스",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/665793e7-5d73-436d-9654-59f7d7192f6b.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000520",
+      "sourceMenuId": "30000520",
+      "name": "(HOT)콜드브루라떼",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/ebc64995-e7a3-49ae-85ed-31b117f926e2.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000492",
+      "sourceMenuId": "30000492",
+      "name": "(ICE)디카페인아메리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/ea9b3d11-c093-48a8-81ed-049830c634b7.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000521",
+      "sourceMenuId": "30000521",
+      "name": "(ICE)콜드브루라떼",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/effbc413-d2a9-464d-8d80-e7c3f7262be3.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000550",
+      "sourceMenuId": "30000550",
+      "name": "골드키위주스",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/44cf231b-b5a4-4672-98e0-29cbd14f46d2.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000649",
+      "sourceMenuId": "30000649",
+      "name": "초당옥수수 프라페",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/91464483-bf6e-4541-b44f-0220c478e4d8.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000579",
+      "sourceMenuId": "30000579",
+      "name": "(HOT)허니자몽블랙티",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/047989d5-17c4-45ac-8fea-8669b59bdf92.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000493",
+      "sourceMenuId": "30000493",
+      "name": "(HOT)디카페인 헛개리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/64e2dc65-a6f8-405b-9104-e0e7932639ea.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000562",
+      "sourceMenuId": "30000562",
+      "name": "(HOT)토피넛라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e097ea58-28f8-4472-9b7a-d8b85a2492e3.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000531",
+      "sourceMenuId": "30000531",
+      "name": "플레인퐁크러쉬",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c32aeb9c-89c5-40cf-81d7-28b242057d64.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000463",
+      "sourceMenuId": "30000463",
+      "name": "(HOT)아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2c26e8a2-240e-4c42-b5a7-fca3c11f543f.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000563",
+      "sourceMenuId": "30000563",
+      "name": "(ICE)토피넛라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8923007a-2125-40d3-a818-d54aa93e3b4a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000580",
+      "sourceMenuId": "30000580",
+      "name": "(ICE)허니자몽블랙티",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9b859f62-b78e-4370-99ce-fa37c7146174.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000532",
+      "sourceMenuId": "30000532",
+      "name": "딸기퐁크러쉬",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9167a153-beaf-434d-9458-4fc085cf498a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000551",
+      "sourceMenuId": "30000551",
+      "name": "체리콜라",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1766e662-5b03-4c6d-ac94-7055c5128b4c.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000651",
+      "sourceMenuId": "30000651",
+      "name": "와앙 핫 치즈스틱 & 딥",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5a3c76e7-2223-41ef-88dc-89be989a3d28.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000522",
+      "sourceMenuId": "30000522",
+      "name": "콜드브루상품용",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/de0a98f8-b6ed-4671-a29f-1687cc34b5dc.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000604",
+      "sourceMenuId": "30000604",
+      "name": "초코스모어쿠키",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/6f909337-9061-47db-ac18-c2909e34a8e3.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000494",
+      "sourceMenuId": "30000494",
+      "name": "(ICE)디카페인 헛개리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b2c54371-f690-4571-b96b-096604f80268.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000552",
+      "sourceMenuId": "30000552",
+      "name": "제로 부스트 에이드",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b2c72380-06ff-4c40-b752-66be5b77b04d.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000564",
+      "sourceMenuId": "30000564",
+      "name": "(HOT)로얄밀크티라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bbee72a5-fd7a-4ff9-b351-1ab9e03656b3.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000581",
+      "sourceMenuId": "30000581",
+      "name": "(HOT)상큼 리치티",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b8d88cdd-41bd-4d13-b1a8-9b66185d67cd.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000523",
+      "sourceMenuId": "30000523",
+      "name": "(HOT)콜드브루디카페인",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/cc25d6ee-f7cb-4257-a66e-8001b65d7367.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000495",
+      "sourceMenuId": "30000495",
+      "name": "(ICE)디카페인 왕메가헛개리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/585b3ac7-89d9-413a-8129-5ea49d5da932.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000533",
+      "sourceMenuId": "30000533",
+      "name": "바나나퐁크러쉬",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8308a05d-cf82-45e6-9ea9-7da31004af29.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000582",
+      "sourceMenuId": "30000582",
+      "name": "(ICE)상큼 리치티",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/12c6a4b2-22af-4002-b565-92a261bee734.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000553",
+      "sourceMenuId": "30000553",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/517fd767-230e-4379-97da-221b367174ba.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000496",
+      "sourceMenuId": "30000496",
+      "name": "(ICE)디카페인 왕메가카페라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/f000a121-1c50-4928-b6da-76d5116481b1.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000465",
+      "sourceMenuId": "30000465",
+      "name": "(HOT) 헛개리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/60100779-ac7f-4e95-a77e-0a4ffbd7d1fe.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000565",
+      "sourceMenuId": "30000565",
+      "name": "(ICE)로얄밀크티라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/ca08054d-c35f-4624-a174-838ab0137a08.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000524",
+      "sourceMenuId": "30000524",
+      "name": "(ICE)콜드브루디카페인",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/fd7cd6f5-e78c-460d-8deb-a3cf449159ca.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000534",
+      "sourceMenuId": "30000534",
+      "name": "쿠키프라페",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2ff69ca5-2d13-4944-b277-bc5d7aa76026.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000497",
+      "sourceMenuId": "30000497",
+      "name": "(ICE)디카페인 라이트바닐라아몬드라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/03b4a9b9-a940-465e-9856-3006bcc265c1.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000525",
+      "sourceMenuId": "30000525",
+      "name": "(HOT)콜드브루디카페인라떼",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/30ea3021-bc28-4058-982b-ae45ee46aa7f.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000566",
+      "sourceMenuId": "30000566",
+      "name": "(HOT)녹차라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/290d98ce-b17b-431e-8da4-17b499626d22.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000554",
+      "sourceMenuId": "30000554",
+      "name": "블루레몬에이드",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/375b660e-29c5-4c45-a2ba-bf6650aab42e.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000466",
+      "sourceMenuId": "30000466",
+      "name": "(ICE) 헛개리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9b552a5b-a4b9-49bc-a4f3-61e821493f58.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000583",
+      "sourceMenuId": "30000583",
+      "name": "(HOT)자몽차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/59d3f14c-5cc4-4393-876f-d545a3f7a337.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000584",
+      "sourceMenuId": "30000584",
+      "name": "(ICE)자몽차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/0170a4d6-9bfd-443f-8a2e-eef6cac0edd7.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000536",
+      "sourceMenuId": "30000536",
+      "name": "민트프라페",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/50687de8-7a76-44c9-92b6-a152c712f994.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000526",
+      "sourceMenuId": "30000526",
+      "name": "(ICE)콜드브루디카페인라떼",
+      "description": "",
+      "category": "콜드브루",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/77b4e687-882c-4f2d-9f30-8dd8ecae8883.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000467",
+      "sourceMenuId": "30000467",
+      "name": "(ICE)왕메가 헛개리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b40480fb-e667-45ee-be79-06260aaa3032.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000567",
+      "sourceMenuId": "30000567",
+      "name": "(ICE)녹차라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/fac72882-e31b-4013-9c6b-9678d714e92b.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000498",
+      "sourceMenuId": "30000498",
+      "name": "(HOT)디카페인꿀아메리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/3a5a9268-482a-48ef-93cc-1ecc262afc56.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000608",
+      "sourceMenuId": "30000608",
+      "name": "감자빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a2bbc501-8be0-41bf-b4ce-57782917f0fa.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000555",
+      "sourceMenuId": "30000555",
+      "name": "자몽에이드",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/6440e16b-88b9-451c-ad44-0c48b3cc8968.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000556",
+      "sourceMenuId": "30000556",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/94c8fdb5-b0e2-40c5-80bd-e00904ce940b.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000568",
+      "sourceMenuId": "30000568",
+      "name": "(HOT)곡물라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/71b03d0d-1c08-4abe-9b9b-4b3ac1e5ba3a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000585",
+      "sourceMenuId": "30000585",
+      "name": "(HOT)유자차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/71fd5371-7c12-4865-8de1-3fd18503ee82.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000499",
+      "sourceMenuId": "30000499",
+      "name": "(ICE)디카페인꿀아메리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/822a47fa-354f-481f-a4c2-b741d86b0cb5.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000630",
+      "sourceMenuId": "30000630",
+      "name": "꿀수박주스",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/bae59a06-6d76-47ec-be54-d6b48f79ed5e.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000537",
+      "sourceMenuId": "30000537",
+      "name": "리얼초코프라페",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/76a27d9d-59b0-4d4e-8faf-c613a61750ac.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000468",
+      "sourceMenuId": "30000468",
+      "name": "(HOT)헤이즐넛아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2177ae30-bab9-42e6-a1e3-907e17e3bbbd.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000538",
+      "sourceMenuId": "30000538",
+      "name": "딸기쿠키프라페",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/016fc0f5-6a11-4946-8239-cfd227f3ecc5.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000557",
+      "sourceMenuId": "30000557",
+      "name": "메가에이드",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/acb5d8e3-34cb-4d6f-b020-579e2fb17956.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000469",
+      "sourceMenuId": "30000469",
+      "name": "(ICE)헤이즐넛아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2d9f154c-234e-454a-94ec-e9d1e2401263.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000569",
+      "sourceMenuId": "30000569",
+      "name": "(ICE)곡물라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/36577ff0-7b3d-44bc-8bd1-281fdb9c35f1.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000500",
+      "sourceMenuId": "30000500",
+      "name": "(HOT)디카페인헤이즐넛아메리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/086fee94-935d-4048-89da-25937a6a1781.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000586",
+      "sourceMenuId": "30000586",
+      "name": "(ICE)유자차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/fbb9eb6c-fc70-4197-a126-61248daf893c.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000558",
+      "sourceMenuId": "30000558",
+      "name": "라임모히또",
+      "description": "",
+      "category": "에이드&주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2070e93a-a114-4a27-bc01-1e7d29876f68.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000470",
+      "sourceMenuId": "30000470",
+      "name": "(HOT)바닐라아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1dec7238-422d-4743-b96a-c03651350f39.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000501",
+      "sourceMenuId": "30000501",
+      "name": "(ICE)디카페인헤이즐넛아메리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/911e7c18-963f-48df-99eb-f6791294f184.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000539",
+      "sourceMenuId": "30000539",
+      "name": "녹차프라페",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/64556058-89fa-498e-ba6b-5d11d259233c.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000587",
+      "sourceMenuId": "30000587",
+      "name": "(HOT)레몬차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/de914682-d57a-488a-a3a2-959a7571797a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000588",
+      "sourceMenuId": "30000588",
+      "name": "(ICE)레몬차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b7ce1b15-9a81-49c7-ac5d-96345ea791ce.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000471",
+      "sourceMenuId": "30000471",
+      "name": "(ICE)바닐라아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/41ab3bc8-3de5-4dae-be29-97194c2b260f.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000502",
+      "sourceMenuId": "30000502",
+      "name": "(HOT)디카페인바닐라아메리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d986cc26-cef4-4388-bb0f-7953cf9973e7.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000540",
+      "sourceMenuId": "30000540",
+      "name": "커피프라페",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1d2aa2e0-0e9f-4392-ad51-4d3dfccea25f.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000633",
+      "sourceMenuId": "30000633",
+      "name": "자몽 톡톡 스무디",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/9b7a3cda-a6a7-4239-a0b3-a9e78242bcc4.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000472",
+      "sourceMenuId": "30000472",
+      "name": "(HOT)꿀아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/05df3689-f1fe-461c-b261-851a7cf2609e.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000589",
+      "sourceMenuId": "30000589",
+      "name": "(HOT)녹차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a66baea4-1586-4235-afed-504241d38e73.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000541",
+      "sourceMenuId": "30000541",
+      "name": "귤톡톡젤리스무디",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b219fd27-9ac8-42e5-9b6e-771d4d694985.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000572",
+      "sourceMenuId": "30000572",
+      "name": "(ICE)흑당버블라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/00daef24-1f9e-4bb2-972f-879a87a05228.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000503",
+      "sourceMenuId": "30000503",
+      "name": "(ICE)디카페인바닐라아메리카노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a9ae8e43-cf7a-4e87-a1bc-31a04d9fea5f.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000504",
+      "sourceMenuId": "30000504",
+      "name": "(HOT)디카페인카페라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2936b206-ee42-4744-8d67-a5005748a5bf.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000635",
+      "sourceMenuId": "30000635",
+      "name": "제로 레몬말차 아이스티",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/431d2eba-1442-4068-812a-d9342e1196b9.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000614",
+      "sourceMenuId": "30000614",
+      "name": "치즈케이크",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8a2fba15-dddc-49c9-8e33-38b5b186fa9a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000473",
+      "sourceMenuId": "30000473",
+      "name": "(ICE)꿀아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c93644b0-69a0-498a-b9da-e9a66c4682a5.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000542",
+      "sourceMenuId": "30000542",
+      "name": "골드망고스무디",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/08ed0dc6-0e12-4e2b-a05a-5e0cdc2b8d3c.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000590",
+      "sourceMenuId": "30000590",
+      "name": "(ICE)녹차",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/554d1fb8-00c6-4e52-8ee5-e6536db7bdd9.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000573",
+      "sourceMenuId": "30000573",
+      "name": "(ICE)흑당버블밀크티라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c6c89b9f-5fe4-4e63-83e2-a7b9a37af1e0.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000574",
+      "sourceMenuId": "30000574",
+      "name": "(ICE)흑당라떼(펄X)",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/6362e820-8822-4108-92d5-97593a71cfca.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000543",
+      "sourceMenuId": "30000543",
+      "name": "블루베리요거트스무디",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/0b1fa4c5-e097-4e62-82d9-87c01ce7ae75.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000636",
+      "sourceMenuId": "30000636",
+      "name": "팥빙 젤라또 파르페",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b6c94f31-6105-4186-bc4b-2ac3d6c53ac0.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000615",
+      "sourceMenuId": "30000615",
+      "name": "초코무스케이크",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/f9782124-9a42-449e-b01c-abd625d6dbad.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000505",
+      "sourceMenuId": "30000505",
+      "name": "(ICE)디카페인카페라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/54a2b632-3ef6-409a-99a8-793df0d4d685.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000474",
+      "sourceMenuId": "30000474",
+      "name": "(HOT)카페라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2a249fd6-a775-47ae-8db9-841abc8f89b9.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000591",
+      "sourceMenuId": "30000591",
+      "name": "(HOT)캐모마일",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/50d8dc1f-70ad-416e-a697-8b9580bd5da0.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000544",
+      "sourceMenuId": "30000544",
+      "name": "플레인요거트스무디",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/eb48eb1e-7ec8-476d-8962-c3a3d1ec1cb3.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000506",
+      "sourceMenuId": "30000506",
+      "name": "(HOT)디카페인카푸치노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1c5448d1-ede9-4ac8-8835-6504e9e87b9f.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000575",
+      "sourceMenuId": "30000575",
+      "name": "(ICE)흑당밀크티라떼(펄X)",
+      "description": "",
+      "category": "라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/065a062f-775f-4d26-9e05-38cea8947ee7.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000592",
+      "sourceMenuId": "30000592",
+      "name": "(ICE)캐모마일",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bbc1af0b-c8d4-4d19-881c-4ce9b7f9f63b.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000616",
+      "sourceMenuId": "30000616",
+      "name": "티라미수케이크",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e946eacf-3b83-40e9-92bc-a3e5b6fb816f.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000637",
+      "sourceMenuId": "30000637",
+      "name": "말차 젤라또 팥빙 파르페",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/52907f7d-8fca-4d9f-86e0-ae9c4cfbdeaa.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000476",
+      "sourceMenuId": "30000476",
+      "name": "(HOT)카푸치노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/3236eec9-86e6-4b2e-ae9b-d3e04a15b927.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000545",
+      "sourceMenuId": "30000545",
+      "name": "망고요거트스무디",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/ae9c3215-63d1-4aa1-a768-f1eb43917b47.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000507",
+      "sourceMenuId": "30000507",
+      "name": "(ICE)디카페인카푸치노",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5f96904a-e7fd-49fb-af34-20ab029bdc99.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000617",
+      "sourceMenuId": "30000617",
+      "name": "유니콘프라페마카롱",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a0fee239-0b77-405a-8c57-5fec9b0f9749.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000593",
+      "sourceMenuId": "30000593",
+      "name": "(HOT)페퍼민트",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/4887ae73-76d0-497d-a53b-28f6b4b64225.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000594",
+      "sourceMenuId": "30000594",
+      "name": "(ICE)페퍼민트",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/97651707-6796-4296-9400-ac8a128f3e3d.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000477",
+      "sourceMenuId": "30000477",
+      "name": "(ICE)카푸치노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d40c487c-7c0b-4366-aafa-ceede30e15d0.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000508",
+      "sourceMenuId": "30000508",
+      "name": "(HOT)디카페인바닐라라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/6cca492f-49fd-44c1-a7af-73ec8daa08f7.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000546",
+      "sourceMenuId": "30000546",
+      "name": "딸기요거트스무디",
+      "description": "",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/7583b098-6e10-4cdb-b449-6cb2fbfda8aa.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000618",
+      "sourceMenuId": "30000618",
+      "name": "메가초코마카롱",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/58fda19e-c697-4ce0-ab27-92cae4eef9df.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000619",
+      "sourceMenuId": "30000619",
+      "name": "딸기요거트마카롱",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a0337496-fe6e-44cb-900c-6a90a4de189c.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000595",
+      "sourceMenuId": "30000595",
+      "name": "(HOT)얼그레이",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/dfa80a3e-67f7-4cc2-9a5a-a33d6cd365e0.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000478",
+      "sourceMenuId": "30000478",
+      "name": "(HOT)헤이즐넛라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/17d03384-0a0d-4d1c-a443-c8669387ad92.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000509",
+      "sourceMenuId": "30000509",
+      "name": "(ICE)디카페인바닐라라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/0491a2d1-a263-4bb4-9e1f-620be903b125.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000479",
+      "sourceMenuId": "30000479",
+      "name": "(ICE)헤이즐넛라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/911c066e-09a1-400c-b702-dca47c1dbb3e.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000626",
+      "sourceMenuId": "30000626",
+      "name": "저당 꿀배 XO야쿠르트",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/759471b7-f2da-4cd2-bcd7-da45a7d39750.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000510",
+      "sourceMenuId": "30000510",
+      "name": "(HOT)디카페인헤이즐넛라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/48242a14-8c83-4d51-803d-cc8dbd8ff916.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000596",
+      "sourceMenuId": "30000596",
+      "name": "(ICE)얼그레이",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/28625f2c-305c-48e4-ad10-4685e239750d.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000480",
+      "sourceMenuId": "30000480",
+      "name": "(HOT)바닐라라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/638a8c86-166a-4af2-b898-5bb12127bad0.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000511",
+      "sourceMenuId": "30000511",
+      "name": "(ICE)디카페인헤이즐넛라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c5b8edec-069c-4ba2-9ecf-a149c68725be.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000446",
+      "sourceMenuId": "30000446",
+      "name": "밀크쉐이크",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/139b051a-1e1a-411d-a135-e5540bce48b4.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000512",
+      "sourceMenuId": "30000512",
+      "name": "(HOT)디카페인카라멜마끼아또",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bdaf0e5f-ed13-4eea-a2a3-9c815edd2a5b.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000482",
+      "sourceMenuId": "30000482",
+      "name": "(HOT)카라멜마끼아또",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/cf67c399-ab34-4f15-bacc-e50fbf13bde1.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000513",
+      "sourceMenuId": "30000513",
+      "name": "(ICE)디카페인카라멜마끼아또",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/5737c121-fd44-4de1-91f3-d1d85422b43e.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000514",
+      "sourceMenuId": "30000514",
+      "name": "(HOT)디카페인카페모카",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8c99cd6f-bbd0-4551-8289-60af865cde06.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000483",
+      "sourceMenuId": "30000483",
+      "name": "(ICE)카라멜마끼아또",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/f62051aa-11d5-4e03-b31b-3a00609a10ba.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000484",
+      "sourceMenuId": "30000484",
+      "name": "(HOT)카페모카",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bbf6da1d-e824-483f-a36d-f1a11cdb0266.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000515",
+      "sourceMenuId": "30000515",
+      "name": "(ICE)디카페인카페모카",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/eb7e2201-368d-4f3e-b7ca-eb4baf16a411.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000451",
+      "sourceMenuId": "30000451",
+      "name": "초코젤라또 말차라떼",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e6dc08cb-afbb-4d2c-9397-d60fc549d3ec.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000516",
+      "sourceMenuId": "30000516",
+      "name": "(ICE) 디카페인 연유라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bd7c5dbb-9b09-4951-936e-310ccfa83e86.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000485",
+      "sourceMenuId": "30000485",
+      "name": "(ICE)카페모카",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bf875ef6-a106-4624-9d62-8dda3b1eaee5.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000486",
+      "sourceMenuId": "30000486",
+      "name": "(ICE)큐브라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/6447746d-21dc-429a-a33d-0543387d951d.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000517",
+      "sourceMenuId": "30000517",
+      "name": "(HOT)디카페인연유라떼",
+      "description": "",
+      "category": "디카페인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b9817c7b-218d-4c73-b0ad-ba319db8efb3.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000487",
+      "sourceMenuId": "30000487",
+      "name": "(ICE)라이트 바닐라 아몬드라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/3ced9390-bcbc-457f-b9a3-4546b577a0fe.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000453",
+      "sourceMenuId": "30000453",
+      "name": "왕메가초코",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/23be7272-c942-4abe-8fd4-4ba70aa4acb2.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000454",
+      "sourceMenuId": "30000454",
+      "name": "왕메가아이스티",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b0190e4b-844d-4284-953f-54fa84132de8.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000488",
+      "sourceMenuId": "30000488",
+      "name": "(ICE)연유라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/4b8734df-7097-4c16-a1b7-9d1b4ea98711.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000489",
+      "sourceMenuId": "30000489",
+      "name": "(HOT)연유라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8477b084-c933-45f4-8244-f436827bae1a.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000455",
+      "sourceMenuId": "30000455",
+      "name": "제로 복숭아 아이스티",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/123418ab-68bf-43e5-9ca1-942bc75dbb50.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000456",
+      "sourceMenuId": "30000456",
+      "name": "왕메가카페라떼",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/17b1e223-3ce8-4e7f-9977-62a2fd01056d.jpg"
+    },
+    {
+      "id": "ddangyo-1209099-30000457",
+      "sourceMenuId": "30000457",
+      "name": "왕메가사과유자차",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/91912d5c-bf50-4140-b6c1-e64798bf8b08.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

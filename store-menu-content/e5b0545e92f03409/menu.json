@@ -1,0 +1,142 @@
+{
+  "storeId": "e5b0545e92f03409",
+  "storeName": "이조 삼계탕",
+  "displayName": "이조 삼계탕",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/fd64edc5-a4a2-4002-8c9e-e375b383982b.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "주류메뉴",
+    "음료",
+    "사이드메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1308538-10000002",
+      "sourceMenuId": "10000002",
+      "name": "삼계탕",
+      "description": "삼계탕은 양질의 고단백식품인 닭고기에 오랜기간동안 만병통치의 영약으로 이용되어온 마늘,대추,은행과 사포닌이 풍부한 인삼을 첨가하여 원기회복과 양기를 보충해주는 완벽한 보양식이며 우리민족이 전통민족으로 유지해온 약식동원의 개념이 가장 잘나타나는 음식입니다.",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/fd64edc5-a4a2-4002-8c9e-e375b383982b.jpg"
+    },
+    {
+      "id": "ddangyo-1308538-10000003",
+      "sourceMenuId": "10000003",
+      "name": "전복삼계탕",
+      "description": "완도산 전복(17~18미) 1마리",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/4b43ce17-27da-43b5-837e-213ff9eb3a92.jpg"
+    },
+    {
+      "id": "ddangyo-1308538-10000004",
+      "sourceMenuId": "10000004",
+      "name": "옻 삼계탕",
+      "description": "옻의 효능은 위장병과 소화를 돕고 어혈과 염증을 풀어주며 피를 맑게합니다. 또한 몸을 따뜻하게 하며, 암세포억제 및 항산화, 향균효과에 매우 우수한것으로 보고되고 있습니다.",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/941345a5-f77f-4a7f-b3fc-e1bcf1f52b91.jpg"
+    },
+    {
+      "id": "ddangyo-1308538-10000005",
+      "sourceMenuId": "10000005",
+      "name": "엄 삼계탕",
+      "description": "한방에서는 엄나무와 닭고기가 궁합이 잘맞다하여 관절염, 종기, 피부병등 염증질환에 효과가 있습니다. 또 신경통에도 잘들으며 만성간염같은 간장질환에도 탁월한 효과가 있다고 합니다.",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/606fc809-abc8-4b81-9b00-ba916077b9b2.jpg"
+    },
+    {
+      "id": "ddangyo-1308538-10000001",
+      "sourceMenuId": "10000001",
+      "name": "한방해물오리탕",
+      "description": "국내산 생오리+ 완도산전복+ 낙지,새우+ 각종야채(미나리,부추,버섯) + 한방육수 + 소스(들깨가루,초장)+4종반찬",
+      "category": "메인메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1308538-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1308538-10000008",
+      "sourceMenuId": "10000008",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1308538-10000010",
+      "sourceMenuId": "10000010",
+      "name": "공기밥(잡곡밥)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/2e802c48-9ef2-4433-b501-d5334c39081d.jpg"
+    },
+    {
+      "id": "ddangyo-1308538-90000002",
+      "sourceMenuId": "90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1308538-10000009",
+      "sourceMenuId": "10000009",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1308538-10000011",
+      "sourceMenuId": "10000011",
+      "name": "라면사리(한방해물오리탕 후식용)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1308538-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1308538-90000004",
+      "sourceMenuId": "90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1308538-10000006",
+      "sourceMenuId": "10000006",
+      "name": "전복죽",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/87a14d40-d0ca-4370-9d50-049ac6e3edfc.jpg"
+    },
+    {
+      "id": "ddangyo-1308538-10000007",
+      "sourceMenuId": "10000007",
+      "name": "닭개장",
+      "description": "공기밥 포함 한방육수와 신선한 닭살코기, 숙주나물, 고사리, 토란대, 대파등",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/238287d5-0f20-41f2-96aa-ce6812f16e64.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

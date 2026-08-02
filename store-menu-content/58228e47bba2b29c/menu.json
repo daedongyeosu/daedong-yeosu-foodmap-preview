@@ -1,0 +1,849 @@
+{
+  "storeId": "58228e47bba2b29c",
+  "storeName": "자담치킨 여수웅천점",
+  "displayName": "자담치킨 여수웅천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/d6a35d40-dd34-469d-829f-aee982b4d2f2.jpg",
+  "categories": [
+    "전체",
+    "할인메뉴",
+    "시그니처 메뉴",
+    "오리지널 치킨 메뉴",
+    "자담치킨 신메뉴",
+    "소스",
+    "콤보치킨 메뉴",
+    "윙봉스치킨 메뉴",
+    "사이드 메뉴",
+    "반반치킨 메뉴",
+    "순살치킨(닭다리살) 메뉴",
+    "3반세트메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1170261-30000838",
+      "sourceMenuId": "30000838",
+      "name": "뿌슐랭+콘립너겟 한화타선폭발세트",
+      "description": "뿌슐랭치킨 + 콘립너겟",
+      "category": "할인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9ffbc075-38df-4f5d-971c-f06cf32d31ba.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000839",
+      "sourceMenuId": "30000839",
+      "name": "맵슐랭+모둠감자튀김 한화최강세트",
+      "description": "맵슐랭치킨 + 모둠감자튀김",
+      "category": "할인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2bf115fd-0c66-4556-b0f9-f65589fdc45e.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000840",
+      "sourceMenuId": "30000840",
+      "name": "불패+치즈볼 한화무적세트",
+      "description": "불패치킨 + 치즈볼",
+      "category": "할인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a29a7cfe-b6cf-41b6-aa96-5d942ccbd0cb.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000472",
+      "sourceMenuId": "30000472",
+      "name": "맵쏘이킥치킨",
+      "description": "",
+      "category": "시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/eee32224-4f5c-40ac-beb8-cee2a6a97689.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000474",
+      "sourceMenuId": "30000474",
+      "name": "허니팝치킨",
+      "description": "",
+      "category": "오리지널 치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/67a39a0f-5992-4da7-95cd-55629a56cfdd.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000005",
+      "sourceMenuId": "30000005",
+      "name": "맵슐랭치킨",
+      "description": "",
+      "category": "시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ba22d461-aad0-4cc0-8e35-ed14dd44f2af.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000375",
+      "sourceMenuId": "30000375",
+      "name": "왓더핫치킨",
+      "description": "",
+      "category": "오리지널 치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/84ef0b3e-b27f-445c-9d3e-45b0558f3de8.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000380",
+      "sourceMenuId": "30000380",
+      "name": "마튀니치킨",
+      "description": "",
+      "category": "시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/549e9c9f-37f4-4710-9dff-db4b232473bf.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000535",
+      "sourceMenuId": "30000535",
+      "name": "치즈핑치킨",
+      "description": "",
+      "category": "시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/2f50e7c6-b525-4119-9656-17d82c91ca94.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000811",
+      "sourceMenuId": "30000811",
+      "name": "뿌슐랭치킨",
+      "description": "후라이드+양념",
+      "category": "자담치킨 신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/da3798eb-3c49-44fe-b5d7-d6686105de28.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000822",
+      "sourceMenuId": "30000822",
+      "name": "바비큐맛시즈닝",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000385",
+      "sourceMenuId": "30000385",
+      "name": "콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/d9f2dac5-b242-4695-a994-317e93838820.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000508",
+      "sourceMenuId": "30000508",
+      "name": "윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/b4abc6fc-83b3-4488-838e-5f0236d2572f.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000842",
+      "sourceMenuId": "30000842",
+      "name": "고추튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/3a61447e-e346-44d8-9223-d7f30ad4e578.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000493",
+      "sourceMenuId": "30000493",
+      "name": "양념반반순살치킨",
+      "description": "후라이드+양념",
+      "category": "반반치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/770d4b17-244d-4df8-ab03-7372820e6719.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000035",
+      "sourceMenuId": "30000035",
+      "name": "후라이드치킨",
+      "description": "",
+      "category": "오리지널 치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/4e2a8602-65f8-4674-a1e4-86802ae8ffde.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000048",
+      "sourceMenuId": "30000048",
+      "name": "순살치킨",
+      "description": "",
+      "category": "순살치킨(닭다리살) 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/10/ca459e3c-8a64-42ba-aa77-108ba5293ac2.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000061",
+      "sourceMenuId": "30000061",
+      "name": "3반치킨세트 (후라이드+양념+1가지맛선택)",
+      "description": "후라이드반+양념반+1가지맛 선택",
+      "category": "3반세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9e42338e-a8ea-43ac-9e1f-fea080b90066.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000843",
+      "sourceMenuId": "30000843",
+      "name": "칠리치즈스틱",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/ebb48626-9a42-4216-b303-3821f5dc22a6.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000006",
+      "sourceMenuId": "30000006",
+      "name": "맵슐랭순살치킨",
+      "description": "",
+      "category": "시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b9677c7a-e8b7-4ab6-a410-aa1c0129ac9f.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000823",
+      "sourceMenuId": "30000823",
+      "name": "떡볶이맛시즈닝",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000386",
+      "sourceMenuId": "30000386",
+      "name": "양념콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/3764df7d-d46b-4785-bf47-c632b0c66814.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000509",
+      "sourceMenuId": "30000509",
+      "name": "양념윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/800ba052-0fb7-4611-89fb-c2dd150d2b9b.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000063",
+      "sourceMenuId": "30000063",
+      "name": "3반순살치킨세트 (후라이드+양념+1가지맛선택)",
+      "description": "후라이드순살반+양념순살반+1가지맛선택",
+      "category": "3반세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b5206fa9-5216-4457-8d69-86f79db4c87f.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000036",
+      "sourceMenuId": "30000036",
+      "name": "양념치킨",
+      "description": "",
+      "category": "오리지널 치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/cd3fc4dc-8dce-430f-bc77-311feb044fe1.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000049",
+      "sourceMenuId": "30000049",
+      "name": "양념순살치킨",
+      "description": "",
+      "category": "순살치킨(닭다리살) 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/10/15ec870a-9e3d-4cda-986a-840bd62b7c04.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000530",
+      "sourceMenuId": "30000530",
+      "name": "핫양념반반순살치킨",
+      "description": "핫후라이드+양념",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000718",
+      "sourceMenuId": "30000718",
+      "name": "스윗망고소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000844",
+      "sourceMenuId": "30000844",
+      "name": "뿌슐랭치킨S(200g)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/32a27aaf-93b4-4f37-b2a4-d3a23fcad516.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000473",
+      "sourceMenuId": "30000473",
+      "name": "맵쏘이킥순살치킨",
+      "description": "",
+      "category": "시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/0139e0d6-8ce1-4e44-aac8-9e66009afb52.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000055",
+      "sourceMenuId": "30000055",
+      "name": "핫순살치킨",
+      "description": "",
+      "category": "순살치킨(닭다리살) 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/f92a76e8-d114-4bb2-9aca-7288bf0a439d.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000387",
+      "sourceMenuId": "30000387",
+      "name": "반반콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/ea03a704-d9a8-427c-907c-734082e2dadf.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000836",
+      "sourceMenuId": "30000836",
+      "name": "핫양념반반순살치킨(매운양념)",
+      "description": "핫후라이드+매운양념",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000814",
+      "sourceMenuId": "30000814",
+      "name": "콘립너겟(150g)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/ccf7413d-2392-44b5-9400-7a1040db2ae0.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000536",
+      "sourceMenuId": "30000536",
+      "name": "3반치즈핑치킨세트 (순살반+양념순살반+치즈핑반)",
+      "description": "후라이드순살반+양념순살반+치즈핑반",
+      "category": "3반세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000511",
+      "sourceMenuId": "30000511",
+      "name": "반반윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000038",
+      "sourceMenuId": "30000038",
+      "name": "핫후라이드치킨",
+      "description": "",
+      "category": "오리지널 치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/5a435368-75d6-46ef-9af0-bd01cfc73588.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000495",
+      "sourceMenuId": "30000495",
+      "name": "맵쏘이킥반반순살치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000176",
+      "sourceMenuId": "30000176",
+      "name": "3반소보로순살치킨세트(순살반+양념순살반+소보로반)",
+      "description": "후라이드순살반+양념순살반+소보로반",
+      "category": "3반세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000324",
+      "sourceMenuId": "30000324",
+      "name": "맵슐랭(마일드)콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/9042a4ce-227e-4ec7-9887-a4f699d660a3.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000512",
+      "sourceMenuId": "30000512",
+      "name": "맵슐랭(마일드)윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000056",
+      "sourceMenuId": "30000056",
+      "name": "핫양념순살치킨",
+      "description": "",
+      "category": "순살치킨(닭다리살) 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000825",
+      "sourceMenuId": "30000825",
+      "name": "모둠감자튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/075a2765-9dc3-4f06-9fdc-6136b3d1d9ca.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000408",
+      "sourceMenuId": "30000408",
+      "name": "맵슐랭소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000039",
+      "sourceMenuId": "30000039",
+      "name": "핫양념치킨",
+      "description": "",
+      "category": "오리지널 치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000841",
+      "sourceMenuId": "30000841",
+      "name": "3반뿌슐랭순살치킨세트",
+      "description": "후라이드순살반+양념순살반+뿌슐랭반",
+      "category": "3반세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000381",
+      "sourceMenuId": "30000381",
+      "name": "마튀니순살치킨",
+      "description": "",
+      "category": "시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/ba139f8f-eb91-4772-ba20-c7113a0998c0.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000496",
+      "sourceMenuId": "30000496",
+      "name": "허니팝반반순살치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000528",
+      "sourceMenuId": "30000528",
+      "name": "맵쏘이킥(마일드)윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000526",
+      "sourceMenuId": "30000526",
+      "name": "맵쏘이킥(마일드)콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000376",
+      "sourceMenuId": "30000376",
+      "name": "왓더핫순살치킨",
+      "description": "",
+      "category": "순살치킨(닭다리살) 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/da30fe6c-db83-49c2-b378-39110e61a40e.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000002",
+      "sourceMenuId": "30000002",
+      "name": "소보로치킨L(750g)",
+      "description": "",
+      "category": "시그니처 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ff8e75e5-e890-444f-bea6-9adab15cb6ef.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000478",
+      "sourceMenuId": "30000478",
+      "name": "허니팝윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000476",
+      "sourceMenuId": "30000476",
+      "name": "허니팝콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000497",
+      "sourceMenuId": "30000497",
+      "name": "맵슐랭반반순살치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/11eee112-cf5e-4d9d-aaae-564716b6dfaf.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000377",
+      "sourceMenuId": "30000377",
+      "name": "왓더핫(마일드)콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000411",
+      "sourceMenuId": "30000411",
+      "name": "양념소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000498",
+      "sourceMenuId": "30000498",
+      "name": "왓더핫반반순살치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000513",
+      "sourceMenuId": "30000513",
+      "name": "왓더핫(마일드)윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000040",
+      "sourceMenuId": "30000040",
+      "name": "간장치킨",
+      "description": "",
+      "category": "오리지널 치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/00f48a02-f33c-41f7-a1f3-329e5236c847.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000053",
+      "sourceMenuId": "30000053",
+      "name": "간장순살치킨",
+      "description": "",
+      "category": "순살치킨(닭다리살) 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/badb5b5d-4ee5-4cfd-9b61-fcd4373e446f.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000413",
+      "sourceMenuId": "30000413",
+      "name": "치요링소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000104",
+      "sourceMenuId": "30000104",
+      "name": "매콤똥집튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/c01943b6-e7a2-4047-a867-4b66bb04dad9.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000499",
+      "sourceMenuId": "30000499",
+      "name": "마튀니반반순살치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000514",
+      "sourceMenuId": "30000514",
+      "name": "마튀니윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000382",
+      "sourceMenuId": "30000382",
+      "name": "마튀니콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000043",
+      "sourceMenuId": "30000043",
+      "name": "치요링치킨",
+      "description": "",
+      "category": "오리지널 치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/2170b4b8-8b9a-48db-a23f-d20fab585731.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000393",
+      "sourceMenuId": "30000393",
+      "name": "파닭콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000060",
+      "sourceMenuId": "30000060",
+      "name": "치요링순살치킨",
+      "description": "",
+      "category": "순살치킨(닭다리살) 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/c605bf11-43e6-4db8-b982-95f73a43b0f2.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000093",
+      "sourceMenuId": "30000093",
+      "name": "자담치즈볼",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/eee6a02d-d591-4fd7-a4d2-4d171505003e.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000097",
+      "sourceMenuId": "30000097",
+      "name": "크런치감자스틱",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2b2c1f82-25b1-4a97-9dd5-54d6ee03e5f5.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000516",
+      "sourceMenuId": "30000516",
+      "name": "간장윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/3ce44221-edae-4f1d-8ce6-1b4540210a86.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000389",
+      "sourceMenuId": "30000389",
+      "name": "간장콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/981c8bce-6cbd-4bf6-bf9e-3bdf041e2955.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000501",
+      "sourceMenuId": "30000501",
+      "name": "간장반반순살치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/f8b00c86-82ab-4f5b-82bc-4f69a426e711.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000475",
+      "sourceMenuId": "30000475",
+      "name": "허니팝순살치킨",
+      "description": "",
+      "category": "순살치킨(닭다리살) 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/90dd759b-36dc-4197-b475-e3465496cf8e.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000085",
+      "sourceMenuId": "30000085",
+      "name": "어포튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/e4665a15-6226-4a6e-a5ac-3ec8369f2efb.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000416",
+      "sourceMenuId": "30000416",
+      "name": "파닭소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000518",
+      "sourceMenuId": "30000518",
+      "name": "치요링윙봉스치킨",
+      "description": "",
+      "category": "윙봉스치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000090",
+      "sourceMenuId": "30000090",
+      "name": "모짜감짜",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/29d9b0a3-9164-4b29-971e-8e0789530386.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000503",
+      "sourceMenuId": "30000503",
+      "name": "치요링반반순살치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/821f44ac-a03f-4f47-ba28-43d9c09466d0.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000392",
+      "sourceMenuId": "30000392",
+      "name": "치요링콤보치킨",
+      "description": "다리 4조각+윙 6조각+봉 6조각",
+      "category": "콤보치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000102",
+      "sourceMenuId": "30000102",
+      "name": "불꽃오징어튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ac58e647-b2cf-41f9-9e6c-fcf9305d20de.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000479",
+      "sourceMenuId": "30000479",
+      "name": "양념반반치킨",
+      "description": "후라이드+양념",
+      "category": "반반치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/3b72a75c-a1c6-4d6a-aaf3-cd9ea8074eb2.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000810",
+      "sourceMenuId": "30000810",
+      "name": "에그야채볶음밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/458a90c8-170c-47c0-a8d3-d6adf2bd3bc1.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000420",
+      "sourceMenuId": "30000420",
+      "name": "매운양념소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000098",
+      "sourceMenuId": "30000098",
+      "name": "우유튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/b9544676-8a86-4f7b-82ad-a29832fff024.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000529",
+      "sourceMenuId": "30000529",
+      "name": "핫양념반반치킨",
+      "description": "핫후라이드+양념",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000357",
+      "sourceMenuId": "30000357",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/1314c3e4-04c9-496d-98ac-4e5650943f8f.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000835",
+      "sourceMenuId": "30000835",
+      "name": "핫양념반반치킨(매운양념)",
+      "description": "핫후라이드+매운양념",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000084",
+      "sourceMenuId": "30000084",
+      "name": "소보로치킨",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/4243151e-dc33-4ce5-ba1a-69ddcc312887.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000837",
+      "sourceMenuId": "30000837",
+      "name": "찹쌀볼",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9a4c305f-1481-485e-9cc4-aecbbf457994.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000481",
+      "sourceMenuId": "30000481",
+      "name": "맵쏘이킥반반치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000482",
+      "sourceMenuId": "30000482",
+      "name": "허니팝반반치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000523",
+      "sourceMenuId": "30000523",
+      "name": "가락만두",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/ffdd3202-dff9-45e4-b1ca-697e555c8df3.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000483",
+      "sourceMenuId": "30000483",
+      "name": "맵슐랭반반치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/84d2980e-ccab-443e-b811-cd293d7a3c5e.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000531",
+      "sourceMenuId": "30000531",
+      "name": "메가크림새우",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/0c228b54-4089-4009-8536-381827da104c.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000484",
+      "sourceMenuId": "30000484",
+      "name": "왓더핫반반치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000717",
+      "sourceMenuId": "30000717",
+      "name": "핫아란치니",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9e87f1db-30c3-4432-9546-c1c82c104759.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000485",
+      "sourceMenuId": "30000485",
+      "name": "마튀니반반치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1170261-30000801",
+      "sourceMenuId": "30000801",
+      "name": "치즈핑(2조각)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/1db79136-deaf-4f46-8c6c-cdd6834ba6c1.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000487",
+      "sourceMenuId": "30000487",
+      "name": "간장반반치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/a6212bef-409d-414c-b97c-87f2f280e9ec.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000489",
+      "sourceMenuId": "30000489",
+      "name": "치요링반반치킨",
+      "description": "",
+      "category": "반반치킨 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/31ffcc3e-f654-442f-9614-ca3519f0167b.jpg"
+    },
+    {
+      "id": "ddangyo-1170261-30000826",
+      "sourceMenuId": "30000826",
+      "name": "앙꼬듬뿍 붕어빵",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/f87c20a7-5909-45c9-ad20-31adf7627219.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

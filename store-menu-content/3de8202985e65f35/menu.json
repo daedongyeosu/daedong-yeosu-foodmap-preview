@@ -1,0 +1,496 @@
+{
+  "storeId": "3de8202985e65f35",
+  "storeName": "스텔라떡볶이 전남여수웅천점",
+  "displayName": "스텔라떡볶이 전남여수웅천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d3331cb3-5cb4-4bd3-86a1-3a34dd13f40a.jpg",
+  "categories": [
+    "전체",
+    "세트",
+    "튀김",
+    "떡볶이",
+    "떡볶이 세트",
+    "컵밥",
+    "라볶이 세트",
+    "음료",
+    "라볶이",
+    "꼬마김밥",
+    "사이드"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1174881-30000022",
+      "sourceMenuId": "30000022",
+      "name": "닭강정+떡볶이 세트",
+      "description": "닭강정+떡볶이+콜라 500ml",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/9a3fc064-8729-4df8-89b5-1c372ad30483.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000023",
+      "sourceMenuId": "30000023",
+      "name": "닭강정+라볶이 세트",
+      "description": "닭강정+라볶이+콜라 500ml",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/ed746b1f-c7da-4fb2-93d0-8dea787b85fb.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000038",
+      "sourceMenuId": "30000038",
+      "name": "후추 닭강정",
+      "description": "닭강정+라면땅",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6f4dcaca-403c-41ac-96cc-439a2c23e0ae.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000001",
+      "sourceMenuId": "30000001",
+      "name": "스텔라 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8555e8de-a45b-48b8-be34-6b8d5075b479.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000015",
+      "sourceMenuId": "30000015",
+      "name": "떡볶이 세트 B",
+      "description": "떡볶이 + 인기튀김 3종 + 쫄깃순대 + 쿨피스450ml",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d5c276f6-3a19-4da1-b59c-d9c1b67e4e00.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000048",
+      "sourceMenuId": "30000048",
+      "name": "기본컵밥",
+      "description": "",
+      "category": "컵밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/a3a6b2cd-89fe-4197-bf7f-525e54326a70.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000017",
+      "sourceMenuId": "30000017",
+      "name": "라볶이 세트 A",
+      "description": "라볶이 + 인기튀김 3종 + 쿨피스450ml",
+      "category": "라볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/c91c2db2-31d1-430b-9680-cd38eb171e09.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000062",
+      "sourceMenuId": "30000062",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/377926ed-bc2b-446d-884b-d42e91948d08.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000014",
+      "sourceMenuId": "30000014",
+      "name": "떡볶이 세트 A",
+      "description": "떡볶이 + 인기튀김 3종 + 쿨피스450ml",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/624f70f1-a149-41fe-bb0c-240354641170.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000130",
+      "sourceMenuId": "30000130",
+      "name": "고구마튀김(3개)",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/67d64d33-5218-415b-a900-c80394f506c5.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000009",
+      "sourceMenuId": "30000009",
+      "name": "우주 라볶이",
+      "description": "",
+      "category": "라볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/cb0b769a-982c-4de4-814b-024942ef1387.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000102",
+      "sourceMenuId": "30000102",
+      "name": "스팸 꼬마김밥",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/925f87aa-ee30-47f2-aa0a-2980be443715.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000018",
+      "sourceMenuId": "30000018",
+      "name": "라볶이 세트 B",
+      "description": "라볶이 + 인기튀김 3종 + 쫄깃순대 + 쿨피스450ml",
+      "category": "라볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b0e0d3e0-789a-41f2-8d8b-a4f0fb4622f7.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000123",
+      "sourceMenuId": "30000123",
+      "name": "납작만두",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/44921fc1-225f-403c-a4cb-bacbd653ae9c.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000049",
+      "sourceMenuId": "30000049",
+      "name": "스팸마요컵밥",
+      "description": "",
+      "category": "컵밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/c7a693e2-7fbd-4209-a110-973ab69521a3.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000016",
+      "sourceMenuId": "30000016",
+      "name": "떡볶이 세트 C",
+      "description": "떡볶이 + 인기튀김 3종 + 쫄깃순대 + 비벼밥 + 오뎅탕 + 쿨피스930ml",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9972d191-8ae4-4185-8619-1bb53e2b3542.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000080",
+      "sourceMenuId": "30000080",
+      "name": "어묵채튀김",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7e7855a4-188a-4a94-bf45-6e309741251a.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000050",
+      "sourceMenuId": "30000050",
+      "name": "참치마요컵밥",
+      "description": "",
+      "category": "컵밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/d6278fd8-919f-482c-a275-5c66e7228cee.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000113",
+      "sourceMenuId": "30000113",
+      "name": "냉떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/eb778f7b-7a68-4a47-bb90-d5c507229cbf.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000019",
+      "sourceMenuId": "30000019",
+      "name": "라볶이 세트 C",
+      "description": "라볶이 + 인기튀김 3종 + 쫄깃순대 + 비벼밥 + 오뎅탕 + 쿨피스930ml",
+      "category": "라볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/442e4c45-86b3-483d-b36f-aa79d36c4bb5.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000026",
+      "sourceMenuId": "30000026",
+      "name": "인기튀김 3종",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/4161ba79-0644-4b08-b14c-427fef67c52e.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000051",
+      "sourceMenuId": "30000051",
+      "name": "치킨마요컵밥",
+      "description": "",
+      "category": "컵밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/01cf900f-62de-4679-a207-2eb3c1858ea0.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000109",
+      "sourceMenuId": "30000109",
+      "name": "떡볶이김밥 세트A",
+      "description": "떡볶이+꼬마김밥(4줄)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/640a6c05-d946-4495-a02f-0777ae826d47.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000041",
+      "sourceMenuId": "30000041",
+      "name": "어묵탕",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/d16bb42a-c842-41b0-ab60-055a8cd016a7.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000128",
+      "sourceMenuId": "30000128",
+      "name": "추억의 즉석떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/0e8cccfa-a273-48af-b39b-debeb9de1844.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000012",
+      "sourceMenuId": "30000012",
+      "name": "치즈 라볶이",
+      "description": "",
+      "category": "라볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b5161f75-0081-439b-aac4-70e773b97c9f.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000027",
+      "sourceMenuId": "30000027",
+      "name": "인기튀김 6종",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/d9740dbc-c3a7-4aee-853f-1ccb76ab5fc8.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000042",
+      "sourceMenuId": "30000042",
+      "name": "쫄깃순대",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/15ea2ba1-16cd-4824-badf-65f652601a30.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000110",
+      "sourceMenuId": "30000110",
+      "name": "떡볶이김밥 세트B",
+      "description": "떡볶이+꼬마김밥(4줄)+인기튀김3종+순대+쿨피스450ml",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/f19577d0-e8e2-4c32-8e26-aafe546287be.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000074",
+      "sourceMenuId": "30000074",
+      "name": "짜장계란 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/17e4e557-ff83-4d46-9c27-9cfeb53e32ff.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000044",
+      "sourceMenuId": "30000044",
+      "name": "양념순대",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/3be9692e-b42c-4171-a1d3-47b435c855c7.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000028",
+      "sourceMenuId": "30000028",
+      "name": "통살 새우볼",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/5ca76344-c0c1-40e1-93b5-c4525f2385a8.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000127",
+      "sourceMenuId": "30000127",
+      "name": "단무지",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174881-30000029",
+      "sourceMenuId": "30000029",
+      "name": "김말이",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/337576ff-f3d5-4cf6-8563-f27651596022.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000002",
+      "sourceMenuId": "30000002",
+      "name": "로제 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b15dbcc2-4cc9-4596-aab2-e43e2f7e29ae.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000003",
+      "sourceMenuId": "30000003",
+      "name": "치즈 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1ccc57d7-34cd-4f80-8c7d-93718baf02cd.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000030",
+      "sourceMenuId": "30000030",
+      "name": "야끼만두",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9b0314bf-28c2-499c-ad6c-c5668b3268f2.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000031",
+      "sourceMenuId": "30000031",
+      "name": "오징어튀김",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/1f952677-a752-46d4-a713-7958a999b501.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000111",
+      "sourceMenuId": "30000111",
+      "name": "까르보나라 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bd7c8c32-1f83-48a1-948e-1e3a20a4f48a.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000135",
+      "sourceMenuId": "30000135",
+      "name": "펩시콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174881-30000032",
+      "sourceMenuId": "30000032",
+      "name": "야채튀김",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/c4c7093d-f27d-43ee-b2ec-b4446bfbf0c0.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000136",
+      "sourceMenuId": "30000136",
+      "name": "펩시콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174881-30000033",
+      "sourceMenuId": "30000033",
+      "name": "치즈볼",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/97c3c7c2-3eea-4bae-830e-6aadc6af8c88.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000120",
+      "sourceMenuId": "30000120",
+      "name": "냉떡 세트 A",
+      "description": "비빔냉떡볶이+닭강정(3종 택1)+쿨피스 450ml",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1b4844bc-8bcb-4986-ae04-6fc19c524b0c.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000006",
+      "sourceMenuId": "30000006",
+      "name": "마라로제 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/a5e28a53-3c29-4c36-818a-d8b010d13e50.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000007",
+      "sourceMenuId": "30000007",
+      "name": "차돌 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/692b1757-c868-4ff8-a2e4-ed9f70b3a673.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000034",
+      "sourceMenuId": "30000034",
+      "name": "새우튀김",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/07a45c3b-543e-434b-8266-d13d8c70790b.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000121",
+      "sourceMenuId": "30000121",
+      "name": "냉떡 세트 B",
+      "description": "비빔냉떡볶이+납작만두(5장)+양념순대+쿨피스 450ml",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/9e6e193d-169d-4433-bfce-086b5e4faab4.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000138",
+      "sourceMenuId": "30000138",
+      "name": "제로 펩시콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174881-30000070",
+      "sourceMenuId": "30000070",
+      "name": "차돌마라 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1821c5af-aec5-4988-85ee-007c2ab7a793.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000037",
+      "sourceMenuId": "30000037",
+      "name": "별튀김",
+      "description": "",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/d028df85-def3-4c3b-a06e-503d50084dae.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000122",
+      "sourceMenuId": "30000122",
+      "name": "냉떡 세트 C",
+      "description": "비빔냉떡볶이+닭강정(3종)+순대+어묵탕+쿨피스 450ml",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7c4b9413-9011-461e-a1de-b3539f949512.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000021",
+      "sourceMenuId": "30000021",
+      "name": "떡닭순 세트",
+      "description": "떡볶이+닭강정+순대+콜라500ml",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8005846d-d1f1-42cf-b4b5-4df5794d8b36.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000071",
+      "sourceMenuId": "30000071",
+      "name": "후라이드 닭강정",
+      "description": "닭강정+라면땅",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6aa482f5-4f57-4440-a733-a83bb37b83aa.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000141",
+      "sourceMenuId": "30000141",
+      "name": "칠성사이다 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174881-30000040",
+      "sourceMenuId": "30000040",
+      "name": "양념 닭강정",
+      "description": "닭강정+라면땅",
+      "category": "튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c5f415f1-4862-4c10-9d61-cbf8af60b846.jpg"
+    },
+    {
+      "id": "ddangyo-1174881-30000142",
+      "sourceMenuId": "30000142",
+      "name": "칠성사이다 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174881-30000144",
+      "sourceMenuId": "30000144",
+      "name": "제로 칠성사이다 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174881-30000105",
+      "sourceMenuId": "30000105",
+      "name": "참치마요 꼬마김밥",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9c829430-4901-49bf-81fd-aadedc60aea3.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

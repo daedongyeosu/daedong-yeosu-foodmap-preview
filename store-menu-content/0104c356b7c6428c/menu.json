@@ -1,0 +1,552 @@
+{
+  "storeId": "0104c356b7c6428c",
+  "storeName": "순살만공격 여수여서점",
+  "displayName": "순살만공격 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/28f48cc1-3e82-4a65-b387-8e62f924d46a.jpg",
+  "categories": [
+    "전체",
+    "주류메뉴",
+    "®순살만공격X코카콜라®",
+    "®청양쉬림프®",
+    "®치바피®",
+    "®치파포®",
+    "®내맘대로선택®",
+    "®후라이드치킨®",
+    "®바베큐치킨®",
+    "사이드메뉴",
+    "음료메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1268766-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1268766-10000124",
+      "sourceMenuId": "10000124",
+      "name": "치파포 V3™+코카콜라 1.25L",
+      "description": "1마리양 5가지맛(치폴라,고추블링 고정 + 택3)+코카콜라 1.25L",
+      "category": "®순살만공격X코카콜라®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/75dda592-4b43-4ba8-b5fd-8d1729c025be.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000128",
+      "sourceMenuId": "10000128",
+      "name": "청양쉬림프 바베큐 세트 V1™",
+      "description": "에그치밥(레드or블랙)+바비큐한마리+콜라 245ml+무 세트",
+      "category": "®청양쉬림프®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/d32b1405-2267-4637-9f30-c57a0390056a.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000130",
+      "sourceMenuId": "10000130",
+      "name": "[신규가성비세트] 치바피 세트 V1™",
+      "description": "에그치밥(레드or블랙)+바베큐반마리+피자+콜라 245ml+무 세트",
+      "category": "®치바피®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/c2d5075d-0108-45e5-a28d-41052a2fdea7.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000132",
+      "sourceMenuId": "10000132",
+      "name": "[5가지맛] 치파포 V3™",
+      "description": "100% 닭다리 순살만으로 1마리양 5가지맛(치폴라, 고추블링 고정 + 택3)",
+      "category": "®치파포®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2aa5435f-7f7e-4221-a163-4fa78ddd1d32.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000138",
+      "sourceMenuId": "10000138",
+      "name": "[100%닭다리살] 내맘대로 2가지맛세트™",
+      "description": "100%닭다리 순살만으로 1마리양 내맘대로 두가지를 골라먹는 가성비세트",
+      "category": "®내맘대로선택®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/cd4b06c5-93a9-42e8-96cf-d22654142601.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000141",
+      "sourceMenuId": "10000141",
+      "name": "[100%닭다리살] 후라이드 치킨™",
+      "description": "후라이드 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/070dd05a-d4ec-40ed-bfc6-e3a5740c35f9.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000156",
+      "sourceMenuId": "10000156",
+      "name": "[주문폭주] 100%닭다리 순살만 치동™",
+      "description": "바베큐치킨+우동사리+치킨무+콜라캔",
+      "category": "®바베큐치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/699e6f6a-7a18-406c-a443-8be6cf94c631.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000161",
+      "sourceMenuId": "10000161",
+      "name": "콘크러스트 피자",
+      "description": "바삭하고 달콤한 콘크림 크러스트 도우에 프리미엄 토핑이 더해진 프리미엄 시그니처 피자",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c00b040f-3fca-4a3b-8eec-43ce500ee219.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000177",
+      "sourceMenuId": "10000177",
+      "name": "코카콜라 500ml 추가",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2b0d3ed4-c419-46f2-9ed8-c220e849ae0f.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-90000002",
+      "sourceMenuId": "90000002",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1268766-10000125",
+      "sourceMenuId": "10000125",
+      "name": "치파포 V5™+코카콜라 1.25L",
+      "description": "1.5마리양 5가지맛(치폴라,고추블링 고정 + 택3)+코카콜라 1.25L",
+      "category": "®순살만공격X코카콜라®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/1a64bfc4-c73d-498f-8ca5-4a06f9611198.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000129",
+      "sourceMenuId": "10000129",
+      "name": "청양쉬림프 바베큐 세트 V2™",
+      "description": "에그치밥(레드or블랙)+바베큐한마리+감자튀김+치즈볼2개+콜라 245ml+무 세트",
+      "category": "®청양쉬림프®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/04bef2c3-88b2-4798-b0a4-894017abdf92.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000131",
+      "sourceMenuId": "10000131",
+      "name": "[신규가성비세트] 치바피 세트 V2™",
+      "description": "에그치밥(레드or블랙)+바베큐한마리+피자+콜라 245ml+무 세트",
+      "category": "®치바피®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/69306351-49a5-41e1-8b12-12cfdf009614.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000133",
+      "sourceMenuId": "10000133",
+      "name": "[5가지맛] 치파포 V5™",
+      "description": "100% 닭다리 순살만으로 1.5마리양 5가지맛(치폴라,고추블링 고정 + 택3)",
+      "category": "®치파포®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/b8607e13-f3d4-41f0-9c7c-d63ce37fbe84.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000139",
+      "sourceMenuId": "10000139",
+      "name": "[100%닭다리살] 내맘대로 3가지맛세트™",
+      "description": "100%닭다리 순살만으로 1.5마리양 내맘대로 세가지를 골라먹는 가성비세트",
+      "category": "®내맘대로선택®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/c322d760-0c0e-4124-a79b-8fd29f00c95d.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000142",
+      "sourceMenuId": "10000142",
+      "name": "[100%닭다리살] 양념 반.반 치킨™",
+      "description": "양념 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1268766-10000157",
+      "sourceMenuId": "10000157",
+      "name": "[원조양념구이] 양념 바베큐 치킨™",
+      "description": "양념 바베큐+치킨무+콜라캔",
+      "category": "®바베큐치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/e92fd575-cd7d-4580-8dba-96ff2de7f1a5.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000162",
+      "sourceMenuId": "10000162",
+      "name": "옛날 떡볶이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1268766-10000178",
+      "sourceMenuId": "10000178",
+      "name": "코카콜라 1.25L 추가",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/c96cff6f-c52c-4df8-9c8d-aa9deb4f06b1.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1268766-10000126",
+      "sourceMenuId": "10000126",
+      "name": "치파포 얼티밋™+코카콜라 1.25L",
+      "description": "2마리양 10가지맛을 즐기는 궁극의 세트+코카콜라 1.25L",
+      "category": "®순살만공격X코카콜라®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/25213e86-210d-47da-a25f-cc8ea48024ef.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000134",
+      "sourceMenuId": "10000134",
+      "name": "[10가지맛] 치파포 얼티밋™",
+      "description": "100%닭다리 순살만으로 2마리양 10가지맛을 즐기는 궁극의 세트",
+      "category": "®치파포®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/65bcd8a6-c77a-498b-be62-3193b5981e78.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000140",
+      "sourceMenuId": "10000140",
+      "name": "[100%닭다리살] 내맘대로 4가지맛세트™",
+      "description": "100%닭다리 순살만으로 2마리양 내맘대로 네가지를 골라먹는 가성비세트",
+      "category": "®내맘대로선택®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/55b372e3-a23d-4179-b6d9-7a4d7dbe15c3.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000143",
+      "sourceMenuId": "10000143",
+      "name": "[100%닭다리살] 레드빌 반.반 치킨™",
+      "description": "레드빌 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/77cc1891-d723-4f65-94a7-b6b3310e70cd.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000158",
+      "sourceMenuId": "10000158",
+      "name": "[매콤한칠리] 스모크칠리 바베큐 치킨™",
+      "description": "스모크칠리 바베큐+치킨무+콜라캔",
+      "category": "®바베큐치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/423ccbbd-cf48-4739-a2fe-c5a0d674baa5.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000163",
+      "sourceMenuId": "10000163",
+      "name": "[신규출시] 오븐치즈 양념우동",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/8fc6a051-603d-4322-8cff-f38c7be1eaf5.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000179",
+      "sourceMenuId": "10000179",
+      "name": "코카콜라제로 500ml 추가",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/fbde8abe-ce5f-41a1-a801-ff919d4cb889.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1268766-10000127",
+      "sourceMenuId": "10000127",
+      "name": "내맘대로 3가지맛세트™+코카콜라 1.25L",
+      "description": "1.5마리양 내맘대로 세가지를 골라먹는 가성비세트+코카콜라 1.25L",
+      "category": "®순살만공격X코카콜라®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/99224993-6080-410a-b136-3cfd18028171.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000135",
+      "sourceMenuId": "10000135",
+      "name": "(3100원 할인 이벤트) 치파포 V3+피자 세트",
+      "description": "1마리양 5가지맛(치폴라,고추블링 고정 + 택3)+골든크러스트 피자 세트",
+      "category": "®치파포®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/494ee60b-959f-46e0-9bb8-281ffe1d8ebd.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000144",
+      "sourceMenuId": "10000144",
+      "name": "[100%닭다리살] 갈릭다이브 반.반 치킨™",
+      "description": "갈릭다이브 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/7c40c755-47ba-410e-829d-5503ba7a3a7c.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000159",
+      "sourceMenuId": "10000159",
+      "name": "[원조간장구이] 순살만 간장 바베큐 치킨",
+      "description": "간장 바베큐+치킨무+콜라캔",
+      "category": "®바베큐치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/f0fd00ec-7354-4599-b753-f169f5581d54.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000164",
+      "sourceMenuId": "10000164",
+      "name": "양념우동사리",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/da3bda4d-6304-4dfa-ad65-9cd92623a387.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000180",
+      "sourceMenuId": "10000180",
+      "name": "코카콜라제로 1.25L 추가",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/d0a4a8e7-7945-4c68-ab39-220662684a28.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-90000005",
+      "sourceMenuId": "90000005",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1268766-10000136",
+      "sourceMenuId": "10000136",
+      "name": "(3100원 할인 이벤트) 치파포 V5+피자 세트",
+      "description": "1.5마리양 5가지맛(치폴라,고추블링 고정 + 택3)+골든크러스트 피자 세트",
+      "category": "®치파포®",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1268766-10000145",
+      "sourceMenuId": "10000145",
+      "name": "[100%닭다리살] 스파이시커리 반.반 치킨™",
+      "description": "스파이시커리 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/e9b22886-b162-433e-b9d1-f8925e899fff.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000165",
+      "sourceMenuId": "10000165",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/414ccd12-c5af-42f6-8985-ad8f111d8ba0.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000181",
+      "sourceMenuId": "10000181",
+      "name": "맛있게 매콤한 떡볶이",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1268766-90000006",
+      "sourceMenuId": "90000006",
+      "name": "카스 생맥주(1000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1268766-10000137",
+      "sourceMenuId": "10000137",
+      "name": "(3100원 할인 이벤트)치파포 얼티밋+피자 세트",
+      "description": "모든 10가지맛 한판메뉴인 치파포 얼티밋+콘크러스트 피자를 한번에 먹을 수 있는 초갓성비 구성 세트",
+      "category": "®치파포®",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1268766-10000146",
+      "sourceMenuId": "10000146",
+      "name": "[100%닭다리살] 치폴라 반.반 치킨™",
+      "description": "치폴라 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/019ac01f-7c61-452b-82e2-11366ee503c6.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000166",
+      "sourceMenuId": "10000166",
+      "name": "레드치(즈)밥",
+      "description": "100% 닭가슴살에 `매콤달콤`의 끝판왕과 고~소~한 자연산 치즈의 풍미가 더해진 맛의 진리 레드치~즈~밥",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/7793c53b-ee0b-48fe-b0cb-bab10b48316b.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-90000007",
+      "sourceMenuId": "90000007",
+      "name": "카스 프레시(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1268766-10000147",
+      "sourceMenuId": "10000147",
+      "name": "[100%닭다리살] 고추블링 반.반 치킨™",
+      "description": "고추블링 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a5bcafb2-5b30-49c3-a93e-91cae673eb8a.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000167",
+      "sourceMenuId": "10000167",
+      "name": "블랙치(즈)밥",
+      "description": "100% 닭가슴살에 `짭조름한` 특제비법 간장소스와 고~소~한 자연산 치즈가 완벽 조화를 이룬 풍미 가득 블랙치~즈~밥",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/e076356e-27b0-4363-ac38-e8b618cbb66f.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-90000008",
+      "sourceMenuId": "90000008",
+      "name": "테라(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1268766-10000148",
+      "sourceMenuId": "10000148",
+      "name": "[100%닭다리살] 쏘이알리오 반.반 치킨™",
+      "description": "쏘이알리오 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/377623c0-4138-4da4-98cf-3159366423ea.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000168",
+      "sourceMenuId": "10000168",
+      "name": "치즈양념 포테이토",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a090b853-432c-478a-a1dd-cd95a66fe55a.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000149",
+      "sourceMenuId": "10000149",
+      "name": "[100%닭다리살] 화이트크림 반.반 치킨™",
+      "description": "화이트크림 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/57b73311-1d1d-403c-abcf-4fd177e4dad4.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000169",
+      "sourceMenuId": "10000169",
+      "name": "자연산 치즈볼2개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/8630a9ca-43fa-4867-b0d9-474a61367d66.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000150",
+      "sourceMenuId": "10000150",
+      "name": "[100%닭다리살] 블랙크림 반.반 치킨™",
+      "description": "100% 닭다리 순살만으로 달달하고 짭조름한 간장소스에 부드럽고 크리미한 화이트 소스의 만남. 한번 빠지면 빠져나올 수 없는 블랙홀 치킨",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/b23d2a46-a8aa-44e1-bdd3-058d82db573c.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000170",
+      "sourceMenuId": "10000170",
+      "name": "자연산 치즈볼4개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/34645f84-c3f1-4188-868e-f4b7bcb980de.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000151",
+      "sourceMenuId": "10000151",
+      "name": "[100%닭다리살] 블링와사비 반.반 치킨™",
+      "description": "100% 닭다리 순살만으로 생 와사비와 느끼하지않은 깊은 크림소스의 찰떡궁합 작품과 같은 요리의 탄생",
+      "category": "®후라이드치킨®",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1268766-10000171",
+      "sourceMenuId": "10000171",
+      "name": "치즈스틱 2개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/137b4282-9bfb-4c09-a856-e6f0be77b49a.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000152",
+      "sourceMenuId": "10000152",
+      "name": "[100%닭다리살] 송송파닭 치킨 치킨™",
+      "description": "송송파닭 치킨+치킨무+콜라캔",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/54570e9b-082a-4b0d-93d3-197d76feaa83.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000172",
+      "sourceMenuId": "10000172",
+      "name": "치즈스틱 4개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4c41be74-164d-4c86-9248-0ab4b2bb2dd1.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000153",
+      "sourceMenuId": "10000153",
+      "name": "골든크러스트 피자+치킨 세트",
+      "description": "골든크러스트 피자와 100%닭다리 순살치킨을 함께",
+      "category": "®후라이드치킨®",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1268766-10000173",
+      "sourceMenuId": "10000173",
+      "name": "즉석밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4a90aa75-7a21-467f-9f5b-06e574273e10.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000154",
+      "sourceMenuId": "10000154",
+      "name": "스파이시불고기 피자+치킨 세트",
+      "description": "한국식 매콤한 국내산 불고기 피자와 100%닭다리 순살치킨을 함께",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/010cb1e7-bfc7-4a0a-a83b-ec6835b360f9.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000174",
+      "sourceMenuId": "10000174",
+      "name": "소스추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1268766-10000155",
+      "sourceMenuId": "10000155",
+      "name": "골든고르곤 피자+치킨세트",
+      "description": "정통 이태리식 고르곤졸라 치즈 피자와 100%닭다리 순살치킨을 함께",
+      "category": "®후라이드치킨®",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/282c929f-e47d-4e55-a6e7-2d9447e93ed9.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000175",
+      "sourceMenuId": "10000175",
+      "name": "무 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/f2f5a04b-aa1d-44c8-a00b-d414b248a57e.jpg"
+    },
+    {
+      "id": "ddangyo-1268766-10000176",
+      "sourceMenuId": "10000176",
+      "name": "골든고르곤 피자",
+      "description": "고르곤졸라 치즈가 더해진 프리미엄 피자",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/05fce0fa-9093-4f13-b75f-6b4b59bef63d.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

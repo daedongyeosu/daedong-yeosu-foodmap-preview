@@ -1,0 +1,185 @@
+{
+  "storeId": "4573285075624a68",
+  "storeName": "이순신 베이커리",
+  "displayName": "이순신 베이커리",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/e2ca5eb0-cd03-4ca8-8963-be23b5702512.jpg",
+  "categories": [
+    "전체",
+    "베이커리",
+    "커피",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1238091-10000009",
+      "sourceMenuId": "10000009",
+      "name": "딸기 찹쌀떡",
+      "description": "",
+      "category": "베이커리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/e7c78378-2d04-4508-9010-99f956136bd2.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000010",
+      "sourceMenuId": "10000010",
+      "name": "아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c30a4c60-5b60-4071-88e7-d10609fe4889.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000012",
+      "sourceMenuId": "10000012",
+      "name": "바닐라 라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/9bd81c42-2065-4fb1-84d8-701f012c14c9.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000001",
+      "sourceMenuId": "10000001",
+      "name": "고메버터 소금빵 세트",
+      "description": "",
+      "category": "베이커리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000013",
+      "sourceMenuId": "10000013",
+      "name": "고구마 라떼",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000002",
+      "sourceMenuId": "10000002",
+      "name": "고메버터 소금빵 선물세트",
+      "description": "고메버터 소금빵 8개 세트",
+      "category": "베이커리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000011",
+      "sourceMenuId": "10000011",
+      "name": "라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b4579e88-2ac5-41e4-a78c-d222e0617215.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000014",
+      "sourceMenuId": "10000014",
+      "name": "초코 라떼",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/099aee9d-f873-44e7-b8ac-f339d02ce856.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000003",
+      "sourceMenuId": "10000003",
+      "name": "명란 소금빵1개+치즈 소금빵1개+고메버터 소금빵2개",
+      "description": "",
+      "category": "베이커리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000015",
+      "sourceMenuId": "10000015",
+      "name": "녹차라떼",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f8cb1cc3-9442-42c9-8bb0-1d3f91e7e586.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000004",
+      "sourceMenuId": "10000004",
+      "name": "명란 소금빵 2개+치즈 소금빵 2개",
+      "description": "",
+      "category": "베이커리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000016",
+      "sourceMenuId": "10000016",
+      "name": "오곡라떼",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000005",
+      "sourceMenuId": "10000005",
+      "name": "명란 소금빵 2개+고메 소금빵 2개",
+      "description": "",
+      "category": "베이커리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000017",
+      "sourceMenuId": "10000017",
+      "name": "복숭아 아이스티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/07/63fbea62-21b6-46d3-970e-566a65b08921.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000006",
+      "sourceMenuId": "10000006",
+      "name": "치즈 소금빵 2개+고메 소금빵 2개",
+      "description": "",
+      "category": "베이커리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000018",
+      "sourceMenuId": "10000018",
+      "name": "플레인 요거트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/32eda59e-e02e-4dd7-829f-bf86e5a0a64d.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000007",
+      "sourceMenuId": "10000007",
+      "name": "앙버터쑥소금빵+고메버터소금빵+치즈소금빵+명란소금빵",
+      "description": "앙버터쑥소금빵 1개+고메버터소금빵 1개+치즈소금빵 1개+명란소금빵 1개",
+      "category": "베이커리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000019",
+      "sourceMenuId": "10000019",
+      "name": "딸기요거트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d323ec33-add6-45da-b37e-7399f75ba808.jpg"
+    },
+    {
+      "id": "ddangyo-1238091-10000008",
+      "sourceMenuId": "10000008",
+      "name": "앙버터 쑥소금빵 2개+고메 버터 소금빵 2개",
+      "description": "",
+      "category": "베이커리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000020",
+      "sourceMenuId": "10000020",
+      "name": "블루베리 요거트",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238091-10000021",
+      "sourceMenuId": "10000021",
+      "name": "망고 요거트",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

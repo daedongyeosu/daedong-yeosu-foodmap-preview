@@ -1,0 +1,346 @@
+{
+  "storeId": "df16b7312c25da31",
+  "storeName": "위대한 닭뽀끼&짜파구리",
+  "displayName": "위대한 닭뽀끼&짜파구리",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/34b3d7f2-ab0d-48b8-afc7-3a1b745a897b.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "닭뽀끼+닭껍질튀김세트",
+    "바삭~ 고소~닭껍질튀김",
+    "사이드메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1202229-10000042",
+      "sourceMenuId": "10000042",
+      "name": "짜파슐랭(누들떡 짜파맛나요 순한맛)",
+      "description": "짜파특제소스+ 다리살로만닭고기 300그램+탱글쫄깃누들떡+쿨피스(품절시콜라)+단무지+옥수수콘+메추리알+비엔나+어묵토핑등",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/34b3d7f2-ab0d-48b8-afc7-3a1b745a897b.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000043",
+      "sourceMenuId": "10000043",
+      "name": "사천짜파슐랭(누들떡.맛있게~매운맛)",
+      "description": "매콤 특제짜파소스+다리살로만닭고기300그램+쿨피스(품절시콜라)+단무지+옥수수콘+어묵+메추리알+비엔나소세지토핑",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4e212746-e049-47f1-ac51-29bb021b6746.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000044",
+      "sourceMenuId": "10000044",
+      "name": "오리지날닭뽀끼(누들떡.순한맛.닭고기듬뿍)",
+      "description": "닭다리살로만 300그램+누들떡+쿨피스+단무지+옥수수콘+메추리알+비엔냐토핑",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/c0574353-9b94-4af9-9595-06590381ff2a.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000045",
+      "sourceMenuId": "10000045",
+      "name": "레드핫 닭뽀끼(누들떡 1단계매운맛.2단계 아주매운맛선택",
+      "description": "닭다리살300그램+누들떡+쿨피스(품절시콜라)l+단무지+옥수수콘+메추리알+비엔나+어묵토핑",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/fd6aeee2-fed9-4185-8fff-710f6d4faa65.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000046",
+      "sourceMenuId": "10000046",
+      "name": "(신메뉴) 로제누들떡볶이 푸짐한 토핑",
+      "description": "닭다리살300그램+누들떡+어묵+비엔나+메추리알옥콘+쿨피스 등등",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/410bc52e-ec30-4893-a182-c58ebec0aa18.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000050",
+      "sourceMenuId": "10000050",
+      "name": "세트1.오리지날 닭뽀끼(닭고기듬뿍+ 닭껍질튀김 선택",
+      "description": "누들떡~닭고기300그램+쥬시쿨(품절시콜라)+단무지+옥수수콘+비엔나+메추리알+어묵토핑",
+      "category": "닭뽀끼+닭껍질튀김세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d81c122e-8f30-46de-8c1f-96b7cc003d53.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000057",
+      "sourceMenuId": "10000057",
+      "name": "매콤마초닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3bf7a4e6-dcd3-4ff9-9b2a-c984438833d7.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000067",
+      "sourceMenuId": "10000067",
+      "name": "호~로~룩 ~로제 떡뽂이 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000051",
+      "sourceMenuId": "10000051",
+      "name": "세트.2레드매콤 닭뽀끼 (닭고기듬뿍+ 닭껍질튀김선택",
+      "description": "누들떡~닭고기300그램+쥬시쿨(품절시콜라)+단무지+옥수수콘+메추리알+비엔나+어묵토핑",
+      "category": "닭뽀끼+닭껍질튀김세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/68366353-c32a-4892-a44b-becbbbdb18da.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000058",
+      "sourceMenuId": "10000058",
+      "name": "허니버터닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000068",
+      "sourceMenuId": "10000068",
+      "name": "모둠튀김(치즈스틱2개+군만두4개+김말4개+펍스맛감자15",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000052",
+      "sourceMenuId": "10000052",
+      "name": "세트3.짜파슐랭(누들떡 짜파순한맛+ 닭껍질튀김선택",
+      "description": "누들떡~닭고기300그램+쥬시쿨(품절시콜라)l+단무지+옥수수콘+메추리알+비엔나소세지+어묵토핑",
+      "category": "닭뽀끼+닭껍질튀김세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/51657eca-35b1-46ba-832a-c113023ba1c0.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000059",
+      "sourceMenuId": "10000059",
+      "name": "핫데리닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d0b56f5f-83fb-4ea6-90d1-fbc2200cdf5d.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000069",
+      "sourceMenuId": "10000069",
+      "name": "모듬튀김(매콤김말이튀김4치즈스틱2 군만두4 맛감자12",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000053",
+      "sourceMenuId": "10000053",
+      "name": "세트4.사천짜파슐랭(누들떡짜파.매운맛 +닭껍질튀김선택",
+      "description": "누들떡~닭고기300그램+쥬시쿨(품절시콜라)l+무+옥수수콘+메추리알+비엔나소세지+어묵",
+      "category": "닭뽀끼+닭껍질튀김세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/53626a5b-3426-4aef-af72-ef34a48b57da.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000060",
+      "sourceMenuId": "10000060",
+      "name": "치즈머스닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/f9be9a7c-456b-4a35-949c-4e9d352e98a6.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000070",
+      "sourceMenuId": "10000070",
+      "name": "닭껍질튀김300그램+100그램덤(매콤~마초간장~풍미",
+      "description": "주인~~강추~메뉴~직접 밑간 수제 달껍질튀김~ 인기 메뉴로~자주 품절됩니다~ 양지바랍니다~~",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/1d1fee17-5def-4d6f-ba11-89f620aa0e18.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000054",
+      "sourceMenuId": "10000054",
+      "name": "세트 8.오리지널 치즈닭뽀끼+닭껍질튀김선택",
+      "description": "누들떡+닭고기 300그램+쥬시쿨+단무지+비엔나+어묵토핑",
+      "category": "닭뽀끼+닭껍질튀김세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/6978f875-7320-49cf-a497-fbf1026a9e1d.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000061",
+      "sourceMenuId": "10000061",
+      "name": "매콤 깐풍닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f16672d3-5455-4044-9ef9-77a406288955.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000071",
+      "sourceMenuId": "10000071",
+      "name": "닭껍질튀김300그램+100그램덤(바사칸허니버터 풍미~",
+      "description": "주인~~강추~메뉴~직접밑간~수제 닭껍질튀김~~ 인기메뉴로~자주~품절됩니다~ 양지바랍니다~~",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/7039822c-7502-49bb-b090-5336512d076a.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000047",
+      "sourceMenuId": "10000047",
+      "name": "오리지날 치즈 닭뽀끼(누들떡치즈듬뿍)",
+      "description": "치즈토핑+단무+옥콘+메추리알+비엔나토핑+쿨피스(품절시콜라)+어묵+다리살로만 닭고기300그램",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/23966501-d86a-4685-83fc-12971c3631df.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000055",
+      "sourceMenuId": "10000055",
+      "name": "세트 10. 신메뉴)고소크림누들 닭뽀기+닭껍질튀김선택",
+      "description": "고소한닭다리살+누들떡+싱싱특수야채+비엔나+메추리알+옥콘등",
+      "category": "닭뽀끼+닭껍질튀김세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/99a5d95d-6227-4f71-8da8-fc6f92cf969b.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000062",
+      "sourceMenuId": "10000062",
+      "name": "할라피뇨체다치즈.닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/7039822c-7502-49bb-b090-5336512d076a.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000072",
+      "sourceMenuId": "10000072",
+      "name": "김말이튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55a481ff-b9ec-4829-9fc9-c51159e0641f.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000048",
+      "sourceMenuId": "10000048",
+      "name": "(신메뉴)고소크림떡뽂이(~호로록~고소한맛~일품)",
+      "description": "다리살로만고소한닭고기+누들떡+각종야채+어묵+비엔나+메추리알++옥콘등",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d265a355-c964-40ed-bd7e-38543e2fc1be.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000056",
+      "sourceMenuId": "10000056",
+      "name": "세트 11.신메뉴) 로제 누들닭뽂이+닭껍질튀김선택",
+      "description": "누들떡+ 다리살로만닭고기+어묵+쿨피스+비엔나+메추리알+특수야채+만두등등 로 침샘~점령~",
+      "category": "닭뽀끼+닭껍질튀김세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ab72c7fd-0c4c-4885-8ce9-35fac81e4491.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000063",
+      "sourceMenuId": "10000063",
+      "name": "레몬크림닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/1d1fee17-5def-4d6f-ba11-89f620aa0e18.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000073",
+      "sourceMenuId": "10000073",
+      "name": "군만두튀김 (8개)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/47976b5b-b6b5-4e7c-bd8f-2f878d8b16cd.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000049",
+      "sourceMenuId": "10000049",
+      "name": "바삭고소닭껍질튀김세트(닭껍질튀김+로제떡뽂이+맛감자튀김)",
+      "description": "바삭고소 닭껍질튀김+ 후루록로제 떡뽂이+맛감자튀김",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/2f0ddaaf-27d3-4ec5-901e-a11198bffc43.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000064",
+      "sourceMenuId": "10000064",
+      "name": "매운바베큐닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000074",
+      "sourceMenuId": "10000074",
+      "name": "통큰 치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/d0e05433-88ab-4bce-971a-56e5434e41ac.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000065",
+      "sourceMenuId": "10000065",
+      "name": "크림머스타닭껍질튀김",
+      "description": "",
+      "category": "바삭~ 고소~닭껍질튀김",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000075",
+      "sourceMenuId": "10000075",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/958abd0b-31bf-42c0-a64a-ab0474339f20.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000076",
+      "sourceMenuId": "10000076",
+      "name": "고소바삭~맛감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/eddaf9b9-29cc-4387-970d-2d73d81d9c54.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000077",
+      "sourceMenuId": "10000077",
+      "name": "데운 햇반",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg"
+    },
+    {
+      "id": "ddangyo-1202229-10000078",
+      "sourceMenuId": "10000078",
+      "name": "코카콜라1.25L 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000079",
+      "sourceMenuId": "10000079",
+      "name": "생수 대",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000080",
+      "sourceMenuId": "10000080",
+      "name": "닭껍질튀김300그램(100그램덤)+3종소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000081",
+      "sourceMenuId": "10000081",
+      "name": "쥬시쿨파인(유산균함유)180ml",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000082",
+      "sourceMenuId": "10000082",
+      "name": "단무지 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1202229-10000083",
+      "sourceMenuId": "10000083",
+      "name": "고소바삭맛감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/eddaf9b9-29cc-4387-970d-2d73d81d9c54.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

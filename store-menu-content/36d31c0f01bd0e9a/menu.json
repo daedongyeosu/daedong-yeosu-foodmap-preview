@@ -1,0 +1,271 @@
+{
+  "storeId": "36d31c0f01bd0e9a",
+  "storeName": "닭씨네 닭강정 여수점",
+  "displayName": "닭씨네 닭강정 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/538eb125-5312-42dc-bcfd-85134f3a8ed1.jpg",
+  "categories": [
+    "전체",
+    "닭씨네 닭강정",
+    "사이드메뉴",
+    "음료",
+    "소스 추가",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1164372-10000001",
+      "sourceMenuId": "10000001",
+      "name": "닭강정(12개중/택1)+콜라500ml",
+      "description": "치킨무X 미포함 닭강정(한박스1.5인분)+ 콜라500ml 특대 (3~4인분)",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9cd89a05-a25f-4816-9b39-d37122b4c72f.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000004",
+      "sourceMenuId": "10000004",
+      "name": "닭씨네 특대 (반/반) +콜라500ml",
+      "description": "두가지 맛선택 [치킨무 X미포함]",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/a49faab1-b0fb-49da-a283-e9f98ced384f.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000007",
+      "sourceMenuId": "10000007",
+      "name": "슈프림 순살양념치킨 +콜라500ml",
+      "description": "슈프림순살 양념+ 콜라500ml 치킨무X",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c2ba9449-1b95-42b9-aba7-a8ac02cebf7e.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000003",
+      "sourceMenuId": "10000003",
+      "name": "닭강정 2박스+콜라pt",
+      "description": "닭강정2박스+콜라pt (치킨무X미포함)",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/03ad8a60-bf09-4d9d-879b-12eb590642c3.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000011",
+      "sourceMenuId": "10000011",
+      "name": "감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/7e5e01e4-2f2a-4e2b-bd3e-c84639e3d7a6.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000018",
+      "sourceMenuId": "10000018",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000022",
+      "sourceMenuId": "10000022",
+      "name": "양념소스",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1164372-10000002",
+      "sourceMenuId": "10000002",
+      "name": "닭씨네셋트+ 콜라500ml",
+      "description": "닭강정+사이드메뉴(택1)+콜라500ml",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/bf50f4d6-64d7-447f-8502-3558859e7fa7.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000012",
+      "sourceMenuId": "10000012",
+      "name": "크림치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/d0e05433-88ab-4bce-971a-56e5434e41ac.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000019",
+      "sourceMenuId": "10000019",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000023",
+      "sourceMenuId": "10000023",
+      "name": "치즈 머스타드",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-90000002",
+      "sourceMenuId": "90000002",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1164372-10000013",
+      "sourceMenuId": "10000013",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/35afa4e9-5fd8-495a-a08e-c1647fcf27d5.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000020",
+      "sourceMenuId": "10000020",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000024",
+      "sourceMenuId": "10000024",
+      "name": "치폴레 소스",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1164372-10000014",
+      "sourceMenuId": "10000014",
+      "name": "김말이튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f792c40c-7184-4c33-87dc-74fb85d34364.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000021",
+      "sourceMenuId": "10000021",
+      "name": "콜라PT",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000025",
+      "sourceMenuId": "10000025",
+      "name": "바베큐소스(순한맛)",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-90000004",
+      "sourceMenuId": "90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1164372-10000005",
+      "sourceMenuId": "10000005",
+      "name": "치즈크림 닭강정+콜라500ml",
+      "description": "닭강정+ 콜라 (치킨무X)",
+      "category": "닭씨네 닭강정",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000015",
+      "sourceMenuId": "10000015",
+      "name": "즉석밥(조리)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000026",
+      "sourceMenuId": "10000026",
+      "name": "바베큐소스(매운맛)",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000006",
+      "sourceMenuId": "10000006",
+      "name": "치폴레 닭강정+콜라500ml",
+      "description": "양념강정에 매콤소스와달콤한치즈머스타드 토핑( 치킨무X)",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/37723bda-5633-42fc-979f-2d6f2a8f91f1.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000016",
+      "sourceMenuId": "10000016",
+      "name": "케찹마요 샐러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000027",
+      "sourceMenuId": "10000027",
+      "name": "치킨무추가",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000028",
+      "sourceMenuId": "10000028",
+      "name": "슈프림 소스",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164372-10000008",
+      "sourceMenuId": "10000008",
+      "name": "순살 양념치킨 +콜라500ml",
+      "description": "치킨+콜라500ml(치킨무X)",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9cd89a05-a25f-4816-9b39-d37122b4c72f.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000009",
+      "sourceMenuId": "10000009",
+      "name": "매콤달콤 간장치킨 +콜라500ml",
+      "description": "닭강정+콜라 (치킨무X)",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/236bab00-92f2-4796-b876-53d06b95ba62.jpg"
+    },
+    {
+      "id": "ddangyo-1164372-10000010",
+      "sourceMenuId": "10000010",
+      "name": "눈꽃치킨 (치즈맛) +콜라500ml",
+      "description": "바삭한 순살치킨에 골드스노윙치즈맛 시즈닝이듬뿍",
+      "category": "닭씨네 닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7a208a39-3e07-45f2-83f9-818656d3ed4d.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

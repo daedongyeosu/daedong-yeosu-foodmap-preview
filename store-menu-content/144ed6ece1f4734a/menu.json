@@ -1,0 +1,300 @@
+{
+  "storeId": "144ed6ece1f4734a",
+  "storeName": "여수팥빙수",
+  "displayName": "여수팥빙수",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/32ea6d42-2a61-4809-b697-f980493bc550.jpg",
+  "categories": [
+    "전체",
+    "프리미엄 빙수",
+    "요거트 & 스무디",
+    "생과일 주스 & 라떼",
+    "수제 디저트",
+    "커피메뉴",
+    "케익"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1296869-10000001",
+      "sourceMenuId": "10000001",
+      "name": "여수 수제 팥빙수",
+      "description": "",
+      "category": "프리미엄 빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/525bbc23-12a4-4e91-aba1-86c7e54757a8.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000005",
+      "sourceMenuId": "10000005",
+      "name": "프리미엄 생과일 빙수",
+      "description": "",
+      "category": "프리미엄 빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0fb681d4-ff15-46b6-9cd3-fa34132b8594.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000015",
+      "sourceMenuId": "10000015",
+      "name": "딸기요거트 스무디",
+      "description": "",
+      "category": "요거트 & 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d323ec33-add6-45da-b37e-7399f75ba808.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000010",
+      "sourceMenuId": "10000010",
+      "name": "딸기주스",
+      "description": "",
+      "category": "생과일 주스 & 라떼",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000022",
+      "sourceMenuId": "10000022",
+      "name": "오늘만든 딸기모찌",
+      "description": "",
+      "category": "수제 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0d6aff16-12d2-43b1-b945-3e3d6373db43.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000008",
+      "sourceMenuId": "10000008",
+      "name": "아메리카노",
+      "description": "",
+      "category": "커피메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/dfc6ac08-71d8-4b96-bc17-091c15d0d6d9.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000027",
+      "sourceMenuId": "10000027",
+      "name": "초코",
+      "description": "달콤한 케익이 생각날때",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/061f58bc-50ee-4963-a88f-757ec758d052.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000009",
+      "sourceMenuId": "10000009",
+      "name": "카페라떼",
+      "description": "",
+      "category": "커피메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/4d3c3850-d3e5-48c7-a7e0-652c9b6aa7b7.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000002",
+      "sourceMenuId": "10000002",
+      "name": "리얼 망고 빙수",
+      "description": "",
+      "category": "프리미엄 빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/42abced2-e489-4cd5-870b-4b0f0004797d.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000016",
+      "sourceMenuId": "10000016",
+      "name": "블루베리요거트 스무디",
+      "description": "",
+      "category": "요거트 & 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/838e442b-4861-41fc-b9cf-ee29b7beb691.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000028",
+      "sourceMenuId": "10000028",
+      "name": "산딸기",
+      "description": "산딸기맛 새콤달콤",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/42c206fb-7a05-4a83-963c-08f90e819302.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000012",
+      "sourceMenuId": "10000012",
+      "name": "망고주스",
+      "description": "",
+      "category": "생과일 주스 & 라떼",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000017",
+      "sourceMenuId": "10000017",
+      "name": "망고요거트 스무디",
+      "description": "",
+      "category": "요거트 & 스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000029",
+      "sourceMenuId": "10000029",
+      "name": "쿠키앤크림",
+      "description": "달달한케익",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/68391006-ab4a-4714-9e7f-f53e73d181da.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000004",
+      "sourceMenuId": "10000004",
+      "name": "생딸기 빙수",
+      "description": "",
+      "category": "프리미엄 빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f735116a-6887-40cf-bbda-ce6fb12992dc.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000013",
+      "sourceMenuId": "10000013",
+      "name": "딸기라떼",
+      "description": "",
+      "category": "생과일 주스 & 라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/e16c1bac-1832-4a8b-9783-e2f8457ff9ac.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000018",
+      "sourceMenuId": "10000018",
+      "name": "딸기 스무디",
+      "description": "",
+      "category": "요거트 & 스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000030",
+      "sourceMenuId": "10000030",
+      "name": "티라미수",
+      "description": "초코와 달달함",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/d9d28145-a7cf-4323-bf2a-6c3831c02ff3.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000019",
+      "sourceMenuId": "10000019",
+      "name": "블루베리 스무디",
+      "description": "",
+      "category": "요거트 & 스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000014",
+      "sourceMenuId": "10000014",
+      "name": "블루베리라떼",
+      "description": "",
+      "category": "생과일 주스 & 라떼",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000031",
+      "sourceMenuId": "10000031",
+      "name": "말차",
+      "description": "녹차맛 케익",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2d56ff7a-6d89-454f-9dbf-e0ef954c04fc.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000020",
+      "sourceMenuId": "10000020",
+      "name": "딸기 에이드",
+      "description": "",
+      "category": "요거트 & 스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000032",
+      "sourceMenuId": "10000032",
+      "name": "원형 쿠키앤크림",
+      "description": "초코과자맛 케익",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/1d66824b-c600-46ab-a1cf-6db1dda95e75.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000034",
+      "sourceMenuId": "10000034",
+      "name": "두바이쫀득쿠키(두쫀쿠)",
+      "description": "",
+      "category": "수제 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/13276f5d-8a83-4f59-86de-5eeb154ab48d.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000007",
+      "sourceMenuId": "10000007",
+      "name": "초코빙수",
+      "description": "",
+      "category": "프리미엄 빙수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000021",
+      "sourceMenuId": "10000021",
+      "name": "블루베리 에이드",
+      "description": "",
+      "category": "요거트 & 스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000033",
+      "sourceMenuId": "10000033",
+      "name": "원형 초코케익",
+      "description": "초코맛 케익",
+      "category": "케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296869-10000035",
+      "sourceMenuId": "10000035",
+      "name": "무지개케잌",
+      "description": "",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/ed1e4056-7b16-4ad6-af34-393dceebf5ce.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000036",
+      "sourceMenuId": "10000036",
+      "name": "두쫀쿠빙수(두쫀쿠가득)",
+      "description": "두쫀쿠 초코렛. 코코아가루 초코시",
+      "category": "프리미엄 빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/7c3bb5f3-f9d0-4b5c-ab4b-d32942b8eacb.jpeg"
+    },
+    {
+      "id": "ddangyo-1296869-10000037",
+      "sourceMenuId": "10000037",
+      "name": "여수팥빙수+딸기모",
+      "description": "",
+      "category": "프리미엄 빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c098b463-f323-4d91-b595-6d993b98c116.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000038",
+      "sourceMenuId": "10000038",
+      "name": "꿀꿀바 마카롱",
+      "description": "",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/dda0c5b1-afa6-47df-9c80-ed134f03a5a5.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000039",
+      "sourceMenuId": "10000039",
+      "name": "딸기 마카롱",
+      "description": "",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/07872d47-38e7-4012-9500-9a61b91e5de5.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000040",
+      "sourceMenuId": "10000040",
+      "name": "초코바닐라 마카",
+      "description": "",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/b6d26d83-6ada-4294-bb42-9ea355b76aae.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000041",
+      "sourceMenuId": "10000041",
+      "name": "블루베리머핀",
+      "description": "",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/c339a52a-f56f-4060-9cac-3c0f79dce757.jpg"
+    },
+    {
+      "id": "ddangyo-1296869-10000042",
+      "sourceMenuId": "10000042",
+      "name": "오리지날 번",
+      "description": "",
+      "category": "케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/9102b0c4-f26b-4564-a27b-caecdf376b7f.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

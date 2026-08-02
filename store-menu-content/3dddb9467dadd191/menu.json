@@ -1,0 +1,1018 @@
+{
+  "storeId": "3dddb9467dadd191",
+  "storeName": "디저트39 웅천점",
+  "displayName": "디저트39 웅천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/e0ea446f-60c8-42a9-b7c5-c867f6325ef8.jpg",
+  "categories": [
+    "전체",
+    "제로칼로리&저칼로리(인기슬림음료)",
+    "신메뉴 & 베스트메뉴",
+    "식사대용&Fresh",
+    "커피",
+    "논커피",
+    "스무디&프라페",
+    "프로틴음료",
+    "음료",
+    "디저트&케익",
+    "아르기닌 건강 스무디",
+    "과일티블랜딩&에이드",
+    "홈 시네마 추천 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1163760-10000030",
+      "sourceMenuId": "10000030",
+      "name": "슬림 딸기 요거트 라떼",
+      "description": "[제로칼로리 시럽 사용 다이어트 음료]새콤달콤한 딸기의 톡톡 씹히는 식감에 상큼한 요거트의 풍미를 더한 라떼를 저칼로리 원재료로 더욱 가볍게 즐기실 수 있는 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/b02344b0-6b23-4b51-b112-2cfee345f4c5.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000018",
+      "sourceMenuId": "10000018",
+      "name": "제로칼로리 청사과 캐모마일티(제로당음료)",
+      "description": "[제로칼로리 청사과 베이스 사용 다이어트 음료] 향긋한 캐모마일 티에 디저트39만의 설탕 무첨가 청사과 베이스를 더해 칼로리와 당 부담 없이 가볍고 상큼하게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f7283976-ee7c-4a99-8288-4b76af686a18.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000034",
+      "sourceMenuId": "10000034",
+      "name": "슬림 타로 JMT",
+      "description": "[제로칼로리 시럽 사용 다이어트 음료]진하고 달달한 타로 라떼를 저칼로리 원재료로 더욱 가볍게 즐길 수 있는 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/9aafe2a8-e78f-4069-a3a5-2d2e24eff43b.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000001",
+      "sourceMenuId": "10000001",
+      "name": "(제로당음료) 저칼로리 청포도 탄산수",
+      "description": "[제로당&저칼로리 다이어트 음료]디저트39만의 설탕무첨가 청포도베이스에 0칼로리 탄산수를 더해 저칼로리로 상큼하고 가볍게 즐길 수 있는 에이드 입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000053",
+      "sourceMenuId": "10000053",
+      "name": "(제로당음료)제로칼로리 애사비 청사과 탄산수",
+      "description": "[제로칼로리&제로당 다이어트 음료] 다이어트와 혈당관리, 그리고 변비에 도움을 주는 프랑스산 100% 애사비(애플사이다비네거)에 디저트39만의 설탕무첨가 청사과 베이스를 더해 0칼로리로 가볍게 즐길 수 있는 설탕무첨가 탄산음료입니다.",
+      "category": "신메뉴 & 베스트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000068",
+      "sourceMenuId": "10000068",
+      "name": "플레인 베이글",
+      "description": "[베이글]정통 방식으로 만들어 겉은 쫄깃하고 속은 부드러운 기본 베이글",
+      "category": "식사대용&Fresh",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/e9394ffe-94d7-4de0-918c-eef7b513a511.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000126",
+      "sourceMenuId": "10000126",
+      "name": "아메리카노",
+      "description": "[아메리카노]브라질, 콜롬비아, 에티오피아 아라비카 원두를 블렌딩해 깊은 맛과 풍부한 향을 제공하며 가성비와 가심비를 동시에 만족시키는 대용량 아메리카노",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/9f10dc75-f3f0-455c-b592-bfba5600c22c.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000140",
+      "sourceMenuId": "10000140",
+      "name": "바나나 우유 라떼",
+      "description": "달콤하고 진한 바나나 라떼에 바나나 과자까지 어우러진 대용량 음료",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000194",
+      "sourceMenuId": "10000194",
+      "name": "망고 스무디",
+      "description": "비타민이 풍부하게 함유되어 있어 피부관리에 탁월한 망고 특유의 달콤함을 극대화시켜 시원하게 맛볼 수 있는 망고 스무디",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/663d4acf-c63b-4991-aa5d-b8d011f22651.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000204",
+      "sourceMenuId": "10000204",
+      "name": "정말 맛있는 프로틴 바나나라떼",
+      "description": "인기메뉴 바나나라떼의 진하고 달콤한 맛으로 단백질을 맛있게 섭취할 수 있는 정말 맛있는 프로틴 바나나라떼",
+      "category": "프로틴음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000213",
+      "sourceMenuId": "10000213",
+      "name": "청포도 스무디",
+      "description": "아르기닌 1,500mg 함량 기준 청량한 청포도에 피로 회복을 도와주는 아르기닌을 함께 넣어 시원함과 건강함 그리고 코코넛 젤리의 식감까지 즐길 수 있는 스무디 음료입니다.",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9187ed46-a989-4796-a491-5a3441405cac.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000263",
+      "sourceMenuId": "10000263",
+      "name": "오리지널 도쿄롤 S",
+      "description": "100% 동물성 생크림 사용 촉촉하고 부드러운 시트에 달지 않고 담백한 우유 크림을 넣어 고급스러움을 자랑하는 오리지널 도쿄롤입니다. 항상 사랑받고 있는 스테디셀러 프리미엄 디저트입니다.",
+      "category": "디저트&케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/cf3d7dd2-d0d7-476e-935d-400db9437801.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000305",
+      "sourceMenuId": "10000305",
+      "name": "아르기닌 베리베리 스무디",
+      "description": "딸기 + 라즈베리 + 크랜베리 + 블루베리 슈퍼푸드 베리들 총집합 몸에좋고 피부에도좋은 베리베리 스무디",
+      "category": "아르기닌 건강 스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000002",
+      "sourceMenuId": "10000002",
+      "name": "제로칼로리 청포도 캐모마일 티 (제로당음료)",
+      "description": "[제로당 제로칼로리 다이어트 음료] 디저트39만의 설탕무첨가 청포도베이스에 향긋한 캐모마일티를 더해 가볍게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000054",
+      "sourceMenuId": "10000054",
+      "name": "(제로당음료)제로칼로리 애사비 복숭아아이스티 탄산수",
+      "description": "[제로칼로리&제로당 다이어트 음료] 다이어트와 혈당관리, 그리고 변비에 도움을 주는 프랑스산 100% 애사비(애플사이다비네거)에 디저트39만의 제로칼로리 복숭아아이스티를 더해 0칼로리로 가볍게 즐길 수 있는 설탕무첨가 탄산음료입니다.",
+      "category": "신메뉴 & 베스트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000069",
+      "sourceMenuId": "10000069",
+      "name": "무화과 베이글",
+      "description": "[베이글]무화과와 호두를 넣어 달콤하고 부드러운 무화과 베이글",
+      "category": "식사대용&Fresh",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f86fa92c-a9e3-4eeb-ab7d-4be8fff001a7.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000127",
+      "sourceMenuId": "10000127",
+      "name": "카푸치노",
+      "description": "[카푸치노]진한 에스프레소와 크리미한 우유, 그리고 풍성한 우유 거품이 완벽한 조화를 이루어 부드러움 식감과 깊은 커피맛을 느낄 수 있는 카푸치노",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/3f43fec7-76a1-48eb-8572-957cb9c94448.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000195",
+      "sourceMenuId": "10000195",
+      "name": "딸기 스무디",
+      "description": "비타민C가 풍부하고 항산화작용이 뛰어난 새콤달콤한 딸기의 과육을 시원하게 즐기는 딸기 스무디",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b6384347-f624-4625-a809-d4d4efd2768f.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000205",
+      "sourceMenuId": "10000205",
+      "name": "정말 맛있는 프로틴 17곡 선식",
+      "description": "고소하고 든든한 17곡 오트밀라떼로 단백질을 맛있게 섭취할 수 있는 정말 맛있는 프로틴 17곡 선식",
+      "category": "프로틴음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000264",
+      "sourceMenuId": "10000264",
+      "name": "화이트초코 도쿄롤 S",
+      "description": "100% 동물성 생크림 사용 카카오가 함유된 시트와 우유크림의 조화가 인상적인 화이트 초코 도쿄롤입니다. 단맛을 좋아하는 누구나 사랑할 수 밖에 없는 프리미엄 디저트입니다.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000306",
+      "sourceMenuId": "10000306",
+      "name": "아르기닌 망고 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/663d4acf-c63b-4991-aa5d-b8d011f22651.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000003",
+      "sourceMenuId": "10000003",
+      "name": "(저당음료) 라이트 슬림 망고 라떼",
+      "description": "[저당음료] 디저트39만의 설탕무첨가 망고베이스에 진짜 망고를 넣어 달콤하게 가볍게 즐길 수 있는 저당 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/23044ad3-643b-49ca-842a-da4e0f51db15.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000070",
+      "sourceMenuId": "10000070",
+      "name": "치즈 베이글",
+      "description": "[베이글]짭짜름한 치즈와 할라피뇨의 조화가 어우러진 풍미 가득 치즈 베이글",
+      "category": "식사대용&Fresh",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/ba0b15eb-95da-4fa1-9449-0a1d8d1dae92.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000128",
+      "sourceMenuId": "10000128",
+      "name": "카페라떼",
+      "description": "[카페라떼]진한 에스프레소에 크리미한 우유를 더해 고소하고 부드러운 맛을 느낄 수 있는 카페라떼",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/b0bd3e14-a442-4384-b579-274319e322c1.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000142",
+      "sourceMenuId": "10000142",
+      "name": "블루베리 JMT",
+      "description": "슈퍼푸드 블루베리의 새콤달콤한 맛을 그대로 느낄수 있는 블루베리 JMT",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000206",
+      "sourceMenuId": "10000206",
+      "name": "정말 맛있는 프로틴 돌체라떼",
+      "description": "부드럽고 달콤한 연유와 커피의 깊은 풍미로 단백질을 맛있게 섭취할 수 있는 정말 맛있는 프로틴 돌체라떼",
+      "category": "프로틴음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000265",
+      "sourceMenuId": "10000265",
+      "name": "녹차 도쿄롤 S",
+      "description": "100% 동물성 생크림 사용 일본식 맛차를 함유한 시트와 우유크림의 조화가 이색적인 녹차 도쿄롤입니다. 녹차 특유의 씁쓸한 첫 느낌과 먹을수록 깊어지는 맛은 결코 질리지 않는 트렌디 셀러 디저트입니다.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000307",
+      "sourceMenuId": "10000307",
+      "name": "아르기닌 딸기 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b6384347-f624-4625-a809-d4d4efd2768f.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000004",
+      "sourceMenuId": "10000004",
+      "name": "비타2000 저칼로리 망고 블랜딩(제로당)",
+      "description": "[제로당&저칼로리 다이어트 음료] 디저트39만의 설탕무첨가 망고베이스에 하루 권장 비타민을 더해 가볍게 즐길 수 있는 제로당 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000129",
+      "sourceMenuId": "10000129",
+      "name": "카라멜 마끼아또",
+      "description": "[카라멜 마끼아또]달콤한 향의 커피와 함께 거품 위의 카라멜 향을 은은하게 즐길수 있습니다.",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/113580f3-39ca-4cf2-9d3e-045fcd6462b7.JPG"
+    },
+    {
+      "id": "ddangyo-1163760-10000143",
+      "sourceMenuId": "10000143",
+      "name": "초코 퐁 라떼",
+      "description": "찐한 초코와 조리퐁까지 한번에 즐길수 있는 초코 퐁 라떼",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/9043f541-4ea8-466e-8603-ef8ecf4bf456.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000197",
+      "sourceMenuId": "10000197",
+      "name": "망고 요거트 스무디",
+      "description": "달콤한 망고가 들어간 유산균이 풍부한 요거트 음료로, 망고의 진한 달콤함과 요거트의 상큼함이 조화를 이루는 망고 요거트 스무디",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/529e6e7b-8bcb-4094-b393-50694ea1cf3e.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000207",
+      "sourceMenuId": "10000207",
+      "name": "정말 맛있는 프로틴 타로 JMT",
+      "description": "디저트39만의 달달하고 구수한 타로 JMT로 단백질을 맛있게 섭취할 수 있는 정말 맛있는 프로틴 타로 JMT",
+      "category": "프로틴음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000216",
+      "sourceMenuId": "10000216",
+      "name": "플레인 요거트 스무디",
+      "description": "아르기닌 1,500mg 함량 기준 상큼하고 달콤한 요거트에 피로 회복을 도와주는 아르기닌을 함께 넣어 시원하고 건강하게 즐길 수 있는 스무디 음료입니다.",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9377af3c-977e-454b-bc8a-1569a02e9e58.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000266",
+      "sourceMenuId": "10000266",
+      "name": "망고 도쿄롤 S",
+      "description": "100% 동물성 생크림 사용 열대과일 망고를 넣어 향긋한 풍미를 자랑하는 망고 도쿄롤입니다. 망고 특유의 상큼함을 맛볼 수 있는 프리미엄 디저트입니다.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000308",
+      "sourceMenuId": "10000308",
+      "name": "아르기닌 청포도 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000005",
+      "sourceMenuId": "10000005",
+      "name": "(제로당음료) 저칼로리 망고 캐모마일티",
+      "description": "[제로당&저칼로리 음료] 디저트39만의 설탕무첨가 망고베이스에 향긋한 캐모마일티를 더해 가볍게 즐길 수 있는 제로당 티블랜딩 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000130",
+      "sourceMenuId": "10000130",
+      "name": "돌체라떼",
+      "description": "[돌체라떼]부드러운 돌체라떼를 시원하게 즐기는 메뉴. 달콤한 연유를 베이스로 우유와 에스프레소가 조화를 이뤄 더욱 풍부한 커피 맛을 즐기실 수 있는 돌체라떼 아이스 입니다.",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7d8c3c10-9096-42c9-be51-5701d990fb68.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000144",
+      "sourceMenuId": "10000144",
+      "name": "흑당 퐁 라떼",
+      "description": "달콤한 흑당에 조리퐁이 퐁당 흑당 퐁 라떼",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e57f6d75-3b49-4604-b4b2-ec8b9d3f7d06.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000168",
+      "sourceMenuId": "10000168",
+      "name": "복숭아 아이스티 코코넛젤리",
+      "description": "달달하고 시원한 복숭아 아이스티를 코코넛 젤리와 함께 즐길 수 있는 복숭아 아이스티 코코넛젤리",
+      "category": "과일티블랜딩&에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000217",
+      "sourceMenuId": "10000217",
+      "name": "딸기 요거트 스무디",
+      "description": "아르기닌 1,500mg 함량 기준 새콤달콤한 딸기와 상큼한 요거트에 피로 회복을 도와주는 아르기닌을 함께 넣어 시원하고 건강하게 즐길 수 있는 스무디 음료입니다.",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/dc7ff3fb-0079-46d0-b3b4-909371a41dc5.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000267",
+      "sourceMenuId": "10000267",
+      "name": "자색고구마 도쿄롤 S",
+      "description": "[자색 고구마 도쿄롤]촉촉한 시트 속을 가득 채운 고구마 우유크림은 담백하고 고급스러운 단맛과 함께 최상의 부드러움을 전달합니다. 먹음직스러운 자색빛 시트 속 알알이 박혀있는 리얼 고구마의 달콤한 식감을 지금 바로 느껴보세요.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000309",
+      "sourceMenuId": "10000309",
+      "name": "아르기닌 청포도 요거트 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/cc8bd8f4-da17-4a41-8867-873b48adb587.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000006",
+      "sourceMenuId": "10000006",
+      "name": "(저당음료) 제로슈거 바닐라라떼",
+      "description": "[저당음료] 저지방우유와 제로슈가 바닐라 시럽을 사용하여 바닐라라떼의 달콤함과 고소함은 그대로 살리고 칼로리와 당 부담은 낮춘 노슈가 바닐라라떼입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/92fe5adb-3554-4889-ab1e-952d69f3c29a.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000073",
+      "sourceMenuId": "10000073",
+      "name": "소프트 플레인 스콘",
+      "description": "[스콘]우유버터의 고소하고 담백한 맛을 느낄수 있는 부드러운 소프트 플레인 스콘(딸기잼 제공)",
+      "category": "식사대용&Fresh",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/a456850a-1f40-4d2d-977b-ec2c079f6534.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000131",
+      "sourceMenuId": "10000131",
+      "name": "카페모카",
+      "description": "[카페모카]진한 에스프레소와 우유에 다크초코릿이 들어가 묵직하고 진한 초콜릿 향이 일품인 카페모카",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/f823c392-b502-4ffd-9946-772ae5c1760e.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000145",
+      "sourceMenuId": "10000145",
+      "name": "흑당 밀크티",
+      "description": "홍차의 향긋함과 흑당의 달콤함이 더해진 흑당 밀크티",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/e9d8cdb1-2811-4f51-8650-03b0fdc616b0.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000169",
+      "sourceMenuId": "10000169",
+      "name": "유자티",
+      "description": "감기 예방 및 면역력 강화에 탁월한 상큼한 유자를 따뜻하게 즐기실 수 있는 유자티",
+      "category": "과일티블랜딩&에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/a161ccca-c4a1-4b80-9132-09ceab773d21.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000199",
+      "sourceMenuId": "10000199",
+      "name": "블루베리 요거트 스무디",
+      "description": "상큼하고 달콤한 블루베리와 요거트를 시원하게 즐길 수 있는 스무디 음료입니다.",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0c00098d-77d6-4497-aa83-a57a7bf8054a.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000209",
+      "sourceMenuId": "10000209",
+      "name": "정말 맛있는 흑임자 프로틴 쉐이크",
+      "description": "[댤걀8개분량]]1일 단백질 섭취 권장량을 맛있게 섭취할 수 있도록 고소한 흑임자를 넣은 정말 맛있는 흑임자 프로틴 쉐이크",
+      "category": "프로틴음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000310",
+      "sourceMenuId": "10000310",
+      "name": "아르기닌 블루베리 요거트 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0c00098d-77d6-4497-aa83-a57a7bf8054a.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000132",
+      "sourceMenuId": "10000132",
+      "name": "바닐라 라떼",
+      "description": "[바닐라라떼]고소한 카페 라떼에 바닐라향 시럽을 첨가한 커피로 진한 바닐라 향과 함께 달콤하게 즐기는 바닐라 라떼",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/92fe5adb-3554-4889-ab1e-952d69f3c29a.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000146",
+      "sourceMenuId": "10000146",
+      "name": "밀크티 라떼",
+      "description": "풍미 깊은 우유에 깊게 우러난 향긋한 로열 홍차가 더해져 부드럽고 진한 맛의 따뜻한 밀크티 라떼",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/2567f31e-3989-4c97-9e77-71161a66e5bc.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000170",
+      "sourceMenuId": "10000170",
+      "name": "실론 블랙퍼스트",
+      "description": "정신을 맑게 해주는 쌉사름한 매력의 블랙퍼스트 홍차 티인 실론 블랙퍼스트",
+      "category": "과일티블랜딩&에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000210",
+      "sourceMenuId": "10000210",
+      "name": "정말 맛있는 프로틴 바닐라라떼",
+      "description": "달콤하고 진한 바닐라와 커피의 깊은 풍미로 단백질을 맛있게 섭취할 수 있는 정말 맛있는 프로틴 바닐라라떼",
+      "category": "프로틴음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/6ed7cf56-bd44-4bc8-ae3e-fa16ff80b6db.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000311",
+      "sourceMenuId": "10000311",
+      "name": "아르기닌 망고 요거트 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/529e6e7b-8bcb-4094-b393-50694ea1cf3e.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000008",
+      "sourceMenuId": "10000008",
+      "name": "(제로당음료) 제로칼로리 레몬티",
+      "description": "[제로당&제로칼로리 다이어트 음료] 비타민C가 풍부하여 피로회복과 항산화작용에 탁월한 새콤한 레몬을 디저트39만의 설탕무첨가 레몬베이스로 가볍게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000047",
+      "sourceMenuId": "10000047",
+      "name": "추억의 학교 앞 떡볶이",
+      "description": "부산 어묵과 쫄깃한 떡의 식감이 돋보이며, 매콤달달한 삼구만의 특제 소스가 잘 배어든 학교 앞 추억의 떡볶이",
+      "category": "홈 시네마 추천 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/556904d7-701a-42d6-950b-e53bbe662f75.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000133",
+      "sourceMenuId": "10000133",
+      "name": "콜드브루",
+      "description": "[콜드브루]깊은 풍미의 디저트39 특제 콜드브루를 즐길 수 있는 콜드브루",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/367dd387-13af-41d2-af5b-0d375fc4c122.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000171",
+      "sourceMenuId": "10000171",
+      "name": "히비스커스티",
+      "description": "클레오파트라가 즐겨마시던 차로 알려진 히비스커스티는 다양한 비타민 성분이 함유되어 있습니다.",
+      "category": "과일티블랜딩&에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/cd01c8eb-015b-48bb-bc15-039a1e670709.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000201",
+      "sourceMenuId": "10000201",
+      "name": "자바칩 프라페",
+      "description": "진한 초코향과 함께 오독오독 씹히는 초코칩이 듬뿍 들어있는 자바칩 프라페",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/2a2bf21c-46e9-44a8-bc62-dcfa4acfd355.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000211",
+      "sourceMenuId": "10000211",
+      "name": "정말 맛있는 프로틴 코코넛라떼",
+      "description": "향긋하고 달달한 코코넛이 들어가 단백질을 맛있게 섭취할 수 있는 정말 맛있는 프로틴 코코넛라떼",
+      "category": "프로틴음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/2d48dded-8691-4f27-bac3-6b797fc1dab0.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000312",
+      "sourceMenuId": "10000312",
+      "name": "아르기닌 딸기요거트 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/5e96c2f6-7695-4d30-a9b9-eef521733df8.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000076",
+      "sourceMenuId": "10000076",
+      "name": "소프트 얼그레이 스콘",
+      "description": "[스콘]얼그레이의 향긋함과 쌉싸름한 홍차의 진한 맛을 느낄 수 있는 소프트 얼그레이 스콘(딸기잼 제공)",
+      "category": "식사대용&Fresh",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000134",
+      "sourceMenuId": "10000134",
+      "name": "돌체 콜드브루 라떼",
+      "description": "[돌체 콜드브루 라떼]부드럽고 달콤한 연유와 깊은 풍미의 디저트39 특제 콜드브루가 만나 매력적인 맛이 나는 돌체 콜드브루 라떼",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/e32f71da-b4ec-45f1-a5f5-b682991a6fdf.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000148",
+      "sourceMenuId": "10000148",
+      "name": "망고 라떼",
+      "description": "진짜 망고가 들어가 더 향긋하고, 달콤한 망고 라떼",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/23044ad3-643b-49ca-842a-da4e0f51db15.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000172",
+      "sourceMenuId": "10000172",
+      "name": "캐모마일티",
+      "description": "심신안정 및 숙면에 탁월한 향긋한 허브티 캐모마일 입니다.",
+      "category": "과일티블랜딩&에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/d8a0793d-9569-4edb-a17f-1091e20d59af.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000202",
+      "sourceMenuId": "10000202",
+      "name": "딸기크림 프라페",
+      "description": "부드러운 크림 맛의 스무디와 새콤달콤한 딸기 과육이 듬뿍 들어가 씹는맛이 살아있는 딸기크림 프라페",
+      "category": "스무디&프라페",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a2046caa-46b0-4b80-9b90-2fef44543b59.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000212",
+      "sourceMenuId": "10000212",
+      "name": "정말 맛있는 자바칩 프로틴 쉐이크",
+      "description": "[댤걀8개분량]]1일 단백질 섭취 권장량을 맛있게 섭취할 수 있도록 진한 자바칩을 넣은 프로틴 쉐이크 음료입니다.",
+      "category": "프로틴음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ff5d6086-52d4-426f-94ec-46dd5b7dc0a9.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000313",
+      "sourceMenuId": "10000313",
+      "name": "아르기닌 깔라만시 요거트 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000010",
+      "sourceMenuId": "10000010",
+      "name": "(제로당음료) 제로칼로리 레몬 탄산수",
+      "description": "[제로당&제로칼로리 다이어트 음료] 디저트39만의 설탕무첨가 레몬베이스에 0칼로리 탄산수를 더해 상큼하고 가볍게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000135",
+      "sourceMenuId": "10000135",
+      "name": "바닐라크림 콜드브루",
+      "description": "[바닐라 크림 콜드브루]깊은 풍미의 디저트39 특제 콜드브루에 바닐라 크림이 더해져 달콤하고 부드러운 바닐라크림 콜드브루",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0bc4ff4a-895b-4e0b-92a5-e3bf74cca57f.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000149",
+      "sourceMenuId": "10000149",
+      "name": "딸기 라떼",
+      "description": "직접 만든 딸기청을 듬뿍 넣어 더욱 달콤하게 즐길 수 있는 프리미엄 딸기라떼",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/7306678e-c3c4-41e4-99ff-1f1997a16311.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000203",
+      "sourceMenuId": "10000203",
+      "name": "하와이안 코코넛 프라페",
+      "description": "달콤한 코코넛의 맛을 극대화한 프라페 입니다. 고소하게 씹히는 코코넛 플레이크와 함께 휴양지의 fresh함을 느낄 수 있는 화와이안 코코넛 프라페",
+      "category": "스무디&프라페",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000314",
+      "sourceMenuId": "10000314",
+      "name": "아르기닌 플레인요거트 스무디",
+      "description": "",
+      "category": "아르기닌 건강 스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9377af3c-977e-454b-bc8a-1569a02e9e58.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000011",
+      "sourceMenuId": "10000011",
+      "name": "(제로당음료) 제로칼로리 레몬 블랙티",
+      "description": "[제로당&제로칼로리 다이어트 음료] 디저트39만의 설탕무첨가 레몬베이스에 진하게 우린 블랙티를 더해 가볍게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000136",
+      "sourceMenuId": "10000136",
+      "name": "아인슈페너(기본3샷)",
+      "description": "[아인슈페너]진한 아메리카노 위에 달콤하고 부드러운 디저트39 특제 우유크림이 올라간 아인슈페너",
+      "category": "커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000150",
+      "sourceMenuId": "10000150",
+      "name": "리얼 생초코 라떼",
+      "description": "진짜 초코릿을 넣어 진한 풍미와 달콤쌉쌀한 맛이 특징인 따뜻한 리얼 생초코 라떼",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/c135f60d-11e5-4b70-9718-101e86f4ef11.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000174",
+      "sourceMenuId": "10000174",
+      "name": "트로피컬 후르츠",
+      "description": "사과, 망고, 바나나 등 다양한 건과일과 상큼한 히비스커스가 어우러진 향긋함이 가득한 트로피컬 후르츠 티",
+      "category": "과일티블랜딩&에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000273",
+      "sourceMenuId": "10000273",
+      "name": "프리미엄 도쿄 5롤",
+      "description": "디저트39에서만 즐길 수 있는 특별한 5가지 맛 오리지널도쿄롤, 화이트초코도쿄롤, 망고도쿄롤, 자색고구마도쿄롤, 녹차도쿄롤 케익이 한자리에 있어 골라먹는 재미를 느낄 수 있는 프리미엄 도쿄 5롤입니다.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000012",
+      "sourceMenuId": "10000012",
+      "name": "(제로당음료) 제로칼로리 청사과 탄산수",
+      "description": "[0칼로리&제로당 다이어트 음료] 노슈거 청사과 베이스를 사용해서 더욱 건강하게 즐길 수 있는 청량감 가득 상콤달콤 ZERO 칼로리 청사과 탄산수",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000137",
+      "sourceMenuId": "10000137",
+      "name": "아인슈페너 라떼(기본3샷)",
+      "description": "[아인슈페너 라떼]진한 카페라떼 위에 달콤하고 부드러운 디저트39 특제 우유크림이 올라간 아인슈페너 라떼",
+      "category": "커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000151",
+      "sourceMenuId": "10000151",
+      "name": "초코 바나나 라떼",
+      "description": "달콤하고 진한 바나나 라떼에 부드러운 초콜렛, 바나나 과자까지 한번에 즐길 수 있는 초코 바나나 라떼",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/7582edbf-10ea-4c72-8ed6-a6dda6129e23.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000274",
+      "sourceMenuId": "10000274",
+      "name": "정말 맛있는 순수우유 고구마 케익",
+      "description": "100% 동물성 생크림 사용 달콤한 고구마와 부드러운 치즈무스가 조화를 이루며, 고구마 본연의 맛 그대로 정성을 담은 순수우유 고구마 케익입니다.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000013",
+      "sourceMenuId": "10000013",
+      "name": "노슈가 헬시플레저 커피 (HOT)",
+      "description": "[노슈가 커피] 고소하면서도 달달한 카라멜 맛이 느껴지는 NO슈가 헬시플레저 라떼입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000152",
+      "sourceMenuId": "10000152",
+      "name": "딸기 요거트 라떼",
+      "description": "상큼한 요거트와 새콤달콤한 딸기의 절묘한 조화 통째로 갈아 넣은 생딸기를 상큼한 요거트와 함께 부드럽게 즐기실 수 있는 딸기 요거트 라떼",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/b02344b0-6b23-4b51-b112-2cfee345f4c5.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000176",
+      "sourceMenuId": "10000176",
+      "name": "복숭아 청포도 블랜딩",
+      "description": "청량한 청포도의 향과 달콤한 피치 과육이 톡톡 씹히는 시원한 복숭아 청포도 블랜딩",
+      "category": "과일티블랜딩&에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000275",
+      "sourceMenuId": "10000275",
+      "name": "순수우유 케익",
+      "description": "100% 동물성 생크림 사용 담백한 100% 순수 우유 크림과 촉촉한 시트와 부드러운 식감이 더해져 남녀노소 누구나 즐길 수 있는 순수우유 케익 입니다.",
+      "category": "디저트&케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/be642a6a-96ac-479f-b5b6-d4be4c8821f6.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000014",
+      "sourceMenuId": "10000014",
+      "name": "노슈가 헬시플레저 커피 (ICE)",
+      "description": "[노슈가 커피] 고소하면서도 달달한 카라멜 맛이 느껴지는 NO슈가 헬시플레저 라떼",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000139",
+      "sourceMenuId": "10000139",
+      "name": "민트 아인슈페너 라떼",
+      "description": "[민트 아인슈페너 라떼]시원한 민트 크림과 달콤한 초코우유에 커피가 어우러진 민초단을 위한 민트 아인슈페너 라떼",
+      "category": "커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000153",
+      "sourceMenuId": "10000153",
+      "name": "딸기 돌체 라떼",
+      "description": "상큼한 딸기 과육에 풍미깊은 연유가 만나 더욱 부드럽게 즐길 수 있는 딸기 돌체라떼",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000177",
+      "sourceMenuId": "10000177",
+      "name": "복숭아 레몬 블랜딩",
+      "description": "새콤한 레몬의 향과 달콤한 피치 과육이 톡톡 씹히는 시원한 복숭아 레몬 블랜딩",
+      "category": "과일티블랜딩&에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000015",
+      "sourceMenuId": "10000015",
+      "name": "(제로당음료) 제로칼로리 깔라만시 탄산수",
+      "description": "[제로칼로리&제로당 다이어트 음료] 다이어트에 효과적인 깔라만시로 만든 청량함 가득한 ZERO 칼로리 깔라만시 탄산수입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000154",
+      "sourceMenuId": "10000154",
+      "name": "망고 코코넛 라떼",
+      "description": "고소하고 달콤한 열대과일 코코넛에 열대과일의 왕 달콤한 망고를 더한 향긋한 망고 코코넛 라떼",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000277",
+      "sourceMenuId": "10000277",
+      "name": "당근케익",
+      "description": "[당근 케이크(조각)]촉촉하고 부드러운 시트에 견과류와 당근을 더해 식감까지 살린 프리미엄 당근 케익입니다.",
+      "category": "디저트&케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/139fba52-6d4d-4abc-9bf1-ea9e516c78a4.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000016",
+      "sourceMenuId": "10000016",
+      "name": "(제로당음료) 제로칼로리 깔라만시 스무디",
+      "description": "[제로칼로리&제로당 다이어트 음료] 다이어트에 효과적인 깔라만시로 만든 새콤달콤하고 시원한 ZERO 칼로리 깔라만시 스무디입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000017",
+      "sourceMenuId": "10000017",
+      "name": "제로칼로리 깔라만시 캐모마일티 (제로당음료)",
+      "description": "[제로칼로리&제로당 다이어트 음료] 다이어트에 효과적인 깔라만시로 만든 새콤하고 향긋한 ZERO 칼로리 깔라만시 캐모마일 티입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000156",
+      "sourceMenuId": "10000156",
+      "name": "흑임자 크림 라떼",
+      "description": "고소한 흑임자의 진한 풍미를 느낄 수 있는 흑임자 크림 라떼",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000279",
+      "sourceMenuId": "10000279",
+      "name": "완전 부드러운 오리지널 치즈케익",
+      "description": "[치즈 케이크(조각)]치즈 케이크지즈의 진한 풍미와 부드러운 식감이 조화로운 뉴욕 전통의 프리미엄 치즈케익입니다.",
+      "category": "디저트&케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/2445cad9-1c08-44d1-9c83-b28aec2ee58e.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000157",
+      "sourceMenuId": "10000157",
+      "name": "버블 흑당 밀크티",
+      "description": "홍차의 향긋함과 달콤한 흑당이 더해져 진한 풍미와 쫀득한 펄의 식감을 즐길 수 있는 버블 흑당 밀크티",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1eb34d5f-6836-4317-afce-78628c5bfd7e.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000019",
+      "sourceMenuId": "10000019",
+      "name": "저칼로리 청사과 스무디(제로당음료)",
+      "description": "[다이어트 음료] 디저트39만의 설탕 무첨가 청사과 베이스를 얼음과 함께 갈아내어 칼로리와 당 부담 없이 시원하게 즐길 수 있는 저칼로리 스무디입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000158",
+      "sourceMenuId": "10000158",
+      "name": "프리미엄 버블 로얄 밀크티",
+      "description": "홍차의 향긋함과 우유의 고소함이 더해져 진한 풍미와 쫀득한 펄의 식감을 즐길 수 있는 프리미엄 버블 로얄 밀크티",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/cdc16dfb-8d88-4b3b-b836-7c644d6edcfc.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000020",
+      "sourceMenuId": "10000020",
+      "name": "제로칼로리 청사과 피치 아이스티(제로당음료)",
+      "description": "[제로당 제로칼로리 다이어트 음료] 디저트39만의 설탕 무첨가 청사과베이스와 제로 복숭아 베이스를 더해 칼로리와 당 부담 없이 달달하고 상큼하게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000159",
+      "sourceMenuId": "10000159",
+      "name": "딸기 로얄밀크티",
+      "description": "상큼한 딸기 과육과 홍차의 향긋함, 우유의 고소함이 더해져 진한 풍미와 부드러움을 즐길 수 있는 딸기 로얄밀크티",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000282",
+      "sourceMenuId": "10000282",
+      "name": "티라미수크레이프",
+      "description": "[티라미수 크레이프 케이크(조각]부드러운 크림치즈 사이에 진한 커피와 초콜릿의 풍미가 더해진 크레이프 케이크입니다.",
+      "category": "디저트&케익",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6ec14f6e-f21d-493d-9ffb-076a08932864.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000021",
+      "sourceMenuId": "10000021",
+      "name": "제로칼로리 복숭아 아이스티 (제로당음료)",
+      "description": "[제로당 제로칼로리 다이어트 음료] 달달하고 시원한 복숭아 아이스티를 디저트39만의 특별한 제로칼로리 원재료로 더욱 가볍게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000160",
+      "sourceMenuId": "10000160",
+      "name": "프리미엄 로얄 밀크티",
+      "description": "홍차의 향긋함과 우유의 고소함이 더해져 진한 풍미와 부드러움을 즐길 수 있는 프리미엄 로얄 밀크티",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000161",
+      "sourceMenuId": "10000161",
+      "name": "민트초코라떼 JMT",
+      "description": "시원한 민트와 달콤한 초코 라떼의 조화가 느껴지는 민트초코라떼 JMT",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/80599ad5-ca52-44e4-8564-954c2284e2cb.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000284",
+      "sourceMenuId": "10000284",
+      "name": "내가진짜생초코크레이프",
+      "description": "[생초코 크레이프 케이크(조각)]생초코 크림의 진한 풍미를 느낄 수 있는 크레이프 케이크 입니다.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000162",
+      "sourceMenuId": "10000162",
+      "name": "타로 JMT",
+      "description": "디저트39 만의 특제 타로밀크베이스로 더욱 깊어진 타로밀크티를 쫀득한 펄의 식감을 즐길 수 있는 타로 JMT",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/9aafe2a8-e78f-4069-a3a5-2d2e24eff43b.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000285",
+      "sourceMenuId": "10000285",
+      "name": "리얼생초코녹차(더블크레이프)",
+      "description": "[생초코 녹차 크레이프 케이크(조각)] 생초코 크레이프와 녹차 크레이프를 한 번에 즐길 수 있는 부드러운 더블 크레이프 케이크입니다.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000024",
+      "sourceMenuId": "10000024",
+      "name": "비타 2000 제로칼로리 레몬 블랜딩",
+      "description": "[제로칼로리 다이어트 음료] 디저트39만의 설탕무첨가 레몬베이스에 하루 권장 비타민을 더해 가볍게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000163",
+      "sourceMenuId": "10000163",
+      "name": "맛있는 17곡 선식(프리미엄 미숫가루)",
+      "description": "남녀노소 누구나에게 사랑받는 든든하고 맛있게 한끼 해결이 가능한 고소한 17곡 오트밀라떼를 대용량으로 즐길수 있는 맛있는 17곡 선식",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000025",
+      "sourceMenuId": "10000025",
+      "name": "비타 2000 저칼로리 리치 블랜딩",
+      "description": "[제로칼로리 시럽 사용 다이어트 음료] 디저트39만의 저칼로리 시럽에 리치와 비타민이 더해져 더욱 가볍게 즐길 수 있는 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000026",
+      "sourceMenuId": "10000026",
+      "name": "비타 2000 제로칼로리 청포도 블랜딩 (제로당음료)",
+      "description": "[제로당 제로칼로리 다이어트 음료] 디저트39만의 설탕무첨가 청포도베이스에 하루 권장 비타민을 더해 가볍게 즐길 수 있는 ZERO 칼로리 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000027",
+      "sourceMenuId": "10000027",
+      "name": "저칼로리 망고 스무디(저당음료)",
+      "description": "[저당 저칼로리 다이어트 음료] 디저트39만의 설탕무첨가 망고베이스에 달콤한 망고 과육과 얼음을 함께 갈아 더욱 가볍고 시원하게 즐길 수 있는 스무디 입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/663d4acf-c63b-4991-aa5d-b8d011f22651.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000028",
+      "sourceMenuId": "10000028",
+      "name": "저칼로리 청포도 스무디(제로당음료)",
+      "description": "[제로당 저칼로리 다이어트 음료] 디저트39만의 설탕무첨가 청포도베이스를 얼음과 함께 갈아 저칼로리로 더욱 가볍고 시원하게 즐길 수 있는 스무디 입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000029",
+      "sourceMenuId": "10000029",
+      "name": "슬림 리얼 생 초코 라떼",
+      "description": "[저칼로리 원재료 사용 다이어트 음료] 진한 초콜릿의 풍미와 달콤쌉쌀한 맛이 특징인 생초코라떼를 저칼로리 원재료로 더욱 가볍게 즐길 수 있는 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/c135f60d-11e5-4b70-9718-101e86f4ef11.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000291",
+      "sourceMenuId": "10000291",
+      "name": "순수우유 카스테라 케이크",
+      "description": "100% 동물성 생크림 사용 부드러운 카스텔라 속에 진한 우유 생크림을 듬뿍 넣어 만든 케이크입니다.",
+      "category": "디저트&케익",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000031",
+      "sourceMenuId": "10000031",
+      "name": "슬림 딸기 라떼",
+      "description": "[제로칼로리 시럽 사용 다이어트 음료]진짜 딸기가 들어가 더 향긋하고, 달콤한 딸기 라떼를 저칼로리 원재료로 더욱 가볍게 즐길 수 있는 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/7306678e-c3c4-41e4-99ff-1f1997a16311.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000032",
+      "sourceMenuId": "10000032",
+      "name": "슬림 딸기 요거트 스무디",
+      "description": "[저칼로리 원재료 사용 다이어트 음료]새콤달콤한 딸기와 상큼한 요거트를 얼음과 함께 시원하게 갈아낸 스무디를 저칼로리 원재료로 더욱 가볍게 즐길 수 있는 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/dc7ff3fb-0079-46d0-b3b4-909371a41dc5.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000033",
+      "sourceMenuId": "10000033",
+      "name": "슬림 플레인 요거트 스무디",
+      "description": "[저칼로리 원재료 사용 다이어트 음료] 상큼하고 달콤한 요거트를 얼음과 함께 시원하게 갈아낸 스무디를 저칼로리 원재료로 더욱 가볍게 즐길 수 있는 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9377af3c-977e-454b-bc8a-1569a02e9e58.jpg"
+    },
+    {
+      "id": "ddangyo-1163760-10000038",
+      "sourceMenuId": "10000038",
+      "name": "(제로슈가) 노슈거 율무차",
+      "description": "[제로슈가/노슈가] 고소하게 볶은 율무를 가득 넣은 디저트39만의 특별한 노슈거 원재료를 이용하여 가볍고 부담없이 즐길 수 있는 따뜻한 no슈가 율무차 음료입니다.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1163760-10000039",
+      "sourceMenuId": "10000039",
+      "name": "[추천]비타2000 저칼로리자몽 블랜딩",
+      "description": "체외로 배출되는 0칼로리 당 알룰로스를 사용한 저칼로리 다이어트 음료.",
+      "category": "제로칼로리&저칼로리(인기슬림음료)",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

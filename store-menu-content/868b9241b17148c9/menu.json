@@ -1,0 +1,169 @@
+{
+  "storeId": "868b9241b17148c9",
+  "storeName": "이집닭강정 잘하네 여수점",
+  "displayName": "이집닭강정 잘하네 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/bcece24b-5227-4d60-b079-bc6eac9c1842.jpg",
+  "categories": [
+    "전체",
+    "닭강정메뉴",
+    "사이드 추가선택",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1231357-10000001",
+      "sourceMenuId": "10000001",
+      "name": "이집 닭강정",
+      "description": "치킨 무 + 펩시 500ml 제공 ( 소 제공 X , 별도 주문 )",
+      "category": "닭강정메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/812786e3-b393-4da3-bc60-ef329b267f02.jpg"
+    },
+    {
+      "id": "ddangyo-1231357-10000006",
+      "sourceMenuId": "10000006",
+      "name": "이집 닭강정 + 똥집튀김 SET",
+      "description": "치킨 무 + 펩시 500ml 제공",
+      "category": "닭강정메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/bde49c5b-7c71-44f4-a364-667111ec1a37.jpg"
+    },
+    {
+      "id": "ddangyo-1231357-10000007",
+      "sourceMenuId": "10000007",
+      "name": "갈릭후레이크 토핑",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000018",
+      "sourceMenuId": "10000018",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000002",
+      "sourceMenuId": "10000002",
+      "name": "반반 닭강정",
+      "description": "치킨 무 + 펩시 500ml 제공",
+      "category": "닭강정메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000008",
+      "sourceMenuId": "10000008",
+      "name": "떡사리 추가(큰 쌀떡8개 제공)",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000019",
+      "sourceMenuId": "10000019",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000003",
+      "sourceMenuId": "10000003",
+      "name": "눈꽃치즈 닭강정 + 똥집튀김 SET",
+      "description": "치킨 무 + 펩시 500ml 제공",
+      "category": "닭강정메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000009",
+      "sourceMenuId": "10000009",
+      "name": "무우 추가",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[NEW]이집 닭강정 + 이집 새우강정 SET",
+      "description": "닭강정 사이즈 선택 및 큼지막한 새우 4마리 고정 제공 치킨무 + 펩시500ml 제공",
+      "category": "닭강정메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000010",
+      "sourceMenuId": "10000010",
+      "name": "똥집 추가",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000005",
+      "sourceMenuId": "10000005",
+      "name": "[NEW] 삼합닭강정",
+      "description": "치킨 무 + 펩시 500ml 제공 ( 소 제공 X , 별도 주문 )",
+      "category": "닭강정메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/09abfc78-d451-44a9-8e96-b6068b42328d.jpg"
+    },
+    {
+      "id": "ddangyo-1231357-10000011",
+      "sourceMenuId": "10000011",
+      "name": "해쉬브라운 감자(30알 제공)",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000012",
+      "sourceMenuId": "10000012",
+      "name": "눈꽃치즈",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000013",
+      "sourceMenuId": "10000013",
+      "name": "치즈크림 소스",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/dc1b8bc1-b788-48f3-a9b4-e0beab5c730f.jpg"
+    },
+    {
+      "id": "ddangyo-1231357-10000014",
+      "sourceMenuId": "10000014",
+      "name": "순한소스",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/a6a146a0-686e-4576-9ab5-bfe5739c1054.jpg"
+    },
+    {
+      "id": "ddangyo-1231357-10000015",
+      "sourceMenuId": "10000015",
+      "name": "매콤소스 추가",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000016",
+      "sourceMenuId": "10000016",
+      "name": "치즈맛 시즈닝",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1231357-10000017",
+      "sourceMenuId": "10000017",
+      "name": "스노윙맛 시즈닝",
+      "description": "",
+      "category": "사이드 추가선택",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

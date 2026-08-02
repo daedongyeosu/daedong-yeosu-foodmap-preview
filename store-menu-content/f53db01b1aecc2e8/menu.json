@@ -16,42 +16,48 @@
       "name": "촌닭한마리",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg",
+      "sourceMenuId": "10000002"
     },
     {
       "id": "ddangyo-1232932-10000003",
       "name": "윙봉",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/422f0879-1bf3-4bfe-8b5d-eea2b4211dba.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/422f0879-1bf3-4bfe-8b5d-eea2b4211dba.jpg",
+      "sourceMenuId": "10000003"
     },
     {
       "id": "ddangyo-1232932-10000005",
       "name": "똥집",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/519818ba-027d-45ea-b632-42b19c6348c1.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/519818ba-027d-45ea-b632-42b19c6348c1.jpg",
+      "sourceMenuId": "10000005"
     },
     {
       "id": "ddangyo-1232932-10000001",
       "name": "촌닭두마리",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000001"
     },
     {
       "id": "ddangyo-1232932-10000011",
       "name": "무",
       "description": "",
       "category": "무/소스",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000011"
     },
     {
       "id": "ddangyo-1232932-10000016",
       "name": "칠성사이다",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000016"
     },
     {
       "id": "ddangyo-1232932-90000001",
@@ -59,21 +65,24 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
     },
     {
       "id": "ddangyo-1232932-10000012",
       "name": "치킨양념소스",
       "description": "",
       "category": "무/소스",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000012"
     },
     {
       "id": "ddangyo-1232932-10000017",
       "name": "코카콜라",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000017"
     },
     {
       "id": "ddangyo-1232932-90000002",
@@ -81,14 +90,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
     },
     {
       "id": "ddangyo-1232932-10000013",
       "name": "겨자소스",
       "description": "",
       "category": "무/소스",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000013"
     },
     {
       "id": "ddangyo-1232932-90000003",
@@ -96,21 +107,24 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
     },
     {
       "id": "ddangyo-1232932-10000004",
       "name": "닭발튀김",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a5664209-4ba6-4ea8-a18a-2f72ce4b569d.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a5664209-4ba6-4ea8-a18a-2f72ce4b569d.jpg",
+      "sourceMenuId": "10000004"
     },
     {
       "id": "ddangyo-1232932-10000014",
       "name": "고추핫소스",
       "description": "",
       "category": "무/소스",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000014"
     },
     {
       "id": "ddangyo-1232932-90000004",
@@ -118,14 +132,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
     },
     {
       "id": "ddangyo-1232932-10000015",
       "name": "양배추 샐러드",
       "description": "",
       "category": "무/소스",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000015"
     },
     {
       "id": "ddangyo-1232932-90000005",
@@ -133,14 +149,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
     },
     {
       "id": "ddangyo-1232932-10000006",
       "name": "반반(닭발+똥집)",
       "description": "닭발+똥집",
       "category": "촌닭이두마리 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000006"
     },
     {
       "id": "ddangyo-1232932-90000006",
@@ -148,14 +166,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
     },
     {
       "id": "ddangyo-1232932-10000007",
       "name": "통오징어튀김",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5cd58638-d4b9-4f2a-aa2b-707ea7b6f5f0.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5cd58638-d4b9-4f2a-aa2b-707ea7b6f5f0.jpg",
+      "sourceMenuId": "10000007"
     },
     {
       "id": "ddangyo-1232932-90000007",
@@ -163,28 +183,32 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000007"
     },
     {
       "id": "ddangyo-1232932-10000008",
       "name": "왕새우튀김",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/78756674-c87a-488a-8d5f-1a7084078be3.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/78756674-c87a-488a-8d5f-1a7084078be3.jpg",
+      "sourceMenuId": "10000008"
     },
     {
       "id": "ddangyo-1232932-10000009",
       "name": "고추튀김",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c20ff2d3-e80d-41d7-953b-4311d0ef36df.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c20ff2d3-e80d-41d7-953b-4311d0ef36df.jpg",
+      "sourceMenuId": "10000009"
     },
     {
       "id": "ddangyo-1232932-10000010",
       "name": "김말이튀김",
       "description": "",
       "category": "촌닭이두마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f792c40c-7184-4c33-87dc-74fb85d34364.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f792c40c-7184-4c33-87dc-74fb85d34364.jpg",
+      "sourceMenuId": "10000010"
     }
   ],
   "source": {
@@ -195,5 +219,8 @@
     ],
     "rawItemCount": 27,
     "duplicateItemsRemoved": 3
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

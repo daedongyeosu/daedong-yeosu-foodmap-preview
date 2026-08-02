@@ -1,0 +1,667 @@
+{
+  "storeId": "83f635e7ea7d737e",
+  "storeName": "파파핫도그 여서점",
+  "displayName": "파파핫도그 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9fe86c55-9b5d-40e9-a305-a169c447740c.jpg",
+  "categories": [
+    "전체",
+    "파파 핫도그",
+    "세트메뉴",
+    "파파 타코야끼",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1303132-10000007",
+      "sourceMenuId": "10000007",
+      "name": "치즈 더블핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/862f7a10-e462-4994-947a-17d81afabcd1.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000008",
+      "sourceMenuId": "10000008",
+      "name": "플레인 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a43feb6a-3821-4238-8a8d-75d4c6a7a9f4.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000010",
+      "sourceMenuId": "10000010",
+      "name": "갈릭 플레인 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/4f577a00-4d81-4e83-acc9-6926298b8592.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000001",
+      "sourceMenuId": "10000001",
+      "name": "파파 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000017",
+      "sourceMenuId": "10000017",
+      "name": "파파 핫도그 세트",
+      "description": "파파핫도그 + 감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000034",
+      "sourceMenuId": "10000034",
+      "name": "파파 타코야끼",
+      "description": "타코야끼+소스+가쓰오부시",
+      "category": "파파 타코야끼",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000040",
+      "sourceMenuId": "10000040",
+      "name": "감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1078453d-f708-4f8b-8c00-6233d3cabfc9.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000002",
+      "sourceMenuId": "10000002",
+      "name": "마미 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000018",
+      "sourceMenuId": "10000018",
+      "name": "바베큐 폴드포크 핫도그 세트",
+      "description": "바베큐 폴드포크핫도그 +감자튀김+음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000035",
+      "sourceMenuId": "10000035",
+      "name": "매콤 타코야끼",
+      "description": "타코야끼+소스+가쓰오부시",
+      "category": "파파 타코야끼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/a7e03fd8-c300-4796-ae28-34f83275b25d.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000041",
+      "sourceMenuId": "10000041",
+      "name": "치폴레 감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000059",
+      "sourceMenuId": "10000059",
+      "name": "밀크쉐이크",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000003",
+      "sourceMenuId": "10000003",
+      "name": "치킨 스파이스 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000019",
+      "sourceMenuId": "10000019",
+      "name": "핫바베큐 폴드포크 핫도그 세트",
+      "description": "핫바베큐 폴드포크 핫도그 +감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000036",
+      "sourceMenuId": "10000036",
+      "name": "와사비 마요 타코야끼",
+      "description": "타코야끼+소스+가쓰오부시",
+      "category": "파파 타코야끼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/7acb3b84-a0c1-4ef1-8712-82e1da2ab491.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000042",
+      "sourceMenuId": "10000042",
+      "name": "치즈맛 감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000060",
+      "sourceMenuId": "10000060",
+      "name": "초코 쉐이크",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000004",
+      "sourceMenuId": "10000004",
+      "name": "치킨 치즈 스파이스 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000020",
+      "sourceMenuId": "10000020",
+      "name": "맥앤치즈 핫도그 세트",
+      "description": "맥앤치즈 핫도그 +감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000037",
+      "sourceMenuId": "10000037",
+      "name": "청양마요 타코야끼",
+      "description": "타코야끼+소스+가쓰오부시",
+      "category": "파파 타코야끼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3257c49c-f000-4113-aab6-7d5ab3171c5e.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000043",
+      "sourceMenuId": "10000043",
+      "name": "허니버터 감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000061",
+      "sourceMenuId": "10000061",
+      "name": "딸기쉐이크",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000005",
+      "sourceMenuId": "10000005",
+      "name": "치폴레 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000021",
+      "sourceMenuId": "10000021",
+      "name": "칠리 베이컨 핫도그 세트",
+      "description": "칠리 베이컨 핫도그 +감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000038",
+      "sourceMenuId": "10000038",
+      "name": "치즈 타코야끼",
+      "description": "타코야끼+소스+가쓰오부시",
+      "category": "파파 타코야끼",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000044",
+      "sourceMenuId": "10000044",
+      "name": "버터갈릭 감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000062",
+      "sourceMenuId": "10000062",
+      "name": "커피 쉐이크",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000006",
+      "sourceMenuId": "10000006",
+      "name": "페퍼로니 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000022",
+      "sourceMenuId": "10000022",
+      "name": "핫 스파이스 핫도그 세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000039",
+      "sourceMenuId": "10000039",
+      "name": "갈릭마요 타코야끼",
+      "description": "타코야끼 +소스+ 가쓰오부시",
+      "category": "파파 타코야끼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/7082d1e5-f8ea-48fb-a3fe-1cc5ba73f7fa.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000045",
+      "sourceMenuId": "10000045",
+      "name": "크림 어니언 감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000063",
+      "sourceMenuId": "10000063",
+      "name": "망고 쉐이크",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000023",
+      "sourceMenuId": "10000023",
+      "name": "체다치즈 핫도그 세트",
+      "description": "체다치즈 핫도그+감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000046",
+      "sourceMenuId": "10000046",
+      "name": "맥앤치즈 감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000064",
+      "sourceMenuId": "10000064",
+      "name": "블루베리 쉐이크",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000024",
+      "sourceMenuId": "10000024",
+      "name": "치폴레 핫도그 세트",
+      "description": "치폴레 핫도그 +감자 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000047",
+      "sourceMenuId": "10000047",
+      "name": "케이준 감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000065",
+      "sourceMenuId": "10000065",
+      "name": "망고라떼",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000009",
+      "sourceMenuId": "10000009",
+      "name": "치즈 플레인 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000025",
+      "sourceMenuId": "10000025",
+      "name": "불닭 마요 핫도그 세트",
+      "description": "불닭 마요 핫도그 +감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000048",
+      "sourceMenuId": "10000048",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000066",
+      "sourceMenuId": "10000066",
+      "name": "청포도 에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/4a97c7f5-91f6-4b7d-b20c-50a9386689d6.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000026",
+      "sourceMenuId": "10000026",
+      "name": "치즈 불닭 핫도그 세트",
+      "description": "치즈 불닭 핫도그 +감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000049",
+      "sourceMenuId": "10000049",
+      "name": "치킨텐더",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000067",
+      "sourceMenuId": "10000067",
+      "name": "자몽 에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b3c2384c-f20a-486c-b80b-c0c153793c46.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000011",
+      "sourceMenuId": "10000011",
+      "name": "핫스파이스 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000027",
+      "sourceMenuId": "10000027",
+      "name": "페퍼로니 핫도그 세트",
+      "description": "페퍼로니 핫도그 +감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000050",
+      "sourceMenuId": "10000050",
+      "name": "치킨텐더 치폴레",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000068",
+      "sourceMenuId": "10000068",
+      "name": "애플망고 에이드",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000012",
+      "sourceMenuId": "10000012",
+      "name": "칠리 베이컨 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/448d9223-0963-446c-8c3c-bad36409bf86.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000028",
+      "sourceMenuId": "10000028",
+      "name": "플레인 핫도그 세트",
+      "description": "플레인 핫도그+감자튀김 +음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000051",
+      "sourceMenuId": "10000051",
+      "name": "치킨텐더 핫스파이스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000069",
+      "sourceMenuId": "10000069",
+      "name": "레몬 에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ac58d26b-ca3d-46e8-ac24-4f4b201b77ee.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000013",
+      "sourceMenuId": "10000013",
+      "name": "바베큐 폴드포크핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000029",
+      "sourceMenuId": "10000029",
+      "name": "치즈 플레인 핫도그 세트",
+      "description": "치즈 플레인 핫도그+감자튀김+음료",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000052",
+      "sourceMenuId": "10000052",
+      "name": "통살 새우링",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000070",
+      "sourceMenuId": "10000070",
+      "name": "블루레몬 에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/4082ad01-2589-4fa8-a43e-a7b3cf84f484.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000014",
+      "sourceMenuId": "10000014",
+      "name": "핫바베큐 폴드포크핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000030",
+      "sourceMenuId": "10000030",
+      "name": "랠리쉬 핫도그 세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000053",
+      "sourceMenuId": "10000053",
+      "name": "코울슬로",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000071",
+      "sourceMenuId": "10000071",
+      "name": "복숭아 아이스티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1e163014-05d9-4cc6-a07d-2a9cfb57950b.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000015",
+      "sourceMenuId": "10000015",
+      "name": "맥앤치즈 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000031",
+      "sourceMenuId": "10000031",
+      "name": "갈릭 플레인 세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000054",
+      "sourceMenuId": "10000054",
+      "name": "윙&봉 치폴레",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000072",
+      "sourceMenuId": "10000072",
+      "name": "아샷추",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d8887fe0-2b53-4aa8-b0cc-84ecbca47c5d.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000016",
+      "sourceMenuId": "10000016",
+      "name": "랠리쉬 핫도그",
+      "description": "",
+      "category": "파파 핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000032",
+      "sourceMenuId": "10000032",
+      "name": "나 홀로 세트",
+      "description": "핫스파이스 핫도그+코울슬로+순살치킨1조각+콜라",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000055",
+      "sourceMenuId": "10000055",
+      "name": "윙&봉 핫스파이스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000073",
+      "sourceMenuId": "10000073",
+      "name": "아이스 아메리카노",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/635bf355-737b-422f-97f1-333464f84a21.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000033",
+      "sourceMenuId": "10000033",
+      "name": "둘이서 세트",
+      "description": "파파 핫도그+랠리쉬핫도그+코울슬로+감자치폴레+윙봉스파이스2p+콜라+사이다",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000056",
+      "sourceMenuId": "10000056",
+      "name": "빅소시지",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000074",
+      "sourceMenuId": "10000074",
+      "name": "아이스 카페라떼",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000057",
+      "sourceMenuId": "10000057",
+      "name": "순살치킨 1조각",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000075",
+      "sourceMenuId": "10000075",
+      "name": "아이스 바닐라라떼",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000076",
+      "sourceMenuId": "10000076",
+      "name": "아이스 다방커피(믹스)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000077",
+      "sourceMenuId": "10000077",
+      "name": "아이스 초코라떼",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/367d5526-71fc-45db-a3db-4a25de523c07.jpg"
+    },
+    {
+      "id": "ddangyo-1303132-10000078",
+      "sourceMenuId": "10000078",
+      "name": "아이스 고구마라떼",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000079",
+      "sourceMenuId": "10000079",
+      "name": "아이스 토피넛 라떼",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000080",
+      "sourceMenuId": "10000080",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000081",
+      "sourceMenuId": "10000081",
+      "name": "콜라 제로",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1303132-10000082",
+      "sourceMenuId": "10000082",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

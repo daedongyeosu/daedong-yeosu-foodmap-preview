@@ -1,0 +1,112 @@
+{
+  "storeId": "3a33f3bc732c6bae",
+  "storeName": "25시마차",
+  "displayName": "25시마차",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/763729cb-9447-4cc8-812d-81755842abb9.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1203223-10000001",
+      "sourceMenuId": "10000001",
+      "name": "(국내산)흑산도홍어 국내산생삼겹 홍어삼합수육보쌈",
+      "description": "국내산흑산도홍어+국내산생삼겹+김치3종+막국수+홍어전5P+쌈 양념3종 부재료는 계절에 따라 변동 될 수 있습니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/763729cb-9447-4cc8-812d-81755842abb9.jpg"
+    },
+    {
+      "id": "ddangyo-1203223-10000003",
+      "sourceMenuId": "10000003",
+      "name": "홍어삼합수육 보쌈(국내산)생삼겹",
+      "description": "홍어삼합수육보쌈+김치3종+쌈 + 막국수. 양념3종 계절에 따라 부재료는 바뀔 수 있습니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/8f01b7d1-9f8c-47c3-acab-a6b35769b4a0.jpg"
+    },
+    {
+      "id": "ddangyo-1203223-10000006",
+      "sourceMenuId": "10000006",
+      "name": "수육 보쌈(국내산생삼겹)",
+      "description": "수육보쌈+김치3종+양념3종 막국수 쌈 계절에 따라 부재료가 바뀔 수 있습니다 국내산김치+국내산양념",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/8f01b7d1-9f8c-47c3-acab-a6b35769b4a0.jpg"
+    },
+    {
+      "id": "ddangyo-1203223-10000005",
+      "sourceMenuId": "10000005",
+      "name": "마늘 보쌈(국내산생삼겹)",
+      "description": "마늘보쌈+김치3종 +양념3종. 막국수+쌈 계절에 따라 부재료가 다를 수 있습니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/349384d6-27e5-4597-a101-f109b0675d3d.jpg"
+    },
+    {
+      "id": "ddangyo-1203223-10000007",
+      "sourceMenuId": "10000007",
+      "name": "(국내산)갑오징어 초 미나리 무침",
+      "description": "(국내산)갑오징어+야채+김가루밥+ 부재료는 계절에 따라 바뀔 수 있습니다 근해에서 갓 잡은 싱싱한 갑오징어로 맛나게 요리합니다 매콤 달콤 상큼 머리를 맑게 해주고 혈액순환 주독 제거에 탁월한 미나리와 갑오징어가 만난 환상의 음식궁합 대포적인 알카리성 음식 혈액정화와 저지방 저칼로리 고단백 다이어트식품",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/e29ec354-71f9-415e-a4c8-dc30ec984e36.jpg"
+    },
+    {
+      "id": "ddangyo-1203223-10000009",
+      "sourceMenuId": "10000009",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/422731fe-9d39-4329-9dad-c38db3ea703b.jpg"
+    },
+    {
+      "id": "ddangyo-1203223-10000021",
+      "sourceMenuId": "10000021",
+      "name": "굴무침보쌈",
+      "description": "국내산생삼겹+통영굴+반찬3종+날치알밥+쌈채소 부재료는 계절에따라서 변동될 수 있습니다. 싱싱한통영굴 국내산생삼겹 매콤달콤한 굴무침보쌈 매콤달콤한 굴무침보쌈",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1203223-10000010",
+      "sourceMenuId": "10000010",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1203223-10000011",
+      "sourceMenuId": "10000011",
+      "name": "환타 파인",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1203223-10000004",
+      "sourceMenuId": "10000004",
+      "name": "(1인분)홍어삼합수육보쌈(국내산생삼겹)",
+      "description": "홍어삼합수육보쌈+김치3종+날치알밥 부재료는 계절에 따라 바뀔 수 있습니다 25시 포차에서는 국내산 생삼겹을 주문즉시 직접 바로 삶아서 조리합니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/763729cb-9447-4cc8-812d-81755842abb9.jpg"
+    },
+    {
+      "id": "ddangyo-1203223-10000022",
+      "sourceMenuId": "10000022",
+      "name": "쭈꾸미볶음",
+      "description": "불맛쭈꾸미볶음 반찬3종+김가루밥+쌈채소 계절에 따라 부재료는 변동될 수 있습니다.",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1203223-10000008",
+      "sourceMenuId": "10000008",
+      "name": "햇반",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f14a5978-ee86-4f55-8ae3-58546ea9fd79.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

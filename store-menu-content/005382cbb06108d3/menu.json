@@ -1,0 +1,340 @@
+{
+  "storeId": "005382cbb06108d3",
+  "storeName": "가장맛있는족발 웅천점",
+  "displayName": "가장맛있는족발 웅천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8b9c060f-3f95-4498-91ec-766877bca927.jpg",
+  "categories": [
+    "전체",
+    "가장맛있는 족발&보쌈",
+    "주류메뉴",
+    "혼자서도 야무지게 실속메뉴~",
+    "[][HOT] 가족세트메뉴",
+    "사이드메뉴",
+    "음료",
+    "추가메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1344797-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[가장맛있는] 국내산 반반족발+미니쟁반국수",
+      "description": "족발+불족발+부추무침+배추겉절이+백김치+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "가장맛있는 족발&보쌈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8b9c060f-3f95-4498-91ec-766877bca927.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000007",
+      "sourceMenuId": "10000007",
+      "name": "[따뜻한 야들야들] 인생보쌈+미니쟁반국수",
+      "description": "보쌈+부추무침+배추겉절이+백김치+상추+마늘+고추+쌈장+새우젓",
+      "category": "가장맛있는 족발&보쌈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/34fb032b-243a-4b32-b5a1-00aa25c5f154.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[불향가득] 국내산 직화불족발+미니쟁반국수",
+      "description": "불족발+부추무침+배추겉절이+백김치+깻잎절임지+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "가장맛있는 족발&보쌈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b9018b52-f783-4ff3-8644-d624b262e693.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-90000001",
+      "sourceMenuId": "90000001",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1344797-10000001",
+      "sourceMenuId": "10000001",
+      "name": "[혼술한잔] 실속족발+미니쟁반국수",
+      "description": "족발+부추무침+배추겉절이+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "혼자서도 야무지게 실속메뉴~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000009",
+      "sourceMenuId": "10000009",
+      "name": "[재주문율 1위] 가족의 족발+보쌈+미니쟁반국수",
+      "description": "족발+보쌈+보쌈김치+부추무침+배추겉절이+백김치+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "[][HOT] 가족세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/90dd5521-82c4-45e5-80a5-ce14ff59bea9.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000012",
+      "sourceMenuId": "10000012",
+      "name": "[냉면 대신] 쟁반국수",
+      "description": ":D 족발&보쌈엔 당연히 이거죠",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2d3521e5-57ef-49e3-b777-24626fe311a7.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000020",
+      "sourceMenuId": "10000020",
+      "name": "코카콜라 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/92cfec22-f0d1-4b7a-bf7d-631ae2fcd232.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000022",
+      "sourceMenuId": "10000022",
+      "name": "겉절이&부추 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-90000002",
+      "sourceMenuId": "90000002",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1344797-10000002",
+      "sourceMenuId": "10000002",
+      "name": "[야들야들] 실속보쌈+미니쟁반국수",
+      "description": "보쌈+배추겉절이 + 부추무침 + 쌈야채세트(쌈야채 + 고추 + 쌈장 + 마늘 + 새우젓 )",
+      "category": "혼자서도 야무지게 실속메뉴~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000005",
+      "sourceMenuId": "10000005",
+      "name": "명품족발[ 중+미니쟁반국수",
+      "description": "족발+부추무침+배추겉절이+백김치+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "가장맛있는 족발&보쌈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/76b43896-58fb-40a1-a8a2-ac1ffb859e82.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000010",
+      "sourceMenuId": "10000010",
+      "name": "[환상의조합] 가족의 불족발+보쌈+미니쟁반국수",
+      "description": "불족발+보쌈+보쌈김치+부추무침+배추겉절이+백김치+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "[][HOT] 가족세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000013",
+      "sourceMenuId": "10000013",
+      "name": "날치알주먹밥",
+      "description": ":D 이제는 필수 메뉴라구요",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000021",
+      "sourceMenuId": "10000021",
+      "name": "사이다 355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000023",
+      "sourceMenuId": "10000023",
+      "name": "야채추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1344797-10000003",
+      "sourceMenuId": "10000003",
+      "name": "[혼술안주] 실속불족발+미니쟁반국수",
+      "description": "불족발+부추무침+배추겉절이+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "혼자서도 야무지게 실속메뉴~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000006",
+      "sourceMenuId": "10000006",
+      "name": "명품족발[ 대+미니쟁반국수",
+      "description": "족발+부추무침+배추겉절이+백김치+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "가장맛있는 족발&보쌈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/cd1c9bec-206f-48bb-92d1-261d3d766236.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000011",
+      "sourceMenuId": "10000011",
+      "name": "[1석 3조 즐기는] 가족의 반반족보+미니쟁반국수",
+      "description": "족발+불족발+보쌈+보쌈무김치+부추무침+배추겉절이+백김치+상추+깻잎+마늘+고추+쌈장+새우젓",
+      "category": "[][HOT] 가족세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000014",
+      "sourceMenuId": "10000014",
+      "name": "[순대국 말고] 얼큰술국",
+      "description": ":D 먹어본 사람만 아는 그 맛",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/424f61a3-dd2d-4ef7-9a11-c4fae7ff6e79.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000024",
+      "sourceMenuId": "10000024",
+      "name": "백김치 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-90000004",
+      "sourceMenuId": "90000004",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1344797-10000015",
+      "sourceMenuId": "10000015",
+      "name": "[마라탕대신] 가마보꼬모듬오뎅탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5b0d9e31-fada-49fe-a9a3-624b19679cda.jpg"
+    },
+    {
+      "id": "ddangyo-1344797-10000025",
+      "sourceMenuId": "10000025",
+      "name": "고추절임 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-90000005",
+      "sourceMenuId": "90000005",
+      "name": "켈리(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1344797-10000016",
+      "sourceMenuId": "10000016",
+      "name": "보쌈무김치",
+      "description": ":D 족발드실때 추가해봐용, 후회 1도 없을껄요",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000026",
+      "sourceMenuId": "10000026",
+      "name": "쌈장 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-90000006",
+      "sourceMenuId": "90000006",
+      "name": "여수 생 막걸리(페트)(750ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1344797-10000017",
+      "sourceMenuId": "10000017",
+      "name": "공기밥",
+      "description": ":D 건강까지 생각하며 지은 흰쌀밥",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000027",
+      "sourceMenuId": "10000027",
+      "name": "새우젓 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-90000007",
+      "sourceMenuId": "90000007",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1344797-10000018",
+      "sourceMenuId": "10000018",
+      "name": "불족소스",
+      "description": ":D 진정한 불맛이 뭔지를 알려주는 불맛의 정석 [많이 맵지 않아요~]",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000028",
+      "sourceMenuId": "10000028",
+      "name": "마늘 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000019",
+      "sourceMenuId": "10000019",
+      "name": "꿀마늘소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000029",
+      "sourceMenuId": "10000029",
+      "name": "청양고추 추가(개당)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000030",
+      "sourceMenuId": "10000030",
+      "name": "겉절이만 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000031",
+      "sourceMenuId": "10000031",
+      "name": "부추만 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344797-10000032",
+      "sourceMenuId": "10000032",
+      "name": "초장추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "storeId": "44a0e464d6d22c38",
+  "storeName": "중앙돈까스 여수점",
+  "displayName": "중앙돈까스 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/44d93feb-72bf-4bdf-af6e-c07470dc6937.jpg",
+  "categories": [
+    "전체",
+    "돈까스류",
+    "덮밥류",
+    "싸이드 메뉴",
+    "음료",
+    "면류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1283899-10000003",
+      "sourceMenuId": "10000003",
+      "name": "수제등심돈까스",
+      "description": "",
+      "category": "돈까스류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f06ba45d-6d5a-4737-b99f-83e455b8a8a2.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000004",
+      "sourceMenuId": "10000004",
+      "name": "왕돈까스",
+      "description": "먹다 질릴만큼 양이 많아요",
+      "category": "돈까스류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/573a55dc-54e4-4e3e-9fe4-94ab26ba8f82.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000005",
+      "sourceMenuId": "10000005",
+      "name": "치즈돈까스",
+      "description": "",
+      "category": "돈까스류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/44d93feb-72bf-4bdf-af6e-c07470dc6937.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000006",
+      "sourceMenuId": "10000006",
+      "name": "고구마치즈돈까스",
+      "description": "",
+      "category": "돈까스류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/4b8a13a8-5108-4d2b-a97a-4ec1737f166d.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000008",
+      "sourceMenuId": "10000008",
+      "name": "생선까스",
+      "description": "생선까스 2장",
+      "category": "돈까스류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d96537df-d55d-436e-9fa6-2dd80e421c60.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000001",
+      "sourceMenuId": "10000001",
+      "name": "치폴레돈까스",
+      "description": "이건 제가 강추합니다~ 뻔한 돈까스에 식상하셨다면 .. 이거 추천합니다 ~믿고 드셔 보세요",
+      "category": "돈까스류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000010",
+      "sourceMenuId": "10000010",
+      "name": "소고기버섯덮밥",
+      "description": "소고기+버섯3종+오징어+청경채+야채류",
+      "category": "덮밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/ada68b23-2952-4527-8d5a-cd7f7042a134.JPG"
+    },
+    {
+      "id": "ddangyo-1283899-10000022",
+      "sourceMenuId": "10000022",
+      "name": "감자&새우튀김",
+      "description": "새우2+감자150g",
+      "category": "싸이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000027",
+      "sourceMenuId": "10000027",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000002",
+      "sourceMenuId": "10000002",
+      "name": "돈까스강정",
+      "description": "[강정돈까스+샐러드+감튀] &아이들 간식~~아빠 술안주~ 양념치킨 비슷한 맛이라고 생각하시면 될것 같아요 가격의 부담을 줄이기 위해 1인분량으로 셋팅 했구요 마무리 양념할때 청양과 견과류가 들어가는데....알레르기가 있거나 매운걸 원치 않으시면 미리 요청사항에 메모 남겨 주세여~",
+      "category": "돈까스류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000011",
+      "sourceMenuId": "10000011",
+      "name": "제육덮밥",
+      "description": "밥 한공기+ 4~5가지 야채+ 제육볶음 150g 고기와 야채가 합쳐져 영양이 충분합니다",
+      "category": "덮밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e0293e10-e2f2-494b-9bbb-14168f3802f4.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000023",
+      "sourceMenuId": "10000023",
+      "name": "감자튀김",
+      "description": "",
+      "category": "싸이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/49279e29-470b-4d05-b198-a1d1edaeace3.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000028",
+      "sourceMenuId": "10000028",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000012",
+      "sourceMenuId": "10000012",
+      "name": "불오징어비빔밥",
+      "description": "",
+      "category": "덮밥류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000017",
+      "sourceMenuId": "10000017",
+      "name": "쫄면 (수제레몬청 소스)",
+      "description": "쫄면+야채3~4가지",
+      "category": "면류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000024",
+      "sourceMenuId": "10000024",
+      "name": "튀김만두",
+      "description": "납작만두 7개 +샐러드",
+      "category": "싸이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000029",
+      "sourceMenuId": "10000029",
+      "name": "수제 레몬청에이드",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000013",
+      "sourceMenuId": "10000013",
+      "name": "콩나물비빔밥",
+      "description": "밥한공기+야채와나물5가지+고기 갈은거 70g",
+      "category": "덮밥류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000018",
+      "sourceMenuId": "10000018",
+      "name": "물쫄면 (우동버전)",
+      "description": "쫄면 +새우튀김1+우동국물+ + 쑥갓 + 유부+ 김+ 후리가께",
+      "category": "면류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000025",
+      "sourceMenuId": "10000025",
+      "name": "공기밥",
+      "description": "",
+      "category": "싸이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000030",
+      "sourceMenuId": "10000030",
+      "name": "수제레몬청에이드1+1(2리터)",
+      "description": "레몬청+탄산수+얼음",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000014",
+      "sourceMenuId": "10000014",
+      "name": "제육볶음",
+      "description": "고기만 500g( 두 분이서 충분히 드실수 있어요) 웍질로 불향을 살짝 입혀 드려요 쌈야채 마늘 고추 준비해서 같이 쌈 싸 드시면 훌륭한 제육불고기 파티 되는거죠 ㅎ",
+      "category": "덮밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/a9bc7fd4-4f23-40b1-b71f-027ce3274c9f.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000019",
+      "sourceMenuId": "10000019",
+      "name": "우동",
+      "description": "우동면+새우튀김1개 +유부+쑥갓+김가루 +후리가께",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4e50625c-9967-4d51-b3d9-c88bd8c006f3.jpg"
+    },
+    {
+      "id": "ddangyo-1283899-10000026",
+      "sourceMenuId": "10000026",
+      "name": "새우튀김(8개)",
+      "description": "",
+      "category": "싸이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000031",
+      "sourceMenuId": "10000031",
+      "name": "수제 레몬청에이드 1L(1병)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000032",
+      "sourceMenuId": "10000032",
+      "name": "이모식혜",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000007",
+      "sourceMenuId": "10000007",
+      "name": "함박까스",
+      "description": "함박까스+작은 생선까스 함박이 좀 싸이즈가 작아요 그래서 작은 생선까스 하나 더 올려서 드립니다",
+      "category": "돈까스류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000033",
+      "sourceMenuId": "10000033",
+      "name": "보틀식혜 1+1(2리터)",
+      "description": "수제 식혜 1리터 보틀 2개(한정수량) & 1일 10병만 만들기 때문에 조기 품절 될수 있음을 양해 바랍니다",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000034",
+      "sourceMenuId": "10000034",
+      "name": "보틀식혜 1리터(1병)",
+      "description": "보틀식혜 1병(1리터)",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1283899-10000009",
+      "sourceMenuId": "10000009",
+      "name": "양념돈까스",
+      "description": "수제돈까스+양념소스+ 견과류",
+      "category": "돈까스류",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -9,43 +9,49 @@
     "사이드 메뉴",
     "음료 추가선택",
     "주류메뉴",
-    "대표메뉴"
+    "대표메뉴",
+    "ONLY 대표메뉴"
   ],
   "items": [
     {
       "id": "ddangyo-1323603-10000013",
       "name": "Only 핫 크리스피 치킨",
       "description": "(소금 제공 / 소스, 치킨무, 콜라 미제공 (별도구입))",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/f36a7f40-e2c7-4e89-9b08-6692cb53bf19.jpg"
+      "category": "ONLY 대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/f36a7f40-e2c7-4e89-9b08-6692cb53bf19.jpg",
+      "sourceMenuId": "10000013"
     },
     {
       "id": "ddangyo-1323603-10000014",
       "name": "Only 핫 크리스피 순살 치킨",
       "description": "(소금 제공 / 소스, 치킨무, 콜라 미제공 (별도구입))",
-      "category": "대표메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/f08939ec-3f9e-45aa-aab7-6c78faa34d91.jpg"
+      "category": "ONLY 대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/f08939ec-3f9e-45aa-aab7-6c78faa34d91.jpg",
+      "sourceMenuId": "10000014"
     },
     {
       "id": "ddangyo-1323603-10000015",
       "name": "Only 핫크리스피 뼈 두마리 세트",
       "description": "치킨 두마리 세트 (소금 제공 / 소스, 치킨무, 콜라 미제공(별도구입))",
       "category": "ONLY 치킨두마리메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/20f0e459-c5aa-4e89-a9b0-fb62540ab06c.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/20f0e459-c5aa-4e89-a9b0-fb62540ab06c.jpg",
+      "sourceMenuId": "10000015"
     },
     {
       "id": "ddangyo-1323603-10000017",
       "name": "치킨무",
       "description": "",
       "category": "사이드 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/346f18d7-a13e-4100-856a-1583a5726362.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/346f18d7-a13e-4100-856a-1583a5726362.jpg",
+      "sourceMenuId": "10000017"
     },
     {
       "id": "ddangyo-1323603-10000022",
       "name": "콜라",
       "description": "",
       "category": "음료 추가선택",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000022"
     },
     {
       "id": "ddangyo-1323603-90000001",
@@ -53,28 +59,32 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
     },
     {
       "id": "ddangyo-1323603-10000016",
       "name": "Only 핫크리스피 순살 두마리 세트",
       "description": "치킨 두마리 세트 (소금 제공 / 소스, 치킨무, 콜라 미제공(별도구입))",
       "category": "ONLY 치킨두마리메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/260da602-fe54-42c2-9fc6-7edaa3ad6b0a.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/260da602-fe54-42c2-9fc6-7edaa3ad6b0a.jpg",
+      "sourceMenuId": "10000016"
     },
     {
       "id": "ddangyo-1323603-10000018",
       "name": "케이준 감자튀김",
       "description": "",
       "category": "사이드 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/ce8f2eb4-56d0-49f5-826f-d07876066ed7.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/ce8f2eb4-56d0-49f5-826f-d07876066ed7.jpg",
+      "sourceMenuId": "10000018"
     },
     {
       "id": "ddangyo-1323603-10000023",
       "name": "칠성사이다",
       "description": "",
       "category": "음료 추가선택",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000023"
     },
     {
       "id": "ddangyo-1323603-90000002",
@@ -82,21 +92,24 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
     },
     {
       "id": "ddangyo-1323603-10000019",
       "name": "양배추 샐러드",
       "description": "",
       "category": "사이드 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000019"
     },
     {
       "id": "ddangyo-1323603-10000024",
       "name": "제로콜라",
       "description": "",
       "category": "음료 추가선택",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000024"
     },
     {
       "id": "ddangyo-1323603-90000003",
@@ -104,14 +117,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
     },
     {
       "id": "ddangyo-1323603-10000020",
       "name": "국물떡볶이",
       "description": "",
       "category": "사이드 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9ba045ca-f66d-47fa-9110-f8129d21e79c.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9ba045ca-f66d-47fa-9110-f8129d21e79c.jpg",
+      "sourceMenuId": "10000020"
     },
     {
       "id": "ddangyo-1323603-90000004",
@@ -119,14 +134,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
     },
     {
       "id": "ddangyo-1323603-10000021",
       "name": "야끼군만두 5개",
       "description": "",
       "category": "사이드 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/88a24768-192a-41db-aa4e-86619839f4b2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/88a24768-192a-41db-aa4e-86619839f4b2.jpg",
+      "sourceMenuId": "10000021"
     },
     {
       "id": "ddangyo-1323603-90000005",
@@ -134,7 +151,8 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
     },
     {
       "id": "ddangyo-1323603-90000006",
@@ -142,7 +160,8 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
     },
     {
       "id": "ddangyo-1323603-90000007",
@@ -150,7 +169,8 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000007"
     }
   ],
   "source": {
@@ -161,5 +181,8 @@
     ],
     "rawItemCount": 22,
     "duplicateItemsRemoved": 3
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

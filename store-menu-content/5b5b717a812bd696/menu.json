@@ -20,434 +20,496 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
     },
     {
       "id": "ddangyo-1202217-10000128",
       "name": "4가지맛 세트(2마리양)",
       "description": "후라이드에는 양념소스 소금 머스타 제공됩니다.음료는 코카콜라500미리 제공됩니다",
       "category": "[바삭고소 닭다리살로만2마리양]4가지맛세트",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5fda0184-983f-4aa3-888c-fef1e3234d9b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5fda0184-983f-4aa3-888c-fef1e3234d9b.jpg",
+      "sourceMenuId": "10000128"
     },
     {
       "id": "ddangyo-1202217-10000129",
       "name": "[3색세트치킨 소] 3가지맛선택가능)",
       "description": "1.치킨무.콜라 245미리 제공합니다 2.후라이드 선택시 소금 머스타제공 3.양념류는 바사칸 식감을위해 토핑으로 조리됩 니다. 4.양파슬라이스. 파채 .맛감자. 김말이튀김.은 니뷰포토 약속 선택입니다.약속은 고객님의 신용입니다. 5.삼색세트양은 550~600그램입니다.보기보다 적지않은양입니다.대식가도 로제라면과같시드시면 충분합니다. 6.럭셔리 메뉴는 지금핫한 신메뉴로 구성하였습니 다.",
       "category": "[삼색세트 소 ] 3가지맛 선택 세트메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ca1a8eea-df38-4832-a415-d70c7a9b64fe.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ca1a8eea-df38-4832-a415-d70c7a9b64fe.jpg",
+      "sourceMenuId": "10000129"
     },
     {
       "id": "ddangyo-1202217-10000130",
       "name": "순참 플레이트A",
       "description": "무1+옥콘+코카콜라500+ 파채+파채특제소스+소금+양념소스+특제토마토소스",
       "category": "순참 플레이트 두마리(5000원할인)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000130"
     },
     {
       "id": "ddangyo-1202217-10000133",
       "name": "(신메뉴)닭다리살로만 슈프림양념치킨",
       "description": "",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/df19d3cc-203c-4dc5-b9f0-bd39572da4c5.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/df19d3cc-203c-4dc5-b9f0-bd39572da4c5.jpg",
+      "sourceMenuId": "10000133"
     },
     {
       "id": "ddangyo-1202217-10000159",
       "name": "닭껍질튀김(300그램+100그램덤)+3종소스",
       "description": "바사삭 닭껍질에 3종소스( 깐풍소스 .치즈머스.토마토양념소스)로 찍먹이 일품~입니다.",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg",
+      "sourceMenuId": "10000159"
     },
     {
       "id": "ddangyo-1202217-10000170",
       "name": "호~로~룩 ~로제 떡뽂이 추가",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/af7e48f3-6432-4018-a488-31e81be1629b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/af7e48f3-6432-4018-a488-31e81be1629b.jpg",
+      "sourceMenuId": "10000170"
     },
     {
       "id": "ddangyo-1202217-10000131",
       "name": "[5000원할인이벤]순참플레이트B",
       "description": "무1+코카콜라500+옥콘+싱싱파채+특제파채소스",
       "category": "순참 플레이트 두마리(5000원할인)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000131"
     },
     {
       "id": "ddangyo-1202217-10000134",
       "name": "(신메뉴)닭다리 살로만 마라칠리치킨",
       "description": "치킨의 고소함과 매콤 알싸한 마라칠리와 환상적인 콜라보~//퓨전마라칠리치킨//",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000134"
     },
     {
       "id": "ddangyo-1202217-10000160",
       "name": "[맛보기할인]매콤마초 닭껍질튀김( 매콤~바사칸~)",
       "description": "바사칸 식감을위해 소스 는 따로드립니다.매콤해요~",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg",
+      "sourceMenuId": "10000160"
     },
     {
       "id": "ddangyo-1202217-10000171",
       "name": "양파채+양파채소스",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000171"
     },
     {
       "id": "ddangyo-1202217-10000132",
       "name": "[5000원할인이벤]순참 플레이트 C",
       "description": "코카콜라500+무+옥콘+양념소스+소금+싱싱파채+특제파소스+코카콜라500",
       "category": "순참 플레이트 두마리(5000원할인)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000132"
     },
     {
       "id": "ddangyo-1202217-10000135",
       "name": "(신메뉴)닭다리살로만 고추냉이마요(톡쏘아눈물이~찔끔~~",
       "description": "무+캔코카콜라+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000135"
     },
     {
       "id": "ddangyo-1202217-10000161",
       "name": "허니버터닭껍질튀김( 바삭~고소~허니버터~풍미~)",
       "description": "허니버터 과자처럼 바삭~바삭 해요~맥주 안주로~바사삭 최고~",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000161"
     },
     {
       "id": "ddangyo-1202217-10000172",
       "name": "파채+파채소스",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/81ea5982-6dc9-496e-bcad-4e1c3253c20b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/81ea5982-6dc9-496e-bcad-4e1c3253c20b.jpg",
+      "sourceMenuId": "10000172"
     },
     {
       "id": "ddangyo-1202217-10000136",
       "name": "(신메뉴)닭다리살로만 로제치킨(침샘~정복~인생로제~)",
       "description": "",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000136"
     },
     {
       "id": "ddangyo-1202217-10000162",
       "name": "핫데리닭껍질튀김(맛있게매운~매콤간장~)",
       "description": "매콤한 간장양념소스입니다.바사칸 식감을위해 소스는 따로 드려요.~한번드시면 중독되는맛~",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000162"
     },
     {
       "id": "ddangyo-1202217-10000173",
       "name": "모듬튀김(치즈스틱3군만두4 매콤김말4 펍스맛감자15",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000173"
     },
     {
       "id": "ddangyo-1202217-10000137",
       "name": "(신메뉴)닭다리살로만 할라피뇨치킨(체다치즈~듬뿍)",
       "description": "",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000137"
     },
     {
       "id": "ddangyo-1202217-10000163",
       "name": "치즈머스닭껍질튀김( 액상~치즈~듬뿍~고소~)",
       "description": "소스는 액상 치즈입니다.찍먹 부먹하면 좋아요.바사칸 맛을위해 소스는따로드려요~",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000163"
     },
     {
       "id": "ddangyo-1202217-10000174",
       "name": "모듬튀김(매콤김말이튀김4치즈스틱2 군만두4 맛감자12",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000174"
     },
     {
       "id": "ddangyo-1202217-10000138",
       "name": "(신메뉴)닭다리살로만 속초강정(순한맛~치킨박스들고먹어요",
       "description": "",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/387a0bdf-1b0f-4656-aa31-f813aba3e82b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/387a0bdf-1b0f-4656-aa31-f813aba3e82b.jpg",
+      "sourceMenuId": "10000138"
     },
     {
       "id": "ddangyo-1202217-10000164",
       "name": "매콤깐풍닭껍질튀김(매콤~세콤~깐풍맛~풍미~",
       "description": "맛보기 할인 이벤트 입니다. 매콤새콤깐풍스런 특제소스를 바사삭하게 즐겨보세요.소스는 따로드리니 찍먹부먹~하세요",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000164"
     },
     {
       "id": "ddangyo-1202217-10000175",
       "name": "허니버터 펍스맛감자튀김",
       "description": "감자튀김과 허니버터시증과의 조화~",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000175"
     },
     {
       "id": "ddangyo-1202217-10000139",
       "name": "(신메뉴)닭다리살로만 옛날강정(옛날잔치집~강정~그맛~)",
       "description": "",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/236bab00-92f2-4796-b876-53d06b95ba62.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/236bab00-92f2-4796-b876-53d06b95ba62.jpg",
+      "sourceMenuId": "10000139"
     },
     {
       "id": "ddangyo-1202217-10000165",
       "name": "할라피뇨체다치즈닭껍질튀김(체다와~닭껍질의~환상~조합~)",
       "description": "",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000165"
     },
     {
       "id": "ddangyo-1202217-10000176",
       "name": "미니한입핫도그",
       "description": "오븐에 제대로구운~카스테라와~소시지와의~환상적~만남~",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/c66ddb48-7878-4ebb-8d05-9d7bd1dabba6.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/c66ddb48-7878-4ebb-8d05-9d7bd1dabba6.jpg",
+      "sourceMenuId": "10000176"
     },
     {
       "id": "ddangyo-1202217-10000140",
       "name": "닭다리살로만 순살후라이드( 이보다더~바삭~고소할순없다)",
       "description": "무+콜라소+옥수수콘+소금+양념소스+머스타소스",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c9068d38-fb6f-41dc-abad-de2333cb2e0d.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c9068d38-fb6f-41dc-abad-de2333cb2e0d.jpg",
+      "sourceMenuId": "10000140"
     },
     {
       "id": "ddangyo-1202217-10000166",
       "name": "와사마요닭껍질튀김(톡~쏘는~와사맛~와사비보단~덜~쏘앙)",
       "description": "",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000166"
     },
     {
       "id": "ddangyo-1202217-10000177",
       "name": "닭껍질튀김 (매콤~마초간장풍~고소~바삭)",
       "description": "주인장.~강추메뉴 수제로 직접~밑간~ 인기메뉴로 자주 품절되는 메뉴~",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg",
+      "sourceMenuId": "10000177"
     },
     {
       "id": "ddangyo-1202217-10000141",
       "name": "닭다리살로만 순살허브양념(맛나서 반해.~자꾸 손이가는맛",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9cd89a05-a25f-4816-9b39-d37122b4c72f.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9cd89a05-a25f-4816-9b39-d37122b4c72f.jpg",
+      "sourceMenuId": "10000141"
     },
     {
       "id": "ddangyo-1202217-10000167",
       "name": "크림머스타 닭껍질튀김(느끼하지~않아요~진짜~바삭~고소~",
       "description": "",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000167"
     },
     {
       "id": "ddangyo-1202217-10000178",
       "name": "닭껍질튀김 (바삭~고소~허니버터풍미~그맛~)",
       "description": "주인강추메뉴~ 수제로 직접밑간~~ 인기메뉴로 자주 품절되는 메뉴~",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg",
+      "sourceMenuId": "10000178"
     },
     {
       "id": "ddangyo-1202217-10000142",
       "name": "닭다리살로만순살 마늘간장(짜지않아요~달콤~마늘향~안나요",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/fe9cc721-0e37-4dd5-9559-ec4e68a71ba7.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/fe9cc721-0e37-4dd5-9559-ec4e68a71ba7.jpg",
+      "sourceMenuId": "10000142"
     },
     {
       "id": "ddangyo-1202217-10000168",
       "name": "매운바베큐 닭껍질튀김(바비큐 향이~솔~솔~)",
       "description": "",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000168"
     },
     {
       "id": "ddangyo-1202217-10000179",
       "name": "통큰치즈볼",
       "description": "자연산치즈 75%",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/d0e05433-88ab-4bce-971a-56e5434e41ac.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/d0e05433-88ab-4bce-971a-56e5434e41ac.jpg",
+      "sourceMenuId": "10000179"
     },
     {
       "id": "ddangyo-1202217-10000143",
       "name": "닭다리살로만 순살 고추핫(숑~숑~청량~매워요)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000143"
     },
     {
       "id": "ddangyo-1202217-10000169",
       "name": "눈꽃치즈 닭껍질튀김( 은근~치즈향~고소미~닭껍질튀김)",
       "description": "",
       "category": "닭껍질튀김//직접밑간수제튀김//바사삭 고소/",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000169"
     },
     {
       "id": "ddangyo-1202217-10000180",
       "name": "쥬시쿨파인(유산균함유)180ml",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000180"
     },
     {
       "id": "ddangyo-1202217-10000144",
       "name": "닭다리살로만 순살 불고기(밥한그릇~뚝딱~불고기맛)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000144"
     },
     {
       "id": "ddangyo-1202217-10000181",
       "name": "매콤김말이튀김 8개",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/c76d5e17-b28e-42a0-baa5-e5b872c0139e.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/c76d5e17-b28e-42a0-baa5-e5b872c0139e.jpg",
+      "sourceMenuId": "10000181"
     },
     {
       "id": "ddangyo-1202217-10000145",
       "name": "닭다리살로만 순살탕수육(새콤~달콤~소스~따로드려요)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/789343ba-36b8-401f-99d1-154ff8110909.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/789343ba-36b8-401f-99d1-154ff8110909.jpg",
+      "sourceMenuId": "10000145"
     },
     {
       "id": "ddangyo-1202217-10000182",
       "name": "치즈스틱",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9bd26a96-6a58-45e6-8bfd-c27bb3933c48.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9bd26a96-6a58-45e6-8bfd-c27bb3933c48.jpg",
+      "sourceMenuId": "10000182"
     },
     {
       "id": "ddangyo-1202217-10000146",
       "name": "닭다리살로만 순살깐풍치킨(매콤~새콤~바삭~깐풍의진미~)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f7b85d97-2d2b-4297-9a97-d1d21e46bee2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f7b85d97-2d2b-4297-9a97-d1d21e46bee2.jpg",
+      "sourceMenuId": "10000146"
     },
     {
       "id": "ddangyo-1202217-10000183",
       "name": "미니맛감자튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f04613b2-3b96-4ffc-92ff-42c09eaa60a2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f04613b2-3b96-4ffc-92ff-42c09eaa60a2.jpg",
+      "sourceMenuId": "10000183"
     },
     {
       "id": "ddangyo-1202217-10000147",
       "name": "닭다리살로만 순살맛동산양념(매콤~양념~땅콩은없어요)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c623b8b1-4991-4807-8bd3-a6e839268cdd.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c623b8b1-4991-4807-8bd3-a6e839268cdd.jpg",
+      "sourceMenuId": "10000147"
     },
     {
       "id": "ddangyo-1202217-10000184",
       "name": "따끈 따끈 집밥같은 햇반",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000184"
     },
     {
       "id": "ddangyo-1202217-10000148",
       "name": "닭다리살로만 순살어니언양파(양파가 ~토핑된~하얀~소스)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/44e00ed9-8764-472b-b710-0da528e80dd3.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/44e00ed9-8764-472b-b710-0da528e80dd3.jpg",
+      "sourceMenuId": "10000148"
     },
     {
       "id": "ddangyo-1202217-10000185",
       "name": "무",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/346f18d7-a13e-4100-856a-1583a5726362.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/346f18d7-a13e-4100-856a-1583a5726362.jpg",
+      "sourceMenuId": "10000185"
     },
     {
       "id": "ddangyo-1202217-10000149",
       "name": "닭다리살로만 순살크림머스타드(학생들~최강~추천~메뉴)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/37723bda-5633-42fc-979f-2d6f2a8f91f1.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/37723bda-5633-42fc-979f-2d6f2a8f91f1.jpg",
+      "sourceMenuId": "10000149"
     },
     {
       "id": "ddangyo-1202217-10000186",
       "name": "양념소스",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/31c9974f-6d0e-4911-8e67-0f6db4cd7e21.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/31c9974f-6d0e-4911-8e67-0f6db4cd7e21.jpg",
+      "sourceMenuId": "10000186"
     },
     {
       "id": "ddangyo-1202217-10000150",
       "name": "닭다리살로만 순살 눈꽃치즈시즈닝(가루 ~치즈~듬뿍~)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f77c7dbd-b50d-40c1-ae66-c4d59ff8eecc.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f77c7dbd-b50d-40c1-ae66-c4d59ff8eecc.jpg",
+      "sourceMenuId": "10000150"
     },
     {
       "id": "ddangyo-1202217-10000187",
       "name": "코카콜라",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/070efeda-8784-413d-9dfc-87865b4bb552.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/070efeda-8784-413d-9dfc-87865b4bb552.jpg",
+      "sourceMenuId": "10000187"
     },
     {
       "id": "ddangyo-1202217-10000151",
       "name": "닭다리살로만 순살허니버터 ( 이보다~더~고소할순없다~)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e4a4f22f-c46c-4205-acd6-9f470f81bf87.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e4a4f22f-c46c-4205-acd6-9f470f81bf87.jpg",
+      "sourceMenuId": "10000151"
     },
     {
       "id": "ddangyo-1202217-10000188",
       "name": "코카콜라500",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/4449f611-dc5b-4afe-8881-88211a0834f5.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/4449f611-dc5b-4afe-8881-88211a0834f5.jpg",
+      "sourceMenuId": "10000188"
     },
     {
       "id": "ddangyo-1202217-10000152",
       "name": "닭다리살로만 순살닭강정(감칠맛~ 쫀득~달콤한맛 지존~)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0561da71-bab6-4400-9f71-0f3d99c15906.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0561da71-bab6-4400-9f71-0f3d99c15906.jpg",
+      "sourceMenuId": "10000152"
     },
     {
       "id": "ddangyo-1202217-10000153",
       "name": "닭다리살로만 매콤골드강정(매운강정~청량고추~팍.~팍~)",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000153"
     },
     {
       "id": "ddangyo-1202217-10000154",
       "name": "닭다리살로만 카레양념(인도~카레라고극찬한 그분은어디에~",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000154"
     },
     {
       "id": "ddangyo-1202217-10000155",
       "name": "닭다리살로만 옛날강정(옛날잔치집뒷부엌~조청맛~침샘폭팔~",
       "description": "무+콜라소+옥수수콘",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000155"
     },
     {
       "id": "ddangyo-1202217-10000156",
       "name": "순살 카레양념파닭",
       "description": "",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000156"
     },
     {
       "id": "ddangyo-1202217-10000157",
       "name": "[신메뉴]D케이준드레싱치킨",
       "description": "푸짐한양~상큼~생큼한 케이준풍 드레싱을 순살치킨과 즐겨보세요",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000157"
     },
     {
       "id": "ddangyo-1202217-10000158",
       "name": "고소바삭 로제 닭껍질튀김(300g+100g덤)",
       "description": "고소~바삭~닭껍질튀김을~따로드린 로제소스에 풍덩 담그어 찍먹 부먹으로 ~로제의 진수를 맛보세요~",
       "category": "닭다리살로만(한마리.반/반)",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg",
+      "sourceMenuId": "10000158"
     }
   ],
   "source": {
@@ -458,5 +520,8 @@
     ],
     "rawItemCount": 62,
     "duplicateItemsRemoved": 0
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

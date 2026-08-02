@@ -1,0 +1,169 @@
+{
+  "storeId": "ab5f14369695f62a",
+  "storeName": "먹기만회 여수본점",
+  "displayName": "먹기만회 여수본점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/cd2db863-408f-4a76-af26-b5d23c201815.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개~~",
+    "먹기만해 단독 활어세트",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138859-10000010",
+      "sourceMenuId": "10000010",
+      "name": "먹기만해 광.참활어&해산물모듬세트 물결",
+      "description": "쫄깃한활어와신선한해산물이한곳에~",
+      "category": "메뉴소개~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/8c730f20-cbb7-4980-8a10-944b893348c0.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000004",
+      "sourceMenuId": "10000004",
+      "name": "먹기만해 연어와해산물모듬세트",
+      "description": "연하디연한 연어와해산물~ (회두께 요청란에 적어주세요)",
+      "category": "먹기만해 단독 활어세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/0ac70133-d51f-48f1-92a1-ff827f0113b0.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000008",
+      "sourceMenuId": "10000008",
+      "name": "나홀로광어 먹기만해",
+      "description": "쫄깃한광어~ 해산물 없이 광어만 드시고싶을때~",
+      "category": "먹기만해 단독 활어세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/d5080056-db4a-463f-b802-607c52658d8f.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000018",
+      "sourceMenuId": "10000018",
+      "name": "콜라(펩시)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138859-10000009",
+      "sourceMenuId": "10000009",
+      "name": "나홀로참돔 먹기만해",
+      "description": "담백한 참돔~해산물 없이 참돔만 드시고 싶을때~",
+      "category": "먹기만해 단독 활어세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138859-10000011",
+      "sourceMenuId": "10000011",
+      "name": "먹기만해 광.참활어&해산물모듬세트 파도",
+      "description": "쫄깃한 활어와 신선한 해산물이 한곳에~~",
+      "category": "메뉴소개~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/afb98649-37dc-4411-8e13-53244c1afdf4.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000019",
+      "sourceMenuId": "10000019",
+      "name": "사이다(칠성)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138859-10000012",
+      "sourceMenuId": "10000012",
+      "name": "먹기만해 광.참활어&해산물모듬세트 쓰나미",
+      "description": "쫄깃한 활어와 신선한 해산물이 한곳에~~",
+      "category": "메뉴소개~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/fb748cbe-79ea-4269-ae5a-300a160116ac.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000020",
+      "sourceMenuId": "10000020",
+      "name": "탐스(파인맛)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138859-10000002",
+      "sourceMenuId": "10000002",
+      "name": "먹기만해 참돔과해산물모듬세트",
+      "description": "담백한 참돔과 해산물~ (회두께 요청란에 적어주세요)",
+      "category": "먹기만해 단독 활어세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/247eb1e3-9c28-4d47-be1b-341a1cfa7c15.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000013",
+      "sourceMenuId": "10000013",
+      "name": "먹기만해 시즌별 모듬해산물세트",
+      "description": "전복/멍게/해삼(겨울철)/소라/뿔소라(꾸죽)/새우등등 (시즌별 변경될 수 있음을 참고해 주세요)",
+      "category": "메뉴소개~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/5e7a3290-aee5-4305-a98b-a5e934cce7f1.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000003",
+      "sourceMenuId": "10000003",
+      "name": "먹기만해 광어와해산물모듬세트",
+      "description": "쫀득한광어와해산물~ (회두께 요청란에 적어주세요)",
+      "category": "먹기만해 단독 활어세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138859-10000014",
+      "sourceMenuId": "10000014",
+      "name": "먹기만해 모듬해산물 물회",
+      "description": "육수가 시원한 물회~야채와 해산물이 풍부한 시원하고 맛있는 모듬해산물 물회",
+      "category": "메뉴소개~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/06310aa1-80d8-441a-ae17-99e16b9c44a1.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000015",
+      "sourceMenuId": "10000015",
+      "name": "먹기만해 얼큰하고 속시원한 매운탕(비조리)",
+      "description": "바로 끓일 수 있도록 모든 양념장과 야채포함",
+      "category": "메뉴소개~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0fdbbfd9-116a-4802-a729-b484fdd3dd2a.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000005",
+      "sourceMenuId": "10000005",
+      "name": "먹기만해 광어와연어&해산물모듬세트",
+      "description": "쫄깃한 광어와 연하디 연한 연어를 반반한 해산물 모듬세트",
+      "category": "먹기만해 단독 활어세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138859-10000016",
+      "sourceMenuId": "10000016",
+      "name": "딱새우회(특대)10마리",
+      "description": "",
+      "category": "메뉴소개~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7903e8b5-ab80-4c52-a199-0bd59f5f5d33.jpg"
+    },
+    {
+      "id": "ddangyo-1138859-10000006",
+      "sourceMenuId": "10000006",
+      "name": "먹기만해 광어와참돔반반",
+      "description": "두가지종류의 활어를 반반으로 원할때~~",
+      "category": "먹기만해 단독 활어세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138859-10000017",
+      "sourceMenuId": "10000017",
+      "name": "공기밥(1공기)",
+      "description": "",
+      "category": "메뉴소개~~",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138859-10000007",
+      "sourceMenuId": "10000007",
+      "name": "먹기만해 광어와연어반반세트(2~3인)",
+      "description": "",
+      "category": "먹기만해 단독 활어세트",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

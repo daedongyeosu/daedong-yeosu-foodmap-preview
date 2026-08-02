@@ -1,0 +1,122 @@
+{
+  "storeId": "b6c5400a34504bc0",
+  "storeName": "처갓집양념치킨 문수점",
+  "displayName": "처갓집양념치킨 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9fa35b28-66ee-4dc6-beef-8824e52f2e05.jpg",
+  "categories": [
+    "전체",
+    "치킨 (한마리)",
+    "치킨 (반반)",
+    "추가메뉴",
+    "음료추가"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216315-30000003",
+      "sourceMenuId": "30000003",
+      "name": "허니올리고당야채양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4b0edd60-de2a-49b6-8aae-a45d0fff6f03.jpg"
+    },
+    {
+      "id": "ddangyo-1216315-30000021",
+      "sourceMenuId": "30000021",
+      "name": "반반치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (반반)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9a4a19eb-558a-424d-a046-2f56075d1fa7.jpg"
+    },
+    {
+      "id": "ddangyo-1216315-30000002",
+      "sourceMenuId": "30000002",
+      "name": "후라이드치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e740aa07-8955-400e-b94b-6de7426a32da.jpg"
+    },
+    {
+      "id": "ddangyo-1216315-30000007",
+      "sourceMenuId": "30000007",
+      "name": "슈프림골드 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b44f3a98-ad0c-449c-9e9a-a89fa8236ca1.jpg"
+    },
+    {
+      "id": "ddangyo-1216315-30000037",
+      "sourceMenuId": "30000037",
+      "name": "치킨무",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216315-30000038",
+      "sourceMenuId": "30000038",
+      "name": "양념소스 (40g)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216315-30000004",
+      "sourceMenuId": "30000004",
+      "name": "슈프림 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/12ae7c64-61f3-4c51-85b6-b20a3f6f44ef.jpg"
+    },
+    {
+      "id": "ddangyo-1216315-30000005",
+      "sourceMenuId": "30000005",
+      "name": "핫슈프림 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f044db58-f783-4cbc-9336-0d185a3094c2.jpg"
+    },
+    {
+      "id": "ddangyo-1216315-30000132",
+      "sourceMenuId": "30000132",
+      "name": "미트칠리 양념소스 (220g)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216315-30000051",
+      "sourceMenuId": "30000051",
+      "name": "코카콜라 245ml",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216315-30000012",
+      "sourceMenuId": "30000012",
+      "name": "와락(간장)치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e22b77ae-6902-49cd-8ce1-474cd397d29d.jpg"
+    },
+    {
+      "id": "ddangyo-1216315-30000015",
+      "sourceMenuId": "30000015",
+      "name": "매운불 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/462d166b-d529-418f-8e75-d27a5c17f9f5.jpg"
+    },
+    {
+      "id": "ddangyo-1216315-30000016",
+      "sourceMenuId": "30000016",
+      "name": "닭강정(순살)",
+      "description": "",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6a74854e-76dc-4d2b-8cc2-ffef68f6f425.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

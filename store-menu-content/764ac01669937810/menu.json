@@ -16,28 +16,32 @@
       "name": "골목제육볶음+달걀찜",
       "description": "",
       "category": "메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dea7480a-6600-4a69-b7e7-e07eecddac41.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dea7480a-6600-4a69-b7e7-e07eecddac41.jpg",
+      "sourceMenuId": "10000001"
     },
     {
       "id": "ddangyo-1323595-10000002",
       "name": "닭매운탕(수제비)",
       "description": "콩나물+무",
       "category": "메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b1f1216c-3628-48cb-9b75-6a9497c7e4fb.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b1f1216c-3628-48cb-9b75-6a9497c7e4fb.jpg",
+      "sourceMenuId": "10000002"
     },
     {
       "id": "ddangyo-1323595-10000006",
       "name": "달걀찜",
       "description": "",
       "category": "사이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e77c8c2d-838a-44cb-8748-4e396a3f8568.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e77c8c2d-838a-44cb-8748-4e396a3f8568.jpg",
+      "sourceMenuId": "10000006"
     },
     {
       "id": "ddangyo-1323595-10000008",
       "name": "펩시콜라",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000008"
     },
     {
       "id": "ddangyo-1323595-90000001",
@@ -45,21 +49,24 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
     },
     {
       "id": "ddangyo-1323595-10000007",
       "name": "공기밥",
       "description": "",
       "category": "사이드",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/1f71c3ee-b08b-4c0b-ad7d-61844c8cf1ae.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/1f71c3ee-b08b-4c0b-ad7d-61844c8cf1ae.jpg",
+      "sourceMenuId": "10000007"
     },
     {
       "id": "ddangyo-1323595-10000009",
       "name": "칠성사이다",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000009"
     },
     {
       "id": "ddangyo-1323595-90000002",
@@ -67,21 +74,24 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
     },
     {
       "id": "ddangyo-1323595-10000003",
       "name": "닭한마리(칼국수)",
       "description": "감자+애호박+떡",
       "category": "메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1860410d-c256-4a05-a93d-4b960d178a47.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1860410d-c256-4a05-a93d-4b960d178a47.jpg",
+      "sourceMenuId": "10000003"
     },
     {
       "id": "ddangyo-1323595-10000010",
       "name": "탐스제로",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000010"
     },
     {
       "id": "ddangyo-1323595-90000003",
@@ -89,21 +99,24 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
     },
     {
       "id": "ddangyo-1323595-10000004",
       "name": "뼈없는양념 돼지꼬리볶음",
       "description": "",
       "category": "메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b2c60ba8-950f-4e30-9153-c247bd136014.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b2c60ba8-950f-4e30-9153-c247bd136014.jpg",
+      "sourceMenuId": "10000004"
     },
     {
       "id": "ddangyo-1323595-10000011",
       "name": "펩시제로",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000011"
     },
     {
       "id": "ddangyo-1323595-90000004",
@@ -111,14 +124,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
     },
     {
       "id": "ddangyo-1323595-10000005",
       "name": "골목치킨",
       "description": "양념+치킨무+콜라355ml",
       "category": "메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000005"
     },
     {
       "id": "ddangyo-1323595-90000005",
@@ -126,7 +141,8 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
     },
     {
       "id": "ddangyo-1323595-90000006",
@@ -134,7 +150,8 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
     },
     {
       "id": "ddangyo-1323595-90000007",
@@ -142,7 +159,8 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000007"
     }
   ],
   "source": {
@@ -153,5 +171,8 @@
     ],
     "rawItemCount": 20,
     "duplicateItemsRemoved": 2
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

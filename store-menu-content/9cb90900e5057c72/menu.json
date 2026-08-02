@@ -1,0 +1,379 @@
+{
+  "storeId": "9cb90900e5057c72",
+  "storeName": "가마솥볶음밥",
+  "displayName": "가마솥볶음밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/e21f8c58-284c-47fc-933b-9114df6d2847.jpg",
+  "categories": [
+    "전체",
+    "메인 메뉴",
+    "사이드 메뉴",
+    "소스 추가",
+    "반찬",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1317745-10000002",
+      "sourceMenuId": "10000002",
+      "name": "김치볶음밥",
+      "description": "볶음밥의 클래식, 언제 먹어도 질리지 않는 김치볶음밥",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/0e86bec4-f828-4361-99ef-947d420f6ce9.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000006",
+      "sourceMenuId": "10000006",
+      "name": "햄야채볶음밥",
+      "description": "아이도, 어른도 누구나 좋아하는 국민 볶음밥",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a9d9b8ed-d79c-46ed-b973-df04c281cd13.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000015",
+      "sourceMenuId": "10000015",
+      "name": "프리미엄 순살 돈까스",
+      "description": "엄선한 국내산 돈육으로 만든 프리미엄 순살 돈까스",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/dba6f5dd-cc47-44e0-a31a-c9cbd12eaf26.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000001",
+      "sourceMenuId": "10000001",
+      "name": "땡초멸치볶음밥",
+      "description": "국산 땡초의 알싸한 매운맛과 고소하게 볶은 멸치의 감칠맛이 어우러진 땡초멸치볶음밥",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000035",
+      "sourceMenuId": "10000035",
+      "name": "오뚜기 케찹",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000040",
+      "sourceMenuId": "10000040",
+      "name": "밥도둑 땡초멸치볶음",
+      "description": "비비면 밥 한 공기 순삭 입맛 살려주는 진짜 밥도둑 반찬",
+      "category": "반찬",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000041",
+      "sourceMenuId": "10000041",
+      "name": "얼박사",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000016",
+      "sourceMenuId": "10000016",
+      "name": "노릇노릇 생선까스",
+      "description": "겉은 바삭, 속은 촉촉 담백하게 즐기는 생선까스 한 접시",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b3b4d8af-feba-41ca-8a10-d005b1d3fd94.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000036",
+      "sourceMenuId": "10000036",
+      "name": "오뚜기 허니머스타드",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000042",
+      "sourceMenuId": "10000042",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000003",
+      "sourceMenuId": "10000003",
+      "name": "삼겹김치볶음밥",
+      "description": "삼겹살과 김치의 환상적인 만남 고소함+매콤함+든든함을 한 그릇에",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000017",
+      "sourceMenuId": "10000017",
+      "name": "닭다리 후라이드",
+      "description": "닭다리 + 치킨소스",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003180.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000037",
+      "sourceMenuId": "10000037",
+      "name": "오뚜기 마요네즈",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000043",
+      "sourceMenuId": "10000043",
+      "name": "코카콜라제로",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000004",
+      "sourceMenuId": "10000004",
+      "name": "스팸김치볶음밥",
+      "description": "국민 반찬 스팸과 김치의 환상 조합 한입 먹는 순간, 추억 소환",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c3e57d6f-4552-4951-8aab-4d42de6d1d2e.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000018",
+      "sourceMenuId": "10000018",
+      "name": "떡갈비",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ba6058f2-96e9-4bdd-b333-aaabbd175e07.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000038",
+      "sourceMenuId": "10000038",
+      "name": "치킨양념소스",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000044",
+      "sourceMenuId": "10000044",
+      "name": "환타 파인",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000005",
+      "sourceMenuId": "10000005",
+      "name": "참치김치볶음밥",
+      "description": "부담 없이 즐기는 고소한 한 그릇 담백함과 감칠맛의 찐조합",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/6b330f91-091e-416e-82f2-7a903831f110.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000019",
+      "sourceMenuId": "10000019",
+      "name": "촉촉한 육즙 미트볼",
+      "description": "미트볼 14pc",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000039",
+      "sourceMenuId": "10000039",
+      "name": "맛간장",
+      "description": "",
+      "category": "소스 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000045",
+      "sourceMenuId": "10000045",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000020",
+      "sourceMenuId": "10000020",
+      "name": "대왕고추튀김",
+      "description": "속이 꽉 찬 대왕고추튀김 볶음밥과 찰떡궁합은 물론, 별도 주문으로도 강력 추천",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c20ff2d3-e80d-41d7-953b-4311d0ef36df.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000007",
+      "sourceMenuId": "10000007",
+      "name": "가마솥 닭갈비",
+      "description": "닭갈비 600g + 대파",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000021",
+      "sourceMenuId": "10000021",
+      "name": "꿔바로우 오징어튀김",
+      "description": "쫄깃하고 바삭한 오징어의 반전 매력 신선한 오징어를 큼직하게 썰어 바삭하게 튀겨냈어요",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000008",
+      "sourceMenuId": "10000008",
+      "name": "짜파구리",
+      "description": "짜파게티 1봉 + 너구리 1봉",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000022",
+      "sourceMenuId": "10000022",
+      "name": "대왕 김말이",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000009",
+      "sourceMenuId": "10000009",
+      "name": "불닭볶음면",
+      "description": "불닭볶음면 2봉",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000023",
+      "sourceMenuId": "10000023",
+      "name": "탕수육 330g",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000010",
+      "sourceMenuId": "10000010",
+      "name": "[혜자세트] 볶음밥2 + 사이드2 set",
+      "description": "양도, 맛도, 구성이 혜자 그 자체 고슬고슬한 볶음밥 2종 + 인기 사이드 2종을 한 번에 즐길 수 있는 실속 세트",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000024",
+      "sourceMenuId": "10000024",
+      "name": "휴게소 간식 소떡소떡",
+      "description": "추억의 간식, 국민 간식 소떡소떡 겉은 살짝 바삭하고 속은 촉촉한 식감으로 휴게소에서 먹던 그 맛",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000011",
+      "sourceMenuId": "10000011",
+      "name": "(폭탄토핑) 땡초멸치볶음밥 2인 set",
+      "description": "반숙 계란 5개, 리얼 스팸 2장, 대패삼겹살 100g",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000025",
+      "sourceMenuId": "10000025",
+      "name": "숯불갈비향소시지",
+      "description": "짜지 않고 담백한 숯불갈비향소시지",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000012",
+      "sourceMenuId": "10000012",
+      "name": "(폭탄토핑) 김치볶음밥 2인 set",
+      "description": "반숙 계란 5개, 리얼 스팸 2장, 대패삼겹살 100g",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000026",
+      "sourceMenuId": "10000026",
+      "name": "문방구 피카츄 돈까스",
+      "description": "어린 시절 문방구 앞에서 먹던 그 맛 추억 소환 간식 1등",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000013",
+      "sourceMenuId": "10000013",
+      "name": "(폭탄토핑) 새우볶음밥 2인 set",
+      "description": "반숙 계란 5개, 리얼 스팸 2장, 대패삼겹살 100g",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000027",
+      "sourceMenuId": "10000027",
+      "name": "왕새우튀김",
+      "description": "탱글탱글한 통살 새우에 고운 빵가루를 입혀 노릇하게 튀겨낸 바삭한 빵가루새우",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/3d4eda4e-1c59-4199-90c1-8cea1d9baf1a.jpg"
+    },
+    {
+      "id": "ddangyo-1317745-10000014",
+      "sourceMenuId": "10000014",
+      "name": "(폭탄토핑) 햄야채볶음밥 2인 set",
+      "description": "반숙 계란 5개, 리얼 스팸 2장, 대패삼겹살 100g",
+      "category": "메인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000028",
+      "sourceMenuId": "10000028",
+      "name": "케이준 프라이 300g",
+      "description": "출출한 오후 간식, 맥주 안주, 아이 간식까지 다 되는 국민 사이드 메뉴, 지금 바로 만나보세요",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000029",
+      "sourceMenuId": "10000029",
+      "name": "추억의 치킨너겟 10pc",
+      "description": "국민 간식 치킨너겟, 그 시절 그 맛을 그대로 담았습니다.",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000030",
+      "sourceMenuId": "10000030",
+      "name": "순살 치킨 가라아게 200g",
+      "description": "혼밥, 야식, 맥주 안주, 아이 간식까지 OK 마요소스나 칠리소스에 콕 찍어 먹으면 입 안 가득 바삭하고 짭짤한 일본식 치킨의 진수",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000031",
+      "sourceMenuId": "10000031",
+      "name": "버팔로 스틱 3pc",
+      "description": "겉은 바삭 속은 촉촉한 순살 치킨에 중독성 강한 버팔로 스틱",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000032",
+      "sourceMenuId": "10000032",
+      "name": "치킨팝콘",
+      "description": "겉은 바삭 속은 부드러운 순살로 만든 치킨팝콘 먹기 좋은 크기로 튀겨내 누구나 부담 없이 즐길 수 있는 국민 간식",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000033",
+      "sourceMenuId": "10000033",
+      "name": "켄터키 핫도그",
+      "description": "폭신한 반죽 안에 통통한 소시지를 쏙 넣고 노릇하게 튀겨낸 켄터키 스타일 핫도그",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1317745-10000034",
+      "sourceMenuId": "10000034",
+      "name": "모짜렐라 치즈볼 5pc",
+      "description": "속은 부드럽고 쫀득한 리얼 모짜렐라 치즈볼 허니버터 시즈닝 환상 조합",
+      "category": "사이드 메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

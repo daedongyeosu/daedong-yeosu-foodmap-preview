@@ -1,0 +1,500 @@
+{
+  "storeId": "7d656b9342aabd94",
+  "storeName": "청담곱떡 전남여수점",
+  "displayName": "청담곱떡 전남여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/0054cd63-3a63-4f59-b521-59da03e81323.jpg",
+  "categories": [
+    "전체",
+    "청담 원조메뉴",
+    "청담 프리미엄메뉴",
+    "주류메뉴",
+    "추가 배달료 ( 돌산 )",
+    "청담 1인메뉴",
+    "청담 튀김메뉴",
+    "청담 사이드메뉴",
+    "청담 음료메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1285607-10000052",
+      "sourceMenuId": "10000052",
+      "name": "청담우삼겹떡볶이",
+      "description": "우삼겹+떡+오뎅+메추리알+양배추+깻잎+단무지",
+      "category": "청담 원조메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c96c21c4-1373-4f58-bbf3-41f7343d267f.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-10000053",
+      "sourceMenuId": "10000053",
+      "name": "청담직화삼겹떡볶이",
+      "description": "직화삼겹+떡+오뎅+메추리알+양배추+깻잎+단무지",
+      "category": "청담 원조메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/4d9ab54e-065e-4017-812b-84b41f468390.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-10000048",
+      "sourceMenuId": "10000048",
+      "name": "청담소곱창떡볶이",
+      "description": "소곱창+떡+오뎅+메추리알+양배추+깻잎+단무지",
+      "category": "청담 프리미엄메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/014b4129-96eb-4690-a5dd-c5eaf9eb20cc.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-90000001",
+      "sourceMenuId": "90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285607-10000042",
+      "sourceMenuId": "10000042",
+      "name": "그리다, 바다정원, 오션힐, 해뜨락, 노블, 라마다",
+      "description": "",
+      "category": "추가 배달료 ( 돌산 )",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000047",
+      "sourceMenuId": "10000047",
+      "name": "청담로제소곱창떡볶이",
+      "description": "로제크림+소곱창+떡+메추리알+비엔나+파마산+피클",
+      "category": "청담 프리미엄메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/11eb24b6-1894-4c43-86c2-003629bdc159.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-10000055",
+      "sourceMenuId": "10000055",
+      "name": "청담1인떡볶이",
+      "description": "기본 떡볶이 입니다 추가 소곱창, 대창 떡볶이 잡내제거 효과를 위해 마무리 토핑으로 다진마늘이 올려져 나갑니다",
+      "category": "청담 1인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f2d12401-f362-48e0-b5a0-f2880fbb5b81.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-10000056",
+      "sourceMenuId": "10000056",
+      "name": "POP만두",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000076",
+      "sourceMenuId": "10000076",
+      "name": "맛보기육회",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000087",
+      "sourceMenuId": "10000087",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "청담 음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285607-10000043",
+      "sourceMenuId": "10000043",
+      "name": "라테라스,여수드림,블루밍",
+      "description": "",
+      "category": "추가 배달료 ( 돌산 )",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000057",
+      "sourceMenuId": "10000057",
+      "name": "왕새우튀김",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000077",
+      "sourceMenuId": "10000077",
+      "name": "육즙가득떡갈비",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000088",
+      "sourceMenuId": "10000088",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "청담 음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-90000003",
+      "sourceMenuId": "90000003",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285607-10000044",
+      "sourceMenuId": "10000044",
+      "name": "JCS,비고,라벤다,웰스테이,슈가브리움",
+      "description": "",
+      "category": "추가 배달료 ( 돌산 )",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000049",
+      "sourceMenuId": "10000049",
+      "name": "청담소대창떡볶이",
+      "description": "소대창+떡+오뎅+메추리알+양배추+깻잎+단무지",
+      "category": "청담 프리미엄메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/7331aa25-ec6b-496b-8815-b8ab38a92085.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-10000054",
+      "sourceMenuId": "10000054",
+      "name": "청담치즈폭탄떡볶이",
+      "description": "치즈폭탄+떡+오뎅+메추리알+양배추+단무지",
+      "category": "청담 원조메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/4656ff13-a11a-485e-ba6d-823beacdd155.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-10000058",
+      "sourceMenuId": "10000058",
+      "name": "치킨가라아게",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000078",
+      "sourceMenuId": "10000078",
+      "name": "참치마요덮밥",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000089",
+      "sourceMenuId": "10000089",
+      "name": "탐스제로 파인맛",
+      "description": "",
+      "category": "청담 음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285607-10000045",
+      "sourceMenuId": "10000045",
+      "name": "여수비치,라포즈,노을담은,디아크,카펠라",
+      "description": "",
+      "category": "추가 배달료 ( 돌산 )",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000050",
+      "sourceMenuId": "10000050",
+      "name": "[HOT_신메뉴]_청담로제막창떡볶이",
+      "description": "로제크림+막창+떡+메추리알+비엔나+파마산+피클",
+      "category": "청담 프리미엄메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/2e1aa57d-0249-47a5-8231-070a80da2e93.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-10000059",
+      "sourceMenuId": "10000059",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000079",
+      "sourceMenuId": "10000079",
+      "name": "계란찜",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000090",
+      "sourceMenuId": "10000090",
+      "name": "쿨피스",
+      "description": "",
+      "category": "청담 음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-90000005",
+      "sourceMenuId": "90000005",
+      "name": "하이트 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285607-10000046",
+      "sourceMenuId": "10000046",
+      "name": "쥬얼리,더끌림,케이파크,굿타임,예술랜드,1박2일,핀란드",
+      "description": "",
+      "category": "추가 배달료 ( 돌산 )",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000051",
+      "sourceMenuId": "10000051",
+      "name": "[HOT_신메뉴]_청담막창떡볶이",
+      "description": "막창+떡+오뎅+메추리알+양배추+깻잎+단무지",
+      "category": "청담 프리미엄메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/9ce93a74-ada8-42dd-9968-aa3b723bc71c.jpg"
+    },
+    {
+      "id": "ddangyo-1285607-10000060",
+      "sourceMenuId": "10000060",
+      "name": "한입핫도그",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000080",
+      "sourceMenuId": "10000080",
+      "name": "공기밥",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000091",
+      "sourceMenuId": "10000091",
+      "name": "생수",
+      "description": "",
+      "category": "청담 음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-90000006",
+      "sourceMenuId": "90000006",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285607-10000061",
+      "sourceMenuId": "10000061",
+      "name": "크림치즈볼",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000081",
+      "sourceMenuId": "10000081",
+      "name": "단무지",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000092",
+      "sourceMenuId": "10000092",
+      "name": "탄산수 ( 라인바싸 )",
+      "description": "",
+      "category": "청담 음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000062",
+      "sourceMenuId": "10000062",
+      "name": "야끼만두",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000082",
+      "sourceMenuId": "10000082",
+      "name": "피클",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000093",
+      "sourceMenuId": "10000093",
+      "name": "펩시콜라 1.25L",
+      "description": "",
+      "category": "청담 음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000063",
+      "sourceMenuId": "10000063",
+      "name": "김말이",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000083",
+      "sourceMenuId": "10000083",
+      "name": "파마산",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000094",
+      "sourceMenuId": "10000094",
+      "name": "칠성사이다 1.25L",
+      "description": "",
+      "category": "청담 음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000084",
+      "sourceMenuId": "10000084",
+      "name": "갈비찐만두 (만두6+간장+단무지)",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000064",
+      "sourceMenuId": "10000064",
+      "name": "고구마튀김",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000065",
+      "sourceMenuId": "10000065",
+      "name": "해쉬브라운",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000085",
+      "sourceMenuId": "10000085",
+      "name": "병천순대 순대(300g)+양념소금",
+      "description": "",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000066",
+      "sourceMenuId": "10000066",
+      "name": "맛감자",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000086",
+      "sourceMenuId": "10000086",
+      "name": "물만두 (간장 1 포함)",
+      "description": "물만두 20p + 간장1개",
+      "category": "청담 사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000067",
+      "sourceMenuId": "10000067",
+      "name": "튀김왕교자만두",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000068",
+      "sourceMenuId": "10000068",
+      "name": "튀김왕교자갈비만두",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000069",
+      "sourceMenuId": "10000069",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000070",
+      "sourceMenuId": "10000070",
+      "name": "튀김왕만두",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000071",
+      "sourceMenuId": "10000071",
+      "name": "팝콘치킨",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000072",
+      "sourceMenuId": "10000072",
+      "name": "왕고추튀김",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000073",
+      "sourceMenuId": "10000073",
+      "name": "라이스 치즈볼",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000074",
+      "sourceMenuId": "10000074",
+      "name": "곰돌이 돈까스",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285607-10000075",
+      "sourceMenuId": "10000075",
+      "name": "김밥말이튀김2p",
+      "description": "",
+      "category": "청담 튀김메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

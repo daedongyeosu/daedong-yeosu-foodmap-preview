@@ -1,0 +1,175 @@
+{
+  "storeId": "732120ab53b3f457",
+  "storeName": "여수분식",
+  "displayName": "여수분식",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/a1b11c12-116d-49df-9637-f39de4787039.jpg",
+  "categories": [
+    "전체",
+    "분식류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1320836-10000002",
+      "sourceMenuId": "10000002",
+      "name": "참치김밥",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d06fc404-258f-4484-b1bd-fdbfdc020f14.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000001",
+      "sourceMenuId": "10000001",
+      "name": "여수김밥",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/57bfd200-f81a-4100-8a00-88bb67c6b82f.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000021",
+      "sourceMenuId": "10000021",
+      "name": "물냉면",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320836-10000022",
+      "sourceMenuId": "10000022",
+      "name": "비빔냉면",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320836-10000005",
+      "sourceMenuId": "10000005",
+      "name": "떡볶이",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/e22ba05c-361e-4ee3-885b-031a751689a8.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000006",
+      "sourceMenuId": "10000006",
+      "name": "순대",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/1b83b75a-24d7-416d-b093-563e6420438d.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000007",
+      "sourceMenuId": "10000007",
+      "name": "야채튀김",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/cea0c14f-e8f5-488a-b0bb-a680d9ca65c1.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000008",
+      "sourceMenuId": "10000008",
+      "name": "고구마튀김",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3462678a-d790-4174-b301-c18161bc4160.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000009",
+      "sourceMenuId": "10000009",
+      "name": "김말이튀김",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f792c40c-7184-4c33-87dc-74fb85d34364.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000010",
+      "sourceMenuId": "10000010",
+      "name": "오징어튀김",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0a175881-29aa-4529-b026-9c39bbd18be8.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000011",
+      "sourceMenuId": "10000011",
+      "name": "고추튀김",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/a4d3855a-b0a9-4131-840d-5017d3daf771.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000012",
+      "sourceMenuId": "10000012",
+      "name": "새우튀김",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/34e52ab7-1b44-428f-a3fe-814cd09c0a38.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000013",
+      "sourceMenuId": "10000013",
+      "name": "오뎅",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320836-10000014",
+      "sourceMenuId": "10000014",
+      "name": "닭강정",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/387a0bdf-1b0f-4656-aa31-f813aba3e82b.jpg"
+    },
+    {
+      "id": "ddangyo-1320836-10000015",
+      "sourceMenuId": "10000015",
+      "name": "콜라",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320836-10000016",
+      "sourceMenuId": "10000016",
+      "name": "사이다",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320836-10000017",
+      "sourceMenuId": "10000017",
+      "name": "환타(파인애플)",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320836-10000018",
+      "sourceMenuId": "10000018",
+      "name": "환타(포도)",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320836-10000019",
+      "sourceMenuId": "10000019",
+      "name": "제로콜라",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1320836-10000020",
+      "sourceMenuId": "10000020",
+      "name": "스프라이트",
+      "description": "",
+      "category": "분식류",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

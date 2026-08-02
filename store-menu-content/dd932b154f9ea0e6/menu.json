@@ -1,0 +1,326 @@
+{
+  "storeId": "dd932b154f9ea0e6",
+  "storeName": "모도리보쌈족발 여수본점",
+  "displayName": "모도리보쌈족발 여수본점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8646793a-8885-4ef5-ae41-aa3d69816bc1.jpg",
+  "categories": [
+    "전체",
+    "모도리 반반셋트",
+    "보쌈메뉴",
+    "족발메뉴",
+    "모도리 혼밥 1인 도시락",
+    "배달료 추가 요금",
+    "사이드 메뉴",
+    "소스",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1177818-10000016",
+      "sourceMenuId": "10000016",
+      "name": "모도리 보족세트",
+      "description": "기본 구성 3인(중)이상 : 보쌈고기+순살족발+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓 )+ 콜라500ml 4인(대)이상 : 보쌈고기+순살족발+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓 )+콜라1.25L",
+      "category": "모도리 반반셋트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/0989bca2-3f9e-4a94-9d91-bfee4c4c8b72.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000004",
+      "sourceMenuId": "10000004",
+      "name": "모도리보쌈",
+      "description": "기본 구성셋트 2인(소)이상 : 보쌈고기+국물떡볶이+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓)+쌈야채+콜라500ml 3인(중)이상 : 보쌈고기+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+ 콜라500ml 4인(대)이상 : 보쌈고기+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+콜라1.25L",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/d6adad22-e321-4b8f-b5b3-d9d2c124738c.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000011",
+      "sourceMenuId": "10000011",
+      "name": "모도리 앞다리족발",
+      "description": "기본 구성셋트 2인(소)이상 : 순살족발+국물떡볶이+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓)+쌈야채+콜라500ml 3인(중)이상 : 순살족발+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+ 콜라500ml 4인(대)이상 : 순살족발+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+콜라1.25L",
+      "category": "족발메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/740838fe-26c0-4ccd-afbd-8bf2af451867.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000017",
+      "sourceMenuId": "10000017",
+      "name": "보쌈1인도시락",
+      "description": "구성 : 보쌈고기 150g+공기밥, 보쌈무김치, 된장찌개, 쌈야채, 쌈장,마늘,양파,쌈무,새우젓(반찬은 바뀔수있음) ,캔음료",
+      "category": "모도리 혼밥 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/c759b6b4-fe1c-4c0b-b7fe-f05ebfb7a029.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000001",
+      "sourceMenuId": "10000001",
+      "name": "라테라스",
+      "description": "",
+      "category": "배달료 추가 요금",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000010",
+      "sourceMenuId": "10000010",
+      "name": "모도리 직화불족발",
+      "description": "기본 구성셋트 2인(소)이상 : 순살족발+국물떡볶이+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓)+쌈야채+콜라500ml 3인(중)이상 : 순살족발+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+ 콜라500ml 4인(대)이상 : 순살족발+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+콜라1.25L",
+      "category": "족발메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/bed0459b-7a98-41dc-a096-df3d691ca53a.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000013",
+      "sourceMenuId": "10000013",
+      "name": "모도리 보쌈+직화 불보쌈",
+      "description": "기본 구성 3인(중)이상 : 순살보쌈고기+불보쌈+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓 )+ 콜라500ml 4인(대)이상 : 순살보쌈고기+불보쌈+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓 )+콜라1.25L",
+      "category": "모도리 반반셋트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/19ec66b7-75b7-4e49-b966-0abe0e955015.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000025",
+      "sourceMenuId": "10000025",
+      "name": "골빔면",
+      "description": "골뱅이+비빔소면",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000035",
+      "sourceMenuId": "10000035",
+      "name": "파소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000038",
+      "sourceMenuId": "10000038",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000002",
+      "sourceMenuId": "10000002",
+      "name": "깔라까따, JCS호텔, 디아크, 웨스트힐스",
+      "description": "",
+      "category": "배달료 추가 요금",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000005",
+      "sourceMenuId": "10000005",
+      "name": "모도리 마늘보쌈",
+      "description": "기본 구성셋트 2인(소)이상 : 보쌈고기+국물떡볶이+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓)+쌈야채+콜라500ml 3인(중)이상 : 보쌈고기+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+ 콜라500ml 4인(대)이상 : 보쌈고기+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+콜라1.25L",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/ef55b1c8-5359-464b-bbc0-fa3d14473f05.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000014",
+      "sourceMenuId": "10000014",
+      "name": "모도리 보쌈+직화 불족발",
+      "description": "기본 구성 3인(중)이상 : 보쌈고기+불족발+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓 )+ 콜라500ml 4인(대)이상 : 보쌈고기+불족발+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓 )+콜라1.25L",
+      "category": "모도리 반반셋트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/d5f3318d-c6c4-4e20-b85d-75f892e5e24e.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000018",
+      "sourceMenuId": "10000018",
+      "name": "족발 1인 도시락",
+      "description": "구성 : 순살족발 150g+공기밥, 보쌈무김치, 된장찌개, 쌈야채, 쌈장,마늘,양파,쌈무,새우젓(반찬은 바뀔수있음) ,캔음료",
+      "category": "모도리 혼밥 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/78a3a833-5f32-4558-966e-e0224ccc08ab.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000026",
+      "sourceMenuId": "10000026",
+      "name": "비빔국수",
+      "description": "소면+각종야채+비빔소스",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/321efc52-4207-4f91-962e-7fa3ae2e4185.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000036",
+      "sourceMenuId": "10000036",
+      "name": "마늘소스",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000039",
+      "sourceMenuId": "10000039",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000003",
+      "sourceMenuId": "10000003",
+      "name": "스톤아일랜드, 라포즈, 비고리조트, 노블루스트",
+      "description": "",
+      "category": "배달료 추가 요금",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000006",
+      "sourceMenuId": "10000006",
+      "name": "모도리 파보쌈",
+      "description": "기본 구성셋트 2인(소)이상 : 보쌈고기+국물떡볶이+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓)+쌈야채+콜라500ml 3인(중)이상 : 보쌈고기+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+ 콜라500ml 4인(대)이상 : 보쌈고기+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+콜라1.25L",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/ff4edbc1-619d-40c1-95f2-8f0f837c514a.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000012",
+      "sourceMenuId": "10000012",
+      "name": "새콤달콤 족뱅이세트",
+      "description": "기본 구성셋트 3인(중) : 족발+골뱅이+비빔국수+국물떡볶이+참치날치알주먹밥+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘,쌈무,생양파,새우젓)+쌈야채+콜라 500ml (비빔냉면X) 4인(대)이상 : 족발+골뱅이+비빔국수+비빔냉면+국물떡볶이+참치날치알주먹밥+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘,쌈무,생양파,새우젓)+쌈야채+콜라 1.25L",
+      "category": "족발메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9cc057a3-c8c5-48da-85ac-cc67cddc496d.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000015",
+      "sourceMenuId": "10000015",
+      "name": "모도리 족발+직화 불족발",
+      "description": "기본 구성 3인(중)이상 : 순살족발+불족발+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓 )+ 콜라500ml 4인(대)이상 : 순살족발+불족발+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓 )+콜라1.25L",
+      "category": "모도리 반반셋트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/d77a4320-1908-4006-9efc-f50f684ef45c.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000019",
+      "sourceMenuId": "10000019",
+      "name": "보쌈냉면 1인 도시락",
+      "description": "보쌈 150g + 비빔냉면, 쌈야채,보쌈무김치,5찬(쌈장,마늘,양파,쌈무,새우젓),캔콜라",
+      "category": "모도리 혼밥 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/964b99af-a904-488e-b93f-b8060b8d92f1.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000027",
+      "sourceMenuId": "10000027",
+      "name": "쟁반비빔냉면",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/45319a00-7173-4d45-9d63-633022e5e04b.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000037",
+      "sourceMenuId": "10000037",
+      "name": "모둠소스 (파소스+마늘소스)",
+      "description": "",
+      "category": "소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000007",
+      "sourceMenuId": "10000007",
+      "name": "모도리 모둠보쌈",
+      "description": "기본 구성셋트 2인(소)이상 : 보쌈고기+국물떡볶이+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓)+쌈야채+콜라500ml 3인(중)이상 : 보쌈고기+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+ 콜라500ml 4인(대)이상 : 보쌈고기+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+콜라1.25L",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/7a62d6cd-a13d-43e3-bb45-a6a36eb633e5.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000020",
+      "sourceMenuId": "10000020",
+      "name": "마늘보쌈 1인 도시락",
+      "description": "구성 :마늘 보쌈고기 150g+공기밥,보쌈 무김치, 된장찌개, 쌈야채, 쌈장,마늘,양파,쌈무,새우젓(반찬은 바뀔수있음) ,캔음료",
+      "category": "모도리 혼밥 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9f6ba490-9a58-49d2-8630-0e7c549f9d99.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000028",
+      "sourceMenuId": "10000028",
+      "name": "차돌된장찌개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/6fa2546c-1f75-4932-a036-9f72f44982e2.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000008",
+      "sourceMenuId": "10000008",
+      "name": "모도리 보쌈냉면세트",
+      "description": "기본 구성셋트 2인(소) : 보쌈고기+비빔냉면+배추김치,무김치+5칸반찬(쌈장.생마늘.생양파.쌈무,새우젓)+쌈야채+ 콜라500ml 3인(중)이상 : 보쌈고기+비빔냉면+참치날치알주먹밥+배추김치,무김치+5칸반찬+쌈야채+콜라500ml 4인(대)이상 : 보쌈고기+비빔냉면+참치날치알주먹밥+배추김치,무김치+5칸반찬+쌈야채+콜라1.25L",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/3a253758-73d3-4623-919f-c3ac3aac471a.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000021",
+      "sourceMenuId": "10000021",
+      "name": "파보쌈 1인 도시락",
+      "description": "구성 :파 보쌈고기 150g+공기밥,보쌈 무김치, 된장찌개, 쌈야채, 쌈장,마늘,양파,쌈무,새우젓(반찬은 바뀔수있음) ,캔음료",
+      "category": "모도리 혼밥 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/2ca4bd5c-7f90-4660-87dc-d7ea8d576724.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000029",
+      "sourceMenuId": "10000029",
+      "name": "국물떡볶이",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/ef252806-ec66-4a9c-ba15-96a92a687ca8.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000009",
+      "sourceMenuId": "10000009",
+      "name": "모도리 직화불보쌈",
+      "description": "기본 구성셋트 2인(소)이상 : 보쌈고기+국물떡볶이+모듬튀김(5종)+배추김치,무김치+5칸반찬(쌈장,생마늘.생양파.쌈무,새우젓)+쌈야채+콜라500ml 3인(중)이상 : 보쌈고기+비빔냉면+국물떡볶이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+ 콜라500ml 4인(대)이상 : 보쌈고기+비빔냉면+국물떡복이+모듬튀김(5종)+ 참치날치알주먹밥+배추김치,무김치+ 쌈야채+ 5칸반찬+콜라1.25L",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/05aa144d-6a18-4a39-86d4-90437955aa6e.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000022",
+      "sourceMenuId": "10000022",
+      "name": "직화 불보쌈 1인 도시락",
+      "description": "구성 : 불보쌈고기 150g+공기밥, 보쌈무김치, 된장찌개, 쌈야채, 쌈장,마늘,양파,쌈무,새우젓(반찬은 바뀔수있음) ,캔음료",
+      "category": "모도리 혼밥 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/5042e1a7-90cd-4595-88f9-af43f9348260.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000030",
+      "sourceMenuId": "10000030",
+      "name": "모둠튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000023",
+      "sourceMenuId": "10000023",
+      "name": "직화 불족발 1인 도시락",
+      "description": "구성 : 불족발 150g+공기밥, 보쌈무김치, 된장찌개, 쌈야채, 쌈장,마늘,양파,쌈무,새우젓(반찬은 바뀔수있음) ,캔음료",
+      "category": "모도리 혼밥 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/330d663d-0ce7-412e-a8d5-0fb46599f74f.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000031",
+      "sourceMenuId": "10000031",
+      "name": "참치날치알주먹밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000032",
+      "sourceMenuId": "10000032",
+      "name": "쌈 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1177818-10000033",
+      "sourceMenuId": "10000033",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e527f16a-06f0-4f1e-b0d3-9e8007175480.jpg"
+    },
+    {
+      "id": "ddangyo-1177818-10000034",
+      "sourceMenuId": "10000034",
+      "name": "생수",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "storeId": "3d802d86d994dbef",
+  "storeName": "카페고운",
+  "displayName": "카페고운",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b203a093-91b3-46a3-a747-92088d811dd2.jpg",
+  "categories": [
+    "전체",
+    "COFFEE",
+    "NON COFFEE",
+    "SMOOTHIE",
+    "ADE",
+    "TEA",
+    "오란다",
+    "쫀득쿠키",
+    "디저트"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1282756-10000002",
+      "sourceMenuId": "10000002",
+      "name": "아메리카노",
+      "description": "",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/98624f38-f186-4c12-b198-ffccefea189d.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000004",
+      "sourceMenuId": "10000004",
+      "name": "돌체라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/fb1acbcd-6a7e-4b03-9833-bec0372bca8d.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000005",
+      "sourceMenuId": "10000005",
+      "name": "바닐라라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/6c8cbc66-d622-4563-93a2-e289fd19a71a.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000001",
+      "sourceMenuId": "10000001",
+      "name": "클라우드 아메리카노",
+      "description": "only ice",
+      "category": "COFFEE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000008",
+      "sourceMenuId": "10000008",
+      "name": "초코라떼",
+      "description": "",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/099aee9d-f873-44e7-b8ac-f339d02ce856.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000013",
+      "sourceMenuId": "10000013",
+      "name": "플레인 요거트 스무디",
+      "description": "",
+      "category": "SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000018",
+      "sourceMenuId": "10000018",
+      "name": "얼박사",
+      "description": "박카스+사이다",
+      "category": "ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/4d4ec22e-4e05-4cf4-be2f-01bb2dc370cd.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000023",
+      "sourceMenuId": "10000023",
+      "name": "복숭아 아이스티",
+      "description": "",
+      "category": "TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000032",
+      "sourceMenuId": "10000032",
+      "name": "오리지널 오란다",
+      "description": "",
+      "category": "오란다",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000038",
+      "sourceMenuId": "10000038",
+      "name": "쿠앤크 쫀득쿠키",
+      "description": "",
+      "category": "쫀득쿠키",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000041",
+      "sourceMenuId": "10000041",
+      "name": "에그타르트",
+      "description": "부드러운 에그타르트",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000009",
+      "sourceMenuId": "10000009",
+      "name": "말차라떼",
+      "description": "",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/247f48ad-5528-47bd-bac3-22dd4fdadc98.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000014",
+      "sourceMenuId": "10000014",
+      "name": "딸기 요거트 스무디",
+      "description": "",
+      "category": "SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000019",
+      "sourceMenuId": "10000019",
+      "name": "청귤에이드",
+      "description": "",
+      "category": "ADE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000024",
+      "sourceMenuId": "10000024",
+      "name": "자몽허니블랙티",
+      "description": "",
+      "category": "TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000033",
+      "sourceMenuId": "10000033",
+      "name": "견과류 오란다",
+      "description": "",
+      "category": "오란다",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000039",
+      "sourceMenuId": "10000039",
+      "name": "후르츠링+오레오 쫀득쿠키",
+      "description": "",
+      "category": "쫀득쿠키",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000003",
+      "sourceMenuId": "10000003",
+      "name": "카페라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/5ca56753-5eeb-4779-965b-60fa298561b7.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000010",
+      "sourceMenuId": "10000010",
+      "name": "수제딸기라떼",
+      "description": "",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5b30a074-57a8-4d0b-beda-f3ee778e975a.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000015",
+      "sourceMenuId": "10000015",
+      "name": "블루베리 요거트 스무디",
+      "description": "",
+      "category": "SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000020",
+      "sourceMenuId": "10000020",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "ADE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000025",
+      "sourceMenuId": "10000025",
+      "name": "허브차",
+      "description": "",
+      "category": "TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000034",
+      "sourceMenuId": "10000034",
+      "name": "감태 오란다",
+      "description": "",
+      "category": "오란다",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000040",
+      "sourceMenuId": "10000040",
+      "name": "두바이쫀득쿠키",
+      "description": "",
+      "category": "쫀득쿠키",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000011",
+      "sourceMenuId": "10000011",
+      "name": "고구마라떼",
+      "description": "",
+      "category": "NON COFFEE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000016",
+      "sourceMenuId": "10000016",
+      "name": "망고 요거트 스무디",
+      "description": "",
+      "category": "SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000021",
+      "sourceMenuId": "10000021",
+      "name": "수제레몬청에이드",
+      "description": "",
+      "category": "ADE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000026",
+      "sourceMenuId": "10000026",
+      "name": "수제레몬차",
+      "description": "+페퍼민트",
+      "category": "TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000035",
+      "sourceMenuId": "10000035",
+      "name": "초코 오란다",
+      "description": "",
+      "category": "오란다",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000012",
+      "sourceMenuId": "10000012",
+      "name": "미숫가루라떼",
+      "description": "",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f36cf8a0-4fe5-4e95-b9d3-7e91a6f64dab.jpg"
+    },
+    {
+      "id": "ddangyo-1282756-10000017",
+      "sourceMenuId": "10000017",
+      "name": "코코넛 커피 스무디",
+      "description": "",
+      "category": "SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000022",
+      "sourceMenuId": "10000022",
+      "name": "수제자몽청에이드",
+      "description": "",
+      "category": "ADE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000027",
+      "sourceMenuId": "10000027",
+      "name": "수제자몽차",
+      "description": "+히비스커스",
+      "category": "TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000036",
+      "sourceMenuId": "10000036",
+      "name": "약과 오란다",
+      "description": "",
+      "category": "오란다",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000006",
+      "sourceMenuId": "10000006",
+      "name": "카라멜라떼",
+      "description": "",
+      "category": "COFFEE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000028",
+      "sourceMenuId": "10000028",
+      "name": "청귤차",
+      "description": "+캐모마일",
+      "category": "TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000037",
+      "sourceMenuId": "10000037",
+      "name": "딸기 오란다",
+      "description": "",
+      "category": "오란다",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000007",
+      "sourceMenuId": "10000007",
+      "name": "넛츠라떼",
+      "description": "only ice",
+      "category": "COFFEE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000029",
+      "sourceMenuId": "10000029",
+      "name": "생강차",
+      "description": "",
+      "category": "TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000030",
+      "sourceMenuId": "10000030",
+      "name": "대추차",
+      "description": "",
+      "category": "TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1282756-10000031",
+      "sourceMenuId": "10000031",
+      "name": "쌍화차",
+      "description": "",
+      "category": "TEA",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "storeId": "217d38b37c2b4d5b",
+  "storeName": "통큰한방삼계탕 여수점",
+  "displayName": "통큰한방삼계탕 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/606fc809-abc8-4b81-9b00-ba916077b9b2.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "일품 쭈꿈쓰",
+    "주류메뉴",
+    "1인 메뉴",
+    "덮밥메뉴",
+    "사이드메뉴",
+    "추가메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1136186-10000050",
+      "sourceMenuId": "10000050",
+      "name": "한방삼계탕",
+      "description": "몸에 좋은 야채와 버섯을 넣고 푹 끓여낸 육수에 영계를 넣고 부드럽게 익혀낸 삼계탕입니다 기력보충,술안주,영양식 어떤걸로도 최고의 음식이라 자부합니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/606fc809-abc8-4b81-9b00-ba916077b9b2.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000051",
+      "sourceMenuId": "10000051",
+      "name": "백목이버섯 삼계탕",
+      "description": "영양가득 삼계탕에 꽃피운 눈꽃버섯~맛도 풍성 양도 풍성, 어디서도 맛보지 못한 맛의향연 눈꽃버섯삼계탕",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/11aa6a30-9982-4aa9-9685-bbfe4def5a5b.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000042",
+      "sourceMenuId": "10000042",
+      "name": "일품 쭈꾸미",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "일품 쭈꿈쓰",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/daf8477b-3878-4634-89ce-3aa074eaae38.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 프레시(병)(330ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136186-10000045",
+      "sourceMenuId": "10000045",
+      "name": "[국내산닭] 닭갈비",
+      "description": "맛있는 닭갈비 떡과 고구마가 쏙~들어있답니다~",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f552e5c5-52c6-4a2e-9017-274a70b19afc.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000052",
+      "sourceMenuId": "10000052",
+      "name": "[1인]든든세트 (공기밥 포함)",
+      "description": "",
+      "category": "1인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136186-10000054",
+      "sourceMenuId": "10000054",
+      "name": "[1인분] 닭갈비 덮밥",
+      "description": "",
+      "category": "덮밥메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136186-10000059",
+      "sourceMenuId": "10000059",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000069",
+      "sourceMenuId": "10000069",
+      "name": "치즈",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b1a6213f-5347-44cc-9618-4e402c9a1e85.JPG"
+    },
+    {
+      "id": "ddangyo-1136186-10000076",
+      "sourceMenuId": "10000076",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136186-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136186-10000043",
+      "sourceMenuId": "10000043",
+      "name": "일품 쭈꾸미 & 대패삼겹",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "일품 쭈꿈쓰",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136186-10000046",
+      "sourceMenuId": "10000046",
+      "name": "[국내산닭] 치즈듬뿍 닭갈비",
+      "description": "고소한 치즈토핑과 닭갈비의 만남 ~ 치즈가 듬뿍듬뿍 떡과 고구마도 쏙~들어있답니다~",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/38486efe-2ad9-4d1d-a094-acdcf2ee5b87.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000053",
+      "sourceMenuId": "10000053",
+      "name": "[2인]튼튼세트 (공기밥 포함)",
+      "description": "",
+      "category": "1인 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136186-10000055",
+      "sourceMenuId": "10000055",
+      "name": "[1인분] 치킨마요덮밥",
+      "description": "",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/575ba239-3fbc-4b91-80e9-73b91acbf321.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000060",
+      "sourceMenuId": "10000060",
+      "name": "김치",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/135aa729-7efe-4f79-b752-23d5efd792c6.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000070",
+      "sourceMenuId": "10000070",
+      "name": "라면사리추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/72000c33-9db1-4c69-b3b0-0389deb933cb.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000077",
+      "sourceMenuId": "10000077",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136186-90000002",
+      "sourceMenuId": "90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136186-10000044",
+      "sourceMenuId": "10000044",
+      "name": "일품 쭈꾸미 & 우삼겹",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "일품 쭈꿈쓰",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136186-10000047",
+      "sourceMenuId": "10000047",
+      "name": "[국내산닭] 짜글짜글 국물닭갈비",
+      "description": "찜닭정도의 촉촉 국물닭갈비",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/78a90ca8-e66c-4920-b346-e65e09cd5613.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000056",
+      "sourceMenuId": "10000056",
+      "name": "[1인분] 육회덮밥",
+      "description": "볶음고추장",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f33f85b5-b9ff-4337-aa7e-05739b908fa6.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000061",
+      "sourceMenuId": "10000061",
+      "name": "청양고추추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/36359dcd-4413-473d-9af5-491e6b374f13.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000071",
+      "sourceMenuId": "10000071",
+      "name": "공깃밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000078",
+      "sourceMenuId": "10000078",
+      "name": "탐스파인",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136186-90000003",
+      "sourceMenuId": "90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136186-10000057",
+      "sourceMenuId": "10000057",
+      "name": "[1인분] 매운쭈꾸미덮밥",
+      "description": "",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/989f2e65-6651-46cb-ab77-e42a5fb0d676.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000062",
+      "sourceMenuId": "10000062",
+      "name": "추억의 떡꼬치 20개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/6f32a285-5720-404e-94d3-783457820a75.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000072",
+      "sourceMenuId": "10000072",
+      "name": "쌈추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/315721e5-ef74-4c2a-b7e3-25e9c1dc3abc.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000058",
+      "sourceMenuId": "10000058",
+      "name": "[1인분] 직화 우삼겹덮밥",
+      "description": "",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/21eee6b7-5683-467e-ab06-711892a759ba.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000063",
+      "sourceMenuId": "10000063",
+      "name": "치킨 가라아게 (닭튀김)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/8ed3e7c1-3e62-48ac-bbcc-a3d5ecc29601.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000073",
+      "sourceMenuId": "10000073",
+      "name": "도시락김",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/8c1bbc52-c231-4855-bc4c-a928f88fa095.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000064",
+      "sourceMenuId": "10000064",
+      "name": "진짜 스팸구이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b29d4308-a1ca-4b7e-823c-07f588598bc6.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000074",
+      "sourceMenuId": "10000074",
+      "name": "계란찜",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000065",
+      "sourceMenuId": "10000065",
+      "name": "통통돈까스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/d7861358-2654-44e9-ba87-e46ce68ef3d6.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000075",
+      "sourceMenuId": "10000075",
+      "name": "콩나물",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d9e97bcc-2f42-48c7-9c59-7052fbd8a394.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000066",
+      "sourceMenuId": "10000066",
+      "name": "함박스테이크",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/0e77fd9b-42f6-42ce-8eb5-110c6d845345.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000067",
+      "sourceMenuId": "10000067",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6ecf8965-8f5a-48cd-b780-eb6387223584.jpg"
+    },
+    {
+      "id": "ddangyo-1136186-10000068",
+      "sourceMenuId": "10000068",
+      "name": "비엔나소시지 야채볶음",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/21522c30-f584-48b8-8ee9-c9967816a205.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

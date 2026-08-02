@@ -1,0 +1,115 @@
+{
+  "storeId": "c29fb9cd27867a9d",
+  "storeName": "여서해장국",
+  "displayName": "여서해장국",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7c641aac-3111-43ca-a1a5-054191b1fab9.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "추가메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1237569-10000001",
+      "sourceMenuId": "10000001",
+      "name": "고등어구이",
+      "description": "고등어구이 + 양념장",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7c641aac-3111-43ca-a1a5-054191b1fab9.jpg"
+    },
+    {
+      "id": "ddangyo-1237569-10000002",
+      "sourceMenuId": "10000002",
+      "name": "김치삼겹제육볶음",
+      "description": "제육볶음 + 파절이 + 쌈채소 + 국",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/c9031135-c753-4c12-9f79-431d1b871c3b.jpg"
+    },
+    {
+      "id": "ddangyo-1237569-10000007",
+      "sourceMenuId": "10000007",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg"
+    },
+    {
+      "id": "ddangyo-1237569-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1237569-10000008",
+      "sourceMenuId": "10000008",
+      "name": "코카콜라",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f91223b3-43b9-4b04-9631-86a8baafaa9f.jpg"
+    },
+    {
+      "id": "ddangyo-1237569-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1237569-10000003",
+      "sourceMenuId": "10000003",
+      "name": "뼈다귀해장국",
+      "description": "뼈다귀해장국 + 공기밥 + 반찬4종",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/b5bb33a5-b760-420e-809c-900f8c350471.jpg"
+    },
+    {
+      "id": "ddangyo-1237569-10000009",
+      "sourceMenuId": "10000009",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237569-10000004",
+      "sourceMenuId": "10000004",
+      "name": "된장찌개",
+      "description": "된장찌개 + 공기밥 + 반찬4종",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/e4a2813e-9570-4bf6-ba32-3e20551c446f.jpg"
+    },
+    {
+      "id": "ddangyo-1237569-10000012",
+      "sourceMenuId": "10000012",
+      "name": "계란찜",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/3b2df64c-6a18-4ed6-8774-25f5a75c76b7.jpg"
+    },
+    {
+      "id": "ddangyo-1237569-10000005",
+      "sourceMenuId": "10000005",
+      "name": "김치찌개",
+      "description": "김치찌개 + 공기밥 + 반찬4종",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/dc678442-1068-4e27-8b77-d19c78754446.jpg"
+    },
+    {
+      "id": "ddangyo-1237569-10000006",
+      "sourceMenuId": "10000006",
+      "name": "우거지된장국",
+      "description": "우거지된장국 + 공기밥 + 반찬4종",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/b545670d-b8e2-40c5-b4d0-42c6db3f3396.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

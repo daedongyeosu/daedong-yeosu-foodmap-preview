@@ -1,0 +1,89 @@
+{
+  "storeId": "9bb804e004dff7d8",
+  "storeName": "온앤",
+  "displayName": "온앤",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7b288e3a-5ddf-4e02-9f2a-0fecd85288ea.jpg",
+  "categories": [
+    "전체",
+    "PIZZA(피자)",
+    "Salad(샐러드)",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1352757-10000005",
+      "sourceMenuId": "10000005",
+      "name": "마르게리따 피자",
+      "description": "",
+      "category": "PIZZA(피자)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7b288e3a-5ddf-4e02-9f2a-0fecd85288ea.jpg"
+    },
+    {
+      "id": "ddangyo-1352757-10000001",
+      "sourceMenuId": "10000001",
+      "name": "고르곤졸라피자",
+      "description": "화이트소스,고르곤치즈,모짜렐라치즈",
+      "category": "PIZZA(피자)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/221bcc84-9fce-47b1-9750-a4043a2b5d22.jpg"
+    },
+    {
+      "id": "ddangyo-1352757-10000002",
+      "sourceMenuId": "10000002",
+      "name": "디럭스 페퍼로니피자",
+      "description": "",
+      "category": "PIZZA(피자)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6033d6d4-bfc3-4de3-b8ff-bceaf5bcc20f.jpg"
+    },
+    {
+      "id": "ddangyo-1352757-10000006",
+      "sourceMenuId": "10000006",
+      "name": "그린 샐러드",
+      "description": "",
+      "category": "Salad(샐러드)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/46537e75-0ee8-4906-8e0e-3b0756e9799b.jpg"
+    },
+    {
+      "id": "ddangyo-1352757-10000007",
+      "sourceMenuId": "10000007",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/06c8ff67-6766-48d0-88f4-6532b84e760e.jpg"
+    },
+    {
+      "id": "ddangyo-1352757-10000008",
+      "sourceMenuId": "10000008",
+      "name": "코카콜라(제로)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/4765438f-d6a8-4294-8eca-d7d6bcdfbe79.jpg"
+    },
+    {
+      "id": "ddangyo-1352757-10000003",
+      "sourceMenuId": "10000003",
+      "name": "시그니처 포테이토피자",
+      "description": "",
+      "category": "PIZZA(피자)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/0e31bfd5-a607-43f0-bc11-68320c2e5836.jpg"
+    },
+    {
+      "id": "ddangyo-1352757-10000009",
+      "sourceMenuId": "10000009",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1352757-10000004",
+      "sourceMenuId": "10000004",
+      "name": "갓버스트피자",
+      "description": "",
+      "category": "PIZZA(피자)",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

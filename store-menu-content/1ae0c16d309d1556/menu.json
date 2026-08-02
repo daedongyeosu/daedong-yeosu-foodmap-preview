@@ -1,0 +1,214 @@
+{
+  "storeId": "1ae0c16d309d1556",
+  "storeName": "둥이식당",
+  "displayName": "둥이식당",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/7497db37-0360-4fdd-b345-3f069d52871e.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "주류메뉴",
+    "소주한잔 안주",
+    "사이드메뉴",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1352664-10000002",
+      "sourceMenuId": "10000002",
+      "name": "김치찌개+공기밥+반찬",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/c9be4a4b-e871-4127-81c3-9be298d155d9.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000003",
+      "sourceMenuId": "10000003",
+      "name": "제육볶음",
+      "description": "공기밥 별도, 반찬 4종+국물",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6b8f3539-002d-42b6-ac25-102f8f38af18.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000004",
+      "sourceMenuId": "10000004",
+      "name": "낙지볶음",
+      "description": "공기밥 별도, 반찬 4종+국물",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/9c3d4408-b0df-4c43-a5ab-340d2f8166cf.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1352664-10000001",
+      "sourceMenuId": "10000001",
+      "name": "갈비탕+공기밥+반찬",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d11d928d-99eb-4c06-a1e6-a9bfaf5cbed2.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000014",
+      "sourceMenuId": "10000014",
+      "name": "골뱅이무침",
+      "description": "공기밥 별도, 반찬 4종+국물",
+      "category": "소주한잔 안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c2c49eab-e50d-4660-9a92-8124e0a01996.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000017",
+      "sourceMenuId": "10000017",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/51718448-f639-4924-a508-0c1717b85c6e.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000020",
+      "sourceMenuId": "10000020",
+      "name": "콜라",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1352664-90000002",
+      "sourceMenuId": "90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1352664-10000015",
+      "sourceMenuId": "10000015",
+      "name": "무뼈닭발볶음",
+      "description": "공기밥 별도, 반찬 4종+국물",
+      "category": "소주한잔 안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/13028f70-1c61-4f8d-b56e-6a7054cc2d59.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000018",
+      "sourceMenuId": "10000018",
+      "name": "계란말이",
+      "description": "야채 가득 들어간 계란말이~",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b11a17f0-081a-4aef-954e-cedcfb6c1aee.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000021",
+      "sourceMenuId": "10000021",
+      "name": "사이다",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1352664-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1352664-10000016",
+      "sourceMenuId": "10000016",
+      "name": "두부김치",
+      "description": "공기밥 별도, 반찬 4종+국물",
+      "category": "소주한잔 안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/2e703898-8c5d-4cd2-832f-d8f8025b9dcc.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000019",
+      "sourceMenuId": "10000019",
+      "name": "모둠해물파전",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/22d81c83-4e6c-4f9e-b6da-97a4da9a0d24.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000005",
+      "sourceMenuId": "10000005",
+      "name": "닭볶음탕",
+      "description": "공기밥 별도, 반찬 4종",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a526b1e8-51bb-483a-83a9-07912491f8c2.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000006",
+      "sourceMenuId": "10000006",
+      "name": "오삼불고기",
+      "description": "공기밥 별도, 반찬 4종+국물",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/12676595-f93f-42ac-b7fb-e47c724afbb0.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000007",
+      "sourceMenuId": "10000007",
+      "name": "소불고기",
+      "description": "소불고기+밥+반찬",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/45fa3959-6bcc-4d62-8934-548bb2f239c7.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000008",
+      "sourceMenuId": "10000008",
+      "name": "동태탕+알, 곤이",
+      "description": "공기밥 별도, 반찬 4종",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a512547e-f162-44a6-8a05-32c74b50879a.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000009",
+      "sourceMenuId": "10000009",
+      "name": "갈치조림",
+      "description": "공기밥별도, 반찬 4종",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4c3e8634-7b7b-4e13-94d7-b9c26c816508.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000010",
+      "sourceMenuId": "10000010",
+      "name": "수제염소탕",
+      "description": "밥+반찬 4종",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/38db3e3a-267c-4772-b7c8-2edb0af8c9b5.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000011",
+      "sourceMenuId": "10000011",
+      "name": "수제추어탕",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/ad94b4e2-b5aa-4736-b547-707ae9e0814a.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000012",
+      "sourceMenuId": "10000012",
+      "name": "수제다슬기추어탕",
+      "description": "밥+반찬4종",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/fac893fa-ceb7-456a-a112-e7d8e8458b3f.jpg"
+    },
+    {
+      "id": "ddangyo-1352664-10000013",
+      "sourceMenuId": "10000013",
+      "name": "수제우렁추어탕",
+      "description": "밥+반찬 4종",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/36296a8b-1816-4d81-89be-9c03cb8e4f21.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

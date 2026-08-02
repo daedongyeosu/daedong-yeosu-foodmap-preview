@@ -1,0 +1,320 @@
+{
+  "storeId": "665953a0453afc52",
+  "storeName": "김사장국밥",
+  "displayName": "김사장국밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b3f5c231-0857-492a-81a1-85f3dad17a13.jpg",
+  "categories": [
+    "전체",
+    "김사장 돼지국밥 메뉴",
+    "김사장 찌개/탕류 메뉴",
+    "신기동(시전동)에서 주문시 추가해주세요.",
+    "김사장 메밀막국수&냉면 세트 메뉴",
+    "김사장 콩나물국밥 메뉴(국밥 여기 다있소~)",
+    "사이드 메뉴",
+    "음료수 메뉴",
+    "김사장 메밀막국수 메뉴",
+    "김사장 고기폭탄 국밥 메뉴",
+    "김사장 해장 냉면 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1333007-10000003",
+      "sourceMenuId": "10000003",
+      "name": "진국 돼지국밥",
+      "description": "국밥,5찬반찬,공기밥",
+      "category": "김사장 돼지국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/d1ab2b0b-6bb6-4f58-943c-00d11e3c40a6.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000006",
+      "sourceMenuId": "10000006",
+      "name": "해장 황태해장국",
+      "description": "메뉴,3찬 반찬(깍두기,오말랭이,산고추),공기밥",
+      "category": "김사장 찌개/탕류 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/843ab2bb-87fe-4d65-acbd-218547d728bc.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000008",
+      "sourceMenuId": "10000008",
+      "name": "진국 우거지 뼈다귀 해장국",
+      "description": "메뉴+3찬 반찬(깍두기,오징어젓갈,산고추)+공기밥",
+      "category": "김사장 찌개/탕류 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/27a8d36f-54c9-402c-a8b6-6b7f9ddc21c1.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000001",
+      "sourceMenuId": "10000001",
+      "name": "시전동(신기동)",
+      "description": "",
+      "category": "신기동(시전동)에서 주문시 추가해주세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000002",
+      "sourceMenuId": "10000002",
+      "name": "1인 진국 돼지국밥 세트",
+      "description": "국밥,사이드 메뉴,5찬 반찬,공기밥",
+      "category": "김사장 돼지국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/3c70bb24-ca65-4fe9-accb-267a2def591d.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000012",
+      "sourceMenuId": "10000012",
+      "name": "1인 면 한상 세트",
+      "description": "냉면과 만두를 저렴한 가격에 드실 수 있도록 준비하였습니다.",
+      "category": "김사장 메밀막국수&냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/93d0e14e-cd70-4812-ac39-578965a6f74d.jpg"
+    },
+    {
+      "id": "ddangyo-1333007-10000022",
+      "sourceMenuId": "10000022",
+      "name": "[해장] 콩나물국밥 얼큰",
+      "description": "콩나물국밥,공기밥,반찬5찬(깍두기,오징어젓갈,산고추,새우젓갈,다진 청양고추),도시락 김.,날 계란",
+      "category": "김사장 콩나물국밥 메뉴(국밥 여기 다있소~)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/8a3a2ccf-44ca-462b-978b-b7e6181721f8.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000026",
+      "sourceMenuId": "10000026",
+      "name": "감자 찐만두( 8알 +간장)",
+      "description": "감자 찐만두(8개), 양념장",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2dce366e-9015-48a6-ae35-23c4759118c8.jpg"
+    },
+    {
+      "id": "ddangyo-1333007-10000029",
+      "sourceMenuId": "10000029",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000041",
+      "sourceMenuId": "10000041",
+      "name": "진한 콩국수(소면)+깍두기",
+      "description": "",
+      "category": "김사장 메밀막국수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000007",
+      "sourceMenuId": "10000007",
+      "name": "얼큰 순두부 찌개",
+      "description": "순두부 찌개,3찬반찬(깍두기,오말랭이,산고추),공기밥",
+      "category": "김사장 찌개/탕류 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/a7b9733a-9480-4fec-9481-ef74be84d15f.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000013",
+      "sourceMenuId": "10000013",
+      "name": "1인 국수 한상 세트",
+      "description": "막국수와 만두를 저렴한 가격에 드실 수 있도록 준비하였습니다.",
+      "category": "김사장 메밀막국수&냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/0c36a29d-c977-485c-99bd-6088e8a04541.jpg"
+    },
+    {
+      "id": "ddangyo-1333007-10000023",
+      "sourceMenuId": "10000023",
+      "name": "[해장] 콩나물국밥 담백",
+      "description": "콩나물국밥,공기밥,반찬5찬(깍두기,오징어젓갈,산고추,새우젓갈,다진 청양고추).도시락 김,날 계란",
+      "category": "김사장 콩나물국밥 메뉴(국밥 여기 다있소~)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/82a4b477-6906-4b8b-8aad-fa08000f276b.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000027",
+      "sourceMenuId": "10000027",
+      "name": "고기 찐왕만두( 5알+간장)",
+      "description": "왕만두(5개), 양념장",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1dbedb0a-7e75-4226-9200-e6347e6866b5.jpg"
+    },
+    {
+      "id": "ddangyo-1333007-10000030",
+      "sourceMenuId": "10000030",
+      "name": "환타파인",
+      "description": "",
+      "category": "음료수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000037",
+      "sourceMenuId": "10000037",
+      "name": "[고기폭탄 300g] 진국 돼지국밥",
+      "description": "국밥,공기밥,5찬반찬(깍두기,보쌈무김치,다대기,새우젓갈,다진 청양고추)",
+      "category": "김사장 고기폭탄 국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/9df0ce38-5561-4943-8b97-cbc1d2b3de31.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000042",
+      "sourceMenuId": "10000042",
+      "name": "열무물국수 (소면,깍두기)",
+      "description": "열무국수,깍두기만 나갑니다.",
+      "category": "김사장 메밀막국수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000004",
+      "sourceMenuId": "10000004",
+      "name": "진국 토종순대국밥",
+      "description": "순대국밥,5찬반찬,공기밥",
+      "category": "김사장 돼지국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/279ff2fa-464c-41c6-8906-b7c62b845b2c.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000016",
+      "sourceMenuId": "10000016",
+      "name": "메밀 물막국수",
+      "description": "막국수,양념장",
+      "category": "김사장 메밀막국수 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/4692d868-ff3c-4c31-b96f-458e609949d2.jpg"
+    },
+    {
+      "id": "ddangyo-1333007-10000020",
+      "sourceMenuId": "10000020",
+      "name": "[해장] 물냉면",
+      "description": "냉면,양념장,겨자,식초",
+      "category": "김사장 해장 냉면 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000024",
+      "sourceMenuId": "10000024",
+      "name": "콩나물 돼지 김치찌개",
+      "description": "콩나물돼지김치찌개,공기밥+반찬3찬(깍두기,오징어젓갈,산고추)",
+      "category": "김사장 콩나물국밥 메뉴(국밥 여기 다있소~)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/78375f78-28a0-43d6-bb4c-ccec403b9a31.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000031",
+      "sourceMenuId": "10000031",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000038",
+      "sourceMenuId": "10000038",
+      "name": "[고기폭탄 300g] 진국 토종순대국밥",
+      "description": "국밥,공기밥,5찬반찬(깍두기,보쌈무김치,다대기,새우젓갈,다진 청양고추) 고기 아끼지 않았습니다. 뚝배기 가득 꽉 채운 고기 폭탄 한 그릇 한 입 먹는 순간 [이거다]나옵니다. 배 터지게 든든한 한 끼, 지금 바로 주문하세요.",
+      "category": "김사장 고기폭탄 국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ba12c46c-2b23-48e7-9605-f1bb5062744a.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000043",
+      "sourceMenuId": "10000043",
+      "name": "감자 튀김만두 (8알,와사비간장",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000005",
+      "sourceMenuId": "10000005",
+      "name": "진국 수육국밥",
+      "description": "메뉴,5찬 반찬,공기밥",
+      "category": "김사장 돼지국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/718b4258-e9d4-4493-bd92-7a7ca55ac32a.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000017",
+      "sourceMenuId": "10000017",
+      "name": "메밀 비빔막국수",
+      "description": "막국수,막국수 육수",
+      "category": "김사장 메밀막국수 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/de185cc4-062f-46a2-a992-937eebb2b087.jpg"
+    },
+    {
+      "id": "ddangyo-1333007-10000021",
+      "sourceMenuId": "10000021",
+      "name": "[해장] 비빔냉면",
+      "description": "냉면,냉면 육수,겨자,식초",
+      "category": "김사장 해장 냉면 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000025",
+      "sourceMenuId": "10000025",
+      "name": "[방신름] 생야채 비빔밥",
+      "description": "야채비빔밥,반찬3찬(깍두기,오징어젓갈,산고추)+고추장,콩나물 국물",
+      "category": "김사장 콩나물국밥 메뉴(국밥 여기 다있소~)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/deb6cae9-1f79-4ae2-a896-58b569450907.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000032",
+      "sourceMenuId": "10000032",
+      "name": "코카콜라(제로)",
+      "description": "",
+      "category": "음료수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000039",
+      "sourceMenuId": "10000039",
+      "name": "[고기폭탄 300g] 진국 살코기 국밥",
+      "description": "국밥,공기밥,5찬반찬(깍두기,보쌈무김치,다대기,새우젓갈,다진 청양고추)",
+      "category": "김사장 고기폭탄 국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/9ee687e5-7009-4a59-a665-997ea2da85e4.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000044",
+      "sourceMenuId": "10000044",
+      "name": "고기 튀김왕만두( 5알 ,와사비간장)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000028",
+      "sourceMenuId": "10000028",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000033",
+      "sourceMenuId": "10000033",
+      "name": "암바사(345ml)",
+      "description": "",
+      "category": "음료수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000040",
+      "sourceMenuId": "10000040",
+      "name": "진국 살코기 국밥",
+      "description": "국밥,공기밥,5찬반찬(깍두기,보쌈무김치,다대기,새우젓갈,다진 청양고추)",
+      "category": "김사장 돼지국밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c3ee6011-07c1-4797-ad13-b4bc90e89a82.png"
+    },
+    {
+      "id": "ddangyo-1333007-10000034",
+      "sourceMenuId": "10000034",
+      "name": "쿨피스(파인) 뚱캔 350ml",
+      "description": "",
+      "category": "음료수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000035",
+      "sourceMenuId": "10000035",
+      "name": "갈아만든 배 340ml",
+      "description": "",
+      "category": "음료수 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1333007-10000036",
+      "sourceMenuId": "10000036",
+      "name": "생수 500ml",
+      "description": "",
+      "category": "음료수 메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,355 @@
+{
+  "storeId": "cf169d6bbf8830f8",
+  "storeName": "밥앤동 볶음밥&우동 여수충무점",
+  "displayName": "밥앤동 볶음밥&우동 여수충무점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2f5df139-763f-4a2b-ba21-b61f79e6cc1a.jpg",
+  "categories": [
+    "전체",
+    "볶음밥 메뉴",
+    "밥앤동 세트메뉴",
+    "우동 & 냉면 메뉴",
+    "튀김류",
+    "사이드 메뉴",
+    "음료",
+    "토핑 메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1174455-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[볶음밥 1등] 대패삼겹 김치볶음밥",
+      "description": "대패삼겹을 김치볶음밥과 함께 볶아 고소한 풍미가 터진다. 안먹고는 못참는 든든한 대패삼겹 김치볶음밥.",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/c02d63d9-fec7-4c9d-89bb-7ac47a20e11a.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000005",
+      "sourceMenuId": "10000005",
+      "name": "[진짜스팸] 스팸김치볶음밥",
+      "description": "스팸에 김치는 변치않는 진리.",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/de7aab85-16b7-4b48-8491-253c27fd2a5d.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000006",
+      "sourceMenuId": "10000006",
+      "name": "[국내산김치] 엄마표 김치볶음밥",
+      "description": "어릴적 엄마가 해주시던 김치볶음밥, 그리운 그 맛",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/53c6729b-eea8-4487-91f9-531877467387.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000001",
+      "sourceMenuId": "10000001",
+      "name": "밥&우동 SET",
+      "description": "볶음밥과 우동, 음료를 하나씩 선택해서 드실 수 있는 세트메뉴입니다",
+      "category": "밥앤동 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/1c281347-d3ff-4801-8e24-db98461d5d2c.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000014",
+      "sourceMenuId": "10000014",
+      "name": "[얼큰해장]국내산김치 우동",
+      "description": "얼큰한 김치국물과 쫄깃한 어묵이 들어간 속풀기 딱좋은 해장 우동.",
+      "category": "우동 & 냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9e761c60-394e-497a-b977-a91f37abc8bf.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000018",
+      "sourceMenuId": "10000018",
+      "name": "[신메뉴] 한입 김밥튀김",
+      "description": "한입에 쏙~ 국물에 찍먹 하기 좋은 미니 김밥 튀김",
+      "category": "튀김류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174455-10000027",
+      "sourceMenuId": "10000027",
+      "name": "도톰 고기야채 동그랑땡",
+      "description": "한입 베어물면 입안 가득 육즙 터지는 도톰한 동그랑땡",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/6d7d6ac8-1e80-42c3-a8e3-5db491eb8731.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000030",
+      "sourceMenuId": "10000030",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174455-10000034",
+      "sourceMenuId": "10000034",
+      "name": "스팸 2조각(볶음밥에 추가)",
+      "description": "",
+      "category": "토핑 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/6783df58-3c26-4bf2-b9a7-e384c19c8914.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1174455-10000002",
+      "sourceMenuId": "10000002",
+      "name": "1인 볶음밥세트",
+      "description": "볶음밥과 튀김, 음료를 하나씩 선택해서 드실 수 있는 세트메뉴입니다.",
+      "category": "밥앤동 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2934ce4e-b9ca-4fa9-b668-fb8eea25f971.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000015",
+      "sourceMenuId": "10000015",
+      "name": "두툼한 통유부 우동",
+      "description": "쫄깃두툼한 식감의 통유부가 넉넉히 올라가 먹는 재미와 든든함을 동시에 잡았다.",
+      "category": "우동 & 냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/947eb1fe-13d5-4d98-8ffc-2f1cbce6f34d.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000019",
+      "sourceMenuId": "10000019",
+      "name": "새우튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/7a965bc4-e0cc-463b-b194-441e9ee9ee1f.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000028",
+      "sourceMenuId": "10000028",
+      "name": "꼬치어묵탕(꼬치는 빼고 드려요)",
+      "description": "어묵탕 생각날땐 부담 없는 꼬치어묵탕",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/bc7f347e-e80d-4ddb-80d5-8478f298190b.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000031",
+      "sourceMenuId": "10000031",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174455-10000035",
+      "sourceMenuId": "10000035",
+      "name": "계란후라이(볶음밥에 추가)",
+      "description": "",
+      "category": "토핑 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/083b9f97-2197-42d8-a192-18f4f5ce5dc6.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-90000002",
+      "sourceMenuId": "90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1174455-10000003",
+      "sourceMenuId": "10000003",
+      "name": "가성비 갑1인 우동세트",
+      "description": "우동과 튀김, 음료를 하나씩 선택해서 드실 수 있는 세트메뉴입니다.",
+      "category": "밥앤동 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/31a724e0-74cd-4e1f-b1d7-b608a98b43aa.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000016",
+      "sourceMenuId": "10000016",
+      "name": "옛날우동",
+      "description": "부담 없이 즐길 수 있는 탱글한 우동면발과 감칠맛 나는 우동국물의 옛날우동.",
+      "category": "우동 & 냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/75ee3592-086a-4ec5-b979-aaff95d76797.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000020",
+      "sourceMenuId": "10000020",
+      "name": "고구마튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/89d7326f-5c35-4ad1-9aa9-9fc805abf8f0.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000029",
+      "sourceMenuId": "10000029",
+      "name": "두툼한국내산 떡갈비",
+      "description": "두툼한 국내산 떡갈비 100G 3개",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d54089e4-2c68-4d17-a20c-cf7bd916bc3a.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000032",
+      "sourceMenuId": "10000032",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/ecfae8d3-38df-498d-88ec-10a097f0ace9.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000036",
+      "sourceMenuId": "10000036",
+      "name": "대패삼겹(볶음밥에 추가)",
+      "description": "",
+      "category": "토핑 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174455-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1174455-10000007",
+      "sourceMenuId": "10000007",
+      "name": "참치듬뿍김치볶음밥",
+      "description": "김치와 참치는 영혼의 단짝.",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/c02d63d9-fec7-4c9d-89bb-7ac47a20e11a.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000017",
+      "sourceMenuId": "10000017",
+      "name": "어묵우동",
+      "description": "휴게소 단골메뉴 어묵우동. 배달은 어묵꼬치를 제거하고 나갑니다.",
+      "category": "우동 & 냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/c80dcc3b-0ee4-4c1c-b446-67d5d5dcfc5d.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000021",
+      "sourceMenuId": "10000021",
+      "name": "김말이",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55a481ff-b9ec-4829-9fc9-c51159e0641f.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000033",
+      "sourceMenuId": "10000033",
+      "name": "환타",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174455-10000037",
+      "sourceMenuId": "10000037",
+      "name": "도시락김 2봉지",
+      "description": "",
+      "category": "토핑 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174455-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1174455-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[어린이 인기메뉴] 동그랑땡 햄야채볶음밥",
+      "description": "우리 애들도 한그릇 뚝딱하는 아빠표 햄야채 볶음밥에 동그랑땡4개까지 올렸다.",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/3d694d28-3b6e-47bc-a409-084ff172c437.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000022",
+      "sourceMenuId": "10000022",
+      "name": "꼬마만두 5개",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e79f0e9b-51ba-4187-a52a-98112cfb73b2.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-90000005",
+      "sourceMenuId": "90000005",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1174455-10000009",
+      "sourceMenuId": "10000009",
+      "name": "[진짜스팸] 스팸 계란볶음밥",
+      "description": "아침에도 먹기 좋은 계란볶음밥에 스팸을 올렸습니다.",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2934ce4e-b9ca-4fa9-b668-fb8eea25f971.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000023",
+      "sourceMenuId": "10000023",
+      "name": "겉바속촉(멘보샤)",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/95bcae18-14de-41d9-86c7-e598b60adcff.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000010",
+      "sourceMenuId": "10000010",
+      "name": "동그랑땡김치볶음밥",
+      "description": "국내산김치볶음밥+계란후라이+동그랑땡4",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/23b4ecf4-5cc9-408f-b9f3-0bc1b04039d5.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000024",
+      "sourceMenuId": "10000024",
+      "name": "가라아게 (8pcs)",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b377f6c0-11e6-4630-8027-d15f34f1f962.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000011",
+      "sourceMenuId": "10000011",
+      "name": "햄야채볶음밥",
+      "description": "",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/3d694d28-3b6e-47bc-a409-084ff172c437.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000012",
+      "sourceMenuId": "10000012",
+      "name": "두틈한국내산떡갈비 김치볶음밥",
+      "description": "",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d54089e4-2c68-4d17-a20c-cf7bd916bc3a.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000026",
+      "sourceMenuId": "10000026",
+      "name": "집게맛살튀김",
+      "description": "",
+      "category": "튀김류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c70a9afa-347c-4ec4-8a8f-6d11fedbd2f5.jpg"
+    },
+    {
+      "id": "ddangyo-1174455-10000013",
+      "sourceMenuId": "10000013",
+      "name": "두툼한국내산떡갈비 햄야채볶음밥",
+      "description": "",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d54089e4-2c68-4d17-a20c-cf7bd916bc3a.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

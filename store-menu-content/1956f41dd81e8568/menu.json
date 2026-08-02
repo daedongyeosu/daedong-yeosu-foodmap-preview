@@ -1,0 +1,531 @@
+{
+  "storeId": "1956f41dd81e8568",
+  "storeName": "가마치통닭 여수신기점",
+  "displayName": "가마치통닭 여수신기점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/e5dbe709-5f5b-4b55-955d-912f322928b5.jpg",
+  "categories": [
+    "전체",
+    "옛날통닭",
+    "사이드 메뉴",
+    "가마치 콤보",
+    "[신메뉴]빠사삭치킨",
+    "신메뉴",
+    "배달시 추가 구간입니다.",
+    "가마치 추천 세트",
+    "조각닭",
+    "순살 치킨",
+    "닭강정",
+    "치킨무.샐러드.햇반,골뱅이 추가",
+    "소스추가",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1209982-10000035",
+      "sourceMenuId": "10000035",
+      "name": "가마치 한마리",
+      "description": "바삭하고 촉촉한 가마치 대표 메뉴",
+      "category": "옛날통닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/dc3efc93-6437-4f69-9e29-69035d8b08af.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000036",
+      "sourceMenuId": "10000036",
+      "name": "가마치 두마리",
+      "description": "바삭하고 촉촉한 가마치 대표메뉴",
+      "category": "옛날통닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/e2ba603d-67cd-49f4-b19c-edfc91d0ac0c.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000044",
+      "sourceMenuId": "10000044",
+      "name": "똥집튀김",
+      "description": "고소하고 쫄깃한 가마치 인기메뉴",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/90f05a07-ec6c-4647-bff6-2bcb28f5d6fd.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000020",
+      "sourceMenuId": "10000020",
+      "name": "가마치 후라이드 콤보",
+      "description": "통다리와 통날개의 부드러움만 담은 가마치 프리미엄 신메뉴.",
+      "category": "가마치 콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b72620d8-030d-4f5c-aecb-71b012395f00.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000042",
+      "sourceMenuId": "10000042",
+      "name": "닭발튀김",
+      "description": "자꾸 자꾸 손이가~ 술 안주 저격.",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/28d779aa-9f1b-4652-a7ed-fb17677d4168.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000001",
+      "sourceMenuId": "10000001",
+      "name": "빠사삭후라이드치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/008691ae-dc72-4077-8449-e5162c2c8464.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000009",
+      "sourceMenuId": "10000009",
+      "name": "(NEW) 청양맵간장순살",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/f0fa1249-8781-4c92-917e-3968cb1c36ec.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000015",
+      "sourceMenuId": "10000015",
+      "name": "웅천,소호,무선,화장,여천,안산동,죽림 추가배달비",
+      "description": "",
+      "category": "배달시 추가 구간입니다.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000017",
+      "sourceMenuId": "10000017",
+      "name": "한마리 1~2인 세트 (한마리+똥집튀김 or 닭발튀김)",
+      "description": "한마리통닭 + 똥집 튀김 or 닭발튀김 + 음료 500ml + 무 or 소스",
+      "category": "가마치 추천 세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000025",
+      "sourceMenuId": "10000025",
+      "name": "후라이드치킨 (조각닭)",
+      "description": "겉은 바삭.속은 촉촉.후라이드 치킨",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/91051f5e-7267-4e01-8ad8-18c3f91ba108.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000030",
+      "sourceMenuId": "10000030",
+      "name": "순살 후라이드",
+      "description": "겉은 바삭.속은 촉촉.",
+      "category": "순살 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/49faf657-f304-4c14-a6a4-d239b592b31a.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000037",
+      "sourceMenuId": "10000037",
+      "name": "순살닭강정",
+      "description": "",
+      "category": "닭강정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/4580c74e-9966-4118-b52f-5438378f4066.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000038",
+      "sourceMenuId": "10000038",
+      "name": "치킨무",
+      "description": "",
+      "category": "치킨무.샐러드.햇반,골뱅이 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000056",
+      "sourceMenuId": "10000056",
+      "name": "양념 순한맛 소스",
+      "description": "기본 and 베스트",
+      "category": "소스추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000061",
+      "sourceMenuId": "10000061",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/fd942fa7-d911-4294-b6f7-a12de4bdcbc2.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000002",
+      "sourceMenuId": "10000002",
+      "name": "빠사삭허니마늘파닭치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/ff8b710e-adaf-44b1-bdb1-a464cdc8eb6f.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000010",
+      "sourceMenuId": "10000010",
+      "name": "(NEW) 허니마늘순살파닭",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/40bf17aa-c925-4caf-a81f-59d0d1db7b36.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000016",
+      "sourceMenuId": "10000016",
+      "name": "전남대,라온유,미평,봉계,둔덕동",
+      "description": "",
+      "category": "배달시 추가 구간입니다.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000018",
+      "sourceMenuId": "10000018",
+      "name": "두마리 1~2인 세트 (두마리 + 똥집튀김or닭발튀김)",
+      "description": "두마리통닭+ 똥집튀김or 닭발튀김 +음료1.25L+무 or 소스",
+      "category": "가마치 추천 세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000021",
+      "sourceMenuId": "10000021",
+      "name": "가마치 양념 콤보",
+      "description": "매콤달콤한 소스의 만남.",
+      "category": "가마치 콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/04965e3b-7a98-4719-9cd3-403a7a6fdc1c.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000026",
+      "sourceMenuId": "10000026",
+      "name": "양념치킨 (조각닭)",
+      "description": "가마치 양념치킨",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/82373063-6d11-431d-89c1-a48f63bc4066.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000031",
+      "sourceMenuId": "10000031",
+      "name": "순살 양념",
+      "description": "겉은 바삭.속은 촉촉 매콤달콤한 소스의 만남",
+      "category": "순살 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/2ee7ccf0-c9d0-4440-b47f-a0882223e364.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000039",
+      "sourceMenuId": "10000039",
+      "name": "양배추 샐러드",
+      "description": "",
+      "category": "치킨무.샐러드.햇반,골뱅이 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000043",
+      "sourceMenuId": "10000043",
+      "name": "무뼈매운닭발볶음",
+      "description": "쫄깃하고 매콤한 가마치 무뼈매운닭발",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/f2370b72-1a67-4547-8df4-60cebd2de3c3.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000057",
+      "sourceMenuId": "10000057",
+      "name": "양념 매운맛 소스",
+      "description": "사장님 추천",
+      "category": "소스추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000062",
+      "sourceMenuId": "10000062",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b9aaf3ec-14c6-4db8-a33c-dd0b018f6f87.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000003",
+      "sourceMenuId": "10000003",
+      "name": "빠사삭반반치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000011",
+      "sourceMenuId": "10000011",
+      "name": "(NEW) 청양맵간장콤보",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b0e6d649-3d47-4ea8-bdc0-e5e2478c6952.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000019",
+      "sourceMenuId": "10000019",
+      "name": "셋트 3. 순살후라이드 + 국물떡볶이",
+      "description": "순살후라이드+국물떡볶이or 양념소스+콜라500ml",
+      "category": "가마치 추천 세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000022",
+      "sourceMenuId": "10000022",
+      "name": "가마치 마늘간장 콤보",
+      "description": "마늘간장의 풍미를 더하다.",
+      "category": "가마치 콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/60f3d62c-bf3e-44d5-aea3-e3547db0fe38.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000027",
+      "sourceMenuId": "10000027",
+      "name": "간장치킨 (조각닭)",
+      "description": "달콤 고소한 가마치 신메뉴",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/fb10f9a1-8b6f-42c4-8e52-ee8a8095ea2a.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000032",
+      "sourceMenuId": "10000032",
+      "name": "순살 간장",
+      "description": "맛있는 순살 간장",
+      "category": "순살 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/6122cc17-27d7-4812-b4dc-c840e0a1bbcb.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000040",
+      "sourceMenuId": "10000040",
+      "name": "골뱅이무침(소면포함)",
+      "description": "",
+      "category": "치킨무.샐러드.햇반,골뱅이 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000058",
+      "sourceMenuId": "10000058",
+      "name": "마늘간장 소스",
+      "description": "밥도둑 아니고 닭도둑",
+      "category": "소스추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000063",
+      "sourceMenuId": "10000063",
+      "name": "환타 파인애플 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000004",
+      "sourceMenuId": "10000004",
+      "name": "빠사삭양념치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/96180709-1b5f-4395-99b2-087f8881c612.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000012",
+      "sourceMenuId": "10000012",
+      "name": "(NEW) 허니마늘파닭콤보",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/c3f56212-6b96-464a-a90b-04802ba7982f.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000023",
+      "sourceMenuId": "10000023",
+      "name": "가마치 치즈 콤보",
+      "description": "고소한 치즈의 맛과 함께",
+      "category": "가마치 콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/da172d2b-ebe8-4d53-98c3-1846556a248f.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000028",
+      "sourceMenuId": "10000028",
+      "name": "치즈치킨 (조각닭)",
+      "description": "고소한 풍미의 가마치즈치킨",
+      "category": "조각닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/cf6fc585-96af-4c89-b9b0-c87ef21186c1.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000033",
+      "sourceMenuId": "10000033",
+      "name": "순살 치즈",
+      "description": "고소한 풍미의 가마치즈 순살",
+      "category": "순살 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/4bc91035-f864-4fcb-9511-827f0cc5a487.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000041",
+      "sourceMenuId": "10000041",
+      "name": "햇반(비조리)",
+      "description": "",
+      "category": "치킨무.샐러드.햇반,골뱅이 추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000045",
+      "sourceMenuId": "10000045",
+      "name": "간장똥집튀김",
+      "description": "달콤하고 고소한 사이드 메뉴",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/8043caee-b548-4ebe-8a6b-3a644c9de03f.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000059",
+      "sourceMenuId": "10000059",
+      "name": "겨자소스",
+      "description": "겨자의 아릿맛과 마요네즈 부드러움",
+      "category": "소스추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000005",
+      "sourceMenuId": "10000005",
+      "name": "빠사삭마늘간장치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/90011fd3-ea64-402e-b4d1-2e658d05ec41.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000013",
+      "sourceMenuId": "10000013",
+      "name": "(NEW) 청양맵간장치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/111407ad-7e53-40d7-8912-8421c5462dfa.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000024",
+      "sourceMenuId": "10000024",
+      "name": "가마치 반반 콤보",
+      "description": "",
+      "category": "가마치 콤보",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000029",
+      "sourceMenuId": "10000029",
+      "name": "반반치킨(조각닭)",
+      "description": "",
+      "category": "조각닭",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000034",
+      "sourceMenuId": "10000034",
+      "name": "순살 반반",
+      "description": "",
+      "category": "순살 치킨",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000046",
+      "sourceMenuId": "10000046",
+      "name": "모듬감자튀김",
+      "description": "바삭한 가마치 감자튀김",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/48402122-e3dd-4e56-bd4a-6e7acf06e022.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000060",
+      "sourceMenuId": "10000060",
+      "name": "치즈머스타드 소스",
+      "description": "고소한 치즈맛",
+      "category": "소스추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1209982-10000006",
+      "sourceMenuId": "10000006",
+      "name": "빠사삭청양맵간장치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/dc2f936e-36cb-4e4f-b6ea-c9d83de1acbe.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000014",
+      "sourceMenuId": "10000014",
+      "name": "(NEW) 허니마늘파닭치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/61d640b5-2916-449d-aeeb-a97288a2207a.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000047",
+      "sourceMenuId": "10000047",
+      "name": "[NEW] 케이준 감자튀김 (500g)",
+      "description": "바로 튀겨 더 맛있는 매콤 짭쪼름한 감자튀김",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/04e88859-67b0-4469-8055-4ba93727eb41.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000007",
+      "sourceMenuId": "10000007",
+      "name": "빠사삭치즈치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/18120349-37b0-4b78-9c3e-fe8faaf43798.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000048",
+      "sourceMenuId": "10000048",
+      "name": "가마 치즈볼",
+      "description": "쫄깃한 치즈가 한가득~",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/d9af0bda-a9bc-42d1-a6b5-39027fc928bd.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000008",
+      "sourceMenuId": "10000008",
+      "name": "빠사삭레드[마라]블랙치킨",
+      "description": "",
+      "category": "[신메뉴]빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/e193dc8b-84b7-4ca1-b437-db8d7455c91c.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000049",
+      "sourceMenuId": "10000049",
+      "name": "뿌링클 가마치즈볼",
+      "description": "치즈 풍미로 고소함을 두배",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/cddfa62c-1fdf-4b84-9cbf-cf7627175bc2.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000050",
+      "sourceMenuId": "10000050",
+      "name": "가마치오뎅탕",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/1bc229db-bca1-42cd-bc09-a55789e444c4.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000051",
+      "sourceMenuId": "10000051",
+      "name": "가마치떡볶이",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/5b035012-2019-4e52-85c3-73acac2a5fde.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000052",
+      "sourceMenuId": "10000052",
+      "name": "크런치 오징어",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/6915097a-e891-44ec-a229-3bad212c069b.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000053",
+      "sourceMenuId": "10000053",
+      "name": "미니소떡소떡(2개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/973267c1-d0a7-4a01-81ea-7715203bca5a.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000054",
+      "sourceMenuId": "10000054",
+      "name": "모듬마른안주",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/efb9b0dd-cce8-4f76-b0e4-1dc91038957d.jpg"
+    },
+    {
+      "id": "ddangyo-1209982-10000055",
+      "sourceMenuId": "10000055",
+      "name": "파우치 삼계탕",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/5325ca62-3714-4404-9481-c5e4c0a9cd60.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

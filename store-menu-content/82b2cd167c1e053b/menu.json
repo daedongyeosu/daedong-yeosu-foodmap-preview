@@ -1,0 +1,726 @@
+{
+  "storeId": "82b2cd167c1e053b",
+  "storeName": "조선다방 2호점",
+  "displayName": "조선다방 2호점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/bfd00484-b0e2-4200-acf1-da4c785b3e97.jpg",
+  "categories": [
+    "전체",
+    "커피",
+    "아이스티/에이드",
+    "시그니처",
+    "논커피",
+    "버블티",
+    "티/주스",
+    "스무디",
+    "디저트"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1134628-10000082",
+      "sourceMenuId": "10000082",
+      "name": "아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/d689d162-cc37-4526-922d-6b15903ebed7.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000086",
+      "sourceMenuId": "10000086",
+      "name": "바닐라라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ddd0acd1-27a9-4cb2-ab9c-07466fe9bcc1.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000107",
+      "sourceMenuId": "10000107",
+      "name": "복숭아아이스티",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1e163014-05d9-4cc6-a07d-2a9cfb57950b.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000076",
+      "sourceMenuId": "10000076",
+      "name": "다방커피",
+      "description": "",
+      "category": "시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/eb830cac-0215-45a5-8a4d-e0c19e37afdc.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000093",
+      "sourceMenuId": "10000093",
+      "name": "초코라떼",
+      "description": "",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/fb72f938-3f3c-4114-b74e-eea5b4679e8d.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000103",
+      "sourceMenuId": "10000103",
+      "name": "밀크티",
+      "description": "",
+      "category": "버블티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/ef9cda8f-7b59-4b8d-9c4b-7bf65b6e187b.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000123",
+      "sourceMenuId": "10000123",
+      "name": "허브차",
+      "description": "",
+      "category": "티/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/07/dcfbf9fd-cac5-4ad5-9c09-d8904dc98368.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000131",
+      "sourceMenuId": "10000131",
+      "name": "딸기바나나스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/9ded212e-830b-4a46-93a4-519023003717.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000148",
+      "sourceMenuId": "10000148",
+      "name": "선물세트[조선절편 16] 보냉백증정",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000077",
+      "sourceMenuId": "10000077",
+      "name": "딸기라떼",
+      "description": "",
+      "category": "시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/e91ea1fb-6eae-4041-8830-b50055564bc7.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000083",
+      "sourceMenuId": "10000083",
+      "name": "카페라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a1e17f73-077a-45f4-9efb-5b832cd6e0fa.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000094",
+      "sourceMenuId": "10000094",
+      "name": "녹차라떼",
+      "description": "",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/99075999-bda5-423c-89a3-9e518d705adc.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000104",
+      "sourceMenuId": "10000104",
+      "name": "흑당밀크티",
+      "description": "",
+      "category": "버블티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1eb34d5f-6836-4317-afce-78628c5bfd7e.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000108",
+      "sourceMenuId": "10000108",
+      "name": "아샷추",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d8887fe0-2b53-4aa8-b0cc-84ecbca47c5d.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000124",
+      "sourceMenuId": "10000124",
+      "name": "리치캐모마일릴렉서",
+      "description": "",
+      "category": "티/주스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000132",
+      "sourceMenuId": "10000132",
+      "name": "바나나스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/67d5431a-3381-4e1c-a097-4b3428fa9282.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000149",
+      "sourceMenuId": "10000149",
+      "name": "조선절편",
+      "description": "쫀~득하고 고소함과 달콤함까지 느낄 수 있는 조선 절편",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000078",
+      "sourceMenuId": "10000078",
+      "name": "조선바닐라빈라떼",
+      "description": "",
+      "category": "시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/828127fc-82c1-48c1-9804-aae51f8b3093.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000084",
+      "sourceMenuId": "10000084",
+      "name": "카페모카",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/070204dc-6bf5-4ee3-8849-c1c701d7970d.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000095",
+      "sourceMenuId": "10000095",
+      "name": "토피넛라떼",
+      "description": "",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1eb8f916-2aa4-4511-9ed2-74a0fb33e573.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000105",
+      "sourceMenuId": "10000105",
+      "name": "얼그레이버블티",
+      "description": "",
+      "category": "버블티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/1a6978c3-27e6-4887-a284-4a6d7cc8fa5b.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000109",
+      "sourceMenuId": "10000109",
+      "name": "하동매실",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000125",
+      "sourceMenuId": "10000125",
+      "name": "리치라벤더릴렉서",
+      "description": "",
+      "category": "티/주스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000133",
+      "sourceMenuId": "10000133",
+      "name": "바닐라스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/32eda59e-e02e-4dd7-829f-bf86e5a0a64d.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000150",
+      "sourceMenuId": "10000150",
+      "name": "고구마절편",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000079",
+      "sourceMenuId": "10000079",
+      "name": "조선곡물가루",
+      "description": "",
+      "category": "시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/0c01419a-9ce5-4503-85fd-aff92bc2008b.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000085",
+      "sourceMenuId": "10000085",
+      "name": "카라멜마끼아또",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5064fdc1-3ea5-4e60-b4a0-460596b1fbe1.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000096",
+      "sourceMenuId": "10000096",
+      "name": "공주밤라떼",
+      "description": "",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c15da069-9f4a-4150-92f1-9bcb13c451d2.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000106",
+      "sourceMenuId": "10000106",
+      "name": "타로버블티",
+      "description": "",
+      "category": "버블티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/09810705-63a9-47c6-9b30-03786a8f7d3b.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000110",
+      "sourceMenuId": "10000110",
+      "name": "청송사과",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000126",
+      "sourceMenuId": "10000126",
+      "name": "딸기쥬스",
+      "description": "",
+      "category": "티/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/bf4b09ec-6ebf-41ef-b003-bf361af8ce58.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000134",
+      "sourceMenuId": "10000134",
+      "name": "유자스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/14621303-fda8-489e-8b93-955c5b6a6518.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000151",
+      "sourceMenuId": "10000151",
+      "name": "미니붕어빵 슈크림",
+      "description": "아기 붕어 뚜루뚜루뚜~",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/52d867d6-af29-45e8-a193-9b61a30baa22.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000080",
+      "sourceMenuId": "10000080",
+      "name": "쌍화차",
+      "description": "",
+      "category": "시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/f6c44b0f-f0b9-46d6-b6ec-7f041fb084a8.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000097",
+      "sourceMenuId": "10000097",
+      "name": "강화쑥라떼",
+      "description": "",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2fbc5420-99a7-45b9-884b-a22353e96bd2.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000111",
+      "sourceMenuId": "10000111",
+      "name": "청포도",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/451538c7-6480-4235-bd6d-bc8a0609d499.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000127",
+      "sourceMenuId": "10000127",
+      "name": "키위쥬스",
+      "description": "",
+      "category": "티/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/451538c7-6480-4235-bd6d-bc8a0609d499.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000135",
+      "sourceMenuId": "10000135",
+      "name": "망고스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/781af785-9119-49c1-bcc4-17857e61c694.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000152",
+      "sourceMenuId": "10000152",
+      "name": "미니붕어빵 팥",
+      "description": "아기 붕어 뚜루뚜루뚜~",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/52d867d6-af29-45e8-a193-9b61a30baa22.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000081",
+      "sourceMenuId": "10000081",
+      "name": "조선식혜",
+      "description": "",
+      "category": "시그니처",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002799.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000087",
+      "sourceMenuId": "10000087",
+      "name": "헤이즐넛라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9c047575-5d74-4230-8ac2-736249a58d28.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000098",
+      "sourceMenuId": "10000098",
+      "name": "무안고구마라떼",
+      "description": "",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/6efc6dd0-2632-495d-beb1-0a2d4a9710d2.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000112",
+      "sourceMenuId": "10000112",
+      "name": "체리아이스",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000128",
+      "sourceMenuId": "10000128",
+      "name": "망고쥬스",
+      "description": "",
+      "category": "티/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/07cc77e7-b72f-442e-a7a7-c951197784a1.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000136",
+      "sourceMenuId": "10000136",
+      "name": "딸기요거트스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d323ec33-add6-45da-b37e-7399f75ba808.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000153",
+      "sourceMenuId": "10000153",
+      "name": "델리만쥬 5ea",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000088",
+      "sourceMenuId": "10000088",
+      "name": "연유라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/68767dc7-f651-4c24-86ef-798884b3f2b9.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000099",
+      "sourceMenuId": "10000099",
+      "name": "꿀참외라떼",
+      "description": "",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000113",
+      "sourceMenuId": "10000113",
+      "name": "체리에이드",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/5b60e90a-2028-41de-9e6f-2f4240d1d3e3.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000129",
+      "sourceMenuId": "10000129",
+      "name": "토마토쥬스",
+      "description": "시",
+      "category": "티/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/2319076d-2208-4f52-ab10-72d75818b4f6.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000137",
+      "sourceMenuId": "10000137",
+      "name": "망고요거트스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/529e6e7b-8bcb-4094-b393-50694ea1cf3e.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000154",
+      "sourceMenuId": "10000154",
+      "name": "소금빵",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000089",
+      "sourceMenuId": "10000089",
+      "name": "소금커피",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/f78a39d6-4877-483f-8347-0439e5e20bf0.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000100",
+      "sourceMenuId": "10000100",
+      "name": "초당옥수수라떼",
+      "description": "",
+      "category": "논커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/ffeb9d53-b71c-4134-a145-7b919bb37c4e.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000114",
+      "sourceMenuId": "10000114",
+      "name": "자두아이스",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000130",
+      "sourceMenuId": "10000130",
+      "name": "수박쥬스",
+      "description": "시",
+      "category": "티/주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/63860e09-79bf-4657-9b2a-0f2df281d34f.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000138",
+      "sourceMenuId": "10000138",
+      "name": "플레요거트스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/a17e55c4-7251-42d8-97ea-66fa89e261de.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000155",
+      "sourceMenuId": "10000155",
+      "name": "크로와상",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/93c7246d-8f8b-4262-a661-fcf6645d9277.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000090",
+      "sourceMenuId": "10000090",
+      "name": "소금카라멜크림라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b9edbadd-d5cd-4fa0-877e-cde9395c2003.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000101",
+      "sourceMenuId": "10000101",
+      "name": "딸기녹차라떼",
+      "description": "",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000115",
+      "sourceMenuId": "10000115",
+      "name": "자두에이드",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/127d7d7e-d73b-4bb7-b527-36245ac132db.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000139",
+      "sourceMenuId": "10000139",
+      "name": "복숭아요거트스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a6b2d576-ad50-49de-8c64-972f1ac6c65c.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000156",
+      "sourceMenuId": "10000156",
+      "name": "초코칩쿠키",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000091",
+      "sourceMenuId": "10000091",
+      "name": "콜드브루 아메리카노",
+      "description": "",
+      "category": "커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000102",
+      "sourceMenuId": "10000102",
+      "name": "딸기초코라떼",
+      "description": "",
+      "category": "논커피",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000116",
+      "sourceMenuId": "10000116",
+      "name": "레몬",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d62c4f8a-0718-444a-8c6b-da7b5e6a75d2.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000140",
+      "sourceMenuId": "10000140",
+      "name": "블루베리요거트스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/2111c78e-09f5-4a0f-b1e4-836a08080785.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000157",
+      "sourceMenuId": "10000157",
+      "name": "마카다미아쿠키",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000092",
+      "sourceMenuId": "10000092",
+      "name": "콜드브루 라떼",
+      "description": "",
+      "category": "커피",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/cdcc530d-2b05-4c78-a243-f78ad41312ed.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000117",
+      "sourceMenuId": "10000117",
+      "name": "자몽",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/63860e09-79bf-4657-9b2a-0f2df281d34f.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000141",
+      "sourceMenuId": "10000141",
+      "name": "죠리퐁쉐이크",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/284852e3-72b7-40a7-99ba-675521b2892c.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000158",
+      "sourceMenuId": "10000158",
+      "name": "악마의 초코 케이크",
+      "description": "커피와 찰떡 조각케이크",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/2f629866-2848-48c8-b78a-33e048fe3b22.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000118",
+      "sourceMenuId": "10000118",
+      "name": "유자아이스",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000142",
+      "sourceMenuId": "10000142",
+      "name": "꿀참외스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/37d0a54f-c26c-484e-8ff6-0878dcd96ecf.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000159",
+      "sourceMenuId": "10000159",
+      "name": "치즈 케이크",
+      "description": "커피와 찰떡 조각케이크",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ea23aaa0-48e7-4e40-8ac2-4f7bdc53bff3.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000119",
+      "sourceMenuId": "10000119",
+      "name": "유자에이드",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/2d4df54f-fad3-4465-be63-0a10326ddc03.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000143",
+      "sourceMenuId": "10000143",
+      "name": "초당옥수수스무디",
+      "description": "",
+      "category": "스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000160",
+      "sourceMenuId": "10000160",
+      "name": "순우유 케이크",
+      "description": "커피와 찰떡 조각케이크",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/99dc9ca6-bfd5-417a-87db-ba171cecd6a2.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000120",
+      "sourceMenuId": "10000120",
+      "name": "애플시나몬아이스",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000144",
+      "sourceMenuId": "10000144",
+      "name": "더위사냥프라페",
+      "description": "",
+      "category": "스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000161",
+      "sourceMenuId": "10000161",
+      "name": "말렌카(윌넷)",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000121",
+      "sourceMenuId": "10000121",
+      "name": "애플시나몬차",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000145",
+      "sourceMenuId": "10000145",
+      "name": "쿠키누가프라페",
+      "description": "",
+      "category": "스무디",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000162",
+      "sourceMenuId": "10000162",
+      "name": "초코머핀",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000122",
+      "sourceMenuId": "10000122",
+      "name": "애플시나몬에이드",
+      "description": "",
+      "category": "아이스티/에이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000146",
+      "sourceMenuId": "10000146",
+      "name": "자바칩프라페",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/90ba290b-e5f6-4475-b86e-aa5963a41893.jpg"
+    },
+    {
+      "id": "ddangyo-1134628-10000163",
+      "sourceMenuId": "10000163",
+      "name": "치즈머핀",
+      "description": "",
+      "category": "디저트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134628-10000147",
+      "sourceMenuId": "10000147",
+      "name": "민트초프라페",
+      "description": "",
+      "category": "스무디",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

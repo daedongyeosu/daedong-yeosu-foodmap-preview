@@ -1,0 +1,767 @@
+{
+  "storeId": "7b80f8d10b67089e",
+  "storeName": "버거킹 여수웅천점",
+  "displayName": "버거킹 여수웅천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/cf9d9b45-8863-475e-92ba-6be536f256c8.jpg",
+  "categories": [
+    "전체",
+    "신제품(NEW)",
+    "와퍼주니어 세트",
+    "씨푸드, 비프, 치킨버거",
+    "씨푸드, 비프, 치킨버거 세트",
+    "와퍼",
+    "와퍼 세트",
+    "와퍼주니어",
+    "사이드",
+    "음료&디저트"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1235670-30000687",
+      "sourceMenuId": "30000687",
+      "name": "펜타치즈와퍼",
+      "description": "콰트로치즈를 넘어 펜타로, 펜타치즈와퍼",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/da86a7bd-5722-4be2-be57-bd913435a4a6.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000693",
+      "sourceMenuId": "30000693",
+      "name": "보일링씨푸드버거 버터갈릭",
+      "description": "루이지애나 스타일의 보일링 씨푸드를 통째로",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5044034f-2461-4781-9243-91486510c8ea.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000695",
+      "sourceMenuId": "30000695",
+      "name": "보일링씨푸드버거 디아블로",
+      "description": "루이지애나 스타일의 보일링 씨푸드를 통째로",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/fd69b296-42e5-48d8-9382-cb022dbd5baa.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000652",
+      "sourceMenuId": "30000652",
+      "name": "오리지널스 엘파소 치폴레",
+      "description": "150g 패티에 스모키한 풍미의 치폴레와 할라피뇨가 만난 엘파소의 풍미",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4537e353-fb15-4b1a-81cb-cea63c19711b.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000480",
+      "sourceMenuId": "30000480",
+      "name": "오리지널스 뉴욕 스테이크",
+      "description": "150g 패티에 뉴욕스테이크 소스와 몬테레이잭 치즈를 더한 정통 미국 스타일",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3c44ee7a-1272-4b25-8805-306b33b3bcff.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000596",
+      "sourceMenuId": "30000596",
+      "name": "더 크리스퍼",
+      "description": "한층 더 바삭해진 100% 두툼한 통닭가슴살과 매콤한 감칠맛의 풍미가 폭발",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/e515e56a-402c-405b-8ce7-01033ce4f027.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000148",
+      "sourceMenuId": "30000148",
+      "name": "통새우와퍼주니어 세트",
+      "description": "통새우와퍼주니어+프렌치프라이R+콜라R",
+      "category": "와퍼주니어 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/f072af95-bb54-46d3-bbd9-5d4aeb643215.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000514",
+      "sourceMenuId": "30000514",
+      "name": "치킨 치즈 마요 버거",
+      "description": "엑스트라 마요네즈와 치즈로 더욱 고소한 치킨치즈마요버거",
+      "category": "씨푸드, 비프, 치킨버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a7f73142-4191-4d48-9d51-f904ac7c9c22.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000515",
+      "sourceMenuId": "30000515",
+      "name": "치킨 치즈 마요 버거 세트",
+      "description": "치킨 치즈 마요 버거+프렌치프라이R+콜라R",
+      "category": "씨푸드, 비프, 치킨버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9de99539-8c55-4738-8926-d929fca5cd37.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000522",
+      "sourceMenuId": "30000522",
+      "name": "더오치 맥시멈2",
+      "description": "맥시멈에 도전하라",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/e05fccf0-821a-4825-b933-f0ac4446cb26.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000523",
+      "sourceMenuId": "30000523",
+      "name": "더오치 맥시멈2 세트",
+      "description": "더오치 맥시멈2+프렌치프라이R+콜라R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/fe4dbc22-53eb-4751-83d9-ee7d6dad3fd2.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000184",
+      "sourceMenuId": "30000184",
+      "name": "통새우와퍼주니어",
+      "description": "통새우와퍼주니어",
+      "category": "와퍼주니어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/a725a17d-b3ad-44b4-895a-579f13df505d.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000342",
+      "sourceMenuId": "30000342",
+      "name": "베이컨치즈와퍼",
+      "description": "풍미 가득한 아메리칸 클래식의 완벽한 조화!",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/0d93f287-f4b3-47b2-8cac-ff9e8ff59435.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000688",
+      "sourceMenuId": "30000688",
+      "name": "펜타치즈와퍼 세트",
+      "description": "펜타치즈와퍼 +프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f1184518-72c0-4348-bbf7-36fc65d3dcf0.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000343",
+      "sourceMenuId": "30000343",
+      "name": "베이컨치즈와퍼 세트",
+      "description": "베이컨치즈와퍼+콜라R+프렌치프라이R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/6484172d-3e55-4059-a36d-a116fe5b50c1.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000149",
+      "sourceMenuId": "30000149",
+      "name": "콰트로치즈와퍼주니어 세트",
+      "description": "콰트로치즈와퍼주니어+프렌치프라이R+콜라R",
+      "category": "와퍼주니어 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/5d4f5fa7-6625-4db4-b751-596c456ba7b6.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000502",
+      "sourceMenuId": "30000502",
+      "name": "크리스퍼 랩",
+      "description": "든든하게 채우는 한입, 크리스퍼 스낵",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e965d650-f7f5-4c0c-a944-2bc6144383d6.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000185",
+      "sourceMenuId": "30000185",
+      "name": "콰트로치즈와퍼주니어",
+      "description": "콰트로치즈와퍼주니어",
+      "category": "와퍼주니어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/142e10a3-7adc-4dbc-8c3d-aea672292274.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000503",
+      "sourceMenuId": "30000503",
+      "name": "크리스퍼 텐더",
+      "description": "든든하게 채우는 한입, 크리스퍼 스낵",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/72208225-37c9-4604-8749-0fd95984697e.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000186",
+      "sourceMenuId": "30000186",
+      "name": "치즈와퍼주니어",
+      "description": "치즈와퍼주니어",
+      "category": "와퍼주니어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/16e63811-0fad-41e2-a178-c27d14c5782a.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000134",
+      "sourceMenuId": "30000134",
+      "name": "몬스터와퍼 세트",
+      "description": "몬스터와퍼+프렌치프라이R+콜라R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/3dcdc986-aa3a-47b5-8c37-ae0dc3737967.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000150",
+      "sourceMenuId": "30000150",
+      "name": "치즈와퍼주니어 세트",
+      "description": "치즈와퍼주니어 +프렌치프라이R+콜라R",
+      "category": "와퍼주니어 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/021ff97c-dcd4-4dd7-934b-800b626bfa61.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000170",
+      "sourceMenuId": "30000170",
+      "name": "몬스터와퍼",
+      "description": "몬스터와퍼",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/a1f78cde-0347-4e55-acec-25f36bcc5217.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000171",
+      "sourceMenuId": "30000171",
+      "name": "콰트로치즈와퍼",
+      "description": "콰트로치즈와퍼",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/38c321b3-e8a4-4976-a9cb-f14edb901206.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000135",
+      "sourceMenuId": "30000135",
+      "name": "콰트로치즈와퍼 세트",
+      "description": "콰트로치즈와퍼+프렌치프라이R+콜라R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/7bf3b4ba-061e-4d0e-aeb0-c7a513a1a59b.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000151",
+      "sourceMenuId": "30000151",
+      "name": "와퍼주니어 세트",
+      "description": "와퍼주니어+프렌치프라이R+콜라R",
+      "category": "와퍼주니어 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/811f007c-0ca4-4f53-8c8c-45cef8187080.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000694",
+      "sourceMenuId": "30000694",
+      "name": "보일링씨푸드버거 버터갈릭 세트",
+      "description": "보일링 씨푸드 버거 버터갈릭 +프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/268fdac3-4dca-489a-ac33-413449608a95.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000236",
+      "sourceMenuId": "30000236",
+      "name": "아메리카노",
+      "description": "아메리카노ICE",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/e654e621-22c0-413e-afbf-da7244400b27.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000383",
+      "sourceMenuId": "30000383",
+      "name": "리얼 어니언링R",
+      "description": "통째로 썰어 더 두툼하고 더 바삭해진",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/3d807464-0f5a-435d-b96e-076b0943b29a.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000404",
+      "sourceMenuId": "30000404",
+      "name": "몬스터 주니어",
+      "description": "순 쇠고기 패티에 치킨 패티를 더해 든든함이 두 배!",
+      "category": "와퍼주니어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/32a5fbf2-fc71-4e76-ab37-cb82ec36aab1.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000172",
+      "sourceMenuId": "30000172",
+      "name": "통새우와퍼",
+      "description": "통새우와퍼",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/d99afd93-ec55-4e9c-9321-d12a12663c65.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000152",
+      "sourceMenuId": "30000152",
+      "name": "불고기와퍼주니어 세트",
+      "description": "불고기와퍼주니어+프렌치프라이R+콜라R",
+      "category": "와퍼주니어 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/471f3891-31e9-4bab-b137-2cb391c74e3d.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000381",
+      "sourceMenuId": "30000381",
+      "name": "리얼 어니언링L",
+      "description": "통째로 썰어 더 두툼하고 더 바삭해진",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/42fd381e-ae4d-4915-9dbb-191d979819b4.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000136",
+      "sourceMenuId": "30000136",
+      "name": "통새우와퍼 세트",
+      "description": "통새우와퍼+프렌치프라이R+콜라R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/8b74dd67-565e-4865-ac30-d4f05b538add.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000476",
+      "sourceMenuId": "30000476",
+      "name": "닥터페퍼 제로",
+      "description": "톡쏘는 유니크함, Zero로 라이트하게",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/bb930214-a3cd-4303-9289-a59af732d433.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000206",
+      "sourceMenuId": "30000206",
+      "name": "너겟킹",
+      "description": "너겟킹4조각",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/5ccfe419-4344-4f9f-88fe-f1320fec08d7.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000187",
+      "sourceMenuId": "30000187",
+      "name": "와퍼주니어",
+      "description": "와퍼주니어",
+      "category": "와퍼주니어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/1247d56b-b7ef-49bf-8824-c50b9165e1be.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000175",
+      "sourceMenuId": "30000175",
+      "name": "갈릭불고기와퍼",
+      "description": "갈릭불고기와퍼",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/059930b9-fc05-4310-a4e2-f2856acdb0de.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000696",
+      "sourceMenuId": "30000696",
+      "name": "보일링씨푸드버거 디아블로 세트",
+      "description": "보일링 씨푸드 버거 디아블로 +프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d33bcae6-5a15-4dc7-a0c2-3646a3b37812.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000288",
+      "sourceMenuId": "30000288",
+      "name": "더블비프불고기버거",
+      "description": "달콤한 불고기 소스에 더블 패티로 더욱 깊어진 감칠맛",
+      "category": "씨푸드, 비프, 치킨버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/9b282c06-4e0d-4b5a-84cd-b5687de8fd90.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000289",
+      "sourceMenuId": "30000289",
+      "name": "더블비프불고기버거 세트",
+      "description": "달콤한 불고기 소스에 더블 패티로 더욱 깊어진 감칠맛",
+      "category": "씨푸드, 비프, 치킨버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/247257e9-8f12-4ac0-beb3-89668379b90b.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000139",
+      "sourceMenuId": "30000139",
+      "name": "갈릭불고기와퍼 세트",
+      "description": "갈릭불고기와퍼+프렌치프라이R+콜라R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/ec6281c8-5cbe-4f19-b546-df820844f640.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000661",
+      "sourceMenuId": "30000661",
+      "name": "롱치킨버거",
+      "description": "담백한 치킨 패티에 부드러운 마요네즈 소스와 싱싱한 야채가 듬뿍",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/fcb376a8-dcb2-4401-bc08-e11829801478.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000241",
+      "sourceMenuId": "30000241",
+      "name": "코카콜라",
+      "description": "코카콜라L",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/bd2f9a2f-33f4-401c-9492-5b074cf27f1a.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000142",
+      "sourceMenuId": "30000142",
+      "name": "치즈와퍼 세트",
+      "description": "치즈와퍼+프렌치프라이R+콜라R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/6813f9bf-54ff-40c3-b659-aeb6d844a82b.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000397",
+      "sourceMenuId": "30000397",
+      "name": "몬스터 주니어 세트",
+      "description": "순 쇠고기 패티에 치킨 패티를 더해 든든함이 두 배!",
+      "category": "와퍼주니어 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/4b9dbb81-43b1-41b7-986e-83864389f146.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000267",
+      "sourceMenuId": "30000267",
+      "name": "치킨킹",
+      "description": "스파이시한 통닭다리살과 고소한 브리오쉬번이 만나 더 풍부해진 프리미엄 치킨버거",
+      "category": "씨푸드, 비프, 치킨버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/2370d430-58b1-4269-8f35-96655ffa0d46.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000188",
+      "sourceMenuId": "30000188",
+      "name": "불고기와퍼주니어",
+      "description": "불고기와퍼주니어",
+      "category": "와퍼주니어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/05629dbe-3b95-4e29-83dd-8ac40763edf0.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000178",
+      "sourceMenuId": "30000178",
+      "name": "치즈와퍼",
+      "description": "치즈와퍼",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/2ff18b72-3ba7-4fc5-b82a-48f7a2d6f6c9.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000266",
+      "sourceMenuId": "30000266",
+      "name": "치킨킹 세트",
+      "description": "스파이시한 통닭다리살과 고소한 브리오쉬번이 만나 더 풍부해진 프리미엄 치킨버거",
+      "category": "씨푸드, 비프, 치킨버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/fc5a23fc-8f4a-479d-83f5-a1fed1d21493.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000269",
+      "sourceMenuId": "30000269",
+      "name": "치킨킹BLT 세트",
+      "description": "스파이시한 통닭다리살 프리미엄 치킨버거에 베이컨, 양상추, 토마토를 더했다.",
+      "category": "씨푸드, 비프, 치킨버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/98227d56-1b67-4a62-8e1c-ce133f5e8a5e.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000268",
+      "sourceMenuId": "30000268",
+      "name": "치킨킹BLT",
+      "description": "스파이시한 통닭다리살 프리미엄 치킨버거에 베이컨, 양상추, 토마토를 더했다.",
+      "category": "씨푸드, 비프, 치킨버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/610b0e95-0271-41e0-b83c-c7c72dd05e44.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000143",
+      "sourceMenuId": "30000143",
+      "name": "와퍼 세트",
+      "description": "와퍼+프렌치프라이R+콜라R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/1dd528e8-da08-4bc5-8ce7-ee19eed307f7.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000179",
+      "sourceMenuId": "30000179",
+      "name": "와퍼",
+      "description": "와퍼",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/7fd91992-b8dc-45bd-98bb-8120a7a0bbbf.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000662",
+      "sourceMenuId": "30000662",
+      "name": "롱치킨버거 세트",
+      "description": "롱치킨버거+프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/da70fc97-d12a-45d6-8390-52065f2c939a.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000254",
+      "sourceMenuId": "30000254",
+      "name": "비프불고기버거",
+      "description": "비프불고기버거",
+      "category": "씨푸드, 비프, 치킨버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/552c5c83-e51c-4bc6-9bd1-a6d16e77b93b.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000144",
+      "sourceMenuId": "30000144",
+      "name": "불고기와퍼 세트",
+      "description": "불고기와퍼+프렌치프라이R+콜라R",
+      "category": "와퍼 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/bd6f0336-6af0-4e09-b698-85058c9fd143.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000180",
+      "sourceMenuId": "30000180",
+      "name": "불고기와퍼",
+      "description": "불고기와퍼",
+      "category": "와퍼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/eec6c4e1-4788-4713-bfc1-ece4d01d0be4.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000209",
+      "sourceMenuId": "30000209",
+      "name": "21치즈스틱",
+      "description": "21치즈스틱",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/93356b2e-800f-4965-b451-052ff8b01100.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000243",
+      "sourceMenuId": "30000243",
+      "name": "코카콜라 제로",
+      "description": "코카콜라 제로L",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/a6e7314b-c10a-4ce2-b2bf-60515be13f84.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000253",
+      "sourceMenuId": "30000253",
+      "name": "비프불고기버거 세트",
+      "description": "비프불고기버거+프렌치프라이R+콜라R",
+      "category": "씨푸드, 비프, 치킨버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/0a44577b-d505-41d9-8d51-bd3c30abd52b.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000663",
+      "sourceMenuId": "30000663",
+      "name": "불고기 롱치킨버거",
+      "description": "담백한 치킨 패티에 부드러운 마요네즈 소스, 달콤한 불고기 소스까지!",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/34b5fd11-dacf-44e3-82b6-8eaa1edad40c.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000664",
+      "sourceMenuId": "30000664",
+      "name": "불고기 롱치킨버거 세트",
+      "description": "불고기 롱치킨버거+프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/96550b4f-69bf-47aa-a353-f4dbd0ac4ddc.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000245",
+      "sourceMenuId": "30000245",
+      "name": "스프라이트",
+      "description": "스프라이트L",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/61bb0815-2eb8-4060-90c9-ef10e2e4c0a2.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000155",
+      "sourceMenuId": "30000155",
+      "name": "통새우 슈림프버거 세트",
+      "description": "통새우 슈림프버거+프렌치프라이R+콜라R",
+      "category": "씨푸드, 비프, 치킨버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/d5916bb8-f2bb-4eb0-84c5-d5ca96741899.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000191",
+      "sourceMenuId": "30000191",
+      "name": "통새우 슈림프버거",
+      "description": "통새우 슈림프버거",
+      "category": "씨푸드, 비프, 치킨버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/f981a00e-9199-4e95-b37c-2cf2e4e077ec.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000200",
+      "sourceMenuId": "30000200",
+      "name": "치킨버거",
+      "description": "킹치킨버거",
+      "category": "씨푸드, 비프, 치킨버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/4eb3246e-8408-4072-9cd8-b66abd310be0.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000280",
+      "sourceMenuId": "30000280",
+      "name": "스프라이트 제로L",
+      "description": "제대로 상쾌한 맛남 스프라이트 제로",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/193bcd19-b30e-47cf-b1cc-826dd9473dd8.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000164",
+      "sourceMenuId": "30000164",
+      "name": "치킨버거 세트",
+      "description": "킹치킨버거+프렌치프라이R+콜라R",
+      "category": "씨푸드, 비프, 치킨버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/19df58cf-7c4b-4b35-834b-c035bf13ed80.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000279",
+      "sourceMenuId": "30000279",
+      "name": "스프라이트 제로R",
+      "description": "제대로 상쾌한 맛남 스프라이트 제로",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/c60f0f54-16bb-4c69-b383-772645944576.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000165",
+      "sourceMenuId": "30000165",
+      "name": "치즈버거 세트",
+      "description": "치즈버거+프렌치프라이R+콜라R",
+      "category": "씨푸드, 비프, 치킨버거 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/5e5fff41-c663-40fa-b7c1-cd8d2d55bb35.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000201",
+      "sourceMenuId": "30000201",
+      "name": "치즈버거",
+      "description": "치즈버거",
+      "category": "씨푸드, 비프, 치킨버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/927a829b-75d4-46aa-ba44-ed70c44ec5fc.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000216",
+      "sourceMenuId": "30000216",
+      "name": "쉐이킹프라이",
+      "description": "쉐이킹프라이구운갈릭",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/1dfecd26-5d33-4d05-8f8a-8995288afb9f.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000249",
+      "sourceMenuId": "30000249",
+      "name": "미닛메이드 오렌지",
+      "description": "미닛메이드 오렌지",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/9f2d24d2-e60b-4501-a6a2-78c854025210.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000653",
+      "sourceMenuId": "30000653",
+      "name": "오리지널스 엘파소 치폴레 세트",
+      "description": "오리지널스 엘파소 치폴레+프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c6a98c31-a8ff-48d3-8c62-2d568ab78154.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000221",
+      "sourceMenuId": "30000221",
+      "name": "코코넛슈림프3조각+스위트칠리소스",
+      "description": "코코넛쉬림프+스위트칠리소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/acf7533d-2550-40bc-81e9-57fe514826e4.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000250",
+      "sourceMenuId": "30000250",
+      "name": "순수(미네랄워터)",
+      "description": "순수(미네랄워터)",
+      "category": "음료&디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/e6693a0a-cca3-4471-a268-98f06e1f6b2e.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000614",
+      "sourceMenuId": "30000614",
+      "name": "갈릭불고기 맥시멈2",
+      "description": "맥시멈에 도전하라",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/ea7704bc-9c5d-4ebd-9049-80bc77084e6f.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000222",
+      "sourceMenuId": "30000222",
+      "name": "코코넛슈림프6조각+스위트칠리소스",
+      "description": "코코넛쉬림프+스위트칠리소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/79e97d79-df10-42b8-8ede-bc461c891344.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000615",
+      "sourceMenuId": "30000615",
+      "name": "갈릭불고기 맥시멈2 세트",
+      "description": "갈릭불고기 맥시멈2+프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/78a3f8e1-9d18-43e6-abcd-c94249a77f12.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000223",
+      "sourceMenuId": "30000223",
+      "name": "코코넛슈림프9조각+스위트칠리소스",
+      "description": "코코넛쉬림프+스위트칠리소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/ef58a28a-acaf-4531-8228-0da619c9cee1.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000225",
+      "sourceMenuId": "30000225",
+      "name": "프렌치프라이",
+      "description": "프렌치프라이L",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/7721fb97-59db-49ef-b227-c177ad3b3439.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000227",
+      "sourceMenuId": "30000227",
+      "name": "코울슬로",
+      "description": "코울슬로",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/db4853bb-baef-4fee-be83-16e70f87e2a7.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000228",
+      "sourceMenuId": "30000228",
+      "name": "콘샐러드",
+      "description": "콘샐러드",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/66cb80e8-5081-484e-abbc-058ac7b73929.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000597",
+      "sourceMenuId": "30000597",
+      "name": "더 크리스퍼 세트",
+      "description": "더 크리스퍼+프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/64e6deb9-8d18-4127-887a-90091b19f6fb.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000665",
+      "sourceMenuId": "30000665",
+      "name": "빅 딥 체다치즈",
+      "description": "깊고 진한 치즈소스로 완성하는 압도적 풍미",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5e642f21-fb56-46cd-8ade-4fef6d2e1ce0.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000598",
+      "sourceMenuId": "30000598",
+      "name": "더 크리스퍼 베이컨&치즈",
+      "description": "한층 더 바삭해진 100% 두툼한 통닭가슴살에 베이컨&치즈를 더해 완성한 치킨 버거의 풍미",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/dc81e032-f496-43ac-bfe6-9a63f7e94a4e.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000229",
+      "sourceMenuId": "30000229",
+      "name": "스위트칠리소스",
+      "description": "스위트칠리소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/d90d9694-8db1-4646-8a8f-ec81682d14ad.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000599",
+      "sourceMenuId": "30000599",
+      "name": "더크리스퍼 베이컨&치즈 세트",
+      "description": "더 크리스퍼 베이컨&치즈+프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/1c0487ba-8144-4d9b-a229-14b68a8f6691.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000231",
+      "sourceMenuId": "30000231",
+      "name": "디아블로소스",
+      "description": "디아블로소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/e79d9df4-4399-4e20-b8ea-0b2a5b34fe4a.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000548",
+      "sourceMenuId": "30000548",
+      "name": "허니머드타드 소스",
+      "description": "허니머드타드 소스",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/542d4647-aeb3-4c59-8fcd-d593a9b66611.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000232",
+      "sourceMenuId": "30000232",
+      "name": "시즈닝",
+      "description": "시즈닝",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/98fc52a4-b61b-4721-a6f3-3dfe86537f21.jpg"
+    },
+    {
+      "id": "ddangyo-1235670-30000481",
+      "sourceMenuId": "30000481",
+      "name": "오리지널스 뉴욕 스테이크 세트",
+      "description": "오리지널스 뉴욕 스테이크+프렌치프라이R+콜라R",
+      "category": "신제품(NEW)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/31282e50-7e9c-489d-bd5a-cd4d16d6ac93.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

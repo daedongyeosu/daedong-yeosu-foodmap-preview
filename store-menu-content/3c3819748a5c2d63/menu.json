@@ -1,0 +1,313 @@
+{
+  "storeId": "3c3819748a5c2d63",
+  "storeName": "윤김밥",
+  "displayName": "윤김밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/54bc97bf-56b3-4a18-89be-15e6ddb3235c.jpg",
+  "categories": [
+    "전체",
+    "김밥류",
+    "식사류",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1234848-10000001",
+      "sourceMenuId": "10000001",
+      "name": "윤김밥",
+      "description": "계란.햄.맛살.어묵.단무지.당근.궁채.우엉.",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/cc8ea65b-bcab-4d9e-9346-a0b1b65857cf.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000002",
+      "sourceMenuId": "10000002",
+      "name": "계란김밥",
+      "description": "계란말이가 통째로 들어간 김밥(계란.소세지.부추.당근)",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/e806d8c3-0cda-4327-b729-d9a8346514f5.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000003",
+      "sourceMenuId": "10000003",
+      "name": "매운어묵김밥",
+      "description": "양념어묵.깻잎.단무지.계란.당근.우엉",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/b417cfdc-e98d-42cd-9ba2-9326f5c6b9ad.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000011",
+      "sourceMenuId": "10000011",
+      "name": "제육덮밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/7855a350-3b51-4485-a89f-a3f2a4ecd6ef.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000025",
+      "sourceMenuId": "10000025",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000012",
+      "sourceMenuId": "10000012",
+      "name": "불고기덮밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/956a6d14-abc4-4b83-ae24-a7498f72fca0.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000026",
+      "sourceMenuId": "10000026",
+      "name": "스포라이트",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000013",
+      "sourceMenuId": "10000013",
+      "name": "낙지덮밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/ab8d527e-05b8-467d-af69-8ba1bf8becd4.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000027",
+      "sourceMenuId": "10000027",
+      "name": "환타파인",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000004",
+      "sourceMenuId": "10000004",
+      "name": "참치김밥",
+      "description": "참치.깻잎.계란.햄.맛살.어묵.단무지.당근.궁채.우엉.",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/573912c1-6064-476c-acd8-9f0f88d0786a.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000014",
+      "sourceMenuId": "10000014",
+      "name": "카레덮밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/acdba0e0-44f8-43ba-a347-d549773b8e94.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000028",
+      "sourceMenuId": "10000028",
+      "name": "환타오렌지",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000005",
+      "sourceMenuId": "10000005",
+      "name": "소세지김밥",
+      "description": "소세지.깻잎.양배추.계란.햄.맛살.어묵.단무지.당근.궁채.우엉(스리라차소스)",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/6f11a012-7627-4b81-bef5-2764ad9a8555.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000029",
+      "sourceMenuId": "10000029",
+      "name": "빅토리아탄산수",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000037",
+      "sourceMenuId": "10000037",
+      "name": "육개장",
+      "description": "",
+      "category": "식사류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000006",
+      "sourceMenuId": "10000006",
+      "name": "돈까스김밥",
+      "description": "돈까스.깻잎.계란.어묵.단무지.당근.궁채.우엉",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/a8655c3a-a426-4849-87cd-39a47a81dbf6.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000016",
+      "sourceMenuId": "10000016",
+      "name": "김치찌개",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/7ea89e86-1b6f-48d0-ba1d-e6e17a3b1e22.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000030",
+      "sourceMenuId": "10000030",
+      "name": "비락식혜175ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000007",
+      "sourceMenuId": "10000007",
+      "name": "통새우김밥",
+      "description": "통새우튀김.깻잎.계란.단무지.햄.맛살.오댕.당근.궁채.우엉",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/72d58f27-3d8d-42d4-bfd3-8d44f966bc75.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000017",
+      "sourceMenuId": "10000017",
+      "name": "차돌된장찌개",
+      "description": "차돌박이,꽃게,건새우,두부,호박,양파",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/d84132b3-4c37-4840-8355-1ee2e125959f.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000031",
+      "sourceMenuId": "10000031",
+      "name": "생수",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000018",
+      "sourceMenuId": "10000018",
+      "name": "비빔밥",
+      "description": "",
+      "category": "식사류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000035",
+      "sourceMenuId": "10000035",
+      "name": "진미김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000008",
+      "sourceMenuId": "10000008",
+      "name": "제육김밥세트",
+      "description": "제육볶음.김밥.쌈채소",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/853c3042-1f43-4e77-8f53-a6310b3b745a.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000038",
+      "sourceMenuId": "10000038",
+      "name": "뚝배기불고기",
+      "description": "불고기. 당면.야채류",
+      "category": "식사류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000019",
+      "sourceMenuId": "10000019",
+      "name": "제육볶음",
+      "description": "제육.쌈채소 .고추.된장국",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/874a564b-277e-4ca4-9f9c-43b2546dde77.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000036",
+      "sourceMenuId": "10000036",
+      "name": "함박.김밥세트",
+      "description": "",
+      "category": "김밥류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000009",
+      "sourceMenuId": "10000009",
+      "name": "불고기김밥세트",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/7d10549f-3612-4caf-8293-cea783825977.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000020",
+      "sourceMenuId": "10000020",
+      "name": "불고기볶음",
+      "description": "불고기.쌈채소.고추.된장국",
+      "category": "식사류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000010",
+      "sourceMenuId": "10000010",
+      "name": "낙지김밥세트",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/cb1d240f-89fb-4cef-829c-45d3d7132cb7.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000021",
+      "sourceMenuId": "10000021",
+      "name": "낙지볶음",
+      "description": "낙지.쌈채소.고추. 된장국",
+      "category": "식사류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000022",
+      "sourceMenuId": "10000022",
+      "name": "낙지.제육볶음",
+      "description": "제육.낙지.쌈채소.고추. 된장국",
+      "category": "식사류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000032",
+      "sourceMenuId": "10000032",
+      "name": "우거지된장국",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/04c34eba-97ac-4438-a810-3af2bd21b28f.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000023",
+      "sourceMenuId": "10000023",
+      "name": "오뎅탕",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/5a1f6bfc-b741-4a6a-b02c-3a8361a7be59.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000033",
+      "sourceMenuId": "10000033",
+      "name": "3종반찬",
+      "description": "감치, 나물류, 마른반찬 (종류는 매일 바뀝니다.)",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/55c7c453-a2a1-4be5-ac07-08ef1f8bfd8b.jpg"
+    },
+    {
+      "id": "ddangyo-1234848-10000024",
+      "sourceMenuId": "10000024",
+      "name": "공기밥",
+      "description": "",
+      "category": "식사류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1234848-10000034",
+      "sourceMenuId": "10000034",
+      "name": "상추쌈",
+      "description": "상추.깻잎rhcn",
+      "category": "식사류",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

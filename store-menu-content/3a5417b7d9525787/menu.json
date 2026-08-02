@@ -1,0 +1,249 @@
+{
+  "storeId": "3a5417b7d9525787",
+  "storeName": "노랑고래찹쌀꽈배기 여수직영점",
+  "displayName": "노랑고래찹쌀꽈배기 여수직영점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/6c5485fd-9562-41d4-9e05-4d0c0bba4287.jpg",
+  "categories": [
+    "전체",
+    "단품류",
+    "세트류",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1221145-10000007",
+      "sourceMenuId": "10000007",
+      "name": "치즈 도너츠",
+      "description": "체다치즈와 크림치즈의 환장하는 조합",
+      "category": "단품류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/e5278d85-9a33-49f1-8f21-fd113c322ffc.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000010",
+      "sourceMenuId": "10000010",
+      "name": "모짜렐라 치즈 핫도그",
+      "description": "모짜렐라 치즈와 옥수수콘 소세지가 함께 들어간 핫도그",
+      "category": "단품류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/7fb0b034-f194-4ac3-986c-0e6093675359.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000012",
+      "sourceMenuId": "10000012",
+      "name": "찹쌀 꽈배기",
+      "description": "누가 뭐라해도 노랑고래의 가장 대표 인기메뉴",
+      "category": "단품류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/c5540954-85b6-4915-8e1c-024eab2d66fa.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000001",
+      "sourceMenuId": "10000001",
+      "name": "노랑세트",
+      "description": "찹쌀꽈배기5개+팥도너츠1개+고구마도너츠1개",
+      "category": "세트류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000006",
+      "sourceMenuId": "10000006",
+      "name": "연유(소분용기)",
+      "description": "",
+      "category": "단품류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000016",
+      "sourceMenuId": "10000016",
+      "name": "아메리카노",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/fa355ec2-f6e0-4cf2-9977-13ec9dfd384d.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000002",
+      "sourceMenuId": "10000002",
+      "name": "노랑더블세트",
+      "description": "찹쌀꽈배기10개+팥도너츠2개+고구마도너츠2개",
+      "category": "세트류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000017",
+      "sourceMenuId": "10000017",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/44282bd3-b7eb-4c5f-b51f-ab4517bc3cfc.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000003",
+      "sourceMenuId": "10000003",
+      "name": "고래세트",
+      "description": "찹쌀꽈배기3+팥도너츠1개+고구마도너츠1개+유자도너츠1개",
+      "category": "세트류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000008",
+      "sourceMenuId": "10000008",
+      "name": "고구마치즈도너츠",
+      "description": "겉은 바삭 속은 촉촉하면서도 쫄깃쫄깃한 달콤한 고구마와 치즈의 조합",
+      "category": "단품류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/e5278d85-9a33-49f1-8f21-fd113c322ffc.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000018",
+      "sourceMenuId": "10000018",
+      "name": "펩시 제로 콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000004",
+      "sourceMenuId": "10000004",
+      "name": "고래더블세트",
+      "description": "찹쌀꽈배기6개+팥도너츠2개+고구마도너츠2개+유자도너츠2개",
+      "category": "세트류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000009",
+      "sourceMenuId": "10000009",
+      "name": "찹쌀 핫도그",
+      "description": "옥수수콘이 송송 박혀있는 맛있는 소세지가 들어간 핫도그",
+      "category": "단품류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/eba5689f-e798-4904-8c7b-9da964409949.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000019",
+      "sourceMenuId": "10000019",
+      "name": "칠성사이다(제로X)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000005",
+      "sourceMenuId": "10000005",
+      "name": "도너츠세트",
+      "description": "치즈도너츠 1개+고구마치즈도너츠 1개+팥도너츠 1개+고구마도너츠 1개+유자도너츠 1개",
+      "category": "세트류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000020",
+      "sourceMenuId": "10000020",
+      "name": "잔치집식혜",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000011",
+      "sourceMenuId": "10000011",
+      "name": "통모짜렐라치즈핫도그",
+      "description": "치즈의 풍미를 느낄 수 있도록 모짜렐라 치즈로만 가득~한 핫도그",
+      "category": "단품류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/b5aa17bb-b9b1-47f5-9df3-a64deaaac8ae.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000021",
+      "sourceMenuId": "10000021",
+      "name": "갈아만든배 사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000022",
+      "sourceMenuId": "10000022",
+      "name": "탐스제로 오렌지",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000013",
+      "sourceMenuId": "10000013",
+      "name": "팥 도너츠",
+      "description": "",
+      "category": "단품류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/3c5cf640-d70e-4814-b960-d2e4593b69c2.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000023",
+      "sourceMenuId": "10000023",
+      "name": "탐스제로 사과키위",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000014",
+      "sourceMenuId": "10000014",
+      "name": "고구마 도너츠",
+      "description": "",
+      "category": "단품류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000024",
+      "sourceMenuId": "10000024",
+      "name": "탐스제로 파인애플",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000015",
+      "sourceMenuId": "10000015",
+      "name": "유자도너츠",
+      "description": "상큼한 유자앙금이 들어간 도너츠 맛있어요",
+      "category": "단품류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/86a3e982-c2ae-4951-b65c-cb74f88f9eb8.jpg"
+    },
+    {
+      "id": "ddangyo-1221145-10000025",
+      "sourceMenuId": "10000025",
+      "name": "델몬트 드링크 사과",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000026",
+      "sourceMenuId": "10000026",
+      "name": "델몬트 드링크 오렌지",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000027",
+      "sourceMenuId": "10000027",
+      "name": "델몬트 드링크 포도",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000028",
+      "sourceMenuId": "10000028",
+      "name": "델몬트 드링크 망고",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221145-10000029",
+      "sourceMenuId": "10000029",
+      "name": "밀키스 (340ml)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

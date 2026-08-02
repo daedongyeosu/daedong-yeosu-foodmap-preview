@@ -1,0 +1,266 @@
+{
+  "storeId": "930c1a4b916bca86",
+  "storeName": "팔도미역 여수점",
+  "displayName": "팔도미역 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/758cb64a-2268-491a-b755-ad175fb64123.jpg",
+  "categories": [
+    "전체",
+    "미역국정식",
+    "비빔밥 / 구이정식",
+    "2vent & New",
+    "계절 메뉴",
+    "무침 요리",
+    "사이드메뉴",
+    "음료수",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1196659-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[1++ 한우암소] 소고기 미역국",
+      "description": "최고 등급 한우암소로 끓이는 미역국계의 에르메스입니다",
+      "category": "미역국정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/758cb64a-2268-491a-b755-ad175fb64123.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000016",
+      "sourceMenuId": "10000016",
+      "name": "[단짠 12첩] 한우 불고기 비빔밥",
+      "description": "12가지 야채나물과 비법 비빔장의 환상의 하모니에 Real한우불고기의 ` 단짠 ` 까지",
+      "category": "비빔밥 / 구이정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/97c18914-88d5-4649-a96a-bb904010353e.JPG"
+    },
+    {
+      "id": "ddangyo-1196659-10000013",
+      "sourceMenuId": "10000013",
+      "name": "[대왕촉촉] 고등어구이 정식",
+      "description": "주문 안하시면 고객님만 `손해` 촉촉함에 반하고 먹다 질린 정도 크기에 놀라 실겁니다. 정식은 밥과 국이 제공됩니다.",
+      "category": "비빔밥 / 구이정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/576b526f-1c0c-4667-83ff-998601e098c3.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000006",
+      "sourceMenuId": "10000006",
+      "name": "[주문 1등] 순살 가자미 미역국",
+      "description": "가자미 가시 손으로 발라내실 필요가없는 먹기편한순살 가자미 미역국입니다",
+      "category": "미역국정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/758cb64a-2268-491a-b755-ad175fb64123.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000002",
+      "sourceMenuId": "10000002",
+      "name": "[제주의추억] 성게 미역국",
+      "description": "대한민국 청정 관광지 제주의 미역국 맛 제주의 추억과 지난 감동이 생각나는 메뉴입니다.",
+      "category": "미역국정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/758cb64a-2268-491a-b755-ad175fb64123.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000001",
+      "sourceMenuId": "10000001",
+      "name": "[빨강맛]얼큰 소고기 미역국",
+      "description": "계속계속 흡입되는 기분좋은 얼큰함. 설렁탕보다 찐~학고 육개장보다 ~ 깔끔합니다. 맵기는 신라면 정도. 살짝 더 매울지도",
+      "category": "미역국정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/758cb64a-2268-491a-b755-ad175fb64123.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000008",
+      "sourceMenuId": "10000008",
+      "name": "생 한우암소 육회",
+      "description": "육회 덕후들도 인정한 맛~ 마블링가득 生한우암소 육회의 부드러움과 갈릭 & 특제소스의 조화는 꿀맛입니다",
+      "category": "2vent & New",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/1768109b-d511-4e45-8116-6bf0a053eb79.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000009",
+      "sourceMenuId": "10000009",
+      "name": "[여름에만 맛나요] 명품 전복물회",
+      "description": "여름에만 만날 수 있어요",
+      "category": "계절 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/7a94b86b-0539-48e4-89c9-87cf506fa478.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000012",
+      "sourceMenuId": "10000012",
+      "name": "[단짠불맛] 석쇠 한우 불고기 정식",
+      "description": "석쇠에 정성껏 구워 불맛작렬~ 단짠~단짠~ 아이 어른 모두 행복해지는 메뉴입니다.정식은 밥과 국이 제공됩니다.",
+      "category": "비빔밥 / 구이정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6a66aa69-8916-4220-80a9-bc01ae17650d.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000017",
+      "sourceMenuId": "10000017",
+      "name": "[스테미너짱] 전복회 무침",
+      "description": "스테미너짱 활전복과 매콤새콤달콤한 신선한 야채무침은(매장에서 직접 담근 초장 사용) 입맛 살리고 술맛 살리는 어의 허준 입니다",
+      "category": "무침 요리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-10000018",
+      "sourceMenuId": "10000018",
+      "name": "[내 몸이 좋아합니다] 활전복2미 추가",
+      "description": "내 몸은 소중하니까요 단돈 5천원으로 탱글탱글 활전복의 꼬드득함을 즐겨보세요 내 몸이 좋아합니다",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-10000022",
+      "sourceMenuId": "10000022",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/2cb63e75-d3f3-49fd-9763-a817bdd913ff.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-90000001",
+      "sourceMenuId": "90000001",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1196659-10000010",
+      "sourceMenuId": "10000010",
+      "name": "[시원하다] 가자미 물회",
+      "description": "새콤달콤 살얼음 물회육수에 몸보신 미주구리회의 고소함까지 꼭 드셔보세요",
+      "category": "계절 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/cee3b0da-32d8-4ffb-abda-fcb5639b9ef8.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000019",
+      "sourceMenuId": "10000019",
+      "name": "[찹쌀] 새알옹심이 추가",
+      "description": "미역국에 추가 가능",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-10000023",
+      "sourceMenuId": "10000023",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1196659-10000003",
+      "sourceMenuId": "10000003",
+      "name": "[진한.국물이.일품] 황태 미역국",
+      "description": "미역국매니아라면 꼭 드시길 사장님께서 강력추천합니다. 팔도미역에서 잠자는 미역국왕국의 공주를 배민 주문으로 깨워주세요 단골들은 뚝배기채 들이키는 숙취로 인한 속을 풀어주는 해장메뉴입니다",
+      "category": "미역국정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/758cb64a-2268-491a-b755-ad175fb64123.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000011",
+      "sourceMenuId": "10000011",
+      "name": "[Real] 한우 물회",
+      "description": "새콤달콤 살얼음 물회육수에 신선한 [Real 한우]가 입안에서 사르르~~~ 녹습니다 꼭 드셔보세요",
+      "category": "계절 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-10000014",
+      "sourceMenuId": "10000014",
+      "name": "[한우암소 12첩] 육회비빔밥",
+      "description": "수입산X 육우No 최상급 한우Yes로 입안에서 사르르~~~~~",
+      "category": "비빔밥 / 구이정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b613fafe-43ff-493b-bd6e-02ef6325fd81.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000020",
+      "sourceMenuId": "10000020",
+      "name": "[호루룹 짭짭]소면 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-10000024",
+      "sourceMenuId": "10000024",
+      "name": "탐스(파인)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-90000003",
+      "sourceMenuId": "90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1196659-10000015",
+      "sourceMenuId": "10000015",
+      "name": "[벌교] 꼬막 비빔밥",
+      "description": "",
+      "category": "비빔밥 / 구이정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/fde0ef9f-2db7-4064-81c6-2240ebb610a2.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000021",
+      "sourceMenuId": "10000021",
+      "name": "[톳가루 넣은 건강밥] 공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000025",
+      "sourceMenuId": "10000025",
+      "name": "탐스(오렌지)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1196659-10000005",
+      "sourceMenuId": "10000005",
+      "name": "[내몸에보약] 굴 미역국",
+      "description": "바다의 우유 ~굴~ 그리고 미역,영양보충이 필요하시다면 여기 굴 미역국이 있습니다.",
+      "category": "미역국정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/758cb64a-2268-491a-b755-ad175fb64123.jpg"
+    },
+    {
+      "id": "ddangyo-1196659-10000026",
+      "sourceMenuId": "10000026",
+      "name": "칠성사이다 (제로)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1196659-10000007",
+      "sourceMenuId": "10000007",
+      "name": "[깊은 맛] 조개 미역국",
+      "description": "미역국의 깊은맛 감동으로 느껴집니다.",
+      "category": "미역국정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/758cb64a-2268-491a-b755-ad175fb64123.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

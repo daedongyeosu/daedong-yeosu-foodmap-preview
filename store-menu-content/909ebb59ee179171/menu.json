@@ -21,70 +21,80 @@
       "name": "갓튀긴후라이드",
       "description": "갓튀긴 후라이드만의 매콤함과 짭짤함으로 튀김의 느끼함을 잡은 후라이드 중에 후라이드",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/20064702-7a54-46ff-aa2e-31bc43c8046a.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/20064702-7a54-46ff-aa2e-31bc43c8046a.jpg",
+      "sourceMenuId": "10000005"
     },
     {
       "id": "ddangyo-1314556-10000018",
       "name": "갓 튀긴 두마리",
       "description": "배달 시 콜라 1.25L는 기본 제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요 ~",
       "category": "두마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5badfc65-d27d-4a85-946e-b87a7c73541e.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5badfc65-d27d-4a85-946e-b87a7c73541e.jpg",
+      "sourceMenuId": "10000018"
     },
     {
       "id": "ddangyo-1314556-10000016",
       "name": "반반치킨 + 똥집",
       "description": "배달 주문시 콜라 500ml는 기본제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요~",
       "category": "반반 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/7753bf84-bd2c-4904-b8b0-61c73284ea34.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/7753bf84-bd2c-4904-b8b0-61c73284ea34.jpg",
+      "sourceMenuId": "10000016"
     },
     {
       "id": "ddangyo-1314556-10000015",
       "name": "반반치킨 + 양념감자튀김",
       "description": "배달 주문시 콜라 500ml는 기본제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요~",
       "category": "반반 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/25f716fd-b8f5-4240-96d5-a96018d123c4.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/25f716fd-b8f5-4240-96d5-a96018d123c4.jpg",
+      "sourceMenuId": "10000015"
     },
     {
       "id": "ddangyo-1314556-10000008",
       "name": "양념치킨",
       "description": "단짠의 환상적인 조화. 후라이드의 고유의 맛과 소스의 달콤함이 어우러져 입안을 가득 메우는 전통적인 양념치킨",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/bd36c616-cd06-4921-acd7-377c975cc88d.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/bd36c616-cd06-4921-acd7-377c975cc88d.jpg",
+      "sourceMenuId": "10000008"
     },
     {
       "id": "ddangyo-1314556-10000001",
       "name": "듬뿍 슈뿌림",
       "description": "갓튀긴 후라이드의 듬뿍 시리즈 첫번째™ 달콤한 양념 위에 화이트 고소함이 듬뿍 ~",
       "category": "듬뿍 시리즈™",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6c81b85b-8f65-4aa1-830e-af5675f362b8.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6c81b85b-8f65-4aa1-830e-af5675f362b8.jpg",
+      "sourceMenuId": "10000001"
     },
     {
       "id": "ddangyo-1314556-10000021",
       "name": "갓 튀긴 후라이드 (반마리)",
       "description": "갓 튀긴 후라이드만의 매콤함과 짭짤함으로 튀김의 느끼함을 잡은 후라이드 중에 후라이드",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c84c2745-2160-4e29-b8fb-6d5ddca6daf7.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c84c2745-2160-4e29-b8fb-6d5ddca6daf7.jpg",
+      "sourceMenuId": "10000021"
     },
     {
       "id": "ddangyo-1314556-10000036",
       "name": "치즈볼",
       "description": "겉은 바삭 속은 치즈 듬뿍~ 모짜렐라 치즈가 듬뿍~ 다양한 치즈볼, 골라 드세요",
       "category": "SIDE 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/25d2b2e5-d386-4f57-923a-540d5ac6b119.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/25d2b2e5-d386-4f57-923a-540d5ac6b119.jpg",
+      "sourceMenuId": "10000036"
     },
     {
       "id": "ddangyo-1314556-10000041",
       "name": "갓 내린 파채 (파채소스)",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/1a86791c-4c19-4114-a042-fd812fd63ccd.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/1a86791c-4c19-4114-a042-fd812fd63ccd.jpg",
+      "sourceMenuId": "10000041"
     },
     {
       "id": "ddangyo-1314556-10000054",
       "name": "콜라 500ml",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000054"
     },
     {
       "id": "ddangyo-1314556-90000001",
@@ -92,336 +102,384 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
     },
     {
       "id": "ddangyo-1314556-10000002",
       "name": "듬뿍 꼬추마요",
       "description": "갓튀긴 후라이드의 듬뿍 시리즈 두번째™ 고추의 매콤함과 마요네즈의 고소함이 듬~뿍",
       "category": "듬뿍 시리즈™",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f72d17b5-0103-4c5b-8eaf-af080385df82.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f72d17b5-0103-4c5b-8eaf-af080385df82.jpg",
+      "sourceMenuId": "10000002"
     },
     {
       "id": "ddangyo-1314556-10000006",
       "name": "[NEW] 갓 튀긴 콤보",
       "description": "닭다리 4개 + 통날개 7개로 이루어진 콤보 메뉴",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5ff07017-d582-456a-b29e-57d957232723.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5ff07017-d582-456a-b29e-57d957232723.jpg",
+      "sourceMenuId": "10000006"
     },
     {
       "id": "ddangyo-1314556-10000019",
       "name": "2마리 세가지맛",
       "description": "(한마리 + 반반)",
       "category": "두마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/0392393d-7e12-4803-a235-d7c0e1731018.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/0392393d-7e12-4803-a235-d7c0e1731018.jpg",
+      "sourceMenuId": "10000019"
     },
     {
       "id": "ddangyo-1314556-10000022",
       "name": "[NEW] 갓 튀긴 콤보 (반마리)",
       "description": "닭다리 2개 + 통날개 3개로 이루어진 콤보 메뉴",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/cd7e09f6-ccc4-4305-9449-0d50958ccf0a.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/cd7e09f6-ccc4-4305-9449-0d50958ccf0a.jpg",
+      "sourceMenuId": "10000022"
     },
     {
       "id": "ddangyo-1314556-10000037",
       "name": "범벅 치즈볼",
       "description": "겉은 바삭 속은 치즈 듬뿍~ 모짜렐라 치즈가 듬뿍~ 다양한 치즈볼, 골라 드세요",
       "category": "SIDE 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/9b553674-78d3-47c7-9fd0-6cf2d50bce1b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/9b553674-78d3-47c7-9fd0-6cf2d50bce1b.jpg",
+      "sourceMenuId": "10000037"
     },
     {
       "id": "ddangyo-1314556-10000042",
       "name": "갓 내린 파채 (파닭소스)",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/d794c886-df16-4c67-b392-b9cb3a100ee5.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/d794c886-df16-4c67-b392-b9cb3a100ee5.jpg",
+      "sourceMenuId": "10000042"
     },
     {
       "id": "ddangyo-1314556-10000055",
       "name": "ZERO 콜라 500ml",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000055"
     },
     {
       "id": "ddangyo-1314556-10000003",
       "name": "[NEW] 듬뿍 까망 알리오",
       "description": "갓튀긴 후라이드의 듬뿍 시리즈 네번째™ 깊고 진한 간장과 고소하고 담백한 마늘로 풍미가 듬~뿍",
       "category": "듬뿍 시리즈™",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/02d93eba-54db-4ade-aeb2-608f89fa4f2e.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/02d93eba-54db-4ade-aeb2-608f89fa4f2e.jpg",
+      "sourceMenuId": "10000003"
     },
     {
       "id": "ddangyo-1314556-10000007",
       "name": "갓 튀긴 윙 & 봉",
       "description": "윙봉 매니아들을 위해 준비한 갓튀긴 윙 & 봉 너무 맛있어서 끊을 수 없는 바로 그 맛",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c95cdbb6-12a7-4980-b929-c4982d3d643f.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c95cdbb6-12a7-4980-b929-c4982d3d643f.jpg",
+      "sourceMenuId": "10000007"
     },
     {
       "id": "ddangyo-1314556-10000017",
       "name": "반반치킨 + 염통꼬치(8개)",
       "description": "배달 주문시 콜라 500ml는 기본제공됩니다. 전화 포장주문 시 콜라는 제공되지 않습니다. 추가 주문 부탁드릴게요~",
       "category": "반반 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/486f648f-b036-454c-a1d3-e1bbc97d4b25.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/486f648f-b036-454c-a1d3-e1bbc97d4b25.jpg",
+      "sourceMenuId": "10000017"
     },
     {
       "id": "ddangyo-1314556-10000020",
       "name": "2마리 네가지맛",
       "description": "(반반 + 반반)",
       "category": "두마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8112b8fe-e6c8-4f65-919f-180feb0292ab.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8112b8fe-e6c8-4f65-919f-180feb0292ab.jpg",
+      "sourceMenuId": "10000020"
     },
     {
       "id": "ddangyo-1314556-10000023",
       "name": "[NEW] 듬뿍 까망 알리오 (반마리)",
       "description": "갓 튀긴 후라이드의 듬뿍 시리즈 네번째™ 깊고 진한 간장과 고소하고 담백한 마늘로 풍미가 듬~뿍",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5ba89be7-ca65-4e68-9c7b-bf14efd36f58.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5ba89be7-ca65-4e68-9c7b-bf14efd36f58.jpg",
+      "sourceMenuId": "10000023"
     },
     {
       "id": "ddangyo-1314556-10000038",
       "name": "똥집",
       "description": "갓튀긴 후라이드만의 바삭함, 매콤함, 쫄깃함, 3개의 맛이 어우러진 똥집튀김",
       "category": "SIDE 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/19a4cc80-23cf-433b-8203-1c555d94663a.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/19a4cc80-23cf-433b-8203-1c555d94663a.jpg",
+      "sourceMenuId": "10000038"
     },
     {
       "id": "ddangyo-1314556-10000043",
       "name": "건강한 비트무",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/614cfe69-a6ef-4445-805f-2cb46242e421.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/614cfe69-a6ef-4445-805f-2cb46242e421.jpg",
+      "sourceMenuId": "10000043"
     },
     {
       "id": "ddangyo-1314556-10000056",
       "name": "콜라 1.25L",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000056"
     },
     {
       "id": "ddangyo-1314556-10000004",
       "name": "[NEW] 듬뿍 뽀얀 어니언",
       "description": "갓튀긴 후라이드의 듬뿍 시리즈 다섯번째™ 부드럽고 찐한 화이트 소스에 풍부한 양파까지 듬~뿍",
       "category": "듬뿍 시리즈™",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f2326a59-a613-4415-8487-c7710344ed54.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f2326a59-a613-4415-8487-c7710344ed54.jpg",
+      "sourceMenuId": "10000004"
     },
     {
       "id": "ddangyo-1314556-10000024",
       "name": "[NEW] 듬뿍 뽀얀 어니언 (반마리)",
       "description": "갓 튀긴 후라이드의 듬뿍 시리즈 다섯번째™ 부드럽고 찐한 화이트 소스에 풍부한 양파까지 듬뿍",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/e5ffe811-6998-488d-8432-38743977a311.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/e5ffe811-6998-488d-8432-38743977a311.jpg",
+      "sourceMenuId": "10000024"
     },
     {
       "id": "ddangyo-1314556-10000039",
       "name": "염통꼬치",
       "description": "쫄깃쫄깃 염통꼬치 좋아하는 사람, 여기여기 모여라 ~",
       "category": "SIDE 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8e057660-a805-4809-9a23-50ab5cd4c67d.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8e057660-a805-4809-9a23-50ab5cd4c67d.jpg",
+      "sourceMenuId": "10000039"
     },
     {
       "id": "ddangyo-1314556-10000044",
       "name": "뿌려먹는 시즈닝 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c93326bd-eed7-484b-8cbd-08ec5f3496d7.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c93326bd-eed7-484b-8cbd-08ec5f3496d7.jpg",
+      "sourceMenuId": "10000044"
     },
     {
       "id": "ddangyo-1314556-10000057",
       "name": "[ NEW ] ZERO 콜라 1.25L",
       "description": "",
       "category": "음료",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000057"
     },
     {
       "id": "ddangyo-1314556-10000009",
       "name": "매운 양념치킨",
       "description": "후라이드 고유의 매콤함과 매운양념의 달짝맵싸한 소스가 만나 어우러진 매운양념치킨 (맵찔이에겐 매움주의/맵짱이에겐 안매움주의)",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c71204d9-d662-48cd-8d45-a8a8a6affe9e.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c71204d9-d662-48cd-8d45-a8a8a6affe9e.jpg",
+      "sourceMenuId": "10000009"
     },
     {
       "id": "ddangyo-1314556-10000025",
       "name": "듬뿍 꼬추마요 (반마리)",
       "description": "갓튀긴 후라이드의 듬뿍 시리즈 두번째™ 고추의 매콤함과 마요네즈의 고소함이 듬~뿍",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/a216ed22-1744-4fc5-b36e-4b73616f38ab.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/a216ed22-1744-4fc5-b36e-4b73616f38ab.jpg",
+      "sourceMenuId": "10000025"
     },
     {
       "id": "ddangyo-1314556-10000040",
       "name": "양념감자튀김",
       "description": "한번 먹고 너무 맛있어서 빠져나오기 힘들다는 감자튀김",
       "category": "SIDE 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c58d5499-94f9-4542-9d36-0fc7f2e0b21b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c58d5499-94f9-4542-9d36-0fc7f2e0b21b.jpg",
+      "sourceMenuId": "10000040"
     },
     {
       "id": "ddangyo-1314556-10000045",
       "name": "양념소스 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/71315398-04db-44f7-b5e3-5f3a7d87dfa9.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/71315398-04db-44f7-b5e3-5f3a7d87dfa9.jpg",
+      "sourceMenuId": "10000045"
     },
     {
       "id": "ddangyo-1314556-10000010",
       "name": "간장치킨",
       "description": "간장 소스의 달달하면서도 짭쪼름한 맛의 조화. 과하지도 부족하지도 않는 부드럽게 끌리는 중독적인 맛",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/3f8acf72-d88f-4c12-9498-a6034ae2f68a.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/3f8acf72-d88f-4c12-9498-a6034ae2f68a.jpg",
+      "sourceMenuId": "10000010"
     },
     {
       "id": "ddangyo-1314556-10000026",
       "name": "듬뿍 슈뿌림 (반마리)",
       "description": "갓튀긴 후라이드의 듬뿍 시리즈 첫번째™ 달콤한 양념 위에 화이트 고소함이 듬뿍 ~",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/168ad6a6-6487-4271-a2f2-65b9a7ce1e2b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/168ad6a6-6487-4271-a2f2-65b9a7ce1e2b.jpg",
+      "sourceMenuId": "10000026"
     },
     {
       "id": "ddangyo-1314556-10000046",
       "name": "매운 양념소스 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/b8929631-f823-4f0a-9277-220492814d9f.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/b8929631-f823-4f0a-9277-220492814d9f.jpg",
+      "sourceMenuId": "10000046"
     },
     {
       "id": "ddangyo-1314556-10000011",
       "name": "매운 간장치킨",
       "description": "간장의 짭쪼름한 맛과 매운맛이 섞여 더욱더 맛있는 매운간장치킨 맛있어서 먹다보면 매운맛이 확악 ~",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/de3f1040-1856-4b1a-bb44-0a8a99d78bdd.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/de3f1040-1856-4b1a-bb44-0a8a99d78bdd.jpg",
+      "sourceMenuId": "10000011"
     },
     {
       "id": "ddangyo-1314556-10000027",
       "name": "갓 튀긴 윙봉 (반마리)",
       "description": "윙봉 매니아들을 위해 준비한 갓튀긴 윙 & 봉 너무 맛있어서 끊을 수 없는 바로 그 맛",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2171ca5a-4cd0-4a06-87d2-9977a9764a09.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2171ca5a-4cd0-4a06-87d2-9977a9764a09.jpg",
+      "sourceMenuId": "10000027"
     },
     {
       "id": "ddangyo-1314556-10000047",
       "name": "마늘간장소스 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/20135086-9fc9-4b59-991a-26586a32e0ed.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/20135086-9fc9-4b59-991a-26586a32e0ed.jpg",
+      "sourceMenuId": "10000047"
     },
     {
       "id": "ddangyo-1314556-10000012",
       "name": "치즈땅",
       "description": "달콤한 치즈가루가 듬뿍 뿌려진 치킨. 치즈가루가 갓 튀긴 후라이드의 바삭함과 만나 고소하고 달콤한 환상적인 치킨",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/256efaf8-0a3a-43d3-b64e-f3e446610307.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/256efaf8-0a3a-43d3-b64e-f3e446610307.jpg",
+      "sourceMenuId": "10000012"
     },
     {
       "id": "ddangyo-1314556-10000028",
       "name": "양념치킨 (반마리)",
       "description": "단짠의 환상적인 조화. 후라이드의 고유의 맛과 소스의 달달함이 어우러져 입안을 가득 메우는 전통적인 양념치킨",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/9c33a62e-dbc2-464e-bff3-5a43c7ff1478.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/9c33a62e-dbc2-464e-bff3-5a43c7ff1478.jpg",
+      "sourceMenuId": "10000028"
     },
     {
       "id": "ddangyo-1314556-10000048",
       "name": "매운 마늘간장소스 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c22c79b1-9029-46b3-aaab-c7c53432190e.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/c22c79b1-9029-46b3-aaab-c7c53432190e.jpg",
+      "sourceMenuId": "10000048"
     },
     {
       "id": "ddangyo-1314556-10000013",
       "name": "칠리땅",
       "description": "매콤한 칠리가루가 듬뿍 뿌려진 치킨. 칠리가루가 갓 튀긴 후라이드의 바삭함과 만나 달콤 매콤한 환상적인 치킨",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2734d4cc-5d10-4493-a687-6401e31c73e8.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2734d4cc-5d10-4493-a687-6401e31c73e8.jpg",
+      "sourceMenuId": "10000013"
     },
     {
       "id": "ddangyo-1314556-10000029",
       "name": "간장치킨 (반마리)",
       "description": "간장 소스의 달달하면서도 짭쪼름한 맛의 조화. 과하지도 부족하지도 않는 부드럽게 끌리는 중독적인 맛",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6550bc3d-30da-4e34-8b21-38fec3e92e89.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6550bc3d-30da-4e34-8b21-38fec3e92e89.jpg",
+      "sourceMenuId": "10000029"
     },
     {
       "id": "ddangyo-1314556-10000049",
       "name": "머스타드 (일회용 2개) 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8409328a-e0e9-4d12-a3ec-f444f40aa8a7.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8409328a-e0e9-4d12-a3ec-f444f40aa8a7.jpg",
+      "sourceMenuId": "10000049"
     },
     {
       "id": "ddangyo-1314556-10000014",
       "name": "갓 파 후라이드",
       "description": "신선한 파의 알싸함과 새콤달콤한 소스의 조합으로 후라이드의 느끼함을 없앤 중독성있는 어디에도 없는 갓 튀긴 후라이드 만의 특별한 치킨",
       "category": "한마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/78a57c05-cd2f-41c6-8b41-91b850bb5845.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/78a57c05-cd2f-41c6-8b41-91b850bb5845.jpg",
+      "sourceMenuId": "10000014"
     },
     {
       "id": "ddangyo-1314556-10000030",
       "name": "매운양념 치킨 (반마리)",
       "description": "후라이드 고유의 매콤함과 매운양념의 달짝맵싸한 소스가 만나 어우러진 매운양념치킨 (맵찔이에겐 매움주의/맵짱이에겐 안매움주의)",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/df41e68d-d9df-41ca-877d-388059ca53ea.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/df41e68d-d9df-41ca-877d-388059ca53ea.jpg",
+      "sourceMenuId": "10000030"
     },
     {
       "id": "ddangyo-1314556-10000050",
       "name": "갈릭소스 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6ed5523a-df55-4e37-8a1b-e321411b8f21.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6ed5523a-df55-4e37-8a1b-e321411b8f21.jpg",
+      "sourceMenuId": "10000050"
     },
     {
       "id": "ddangyo-1314556-10000031",
       "name": "매운간장 치킨 (반마리)",
       "description": "간장의 짭쪼름한 맛과 매운맛이 섞여 더욱더 맛있는 매운간장치킨 맛있어서 먹다보면 매운맛이 확악 ~",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/fd212693-5542-45f8-851e-a5c18d61613c.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/fd212693-5542-45f8-851e-a5c18d61613c.jpg",
+      "sourceMenuId": "10000031"
     },
     {
       "id": "ddangyo-1314556-10000051",
       "name": "와사마요소스 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/ebd5057a-b883-4989-9a28-bb5a5604f1df.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/ebd5057a-b883-4989-9a28-bb5a5604f1df.jpg",
+      "sourceMenuId": "10000051"
     },
     {
       "id": "ddangyo-1314556-10000032",
       "name": "치즈땅 (반마리)",
       "description": "달콤한 치즈가루가 듬뿍 뿌려진 치킨. 치즈가루가 갓 튀긴 후라이드의 바삭함과 만나 고소하고 달콤한 환상적인 치킨",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/293589be-387e-4078-9a1b-1e9e567676a5.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/293589be-387e-4078-9a1b-1e9e567676a5.jpg",
+      "sourceMenuId": "10000032"
     },
     {
       "id": "ddangyo-1314556-10000052",
       "name": "스위트칠리소스 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/caef2d82-e0be-44e8-8f2a-8e781550e316.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/caef2d82-e0be-44e8-8f2a-8e781550e316.jpg",
+      "sourceMenuId": "10000052"
     },
     {
       "id": "ddangyo-1314556-10000033",
       "name": "칠리땅 (반마리)",
       "description": "매콤한 칠리가루가 듬뿍 뿌려진 치킨. 칠리가루가 갓 튀긴 후라이드의 바삭함과 만나 달콤 매콤한 환상적인 치킨",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8f078e76-f0d4-443b-abaf-e1fa8c95509e.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8f078e76-f0d4-443b-abaf-e1fa8c95509e.jpg",
+      "sourceMenuId": "10000033"
     },
     {
       "id": "ddangyo-1314556-10000053",
       "name": "청양간장마요소스 추가",
       "description": "",
       "category": "추가메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2d529c68-2a25-4dd2-8166-15f404719352.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2d529c68-2a25-4dd2-8166-15f404719352.jpg",
+      "sourceMenuId": "10000053"
     },
     {
       "id": "ddangyo-1314556-10000034",
       "name": "갓파후라이드 (반마리)",
       "description": "신선한 파의 알싸함과 새콤달콤한 소스의 조합으로 후라이드의 느끼함을 없앤 중독성있는 어디에도 없는 갓 튀긴 후라이드 만의 특별한 치킨",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/e8bbdcda-7471-46e3-95b3-1247b7acd3e8.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/e8bbdcda-7471-46e3-95b3-1247b7acd3e8.jpg",
+      "sourceMenuId": "10000034"
     },
     {
       "id": "ddangyo-1314556-10000035",
       "name": "나 혼자 산닭 SET (1인분) (콜라 미포함)",
       "description": "반마리에는 콜라가 제공되지 않습니다. 추가 주문 부탁드릴게요~ (배달/전화포장 콜라 미포함) 원자재 가격 상승으로 리뷰 이벤트 참여가 불가능 합니다.",
       "category": "반마리 치킨",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/73ca28c1-b9f1-4a48-9d9e-441e2c2ed1cf.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/73ca28c1-b9f1-4a48-9d9e-441e2c2ed1cf.jpg",
+      "sourceMenuId": "10000035"
     }
   ],
   "source": {
@@ -432,5 +490,8 @@
     ],
     "rawItemCount": 63,
     "duplicateItemsRemoved": 5
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

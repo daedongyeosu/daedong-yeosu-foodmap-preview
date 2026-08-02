@@ -1,0 +1,283 @@
+{
+  "storeId": "796e9fd8e3672604",
+  "storeName": "홍탕 덕충점",
+  "displayName": "홍탕 덕충점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5a7f6b19-233a-4488-9917-e0e7815451a1.jpg",
+  "categories": [
+    "전체",
+    "주류메뉴",
+    "신(NEW) 메뉴",
+    "오리지널 탕수육",
+    "스페셜 탕수육",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1134984-90000001",
+      "sourceMenuId": "90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134984-10000065",
+      "sourceMenuId": "10000065",
+      "name": "간장마늘 탕수육",
+      "description": "바삭한 탕수육에 간장마늘 소스로 버무린 신개념 퓨전탕수육",
+      "category": "신(NEW) 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/750b7865-ea1f-4eed-b625-1a9c75791eec.jpg"
+    },
+    {
+      "id": "ddangyo-1134984-10000066",
+      "sourceMenuId": "10000066",
+      "name": "홍 탕수육",
+      "description": "홍삼먹인 돼지의 부드러운 등심과 탕수 소스를 곁들여 남녀노소 누구나 즐길 수 있는 정통 탕수육",
+      "category": "오리지널 탕수육",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5a7f6b19-233a-4488-9917-e0e7815451a1.jpg"
+    },
+    {
+      "id": "ddangyo-1134984-10000073",
+      "sourceMenuId": "10000073",
+      "name": "양파 탕수육",
+      "description": "고소한 탕수육 위에 아삭아삭한 양파채를 곁들인 환상의 메뉴",
+      "category": "스페셜 탕수육",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/dc787760-0380-4179-a3cc-cc6c9346bfe7.jpg"
+    },
+    {
+      "id": "ddangyo-1134984-10000078",
+      "sourceMenuId": "10000078",
+      "name": "탕수육소스추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000088",
+      "sourceMenuId": "10000088",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-90000002",
+      "sourceMenuId": "90000002",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134984-10000067",
+      "sourceMenuId": "10000067",
+      "name": "마늘 탕수육",
+      "description": "바삭한 탕수육 튀김옷에 국내산 다진마늘을 입혀 튀겨낸 신개념 탕수육",
+      "category": "오리지널 탕수육",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/3588d06f-bdc1-4fb3-8b6d-bdc88a6e186f.jpg"
+    },
+    {
+      "id": "ddangyo-1134984-10000074",
+      "sourceMenuId": "10000074",
+      "name": "파 탕수육",
+      "description": "국내산 파절이와 달콤 알싸한 겨자 소스를 곁들여 먹는 퓨전탕수육",
+      "category": "스페셜 탕수육",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a2f4e7be-9bc0-41cd-97b6-6b20d0f5986a.jpg"
+    },
+    {
+      "id": "ddangyo-1134984-10000079",
+      "sourceMenuId": "10000079",
+      "name": "옛날떡볶이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/ef252806-ec66-4a9c-ba15-96a92a687ca8.jpg"
+    },
+    {
+      "id": "ddangyo-1134984-10000089",
+      "sourceMenuId": "10000089",
+      "name": "사이다 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-90000003",
+      "sourceMenuId": "90000003",
+      "name": "하이트 EXTRA COLD(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134984-10000068",
+      "sourceMenuId": "10000068",
+      "name": "야채 탕수육",
+      "description": "신선도 가득한 다양한 야채를 튀김에 입힌 고급 탕수육",
+      "category": "오리지널 탕수육",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/44abf224-eb9b-48b4-9e0d-afcaacd446bb.jpg"
+    },
+    {
+      "id": "ddangyo-1134984-10000075",
+      "sourceMenuId": "10000075",
+      "name": "탕수강정",
+      "description": "매콤하고 달콤한 강정소스에 한번 더 버무려 볶아낸 탕수육",
+      "category": "스페셜 탕수육",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000080",
+      "sourceMenuId": "10000080",
+      "name": "해쉬브라운",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-90000004",
+      "sourceMenuId": "90000004",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134984-10000069",
+      "sourceMenuId": "10000069",
+      "name": "홍탕수육반+순살파닭",
+      "description": "",
+      "category": "오리지널 탕수육",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000076",
+      "sourceMenuId": "10000076",
+      "name": "김치 피자 탕수육",
+      "description": "새콤하고 아삭한 국내산 김치위에 모짜렐라 치즈를 듬뿍 얹은 신개념 퓨전 탕수육 (또띠아는 과자처럼~ 디저트로~)",
+      "category": "스페셜 탕수육",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/588656f1-2820-4b19-b56d-dbe466692502.jpg"
+    },
+    {
+      "id": "ddangyo-1134984-10000081",
+      "sourceMenuId": "10000081",
+      "name": "양배추샐러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-90000005",
+      "sourceMenuId": "90000005",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134984-10000070",
+      "sourceMenuId": "10000070",
+      "name": "마늘탕수육반+순살파닭",
+      "description": "",
+      "category": "오리지널 탕수육",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000077",
+      "sourceMenuId": "10000077",
+      "name": "깐풍육",
+      "description": "",
+      "category": "스페셜 탕수육",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000082",
+      "sourceMenuId": "10000082",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-90000006",
+      "sourceMenuId": "90000006",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134984-10000071",
+      "sourceMenuId": "10000071",
+      "name": "야채탕수육반+순살파닭",
+      "description": "",
+      "category": "오리지널 탕수육",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000083",
+      "sourceMenuId": "10000083",
+      "name": "섞어치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-90000007",
+      "sourceMenuId": "90000007",
+      "name": "처음처럼(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134984-10000072",
+      "sourceMenuId": "10000072",
+      "name": "간장마늘탕수육반+순살파닭",
+      "description": "",
+      "category": "오리지널 탕수육",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000084",
+      "sourceMenuId": "10000084",
+      "name": "고구마치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000085",
+      "sourceMenuId": "10000085",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000086",
+      "sourceMenuId": "10000086",
+      "name": "무추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134984-10000087",
+      "sourceMenuId": "10000087",
+      "name": "파&소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

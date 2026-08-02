@@ -1,0 +1,504 @@
+{
+  "storeId": "9abb1d4db21758ad",
+  "storeName": "카레상 봉산점",
+  "displayName": "카레상 봉산점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/d7f54ef9-c52c-4189-9f79-fa5e0f955be1.jpg",
+  "categories": [
+    "전체",
+    "마시또김밥",
+    "Japanese Curry Mix Menu",
+    "Tonkasu Single Menu",
+    "Japanese Curry SingleMenu",
+    "Donburi Menu",
+    "Side Menu",
+    "Sauce Menu",
+    "Drink",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1236849-10000060",
+      "sourceMenuId": "10000060",
+      "name": "마시또 참치마요김밥",
+      "description": "",
+      "category": "마시또김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/442419da-ce55-4ecd-8138-8dde7f953702.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000061",
+      "sourceMenuId": "10000061",
+      "name": "마시또 김밥",
+      "description": "",
+      "category": "마시또김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/488957c5-d134-4c14-a6cc-fcfc9edc33db.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000001",
+      "sourceMenuId": "10000001",
+      "name": "[A SET]롤치즈카츠+새우+고로케+가라아게(각1p)",
+      "description": "숙성카레+계란후라이+마늘후레이크+김치+단무지(카레O/소스X)",
+      "category": "Japanese Curry Mix Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/0e95909b-f601-454d-a005-8eb0bb68d61d.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000002",
+      "sourceMenuId": "10000002",
+      "name": "[B SET]등심카츠+소시지+고로케+가라아게(각1p)",
+      "description": "숙성카레+계란후라이+마늘후레이크+김치+단무지(카레O/소스X)",
+      "category": "Japanese Curry Mix Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/24369881-2737-4191-9b71-6dc324f97786.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000018",
+      "sourceMenuId": "10000018",
+      "name": "[고구마치즈] 고치카츠 도시락",
+      "description": "고치카츠1ps+밥+샐러드+국물+소스",
+      "category": "Tonkasu Single Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/43b0c57f-f5db-4f3a-8af1-cceb450bcea7.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000006",
+      "sourceMenuId": "10000006",
+      "name": "[단품] 카레도시락",
+      "description": "진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/38d94618-75a2-49c3-a592-7d80db28789d.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000015",
+      "sourceMenuId": "10000015",
+      "name": "[등심] 로스카츠 도시락",
+      "description": "로스카츠1ps+밥+샐러드+국물+소스",
+      "category": "Tonkasu Single Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/38945339-c951-4d6b-bd89-bf71666d23e4.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000019",
+      "sourceMenuId": "10000019",
+      "name": "진한 일식카레우동",
+      "description": "",
+      "category": "Donburi Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/cb99e024-d0bb-48a9-94bf-f6ac7b2666ec.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000025",
+      "sourceMenuId": "10000025",
+      "name": "[단품] 진한 일식카레 추가",
+      "description": "1단계 : 순한맛 2단계 : 중간맛 3단계 : 매운맛",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/82cc9474-0ad1-48a2-b1cd-03c6aa302a6b.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000038",
+      "sourceMenuId": "10000038",
+      "name": "돈카츠소스",
+      "description": "",
+      "category": "Sauce Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b38f2933-1789-4426-8646-e9799c370e60.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000040",
+      "sourceMenuId": "10000040",
+      "name": "콜라",
+      "description": "",
+      "category": "Drink",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/6fae3d6e-966d-4479-9803-52c69ad3e9b9.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000054",
+      "sourceMenuId": "10000054",
+      "name": "마시또갓김치김밥",
+      "description": "",
+      "category": "마시또김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/2ec16016-9aa6-4342-bcef-55277091adba.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000007",
+      "sourceMenuId": "10000007",
+      "name": "[직화] 불고기 카레도시락",
+      "description": "불고기+진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/63800051-f7a1-4162-9665-38165410581c.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000016",
+      "sourceMenuId": "10000016",
+      "name": "[안심] 히레카츠 도시락",
+      "description": "히레카츠1ps+밥+샐러드+국물+소스",
+      "category": "Tonkasu Single Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/50153cad-60e1-47d1-a88f-4417ec9b1404.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000020",
+      "sourceMenuId": "10000020",
+      "name": "유부우동",
+      "description": "",
+      "category": "Donburi Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ac5bdc05-7b6a-4028-a599-f0423972588e.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000026",
+      "sourceMenuId": "10000026",
+      "name": "[단품] 함박스테이크",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/1e15e0b4-b35e-4112-b2a4-cbebdc3026d5.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000039",
+      "sourceMenuId": "10000039",
+      "name": "매운소스",
+      "description": "",
+      "category": "Sauce Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f2bc7278-b3ce-4437-83da-4aa971b01402.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000041",
+      "sourceMenuId": "10000041",
+      "name": "사이다",
+      "description": "",
+      "category": "Drink",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/51eef803-741b-4650-bb3e-d98c6f34de7d.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000002",
+      "sourceMenuId": "90000002",
+      "name": "여수밤바다(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000055",
+      "sourceMenuId": "10000055",
+      "name": "마시또 매운어묵김밥",
+      "description": "",
+      "category": "마시또김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/df722b9b-8890-40f3-808e-15882fe1f848.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000003",
+      "sourceMenuId": "10000003",
+      "name": "[C SET]안심카츠+새우+고로케+가라아게(각1p)",
+      "description": "숙성카레+계란후라이+마늘후레이크+김치+단무지(카레O/소스X)",
+      "category": "Japanese Curry Mix Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2bcce117-4b1e-4e70-92e6-57fcda770b84.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[더블함박] 카레도시락",
+      "description": "함박2p+진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/eedd2ede-a291-490e-9b6b-2b50f94f5f66.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000017",
+      "sourceMenuId": "10000017",
+      "name": "[치즈100%] 롤치즈카츠 도시락",
+      "description": "롤치즈카츠2ps+밥+샐러드+국물+소스",
+      "category": "Tonkasu Single Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0e694b57-25ef-48bb-b854-8aae33334539.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000021",
+      "sourceMenuId": "10000021",
+      "name": "새우튀김우동",
+      "description": "",
+      "category": "Donburi Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/08fe4266-15e1-4a20-9102-2b9b83a25d4e.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000027",
+      "sourceMenuId": "10000027",
+      "name": "[단품] 로스카츠",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/fdc4ca56-0e4d-4579-b018-643193f0495a.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000056",
+      "sourceMenuId": "10000056",
+      "name": "마시또 우엉김밥",
+      "description": "",
+      "category": "마시또김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a23e7a31-f73b-4346-9f7e-70d51cd5c172.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[D SET]고치카츠+소시지+고로케+가라아게(각1p)",
+      "description": "",
+      "category": "Japanese Curry Mix Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/e910673f-4a2f-457b-9ab0-270e9ae41234.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000009",
+      "sourceMenuId": "10000009",
+      "name": "[등심] 로스카츠 카레도시락",
+      "description": "등심1p+진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/ca9d57e7-86cd-4b2c-bef2-8b69d6808321.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000022",
+      "sourceMenuId": "10000022",
+      "name": "햄야채볶음밥",
+      "description": "",
+      "category": "Donburi Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/317f8d0b-64f3-4d7b-91bf-1a981883350e.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000028",
+      "sourceMenuId": "10000028",
+      "name": "[단품] 히레카츠",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2adfa692-ec08-43e8-a4f2-72a050fef812.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000004",
+      "sourceMenuId": "90000004",
+      "name": "보해골드(병)(375ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000057",
+      "sourceMenuId": "10000057",
+      "name": "마시또 매콤멸치김밥",
+      "description": "",
+      "category": "마시또김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/e16ec056-a13c-461c-87ff-e646e7dc2304.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000005",
+      "sourceMenuId": "10000005",
+      "name": "[E SET]함박+새우+고로케+가라아게(각1p)",
+      "description": "",
+      "category": "Japanese Curry Mix Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/5a87b840-698f-4222-86a2-c319080259a3.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000010",
+      "sourceMenuId": "10000010",
+      "name": "[안심] 히레카츠 카레도시락",
+      "description": "안심1p+진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/96bd7430-5876-4678-bc9b-f3f014fe1758.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000023",
+      "sourceMenuId": "10000023",
+      "name": "김치볶음밥",
+      "description": "",
+      "category": "Donburi Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/df2225cf-dce9-492a-980b-a6ec7729ade1.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000029",
+      "sourceMenuId": "10000029",
+      "name": "[단품] 롤치즈카츠",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/112eccaf-8a55-4f4b-937c-b9a70085ecaf.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000044",
+      "sourceMenuId": "10000044",
+      "name": "제로펩시라임향",
+      "description": "",
+      "category": "Drink",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3114bfcc-e763-4e9e-8904-5c08b3b2edf1.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000005",
+      "sourceMenuId": "90000005",
+      "name": "청하(병)(300ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000058",
+      "sourceMenuId": "10000058",
+      "name": "마시또 치즈김밥",
+      "description": "",
+      "category": "마시또김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/88e09c75-8b15-411b-b864-25b06c9dd15b.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000011",
+      "sourceMenuId": "10000011",
+      "name": "[롤치즈] 리얼치즈카츠 카레도시락",
+      "description": "롤치즈1p+진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/3afbf4de-bf18-46bf-a2f1-043366252690.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000024",
+      "sourceMenuId": "10000024",
+      "name": "새우볶음밥",
+      "description": "",
+      "category": "Donburi Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f0b5718b-b61c-4334-b47b-18a5f0f76121.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000030",
+      "sourceMenuId": "10000030",
+      "name": "[단품] 고구마치즈카츠",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/939ebe8f-5b21-4376-8a7b-94f9e5ed4c76.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000006",
+      "sourceMenuId": "90000006",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000059",
+      "sourceMenuId": "10000059",
+      "name": "마시또 고추참치김밥",
+      "description": "",
+      "category": "마시또김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/bfb47303-cc49-438a-9913-ae5625fa8748.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000012",
+      "sourceMenuId": "10000012",
+      "name": "[고구마치즈] 고치카츠 카레도시락",
+      "description": "고구마치즈1p+진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/a09b4cdb-7512-4583-996b-d6dd28227d61.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000031",
+      "sourceMenuId": "10000031",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/306302bb-dd93-4cc9-bb75-eff37d762e5f.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000007",
+      "sourceMenuId": "90000007",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000013",
+      "sourceMenuId": "10000013",
+      "name": "[일식카레전문점] 가라아게(닭) 카레도시락",
+      "description": "가라아게 5p+진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/bf6c5445-db91-476c-9bf7-2667023b4990.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000032",
+      "sourceMenuId": "10000032",
+      "name": "[단품] 소시지",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f2a4466a-c292-450a-a304-394e61ed2712.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000008",
+      "sourceMenuId": "90000008",
+      "name": "클라우드 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000014",
+      "sourceMenuId": "10000014",
+      "name": "[새우] 에비카츠 카레도시락",
+      "description": "새우튀김 2p+진한일식카레+마늘후레이크+샐러드+국물",
+      "category": "Japanese Curry SingleMenu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/cd45ff81-fd97-4a4d-b97d-afb3eb3c8926.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000033",
+      "sourceMenuId": "10000033",
+      "name": "[단품] 가라아게[닭]",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0b6bb7ff-b0c6-4ee3-bdc6-980cda8ecdfa.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-90000009",
+      "sourceMenuId": "90000009",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236849-10000034",
+      "sourceMenuId": "10000034",
+      "name": "[단품] 에비카츠[새우]",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/3353b506-eb78-42f6-83ff-59b95dc1b2c4.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000035",
+      "sourceMenuId": "10000035",
+      "name": "[단품] 감자고로케",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/508b562d-f671-4c57-996a-8c957dedddfc.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000036",
+      "sourceMenuId": "10000036",
+      "name": "[단품] 구운마늘슬라이스",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/fc7e2ba2-b841-4f14-aa9e-2eb251912e81.jpg"
+    },
+    {
+      "id": "ddangyo-1236849-10000037",
+      "sourceMenuId": "10000037",
+      "name": "[단품] 공기밥",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e90ec847-030d-463f-ad52-09f7566e72be.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

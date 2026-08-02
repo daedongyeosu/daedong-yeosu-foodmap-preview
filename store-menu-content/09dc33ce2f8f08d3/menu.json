@@ -1,0 +1,256 @@
+{
+  "storeId": "09dc33ce2f8f08d3",
+  "storeName": "쭈꾸미닭 여수점",
+  "displayName": "쭈꾸미닭 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/4de35a6a-876b-423f-b3e9-38e45576e9c2.jpg",
+  "categories": [
+    "전체",
+    "주류메뉴",
+    "1인 메뉴",
+    "일품 쭈꿈쓰",
+    "메뉴소개",
+    "사이드",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1136185-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 프레시(병)(330ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136185-10000030",
+      "sourceMenuId": "10000030",
+      "name": "[1인]든든세트 (공기밥 포함)",
+      "description": "",
+      "category": "1인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a4b62090-f34f-4fcd-bfe1-c96aaedf7398.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000037",
+      "sourceMenuId": "10000037",
+      "name": "일품 쭈꾸미",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "일품 쭈꿈쓰",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/b0f70797-d2e8-4edd-8be2-b43fe1d049f2.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000040",
+      "sourceMenuId": "10000040",
+      "name": "[국내산닭] 닭갈비(2인분)",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5fd6c066-b1b4-45e1-837c-2d0da3ce48b1.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000045",
+      "sourceMenuId": "10000045",
+      "name": "추억의 떡꼬치 20개",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/35dbbec8-8895-466c-9a79-4414746e52c4.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000052",
+      "sourceMenuId": "10000052",
+      "name": "펩시콜라 355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136185-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136185-10000031",
+      "sourceMenuId": "10000031",
+      "name": "[2인]튼튼세트 (공기밥 포함)",
+      "description": "",
+      "category": "1인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/6a2b4681-fc45-49b9-a965-fda5c7552f00.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000038",
+      "sourceMenuId": "10000038",
+      "name": "일품 쭈꾸미 & 대패삼겹",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "일품 쭈꿈쓰",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/4de35a6a-876b-423f-b3e9-38e45576e9c2.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000041",
+      "sourceMenuId": "10000041",
+      "name": "[국내산닭] 치즈듬뿍 닭갈비(2인분)",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/a884f2be-2ff6-46d0-b331-0aec65442e93.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000046",
+      "sourceMenuId": "10000046",
+      "name": "치킨 가라아게 (닭튀김)",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b377f6c0-11e6-4630-8027-d15f34f1f962.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000053",
+      "sourceMenuId": "10000053",
+      "name": "칠성사이다 355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136185-90000002",
+      "sourceMenuId": "90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136185-10000032",
+      "sourceMenuId": "10000032",
+      "name": "[1인분]쭈꾸미 백반정식",
+      "description": "알차다 알차",
+      "category": "1인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a4b62090-f34f-4fcd-bfe1-c96aaedf7398.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000039",
+      "sourceMenuId": "10000039",
+      "name": "일품 쭈꾸미 & 우삼겹",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "일품 쭈꿈쓰",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/bde9456c-a989-46b5-abd5-a71ef992d21a.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000042",
+      "sourceMenuId": "10000042",
+      "name": "[국내산닭] 짜글짜글 국물닭갈비(2인분)",
+      "description": "&&공기밥은 별도에요&&",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/575b89a7-c5c3-4f50-b67d-80d7902941e8.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000047",
+      "sourceMenuId": "10000047",
+      "name": "진짜 스팸구이",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/76f02005-df35-474c-b1e8-4eb031200e7e.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000054",
+      "sourceMenuId": "10000054",
+      "name": "탐스파인 355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136185-90000003",
+      "sourceMenuId": "90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136185-10000033",
+      "sourceMenuId": "10000033",
+      "name": "[1인분]우삼겹 백반정식",
+      "description": "부족함 없는 구성",
+      "category": "1인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/489202d8-7b73-452c-8b3d-39df4ce452b9.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000043",
+      "sourceMenuId": "10000043",
+      "name": "한방삼계탕",
+      "description": "몸에 좋은 야채와 버섯을 넣고 푹 끓여낸 육수에 영계를 넣고 부드럽게 익혀낸 삼계탕입니다 기력보충,술안주,영양식 어떤걸로도 최고의 음식이라 자부합니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/fd64edc5-a4a2-4002-8c9e-e375b383982b.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000048",
+      "sourceMenuId": "10000048",
+      "name": "통통돈까스",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/4214b52d-0b73-4fbe-b9bb-2aaed4f88851.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000034",
+      "sourceMenuId": "10000034",
+      "name": "[1인분]닭불고기 백반정식",
+      "description": "든든..",
+      "category": "1인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a91e469e-6372-48d8-b7cd-985177db3f88.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000044",
+      "sourceMenuId": "10000044",
+      "name": "백목이버섯 삼계탕",
+      "description": "영양가득 삼계탕에 꽃피운 눈꽃버섯~맛도 풍성 양도 풍성, 어디서도 맛보지 못한 맛의향연 눈꽃버섯삼계탕",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/cbf769ba-2f04-44e0-a566-7c3e51a7031e.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000049",
+      "sourceMenuId": "10000049",
+      "name": "함박스테이크",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003255.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000035",
+      "sourceMenuId": "10000035",
+      "name": "치킨마요덮밥",
+      "description": "치느님+나의사랑 마요네즌데 무슨말이 필요할까요",
+      "category": "1인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/db583c57-6099-44c9-a25f-9242cfde7d83.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000050",
+      "sourceMenuId": "10000050",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/41e3629b-8dc5-4e52-bce0-b539de2e0125.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000036",
+      "sourceMenuId": "10000036",
+      "name": "육회덮밥",
+      "description": "담백하니 깔끔하게 소금,참기름,깨소금으로 간 하였습니다.",
+      "category": "1인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/f52b818a-7b22-4f75-a2b2-1d9f05b17f37.jpg"
+    },
+    {
+      "id": "ddangyo-1136185-10000051",
+      "sourceMenuId": "10000051",
+      "name": "비엔나소시지 야채볶음",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b044881f-0544-4c12-81de-09c3dee432aa.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

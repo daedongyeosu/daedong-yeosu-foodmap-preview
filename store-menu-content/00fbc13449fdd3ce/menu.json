@@ -19,294 +19,336 @@
       "name": "강정타코 콤보(1인분+8알+음료)",
       "description": "1인 닭강정 + 타코야끼 8알 + 치킨무 + 음료 500ml",
       "category": "세트메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/eb6cc6bb-46c2-4bd4-a198-66297c94c096.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/eb6cc6bb-46c2-4bd4-a198-66297c94c096.jpg",
+      "sourceMenuId": "10000001"
     },
     {
       "id": "ddangyo-1319411-10000007",
       "name": "달콤양념' 떡 닭강정",
       "description": "1인구성: 닭강정 + 치킨무 공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/cf070bb3-74ff-4523-a4ec-d99191f36a38.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/cf070bb3-74ff-4523-a4ec-d99191f36a38.jpg",
+      "sourceMenuId": "10000007"
     },
     {
       "id": "ddangyo-1319411-10000010",
       "name": "깐풍' 떡 닭강정",
       "description": "1인구성: 닭강정 + 치킨무 공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/63a057fa-d40b-4a4b-bad7-b66771f6a566.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/63a057fa-d40b-4a4b-bad7-b66771f6a566.jpg",
+      "sourceMenuId": "10000010"
     },
     {
       "id": "ddangyo-1319411-10000003",
       "name": "'화끈' 국물 쫄+떡볶이",
       "description": "넉넉한' 국물 떡볶이에 다양한 토핑이 추가 가능한 '매콤' 떡볶이",
       "category": "[]NEW[] '나는' 매콤 떡볶이 1~2인",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000003"
     },
     {
       "id": "ddangyo-1319411-10000005",
       "name": "고추마요' 떡 닭강정",
       "description": "1인구성: 닭강정 + 치킨무 공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000005"
     },
     {
       "id": "ddangyo-1319411-10000014",
       "name": "[골라담는] 토핑 타코야끼",
       "description": "터짐 주의 공룡만에 꾹꾹 눌러 담아 드리는 토핑 타코야끼",
       "category": "나는 문어 타코야끼 X 1키로 공룡 닭강정",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/97bce0d1-8a28-495d-be1c-811c4784a990.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/97bce0d1-8a28-495d-be1c-811c4784a990.jpg",
+      "sourceMenuId": "10000014"
     },
     {
       "id": "ddangyo-1319411-10000016",
       "name": "[허니버터]회오리핫도그2p",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000016"
     },
     {
       "id": "ddangyo-1319411-10000036",
       "name": "담먹'불닭 소스",
       "description": "",
       "category": "찍먹보다 담궈 먹는 대용량 :::담먹소스:::",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000036"
     },
     {
       "id": "ddangyo-1319411-10000042",
       "name": "사이다",
       "description": "",
       "category": "음료메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000042"
     },
     {
       "id": "ddangyo-1319411-10000017",
       "name": "'감자튀김'",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6a688ca7-4de6-4da5-a408-e5e4807868f9.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6a688ca7-4de6-4da5-a408-e5e4807868f9.jpg",
+      "sourceMenuId": "10000017"
     },
     {
       "id": "ddangyo-1319411-10000002",
       "name": "강정떡 콤보(1인분+떡볶이+음료)",
       "description": "1인 닭강정 + 떡볶이 + 치킨무 + 음료500ml",
       "category": "세트메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000002"
     },
     {
       "id": "ddangyo-1319411-10000004",
       "name": "'꾸덕' 로제 누들떡볶이",
       "description": "매콤 크리미한 로제소스 다양한 토핑이 추가 가능한 '로제' 누들 떡볶이",
       "category": "[]NEW[] '나는' 매콤 떡볶이 1~2인",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/410bc52e-ec30-4893-a182-c58ebec0aa18.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/410bc52e-ec30-4893-a182-c58ebec0aa18.jpg",
+      "sourceMenuId": "10000004"
     },
     {
       "id": "ddangyo-1319411-10000006",
       "name": "블랙페퍼'후라이드 떡 닭강정",
       "description": "1인구성: 닭강정 + 치킨무 공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/a82df378-516a-45d4-b2ab-4cf3a24aa1f3.jpg",
+      "sourceMenuId": "10000006"
     },
     {
       "id": "ddangyo-1319411-10000015",
       "name": "[골라먹는] 소스 타코야끼",
       "description": "단짠단짠 오리지날부터 매콤, 달달, 코찡까지 오직 공룡에서만 맛 볼 수 있는 명품 타코야끼",
       "category": "나는 문어 타코야끼 X 1키로 공룡 닭강정",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/5402fe2b-3131-4d79-a3aa-c96b4bca5c68.JPG"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/5402fe2b-3131-4d79-a3aa-c96b4bca5c68.JPG",
+      "sourceMenuId": "10000015"
     },
     {
       "id": "ddangyo-1319411-10000037",
       "name": "담먹'와사비 소스",
       "description": "",
       "category": "찍먹보다 담궈 먹는 대용량 :::담먹소스:::",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000037"
     },
     {
       "id": "ddangyo-1319411-10000043",
       "name": "펩시콜라",
       "description": "",
       "category": "음료메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000043"
     },
     {
       "id": "ddangyo-1319411-10000018",
       "name": "'닭껍질' 튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/f9be9a7c-456b-4a35-949c-4e9d352e98a6.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/f9be9a7c-456b-4a35-949c-4e9d352e98a6.jpg",
+      "sourceMenuId": "10000018"
     },
     {
       "id": "ddangyo-1319411-10000038",
       "name": "담먹'달콤양념 소스",
       "description": "",
       "category": "찍먹보다 담궈 먹는 대용량 :::담먹소스:::",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000038"
     },
     {
       "id": "ddangyo-1319411-10000008",
       "name": "와사비'마요 떡 닭강정",
       "description": "1인구성: 닭강정 + 치킨무 공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000008"
     },
     {
       "id": "ddangyo-1319411-10000019",
       "name": "[떡순이]양념떡강정20p",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000019"
     },
     {
       "id": "ddangyo-1319411-10000039",
       "name": "담먹소스 치즈소스",
       "description": "",
       "category": "찍먹보다 담궈 먹는 대용량 :::담먹소스:::",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000039"
     },
     {
       "id": "ddangyo-1319411-10000009",
       "name": "불닭' 떡 닭강정",
       "description": "1인구성: 닭강정 + 치킨무 공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000009"
     },
     {
       "id": "ddangyo-1319411-10000020",
       "name": "각 무우",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000020"
     },
     {
       "id": "ddangyo-1319411-10000040",
       "name": "담먹'깐풍 소스",
       "description": "",
       "category": "찍먹보다 담궈 먹는 대용량 :::담먹소스:::",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000040"
     },
     {
       "id": "ddangyo-1319411-10000021",
       "name": "'치밥'공기밥",
       "description": "비조리",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000021"
     },
     {
       "id": "ddangyo-1319411-10000041",
       "name": "담먹'고추마요 소스",
       "description": "",
       "category": "찍먹보다 담궈 먹는 대용량 :::담먹소스:::",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000041"
     },
     {
       "id": "ddangyo-1319411-10000022",
       "name": "'양념'팝콘만두튀김20p",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000022"
     },
     {
       "id": "ddangyo-1319411-10000011",
       "name": "두가지맛'반반' 떡 닭강정",
       "description": "공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/224ba211-912f-433c-9a2b-a94e2f9dadbb.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/224ba211-912f-433c-9a2b-a94e2f9dadbb.jpg",
+      "sourceMenuId": "10000011"
     },
     {
       "id": "ddangyo-1319411-10000012",
       "name": "허니버터' 떡 닭강정",
       "description": "1인구성: 닭강정 + 치킨무 공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000012"
     },
     {
       "id": "ddangyo-1319411-10000023",
       "name": "불닭볶음면큰컵라면(비조리)",
       "description": "유튜버 추천조합 불닭볶음면",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000023"
     },
     {
       "id": "ddangyo-1319411-10000013",
       "name": "눈꽃치즈' 떡 닭강정",
       "description": "1인구성: 닭강정 + 치킨무 공룡구성: 닭강정1kg + 치킨무 + 음료500ml",
       "category": "메인메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000013"
     },
     {
       "id": "ddangyo-1319411-10000024",
       "name": "팝콘만두튀김15p",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000024"
     },
     {
       "id": "ddangyo-1319411-10000025",
       "name": "떡 튀김10p",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000025"
     },
     {
       "id": "ddangyo-1319411-10000026",
       "name": "소떡소떡",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/626bbce6-8a08-4070-b21a-6da41840550d.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/626bbce6-8a08-4070-b21a-6da41840550d.jpg",
+      "sourceMenuId": "10000026"
     },
     {
       "id": "ddangyo-1319411-10000027",
       "name": "쌀떡꼬치",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000027"
     },
     {
       "id": "ddangyo-1319411-10000028",
       "name": "오징어튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/6aaace5a-f702-4846-abc4-d744d1e65de2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/6aaace5a-f702-4846-abc4-d744d1e65de2.jpg",
+      "sourceMenuId": "10000028"
     },
     {
       "id": "ddangyo-1319411-10000029",
       "name": "왕새우튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000029"
     },
     {
       "id": "ddangyo-1319411-10000030",
       "name": "고구마튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/89296823-0a59-4ca0-adfb-af83831795a8.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/89296823-0a59-4ca0-adfb-af83831795a8.jpg",
+      "sourceMenuId": "10000030"
     },
     {
       "id": "ddangyo-1319411-10000031",
       "name": "김말이튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/43ad9b86-7302-4f20-85ea-d710f9a4cef7.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/43ad9b86-7302-4f20-85ea-d710f9a4cef7.jpg",
+      "sourceMenuId": "10000031"
     },
     {
       "id": "ddangyo-1319411-10000032",
       "name": "치즈볼",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/78974236-7c90-4d2a-b122-1808145f83b2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/78974236-7c90-4d2a-b122-1808145f83b2.jpg",
+      "sourceMenuId": "10000032"
     },
     {
       "id": "ddangyo-1319411-10000034",
       "name": "계란찜",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg",
+      "sourceMenuId": "10000034"
     },
     {
       "id": "ddangyo-1319411-10000035",
       "name": "날치알주먹밥",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/1ccf657b-5e9a-429e-b284-bebdcbac6a91.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/1ccf657b-5e9a-429e-b284-bebdcbac6a91.jpg",
+      "sourceMenuId": "10000035"
     }
   ],
   "source": {
@@ -317,5 +359,8 @@
     ],
     "rawItemCount": 45,
     "duplicateItemsRemoved": 3
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

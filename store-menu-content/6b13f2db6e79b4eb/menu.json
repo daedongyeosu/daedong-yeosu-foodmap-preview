@@ -1,0 +1,139 @@
+{
+  "storeId": "6b13f2db6e79b4eb",
+  "storeName": "평양보쌈왕족발",
+  "displayName": "평양보쌈왕족발",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/68ae5d5f-2aa7-4515-afff-2f072fd6c1a8.jpg",
+  "categories": [
+    "전체",
+    "족발 보쌈",
+    "불족발",
+    "나홀로세트 (1.5인분)",
+    "족보세트",
+    "사이드메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1252230-10000003",
+      "sourceMenuId": "10000003",
+      "name": "왕족발(국내산 앞족)",
+      "description": "쟁반국수 + 탕수육 (中 이상) + 쌈야채세트 + 김치 + 국물 + 음료 제공",
+      "category": "족발 보쌈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/d5b02f6a-866d-4fc1-ae6a-6b7c5755970c.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000004",
+      "sourceMenuId": "10000004",
+      "name": "보쌈",
+      "description": "쟁반국수 + 탕수육 (中 이상) + 쌈야채세트 + 김치 + 국물 + 음료 제공",
+      "category": "족발 보쌈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/dea81d04-feed-4b65-9f7b-ba27b1497823.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000005",
+      "sourceMenuId": "10000005",
+      "name": "불족발",
+      "description": "쟁반국수 + 계란찜 + 쌈야채세트 + 김치 + 국물 + 음료 제공",
+      "category": "불족발",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ce380777-0966-40dd-acbc-9268dd834ce1.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000001",
+      "sourceMenuId": "10000001",
+      "name": "홀로족발",
+      "description": "단품메뉴 + 김치 + 쌈야채세트 ( 쌈야채 + 고추 + 마늘 + 쌈장 + 새우젓 + 초장 ) ( 쟁반국수 제외 )",
+      "category": "나홀로세트 (1.5인분)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c7453864-9aa8-436f-9d76-b5d89299d297.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000006",
+      "sourceMenuId": "10000006",
+      "name": "모듬세트",
+      "description": "족발+ 보쌈 + 쟁반국수 + 탕수육 + 쌈야채세트 + 김치 + 국물 + 음료 제공",
+      "category": "족보세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/45abcfd3-e560-4579-801d-5585a845f54d.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000007",
+      "sourceMenuId": "10000007",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/8fa153d4-0122-4560-a6b3-d513ef5d9eff.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000002",
+      "sourceMenuId": "10000002",
+      "name": "홀로보쌈",
+      "description": "단품메뉴 + 김치 + 쌈야채세트 ( 쌈야채 + 고추 + 마늘 + 쌈장 + 새우젓 + 초장 ) ( 쟁반국수 제외 )",
+      "category": "나홀로세트 (1.5인분)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/75768c42-4166-41ed-b681-f869c519f1b2.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000008",
+      "sourceMenuId": "10000008",
+      "name": "쟁반국수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/db0d31d6-7a6d-479d-9739-83b1617c6133.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000009",
+      "sourceMenuId": "10000009",
+      "name": "탕수육",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/6fe6941b-dcaa-4f5e-9a0e-ca959ff90319.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000010",
+      "sourceMenuId": "10000010",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000011",
+      "sourceMenuId": "10000011",
+      "name": "야채추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/dddd56ba-80fe-459c-a9ba-93ef6c14fa76.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000012",
+      "sourceMenuId": "10000012",
+      "name": "우거지국물",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1252230-10000013",
+      "sourceMenuId": "10000013",
+      "name": "김치추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6909a8a1-b508-4b47-8b35-99d8310136f4.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000014",
+      "sourceMenuId": "10000014",
+      "name": "코카콜라",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/a9120650-9662-4b72-8d38-72558d951790.jpg"
+    },
+    {
+      "id": "ddangyo-1252230-10000015",
+      "sourceMenuId": "10000015",
+      "name": "사이다",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

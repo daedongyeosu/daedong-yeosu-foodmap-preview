@@ -1,0 +1,292 @@
+{
+  "storeId": "75dbdaa6383cd49c",
+  "storeName": "생생연어 여서점",
+  "displayName": "생생연어 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f246d53e-023c-4bc5-b441-4bd2013b63d7.jpg",
+  "categories": [
+    "전체",
+    "단품",
+    "식사메뉴",
+    "생생연어 온가족 패밀리 셋트 A or B",
+    "세트메뉴",
+    "통 연어 그릴 스테이크 (완제품)",
+    "추가메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1271303-10000010",
+      "sourceMenuId": "10000010",
+      "name": "생연어사시미 430g 2~3인(중)",
+      "description": "슈퍼살몬 최고등급 대뱃살+뱃살+허리살(상하단)+꼬리살 특수부위 포함",
+      "category": "단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/1109d43c-08d6-4251-bc8a-d0aa3ec301cb.jpg"
+    },
+    {
+      "id": "ddangyo-1271303-10000011",
+      "sourceMenuId": "10000011",
+      "name": "생연어사시미630g 3~4인(대)",
+      "description": "슈퍼살몬 최고등급 대뱃살+뱃살+허리살(상하단)+꼬리살 특수부위 포함",
+      "category": "단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/9c656eb6-a068-409b-9246-981b70004625.JPG"
+    },
+    {
+      "id": "ddangyo-1271303-10000016",
+      "sourceMenuId": "10000016",
+      "name": "노르웨이 생연어 특선초밥 10PCS",
+      "description": "3구반찬(락교.초생강.와사비)만 제공 됩니다.",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/824ec5a9-71a8-4dcf-9a15-4e03c985ea08.jpg"
+    },
+    {
+      "id": "ddangyo-1271303-10000021",
+      "sourceMenuId": "10000021",
+      "name": "사케동 생연어덮밥 더블",
+      "description": "[중독성 최고]초딩 입맛 사장님 최애메뉴",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/01cc60ba-7c65-41da-b274-6ec243829379.jpg"
+    },
+    {
+      "id": "ddangyo-1271303-10000001",
+      "sourceMenuId": "10000001",
+      "name": "생생연어 온가족 패밀리 A 셋트",
+      "description": "생연어회 사시미 대 630g 그릴연어 초밥10p 요청란에 그릴초밥 5p+연어초밥5p 변경 가능합니다 사케동 덮밥 더블",
+      "category": "생생연어 온가족 패밀리 셋트 A or B",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000003",
+      "sourceMenuId": "10000003",
+      "name": "1인혼술 세트 생연어사시미+특선연어초밥4P",
+      "description": "생연어 130g+생연어초밥4P(100g)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000009",
+      "sourceMenuId": "10000009",
+      "name": "생연어사시미 270g 1~2인(소)",
+      "description": "SUPERIOR SUPER SALMON.(1등급)",
+      "category": "단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6fc1dd25-730f-4fae-ae0e-540ecbd2a5a7.jpg"
+    },
+    {
+      "id": "ddangyo-1271303-10000015",
+      "sourceMenuId": "10000015",
+      "name": "통 연어 그릴 스테이크",
+      "description": "양파 슬라이스 +버섯+각종소스 토핑되어 통 연어 그릴에 구워서 제공 됩니다. 요청란에 소금구이 요청 하시면 소스없이 소금구이 가능합니다.",
+      "category": "통 연어 그릴 스테이크 (완제품)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000024",
+      "sourceMenuId": "10000024",
+      "name": "타르타르 소스",
+      "description": "씨푸드.샐러드.야채.과일등에 잘 어울려요",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000002",
+      "sourceMenuId": "10000002",
+      "name": "생생연어 온가족 패밀리 B 셋트",
+      "description": "생생어 사시미 대 630g 그릴연어초밥 10ps+사케동 덮밥 더블 1.5인 혼술 연어장+신라면컵1+음료수까지 단체모임 주문시 보다저렴이 드실수있는 메뉴입니다. 음료나 컵라면1개써비스",
+      "category": "생생연어 온가족 패밀리 셋트 A or B",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000004",
+      "sourceMenuId": "10000004",
+      "name": "생생혼술오마카세+연어장",
+      "description": "혼술각]사장님 왕추천 메뉴 사시미+단짠단짠 연어장까지 즐기세요~",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000017",
+      "sourceMenuId": "10000017",
+      "name": "노르웨이 생연어 특선초밥 8PCS",
+      "description": "3구 반찬(락교.초생강.와사비)만 제공 됩니다.",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/8bacde54-7b14-44b6-b707-1d45a1ff368c.jpg"
+    },
+    {
+      "id": "ddangyo-1271303-10000025",
+      "sourceMenuId": "10000025",
+      "name": "반찬 도시락 1세트 (추가)",
+      "description": "생양파+양파드레싱소스+날치알+락교+초생강+와사비",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000005",
+      "sourceMenuId": "10000005",
+      "name": "나혼자 그릴초밥세트",
+      "description": "생연어와 구운초밥이 들어있는 아이들 원픽 메뉴 생연어 150g+그릴연어초밥4P",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000018",
+      "sourceMenuId": "10000018",
+      "name": "노르웨이 생연어 특선초밥 4PCS",
+      "description": "반찬X 간장만 제공 됩니다.",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000026",
+      "sourceMenuId": "10000026",
+      "name": "미니 컵라면(신라면소컵)",
+      "description": "신라면 미니컵라면 (소컵)",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000006",
+      "sourceMenuId": "10000006",
+      "name": "생연어(소)회270G+연어초밥(8P)",
+      "description": "항공특송당일입고 슈퍼살몬+최근도정 특상급 쌀+특선허리뱃살초밥/5성급 호텔식재료 사용",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/15b36a1d-e991-495c-8f5e-1d4daddc6913.jpg"
+    },
+    {
+      "id": "ddangyo-1271303-10000012",
+      "sourceMenuId": "10000012",
+      "name": "생생연어장 2~3인",
+      "description": "술안주로 밥 반찬으로도 잘 어울려요~ [중독성 최강]단짠단짠 최강 소스의 조합",
+      "category": "단품",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000019",
+      "sourceMenuId": "10000019",
+      "name": "그릴연어초밥(구운초밥)",
+      "description": "안 먹어본 사람 없게 해주세요~~",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000027",
+      "sourceMenuId": "10000027",
+      "name": "웰치스 포도맛",
+      "description": "포도맛 탄산음료캔",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000007",
+      "sourceMenuId": "10000007",
+      "name": "생연어 중 (2~3인)450g+연어초밥(8P)",
+      "description": "항공특송당일입고 슈퍼살몬+최근도정 특상급 쌀+특선허리뱃살초밥/5성급 호텔식재료 사용",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000013",
+      "sourceMenuId": "10000013",
+      "name": "뱃살 및 전체부위 코스",
+      "description": "대뱃살+배꼽살+허리뱃살+아랫배살+등살",
+      "category": "단품",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000020",
+      "sourceMenuId": "10000020",
+      "name": "사케동덮밥+초밥4P세트",
+      "description": "단짠단짠 아이들이 좋아하는 최강조합 엄마~~ 나갈때 이거 시켜 주세효~~",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000028",
+      "sourceMenuId": "10000028",
+      "name": "조미김",
+      "description": "덮밥에 싸서 드시거나,사시미와 같이 드셔도 좋아요",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000008",
+      "sourceMenuId": "10000008",
+      "name": "생연어 대 (3~4인)630g+연어초밥(8P)",
+      "description": "항공특송당일입고 슈퍼살몬+최근도정 특상급 쌀+특선허리뱃살초밥/5성급 호텔식재료 사용",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000014",
+      "sourceMenuId": "10000014",
+      "name": "촉촉한 왕노가리 구이",
+      "description": "기본 5마리 제공됩니다. 노가리 특성상 크기가 일정하지않아 최대한 큰 왕노가리 제공됩니다. 그릴에구워서 제공됩니다.",
+      "category": "단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/85cd35a9-6c6e-405d-a0a0-08927b24828f.jpg"
+    },
+    {
+      "id": "ddangyo-1271303-10000029",
+      "sourceMenuId": "10000029",
+      "name": "양파 슬라이스",
+      "description": "양파 슬라이스 매니아 분 위한 옵션입니다.",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000022",
+      "sourceMenuId": "10000022",
+      "name": "사케동 생연어덮밥 미니",
+      "description": "[중독성 최고]아이들이 더 좋아하는 영양식",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/779261b9-e253-4e92-b880-6f8e0cab3407.jpg"
+    },
+    {
+      "id": "ddangyo-1271303-10000030",
+      "sourceMenuId": "10000030",
+      "name": "와사비 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000023",
+      "sourceMenuId": "10000023",
+      "name": "초밥 반반 메뉴",
+      "description": "연어초밥 4ps+ 구운초밥 4ps 연어초밥 5ps+구운초밥 5ps 두가지 초밥셋트 있어요",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000031",
+      "sourceMenuId": "10000031",
+      "name": "락교 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000032",
+      "sourceMenuId": "10000032",
+      "name": "초생강 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000033",
+      "sourceMenuId": "10000033",
+      "name": "케이퍼 추가",
+      "description": "연어의 풍미를 더해 줍니다",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1271303-10000034",
+      "sourceMenuId": "10000034",
+      "name": "무순 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

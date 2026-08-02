@@ -20,63 +20,72 @@
       "name": "한식바베큐 (뼈)",
       "description": "",
       "category": "바베큐 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/8bd25be3-d573-4bbc-8200-cb791dd2a441.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/8bd25be3-d573-4bbc-8200-cb791dd2a441.jpg",
+      "sourceMenuId": "10000008"
     },
     {
       "id": "ddangyo-1324646-10000010",
       "name": "소금구이바베큐 (뼈)",
       "description": "",
       "category": "바베큐 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ffde45d-14fa-4132-88b8-456a9a2faf5b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ffde45d-14fa-4132-88b8-456a9a2faf5b.jpg",
+      "sourceMenuId": "10000010"
     },
     {
       "id": "ddangyo-1324646-10000042",
       "name": "순살 후라이드",
       "description": "",
       "category": "후라이드 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/8e5b53c7-3109-4fcd-922d-6729e43f1fa9.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/8e5b53c7-3109-4fcd-922d-6729e43f1fa9.jpg",
+      "sourceMenuId": "10000042"
     },
     {
       "id": "ddangyo-1324646-10000001",
       "name": "한식 (순살)",
       "description": "",
       "category": "바베큐(순살) 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2b4ad9a3-08d7-489f-a23b-75403c3755e2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2b4ad9a3-08d7-489f-a23b-75403c3755e2.jpg",
+      "sourceMenuId": "10000001"
     },
     {
       "id": "ddangyo-1324646-10000013",
       "name": "한식/양식 바베큐 (뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000013"
     },
     {
       "id": "ddangyo-1324646-10000022",
       "name": "한식/양식 (순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000022"
     },
     {
       "id": "ddangyo-1324646-10000031",
       "name": "치즈떡 추가 (6개)",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000031"
     },
     {
       "id": "ddangyo-1324646-10000041",
       "name": "고추 바사삭 후라이드(순살)",
       "description": "",
       "category": "후라이드 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000041"
     },
     {
       "id": "ddangyo-1324646-10000043",
       "name": "코카콜라",
       "description": "",
       "category": "음료수",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/689e9f9a-a680-4f01-813e-10840bda99f0.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/689e9f9a-a680-4f01-813e-10840bda99f0.jpg",
+      "sourceMenuId": "10000043"
     },
     {
       "id": "ddangyo-1324646-90000001",
@@ -84,49 +93,56 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
     },
     {
       "id": "ddangyo-1324646-10000002",
       "name": "신한식 (순살)",
       "description": "",
       "category": "바베큐(순살) 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000002"
     },
     {
       "id": "ddangyo-1324646-10000009",
       "name": "신한식바베큐 (뼈)",
       "description": "",
       "category": "바베큐 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000009"
     },
     {
       "id": "ddangyo-1324646-10000014",
       "name": "한식/소금 바베큐 (뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000014"
     },
     {
       "id": "ddangyo-1324646-10000023",
       "name": "한식/소금 (순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000023"
     },
     {
       "id": "ddangyo-1324646-10000032",
       "name": "라면사리(한식) 추가",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000032"
     },
     {
       "id": "ddangyo-1324646-10000044",
       "name": "스프라이트",
       "description": "",
       "category": "음료수",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/066f0c42-1fad-458f-beaf-32f70ddc4111.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/066f0c42-1fad-458f-beaf-32f70ddc4111.jpg",
+      "sourceMenuId": "10000044"
     },
     {
       "id": "ddangyo-1324646-90000002",
@@ -134,42 +150,48 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
     },
     {
       "id": "ddangyo-1324646-10000003",
       "name": "소금구이 (순살)",
       "description": "",
       "category": "바베큐(순살) 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ae394305-2f51-4619-ba0c-37fdbfce8fff.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ae394305-2f51-4619-ba0c-37fdbfce8fff.jpg",
+      "sourceMenuId": "10000003"
     },
     {
       "id": "ddangyo-1324646-10000015",
       "name": "한식/신한식 바베큐 (뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000015"
     },
     {
       "id": "ddangyo-1324646-10000024",
       "name": "한식/신한식 (순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000024"
     },
     {
       "id": "ddangyo-1324646-10000033",
       "name": "라면사리(양식) 추가",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000033"
     },
     {
       "id": "ddangyo-1324646-10000045",
       "name": "코카콜라제로",
       "description": "",
       "category": "음료수",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c1bb92fd-83ea-4ee1-9473-0873d5a12fc8.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c1bb92fd-83ea-4ee1-9473-0873d5a12fc8.jpg",
+      "sourceMenuId": "10000045"
     },
     {
       "id": "ddangyo-1324646-90000003",
@@ -177,42 +199,48 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
     },
     {
       "id": "ddangyo-1324646-10000004",
       "name": "치즈떡 한식 (순살)",
       "description": "",
       "category": "바베큐(순살) 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000004"
     },
     {
       "id": "ddangyo-1324646-10000011",
       "name": "양식바베큐 (뼈)",
       "description": "",
       "category": "바베큐 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000011"
     },
     {
       "id": "ddangyo-1324646-10000016",
       "name": "양식/소금 바베큐 (뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000016"
     },
     {
       "id": "ddangyo-1324646-10000025",
       "name": "양식/소금 (순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000025"
     },
     {
       "id": "ddangyo-1324646-10000034",
       "name": "우동사리 (한식) 추가",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000034"
     },
     {
       "id": "ddangyo-1324646-90000004",
@@ -220,42 +248,48 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
     },
     {
       "id": "ddangyo-1324646-10000005",
       "name": "치즈떡 양식 ( 순살)",
       "description": "",
       "category": "바베큐(순살) 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000005"
     },
     {
       "id": "ddangyo-1324646-10000012",
       "name": "간장바베큐 (뼈)",
       "description": "",
       "category": "바베큐 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000012"
     },
     {
       "id": "ddangyo-1324646-10000017",
       "name": "신한식/양식 바베큐 (뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000017"
     },
     {
       "id": "ddangyo-1324646-10000026",
       "name": "신한식/양식 (순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000026"
     },
     {
       "id": "ddangyo-1324646-10000035",
       "name": "우동사리 (양식) 추가",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000035"
     },
     {
       "id": "ddangyo-1324646-90000005",
@@ -263,35 +297,40 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
     },
     {
       "id": "ddangyo-1324646-10000006",
       "name": "양식 (순살)",
       "description": "",
       "category": "바베큐(순살) 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000006"
     },
     {
       "id": "ddangyo-1324646-10000018",
       "name": "신한식/소금 바베큐 (뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000018"
     },
     {
       "id": "ddangyo-1324646-10000027",
       "name": "신한식/소금 (순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000027"
     },
     {
       "id": "ddangyo-1324646-10000036",
       "name": "소스 추가(한식)",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000036"
     },
     {
       "id": "ddangyo-1324646-90000006",
@@ -299,84 +338,96 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
     },
     {
       "id": "ddangyo-1324646-10000007",
       "name": "간장 (순살)",
       "description": "",
       "category": "바베큐(순살) 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000007"
     },
     {
       "id": "ddangyo-1324646-10000019",
       "name": "한식/간장 바베큐(뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000019"
     },
     {
       "id": "ddangyo-1324646-10000028",
       "name": "한식/간장 바베큐(순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000028"
     },
     {
       "id": "ddangyo-1324646-10000037",
       "name": "소스 추가(양식)",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000037"
     },
     {
       "id": "ddangyo-1324646-10000020",
       "name": "양식/간장 바베큐(뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000020"
     },
     {
       "id": "ddangyo-1324646-10000029",
       "name": "양식/간장 바베큐(순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000029"
     },
     {
       "id": "ddangyo-1324646-10000038",
       "name": "소스추가(신한식)",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000038"
     },
     {
       "id": "ddangyo-1324646-10000021",
       "name": "신한식/간장 바베큐(뼈)",
       "description": "",
       "category": "바베큐 반반 메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000021"
     },
     {
       "id": "ddangyo-1324646-10000030",
       "name": "신한식/간장 바베큐(순살)",
       "description": "",
       "category": "바베큐(순살) 반반메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000030"
     },
     {
       "id": "ddangyo-1324646-10000039",
       "name": "샐러드 추가(대)",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000039"
     },
     {
       "id": "ddangyo-1324646-10000040",
       "name": "햇반",
       "description": "",
       "category": "틈새메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000040"
     }
   ],
   "source": {
@@ -387,5 +438,8 @@
     ],
     "rawItemCount": 54,
     "duplicateItemsRemoved": 3
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

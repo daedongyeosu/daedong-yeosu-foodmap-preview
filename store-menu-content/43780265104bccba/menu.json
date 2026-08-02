@@ -1,0 +1,535 @@
+{
+  "storeId": "43780265104bccba",
+  "storeName": "핵떡 봉산점",
+  "displayName": "핵떡 봉산점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/b938b04f-79b3-4074-9e46-11c3e2c2df96.jpg",
+  "categories": [
+    "전체",
+    "떡볶이",
+    "김밥or주먹밥",
+    "튀김메뉴",
+    "떡튀세트",
+    "떡밥세트",
+    "떡치세트",
+    "토핑or사이드",
+    "주류메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1236853-10000001",
+      "sourceMenuId": "10000001",
+      "name": "국물떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/b938b04f-79b3-4074-9e46-11c3e2c2df96.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000002",
+      "sourceMenuId": "10000002",
+      "name": "로제떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9c19448c-db5c-42f7-ac76-90759c8229e8.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000066",
+      "sourceMenuId": "10000066",
+      "name": "마시또 참치마요김밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/442419da-ce55-4ecd-8138-8dde7f953702.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000019",
+      "sourceMenuId": "10000019",
+      "name": "모듬튀김",
+      "description": "김말이2/고구마1/오뎅튀김2/군만두2/오징어튀김",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2d829a35-b942-4d25-b06a-b3814e358b10.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000070",
+      "sourceMenuId": "10000070",
+      "name": "순살치킨(200g)+소스포함",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001076.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000005",
+      "sourceMenuId": "10000005",
+      "name": "떡튀.SET 01",
+      "description": "로제떡볶이+모듬튀김+쿨피스+단무지",
+      "category": "떡튀세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/48f343d9-264f-4239-b8ad-8ec6d7ada91e.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000009",
+      "sourceMenuId": "10000009",
+      "name": "떡밥.SET 01",
+      "description": "로제떡볶이+참치마요밥+쿨피스+단무지",
+      "category": "떡밥세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/e0c2974f-a77a-459d-bacc-da0fb1c7d5a8.JPG"
+    },
+    {
+      "id": "ddangyo-1236853-10000013",
+      "sourceMenuId": "10000013",
+      "name": "떡치.SET 01",
+      "description": "로제떡볶이+황금순살치킨M+쿨피스+단무지",
+      "category": "떡치세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e0586a43-f84d-4f33-b874-d0fa3c6fc61f.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000034",
+      "sourceMenuId": "10000034",
+      "name": "분모자(200g)",
+      "description": "",
+      "category": "토핑or사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1236853-10000039",
+      "sourceMenuId": "10000039",
+      "name": "셀프주먹밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/deb820e1-18e1-4ae8-8e95-401917b30726.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-90000001",
+      "sourceMenuId": "90000001",
+      "name": "여수밤바다(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236853-10000006",
+      "sourceMenuId": "10000006",
+      "name": "떡튀.SET 02",
+      "description": "분모자떡볶이+모듬튀김+쿨피스+단무지",
+      "category": "떡튀세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/48f343d9-264f-4239-b8ad-8ec6d7ada91e.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000010",
+      "sourceMenuId": "10000010",
+      "name": "떡밥.SET 02",
+      "description": "분모자떡볶이+참치마요밥+쿨피스+단무지",
+      "category": "떡밥세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/e0c2974f-a77a-459d-bacc-da0fb1c7d5a8.JPG"
+    },
+    {
+      "id": "ddangyo-1236853-10000014",
+      "sourceMenuId": "10000014",
+      "name": "떡치.SET 02",
+      "description": "분모자떡볶이+황금순살치킨M+쿨피스+단무지",
+      "category": "떡치세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e0586a43-f84d-4f33-b874-d0fa3c6fc61f.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000020",
+      "sourceMenuId": "10000020",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/02bd0276-ccf0-4208-9694-ce0384cc323d.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000040",
+      "sourceMenuId": "10000040",
+      "name": "날치알밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/f2fd800e-ae5c-49cc-b288-3269ba667ae4.JPG"
+    },
+    {
+      "id": "ddangyo-1236853-10000046",
+      "sourceMenuId": "10000046",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1236853-90000002",
+      "sourceMenuId": "90000002",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236853-10000003",
+      "sourceMenuId": "10000003",
+      "name": "분모자떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/ee22dc4f-581e-4b18-b0bd-393c2bc8f704.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000007",
+      "sourceMenuId": "10000007",
+      "name": "떡튀.SET 03",
+      "description": "국물떡볶이+모듬튀김+쿨피스+단무지",
+      "category": "떡튀세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/48f343d9-264f-4239-b8ad-8ec6d7ada91e.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000011",
+      "sourceMenuId": "10000011",
+      "name": "떡밥.SET 03",
+      "description": "국물떡볶이+참치마요밥+쿨피스+단무지",
+      "category": "떡밥세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/e0c2974f-a77a-459d-bacc-da0fb1c7d5a8.JPG"
+    },
+    {
+      "id": "ddangyo-1236853-10000015",
+      "sourceMenuId": "10000015",
+      "name": "떡치.SET 03",
+      "description": "국물떡볶이+황금순살치킨M+쿨피스+단무지",
+      "category": "떡치세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e0586a43-f84d-4f33-b874-d0fa3c6fc61f.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000021",
+      "sourceMenuId": "10000021",
+      "name": "치즈볼2,크림치즈볼2",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/d0e05433-88ab-4bce-971a-56e5434e41ac.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000036",
+      "sourceMenuId": "10000036",
+      "name": "모짜렐라치즈폭탄",
+      "description": "",
+      "category": "토핑or사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6dcad7a0-d612-4549-a7f5-d6c69fdcda57.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000041",
+      "sourceMenuId": "10000041",
+      "name": "스팸마요밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c365bbe3-e986-4899-bf90-253bb36c652a.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000047",
+      "sourceMenuId": "10000047",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1236853-90000003",
+      "sourceMenuId": "90000003",
+      "name": "보해골드(병)(375ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236853-10000004",
+      "sourceMenuId": "10000004",
+      "name": "짜장떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/7d0eae4c-9bf8-409c-88bc-cc0b670d33d3.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000008",
+      "sourceMenuId": "10000008",
+      "name": "떡튀.SET 04",
+      "description": "짜장떡볶이+모듬튀김+쿨피스+단무지",
+      "category": "떡튀세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/48f343d9-264f-4239-b8ad-8ec6d7ada91e.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000012",
+      "sourceMenuId": "10000012",
+      "name": "떡밥.SET 04",
+      "description": "짜장떡볶이+참치마요밥+쿨피스+단무지",
+      "category": "떡밥세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/e0c2974f-a77a-459d-bacc-da0fb1c7d5a8.JPG"
+    },
+    {
+      "id": "ddangyo-1236853-10000016",
+      "sourceMenuId": "10000016",
+      "name": "떡치.SET 04",
+      "description": "짜장떡볶이+황금순살치킨M+쿨피스+단무지",
+      "category": "떡치세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e0586a43-f84d-4f33-b874-d0fa3c6fc61f.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000022",
+      "sourceMenuId": "10000022",
+      "name": "바보감자",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f04613b2-3b96-4ffc-92ff-42c09eaa60a2.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000037",
+      "sourceMenuId": "10000037",
+      "name": "비엔나",
+      "description": "",
+      "category": "토핑or사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/19bd2e6c-a8e1-4a48-9d77-ef90cf6ebab0.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000042",
+      "sourceMenuId": "10000042",
+      "name": "참치마요밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/b4f067fc-924d-44a2-add3-a3ec9f310e1a.JPG"
+    },
+    {
+      "id": "ddangyo-1236853-10000048",
+      "sourceMenuId": "10000048",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1236853-90000004",
+      "sourceMenuId": "90000004",
+      "name": "청하(병)(300ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236853-10000023",
+      "sourceMenuId": "10000023",
+      "name": "오뎅튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/ed82b50b-9ccc-4d55-be18-ef6ca2156693.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000038",
+      "sourceMenuId": "10000038",
+      "name": "오뎅(50g)추가",
+      "description": "",
+      "category": "토핑or사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/33c3e319-78f8-4110-8acf-7677353ef54d.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-90000005",
+      "sourceMenuId": "90000005",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236853-10000060",
+      "sourceMenuId": "10000060",
+      "name": "마시또 매운어묵김밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/5bd193b3-0b89-411e-a0d9-42b58ff33723.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000024",
+      "sourceMenuId": "10000024",
+      "name": "김말이",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/569949b5-4227-405b-b044-ba140b05ebbd.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-90000006",
+      "sourceMenuId": "90000006",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236853-10000061",
+      "sourceMenuId": "10000061",
+      "name": "마시또 우엉김밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a23e7a31-f73b-4346-9f7e-70d51cd5c172.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000068",
+      "sourceMenuId": "10000068",
+      "name": "당면(100g)",
+      "description": "",
+      "category": "토핑or사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/467af325-f9f1-40c2-9cca-44835b1a37f7.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000025",
+      "sourceMenuId": "10000025",
+      "name": "오징어튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/88bdb749-fd5a-4dad-8b91-3dc16322cf36.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000051",
+      "sourceMenuId": "10000051",
+      "name": "제로펩시",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1236853-90000007",
+      "sourceMenuId": "90000007",
+      "name": "클라우드 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236853-10000062",
+      "sourceMenuId": "10000062",
+      "name": "마시또 매콤멸치김밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/e16ec056-a13c-461c-87ff-e646e7dc2304.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000069",
+      "sourceMenuId": "10000069",
+      "name": "메추리5알",
+      "description": "",
+      "category": "토핑or사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1236853-10000026",
+      "sourceMenuId": "10000026",
+      "name": "야끼만두",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/41b04749-4a34-416e-b59f-41572a0d79ad.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-90000008",
+      "sourceMenuId": "90000008",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1236853-10000063",
+      "sourceMenuId": "10000063",
+      "name": "마시또 갓김치김밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/4b652829-504a-42e8-b611-08d650e52c7e.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000071",
+      "sourceMenuId": "10000071",
+      "name": "어묵탕",
+      "description": "",
+      "category": "토핑or사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/9db203e5-d2a8-4202-8c9a-3ac3f25d3931.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000027",
+      "sourceMenuId": "10000027",
+      "name": "고구마튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/89296823-0a59-4ca0-adfb-af83831795a8.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000064",
+      "sourceMenuId": "10000064",
+      "name": "마시또 치즈김밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/5936ccf8-4777-4ed2-b1ac-9ab5ceeb0bbd.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000072",
+      "sourceMenuId": "10000072",
+      "name": "단무지(2개)",
+      "description": "",
+      "category": "토핑or사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/89023f57-03a8-4156-83a2-083aad773a24.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000028",
+      "sourceMenuId": "10000028",
+      "name": "꼬마군만두",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/cfdc5a6a-9de6-4692-a32f-1c00df7532ed.JPG"
+    },
+    {
+      "id": "ddangyo-1236853-10000065",
+      "sourceMenuId": "10000065",
+      "name": "마시또 고추참치김밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/5705e8bc-32d3-46fa-83ad-0d9c25425400.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000029",
+      "sourceMenuId": "10000029",
+      "name": "새우볼",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2c915599-2a40-4414-9035-56eb3c2932a2.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000030",
+      "sourceMenuId": "10000030",
+      "name": "자이언트 왕새우튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/580a56cd-3a0c-4158-a0aa-fc64c6d07969.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000067",
+      "sourceMenuId": "10000067",
+      "name": "마시또 김밥",
+      "description": "",
+      "category": "김밥or주먹밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c8864799-c479-4dac-84f7-ca597b40661a.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000032",
+      "sourceMenuId": "10000032",
+      "name": "우유튀김",
+      "description": "바싹하게 튀긴 우유튀김을 양념에 찍어서 한입에 쏙~",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b7a6d4a5-ed73-4c9b-8778-440616f72552.jpg"
+    },
+    {
+      "id": "ddangyo-1236853-10000033",
+      "sourceMenuId": "10000033",
+      "name": "고추튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/a4d3855a-b0a9-4131-840d-5017d3daf771.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

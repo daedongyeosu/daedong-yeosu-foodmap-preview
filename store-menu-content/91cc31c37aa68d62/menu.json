@@ -1,0 +1,131 @@
+{
+  "storeId": "91cc31c37aa68d62",
+  "storeName": "고궁갈비탕&갈비찜",
+  "displayName": "고궁갈비탕&갈비찜",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ffa15934-41e8-49c7-91ce-4e3c63a89a98.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1238544-10000001",
+      "sourceMenuId": "10000001",
+      "name": "소갈비탕(김치+깍두기+공기밥)",
+      "description": "2人 이상",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/ffa15934-41e8-49c7-91ce-4e3c63a89a98.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-10000004",
+      "sourceMenuId": "10000004",
+      "name": "소갈비찜(기본찬+야채셋트)",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/a91b7e3d-02f1-4087-a48e-21fcb39755ef.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-10000005",
+      "sourceMenuId": "10000005",
+      "name": "육개장(깍두기+공기밥)",
+      "description": "2人 이상",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/bb86e22f-dd0c-4f2a-8b6d-ebea2b84e4ee.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[얼큰] 해장필수 `돼지국밥`",
+      "description": "국밥+공기밥+반찬(깍두기,다대기,새우젓)제공",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/aa3d92b1-02f6-4a1b-bfe9-fd31d219fb6d.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-10000003",
+      "sourceMenuId": "10000003",
+      "name": "돼지불고기(간장&고추장)",
+      "description": "6구반찬+쌈장+야채셋트",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/b5dee7b1-be2f-4085-b224-0e3d0b810de4.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1238544-10000002",
+      "sourceMenuId": "10000002",
+      "name": "특 갈비탕(김치+깍두기+공기밥)",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/11cc4c0f-a903-4c74-9601-ff3ee54417dd.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-90000002",
+      "sourceMenuId": "90000002",
+      "name": "맥주 (테라)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1238544-90000003",
+      "sourceMenuId": "90000003",
+      "name": "맥주 (카스)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1238544-10000006",
+      "sourceMenuId": "10000006",
+      "name": "특대 육개장(김치+깍두기+공기밥)",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001467.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-10000007",
+      "sourceMenuId": "10000007",
+      "name": "야들야들`내장국밥`",
+      "description": "국밥+공기밥+반찬(깍두기,다대기,새우젓)제공",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/660e3cc5-1aaa-487a-9578-e93e5e1a24c4.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-10000009",
+      "sourceMenuId": "10000009",
+      "name": "영양가득 `병천순대국밥`",
+      "description": "국밥+공기밥+반찬(깍두기,다대기,새우젓)제공",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/be8da83d-eaaf-4a49-b845-240847b617d0.jpg"
+    },
+    {
+      "id": "ddangyo-1238544-10000010",
+      "sourceMenuId": "10000010",
+      "name": "[얼큰]1인 셋트메뉴(국밥+사이드 택1)",
+      "description": "얼큰국밥+사이드 (택1) 기본제공 : 공기밥+반찬(깍두기,다대기,새우젓)제공",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1238544-10000011",
+      "sourceMenuId": "10000011",
+      "name": "명태회냉면",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/4102d8ec-ab9d-4c14-b7ba-2b678f21d1d8.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

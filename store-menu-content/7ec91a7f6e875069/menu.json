@@ -1,0 +1,322 @@
+{
+  "storeId": "7ec91a7f6e875069",
+  "storeName": "크라운 닭발",
+  "displayName": "크라운 닭발",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5de6f85b-84fb-4138-82fb-26f5b740159b.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "사이드",
+    "추가배달비",
+    "세트메뉴",
+    "음료수",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1197138-10000001",
+      "sourceMenuId": "10000001",
+      "name": "짜글이닭발",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/7f46a4d1-b5b3-4fdb-8f58-c532088f1f81.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000017",
+      "sourceMenuId": "10000017",
+      "name": "똥집튀김",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4dc160e8-e402-483b-9b6b-c36e22bead89.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000002",
+      "sourceMenuId": "10000002",
+      "name": "불닭발+주먹밥",
+      "description": "뼈 / 무뼈 / 반반 선택가능 직화구이 닭발",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/17153290-3304-4ce3-86c8-5300e7fa50cc.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000005",
+      "sourceMenuId": "10000005",
+      "name": "신기동",
+      "description": "",
+      "category": "추가배달비",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000009",
+      "sourceMenuId": "10000009",
+      "name": "A. 짜글이닭발+우삼겹+주먹밥",
+      "description": "짜글이닭발 / 무뼈짜글이닭발 선택가능",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000014",
+      "sourceMenuId": "10000014",
+      "name": "영계통닭",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/34e0c3aa-511a-4fef-98db-249291b9d698.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000024",
+      "sourceMenuId": "10000024",
+      "name": "콜라",
+      "description": "",
+      "category": "음료수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/be26e05f-71bc-400c-902d-6053e4acaf9f.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-90000001",
+      "sourceMenuId": "90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1197138-10000006",
+      "sourceMenuId": "10000006",
+      "name": "소호동",
+      "description": "",
+      "category": "추가배달비",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000010",
+      "sourceMenuId": "10000010",
+      "name": "B. 불닭발+주먹밥+계란찜",
+      "description": "불닭발 / 무뼈불닭발 선택가능",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/cc8c8538-a35f-4a3d-a939-0bb79b5f206e.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000015",
+      "sourceMenuId": "10000015",
+      "name": "후라이드치킨",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000025",
+      "sourceMenuId": "10000025",
+      "name": "사이다",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1197138-10000003",
+      "sourceMenuId": "10000003",
+      "name": "닭도리탕",
+      "description": "뼈 / 순살1 선택가능",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d76c36cd-e7df-4bd7-9519-915247a2cd43.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000007",
+      "sourceMenuId": "10000007",
+      "name": "수정동",
+      "description": "",
+      "category": "추가배달비",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000011",
+      "sourceMenuId": "10000011",
+      "name": "C. 닭발+똥집튀김+쿨피스",
+      "description": "짜글이 뼈닭발 / 짜글이 무뼈닭발 / 짜글이 반반닭발 / 뼈불닭발 / 무뼈불닭발 / 반반불닭발 선택 가능",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000016",
+      "sourceMenuId": "10000016",
+      "name": "닭발후라이드",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a5664209-4ba6-4ea8-a18a-2f72ce4b569d.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000026",
+      "sourceMenuId": "10000026",
+      "name": "환타(파인)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1197138-10000004",
+      "sourceMenuId": "10000004",
+      "name": "무뼈치즈닭발",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/acdd56e2-8e9c-4bef-bc77-62db8185f8af.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000008",
+      "sourceMenuId": "10000008",
+      "name": "고소동",
+      "description": "",
+      "category": "추가배달비",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000012",
+      "sourceMenuId": "10000012",
+      "name": "D. 닭발+닭발후라이드+쿨피스",
+      "description": "짜글이 뼈닭발 / 짜글이 무뼈닭발 / 짜글이 반반닭발 / 뼈불닭발 / 무뼈불닭발 / 반반불닭발 선택 가능",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000027",
+      "sourceMenuId": "10000027",
+      "name": "환타(오렌지)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1197138-10000013",
+      "sourceMenuId": "10000013",
+      "name": "E. 닭발+조개탕+쿨피스",
+      "description": "짜글이 뼈닭발 / 짜글이 무뼈닭발 / 짜글이 반반닭발 / 뼈불닭발 / 무뼈불닭발 / 반반불닭발 선택 가능",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000018",
+      "sourceMenuId": "10000018",
+      "name": "조개탕",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/ed5520cb-b252-45e2-bc13-6c2892d0bedb.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000028",
+      "sourceMenuId": "10000028",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-90000005",
+      "sourceMenuId": "90000005",
+      "name": "켈리 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1197138-10000019",
+      "sourceMenuId": "10000019",
+      "name": "오뎅탕",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/cf00fa30-45d7-4ed6-869b-feb0ac67912e.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000029",
+      "sourceMenuId": "10000029",
+      "name": "암바사",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-90000006",
+      "sourceMenuId": "90000006",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1197138-10000020",
+      "sourceMenuId": "10000020",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/ff74b4a9-5b9a-4b8a-a4a4-38f7f2c9f60d.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000030",
+      "sourceMenuId": "10000030",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/be26e05f-71bc-400c-902d-6053e4acaf9f.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000021",
+      "sourceMenuId": "10000021",
+      "name": "셀프주먹밥",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/182cffba-caec-41b4-9056-c903268de43f.jpg"
+    },
+    {
+      "id": "ddangyo-1197138-10000031",
+      "sourceMenuId": "10000031",
+      "name": "제로사이다",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000022",
+      "sourceMenuId": "10000022",
+      "name": "샐러드",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1197138-10000023",
+      "sourceMenuId": "10000023",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/c68c421f-c2ec-4565-ae1a-d753f1a741e8.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

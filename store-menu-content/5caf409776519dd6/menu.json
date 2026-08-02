@@ -1,0 +1,179 @@
+{
+  "storeId": "5caf409776519dd6",
+  "storeName": "고기듬뿍 국물두루치기 여수점",
+  "displayName": "고기듬뿍 국물두루치기 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/86442bb1-7a6a-45f0-bbd8-50b683b77f66.jpg",
+  "categories": [
+    "전체",
+    "두루치기 메뉴",
+    "주류메뉴",
+    "사이드 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1321176-10000001",
+      "sourceMenuId": "10000001",
+      "name": "고기듬뿍 국물두루치기 1인",
+      "description": "국물두루치기+계란후라이밥1개+3종반찬+떡사리",
+      "category": "두루치기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/86442bb1-7a6a-45f0-bbd8-50b683b77f66.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000002",
+      "sourceMenuId": "10000002",
+      "name": "고기듬뿍 김치두루치기",
+      "description": "",
+      "category": "두루치기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/4a87a7b9-fbb5-44e3-bd47-1c22f6340f45.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000008",
+      "sourceMenuId": "10000008",
+      "name": "고기듬뿍 로제 국물두루치기 2인",
+      "description": "로제 두루치기+계란후라이밥2개+3종반찬+떡사리",
+      "category": "두루치기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/22b75245-58e6-4135-8508-f81a9e343984.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1321176-10000010",
+      "sourceMenuId": "10000010",
+      "name": "김치 추가",
+      "description": "로제,마라,마라로제 김치추가X",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/4009b69a-d286-4066-9fe7-3ca09d9b8080.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-90000002",
+      "sourceMenuId": "90000002",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1321176-10000011",
+      "sourceMenuId": "10000011",
+      "name": "김가루 주먹밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321176-10000003",
+      "sourceMenuId": "10000003",
+      "name": "고기듬뿍 국물두루치기 2인",
+      "description": "국물두루치기+계란후라이밥2개+3종반찬+떡사리",
+      "category": "두루치기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/4a87a7b9-fbb5-44e3-bd47-1c22f6340f45.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000012",
+      "sourceMenuId": "10000012",
+      "name": "계란후라이밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8ffadb0e-4f6e-4efa-8272-67a6d94895a2.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000004",
+      "sourceMenuId": "10000004",
+      "name": "고기듬뿍 국물두루치기 패밀리",
+      "description": "국물두루치기+계란후라이밥3개+3종반찬+떡사리",
+      "category": "두루치기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/4a87a7b9-fbb5-44e3-bd47-1c22f6340f45.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000013",
+      "sourceMenuId": "10000013",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d67757fe-7877-4bf4-b994-b8c0b75620a4.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000005",
+      "sourceMenuId": "10000005",
+      "name": "고기듬뿍 김치당면 추가 1인 (1000원할인)",
+      "description": "리뷰에 남겨주신 ㄱㅇ고객님께서 추천해주신 김치+당면 메뉴 입니다 감사합니다",
+      "category": "두루치기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/4a87a7b9-fbb5-44e3-bd47-1c22f6340f45.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000014",
+      "sourceMenuId": "10000014",
+      "name": "떡사리 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/9d9403a1-727f-4f22-a718-3ef344de4d3b.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000006",
+      "sourceMenuId": "10000006",
+      "name": "고기듬뿍 김치당면 추가 2인 (1000원 할인)",
+      "description": "ㄱㅇ고객님의 추천으로 인기있는 메뉴 입니다",
+      "category": "두루치기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/4a87a7b9-fbb5-44e3-bd47-1c22f6340f45.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000015",
+      "sourceMenuId": "10000015",
+      "name": "당면 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/324ef831-536a-47aa-9958-39b0565b42ba.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000007",
+      "sourceMenuId": "10000007",
+      "name": "고기듬뿍 로제 두루치기 1인",
+      "description": "로제 두루치기+계란후라이밥1개+3종반찬+떡사리",
+      "category": "두루치기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/22b75245-58e6-4135-8508-f81a9e343984.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000016",
+      "sourceMenuId": "10000016",
+      "name": "치즈토핑",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321176-10000017",
+      "sourceMenuId": "10000017",
+      "name": "비엔나 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/11a470d6-4ef1-4cc6-bf6d-c36c9c005a9f.jpg"
+    },
+    {
+      "id": "ddangyo-1321176-10000018",
+      "sourceMenuId": "10000018",
+      "name": "콜라 1.25L",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321176-10000019",
+      "sourceMenuId": "10000019",
+      "name": "사이다 1.25L",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

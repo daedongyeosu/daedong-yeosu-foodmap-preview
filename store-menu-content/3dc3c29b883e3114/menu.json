@@ -1,0 +1,269 @@
+{
+  "storeId": "3dc3c29b883e3114",
+  "storeName": "닭이랑놀자",
+  "displayName": "닭이랑놀자",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9a43af25-15a4-4dbd-9af5-4190e4f1045b.jpg",
+  "categories": [
+    "전체",
+    "인기메뉴",
+    "사이드메뉴",
+    "소스및치킨무",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1316383-10000002",
+      "sourceMenuId": "10000002",
+      "name": "닭강정 한마리 (11가지맛 중 택1)",
+      "description": "샐러드+치킨무+ 콜라500ml 서비스 (부드러운 닭다리 순살)",
+      "category": "인기메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/18ff6299-66bc-42ab-b62f-ff54ecab0a21.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000003",
+      "sourceMenuId": "10000003",
+      "name": "반반세트 (11가지맛 중 택2)",
+      "description": "샐러드+치킨무+콜라500ml 서비스 (부드러운 닭다리 순살)",
+      "category": "인기메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/224ba211-912f-433c-9a2b-a94e2f9dadbb.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000005",
+      "sourceMenuId": "10000005",
+      "name": "맵달떡볶이",
+      "description": "밀떡+비엔나+메추리알+어묵+중국당면",
+      "category": "인기메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/905b20ca-6883-4833-a966-01f509e19ef4.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000001",
+      "sourceMenuId": "10000001",
+      "name": "닭강정 반마리 (11가지맛 중 택1)",
+      "description": "치킨무.샐러드.콜라는 XX 별도구매 (부드러운 닭다리 순살)",
+      "category": "인기메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/bd2aa608-841a-4573-93dd-b015a99950bb.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000006",
+      "sourceMenuId": "10000006",
+      "name": "모둠튀김",
+      "description": "새우링2+롱오징어튀김2+김말이2+고추만두2 (롱오징어 커팅해서 4조각)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55d7b6fc-d7bb-46d4-adbe-2a8bd71bc9ef.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000020",
+      "sourceMenuId": "10000020",
+      "name": "치킨무",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000029",
+      "sourceMenuId": "10000029",
+      "name": "코카콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/c8b1fd86-b6e1-45cc-bb30-357208cdf6ba.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1316383-10000007",
+      "sourceMenuId": "10000007",
+      "name": "새우링",
+      "description": "머스터드+케찹",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/bb127aa5-cd81-41c7-a598-eb4b46b605c0.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000021",
+      "sourceMenuId": "10000021",
+      "name": "샐러드",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000030",
+      "sourceMenuId": "10000030",
+      "name": "제로콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1316383-10000008",
+      "sourceMenuId": "10000008",
+      "name": "김말이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e238ae66-62d5-43e8-8e6d-49d7b7322113.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000022",
+      "sourceMenuId": "10000022",
+      "name": "슈프림소스",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000031",
+      "sourceMenuId": "10000031",
+      "name": "코카콜라 1.25ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a322bdce-6a5d-4652-8d6b-165698e48462.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000004",
+      "sourceMenuId": "10000004",
+      "name": "수제똥집튀김",
+      "description": "양념소스+소금",
+      "category": "인기메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4dc160e8-e402-483b-9b6b-c36e22bead89.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000009",
+      "sourceMenuId": "10000009",
+      "name": "군만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/833b8bc2-0859-441e-b58d-e9419292e095.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000023",
+      "sourceMenuId": "10000023",
+      "name": "고추마요슈프림",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000010",
+      "sourceMenuId": "10000010",
+      "name": "치킨너겟",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/568372a1-f5f2-4982-8f95-4035c7df0212.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000024",
+      "sourceMenuId": "10000024",
+      "name": "마요소스",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000011",
+      "sourceMenuId": "10000011",
+      "name": "윙.봉 후라이드 (5개)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/833b8bc2-0859-441e-b58d-e9419292e095.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000025",
+      "sourceMenuId": "10000025",
+      "name": "머스터드",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000026",
+      "sourceMenuId": "10000026",
+      "name": "매콤소스",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000027",
+      "sourceMenuId": "10000027",
+      "name": "양념소스",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000014",
+      "sourceMenuId": "10000014",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/958abd0b-31bf-42c0-a64a-ab0474339f20.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000028",
+      "sourceMenuId": "10000028",
+      "name": "눈꽃치즈 시즈닝가루",
+      "description": "",
+      "category": "소스및치킨무",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316383-10000015",
+      "sourceMenuId": "10000015",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/06e22418-9914-4b5a-a3cf-d2127222fdc4.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000016",
+      "sourceMenuId": "10000016",
+      "name": "눈꽃치즈 치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/36b270c2-10e8-42b7-8bdc-2878ee02eaef.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000017",
+      "sourceMenuId": "10000017",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/d79b9f64-7b42-4164-9457-67faa83f7e51.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000018",
+      "sourceMenuId": "10000018",
+      "name": "케이준포테이토",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6a688ca7-4de6-4da5-a408-e5e4807868f9.jpg"
+    },
+    {
+      "id": "ddangyo-1316383-10000019",
+      "sourceMenuId": "10000019",
+      "name": "맛감자",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f04613b2-3b96-4ffc-92ff-42c09eaa60a2.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

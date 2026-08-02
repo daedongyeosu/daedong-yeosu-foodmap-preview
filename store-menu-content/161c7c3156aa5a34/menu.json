@@ -1,0 +1,161 @@
+{
+  "storeId": "161c7c3156aa5a34",
+  "storeName": "닭익는마을 여수공화점",
+  "displayName": "닭익는마을 여수공화점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/de5dc20b-b26e-4b7e-88bd-8c7b90a45264.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "음료",
+    "사이드"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1237490-10000002",
+      "sourceMenuId": "10000002",
+      "name": "간장찜닭",
+      "description": "뼈 (순살 불가)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/de5dc20b-b26e-4b7e-88bd-8c7b90a45264.jpg"
+    },
+    {
+      "id": "ddangyo-1237490-10000003",
+      "sourceMenuId": "10000003",
+      "name": "고추장찜닭",
+      "description": "뼈 (순살 불가)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b2e10d7e-570c-4354-907c-66e53b882789.jpg"
+    },
+    {
+      "id": "ddangyo-1237490-10000001",
+      "sourceMenuId": "10000001",
+      "name": "닭갈비",
+      "description": "2인분 이상부터 주문 가능해요",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f552e5c5-52c6-4a2e-9017-274a70b19afc.jpg"
+    },
+    {
+      "id": "ddangyo-1237490-10000005",
+      "sourceMenuId": "10000005",
+      "name": "닭곰탕",
+      "description": "공기밥 포함",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/96f98d4e-bbc7-4b4a-8d87-d3bc4c3271f6.jpg"
+    },
+    {
+      "id": "ddangyo-1237490-10000006",
+      "sourceMenuId": "10000006",
+      "name": "닭개장",
+      "description": "공기밥 포함",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/238287d5-0f20-41f2-96aa-ce6812f16e64.jpg"
+    },
+    {
+      "id": "ddangyo-1237490-10000008",
+      "sourceMenuId": "10000008",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/43171f94-2736-408c-9c90-c72f70003c26.jpg"
+    },
+    {
+      "id": "ddangyo-1237490-10000012",
+      "sourceMenuId": "10000012",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000009",
+      "sourceMenuId": "10000009",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/fa423a68-f50f-4c02-93aa-1fa240d7db59.jpg"
+    },
+    {
+      "id": "ddangyo-1237490-10000014",
+      "sourceMenuId": "10000014",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000010",
+      "sourceMenuId": "10000010",
+      "name": "환타 오렌지",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000011",
+      "sourceMenuId": "10000011",
+      "name": "환타 파인",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000013",
+      "sourceMenuId": "10000013",
+      "name": "새우튀김(2p)",
+      "description": "소스 미제공",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000015",
+      "sourceMenuId": "10000015",
+      "name": "황금알치즈볼",
+      "description": "5p",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000007",
+      "sourceMenuId": "10000007",
+      "name": "삼계탕",
+      "description": "공기밥 미포함",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/11aa6a30-9982-4aa9-9685-bbfe4def5a5b.jpg"
+    },
+    {
+      "id": "ddangyo-1237490-10000016",
+      "sourceMenuId": "10000016",
+      "name": "감자고로케",
+      "description": "3p 소스 미제공",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000017",
+      "sourceMenuId": "10000017",
+      "name": "고구마치즈고로케",
+      "description": "3p",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000018",
+      "sourceMenuId": "10000018",
+      "name": "카레고로케",
+      "description": "3p 소스 미제공",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1237490-10000019",
+      "sourceMenuId": "10000019",
+      "name": "모듬감자튀김",
+      "description": "소스 미제공",
+      "category": "사이드",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

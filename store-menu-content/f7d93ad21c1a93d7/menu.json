@@ -1,0 +1,814 @@
+{
+  "storeId": "f7d93ad21c1a93d7",
+  "storeName": "맘스터치 여수엑스포점",
+  "displayName": "맘스터치 여수엑스포점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/6fa07c9a-ae4f-422e-aa5d-6c7e266ddfb5.jpg",
+  "categories": [
+    "전체",
+    "[NEW]신제품",
+    "뼈치킨",
+    "세트메뉴",
+    "사이드/스낵",
+    "순살치킨",
+    "음료",
+    "버거세트",
+    "버거단품"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1181043-30000949",
+      "sourceMenuId": "30000949",
+      "name": "(행사)갓빠삭치킨(순살)",
+      "description": "갓빠삭치킨(순살)1+맘스양념소스(소포장)1",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/422646d2-2239-4e2b-9f6b-f15212076cd1.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000950",
+      "sourceMenuId": "30000950",
+      "name": "(행사)스트레스 빠삭세트(순살)",
+      "description": "갓빠삭빅싸이순살1+불고기버거1+콜라1+맘스양념소스(소포장)1",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5520a853-652e-443c-b2a4-2f22d0222379.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000778",
+      "sourceMenuId": "30000778",
+      "name": "(행사)핫치즈밤치킨(순살)",
+      "description": "[치즈밤 비조리제공] 핫치즈밤치킨(순살)",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/6c828b4f-a81d-45aa-b1c4-d7571ba429a8.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000923",
+      "sourceMenuId": "30000923",
+      "name": "어메이징매콤마요버거 세트",
+      "description": "어메이징매콤마요버거 단품+케이준양념감자(중)+콜라",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/626a58d2-3710-4d41-af43-b93500e58853.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000806",
+      "sourceMenuId": "30000806",
+      "name": "(행사)핫치즈밤치킨(뼈)",
+      "description": "[치즈밤 비조리제공] 핫치즈밤치킨(뼈)",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/6ad65225-21bd-4c37-ad6e-821c72d47ce1.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000808",
+      "sourceMenuId": "30000808",
+      "name": "치킨&버거세트",
+      "description": "치킨1+버거1+콜라1",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/29c4d25e-3a22-4061-b2eb-738b81f6cecf.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000731",
+      "sourceMenuId": "30000731",
+      "name": "치즈스낵업",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b34dced4-c9a5-45ff-a8af-56d6a5fd4c04.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000796",
+      "sourceMenuId": "30000796",
+      "name": "핫치즈치킨(순살)",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/6a252e54-d161-4cdb-9040-33668b01570b.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000510",
+      "sourceMenuId": "30000510",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/4c9783bc-aa38-4764-95f6-77a1007fdf5a.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000511",
+      "sourceMenuId": "30000511",
+      "name": "펩시콜라제로",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/5f31a82c-193c-49f4-a4f6-8dab041d2d8a.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000914",
+      "sourceMenuId": "30000914",
+      "name": "떡강정세트",
+      "description": "떡강정1+버거1+콜라1",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7179fb6a-2ef8-4d0e-b06f-e70736468659.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000732",
+      "sourceMenuId": "30000732",
+      "name": "트리플스낵업",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/da4004e8-dd73-45c4-ac25-b62344411b3a.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000750",
+      "sourceMenuId": "30000750",
+      "name": "매직풍치킨(뼈)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/8d8ffb0a-cd12-43a4-9d67-3e16fb009867.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000512",
+      "sourceMenuId": "30000512",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/1fa748fb-b9fe-40ec-bf5d-bab878f0a7ab.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000680",
+      "sourceMenuId": "30000680",
+      "name": "후덕죽치킨(뼈)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/52effa03-4094-4c74-892b-ad87d44a4a0f.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000671",
+      "sourceMenuId": "30000671",
+      "name": "치킨치즈스틱(2조각)",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/ffe0e5cb-0105-417b-a7a4-0645fe78b32e.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000573",
+      "sourceMenuId": "30000573",
+      "name": "핫치즈치킨(뼈)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/5a8f688b-428d-4bfe-b1d5-0dbf64e4647a.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000672",
+      "sourceMenuId": "30000672",
+      "name": "미트칠리감자",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/39790ba1-f6f7-42d0-850b-2e5669241b61.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000800",
+      "sourceMenuId": "30000800",
+      "name": "후라이드치킨(순살)",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5d48b8bd-19cf-4b28-a6c3-60e62a47a1f0.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000453",
+      "sourceMenuId": "30000453",
+      "name": "언빌리버블버거 세트",
+      "description": "언빌리버블버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/9911b543-cca7-41da-9cf2-7bad410fd4b4.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000476",
+      "sourceMenuId": "30000476",
+      "name": "언빌리버블버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/b58447f8-0050-4b53-9e73-dcbbca5e511f.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000801",
+      "sourceMenuId": "30000801",
+      "name": "맘스양념치킨(순살)",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/795d8f8e-9be2-4583-bfdf-366926df188a.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000479",
+      "sourceMenuId": "30000479",
+      "name": "화이트갈릭버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/23166a68-32d4-426f-b1e2-82e5e7a9bdbd.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000456",
+      "sourceMenuId": "30000456",
+      "name": "화이트갈릭버거 세트",
+      "description": "화이트갈릭버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/2c60846a-f45c-45c5-b442-4e7ab7df9cf9.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000802",
+      "sourceMenuId": "30000802",
+      "name": "간장마늘치킨(순살)",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b65e7942-6bc3-4827-80b0-8f3b7bae7091.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000572",
+      "sourceMenuId": "30000572",
+      "name": "셰프스 버번치킨(뼈)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e5ca6066-9413-412d-973b-2cb569193942.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000474",
+      "sourceMenuId": "30000474",
+      "name": "딥치즈버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/771f8dc0-718c-4d6c-8400-6c32763d27f8.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000451",
+      "sourceMenuId": "30000451",
+      "name": "딥치즈버거 세트",
+      "description": "딥치즈버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/d288145d-6907-4f70-a67c-57fb9ced8a9f.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000482",
+      "sourceMenuId": "30000482",
+      "name": "휠렛버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/71ea9264-bdd2-4ad8-be0b-7c1a619f25c0.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000422",
+      "sourceMenuId": "30000422",
+      "name": "후라이드치킨(뼈)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/da73b532-a85f-48f5-afba-f7959044cddf.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000483",
+      "sourceMenuId": "30000483",
+      "name": "닭강정트리오",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/bad722ac-09ea-4388-a3c0-f45902682ef4.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000459",
+      "sourceMenuId": "30000459",
+      "name": "휠렛버거 세트",
+      "description": "휠렛버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/12e99013-c249-4ba4-b801-7183348e5d36.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000477",
+      "sourceMenuId": "30000477",
+      "name": "불고기버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/9fbb63b9-d1b6-413e-a398-bbf089024151.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000803",
+      "sourceMenuId": "30000803",
+      "name": "케이준떡강정",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/cc256752-8b8a-4000-975f-ce3210631b2d.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000423",
+      "sourceMenuId": "30000423",
+      "name": "맘스양념치킨(뼈)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/6d305cf0-48d5-4b55-aa93-b4bc32c20348.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000454",
+      "sourceMenuId": "30000454",
+      "name": "불고기버거 세트",
+      "description": "불고기버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/4ae0849b-cd9e-469d-8f0b-85fbea6a35ae.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000478",
+      "sourceMenuId": "30000478",
+      "name": "통새우버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/33499585-5cb5-43cb-80cd-e5b83afc301d.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000804",
+      "sourceMenuId": "30000804",
+      "name": "간장마늘떡강정",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/96d98d34-8e78-41a4-947f-9e204a63b6f2.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000817",
+      "sourceMenuId": "30000817",
+      "name": "바삭크림치즈볼",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/d94b256b-a667-42e0-a2b4-b8bb6e6675c6.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000424",
+      "sourceMenuId": "30000424",
+      "name": "간장마늘치킨(뼈)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/480a299d-233e-4a49-8b4a-f015d8f40da3.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000455",
+      "sourceMenuId": "30000455",
+      "name": "통새우버거 세트",
+      "description": "통새우버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/3bb709f8-aab1-4c66-8a89-5ff11afd6c77.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000818",
+      "sourceMenuId": "30000818",
+      "name": "케이준양념감자",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/3c0012b6-f1b6-4825-9e87-5b07b2fa7bc7.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000457",
+      "sourceMenuId": "30000457",
+      "name": "디럭스불고기버거 세트",
+      "description": "디럭스불고기버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/76956fdf-6ad6-47d7-bc09-12540f64798f.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000480",
+      "sourceMenuId": "30000480",
+      "name": "디럭스불고기버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/7e2bd99b-837f-4bcc-b0ca-6e1f36071a5c.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000805",
+      "sourceMenuId": "30000805",
+      "name": "치파오떡강정",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2feb40f1-95bf-4121-a573-150d15b61ecc.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000807",
+      "sourceMenuId": "30000807",
+      "name": "반반치킨(후라이드+양념1종 뼈치킨)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c4a6afc4-f14b-4519-916d-d6dadef52c4a.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000499",
+      "sourceMenuId": "30000499",
+      "name": "치즈감자",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/e9251594-c7b3-497b-946f-0b476adc8588.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000768",
+      "sourceMenuId": "30000768",
+      "name": "당근빵(2조각)",
+      "description": "",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9625f516-1edc-443c-85e9-1b363c68aba5.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000490",
+      "sourceMenuId": "30000490",
+      "name": "후라이드통다리(1조각)",
+      "description": "",
+      "category": "뼈치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/d87f8b1e-1aa2-4a39-9f30-fc76a5877461.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000473",
+      "sourceMenuId": "30000473",
+      "name": "새우불고기버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/ea9a6ff4-0dad-4d88-b96d-4d6f13b66b86.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000450",
+      "sourceMenuId": "30000450",
+      "name": "새우불고기버거 세트",
+      "description": "새우불고기버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/ed6bdde7-4064-44d7-accc-515f31e56a75.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000901",
+      "sourceMenuId": "30000901",
+      "name": "매직풍 싸이버거 싱글세트",
+      "description": "매직풍싸이버거1+매직풍빅싸이순살1+콜라1",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/e2506a11-fc70-42fc-8cc6-2c2520487044.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000439",
+      "sourceMenuId": "30000439",
+      "name": "아라비아따치즈버거 세트",
+      "description": "아라비아따치즈버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/7d962d44-8bd9-4198-b454-7226fea3738e.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000462",
+      "sourceMenuId": "30000462",
+      "name": "아라비아따치즈버거단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/0463714b-683e-4644-82c3-8b3d386d77c3.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000501",
+      "sourceMenuId": "30000501",
+      "name": "치즈스틱(2조각)",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/4728d1d7-27e0-49d0-8fba-919262bfd3d1.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000902",
+      "sourceMenuId": "30000902",
+      "name": "매직풍 싸이버거 커플세트",
+      "description": "매직풍싸이버거1+싸이버거1+매직풍빅싸이순살1+케이준양념감자(중)1+콜라2",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/7218de5a-eea5-43f1-bfdc-c68e17eda27b.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000819",
+      "sourceMenuId": "30000819",
+      "name": "할라피뇨너겟",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ec359773-ed5f-41e2-9720-009acb1383a8.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000743",
+      "sourceMenuId": "30000743",
+      "name": "매직풍싸이버거 세트",
+      "description": "매직풍싸이버거 단품+케이준양념감자(중)+콜라",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5904c667-64bb-441c-9b14-c5ec6b07906f.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000465",
+      "sourceMenuId": "30000465",
+      "name": "쉬림프싸이플렉스버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/512fe75c-fe09-4dbd-9171-92feb378e7b0.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000442",
+      "sourceMenuId": "30000442",
+      "name": "쉬림프싸이플렉스버거 세트",
+      "description": "쉬림프싸이플렉스버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/178b44b8-9704-4156-9dcd-4a3dce6bd3a7.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000744",
+      "sourceMenuId": "30000744",
+      "name": "매직풍싸이버거 단품",
+      "description": "",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/772fc91e-d093-4407-942a-68462b4087a1.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000443",
+      "sourceMenuId": "30000443",
+      "name": "딥치즈싸이버거 세트",
+      "description": "딥치즈싸이버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/f5b633d1-f816-4f3b-b0b0-737912a963eb.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000466",
+      "sourceMenuId": "30000466",
+      "name": "딥치즈싸이버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/2b366460-8b22-4bda-89a8-834d6a1bc48f.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000821",
+      "sourceMenuId": "30000821",
+      "name": "갈릭김떡만/매콤김떡만",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/42c15e1b-7514-42bd-9481-6b942069dea1.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000467",
+      "sourceMenuId": "30000467",
+      "name": "화이트갈릭싸이버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/c9b9b07e-b673-4eb1-bc01-4d85690b8e7b.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000822",
+      "sourceMenuId": "30000822",
+      "name": "팝콘볼",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/96260895-0519-460f-b3f0-53ccecd39adc.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000519",
+      "sourceMenuId": "30000519",
+      "name": "오렌지주스",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/1d96db8a-b1df-40a7-a196-2288129802ec.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000444",
+      "sourceMenuId": "30000444",
+      "name": "화이트갈릭싸이버거 세트",
+      "description": "화이트갈릭싸이버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/b16a594b-debd-4fe3-a85c-d40e44e54610.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000468",
+      "sourceMenuId": "30000468",
+      "name": "싸이플렉스버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/030a0a07-cda4-496c-a773-7f13a6b76d97.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000445",
+      "sourceMenuId": "30000445",
+      "name": "싸이플렉스버거 세트",
+      "description": "싸이플렉스버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/3f1891c8-f2f0-4fc1-8ae7-a5f548640861.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000783",
+      "sourceMenuId": "30000783",
+      "name": "매직풍치킨(순살)",
+      "description": "",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/efcc4bec-75bd-4f07-90b1-044cb9a547fa.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000494",
+      "sourceMenuId": "30000494",
+      "name": "콘샐러드",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/e3c5bdce-7db5-43c5-bec1-4ed385c40986.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000905",
+      "sourceMenuId": "30000905",
+      "name": "후덕죽 싱글세트",
+      "description": "후덕죽싸이버거1+후덕죽빅싸이순살1+콜라1",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/6be2eb2c-f550-48d0-b49e-ad628bc8809d.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000493",
+      "sourceMenuId": "30000493",
+      "name": "코울슬로",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/3c1abcb4-899a-478e-826f-8826860c9dd5.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000469",
+      "sourceMenuId": "30000469",
+      "name": "싸이버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/31f06723-aef9-4df0-8e16-e49e15269ace.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000446",
+      "sourceMenuId": "30000446",
+      "name": "싸이버거 세트",
+      "description": "싸이버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/59fadd67-923d-4a2d-9df2-c09639d22ebf.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000447",
+      "sourceMenuId": "30000447",
+      "name": "불싸이버거 세트",
+      "description": "불싸이버거단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/4cb8105c-1cb1-49ea-b732-5b04546dd96f.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000906",
+      "sourceMenuId": "30000906",
+      "name": "후덕죽 커플세트",
+      "description": "후덕죽통새우버거1+싸이버거1+후덕죽빅싸이순살1+케이준양념감자(중)1+콜라2",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/30e035e6-4ba9-4ee7-aeeb-579955c181d3.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000644",
+      "sourceMenuId": "30000644",
+      "name": "버번소스",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b878ff94-5407-4c89-abc9-4bbf8227af42.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000470",
+      "sourceMenuId": "30000470",
+      "name": "불싸이버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/95ebfec2-bdd4-4141-abd4-c239a261b30c.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000685",
+      "sourceMenuId": "30000685",
+      "name": "후덕죽통새우버거 세트",
+      "description": "후덕죽통새우버거 단품+케이준양념감자(중)+콜라",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/ebad3dec-e524-4f08-956b-3dc41fa4a043.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000506",
+      "sourceMenuId": "30000506",
+      "name": "맘스양념소스",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/39496850-fcaf-42e5-ac6f-8f431bd258f5.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000686",
+      "sourceMenuId": "30000686",
+      "name": "후덕죽통새우버거 단품",
+      "description": "",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/646285a2-b256-4c2c-a890-70fe19bdf43f.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000507",
+      "sourceMenuId": "30000507",
+      "name": "랜치소스",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/53653592-1cd5-4330-9df2-a9d881f172ad.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000508",
+      "sourceMenuId": "30000508",
+      "name": "매콤치즈마요소스",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/3ac49ada-c4fe-421e-8629-9a2b77a01f09.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000687",
+      "sourceMenuId": "30000687",
+      "name": "후덕죽싸이버거 세트",
+      "description": "후덕죽싸이버거 단품+케이준양념감자(중)+콜라",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/fffbd4fc-3fcb-466e-b442-26f1e75cebe2.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000688",
+      "sourceMenuId": "30000688",
+      "name": "후덕죽싸이버거 단품",
+      "description": "",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/6f02e1d1-8566-48f0-8a54-ee31c6b98876.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000665",
+      "sourceMenuId": "30000665",
+      "name": "딥스모크소스",
+      "description": "훈제향 가득한 딥스모크 머스타드",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/49c4fe97-1e1d-441c-9c00-54acf26d0163.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000784",
+      "sourceMenuId": "30000784",
+      "name": "후덕죽치킨(순살)",
+      "description": "",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/622bd25e-2f05-4357-89da-8edff9f5ec84.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000666",
+      "sourceMenuId": "30000666",
+      "name": "고메버터시즈닝",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2d077cea-2214-41f5-82d3-a4c75ea4aca4.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000547",
+      "sourceMenuId": "30000547",
+      "name": "치킨무",
+      "description": "",
+      "category": "사이드/스낵",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/64d58948-9546-4146-b106-bd7752469a70.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000610",
+      "sourceMenuId": "30000610",
+      "name": "셰프스 K 싸이버거 세트",
+      "description": "셰프스 K 싸이버거 단품+케이준양념감자(중)+콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/d0e9c588-7b2d-44e6-8238-1650b64a43b2.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000611",
+      "sourceMenuId": "30000611",
+      "name": "셰프스 K 싸이버거 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/bc2c0cd4-f73e-4227-8faf-b487f76d2660.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000639",
+      "sourceMenuId": "30000639",
+      "name": "슈퍼싸이더블Kick 세트",
+      "description": "슈퍼싸이더블Kick 단품 + 케이준양념감자(중) + 콜라",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3bdc4d93-e9fb-4377-92b0-6ec2e3f32972.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000640",
+      "sourceMenuId": "30000640",
+      "name": "슈퍼싸이더블Kick 단품",
+      "description": "",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/89fddc39-d1f7-4134-b0e4-ebcad3eb54ce.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000799",
+      "sourceMenuId": "30000799",
+      "name": "셰프스 버번치킨(순살)",
+      "description": "",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/f89b773d-3e0d-44c7-9a4e-ec5c7e51b278.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000924",
+      "sourceMenuId": "30000924",
+      "name": "어메이징매콤마요버거 단품",
+      "description": "",
+      "category": "[NEW]신제품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1cc1b862-6dc2-4e18-a0b7-ee4251cba1f8.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000517",
+      "sourceMenuId": "30000517",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/9c33baee-3267-4042-a6c6-70667d428874.jpg"
+    },
+    {
+      "id": "ddangyo-1181043-30000518",
+      "sourceMenuId": "30000518",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/89d1bfb7-35f0-4bee-b4c7-6b827b4acce1.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}
