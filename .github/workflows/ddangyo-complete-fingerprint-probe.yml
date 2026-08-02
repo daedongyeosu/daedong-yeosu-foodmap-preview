@@ -1,44 +1,35 @@
-name: Ddangyo Complete Fingerprint Probe
+name: Install Validated Complete Ddangyo Package
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - scripts/ddangyo-complete-fingerprint-probe.mjs
-      - scripts/collect-all-historical-ddangyo-links.mjs
-      - scripts/extract-all-historical-ddangyo.mjs
-      - scripts/reclassify-all-ddangyo-stores.mjs
-      - scripts/finalize-ddangyo-classification.mjs
-      - scripts/resolve-final-ddangyo-classification.mjs
-      - scripts/ddangyo-package-utils.mjs
-      - scripts/build-ddangyo-service-info.mjs
-      - scripts/build-ddangyo-enrichment.mjs
-      - scripts/build-ddangyo-menus.mjs
-      - scripts/validate-ddangyo-package.mjs
-      - data/ddangyo-manual-existing-overrides.json
       - .github/workflows/ddangyo-complete-fingerprint-probe.yml
-      - .ddangyo-complete-fingerprint-trigger
+      - .install-ddangyo-complete-package-trigger
+      - scripts/**
+      - data/ddangyo-manual-existing-overrides.json
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
-  group: ddangyo-complete-${{ github.ref }}
+  group: install-complete-ddangyo-pr
   cancel-in-progress: true
 
 jobs:
-  probe:
+  install:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 65
     steps:
-      - name: Check out preview full history
+      - name: Check out preview work branch with full history
         uses: actions/checkout@v4
         with:
+          ref: work/ddangyo-hours-benefits-complete
           fetch-depth: 0
           path: preview
 
-      - name: Check out production full history
+      - name: Check out production history
         uses: actions/checkout@v4
         with:
           repository: daedongyeosu/daedong-yeosu-foodmap
@@ -46,86 +37,162 @@ jobs:
           fetch-depth: 0
           path: production
 
-      - name: Collect every historical Ddangyo link from both repositories
-        run: node preview/scripts/collect-all-historical-ddangyo-links.mjs preview production
+      - name: Rebuild and validate complete package
+        run: |
+          node preview/scripts/collect-all-historical-ddangyo-links.mjs preview production
+          cd preview
+          node scripts/ddangyo-complete-fingerprint-probe.mjs
+          node scripts/extract-all-historical-ddangyo.mjs ../ddangyo-historical-links-output/all-historical-ddangyo-links.json
+          node scripts/reclassify-all-ddangyo-stores.mjs ddangyo-all-extraction-output/all-stores-normalized.json
+          node scripts/finalize-ddangyo-classification.mjs ddangyo-reclassification-output/reclassified-stores.json
+          node scripts/resolve-final-ddangyo-classification.mjs ddangyo-final-classification-output/final-stores.json
+          node scripts/build-ddangyo-service-info.mjs ddangyo-final-ready-output/final-stores.json
+          node scripts/build-ddangyo-enrichment.mjs ddangyo-final-ready-output/final-stores.json
+          node scripts/build-ddangyo-menus.mjs ddangyo-final-ready-output/final-stores.json
+          node scripts/validate-ddangyo-package.mjs
 
-      - name: Probe exact hours and coupon request formats
+      - name: Install validated additive files
         working-directory: preview
-        run: node scripts/ddangyo-complete-fingerprint-probe.mjs
+        run: |
+          cp ddangyo-package-output/store-service-info.json store-service-info.json
+          cp ddangyo-package-output/data/ddangyo-store-enrichment.json data/ddangyo-store-enrichment.json
+          cp ddangyo-package-output/data/ddangyo-coupon-details.json data/ddangyo-coupon-details.json
+          rsync -a ddangyo-package-output/store-menu-content/ store-menu-content/
 
-      - name: Extract every historical Ddangyo store
+      - name: Correct stale Ddangyo routes and bump cache versions
         working-directory: preview
-        run: node scripts/extract-all-historical-ddangyo.mjs ../ddangyo-historical-links-output/all-historical-ddangyo-links.json
+        run: |
+          python - <<'PY'
+          from pathlib import Path
 
-      - name: Reclassify existing, new and shop-in-shop stores conservatively
+          runtime_path = Path('ddangyo-preview-runtime.js')
+          runtime = runtime_path.read_text(encoding='utf-8')
+          runtime = runtime.replace(
+              "const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-2';",
+              "const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-4';"
+          )
+          old = '''  function addDdangyoRoute(store, url, report) {
+            const href = safeUrl(url);
+            if (!href) return;
+            if (hasRoute(store, 'ddangyo', '땡겨요')) {
+              report.preservedDdangyoRoutes += 1;
+              return;
+            }
+            if (!Array.isArray(store.routes)) store.routes = [];
+            store.routes.push({name: '땡겨요', key: 'ddangyo', url: href, enabled: true, source: 'ddangyo-preview-batch'});
+            report.addedDdangyoRoutes += 1;
+          }
+          '''
+          new = '''  function addDdangyoRoute(store, row, report) {
+            const href = safeUrl(row?.ddangyoUrl);
+            if (!href) return;
+            if (!Array.isArray(store.routes)) store.routes = [];
+            const verifiedUrls = unique([...(row?.sourceUrls || []), row?.ddangyoUrl])
+              .map(safeUrl)
+              .filter(Boolean);
+            const existing = store.routes.find(route => {
+              const routeKey = String(route?.key || '').toLowerCase();
+              const routeName = String(route?.name || '').replace(/\\s/g, '');
+              return routeKey === 'ddangyo' || routeName.includes('땡겨요');
+            });
+            if (existing) {
+              const current = safeUrl(existing.url);
+              if (current && verifiedUrls.includes(current)) {
+                report.preservedDdangyoRoutes += 1;
+                return;
+              }
+              existing.name = '땡겨요';
+              existing.key = 'ddangyo';
+              existing.url = href;
+              existing.enabled = true;
+              existing.source = 'ddangyo-fingerprint-corrected';
+              report.correctedDdangyoRoutes += 1;
+              return;
+            }
+            store.routes.push({name: '땡겨요', key: 'ddangyo', url: href, enabled: true, source: 'ddangyo-fingerprint'});
+            report.addedDdangyoRoutes += 1;
+          }
+          '''
+          if old not in runtime:
+              raise SystemExit('original addDdangyoRoute block not found')
+          runtime = runtime.replace(old, new)
+          runtime = runtime.replace('addDdangyoRoute(store, row.ddangyoUrl, report);', 'addDdangyoRoute(store, row, report);')
+          runtime = runtime.replace('      preservedDdangyoRoutes: 0,', '      preservedDdangyoRoutes: 0,\n      correctedDdangyoRoutes: 0,')
+          runtime_path.write_text(runtime, encoding='utf-8')
+
+          service_path = Path('store-service-info.js')
+          service = service_path.read_text(encoding='utf-8')
+          service = service.replace('store-service-info.json?v=store-service-6', 'store-service-info.json?v=store-service-7')
+          service_path.write_text(service, encoding='utf-8')
+
+          index_path = Path('index.html')
+          index = index_path.read_text(encoding='utf-8')
+          index = index.replace('store-service-info.css?v=store-service-6', 'store-service-info.css?v=store-service-7')
+          index = index.replace('store-service-info.js?v=store-service-6', 'store-service-info.js?v=store-service-7')
+          index = index.replace('store-menu-content/ddangyo-menu-map.js?v=20260802-3', 'store-menu-content/ddangyo-menu-map.js?v=20260802-4')
+          index = index.replace('ddangyo-preview-runtime.js?v=20260802-3', 'ddangyo-preview-runtime.js?v=20260802-4')
+          index_path.write_text(index, encoding='utf-8')
+          PY
+
+      - name: Validate installed files and protected data
         working-directory: preview
-        run: node scripts/reclassify-all-ddangyo-stores.mjs ddangyo-all-extraction-output/all-stores-normalized.json
+        run: |
+          node --check ddangyo-preview-runtime.js
+          node --check store-service-info.js
+          cmp ddangyo-package-output/store-service-info.json store-service-info.json
+          cmp ddangyo-package-output/data/ddangyo-store-enrichment.json data/ddangyo-store-enrichment.json
+          cmp ddangyo-package-output/data/ddangyo-coupon-details.json data/ddangyo-coupon-details.json
+          grep -q "store-service-info.json?v=store-service-7" store-service-info.js
+          grep -q "store-service-info.css?v=store-service-7" index.html
+          grep -q "store-service-info.js?v=store-service-7" index.html
+          grep -q "ddangyo-menu-map.js?v=20260802-4" index.html
+          grep -q "ddangyo-preview-runtime.js?v=20260802-4" index.html
+          grep -q "correctedDdangyoRoutes" ddangyo-preview-runtime.js
+          test -z "$(git diff --name-only -- data/stores.json)"
+          node - <<'NODE'
+          const fs = require('fs');
+          const service = JSON.parse(fs.readFileSync('store-service-info.json', 'utf8'));
+          const enrichment = JSON.parse(fs.readFileSync('data/ddangyo-store-enrichment.json', 'utf8'));
+          const summary = JSON.parse(fs.readFileSync('ddangyo-package-output/package-validation-summary.json', 'utf8'));
+          if (summary.classification.existing !== 444 || summary.classification.newStores !== 0) throw new Error('identity validation failed');
+          if (summary.service.hoursCreated + summary.service.hoursSupplemented !== 444) throw new Error('hours validation failed');
+          if (summary.menus.menuFiles !== 444) throw new Error('menu validation failed');
+          if (enrichment.stores.length !== 444) throw new Error(`enrichment ${enrichment.stores.length}`);
+          if (!service.stores.d14f1e6669383a88) throw new Error('MegaMGC service record missing');
+          console.log(JSON.stringify(summary, null, 2));
+          NODE
 
-      - name: Reject wrong existing links and identify unresolved identities
+      - name: Remove temporary extraction machinery
         working-directory: preview
-        run: node scripts/finalize-ddangyo-classification.mjs ddangyo-reclassification-output/reclassified-stores.json
+        run: |
+          rm -f .ddangyo-complete-fingerprint-trigger .install-ddangyo-complete-package-trigger
+          rm -f .github/workflows/ddangyo-complete-fingerprint-probe.yml
+          rm -f .github/workflows/install-ddangyo-complete-package.yml
+          rm -f data/ddangyo-manual-existing-overrides.json
+          rm -f scripts/ddangyo-complete-fingerprint-probe.mjs
+          rm -f scripts/collect-all-historical-ddangyo-links.mjs
+          rm -f scripts/extract-all-historical-ddangyo.mjs
+          rm -f scripts/reclassify-all-ddangyo-stores.mjs
+          rm -f scripts/finalize-ddangyo-classification.mjs
+          rm -f scripts/resolve-final-ddangyo-classification.mjs
+          rm -f scripts/ddangyo-package-utils.mjs
+          rm -f scripts/build-ddangyo-service-info.mjs
+          rm -f scripts/build-ddangyo-enrichment.mjs
+          rm -f scripts/build-ddangyo-menus.mjs
+          rm -f scripts/validate-ddangyo-package.mjs
+          rm -rf ddangyo-complete-fingerprint-probe-output
+          rm -rf ddangyo-all-extraction-output
+          rm -rf ddangyo-reclassification-output
+          rm -rf ddangyo-final-classification-output
+          rm -rf ddangyo-final-ready-output
+          rm -rf ddangyo-package-output
 
-      - name: Restore valid existing stores and assign deterministic IDs only to real new stores
+      - name: Commit validated package to preview work branch
         working-directory: preview
-        run: node scripts/resolve-final-ddangyo-classification.mjs ddangyo-final-classification-output/final-stores.json
-
-      - name: Build additive business hours and app-scoped benefits
-        working-directory: preview
-        run: node scripts/build-ddangyo-service-info.mjs ddangyo-final-ready-output/final-stores.json
-
-      - name: Build additive store enrichment
-        working-directory: preview
-        run: node scripts/build-ddangyo-enrichment.mjs ddangyo-final-ready-output/final-stores.json
-
-      - name: Build additive menus, descriptions and images
-        working-directory: preview
-        run: node scripts/build-ddangyo-menus.mjs ddangyo-final-ready-output/final-stores.json
-
-      - name: Validate complete fingerprint package
-        working-directory: preview
-        run: node scripts/validate-ddangyo-package.mjs
-
-      - name: Upload historical link inventory
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: all-historical-ddangyo-links
-          path: ddangyo-historical-links-output
-          if-no-files-found: error
-          retention-days: 2
-
-      - name: Upload complete extraction output
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ddangyo-all-historical-extraction
-          path: preview/ddangyo-all-extraction-output
-          if-no-files-found: error
-          retention-days: 2
-
-      - name: Upload strict identity conflict report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ddangyo-final-classification
-          path: preview/ddangyo-final-classification-output
-          if-no-files-found: error
-          retention-days: 2
-
-      - name: Upload final ready identity report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ddangyo-final-ready-classification
-          path: preview/ddangyo-final-ready-output
-          if-no-files-found: error
-          retention-days: 2
-
-      - name: Upload validated additive package
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ddangyo-complete-package
-          path: preview/ddangyo-package-output
-          if-no-files-found: error
-          retention-days: 2
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "과거 전체 땡겨요 444곳 지문등록식 누락정보 보완"
+          git pull --rebase origin work/ddangyo-hours-benefits-complete
+          git push origin HEAD:work/ddangyo-hours-benefits-complete
