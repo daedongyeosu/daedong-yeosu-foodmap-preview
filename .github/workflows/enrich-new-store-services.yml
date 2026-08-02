@@ -6,12 +6,19 @@ on:
       - work/new-store-services-preview
     paths:
       - .new-store-services-trigger
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ddangyo-preview-runtime.js
+      - .new-store-services-trigger
+      - .github/workflows/enrich-new-store-services.yml
 
 permissions:
   contents: write
 
 concurrency:
-  group: enrich-new-store-services-preview
+  group: enrich-new-store-services-preview-${{ github.event_name }}
   cancel-in-progress: true
 
 jobs:
