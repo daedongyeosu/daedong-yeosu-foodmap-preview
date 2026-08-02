@@ -31,6 +31,6 @@ assert.match(index, /가게바로주문<small>\(준비중\)<\/small>/);
 assert.match(index, /app\.css\?v=[^"]*direct-coming-soon-1/);
 assert.match(index, /app\.js\?v=[^"]*direct-coming-soon-1/);
 assert.match(index, /store-menu-preview\.css\?v=store-menu-14-direct-coming-soon-1/);
-assert.match(index, /store-menu-preview\.js\?v=store-menu-16-direct-coming-soon-1/);
+assert.match(index, /store-menu-preview\.js\?v=store-menu-17-direct-coming-soon-1-unified-menu-search-1/);
 
 console.log('PASS: 가게바로주문 주소 564곳 보존, 홈·가게상세·음식보기 준비중 비활성화 통일');

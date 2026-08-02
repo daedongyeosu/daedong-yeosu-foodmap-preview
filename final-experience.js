@@ -155,6 +155,7 @@ function fxRenderSearchResults(query=''){
 }
 function fxSearchModal(query=''){
  const q=String(query).trim(),current=$('#modal .search-popup');
+ if(window.daedongStoreServiceInfo?.showOverview){window.daedongStoreServiceInfo.showOverview(document.activeElement,{query:q,focusQuery:true});return;}
  if(current&&!$('#modal').hidden){const input=$('#fxSearchInput');if(input)input.value=q;fxRenderSearchResults(q);setTimeout(()=>input?.focus(),0);return;}
  openModal(`<section class="app-browser search-popup"><h2 id="modalTitle">메뉴·가게명·동네 검색</h2><div class="searchbox"><input id="fxSearchInput" value="${escapeHtml(q)}" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="fxSearchRun" class="primary-btn" type="button">검색</button></div><div id="fxSearchResults" class="app-browser-list" aria-live="polite"></div></section>`);
  const input=$('#fxSearchInput'),run=$('#fxSearchRun');run?.addEventListener('click',()=>fxRenderSearchResults(input?.value||''));

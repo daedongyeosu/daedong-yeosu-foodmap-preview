@@ -2,8 +2,10 @@
 
 (() => {
   const DATA_URL = 'store-service-info.json?v=store-service-9';
+  const MENU_SEARCH_URL = 'data/store-menu-search-index.json?v=menu-search-2';
   const HISTORY_KEY = 'daedongStoreServiceOverview';
   const CLOSING_SOON_MINUTES = 60;
+  const MENU_MATCH_PREVIEW_LIMIT = 4;
   const WEEK_KEYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
   const WEEK_FROM_SHORT = {
     Sun: 'sun',
@@ -34,6 +36,10 @@
   let selectedArea = '';
   let overviewQuery = '';
   let overviewQueryComposing = false;
+  let pendingMenuOpen = null;
+  let menuSearchData = {stores: {}};
+  let menuSearchState = 'idle';
+  let menuSearchPromise = null;
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({
     '&': '&amp;',
@@ -47,6 +53,77 @@
     .normalize('NFKC')
     .replace(/\s+/g, '')
     .toLowerCase();
+
+  const MENU_FAMILIES = [
+    {key: '빙수', label: '빙수', matches: value => value.includes('빙수'), terms: ['빙수']},
+    {key: '족발', label: '족발', matches: value => value.includes('족발') || value.includes('불족'), terms: ['족발', '불족', '냉채족']},
+    {key: '치킨', label: '치킨', matches: value => ['치킨', '통닭', '닭강정'].some(term => value.includes(term)), terms: ['치킨', '통닭', '닭강정', '후라이드', '양념', '간장', '순살', '윙봉']},
+    {key: '커피', label: '커피', matches: value => ['커피', '아메리카노', '에스프레소', '콜드브루'].some(term => value.includes(term)), terms: ['커피', '아메리카노', '에스프레소', '카페라떼', '카푸치노', '마키아토', '콜드브루', '핸드드립']},
+    {key: '빵', label: '빵·베이커리', matches: value => value === '빵' || ['베이커리', '식빵', '소금빵', '크루아상', '크로와상', '바게트', '베이글', '도넛'].some(term => value.includes(term)), terms: ['빵', '식빵', '소금빵', '크루아상', '크로와상', '바게트', '베이글', '도넛', '단팥빵', '붕어빵']},
+    {key: '회', label: '회·사시미', matches: value => value === '회' || value.endsWith('회') || ['횟집', '사시미', '광어', '우럭', '참돔', '물회'].some(term => value.includes(term)), terms: ['회', '사시미', '광어', '우럭', '참돔', '도다리', '물회', '숙회', '육회']}
+  ];
+
+  function menuSearchSpec(query) {
+    const value = normalize(query);
+    const family = MENU_FAMILIES.find(item => item.matches(value));
+    if (family) return family;
+    return value ? {key: value, label: String(query || '').trim(), matches: () => true, terms: [value]} : null;
+  }
+
+  function menuItemMatches(item, spec, store) {
+    if (!spec) return false;
+    let text = normalize(`${item?.[1] || ''} ${item?.[2] || ''}`);
+    if (spec.key === '회') text = text.replace(/회오리|회복|회전/g, '');
+    if (spec.key === '치킨') {
+      const explicit = ['치킨', '통닭', '닭강정'].some(term => text.includes(term));
+      const chickenStore = normalize([store?.category, store?.cat, store?.categories].flat().join(' ')).includes('치킨');
+      return explicit || (chickenStore && spec.terms.some(term => text.includes(normalize(term))));
+    }
+    return spec.terms.some(term => text.includes(normalize(term)));
+  }
+
+  function menuMatchesForStore(storeId, query, store) {
+    const record = menuSearchData.stores?.[String(storeId)];
+    const spec = menuSearchSpec(query);
+    if (!record || !spec) return [];
+    return (record.i || []).filter(item => menuItemMatches(item, spec, store)).map(item => ({
+      id: String(item[0] || ''),
+      name: String(item[1] || ''),
+      category: String(item[2] || ''),
+      image: String(item[3] || '')
+    }));
+  }
+
+  function ensureMenuSearchData() {
+    if (menuSearchPromise) return menuSearchPromise;
+    menuSearchState = 'loading';
+    menuSearchPromise = fetch(MENU_SEARCH_URL, {cache: 'force-cache'})
+      .then(response => {
+        if (!response.ok) throw new Error(`메뉴 검색자료를 불러오지 못했습니다. (${response.status})`);
+        return response.json();
+      })
+      .then(async data => {
+        if (data?.stores) return data;
+        if (!Array.isArray(data?.chunks)) return {stores: {}};
+        const chunks = await Promise.all(data.chunks.map(async path => {
+          const response = await fetch(`${path}?v=menu-search-2`, {cache: 'force-cache'});
+          if (!response.ok) throw new Error(`메뉴 검색자료 조각을 불러오지 못했습니다. (${response.status})`);
+          return response.json();
+        }));
+        return {...data, stores: Object.assign({}, ...chunks.map(chunk => chunk?.stores || {}))};
+      })
+      .then(data => {
+        menuSearchData = data?.stores ? data : {stores: {}};
+        menuSearchState = 'ready';
+        return menuSearchData;
+      })
+      .catch(error => {
+        menuSearchState = 'error';
+        console.warn(error);
+        return menuSearchData;
+      });
+    return menuSearchPromise;
+  }
 
   function timeMinutes(value) {
     const [hour, minute] = String(value || '').split(':').map(Number);
@@ -412,21 +489,36 @@
       }
     }
 
-    if (!document.querySelector('[data-store-service-search-open]')) {
-      const searchRow = document.querySelector('.main-search-row');
-      if (searchRow) {
-        const entry = document.createElement('div');
-        entry.className = 'store-service-search-entry';
-        entry.innerHTML = `
-          <button type="button" data-store-service-search-open>
-            <span aria-hidden="true">◷</span>
-            <b>지금 영업하는 가게·주문앱별 혜택 찾기</b>
-            <small>먹깨비·땡겨요 섬섬페이 · 땡겨요 지원금·온누리·무료배달</small>
-            <i aria-hidden="true">›</i>
-          </button>
-        `;
-        searchRow.after(entry);
-      }
+    const searchRow = document.querySelector('.main-search-row');
+    let entry = document.querySelector('[data-store-finder-quick]');
+    if (!entry && searchRow) {
+      entry = document.createElement('section');
+      entry.className = 'store-finder-quick';
+      entry.dataset.storeFinderQuick = '';
+      entry.innerHTML = `
+        <div class="store-finder-location">
+          <span aria-hidden="true">📍</span>
+          <b data-store-finder-location-label>주소를 설정하면 가까운 순</b>
+          <button type="button" data-store-service-address-change>주소 변경</button>
+        </div>
+        <nav aria-label="빠른 가게 찾기 조건">
+          <button type="button" data-store-service-quick-status="open">🟢 지금 영업 중 <b data-store-finder-open-count></b></button>
+          <button type="button" data-store-service-quick-benefit>🎁 혜택 찾기</button>
+          <button type="button" data-store-service-quick-location="all">전체 동네</button>
+        </nav>
+      `;
+      searchRow.after(entry);
+    }
+    if (entry) {
+      const location = typeof state !== 'undefined' ? String(state.location || '') : '';
+      const hasLocation = location && location !== '여수시 전체';
+      const label = entry.querySelector('[data-store-finder-location-label]');
+      if (label) label.textContent = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
+      const count = sourceStores().reduce((total, store) => (
+        ['open', 'closing-soon'].includes(storeStatus(serviceData.stores?.[storeIdOf(store)]).state) ? total + 1 : total
+      ), 0);
+      const countNode = entry.querySelector('[data-store-finder-open-count]');
+      if (countNode) countNode.textContent = String(count);
     }
   }
 
@@ -517,7 +609,8 @@
         index,
         areaDistance: reference ? distanceBetween(reference, areaCoordinate) : Number.POSITIVE_INFINITY,
         status: storeStatus(info),
-        benefits: benefitLabels(info)
+        benefits: benefitLabels(info),
+        menuMatches: menuMatchesForStore(storeId, overviewQuery, store)
       };
     });
   }
@@ -553,12 +646,25 @@ function overviewSearchText(entry) {
   ]).filter(Boolean).join(' ');
 }
 
+  function entryMatchesQuery(entry) {
+    const raw = String(overviewQuery || '').trim();
+    if (!raw) return true;
+    const text = normalize(overviewSearchText(entry));
+    const spec = menuSearchSpec(raw);
+    const compact = normalize(raw);
+    if (text.includes(compact)) return true;
+    const rawTokens = raw.split(/\s+/).map(normalize).filter(Boolean);
+    const familyTokens = spec && spec.key !== compact
+      ? rawTokens.filter(token => !spec.matches(token))
+      : [];
+    const contextTokens = familyTokens.length ? familyTokens : rawTokens;
+    const contextMatched = contextTokens.every(token => text.includes(token) || spec?.matches(token));
+    return contextMatched && (entry.menuMatches.length > 0 || rawTokens.every(token => text.includes(token)));
+  }
+
   function filteredOverviewEntries() {
-    const query = normalize(overviewQuery);
     const scoped = overviewEntries().filter(entry => {
-      if (query && !normalize(overviewSearchText(entry)).includes(query)) {
-        return false;
-      }
+      if (!entryMatchesQuery(entry)) return false;
       if (locationMode === 'selected' && entry.area !== ensureSelectedArea()) return false;
       if (activeStatus === 'open' && !['open', 'closing-soon'].includes(entry.status.state)) return false;
       if (activeStatus !== 'all' && activeStatus !== 'open' && entry.status.state !== activeStatus) return false;
@@ -611,26 +717,57 @@ function overviewSearchText(entry) {
 
   function overviewCardMarkup(entry) {
     const verified = verifiedLabel(entry.info);
+    const menuSpec = menuSearchSpec(overviewQuery);
+    const menuMatches = entry.menuMatches || [];
+    const menuPreview = menuMatches.slice(0, MENU_MATCH_PREVIEW_LIMIT);
+    const menuMarkup = menuMatches.length ? `
+      <section class="store-service-menu-matches" aria-label="${escapeHtml(entry.store?.name || '가게')} 일치 메뉴">
+        <header>
+          <b>‘${escapeHtml(menuSpec?.label || overviewQuery)}’ 일치 메뉴</b>
+          <span>${menuMatches.length}개</span>
+        </header>
+        <div>
+          ${menuPreview.map(item => `
+            <button type="button" data-store-service-menu-open data-store-service-menu-store-id="${escapeHtml(entry.storeId)}" data-store-service-menu-id="${escapeHtml(item.id)}">
+              ${item.image ? `<img src="${escapeHtml(item.image)}" alt="" loading="lazy" decoding="async">` : '<span class="store-service-menu-image-empty" aria-hidden="true">메뉴</span>'}
+              <span>
+                <small>${escapeHtml(item.category || '메뉴')}</small>
+                <strong>${escapeHtml(item.name)}</strong>
+              </span>
+              <i aria-hidden="true">›</i>
+            </button>
+          `).join('')}
+        </div>
+        ${menuMatches.length > MENU_MATCH_PREVIEW_LIMIT ? `
+          <button type="button" class="store-service-menu-all" data-store-service-menu-open data-store-service-menu-store-id="${escapeHtml(entry.storeId)}">
+            이 가게의 ${escapeHtml(menuSpec?.label || '일치')} 메뉴 ${menuMatches.length}개 모두 보기
+          </button>
+        ` : ''}
+      </section>
+    ` : '';
     return `
-      <button type="button" class="store-service-overview-card" data-store-service-store-id="${escapeHtml(entry.storeId)}">
-        <span class="store-service-overview-card-main">
-          <strong>${escapeHtml(entry.store?.name || '가게 정보')}</strong>
-          <small>${escapeHtml(entry.area)} · ${escapeHtml(entry.status.today)}</small>
-        </span>
-        <span class="store-service-status is-${escapeHtml(entry.status.state)}">
-          <i aria-hidden="true"></i>${escapeHtml(entry.status.label)}
-        </span>
-        <span class="store-service-overview-payments">
-          ${entry.benefits.length
-            ? entry.benefits.map(benefit => {
-              const deliveryClass = benefit.kind === 'delivery' ? ' class="is-delivery"' : '';
-              return `<b${deliveryClass}>✓ ${escapeHtml(scopedBenefitLabel(benefit))}</b>`;
-            }).join('')
-            : '<b class="is-unknown">주문앱별 혜택 미확인</b>'}
-          ${verified ? `<small>${escapeHtml(verified)}</small>` : ''}
-        </span>
-        <i aria-hidden="true">›</i>
-      </button>
+      <article class="store-service-overview-group">
+        <button type="button" class="store-service-overview-card" data-store-service-store-id="${escapeHtml(entry.storeId)}">
+          <span class="store-service-overview-card-main">
+            <strong>${escapeHtml(entry.store?.name || '가게 정보')}</strong>
+            <small>${escapeHtml(entry.area)} · ${escapeHtml(entry.status.today)}</small>
+          </span>
+          <span class="store-service-status is-${escapeHtml(entry.status.state)}">
+            <i aria-hidden="true"></i>${escapeHtml(entry.status.label)}
+          </span>
+          <span class="store-service-overview-payments">
+            ${entry.benefits.length
+              ? entry.benefits.map(benefit => {
+                const deliveryClass = benefit.kind === 'delivery' ? ' class="is-delivery"' : '';
+                return `<b${deliveryClass}>✓ ${escapeHtml(scopedBenefitLabel(benefit))}</b>`;
+              }).join('')
+              : '<b class="is-unknown">주문앱별 혜택 미확인</b>'}
+            ${verified ? `<small>${escapeHtml(verified)}</small>` : ''}
+          </span>
+          <i aria-hidden="true">›</i>
+        </button>
+        ${menuMarkup}
+      </article>
     `;
   }
 
@@ -640,7 +777,7 @@ function overviewSearchText(entry) {
     const locationAndBenefitEntries = allEntries.filter(entry => (
       (locationMode !== 'selected' || entry.area === selectedArea)
       && (activeBenefit === 'all' || acceptsBenefit(entry.info, activeBenefit))
-      && (!overviewQuery || normalize(overviewSearchText(entry)).includes(normalize(overviewQuery)))
+      && entryMatchesQuery(entry)
     ));
     const counts = statusCounts(locationAndBenefitEntries);
     const entries = filteredOverviewEntries();
@@ -661,19 +798,19 @@ function overviewSearchText(entry) {
       <section class="store-service-overview" role="dialog" aria-modal="true" aria-labelledby="storeServiceOverviewTitle" data-store-service-source-count="${allEntries.length}">
         <header>
           <div>
-            <span>가게 검색</span>
-            <h2 id="storeServiceOverviewTitle">영업시간·주문앱별 혜택 찾기</h2>
+            <span>통합 가게 찾기</span>
+            <h2 id="storeServiceOverviewTitle">메뉴·가게·혜택 한 번에 찾기</h2>
           </div>
           <button type="button" data-store-service-overview-close aria-label="영업시간·결제·배달혜택 찾기 닫기">×</button>
         </header>
 
         <p class="store-service-overview-lead">
-          현재 위치에서 가까운 동네부터 볼 수 있습니다. 상품권·쿠폰·무료배달은 배지에 표시된 주문앱 기준이며 다른 주문앱에는 적용되지 않을 수 있습니다.
+          음식 이름을 검색하면 해당 메뉴가 있는 가게와 일치 메뉴를 함께 보여드립니다. 상품권·쿠폰·무료배달은 배지에 표시된 주문앱 기준입니다.
         </p>
 
         <label class="store-service-overview-search">
           <span aria-hidden="true">⌕</span>
-          <input type="search" value="${escapeHtml(overviewQuery)}" data-store-service-query placeholder="가게명·음식종류·동네 검색" aria-label="영업시간 및 결제·배달혜택 가게 검색">
+          <input type="search" value="${escapeHtml(overviewQuery)}" data-store-service-query placeholder="메뉴·가게명·동네 검색 (예: 팥빙수)" aria-label="메뉴·가게명·동네 통합 검색">
           ${overviewQuery ? '<button type="button" data-store-service-query-clear aria-label="검색어 지우기">×</button>' : ''}
         </label>
 
@@ -721,14 +858,19 @@ function overviewSearchText(entry) {
         </section>
 
         <div class="store-service-overview-result" aria-live="polite">
-          <b>${isEntireStoreList ? '전체 가게' : `${entries.length}개 가게`}</b>
+          <b>${overviewQuery ? '검색 결과' : activeStatus === 'open' ? `지금 영업 중 ${entries.length}곳` : isEntireStoreList ? '전체 가게' : '조건에 맞는 가게'}</b>
           <span>${escapeHtml(locationDescription())}</span>
         </div>
 
         <div class="store-service-overview-list">
+          ${overviewQuery && menuSearchState === 'loading'
+            ? '<p class="store-service-menu-loading">등록된 메뉴판을 함께 검색하고 있습니다…</p>'
+            : ''}
           ${entries.length
             ? entries.map(overviewCardMarkup).join('')
-            : '<p class="store-service-overview-empty">이 조건으로 확인되는 가게가 아직 없습니다.<small>다른 영업상태·혜택·지역범위를 선택해 보세요.</small></p>'}
+            : overviewQuery && menuSearchState === 'loading'
+              ? ''
+              : '<p class="store-service-overview-empty">이 조건으로 확인되는 가게가 아직 없습니다.<small>다른 검색어·영업상태·혜택·지역범위를 선택해 보세요.</small></p>'}
         </div>
 
         <footer>
@@ -750,7 +892,14 @@ function overviewSearchText(entry) {
     return overlay;
   }
 
-  function renderOverview({focusQuery = false} = {}) {
+  function renderOverview({focusQuery = false, focusSection = ''} = {}) {
+    if (overviewQuery && menuSearchState === 'idle') {
+      const requestedQuery = overviewQuery;
+      ensureMenuSearchData().then(() => {
+        const currentOverlay = document.querySelector('[data-store-service-overview-overlay]');
+        if (currentOverlay && !currentOverlay.hidden && overviewQuery === requestedQuery) renderOverview();
+      });
+    }
     const overlay = ensureOverviewOverlay();
     const scrollTop = overlay.querySelector('.store-service-overview')?.scrollTop || 0;
     overlay.innerHTML = overviewMarkup();
@@ -761,15 +910,19 @@ function overviewSearchText(entry) {
       input?.focus();
       input?.setSelectionRange?.(input.value.length, input.value.length);
     }
+    if (focusSection) {
+      const section = overlay.querySelector(`[aria-labelledby="${focusSection}"]`);
+      window.requestAnimationFrame(() => section?.scrollIntoView({block: 'start'}));
+    }
   }
 
-  function showOverview(trigger) {
+  function showOverview(trigger, options = {}) {
     const overlay = ensureOverviewOverlay();
     lastFocused = trigger || document.activeElement;
-    activeStatus = 'all';
-    activeBenefit = 'all';
-    locationMode = 'nearby';
-    overviewQuery = '';
+    activeStatus = options.status || 'all';
+    activeBenefit = options.benefit || 'all';
+    locationMode = options.locationMode || 'nearby';
+    overviewQuery = String(options.query || '').trim();
     renderOverview();
     overlay.hidden = false;
     document.body.classList.add('store-service-overview-open');
@@ -778,7 +931,13 @@ function overviewSearchText(entry) {
     } catch {
       // The finder still works when browser history is unavailable.
     }
-    overlay.querySelector('[data-store-service-overview-close]')?.focus();
+    if (options.focusQuery === true) {
+      window.requestAnimationFrame(() => overlay.querySelector('[data-store-service-query]')?.focus());
+    } else if (options.focusSection) {
+      window.requestAnimationFrame(() => overlay.querySelector(`[aria-labelledby="${options.focusSection}"]`)?.scrollIntoView({block: 'start'}));
+    } else {
+      overlay.querySelector('[data-store-service-overview-close]')?.focus();
+    }
   }
 
   function hideOverview({restoreFocus = true} = {}) {
@@ -804,6 +963,16 @@ function overviewSearchText(entry) {
       return;
     }
     document.querySelector(`#storeGrid .store-card[data-id="${CSS.escape(storeId)}"]`)?.click();
+  }
+
+  function openMenuAfterOverview(request) {
+    if (!request?.storeId) return;
+    const spec = menuSearchSpec(request.query);
+    const query = spec?.key || request.query || '';
+    window.daedongMenuPreview?.open?.(request.storeId, {
+      query,
+      menuId: request.menuId || ''
+    });
   }
 
   const ready = fetch(DATA_URL, {cache: 'no-store'})
@@ -862,6 +1031,25 @@ document.addEventListener('input', event => {
       showOverview(opener);
       return;
     }
+    if (event.target.closest('[data-store-service-address-change]')) {
+      document.querySelector('#locationBtn')?.click();
+      return;
+    }
+    const quickStatus = event.target.closest('[data-store-service-quick-status]');
+    if (quickStatus) {
+      showOverview(quickStatus, {status: quickStatus.dataset.storeServiceQuickStatus || 'open'});
+      return;
+    }
+    const quickBenefit = event.target.closest('[data-store-service-quick-benefit]');
+    if (quickBenefit) {
+      showOverview(quickBenefit, {focusSection: 'storeServiceBenefitLabel'});
+      return;
+    }
+    const quickLocation = event.target.closest('[data-store-service-quick-location]');
+    if (quickLocation) {
+      showOverview(quickLocation, {locationMode: quickLocation.dataset.storeServiceQuickLocation || 'all'});
+      return;
+    }
     if (event.target.closest('[data-store-service-overview-close]')) {
       requestOverviewClose();
       return;
@@ -890,6 +1078,22 @@ document.addEventListener('input', event => {
       renderOverview();
       return;
     }
+    const menuCard = event.target.closest('[data-store-service-menu-open]');
+    if (menuCard) {
+      pendingMenuOpen = {
+        storeId: menuCard.dataset.storeServiceMenuStoreId || '',
+        menuId: menuCard.dataset.storeServiceMenuId || '',
+        query: overviewQuery
+      };
+      if (history.state?.[HISTORY_KEY]) history.back();
+      else {
+        const request = pendingMenuOpen;
+        pendingMenuOpen = null;
+        hideOverview({restoreFocus: false});
+        openMenuAfterOverview(request);
+      }
+      return;
+    }
     const storeCard = event.target.closest('[data-store-service-store-id]');
     if (storeCard) {
       pendingStoreId = storeCard.dataset.storeServiceStoreId || '';
@@ -906,7 +1110,13 @@ document.addEventListener('input', event => {
     const overlay = document.querySelector('[data-store-service-overview-overlay]');
     if (!overlay || overlay.hidden || event.state?.[HISTORY_KEY]) return;
     event.stopImmediatePropagation();
-    hideOverview({restoreFocus: !pendingStoreId});
+    hideOverview({restoreFocus: !pendingStoreId && !pendingMenuOpen});
+    if (pendingMenuOpen) {
+      const request = pendingMenuOpen;
+      pendingMenuOpen = null;
+      window.setTimeout(() => openMenuAfterOverview(request), 0);
+      return;
+    }
     if (pendingStoreId) {
       const storeId = pendingStoreId;
       pendingStoreId = '';

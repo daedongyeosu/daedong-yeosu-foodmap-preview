@@ -10,7 +10,7 @@ const assert=(condition,message)=>{if(!condition)throw new Error(message);};
 const searchable=stores.filter(store=>(store.store_id||store.id)&&store.name?.trim()&&store.name!=='제목 없음');
 const localColdNoodle=searchable.find(store=>store.name==='금성칡냉면 미평점');
 
-assert(searchable.length===649,`search scope changed: ${searchable.length}`);
+assert(searchable.length===709,`search scope changed: ${searchable.length}`);
 assert(localColdNoodle,'둔덕·미평 냉면 가게가 검색 데이터에서 빠졌습니다.');
 assert(/미평/.test(localColdNoodle.district)&&/둔덕/.test(localColdNoodle.district),'복수 동네 정보가 유지되지 않았습니다.');
 assert(js.includes('function fxRankSearchMatches(matches)'), '검색 위치 정렬 함수가 없습니다.');
