@@ -6,6 +6,12 @@ on:
       - fix/store-service-korean-ime-search
     paths:
       - .store-service-korean-ime-fix-trigger
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .store-service-korean-ime-fix-trigger
+      - .github/workflows/store-service-korean-ime-fix.yml
 
 permissions:
   contents: write
