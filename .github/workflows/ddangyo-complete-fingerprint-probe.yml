@@ -61,78 +61,7 @@ jobs:
 
       - name: Correct stale Ddangyo routes and bump cache versions
         working-directory: preview
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          runtime_path = Path('ddangyo-preview-runtime.js')
-          runtime = runtime_path.read_text(encoding='utf-8')
-          runtime = runtime.replace(
-              "const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-2';",
-              "const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-4';"
-          )
-          old = '''  function addDdangyoRoute(store, url, report) {
-            const href = safeUrl(url);
-            if (!href) return;
-            if (hasRoute(store, 'ddangyo', '땡겨요')) {
-              report.preservedDdangyoRoutes += 1;
-              return;
-            }
-            if (!Array.isArray(store.routes)) store.routes = [];
-            store.routes.push({name: '땡겨요', key: 'ddangyo', url: href, enabled: true, source: 'ddangyo-preview-batch'});
-            report.addedDdangyoRoutes += 1;
-          }
-          '''
-          new = '''  function addDdangyoRoute(store, row, report) {
-            const href = safeUrl(row?.ddangyoUrl);
-            if (!href) return;
-            if (!Array.isArray(store.routes)) store.routes = [];
-            const verifiedUrls = unique([...(row?.sourceUrls || []), row?.ddangyoUrl])
-              .map(safeUrl)
-              .filter(Boolean);
-            const existing = store.routes.find(route => {
-              const routeKey = String(route?.key || '').toLowerCase();
-              const routeName = String(route?.name || '').replace(/\\s/g, '');
-              return routeKey === 'ddangyo' || routeName.includes('땡겨요');
-            });
-            if (existing) {
-              const current = safeUrl(existing.url);
-              if (current && verifiedUrls.includes(current)) {
-                report.preservedDdangyoRoutes += 1;
-                return;
-              }
-              existing.name = '땡겨요';
-              existing.key = 'ddangyo';
-              existing.url = href;
-              existing.enabled = true;
-              existing.source = 'ddangyo-fingerprint-corrected';
-              report.correctedDdangyoRoutes += 1;
-              return;
-            }
-            store.routes.push({name: '땡겨요', key: 'ddangyo', url: href, enabled: true, source: 'ddangyo-fingerprint'});
-            report.addedDdangyoRoutes += 1;
-          }
-          '''
-          if old not in runtime:
-              raise SystemExit('original addDdangyoRoute block not found')
-          runtime = runtime.replace(old, new)
-          runtime = runtime.replace('addDdangyoRoute(store, row.ddangyoUrl, report);', 'addDdangyoRoute(store, row, report);')
-          runtime = runtime.replace('      preservedDdangyoRoutes: 0,', '      preservedDdangyoRoutes: 0,\n      correctedDdangyoRoutes: 0,')
-          runtime_path.write_text(runtime, encoding='utf-8')
-
-          service_path = Path('store-service-info.js')
-          service = service_path.read_text(encoding='utf-8')
-          service = service.replace('store-service-info.json?v=store-service-6', 'store-service-info.json?v=store-service-7')
-          service_path.write_text(service, encoding='utf-8')
-
-          index_path = Path('index.html')
-          index = index_path.read_text(encoding='utf-8')
-          index = index.replace('store-service-info.css?v=store-service-6', 'store-service-info.css?v=store-service-7')
-          index = index.replace('store-service-info.js?v=store-service-6', 'store-service-info.js?v=store-service-7')
-          index = index.replace('store-menu-content/ddangyo-menu-map.js?v=20260802-3', 'store-menu-content/ddangyo-menu-map.js?v=20260802-4')
-          index = index.replace('ddangyo-preview-runtime.js?v=20260802-3', 'ddangyo-preview-runtime.js?v=20260802-4')
-          index_path.write_text(index, encoding='utf-8')
-          PY
+        run: node scripts/patch-installed-ddangyo-runtime.mjs
 
       - name: Validate installed files and protected data
         working-directory: preview
@@ -180,6 +109,7 @@ jobs:
           rm -f scripts/build-ddangyo-enrichment.mjs
           rm -f scripts/build-ddangyo-menus.mjs
           rm -f scripts/validate-ddangyo-package.mjs
+          rm -f scripts/patch-installed-ddangyo-runtime.mjs
           rm -rf ddangyo-complete-fingerprint-probe-output
           rm -rf ddangyo-all-extraction-output
           rm -rf ddangyo-reclassification-output
