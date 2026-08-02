@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "batchId": "ddangyo-chicken-batch-01",
-  "generatedAt": "2026-08-02T06:54:01.655Z",
+  "generatedAt": "2026-08-02T07:01:37.040Z",
   "policy": {
     "mode": "add-missing-only",
     "identity": "verified-address-and-existing-store-id",
@@ -48,41 +48,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "죽림3길5-14",
         "attempts": [
           {
-            "query": "메고지고 여수죽림점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "메고지고 여수죽림점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "메고지고 여수죽림점 전남 여수시 죽림3길 5-14",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 죽림3길 5-14",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%A9%94%EA%B3%A0%EC%A7%80%EA%B3%A0%20%EC%97%AC%EC%88%98%EC%A3%BD%EB%A6%BC%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "2014808792",
+            "name": "place",
+            "roadAddress": "도로명",
+            "address": "주소"
+          }
+        ]
       }
     },
     {
@@ -376,41 +360,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "여서로136",
         "attempts": [
           {
-            "query": "순살 참잘튀기는집 여수점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "순살 참잘튀기는집 여수점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "순살 참잘튀기는집 여수점 전남 여수시 여서로 136",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 여서로 136",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%88%9C%EC%82%B4%20%EC%B0%B8%EC%9E%98%ED%8A%80%EA%B8%B0%EB%8A%94%EC%A7%91%20%EC%97%AC%EC%88%98%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1109161413",
+            "name": "순살 참잘튀기는집 여수점",
+            "roadAddress": "전남광주 여수시 여서로 146-2 현대건설아파트",
+            "address": "전남광주 여수시 여서동 489-1"
+          }
+        ]
       }
     },
     {
@@ -443,41 +411,48 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "여서로136",
         "attempts": [
           {
-            "query": "치코두마리파닭",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "치코두마리파닭 여수",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%EC%BD%94%EB%91%90%EB%A7%88%EB%A6%AC%ED%8C%8C%EB%8B%AD%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "치코두마리파닭 전남 여수시 여서로 136",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 여서로 136",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "query": "치코두마리파닭",
+            "candidateCount": 4,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%EC%BD%94%EB%91%90%EB%A7%88%EB%A6%AC%ED%8C%8C%EB%8B%AD"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "2029136931",
+            "name": "치코파닭두마리",
+            "roadAddress": "평거로13번길 25 1층",
+            "address": "경상남도 진주시 평거로13번길 25 1층"
+          },
+          {
+            "placeId": "2087523200",
+            "name": "치코파닭두마리",
+            "roadAddress": "평거로13번길 25 1층",
+            "address": "경상남도 진주시 평거로13번길 25 1층"
+          },
+          {
+            "placeId": "1146576797",
+            "name": "치코파닭두마리",
+            "roadAddress": "평거로13번길 25 1층",
+            "address": "경상남도 진주시 평거로13번길 25 1층"
+          },
+          {
+            "placeId": "2080928000",
+            "name": "place",
+            "roadAddress": "도로명",
+            "address": "주소"
+          }
+        ]
       }
     },
     {
@@ -684,41 +659,28 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "여문문화2길18",
         "attempts": [
           {
-            "query": "수원왕갈비통닭 여수점",
-            "status": "http-400",
+            "query": "수원왕갈비통닭 여수점 여수",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%88%98%EC%9B%90%EC%99%95%EA%B0%88%EB%B9%84%ED%86%B5%EB%8B%AD%20%EC%97%AC%EC%88%98%EC%A0%90%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "수원왕갈비통닭 여수점 여수",
-            "status": "http-400",
+            "query": "수원왕갈비통닭 여수점",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%88%98%EC%9B%90%EC%99%95%EA%B0%88%EB%B9%84%ED%86%B5%EB%8B%AD%20%EC%97%AC%EC%88%98%EC%A0%90"
           },
           {
             "query": "수원왕갈비통닭 여수점 전남 여수시 여문문화2길 18",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 여문문화2길 18",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%88%98%EC%9B%90%EC%99%95%EA%B0%88%EB%B9%84%ED%86%B5%EB%8B%AD%20%EC%97%AC%EC%88%98%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%97%AC%EB%AC%B8%EB%AC%B8%ED%99%942%EA%B8%B8%2018"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": []
       }
     },
     {
@@ -749,41 +711,67 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "소호로481-1",
         "attempts": [
           {
-            "query": "돈스토리",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "돈스토리 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "돈스토리 전남 여수시 소호로 481-1",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 소호로 481-1",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 25,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%8F%88%EC%8A%A4%ED%86%A0%EB%A6%AC%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1004135490",
+            "name": "돈스토리",
+            "roadAddress": "",
+            "address": ""
+          },
+          {
+            "placeId": "1506094858",
+            "name": "돈스토리 여수",
+            "roadAddress": "",
+            "address": "여수시 웅천동"
+          },
+          {
+            "placeId": "1488644581",
+            "name": "돈스토리 여수",
+            "roadAddress": "",
+            "address": "여수시 웅천동"
+          },
+          {
+            "placeId": "665526284",
+            "name": "돈스토리 여수",
+            "roadAddress": "",
+            "address": "여수시 웅천동"
+          },
+          {
+            "placeId": "425875612",
+            "name": "돈스토리 여수",
+            "roadAddress": "",
+            "address": "여수시 웅천동"
+          },
+          {
+            "placeId": "16962120",
+            "name": "돈스토리 여수",
+            "roadAddress": "",
+            "address": "여수시 웅천동"
+          },
+          {
+            "placeId": "33706086",
+            "name": "restaurant",
+            "roadAddress": "",
+            "address": "여수시 웅천동"
+          },
+          {
+            "placeId": "1706505273",
+            "name": "PoiRecommendationsResult",
+            "roadAddress": "",
+            "address": "여수시 웅천동"
+          }
+        ]
       }
     },
     {
@@ -814,41 +802,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "화산2길30",
         "attempts": [
           {
-            "query": "피나치공 무선점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "피나치공 무선점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "피나치공 무선점 전남 여수시 화산2길 30",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 화산2길 30",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%94%BC%EB%82%98%EC%B9%98%EA%B3%B5%20%EB%AC%B4%EC%84%A0%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1116933955",
+            "name": "피나치공 여수무선점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -879,41 +851,32 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "안산2길6",
         "attempts": [
           {
-            "query": "배떡 안산점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "배떡 안산점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "배떡 안산점 전남 여수시 안산2길 6",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 안산2길 6",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B0%B0%EB%96%A1%20%EC%95%88%EC%82%B0%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
-        "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "sameAddressCandidates": [
+          {
+            "placeId": "1937550407",
+            "name": "배떡 여수안산점",
+            "roadAddress": "전남광주 여수시 안산2길 6 1층",
+            "address": "전남광주 여수시 안산동 470-14"
+          }
+        ],
+        "candidates": [
+          {
+            "placeId": "1937550407",
+            "name": "배떡 여수안산점",
+            "roadAddress": "전남광주 여수시 안산2길 6 1층",
+            "address": "전남광주 여수시 안산동 470-14"
+          }
+        ]
       }
     },
     {
@@ -1117,41 +1080,67 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "화산로39",
         "attempts": [
           {
-            "query": "치킨먹고 인생피자",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "치킨먹고 인생피자 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "치킨먹고 인생피자 전남 여수시 화산로 39",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 화산로 39",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 25,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%ED%82%A8%EB%A8%B9%EA%B3%A0%20%EC%9D%B8%EC%83%9D%ED%94%BC%EC%9E%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1044098719",
+            "name": "치킨먹고인생피자",
+            "roadAddress": "",
+            "address": ""
+          },
+          {
+            "placeId": "2070167644",
+            "name": "치킨먹고 인생피자 여수",
+            "roadAddress": "",
+            "address": "여수시 선원동"
+          },
+          {
+            "placeId": "1621767693",
+            "name": "치킨먹고 인생피자 여수",
+            "roadAddress": "",
+            "address": "여수시 선원동"
+          },
+          {
+            "placeId": "1273701246",
+            "name": "치킨먹고 인생피자 여수",
+            "roadAddress": "",
+            "address": "여수시 선원동"
+          },
+          {
+            "placeId": "36827590",
+            "name": "치킨먹고 인생피자 여수",
+            "roadAddress": "",
+            "address": "여수시 선원동"
+          },
+          {
+            "placeId": "1743780555",
+            "name": "치킨먹고 인생피자 여수",
+            "roadAddress": "",
+            "address": "여수시 선원동"
+          },
+          {
+            "placeId": "1767318736",
+            "name": "restaurant",
+            "roadAddress": "",
+            "address": "여수시 선원동"
+          },
+          {
+            "placeId": "2043589272",
+            "name": "PoiRecommendationsResult",
+            "roadAddress": "",
+            "address": "여수시 선원동"
+          }
+        ]
       }
     },
     {
@@ -1240,41 +1229,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "성산로2",
         "attempts": [
           {
-            "query": "촌닭이두마리 무선점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "촌닭이두마리 무선점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "촌닭이두마리 무선점 전남 여수시 성산로 2",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 성산로 2",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B4%8C%EB%8B%AD%EC%9D%B4%EB%91%90%EB%A7%88%EB%A6%AC%20%EB%AC%B4%EC%84%A0%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1288656570",
+            "name": "촌닭이두마리 무선점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -1305,41 +1278,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "시청동5길21-2",
         "attempts": [
           {
-            "query": "오빠통닭 여수학동점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "오빠통닭 여수학동점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "오빠통닭 여수학동점 전남 여수시 시청동5길 21-2",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 시청동5길 21-2",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%98%A4%EB%B9%A0%ED%86%B5%EB%8B%AD%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1132181101",
+            "name": "오빠통닭 여수학동점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -1370,41 +1327,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "무선로6",
         "attempts": [
           {
-            "query": "갓튀긴후라이드 여수학동점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "갓튀긴후라이드 여수학동점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "갓튀긴후라이드 여수학동점 전남 여수시 무선로 6",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 무선로 6",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EA%B0%93%ED%8A%80%EA%B8%B4%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1416796766",
+            "name": "갓튀긴후라이드 여수학동점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -1464,41 +1405,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "죽림3길15-16",
         "attempts": [
           {
-            "query": "땅땅치킨 죽림무선점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "땅땅치킨 죽림무선점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "땅땅치킨 죽림무선점 전남 여수시 죽림3길 15-16",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 죽림3길 15-16",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%95%85%EB%95%85%EC%B9%98%ED%82%A8%20%EC%A3%BD%EB%A6%BC%EB%AC%B4%EC%84%A0%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1429100955",
+            "name": "땅땅치킨 죽림무선점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -1531,41 +1456,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "시청동5길20",
         "attempts": [
           {
-            "query": "불로만치킨바베큐 학동점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "불로만치킨바베큐 학동점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "불로만치킨바베큐 학동점 전남 여수시 시청동5길 20",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 시청동5길 20",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B6%88%EB%A1%9C%EB%A7%8C%EC%B9%98%ED%82%A8%EB%B0%94%EB%B2%A0%ED%81%90%20%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1266529539",
+            "name": "불로만치킨바베큐 학동점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -1598,41 +1507,28 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "신기남3길2-5",
         "attempts": [
           {
-            "query": "폭탄치밥 여수여천점",
-            "status": "http-400",
+            "query": "폭탄치밥 여수여천점 여수",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%8F%AD%ED%83%84%EC%B9%98%EB%B0%A5%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "폭탄치밥 여수여천점 여수",
-            "status": "http-400",
+            "query": "폭탄치밥 여수여천점",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%8F%AD%ED%83%84%EC%B9%98%EB%B0%A5%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90"
           },
           {
             "query": "폭탄치밥 여수여천점 전남 여수시 신기남3길 2-5",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 신기남3길 2-5",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%8F%AD%ED%83%84%EC%B9%98%EB%B0%A5%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%A0%EA%B8%B0%EB%82%A83%EA%B8%B8%202-5"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": []
       }
     },
     {
@@ -1663,41 +1559,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "화산로64",
         "attempts": [
           {
-            "query": "푸라닭 여수무선점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "푸라닭 여수무선점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "푸라닭 여수무선점 전남 여수시 화산로 64",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 화산로 64",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%91%B8%EB%9D%BC%EB%8B%AD%20%EC%97%AC%EC%88%98%EB%AC%B4%EC%84%A0%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1066505162",
+            "name": "푸라닭 여수무선점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -1931,41 +1811,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "시청동1길29",
         "attempts": [
           {
-            "query": "한앤둘치킨 여수시청점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "한앤둘치킨 여수시청점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "한앤둘치킨 여수시청점 전남 여수시 시청동1길 29",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 시청동1길 29",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%95%9C%EC%95%A4%EB%91%98%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%EC%B2%AD%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "2064617732",
+            "name": "한앤둘치킨 여수시청점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -1996,41 +1860,28 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "무선중앙로50",
         "attempts": [
           {
-            "query": "치킨플러스 여수1호점",
-            "status": "http-400",
+            "query": "치킨플러스 여수1호점 여수",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%ED%82%A8%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%97%AC%EC%88%981%ED%98%B8%EC%A0%90%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "치킨플러스 여수1호점 여수",
-            "status": "http-400",
+            "query": "치킨플러스 여수1호점",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%ED%82%A8%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%97%AC%EC%88%981%ED%98%B8%EC%A0%90"
           },
           {
             "query": "치킨플러스 여수1호점 전남 여수시 무선중앙로 50",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 무선중앙로 50",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B9%98%ED%82%A8%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%97%AC%EC%88%981%ED%98%B8%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EB%AC%B4%EC%84%A0%EC%A4%91%EC%95%99%EB%A1%9C%2050"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": []
       }
     },
     {
@@ -2061,41 +1912,28 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "시청로59",
         "attempts": [
           {
-            "query": "1키로공룡닭강정 여수여천점",
-            "status": "http-400",
+            "query": "1키로공룡닭강정 여수여천점 여수",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=1%ED%82%A4%EB%A1%9C%EA%B3%B5%EB%A3%A1%EB%8B%AD%EA%B0%95%EC%A0%95%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "1키로공룡닭강정 여수여천점 여수",
-            "status": "http-400",
+            "query": "1키로공룡닭강정 여수여천점",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=1%ED%82%A4%EB%A1%9C%EA%B3%B5%EB%A3%A1%EB%8B%AD%EA%B0%95%EC%A0%95%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90"
           },
           {
             "query": "1키로공룡닭강정 여수여천점 전남 여수시 시청로 59",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 시청로 59",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=1%ED%82%A4%EB%A1%9C%EA%B3%B5%EB%A3%A1%EB%8B%AD%EA%B0%95%EC%A0%95%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%9C%EC%B2%AD%EB%A1%9C%2059"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": []
       }
     },
     {
@@ -2155,41 +1993,28 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "시청동2길8",
         "attempts": [
           {
-            "query": "ONLY 후라이드 여수학동점",
-            "status": "http-400",
+            "query": "ONLY 후라이드 여수학동점 여수",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=ONLY%20%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "ONLY 후라이드 여수학동점 여수",
-            "status": "http-400",
+            "query": "ONLY 후라이드 여수학동점",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=ONLY%20%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90"
           },
           {
             "query": "ONLY 후라이드 여수학동점 전남 여수시 시청동2길 8",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 시청동2길 8",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=ONLY%20%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%9C%EC%B2%AD%EB%8F%992%EA%B8%B8%208"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": []
       }
     },
     {
@@ -2365,41 +2190,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "시청동1길17",
         "attempts": [
           {
-            "query": "푸라닭 여수학동점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "푸라닭 여수학동점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "푸라닭 여수학동점 전남 여수시 시청동1길 17",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 시청동1길 17",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%91%B8%EB%9D%BC%EB%8B%AD%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "38642666",
+            "name": "푸라닭 여수학동점",
+            "roadAddress": "",
+            "address": ""
+          }
+        ]
       }
     },
     {
@@ -2459,41 +2268,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "오림2길17",
         "attempts": [
           {
-            "query": "촌닭이두마리 오림점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "촌닭이두마리 오림점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "촌닭이두마리 오림점 전남 여수시 오림2길 17",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 오림2길 17",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%B4%8C%EB%8B%AD%EC%9D%B4%EB%91%90%EB%A7%88%EB%A6%AC%20%EC%98%A4%EB%A6%BC%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1369647400",
+            "name": "place",
+            "roadAddress": "도로명",
+            "address": "주소"
+          }
+        ]
       }
     },
     {
@@ -2524,41 +2317,30 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "시청동2길8",
         "attempts": [
           {
-            "query": "후라이드 참 맛있는집 여수학동점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "후라이드 참 맛있는집 여수학동점 여수",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%B0%B8%20%EB%A7%9B%EC%9E%88%EB%8A%94%EC%A7%91%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "후라이드 참 맛있는집 여수학동점 전남 여수시 시청동2길 8",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 시청동2길 8",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "query": "후라이드 참 맛있는집 여수학동점",
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%20%EC%B0%B8%20%EB%A7%9B%EC%9E%88%EB%8A%94%EC%A7%91%20%EC%97%AC%EC%88%98%ED%95%99%EB%8F%99%EC%A0%90"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "37000898",
+            "name": "못참아그파닭&탕수육",
+            "roadAddress": "전남광주 여수시 선원3길 6-16",
+            "address": "전남광주 여수시 선원동 150-41"
+          }
+        ]
       }
     },
     {
@@ -2591,41 +2373,28 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "신기남3길1",
         "attempts": [
           {
-            "query": "새우치킨덤 여천점",
-            "status": "http-400",
+            "query": "새우치킨덤 여천점 여수",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%83%88%EC%9A%B0%EC%B9%98%ED%82%A8%EB%8D%A4%20%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "새우치킨덤 여천점 여수",
-            "status": "http-400",
+            "query": "새우치킨덤 여천점",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%83%88%EC%9A%B0%EC%B9%98%ED%82%A8%EB%8D%A4%20%EC%97%AC%EC%B2%9C%EC%A0%90"
           },
           {
             "query": "새우치킨덤 여천점 전남 여수시 신기남3길 1",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 신기남3길 1",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EC%83%88%EC%9A%B0%EC%B9%98%ED%82%A8%EB%8D%A4%20%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%A0%EA%B8%B0%EB%82%A83%EA%B8%B8%201"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": []
       }
     },
     {
@@ -2714,41 +2483,25 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "웅남2길24",
         "attempts": [
           {
-            "query": "푸라닭 여수웅천점",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "푸라닭 여수웅천점 여수",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "푸라닭 여수웅천점 전남 여수시 웅남2길 24",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 웅남2길 24",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "candidateCount": 1,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%ED%91%B8%EB%9D%BC%EB%8B%AD%20%EC%97%AC%EC%88%98%EC%9B%85%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "37837641",
+            "name": "place",
+            "roadAddress": "도로명",
+            "address": "주소"
+          }
+        ]
       }
     },
     {
@@ -2897,41 +2650,28 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "여문2로73",
         "attempts": [
           {
-            "query": "박스터지는 두마리치킨 (샵인점)",
-            "status": "http-400",
+            "query": "박스터지는 두마리치킨 (샵인점) 여수",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B0%95%EC%8A%A4%ED%84%B0%EC%A7%80%EB%8A%94%20%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8%20%28%EC%83%B5%EC%9D%B8%EC%A0%90%29%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "박스터지는 두마리치킨 (샵인점) 여수",
-            "status": "http-400",
+            "query": "박스터지는 두마리치킨 (샵인점)",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B0%95%EC%8A%A4%ED%84%B0%EC%A7%80%EB%8A%94%20%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8%20%28%EC%83%B5%EC%9D%B8%EC%A0%90%29"
           },
           {
             "query": "박스터지는 두마리치킨 (샵인점) 전남 여수시 여문2로 73",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 여문2로 73",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%B0%95%EC%8A%A4%ED%84%B0%EC%A7%80%EB%8A%94%20%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8%20%28%EC%83%B5%EC%9D%B8%EC%A0%90%29%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%97%AC%EB%AC%B82%EB%A1%9C%2073"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": []
       }
     },
     {
@@ -3022,41 +2762,28 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "신기남3길2-5",
         "attempts": [
           {
-            "query": "닥엔돈스 직화바베큐치킨 여수여천점",
-            "status": "http-400",
+            "query": "닥엔돈스 직화바베큐치킨 여수여천점 여수",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%8B%A5%EC%97%94%EB%8F%88%EC%8A%A4%20%EC%A7%81%ED%99%94%EB%B0%94%EB%B2%A0%ED%81%90%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "닥엔돈스 직화바베큐치킨 여수여천점 여수",
-            "status": "http-400",
+            "query": "닥엔돈스 직화바베큐치킨 여수여천점",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%8B%A5%EC%97%94%EB%8F%88%EC%8A%A4%20%EC%A7%81%ED%99%94%EB%B0%94%EB%B2%A0%ED%81%90%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90"
           },
           {
             "query": "닥엔돈스 직화바베큐치킨 여수여천점 전남 여수시 신기남3길 2-5",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 신기남3길 2-5",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EB%8B%A5%EC%97%94%EB%8F%88%EC%8A%A4%20%EC%A7%81%ED%99%94%EB%B0%94%EB%B2%A0%ED%81%90%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98%EC%97%AC%EC%B2%9C%EC%A0%90%20%EC%A0%84%EB%82%A8%20%EC%97%AC%EC%88%98%EC%8B%9C%20%EC%8B%A0%EA%B8%B0%EB%82%A83%EA%B8%B8%202-5"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": []
       }
     },
     {
@@ -3087,41 +2814,54 @@
       "naverStatus": "no-exact-match",
       "naverEvidence": {
         "status": "no-exact-match",
+        "naverMap": "",
         "roadSignature": "시청동2길8",
         "attempts": [
           {
-            "query": "골목포차&치킨",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
             "query": "골목포차&치킨 여수",
-            "status": "http-400",
             "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EA%B3%A8%EB%AA%A9%ED%8F%AC%EC%B0%A8%26%EC%B9%98%ED%82%A8%20%EC%97%AC%EC%88%98"
           },
           {
-            "query": "골목포차&치킨 전남 여수시 시청동2길 8",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
-          },
-          {
-            "query": "전남 여수시 시청동2길 8",
-            "status": "http-400",
-            "candidateCount": 0,
-            "rootKeys": [],
-            "preview": ""
+            "query": "골목포차&치킨",
+            "candidateCount": 5,
+            "url": "https://m.search.naver.com/search.naver?where=m&query=%EA%B3%A8%EB%AA%A9%ED%8F%AC%EC%B0%A8%26%EC%B9%98%ED%82%A8"
           }
         ],
         "exactMatches": [],
         "sameAddressCandidates": [],
-        "candidates": [],
-        "naverMap": ""
+        "candidates": [
+          {
+            "placeId": "1382569759",
+            "name": "골목포차",
+            "roadAddress": "한강대로15길 12-7 1층",
+            "address": "서울특별시 용산구 한강대로15길 12-7 1층"
+          },
+          {
+            "placeId": "1919868225",
+            "name": "골목포차",
+            "roadAddress": "한강대로15길 12-7 1층",
+            "address": "서울특별시 용산구 한강대로15길 12-7 1층"
+          },
+          {
+            "placeId": "2001029777",
+            "name": "골목포차",
+            "roadAddress": "한강대로15길 12-7 1층",
+            "address": "서울특별시 용산구 한강대로15길 12-7 1층"
+          },
+          {
+            "placeId": "2089663875",
+            "name": "야탑 골목족발포차",
+            "roadAddress": "야탑로111번길 12-11 101호",
+            "address": "경기도 성남시 분당구 야탑로111번길 12-11 101호"
+          },
+          {
+            "placeId": "2019041579",
+            "name": "place",
+            "roadAddress": "도로명",
+            "address": "주소"
+          }
+        ]
       }
     }
   ],
