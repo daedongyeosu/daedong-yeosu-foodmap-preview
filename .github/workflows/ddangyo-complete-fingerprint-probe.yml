@@ -10,6 +10,7 @@ on:
       - scripts/extract-all-historical-ddangyo.mjs
       - scripts/reclassify-all-ddangyo-stores.mjs
       - scripts/finalize-ddangyo-classification.mjs
+      - scripts/resolve-final-ddangyo-classification.mjs
       - scripts/ddangyo-package-utils.mjs
       - scripts/build-ddangyo-service-info.mjs
       - scripts/build-ddangyo-enrichment.mjs
@@ -60,21 +61,25 @@ jobs:
         working-directory: preview
         run: node scripts/reclassify-all-ddangyo-stores.mjs ddangyo-all-extraction-output/all-stores-normalized.json
 
-      - name: Reject wrong existing links and finalize store identities
+      - name: Reject wrong existing links and identify unresolved identities
         working-directory: preview
         run: node scripts/finalize-ddangyo-classification.mjs ddangyo-reclassification-output/reclassified-stores.json
 
+      - name: Restore valid existing stores and assign deterministic IDs only to real new stores
+        working-directory: preview
+        run: node scripts/resolve-final-ddangyo-classification.mjs ddangyo-final-classification-output/final-stores.json
+
       - name: Build additive business hours and app-scoped benefits
         working-directory: preview
-        run: node scripts/build-ddangyo-service-info.mjs ddangyo-final-classification-output/final-stores.json
+        run: node scripts/build-ddangyo-service-info.mjs ddangyo-final-ready-output/final-stores.json
 
       - name: Build additive store enrichment
         working-directory: preview
-        run: node scripts/build-ddangyo-enrichment.mjs ddangyo-final-classification-output/final-stores.json
+        run: node scripts/build-ddangyo-enrichment.mjs ddangyo-final-ready-output/final-stores.json
 
       - name: Build additive menus, descriptions and images
         working-directory: preview
-        run: node scripts/build-ddangyo-menus.mjs ddangyo-final-classification-output/final-stores.json
+        run: node scripts/build-ddangyo-menus.mjs ddangyo-final-ready-output/final-stores.json
 
       - name: Validate complete fingerprint package
         working-directory: preview
@@ -98,12 +103,21 @@ jobs:
           if-no-files-found: error
           retention-days: 2
 
-      - name: Upload final identity report
+      - name: Upload strict identity conflict report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ddangyo-final-classification
           path: preview/ddangyo-final-classification-output
+          if-no-files-found: error
+          retention-days: 2
+
+      - name: Upload final ready identity report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ddangyo-final-ready-classification
+          path: preview/ddangyo-final-ready-output
           if-no-files-found: error
           retention-days: 2
 
