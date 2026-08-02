@@ -178,7 +178,7 @@
   function syncMainAddress() {
     const label = String(state.addressLabel || state.location || '여수시 전체').trim();
     const configured = label && label !== '여수시 전체';
-    const short = configured ? shortAddress(label) : '주소 설정';
+    const short = configured ? shortAddress(label, state.location) : '주소 설정';
     const top = document.querySelector('#locationText');
     const main = document.querySelector('#activeAddressText');
     const hint = document.querySelector('#activeAddressHint');
