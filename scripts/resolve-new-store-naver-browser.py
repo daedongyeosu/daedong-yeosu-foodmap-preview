@@ -3,7 +3,7 @@ import json
 import re
 import time
 from pathlib import Path
-from urllib.parse import quote, urlparse
+from urllib.parse import quote
 
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
@@ -11,6 +11,7 @@ from selenium.webdriver.chrome.options import Options
 
 INPUT_PATH = Path('data/ddangyo-new-store-services.json')
 DATA = json.loads(INPUT_PATH.read_text(encoding='utf-8'))
+GENERIC_NAMES = {'place', '홈', '메뉴', '사진', '리뷰', '정보', '주소', '도로명', '네이버플레이스'}
 
 
 def clean(value):
@@ -67,6 +68,11 @@ def compatible_name(left, right):
     return common >= threshold
 
 
+def valid_name(value):
+    text = clean(value)
+    return bool(text and text.lower() not in GENERIC_NAMES and len(canonical_name(text)) >= 2)
+
+
 def road_base(value):
     text = clean(value)
     text = re.sub(r'^대한민국\s*', '', text)
@@ -84,6 +90,10 @@ def road_signature(value):
     return f'{matches[-1].group(1)}{matches[-1].group(2)}'.lower()
 
 
+def valid_road(value):
+    return bool(road_signature(value))
+
+
 def unique_rows(rows):
     output = []
     seen = set()
@@ -96,37 +106,73 @@ def unique_rows(rows):
     return output
 
 
-def extract_field(window, field_names):
+def extract_values(window, field_names):
+    values = []
+    seen = set()
     for field in field_names:
         patterns = [
             rf'"{re.escape(field)}"\s*:\s*"((?:\\.|[^"\\])*)"',
             rf'{re.escape(field)}\\?"?\s*:\s*\\?"((?:\\.|[^"\\])*)"',
         ]
         for pattern in patterns:
-            match = re.search(pattern, window, re.I | re.S)
-            if match:
-                return decode_jsonish(match.group(1))
-    return ''
+            for match in re.finditer(pattern, window, re.I | re.S):
+                value = decode_jsonish(match.group(1))
+                if value and value not in seen:
+                    seen.add(value)
+                    values.append(value)
+    return values
+
+
+def choose_name(values, link_text=''):
+    valid = [value for value in values if valid_name(value)]
+    if link_text and valid_name(link_text):
+        compatible = [value for value in valid if compatible_name(value, link_text)]
+        if compatible:
+            return compatible[0]
+    return valid[0] if valid else (clean(link_text) if valid_name(link_text) else '')
+
+
+def choose_road(values):
+    valid = [value for value in values if valid_road(value)]
+    return valid[0] if valid else ''
+
+
+def choose_address(values):
+    preferred = [value for value in values if ('여수' in value or '전남' in value) and len(value) >= 6]
+    return preferred[0] if preferred else (values[0] if values else '')
+
+
+def candidate_score(candidate, link_text=''):
+    score = 0
+    if valid_name(candidate.get('name')):
+        score += 4
+    if link_text and compatible_name(candidate.get('name'), link_text):
+        score += 4
+    if valid_road(candidate.get('roadAddress')):
+        score += 10
+    if '여수' in clean(candidate.get('address')):
+        score += 2
+    return score
 
 
 def enrich_candidate_from_html(page_html, place_id, link_text=''):
     occurrences = [match.start() for match in re.finditer(re.escape(place_id), page_html)]
-    best = {'placeId': place_id, 'name': clean(link_text), 'roadAddress': '', 'address': ''}
-    for position in occurrences[:20]:
-        window = page_html[max(0, position - 8000):position + 14000]
+    candidates = []
+    for position in occurrences[:40]:
+        window = page_html[max(0, position - 12000):position + 18000]
+        names = extract_values(window, ['normalizedName', 'name', 'businessName'])
+        roads = extract_values(window, ['roadAddress', 'road_address', 'newAddress'])
+        addresses = extract_values(window, ['fullAddress', 'address', 'jibunAddress'])
         candidate = {
             'placeId': place_id,
-            'name': extract_field(window, ['normalizedName', 'name', 'businessName']) or best['name'],
-            'roadAddress': extract_field(window, ['roadAddress', 'road_address', 'newAddress']),
-            'address': extract_field(window, ['fullAddress', 'address', 'jibunAddress']),
+            'name': choose_name(names, link_text),
+            'roadAddress': choose_road(roads),
+            'address': choose_address(addresses),
         }
-        if candidate['roadAddress']:
-            return candidate
-        if candidate['name'] and not best['name']:
-            best['name'] = candidate['name']
-        if candidate['address'] and not best['address']:
-            best['address'] = candidate['address']
-    return best
+        candidates.append(candidate)
+    if not candidates:
+        return {'placeId': place_id, 'name': clean(link_text) if valid_name(link_text) else '', 'roadAddress': '', 'address': ''}
+    return max(candidates, key=lambda candidate: candidate_score(candidate, link_text))
 
 
 def make_driver():
@@ -181,7 +227,7 @@ def search_page(driver, query):
 
 
 def fill_candidate_from_place_page(driver, candidate):
-    if candidate.get('roadAddress') and candidate.get('name'):
+    if valid_road(candidate.get('roadAddress')) and valid_name(candidate.get('name')):
         return candidate
     place_id = candidate['placeId']
     url = f'https://m.place.naver.com/place/{place_id}/home'
@@ -194,8 +240,8 @@ def fill_candidate_from_place_page(driver, candidate):
     filled = enrich_candidate_from_html(page_html, place_id, candidate.get('name', ''))
     return {
         'placeId': place_id,
-        'name': filled.get('name') or candidate.get('name', ''),
-        'roadAddress': filled.get('roadAddress') or candidate.get('roadAddress', ''),
+        'name': filled.get('name') if valid_name(filled.get('name')) else candidate.get('name', ''),
+        'roadAddress': filled.get('roadAddress') if valid_road(filled.get('roadAddress')) else candidate.get('roadAddress', ''),
         'address': filled.get('address') or candidate.get('address', ''),
     }
 
@@ -215,9 +261,7 @@ def resolve_row(driver, row):
         if candidates:
             break
     candidates = unique_rows(candidates)
-    detailed = []
-    for candidate in candidates[:8]:
-        detailed.append(fill_candidate_from_place_page(driver, candidate))
+    detailed = [fill_candidate_from_place_page(driver, candidate) for candidate in candidates[:8]]
     detailed = unique_rows(detailed)
 
     target_signature = road_signature(row['address'])
@@ -277,7 +321,7 @@ DATA['stats'] = {
     'chakRoutes': len(DATA.get('stores', [])),
     'naverVerified': verified,
     'naverOmitted': omitted,
-    'resolver': 'mobile-naver-search-browser',
+    'resolver': 'mobile-naver-search-browser-v2',
 }
 INPUT_PATH.write_text(json.dumps(DATA, ensure_ascii=False, indent=2), encoding='utf-8')
 print(json.dumps(DATA['stats'], ensure_ascii=False, indent=2))
