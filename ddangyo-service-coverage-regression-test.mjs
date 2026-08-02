@@ -56,8 +56,8 @@ assert.equal(report.ddangyoRouteServiceCovered, 572);
 assert.equal(report.explicitBenefitStatusRecords, 560);
 assert.match(runtime, /현재 쿠폰 없음 확인/);
 assert.match(runtime, /현재 타임세일 없음 확인/);
-assert.match(runtime, /현재 확인된 혜택 없음/);
-assert.match(html, /ddangyo-service-coverage-1/);
+assert.match(runtime, /현재 확인된 주문앱 혜택 없음/);
+assert.match(html, /store-service-12-customer-search-ux-1/);
 
 console.log(JSON.stringify({
   ok: true,
