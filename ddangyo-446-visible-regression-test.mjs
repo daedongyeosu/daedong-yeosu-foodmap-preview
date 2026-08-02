@@ -149,4 +149,20 @@ assert.equal(nene.source.patstoNo, '1195676');
 assert.equal(nene.storeName, '네네치킨 둔덕미평점');
 assert.equal(nene.items.length, 58);
 
+const kingJjajang = service.stores.a4ba6805e73e7e76;
+assert.ok(kingJjajang, '짜장왕 왕서방 영업정보가 있어야 합니다.');
+assert.deepEqual(kingJjajang.hours.displayLines, [
+  '매일 오전 10:00 ~ 익일 오전 02:00',
+  '땡겨요 브레이크 타임 매일 오전 02:00 ~ 오전 10:00 반영'
+]);
+for (const periods of Object.values(kingJjajang.hours.weekly)) {
+  assert.deepEqual(periods, [{open: '10:00', close: '02:00'}]);
+}
+for (const info of Object.values(service.stores)) {
+  const hasBreak = (info.hours?.displayLines || []).some(line => /브레이크|휴게/.test(line));
+  const hasFake24Hours = Object.values(info.hours?.weekly || {}).flat()
+    .some(period => period.open === '00:00' && period.close === '00:00');
+  assert.ok(!(hasBreak && hasFake24Hours), '브레이크타임을 둔 가게를 24시간 영업으로 계산하면 안 됩니다.');
+}
+
 console.log('PASS: 710개 원본 + 신규 27개 = 737개 보존, 땡겨요 메뉴맵 598곳·음식보기 600곳 연결, 네네치킨 58개 확인');
