@@ -57,8 +57,10 @@ try {
   await check(page.locator('[data-menu-card]:visible mark').count().then(count => count > 0), '도미노 검색어 강조');
   await page.locator('[data-menu-card]:visible').first().click();
   await check(page.locator('[data-menu-order-sheet]').evaluate(node => !node.hidden), '도미노 메뉴 터치 시 주문방법 선택창 열림');
-  const firstDirectHref = await page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').getAttribute('href');
-  await check(Promise.resolve(firstDirectHref === 'https://app.notion.com/p/38dda158dd2a80b798f7c9f559716e3c'), '여천점 기존 가게바로주문 링크 유지');
+  await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').isDisabled(), '여천점 가게바로주문 준비중 비활성화');
+  await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').innerText().then(value => value.includes('준비중')), '여천점 가게바로주문 준비중 표시');
+  const firstDirectHref = await page.evaluate(() => fxStoreById('2f4c3cfb0866c4a4').routes.find(route => route.key === 'direct')?.url);
+  await check(Promise.resolve(firstDirectHref === 'https://app.notion.com/p/38dda158dd2a80b798f7c9f559716e3c'), '여천점 원본 가게바로주문 주소 유지');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="phone"] .menu-order-icon svg circle').count().then(count => count === 1), '도미노 전화주문 아이콘 표시');
   await page.goBack();
   await page.waitForFunction(() => document.querySelector('[data-menu-order-sheet]')?.hidden === true);
@@ -72,8 +74,9 @@ try {
   await page.locator('#modal [data-close-modal], #modal .close, #modal .modal-close').first().click().catch(() => {});
   await page.waitForTimeout(100);
   await openStore('dc638b23f8cf3c5b');
-  const secondDirectHref = await page.locator('.store-menu-sticky-actions .primary').getAttribute('href');
-  await check(Promise.resolve(secondDirectHref === 'https://bit.ly/auto-domino'), '문수점 기존 가게바로주문 링크 유지');
+  await check(page.locator('.store-menu-sticky-actions .primary').isDisabled(), '문수점 가게바로주문 준비중 비활성화');
+  const secondDirectHref = await page.evaluate(() => fxStoreById('dc638b23f8cf3c5b').routes.find(route => route.key === 'direct')?.url);
+  await check(Promise.resolve(secondDirectHref === 'https://bit.ly/auto-domino'), '문수점 원본 가게바로주문 주소 유지');
   await check(Promise.resolve(secondDirectHref !== firstDirectHref), '두 지점의 주문 링크를 서로 섞지 않음');
   await page.screenshot({path: 'browser-domino-menu-preview.png', fullPage: false});
 
