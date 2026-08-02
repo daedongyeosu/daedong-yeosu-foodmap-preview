@@ -1,12 +1,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {clean, unique, today, parseDdangyoHours, mergeHours, upsertScoped, couponActive, couponRecord, readJsonIfExists} from './ddangyo-package-utils.mjs';
+import {clean, today, parseDdangyoHours, mergeHours, upsertScoped, couponActive, couponRecord, readJsonIfExists} from './ddangyo-package-utils.mjs';
 
-const inputPath = process.argv[2] || 'ddangyo-final-classification-output/final-stores.json';
+const inputPath = process.argv[2] || 'ddangyo-final-ready-output/final-stores.json';
 const outputDir = path.resolve('ddangyo-package-output');
 await fs.mkdir(outputDir, {recursive: true});
 const rows = JSON.parse(await fs.readFile(inputPath, 'utf8'));
-const unresolved = rows.filter(row => row?.error || row?.match?.status !== 'existing' || !row?.match?.storeId);
+const unresolved = rows.filter(row => row?.error || !['existing', 'new'].includes(row?.match?.status) || !row?.match?.storeId);
 if (unresolved.length) throw new Error(`unresolved stores: ${unresolved.length}`);
 
 const service = await readJsonIfExists('store-service-info.json', {version: 4, programs: [], deliveryBenefits: [], stores: {}});
@@ -22,6 +22,8 @@ service.updatedAt = today;
 
 const stats = {
   stores: rows.length,
+  existingStores: rows.filter(row => row.match.status === 'existing').length,
+  newStores: rows.filter(row => row.match.status === 'new').length,
   hoursCreated: 0,
   hoursSupplemented: 0,
   seomseomAdded: 0,
