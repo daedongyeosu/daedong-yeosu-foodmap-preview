@@ -255,7 +255,7 @@
 
   function verifiedLabel(info) {
     const date = String(info?.verifiedAt || '').replaceAll('-', '.');
-    return [info?.sourceLabel, date ? `${date} 확인` : ''].filter(Boolean).join(' · ');
+    return [info?.sourceLabel, '표시된 주문앱 기준', date ? `${date} 확인` : ''].filter(Boolean).join(' · ');
   }
 
   function benefitBadgeMarkup(benefit, className) {
@@ -406,7 +406,7 @@
         button.type = 'button';
         button.className = 'store-service-overview-button';
         button.dataset.storeServiceOverviewOpen = '';
-        button.innerHTML = '<span aria-hidden="true">◷</span><b>영업·혜택 한눈에</b>';
+        button.innerHTML = '<span aria-hidden="true">◷</span><b>주문앱별 혜택 한눈에</b>';
         head.append(button);
       }
     }
@@ -594,7 +594,7 @@
               const deliveryClass = benefit.kind === 'delivery' ? ' class="is-delivery"' : '';
               return `<b${deliveryClass}>✓ ${escapeHtml(scopedBenefitLabel(benefit))}</b>`;
             }).join('')
-            : '<b class="is-unknown">결제·혜택 미확인</b>'}
+            : '<b class="is-unknown">주문앱별 혜택 미확인</b>'}
           ${verified ? `<small>${escapeHtml(verified)}</small>` : ''}
         </span>
         <i aria-hidden="true">›</i>
