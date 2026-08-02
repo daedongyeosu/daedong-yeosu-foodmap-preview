@@ -1,0 +1,249 @@
+{
+  "storeId": "21a676f860851a5a",
+  "storeName": "정말 맛있는 김치찌개",
+  "displayName": "정말 맛있는 김치찌개",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c915908c-3ef9-41e5-8bee-7e265a0070fd.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1259766-10000001",
+      "sourceMenuId": "10000001",
+      "name": "삼겹살김치찌개",
+      "description": "김치찌개+후라이밥1개+명란김1개",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c915908c-3ef9-41e5-8bee-7e265a0070fd.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000002",
+      "sourceMenuId": "10000002",
+      "name": "스팸김치찌개",
+      "description": "김치찌개+후라이밥1개+명란김1개",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/9bc0d452-b1e6-4152-8f7a-c95e5cfc0b98.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000003",
+      "sourceMenuId": "10000003",
+      "name": "참치 김치찌개",
+      "description": "김치찌개+후라이밥1개+명란김1개",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0737724b-9e9c-481d-8088-38abab04e9a0.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000007",
+      "sourceMenuId": "10000007",
+      "name": "우삼겹을 품은 김치볶음밥",
+      "description": "국내산 볶음김치와 우삼겹의 환상적인 만남.... 한번 좝샤봐용~",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/daebf072-0efb-4499-bc30-416a9fefaf9c.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000029",
+      "sourceMenuId": "10000029",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1259766-10000008",
+      "sourceMenuId": "10000008",
+      "name": "우삼겹된장찌개",
+      "description": "우삼겹과 각종 채소 야채가 넉넉히 들어간 짭조름한 오리지널 된장국",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/91d3d08b-ddbe-443c-8587-7f854e2a3a10.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000030",
+      "sourceMenuId": "10000030",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1259766-10000009",
+      "sourceMenuId": "10000009",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/93763c85-f27d-4c9a-8c2c-7e2596dcdbb2.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000010",
+      "sourceMenuId": "10000010",
+      "name": "해쉬브라운",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/181ea614-6b0d-4145-865a-718736f70f08.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000005",
+      "sourceMenuId": "10000005",
+      "name": "스팸김치찜",
+      "description": "김치찌개+후라이밥2개+명란김2개",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/2c1eb732-b55c-4bc4-a2ba-92ed9f2043a6.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000011",
+      "sourceMenuId": "10000011",
+      "name": "치킨텐더",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/fe9af9dd-a959-40d9-acda-72f6497d8a13.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000006",
+      "sourceMenuId": "10000006",
+      "name": "참치김치찜",
+      "description": "김치찌개 +후라이밥2개+명란김2개",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/507de281-16ce-4ad4-b059-dc97c9c66af6.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000012",
+      "sourceMenuId": "10000012",
+      "name": "떡갈비",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/316ccc06-ff99-40e6-8a6a-495d32b4b76c.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000013",
+      "sourceMenuId": "10000013",
+      "name": "대왕수세지",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/217a90df-7ec2-43b9-ab88-60d35fa5ffb3.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000014",
+      "sourceMenuId": "10000014",
+      "name": "버팔로윙",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/63d6a974-48d4-4d8e-b42e-6ad40135a771.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000015",
+      "sourceMenuId": "10000015",
+      "name": "버팔로봉",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/40611283-01a4-4801-abc5-42598e78050f.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000016",
+      "sourceMenuId": "10000016",
+      "name": "가라아게",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3f1207f2-d718-4e5d-be10-361f1c126021.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000017",
+      "sourceMenuId": "10000017",
+      "name": "튀김만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d23f6e55-5143-46cb-a807-225b725e95de.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000018",
+      "sourceMenuId": "10000018",
+      "name": "깻잎절임",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/731bfae1-98d6-4b78-8592-67aef6a26886.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000019",
+      "sourceMenuId": "10000019",
+      "name": "쌈무",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/06ce6b3a-2fb7-43c6-9001-96d9ae19b690.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000020",
+      "sourceMenuId": "10000020",
+      "name": "쌈장",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/645c8a2f-c037-40c7-9208-e0ada9ffad80.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000021",
+      "sourceMenuId": "10000021",
+      "name": "생마늘",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b2c17311-6c24-4c22-8055-b550ef77d2ba.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000022",
+      "sourceMenuId": "10000022",
+      "name": "참소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c5312457-bf3b-4507-b982-5b3054a201f2.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000023",
+      "sourceMenuId": "10000023",
+      "name": "볶음김치",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5fa6e176-1fb8-4ccb-9870-d8c767bc2409.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000024",
+      "sourceMenuId": "10000024",
+      "name": "파무침",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/88afe71f-db5c-43b2-b8bc-fb1b03821d9a.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000025",
+      "sourceMenuId": "10000025",
+      "name": "상추만 10장",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/58ec4cdc-5ca6-4601-8c71-d9a0f8748fd3.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000026",
+      "sourceMenuId": "10000026",
+      "name": "후라이밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/03b33d60-b7ae-4136-bc9e-457bf2750c90.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000027",
+      "sourceMenuId": "10000027",
+      "name": "돈까스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/42cddef9-aed1-485f-8af0-220e70bd8111.jpg"
+    },
+    {
+      "id": "ddangyo-1259766-10000028",
+      "sourceMenuId": "10000028",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5b9b64bb-74a0-40ef-b691-5c3cf4541e8d.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

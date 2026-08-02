@@ -1,0 +1,164 @@
+{
+  "storeId": "20c107a437ec483e",
+  "storeName": "포슬포슬꼬마김밥",
+  "displayName": "포슬포슬꼬마김밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8a537b11-0a95-4664-8ec6-57d35d4e546e.jpg",
+  "categories": [
+    "전체",
+    "꼬마김밥",
+    "떡볶이",
+    "쫄면",
+    "오뎅탕",
+    "음료",
+    "배달비 추가(시전동 신기동 필수체크)"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1174933-10000001",
+      "sourceMenuId": "10000001",
+      "name": "꼬마김밥",
+      "description": "계란 3개정도 들어가는 꼬마김밥입니다",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/713838b1-4a88-45b8-a5b1-b0d640ff6488.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000006",
+      "sourceMenuId": "10000006",
+      "name": "갓참치마요김밥",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/fe33bfa1-59eb-40b3-9761-37bd5c7bd62a.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000009",
+      "sourceMenuId": "10000009",
+      "name": "떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/b90df392-900f-4cae-b134-365b0f92c137.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000002",
+      "sourceMenuId": "10000002",
+      "name": "어묵김밥",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/d2957d27-adaf-46f2-85d3-655c5c0ade27.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000008",
+      "sourceMenuId": "10000008",
+      "name": "모듬김밥(꼬마+어묵+키토+2가지 선택 / 24개)",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8ea34a04-6fed-4902-8b08-5469c6a6dc26.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000010",
+      "sourceMenuId": "10000010",
+      "name": "쫄면",
+      "description": "",
+      "category": "쫄면",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/445f032a-db06-490e-a7a4-f8ce8fe1e947.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000011",
+      "sourceMenuId": "10000011",
+      "name": "오뎅탕",
+      "description": "북어육수를 내서 만든 오뎅탕입니다",
+      "category": "오뎅탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/3cc2a8bf-a67c-4f9d-9200-188a51060c63.JPG"
+    },
+    {
+      "id": "ddangyo-1174933-10000012",
+      "sourceMenuId": "10000012",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/db7a3ba3-f8f8-4afa-af49-22be320a46b4.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000017",
+      "sourceMenuId": "10000017",
+      "name": "시전동, 신기동 배달추가금 1,500원 반드시 체크부탁드립니다!",
+      "description": "시전동, 신기동 배달추가금 1,500원 반드시 체크부탁드립니다!",
+      "category": "배달비 추가(시전동 신기동 필수체크)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174933-10000013",
+      "sourceMenuId": "10000013",
+      "name": "코카콜라 제로",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/44f127d5-8bd8-46ae-b6ec-aefd5229d265.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000003",
+      "sourceMenuId": "10000003",
+      "name": "키토김밥",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f41290f9-fba8-42ba-877d-911d29126799.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000014",
+      "sourceMenuId": "10000014",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/53d0f152-f6f4-4cc9-a3e7-a3a6d0436ff8.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000004",
+      "sourceMenuId": "10000004",
+      "name": "스팸김밥",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/699db3b7-4f20-4499-87af-606bda73bce3.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000015",
+      "sourceMenuId": "10000015",
+      "name": "환타 포도",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174933-10000005",
+      "sourceMenuId": "10000005",
+      "name": "멸추김밥",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/964e59ce-40b2-44c7-a720-b22fe410450a.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000016",
+      "sourceMenuId": "10000016",
+      "name": "환타 파인애플",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174933-10000007",
+      "sourceMenuId": "10000007",
+      "name": "참치김밥",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/9fb4f03d-2331-412f-968d-0dec30625a00.jpg"
+    },
+    {
+      "id": "ddangyo-1174933-10000018",
+      "sourceMenuId": "10000018",
+      "name": "미니모듬(꼬마+어묵+키토+2가지 선택 / 5개)",
+      "description": "",
+      "category": "꼬마김밥",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

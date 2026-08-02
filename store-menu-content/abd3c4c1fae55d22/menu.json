@@ -1,0 +1,88 @@
+{
+  "storeId": "abd3c4c1fae55d22",
+  "storeName": "Ho(호)분식",
+  "displayName": "Ho(호)분식",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0e0bb516-f45d-4c71-bc9d-421d9a27f831.jpg",
+  "categories": [
+    "전체",
+    "김밥",
+    "분식"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1157494-10000002",
+      "sourceMenuId": "10000002",
+      "name": "참치김밥",
+      "description": "",
+      "category": "김밥",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1157494-10000003",
+      "sourceMenuId": "10000003",
+      "name": "(best)일반김밥",
+      "description": "7가지 재료로 구성 된 기본김밥",
+      "category": "김밥",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1157494-10000005",
+      "sourceMenuId": "10000005",
+      "name": "떡볶이",
+      "description": "",
+      "category": "분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/d2849f2b-34a4-4985-afaf-f9258ae4c0c6.jpg"
+    },
+    {
+      "id": "ddangyo-1157494-10000029",
+      "sourceMenuId": "10000029",
+      "name": "어묵",
+      "description": "",
+      "category": "분식",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1157494-10000030",
+      "sourceMenuId": "10000030",
+      "name": "[best]매콤오징어김밥",
+      "description": "소스에 아몬드를 갈아서 넣습니다 견과류 알레르기 있으신 분은 참고부탁드려요",
+      "category": "김밥",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1157494-10000031",
+      "sourceMenuId": "10000031",
+      "name": "매콤참치김밥",
+      "description": "소스에 아몬드를 갈아서 넣습니다 견과류 알레르기 있으신 분은 참고부탁드려요",
+      "category": "김밥",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1157494-10000032",
+      "sourceMenuId": "10000032",
+      "name": "치즈김밥",
+      "description": "",
+      "category": "김밥",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1157494-10000033",
+      "sourceMenuId": "10000033",
+      "name": "[New]알싸크래미김밥(궁채)",
+      "description": "와사비와 크래미의 만남",
+      "category": "김밥",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1157494-10000035",
+      "sourceMenuId": "10000035",
+      "name": "[New]아삭크래미김밥(궁채)",
+      "description": "",
+      "category": "김밥",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

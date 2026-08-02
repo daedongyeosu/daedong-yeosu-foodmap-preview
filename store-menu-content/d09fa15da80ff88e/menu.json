@@ -1,0 +1,190 @@
+{
+  "storeId": "d09fa15da80ff88e",
+  "storeName": "1989마라탕 여수점",
+  "displayName": "1989마라탕 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e8410d92-aa1a-45f9-8f50-3636d1df1bfe.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "추가 배달료 ( 해당지역 필수선택 )",
+    "세트메뉴",
+    "사이드메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1246432-10000002",
+      "sourceMenuId": "10000002",
+      "name": "1989마라탕",
+      "description": "1989마라탕은 식사로도 최고, 소주안주에도 최고, 해장에도 최고",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5f13b4f1-89ec-4b6b-9cc7-194d889c26b9.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000003",
+      "sourceMenuId": "10000003",
+      "name": "1989마라샹궈",
+      "description": "1989마라샹궈는 식사에도 최고, 맥주안주에도 최고",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/76d8d9f0-c605-4122-9cac-643e24bd5c96.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000007",
+      "sourceMenuId": "10000007",
+      "name": "[NEW]꿔바로우(따라올수없는맛)",
+      "description": "드디어 찾았다. 내가 찾던 꿔바로우~~ (겉바속촉과 새콤달콤의 만남)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/01ca8b14-3d98-4243-ad72-4edb1cbff2f1.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000001",
+      "sourceMenuId": "10000001",
+      "name": "지역별 추가 배달료",
+      "description": "",
+      "category": "추가 배달료 ( 해당지역 필수선택 )",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1246432-10000010",
+      "sourceMenuId": "10000010",
+      "name": "마라탕+미니꿔바로우 세트",
+      "description": "마라탕(1~2인분)+미니꿔바로우",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/9b9dc92a-6f35-4ce6-b756-192eb2b7f395.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000014",
+      "sourceMenuId": "10000014",
+      "name": "새우볶음밥",
+      "description": "들어가는 재료:새우+계란+각종야채+밥",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b15192de-0cf8-443f-bec1-b0deb5bb5d34.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000016",
+      "sourceMenuId": "10000016",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1246432-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1246432-10000011",
+      "sourceMenuId": "10000011",
+      "name": "마라샹궈+미니꿔바로우 세트",
+      "description": "마라샹궈(1~2인분)+미니꿔바로우",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1246432-10000015",
+      "sourceMenuId": "10000015",
+      "name": "햄볶음밥",
+      "description": "들어가는 재료:햄+계란+각종야채+밥",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/91f68876-1dda-48dd-8d7c-949da52d2e11.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000017",
+      "sourceMenuId": "10000017",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1246432-90000002",
+      "sourceMenuId": "90000002",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1246432-10000004",
+      "sourceMenuId": "10000004",
+      "name": "1989마라탕(고기포함)",
+      "description": "1989마라탕은 식사로도 최고, 소주안주에도 최고, 해장에도 최고",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5f13b4f1-89ec-4b6b-9cc7-194d889c26b9.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000012",
+      "sourceMenuId": "10000012",
+      "name": "마라탕+볶음밥 세트",
+      "description": "마라탕(1~2인분)+볶음밥(새우&햄)",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c98ce515-86da-4bd1-b4e4-1b2fa65d8c6a.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000018",
+      "sourceMenuId": "10000018",
+      "name": "빙홍차",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1246432-10000005",
+      "sourceMenuId": "10000005",
+      "name": "1989마라샹궈(고기포함)",
+      "description": "1989마라샹궈는 식사에도 최고, 맥주안주에도 최고",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/76d8d9f0-c605-4122-9cac-643e24bd5c96.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000013",
+      "sourceMenuId": "10000013",
+      "name": "마라샹궈+볶음밥 세트",
+      "description": "마라샹궈(1~2인분)+볶음밥(새우&햄)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1246432-10000019",
+      "sourceMenuId": "10000019",
+      "name": "차파이(복숭아우룽차맛)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1246432-10000006",
+      "sourceMenuId": "10000006",
+      "name": "셀프마라탕",
+      "description": "기본재료 NO, 모든재료 내 취향대로 선택가능",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/76d8d9f0-c605-4122-9cac-643e24bd5c96.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[신메뉴출시] 크림통새우",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2d0a13ce-b060-45ae-af0b-b5005b42f9c2.jpg"
+    },
+    {
+      "id": "ddangyo-1246432-10000009",
+      "sourceMenuId": "10000009",
+      "name": "[인기메뉴] 새우꿔바로우",
+      "description": "(1989마라탕의 꿔바로우 조리 특성 상 소스 따로 조리가 어려운 점 양해 부탁드립니다.)",
+      "category": "메인메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

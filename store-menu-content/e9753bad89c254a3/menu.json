@@ -1,0 +1,254 @@
+{
+  "storeId": "e9753bad89c254a3",
+  "storeName": "맛나감자탕 여서점",
+  "displayName": "맛나감자탕 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a25fc6ad-cb24-4afe-96b4-452face593c4.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "식사메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1230210-10000001",
+      "sourceMenuId": "10000001",
+      "name": "간장목뼈찜",
+      "description": "분모자+문어비엔나+쫀득떡사리+수제비+당면+양파+대파+청양고추 (재료소진시 다른품목이더추가됩니다)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0d72a747-0d3d-44fb-a225-12957a4cc700.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000003",
+      "sourceMenuId": "10000003",
+      "name": "목뼈감자탕",
+      "description": "야채+ 라면사리 + 반찬(깍두기 + 소스)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/8800fe78-fc58-432e-9998-46c3d59f431f.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000004",
+      "sourceMenuId": "10000004",
+      "name": "맛나목뼈찜",
+      "description": "반찬(깍두기 + 소스)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/78c74e15-7c15-4a15-b0fa-0e3adc2f1e9c.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000008",
+      "sourceMenuId": "10000008",
+      "name": "목뼈수제비해장국_조리완료(개별포장)",
+      "description": "반찬(깍두기 + 소스)",
+      "category": "식사메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-10000016",
+      "sourceMenuId": "10000016",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-10000029",
+      "sourceMenuId": "10000029",
+      "name": "고기만두튀김",
+      "description": "",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/213e7fd8-a3db-45fa-8757-152067c3e86b.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-90000001",
+      "sourceMenuId": "90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1230210-10000002",
+      "sourceMenuId": "10000002",
+      "name": "치즈간장목뼈찜",
+      "description": "모짜렐라치즈+분모자+문어비엔나+쫀득떡사리+수제비+당면+양파+대파+청양고추",
+      "category": "메인메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-10000009",
+      "sourceMenuId": "10000009",
+      "name": "목뼈해장국_조리완료(개별포장)",
+      "description": "반찬(깍두기 + 소스)",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/44b2dd43-01a4-49bd-beb5-87ae03e77993.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000017",
+      "sourceMenuId": "10000017",
+      "name": "제로펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-10000030",
+      "sourceMenuId": "10000030",
+      "name": "고추만두튀김",
+      "description": "",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/47976b5b-b6b5-4e7c-bd8f-2f878d8b16cd.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1230210-10000010",
+      "sourceMenuId": "10000010",
+      "name": "목뼈해장국_비조리(2인이상 묶음포장)",
+      "description": "반찬(깍두기 + 소스)",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/32a62a6d-42f8-4214-9aab-50a9cc7c295e.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000018",
+      "sourceMenuId": "10000018",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1230210-10000011",
+      "sourceMenuId": "10000011",
+      "name": "우거지해장국_조리완료(개별포장)",
+      "description": "고기&뼈 없음",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/2571ab7b-89bd-401c-b2b5-24d883fd93df.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000019",
+      "sourceMenuId": "10000019",
+      "name": "제로칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-90000004",
+      "sourceMenuId": "90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1230210-10000005",
+      "sourceMenuId": "10000005",
+      "name": "해물목뼈찜",
+      "description": "반찬(깍두기 + 소스)",
+      "category": "메인메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-10000012",
+      "sourceMenuId": "10000012",
+      "name": "우거지해장국_비조리(2인이상 묶음포장)",
+      "description": "고기&뼈 없음",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/4ed27953-e7b8-4a3b-8520-ccbdb35a0ad7.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000020",
+      "sourceMenuId": "10000020",
+      "name": "탐스(파인맛)355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-10000006",
+      "sourceMenuId": "10000006",
+      "name": "(신메뉴)맥반석 불뼈구이",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/c965ed28-a99d-4ca6-996b-b4431a116c8a.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000013",
+      "sourceMenuId": "10000013",
+      "name": "공기밥",
+      "description": "",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5ffa8a37-1cf6-413a-ae38-13553c24b225.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000021",
+      "sourceMenuId": "10000021",
+      "name": "탐스(오렌지)355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-10000007",
+      "sourceMenuId": "10000007",
+      "name": "(신메뉴)맥반석 간장목뼈구이",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/764ff985-1073-4fee-b854-6df84cae1011.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000014",
+      "sourceMenuId": "10000014",
+      "name": "깍두기 추가",
+      "description": "",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3826a240-6b4d-40ad-a78e-4cdbac1484f2.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000022",
+      "sourceMenuId": "10000022",
+      "name": "밀키스",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1230210-10000015",
+      "sourceMenuId": "10000015",
+      "name": "셀프볶음밥(밥+재료)",
+      "description": "",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/0e86bec4-f828-4361-99ef-947d420f6ce9.jpg"
+    },
+    {
+      "id": "ddangyo-1230210-10000023",
+      "sourceMenuId": "10000023",
+      "name": "생수",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

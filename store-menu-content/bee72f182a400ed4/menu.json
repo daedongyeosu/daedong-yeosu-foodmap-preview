@@ -1,0 +1,351 @@
+{
+  "storeId": "bee72f182a400ed4",
+  "storeName": "뚱땡이숯불두마리치킨 직영점",
+  "displayName": "뚱땡이숯불두마리치킨 직영점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5cd48bbb-3665-404f-a146-8e4021efc3d8.jpg",
+  "categories": [
+    "전체",
+    "[세트메뉴] 재주문율 높은대는 다~이유가 있죠",
+    "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+    "[사이드 메뉴] 치킨과 같이드세요.",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1221569-10000001",
+      "sourceMenuId": "10000001",
+      "name": "내맘대로 두마리세트",
+      "description": "두 마리 라고 작은 닭 쓰지않습니다. 구성 : 치킨 + 치킨 + 떡사리 + 무 +양배추샐러드+ 콜라 500ml",
+      "category": "[세트메뉴] 재주문율 높은대는 다~이유가 있죠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/8b7bac75-9c42-4f91-be6b-8928c4731f29.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000005",
+      "sourceMenuId": "10000005",
+      "name": "숯불바베큐양념구이",
+      "description": "(치밥끝판왕)누구도 흉내낼수 없는 뚱땡이 만의 특별한 소스로 만든 숯불 바베큐양념구이",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5cd48bbb-3665-404f-a146-8e4021efc3d8.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000008",
+      "sourceMenuId": "10000008",
+      "name": "숯불소금구이",
+      "description": "(육즙주의) 담백하고 촉촉한 숯불 소금구이",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ffde45d-14fa-4132-88b8-456a9a2faf5b.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000003",
+      "sourceMenuId": "10000003",
+      "name": "우동사리 SET",
+      "description": "숯불양념구이+우동사리+떡사리+양배추샐러드+치킨무+콜라500ml",
+      "category": "[세트메뉴] 재주문율 높은대는 다~이유가 있죠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5cd48bbb-3665-404f-a146-8e4021efc3d8.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000004",
+      "sourceMenuId": "10000004",
+      "name": "라면사리 SET",
+      "description": "숯불양념구이+라면사리+떡사리+양배추샐러드+치킨무+콜라500ml",
+      "category": "[세트메뉴] 재주문율 높은대는 다~이유가 있죠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5cd48bbb-3665-404f-a146-8e4021efc3d8.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000014",
+      "sourceMenuId": "10000014",
+      "name": "뚱땡이 사이드 패키지",
+      "description": "치즈볼2p+김말이2p+치즈스틱2p+새우링2p+감자튀김",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000036",
+      "sourceMenuId": "10000036",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1221569-10000006",
+      "sourceMenuId": "10000006",
+      "name": "크리미 숯불 바베큐양념",
+      "description": "매콤한 숯불소스와 부드럽고 고소한 슈프림 소스의 만남.",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/dc5fcbda-3c42-4be5-8ee3-89577acc2af3.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000015",
+      "sourceMenuId": "10000015",
+      "name": "(이건못참지) 모듬사이드패키지",
+      "description": "모짜렐라치즈볼2P + 치즈스틱2P + 김말이2P + 새우링2P",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000038",
+      "sourceMenuId": "10000038",
+      "name": "(순살)내맘대로'반반'SET",
+      "description": "반마리치킨+반마리치킨+양배추샐러드+치킨무+콜라500ml",
+      "category": "[세트메뉴] 재주문율 높은대는 다~이유가 있죠",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-90000002",
+      "sourceMenuId": "90000002",
+      "name": "소주 (진로)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1221569-10000007",
+      "sourceMenuId": "10000007",
+      "name": "크리미 양념치킨",
+      "description": "달짝지근한 양념치킨과 고소한 크리미소스의 만남",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/5addf4ec-cc04-46e3-9497-36b1a6750597.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000021",
+      "sourceMenuId": "10000021",
+      "name": "파채추가(숯불양념,데리,소금구이만 가능)",
+      "description": "시즈닝가루 부족하지 않게 넉넉히 드려요",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-90000003",
+      "sourceMenuId": "90000003",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1221569-10000016",
+      "sourceMenuId": "10000016",
+      "name": "(생과즙 가득) 파인애플 샤베트",
+      "description": "(후식 강추1위) 생과즙 듬뿍 들어간 달콤한 파인애플 샤베트 술안주에도 최고, 후식으로도 최고",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ec541631-cfb2-44a7-af1b-7f4f6650651f.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-90000004",
+      "sourceMenuId": "90000004",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1221569-10000002",
+      "sourceMenuId": "10000002",
+      "name": "폭탄치즈 SET [모짜렐라치즈 듬뿍]",
+      "description": "양념구이+폭탄치즈사리+우동사리or라면사리+떡사리+무+양배추샐러드+콜라500ml",
+      "category": "[세트메뉴] 재주문율 높은대는 다~이유가 있죠",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/dc5fcbda-3c42-4be5-8ee3-89577acc2af3.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000009",
+      "sourceMenuId": "10000009",
+      "name": "숯불데리야끼",
+      "description": "`단짠단짠 ` 담백한 숯불데리야끼",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000010",
+      "sourceMenuId": "10000010",
+      "name": "`바사삭` 후라이드",
+      "description": "겉바속촉의 `정석`",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/ff3c3a7e-82aa-4395-b9dd-16f2e0848d9a.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000017",
+      "sourceMenuId": "10000017",
+      "name": "양배추샐러드",
+      "description": "(케찹+마요네즈)치킨드실때 양배추샐러드 빠지면 섭섭하죠",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/6e474ca4-3f05-4a24-bd18-1463a47f64c8.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000011",
+      "sourceMenuId": "10000011",
+      "name": "`달짝지근` 양념치킨",
+      "description": "어릴적 먹던 추억의 양념치킨 맛",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/750c72d3-a74e-4c83-ab51-2ebba8fd024a.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000018",
+      "sourceMenuId": "10000018",
+      "name": "우동사리",
+      "description": "숯불양념소스와 탱탱하고 식감좋은 우동사리의 만남.후회없는선택",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dc7f23e0-ef46-428b-a392-e5cc9d77b08d.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000012",
+      "sourceMenuId": "10000012",
+      "name": "`단짠`간장치킨",
+      "description": "향긋한 간장과 신선한 마늘이 함유된 최고급 정통 간장치킨",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/5b5f4dbb-d7f7-4cb4-bf85-e7cdb0b8a130.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000019",
+      "sourceMenuId": "10000019",
+      "name": "라면사리",
+      "description": "숯불양념소스와 꼬들꼬들한 식감의 라면사리의 만남.후회없는선택",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/27080b3b-5ab4-4669-8707-4395c52c2879.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000013",
+      "sourceMenuId": "10000013",
+      "name": "`버터` 간장치킨",
+      "description": "버터와 간장소스의 황홀한 만남",
+      "category": "[단품메뉴] 진짜 맛있습니다. 꼭 드셔보세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/5b5f4dbb-d7f7-4cb4-bf85-e7cdb0b8a130.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000020",
+      "sourceMenuId": "10000020",
+      "name": "양념감자(크림버터마늘맛)",
+      "description": "시즈닝가루 부족하지 않게 넉넉히 드려요",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000022",
+      "sourceMenuId": "10000022",
+      "name": "새우링",
+      "description": "(강추) 새우살 듬뿍. 절대 후회안해요",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000023",
+      "sourceMenuId": "10000023",
+      "name": "감자튀김(케찹 제공되요~)",
+      "description": "맛있으면 0칼로리",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1078453d-f708-4f8b-8c00-6233d3cabfc9.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000024",
+      "sourceMenuId": "10000024",
+      "name": "김말이",
+      "description": "숯불바베큐와 찰떡궁합",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f792c40c-7184-4c33-87dc-74fb85d34364.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000025",
+      "sourceMenuId": "10000025",
+      "name": "모짜렐라 치즈볼",
+      "description": "특급 레시피로 겉은 바삭하고 속은 고소한 모짜렐라 치즈볼",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001993.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000026",
+      "sourceMenuId": "10000026",
+      "name": "떡튀김",
+      "description": "모든 메뉴와 찰떡궁합",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e5b845d4-25cb-4397-9ec4-b7550300509d.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000027",
+      "sourceMenuId": "10000027",
+      "name": "치즈스틱",
+      "description": "고소하고 쫀득한 치즈스틱",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5ddece62-e61b-4ff4-94e3-22247dc46b17.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000028",
+      "sourceMenuId": "10000028",
+      "name": "즉석밥",
+      "description": "",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000029",
+      "sourceMenuId": "10000029",
+      "name": "무",
+      "description": "새콤달콤 아삭아삭 치킨무",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/346f18d7-a13e-4100-856a-1583a5726362.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000030",
+      "sourceMenuId": "10000030",
+      "name": "양념치킨소스",
+      "description": "옛날 시장통에서 사먹던 양념치킨 소스",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/31c9974f-6d0e-4911-8e67-0f6db4cd7e21.jpg"
+    },
+    {
+      "id": "ddangyo-1221569-10000031",
+      "sourceMenuId": "10000031",
+      "name": "간장소스",
+      "description": "적당히 짭잘하고 달달한 간장소스",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000032",
+      "sourceMenuId": "10000032",
+      "name": "버터간장소스",
+      "description": "버터와 간장을 황금비율로 만든 트렌디한 소스",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000033",
+      "sourceMenuId": "10000033",
+      "name": "크리미소스",
+      "description": "부드럽고 고소한 슈프림 소스",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000034",
+      "sourceMenuId": "10000034",
+      "name": "청양마요소스",
+      "description": "청양의 매콤함과 마요네즈의 고소함의 콜라보",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1221569-10000035",
+      "sourceMenuId": "10000035",
+      "name": "치즈치폴레소스",
+      "description": "훈연칠리의 매콤함과 치즈의 고소함이 만난 환상의 콜라보 소스",
+      "category": "[사이드 메뉴] 치킨과 같이드세요.",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

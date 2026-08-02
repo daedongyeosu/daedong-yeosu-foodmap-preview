@@ -1,0 +1,134 @@
+{
+  "storeId": "779bc5453215d9c5",
+  "storeName": "손수끓인육개장 여수점",
+  "displayName": "손수끓인육개장 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4b467fb5-5cdb-4b78-b80b-a9ff0c22b81d.jpg",
+  "categories": [
+    "전체",
+    "손수끓인 닭곰탕",
+    "손수끓인 육개장",
+    "삼계탕 메뉴",
+    "보쌈 메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1201319-10000005",
+      "sourceMenuId": "10000005",
+      "name": "닭곰탕",
+      "description": "닭곰탕(살코기 or 닭반마리 선택) + 깍두기 + 공기밥",
+      "category": "손수끓인 닭곰탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/7179d35c-cf5d-46a9-b321-51bb0dd563f4.jpg"
+    },
+    {
+      "id": "ddangyo-1201319-10000006",
+      "sourceMenuId": "10000006",
+      "name": "얼큰 닭곰탕",
+      "description": "얼큰닭곰탕 + 깍두기 + 공기밥",
+      "category": "손수끓인 닭곰탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/f8fc1e08-3e1a-40db-86ae-0b3dfbf3ffaf.jpg"
+    },
+    {
+      "id": "ddangyo-1201319-10000007",
+      "sourceMenuId": "10000007",
+      "name": "들깨 닭곰탕",
+      "description": "얼큰닭곰탕 + 깍두기 + 공기밥",
+      "category": "손수끓인 닭곰탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/17477082-cd1b-40f4-93ae-06d45ad9cd9e.jpg"
+    },
+    {
+      "id": "ddangyo-1201319-10000001",
+      "sourceMenuId": "10000001",
+      "name": "차돌육개장",
+      "description": "차돌육개장+공기밥+반찬",
+      "category": "손수끓인 육개장",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/8c9f1fa8-e154-4ee6-9c11-fdfe8f683f77.jpg"
+    },
+    {
+      "id": "ddangyo-1201319-10000002",
+      "sourceMenuId": "10000002",
+      "name": "차돌 만두육개장",
+      "description": "차돌육개장+만두3+공기밥+반찬",
+      "category": "손수끓인 육개장",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/7afbeaa8-6f75-49e9-9267-12fa3c2dfe0e.JPG"
+    },
+    {
+      "id": "ddangyo-1201319-10000008",
+      "sourceMenuId": "10000008",
+      "name": "삼계탕 정식",
+      "description": "삼계탕 + 공기밥 + 반찬",
+      "category": "삼계탕 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/006c0604-415c-4ce6-8250-73b8f3cbc69c.jpg"
+    },
+    {
+      "id": "ddangyo-1201319-10000010",
+      "sourceMenuId": "10000010",
+      "name": "보쌈",
+      "description": "",
+      "category": "보쌈 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/6721abb6-c4e3-438b-8c2e-d6ebe0f87834.jpg"
+    },
+    {
+      "id": "ddangyo-1201319-10000011",
+      "sourceMenuId": "10000011",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1201319-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1201319-10000009",
+      "sourceMenuId": "10000009",
+      "name": "들깨삼계탕 정식",
+      "description": "들깨삼계탕 + 공기밥 + 반찬",
+      "category": "삼계탕 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/321fbfd7-236c-4f35-90ec-a7f0b0543af2.jpg"
+    },
+    {
+      "id": "ddangyo-1201319-10000012",
+      "sourceMenuId": "10000012",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1201319-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1201319-10000003",
+      "sourceMenuId": "10000003",
+      "name": "닭개장",
+      "description": "닭개장+공기밥+반찬",
+      "category": "손수끓인 육개장",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/ce3244ad-5f43-476a-a650-96ec9ab6da23.jpg"
+    },
+    {
+      "id": "ddangyo-1201319-10000004",
+      "sourceMenuId": "10000004",
+      "name": "만두 닭개장",
+      "description": "닭개장+만두3+공기밥+반찬",
+      "category": "손수끓인 육개장",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/cb0d8c2b-8704-4cf2-94b4-5d72dce6f035.JPG"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "storeId": "3d91b86995f619d6",
+  "storeName": "프랭크버거 여수여서점",
+  "displayName": "프랭크버거 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5136f843-9032-4a3d-8ac6-4be3a514d6c8.jpg",
+  "categories": [
+    "전체",
+    "버거세트",
+    "음료",
+    "버거단품",
+    "사이드",
+    "프랭크팩",
+    "신메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1193629-30000018",
+      "sourceMenuId": "30000018",
+      "name": "치즈버거세트",
+      "description": "대표메뉴로서 100% 수제패티와 체다 치즈의 깊은 풍미를 이룬 시그니처 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/cad7a29f-3c19-4fee-bfe1-c54f712f37d8.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000001",
+      "sourceMenuId": "30000001",
+      "name": "100%한우갈릭버거세트",
+      "description": "100% 순수 한우 패티에 블랙갈릭소스의 깊고 진한 맛을 더한 한우 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/7d062453-f07d-4f03-9195-7594fa2b6240.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000002",
+      "sourceMenuId": "30000002",
+      "name": "100%한우버거세트",
+      "description": "100% 순수 한우 패티에 데미글라스 브라운 소스를 더한 리얼 한우 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/01555070-96b7-4adc-b620-c5fe8c4482af.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000015",
+      "sourceMenuId": "30000015",
+      "name": "프랭크버거세트",
+      "description": "육즙 가득한 수제패티와 신선한 야채가 잘 어우러져 기본에 충실한 미국 동부식 오리지널 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/89537722-45cc-4836-92e2-417e088b025b.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000054",
+      "sourceMenuId": "30000054",
+      "name": "펩시(355ml캔)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/1df9e354-d469-41ff-9a4b-597753ff52ef.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000099",
+      "sourceMenuId": "30000099",
+      "name": "(박은영 에디션)파닭파닭치킨버거",
+      "description": "고소한 땅콩과 고추와 대파의 풍미가 살아있는 중화풍 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/26b938d4-9fb2-4f91-a291-952c04911490.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000096",
+      "sourceMenuId": "30000096",
+      "name": "(박은영 에디션)파닭파닭치킨버거세트",
+      "description": "고소한 땅콩과 고추와 대파의 풍미가 살아있는 중화풍 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/eb3455f1-613b-418d-afd5-297b7c0c2700.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000068",
+      "sourceMenuId": "30000068",
+      "name": "순살치킨 후라이드(200g)",
+      "description": "껍질의 바삭함과 육즙 가득한 부드러운 속살을 동시에 느낄수 있는 맛",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c2e5f229-7a0a-4881-a320-6580b4d09dc1.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000062",
+      "sourceMenuId": "30000062",
+      "name": "프랭크치킨팩(자이언트통닭다리)",
+      "description": "자이언트통닭다리(1)+치킨선택+사이드선택",
+      "category": "프랭크팩",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/aadaba81-313c-4805-823a-4d68767d9441.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000069",
+      "sourceMenuId": "30000069",
+      "name": "순살치킨 양념(200g)",
+      "description": "특제 고추양념소스로 버무린 매콤달콤함의 정석을 느낄 수 있는 맛",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5f16ae46-ca62-4bd3-87f4-49603a0adc56.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000055",
+      "sourceMenuId": "30000055",
+      "name": "펩시제로(355ml캔)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/7bc5a454-69ef-4a67-9e91-394f32ee3033.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000063",
+      "sourceMenuId": "30000063",
+      "name": "프랭크버거팩(자이언트통닭다리)",
+      "description": "자이언트통닭다리(1)+햄버거선택+사이드선택",
+      "category": "프랭크팩",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ba547631-a589-4058-8783-3d98cbd783bc.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000091",
+      "sourceMenuId": "30000091",
+      "name": "(박은영 에디션)깐쇼새우비프버거세트",
+      "description": "육즙 가득한 비프패티와 바삭한 새우패티를 함께 즐기는 두가지 패티맛의 버거 세트",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4e34f159-04b1-4b8b-937f-138f2a006f9d.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000100",
+      "sourceMenuId": "30000100",
+      "name": "(박은영 에디션)깐쇼새우비프버거",
+      "description": "육즙 가득한 비프패티와 바삭한 새우패티를 함께 즐기는 두가지 패티맛의 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e329e9ad-f2b5-4eb2-bf15-0f07e365a685.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000101",
+      "sourceMenuId": "30000101",
+      "name": "(박은영 에디션)맥앤치즈비프버거",
+      "description": "진한 체다치즈로 만든 크리미한 맥앤치즈와 육즙 가득한 비프패티의 완벽하게 조화로 만들어진 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bcdc2bb9-b88b-46ca-adad-8b8590ef6c04.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000056",
+      "sourceMenuId": "30000056",
+      "name": "사이다(355ml캔)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e0ca4d51-fd8d-4181-b0b6-679e26f9c9a2.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000070",
+      "sourceMenuId": "30000070",
+      "name": "순살치킨 청양마요(200g)",
+      "description": "매콤하고 크리미한 청양마요소스에 할라피뇨가 더해진 매력적인 맛",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4cb0bf38-46bb-4e4c-b8ae-228025ebfda5.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000092",
+      "sourceMenuId": "30000092",
+      "name": "(박은영 에디션)맥앤치즈비프버거세트",
+      "description": "진한 체다치즈로 만든 크리미한 맥앤치즈와 육즙 가득한 비프패티의 완벽하게 조화로 만들어진 버거 세트",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5ec24d8b-1e8f-491e-87f2-82486b780aaf.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000057",
+      "sourceMenuId": "30000057",
+      "name": "사이다제로(355ml캔)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/74b99a76-7f1c-4697-ace7-21bdf5d88f61.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000041",
+      "sourceMenuId": "30000041",
+      "name": "해쉬포테이토(1개)",
+      "description": "바삭한 크런치함 속에 고소하고 담백한 포테이토 맛이 일품인 메뉴",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/cb5df6a5-4ad3-4ef9-9c9e-6a99bb8e2f84.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000027",
+      "sourceMenuId": "30000027",
+      "name": "K불고기버거",
+      "description": "전통 궁중식 너비아니 스타일의 패티에 불고기 양념을 가미한 한국의 대표 불고기 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/930f8a8e-90b6-4a70-849c-f0b1b094bff7.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000013",
+      "sourceMenuId": "30000013",
+      "name": "K불고기버거세트",
+      "description": "전통 궁중식 너비아니 스타일의 패티에 불고기 양념을 가미한 한국의 대표 불고기 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/04f05180-d241-459b-a973-baa942ed84a6.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000058",
+      "sourceMenuId": "30000058",
+      "name": "탐스쥬시오렌지(355ml캔)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e5f3f203-c1ee-4703-9f09-0a6a8b100d91.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000028",
+      "sourceMenuId": "30000028",
+      "name": "K핫불고기버거",
+      "description": "매콤한 특제소스로 한국 특유의 매운맛을 살린 화끈한 불고기 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/1ba351b3-8515-4c42-86cc-c7ae2d696a45.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000042",
+      "sourceMenuId": "30000042",
+      "name": "프렌치프라이",
+      "description": "크리스피 슈스트링 감자의 바삭함이 일품인 감자튀김",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/16cf668b-981c-42a3-a21c-08a54d86ff7b.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000014",
+      "sourceMenuId": "30000014",
+      "name": "K핫불고기버거세트",
+      "description": "매콤한 특제소스로 한국 특유의 매운맛을 살린 화끈한 불고기 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ddee406c-db6b-4271-83de-4eee3a38cdd3.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000029",
+      "sourceMenuId": "30000029",
+      "name": "프랭크버거",
+      "description": "육즙 가득한 수제패티와 신선한 야채가 잘 어우러져 기본에 충실한 미국 동부식 오리지널 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/6176c16c-6bbb-4aa2-adf8-34e70c0ccee8.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000043",
+      "sourceMenuId": "30000043",
+      "name": "콘샐러드(1개)",
+      "description": "스위트콘의 톡톡튀는 식감과 달콤하고 고소한 맛의 조화 버거와 함께 먹으면 너무 잘 어울리는 콘샐러드",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/c308ef4c-1fa5-45a9-a7b4-7fb65cef4f33.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000030",
+      "sourceMenuId": "30000030",
+      "name": "쉬림프버거",
+      "description": "탱탱한 새우가 들어간 새우패티를 바삭하게 튀겨 새콤달콤한 특제소스와 조화를 이룬 프리미엄 새우 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ff836703-407f-4174-91a2-81e4b8b22d24.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000044",
+      "sourceMenuId": "30000044",
+      "name": "코울슬로(1개)",
+      "description": "양배추의 아삭아삭 신선함과 상큼한 맛이 일품인 코울슬로",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/42a8d35b-20ab-419c-8bc7-854d1595f5bf.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000060",
+      "sourceMenuId": "30000060",
+      "name": "아메리카노(ICE)",
+      "description": "100% 풍미 깊은 원두로 더욱 깊고 진한 아메리카노",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5d544acb-8260-48f0-9ef5-22a006d89212.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000016",
+      "sourceMenuId": "30000016",
+      "name": "쉬림프버거세트",
+      "description": "탱탱한 새우가 들어간 새우패티를 바삭하게 튀겨 새콤달콤한 특제소스와 조화를 이룬 프리미엄 새우 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/7efb4d08-dc8f-4482-96a6-15f39307ff47.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000031",
+      "sourceMenuId": "30000031",
+      "name": "청양마요쉬림프버거",
+      "description": "핫 렐리쉬 마요소스와 탱글탱글한 새우 패티가 어우러져 새우의 풍미가 깔끔하게 마무리 되는 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e7d24e30-379b-4ca9-8678-b26d38283f50.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000072",
+      "sourceMenuId": "30000072",
+      "name": "오징어링(3개)",
+      "description": "겉은 바삭하게 튀겨 쫄깃한 식감을 그대로 느낄 수 있는 오징어링",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/3c410deb-0514-4295-8d82-f3af01bc33e2.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000061",
+      "sourceMenuId": "30000061",
+      "name": "밀크쉐이크",
+      "description": "신선한 우유와 부드러운 바닐라의 조합으로 직접 만든 100% 미국식 수제 밀크쉐이크",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/db0ee2e0-a30e-46d8-95d5-828e2636a0d4.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000017",
+      "sourceMenuId": "30000017",
+      "name": "청양마요쉬림프버거세트",
+      "description": "핫 렐리쉬 마요소스와 탱글탱글한 새우 패티가 어우러져 새우의 풍미가 깔끔하게 마무리 되는 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4b075889-6caa-49ef-b3d2-0ae806db010a.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000032",
+      "sourceMenuId": "30000032",
+      "name": "치즈버거",
+      "description": "대표메뉴로서 100% 수제패티와 체다 치즈의 깊은 풍미를 이룬 시그니처 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/50fbec1b-3ecf-423f-9e4b-67d71174a51a.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000045",
+      "sourceMenuId": "30000045",
+      "name": "치즈스틱(3개)",
+      "description": "100% 모짜렐라 치즈로 속이 꽉 찬 바삭한 치즈스틱",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b48120f8-1fef-4662-93cf-44d169a6e6a8.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000022",
+      "sourceMenuId": "30000022",
+      "name": "베이컨치즈버거세트",
+      "description": "수제패티에 하와이안 스타일의 구운 파인애플과 베이컨의 조화를 이룬 스페셜 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/da1ce770-4466-4ecd-95b7-0ae0f697ffe0.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000036",
+      "sourceMenuId": "30000036",
+      "name": "베이컨치즈버거",
+      "description": "수제패티에 하와이안 스타일의 구운 파인애플과 베이컨의 조화를 이룬 스페셜 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/3d628b75-5ce2-44ad-b3ac-b675732cbc1e.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000046",
+      "sourceMenuId": "30000046",
+      "name": "더치즈볼(3개)",
+      "description": "치즈의 고소함과 깊은 풍미가 가득한 치즈볼",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/2ba015ae-b317-42f8-b29f-bf9113046a3e.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000023",
+      "sourceMenuId": "30000023",
+      "name": "비프앤쉬림프버거세트",
+      "description": "탱탱한 새우가 들어간 새우 패티와 소고기패티의 육향이 절묘하게 조화를 이룬 프리미엄 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/db040896-bab5-4de5-8811-40c6b0dca4f5.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000047",
+      "sourceMenuId": "30000047",
+      "name": "치킨텐더(2개)",
+      "description": "스파이시 시즈닝을 입힌 부드러운 닭안심살을 매콤 바삭하게 튀겨낸 치킨 텐더",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b835646d-d45d-4af0-8b87-56b45628d760.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000037",
+      "sourceMenuId": "30000037",
+      "name": "비프앤쉬림프버거",
+      "description": "탱탱한 새우가 들어간 새우 패티와 소고기패티의 육향이 절묘하게 조화를 이룬 프리미엄 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/23e75de9-bd01-4fc6-8fb6-aa25314b7805.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000049",
+      "sourceMenuId": "30000049",
+      "name": "치즈프렌치프라이",
+      "description": "바삭한 감자튀김에 꾸덕한 체다치즈가 더해져 깊은 풍미를 느낄 수 있는 치즈 감자튀김",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/43b15d14-e47a-4afe-8403-e4d1eaa8a2e4.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000004",
+      "sourceMenuId": "30000004",
+      "name": "100%한우버거",
+      "description": "100% 순수 한우 패티에 데미글라스 브라운 소스를 더한 리얼 한우 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e7ac7d21-997f-4e88-8cda-34c3bb620b71.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000071",
+      "sourceMenuId": "30000071",
+      "name": "바삭어니언링",
+      "description": "통양파를 크런치하게 튀겨 바삭함과 달콤함을 극대화한 어니언링",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c6e647f1-b9aa-4e93-8c2d-83154aab15b1.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000003",
+      "sourceMenuId": "30000003",
+      "name": "100%한우갈릭버거",
+      "description": "100% 순수 한우 패티에 블랙갈릭소스의 깊고 진한 맛을 더한 한우 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/7d6c3072-a884-47df-b260-8b7939ceef72.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000038",
+      "sourceMenuId": "30000038",
+      "name": "더블비프치즈버거",
+      "description": "더블패티에 생양파와 피클을 더해 미국식 수제버거의 풍미를 최상으로 느낄 수 있는 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/a84070cf-76cd-4d68-a18e-ee9af57bf1e4.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000024",
+      "sourceMenuId": "30000024",
+      "name": "더블비프치즈버거세트",
+      "description": "더블패티에 생양파와 피클을 더해 미국식 수제버거의 풍미를 최상으로 느낄 수 있는 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/bcf485e9-caf0-4d5d-ba76-e57edc4fd0d5.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000050",
+      "sourceMenuId": "30000050",
+      "name": "통가슴살후라이드(1개)",
+      "description": "순살 닭가슴살을 납작하게 튀겨 겉은 바삭, 속은 촉촉하게 튀겨낸 치킨 파이 스타일",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d942b8fd-1ea1-4d44-81f5-ce467d62091f.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000026",
+      "sourceMenuId": "30000026",
+      "name": "JG버거세트",
+      "description": "정통 아메리칸 스타일에 구운 베이컨에 꾸덕한 치즈소스가 듬뿍 들어가 풍만함이 최상인 마지막 종결 버거 세트",
+      "category": "버거세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/657c69e4-8306-4d13-9426-f6855e17885f.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000040",
+      "sourceMenuId": "30000040",
+      "name": "JG버거",
+      "description": "정통 아메리칸 스타일에 구운 베이컨에 꾸덕한 치즈소스가 듬뿍 들어가 풍만함이 최상인 마지막 종결 버거",
+      "category": "버거단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/1f5e8778-60aa-495f-8eda-a8f55fe7c284.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000052",
+      "sourceMenuId": "30000052",
+      "name": "버팔로윙봉(4개)",
+      "description": "뉴욕 버팔로 스타일로 겉은 바삭, 속은 촉촉하게 튀겨 짭짤한 맛이 일품인 버팔로 치킨",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/740f6bfc-b1e6-445b-b3c4-ec8a346478e1.jpg"
+    },
+    {
+      "id": "ddangyo-1193629-30000053",
+      "sourceMenuId": "30000053",
+      "name": "자이언트통닭다리(1개)",
+      "description": "거대한 닭다리 한쪽을 통째로 바삭하게 튀겨 육즙은 살리고 짭쪼름한 맛을 더한 통닭다리살",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/34b6c8c1-892f-4013-8efe-51c1852c7aa1.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "storeId": "585904750de0000c",
+  "storeName": "땡초닭발",
+  "displayName": "땡초닭발",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/22622e8d-8b58-43eb-902d-e99efeb22a98.jpg",
+  "categories": [
+    "전체",
+    "세트메뉴",
+    "메뉴소개",
+    "추가 배달료(미 확인시 자동취소)",
+    "사이드메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1204994-10000011",
+      "sourceMenuId": "10000011",
+      "name": "직화무뼈닭발 세트",
+      "description": "불에 직접 구워 더 맛있는 닭발 무뼈닭발(중)+계란찜+주먹밥+마요네즈+양배추샐러드+단무지+쿨피스450ml (안내사항) 무뼈닭발은 간혹 잔뼈가 나올 수 있습니다 매장에서 2차로 한번 더 확인 후 보내지만 사람이 하는 일이다보니 잔뼈를 놓치는 경우가 있습니다. 이 부분 참고하시여 드실 때 유의 부탁드립니다",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/2cc6b59c-928a-4639-a2b3-6830ccd1e716.jpeg"
+    },
+    {
+      "id": "ddangyo-1204994-10000013",
+      "sourceMenuId": "10000013",
+      "name": "땡초국물닭발세트",
+      "description": "%반반 불가 %반반 불가% 콩나물은 국물닭발에 넣지마시고 따로 국물에 찍어드세요/더맵게,덜맵게 불가 맛있게 매운맛 1가지만 가능합니다 무뼈닭발은 간혹 뼈가 나올 수 있으니 유의 바랍니다 국물닭발+계란찜+주먹밥+마요네즈+양배추샐러드+단무지+쿨피스450ml",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e79b09cb-55b8-4a8c-a95e-39b20dbce147.jpeg"
+    },
+    {
+      "id": "ddangyo-1204994-10000016",
+      "sourceMenuId": "10000016",
+      "name": "직화무뼈닭발",
+      "description": "불에 직접 구워 더 맛있는 닭발",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5beaf591-0839-4110-af17-62951d390018.jpeg"
+    },
+    {
+      "id": "ddangyo-1204994-10000015",
+      "sourceMenuId": "10000015",
+      "name": "직화뼈닭발",
+      "description": "불에 직접 구워 더 맛있는 닭발 뼈닭발(중)+마요네즈+양배추샐러드+단무지 안내) 대짜리로 주문 시 쿨피스 450ml 서비스 중짜리는 제공되지 않습니다.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e620abce-0c6b-4d50-aa72-15400b89551e.jpeg"
+    },
+    {
+      "id": "ddangyo-1204994-10000009",
+      "sourceMenuId": "10000009",
+      "name": "직화뼈닭발세트",
+      "description": "불에 직접 구워 더 맛있는 닭발",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ee6139c3-11cd-4f53-a132-2dfa198eda98.jpeg"
+    },
+    {
+      "id": "ddangyo-1204994-10000001",
+      "sourceMenuId": "10000001",
+      "name": "광무동,고소동,중앙동,수정동,관문동,종화동,학동",
+      "description": "",
+      "category": "추가 배달료(미 확인시 자동취소)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000020",
+      "sourceMenuId": "10000020",
+      "name": "김가루주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/deb820e1-18e1-4ae8-8e95-401917b30726.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-10000030",
+      "sourceMenuId": "10000030",
+      "name": "캔쿨피스(복숭아맛)350ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1204994-10000002",
+      "sourceMenuId": "10000002",
+      "name": "군자동,충무동,공화동",
+      "description": "",
+      "category": "추가 배달료(미 확인시 자동취소)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000010",
+      "sourceMenuId": "10000010",
+      "name": "직화뼈닭발 3인세트",
+      "description": "불에 직접 구워 더 맛있는 닭발 뼈닭발(대)+계란찜+주먹밥+마요네즈+양배추샐러드+단무지+쿨피스450ml",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000021",
+      "sourceMenuId": "10000021",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/3b2df64c-6a18-4ed6-8774-25f5a75c76b7.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-10000031",
+      "sourceMenuId": "10000031",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/3edc667e-5771-4c85-a883-9d56d09487ce.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1204994-10000003",
+      "sourceMenuId": "10000003",
+      "name": "수정동 호텔",
+      "description": "",
+      "category": "추가 배달료(미 확인시 자동취소)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000017",
+      "sourceMenuId": "10000017",
+      "name": "땡초국물닭발",
+      "description": "%반반 불가% 콩나물은 국물닭발에 넣지마시고 따로 국물에 찍어드세요 더맵게,덜맵게 불가 맛있게 매운맛 1가지만 가능합니다 무뼈닭발은 간혹 뼈가 나올 수 있으니 유의 바랍니다 마요네즈+양배추샐러드+단무지+콩나물",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/c148e400-61c5-4cc5-84e3-3435c681c55a.jpeg"
+    },
+    {
+      "id": "ddangyo-1204994-10000022",
+      "sourceMenuId": "10000022",
+      "name": "마요네즈",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000004",
+      "sourceMenuId": "10000004",
+      "name": "교동,히든베이호텔",
+      "description": "",
+      "category": "추가 배달료(미 확인시 자동취소)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000012",
+      "sourceMenuId": "10000012",
+      "name": "직화무뼈닭발 3인세트",
+      "description": "불에 직접 구워 더 맛있는 닭발 무뼈닭발(대)+계란찜+주먹밥+마요네즈+양배추샐러드+단무지+쿨피스450ml (안내사항) 무뼈닭발은 간혹 잔뼈가 나올 수 있습니다 매장에서 2차로 한번 더 확인 후 보내지만 사람이 하는 일이다보니 잔뼈를 놓치는 경우가 있습니다. 이 부분 참고하시여 드실 때 유의 부탁드립니다",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000018",
+      "sourceMenuId": "10000018",
+      "name": "양념똥집",
+      "description": "지금까지 이런 똥집은 없었다... 불향 솔솔 나는 또옹찝~",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/d168579c-f108-46b1-a87c-7762a83b0661.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-10000023",
+      "sourceMenuId": "10000023",
+      "name": "치킨무230g",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/89023f57-03a8-4156-83a2-083aad773a24.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-10000005",
+      "sourceMenuId": "10000005",
+      "name": "선원동,안산동,화장동",
+      "description": "",
+      "category": "추가 배달료(미 확인시 자동취소)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000019",
+      "sourceMenuId": "10000019",
+      "name": "소금똥집",
+      "description": "지금까지 이런 똥집은 없었다... 불향 솔솔 나는 또옹찝~",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/4c9724d9-b2a1-404d-83dc-50ae5f834d8a.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-10000006",
+      "sourceMenuId": "10000006",
+      "name": "무선주공3차",
+      "description": "",
+      "category": "추가 배달료(미 확인시 자동취소)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000014",
+      "sourceMenuId": "10000014",
+      "name": "볶음 닭똥집 세트",
+      "description": "지금까지 이런 똥집은 없었다... 불향 솔솔 나는 또옹찝~ 볶음똥집+계란찜+주먹밥+마요네즈+양배추샐러드+단무지+쿨피스450ml (소금똥집 선택시) 소금장",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000025",
+      "sourceMenuId": "10000025",
+      "name": "떡 추가(무뼈닭발, 국물닭발 이외 추가 X)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/b19f1914-3e26-436d-b8d4-c717021ca1a9.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-10000007",
+      "sourceMenuId": "10000007",
+      "name": "만흥동 , 소호동",
+      "description": "",
+      "category": "추가 배달료(미 확인시 자동취소)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000026",
+      "sourceMenuId": "10000026",
+      "name": "우동사리(국물닭발만 가능)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dc7f23e0-ef46-428b-a392-e5cc9d77b08d.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-10000008",
+      "sourceMenuId": "10000008",
+      "name": "덕충동펜션 및 호텔",
+      "description": "",
+      "category": "추가 배달료(미 확인시 자동취소)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000027",
+      "sourceMenuId": "10000027",
+      "name": "양배추샐러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000029",
+      "sourceMenuId": "10000029",
+      "name": "옛날쫀드기(추가)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6da914b6-04cb-46de-a592-804acacd1259.jpg"
+    },
+    {
+      "id": "ddangyo-1204994-10000034",
+      "sourceMenuId": "10000034",
+      "name": "연근모양분모자 6개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000037",
+      "sourceMenuId": "10000037",
+      "name": "둥근당면150g(삶아서 따로 포장해드립니다)",
+      "description": "국물닭발에 넣어먹으면 금상첨화!!!!!!!!!",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1204994-10000045",
+      "sourceMenuId": "10000045",
+      "name": "우삼겹(국물닭발만 가능)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

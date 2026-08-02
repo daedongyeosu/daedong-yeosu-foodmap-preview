@@ -15,21 +15,24 @@
       "name": "대만족 삼겹보쌈",
       "description": "보쌈+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/75768c42-4166-41ed-b681-f869c519f1b2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/75768c42-4166-41ed-b681-f869c519f1b2.jpg",
+      "sourceMenuId": "10000003"
     },
     {
       "id": "ddangyo-1311033-10000004",
       "name": "야들야들 건강족발",
       "description": "족발+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라 500ml",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a85255c2-8577-49fc-aa07-dfd9e47561e8.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a85255c2-8577-49fc-aa07-dfd9e47561e8.jpg",
+      "sourceMenuId": "10000004"
     },
     {
       "id": "ddangyo-1311033-10000006",
       "name": "맛있게매운 불족발",
       "description": "족발+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/9c3287b0-60c6-4bc1-a125-19c770a30360.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/9c3287b0-60c6-4bc1-a125-19c770a30360.jpg",
+      "sourceMenuId": "10000006"
     },
     {
       "id": "ddangyo-1311033-90000001",
@@ -37,14 +40,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
     },
     {
       "id": "ddangyo-1311033-10000001",
       "name": "보신환상궁합세트",
       "description": "족발+삼겹보쌈+떡볶이+튀김+막국수+모듬채소+무말랭이 보쌈김치+소스세트+콜라大",
       "category": "세트메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000001"
     },
     {
       "id": "ddangyo-1311033-90000002",
@@ -52,14 +57,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
     },
     {
       "id": "ddangyo-1311033-10000002",
       "name": "불족엔보쌈",
       "description": "불족보쌈+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
       "category": "세트메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000002"
     },
     {
       "id": "ddangyo-1311033-90000003",
@@ -67,14 +74,16 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
     },
     {
       "id": "ddangyo-1311033-10000005",
       "name": "새콤달콤 파채 족발",
       "description": "파채족발+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
       "category": "메뉴소개",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000005"
     },
     {
       "id": "ddangyo-1311033-90000004",
@@ -82,56 +91,64 @@
       "description": "",
       "category": "주류메뉴",
       "image": "",
-      "adultOnly": true
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
     },
     {
       "id": "ddangyo-1311033-10000007",
       "name": "환상의두가지맛 반반족발",
       "description": "반반족발+떡볶이+막국수+쌈채소+무말랭이 보쌈김치+소스세트+콜라500",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/d3b190ed-1306-4ba2-a380-cf58b2757ff9.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/d3b190ed-1306-4ba2-a380-cf58b2757ff9.jpg",
+      "sourceMenuId": "10000007"
     },
     {
       "id": "ddangyo-1311033-10000008",
       "name": "파채 치킨",
       "description": "소호동 지역만 배달되고 그외지역은 추가주문시 가능합니다. 감사합니다.",
       "category": "메뉴소개",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000008"
     },
     {
       "id": "ddangyo-1311033-10000009",
       "name": "깻잎 치킨1998",
       "description": "소호동 지역만 배달되고 그외지역은 추가주문시 배달 가능합니...",
       "category": "메뉴소개",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000009"
     },
     {
       "id": "ddangyo-1311033-10000010",
       "name": "양념 치킨",
       "description": "소호동 지역만 배달되고 그외지역 추가주문만 가능합니다. 감사합니다.",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/3b767125-5aa6-41f8-b5e0-35e1f88666c1.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/3b767125-5aa6-41f8-b5e0-35e1f88666c1.jpg",
+      "sourceMenuId": "10000010"
     },
     {
       "id": "ddangyo-1311033-10000011",
       "name": "반반치킨",
       "description": "소호동 지역만 배달가능하고 그외 지역은 추가주문시 배달가능합니.....",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3cece22d-6671-489c-8d03-d6cefe4829d3.jpg",
+      "sourceMenuId": "10000011"
     },
     {
       "id": "ddangyo-1311033-10000012",
       "name": "비빔막국수",
       "description": "정통 막국수",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e6ee0ca8-99e0-4ed0-a5e6-4796b2febc78.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e6ee0ca8-99e0-4ed0-a5e6-4796b2febc78.jpg",
+      "sourceMenuId": "10000012"
     },
     {
       "id": "ddangyo-1311033-10000013",
       "name": "공기밥",
       "description": "",
       "category": "메뉴소개",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg",
+      "sourceMenuId": "10000013"
     }
   ],
   "source": {
@@ -142,5 +159,8 @@
     ],
     "rawItemCount": 20,
     "duplicateItemsRemoved": 3
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

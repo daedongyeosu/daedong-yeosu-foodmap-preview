@@ -1,0 +1,334 @@
+{
+  "storeId": "6721d86f9ff6f74b",
+  "storeName": "부리나 바베큐치킨 여문점",
+  "displayName": "부리나 바베큐치킨 여문점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/e8574a03-8a56-4cc6-9b7b-9ee4d24f96f5.jpg",
+  "categories": [
+    "전체",
+    "부리나 바베큐 치킨",
+    "부리나 치킨",
+    "사이드메뉴",
+    "추가 배달료",
+    "부리나 순살 치킨",
+    "추가",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138935-10000002",
+      "sourceMenuId": "10000002",
+      "name": "숯불양념바베큐 (뼈O)",
+      "description": "(코카콜라355ml + 치킨무)",
+      "category": "부리나 바베큐 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/f4a318d4-96b9-476a-9bce-ec270182bc7b.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000004",
+      "sourceMenuId": "10000004",
+      "name": "순살 양념 바베큐",
+      "description": "(코카콜라355ml + 치킨무)",
+      "category": "부리나 바베큐 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/300c308d-3374-4104-946e-33faa7790686.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000005",
+      "sourceMenuId": "10000005",
+      "name": "순살 소금구이",
+      "description": "(코카콜라355ml + 매운소스 + 치킨무)",
+      "category": "부리나 바베큐 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/e110b270-f762-407b-b6ca-b434b07bcf73.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000006",
+      "sourceMenuId": "10000006",
+      "name": "후라이드 (뼈O)",
+      "description": "(코카콜라355ml + 양념치킨소스 + 치킨무)",
+      "category": "부리나 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000016",
+      "sourceMenuId": "10000016",
+      "name": "똥집튀김 + 감자튀김",
+      "description": "케찹 + 청양마요",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/fd7fb9e6-18e3-4ff9-a0b0-0e91a3dd56c8.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000001",
+      "sourceMenuId": "10000001",
+      "name": "신기동",
+      "description": "",
+      "category": "추가 배달료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138935-10000011",
+      "sourceMenuId": "10000011",
+      "name": "순살 후라이드",
+      "description": "(코카콜라355ml + 양념치킨소스 + 치킨무)",
+      "category": "부리나 순살 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/ba1eea7d-9712-493d-aa0e-1cc0f9be4bf9.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000015",
+      "sourceMenuId": "10000015",
+      "name": "샐러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138935-10000019",
+      "sourceMenuId": "10000019",
+      "name": "치킨무",
+      "description": "",
+      "category": "추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138935-10000022",
+      "sourceMenuId": "10000022",
+      "name": "코카콜라 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/6f0d2bcf-e28b-4fb2-971e-1bb40e69a482.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-90000001",
+      "sourceMenuId": "90000001",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138935-10000003",
+      "sourceMenuId": "10000003",
+      "name": "숯불소금구이 (뼈O)",
+      "description": "(코카콜라355ml + 매운소스 + 치킨무)",
+      "category": "부리나 바베큐 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/e8574a03-8a56-4cc6-9b7b-9ee4d24f96f5.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000007",
+      "sourceMenuId": "10000007",
+      "name": "양념치킨 (뼈O)",
+      "description": "(코카콜라355ml + 치킨무)",
+      "category": "부리나 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa6bbf0a-1c10-4473-a6d8-bfabf7585c96.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000012",
+      "sourceMenuId": "10000012",
+      "name": "순살 양념치킨",
+      "description": "(코카콜라355ml + 치킨무)",
+      "category": "부리나 순살 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/1315c9d6-b945-4dc6-ba4f-d1b97f69a1ad.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000018",
+      "sourceMenuId": "10000018",
+      "name": "감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1078453d-f708-4f8b-8c00-6233d3cabfc9.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000020",
+      "sourceMenuId": "10000020",
+      "name": "매운 소스",
+      "description": "",
+      "category": "추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138935-10000023",
+      "sourceMenuId": "10000023",
+      "name": "코카콜라 제로 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/b946b7de-47ca-4820-ba26-c2d105b83cd4.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-90000002",
+      "sourceMenuId": "90000002",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138935-10000008",
+      "sourceMenuId": "10000008",
+      "name": "데리야끼 치킨 (뼈O)",
+      "description": "(코카콜라355ml + 치킨무)",
+      "category": "부리나 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/35677b10-aef1-4979-84e5-818f69569944.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000013",
+      "sourceMenuId": "10000013",
+      "name": "순살 데리야끼 치킨",
+      "description": "(코카콜라355ml + 치킨무)",
+      "category": "부리나 순살 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1595d5c2-7e09-4e67-8624-a6bc22a74c7a.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000021",
+      "sourceMenuId": "10000021",
+      "name": "양념치킨 소스",
+      "description": "",
+      "category": "추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138935-10000024",
+      "sourceMenuId": "10000024",
+      "name": "스프라이트 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/a0a47851-4477-4c8e-a260-388d4ebd9bd0.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000036",
+      "sourceMenuId": "10000036",
+      "name": "모짜렐라 치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9bd26a96-6a58-45e6-8bfd-c27bb3933c48.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-90000003",
+      "sourceMenuId": "90000003",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138935-10000009",
+      "sourceMenuId": "10000009",
+      "name": "반반 치킨 (뼈O)",
+      "description": "(코카콜라355ml (+ 양념치킨소스) + 치킨무)",
+      "category": "부리나 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b2c8c708-9c1d-41b0-acab-0bc258f7084d.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000014",
+      "sourceMenuId": "10000014",
+      "name": "순살 반반 치킨",
+      "description": "(코카콜라355ml (+ 양념치킨소스) + 치킨무)",
+      "category": "부리나 순살 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/34da1ad9-d5cc-4798-88bd-5fbd14c90d78.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000035",
+      "sourceMenuId": "10000035",
+      "name": "스프라이트 제로 355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138935-10000037",
+      "sourceMenuId": "10000037",
+      "name": "모짜렐라 치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/78974236-7c90-4d2a-b122-1808145f83b2.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-90000004",
+      "sourceMenuId": "90000004",
+      "name": "한맥(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138935-10000010",
+      "sourceMenuId": "10000010",
+      "name": "날개&다리 세트",
+      "description": "(코카콜라355ml (+ 양념치킨소스) + 치킨무)",
+      "category": "부리나 치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/10965111-b851-4ef1-a99e-7e28911a6bd8.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000025",
+      "sourceMenuId": "10000025",
+      "name": "환타파인 355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138935-90000005",
+      "sourceMenuId": "90000005",
+      "name": "하이트 EXTRA COLD(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138935-10000017",
+      "sourceMenuId": "10000017",
+      "name": "(무뼈)닭발튀김 + 감자튀김",
+      "description": "케찹 + 청양마요",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/00b04381-e8fa-4b63-86c4-dfc938c17d42.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-10000026",
+      "sourceMenuId": "10000026",
+      "name": "코카콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/9dde63c2-d729-4714-be3a-90b5616d3dcb.jpg"
+    },
+    {
+      "id": "ddangyo-1138935-90000006",
+      "sourceMenuId": "90000006",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138935-90000007",
+      "sourceMenuId": "90000007",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138935-10000038",
+      "sourceMenuId": "10000038",
+      "name": "코카콜라 제로 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138935-90000008",
+      "sourceMenuId": "90000008",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

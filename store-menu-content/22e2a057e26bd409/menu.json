@@ -1,0 +1,197 @@
+{
+  "storeId": "22e2a057e26bd409",
+  "storeName": "해수부실내포차",
+  "displayName": "해수부실내포차",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/d4894d3c-2823-41b0-83e5-e40d9f0dcb77.jpg",
+  "categories": [
+    "전체",
+    "활어/선어",
+    "구이/조림/볶음",
+    "삼합/숙회/무침/탕",
+    "사이드",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1295483-10000003",
+      "sourceMenuId": "10000003",
+      "name": "해물모듬",
+      "description": "",
+      "category": "활어/선어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/27c22abb-827b-4510-96b4-ea1597f3677f.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000005",
+      "sourceMenuId": "10000005",
+      "name": "낙지볶음",
+      "description": "",
+      "category": "구이/조림/볶음",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/aacf5fe7-3e21-4107-b851-bfa2867ed3ae.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000009",
+      "sourceMenuId": "10000009",
+      "name": "가자미.병어조림",
+      "description": "",
+      "category": "구이/조림/볶음",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d765bd96-ae15-4a89-8b13-338f6f79a35c.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000001",
+      "sourceMenuId": "10000001",
+      "name": "활어",
+      "description": "",
+      "category": "활어/선어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8421a373-c9c0-43f9-b4af-d8ce59099fd4.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000004",
+      "sourceMenuId": "10000004",
+      "name": "냉삼1人(150g)",
+      "description": "",
+      "category": "구이/조림/볶음",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/f338754f-2bf9-4b3c-8531-bcbf91aecc93.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000010",
+      "sourceMenuId": "10000010",
+      "name": "홍어삼합",
+      "description": "",
+      "category": "삼합/숙회/무침/탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a45a16a2-5758-4a60-8527-937f62830a72.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000016",
+      "sourceMenuId": "10000016",
+      "name": "골뱅이무침",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5d2c54d7-54de-42d1-b56a-4a6bd8fada5b.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-90000001",
+      "sourceMenuId": "90000001",
+      "name": "소주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1295483-10000011",
+      "sourceMenuId": "10000011",
+      "name": "갑오징어초숙회",
+      "description": "",
+      "category": "삼합/숙회/무침/탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/720a496e-eb96-4b28-8531-4799825f8c72.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000017",
+      "sourceMenuId": "10000017",
+      "name": "닭발",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c98c2a77-6760-4369-8d2d-2545d4e8e4a5.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000002",
+      "sourceMenuId": "10000002",
+      "name": "해물삼합",
+      "description": "",
+      "category": "활어/선어",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/8cc97b3b-6399-4155-9a42-c5323e6aba0b.JPG"
+    },
+    {
+      "id": "ddangyo-1295483-90000002",
+      "sourceMenuId": "90000002",
+      "name": "병맥주(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1295483-10000006",
+      "sourceMenuId": "10000006",
+      "name": "제육볶음",
+      "description": "",
+      "category": "구이/조림/볶음",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/8ecdd0b5-f6ea-47dd-8cf3-5b5e68e3ab9a.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000012",
+      "sourceMenuId": "10000012",
+      "name": "갑오징어초무침",
+      "description": "",
+      "category": "삼합/숙회/무침/탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dedb71d4-61b5-4544-aa41-1a8ad1c8a62a.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000018",
+      "sourceMenuId": "10000018",
+      "name": "새우튀김",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/36f1a943-9479-4f55-89e2-904d1b9462ed.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000019",
+      "sourceMenuId": "10000019",
+      "name": "마른안주",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1295483-10000007",
+      "sourceMenuId": "10000007",
+      "name": "오징어제육",
+      "description": "",
+      "category": "구이/조림/볶음",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/da87fde0-4fd2-4b17-80b3-a7bfb939aec8.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000013",
+      "sourceMenuId": "10000013",
+      "name": "우럭매운탕",
+      "description": "",
+      "category": "삼합/숙회/무침/탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002326.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000014",
+      "sourceMenuId": "10000014",
+      "name": "백합탕",
+      "description": "",
+      "category": "삼합/숙회/무침/탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7529d2f2-cafc-4842-8055-bb44d96f3bf3.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000008",
+      "sourceMenuId": "10000008",
+      "name": "갈치.서대조림",
+      "description": "",
+      "category": "구이/조림/볶음",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2b359e76-a384-47da-a744-3665a785b53a.jpg"
+    },
+    {
+      "id": "ddangyo-1295483-10000020",
+      "sourceMenuId": "10000020",
+      "name": "음료수",
+      "description": "",
+      "category": "사이드",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1295483-10000021",
+      "sourceMenuId": "10000021",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e527f16a-06f0-4f1e-b0d3-9e8007175480.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "storeId": "173d62e7132f3370",
+  "storeName": "맥시칸치킨 무선점",
+  "displayName": "맥시칸치킨 무선점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/eaf0027e-9e5d-4397-86cd-c2ec5da51056.jpg",
+  "categories": [
+    "전체",
+    "치킨메뉴",
+    "사이드메뉴",
+    "파닭소스",
+    "음료메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1248832-10000012",
+      "sourceMenuId": "10000012",
+      "name": "하림닭강정",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1ed56ed0-c954-4830-bf1d-a569029bc55a.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000013",
+      "sourceMenuId": "10000013",
+      "name": "하림닭강정(중간맛)",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/00da499d-2d84-48aa-b9a0-4d7af26da768.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000006",
+      "sourceMenuId": "10000006",
+      "name": "반반치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/39185d54-32e5-467b-8c90-d47b82d3bce2.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000021",
+      "sourceMenuId": "10000021",
+      "name": "다리.날개",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/36c91702-4f0b-40c2-90b7-ef2975c42b53.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000001",
+      "sourceMenuId": "10000001",
+      "name": "후라이드",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4385df4c-3af8-4205-827e-80acfe0f974c.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000025",
+      "sourceMenuId": "10000025",
+      "name": "양배추샐러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000041",
+      "sourceMenuId": "10000041",
+      "name": "파닭소스",
+      "description": "",
+      "category": "파닭소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000043",
+      "sourceMenuId": "10000043",
+      "name": "코카콜라 500ml",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/397b7f50-24f1-4243-896d-079fba4db782.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1248832-10000002",
+      "sourceMenuId": "10000002",
+      "name": "후라이드(반마리)",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/70ee59a3-f79f-4b83-b7ed-fcc18a487bc3.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000026",
+      "sourceMenuId": "10000026",
+      "name": "핫도그",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/742eb1ab-9f1d-4756-bd18-5194e57c9d1b.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000042",
+      "sourceMenuId": "10000042",
+      "name": "파채",
+      "description": "",
+      "category": "파닭소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000044",
+      "sourceMenuId": "10000044",
+      "name": "코카콜라1.25",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b3058bfc-a3ea-4dd3-b3d8-3c54f6e797b3.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-90000002",
+      "sourceMenuId": "90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1248832-10000003",
+      "sourceMenuId": "10000003",
+      "name": "양념치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0f224796-c239-4e59-aa50-763b68ff04d0.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000027",
+      "sourceMenuId": "10000027",
+      "name": "똥집튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/04ffb4aa-3080-4415-9644-b0df8ec251a9.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000045",
+      "sourceMenuId": "10000045",
+      "name": "사이다500ml",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1248832-10000004",
+      "sourceMenuId": "10000004",
+      "name": "양념치킨(반마리)",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fdd062f0-b818-4894-95fb-b8d271dec03f.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000046",
+      "sourceMenuId": "10000046",
+      "name": "제로콜라 500ml",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000005",
+      "sourceMenuId": "10000005",
+      "name": "핫양념치킨(뼈)",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b19eafa2-e26c-4f55-a2b4-59fd3df7cf44.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000047",
+      "sourceMenuId": "10000047",
+      "name": "제로콜라 1.25L",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000030",
+      "sourceMenuId": "10000030",
+      "name": "강정떡추가",
+      "description": "떡추가(12개) 할 경우 떡 갯수는 20개입니다.",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000007",
+      "sourceMenuId": "10000007",
+      "name": "순살",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b614086f-50fb-4335-b4c6-db6c9d9545a2.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000031",
+      "sourceMenuId": "10000031",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5e33ad3c-f106-4237-af25-ddfdcb4e26a5.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000008",
+      "sourceMenuId": "10000008",
+      "name": "고추크러시(매워요)",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000032",
+      "sourceMenuId": "10000032",
+      "name": "매운 양념소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000009",
+      "sourceMenuId": "10000009",
+      "name": "어니언치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/74634644-879e-40cc-8c66-125fc553bf63.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000033",
+      "sourceMenuId": "10000033",
+      "name": "김치볶음밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/88691ebf-b269-4c47-96af-aaa2eec68223.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000010",
+      "sourceMenuId": "10000010",
+      "name": "순살어니언치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/03ad6fa2-104a-44c5-a4f4-e4b356d36ad5.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000034",
+      "sourceMenuId": "10000034",
+      "name": "새우볶음밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d8690b50-531d-4f97-a5ca-b7bad3671e76.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000011",
+      "sourceMenuId": "10000011",
+      "name": "치즈랑치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/09056bb7-6000-415b-9700-651b3d395b21.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000035",
+      "sourceMenuId": "10000035",
+      "name": "양파채",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000036",
+      "sourceMenuId": "10000036",
+      "name": "양파소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000048",
+      "sourceMenuId": "10000048",
+      "name": "치킨무",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000014",
+      "sourceMenuId": "10000014",
+      "name": "매운닭강정",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7774b00a-d498-40b9-a540-f7efaf801dbf.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000049",
+      "sourceMenuId": "10000049",
+      "name": "닭발튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000015",
+      "sourceMenuId": "10000015",
+      "name": "순살스윗마요",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/02b2998f-2b25-4162-83ba-d7aaad51086b.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000016",
+      "sourceMenuId": "10000016",
+      "name": "순살매콤스윗마요",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5af430f2-fda3-405a-840f-d4036e6dafef.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000017",
+      "sourceMenuId": "10000017",
+      "name": "순살파닭",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6d2523fd-a60c-4f3e-abf5-2788db9102e5.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000018",
+      "sourceMenuId": "10000018",
+      "name": "후라이드파닭",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dac398b5-5f8c-4cd9-83d6-31812bd6a735.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000019",
+      "sourceMenuId": "10000019",
+      "name": "간장치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1c36e44c-ec22-49ad-bcb3-e9c10c7d8cf3.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000020",
+      "sourceMenuId": "10000020",
+      "name": "순살간장치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/82f84e65-03bd-48b9-a2a6-f93a5b80fd93.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000022",
+      "sourceMenuId": "10000022",
+      "name": "반반반치킨",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1248832-10000023",
+      "sourceMenuId": "10000023",
+      "name": "후라이드1 양념반",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ec78b8c6-2b13-4d54-a140-cb2ff9ba4b72.jpg"
+    },
+    {
+      "id": "ddangyo-1248832-10000024",
+      "sourceMenuId": "10000024",
+      "name": "양념1 후라이드반",
+      "description": "",
+      "category": "치킨메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

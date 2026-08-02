@@ -1,0 +1,343 @@
+{
+  "storeId": "2b78b30bde243ae6",
+  "storeName": "바른보쌈1990 여수웅천점",
+  "displayName": "바른보쌈1990 여수웅천점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ca5b8cbe-c383-4373-a367-f732def53b24.jpg",
+  "categories": [
+    "전체",
+    "수비드 보쌈, 족발세트",
+    "혼밥도 맛있게 _ 1인 도시락",
+    "주류메뉴",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138400-10000001",
+      "sourceMenuId": "10000001",
+      "name": "((B.E.S.T 족보셋트))보쌈or족발or불족",
+      "description": "2가지 선택_골라먹는_족보SET &&담백보쌈_쫄깃족발_화끈불족&&",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/47f5acc9-44a9-4c0c-9337-b68583bf3df8.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000002",
+      "sourceMenuId": "10000002",
+      "name": "((육.즙.가.득.한))수비드보쌈",
+      "description": "부드러운_저온숙성_수비드보쌈",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ca5b8cbe-c383-4373-a367-f732def53b24.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000008",
+      "sourceMenuId": "10000008",
+      "name": "((누.적.판.매.10만))1인보쌈도시락",
+      "description": "재주문 100%_혼밥하면_바른보쌈",
+      "category": "혼밥도 맛있게 _ 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/a8b688e3-7543-44ce-aeae-a28585ea3191.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000003",
+      "sourceMenuId": "10000003",
+      "name": "((앞.다.리.100%))쫀득순살족발",
+      "description": "쫄깃쫄깃_뼈없는_순살족발",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/27858bb2-4ea7-4b74-80fc-6494572e8b79.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000009",
+      "sourceMenuId": "10000009",
+      "name": "((혼.밥.도.맛.있.게))1인족발도시락",
+      "description": "콜라겐 폭탄_쫄깃한_순살족발",
+      "category": "혼밥도 맛있게 _ 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/488549b7-d6f2-4dcf-b61c-e83f54790fcc.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138400-10000011",
+      "sourceMenuId": "10000011",
+      "name": "날치알주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/f2fd800e-ae5c-49cc-b288-3269ba667ae4.JPG"
+    },
+    {
+      "id": "ddangyo-1138400-10000033",
+      "sourceMenuId": "10000033",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-90000002",
+      "sourceMenuId": "90000002",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138400-10000012",
+      "sourceMenuId": "10000012",
+      "name": "푸딩계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000034",
+      "sourceMenuId": "10000034",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138400-10000010",
+      "sourceMenuId": "10000010",
+      "name": "((주.인.장.추.천))보쌈김치볶음밥",
+      "description": "김치볶음밥에 보쌈고기 듬뿍~~`_`",
+      "category": "혼밥도 맛있게 _ 1인 도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/8a3abec2-c8e0-4a67-8bc5-60fcf0b8123e.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000013",
+      "sourceMenuId": "10000013",
+      "name": "새콤달콤 막국수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/db0d31d6-7a6d-479d-9739-83b1617c6133.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000035",
+      "sourceMenuId": "10000035",
+      "name": "제로펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-90000004",
+      "sourceMenuId": "90000004",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1138400-10000004",
+      "sourceMenuId": "10000004",
+      "name": "((불.향.가.득.한))매운 불족발",
+      "description": "화끈한_불향가득_불족발",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ce380777-0966-40dd-acbc-9268dd834ce1.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000014",
+      "sourceMenuId": "10000014",
+      "name": "반찬추가 (김치,무말랭이,새우젓,쌈장,마늘,고추)",
+      "description": "넉넉한 반찬을 원하시는 분들을 위한~~~",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000036",
+      "sourceMenuId": "10000036",
+      "name": "탐라제로",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000005",
+      "sourceMenuId": "10000005",
+      "name": "((한.국.인.의.맛))마늘듬뿍보쌈",
+      "description": "육즙가득_풍미가득_마늘보쌈",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a99e3218-69de-4340-b7e0-310708fa5cbf.JPG"
+    },
+    {
+      "id": "ddangyo-1138400-10000015",
+      "sourceMenuId": "10000015",
+      "name": "직접담근 보쌈김치",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000006",
+      "sourceMenuId": "10000006",
+      "name": "((콜.라.겐.폭.탄))마늘순살족발",
+      "description": "콜라겐폭탄_풍미가득_마늘족발",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/af5c7992-857d-4360-ba9d-a0b321fa82a6.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000016",
+      "sourceMenuId": "10000016",
+      "name": "무말랭이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000007",
+      "sourceMenuId": "10000007",
+      "name": "((매.콤.고.소.한))청양마요보쌈",
+      "description": "매콤고소_청양마요_수비드보쌈",
+      "category": "수비드 보쌈, 족발세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000017",
+      "sourceMenuId": "10000017",
+      "name": "달콤마늘소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000018",
+      "sourceMenuId": "10000018",
+      "name": "청양마요소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000019",
+      "sourceMenuId": "10000019",
+      "name": "매운불소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000020",
+      "sourceMenuId": "10000020",
+      "name": "맛보기 청양마요소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000021",
+      "sourceMenuId": "10000021",
+      "name": "맛보기 매운불소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000022",
+      "sourceMenuId": "10000022",
+      "name": "오리지널소스(깔끔소스)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000023",
+      "sourceMenuId": "10000023",
+      "name": "푸짐한 쌈야채 (상추+깻잎)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/dddd56ba-80fe-459c-a9ba-93ef6c14fa76.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000024",
+      "sourceMenuId": "10000024",
+      "name": "깻잎추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/e6b25b13-678c-42e6-b74e-43ca0ba40173.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000025",
+      "sourceMenuId": "10000025",
+      "name": "파채",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000026",
+      "sourceMenuId": "10000026",
+      "name": "고추",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000027",
+      "sourceMenuId": "10000027",
+      "name": "마늘",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000028",
+      "sourceMenuId": "10000028",
+      "name": "쌈장",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000029",
+      "sourceMenuId": "10000029",
+      "name": "새우젓",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000030",
+      "sourceMenuId": "10000030",
+      "name": "초장",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138400-10000031",
+      "sourceMenuId": "10000031",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg"
+    },
+    {
+      "id": "ddangyo-1138400-10000032",
+      "sourceMenuId": "10000032",
+      "name": "국물",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

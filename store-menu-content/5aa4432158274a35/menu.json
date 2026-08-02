@@ -1,0 +1,227 @@
+{
+  "storeId": "5aa4432158274a35",
+  "storeName": "이화수육계장",
+  "displayName": "이화수육계장",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001467.jpg",
+  "categories": [
+    "전체",
+    "주메뉴",
+    "특별메뉴",
+    "부메뉴",
+    "추가메뉴",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1216982-10000028",
+      "sourceMenuId": "10000028",
+      "name": "전통육개장",
+      "description": "육개장+공기밥+석박지+당면+델몬트 주스(190mml) 파가 듬뿍 들어가 국물 맛이 진한 보양식 전통육개장",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001467.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000029",
+      "sourceMenuId": "10000029",
+      "name": "육개장칼국수",
+      "description": "육개장+석박지+델몬트 주스(190mml) 진한 육개장 육수와 어우러진 탱글탱글한 칼국수 면발~",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/47870d5d-aa71-45d0-a680-8d0242b4e669.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000030",
+      "sourceMenuId": "10000030",
+      "name": "차돌육개장",
+      "description": "육개장+공기밥+석박지+당면+델몬트 주스(190mml) 고소한 맛이 특징인 차돌이 들어가 맛과 영양을 고루 갖춘 육개장",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/8c9f1fa8-e154-4ee6-9c11-fdfe8f683f77.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000032",
+      "sourceMenuId": "10000032",
+      "name": "순두부육개장 new",
+      "description": "육개장+공기밥+석박지+당면+델몬트 주스(190mml)",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/76bd144a-24ed-4b76-934f-691c852c7993.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000036",
+      "sourceMenuId": "10000036",
+      "name": "모듬수육전골 [비조리]",
+      "description": "다양한 부위의 고기(꼬리, 양지, 스지)와 진한 국물, 몸에 좋은 재료로 만든 영양보충 으뜸 메뉴",
+      "category": "특별메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/ded6d7f0-f3ec-4466-ba63-7b3a62b3804c.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000039",
+      "sourceMenuId": "10000039",
+      "name": "한판보쌈(가브리살)",
+      "description": "담백하고 야들야들하게 삶아 겉 면을 살짝 구워 감칠맛이 가득한 곁들임용 보쌈",
+      "category": "부메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/cd882b5f-9088-49fa-864d-665d93cbce36.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000042",
+      "sourceMenuId": "10000042",
+      "name": "양지고기 추가(비조리)",
+      "description": "[비조리]",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/cad25ba1-f6bd-443a-b533-de678b95609a.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000047",
+      "sourceMenuId": "10000047",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000037",
+      "sourceMenuId": "10000037",
+      "name": "양지육개장전골 [비조리]",
+      "description": "진한 육개장에 푸짐하게 야채와 양지고기를 듬뿍 넣은 전골 메뉴",
+      "category": "특별메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000040",
+      "sourceMenuId": "10000040",
+      "name": "왕만두",
+      "description": "고기와 각종 야채로 속을 꽉 채워 식사 전 간단히 드시기 좋은 왕만두",
+      "category": "부메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000978.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000043",
+      "sourceMenuId": "10000043",
+      "name": "스지, 꼬리 추가(비조리)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000048",
+      "sourceMenuId": "10000048",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000038",
+      "sourceMenuId": "10000038",
+      "name": "전통보쌈",
+      "description": "최고급 품질의 삼겹살만을 고집하여 이화수만의 특제 소스로 구운 담백한 보쌈",
+      "category": "특별메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/dea81d04-feed-4b65-9f7b-ba27b1497823.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000041",
+      "sourceMenuId": "10000041",
+      "name": "메밀전병",
+      "description": "찰진 전평피에 매콤한 야채로 바삭하고 고소하게 구워 낸 전병",
+      "category": "부메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/8e8b0b33-3e70-4bc2-a2c2-350be59fdb56.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000044",
+      "sourceMenuId": "10000044",
+      "name": "칼국수 [비조리]",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/d6c5367b-d0b6-4113-ad4d-781194b29686.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000049",
+      "sourceMenuId": "10000049",
+      "name": "펩시제로",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000031",
+      "sourceMenuId": "10000031",
+      "name": "부대육개장",
+      "description": "육개장+공기밥+석박지+당면+델몬트 주스(190mml) 얼큰한 부대찌개의 맛과 육개장의 어울린 참맛",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/fd80d01d-8984-4e08-9ddd-30fe11135742.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000045",
+      "sourceMenuId": "10000045",
+      "name": "당면사리 [비조리]",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/51ff4098-ad52-4628-a655-3de2b2b26472.JPG"
+    },
+    {
+      "id": "ddangyo-1216982-10000050",
+      "sourceMenuId": "10000050",
+      "name": "탐스파인제로",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000046",
+      "sourceMenuId": "10000046",
+      "name": "공기추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/1f71c3ee-b08b-4c0b-ad7d-61844c8cf1ae.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000051",
+      "sourceMenuId": "10000051",
+      "name": "탐스오렌지",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000033",
+      "sourceMenuId": "10000033",
+      "name": "버섯육개장 new",
+      "description": "육개장+공기밥+석박지+당면+델몬트 주스(190mml) 건강식으로 따끈하게 한 그릇...",
+      "category": "주메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000052",
+      "sourceMenuId": "10000052",
+      "name": "생수(아이시스)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000034",
+      "sourceMenuId": "10000034",
+      "name": "사골떡만두국",
+      "description": "사골떡만두+석박지+델몬트 주스(190mml) 진하고 뜨끈한 사골 국물과 속이 꽉 찬, 왕만두의 푸짐한 한끼",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/edc22748-a4ce-4d35-9540-dd769c094713.jpg"
+    },
+    {
+      "id": "ddangyo-1216982-10000053",
+      "sourceMenuId": "10000053",
+      "name": "델몬트 쥬스",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1216982-10000035",
+      "sourceMenuId": "10000035",
+      "name": "맑은육개장",
+      "description": "육개장+공기밥+석박지+당면+델몬트 주스(190mml) 사골로 오랜 시간 푹 고아내 국물맛이 담백하고 맑은 육개장",
+      "category": "주메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/faf1a952-f7e2-4806-8891-5d7cb4bb8285.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

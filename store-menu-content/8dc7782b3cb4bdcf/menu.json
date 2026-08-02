@@ -1,0 +1,257 @@
+{
+  "storeId": "8dc7782b3cb4bdcf",
+  "storeName": "김밥세상",
+  "displayName": "김밥세상",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/68601005-6f04-4ac6-80f9-21a3608c1ad7.jpg",
+  "categories": [
+    "전체",
+    "김밥류",
+    "분식류",
+    "식사류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1222686-10000029",
+      "sourceMenuId": "10000029",
+      "name": "김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/48f6bedb-dee3-4cbb-a6aa-ad21ef8f6130.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000032",
+      "sourceMenuId": "10000032",
+      "name": "참치김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/51df73ba-5d8f-47d8-8814-cf9b38f22978.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000037",
+      "sourceMenuId": "10000037",
+      "name": "키토김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0d68aee7-5f96-4752-bff8-b7645d6576d2.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000040",
+      "sourceMenuId": "10000040",
+      "name": "떡라면",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/babbec13-fa2a-40d6-92ca-2bf3c55ac086.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000042",
+      "sourceMenuId": "10000042",
+      "name": "떡볶이",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/de83c8d5-83cf-4fc2-9421-d30fde19e3bd.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000039",
+      "sourceMenuId": "10000039",
+      "name": "라면",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/b95ffa67-96ec-42ae-8e83-1711968e9b9c.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000047",
+      "sourceMenuId": "10000047",
+      "name": "비빔밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/df18abaa-6b1e-46d6-8137-a61e25fe0a83.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000030",
+      "sourceMenuId": "10000030",
+      "name": "치즈김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/f0dcb3fb-687d-4b3f-8a2c-7bd3ec2ba736.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000048",
+      "sourceMenuId": "10000048",
+      "name": "장터해장국",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/16f37c6b-b224-438b-866b-3b6f9cfe786a.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000031",
+      "sourceMenuId": "10000031",
+      "name": "땡초김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/724e71fe-d3b7-4c07-9ab2-a7322ae625e8.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000041",
+      "sourceMenuId": "10000041",
+      "name": "만두라면",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1cc625f2-954d-4800-8d45-71abb305dd12.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000049",
+      "sourceMenuId": "10000049",
+      "name": "뼈다귀해장국",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/2c31a500-bab6-4003-8564-12d47ec95e6f.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000050",
+      "sourceMenuId": "10000050",
+      "name": "선지해장국",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1b7a673a-cc25-473c-9c12-2825ebaff51c.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000033",
+      "sourceMenuId": "10000033",
+      "name": "계란김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/cf031b5e-2de8-4aa8-bb25-c49472fb7735.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000043",
+      "sourceMenuId": "10000043",
+      "name": "치즈떡볶이",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/74aaec2c-f8fc-484f-852a-ec11dc2dc24b.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000051",
+      "sourceMenuId": "10000051",
+      "name": "육개장",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/dac15cdf-d944-43a3-8156-2ea8486a60bc.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000034",
+      "sourceMenuId": "10000034",
+      "name": "새우김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/5982eef2-9cd7-4d49-a306-564cdaa3e63d.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000044",
+      "sourceMenuId": "10000044",
+      "name": "고기만두",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/88ebf188-d467-4cf0-8b50-efc29ce4282b.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000052",
+      "sourceMenuId": "10000052",
+      "name": "갈비탕",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/c9e0c000-d77a-44f3-b5ae-a6088bbe60e0.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000035",
+      "sourceMenuId": "10000035",
+      "name": "돈까스김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/227faa0d-749b-43fb-9615-a977fb2cf7f7.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000045",
+      "sourceMenuId": "10000045",
+      "name": "김치만두",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/4e6cf89e-01ff-47df-8a44-a2649f81181e.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000053",
+      "sourceMenuId": "10000053",
+      "name": "설렁탕(곰탕)",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/71a11282-d61a-402a-ba7b-aedcf8778063.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000036",
+      "sourceMenuId": "10000036",
+      "name": "소고기김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/e45096b8-af9a-4f3b-8ba5-ff9b006c6549.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000046",
+      "sourceMenuId": "10000046",
+      "name": "물만두",
+      "description": "",
+      "category": "분식류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/8c9110ff-870e-4351-b480-ee6474fe75be.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000054",
+      "sourceMenuId": "10000054",
+      "name": "떡국",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/baa0c4e2-6c86-412e-b1f7-6dfbeb80ec26.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000055",
+      "sourceMenuId": "10000055",
+      "name": "떡만두국",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/11aa45de-2be9-4d7a-9351-1d769789e17b.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000038",
+      "sourceMenuId": "10000038",
+      "name": "오뎅(탕)",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/3a72f6ba-92c1-4d93-a73f-8223900e731a.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000057",
+      "sourceMenuId": "10000057",
+      "name": "버섯 뚝배기 불고기",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/697ab049-8176-4ef7-adcc-efd768ba7a6b.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000058",
+      "sourceMenuId": "10000058",
+      "name": "부대찌개",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/900167f0-03c5-4ce2-a9b9-86629d339204.jpg"
+    },
+    {
+      "id": "ddangyo-1222686-10000056",
+      "sourceMenuId": "10000056",
+      "name": "공기밥(추가시)",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

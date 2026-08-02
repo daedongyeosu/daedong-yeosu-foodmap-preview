@@ -1,0 +1,284 @@
+{
+  "storeId": "cd2ecfcd707cd2c7",
+  "storeName": "청춘꼬마김밥 여수국동점",
+  "displayName": "청춘꼬마김밥 여수국동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/af5ce3bb-e27f-4e3a-9da8-029afe71ac25.jpg",
+  "categories": [
+    "전체",
+    "김밥메뉴",
+    "분식/식사",
+    "만두메뉴",
+    "추가메뉴",
+    "음료메뉴",
+    "계절메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1196077-30000001",
+      "sourceMenuId": "30000001",
+      "name": "청춘김밥",
+      "description": "[5줄] 계란,멸치,어묵,참치,무말랭",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/67309a9c-4e68-4b6b-b212-d3e7905b903e.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000002",
+      "sourceMenuId": "30000002",
+      "name": "모둠김밥",
+      "description": "[9줄] 어묵,계란,우엉,치즈,멸치,스팸,무말랭,참치,땡초",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9c489ec1-5b74-4bf6-b4ae-43e668f3c844.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000013",
+      "sourceMenuId": "30000013",
+      "name": "국물떡볶이",
+      "description": "떡볶이[밀떡]+어묵+삶은계란+대파+특제소스",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d76e3d0f-f7ed-4c4f-b57d-7cdde2e217b8.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000021",
+      "sourceMenuId": "30000021",
+      "name": "납작만두범벅",
+      "description": "납작만두[8개]+야채믹스+특제소스",
+      "category": "만두메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/ce045521-be2c-4373-9c7b-7a73fdb01e63.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000017",
+      "sourceMenuId": "30000017",
+      "name": "쫄면",
+      "description": "쫄면+야채믹스+계란1/2+특제소스",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/fb21ab09-2332-4c87-b290-5b0bdafe3bd5.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000020",
+      "sourceMenuId": "30000020",
+      "name": "청춘나물비빔밥",
+      "description": "6가지 나물+볶음고기+계란후라이+밥+특제고추장",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/70bcab21-0bfa-431a-951a-5beec5ebe3c8.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000035",
+      "sourceMenuId": "30000035",
+      "name": "[포장]오뎅국물",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/8c30e1a6-5090-4b88-aa47-68ba4d756413.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000041",
+      "sourceMenuId": "30000041",
+      "name": "콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4a96fd50-73cd-45ad-b67c-d61828b8beda.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000012",
+      "sourceMenuId": "30000012",
+      "name": "국물떡볶이(2인)",
+      "description": "[2인분] 떡볶이[밀떡]+어묵+삶은계란+대파+특제소스",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/c0514950-0e7c-4ef3-a238-b66814d811dc.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000042",
+      "sourceMenuId": "30000042",
+      "name": "사이다",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/a751a85a-b0eb-4c27-a74e-f3e4be596340.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000022",
+      "sourceMenuId": "30000022",
+      "name": "납작만두",
+      "description": "납작만두[8개]",
+      "category": "만두메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0076407a-34b7-4169-835a-f4416460d578.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000014",
+      "sourceMenuId": "30000014",
+      "name": "라볶이",
+      "description": "라면사리+떡볶이[밀떡]+어묵+삶은계란+대파+특제소스",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/6959882a-0df3-439e-8850-317b46ff007c.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000023",
+      "sourceMenuId": "30000023",
+      "name": "김치만두",
+      "description": "김치만두[4개]",
+      "category": "만두메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/7e2b0ebc-eb55-45fe-922e-adb587a90c24.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000004",
+      "sourceMenuId": "30000004",
+      "name": "어묵김밥",
+      "description": "[5줄] 어묵조림+단무지+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/0b6a988c-80e1-4591-8fd5-73a2dc2f4846.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000026",
+      "sourceMenuId": "30000026",
+      "name": "떡국",
+      "description": "떡국+파+당근+계란+김가루+멸치육수",
+      "category": "계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/66b4fe03-e99a-423e-a6b9-cc134dd3c3f4.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000043",
+      "sourceMenuId": "30000043",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/fe02c38c-9c55-493a-a883-ae97937d5aa0.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000024",
+      "sourceMenuId": "30000024",
+      "name": "고기만두",
+      "description": "고기만두[4개]",
+      "category": "만두메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9443833c-6173-4916-8bde-cd0539ab9697.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000027",
+      "sourceMenuId": "30000027",
+      "name": "떡만둣국",
+      "description": "떡국+만두[고기1+김치2]+대파+당근+계란+김가루+멸치육수",
+      "category": "계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/480ee45c-f820-4c51-a56b-1cf4230fb83c.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000003",
+      "sourceMenuId": "30000003",
+      "name": "계란김밥",
+      "description": "[5줄] 계란지단+단무지+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/438f3bb9-271f-446a-bdd3-6ef1858da0ce.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000044",
+      "sourceMenuId": "30000044",
+      "name": "생수",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/1cc9b4a5-d60d-40c1-b658-ff7d2ddb5c95.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000005",
+      "sourceMenuId": "30000005",
+      "name": "우엉김밥",
+      "description": "[5줄] 우엉조림+단무지+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4548502b-a2cd-4ff0-bdc5-6006e3500d1f.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000025",
+      "sourceMenuId": "30000025",
+      "name": "반반만두",
+      "description": "김치만두[2개]+고기만두[2개]",
+      "category": "만두메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4df56c00-5672-4066-bf70-e8f6ded3abbf.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000028",
+      "sourceMenuId": "30000028",
+      "name": "만둣국",
+      "description": "만두[고기3+김치4]+대파+당근+계란+김가루+멸치육수",
+      "category": "계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4c6dc192-faa8-4c8a-94a7-bac3f5721f88.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000015",
+      "sourceMenuId": "30000015",
+      "name": "순대",
+      "description": "순대[내장없음]",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/eb2ecd34-a732-4dcb-bd94-2527d15a4a5e.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000006",
+      "sourceMenuId": "30000006",
+      "name": "치즈김밥",
+      "description": "[5줄] 체다치즈+깻잎+계란지단+단무지+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/08d2adcf-5941-4b5d-9494-07405261c808.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000009",
+      "sourceMenuId": "30000009",
+      "name": "멸치김밥",
+      "description": "[5줄] 멸치볶음+깻잎+단무지+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b01f4e49-7272-4454-8621-2e55a0761e2a.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000016",
+      "sourceMenuId": "30000016",
+      "name": "오뎅(3개)",
+      "description": "오뎅[3개]+맛있는 오뎅 국물",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5e7a87f6-ba5e-41cc-acd5-504bdedcda0b.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000010",
+      "sourceMenuId": "30000010",
+      "name": "스팸김밥",
+      "description": "[5줄] 런천미트+깻잎+단무지+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/abf4c2e5-1314-4c8a-a320-e05f855a454d.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000018",
+      "sourceMenuId": "30000018",
+      "name": "청춘우동",
+      "description": "우동+유부+건더기스프+쑥갓+대파",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/bae595ef-ce0c-4807-ba81-c51835b4c767.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000011",
+      "sourceMenuId": "30000011",
+      "name": "무말랭김밥",
+      "description": "[5줄] 무말랭이+깻잎+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/46b2fd23-eab2-49eb-b504-fd1552e7e8e5.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000019",
+      "sourceMenuId": "30000019",
+      "name": "김치우동",
+      "description": "김치+우동+유부+건더기스프+쑥갓+대파",
+      "category": "분식/식사",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/af4e917c-3456-4eea-ac2b-9f1ac2adf5bd.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000007",
+      "sourceMenuId": "30000007",
+      "name": "참치김밥",
+      "description": "[5줄] 참치+마요+계란지단+깻잎+단무지+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/609e88c3-3fee-4382-a498-1942e8b3ee36.jpg"
+    },
+    {
+      "id": "ddangyo-1196077-30000008",
+      "sourceMenuId": "30000008",
+      "name": "땡초김밥",
+      "description": "[5줄] 땡초[멸치+진미채]+깻잎+단무지+당근+밥+김",
+      "category": "김밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/28b00cdb-d0f6-4a59-9ace-2f737ab79f40.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

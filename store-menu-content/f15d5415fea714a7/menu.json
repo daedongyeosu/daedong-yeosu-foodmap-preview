@@ -1,0 +1,48 @@
+{
+  "storeId": "f15d5415fea714a7",
+  "storeName": "여수 바다 닭강정",
+  "displayName": "여수 바다 닭강정",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002422.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "음료메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1308476-10000001",
+      "sourceMenuId": "10000001",
+      "name": "바다 닭강정",
+      "description": "보통맛(치킨무 포함)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002422.jpg"
+    },
+    {
+      "id": "ddangyo-1308476-10000002",
+      "sourceMenuId": "10000002",
+      "name": "청양 닭강정",
+      "description": "매운맛(치킨무 포함)",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/d6fab122-f032-4d1a-b540-9e5338d40a27.jpg"
+    },
+    {
+      "id": "ddangyo-1308476-10000003",
+      "sourceMenuId": "10000003",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1308476-10000004",
+      "sourceMenuId": "10000004",
+      "name": "치킨무",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/346f18d7-a13e-4100-856a-1583a5726362.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

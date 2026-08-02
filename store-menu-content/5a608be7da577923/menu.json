@@ -1,0 +1,267 @@
+{
+  "storeId": "5a608be7da577923",
+  "storeName": "수유리우동집 여수엑스포점",
+  "displayName": "수유리우동집 여수엑스포점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/5e63dcdf-6d46-4ef1-8466-8b8ecc42cb0d.jpg",
+  "categories": [
+    "전체",
+    "김밥류",
+    "면류",
+    "밥류",
+    "사이드메뉴",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1321305-10000001",
+      "sourceMenuId": "10000001",
+      "name": "수유김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/bc51d37b-0340-47bf-879c-52472d4f7ee3.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000002",
+      "sourceMenuId": "10000002",
+      "name": "참치김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/dd3cc641-9fd8-4759-bcd0-df71b277782b.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000007",
+      "sourceMenuId": "10000007",
+      "name": "어묵우동",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/70ff38f3-ef2a-4441-bbd6-aded1971e34e.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000022",
+      "sourceMenuId": "10000022",
+      "name": "수유돈까스",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/cd1e8546-43fe-43da-9c01-be83368220fa.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000006",
+      "sourceMenuId": "10000006",
+      "name": "우동",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/49d0f69f-7145-4649-9ca9-1b265a8d84e6.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000018",
+      "sourceMenuId": "10000018",
+      "name": "비빔밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/342a7f46-0863-45c3-9f4a-6db5a88f0bfd.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000024",
+      "sourceMenuId": "10000024",
+      "name": "국물떡볶이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321305-10000029",
+      "sourceMenuId": "10000029",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321305-10000019",
+      "sourceMenuId": "10000019",
+      "name": "짜장밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/7c342c0f-75c2-489b-a78d-f3b7b9b72864.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000025",
+      "sourceMenuId": "10000025",
+      "name": "수유만두(고기+김치)",
+      "description": "고기만두 3개 + 김치만두 3개",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/ea233e4b-fc7c-42ca-ae3b-59b0fc6873f7.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000030",
+      "sourceMenuId": "10000030",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/cee23368-f822-4ef1-a988-b38b381894e7.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000003",
+      "sourceMenuId": "10000003",
+      "name": "스팸김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/e467a669-5e75-4477-92ae-c54c6f4af440.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000008",
+      "sourceMenuId": "10000008",
+      "name": "얼큰우동",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4b703d9b-3127-4a99-bfc3-9890fab053dd.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000020",
+      "sourceMenuId": "10000020",
+      "name": "제육덮밥",
+      "description": "",
+      "category": "밥류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321305-10000026",
+      "sourceMenuId": "10000026",
+      "name": "튀김만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321305-10000031",
+      "sourceMenuId": "10000031",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2a98741b-bbec-4883-9a47-0dc6f68cf7ee.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000004",
+      "sourceMenuId": "10000004",
+      "name": "돈까스김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321305-10000009",
+      "sourceMenuId": "10000009",
+      "name": "김치우동",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/0b5cab9c-dcda-4474-8d19-d05f8eeeb9f6.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000021",
+      "sourceMenuId": "10000021",
+      "name": "사골떡만두국",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/162e6a00-1b8e-4960-9f73-8dd2c9516d24.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000027",
+      "sourceMenuId": "10000027",
+      "name": "갈비만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/326f842b-ce48-4020-acb4-7858bfbf238a.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000005",
+      "sourceMenuId": "10000005",
+      "name": "치즈김밥",
+      "description": "",
+      "category": "김밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/6f75286b-d3c8-47cc-8ef0-536831bdc587.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000010",
+      "sourceMenuId": "10000010",
+      "name": "쫄면",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/1c7708ea-2f1d-4109-a1e9-535939074d94.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000028",
+      "sourceMenuId": "10000028",
+      "name": "어묵만",
+      "description": "쫄깃한 꼬불이 사각어묵꼬치 3개",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a45f71fb-b14c-4225-946d-6d82d7395efc.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000011",
+      "sourceMenuId": "10000011",
+      "name": "짜장면",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/ec2f862b-4199-4d4a-a9b5-aa092de1c7a0.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000023",
+      "sourceMenuId": "10000023",
+      "name": "치즈돈까스",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/02898239-6c57-41f1-9e0c-82f8f5063c00.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000012",
+      "sourceMenuId": "10000012",
+      "name": "잔치국수",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/3da7ab92-d18f-4d4b-bd07-9335949553a0.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000013",
+      "sourceMenuId": "10000013",
+      "name": "비빔국수",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/b0e94ca8-b8a5-4fd1-9fd0-0e701d3fffcc.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000014",
+      "sourceMenuId": "10000014",
+      "name": "메밀비빔국수",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/72ec0013-8b52-4f8d-a79d-47a8d6c54698.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000015",
+      "sourceMenuId": "10000015",
+      "name": "콩국수",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/2d2366ec-65d6-4df5-b9fd-0bfdead63afa.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000016",
+      "sourceMenuId": "10000016",
+      "name": "열무국수",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/b816dbd9-4097-47ff-9ea2-35ef51051b63.jpg"
+    },
+    {
+      "id": "ddangyo-1321305-10000017",
+      "sourceMenuId": "10000017",
+      "name": "냉모밀",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/0b780829-5a76-4bc0-bd51-59a52f8f79d2.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

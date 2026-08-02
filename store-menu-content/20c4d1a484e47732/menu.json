@@ -1,0 +1,203 @@
+{
+  "storeId": "20c4d1a484e47732",
+  "storeName": "돈쌈대패",
+  "displayName": "돈쌈대패",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/e83682b2-84e7-45a0-9ffa-9d7a691fdbb4.jpg",
+  "categories": [
+    "전체",
+    "맛있는 세 녀석들",
+    "사이드메뉴된장찌게3000원",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175137-10000001",
+      "sourceMenuId": "10000001",
+      "name": "대패삼겹살",
+      "description": "콩나물파절이,보쌈김치,쌈장,기름장,새우젓,쌈무,마늘,콩나물국,고기바닥에양념,파절이",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0cced993-1604-435c-bd1c-8d3c3351b14c.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000004",
+      "sourceMenuId": "10000004",
+      "name": "김치대패삼겹살",
+      "description": "콩나물파절이,보쌈김치,쌈장,기름장,새우젓,쌈무,마늘,콩나물국,고기바닥에양념,파절이",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0cced993-1604-435c-bd1c-8d3c3351b14c.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000003",
+      "sourceMenuId": "10000003",
+      "name": "비계적은쪽 대패",
+      "description": "콩나물파절이,보쌈김치,쌈장,기름장,새우젓,쌈무,마늘,콩나물국,고기바닥에양념,파절이",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/39a0c98e-aca4-4c5a-ac56-3b35ebe1b0dc.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000005",
+      "sourceMenuId": "10000005",
+      "name": "갈비맛 대패",
+      "description": "콩나물파절이,보쌈김치,쌈장,기름장,새우젓,쌈무,마늘,콩나물국,고기바닥에양념,파절이",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0402f571-3d48-4a2e-a360-3e29850e4829.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000006",
+      "sourceMenuId": "10000006",
+      "name": "보쌈",
+      "description": "된장국,보쌈김치,쌈무,쌈채소(소/중1/대2) 5구찬: 쌈장,마늘,새우,묵은지,명이나물",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/72c63154-3967-4239-9176-8a8d7baafd89.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000007",
+      "sourceMenuId": "10000007",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1175137-10000002",
+      "sourceMenuId": "10000002",
+      "name": "마늘대패삼결살",
+      "description": "",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9ea8a10c-54c6-45a3-bfdd-2ce624d906be.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000008",
+      "sourceMenuId": "10000008",
+      "name": "쟁반국수",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/db0d31d6-7a6d-479d-9739-83b1617c6133.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000009",
+      "sourceMenuId": "10000009",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/8fa153d4-0122-4560-a6b3-d513ef5d9eff.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000010",
+      "sourceMenuId": "10000010",
+      "name": "누룽지",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/08105645-8fb8-4f3e-90d2-1c97ef5b590d.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 프레시(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1175137-10000011",
+      "sourceMenuId": "10000011",
+      "name": "주먹밥",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4bd095b8-ac43-41ea-adf1-d9630103641c.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000012",
+      "sourceMenuId": "10000012",
+      "name": "김치 추가",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/386feb81-b22c-41a4-a3a9-e999cb0395f8.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000013",
+      "sourceMenuId": "10000013",
+      "name": "5구찬팩",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175137-10000014",
+      "sourceMenuId": "10000014",
+      "name": "콩나물파절이",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/ef7b1d83-9e8f-45c6-b7f2-fbfcb1d44a64.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000015",
+      "sourceMenuId": "10000015",
+      "name": "상추추가",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/f8818c70-0a63-4d38-b2a0-ea08a774476a.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000016",
+      "sourceMenuId": "10000016",
+      "name": "쌈무추가",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1175137-10000017",
+      "sourceMenuId": "10000017",
+      "name": "쌈장",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/1c456d78-cd87-410c-9603-46e8574d84b5.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000018",
+      "sourceMenuId": "10000018",
+      "name": "마늘",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/70bfdff1-ae7c-487c-8884-554240be89d2.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000019",
+      "sourceMenuId": "10000019",
+      "name": "고추",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/92b000bf-b59a-4f1d-b8be-f499e9064848.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000020",
+      "sourceMenuId": "10000020",
+      "name": "된장찌개",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/97023e09-fd17-4d03-b3d6-068e8d8024fb.jpg"
+    },
+    {
+      "id": "ddangyo-1175137-10000026",
+      "sourceMenuId": "10000026",
+      "name": "사이다 500ml 추가",
+      "description": "",
+      "category": "사이드메뉴된장찌게3000원",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

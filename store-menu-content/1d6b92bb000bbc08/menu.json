@@ -1,0 +1,439 @@
+{
+  "storeId": "1d6b92bb000bbc08",
+  "storeName": "가마치통닭 여수소호점",
+  "displayName": "가마치통닭 여수소호점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/eb5d194e-13b1-44ab-acac-bfebc2b54b59.jpg",
+  "categories": [
+    "전체",
+    "(NEW) 빠사삭치킨",
+    "콤보",
+    "깐풍치킨",
+    "사이드메뉴",
+    "통닭",
+    "청양맵간장",
+    "허니마늘파닭",
+    "순살치킨",
+    "소스, 치킨무 추가",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1251014-10000012",
+      "sourceMenuId": "10000012",
+      "name": "빠사삭 후라이드",
+      "description": "소금포함 조각닭12조각 (치킨무,소스,음료 미포함)",
+      "category": "(NEW) 빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/099ebda9-037c-49bd-b52c-224f8c34bd68.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000023",
+      "sourceMenuId": "10000023",
+      "name": "가마치후라이드콤보",
+      "description": "소금 포함 다리4개, 날개4개 (치킨무, 소스, 음료 미포함)",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5f326fca-89a2-4640-a989-b64ac02363b7.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000005",
+      "sourceMenuId": "10000005",
+      "name": "(NEW) 깐풍콤보",
+      "description": "다리4개, 날개4개 (치킨무,소스,음료 미포함)",
+      "category": "깐풍치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/853d2888-de3d-49e7-b5c2-2e1444aa1a3f.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000028",
+      "sourceMenuId": "10000028",
+      "name": "똥집튀김",
+      "description": "닭똥집 + 꽈리고추 + 감자튀김 양파는 선택 사항 선택 해주세요. (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/965dff5f-9c99-4a54-9f8a-f1ecce6b95a8.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000001",
+      "sourceMenuId": "10000001",
+      "name": "한마리통닭",
+      "description": "소금포함 (치킨무, 소스, 음료 미포함)",
+      "category": "통닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dae507a6-18e6-4ec7-a5ab-d264a0d72560.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000003",
+      "sourceMenuId": "10000003",
+      "name": "(NEW) 빠사삭깐풍치킨",
+      "description": "닭 12조각 (치킨무, 소스, 음료 미포함)",
+      "category": "깐풍치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b0242eda-14a2-453b-81d0-66b034e65f8b.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000006",
+      "sourceMenuId": "10000006",
+      "name": "(NEW) 빠사삭 청양맵간장치킨",
+      "description": "닭 12조각 (치킨무, 소스, 음료 미포함)",
+      "category": "청양맵간장",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/93152269-08ed-48cf-8391-a4c179cd6563.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000009",
+      "sourceMenuId": "10000009",
+      "name": "(NEW) 빠사삭 허니마늘파닭",
+      "description": "닭 12조각 (치킨무, 소스, 음료 미포함)",
+      "category": "허니마늘파닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ad5d9d71-40d6-4655-aa36-4acf04a7f7a3.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000017",
+      "sourceMenuId": "10000017",
+      "name": "후라이드순살",
+      "description": "소금포함 순살 500g (치킨무, 소스, 음료 미포함)",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fab9f433-aabd-4402-a924-9a310295373c.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000042",
+      "sourceMenuId": "10000042",
+      "name": "소스, 치킨무 ,샐러드추가",
+      "description": "500원 소스컵 + 치킨무",
+      "category": "소스, 치킨무 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/76108c53-7a0c-45d4-8d07-5c8de07e8e33.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000043",
+      "sourceMenuId": "10000043",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d88c9937-9cb6-48a8-8d86-8bcba1e0b722.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1251014-10000002",
+      "sourceMenuId": "10000002",
+      "name": "두마리통닭",
+      "description": "소금포함 (치킨무, 소스, 음료 미포함)",
+      "category": "통닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/2d43a071-43f4-401f-ab77-9dae7f9deb04.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000004",
+      "sourceMenuId": "10000004",
+      "name": "(NEW) 깐풍순살치킨",
+      "description": "순살 500g (치킨무,소스,음료 미포함)",
+      "category": "깐풍치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dd0be1b5-f389-4ec3-806f-f09ef5004a44.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000007",
+      "sourceMenuId": "10000007",
+      "name": "(NEW) 청양맵간장순살",
+      "description": "순살 500g (치킨무,소스,음료 미포함)",
+      "category": "청양맵간장",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c51eff48-dcae-48ad-979a-a91b75fbbd18.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000010",
+      "sourceMenuId": "10000010",
+      "name": "(NEW) 허니마늘순살파닭",
+      "description": "순살 500g (치킨무,소스,음료 미포함)",
+      "category": "허니마늘파닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/2d9de707-6c02-4687-8b75-b59a44a88c4d.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000013",
+      "sourceMenuId": "10000013",
+      "name": "빠사삭 간장치킨",
+      "description": "조각닭 12조각 (치킨무, 소스, 음료 미포함)",
+      "category": "(NEW) 빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6ba80b8f-8093-4042-8fe1-e814d1b43dd9.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000018",
+      "sourceMenuId": "10000018",
+      "name": "간장순살",
+      "description": "순살 500g (치킨무, 소스, 음료 미포함)",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/32062581-f94b-497c-9140-a6ff296978bf.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000024",
+      "sourceMenuId": "10000024",
+      "name": "가마치마늘간장콤보",
+      "description": "다리4개, 날개4개 (치킨무, 소스, 음료 미포함)",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8fa7249a-0c40-4914-8c1c-75fb903059e9.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000029",
+      "sourceMenuId": "10000029",
+      "name": "간장똥집튀김",
+      "description": "닭똥집 + 꽈리고추 + 감자튀김 + 마늘 간장소스 양파는 선택 사항 선택 해주세요. (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1d242588-2e63-45ab-953f-15dd9c84d934.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000044",
+      "sourceMenuId": "10000044",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7d3977f9-dde3-4c59-9c41-0e1336801412.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-90000002",
+      "sourceMenuId": "90000002",
+      "name": "소주 (참이슬)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1251014-10000008",
+      "sourceMenuId": "10000008",
+      "name": "(NEW) 청양맵간장콤보",
+      "description": "다리4개, 날개4개 (치킨무,소스,음료 미포함)",
+      "category": "청양맵간장",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b7588e00-2647-4ea7-8b70-ca50273ce169.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000011",
+      "sourceMenuId": "10000011",
+      "name": "(NEW) 허니마늘파닭콤보",
+      "description": "다리4개, 날개4개 (치킨무, 소스, 음료 미포함)",
+      "category": "허니마늘파닭",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d459574b-0d05-48f7-b9dc-21b9527d75e1.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000014",
+      "sourceMenuId": "10000014",
+      "name": "빠사삭 양념치킨",
+      "description": "조각닭 12조각 (치킨무, 소스, 음료 미포함)",
+      "category": "(NEW) 빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d9a7b1b5-f07e-4265-9bac-80bf60535ab8.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000019",
+      "sourceMenuId": "10000019",
+      "name": "양념순살",
+      "description": "순살 500g (치킨무, 소스, 음료 미포함)",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/93a33554-25b4-4dea-9dce-288963238a12.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000025",
+      "sourceMenuId": "10000025",
+      "name": "가마치양념콤보",
+      "description": "다리4개, 날개4개 (치킨무, 소스, 음료 미포함)",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0302c81f-8218-4776-b2d6-cf09227aa131.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000030",
+      "sourceMenuId": "10000030",
+      "name": "(NEW) 크런치오징어",
+      "description": "크런치오징어 + 머스타드, 케찹 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d1ec7358-fccb-415f-91dd-458971abc81f.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000045",
+      "sourceMenuId": "10000045",
+      "name": "환타",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1251014-90000003",
+      "sourceMenuId": "90000003",
+      "name": "소주 (진로)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1251014-10000015",
+      "sourceMenuId": "10000015",
+      "name": "빠사삭 가마치즈치킨",
+      "description": "조각닭 12조각 (치킨무, 소스, 음료 미포함)",
+      "category": "(NEW) 빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce50d046-15af-4851-96e4-052e730ce410.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000020",
+      "sourceMenuId": "10000020",
+      "name": "가마치즈순살",
+      "description": "순살 500g (치킨무, 소스, 음료 미포함)",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/57c4f523-838a-4bf9-834d-61681905f867.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000026",
+      "sourceMenuId": "10000026",
+      "name": "가마치즈콤보",
+      "description": "다리4개, 날개4개 (치킨무, 소스, 음료 미포함)",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a0bda682-64d9-4251-8842-76dfd47d8833.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000031",
+      "sourceMenuId": "10000031",
+      "name": "닭발튀김",
+      "description": "무뼈 닭발튀김 + 소금포함 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a43d22c3-6746-4730-8129-ec0d7f8fa7df.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-90000004",
+      "sourceMenuId": "90000004",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1251014-10000016",
+      "sourceMenuId": "10000016",
+      "name": "빠사삭 반반치킨",
+      "description": "소금포함 조각닭12조각 (빠사삭 후라이드 치킨+소스치킨(양념/마늘간장/가마치즈/청양맵간장) (치킨무, 소스, 음료 미포함)",
+      "category": "(NEW) 빠사삭치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/54fee5c6-d46e-4002-bf95-0030a0f84fb6.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000021",
+      "sourceMenuId": "10000021",
+      "name": "순살 닭강정",
+      "description": "순살 500g ,떡 3개 (치킨무, 소스, 음료 미포함)",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1edc59dd-a8f4-429e-912f-2457a50133a5.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000027",
+      "sourceMenuId": "10000027",
+      "name": "가마치반반콤보",
+      "description": "소금 포함 다리4개, 날개4개 반반치킨 (후라이드 콤보+소스치킨(양념/마늘간장/가마치즈/청양맵간장) (치킨무, 소스, 음료 미포함)",
+      "category": "콤보",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0f035cd0-5ea6-4c36-921b-931db4c4bdf0.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000032",
+      "sourceMenuId": "10000032",
+      "name": "무뼈매운닭발",
+      "description": "무뼈 매운닭발 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/175c7bed-b5cb-4eb4-814e-17c5c2fdb15b.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-90000005",
+      "sourceMenuId": "90000005",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1251014-10000022",
+      "sourceMenuId": "10000022",
+      "name": "반반 순살치킨",
+      "description": "소금 포함 반반치킨(후라이드 순살 +소스치킨(양념/마늘간장/가마치즈/청양맵간장) (치킨무, 소스 미포함)",
+      "category": "순살치킨",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b9a3c8a4-bc33-4d6c-9e75-4bcdb6cc0d1a.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000033",
+      "sourceMenuId": "10000033",
+      "name": "모듬감자튀김",
+      "description": "모듬감자튀김 + 케찹 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7ea31f1a-2758-4ef1-8280-be7279acde5e.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-90000006",
+      "sourceMenuId": "90000006",
+      "name": "카스 생맥주(1000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1251014-10000034",
+      "sourceMenuId": "10000034",
+      "name": "막대감자튀김",
+      "description": "막대감자튀김 + 케찹 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/eda3b80e-077c-46c5-98ee-22ab59ce9895.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000035",
+      "sourceMenuId": "10000035",
+      "name": "가마치즈막대감자",
+      "description": "막대감자튀김 + 치즈시즈닝 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/066505f9-26c1-4baf-8c1d-acdb1fa2c050.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000036",
+      "sourceMenuId": "10000036",
+      "name": "가마치즈볼 (5개)",
+      "description": "치즈볼 5개 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dc59388d-b6fa-4ee7-bed5-29d3d1db77b5.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000037",
+      "sourceMenuId": "10000037",
+      "name": "스노윙가마치즈볼 (5개)",
+      "description": "치즈볼 5개 + 치즈시즈닝 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/19b7ce7b-de16-4de5-847b-faf19b5a2d6a.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000038",
+      "sourceMenuId": "10000038",
+      "name": "소떡소떡",
+      "description": "닭가슴살 소시지 + 떡 + 치킨양념소스(발림) 안바른 상태를 원하면 요청사항에 적어주세요.",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/60ac0855-33db-4524-ba78-6514381b0c89.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000039",
+      "sourceMenuId": "10000039",
+      "name": "가마치떡볶이",
+      "description": "가마치떡볶이 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b32383de-5a1c-4fe2-ae07-1859ccf9a700.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000040",
+      "sourceMenuId": "10000040",
+      "name": "가마치오뎅탕",
+      "description": "오뎅탕 (치킨무, 소스, 음료 미포함)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/440f82af-adfe-4292-ac7a-8fcbafd78480.jpg"
+    },
+    {
+      "id": "ddangyo-1251014-10000041",
+      "sourceMenuId": "10000041",
+      "name": "가마치 삼계탕파우치",
+      "description": "유황먹여 키운 닭으로 만든 국내산 삼계탕 900g 파우치 상품",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/22e2341a-482e-4150-a58a-94eef595db95.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

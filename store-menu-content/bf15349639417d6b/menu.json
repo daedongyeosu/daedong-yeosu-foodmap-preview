@@ -1,0 +1,349 @@
+{
+  "storeId": "bf15349639417d6b",
+  "storeName": "피피마켓",
+  "displayName": "피피마켓",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/ce889165-5bd2-4175-b14d-3fe322573429.jpg",
+  "categories": [
+    "전체",
+    "한식 분식",
+    "철판",
+    "타코",
+    "해산물",
+    "숯불바베큐",
+    "세트메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1227918-10000002",
+      "sourceMenuId": "10000002",
+      "name": "양념치킨",
+      "description": "",
+      "category": "한식 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/ce889165-5bd2-4175-b14d-3fe322573429.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000006",
+      "sourceMenuId": "10000006",
+      "name": "모듬튀김",
+      "description": "",
+      "category": "한식 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/209105ae-1905-4a5c-8aa5-84973730eb43.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000016",
+      "sourceMenuId": "10000016",
+      "name": "불막창볶음",
+      "description": "",
+      "category": "철판",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/647da4f8-b107-44d0-b76c-4b29e389c080.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000001",
+      "sourceMenuId": "10000001",
+      "name": "치킨",
+      "description": "",
+      "category": "한식 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/a68874dc-13b4-4210-ab56-4208bce96a2b.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000009",
+      "sourceMenuId": "10000009",
+      "name": "나쵸치즈타코",
+      "description": "",
+      "category": "타코",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000014",
+      "sourceMenuId": "10000014",
+      "name": "모듬전",
+      "description": "",
+      "category": "철판",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ddff31ce-2fc2-4150-a07f-50ef7ca6bc56.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000022",
+      "sourceMenuId": "10000022",
+      "name": "섞어막회",
+      "description": "",
+      "category": "해산물",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000030",
+      "sourceMenuId": "10000030",
+      "name": "통삼겹바베큐",
+      "description": "",
+      "category": "숯불바베큐",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000037",
+      "sourceMenuId": "10000037",
+      "name": "막회+치킨세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000041",
+      "sourceMenuId": "10000041",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000010",
+      "sourceMenuId": "10000010",
+      "name": "돌문어타코",
+      "description": "",
+      "category": "타코",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000015",
+      "sourceMenuId": "10000015",
+      "name": "치즈감자전",
+      "description": "",
+      "category": "철판",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a77673ab-067d-4636-8325-824be65b76a5.JPG"
+    },
+    {
+      "id": "ddangyo-1227918-10000023",
+      "sourceMenuId": "10000023",
+      "name": "딱새우회",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/7d6f9e98-7333-4b21-ac91-4dcc0c4e085d.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000031",
+      "sourceMenuId": "10000031",
+      "name": "등갈비바베큐",
+      "description": "",
+      "category": "숯불바베큐",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dbf041cb-335b-4b01-b7bd-41d55b0a8b83.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000038",
+      "sourceMenuId": "10000038",
+      "name": "야시장특별세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000003",
+      "sourceMenuId": "10000003",
+      "name": "떡볶이",
+      "description": "",
+      "category": "한식 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/655ff0a3-1324-4ed3-a97c-9808b896a90b.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000011",
+      "sourceMenuId": "10000011",
+      "name": "쉬림프타코",
+      "description": "",
+      "category": "타코",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000024",
+      "sourceMenuId": "10000024",
+      "name": "해산물 물회",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/de345c1b-dcbf-4f45-99ad-223decc160be.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000032",
+      "sourceMenuId": "10000032",
+      "name": "닭날개바베큐",
+      "description": "",
+      "category": "숯불바베큐",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000039",
+      "sourceMenuId": "10000039",
+      "name": "해산물 세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000004",
+      "sourceMenuId": "10000004",
+      "name": "순대",
+      "description": "",
+      "category": "한식 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b770116a-4b34-4f32-a3fe-eece14ca829f.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000012",
+      "sourceMenuId": "10000012",
+      "name": "불고기타코",
+      "description": "",
+      "category": "타코",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000017",
+      "sourceMenuId": "10000017",
+      "name": "프랜치 토스트",
+      "description": "",
+      "category": "철판",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000025",
+      "sourceMenuId": "10000025",
+      "name": "낙지탕탕이",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/943c3fb7-fc2b-441f-aadc-2caf0eee95e2.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000033",
+      "sourceMenuId": "10000033",
+      "name": "갈릭버터 꽃게구이",
+      "description": "",
+      "category": "숯불바베큐",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000040",
+      "sourceMenuId": "10000040",
+      "name": "떡튀순세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/db08ea93-f041-4491-8330-b14780cb82b8.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000005",
+      "sourceMenuId": "10000005",
+      "name": "어묵",
+      "description": "",
+      "category": "한식 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/9a0c2620-d2d1-46c0-a7c5-1300e4aa49c0.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000013",
+      "sourceMenuId": "10000013",
+      "name": "치킨타코",
+      "description": "",
+      "category": "타코",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000018",
+      "sourceMenuId": "10000018",
+      "name": "호떡",
+      "description": "",
+      "category": "철판",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/272ddbbd-49bf-42d5-8904-deb980bdf503.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000026",
+      "sourceMenuId": "10000026",
+      "name": "막회 무침",
+      "description": "",
+      "category": "해산물",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000034",
+      "sourceMenuId": "10000034",
+      "name": "숯불무뼈닭발",
+      "description": "",
+      "category": "숯불바베큐",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/814f93e0-ef47-421e-a88b-6dbf842da557.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000019",
+      "sourceMenuId": "10000019",
+      "name": "인절미 호떡",
+      "description": "",
+      "category": "철판",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000027",
+      "sourceMenuId": "10000027",
+      "name": "물회",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/01cc7df8-a127-4a0b-8154-6bf0da0660ac.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000035",
+      "sourceMenuId": "10000035",
+      "name": "닭꼬치",
+      "description": "",
+      "category": "숯불바베큐",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/efc3ba32-7a93-48e7-95c7-253eb0c9a27b.jpg"
+    },
+    {
+      "id": "ddangyo-1227918-10000007",
+      "sourceMenuId": "10000007",
+      "name": "한모두부김치",
+      "description": "",
+      "category": "한식 분식",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000020",
+      "sourceMenuId": "10000020",
+      "name": "흑임자 호떡",
+      "description": "",
+      "category": "철판",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000028",
+      "sourceMenuId": "10000028",
+      "name": "모듬해산물+낙지탕탕이",
+      "description": "",
+      "category": "해산물",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000036",
+      "sourceMenuId": "10000036",
+      "name": "보일링크랩",
+      "description": "",
+      "category": "숯불바베큐",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000008",
+      "sourceMenuId": "10000008",
+      "name": "돌문어갓김치볶음밥",
+      "description": "",
+      "category": "한식 분식",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000021",
+      "sourceMenuId": "10000021",
+      "name": "뿌링클 호떡",
+      "description": "",
+      "category": "철판",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1227918-10000029",
+      "sourceMenuId": "10000029",
+      "name": "모듬해산물",
+      "description": "",
+      "category": "해산물",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "storeId": "f7f78ea24637cd25",
+  "storeName": "오동도 회포차",
+  "displayName": "오동도 회포차",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/6983edf7-b654-4941-9944-bab769585578.JPG",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "해산물",
+    "탕. 찌개류",
+    "SET 메뉴",
+    "상위 1% 냉삼겹 구이 세트메뉴",
+    "상위 1% 냉삼겹 구이 단품메뉴",
+    "사이드메뉴",
+    "음료수",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1178939-10000001",
+      "sourceMenuId": "10000001",
+      "name": "모듬회",
+      "description": "모둠 [참돔+광어+도다리]+기본서비스 (캔음료수 등)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8421a373-c9c0-43f9-b4af-d8ce59099fd4.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-10000017",
+      "sourceMenuId": "10000017",
+      "name": "참소라 숙회",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/928d2352-a6ee-4027-af96-9863d2b03579.JPG"
+    },
+    {
+      "id": "ddangyo-1178939-10000018",
+      "sourceMenuId": "10000018",
+      "name": "버터전복구이(7p)",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/edb859a4-550f-479e-aa24-ffcaaac3398b.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-10000016",
+      "sourceMenuId": "10000016",
+      "name": "매운탕 3~4인분",
+      "description": "",
+      "category": "탕. 찌개류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/aee7e5cc-240e-4d94-a15e-2a2ba87c0f9f.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-10000005",
+      "sourceMenuId": "10000005",
+      "name": "활어회SET1(광어+참돔+낙지탕탕이+전복버터구이)",
+      "description": "광어+참돔+낙지탕탕이+전복버터구이",
+      "category": "SET 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000008",
+      "sourceMenuId": "10000008",
+      "name": "냉삼 (2인분)",
+      "description": "기본반찬6구그릇(볶음김치+파절이+콩나물+백김치+샐러드+고추,마늘+된장찌개+쌈야채+쌈+기름장)",
+      "category": "상위 1% 냉삼겹 구이 세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000012",
+      "sourceMenuId": "10000012",
+      "name": "냉삼1kg+쌈장2개",
+      "description": "",
+      "category": "상위 1% 냉삼겹 구이 단품메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000025",
+      "sourceMenuId": "10000025",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/c68c421f-c2ec-4565-ae1a-d753f1a741e8.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-10000026",
+      "sourceMenuId": "10000026",
+      "name": "음료수",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1178939-10000002",
+      "sourceMenuId": "10000002",
+      "name": "광어회",
+      "description": "광어회+기본서비스 (캔음료수 등)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/11573002-76be-4100-af5b-2fa2147523b1.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-10000006",
+      "sourceMenuId": "10000006",
+      "name": "활어회SET2(광어+참돔+참소라숙회+전복버터구이)",
+      "description": "광어+참돔+참소라숙회+전복버터구이",
+      "category": "SET 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000009",
+      "sourceMenuId": "10000009",
+      "name": "냉삼 (3인분)",
+      "description": "기본반찬6구그릇(볶음김치+파절이+콩나물+백김치+샐러드+고추,마늘+된장찌개+쌈야채+쌈+기름장)",
+      "category": "상위 1% 냉삼겹 구이 세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000013",
+      "sourceMenuId": "10000013",
+      "name": "냉삼800g+쌈장2개",
+      "description": "",
+      "category": "상위 1% 냉삼겹 구이 단품메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-90000002",
+      "sourceMenuId": "90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1178939-10000003",
+      "sourceMenuId": "10000003",
+      "name": "광어+참돔",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000007",
+      "sourceMenuId": "10000007",
+      "name": "활어회SET3(광어+참돔+왕새우튀김+전복버터구이)",
+      "description": "광어+참돔+참소라숙회+전복버터구이",
+      "category": "SET 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000010",
+      "sourceMenuId": "10000010",
+      "name": "냉삼 (4인분)+기본반찬 6구 그릇 2개",
+      "description": "기본반찬 6구 그릇 2개 (구성 : 볶음김치+파절이+콩나물+백김치+샐러드+고추,마늘+된장찌개+쌈야채+쌈+기름장)",
+      "category": "상위 1% 냉삼겹 구이 세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000014",
+      "sourceMenuId": "10000014",
+      "name": "냉삼400g+쌈장1개",
+      "description": "",
+      "category": "상위 1% 냉삼겹 구이 단품메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000019",
+      "sourceMenuId": "10000019",
+      "name": "낙지탕탕이",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/996e37f4-3318-4d9e-8797-2ddad5584df1.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1178939-10000004",
+      "sourceMenuId": "10000004",
+      "name": "강도다리",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/68f2f240-1426-4b13-a602-03871f708b41.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-10000011",
+      "sourceMenuId": "10000011",
+      "name": "냉삼 (5인분)+기본반찬 6구 그릇 2개",
+      "description": "기본반찬 6구 그릇 2개 (구성 : 볶음김치+파절이+콩나물+백김치+샐러드+고추,마늘+된장찌개+쌈야채+쌈+기름장)",
+      "category": "상위 1% 냉삼겹 구이 세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000015",
+      "sourceMenuId": "10000015",
+      "name": "냉삼600g+쌈장2개",
+      "description": "",
+      "category": "상위 1% 냉삼겹 구이 단품메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-10000020",
+      "sourceMenuId": "10000020",
+      "name": "문어숙회",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/db647bba-6b50-4993-b4f8-4fd314780d0a.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1178939-10000021",
+      "sourceMenuId": "10000021",
+      "name": "탕탕이",
+      "description": "",
+      "category": "해산물",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-90000005",
+      "sourceMenuId": "90000005",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1178939-10000022",
+      "sourceMenuId": "10000022",
+      "name": "해삼+멍게",
+      "description": "",
+      "category": "해산물",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1178939-90000006",
+      "sourceMenuId": "90000006",
+      "name": "여수밤바다(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1178939-10000023",
+      "sourceMenuId": "10000023",
+      "name": "왕새우튀김 10p",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1a5ab212-c109-4565-8d55-2db1b40a327e.jpg"
+    },
+    {
+      "id": "ddangyo-1178939-10000024",
+      "sourceMenuId": "10000024",
+      "name": "굴전",
+      "description": "",
+      "category": "해산물",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f9be3615-a3f4-4b30-a647-80e52bf5f6d0.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

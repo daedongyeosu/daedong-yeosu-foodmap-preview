@@ -17,238 +17,272 @@
       "name": "내 맘대로 2마리 세트",
       "description": "내가 원하는 메뉴 두마리를 선택하는 가성비 갑 세트 메뉴(콜라미제공)",
       "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6113e481-4ef1-4165-a662-032d923f7735.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6113e481-4ef1-4165-a662-032d923f7735.jpg",
+      "sourceMenuId": "10000004"
     },
     {
       "id": "ddangyo-1353897-10000007",
       "name": "순살숯불불모자치킨",
       "description": "매화양념구이+분모자8p (콜라미제공)",
       "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/aec4c6fa-22e1-4026-9ecb-e2505b264075.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/aec4c6fa-22e1-4026-9ecb-e2505b264075.jpg",
+      "sourceMenuId": "10000007"
     },
     {
       "id": "ddangyo-1353897-10000010",
       "name": "(후라이드도잘해요)후라이드치킨",
       "description": "떡 튀김 10p+양념소스 1개+머스타드 1개 (콜라미제공)",
       "category": "한마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3fe5d143-1e9f-4123-b229-e4d67ff32c3c.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/3fe5d143-1e9f-4123-b229-e4d67ff32c3c.jpg",
+      "sourceMenuId": "10000010"
     },
     {
       "id": "ddangyo-1353897-10000001",
       "name": "[신메뉴출시]순살마라로제숯불구이",
       "description": "분모자 10p+ 향취고추토핑(콜라미제공)",
       "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a2f4900a-faa9-45a1-9be7-02835461825f.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a2f4900a-faa9-45a1-9be7-02835461825f.jpg",
+      "sourceMenuId": "10000001"
     },
     {
       "id": "ddangyo-1353897-10000026",
       "name": "매콤치밥소스",
       "description": "",
       "category": "소스",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d643a275-c318-4eb7-a552-8c3534e4c2ae.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d643a275-c318-4eb7-a552-8c3534e4c2ae.jpg",
+      "sourceMenuId": "10000026"
     },
     {
       "id": "ddangyo-1353897-10000031",
       "name": "코카콜라 500ml",
       "description": "",
       "category": "음료수",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e324eddf-0dd0-4536-bf3b-680d8838f193.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e324eddf-0dd0-4536-bf3b-680d8838f193.jpg",
+      "sourceMenuId": "10000031"
     },
     {
       "id": "ddangyo-1353897-10000002",
       "name": "순살숯불양념구이+우동사리",
       "description": "떡사리 10p+서비스 분모자2p (콜라미제공)",
       "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/2f2e5864-90c6-4a52-affd-a80d683e065d.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/2f2e5864-90c6-4a52-affd-a80d683e065d.jpg",
+      "sourceMenuId": "10000002"
     },
     {
       "id": "ddangyo-1353897-10000011",
       "name": "숯불양념구이치킨",
       "description": "치킨무+떡사리 10p+분모자 2p 서비스(콜라미제공)",
       "category": "한마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f6728524-a85a-4aa0-b23a-e973bf18bb81.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f6728524-a85a-4aa0-b23a-e973bf18bb81.jpg",
+      "sourceMenuId": "10000011"
     },
     {
       "id": "ddangyo-1353897-10000027",
       "name": "마요네즈 1p",
       "description": "숯불양념구이와 찰떡~~",
       "category": "소스",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/dd05c558-7507-4747-a9ec-b4999fba2d00.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/dd05c558-7507-4747-a9ec-b4999fba2d00.jpg",
+      "sourceMenuId": "10000027"
     },
     {
       "id": "ddangyo-1353897-10000032",
       "name": "코카콜라 1.25L",
       "description": "",
       "category": "음료수",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/49347226-2065-4f51-9bd6-1d5df8773095.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/49347226-2065-4f51-9bd6-1d5df8773095.jpg",
+      "sourceMenuId": "10000032"
     },
     {
       "id": "ddangyo-1353897-10000039",
       "name": "[사장님최애]닭껍질튀김 (양념소스+소금 제공)",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000039"
     },
     {
       "id": "ddangyo-1353897-10000003",
       "name": "내맘대로 한마리+마라로제[순살] 세트",
       "description": "내가 원하는 메뉴 한마리와 마라로제[순살] 세트 메뉴 :D (콜라미제공)",
       "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5187ce97-68fc-496d-9c73-e33edb1a58d7.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5187ce97-68fc-496d-9c73-e33edb1a58d7.jpg",
+      "sourceMenuId": "10000003"
     },
     {
       "id": "ddangyo-1353897-10000012",
       "name": "숯불라갈비맛치킨",
       "description": "치킨무+떡사리 10p+분모자2p 서비스(콜라미제공)",
       "category": "한마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/85f12ef4-f9b8-4cd9-b6e0-62e76c1fa070.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/85f12ef4-f9b8-4cd9-b6e0-62e76c1fa070.jpg",
+      "sourceMenuId": "10000012"
     },
     {
       "id": "ddangyo-1353897-10000017",
       "name": "즉석밥 200g",
       "description": "오뚜기 입니다.",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ab7bed76-5415-4424-83a0-4ca73a0af512.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ab7bed76-5415-4424-83a0-4ca73a0af512.jpg",
+      "sourceMenuId": "10000017"
     },
     {
       "id": "ddangyo-1353897-10000028",
       "name": "허니 머스타드1p",
       "description": "",
       "category": "소스",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/21680fb4-b06b-4aa0-a403-a605bb475920.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/21680fb4-b06b-4aa0-a403-a605bb475920.jpg",
+      "sourceMenuId": "10000028"
     },
     {
       "id": "ddangyo-1353897-10000013",
       "name": "양념치킨",
       "description": "떡 튀김 10p (콜라미제공)",
       "category": "한마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/1adcbd24-81c5-4166-a6bb-9e28c605b818.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/1adcbd24-81c5-4166-a6bb-9e28c605b818.jpg",
+      "sourceMenuId": "10000013"
     },
     {
       "id": "ddangyo-1353897-10000018",
       "name": "매콤국물떡볶이",
       "description": "떡 25p",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a0fadd42-5163-490a-bddf-ba2e19da9dab.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a0fadd42-5163-490a-bddf-ba2e19da9dab.jpg",
+      "sourceMenuId": "10000018"
     },
     {
       "id": "ddangyo-1353897-10000029",
       "name": "양념치킨소스(숯불양념X)",
       "description": "",
       "category": "소스",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ea515143-214f-4db6-985c-a5826ede06f0.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ea515143-214f-4db6-985c-a5826ede06f0.jpg",
+      "sourceMenuId": "10000029"
     },
     {
       "id": "ddangyo-1353897-10000014",
       "name": "마늘간장치킨",
       "description": "떡 튀김 10p (콜라미제공)",
       "category": "한마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a816ae0c-42a1-4d1d-b50b-7b4f126d3791.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a816ae0c-42a1-4d1d-b50b-7b4f126d3791.jpg",
+      "sourceMenuId": "10000014"
     },
     {
       "id": "ddangyo-1353897-10000019",
       "name": "맛있는 치즈볼",
       "description": "먹는 순간, 외부 층은 바삭하게 갈라지고 안쪽은 부드럽고 신선한 치즈 풍미가 입안에서 터집니다.",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/afb5215d-41c8-41dd-9f52-1837b7486301.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/afb5215d-41c8-41dd-9f52-1837b7486301.jpg",
+      "sourceMenuId": "10000019"
     },
     {
       "id": "ddangyo-1353897-10000030",
       "name": "토마토 케찹 1p",
       "description": "",
       "category": "소스",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/021e295a-baf0-41d7-a758-f7685aa2addb.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/021e295a-baf0-41d7-a758-f7685aa2addb.jpg",
+      "sourceMenuId": "10000030"
     },
     {
       "id": "ddangyo-1353897-10000035",
       "name": "코카콜라 제로 1.25L",
       "description": "",
       "category": "음료수",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bec0967f-ca99-4568-afcb-69ea999f49cb.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bec0967f-ca99-4568-afcb-69ea999f49cb.jpg",
+      "sourceMenuId": "10000035"
     },
     {
       "id": "ddangyo-1353897-10000006",
       "name": "순살숯불양념구이",
       "description": "떡사리 10p+서비스 분모자2p(콜라미제공)",
       "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b64a4604-126b-49a0-88c2-0d764beb90dc.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b64a4604-126b-49a0-88c2-0d764beb90dc.jpg",
+      "sourceMenuId": "10000006"
     },
     {
       "id": "ddangyo-1353897-10000015",
       "name": "눈꽃치즈치킨",
       "description": "떡 튀김 10p (콜라미제공)",
       "category": "한마리 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/55f6381d-54cd-469c-b30d-1b0524290787.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/55f6381d-54cd-469c-b30d-1b0524290787.jpg",
+      "sourceMenuId": "10000015"
     },
     {
       "id": "ddangyo-1353897-10000020",
       "name": "눈꽃치즈볼",
       "description": "맛있는 치즈볼에 눈꽃치즈 가루가 솔솔 올라가요.",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d9451a7c-d00c-4293-9588-97a92aa20d9b.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d9451a7c-d00c-4293-9588-97a92aa20d9b.jpg",
+      "sourceMenuId": "10000020"
     },
     {
       "id": "ddangyo-1353897-10000036",
       "name": "코카콜라 제로 500ml",
       "description": "",
       "category": "음료수",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/784cba2c-fe03-4e97-86bf-46b43196985a.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/784cba2c-fe03-4e97-86bf-46b43196985a.jpg",
+      "sourceMenuId": "10000036"
     },
     {
       "id": "ddangyo-1353897-10000021",
       "name": "맛있는 치즈스틱",
       "description": "맛있는 치즈스틱",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/2041bd1e-3443-4ee7-89b3-cb57d484b1c6.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/2041bd1e-3443-4ee7-89b3-cb57d484b1c6.jpg",
+      "sourceMenuId": "10000021"
     },
     {
       "id": "ddangyo-1353897-10000008",
       "name": "숯불매화양념구이",
       "description": "치킨무+떡사리10p+서비스 분모자1p (콜라미제공)",
       "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/7a63d67e-a5e2-46e2-b3bd-1893ac143843.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/7a63d67e-a5e2-46e2-b3bd-1893ac143843.jpg",
+      "sourceMenuId": "10000008"
     },
     {
       "id": "ddangyo-1353897-10000022",
       "name": "맛감자 20p",
       "description": "맛있는 맛감자 20p",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/76575159-c175-46e2-88db-1034aca628d5.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/76575159-c175-46e2-88db-1034aca628d5.jpg",
+      "sourceMenuId": "10000022"
     },
     {
       "id": "ddangyo-1353897-10000009",
       "name": "숯불소금구이",
       "description": "떡 튀김 10p+대파 사리+양념소스 1개+머스타드 1개 (콜라미제공)",
       "category": "사장님 강추 메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/068ec5d1-c0ac-4036-86d7-a324e79f6289.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/068ec5d1-c0ac-4036-86d7-a324e79f6289.jpg",
+      "sourceMenuId": "10000009"
     },
     {
       "id": "ddangyo-1353897-10000023",
       "name": "눈꽃치즈 맛감자 20p",
       "description": "맛있는 눈꽃치즈 가루가 솔솔솔~",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ae2071b8-0620-4d17-9afb-9831ba92cb50.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ae2071b8-0620-4d17-9afb-9831ba92cb50.jpg",
+      "sourceMenuId": "10000023"
     },
     {
       "id": "ddangyo-1353897-10000024",
       "name": "[떡류탄]쩝쩝쫄깃 떡 튀김 20P",
       "description": "떡류탄 무서워요.",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/fa764678-d37b-4916-95f6-0f947eddd5f5.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/fa764678-d37b-4916-95f6-0f947eddd5f5.jpg",
+      "sourceMenuId": "10000024"
     },
     {
       "id": "ddangyo-1353897-10000037",
       "name": "김말이튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c56e5872-6915-4caa-98ee-7b101608ed00.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c56e5872-6915-4caa-98ee-7b101608ed00.jpg",
+      "sourceMenuId": "10000037"
     },
     {
       "id": "ddangyo-1353897-10000025",
       "name": "치킨 무",
       "description": "동근's 치킨 무",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/044d34c0-9b9a-46db-9c91-376e7fa1ef8a.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/044d34c0-9b9a-46db-9c91-376e7fa1ef8a.jpg",
+      "sourceMenuId": "10000025"
     }
   ],
   "source": {
@@ -259,5 +293,8 @@
     ],
     "rawItemCount": 37,
     "duplicateItemsRemoved": 3
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

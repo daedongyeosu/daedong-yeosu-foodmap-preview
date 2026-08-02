@@ -1,0 +1,221 @@
+{
+  "storeId": "e7a98f90c3df0c2b",
+  "storeName": "여수삼합당",
+  "displayName": "여수삼합당",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/46171486-9682-42b6-ae15-857e7f02860d.jpg",
+  "categories": [
+    "전체",
+    "메뉴",
+    "세트메뉴",
+    "음료",
+    "딸기찹쌀떡",
+    "과일찹쌀떡",
+    "딸기찹쌀떡세트",
+    "밤양갱"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1316323-10000003",
+      "sourceMenuId": "10000003",
+      "name": "치즈 삼합빵",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/b1ac149a-fcb7-40f9-ba08-b591ba4062c6.jpg"
+    },
+    {
+      "id": "ddangyo-1316323-10000005",
+      "sourceMenuId": "10000005",
+      "name": "생딸기크림치즈빵",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/3f161d5d-439c-4330-8fb6-bf998257de07.jpg"
+    },
+    {
+      "id": "ddangyo-1316323-10000007",
+      "sourceMenuId": "10000007",
+      "name": "크림치즈단팥빵",
+      "description": "",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f879226d-a552-47a0-8f87-42c6dbad7853.jpg"
+    },
+    {
+      "id": "ddangyo-1316323-10000001",
+      "sourceMenuId": "10000001",
+      "name": "오리지널 삼합빵",
+      "description": "",
+      "category": "메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000008",
+      "sourceMenuId": "10000008",
+      "name": "여수삼합 6종 패키지",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000009",
+      "sourceMenuId": "10000009",
+      "name": "아이스 아메리카노",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ca8f07d9-f143-4268-bf0a-f182f91cb4c9.jpg"
+    },
+    {
+      "id": "ddangyo-1316323-10000011",
+      "sourceMenuId": "10000011",
+      "name": "팥앙금딸기찹쌀떡",
+      "description": "",
+      "category": "딸기찹쌀떡",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/7af51b91-f9cd-46ee-806d-b581b97d5a25.jpg"
+    },
+    {
+      "id": "ddangyo-1316323-10000015",
+      "sourceMenuId": "10000015",
+      "name": "샤인머스켓찹쌀떡",
+      "description": "",
+      "category": "과일찹쌀떡",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000017",
+      "sourceMenuId": "10000017",
+      "name": "딸기찹쌀떡6구세트",
+      "description": "",
+      "category": "딸기찹쌀떡세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000025",
+      "sourceMenuId": "10000025",
+      "name": "수제 밤양갱",
+      "description": "",
+      "category": "밤양갱",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/eb6c7245-941f-4ee5-8a6f-9b9c91b52a99.jpg"
+    },
+    {
+      "id": "ddangyo-1316323-10000002",
+      "sourceMenuId": "10000002",
+      "name": "매콤 삼합빵",
+      "description": "",
+      "category": "메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000010",
+      "sourceMenuId": "10000010",
+      "name": "딸기에이드",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/8d106c57-7656-4d70-91e0-d880e398d624.jpg"
+    },
+    {
+      "id": "ddangyo-1316323-10000012",
+      "sourceMenuId": "10000012",
+      "name": "백앙금딸기찹쌀떡",
+      "description": "",
+      "category": "딸기찹쌀떡",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000016",
+      "sourceMenuId": "10000016",
+      "name": "귤찹쌀떡",
+      "description": "",
+      "category": "과일찹쌀떡",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000018",
+      "sourceMenuId": "10000018",
+      "name": "딸기찹쌀떡10구세트",
+      "description": "",
+      "category": "딸기찹쌀떡세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000013",
+      "sourceMenuId": "10000013",
+      "name": "해풍쑥딸기찹쌀떡",
+      "description": "",
+      "category": "딸기찹쌀떡",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000019",
+      "sourceMenuId": "10000019",
+      "name": "해풍쑥찹쌀떡6구세트",
+      "description": "",
+      "category": "딸기찹쌀떡세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000004",
+      "sourceMenuId": "10000004",
+      "name": "피자 삼합빵",
+      "description": "",
+      "category": "메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000014",
+      "sourceMenuId": "10000014",
+      "name": "크림치즈딸기찹쌀떡",
+      "description": "",
+      "category": "딸기찹쌀떡",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000020",
+      "sourceMenuId": "10000020",
+      "name": "해풍쑥찹쌀떡10구세트",
+      "description": "",
+      "category": "딸기찹쌀떡세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000021",
+      "sourceMenuId": "10000021",
+      "name": "딸기찹쌀떡혼합6구세트",
+      "description": "",
+      "category": "딸기찹쌀떡세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000006",
+      "sourceMenuId": "10000006",
+      "name": "와사비마요삼합빵",
+      "description": "",
+      "category": "메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000022",
+      "sourceMenuId": "10000022",
+      "name": "딸기찹쌀떡혼합10구세트",
+      "description": "",
+      "category": "딸기찹쌀떡세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000023",
+      "sourceMenuId": "10000023",
+      "name": "딸기찹쌀떡4구세트",
+      "description": "",
+      "category": "딸기찹쌀떡세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1316323-10000024",
+      "sourceMenuId": "10000024",
+      "name": "해풍쑥4구세트",
+      "description": "",
+      "category": "딸기찹쌀떡세트",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

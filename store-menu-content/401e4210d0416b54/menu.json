@@ -1,0 +1,170 @@
+{
+  "storeId": "401e4210d0416b54",
+  "storeName": "자연산오징어회",
+  "displayName": "자연산오징어회",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/809bb493-7523-4a83-9174-2d267bf2dff0.jpg",
+  "categories": [
+    "전체",
+    "산오징어or물회",
+    "단품메뉴",
+    "추가메뉴",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138493-10000002",
+      "sourceMenuId": "10000002",
+      "name": "산오징어 회 (중)",
+      "description": "산오징어+미니전+모듬채소+다진마늘+다진고추+와사비+간장+쌈장+김가루+콩가루+초장1개+콘샐러드+번데기+삶은새우",
+      "category": "산오징어or물회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/809bb493-7523-4a83-9174-2d267bf2dff0.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000003",
+      "sourceMenuId": "10000003",
+      "name": "산오징어 회 (소)",
+      "description": "산오징어+미니전+모듬채소+다진마늘+다진고추+와사비+간장+쌈장+김가루+콩가루+초장1개+콘샐러드+번데기+삶은새우",
+      "category": "산오징어or물회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/809bb493-7523-4a83-9174-2d267bf2dff0.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000001",
+      "sourceMenuId": "10000001",
+      "name": "산오징어 회 (대)",
+      "description": "산오징어+미니전+모듬채소+다진마늘+다진고추+와사비+간장+쌈장+김가루+콩가루+초장1개+콘샐러드+번데기+삶은새우",
+      "category": "산오징어or물회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/809bb493-7523-4a83-9174-2d267bf2dff0.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000006",
+      "sourceMenuId": "10000006",
+      "name": "산오징어 숙회",
+      "description": "산오징어숙회+초장",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d866b4bb-479a-4799-a10f-46bde33e682f.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000009",
+      "sourceMenuId": "10000009",
+      "name": "옥수수콘",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/1ee7db8c-ee46-411d-bb4a-f152fa060247.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000016",
+      "sourceMenuId": "10000016",
+      "name": "펩시콜라500ml",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138493-10000019",
+      "sourceMenuId": "10000019",
+      "name": "1인 산오징어",
+      "description": "산오징어1마리+야채조금+초장 만 제공됩니다.",
+      "category": "산오징어or물회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/a6e35eaa-6d60-4977-b252-37ff6f3e962e.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000007",
+      "sourceMenuId": "10000007",
+      "name": "오징어부추전",
+      "description": "",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/2d73234e-09c4-4f70-a885-a903d86631a9.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000010",
+      "sourceMenuId": "10000010",
+      "name": "따뜻한번데기",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/54013ab0-2e7a-46a7-ac00-66268671747b.JPG"
+    },
+    {
+      "id": "ddangyo-1138493-10000017",
+      "sourceMenuId": "10000017",
+      "name": "칠성사이다500ml",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138493-10000008",
+      "sourceMenuId": "10000008",
+      "name": "물회육수",
+      "description": "",
+      "category": "단품메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138493-10000011",
+      "sourceMenuId": "10000011",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/5e6f2862-6874-444c-95a1-c1a09a5e5e3f.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000018",
+      "sourceMenuId": "10000018",
+      "name": "제로펩시",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138493-10000012",
+      "sourceMenuId": "10000012",
+      "name": "초장",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138493-10000004",
+      "sourceMenuId": "10000004",
+      "name": "시원칼칼 오징어물회(대)",
+      "description": "",
+      "category": "산오징어or물회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/cee3b0da-32d8-4ffb-abda-fcb5639b9ef8.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000013",
+      "sourceMenuId": "10000013",
+      "name": "콩가루",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138493-10000005",
+      "sourceMenuId": "10000005",
+      "name": "시원칼칼오징어물회(중)",
+      "description": "",
+      "category": "산오징어or물회",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/cee3b0da-32d8-4ffb-abda-fcb5639b9ef8.jpg"
+    },
+    {
+      "id": "ddangyo-1138493-10000014",
+      "sourceMenuId": "10000014",
+      "name": "와사비",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1138493-10000015",
+      "sourceMenuId": "10000015",
+      "name": "소면",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

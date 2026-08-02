@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-2';
+  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-4';
   const WAIT_TIMEOUT_MS = 30000;
   const POLL_MS = 80;
 
@@ -54,15 +54,33 @@
     });
   }
 
-  function addDdangyoRoute(store, url, report) {
-    const href = safeUrl(url);
+  function addDdangyoRoute(store, row, report) {
+    const href = safeUrl(row?.ddangyoUrl);
     if (!href) return;
-    if (hasRoute(store, 'ddangyo', '땡겨요')) {
-      report.preservedDdangyoRoutes += 1;
+    if (!Array.isArray(store.routes)) store.routes = [];
+    const verifiedUrls = unique([...(row?.sourceUrls || []), row?.ddangyoUrl])
+      .map(safeUrl)
+      .filter(Boolean);
+    const existing = store.routes.find(route => {
+      const routeKey = String(route?.key || '').toLowerCase();
+      const routeName = String(route?.name || '').replace(/\s/g, '');
+      return routeKey === 'ddangyo' || routeName.includes('땡겨요');
+    });
+    if (existing) {
+      const current = safeUrl(existing.url);
+      if (current && verifiedUrls.includes(current)) {
+        report.preservedDdangyoRoutes += 1;
+        return;
+      }
+      existing.name = '땡겨요';
+      existing.key = 'ddangyo';
+      existing.url = href;
+      existing.enabled = true;
+      existing.source = 'ddangyo-fingerprint-corrected';
+      report.correctedDdangyoRoutes += 1;
       return;
     }
-    if (!Array.isArray(store.routes)) store.routes = [];
-    store.routes.push({name: '땡겨요', key: 'ddangyo', url: href, enabled: true, source: 'ddangyo-preview-batch'});
+    store.routes.push({name: '땡겨요', key: 'ddangyo', url: href, enabled: true, source: 'ddangyo-fingerprint'});
     report.addedDdangyoRoutes += 1;
   }
 
@@ -146,7 +164,7 @@
       report.addedCoordinates += 1;
     }
 
-    addDdangyoRoute(store, row.ddangyoUrl, report);
+    addDdangyoRoute(store, row, report);
     addChakRoute(store, row.chakUrl, report);
     addVerifiedNaverMap(store, row, report);
     refreshSearch(store, row);
@@ -239,6 +257,7 @@
       addedCoordinates: 0,
       addedDdangyoRoutes: 0,
       preservedDdangyoRoutes: 0,
+      correctedDdangyoRoutes: 0,
       addedChakRoutes: 0,
       preservedChakRoutes: 0,
       addedNaverMaps: 0,

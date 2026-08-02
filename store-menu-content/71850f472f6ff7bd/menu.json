@@ -1,0 +1,232 @@
+{
+  "storeId": "71850f472f6ff7bd",
+  "storeName": "해녀갯바구",
+  "displayName": "해녀갯바구",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/947874eb-1b61-4cec-8ed8-8510d53ffa0b.JPG",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "사이드메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1194575-10000001",
+      "sourceMenuId": "10000001",
+      "name": "모듬해산물",
+      "description": "낙지탕탕이.뿔소라.해삼.전복회.돌멍게.일반멍게 6종 구성품입니다 위구성이 품절시에는 다른구성 대체합니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/947874eb-1b61-4cec-8ed8-8510d53ffa0b.JPG"
+    },
+    {
+      "id": "ddangyo-1194575-10000009",
+      "sourceMenuId": "10000009",
+      "name": "산낙지탕탕이",
+      "description": "낙지 한접시 구성입니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/39020c1b-68e4-48a2-b626-9b4d3f666d14.jpg"
+    },
+    {
+      "id": "ddangyo-1194575-10000016",
+      "sourceMenuId": "10000016",
+      "name": "전복버터구이",
+      "description": "새우버터10미 구성품입니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/f5de54c5-b767-4ac3-8f79-a3c6c8768800.jpg"
+    },
+    {
+      "id": "ddangyo-1194575-10000017",
+      "sourceMenuId": "10000017",
+      "name": "새우버터구이",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5a2f444d-4bef-4489-ab75-55db4b725546.jpg"
+    },
+    {
+      "id": "ddangyo-1194575-10000020",
+      "sourceMenuId": "10000020",
+      "name": "컵라면",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-10000023",
+      "sourceMenuId": "10000023",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/310989ee-6e0f-4416-80cc-9be87e019149.jpg"
+    },
+    {
+      "id": "ddangyo-1194575-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1194575-10000002",
+      "sourceMenuId": "10000002",
+      "name": "모듬해산물+낙지호롱이",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-10000024",
+      "sourceMenuId": "10000024",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/782efadb-94bf-4f22-94f3-1f12babc8927.jpg"
+    },
+    {
+      "id": "ddangyo-1194575-90000002",
+      "sourceMenuId": "90000002",
+      "name": "여수밤바다(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1194575-10000003",
+      "sourceMenuId": "10000003",
+      "name": "모듬해산물+딱새우회",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-10000022",
+      "sourceMenuId": "10000022",
+      "name": "햇반",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1194575-10000004",
+      "sourceMenuId": "10000004",
+      "name": "모듬해산물+전복or새우버터구이",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-90000004",
+      "sourceMenuId": "90000004",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1194575-90000005",
+      "sourceMenuId": "90000005",
+      "name": "켈리(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1194575-90000006",
+      "sourceMenuId": "90000006",
+      "name": "청하(병)(300ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1194575-10000007",
+      "sourceMenuId": "10000007",
+      "name": "멍게",
+      "description": "일반멍게 한접시입니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/ad34a4c4-898f-4f96-a493-2300cd2acf1d.jpg"
+    },
+    {
+      "id": "ddangyo-1194575-10000008",
+      "sourceMenuId": "10000008",
+      "name": "해삼",
+      "description": "해삼 한접시 구성입니다",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-10000010",
+      "sourceMenuId": "10000010",
+      "name": "참소라",
+      "description": "참소라 한접시 구성입니다",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-10000011",
+      "sourceMenuId": "10000011",
+      "name": "돌멍게",
+      "description": "돌멍게 한접시 나가는 구성입니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/be5797e4-7478-41c5-844a-15fbd1514d09.jpg"
+    },
+    {
+      "id": "ddangyo-1194575-10000012",
+      "sourceMenuId": "10000012",
+      "name": "뿔소라",
+      "description": "뿔소라회 한접시 구성입니다",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-10000013",
+      "sourceMenuId": "10000013",
+      "name": "자연산 전복",
+      "description": "자연산전복 1접시 구성입니다",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/227c8874-f2e3-4bb1-a933-8a9c83122a60.jpg"
+    },
+    {
+      "id": "ddangyo-1194575-10000014",
+      "sourceMenuId": "10000014",
+      "name": "골라3개",
+      "description": "해삼/ 참소라/ 뿔소라/ 개불/ 돌멍게/ 전복회/ 낙지탕탕이 중 택3",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-10000018",
+      "sourceMenuId": "10000018",
+      "name": "낙지호롱이",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1194575-10000019",
+      "sourceMenuId": "10000019",
+      "name": "딱새우회",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f58f2c63-5ae1-4580-9290-ef1061381308.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "storeId": "04910f606ba038a6",
+  "storeName": "오워래 수제돈까스 여서점",
+  "displayName": "오워래 수제돈까스 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/fb8f4314-6750-4e30-9f5a-9d48d974c253.jpg",
+  "categories": [
+    "전체",
+    "돈까스정식",
+    "만두류",
+    "사이드메뉴",
+    "음료",
+    "신기동 시전동 추가배달비"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1215130-10000003",
+      "sourceMenuId": "10000003",
+      "name": "치즈돈까스정식",
+      "description": "자연산모짜렐라치즈가 통으로~",
+      "category": "돈까스정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/fb8f4314-6750-4e30-9f5a-9d48d974c253.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000002",
+      "sourceMenuId": "10000002",
+      "name": "히레(안심)돈까스정식",
+      "description": "담백하고 부드러운 식감~",
+      "category": "돈까스정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/8fd5d920-61a8-4174-8e41-26b7c61879ef.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000005",
+      "sourceMenuId": "10000005",
+      "name": "대왕돈까스정식",
+      "description": "특제소스와 함께 옛맛그대로",
+      "category": "돈까스정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8845ac73-7903-4e9b-92c0-b7987b4edb3a.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000004",
+      "sourceMenuId": "10000004",
+      "name": "고구마치즈돈까스정식",
+      "description": "모짜렐라치즈위에 달콤한 고구마무스가 가득",
+      "category": "돈까스정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/5aa92cb4-09b1-448a-a333-8ce3e47a9d00.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000001",
+      "sourceMenuId": "10000001",
+      "name": "로스(등심)돈까스정식",
+      "description": "투툼한 통등심을 바삭하게 튀겨낸 돈까스정식",
+      "category": "돈까스정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/a886246c-d6de-44b4-b04e-8bc8cdc7a45b.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000007",
+      "sourceMenuId": "10000007",
+      "name": "고기왕만두(4개)",
+      "description": "",
+      "category": "만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7df76864-4506-44bb-9774-c6c5de34eb03.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000009",
+      "sourceMenuId": "10000009",
+      "name": "치킨가라아게",
+      "description": "치킨가라아게 약10조각",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b377f6c0-11e6-4630-8027-d15f34f1f962.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000014",
+      "sourceMenuId": "10000014",
+      "name": "탐스오렌지제로350ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1215130-10000021",
+      "sourceMenuId": "10000021",
+      "name": "신기동 신기동 배달비추가",
+      "description": "",
+      "category": "신기동 시전동 추가배달비",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1215130-10000008",
+      "sourceMenuId": "10000008",
+      "name": "김치왕만두(4개)",
+      "description": "",
+      "category": "만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b1efd547-1167-4791-86d5-a97c964c2a64.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000010",
+      "sourceMenuId": "10000010",
+      "name": "새우튀김",
+      "description": "새우튀김5마리",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/7af68236-462e-45a4-adc1-d0ea7883ba30.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000015",
+      "sourceMenuId": "10000015",
+      "name": "펩시제로350ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1215130-10000011",
+      "sourceMenuId": "10000011",
+      "name": "치즈볼",
+      "description": "찹쌀연유치즈볼5개",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/78974236-7c90-4d2a-b122-1808145f83b2.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000016",
+      "sourceMenuId": "10000016",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1215130-10000012",
+      "sourceMenuId": "10000012",
+      "name": "공기밥추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5ffa8a37-1cf6-413a-ae38-13553c24b225.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000017",
+      "sourceMenuId": "10000017",
+      "name": "펩시제로콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1215130-10000013",
+      "sourceMenuId": "10000013",
+      "name": "깍두기추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f2bb035d-63c3-482a-b7a5-0afbe503d214.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000018",
+      "sourceMenuId": "10000018",
+      "name": "탐스 파인 제로 350ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1215130-10000006",
+      "sourceMenuId": "10000006",
+      "name": "치킨까스정식",
+      "description": "100%국내산 닭가슴살",
+      "category": "돈까스정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/afb35139-0ecc-47fa-bf5c-edad65e35bc3.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000019",
+      "sourceMenuId": "10000019",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7fc59b12-34a8-472f-b255-a129815c4ad7.jpg"
+    },
+    {
+      "id": "ddangyo-1215130-10000020",
+      "sourceMenuId": "10000020",
+      "name": "탐스제로사과맛350ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

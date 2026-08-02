@@ -1,0 +1,119 @@
+{
+  "storeId": "77b1600313d1d6d4",
+  "storeName": "쭈신쭈왕 여수점",
+  "displayName": "쭈신쭈왕 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/518cfbbd-207c-4f61-9e31-b2bb63efeca5.jpg",
+  "categories": [
+    "전체",
+    "쭈신쭈왕 단품",
+    "쭈신쭈왕 세트",
+    "쭈신쭈왕 1인SET",
+    "수제 마요소스",
+    "음료",
+    "주류메뉴",
+    "사이드메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1321178-10000007",
+      "sourceMenuId": "10000007",
+      "name": "쭈신쭈왕 단품(쭈꾸미+수제소스)",
+      "description": "",
+      "category": "쭈신쭈왕 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/0c3a86d5-9212-4c3f-ab54-8215de205c96.jpg"
+    },
+    {
+      "id": "ddangyo-1321178-10000001",
+      "sourceMenuId": "10000001",
+      "name": "쭈신SET",
+      "description": "쭈꾸미+공기밥+치킨무+마요소스+콜라小 (2인시 공기밥 2개 3인시 공기밥 3개)",
+      "category": "쭈신쭈왕 세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321178-10000004",
+      "sourceMenuId": "10000004",
+      "name": "쭈신쭈왕 1인SET",
+      "description": "쭈꾸미+공기밥+치킨무+마요소스+스파클링",
+      "category": "쭈신쭈왕 1인SET",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321178-10000014",
+      "sourceMenuId": "10000014",
+      "name": "마요소스",
+      "description": "",
+      "category": "수제 마요소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321178-10000015",
+      "sourceMenuId": "10000015",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321178-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1321178-10000002",
+      "sourceMenuId": "10000002",
+      "name": "쭈꾸미2인+삼겹살SET",
+      "description": "쭈꾸미+삼겹살+공기밥+치킨무+마요소스+콜라小 (2인시 공기밥 2개 3인시 공기밥 3개)",
+      "category": "쭈신쭈왕 세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321178-10000005",
+      "sourceMenuId": "10000005",
+      "name": "쭈신쭈왕 1인+삼겹살SET",
+      "description": "쭈꾸미+삼겹살+공기밥+치킨무+마요소스+스파클링",
+      "category": "쭈신쭈왕 1인SET",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321178-10000016",
+      "sourceMenuId": "10000016",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321178-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1321178-10000012",
+      "sourceMenuId": "10000012",
+      "name": "김가루주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321178-10000013",
+      "sourceMenuId": "10000013",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

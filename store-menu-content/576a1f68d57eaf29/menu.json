@@ -1,0 +1,439 @@
+{
+  "storeId": "576a1f68d57eaf29",
+  "storeName": "몬스터탕수육 여수학동점",
+  "displayName": "몬스터탕수육 여수학동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/131f7a99-fc5f-48e1-a28f-f42bb03a2c2e.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "추가배달요금 주삼동 봉계동",
+    "추가배달요금 여서동 문수동 미평 둔덕동",
+    "세트메뉴",
+    "사이드메뉴",
+    "디핑소스",
+    "음료메뉴",
+    "핫도그",
+    "빙수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1265422-10000058",
+      "sourceMenuId": "10000058",
+      "name": "[재주문율1위]몬스터탕수육",
+      "description": "리얼 짐승용량 몬스터탕수육 [[대용량주의]]",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/131f7a99-fc5f-48e1-a28f-f42bb03a2c2e.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000062",
+      "sourceMenuId": "10000062",
+      "name": "깐풍육(단품)",
+      "description": "매콤, 달콤한 깐풍육",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/fe211e34-4aa1-479c-97d2-2f50bf3dd069.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000065",
+      "sourceMenuId": "10000065",
+      "name": "로제탕수육(단품)",
+      "description": "크리미한 고소함과 매콤함이 살아있는 로제소스와 탕수육의 조화 )",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/ce29b423-a128-4ef6-8f28-227a04564ff5.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000054",
+      "sourceMenuId": "10000054",
+      "name": "봉계동 주삼동추가배달비",
+      "description": "",
+      "category": "추가배달요금 주삼동 봉계동",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000055",
+      "sourceMenuId": "10000055",
+      "name": "추가배달비",
+      "description": "",
+      "category": "추가배달요금 여서동 문수동 미평 둔덕동",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000057",
+      "sourceMenuId": "10000057",
+      "name": "1인 탕수육] 몬탕의 모든 메뉴를 1인분으로 :)",
+      "description": "몬스터탕수육의 모든 메뉴를 1인분으로 즐겨보세요 :)",
+      "category": "메인메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000067",
+      "sourceMenuId": "10000067",
+      "name": "몬스터하프콤보",
+      "description": "몬스터탕수육의 모든메뉴를 반반으로 (2개 선택)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000068",
+      "sourceMenuId": "10000068",
+      "name": "매콤 국물 떡볶이,떡제비",
+      "description": "진짜 맛있게 매운 몬스터탕수육의 `매운국물떡볶이`",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c61d399d-6e75-4b4e-bb24-23acaa12344f.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000088",
+      "sourceMenuId": "10000088",
+      "name": "탕수육소스",
+      "description": "",
+      "category": "디핑소스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000089",
+      "sourceMenuId": "10000089",
+      "name": "콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000098",
+      "sourceMenuId": "10000098",
+      "name": "플레인핫도그",
+      "description": "8mm 빵 소세지 케찹머스타드",
+      "category": "핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000100",
+      "sourceMenuId": "10000100",
+      "name": "오레오 쿠키 앤 크림 눈꽃설빙",
+      "description": "",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/31794dd7-4264-4be1-81be-9246569735f9.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000069",
+      "sourceMenuId": "10000069",
+      "name": "로제 떡제비",
+      "description": "고소함과 매콤함이 살아있는 몬스터탕수육 `로제떡제비`",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000090",
+      "sourceMenuId": "10000090",
+      "name": "사이다",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000099",
+      "sourceMenuId": "10000099",
+      "name": "치폴레핫도그",
+      "description": "8mm 빵소세지 치폴레소스 렐리쉬피클",
+      "category": "핫도그",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000101",
+      "sourceMenuId": "10000101",
+      "name": "인절미 아이스크림 눈꽃 설빙",
+      "description": "",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e5561f33-7930-4861-98a3-71ebfca77f1f.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000059",
+      "sourceMenuId": "10000059",
+      "name": "몬스터김치피자탕수육",
+      "description": "새콤달콤매콤한 김치소스와 100% 모짜렐라가 어우러진 김치피자탕수육의 몬스터버전",
+      "category": "메인메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000070",
+      "sourceMenuId": "10000070",
+      "name": "우유튀김",
+      "description": "부드러움의 극치 대만의 명물",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000091",
+      "sourceMenuId": "10000091",
+      "name": "복숭아에이드",
+      "description": "보틀에 갑니다",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000102",
+      "sourceMenuId": "10000102",
+      "name": "꽁꽁딸기요거트눈꽃설빙(냉동딸기)",
+      "description": "",
+      "category": "빙수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000060",
+      "sourceMenuId": "10000060",
+      "name": "김치피자탕수육(단품)",
+      "description": "새콤달콤매콤한 몬스터탕수육의 김치소스와 100% 모짜렐라의 만남",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/dd84e036-f16b-40ac-97fe-17280f53ee0a.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000071",
+      "sourceMenuId": "10000071",
+      "name": "감자튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1078453d-f708-4f8b-8c00-6233d3cabfc9.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000092",
+      "sourceMenuId": "10000092",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000103",
+      "sourceMenuId": "10000103",
+      "name": "꽁꽁딸기치즈 눈꽃설빙",
+      "description": "",
+      "category": "빙수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000061",
+      "sourceMenuId": "10000061",
+      "name": "탕수육(단품)",
+      "description": "100% 리얼 수제 탕수육",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3b725868-2cf3-487c-8b72-818f120d6c31.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000072",
+      "sourceMenuId": "10000072",
+      "name": "김말이튀김(5개)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3fba463a-31ab-46c5-962e-6a0558f09b24.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000093",
+      "sourceMenuId": "10000093",
+      "name": "자몽에이드",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/16e4bb11-a5ec-49e3-abae-32a338a660a7.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000104",
+      "sourceMenuId": "10000104",
+      "name": "꿀꿀돼지바눈꽃빙수",
+      "description": "",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/00aa1baf-510d-41c7-82b6-36c1388431c3.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000073",
+      "sourceMenuId": "10000073",
+      "name": "군만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/2eb58692-f491-43f9-9fee-4ff0cdc3043d.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000094",
+      "sourceMenuId": "10000094",
+      "name": "아메리카노 아이스",
+      "description": "보틀에 담겨져 나갑니다.",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c30a4c60-5b60-4071-88e7-d10609fe4889.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000105",
+      "sourceMenuId": "10000105",
+      "name": "꽁꽁딸기눈꽃설빙",
+      "description": "",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/841907f2-fcdb-4825-8d6c-7fd37a34eb8c.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000063",
+      "sourceMenuId": "10000063",
+      "name": "빨간맛김치피자탕수육(단품)",
+      "description": "전 국민이 모두 아는 불닭볶음면의 그 맛, 이제 김피탕으로 즐겨보세요",
+      "category": "메인메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000074",
+      "sourceMenuId": "10000074",
+      "name": "오징어튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a9135bc7-f406-457f-9fec-b7b91b741665.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000095",
+      "sourceMenuId": "10000095",
+      "name": "오렌지에이드",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/30d7deb6-a36b-4720-8775-89017803cae6.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000106",
+      "sourceMenuId": "10000106",
+      "name": "꿀꿀돼지바 눈꽃설빙",
+      "description": "",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/00aa1baf-510d-41c7-82b6-36c1388431c3.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000064",
+      "sourceMenuId": "10000064",
+      "name": "[[NEW]]몬스터빨간맛김치피자탕수육",
+      "description": "전 국민이 모두 아는 불닭볶음면의 그 맛, 이제 김피탕으로 즐겨보세요",
+      "category": "메인메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000075",
+      "sourceMenuId": "10000075",
+      "name": "떡튀김(10개)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000096",
+      "sourceMenuId": "10000096",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3131a199-d0a7-4be9-9dce-d9ccfc0d2c71.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000076",
+      "sourceMenuId": "10000076",
+      "name": "치킨텐더붉닭양념",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000097",
+      "sourceMenuId": "10000097",
+      "name": "복숭아아이스티",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1e163014-05d9-4cc6-a07d-2a9cfb57950b.jpg"
+    },
+    {
+      "id": "ddangyo-1265422-10000066",
+      "sourceMenuId": "10000066",
+      "name": "[[NEW]]몬스터로제탕수육",
+      "description": "크리미한 고소함과 매콤함이 살아있는 로제소스와 탕수육의 조화)",
+      "category": "메인메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000077",
+      "sourceMenuId": "10000077",
+      "name": "치킨텐더핫스파이스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000078",
+      "sourceMenuId": "10000078",
+      "name": "치킨텐더오리지널",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000079",
+      "sourceMenuId": "10000079",
+      "name": "즉석밥 오뚜기or햇반",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000080",
+      "sourceMenuId": "10000080",
+      "name": "치킨텐더 치폴레",
+      "description": "치킨텐더,치폴레양념",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000081",
+      "sourceMenuId": "10000081",
+      "name": "야채튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000082",
+      "sourceMenuId": "10000082",
+      "name": "고추튀김 2개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000083",
+      "sourceMenuId": "10000083",
+      "name": "윙봉 불닭",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000084",
+      "sourceMenuId": "10000084",
+      "name": "윙봉 핫스파이스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000085",
+      "sourceMenuId": "10000085",
+      "name": "윙봉 치폴레",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000086",
+      "sourceMenuId": "10000086",
+      "name": "통살새우링",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1265422-10000087",
+      "sourceMenuId": "10000087",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "storeId": "0a5ea9fd4c080ed0",
+  "storeName": "멜로우(mellow)",
+  "displayName": "멜로우(mellow)",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7cd21096-1ccb-4728-b5a1-43ab0666cecd.jpg",
+  "categories": [
+    "전체",
+    "COFFEE(Hot/Ice)",
+    "BEVERAGE",
+    "FRESH JUICE(계절)",
+    "수제차&TEA",
+    "ADE&SMOOTHIE"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1344515-10000001",
+      "sourceMenuId": "10000001",
+      "name": "아메리카노",
+      "description": "",
+      "category": "COFFEE(Hot/Ice)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/dfc6ac08-71d8-4b96-bc17-091c15d0d6d9.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000002",
+      "sourceMenuId": "10000002",
+      "name": "카페라떼",
+      "description": "",
+      "category": "COFFEE(Hot/Ice)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/4d3c3850-d3e5-48c7-a7e0-652c9b6aa7b7.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000007",
+      "sourceMenuId": "10000007",
+      "name": "고구마라떼",
+      "description": "",
+      "category": "BEVERAGE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000012",
+      "sourceMenuId": "10000012",
+      "name": "토마토쥬스",
+      "description": "",
+      "category": "FRESH JUICE(계절)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000015",
+      "sourceMenuId": "10000015",
+      "name": "대추차",
+      "description": "",
+      "category": "수제차&TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000023",
+      "sourceMenuId": "10000023",
+      "name": "블루레몬에이드",
+      "description": "",
+      "category": "ADE&SMOOTHIE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/221ec661-565d-43b5-a68a-703876954640.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000008",
+      "sourceMenuId": "10000008",
+      "name": "초코 라떼",
+      "description": "",
+      "category": "BEVERAGE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a85078bc-2591-46ce-b90c-81f2e8e9dff1.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000013",
+      "sourceMenuId": "10000013",
+      "name": "키위쥬스",
+      "description": "",
+      "category": "FRESH JUICE(계절)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000016",
+      "sourceMenuId": "10000016",
+      "name": "생강차",
+      "description": "",
+      "category": "수제차&TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000024",
+      "sourceMenuId": "10000024",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "ADE&SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000003",
+      "sourceMenuId": "10000003",
+      "name": "바닐라빈 라떼",
+      "description": "",
+      "category": "COFFEE(Hot/Ice)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000009",
+      "sourceMenuId": "10000009",
+      "name": "말차 라떼",
+      "description": "",
+      "category": "BEVERAGE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/99075999-bda5-423c-89a3-9e518d705adc.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000014",
+      "sourceMenuId": "10000014",
+      "name": "딸기쥬스",
+      "description": "",
+      "category": "FRESH JUICE(계절)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000017",
+      "sourceMenuId": "10000017",
+      "name": "백향과차",
+      "description": "",
+      "category": "수제차&TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000025",
+      "sourceMenuId": "10000025",
+      "name": "자몽에이드",
+      "description": "",
+      "category": "ADE&SMOOTHIE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/076e52ea-0f57-4b5a-8996-741e5ee3b63a.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000004",
+      "sourceMenuId": "10000004",
+      "name": "카페모카",
+      "description": "",
+      "category": "COFFEE(Hot/Ice)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000010",
+      "sourceMenuId": "10000010",
+      "name": "딸기 라떼",
+      "description": "Only ICE",
+      "category": "BEVERAGE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/e16c1bac-1832-4a8b-9783-e2f8457ff9ac.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000018",
+      "sourceMenuId": "10000018",
+      "name": "레몬차",
+      "description": "",
+      "category": "수제차&TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/ea1ef68e-10a8-45ef-8ee1-878bbbdbd37a.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000026",
+      "sourceMenuId": "10000026",
+      "name": "백향과에이드",
+      "description": "",
+      "category": "ADE&SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000005",
+      "sourceMenuId": "10000005",
+      "name": "카라멜 마끼아또",
+      "description": "",
+      "category": "COFFEE(Hot/Ice)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000011",
+      "sourceMenuId": "10000011",
+      "name": "아이스티(복숭아)",
+      "description": "",
+      "category": "BEVERAGE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000019",
+      "sourceMenuId": "10000019",
+      "name": "자몽차",
+      "description": "",
+      "category": "수제차&TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000027",
+      "sourceMenuId": "10000027",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "ADE&SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000006",
+      "sourceMenuId": "10000006",
+      "name": "믹스커피",
+      "description": "Only ICE",
+      "category": "COFFEE(Hot/Ice)",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000020",
+      "sourceMenuId": "10000020",
+      "name": "캐모마일 티",
+      "description": "",
+      "category": "수제차&TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000028",
+      "sourceMenuId": "10000028",
+      "name": "플레인 요거트 스무디",
+      "description": "",
+      "category": "ADE&SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000021",
+      "sourceMenuId": "10000021",
+      "name": "히비스커스 티",
+      "description": "",
+      "category": "수제차&TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/94618c4b-98a6-46c4-be93-11a2f8d092ec.jpg"
+    },
+    {
+      "id": "ddangyo-1344515-10000029",
+      "sourceMenuId": "10000029",
+      "name": "딸기 요거트 스무디",
+      "description": "",
+      "category": "ADE&SMOOTHIE",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000022",
+      "sourceMenuId": "10000022",
+      "name": "루이보스 티",
+      "description": "",
+      "category": "수제차&TEA",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1344515-10000030",
+      "sourceMenuId": "10000030",
+      "name": "블루베리 요거트 스무디",
+      "description": "",
+      "category": "ADE&SMOOTHIE",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

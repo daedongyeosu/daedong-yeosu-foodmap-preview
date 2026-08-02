@@ -1,0 +1,400 @@
+{
+  "storeId": "05634c81541f6bda",
+  "storeName": "피자헛 여수시청점",
+  "displayName": "피자헛 여수시청점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/24fabf22-ed9b-4046-abe2-21c861382559.jpg",
+  "categories": [
+    "전체",
+    "음료",
+    "세트메뉴",
+    "기타 추가",
+    "[한정 특가] 1+1 US 오리진",
+    "[NEW] 한근반근 치즈 페스타",
+    "내 마음대로 반반피자",
+    "[NEW] 화이트&블랙 스테이크 뇨끼",
+    "US 오리진 L",
+    "프리미엄 피자",
+    "US 오리진 M"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1117554-30000402",
+      "sourceMenuId": "30000402",
+      "name": "코카-콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/63c52b7d-c039-4786-bc27-5c7ea4b18865.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000398",
+      "sourceMenuId": "30000398",
+      "name": "US 오리진 피자 세트 L (US 오리진 피자 L + 파스타)",
+      "description": "오리지널 피자 L + 파스타",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/0f7a1e24-abf9-4f43-8179-14b954ad2428.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000465",
+      "sourceMenuId": "30000465",
+      "name": "[특가] 더블 디핑소스",
+      "description": "피자와 찰떡 궁합 2가지 디핑소스를 한번에",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/90bc2329-2b00-427d-9767-2a98b02a837a.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000350",
+      "sourceMenuId": "30000350",
+      "name": "[한정 특가] 1+1 US 오리진 M",
+      "description": "인기메뉴를 1+1로 즐기세요 * 추천메뉴 : 콤비네이션 + 페페로니러버",
+      "category": "[한정 특가] 1+1 US 오리진",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/dd3c8ade-3cde-4fcb-bc78-71d99de9bc4a.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000460",
+      "sourceMenuId": "30000460",
+      "name": "한근 치즈 피자 L",
+      "description": "[피자 선택] 치즈 무게만 600g 한근 치즈로 즐기는 피자 (본 메뉴 이미지는 한근 치즈 콤비네이션 입니다. )",
+      "category": "[NEW] 한근반근 치즈 페스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/49ced0f2-5cad-446f-aa07-28a715773a60.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000459",
+      "sourceMenuId": "30000459",
+      "name": "스테이크 뇨끼 반반피자 L",
+      "description": "스테이크 뇨끼 피자와 함께 즐기는 프리미엄 반반피자",
+      "category": "내 마음대로 반반피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/aa6392a8-2ba3-4db5-8c5d-986a22482399.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000455",
+      "sourceMenuId": "30000455",
+      "name": "[NEW] 화이트 트러플 스테이크 뇨끼 M",
+      "description": "안창살 스테이크, 리얼 감자 뇨끼, 화이트 트러플 크림, 체다골드 엣지까지 4가지 프리미엄 토핑으로 완성한 40주년 스페셜 피자",
+      "category": "[NEW] 화이트&블랙 스테이크 뇨끼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ab426e07-a01a-43ab-b396-3aea584379b2.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000451",
+      "sourceMenuId": "30000451",
+      "name": "화이트 트러플 머쉬룸 L",
+      "description": "화이트 트러플 크림소스와 양송이버섯의 부드럽고 고소한 풍미 U리들의 S타일로 즐기는 '화이트 트러플 머쉬룸' 피자",
+      "category": "US 오리진 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/2719641e-1695-46ec-a769-c0219b9218b5.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000439",
+      "sourceMenuId": "30000439",
+      "name": "더블 쉬림프 크런치 L",
+      "description": "갈릭버터&케이준 쉬림프의 풍미! 고구마무스&포테이토 크런치의 식감! 차례대로 터지는 4가지 맛의 완벽 조합!",
+      "category": "프리미엄 피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/07acb4fb-78a3-47ff-a2b0-8700fcb27c28.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000461",
+      "sourceMenuId": "30000461",
+      "name": "반근 치즈 피자 L",
+      "description": "[피자 선택] 치즈 무게만 300g 반근 치즈로 즐기는 피자 (본 메뉴 이미지는 반근 치즈 페페로니 입니다. )",
+      "category": "[NEW] 한근반근 치즈 페스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/2f772bbb-48f4-46a0-ae3c-da2b5ff799f7.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000456",
+      "sourceMenuId": "30000456",
+      "name": "[NEW] 화이트 트러플 스테이크 뇨끼 L",
+      "description": "안창살 스테이크, 리얼 감자 뇨끼, 화이트 트러플 크림, 체다골드 엣지까지 4가지 프리미엄 토핑으로 완성한 40주년 스페셜 피자",
+      "category": "[NEW] 화이트&블랙 스테이크 뇨끼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c73fa89a-d177-432f-9617-b723a73c3ee7.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000352",
+      "sourceMenuId": "30000352",
+      "name": "프리미엄 반반피자 L",
+      "description": "프리미엄 토핑과 엣지의 조화를 반반피자",
+      "category": "내 마음대로 반반피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e5c2fc44-01f4-4fbf-a810-ecd9d9a9f528.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000399",
+      "sourceMenuId": "30000399",
+      "name": "US 오리진 피자 세트 M (US 오리진 피자 M + 파스타)",
+      "description": "오리지널 피자 M + 파스타",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/bf4dfe2a-6116-422c-9fda-2b73ca59f168.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000404",
+      "sourceMenuId": "30000404",
+      "name": "코카-콜라 제로 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/9c6d019f-6a2a-466b-bc2a-ff1415593fd8.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000351",
+      "sourceMenuId": "30000351",
+      "name": "[한정 특가] 1+1 US 오리진 L",
+      "description": "인기메뉴를 1+1로 즐기세요 * 추천메뉴: LA BBQ 볼고기 + 콤비네이션",
+      "category": "[한정 특가] 1+1 US 오리진",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ee664c00-dd9c-4ec0-9c1b-869e373d25f6.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000466",
+      "sourceMenuId": "30000466",
+      "name": "스리라차마요 디핑소스 (40g)",
+      "description": "매콤한 스리라차와 크리미한 마요의 조화",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/84525ec0-e374-4ea1-983b-3963dcf29247.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000382",
+      "sourceMenuId": "30000382",
+      "name": "콤비네이션 M",
+      "description": "출시 이후로 지금까지 꾸준히 사랑받는 베스트셀러",
+      "category": "US 오리진 M",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/1f9cbe3c-6f95-43cc-9dab-a8253b855175.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000362",
+      "sourceMenuId": "30000362",
+      "name": "수퍼슈프림 L",
+      "description": "오랫동안 사랑받아온 피자헛 스테디셀러",
+      "category": "프리미엄 피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/9fd31892-01f3-47a8-8fec-8f3a680cd2e6.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000427",
+      "sourceMenuId": "30000427",
+      "name": "US 오리진 반반피자 L",
+      "description": "미국 본연의 맛 US오리진 반반 * 추천메뉴 : 콤비네이션 + 페페로니러버",
+      "category": "내 마음대로 반반피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/87177f2a-5843-45e1-99b4-bf98f8be5862.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000457",
+      "sourceMenuId": "30000457",
+      "name": "[NEW] 블랙 BBQ 스테이크 뇨끼 M",
+      "description": "안창살 스테이크, 리얼 감자 뇨끼, 숯불 BBQ 소스, 체다골드 엣지까지 4가지 프리미엄 토핑으로 완성한 40주년 스페셜 피자",
+      "category": "[NEW] 화이트&블랙 스테이크 뇨끼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/4dcc7f0d-ef42-4c17-9c43-ecc4c1c8b9f0.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000462",
+      "sourceMenuId": "30000462",
+      "name": "반근 치즈 피자 M",
+      "description": "[피자 선택] 치즈 무게만 300g 반근 치즈로 즐기는 피자 (본 메뉴 이미지는 반근 치즈 멜팅포테이토 입니다. )",
+      "category": "[NEW] 한근반근 치즈 페스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e5c2a59e-3fe7-4375-b138-86fb2c615d36.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000385",
+      "sourceMenuId": "30000385",
+      "name": "페페로니 러버 M",
+      "description": "짭조름한 페페로니가 가득한 US 오리진 대표 피자",
+      "category": "US 오리진 M",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/180aec95-931c-4ff6-a6d2-5f9b5e91f4a0.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000373",
+      "sourceMenuId": "30000373",
+      "name": "콤비네이션 L",
+      "description": "출시 이후로 지금까지 꾸준히 사랑받는 베스트셀러",
+      "category": "US 오리진 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/3f09d0d1-4c50-468c-868e-13ac9720980d.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000406",
+      "sourceMenuId": "30000406",
+      "name": "스프라이트 1.5L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/7b30097a-d2ba-4980-8586-89438af1754f.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000445",
+      "sourceMenuId": "30000445",
+      "name": "리얼 갈릭 디핑소스 (40g)",
+      "description": "",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/7d6d760f-3dff-4dd1-8a03-8b22d4b2270c.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000364",
+      "sourceMenuId": "30000364",
+      "name": "베이컨 포테이토 L",
+      "description": "포테이토큐브, 훈연베이컨에 타르타르소스로 마무리",
+      "category": "프리미엄 피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/dae4d875-ad88-4418-ac02-e318fd9dfc98.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000376",
+      "sourceMenuId": "30000376",
+      "name": "페페로니 러버 L",
+      "description": "짭조름한 페페로니가 가득한 US 오리진 대표 피자",
+      "category": "US 오리진 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/7e8473ee-c64e-4e8e-94ab-7666bfb83b8b.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000380",
+      "sourceMenuId": "30000380",
+      "name": "LA BBQ 불고기 M",
+      "description": "누구나 좋아하는 불고기에 BBQ 소스를 더한 LA 스타일의 피자",
+      "category": "US 오리진 M",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/93b9bfb0-008c-4ef3-8b34-0317af02cb80.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000435",
+      "sourceMenuId": "30000435",
+      "name": "스프라이트 제로 1.5L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/894ffe13-a3e0-42cc-bda5-a20651c4393b.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000446",
+      "sourceMenuId": "30000446",
+      "name": "치즈크러스트 용 디핑소스 (11g)",
+      "description": "",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/80ea84ab-2ef0-436e-93e2-67a5309f18a2.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000458",
+      "sourceMenuId": "30000458",
+      "name": "[NEW] 블랙 BBQ 스테이크 뇨끼 L",
+      "description": "안창살 스테이크, 리얼 감자 뇨끼, 숯불 BBQ 소스, 체다골드 엣지까지 4가지 프리미엄 토핑으로 완성한 40주년 스페셜 피자",
+      "category": "[NEW] 화이트&블랙 스테이크 뇨끼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a091c71c-44bc-4212-860f-378f06224d02.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000463",
+      "sourceMenuId": "30000463",
+      "name": "치즈 폭탄 파스타",
+      "description": "모짜렐라 치즈를 아낌없이 올린, 진한 풍미의 미트 토마토 파스타. 치즈가 기존 대비 3배",
+      "category": "[NEW] 한근반근 치즈 페스타",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/43f82188-d0a0-4a87-b45a-f3b635b093ac.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000371",
+      "sourceMenuId": "30000371",
+      "name": "LA BBQ 불고기 L",
+      "description": "누구나 좋아하는 불고기에 BBQ 소스를 더한 LA 스타일의 피자",
+      "category": "US 오리진 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/14e34bcb-1ea7-4806-af6a-3007113aaea2.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000403",
+      "sourceMenuId": "30000403",
+      "name": "코카-콜라 0.5L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/33d103f3-7aeb-4971-8994-2380caec355c.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000411",
+      "sourceMenuId": "30000411",
+      "name": "핫소스(2.5g)",
+      "description": "",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/bca15128-f21d-4f00-b19e-783349100c64.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000359",
+      "sourceMenuId": "30000359",
+      "name": "씨푸드킹 L",
+      "description": "통새우와 통관자, 최강 씨푸드의 만남",
+      "category": "프리미엄 피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/3fd76fec-0323-42b0-85ba-9d21b5e5f724.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000405",
+      "sourceMenuId": "30000405",
+      "name": "코카-콜라 제로 0.5L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/134f7b4a-2a57-45bd-933f-55a10a796f37.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000437",
+      "sourceMenuId": "30000437",
+      "name": "생피클L",
+      "description": "",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/1f1a0aa0-61a7-4813-a0e0-3e867b05c173.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000381",
+      "sourceMenuId": "30000381",
+      "name": "멜팅치즈 포테이토 M",
+      "description": "웨지감자, 베이컨, 마요네즈, 치즈의 완벽 조화! 클래식한 포테이토 피자",
+      "category": "US 오리진 M",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/c8a0c3c0-8e3c-48f5-b7da-702fd633ddeb.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000436",
+      "sourceMenuId": "30000436",
+      "name": "생피클M",
+      "description": "",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/7ffc50d0-6d3a-41b4-b506-7d48f91e9e80.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000372",
+      "sourceMenuId": "30000372",
+      "name": "멜팅치즈 포테이토 L",
+      "description": "웨지감자, 베이컨, 마요네즈, 치즈의 완벽 조화! 클래식한 포테이토 피자",
+      "category": "US 오리진 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/8bc319fd-8af5-4c89-b414-7b3d14ec39fd.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000363",
+      "sourceMenuId": "30000363",
+      "name": "직화불고기 L",
+      "description": "정통불고기, 야채, 모짜렐라를 화끈하게 구운 피자",
+      "category": "프리미엄 피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/d67e38c5-b74b-4748-81b8-ef131832b001.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000414",
+      "sourceMenuId": "30000414",
+      "name": "콘샐러드",
+      "description": "",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/d830887d-9cac-4477-9bf6-67c03f1281de.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000374",
+      "sourceMenuId": "30000374",
+      "name": "알로하 하와이 L",
+      "description": "파인애플, 베이컨, 페페로니 듬뿍 Real 하와이안 피자",
+      "category": "US 오리진 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/d73dd3ba-ca2e-4df5-ace6-40b3461dcc72.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000438",
+      "sourceMenuId": "30000438",
+      "name": "더블 쉬림프 크런치 M",
+      "description": "갈릭버터&케이준 쉬림프의 풍미! 고구마무스&포테이토 크런치의 식감! 차례대로 터지는 4가지 맛의 완벽 조합!",
+      "category": "프리미엄 피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/03e068e5-db94-4d5c-857a-1488f3fb3723.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000415",
+      "sourceMenuId": "30000415",
+      "name": "코울슬로",
+      "description": "",
+      "category": "기타 추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/0f34ab49-1eb6-4a27-9de9-a7886e39bb24.jpg"
+    },
+    {
+      "id": "ddangyo-1117554-30000368",
+      "sourceMenuId": "30000368",
+      "name": "수퍼슈프림 M",
+      "description": "오랫동안 사랑받아온 피자헛 스테디셀러",
+      "category": "프리미엄 피자",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/eb4c881a-b0b4-4516-935f-be7bfa1a90fa.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

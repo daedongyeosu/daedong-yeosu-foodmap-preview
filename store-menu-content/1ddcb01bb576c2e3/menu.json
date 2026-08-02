@@ -1,0 +1,274 @@
+{
+  "storeId": "1ddcb01bb576c2e3",
+  "storeName": "바른보쌈1990 문수점",
+  "displayName": "바른보쌈1990 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/10386f19-cca2-44af-870f-6fcbc3ba0791.jpg",
+  "categories": [
+    "전체",
+    "수비드 보쌈, 족발세트",
+    "음료",
+    "사이드메뉴",
+    "혼밥도 맛있게 1인 정식"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1312460-10000001",
+      "sourceMenuId": "10000001",
+      "name": "[보+족+불Set]다담아 한상",
+      "description": "보쌈+족발+직화불족발+쟁반막국수+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/10386f19-cca2-44af-870f-6fcbc3ba0791.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000003",
+      "sourceMenuId": "10000003",
+      "name": "[육즙 가~득]수비드보쌈",
+      "description": "수비드보쌈+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bffcf892-623b-45a7-b6a1-2a7c57293258.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[100%앞다리]쫀득순살족발",
+      "description": "수비드족발(앞다리100%)+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e2501978-7f1e-4a6a-912a-b555a7c4dbd7.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000027",
+      "sourceMenuId": "10000027",
+      "name": "코카콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4891b201-843e-48c2-ab6e-c1185541141a.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000020",
+      "sourceMenuId": "10000020",
+      "name": "[쫀득쫀득]미니족발",
+      "description": "[[알림]]기본반찬 제공없이 소스와 위생장갑만 제공됩니다.",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b13c8153-bb08-4085-a193-4ec74414432d.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000013",
+      "sourceMenuId": "10000013",
+      "name": "[혼자서도 반반]1인 보쌈+족발 도시락",
+      "description": "1인(보쌈+족발)+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+공기밥+장국",
+      "category": "혼밥도 맛있게 1인 정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/155a9f86-ab84-49d4-ac10-5cad66006b90.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000028",
+      "sourceMenuId": "10000028",
+      "name": "스프라이트 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1312460-10000002",
+      "sourceMenuId": "10000002",
+      "name": "[내맘대로 골라먹는]반반Set",
+      "description": "보쌈or족발or불족발(택2)+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓...",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/272bd386-7e84-454d-9da9-bd3ab7f106f4.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000021",
+      "sourceMenuId": "10000021",
+      "name": "100%국내산 홍어(한점시+초장)",
+      "description": "기본 한접시에 15~17피스 + 초장 제공됨",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d34779f6-2cc1-4c9d-84f1-41c7cc8f5be4.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000014",
+      "sourceMenuId": "10000014",
+      "name": "[혼밥BEST]1인보쌈도시락",
+      "description": "1인보쌈+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+공기밥+장국",
+      "category": "혼밥도 맛있게 1인 정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ba5ad68b-b391-4cd0-b3e0-c23b0ec43954.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000029",
+      "sourceMenuId": "10000029",
+      "name": "코카콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/8bc1eda6-ca65-446a-bb21-cfb182072417.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000022",
+      "sourceMenuId": "10000022",
+      "name": "새콤달콤 쟁반막국수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/24b7c4ac-fb94-464c-8170-40482bb1b10f.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000015",
+      "sourceMenuId": "10000015",
+      "name": "[콜라겐폭탄]1인족발도시락",
+      "description": "1인족발(100%앞다리)+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+공기밥+장국",
+      "category": "혼밥도 맛있게 1인 정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0e80cd46-d43a-49b0-a83f-0cd416d9e815.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000023",
+      "sourceMenuId": "10000023",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/79d3ba4a-c516-4beb-b5df-3e0fdddc097f.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000030",
+      "sourceMenuId": "10000030",
+      "name": "스프라이트 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/5881c4a2-366f-43f3-9230-b862e9ca4a7a.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000005",
+      "sourceMenuId": "10000005",
+      "name": "[고민은 이제그만]보쌈&족발Set",
+      "description": "수비드보쌈&순살족발(앞다리100%)+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1312460-10000031",
+      "sourceMenuId": "10000031",
+      "name": "코카콜라255ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1312460-10000024",
+      "sourceMenuId": "10000024",
+      "name": "쌈장",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/be5ce361-6da8-4a4e-8344-5e905c220dd0.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000006",
+      "sourceMenuId": "10000006",
+      "name": "[코끝 찡~한]국내산 홍어보쌈",
+      "description": "",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c889ab0e-2285-4534-a3ee-30a3de689434.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000032",
+      "sourceMenuId": "10000032",
+      "name": "스프라이트355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/06c1e1dc-4fc9-40a8-a6d8-211cf1a5b684.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000025",
+      "sourceMenuId": "10000025",
+      "name": "고추",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/accc94cd-a00a-4608-bc22-abd00cf5a638.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000018",
+      "sourceMenuId": "10000018",
+      "name": "[매콤~달콤]불보쌈덮밥+후라이+미소국",
+      "description": "",
+      "category": "혼밥도 맛있게 1인 정식",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1312460-10000019",
+      "sourceMenuId": "10000019",
+      "name": "[직원추천]철판김치볶음밥+후라이+미소국",
+      "description": "",
+      "category": "혼밥도 맛있게 1인 정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/980b3ff0-1f93-4b73-8967-d7f7d683a1c8.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000033",
+      "sourceMenuId": "10000033",
+      "name": "환타(파인)355ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1312460-10000026",
+      "sourceMenuId": "10000026",
+      "name": "마늘",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/1562b9f4-8d6a-45fb-949a-8f305b479b09.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000007",
+      "sourceMenuId": "10000007",
+      "name": "[불향가득]매운 불족발",
+      "description": "직화불족발+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/68132777-c5c7-4e09-a1be-6069c5889ed3.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000034",
+      "sourceMenuId": "10000034",
+      "name": "식혜",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1312460-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[한국인의맛]마늘듬뿍보쌈",
+      "description": "수비드마늘보쌈+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/14acc1e1-1b8b-4e4d-8e30-d6c50b5574d7.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000009",
+      "sourceMenuId": "10000009",
+      "name": "[콜라겐폭탄]마늘순살족발",
+      "description": "수비드마늘족발+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/fd6fb497-1635-437e-8abc-3a55371ebffd.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000010",
+      "sourceMenuId": "10000010",
+      "name": "[매콤고소한]청양마요보쌈",
+      "description": "수비드청양마요보쌈+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7cbf93fb-2992-4820-a546-18cdc92a44c9.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000011",
+      "sourceMenuId": "10000011",
+      "name": "[불향가득]직화 불보쌈",
+      "description": "직화불보쌈+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/72ad13c0-283d-4853-ba44-9fb409f2863b.jpg"
+    },
+    {
+      "id": "ddangyo-1312460-10000012",
+      "sourceMenuId": "10000012",
+      "name": "[꼬들꼬들]옛날식 냉족발",
+      "description": "순살냉족발+서비스10종(택1)+보쌈김치+무말랭이+고추+마늘+쌈장+쌈채소+새우젓+장국",
+      "category": "수비드 보쌈, 족발세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/df9d815a-bdd0-4650-8369-fecc094ffb58.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

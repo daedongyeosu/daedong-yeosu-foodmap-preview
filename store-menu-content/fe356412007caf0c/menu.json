@@ -1,0 +1,215 @@
+{
+  "storeId": "fe356412007caf0c",
+  "storeName": "여수튀김",
+  "displayName": "여수튀김",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3b725868-2cf3-487c-8b72-818f120d6c31.jpg",
+  "categories": [
+    "전체",
+    "차림표"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1296153-10000001",
+      "sourceMenuId": "10000001",
+      "name": "왕창탕수육",
+      "description": "찹쌀탕수육 퀄리티 있는 혜자 찹쌀 탕수육(사장님 픽)",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3b725868-2cf3-487c-8b72-818f120d6c31.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000003",
+      "sourceMenuId": "10000003",
+      "name": "칠리새우",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/43185be6-dc13-4035-aaa1-99565ea646f4.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000005",
+      "sourceMenuId": "10000005",
+      "name": "멘보샤",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/a870959a-31ed-496f-b4ba-98aff2c77e0c.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000032",
+      "sourceMenuId": "10000032",
+      "name": "찐한콩국수",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4088decd-8b47-4c1a-9280-a002d14b69bb.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000031",
+      "sourceMenuId": "10000031",
+      "name": "중화제육덮밥",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/9952f598-f118-492e-a6cf-46c24d51e253.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000030",
+      "sourceMenuId": "10000030",
+      "name": "짜장면",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/57f98b90-47d3-437e-8103-f2be1f829459.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000027",
+      "sourceMenuId": "10000027",
+      "name": "여수짬뽕",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/cd7a54d7-6100-407b-8716-51b0ef96c36b.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000028",
+      "sourceMenuId": "10000028",
+      "name": "통오징어짬뽕",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/8bf8b403-2ee1-4c79-8d59-1f6467522ac8.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000004",
+      "sourceMenuId": "10000004",
+      "name": "크림새우",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2d0a13ce-b060-45ae-af0b-b5005b42f9c2.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000025",
+      "sourceMenuId": "10000025",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/d79b9f64-7b42-4164-9457-67faa83f7e51.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000026",
+      "sourceMenuId": "10000026",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/64d744a0-7a57-4ccb-adad-d71da30b1584.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000006",
+      "sourceMenuId": "10000006",
+      "name": "고추튀김",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/a4d3855a-b0a9-4131-840d-5017d3daf771.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000008",
+      "sourceMenuId": "10000008",
+      "name": "왕김말이튀김",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55a481ff-b9ec-4829-9fc9-c51159e0641f.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000010",
+      "sourceMenuId": "10000010",
+      "name": "계란튀김",
+      "description": "",
+      "category": "차림표",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296153-10000011",
+      "sourceMenuId": "10000011",
+      "name": "왕오징어튀김",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/047d4ed6-7b3f-41bd-8ede-dfe422aecc5f.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000012",
+      "sourceMenuId": "10000012",
+      "name": "고구마튀김",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/fe6ed7c9-55ec-45fb-acd6-ec2accfb19b5.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000013",
+      "sourceMenuId": "10000013",
+      "name": "떡볶이",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/53fc425f-43fe-4370-9e19-11bd5dcd47fa.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000014",
+      "sourceMenuId": "10000014",
+      "name": "라볶이",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/79213012-ed5a-4b8c-b8b2-1a5412978929.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000017",
+      "sourceMenuId": "10000017",
+      "name": "군만두",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/213e7fd8-a3db-45fa-8757-152067c3e86b.jpg"
+    },
+    {
+      "id": "ddangyo-1296153-10000018",
+      "sourceMenuId": "10000018",
+      "name": "음료",
+      "description": "",
+      "category": "차림표",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296153-10000019",
+      "sourceMenuId": "10000019",
+      "name": "환타파인애플",
+      "description": "",
+      "category": "차림표",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296153-10000020",
+      "sourceMenuId": "10000020",
+      "name": "환타 오렌지",
+      "description": "",
+      "category": "차림표",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296153-10000021",
+      "sourceMenuId": "10000021",
+      "name": "코코넛 새우튀김",
+      "description": "",
+      "category": "차림표",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296153-10000022",
+      "sourceMenuId": "10000022",
+      "name": "닭다리꼬치튀김",
+      "description": "",
+      "category": "차림표",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1296153-10000029",
+      "sourceMenuId": "10000029",
+      "name": "공기밥",
+      "description": "",
+      "category": "차림표",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/5537f980-27f8-4ca5-85fe-6125e5140f00.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

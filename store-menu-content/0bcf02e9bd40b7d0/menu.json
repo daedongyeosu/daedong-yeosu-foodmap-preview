@@ -1,0 +1,170 @@
+{
+  "storeId": "0bcf02e9bd40b7d0",
+  "storeName": "뿅가야채곱창 여수점",
+  "displayName": "뿅가야채곱창 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/1c21a969-d627-44f4-94bf-a27b77b670dc.jpg",
+  "categories": [
+    "전체",
+    "뿅가 야채곱창 메뉴",
+    "뿅가 야채곱창 세트 메뉴",
+    "뿅가 야채곱창 실속 메뉴",
+    "추가 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1321174-10000001",
+      "sourceMenuId": "10000001",
+      "name": "야채곱창",
+      "description": "",
+      "category": "뿅가 야채곱창 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/98e16048-c47b-4b44-a019-e8e9e4f8e12b.jpg"
+    },
+    {
+      "id": "ddangyo-1321174-10000002",
+      "sourceMenuId": "10000002",
+      "name": "치즈곱창",
+      "description": "",
+      "category": "뿅가 야채곱창 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d05ec615-b8d0-47be-b3f9-32f71831b9ee.jpg"
+    },
+    {
+      "id": "ddangyo-1321174-10000003",
+      "sourceMenuId": "10000003",
+      "name": "야채막창",
+      "description": "",
+      "category": "뿅가 야채곱창 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/eda17afe-76db-4b52-ba0d-09b2b26a92d8.jpg"
+    },
+    {
+      "id": "ddangyo-1321174-10000006",
+      "sourceMenuId": "10000006",
+      "name": "1. 야채곱창(2인)+김가루주먹밥+콜라(소)",
+      "description": "",
+      "category": "뿅가 야채곱창 세트 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000013",
+      "sourceMenuId": "10000013",
+      "name": "실속 곱창 [] []",
+      "description": "곱창만 나갑니다",
+      "category": "뿅가 야채곱창 실속 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/a85bdc7e-520c-426e-842c-811ff2196d21.jpg"
+    },
+    {
+      "id": "ddangyo-1321174-10000016",
+      "sourceMenuId": "10000016",
+      "name": "김가루주먹밥",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000007",
+      "sourceMenuId": "10000007",
+      "name": "4. 치즈곱창(2인)+김가루주먹밥+콜라(소)",
+      "description": "",
+      "category": "뿅가 야채곱창 세트 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000014",
+      "sourceMenuId": "10000014",
+      "name": "실속 막창 [] []",
+      "description": "막창만 나갑니다",
+      "category": "뿅가 야채곱창 실속 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/07828f5b-236b-4ef5-bfba-7d717bde4eac.jpg"
+    },
+    {
+      "id": "ddangyo-1321174-10000017",
+      "sourceMenuId": "10000017",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000008",
+      "sourceMenuId": "10000008",
+      "name": "5. 야채막창(2인)+김가루주먹밥+콜라(소)",
+      "description": "",
+      "category": "뿅가 야채곱창 세트 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000015",
+      "sourceMenuId": "10000015",
+      "name": "실속 소금구이막창",
+      "description": "소금구이막창+소스만 나갑니다",
+      "category": "뿅가 야채곱창 실속 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/0acd4d22-ae63-46d7-94d9-3963ff54b1e1.jpg"
+    },
+    {
+      "id": "ddangyo-1321174-10000018",
+      "sourceMenuId": "10000018",
+      "name": "콜라",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000004",
+      "sourceMenuId": "10000004",
+      "name": "치즈막창",
+      "description": "",
+      "category": "뿅가 야채곱창 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000009",
+      "sourceMenuId": "10000009",
+      "name": "8. 치즈막창(2인)+김가루주먹밥+콜라(소)",
+      "description": "",
+      "category": "뿅가 야채곱창 세트 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000019",
+      "sourceMenuId": "10000019",
+      "name": "사이다",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000005",
+      "sourceMenuId": "10000005",
+      "name": "소금구이막창",
+      "description": "",
+      "category": "뿅가 야채곱창 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4abaa3c1-d05b-4ec8-ab26-44d2fbbbe3b9.jpg"
+    },
+    {
+      "id": "ddangyo-1321174-10000010",
+      "sourceMenuId": "10000010",
+      "name": "9. 소금구이막창(2인)+주먹밥+콜라(소)",
+      "description": "",
+      "category": "뿅가 야채곱창 세트 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000011",
+      "sourceMenuId": "10000011",
+      "name": "10. 야채곱창(3인)+주먹밥+콜라(대)",
+      "description": "",
+      "category": "뿅가 야채곱창 세트 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1321174-10000012",
+      "sourceMenuId": "10000012",
+      "name": "11. 야채막창(3인)+주먹밥+콜라(대)",
+      "description": "",
+      "category": "뿅가 야채곱창 세트 메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,1013 @@
+{
+  "storeId": "88b98e5ecb968c2c",
+  "storeName": "맥도날드 여수미평DT점",
+  "displayName": "맥도날드 여수미평DT점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c7baa12d-12ee-478d-912b-f5e68f055f02.jpg",
+  "categories": [
+    "전체",
+    "세트",
+    "스낵 & 사이드",
+    "해피밀",
+    "음료",
+    "버거",
+    "디저트",
+    "라지세트"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1229123-30000032",
+      "sourceMenuId": "30000032",
+      "name": "더블 쿼터파운더® 치즈 세트",
+      "description": "더블 쿼터파운더® + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5b2a77cc-ddf5-4252-a1e6-ba3c08de87ee.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000323",
+      "sourceMenuId": "30000323",
+      "name": "더블 맥스파이시 상하이 버거 세트",
+      "description": "더블 맥스파이시 상하이 + 후렌치후라이(M) + 콜라(M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/b50b7b01-547d-4e44-9b08-1cad19e6a977.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000386",
+      "sourceMenuId": "30000386",
+      "name": "홍천 우리쌀 칩",
+      "description": "홍천 우리쌀 칩",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/0e9f9879-b03a-4b23-845f-bdf9970d4b01.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000353",
+      "sourceMenuId": "30000353",
+      "name": "게살 크림 크로켓 스낵랩",
+      "description": "게살 크림 크로켓 스낵랩",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2849189c-8045-456c-8004-902bde75b867.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000073",
+      "sourceMenuId": "30000073",
+      "name": "해피밀 맥너겟® 4조각",
+      "description": "맥너겟® 4조각 + 후룻볼 파인애플 + 생수 + 해피밀 랜덤 토이 1종",
+      "category": "해피밀",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/f062ec51-4703-432c-b6d6-104684267a95.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000354",
+      "sourceMenuId": "30000354",
+      "name": "그리머스 쉐이크",
+      "description": "그리머스 쉐이크",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/cf96df7a-e0ac-48d6-91fa-34df98730b4c.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000326",
+      "sourceMenuId": "30000326",
+      "name": "더블 맥스파이시 상하이 버거",
+      "description": "더블 맥스파이시 상하이",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/d5d777ca-306d-4445-a9d5-ea3302f6579a.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000072",
+      "sourceMenuId": "30000072",
+      "name": "오레오 맥플러리",
+      "description": "오레오 맥플러리",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/af60eb7c-0ffd-43b7-96cf-b57d3dad9ba1.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000074",
+      "sourceMenuId": "30000074",
+      "name": "해피밀 햄버거",
+      "description": "버거 + 후룻볼 파인애플 + 생수 + 해피밀 랜덤 토이 1종",
+      "category": "해피밀",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/21b6e71e-d01d-4b80-b0c2-49b84e5a699b.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000320",
+      "sourceMenuId": "30000320",
+      "name": "더블 맥스파이시 상하이 버거 라지세트",
+      "description": "더블 맥스파이시 상하이 + 후렌치후라이(L) + 콜라(L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/edc678a9-119f-45b5-b78c-52d66324984c.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000075",
+      "sourceMenuId": "30000075",
+      "name": "해피밀 불고기버거",
+      "description": "버거 + 후룻볼 파인애플 + 생수 + 해피밀 랜덤 토이 1종",
+      "category": "해피밀",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/c3f68a49-3c20-4d7a-b56d-90a25a44a7c5.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000327",
+      "sourceMenuId": "30000327",
+      "name": "맥크리스피™ 치킨 디럭스",
+      "description": "맥크리스피™ 치킨 디럭스",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/8562914e-6b26-4937-9c51-fa7b875f4413.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000324",
+      "sourceMenuId": "30000324",
+      "name": "맥크리스피™ 치킨 디럭스 세트",
+      "description": "맥크리스피™ 치킨 디럭스 + 후렌치후라이(M) + 콜라(M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4cd2429c-1bc5-44b2-ba64-10d17a299650.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000321",
+      "sourceMenuId": "30000321",
+      "name": "맥크리스피™ 치킨 디럭스 라지세트",
+      "description": "맥크리스피™ 치킨 디럭스 + 후렌치후라이(L) + 콜라(L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/3229292b-0117-4b26-a45d-2567d2a2fec6.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000297",
+      "sourceMenuId": "30000297",
+      "name": "맥윙 2조각",
+      "description": "맥윙 2조각",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/ef76eb0f-3831-4724-9cb8-57ba7187c920.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000328",
+      "sourceMenuId": "30000328",
+      "name": "맥크리스피™ 치킨 클래식",
+      "description": "맥크리스피™ 치킨 클래식",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/62bdd868-bdc5-42d1-9e5e-3287664039d0.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000077",
+      "sourceMenuId": "30000077",
+      "name": "코카 콜라® 미디엄",
+      "description": "코카 콜라® 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3c94bf34-8c15-479b-a7f7-0c5856f4cb4f.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000298",
+      "sourceMenuId": "30000298",
+      "name": "맥윙 4조각",
+      "description": "맥윙 4조각",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/630ad887-f2bc-47fa-aba1-df53a37d00f1.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000325",
+      "sourceMenuId": "30000325",
+      "name": "맥크리스피™ 치킨 클래식 세트",
+      "description": "맥크리스피™ 치킨 클래식+ 후렌치후라이(M) + 콜라(M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/e58a6f4f-c5f5-421d-b89a-9341ce60d095.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000322",
+      "sourceMenuId": "30000322",
+      "name": "맥크리스피™ 치킨 클래식 라지세트",
+      "description": "맥크리스피™ 치킨 클래식 + 후렌치후라이(L) + 콜라(L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/1457fece-fd8d-407d-a89c-41d51fb9228e.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000076",
+      "sourceMenuId": "30000076",
+      "name": "해피밀 치즈버거",
+      "description": "버거 + 후룻볼 파인애플 + 생수 + 해피밀 랜덤 토이 1종",
+      "category": "해피밀",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/479b1908-68b0-47c3-9181-26c436e1888a.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000003",
+      "sourceMenuId": "30000003",
+      "name": "슈비버거 라지 세트",
+      "description": "슈비버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/bb91952e-be78-46ca-93fa-fb109664342e.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000041",
+      "sourceMenuId": "30000041",
+      "name": "슈비버거",
+      "description": "슈비버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/edb7a4ff-d399-42fa-9f63-b8bfb4cbf3e3.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000299",
+      "sourceMenuId": "30000299",
+      "name": "맥윙 8조각",
+      "description": "맥윙 8조각",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8b22f574-8480-4bc5-b3e6-3b0e9cd44571.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000078",
+      "sourceMenuId": "30000078",
+      "name": "코카 콜라® 라지",
+      "description": "코카 콜라® 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e8b059ca-8b0f-4dcb-a556-4cef032b4d1e.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000022",
+      "sourceMenuId": "30000022",
+      "name": "슈비버거 세트",
+      "description": "슈비버거 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0316c40f-e3b5-4393-861d-9500d59dacd0.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000004",
+      "sourceMenuId": "30000004",
+      "name": "슈슈버거 라지 세트",
+      "description": "슈슈버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/aee53765-2263-4434-8c78-89d72dab61c6.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000300",
+      "sourceMenuId": "30000300",
+      "name": "맥윙 2조각 콤보",
+      "description": "맥윙 2조각 + 콜라(M)",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f2083c07-3745-40a5-b690-db3932d44468.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000023",
+      "sourceMenuId": "30000023",
+      "name": "슈슈버거 세트",
+      "description": "슈슈버거 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3f2206db-bedb-4c66-9d72-bcba0c74f79d.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000079",
+      "sourceMenuId": "30000079",
+      "name": "코카 콜라® 제로 미디엄",
+      "description": "코카 콜라® 제로 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/fe483c8b-47b2-4f58-adbf-18b582a44d0d.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000042",
+      "sourceMenuId": "30000042",
+      "name": "슈슈버거",
+      "description": "슈슈버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3d178b4f-c336-4a57-aefb-d88d539b3159.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000024",
+      "sourceMenuId": "30000024",
+      "name": "1955® 버거 세트",
+      "description": "1955® 버거 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/060f7194-bc9d-4fab-bed2-de1fe95c5af4.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000043",
+      "sourceMenuId": "30000043",
+      "name": "1955® 버거",
+      "description": "1955® 버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/aa144ad3-8b93-40ec-8cff-7e9110aac89c.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000301",
+      "sourceMenuId": "30000301",
+      "name": "맥윙 4조각 콤보",
+      "description": "맥윙 4조각 + 콜라(M)",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/d5d693d5-528d-4f8f-9435-9f0f2d51adec.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000080",
+      "sourceMenuId": "30000080",
+      "name": "코카 콜라® 제로 라지",
+      "description": "코카 콜라® 제로 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/829f64a4-1116-46c7-836a-8e3c0b1727b5.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000005",
+      "sourceMenuId": "30000005",
+      "name": "1955® 버거 라지 세트",
+      "description": "1955® 버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/add24246-8f12-4186-9d2f-afe90e3e2466.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000081",
+      "sourceMenuId": "30000081",
+      "name": "환타® 미디엄",
+      "description": "환타® 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9d6a25ec-a9b0-4da4-b2d1-8b46bcb84407.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000025",
+      "sourceMenuId": "30000025",
+      "name": "맥치킨® 세트",
+      "description": "맥치킨® + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/8f3a8783-fddc-4cbb-8d9a-9cc206732848.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000044",
+      "sourceMenuId": "30000044",
+      "name": "맥치킨®",
+      "description": "맥치킨®",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/843064bd-e12b-4cac-9077-0080b9092791.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000006",
+      "sourceMenuId": "30000006",
+      "name": "맥치킨® 라지 세트",
+      "description": "맥치킨® 버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/fa27d396-f8b7-46f5-8d9b-726ea861d90b.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000058",
+      "sourceMenuId": "30000058",
+      "name": "골든 모짜렐라 치즈스틱 2조각",
+      "description": "골든 모짜렐라 치즈스틱 2조각",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ef775eb5-7953-4c1f-b75d-12eeaf62adeb.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000007",
+      "sourceMenuId": "30000007",
+      "name": "맥치킨® 모짜렐라 라지 세트",
+      "description": "맥치킨® 모짜렐라 버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0e953afe-cacd-464d-b4ce-53cee9caf9c6.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000059",
+      "sourceMenuId": "30000059",
+      "name": "골든 모짜렐라 치즈스틱 4조각",
+      "description": "골든 모짜렐라 치즈스틱 4조각",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a5f26968-13eb-4642-a53a-61f20e7ba5d5.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000045",
+      "sourceMenuId": "30000045",
+      "name": "맥치킨® 모짜렐라",
+      "description": "맥치킨® 모짜렐라",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6cd48878-2774-4fe1-868e-f6044d5f6733.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000026",
+      "sourceMenuId": "30000026",
+      "name": "빅맥® 세트",
+      "description": "빅맥® + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e204942d-25ca-4bf3-85ad-df3844066f65.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000082",
+      "sourceMenuId": "30000082",
+      "name": "환타® 라지",
+      "description": "환타® 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/01bac1cf-32c8-496e-8a9f-a00225db52b5.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000083",
+      "sourceMenuId": "30000083",
+      "name": "스프라이트® 미디엄",
+      "description": "스프라이트® 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d76fe601-0f2e-408c-8a7b-3e06f3c9c2ca.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000008",
+      "sourceMenuId": "30000008",
+      "name": "빅맥® 라지 세트",
+      "description": "빅맥® 버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/58bd4a48-9abb-45a1-93e3-1109ce27fabd.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000027",
+      "sourceMenuId": "30000027",
+      "name": "맥치킨® 모짜렐라 세트",
+      "description": "맥치킨® 모짜렐라 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/4fc4f19f-fdb8-4bb7-886e-9b122022dce7.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000046",
+      "sourceMenuId": "30000046",
+      "name": "빅맥®",
+      "description": "빅맥®",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c4f067e2-92ab-40cd-9aed-2d9b14284f63.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000060",
+      "sourceMenuId": "30000060",
+      "name": "맥너겟® 4조각",
+      "description": "맥너겟Ⓡ 4조각",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/cc440c67-3c64-4400-8bdf-2b18a3d684cd.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000028",
+      "sourceMenuId": "30000028",
+      "name": "맥스파이시® 상하이버거 세트",
+      "description": "맥스파이시® 상하이버거 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/73ef0b61-0220-466d-8f56-fb570a763437.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000061",
+      "sourceMenuId": "30000061",
+      "name": "맥너겟® 6조각",
+      "description": "맥너겟Ⓡ 6조각",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e6821f3b-5bdd-44e8-a74a-05056a0f5b44.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000009",
+      "sourceMenuId": "30000009",
+      "name": "맥스파이시® 상하이버거 라지 세트",
+      "description": "맥스파이시® 상하이버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/589ded35-5d3d-419a-8090-23816ec80244.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000047",
+      "sourceMenuId": "30000047",
+      "name": "맥스파이시® 상하이버거",
+      "description": "맥스파이시® 상하이버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d7845200-49b5-4906-bcbe-51376af7fb77.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000084",
+      "sourceMenuId": "30000084",
+      "name": "스프라이트® 라지",
+      "description": "스프라이트® 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/db7dc7e5-9f85-48ee-990e-7061dc7dc305.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000062",
+      "sourceMenuId": "30000062",
+      "name": "맥스파이시® 치킨텐더 2조각",
+      "description": "맥스파이시Ⓡ 치킨텐더 2조각",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/bbdd94a0-7ab4-4e94-8ad3-8a2b074c2372.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000029",
+      "sourceMenuId": "30000029",
+      "name": "더블 불고기버거 세트",
+      "description": "더블 불고기버거 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b9943701-a8bc-41dd-9087-3bcc2fa25ae0.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000048",
+      "sourceMenuId": "30000048",
+      "name": "더블 불고기버거",
+      "description": "더블 불고기버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/410159a2-6f35-4623-a78b-6ae39d5ef9e6.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000010",
+      "sourceMenuId": "30000010",
+      "name": "더블 불고기버거 라지 세트",
+      "description": "더블 불고기 버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/dbdf0461-752a-433a-b82f-2e8e33e38754.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000369",
+      "sourceMenuId": "30000369",
+      "name": "스프라이트® 제로 미디엄",
+      "description": "스프라이트® 제로 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2dbf9d73-fd1c-4c1e-8c76-65f53708ef14.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000011",
+      "sourceMenuId": "30000011",
+      "name": "불고기버거 라지 세트",
+      "description": "불고기 버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ac646fda-1e8a-48c2-8d76-8901e1e9065c.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000049",
+      "sourceMenuId": "30000049",
+      "name": "불고기버거",
+      "description": "불고기버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/edda7337-5205-461d-bf26-e2bd50f5a8b0.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000370",
+      "sourceMenuId": "30000370",
+      "name": "스프라이트® 제로 라지",
+      "description": "스프라이트® 제로 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/fd1c7032-934d-4b78-95fb-c7a9bffb402c.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000063",
+      "sourceMenuId": "30000063",
+      "name": "상하이 치킨 스낵랩®",
+      "description": "",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/71268dc4-ff40-4a8f-aa22-f823467218f5.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000030",
+      "sourceMenuId": "30000030",
+      "name": "불고기버거 세트",
+      "description": "불고기 버거 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/2ab17eb3-abb2-48ce-aeed-1e97bcdc5582.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000031",
+      "sourceMenuId": "30000031",
+      "name": "베이컨 토마토 디럭스 세트",
+      "description": "베이컨 토마토 디럭스 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/990335d4-7592-40c6-b82d-d5282c78f116.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000050",
+      "sourceMenuId": "30000050",
+      "name": "베이컨 토마토 디럭스",
+      "description": "베이컨 토마토 디럭스",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/7cc32e87-543c-482d-b3c6-08831c90b2b0.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000012",
+      "sourceMenuId": "30000012",
+      "name": "베이컨 토마토 디럭스 라지 세트",
+      "description": "베이컨 토마토 디럭스 버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e376347d-668c-4bca-a905-cffe8249c1c3.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000085",
+      "sourceMenuId": "30000085",
+      "name": "카페라떼 미디엄",
+      "description": "카페라떼 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c1526eb6-90b6-47d5-9b16-f8aebf65445d.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000064",
+      "sourceMenuId": "30000064",
+      "name": "후렌치 후라이 스몰",
+      "description": "",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a8e7952f-2498-493a-b180-c20c73fa9ec3.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000065",
+      "sourceMenuId": "30000065",
+      "name": "후렌치 후라이 미디엄",
+      "description": "",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f9b92378-8c9e-41a9-bc2d-084499cd7487.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000051",
+      "sourceMenuId": "30000051",
+      "name": "더블 쿼터파운더® 치즈",
+      "description": "더블 쿼터파운더® 치즈",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/2c7096a5-624d-4f6e-9057-fca53cee2237.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000013",
+      "sourceMenuId": "30000013",
+      "name": "더블 쿼터파운더® 치즈 라지 세트",
+      "description": "더블 쿼터파운더® 치즈버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d5f3e117-7d82-447d-a167-1d2234148a2a.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000086",
+      "sourceMenuId": "30000086",
+      "name": "카페라떼 라지",
+      "description": "카페라떼 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/674e51a2-96cb-4884-8e66-ded8200fe4b1.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000052",
+      "sourceMenuId": "30000052",
+      "name": "쿼터파운더® 치즈",
+      "description": "쿼터파운더® 치즈",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9aec17a8-b95c-420b-a13b-b73960838f53.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000014",
+      "sourceMenuId": "30000014",
+      "name": "쿼터파운더® 치즈 라지 세트",
+      "description": "쿼터파운더® 치즈버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a057e363-796a-4c75-b56b-b8d873ebd2b0.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000033",
+      "sourceMenuId": "30000033",
+      "name": "쿼터파운더® 치즈 세트",
+      "description": "쿼터파운더® 치즈 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e0d03333-c83b-418b-8975-9d95298dc3f7.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000087",
+      "sourceMenuId": "30000087",
+      "name": "카푸치노 미디엄",
+      "description": "카푸치노 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b61d14a7-5150-4c23-91cb-0e0c60a7e43a.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000066",
+      "sourceMenuId": "30000066",
+      "name": "후렌치 후라이 라지",
+      "description": "",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/900e927b-dcc2-4e6b-846c-044ff3a4b02c.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000067",
+      "sourceMenuId": "30000067",
+      "name": "디핑 소스 스위트 앤 사워",
+      "description": "",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/54653a0c-f8b6-46fd-a73e-445338f13577.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000088",
+      "sourceMenuId": "30000088",
+      "name": "카푸치노 라지",
+      "description": "카푸치노 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c4db2b13-b356-4848-9e43-a2e29e3555d0.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000034",
+      "sourceMenuId": "30000034",
+      "name": "치즈버거 세트",
+      "description": "치즈버거 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/22702056-9da4-467d-b3b8-ec71229e9faf.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000053",
+      "sourceMenuId": "30000053",
+      "name": "치즈버거",
+      "description": "치즈버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1216a540-2c89-4124-9ed2-8d7aba4b9c6a.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000015",
+      "sourceMenuId": "30000015",
+      "name": "치즈버거 라지 세트",
+      "description": "치즈버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0d4f4e91-de3c-40ee-9843-23c06b45af83.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000054",
+      "sourceMenuId": "30000054",
+      "name": "더블 치즈버거",
+      "description": "더블 치즈버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/14e7a6a7-d131-4db4-a3f9-2557117bd10d.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000068",
+      "sourceMenuId": "30000068",
+      "name": "디핑 소스 스위트 칠리",
+      "description": "",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/781c9334-9bb4-4053-ac1b-cede48a10813.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000089",
+      "sourceMenuId": "30000089",
+      "name": "아메리카노 미디엄",
+      "description": "아메리카노 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c27e180c-8de2-4238-bcd7-26e0ecdcdb1a.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000016",
+      "sourceMenuId": "30000016",
+      "name": "더블 치즈버거 라지 세트",
+      "description": "더블 치즈버거 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/abbaaa42-db0f-4e3d-bdec-4229e4a54034.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000035",
+      "sourceMenuId": "30000035",
+      "name": "더블 치즈버거 세트",
+      "description": "더블 치즈버거 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/43de47bc-86f8-4c18-a392-3a40424b6cbd.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000018",
+      "sourceMenuId": "30000018",
+      "name": "트리플 치즈버거 라지 세트",
+      "description": "트리플 치즈버거 + 후렌치 후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c55f4367-7b48-455a-ae96-f94c0515c4ba.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000090",
+      "sourceMenuId": "30000090",
+      "name": "아메리카노 라지",
+      "description": "아메리카노 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d5fbe3ff-b557-47e2-810b-e2a5b3de6fef.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000069",
+      "sourceMenuId": "30000069",
+      "name": "디핑 소스 케이준",
+      "description": "",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/978b6cc4-1d8a-4c5e-9868-54a88b2095e6.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000055",
+      "sourceMenuId": "30000055",
+      "name": "햄버거",
+      "description": "햄버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/8a7e8295-54c7-446f-a5f7-6809f7992c75.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000037",
+      "sourceMenuId": "30000037",
+      "name": "트리플 치즈버거 세트",
+      "description": "트리플 치즈버거 + 후렌치 후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e7466737-b6be-4c5a-93a2-8adfbacf8dca.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000019",
+      "sourceMenuId": "30000019",
+      "name": "토마토 치즈 비프 버거 라지세트",
+      "description": "토마토 치즈 비프 버거 + 후렌치 후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/bb12d51a-2471-4189-b7ce-2b423637d7d9.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000091",
+      "sourceMenuId": "30000091",
+      "name": "드립 커피 미디엄",
+      "description": "드립 커피 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/604acb7c-16ec-4fdd-8549-0757dc56e59f.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000038",
+      "sourceMenuId": "30000038",
+      "name": "토마토 치즈 비프 버거 세트",
+      "description": "토마토 치즈 비프 버거 + 후렌치 후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a803f139-9bfe-4ea1-927d-a0320437b665.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000056",
+      "sourceMenuId": "30000056",
+      "name": "트리플 치즈버거",
+      "description": "트리플 치즈버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a91de21d-957f-43b3-ab6e-f28ba5ed30d7.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000070",
+      "sourceMenuId": "30000070",
+      "name": "코울슬로",
+      "description": "코울슬로",
+      "category": "스낵 & 사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/aaeaa2f9-bdc0-4449-a074-bff1e7618ea4.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000092",
+      "sourceMenuId": "30000092",
+      "name": "드립 커피 라지",
+      "description": "드립 커피 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/be3ab9f0-ff58-4efd-bea1-bd72aae9c3b1.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000017",
+      "sourceMenuId": "30000017",
+      "name": "맥너겟® 6조각 라지 세트",
+      "description": "맥너겟® 6조각 + 후렌치후라이 (L) + 콜라 (L)",
+      "category": "라지세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b0e8ebac-f682-44e4-a0d6-7e3f04c94ecc.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000057",
+      "sourceMenuId": "30000057",
+      "name": "토마토 치즈 비프 버거",
+      "description": "토마토 치즈 비프 버거",
+      "category": "버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/26758b1f-43f4-4507-a5ef-684fdb5a7999.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000036",
+      "sourceMenuId": "30000036",
+      "name": "맥너겟® 6조각 세트",
+      "description": "맥너겟® 6조각 + 후렌치후라이 (M) + 콜라 (M)",
+      "category": "세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b4669f56-5a60-4d17-bab4-4e5fd0f58050.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000093",
+      "sourceMenuId": "30000093",
+      "name": "아이스 드립 커피(시럽없음) 미디엄",
+      "description": "아이스 드립 커피(시럽없음) 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/43f1c0a9-0cce-4768-8838-2b102964a635.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000094",
+      "sourceMenuId": "30000094",
+      "name": "아이스 드립 커피(시럽없음) 라지",
+      "description": "아이스 드립 커피(시럽없음) 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c048e105-6fb7-45b2-a118-87979849ceb7.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000095",
+      "sourceMenuId": "30000095",
+      "name": "아이스 아메리카노(시럽없음) 미디엄",
+      "description": "아이스 아메리카노(시럽없음) 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/4beb2657-f1c4-41a0-86a8-3555594faa44.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000096",
+      "sourceMenuId": "30000096",
+      "name": "아이스 아메리카노(시럽없음) 라지",
+      "description": "아이스 아메리카노(시럽없음) 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/608affea-a49d-451a-9210-d3179357abb8.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000097",
+      "sourceMenuId": "30000097",
+      "name": "아이스 카페라떼(시럽없음) 미디엄",
+      "description": "아이스 카페라떼(시럽없음) 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ddc6a47a-c7b6-4830-ac5e-a927ae1c1ec1.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000098",
+      "sourceMenuId": "30000098",
+      "name": "아이스 카페라떼(시럽없음) 라지",
+      "description": "아이스 카페라떼(시럽없음) 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/886b3d3a-adf0-4641-9a04-96675aada50a.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000099",
+      "sourceMenuId": "30000099",
+      "name": "딸기 쉐이크 미디엄",
+      "description": "딸기 쉐이크 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6679c905-34f4-45fc-91b2-e1d6694a3172.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000100",
+      "sourceMenuId": "30000100",
+      "name": "초코 쉐이크 미디엄",
+      "description": "초코 쉐이크 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d431218f-1f42-4bf2-a688-65252dcd4237.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000101",
+      "sourceMenuId": "30000101",
+      "name": "바닐라 쉐이크 미디엄",
+      "description": "바닐라 쉐이크 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f166218a-20fd-4a76-be84-5bb288adaefe.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000102",
+      "sourceMenuId": "30000102",
+      "name": "바닐라 라떼 미디엄",
+      "description": "바닐라 라떼 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0258c6c8-a02c-40b7-9110-2638574d244d.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000103",
+      "sourceMenuId": "30000103",
+      "name": "바닐라 라떼 라지",
+      "description": "바닐라 라떼 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/29bb680e-8f32-4b08-8f23-fba4a8142d40.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000104",
+      "sourceMenuId": "30000104",
+      "name": "아이스 바닐라 라떼 미디엄",
+      "description": "아이스 바닐라 라떼 미디엄",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/43182ef1-cab3-4d11-ac7c-540d1aa08493.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000105",
+      "sourceMenuId": "30000105",
+      "name": "아이스 바닐라 라떼 라지",
+      "description": "아이스 바닐라 라떼 라지",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5ee0330f-a892-48df-8cfc-d5cdba881e92.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000106",
+      "sourceMenuId": "30000106",
+      "name": "피치 아이스티 미디엄",
+      "description": "피치 아이스티 (M)",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e027fe3e-a8d0-4f2f-b1fe-913484ae40cb.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000107",
+      "sourceMenuId": "30000107",
+      "name": "피치 아이스티 라지",
+      "description": "피치 아이스티 (L)",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c2644c4d-72bb-47bc-93cd-a706e0c3beaa.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000348",
+      "sourceMenuId": "30000348",
+      "name": "카라멜 팝콘 맥플러리",
+      "description": "카라멜 팝콘 맥플러리",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/73d25e5b-5810-46fc-9db8-b98ffb8bc0b3.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000339",
+      "sourceMenuId": "30000339",
+      "name": "망고 맥피즈 - 스프라이트 M",
+      "description": "망고 맥피즈 스프라이트 M",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4c075b69-72ec-4741-b2da-61cc7fe1703a.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000340",
+      "sourceMenuId": "30000340",
+      "name": "망고 맥피즈 - 스프라이트 L",
+      "description": "망고 맥피즈 스프라이트 L",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/87b51500-6dfd-44c0-8c8d-7c025faa4bea.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000108",
+      "sourceMenuId": "30000108",
+      "name": "망고 피치 아이스티 미디엄",
+      "description": "망고 피치 아이스티 (M)",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/2c0d8521-48c4-48b4-affa-58b84a14a035.jpg"
+    },
+    {
+      "id": "ddangyo-1229123-30000109",
+      "sourceMenuId": "30000109",
+      "name": "망고 피치 아이스티 라지",
+      "description": "망고 피치 아이스티 (L)",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ca98e9cd-b610-4304-9c6b-d3f2f0118e82.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

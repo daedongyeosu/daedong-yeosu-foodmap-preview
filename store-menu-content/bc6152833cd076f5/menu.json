@@ -1,0 +1,361 @@
+{
+  "storeId": "bc6152833cd076f5",
+  "storeName": "전골의법칙 여수점",
+  "displayName": "전골의법칙 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c9f6e0a4-1c87-408f-a5af-9ec9fe96582b.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "추가메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1273830-10000001",
+      "sourceMenuId": "10000001",
+      "name": "소곱창 전골(비조리)",
+      "description": "(전골비조리) : 전골+육수+양념다대기+간장소스+서브반찬+코카콜라500ml.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b25ad941-0a96-475b-8171-768c64054c2f.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000003",
+      "sourceMenuId": "10000003",
+      "name": "모듬전골(비조리)(곱창+대창+깐양)",
+      "description": "(전골비조리) : 전골+육수+양념다대기+서브반찬+간장소스+코카콜라500ml",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/8923487c-fd08-4e36-8728-7cf5dff5c450.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000005",
+      "sourceMenuId": "10000005",
+      "name": "한우대창추가(170g)",
+      "description": "고소한 소 대창을 추가하면 전골 맛이 세상에나 대창에나!",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000035",
+      "sourceMenuId": "10000035",
+      "name": "코카콜라500ml추가",
+      "description": "왠지 내가 사온 음료수보다 더 시원할 것 같은 음료수.",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/fb541322-4c47-4237-9ef4-d4b9cac56b97.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000002",
+      "sourceMenuId": "10000002",
+      "name": "소대창 전골(비조리)",
+      "description": "(전골비조리) : 전골+육수+양념다대기+서브반찬+간장소스+코카콜라500ml.",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000006",
+      "sourceMenuId": "10000006",
+      "name": "소곱창추가(170g)",
+      "description": "어휴! 말하면 뭐해요! 믿고 먹는 소곱창. 추가해서 잡솨봐요!",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000036",
+      "sourceMenuId": "10000036",
+      "name": "스프라이트500ml추가",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/dc9d3b01-bd59-4600-802a-6ca8e98bb16c.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000007",
+      "sourceMenuId": "10000007",
+      "name": "소양(깐양)추가(120g)",
+      "description": "한국인은 밥심 빼면 시체죠!",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000037",
+      "sourceMenuId": "10000037",
+      "name": "코카콜라1.25L로사이즈업",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/0a280219-e749-4813-a2c5-37cfab7ea8f0.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000004",
+      "sourceMenuId": "10000004",
+      "name": "밥과볶음밥재료",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000008",
+      "sourceMenuId": "10000008",
+      "name": "우삼겹(120g)추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000038",
+      "sourceMenuId": "10000038",
+      "name": "스프라이트1.5L로사이즈업",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/63171953-bea6-48ed-acb4-ce3cd8ba4cc5.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000009",
+      "sourceMenuId": "10000009",
+      "name": "전골용만두추가",
+      "description": "먹고싶을 만두 하지. 이런 아재개그 그`만두`게!",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000039",
+      "sourceMenuId": "10000039",
+      "name": "코카콜라1.25ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/55a8dfdb-8c0e-4239-bd6a-3420a74310ec.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000010",
+      "sourceMenuId": "10000010",
+      "name": "당면사리추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/11fea56f-7e16-4cd1-b180-c156750e1770.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000040",
+      "sourceMenuId": "10000040",
+      "name": "환타파인500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000011",
+      "sourceMenuId": "10000011",
+      "name": "모짜렐라 치즈볼",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/d0e05433-88ab-4bce-971a-56e5434e41ac.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000041",
+      "sourceMenuId": "10000041",
+      "name": "마시는유산균 쿨피스캔 (350ml)",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000012",
+      "sourceMenuId": "10000012",
+      "name": "김말이튀김(10개)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/ceb7002d-6562-49e0-a73f-e6989d35bef5.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000042",
+      "sourceMenuId": "10000042",
+      "name": "생수",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000013",
+      "sourceMenuId": "10000013",
+      "name": "날치알 주먹밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a076e9fc-aa2a-4df9-86a4-42585b4459dc.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000014",
+      "sourceMenuId": "10000014",
+      "name": "계란비벼밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000044",
+      "sourceMenuId": "10000044",
+      "name": "사이다(스프라이트)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/0b8be5f4-ae77-44a8-9359-cdd9f89f8a02.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000015",
+      "sourceMenuId": "10000015",
+      "name": "전골육수추가 대 (1600ml)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000016",
+      "sourceMenuId": "10000016",
+      "name": "전골육수추가 소 (900ml)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000017",
+      "sourceMenuId": "10000017",
+      "name": "수제비추가(120g)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000018",
+      "sourceMenuId": "10000018",
+      "name": "부탄가스1개추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000019",
+      "sourceMenuId": "10000019",
+      "name": "라면사리추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e622cea1-aa89-4f59-bdd8-746102495626.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000020",
+      "sourceMenuId": "10000020",
+      "name": "양념다데기소1개(80g)추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000021",
+      "sourceMenuId": "10000021",
+      "name": "모듬튀김: 왕새우3+김말이4+만두5",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000022",
+      "sourceMenuId": "10000022",
+      "name": "계란찜추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000023",
+      "sourceMenuId": "10000023",
+      "name": "직화 오돌뼈볶음400g (단품)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/cb1a2bb3-ad76-498e-959d-ea0e722ca3d6.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000024",
+      "sourceMenuId": "10000024",
+      "name": "양배추셀러드추가(대)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000025",
+      "sourceMenuId": "10000025",
+      "name": "[단백질보충]계란후라이4개",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e587b624-768e-4020-a136-5528a1e2e38d.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000026",
+      "sourceMenuId": "10000026",
+      "name": "떡볶이사리추가12개",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000027",
+      "sourceMenuId": "10000027",
+      "name": "크리스피 왕새우튀김",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c15ba5a2-0f6d-4602-bb99-4db4fc7bc435.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000028",
+      "sourceMenuId": "10000028",
+      "name": "꿀떡~ 닭강정(반마리)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/0b446963-74b8-4f70-a54a-a135a02fa45d.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000029",
+      "sourceMenuId": "10000029",
+      "name": "튀김만두10개",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c1419e66-13cc-4973-bda9-33d8c1194650.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000030",
+      "sourceMenuId": "10000030",
+      "name": "고구마치즈스틱 5개",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/958abd0b-31bf-42c0-a64a-ab0474339f20.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000031",
+      "sourceMenuId": "10000031",
+      "name": "치즈가들어간~치즈소떡",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1273830-10000032",
+      "sourceMenuId": "10000032",
+      "name": "흑미공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/2b6786ff-d180-47ef-8e0c-73a59576e77d.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000033",
+      "sourceMenuId": "10000033",
+      "name": "고구마튀김5~6개",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5a8a3728-a0f3-4505-9d76-ca0591e0dc8e.jpg"
+    },
+    {
+      "id": "ddangyo-1273830-10000034",
+      "sourceMenuId": "10000034",
+      "name": "통닭발 후라이드튀김12p",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3db775a9-4901-480b-844f-3674c6b90d78.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "storeId": "b4991b954ffc2156",
+  "storeName": "프레드피자 여수해양공원점",
+  "displayName": "프레드피자 여수해양공원점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/617c5754-0706-4f95-aabe-0cb61a14f0ae.jpg",
+  "categories": [
+    "전체",
+    "Pizza Menu (오리지널 흑미도우)",
+    "Half and Half",
+    "1+1 Set",
+    "Pizza Menu (시그니처 순수우유도우)",
+    "Extra Menu",
+    "My Pick Pizza",
+    "인기 세트 메뉴",
+    "Side Menu",
+    "Drink Menu"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1277122-30000329",
+      "sourceMenuId": "30000329",
+      "name": "페퍼로니피자",
+      "description": "[BEST 메뉴] 짭조름한 페퍼로니와 치즈를 듬뿍",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/54b0bed0-fcd7-4ae8-99ad-495c91d1c9b2.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000237",
+      "sourceMenuId": "30000237",
+      "name": "베이컨포테마요피자",
+      "description": "포슬포슬 웨지감자가 한가득~",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/fb3c0776-c95a-43d5-98a4-4ffed657d116.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000228",
+      "sourceMenuId": "30000228",
+      "name": "쉬림플렉스피자",
+      "description": "두 판에 들어간 새우를 한 판에 Flex 오직 프레드에서만",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b90b9047-c6fb-40bc-b59f-9b582a464740.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000226",
+      "sourceMenuId": "30000226",
+      "name": "반반 피자",
+      "description": "[인기만점] 두 가지 메뉴를 한 판에",
+      "category": "Half and Half",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/da5ae943-1510-4a3c-aa49-1d405d42a2a3.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000225",
+      "sourceMenuId": "30000225",
+      "name": "1 + 1 피자",
+      "description": "[갓성비] 한 판 가격에 두 판을",
+      "category": "1+1 Set",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/0c2003c4-05ae-4619-9db2-e58807afd3cb.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000341",
+      "sourceMenuId": "30000341",
+      "name": "[NEW] 레드핫포테마요피자",
+      "description": "담백한 웨지감자에 칠리시즈닝을 뿌려 매콤한 감칠맛 완성",
+      "category": "Pizza Menu (시그니처 순수우유도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/1676d39c-707b-4a4c-9c2d-0f306f3b1384.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000282",
+      "sourceMenuId": "30000282",
+      "name": "코울슬로",
+      "description": "추가메뉴",
+      "category": "Extra Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7b7097ce-d01a-48f7-9f10-ea6b43c7cc29.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000227",
+      "sourceMenuId": "30000227",
+      "name": "마이픽피자 (L)",
+      "description": "나의 PICK 피자 [only L size] 원하는대로 4 PICK 토핑과 엣지를 내맘대로 골라먹는 나만의 피자",
+      "category": "My Pick Pizza",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/d56db763-3a84-45b5-8cdd-9d5d81c0859f.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000223",
+      "sourceMenuId": "30000223",
+      "name": "2인 갓성비 세트",
+      "description": "BEST SET MENU",
+      "category": "인기 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/3ac9d75d-c064-4222-823c-89c191e6a2e0.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000266",
+      "sourceMenuId": "30000266",
+      "name": "로제치즈볼",
+      "description": "찐~한 로제소스 가득 들어간 쫀득한 치즈볼",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/eaa0920e-53b3-46d4-9001-dd4186af2238.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000224",
+      "sourceMenuId": "30000224",
+      "name": "4인 갓성비 세트",
+      "description": "BEST SET MENU",
+      "category": "인기 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/937352d6-5433-4a76-99c1-04b67116a441.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000267",
+      "sourceMenuId": "30000267",
+      "name": "모짜치즈볼",
+      "description": "달달고소한 모짜렐라가 가득 들어간 치즈볼",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/deef5123-dd86-4672-83b9-dbae212fb8a3.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000339",
+      "sourceMenuId": "30000339",
+      "name": "[NEW] 크림불고기피자",
+      "description": "불고기에 부드러운 크림소스를 더해, 더욱 깊어진 풍미",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/a0a1163a-0d11-4a3a-971b-755244c68508.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000283",
+      "sourceMenuId": "30000283",
+      "name": "피클",
+      "description": "추가메뉴",
+      "category": "Extra Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/6110b820-2326-4fa3-a89f-6add55305fbc.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000284",
+      "sourceMenuId": "30000284",
+      "name": "프레드요거트소스",
+      "description": "추가메뉴",
+      "category": "Extra Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/f0ce375f-3191-4a35-b778-655dc22219cf.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000268",
+      "sourceMenuId": "30000268",
+      "name": "반반치즈볼",
+      "description": "로제 vs 모짜, 둘 다 먹고 싶을 땐",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/501a6153-0e53-4330-8bfc-9df32e4778cc.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000343",
+      "sourceMenuId": "30000343",
+      "name": "[NEW] 바베큐핫치킨피자",
+      "description": "매콤달콤한 소스에 바베큐 풍미를 더한 치킨을 듬뿍",
+      "category": "Pizza Menu (시그니처 순수우유도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/e200f8bb-7eac-4417-b362-b73862c7c0a9.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000334",
+      "sourceMenuId": "30000334",
+      "name": "[NEW] 매콤쭈새피자",
+      "description": "주꾸미 X 새우, 매콤한 소스로 즐기는 극강의 해산물 조합",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/08c71cba-b2c5-468e-8fa9-cdf8d09cfd59.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000285",
+      "sourceMenuId": "30000285",
+      "name": "프레드갈릭소스",
+      "description": "추가메뉴",
+      "category": "Extra Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/d56d0fed-33ca-4f2c-8f91-3231e5cb6fa5.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000291",
+      "sourceMenuId": "30000291",
+      "name": "코카콜라 500mL",
+      "description": "음료메뉴",
+      "category": "Drink Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/acd93823-6bc4-495a-a59c-61804831a60b.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000270",
+      "sourceMenuId": "30000270",
+      "name": "골드킹 or 레드핫 (닭다리)",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/82c3bcd2-648a-4f80-ada2-98518ace5cb6.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000286",
+      "sourceMenuId": "30000286",
+      "name": "핫소스",
+      "description": "추가메뉴",
+      "category": "Extra Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/94f30f9e-7e5f-47bf-a432-d14417d216ea.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000271",
+      "sourceMenuId": "30000271",
+      "name": "치즈오븐스파게티",
+      "description": "진한 토마토 소스와 고소한 모짜렐라치즈를 듬뿍",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/043b172b-9b4c-4529-b754-d21e35cd4af9.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000287",
+      "sourceMenuId": "30000287",
+      "name": "파마산",
+      "description": "추가메뉴",
+      "category": "Extra Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/f0dbf07d-fb1b-4848-adb9-880389c2f788.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000272",
+      "sourceMenuId": "30000272",
+      "name": "불고기 크림스파게티",
+      "description": "정통 크림소스에 불고기가 한가득",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b51d8a6b-c3f5-415f-a653-e694ae4e5eaa.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000273",
+      "sourceMenuId": "30000273",
+      "name": "베이컨 크림스파게티",
+      "description": "고소하고 진한 크림소스와 베이컨이 한가득",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/d5888f43-2ef6-4652-9646-e6e2ffb7c950.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000230",
+      "sourceMenuId": "30000230",
+      "name": "치즈피자",
+      "description": "프레드 특제소스에 모짜렐라, 체다치즈를 듬뿍",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/57aebb01-32d3-433b-a346-44219a4fcd11.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000231",
+      "sourceMenuId": "30000231",
+      "name": "베이컨딥체다치즈피자",
+      "description": "체다치즈의 고소함과 푸짐한 베이컨의 조화",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/fd156164-1fea-46c4-9207-d87470049caa.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000274",
+      "sourceMenuId": "30000274",
+      "name": "쉬림프 로제스파게티",
+      "description": "부드러운 로제소스와 탱글탱글한 새우가 한가득",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/67947277-438a-4b14-b89d-10277c996978.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000295",
+      "sourceMenuId": "30000295",
+      "name": "코카콜라 1.25L",
+      "description": "음료메뉴",
+      "category": "Drink Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/eaf282ec-6793-477f-804a-a00dc59db426.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000251",
+      "sourceMenuId": "30000251",
+      "name": "할라로니피자",
+      "description": "짭조름한 페퍼로니와 매콤한 할라피뇨의 조화",
+      "category": "Pizza Menu (시그니처 순수우유도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/00edb4ca-bc13-4ab9-be33-eface6d4c7a3.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000275",
+      "sourceMenuId": "30000275",
+      "name": "매콤 크림스파게티",
+      "description": "",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/de1986e1-93c6-404c-a62a-f0db29ec0b0f.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000335",
+      "sourceMenuId": "30000335",
+      "name": "레드콘리코타피자",
+      "description": "통옥수수와 부드러운 리코타치즈가 듬뿍",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/913a40fa-0dc7-4d7a-8959-84b359bf14ca.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000276",
+      "sourceMenuId": "30000276",
+      "name": "윙봉 (5개)",
+      "description": "사이드 필수메뉴 매콤한 소스 베이스의 윙봉",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/a2841ded-09ae-427c-98aa-2a41e11db5cc.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000253",
+      "sourceMenuId": "30000253",
+      "name": "하와이안피자",
+      "description": "상큼달달한 파인애플과 짭조름한 베이컨의 조화",
+      "category": "Pizza Menu (시그니처 순수우유도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/1f8129f9-aad0-43ce-b50c-459763d3d156.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000277",
+      "sourceMenuId": "30000277",
+      "name": "순살치킨 (8개)",
+      "description": "겉은 바삭하고 속은 촉촉한 순살치킨",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/43844e9b-bdbf-44de-8f48-e68afa0b9f60.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000235",
+      "sourceMenuId": "30000235",
+      "name": "슈퍼콤비네이션피자",
+      "description": "신선한 야채와 페퍼로니, 햄 토핑이 듬뿍",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7a71d648-5a36-4241-8dd5-6f581b517964.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000278",
+      "sourceMenuId": "30000278",
+      "name": "순살치킨 (12개)",
+      "description": "겉은 바삭하고 속은 촉촉한 순살치킨",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/53ca4fee-1a07-4282-b421-00b4a4934b20.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000238",
+      "sourceMenuId": "30000238",
+      "name": "더블불고기피자",
+      "description": "불고기 맛과 양을 한층 더 업그레이드",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/f9f1103a-bb4e-46e1-b13e-4c4d8dc32830.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000279",
+      "sourceMenuId": "30000279",
+      "name": "치킨텐더 (6개)",
+      "description": "노릇하고 바삭하게 튀겨낸 치킨텐더",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/6c64920b-e280-4f54-99b5-22fa61b88b3d.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000301",
+      "sourceMenuId": "30000301",
+      "name": "스프라이트 500mL",
+      "description": "음료메뉴",
+      "category": "Drink Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/64e11462-37c2-4eaf-a682-b45c6ed3c62e.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000280",
+      "sourceMenuId": "30000280",
+      "name": "감자튀김",
+      "description": "바삭하게 튀겨낸 담백한 감튀",
+      "category": "Side Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/5b6ab08f-fe07-4c5b-a95d-90158939f1ed.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000240",
+      "sourceMenuId": "30000240",
+      "name": "할라불고기피자",
+      "description": "더욱 풍성해진 불고기와 매콤한 할라피뇨의 조화",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/0fe61dd4-d60c-4a9e-85bb-df788a80526c.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000261",
+      "sourceMenuId": "30000261",
+      "name": "화이트포테이토피자",
+      "description": "담백한 포테이토 위에 베이컨, 고구마샐러드까지",
+      "category": "Pizza Menu (시그니처 순수우유도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b72512ad-daed-445c-aabd-3adad4b85a78.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000305",
+      "sourceMenuId": "30000305",
+      "name": "스프라이트 1.5L",
+      "description": "음료메뉴",
+      "category": "Drink Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/a1731ad9-2ab6-44c4-ad69-8f63736c8a9e.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000262",
+      "sourceMenuId": "30000262",
+      "name": "메가콤비네이션피자",
+      "description": "미트x미트x미트, 극강의 미트 토핑과 페퍼로니, 햄, 신선한 야채를 듬뿍",
+      "category": "Pizza Menu (시그니처 순수우유도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/4ef0d9d7-9754-4291-a289-5682b6a1618b.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000263",
+      "sourceMenuId": "30000263",
+      "name": "킬바사소세지피자",
+      "description": "통통한 BIG 소세지가 통째로 가득",
+      "category": "Pizza Menu (시그니처 순수우유도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/0aab1e0e-0e44-4563-b84c-f208eb26f1cf.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000264",
+      "sourceMenuId": "30000264",
+      "name": "바질버터관자피자",
+      "description": "바질크림과 버터에 구운 관자를 듬뿍",
+      "category": "Pizza Menu (시그니처 순수우유도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/56298ab5-c02f-4864-803c-68ff5014244e.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000246",
+      "sourceMenuId": "30000246",
+      "name": "갈릭쉬림플렉스피자",
+      "description": "달싸한 갈릭향에 쉬림프를 Flex 두판에 들어갈 새우를 한판에 더하다",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/26db1728-7655-4c96-ac3e-cfddff9868be.jpg"
+    },
+    {
+      "id": "ddangyo-1277122-30000317",
+      "sourceMenuId": "30000317",
+      "name": "제로콜라 1.25L",
+      "description": "음료메뉴",
+      "category": "Drink Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1277122-30000236",
+      "sourceMenuId": "30000236",
+      "name": "스위트고구마피자",
+      "description": "달콤한 고구마무스와 짭조름한 베이컨의 조화",
+      "category": "Pizza Menu (오리지널 흑미도우)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/51476b44-a08b-41aa-828e-ddaf334ff695.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

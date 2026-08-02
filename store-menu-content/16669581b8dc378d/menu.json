@@ -1,0 +1,643 @@
+{
+  "storeId": "16669581b8dc378d",
+  "storeName": "땅스부대찌개 여수여서점",
+  "displayName": "땅스부대찌개 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/da5ec5f9-d85c-4829-a3eb-1449ef5266d9.jpg",
+  "categories": [
+    "전체",
+    "떡볶이",
+    "부대찌개",
+    "부대찌개 세트",
+    "캠핑 세트",
+    "땅스인은 밥심",
+    "추천 세트메뉴",
+    "음료",
+    "육수 추가 선택",
+    "기타 추가 선택",
+    "떡볶이 세트",
+    "같이 먹으면 더 맛있땅스",
+    "떡볶이 추천사리",
+    "부대찌개 추천사리"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1174920-30000075",
+      "sourceMenuId": "30000075",
+      "name": "부대 떡볶이 3인분(비조리)",
+      "description": "부대찌개 대표 브랜드에서 사용하는 햄 그대로, 3가지 프리미엄 햄 가득 밀키트 떡볶이 누들밀떡+어묵+야채(대파,팽이버섯,느타리버섯)+떡국떡+찰당면+햄(오팜,후랑크소시지,촙트,민찌)+라면1개+옹심이만두8개",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/34d48b74-c38d-4b90-b96a-a80ccb553e09.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000153",
+      "sourceMenuId": "30000153",
+      "name": "짬뽕 부대찌개 3인분(비조리)",
+      "description": "콩사리(베이크드 빈스+김치+마늘) 미포함 화끈한 직화 불맛과 짬뽕 특유의 얼큰함이 만나 강렬한 풍미를 자아낸다! 짬뽕의 매콤함과 부대찌개의 깊은 맛이 어우러진 짬뽕부대찌개 짬뽕육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+팽이버섯+느타리버섯+대파+두부+당면+떡국떡",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/6076467a-cd76-43e0-9bd1-b91a0506c555.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000062",
+      "sourceMenuId": "30000062",
+      "name": "가득햄 부대찌개 3인분(비조리)",
+      "description": "[땅스부대찌개 대표메뉴] 햄이 한가득 가득햄 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+햄추가",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/e3cea0a5-d8f1-4377-a2ae-b997e00fa1b4.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000130",
+      "sourceMenuId": "30000130",
+      "name": "쫄볶이 3인분(비조리)",
+      "description": "매콤달콤 소스에 쫄깃 탱탱한 쫄면사리로 색다르게 즐기는 쫄볶이 쫄면이 떡볶이 소스를 흡수하면서 매콤달콤한 맛이 면발에 잘 배어들어 더욱 맛있어요~ 누들밀떡+어묵+야채(대파,팽이버섯,느타리버섯)+떡국떡+납작당면+쫄면+옹심이만두8개",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/636f260c-bbd6-4287-870c-4d9d487ba606.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000145",
+      "sourceMenuId": "30000145",
+      "name": "땅스부대찌개 + 햇반 추가(비조리)",
+      "description": "햇반이 포함된 든든한 세트 땅스부대찌개 3인분 + 햇반",
+      "category": "부대찌개 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/90293283-9501-494b-8053-83f729cb2755.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000010",
+      "sourceMenuId": "30000010",
+      "name": "부대찌개 식혜 세트(비조리)",
+      "description": "땅스부대찌개 3인분(비조리)+땅스식혜 400ml 2개",
+      "category": "부대찌개 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f5b4ed5e-3d6f-42d8-b772-7d07b9bee361.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000133",
+      "sourceMenuId": "30000133",
+      "name": "부대찌개 캠핑 세트(비조리)",
+      "description": "[할인세트] 캠핑밀키트 세트로 푸짐한 식사 가능 [빈 냄비 가열금지] 모둠부대찌개 3인분 (비조리) + 리필용육수(콩사리포함)1개 + 일회용냄비(인덕션 사용 불가) + 라면사리",
+      "category": "캠핑 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/479b33ce-a34d-458a-9f7c-07765fbe84a8.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000164",
+      "sourceMenuId": "30000164",
+      "name": "땅스 유부초밥",
+      "description": "끝을 살짝 뜯어 전자레인지에 1분 30초 돌리면 완성~ 땅스 유부초밥 3pc",
+      "category": "땅스인은 밥심",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f2cee56e-3f56-47dc-ba49-e812c2963ec9.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000131",
+      "sourceMenuId": "30000131",
+      "name": "[땅스1등조합]가성비 땅스세트(비조리)",
+      "description": "[할인세트] 부대찌개와 떡볶이로 푸짐하고 든든하게 가성비있게 즐기자~ 오리지널 부대찌개 3인분 (비조리) + 오리지널 국물떡볶이 3인분(비조리) + 1.25L 음료 선택",
+      "category": "추천 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d1d8744d-2945-46f3-8a62-3d95e64613ca.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000115",
+      "sourceMenuId": "30000115",
+      "name": "땅스식혜 400ml",
+      "description": "얼큰한 부대찌개와 최고의 조합 달짝지근 땅스식혜",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/439ca955-4bf4-4673-84b5-0ee8846a1d1e.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000109",
+      "sourceMenuId": "30000109",
+      "name": "부대찌개 보통맛 육수 추가",
+      "description": "보통맛육수(1.1L)+콩사리(베이크드 빈스+다진 김치+다진 마늘)",
+      "category": "육수 추가 선택",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/c6f34018-b336-4701-a47a-54acb1eb9f43.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000113",
+      "sourceMenuId": "30000113",
+      "name": "일회용냄비 (인덕션 사용 불가)",
+      "description": "[빈 냄비 가열금지]",
+      "category": "기타 추가 선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174920-30000149",
+      "sourceMenuId": "30000149",
+      "name": "어묵 쫄볶이 3인분(비조리)",
+      "description": "땅스고객선정 쫄볶이 추가사리 1위 조합누들밀떡+어묵+팽이버섯+느타리버섯+대파+떡국떡+납작당면+쫄면+옹심이만두8개+어묵추가",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d1c930cc-0872-4cab-8cd2-8578ee048f70.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000148",
+      "sourceMenuId": "30000148",
+      "name": "더블치즈 부대찌개 3인분(비조리)",
+      "description": "체다치즈 한 번 더 추가 고소한 리얼치즈 부대찌개 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+체다치즈4장",
+      "category": "부대찌개 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c4bf3e9d-c0aa-4b05-88c2-fe1abefb1304.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000098",
+      "sourceMenuId": "30000098",
+      "name": "당면 추가",
+      "description": "쫄깃탱탱 넙적당면 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/05a8abff-7102-4f05-959c-5cedfb88d7a0.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000094",
+      "sourceMenuId": "30000094",
+      "name": "모둠튀김 (비조리) 추가",
+      "description": "김말이튀김2개+야채튀김1개+고구마튀김1개+잡채튀김1개 (비조리) 남녀노소 모두 사랑하는 튀김으로 알차게 모아모아br바삭하게 튀겨서 갓튀긴 튀김으로 드세요~",
+      "category": "떡볶이 추천사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/890a8038-ca56-4dd7-bbd9-3e9b5a70c648.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000093",
+      "sourceMenuId": "30000093",
+      "name": "모둠사리 추가(햄+물만두+치즈2장+당면)",
+      "description": "햄+물만두10개+체다치즈2장+당면",
+      "category": "부대찌개 추천사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/42ec90c4-dc66-4255-8921-f8ca57b4048b.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000096",
+      "sourceMenuId": "30000096",
+      "name": "어묵 추가",
+      "description": "어묵 추가",
+      "category": "떡볶이 추천사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/52d02ab7-9d08-4261-9e97-5228f8fab167.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000074",
+      "sourceMenuId": "30000074",
+      "name": "김치피자 떡볶이 3인분(비조리)",
+      "description": "김피탕의 떡볶이버전 쫀득한 김피떡 누들밀떡+토마토소스+모짜렐라치즈1팩+어묵+콩사리(김치+마늘+마늘)+라면1개+옹심이만두8개",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/8770eca5-54e7-4dea-bd38-5c08c287dcef.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000082",
+      "sourceMenuId": "30000082",
+      "name": "떡볶이 식혜 세트(비조리)",
+      "description": "땅스즉석떡볶이 3인분(비조리)+땅스식혜 400ml 2개",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/879bf4c3-0e39-4c1f-a191-c2b545c0fa9a.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000084",
+      "sourceMenuId": "30000084",
+      "name": "부대찌개 일회용냄비 세트(비조리)",
+      "description": "땅스 부대찌개 3인분(비조리) + 일회용냄비 (인덕션 사용 불가) [빈 냄비 가열금지]",
+      "category": "캠핑 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/81ba0ea7-361e-4c58-990b-5c414ff9d61d.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000086",
+      "sourceMenuId": "30000086",
+      "name": "참치마요 주먹밥",
+      "description": "끝을 살짝 뜯어 전자레인지에 2분 돌리면 완성~ 담백하고 부드러운 참치마요 주먹밥",
+      "category": "땅스인은 밥심",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/b7791d62-7b97-4360-999e-6f1852496f2d.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000092",
+      "sourceMenuId": "30000092",
+      "name": "십센치 추가",
+      "description": "지름 10cm의 특대햄 6장",
+      "category": "부대찌개 추천사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/a9df93ae-f89e-4c74-a100-620b07efb784.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000099",
+      "sourceMenuId": "30000099",
+      "name": "라면 추가",
+      "description": "라면 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/dc1fbfe3-957e-4c14-b3d8-5ceb812e0d55.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000110",
+      "sourceMenuId": "30000110",
+      "name": "부대찌개 매운맛 육수 추가",
+      "description": "매운맛육수(1.1L)+콩사리(베이크드 빈스+다진 김치+다진 마늘)",
+      "category": "육수 추가 선택",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/5969409e-47a8-4e80-a650-2ec803afa4bf.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000114",
+      "sourceMenuId": "30000114",
+      "name": "보냉팩 추가",
+      "description": "",
+      "category": "기타 추가 선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174920-30000116",
+      "sourceMenuId": "30000116",
+      "name": "코카콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/7f5b78fa-bf00-4ce3-b9af-a22a05c8b02b.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000132",
+      "sourceMenuId": "30000132",
+      "name": "옹심이 만두전골 부대세트(비조리)",
+      "description": "[할인세트] 옹심이만두와 만두를 사랑하는 땅스인을 위한 특별세트 왕만두부대찌개 3인분 (비조리) + 옹심이만두(8개) + 물만두(10개)",
+      "category": "추천 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/03a3f016-d6d7-4982-b725-3df8b24aad61.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000073",
+      "sourceMenuId": "30000073",
+      "name": "떡볶이 주먹밥 세트(비조리)",
+      "description": "맛있게 든든한 삼각주먹밥 세트 주먹밥은 끝을 살짝 뜯어 전자레인지에 2분 조리해주세요 땅스떡볶이 3인분 (비조리) + 삼각 주먹밥 1개",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/dee7bc72-f6f1-46fa-a939-b7564438ae19.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000117",
+      "sourceMenuId": "30000117",
+      "name": "칠성사이다 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/81dc1778-6557-4e04-a6cb-f30da584cef8.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000154",
+      "sourceMenuId": "30000154",
+      "name": "부대찌개 짬뽕 육수 추가",
+      "description": "화끈한 불맛의 직화 풍미와 짬뽕 특유의 얼큰하고 매콤한 맛",
+      "category": "육수 추가 선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174920-30000097",
+      "sourceMenuId": "30000097",
+      "name": "모짜렐라치즈 추가",
+      "description": "아낌없이 드려요 쭈욱 늘어나는 모짜렐라",
+      "category": "떡볶이 추천사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/e271af12-8d52-4669-b16b-2d4be47cae49.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000087",
+      "sourceMenuId": "30000087",
+      "name": "간장버터치즈 주먹밥",
+      "description": "끝을 살짝 뜯어 전자레인지에 2분 돌리면 완성~ 치즈가 쭈욱~ 고소한 간장버터치즈주먹밥",
+      "category": "땅스인은 밥심",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/bcb8cf17-047a-4e68-9250-bb8474b8b735.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000090",
+      "sourceMenuId": "30000090",
+      "name": "깡통햄 추가",
+      "description": "깡통햄 추가",
+      "category": "부대찌개 추천사리",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174920-30000005",
+      "sourceMenuId": "30000005",
+      "name": "깡통햄 부대찌개 3인분(비조리)",
+      "description": "th팸이 아니네요 더 맛있는 깡통햄 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+깡통햄 4조각",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/2f74629c-2f1f-4cec-9458-065da83b1b65.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000137",
+      "sourceMenuId": "30000137",
+      "name": "쫄면 추가",
+      "description": "쫄깃 탱탱한 쫄면 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174920-30000065",
+      "sourceMenuId": "30000065",
+      "name": "부대찌개 주먹밥 세트(비조리)",
+      "description": "맛있게 든든한 삼각주먹밥 세트 주먹밥은 끝을 살짝 뜯어 전자레인지에 2분 조리해주세요 땅스부대찌개 3인분 (비조리) + 삼각 주먹밥 1개",
+      "category": "부대찌개 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/37dd2bb3-9a25-4f9d-b52d-057966505c2e.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000085",
+      "sourceMenuId": "30000085",
+      "name": "떡볶이 일회용냄비 세트(비조리)",
+      "description": "땅스떡볶이 3인분(비조리) + 일회용 냄비(인덕션 사용 불가) [빈 냄비 가열금지]",
+      "category": "캠핑 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/1ee8cd51-cd9e-45c7-b185-aabf22e76682.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000076",
+      "sourceMenuId": "30000076",
+      "name": "로제 떡볶이 3인분(비조리)",
+      "description": "신선한 우유와 생크림을 넣어 만든 크림베이스, 매콤 고소한 로제소스가 들어간 밀키트 떡볶이 로제소스+누들밀떡+비엔나소세지10개+찰당면+옹심이만두8개",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/2b4af231-1a7f-4dc6-b4c3-87bed4b13e69.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000118",
+      "sourceMenuId": "30000118",
+      "name": "펩시제로(라임) 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/e7bcfd96-a764-4770-b597-ab084d18dfe7.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000009",
+      "sourceMenuId": "30000009",
+      "name": "모둠 부대찌개 3인분(비조리)",
+      "description": "뭘 좋아할지 몰라서 다 넣어봤어 골라 먹는 재미와 푸짐함 가득 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+햄추가+물만두 10개+체다치즈 2장+당면사리",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/d0ae1199-d93b-4d73-950b-e7a75e0f5c42.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000163",
+      "sourceMenuId": "30000163",
+      "name": "떡볶이 유부초밥 세트(비조리)",
+      "description": "간편하게 즐기는 땅스 햄야채 유부초밥 세트 유부초밥은 끝을 살짝 뜯어 전자레인지에 1분 30초 조리해주세요 땅스떡볶이 3인분 (비조리) + 유부초밥 1개 (3pc)",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/b8bfb5f2-a9d7-41ab-a6e8-af16d4e4ba79.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000077",
+      "sourceMenuId": "30000077",
+      "name": "치즈 떡볶이 3인분(비조리)",
+      "description": "부드러운 치즈맛의 정석, 고소한 모짜렐라치즈와 체다치즈를 더한 밀키트 떡볶이 누들밀떡+어묵+야채(대파,팽이버섯,느타리버섯)+떡국떡+찰당면+모짜렐라치즈1팩+체다치즈1장+라면1개+옹심이만두8개",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/46195aaf-90ef-4d8c-956c-4e6e89e8d6bf.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000088",
+      "sourceMenuId": "30000088",
+      "name": "햇반",
+      "description": "햇반 추가",
+      "category": "땅스인은 밥심",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174920-30000091",
+      "sourceMenuId": "30000091",
+      "name": "베이컨 추가",
+      "description": "베이컨 100g 추가",
+      "category": "부대찌개 추천사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/15c6641f-49c6-4421-90f5-96e063da1866.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000111",
+      "sourceMenuId": "30000111",
+      "name": "떡볶이 순한맛 육수 추가",
+      "description": "순한맛(모두가 즐기는 약간 매콤한 맛)",
+      "category": "육수 추가 선택",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/ecdda496-2621-49a7-8d4f-4a6007441cd6.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000162",
+      "sourceMenuId": "30000162",
+      "name": "부대찌개 유부초밥 세트(비조리)",
+      "description": "간편하게 즐기는 땅스 햄야채 유부초밥 세트 유부초밥은 끝을 살짝 뜯어 전자레인지에 1분 30초 조리해주세요 땅스부대찌개 3인분 (비조리) + 유부초밥 1개 (3pc)",
+      "category": "부대찌개 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/4747fec4-6f04-44b9-8875-01bb199c57de.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000100",
+      "sourceMenuId": "30000100",
+      "name": "옹심이만두(8개) 추가",
+      "description": "쫄깃한 옹심이만두 8개 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/06d1037c-f28c-47c9-a4f9-9264f51f3d92.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000112",
+      "sourceMenuId": "30000112",
+      "name": "떡볶이 매운맛 육수 추가",
+      "description": "매운맛(신라면보다 매워요)",
+      "category": "육수 추가 선택",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/b18d82c1-3444-47b6-9e09-493bd0f0e046.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000119",
+      "sourceMenuId": "30000119",
+      "name": "코카콜라 캔 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/87dd0de8-d0a2-44c8-860a-fa66acd02c80.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000072",
+      "sourceMenuId": "30000072",
+      "name": "땅스즉석떡볶이 + 튀김추가(비조리)",
+      "description": "[바삭한 할인] 땅스 떡볶이 3인분(비조리) + 모둠 튀김 (비조리) 국물에 바삭한 튀김을 찍어 먹으면 그 맛은 상상 그 이상~ 튀김은 미리 튀기면 눅눅해요~ 바삭하게 튀겨 드세요!",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/808d6dcf-ab96-4367-bf31-23a031feb959.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000144",
+      "sourceMenuId": "30000144",
+      "name": "깡통햄 부대찌개 + 깡통햄 추가(비조리)",
+      "description": "th팸이 아니에요 더 맛있는 깡통햄에 깡통햄 한 번 더 추가 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+깡통햄 8조각",
+      "category": "부대찌개 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/cfcde73f-effe-4485-8b9a-0e1e321876e2.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000007",
+      "sourceMenuId": "30000007",
+      "name": "십센치 부대찌개 3인분(비조리)",
+      "description": "손바닥만 한 특대함을 무려 6장 더 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+볼로냐 3장+살라미 3장",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/70aafede-d8f2-4795-9539-8c3762ab6baa.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000089",
+      "sourceMenuId": "30000089",
+      "name": "햄 추가(촙트+오팜+후랑크)",
+      "description": "3가지 프리미엄 햄(촙트+오팜+후랑크)",
+      "category": "부대찌개 추천사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/b2345fcd-e453-41d7-99f3-1cad30a5ed2e.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000008",
+      "sourceMenuId": "30000008",
+      "name": "토마토 부대찌개 3인분(비조리)",
+      "description": "맛보면 이탈리아 풍경이 눈앞에 스친다는 토마토스튜st 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+토마토소스",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/aa3e97d4-217c-4c29-80ff-4b297377f164.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000136",
+      "sourceMenuId": "30000136",
+      "name": "오리지널 국물떡볶이 3인분(비조리)",
+      "description": "쫄깃한 밀 떡볶이 본연의 맛에 가성비를 더한 땅스 밀키트 떡볶이 누들밀떡+어묵+야채(대파,팽이버섯,느타리버섯)+떡국떡+찰당면+라면1개+옹심이만두8개",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/2d2961a5-d08c-492c-9681-160d7f8928d1.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000141",
+      "sourceMenuId": "30000141",
+      "name": "오리지널 국물떡볶이 + 어묵추가(비조리)",
+      "description": "땅스고객선정 추가사리 1위 조합 오리지널 국물떡볶이 3인분(비조리) + 어묵추가 누들밀떡+어묵+팽이버섯+느타리버섯+대파+떡국떡+납작당면+라면+옹심이만두8개+어묵추가",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/016c6109-7143-4e27-aa10-ae7b8e658fac.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000120",
+      "sourceMenuId": "30000120",
+      "name": "칠성사이다 캔 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/2c6f6969-273d-4097-bc4b-e84a7ea8a82b.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000127",
+      "sourceMenuId": "30000127",
+      "name": "떡볶이 로제 육수 추가",
+      "description": "매콤한 로제맛",
+      "category": "육수 추가 선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174920-30000123",
+      "sourceMenuId": "30000123",
+      "name": "토마토 소스 추가",
+      "description": "",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1174920-30000101",
+      "sourceMenuId": "30000101",
+      "name": "콩사리(베이크드 빈스+다진 김치+다진 마늘) 추가",
+      "description": "감칠 맛을 더 해주는 콩사리 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/49a261c0-a58b-489f-8a64-c6942f81dced.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000121",
+      "sourceMenuId": "30000121",
+      "name": "펩시제로(라임) 캔 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/664024b2-5e17-4830-956a-319d7d54d07c.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000142",
+      "sourceMenuId": "30000142",
+      "name": "오리지널 국물떡볶이 + 누들밀떡추가(비조리)",
+      "description": "땅스고객선정 추가사리 2위 조합 오리지널 국물떡볶이 3인분(비조리) + 누들밀떡추가 누들밀떡+어묵+팽이버섯+느타리버섯+대파+떡국떡+납작당면+라면+옹심이만두8개+누들밀떡추가",
+      "category": "떡볶이 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/b0f37416-ccd8-45f1-9780-6f929b05c739.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000006",
+      "sourceMenuId": "30000006",
+      "name": "베이컨 부대찌개 3인분(비조리)",
+      "description": "베이컨 추가로 한층 고급스러운 맛 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+베이컨 100g",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/59cbdea6-9a1e-495f-8b49-f8ea78ceb4d1.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000004",
+      "sourceMenuId": "30000004",
+      "name": "왕만두 부대찌개 3인분(비조리)",
+      "description": "고기만두와 김치만두의 콜라보br 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+김치왕만두 2개+고기왕만두 2개",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/ac3ae25c-6f17-4ad3-9361-7eb9fe28d723.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000102",
+      "sourceMenuId": "30000102",
+      "name": "두부 추가",
+      "description": "두부 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/1bd1a042-e1e5-40ac-905e-13433e544137.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000122",
+      "sourceMenuId": "30000122",
+      "name": "생수 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/e75cad59-ea6b-443d-8e35-102620db33a3.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000103",
+      "sourceMenuId": "30000103",
+      "name": "기본햄사리(촙트+오팜+민찌+후랑크) 추가",
+      "description": "3가지 프리미엄 햄에 민찌까지 포함된 기본 햄사리(촙트+오팜+민찌+후랑크)",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/0a3a8018-e8bd-4fae-b682-c87cbc8f67d1.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000003",
+      "sourceMenuId": "30000003",
+      "name": "치즈 부대찌개 3인분(비조리)",
+      "description": "체다치즈로 고소한 리얼치즈 부대찌개 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘+체다치즈2장",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/6f6c9126-1fb3-46a3-802e-99060a033a94.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000104",
+      "sourceMenuId": "30000104",
+      "name": "물만두(10개) 추가",
+      "description": "물만두 10개 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/1085ad84-9f5a-4f51-abdd-a705d6a18231.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000002",
+      "sourceMenuId": "30000002",
+      "name": "오리지널 부대찌개 3인분(비조리)",
+      "description": "한 번도 안 먹어본 사람은 있어도 한 번만 먹어본 사람은 없다는 땅스부대찌개 오리지널 메뉴 육수+라면+프랑크소세지+촙트햄+오팜햄+민찌+김치+팽이버섯+느타리버섯+대파+두부+콩+당면+떡국떡+마늘",
+      "category": "부대찌개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/6e84a67b-b598-47c2-9dfc-885cf4ce7eba.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000105",
+      "sourceMenuId": "30000105",
+      "name": "야채(파+팽이버섯+느타리+떡국떡+당면) 추가",
+      "description": "파+팽이버섯+느타리버섯+떡+당면 땅스부대찌개의 기본사리",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/5c4ce144-c61b-4fcd-851a-9b363f63eec2.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000106",
+      "sourceMenuId": "30000106",
+      "name": "왕만두(김치왕만두 2개+고기왕만두 2개) 추가",
+      "description": "김치왕만두 2개, 고기왕만두 2개",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/58f1ba4f-056e-4f9a-bff2-01d4660d4a6f.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000107",
+      "sourceMenuId": "30000107",
+      "name": "떡국떡 추가",
+      "description": "떡 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/7eb011ba-61f6-4f68-be18-dd98a41b98a6.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000108",
+      "sourceMenuId": "30000108",
+      "name": "치즈(체다슬라이스치즈 2장) 추가",
+      "description": "체다 슬라이스 치즈 2장 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/eae72507-716f-48e6-88b2-f94f38eb903d.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000124",
+      "sourceMenuId": "30000124",
+      "name": "누들밀떡 추가",
+      "description": "누들밀떡 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/3c073b0a-a51e-4112-aa3a-f44995c07331.jpg"
+    },
+    {
+      "id": "ddangyo-1174920-30000125",
+      "sourceMenuId": "30000125",
+      "name": "비엔나소시지(10개) 추가",
+      "description": "비엔나소세지 10개 추가",
+      "category": "같이 먹으면 더 맛있땅스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/d961c5c0-9813-4663-8af1-3f8b0b9237e6.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

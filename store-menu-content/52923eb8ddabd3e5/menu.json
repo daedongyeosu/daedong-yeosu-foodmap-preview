@@ -1,0 +1,360 @@
+{
+  "storeId": "52923eb8ddabd3e5",
+  "storeName": "라화쿵부 여수중앙점",
+  "displayName": "라화쿵부 여수중앙점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a1cb55dd-e0ed-438b-a608-acf258cc5db7.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "음료수",
+    "쌀국수메뉴",
+    "요리류",
+    "식사류",
+    "세트메뉴",
+    "사이드메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1244015-10000001",
+      "sourceMenuId": "10000001",
+      "name": "마라탕",
+      "description": "매운맛 (추천) / 청탕 (담백한맛) / 약간 매운맛(위마위라) / 아주 매운맛(자마자라) 선택가능",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a1cb55dd-e0ed-438b-a608-acf258cc5db7.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000002",
+      "sourceMenuId": "10000002",
+      "name": "마라향궈",
+      "description": "매운맛 (추천) / 약간 매운맛(위마위라) / 아주 매운맛(자마자라) 선택가능",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/71afc430-e15a-47cc-87b7-03d329e09d78.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000027",
+      "sourceMenuId": "10000027",
+      "name": "콜라 뚱캔",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000003",
+      "sourceMenuId": "10000003",
+      "name": "야채쌀국수",
+      "description": "쌀로 만든 통통하고 쫄깃한 면발과 오리뼈, 닭 육수로 특색있는 면 요리",
+      "category": "쌀국수메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003451.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000007",
+      "sourceMenuId": "10000007",
+      "name": "꿔바로우",
+      "description": "달달하고 새콤한 소스가 잘 어우러진 찹쌀 탕수육",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/4e243f1e-3c2c-4c70-b158-9dd81e9108b7.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000009",
+      "sourceMenuId": "10000009",
+      "name": "볶음밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/ea635fe5-b527-40b3-8edb-8359769dd383.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000011",
+      "sourceMenuId": "10000011",
+      "name": "빛이 나는 솔로세트[마라탕]",
+      "description": "마라탕+꿔바로우+음료(택1)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000017",
+      "sourceMenuId": "10000017",
+      "name": "샤오롱바오(고기만두)",
+      "description": "고기 육즙이 가득해 누구나 좋아하는 맛!",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-10000028",
+      "sourceMenuId": "10000028",
+      "name": "사이다 뚱캔",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000004",
+      "sourceMenuId": "10000004",
+      "name": "완자야채쌀국수",
+      "description": "쌀로 만든 통통하고 쫄깃한 면발과 오리뼈, 닭 육수로 특색있는 면 요리",
+      "category": "쌀국수메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/6810929c-83f0-4580-b367-9871833e695e.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000008",
+      "sourceMenuId": "10000008",
+      "name": "마라룽샤麻辣龙虾(매운가재볶음)",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/372ad56d-e312-44d7-a2fa-2663b2bc5ff7.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000010",
+      "sourceMenuId": "10000010",
+      "name": "공깃밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000012",
+      "sourceMenuId": "10000012",
+      "name": "반짝이는 커플세트[마라탕]",
+      "description": "마라탕+꿔바로우+음료(택2)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000018",
+      "sourceMenuId": "10000018",
+      "name": "고기빠오즈",
+      "description": "발효피로 만들어 소화가 잘 되고 부드러운 돼지고기 만두",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-90000002",
+      "sourceMenuId": "90000002",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-90000010",
+      "sourceMenuId": "90000010",
+      "name": "칭따오(병)(640ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-10000029",
+      "sourceMenuId": "10000029",
+      "name": "환타 오렌지향 뚱캔",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000005",
+      "sourceMenuId": "10000005",
+      "name": "소고기야채쌀국수",
+      "description": "쌀로 만든 통통하고 쫄깃한 면발과 오리뼈, 닭 육수로 특색있는 면 요리",
+      "category": "쌀국수메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/de033e4d-dff4-4398-8512-60bdb00d4278.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000013",
+      "sourceMenuId": "10000013",
+      "name": "빛이 나는 솔로세트[마라상궈]",
+      "description": "마라샹궈+꿔바로우+음료(택1)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000030",
+      "sourceMenuId": "10000030",
+      "name": "환타 파인애플향 뚱캔",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-90000003",
+      "sourceMenuId": "90000003",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-10000006",
+      "sourceMenuId": "10000006",
+      "name": "양고기야채쌀국수",
+      "description": "쌀로 만든 통통하고 쫄깃한 면발과 오리뼈, 닭 육수로 특색있는 면 요리",
+      "category": "쌀국수메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a0b01257-4351-4248-999f-5471b112cac9.jpg"
+    },
+    {
+      "id": "ddangyo-1244015-10000014",
+      "sourceMenuId": "10000014",
+      "name": "반짝이는 커플세트[마라샹궈]",
+      "description": "마라샹궈+꿔바로우+음료(택2)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-90000004",
+      "sourceMenuId": "90000004",
+      "name": "설원(병)(125ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-10000031",
+      "sourceMenuId": "10000031",
+      "name": "밀크소다 암바사 뚱캔",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000015",
+      "sourceMenuId": "10000015",
+      "name": "오순도순 패밀리세트[마라탕]",
+      "description": "마라탕+꿔바로우+음료(택3)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-90000005",
+      "sourceMenuId": "90000005",
+      "name": "설원(병)(250ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-10000032",
+      "sourceMenuId": "10000032",
+      "name": "갈아만든배 뚱캔",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000016",
+      "sourceMenuId": "10000016",
+      "name": "오순도순 패밀리세트[마라샹궈]",
+      "description": "마라샹궈+꿔바로우+음료(택3)",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000033",
+      "sourceMenuId": "10000033",
+      "name": "코코팜 뚱캔",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-90000006",
+      "sourceMenuId": "90000006",
+      "name": "설원(병)(450ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-10000034",
+      "sourceMenuId": "10000034",
+      "name": "코코팜피치핑크복숭아 뚱캔",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-90000007",
+      "sourceMenuId": "90000007",
+      "name": "라오왕 연태구냥 플러스(병)(125ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-90000008",
+      "sourceMenuId": "90000008",
+      "name": "라오왕 연태구냥 플러스(병)(250ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-10000040",
+      "sourceMenuId": "10000040",
+      "name": "쿨피스 복숭아 맛",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000035",
+      "sourceMenuId": "10000035",
+      "name": "빙홍차",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-90000009",
+      "sourceMenuId": "90000009",
+      "name": "라오왕 연태구냥 플러스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1244015-10000036",
+      "sourceMenuId": "10000036",
+      "name": "빙탕쉐리",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000037",
+      "sourceMenuId": "10000037",
+      "name": "차파이(레몬홍차)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1244015-10000038",
+      "sourceMenuId": "10000038",
+      "name": "차파이(유자)",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "storeId": "da46c2fa0f47744b",
+  "storeName": "호세야 오리바베큐 여수엑스포점",
+  "displayName": "호세야 오리바베큐 여수엑스포점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/3744775d-05f9-40c8-97a1-da2afeec6a2c.jpg",
+  "categories": [
+    "전체",
+    "호세야 오리바베큐 메뉴",
+    "호세야 도시락 세트",
+    "오리 떡갈비",
+    "추가배달료",
+    "호세야 추가 메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1164344-10000003",
+      "sourceMenuId": "10000003",
+      "name": "모듬 장작 바베큐(오리+삼겹)",
+      "description": "장작바베큐 뿐만 아니라 장작에서 갓 구워낸 통 삼겹살과 함께 맛을 느낄 수 있습니다.",
+      "category": "호세야 오리바베큐 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/bd2a3c51-e41d-4243-a887-6f6b7842c2fa.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000001",
+      "sourceMenuId": "10000001",
+      "name": "오리 장작 바베큐",
+      "description": "오리를 통째로 훈연하여 냄새가 나지 않으며 참나무 장작으로 구운 향기와 맛을 느낄 수 있습니다.",
+      "category": "호세야 오리바베큐 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/35d4e9e8-f7e4-4a4f-95fa-ee23e1cc69db.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000008",
+      "sourceMenuId": "10000008",
+      "name": "오리바베큐 도시락",
+      "description": "오리바베큐와 밥",
+      "category": "호세야 도시락 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/1f0300b1-c760-4cbe-9c28-a4300a8d737a.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000004",
+      "sourceMenuId": "10000004",
+      "name": "수제소시지 바베큐",
+      "description": "수제 소시지를 참숯으로 구어내어 특유의 씹는 질감에 신선함까지 고스란히 전해드립니다.",
+      "category": "호세야 오리바베큐 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4e89ae35-fb2f-42ab-a771-80b1c16458b4.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000002",
+      "sourceMenuId": "10000002",
+      "name": "통삼겹 장작 바베큐",
+      "description": "부드러운 육질에 삼겹살 특유의 구수한 맛을 참나무 장작으로 구워 독특하게 즐기는 바베큐입니다.",
+      "category": "호세야 오리바베큐 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2c03c216-4674-4b74-ada2-1bcd2c076c82.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000011",
+      "sourceMenuId": "10000011",
+      "name": "수제 오리 떡갈비",
+      "description": "",
+      "category": "오리 떡갈비",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/302ea1d6-f80e-4f95-a3d6-9c65233eea58.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000012",
+      "sourceMenuId": "10000012",
+      "name": "추가배달료 클릭해주세요",
+      "description": "",
+      "category": "추가배달료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-10000015",
+      "sourceMenuId": "10000015",
+      "name": "공기밥",
+      "description": "",
+      "category": "호세야 추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/30c19ba0-778d-4946-99c4-e703bfff75f9.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000020",
+      "sourceMenuId": "10000020",
+      "name": "콜라500ML",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1164344-10000009",
+      "sourceMenuId": "10000009",
+      "name": "통삼겹바베큐 도시락",
+      "description": "통삼겹바베큐와 밥",
+      "category": "호세야 도시락 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/0c9f2c8e-ca5d-4d94-af10-100e1322a252.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000013",
+      "sourceMenuId": "10000013",
+      "name": "만흥동",
+      "description": "",
+      "category": "추가배달료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-10000021",
+      "sourceMenuId": "10000021",
+      "name": "사이다500ML",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-90000002",
+      "sourceMenuId": "90000002",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1164344-10000010",
+      "sourceMenuId": "10000010",
+      "name": "어묵탕",
+      "description": "",
+      "category": "호세야 도시락 세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-10000014",
+      "sourceMenuId": "10000014",
+      "name": "봉계동",
+      "description": "",
+      "category": "추가배달료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-10000022",
+      "sourceMenuId": "10000022",
+      "name": "콜라1.25ML",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1164344-10000023",
+      "sourceMenuId": "10000023",
+      "name": "사이다1.25ML",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-90000004",
+      "sourceMenuId": "90000004",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1164344-10000005",
+      "sourceMenuId": "10000005",
+      "name": "델리소스",
+      "description": "",
+      "category": "호세야 오리바베큐 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/30ad6db9-936c-4fe2-aedc-522ea5b777e1.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000024",
+      "sourceMenuId": "10000024",
+      "name": "생수2L",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1164344-10000006",
+      "sourceMenuId": "10000006",
+      "name": "머스타드소스",
+      "description": "",
+      "category": "호세야 오리바베큐 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c9299ac1-40a1-4027-98fa-afd1b8c59551.jpg"
+    },
+    {
+      "id": "ddangyo-1164344-10000007",
+      "sourceMenuId": "10000007",
+      "name": "볼케이노소스(매운소스)",
+      "description": "",
+      "category": "호세야 오리바베큐 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/945905fb-a804-489e-b1a6-4d6ebf798752.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

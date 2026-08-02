@@ -1,0 +1,401 @@
+{
+  "storeId": "8df8f77db6d9a205",
+  "storeName": "청담낙곱새 전남여수점",
+  "displayName": "청담낙곱새 전남여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c70a3d10-878e-43c0-89d3-c0747a21092d.jpg",
+  "categories": [
+    "전체",
+    "청담낙곱새 (조리메뉴)",
+    "사이드메뉴",
+    "튀김메뉴",
+    "음료수",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1285606-10000001",
+      "sourceMenuId": "10000001",
+      "name": "청담낙곱새",
+      "description": "낙지+소대창+새우+비빔밥2",
+      "category": "청담낙곱새 (조리메뉴)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/934c2500-5df0-4d83-880b-95a4fbde6351.jpg"
+    },
+    {
+      "id": "ddangyo-1285606-10000002",
+      "sourceMenuId": "10000002",
+      "name": "청담낙삼새",
+      "description": "낙지+삼겹+새우+비빔밥2",
+      "category": "청담낙곱새 (조리메뉴)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/4c49a5cd-d753-4bc7-af9c-7156d852e7e6.jpg"
+    },
+    {
+      "id": "ddangyo-1285606-10000003",
+      "sourceMenuId": "10000003",
+      "name": "청담쭈곱새",
+      "description": "쭈꾸미+소대창+새우+비빔밥2",
+      "category": "청담낙곱새 (조리메뉴)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/5c536791-e9c1-4f30-8e74-d321d445ba1c.jpg"
+    },
+    {
+      "id": "ddangyo-1285606-10000005",
+      "sourceMenuId": "10000005",
+      "name": "맛보기육회",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000015",
+      "sourceMenuId": "10000015",
+      "name": "POP만두",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000034",
+      "sourceMenuId": "10000034",
+      "name": "탄산수 ( 라인바싸 )",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-90000001",
+      "sourceMenuId": "90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285606-10000006",
+      "sourceMenuId": "10000006",
+      "name": "육즙가득떡갈비",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000016",
+      "sourceMenuId": "10000016",
+      "name": "왕새우튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000035",
+      "sourceMenuId": "10000035",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285606-10000007",
+      "sourceMenuId": "10000007",
+      "name": "참치마요덮밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000017",
+      "sourceMenuId": "10000017",
+      "name": "치킨가라아게",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000036",
+      "sourceMenuId": "10000036",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-90000003",
+      "sourceMenuId": "90000003",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285606-10000004",
+      "sourceMenuId": "10000004",
+      "name": "청담낙곱새(1인)",
+      "description": "1인메뉴(택1)+비빔밥1",
+      "category": "청담낙곱새 (조리메뉴)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/4da6c0b0-4fb8-43e6-a406-ac81fd2fe724.jpg"
+    },
+    {
+      "id": "ddangyo-1285606-10000008",
+      "sourceMenuId": "10000008",
+      "name": "청담미니비빔밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/373af7d6-bab8-4730-9f1d-ce56cf70200d.jpg"
+    },
+    {
+      "id": "ddangyo-1285606-10000018",
+      "sourceMenuId": "10000018",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000037",
+      "sourceMenuId": "10000037",
+      "name": "탐스제로 파인맛",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-90000004",
+      "sourceMenuId": "90000004",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285606-10000009",
+      "sourceMenuId": "10000009",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000019",
+      "sourceMenuId": "10000019",
+      "name": "한입핫도그",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000038",
+      "sourceMenuId": "10000038",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-90000005",
+      "sourceMenuId": "90000005",
+      "name": "하이트 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285606-10000010",
+      "sourceMenuId": "10000010",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000020",
+      "sourceMenuId": "10000020",
+      "name": "크림치즈볼",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000039",
+      "sourceMenuId": "10000039",
+      "name": "생수",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-90000006",
+      "sourceMenuId": "90000006",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1285606-10000011",
+      "sourceMenuId": "10000011",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000021",
+      "sourceMenuId": "10000021",
+      "name": "야끼만두",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000040",
+      "sourceMenuId": "10000040",
+      "name": "펩시콜라 1.25L",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000012",
+      "sourceMenuId": "10000012",
+      "name": "갈비찐만두 (만두6+간장+단무지)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000022",
+      "sourceMenuId": "10000022",
+      "name": "김말이",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000041",
+      "sourceMenuId": "10000041",
+      "name": "칠성사이다 1.25L",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000013",
+      "sourceMenuId": "10000013",
+      "name": "병천순대 순대(300g)+양념소금",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000023",
+      "sourceMenuId": "10000023",
+      "name": "고구마튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000014",
+      "sourceMenuId": "10000014",
+      "name": "물만두 (간장 1 포함)",
+      "description": "물만두 20p + 간장1개",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000024",
+      "sourceMenuId": "10000024",
+      "name": "해쉬브라운",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000025",
+      "sourceMenuId": "10000025",
+      "name": "맛감자",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000026",
+      "sourceMenuId": "10000026",
+      "name": "튀김왕교자만두",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000027",
+      "sourceMenuId": "10000027",
+      "name": "튀김왕교자갈비만두",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000028",
+      "sourceMenuId": "10000028",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000029",
+      "sourceMenuId": "10000029",
+      "name": "튀김왕만두",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000030",
+      "sourceMenuId": "10000030",
+      "name": "팝콘치킨",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000031",
+      "sourceMenuId": "10000031",
+      "name": "왕고추튀김",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000032",
+      "sourceMenuId": "10000032",
+      "name": "라이스 치즈볼",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1285606-10000033",
+      "sourceMenuId": "10000033",
+      "name": "곰돌이 돈까스",
+      "description": "",
+      "category": "튀김메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "storeId": "25ebed742b1238d5",
+  "storeName": "치킨아이 무선점",
+  "displayName": "치킨아이 무선점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b2c8c708-9c1d-41b0-acab-0bc258f7084d.jpg",
+  "categories": [
+    "전체",
+    "주류메뉴",
+    "신메뉴",
+    "메뉴소개",
+    "세트메뉴",
+    "추가선택",
+    "사이드메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1210869-90000001",
+      "sourceMenuId": "90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1210869-10000034",
+      "sourceMenuId": "10000034",
+      "name": "매실 간장 반반(간+후) 치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d1d10d26-0254-481d-9f5f-b6ae91258ed9.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000035",
+      "sourceMenuId": "10000035",
+      "name": "매실 후라이드치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/3f95ded3-e6df-446e-be93-4d12c6426479.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000052",
+      "sourceMenuId": "10000052",
+      "name": "간/양 한마리 반",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000056",
+      "sourceMenuId": "10000056",
+      "name": "양념소스",
+      "description": "",
+      "category": "추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000064",
+      "sourceMenuId": "10000064",
+      "name": "닭똥집튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4dc160e8-e402-483b-9b6b-c36e22bead89.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-90000002",
+      "sourceMenuId": "90000002",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1210869-10000036",
+      "sourceMenuId": "10000036",
+      "name": "매실 양념치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d6dd1cd2-55da-4e38-af2b-b73e14fde376.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000053",
+      "sourceMenuId": "10000053",
+      "name": "간/핫 한마리 반",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000057",
+      "sourceMenuId": "10000057",
+      "name": "겨자소스",
+      "description": "",
+      "category": "추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000065",
+      "sourceMenuId": "10000065",
+      "name": "무뼈닭발튀김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a5664209-4ba6-4ea8-a18a-2f72ce4b569d.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-90000003",
+      "sourceMenuId": "90000003",
+      "name": "하이트 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1210869-10000037",
+      "sourceMenuId": "10000037",
+      "name": "매실 반반(후+양) 치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b2c8c708-9c1d-41b0-acab-0bc258f7084d.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000054",
+      "sourceMenuId": "10000054",
+      "name": "순살 간/양 한마리 반",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000058",
+      "sourceMenuId": "10000058",
+      "name": "핫소스",
+      "description": "",
+      "category": "추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000038",
+      "sourceMenuId": "10000038",
+      "name": "매실 핫(매운맛)치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d6dd1cd2-55da-4e38-af2b-b73e14fde376.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000055",
+      "sourceMenuId": "10000055",
+      "name": "순살 간/핫 한마리 반",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000059",
+      "sourceMenuId": "10000059",
+      "name": "치킨 무",
+      "description": "",
+      "category": "추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000039",
+      "sourceMenuId": "10000039",
+      "name": "매실 핫 반반(후+핫) 치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b2c8c708-9c1d-41b0-acab-0bc258f7084d.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000060",
+      "sourceMenuId": "10000060",
+      "name": "간장소스",
+      "description": "",
+      "category": "추가선택",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000040",
+      "sourceMenuId": "10000040",
+      "name": "매실 순살 후라이드치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/859b8469-1d09-45bb-a65c-857ca76237a6.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000041",
+      "sourceMenuId": "10000041",
+      "name": "매실 순살 양념치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f7503346-8dd6-4dd6-8194-c9d0ad923823.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000042",
+      "sourceMenuId": "10000042",
+      "name": "매실 순살양념 반반(후+양) 치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ab825b17-3dcf-41cd-b02b-14ded9ab3905.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000043",
+      "sourceMenuId": "10000043",
+      "name": "매실 순살 간장치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/fe9cc721-0e37-4dd5-9559-ec4e68a71ba7.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000044",
+      "sourceMenuId": "10000044",
+      "name": "매실 순살 간장 반반(후+간) 치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1210869-10000045",
+      "sourceMenuId": "10000045",
+      "name": "매실 순살 핫치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f7503346-8dd6-4dd6-8194-c9d0ad923823.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000046",
+      "sourceMenuId": "10000046",
+      "name": "매실 순살 핫 반반(후+핫) 치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ab825b17-3dcf-41cd-b02b-14ded9ab3905.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000047",
+      "sourceMenuId": "10000047",
+      "name": "순살 강정치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9cd89a05-a25f-4816-9b39-d37122b4c72f.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000048",
+      "sourceMenuId": "10000048",
+      "name": "순살 파닭",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2f7d5994-a0fb-4f9c-9d85-a26961422524.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000049",
+      "sourceMenuId": "10000049",
+      "name": "순살 간장 파닭",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2f7d5994-a0fb-4f9c-9d85-a26961422524.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000050",
+      "sourceMenuId": "10000050",
+      "name": "순살 핫 파닭",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/34059932-2c52-465c-b3f2-9fadab287642.jpg"
+    },
+    {
+      "id": "ddangyo-1210869-10000051",
+      "sourceMenuId": "10000051",
+      "name": "다리 날개치킨",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/833b8bc2-0859-441e-b58d-e9419292e095.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

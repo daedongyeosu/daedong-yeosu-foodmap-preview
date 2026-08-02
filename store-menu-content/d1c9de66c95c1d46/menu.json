@@ -1,0 +1,134 @@
+{
+  "storeId": "d1c9de66c95c1d46",
+  "storeName": "덮밥전문점 고기그릇 여수점",
+  "displayName": "덮밥전문점 고기그릇 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0ac7b45c-51d2-4fab-9c70-a6b0b69bf3cc.jpg",
+  "categories": [
+    "전체",
+    "주류메뉴",
+    "Meat Bowl",
+    "신메뉴",
+    "drink"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1136190-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스 프레시(병)(330ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136190-10000016",
+      "sourceMenuId": "10000016",
+      "name": "항정살덮밥도시락",
+      "description": "마블링최고의 항정살로 만든 검증된 No.1 덮밥",
+      "category": "Meat Bowl",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/66446c37-404c-4263-ad3f-064017370927.jpg"
+    },
+    {
+      "id": "ddangyo-1136190-10000021",
+      "sourceMenuId": "10000021",
+      "name": "주꾸미덮밥도시락",
+      "description": "TRUST ME, LET`S DIG IN, ENJOY :)",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/d7e6af8a-a538-4f8f-8b8c-1d5c73886395.jpg"
+    },
+    {
+      "id": "ddangyo-1136190-10000023",
+      "sourceMenuId": "10000023",
+      "name": "펩시콜라 355ml",
+      "description": "",
+      "category": "drink",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136190-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136190-10000017",
+      "sourceMenuId": "10000017",
+      "name": "삼겹살덮밥도시락",
+      "description": "삼겹살은 신이내린 고기, 말이 필요없다.",
+      "category": "Meat Bowl",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2503b46c-819d-45f8-8554-ba957ab6feb7.jpg"
+    },
+    {
+      "id": "ddangyo-1136190-10000022",
+      "sourceMenuId": "10000022",
+      "name": "치킨마요덮밥도시락",
+      "description": "오리지널치킨마요덮밥에 특제간장소스를 더했다.",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ef36a702-2743-455d-ba70-be9d4ec9c653.jpg"
+    },
+    {
+      "id": "ddangyo-1136190-10000024",
+      "sourceMenuId": "10000024",
+      "name": "칠성사이다 355ml",
+      "description": "",
+      "category": "drink",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136190-90000002",
+      "sourceMenuId": "90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136190-10000018",
+      "sourceMenuId": "10000018",
+      "name": "우삼겹덮밥도시락",
+      "description": "소고기 부위중 육즙 맛이 가장 뛰어난 우삼겹.",
+      "category": "Meat Bowl",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f33d309f-2863-4dba-bc53-482bb89fb965.jpg"
+    },
+    {
+      "id": "ddangyo-1136190-10000025",
+      "sourceMenuId": "10000025",
+      "name": "탐스파인 355ml",
+      "description": "",
+      "category": "drink",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136190-90000004",
+      "sourceMenuId": "90000004",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136190-10000019",
+      "sourceMenuId": "10000019",
+      "name": "제육볶음덮밥도시락",
+      "description": "제육볶음덮밥도시락+기본국+기본찬+비빔장",
+      "category": "Meat Bowl",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/21461d61-a1f2-4018-9958-372f567742d1.jpg"
+    },
+    {
+      "id": "ddangyo-1136190-10000020",
+      "sourceMenuId": "10000020",
+      "name": "육회 도시락",
+      "description": "",
+      "category": "Meat Bowl",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/69dff670-da1f-45da-8e55-8b60a9cc172e.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

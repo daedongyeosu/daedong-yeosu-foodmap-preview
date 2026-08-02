@@ -1,0 +1,396 @@
+{
+  "storeId": "05a9fdb9f37f4b6b",
+  "storeName": "데이지샌드",
+  "displayName": "데이지샌드",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ca2d07ac-179d-4fb9-b1de-277966269b72.jpg",
+  "categories": [
+    "전체",
+    "샌드위치",
+    "수제버거",
+    "토스트",
+    "샐러드",
+    "음료메뉴",
+    "그릭요거트"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1229614-10000005",
+      "sourceMenuId": "10000005",
+      "name": "에그 빵빵 샌드위치",
+      "description": "빵+체다치즈+시그니처 소스+계란(3개)+파슬리",
+      "category": "샌드위치",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/462e370d-3114-4b84-b4c5-739f219720af.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000006",
+      "sourceMenuId": "10000006",
+      "name": "에그햄치즈 샌드위치",
+      "description": "빵+시그니처 소스+체다치즈+비어슁캔 슬라이스(햄)+계란+토마토+양배추+양상추+청상추",
+      "category": "샌드위치",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/123e2ee3-4f23-41ae-935e-f1c40b51a712.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000007",
+      "sourceMenuId": "10000007",
+      "name": "닭가슴살 빵빵 샌드위치",
+      "description": "빵+시그니처소스+체다치즈+비어슁캔 슬라이스(햄)+계란+닭가슴살+토마토+양배추+양상추+청상추",
+      "category": "샌드위치",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b07671bd-d832-4cb9-98a9-ce1a8fa4fd11.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000001",
+      "sourceMenuId": "10000001",
+      "name": "데이지버거",
+      "description": "매장/포장 주문 시 3,900원",
+      "category": "수제버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c6254c5b-1ed1-4782-8666-60f519e0db7b.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000010",
+      "sourceMenuId": "10000010",
+      "name": "딸기잼 토스트",
+      "description": "클래식한 딸기잼 토스트",
+      "category": "토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/793650cd-0290-4ea6-85ac-3e820192b3f1.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000015",
+      "sourceMenuId": "10000015",
+      "name": "그린샐러드",
+      "description": "청상추+양상추+양배추+토마토+옥수수+병아리콩+계란+올리브+파슬리",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/d236eda6-cf54-44f9-85df-7e5c77f0df1d.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000020",
+      "sourceMenuId": "10000020",
+      "name": "아메리카노",
+      "description": "매장/포장 주문 시 1,000원",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/0d9411e7-22c4-4cf1-9594-34729690a1da.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000049",
+      "sourceMenuId": "10000049",
+      "name": "플레인 그릭요거트(80g)",
+      "description": "",
+      "category": "그릭요거트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/ffeb8434-1033-4077-a6b0-7c462930786a.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000011",
+      "sourceMenuId": "10000011",
+      "name": "블루베리잼 토스트",
+      "description": "자꾸 생각나는 블루베리잼 토스트",
+      "category": "토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/793650cd-0290-4ea6-85ac-3e820192b3f1.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000016",
+      "sourceMenuId": "10000016",
+      "name": "닭가슴살 듬뿍 샐러드",
+      "description": "청상추+양상추+양배추+토마토+옥수수+병아리콩+계란+올리브+닭가슴살+파슬리",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2f3168b4-1d52-45d7-8885-3ee192a7a987.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000021",
+      "sourceMenuId": "10000021",
+      "name": "레몬 아이스티",
+      "description": "Only ICE",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c5bcb820-1cd1-459a-8bb9-ddce7e8f93cb.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000050",
+      "sourceMenuId": "10000050",
+      "name": "딸기 그릭요거트",
+      "description": "",
+      "category": "그릭요거트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/1f6af256-93bc-4e5f-8367-9f95afa87904.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000002",
+      "sourceMenuId": "10000002",
+      "name": "샤샤버거(새우버거)",
+      "description": "매장/포장 주문 시 5,900원",
+      "category": "수제버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/bb19ceed-d1f4-45f8-b5da-a75c404fbccc.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000012",
+      "sourceMenuId": "10000012",
+      "name": "망고잼 토스트",
+      "description": "마성의 중독성 망고잼 토스트",
+      "category": "토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/793650cd-0290-4ea6-85ac-3e820192b3f1.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000017",
+      "sourceMenuId": "10000017",
+      "name": "단호박 듬뿍 샐러드",
+      "description": "청상추+양상추+양배추+토마토+옥수수+병아리콩+계란+올리브+으깬 단호박+파슬리",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/f0c2abb5-0994-4caa-a58f-067823ab542b.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000022",
+      "sourceMenuId": "10000022",
+      "name": "복숭아 아이스티",
+      "description": "Only ICE",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000314.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000051",
+      "sourceMenuId": "10000051",
+      "name": "블루베리 그릭요거트",
+      "description": "",
+      "category": "그릭요거트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/5b0d45e2-c6f6-4e61-bebd-e8f24fbdba2f.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000008",
+      "sourceMenuId": "10000008",
+      "name": "단호박 빵빵 샌드위치",
+      "description": "빵+시그니처 소스+체다치즈+비어슁캔 슬라이스(햄)+계란+단호박+토마토+양배추+양상추+청상추",
+      "category": "샌드위치",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c7f46f23-9cd9-47fb-819b-b6e0377d21ce.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000013",
+      "sourceMenuId": "10000013",
+      "name": "복숭아잼 토스트",
+      "description": "과육이 살아있는 복숭아잼 토스트",
+      "category": "토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/793650cd-0290-4ea6-85ac-3e820192b3f1.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000018",
+      "sourceMenuId": "10000018",
+      "name": "감자 듬뿍 샐러드",
+      "description": "청상추+양상추+양배추+토마토+옥수수+병아리콩+계란+올리브+으깬 감자+파슬리",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/0474ff17-d5ca-4e4f-9b28-31cda163c4fe.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000023",
+      "sourceMenuId": "10000023",
+      "name": "콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1229614-10000039",
+      "sourceMenuId": "10000039",
+      "name": "리얼 불고기버거",
+      "description": "매장/포장 주문 시 6,900원",
+      "category": "수제버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/d9d2471e-ddc2-4a7f-a0ee-6a2257ba7c65.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000052",
+      "sourceMenuId": "10000052",
+      "name": "망고 그릭요거트",
+      "description": "",
+      "category": "그릭요거트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/34ddc429-7394-4a10-9fb4-4dd980d875fc.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000009",
+      "sourceMenuId": "10000009",
+      "name": "감자 빵빵 샌드위치",
+      "description": "빵+시그니처 소스+체다치즈+비어슁캔 슬라이스(햄)+계란+감자+토마토+양배추+양상추+청상추",
+      "category": "샌드위치",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/d2025531-f61a-444a-ad54-0a68845e4fe7.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000014",
+      "sourceMenuId": "10000014",
+      "name": "그린 카야잼 토스트",
+      "description": "코코넛으로 만든 은은한 단맛의 그림 카야잼 토스트",
+      "category": "토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/793650cd-0290-4ea6-85ac-3e820192b3f1.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000024",
+      "sourceMenuId": "10000024",
+      "name": "제로콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1229614-10000040",
+      "sourceMenuId": "10000040",
+      "name": "치킨 데리야끼 버거",
+      "description": "매장/포장 주문 시 7,900원",
+      "category": "수제버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d7155891-f9d4-428b-94ba-92d64ceeb49d.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000043",
+      "sourceMenuId": "10000043",
+      "name": "새우 듬뿍 샐러드",
+      "description": "청상추+양상추+양배추+토마토+옥수수+병아리콩+계란+올리브+구운 새우+파슬리",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/149c3a24-1234-42af-8f6a-df1ca2d96a5f.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000053",
+      "sourceMenuId": "10000053",
+      "name": "복숭아 그릭요거트",
+      "description": "",
+      "category": "그릭요거트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/34ddc429-7394-4a10-9fb4-4dd980d875fc.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000003",
+      "sourceMenuId": "10000003",
+      "name": "회오리감자",
+      "description": "",
+      "category": "수제버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/5bc5c2f9-7995-4ab1-beeb-203eb42a0312.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000025",
+      "sourceMenuId": "10000025",
+      "name": "사이다",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1229614-10000042",
+      "sourceMenuId": "10000042",
+      "name": "참치마요 샌드위치",
+      "description": "참치마요+양배추",
+      "category": "샌드위치",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1229614-10000044",
+      "sourceMenuId": "10000044",
+      "name": "푸실리 샐러드",
+      "description": "청상추+양상추+양배추+토마토+옥수수+병아리콩+계란+올리브+푸실리 토핑+파슬리",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/af91804a-146c-4f14-a0d1-83fae6f21d3b.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000026",
+      "sourceMenuId": "10000026",
+      "name": "제로사이다",
+      "description": "",
+      "category": "음료메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1229614-10000041",
+      "sourceMenuId": "10000041",
+      "name": "오징어튀김",
+      "description": "",
+      "category": "수제버거",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/7f92a5bb-310a-4cb4-90f7-148a3b74b6e8.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000045",
+      "sourceMenuId": "10000045",
+      "name": "하루견과 샐러드",
+      "description": "아몬드, 호두, 볶은 현미, 렌틸콩, 크랜베리, 요거트건포도 토핑+그린샐러드",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/9690c561-8b96-4828-811b-bfab342c845e.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000047",
+      "sourceMenuId": "10000047",
+      "name": "페퍼민트",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000770.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000048",
+      "sourceMenuId": "10000048",
+      "name": "캐모마일",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8f7bd661-6e73-4ba2-855f-ef7c4e46cd90.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000027",
+      "sourceMenuId": "10000027",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f1dd3be5-2c69-4dba-9618-55ccddf081d1.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000028",
+      "sourceMenuId": "10000028",
+      "name": "라즈베리 에이드",
+      "description": "베리베리 상큼한 라즈베리 에이드",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000128.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000029",
+      "sourceMenuId": "10000029",
+      "name": "망고 에이드",
+      "description": "찐하게 달달한 망고 에이드",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/477f6d80-a5bb-455e-8420-1884e393ecee.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000030",
+      "sourceMenuId": "10000030",
+      "name": "체리 에이드",
+      "description": "기분 좋게 달달한 체리 에이드",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/1d609e81-8527-426d-afdd-75bcf4ac3d84.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000031",
+      "sourceMenuId": "10000031",
+      "name": "카페라떼",
+      "description": "고소하고 깔끔한 카페라떼",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/15bcf85e-98d5-4309-bb59-37c2bfa7f9f4.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000032",
+      "sourceMenuId": "10000032",
+      "name": "바닐라라떼",
+      "description": "고급스럽게 달달한 바닐라라떼",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/22b3ce79-0138-402f-a826-bba67fe74064.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000033",
+      "sourceMenuId": "10000033",
+      "name": "녹차라떼",
+      "description": "적당히 쌉싸름한 녹차라떼",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/6771a298-64dd-492f-a7f7-e3d59e66b08d.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000034",
+      "sourceMenuId": "10000034",
+      "name": "초코라떼",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/d3577901-43df-41ce-a1ee-af2b9ba93c7d.jpg"
+    },
+    {
+      "id": "ddangyo-1229614-10000035",
+      "sourceMenuId": "10000035",
+      "name": "고구마라떼",
+      "description": "Only HOT",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3f0dbdc1-337b-4199-ad05-609f46a47fe9.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "storeId": "6772d4141d54e74d",
+  "storeName": "엄마미안 김치찜 여수점",
+  "displayName": "엄마미안 김치찜 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/68f03471-a653-402b-9ba3-26b1e16a56c7.jpg",
+  "categories": [
+    "전체",
+    "주류메뉴",
+    "메인 메뉴",
+    "단품 메뉴",
+    "1인 백반 & 덮밥",
+    "사이드 메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1136189-90000001",
+      "sourceMenuId": "90000001",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136189-10000029",
+      "sourceMenuId": "10000029",
+      "name": "돼지 김치찜 세트",
+      "description": "중:푸짐한 김치찜 중+계란찜+공기밥2+도시락김1+꼬들단무지 대:푸짐한 김치찜 대+계란찜+공기밥3+도시락김2+꼬들단무지",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/541b910c-e18d-4e61-8951-3ec40bd9f1aa.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000034",
+      "sourceMenuId": "10000034",
+      "name": "돼지 김치찜 단품",
+      "description": "중 : 돼지 김치찜 중 단품 대 : 돼지 김치찜 대 단품",
+      "category": "단품 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/543b7359-07b5-4b25-9fbd-a9c46c6aa1ed.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000039",
+      "sourceMenuId": "10000039",
+      "name": "육회덮밥",
+      "description": "담백하니 깔끔하게 소금,참기름,깨소금으로 간 하였습니다.",
+      "category": "1인 백반 & 덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d04aa3e0-5ab5-48ff-9da7-49b884ac9e32.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000045",
+      "sourceMenuId": "10000045",
+      "name": "함박스테이크",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002234.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000054",
+      "sourceMenuId": "10000054",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136189-90000002",
+      "sourceMenuId": "90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136189-10000030",
+      "sourceMenuId": "10000030",
+      "name": "순두부 김치찜 세트",
+      "description": "중:푸짐한 김치찜 중+계란찜+공기밥2+도시락김1+꼬들단무지 대:푸짐한 김치찜 대+계란찜+공기밥3+도시락김2+꼬들단무지",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/2c083452-b002-48e6-84de-148a20e2c9a8.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000035",
+      "sourceMenuId": "10000035",
+      "name": "순두부 김치찜 단품",
+      "description": "중 : 순두부 김치찜 중 단품 대 : 순두부 김치찜 대 단품",
+      "category": "단품 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/340b6d7b-1f9d-4dd4-9da4-e9eed5d5e888.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000040",
+      "sourceMenuId": "10000040",
+      "name": "치킨마요덮밥",
+      "description": "치느님+나의사랑 마요네즌데 무슨말이 필요할까요",
+      "category": "1인 백반 & 덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/abdf8418-5d2c-4eff-86ae-5cce5d534dec.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000046",
+      "sourceMenuId": "10000046",
+      "name": "비엔나소시지 야채볶음",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/1c3fbb89-91e3-4cbc-b911-81160042415b.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000055",
+      "sourceMenuId": "10000055",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136189-90000003",
+      "sourceMenuId": "90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136189-10000031",
+      "sourceMenuId": "10000031",
+      "name": "우삼겹 김치찜 세트",
+      "description": "중:푸짐한 김치찜 중+계란찜+공기밥2+도시락김1+꼬들단무지 대:푸짐한 김치찜 대+계란찜+공기밥3+도시락김2+꼬들단무지",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d0622ba0-10a8-4ba6-bc3e-aed88f1ce6e6.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000036",
+      "sourceMenuId": "10000036",
+      "name": "우삼겹 김치찜 단품",
+      "description": "중: 우삼겹 김치찜 중 단품 대: 우삼겹 김치찜 대 단품",
+      "category": "단품 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d0622ba0-10a8-4ba6-bc3e-aed88f1ce6e6.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000041",
+      "sourceMenuId": "10000041",
+      "name": "[1인분]닭불고기 백반정식",
+      "description": "든든..",
+      "category": "1인 백반 & 덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/010ad215-5b33-4679-897b-6a5075674a77.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000047",
+      "sourceMenuId": "10000047",
+      "name": "통통돈까스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/dba6f5dd-cc47-44e0-a31a-c9cbd12eaf26.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000056",
+      "sourceMenuId": "10000056",
+      "name": "탐스파인",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1136189-90000004",
+      "sourceMenuId": "90000004",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1136189-10000032",
+      "sourceMenuId": "10000032",
+      "name": "꽁치 김치찜 세트",
+      "description": "중:푸짐한 김치찜 중+계란찜+공기밥2+도시락김1+꼬들단무지 대:푸짐한 김치찜 대+계란찜+공기밥3+도시락김2+꼬들단무지",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/5163c050-7832-4fce-8ac4-47843864e450.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000037",
+      "sourceMenuId": "10000037",
+      "name": "꽁치 김치찜 단품",
+      "description": "중: 김치찜 중 단품 대: 김치찜 대 단품",
+      "category": "단품 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/657cde03-6325-4039-9af7-a9c7e12b3264.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000042",
+      "sourceMenuId": "10000042",
+      "name": "[1인분]우삼겹 백반정식",
+      "description": "부족함 없는 구성",
+      "category": "1인 백반 & 덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2a09b367-b3ac-4f20-9900-bb773b5d04bc.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000048",
+      "sourceMenuId": "10000048",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f88e15b8-6e83-4b87-8d1a-b00782d4a76b.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000033",
+      "sourceMenuId": "10000033",
+      "name": "참치 김치찜 세트",
+      "description": "중:푸짐한 김치찜 중+계란찜+공기밥2+도시락김1+꼬들단무지 대:푸짐한 김치찜 대+계란찜+공기밥3+도시락김2+꼬들단무지",
+      "category": "메인 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/47866714-2d8c-4a45-b68d-060a24c65601.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000038",
+      "sourceMenuId": "10000038",
+      "name": "참치 김치찜 단품",
+      "description": "중 : 참치 김치찜 중 단품 대 : 참치 김치찜 대 단품",
+      "category": "단품 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/426ede8c-17de-4ef7-9f4e-6ac06f4ca432.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000043",
+      "sourceMenuId": "10000043",
+      "name": "[1인분]쭈꾸미 백반정식",
+      "description": "알차다 알차",
+      "category": "1인 백반 & 덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/950a2225-ded3-4a0a-9c04-833348479c0d.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000049",
+      "sourceMenuId": "10000049",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/043c9344-7292-40b9-91ce-148805902e11.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000044",
+      "sourceMenuId": "10000044",
+      "name": "제육볶음덮밥도시락",
+      "description": "제육볶음덮밥도시락+기본국+기본찬+비빔장",
+      "category": "1인 백반 & 덮밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/7eab783a-2e9c-4edf-b3df-42b0d146e7d9.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000050",
+      "sourceMenuId": "10000050",
+      "name": "치킨 가라아게 (닭튀김)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b377f6c0-11e6-4630-8027-d15f34f1f962.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000051",
+      "sourceMenuId": "10000051",
+      "name": "추억의 떡꼬치 20개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/4767e7ee-b76b-4b8c-b0a1-97af1f679b0a.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000052",
+      "sourceMenuId": "10000052",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3f8a0a43-849e-470d-8018-097cb5fc7521.jpg"
+    },
+    {
+      "id": "ddangyo-1136189-10000053",
+      "sourceMenuId": "10000053",
+      "name": "도시락김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/8c1bbc52-c231-4855-bc4c-a928f88fa095.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

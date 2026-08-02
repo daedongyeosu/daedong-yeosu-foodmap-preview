@@ -1,0 +1,113 @@
+{
+  "storeId": "2e2afe0788acce6a",
+  "storeName": "동서울왕족발",
+  "displayName": "동서울왕족발",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/d4feb2ca-3ecb-42be-8c35-05ebb352691f.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "곁들임 메뉴",
+    "음료메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1133269-10000001",
+      "sourceMenuId": "10000001",
+      "name": "족발",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/ce567656-862c-40ac-9a96-26fd94193589.jpg"
+    },
+    {
+      "id": "ddangyo-1133269-10000002",
+      "sourceMenuId": "10000002",
+      "name": "보쌈",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/52bca1a7-f717-4244-ac71-54961cc2ed45.jpg"
+    },
+    {
+      "id": "ddangyo-1133269-10000005",
+      "sourceMenuId": "10000005",
+      "name": "탕수육",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/74e74a9d-8419-4fbf-b46c-ad4134927484.jpg"
+    },
+    {
+      "id": "ddangyo-1133269-10000012",
+      "sourceMenuId": "10000012",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/12/8e740297-c65d-4729-8e6e-370565c9b62d.jpg"
+    },
+    {
+      "id": "ddangyo-1133269-10000006",
+      "sourceMenuId": "10000006",
+      "name": "쟁반막국수",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/5eaf5268-55af-4c1e-b331-cd1ae1c0d4ac.jpg"
+    },
+    {
+      "id": "ddangyo-1133269-10000003",
+      "sourceMenuId": "10000003",
+      "name": "동서울세트메뉴",
+      "description": "족발+보쌈+탕수육+쟁반국수+보쌈김치+절인배추+야채세트+국물+음료수1.25L",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/29adad97-270c-4214-a17f-bd0d83e4cf7e.jpg"
+    },
+    {
+      "id": "ddangyo-1133269-10000007",
+      "sourceMenuId": "10000007",
+      "name": "상추셋트",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1133269-10000004",
+      "sourceMenuId": "10000004",
+      "name": "쟁반국수",
+      "description": "추가주문시 주문가능",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/4017ef1a-786b-429a-ac07-820500982df3.jpg"
+    },
+    {
+      "id": "ddangyo-1133269-10000008",
+      "sourceMenuId": "10000008",
+      "name": "절인배추+무우김치",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1133269-10000009",
+      "sourceMenuId": "10000009",
+      "name": "무우김치",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1133269-10000010",
+      "sourceMenuId": "10000010",
+      "name": "절인배추",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1133269-10000011",
+      "sourceMenuId": "10000011",
+      "name": "공기밥",
+      "description": "",
+      "category": "곁들임 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

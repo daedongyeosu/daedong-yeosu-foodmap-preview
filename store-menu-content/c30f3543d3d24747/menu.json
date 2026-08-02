@@ -1,0 +1,87 @@
+{
+  "storeId": "c30f3543d3d24747",
+  "storeName": "조롱박",
+  "displayName": "조롱박",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/717fabe2-7d24-4e60-82bd-27daa52650c7.jpg",
+  "categories": [
+    "전체",
+    "메뉴 소개"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1261820-10000001",
+      "sourceMenuId": "10000001",
+      "name": "장어탕",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/717fabe2-7d24-4e60-82bd-27daa52650c7.jpg"
+    },
+    {
+      "id": "ddangyo-1261820-10000002",
+      "sourceMenuId": "10000002",
+      "name": "아귀찜",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/bee9de22-42e4-4fb1-aac4-7c071e77a1c8.jpg"
+    },
+    {
+      "id": "ddangyo-1261820-10000003",
+      "sourceMenuId": "10000003",
+      "name": "아귀탕",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/e678284b-d0a8-471b-b786-55d504a3f257.jpg"
+    },
+    {
+      "id": "ddangyo-1261820-10000004",
+      "sourceMenuId": "10000004",
+      "name": "대창찜",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1261820-10000005",
+      "sourceMenuId": "10000005",
+      "name": "대창+아귀",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1261820-10000006",
+      "sourceMenuId": "10000006",
+      "name": "서대회",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1261820-10000007",
+      "sourceMenuId": "10000007",
+      "name": "갈치조림정식",
+      "description": "갈치조림+서대회",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2b359e76-a384-47da-a744-3665a785b53a.jpg"
+    },
+    {
+      "id": "ddangyo-1261820-10000008",
+      "sourceMenuId": "10000008",
+      "name": "공기밥 별도",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/3946028b-6ea9-4ab1-8ad0-6145f99e8408.jpg"
+    },
+    {
+      "id": "ddangyo-1261820-10000009",
+      "sourceMenuId": "10000009",
+      "name": "족발",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9272303f-dcba-4831-ac4e-7ac5f0c1395e.jpg"
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

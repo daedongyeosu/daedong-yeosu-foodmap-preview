@@ -1,0 +1,180 @@
+{
+  "storeId": "d1c6934ccbb62ba6",
+  "storeName": "라화쿵부 마라탕 여수학동점",
+  "displayName": "라화쿵부 마라탕 여수학동점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/62de08f1-4d3f-4a54-bdc6-feae1a5318bc.jpg",
+  "categories": [
+    "전체",
+    "[라화쿵부만의, 메인 마라 메뉴]",
+    "[환상 궁합, 세트 메뉴]",
+    "[빠지면 섭섭하지, 사이드 메뉴]",
+    "[든든하게 한끼, 밥 메뉴]",
+    "[별미, 쌀국수 메뉴]",
+    "[화룡점정, 음료 메뉴]"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1143926-10000001",
+      "sourceMenuId": "10000001",
+      "name": "마라탕 麻辣烫",
+      "description": "좋아하는 식재료를 육수에 끓여 얼얼하고 매운맛을 자유선택할수 있는 건강음식",
+      "category": "[라화쿵부만의, 메인 마라 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/3d4c9f7f-9f43-45d2-a51e-4db89a87ffc4.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000003",
+      "sourceMenuId": "10000003",
+      "name": "빛이나는 솔로세트 마라탕 ver.",
+      "description": "마라탕 + 꿔바로우+음료 (택1)",
+      "category": "[환상 궁합, 세트 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/1e4a0cc6-e7ef-42ec-b146-135e57871584.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[ 겉바속쫀 ] 꿔바로우/锅包肉",
+      "description": "겉은 바삭하고 속은 쫀득 쫀득하며 새콤달콤 하여 누구나 즐겨 찾는 튀김요리 입니다",
+      "category": "[빠지면 섭섭하지, 사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/deba843e-e9a7-470f-8680-a50e388243c7.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000002",
+      "sourceMenuId": "10000002",
+      "name": "마라샹궈 麻辣香锅",
+      "description": "매콤 얼얼한 마라맛 + 불맛이 어울려 한층더 업데이트하여 짜릿한 맛을 내는볶음요리",
+      "category": "[라화쿵부만의, 메인 마라 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/5f21d8df-99ce-4f49-b9ae-8dd1330d3bd4.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000016",
+      "sourceMenuId": "10000016",
+      "name": "[ 빠지면 섭섭한 ] 볶음밥/炒饭",
+      "description": "",
+      "category": "[든든하게 한끼, 밥 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c4207b50-f177-458c-88c1-a00d305f7c7f.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000012",
+      "sourceMenuId": "10000012",
+      "name": "야채쌀국수/蔬菜米线",
+      "description": "쌀로 만든 통통하고 쫄깃한 면발과 오리뼈, 닭 육수로 특색있는 면 요리",
+      "category": "[별미, 쌀국수 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6ab7441e-26a9-40a0-903f-8f746b5e7afe.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000018",
+      "sourceMenuId": "10000018",
+      "name": "차파이(복숭아)/蜜桃乌龙茶",
+      "description": "",
+      "category": "[화룡점정, 음료 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1143926-10000004",
+      "sourceMenuId": "10000004",
+      "name": "빛이나는 솔로세트 마라샹궈 ver.",
+      "description": "마라샹궈 1~2인분 + 꿔바로우+음료 (택1)",
+      "category": "[환상 궁합, 세트 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5b43b4a8-8a7d-4be1-9e26-0ae7b3a1eee3.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000013",
+      "sourceMenuId": "10000013",
+      "name": "완자야채쌀국수/鱼丸米线",
+      "description": "쌀로 만든 통통하고 쫄깃한 면발과 오리뼈, 닭 육수로 특색있는 면 요리",
+      "category": "[별미, 쌀국수 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e0920399-4fee-4f95-9d7c-c2ecc4ea69e5.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000017",
+      "sourceMenuId": "10000017",
+      "name": "공깃밥/米饭",
+      "description": "",
+      "category": "[든든하게 한끼, 밥 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000019",
+      "sourceMenuId": "10000019",
+      "name": "차파이(유자녹차)/柚子绿茶",
+      "description": "",
+      "category": "[화룡점정, 음료 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1143926-10000005",
+      "sourceMenuId": "10000005",
+      "name": "반짝이는 커플세트 마라탕 ver.",
+      "description": "마라탕 + 꿔바로우 + 음료 택 2",
+      "category": "[환상 궁합, 세트 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/1e4a0cc6-e7ef-42ec-b146-135e57871584.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000010",
+      "sourceMenuId": "10000010",
+      "name": "[ 육즙 가득 ] 샤오롱바오/灌汤小笼包",
+      "description": "고기 육즙이 가득해 누구나 좋아하는 맛",
+      "category": "[빠지면 섭섭하지, 사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/1b84954b-bf16-4279-9382-263052c36f53.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000014",
+      "sourceMenuId": "10000014",
+      "name": "[ JMT ]소고기야채쌀국수/牛肉米线",
+      "description": "쌀로 만든 통통하고 쫄깃한 면발과 오리뼈, 닭 육수로 특색있는 면 요리",
+      "category": "[별미, 쌀국수 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/069c0097-9c43-4ba6-88f3-c75305c65d41.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000020",
+      "sourceMenuId": "10000020",
+      "name": "차파이(레몬홍차)/柠檬红茶",
+      "description": "",
+      "category": "[화룡점정, 음료 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1143926-10000006",
+      "sourceMenuId": "10000006",
+      "name": "반짝이는 커플세트 마라샹궈 ver.",
+      "description": "마라샹궈 2~3인분 + 꿔바로우 + 음료 택 2",
+      "category": "[환상 궁합, 세트 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5b43b4a8-8a7d-4be1-9e26-0ae7b3a1eee3.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000011",
+      "sourceMenuId": "10000011",
+      "name": "고기빠오즈/发面小笼包",
+      "description": "발효피로 만들어 소화가 잘 되고 부드러운 돼지고기 만두",
+      "category": "[빠지면 섭섭하지, 사이드 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/ad512fd3-44ef-42e8-a4c9-b6693e447427.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000015",
+      "sourceMenuId": "10000015",
+      "name": "양고기야채쌀국수/羊肉米线",
+      "description": "쌀로 만든 통통하고 쫄깃한 면발과 오리뼈, 닭 육수로 특색있는 면 요리",
+      "category": "[별미, 쌀국수 메뉴]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003451.jpg"
+    },
+    {
+      "id": "ddangyo-1143926-10000021",
+      "sourceMenuId": "10000021",
+      "name": "콜라/可乐",
+      "description": "",
+      "category": "[화룡점정, 음료 메뉴]",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1143926-10000022",
+      "sourceMenuId": "10000022",
+      "name": "사이다/汽水",
+      "description": "",
+      "category": "[화룡점정, 음료 메뉴]",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

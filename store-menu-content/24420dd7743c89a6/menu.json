@@ -1,0 +1,204 @@
+{
+  "storeId": "24420dd7743c89a6",
+  "storeName": "라인반점",
+  "displayName": "라인반점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003105.jpg",
+  "categories": [
+    "전체",
+    "면류",
+    "밥류",
+    "요리류",
+    "알뜰1인",
+    "2인세트",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1239141-10000001",
+      "sourceMenuId": "10000001",
+      "name": "짜장면",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/ff8bdd5b-4046-4994-8d9d-e74e9e4c6cdb.jpg"
+    },
+    {
+      "id": "ddangyo-1239141-10000002",
+      "sourceMenuId": "10000002",
+      "name": "짬뽕",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/0d42eeb0-8d61-4d8d-a334-a8173a365578.jpg"
+    },
+    {
+      "id": "ddangyo-1239141-10000003",
+      "sourceMenuId": "10000003",
+      "name": "간짜장면",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/77d0611f-24c3-4bcd-a3dd-8625596540e1.jpg"
+    },
+    {
+      "id": "ddangyo-1239141-10000006",
+      "sourceMenuId": "10000006",
+      "name": "볶음밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/182bc790-4c81-4c99-b377-3aa64be7579b.jpg"
+    },
+    {
+      "id": "ddangyo-1239141-10000010",
+      "sourceMenuId": "10000010",
+      "name": "탕수육",
+      "description": "",
+      "category": "요리류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000013",
+      "sourceMenuId": "10000013",
+      "name": "탕수육+짜장면",
+      "description": "",
+      "category": "알뜰1인",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000017",
+      "sourceMenuId": "10000017",
+      "name": "탕수육+짜장면2",
+      "description": "",
+      "category": "2인세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000023",
+      "sourceMenuId": "10000023",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/c38c1507-4d03-4d35-91f6-4303e683d31f.jpg"
+    },
+    {
+      "id": "ddangyo-1239141-10000007",
+      "sourceMenuId": "10000007",
+      "name": "짬뽕밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2fa14d66-a6a1-4dd4-b195-d9111a10bd37.jpg"
+    },
+    {
+      "id": "ddangyo-1239141-10000011",
+      "sourceMenuId": "10000011",
+      "name": "미니탕수육",
+      "description": "",
+      "category": "요리류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000014",
+      "sourceMenuId": "10000014",
+      "name": "탕수육+짬뽕",
+      "description": "",
+      "category": "알뜰1인",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000018",
+      "sourceMenuId": "10000018",
+      "name": "탕수육+짜장면+짬뽕",
+      "description": "",
+      "category": "2인세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000008",
+      "sourceMenuId": "10000008",
+      "name": "짜장밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/42c0ed5d-9a91-4784-bb8c-e49b2c9dc6ef.jpg"
+    },
+    {
+      "id": "ddangyo-1239141-10000012",
+      "sourceMenuId": "10000012",
+      "name": "군만두",
+      "description": "",
+      "category": "요리류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000015",
+      "sourceMenuId": "10000015",
+      "name": "탕수육+간짜장면",
+      "description": "",
+      "category": "알뜰1인",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000019",
+      "sourceMenuId": "10000019",
+      "name": "탕수육+짬뽕2",
+      "description": "",
+      "category": "2인세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000004",
+      "sourceMenuId": "10000004",
+      "name": "해물짜장면",
+      "description": "",
+      "category": "면류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000009",
+      "sourceMenuId": "10000009",
+      "name": "공기밥",
+      "description": "",
+      "category": "밥류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/dea77d47-dc40-44bb-917e-27fc64d4e216.jpg"
+    },
+    {
+      "id": "ddangyo-1239141-10000016",
+      "sourceMenuId": "10000016",
+      "name": "탕수육+볶음밥",
+      "description": "",
+      "category": "알뜰1인",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000020",
+      "sourceMenuId": "10000020",
+      "name": "탕수육+간짜장면2",
+      "description": "",
+      "category": "2인세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000005",
+      "sourceMenuId": "10000005",
+      "name": "콩국수",
+      "description": "",
+      "category": "면류",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000021",
+      "sourceMenuId": "10000021",
+      "name": "탕수육+볶음밥2",
+      "description": "",
+      "category": "2인세트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1239141-10000022",
+      "sourceMenuId": "10000022",
+      "name": "탕수육+해물쟁반짜장면2",
+      "description": "",
+      "category": "2인세트",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

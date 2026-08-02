@@ -1,0 +1,271 @@
+{
+  "storeId": "925f6f828599eb4f",
+  "storeName": "맛조은",
+  "displayName": "맛조은",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/85bf5b7f-c676-49b5-91a1-a470863e402f.jpg",
+  "categories": [
+    "전체",
+    "메뉴 소개",
+    "사이드",
+    "세트메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1207373-10000001",
+      "sourceMenuId": "10000001",
+      "name": "제육볶음",
+      "description": "제육볶음+3찬// 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/85bf5b7f-c676-49b5-91a1-a470863e402f.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000011",
+      "sourceMenuId": "10000011",
+      "name": "계란말이",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/905481f9-9d15-4658-9850-2c3f2eae94b1.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000003",
+      "sourceMenuId": "10000003",
+      "name": "닭도리탕",
+      "description": "닭도리탕+3찬// 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/615979ff-4c10-4d2f-9ad1-7e414139a120.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000004",
+      "sourceMenuId": "10000004",
+      "name": "갈치조림",
+      "description": "갈치조림+3찬// 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2b359e76-a384-47da-a744-3665a785b53a.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000018",
+      "sourceMenuId": "10000018",
+      "name": "제육볶음+찌개",
+      "description": "공기밥 별도",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000032",
+      "sourceMenuId": "10000032",
+      "name": "오징어볶음",
+      "description": "오징어볶음450g+3찬// 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/1c2f13cd-563d-4fe2-8735-15a43143114e.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1207373-10000010",
+      "sourceMenuId": "10000010",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/733d2093-79b0-465f-9bce-0828e839e589.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000019",
+      "sourceMenuId": "10000019",
+      "name": "닭도리탕+찌개",
+      "description": "공기밥 별도",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000031",
+      "sourceMenuId": "10000031",
+      "name": "고기만 제육볶음(600g)",
+      "description": "600g",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6b8f3539-002d-42b6-ac25-102f8f38af18.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-90000002",
+      "sourceMenuId": "90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1207373-10000020",
+      "sourceMenuId": "10000020",
+      "name": "갈치조림+찌개",
+      "description": "공기밥 별도",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000028",
+      "sourceMenuId": "10000028",
+      "name": "김말이튀김4개",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3fba463a-31ab-46c5-962e-6a0558f09b24.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1207373-10000029",
+      "sourceMenuId": "10000029",
+      "name": "팝콘만두10개",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4fdde566-c402-46b3-845e-79c15003ce5b.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000033",
+      "sourceMenuId": "10000033",
+      "name": "오징어볶음+찌개",
+      "description": "",
+      "category": "세트메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-90000004",
+      "sourceMenuId": "90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1207373-10000002",
+      "sourceMenuId": "10000002",
+      "name": "감자탕",
+      "description": "감자탕+3찬// 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/284c69a3-970a-489b-9f67-a5ddc58aca65.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-90000005",
+      "sourceMenuId": "90000005",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1207373-10000005",
+      "sourceMenuId": "10000005",
+      "name": "제육덮밥",
+      "description": "제육볶음 250g 덮밥 위에 계란후라이 + 3찬",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/e0293e10-e2f2-494b-9bbb-14168f3802f4.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000006",
+      "sourceMenuId": "10000006",
+      "name": "뼈해장국",
+      "description": "뼈해장국 + 3찬 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/b5bb33a5-b760-420e-809c-900f8c350471.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000007",
+      "sourceMenuId": "10000007",
+      "name": "닭육개장",
+      "description": "닭육개장 + 3찬 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/238287d5-0f20-41f2-96aa-ce6812f16e64.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000008",
+      "sourceMenuId": "10000008",
+      "name": "된장찌개",
+      "description": "된장찌개 + 3찬 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/902ef92a-51db-453f-9707-0baf5d83dc45.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000009",
+      "sourceMenuId": "10000009",
+      "name": "김치찌개",
+      "description": "김치찌개 + 3찬 공기밥 별도",
+      "category": "메뉴 소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/16d56698-206e-47fb-833d-3ad1081582ab.jpg"
+    },
+    {
+      "id": "ddangyo-1207373-10000012",
+      "sourceMenuId": "10000012",
+      "name": "공기밥",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000013",
+      "sourceMenuId": "10000013",
+      "name": "콜라355ml",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000014",
+      "sourceMenuId": "10000014",
+      "name": "사이다355ml",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000015",
+      "sourceMenuId": "10000015",
+      "name": "환타오렌지355ml",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000016",
+      "sourceMenuId": "10000016",
+      "name": "환타파인애플355ml",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000017",
+      "sourceMenuId": "10000017",
+      "name": "환타포도355ml",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1207373-10000026",
+      "sourceMenuId": "10000026",
+      "name": "펩시제로 355ml",
+      "description": "",
+      "category": "메뉴 소개",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

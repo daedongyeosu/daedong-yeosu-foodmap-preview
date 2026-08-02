@@ -1,0 +1,403 @@
+{
+  "storeId": "79a1a4e81b066de4",
+  "storeName": "처갓집양념치킨 동정점",
+  "displayName": "처갓집양념치킨 동정점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9fa35b28-66ee-4dc6-beef-8824e52f2e05.jpg",
+  "categories": [
+    "전체",
+    "치킨 (한마리)",
+    "치킨 (반반)",
+    "추가메뉴",
+    "신메뉴",
+    "음료 세트",
+    "주류메뉴",
+    "음료추가",
+    "사이드 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1219441-30000001",
+      "sourceMenuId": "30000001",
+      "name": "K-마라 양념치킨",
+      "description": "지금 가장 핫한 메뉴",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/6f5d5918-9716-4eda-9fdb-e62ba8d38b9c.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000003",
+      "sourceMenuId": "30000003",
+      "name": "허니올리고당야채양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4b0edd60-de2a-49b6-8aae-a45d0fff6f03.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000021",
+      "sourceMenuId": "30000021",
+      "name": "반반치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (반반)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9a4a19eb-558a-424d-a046-2f56075d1fa7.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000002",
+      "sourceMenuId": "30000002",
+      "name": "후라이드치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e740aa07-8955-400e-b94b-6de7426a32da.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000007",
+      "sourceMenuId": "30000007",
+      "name": "슈프림골드 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b44f3a98-ad0c-449c-9e9a-a89fa8236ca1.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000037",
+      "sourceMenuId": "30000037",
+      "name": "치킨무",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000123",
+      "sourceMenuId": "30000123",
+      "name": "미트칠리 양념치킨",
+      "description": "",
+      "category": "신메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/71898491-1bca-4dff-aebc-c05200cac0de.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000124",
+      "sourceMenuId": "30000124",
+      "name": "K마라 맛보기 세트",
+      "description": "후라이드치킨 + K마라양념소스 40g(2개) + 콜라 1.25L 구성",
+      "category": "음료 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/dde7b014-97ff-41ec-8ca1-68a44b552a7a.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1219441-30000038",
+      "sourceMenuId": "30000038",
+      "name": "양념소스 (40g)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000125",
+      "sourceMenuId": "30000125",
+      "name": "K마라 맛보기 제로 세트",
+      "description": "후라이드치킨 + K마라양념소스 40g(2개) + 제로콜라 1.25L 구성",
+      "category": "음료 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/439a99e6-0c0a-4f2f-bc7f-1c2f4c8a6809.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-90000002",
+      "sourceMenuId": "90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1219441-30000045",
+      "sourceMenuId": "30000045",
+      "name": "펩시콜라 500ml",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000004",
+      "sourceMenuId": "30000004",
+      "name": "슈프림 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/12ae7c64-61f3-4c51-85b6-b20a3f6f44ef.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000126",
+      "sourceMenuId": "30000126",
+      "name": "미트칠리 양념치킨 + 콜라 1.25L",
+      "description": "미트칠리 양념치킨+콜라 1.25L 구성",
+      "category": "음료 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5b39a961-b100-46d8-b727-407722f386ee.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000025",
+      "sourceMenuId": "30000025",
+      "name": "슈프림골드치즈볼5개",
+      "description": "메인보다 매력적인 사이드",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7aecfd8f-bc1a-4ea3-a792-56bc75bbcd0e.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000039",
+      "sourceMenuId": "30000039",
+      "name": "청양산고추양념소스 (40g)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-90000003",
+      "sourceMenuId": "90000003",
+      "name": "맥주 (테라)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1219441-30000040",
+      "sourceMenuId": "30000040",
+      "name": "겨자소스 (30g)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000046",
+      "sourceMenuId": "30000046",
+      "name": "펩시콜라 1.25L",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000127",
+      "sourceMenuId": "30000127",
+      "name": "미트칠리 양념치킨 + 제로콜라 1.25L",
+      "description": "미트칠리 양념치킨+제로콜라 1.25L 구성",
+      "category": "음료 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/28c389cd-0449-4498-aa3b-1252067898d9.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000005",
+      "sourceMenuId": "30000005",
+      "name": "핫슈프림 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f044db58-f783-4cbc-9336-0d185a3094c2.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000026",
+      "sourceMenuId": "30000026",
+      "name": "라이스치즈볼5개",
+      "description": "메인보다 매력적인 사이드",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6a93ed64-fe5d-4f11-9eb1-1d6979464ce4.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-90000004",
+      "sourceMenuId": "90000004",
+      "name": "맥주 (카스)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1219441-30000047",
+      "sourceMenuId": "30000047",
+      "name": "[제로]펩시콜라 245ml",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000006",
+      "sourceMenuId": "30000006",
+      "name": "치즈슈프림 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fbc10699-d91f-4c93-a0b3-55aaeb067aed.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000027",
+      "sourceMenuId": "30000027",
+      "name": "감자튀김",
+      "description": "메인보다 매력적인 사이드",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000128",
+      "sourceMenuId": "30000128",
+      "name": "슈프림 양념치킨 + 콜라 1.25L",
+      "description": "슈프림 양념치킨+콜라 1.25L 구성",
+      "category": "음료 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/da2d3e8e-06e4-4343-b4c9-272c2649769d.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-90000005",
+      "sourceMenuId": "90000005",
+      "name": "카스(캔)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1219441-30000129",
+      "sourceMenuId": "30000129",
+      "name": "슈프림 양념치킨 + 제로콜라 1.25L",
+      "description": "슈프림 양념치킨+제로콜라 1.25L 구성",
+      "category": "음료 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/f23f5446-55af-4054-bfc0-fa6f87ce1b2a.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000132",
+      "sourceMenuId": "30000132",
+      "name": "미트칠리 양념소스 (220g)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000048",
+      "sourceMenuId": "30000048",
+      "name": "[제로]펩시콜라 355ml",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000049",
+      "sourceMenuId": "30000049",
+      "name": "[제로]펩시콜라 500ml",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000041",
+      "sourceMenuId": "30000041",
+      "name": "즉석밥 (비조리)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000008",
+      "sourceMenuId": "30000008",
+      "name": "슈프림양념치킨 블랙라벨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d049251c-f5ca-4609-b590-66d3d994b580.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000130",
+      "sourceMenuId": "30000130",
+      "name": "반반(후+양)치킨 + 콜라 1.25L",
+      "description": "반반(후+양)치킨 + 콜라 1.25L 구성",
+      "category": "음료 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/683f0dcc-e1ea-4231-9532-3aa5034b105b.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000030",
+      "sourceMenuId": "30000030",
+      "name": "양배추 샐러드",
+      "description": "메인보다 매력적인 사이드",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000050",
+      "sourceMenuId": "30000050",
+      "name": "[제로]펩시콜라 1.25L",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000131",
+      "sourceMenuId": "30000131",
+      "name": "반반(후+양)치킨 + 제로콜라 1.25L",
+      "description": "반반(후+양)치킨 + 제로콜라 1.25L 구성",
+      "category": "음료 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b913db88-5816-49f9-869d-52414a0f9f92.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000010",
+      "sourceMenuId": "30000010",
+      "name": "꼬꼬뱅 슈프림 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d785d4a9-a896-4dcb-a309-8762a719a8ad.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000011",
+      "sourceMenuId": "30000011",
+      "name": "꼬꼬뱅 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f22be327-2c98-43ab-a585-ba5295740756.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000012",
+      "sourceMenuId": "30000012",
+      "name": "와락(간장)치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e22b77ae-6902-49cd-8ce1-474cd397d29d.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000014",
+      "sourceMenuId": "30000014",
+      "name": "100% 청양산 고추치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9670fbcd-b226-4c2c-b0a3-595b7488e6d0.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000015",
+      "sourceMenuId": "30000015",
+      "name": "매운불 양념치킨",
+      "description": "선택 가능(뼈, 순살, 다리, 날개)",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/462d166b-d529-418f-8e75-d27a5c17f9f5.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000016",
+      "sourceMenuId": "30000016",
+      "name": "닭강정(순살)",
+      "description": "",
+      "category": "치킨 (한마리)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6a74854e-76dc-4d2b-8cc2-ffef68f6f425.jpg"
+    },
+    {
+      "id": "ddangyo-1219441-30000069",
+      "sourceMenuId": "30000069",
+      "name": "칠성사이다 500ml",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1219441-30000070",
+      "sourceMenuId": "30000070",
+      "name": "칠성사이다 1.25L",
+      "description": "",
+      "category": "음료추가",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "storeId": "9c7b5c85a8c79a6a",
+  "storeName": "마라월드 마라탕&마라샹궈 여수문수점",
+  "displayName": "마라월드 마라탕&마라샹궈 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/df405266-040e-4cf2-9a35-6cce24e14fc3.jpg",
+  "categories": [
+    "전체",
+    ":+: 메인 메뉴 :+:",
+    ":+: 마라탕 세트메뉴 :+:",
+    ":+: 마라샹궈 세트메뉴 :+:",
+    ":+: 기타 메뉴 :+:",
+    ":+: 음료 메뉴 :+:"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1340232-10000001",
+      "sourceMenuId": "10000001",
+      "name": "월드 마라탕",
+      "description": "신선하고 인기 있는 재료를 가득 담은 시그니처 월드 마라탕",
+      "category": ":+: 메인 메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/550a8f10-5641-4432-8f4f-5e3af6089f05.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000003",
+      "sourceMenuId": "10000003",
+      "name": "[공기밥 서비스] 월드 소고기 마라샹궈",
+      "description": "[공기밥 서비스] 신선한 재료와 소고기를 센 불에 화르르 볶아낸 불맛 가득 시그니처 월드 소고기 마라샹궈",
+      "category": ":+: 메인 메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/e819bcc3-85a5-44a8-a9c0-624c85f53325.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000005",
+      "sourceMenuId": "10000005",
+      "name": "꿔바로우",
+      "description": "겉바속촉 식감이 매력적인 새콤달콤 찹쌀 꿔바로우",
+      "category": ":+: 메인 메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/a3e20b46-78d3-4fd0-82bd-eeadbc1d1777.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000006",
+      "sourceMenuId": "10000006",
+      "name": "계란 볶음밥",
+      "description": "담백하고 고소한 맛이 매력적인 계란 볶음밥",
+      "category": ":+: 메인 메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/912820ec-0705-4582-b703-e1d3dde5c7cb.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000002",
+      "sourceMenuId": "10000002",
+      "name": "[내맘대로] 셀프 마라탕",
+      "description": "",
+      "category": ":+: 메인 메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/8dd5a076-8855-4c5d-8896-692e5be40a04.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000004",
+      "sourceMenuId": "10000004",
+      "name": "[불맛가득] 셀프 마라샹궈",
+      "description": "",
+      "category": ":+: 메인 메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ad6ba410-806b-4492-b905-cd5411524c00.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000007",
+      "sourceMenuId": "10000007",
+      "name": "[SET] 셀프 마라탕+꿔바로우",
+      "description": "기본 숙주 토핑 // 18,900원 이상 주문 가능합니다.",
+      "category": ":+: 마라탕 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/1eb1b73d-2a59-4f82-88b0-b6e1c9deba2e.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000012",
+      "sourceMenuId": "10000012",
+      "name": "[SET] 셀프 마라샹궈+꿔바로우",
+      "description": "기본 숙주 토핑 // 23,900원 이상 주문 가능합니다.",
+      "category": ":+: 마라샹궈 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/21c8a6d8-7fbb-423f-b0ef-0eb30c764f91.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000016",
+      "sourceMenuId": "10000016",
+      "name": "공기밥",
+      "description": "",
+      "category": ":+: 기타 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000022",
+      "sourceMenuId": "10000022",
+      "name": "펩시콜라 355ml",
+      "description": "",
+      "category": ":+: 음료 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000008",
+      "sourceMenuId": "10000008",
+      "name": "[SET] 월드 마라탕+음료",
+      "description": "시그니처 월드마라탕 & 음료 메뉴를 가성비 있게 즐기실 수 있는 세트 메뉴 입니다.",
+      "category": ":+: 마라탕 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8cced4d3-e7f3-49cd-96c4-148419dbdebb.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000013",
+      "sourceMenuId": "10000013",
+      "name": "[SET] 월드 소고기 마라샹궈+꿔바로우",
+      "description": "시그니처 월드 마라샹궈 & 꿔바로우 메뉴를 가성비 있게 즐기실 수 있는 세트 메뉴 입니다.",
+      "category": ":+: 마라샹궈 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a3898ac1-bbcf-4805-b3e7-9f801d9973ce.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000017",
+      "sourceMenuId": "10000017",
+      "name": "단무지",
+      "description": "",
+      "category": ":+: 기타 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000023",
+      "sourceMenuId": "10000023",
+      "name": "칠성사이다 355ml",
+      "description": "",
+      "category": ":+: 음료 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000009",
+      "sourceMenuId": "10000009",
+      "name": "[SET] 월드 마라탕+꿔바로우",
+      "description": "시그니처 월드마라탕 & 꿔바로우 메뉴를 가성비 있게 즐기실 수 있는 세트 메뉴 입니다.",
+      "category": ":+: 마라탕 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ded0746a-add3-4497-bc15-8035bef666fc.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000014",
+      "sourceMenuId": "10000014",
+      "name": "[SET] 월드 소고기 마라샹궈+계란볶음밥",
+      "description": "시그니처 월드 마라샹궈 & 계란볶음밥 메뉴를 가성비 있게 즐기실 수 있는 세트 메뉴 입니다.",
+      "category": ":+: 마라샹궈 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/27d88155-ebbc-428a-90d0-dc0052b48f72.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000018",
+      "sourceMenuId": "10000018",
+      "name": "땅콩소스(별도포장)",
+      "description": "",
+      "category": ":+: 기타 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000024",
+      "sourceMenuId": "10000024",
+      "name": "펩시제로콜라 355ml",
+      "description": "",
+      "category": ":+: 음료 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000010",
+      "sourceMenuId": "10000010",
+      "name": "[SET] 월드 마라탕+계란볶음밥",
+      "description": "시그니처 월드마라탕 & 계란볶음밥 메뉴를 가성비 있게 즐기실 수 있는 세트 메뉴 입니다.",
+      "category": ":+: 마라탕 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/461e7a1b-a9a5-4bf7-b21f-3df6bfd86717.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000015",
+      "sourceMenuId": "10000015",
+      "name": "[SET] 월드 소고기 마라샹궈+꿔바로우+계란볶음밥",
+      "description": "시그니처 월드 마라샹궈, 꿔바로우, 계란볶음밥 메뉴를 가성비 있게 즐기실 수 있는 세트 메뉴 입니다.",
+      "category": ":+: 마라샹궈 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/7ddc7002-c0bd-4d26-a517-11bedad3844a.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000019",
+      "sourceMenuId": "10000019",
+      "name": "해물간장(별도포장)",
+      "description": "",
+      "category": ":+: 기타 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000025",
+      "sourceMenuId": "10000025",
+      "name": "빙홍차 500ml",
+      "description": "",
+      "category": ":+: 음료 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000011",
+      "sourceMenuId": "10000011",
+      "name": "[SET] 월드 마라탕+꿔바로우+계란볶음밥",
+      "description": "시그니처 월드마라탕, 꿔바로우, 계란볶음밥 메뉴를 가성비 있게 즐기실 수 있는 세트 메뉴 입니다.",
+      "category": ":+: 마라탕 세트메뉴 :+:",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a5e9f815-c8ad-4010-b844-4fc397e8a7c7.jpg"
+    },
+    {
+      "id": "ddangyo-1340232-10000026",
+      "sourceMenuId": "10000026",
+      "name": "차파이(복숭아) 500ml",
+      "description": "",
+      "category": ":+: 음료 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000021",
+      "sourceMenuId": "10000021",
+      "name": "마라유(별도포장)",
+      "description": "",
+      "category": ":+: 기타 메뉴 :+:",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1340232-10000027",
+      "sourceMenuId": "10000027",
+      "name": "빙탕설리 500ml",
+      "description": "",
+      "category": ":+: 음료 메뉴 :+:",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

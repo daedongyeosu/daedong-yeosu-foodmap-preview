@@ -15,147 +15,168 @@
       "name": "바베큐양념치밥 도시락(간장계란밥)",
       "description": "순살을 오븐에 구워 바베큐소스로 쫄인 치밥의 원조",
       "category": "치밥메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/603ad8a2-71a0-4bd4-8f59-5de9789c0d21.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/603ad8a2-71a0-4bd4-8f59-5de9789c0d21.jpg",
+      "sourceMenuId": "10000001"
     },
     {
       "id": "ddangyo-1188831-10000008",
       "name": "눈꽃치즈치밥 도시락(간장계란밥)",
       "description": "모짜렐라 치즈와 고다치즈의 풍미를 치밥과 함께~",
       "category": "치밥메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/30cdda7d-d0bb-4cac-b34e-ed69ff5c0afa.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/30cdda7d-d0bb-4cac-b34e-ed69ff5c0afa.jpg",
+      "sourceMenuId": "10000008"
     },
     {
       "id": "ddangyo-1188831-10000012",
       "name": "야채모듬튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/5429aea8-69f2-451a-9f2d-fceb368ea1ac.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/5429aea8-69f2-451a-9f2d-fceb368ea1ac.jpg",
+      "sourceMenuId": "10000012"
     },
     {
       "id": "ddangyo-1188831-10000020",
       "name": "참이슬",
       "description": "",
       "category": "주류",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000020"
     },
     {
       "id": "ddangyo-1188831-10000002",
       "name": "참치마요치밥 도시락",
       "description": "참치와 마요의 고소함이 함께 만난 건강한 치밥",
       "category": "치밥메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/956c871e-ee97-492e-a2d7-0049736d4e16.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/956c871e-ee97-492e-a2d7-0049736d4e16.jpg",
+      "sourceMenuId": "10000002"
     },
     {
       "id": "ddangyo-1188831-10000013",
       "name": "새우튀김",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/1e03a53c-6225-4d73-b6e8-a20171e4faa2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/1e03a53c-6225-4d73-b6e8-a20171e4faa2.jpg",
+      "sourceMenuId": "10000013"
     },
     {
       "id": "ddangyo-1188831-10000021",
       "name": "잎새주",
       "description": "",
       "category": "주류",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000021"
     },
     {
       "id": "ddangyo-1188831-10000003",
       "name": "숯불양념쪽갈비치밥 도시락(간장계란밥)",
       "description": "숯불직화로 직접 구운 쪽갈비+ 치킨이 함께한 폭탄치밥의 대표 메뉴",
       "category": "치밥메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/b9af1683-3c2a-4d74-a8d2-8e1c5460f630.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/b9af1683-3c2a-4d74-a8d2-8e1c5460f630.jpg",
+      "sourceMenuId": "10000003"
     },
     {
       "id": "ddangyo-1188831-10000014",
       "name": "똥집후라이드",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a3ce98a5-61d2-4dc6-8799-d7f6f37ced04.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a3ce98a5-61d2-4dc6-8799-d7f6f37ced04.jpg",
+      "sourceMenuId": "10000014"
     },
     {
       "id": "ddangyo-1188831-10000022",
       "name": "카스",
       "description": "",
       "category": "주류",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000022"
     },
     {
       "id": "ddangyo-1188831-10000004",
       "name": "숯불데리쪽갈비치밥 도시락(간장계란밥)",
       "description": "쪽갈비와 치킨을 달콤한 데리소스를 입혀 직화로 한번더 구운 누구도 따라올수 없는 치밥",
       "category": "치밥메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/1025ebcf-d123-4b3e-8fab-4e91aa70de82.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/1025ebcf-d123-4b3e-8fab-4e91aa70de82.jpg",
+      "sourceMenuId": "10000004"
     },
     {
       "id": "ddangyo-1188831-10000015",
       "name": "케이준양념감자",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6a688ca7-4de6-4da5-a408-e5e4807868f9.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6a688ca7-4de6-4da5-a408-e5e4807868f9.jpg",
+      "sourceMenuId": "10000015"
     },
     {
       "id": "ddangyo-1188831-10000005",
       "name": "깐쇼새우치밥 도시락(간장계란밥)",
       "description": "탱글탱글한 새우살과 치밥의 환상적인 콜라보",
       "category": "치밥메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000005"
     },
     {
       "id": "ddangyo-1188831-10000016",
       "name": "미니붕어빵",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/c8598e6f-eab2-4573-a262-704c466ca05d.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/c8598e6f-eab2-4573-a262-704c466ca05d.jpg",
+      "sourceMenuId": "10000016"
     },
     {
       "id": "ddangyo-1188831-10000017",
       "name": "왕치즈볼",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/78974236-7c90-4d2a-b122-1808145f83b2.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/78974236-7c90-4d2a-b122-1808145f83b2.jpg",
+      "sourceMenuId": "10000017"
     },
     {
       "id": "ddangyo-1188831-10000007",
       "name": "숯불양념치밥 도시락(간장계란밥)",
       "description": "대한민국 최초 숯불직화에 직접 구운 양념치밥",
       "category": "치밥메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000007"
     },
     {
       "id": "ddangyo-1188831-10000018",
       "name": "공기밥",
       "description": "",
       "category": "사이드메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5ffa8a37-1cf6-413a-ae38-13553c24b225.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5ffa8a37-1cf6-413a-ae38-13553c24b225.jpg",
+      "sourceMenuId": "10000018"
     },
     {
       "id": "ddangyo-1188831-10000019",
       "name": "콜라",
       "description": "",
       "category": "사이드메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000019"
     },
     {
       "id": "ddangyo-1188831-10000009",
       "name": "청량땡초치밥 도시락(간장계란밥)",
       "description": "화끈하게 맵고 깔끔한 매운맛의 매니아를 위한 치밥",
       "category": "치밥메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000009"
     },
     {
       "id": "ddangyo-1188831-10000010",
       "name": "로제크림치밥 도시락(간장계란밥)",
       "description": "크림의 향미와 로제의 고소함이 함께하는 신개념 치밥",
       "category": "치밥메뉴",
-      "image": ""
+      "image": "",
+      "sourceMenuId": "10000010"
     },
     {
       "id": "ddangyo-1188831-10000011",
       "name": "데리갈릭치밥 도시락(간장계란밥)",
       "description": "달콤한 데리소스와 마늘이 듬뿍 만난 치밥",
       "category": "치밥메뉴",
-      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/1115a155-71f6-4f38-a5cd-361cc913a4c1.jpg"
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/1115a155-71f6-4f38-a5cd-361cc913a4c1.jpg",
+      "sourceMenuId": "10000011"
     }
   ],
   "source": {
@@ -166,5 +187,8 @@
     ],
     "rawItemCount": 23,
     "duplicateItemsRemoved": 2
-  }
+  },
+  "sources": [
+    "ddangyo"
+  ]
 }

@@ -1,0 +1,296 @@
+{
+  "storeId": "195af7ec512059b2",
+  "storeName": "황제돈 여수엑스포점",
+  "displayName": "황제돈 여수엑스포점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/fbe3ae8e-1b56-4a17-b070-8d8045d78905.jpg",
+  "categories": [
+    "전체",
+    "대표 메뉴",
+    "고객 감사 E벤트",
+    "고기 반반메뉴",
+    "세트 메뉴",
+    "찌개 메뉴",
+    "볶음밥 메뉴",
+    "사이드 메뉴",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1322899-10000002",
+      "sourceMenuId": "10000002",
+      "name": "고추장 삼겹살 250g",
+      "description": "고추장 삼겹살 250g+꽈리 고추3+치즈떡2+통마늘3+엄지새송이버섯30g+3종 소스",
+      "category": "대표 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a18a8e33-3570-4627-b4b6-744af880b22e.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000006",
+      "sourceMenuId": "10000006",
+      "name": "삼겹살 250g",
+      "description": "삼겹살 250g+꽈리 고추3+치즈떡2+통마늘3+엄지새송이버섯30g+3종소스",
+      "category": "대표 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6540db51-4fd3-4639-9ef0-cf52518856c6.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000008",
+      "sourceMenuId": "10000008",
+      "name": "우삼겹 250g",
+      "description": "우삼겹 250g+꽈리 고추3+치즈떡2+통마늘3+엄지새송이버섯30g+3종소스",
+      "category": "대표 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/489202d8-7b73-452c-8b3d-39df4ce452b9.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000001",
+      "sourceMenuId": "10000001",
+      "name": "황제돈 리뷰이벤트",
+      "description": "",
+      "category": "고객 감사 E벤트",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000013",
+      "sourceMenuId": "10000013",
+      "name": "고기만 500g",
+      "description": "고기 250g + 고기 250g + 꽈리 고추6+치즈떡4+통마늘6+엄지새송이버섯60g+3종소스",
+      "category": "고기 반반메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000014",
+      "sourceMenuId": "10000014",
+      "name": "고기 + 1/2 찌개 세트",
+      "description": "고기 250g + 1/2 찌개",
+      "category": "세트 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000016",
+      "sourceMenuId": "10000016",
+      "name": "돼지 김치찌개",
+      "description": "찌개 + 밥 + 김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/16d56698-206e-47fb-833d-3ad1081582ab.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000019",
+      "sourceMenuId": "10000019",
+      "name": "대패 삼겹 김치 볶음밥",
+      "description": "",
+      "category": "볶음밥 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000021",
+      "sourceMenuId": "10000021",
+      "name": "진짜 스팸구이 4p",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c5804875-2ac3-4451-9830-64ab89bb5917.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000031",
+      "sourceMenuId": "10000031",
+      "name": "펩시콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-90000001",
+      "sourceMenuId": "90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1322899-10000003",
+      "sourceMenuId": "10000003",
+      "name": "고추장 삼겹살 500g",
+      "description": "고추장 삼겹살 500g+꽈리 고추6+치즈떡4+통마늘6+엄지새송이버섯60g+3종 소스",
+      "category": "대표 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000015",
+      "sourceMenuId": "10000015",
+      "name": "고기 + 볶음밥 세트",
+      "description": "볶음밥 + 고기 250g",
+      "category": "세트 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000017",
+      "sourceMenuId": "10000017",
+      "name": "진짜 스팸 김치찌개",
+      "description": "찌개 + 밥 + 김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/78f982f7-ebe0-468a-8480-96e5d7ee4475.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000020",
+      "sourceMenuId": "10000020",
+      "name": "황금 계란 스팸 볶음밥",
+      "description": "",
+      "category": "볶음밥 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000022",
+      "sourceMenuId": "10000022",
+      "name": "가라아게 4p",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000032",
+      "sourceMenuId": "10000032",
+      "name": "탐스(환타)오렌지 600ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000004",
+      "sourceMenuId": "10000004",
+      "name": "간장 삼겹살 250g",
+      "description": "간장 삼겹살 250g+꽈리 고추3+치즈떡2+통마늘3+엄지새송이버섯30g+3종소스",
+      "category": "대표 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000018",
+      "sourceMenuId": "10000018",
+      "name": "우삼겹 고깃집 된장찌개",
+      "description": "찌개 + 밥 + 김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/000fb520-08f1-43d5-9056-1f783369bd3a.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000023",
+      "sourceMenuId": "10000023",
+      "name": "[육즙팡팡] 떡갈비",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e2226f38-0fae-439a-b95a-89daf79ee30e.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000033",
+      "sourceMenuId": "10000033",
+      "name": "탐스제로(환타)파인애플 600ml",
+      "description": "",
+      "category": "음료",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000005",
+      "sourceMenuId": "10000005",
+      "name": "간장 삼겹살 500g",
+      "description": "간장 삼겹살 500g+꽈리 고추6+치즈떡4+통마늘6+엄지새송이버섯60g+3종소스",
+      "category": "대표 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000024",
+      "sourceMenuId": "10000024",
+      "name": "버팔로 윙 3p",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000025",
+      "sourceMenuId": "10000025",
+      "name": "버팔로 봉 3p",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000007",
+      "sourceMenuId": "10000007",
+      "name": "삼겹살 200g",
+      "description": "삼겹살 200g+꽈리 고추3+치즈떡2+통마늘3+엄지새송이버섯30g+3종소스",
+      "category": "대표 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003262.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000026",
+      "sourceMenuId": "10000026",
+      "name": "튀김 고기만두 6p",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000027",
+      "sourceMenuId": "10000027",
+      "name": "튀김 김치만두 6p",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000009",
+      "sourceMenuId": "10000009",
+      "name": "대패삼겹 250g",
+      "description": "대패삼겹 250g+꽈리 고추3+치즈떡2+통마늘3+엄지새송이버섯30g+3종소스",
+      "category": "대표 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/489202d8-7b73-452c-8b3d-39df4ce452b9.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000028",
+      "sourceMenuId": "10000028",
+      "name": "순살 돈까스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000010",
+      "sourceMenuId": "10000010",
+      "name": "목살 250g",
+      "description": "목살 250g+꽈리 고추3+치즈떡2+통마늘3+엄지새송이버섯30g+3종소스",
+      "category": "대표 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/85332de0-c570-444f-9725-7beb73dc70f7.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000029",
+      "sourceMenuId": "10000029",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000011",
+      "sourceMenuId": "10000011",
+      "name": "양념 돼지구이(양념갈비맛) 350g",
+      "description": "양념갈비 350g",
+      "category": "대표 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/77ce40e8-a0ab-4ffd-adad-b7e52bb0ceff.jpg"
+    },
+    {
+      "id": "ddangyo-1322899-10000030",
+      "sourceMenuId": "10000030",
+      "name": "공깃밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1322899-10000012",
+      "sourceMenuId": "10000012",
+      "name": "양념 돼지구이(양념갈비맛) 300g",
+      "description": "양념 돼지갈비 300g",
+      "category": "대표 메뉴",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}

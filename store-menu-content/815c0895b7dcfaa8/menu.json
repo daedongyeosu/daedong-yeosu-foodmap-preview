@@ -1,0 +1,353 @@
+{
+  "storeId": "815c0895b7dcfaa8",
+  "storeName": "계동치킨(덕충점)",
+  "displayName": "계동치킨(덕충점)",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7924c34c-efa0-43bb-b203-f143e1b34626.jpg",
+  "categories": [
+    "전체",
+    "주류메뉴",
+    "Kyedong Menu",
+    "사이드메뉴",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1134982-90000001",
+      "sourceMenuId": "90000001",
+      "name": "생맥주(1,000cc)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134982-10000095",
+      "sourceMenuId": "10000095",
+      "name": "날개치킨(간장)",
+      "description": "양배추셀러드& 파 셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/833b8bc2-0859-441e-b58d-e9419292e095.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000118",
+      "sourceMenuId": "10000118",
+      "name": "치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000127",
+      "sourceMenuId": "10000127",
+      "name": "콜라",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-90000002",
+      "sourceMenuId": "90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134982-10000096",
+      "sourceMenuId": "10000096",
+      "name": "날개+다리치킨(간장)",
+      "description": "양배추셀러드& 파 셀러드 중 1선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b5bb3800-ba05-489b-b5e7-91a60e478100.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000119",
+      "sourceMenuId": "10000119",
+      "name": "섞어치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000128",
+      "sourceMenuId": "10000128",
+      "name": "사이다 500ml",
+      "description": "",
+      "category": "음료수",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-90000003",
+      "sourceMenuId": "90000003",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134982-10000097",
+      "sourceMenuId": "10000097",
+      "name": "살만치킨(간장)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/fe9cc721-0e37-4dd5-9559-ec4e68a71ba7.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000120",
+      "sourceMenuId": "10000120",
+      "name": "고구마치즈볼",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-90000004",
+      "sourceMenuId": "90000004",
+      "name": "하이트 EXTRA COLD(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134982-10000098",
+      "sourceMenuId": "10000098",
+      "name": "불양념순살파닭",
+      "description": "양배추셀러러드&파 셀러드 중 1선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/34059932-2c52-465c-b3f2-9fadab287642.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000121",
+      "sourceMenuId": "10000121",
+      "name": "옛날떡볶이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-90000005",
+      "sourceMenuId": "90000005",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134982-10000099",
+      "sourceMenuId": "10000099",
+      "name": "순살간장파닭",
+      "description": "양배추셀러드&파 셀러드 중 1선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2f7d5994-a0fb-4f9c-9d85-a26961422524.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000122",
+      "sourceMenuId": "10000122",
+      "name": "해쉬브라운",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-90000006",
+      "sourceMenuId": "90000006",
+      "name": "처음처럼(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134982-10000100",
+      "sourceMenuId": "10000100",
+      "name": "한마리치킨(간장)",
+      "description": "양배추셀러드&파셀러드 중 1선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/19145462-6d2d-4615-9a5c-c465e4535cb2.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000123",
+      "sourceMenuId": "10000123",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-90000007",
+      "sourceMenuId": "90000007",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true
+    },
+    {
+      "id": "ddangyo-1134982-10000101",
+      "sourceMenuId": "10000101",
+      "name": "다리치킨(간장)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/b2918c62-65c7-45dc-a61d-c427179c2866.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000124",
+      "sourceMenuId": "10000124",
+      "name": "무추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000102",
+      "sourceMenuId": "10000102",
+      "name": "똥집튀김(모래집)",
+      "description": "불양념으로 변경시 1,000원 추가 음료수 미 제공",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4dc160e8-e402-483b-9b6b-c36e22bead89.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000125",
+      "sourceMenuId": "10000125",
+      "name": "파&소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000103",
+      "sourceMenuId": "10000103",
+      "name": "후라이드",
+      "description": "양배추셀러드&파셀러드 중 1선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/295e727c-98f7-4d9c-8afc-044b41ec7c7a.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000126",
+      "sourceMenuId": "10000126",
+      "name": "양배추샐러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000104",
+      "sourceMenuId": "10000104",
+      "name": "양념",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e51294b2-005e-4416-bda3-fb91d0e0592e.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000105",
+      "sourceMenuId": "10000105",
+      "name": "후양 반반",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/f3ef3636-124e-47d8-acce-71a7157005f1.jpg"
+    },
+    {
+      "id": "ddangyo-1134982-10000106",
+      "sourceMenuId": "10000106",
+      "name": "후.간장 반반",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000107",
+      "sourceMenuId": "10000107",
+      "name": "날개치킨(후라이드)",
+      "description": "양배추설러드&파셀러드 중 1 선택 (써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000108",
+      "sourceMenuId": "10000108",
+      "name": "날개치킨(양념)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000109",
+      "sourceMenuId": "10000109",
+      "name": "날개치킨(후.양 반반)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000110",
+      "sourceMenuId": "10000110",
+      "name": "날개치킨(후.간장 반반)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000111",
+      "sourceMenuId": "10000111",
+      "name": "날개.다리치킨(후라이드)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000112",
+      "sourceMenuId": "10000112",
+      "name": "날개.다리치킨(양념)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000113",
+      "sourceMenuId": "10000113",
+      "name": "날개.다리치킨(후.간장 반반)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000114",
+      "sourceMenuId": "10000114",
+      "name": "살만치킨(후라이드)",
+      "description": "양배추셀러드&파셀러드 중 1 선택(써비스)",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000115",
+      "sourceMenuId": "10000115",
+      "name": "날개치킨 반마리(간장)",
+      "description": "",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000116",
+      "sourceMenuId": "10000116",
+      "name": "다리치킨 반마리(간장)",
+      "description": "",
+      "category": "Kyedong Menu",
+      "image": ""
+    },
+    {
+      "id": "ddangyo-1134982-10000117",
+      "sourceMenuId": "10000117",
+      "name": "닭다리",
+      "description": "",
+      "category": "Kyedong Menu",
+      "image": ""
+    }
+  ],
+  "sources": [
+    "ddangyo"
+  ]
+}
