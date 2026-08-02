@@ -9,6 +9,13 @@ on:
       - scripts/collect-all-historical-ddangyo-links.mjs
       - scripts/extract-all-historical-ddangyo.mjs
       - scripts/reclassify-all-ddangyo-stores.mjs
+      - scripts/finalize-ddangyo-classification.mjs
+      - scripts/ddangyo-package-utils.mjs
+      - scripts/build-ddangyo-service-info.mjs
+      - scripts/build-ddangyo-enrichment.mjs
+      - scripts/build-ddangyo-menus.mjs
+      - scripts/validate-ddangyo-package.mjs
+      - data/ddangyo-manual-existing-overrides.json
       - .github/workflows/ddangyo-complete-fingerprint-probe.yml
       - .ddangyo-complete-fingerprint-trigger
 
@@ -22,7 +29,7 @@ concurrency:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 60
     steps:
       - name: Check out preview full history
         uses: actions/checkout@v4
@@ -53,21 +60,32 @@ jobs:
         working-directory: preview
         run: node scripts/reclassify-all-ddangyo-stores.mjs ddangyo-all-extraction-output/all-stores-normalized.json
 
+      - name: Reject wrong existing links and finalize store identities
+        working-directory: preview
+        run: node scripts/finalize-ddangyo-classification.mjs ddangyo-reclassification-output/reclassified-stores.json
+
+      - name: Build additive business hours and app-scoped benefits
+        working-directory: preview
+        run: node scripts/build-ddangyo-service-info.mjs ddangyo-final-classification-output/final-stores.json
+
+      - name: Build additive store enrichment
+        working-directory: preview
+        run: node scripts/build-ddangyo-enrichment.mjs ddangyo-final-classification-output/final-stores.json
+
+      - name: Build additive menus, descriptions and images
+        working-directory: preview
+        run: node scripts/build-ddangyo-menus.mjs ddangyo-final-classification-output/final-stores.json
+
+      - name: Validate complete fingerprint package
+        working-directory: preview
+        run: node scripts/validate-ddangyo-package.mjs
+
       - name: Upload historical link inventory
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: all-historical-ddangyo-links
           path: ddangyo-historical-links-output
-          if-no-files-found: error
-          retention-days: 2
-
-      - name: Upload field probe output
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ddangyo-complete-fingerprint-probe
-          path: preview/ddangyo-complete-fingerprint-probe-output
           if-no-files-found: error
           retention-days: 2
 
@@ -80,11 +98,20 @@ jobs:
           if-no-files-found: error
           retention-days: 2
 
-      - name: Upload conservative reclassification report
+      - name: Upload final identity report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ddangyo-reclassification-report
-          path: preview/ddangyo-reclassification-output
+          name: ddangyo-final-classification
+          path: preview/ddangyo-final-classification-output
+          if-no-files-found: error
+          retention-days: 2
+
+      - name: Upload validated additive package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ddangyo-complete-package
+          path: preview/ddangyo-package-output
           if-no-files-found: error
           retention-days: 2
