@@ -1,0 +1,207 @@
+{
+  "storeId": "c27307962d9438b6",
+  "storeName": "다자연맛집",
+  "displayName": "다자연맛집",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/05fc50c3-5102-4942-91e5-19021f9029e2.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "식사류",
+    "추가",
+    "단품메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1211712-10000008",
+      "name": "동태탕",
+      "description": "2인 (밥2, 반찬5종세트)\n3인 (밥3, 반찬5종세트)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/05fc50c3-5102-4942-91e5-19021f9029e2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1211712-10000002",
+      "name": "제육볶음",
+      "description": "2인 (밥2, 국,반찬5종세트, 쌈야채 ) \n3인 (밥3, 국, 반찬5종세트, 쌈야채)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/c9031135-c753-4c12-9f79-431d1b871c3b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1211712-10000010",
+      "name": "삼합(홍어,수육,김치)",
+      "description": "반찬 5종세트, 쌈야채, 국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/f466461c-a638-4101-8538-a0e9d556deb9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1211712-10000007",
+      "name": "낙지볶음",
+      "description": "2인분 (밥2, 국, 반찬5종 세트)\n3인분 (밥3, 국, 반찬5종 세트)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/9c3d4408-b0df-4c43-a5ab-340d2f8166cf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1211712-10000003",
+      "name": "닭볶음탕",
+      "description": "소 (밥2, 반찬5종세트) \n대 (밥3, 반찬5종 세트)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/aeec3980-9a32-4bd7-a7a5-db8923142cd3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1211712-10000006",
+      "name": "김치찌개",
+      "description": "2인 (밥2, 반찬5종세트)\n3인 (밥3, 반찬5종세트)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/0b11e4e0-3e7c-4ed7-9075-efce79fd4234.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1211712-10000001",
+      "name": "돌게장정식(간장+양념+밑반찬+공기밥)",
+      "description": "(2인분)간장게장+양념게장+된장국\n               +밑반찬5가지+공기밥2개\n(3인분)간장게장+양념게장+된장국\n               +밑반찬5가지+공기밥3개",
+      "category": "식사류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1211712-10000013",
+      "name": "간장돌게장",
+      "description": "간장돌게장 단품",
+      "category": "추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1211712-10000015",
+      "name": "꽃게간장게장",
+      "description": "택배 가능한 메뉴입니다.\n물론 배달도 가능합니다. 게장도 집에서 맛 보세요.",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1211712-10000014",
+      "name": "양념돌게장",
+      "description": "양념돌게장 단품",
+      "category": "추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1211712-10000016",
+      "name": "꽃게 양념게장",
+      "description": "택배 가능한 메뉴입니다.\n물론 배달도 가능합니다. 게장도 집에서 맛 보세요.",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1211712-10000004",
+      "name": "갈치조림",
+      "description": "2인 (밥2, 반찬5종 세트)\n3인 (밥3, 반찬5종 세트)",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1211712-10000017",
+      "name": "돌게간장게장",
+      "description": "택배 가능한 메뉴입니다.\n물론 배달도 가능합니다. 게장도 집에서 맛 보세요.",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1211712-10000005",
+      "name": "조기매운탕",
+      "description": "2인 (밥2, 반찬5종세트)\n3인 (밥3, 반찬5종 세트)",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1211712-10000018",
+      "name": "돌게양념게장",
+      "description": "택배 가능한 메뉴입니다.\n물론 배달도 가능합니다. 게장도 집에서 맛 보세요.",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1211712-10000019",
+      "name": "배추김치",
+      "description": "택배 가능한 메뉴입니다.\n물론 배달도 가능합니다. \n여수배추김치",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1211712-10000020",
+      "name": "돌산갓김치",
+      "description": "택배 가능한 메뉴입니다.\n물론 배달도 가능합니다. \n여수갓김치",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1211712-10000009",
+      "name": "서대회무침",
+      "description": "1~2인 ( 반찬5종세트, 국)\n3~4인 (동일)",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1211712-10000011",
+      "name": "선어(삼치)",
+      "description": "김,쌈야채, 마늘 고추, 쌈장, 초장, 양념간장, 와사비",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1211712-10000012",
+      "name": "선어(병어)",
+      "description": "쌈야채, 마늘, 고추, 쌈장, 초장, 간장, 와사비",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1211712",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?R1aGSug"
+    ],
+    "rawItemCount": 26,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

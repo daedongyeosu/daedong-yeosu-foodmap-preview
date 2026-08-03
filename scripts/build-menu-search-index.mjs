@@ -61,7 +61,7 @@ const chunks = bins.map((bin, index) => {
 
 const payload = {
   version: 2,
-  generatedAt: '2026-08-02',
+  generatedAt: '2026-08-04',
   storeCount: Object.keys(stores).length,
   itemCount,
   chunks

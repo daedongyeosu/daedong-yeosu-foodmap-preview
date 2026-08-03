@@ -1,0 +1,838 @@
+{
+  "storeId": "86c20cb35e0fc19b",
+  "storeName": "밥풀릭스 여수문수점",
+  "displayName": "밥풀릭스 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e658049b-a4ba-4020-98c2-c88bb401d17c.jpg",
+  "categories": [
+    "전체",
+    "볶음밥 메뉴",
+    "가성비 세트 메뉴",
+    "고기 메뉴",
+    "덮밥메뉴",
+    "도시락 메뉴",
+    "찌개 2.5인분 단품",
+    "찌개 메뉴",
+    "사이드 메뉴",
+    "비빔밥 메뉴",
+    "전골 메뉴",
+    "냉면 메뉴",
+    "음료 메뉴",
+    "주류메뉴",
+    "[NEW] 밥풀릭스 아이스크림 출시"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1338796-30000049",
+      "name": "김치 볶음밥",
+      "description": "볶음밥+계란후라이+된장국+2찬",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e2333312-b2c2-41ca-9321-d5bf99e2788a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000049"
+    },
+    {
+      "id": "ddangyo-1338796-30000001",
+      "name": "찌개+사이드메뉴 세트",
+      "description": "찌개+사이드메뉴[택1]+공기밥+2찬+조미김",
+      "category": "가성비 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/1a4aa0bb-7d02-4e37-9d14-8548fae69b27.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000001"
+    },
+    {
+      "id": "ddangyo-1338796-30000040",
+      "name": "두루치기",
+      "description": "고기두루치기+두부8조각+ 공기밥1+ 된장국",
+      "category": "고기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b763a08e-112a-4737-8985-2722a5d66ced.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000040"
+    },
+    {
+      "id": "ddangyo-1338796-30000018",
+      "name": "직화삼겹덮밥",
+      "description": "덮밥 + 된장국 + 소스 택1",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a4ee3012-546f-4021-add8-b4631accb706.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000018"
+    },
+    {
+      "id": "ddangyo-1338796-30000033",
+      "name": "스팸 도시락",
+      "description": "도시락 + 된장국",
+      "category": "도시락 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/515749c9-98d5-4008-b50b-0ff775fa30c0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000033"
+    },
+    {
+      "id": "ddangyo-1338796-30000013",
+      "name": "김치찌개 2.5인분 단품",
+      "description": "밥 X, 반찬 X",
+      "category": "찌개 2.5인분 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bb983e95-c600-4977-b399-e969959e4b1e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000013"
+    },
+    {
+      "id": "ddangyo-1338796-30000007",
+      "name": "김치찌개",
+      "description": "찌개+공기밥+2찬+조미김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/712075d3-1712-41f6-a9ed-7fb7cd0b3419.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000007"
+    },
+    {
+      "id": "ddangyo-1338796-30000057",
+      "name": "갈비 반찬",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/69640c47-d238-4964-8509-538ffdaf3be4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000057"
+    },
+    {
+      "id": "ddangyo-1338796-30000023",
+      "name": "콩나물 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/aa89498a-8ed3-442a-a80f-12ae173221e7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000023"
+    },
+    {
+      "id": "ddangyo-1338796-30000046",
+      "name": "낙곱새+미니비빔밥",
+      "description": "낙지,대창,새우+미니 비빔밥",
+      "category": "전골 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e94d5d18-4608-4d26-9371-0d208dc24066.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000046"
+    },
+    {
+      "id": "ddangyo-1338796-30000053",
+      "name": "물냉면",
+      "description": "냉면+식초1p+겨자1p",
+      "category": "냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/baaf06c2-8943-4969-b49e-b17a4beaacdd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000053"
+    },
+    {
+      "id": "ddangyo-1338796-30000076",
+      "name": "칠성사이다 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/92a0adea-3b99-42b8-adff-234535a9f54e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000076"
+    },
+    {
+      "id": "ddangyo-1338796-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1338796-30000088",
+      "name": "[신메뉴] 밥풀릭스 소금우유 초코칩 아이스크림",
+      "description": "",
+      "category": "[NEW] 밥풀릭스 아이스크림 출시",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/2564f535-4dc7-4077-883f-80381b040d48.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000088"
+    },
+    {
+      "id": "ddangyo-1338796-30000047",
+      "name": "낙삼새+미니비빔밥",
+      "description": "낙지,삼겹,새우+미니 비빔밥",
+      "category": "전골 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7686b9d9-8dfa-4f8c-89df-907c783dad9d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000047"
+    },
+    {
+      "id": "ddangyo-1338796-30000041",
+      "name": "삼겹 정식",
+      "description": "고기+공기밥+2찬+조미김+된장국",
+      "category": "고기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/29d05a49-b2bc-49ca-b346-ac6c9bb18438.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000041"
+    },
+    {
+      "id": "ddangyo-1338796-30000034",
+      "name": "삼겹 도시락",
+      "description": "도시락 + 된장국",
+      "category": "도시락 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a8bfa9c5-e789-4f66-9c07-9181380f0b8e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000034"
+    },
+    {
+      "id": "ddangyo-1338796-30000008",
+      "name": "된장찌개",
+      "description": "된장찌개+공기밥+2찬+조미김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d7b33640-5534-42e2-8712-984d4fdbd792.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000008"
+    },
+    {
+      "id": "ddangyo-1338796-30000002",
+      "name": "볶음밥+찌개 세트",
+      "description": "볶음밥[택1]+찌개[택1]+2찬",
+      "category": "가성비 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f249e3c8-0144-4c5d-bbaf-72d4d31ef50e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000002"
+    },
+    {
+      "id": "ddangyo-1338796-30000077",
+      "name": "제로 칠성사이다 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/cd8d0fe5-22c0-4f1f-80d0-936d0d9939d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000077"
+    },
+    {
+      "id": "ddangyo-1338796-30000014",
+      "name": "순두부찌개 2.5인분 단품",
+      "description": "밥 X, 반찬 X",
+      "category": "찌개 2.5인분 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/abcb6393-4e9b-4e95-838e-97550e13663e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000014"
+    },
+    {
+      "id": "ddangyo-1338796-30000058",
+      "name": "제육볶음 반찬",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d5db73c3-fe9c-49b6-8611-dde2d981beac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000058"
+    },
+    {
+      "id": "ddangyo-1338796-30000019",
+      "name": "양념갈비덮밥",
+      "description": "덮밥 + 된장국 + 소스 택1",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/23708c4a-5c2a-4629-983e-821c3c0b81d6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000019"
+    },
+    {
+      "id": "ddangyo-1338796-30000054",
+      "name": "비빔냉면",
+      "description": "비빔냉면+미니육수+식초1p+겨자1p",
+      "category": "냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7bed1783-7c73-4c50-b8e1-4b585f94fce9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000054"
+    },
+    {
+      "id": "ddangyo-1338796-30000024",
+      "name": "새싹 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/26615e0d-110c-44de-bed7-2f1548e7d340.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000024"
+    },
+    {
+      "id": "ddangyo-1338796-30000050",
+      "name": "낙지 볶음밥",
+      "description": "볶음밥+계란후라이+된장국+2찬",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/37dd2700-3f4d-4b0a-b3e3-6d1b7ca54f6e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000050"
+    },
+    {
+      "id": "ddangyo-1338796-90000002",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1338796-30000059",
+      "name": "불고기 반찬",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/613d878e-4b1b-46e2-85f7-3fe3ce00060f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000059"
+    },
+    {
+      "id": "ddangyo-1338796-30000003",
+      "name": "비빔밥+찌개 세트",
+      "description": "비빔밥[택1]+찌개[택1]+비빔장",
+      "category": "가성비 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7d1b9f3a-3d6e-440a-9bae-d423835f4b37.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000003"
+    },
+    {
+      "id": "ddangyo-1338796-30000009",
+      "name": "청국장찌개",
+      "description": "청국장찌개+공기밥+2찬+조미김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/539a2f8b-b1f5-41d4-984b-ec5379e2b92e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000009"
+    },
+    {
+      "id": "ddangyo-1338796-30000015",
+      "name": "된장찌개 2.5인분 단품",
+      "description": "밥 X, 반찬 X",
+      "category": "찌개 2.5인분 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/36c1fdc1-b526-426e-9164-4784e9833a62.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000015"
+    },
+    {
+      "id": "ddangyo-1338796-30000020",
+      "name": "간장불고기덮밥",
+      "description": "덮밥 + 된장국 + 소스 택1",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/2ef8a66f-41a1-41e2-8c03-553c138e1b80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000020"
+    },
+    {
+      "id": "ddangyo-1338796-30000025",
+      "name": "열무 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/9fd13787-9e83-484a-9057-7f6a3019e72c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000025"
+    },
+    {
+      "id": "ddangyo-1338796-30000035",
+      "name": "갈비 도시락",
+      "description": "도시락 + 된장국",
+      "category": "도시락 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/2b22c581-bb1e-4dfe-8925-2e084a7b0f37.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000035"
+    },
+    {
+      "id": "ddangyo-1338796-30000042",
+      "name": "갈비 정식",
+      "description": "고기+공기밥+2찬+조미김+된장국",
+      "category": "고기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f3453b5a-78d6-4944-bf71-ac3e4eec385d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000042"
+    },
+    {
+      "id": "ddangyo-1338796-30000048",
+      "name": "낙우새+미니비빔밥",
+      "description": "낙지,우삼겹,새우+미니 비빔밥",
+      "category": "전골 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/45ea964b-4bf9-4745-9f4d-c54755a699bb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000048"
+    },
+    {
+      "id": "ddangyo-1338796-30000051",
+      "name": "새우 볶음밥",
+      "description": "볶음밥+계란후라이+된장국+2찬",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d69f2dcf-2f14-4abb-9af8-3277684b2782.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000051"
+    },
+    {
+      "id": "ddangyo-1338796-30000055",
+      "name": "냉면+고기 세트",
+      "description": "물냉면 + 고기\n/ 비빔냉면 + 미니육수 + 고기",
+      "category": "냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b64755ab-c949-4198-9345-3201acfc71e7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000055"
+    },
+    {
+      "id": "ddangyo-1338796-30000078",
+      "name": "펩시 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5dd828f0-29c9-45b3-ba70-2d697b06c600.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000078"
+    },
+    {
+      "id": "ddangyo-1338796-90000003",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1338796-30000043",
+      "name": "불고기 정식",
+      "description": "고기+공기밥+2찬+조미김+된장국",
+      "category": "고기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3eabb2c6-3cd7-4275-9a2d-ef35bd441aef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1338796-30000010",
+      "name": "순두부찌개",
+      "description": "순두부찌개+공기밥+2찬+조미김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/cb96ccbc-4c99-4871-a382-4a8f5318fc0e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000010"
+    },
+    {
+      "id": "ddangyo-1338796-30000036",
+      "name": "불고기 도시락",
+      "description": "도시락 + 된장국",
+      "category": "도시락 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c8fbfaee-005b-4854-b36b-a2d56e04a4f5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000036"
+    },
+    {
+      "id": "ddangyo-1338796-30000060",
+      "name": "맛보기 육회",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/fac0b0e5-e4fb-4234-91fb-5e803e9d90c5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000060"
+    },
+    {
+      "id": "ddangyo-1338796-30000016",
+      "name": "청국장찌개 2.5인분 단품",
+      "description": "밥 X, 반찬 X",
+      "category": "찌개 2.5인분 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/51a2afb4-784f-47fd-91dc-747f8958ebaa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000016"
+    },
+    {
+      "id": "ddangyo-1338796-30000021",
+      "name": "직화제육덮밥",
+      "description": "덮밥 + 된장국 + 소스 택1",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c239339a-345b-468a-af98-66a45bf69719.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000021"
+    },
+    {
+      "id": "ddangyo-1338796-30000056",
+      "name": "냉면2+고기 세트",
+      "description": "물냉면+고기/비빔냉면+미니육수+고기",
+      "category": "냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/072a54fb-dcdf-4b70-ad5a-6be8683b17dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000056"
+    },
+    {
+      "id": "ddangyo-1338796-30000004",
+      "name": "도시락+찌개 세트",
+      "description": "도시락[택1]+찌개[택1]",
+      "category": "가성비 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d088c2f9-f63b-46d4-b50e-f61a375106fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000004"
+    },
+    {
+      "id": "ddangyo-1338796-30000052",
+      "name": "잡채 볶음밥",
+      "description": "볶음밥+계란후라이+된장국+2찬",
+      "category": "볶음밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d314bb0f-dfa2-4e90-a2c3-59d345e354c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000052"
+    },
+    {
+      "id": "ddangyo-1338796-30000026",
+      "name": "참치 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0cd8d034-e354-47a3-a615-746ea28609fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000026"
+    },
+    {
+      "id": "ddangyo-1338796-30000079",
+      "name": "제로 펩시 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3fe16443-21a3-4176-beac-be90a9e5fe03.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000079"
+    },
+    {
+      "id": "ddangyo-1338796-90000004",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1338796-30000027",
+      "name": "삼겹 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/af7f4b63-97e1-4324-a0de-c0686838a511.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000027"
+    },
+    {
+      "id": "ddangyo-1338796-30000017",
+      "name": "부대찌개 2.5인분 단품",
+      "description": "밥 X, 반찬 X",
+      "category": "찌개 2.5인분 단품",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/169e6dc9-116f-4ee5-8fc3-871ab144050a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000017"
+    },
+    {
+      "id": "ddangyo-1338796-30000005",
+      "name": "덮밥 + 찌개 set",
+      "description": "덮밥[택1]+찌개[택1]",
+      "category": "가성비 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5f722697-e5a0-4d13-9a9c-5d94d020ab45.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000005"
+    },
+    {
+      "id": "ddangyo-1338796-30000037",
+      "name": "제육 도시락",
+      "description": "도시락 + 된장국",
+      "category": "도시락 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e161d991-d8d7-4d83-b0e0-8770822bbc5c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000037"
+    },
+    {
+      "id": "ddangyo-1338796-30000095",
+      "name": "[NEW]떡갈비",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/188859de-c614-444d-9729-5e2e79af68fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000095"
+    },
+    {
+      "id": "ddangyo-1338796-30000011",
+      "name": "부대찌개",
+      "description": "부대찌개+공기밥+2찬+조미김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/af51d2d5-7924-41a9-ac97-87383314eaed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000011"
+    },
+    {
+      "id": "ddangyo-1338796-30000044",
+      "name": "제육볶음 정식",
+      "description": "고기+공기밥+2찬+조미김+된장국",
+      "category": "고기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0af602cc-444e-4733-8350-3317ac56cfbe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000044"
+    },
+    {
+      "id": "ddangyo-1338796-30000080",
+      "name": "밥풀릭스 커피",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a2ab5f4f-4aea-4703-9f5b-74f28215e9fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000080"
+    },
+    {
+      "id": "ddangyo-1338796-30000022",
+      "name": "직화우삼겹덮밥",
+      "description": "덮밥 + 된장국 + 소스 택1",
+      "category": "덮밥메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/850fb69b-0b2b-4d4f-88b2-9e5f541a06e7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000022"
+    },
+    {
+      "id": "ddangyo-1338796-30000081",
+      "name": "밥풀릭스 아이스티",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c1a64700-26c3-4c63-a1e9-e3f62b23cc2a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000081"
+    },
+    {
+      "id": "ddangyo-1338796-30000045",
+      "name": "우삼겹 정식",
+      "description": "고기+공기밥+2찬+조미김+된장국",
+      "category": "고기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/cc1aae23-9877-4221-82d1-e732ac5d22cd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000045"
+    },
+    {
+      "id": "ddangyo-1338796-30000028",
+      "name": "갈비 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b4e07960-2e1d-41ca-925f-69942f78ba79.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000028"
+    },
+    {
+      "id": "ddangyo-1338796-30000006",
+      "name": "고기정식+찌개 세트",
+      "description": "고기정식[택1]+찌개[택1]",
+      "category": "가성비 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/46f50219-0236-4317-a25c-b855b819cbc6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000006"
+    },
+    {
+      "id": "ddangyo-1338796-30000096",
+      "name": "[NEW]순살치킨",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/2ae167b4-6c79-4897-999e-f6c4b4ccc9c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000096"
+    },
+    {
+      "id": "ddangyo-1338796-30000038",
+      "name": "우삼겹 도시락",
+      "description": "도시락 + 된장국",
+      "category": "도시락 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f5742567-1df6-4c57-b7e0-cc7f032215c3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000038"
+    },
+    {
+      "id": "ddangyo-1338796-30000012",
+      "name": "돼지고기짜글이",
+      "description": "짜글이+공기밥+2찬+조미김",
+      "category": "찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8cb26626-6df4-471f-b870-407d7dd172a1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000012"
+    },
+    {
+      "id": "ddangyo-1338796-30000029",
+      "name": "불고기 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/18686045-c48f-491d-a4b9-581e71fade16.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000029"
+    },
+    {
+      "id": "ddangyo-1338796-30000061",
+      "name": "수제 비빔면",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d83765ae-ea8f-4daa-b6bd-61e7c141f6fc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000061"
+    },
+    {
+      "id": "ddangyo-1338796-30000039",
+      "name": "육회 도시락",
+      "description": "도시락 + 된장국",
+      "category": "도시락 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/49b1d017-9adb-4e22-b549-b64ced7ab755.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000039"
+    },
+    {
+      "id": "ddangyo-1338796-30000082",
+      "name": "극찬메뉴 / 김치제육정식",
+      "description": "",
+      "category": "고기 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/3191c73c-d68f-4baa-bd56-4e86da3c7908.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000082"
+    },
+    {
+      "id": "ddangyo-1338796-30000030",
+      "name": "제육 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/2854142b-5f92-43f4-b990-cd9c800ee11d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000030"
+    },
+    {
+      "id": "ddangyo-1338796-30000062",
+      "name": "수제 떡갈비",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3aed950f-1ffa-4a40-976b-ef4a25e4ea6f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000062"
+    },
+    {
+      "id": "ddangyo-1338796-30000031",
+      "name": "우삼겹 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7670fe17-c3e2-48b6-ac9d-aef42a8434d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000031"
+    },
+    {
+      "id": "ddangyo-1338796-30000063",
+      "name": "미니 김치전",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/98689104-31b4-43f4-b987-87e60655d34d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000063"
+    },
+    {
+      "id": "ddangyo-1338796-30000064",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bf937e7f-1ef5-4c09-9a25-80cddf7da5bd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000064"
+    },
+    {
+      "id": "ddangyo-1338796-30000032",
+      "name": "육회 비빔밥",
+      "description": "비빔밥+된장국+비빔장",
+      "category": "비빔밥 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ba27b446-0b13-4de8-b8c5-d16bde9e3d98.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000032"
+    },
+    {
+      "id": "ddangyo-1338796-30000065",
+      "name": "동그랑땡",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/c2dc5bad-b0c8-410e-9dbd-30c987eb192f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000065"
+    },
+    {
+      "id": "ddangyo-1338796-30000066",
+      "name": "한입돈까스",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d0d8411a-e26e-44ce-ba94-b5cbd2ef1c1c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000066"
+    },
+    {
+      "id": "ddangyo-1338796-30000067",
+      "name": "용가리치킨",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/3865be62-8833-400e-8cd8-db808cc57879.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000067"
+    },
+    {
+      "id": "ddangyo-1338796-30000068",
+      "name": "스팸계란후라이",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/2a344c58-604d-4dea-ac05-a1abea953484.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000068"
+    },
+    {
+      "id": "ddangyo-1338796-30000069",
+      "name": "두부김치",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/5df074dc-a795-4608-b851-47ef9f085fbd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000069"
+    },
+    {
+      "id": "ddangyo-1338796-30000070",
+      "name": "된장국",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/89565ddd-d455-4513-9eab-bf571f0a54f5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000070"
+    },
+    {
+      "id": "ddangyo-1338796-30000071",
+      "name": "반찬+조미김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000071"
+    },
+    {
+      "id": "ddangyo-1338796-30000072",
+      "name": "라면사리",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ec88bcf6-2a44-4f0c-9549-03e30ad83740.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000072"
+    },
+    {
+      "id": "ddangyo-1338796-30000073",
+      "name": "한식 공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/46e89ec4-7239-46d6-ae05-012a726d2bfa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000073"
+    },
+    {
+      "id": "ddangyo-1338796-30000074",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bf6adf3c-a463-4ac0-8820-1accb0a840e3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000074"
+    },
+    {
+      "id": "ddangyo-1338796-30000075",
+      "name": "비빔장",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/884d166a-86eb-4b77-bc93-93f1db5f8e83.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000075"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1338796",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?thg9PBN"
+    ],
+    "rawItemCount": 89,
+    "duplicateItemsRemoved": 0
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

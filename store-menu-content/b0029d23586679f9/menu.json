@@ -1,0 +1,182 @@
+{
+  "storeId": "b0029d23586679f9",
+  "storeName": "인생김치찌개 여수문수점",
+  "displayName": "인생김치찌개 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/1f8ada3f-396b-41f9-ac1a-75a1643dfca6.jpg",
+  "categories": [
+    "전체",
+    "찌개류",
+    "세트메뉴",
+    "김치찜류",
+    "직화 고기류",
+    "사이드류",
+    "음료류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138477-10000005",
+      "name": "[찌개1위]인생 돼지 김치찌개",
+      "description": "100% 72시간 저온숙성 김치, 100% 프리미엄 돼지",
+      "category": "찌개류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bfc1e8d1-53c9-4dc1-81bc-fff64943d323.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1138477-10000001",
+      "name": "[가성비]인생 김치찌개 고기 1인 set 백반",
+      "description": "진한 김치찌개 집밥느낌 제대로~",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/1a2f7e24-eda9-4900-8760-5770ef4a240f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1138477-10000009",
+      "name": "[사장 강추]인생 삼겹 김치찜",
+      "description": "사실 김치찜 전문집이라는~\n사장 최고 강추메뉴입니다~",
+      "category": "김치찜류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/0aaab1e6-21eb-44d0-96d7-b40a17aafdf4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1138477-10000006",
+      "name": "[고소함1위]인생 참치 김치찌개",
+      "description": "",
+      "category": "찌개류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/86f9a4d7-568f-47de-9bab-722d758f691d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1138477-10000011",
+      "name": "인생 직화 간장 불고기",
+      "description": "",
+      "category": "직화 고기류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/cc11a615-6b5e-4828-9982-d915f5a4b6f3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1138477-10000013",
+      "name": "공기밥 추가",
+      "description": "",
+      "category": "사이드류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5ea37413-19c2-4f30-8788-9846fefab993.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1138477-10000015",
+      "name": "펩시 콜라 500ml",
+      "description": "",
+      "category": "음료류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1138477-10000002",
+      "name": "[푸짐함]인생 김치찌개 고기 2~3인 set 백반",
+      "description": "고기 100g 서비스로 더 드립니다~",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a24a40fb-299a-4fff-ba74-5e687bb79bd2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1138477-10000010",
+      "name": "[Real 스팸]인생 스팸 김치찜",
+      "description": "",
+      "category": "김치찜류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a284c3a5-e87e-478b-9846-dca57341bf7f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1138477-10000012",
+      "name": "인생 직화 삼겹",
+      "description": "",
+      "category": "직화 고기류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a2111cc0-b628-45b1-aa9e-d38821553071.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1138477-10000014",
+      "name": "콘샐러드",
+      "description": "",
+      "category": "사이드류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1138477-10000016",
+      "name": "칠성 사이다 500ml",
+      "description": "",
+      "category": "음료류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1138477-10000003",
+      "name": "[김치찜 1위]인생 김치찜 고기 1~2인 set 백반",
+      "description": "인생 김치찜 1~2인 + 직화 고기 200g",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/fd4b875d-5fd5-48e6-98f4-6445c30c69c6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1138477-10000007",
+      "name": "[Real 스팸]인생 스팸 김치찌개",
+      "description": "REAL 스팸 사용~~",
+      "category": "찌개류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/748ce2ea-f50b-40fe-93f0-c6ac174f00f2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1138477-10000017",
+      "name": "ZERO펩시콜라 뚱캔",
+      "description": "",
+      "category": "음료류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1138477-10000004",
+      "name": "[푸짐함]인생 김치찜 고기 2~3인 set 백반",
+      "description": "인생 김치찜 2~3인분 + 직화고기 300g",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a4d6fe26-eb13-4205-b3a9-9fec5aa4c9f6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1138477-10000008",
+      "name": "돼지김치찌개만(밥,반찬X)",
+      "description": "밥,반찬 없이 찌개만 나갑니다.",
+      "category": "찌개류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1138477",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?LN0RUT5"
+    ],
+    "rawItemCount": 21,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

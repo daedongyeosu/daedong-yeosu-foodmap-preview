@@ -1,0 +1,98 @@
+{
+  "storeId": "3163472c4122fa8e",
+  "storeName": "참치대뱃살",
+  "displayName": "참치대뱃살",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1e3d9c11-3f5a-4b56-9303-fe257f7d7c09.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1268825-10000027",
+      "name": "(참다랑어) 1번도로 (대뱃살)",
+      "description": "2인 : 참치뱃살180g+김3개+간장,소금장2개+락교,초생강,와사비,단무지,무순 \n3인 : 참치뱃살280g+김5개+간장,소금장3개+락교,초생강,와사비,단무지,무순 \n4인 : 참치뱃살380g+김7개+간장,소금장4개+락교,초생강,와사비,단무지,무순",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5e82f2ab-01aa-4b14-9490-3dd013b3f7e5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1268825-10000028",
+      "name": "(참다랑어) 2번도로 (대뱃살)",
+      "description": "2인 : 참치뱃살180g+김3개+간장,소금장2개+락교,초생강,와사비,단무지,무순 \n3인 : 참치뱃살280g+김5개+간장,소금장3개+락교,초생강,와사비,단무지,무순 \n4인 : 참치뱃살380g+김7개+간장,소금장4개+락교,초생강,와사비,단무지,무순",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b17fc57d-bf7c-41d3-bc32-2248d3c1e11a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1268825-10000029",
+      "name": "소고기무국",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/542611bf-883e-4725-85ad-aa60a6b92a3e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1268825-10000034",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1268825-10000030",
+      "name": "주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4bd095b8-ac43-41ea-adf1-d9630103641c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1268825-10000031",
+      "name": "와사비",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/b6f8e519-277a-40f6-b9f1-25e027dc0d9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1268825-10000032",
+      "name": "무순",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1268825-10000033",
+      "name": "김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1268825",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?Tz1yRQf"
+    ],
+    "rawItemCount": 11,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

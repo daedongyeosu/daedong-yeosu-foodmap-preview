@@ -1,0 +1,817 @@
+{
+  "storeId": "e6015553103723b6",
+  "storeName": "스윗&스윗",
+  "displayName": "스윗&스윗",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e7a855e9-1e78-4eb8-9f1f-0a53a741a29f.jpg",
+  "categories": [
+    "전체",
+    "음료",
+    "에이드",
+    "라떼",
+    "컵빙수",
+    "스무디",
+    "마카롱",
+    "3호 크림타르트",
+    "쁘띠케이크",
+    "미니크림타르트",
+    "쥬스",
+    "생과일타르트"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1223899-10000028",
+      "name": "아메리카노",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000421.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1223899-10000032",
+      "name": "백향과에이드(패션푸르츠)",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2e474c0d-333b-45c0-b3eb-16085dde8c2e.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1223899-10000064",
+      "name": "ice딸기라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000064"
+    },
+    {
+      "id": "ddangyo-1223899-10000074",
+      "name": "컵)팥빙수",
+      "description": "",
+      "category": "컵빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/aaa15675-12fe-4ad8-b9a4-52ba653ac6c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000074"
+    },
+    {
+      "id": "ddangyo-1223899-10000155",
+      "name": "밀크쉐이크",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/bb08f951-cd27-4830-ae14-69be5c9bed02.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000155"
+    },
+    {
+      "id": "ddangyo-1223899-10000173",
+      "name": "마카롱시리얼",
+      "description": "우유에 말아먹거나, 요플레에 뿌려먹으면 바싹바싹 맛있어요",
+      "category": "마카롱",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7c58360b-c050-4835-b408-4f0828959f2e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000173"
+    },
+    {
+      "id": "ddangyo-1223899-10000003",
+      "name": "뉴욕치즈",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/b53bb8ad-b5d7-4f69-8a6c-4a873213f838.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1223899-10000029",
+      "name": "아이스아메리카노",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/72e4d24c-7400-464b-9737-09998e50beaf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1223899-10000065",
+      "name": "ice멜론라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1223899-10000075",
+      "name": "컵)딸기빙수",
+      "description": "",
+      "category": "컵빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f7b3156d-0332-4f3d-a739-74f3ba0c62e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000075"
+    },
+    {
+      "id": "ddangyo-1223899-10000092",
+      "name": "쁘띠샤인머스켓",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/545d6978-c1bf-4224-a7e3-e8dc121c0335.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1223899-10000154",
+      "name": "커피쉐이크",
+      "description": "",
+      "category": "스무디",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000154"
+    },
+    {
+      "id": "ddangyo-1223899-10000157",
+      "name": "고소미 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000157"
+    },
+    {
+      "id": "ddangyo-1223899-10000177",
+      "name": "마카롱씨리얼(초코)",
+      "description": "",
+      "category": "마카롱",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/83d2ccfb-4cab-4bfb-abbf-3e4881a8908b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000177"
+    },
+    {
+      "id": "ddangyo-1223899-10000004",
+      "name": "단호박",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d1ef01be-03d2-422d-88bd-4c4bc06f1ab3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1223899-10000036",
+      "name": "복숭아아이스티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/ba75d53b-77b2-444d-8f06-0210e4824ec7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1223899-10000049",
+      "name": "수박주스",
+      "description": "",
+      "category": "쥬스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/72e8f41c-b9a9-47cc-b78f-f0dd6871bdf3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1223899-10000066",
+      "name": "ice복숭아라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1223899-10000076",
+      "name": "컵)망고빙수",
+      "description": "",
+      "category": "컵빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/18481ff6-b926-4212-9243-5e4b313e884d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000076"
+    },
+    {
+      "id": "ddangyo-1223899-10000150",
+      "name": "딸기스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/07a02ea5-786b-479e-b65b-81a6d6872dbe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000150"
+    },
+    {
+      "id": "ddangyo-1223899-10000158",
+      "name": "고구마 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000158"
+    },
+    {
+      "id": "ddangyo-1223899-10000175",
+      "name": "미니마카롱(6입)",
+      "description": "소금바닐라, 황치즈, 솜사탕, 바밤바, 딸기&바나나, 메로나, 쿠엔쿠, 크림치즈, 초코가나슈   9가지 맛 중 랜덤 6구",
+      "category": "마카롱",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/1c3e1e0d-3891-416e-bff4-c3aff49732a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000175"
+    },
+    {
+      "id": "ddangyo-1223899-10000005",
+      "name": "레몬타르트",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/a837938a-950b-4b06-a86b-b370786fa1b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1223899-10000053",
+      "name": "오몽에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1223899-10000067",
+      "name": "키위쥬스",
+      "description": "",
+      "category": "쥬스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/07/dc383fd9-9823-43fc-b724-30d296878292.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1223899-10000069",
+      "name": "히비스커스티",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1223899-10000078",
+      "name": "옥수수라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000078"
+    },
+    {
+      "id": "ddangyo-1223899-10000094",
+      "name": "쁘띠귤",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4aff9d3f-84bb-49bc-b1ed-27b523a717f9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000094"
+    },
+    {
+      "id": "ddangyo-1223899-10000139",
+      "name": "생과일 망고타르트",
+      "description": "",
+      "category": "생과일타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000139"
+    },
+    {
+      "id": "ddangyo-1223899-10000151",
+      "name": "망고스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000212.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000151"
+    },
+    {
+      "id": "ddangyo-1223899-10000160",
+      "name": "단호박 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000160"
+    },
+    {
+      "id": "ddangyo-1223899-10000178",
+      "name": "미니마카롱(9입)",
+      "description": "",
+      "category": "마카롱",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d9aa42cc-31b6-440f-b1a6-5330bc5a2671.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000178"
+    },
+    {
+      "id": "ddangyo-1223899-10000006",
+      "name": "블루베리",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e3eb17bd-8d76-46c4-b95e-15b5e316141e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1223899-10000060",
+      "name": "멜론스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1db8fc4c-5dc8-461d-9d15-006c637f2936.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1223899-10000079",
+      "name": "땅콩라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1223899-10000140",
+      "name": "생과일 키위타르트",
+      "description": "그날 과일 수급에 따라 골드키위 혹은 그린키위로 구성됩니다.",
+      "category": "생과일타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000140"
+    },
+    {
+      "id": "ddangyo-1223899-10000149",
+      "name": "레몬차",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/ea1ef68e-10a8-45ef-8ee1-878bbbdbd37a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000149"
+    },
+    {
+      "id": "ddangyo-1223899-10000161",
+      "name": "쑥이에요 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000161"
+    },
+    {
+      "id": "ddangyo-1223899-10000007",
+      "name": "딸기우유맛",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/29a4f50f-3024-4ff8-92d4-b0557f5edb48.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1223899-10000061",
+      "name": "수박스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/35f28e91-39a7-426e-8984-da157230dddd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000061"
+    },
+    {
+      "id": "ddangyo-1223899-10000072",
+      "name": "유자차",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/40cf7df1-5da8-4871-a8f0-9441529f088c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000072"
+    },
+    {
+      "id": "ddangyo-1223899-10000082",
+      "name": "카페라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000082"
+    },
+    {
+      "id": "ddangyo-1223899-10000096",
+      "name": "쁘띠블루베리",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5ade79bf-3861-4643-8fa3-5f670f56db70.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1223899-10000141",
+      "name": "생과일 자몽타르트",
+      "description": "",
+      "category": "생과일타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000141"
+    },
+    {
+      "id": "ddangyo-1223899-10000159",
+      "name": "레몬 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000159"
+    },
+    {
+      "id": "ddangyo-1223899-10000008",
+      "name": "고구마맛",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/eaa7725d-57bf-41d0-87ec-44f2a4b3e0c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1223899-10000062",
+      "name": "복숭아스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/8b005786-085d-4fbb-8d1a-d74e4c20660e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1223899-10000073",
+      "name": "오몽차",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000073"
+    },
+    {
+      "id": "ddangyo-1223899-10000097",
+      "name": "쁘띠티라미수",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4a0d1653-77e7-4f9b-8c9d-8ddf641da85e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1223899-10000102",
+      "name": "자색고구마라떼",
+      "description": "",
+      "category": "라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000102"
+    },
+    {
+      "id": "ddangyo-1223899-10000142",
+      "name": "생과일 체리타르트",
+      "description": "",
+      "category": "생과일타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000142"
+    },
+    {
+      "id": "ddangyo-1223899-10000057",
+      "name": "오미자에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/fe34533e-57d6-4157-bd0a-9091747697d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1223899-10000080",
+      "name": "땅콩스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1223899-10000098",
+      "name": "쁘띠고구마",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/684e245e-c27a-430d-be79-73e47a2e981a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1223899-10000143",
+      "name": "생과일 블루베리타르트",
+      "description": "",
+      "category": "생과일타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000143"
+    },
+    {
+      "id": "ddangyo-1223899-10000146",
+      "name": "쟈스민티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000523.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000146"
+    },
+    {
+      "id": "ddangyo-1223899-10000167",
+      "name": "딸기우유 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000167"
+    },
+    {
+      "id": "ddangyo-1223899-10000010",
+      "name": "고소미(흑임자)",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d15695e0-686b-4dd3-b1a9-e76d91dac18d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1223899-10000058",
+      "name": "복숭아에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/84c8eef5-22c5-4d1b-a998-ab80684eb63f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1223899-10000071",
+      "name": "애플티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/930f2b5a-9b77-4c11-8d1d-98e7e5d9eaec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1223899-10000084",
+      "name": "옥수수스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1223899-10000163",
+      "name": "티라미수 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000163"
+    },
+    {
+      "id": "ddangyo-1223899-10000011",
+      "name": "얼그레이카페",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/433f8047-c232-491e-a372-5d994738835c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1223899-10000100",
+      "name": "쁘띠초코",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/bd995299-74e7-44d6-9e8e-cc347e7f45f2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000100"
+    },
+    {
+      "id": "ddangyo-1223899-10000103",
+      "name": "자색고구마스무디",
+      "description": "",
+      "category": "스무디",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    },
+    {
+      "id": "ddangyo-1223899-10000147",
+      "name": "페퍼민트티",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/1ead3154-9b19-48cf-ae98-c48cb23f3294.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000147"
+    },
+    {
+      "id": "ddangyo-1223899-10000152",
+      "name": "딸기에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/a85573f7-d1c3-4fad-953c-2c2a81227654.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000152"
+    },
+    {
+      "id": "ddangyo-1223899-10000164",
+      "name": "헤이초코 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000164"
+    },
+    {
+      "id": "ddangyo-1223899-10000148",
+      "name": "라벤더티",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000148"
+    },
+    {
+      "id": "ddangyo-1223899-10000153",
+      "name": "망고에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/ca3b0acf-0842-4d77-a155-f4b241658b02.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000153"
+    },
+    {
+      "id": "ddangyo-1223899-10000165",
+      "name": "쇼콜라 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000165"
+    },
+    {
+      "id": "ddangyo-1223899-10000169",
+      "name": "생과일 샤인머스켓",
+      "description": "",
+      "category": "생과일타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000169"
+    },
+    {
+      "id": "ddangyo-1223899-10000013",
+      "name": "헤이초코",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9237562a-152d-4c4e-84bd-b76ff5913922.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1223899-10000166",
+      "name": "초코퍼지 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000166"
+    },
+    {
+      "id": "ddangyo-1223899-10000170",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/34ce8c7f-8bea-456a-9f11-1a1dfe19f8ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000170"
+    },
+    {
+      "id": "ddangyo-1223899-10000174",
+      "name": "생과일)복숭아",
+      "description": "신비, 천도, 백도 복숭아중 그날 그날 수급되는 복숭아로 신선하게 ~",
+      "category": "생과일타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000174"
+    },
+    {
+      "id": "ddangyo-1223899-10000014",
+      "name": "티라미수",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/1117404a-4e5e-4e8c-8c70-2eaaea93d3be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1223899-10000015",
+      "name": "초코퍼지",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d75f2d38-0e1e-4a25-83f4-2854cd9e2bdf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1223899-10000179",
+      "name": "쁘띠자몽",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/adbd8ca9-101e-4892-bc86-53e728ddaac1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000179"
+    },
+    {
+      "id": "ddangyo-1223899-10000048",
+      "name": "쇼콜라",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e9217761-bc51-407f-98a2-be9afa253711.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1223899-10000180",
+      "name": "쁘띠오레오치즈케이크",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/7c7cc396-d370-45f1-b7c6-a9ef9445b4e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000180"
+    },
+    {
+      "id": "ddangyo-1223899-10000101",
+      "name": "쑥이에요",
+      "description": "",
+      "category": "3호 크림타르트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/80d8439a-26e2-4c60-96a7-bfee965d0276.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1223899-10000181",
+      "name": "쁘띠플레인치즈케이크",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/0fa7bbe9-e23b-48f2-91dc-899463e930ad.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000181"
+    },
+    {
+      "id": "ddangyo-1223899-10000182",
+      "name": "쁘띠레몬케이크",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bb2a9667-8d3d-4cb3-91cc-e6434dfda7c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000182"
+    },
+    {
+      "id": "ddangyo-1223899-10000091",
+      "name": "쁘띠망고",
+      "description": "",
+      "category": "쁘띠케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4b632a0c-a5da-4a61-82d8-257ae38945ab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1223899-10000156",
+      "name": "뉴욕치즈 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000156"
+    },
+    {
+      "id": "ddangyo-1223899-10000162",
+      "name": "블루베리 1호",
+      "description": "",
+      "category": "미니크림타르트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000162"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1223899",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?d6jVZiO"
+    ],
+    "rawItemCount": 87,
+    "duplicateItemsRemoved": 0
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

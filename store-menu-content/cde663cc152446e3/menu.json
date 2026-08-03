@@ -1,0 +1,1216 @@
+{
+  "storeId": "cde663cc152446e3",
+  "storeName": "이다크로플 여수점",
+  "displayName": "이다크로플 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/c25a3f31-6480-4cb3-8775-f4fcea04a44c.jpg",
+  "categories": [
+    "전체",
+    "기본메뉴 (BASIC)",
+    "[가성비 굿 사이드 빵]",
+    "이다표 취향저격 가성비 SET",
+    "(NEW) 가성비갑 10가지맛 눈꽃빙수",
+    "(NEW) 페스츄리 붕어빵",
+    "군군군",
+    "잼&크림치즈 (JAM & CREAM CHEESE)",
+    "초코 (CHOCO)",
+    "크림&버터 (CREAM & BUTTER)",
+    "햄&치즈 (HAM & CHEESE)",
+    "[대용량] 1리터 보틀 모음",
+    "음료 (DRINK)",
+    "(HOT) 상하이 버터떡",
+    "(NEW) 9가지맛 젤라또 아이스크림"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1289318-10000062",
+      "name": "플레인 크로플",
+      "description": "호불호 절대 없는 사랑받는 크로플 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "기본메뉴 (BASIC)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b885ebb8-6318-46c9-8b99-b1abcbedb23f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1289318-10000063",
+      "name": "시나몬 크로플",
+      "description": "시나몬 향이 강하지 않아 부담 없이 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "기본메뉴 (BASIC)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/87d66bbb-9a84-426c-8f00-999b734812d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000063"
+    },
+    {
+      "id": "ddangyo-1289318-10000067",
+      "name": "인절미 크로플",
+      "description": "콩가루와 연유의 만남 완벽 그 잡채 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "기본메뉴 (BASIC)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/902f26a4-2b6c-47f6-96ab-dc85f2dc9ab5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1289318-10000015",
+      "name": "( New ) 델리만쥬",
+      "description": "부드러움이 입안에서 녹아내리는 순간, 델리만쥬의 마법",
+      "category": "[가성비 굿 사이드 빵]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/7e04f3a7-5fd3-414b-9112-906faa3556c0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1289318-10000016",
+      "name": "( New ) 호두과자",
+      "description": "고소한 호두의 아삭함과 달콤한 팥이 만나 완벽한 한입",
+      "category": "[가성비 굿 사이드 빵]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/d6c2fd43-76e9-402a-924b-cd0d52cd0ee4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1289318-10000020",
+      "name": "이다가 처음이다면 (입문SET.1)",
+      "description": "플레인2+아메리카노/아이스티 ( Only ice)",
+      "category": "이다표 취향저격 가성비 SET",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1289318-10000025",
+      "name": "인절미 눈꽃빙수",
+      "description": "",
+      "category": "(NEW) 가성비갑 10가지맛 눈꽃빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1289318-10000047",
+      "name": "플레인 붕어빵",
+      "description": "기본 페스츄리 그 잡채 ( 앙금 없어유 )",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1289318-10000060",
+      "name": "직화 꿀 군고구마",
+      "description": "목이 콱 막히는 고구마의 매력",
+      "category": "군군군",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1289318-10000068",
+      "name": "땅콩쨈 크로플",
+      "description": "고소하고 그냥 맛있음 주의 ( 별로 달지 않아요 )",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    },
+    {
+      "id": "ddangyo-1289318-10000077",
+      "name": "[NEW 스모어딥] 마시멜로크로플",
+      "description": "누텔라+마세멜로를 활용한 스모어딥느낌의 크로플",
+      "category": "초코 (CHOCO)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000077"
+    },
+    {
+      "id": "ddangyo-1289318-10000084",
+      "name": "生생크림 크로플",
+      "description": "직접 만든 우유 생크림이 듬뿍",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1289318-10000097",
+      "name": "불고기피자 크로플",
+      "description": "",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1289318-10000113",
+      "name": "대용량 1리터 보틀 [커피] 모음",
+      "description": "",
+      "category": "[대용량] 1리터 보틀 모음",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000113"
+    },
+    {
+      "id": "ddangyo-1289318-10000117",
+      "name": "아메리카노 ( Only Ice )",
+      "description": "기본 2샷 많이 진하지 않아 진하게 드시는 분들은 꼭 샷 추가 부탁드려용",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000117"
+    },
+    {
+      "id": "ddangyo-1289318-10000151",
+      "name": "상하이 버터떡",
+      "description": "",
+      "category": "(HOT) 상하이 버터떡",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000151"
+    },
+    {
+      "id": "ddangyo-1289318-10000021",
+      "name": "이다가 처음이다면 (입문SET.2)",
+      "description": "플레인+시나몬+아메리카노/아이스티 ( Only ice)",
+      "category": "이다표 취향저격 가성비 SET",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1289318-10000026",
+      "name": "팥인절미 눈꽃빙수",
+      "description": "",
+      "category": "(NEW) 가성비갑 10가지맛 눈꽃빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1289318-10000032",
+      "name": "딸기 젤라또 아이스크림",
+      "description": "",
+      "category": "(NEW) 9가지맛 젤라또 아이스크림",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1289318-10000048",
+      "name": "슈크림 붕어빵",
+      "description": "슈붕파 모여라 ( 여사장 추천메뉴래유 )",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1289318-10000061",
+      "name": "찐옥수수",
+      "description": "톡톡터지는 매력덩어리",
+      "category": "군군군",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000061"
+    },
+    {
+      "id": "ddangyo-1289318-10000069",
+      "name": "카야쨈 크로플",
+      "description": "달아 달아 완~전 달아",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1289318-10000078",
+      "name": "누텔라 크로플",
+      "description": "누텔라잼이 듬뿍 올려가지용용 죽겠지 \n누텔라 올라가는 품목은 컷팅 불가에용",
+      "category": "초코 (CHOCO)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000078"
+    },
+    {
+      "id": "ddangyo-1289318-10000085",
+      "name": "생크림누텔라 크로플",
+      "description": "이다 사장님이 자기 원픽이라네요 크킄 \n누텔라 올라가는 품목은 컷팅 불가에용",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1289318-10000098",
+      "name": "쉬림프피자 크로플",
+      "description": "",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1289318-10000114",
+      "name": "대용량 1리터 보틀 [과일주스] 모음",
+      "description": "",
+      "category": "[대용량] 1리터 보틀 모음",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000114"
+    },
+    {
+      "id": "ddangyo-1289318-10000118",
+      "name": "디카페인 콜드브루 ( Only ice )",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000118"
+    },
+    {
+      "id": "ddangyo-1289318-10000152",
+      "name": "두바이 버터떡",
+      "description": "",
+      "category": "(HOT) 상하이 버터떡",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000152"
+    },
+    {
+      "id": "ddangyo-1289318-10000017",
+      "name": "( New ) 커피콩빵",
+      "description": "커피의 깊은 향기와 고소한 맛이 어우러진 카페의 대표빵",
+      "category": "[가성비 굿 사이드 빵]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/01edb2f5-9a36-4e0f-ad52-b6bca6b3133a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1289318-10000022",
+      "name": "이다가 처음이다면 (입문SET.3)",
+      "description": "플레인2+에이드(Ice)",
+      "category": "이다표 취향저격 가성비 SET",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1289318-10000027",
+      "name": "오레오 눈꽃빙수",
+      "description": "",
+      "category": "(NEW) 가성비갑 10가지맛 눈꽃빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1289318-10000033",
+      "name": "바닐라 젤라또 아이스크림",
+      "description": "",
+      "category": "(NEW) 9가지맛 젤라또 아이스크림",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1289318-10000049",
+      "name": "팥앙금 붕어빵",
+      "description": "팥붕파 모여라 ( 저당 팥앙금 )",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1289318-10000064",
+      "name": "갈릭 크로플",
+      "description": "마늘소스와 향에 취해 오븐에 들어가는 품목은 컷팅 불가에용",
+      "category": "기본메뉴 (BASIC)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/6f5b2ee3-66c6-4c49-9dd7-8f37444ea8b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000064"
+    },
+    {
+      "id": "ddangyo-1289318-10000070",
+      "name": "쨈쨈애플 크로플",
+      "description": "새콤 달콤한 사과쨈 과의 조합 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000070"
+    },
+    {
+      "id": "ddangyo-1289318-10000079",
+      "name": "바나나누텔라 크로플",
+      "description": "",
+      "category": "초코 (CHOCO)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1289318-10000086",
+      "name": "바나나 생크림누텔라 크로플",
+      "description": "",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1289318-10000099",
+      "name": "모짜피자 크로플",
+      "description": "취향대로 골라 먹어요 미니 핏짜 오븐에 들어가는 품목은 컷팅 불가에용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000099"
+    },
+    {
+      "id": "ddangyo-1289318-10000115",
+      "name": "대용량 1리터 보틀 [에이드] 모음",
+      "description": "",
+      "category": "[대용량] 1리터 보틀 모음",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000115"
+    },
+    {
+      "id": "ddangyo-1289318-10000119",
+      "name": "헤이즐넛 아메리카노",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000119"
+    },
+    {
+      "id": "ddangyo-1289318-10000018",
+      "name": "( New ) 땅콩빵",
+      "description": "한 입 베어물면 터져 나오는 고소한 땅콩의 매력",
+      "category": "[가성비 굿 사이드 빵]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/2ba1c3bb-af8c-4c3f-bd21-d2ae855003cf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1289318-10000023",
+      "name": "당충전 필요할땐 혈당스파이크 SET",
+      "description": "생크림누텔라+초코크로플(다크,딸기,녹차,밀크)+아메리카노/아이스티 ( Only ice)",
+      "category": "이다표 취향저격 가성비 SET",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1289318-10000028",
+      "name": "로투스 눈꽃빙수",
+      "description": "",
+      "category": "(NEW) 가성비갑 10가지맛 눈꽃빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1289318-10000034",
+      "name": "녹차 젤라또 아이스크림",
+      "description": "",
+      "category": "(NEW) 9가지맛 젤라또 아이스크림",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1289318-10000050",
+      "name": "완두앙금 붕어빵",
+      "description": "남녀노소 모두 좋아할 완두앙~금",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1289318-10000065",
+      "name": "팥앙금 크로플",
+      "description": "붕어빵에만 팥 들어가냐 크로플에도 팥 올라간돠아 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "기본메뉴 (BASIC)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1289318-10000071",
+      "name": "쨈쨈딸기 크로플",
+      "description": "새콤 달콤한 딸기쨈 과의 조합 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1289318-10000080",
+      "name": "다크초코 크로플",
+      "description": "다크 초코 좋아하시는 분들 모여라 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "초코 (CHOCO)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1289318-10000087",
+      "name": "오레오 크로플",
+      "description": "직접 만든 우유 생크림에 오레오를 톡톡 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1289318-10000100",
+      "name": "핫모짜피자 크로플",
+      "description": "그냥 핫소스 아니죠 달라요 달라 오븐에 들어가는 품목은 컷팅 불가에용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000100"
+    },
+    {
+      "id": "ddangyo-1289318-10000116",
+      "name": "대용량 1리터 보틀 [논커피&라떼] 모음",
+      "description": "",
+      "category": "[대용량] 1리터 보틀 모음",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000116"
+    },
+    {
+      "id": "ddangyo-1289318-10000120",
+      "name": "아이스티",
+      "description": "찐~한 복숭아 아이스티 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000120"
+    },
+    {
+      "id": "ddangyo-1289318-10000019",
+      "name": "( New ) 한입 계란빵",
+      "description": "계란의 부드러움이 그대로 살아있는, 따끈한 간식",
+      "category": "[가성비 굿 사이드 빵]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/1d8d3c62-82d7-4033-8883-023e267dfef3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1289318-10000024",
+      "name": "이다피자 먹고 다같이 어깨피자 SET",
+      "description": "모짜피자 크로플+10가지 모짜치즈가 들어간 크로플+아메리카노/아이스티 ( Only ice)",
+      "category": "이다표 취향저격 가성비 SET",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1289318-10000029",
+      "name": "티라미슈 눈꽃빙수",
+      "description": "",
+      "category": "(NEW) 가성비갑 10가지맛 눈꽃빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1289318-10000035",
+      "name": "망고 젤라또 아이스크림",
+      "description": "",
+      "category": "(NEW) 9가지맛 젤라또 아이스크림",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1289318-10000052",
+      "name": "계란 붕어빵",
+      "description": "계란빵 그 잡채 \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1289318-10000066",
+      "name": "고구마 크로플",
+      "description": "고구마 무스가 뿅뿅뿅 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "기본메뉴 (BASIC)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1289318-10000072",
+      "name": "쨈쨈블루베리 크로플",
+      "description": "새콤 달콤한 블루베리쨈 과의 조합 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000072"
+    },
+    {
+      "id": "ddangyo-1289318-10000081",
+      "name": "딸기초코 크로플",
+      "description": "딸기 초코 좋아하시는 분들 모여라 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "초코 (CHOCO)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000081"
+    },
+    {
+      "id": "ddangyo-1289318-10000088",
+      "name": "로투스 크로플",
+      "description": "직접 만든 커피 생크림에 로투스를 톡톡 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1289318-10000101",
+      "name": "고구마모짜피자 크로플",
+      "description": "인기만쩜 모짜피자에 고구마 올렸슈 에어프라이어 오븐으로 한번 더 구워 나가용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1289318-10000121",
+      "name": "아샷추",
+      "description": "달달한 아이스티에 에스프레소 1샷 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000121"
+    },
+    {
+      "id": "ddangyo-1289318-10000030",
+      "name": "바나나 누텔라 눈꽃빙수",
+      "description": "",
+      "category": "(NEW) 가성비갑 10가지맛 눈꽃빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1289318-10000053",
+      "name": "마시멜로우 붕어빵",
+      "description": "마시멜로우가 들어간 붕어빵 드셔는 봤나 \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1289318-10000073",
+      "name": "크림치즈애플 크로플",
+      "description": "쨈만 있는건 아쉬운데.. 그럼 크림치즈 까지 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000073"
+    },
+    {
+      "id": "ddangyo-1289318-10000082",
+      "name": "녹차초코 크로플",
+      "description": "녹차 초코 좋아하시는 분들 모여라 \n말차 아니에용 \n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "초코 (CHOCO)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000082"
+    },
+    {
+      "id": "ddangyo-1289318-10000089",
+      "name": "티라미슈 크로플",
+      "description": "직접 만든 티라미슈 크림이 듬뿍",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1289318-10000102",
+      "name": "베이컨모짜피자 크로플",
+      "description": "페퍼로니 말고 통 베이컨이 올라간돠 오븐에 들어가는 품목은 컷팅 불가에용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000102"
+    },
+    {
+      "id": "ddangyo-1289318-10000122",
+      "name": "카페라떼 ( Only Ice )",
+      "description": "저지방우유에 에스프레소 2샷 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000122"
+    },
+    {
+      "id": "ddangyo-1289318-10000037",
+      "name": "초코&딸기 젤라또 아이스크림",
+      "description": "",
+      "category": "(NEW) 9가지맛 젤라또 아이스크림",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1289318-10000051",
+      "name": "호떡 붕어빵",
+      "description": "겨울 간식 투탑의 만남 ( 씨앗, 견과류 들어가유 ) \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1289318-10000074",
+      "name": "크림치즈딸기 크로플",
+      "description": "쨈만 있는건 아쉬운데.. 그럼 크림치즈 까지 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000074"
+    },
+    {
+      "id": "ddangyo-1289318-10000083",
+      "name": "밀크초코 크로플",
+      "description": "밀크 초코 좋아하시는 분들 모여라\n컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "초코 (CHOCO)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000083"
+    },
+    {
+      "id": "ddangyo-1289318-10000090",
+      "name": "말차생크림 크로플",
+      "description": "제주 유기농 말차 100% , 말차 덕후들 모여라",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1289318-10000103",
+      "name": "페퍼로니피자 크로플",
+      "description": "페퍼로니 과부하 오븐에 들어가는 품목은 컷팅 불가에용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    },
+    {
+      "id": "ddangyo-1289318-10000123",
+      "name": "(NEW) 연유라떼 ( Only ice )",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000123"
+    },
+    {
+      "id": "ddangyo-1289318-10000038",
+      "name": "딸기&바나나 젤라또 아이스크림",
+      "description": "",
+      "category": "(NEW) 9가지맛 젤라또 아이스크림",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1289318-10000054",
+      "name": "고구마 붕어빵",
+      "description": "고구마 무스가 듬~뿍 \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1289318-10000075",
+      "name": "크림치즈블루베리 크로플",
+      "description": "쨈만 있는건 아쉬운데.. 그럼 크림치즈 까지 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000075"
+    },
+    {
+      "id": "ddangyo-1289318-10000091",
+      "name": "팥앙금 생크림 크로플",
+      "description": "당이 적은 전통 팥 위에 수제 생크림이 듬뿍",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1289318-10000104",
+      "name": "체다피자 크로플",
+      "description": "취향대로 골라 먹어요 미니 핏짜 에어프라이어 오븐으로 한번 더 구워 나가용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000104"
+    },
+    {
+      "id": "ddangyo-1289318-10000124",
+      "name": "(NEW) 카라멜라떼 ( Only ice )",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000124"
+    },
+    {
+      "id": "ddangyo-1289318-10000039",
+      "name": "블루베리&요거트 젤라또 아이스크림",
+      "description": "",
+      "category": "(NEW) 9가지맛 젤라또 아이스크림",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1289318-10000040",
+      "name": "(NEW) 치즈 붕어빵",
+      "description": "모짜렐라 치즈가 들어가용",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1289318-10000076",
+      "name": "크림치즈누텔라 크로플",
+      "description": "누텔라만 있는건 아쉬운데.. 그럼 크림치즈 까지 누텔라 올라가는 품목은 컷팅 불가에용",
+      "category": "잼&크림치즈 (JAM & CREAM CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000076"
+    },
+    {
+      "id": "ddangyo-1289318-10000092",
+      "name": "커스터드 크로플",
+      "description": "이제 슈크림도 크로플과 함께 하는 시대 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1289318-10000105",
+      "name": "핫체다피자 크로플",
+      "description": "그냥 핫소스 아니죠 달라요 달라 오븐에 들어가는 품목은 컷팅 불가에용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000105"
+    },
+    {
+      "id": "ddangyo-1289318-10000125",
+      "name": "바닐라라떼 ( Only Ice )",
+      "description": "달콤 쌉싸름하니 맛좋구만 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000125"
+    },
+    {
+      "id": "ddangyo-1289318-10000058",
+      "name": "콘치즈 붕어빵",
+      "description": "톡톡 터지는 콘치즈와 붕어빵의 만남 \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1289318-10000093",
+      "name": "고구마브륄레 크로플",
+      "description": "크림브륄레 동생 고구마브륄레 브륄레는 컷팅 불가에용",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000093"
+    },
+    {
+      "id": "ddangyo-1289318-10000106",
+      "name": "콘치즈 크로플",
+      "description": "콘치즈가 올라가다니 혁명이야 에어프라이어 오븐으로 한번 더 구워 나가용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000106"
+    },
+    {
+      "id": "ddangyo-1289318-10000126",
+      "name": "초코라떼 ( Only Ice )",
+      "description": "남녀노소 좋아하는 쪼꼬 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000126"
+    },
+    {
+      "id": "ddangyo-1289318-10000094",
+      "name": "크림브륄레 크로플",
+      "description": "커스터드 크림에 달달함 더 추가 브륄레는 컷팅 불가에용",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000094"
+    },
+    {
+      "id": "ddangyo-1289318-10000107",
+      "name": "체다치즈 크로플",
+      "description": "담백한 체다치즈 한장 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000107"
+    },
+    {
+      "id": "ddangyo-1289318-10000127",
+      "name": "다방커피",
+      "description": "자판기에서 뽑아 먹던, 다방에서 타주던 그 맛 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000127"
+    },
+    {
+      "id": "ddangyo-1289318-10000057",
+      "name": "모짜피자 붕어빵",
+      "description": "이다표 피자 믿먹.. 아시쥬 \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1289318-10000095",
+      "name": "앙버터 크로플",
+      "description": "프랑스 무염 버터와 한국 전통 팥의 궁합",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000095"
+    },
+    {
+      "id": "ddangyo-1289318-10000108",
+      "name": "더블치즈 크로플",
+      "description": "체다치즈가 X2 컷팅이 필요하신 분들은 추가 선택 해주세용",
+      "category": "햄&치즈 (HAM & CHEESE)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000108"
+    },
+    {
+      "id": "ddangyo-1289318-10000128",
+      "name": "옛날 미숫가루 (물)",
+      "description": "물이 들어가 깔~끔한 맛 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000128"
+    },
+    {
+      "id": "ddangyo-1289318-10000041",
+      "name": "(NEW) 불고기피자 붕어빵",
+      "description": "",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1289318-10000096",
+      "name": "카야버터 크로플",
+      "description": "달콤한 잼과 고소한 우유맛 버터의 환상 조합",
+      "category": "크림&버터 (CREAM & BUTTER)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1289318-10000129",
+      "name": "옛날 미숫가루 (우유)",
+      "description": "우유가 들어가 걸~쭉한 맛 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000129"
+    },
+    {
+      "id": "ddangyo-1289318-10000042",
+      "name": "(NEW) 베이컨피자 붕어빵",
+      "description": "",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1289318-10000130",
+      "name": "딸기 주스",
+      "description": "음료가 샐 염려가 있어 캔 포장으로 나갑니다.",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000130"
+    },
+    {
+      "id": "ddangyo-1289318-10000043",
+      "name": "(NEW) 다크초코 붕어빵",
+      "description": "",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1289318-10000131",
+      "name": "블루베리 주스",
+      "description": "음료가 샐 염려가 있어 캔 포장으로 나갑니다.",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000131"
+    },
+    {
+      "id": "ddangyo-1289318-10000044",
+      "name": "(NEW) 딸기초코 붕어빵",
+      "description": "",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1289318-10000132",
+      "name": "망고 주스",
+      "description": "음료가 샐 염려가 있어 캔 포장으로 나갑니다.",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000132"
+    },
+    {
+      "id": "ddangyo-1289318-10000045",
+      "name": "(NEW) 밀크초코 붕어빵",
+      "description": "",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1289318-10000133",
+      "name": "홍시 주스",
+      "description": "음료가 샐 염려가 있어 캔 포장으로 나갑니다.",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000133"
+    },
+    {
+      "id": "ddangyo-1289318-10000055",
+      "name": "애플시나몬 붕어빵",
+      "description": "쌍콤 달달한 애플쨈이 들어가유 \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1289318-10000134",
+      "name": "키위 주스",
+      "description": "음료가 샐 염려가 있어 캔 포장으로 나갑니다.",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000134"
+    },
+    {
+      "id": "ddangyo-1289318-10000056",
+      "name": "누텔라 붕어빵",
+      "description": "악마 누텔라쨈 진짜 달아요 근데 맛있어.... \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1289318-10000135",
+      "name": "파인애플 주스",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000135"
+    },
+    {
+      "id": "ddangyo-1289318-10000059",
+      "name": "크림치즈블루베리 붕어빵",
+      "description": "붕어빵계의 신흥강자 \n예쁜 포장 박스 제작 중이니 조금만 기다려주세요 커밍쑨 Coming soon",
+      "category": "(NEW) 페스츄리 붕어빵",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1289318-10000136",
+      "name": "바나나 주스",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000136"
+    },
+    {
+      "id": "ddangyo-1289318-10000137",
+      "name": "체리콕",
+      "description": "키야 톡 쏘는 콜라와 함께 음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000137"
+    },
+    {
+      "id": "ddangyo-1289318-10000138",
+      "name": "한라봉 에이드",
+      "description": "시원한 탄산 속에 달콤한 한라봉 과육이 풍덩",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000138"
+    },
+    {
+      "id": "ddangyo-1289318-10000139",
+      "name": "청포도 에이드",
+      "description": "시원한 탄산 속에 달콤한 청포도 과육이 풍덩 과육이 가라 앉을수 있어 꼭 섞어서 드세용 \n음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000139"
+    },
+    {
+      "id": "ddangyo-1289318-10000140",
+      "name": "자몽 에이드",
+      "description": "시원한 탄산 속에 새콤한 자몽 과육이 풍덩 과육이 가라 앉을수 있어 꼭 섞어서 드세용 \n음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000140"
+    },
+    {
+      "id": "ddangyo-1289318-10000141",
+      "name": "레몬 에이드",
+      "description": "시원한 탄산 속에 새콤한 레몬 과육이 풍덩 과육이 가라 앉을수 있어 꼭 섞어서 드세용 \n음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000141"
+    },
+    {
+      "id": "ddangyo-1289318-10000142",
+      "name": "복숭아 에이드",
+      "description": "시원한 탄산 속에 달콤한 복숭아 과육이 풍덩 과육이 가라 앉을수 있어 꼭 섞어서 드세용 \n음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000142"
+    },
+    {
+      "id": "ddangyo-1289318-10000143",
+      "name": "유자 에이드",
+      "description": "시원한 탄산 속에 유자가 풍덩 과육이 가라 앉을수 있어 꼭 섞어서 드세용 \n음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000143"
+    },
+    {
+      "id": "ddangyo-1289318-10000144",
+      "name": "매실 에이드",
+      "description": "시원한 탄산 속에 매실이 풍덩 과육이 가라 앉을수 있어 꼭 섞어서 드세용 \n음료가 샐 염려가 있어 캔 포장으로 나갑니다 :)",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000144"
+    },
+    {
+      "id": "ddangyo-1289318-10000145",
+      "name": "파인애플 에이드",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000145"
+    },
+    {
+      "id": "ddangyo-1289318-10000146",
+      "name": "살구 에이드",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000146"
+    },
+    {
+      "id": "ddangyo-1289318-10000147",
+      "name": "바나나 우유",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000147"
+    },
+    {
+      "id": "ddangyo-1289318-10000148",
+      "name": "딸기 우유",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000148"
+    },
+    {
+      "id": "ddangyo-1289318-10000149",
+      "name": "블루베리 우유",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000149"
+    },
+    {
+      "id": "ddangyo-1289318-10000150",
+      "name": "망고 우유",
+      "description": "",
+      "category": "음료 (DRINK)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000150"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1289318",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?Sp4qHnv"
+    ],
+    "rawItemCount": 136,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

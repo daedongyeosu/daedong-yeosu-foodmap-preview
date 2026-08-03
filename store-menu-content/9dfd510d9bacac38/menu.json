@@ -1,0 +1,206 @@
+{
+  "storeId": "9dfd510d9bacac38",
+  "storeName": "김선생불닭발 여수점",
+  "displayName": "김선생불닭발 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/e22da63e-79a0-4bf0-9069-9af93f9558ba.jpg",
+  "categories": [
+    "전체",
+    "주류메뉴",
+    "메뉴",
+    "공기밥1000원"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175140-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1175140-10000022",
+      "name": "닭발 2개 선택 세트(튤립/무뼈/국물)",
+      "description": "[직화튤립닭발(300g) + 직화무뼈닭발(250g) + 국물통뼈닭발(400g) ] 중 택2 +후리가케주먹밥 + 일본식계란찜 + 콩나물 냉국 + 조미김 2 + 와사비마요 소스 2",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/90d1094f-7196-45b8-a87e-0b58c428bfe7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1175140-10000043",
+      "name": "공기밥1000윤",
+      "description": "",
+      "category": "공기밥1000원",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1175140-10000023",
+      "name": "2배 직화튤립닭발 세트",
+      "description": "[직화튤립닭발(300g) x 2] +후리가케주먹밥 + 일본식계란찜 + 콩나물 냉국 + 조미김 2 + 와사비마요 소스 2",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/0c8d7973-c468-4744-9b98-8fd60970ce0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1175140-10000024",
+      "name": "2배 직화무뼈닭발 세트",
+      "description": "[직화무뼈닭발(250g) x 2] +후리가케주먹밥 + 일본식계란찜 + 콩나물 냉국 + 조미김 2 + 와사비마요 소스 2",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/9c8759e1-022f-4f2f-b139-85db8f547bff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1175140-90000004",
+      "name": "카스 프레시(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1175140-10000025",
+      "name": "2배 국물통뼈닭발 세트",
+      "description": "[국물통뼈닭발(400g) x 2] +후리가케주먹밥 + 일본식계란찜 + 콩나물 냉국 + 조미김 2 + 와사비마요 소스 2",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1175140-10000026",
+      "name": "직화튤립닭발 세트",
+      "description": "[직화튤립닭발(300g)] +후리가케주먹밥 + 일본식계란찜 + 콩나물 냉국 + 조미김  + 와사비마요 소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/ff56bf00-61e5-4f80-b64e-d79371e969e3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1175140-10000027",
+      "name": "직화무뼈닭발 세트",
+      "description": "[직화무뼈닭발(250g)] +후리가케주먹밥 + 일본식계란찜 + 콩나물 냉국 + 조미김  + 와사비마요 소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/9c40f4f8-9476-47b7-a69d-9a2fefbdc1dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1175140-10000028",
+      "name": "1인 국물통뼈닭발 세트",
+      "description": "[국물통뼈닭발(400g)] +후리가케주먹밥 + 일본식계란찜 + 콩나물 냉국 + 조미김  + 와사비마요 소스",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/388ceba0-b957-48a1-8e29-d40b83501019.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1175140-10000029",
+      "name": "직화 닭오돌뼈 추가",
+      "description": "추가 메뉴 (세트에 추가만 가능)",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4372fddf-932d-44dc-b065-addb7c2ac506.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1175140-10000030",
+      "name": "매콤 돼지껍데기 단품 (150g)",
+      "description": "매콤 돼지껍데기 단품 (150g)",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/00748bd0-3f80-4a02-9477-a9baee5cf6b6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1175140-10000031",
+      "name": "후리가케 주먹밥 추가",
+      "description": "직접 지은 밥(210g), 단무지, 후리가케, 마요네즈, 참기름, 김가루로 만든 일본식 주먹밥",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/3225c4c0-35ef-4fef-b860-71cb03f180d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1175140-10000032",
+      "name": "일본식 계란찜 추가",
+      "description": "부드러운 일본식 계란찜(계란3개)",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/240434f8-ebec-415f-ab14-51844625afa7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1175140-10000033",
+      "name": "콩나물 냉국 추가",
+      "description": "직접 끓여 식힌 콩나물 냉국",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/290ef5ee-6e3c-42dc-8b95-9e7102e8cf50.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1175140-10000034",
+      "name": "쿨피스 230ml 추가",
+      "description": "",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1175140-10000035",
+      "name": "와사비 마요 소스 추가",
+      "description": "와사비마요 소스",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1175140-10000036",
+      "name": "조미김 2봉 추가",
+      "description": "",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1175140-10000037",
+      "name": "사이다 500ml 추가",
+      "description": "",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1175140-10000038",
+      "name": "사이다 190ml 추가",
+      "description": "",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175140",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?XsQjmkF"
+    ],
+    "rawItemCount": 20,
+    "duplicateItemsRemoved": 0
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

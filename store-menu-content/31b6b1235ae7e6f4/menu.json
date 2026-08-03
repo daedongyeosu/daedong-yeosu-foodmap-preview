@@ -1,0 +1,108 @@
+{
+  "storeId": "31b6b1235ae7e6f4",
+  "storeName": "돌산 정담 백반&정식",
+  "displayName": "돌산 정담 백반&정식",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/ab3520ce-977a-4c7a-a386-b01e966388a4.jpg",
+  "categories": [
+    "전체",
+    "정식 메뉴",
+    "백반 메뉴",
+    "추가",
+    "갓김치, 게장 판매"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1190255-10000001",
+      "name": "돌게장정식",
+      "description": "게장+반찬+꽃게탕+김+밥",
+      "category": "정식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/d5ea637f-f2f8-47ae-81bb-0824cea8cf9f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1190255-10000002",
+      "name": "수육 정식",
+      "description": "수육+반찬+된장찌개+상추쌈+밥",
+      "category": "정식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/b11bebec-d173-4d45-9992-bd3e1b9e1714.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1190255-10000003",
+      "name": "제육볶음 정식",
+      "description": "제육볶음+반찬+된장찌개+상추쌈+밥",
+      "category": "정식 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/c890963c-7ce9-4803-af2f-bec75ec8af64.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1190255-10000004",
+      "name": "불고기 전골",
+      "description": "불고기+반찬+밥",
+      "category": "백반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/67f17bd1-152a-4659-8c3d-bd18cd607e08.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1190255-10000005",
+      "name": "김치찌개 백반",
+      "description": "찌개+반찬+밥",
+      "category": "백반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/c21b5ea6-ce93-4d45-888d-fa48ecd2e480.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1190255-10000007",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/0e80d4a6-4a7d-4a42-888c-51c1465f1726.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1190255-10000008",
+      "name": "갓김치",
+      "description": "갓, 고춧가루 등 모든 재료 국산\n좋은 재료로 정성을 담아 담근 갓김치",
+      "category": "갓김치, 게장 판매",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/d52748b7-223c-4f18-a0aa-50ca632d730d.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1190255-10000009",
+      "name": "간장 게장",
+      "description": "좋은 국산 재료를 사용해 직접 끓인 간장으로 만듭니다.",
+      "category": "갓김치, 게장 판매",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/53b876ca-b6a5-4cf9-b666-020b6a98b044.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1190255-10000006",
+      "name": "된장찌개 백반",
+      "description": "찌개+반찬+밥",
+      "category": "백반 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/95e53354-51ca-4f04-afb4-ed8eede6c537.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1190255",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?mRiU6na"
+    ],
+    "rawItemCount": 14,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

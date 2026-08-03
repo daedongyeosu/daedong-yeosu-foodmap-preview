@@ -58,11 +58,11 @@ const targets = [
 try {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForSelector('#storeGrid .store-card', {timeout: 15000});
-  await page.waitForFunction(() => window.daedongDdangyoPreviewReport?.inputStores === 446, null, {timeout: 30000});
+  await page.waitForFunction(() => window.daedongDdangyoPreviewReport?.inputStores === 561, null, {timeout: 30000});
   await page.evaluate(() => window.daedongStoreServiceInfo.ready);
-  await check(page.evaluate(() => Object.keys(window.DAEDONG_DDANGYO_MENU_STORES || {}).length === 598), '브라우저에 땡겨요 메뉴 598곳 로드');
-  await check(page.evaluate(() => window.daedongDdangyoPreviewReport?.matchedExisting === 419), '기존 가게 419곳 보강');
-  await check(page.evaluate(() => window.daedongDdangyoPreviewReport?.createdStores === 27), '신규 가게 27곳 생성');
+  await check(page.evaluate(() => Object.keys(window.DAEDONG_DDANGYO_MENU_STORES || {}).length === 713), '브라우저에 땡겨요 메뉴 713곳 로드');
+  await check(page.evaluate(() => window.daedongDdangyoPreviewReport?.matchedExisting === 430), '기존 가게 430곳 보강');
+  await check(page.evaluate(() => window.daedongDdangyoPreviewReport?.createdStores === 131), '신규 가게 131곳 생성');
 
   const buttonAudit = await page.evaluate(async () => {
     const failures = [];
@@ -82,7 +82,7 @@ try {
     return {count: ids.length, failures};
   });
   report.buttonAudit = buttonAudit;
-  await check(Promise.resolve(buttonAudit.count === 598 && buttonAudit.failures.length === 0), '598곳 가게화면 음식보기 버튼 전수 확인');
+  await check(Promise.resolve(buttonAudit.count === 713 && buttonAudit.failures.length === 0), '713곳 가게화면 음식보기 버튼 전수 확인');
 
   for (const target of targets) {
     await page.evaluate(id => openStore(fxStoreById(id)), target.id);

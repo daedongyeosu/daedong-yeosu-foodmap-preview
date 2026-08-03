@@ -21,9 +21,9 @@ const ddangyoEntries = Object.entries(service.stores).filter(([, entry]) => entr
 const missingRouteService = stores.filter(store => ddangyoRoute(store) && !service.stores[store.id]);
 
 assert.equal(stores.length, 710, '기존 710개 가게 목록을 보존해야 합니다.');
-assert.equal(Object.keys(menuMap).length, 598, '음식보기 598곳을 보존해야 합니다.');
-assert.equal(Object.keys(service.stores).length, 608, '영업·혜택 자료는 608곳이어야 합니다.');
-assert.equal(ddangyoEntries.length, 560, '땡겨요 원본 확인 자료는 560곳이어야 합니다.');
+assert.equal(Object.keys(menuMap).length, 713, '음식보기 713곳을 보존해야 합니다.');
+assert.equal(Object.keys(service.stores).length, 722, '영업·혜택 자료는 722곳이어야 합니다.');
+assert.equal(ddangyoEntries.length, 676, '땡겨요 원본 확인 자료는 676곳이어야 합니다.');
 assert.ok(Object.keys(menuMap).every(id => service.stores[id]), '음식보기 가게에 영업·혜택 자료 누락이 있습니다.');
 assert.ok(ddangyoEntries.every(([, entry]) => entry.hours?.weekly), '땡겨요 확인 가게에 영업시간 누락이 있습니다.');
 assert.ok(ddangyoEntries.every(([, entry]) => (
@@ -52,8 +52,8 @@ for (const key of ['high-oil-support', 'onnuri-gift-certificate', 'ddangyo-coupo
 assert.equal(teum.delivery.find(item => item.key === 'free-delivery')?.status, 'unavailable');
 
 assert.equal(report.menuPreviewMissingService.length, 0);
-assert.equal(report.ddangyoRouteServiceCovered, 572);
-assert.equal(report.explicitBenefitStatusRecords, 560);
+assert.equal(report.ddangyoRouteServiceCovered, 715);
+assert.equal(report.explicitBenefitStatusRecords, 676);
 assert.match(runtime, /현재 쿠폰 없음 확인/);
 assert.match(runtime, /현재 타임세일 없음 확인/);
 assert.match(runtime, /현재 확인된 주문앱 혜택 없음/);

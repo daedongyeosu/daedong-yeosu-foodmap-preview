@@ -9,7 +9,7 @@ const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file))
 
 const protectedHashes = {
   'data/stores.json': '2b976a0e05ad494e6723bc191962e1d8c66e8e1d93f98e6f0750baf25bdc6630',
-  'app.js': '77eda9d0f74951b10e123bd3d5a9c305fdd8fdbeee0cc5d5ed620a757250e1bd',
+  'app.js': '46a20f6b5a424c1fdd92e47b7e635458d92a77db75daadb4d8738f704949dc20',
   'store-menu-content/a089d1d54720b48e/menu.json': 'bacf5a6edbc8a9adedd9a0a6c1ef5685a6a5187b7da0cb93c5393f2b0f650878',
   'store-menu-content/domino/menu.json': '6d8307775d014a278d4a3401c6517e63cf1bdd00f75ffb9f7cea0fc6e92d26db',
   'store-menu-content/surasanggung/menu.json': '0f874cbc664814bc18fc228afa157f9d69919608548c4c626b8d733ffe697ca7'
@@ -25,35 +25,32 @@ const mapContext = {window: {}};
 vm.runInNewContext(read('store-menu-content/ddangyo-menu-map.js'), mapContext);
 const menuMap = mapContext.window.DAEDONG_DDANGYO_MENU_STORES;
 const menuMapIds = Object.keys(menuMap);
-assert.equal(menuMapIds.length, 598, '땡겨요 메뉴 지도는 598곳이어야 합니다.');
+assert.equal(menuMapIds.length, 713, '땡겨요 메뉴 지도는 713곳이어야 합니다.');
 
 const enrichment = json('data/ddangyo-store-enrichment.json');
-assert.equal(enrichment.stores.length, 446);
-assert.equal(enrichment.stores.filter(row => row.isNew).length, 27, '신규 땡겨요 가게는 27곳이어야 합니다.');
-assert.ok(enrichment.stores.every(row => menuMap[row.targetStoreId]), '기존 446곳 메뉴 연결을 모두 보존해야 합니다.');
+assert.equal(enrichment.stores.length, 561);
+assert.equal(enrichment.stores.filter(row => row.isNew).length, 131, '신규 땡겨요 가게는 131곳이어야 합니다.');
+assert.ok(enrichment.stores.every(row => menuMap[row.targetStoreId]), '기존·신규 땡겨요 지문의 메뉴 연결을 모두 보존해야 합니다.');
 
 const allStoreIds = new Set([
   ...stores.map(store => String(store.id || store.store_id)),
   ...enrichment.stores.filter(row => row.isNew).map(row => row.targetStoreId)
 ]);
-assert.equal(allStoreIds.size, 737, '기존 710곳과 신규 27곳의 내부 총합은 737곳이어야 합니다.');
+assert.equal(allStoreIds.size, 841, '기존 710곳과 신규 131곳의 내부 총합은 841곳이어야 합니다.');
 
 const expansion = json('data/ddangyo-menu-expansion-report.json');
-assert.equal(expansion.previousMapCount, 446);
-assert.equal(expansion.generatedCount, 152);
-assert.equal(expansion.finalMapCount, 598);
+assert.equal(expansion.previousMapCount, 598);
+assert.equal(expansion.generatedCount, 115);
+assert.equal(expansion.finalMapCount, 713);
 assert.deepEqual(expansion.rejectedCrossStoreIds.sort(), [
   '8d9df0fbb77ce9eb',
   '9f89e6d7784cf4a2',
   'fa0bccb2d190a7c0'
 ]);
-assert.deepEqual(expansion.unresolved.map(row => row.storeId).sort(), [
-  '08e5e26653436fef',
-  'b016e6c2fc4217ea'
-]);
+assert.deepEqual(expansion.unresolved.map(row => row.storeId).sort(), ['08e5e26653436fef']);
 
 for (const [storeId, entry] of Object.entries(menuMap)) {
-  assert.ok(allStoreIds.has(storeId), `${storeId}는 현재 737개 가게 목록에 존재해야 합니다.`);
+  assert.ok(allStoreIds.has(storeId), `${storeId}는 현재 내부 가게 목록에 존재해야 합니다.`);
   assert.ok(fs.existsSync(entry.path), `${storeId} 메뉴 파일이 없습니다.`);
   const menu = json(entry.path);
   assert.equal(menu.storeId, storeId);
@@ -64,7 +61,7 @@ for (const [storeId, entry] of Object.entries(menuMap)) {
 
 const legacyMenuIds = ['a089d1d54720b48e', '2f4c3cfb0866c4a4', 'dc638b23f8cf3c5b', '7bc7239e6b509c44'];
 const visibleMenuIds = new Set([...menuMapIds, ...legacyMenuIds]);
-assert.equal(visibleMenuIds.size, 600, '음식보기 가능한 가게는 중복 제외 600곳이어야 합니다.');
+assert.equal(visibleMenuIds.size, 715, '음식보기 가능한 가게는 중복 제외 715곳이어야 합니다.');
 
 const runtimeDdangyoIds = new Set();
 for (const store of stores) {
@@ -73,12 +70,11 @@ for (const store of stores) {
   }
 }
 for (const row of enrichment.stores) runtimeDdangyoIds.add(row.targetStoreId);
-assert.equal(runtimeDdangyoIds.size, 605, '땡겨요 주문경로 가게는 605곳이어야 합니다.');
+assert.equal(runtimeDdangyoIds.size, 719, '땡겨요 주문경로 가게는 719곳이어야 합니다.');
 assert.deepEqual([...runtimeDdangyoIds].filter(id => !visibleMenuIds.has(id)).sort(), [
   '08e5e26653436fef',
   '8d9df0fbb77ce9eb',
   '9f89e6d7784cf4a2',
-  'b016e6c2fc4217ea',
   'fa0bccb2d190a7c0'
 ]);
 
@@ -88,7 +84,7 @@ assert.match(previewSource, /\.\.\.\(window\.DAEDONG_DDANGYO_MENU_STORES \|\| \{
 const html = read('index.html');
 assert.doesNotMatch(html, /store-menu-map-bridge\.js/);
 assert.ok(html.indexOf('ddangyo-menu-map.js') < html.indexOf('store-menu-preview.js'));
-assert.match(html, /ddangyo-menu-map\.js\?v=20260802-6/);
+assert.match(html, /ddangyo-menu-map\.js\?v=20260804-1/);
 assert.ok(!fs.existsSync('store-menu-map-bridge.js'));
 
 const service = json('store-service-info.json');
@@ -165,4 +161,4 @@ for (const info of Object.values(service.stores)) {
   assert.ok(!(hasBreak && hasFake24Hours), '브레이크타임을 둔 가게를 24시간 영업으로 계산하면 안 됩니다.');
 }
 
-console.log('PASS: 710개 원본 + 신규 27개 = 737개 보존, 땡겨요 메뉴맵 598곳·음식보기 600곳 연결, 네네치킨 58개 확인');
+console.log('PASS: 기존 710개 원본 보존, 여서동 링크 지문·메뉴·영업혜택 연결, 네네치킨 58개 확인');

@@ -1,0 +1,208 @@
+{
+  "storeId": "a021da1cfacb0658",
+  "storeName": "금도령찜닭 여수문수점",
+  "displayName": "금도령찜닭 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003258.jpg",
+  "categories": [
+    "전체",
+    "[금도령이 찾아낸 가장 완벽한 황금비율 찜닭]",
+    "[금도령이 혼자서도 제대로 즐기던 1인 정식] ",
+    "주류메뉴",
+    "사이드 메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1360099-10000001",
+      "name": "[3000원 즉시할인] 안동 간장찜닭",
+      "description": "['찜닭의 근본, 간장맛의 깊은 감칠맛을 최고로 끌어올린 안동찜닭'] \n신선한 재료 구성 :닭(뼈/순살)+감자+양파+대파+밀떡+메추리알+감자만두+납작당면",
+      "category": "[금도령이 찾아낸 가장 완벽한 황금비율 찜닭]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/8ea8884e-289e-4c9a-98f2-f2ff4aca8732.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1360099-10000002",
+      "name": "[3000원 즉시할인] 빨간찜닭",
+      "description": "['간장&빨간맛' 가장 완벽한 비율을 위해 연구했습니다. 한국인의 입맛을 자극하는 금도령 찜닭의 자신있는 시그니처 메뉴'\n신선한 재료 구성 :닭(뼈/순살)+감자+양파+대파+밀떡+메추리알+감자만두+납작당면",
+      "category": "[금도령이 찾아낸 가장 완벽한 황금비율 찜닭]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/7ba721e1-b03c-409c-adb8-f8aa8ab607d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1360099-10000003",
+      "name": "[3000원 즉시할인] 치즈 간장찜닭",
+      "description": "['부드럽게 녹아내리는 고소한 치즈와 금도령 특제 소스가 어우러진 프리미엄 안동 치즈찜닭' \n신선한 재료 구성 :닭(뼈/순살)+감자+양파+대파+밀떡+메추리알+감자만두+납작당면",
+      "category": "[금도령이 찾아낸 가장 완벽한 황금비율 찜닭]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a4921201-68f5-4b66-bb1a-19b04fb59181.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1360099-10000018",
+      "name": "[1인] 금도령 안동찜닭 정식(공기밥포함)",
+      "description": "'찜닭의 근본. 간장맛의 깊은 감칠맛을 최고로 끌어올린 안동찜닭'\n닭다리살(순살)+감자+양파+대파+밀떡+메추리알+납작당면+쌈무+공기밥1개",
+      "category": "[금도령이 혼자서도 제대로 즐기던 1인 정식] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/b08185cc-a817-4458-bacc-db3a527f9283.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1360099-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1360099-10000010",
+      "name": "모짜렐라 치즈(100g)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/4bf80c6a-1afc-49ba-ab49-a963de79c0ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1360099-10000014",
+      "name": "펩시",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1360099-10000019",
+      "name": "[1인] 금도령 빨간찜닭 정식(공기밥포함)",
+      "description": "'간장&빨간맛' 가장 완벽한 비율을 위해 연구했습니다 한국인의 입맛을 자극하는 금도령 찜닭의 자신있는 시그니처 메뉴\n닭다리살(순살)+감자+양파+대파+밀떡+메추리알+납작당면+쌈무+공기밥1개",
+      "category": "[금도령이 혼자서도 제대로 즐기던 1인 정식] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/aec4a865-ceca-42b0-877a-17ed2810c226.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1360099-90000002",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1360099-10000011",
+      "name": "(강력추천) 일품 파김치 추가",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/e6c46fa6-2200-48be-9f4b-783528693960.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1360099-10000015",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1360099-10000020",
+      "name": "[1인] 금도령 로제찜닭 정식(공기밥포함)",
+      "description": "'부드럽고 진한 크림의 풍미. 매콤함과 고소함의 황금비율을 완성한 프리미엄 로제찜닭'\n닭다리살(순살)+감자+양파+대파+밀떡+메추리알+납작당면+쌈무+공기밥1개",
+      "category": "[금도령이 혼자서도 제대로 즐기던 1인 정식] ",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1360099-90000003",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1360099-10000012",
+      "name": "비트무",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1360099-10000016",
+      "name": "제로 펩시",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1360099-10000004",
+      "name": "[3000원 즉시할인] 소대창 간장찜닭",
+      "description": "['고소한 소대창의 진한 풍미와 금도령 특제 간장 소스가 깊게 스며든 중독적인 대창찜닭'\n신선한 재료 구성 :닭(뼈/순살)+감자+양파+대파+밀떡+메추리알+감자만두+납작당면",
+      "category": "[금도령이 찾아낸 가장 완벽한 황금비율 찜닭]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/496b7291-b7a5-41c9-8b96-bb42a5cb0aca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1360099-10000013",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e527f16a-06f0-4f1e-b0d3-9e8007175480.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1360099-10000017",
+      "name": "제로 사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1360099-10000005",
+      "name": "[3000원 즉시할인] 소대창 빨간찜닭",
+      "description": "['고소한 소대창의 진한 풍미와 금도령 특제 소스가 깊게 스며든 중독적인 대창찜닭'\n신선한 재료 구성 :닭(뼈/순살)+감자+양파+대파+밀떡+메추리알+감자만두+납작당면",
+      "category": "[금도령이 찾아낸 가장 완벽한 황금비율 찜닭]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/f83c3c2b-cc79-4f80-a74f-f1fa95c3bc4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1360099-10000006",
+      "name": "[3000원 즉시할인] 순살 로제찜닭",
+      "description": "부드럽고 진한 크림의 풍미, 매콤함과 고소함의 황금비율을 완성한 프리미엄 로제찜닭'\n신선한 재료 구성 :닭(뼈/순살)+감자+양파+대파+밀떡+메추리알+감자만두+납작당면+비엔나소세지",
+      "category": "[금도령이 찾아낸 가장 완벽한 황금비율 찜닭]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f4527f01-abfc-4349-aadc-9078d379c521.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1360099",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?be74ZQT"
+    ],
+    "rawItemCount": 23,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "storeId": "b717d583801d3f04",
+  "storeName": "깐깐한족발 문수점",
+  "displayName": "깐깐한족발 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/7a144e74-e672-456a-9bc3-9393baa69694.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "주류메뉴",
+    "사이드메뉴",
+    "추가메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175052-10000001",
+      "name": "[BEST]참숯구이족발",
+      "description": "참숯으로 한번 더 구워 담백한 맛과 향이나며 부드러운 식감이 일품인 족발요리",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/f71feffb-cd87-46dc-94aa-378d8d0df572.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1175052-10000002",
+      "name": "[Hit]반반족발",
+      "description": "모든메뉴 중 두가지의 메뉴를 한번에 맛볼수 있는 깐족의 최고 히트 메뉴",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b4a27836-a5e0-4e7a-9a2e-b4c3f792a210.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1175052-10000003",
+      "name": "직화매운족발",
+      "description": "정성스럽게 삶아낸 족발에 특제 매운소스를 가미하여 직화로 구워 불향이 일품인 족발요리",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7c601c82-9f25-4f85-a108-016b749c4582.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1175052-10000004",
+      "name": "옛날식왕족발",
+      "description": "정성스럽게 삶아낸 족발을 얇게 슬라이스하여 푸짐해보이며 식감이 쫄깃쫄깃한게 특징인 족발요리",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/176b0891-3135-470e-8ea4-05c6350f1ce3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1175052-10000008",
+      "name": "참숯구이보쌈",
+      "description": "참숯에 한번 구워 느끼함 대신에 담백한 맛과 참숯향이 매력인 일품 보쌈요리",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/313468ac-9b34-493a-ba8f-8bcbd9cbe2ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1175052-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1175052-10000014",
+      "name": "날치알주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/1ccf657b-5e9a-429e-b284-bebdcbac6a91.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1175052-90000002",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1175052-10000015",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1175052-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1175052-10000016",
+      "name": "막국수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/654d7f18-8b2f-49a6-bec1-b24c6f41de9c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1175052-90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1175052-10000017",
+      "name": "속풀이바지락탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a2d1a51e-d36f-49b1-b42c-0745f45fac16.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1175052-10000018",
+      "name": "수제어묵탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/cf00fa30-45d7-4ed6-869b-feb0ac67912e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1175052-10000006",
+      "name": "꽃냉채족발",
+      "description": "족발을 최대한 얇게 슬라이스하여 각종야채와 해파리를 넣고 특제소스와 함께 보기에도 좋고 맛도 좋은 특별한 족발요리",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d57b085e-b8f1-483b-a97c-2990dac6df1d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1175052-10000009",
+      "name": "족보세트",
+      "description": "깐깐한족발의 족발과 보쌈을 한번에 즐길 수 있는 세트메뉴",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/29adad97-270c-4214-a17f-bd0d83e4cf7e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1175052-10000007",
+      "name": "반+반+반족발",
+      "description": "메인메뉴 중 세가지 선택가능 골라먹는 재미가 쏠쏠한 반반반세트",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/6597698f-b023-4912-8c2e-c3e344be7ab1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1175052-10000024",
+      "name": "직화매운보쌈",
+      "description": "정성스럽게 삶아낸 보쌈에 특제매운소스를 가미하여 직화로 구워 불향이 일품인 보쌈요리",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b99e4975-fa78-4e11-95b1-d73325083abc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1175052-10000027",
+      "name": "고흥생마늘족발",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1175052-10000028",
+      "name": "고흥생마늘보쌈",
+      "description": "대,중: 보쌈+마늘소스+막국수(소)+샐러드+무침치+쌈무+야채일절+보쌈김치+콜라1.25L",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1175052-10000019",
+      "name": "참숯미니족",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a8ced124-6481-408b-b9ea-b60a3afef2e8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1175052-10000020",
+      "name": "쫄깃쫄깃 미니족",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/99245305-68e5-493b-a1bb-8c19ac55deda.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1175052-10000021",
+      "name": "매운미니 족발",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175052",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?oo2rA9m"
+    ],
+    "rawItemCount": 28,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

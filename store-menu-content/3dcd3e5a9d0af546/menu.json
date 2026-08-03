@@ -1,0 +1,233 @@
+{
+  "storeId": "3dcd3e5a9d0af546",
+  "storeName": "엄마라탕",
+  "displayName": "엄마라탕",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e8410d92-aa1a-45f9-8f50-3636d1df1bfe.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "세트메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1324508-10000001",
+      "name": "골고루 담아 [마라탕]",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/28420edc-10f7-49c9-8a1a-aca6957e3102.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1324508-10000002",
+      "name": "마라샹궈",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/c457ae24-6b7e-4995-97a0-050288a21570.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1324508-10000003",
+      "name": "꿔바로우",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/fea76064-3728-469f-98aa-a6a4538dfefe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1324508-10000016",
+      "name": "마라탕+미니 꿔바로우",
+      "description": "​",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b9540451-6ad3-4471-8fef-de1d846046b1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1324508-10000020",
+      "name": "코카콜라",
+      "description": "​",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1324508-10000017",
+      "name": "마라탕+돈까스",
+      "description": "​",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1324508-10000021",
+      "name": "사이다",
+      "description": "​",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1324508-10000018",
+      "name": "마라탕+크림새우 소",
+      "description": "​",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1324508-10000022",
+      "name": "코카콜라 제로",
+      "description": "​",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1324508-10000004",
+      "name": "크림새우",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aa1e6f44-6743-440d-b4e7-3b7025d197e5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1324508-10000019",
+      "name": "마라탕+칠리새우 소",
+      "description": "​",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1324508-10000023",
+      "name": "빙홍차",
+      "description": "​",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1324508-10000005",
+      "name": "칠리새우",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/4fbe34f1-d5ee-4145-abc5-f76062ae2469.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1324508-10000006",
+      "name": "멘보샤",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/5915366b-c845-4b26-90a1-4ccab73fd920.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1324508-10000007",
+      "name": "연유꽃빵",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d5484a0e-8cc7-4716-99a8-350771a5679d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1324508-10000008",
+      "name": "돈까스",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1324508-10000009",
+      "name": "야채볶음밥",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1324508-10000010",
+      "name": "새우볶음밥",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1324508-10000011",
+      "name": "소고기",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1324508-10000012",
+      "name": "양고기",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1324508-10000013",
+      "name": "꼬치류",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1324508-10000014",
+      "name": "라면사리",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1324508-10000015",
+      "name": "우동사리",
+      "description": "​",
+      "category": "메인메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1324508",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?FEi3Qgv"
+    ],
+    "rawItemCount": 26,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,8 +1,8 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'store-service-info.json?v=store-service-10-ddangyo-coverage';
-  const MENU_SEARCH_URL = 'data/store-menu-search-index.json?v=menu-search-2';
+  const DATA_URL = 'store-service-info.json?v=store-service-11-yeseo-ddangyo';
+  const MENU_SEARCH_URL = 'data/store-menu-search-index.json?v=menu-search-3-yeseo';
   const HISTORY_KEY = 'daedongStoreServiceOverview';
   const CLOSING_SOON_MINUTES = 60;
   const MENU_MATCH_PREVIEW_LIMIT = 4;

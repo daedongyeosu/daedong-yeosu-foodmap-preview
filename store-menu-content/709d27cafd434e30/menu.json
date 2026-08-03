@@ -1,0 +1,282 @@
+{
+  "storeId": "709d27cafd434e30",
+  "storeName": "시민족발보쌈",
+  "displayName": "시민족발보쌈",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/01160f50-9046-4507-a335-bbe7ebaf03d8.jpg",
+  "categories": [
+    "전체",
+    "반반메뉴",
+    "메뉴소개",
+    "주류메뉴",
+    "고기+쌈장+새우젓만 드립니다",
+    "음료수",
+    "추가메뉴",
+    "시민감자탕"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1227793-10000038",
+      "name": "족,보쌈",
+      "description": "막국수+무말랭이+보쌈김치+양파절임+쌈야채+콜라500ml",
+      "category": "반반메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/45abcfd3-e560-4579-801d-5585a845f54d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1227793-10000032",
+      "name": "가브리살 [보쌈]",
+      "description": "막국수+무말랭이+보쌈김치+양파절임+쌈야채+콜라500ml",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/acf7ccc7-9b0c-4e17-a824-4b0b4cb05a7b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1227793-10000033",
+      "name": "100% 국내산 [족발]",
+      "description": "막국수+무말랭이+보쌈김치+양파절임+쌈야채+콜라500ml\n(초장은 선택사항입니다. 초장이 필요하신 분은 초장 선택해주세요.)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/028ffd94-5bc3-4f49-8547-4e2ec73e62c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1227793-90000001",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1227793-10000039",
+      "name": "고기만드립니다(쌈장 새우젓만드립니다)",
+      "description": "고기+쌈장+새우젓만 드립니다\n(초장은 선택사항입니다. 초장이 필요하신 분은 초장 선택해주세요.)",
+      "category": "고기+쌈장+새우젓만 드립니다",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1227793-10000054",
+      "name": "음료",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1227793-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1227793-10000031",
+      "name": "혼자서 즐겨요 (나홀로 메뉴)",
+      "description": "막국수+무말랭이+보쌈김치+양파절임+쌈야채\n(초장은 선택사항입니다. 초장이 필요하신 분은 초장 선택해주세요.)",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1227793-10000044",
+      "name": "막국수",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/76369265-d392-4796-b69f-f2f42a60e8ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1227793-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1227793-10000045",
+      "name": "보쌈김치 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1227793-90000004",
+      "name": "켈리 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1227793-10000046",
+      "name": "셀프주먹밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/54a361ab-5b5f-4735-a07c-cf25b9077720.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1227793-90000005",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1227793-10000034",
+      "name": "맵싹달달 가브리살 [마늘보쌈]",
+      "description": "막국수+무말랭이+보쌈김치+양파절임+쌈야채+콜라500ml",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/fee8ef47-d5e3-4f9f-ab12-11051f76156f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1227793-10000047",
+      "name": "마늘소스추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1227793-10000035",
+      "name": "맵싹달달 알싸한 [마늘족발]",
+      "description": "(초장은 선택사항입니다. 초장이 필요하신 분은 초장 선택해주세요.)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/6ece2ffb-f1c4-4334-a102-8931eba676a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1227793-10000048",
+      "name": "쌈야채 세트",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/315721e5-ef74-4c2a-b7e3-25e9c1dc3abc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1227793-10000036",
+      "name": "매콤달콤 맛있게 매운 [불족발]",
+      "description": "막국수+무말랭이+보쌈김치+양파절임+쌈야채+콜라500ml\n(초장은 선택사항입니다. 초장이 필요하신 분은 초장 선택해주세요.)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/9cf92234-76c6-4762-b5e1-7c06f86dc6b7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1227793-10000049",
+      "name": "양파절임 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1227793-10000037",
+      "name": "알싸한 [냉채족발]",
+      "description": "막국수+무말랭이+보쌈김치+양파절임+쌈야채+콜라500ml\n(초장은 선택사항입니다. 초장이 필요하신 분은 초장 선택해주세요.)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9d870ed8-9df3-424b-b0dd-6cc67e1ea396.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1227793-10000050",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1227793-10000051",
+      "name": "계란찜 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/8fa153d4-0122-4560-a6b3-d513ef5d9eff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1227793-10000052",
+      "name": "깍두기 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9ceca13b-3278-41d8-9c2e-5eea9d2cd67a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1227793-10000053",
+      "name": "수육 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1227793-10000040",
+      "name": "감자탕",
+      "description": "공기밥 미포함",
+      "category": "시민감자탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/b23d0a00-50fa-4bcd-be2d-bfd8ac9f1499.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1227793-10000041",
+      "name": "뼈해장국+수육",
+      "description": "공기밥포함 1인분씩 따로 포장합니다",
+      "category": "시민감자탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1227793-10000042",
+      "name": "뼈해장국",
+      "description": "공기밥 포함",
+      "category": "시민감자탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/80a3bbd2-a8c5-4c94-af42-c3d869be41ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1227793",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?Vw7j0wR"
+    ],
+    "rawItemCount": 31,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

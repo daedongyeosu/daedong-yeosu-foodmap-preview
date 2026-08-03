@@ -1,0 +1,527 @@
+{
+  "storeId": "698b49e83d66d8b9",
+  "storeName": "피자팬다&파스타 본점",
+  "displayName": "피자팬다&파스타 본점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/10fb272d-19da-4903-89ab-939e96248b2a.jpg",
+  "categories": [
+    "전체",
+    "베스트메뉴 L",
+    "베스트메뉴 R",
+    "세트메뉴",
+    "사이드메뉴",
+    "주류메뉴",
+    "피자만 두판",
+    "스페셜 피자메뉴 R",
+    "스페셜 피자메뉴 L",
+    "소스류"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1213628-10000079",
+      "name": "수제 불고기피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/0633d9ff-6ef2-407e-ad9a-7c702ce9e0bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1213628-10000080",
+      "name": "컴비스폐셜피자/하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/dfa8ab6f-9655-4cca-aa99-5110b1d38c79.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1213628-10000070",
+      "name": "팬다수제불고기피자",
+      "description": "명품 전통 수제피자\n스크린R(레귤러)사이즈(토핑선택가능)+피클1ea+갈릭소스1ea+핫소스1ea",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/118db4cf-cd7b-4e6a-a1e4-44b0397f118a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000070"
+    },
+    {
+      "id": "ddangyo-1213628-10000066",
+      "name": "SET A. 스크린 R+치즈오븐스파게티+버팔로윙",
+      "description": "스크린R(레귤러)사이즈(토핑선택가능),치즈오븐스파게티,버팔로윙5ea ,피클2ea,갈릭소스1ea,핫소스1ea",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/00f170d3-16cb-4ea0-916c-7ea8fccacf50.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1213628-10000102",
+      "name": "치즈오븐스파게티",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/cfe97320-e7c4-45ae-9761-a9ff097c7120.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000102"
+    },
+    {
+      "id": "ddangyo-1213628-90000001",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1213628-10000059",
+      "name": "피자만 두판( R+R ) 9인치 두판",
+      "description": "명품 전통 수제피자 한판에 &한판더\n(R+R) 9인치 두판\n기본제공 \n피클2개 핫소스2개 제공",
+      "category": "피자만 두판",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1213628-10000088",
+      "name": "패스트리비트 /하프&하프 가능",
+      "description": "피자R♡웰빙샐러드♡콜라&사이다선택가능♡갈릭소스1ea♡핫소스1ea♡쿠폰",
+      "category": "스페셜 피자메뉴 R",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1213628-10000093",
+      "name": "패스트리비트 /하프&하프(반반)가능",
+      "description": "",
+      "category": "스페셜 피자메뉴 L",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000093"
+    },
+    {
+      "id": "ddangyo-1213628-10000098",
+      "name": "핫소스",
+      "description": "",
+      "category": "소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1213628-10000101",
+      "name": "팬다식 카르보나라",
+      "description": "물한방울 쓰지않고 1등급 우유로 정성담아 요리한 팬다에서만 만날수 있는 프리미엄 크림 파스타",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1213628-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1213628-10000060",
+      "name": "피자만 두판 (L+L) 13인치 두판",
+      "description": "명품전통수제피자 한판에&한판더\n(L+L)13인치 두판\n기본제공\n피클2ea,핫소스2ea",
+      "category": "피자만 두판",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1213628-10000067",
+      "name": "SET B. 치즈크러스트피자R+치즈오븐스파게티+버팔로윙",
+      "description": "치즈크러스트R(레귤러)사이즈(토핑선택가능)+치즈오븐스파게티+버팔로윙5ea+피클2ea+갈릭소스1ea+핫소스1ea",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1213628-10000071",
+      "name": "컴비스폐셜피자/하프&하프가능",
+      "description": "컴비스폐셜 (R)\n피클1ea+갈릭소스1ea+ 핫소스1ea",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/5dad5181-6e8f-4ca5-bc11-1e042a7a5f4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1213628-10000089",
+      "name": "리치골드 _하프&하프 가능",
+      "description": "리치골드R(레귤러)사이즈(토핑선택가능 기본1선택반반원하실경우 하프2선택1가지만)♡웰빙샐러드♡콜라500ml(사이다변경가능)피클1ea♡핫소스1ea ♡갈릭소스1ea♡쿠폰",
+      "category": "스페셜 피자메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/70c63369-2b0d-471f-890a-c902b5754b49.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1213628-10000094",
+      "name": "리치골드",
+      "description": "",
+      "category": "스페셜 피자메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/70c63369-2b0d-471f-890a-c902b5754b49.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000094"
+    },
+    {
+      "id": "ddangyo-1213628-10000099",
+      "name": "치즈가루",
+      "description": "",
+      "category": "소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000099"
+    },
+    {
+      "id": "ddangyo-1213628-90000003",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1213628-10000068",
+      "name": "SET C. 스크린피자 L+치즈오븐스파게티+버팔로윙",
+      "description": "스크린L(라지)(토핑선택가능)+치즈오븐스파게티+버팔로윙5ea+피클2ea+갈릭소스1ea+핫소스2ea",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    },
+    {
+      "id": "ddangyo-1213628-10000072",
+      "name": "매콤케이준치킨피자  /하프&하프가능",
+      "description": "매콤케이준치킨피자(R)9인치\n피클1ea+갈릭소스1ea+핫소스1ea",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/62193b97-6d1d-4f02-be55-2d6387ebb2fd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000072"
+    },
+    {
+      "id": "ddangyo-1213628-10000081",
+      "name": "케이준치킨피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/8fe88d62-8148-44b4-b1d1-5e70007c4ebe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000081"
+    },
+    {
+      "id": "ddangyo-1213628-10000090",
+      "name": "체다골드피자/하프&하프(반반)가능",
+      "description": "피자R,콜라500,피클1,핫소스1,갈릭1,웰빙샐러드",
+      "category": "스페셜 피자메뉴 R",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1213628-10000095",
+      "name": "체다골드피자",
+      "description": "",
+      "category": "스페셜 피자메뉴 L",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000095"
+    },
+    {
+      "id": "ddangyo-1213628-10000100",
+      "name": "갈릭디핑소스",
+      "description": "",
+      "category": "소스류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000100"
+    },
+    {
+      "id": "ddangyo-1213628-10000103",
+      "name": "버팔로윙",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f46be36b-b124-4017-a0ac-37de08cce699.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    },
+    {
+      "id": "ddangyo-1213628-10000069",
+      "name": "SET D.",
+      "description": "치즈크러스트L(라지)사이즈(토핑선택가능)+치즈오븐스파게티버팔로윙5ea+피클2ea+갈릭소스1ea+핫소스2ea",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1213628-10000073",
+      "name": "페파로니피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/db2655cb-8bfd-435a-9806-cbf76df393db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000073"
+    },
+    {
+      "id": "ddangyo-1213628-10000082",
+      "name": "페파로니피자/하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/b9187caf-417f-46fc-b3a2-91ea2ed13e4b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000082"
+    },
+    {
+      "id": "ddangyo-1213628-10000091",
+      "name": "통(king)새우패스트리",
+      "description": "",
+      "category": "스페셜 피자메뉴 R",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1213628-10000096",
+      "name": "통(king)새우패스트리",
+      "description": "",
+      "category": "스페셜 피자메뉴 L",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1213628-10000104",
+      "name": "리얼새우링",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/dbf70bdd-07bf-4d33-be87-ce368e877165.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000104"
+    },
+    {
+      "id": "ddangyo-1213628-10000074",
+      "name": "하와이언피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/61dfcf8e-07ca-4217-8342-eaeaaa3d08c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000074"
+    },
+    {
+      "id": "ddangyo-1213628-10000083",
+      "name": "하와이언피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/1babcc45-845a-4843-8ff9-73347f639f40.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000083"
+    },
+    {
+      "id": "ddangyo-1213628-10000092",
+      "name": "치즈피자",
+      "description": "",
+      "category": "스페셜 피자메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0babf790-ea59-4350-a570-60e2ea8ea127.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1213628-10000097",
+      "name": "치즈피자",
+      "description": "",
+      "category": "스페셜 피자메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0babf790-ea59-4350-a570-60e2ea8ea127.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1213628-10000105",
+      "name": "치즈스틱",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/35afa4e9-5fd8-495a-a08e-c1647fcf27d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000105"
+    },
+    {
+      "id": "ddangyo-1213628-10000075",
+      "name": "싱싱한 버섯야채피자/하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/8c6c4b43-ccac-487c-be14-b09d09693d70.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000075"
+    },
+    {
+      "id": "ddangyo-1213628-10000084",
+      "name": "싱싱한 버섯야채피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/8b28a5aa-f9df-4184-bba4-69facea17ee4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1213628-10000106",
+      "name": "치킨텐더",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7d38196e-535a-476d-9ccd-6ea1f4236ee2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000106"
+    },
+    {
+      "id": "ddangyo-1213628-10000065",
+      "name": "시원한 얼음컵",
+      "description": "여름엔 시원한 얼음 \n탄산과 찰떡궁합",
+      "category": "피자만 두판",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1213628-10000076",
+      "name": "베이컨피자/하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/052eeb85-3c2a-436c-a25c-5c7b356eaf5f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000076"
+    },
+    {
+      "id": "ddangyo-1213628-10000085",
+      "name": "베이컨피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/dbec89b5-964c-4b8c-aecf-72ac98b1fc42.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1213628-10000107",
+      "name": "치킨샐러드",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/cc199fde-4745-4fec-87c5-b06352b67e65.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000107"
+    },
+    {
+      "id": "ddangyo-1213628-10000077",
+      "name": "리얼 포테이토피자/하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/fa971f97-074b-4d38-83fc-3ba1c4a7a91b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000077"
+    },
+    {
+      "id": "ddangyo-1213628-10000086",
+      "name": "리얼 포테이토피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/0e31bfd5-a607-43f0-bc11-68320c2e5836.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1213628-10000108",
+      "name": "피클",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000108"
+    },
+    {
+      "id": "ddangyo-1213628-10000078",
+      "name": "리얼고구마피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 R",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d9e84464-dee6-4ccd-9a34-1640fbb80452.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000078"
+    },
+    {
+      "id": "ddangyo-1213628-10000087",
+      "name": "리얼 고구마피자 /하프&하프가능",
+      "description": "",
+      "category": "베스트메뉴 L",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/88d86a4e-5566-4aba-905b-0a97d3152dec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1213628-10000109",
+      "name": "콜라",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000109"
+    },
+    {
+      "id": "ddangyo-1213628-10000110",
+      "name": "사이다",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000110"
+    },
+    {
+      "id": "ddangyo-1213628-10000111",
+      "name": "시원한 얼음컵",
+      "description": "여름엔 시원한 얼음 \n탄산음료와 환상궁합",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000111"
+    },
+    {
+      "id": "ddangyo-1213628-10000112",
+      "name": "페파로니치즈오븐스파게티",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000112"
+    },
+    {
+      "id": "ddangyo-1213628-10000113",
+      "name": "베이컨치즈오븐스파게티",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000113"
+    },
+    {
+      "id": "ddangyo-1213628-10000114",
+      "name": "매콤닭다리",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000114"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1213628",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?5BJ65TJ"
+    ],
+    "rawItemCount": 60,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

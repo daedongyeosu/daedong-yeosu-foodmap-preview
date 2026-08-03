@@ -1,0 +1,342 @@
+{
+  "storeId": "f990c01fc8661a24",
+  "storeName": "여기어때횟집",
+  "displayName": "여기어때횟집",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/5db17a8b-b40e-43a6-b346-e174ee2efac1.jpg",
+  "categories": [
+    "전체",
+    "대표메뉴",
+    "사이드메뉴",
+    "추가배달료",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1170796-10000003",
+      "name": "모듬회",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/aee60383-d37e-4bae-ab87-0f7ed1ce985f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1170796-10000002",
+      "name": "모듬회+해물세트",
+      "description": "광어+농어+참돔",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/71cf3b3a-d8b4-45e3-aa56-24091096a3f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1170796-10000029",
+      "name": "뼈매운탕",
+      "description": "회 주문시 추가되는 항목입니다.\n비조리로 나가니 끓여드셔야 됩니다.",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/aee7e5cc-240e-4d94-a15e-2a2ba87c0f9f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1170796-10000001",
+      "name": "모듬회 셋트 어때",
+      "description": "모듬회+우럭탕수+산낙지탕탕이+물회+랍스터치즈구이",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/f88968cc-a0e1-48d3-a0b0-47cd21a56dc7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1170796-10000006",
+      "name": "슈가브리움,오션스케치,카펠라리조트,까치펜션",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1170796-10000020",
+      "name": "특제육수물회",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b3af06ca-c1fc-4d21-a136-482a50cc8f63.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1170796-10000032",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/3bd8232b-7a06-4c7b-9971-7de67d800ab6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1170796-10000007",
+      "name": "폴라리스,쥬얼리,더끌림,자연담은,굴전여가캠핑장",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1170796-10000021",
+      "name": "회덮밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/730ab75b-6961-40bf-8936-bd329b83dded.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1170796-10000033",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/a5be4d51-777d-4aad-9f98-0dbb292501de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1170796-10000008",
+      "name": "무술목해변,해오름펜션,소담펜션,JJ호텔,노체델마르",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1170796-10000022",
+      "name": "랍스타치즈구이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/894f73eb-e382-4f7d-a7d1-c65480580ef9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1170796-10000034",
+      "name": "환타(파인)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1170796-10000004",
+      "name": "해물물회",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/bb0cfe6a-1ee8-4123-ba85-817b8ceccf3c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1170796-10000009",
+      "name": "여수스테이,느낌스파펜션,모래알,티볼리,밀라그로,달콤",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1170796-10000023",
+      "name": "산우럭탕수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1170796-10000035",
+      "name": "환타(포도)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1170796-10000005",
+      "name": "서대회무침",
+      "description": "",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f67445d7-c686-4900-aa1d-0dffde26fd22.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1170796-10000010",
+      "name": "천마모텔,아일리아펜션,까사413,여수마리나,하얀정원",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1170796-10000024",
+      "name": "낙지탕탕이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/3a00153b-bd8f-4b43-b110-b7527a44ad5f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1170796-10000011",
+      "name": "여수밤바다,해리펜션,하늘보라,프롬겔러리,더킹펜션",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1170796-10000025",
+      "name": "전복죽",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ea118634-b6c1-4ffe-bf12-ccafb95d1074.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1170796-10000012",
+      "name": "미하스빌,블루망고리조트,둔전리,해바다펜션,아르떼펜션",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1170796-10000026",
+      "name": "전복사시미",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/27f8d146-de0b-4937-b15a-f1083723aca1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1170796-10000013",
+      "name": "지금여수,초이스,르시엘,무무,피에르몽펜션,바다향기펜션",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1170796-10000027",
+      "name": "산우럭매운탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001682.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1170796-10000014",
+      "name": "돌산마루펜션,울랄라펜션,수펜션,아렌스펜션,까르마풀빌라",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1170796-10000028",
+      "name": "산우럭 미역지리탕",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1170796-10000015",
+      "name": "키놀키즈,다시봄,안단테,복자펜션,블루온",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1170796-10000016",
+      "name": "상하동",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1170796-10000030",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1170796-10000017",
+      "name": "jcs호텔,히든비치,스톤아일랜드",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1170796-10000031",
+      "name": "전복물회",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/d51b8b55-4908-4711-9ed5-d7f998ab22e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1170796-10000018",
+      "name": "예술랜드,하이클래스,더뷰,라메르,굿타임",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1170796-10000019",
+      "name": "씨엔블루,티라061,미아모르,아일랜드",
+      "description": "",
+      "category": "추가배달료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1170796",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?PKQZADw"
+    ],
+    "rawItemCount": 38,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

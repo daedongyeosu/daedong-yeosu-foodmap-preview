@@ -1,0 +1,290 @@
+{
+  "storeId": "7a01cce02afa8141",
+  "storeName": "주가네김치찌개&찜 여수여서점",
+  "displayName": "주가네김치찌개&찜 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001194.jpg",
+  "categories": [
+    "전체",
+    "주가네 김치찌개 메뉴",
+    "주류메뉴",
+    "주가네 김치찜 메뉴",
+    "사이드메뉴",
+    "음료",
+    "한그릇메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1244204-10000029",
+      "name": "[고기듬뿍] 돼지김치찌개",
+      "description": "2인: 찌개+공기밥2개+김2\n3~4인 : 찌개+공기밥3개+김3개",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001194.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1244204-10000031",
+      "name": "[참치듬뿍] 참치김치찌개",
+      "description": "2인: 찌개+공기밥2개+김2 \n3~4인 : 찌개+공기밥3개+김3개",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e9b775c5-ecad-4506-bf44-303e07d6b898.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1244204-10000033",
+      "name": "[말해뭐해] 스팸김치찌개",
+      "description": "2인 : 공기밥 2개포함\n3~4인 : 공기밥 3개포함\n맛선택가능 : 0단계/1단계/2단계/3단계",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/548e0706-9a1c-44c5-966e-4c40b0ffef26.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1244204-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1244204-10000039",
+      "name": "[1.5인분] 김치찜",
+      "description": "1인김치찜+공기밥1+도시락김1",
+      "category": "주가네 김치찜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ca390fff-76aa-45aa-9e3e-5e89b7e7ced6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1244204-10000047",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/57b08b10-7018-40ec-9533-7758c6f26dac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1244204-10000052",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6a719779-961d-452d-ac86-3e5b9c0c11eb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1244204-10000057",
+      "name": "[한그릇] 김치찌개1인분",
+      "description": "한그릇 배달만을 위한 메뉴에요\n찌개+밥+김 이 제공됩니다.",
+      "category": "한그릇메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1244204-90000002",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1244204-10000030",
+      "name": "[갓성비] 김치찌개1인분",
+      "description": "1인찌개+김1+공기밥 or 후라이 밥",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/60644f15-98f8-4bc3-9a1a-83ae23010be4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1244204-10000040",
+      "name": "[단품]1.5인분 김치찜",
+      "description": "김치찜만 나갑니다. (공기X , 김X)",
+      "category": "주가네 김치찜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/9b013a28-288f-4650-ac5e-f2b898a816a9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1244204-10000048",
+      "name": "공기밥2개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1244204-10000053",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/284a7c19-f45c-4da7-b325-1fd58f5a8688.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1244204-10000041",
+      "name": "김치찜(단품) 공기X, 김X, 찜만 제공",
+      "description": "찜+순두부반모 (공기x,찜만 제공)",
+      "category": "주가네 김치찜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/a22689b2-d5ba-4376-a805-f49c76194bb9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1244204-10000049",
+      "name": "계란후라이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/dd435c86-3b71-45d8-b074-d2d17069f0cd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1244204-10000054",
+      "name": "제로코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1244204-10000032",
+      "name": "[햄폭탄] 부대김치찌개",
+      "description": "2인 : 공기밥 2개포함\n3~4인 : 공기밥 3개포함\n맛선택가능 : 0단계/1단계/2단계/3단계",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3ff9e2fd-2b0a-4f66-89ee-f16b7b1b5f84.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1244204-10000042",
+      "name": "[고기듬뿍] 돼지김치찜+푸딩계란찜",
+      "description": "2~3인// 공기밥2개 김2 김치찜+순두부반모 계란찜 3~4인// 공기밥3개 김3 김치찜+순두부반모 계란찜",
+      "category": "주가네 김치찜 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b342b87b-a6dc-4b8c-bd3e-f10e284e0d45.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1244204-10000050",
+      "name": "푸딩계란찜",
+      "description": "푸딩같이 탱탱한 뜨끈뜨끈 계란찜~",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1244204-10000043",
+      "name": "[고기가득] 삼겹김치찜+푸딩계란찜",
+      "description": "2~3인// 공기밥2개 김2 김치찜+순두부반모 계란찜 3~4인// 공기밥3개 김3 김치찜+순두부반모 계란찜",
+      "category": "주가네 김치찜 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1244204-10000051",
+      "name": "도시락 김",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1244204-10000034",
+      "name": "[단품]김치찌개1인분(공기X, 김X)",
+      "description": "오직찌개만(공기X,김X)",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/dc678442-1068-4e27-8b77-d19c78754446.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1244204-10000044",
+      "name": "[가득가득] 참치김치찜+푸딩계란찜",
+      "description": "2~3인// 공기밥2개 김2 김치찜 계란찜 3~4인// 공기밥3개 김3 김치찜 계란찜",
+      "category": "주가네 김치찜 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1244204-10000035",
+      "name": "[단품]돼지김치찌개(2인)",
+      "description": "단품 : 공기밥X , 옵션선택X",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/09838a3f-f03c-414f-a34b-a9b3606d22fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1244204-10000045",
+      "name": "[햄폭탄] 부대김치찜+푸딩계란찜",
+      "description": "2~3인// 공기밥2개 김2 김치찜+순두부반모 계란찜 3~4인// 공기밥3개 김3 김치찜+순두부반모 계란찜",
+      "category": "주가네 김치찜 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1244204-10000036",
+      "name": "[단품]참치김치찌개(2인)",
+      "description": "단품 : 공기밥X , 옵션선택X",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3da4e394-c27f-4839-ac11-e8e08cc5ecd1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1244204-10000046",
+      "name": "[말해뭐해] 스팸김치찜+푸딩계란찜",
+      "description": "2~3인// 공기밥2개 김2 김치찜+순두부반모 계란찜 3~4인// 공기밥3개 김3 김치찜+순두부반모 계란찜",
+      "category": "주가네 김치찜 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1244204-10000037",
+      "name": "[단품]부대김치찌개(2인)",
+      "description": "단품 : 공기밥X , 옵션선택X",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1244204-10000038",
+      "name": "[단품]스팸김치찌개(2인)",
+      "description": "단품 : 공기밥X , 옵션선택X",
+      "category": "주가네 김치찌개 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/548e0706-9a1c-44c5-966e-4c40b0ffef26.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1244204",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?QoO5eeN"
+    ],
+    "rawItemCount": 32,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

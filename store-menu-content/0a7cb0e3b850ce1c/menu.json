@@ -1,0 +1,452 @@
+{
+  "storeId": "0a7cb0e3b850ce1c",
+  "storeName": "열정국밥 여수문수점",
+  "displayName": "열정국밥 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/86eb4c64-14a2-4bcb-8b28-328780131be7.jpg",
+  "categories": [
+    "전체",
+    "열정정식 (배고플땐바로)",
+    "열정진국 (깊게우린국물)",
+    "추가 메뉴",
+    "저녁인기메뉴 (함께 나눠요)",
+    "열정해장국 (계속 생각나는 해장국)",
+    "사이드 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138838-30000002",
+      "name": "(속풀이) 얼큰돼지국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 얼큰국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/06bbb967-36fe-45c9-bca3-ae628a44f73c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000002"
+    },
+    {
+      "id": "ddangyo-1138838-30000004",
+      "name": "(매운깔끔맛) 얼큰살코기국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 얼큰국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/98b66644-507e-40b2-bb43-0b64d25920d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000004"
+    },
+    {
+      "id": "ddangyo-1138838-30000005",
+      "name": "(더감칠맛) 토종순대국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/dbd63761-f118-4f08-bb1c-80e7dbc2525b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000005"
+    },
+    {
+      "id": "ddangyo-1138838-30000006",
+      "name": "(칼칼한맛) 얼큰순대국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 얼큰국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/f9631a36-4c59-4544-a6ed-58e69e6b677b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000006"
+    },
+    {
+      "id": "ddangyo-1138838-30000008",
+      "name": "(매운땡김맛) 얼큰모듬국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 얼큰국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/2cdb9066-f3b2-4e36-879c-7cde77e88439.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000008"
+    },
+    {
+      "id": "ddangyo-1138838-30000001",
+      "name": "(야들야들) 돼지국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/381053f6-3ed9-468c-8bd0-24a2505774ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000001"
+    },
+    {
+      "id": "ddangyo-1138838-30000015",
+      "name": "(기력충전) 닭한마리삼계탕",
+      "description": "닭한마리삼계탕+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/4784d4c3-f321-4b30-99a5-08d1b43223da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000015"
+    },
+    {
+      "id": "ddangyo-1138838-30000047",
+      "name": "육장 추가(특제소스)",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000047"
+    },
+    {
+      "id": "ddangyo-1138838-30000023",
+      "name": "담백모듬수육전골+공기밥 2+육장 2+당면+숙주+깍두기+무말랭이",
+      "description": "담백모듬전골+당면+공기밥2+육장2+깍두기1+무말랭이1",
+      "category": "저녁인기메뉴 (함께 나눠요)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/2c85ccd0-bf68-430b-9c22-ec989bfd9cc9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000023"
+    },
+    {
+      "id": "ddangyo-1138838-30000135",
+      "name": "(재주문 1위) 열정충전해장국+숙주+당면",
+      "description": "열정충전해장국+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정해장국 (계속 생각나는 해장국)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/71ba2f4e-f8ac-43a3-b407-1b1f8aff995b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000135"
+    },
+    {
+      "id": "ddangyo-1138838-30000035",
+      "name": "(도시락 반찬)함박스테이크 (2개)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f93f4e10-29b0-4b1f-bfc4-36bc0ad436be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000035"
+    },
+    {
+      "id": "ddangyo-1138838-30000024",
+      "name": "얼큰모듬수육전골+공기밥2+육장2+당면+숙주+깍두기+무말랭이",
+      "description": "얼큰모듬전골+당면+공기밥2+육장2+깍두기1+무말랭이1",
+      "category": "저녁인기메뉴 (함께 나눠요)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/556659da-7f99-45e4-9ceb-61fb9e24b3c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000024"
+    },
+    {
+      "id": "ddangyo-1138838-30000048",
+      "name": "공기밥 추가",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000048"
+    },
+    {
+      "id": "ddangyo-1138838-30000138",
+      "name": "(인기 1위) 힘내부대해장국+숙주+당면",
+      "description": "지친 하루를 따뜻하게 위로하고, 내일을 다시 힘차게 시작할 수 있도록 응원의 마음을 담았습니다.",
+      "category": "열정해장국 (계속 생각나는 해장국)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/de092a54-a071-4565-8ed0-08ce5acf3ac7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000138"
+    },
+    {
+      "id": "ddangyo-1138838-30000036",
+      "name": "(도시락 반찬)함박스테이크 (4개)",
+      "description": "열정 시그니쳐 인기사이드메뉴",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/974302e6-f093-410a-8092-ea5723a2f9c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000036"
+    },
+    {
+      "id": "ddangyo-1138838-30000137",
+      "name": "(깔끔함 1위) 얼큰살코기해장국+숙주+당면",
+      "description": "얼큰살코기해장국+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정해장국 (계속 생각나는 해장국)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ddecd8ce-5f4a-43d7-9ffd-e0a58ace8110.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000137"
+    },
+    {
+      "id": "ddangyo-1138838-30000003",
+      "name": "(고단백질) 살코기수육국밥정식",
+      "description": "291kcal 고단백질 다이어트(공깃밥 뺀 수치) (1~2인분 1찬/3~4인분 2찬) 국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/9a2620ec-2dea-4f46-8b2d-5298cad9be64.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000003"
+    },
+    {
+      "id": "ddangyo-1138838-30000049",
+      "name": "깍두기 추가",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000049"
+    },
+    {
+      "id": "ddangyo-1138838-30000037",
+      "name": "(동글바삭) 완자돈까스 2개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/bd722ef8-2eaf-4c7c-bf8a-0c281689277f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000037"
+    },
+    {
+      "id": "ddangyo-1138838-30000009",
+      "name": "(순살만) 순살갈비탕+당면+육장",
+      "description": "순살갈비탕+육장+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/0ba8a3ff-5f15-40d8-9fd0-d47b8642c817.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000009"
+    },
+    {
+      "id": "ddangyo-1138838-30000038",
+      "name": "(동글바삭) 완자돈까스 4개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f0e6b11f-dd3e-4bab-a8cc-a0ef26b1efdb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000038"
+    },
+    {
+      "id": "ddangyo-1138838-30000010",
+      "name": "(더깊은맛) 특설렁탕+당면+육장",
+      "description": "특설렁탕+육장+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/21b76c12-7100-4b19-81de-a5fbe33b9f08.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000010"
+    },
+    {
+      "id": "ddangyo-1138838-30000018",
+      "name": "(해장땡길땐) 양평양선지해장국+육장",
+      "description": "소양내장탕+육장+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정해장국 (계속 생각나는 해장국)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/03f56f58-d6b2-4c97-8d98-649b4757b4ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000018"
+    },
+    {
+      "id": "ddangyo-1138838-30000025",
+      "name": "꽉찬소곱창전골+당면+밥2+육장2+깍두기1+무말랭이1",
+      "description": "꽉찬소곱창전골+당면+공기밥2+육장2+깍두기1+무말랭이1",
+      "category": "저녁인기메뉴 (함께 나눠요)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/bddb054a-4ecf-430a-be71-c68caa913d73.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000025"
+    },
+    {
+      "id": "ddangyo-1138838-30000050",
+      "name": "생부추 추가",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000050"
+    },
+    {
+      "id": "ddangyo-1138838-30000039",
+      "name": "얇은피왕만두(고기) 4개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/3624956a-95cb-4eea-ae77-0036df6d5981.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000039"
+    },
+    {
+      "id": "ddangyo-1138838-30000011",
+      "name": "(땡기는맛) 햄폭탄부대찌개800g+당면",
+      "description": "햄폭탄부대찌개+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/edc0b547-143d-4981-9c77-931cc51df245.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000011"
+    },
+    {
+      "id": "ddangyo-1138838-30000051",
+      "name": "무말랭이 추가",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000051"
+    },
+    {
+      "id": "ddangyo-1138838-30000012",
+      "name": "(특뼈해장국) 열정2배감자탕+육장",
+      "description": "열정2배감자탕+육장+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/b309c78f-ee13-4220-8bef-edf7680ef6fc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000012"
+    },
+    {
+      "id": "ddangyo-1138838-30000040",
+      "name": "얇은피왕만두(김치) 4개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/8757c5ea-a181-4b4b-9c53-1ad764b718cc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000040"
+    },
+    {
+      "id": "ddangyo-1138838-30000052",
+      "name": "5찬 추가",
+      "description": "새우젓,다대기,쌈장,청양고추,양파",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000052"
+    },
+    {
+      "id": "ddangyo-1138838-30000007",
+      "name": "(모두맛있다) 모듬국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/88fcea2a-2008-4ff9-ace6-55bec5eb64f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000007"
+    },
+    {
+      "id": "ddangyo-1138838-30000031",
+      "name": "(다이어트) 뽈살항정수육250g+무말랭이+육장",
+      "description": "뽈살항정수육250g+무말랭이+육장",
+      "category": "저녁인기메뉴 (함께 나눠요)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c5e55797-ec13-4bcb-ac0f-099b74877f38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000031"
+    },
+    {
+      "id": "ddangyo-1138838-30000013",
+      "name": "(더맛있는맛) 순살감자탕+육장",
+      "description": "순살 제품이나 전통 수작업 특성상 미세한 뼈가 있을 수 있습니다.  순살감자탕 + 육장 + 공기밥 + 깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f07e7e4a-7f88-49da-b5b3-074b5146ef23.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000013"
+    },
+    {
+      "id": "ddangyo-1138838-30000042",
+      "name": "갈비만두 8개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f16aed34-651d-470d-aafc-38952117b546.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000042"
+    },
+    {
+      "id": "ddangyo-1138838-30000131",
+      "name": "(닭다리살100%) 순살닭볶음탕+감자+당면",
+      "description": "순살닭볶음탕+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/eff789f0-f575-4950-9130-5c6337ed1c4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000131"
+    },
+    {
+      "id": "ddangyo-1138838-30000032",
+      "name": "잡내없는 쫀득보쌈수육 (국내산 250g,무말랭이,육장)",
+      "description": "국내산보쌈수육250g+무말랭이+육장",
+      "category": "저녁인기메뉴 (함께 나눠요)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/ef3d32d7-e2e2-4cfa-b1cd-69cddff9d76c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000032"
+    },
+    {
+      "id": "ddangyo-1138838-30000043",
+      "name": "왕군만두(고기) 4개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/d76bc266-15f6-46ec-a617-b881ca7efa4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1138838-30000033",
+      "name": "(시골순대) 토종순대한상300g+무말랭이",
+      "description": "토종순대한상300g+무말랭이",
+      "category": "저녁인기메뉴 (함께 나눠요)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/0fa52866-3714-490d-943a-44008951c91a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000033"
+    },
+    {
+      "id": "ddangyo-1138838-30000044",
+      "name": "왕군만두(김치) 4개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/79ac8725-c54f-4997-b441-4fa3a21177fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000044"
+    },
+    {
+      "id": "ddangyo-1138838-30000034",
+      "name": "(쫄깃~탱글)낙지젓무침",
+      "description": "",
+      "category": "저녁인기메뉴 (함께 나눠요)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/096517ec-5880-4e9c-82e8-5cb4cb236263.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000034"
+    },
+    {
+      "id": "ddangyo-1138838-30000016",
+      "name": "(전통육개장) 열정소고기국밥",
+      "description": "열정소고기국밥+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/87c24441-403b-4247-a42d-1d2e34a2a439.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000016"
+    },
+    {
+      "id": "ddangyo-1138838-30000017",
+      "name": "(내장듬뿍) 전라도식 소내장탕+육장",
+      "description": "전라도식 소내장탕+육장+공기밥+깍두기 1개(1~2인분/국내산)",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/20a5416f-23f4-4c34-af06-455d0a6536c6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000017"
+    },
+    {
+      "id": "ddangyo-1138838-30000046",
+      "name": "갈비 군만두 8개",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/1a967235-6eb1-4751-98d0-4747eb02af8e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000046"
+    },
+    {
+      "id": "ddangyo-1138838-30000019",
+      "name": "(한결같은맛) 소양내장탕+육장",
+      "description": "소내장듬뿍+깐양듬뿍+부추+공기밥",
+      "category": "열정진국 (깊게우린국물)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/6abb5441-e749-4ad1-b2bc-1bfb7680e9e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000019"
+    },
+    {
+      "id": "ddangyo-1138838-30000020",
+      "name": "(쫄깃곱창) 내장국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/bc2653b5-2bd9-47af-8634-930b64085f7e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000020"
+    },
+    {
+      "id": "ddangyo-1138838-30000129",
+      "name": "(쫄깃내장) 얼큰내장국밥정식",
+      "description": "(1~2인분 1찬/3~4인분 2찬) 얼큰국밥+양파+청양고추+쌈장+다대기+새우젓+소금+깍두기+공기밥",
+      "category": "열정정식 (배고플땐바로)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/18bb3911-8cee-4c33-9f62-33c64d179b55.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000129"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1138838",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?DuqueQd"
+    ],
+    "rawItemCount": 52,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

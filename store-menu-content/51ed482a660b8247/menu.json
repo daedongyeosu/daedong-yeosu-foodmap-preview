@@ -1,0 +1,1600 @@
+{
+  "storeId": "51ed482a660b8247",
+  "storeName": "휴게소 여수여서점",
+  "displayName": "휴게소 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f42ddbfa-6129-4c71-b71e-b015fb263202.jpg",
+  "categories": [
+    "전체",
+    "리뷰약속[최소금액11900원채워야리뷰가능]",
+    "디저트",
+    "1L 보틀 대용량",
+    "1L 보틀 빅아메리카노(얼음X)",
+    "휴게소 추천메뉴",
+    "휴게소 set",
+    "식사 할샤럄 ~~",
+    "휴게소의 MAIN 분식",
+    "커피 [리유저블 컵 700ML]",
+    "스무디 [리유저블 컵 700ML]",
+    "시원한 여름 컵빙수",
+    "음료 [리유저블 컵 700ML]",
+    "라떼 [리유저블 컵 700ML]",
+    "쥬스[리유저블 컵 700ML]",
+    "에이드 [리유저블 컵 700ML]",
+    "쒜이크 [리유저블 컵 700ML]",
+    "커피 스무디 [리유저블 컵 700ML]",
+    "TEA [리유저블 컵 700ML]",
+    "아침빱은 간댠히",
+    "사이드"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1228631-10000483",
+      "name": "아이스티",
+      "description": "(리뷰는 꼭 약속입니다)\n1. 중복 선택 안됩니다(1개만 선택)\n2. 최소주문금액 주문시에만 선택가능합니다.\n3. 따로 연락드리지 않습니다.",
+      "category": "리뷰약속[최소금액11900원채워야리뷰가능]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/07/63fbea62-21b6-46d3-970e-566a65b08921.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000483"
+    },
+    {
+      "id": "ddangyo-1228631-10000567",
+      "name": "미니 찰 붕어빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a1e45e86-c88a-4b7b-8ab7-fafbe3beec2e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000567"
+    },
+    {
+      "id": "ddangyo-1228631-10000487",
+      "name": "[NEW]1L보틀 아메리카노",
+      "description": "",
+      "category": "1L 보틀 대용량",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/321f5029-7f2a-4196-90fe-f64a8a24794f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000487"
+    },
+    {
+      "id": "ddangyo-1228631-10000493",
+      "name": "[NEW]1L보틀 얼음 없이[커피]",
+      "description": "",
+      "category": "1L 보틀 빅아메리카노(얼음X)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000493"
+    },
+    {
+      "id": "ddangyo-1228631-10000494",
+      "name": "[NEW]1L보틀 대용량[커피]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000494"
+    },
+    {
+      "id": "ddangyo-1228631-10000514",
+      "name": "[NEW] 휴 브런치 set (토스트)",
+      "description": "",
+      "category": "휴게소 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000514"
+    },
+    {
+      "id": "ddangyo-1228631-10000518",
+      "name": "[NEW]짜파구리",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000518"
+    },
+    {
+      "id": "ddangyo-1228631-10000528",
+      "name": "알감자",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/61c06c47-8ce4-42ad-8c94-8a56e74623f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000528"
+    },
+    {
+      "id": "ddangyo-1228631-10000575",
+      "name": "아메리카노 (고급원두)",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/c30a4c60-5b60-4071-88e7-d10609fe4889.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000575"
+    },
+    {
+      "id": "ddangyo-1228631-10000586",
+      "name": "플레인요거트",
+      "description": "",
+      "category": "스무디 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/51a9c42e-a397-46fc-8e6e-36e9c1e10e68.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000586"
+    },
+    {
+      "id": "ddangyo-1228631-10000591",
+      "name": "콩콩 인절미 컵빙수",
+      "description": "",
+      "category": "시원한 여름 컵빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/44c50bd9-d403-4c29-83ac-32ee4f7a6f2a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000591"
+    },
+    {
+      "id": "ddangyo-1228631-10000594",
+      "name": "[NEW] 아망추",
+      "description": "",
+      "category": "음료 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000594"
+    },
+    {
+      "id": "ddangyo-1228631-10000598",
+      "name": "초코라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/dae3e463-9330-4f2d-9dec-31ad3c01f50d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000598"
+    },
+    {
+      "id": "ddangyo-1228631-10000617",
+      "name": "토마토쥬스",
+      "description": "",
+      "category": "쥬스[리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/8244f3ae-f05f-4871-9ac6-5ec7c3f91924.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000617"
+    },
+    {
+      "id": "ddangyo-1228631-10000625",
+      "name": "과즙 팡팡 에이드",
+      "description": "",
+      "category": "에이드 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000625"
+    },
+    {
+      "id": "ddangyo-1228631-10000633",
+      "name": "밀크쉐이크",
+      "description": "",
+      "category": "쒜이크 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2cdd3146-f637-4063-ab4f-c4e26d39286f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000633"
+    },
+    {
+      "id": "ddangyo-1228631-10000640",
+      "name": "[NEW]커피 에스프레소 스무디",
+      "description": "",
+      "category": "커피 스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000640"
+    },
+    {
+      "id": "ddangyo-1228631-10000646",
+      "name": "New매실차",
+      "description": "",
+      "category": "TEA [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/84e98dec-4a60-42c8-91fc-cbfedc8af124.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000646"
+    },
+    {
+      "id": "ddangyo-1228631-10000653",
+      "name": "Siri얼",
+      "description": "",
+      "category": "아침빱은 간댠히",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000653"
+    },
+    {
+      "id": "ddangyo-1228631-10000654",
+      "name": "롱슈가 스틱 5g",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000654"
+    },
+    {
+      "id": "ddangyo-1228631-10000485",
+      "name": "아이스 아메리카노",
+      "description": "(리뷰는 꼭 약속입니다)\n1. 중복 선택 안됩니다(1개만 선택)\n2. 최소주문금액 주문시에만 선택가능합니다.\n3. 따로 연락드리지 않습니다.",
+      "category": "리뷰약속[최소금액11900원채워야리뷰가능]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c7a6af65-c597-4f0f-9d5a-c06dbf4d6e4e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000485"
+    },
+    {
+      "id": "ddangyo-1228631-10000568",
+      "name": "델리만쥬",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/6e5ab10f-4008-4c33-8c11-9fb39c3d84f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000568"
+    },
+    {
+      "id": "ddangyo-1228631-10000495",
+      "name": "[찐스팸]스팸 김치 볶음밥",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/41140c0e-dbd3-477c-b06e-76631e0e7934.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000495"
+    },
+    {
+      "id": "ddangyo-1228631-10000656",
+      "name": "일회용 머스타드",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000656"
+    },
+    {
+      "id": "ddangyo-1228631-10000488",
+      "name": "[NEW]1L보틀 대용량[라떼]",
+      "description": "",
+      "category": "1L 보틀 대용량",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000488"
+    },
+    {
+      "id": "ddangyo-1228631-10000515",
+      "name": "[NEW] 휴 런치set (볶음밥)",
+      "description": "",
+      "category": "휴게소 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000515"
+    },
+    {
+      "id": "ddangyo-1228631-10000519",
+      "name": "새우 볶음밥",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/4028fa78-3ef3-48c7-8e19-41f638af2f35.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000519"
+    },
+    {
+      "id": "ddangyo-1228631-10000529",
+      "name": "달달구링 닭강정",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000529"
+    },
+    {
+      "id": "ddangyo-1228631-10000576",
+      "name": "디 카페인 아메리카노",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/635bf355-737b-422f-97f1-333464f84a21.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000576"
+    },
+    {
+      "id": "ddangyo-1228631-10000587",
+      "name": "요거트스무디",
+      "description": "",
+      "category": "스무디 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f7b73cd5-b45c-4c5c-8f84-9a28d139c152.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000587"
+    },
+    {
+      "id": "ddangyo-1228631-10000592",
+      "name": "옥수수 컵빙수",
+      "description": "",
+      "category": "시원한 여름 컵빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000592"
+    },
+    {
+      "id": "ddangyo-1228631-10000595",
+      "name": "New달달구리식혜",
+      "description": "",
+      "category": "음료 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002800.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000595"
+    },
+    {
+      "id": "ddangyo-1228631-10000599",
+      "name": "딸기라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0012a1a7-6d79-4192-8dc9-155ef422e6b4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000599"
+    },
+    {
+      "id": "ddangyo-1228631-10000618",
+      "name": "바나나쥬스",
+      "description": "",
+      "category": "쥬스[리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9239b48e-97c2-411c-8cfa-671b83da557b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000618"
+    },
+    {
+      "id": "ddangyo-1228631-10000626",
+      "name": "에너지부스터드링크",
+      "description": "",
+      "category": "에이드 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000626"
+    },
+    {
+      "id": "ddangyo-1228631-10000634",
+      "name": "코코넛쉐이크",
+      "description": "",
+      "category": "쒜이크 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000634"
+    },
+    {
+      "id": "ddangyo-1228631-10000641",
+      "name": "[NEW]바닐라 스무디",
+      "description": "",
+      "category": "커피 스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000641"
+    },
+    {
+      "id": "ddangyo-1228631-10000647",
+      "name": "얼그레이",
+      "description": "",
+      "category": "TEA [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000647"
+    },
+    {
+      "id": "ddangyo-1228631-10000569",
+      "name": "호두과자",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/906692af-87b8-4e28-bb2e-860e5faa7602.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000569"
+    },
+    {
+      "id": "ddangyo-1228631-10000486",
+      "name": "케찹마요 양배추샐러드",
+      "description": "(리뷰는 꼭 약속입니다)\n1. 중복 선택 안됩니다(1개만 선택)\n2. 최소주문금액 주문시에만 선택가능합니다.\n3. 따로 연락드리지 않습니다.",
+      "category": "리뷰약속[최소금액11900원채워야리뷰가능]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000486"
+    },
+    {
+      "id": "ddangyo-1228631-10000657",
+      "name": "일회용 케찹",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000657"
+    },
+    {
+      "id": "ddangyo-1228631-10000489",
+      "name": "[NEW]1L보틀 대용량[스무디]",
+      "description": "",
+      "category": "1L 보틀 대용량",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000489"
+    },
+    {
+      "id": "ddangyo-1228631-10000496",
+      "name": "프렌치 토스트",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/15d172df-0c1b-4d37-b957-d6dfb65ed56a.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000496"
+    },
+    {
+      "id": "ddangyo-1228631-10000516",
+      "name": "양배추 샐러드",
+      "description": "",
+      "category": "휴게소 set",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000516"
+    },
+    {
+      "id": "ddangyo-1228631-10000520",
+      "name": "치킨 마요 볶음밥",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000520"
+    },
+    {
+      "id": "ddangyo-1228631-10000530",
+      "name": "타코치킨",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000530"
+    },
+    {
+      "id": "ddangyo-1228631-10000577",
+      "name": "꿀 아메리카노",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/7cdeee57-9805-4ce8-84c5-78a5b320e6f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000577"
+    },
+    {
+      "id": "ddangyo-1228631-10000588",
+      "name": "탱크보이스무디",
+      "description": "",
+      "category": "스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000588"
+    },
+    {
+      "id": "ddangyo-1228631-10000593",
+      "name": "멜론 컵빙수",
+      "description": "",
+      "category": "시원한 여름 컵빙수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000593"
+    },
+    {
+      "id": "ddangyo-1228631-10000596",
+      "name": "복숭아아이스티",
+      "description": "",
+      "category": "음료 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/dd2fc0c1-659b-43f0-8374-77a9794d1e3c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000596"
+    },
+    {
+      "id": "ddangyo-1228631-10000600",
+      "name": "말차라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/70891a0c-0bfa-4069-809a-cdc98b6ec7ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000600"
+    },
+    {
+      "id": "ddangyo-1228631-10000619",
+      "name": "딸기쥬스",
+      "description": "",
+      "category": "쥬스[리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/a0f7970e-eb75-4ecd-a9e1-25323589b165.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000619"
+    },
+    {
+      "id": "ddangyo-1228631-10000627",
+      "name": "New매실에이드",
+      "description": "",
+      "category": "에이드 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/ad407905-6af1-41e9-a74a-63d930bd8abc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000627"
+    },
+    {
+      "id": "ddangyo-1228631-10000635",
+      "name": "죠리퐁쉐이크",
+      "description": "",
+      "category": "쒜이크 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/284852e3-72b7-40a7-99ba-675521b2892c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000635"
+    },
+    {
+      "id": "ddangyo-1228631-10000642",
+      "name": "[NEW]휴다방스무디",
+      "description": "",
+      "category": "커피 스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000642"
+    },
+    {
+      "id": "ddangyo-1228631-10000648",
+      "name": "히비스커스",
+      "description": "",
+      "category": "TEA [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/a648444a-7a11-417e-968c-76c855ba575f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000648"
+    },
+    {
+      "id": "ddangyo-1228631-10000570",
+      "name": "갓 구운 식빵 + 생크림 한컵",
+      "description": "",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000570"
+    },
+    {
+      "id": "ddangyo-1228631-10000658",
+      "name": "매운 붉닭소스 추가",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000658"
+    },
+    {
+      "id": "ddangyo-1228631-10000490",
+      "name": "[NEW]1L보틀 대용량[쉐이크]",
+      "description": "",
+      "category": "1L 보틀 대용량",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000490"
+    },
+    {
+      "id": "ddangyo-1228631-10000497",
+      "name": "후라이드 닭꼬치",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/b7e4fd2e-aab1-4299-a2f0-f46b945934a5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000497"
+    },
+    {
+      "id": "ddangyo-1228631-10000521",
+      "name": "토마토 파스타",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/3516c93e-dbfc-4664-be95-f0cf11b9fbe5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000521"
+    },
+    {
+      "id": "ddangyo-1228631-10000531",
+      "name": "앙 꿀호떡",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000531"
+    },
+    {
+      "id": "ddangyo-1228631-10000578",
+      "name": "휴다방커피",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/730ae7de-01b8-43da-9bff-d48099c6a9a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000578"
+    },
+    {
+      "id": "ddangyo-1228631-10000589",
+      "name": "NEW]체리요거트스무디",
+      "description": "",
+      "category": "스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000589"
+    },
+    {
+      "id": "ddangyo-1228631-10000597",
+      "name": "아샷추",
+      "description": "",
+      "category": "음료 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d8887fe0-2b53-4aa8-b0cc-84ecbca47c5d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000597"
+    },
+    {
+      "id": "ddangyo-1228631-10000601",
+      "name": "바밤바라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/07/d5347696-5b36-406f-8ee1-472dec8e1b0f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000601"
+    },
+    {
+      "id": "ddangyo-1228631-10000620",
+      "name": "블루베리쥬스",
+      "description": "",
+      "category": "쥬스[리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/f0b1e1b7-d4c9-46ae-8075-614c71ce1b5b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000620"
+    },
+    {
+      "id": "ddangyo-1228631-10000628",
+      "name": "[NEW]체리에이드",
+      "description": "",
+      "category": "에이드 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/e5fb155b-c8c5-4d96-9e7b-ba43e3c2c84f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000628"
+    },
+    {
+      "id": "ddangyo-1228631-10000636",
+      "name": "메로나쉐이크",
+      "description": "",
+      "category": "쒜이크 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000636"
+    },
+    {
+      "id": "ddangyo-1228631-10000643",
+      "name": "[NEW]코코넛 커피 스무디",
+      "description": "",
+      "category": "커피 스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000643"
+    },
+    {
+      "id": "ddangyo-1228631-10000649",
+      "name": "페퍼민트",
+      "description": "",
+      "category": "TEA [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000000770.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000649"
+    },
+    {
+      "id": "ddangyo-1228631-10000571",
+      "name": "붕어빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/adac578a-8455-4f8d-8462-db775bd703d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000571"
+    },
+    {
+      "id": "ddangyo-1228631-10000659",
+      "name": "양배추 샐러드",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000659"
+    },
+    {
+      "id": "ddangyo-1228631-10000491",
+      "name": "[NEW]1L보틀 대용량[TEA]",
+      "description": "",
+      "category": "1L 보틀 대용량",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000491"
+    },
+    {
+      "id": "ddangyo-1228631-10000498",
+      "name": "왕 새우튀김 5p",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/7a22a90b-18b5-4da3-83c3-eb2ead809a38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000498"
+    },
+    {
+      "id": "ddangyo-1228631-10000522",
+      "name": "로제 파스타",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a6f82b3d-afdc-4b24-94ad-64d0fc76e4a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000522"
+    },
+    {
+      "id": "ddangyo-1228631-10000532",
+      "name": "페스츄리핫도그",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000532"
+    },
+    {
+      "id": "ddangyo-1228631-10000579",
+      "name": "카페모카",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/82c5449b-83d1-4a95-b5e8-8b1b5c32950c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000579"
+    },
+    {
+      "id": "ddangyo-1228631-10000590",
+      "name": "NEW]초당옥수수스무디",
+      "description": "",
+      "category": "스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000590"
+    },
+    {
+      "id": "ddangyo-1228631-10000602",
+      "name": "고구마라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/6efc6dd0-2632-495d-beb1-0a2d4a9710d2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000602"
+    },
+    {
+      "id": "ddangyo-1228631-10000621",
+      "name": "자두쥬스",
+      "description": "",
+      "category": "쥬스[리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/df3d2f58-0748-44cd-afbc-0dd60970fe77.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000621"
+    },
+    {
+      "id": "ddangyo-1228631-10000629",
+      "name": "[NEW]체리콕콕",
+      "description": "",
+      "category": "에이드 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d269fd66-cac2-4376-82d4-e2f2bee6fdc0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000629"
+    },
+    {
+      "id": "ddangyo-1228631-10000637",
+      "name": "쿠앤크쉐이크",
+      "description": "",
+      "category": "쒜이크 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ff5d6086-52d4-426f-94ec-46dd5b7dc0a9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000637"
+    },
+    {
+      "id": "ddangyo-1228631-10000644",
+      "name": "[NEW]캬라멜 스무디",
+      "description": "",
+      "category": "커피 스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000644"
+    },
+    {
+      "id": "ddangyo-1228631-10000650",
+      "name": "카모마일",
+      "description": "",
+      "category": "TEA [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/25f821e5-815c-4329-9fb4-5289637fa143.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000650"
+    },
+    {
+      "id": "ddangyo-1228631-10000573",
+      "name": "감자빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a4830f27-d863-4b78-b534-bc6d6bc95420.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000573"
+    },
+    {
+      "id": "ddangyo-1228631-10000492",
+      "name": "[NEW]1L보틀 대용량[에이드, 쥬스]",
+      "description": "",
+      "category": "1L 보틀 대용량",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000492"
+    },
+    {
+      "id": "ddangyo-1228631-10000499",
+      "name": "빠져든다 매콤 닭강정",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001069.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000499"
+    },
+    {
+      "id": "ddangyo-1228631-10000523",
+      "name": "떡볶이",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001853.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000523"
+    },
+    {
+      "id": "ddangyo-1228631-10000533",
+      "name": "후랑크소세지",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/d2747ae9-d98e-4f59-8602-608624a3fa80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000533"
+    },
+    {
+      "id": "ddangyo-1228631-10000580",
+      "name": "캬라멜마끼아또",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4b0133c6-318b-4bed-a196-4ff7297f90ef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000580"
+    },
+    {
+      "id": "ddangyo-1228631-10000603",
+      "name": "쑥라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/fb44327e-4c93-41ca-94e5-3bf1556941b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000603"
+    },
+    {
+      "id": "ddangyo-1228631-10000622",
+      "name": "망고쥬스",
+      "description": "",
+      "category": "쥬스[리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/83ae4c7e-6794-41fa-ae86-a3b7b929b52f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000622"
+    },
+    {
+      "id": "ddangyo-1228631-10000630",
+      "name": "핑크 레몬에이드",
+      "description": "",
+      "category": "에이드 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3131a199-d0a7-4be9-9dce-d9ccfc0d2c71.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000630"
+    },
+    {
+      "id": "ddangyo-1228631-10000638",
+      "name": "[NEW]초코밀크쉐이크",
+      "description": "",
+      "category": "쒜이크 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/205a6a7a-acf5-487b-98ee-695f17ba10a8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000638"
+    },
+    {
+      "id": "ddangyo-1228631-10000645",
+      "name": "[NEW]헤이즐럿 스무디",
+      "description": "",
+      "category": "커피 스무디 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000645"
+    },
+    {
+      "id": "ddangyo-1228631-10000651",
+      "name": "청귤차",
+      "description": "",
+      "category": "TEA [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/218e32fc-d6a3-411a-aa12-610ad31284fa.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000651"
+    },
+    {
+      "id": "ddangyo-1228631-10000574",
+      "name": "고구마빵",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/eb52a34b-4ae5-410c-bad7-49fd32a2b1a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000574"
+    },
+    {
+      "id": "ddangyo-1228631-10000500",
+      "name": "땡큐베리 황도",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/0f0d62c2-0356-45cb-a5ed-961609b1628a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000500"
+    },
+    {
+      "id": "ddangyo-1228631-10000524",
+      "name": "로제떡볶이",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/0354db0e-adef-4848-8dc3-912b008818bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000524"
+    },
+    {
+      "id": "ddangyo-1228631-10000534",
+      "name": "츄러스",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a99280cb-943f-4e8f-87bc-fa86ad802a05.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000534"
+    },
+    {
+      "id": "ddangyo-1228631-10000581",
+      "name": "카페라떼",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/edbb3b78-c15b-47b1-93d4-2b6c27a3fa07.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000581"
+    },
+    {
+      "id": "ddangyo-1228631-10000604",
+      "name": "옥수수라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/ffeb9d53-b71c-4134-a145-7b919bb37c4e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000604"
+    },
+    {
+      "id": "ddangyo-1228631-10000623",
+      "name": "딸바쥬스(딸기 +바나나)",
+      "description": "",
+      "category": "쥬스[리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/8e479098-3057-434b-a221-93801074acc7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000623"
+    },
+    {
+      "id": "ddangyo-1228631-10000631",
+      "name": "얼박사",
+      "description": "",
+      "category": "에이드 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/4d4ec22e-4e05-4cf4-be2f-01bb2dc370cd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000631"
+    },
+    {
+      "id": "ddangyo-1228631-10000639",
+      "name": "[NEW]카라멜밀크쉐이크",
+      "description": "",
+      "category": "쒜이크 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000639"
+    },
+    {
+      "id": "ddangyo-1228631-10000652",
+      "name": "유자차",
+      "description": "",
+      "category": "TEA [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f96642fb-3430-4370-a94f-bdd7ddb5d37e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000652"
+    },
+    {
+      "id": "ddangyo-1228631-10000667",
+      "name": "도라에몽 솜사탕",
+      "description": "",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000667"
+    },
+    {
+      "id": "ddangyo-1228631-10000501",
+      "name": "[취향저격] 치즈 붉닭게티",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000501"
+    },
+    {
+      "id": "ddangyo-1228631-10000525",
+      "name": "짜장떡볶이",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003002.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000525"
+    },
+    {
+      "id": "ddangyo-1228631-10000535",
+      "name": "소떡소떡",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000535"
+    },
+    {
+      "id": "ddangyo-1228631-10000582",
+      "name": "바닐라라떼",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/8e3e7ed6-9a5b-4e39-b705-d2da454679f9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000582"
+    },
+    {
+      "id": "ddangyo-1228631-10000605",
+      "name": "자색고구마라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/e9f8284e-098a-4850-9a1f-aea457a85bfc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000605"
+    },
+    {
+      "id": "ddangyo-1228631-10000624",
+      "name": "수박쥬스",
+      "description": "",
+      "category": "쥬스[리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f6b32220-fe0f-4612-b661-c4b92253c469.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000624"
+    },
+    {
+      "id": "ddangyo-1228631-10000632",
+      "name": "청포도에이드",
+      "description": "",
+      "category": "에이드 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/fe56c085-47c2-4d23-962f-38409a8a970f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000632"
+    },
+    {
+      "id": "ddangyo-1228631-10000665",
+      "name": "해물핫바",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/e5505479-eff8-436b-b8aa-0a47b156326e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000665"
+    },
+    {
+      "id": "ddangyo-1228631-10000502",
+      "name": "숯불 데리야끼 닭꼬치[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/f0e3af73-e2d2-4924-a140-55df086e7495.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000502"
+    },
+    {
+      "id": "ddangyo-1228631-10000526",
+      "name": "치즈돈까스[NEW]",
+      "description": "",
+      "category": "식사 할샤럄 ~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/80f234e2-4b78-422c-ad57-22e9e9b6a3c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000526"
+    },
+    {
+      "id": "ddangyo-1228631-10000583",
+      "name": "헤이즐럿라떼",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9c047575-5d74-4230-8ac2-736249a58d28.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000583"
+    },
+    {
+      "id": "ddangyo-1228631-10000606",
+      "name": "밀크티",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/ef9cda8f-7b59-4b8d-9c4b-7bf65b6e187b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000606"
+    },
+    {
+      "id": "ddangyo-1228631-10000538",
+      "name": "버터오징어구이",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/3a9202dc-e80d-4ec0-84b3-0f909624f38e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000538"
+    },
+    {
+      "id": "ddangyo-1228631-10000503",
+      "name": "닭껍질튀김[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3bf7a4e6-dcd3-4ff9-9b2a-c984438833d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000503"
+    },
+    {
+      "id": "ddangyo-1228631-10000584",
+      "name": "아샷추",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d8887fe0-2b53-4aa8-b0cc-84ecbca47c5d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000584"
+    },
+    {
+      "id": "ddangyo-1228631-10000607",
+      "name": "달고나라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/22ac595b-0a7a-44f9-9d84-2c01b0264b0f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000607"
+    },
+    {
+      "id": "ddangyo-1228631-10000539",
+      "name": "매콤점보닭다리",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000539"
+    },
+    {
+      "id": "ddangyo-1228631-10000504",
+      "name": "쌀꼬치[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000504"
+    },
+    {
+      "id": "ddangyo-1228631-10000585",
+      "name": "[NEW]베트남 연유 라떼",
+      "description": "",
+      "category": "커피 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/4e86037d-aa9a-45f8-a204-a2993c01e0f1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000585"
+    },
+    {
+      "id": "ddangyo-1228631-10000608",
+      "name": "미숫가루",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f36cf8a0-4fe5-4e95-b9d3-7e91a6f64dab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000608"
+    },
+    {
+      "id": "ddangyo-1228631-10000540",
+      "name": "맛감자",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000540"
+    },
+    {
+      "id": "ddangyo-1228631-10000505",
+      "name": "추억의떡꼬치[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3cde062d-1c78-48b6-9f15-69ed0fcb1b40.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000505"
+    },
+    {
+      "id": "ddangyo-1228631-10000609",
+      "name": "민트쪼꼬라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/e74b320c-7bdd-490a-90bd-afc0c22d57a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000609"
+    },
+    {
+      "id": "ddangyo-1228631-10000541",
+      "name": "버팔로 윙봉",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/8e06d987-1c79-4f6f-a6d4-9905b42bd898.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000541"
+    },
+    {
+      "id": "ddangyo-1228631-10000506",
+      "name": "삼겹살바베큐[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/6137aed0-f68a-4a0d-a492-7c5b9713c445.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000506"
+    },
+    {
+      "id": "ddangyo-1228631-10000610",
+      "name": "[NEW]체리마루라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/022791d5-9832-4371-904e-9b7d21820e32.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000610"
+    },
+    {
+      "id": "ddangyo-1228631-10000542",
+      "name": "케이준 감자튀김",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e791b55e-dc4d-4172-a61e-a150976ce0f3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000542"
+    },
+    {
+      "id": "ddangyo-1228631-10000507",
+      "name": "(갈증해소) 얼파박",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000507"
+    },
+    {
+      "id": "ddangyo-1228631-10000611",
+      "name": "[NEW]레몬아이스티",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/2fba1424-face-4088-af28-9d9707e42e7e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000611"
+    },
+    {
+      "id": "ddangyo-1228631-10000509",
+      "name": "20cm롱치즈스틱[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/5c6ec908-b611-4f55-bd4c-d10ad1ba37de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000509"
+    },
+    {
+      "id": "ddangyo-1228631-10000543",
+      "name": "타코야끼",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/1c3b34b3-6920-4304-9ebc-66d003bf8dbe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000543"
+    },
+    {
+      "id": "ddangyo-1228631-10000612",
+      "name": "[NEW]망고아이스티",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000612"
+    },
+    {
+      "id": "ddangyo-1228631-10000544",
+      "name": "회오리감자",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/b34edad1-6b70-4b6d-8d70-66b1a7608072.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000544"
+    },
+    {
+      "id": "ddangyo-1228631-10000508",
+      "name": "오미자에이드[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/88961434-2dee-45d0-b0bc-37a3f9dcf096.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000508"
+    },
+    {
+      "id": "ddangyo-1228631-10000613",
+      "name": "[NEW]석류아이스티",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/205cf436-e465-4918-aaab-dbba63bca1ab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000613"
+    },
+    {
+      "id": "ddangyo-1228631-10000545",
+      "name": "양념떡튀김",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000545"
+    },
+    {
+      "id": "ddangyo-1228631-10000510",
+      "name": "오미자차[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/3b91373c-a92c-4085-8627-9dcd85f0a5a3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000510"
+    },
+    {
+      "id": "ddangyo-1228631-10000614",
+      "name": "[NEW]청포도아이스티",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000614"
+    },
+    {
+      "id": "ddangyo-1228631-10000546",
+      "name": "인절미떡튀김",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000546"
+    },
+    {
+      "id": "ddangyo-1228631-10000664",
+      "name": "20cm롱치즈스틱[NEW]",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/5c6ec908-b611-4f55-bd4c-d10ad1ba37de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000664"
+    },
+    {
+      "id": "ddangyo-1228631-10000615",
+      "name": "[NEW]코코넛라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/31199c73-23dc-45a9-ab2e-1176d12f6994.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000615"
+    },
+    {
+      "id": "ddangyo-1228631-10000547",
+      "name": "팝콘치킨 [콜라별되]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/db1b92a9-ed31-4d3e-ade1-872a0082ab95.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000547"
+    },
+    {
+      "id": "ddangyo-1228631-10000512",
+      "name": "새우링",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/bb127aa5-cd81-41c7-a598-eb4b46b605c0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000512"
+    },
+    {
+      "id": "ddangyo-1228631-10000616",
+      "name": "[NEW]메로나라떼",
+      "description": "",
+      "category": "라떼 [리유저블 컵 700ML]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/56398e07-6d23-483b-8ba4-93634711d599.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000616"
+    },
+    {
+      "id": "ddangyo-1228631-10000549",
+      "name": "감자핫도그",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000549"
+    },
+    {
+      "id": "ddangyo-1228631-10000513",
+      "name": "통살 오징어튀김",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0a175881-29aa-4529-b026-9c39bbd18be8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000513"
+    },
+    {
+      "id": "ddangyo-1228631-10000661",
+      "name": "바삭바삭 통 김말이",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e4085b66-98cc-42c8-9082-2b3f5ec2f878.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000661"
+    },
+    {
+      "id": "ddangyo-1228631-10000548",
+      "name": "피카피카피카츄",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/ff78e131-380e-41ec-a3f9-57d49426f6a9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000548"
+    },
+    {
+      "id": "ddangyo-1228631-10000550",
+      "name": "[NEW]추억의 라면땅",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000550"
+    },
+    {
+      "id": "ddangyo-1228631-10000662",
+      "name": "매콤바삭 통통 고추튀김",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/9ff6e1dd-2266-46c7-ae7e-192e78efb92d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000662"
+    },
+    {
+      "id": "ddangyo-1228631-10000551",
+      "name": "[NEW]바싹바싹 어포",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000551"
+    },
+    {
+      "id": "ddangyo-1228631-10000663",
+      "name": "달콤바삭 고구마튀김",
+      "description": "",
+      "category": "휴게소 추천메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/45920e54-9097-4ab7-97bd-7b7b5aeb6798.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000663"
+    },
+    {
+      "id": "ddangyo-1228631-10000552",
+      "name": "NEW물만두",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/be4f952f-c192-49bb-88b7-2bf9ff3ccc06.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000552"
+    },
+    {
+      "id": "ddangyo-1228631-10000554",
+      "name": "옛날핫도그",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/7e8fee65-1a1e-471e-87a1-a1f3a38d5c56.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000554"
+    },
+    {
+      "id": "ddangyo-1228631-10000555",
+      "name": "모짜렐라핫도그",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000555"
+    },
+    {
+      "id": "ddangyo-1228631-10000556",
+      "name": "치즈말이핫바[NEW]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000556"
+    },
+    {
+      "id": "ddangyo-1228631-10000557",
+      "name": "싹쓰리 모듬감자[NEW]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000557"
+    },
+    {
+      "id": "ddangyo-1228631-10000558",
+      "name": "닭껍질튀김[NEW]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3bf7a4e6-dcd3-4ff9-9b2a-c984438833d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000558"
+    },
+    {
+      "id": "ddangyo-1228631-10000559",
+      "name": "더바삭한치즈볼[NEW]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/1b2bb69e-6a24-467c-98a7-640445f79ba3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000559"
+    },
+    {
+      "id": "ddangyo-1228631-10000560",
+      "name": "추억의 떡꼬치[NEW]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/3cde062d-1c78-48b6-9f15-69ed0fcb1b40.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000560"
+    },
+    {
+      "id": "ddangyo-1228631-10000561",
+      "name": "삼겹살바베큐[NEW]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000561"
+    },
+    {
+      "id": "ddangyo-1228631-10000562",
+      "name": "쌀꼬치[NEW]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000562"
+    },
+    {
+      "id": "ddangyo-1228631-10000563",
+      "name": "떡갈비스테이크[NEW]",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000563"
+    },
+    {
+      "id": "ddangyo-1228631-10000666",
+      "name": "깨찰공룡알",
+      "description": "깨찰볼5개\n맛있는 깨찰볼\n느끼한게 싫다면 고소한 깨찰볼 추천~",
+      "category": "휴게소의 MAIN 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000666"
+    },
+    {
+      "id": "ddangyo-1228631-10000537",
+      "name": "어묵바",
+      "description": "",
+      "category": "휴게소의 MAIN 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/32090f54-e762-4345-ae71-db2c75268d18.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000537"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1228631",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?JaqfLsA"
+    ],
+    "rawItemCount": 173,
+    "duplicateItemsRemoved": 0
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

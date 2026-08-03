@@ -1,0 +1,243 @@
+{
+  "storeId": "8fe8b8fdd0fc30ae",
+  "storeName": "설악칡냉면 여수문수점",
+  "displayName": "설악칡냉면 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/89d623a6-0f30-4b7c-aef6-6e9d509b5a9b.jpg",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "세트메뉴",
+    "사이드",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138479-10000001",
+      "name": "(진짜맛있습니다)설악칡물냉면",
+      "description": "다데기가 소량 따로 포장되어 배달됩니다\n다데기가 많이 필요하신분은 다데기추가 하시면 됩니다\n식초는 기본간으로 되어있습니다.더 필요하신분은 요청사항에 적어주세요",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/74d731d9-5513-449a-8b6a-a502eadc17e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1138479-10000004",
+      "name": "(해장용)매운불물냉면",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d0f224dc-93a3-465f-8454-219b31531941.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1138479-10000002",
+      "name": "(감칠맛 폭팔)설악칡비빔냉면",
+      "description": "육수가 기본적으로 한공기 따로 포장되어 배달됩니다\n식초는 기본간으로 되어있어 따로 배달되지 않아요~더 필요하신분은 요청사항에 기재해 주세요~",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/de243da3-5638-4445-9d9d-7b82b6a7c9cf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1138479-10000006",
+      "name": "칡냉면1+튀김왕만두2개",
+      "description": "선택냉면1개+튀김왕만두2개",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/477bfd32-8403-4178-81fc-a38d5928de4f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1138479-10000012",
+      "name": "튀김고기왕만두",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/32320bbc-eff3-43fe-8401-e7302a8082d4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1138479-10000022",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1138479-10000007",
+      "name": "칡냉면1+숯불고기150g",
+      "description": "선택냉면1개+숯불고기150g",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/1b568b00-40d7-4163-8e25-84c94509bd58.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1138479-10000013",
+      "name": "튀김김치왕만두",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1138479-10000023",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1138479-10000003",
+      "name": "(해장용 불닭x5배)매운불비빔냉면",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a3d4a71d-e28e-4014-a84b-b888bbe816d4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1138479-10000008",
+      "name": "칡냉면1+숯불고기150g+튀김왕만두 2개",
+      "description": "선택냉면1개+숯불고기150g+튀김왕만두2개",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1138479-10000014",
+      "name": "섞어왕만두튀김(고기3+김치3)",
+      "description": "고기왕만두3개 + 김치왕만두3개",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1138479-10000024",
+      "name": "제로펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1138479-10000009",
+      "name": "(커플세트)칡냉면2개+튀김왕만두 4개",
+      "description": "선택냉면2개+튀김왕만두4개",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/89d623a6-0f30-4b7c-aef6-6e9d509b5a9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1138479-10000015",
+      "name": "갈비만두튀김",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c1419e66-13cc-4973-bda9-33d8c1194650.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1138479-10000005",
+      "name": "(극찬합니다)설악칡물비냉면",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/40982107-13ee-46d0-83d5-f6bdf1609565.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1138479-10000010",
+      "name": "(커플세트)칡냉면2개+숯불고기300g",
+      "description": "선택냉면2개+숯불고기300g",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/180a712d-89ff-4941-a09d-f61dd5878922.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1138479-10000016",
+      "name": "숯불고기 150g추가",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/84eecf7a-4f86-45ca-9f3d-43714e14fea4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1138479-10000011",
+      "name": "(대식가2인세트)칡냉면2개+숯불고기300g튀김왕만두4개",
+      "description": "선택냉면2개+숯불고기300g+튀김왕만두4개",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1138479-10000017",
+      "name": "숯불고기 300g 추가",
+      "description": "",
+      "category": "사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/84eecf7a-4f86-45ca-9f3d-43714e14fea4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1138479-10000018",
+      "name": "다데기 추가",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1138479-10000019",
+      "name": "불다데기 추가",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1138479-10000020",
+      "name": "육수 추가",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1138479-10000021",
+      "name": "사리 추가",
+      "description": "",
+      "category": "사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1138479",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?Cu2jp4X"
+    ],
+    "rawItemCount": 28,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

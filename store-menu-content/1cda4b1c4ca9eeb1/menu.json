@@ -1,0 +1,199 @@
+{
+  "storeId": "1cda4b1c4ca9eeb1",
+  "storeName": "상하동 참옻닭",
+  "displayName": "상하동 참옻닭",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/95de2765-c7bc-4bd1-9460-838e4cd84c05.jpg",
+  "categories": [
+    "전체",
+    "삼계탕",
+    "백 숙(2인분) ",
+    "백숙(4인분)",
+    "특별메뉴(예약메뉴)",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1340623-10000001",
+      "name": "한방삼계탕",
+      "description": "",
+      "category": "삼계탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/fd64edc5-a4a2-4002-8c9e-e375b383982b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1340623-10000006",
+      "name": "한방백숙2인분(닭죽별도)",
+      "description": "",
+      "category": "백 숙(2인분) ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/2f78d7eb-5cb7-4661-a988-70458f6dd2e3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1340623-10000012",
+      "name": "한방백숙4인분(닭죽별도)",
+      "description": "",
+      "category": "백숙(4인분)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1340623-10000016",
+      "name": "해신탕",
+      "description": "활문어+전복",
+      "category": "특별메뉴(예약메뉴)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1340623-10000017",
+      "name": "음료수",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1340623-10000002",
+      "name": "참옻삼계탕",
+      "description": "",
+      "category": "삼계탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1340623-10000007",
+      "name": "참옻백숙2인분(닭죽별도)",
+      "description": "",
+      "category": "백 숙(2인분) ",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1340623-10000013",
+      "name": "황칠백숙4인분(닭죽별도)",
+      "description": "",
+      "category": "백숙(4인분)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1340623-10000018",
+      "name": "공기밥",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1340623-10000020",
+      "name": "참옻수육(소)",
+      "description": "",
+      "category": "특별메뉴(예약메뉴)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1340623-10000003",
+      "name": "황칠삼계탕",
+      "description": "",
+      "category": "삼계탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/e024b907-befd-4a80-b0b8-2f048cd62284.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1340623-10000008",
+      "name": "황칠백숙2인분(닭죽별도)",
+      "description": "",
+      "category": "백 숙(2인분) ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/d7ddfad4-6e06-41bc-88f1-7a446d8bc210.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1340623-10000019",
+      "name": "닭죽",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1340623-10000021",
+      "name": "참옻수육(중)",
+      "description": "",
+      "category": "특별메뉴(예약메뉴)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1340623-10000015",
+      "name": "전복백숙4인분(닭죽별도)",
+      "description": "",
+      "category": "백숙(4인분)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1340623-10000022",
+      "name": "참옻수육(대)",
+      "description": "",
+      "category": "특별메뉴(예약메뉴)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1340623-10000005",
+      "name": "전복삼계탕",
+      "description": "",
+      "category": "삼계탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/5d54f8e4-8010-4d9a-a62f-473338f98c92.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1340623-10000010",
+      "name": "전복백숙2인분(닭죽별도)",
+      "description": "",
+      "category": "백 숙(2인분) ",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1340623-10000011",
+      "name": "닭볶음탕",
+      "description": "",
+      "category": "백 숙(2인분) ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9ded4610-11c8-4518-aaee-e224bd55faac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1340623",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?yUhYDrF"
+    ],
+    "rawItemCount": 20,
+    "duplicateItemsRemoved": 1
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

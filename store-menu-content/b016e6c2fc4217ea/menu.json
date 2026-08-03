@@ -1,0 +1,237 @@
+{
+  "storeId": "b016e6c2fc4217ea",
+  "storeName": "요아정 여수여서점",
+  "displayName": "요아정 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/7a2e7f48-5e53-498b-8473-129820908da7.jpg",
+  "categories": [
+    "전체",
+    "내맘대로 요아정",
+    "[New 요아정 프리미엄 토핑]",
+    "요아정 과일 추천조합 :)",
+    "입안에서톡톡) 팝팝캔디조합",
+    "꾸덕꾸덕 그릭요거트",
+    "요아정 디저트",
+    "요아정 봄날 추천메뉴 :)"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1237567-10000032",
+      "name": "내맘대로 요아정",
+      "description": "요아정 아직도 안먹어 봤니 요즘 최고 인기 디저트 마라탕 먹고 먹으면 최고 과일 듬뿍올라간 최고의 샐러드(짜장면 먹고 요아정 국밥먹고 요아정 피자먹고 요아정 치킨먹고 요아정)",
+      "category": "내맘대로 요아정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9b5196be-7ec1-4838-9732-ec5c3928954c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1237567-10000033",
+      "name": "내맘대로 [초코쉘] 요거트 아이스크림( 베라못먹어요)",
+      "description": "오도독 오도독 요아정만의 특별한 마법의 초콜렛과 요아정의 환상적인 궁합으로 나만의 요아정을 만들어 보세요.",
+      "category": "내맘대로 요아정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/69d27905-b577-4c5c-afd9-dd1e36658f6d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1237567-10000031",
+      "name": "[빠삭 두바이 초코쉘]",
+      "description": "요거트아이스크림 150g + 카다이프 베이스 + 초코쉘",
+      "category": "[New 요아정 프리미엄 토핑]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/eb65733a-6d17-48a5-a978-4157de07da5a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1237567-10000046",
+      "name": "요거트아이스크림+그래놀라+밀랍벌집꿀",
+      "description": "요거트아이스크림 + 그래놀라 50g + 밀랍벌집꿀 50g",
+      "category": "요아정 과일 추천조합 :)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/d56a1cc2-310c-4380-9569-6d16581f8f8f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1237567-10000045",
+      "name": "오렌지+자몽+ 밀랍벌집꿀 + 요거트아이스크림",
+      "description": "오렌지 100g + 자몽 120g + 밀랍벌집꿀50g + 요거트 아이스크림",
+      "category": "요아정 과일 추천조합 :)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/9a85e45c-ce6b-4c5d-8762-dfc7ab245fe2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1237567-10000030",
+      "name": "[빠작 바나나 브륄레]",
+      "description": "요거트아이스크림 150g + 빠작 바나나 브륄레",
+      "category": "[New 요아정 프리미엄 토핑]",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/ac897ce4-60b3-4279-86fd-d143a917fd7d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1237567-10000051",
+      "name": "쉘팝팝",
+      "description": "기본적으로 쉘과 팝팝캔디가 추가되어있어요~\n다른 토핑 추가할수록 더욱 맛있어집니다~",
+      "category": "입안에서톡톡) 팝팝캔디조합",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1237567-10000052",
+      "name": "플레인 그릭요거트",
+      "description": "",
+      "category": "꾸덕꾸덕 그릭요거트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/13e43a17-0c0a-4dab-91f0-0acac2ac50e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1237567-10000065",
+      "name": "요아정 소금빵 플레인",
+      "description": "플레인 소금빵 단품 1개",
+      "category": "요아정 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1237567-10000039",
+      "name": "민초의 정석",
+      "description": "민트초코쉘(30g)+콘푸로스트 다크(30g)+요아정초코링(30g)+초코브라우니(30g)+민트팝팝(20g)+요거트아이스크림(150g)",
+      "category": "요아정 봄날 추천메뉴 :)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/f9bc8d44-29f1-4f8f-bfd2-63cd0e7a6f60.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1237567-10000053",
+      "name": "그릭요거트+그래놀라+밀랍벌집꿀",
+      "description": "그릭요거트 + 그래놀라 50g + 밀랍벌집꿀 50g",
+      "category": "꾸덕꾸덕 그릭요거트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1237567-10000066",
+      "name": "요아정 소금빵 츄러스맛",
+      "description": "",
+      "category": "요아정 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1237567-10000034",
+      "name": "내맘대로 [딸기우유 초코쉘] 요거트아이스크림",
+      "description": "",
+      "category": "내맘대로 요아정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/481e61c7-1b0d-42e0-82fe-bf9e310a58c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1237567-10000040",
+      "name": "우리 만남은 계획대로",
+      "description": "요거트아이스크림(300g)+그래놀라(50g)+코코넛청크(20g)+팝핑보바 망고맛(50g)+딸기팝팝(20g)+치즈 큐브(10개)+바나나(1개)",
+      "category": "요아정 봄날 추천메뉴 :)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1237567-10000054",
+      "name": "달달)꿀소스+그래놀라+그릭요거트",
+      "description": "꿀소스 30g + 그래놀라 50g + 그릭요거트",
+      "category": "꾸덕꾸덕 그릭요거트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1237567-10000063",
+      "name": "요아정 쫀득 베이글",
+      "description": "쫀득한 베이글 단품 1개",
+      "category": "요아정 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000063"
+    },
+    {
+      "id": "ddangyo-1237567-10000035",
+      "name": "내맘대로 [민트초코쉘] 요거트아이스크림",
+      "description": "",
+      "category": "내맘대로 요아정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/157d85f5-3160-459c-99a2-04bdeb438450.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1237567-10000041",
+      "name": "우리의 축제",
+      "description": "요거트아이스크림(300g)+초코쉘(30g)+오레오오즈(30g)+초코 팝팝(20g)+애플청포도(100g)+블루베리(50g)",
+      "category": "요아정 봄날 추천메뉴 :)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1237567-10000047",
+      "name": "멜론+그래놀라+밀랍벌집꿀+요거트아이스크림",
+      "description": "멜론 100g + 그래놀라 50g + 밀랍벌집꿀 50g + 요거트아이스크림",
+      "category": "요아정 과일 추천조합 :)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/08e028a8-400b-4027-b26a-87aa46ab6e26.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1237567-10000036",
+      "name": "내맘대로 [망고초코쉘] 요거트 아이스크림",
+      "description": "",
+      "category": "내맘대로 요아정",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/66839e64-7b4b-4c76-9926-7b7a0320e79e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1237567-10000048",
+      "name": "자몽+연유+후루트링+밀랍벌집꿀+요거트아이스크림",
+      "description": "자몽 120g + 연유 30g + 후루트링 30g + 밀랍벌집꿀 50g + 요거트 아이스크림",
+      "category": "요아정 과일 추천조합 :)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/5074fbd4-e9e0-4134-bd13-1e2d0e42a654.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1237567-10000049",
+      "name": "골드키위+파인애플+요거트아이스크림+밀랍벌집꿀",
+      "description": "골드키위 1알 + 파인애플 100g + 요거트아이스크림 + 밀랍벌집꿀 50g",
+      "category": "요아정 과일 추천조합 :)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/10ac89f6-a41a-4551-a20b-877b2e494f11.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1237567-10000050",
+      "name": "애플망고 1/2  + 밀랍벌집꿀 + 요거트아이스크림",
+      "description": "애플망고 1/2개  + 밀랍벌집꿀 50g + 요거트아이스크림",
+      "category": "요아정 과일 추천조합 :)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1237567",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?VxQTciR"
+    ],
+    "rawItemCount": 28,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

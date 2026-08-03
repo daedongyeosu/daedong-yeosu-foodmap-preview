@@ -1,0 +1,143 @@
+{
+  "storeId": "82d532b4a463ec3c",
+  "storeName": "돈제주 돔베수육",
+  "displayName": "돈제주 돔베수육",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/b869c1c2-ddc5-42a1-b374-c7e8a6c814b9.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "사이드 메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1183581-10000002",
+      "name": "100%제주산 돔베수육세트",
+      "description": "돔베고기+명이나물+궁채+쌈무+보쌈무김치+부추무침+쌈장+마늘소스+새우젓+국 +쌈\n돔베고기 중 (계란찜 서비스)\n돔베고기 대 (계란찜+냉면)\n\n대:냉면",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/9c152d32-ca3f-401a-89c5-958067dfc6e7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1183581-10000003",
+      "name": "고기냉면",
+      "description": "냉면에 들어가는 육수와 다대기는 돈제주에서 직접 만들었답니다\n그래서 돈제주에서만 맛볼수있는 냉면입니다",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/de338ef3-4ff4-4c7f-8754-bfb2e9a38510.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1183581-10000001",
+      "name": "100%제주산 1인 수육도시락",
+      "description": "1인수육 (160g)+밥+국 +보쌈무김치+명이나물+고추+마늘+쌈장+마른반찬1종+상추",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/a8b688e3-7543-44ce-aeae-a28585ea3191.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1183581-90000001",
+      "name": "한라산 21(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1183581-10000004",
+      "name": "김치 볶음밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/0e86bec4-f828-4361-99ef-947d420f6ce9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1183581-90000002",
+      "name": "한라산 순한(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1183581-10000005",
+      "name": "멸젓 볶음밥",
+      "description": "양념한 추자도 멸치젓갈로 볶은 단짠단짠 꼬소한 볶음밥",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1183581-90000003",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1183581-10000006",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1183581-90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1183581-10000007",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/5ffa8a37-1cf6-413a-ae38-13553c24b225.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1183581-10000008",
+      "name": "코카콜라",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1183581-10000009",
+      "name": "스프라이트",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1183581",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?VSfMEfJ"
+    ],
+    "rawItemCount": 15,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

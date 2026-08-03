@@ -1,0 +1,300 @@
+{
+  "storeId": "ec911391ba907955",
+  "storeName": "원조 국물 닭발 여수문수점",
+  "displayName": "원조 국물 닭발 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/9234b3e2-f3d8-49a9-8904-3d7395a11b7e.jpg",
+  "categories": [
+    "전체",
+    "[멈출 수 없는 맛]원조국물닭발",
+    "[불맛을 가두다]직화 닭발구이",
+    "[내인생 첫 닭발]원조닭발 실속세트",
+    "[화르륵] 직화구이 스페셜 안주",
+    "[닭발을 완성시키다]사이드",
+    "음 료",
+    "도시락"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1360107-10000001",
+      "name": "[깊은맛의 비결]뼈 수제양념 국물닭발",
+      "description": "(뼈)수제양념국물닭발+떡사리+단무지\n--------------------------------------------------------",
+      "category": "[멈출 수 없는 맛]원조국물닭발",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/9ccdb914-6006-4f9e-b731-d88f282817bd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1360107-10000002",
+      "name": "[깊은맛의 비결]무뼈 수제양념 국물닭발",
+      "description": "(무뼈)수제양념국물닭발+떡사리+단무지\n----------------------------------------------------",
+      "category": "[멈출 수 없는 맛]원조국물닭발",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/62679fb5-a329-493b-a796-2ba6b7d5c7ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1360107-10000003",
+      "name": "[화르륵 불맛]뼈 직화 닭발",
+      "description": "(뼈)직화닭발구이+단무지\n-------------------------------------------------",
+      "category": "[불맛을 가두다]직화 닭발구이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/12da5cc2-b7f6-4ec1-9f07-40f6696ebc5f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1360107-10000006",
+      "name": "[뼈닭발] 내인생 첫닭발 실속세트(A)",
+      "description": "(뼈)국물닭발or직화닭발(택1)+계란찜+왕대왕주먹밥(택1)+단무지 \n----------------------------------------------------",
+      "category": "[내인생 첫 닭발]원조닭발 실속세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/78cc1c7a-b488-41b8-8306-6ef80b5d2eb5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1360107-10000010",
+      "name": "[어이없는 맛]매콤 오돌뼈 볶음(국내산)",
+      "description": "닭발 만들다가 [어이 없는 맛]을 만들어버렸어요. 안주 드신다면 한번은 꼭 시켜봐야할 메뉴에요 (주먹밥과 환상의짝꿍)\n-----------------------------------------------------",
+      "category": "[화르륵] 직화구이 스페셜 안주",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4ab6519e-886e-4c2d-821e-3d8c8958d9e5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1360107-10000013",
+      "name": "[참치]왕대왕 주먹밥",
+      "description": "참치의 고소함,닭발엔 진짜 빠질수없는 메뉴에요부족하면 말씀만 주세요, 왕창드릴게요",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/c7ebaf21-4336-4eb8-bd7a-fe893e774f38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1360107-10000027",
+      "name": "펩시500ml",
+      "description": "",
+      "category": "음 료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1360107-10000031",
+      "name": "제육 200g 도시락",
+      "description": "",
+      "category": "도시락",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1360107-10000004",
+      "name": "[화르륵 불맛]무뼈 직화 닭발",
+      "description": "(무뼈)직화닭발구이+단무지\n------------------------------------------------------",
+      "category": "[불맛을 가두다]직화 닭발구이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/6d1c5c06-5fe6-4d36-b6ae-4620b3a4af67.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1360107-10000007",
+      "name": "[무뼈닭발]내인생 첫닭발 실속세트(B)",
+      "description": "(무뼈)국물닭발or직화닭발(택1)+계란찜+왕대왕주먹밥(택1)+단무지\n----------------------------------------------------",
+      "category": "[내인생 첫 닭발]원조닭발 실속세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/5f2da9f9-53bf-4dd3-8dbd-ec0f0ae379c1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1360107-10000011",
+      "name": "[고사&매콤]칼집낸 양념 막창 볶음(국내산)",
+      "description": "칼집을 내서 골고루 맛이 잘 베이도록 만들어 볶아 만들었어요. 쫄깃쫄깃해서 씹는 즐거움이 있어요\n------------------------------------------------",
+      "category": "[화르륵] 직화구이 스페셜 안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1360107-10000014",
+      "name": "[날치알]왕대왕주먹밥",
+      "description": "날치알의 톡톡튀는 식감, 닭발엔 진짜 빠질수 없는 메뉴에요 부족하면 말씀만 주 세요, 왕창드릴게요",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a076e9fc-aa2a-4df9-86a4-42585b4459dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1360107-10000028",
+      "name": "제로펩시500ml",
+      "description": "",
+      "category": "음 료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1360107-10000005",
+      "name": "(NEW) 무뼈 닭목살 직화구이",
+      "description": "닭발 개발하다 또하나 엄청난 맛을 만들었습니다 믿고 한번만 드셔보세요 (무릎을 탁) 치게 만드는 감칠맛 원조 국물닭발만의 특별한 맛을 느껴보세요",
+      "category": "[불맛을 가두다]직화 닭발구이",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1360107-10000008",
+      "name": "[뼈닭발] 내인생 첫닭발 실속세트+스페셜볶음(C)",
+      "description": "(뼈)국물닭발or직화닭발(택1)+계란찜+왕대왕주먹밥(택1)+단무지+스페셜구이(택1)\n----------------------------------------------------",
+      "category": "[내인생 첫 닭발]원조닭발 실속세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1360107-10000012",
+      "name": "[고사&담백]칼집낸 소금 막창 볶음(국내산)",
+      "description": "매운 맛이 부담스러운 분들은 함께 시키시면 딱이에요. 쫄깃쫄깃해서 씹는 재미가 있어요.\n-------------------------------------------------------",
+      "category": "[화르륵] 직화구이 스페셜 안주",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1360107-10000015",
+      "name": "(3인분같은1인분)계란찜",
+      "description": "손님들이 많이 좋아해주시는 푸딩 계란찜. 닭발엔 빠질 수가 없나봐요",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/83cb8e78-29a9-455f-b6b5-811957a1dade.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1360107-10000029",
+      "name": "칠성사이다500ml",
+      "description": "",
+      "category": "음 료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1360107-10000009",
+      "name": "[무뼈닭발] 내인생 첫닭발 실속세트+스페셜볶음(D)",
+      "description": "(무뼈)국물닭발or직화닭발(택1)+계란찜+왕대왕주먹밥(택1)+단무지+쥬시쿨+스페셜구이(택1) \n----------------------------------------------------------",
+      "category": "[내인생 첫 닭발]원조닭발 실속세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1360107-10000016",
+      "name": "치킨가라아게",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/27f7f8c9-3c6f-4a89-a533-a17690999a82.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1360107-10000030",
+      "name": "제로사이다500ml",
+      "description": "",
+      "category": "음 료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1360107-10000017",
+      "name": "두툼떡갈비",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/820c0b0b-f511-40fb-936b-c0636650f28e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1360107-10000018",
+      "name": "모짜렐라 치즈볼",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/8caf090f-16bb-4314-908e-9b2a4fd57489.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1360107-10000019",
+      "name": "버팔로 봉",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/4706a2e3-1782-4f8a-ab4e-755c5d72b30b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1360107-10000020",
+      "name": "버팔로 윙",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f46be36b-b124-4017-a0ac-37de08cce699.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1360107-10000021",
+      "name": "한입 미니 핫도그",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/36b9a5cb-ed13-42d5-811a-ef624a32e75a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1360107-10000032",
+      "name": "해쉬브라운",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a02f5474-2b5a-49b0-a1b2-7435564f4851.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1360107-10000033",
+      "name": "모듬튀김세트",
+      "description": "해쉬2+윙2+봉2+치즈볼1+치킨가라아게2\n케찹이 같이나가요~",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1360107-10000034",
+      "name": "군만두",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/479db190-760e-4ed6-a15b-2e064bedacee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1360107-10000035",
+      "name": "마요네즈 추가",
+      "description": "",
+      "category": "[닭발을 완성시키다]사이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1360107",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?tFzvjae"
+    ],
+    "rawItemCount": 33,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

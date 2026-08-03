@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260802-5';
+  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260804-1';
   const WAIT_TIMEOUT_MS = 30000;
   const POLL_MS = 80;
 
@@ -110,6 +110,7 @@
 
   function refreshSearch(store, row) {
     store.searchAliases = unique([...(store.searchAliases || []), row.name]);
+    store.shopInShopNames = unique([...(store.shopInShopNames || []), ...(row.shopInShopNames || [])]);
     store.tags = unique([...(store.tags || []), row.address, row.category, row.name]);
     const parts = [
       store.name,
@@ -185,11 +186,11 @@
       id: row.targetStoreId,
       store_id: row.targetStoreId,
       name: row.name,
-      realBusinessName: row.name,
+      realBusinessName: row.realBusinessName || row.name,
       brandName: row.name,
       branchName: '',
       searchAliases: [row.name],
-      shopInShopNames: [],
+      shopInShopNames: unique(row.shopInShopNames || []),
       district: typeof neighborhoodFor === 'function' ? neighborhoodFor(row.address) : '',
       category: row.category || '치킨',
       categories: [row.category || '치킨'],

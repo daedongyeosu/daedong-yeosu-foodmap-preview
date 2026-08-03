@@ -1,0 +1,144 @@
+{
+  "storeId": "f06c131d74c25063",
+  "storeName": "맛있돼지",
+  "displayName": "맛있돼지",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/fbe3ae8e-1b56-4a17-b070-8d8045d78905.jpg",
+  "categories": [
+    "전체",
+    "메뉴",
+    "음료",
+    "추가메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1321181-10000001",
+      "name": "나홀로 삼겹세트",
+      "description": "상추, 마늘, 쌈장, 간장깻잎절임, 공기밥 1개",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003262.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1321181-10000003",
+      "name": "2인삼겹세트",
+      "description": "기본: 상추, 마늘, 쌈장, 간장깻잎절임, 공기밥 1개",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003262.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1321181-10000013",
+      "name": "콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1321181-10000005",
+      "name": "고기 추가 100g",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1321181-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1321181-10000014",
+      "name": "사이다 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1321181-10000006",
+      "name": "공기밥 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/dea77d47-dc40-44bb-917e-27fc64d4e216.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1321181-90000002",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1321181-10000008",
+      "name": "김가루 주먹밥 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/deb820e1-18e1-4ae8-8e95-401917b30726.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1321181-10000004",
+      "name": "실속 삼겹살만 드려요",
+      "description": "구워진 고기만 제공해 드립니다.",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003262.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1321181-10000009",
+      "name": "버섯 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1321181-10000010",
+      "name": "양파 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1321181-10000011",
+      "name": "비엔나 소시지 추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/19bd2e6c-a8e1-4a48-9d77-ef90cf6ebab0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1321181",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?kTgfMuo"
+    ],
+    "rawItemCount": 15,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

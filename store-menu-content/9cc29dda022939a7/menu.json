@@ -1,0 +1,171 @@
+{
+  "storeId": "9cc29dda022939a7",
+  "storeName": "통큰 솥뚜껑 닭볶음",
+  "displayName": "통큰 솥뚜껑 닭볶음",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b26b37e3-d086-4501-802e-3ca63ac7b55a.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "추가메뉴",
+    "곁들임메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1265869-10000001",
+      "name": "솥뚜껑닭볶음탕(2인)부터주문가능합니다",
+      "description": "얼큰한 양념과 진한 닭육수의 만남.\n국내산100% 신선한 제육만을 사용합니다.",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f83d9ac9-b81b-44a0-b769-acc0515dde2e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1265869-10000002",
+      "name": "산더미곱도리탕(2인)부터주문가능합니다",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/95101cb0-b034-4a5d-9e8d-b202cf75870e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1265869-10000003",
+      "name": "묵은지닭볶음탕(2인분)부터주문가능합니다",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/4b3d6c70-9823-41c3-84b4-34d16137b5e2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1265869-10000005",
+      "name": "간장찜닭(2인)부터주문가능합니다",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/457dfc95-ad30-4fc1-a9aa-3a885262e7cc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1265869-10000006",
+      "name": "어묵꼬치",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1265869-10000012",
+      "name": "계란말이",
+      "description": "",
+      "category": "곁들임메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/8282246c-c1ed-4e52-9c1f-623f420cd389.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1265869-10000013",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e08d06a1-cf75-4ec6-ae21-d22acdc15a81.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1265869-10000007",
+      "name": "치즈사리",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1265869-10000014",
+      "name": "코카콜라제로",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d4d7c060-af1b-448f-9cf7-237f9cc1777b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1265869-10000008",
+      "name": "떡사리",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1265869-10000015",
+      "name": "킨사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1265869-10000004",
+      "name": "LA갈비찜닭(2인)부터주문가능합니다",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/457dfc95-ad30-4fc1-a9aa-3a885262e7cc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1265869-10000009",
+      "name": "우동사리",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1265869-10000016",
+      "name": "환타파인",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1265869-10000010",
+      "name": "라면사리",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1265869-10000011",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1265869",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?UmuJVCp"
+    ],
+    "rawItemCount": 20,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

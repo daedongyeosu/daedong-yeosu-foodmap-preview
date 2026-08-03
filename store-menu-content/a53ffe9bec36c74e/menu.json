@@ -1,0 +1,416 @@
+{
+  "storeId": "a53ffe9bec36c74e",
+  "storeName": "그놈포차 여수문수점",
+  "displayName": "그놈포차 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/7245f332-6983-4362-8fcb-8d30abefdbe9.jpg",
+  "categories": [
+    "전체",
+    "단품메뉴",
+    "그놈의 세트메뉴",
+    "사이드메뉴",
+    "건어물&전 메뉴",
+    "사리",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1284122-10000001",
+      "name": "그놈 석쇠 무뼈닭발",
+      "description": "석쇠닭발+치킨무+파채+떡튀김+꿀+특제청양마요소스",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/1ab000f5-7f14-42b1-9842-0ab1f87f0bea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1284122-10000002",
+      "name": "그놈 무뼈 국물닭발",
+      "description": "무뼈국물닭발+치킨무+파채토핑+숙주+특제청양마요소스",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b8715524-5285-435e-87f6-476b36560dca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1284122-10000006",
+      "name": "그놈 순살후라이드",
+      "description": "수제치킨+치킨무+소금+케찹+머스타드",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/43a5efa2-35ed-4bc3-a1d7-a4f1f506d806.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1284122-10000013",
+      "name": "광안리 세트",
+      "description": "메인메뉴1+치킨무+주먹밥+계란찜+파채+소스류+음료",
+      "category": "그놈의 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d6949c9a-6bb5-4621-8bc4-face8329c2ed.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1284122-10000015",
+      "name": "롱치즈돈까스",
+      "description": "[치즈가~쭉욱] 통 모짜렐라 치즈의 돈까스 조합",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0deadd96-a7b7-4bff-9234-9cbfab2dae87.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1284122-10000037",
+      "name": "먹태구이",
+      "description": "먹태구이 + 땅콩 + 소스",
+      "category": "건어물&전 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/0b91e968-7b9d-4672-9440-43195897a0a6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1284122-10000039",
+      "name": "라면사리(석쇠류는 조리불가)",
+      "description": "탕에 넣어먹으면 맛있는거 알쥬~ 맞아유 삶아서 드려유~",
+      "category": "사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e622cea1-aa89-4f59-bdd8-746102495626.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1284122-10000041",
+      "name": "펩시콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1284122-10000014",
+      "name": "해운대 세트",
+      "description": "메인메뉴2개+치킨무+주먹밥+계란찜+파채+소스류+음료",
+      "category": "그놈의 세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/9f76f53c-8c79-4bf8-bf1b-6d97f574f583.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1284122-10000038",
+      "name": "반건조오징어",
+      "description": "반건조오징어1마리 + 땅콩 + 소스",
+      "category": "건어물&전 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/259d26a1-4599-475f-bce2-8e18c97b519e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1284122-10000040",
+      "name": "우동사리(석쇠류는 조리불가)",
+      "description": "",
+      "category": "사리",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/dc7f23e0-ef46-428b-a392-e5cc9d77b08d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1284122-10000042",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1284122-10000003",
+      "name": "닭목살소금구이",
+      "description": "닭목살소금구이+치킨무+파채+떡튀김+꿀+간장소스",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/48582788-b8ef-45d8-aa6d-1a95cee72c1c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1284122-10000017",
+      "name": "버팔로윙.봉10p",
+      "description": "버팔로윙6+봉4+양배추샐러드+칠리소스",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/422f0879-1bf3-4bfe-8b5d-eea2b4211dba.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1284122-10000043",
+      "name": "쿨피스 뚱캔(복숭아)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1284122-10000004",
+      "name": "닭목살고추장구이",
+      "description": "닭목살소금구이+치킨무+파채+떡튀김+꿀+특제청양마요소스",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/6c59d023-7390-4e20-85fa-bf972843b849.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1284122-10000018",
+      "name": "부산 남포동떡볶이",
+      "description": "꾸덕하고 달달맵콤한 소스에 부산갬성 가득한 남포동떡볶이",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1284122-10000005",
+      "name": "똥집후라이드300g+감자튀김100g",
+      "description": "똥집후라이드+감자튀김+똥집소스+케찹",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/5ec4c9e5-1adf-4bda-8576-964d7a7bbac3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1284122-10000019",
+      "name": "닭껍질 후라이드",
+      "description": "닭껍질후라이드+허니머스타드+소금",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0cca30eb-34f7-4a32-995c-f14b43ec9f75.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1284122-10000045",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1284122-10000020",
+      "name": "치즈볼",
+      "description": "쫀~~득한 치즈볼이 다섯개",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/8caf090f-16bb-4314-908e-9b2a4fd57489.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1284122-10000007",
+      "name": "부산 오뎅탕",
+      "description": "부산오뎅탕+간장",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ba48c740-211b-427a-aa9a-17a6d45fa478.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1284122-10000021",
+      "name": "셀프 날치알주먹밥",
+      "description": "입 안에서 톡톡튀는 날치알",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/a076e9fc-aa2a-4df9-86a4-42585b4459dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1284122-10000008",
+      "name": "나가사키짬뽕탕",
+      "description": "나가사키짬뽕탕 + 우동사리",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/da673915-f51f-4919-9ac3-4126e2f60f03.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1284122-10000022",
+      "name": "셀프 참치주먹밥",
+      "description": "참치마요",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/e5502172-a9cc-4fd2-9a44-a1172f3cd290.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1284122-10000009",
+      "name": "소고기나베",
+      "description": "소고기나베 + 칠리소스 + 간장소스",
+      "category": "단품메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1284122-10000023",
+      "name": "푸딩 계란찜",
+      "description": "매운음식 찰떡궁합",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/ff74b4a9-5b9a-4b8a-a4a4-38f7f2c9f60d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1284122-10000010",
+      "name": "얼큰한 알탕",
+      "description": "푸짐한 알탕",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/4f3face0-9a78-4428-a75d-e3104deeadc1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1284122-10000024",
+      "name": "간장 계란밥(계란2개)",
+      "description": "간장이 따로 나가요",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/16efbd27-0826-4555-ac37-d58d2450aba2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1284122-10000011",
+      "name": "순두부짬뽕탕",
+      "description": "시~ 원한 해물, 얼큰한 짬뽕 국물에 순두부까지 술 안주로 최고",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/318b0965-4b76-422b-8121-cbcbd126a581.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1284122-10000025",
+      "name": "모듬튀김 4p",
+      "description": "모듬튀김 + 간장",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ebb524b5-370d-43a0-87ea-5efb4629f430.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1284122-10000012",
+      "name": "쫄깃 등심 칠리꿔바로우",
+      "description": "칠리소스 + 양배추샐러드\n(소스는 따로나가요)",
+      "category": "단품메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e76d8f40-ca90-47d1-a685-2702a6d1b4b7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1284122-10000026",
+      "name": "바삭 새우튀김 2p",
+      "description": "바사사삭 새우튀김",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/7a965bc4-e0cc-463b-b194-441e9ee9ee1f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1284122-10000027",
+      "name": "핫핫 고추튀김 2p",
+      "description": "튀김 속 고기당면이 가득",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/c20ff2d3-e80d-41d7-953b-4311d0ef36df.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1284122-10000028",
+      "name": "꿔바로우 오징어튀김 2p",
+      "description": "오징어튀김계의 신상 다크호스",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1284122-10000029",
+      "name": "달달한 고구마튀김 2p",
+      "description": "아이들이 참 좋아하는 고구마튀김이예요~~",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/89d7326f-5c35-4ad1-9aa9-9fc805abf8f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1284122-10000030",
+      "name": "고소한 김말이튀김 3p",
+      "description": "김말이 알쥬 그거맞아유 두개는 아쉬우니 세개",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/55a481ff-b9ec-4829-9fc9-c51159e0641f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1284122-10000031",
+      "name": "쭉쭉 치즈스틱 4p",
+      "description": "쭉쭉 치즈스틱",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/35afa4e9-5fd8-495a-a08e-c1647fcf27d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1284122-10000032",
+      "name": "쉑쉑 양념감자",
+      "description": "향도좋은 양념감자",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1284122-10000033",
+      "name": "별미파채",
+      "description": "싱싱한 파채와 파채소스의 환상적인 궁합",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1284122-10000034",
+      "name": "튀김만두(고기5p)",
+      "description": "간장 + 양배추샐러드",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1284122-10000035",
+      "name": "튀김만두(김치불닭5p)",
+      "description": "간장 + 양배추샐러드",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1284122-10000036",
+      "name": "튀김만두(불닭김치3p+고기3p)",
+      "description": "간장 + 양배추샐러드",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/fd7d85f4-d34f-4e64-b446-1a3a57662f9d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1284122",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?0PXWLnO"
+    ],
+    "rawItemCount": 46,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}
