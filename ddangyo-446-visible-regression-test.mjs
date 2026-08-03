@@ -28,7 +28,7 @@ const menuMapIds = Object.keys(menuMap);
 assert.equal(menuMapIds.length, 713, '땡겨요 메뉴 지도는 713곳이어야 합니다.');
 
 const enrichment = json('data/ddangyo-store-enrichment.json');
-assert.equal(enrichment.stores.length, 561);
+assert.equal(enrichment.stores.length, 562);
 assert.equal(enrichment.stores.filter(row => row.isNew).length, 131, '신규 땡겨요 가게는 131곳이어야 합니다.');
 assert.ok(enrichment.stores.every(row => menuMap[row.targetStoreId]), '기존·신규 땡겨요 지문의 메뉴 연결을 모두 보존해야 합니다.');
 
@@ -55,7 +55,10 @@ for (const [storeId, entry] of Object.entries(menuMap)) {
   const menu = json(entry.path);
   assert.equal(menu.storeId, storeId);
   assert.equal(menu.items.length, entry.itemCount);
-  assert.equal(new Set(menu.items.map(item => item.sourceMenuId)).size, menu.items.length, `${storeId} 중복 메뉴`);
+  assert.equal(new Set(menu.items.map(item => item.id)).size, menu.items.length, `${storeId} 중복 메뉴 ID`);
+  assert.equal(new Set(menu.items.map(item => (
+    `${item.sourcePatstoNo || menu.source?.patstoNo || ''}:${item.sourceMenuId}`
+  ))).size, menu.items.length, `${storeId} 원본 지문 내 중복 메뉴`);
   assert.ok(menu.items.every(item => !('price' in item) && !('menu_unitprc' in item)), `${storeId} 가격 노출`);
 }
 
@@ -84,7 +87,7 @@ assert.match(previewSource, /\.\.\.\(window\.DAEDONG_DDANGYO_MENU_STORES \|\| \{
 const html = read('index.html');
 assert.doesNotMatch(html, /store-menu-map-bridge\.js/);
 assert.ok(html.indexOf('ddangyo-menu-map.js') < html.indexOf('store-menu-preview.js'));
-assert.match(html, /ddangyo-menu-map\.js\?v=20260804-1/);
+assert.match(html, /ddangyo-menu-map\.js\?v=20260804-2/);
 assert.ok(!fs.existsSync('store-menu-map-bridge.js'));
 
 const service = json('store-service-info.json');

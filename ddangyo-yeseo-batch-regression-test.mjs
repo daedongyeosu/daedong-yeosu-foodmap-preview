@@ -26,12 +26,14 @@ const rowsByPatsto = new Map(enrichment.stores.map(row => [String(row.patstoNo),
 for (const patstoNo of ['1119730', '1118341']) {
   assert.ok(!rowsByPatsto.has(patstoNo), `동일 매장 파바포장 중복 ${patstoNo}는 등록하지 않습니다.`);
 }
-for (const patstoNo of ['1345950']) {
-  assert.ok(!rowsByPatsto.has(patstoNo), `기존 유효 주문경로를 ${patstoNo}로 덮어쓰면 안 됩니다.`);
-}
+const gamachiFingerprint = rowsByPatsto.get('1345950');
+assert.ok(gamachiFingerprint, '가마치통닭 신규 원본의 사진 지문이 있어야 합니다.');
+assert.equal(gamachiFingerprint.preserveExistingDdangyoRoute, true);
+assert.ok(!gamachiFingerprint.ddangyoUrl, '기존 유효 주문경로를 신규 원본으로 덮어쓰면 안 됩니다.');
 
 const gamachiMenu = json(menuMap['361f855efc21c1c2'].path);
 assert.equal(gamachiMenu.source.patstoNo, '1227008', '가마치통닭 기존 메뉴를 보존해야 합니다.');
+assert.ok(gamachiMenu.source.secondaryPatstoNos.includes('1345950'), '가마치통닭 신규 원본 메뉴를 병합해야 합니다.');
 assert.equal(service.stores['361f855efc21c1c2'].ddangyo.patstoNo, '1345950', '가마치통닭 누락 영업·혜택은 새 자료로 보완합니다.');
 
 const octopus = [...rowsByPatsto.values()].find(row => row.name === '나는문어 타코야끼 여수여서점');

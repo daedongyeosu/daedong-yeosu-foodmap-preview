@@ -12,7 +12,9 @@
     "똥집튀김 set",
     "닭발튀김 set",
     "추가 메뉴",
-    "주류메뉴"
+    "주류메뉴",
+    "대표메뉴",
+    "콤보(왕 닭다리 4개, 날개 4개)"
   ],
   "items": [
     {
@@ -92,7 +94,7 @@
       "name": "샐러드",
       "description": "",
       "category": "추가 메뉴",
-      "image": "",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/47439c91-1d94-476a-a636-c8b63bdfe108.jpg",
       "adultOnly": false,
       "sourceMenuId": "10000043"
     },
@@ -164,7 +166,7 @@
       "name": "무",
       "description": "",
       "category": "추가 메뉴",
-      "image": "",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/bd2d4574-aef1-4c3f-9140-e9aa48966447.jpg",
       "adultOnly": false,
       "sourceMenuId": "10000044"
     },
@@ -491,6 +493,106 @@
       "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/ce26f8f8-9ab9-46d6-8667-bbffb4d63052.jpg",
       "adultOnly": false,
       "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1345950-10000008",
+      "name": "가마치 두마리",
+      "description": "바삭하고 촉촉한 가마치 대표메뉴",
+      "category": "대표메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/aa102b16-14b5-4590-9f3c-cb0ccedc712b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000033",
+      "name": "매운국물닭발",
+      "description": "신선한 국내산 100% 닭발로 완성한 매운맛",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/61448680-aa8f-418c-80ef-e6a733f227f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000024",
+      "name": "깐풍 콤보",
+      "description": "",
+      "category": "콤보(왕 닭다리 4개, 날개 4개)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/18109596-ddba-4b72-9d28-105aa9750138.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000036",
+      "name": "텐더500g",
+      "description": "부드러운 닭안심을 사용해 바삭하게 튀겨낸 미니텐더",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/2da1f531-5bd5-4e08-b656-a253da4b46da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000039",
+      "name": "똥집튀김",
+      "description": "고소하고 쫄깃한 가마치 인기메뉴",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4146a2d3-4af6-431f-81c4-a89f0f5b5c3a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000039",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000040",
+      "name": "간장똥집",
+      "description": "달콤하고 고소한 사이드메뉴",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/8a88225d-ea69-4f22-8c1c-63bc5553e404.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000040",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000017",
+      "name": "순살 닭강정",
+      "description": "매콤달콤한 양념과 부드러운 속살",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ba57e9c3-44cd-4fec-be3c-a28d8bc3400b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000041",
+      "name": "닭발튀김",
+      "description": "자꾸 자꾸 손이가 ~ 술 안주 저격",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c6f41553-59e5-48cc-99f8-adcb13ce7fcf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000041",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000018",
+      "name": "깐풍치킨",
+      "description": "",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/0a1d3716-8dec-4227-b37e-defc3341d514.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018",
+      "sourcePatstoNo": "1345950"
+    },
+    {
+      "id": "ddangyo-1345950-10000019",
+      "name": "깐풍 순살",
+      "description": "",
+      "category": "옛날통닭, 조각닭, 순살",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/a3625bfa-a218-4b7d-961d-b82d040f910b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019",
+      "sourcePatstoNo": "1345950"
     }
   ],
   "source": {
@@ -498,10 +600,16 @@
     "patstoNo": "1227008",
     "sourceUrls": [
       "https://bit.ly/tk-가마치통닭여서점",
-      "https://fdofd.ddangyo.com/gateway1.html?30QNO1C"
+      "https://fdofd.ddangyo.com/gateway1.html?30QNO1C",
+      "https://fdofd.ddangyo.com/gateway1.html?KhcDM17"
     ],
     "rawItemCount": 57,
-    "duplicateItemsRemoved": 4
+    "duplicateItemsRemoved": 4,
+    "secondaryPatstoNos": [
+      "1345950"
+    ],
+    "mergedRawItemCount": 54,
+    "mergedUniqueItemsAdded": 10
   },
   "sources": [
     "ddangyo"

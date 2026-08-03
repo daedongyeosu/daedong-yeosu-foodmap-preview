@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260804-1';
+  const DATA_URL = 'data/ddangyo-store-enrichment.json?v=20260804-2';
   const WAIT_TIMEOUT_MS = 30000;
   const POLL_MS = 80;
 
@@ -129,6 +129,37 @@
       : parts.toLowerCase().replace(/[\s·&()\-_/.,]/g, '');
   }
 
+  function storeImageUrls(store) {
+    return unique([
+      store?.image,
+      store?.img,
+      store?.legacyImage,
+      ...(Array.isArray(store?.legacyImages) ? store.legacyImages : []),
+      ...(Array.isArray(store?.images) ? store.images.flatMap(item => (
+        typeof item === 'string' ? [item] : [item?.card, item?.detail]
+      )) : [])
+    ]).map(safeUrl).filter(Boolean);
+  }
+
+  function addVerifiedShopImages(store, row, report) {
+    if (!row?.mergeShopImages) return;
+    const incoming = unique([row.mainImage, ...(row.shopImages || [])])
+      .map(safeUrl)
+      .filter(Boolean);
+    if (!incoming.length) return;
+    const existing = new Set(storeImageUrls(store));
+    const added = incoming.filter(url => !existing.has(url));
+    if (!added.length) return;
+    store.legacyImages = unique([...(store.legacyImages || []), ...added]);
+    if (!safeUrl(store.legacyImage)) store.legacyImage = incoming[0];
+    if (!Array.isArray(store.images)) store.images = [];
+    for (const url of added) store.images.push({card: url, detail: url});
+    if (!safeUrl(store.image)) store.image = incoming[0];
+    if (!safeUrl(store.img)) store.img = incoming[0];
+    report.enrichedPhotoStores += 1;
+    report.addedShopImages += added.length;
+  }
+
   function applyExisting(store, row, report) {
     if (!store.address && row.address) {
       store.address = row.address;
@@ -168,6 +199,7 @@
     addDdangyoRoute(store, row, report);
     addChakRoute(store, row.chakUrl, report);
     addVerifiedNaverMap(store, row, report);
+    addVerifiedShopImages(store, row, report);
     refreshSearch(store, row);
     store.ddangyoPatstoNo = String(row.patstoNo || '');
   }
@@ -262,7 +294,9 @@
       addedChakRoutes: 0,
       preservedChakRoutes: 0,
       addedNaverMaps: 0,
-      preservedNaverMaps: 0
+      preservedNaverMaps: 0,
+      enrichedPhotoStores: 0,
+      addedShopImages: 0
     };
 
     for (const row of rows) {

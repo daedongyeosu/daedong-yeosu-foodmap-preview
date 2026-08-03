@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "batchId": "all-historical-ddangyo-fingerprint-yeseo-20260804",
-  "generatedAt": "2026-08-03T21:52:23.597Z",
+  "generatedAt": "2026-08-03T22:27:20.507Z",
   "policy": {
     "mode": "add-missing-only",
     "identity": "verified-address-and-existing-store-id",
@@ -25009,12 +25009,13 @@
         "phone": true,
         "images": 3,
         "menus": 32,
-        "weeklyHours": 6,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 6,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25061,12 +25062,13 @@
         "phone": true,
         "images": 3,
         "menus": 8,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25113,12 +25115,13 @@
         "phone": true,
         "images": 3,
         "menus": 19,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25165,12 +25168,13 @@
         "phone": true,
         "images": 3,
         "menus": 82,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25217,12 +25221,13 @@
         "phone": true,
         "images": 3,
         "menus": 18,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25269,12 +25274,13 @@
         "phone": true,
         "images": 3,
         "menus": 30,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25321,12 +25327,13 @@
         "phone": true,
         "images": 3,
         "menus": 9,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 1
       }
     },
     {
@@ -25373,12 +25380,13 @@
         "phone": true,
         "images": 3,
         "menus": 15,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 2,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25425,12 +25433,13 @@
         "phone": true,
         "images": 3,
         "menus": 35,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25477,12 +25486,13 @@
         "phone": true,
         "images": 3,
         "menus": 16,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25529,12 +25539,13 @@
         "phone": true,
         "images": 3,
         "menus": 19,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -25552,7 +25563,9 @@
       "shopImages": [
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/36122ae6-ffb2-40cc-991e-9108daebe62d.jpg",
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/bff2ca6e-9b54-455a-9af5-f21a42db9072.jpg",
-        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/86275b02-bf81-43e4-b9a1-316ea2e05b3e.jpg"
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/86275b02-bf81-43e4-b9a1-316ea2e05b3e.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/c16ebbb0-59e9-4187-b222-48c4ec6c5212.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/b7b64a80-0cdf-45fd-b01b-eb01a721fc83.jpg"
       ],
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?ubQS8kN",
       "phone": "0616442020",
@@ -25579,14 +25592,15 @@
       "completeFingerprint": {
         "address": true,
         "phone": true,
-        "images": 3,
+        "images": 5,
         "menus": 13,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25633,12 +25647,13 @@
         "phone": true,
         "images": 3,
         "menus": 23,
-        "weeklyHours": 3,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 2,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25685,12 +25700,13 @@
         "phone": true,
         "images": 3,
         "menus": 24,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25737,12 +25753,13 @@
         "phone": true,
         "images": 3,
         "menus": 8,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25790,11 +25807,12 @@
         "images": 3,
         "menus": 66,
         "weeklyHours": 7,
-        "closures": 0,
+        "closures": 2,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25841,12 +25859,13 @@
         "phone": true,
         "images": 3,
         "menus": 209,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -25895,12 +25914,13 @@
         "phone": true,
         "images": 5,
         "menus": 2,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 2,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -25949,12 +25969,13 @@
         "phone": true,
         "images": 3,
         "menus": 23,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26003,12 +26024,13 @@
         "phone": true,
         "images": 3,
         "menus": 13,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26057,12 +26079,13 @@
         "phone": true,
         "images": 3,
         "menus": 17,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -26111,12 +26134,13 @@
         "phone": true,
         "images": 3,
         "menus": 19,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -26165,12 +26189,13 @@
         "phone": true,
         "images": 3,
         "menus": 17,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26219,12 +26244,13 @@
         "phone": true,
         "images": 3,
         "menus": 24,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26273,12 +26299,13 @@
         "phone": true,
         "images": 3,
         "menus": 59,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26327,12 +26354,13 @@
         "phone": true,
         "images": 3,
         "menus": 27,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26379,12 +26407,13 @@
         "phone": true,
         "images": 3,
         "menus": 37,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -26433,12 +26462,13 @@
         "phone": true,
         "images": 5,
         "menus": 206,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26484,13 +26514,15 @@
         "phone": true,
         "images": 3,
         "menus": 29,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "c123553460271e78",
@@ -26539,12 +26571,13 @@
         "phone": true,
         "images": 3,
         "menus": 16,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -26594,12 +26627,13 @@
         "phone": true,
         "images": 3,
         "menus": 36,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -26648,12 +26682,13 @@
         "phone": true,
         "images": 3,
         "menus": 10,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26703,12 +26738,13 @@
         "phone": true,
         "images": 6,
         "menus": 42,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -26754,13 +26790,15 @@
         "phone": true,
         "images": 3,
         "menus": 23,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
-      }
+        "freeDelivery": true,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "6157267e60282059",
@@ -26806,12 +26844,13 @@
         "phone": true,
         "images": 3,
         "menus": 46,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 1
       }
     },
     {
@@ -26858,12 +26897,13 @@
         "phone": true,
         "images": 3,
         "menus": 29,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26881,7 +26921,8 @@
       "shopImages": [
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/b0c51083-e062-4179-b325-5ff7ddb686ef.jpg",
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/d25e9242-4fab-4c4d-b319-ffcc51935692.jpg",
-        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7e35d3e6-81f8-483d-81e9-6a17482db56b.jpg"
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7e35d3e6-81f8-483d-81e9-6a17482db56b.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/7e01feab-3658-448c-b59e-935208320de8.jpg"
       ],
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?CF46yS7",
       "phone": "0616519977",
@@ -26908,14 +26949,15 @@
       "completeFingerprint": {
         "address": true,
         "phone": true,
-        "images": 3,
+        "images": 4,
         "menus": 242,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -26962,12 +27004,13 @@
         "phone": true,
         "images": 3,
         "menus": 80,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27017,12 +27060,13 @@
         "phone": true,
         "images": 3,
         "menus": 62,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27072,12 +27116,13 @@
         "phone": true,
         "images": 3,
         "menus": 72,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27124,12 +27169,13 @@
         "phone": true,
         "images": 3,
         "menus": 29,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27176,12 +27222,13 @@
         "phone": true,
         "images": 3,
         "menus": 26,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27199,7 +27246,11 @@
       "shopImages": [
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e7a855e9-1e78-4eb8-9f1f-0a53a741a29f.jpg",
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/6e3b9052-33bd-47d2-8c1e-aed5ca6995c7.jpg",
-        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/58193968-f2b1-4a09-89a1-4f618db128c1.jpg"
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/58193968-f2b1-4a09-89a1-4f618db128c1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3ec85ac6-5abb-4250-8b16-53ba033c2589.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/4fcc1dcd-e579-42af-b93e-37997e26a8c0.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/4519215f-9f66-4578-b625-2ada55f5cc93.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/06ef2954-7257-455e-8f5e-9126eccdb1ea.jpg"
       ],
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?d6jVZiO",
       "phone": "0619211432",
@@ -27226,14 +27277,15 @@
       "completeFingerprint": {
         "address": true,
         "phone": true,
-        "images": 3,
+        "images": 7,
         "menus": 87,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 3,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -27280,12 +27332,13 @@
         "phone": true,
         "images": 3,
         "menus": 18,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27306,7 +27359,11 @@
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0cfd8f0b-52fa-4587-b944-4232f0691f97.jpg",
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/94392819-058d-446d-9104-1ee75da75ddb.jpg",
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4c858360-0b7e-4924-9164-4bedf0e90e80.jpg",
-        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/79fd7622-d2e2-44f7-8072-2d482704d732.jpg"
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/79fd7622-d2e2-44f7-8072-2d482704d732.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce2cc0a4-601c-4d0b-a50a-fb50e74260bf.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d01814c4-a8c0-419e-af2b-4fff9c1cc581.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d9e9d848-c14f-4d1c-930e-0dbbe1d46bd0.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a9da31dd-407e-4a39-b8cd-042c81624b3a.jpg"
       ],
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?yYtKovu",
       "phone": "01050028285",
@@ -27333,14 +27390,15 @@
       "completeFingerprint": {
         "address": true,
         "phone": true,
-        "images": 6,
+        "images": 10,
         "menus": 53,
-        "weeklyHours": 3,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -27387,12 +27445,13 @@
         "phone": true,
         "images": 3,
         "menus": 22,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 2,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27439,12 +27498,13 @@
         "phone": true,
         "images": 3,
         "menus": 36,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27462,7 +27522,8 @@
       "shopImages": [
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/d593f7f2-23ef-493a-bf19-9c4e8be8cfea.jpg",
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4ffbd344-2781-4e3d-8648-fb8c0a347f42.jpg",
-        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/644e8b23-c2a8-497e-a03b-94c2ea86b3e5.jpg"
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/644e8b23-c2a8-497e-a03b-94c2ea86b3e5.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/67ad11a3-b5f5-4f32-bf7c-149d317928ac.jpg"
       ],
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?EaVffGT",
       "phone": "01076126933",
@@ -27489,14 +27550,15 @@
       "completeFingerprint": {
         "address": true,
         "phone": true,
-        "images": 3,
+        "images": 4,
         "menus": 27,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27545,12 +27607,13 @@
         "phone": true,
         "images": 3,
         "menus": 16,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27600,12 +27663,13 @@
         "phone": true,
         "images": 6,
         "menus": 52,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27651,13 +27715,15 @@
         "phone": true,
         "images": 3,
         "menus": 28,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 2,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "9dfd510d9bacac38",
@@ -27705,12 +27771,13 @@
         "phone": true,
         "images": 3,
         "menus": 20,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27759,12 +27826,13 @@
         "phone": true,
         "images": 3,
         "menus": 17,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -27814,12 +27882,13 @@
         "phone": true,
         "images": 3,
         "menus": 22,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -27869,12 +27938,13 @@
         "phone": true,
         "images": 3,
         "menus": 15,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -27924,12 +27994,13 @@
         "phone": true,
         "images": 3,
         "menus": 16,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -27979,12 +28050,13 @@
         "phone": true,
         "images": 6,
         "menus": 78,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 1,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28030,13 +28102,15 @@
         "phone": true,
         "images": 3,
         "menus": 23,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "078947ccc4df31cd",
@@ -28082,12 +28156,13 @@
         "phone": true,
         "images": 3,
         "menus": 32,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28134,12 +28209,13 @@
         "phone": true,
         "images": 3,
         "menus": 236,
-        "weeklyHours": 3,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28189,12 +28265,13 @@
         "phone": true,
         "images": 6,
         "menus": 33,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -28241,12 +28318,13 @@
         "phone": true,
         "images": 3,
         "menus": 130,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28264,7 +28342,8 @@
       "shopImages": [
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/67134a3b-3fe3-4308-98d9-f12060353a4b.jpg",
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/7174971f-c619-4947-8e0f-9bc507b29a79.jpg",
-        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2c63fa5d-f0ce-45cb-9718-a4f7dd308c32.jpg"
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2c63fa5d-f0ce-45cb-9718-a4f7dd308c32.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/de895f93-a9c7-49b6-967c-508801ac3bab.jpg"
       ],
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?bXoZCEV",
       "phone": "0616518600",
@@ -28291,14 +28370,15 @@
       "completeFingerprint": {
         "address": true,
         "phone": true,
-        "images": 3,
+        "images": 4,
         "menus": 89,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28349,12 +28429,13 @@
         "phone": true,
         "images": 5,
         "menus": 55,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28403,12 +28484,13 @@
         "phone": true,
         "images": 3,
         "menus": 43,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28455,12 +28537,13 @@
         "phone": true,
         "images": 3,
         "menus": 53,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28507,12 +28590,13 @@
         "phone": true,
         "images": 3,
         "menus": 74,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28558,13 +28642,15 @@
         "phone": true,
         "images": 3,
         "menus": 21,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "4a03cc414bf38135",
@@ -28610,12 +28696,13 @@
         "phone": true,
         "images": 3,
         "menus": 48,
-        "weeklyHours": 3,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28664,12 +28751,13 @@
         "phone": true,
         "images": 5,
         "menus": 76,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 1,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28716,12 +28804,13 @@
         "phone": true,
         "images": 3,
         "menus": 20,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28768,12 +28857,13 @@
         "phone": true,
         "images": 3,
         "menus": 29,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28823,12 +28913,13 @@
         "phone": true,
         "images": 3,
         "menus": 20,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28878,12 +28969,13 @@
         "phone": true,
         "images": 3,
         "menus": 30,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28933,12 +29025,13 @@
         "phone": true,
         "images": 3,
         "menus": 19,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -28985,12 +29078,13 @@
         "phone": true,
         "images": 3,
         "menus": 35,
-        "weeklyHours": 3,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29042,12 +29136,13 @@
         "phone": true,
         "images": 6,
         "menus": 89,
-        "weeklyHours": 4,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -29099,12 +29194,13 @@
         "phone": true,
         "images": 6,
         "menus": 45,
-        "weeklyHours": 4,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -29151,12 +29247,13 @@
         "phone": true,
         "images": 3,
         "menus": 36,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29205,12 +29302,13 @@
         "phone": true,
         "images": 5,
         "menus": 75,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29257,13 +29355,15 @@
         "phone": true,
         "images": 4,
         "menus": 35,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "4bf72e42f7bbe1d6",
@@ -29312,11 +29412,12 @@
         "images": 5,
         "menus": 46,
         "weeklyHours": 7,
-        "closures": 0,
+        "closures": 2,
         "coupons": 1,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29366,12 +29467,13 @@
         "phone": true,
         "images": 3,
         "menus": 17,
-        "weeklyHours": 3,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29421,12 +29523,13 @@
         "phone": true,
         "images": 3,
         "menus": 26,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29476,12 +29579,13 @@
         "phone": true,
         "images": 3,
         "menus": 31,
-        "weeklyHours": 3,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29529,12 +29633,13 @@
         "phone": true,
         "images": 4,
         "menus": 47,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -29580,13 +29685,15 @@
         "phone": true,
         "images": 3,
         "menus": 97,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 1
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "2ec90ae79fc379b2",
@@ -29634,12 +29741,13 @@
         "phone": true,
         "images": 5,
         "menus": 220,
-        "weeklyHours": 3,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29686,12 +29794,13 @@
         "phone": true,
         "images": 3,
         "menus": 43,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29740,12 +29849,13 @@
         "phone": true,
         "images": 3,
         "menus": 52,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29794,12 +29904,13 @@
         "phone": true,
         "images": 3,
         "menus": 95,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29850,12 +29961,13 @@
         "phone": true,
         "images": 5,
         "menus": 84,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -29901,13 +30013,15 @@
         "phone": true,
         "images": 3,
         "menus": 173,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "03eb4c7102a8a4ee",
@@ -29953,12 +30067,13 @@
         "phone": true,
         "images": 3,
         "menus": 19,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30004,13 +30119,15 @@
         "phone": true,
         "images": 3,
         "menus": 58,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "65cc1845e542d5fb",
@@ -30054,12 +30171,13 @@
         "phone": true,
         "images": 1,
         "menus": 40,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 1,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30108,12 +30226,13 @@
         "phone": true,
         "images": 3,
         "menus": 59,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30162,12 +30281,13 @@
         "phone": true,
         "images": 5,
         "menus": 832,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -30218,12 +30338,13 @@
         "phone": true,
         "images": 5,
         "menus": 832,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -30274,12 +30395,13 @@
         "phone": true,
         "images": 5,
         "menus": 832,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": true
+        "freeDelivery": true,
+        "breaks": 0
       }
     },
     {
@@ -30326,12 +30448,13 @@
         "phone": true,
         "images": 3,
         "menus": 27,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30376,12 +30499,13 @@
         "phone": true,
         "images": 1,
         "menus": 130,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30430,12 +30554,13 @@
         "phone": true,
         "images": 5,
         "menus": 355,
-        "weeklyHours": 3,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30484,12 +30609,13 @@
         "phone": true,
         "images": 3,
         "menus": 6,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30536,12 +30662,13 @@
         "phone": true,
         "images": 3,
         "menus": 131,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30590,12 +30717,13 @@
         "phone": true,
         "images": 3,
         "menus": 109,
-        "weeklyHours": 3,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30644,12 +30772,13 @@
         "phone": true,
         "images": 5,
         "menus": 77,
-        "weeklyHours": 4,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -30699,12 +30828,13 @@
         "phone": true,
         "images": 6,
         "menus": 36,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30751,12 +30881,13 @@
         "phone": true,
         "images": 3,
         "menus": 49,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 2,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 1
       }
     },
     {
@@ -30774,7 +30905,8 @@
       "shopImages": [
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/e56faa83-6922-4f9f-b1d7-a3a0a592c941.jpg",
         "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/25a098c8-eafc-4b1a-8ef6-6abb79df9566.jpg",
-        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6b833ae1-7ed9-4422-8695-124dbcb47bfc.jpg"
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6b833ae1-7ed9-4422-8695-124dbcb47bfc.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9e3aa8be-9e76-471a-8351-5b320c0b2d3d.jpg"
       ],
       "ddangyoUrl": "https://fdofd.ddangyo.com/gateway1.html?3muRcqd",
       "phone": "0616541050",
@@ -30800,15 +30932,17 @@
       "completeFingerprint": {
         "address": true,
         "phone": true,
-        "images": 3,
+        "images": 4,
         "menus": 20,
-        "weeklyHours": 2,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 1
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "82d532b4a463ec3c",
@@ -30856,12 +30990,13 @@
         "phone": true,
         "images": 3,
         "menus": 13,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -30908,13 +31043,15 @@
         "phone": true,
         "images": 4,
         "menus": 170,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": false,
         "onnuri": false,
-        "freeDelivery": false
-      }
+        "freeDelivery": false,
+        "breaks": 0
+      },
+      "mergeShopImages": true
     },
     {
       "targetStoreId": "d03349f88094f50b",
@@ -30962,12 +31099,13 @@
         "phone": true,
         "images": 3,
         "menus": 18,
-        "weeklyHours": 1,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 2,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -31014,12 +31152,13 @@
         "phone": true,
         "images": 3,
         "menus": 9,
-        "weeklyHours": 1,
+        "weeklyHours": 7,
         "closures": 0,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
       }
     },
     {
@@ -31066,12 +31205,65 @@
         "phone": true,
         "images": 3,
         "menus": 46,
-        "weeklyHours": 2,
-        "closures": 0,
+        "weeklyHours": 7,
+        "closures": 1,
         "coupons": 0,
         "seomseomPay": true,
         "onnuri": false,
-        "freeDelivery": false
+        "freeDelivery": false,
+        "breaks": 0
+      }
+    },
+    {
+      "targetStoreId": "361f855efc21c1c2",
+      "isNew": false,
+      "patstoNo": "1345950",
+      "name": "가마치통닭 여서점",
+      "realBusinessName": "가마치통닭여서점",
+      "shopInShopNames": [],
+      "address": "전남 여수시 여서1로 23 1층",
+      "latitude": "34.7505114011389",
+      "longitude": "127.70109473346896",
+      "category": "치킨",
+      "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b106f5dd-beff-458a-82fe-3f3cfef1e15c.jpg",
+      "shopImages": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/b106f5dd-beff-458a-82fe-3f3cfef1e15c.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/4bb6bb58-c126-4175-9283-27de28dd1aca.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f7165c44-ea84-455b-8b9e-6ac53ac21379.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/f39b3c1a-d2f7-4817-90b2-e6a829bba7ff.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/55ebd3f1-2ee8-4722-b348-40eb8d44dbaa.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/029f93d0-245b-4b58-80ee-7ad67e3e82b2.jpg"
+      ],
+      "mergeShopImages": true,
+      "preserveExistingDdangyoRoute": true,
+      "phone": "0616518292",
+      "phoneSource": "ddangyo",
+      "naverEligible": false,
+      "naverStatus": "not-checked",
+      "sourceMatch": {
+        "status": "existing",
+        "method": "same-store-new-ddangyo-fingerprint-preserve-route",
+        "storeId": "361f855efc21c1c2",
+        "candidate": {
+          "storeId": "361f855efc21c1c2",
+          "storeName": "가마치통닭 여서점",
+          "address": "전남 여수시 여서1로 23 1층",
+          "virtual": false
+        }
+      },
+      "sourceUrls": [
+        "https://fdofd.ddangyo.com/gateway1.html?KhcDM17"
+      ],
+      "hoursSource": "ddangyo-common-store-hours",
+      "benefitsSource": "ddangyo-app-scoped",
+      "completeFingerprint": {
+        "address": true,
+        "phone": true,
+        "images": 6,
+        "menus": 54,
+        "weeklyHours": 7,
+        "breaks": 0,
+        "closures": 1
       }
     }
   ],

@@ -1,8 +1,8 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'store-service-info.json?v=store-service-11-yeseo-ddangyo';
-  const MENU_SEARCH_URL = 'data/store-menu-search-index.json?v=menu-search-3-yeseo';
+  const DATA_URL = 'store-service-info.json?v=store-service-12-yeseo-complete';
+  const MENU_SEARCH_URL = 'data/store-menu-search-index.json?v=menu-search-4-yeseo-complete';
   const HISTORY_KEY = 'daedongStoreServiceOverview';
   const CLOSING_SOON_MINUTES = 60;
   const MENU_MATCH_PREVIEW_LIMIT = 4;
@@ -173,11 +173,28 @@
   }
 
   function closureFor(hours, parts) {
-    return (hours?.closures || []).find(rule => (
-      rule.type === 'monthly-weekday'
-      && rule.weekday === parts.weekday
-      && Number(rule.nth) === Math.ceil(parts.day / 7)
-    )) || null;
+    const dateKey = `${String(parts.year).padStart(4, '0')}-${String(parts.month).padStart(2, '0')}-${String(parts.day).padStart(2, '0')}`;
+    return (hours?.closures || []).find(rule => {
+      if (rule.type === 'weekly') return rule.weekday === parts.weekday;
+      if (rule.type === 'monthly-weekday') {
+        return rule.weekday === parts.weekday && Number(rule.nth) === Math.ceil(parts.day / 7);
+      }
+      if (rule.type === 'date-range') return dateKey >= rule.start && dateKey <= rule.end;
+      return false;
+    }) || null;
+  }
+
+  function breakFor(hours, parts) {
+    const minutes = (parts.hour * 60) + parts.minute;
+    return (hours?.breaks || []).find(rule => {
+      if (Array.isArray(rule.weekdays) && !rule.weekdays.includes(parts.weekday)) return false;
+      const open = timeMinutes(rule.open);
+      const close = timeMinutes(rule.close);
+      if (!Number.isFinite(open) || !Number.isFinite(close)) return false;
+      return close <= open
+        ? minutes >= open || minutes < close
+        : minutes >= open && minutes < close;
+    }) || null;
   }
 
   function periodLabel(period) {
@@ -213,6 +230,8 @@
     const previous = shiftCalendar(now, -1);
     const previousPeriods = info.hours.weekly[previous.weekday] || [];
 
+    const activeBreak = breakFor(info.hours, now);
+
     if (!closureFor(info.hours, previous)) {
       const overnight = previousPeriods.find(period => {
         const open = timeMinutes(period.open);
@@ -220,6 +239,14 @@
         return close <= open && minutes < close;
       });
       if (overnight) {
+        if (activeBreak) {
+          return {
+            state: 'closed',
+            label: '브레이크 타임',
+            detail: `${activeBreak.close}에 영업 재개`,
+            today: `오늘 ${(info.hours.weekly[now.weekday] || []).map(periodLabel).join(', ') || '영업시간 없음'}`
+          };
+        }
         const todayClosure = closureFor(info.hours, now);
         return openStatus(
           overnight,
@@ -235,9 +262,18 @@
     if (closure) {
       return {
         state: 'closed',
-        label: '정기휴무',
+        label: closure.type === 'date-range' ? '임시휴무' : '정기휴무',
         detail: closure.label || '오늘 휴무',
         today: `오늘 ${closure.label || '휴무'}`
+      };
+    }
+
+    if (activeBreak) {
+      return {
+        state: 'closed',
+        label: '브레이크 타임',
+        detail: `${activeBreak.close}에 영업 재개`,
+        today: `오늘 ${(info.hours.weekly[now.weekday] || []).map(periodLabel).join(', ') || '영업시간 없음'}`
       };
     }
 
