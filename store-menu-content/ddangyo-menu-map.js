@@ -2338,7 +2338,7 @@ window.DAEDONG_DDANGYO_MENU_STORES = Object.freeze({
   "361f855efc21c1c2": {
     "path": "store-menu-content/361f855efc21c1c2/menu.json",
     "entryImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f3d5f5cd-2bf1-4bec-ab62-c35539068d96.jpg",
-    "itemCount": 53
+    "itemCount": 63
   },
   "fb798d3119a28415": {
     "path": "store-menu-content/fb798d3119a28415/menu.json",

@@ -26,7 +26,7 @@ assert.equal(index.version, 2);
 assert.equal(index.chunks.length, 40, '웹 업로드와 병렬 로딩을 위해 검색색인을 40개로 나눕니다.');
 assert.equal(index.storeCount, 715, '음식보기 가능한 가게가 모두 검색색인에 있어야 합니다.');
 assert.equal(Object.keys(index.stores).length, 715);
-assert.equal(index.itemCount, 47046, '현재 노출 메뉴가 모두 검색색인에 있어야 합니다.');
+assert.equal(index.itemCount, 47056, '현재 노출 메뉴가 모두 검색색인에 있어야 합니다.');
 assert.equal(
   Object.values(index.stores).reduce((sum, store) => sum + store.i.length, 0),
   index.itemCount
@@ -63,7 +63,7 @@ assert.match(menuScript, /window\.daedongMenuPreview = Object\.freeze/);
 assert.match(menuScript, /open: \(storeId, options = \{\}\) => openMenuPreview/);
 assert.match(serviceStyle, /\.store-finder-quick/);
 assert.match(serviceStyle, /\.store-service-menu-matches/);
-assert.match(html, /store-service-15-single-address-control-1/);
+assert.match(html, /store-service-16-yeseo-complete/);
 assert.match(html, /store-menu-17-direct-coming-soon-1-unified-menu-search-1/);
 assert.match(html, /unified-menu-search-1/);
 

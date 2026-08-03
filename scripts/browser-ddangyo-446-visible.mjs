@@ -58,10 +58,10 @@ const targets = [
 try {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForSelector('#storeGrid .store-card', {timeout: 15000});
-  await page.waitForFunction(() => window.daedongDdangyoPreviewReport?.inputStores === 561, null, {timeout: 30000});
+  await page.waitForFunction(() => window.daedongDdangyoPreviewReport?.inputStores === 562, null, {timeout: 30000});
   await page.evaluate(() => window.daedongStoreServiceInfo.ready);
   await check(page.evaluate(() => Object.keys(window.DAEDONG_DDANGYO_MENU_STORES || {}).length === 713), '브라우저에 땡겨요 메뉴 713곳 로드');
-  await check(page.evaluate(() => window.daedongDdangyoPreviewReport?.matchedExisting === 430), '기존 가게 430곳 보강');
+  await check(page.evaluate(() => window.daedongDdangyoPreviewReport?.matchedExisting === 431), '기존 가게 431곳 보강');
   await check(page.evaluate(() => window.daedongDdangyoPreviewReport?.createdStores === 131), '신규 가게 131곳 생성');
 
   const buttonAudit = await page.evaluate(async () => {
