@@ -6,6 +6,7 @@ const json = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const report = json('data/ddangyo-yeseo-completeness-report.json');
 const batch = json('data/ddangyo-yeseo-batch-report.json');
 const enrichment = json('data/ddangyo-store-enrichment.json');
+const photoManifest = json('data/photo-manifest.json');
 const service = json('store-service-info.json');
 const runtime = fs.readFileSync('ddangyo-preview-runtime.js', 'utf8');
 const serviceRuntime = fs.readFileSync('store-service-info.js', 'utf8');
@@ -58,6 +59,22 @@ assert.ok(gamachiRow && !gamachiRow.isNew && gamachiRow.mergeShopImages);
 assert.equal(gamachiRow.shopImages.length, 6);
 assert.ok(!gamachiRow.ddangyoUrl, '가마치통닭 기존 주문경로는 그대로 보존해야 합니다.');
 assert.equal(enrichment.stores.filter(row => !row.isNew && row.mergeShopImages).length, 12);
+const photoEntryById = new Map(photoManifest.entries.map(entry => [String(entry.storeId || ''), entry]));
+const photoRows = enrichment.stores.filter(row => !row.isNew && row.mergeShopImages);
+let manifestPhotoStores = 0;
+let runtimePhotoStores = 0;
+for (const row of photoRows) {
+  const entry = photoEntryById.get(row.targetStoreId);
+  if (!entry) {
+    runtimePhotoStores += 1;
+    continue;
+  }
+  manifestPhotoStores += 1;
+  const visible = new Set([entry.src, ...(entry.additionalSrcs || []), ...(entry.gallery || [])].filter(Boolean));
+  assert.ok(row.shopImages.every(url => visible.has(url)), `${row.name} 사진목록 우선순위로 땡겨요 사진이 가려지면 안 됩니다.`);
+}
+assert.equal(manifestPhotoStores, 7);
+assert.equal(runtimePhotoStores, 5);
 
 const gamachi = json(menuMap['361f855efc21c1c2'].path);
 const addedNames = [
