@@ -1,0 +1,355 @@
+{
+  "storeId": "d79722d51c71da59",
+  "storeName": "육대장 여수본점",
+  "displayName": "육대장 여수본점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/855d26a9-9b2a-42d5-bcfc-67623dca13e2.jpg",
+  "categories": [
+    "전체",
+    "육개장은 역시 육대장~",
+    "가성비 갑 세트메뉴",
+    "오늘은 쫄깃한 면발 어떠세요~~",
+    "사이드메뉴",
+    "보쌈메뉴",
+    "전골메뉴",
+    "추가메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1213984-10000003",
+      "name": "[해장 최고] 순두부육개장",
+      "description": "육개장+반찬2종+공깃밥+당면",
+      "category": "육개장은 역시 육대장~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/fe76a9b3-1323-4af8-a85e-59676d5a1917.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1213984-10000005",
+      "name": "[시그니처] 전통육개장",
+      "description": "육개장+반찬 2종+공깃밥+당면",
+      "category": "육개장은 역시 육대장~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/96f033a3-9422-4428-8b27-9665ec3bddc9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1213984-10000006",
+      "name": "[화끈 얼큰] 불육개장",
+      "description": "육개장+반찬2종+공깃밥+당면",
+      "category": "육개장은 역시 육대장~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/fccdba81-1641-404f-b9b2-85224b0c97ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1213984-10000007",
+      "name": "[햄 왕창] 부대육개장",
+      "description": "육개장+반찬2종+공깃밥+당면",
+      "category": "육개장은 역시 육대장~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/54dfd68d-a9fc-4c0b-88f6-7b62a33e9d1a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1213984-10000008",
+      "name": "[담백한] 닭계장",
+      "description": "육개장+반찬2종+공깃밥+당면",
+      "category": "육개장은 역시 육대장~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/1fbb4dd7-bcc0-46a7-8833-d2894b3c469d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1213984-10000009",
+      "name": "[고소한] 차돌 육개장",
+      "description": "육개장+반찬2종+공깃밥+당면",
+      "category": "육개장은 역시 육대장~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c9cbd0c3-64a4-4430-a4f1-f75d83c8b2db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1213984-10000001",
+      "name": "육개장+육즙가득만두(3알)",
+      "description": "육개장+반찬2종+공깃밥+당면+만두3알",
+      "category": "가성비 갑 세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1213984-10000011",
+      "name": "[쫄깃쫄깃] 육칼면",
+      "description": "육개장+반찬2종+건면",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/d413d060-069e-49a1-af34-0cb31306148b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1213984-10000024",
+      "name": "[화끈한] 짬뽕만두",
+      "description": "매콤한 짬뽕고기만두 (6ea)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b2cb999c-c2eb-4fa3-99a6-b8779826091d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1213984-10000026",
+      "name": "[불맛 가득]석쇠불고기",
+      "description": "석쇠불고기는 단품 입니다",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/9d0b7c15-ebff-498b-9df7-c6ee89470dfe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1213984-10000029",
+      "name": "부대전골",
+      "description": "기본 사골육수는 매장과 같이 리필육수가 나갑니다. 다데기가 들어간 육수는 추가 부탁드립니다.",
+      "category": "전골메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a130200d-7c78-4899-afbf-4aed5cd6b999.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1213984-10000032",
+      "name": "공기밥",
+      "description": "탕 메뉴 외 공기밥 별도입니다",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/6551dddc-b5b7-4dc3-af09-00b01e7f4ff7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1213984-10000033",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ca6b4416-9b96-4d58-b37f-15026a4eda5f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1213984-10000002",
+      "name": "육개장+짬뽕만두(3알)",
+      "description": "육개장+반찬2종+공깃밥+당면+만두3알",
+      "category": "가성비 갑 세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1213984-10000004",
+      "name": "[고소한] 양지 설렁탕",
+      "description": "설렁탕+반찬2종+공깃밥+당면",
+      "category": "육개장은 역시 육대장~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/f70f9f11-a79d-4c74-8359-2d696fc1fdc2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1213984-10000012",
+      "name": "[탱글탱글] 생육칼면",
+      "description": "육개장+반찬2종+생면",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/100a157d-60c9-4eb2-967d-f3f75c007428.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1213984-10000025",
+      "name": "[육즙팡팡] 육즙가득한 만두",
+      "description": "육즙가득한 만두 (7ea)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4bcd3606-5b32-4f9f-a3d8-e2967b312609.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1213984-10000027",
+      "name": "한방보쌈 한판",
+      "description": "",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b01a44f8-5331-414a-8ce7-5a4e1771d8fc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1213984-10000030",
+      "name": "육개장전골",
+      "description": "기본 사골육수는 매장과 같이 리필육수가 나갑니다. 다데기가 들어간 육수는 추가 부탁드립니다.",
+      "category": "전골메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b8b6b30c-dc77-4009-be23-5314cd8a8277.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1213984-10000034",
+      "name": "탐스 제로 키위사과",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1213984-10000013",
+      "name": "[얼큰 화끈] 불 생육칼면",
+      "description": "육개장+반찬2종+생면",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8cfd390e-8bc3-4e7c-87c9-a902ad20f4e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1213984-10000028",
+      "name": "한방보쌈",
+      "description": "",
+      "category": "보쌈메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4a20fcca-cb73-4277-913c-9ab3e34096c6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1213984-10000031",
+      "name": "순두부전골",
+      "description": "기본 사골육수는 매장과 같이 리필육수가 나갑니다. 다데기가 들어간 육수는 추가 부탁드립니다.",
+      "category": "전골메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/a40e72cb-afaf-4f0c-bd12-5cdbaa58cf0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1213984-10000035",
+      "name": "킨사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1213984-10000014",
+      "name": "[햄 왕창] 부대생육칼면",
+      "description": "육개장+반찬2종+생면(우동사리)",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/eb7025dc-d6db-4ace-8769-40de80377dd4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1213984-10000036",
+      "name": "탐스 제로 파인애플",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1213984-10000015",
+      "name": "[담백한] 닭생육칼면",
+      "description": "육개장+반찬2종+생면(우동사리)",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c092c269-48a5-41e0-9b96-8fd6952a6df7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1213984-10000016",
+      "name": "[고소한] 차돌 생육칼면",
+      "description": "육개장+반찬2종+생면(우동사리)",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/02291f7f-4b19-46e9-a181-fb90ff13e8a6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1213984-10000017",
+      "name": "차돌 육칼면",
+      "description": "육개장+반찬2종+건면(라면사리)",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/3116e469-4cc5-4f62-bb4c-2b70f0886386.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1213984-10000010",
+      "name": "[든든한] 사골떡만두국",
+      "description": "떡만둣국+반찬2종",
+      "category": "육개장은 역시 육대장~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5fa7ccaa-98e6-4234-bd46-00ee4e1af7ee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1213984-10000018",
+      "name": "부대 육칼면",
+      "description": "육개장+반찬2종+건면(라면사리)",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/44d5ebf0-8aca-472f-997d-85ca6060f24a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1213984-10000019",
+      "name": "불 육칼면",
+      "description": "육개장+반찬2종+건면(라면사리)",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/1f1516d5-b284-4543-b472-c46afac3ed00.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1213984-10000020",
+      "name": "닭 육칼면",
+      "description": "육개장+반찬2종+건면(라면사리)",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/67b0d877-78fe-4f48-840c-a4cfb48538d1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1213984-10000021",
+      "name": "[탱글탱글] 생육칼면",
+      "description": "육개장+반찬2종+생면(우동사리)",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/c57e4fbb-acaa-4933-9b96-904e5690f1b1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1213984-10000022",
+      "name": "[얼큰 화끈] 불 생육칼면",
+      "description": "육개장+반찬2종+생면",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/267bd0b0-fe1e-4b97-b1fe-e1d9cb64e20c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1213984-10000023",
+      "name": "[고소한] 차돌 육칼면",
+      "description": "육개장+반찬2종+건면",
+      "category": "오늘은 쫄깃한 면발 어떠세요~~",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/dc9ea0fa-1e5d-4d1d-86ba-29a1c085327d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1213984",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?o4Uozqi"
+    ],
+    "rawItemCount": 42,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

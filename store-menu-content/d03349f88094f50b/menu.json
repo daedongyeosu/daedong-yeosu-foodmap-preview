@@ -1,0 +1,190 @@
+{
+  "storeId": "d03349f88094f50b",
+  "storeName": "라화쿵부 마라탕 여수여문점",
+  "displayName": "라화쿵부 마라탕 여수여문점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32a8ba25-1180-41d5-b362-3b1c7af5825b.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "요리류",
+    "식사류",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138335-10000001",
+      "name": "마라탕",
+      "description": "매운맛 (추천) / 청탕 (담백한맛) / 약간 매운맛(위마위라) / 아주 매운맛(자마자라) 선택가능",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/312640ea-5829-46b9-8d24-1cc655051396.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1138335-10000003",
+      "name": "꿔바로우",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a1cb5189-db19-4966-a144-fcbdff29eb9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1138335-10000002",
+      "name": "마라향궈",
+      "description": "매운맛 (추천) / 약간 매운맛(위마위라) / 아주 매운맛(자마자라) 선택가능",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/846f4343-6636-4acd-b6d9-d6b12dbf87b9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1138335-10000008",
+      "name": "볶음밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/c4207b50-f177-458c-88c1-a00d305f7c7f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1138335-10000007",
+      "name": "공깃밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1138335-10000009",
+      "name": "샤오롱바오(고기만두)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/1b84954b-bf16-4279-9382-263052c36f53.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1138335-10000011",
+      "name": "차파이(복숭아)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1138335-10000004",
+      "name": "마라롱샤(가재요리)",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/372ad56d-e312-44d7-a2fa-2663b2bc5ff7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1138335-10000010",
+      "name": "고기빠오즈",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1138335-10000012",
+      "name": "차파이(유자녹차)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1138335-10000005",
+      "name": "오징어마라샹궈볶음",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/5f21d8df-99ce-4f49-b9ae-8dd1330d3bd4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1138335-10000013",
+      "name": "차파이(레몬홍차)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1138335-10000006",
+      "name": "마파두부",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/f9e6ccf6-6069-4968-9c3a-b3c1bbfb3fd3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1138335-10000014",
+      "name": "빙홍차",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1138335-10000015",
+      "name": "빙탕쉐리",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1138335-10000016",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1138335-10000017",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1138335-10000018",
+      "name": "환타 파인애플향",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1138335",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?hBUaXgb"
+    ],
+    "rawItemCount": 22,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

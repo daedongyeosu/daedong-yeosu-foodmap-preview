@@ -1,0 +1,317 @@
+{
+  "storeId": "078947ccc4df31cd",
+  "storeName": "임실치즈피자 여수점",
+  "displayName": "임실치즈피자 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/5a602b05-68ef-4190-a826-52a5b50a0a2c.jpg",
+  "categories": [
+    "전체",
+    "한우메뉴",
+    "스페셜메뉴",
+    "골드메뉴",
+    "프리미엄메뉴",
+    "세트메뉴",
+    "에피타이저"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1164390-10000010",
+      "name": "치즈크러스트 한우불고기",
+      "description": "",
+      "category": "한우메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d68ead23-bae6-4341-b05a-9972432b8920.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1164390-10000012",
+      "name": "밤고구마피자",
+      "description": "과채류 중 녹말 함량이 가장 많은 고구마와 화이트소스, 야채 등을 토핑한 웰빙피자",
+      "category": "스페셜메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b4260422-a9ef-466c-b156-cd932fa1a076.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1164390-10000003",
+      "name": "쉬림프골드",
+      "description": "고소한 고구마 무스에 새우맛이 일품인 케이준 쉬림프 골드~",
+      "category": "골드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/83d4191e-5f0a-4915-b842-64935f41473d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1164390-10000015",
+      "name": "슈퍼슈프림피자",
+      "description": "햄, 페퍼로니, 야채 등 토핑이 듬뿍 대한민국 대표피자",
+      "category": "프리미엄메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c10bb257-884c-4437-9de6-7957426e4696.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1164390-10000001",
+      "name": "치즈팡",
+      "description": "고소한 크림치즈가 팡팡~ 이태리풍 정통 프리미엄 피자",
+      "category": "골드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1164390-10000009",
+      "name": "라이스골드 한우불고기",
+      "description": "100% 국내산 한우만을 사용한 안전한 우리피자 한우의 깊은 맛을 느껴보세요.",
+      "category": "한우메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1164390-10000011",
+      "name": "랍스타피자",
+      "description": "크래미가 듬뿍 타타르 소스가 쭉 환상의 맛이 시작됩니다.",
+      "category": "스페셜메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1164390-10000014",
+      "name": "콤비네이션",
+      "description": "",
+      "category": "프리미엄메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1164390-10000019",
+      "name": "A세트",
+      "description": "치즈크러스트L+치즈오븐스파게티+버팔로윙+포테이토",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1164390-10000022",
+      "name": "치즈오븐스파게티",
+      "description": "치즈를 듬뿍 넣어 고소함과 담백함이 입안 가득 느껴지는 스파게티",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1164390-10000002",
+      "name": "라이스골드한우불고기",
+      "description": "",
+      "category": "골드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1164390-10000020",
+      "name": "B 세트",
+      "description": "치즈크러스트R+치즈오븐스파게티+버팔로윙+포테이토",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1164390-10000023",
+      "name": "치즈스틱",
+      "description": "치즈가 쫄깃쫄깃하게 씹히는 맛이 일품인 스틱",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1164390-10000013",
+      "name": "치즈크러스트감자피자",
+      "description": "",
+      "category": "스페셜메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1164390-10000016",
+      "name": "하와이언피자",
+      "description": "부드러운 치즈에 파인애플, 햄 등을 듬뿍",
+      "category": "프리미엄메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1164390-10000021",
+      "name": "C 세트",
+      "description": "팬피자L+치즈오븐스파게티+버팔로윙+포테이토",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1164390-10000024",
+      "name": "버팔로봉",
+      "description": "버팔로윙 그 고소함은 피자와 함께라면 더욱 맛있습니다.",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1164390-10000004",
+      "name": "라이스바이트",
+      "description": "",
+      "category": "골드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1164390-10000017",
+      "name": "페퍼로니피자",
+      "description": "치즈와 페퍼로니 이맛이 진정한 피자",
+      "category": "프리미엄메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1164390-10000025",
+      "name": "포테이토",
+      "description": "평범한 감자는 가라~ 다양하게 즐기는 감자 치즈가 듬뿍 들어간 피자와 함께 드세요.",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1164390-10000032",
+      "name": "한우불고기추가",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1164390-10000005",
+      "name": "2in1(한우불고기+밤스위트골드)",
+      "description": "한우불고기+밤스위트골드 두가지 맛을 동시에 즐기세요.",
+      "category": "골드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1164390-10000018",
+      "name": "디럭스치즈피자",
+      "description": "부드러운 치즈맛을 제대로 즐길 수 있는 피자",
+      "category": "프리미엄메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1164390-10000026",
+      "name": "치킨텐더",
+      "description": "부드럽고 두툼한 안심살을 구워내 담백한 맛이 일품",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1164390-10000006",
+      "name": "포테이토골드(석쇠피자)",
+      "description": "반달감자와 체다치즈의 환상의 하모니. 석쇠도우의 담백한 맛을 느끼실 수 있습니다.",
+      "category": "골드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1164390-10000027",
+      "name": "콜라",
+      "description": "",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1164390-10000007",
+      "name": "트리플미트",
+      "description": "",
+      "category": "골드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1164390-10000028",
+      "name": "갈릭소스",
+      "description": "",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1164390-10000008",
+      "name": "밤스위트골드피자",
+      "description": "",
+      "category": "골드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1164390-10000029",
+      "name": "피클",
+      "description": "",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1164390-10000030",
+      "name": "핫소스",
+      "description": "",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1164390-10000031",
+      "name": "사이다",
+      "description": "",
+      "category": "에피타이저",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1164390",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?TMxvpBz"
+    ],
+    "rawItemCount": 36,
+    "duplicateItemsRemoved": 4
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

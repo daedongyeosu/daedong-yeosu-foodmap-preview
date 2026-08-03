@@ -1,0 +1,709 @@
+{
+  "storeId": "8242097f57502bcc",
+  "storeName": "냉면 다이닝 미슐냉면 여수여서점",
+  "displayName": "냉면 다이닝 미슐냉면 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/02/3360e58c-3b49-42ad-a4e8-890186288be9.jpg",
+  "categories": [
+    "전체",
+    "냉면 메뉴",
+    "음료 메뉴",
+    "냉면 세트 메뉴",
+    "사이드 메뉴",
+    "사리 추가 메뉴",
+    "만두 메뉴",
+    "미슐 별미 메뉴",
+    "사골 전통 국밥",
+    "수제 돈까스",
+    "주류메뉴",
+    "스페셜 냉면 메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175458-30000085",
+      "name": "[시원상큼] 살얼음 물냉면",
+      "description": "",
+      "category": "냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/09828733-3bb1-4100-b601-aea3790a4617.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000085"
+    },
+    {
+      "id": "ddangyo-1175458-30000062",
+      "name": "콜라 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000062"
+    },
+    {
+      "id": "ddangyo-1175458-30000128",
+      "name": "냉면 1그릇 + 돈까스",
+      "description": "",
+      "category": "냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/9fa74fef-63cf-4dea-a83c-8f541b6f8cbf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000128"
+    },
+    {
+      "id": "ddangyo-1175458-30000112",
+      "name": "[강추별미] 부산 어묵채 튀김",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/55310cda-306c-40b3-a3f6-65afb746f68e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000112"
+    },
+    {
+      "id": "ddangyo-1175458-30000122",
+      "name": "살얼음 냉육수 추가",
+      "description": "",
+      "category": "사리 추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/668242d3-7206-4fae-9c9e-8c79dcd094b5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000122"
+    },
+    {
+      "id": "ddangyo-1175458-30000105",
+      "name": "고기왕만두 (2ea)",
+      "description": "",
+      "category": "만두 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/c746f40f-c6ec-46a6-960e-a18ac58d419a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000105"
+    },
+    {
+      "id": "ddangyo-1175458-30000099",
+      "name": "직화 양념 목살 구이 (200g)",
+      "description": "",
+      "category": "미슐 별미 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/c2712357-be61-433a-99c3-6478e7dd2a57.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000099"
+    },
+    {
+      "id": "ddangyo-1175458-30000097",
+      "name": "[얼큰하다] 부산식 얼큰이 국밥",
+      "description": "",
+      "category": "사골 전통 국밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/145223a9-8e2b-4a98-a9a5-f9bcdecf574a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000097"
+    },
+    {
+      "id": "ddangyo-1175458-30000096",
+      "name": "수제 등심 돈까스 도시락",
+      "description": "",
+      "category": "수제 돈까스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/cbdcf320-5d16-4889-96c6-fcddb0a9803e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000096"
+    },
+    {
+      "id": "ddangyo-1175458-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1175458-30000106",
+      "name": "김치왕만두 (2ea)",
+      "description": "",
+      "category": "만두 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7989e753-261f-4552-99ad-8b67b465bbb2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000106"
+    },
+    {
+      "id": "ddangyo-1175458-30000123",
+      "name": "냉면장 추가",
+      "description": "",
+      "category": "사리 추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/2ebe06d8-45de-4197-bfa3-c663efc88f66.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000123"
+    },
+    {
+      "id": "ddangyo-1175458-30000063",
+      "name": "콜라 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000063"
+    },
+    {
+      "id": "ddangyo-1175458-30000129",
+      "name": "냉면 2그릇 + 돈까스",
+      "description": "",
+      "category": "냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/f9606d48-5485-4310-a689-36e5081b977d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000129"
+    },
+    {
+      "id": "ddangyo-1175458-30000086",
+      "name": "[새콤달달] 비빔냉면 + 살얼음 육수",
+      "description": "",
+      "category": "냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/700c131b-2273-4940-add8-810321f7876a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000086"
+    },
+    {
+      "id": "ddangyo-1175458-30000100",
+      "name": "[전통속초] 코다리 회무침 (200g)",
+      "description": "",
+      "category": "미슐 별미 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b3746435-d86f-48f9-9036-daa619c0acc5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000100"
+    },
+    {
+      "id": "ddangyo-1175458-30000113",
+      "name": "[육즙가득] 떡산적 스테이크 (2ea)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/fff6e9f2-f35c-467f-ad64-90f3418be74a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000113"
+    },
+    {
+      "id": "ddangyo-1175458-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1175458-30000087",
+      "name": "[매콤얼얼] 해장 불냉면",
+      "description": "",
+      "category": "냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/20c047db-93a3-47b4-b38c-7402ba4f9155.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000087"
+    },
+    {
+      "id": "ddangyo-1175458-30000141",
+      "name": "미니전 (4ea)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/a48f105a-19d4-4bbf-90ca-d0f21dd70d13.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000141"
+    },
+    {
+      "id": "ddangyo-1175458-30000144",
+      "name": "[얼큰칼칼] 사골 전통 육개장",
+      "description": "",
+      "category": "사골 전통 국밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/25af3aee-3671-4bf1-8a88-ed09cfe48625.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000144"
+    },
+    {
+      "id": "ddangyo-1175458-30000124",
+      "name": "매운 냉면장 추가",
+      "description": "",
+      "category": "사리 추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/c43d220d-7d44-4b57-8c31-4feb67a46e35.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000124"
+    },
+    {
+      "id": "ddangyo-1175458-30000107",
+      "name": "[고기/김치]반반왕만두 (4ea)",
+      "description": "",
+      "category": "만두 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/9a3f4977-d59b-44cb-b7c0-262a4c73a523.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000107"
+    },
+    {
+      "id": "ddangyo-1175458-30000064",
+      "name": "콜라 1.25L",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000064"
+    },
+    {
+      "id": "ddangyo-1175458-30000130",
+      "name": "냉면 1그릇 + 만두",
+      "description": "",
+      "category": "냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/d825831a-37af-4793-939b-52cff0be4f7c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000130"
+    },
+    {
+      "id": "ddangyo-1175458-30000139",
+      "name": "감자채전",
+      "description": "",
+      "category": "미슐 별미 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000139"
+    },
+    {
+      "id": "ddangyo-1175458-90000003",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1175458-30000092",
+      "name": "[사장님추천] 편쌈 물비빔냉면 + 살얼음 육수",
+      "description": "",
+      "category": "스페셜 냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/4f6dc056-722a-452c-9356-7037ad6e82aa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000092"
+    },
+    {
+      "id": "ddangyo-1175458-30000065",
+      "name": "사이다 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000065"
+    },
+    {
+      "id": "ddangyo-1175458-30000101",
+      "name": "부산식 쫄깃 편육 (200g)",
+      "description": "",
+      "category": "미슐 별미 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/fec1f861-e4d5-41cf-9713-831294d3311a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000101"
+    },
+    {
+      "id": "ddangyo-1175458-30000114",
+      "name": "[달달한 마무리] 설탕 토마토",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/db0fbb80-9f7a-43ce-a946-c433c1e634b0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000114"
+    },
+    {
+      "id": "ddangyo-1175458-30000088",
+      "name": "[전통속초] 코다리 회냉면 + 살얼음 육수",
+      "description": "",
+      "category": "냉면 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/13f86a56-d63f-45c9-9e07-a0053281e7a5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000088"
+    },
+    {
+      "id": "ddangyo-1175458-30000108",
+      "name": "갈비만두 (5ea)",
+      "description": "",
+      "category": "만두 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/d678e9de-b084-4463-9f35-f030f6d4a006.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000108"
+    },
+    {
+      "id": "ddangyo-1175458-30000131",
+      "name": "냉면 2그릇 + 만두",
+      "description": "",
+      "category": "냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/6ee6d027-1d85-4ffc-ac01-80d61152dd1e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000131"
+    },
+    {
+      "id": "ddangyo-1175458-30000125",
+      "name": "메추리알 추가 (5ea)",
+      "description": "",
+      "category": "사리 추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/79015b9b-84b4-4c04-9195-5b0455beb9f8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000125"
+    },
+    {
+      "id": "ddangyo-1175458-90000004",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1175458-30000066",
+      "name": "사이다 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000066"
+    },
+    {
+      "id": "ddangyo-1175458-30000132",
+      "name": "냉면 1그릇 + 직화 목살 구이 (200g)",
+      "description": "",
+      "category": "냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/8abf5dc0-6fca-4585-8747-192c7bc77d9f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000132"
+    },
+    {
+      "id": "ddangyo-1175458-30000115",
+      "name": "[속이탱탱] 오징어 튀김 (2ea)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/b7286500-61a2-478e-b349-49d69d2c9043.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000115"
+    },
+    {
+      "id": "ddangyo-1175458-30000102",
+      "name": "[촉촉담백] 삼겹수육 (200g)",
+      "description": "",
+      "category": "미슐 별미 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/60e81818-a726-4c44-84c5-f4937fde7b4b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000102"
+    },
+    {
+      "id": "ddangyo-1175458-30000109",
+      "name": "김치왕만두 튀김 (2ea)",
+      "description": "",
+      "category": "만두 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/75c57243-b800-4702-adb2-1efadc1dd9db.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000109"
+    },
+    {
+      "id": "ddangyo-1175458-30000126",
+      "name": "겨자, 식초 추가",
+      "description": "",
+      "category": "사리 추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000126"
+    },
+    {
+      "id": "ddangyo-1175458-90000005",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1175458-30000104",
+      "name": "[겉바속촉]한쪽 수제 등심돈까스",
+      "description": "",
+      "category": "미슐 별미 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/1207b080-e1c2-4b63-b444-b8b677309e9e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000104"
+    },
+    {
+      "id": "ddangyo-1175458-30000110",
+      "name": "고기왕만두 튀김 (2ea)",
+      "description": "",
+      "category": "만두 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/99113381-42a3-420c-b8f2-2bf683eff0fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000110"
+    },
+    {
+      "id": "ddangyo-1175458-30000067",
+      "name": "사이다 1.25L",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000067"
+    },
+    {
+      "id": "ddangyo-1175458-30000133",
+      "name": "냉면 2그릇 + 직화 목살 구이 (200g)",
+      "description": "",
+      "category": "냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/123882a8-650f-457b-9c28-383271376e9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000133"
+    },
+    {
+      "id": "ddangyo-1175458-30000116",
+      "name": "[속이알찬] 고추전 튀김 (2ea)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/8686cd1b-debd-43b4-bc4f-2cfa40ba041c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000116"
+    },
+    {
+      "id": "ddangyo-1175458-90000006",
+      "name": "켈리 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1175458-30000068",
+      "name": "델몬트 주스",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000068"
+    },
+    {
+      "id": "ddangyo-1175458-30000111",
+      "name": "[고기/김치]반반왕만두 튀김 (4ea)",
+      "description": "",
+      "category": "만두 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/31ca958b-5d31-4f58-97e7-caefc08667a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000111"
+    },
+    {
+      "id": "ddangyo-1175458-30000117",
+      "name": "[최고별미] 메밀 전병 (1ea)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/590011e5-c3f6-4857-a242-d48a5de4b54b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000117"
+    },
+    {
+      "id": "ddangyo-1175458-90000007",
+      "name": "이과두주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000007"
+    },
+    {
+      "id": "ddangyo-1175458-30000069",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000069"
+    },
+    {
+      "id": "ddangyo-1175458-30000118",
+      "name": "[쫄깃고소] 크림 치즈볼 (3ea)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/df3a3002-db90-42c2-b9cb-0ec9546f7b81.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000118"
+    },
+    {
+      "id": "ddangyo-1175458-30000070",
+      "name": "쥬시쿨",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000070"
+    },
+    {
+      "id": "ddangyo-1175458-30000142",
+      "name": "냉면 1그릇 + 육개장",
+      "description": "",
+      "category": "냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5f6b1031-73d0-43d0-8193-874b7bcc24ee.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000142"
+    },
+    {
+      "id": "ddangyo-1175458-30000119",
+      "name": "[별미후식] 인절미 떡튀김 (15ea)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/9c9032f5-bf2d-4908-b6ad-66e2d9241766.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000119"
+    },
+    {
+      "id": "ddangyo-1175458-30000143",
+      "name": "냉면 2그릇 + 육개장",
+      "description": "",
+      "category": "냉면 세트 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/395d7249-7a2a-4c60-a515-1f35ec753bf0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000143"
+    },
+    {
+      "id": "ddangyo-1175458-30000071",
+      "name": "환타 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000071"
+    },
+    {
+      "id": "ddangyo-1175458-30000120",
+      "name": "새우 튀김 (2ea)",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/3ecf1353-ca3b-45a7-8436-8bda542c0f85.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000120"
+    },
+    {
+      "id": "ddangyo-1175458-30000121",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000121"
+    },
+    {
+      "id": "ddangyo-1175458-30000072",
+      "name": "환타 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000072"
+    },
+    {
+      "id": "ddangyo-1175458-30000073",
+      "name": "환타 1.25L",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000073"
+    },
+    {
+      "id": "ddangyo-1175458-30000074",
+      "name": "웰치스 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000074"
+    },
+    {
+      "id": "ddangyo-1175458-30000075",
+      "name": "웰치스 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000075"
+    },
+    {
+      "id": "ddangyo-1175458-30000076",
+      "name": "밀키스 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000076"
+    },
+    {
+      "id": "ddangyo-1175458-30000077",
+      "name": "밀키스 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000077"
+    },
+    {
+      "id": "ddangyo-1175458-30000078",
+      "name": "제로 콜라 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000078"
+    },
+    {
+      "id": "ddangyo-1175458-30000079",
+      "name": "제로 콜라 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000079"
+    },
+    {
+      "id": "ddangyo-1175458-30000080",
+      "name": "제로 사이다 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000080"
+    },
+    {
+      "id": "ddangyo-1175458-30000081",
+      "name": "제로 사이다 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000081"
+    },
+    {
+      "id": "ddangyo-1175458-30000082",
+      "name": "스프라이트 355ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/c8bb4727-a4ff-42a8-8b3e-99ef70339abc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000082"
+    },
+    {
+      "id": "ddangyo-1175458-30000083",
+      "name": "스프라이트 500ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/529d1fcb-1f89-4bf0-8fe7-1190d27d8f39.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000083"
+    },
+    {
+      "id": "ddangyo-1175458-30000084",
+      "name": "스프라이트 1.25ml",
+      "description": "",
+      "category": "음료 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000084"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175458",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?6uYszQc"
+    ],
+    "rawItemCount": 76,
+    "duplicateItemsRemoved": 1
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,681 @@
+{
+  "storeId": "e4d80f7d9fe12291",
+  "storeName": "영빈관",
+  "displayName": "영빈관",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/a8411345-f16b-47f5-943a-229ed3eceaee.jpg",
+  "categories": [
+    "전체",
+    "면류",
+    "탕수육세트",
+    "식사류",
+    "솔로세트",
+    "주류메뉴",
+    "양장피세트",
+    "깐풍기세트",
+    "계절메뉴",
+    "요리류",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1211445-10000156",
+      "name": "짜장면",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4a97f3b1-4e84-4e58-a90d-d75306324005.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000156"
+    },
+    {
+      "id": "ddangyo-1211445-10000137",
+      "name": "2. 탕수육+짜장1+짬뽕1+만두",
+      "description": "",
+      "category": "탕수육세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2ebc3f3f-52a1-455f-b5ef-00f5b72e7b61.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000137"
+    },
+    {
+      "id": "ddangyo-1211445-10000170",
+      "name": "볶음밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/460af244-8429-49e4-9468-41b41801f3b1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000170"
+    },
+    {
+      "id": "ddangyo-1211445-10000164",
+      "name": "삼선짬뽕",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/93d1baf3-1eec-4216-bb7f-14d3a36ba800.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000164"
+    },
+    {
+      "id": "ddangyo-1211445-10000142",
+      "name": "1. 탕수육+짜장1",
+      "description": "",
+      "category": "솔로세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/614ede96-fea5-4281-8381-5462ff77bf27.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000142"
+    },
+    {
+      "id": "ddangyo-1211445-90000001",
+      "name": "연태고량주(중)(250ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1211445-10000136",
+      "name": "1. 탕수육+짜장2+만두",
+      "description": "",
+      "category": "탕수육세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/79f48019-a9a0-4ec6-b9fc-30c5d54765e2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000136"
+    },
+    {
+      "id": "ddangyo-1211445-10000146",
+      "name": "1. 양장피+짜장2",
+      "description": "",
+      "category": "양장피세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000146"
+    },
+    {
+      "id": "ddangyo-1211445-10000152",
+      "name": "1. 깐풍기+짜장2",
+      "description": "",
+      "category": "깐풍기세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000152"
+    },
+    {
+      "id": "ddangyo-1211445-10000184",
+      "name": "육개장",
+      "description": "",
+      "category": "계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/71c7f58e-4a6b-4215-a804-878e407f4266.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000184"
+    },
+    {
+      "id": "ddangyo-1211445-10000186",
+      "name": "탕수육",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/8b88bd13-d630-455a-ae05-6771aa29c699.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000186"
+    },
+    {
+      "id": "ddangyo-1211445-10000198",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/be26e05f-71bc-400c-902d-6053e4acaf9f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000198"
+    },
+    {
+      "id": "ddangyo-1211445-90000002",
+      "name": "연태고량주(소)(125ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1211445-10000143",
+      "name": "2. 탕수육+짬뽕1",
+      "description": "",
+      "category": "솔로세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f77b655e-0e9f-4297-87f1-feb86e17f4cb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000143"
+    },
+    {
+      "id": "ddangyo-1211445-10000147",
+      "name": "2. 양장피+짬뽕2",
+      "description": "",
+      "category": "양장피세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000147"
+    },
+    {
+      "id": "ddangyo-1211445-10000153",
+      "name": "2. 깐풍기+짬뽕2",
+      "description": "",
+      "category": "깐풍기세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000153"
+    },
+    {
+      "id": "ddangyo-1211445-10000157",
+      "name": "간짜장",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/a4930497-6c65-4ac2-8f15-7e32a2910869.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000157"
+    },
+    {
+      "id": "ddangyo-1211445-10000171",
+      "name": "잡채밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/bf6a7ced-7ec2-4370-9208-5d629b9e225e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000171"
+    },
+    {
+      "id": "ddangyo-1211445-10000185",
+      "name": "떡국",
+      "description": "",
+      "category": "계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/2f342509-3f33-4d11-8920-a335905bccd4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000185"
+    },
+    {
+      "id": "ddangyo-1211445-10000187",
+      "name": "사천탕수육",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/99d3c5ad-f118-49fd-b38e-ee5c8e914681.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000187"
+    },
+    {
+      "id": "ddangyo-1211445-10000199",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000199"
+    },
+    {
+      "id": "ddangyo-1211445-90000003",
+      "name": "이과두주(병)(125ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1211445-10000138",
+      "name": "3. 탕수육+볶음밥2+만두",
+      "description": "",
+      "category": "탕수육세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000138"
+    },
+    {
+      "id": "ddangyo-1211445-10000144",
+      "name": "3. 탕수육+간짜장1",
+      "description": "",
+      "category": "솔로세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000144"
+    },
+    {
+      "id": "ddangyo-1211445-10000148",
+      "name": "3. 양장피+볶음밥2",
+      "description": "",
+      "category": "양장피세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000148"
+    },
+    {
+      "id": "ddangyo-1211445-10000154",
+      "name": "3. 깐풍기+볶음밥2",
+      "description": "",
+      "category": "깐풍기세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000154"
+    },
+    {
+      "id": "ddangyo-1211445-10000158",
+      "name": "짬뽕",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/b49dfdd7-4202-41ec-a091-a0578bb852d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000158"
+    },
+    {
+      "id": "ddangyo-1211445-10000172",
+      "name": "짬뽕밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/d3cd0646-667d-4ada-8625-46f5edf3fc73.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000172"
+    },
+    {
+      "id": "ddangyo-1211445-10000188",
+      "name": "깐쇼새우",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/50b5d235-ed50-4183-8c03-b37193efea30.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000188"
+    },
+    {
+      "id": "ddangyo-1211445-10000200",
+      "name": "환타",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000200"
+    },
+    {
+      "id": "ddangyo-1211445-10000206",
+      "name": "콩국수",
+      "description": "",
+      "category": "계절메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/570b0967-1175-413f-a86e-2f0d4e2b5733.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000206"
+    },
+    {
+      "id": "ddangyo-1211445-90000004",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1211445-10000139",
+      "name": "4. 탕수육 +간짜장 2 +만두",
+      "description": "",
+      "category": "탕수육세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000139"
+    },
+    {
+      "id": "ddangyo-1211445-10000145",
+      "name": "4. 탕수육+볶음밤1",
+      "description": "",
+      "category": "솔로세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000145"
+    },
+    {
+      "id": "ddangyo-1211445-10000149",
+      "name": "4. 양장피+쟁반짜장2인",
+      "description": "",
+      "category": "양장피세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000149"
+    },
+    {
+      "id": "ddangyo-1211445-10000155",
+      "name": "4. 깐풍기+쟁반짜장2인",
+      "description": "",
+      "category": "깐풍기세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000155"
+    },
+    {
+      "id": "ddangyo-1211445-10000159",
+      "name": "우동",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/e4426908-c682-47c1-a65a-28cb06874263.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000159"
+    },
+    {
+      "id": "ddangyo-1211445-10000173",
+      "name": "짜장밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/b404d648-ca16-444d-9695-9223fec56e55.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000173"
+    },
+    {
+      "id": "ddangyo-1211445-10000189",
+      "name": "양장피",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/49231160-19bb-4f2f-942b-30f058c6dfd6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000189"
+    },
+    {
+      "id": "ddangyo-1211445-90000005",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1211445-10000140",
+      "name": "5. 탕수육+쟁반짜장2인+만두",
+      "description": "",
+      "category": "탕수육세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/ac31967b-afa9-49ad-b61e-e5ccb655aa6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000140"
+    },
+    {
+      "id": "ddangyo-1211445-10000150",
+      "name": "5. 양장피+탕수육",
+      "description": "",
+      "category": "양장피세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000150"
+    },
+    {
+      "id": "ddangyo-1211445-10000160",
+      "name": "울면",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f349d8ea-8cf6-4149-8cea-ddd5a3336062.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000160"
+    },
+    {
+      "id": "ddangyo-1211445-10000174",
+      "name": "오무라이스",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/44b0dd59-eedc-4cfa-ab31-923a689eafb0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000174"
+    },
+    {
+      "id": "ddangyo-1211445-10000190",
+      "name": "유산슬",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ac487eed-a1c7-4048-9381-0b0c8243b933.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000190"
+    },
+    {
+      "id": "ddangyo-1211445-90000006",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1211445-10000141",
+      "name": "탕수육+짬뽕2+만두",
+      "description": "탕수육+짬뽕2+만두",
+      "category": "탕수육세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/58593282-d36e-4f17-bf81-d89d4302db9d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000141"
+    },
+    {
+      "id": "ddangyo-1211445-10000151",
+      "name": "6. 양장피+깐풍기",
+      "description": "",
+      "category": "양장피세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000151"
+    },
+    {
+      "id": "ddangyo-1211445-10000161",
+      "name": "차돌짬뽕",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/cc095d47-3138-4911-b64f-ccebe9eb3ea1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000161"
+    },
+    {
+      "id": "ddangyo-1211445-10000175",
+      "name": "삼선볶음밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/0551dfc3-f447-48b8-a99d-e17246844edb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000175"
+    },
+    {
+      "id": "ddangyo-1211445-10000191",
+      "name": "고추잡채",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/d3d8c53c-0205-4e71-9716-2ca5212aae90.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000191"
+    },
+    {
+      "id": "ddangyo-1211445-10000162",
+      "name": "삼선우동",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/919bc62d-0136-4086-ab46-fbe11a12b386.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000162"
+    },
+    {
+      "id": "ddangyo-1211445-10000176",
+      "name": "삼선짬뽕밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/11/8e303af5-d4ea-441f-b349-954fefa0cc0e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000176"
+    },
+    {
+      "id": "ddangyo-1211445-10000192",
+      "name": "팔보채",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3a0d8cc6-91ce-4161-939e-5cdb94c8d12f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000192"
+    },
+    {
+      "id": "ddangyo-1211445-10000163",
+      "name": "삼선짜장",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/194cf76b-5753-4e29-baf4-5f2803946c1f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000163"
+    },
+    {
+      "id": "ddangyo-1211445-10000177",
+      "name": "새우볶음밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/0d3e13c2-3eb1-4185-87fc-6fd02eb41168.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000177"
+    },
+    {
+      "id": "ddangyo-1211445-10000193",
+      "name": "깐풍기",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/28172a75-44ea-4b58-90d1-bcb507ee33a8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000193"
+    },
+    {
+      "id": "ddangyo-1211445-10000178",
+      "name": "해물덮밥",
+      "description": "",
+      "category": "식사류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000178"
+    },
+    {
+      "id": "ddangyo-1211445-10000194",
+      "name": "라조기",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2e8305cf-9898-4124-93a3-fcdb3a25e517.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000194"
+    },
+    {
+      "id": "ddangyo-1211445-10000165",
+      "name": "불짜장",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/416f30b2-29aa-40e0-96ff-ccb2771d290b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000165"
+    },
+    {
+      "id": "ddangyo-1211445-10000179",
+      "name": "유산슬덮밥",
+      "description": "",
+      "category": "식사류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000179"
+    },
+    {
+      "id": "ddangyo-1211445-10000195",
+      "name": "라조육",
+      "description": "",
+      "category": "요리류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000195"
+    },
+    {
+      "id": "ddangyo-1211445-10000166",
+      "name": "불짬뽕",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/1923a0c8-3837-4216-b28d-017b979c52d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000166"
+    },
+    {
+      "id": "ddangyo-1211445-10000180",
+      "name": "잡탕밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/9b82cab8-f73d-4dcb-bdb1-c758bbfca3dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000180"
+    },
+    {
+      "id": "ddangyo-1211445-10000196",
+      "name": "잡채",
+      "description": "",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/2d1050b6-0fa1-4953-9521-dc9b658a3056.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000196"
+    },
+    {
+      "id": "ddangyo-1211445-10000167",
+      "name": "쟁반짜장",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/4b58d9e7-c8d1-4ee9-ad17-f2565ff4323b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000167"
+    },
+    {
+      "id": "ddangyo-1211445-10000181",
+      "name": "공기밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f820f9e8-1623-4df9-b3af-469a5ebc5e80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000181"
+    },
+    {
+      "id": "ddangyo-1211445-10000197",
+      "name": "삼선국물",
+      "description": "",
+      "category": "요리류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000197"
+    },
+    {
+      "id": "ddangyo-1211445-10000168",
+      "name": "쟁반짬뽕",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/72fe270a-1681-4f92-904c-bd9341757983.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000168"
+    },
+    {
+      "id": "ddangyo-1211445-10000182",
+      "name": "마파두부밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f93933cd-db79-4f68-ada0-5915980c66e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000182"
+    },
+    {
+      "id": "ddangyo-1211445-10000169",
+      "name": "군만두",
+      "description": "",
+      "category": "면류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/2eb58692-f491-43f9-9fee-4ff0cdc3043d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000169"
+    },
+    {
+      "id": "ddangyo-1211445-10000183",
+      "name": "제육덮밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/9952f598-f118-492e-a6cf-46c24d51e253.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000183"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1211445",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?Hcoo3qg"
+    ],
+    "rawItemCount": 77,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "storeId": "02f013b132587e29",
+  "storeName": "와우당냉면&참숯목살갈비 오림점",
+  "displayName": "와우당냉면&참숯목살갈비 오림점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/4d7613ad-9e39-4701-b5cd-59296f3b421c.jpg",
+  "categories": [
+    "전체",
+    "[1인 SET] 다양한 1인 세트",
+    "[국내최초] 반반냉면 / 곱빼기 양입니다.",
+    "[오리지널]와우당 냉면",
+    "[2인 SET] 다양한 2인세트",
+    "[요리같은] 사이드 메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1231086-10000001",
+      "name": "참숯목살갈비 1인세트",
+      "description": "참숯목살갈비 200g + 냉면 선택 1",
+      "category": "[1인 SET] 다양한 1인 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/4d7613ad-9e39-4701-b5cd-59296f3b421c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1231086-10000011",
+      "name": "[반반냉면] 물냉면/불냉면",
+      "description": "국내최초 반반냉면 출시. \n냉면 욕심나는 날 `두가지 맛` 의 냉면을 함께 즐기세요.",
+      "category": "[국내최초] 반반냉면 / 곱빼기 양입니다.",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/72a50d93-9343-4a18-937f-68539a9e17da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1231086-10000015",
+      "name": "와우 불냉면",
+      "description": "맛있게 맵고 시원한 감칠맛이 어우러진 와우당 만의 매운 양념다대기 사용.",
+      "category": "[오리지널]와우당 냉면",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/c18c5f23-e34c-4c22-bf95-eb680fa95894.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1231086-10000005",
+      "name": "참숯목살갈비 2인세트",
+      "description": "참숯목살갈비 200g + 냉면 선택 2",
+      "category": "[2인 SET] 다양한 2인세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/406ad471-a5fa-476e-a208-86a98091b0cc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1231086-10000009",
+      "name": "[반반냉면] 물냉면/코다리회냉면",
+      "description": "국내최초 반반냉면 출시,\n냉면 욕심나는 날 `두가지 맛`의 냉면을 함께 즐기세요.",
+      "category": "[국내최초] 반반냉면 / 곱빼기 양입니다.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1231086-10000012",
+      "name": "와우당 코다리 회냉면",
+      "description": "함경남도 단천 지방의 맛 그대로 속초 정호동 아바이 마을에 이어진 잘 숙성된 명태살의 담백 쫄깃함과 새콤함이 어우러진 맛",
+      "category": "[오리지널]와우당 냉면",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1231086-10000016",
+      "name": "참숯목살갈비(200g)",
+      "description": "참숯에 직접굽는 방식으로 숯불향이 은은하게 배어나와 \n갈비의 육즙과  감칠 맛이 끝내 줍니다.",
+      "category": "[요리같은] 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/958f3168-da43-4d6d-a9ca-c72938173743.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1231086-10000023",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e3b7f1a7-92c9-4955-8a1c-a48e41b18154.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1231086-10000002",
+      "name": "사골물만두 1인세트",
+      "description": "사골물만두 + 냉면 선택 1",
+      "category": "[1인 SET] 다양한 1인 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/043a3ca8-7d10-4545-a333-11ce39d2f1ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1231086-10000006",
+      "name": "사골물만두 2인세트",
+      "description": "사골물만두 + 냉면  선택 2",
+      "category": "[2인 SET] 다양한 2인세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/fa821e41-b2f3-46a7-ba75-b4cd166ca55e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1231086-10000010",
+      "name": "[반반냉면] 물냉면/비빔냉면",
+      "description": "국내최초 반반냉면 출시. \n냉면 욕심나는 날 `두가지 맛` 의 냉면을 함께 즐기세요.",
+      "category": "[국내최초] 반반냉면 / 곱빼기 양입니다.",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1231086-10000013",
+      "name": "와우당 살얼음 물냉면",
+      "description": "특제 사골 육수와 동치미를 배합하여 냉면 육수 맛이 진하고 깊은 맛이 일품입니다.\n특제 사골 육수와 동치미를 배합하여 냉면 육수 맛이 진하고 깊은 맛이 일품입니다.",
+      "category": "[오리지널]와우당 냉면",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/e89c02a1-9f41-4c2c-93d9-26dc30636800.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1231086-10000017",
+      "name": "코다리 회무침(200g)",
+      "description": "함겸남도 단천 지방의 맛 그대로\n잘숙성된 명태살의 담백 쫄깃함과 새콤함이 어우러진 맛.",
+      "category": "[요리같은] 사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1231086-10000024",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1231086-10000003",
+      "name": "갈비만두튀김 1인세트",
+      "description": "갈비만두튀김5개+ 냉면 선택 1",
+      "category": "[1인 SET] 다양한 1인 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/2f149768-e4bd-40a2-9a6f-2c9368d5de42.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1231086-10000007",
+      "name": "갈비만두튀김 2인세트",
+      "description": "갈비만두튀김5개+ 냉면 선택 2",
+      "category": "[2인 SET] 다양한 2인세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/11894291-0aa5-4c8d-9800-d49a2fd8453d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1231086-10000014",
+      "name": "와우당 비빔냉면",
+      "description": "특제 사골 육수와 매실청, 배, 마늘등 천연조미료를 갈아 72시간 저온 숙성 시킨 양념장으로 나갑니다.\n특제 사골 육수와 매실청, 배, 마늘등 천연조미료를 갈아 72시간 저온 숙성 시킨 양념장으로 나갑니다.",
+      "category": "[오리지널]와우당 냉면",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/b1a106ee-df14-42a3-b57b-e46d961419f1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1231086-10000018",
+      "name": "사골물만두(20개)",
+      "description": "사골을 우린 육수에 삶아 구수한 풍미가 일품인 \n아하 물만두.",
+      "category": "[요리같은] 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/465d8619-14b3-4e4e-8682-daa9eaae9c73.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1231086-10000004",
+      "name": "떡갈비 1인세트",
+      "description": "떡갈비 2개 + 냉면 선택 1",
+      "category": "[1인 SET] 다양한 1인 세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/36204962-43ea-4187-9d65-d63585b96eeb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1231086-10000008",
+      "name": "떡갈비 2인세트",
+      "description": "떡갈비 4개 + 냉면 선택 2",
+      "category": "[2인 SET] 다양한 2인세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/b75a62ed-b2b5-4d17-a330-b16afde6a05e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1231086-10000019",
+      "name": "떡갈비(4개)",
+      "description": "떡산적 반죽에 쌀떡을 넣어 구워내 고기의 육즙과 \n쌀덕의 쫄깃함을 느낄 수 있습니다.",
+      "category": "[요리같은] 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/ea1e6e6b-de22-4f73-a5ba-dc5529726aa0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1231086-10000020",
+      "name": "갈비만두튀김5개",
+      "description": "정성을 다해 직접 구운 갈비를 넣어 빚은 갈비만두를 사용하고 \n있어 달콤한 갈비의 육즙이 가득합니다.",
+      "category": "[요리같은] 사이드 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/09980bb0-49c3-4c68-8157-a1d79d84672f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1231086-10000021",
+      "name": "살얼음 냉면육수 추가",
+      "description": "소고기 육수와 시원한 동치미를 배합한 특제 육수",
+      "category": "[요리같은] 사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1231086-10000022",
+      "name": "공깃밥",
+      "description": "",
+      "category": "[요리같은] 사이드 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1231086",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?VhwMotr"
+    ],
+    "rawItemCount": 27,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

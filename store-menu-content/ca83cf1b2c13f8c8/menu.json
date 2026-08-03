@@ -1,0 +1,730 @@
+{
+  "storeId": "ca83cf1b2c13f8c8",
+  "storeName": "본도시락 여수문수점",
+  "displayName": "본도시락 여수문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/95210637-d39d-4fb8-ad28-9cf48ce482f8.jpg",
+  "categories": [
+    "전체",
+    "여름 보양",
+    "[Healthy]건강 집밥",
+    "집밥 한상",
+    "집밥 국반상",
+    "[NEW]제철 쌈밥",
+    "본격도시락",
+    "음료디저트기타",
+    "추가 메뉴",
+    "프리미엄 한상",
+    "찌개 집밥",
+    "품격 한정식",
+    "집밥 반상",
+    "별미 집밥",
+    "[스프] 프리미엄 Light도시락"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1291776-30000243",
+      "name": "직화 마늘석갈비 국반상",
+      "description": "흑미밥, 직화 마늘석갈비, 삼채부추무침, 국, 2가지 한식반찬, 김",
+      "category": "여름 보양",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/05ebcee2-8f21-499f-80c6-dbd2fddac539.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000243"
+    },
+    {
+      "id": "ddangyo-1291776-30000236",
+      "name": "여름열무 제육덮밥",
+      "description": "흑미밥, 열무김치, 제육볶음, 치커리",
+      "category": "[Healthy]건강 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0030b2bd-ad9d-4b4c-b55f-dfb965f9ae95.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000236"
+    },
+    {
+      "id": "ddangyo-1291776-30000135",
+      "name": "[집밥] 바싹불고기 깻잎제육 한상",
+      "description": "바싹불고기, 깻잎제육볶음, 오색산적, 4가지 한식반찬, 김",
+      "category": "집밥 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/24118f37-243c-4df3-90d7-5ca2579de6de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000135"
+    },
+    {
+      "id": "ddangyo-1291776-30000145",
+      "name": "[집밥] 깻잎제육 국반상",
+      "description": "깻잎제육볶음, 국, 계란후라이, 튀김&전, 2가지 한식반찬, 김",
+      "category": "집밥 국반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/02f93c20-d6a6-4584-b4a5-71e13eff918a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000145"
+    },
+    {
+      "id": "ddangyo-1291776-30000232",
+      "name": "매콤 제육 쌈밥",
+      "description": "흑미밥, 제육볶음, 우렁강된장, 볶음김치, 계란말이, 쌈채소, 바지락미역국",
+      "category": "[NEW]제철 쌈밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/e7c8509b-447f-4b19-a3f0-396e3de66f8a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000232"
+    },
+    {
+      "id": "ddangyo-1291776-30000133",
+      "name": "본격도시락(스팸두부조림)",
+      "description": "스팸두부조림, 옛날소시지전, 흑미밥, 계란후라이, 한식반찬 3종, 바싹불고기, 제육볶음",
+      "category": "본격도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/b1c1bb9b-6199-4d47-80a8-c08efbbd8b34.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000133"
+    },
+    {
+      "id": "ddangyo-1291776-30000193",
+      "name": "아이스홍시",
+      "description": "",
+      "category": "음료디저트기타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000193"
+    },
+    {
+      "id": "ddangyo-1291776-30000183",
+      "name": "(추가) 귀리보리백미밥",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e3d1fdd3-b6b1-4d57-9dc2-fe80458bf9c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000183"
+    },
+    {
+      "id": "ddangyo-1291776-30000230",
+      "name": "[프리미엄] 매콤낙지 꽈리닭구이 한상",
+      "description": "매콤낙지볶음, 꽈리닭구이, 오색산적, 4가지 한식반찬, 김",
+      "category": "프리미엄 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/4274c3ef-5923-4cbd-a413-14a291589f74.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000230"
+    },
+    {
+      "id": "ddangyo-1291776-30000205",
+      "name": "(정식) 고추장 애호박찌개",
+      "description": "고추장 애호박찌개, 흑미밥+계란후라이, 기본 반찬 3종, 김",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/b8615326-2dfa-487d-a712-dada8e7c9b3a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000205"
+    },
+    {
+      "id": "ddangyo-1291776-30000194",
+      "name": "컵국(된장국)",
+      "description": "",
+      "category": "음료디저트기타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000194"
+    },
+    {
+      "id": "ddangyo-1291776-30000231",
+      "name": "[프리미엄] 매콤낙지 석갈비 한상",
+      "description": "매콤낙지볶음, 석갈비, 오색산적, 4가지 한식반찬, 김",
+      "category": "프리미엄 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/0a80a381-7527-4b3c-9f41-1ceb978ea2d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000231"
+    },
+    {
+      "id": "ddangyo-1291776-30000179",
+      "name": "특선 LA갈비구이 한정식",
+      "description": "LA갈비구이, 소불고기, 꼬막무침, 잡채, 냉채샐러드, 아이스홍시, 단호박식혜",
+      "category": "품격 한정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/f81b10f0-0b6b-42b0-bbe6-1dbb511aa3dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000179"
+    },
+    {
+      "id": "ddangyo-1291776-30000206",
+      "name": "(국+밥) 고추장 애호박찌개",
+      "description": "고추장 애호박찌개, 흑미밥+계란후라이",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/7cbfffdf-ec03-431d-aed0-8d984d30b49b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000206"
+    },
+    {
+      "id": "ddangyo-1291776-30000184",
+      "name": "(추가) 울릉도나물밥",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/29cce3f7-c992-4f81-9f55-551d3d4c2a00.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000184"
+    },
+    {
+      "id": "ddangyo-1291776-30000143",
+      "name": "[집밥] 바싹불고기 국반상",
+      "description": "바싹불고기, 국, 계란후라이, 튀김&전, 2가지 한식반찬, 김",
+      "category": "집밥 국반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/73e83aed-f356-49b3-83d2-08cb03b1c4b1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000143"
+    },
+    {
+      "id": "ddangyo-1291776-30000153",
+      "name": "[집밥] 바싹불고기 반상",
+      "description": "바싹불고기, 계란후라이, 튀김&전, 4가지 한식반찬",
+      "category": "집밥 반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/11f80d15-fbbc-4100-a444-0721a81c8829.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000153"
+    },
+    {
+      "id": "ddangyo-1291776-30000244",
+      "name": "직화 마늘석갈비 반상",
+      "description": "흑미밥, 직화 마늘석갈비, 삼채부추무침, 4가지 한식반찬",
+      "category": "여름 보양",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/5095c546-50ec-450f-b673-cdddc123da44.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000244"
+    },
+    {
+      "id": "ddangyo-1291776-30000134",
+      "name": "본격도시락(카츠, 전)",
+      "description": "돈까스, 오색산적, 해물파전, 흑미밥, 계란후라이, 한식반찬 3종, 바싹불고기, 제육볶음",
+      "category": "본격도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/03636ad6-91ca-4caa-b548-6b4c98a0f361.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000134"
+    },
+    {
+      "id": "ddangyo-1291776-30000237",
+      "name": "열무 두부강된장덮밥",
+      "description": "흑미밥, 두부강된장, 열무김치, 치커리",
+      "category": "[Healthy]건강 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/fd7ca742-f4c8-46ce-ba4d-055d196cb53f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000237"
+    },
+    {
+      "id": "ddangyo-1291776-30000114",
+      "name": "스크램블드에그 치킨마요",
+      "description": "스크램블드에그, 치킨마요, 스틱김자반",
+      "category": "별미 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/e4fd5b8b-fca4-48f3-9e5e-f72b191a12d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000114"
+    },
+    {
+      "id": "ddangyo-1291776-30000128",
+      "name": "토마토 칠리 함박 스프",
+      "description": "",
+      "category": "[스프] 프리미엄 Light도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/00f4bd20-355d-412c-b0e6-23f50f0e8ad5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000128"
+    },
+    {
+      "id": "ddangyo-1291776-30000136",
+      "name": "[집밥] 바싹불고기 숯불닭구이 한상",
+      "description": "바싹불고기, 숯불고추장닭구이, 오색산적, 4가지 한식반찬, 김",
+      "category": "집밥 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/b79f1575-60fd-4b29-9063-db47a7fe2238.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000136"
+    },
+    {
+      "id": "ddangyo-1291776-30000144",
+      "name": "[집밥] 숯불닭구이 국반상",
+      "description": "숯불고추장닭구이, 국, 계란후라이, 튀김&전, 2가지 한식반찬, 김",
+      "category": "집밥 국반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/1c77d9d2-5247-4d90-8148-989977b69398.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000144"
+    },
+    {
+      "id": "ddangyo-1291776-30000154",
+      "name": "[집밥] 숯불닭구이 반상",
+      "description": "숯불고추장닭구이, 계란후라이, 튀김&전, 4가지 한식반찬",
+      "category": "집밥 반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/75ecb393-99e5-47ed-9834-a86ff26cbf32.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000154"
+    },
+    {
+      "id": "ddangyo-1291776-30000176",
+      "name": "[프리미엄] 더덕 장어구이 바싹불고기 한상",
+      "description": "고추장 장어더덕구이, 바싹불고기, 오색산적, 4가지 한식반찬, 김",
+      "category": "프리미엄 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/270fdad6-b635-4e6a-a7c0-df51d39835a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000176"
+    },
+    {
+      "id": "ddangyo-1291776-30000180",
+      "name": "궁중 전복소갈비찜 한정식",
+      "description": "전복소갈비찜, 소불고기, 꼬막무침, 잡채, 냉채샐러드, 아이스홍시, 단호박식혜",
+      "category": "품격 한정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/e39553b4-8193-4039-b23f-6dab913421c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000180"
+    },
+    {
+      "id": "ddangyo-1291776-30000185",
+      "name": "스틱 김자반",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000185"
+    },
+    {
+      "id": "ddangyo-1291776-30000207",
+      "name": "(국) 고추장 애호박찌개",
+      "description": "",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/22141884-df68-4dc1-800a-3acd3b26cf55.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000207"
+    },
+    {
+      "id": "ddangyo-1291776-30000163",
+      "name": "(정식) 스팸김치찌개",
+      "description": "스팸 김치찌개, 흑미밥+계란후라이, 기본 반찬 3종, 김",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/b548c567-b26c-42b3-95ae-ea9cc5f13042.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000163"
+    },
+    {
+      "id": "ddangyo-1291776-30000115",
+      "name": "스크램블드에그 치킨마요(곱빼기)",
+      "description": "스크램블드에그, 치킨마요, 스틱김자반",
+      "category": "별미 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ada65aae-88b0-4af9-b2b2-b78caf63defd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000115"
+    },
+    {
+      "id": "ddangyo-1291776-30000117",
+      "name": "울릉도 나물 버섯영양밥",
+      "description": "울릉도나물밥, 버섯볶음, 삼채양념간장, 들기름",
+      "category": "[Healthy]건강 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/3ccfa933-fc1a-4e12-8fb1-4db349109719.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000117"
+    },
+    {
+      "id": "ddangyo-1291776-30000181",
+      "name": "보양 고추장 더덕 장어구이 한정식",
+      "description": "고추장 장어더덕구이, 꼬막무침, 소불고기, 잡채, 냉채샐러드, 아이스홍시, 단호박식혜",
+      "category": "품격 한정식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/7c0f893f-5ea1-44ac-8b53-857bc3fb4252.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000181"
+    },
+    {
+      "id": "ddangyo-1291776-30000196",
+      "name": "참고소한김",
+      "description": "",
+      "category": "음료디저트기타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000196"
+    },
+    {
+      "id": "ddangyo-1291776-30000155",
+      "name": "[집밥] 깻잎제육 반상",
+      "description": "깻잎제육볶음, 계란후라이, 튀김&전, 4가지 한식반찬",
+      "category": "집밥 반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/fe2904f9-3fc1-4d18-8049-a46d07a87e61.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000155"
+    },
+    {
+      "id": "ddangyo-1291776-30000186",
+      "name": "반달 돈까스(일회용 케찹 포함)",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000186"
+    },
+    {
+      "id": "ddangyo-1291776-30000137",
+      "name": "[집밥] 버섯소불고기 깻잎제육 한상",
+      "description": "버섯소불고기, 깻잎제육볶음, 오색산적, 4가지 한식반찬, 김",
+      "category": "집밥 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/20fe2f5a-a8f4-4722-8a5d-acc47a03671a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000137"
+    },
+    {
+      "id": "ddangyo-1291776-30000220",
+      "name": "[프리미엄] 울릉도 오징어 석갈비 한상",
+      "description": "울릉도나물밥, 오징어두루치기, 석갈비, 와사비 및 명이나물쌈, 4가지 한식반찬, 김",
+      "category": "프리미엄 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/c8891e17-5829-4cea-9a08-2e1f28413d89.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000220"
+    },
+    {
+      "id": "ddangyo-1291776-30000187",
+      "name": "흑미밥 추가",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000187"
+    },
+    {
+      "id": "ddangyo-1291776-30000138",
+      "name": "[집밥] 바싹불고기 여수꼬막무침 한상",
+      "description": "바싹불고기, 꼬막무침, 오색산적, 4가지 한식반찬, 김",
+      "category": "집밥 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/ce3627ba-9a82-4e51-b190-7609512a3570.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000138"
+    },
+    {
+      "id": "ddangyo-1291776-30000146",
+      "name": "[집밥] 꽈리닭구이 국반상",
+      "description": "꽈리닭구이, 국, 튀김&전, 2가지 한식반찬, 김",
+      "category": "집밥 국반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/16389f66-503e-4835-baf8-c1c805d85cfa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000146"
+    },
+    {
+      "id": "ddangyo-1291776-30000164",
+      "name": "(국+밥) 스팸김치찌개",
+      "description": "스팸 김치찌개, 흑미밥+계란후라이",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e595f12a-86aa-4a51-a905-cb0f19065a6c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000164"
+    },
+    {
+      "id": "ddangyo-1291776-30000156",
+      "name": "[집밥] 꽈리닭구이 반상",
+      "description": "꽈리닭구이, 튀김&전, 4가지 한식반찬",
+      "category": "집밥 반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f8d5788e-81ec-42a0-b5ba-d2f8917ea7d8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000156"
+    },
+    {
+      "id": "ddangyo-1291776-30000197",
+      "name": "단호박 식혜",
+      "description": "",
+      "category": "음료디저트기타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000197"
+    },
+    {
+      "id": "ddangyo-1291776-30000157",
+      "name": "[집밥] 버섯소불고기 반상",
+      "description": "버섯소불고기, 튀김&전, 4가지 한식반찬",
+      "category": "집밥 반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/7cb5b96b-01c6-49ab-87ed-a097fbcc2336.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000157"
+    },
+    {
+      "id": "ddangyo-1291776-30000165",
+      "name": "(국) 스팸김치찌개",
+      "description": "",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/ba917605-6e69-4a2e-842a-c504f6aa19f8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000165"
+    },
+    {
+      "id": "ddangyo-1291776-30000147",
+      "name": "[집밥] 버섯소불고기 국반상",
+      "description": "버섯소불고기, 국, 튀김&전, 2가지 한식반찬, 김",
+      "category": "집밥 국반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c08df9a5-4256-423b-bf82-73a33546c2ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000147"
+    },
+    {
+      "id": "ddangyo-1291776-30000116",
+      "name": "저염 스팸 김치볶음밥",
+      "description": "저염 스팸, 김치볶음밥, 계란후라이",
+      "category": "별미 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/9f3e3498-a24b-4501-9dba-cb92f6852a0f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000116"
+    },
+    {
+      "id": "ddangyo-1291776-30000198",
+      "name": "콜라",
+      "description": "",
+      "category": "음료디저트기타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000198"
+    },
+    {
+      "id": "ddangyo-1291776-30000139",
+      "name": "[집밥] 우삼겹된장찌개 제육 백반 한상",
+      "description": "우삼겹 된장찌개, 제육볶음, 스팸, 기본반찬, 스틱 김자반",
+      "category": "집밥 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/06472305-3c05-4899-ad3d-fe9c05d13c75.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000139"
+    },
+    {
+      "id": "ddangyo-1291776-30000140",
+      "name": "[집밥] 바싹불고기 오징어두루치기 한상",
+      "description": "바싹불고기, 오징어두루치기, 오색산적, 4가지 한식반찬, 김",
+      "category": "집밥 한상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/4ed11518-9f5f-4a4b-933f-d8cd70db0abc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000140"
+    },
+    {
+      "id": "ddangyo-1291776-30000121",
+      "name": "땅콩 닭강정",
+      "description": "",
+      "category": "별미 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/8f489d9d-92c8-40c4-97f4-9dbb0259f772.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000121"
+    },
+    {
+      "id": "ddangyo-1291776-30000166",
+      "name": "(정식) 우삼겹된장찌개",
+      "description": "우삼겹 된장찌개, 흑미밥+계란후라이, 기본 반찬 3종, 김",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/3ba5908a-9f69-40e8-b781-85c11f1f2a25.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000166"
+    },
+    {
+      "id": "ddangyo-1291776-30000149",
+      "name": "[집밥] 오징어두루치기 국반상",
+      "description": "오징어두루치기, 국, 튀김&전, 2가지 한식반찬, 김",
+      "category": "집밥 국반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/a169b863-01a2-477b-9578-d67ba21eee5a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000149"
+    },
+    {
+      "id": "ddangyo-1291776-30000199",
+      "name": "사이다",
+      "description": "",
+      "category": "음료디저트기타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000199"
+    },
+    {
+      "id": "ddangyo-1291776-30000159",
+      "name": "[집밥] 오징어두루치기 반상",
+      "description": "오징어두루치기, 튀김&전, 4가지 한식반찬",
+      "category": "집밥 반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/897ae587-f020-43f5-9a1c-470b22095213.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000159"
+    },
+    {
+      "id": "ddangyo-1291776-30000190",
+      "name": "핫윙콤보(윙+봉) 2조각",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000190"
+    },
+    {
+      "id": "ddangyo-1291776-30000167",
+      "name": "(국+밥) 우삼겹된장찌개",
+      "description": "우삼겹 된장찌개, 흑미밥+계란후라이",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/f325d277-bd50-423e-bd8b-a8c79345a99e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000167"
+    },
+    {
+      "id": "ddangyo-1291776-30000150",
+      "name": "[집밥] 수작돈까스 국반상",
+      "description": "등심돈까스, 국, 2가지 한식반찬, 김",
+      "category": "집밥 국반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/e46a5888-71af-4f11-b53d-161c3a2e4cb4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000150"
+    },
+    {
+      "id": "ddangyo-1291776-30000160",
+      "name": "[집밥] 수작돈까스 반상",
+      "description": "계란후라이 제공 제외",
+      "category": "집밥 반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/82ca0871-34e0-4f22-9e73-5df6246b105f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000160"
+    },
+    {
+      "id": "ddangyo-1291776-30000168",
+      "name": "(국) 우삼겹된장찌개",
+      "description": "",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/bc96936f-258e-48b1-86ec-cc6edd71f5d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000168"
+    },
+    {
+      "id": "ddangyo-1291776-30000152",
+      "name": "[집밥] 직화 떡갈비 국반상",
+      "description": "떡갈비, 국, 튀김&전, 2가지 한식반찬, 김",
+      "category": "집밥 국반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/15cc743d-3731-4916-af38-26b4de66d4e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000152"
+    },
+    {
+      "id": "ddangyo-1291776-30000162",
+      "name": "[집밥] 직화 떡갈비 반상",
+      "description": "계란후라이 제공 제외",
+      "category": "집밥 반상",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/eecf04a5-f75f-4b85-a778-075c037bcc08.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000162"
+    },
+    {
+      "id": "ddangyo-1291776-30000191",
+      "name": "계란후라이 추가",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000191"
+    },
+    {
+      "id": "ddangyo-1291776-30000192",
+      "name": "스팸 1조각 추가",
+      "description": "",
+      "category": "추가 메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000192"
+    },
+    {
+      "id": "ddangyo-1291776-30000202",
+      "name": "생수(330ml)",
+      "description": "",
+      "category": "음료디저트기타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000202"
+    },
+    {
+      "id": "ddangyo-1291776-30000217",
+      "name": "(정식) 바지락미역국",
+      "description": "바지락미역국, 흑미밥+계란후라이, 기본 반찬 3종, 김",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/4e4a34b2-c411-4d2c-a2a9-1b4730afe154.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000217"
+    },
+    {
+      "id": "ddangyo-1291776-30000218",
+      "name": "(국+밥) 바지락미역국",
+      "description": "바지락미역국, 흑미밥+계란후라이",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/23edfae2-2467-4b15-9a30-1d3df13cb061.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000218"
+    },
+    {
+      "id": "ddangyo-1291776-30000219",
+      "name": "(국) 바지락미역국",
+      "description": "",
+      "category": "찌개 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/a82ed701-6aad-404c-886e-d72d87bd78f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000219"
+    },
+    {
+      "id": "ddangyo-1291776-30000242",
+      "name": "[세트] 스프+한컵 닭가슴살 샐러드",
+      "description": "스프(택1)+한컵 닭가슴살샐러드+브리오슈 빵",
+      "category": "[스프] 프리미엄 Light도시락",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/32380c17-1b6d-4fb9-9131-9cf08b63c772.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000242"
+    },
+    {
+      "id": "ddangyo-1291776-30000233",
+      "name": "석갈비 쌈밥",
+      "description": "흑미밥, 석갈비, 우렁강된장, 볶음김치, 계란말이, 쌈채소, 바지락미역국",
+      "category": "[NEW]제철 쌈밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/fd935413-a0cb-4eec-8f6e-7990cba3728c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000233"
+    },
+    {
+      "id": "ddangyo-1291776-30000240",
+      "name": "매콤직화제육덮밥",
+      "description": "직화제육볶음, 깻잎채, 흑미밥, 김",
+      "category": "별미 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/b4cc0594-b730-40cf-83b6-557780e7dbb7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000240"
+    },
+    {
+      "id": "ddangyo-1291776-30000195",
+      "name": "컵국(미역국)",
+      "description": "",
+      "category": "음료디저트기타",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000195"
+    },
+    {
+      "id": "ddangyo-1291776-30000225",
+      "name": "우리땅 정선 곤드레도시락",
+      "description": "곤드레밥, 삼채양념간장, 그릴닭구이 샐러드, 오리엔탈소스",
+      "category": "[Healthy]건강 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/d21d8fb2-0f3c-4856-a325-2fee24e78316.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000225"
+    },
+    {
+      "id": "ddangyo-1291776-30000234",
+      "name": "바싹불고기 쌈밥",
+      "description": "흑미밥, 바싹불고기, 우렁강된장, 볶음김치, 계란말이, 쌈채소, 바지락미역국",
+      "category": "[NEW]제철 쌈밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/9436cf13-d5d1-4665-857e-aac086a0fdcb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000234"
+    },
+    {
+      "id": "ddangyo-1291776-30000235",
+      "name": "직화 떡갈비 쌈밥",
+      "description": "흑미밥, 직화 떡갈비, 우렁강된장, 볶음김치, 계란말이, 쌈채소, 바지락미역국",
+      "category": "[NEW]제철 쌈밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/c4f8c6ac-1f2b-41d1-b512-ee89d2d45274.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000235"
+    },
+    {
+      "id": "ddangyo-1291776-30000241",
+      "name": "스크램블드에그 참치마요",
+      "description": "스크램블드에그, 참치마요, 스틱김자반",
+      "category": "별미 집밥",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/463dadb8-9378-4b2f-8d9a-877e2c9ef392.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000241"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1291776",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?gwYCs67"
+    ],
+    "rawItemCount": 83,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

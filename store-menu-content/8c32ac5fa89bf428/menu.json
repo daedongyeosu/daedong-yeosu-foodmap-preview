@@ -1,0 +1,225 @@
+{
+  "storeId": "8c32ac5fa89bf428",
+  "storeName": "돈쌈푸드 대패",
+  "displayName": "돈쌈푸드 대패",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0402f571-3d48-4a2e-a360-3e29850e4829.jpg",
+  "categories": [
+    "전체",
+    "맛있는 세 녀석들",
+    "사이드메뉴",
+    "음료메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175144-10000001",
+      "name": "대패삼겹살",
+      "description": "콩나물파절이,보쌈김치,쌈장,기름장,새우젓,쌈무,마늘,콩나물국,고기바닥에양념,파절이",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/0402f571-3d48-4a2e-a360-3e29850e4829.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1175144-10000003",
+      "name": "김치대패삼겹살",
+      "description": "콩나물파절이,보쌈김치,쌈장,기름장,새우젓,쌈무,마늘,콩나물국,고기바닥에양념,파절이",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2a09b367-b3ac-4f20-9900-bb773b5d04bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1175144-10000002",
+      "name": "비계적은쪽 대패",
+      "description": "콩나물파절이,보쌈김치,쌈장,기름장,새우젓,쌈무,마늘,콩나물국,고기바닥에양념,파절이",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2a09b367-b3ac-4f20-9900-bb773b5d04bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1175144-10000004",
+      "name": "갈비맛 대패",
+      "description": "콩나물파절이,보쌈김치,쌈장,기름장,새우젓,쌈무,마늘,콩나물국,고기바닥에양념,파절이",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/b968d66b-a3f8-4a28-8888-052a8f1837d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1175144-10000005",
+      "name": "보쌈",
+      "description": "된장국,보쌈김치,쌈무,쌈채소(소/중1/대2)\n5구찬: 쌈장,마늘,새우,묵은지,명이나물",
+      "category": "맛있는 세 녀석들",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d6bd05da-4eae-4d21-991c-2582a5a1ada5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1175144-10000006",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/0e80d4a6-4a7d-4a42-888c-51c1465f1726.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1175144-10000020",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/10/c3479105-905d-4a67-b2d8-ab413dbabd5e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1175144-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1175144-10000007",
+      "name": "쟁반국수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/c9af6380-5ce2-4d33-9431-bda6a41b0132.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1175144-90000002",
+      "name": "카스 프레시(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1175144-10000008",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/8fa153d4-0122-4560-a6b3-d513ef5d9eff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1175144-10000009",
+      "name": "누룽지",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/08105645-8fb8-4f3e-90d2-1c97ef5b590d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1175144-10000010",
+      "name": "주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4bd095b8-ac43-41ea-adf1-d9630103641c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1175144-10000011",
+      "name": "김치 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1175144-10000012",
+      "name": "5구찬팩",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1175144-10000013",
+      "name": "콩나물파절이",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1175144-10000014",
+      "name": "상추추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1175144-10000015",
+      "name": "쌈무추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1175144-10000016",
+      "name": "쌈장",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1175144-10000017",
+      "name": "마늘",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1175144-10000018",
+      "name": "고추",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1175144-10000019",
+      "name": "된장찌개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/e4a2813e-9570-4bf6-ba32-3e20551c446f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175144",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?Svirsbs"
+    ],
+    "rawItemCount": 27,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

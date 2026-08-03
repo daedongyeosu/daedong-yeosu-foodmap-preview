@@ -1,0 +1,225 @@
+{
+  "storeId": "2416d3964c39d307",
+  "storeName": "선풍 백반&도시락",
+  "displayName": "선풍 백반&도시락",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/29dfc86e-a4ae-48f9-860a-26bcfc209a49.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "식사류",
+    "음료",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175673-10000004",
+      "name": "선풍 제육 백반",
+      "description": "반찬8가지이상과  밥 국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/988d76e0-9cb4-4ba7-9e4c-ec0548a12f15.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1175673-10000003",
+      "name": "선풍 고등어 백반",
+      "description": "기본반찬8이상과 밥 국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/490b132e-53a2-41f6-8c76-5ef04f5b65ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1175673-10000002",
+      "name": "얼큰동태탕백반",
+      "description": "반찬8가지이상",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/9e33529a-c180-4cb6-a33e-00b30664b987.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1175673-10000001",
+      "name": "돼지고기듬뿍 김치찌개",
+      "description": "김치찌개    반찬8가지이상 밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/81c140f4-c4f2-4326-b9c3-fc133d2d0fb6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1175673-10000012",
+      "name": "누룽지",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/08105645-8fb8-4f3e-90d2-1c97ef5b590d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1175673-10000015",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1175673-90000001",
+      "name": "진로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1175673-10000013",
+      "name": "공기밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/51718448-f639-4924-a508-0c1717b85c6e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1175673-10000016",
+      "name": "환타",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1175673-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1175673-10000014",
+      "name": "날치알 주먹밥",
+      "description": "",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/54a361ab-5b5f-4735-a07c-cf25b9077720.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1175673-10000017",
+      "name": "사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1175673-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1175673-90000004",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1175673-10000005",
+      "name": "선풍 소불고기 백반",
+      "description": "8가지이상의 반찬과 밥 국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/acbf158a-9f9d-4024-b79b-08b30ba265d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1175673-90000005",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1175673-10000006",
+      "name": "선풍 삼겹살구이 백반(200g)",
+      "description": "삼겹구이  기본찬4가지  쌈채소 고추  쌈장  밥 국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/c953d89e-b214-4fff-bbb7-e707731e8fb9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1175673-90000006",
+      "name": "참이슬 오리지널(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1175673-10000007",
+      "name": "매콤생오리주물럭백반",
+      "description": "반찬8가지이상 밥 국 쌈상추",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/353028c0-c3de-4fbb-9ae5-8977333a4c8c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1175673-10000008",
+      "name": "돌문어두루치기",
+      "description": "반찬8가지이상",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1175673-10000009",
+      "name": "참치김치찌개",
+      "description": "반찬8가지이상 밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/f5ce5a1e-91e4-4ff6-90f9-15ef667ad6a8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1175673-10000010",
+      "name": "매콤낙지볶음백반",
+      "description": "낙지볶음+반찬5가지+김가루밥  국    (3~4인메뉴는  밥 국 은 제공하지  않습니다)",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/df4af6c3-a367-408e-b66f-05ae01f57fa3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175673",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?AXNHYmq"
+    ],
+    "rawItemCount": 27,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

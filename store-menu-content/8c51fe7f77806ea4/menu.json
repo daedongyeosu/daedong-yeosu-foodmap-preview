@@ -1,0 +1,42 @@
+{
+  "storeId": "8c51fe7f77806ea4",
+  "storeName": "서녹씨",
+  "displayName": "서녹씨",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5b96e3fa-53a0-442b-858b-bcb7d274fa00.jpg",
+  "categories": [
+    "전체",
+    "메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1261406-10000001",
+      "name": "종합과일모찌 10p",
+      "description": "특허받은 컷팅모찌는 과일의 물러짐을 방지하며 과즙을 오래도록 유지시켜 신선함을 더해드립니다",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/92755ba0-4176-4be5-abfa-65b27ba873fa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1261406-10000002",
+      "name": "딸기모찌 10p",
+      "description": "특허받은 컷팅모찌는 과일의 물러짐을 방지하며 과즙을 오래도록 유지시켜 신선함을 더해드립니다",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/926e8c76-24a5-4bae-8ce3-14cc79c6c8e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1261406",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?bEX5e3r"
+    ],
+    "rawItemCount": 4,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

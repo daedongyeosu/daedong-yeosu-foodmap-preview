@@ -1,0 +1,354 @@
+{
+  "storeId": "5b252f9e739fb272",
+  "storeName": "김여사네 반찬가게",
+  "displayName": "김여사네 반찬가게",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f14e9d6c-f7a8-4c75-8466-1e7535cbca17.jpg",
+  "categories": [
+    "전체",
+    "김치류",
+    "조림류",
+    "나물류",
+    "젓갈류",
+    "국물 종류",
+    "볶음류",
+    "그외 반찬"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1320835-10000001",
+      "name": "배추포기김치",
+      "description": "",
+      "category": "김치류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/29fb66c8-e89d-4dd5-a9ec-2ecca60f26c5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1320835-10000014",
+      "name": "돼지고기 메추리알 장조림",
+      "description": "1개 남음",
+      "category": "조림류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/cb59c071-439b-4397-9f0a-e49a6d7f394f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1320835-10000004",
+      "name": "콩나물",
+      "description": "",
+      "category": "나물류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0632d221-a65d-4335-8812-abd9c7e4c3e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1320835-10000008",
+      "name": "갈치속젓[사이즈업]",
+      "description": "",
+      "category": "젓갈류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1320835-10000010",
+      "name": "우거지 된장국",
+      "description": "",
+      "category": "국물 종류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1320835-10000017",
+      "name": "진미채",
+      "description": "",
+      "category": "볶음류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/9e06225e-f7fd-41d8-8d46-b24fda6eaf32.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1320835-10000025",
+      "name": "달걀말이",
+      "description": "",
+      "category": "그외 반찬",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1320835-10000018",
+      "name": "명엽채 볶음",
+      "description": "",
+      "category": "볶음류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1320835-10000006",
+      "name": "오이들깨나물",
+      "description": "",
+      "category": "나물류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1320835-10000019",
+      "name": "꽈리고추멸치볶음",
+      "description": "",
+      "category": "볶음류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1320835-10000027",
+      "name": "양념 두부부침",
+      "description": "",
+      "category": "그외 반찬",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1320835-10000032",
+      "name": "들깨 우거지국",
+      "description": "",
+      "category": "국물 종류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1320835-10000007",
+      "name": "무나물",
+      "description": "",
+      "category": "나물류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1320835-10000016",
+      "name": "연근조림",
+      "description": "",
+      "category": "조림류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/3afeb53c-26d7-4712-a7e8-d88f413ca2ea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1320835-10000020",
+      "name": "콩자반",
+      "description": "",
+      "category": "볶음류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/6adf3273-567d-4108-a6a3-382033d97ce5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1320835-10000045",
+      "name": "콩나물국",
+      "description": "",
+      "category": "국물 종류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1320835-10000022",
+      "name": "잔멸치볶음",
+      "description": "",
+      "category": "볶음류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1320835-10000023",
+      "name": "빨간오뎅볶음",
+      "description": "1개 남음",
+      "category": "볶음류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1320835-10000035",
+      "name": "숙주나물",
+      "description": "",
+      "category": "나물류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1320835-10000033",
+      "name": "고추장 잔멸치 볶음",
+      "description": "",
+      "category": "볶음류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1320835-10000039",
+      "name": "가지나물",
+      "description": "",
+      "category": "나물류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1320835-10000043",
+      "name": "애호박나물",
+      "description": "",
+      "category": "나물류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1320835-10000002",
+      "name": "파김치",
+      "description": "",
+      "category": "김치류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/a09a6149-3ae0-4650-9aab-c91baf6139eb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1320835-10000011",
+      "name": "소고기 미역국",
+      "description": "",
+      "category": "국물 종류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/7f931a38-979a-419f-822c-c754c8760fa2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1320835-10000026",
+      "name": "잡채",
+      "description": "소고기와 버섯이 들어갔어요~",
+      "category": "그외 반찬",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1320835-10000003",
+      "name": "채김치",
+      "description": "",
+      "category": "김치류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1320835-10000015",
+      "name": "햄 메추리알 장조림",
+      "description": "",
+      "category": "조림류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1320835-10000028",
+      "name": "알타리",
+      "description": "",
+      "category": "김치류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/10395daa-c492-4a87-89e1-8b0ebf0a9496.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1320835-10000029",
+      "name": "깍두기",
+      "description": "",
+      "category": "김치류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/1f85cfb7-e85a-4c9b-aaca-d4323156581a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1320835-10000030",
+      "name": "들깨  고구마순나물",
+      "description": "",
+      "category": "나물류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1320835-10000031",
+      "name": "들깨 토란대 나물",
+      "description": "",
+      "category": "나물류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1320835-10000048",
+      "name": "갓김치",
+      "description": "",
+      "category": "김치류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1320835-10000024",
+      "name": "소세지 야채 볶음",
+      "description": "",
+      "category": "볶음류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1320835-10000034",
+      "name": "미역줄기 볶음",
+      "description": "",
+      "category": "볶음류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1320835-10000050",
+      "name": "아귀포",
+      "description": "",
+      "category": "볶음류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1320835-10000042",
+      "name": "들깨머위나물",
+      "description": "",
+      "category": "나물류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1320835",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?iOeOi5g"
+    ],
+    "rawItemCount": 38,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

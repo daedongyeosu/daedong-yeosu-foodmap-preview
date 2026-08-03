@@ -1,0 +1,788 @@
+{
+  "storeId": "0df82efd8bc517c7",
+  "storeName": "덮밥석쇠구이 여수점",
+  "displayName": "덮밥석쇠구이 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9d2b53cf-f83d-4235-819f-ee938fa32611.jpg",
+  "categories": [
+    "전체",
+    "식사메뉴",
+    "덮밥플러스1.6인분",
+    "100세 시대 건강 관리 필수",
+    "싸이드메뉴",
+    "꼬마김밥(우량아)&히라끼탕",
+    "커피 리스또레또 더블샷",
+    "과일에이드",
+    "과일주스",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1214483-10000022",
+      "name": "숯불제육덮밥(석쇠 구이 방식)",
+      "description": "불향 가득 석쇠 구이 숯불제육덮밥 제발비비지마시고 밥에올려드세요",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/48d1ae3d-f5ea-406c-a994-e6b460ffdb57.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1214483-10000024",
+      "name": "참숯 닭갈비덮밥(석쇠 구이 방식)",
+      "description": "매콤한 특제 소스와 부드러운 닭고기살이 잘 어울러진 닭갈비 덮밥 제발비비지마시고 밥에올려드세요",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/53e81362-6ee5-4602-925b-4a0ac1d8aad3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1214483-10000026",
+      "name": "민물 한마리 장어덮밥",
+      "description": "놀라지 마세요 )0( 민물장어 통째로 1마리가 들어간 고단백 장어덮밥 펄펄뛰는민물장어 통째로 1마리",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3ad4dbec-762b-4928-958c-ee63a6018c91.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1214483-10000033",
+      "name": "엄마 김치볶음밥 해줘+조미김",
+      "description": "김치볶음밥 + 히라끼탕 小+ 조미김",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d76abab7-127a-41af-8cc9-e60daedc4ca4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1214483-10000003",
+      "name": "제육덮밥+사누끼우동",
+      "description": "석쇠 구이 방식 + 사누끼 우동 석쇠불맛제육과 사누끼우동의 절묘한 조화로 완벽한 한끼 (넉넉한양1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9d2b53cf-f83d-4235-819f-ee938fa32611.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1214483-10000035",
+      "name": "오늘 하루 견과류 챙기셨나요",
+      "description": "하루 견과류 한팩이 가져다 주는 효과는 엄청나다는거 알고 계셨나요",
+      "category": "100세 시대 건강 관리 필수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1214483-10000036",
+      "name": "모듬튀김",
+      "description": "엑스트라 올리브 오일로 튀긴 각기 다른 명품 모듬 튀김",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5e0fa848-3576-4857-b6b5-5da8d5174fc2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1214483-10000055",
+      "name": "히라끼탕",
+      "description": "탕을캔에넣어드려요",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5f9dcefc-28a9-4da4-9924-496a1e5def7a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1214483-10000068",
+      "name": "커피 핫",
+      "description": "리스또레또 더블샷",
+      "category": "커피 리스또레또 더블샷",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9f017a91-5fe0-4ae4-9bd4-eb32d839c818.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    },
+    {
+      "id": "ddangyo-1214483-10000071",
+      "name": "제로무설탕 생레몬탄산수",
+      "description": "신선한 레몬+무설탕 톡톡탄산수",
+      "category": "과일에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6ee3f23d-860e-4685-9a12-93967aa91561.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1214483-10000077",
+      "name": "생자몽주스",
+      "description": "플로리다 자몽의 깊은 맛\n맛과 향이 최고",
+      "category": "과일주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d500e889-83ad-496d-9668-12b7600ca27b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000077"
+    },
+    {
+      "id": "ddangyo-1214483-10000082",
+      "name": "딸기 라떼",
+      "description": "과육 듬뿍 찐~한 딸기 라떼",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000082"
+    },
+    {
+      "id": "ddangyo-1214483-10000004",
+      "name": "참숯돼지불고기덮밥 도시락 +사누끼우동",
+      "description": "석쇠불맛 돼지불고기와 사누끼우동의 절묘한 조화로 완벽한 한끼 (넉넉한양1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/87c1df5f-0399-4273-b530-bca9a5ac833d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1214483-10000023",
+      "name": "참숯 돼지불고기덮밥(석쇠구이방식)",
+      "description": "한국인 입맛에 딱 맞는 석쇠 구이 불맛 가득 돼지불고기덮밥 제발비비지마시고 밥에올려드세요",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6929de1d-c49e-4782-8a88-5f1cfb5b4802.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1214483-10000037",
+      "name": "찐탱이 찰순대",
+      "description": "금산에서 직송 진한 명품 찰순대 (간, 내장X)",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/690adfab-d784-4ac1-8f68-db8e88d39462.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1214483-10000056",
+      "name": "자연야채꼬마김밥3개",
+      "description": "속다채웠으니나도이제으~른이다",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/87d53388-7c08-4ddd-b9ea-c3954b020519.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1214483-10000069",
+      "name": "커피 아이스",
+      "description": "리스또레또 더블샷",
+      "category": "커피 리스또레또 더블샷",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9fb7e3fa-9468-4854-83ab-54f00e0caed1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1214483-10000072",
+      "name": "생자몽에이드",
+      "description": "신선한 생 자몽+톡톡탄산수",
+      "category": "과일에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/e7c273c5-cd64-4690-9cbe-b1608e5eab52.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000072"
+    },
+    {
+      "id": "ddangyo-1214483-10000078",
+      "name": "생레몬주스",
+      "description": "순수한 레몬과 미네랄워터로 만든 해독디톡스 워터",
+      "category": "과일주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/090e44e1-a67f-4d96-9e95-46a7cab348f8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000078"
+    },
+    {
+      "id": "ddangyo-1214483-10000083",
+      "name": "제주유기농 말차 라떼",
+      "description": "제주 유기농 푸른 녹차와 신선한 우유로 만든 수제 말차",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000083"
+    },
+    {
+      "id": "ddangyo-1214483-10000005",
+      "name": "참숯 닭갈비덮밥 도시락+사누끼 우동",
+      "description": "석쇠불맛 닭갈비와 사누끼우동의 절묘한 조화로 완벽한 한끼 (넉넉한양1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1214483-10000038",
+      "name": "쭈꾸미 순대볶음",
+      "description": "쭈꾸미와순대의만남(매움주의보)",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/630d830a-53b3-4fe5-81d5-bbd426078a18.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1214483-10000057",
+      "name": "바다참치꼬마김밥3개",
+      "description": "속다채웠으니나도이제으~른이다",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d06e3fc5-db2e-4b22-af0a-4d302a102f82.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1214483-10000070",
+      "name": "내일의 커피 아이스",
+      "description": "냉장보관하셨다가 얼음+물 가득넣어서 드세요 일리 원두리스또레또 2샷",
+      "category": "커피 리스또레또 더블샷",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f2ee3b88-a67e-40f4-acd6-922fc12eed86.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000070"
+    },
+    {
+      "id": "ddangyo-1214483-10000073",
+      "name": "생레몬에이드",
+      "description": "신선한 레몬+톡톡탄산수",
+      "category": "과일에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0698e781-e232-428d-a153-bee8aaa79b92.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000073"
+    },
+    {
+      "id": "ddangyo-1214483-10000079",
+      "name": "딸기주스",
+      "description": "딸기라씨 팡팡 톡톡",
+      "category": "과일주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/617cca1a-acf6-40b3-9c3e-0b299a1c17d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1214483-10000084",
+      "name": "복숭아 아이스티",
+      "description": "싱그러운 그 맛 복숭아맛 아이스티",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1214483-10000006",
+      "name": "불쭈꾸미덮밥+사누끼우동",
+      "description": "매움주위보 쭈꾸미 + 사누끼 우동 전국팔도 쭈꾸미 맛집 평정 ,  불맛 매운 쭈꾸미 덮밥과 사누끼 우동의 절묘한 조화 (넉넉한 양 1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/95a9d996-f8ce-4458-9f21-a0467b489f95.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1214483-10000025",
+      "name": "불쭈꾸미덮밥(매움주의보)",
+      "description": "매콤한 수제 양념에 탱글탱글한 쭈꾸미의 콜라보~ 중독되는 쭈꾸미덮밥 제발비비지마시고 밥에올려드세요",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/eba4c785-b9e4-4973-8754-6f818a35d6ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1214483-10000039",
+      "name": "쭈꾸미내장볶음",
+      "description": "쭈꾸미+생대파+버섯+양배추+양파+순대내장",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/527db244-fe38-4af4-9d69-67a42d378014.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1214483-10000058",
+      "name": "생청양마요꼬마김밥",
+      "description": "생청양고추와참치듬뿍",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/decdbb1e-d42e-4cdf-a61a-cf98acd9329a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1214483-10000074",
+      "name": "딸기에이드",
+      "description": "신선한 생 딸기+톡톡탄산수",
+      "category": "과일에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/b2c75b32-2353-4f82-a03c-77aa0f421d4c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000074"
+    },
+    {
+      "id": "ddangyo-1214483-10000080",
+      "name": "블루베리주스",
+      "description": "향이 멀리 퍼져나갈 블루베리",
+      "category": "과일주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/765efb31-81c2-4644-ae04-d5efc4d74470.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1214483-10000085",
+      "name": "아샷추",
+      "description": "싱그러운 그 맛 복숭아맛 아이스티",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1214483-10000007",
+      "name": "민물한마리 장어덮밥+사누끼우동",
+      "description": "민물장어 통 1마리 + 사누끼 우동 팔딱팔딱 민물 통장어 한마리 덮밥과 사누끼 우동의 절묘한 조화 (1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6b778f48-4374-4d0d-84b3-a3b9f9556c56.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1214483-10000040",
+      "name": "쭈꾸미 삼겹살 볶음",
+      "description": "쭈꾸미+생대파+버섯+양배추+양파+삼겹살",
+      "category": "싸이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1214483-10000059",
+      "name": "쓰리콤보참치청양마요야채",
+      "description": "세가지맛을한번에",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1214483-10000075",
+      "name": "블루베리에이드",
+      "description": "신선한 섕 블루베리+톡톡탄산수",
+      "category": "과일에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1cba9c0e-a525-4c82-82cc-6f540e177ddd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000075"
+    },
+    {
+      "id": "ddangyo-1214483-10000081",
+      "name": "애플망고주스",
+      "description": "망고를 좋아하시는 분들께 강추\n애플망고를 씁니다.",
+      "category": "과일주스",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a2d29ec7-deac-4fde-ade9-47eed3a2fcc3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000081"
+    },
+    {
+      "id": "ddangyo-1214483-10000086",
+      "name": "붓기차",
+      "description": "아이돌이 메이크업 전 붓기 빼기 위해 마시는 차 얼굴 붓기 완전 최고 (얼굴 반쪽되니 조심하세요)",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1214483-10000008",
+      "name": "김치햄볶음밥+히루이루식냉소바",
+      "description": "울 엄마가 해준 김치볶음밥 그 맛 그대로(1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3498e141-9873-44c3-9960-bd80dae83795.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1214483-10000027",
+      "name": "냉소바 자연 사랑방식",
+      "description": "전통 냉소바",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c67f25f0-b6ce-47c9-a58e-e5c1cbab3da0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1214483-10000041",
+      "name": "쭈꾸미우동볶음",
+      "description": "쭈꾸미+생대파+버섯+양배추+양파+우동",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1309bf55-6f99-40f1-8c9c-f8a3a762052c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1214483-10000060",
+      "name": "반반 참치2 야채2 꼬마김밥",
+      "description": "속다채웠으니나도이제으~른이다",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/38195262-04bf-40a5-ab94-4a02d589e3af.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1214483-10000076",
+      "name": "애플망고에이드",
+      "description": "신선한 생 애플망고+톡톡탄산수",
+      "category": "과일에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/283b79c7-304b-437e-b7da-76cd21f8e934.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000076"
+    },
+    {
+      "id": "ddangyo-1214483-10000009",
+      "name": "김치햄볶음밥+히루이루식냉우동",
+      "description": "울 엄마가 해준 김치볶음밥 그 맛 그대로(1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/3307116b-a019-439e-870d-814e25b99b31.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1214483-10000028",
+      "name": "판소바 자연 사랑방식",
+      "description": "전통 판소바",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/0297a790-a0bc-4237-920a-238870d9abc4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1214483-10000042",
+      "name": "쭈꾸미 야채볶음밥",
+      "description": "쭈꾸미+생대파+버섯+양배추+양파+야채볶음밥",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/49621435-6408-42b7-86a6-a0c7f601c217.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1214483-10000061",
+      "name": "히라끼탕+자연야채꼬마김밥3개",
+      "description": "여행갈때 간편하게",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000061"
+    },
+    {
+      "id": "ddangyo-1214483-10000010",
+      "name": "김치햄볶음밥+히루이루식우동",
+      "description": "울 엄마가 해준 김치볶음밥 그 맛 그대로(1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f9305029-0eab-442f-b35b-2e29eef7ddfc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1214483-10000029",
+      "name": "유부유부 우동",
+      "description": "정통 우동\n매일 매일 신선한 생 야채를 사용해서 육수 사용",
+      "category": "식사메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1214483-10000043",
+      "name": "고급순대내장만",
+      "description": "소금은 기본으로 3개 나가요",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/5c411d8f-8af9-48c3-aead-391fb4cbcca9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1214483-10000062",
+      "name": "히라끼탕+바다참치꼬마김밥3개",
+      "description": "차에서도 간편하게",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1214483-10000011",
+      "name": "김치햄볶음밥+히루이루식판모밀",
+      "description": "울 엄마가 해준 김치볶음밥 그 맛 그대로(1쩜4인분)",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/020ff160-b787-43f1-a335-2f323364c0bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1214483-10000030",
+      "name": "자연튀김 우동",
+      "description": "자연사랑방식 튀김 우동\n매일 매일 신선한 생 야채를 사용해서 육수 사용",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1d2eeaa4-ecf8-4a53-9d65-0a23a0cfcd32.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1214483-10000044",
+      "name": "유부어묵탕",
+      "description": "복주머니 유부 어묵 탕탕탕 진한 야채육수 사용",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/fd218ea1-e624-4654-8d50-3178445ce137.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1214483-10000063",
+      "name": "히라끼탕+반반 참치2야채2 꼬마김밥",
+      "description": "탕을 캔에 너어드려요",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000063"
+    },
+    {
+      "id": "ddangyo-1214483-10000012",
+      "name": "꼬마떡갈비+히루이루식냉소바",
+      "description": "한입 쏙 꼬마 떡갈비~",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6a51e9d8-f190-480f-a846-a0c2f60250e3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1214483-10000031",
+      "name": "태평양어묵 우동",
+      "description": "야마이루식 정통 태평양 어묵 우동\n어묵의 깊은 맛이 베어 한층 더 고급스러운 맛",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d04af558-e5ba-4e30-9854-dc4c8ee5640c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1214483-10000045",
+      "name": "맥주안주쥐포튀김땅콩",
+      "description": "땅콩은써비스입니당",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/ee56ac08-5342-4c14-bc64-97865be68b17.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1214483-10000064",
+      "name": "히라끼탕+자연야채꼬마김밥3개+음료",
+      "description": "여행갈때 간편하게",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000064"
+    },
+    {
+      "id": "ddangyo-1214483-10000013",
+      "name": "꼬마떡갈비+히루이루식냉우동",
+      "description": "한입 쏙 꼬마 떡갈비~",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/32fe69bf-0b70-4a17-a9a0-f8c554990c58.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1214483-10000032",
+      "name": "고래 왕새우 볶음밥",
+      "description": "전국 팔도 중국집 평정 왕새우 볶음밥",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a0688223-c961-4aca-9804-33fd2d93d96d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1214483-10000046",
+      "name": "체다로제떡볶이",
+      "description": "강남지역 1600 가게중 로제부문 탑 1위",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c0422657-054a-46ed-9eb8-f5a2ee449a2f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1214483-10000065",
+      "name": "히라끼탕+바다참치꼬마김밥3개+음료",
+      "description": "차에서도 간편하게",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1214483-10000014",
+      "name": "꼬마떡갈비+히루이루식우동",
+      "description": "한입 쏙 꼬마 떡갈비~",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/dedcd94b-d5f6-4539-a4f0-3d63a936e4a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1214483-10000047",
+      "name": "국민학교떡볶이 2인",
+      "description": "칼짚쏙쏙 밀떡+부산어묵+생대파+메추리알+비엔나+중국당면+소스(자유토핑:치즈,메추리알,비엔나,통대파 등을 내맘대로)",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/1cfb2994-6dac-4323-9424-7e27e80d4fad.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1214483-10000066",
+      "name": "히라끼탕+반반 참치2 야채2 꼬마김밥+음료",
+      "description": "탕을 캔에 너어드려요",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1214483-10000015",
+      "name": "꼬마떡갈비+히루이루식판모밀",
+      "description": "한입 쏙 꼬마 떡갈비~",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/9ce9eabe-6631-4dda-b754-3cb0d37c6e6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1214483-10000034",
+      "name": "삼겹살 김치볶음밥+조미김",
+      "description": "삽겹살 김치볶음밥 + 히라끼탕 小+ 조미김",
+      "category": "식사메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/601ba2c6-754b-4c5a-9c7c-b003a2eae330.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1214483-10000048",
+      "name": "우삼겹양지떡볶이",
+      "description": "칼집 쏙쏙 + 어묵 + 추리추리알 + 육즙가득 비엔나 + 직화불맛 차돌바이 + 생대파 + 소스",
+      "category": "싸이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1214483-10000067",
+      "name": "[신메뉴]불폭탄오뎅야채김밥",
+      "description": "",
+      "category": "꼬마김밥(우량아)&히라끼탕",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    },
+    {
+      "id": "ddangyo-1214483-10000016",
+      "name": "돈까스+히루이루식냉소바",
+      "description": "울 엄마가 튀겨주는 그 맛 두툼 돈까스",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/665eb7c5-5e74-485b-9d8f-5d1654ee711f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1214483-10000049",
+      "name": "팝콘오징어",
+      "description": "오징어를 먹기 좋게 팝콘 볼 처럼 잘라서 튀긴 팝콘오징어.",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/bc72043f-e11b-4c40-be70-245d2ca3af45.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1214483-10000017",
+      "name": "돈까스+히루이루식냉우동",
+      "description": "울 엄마가 튀겨주는 그 맛 두툼 돈까스",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/f2d8cbd9-662c-46ef-a177-942756af6522.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1214483-10000050",
+      "name": "왕새우튀김 4개",
+      "description": "시간이 지나도 빠삭한 왕새우 통 네마리",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/2bf5d386-4d43-4459-9360-9e28e32a1cb6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1214483-10000018",
+      "name": "돈까스+히루이루식우동",
+      "description": "울 엄마가 튀겨주는 그 맛 두툼 돈까스",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/6131e91a-a8e3-4526-8a74-b70741c4b435.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1214483-10000051",
+      "name": "버팔로윙 6개 + 꼬꼬마감자 8개",
+      "description": "닭날개 치킨과 꼬꼬마감자의 만남",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d3e0ef86-4c9b-47f1-ab27-fc6f4c744884.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1214483-10000019",
+      "name": "돈까스+히루이루식판소바",
+      "description": "울 엄마가 튀겨주는 그 맛 두툼 돈까스",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d3e052b7-2b46-4eb0-9c2d-6f1b7e3a3094.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1214483-10000052",
+      "name": "돈까스1장+특제소스",
+      "description": "두툼 울 엄마표 돈까스",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/c3e705c4-936b-477d-98bf-ba1bf9def312.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1214483-10000020",
+      "name": "왕새우볶음밥+히루이루식우동",
+      "description": "전국 팔도 중국집 평정 왕새우 볶음밥",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/73dcfed5-1e5d-4a7d-bdd6-66be0ecf0353.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1214483-10000053",
+      "name": "꼬마떡갈비",
+      "description": "한입 쏙 꼬마떡갈비",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/a5ca305e-2978-42eb-9b94-d61716561816.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1214483-10000021",
+      "name": "왕새우볶음밥+이루이루식판소바",
+      "description": "전국 팔도 중국집 평정 왕새우 볶음밥",
+      "category": "덮밥플러스1.6인분",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d276fea9-8c16-47d3-8913-e143562d60de.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1214483-10000054",
+      "name": "싱싱단무지",
+      "description": "싱싱하고 아삭한 단무지",
+      "category": "싸이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/04/d10c0ea5-5240-482c-a007-4b986a6b5736.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1214483",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?Oqn1EhH"
+    ],
+    "rawItemCount": 89,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

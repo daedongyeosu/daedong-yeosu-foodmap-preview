@@ -1,0 +1,271 @@
+{
+  "storeId": "c5a259f200dbcded",
+  "storeName": "참쪽갈비 여수점",
+  "displayName": "참쪽갈비 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/73d97337-82a7-49e3-b314-f54dcf0db80a.jpg",
+  "categories": [
+    "전체",
+    "단품메뉴 추천사이즈",
+    "SET 메뉴 추천사이즈",
+    "반반메뉴 추천사이즈",
+    "사이드메뉴",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1304304-10000001",
+      "name": "1인 쪽갈비",
+      "description": "쪽갈비 + 양파짱아찌+ 2종소스",
+      "category": "단품메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e1a5af98-ee0f-449f-8c3f-8c70607cee48.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1304304-10000002",
+      "name": "생쪽갈비(등갈비)",
+      "description": "쪽갈비 +양파짱아찌 + 2종소스",
+      "category": "단품메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d706e444-b921-4a3d-8f61-3646c9d94ea0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1304304-10000003",
+      "name": "양념쪽갈비(등갈비)",
+      "description": "쪽갈비 + 양파짱아찌 + 2종소스 (김치정도의맵기)",
+      "category": "단품메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e410dff7-bbc8-42ed-a0b7-40516eada888.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1304304-10000004",
+      "name": "매운쪽갈비(등갈비)",
+      "description": "쪽갈비 +양파짱아찌 + 2종소스",
+      "category": "단품메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5a6741ec-d109-45d5-95c4-f9b720df591e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1304304-10000005",
+      "name": "간장쪽갈비(등갈비)",
+      "description": "쪽갈비 + 양파짱아찌 + 2종소스",
+      "category": "단품메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/b158c954-bf17-46f4-8f03-823f546d5178.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1304304-10000006",
+      "name": "불쪽갈비(등갈비)",
+      "description": "쪽갈비 + 양파짱아찌 + 2종소스",
+      "category": "단품메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/c9455300-2304-4971-97c0-72dff273ea9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1304304-10000007",
+      "name": "1인 쪽갈비 SET",
+      "description": "쪽갈비(등갈비) + 주먹밥 +김치부침개 +양파짱아찌 + 2종소스",
+      "category": "SET 메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e1a5af98-ee0f-449f-8c3f-8c70607cee48.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1304304-10000014",
+      "name": "반반쪽갈비(등갈비)",
+      "description": "쪽갈비 + 양파짱아찌 + 2종소스",
+      "category": "반반메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/ab0f08a0-6bca-4e1b-8bde-6e83d105b125.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1304304-10000015",
+      "name": "날치알주먹밥",
+      "description": "밥 + 날치알 + 김가루 + 단무지",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/182cffba-caec-41b4-9056-c903268de43f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1304304-10000022",
+      "name": "코카콜라 500ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c54d7365-c0e3-44c5-b94f-1c168336ae42.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1304304-10000008",
+      "name": "생쪽갈비(등갈비) SET",
+      "description": "쪽갈비(등갈비) + 주먹밥 + 김치부침개+ 양파짱아찌 + 2종소스",
+      "category": "SET 메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/d706e444-b921-4a3d-8f61-3646c9d94ea0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1304304-10000016",
+      "name": "양파짱아찌",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1304304-10000023",
+      "name": "코카콜라 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/3a46b8d5-2494-42a8-b312-a5e8e1d29d40.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1304304-10000009",
+      "name": "양념쪽갈비(등갈비) SET",
+      "description": "양념쪽갈비(등갈비) + 주먹밥 +김치부침개 + 양파짱아찌 + 2종소스",
+      "category": "SET 메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/e410dff7-bbc8-42ed-a0b7-40516eada888.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1304304-10000017",
+      "name": "공기밥",
+      "description": "대한민국 사람은 밥심입니다 :)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/e527f16a-06f0-4f1e-b0d3-9e8007175480.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1304304-10000024",
+      "name": "스프라이트 500ML",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1d885a03-5c62-4fd8-bba5-292f61d9a8ff.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1304304-10000010",
+      "name": "매운쪽갈비(등갈비) SET",
+      "description": "매운쪽갈비(등갈비) + 주먹밥 + 양파짱아찌 + 2종소스",
+      "category": "SET 메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5a6741ec-d109-45d5-95c4-f9b720df591e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1304304-10000018",
+      "name": "불쪽, 데리야끼 소스 (2종)",
+      "description": "소스 2종 (불쪽,데리야끼)",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1304304-10000025",
+      "name": "스프라이트 1.25L",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/51eef803-741b-4650-bb3e-d98c6f34de7d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1304304-10000011",
+      "name": "간장쪽갈비(등갈비) SET",
+      "description": "간장쪽갈비(등갈비) + 주먹밥 + 김치부침개+ 양파짱아찌 + 2종소스",
+      "category": "SET 메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/b158c954-bf17-46f4-8f03-823f546d5178.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1304304-10000019",
+      "name": "후리카케 주먹밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/b03bdd35-c682-4fc2-9d22-e12437037bac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1304304-10000026",
+      "name": "환타파인맛 355ML",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1304304-10000012",
+      "name": "불쪽갈비(등갈비) SET",
+      "description": "불쪽갈비(등갈비) + 주먹밥 + 김치부침개 + 양파짱아찌 + 2종소스",
+      "category": "SET 메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/c9455300-2304-4971-97c0-72dff273ea9b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1304304-10000020",
+      "name": "과일숙성메밀막국수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/2148d793-f7dd-40bb-93ae-f9ac0f93b4bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1304304-10000027",
+      "name": "식혜",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1304304-10000013",
+      "name": "쪽갈비 반반 SET",
+      "description": "쪽갈비(등갈비) + 주먹밥 + 김치부침개+ 양파짱아찌 + 2종소스",
+      "category": "SET 메뉴 추천사이즈",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/f18a7a3a-1d92-4388-bbb1-a4b5d39d19ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1304304-10000021",
+      "name": "들깨메밀막국수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1304304",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?rb3hYeb"
+    ],
+    "rawItemCount": 33,
+    "duplicateItemsRemoved": 6
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

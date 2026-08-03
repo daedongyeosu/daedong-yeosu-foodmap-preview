@@ -1,0 +1,179 @@
+{
+  "storeId": "f79b0a88e15c5788",
+  "storeName": "봉여사 아구&뽈찜",
+  "displayName": "봉여사 아구&뽈찜",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3199f6b8-f245-43d1-9cc1-38efe757869e.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "사이드메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1190358-10000002",
+      "name": "[찐단골] 원조아구찜",
+      "description": "뼈+살+콩나물+미나리+오만둥이+계란탕+국산백 김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3199f6b8-f245-43d1-9cc1-38efe757869e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1190358-10000003",
+      "name": "[인기추천] 아구섞어찜",
+      "description": "뼈+살+콩나물+미나리+오만둥이+계란탕+국산백김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/e4b2f31a-8871-4049-9820-b74684eb9d97.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1190358-10000004",
+      "name": "[고기많이] 순살뼈찜",
+      "description": "순살(중심뼈)+콩나물+미나리+오만둥이+계란탕+국산백 김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/32f36ec7-e53d-4b0d-a23a-7a93c7bc4af0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1190358-10000006",
+      "name": "[인기추천]  해물+아구찜",
+      "description": "뼈+살+콩나물+미나리+오만둥이+계란탕+국산백 김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/d0cdf180-bfed-4a56-87b1-312c41d00df4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1190358-10000007",
+      "name": "[찐단골] 해물찜",
+      "description": "+콩나물+미나리+오만둥이+계란탕+국산백 김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/6ee9bec0-50e9-47e9-964f-996db1186e5b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1190358-10000011",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/51718448-f639-4924-a508-0c1717b85c6e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1190358-90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1190358-10000012",
+      "name": "감자고기만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7df76864-4506-44bb-9774-c6c5de34eb03.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1190358-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1190358-10000013",
+      "name": "감자김치만두",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/31e5c381-473b-42c6-a9c2-14446b28e9d4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1190358-90000003",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1190358-10000014",
+      "name": "코카콜라",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/e5bfea43-b437-4398-b2f9-1aa978bbfc6b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1190358-10000005",
+      "name": "[모두좋아] 순살순살 (100%)",
+      "description": "순살100%\n콩나물+미나리+오만둥이+계란탕+국산백 김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/73c4e3ce-65a2-41ce-ba5d-9e16a90b2b4e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1190358-10000015",
+      "name": "칠성 사이다",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1190358-10000008",
+      "name": "[찐단골] 대구뽈찜",
+      "description": "뼈+살+콩나물+미나리+오만둥이+계란탕+국산백 김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/87a968de-564a-459a-b1c7-f133f960380f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1190358-10000009",
+      "name": "알고니찜",
+      "description": "뼈+살+콩나물+미나리+오만둥이+계란탕+국산 백김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6a59d3ac-4427-444b-806e-9e813b974a00.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1190358-10000010",
+      "name": "봉여사 대창 찜",
+      "description": "뼈+살+콩나물+미나리+오만둥이+계란탕+국산백 김치+초장+와사비장+셀프주먹밥",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1190358",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?njHDn9u"
+    ],
+    "rawItemCount": 22,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

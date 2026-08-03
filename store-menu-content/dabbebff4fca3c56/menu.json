@@ -1,0 +1,345 @@
+{
+  "storeId": "dabbebff4fca3c56",
+  "storeName": "대패가1900 문수점",
+  "displayName": "대패가1900 문수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/3b12b3c6-ea8e-405e-a371-adaabe4b81ef.jpg",
+  "categories": [
+    "전체",
+    "대패가 메인메뉴",
+    "대패가 추천세트",
+    "대패가 술상세트",
+    "고기 추가",
+    "사이드메뉴",
+    "음료메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1192583-10000002",
+      "name": "모던 대패삼겹 기본 정식세트",
+      "description": "고기 + 파채 + 구운팽이버섯 + 구운콩나물 + 볶음김치 + 비엔나소세지(소5/중6/대7) + 5구찬 + 쌈채소(소,중1/대2) + 된장찌개(소,중1/대2)",
+      "category": "대패가 메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/f02785ac-ee9c-45a7-9b81-ec34f570a0df.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1192583-10000001",
+      "name": "모던 대패삼겹 싱글세트",
+      "description": "고기200g + 파채 + 구운팽이버섯 + 구운콩나물 + 볶음김치 + 5구찬 + 쌈채소 + 된장찌개 + 공기밥",
+      "category": "대패가 메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/3ef015c5-39a8-4e5c-9414-4efcad12c3fc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1192583-10000005",
+      "name": "모던 대패삼겹 고기만 세트",
+      "description": "고기 + 파채 + 쌈장 + 기름장 + 양파소스&양파슬라이스",
+      "category": "대패가 추천세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/f9b17024-42c1-493d-ab10-d53ad28f698c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1192583-10000004",
+      "name": "모던 대패삼겹 반반세트",
+      "description": "고기 + 파채 + 구운팽이버섯 + 구운콩나물 + 볶음김치 + 비엔나소세지(소5/중6/대7) + 5구찬 + 쌈채소(소,중1/대2) + 된장찌개(소,중1/대2)",
+      "category": "대패가 메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/edea55b2-b6f4-49ba-8b49-16fbad0c97f2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1192583-10000006",
+      "name": "모던 대패삼겹 비빔면 세트",
+      "description": "고기 + 파채 + 비빔면 + 볶음김치 + 양파소스&양파슬라이스",
+      "category": "대패가 추천세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/89ff9bfc-f2b1-4f97-9387-9f583ab2130e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1192583-10000007",
+      "name": "혼술세트",
+      "description": "고기200g + 파채 + 비엔나소세지8 + 쌈장 + 기름장 + 양파소스&양파슬라이스 + 된장찌개 + 공기밥 + 주류 택1",
+      "category": "대패가 술상세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/5328d0f2-874f-4b1b-a978-9d5ac31ba6c5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1192583-10000009",
+      "name": "고기 추가",
+      "description": "",
+      "category": "고기 추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1192583-10000010",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/b70e7e79-9407-45e6-9a23-89552ac2f474.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1192583-10000026",
+      "name": "펩시",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1192583-90000001",
+      "name": "카스 프레시(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1192583-10000008",
+      "name": "회식세트",
+      "description": "고기 600g + 파채 + 비엔나소세지8 + 쌈장 + 기름장 + 양파소스&양파슬라이스 + 된장찌개 2개 + 공기밥 2개 + 주류 택1",
+      "category": "대패가 술상세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/ff421401-eb94-459c-a978-cf79376a7303.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1192583-10000011",
+      "name": "비빔면",
+      "description": "비빔면 + 삶은 계란 1/2",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/05dd5465-1f22-444e-8943-41a0fc1688c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1192583-10000027",
+      "name": "펩시제로",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1192583-90000002",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1192583-10000003",
+      "name": "모던 대패삼겹 스페셜 정식세트",
+      "description": "고기 + 파채 + 구운팽이버섯 + 구운콩나물 + 볶음김치 + 비엔나소세지(소5/중6/대7) + 5구찬 + 쌈채소(소,중1/대2) + 된장찌개(소,중1/대2)",
+      "category": "대패가 메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/45161b2f-17c2-4646-a47b-c2d0f563efb3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1192583-10000012",
+      "name": "김치삼겹볶음밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/7241d370-ba34-42cc-9222-acce1a1485e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1192583-10000028",
+      "name": "밀키스",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1192583-90000003",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1192583-10000013",
+      "name": "된장찌개",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/92973c0e-ed59-4b87-9c69-a4a9155021a5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1192583-10000029",
+      "name": "마운틴듀",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1192583-90000004",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1192583-10000014",
+      "name": "슬라이스양파&소스",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/4e34191f-7ae0-4315-a4f9-df003325050a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1192583-10000030",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1192583-10000015",
+      "name": "계란찜",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/1357b3f5-a0e9-4005-a7e6-4118db84c3b7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1192583-10000031",
+      "name": "웰치스",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1192583-10000016",
+      "name": "물냉면 (다데기 미포함)",
+      "description": "<다데기 미포함>\n넣어드시는 고객님은 요청사항에 `다데기 넣어주세요~` 메모 남겨주시면, 냉면에 넣어드려요 :-)",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/fa3198b3-e34a-4b30-a5f7-77d293b227e1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1192583-10000017",
+      "name": "물냉면 (다데기 포함)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/78cfa42f-a53e-4e77-bf37-f7944d76eb62.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1192583-10000018",
+      "name": "비빔냉면 (육수 미포함)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/0221cbf7-7cd4-40d8-9ac9-904e8149b810.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1192583-10000019",
+      "name": "냉면육수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1192583-10000020",
+      "name": "5구찬 팩",
+      "description": "쌈무,깻잎지,마늘,고추,쌈장,기름장,슬라이스양파&소스",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/a44b03d2-048c-4824-b22f-4cb77bef966c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1192583-10000021",
+      "name": "마늘,고추",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/696403bd-a73a-4f3f-b808-d82ebaccc5a5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1192583-10000022",
+      "name": "상추 추가",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/3a42b340-073a-42da-8204-dd1919adbbc0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1192583-10000023",
+      "name": "불냉면 (물)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1192583-10000024",
+      "name": "불냉면 (비빔 / 육수미포함)",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/bc537bf3-ea42-461c-93ec-f7fb480fe0da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1192583-10000025",
+      "name": "오뚜기 케찹",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1192583",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?GesMowg"
+    ],
+    "rawItemCount": 40,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

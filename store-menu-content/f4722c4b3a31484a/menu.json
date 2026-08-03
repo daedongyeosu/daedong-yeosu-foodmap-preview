@@ -1,0 +1,272 @@
+{
+  "storeId": "f4722c4b3a31484a",
+  "storeName": "한식디저트전문카페 정화당",
+  "displayName": "한식디저트전문카페 정화당",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cdf3200f-cffd-49c7-89e7-068f0ba83ed7.jpg",
+  "categories": [
+    "전체",
+    "에스프레소",
+    "빙수",
+    "디저트",
+    "음료",
+    "선물세트",
+    "전통음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1310332-10000003",
+      "name": "아메리카노",
+      "description": "스페셜티 원두사용",
+      "category": "에스프레소",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/635bf355-737b-422f-97f1-333464f84a21.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1310332-10000004",
+      "name": "카페라떼",
+      "description": "스페셜티원두사용",
+      "category": "에스프레소",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/d5b17d42-e4bd-45dc-a19d-c040a8f6d1e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1310332-10000005",
+      "name": "카푸치노",
+      "description": "",
+      "category": "에스프레소",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/7af82b63-304b-4418-afb1-74ce6e161eea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1310332-10000001",
+      "name": "팥빙수",
+      "description": "인절미우유눈꽃팥빙수",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/661ba0e1-921e-4923-999e-ee6d645ecba0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1310332-10000009",
+      "name": "현미오란다",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/c6ba5467-0767-40e7-8d10-1ad3f81ea2b1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1310332-10000017",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1310332-10000023",
+      "name": "오란다쿠키세트(대)",
+      "description": "현미오란다6+크랜베리오란다6+우리밀통호두쿠키6",
+      "category": "선물세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1310332-10000027",
+      "name": "전통수제식혜",
+      "description": "국내산엿기름과 우리쌀로 만든 전통수제식혜.",
+      "category": "전통음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1310332-10000002",
+      "name": "망고빙수",
+      "description": "",
+      "category": "빙수",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/42abced2-e489-4cd5-870b-4b0f0004797d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1310332-10000010",
+      "name": "양갱",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/bff57b68-eb83-44e6-aa6b-e5a49742e3fc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1310332-10000018",
+      "name": "백향과에이드",
+      "description": "직접담은백향과수제청을사용해요",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1310332-10000024",
+      "name": "오란다세트",
+      "description": "흑임자현미오란다9개+크랜베리오란다9개세트",
+      "category": "선물세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1310332-10000011",
+      "name": "구움찰빵",
+      "description": "",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1310332-10000019",
+      "name": "자몽에이드",
+      "description": "직접담은수제자몽청으로만들어요",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1310332-10000025",
+      "name": "구움찰빵세트",
+      "description": "국내산찹쌀,꿀,피칸이들어간몸에좋은영양간식.",
+      "category": "선물세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1310332-10000006",
+      "name": "바닐라라떼",
+      "description": "",
+      "category": "에스프레소",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/92fe5adb-3554-4889-ab1e-952d69f3c29a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1310332-10000012",
+      "name": "식혜",
+      "description": "",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000002800.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1310332-10000020",
+      "name": "레몬에이드",
+      "description": "직접담은레몬수제청을사용해요",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3131a199-d0a7-4be9-9dce-d9ccfc0d2c71.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1310332-10000026",
+      "name": "양갱세트",
+      "description": "통팥3+유자3+단팥호두3",
+      "category": "선물세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1310332-10000007",
+      "name": "카라멜마끼아또",
+      "description": "",
+      "category": "에스프레소",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1310332-10000013",
+      "name": "찹쌀앙버터모나카",
+      "description": "찹쌀떡이 앙금이랑 발효버터 모나카",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1310332-10000021",
+      "name": "1리터대용량보틀(레몬에이드)",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1310332-10000008",
+      "name": "카페모카",
+      "description": "",
+      "category": "에스프레소",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1310332-10000014",
+      "name": "우리밀통호두초코쿠키",
+      "description": "우리밀 통호두 초코칩 버터로만든",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1310332-10000022",
+      "name": "1리터 보틀(아이스아메리카노)",
+      "description": "1리터 보틀",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1310332-10000015",
+      "name": "크랜베리오란다",
+      "description": "입맛 돋구는 크랜베리가 들어간 오란다.",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1310332-10000016",
+      "name": "까불이별사탕오란다",
+      "description": "커피맛과 시나몬맛이 조화를 이룬 오란다",
+      "category": "디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1310332",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?7TpdDba"
+    ],
+    "rawItemCount": 30,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

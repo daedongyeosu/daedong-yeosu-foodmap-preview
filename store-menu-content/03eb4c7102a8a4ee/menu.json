@@ -1,0 +1,199 @@
+{
+  "storeId": "03eb4c7102a8a4ee",
+  "storeName": "돌문어삼합&낙지삼합",
+  "displayName": "돌문어삼합&낙지삼합",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/56144ecb-fd78-4412-83f5-29c06b3ba861.jpg",
+  "categories": [
+    "전체",
+    "돌문어삼합",
+    "낚지 삼합",
+    "음료",
+    "추가메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1238540-10000001",
+      "name": "돌문어삼합(돌문어+낙지+쭈꾸미+삼겹살+김치+야채",
+      "description": "",
+      "category": "돌문어삼합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/56144ecb-fd78-4412-83f5-29c06b3ba861.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1238540-10000002",
+      "name": "낚지삼합(낙지+돌문어+쭈꾸미+삼겹살+야채)",
+      "description": "",
+      "category": "낚지 삼합",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/947874eb-1b61-4cec-8ed8-8510d53ffa0b.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1238540-10000019",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1238540-10000003",
+      "name": "삼겹살  추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/08/3cd32146-e4d8-4150-b64d-b3713212b558.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1238540-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1238540-10000020",
+      "name": "콜라",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1238540-10000004",
+      "name": "물 냉 면추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/2fea9640-2116-4221-80ae-ef707eff5dd9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1238540-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1238540-10000005",
+      "name": "반반냉면(비냉+물냉)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/a28fd5e8-6080-4615-ad16-a941bbce7b63.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1238540-90000003",
+      "name": "맥주 (카스)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1238540-10000006",
+      "name": "김치찌게(반찬+공기)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8dc4057e-1b78-4727-9b81-fe9129028e5d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1238540-90000004",
+      "name": "맥주 (테라)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1238540-10000007",
+      "name": "누룽지탕",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/08105645-8fb8-4f3e-90d2-1c97ef5b590d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1238540-10000008",
+      "name": "계란찜",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/3b2df64c-6a18-4ed6-8774-25f5a75c76b7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1238540-10000009",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/1f71c3ee-b08b-4c0b-ad7d-61844c8cf1ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1238540-10000010",
+      "name": "야채추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/369ab26e-4d46-49d0-8964-21be1246adc1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1238540-10000011",
+      "name": "땡초추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1238540-10000012",
+      "name": "물김치  추가",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/403659c7-4cf9-42b4-b4e6-2a22647d604a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1238540-10000013",
+      "name": "명태회냉면",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/66438e0e-c88f-45ca-80f4-64eb715d8543.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1238540",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?qOq2d5k"
+    ],
+    "rawItemCount": 21,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

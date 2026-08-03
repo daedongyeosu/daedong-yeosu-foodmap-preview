@@ -1,0 +1,410 @@
+{
+  "storeId": "3c91988582bee947",
+  "storeName": "슬로우캘리 여수여서점",
+  "displayName": "슬로우캘리 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/f2cf7113-baa4-4004-8579-886c8740d266.jpg",
+  "categories": [
+    "전체",
+    "시그니처 포케",
+    "보울",
+    "샐러드 랩 샌드위치",
+    "슬로우캘리 스페셜 스프 ",
+    "[NEW & 추천] ",
+    "데일리 포케",
+    "음료",
+    "샐러드",
+    "그릴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1206147-30000010",
+      "name": "연어포케",
+      "description": "(단백질33.3g) 신선한 생연어의 부드럽고 고소한 풍미를 중심으로 다양한 토핑과 어우러진 슬로우캘리 대표 포케",
+      "category": "시그니처 포케",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/8b1f6532-d505-467a-b938-826f82bcc9d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000010"
+    },
+    {
+      "id": "ddangyo-1206147-30000017",
+      "name": "부채살 스테이크 보울",
+      "description": "마리네이드한 부채살을 수비드하여 만든 건강한 육류 보울\n소고기, 양파후레이크, 브로콜리, 파프리카, 베이크드빈, 파슬리",
+      "category": "보울",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/48705d54-6d72-40d3-9327-407398b1d1ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000017"
+    },
+    {
+      "id": "ddangyo-1206147-30000016",
+      "name": "블랙페퍼 치킨 보울",
+      "description": "아일랜드풍의 달콤한 통후추 소스와 닭다리살\n닭다리살, 양파후레이크, 브로콜리, 파프리카, 베이크드빈, 통후추, 파슬리",
+      "category": "보울",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/93c63766-bd62-4e1f-a4dc-07120470e908.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000016"
+    },
+    {
+      "id": "ddangyo-1206147-30000001",
+      "name": "닭가슴살 에그 통밀 랩 샌드위치",
+      "description": "시그니처 소스로 버무려진 닭가슴살과 담백한 계란이 가득한 든든한 통밀 랩",
+      "category": "샐러드 랩 샌드위치",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b2aee5f4-98f2-450a-bbf4-90487c73fb73.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000001"
+    },
+    {
+      "id": "ddangyo-1206147-30000020",
+      "name": "스파이시 토마토 야채 스프",
+      "description": "매콤한 토마토 소스와 각종 야채가 어우러진 비건 스프\n토마토스프, 방울토마토, 양파, 브로콜리, 감자, 당근 ,파슬리",
+      "category": "슬로우캘리 스페셜 스프 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9e4d4819-eb79-4f88-bc31-15d4a0c6c57a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000020"
+    },
+    {
+      "id": "ddangyo-1206147-30000055",
+      "name": "[속세맛] 프로틴쿠키 (아몬드&초코청크)",
+      "description": "단백질 7g 속세맛 프로틴쿠키",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/aa919632-aaf4-430f-83b8-2ab31fa11389.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000055"
+    },
+    {
+      "id": "ddangyo-1206147-30000006",
+      "name": "닭가슴살 에그포케",
+      "description": "고단백의 닭가슴살, 계란에 슬로우캘리 소이소스로 감칠맛을 더한 프로틴 포케\n양파, 쪽파, 에다마메, 방울토마토, 양파후레이크, 적채, 깐계란, 파슬리",
+      "category": "데일리 포케",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/54744f83-c163-45a3-882c-8b26a5124714.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000006"
+    },
+    {
+      "id": "ddangyo-1206147-30000022",
+      "name": "유기농 콤부차(진저레몬)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/9879a5e9-4fdf-46d7-8499-cb10be0168b9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000022"
+    },
+    {
+      "id": "ddangyo-1206147-30000052",
+      "name": "비프&치킨 더블프로틴 보울",
+      "description": "(비프&치킨 200g) 부드러운 소고기와 촉촉한 닭다리살을 한 번에 담아 두가지 풍미를 동시에 즐기는 든든한 프로틴 가득 보울",
+      "category": "보울",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/cb9d8cb9-45ef-4f3b-a446-804bedf73e59.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000052"
+    },
+    {
+      "id": "ddangyo-1206147-30000043",
+      "name": "탄단지데이  샐러드",
+      "description": "(추천 소스 : 오리엔탈 소스) 달콤한 단호박과 촉촉한 닭가슴살과 삶은  계란로 단백질 더블. 고소하고 바삭한 그래놀라 까지 맛과 영양이 가득한 데일리 샐러드",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/c35d183c-f38d-42d3-9e42-e3e794ec90ef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000043"
+    },
+    {
+      "id": "ddangyo-1206147-30000002",
+      "name": "블랙페퍼 치킨 통밀 랩 샌드위치",
+      "description": "블랙페퍼 치킨이 통째로 들어간 부드러운 닭다리살 통밀 랩",
+      "category": "샐러드 랩 샌드위치",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b555376c-8d5c-49cf-b9e2-b2e99e7425c4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000002"
+    },
+    {
+      "id": "ddangyo-1206147-30000056",
+      "name": "[속세맛] 프로틴쿠키 (더티초코&크랜베리)",
+      "description": "단백질 7g 속세맛 프로틴쿠키",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/82e2fd10-4a4a-4d2e-aa6b-5e3e2fadad82.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000056"
+    },
+    {
+      "id": "ddangyo-1206147-30000053",
+      "name": "훈제오리&치킨 더블프로틴 보울",
+      "description": "(훈제오리&치킨180g) 부드러운 닭다리살과 깊은 풍미의 훈제오리를 함께 구성해 풍성한 단백질 밸런스를 완성한 프로틴 가득 보울",
+      "category": "보울",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/167bc580-f7a6-47f1-b11f-e3b0b2e24dfb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000053"
+    },
+    {
+      "id": "ddangyo-1206147-30000023",
+      "name": "유기농 콤부차(석류)",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/4a21e8fc-555c-4de4-9ed1-7bc4bd3c5c64.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000023"
+    },
+    {
+      "id": "ddangyo-1206147-30000018",
+      "name": "하와이안 갈릭 쉬림프",
+      "description": "달콤한 갈릭 버터 소스와 통통한 새우가 어우러진 하와이 대표 메뉴\n사워크림, 마늘 , 레몬, 오리엔탈드레싱, 파슬리",
+      "category": "그릴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5d93da5b-d3d5-48d8-8e1a-ba166cdf469f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000018"
+    },
+    {
+      "id": "ddangyo-1206147-30000007",
+      "name": "참치포케",
+      "description": "특제 간장 베이스와 클래식 소스가 어우러진 참치\n양파, 쪽파, 에다마메, 날치알, 양파후레이크, 김, 적채피클, 깨",
+      "category": "시그니처 포케",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/ca073489-fa56-4998-bb87-9fc861c7f02d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000007"
+    },
+    {
+      "id": "ddangyo-1206147-30000012",
+      "name": "라임폰즈 문어포케",
+      "description": "크리미한 렌치 소스와 은은한 와사비가 어우러진 담백한 소스와 연어\n양파, 쪽파, 에다마메, 날치알, 양파후레이크, 올리브, 방울토마토, 깨",
+      "category": "데일리 포케",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b7fb442f-5bcf-43b2-bc29-298abb35a029.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000012"
+    },
+    {
+      "id": "ddangyo-1206147-30000044",
+      "name": "크런치 시저 샐러드",
+      "description": "(추천 소스 : 시저 소스)아삭한 로메인과 바삭한 크루통, 치즈의  감칠맛이 어우러진 클래식한 시저 샐러드",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/5bdce71d-1c57-4644-acf0-c7c41009333c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000044"
+    },
+    {
+      "id": "ddangyo-1206147-30000050",
+      "name": "유기농 ABC주스",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/eb40a455-34e3-4065-a1ae-084842459b23.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000050"
+    },
+    {
+      "id": "ddangyo-1206147-30000005",
+      "name": "올인원포케",
+      "description": "연어, 참치, 문어를 한번에 담은 올인원 프로틴 포케 \n양파, 쪽파, 에다마메, 날치알, 양파후레이크, 김, 적채, 깨",
+      "category": "시그니처 포케",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/0c915cd0-fa23-40a1-ba52-bd3db0b55c7b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000005"
+    },
+    {
+      "id": "ddangyo-1206147-30000015",
+      "name": "트러플 버섯 포케",
+      "description": "다채로운 버섯과 트러플 폰즈 소스가 어우러진 비건 메뉴\n양파, 쪽파, 양파후레이크, 올리브, 새송이, 느타리, 표고, 브로콜리, 파프리카, 적채피클, 깨",
+      "category": "데일리 포케",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4321c298-d5cd-4f27-8c29-f65b9c020fdd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000015"
+    },
+    {
+      "id": "ddangyo-1206147-30000019",
+      "name": "프리미엄 연어 스테이크",
+      "description": "겉바속촉하게 그릴링한 연어와 타르타르 소스의 조화\n양파, 레몬, 사워크림, 브로콜리, 방울토마토, 오리엔탈드레싱, 파슬리",
+      "category": "그릴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/71ee5e5c-aeec-4943-b7fd-7f216725963d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000019"
+    },
+    {
+      "id": "ddangyo-1206147-30000057",
+      "name": "시그니처 포케 + 프로틴쿠키 세트",
+      "description": "[세트할인] 세트로 구매하시면 식후 섭취에 부담없는 속세맛 프로틴 쿠키를 할인해서 드려요 : )",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6c955875-2bbf-444b-b72c-d921f1fa28e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000057"
+    },
+    {
+      "id": "ddangyo-1206147-30000004",
+      "name": "부채살 스테이크 통밀 랩 샌드위치",
+      "description": "수비드한 부채살과 달짝지근한 소스가 들어간 든든한 통밀 랩",
+      "category": "샐러드 랩 샌드위치",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e9cfdd29-fdb6-4212-9755-f2160b7908e3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000004"
+    },
+    {
+      "id": "ddangyo-1206147-30000058",
+      "name": "데일리 포케 + 프로틴쿠키 세트",
+      "description": "[세트할인] 세트로 구매하시면 식후 섭취에 부담없는 속세맛 프로틴 쿠키를 할인해서 드려요 : )",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/50e6589e-ca69-4619-98ac-043c63b9bb4d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000058"
+    },
+    {
+      "id": "ddangyo-1206147-30000013",
+      "name": "문어포케",
+      "description": "상큼한 홈메이드 라임 폰즈 소스와 문어\n양파, 쪽파, 에다마메, 날치알, 양파후레이크, 김, 적채피클, 깨",
+      "category": "시그니처 포케",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/37720c45-3acd-4eac-afb4-3024c7af9a4e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000013"
+    },
+    {
+      "id": "ddangyo-1206147-30000014",
+      "name": "오리엔탈 두부 포케",
+      "description": "달콤새콤한 특제 오리엔탈 소스와 담백한 일본식 튀김 두부\n양파, 쪽파, 에다마메, 양파후레이크, 방울토마토, 올리브, 통후추, 적채피클, 깨",
+      "category": "데일리 포케",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/5f01b7bf-b84f-4dc3-bee8-7a493bff17b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000014"
+    },
+    {
+      "id": "ddangyo-1206147-30000051",
+      "name": "유기농 CCA주스",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/10bb6758-b56e-462c-ad72-8c1d19383eef.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000051"
+    },
+    {
+      "id": "ddangyo-1206147-30000046",
+      "name": "훈제오리 샐러드",
+      "description": "(추천소스 : 발사믹 소스) 스모키한 훈제 오리 풍미에 단호박의  달콤함과 프레시한 채소와 그래놀라로 든든한  샐러드",
+      "category": "샐러드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/10/596692f9-6a79-422d-a027-8348fda6883e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000046"
+    },
+    {
+      "id": "ddangyo-1206147-30000047",
+      "name": "콘크림 스프",
+      "description": "자연의 달콤한 옥수수와 부드러운 크림이 어우러진 포근하고 고소한 스프",
+      "category": "슬로우캘리 스페셜 스프 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/ac363910-cb3b-409e-ae90-a514722a3ef4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000047"
+    },
+    {
+      "id": "ddangyo-1206147-30000059",
+      "name": "보울or그릴 + 프로틴쿠키 세트",
+      "description": "[세트할인] 세트로 구매하시면 식후 섭취에 부담없는 속세맛 프로틴 쿠키를 할인해서 드려요 : )",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/97dfd1e4-621a-4363-9a15-0daec68d82b5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000059"
+    },
+    {
+      "id": "ddangyo-1206147-30000048",
+      "name": "트러플 머쉬룸 스프",
+      "description": "진한 버섯 풍미에 트러플을 더한 프리미엄 크림 스프",
+      "category": "슬로우캘리 스페셜 스프 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8662edf6-2135-4cab-9d61-61be2d1af24b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000048"
+    },
+    {
+      "id": "ddangyo-1206147-30000034",
+      "name": "코카콜라 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/40da73af-ad45-4d2b-9f50-3da61a6b73dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000034"
+    },
+    {
+      "id": "ddangyo-1206147-30000060",
+      "name": "포케(연참문퐄) + 프로틴쿠키 세트",
+      "description": "[세트할인] 세트로 구매하시면 식후 섭취에 부담없는 속세맛 프로틴 쿠키를 할인해서 드려요 : )",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/0889a029-5f32-432b-a7aa-f51a005bbcec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000060"
+    },
+    {
+      "id": "ddangyo-1206147-30000049",
+      "name": "단호박 스프",
+      "description": "부드럽게 녹아드는 단호박의 달콤함과 자연스러운 풍미가 담긴 스프",
+      "category": "슬로우캘리 스페셜 스프 ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/6ffbc5b3-036b-41d0-a944-22cd767053dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000049"
+    },
+    {
+      "id": "ddangyo-1206147-30000061",
+      "name": "샐러드 + 프로틴쿠키 세트",
+      "description": "[세트할인] 세트로 구매하시면 식후 섭취에 부담없는 속세맛 프로틴 쿠키를 할인해서 드려요 : )",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/367ca05c-5bbc-4445-bedb-d6e8f29c72a9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000061"
+    },
+    {
+      "id": "ddangyo-1206147-30000030",
+      "name": "제로콜라 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/6ef3070b-012d-4746-ac30-b355b8a2f018.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000030"
+    },
+    {
+      "id": "ddangyo-1206147-30000062",
+      "name": "통밀랩 + 프로틴쿠키 세트",
+      "description": "[세트할인] 세트로 구매하시면 식후 섭취에 부담없는 속세맛 프로틴 쿠키를 할인해서 드려요 : )",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9265b7c3-fc29-4ff2-9f83-5f2b705bf58b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000062"
+    },
+    {
+      "id": "ddangyo-1206147-30000031",
+      "name": "스프라이트 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/54029543-7c58-43b2-98d8-4b51911f2110.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000031"
+    },
+    {
+      "id": "ddangyo-1206147-30000054",
+      "name": "[연.참.문] 퐄",
+      "description": "밥 양은 그대로, 연어,참치,문어 3가지 메인 토핑을 모두 맛보면서 샐러드와 서브토핑은 가볍게 즐기는 실속 포케",
+      "category": "[NEW & 추천] ",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/31751ae3-36bf-4f3e-8dca-bd3494f7b511.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000054"
+    },
+    {
+      "id": "ddangyo-1206147-30000032",
+      "name": "제로스프라이트 355ml",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/ba2c386f-8c56-41de-b5bf-61a8138670b3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000032"
+    },
+    {
+      "id": "ddangyo-1206147-30000028",
+      "name": "아메리카노",
+      "description": "",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9438c8a9-5f1f-4e67-9142-08ad891b1f7d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000028"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1206147",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?oBh8EzB"
+    ],
+    "rawItemCount": 47,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

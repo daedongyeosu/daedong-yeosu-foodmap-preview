@@ -1,0 +1,908 @@
+{
+  "storeId": "5deb911df92c645a",
+  "storeName": "포우머그(pawmug)",
+  "displayName": "포우머그(pawmug)",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f6f244e8-f7b7-4690-84b0-c7ea650d7268.jpg",
+  "categories": [
+    "전체",
+    "커피&라떼",
+    "포우머그 100% 수제식혜",
+    "찜&리뷰 약속해줘~잉",
+    "포우머그 분식",
+    "포우머그 디저트",
+    "1L 보틀",
+    "포우머그 블렌디드",
+    "포우머그 토스트&샌드위치",
+    "음료",
+    "논커피&라떼",
+    "에이드",
+    "티"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1339008-10000075",
+      "name": "아메리카노",
+      "description": "진한 바디감과 고소한 풍미가 어우러진 원두, 깔끔한 마무리로 깊은 커피의 풍미를 느끼실 수 있어요.",
+      "category": "커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/dfc6ac08-71d8-4b96-bc17-091c15d0d6d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000075"
+    },
+    {
+      "id": "ddangyo-1339008-10000077",
+      "name": "바닐라라떼",
+      "description": "사장 추천 바닐라라떼, 달콤함은 살리고 커피 맛은 진하게 했어요. 재주문이 많은 인기 메뉴에요.",
+      "category": "커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/4d3c3850-d3e5-48c7-a7e0-652c9b6aa7b7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000077"
+    },
+    {
+      "id": "ddangyo-1339008-10000036",
+      "name": "1L 오리지널 쌀식혜",
+      "description": "쌀 : 국내산 보리(엿기름) : 국내산",
+      "category": "포우머그 100% 수제식혜",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000036"
+    },
+    {
+      "id": "ddangyo-1339008-10000040",
+      "name": "음료&과자",
+      "description": "주문 후 사진리뷰필수, 찜, 알림받기를 꾸욱 눌러주세요. 약속 꼭 지켜주세요. 안 지켜주시면 너무 슬퍼요 (ㅠ,ㅠ)",
+      "category": "찜&리뷰 약속해줘~잉",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000040"
+    },
+    {
+      "id": "ddangyo-1339008-10000041",
+      "name": "오뚜기 햇반",
+      "description": "햇반 210g",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000041"
+    },
+    {
+      "id": "ddangyo-1339008-10000054",
+      "name": "뚱카롱 솔트카라멜 마카롱",
+      "description": "",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000054"
+    },
+    {
+      "id": "ddangyo-1339008-10000068",
+      "name": "1L 요거트플레인스무디[NEW]",
+      "description": "진하고 부드러운 요거트의 풍미를 새콤달콤한 맛이 가득~",
+      "category": "1L 보틀",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000068"
+    },
+    {
+      "id": "ddangyo-1339008-10000074",
+      "name": "에스프레소",
+      "description": "진한 바디감과 고소한 풍미가 어우러진 원두, 깔끔한 마무리로 깊은 커피의 풍미를 느끼실 수 있어요.",
+      "category": "커피&라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000074"
+    },
+    {
+      "id": "ddangyo-1339008-10000082",
+      "name": "플레인 요거트 스무디",
+      "description": "진한 요거트의 상큼한 맛이 조화로운 플레인 요거트 스무디, 부드럽고 시원한 한 잔으로 기분 좋은 달콤함을 느껴보세요.",
+      "category": "포우머그 블렌디드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f7b73cd5-b45c-4c5c-8f84-9a28d139c152.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000082"
+    },
+    {
+      "id": "ddangyo-1339008-10000094",
+      "name": "에그햄치즈 머핀 토스트",
+      "description": "잉글리쉬 머핀빵 + 햄 2장 + 계란후라이 + 치즈 + 특제소스",
+      "category": "포우머그 토스트&샌드위치",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000094"
+    },
+    {
+      "id": "ddangyo-1339008-10000098",
+      "name": "찐 얼박사",
+      "description": "얼음 + 박카스 + 사이다",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000098"
+    },
+    {
+      "id": "ddangyo-1339008-10000102",
+      "name": "리얼 딸기 라떼[NEW]",
+      "description": "국내산 딸기 80%와 탱글한 딸기 과육을 듬뿍 담은 리얼 딸기라떼, 신선한 우유와 달콤한 딸기가 어우러져 부드럽고 진한 딸기의 풍미를 즐기실 수 있어요~",
+      "category": "논커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/e16c1bac-1832-4a8b-9783-e2f8457ff9ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000102"
+    },
+    {
+      "id": "ddangyo-1339008-10000111",
+      "name": "체리콕",
+      "description": "",
+      "category": "에이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000111"
+    },
+    {
+      "id": "ddangyo-1339008-10000122",
+      "name": "히비스커스티",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000122"
+    },
+    {
+      "id": "ddangyo-1339008-10000037",
+      "name": "통째로 갈아넣은 1L 단호박식혜",
+      "description": "쌀 : 국내산\n보리(엿기름) : 국내산\n단호박 : 국내산",
+      "category": "포우머그 100% 수제식혜",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000037"
+    },
+    {
+      "id": "ddangyo-1339008-10000042",
+      "name": "대패삼겹 비빔면[NEW]",
+      "description": "비빔면 + 대패삼겹살(100g) / 매콤새콤한 비빔면 위에 볶아낸 대패삼겹살을 올리고 고소한 통깨로 마무리한 든든한 야식 한끼",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000042"
+    },
+    {
+      "id": "ddangyo-1339008-10000055",
+      "name": "뚱카롱 찐한 순우유 마카롱",
+      "description": "",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000055"
+    },
+    {
+      "id": "ddangyo-1339008-10000069",
+      "name": "1L 리얼 과일 스무디",
+      "description": "과일을 듬뿍 넣어 진하고 쫀쫀하게 만들었어요. 넉넉한 용량으로 오래 시원하게 즐겨보세요.",
+      "category": "1L 보틀",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000069"
+    },
+    {
+      "id": "ddangyo-1339008-10000083",
+      "name": "리얼 딸기 스무디",
+      "description": "냉동 딸기를 듬뿍 넣어 진하고 쫀쫀하게 만든 리얼 딸기 스무디, 달콤한 딸기의 풍미를 시원하게 즐겨보세요.",
+      "category": "포우머그 블렌디드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d323ec33-add6-45da-b37e-7399f75ba808.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000083"
+    },
+    {
+      "id": "ddangyo-1339008-10000095",
+      "name": "에그햄치즈 샌드위치",
+      "description": "식빵+계란후라이+슬라이스햄2장+체다치즈+양상추+적채",
+      "category": "포우머그 토스트&샌드위치",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000095"
+    },
+    {
+      "id": "ddangyo-1339008-10000099",
+      "name": "비타민 사이다",
+      "description": "얼음 + 비타민C + 사이다",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000099"
+    },
+    {
+      "id": "ddangyo-1339008-10000103",
+      "name": "말차라떼",
+      "description": "진한 말차의 풍미를 그대로 담아 완성한 말차라떼, 달콤함과 쌉싸름한 매력을 한 잔에 담았어오",
+      "category": "논커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/99075999-bda5-423c-89a3-9e518d705adc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000103"
+    },
+    {
+      "id": "ddangyo-1339008-10000112",
+      "name": "레몬 에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ed5a34cd-57a0-41c3-a1e6-3060352060da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000112"
+    },
+    {
+      "id": "ddangyo-1339008-10000123",
+      "name": "캐모마일티",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/d7804225-9bbb-40c2-9df0-dd385bd50a4e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000123"
+    },
+    {
+      "id": "ddangyo-1339008-10000038",
+      "name": "통째로 갈아넣은 1L 꿀고구마식혜",
+      "description": "쌀 : 국내산\n보리(엿기름) : 국내산\n꿀고구마 : 국내산",
+      "category": "포우머그 100% 수제식혜",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000038"
+    },
+    {
+      "id": "ddangyo-1339008-10000043",
+      "name": "라게치[NEW]",
+      "description": "라면볶이+계란후라이+체다치즈",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000043"
+    },
+    {
+      "id": "ddangyo-1339008-10000056",
+      "name": "뚱카롱 꿀꿀바 마카롱",
+      "description": "",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000056"
+    },
+    {
+      "id": "ddangyo-1339008-10000070",
+      "name": "1L 보틀 아메리카노",
+      "description": "진한 바디감과 고소한 풍미가 어우러진 원두, 깔끔한 마무리로 깊은 커피의 풍미를 느끼실 수 있어요.",
+      "category": "1L 보틀",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000070"
+    },
+    {
+      "id": "ddangyo-1339008-10000076",
+      "name": "카페라떼",
+      "description": "깊고 진한 에스프레소에 부드러운 우유를 더해 누구나 부담 없이 즐길 수 있는 카페라떼, 고소하고 깔끔한 맛이 매력적인 메뉴에요.",
+      "category": "커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/8ade48cf-e043-4b32-9005-82da8e24981b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000076"
+    },
+    {
+      "id": "ddangyo-1339008-10000084",
+      "name": "리얼 키위 스무디",
+      "description": "상큼한 키위를 듬뿍 넣어 진하고 쫀쫀하게 만든 리얼 키위 스무디, 달콤함과 상큼함의 조화가 매력적인 메뉴에오.",
+      "category": "포우머그 블렌디드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000084"
+    },
+    {
+      "id": "ddangyo-1339008-10000096",
+      "name": "스노우 카야잼 토스트",
+      "description": "고소하고 달콤한 카야잼을 듬뿍 바르고 새하얀 슈가파우더를 뿌려 완성한 토스트",
+      "category": "포우머그 토스트&샌드위치",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000096"
+    },
+    {
+      "id": "ddangyo-1339008-10000100",
+      "name": "복숭아 아이스티",
+      "description": "달콤한 복숭아의 향긋한 풍미를 가득 담은 아이스티, 깔끔하고 시원한 목 넘김으로 더운 날씨에 더욱 잘 어울리는 상큼한 음료에요.",
+      "category": "음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1e163014-05d9-4cc6-a07d-2a9cfb57950b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000100"
+    },
+    {
+      "id": "ddangyo-1339008-10000104",
+      "name": "녹차라떼",
+      "description": "진한 말차보다 달콤하고 부드러운 맛을 좋아하시는 분들께는 녹차라떼 추천",
+      "category": "논커피&라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000104"
+    },
+    {
+      "id": "ddangyo-1339008-10000113",
+      "name": "망고 에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000113"
+    },
+    {
+      "id": "ddangyo-1339008-10000124",
+      "name": "페퍼민트티",
+      "description": "",
+      "category": "티",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/25f821e5-815c-4329-9fb4-5289637fa143.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000124"
+    },
+    {
+      "id": "ddangyo-1339008-10000039",
+      "name": "100% 쑥 가루가 들어간 1L 쑥 식혜",
+      "description": "쌀 : 국내산\n보리(엿기름) : 국내산\n쑥 가루 : 국내산",
+      "category": "포우머그 100% 수제식혜",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000039"
+    },
+    {
+      "id": "ddangyo-1339008-10000044",
+      "name": "짜계치",
+      "description": "짜파게티+계란후라이+체다치즈",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000044"
+    },
+    {
+      "id": "ddangyo-1339008-10000057",
+      "name": "뚱카롱 황치즈 마카롱",
+      "description": "",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000057"
+    },
+    {
+      "id": "ddangyo-1339008-10000071",
+      "name": "1L 보틀 카페라떼",
+      "description": "깊고 진한 에스프레소에 부드러운 우유를 더해 누구나 부담 없이 즐길 수 있는 카페라떼, 고소하고 깔끔한 맛이 매력적인 메뉴에요.",
+      "category": "1L 보틀",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000071"
+    },
+    {
+      "id": "ddangyo-1339008-10000085",
+      "name": "리얼 망고 스무디",
+      "description": "달콤한 망고를 듬뿍 담아 진하고 쫀쫀하게 만든 리얼 망고 스무디, 한 모금마다 진한 망고의 풍미를 느껴보세요.",
+      "category": "포우머그 블렌디드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000085"
+    },
+    {
+      "id": "ddangyo-1339008-10000097",
+      "name": "더티 누텔라 토스트",
+      "description": "진한 누텔라를 듬뿍 바르고 달콤한 코코아파우더를 뿌려 완성한 토스트",
+      "category": "포우머그 토스트&샌드위치",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000097"
+    },
+    {
+      "id": "ddangyo-1339008-10000101",
+      "name": "레몬 아이스티[NEW]",
+      "description": "상큼한 레몬의 산뜻한 풍미를 가득 담은 아이스티, 깔끔하고 시원한 목 넘김으로 더운 날씨에 더욱 잘 어울리는 상큼한 음료에요.",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000101"
+    },
+    {
+      "id": "ddangyo-1339008-10000105",
+      "name": "흑당라떼",
+      "description": "달콤하고 진한 흑당과 부드러운 우유가 어우러진 흑당라떼",
+      "category": "논커피&라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000105"
+    },
+    {
+      "id": "ddangyo-1339008-10000114",
+      "name": "키위 에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000114"
+    },
+    {
+      "id": "ddangyo-1339008-10000125",
+      "name": "얼그레이티",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000125"
+    },
+    {
+      "id": "ddangyo-1339008-10000045",
+      "name": "불계치",
+      "description": "불닭볶음면+계란후라이+체다치즈",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000045"
+    },
+    {
+      "id": "ddangyo-1339008-10000058",
+      "name": "뚱카롱 리얼딸기 마카롱",
+      "description": "",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000058"
+    },
+    {
+      "id": "ddangyo-1339008-10000072",
+      "name": "1L 복숭아 아이스티",
+      "description": "달콤한 복숭아의 향긋한 풍미를 가득 담은 아이스티, 깔끔하고 시원한 목 넘김으로 더운 날씨에 더욱 잘 어울리는 상큼한 음료에요.",
+      "category": "1L 보틀",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000072"
+    },
+    {
+      "id": "ddangyo-1339008-10000078",
+      "name": "카라멜마끼아또",
+      "description": "달콤한 카라멜과 진한 에스프레소가 조화롭게 어우러진 카라멜마끼아또",
+      "category": "커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/afcda339-4b27-4b04-bd5e-fc9d837298cd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000078"
+    },
+    {
+      "id": "ddangyo-1339008-10000086",
+      "name": "리얼 블루베리 스무디",
+      "description": "블루베리를 듬뿍 넣어 진하고 쫀쫀하게 만든 리얼 블루베리 스무디, 진한 블루베리 맛을 시원하게 즐겨보세요.",
+      "category": "포우머그 블렌디드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/13b013e8-0fad-49a9-b783-87ca94975205.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000086"
+    },
+    {
+      "id": "ddangyo-1339008-10000106",
+      "name": "초코라떼",
+      "description": "초코 시럽과 초코 파우더를 함께 사용해 더욱 깊고 진한 맛을 완성한 초코라떼",
+      "category": "논커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/099aee9d-f873-44e7-b8ac-f339d02ce856.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000106"
+    },
+    {
+      "id": "ddangyo-1339008-10000115",
+      "name": "딸기 에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000115"
+    },
+    {
+      "id": "ddangyo-1339008-10000126",
+      "name": "유자차",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000126"
+    },
+    {
+      "id": "ddangyo-1339008-10000046",
+      "name": "까불계치",
+      "description": "까르보불닭+계란후라이+체다치즈",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000046"
+    },
+    {
+      "id": "ddangyo-1339008-10000059",
+      "name": "뚱카롱 초코바닐라 마카롱",
+      "description": "",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000059"
+    },
+    {
+      "id": "ddangyo-1339008-10000073",
+      "name": "1L 레몬 아이스티[NEW]",
+      "description": "상큼한 레몬의 산뜻한 풍미를 가득 담은 아이스티, 깔끔하고 시원한 목 넘김으로 더운 날씨에 더욱 잘 어울리는 상큼한 음료에요.",
+      "category": "1L 보틀",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000073"
+    },
+    {
+      "id": "ddangyo-1339008-10000079",
+      "name": "카페모카",
+      "description": "진한 커피와 달콤한 초콜릿, 부드러운 우유가 완벽하게 어우러진 카페모카",
+      "category": "커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a85078bc-2591-46ce-b90c-81f2e8e9dff1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000079"
+    },
+    {
+      "id": "ddangyo-1339008-10000087",
+      "name": "내맘대로 반반 스무디",
+      "description": "딸기, 망고, 키위, 블루베리 중 원하는 과일 2가지를 선택해 만드는 나만의 리얼 과일 스무디 만들어 보아오. 롸잇나우.",
+      "category": "포우머그 블렌디드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000087"
+    },
+    {
+      "id": "ddangyo-1339008-10000107",
+      "name": "이천쌀라떼",
+      "description": "(사장 추천) 고소한 쌀의 풍미와 부드러운 우유가 만나 편안하고 든든한 한 잔 완성",
+      "category": "논커피&라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000107"
+    },
+    {
+      "id": "ddangyo-1339008-10000116",
+      "name": "청포도 에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/fe56c085-47c2-4d23-962f-38409a8a970f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000116"
+    },
+    {
+      "id": "ddangyo-1339008-10000127",
+      "name": "대추차",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000127"
+    },
+    {
+      "id": "ddangyo-1339008-10000047",
+      "name": "촉촉 윙봉 치킨 4조각[NEW]",
+      "description": "윙 2조각과 봉 2조각(약 170g 내외)으로 구성된 메뉴",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000047"
+    },
+    {
+      "id": "ddangyo-1339008-10000060",
+      "name": "뚱카롱 크림브륄레 마카롱",
+      "description": "",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000060"
+    },
+    {
+      "id": "ddangyo-1339008-10000080",
+      "name": "돌체라떼",
+      "description": "진한 에스프레소와 달콤한 연유, 부드러운 우유가 조화롭게 어우러진 돌체라떼",
+      "category": "커피&라떼",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/9bd81c42-2065-4fb1-84d8-701f012c14c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000080"
+    },
+    {
+      "id": "ddangyo-1339008-10000088",
+      "name": "녹차프라페",
+      "description": "",
+      "category": "포우머그 블렌디드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000088"
+    },
+    {
+      "id": "ddangyo-1339008-10000108",
+      "name": "고구마라떼",
+      "description": "진한 고구마의 달콤함과 부드러운 우유가 만나 누구나 부담 없이 즐기기 좋은 라떼",
+      "category": "논커피&라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000108"
+    },
+    {
+      "id": "ddangyo-1339008-10000117",
+      "name": "유자 에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000117"
+    },
+    {
+      "id": "ddangyo-1339008-10000128",
+      "name": "애플티",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000128"
+    },
+    {
+      "id": "ddangyo-1339008-10000048",
+      "name": "데리야끼 닭꼬치",
+      "description": "촉촉한 닭다리살과 달콤한 데리야끼 소스의 환상 조합~ 부드럽고 맛있어서 하나로는 부족한 인기 메뉴에오",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000048"
+    },
+    {
+      "id": "ddangyo-1339008-10000061",
+      "name": "다크초코무스",
+      "description": "달콤하면서도 진한 다크초콜릿의 풍미를 그대로 담았어요. 부드러운 무스가 입안에서 사르르 녹는 프리미엄 디저트",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000061"
+    },
+    {
+      "id": "ddangyo-1339008-10000081",
+      "name": "스모키얼그레이라떼",
+      "description": "진한 에스프레소와 얼그레이의 향긋함, 은은한 스모키 향이 어우러진 특별한 라떼",
+      "category": "커피&라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000081"
+    },
+    {
+      "id": "ddangyo-1339008-10000089",
+      "name": "밀크쉐이크",
+      "description": "",
+      "category": "포우머그 블렌디드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/8d427dc2-3163-49fb-866c-cc5e3804e2b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000089"
+    },
+    {
+      "id": "ddangyo-1339008-10000109",
+      "name": "얼그레이홍차라떼",
+      "description": "진한 얼그레이 홍차의 향과 부드러운 우유가 만나 깊고 은은한 풍미가 들어간 라떼",
+      "category": "논커피&라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000109"
+    },
+    {
+      "id": "ddangyo-1339008-10000118",
+      "name": "체리 에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000118"
+    },
+    {
+      "id": "ddangyo-1339008-10000129",
+      "name": "허니자몽블랙티",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000129"
+    },
+    {
+      "id": "ddangyo-1339008-10000049",
+      "name": "후라이드 닭꼬치",
+      "description": "촉촉한 닭다리살을 바삭하게 튀겨낸 후라이드 닭꼬치~ 한번 먹으면 자꾸 생각나는 그 맛 겉바속촉의 매력을 제대로 느낄 수 있는 메뉴에오",
+      "category": "포우머그 분식",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/a2308b57-6c1e-494b-8ffb-6b021af244a8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000049"
+    },
+    {
+      "id": "ddangyo-1339008-10000062",
+      "name": "뉴욕치즈케이크",
+      "description": "부드럽고 진한 치즈 풍미가 매력적인 뉴욕치즈케이크, 아메리카노와 환상적인 조합을 자랑하는 인기 디저트",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000062"
+    },
+    {
+      "id": "ddangyo-1339008-10000090",
+      "name": "초코 밀크쉐이크",
+      "description": "",
+      "category": "포우머그 블렌디드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000090"
+    },
+    {
+      "id": "ddangyo-1339008-10000110",
+      "name": "땅콩카라멜라떼",
+      "description": "고소한 땅콩과 달콤한 카라멜을 더한 시그니처 라떼",
+      "category": "논커피&라떼",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000110"
+    },
+    {
+      "id": "ddangyo-1339008-10000119",
+      "name": "블루베리 에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000119"
+    },
+    {
+      "id": "ddangyo-1339008-10000130",
+      "name": "유자민트티",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000130"
+    },
+    {
+      "id": "ddangyo-1339008-10000050",
+      "name": "치킨너겟",
+      "description": "바삭한 치킨너겟 8조각, 겉은 바삭하고 속은 촉촉해 아이부터 어른까지 누구나 맛있게 즐길 수 있는 인기 사이드 메뉴에오",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000050"
+    },
+    {
+      "id": "ddangyo-1339008-10000063",
+      "name": "딸기크림케이크",
+      "description": "달콤한 딸기가 어우러진 딸기크림케이크, 달콤함과 상큼함을 한 번에 즐길 수 있는 추천 디저트",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000063"
+    },
+    {
+      "id": "ddangyo-1339008-10000091",
+      "name": "딸기 밀크쉐이크",
+      "description": "",
+      "category": "포우머그 블렌디드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000091"
+    },
+    {
+      "id": "ddangyo-1339008-10000120",
+      "name": "레드자몽에이드",
+      "description": "시원 상큼 달달 안 마시면 후회하는 자몽에이드",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/076e52ea-0f57-4b5a-8996-741e5ee3b63a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000120"
+    },
+    {
+      "id": "ddangyo-1339008-10000131",
+      "name": "애플유자티",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000131"
+    },
+    {
+      "id": "ddangyo-1339008-10000051",
+      "name": "바삭한 치즈 핫도그",
+      "description": "바삭한 튀김옷과 소세지와 치즈가 어우러진 치즈 핫도그 추천 간식",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000051"
+    },
+    {
+      "id": "ddangyo-1339008-10000064",
+      "name": "허니브레드",
+      "description": "겉은 바삭, 속은 촉촉한 식빵에 부드러운 생크림과 함께 더욱 달콤하게 즐길 수 있는 카페 인기 디저트",
+      "category": "포우머그 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/b6d7b917-3c60-4362-ae2f-9691d488c282.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000064"
+    },
+    {
+      "id": "ddangyo-1339008-10000092",
+      "name": "망고 밀크쉐이크",
+      "description": "",
+      "category": "포우머그 블렌디드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000092"
+    },
+    {
+      "id": "ddangyo-1339008-10000121",
+      "name": "블루레몬에이드",
+      "description": "",
+      "category": "에이드",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/221ec661-565d-43b5-a68a-703876954640.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000121"
+    },
+    {
+      "id": "ddangyo-1339008-10000132",
+      "name": "허니레몬진저티",
+      "description": "",
+      "category": "티",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000132"
+    },
+    {
+      "id": "ddangyo-1339008-10000052",
+      "name": "추억의 옛날 꿀호떡",
+      "description": "촉촉한 꿀호떡, 달콤한 꿀의 풍미를 가득 담아 커피와 함께 즐기기 좋은 메뉴",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000052"
+    },
+    {
+      "id": "ddangyo-1339008-10000065",
+      "name": "두바이쫀득쿠키",
+      "description": "고소한 피스타치오, 바삭한 카다이프가 어우러진 인기 디저트",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000065"
+    },
+    {
+      "id": "ddangyo-1339008-10000093",
+      "name": "녹차 밀크쉐이크",
+      "description": "",
+      "category": "포우머그 블렌디드",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000093"
+    },
+    {
+      "id": "ddangyo-1339008-10000053",
+      "name": "국물떡볶이",
+      "description": "",
+      "category": "포우머그 분식",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000053"
+    },
+    {
+      "id": "ddangyo-1339008-10000066",
+      "name": "초코 프레첼",
+      "description": "고소한 프레첼과 달콤한 초콜릿의 완벽한 조화",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000066"
+    },
+    {
+      "id": "ddangyo-1339008-10000067",
+      "name": "토끼 랜덤과자 기프트백",
+      "description": "오늘은 어떤 과자가 들어 있을까요 다양한 과자를 랜덤으로 구성한 기프트백",
+      "category": "포우머그 디저트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000067"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1339008",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?FOaMwV5"
+    ],
+    "rawItemCount": 99,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

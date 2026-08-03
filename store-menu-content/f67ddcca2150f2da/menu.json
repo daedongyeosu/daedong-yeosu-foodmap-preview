@@ -1,0 +1,170 @@
+{
+  "storeId": "f67ddcca2150f2da",
+  "storeName": "섬섬김밥",
+  "displayName": "섬섬김밥",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/afc29a21-df12-462d-a44b-6408eaf2990a.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "커피/음료",
+    "탄산음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1208326-10000003",
+      "name": "갓참치김밥",
+      "description": "돌산갓과 참치마요가 아주 가득한 김밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/afc29a21-df12-462d-a44b-6408eaf2990a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1208326-10000001",
+      "name": "섬섬김밥",
+      "description": "기본, 원조김밥. 엄마손맛처럼 느껴지는 김밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4fccf6d7-4ff1-4833-9121-400bc2658859.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1208326-10000005",
+      "name": "아메리카노",
+      "description": "",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/01/d689d162-cc37-4526-922d-6b15903ebed7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1208326-10000013",
+      "name": "코카콜라",
+      "description": "",
+      "category": "탄산음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/dd642456-a64d-44ca-81a5-0944ebf1f374.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1208326-10000002",
+      "name": "매운어묵김밥",
+      "description": "매운 양념 어묵을 듬뿍 넣은 매콤한 김밥",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/5bd193b3-0b89-411e-a0d9-42b58ff33723.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1208326-10000006",
+      "name": "홍삼라떼",
+      "description": "",
+      "category": "커피/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1208326-10000014",
+      "name": "코카콜라제로",
+      "description": "",
+      "category": "탄산음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/7c2b0d05-d3c8-4ae5-a93b-4f61adbc1ecb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1208326-10000007",
+      "name": "유자차",
+      "description": "",
+      "category": "커피/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1208326-10000015",
+      "name": "스프라이트",
+      "description": "",
+      "category": "탄산음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/03/09aa2d8e-1c00-4f71-9139-084f7511893f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1208326-10000004",
+      "name": "갓한치 충무식 김밥",
+      "description": "한치와 갓김치가 들어간 충무식 김밥",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1208326-10000008",
+      "name": "생강차",
+      "description": "",
+      "category": "커피/음료",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/02/769b9846-9edc-404e-954a-602725ad9afd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1208326-10000016",
+      "name": "제로스프라이트",
+      "description": "",
+      "category": "탄산음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1208326-10000009",
+      "name": "자몽에이드",
+      "description": "",
+      "category": "커피/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1208326-10000010",
+      "name": "레몬에이드",
+      "description": "",
+      "category": "커피/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1208326-10000011",
+      "name": "딸기주스",
+      "description": "",
+      "category": "커피/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1208326-10000012",
+      "name": "제로 아이스티",
+      "description": "",
+      "category": "커피/음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1208326",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?vnzyT41"
+    ],
+    "rawItemCount": 18,
+    "duplicateItemsRemoved": 2
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

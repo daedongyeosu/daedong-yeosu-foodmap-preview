@@ -1,0 +1,345 @@
+{
+  "storeId": "73dca5f85fec0d8b",
+  "storeName": "죽생각 여수점",
+  "displayName": "죽생각 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/af70cc8b-6734-4c65-adec-f4d107617c68.jpg",
+  "categories": [
+    "전체",
+    "죽생각 (단품)",
+    "몸보신세트",
+    "몸보신 생각",
+    "반찬류",
+    "떡볶이",
+    "만두류",
+    "음료"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1160614-10000003",
+      "name": "프롬 더 완도~영양전복죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/e7be0ab4-7bc8-410c-b8cb-569c82a76bb9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1160614-10000002",
+      "name": "진짜~한우소고기죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/57028be5-9ce9-4234-a0ed-6d49bfda938a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1160614-10000004",
+      "name": "맛있닭~영양닭죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/837131f6-9218-4001-8835-db4820378c53.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1160614-10000014",
+      "name": "달콤달콤 호박죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/1344c0ff-9f92-4c02-91b4-e263907dcfb9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1160614-10000010",
+      "name": "매콤쫄깃 낙지김치죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/661527b6-c86e-4f17-a08f-d676140918b7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1160614-10000001",
+      "name": "몸보신세트",
+      "description": "삼계탕+영양닭죽300g+반찬선택+++호박죽맛보기서비스+++",
+      "category": "몸보신세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/79598bec-a46a-4a71-9244-56fb697e0240.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1160614-10000018",
+      "name": "몸보신 삼계탕 찹쌀포함",
+      "description": "삼계탕+반찬선택",
+      "category": "몸보신 생각",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/79598bec-a46a-4a71-9244-56fb697e0240.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1160614-10000019",
+      "name": "3종반찬(오징어젓갈,메추리알,김치)",
+      "description": "",
+      "category": "반찬류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1160614-10000024",
+      "name": "국민학교앞 떡볶이",
+      "description": "",
+      "category": "떡볶이",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/556904d7-701a-42d6-950b-e53bbe662f75.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1160614-10000025",
+      "name": "고기만두",
+      "description": "",
+      "category": "만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d0aa99c8-373b-44f3-b23a-492864dea69a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1160614-10000028",
+      "name": "웰치스 제로 오렌지",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000028"
+    },
+    {
+      "id": "ddangyo-1160614-10000020",
+      "name": "계란찜 푸딩인줄~",
+      "description": "",
+      "category": "반찬류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/97b59c56-b5c1-4816-9f1e-7fa92beae605.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1160614-10000026",
+      "name": "김치만두",
+      "description": "",
+      "category": "만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f6211ff6-f21c-48fa-b9f4-4bc9b2d37c0b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1160614-10000029",
+      "name": "웰치스 제로 샤인머스켓",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000029"
+    },
+    {
+      "id": "ddangyo-1160614-10000021",
+      "name": "메추리알 장조림",
+      "description": "",
+      "category": "반찬류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/25ee4376-189c-4dc7-8e0e-9ea452bbd4b0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1160614-10000027",
+      "name": "갈비만두",
+      "description": "",
+      "category": "만두류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/09c4d2ec-423b-43eb-9f7d-f8e587cfedab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000027"
+    },
+    {
+      "id": "ddangyo-1160614-10000030",
+      "name": "웰치스 제로 체리스트로베리",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000030"
+    },
+    {
+      "id": "ddangyo-1160614-10000005",
+      "name": "담백한 참치죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/07/1312af6c-e503-4ecf-bfc2-522d82bd445a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1160614-10000022",
+      "name": "오징어젓갈",
+      "description": "",
+      "category": "반찬류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/50d039eb-e66d-4aae-9f83-d70665f3b3be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1160614-10000031",
+      "name": "웰치스 제로 포도",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000031"
+    },
+    {
+      "id": "ddangyo-1160614-10000006",
+      "name": "신선한 야채죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/82c17350-2827-48e0-be34-b4ade93478d7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1160614-10000023",
+      "name": "꼬수운 누룽지",
+      "description": "",
+      "category": "반찬류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1160614-10000032",
+      "name": "립톤 아이스티",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000032"
+    },
+    {
+      "id": "ddangyo-1160614-10000007",
+      "name": "영양만점 한우미역죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/500cd9dd-04ba-43d2-82f0-a54b7391ed97.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1160614-10000033",
+      "name": "생수",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000033"
+    },
+    {
+      "id": "ddangyo-1160614-10000008",
+      "name": "건강하자 삼계죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/9e114b7b-4336-407b-9f0f-3506941f89dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1160614-10000034",
+      "name": "식혜238ml",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000034"
+    },
+    {
+      "id": "ddangyo-1160614-10000009",
+      "name": "매콤한 참치김치죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/8e41bf2f-3aff-41e8-99f0-3ac5fb17e3ca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1160614-10000035",
+      "name": "킨사이다",
+      "description": "",
+      "category": "음료",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000035"
+    },
+    {
+      "id": "ddangyo-1160614-10000011",
+      "name": "해장하자 삼선짬뽕죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/6dbbaa66-2123-4f74-9800-7f2ef611e44a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1160614-10000012",
+      "name": "든든벌떡 불고기낙지죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/c5c3d128-9700-47a7-bee3-a7793ce29a2c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1160614-10000013",
+      "name": "몸보신하자 해신죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a4297d32-b7bd-40ca-8292-b9add1f8a5a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1160614-10000015",
+      "name": "액운타파 달콤팥죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/3a94d94f-2728-461d-8483-8d6ca62ef339.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1160614-10000016",
+      "name": "울엄마 시래기된장죽~매움해요",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1160614-10000017",
+      "name": "구수한 누룽지 새우계란죽",
+      "description": "죽600g+반찬선택",
+      "category": "죽생각 (단품)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/e1ee9e80-2da1-46b7-8847-f9a38c1d3de8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1160614",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?86Ae5iT"
+    ],
+    "rawItemCount": 40,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

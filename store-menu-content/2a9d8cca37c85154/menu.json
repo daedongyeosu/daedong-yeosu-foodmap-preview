@@ -1,0 +1,170 @@
+{
+  "storeId": "2a9d8cca37c85154",
+  "storeName": "여수낙지 더 쭈꾸미",
+  "displayName": "여수낙지 더 쭈꾸미",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/13a9ff83-614d-4a3b-8b00-addfc8ba2832.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "음료메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175149-10000005",
+      "name": "쭈꾸미&대패세트",
+      "description": "매콤쭈꾸미(210g)+직화대패(300g)+콩나물냉국+쌈세트(깻잎+김+와사비마요)+주먹밥+계란찜",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/b8cfbcc9-a27c-4238-9638-ad8a0216fb44.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1175149-10000001",
+      "name": "쭈꾸미 1인 세트",
+      "description": "매콤쭈꾸미(210g)+콩나물냉국+쌈세트(깻잎+김+와사비마요)+주먹밥+계란찜",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f0bf4966-7547-4891-9e46-c0588e654293.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1175149-10000003",
+      "name": "낙지 1인 세트",
+      "description": "매콤낙지(400g)+콩나물냉국+쌈세트(깻잎+김+와사비마요)+주먹밥+계란찜",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/11eb7731-8cd9-4c5d-bee3-a0eda4ae4f66.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1175149-10000002",
+      "name": "쭈꾸미 1인 (단품)",
+      "description": "콩나물 국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/753a6b51-9788-4c23-adc4-118fda70b937.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1175149-10000004",
+      "name": "낙지 1인(단품)",
+      "description": "콩나물국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/11eb7731-8cd9-4c5d-bee3-a0eda4ae4f66.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1175149-10000009",
+      "name": "후리가케 주먹밥",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/4bd095b8-ac43-41ea-adf1-d9630103641c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1175149-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1175149-10000010",
+      "name": "일본식 계란찜",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/05/4fffb19c-0bc7-4211-8d99-16fbb67b5e61.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1175149-90000002",
+      "name": "카스 프레시(캔)(355ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1175149-10000011",
+      "name": "콩나물 냉국",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/bb816ea6-e062-4a21-b356-7dad4d073b5d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1175149-10000012",
+      "name": "쌈세트(깻잎+와사비)",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1175149-10000013",
+      "name": "칠성사이다",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1175149-10000006",
+      "name": "쭈꾸미&대패(단품)",
+      "description": "콩나물국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/a941a3c7-c9bd-45fb-973f-7272c7fabe12.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1175149-10000014",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1175149-10000007",
+      "name": "낙지&대패세트",
+      "description": "매콤낙지(210g)+직화대패(300g)+콩나물냉국+쌈세트(깻잎+김+와사비마요)+주먹밥+계란찜",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/d6083814-2a08-4c6d-aa2f-09846adc3d7a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1175149-10000008",
+      "name": "낙지&대패(단품)",
+      "description": "콩나물국",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/d6083814-2a08-4c6d-aa2f-09846adc3d7a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175149",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?FUg3pNF"
+    ],
+    "rawItemCount": 21,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

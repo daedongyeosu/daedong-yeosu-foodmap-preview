@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T20:52:13.904Z",
+  "generatedAt": "2026-08-03T21:52:23.597Z",
   "sourceApp": "ddangyo",
   "stores": {
     "f0b4ebfd7df44a75": [
@@ -1064,6 +1064,70 @@
         "benefitRate": 0,
         "minimumOrderAmount": 21900,
         "startsAt": "20260801",
+        "endsAt": "20260831",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "f400a1ddbb30d59c": [
+      {
+        "id": "PLATFORM_B_B000190_202607_001",
+        "label": "BBQ 4,000원 할인",
+        "benefitAmount": 4000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 18000,
+        "startsAt": "20260801",
+        "endsAt": "20260831",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "061053c087e938ca": [
+      {
+        "id": "PLATFORM_B_B000193_202607_001",
+        "label": "7번가피자 4,000원 할인",
+        "benefitAmount": 4000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 19900,
+        "startsAt": "20260801",
+        "endsAt": "20260831",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "4bf72e42f7bbe1d6": [
+      {
+        "id": "PLATFORM_B_B000270_202607_003",
+        "label": "청년피자 5,000원 할인",
+        "benefitAmount": 5000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 18900,
+        "startsAt": "20260801",
+        "endsAt": "20260831",
+        "appKeys": [
+          "ddangyo"
+        ],
+        "appLabel": "땡겨요",
+        "status": "available"
+      }
+    ],
+    "65cc1845e542d5fb": [
+      {
+        "id": "PLATFORM_B_B000320_202608_001",
+        "label": "후참잘 3,000원 할인",
+        "benefitAmount": 3000,
+        "benefitRate": 0,
+        "minimumOrderAmount": 17000,
+        "startsAt": "20260803",
         "endsAt": "20260831",
         "appKeys": [
           "ddangyo"

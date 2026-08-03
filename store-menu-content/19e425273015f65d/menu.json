@@ -1,0 +1,189 @@
+{
+  "storeId": "19e425273015f65d",
+  "storeName": "여수맛집 정가네생선구이 전문점",
+  "displayName": "여수맛집 정가네생선구이 전문점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000003113.jpg",
+  "categories": [
+    "전체",
+    "메뉴",
+    "주류메뉴",
+    "추가메뉴",
+    "음료수"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1350036-10000001",
+      "name": "생선구이",
+      "description": "2인 이상/고등어+갈치+조기 [3가지]",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/08cc112b-402d-4f79-b422-9f75b8bb891d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1350036-10000003",
+      "name": "생선구이 특정식",
+      "description": "2인 이상/고등어+갈치+조기+서대 [4가지]+게장+제육볶음+서대회무침",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/fe01c804-e6a2-4bb5-8c55-940be42dd65d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1350036-10000004",
+      "name": "갈치조림",
+      "description": "2인 이상",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/2b359e76-a384-47da-a744-3665a785b53a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1350036-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1350036-10000008",
+      "name": "서대회무침",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1350036-10000012",
+      "name": "콜라",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1350036-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1350036-10000002",
+      "name": "생선구이정식",
+      "description": "2인 이상/고등어+갈치+조기+서대 [4가지]+게장+제육볶음",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/c0164d6f-218a-4f8a-9f05-aa45cf8e0d67.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1350036-10000009",
+      "name": "제육볶음",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e1c8cf09-86d0-4e57-8afd-8ca533ea0d44.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1350036-10000013",
+      "name": "사이다",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1350036-90000003",
+      "name": "카스(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1350036-10000010",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/f27b0a87-9f6b-4bf8-9e4b-0be5297d9013.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1350036-10000014",
+      "name": "환타 파인",
+      "description": "",
+      "category": "음료수",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1350036-90000004",
+      "name": "테라(병)(500ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1350036-10000011",
+      "name": "김",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1350036-10000005",
+      "name": "갈치조림정식",
+      "description": "2인 이상/갈치조림+게장+제육볶음",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/721e6521-5240-45c4-8087-35bf3cca945b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1350036-10000006",
+      "name": "갈치조림 특정식",
+      "description": "2인 이상/갈치조림+게장+제육볶음+서대회무침",
+      "category": "메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ad39177a-9798-4521-9398-216397d3216c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1350036-10000007",
+      "name": "꽃게장정식",
+      "description": "2인이상/암꽃게+전복+새우+소라+고등어",
+      "category": "메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1350036",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?yW4qsVn"
+    ],
+    "rawItemCount": 21,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

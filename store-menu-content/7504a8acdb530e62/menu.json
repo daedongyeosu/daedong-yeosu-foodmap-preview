@@ -1,0 +1,181 @@
+{
+  "storeId": "7504a8acdb530e62",
+  "storeName": "이가네 나주곰탕&설렁탕 여수점",
+  "displayName": "이가네 나주곰탕&설렁탕 여수점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f5f883fd-73ec-48e5-81bc-eaa5d22d6f21.JPG",
+  "categories": [
+    "전체",
+    "메인메뉴",
+    "추가메뉴",
+    "욜로 1인세트",
+    "가족세트",
+    "음료메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1138827-10000002",
+      "name": "이가네 나주곰탕+공기밥+깍두기",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/eb28b5df-715b-4706-a9be-4614124b8b07.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1138827-10000003",
+      "name": "이가네 설렁탕+공기밥+깍두기",
+      "description": "",
+      "category": "메인메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/f5f883fd-73ec-48e5-81bc-eaa5d22d6f21.JPG",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1138827-10000016",
+      "name": "강력추천 염통꼬치",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/a1d715d2-0b0f-4de3-ae57-681c7a5fb38e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1138827-10000007",
+      "name": "욜로1인세트A. 이가네 나주곰탕 + 석쇠불고기",
+      "description": "이가네 나주곰탕+석쇠불고기",
+      "category": "욜로 1인세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1138827-10000011",
+      "name": "가족세트A. 이가네 메인메뉴 中 택 2 +석쇠불고기",
+      "description": "나주곰탕or설렁탕中 택2+석쇠불고기",
+      "category": "가족세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1138827-10000015",
+      "name": "석쇠불고기",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/84eecf7a-4f86-45ca-9f3d-43714e14fea4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1138827-10000024",
+      "name": "코카콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/b7c38ecc-52a0-4973-b014-00193984ac45.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000024"
+    },
+    {
+      "id": "ddangyo-1138827-10000008",
+      "name": "욜로1인세트B. 이가네 설렁탕 + 석쇠불고기",
+      "description": "이가네 설렁탕+석쇠불고기",
+      "category": "욜로 1인세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1138827-10000012",
+      "name": "가족세트B. 이가네 메인메뉴中 택3 + 석쇠불고기",
+      "description": "나주곰탕or설렁탕中 택3 + 석쇠불고기",
+      "category": "가족세트",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1138827-10000025",
+      "name": "스프라이트",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/03/c70d841c-ef6e-47e3-8234-04da8de3c2a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000025"
+    },
+    {
+      "id": "ddangyo-1138827-10000026",
+      "name": "쿨피스",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000026"
+    },
+    {
+      "id": "ddangyo-1138827-10000018",
+      "name": "얼큰한 어묵탕",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/f1f2487d-86b2-4efa-9094-10f008c19720.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1138827-10000019",
+      "name": "모 듬 튀 김",
+      "description": "핫도그 1개 + 새우까스 1개 + 김말이 2개 + 만두 2개 + 어묵튀김 2개",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/76518b9b-5d0b-49fc-af93-39fa137d7703.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1138827-10000020",
+      "name": "찰순대(순대만)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/5fa7767e-fcc2-4cd8-9fd0-2c43f3d5bd91.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1138827-10000021",
+      "name": "계란찜",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/02/f6d6b08a-6d21-4949-a449-2447a9ae2d66.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    },
+    {
+      "id": "ddangyo-1138827-10000022",
+      "name": "공기밥",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/1f71c3ee-b08b-4c0b-ad7d-61844c8cf1ae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1138827-10000023",
+      "name": "김치(깍두기)",
+      "description": "",
+      "category": "추가메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/1b57eae4-3cea-4110-a03a-93ffa08efa0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1138827",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?obD3kUx"
+    ],
+    "rawItemCount": 20,
+    "duplicateItemsRemoved": 3
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

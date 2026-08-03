@@ -1,0 +1,3238 @@
+{
+  "storeId": "8d96b4a2fa768050",
+  "storeName": "영커피 여수여서점",
+  "displayName": "영커피 여수여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/87b75fbf-34bd-4307-9861-04a9e9e15974.jpg",
+  "categories": [
+    "전체",
+    "1.1리터 보틀(Ice Only)",
+    "COFFEE",
+    "CREAM",
+    "페스츄리 디저트",
+    "디저트",
+    "JUICE&ADE",
+    "TEA",
+    "카야토스트",
+    "선물세트",
+    "음료 3+1 메뉴",
+    "BUBBLE TEA",
+    "보틀 3개 묶음 할인",
+    "ICE BLENDED",
+    "세트메뉴",
+    "ZERO SUGAR",
+    "케이크",
+    "스모어쿠키",
+    "크로플",
+    "베이글",
+    "NON COFFEE"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1222645-30000230",
+      "name": "1.1리터 아메리카노",
+      "description": "미디엄, 다크, 디카페인 3가지 종류의 원두 선택이 가능합니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/97a4b6be-baf5-415d-9547-8d333ce3e765.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000230"
+    },
+    {
+      "id": "ddangyo-1222645-30000341",
+      "name": "바닐라라떼",
+      "description": "바닐라 파우더를 사용하여 한층 더 진하고 깊은 맛의 커피가 들어간 라떼입니다",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dbcc717f-514a-4642-ad7d-9ee1d0bea7bc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000341"
+    },
+    {
+      "id": "ddangyo-1222645-30000377",
+      "name": "식후떼",
+      "description": "부드러운 목넘김에 달달한 돌체와 달콤한 크림의 만남",
+      "category": "CREAM",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/62b4bb93-cf83-4a5a-8c18-468ff66126c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000377"
+    },
+    {
+      "id": "ddangyo-1222645-30000461",
+      "name": "페스츄리붕어빵(팥)",
+      "description": "달달한 팥이 들어간 붕어빵의 정석",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8439cf8b-9752-43df-baa9-7419edc4045e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000461"
+    },
+    {
+      "id": "ddangyo-1222645-30000496",
+      "name": "파니니 햄치즈토스트",
+      "description": "영커피만의 중독성 강.한 특제 소스가 들어간 든든한 파니니 토스트",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a9cce87c-ee0b-432d-9cc8-774d73707ba4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000496"
+    },
+    {
+      "id": "ddangyo-1222645-30000410",
+      "name": "케일파인애플주스",
+      "description": "케일 사과 파인애플 최강조합 건강과 맛까지 챙겨챙겨",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e2113f37-4db2-434b-82e3-793ee0901558.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000410"
+    },
+    {
+      "id": "ddangyo-1222645-30000532",
+      "name": "복숭아아이스티",
+      "description": "복숭아 본연의 단맛과 풍미를 그대로 느낄수 있는 복숭아티입니다",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/159324f7-8e0b-4ed4-89c3-1b47b46c1e38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000532"
+    },
+    {
+      "id": "ddangyo-1222645-30000473",
+      "name": "카야토스트",
+      "description": "단짠단짠 한 번 빠지면 헤어나오지 못하는 맛",
+      "category": "카야토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fa549c25-cbe1-4054-b51c-e9aedacc0a6a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000473"
+    },
+    {
+      "id": "ddangyo-1222645-30000557",
+      "name": "달콤바삭약과 선물세트(5개)",
+      "description": "바삭한 크런키로 둘러싸인 달콤 약과 5개 구성 선물세트",
+      "category": "선물세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/88080547-4197-4133-b4bd-6cb7e645d485.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000557"
+    },
+    {
+      "id": "ddangyo-1222645-30000224",
+      "name": "드립커피 3+1(4잔)",
+      "description": "드립커피 ICE(V) 사이즈 3잔 가격에 4잔, 이거 안사면 손해",
+      "category": "음료 3+1 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cf0c4732-fed7-4ae7-9f85-18446acc393f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000224"
+    },
+    {
+      "id": "ddangyo-1222645-30000405",
+      "name": "타로버블티",
+      "description": "고소~하고 담백한 타로에 쫀득탱글한 펄이 퐁~당~",
+      "category": "BUBBLE TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/13880c05-6e94-42a0-b9ff-6cdbaf86dd33.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000405"
+    },
+    {
+      "id": "ddangyo-1222645-30000219",
+      "name": "1.1리터 보틀 아메리카노 3개(only ICE)",
+      "description": "아메리카노 양 많은거 찾는 사람 이거 추천(3개 묶어 3천원 할인)",
+      "category": "보틀 3개 묶음 할인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b194e48f-bced-45fc-9245-5acbe66775e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000219"
+    },
+    {
+      "id": "ddangyo-1222645-30000430",
+      "name": "냉율무스무디",
+      "description": "기본은 꿀이 들어가지 않습니다.",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ee8bbb2d-7192-463d-bf0a-6a6d69ce0394.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000430"
+    },
+    {
+      "id": "ddangyo-1222645-30000568",
+      "name": "붕어빵 5종 선물세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/f93cfed6-4232-4df6-a987-4fce2a5b4c5f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000568"
+    },
+    {
+      "id": "ddangyo-1222645-30000355",
+      "name": "제로슈가 복숭아티",
+      "description": "ZERO SUGAR, 대체당으로 만든 달달한 복숭아티",
+      "category": "ZERO SUGAR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7f85a4b1-9409-417e-a496-7366b7c96b46.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000355"
+    },
+    {
+      "id": "ddangyo-1222645-30000466",
+      "name": "듀얼초코케이크",
+      "description": "초콜릿 애호가들에게 특히 인기가 많으며, 다양한 초콜릿의 맛과 텍스처를 동시에 즐길 수 있는 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/24b48a16-6f3e-4643-931b-c2d8d442802c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000466"
+    },
+    {
+      "id": "ddangyo-1222645-30000513",
+      "name": "돼지크럼쿠키",
+      "description": "초코+딸기잼+크림치즈, 돼지아이스크림 그대로 재현한 쿠키",
+      "category": "스모어쿠키",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5a5f2d08-591c-4b64-8751-684281b9fc89.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000513"
+    },
+    {
+      "id": "ddangyo-1222645-30000617",
+      "name": "[짭짤고소]플레인소금식빵",
+      "description": "고소한 버터의 풍미와 짭조름한 소금이 어우러진 가장 기본에 충실한 플레인 소금식빵(미니사이즈)",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/8118298d-2047-45bb-b75a-4838b22c1633.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000617"
+    },
+    {
+      "id": "ddangyo-1222645-30000479",
+      "name": "플레인 크로플(1조각)",
+      "description": "겉은 바싹~~속은 부드러운 깊은 맛~",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fe6dec08-ca7d-4a25-9c6d-9fad4b9ed720.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000479"
+    },
+    {
+      "id": "ddangyo-1222645-30000488",
+      "name": "플레인베이글",
+      "description": "플레인 베이글은 밀가루와 이스트의 발효 과정에서 나오는 고소한 맛이 주된 풍미를 이루고 있습니다. 특별한 재료가 들어가지 않아 베이글 본연의 고소한 맛을 그대로 느낄 수 있습니다.",
+      "category": "베이글",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d02eba68-27bd-40f8-a80c-4187741beb62.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000488"
+    },
+    {
+      "id": "ddangyo-1222645-30000361",
+      "name": "식혜",
+      "description": "살아있는 밥알이 씹히는 시원하고 달큰한 식혜",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/586b4c3a-6dd3-41f8-8c67-d49b9f3586ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000361"
+    },
+    {
+      "id": "ddangyo-1222645-30000450",
+      "name": "페스츄리식빵",
+      "description": "부드럽고 촉촉한 질감이 입안에서 녹아내리면서, 달콤한 향이 입안 가득퍼지는 맛(영크림이랑 먹으면 훨씬 맛있는건 안비밀...)",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5be0dfad-8c2d-4874-825b-a96bbd9ab251.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000450"
+    },
+    {
+      "id": "ddangyo-1222645-30000558",
+      "name": "달콤바삭약과 선물세트(8개)",
+      "description": "바삭한 크런키로 둘러싸인 달콤 약과 8개 구성 선물세트",
+      "category": "선물세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/cb5cb747-047b-4f83-9baa-77fac4bea0b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000558"
+    },
+    {
+      "id": "ddangyo-1222645-30000406",
+      "name": "초코버블티",
+      "description": "쫀득탱글한 펄에 달달한 초콜렛 맛 뒤에 느껴지는 다크초콜릿의 맛",
+      "category": "BUBBLE TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9e75c300-70c4-43f7-a480-78bf42bb4d38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000406"
+    },
+    {
+      "id": "ddangyo-1222645-30000489",
+      "name": "토마토바질베이글",
+      "description": "바질이 추가되어 신선하고 향긋한 허브 향이 베이글 전체에 퍼져 있습니다. 바질의 독특한 풍미가 토마토의 달콤함과 잘 어우러져 풍부한 맛을 제공합니다.",
+      "category": "베이글",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a74f346e-5ea7-48a6-9e00-876eeb99e406.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000489"
+    },
+    {
+      "id": "ddangyo-1222645-30000225",
+      "name": "아이스아메리카노 3+1(4잔)",
+      "description": "아메리카노 ICE(V) 사이즈 3잔 가격에 4잔, 이거 안사면 손해",
+      "category": "음료 3+1 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d48aab32-bfd0-4e97-9fd8-0b59ada3acdd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000225"
+    },
+    {
+      "id": "ddangyo-1222645-30000362",
+      "name": "순우유라떼",
+      "description": "아이들도 부담없이 먹을 수 있는 달콤한 라떼(자판기우유st)",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4c2a05d9-12c8-4ce4-bf28-880060bf6675.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000362"
+    },
+    {
+      "id": "ddangyo-1222645-30000378",
+      "name": "아인슈페너",
+      "description": "부드러운 콜드브루와 달콤한 영크림의 조화가 일품인 콜드브루 아인슈페너",
+      "category": "CREAM",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/325cf4ca-850e-4fea-b243-fa4729961f15.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000378"
+    },
+    {
+      "id": "ddangyo-1222645-30000381",
+      "name": "아망추",
+      "description": "복숭아 아이스티에 망고가 퐁당",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7f761850-dabe-4163-9696-674c9f3daac4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000381"
+    },
+    {
+      "id": "ddangyo-1222645-30000337",
+      "name": "아메리카노",
+      "description": "미디엄, 다크, 디카페인 3가지 종류의 원두 선택이 가능합니다",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ece12df5-3a3f-4cf8-824c-d28a0e7eba73.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000337"
+    },
+    {
+      "id": "ddangyo-1222645-30000618",
+      "name": "[풍미가득]바질소금식빵",
+      "description": "향긋한 바질과 버터의 깊은 풍미가 더해져 더욱 풍성한 맛을 즐길 수 있는 소금식빵(미니사이즈)",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/833920e2-5fe5-44a1-ba29-959d488dace9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000618"
+    },
+    {
+      "id": "ddangyo-1222645-30000356",
+      "name": "제로슈가 아샷추(복숭아티+샷추가)",
+      "description": "ZERO SUGAR, 대체당으로 만든 상콤달달 복숭아티에. 묵직한 에스프레소가 추가된 음료",
+      "category": "ZERO SUGAR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ed47cb8b-bc9c-4427-bbaa-39e14fafaa1d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000356"
+    },
+    {
+      "id": "ddangyo-1222645-30000604",
+      "name": "1.1리터 레모니카노",
+      "description": "상큼한 레몬티 베이스에 진한 에스프레소 샷을 더해 완성한 새로운 스타일의 시트러스 커피. 가볍고 산뜻하게, 색다른 커피의 매력을 경험해 보세요.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/6587fba9-98ae-415b-870c-98354336a2d9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000604"
+    },
+    {
+      "id": "ddangyo-1222645-30000467",
+      "name": "갸또피스타치오딸기케이크",
+      "description": "피스타치오의 고소한 맛과 부드러운 식감, 그리고 달콤한 맛의 균형이 잘 어우러진 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce377bde-4e22-472b-acda-d9263993be44.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000467"
+    },
+    {
+      "id": "ddangyo-1222645-30000431",
+      "name": "마시떼스무디",
+      "description": "기본은 꿀이 들어가지 않습니다.",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1b3436e3-c0d4-45ca-81ab-1ceade8f00d6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000431"
+    },
+    {
+      "id": "ddangyo-1222645-30000569",
+      "name": "시그니처 식빵 3종 선물세트",
+      "description": "",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e1b06547-cb99-444b-916c-8bdac22939ac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000569"
+    },
+    {
+      "id": "ddangyo-1222645-30000474",
+      "name": "카야토스트(스페셜)",
+      "description": "단짠단짠한 맛에 호두토핑이 들어가 고소함이 추가된 맛",
+      "category": "카야토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/55a2850f-94ea-42bd-9b63-43014ca7eb94.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000474"
+    },
+    {
+      "id": "ddangyo-1222645-30000480",
+      "name": "메이플 크로플(1조각)",
+      "description": "겉은 바싹~~속은 부드러운 메이플의 깊은 맛",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cac5d0f4-1240-49ac-9e8c-7c09763a8092.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000480"
+    },
+    {
+      "id": "ddangyo-1222645-30000220",
+      "name": "1.1리터 보틀 아샷추 3개(only ICE)",
+      "description": "맛있는 아샷추 양 많은거 찾는 사람 이거 추천(3개 묶어 3천원 할인)",
+      "category": "보틀 3개 묶음 할인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f53ed33a-da5e-4633-ae70-0e819db7fc7a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000220"
+    },
+    {
+      "id": "ddangyo-1222645-30000411",
+      "name": "ABC주스",
+      "description": "콜레스테롤과 내방지방 낮춰낯춰 맛과 건강까지 챙겨챙겨",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/23dba2f2-dc7a-42fb-9bde-1c39352b9383.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000411"
+    },
+    {
+      "id": "ddangyo-1222645-30000611",
+      "name": "레모니카노",
+      "description": "상큼한 레몬티 베이스에 진한 에스프레소 샷을 더해 완성한 새로운 스타일의 시트러스 커피. 가볍고 산뜻하게, 색다른 커피의 매력을 경험해 보세요.",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000611"
+    },
+    {
+      "id": "ddangyo-1222645-30000605",
+      "name": "1.1리터 유자리카노",
+      "description": "상큼한 유자티 베이스에 진한 에스프레소 샷을 더해 완성한 새로운 스타일의 시트러스 커피. 가볍고 산뜻하게, 색다른 커피의 매력을 경험해 보세요.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9380ef6b-d2cc-48b2-8cc7-f361a6211fdc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000605"
+    },
+    {
+      "id": "ddangyo-1222645-30000515",
+      "name": "황치즈쿠키",
+      "description": "진한 치즈 맛을 묵직하게 강화한 쿠키. 치즈덕후에게 강추",
+      "category": "스모어쿠키",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/07cfb22f-926c-4119-8a90-4d2ba5755bd0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000515"
+    },
+    {
+      "id": "ddangyo-1222645-30000593",
+      "name": "토마토주스",
+      "description": "프레시함이 살아있는 토마토주스",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/3f710747-04a7-4576-8ead-06404eb7b5e3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000593"
+    },
+    {
+      "id": "ddangyo-1222645-30000432",
+      "name": "초코칩영치노",
+      "description": "초코칩 듬뿍~ 갈려 식감과 맛 둘 다 잡아버린 그 음료",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/93c25d89-ab33-43ee-af7e-7a5732c58451.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000432"
+    },
+    {
+      "id": "ddangyo-1222645-30000196",
+      "name": "페스츄리호두과자 세트",
+      "description": "페스츄리호두과자3알+아메리카노or복숭아티 세트",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e548034e-9ef2-4039-97a7-aed027a1fe44.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000196"
+    },
+    {
+      "id": "ddangyo-1222645-30000407",
+      "name": "흑당버블티",
+      "description": "쫀득탱글한 펄에 흑당의 깊은 풍미와 달달함이 끝내주는 맛",
+      "category": "BUBBLE TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7a9f8b82-5c54-4eba-9342-8d74a23d5932.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000407"
+    },
+    {
+      "id": "ddangyo-1222645-30000481",
+      "name": "시나몬 크로플(1조각)",
+      "description": "겉은 바싹~~속은 부드러운 깊은 시나몬 맛",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c7165b18-bf98-4dbe-afdb-4aa5f1efdde5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000481"
+    },
+    {
+      "id": "ddangyo-1222645-30000363",
+      "name": "바나나라떼",
+      "description": "그 시절 바나나맛 그대로, 추억을 담은 바나나라떼",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f32d5dfb-d992-447e-9a59-7e1ff2ca1b9f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000363"
+    },
+    {
+      "id": "ddangyo-1222645-30000226",
+      "name": "복숭아아이스티 3+1(4잔)",
+      "description": "복숭아아이스티 ICE(V) 사이즈 3잔 가격에 4잔, 이거 안사면 손해",
+      "category": "음료 3+1 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1d4e6e69-63fa-483f-8123-7b3c15b2424b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000226"
+    },
+    {
+      "id": "ddangyo-1222645-30000559",
+      "name": "약과+오란다 2종 선물세트",
+      "description": "바삭한 크런키로 둘러싸인 달콤 약과 5개와 쫀득한 오란다 4개 세트",
+      "category": "선물세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/840d526a-a5b6-4683-a143-c9c42a7ba44a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000559"
+    },
+    {
+      "id": "ddangyo-1222645-30000468",
+      "name": "딸기생크림케이크",
+      "description": "상큼한 딸기와 부드러운 생크림의 조화를 통해 누구나 좋아할 만한, 부담 없이 즐길 수 있는 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6f86bcbf-3620-4240-963d-f6d8f0a97de9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000468"
+    },
+    {
+      "id": "ddangyo-1222645-30000221",
+      "name": "1.1리터 보틀 카페라떼 3개(only ICE)",
+      "description": "고소한~ 카페라떼 양 많은거 찾는 사람 이거 추천(3개 묶어 3천원 할인)",
+      "category": "보틀 3개 묶음 할인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6beefd38-afd3-4c65-b5b6-b2ba573342f8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000221"
+    },
+    {
+      "id": "ddangyo-1222645-30000490",
+      "name": "무화과베이글",
+      "description": "무화과가 들어가 있어 자연스러운 단맛과 함께 은은한 과일 향이 납니다. 무화과의 달콤함이 베이글 전체에 퍼져있어, 한 입 먹을 때마다 무화과의 풍미를 느낄 수 있습니다.",
+      "category": "베이글",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/2fffe406-cd71-4e31-9f0c-7fb3aaf49a7b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000490"
+    },
+    {
+      "id": "ddangyo-1222645-30000382",
+      "name": "캐모마일",
+      "description": "피부에 좋고 심신 안정 및 숙면에 효과가 좋은 허브티 캐모마일 티입니다",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5d823a0e-ac48-4b2d-b810-f3c615af9a38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000382"
+    },
+    {
+      "id": "ddangyo-1222645-30000619",
+      "name": "[감칠맛가득]명란소금식빵",
+      "description": "짭조름한 명란의 감칠맛과 고소한 버터가 만나 중독적인 풍미를 완성한 소금식빵 (식빵 위에 감태토핑이 올라가있습니다.)(미니사이즈)",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/1e98ce14-36d6-45c9-8301-1e46854c6a2e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000619"
+    },
+    {
+      "id": "ddangyo-1222645-30000379",
+      "name": "영라떼 아인슈페너",
+      "description": "부드러운 콜드브루에 고소한 우유와 영크림이 올라간 음료",
+      "category": "CREAM",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6fe4374e-c897-4880-bb2b-d23b02bb8d06.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000379"
+    },
+    {
+      "id": "ddangyo-1222645-30000620",
+      "name": "[풍미가득]소금식빵3종세트",
+      "description": "플레인, 바질, 명란 3가지맛의 소금식빵을 한번에 세트로 할인 받아서 구매해보세요",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/83d978dd-d486-46f3-95bf-49e844122ecb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000620"
+    },
+    {
+      "id": "ddangyo-1222645-30000469",
+      "name": "인절미케이크",
+      "description": "과하지 않은 달콤함과 고소한 맛이 균형을 이루고 있습니다. 설탕의 단맛보다는 콩고물과 인절미 자체의 고소한 맛이 주를 이루는 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a40adbe9-6cde-4a41-b33e-9db6ba15cfd3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000469"
+    },
+    {
+      "id": "ddangyo-1222645-30000364",
+      "name": "딸기라떼",
+      "description": "과육이 듬뿍 들어가 톡톡 씹히는 달콤한 딸기라떼",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/037bd674-0442-42c7-a786-aadcc841dc61.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000364"
+    },
+    {
+      "id": "ddangyo-1222645-30000231",
+      "name": "1.1리터 아샷추",
+      "description": "영커피 특제 복숭아 아이스티에 스페셜티 커피가 들어간 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/80eb2518-2779-4da2-b953-b2a34a43a93e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000231"
+    },
+    {
+      "id": "ddangyo-1222645-30000412",
+      "name": "수박주스",
+      "description": "갈증날땐 달달한 수박충전",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4fb2f50a-dbc0-4bec-b305-5296ef6ae3f0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000412"
+    },
+    {
+      "id": "ddangyo-1222645-30000612",
+      "name": "유자리카노",
+      "description": "상큼한 유자티 베이스에 진한 에스프레소 샷을 더해 완성한 새로운 스타일의 시트러스 커피. 가볍고 산뜻하게, 색다른 커피의 매력을 경험해 보세요.",
+      "category": "COFFEE",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000612"
+    },
+    {
+      "id": "ddangyo-1222645-30000476",
+      "name": "호밀빵 카야토스트",
+      "description": "단짠단짠한 맛에 호밀빵으로 만들어져 업그레이드 된 바삭함과 고소함",
+      "category": "카야토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fbc1b636-3d59-4e8d-bdae-63ddcabb3370.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000476"
+    },
+    {
+      "id": "ddangyo-1222645-30000586",
+      "name": "페스츄리초코식빵",
+      "description": "부드러운 식빵사이에 초코가 콕콕 박혀, 달콤한 향이 입안 가득 퍼지는 맛(영크림이랑 먹으면 훨씬 맛있는건 안비밀...)",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/832d48c8-4015-4f0e-8ae8-d53fb6c70105.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000586"
+    },
+    {
+      "id": "ddangyo-1222645-30000578",
+      "name": "아인쑥페너",
+      "description": "쑥의 쌉싸름함과 에스프레소의 깊은 쓴맛이 층층이 만나 복합적인 풍미를 만듭니다.",
+      "category": "CREAM",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/b1f20b17-0f67-411d-a927-6850a3c61791.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000578"
+    },
+    {
+      "id": "ddangyo-1222645-30000482",
+      "name": "젤라또 크로플(1조각)",
+      "description": "젤라또와 겉은 바싹 속은 부드럽고 깊은 맛",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7afd4191-9815-49ba-b626-752fb9d164e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000482"
+    },
+    {
+      "id": "ddangyo-1222645-30000197",
+      "name": "페스츄리붕어빵 세트",
+      "description": "페스츄리붕어빵1개+아메리카노or복숭아티 세트",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ea11e895-a196-4891-b531-1a98ceb4648f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000197"
+    },
+    {
+      "id": "ddangyo-1222645-30000383",
+      "name": "얼그레이",
+      "description": "체중 감량과 면역력 강화에 좋은 홍차 얼그레이 티입니다",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/72bafaa6-b152-4af4-a3e7-359afb253dfa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000383"
+    },
+    {
+      "id": "ddangyo-1222645-30000227",
+      "name": "아샷추 3+1(4잔)",
+      "description": "아샷추 ICE(V) 사이즈 3잔 가격에 4잔, 이거 안사면 손해",
+      "category": "음료 3+1 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d7acf8ca-7b89-4de7-b68b-433479fb9933.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000227"
+    },
+    {
+      "id": "ddangyo-1222645-30000222",
+      "name": "1.1리터 보틀 바닐라라떼 3개(only ICE)",
+      "description": "찐한 바닐라라떼 양 많은거 찾는 사람 이거 추천(영커피 바닐라라떼 맛있는거 모르는 사람 없죠)(3개 묶어 3천원 할인)",
+      "category": "보틀 3개 묶음 할인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7e0ae11a-9976-4619-8a68-f8988c047a45.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000222"
+    },
+    {
+      "id": "ddangyo-1222645-30000560",
+      "name": "약과+오란다+콜드브루 3종 선물세트",
+      "description": "바삭한 크런키로 둘러싸인 달콤 약과 5개와 쫀득한 오란다 4개, 콜드브루(500ml) 세트",
+      "category": "선물세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/81faeb19-8f15-44bb-b804-824768ead165.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000560"
+    },
+    {
+      "id": "ddangyo-1222645-30000433",
+      "name": "쿠앤크영치노",
+      "description": "시원~한 영치노에 쿠앤크와 달콤한 영크림을 더하다",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/bb97aa12-72bb-40da-8457-3dde2b7b1c4e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000433"
+    },
+    {
+      "id": "ddangyo-1222645-30000408",
+      "name": "말차버블티",
+      "description": "쫀득탱글한 펄에 제주유기농 말차의 단맛과 고급스러운 쌉싸름한 맛",
+      "category": "BUBBLE TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/bcd2ac54-677b-4628-a26f-356f6e8bec74.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000408"
+    },
+    {
+      "id": "ddangyo-1222645-30000491",
+      "name": "치즈베이글",
+      "description": "치즈의 자연스러운 짭짤함이 베이글에 더해져, 기본 베이글의 담백한 맛과 잘 어울립니다. 치즈의 짭짤한 맛이 베이글의 단맛과 균형을 이루어 풍미가 더욱 살아납니다.",
+      "category": "베이글",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/4296d321-d580-4118-a1bd-a3222a268800.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000491"
+    },
+    {
+      "id": "ddangyo-1222645-30000492",
+      "name": "올리브치즈베이글",
+      "description": "베이글 반죽의 고소한 맛이 올리브와 치즈의 풍미와 어우러지며, 밀가루와 발효 과정에서 발생하는 고소한 향이 더해져 더욱 깊은 맛을 느낄 수 있습니다.",
+      "category": "베이글",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7dffadc8-890d-416d-9b45-e475dc0031f5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000492"
+    },
+    {
+      "id": "ddangyo-1222645-30000223",
+      "name": "1.1리터 보틀 복숭아아이스티 3개(only ICE)",
+      "description": "고급진 복숭아아이스티 양 많은거 찾는 사람 이거 추천(3개 묶어 3천원 할인)",
+      "category": "보틀 3개 묶음 할인",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e350d1e0-5b1c-4c77-8808-0ce0e3333d7d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000223"
+    },
+    {
+      "id": "ddangyo-1222645-30000228",
+      "name": "아이스카페라떼 3+1(4잔)",
+      "description": "카페라떼 ICE(V) 사이즈 3잔 가격에 4잔, 이거 안사면 손해",
+      "category": "음료 3+1 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/bd6feb89-f730-4b26-920e-0b1045d7eb69.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000228"
+    },
+    {
+      "id": "ddangyo-1222645-30000232",
+      "name": "1.1리터 카페라떼",
+      "description": "진한 에스프레소에 우유를 넣어 부드럽고 고소한 맛을 느끼실 수 있습니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0984e221-79a3-4306-9e81-c11bba49e5be.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000232"
+    },
+    {
+      "id": "ddangyo-1222645-30000434",
+      "name": "돼지쿠키영치노",
+      "description": "돼지아이스크림 좋아하는 사람 손~ 제가 참 좋아해서 출시된 그 음료",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c9843497-ac89-4fd0-b778-22970f6df002.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000434"
+    },
+    {
+      "id": "ddangyo-1222645-30000198",
+      "name": "파니니 햄치즈토스트 세트",
+      "description": "파니니 햄치즈토스트+아메리카노or복숭아티 세트",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/432b2947-c27d-450f-8256-79b79e2151ea.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000198"
+    },
+    {
+      "id": "ddangyo-1222645-30000587",
+      "name": "페스츄리밤식빵",
+      "description": "부드러운 페스츄리 결 사이로 달콤한 밤앙금이 들어간 밤 식빵, 한 입 베어물면 고소한 향과 달콤한 밤의 풍미가 느껴지는 맛(영크림이랑 먹으면 훨씬 맛있는건 안비밀..)",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/566fe4cd-896c-4dc1-92ff-e612727281cb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000587"
+    },
+    {
+      "id": "ddangyo-1222645-30000561",
+      "name": "스페셜 콜드브루 원액(500ml)",
+      "description": "콜드브루 원액 500ml 상자 포장 구성으로 선물하시기에도 좋습니다.",
+      "category": "선물세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/27ab778c-d26b-4dd9-a65d-f53c208f2c2e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000561"
+    },
+    {
+      "id": "ddangyo-1222645-30000413",
+      "name": "오렌지자몽주스",
+      "description": "비타민 폭발 오렌지와 자몽에 만남",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/801981eb-e7e7-488a-becd-3355d3819b69.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000413"
+    },
+    {
+      "id": "ddangyo-1222645-30000409",
+      "name": "로얄버블티",
+      "description": "쫀득탱글한 펄에 로얄 밀크티의 고급스러운 맛",
+      "category": "BUBBLE TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6f78aea5-64a9-4cf2-a6f7-b326e5dee244.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000409"
+    },
+    {
+      "id": "ddangyo-1222645-30000365",
+      "name": "리얼초코라떼",
+      "description": "달달~한 초코와 함께 느껴지는 쌉싸름한 카카오의 맛이 일품인 초코라떼입니다",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/2dad03d8-1841-4163-8d3a-c69a8fc37165.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000365"
+    },
+    {
+      "id": "ddangyo-1222645-30000483",
+      "name": "영크림퐁당 크로플(2조각)",
+      "description": "비교불가. 독보적인 영크림과 크로플의 맛남",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/849cf35e-33ea-461e-8862-6613586dc757.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000483"
+    },
+    {
+      "id": "ddangyo-1222645-30000477",
+      "name": "호밀빵 카야토스트(스페셜)",
+      "description": "단짠단짠함에 호밀빵과 호두토핑이 더해져 고소한 맛이 일품",
+      "category": "카야토스트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/22bd6c40-c93f-4ad1-b140-51a4559d2189.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000477"
+    },
+    {
+      "id": "ddangyo-1222645-30000470",
+      "name": "얼그레이케이크",
+      "description": "향긋한 얼그레이 차의 풍미를 살린 디저트로 부드러운 식감과 섬세한 달콤함이 매력적인 케이크",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/25e0fee5-857b-45c3-9988-2c80a2cc476e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000470"
+    },
+    {
+      "id": "ddangyo-1222645-30000338",
+      "name": "아샷추",
+      "description": "영커피 특제 복숭아 아이스티에 스페셜티 커피가 들어간 음료\n기본사이즈 : 1샷, 1.1리터보틀 : 2샷",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ceb644b2-602d-4c63-b41b-191e959c80a1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000338"
+    },
+    {
+      "id": "ddangyo-1222645-30000384",
+      "name": "블랙퍼스트",
+      "description": "부드러우면서 산뜻한 맛이 특징인 블렌딩 홍차",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9d11efdc-a412-4acb-85df-5b6643fc8230.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000384"
+    },
+    {
+      "id": "ddangyo-1222645-30000359",
+      "name": "제로슈가 바닐라라떼",
+      "description": "ZERO SUGAR,  대체당으로 만든 깊고 진한 바닐라라떼",
+      "category": "ZERO SUGAR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4085bdfc-96ec-4d84-be93-771d033b6a59.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000359"
+    },
+    {
+      "id": "ddangyo-1222645-30000229",
+      "name": "아이스바닐라라떼 3+1(4잔)",
+      "description": "바닐라라떼 ICE(V) 사이즈 3잔 가격에 4잔, 이거 안사면 손해",
+      "category": "음료 3+1 메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3ea6eb77-9b36-4fd8-9cfe-a436afe8f59c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000229"
+    },
+    {
+      "id": "ddangyo-1222645-30000484",
+      "name": "흑임자크림퐁당 크로플(2조각)",
+      "description": "진한 흑임자 크림과 크로플의 맛남",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/18743790-2495-4a91-b28c-53b7dc7bed27.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000484"
+    },
+    {
+      "id": "ddangyo-1222645-30000414",
+      "name": "블루베리딸기바나나주스",
+      "description": "달콤함과 비타민 가득 눈 건강까지 챙겨",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a2eb8c35-94e7-459f-a65e-f7145aca1d48.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000414"
+    },
+    {
+      "id": "ddangyo-1222645-30000471",
+      "name": "미니바스크치즈케이크",
+      "description": "외부는 캐러멜화되어 약간 단단하지만, 내부는 매우 부드럽고 촉촉합니다",
+      "category": "케이크",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/2ca02a82-99c2-4184-b8fd-fa3b4c7bc276.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000471"
+    },
+    {
+      "id": "ddangyo-1222645-30000495",
+      "name": "버터소금빵",
+      "description": "디저트 1티어. 고소하면서 짭조름한 맛이 매력적인 소금빵",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8e7d6bcc-88c4-434b-9d8a-f45a06859fa1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000495"
+    },
+    {
+      "id": "ddangyo-1222645-30000366",
+      "name": "제주말차라떼",
+      "description": "진하고 풍부한 풍미를 가진 제주말차의 초록빛이 먹음직스러운 라떼입니다",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5fe15db5-d82e-46d0-9895-6abff169de2f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000366"
+    },
+    {
+      "id": "ddangyo-1222645-30000493",
+      "name": "어니언바질베이글",
+      "description": "어니언 바질 베이글에는 양파와 바질이 들어가 있어 바질 향과 양파의 자연스러운 단맛과 감칠맛을 느낄 수 있습니다.",
+      "category": "베이글",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/5cadc4af-ff26-49b6-a9b3-91108ce7b261.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000493"
+    },
+    {
+      "id": "ddangyo-1222645-30000602",
+      "name": "메론버블티",
+      "description": "달달함에 쫀득한 버블까지 더해져 당충전 제대로 하고싶은날 추천",
+      "category": "BUBBLE TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/7515b4bd-ae88-4b70-a61b-5caacf93a7b6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000602"
+    },
+    {
+      "id": "ddangyo-1222645-30000201",
+      "name": "[선물세트]오란다",
+      "description": "자꾸 자꾸 손이가는 중독성 있는 오란다4종 선물세트",
+      "category": "선물세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a302abd1-b23e-4693-9f4c-262dedfe329e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000201"
+    },
+    {
+      "id": "ddangyo-1222645-30000435",
+      "name": "시나몬꿀밤영치노",
+      "description": "향긋한 시나몬향과 달콤한 꿀과 밤의 만남.",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c33978a5-ed89-42d8-8b9b-b29eb5c35905.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000435"
+    },
+    {
+      "id": "ddangyo-1222645-30000199",
+      "name": "페스츄리호두과자+페스츄리붕어빵 세트",
+      "description": "페스츄리호두과자3알+페스츄리붕어빵1개+아메리카노or복숭아티 세트",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f1a95064-4ccc-4ec2-8c9e-10977046d260.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000199"
+    },
+    {
+      "id": "ddangyo-1222645-30000518",
+      "name": "달고나스모어쿠키",
+      "description": "고소한 쿠키에 폭신한 마시멜로우와 달달한 달고나가 쏙 올라간 쿠키",
+      "category": "스모어쿠키",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/96fe01ed-61b7-49c3-b0c5-5ef3f7698bf6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000518"
+    },
+    {
+      "id": "ddangyo-1222645-30000339",
+      "name": "카페라떼",
+      "description": "진한 에스프레소에 우유를 넣어 부드럽고 고소한 맛을 느끼실 수 있습니다",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9abec69d-5f2c-4e57-8b68-58f67c538055.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000339"
+    },
+    {
+      "id": "ddangyo-1222645-30000451",
+      "name": "페스츄리 스틱(시나몬)",
+      "description": "바삭하고 시나몬이 입안 가득 퍼지며, 달콤한 부드러움이 매력적인 디저트",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4b866938-dbc6-4799-8ebe-c7409050a6ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000451"
+    },
+    {
+      "id": "ddangyo-1222645-30000385",
+      "name": "페퍼민트",
+      "description": "위장을 진정시키는 효능이 있는 허브티 페퍼민트 티입니다",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/40fa3d44-3f2f-41ff-ae4a-32883b4acb8b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000385"
+    },
+    {
+      "id": "ddangyo-1222645-30000233",
+      "name": "1.1리터 카푸치노",
+      "description": "기본 4샷 에스프레소와 우유에 쫀득한 밀크폼의 조화가 더해져 목넘김이 부드럽습니다.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a2a7466e-ca9a-4c55-b81b-ef3808e87b69.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000233"
+    },
+    {
+      "id": "ddangyo-1222645-30000360",
+      "name": "제로슈가 초코라떼",
+      "description": "ZERO SUGAR,  대체당으로 만든 달콤 쌉싸름 초코라떼",
+      "category": "ZERO SUGAR",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c8159386-cc20-4a98-ac10-abbf6dafb115.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000360"
+    },
+    {
+      "id": "ddangyo-1222645-30000386",
+      "name": "와일드 스트로베리",
+      "description": "입안 가득 잘 익은 딸기의 풍미를 새콤달콤하게 즐기실 수 있는 허브티 와일드 스트로베리 티입니다",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b1f6d993-4323-4e6c-9baa-66bab105fcbb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000386"
+    },
+    {
+      "id": "ddangyo-1222645-30000200",
+      "name": "페스츄리소시지빵 세트",
+      "description": "페스츄리소시지빵+아메리카노or복숭아티 세트",
+      "category": "세트메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/82ea3c4c-fe32-430d-9f07-980feb4d26b4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000200"
+    },
+    {
+      "id": "ddangyo-1222645-30000367",
+      "name": "타로라떼",
+      "description": "고소~하면서 달짝지근한 타로의 맛",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3863145d-0137-4f59-8161-e4dc70c92200.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000367"
+    },
+    {
+      "id": "ddangyo-1222645-30000452",
+      "name": "페스츄리 스틱(초코)",
+      "description": "바삭하고 누텔라 초코의 달콤함이 입안 가득 퍼지며, 부드러움이 매력적인 디저트",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/16ae941f-883a-4043-b560-44cfbf770694.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000452"
+    },
+    {
+      "id": "ddangyo-1222645-30000436",
+      "name": "밀크쉐이크",
+      "description": "꼬숩고 달콤한 시~~~원~한 밀크쉐이크",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/337a2e40-543a-42b7-a5d5-4d927a5a4756.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000436"
+    },
+    {
+      "id": "ddangyo-1222645-30000485",
+      "name": "초코크림퐁당 크로플(2조각)",
+      "description": "깊은 묵직한 초코크림과 크로플의 맛남",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fc1d1807-bce0-45c1-b1e7-309636a6cf32.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000485"
+    },
+    {
+      "id": "ddangyo-1222645-30000234",
+      "name": "1.1리터 바닐라라떼",
+      "description": "바닐라 파우더를 사용하여 한층 더 진하고 깊은 맛의 커피가 들어간 라떼입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/2081f873-fc55-4162-a693-3d72baf32366.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000234"
+    },
+    {
+      "id": "ddangyo-1222645-30000340",
+      "name": "카푸치노",
+      "description": "에스프레소와 우유에 쫀득한 밀크폼의 조화가 더해져 목넘김이 부드럽습니다",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/51afd027-e594-4f33-b129-d73d884652b1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000340"
+    },
+    {
+      "id": "ddangyo-1222645-30000203",
+      "name": "[선물세트]페스츄리 호두과자",
+      "description": "페스츄리 호두과자 12알 선물세트",
+      "category": "선물세트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/89b32ab3-2e4d-4e8e-8a6a-49217e9d51f7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000203"
+    },
+    {
+      "id": "ddangyo-1222645-30000519",
+      "name": "쑥인절미크림쿠키",
+      "description": "쑥 반죽 쿠키에 인절미크림치즈와 마시멜로우가 들어간 쿠키",
+      "category": "스모어쿠키",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/133dadac-4251-4ca6-bde5-8a1f9c72d4cf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000519"
+    },
+    {
+      "id": "ddangyo-1222645-30000415",
+      "name": "당근사과주스",
+      "description": "비타민 가득 사과엔 당근이쥐",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1d551fb7-195e-495e-a467-0d89b30b3cec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000415"
+    },
+    {
+      "id": "ddangyo-1222645-30000486",
+      "name": "브라운치즈크로플(1조각)",
+      "description": "카라멜 향의 달콤 고소한 치즈와 달콤하고 쫄깃한 크로플의 만남",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f875bbc4-73b7-4b16-afde-29d58a183256.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000486"
+    },
+    {
+      "id": "ddangyo-1222645-30000416",
+      "name": "망고파인애플주스",
+      "description": "망고와 파인애플의 만남 시원시원해~~",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c12732ec-b383-4f79-8815-9754450f924a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000416"
+    },
+    {
+      "id": "ddangyo-1222645-30000387",
+      "name": "호박팥차",
+      "description": "호박의 부드러운 당도와 고소한 팥의 풍미의 조화",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/02fc0850-1524-4be8-92ad-77a05cbb8be3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000387"
+    },
+    {
+      "id": "ddangyo-1222645-30000437",
+      "name": "자몽스무디",
+      "description": "상콤한 자몽청과 시원한 얼음을 갈고 코코넛 젤리의 식감을 더한 시~원~한~ 스무디입니다",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1b249d04-30cd-4ec8-a25f-125616627e1a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000437"
+    },
+    {
+      "id": "ddangyo-1222645-30000368",
+      "name": "흑당라떼",
+      "description": "흑당의 깊은 풍미와 달달함이 매력적인 라떼",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/58f9d86b-f2ea-4b0a-9b73-f56e69339c07.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000368"
+    },
+    {
+      "id": "ddangyo-1222645-30000453",
+      "name": "[인기만점 핫도그]페스츄리소시지빵",
+      "description": "바삭한 페스츄리빵에 굵고 탱글한 소시지에 소스가 듬뿍 올라간 신개념 소시지빵",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e06b5b20-8d3d-4a13-9a74-97feca763889.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000453"
+    },
+    {
+      "id": "ddangyo-1222645-30000235",
+      "name": "1.1리터 카페모카",
+      "description": "묵직하고 진한 모카가 들어간 라떼입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/34c05d3c-312d-4848-9b08-ff40c5fd5e79.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000235"
+    },
+    {
+      "id": "ddangyo-1222645-30000497",
+      "name": "꿀호떡",
+      "description": "추운 날씨면 생각나는 달콤한 꿀이 들어가 있는 쫀득한 찹쌀 호떡",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/303e69be-694f-41ad-a6ba-f2c8968654fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000497"
+    },
+    {
+      "id": "ddangyo-1222645-30000454",
+      "name": "치즈치즈 페스츄리소시지빵",
+      "description": "굵은 소시지에 짭조롬한 소스와 고소한 모짜렐라치즈가 듬뿍 올려 업그레이드된 페스츄리 소시지빵",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/997b963c-8f61-48ff-8925-30b5ee265985.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000454"
+    },
+    {
+      "id": "ddangyo-1222645-30000342",
+      "name": "카라멜마끼아또",
+      "description": "카라멜 시럽이 첨가된 커피에 우유가 더해져 달콤하고 부드러운 라떼입니다",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d18b9636-62e7-4baa-9dcd-04b78fb0c9a3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000342"
+    },
+    {
+      "id": "ddangyo-1222645-30000438",
+      "name": "망고스무디",
+      "description": "진한 망고청과 시원한 얼음을 갈고 코코넛 젤리의 식감을 더한 시~원~한~ 스무디입니다",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/88b84a8d-7313-4772-b890-9d70243a9fa9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000438"
+    },
+    {
+      "id": "ddangyo-1222645-30000615",
+      "name": "블루베리요거트티",
+      "description": "",
+      "category": "TEA",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000615"
+    },
+    {
+      "id": "ddangyo-1222645-30000417",
+      "name": "한라봉주스",
+      "description": "제주도산 한라봉으로 만든 상큼한 프리미엄 주스",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e1712083-4bbc-4558-8385-e468b83d2521.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000417"
+    },
+    {
+      "id": "ddangyo-1222645-30000369",
+      "name": "율무라떼",
+      "description": "고소하면서 포만감 만점. 든든한 라떼",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/99543150-55a7-41fe-b406-16ac9f02578d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000369"
+    },
+    {
+      "id": "ddangyo-1222645-30000498",
+      "name": "플레인오란다",
+      "description": "달달하면서 쫀득한 식감이 매력적인 오란다",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/2e24a3ac-2f43-451f-b348-8579917680a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000498"
+    },
+    {
+      "id": "ddangyo-1222645-30000487",
+      "name": "브라운치즈젤라또크로플(1조각)",
+      "description": "카라멜 향의 달콤 고소한 치즈와 달콤하고 쫄깃한 크로플에 고소하고 부드러운 밀크젤라또의 만남",
+      "category": "크로플",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f27260ed-4a79-4f7f-83ff-cf5432c5a6e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000487"
+    },
+    {
+      "id": "ddangyo-1222645-30000236",
+      "name": "1.1리터 카라멜마끼아또",
+      "description": "카라멜이 쏙쏙 들어가있는 카라멜 향 가득한 리얼 카라멜마끼아또",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/27538970-22a7-4650-adf2-603a6cb51821.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000236"
+    },
+    {
+      "id": "ddangyo-1222645-30000455",
+      "name": "페스츄리 호두과자(팥)",
+      "description": "겹겹이 쌓인 페스츄리 식감의 신개념 호두과자",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0074a086-5e9f-441b-afa4-34efb7bff02d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000455"
+    },
+    {
+      "id": "ddangyo-1222645-30000237",
+      "name": "1.1리터 돌체라떼",
+      "description": "에스프레소에 달달한 연유베이스가 더해져 달달하고 고소한 맛입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b99b1300-b7e9-4ad2-81bd-7ce25d5718d1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000237"
+    },
+    {
+      "id": "ddangyo-1222645-30000616",
+      "name": "루이보스오렌지티",
+      "description": "",
+      "category": "TEA",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000616"
+    },
+    {
+      "id": "ddangyo-1222645-30000499",
+      "name": "치즈오란다",
+      "description": "쫀득 달콤한 오란다에 치즈가 추가되어 달콤함X100",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/edea995b-4f7c-4440-b429-89d8bec8856a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000499"
+    },
+    {
+      "id": "ddangyo-1222645-30000343",
+      "name": "카페모카",
+      "description": "묵직하고 진한 모카가 들어간 라떼입니다",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7fea4fc5-65be-40b8-94c2-5e55e55c70ec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000343"
+    },
+    {
+      "id": "ddangyo-1222645-30000370",
+      "name": "복숭아라떼",
+      "description": "복숭아에 퐁당 빠져버리는 듯한 달콤한 라떼",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4fdf0562-2c7e-4968-82c0-cec4152795b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000370"
+    },
+    {
+      "id": "ddangyo-1222645-30000418",
+      "name": "바나나주스",
+      "description": "달달한 생바나나가 듬뿍 들어간 과일주스",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c2ff056c-a449-46ca-9e6f-34636097b412.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000418"
+    },
+    {
+      "id": "ddangyo-1222645-30000439",
+      "name": "복숭아스무디",
+      "description": "달콤한 복숭아청에 코코넛젤리의 식감을 더한 스무디",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cc4871b5-3ade-4d82-b72c-cd7b9db3d93b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000439"
+    },
+    {
+      "id": "ddangyo-1222645-30000440",
+      "name": "샤인머스캣스무디",
+      "description": "식감좋은 상콤 달콤 샤인머스캣청과 시원한 얼음을 갈고 코코넛 젤리의 식감을 더한 시~원~한~ 스무디입니다",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4aa548ca-1107-40b6-911d-bdfea492dd0c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000440"
+    },
+    {
+      "id": "ddangyo-1222645-30000456",
+      "name": "[신메뉴]페스츄리 호두과자(슈크림)",
+      "description": "고소한 호두의 풍미와 부드러운 슈크림의 질감과 달콤한 맛이 조화를 이루는 페스츄리호두과자",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c78d7b2a-5304-4d4c-b1d4-1d547bee4e5c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000456"
+    },
+    {
+      "id": "ddangyo-1222645-30000500",
+      "name": "콩깨오란다",
+      "description": "쫀득 달콤한 오란다에 검은콩의 고소함X100",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1a7bd477-adbb-4116-8bc9-5bd322905b1a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000500"
+    },
+    {
+      "id": "ddangyo-1222645-30000388",
+      "name": "블랙밀크티",
+      "description": "블렌딩한 홍차와 달콤한 밀크티의 만남",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fcbeb87b-7768-47e1-b32b-31626ac259bf.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000388"
+    },
+    {
+      "id": "ddangyo-1222645-30000238",
+      "name": "1.1리터 바나나샷라떼",
+      "description": "그 시절 바나나맛 그대로, 추억을 담은 바나나라떼에 에스프레소추가",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/292b1abf-15d6-4a35-958e-931afe086eb4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000238"
+    },
+    {
+      "id": "ddangyo-1222645-30000344",
+      "name": "돌체라떼",
+      "description": "에스프레소에 달달한 연유베이스가 더해져 달달하고 고소한 맛입니다",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/65957b0b-d8c5-44a3-a798-088fec4d2034.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000344"
+    },
+    {
+      "id": "ddangyo-1222645-30000419",
+      "name": "딸기바나나주스",
+      "description": "달달한 바나나와 상콤한 딸기의 부드러운 조화",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/26e14ea1-3e0d-45c1-bbad-f17a5b4a3734.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000419"
+    },
+    {
+      "id": "ddangyo-1222645-30000371",
+      "name": "시나몬꿀밤라떼",
+      "description": "향긋한 시나몬향과 달콤한 밤에 리얼 꿀이 매력적인 시나몬꿀밤라떼",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/41a6d347-835b-45b6-ba50-702d253350b0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000371"
+    },
+    {
+      "id": "ddangyo-1222645-30000501",
+      "name": "초코크런치오란다",
+      "description": "쫀득 달콤한 오란다에 초코크런치의 바삭함X100",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/63783c4b-334d-460c-a004-05470d7ceef0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000501"
+    },
+    {
+      "id": "ddangyo-1222645-30000457",
+      "name": "[신메뉴]페스츄리 호두과자(크림치즈+팥)",
+      "description": "상큼하고 부드러운 크림치즈와 달달한 팥이 만난 페스츄리 호두과자",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7aea9b14-1fae-4625-be5f-9d165179780d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000457"
+    },
+    {
+      "id": "ddangyo-1222645-30000239",
+      "name": "1.1리터 다방커피",
+      "description": "달달하이 당충전 제대로 되는 믹스커피맛",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b22c0f34-d701-461b-b472-f9db0d201eca.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000239"
+    },
+    {
+      "id": "ddangyo-1222645-30000441",
+      "name": "플레인요거트스무디",
+      "description": "상큼한 리얼 요거트가 얹어진 상콤 달콤 시원~한 요거트 스무디입니다",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/544f1d2d-8a7f-4dc1-bc1e-ef23ee2ed09a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000441"
+    },
+    {
+      "id": "ddangyo-1222645-30000372",
+      "name": "흑임자라떼",
+      "description": "꼬소~한 맛에 건강하고 든든한 흑임자라떼",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0c9131b1-2e49-48ea-ae05-2f4f86d5796c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000372"
+    },
+    {
+      "id": "ddangyo-1222645-30000345",
+      "name": "바나나샷라떼",
+      "description": "그 시절 바나나맛 그대로, 추억을 담은 바나나라떼에 에스프레소 추가",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4c0fd952-fc3d-47af-824e-a46308e1363d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000345"
+    },
+    {
+      "id": "ddangyo-1222645-30000389",
+      "name": "얼그레이밀크티",
+      "description": "베르가못 향을 더한 홍차의 풍미를 느낄 수 있는 부드러운 밀크티",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f23d9958-5919-4007-9d29-746fdd048c02.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000389"
+    },
+    {
+      "id": "ddangyo-1222645-30000420",
+      "name": "망고바나나주스",
+      "description": "달달한 바나나와 상콤 달콤 망고의 부드러운 조화",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c1cfb1c0-9c91-489a-8696-47bd608c3373.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000420"
+    },
+    {
+      "id": "ddangyo-1222645-30000240",
+      "name": "1.1리터 다방라떼",
+      "description": "우유로 만든 믹스커피(미숫가루도 물보다 우유가 더 맛있는거 알죠)",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ec0294f0-fab0-4c13-91ca-80c1e4c84da0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000240"
+    },
+    {
+      "id": "ddangyo-1222645-30000390",
+      "name": "유자차",
+      "description": "유자와 꿀로 만든 유자청이 들어가 달콤하고 산뜻한 맛이 좋은 한국 전통 유자차",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7c60c1b8-13b4-401e-a4a1-601dcf0f391f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000390"
+    },
+    {
+      "id": "ddangyo-1222645-30000373",
+      "name": "요거플레인영",
+      "description": "상큼한 리얼 요거트가 얹어진 상콤 달콤한 플레인 요거트 라떼입니다",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/765652e9-178a-4b91-b115-b3f5002dd6b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000373"
+    },
+    {
+      "id": "ddangyo-1222645-30000422",
+      "name": "저칼로리 와일드스트로베리티에이드",
+      "description": "카페인,첨가물이 없는 유럽의 딸기향이 강렬한 천연과일차로 만든 저칼로리 에이드",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c6d6abd3-9535-4c45-99f2-a618988b8a42.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000422"
+    },
+    {
+      "id": "ddangyo-1222645-30000458",
+      "name": "페스츄리붕어빵(피자)",
+      "description": "피자소스가 들어간 단짠단짠 페스츄리 붕어빵(치즈는 들어 있지 않아요)",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/23b49822-ea68-468c-8836-ced7323c718a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000458"
+    },
+    {
+      "id": "ddangyo-1222645-30000442",
+      "name": "딸기요거트스무디",
+      "description": "상큼한 리얼 요거트가 얹어진 새콤 달콤 딸기와 갓벽한 조화를 이루는 시원~한 요거트 스무디입니다",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/61737997-277d-4c86-8daa-84220371cf78.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000442"
+    },
+    {
+      "id": "ddangyo-1222645-30000562",
+      "name": "달콤바삭약과",
+      "description": "바삭한 크런키로 둘러싸인 달콤 약과",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/02/023f7205-ba39-4c29-a788-aa3ae993b59a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000562"
+    },
+    {
+      "id": "ddangyo-1222645-30000346",
+      "name": "다방커피",
+      "description": "K 커피는 믹스커피지~",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/537a109a-0d9f-4441-902a-235c771f6041.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000346"
+    },
+    {
+      "id": "ddangyo-1222645-30000391",
+      "name": "자몽티",
+      "description": "비타민C가 풍부해서 다이어터에게 사랑받는 자몽티",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/08390264-6573-4dd8-84a0-8356ab2b9344.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000391"
+    },
+    {
+      "id": "ddangyo-1222645-30000374",
+      "name": "요거딸기영",
+      "description": "상큼한 리얼 요거트가 얹어져 상콤 달콤 딸기와 갓벽한 조화를 이루는 요거트 라떼입니다",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dea34c13-a968-4185-9df8-0731136bef3c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000374"
+    },
+    {
+      "id": "ddangyo-1222645-30000347",
+      "name": "다방라떼",
+      "description": "우유로 만든 믹스커피 ( 미숫가루도 물보다 우유가 더 맛있는거알죠 )",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/83494491-6908-4c54-a10c-01313442bea3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000347"
+    },
+    {
+      "id": "ddangyo-1222645-30000459",
+      "name": "페스츄리붕어빵(모찌)",
+      "description": "쫀득쫀득한 찹쌀떡이 통째로 들어간 붕어빵",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0224d261-5316-4126-938d-487dac9fd939.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000459"
+    },
+    {
+      "id": "ddangyo-1222645-30000502",
+      "name": "브라우니",
+      "description": "꾸덕하고 찐한 브라우니에 과자가 통째로 올라간 브라우니",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d4008171-f253-415e-88d9-238af5ed5376.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000502"
+    },
+    {
+      "id": "ddangyo-1222645-30000423",
+      "name": "저칼로리 레몬에이드",
+      "description": "상콤 달콤한 레몬청과 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/00c11f23-74fe-4bfc-97d2-d85069d8848b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000423"
+    },
+    {
+      "id": "ddangyo-1222645-30000443",
+      "name": "망고요거트스무디",
+      "description": "상큼한 리얼 요거트가 얹어진 상콤 달콤 망고와 갓벽한 조화를 이루는 시원~한 요거트 스무디입니다",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/75fc7836-b33e-4f3e-815b-1d948efcf741.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000443"
+    },
+    {
+      "id": "ddangyo-1222645-30000241",
+      "name": "1.1리터 소이라떼",
+      "description": "꼬소한 두유가 들어간 라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8d0c5500-8c9b-42c0-815d-1c0ed69af3ab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000241"
+    },
+    {
+      "id": "ddangyo-1222645-30000348",
+      "name": "콜드브루",
+      "description": "입에 남는 텁텁함이 없고 목넘김이 부드러운 깔끔한 맛입니다",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e31b12f2-7e85-46db-a942-8f17cbc5d4a2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000348"
+    },
+    {
+      "id": "ddangyo-1222645-30000242",
+      "name": "1.1리터 스키니라떼",
+      "description": "디카페인 에스프레소+저지방우유",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dd14c6cc-8d70-416e-8738-f004a90174f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000242"
+    },
+    {
+      "id": "ddangyo-1222645-30000375",
+      "name": "요거망고영",
+      "description": "상큼한 리얼 요거트가 얹어져 상콤 달콤 망고와 갓벽한 조화를 이루는 요거트 라떼입니다",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/33dc5c62-2371-4ca0-aefe-d3bd538f16eb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000375"
+    },
+    {
+      "id": "ddangyo-1222645-30000460",
+      "name": "페스츄리붕어빵(크림치즈+팥)",
+      "description": "상큼하고 부드러운 크림치즈와 달달한 팥의 만남",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ce468de9-06e9-4c9f-9cff-01170dccecab.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000460"
+    },
+    {
+      "id": "ddangyo-1222645-30000444",
+      "name": "블루베리요거트스무디",
+      "description": "상큼한 리얼 요거트가 얹어진 상콤 달콤 블루베리의 갓벽한 조화를 이루는 시원~한 요거트 스무디입니다",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6c2005a4-a0bb-4b8b-a42c-78745049b525.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000444"
+    },
+    {
+      "id": "ddangyo-1222645-30000503",
+      "name": "미니 크룽지",
+      "description": "가격도 씬~ 크기도 씬~ 가볍게 즐기기 좋은 미니 크룽지",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/87a63410-9fd6-4c5f-959f-5b6b5b59ad97.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000503"
+    },
+    {
+      "id": "ddangyo-1222645-30000392",
+      "name": "레몬티",
+      "description": "산뜻하고 레몬의 산미가 어우러져 상쾌함을 주는 티",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b31628eb-9f8c-4192-ad60-9cda9228c7aa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000392"
+    },
+    {
+      "id": "ddangyo-1222645-30000424",
+      "name": "저칼로리 복숭아에이드",
+      "description": "달콤한 복숭아에 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9ff50bd9-f400-4899-b0e1-34c13fd8e9b5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000424"
+    },
+    {
+      "id": "ddangyo-1222645-30000376",
+      "name": "요거복숭아영",
+      "description": "상큼한 리얼 요거트가 얹어져 상콤 달콤 복숭아와 갓벽한 조화를 이루는 요거트 라떼입니다",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b395e69a-5356-45d1-87da-bc7cf3368703.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000376"
+    },
+    {
+      "id": "ddangyo-1222645-30000243",
+      "name": "1.1리터 오트라떼",
+      "description": "오트밀 우유가 들어가 비건들도 마실 수 있는 라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a5a91d99-f8c4-494d-ae07-0a1357e7f3d5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000243"
+    },
+    {
+      "id": "ddangyo-1222645-30000445",
+      "name": "유자크러쉬",
+      "description": "유자의 쌉싸름함과 라임의 달콤함이 환상의 궁합",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f41b6f8a-b474-4905-9f4e-e4f707c44ca1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000445"
+    },
+    {
+      "id": "ddangyo-1222645-30000393",
+      "name": "유자 캐모마일",
+      "description": "상콤 달콤한 유자청과 캐모마일 티의 조화",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a8deea00-0ba3-4590-9474-4a785a2804b9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000393"
+    },
+    {
+      "id": "ddangyo-1222645-30000425",
+      "name": "저칼로리 쿨라임에이드",
+      "description": "청량하면서 상큼한 라임이 매력적인 저칼로리 에이드",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/af406460-b058-4667-8bfc-ab5ac9d37b9e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000425"
+    },
+    {
+      "id": "ddangyo-1222645-30000349",
+      "name": "콜드브루라떼",
+      "description": "깔끔한 맛의 콜드브루 원액과 부드러운 우유가 더해져 고소함 +100",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d7d845b0-9a23-4091-86ea-473058d2d946.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000349"
+    },
+    {
+      "id": "ddangyo-1222645-30000426",
+      "name": "저칼로리 딸기에이드",
+      "description": "과육이 톡톡씹히는 딸기와 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f32ff3fc-6ed7-47e2-a456-ebd3291cbac4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000426"
+    },
+    {
+      "id": "ddangyo-1222645-30000446",
+      "name": "커피쉐이크",
+      "description": "달달한게 땡기면서 시원하게 카페인섭취까지 필요할 때 GOOD",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/59a3e2f5-d611-41e8-8dd9-9c0f754618e2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000446"
+    },
+    {
+      "id": "ddangyo-1222645-30000350",
+      "name": "돌체콜드브루",
+      "description": "깔끔한 맛의 콜드브루 원액과 달콤한 연유베이스가 더해져 달콤함+100",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a0c7ee05-31b0-4c94-81fb-5687c46a281c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000350"
+    },
+    {
+      "id": "ddangyo-1222645-30000394",
+      "name": "유자 민트티",
+      "description": "상콤 달콤한 유자청과 화사한 페퍼민트 티의 조화",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0b9660ab-164d-4b25-8852-de40364e4d46.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000394"
+    },
+    {
+      "id": "ddangyo-1222645-30000244",
+      "name": "1.1리터 소잘라떼(소화가잘되는우유)",
+      "description": "유당zero, 유당이 없어 유당불내증인 사람도 마실 수 있는 라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1fb4e125-20ea-4369-ab81-158fdfd243f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000244"
+    },
+    {
+      "id": "ddangyo-1222645-30000462",
+      "name": "페스츄리붕어빵(초코)",
+      "description": "누텔라 초코가 들어간 달달함의 끝판왕",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/268a278c-3480-493e-b775-a09aaa347179.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000462"
+    },
+    {
+      "id": "ddangyo-1222645-30000542",
+      "name": "우도땅콩라떼",
+      "description": "",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/a8b602c6-55da-40f6-8c3e-acdfc7bba94a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000542"
+    },
+    {
+      "id": "ddangyo-1222645-30000552",
+      "name": "단호박고구마라떼",
+      "description": "단호박의 은은한 단맛과 고구마의 달달함이 합쳐진 한끼로 든든한 호박고구마라떼/ 겨울엔 역시 달달한 고구마지~~",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/328b23a9-6acb-48c6-a60c-efb1ef28f899.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000552"
+    },
+    {
+      "id": "ddangyo-1222645-30000395",
+      "name": "자몽허니블랙티",
+      "description": "상큼한 자몽에 달콤한 꿀과 진한 블랙퍼스트티의 조화",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/31ddeb10-5f00-450f-8c24-e3b9ce8ef458.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000395"
+    },
+    {
+      "id": "ddangyo-1222645-30000427",
+      "name": "저칼로리 샤인머스캣에이드",
+      "description": "식감좋은 상콤 달콤 샤인머스캣청과 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9e4e4cbd-1998-444b-9dad-f05391e14f69.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000427"
+    },
+    {
+      "id": "ddangyo-1222645-30000245",
+      "name": "1.1리터 콜드브루",
+      "description": "입에 남는 텁텁함이 없고 목넘김이 부드러운 깔끔한 맛입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e00ba3ab-e9ec-44d1-89cd-d40aad44d866.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000245"
+    },
+    {
+      "id": "ddangyo-1222645-30000351",
+      "name": "소잘라떼(소화가잘되는우유)",
+      "description": "유당zero, 유당이 없어 유당불내증인 사람도 마실 수 있는 라떼",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5bf7cd7c-4100-4800-bca7-38d602962c84.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000351"
+    },
+    {
+      "id": "ddangyo-1222645-30000447",
+      "name": "구름스무디",
+      "description": "푸른 하늘 구름이 연상되는 달콤한 쉐이크",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/515ff6f4-51fa-4df4-aa97-18afa8d6504c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000447"
+    },
+    {
+      "id": "ddangyo-1222645-30000352",
+      "name": "스키니라떼",
+      "description": "디카페인 에스프레소 + 저지방우유",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cbd791ff-447f-49c9-89f1-b1edb8621609.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000352"
+    },
+    {
+      "id": "ddangyo-1222645-30000428",
+      "name": "저칼로리 망고에이드",
+      "description": "상콤 달콤 망고와 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ed7bc405-6615-4d90-af45-5442c30611cc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000428"
+    },
+    {
+      "id": "ddangyo-1222645-30000448",
+      "name": "진바스무디(진저바나나)",
+      "description": "부드럽고 달콤한 바나나에 생강의 은은한 매운맛과 상쾌함이 더해진 특별한 건강스무디",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/73c37bc0-8fcd-4d46-b6ee-d340c8a94f66.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000448"
+    },
+    {
+      "id": "ddangyo-1222645-30000553",
+      "name": "단호박고구마스프",
+      "description": "단호박의 은은한 단맛과 고구마의 달달함이 합쳐진 한끼로도 든든한 호박고구마스프/ 겨울엔 역시 달달한 고구마지~~",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/bef715c4-e866-42f0-bbbb-6d0e081d839f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000553"
+    },
+    {
+      "id": "ddangyo-1222645-30000507",
+      "name": "요구르트슈스틱",
+      "description": "길다란 슈 안에 요구르트 크림이 듬뿍 들어가 차갑게 먹는 간편 디저트",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d8d50264-240c-4e89-b063-7213e2019f80.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000507"
+    },
+    {
+      "id": "ddangyo-1222645-30000396",
+      "name": "달콤히비스커스블랙티",
+      "description": "면역증진에 좋은 히비스커스와 블렌딩홍차의 조합",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cc65011e-ee30-4113-8ba1-f94a1c70bf27.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000396"
+    },
+    {
+      "id": "ddangyo-1222645-30000246",
+      "name": "1.1리터 콜드브루라떼",
+      "description": "깔끔한 맛의 콜드브루 원액과 부드러운 우유가 더해져 달콤함+100",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/90fa1636-6998-452d-91f5-aabc3a736378.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000246"
+    },
+    {
+      "id": "ddangyo-1222645-30000588",
+      "name": "페스츄리붕어빵(고구마)",
+      "description": "달달한 고구마 필링이 가득",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5cb39fa1-f564-44e8-a36b-6557fa2259d3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000588"
+    },
+    {
+      "id": "ddangyo-1222645-30000247",
+      "name": "1.1리터 돌체콜드브루",
+      "description": "깔끔한 맛의 콜드브루 원액과 달콤한 연유베이스가 더해져 달콤함+100",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ffa7245d-43a9-4b84-9b58-d6f669062fd9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000247"
+    },
+    {
+      "id": "ddangyo-1222645-30000575",
+      "name": "쑥라떼",
+      "description": "진득하게 우린 쑥 특유의 향긋하고 쌉싸름한 풍미가 입 안 가득 퍼집니다.",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d18fec98-3976-4226-9933-79fcaf62a1f8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000575"
+    },
+    {
+      "id": "ddangyo-1222645-30000429",
+      "name": "저칼로리 자몽에이드",
+      "description": "상콤한 자몽과 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "JUICE&ADE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cc1c3749-2871-4ba4-aa78-4b96265364e7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000429"
+    },
+    {
+      "id": "ddangyo-1222645-30000353",
+      "name": "소이라떼",
+      "description": "꼬소한 두유가 들어간 라떼",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3e2bcd0e-c835-4d84-aa82-d020f86397c8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000353"
+    },
+    {
+      "id": "ddangyo-1222645-30000546",
+      "name": "우도땅콩초코스무디",
+      "description": "고소한 땅콩과 달달한 초코의 찰떡궁합",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/24f9e47d-f3bf-499e-8509-e152adfd5e19.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000546"
+    },
+    {
+      "id": "ddangyo-1222645-30000397",
+      "name": "복숭아얼그레이",
+      "description": "베르가못 향 얼그레이에 달콤한 복숭아의 만남",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/63b324df-7038-4d4a-b17b-b5ad2aad7680.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000397"
+    },
+    {
+      "id": "ddangyo-1222645-30000508",
+      "name": "초코슈스틱",
+      "description": "길다란 슈 안에 초코 크림이 듬뿍 들어가 차갑게 먹는 간편 디저트",
+      "category": "디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/412b2017-d484-4496-8ac3-3b972d41196f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000508"
+    },
+    {
+      "id": "ddangyo-1222645-30000463",
+      "name": "젤라또 붕어빵",
+      "description": "겹겹이 쌓인 페스츄리의 식감과 시원한 젤라또의 味친 궁합",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cb0bb0fb-25ad-432b-8be2-a09306c3c5fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000463"
+    },
+    {
+      "id": "ddangyo-1222645-30000354",
+      "name": "오트라떼",
+      "description": "오트밀 우유가 들어가 비건들도 마실 수 있는 라떼",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/82470480-35e8-465c-9056-6541abb2b56d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000354"
+    },
+    {
+      "id": "ddangyo-1222645-30000398",
+      "name": "진저얼그레이밀크티",
+      "description": "생강의 따뜻하고 알싸한 맛과 베르가못 향을 더한 홍차의 풍미를 느낄 수 있는 부드러운 밀크티",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/28b1cdca-57f5-4e80-965b-34c590749728.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000398"
+    },
+    {
+      "id": "ddangyo-1222645-30000464",
+      "name": "브라운치즈 붕어빵",
+      "description": "카라멜 향의 달콤 고소한 치즈와 달콤 바삭한 영커피 수제 붕어빵의 만남",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ff99dc2b-396f-4b2c-9018-42ac96b61835.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000464"
+    },
+    {
+      "id": "ddangyo-1222645-30000576",
+      "name": "콩국라떼",
+      "description": "진하고 걸쭉한 콩국 베이스가 혀에 묵직하게 감기는 강한 고소함을 선사합니다.",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/060333d6-56b1-4212-9cdd-4a26b2ed37cb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000576"
+    },
+    {
+      "id": "ddangyo-1222645-30000579",
+      "name": "콩국스무디",
+      "description": "꼬소~한게 리얼 콩가루로 만든 콩국스무디 말고 '콩국수무디'",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/62c4bad0-4360-43f1-85db-cefedd21274a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000579"
+    },
+    {
+      "id": "ddangyo-1222645-30000606",
+      "name": "1.1리터 딥라떼",
+      "description": "크림의 부드러운맛 + 에스프레소의 고소함이 깊은 풍미를 더한 라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/099e87b6-eb94-4a74-9bab-6cc20cac43bb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000606"
+    },
+    {
+      "id": "ddangyo-1222645-30000400",
+      "name": "레몬선셋",
+      "description": "새콤 달콤 레몬청에 은은한 히비스커스의 조화",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/641db56d-4552-43d3-9da5-3affd35d15a4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000400"
+    },
+    {
+      "id": "ddangyo-1222645-30000613",
+      "name": "딥라떼",
+      "description": "크림의 부드러운맛 + 에스프레소의 고소함이 깊은 풍미를 더한 라떼",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/82df4434-2e41-4dab-b644-874e2d0dff4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000613"
+    },
+    {
+      "id": "ddangyo-1222645-30000580",
+      "name": "쑥떡프라페",
+      "description": "",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/6d02f827-d759-4f3a-8c41-3c3a4a7e2c5b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000580"
+    },
+    {
+      "id": "ddangyo-1222645-30000465",
+      "name": "브라운치즈젤라또붕어빵",
+      "description": "카라멜 향의 달콤 고소한 치즈와 달콤 바삭한 영커피 수제 붕어빵에 부드러운 밀크젤라또의 만남",
+      "category": "페스츄리 디저트",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f3fd5715-407c-4edc-81f4-a7e01ffc53c9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000465"
+    },
+    {
+      "id": "ddangyo-1222645-30000607",
+      "name": "1.1리터 딥오트라떼",
+      "description": "크림 + 오트밀우유를 더해 부드러운맛에 고소함과 깊은 풍미를 더한 라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/735a221a-fc7e-440d-8bb6-4af49953881c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000607"
+    },
+    {
+      "id": "ddangyo-1222645-30000577",
+      "name": "미숫가루라떼",
+      "description": "구수하게 볶은 곡물의 온기가 부드러운 우유와 조용히 어우러집니다.",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/9071b578-f85f-4813-92c1-6fadcf111602.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000577"
+    },
+    {
+      "id": "ddangyo-1222645-30000595",
+      "name": "딥오트라떼",
+      "description": "크림 + 오트밀우유를 더해 부드러운맛에 고소함과 깊은 풍미를 더한 라떼",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/dea12132-ac39-4242-9cd7-9a4bec4b4417.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000595"
+    },
+    {
+      "id": "ddangyo-1222645-30000401",
+      "name": "홍강차",
+      "description": "생강의 강렬하면서도 따뜻한 풍미가 돋보이는 전통적인 차 음료\n생강의 프리미엄 버전 홍강 입니다.",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f6382d40-d57c-4969-961c-beb80e9318b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000401"
+    },
+    {
+      "id": "ddangyo-1222645-30000608",
+      "name": "1.1리터 딥바닐라라떼",
+      "description": "크림의 부드러운맛 + 에스프레소의 고소함 + 바닐라파우더의 고급진 단맛이 어우러져 깊은 풍미를 더한 바닐라라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/92affb76-d2b4-47a4-97c1-a2041aa1f740.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000608"
+    },
+    {
+      "id": "ddangyo-1222645-30000603",
+      "name": "딸기쉘메론스무디",
+      "description": "메론의 달달함에 상큼한 딸기쉘초코가 더해져 씹는 맛이 있는 스무디",
+      "category": "ICE BLENDED",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/48b6f09d-ad71-452d-a6b8-558201b5b645.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000603"
+    },
+    {
+      "id": "ddangyo-1222645-30000581",
+      "name": "우베라떼",
+      "description": "신비로운 보라색 비주얼과 달콤하고 고소한 풍미가 매력적인 우베라떼",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/a3aac60f-793b-4b23-b785-c982fd1e7b2e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000581"
+    },
+    {
+      "id": "ddangyo-1222645-30000582",
+      "name": "우베말차크림라떼",
+      "description": "우베의 은은하고 묵직한 단맛, 그리고 프리미엄 말차 크림의 기분좋은 쌉싸름함이 만났습니다.",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/ce9761ce-3fcb-4918-9f81-da49ae26a554.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000582"
+    },
+    {
+      "id": "ddangyo-1222645-30000596",
+      "name": "1.1리터 메론딥에스프레소라떼",
+      "description": "",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/181869b5-2cb6-49c0-ba15-45445ef000f4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000596"
+    },
+    {
+      "id": "ddangyo-1222645-30000402",
+      "name": "진저레몬티",
+      "description": "생강의 따뜻하고 알싸한 맛과 레몬의 상큼한 맛이 어우러진 향긋하고 상쾌한 차 음료입니다.",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b8a31bf9-8731-44db-8a3f-c58e92e2f592.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000402"
+    },
+    {
+      "id": "ddangyo-1222645-30000614",
+      "name": "딥바닐라라떼",
+      "description": "크림의 부드러운맛 + 에스프레소의 고소함 + 바닐라파우더의 고급진 단맛이 어우러져 깊은 풍미를 더한 바닐라라떼",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/29b4b532-e4b1-4869-9d18-137a48ad39b6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000614"
+    },
+    {
+      "id": "ddangyo-1222645-30000403",
+      "name": "헛개차",
+      "description": "간 지켜~ 해독효과가 좋아 숙취해소에 직빵인 헛개차",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4aaf2cb4-2c27-4163-9dc5-2c0b456ee75e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000403"
+    },
+    {
+      "id": "ddangyo-1222645-30000248",
+      "name": "1.1리터 제로바닐라라떼",
+      "description": "ZERO SUGAR, 대체당으로 만든 깊고 진한 바닐라라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/dd5462a4-7a9b-42b5-8654-336d818c0a81.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000248"
+    },
+    {
+      "id": "ddangyo-1222645-30000601",
+      "name": "메론라떼",
+      "description": "달콤함 가득 메론아이스크림이 생각나는 그 맛",
+      "category": "NON COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/8a24e8d7-f14e-406a-b764-8ec1d966e7b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000601"
+    },
+    {
+      "id": "ddangyo-1222645-30000600",
+      "name": "메론딥에스프레소라떼",
+      "description": "메론의 달콤함에 오트밀우유로 풍부함을 더하고 에스프레소로 카페인 충전까지 제대로",
+      "category": "COFFEE",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/222fa1ea-5bca-4aad-9c34-4593801d3e4a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000600"
+    },
+    {
+      "id": "ddangyo-1222645-30000404",
+      "name": "옥수수수염차",
+      "description": "갈증이 해소되지 않을 때 구수하고 시원한 옥수수수염차 한잔",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/28573c2f-7449-4787-8257-6d4100fe05e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000404"
+    },
+    {
+      "id": "ddangyo-1222645-30000249",
+      "name": "1.1리터 제로초코라떼",
+      "description": "ZERO SUGAR, 대체당으로 만든 달콤 쌉싸름 초코라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4adc19c1-2270-4bdb-b0ae-9db39b838cd7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000249"
+    },
+    {
+      "id": "ddangyo-1222645-30000543",
+      "name": "청송사과티",
+      "description": "",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/912e83cf-7e75-4d88-8d3c-6de91de84b4c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000543"
+    },
+    {
+      "id": "ddangyo-1222645-30000250",
+      "name": "1.1리터 제로복숭아아이스티",
+      "description": "ZERO SUGAR, 대체당으로 만든 달달한 복숭아티",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/127cd4aa-a677-4ccf-8b58-0e2880c19351.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000250"
+    },
+    {
+      "id": "ddangyo-1222645-30000544",
+      "name": "청송사과민트티",
+      "description": "",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/b3db1591-9319-41ad-8ad7-d5227d969ae2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000544"
+    },
+    {
+      "id": "ddangyo-1222645-30000251",
+      "name": "1.1리터 제로아샷추(복숭아티+샷추가)",
+      "description": "ZERO SUGAR, 대체당으로 만든 상콤달달 복숭아티에, 묵직한 에스프레소가 추가된 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8ef992af-8204-4f09-a026-1743e9b3a98d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000251"
+    },
+    {
+      "id": "ddangyo-1222645-30000252",
+      "name": "1.1리터 식혜",
+      "description": "살아있는 밥알이 씹히는 시원하고 달큰한 식혜",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cb0973bc-12f2-4749-86c1-b932afb21ad0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000252"
+    },
+    {
+      "id": "ddangyo-1222645-30000545",
+      "name": "청송사과얼그레이티",
+      "description": "",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9528cda9-2906-4038-b7ac-804c3bbf462b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000545"
+    },
+    {
+      "id": "ddangyo-1222645-30000253",
+      "name": "1.1리터 순우유라떼",
+      "description": "아이들도 부담없이 먹을 수 있는 달콤한 라떼(자판기우유st)",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b2728701-7144-41fd-91e5-1620fea2316c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000253"
+    },
+    {
+      "id": "ddangyo-1222645-30000554",
+      "name": "오미자몽티",
+      "description": "입안에 피어나는 다섯가지맛 오미자에 비타민 가득 상큼한 자몽이 플러스++",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/427d7783-edd4-4571-ab1e-0eaf53a08f76.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000554"
+    },
+    {
+      "id": "ddangyo-1222645-30000254",
+      "name": "1.1리터 딸기라떼",
+      "description": "과육이 듬뿍 들어가 톡톡 씹히는 달콤한 딸기라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9054ceef-0c18-4b44-b541-8d0c9ad4b8f1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000254"
+    },
+    {
+      "id": "ddangyo-1222645-30000555",
+      "name": "오미홍강티",
+      "description": "입안에 피어나는 다섯가지맛 오미자에 건강함가득 홍삼이 플러스++",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/17c57d47-748d-4c72-8ad6-108af109467c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000555"
+    },
+    {
+      "id": "ddangyo-1222645-30000255",
+      "name": "1.1리터 복숭아라떼",
+      "description": "복숭아에 퐁당 빠져버리는 듯한 달콤한 라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/952cd67d-68f6-46ab-99d4-36377f3ed9b2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000255"
+    },
+    {
+      "id": "ddangyo-1222645-30000556",
+      "name": "쌍화차",
+      "description": "대추 토핑 올려 건강을 가득 담은 몸이 따듯해지는 쌍화차 겨울철 감기 훠이훠이 물러가라~~",
+      "category": "TEA",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/11/34d97e43-e61f-4a80-9bb2-5876b5991098.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000556"
+    },
+    {
+      "id": "ddangyo-1222645-30000256",
+      "name": "1.1리터 바나나라떼",
+      "description": "그 시절 바나나맛 그대로, 추억을 담은 바나나라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9cfda01f-eeb0-4732-8edc-5be08f03ea93.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000256"
+    },
+    {
+      "id": "ddangyo-1222645-30000257",
+      "name": "1.1리터 리얼초코라떼",
+      "description": "달달~한 초코와 함께 느껴지는 쌉싸름한 카카오의 맛이 일품인 초코라떼입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/86c800fc-e145-4e46-a3af-3960c15d5e06.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000257"
+    },
+    {
+      "id": "ddangyo-1222645-30000258",
+      "name": "1.1리터 흑당라떼",
+      "description": "흑당의 깊은 풍미와 달달함이 매력적인 라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1093978e-592d-406b-84bd-85fd9288bcae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000258"
+    },
+    {
+      "id": "ddangyo-1222645-30000259",
+      "name": "1.1리터 제주말차라떼",
+      "description": "진하고 풍부한 풍미를 가진 제주말차의 초록빛이 먹음직스러운 라떼입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d060d717-373b-4e96-9d63-7af1475b814d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000259"
+    },
+    {
+      "id": "ddangyo-1222645-30000260",
+      "name": "1.1리터 타로라떼",
+      "description": "고소~하면서 달짝지근한 타로의 맛",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/bcf03733-ff41-40e9-b44d-01962f5bdb1b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000260"
+    },
+    {
+      "id": "ddangyo-1222645-30000261",
+      "name": "1.1리터 율무라떼",
+      "description": "고소하면서 포만감 만점. 든든한 라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ef4ba758-5273-46b5-9bd0-e015c7d65e6f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000261"
+    },
+    {
+      "id": "ddangyo-1222645-30000262",
+      "name": "1.1리터 시나몬꿀밤라떼",
+      "description": "향긋한 시나몬향과 달콤한 밤에 리얼 꿀이 매력적인 시나몬꿀밤라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9db63da1-0416-47fa-9c56-7fa8815045af.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000262"
+    },
+    {
+      "id": "ddangyo-1222645-30000263",
+      "name": "1.1리터 흑임자라떼",
+      "description": "꼬소~한 맛에 건강하고 든든한 흑임자라떼",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ff9c8a6d-cce9-4c13-a29d-de22279b5e44.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000263"
+    },
+    {
+      "id": "ddangyo-1222645-30000570",
+      "name": "1.1리터 쑥라떼",
+      "description": "진득하게 우린 쑥 특유의 향긋하고 쌉싸름한 풍미가 입 안 가득 퍼집니다.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/ae2834f4-f2da-4391-8830-d78e41731980.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000570"
+    },
+    {
+      "id": "ddangyo-1222645-30000571",
+      "name": "1.1리터 콩국라떼",
+      "description": "진하고 걸쭉한 콩국 베이스가 혀에 묵직하게 감기는 강한 고소함을 선사합니다.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c680fcad-1231-4d66-a32f-9c172aa12881.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000571"
+    },
+    {
+      "id": "ddangyo-1222645-30000572",
+      "name": "1.1리터 미숫가루라떼",
+      "description": "구수하게 볶은 곡물의 온기가 부드러운 우유와 조용히 어우러집니다.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/0fd874ad-ea7d-4622-b740-632fa3a540a7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000572"
+    },
+    {
+      "id": "ddangyo-1222645-30000597",
+      "name": "1.1리터 메론라떼",
+      "description": "달콤함 가득 메론아이스크림이 생각나는 그 맛",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/d2c4cee1-e186-4189-b239-69ebe2157c97.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000597"
+    },
+    {
+      "id": "ddangyo-1222645-30000264",
+      "name": "1.1리터 요거플레인영",
+      "description": "상큼한 리얼 요거트가 얹어진 상콤 달콤한 플레인 요거트 라떼입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a108eb25-63c2-4a46-9a05-bdce93d60efe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000264"
+    },
+    {
+      "id": "ddangyo-1222645-30000265",
+      "name": "1.1리터 요거딸기영",
+      "description": "상큼한 리얼 요거트가 얹어져 상콤 달콤 딸기와 갓벽한 조화를 이루는 요거트 라떼입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/6b61d56a-4531-4fdb-b089-e4417670fc0b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000265"
+    },
+    {
+      "id": "ddangyo-1222645-30000266",
+      "name": "1.1리터 요거망고영",
+      "description": "상큼한 리얼 요거트가 얹어져 상콤 달콤 망고와 갓벽한 조화를 이루는 요거트 라떼입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8103b845-d7cf-4794-8bdb-c4f47df9291f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000266"
+    },
+    {
+      "id": "ddangyo-1222645-30000267",
+      "name": "1.1리터 요거복숭아영",
+      "description": "상큼한 리얼 요거트가 얹어져 달콤한 복숭아와 갓벽한 조화를 이루는 요거트 라떼입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/fd80775e-5dbf-47ce-a590-e0d5454a4e43.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000267"
+    },
+    {
+      "id": "ddangyo-1222645-30000538",
+      "name": "1.1리터 우도땅콩라떼",
+      "description": "",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/e3f9ff07-823a-4689-81ab-d27e7a60403d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000538"
+    },
+    {
+      "id": "ddangyo-1222645-30000549",
+      "name": "1.1리터 단호박고구마라떼",
+      "description": "단호박의 은은한 단맛과 고구마의 달달함이 합쳐진 한끼로 든든한 호박고구마라떼/ 겨울엔 역시 달달한 고구마지~~",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000549"
+    },
+    {
+      "id": "ddangyo-1222645-30000268",
+      "name": "1.1리터 케일파인애플주스",
+      "description": "케일 파인애프 최강조합 건강과 맛까지 챙겨챙겨",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9b7d740f-2216-45cb-b923-9f18ffcf34e5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000268"
+    },
+    {
+      "id": "ddangyo-1222645-30000269",
+      "name": "1.1리터 오렌지자몽주스",
+      "description": "비타민 폭발 오렌지와 자몽에 만남",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f528c77c-e6e3-4402-bd7f-a8ce1ea8f735.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000269"
+    },
+    {
+      "id": "ddangyo-1222645-30000270",
+      "name": "1.1리터 수박주스",
+      "description": "갈증날땐 달달한 수박충전",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/63b3078f-d113-4440-b427-5a2367828847.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000270"
+    },
+    {
+      "id": "ddangyo-1222645-30000594",
+      "name": "1.1리터 토마토주스",
+      "description": "프레시함이 살아있는 토마토주스",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/b2fe7433-7f11-46cc-b10c-5a23dbf3b9d8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000594"
+    },
+    {
+      "id": "ddangyo-1222645-30000271",
+      "name": "1.1리터 ABC주스",
+      "description": "콜레스테롤과 내방지방 낮춰낯춰 맛과 건강까지 챙겨챙겨",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4468529a-0713-4f6e-8b1a-9ef025e34f57.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000271"
+    },
+    {
+      "id": "ddangyo-1222645-30000272",
+      "name": "1.1리터 블루베리딸기바나나주스",
+      "description": "달콤함과 비타민 가득 눈 건강까지 챙겨",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/77d3e74b-059c-4feb-83ea-47225e897b67.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000272"
+    },
+    {
+      "id": "ddangyo-1222645-30000273",
+      "name": "1.1리터 당근사과주스",
+      "description": "비타민 가득 사과엔 당근이쥐",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/92388602-59ee-4358-8141-95fadcccad46.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000273"
+    },
+    {
+      "id": "ddangyo-1222645-30000274",
+      "name": "1.1리터 망고파인애플주스",
+      "description": "망고와 파인애플의 만남 시원시원해~~",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0e091b35-cf51-45af-8514-c6f6dc2bf5e6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000274"
+    },
+    {
+      "id": "ddangyo-1222645-30000275",
+      "name": "1.1리터 바나나주스",
+      "description": "달콤한 바나나의 순정",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c39f9df4-5e43-4213-9f62-a6bee72bfc17.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000275"
+    },
+    {
+      "id": "ddangyo-1222645-30000276",
+      "name": "1.1리터 딸기바나나주스",
+      "description": "달콤한 바나나와 상콤한 딸기의 만남",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/173c5a7e-cf4d-4c8c-9baa-9a8a686e1a98.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000276"
+    },
+    {
+      "id": "ddangyo-1222645-30000277",
+      "name": "1.1리터 망고바나나주스",
+      "description": "달달한 바나나와 상콤 달콤 망고의 부드러운 조화",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4498a185-84da-49c5-bb3d-7999bb2afa6a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000277"
+    },
+    {
+      "id": "ddangyo-1222645-30000278",
+      "name": "1.1리터 한라봉주스",
+      "description": "새콤달콤 상큼한 한라봉 주스",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/d74f0342-94c3-4869-8348-cadd5caec633.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000278"
+    },
+    {
+      "id": "ddangyo-1222645-30000279",
+      "name": "1.1리터 초코버블티",
+      "description": "쫀득탱글한 펄에 달달한 초콜렛 맛 뒤에 느껴지는 다크초콜릿의 맛",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/47d69f43-b576-4776-8f77-be5bb80d1509.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000279"
+    },
+    {
+      "id": "ddangyo-1222645-30000280",
+      "name": "1.1리터 타로버블티",
+      "description": "고소~하고 담백한 타로에 쫀득탱글한 펄이 퐁~당~",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/8d6ec649-666a-4b19-9084-0471c2a4f3c7.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000280"
+    },
+    {
+      "id": "ddangyo-1222645-30000281",
+      "name": "1.1리터 흑당버블티",
+      "description": "쫀득탱글한 펄에 흑당의 깊은 풍미와 달달함이 끝내주는 맛",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/cd4162cc-95bc-4ed3-b605-ae07ec554fc4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000281"
+    },
+    {
+      "id": "ddangyo-1222645-30000282",
+      "name": "1.1리터 말차버블티",
+      "description": "쫀득탱글한 펄에 제주유기농 말차의 단맛과 고급스러운 쌉싸름한 맛",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7fc8799c-0737-4ef1-bc79-d90138374bc5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000282"
+    },
+    {
+      "id": "ddangyo-1222645-30000283",
+      "name": "1.1리터 로얄버블티",
+      "description": "쫀득탱글한 펄에 로얄 밀크티의 고급스러운 맛",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f6b64ac6-602a-4808-908a-df8807f8ed64.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000283"
+    },
+    {
+      "id": "ddangyo-1222645-30000598",
+      "name": "1.1리터 메론버블티",
+      "description": "달달함에 쫀득한 버블까지 더해져 당충전 제대로 하고싶은날 추천",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/39873111-357c-48d3-a070-d5e88d5afcb1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000598"
+    },
+    {
+      "id": "ddangyo-1222645-30000284",
+      "name": "1.1리터 헛개차",
+      "description": "간 지켜~ 해독효과가 좋아 숙취해소에 직빵인 헛개차",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1f6d93cc-268b-4650-a37d-9d6cc911dfdc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000284"
+    },
+    {
+      "id": "ddangyo-1222645-30000285",
+      "name": "1.1리터 옥수수수염차",
+      "description": "갈증이 해소되지 않을 때 구수하고 시원한 옥수수수염차 한잔",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4ea41cce-ab8c-4735-b9d1-35456b3472dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000285"
+    },
+    {
+      "id": "ddangyo-1222645-30000286",
+      "name": "1.1리터 캐모마일",
+      "description": "피부에 좋고 심신 안정 및 숙면에 효과가 좋은 허브티 캐모마일 티입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1fb45ac6-9a2c-4384-a987-8c9ccc9e27dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000286"
+    },
+    {
+      "id": "ddangyo-1222645-30000287",
+      "name": "1.1리터 얼그레이",
+      "description": "체중 감량과 면역력 강화에 좋은 홍차 얼그레이 티입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1bc8775c-1f22-4846-b26f-7a911e00089b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000287"
+    },
+    {
+      "id": "ddangyo-1222645-30000288",
+      "name": "1.1리터 블랙퍼스트",
+      "description": "부드러우면서 산뜻한 맛이 특징인 블렌딩 홍차",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/90595e62-1009-4e77-bb71-08ce01cfbe74.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000288"
+    },
+    {
+      "id": "ddangyo-1222645-30000289",
+      "name": "1.1리터 페퍼민트",
+      "description": "위장을 진정시키는 효능이 있는 허브티 페퍼민트 티입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/e9476b54-f053-49cb-8121-ce0995faeaa4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000289"
+    },
+    {
+      "id": "ddangyo-1222645-30000290",
+      "name": "1.1리터 와일드 스트로베리",
+      "description": "입안 가득 잘 익은 딸기의 풍미를 새콤달콤하게 즐기실 수 있는 허브티 와일드 스트로베리 티입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0992bb4a-895a-4959-b442-ea3dcdab96b3.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000290"
+    },
+    {
+      "id": "ddangyo-1222645-30000291",
+      "name": "1.1리터 호박팥차",
+      "description": "호박의 부드러운 당도와 고소한 팥의 풍미의 조화",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0af175b9-10d6-4a71-ba8c-69084d7d10fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000291"
+    },
+    {
+      "id": "ddangyo-1222645-30000609",
+      "name": "1.1리터 블루베리요거트티",
+      "description": "새콤달콤한 블루베리와 크리미한 요거트의 맛이 조화를 이루는 향긋한 블랜딩티",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/fe08fb01-ae39-4901-bad2-5b04b5cf1cec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000609"
+    },
+    {
+      "id": "ddangyo-1222645-30000610",
+      "name": "1.1리터 루이보스오렌지티",
+      "description": "은은한 루이보스 향에 오렌지의 싱그러움을 담은 블랜딩티",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/9ec041d1-7a47-485a-8272-6d8ab63adad4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000610"
+    },
+    {
+      "id": "ddangyo-1222645-30000292",
+      "name": "1.1리터 블랙밀크티",
+      "description": "블렌딩한 홍차와 달콤한 밀크티의 만남",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/59b4c1ae-fcce-48f8-936c-c5b5187d7aae.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000292"
+    },
+    {
+      "id": "ddangyo-1222645-30000293",
+      "name": "1.1리터 얼그레이 밀크티",
+      "description": "베르가못 향을 더한 홍차의 풍미를 느낄 수 있는 부드러운 밀크티",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/85fb509c-008c-4412-8d43-6f0ceed97b92.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000293"
+    },
+    {
+      "id": "ddangyo-1222645-30000294",
+      "name": "1.1리터 유자차",
+      "description": "유자와 꿀로 만든 유자청이 들어가 달콤하고 산뜻한 맛이 좋은 한국 전통 유자차",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/20eaaa74-461a-44db-bb73-9417600c922d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000294"
+    },
+    {
+      "id": "ddangyo-1222645-30000295",
+      "name": "1.1리터 자몽티",
+      "description": "비타민C가 풍부해서 다이어터에게 사랑받는 자몽티",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3a90e777-8505-4fd0-8b09-8374a2e7f5da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000295"
+    },
+    {
+      "id": "ddangyo-1222645-30000296",
+      "name": "1.1리터 레몬티",
+      "description": "산뜻하고 레몬의 산미가 어우러져 상쾌함을 주는 티",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/98774d93-a6d4-4470-928c-e6b48c61d556.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000296"
+    },
+    {
+      "id": "ddangyo-1222645-30000297",
+      "name": "1.1리터 유자 캐모마일",
+      "description": "상콤 달콤한 유자청과 캐모마일 티의 조화",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3d46cd3a-b4ec-4265-afb4-829fab8200e5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000297"
+    },
+    {
+      "id": "ddangyo-1222645-30000298",
+      "name": "1.1리터 유자민트티",
+      "description": "상콤 달콤한 유자청과 화사한 페퍼민트 티의 조화",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/8c2fc5ca-3cd0-4de2-8d85-b63bf360261d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000298"
+    },
+    {
+      "id": "ddangyo-1222645-30000299",
+      "name": "1.1리터 복숭아아이스티",
+      "description": "복숭아 본연의 단맛과 풍미를 그대로 느낄수 있는 복숭아 아이스티입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4fe16fa7-e03c-47fa-9d25-bd24cc20104f.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000299"
+    },
+    {
+      "id": "ddangyo-1222645-30000300",
+      "name": "1.1리터 자몽허니블랙티",
+      "description": "상큼한 자몽에 달콤한 꿀과 진한 블랙퍼스트티의 조화",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/9911cfcc-6f5e-4cef-8b38-3dae296e8ba2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000300"
+    },
+    {
+      "id": "ddangyo-1222645-30000301",
+      "name": "1.1리터 달콤히비스커스블랙티",
+      "description": "면역증진에 좋은 히비스커스와 블렌딩홍차의 조합",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/4fedb686-1b5a-4b82-8f25-a6c9959cba64.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000301"
+    },
+    {
+      "id": "ddangyo-1222645-30000302",
+      "name": "1.1리터 복숭아얼그레이",
+      "description": "베르가못 향 얼그레이에 달콤한 복숭아의 만남",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1dce8cd1-0b9d-4175-948c-27601b9f65aa.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000302"
+    },
+    {
+      "id": "ddangyo-1222645-30000303",
+      "name": "1.1리터 진저얼그레이밀크티",
+      "description": "생강의 따뜻하고 알싸한 맛과 베르가못 향을 더한 홍차의 풍미를 느낄 수 있는 부드러운 밀크티",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/81a350d4-f824-47ca-ba00-61723f9ca93b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000303"
+    },
+    {
+      "id": "ddangyo-1222645-30000305",
+      "name": "1.1리터 레몬선셋",
+      "description": "새콤 달콤 레몬청에 은은한 히비스커스의 조화",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/36bc2303-a7e7-41cd-bbc2-9cda504e6d09.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000305"
+    },
+    {
+      "id": "ddangyo-1222645-30000306",
+      "name": "1.1리터 홍강차",
+      "description": "생강의 강렬하면서도 따뜻한 풍미가 돋보이는 전통적인 차 음료예요. \n생강 특유의 알싸한 매운맛이 입안을 감싸면서도, 끓이거나 달인 생강에서 우러난 은은한 단맛과 깊은 향이 조화를 이룹니다.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ad244bbd-c32a-4f3e-b328-aafcf233536a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000306"
+    },
+    {
+      "id": "ddangyo-1222645-30000307",
+      "name": "1.1리터 진저레몬티",
+      "description": "생강의 따뜻하고 알싸한 맛과 레몬의 상큼한 맛이 어우러진 향긋하고 상쾌한 차 음료입니다. \n생강의 알싸한 풍미가 차의 기본을 이루면서도 레몬이 더해져 신선하고 상쾌한 느낌을 줍니다.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c97b477e-163e-4f0c-9226-85320043018c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000307"
+    },
+    {
+      "id": "ddangyo-1222645-30000539",
+      "name": "1.1리터 청송사과티",
+      "description": "",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/d1abd19f-87a2-4841-961a-fa931ac03de1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000539"
+    },
+    {
+      "id": "ddangyo-1222645-30000540",
+      "name": "1.1리터 청송사과민트티",
+      "description": "",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9d53049b-4531-4c6d-83ea-5d43453a34e4.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000540"
+    },
+    {
+      "id": "ddangyo-1222645-30000541",
+      "name": "1.1리터 청송사과얼그레이티",
+      "description": "",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/9c3e6214-4164-4f5f-a261-ef3f990d616e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000541"
+    },
+    {
+      "id": "ddangyo-1222645-30000550",
+      "name": "1.1리터 오미자몽티",
+      "description": "입안에 피어나는 다섯가지맛 오미자에 비타민 가득 상큼한 자몽이 플러스++",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000550"
+    },
+    {
+      "id": "ddangyo-1222645-30000551",
+      "name": "1.1리터 오미홍강티",
+      "description": "입안에 피어나는 다섯가지맛 오미자에 건강함가득 홍삼이 플러스++",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "30000551"
+    },
+    {
+      "id": "ddangyo-1222645-30000308",
+      "name": "1.1리터 냉율무스무디",
+      "description": "맛과 건강을 동시에 챙기는 건강 율무스무디\n(기본은 꿀이 들어가지 않습니다.)",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/da2854f2-a01b-4549-aac0-3e56ddfb8791.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000308"
+    },
+    {
+      "id": "ddangyo-1222645-30000309",
+      "name": "1.1리터 마시떼스무디",
+      "description": "맛과 건강을 동시에 챙기는 건강 마스무디\n(기본은 꿀이 들어가지 않습니다.)",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/19bed206-f385-423d-98e5-4b2bc9784cac.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000309"
+    },
+    {
+      "id": "ddangyo-1222645-30000310",
+      "name": "1.1리터 초코칩영치노",
+      "description": "자바칩 듬뿍~ 갈려 식감과 맛 둘 다 잡아버린 그 음료 [영크림이 기본 옵션으로 얹어져 제조됩니다]",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ba00555c-8117-496d-afd3-0f33656949f9.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000310"
+    },
+    {
+      "id": "ddangyo-1222645-30000311",
+      "name": "1.1리터 초코쿠키 영치노",
+      "description": "시원~한 영치노에 쿠앤크와 달콤한 영크림을 더하다 [영크림이 기본 옵션으로 얹어져 제조됩니다]",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/215b2a71-4af1-4d02-9d6b-5aef2572c6b5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000311"
+    },
+    {
+      "id": "ddangyo-1222645-30000312",
+      "name": "1.1리터 돼지쿠키영치노",
+      "description": "돼지아이스크림 좋아하는 사람 손~ 제가 참 좋아해서 출시된 그 음료 [영크림이 기본 옵션으로 얹어져 제조됩니다]",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/c2d16c39-2047-4a52-af89-773bc2b299e5.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000312"
+    },
+    {
+      "id": "ddangyo-1222645-30000313",
+      "name": "1.1리터 시나몬꿀밤영치노",
+      "description": "향긋한 시나몬향과 달콤한 꿀과 밤의 만남.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/575e41ba-4059-48d0-8ecd-f937db2eeb9c.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000313"
+    },
+    {
+      "id": "ddangyo-1222645-30000314",
+      "name": "1.1리터 밀크쉐이크",
+      "description": "꼬숩고 달콤한 시~~~원~한 밀크쉐이크",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/94f7707c-e67a-4af2-b946-044908b0f688.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000314"
+    },
+    {
+      "id": "ddangyo-1222645-30000315",
+      "name": "1.1리터 자몽스무디",
+      "description": "상콤한 자몽청과 시원한 얼음을 갈고 코코넛 젤리의 식감을 더한 시~원~한~ 스무디입니다 [코코넛 젤리가 기본 옵션으로 포함되어 제조됩니다]",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/264fbc59-cc7c-4f79-a407-d1ba9a8180e0.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000315"
+    },
+    {
+      "id": "ddangyo-1222645-30000316",
+      "name": "1.1리터 망고스무디",
+      "description": "상콤 달콤 망고청과 시원한 얼음을 갈고 코코넛 젤리의 식감을 더한 시~원~한~ 스무디입니다 [코코넛 젤리가 기본 옵션으로 포함되어 제조됩니다]",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5ed39dd4-01b0-4ee8-a84e-c003cc7923fb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000316"
+    },
+    {
+      "id": "ddangyo-1222645-30000317",
+      "name": "1.1리터 복숭아스무디",
+      "description": "달콤한 복숭아와 아삭아삭한 식감이 좋은 스무디 [코코넛 젤리가 기본 옵션으로 포함되어 제조됩니다]",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/16fe02e8-a416-4a52-963c-48c11538fa34.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000317"
+    },
+    {
+      "id": "ddangyo-1222645-30000318",
+      "name": "1.1리터 샤인머스켓스무디",
+      "description": "식감좋은 상콤 달콤 청포청과 시원한 얼음을 갈고 코코넛 젤리의 식감을 더한 시~원~한~ 스무디입니다 [코코넛 젤리가 기본 옵션으로 포함되어 제조됩니다]",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/61a22991-c1da-4c83-9e57-0540226b9625.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000318"
+    },
+    {
+      "id": "ddangyo-1222645-30000319",
+      "name": "1.1리터 플레인요거트스무디",
+      "description": "상큼한 리얼 요거트가 얹어진 상콤 달콤 시원~한 요거트 스무디입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b0dc3771-bec8-42c9-b8fa-455065c07d39.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000319"
+    },
+    {
+      "id": "ddangyo-1222645-30000320",
+      "name": "1.1리터 딸기요거트스무디",
+      "description": "상큼한 리얼 요거트가 얹어진 새콤 달콤 딸기와 갓벽한 조화를 이루는 시원~한 요거트 스무디입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/5bd74a2f-81a6-414c-b009-bda440837c0b.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000320"
+    },
+    {
+      "id": "ddangyo-1222645-30000321",
+      "name": "1.1리터 망고요거트스무디",
+      "description": "상큼한 리얼 요거트가 얹어진 상콤 달콤 망고와 갓벽한 조화를 이루는 시원~한 요거트 스무디입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f2440b13-a645-4341-8e01-9784b5b270b8.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000321"
+    },
+    {
+      "id": "ddangyo-1222645-30000322",
+      "name": "1.1리터 블루베리요거트스무디",
+      "description": "상큼한 리얼 요거트가 얹어진 상콤 달콤 블루베리의 갓벽한 조화를 이루는 시원~한 요거트 스무디입니다",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/87763727-8db8-4b53-b010-ca49b67035da.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000322"
+    },
+    {
+      "id": "ddangyo-1222645-30000323",
+      "name": "1.1리터 유자크러쉬",
+      "description": "유자의 쌉싸름함과 라임의 달콤함이 환상의 궁합",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/1ff9ceb2-f04f-4b16-8ad6-c0ae5a35a010.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000323"
+    },
+    {
+      "id": "ddangyo-1222645-30000324",
+      "name": "1.1리터 커피쉐이크",
+      "description": "달달한게 땡기면서 시원하게 카페인섭취까지 필요할 때 GOOD",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/828f8c8b-15c0-49d3-a670-1fd403dca2c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000324"
+    },
+    {
+      "id": "ddangyo-1222645-30000325",
+      "name": "1.1리터 구름스무디",
+      "description": "푸른 하늘 구름이 연상되는 달콤한 쉐이크",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a9232dcf-e4e4-4eb2-9614-408826f0e88e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000325"
+    },
+    {
+      "id": "ddangyo-1222645-30000326",
+      "name": "1.1리터 진바스무디(진저바나나)",
+      "description": "부드럽고 달콤한 바나나에 생강의 은은한 매운맛과 상쾌함이 더해진 특별한 건강 스무디",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3aea46dc-3248-4d37-a1a3-9dd8b5f54964.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000326"
+    },
+    {
+      "id": "ddangyo-1222645-30000573",
+      "name": "1.1리터 콩국스무디",
+      "description": "꼬소~한게 리얼 콩가루로 만든 콩국스무디 말고 '콩국수무디'",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/831ca447-e16b-4188-bc75-3bc36874b862.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000573"
+    },
+    {
+      "id": "ddangyo-1222645-30000574",
+      "name": "1.1리터 쑥떡프라페",
+      "description": "쑥과 떡을 함께 갈아 만들어, 쑥의 진한 향 사이로 떡의 쫀득한 식감이 살아있습니다.",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/e69751d9-5931-4664-bee9-ea28f09a84bb.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000574"
+    },
+    {
+      "id": "ddangyo-1222645-30000599",
+      "name": "1.1리터 딸기쉘메론스무디",
+      "description": "메론의 달달함에 상큼한 딸기쉘초코가 더해져 씹는 맛이 있는 스무디",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/664f1dbf-49e3-457b-be63-4c51ef52613d.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000599"
+    },
+    {
+      "id": "ddangyo-1222645-30000328",
+      "name": "1.1리터 저칼로리 와일드스트로베리티에이드",
+      "description": "카페인,첨가물이 없는 유럽의 딸기향이 강렬한 천연과일차로 만든 저칼로리 에이드",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/ef802a1a-af35-4751-bda7-c42a4ec75533.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000328"
+    },
+    {
+      "id": "ddangyo-1222645-30000329",
+      "name": "1.1리터 저칼로리 레몬에이드",
+      "description": "상콤 달콤한 레몬청과 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/51fa9f73-ea2c-47e6-b532-d3398f4ca586.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000329"
+    },
+    {
+      "id": "ddangyo-1222645-30000330",
+      "name": "1.1리터 저칼로리 복숭아에이드",
+      "description": "달콤한 복숭아에 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/70a03342-0f85-4e69-a339-dd20499f437e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000330"
+    },
+    {
+      "id": "ddangyo-1222645-30000331",
+      "name": "1.1리터 저칼로리 쿨라임에이드",
+      "description": "청량하면서 상큼한 라임이 매력적인 저칼로리 에이드\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/2088b3b6-5808-4390-8a7b-57a0748318fe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000331"
+    },
+    {
+      "id": "ddangyo-1222645-30000332",
+      "name": "1.1리터 저칼로리 딸기에이드",
+      "description": "과육이 톡톡씹히는 딸기와 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/b0bc8471-a692-4281-9584-1900f1b64f8a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000332"
+    },
+    {
+      "id": "ddangyo-1222645-30000333",
+      "name": "1.1리터 저칼로리 샤인머스캣에이드",
+      "description": "식감좋은 상콤 달콤 샤인머스캣청과 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/f0c715fe-c6b3-4c47-b792-bbab06e03901.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000333"
+    },
+    {
+      "id": "ddangyo-1222645-30000334",
+      "name": "1.1리터 저칼로리 망고에이드",
+      "description": "상콤 달콤 망고와 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3889b426-fdfa-4239-8b04-b37a8d06adec.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000334"
+    },
+    {
+      "id": "ddangyo-1222645-30000335",
+      "name": "1.1리터 저칼로리 자몽에이드",
+      "description": "상콤한 자몽과 0칼로리 사이다를 사용하여\n설탕은 줄이고 건강까지 챙기는 음료",
+      "category": "1.1리터 보틀(Ice Only)",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/7d76024d-a2c7-4d71-adb6-1e32163b5afc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "30000335"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1222645",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?nR1RWOZ"
+    ],
+    "rawItemCount": 360,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

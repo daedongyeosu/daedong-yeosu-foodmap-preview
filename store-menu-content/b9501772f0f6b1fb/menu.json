@@ -1,0 +1,215 @@
+{
+  "storeId": "b9501772f0f6b1fb",
+  "storeName": "이순신갈비탕 여서점",
+  "displayName": "이순신갈비탕 여서점",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/e9eb6eba-3806-473b-bd1e-87cc95006e10.jpg",
+  "categories": [
+    "전체",
+    "메뉴소개",
+    "사이드메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1135973-10000006",
+      "name": "(한방) 이순신 갈비탕",
+      "description": "반찬5가지(배추겉절이,깍두기)\n전국 소갈비 육수와 12가지 한방 재료로 끓여 맛과 건강에 최고",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/e9eb6eba-3806-473b-bd1e-87cc95006e10.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1135973-10000004",
+      "name": "(한방) 왕갈비탕",
+      "description": "`반찬5가지(배추겉절이,깍두기), 공기밥 포함`  \n전국 소갈비 육수와 12가지 한방 재료로 끓여 맛과 건강에 최고",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/9b033633-59ec-4a01-b897-b2f41c5e14dc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1135973-10000001",
+      "name": "뼈해장국 (소갈비육수로끓인)",
+      "description": "반찬5가지(배추겉절이,깍두기),공기밥 포함",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/fdd32698-7a51-48e3-84f1-67336aa5eb82.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1135973-10000010",
+      "name": "설렁탕",
+      "description": "`반찬5가지(배추겉절이,깍두기), 공기밥 포함` \n콜라겐 듬뿍 함유",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/d9f8eb45-ae5e-4e4f-8659-c49f0919db17.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1135973-10000013",
+      "name": "소고기비빔밥",
+      "description": "`반찬5가지(배추겉절이,깍두기)` \n과일과 야채로 숙성 시킨 비빔장",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/ffb72974-de1c-4984-8b44-cf89c4f2949e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1135973-10000018",
+      "name": "음료수",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1135973-90000001",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1135973-10000002",
+      "name": "왕갈비 야채전골",
+      "description": "`반찬5가지(배추겉절이,깍두기)`  \n100% 소갈비 육수로 끓여 맛과 건강에 최고",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/11cc4c0f-a903-4c74-9601-ff3ee54417dd.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1135973-10000019",
+      "name": "공기밥",
+      "description": "",
+      "category": "사이드메뉴",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/5537f980-27f8-4ca5-85fe-6125e5140f00.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1135973-90000002",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1135973-10000003",
+      "name": "알뜰식단",
+      "description": "밥,반찬 없이 3인분에 18,000원",
+      "category": "메뉴소개",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1135973-10000005",
+      "name": "한우갈비탕",
+      "description": "`반찬5가지(배추겉절이,깍두기), 공기밥 포함`",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/25a098c8-eafc-4b1a-8ef6-6abb79df9566.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1135973-10000007",
+      "name": "소머리곰탕",
+      "description": "`반찬5가지(배추겉절이,깍두기), 공기밥 포함` \n콜라겐 듬뿍 함유",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/76fa8033-3606-4f26-98d8-75d7ffe55170.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1135973-10000008",
+      "name": "김치찌개",
+      "description": "`반찬5가지(배추겉절이,깍두기),공기밥 포함 `\n새콤 달콤 숙성된 김치로 끓여 입맛을 사로 잡음",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/d3157cea-86e1-46cc-8b6a-b6826a974566.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1135973-10000009",
+      "name": "한우설렁탕",
+      "description": "`반찬5가지(배추겉절이,깍두기), 공기밥 포함`",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/d9f8eb45-ae5e-4e4f-8659-c49f0919db17.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1135973-10000011",
+      "name": "소고기해장국",
+      "description": "반찬5가지(배추겉절이,딱두기), 공기밥 포함",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/50dbd46a-5c0c-4ea2-99c2-fd66aa676876.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1135973-10000012",
+      "name": "제육덮밥",
+      "description": "`반찬5가지(배추겉절이,깍두기)` \n부드러운 국내산 돼지고기",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/b353b6cc-5a0b-4526-9b7e-580e0c210ded.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1135973-10000014",
+      "name": "비빔밥",
+      "description": "`반찬5가지(배추겉절이,깍두기)`\n과일과 야채로 숙성시킨 비빔장",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/7c6a36a3-15e1-4898-9708-39ce017a19c2.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1135973-10000015",
+      "name": "도가니탕",
+      "description": "`반찬5가지(배추겉절이,깍두기), 공기밥 포함 `  \n콜라겐 듬뿍 함유되어 건강에 최고",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/6b833ae1-7ed9-4422-8695-124dbcb47bfc.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1135973-10000016",
+      "name": "꼬리곰탕",
+      "description": "`반찬5가지(배추겉절이,깍두기), 공기밥 포함 `  \n콜라겐 듬뿍 들어 있어 건강에 최고",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/f6ee7cb7-43c2-46fe-9008-abda962bfe73.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1135973-10000017",
+      "name": "감자탕",
+      "description": "",
+      "category": "메뉴소개",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/af2b7999-27f8-42b7-9bdd-81e94048c7ce.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1135973",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?F6b6Lk7"
+    ],
+    "rawItemCount": 26,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}

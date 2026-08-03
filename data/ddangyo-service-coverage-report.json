@@ -1,34 +1,31 @@
 {
-  "generatedAt": "2026-08-02T20:52:13.907Z",
-  "registeredStores": 710,
-  "menuPreviewStores": 598,
-  "serviceRecords": 608,
-  "ddangyoSourceRecords": 560,
-  "ddangyoRouteStores": 576,
-  "ddangyoRouteServiceCovered": 572,
-  "newlyVerifiedRecords": 114,
-  "explicitBenefitStatusRecords": 560,
+  "generatedAt": "2026-08-03T21:52:23.662Z",
+  "registeredBaseStores": 710,
+  "runtimeStores": 841,
+  "menuPreviewStores": 713,
+  "serviceRecords": 722,
+  "ddangyoSourceRecords": 676,
+  "ddangyoRouteStores": 719,
+  "ddangyoRouteServiceCovered": 715,
+  "newlyVerifiedRecords": 116,
+  "explicitBenefitStatusRecords": 676,
   "menuPreviewMissingService": [],
   "unresolvedDdangyoRoutes": [
     {
       "storeId": "08e5e26653436fef",
-      "storeName": "알토랑반찬 여수문수본점",
       "reason": "unresolved-source-link"
     },
     {
       "storeId": "fa0bccb2d190a7c0",
-      "storeName": "카페인",
-      "reason": "rejected-cross-store-link"
+      "reason": "unresolved-source-link"
     },
     {
       "storeId": "8d9df0fbb77ce9eb",
-      "storeName": "콩불 여수중앙점",
-      "reason": "rejected-cross-store-link"
+      "reason": "unresolved-source-link"
     },
     {
       "storeId": "9f89e6d7784cf4a2",
-      "storeName": "피자프렌드 미평점",
-      "reason": "rejected-cross-store-link"
+      "reason": "unresolved-source-link"
     }
   ]
 }

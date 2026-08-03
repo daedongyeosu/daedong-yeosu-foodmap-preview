@@ -1,0 +1,290 @@
+{
+  "storeId": "3676603e874cf22c",
+  "storeName": "동태한마리",
+  "displayName": "동태한마리",
+  "mainImage": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3a2329a1-636a-46af-9c87-b786cb03fcee.jpg",
+  "categories": [
+    "전체",
+    "식사류",
+    "요리류",
+    "추가배달비",
+    "사리추가",
+    "음료메뉴",
+    "주류메뉴"
+  ],
+  "items": [
+    {
+      "id": "ddangyo-1175498-10000002",
+      "name": "동태탕2인",
+      "description": "동태2+알+곤이+애(공기밥 미포함)",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/3b575458-d4aa-4ea5-80e9-0eb01c0698c6.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000002"
+    },
+    {
+      "id": "ddangyo-1175498-10000003",
+      "name": "동태탕1+알곤이탕1",
+      "description": "동태1  알+곤이+애 (공기밥 미포함)",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/9ece36be-0cf7-4c44-a896-c3d81abf9b38.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000003"
+    },
+    {
+      "id": "ddangyo-1175498-10000007",
+      "name": "알곤이탕",
+      "description": "알.곤이",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/4f3face0-9a78-4428-a75d-e3104deeadc1.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000007"
+    },
+    {
+      "id": "ddangyo-1175498-10000006",
+      "name": "황태해장국",
+      "description": "공기밥 포함하지 않습니다",
+      "category": "식사류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/8e5a55f2-357a-4183-a66c-cd2122f0b224.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000006"
+    },
+    {
+      "id": "ddangyo-1175498-10000011",
+      "name": "동태해물전골",
+      "description": "공기밥포함되지 않습니다",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/12/5699d577-acd7-45b6-8b94-e6cb5267cbfe.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000011"
+    },
+    {
+      "id": "ddangyo-1175498-10000001",
+      "name": "신기동 추가 배달비",
+      "description": "신기동 추가 배달비",
+      "category": "추가배달비",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000001"
+    },
+    {
+      "id": "ddangyo-1175498-10000008",
+      "name": "알고니찜",
+      "description": "공기밥포함되지 않습니다",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/ba7567ce-79ba-4a7b-bbf7-8f7fb03ec45a.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000008"
+    },
+    {
+      "id": "ddangyo-1175498-10000014",
+      "name": "공기밥",
+      "description": "",
+      "category": "사리추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000014"
+    },
+    {
+      "id": "ddangyo-1175498-10000022",
+      "name": "콜라",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000022"
+    },
+    {
+      "id": "ddangyo-1175498-90000001",
+      "name": "잎새주(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000001"
+    },
+    {
+      "id": "ddangyo-1175498-10000009",
+      "name": "동태찜",
+      "description": "공기밥포함되지 않습니다",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/4c542387-9249-48f7-b703-b3fb55cea252.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000009"
+    },
+    {
+      "id": "ddangyo-1175498-10000015",
+      "name": "손수제비",
+      "description": "손반죽입니다..",
+      "category": "사리추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000015"
+    },
+    {
+      "id": "ddangyo-1175498-10000023",
+      "name": "사이다",
+      "description": "",
+      "category": "음료메뉴",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000023"
+    },
+    {
+      "id": "ddangyo-1175498-90000002",
+      "name": "참이슬 fresh(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000002"
+    },
+    {
+      "id": "ddangyo-1175498-10000004",
+      "name": "수제 동태생선까스",
+      "description": "(공기밥 미포함)",
+      "category": "식사류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000004"
+    },
+    {
+      "id": "ddangyo-1175498-10000010",
+      "name": "황태찜",
+      "description": "공기밥포함되지 않습니다",
+      "category": "요리류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000010"
+    },
+    {
+      "id": "ddangyo-1175498-10000016",
+      "name": "라면",
+      "description": "",
+      "category": "사리추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000016"
+    },
+    {
+      "id": "ddangyo-1175498-90000003",
+      "name": "진로이즈백(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000003"
+    },
+    {
+      "id": "ddangyo-1175498-10000005",
+      "name": "황태구이백반",
+      "description": "공기밥포함하지 않습니다",
+      "category": "식사류",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000005"
+    },
+    {
+      "id": "ddangyo-1175498-10000017",
+      "name": "만두",
+      "description": "",
+      "category": "사리추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000017"
+    },
+    {
+      "id": "ddangyo-1175498-90000004",
+      "name": "새로(병)(360ml)",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000004"
+    },
+    {
+      "id": "ddangyo-1175498-10000012",
+      "name": "동태전",
+      "description": "공기밥포함되지 않습니다",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/d72d38d6-5513-47ef-b1c2-b4d3e471fc96.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000012"
+    },
+    {
+      "id": "ddangyo-1175498-10000018",
+      "name": "알300g",
+      "description": "",
+      "category": "사리추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000018"
+    },
+    {
+      "id": "ddangyo-1175498-90000005",
+      "name": "카스 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000005"
+    },
+    {
+      "id": "ddangyo-1175498-10000013",
+      "name": "황태구이",
+      "description": "공기밥포함되지 않습니다",
+      "category": "요리류",
+      "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/8e9618da-1fcb-49c0-8730-ecaa4b21133e.jpg",
+      "adultOnly": false,
+      "sourceMenuId": "10000013"
+    },
+    {
+      "id": "ddangyo-1175498-10000019",
+      "name": "곤이400g",
+      "description": "",
+      "category": "사리추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000019"
+    },
+    {
+      "id": "ddangyo-1175498-90000006",
+      "name": "테라 병맥주",
+      "description": "",
+      "category": "주류메뉴",
+      "image": "",
+      "adultOnly": true,
+      "sourceMenuId": "90000006"
+    },
+    {
+      "id": "ddangyo-1175498-10000020",
+      "name": "반두부",
+      "description": "",
+      "category": "사리추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000020"
+    },
+    {
+      "id": "ddangyo-1175498-10000021",
+      "name": "한두부",
+      "description": "",
+      "category": "사리추가",
+      "image": "",
+      "adultOnly": false,
+      "sourceMenuId": "10000021"
+    }
+  ],
+  "source": {
+    "type": "ddangyo",
+    "patstoNo": "1175498",
+    "sourceUrls": [
+      "https://fdofd.ddangyo.com/gateway1.html?UMTDFHA"
+    ],
+    "rawItemCount": 34,
+    "duplicateItemsRemoved": 5
+  },
+  "sources": [
+    "ddangyo"
+  ]
+}
