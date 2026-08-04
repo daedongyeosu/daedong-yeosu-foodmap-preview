@@ -41,11 +41,16 @@
     for (const store of sourceStores.filter(item => item?.hasMenu === true)) {
       const storeId = String(store.id || store.store_id || '');
       const detail = document.querySelector(`#modalContent .store-detail[data-store-id="${storeId}"]`);
-      if (!detail || detail.querySelector('[data-store-menu-preview]')) continue;
-      const target = detail.querySelector('.detail-routes') || detail.querySelector('.detail-personal-actions');
-      if (!target) continue;
+      if (!detail) continue;
+      if (detail.querySelector('[data-store-menu-preview]')) {
+        window.daedongArrangeStoreDetail?.(detail);
+        continue;
+      }
+      const meta = detail.querySelector('.store-detail-meta-row') || detail.querySelector('.detail-meta');
+      const fallbackTarget = detail.querySelector('.detail-routes') || detail.querySelector('.detail-personal-actions');
+      if (!meta && !fallbackTarget) continue;
       const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
-      target.insertAdjacentHTML('beforebegin', `
+      const markup = `
         <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
           ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="">` : ''}
           <span>
@@ -54,7 +59,10 @@
           </span>
           <strong>메뉴 보기 ›</strong>
         </button>
-      `);
+      `;
+      if (meta) meta.insertAdjacentHTML('afterend', markup);
+      else fallbackTarget.insertAdjacentHTML('beforebegin', markup);
+      window.daedongArrangeStoreDetail?.(detail);
     }
   }
 
