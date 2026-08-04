@@ -468,7 +468,24 @@ function categoryIcon(name, className = 'category-inline-icon') {
 function categoryButtonMarkup(name) {
   return `<button type="button" class="category glass-action ${state.category === name ? 'active' : ''}" data-cat="${escapeHtml(name)}">${categoryIcon(name, 'category-main-icon')}<span>${escapeHtml(name)}</span></button>`;
 }
-function safeHref(value) { const raw=String(value??'').trim();if(!/^(?:https?:|tel:)/i.test(raw))return '#';try { const url = new URL(raw); return ['http:', 'https:', 'tel:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } }
+function safeHref(value) { let raw=String(value??'').trim();if(/^http:\/\/(?:www\.)?mukkebi\.com\//i.test(raw))raw=raw.replace(/^http:/i,'https:');if(!/^(?:https?:|tel:)/i.test(raw))return '#';try { const url = new URL(raw); return ['http:', 'https:', 'tel:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } }
+const KAKAO_SAME_TAB_ORDER_KEYS = new Set(['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin']);
+function isKakaoInAppBrowser() { return /KAKAOTALK/i.test(String(navigator.userAgent || '')); }
+function handleKakaoOrderLinkClick(event) {
+  if (!isKakaoInAppBrowser() || !(event.target instanceof Element)) return;
+  const link = event.target.closest('a[href]');
+  if (!link) return;
+  const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
+  if (!KAKAO_SAME_TAB_ORDER_KEYS.has(key)) return;
+  const href = safeHref(link.getAttribute('href'));
+  if (href === '#') return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  trackAnalyticsRouteClick(event);
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
+  window.location.assign(href);
+}
+document.addEventListener('click', handleKakaoOrderLinkClick, true);
 function routeKey(name) {
   const text = normalize(name);
   if (text.includes('가게바로')) return 'direct';

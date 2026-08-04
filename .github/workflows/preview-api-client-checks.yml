@@ -43,6 +43,7 @@ jobs:
           node hero-store-direct-popup-regression-test.mjs
           node home-address-ux-regression-test.mjs
           node inapp-location-recovery-regression-test.mjs
+          node kakao-order-link-regression-test.mjs
           node outside-yeosu-full-list-regression-test.mjs
           node photo-viewer-removal-regression-test.mjs
           node store-popup-native-order-regression-test.mjs
