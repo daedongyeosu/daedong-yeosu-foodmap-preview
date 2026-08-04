@@ -304,9 +304,11 @@ function rc3EnhanceStoreDetail(store) {
 }
 
 const rc3OpenStoreBase = openStore;
-openStore = function rc3OpenStore(store) {
-  rc3OpenStoreBase(store);
+openStore = async function rc3OpenStore(store) {
+  const opened = await rc3OpenStoreBase(store);
+  if (opened === false) return false;
   rc3EnhanceStoreDetail(store);
+  return opened;
 };
 
 feeGuideMarkup = function rc3FeeGuideMarkup(store, selectedRoute, {fromBrowser = false} = {}) {

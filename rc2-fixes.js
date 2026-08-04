@@ -501,11 +501,13 @@ fxEnhanceStoreDetail = function rc2EnhanceStoreDetail(store) {
   }
 };
 
-openStore = function rc2OpenStore(store) {
-  if (!fxVisible(store)) return;
-  fxOriginalOpenStore(store);
+openStore = async function rc2OpenStore(store) {
+  if (!fxVisible(store)) return false;
+  const opened = await fxOriginalOpenStore(store);
+  if (opened === false) return false;
   fxEnhanceStoreDetail(store);
   history.replaceState({...history.state, storeId: String(store.id)}, '');
+  return opened;
 };
 
 guide = function rc2Guide() {
