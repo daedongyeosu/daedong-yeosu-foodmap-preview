@@ -42,7 +42,9 @@
       const storeId = String(store.id || store.store_id || '');
       const detail = document.querySelector(`#modalContent .store-detail[data-store-id="${storeId}"]`);
       if (!detail || detail.querySelector('[data-store-menu-preview]')) continue;
-      const target = detail.querySelector('.detail-routes') || detail.querySelector('.detail-personal-actions');
+      const target = detail.querySelector('[data-store-service-detail]')
+        || detail.querySelector('.detail-routes')
+        || detail.querySelector('.detail-personal-actions');
       if (!target) continue;
       const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
       target.insertAdjacentHTML('beforebegin', `
