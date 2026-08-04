@@ -189,46 +189,6 @@ body.store-service-overview-open {
   font-weight: 700;
 }
 
-.store-service-top-status {
-  width: fit-content;
-  margin: 0 3px 9px;
-}
-
-.store-detail-meta-row {
-  margin: 3px 3px 9px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.store-detail-meta-row .detail-meta {
-  min-width: 0;
-  margin: 0;
-}
-
-.store-detail-meta-row .store-detail-map-quick {
-  min-height: 34px;
-  flex: 0 0 auto;
-  padding: 0 10px;
-  border-radius: 999px;
-  gap: 5px;
-  font-size: 12px;
-}
-
-.store-detail-meta-row .store-detail-map-quick .quick-icon {
-  width: 18px;
-  height: 18px;
-  display: grid;
-  place-items: center;
-  font-size: 16px;
-}
-
-.store-detail-meta-row .store-detail-map-quick .quick-icon svg {
-  width: 18px;
-  height: 18px;
-}
-
 .store-service-card-payment {
   color: #315d91;
   background: #edf5ff;
@@ -377,18 +337,6 @@ body.store-service-overview-open {
 .store-service-detail-panel > footer small {
   color: #465873;
   font-weight: 750;
-}
-
-.store-service-gift-app-slot {
-  margin-top: 10px;
-}
-
-.store-service-gift-app-link {
-  width: 100%;
-  min-height: 44px;
-  border-color: #bfd8f3;
-  background: #fff;
-  color: #234f7f;
 }
 
 .store-service-overview-overlay {

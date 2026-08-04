@@ -96,29 +96,20 @@ try {
       .then(value => (
         value.includes('월–토 11:00–다음 날 01:00')
         && value.includes('여수섬섬페이 사용 가능')
-        && !value.includes('사용 불가')
-        && !value.includes('없음 확인')
-        && !value.includes('미확인')
+        && value.includes('고유가 피해지원금 미확인')
+        && value.includes('온누리상품권 미확인')
+        && value.includes('무료배달 여부 미확인')
       )),
-    '가게 상세카드에는 이용 가능한 혜택만 표시'
+    '가게 상세카드에서 각 상품권과 무료배달 확인 상태를 구분'
   );
   await check(
     page.evaluate(id => {
       const detail = document.querySelector(`#modal .store-detail[data-store-id="${id}"]`);
-      const metaRow = detail?.querySelector('.store-detail-meta-row');
-      const naver = metaRow?.querySelector('[data-detail-only="naver"]');
-      const topStatus = detail?.querySelector('[data-store-service-top-status]');
-      const menuEntry = detail?.querySelector('[data-store-menu-preview]');
-      const routes = detail?.querySelector('.local-detail-routes');
       const servicePanel = detail?.querySelector('[data-store-service-detail]');
-      const giftApp = servicePanel?.querySelector('[data-detail-only="chak"]');
-      const actions = detail?.querySelector('.detail-personal-actions');
-      const order = [metaRow, topStatus, menuEntry, routes, servicePanel, actions];
-      return Boolean(naver && giftApp) && order.every(Boolean) && order.every((node, index) => (
-        index === 0 || Boolean(order[index - 1].compareDocumentPosition(node) & Node.DOCUMENT_POSITION_FOLLOWING)
-      ));
+      const menuEntry = detail?.querySelector('[data-store-menu-preview]');
+      return Boolean(servicePanel && menuEntry && servicePanel.nextElementSibling === menuEntry);
     }, storeId),
-    '기본정보·지도 → 영업상태 → 음식보기 → 주문방법 → 영업·혜택·지역상품권앱 → 하단기능 순서 유지'
+    '가게 이용정보를 음식보기 바로 위에 배치'
   );
   await check(
     page.locator(`[data-store-menu-preview="${storeId}"] strong`).innerText().then(value => value.trim() === '46개 ›'),

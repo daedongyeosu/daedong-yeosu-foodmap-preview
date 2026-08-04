@@ -465,14 +465,15 @@
 
   function detailPanelMarkup(info, status) {
     const displayLines = Array.isArray(info?.hours?.displayLines) ? info.hours.displayLines : [];
-    const availableBenefits = detailBenefitItems(info).filter(item => item.state === 'available');
-    const localGiftAvailable = availableBenefits.some(item => item.key === 'yeosu-seomseom-pay');
     return `
       <header>
         <div>
           <span>가게 이용정보</span>
           <h3>영업시간·주문앱별 혜택</h3>
         </div>
+        <span class="store-service-status is-${escapeHtml(status.state)}">
+          <i aria-hidden="true"></i>${escapeHtml(status.label)}
+        </span>
       </header>
       <p class="store-service-detail-today">
         <b>${escapeHtml(formatCustomerHours24(status.detail))}</b>
@@ -483,83 +484,13 @@
           ? displayLines.map(line => `<span>${escapeHtml(formatCustomerHours24(line))}</span>`).join('')
           : '<span class="is-unknown">확인된 영업시간이 없습니다.</span>'}
       </div>
-      ${availableBenefits.length ? `
-        <div class="store-service-detail-benefits" aria-label="현재 이용 가능한 주문앱별 혜택">
-          ${availableBenefits.map(detailBenefitMarkup).join('')}
-        </div>
-        <footer>
-          <span>표시된 상품권·쿠폰·무료배달은 혜택 옆에 적힌 주문앱에서 이용할 수 있습니다.</span>
-        </footer>
-      ` : ''}
-      ${localGiftAvailable ? '<div class="store-service-gift-app-slot" data-store-service-gift-app-slot></div>' : ''}
+      <div class="store-service-detail-benefits" aria-label="주문앱별 상품권 및 무료배달 확인 상태">
+        ${detailBenefitItems(info).map(detailBenefitMarkup).join('')}
+      </div>
+      <footer>
+        <span>상품권·쿠폰·무료배달은 혜택 옆에 적힌 주문앱에서 이용할 수 있습니다. 미확인은 아직 사용 가능 여부가 확인되지 않은 정보입니다.</span>
+      </footer>
     `;
-  }
-
-  function directDetailChild(detail, selector) {
-    return [...detail.children].find(node => node.matches(selector)) || null;
-  }
-
-  function arrangeStoreDetail(detail) {
-    const metaAnchor = directDetailChild(detail, '.store-detail-meta-row')
-      || directDetailChild(detail, '.detail-meta');
-    if (!metaAnchor) return;
-    const orderedNodes = [
-      directDetailChild(detail, '[data-store-service-top-status]'),
-      directDetailChild(detail, '[data-store-menu-preview]'),
-      directDetailChild(detail, '.local-detail-routes') || directDetailChild(detail, '.detail-routes'),
-      ...[...detail.children].filter(node => node.matches('.brand-store-actions')),
-      directDetailChild(detail, '.store-other-wrap'),
-      directDetailChild(detail, '.selected-order-cta'),
-      directDetailChild(detail, '[data-store-service-detail]'),
-      directDetailChild(detail, '.detail-quick-links'),
-      directDetailChild(detail, '.detail-personal-actions')
-    ].filter(Boolean);
-    let cursor = metaAnchor;
-    for (const node of orderedNodes) {
-      if (node === cursor) continue;
-      if (cursor.nextElementSibling !== node) cursor.after(node);
-      cursor = node;
-    }
-  }
-
-  window.daedongArrangeStoreDetail = arrangeStoreDetail;
-
-  function organizeStoreUtilities(detail, info, panel) {
-    const meta = detail.querySelector('.detail-meta');
-    if (!meta) return;
-    let metaRow = directDetailChild(detail, '.store-detail-meta-row');
-    if (!metaRow) {
-      metaRow = document.createElement('div');
-      metaRow.className = 'store-detail-meta-row';
-      meta.before(metaRow);
-      metaRow.append(meta);
-    }
-
-    const naver = detail.querySelector('[data-detail-only="naver"]');
-    if (naver) {
-      naver.classList.add('store-detail-map-quick');
-      if (naver.parentElement !== metaRow) metaRow.append(naver);
-    }
-
-    const quickLinks = directDetailChild(detail, '.detail-quick-links');
-    const giftSource = quickLinks?.querySelector('[data-detail-only="chak"]') || null;
-    if (giftSource && !giftSource.hidden) giftSource.hidden = true;
-    const giftAvailable = detailBenefitItems(info)
-      .some(item => item.key === 'yeosu-seomseom-pay' && item.state === 'available');
-    const giftSlot = panel.querySelector('[data-store-service-gift-app-slot]');
-    if (giftAvailable && giftSlot && giftSource) {
-      let giftButton = giftSlot.querySelector('[data-detail-only="chak"]');
-      if (!giftButton) {
-        giftButton = giftSource.cloneNode(true);
-        giftButton.hidden = false;
-        giftButton.classList.add('store-service-gift-app-link');
-        giftSlot.append(giftButton);
-      }
-    }
-    if (quickLinks) {
-      const shouldHide = [...quickLinks.children].every(node => node.hidden);
-      if (quickLinks.hidden !== shouldHide) quickLinks.hidden = shouldHide;
-    }
   }
 
   function decorateStoreCards() {
@@ -600,21 +531,11 @@
         panel.dataset.storeServiceSignature = signature;
         panel.innerHTML = detailPanelMarkup(info, status);
       }
-      let topStatus = detail.querySelector('[data-store-service-top-status]');
-      if (!topStatus) {
-        topStatus = document.createElement('span');
-        topStatus.dataset.storeServiceTopStatus = '';
-      }
-      const topStatusSignature = `${status.state}:${status.label}`;
-      if (topStatus.dataset.storeServiceStatusSignature !== topStatusSignature) {
-        topStatus.dataset.storeServiceStatusSignature = topStatusSignature;
-        topStatus.className = `store-service-status store-service-top-status is-${status.state}`;
-        topStatus.innerHTML = `<i aria-hidden="true"></i>${escapeHtml(status.label)}`;
-      }
-      if (!topStatus.isConnected) detail.append(topStatus);
-      if (!panel.isConnected) detail.append(panel);
-      organizeStoreUtilities(detail, info, panel);
-      arrangeStoreDetail(detail);
+      const target = detail.querySelector('[data-store-menu-preview]')
+        || detail.querySelector('.detail-routes')
+        || detail.querySelector('.detail-personal-actions');
+      if (target && panel.nextElementSibling !== target) target.before(panel);
+      else if (!target && !panel.isConnected) detail.append(panel);
     });
   }
 
