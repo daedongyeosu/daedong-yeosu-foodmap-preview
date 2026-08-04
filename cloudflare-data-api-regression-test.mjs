@@ -51,6 +51,8 @@ assert.throws(() => api.detail('../private'), /식별자/);
 const index = fs.readFileSync('index.html', 'utf8');
 const app = fs.readFileSync('app.js', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
+const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
+const rc3 = fs.readFileSync('rc3-fixes.js', 'utf8');
 const services = fs.readFileSync('store-service-info.js', 'utf8');
 const menus = fs.readFileSync('store-menu-preview.js', 'utf8');
 assert(index.indexOf('data-api.js') < index.indexOf('app.js'), 'API client must load before the application');
@@ -65,6 +67,8 @@ assert(menus.includes('window.daedongDataApi.menu(storeId)'));
 assert(app.includes('window.daedongDataApi?.catalog?.()'));
 assert(app.includes('await secureDetail.enrich(store, normalizedStore)'));
 assert(finalExperience.includes('const opened=await fxOriginalOpenStore(store)'));
+assert(rc2.includes('const opened = await fxOriginalOpenStore(store)'));
+assert(rc3.includes('const opened = await rc3OpenStoreBase(store)'));
 assert(services.includes('window.daedongDataApi.services()'));
 
 const expectedRoutes = [
