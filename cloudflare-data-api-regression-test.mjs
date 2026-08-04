@@ -135,4 +135,44 @@ await assert.rejects(
 );
 assert.notEqual(incompleteStore.__secureDetailReady, true, 'incomplete detail must never be marked ready');
 
+const fallbackStart = rc3.indexOf('function rc3CardChannelFallback');
+const primaryStart = rc3.indexOf('function rc3PrimaryCardChannels');
+const primaryEnd = rc3.indexOf('function rc3PrimaryChannelIcon');
+assert(fallbackStart >= 0 && primaryStart > fallbackStart && primaryEnd > primaryStart, 'card channel helpers must remain testable');
+const cardContext = {
+  RC3_CARD_PRIMARY_CHANNELS: [
+    ['direct', 'directOrder'],
+    ['brand', 'brandApp'],
+    ['mukkebi', 'mukkebi'],
+    ['ddangyo', 'ddangyo'],
+    ['ondongne', 'ondongne'],
+    ['phone', 'phoneOrder']
+  ],
+  RC3_BLOCKED_PHONE_ROUTE_STORES: new Set(['blocked-phone-store']),
+  APP_META: {
+    direct: {label: '가게바로주문'},
+    mukkebi: {label: '먹깨비'},
+    ddangyo: {label: '땡겨요'},
+    phone: {label: '전화주문'}
+  },
+  storeHasChannel: (store, key) => store.channelKeys?.includes(key),
+  resolveStoreChannels: () => ({primaryOrder: {}}),
+  routeFor: () => null,
+  String,
+  Boolean,
+  Object
+};
+vm.createContext(cardContext);
+vm.runInContext(`${rc3.slice(fallbackStart, primaryStart)}\n${rc3.slice(primaryStart, primaryEnd)}`, cardContext);
+const catalogCardKeys = vm.runInContext(
+  `rc3PrimaryCardChannels({id: 'catalog-store', channelKeys: ['direct', 'mukkebi', 'ddangyo', 'phone']}).map(item => item.key)`,
+  cardContext
+);
+assert.deepEqual(plain(catalogCardKeys), ['direct', 'mukkebi', 'ddangyo', 'phone'], 'catalog channelKeys must restore card icons without exposing URLs');
+const blockedPhoneKeys = vm.runInContext(
+  `rc3PrimaryCardChannels({id: 'blocked-phone-store', channelKeys: ['mukkebi', 'phone']}).map(item => item.key)`,
+  cardContext
+);
+assert.deepEqual(plain(blockedPhoneKeys), ['mukkebi'], 'blocked placeholder phones must stay hidden on cards');
+
 console.log('PASS Cloudflare preview API client contract');
