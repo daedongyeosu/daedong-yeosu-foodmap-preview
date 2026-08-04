@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+  <meta name="theme-color" content="#ff5a1f">
+  <meta name="description" content="여수 음식점과 주문방법을 한눈에 찾는 대동여수음식지도">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="대동여수음식지도">
+  <meta property="og:title" content="대동여수음식지도">
+  <meta property="og:description" content="여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.">
+  <meta property="og:url" content="https://daedongmap.com/">
+  <meta property="og:image" content="https://daedongmap.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://daedongmap.com/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/app-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <title>대동여수음식지도</title>
+  <link rel="preload" as="image" href="images/01.png">
+  <link rel="preload" as="image" href="assets/ui/category-icons-color.svg?v=category-first-paint-1">
+  <link rel="preload" as="image" href="assets/yeosu-rc6/dolsan-day-mobile.webp" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="assets/yeosu-rc6/dolsan-day-desktop.webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="assets/yeosu-ux/turtle-ship-northwest-mobile-v4.webp" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="assets/yeosu-ux/turtle-ship-northwest-v4.webp" media="(min-width: 768px)">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
+  <link rel="stylesheet" href="app.css?v=selected-category-label-1-external-app-text-1-legacy-rail-button-hidden-1-lower-promo-details-5-direct-coming-soon-1">
+  <link rel="stylesheet" href="store-list-horizontal-pager.css?v=1">
+  <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1-turtle-glass-1-search-button-horizontal-1-store-share-copy-2">
+  <link rel="stylesheet" href="rc6-fixes.css?v=location-store-hero-1">
+  <link rel="stylesheet" href="rc7-address-map.css?v=home-share-touch-3-inapp-location-recovery-1">
+  <link rel="stylesheet" href="turtle-ship-hero.css?v=message-colors-popup-15s-1">
+  <link rel="stylesheet" href="store-service-info.css?v=store-service-9-customer-search-ux-1">
+  <link rel="stylesheet" href="store-menu-preview.css?v=store-menu-14-direct-coming-soon-1">
+  <link rel="stylesheet" href="mukkebi-summer-event.css?v=20260801-1">
+</head>
+<body>
+  <div id="app">
+    <div class="yeosu-night-shell" data-weather="clear">
+    <div class="weather-layer" aria-hidden="true"></div>
+    <div class="bridge-light-layer" aria-hidden="true"></div>
+    <div id="microFxLayer" class="micro-fx-layer" aria-hidden="true"></div>
+    <div id="communityIntro" class="community-intro" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="communityIntroTitle">
+      <div class="community-intro-card">
+        <button id="communityIntroClose" class="community-intro-close" type="button" aria-label="안내 닫기">×</button>
+        <p class="community-intro-kicker">여수의 맛을 오래 이어가는 주문</p>
+        <h2 id="communityIntroTitle">여수에서 주문한다면,</h2>
+        <p class="community-intro-lead">여수를 한 번 더 생각해 주세요.</p>
+        <div class="community-intro-guide">
+          <strong>가게바로주문 · 먹깨비 · 땡겨요</strong>
+          <span>브랜드앱 · 전화주문을 먼저 살펴보세요.</span>
+        </div>
+        <p class="community-intro-outcome">
+          오늘의 작은 선택이<br>
+          우리가 아끼는 여수의 맛을 내일로 이어갑니다.
+        </p>
+        <p class="community-intro-heart">💚 여수의 가게를 응원하는<br><strong>가장 쉬운 방법입니다.</strong></p>
+        <p class="community-intro-auto">15초 후 자동으로 닫힙니다.</p>
+        <div class="community-intro-progress" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+    <div id="turtleShipHeroScene" class="turtle-ship-hero-scene" data-heading="northwest-rear-three-quarter" aria-hidden="true">
+      <div class="turtle-ship-hero-voyage">
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/yeosu-ux/turtle-ship-northwest-mobile-v4.webp">
+          <img src="assets/yeosu-ux/turtle-ship-northwest-v4.webp" alt="" width="1400" height="700" decoding="async">
+        </picture>
+      </div>
+    </div>
+    <header class="topbar">
+      <button id="locationBtn" class="location-chip" type="button" aria-label="지역 선택">
+        <svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#location"></use></svg><span id="locationText">여수시 전체</span><span aria-hidden="true">⌄</span>
+      </button>
+      <a class="brand-wordmark" href="#app" aria-label="대동여수음식지도 홈">
+        <span class="brand-word brand-word-left" aria-hidden="true"><b>대동</b><em>여수</em></span>
+        <span class="brand-symbol" aria-hidden="true"><img src="assets/logo.png" alt=""></span>
+        <span class="brand-word brand-word-right" aria-hidden="true">음식지도</span>
+      </a>
+      <div class="topbar-actions">
+        <button id="homeShareBtn" class="icon-btn topbar-share-btn glass-action" type="button" data-share-home aria-label="대동여수음식지도 공유하기" aria-haspopup="dialog">
+          <svg class="ui-icon home-share-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="18" cy="5" r="2.2"></circle>
+            <circle cx="6" cy="12" r="2.2"></circle>
+            <circle cx="18" cy="19" r="2.2"></circle>
+            <path d="m8 11 7.8-4.6M8 13l7.8 4.6"></path>
+          </svg>
+        </button>
+        <button id="noticeBtn" class="icon-btn glass-action" type="button" aria-label="알림"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#bell"></use></svg><b class="badge">2</b></button>
+      </div>
+    </header>
+    <p class="brand-return-slogan">여수의 맛을 찾는 날마다, 대동여수음식지도.</p>
+
+    <section class="search-row main-search-row" aria-label="가게 검색">
+      <div class="searchbox glass-action" id="searchSurface"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#search"></use></svg><input id="mainSearch" placeholder="메뉴, 가게명, 동네 검색" autocomplete="off"><button id="clearMainSearch" class="input-clear" type="button" aria-label="검색어 지우기" hidden>×</button></div>
+      <button id="searchBtn" class="primary-btn" type="button">검색</button>
+      <button id="topFavoriteBtn" class="top-quick-btn glass-action" type="button" aria-label="찜한 가게"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#heart"></use></svg><span>찜</span></button>
+      <button id="topRecentBtn" class="top-quick-btn glass-action" type="button" aria-label="최근 방문 가게"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#recent"></use></svg><span>최근</span></button>
+    </section>
+
+    <section class="section order-section">
+      <div class="section-head">
+        <div class="section-head-copy community-order-message"><h2>가게에 힘이 되는 주문방법</h2><p>가게바로주문·먹깨비·땡겨요·브랜드앱·전화주문을 먼저 살펴보세요.</p></div>
+        <button class="text-btn" type="button" data-open="guide">이용안내 ›</button>
+      </div>
+      <div class="order-grid" aria-label="주문방법 선택">
+        <button class="order-item first glass-action community-order direct-coming-soon" type="button" data-order-key="direct" disabled><svg class="order-svg" aria-hidden="true"><use href="assets/ui/ui-icons.svg#store"></use></svg><strong class="direct-order-label">가게바로주문<small>(준비중)</small></strong></button>
+        <button class="order-item glass-action community-order" type="button" data-order-key="mukkebi"><img src="assets/mukkebi-v7.png" alt="먹깨비"><strong>먹깨비</strong></button>
+        <button class="order-item glass-action community-order" type="button" data-order-key="ddangyo"><img src="assets/ddangyo-v7.png" alt="땡겨요"><strong>땡겨요</strong></button>
+        <button class="order-item glass-action" type="button" data-order-key="brand"><span class="brand-app-icon"><img src="images/momstouch.jpg" alt=""><img src="images/ajukeo.jpg" alt=""><img src="images/burgerking.png" alt=""><span aria-hidden="true">＋</span></span><strong>브랜드앱</strong></button>
+        <button class="order-item glass-action community-order order-coming-soon" type="button" data-order-key="ondongne" disabled><img src="assets/ondongne.png" alt="온동네"><strong class="order-coming-soon-label">온동네<small>(준비중)</small></strong></button>
+        <button class="order-item glass-action community-order" type="button" data-order-key="phone"><img src="assets/ui/phone.svg" alt=""><strong>전화주문</strong></button>
+        <button id="moreAppsBtn" class="order-item more-apps glass-action" type="button" data-order-key="other"><svg class="order-svg" aria-hidden="true"><use href="assets/ui/ui-icons.svg#package"></use></svg><strong>다른 주문앱</strong></button>
+      </div>
+      <div id="moreAppsPopover" class="popover" hidden>
+        <button class="popover-close" type="button" aria-label="닫기">×</button><h3>다른 주문앱 보기</h3>
+        <div class="external-apps">
+          <button type="button" data-global-external="yogiyo"><span class="external-app-choice-label">요기요</span></button>
+          <button type="button" data-global-external="coupang"><span class="external-app-choice-label">쿠팡이츠</span></button>
+          <button type="button" data-global-external="baemin"><span class="external-app-choice-label">배달의민족</span></button>
+        </div>
+        <p class="external-app-notice" role="note"><span aria-hidden="true">ⓘ</span><span>앱 이름은 주문 경로 안내를 위해 표시되며, 대동여수음식지도와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.</span></p>
+      </div>
+      <div id="navalLane" hidden aria-hidden="true"></div>
+      <div class="turtle-ship-passage" aria-hidden="true"></div>
+    </section>
+    <section class="hero" aria-label="메인 슬라이드 배너">
+      <div id="heroCarousel" class="carousel-controller">
+        <div class="carousel-shell hero-frame">
+          <button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 배너">‹</button>
+          <div id="heroTrack" class="carousel-track"></div>
+          <button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 배너">›</button>
+        </div>
+        <div id="heroDots" class="carousel-dots" aria-label="배너 위치"></div>
+      </div>
+    </section>
+    </div>
+
+    <section class="section category-section">
+      <div class="section-head"><div class="section-head-copy"><h2>원하는 음식 종류를 선택하세요</h2><p>카테고리와 동네를 5초 안에 선택할 수 있도록 구성했습니다.</p></div></div>
+      <div id="categoryGrid" class="category-grid horizontal-categories"></div>
+    </section>
+
+    <section id="searchSummary" class="search-summary" hidden></section>
+    <section id="recommendRails" class="recommend-rails" aria-label="상황별 추천"></section>
+    <section id="recommendSection" class="section">
+      <div class="section-head"><h2>가게목록</h2><button id="resetCategoryBtn" class="text-btn" type="button" hidden>전체 추천 보기 ›</button></div>
+      <div id="storeGrid" class="store-grid"><div class="empty">가게 정보를 불러오는 중입니다.</div></div>
+      <div id="storePagerControls" class="store-pager-controls">
+        <button id="storePrevBtn" class="load-more store-page-prev" type="button" data-store-page-direction="prev" hidden>← 이전 가게</button>
+        <button id="loadMoreBtn" class="load-more store-page-next" type="button" data-store-page-direction="next" hidden>다음 가게 보기 →</button>
+      </div>
+    </section>
+
+    <section class="section promo-section" aria-label="광고와 지역 소식">
+      <div class="section-head"><div class="section-head-copy"><h2>여수와 함께하는 소식</h2><p>기사 모집, 가게 모집, 신규 오픈과 지역 소식을 전합니다.</p></div></div>
+      <div id="promoCarousel" class="carousel-controller">
+        <div class="carousel-shell promo-frame">
+          <button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 소식">‹</button>
+          <div id="promoTrack" class="carousel-track"></div>
+          <button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 소식">›</button>
+        </div>
+        <div class="carousel-dots" aria-label="소식 위치"></div>
+      </div>
+    </section>
+
+    <footer class="legal"><button type="button" data-open="guide">이용안내</button><button type="button" onclick="window.location.href='/privacy/'">개인정보처리방침</button><button type="button">광고 문의</button></footer>
+    <div class="build-mark">대동여수음식지도 RC6 온라인 검수 후보</div>
+  </div>
+
+  <nav class="bottom-nav"><button type="button" data-tab="home" class="active"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#store"></use></svg><span>홈</span></button><button type="button" data-tab="search"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#search"></use></svg><span>검색</span></button><button type="button" data-tab="favorite"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#heart"></use></svg><span>찜한가게</span></button><button type="button" data-tab="recent"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#recent"></use></svg><span>최근방문</span></button><button type="button" data-tab="mypage"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#location"></use></svg><span>마이페이지</span></button></nav>
+  <div id="overlay" class="overlay" hidden></div>
+  <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button class="modal-close" type="button" aria-label="닫기">×</button><div id="modalContent"></div></div></div>
+  <div id="startupAd" class="startup-ad" hidden><div class="startup-card"><button class="startup-close" type="button" aria-label="닫기">×</button><small>대동여수음식지도 안내</small><h2>배달기사·가맹점 모집</h2><p>기사 모집, 가게 모집, 주문앱 가입 안내, 신규 오픈 가게와 소상공인 소식을 알립니다.</p><div class="startup-actions"><button id="startupDetails" class="primary-btn" type="button">자세히 보기</button><button id="hideToday" type="button">오늘 그만 보기</button></div></div></div>
+  <div id="mukkebiSummerEvent" class="mukkebi-summer-event" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mukkebiSummerTitle">
+    <div class="mukkebi-summer-card">
+      <button id="mukkebiSummerClose" class="mukkebi-summer-close" type="button" aria-label="먹깨비 이벤트 안내 닫기">×</button>
+      <div class="mukkebi-summer-head">
+        <p class="mukkebi-summer-partners">여수시 · 전남신용보증재단 · 먹깨비</p>
+        <p class="mukkebi-summer-kicker">여수시 여름휴가 기념</p>
+        <h2 id="mukkebiSummerTitle">3천 원 할인</h2>
+        <p class="mukkebi-summer-period">08.01.(토) ~ 08.31.(월)</p>
+      </div>
+      <div class="mukkebi-summer-body">
+        <p class="mukkebi-summer-condition"><strong>12,000원 이상 주문 시</strong><span>3천 원 즉시 할인</span></p>
+        <ul class="mukkebi-summer-details">
+          <li>일 선착순 500매</li>
+          <li>총 선착순 6,300매</li>
+          <li>1일 1회</li>
+          <li>예산 소진 시 조기 종료</li>
+        </ul>
+        <button id="mukkebiSummerOrder" class="mukkebi-summer-order" type="button">먹깨비로 주문하기</button>
+        <button id="mukkebiSummerHideToday" class="mukkebi-summer-hide" type="button">오늘 하루 보지 않기</button>
+      </div>
+    </div>
+  </div>
+  <noscript><p class="noscript">대동여수음식지도를 이용하려면 자바스크립트를 켜주세요.</p></noscript>
+  <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
+  <script src="data-api.js?v=cloudflare-preview-api-1" defer></script>
+  <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-hero-forward-only-1-lower-promo-details-6-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-startup-popup-disabled-1-anonymous-analytics-1-coarse-region-1-owner-exclusion-1-outside-yeosu-full-list-1-direct-coming-soon-1-home-address-short-1" defer></script>
+  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1-unified-menu-search-1" defer></script>
+  <script src="store-list-horizontal-pager.js?v=1" defer></script>
+  <script src="turtle-ship-hero.js?v=message-colors-popup-15s-1" defer></script>
+  <script src="store-service-info.js?v=store-service-16-yeseo-complete" defer></script>
+  <script src="store-menu-preview.js?v=store-menu-17-direct-coming-soon-1-unified-menu-search-1" defer></script>
+  <script src="data-api-runtime.js?v=cloudflare-preview-api-1" defer></script>
+  <script src="pwa-register.js?v=android-pwa-1-preview-redeploy-1" defer></script>
+  <script src="mukkebi-summer-event.js?v=20260801-1" defer></script>
+</body>
+</html>

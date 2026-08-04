@@ -1,0 +1,95 @@
+{
+  "campaigns": {
+    "67a9e4f14c8c7ea4": {
+      "storeId": "67a9e4f14c8c7ea4",
+      "slug": "sonsugimbap-yangji-flyer",
+      "label": "손수김밥 전용 대동여수음식지도",
+      "title": "손수김밥",
+      "meta": "미평·둔덕 · 김밥·분식·한식",
+      "images": [
+        "assets/campaigns/sonsugimbap-yangji/01-gimbap-set.webp",
+        "assets/campaigns/sonsugimbap-yangji/02-storefront.webp",
+        "assets/campaigns/sonsugimbap-yangji/03-gimbap.webp",
+        "assets/campaigns/sonsugimbap-yangji/04-spicy-soup-table.webp",
+        "assets/campaigns/sonsugimbap-yangji/05-yukgaejang.webp",
+        "assets/campaigns/sonsugimbap-yangji/06-spicy-noodles.webp",
+        "assets/campaigns/sonsugimbap-yangji/07-seafood-ramyeon.webp",
+        "assets/campaigns/sonsugimbap-yangji/08-pork-cutlet-set.webp",
+        "assets/campaigns/sonsugimbap-yangji/09-pork-cutlet.webp",
+        "assets/campaigns/sonsugimbap-yangji/10-tteokbokki.webp",
+        "assets/campaigns/sonsugimbap-yangji/11-fried-rice.webp",
+        "assets/campaigns/sonsugimbap-yangji/12-side-dishes-wide.webp",
+        "assets/campaigns/sonsugimbap-yangji/13-side-dishes.webp",
+        "assets/campaigns/sonsugimbap-yangji/14-seafood-soup.webp"
+      ],
+      "specialBannerKeys": [
+        "18",
+        "19",
+        "20"
+      ],
+      "copySlides": [
+        1,
+        5,
+        9,
+        13
+      ]
+    },
+    "cfde2617224f33a0": {
+      "storeId": "cfde2617224f33a0",
+      "slug": "kongsanso-store-family",
+      "label": "콩산소 전용 대동여수음식지도",
+      "title": "콩산소",
+      "meta": "문수동 · 음식 연구소",
+      "slides": [
+        {
+          "storeId": "cfde2617224f33a0",
+          "image": "assets/campaigns/kongsanso-family/kongsanso/01-family-menu.webp",
+          "title": "콩산소",
+          "meta": "문수동 · 음식 연구소"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "assets/campaigns/kongsanso-family/cho-chef-pho/01-pho-set.webp",
+          "title": "조쉐프의 쌀국수",
+          "meta": "문수동 · 면요리"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "assets/campaigns/kongsanso-family/kim-samgyeop-kimchi-jjim/01-kimchi-jjim-set.webp",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "문수동 · 한식·김치찜"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "assets/campaigns/kongsanso-family/memil-makguksu/01-makguksu.webp",
+          "title": "메밀꽃 필 막국수",
+          "meta": "문수동 · 면요리"
+        },
+        {
+          "storeId": "3f441930b8d18783",
+          "image": "assets/store-photos/2822d52b9ee44f/02.webp",
+          "title": "1980밀면회관&냉면 문수점",
+          "meta": "문수동 · 면요리"
+        },
+        {
+          "storeId": "f3cb61dd45ba9b8b",
+          "image": "assets/notion-store-photos/f3cb61dd45ba9b/01.webp",
+          "title": "콩담은 콩나물 국밥 문수점",
+          "meta": "문수동 · 한식·국밥"
+        },
+        {
+          "storeId": "665953a0453afc52",
+          "image": "assets/campaigns/kongsanso-family/kim-gukbap/01-gukbap.webp",
+          "title": "김사장 국밥 문수점",
+          "meta": "문수동 · 한식·국밥"
+        },
+        {
+          "storeId": "7ed65c8f086f11f2",
+          "image": "assets/campaigns/kongsanso-family/kim-noodle-house/01-spicy-noodles.webp",
+          "title": "김사장 대박난 국수집 문수점",
+          "meta": "문수동 · 한식·면요리"
+        }
+      ]
+    }
+  }
+}

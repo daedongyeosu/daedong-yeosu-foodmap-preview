@@ -1,0 +1,474 @@
+{
+  "generated_from": "data/store-coordinates.json",
+  "verified_store_coordinate_count": 326,
+  "usage": "relative-neighborhood-order-only-never-store-distance",
+  "neighborhoods": [
+    {
+      "name": "여서동",
+      "aliases": [
+        "여서동점",
+        "여수여서동점",
+        "여서점",
+        "여수여서",
+        "여서2로"
+      ],
+      "latitude": 34.752383191110084,
+      "longitude": 127.703516707306,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 48
+    },
+    {
+      "name": "문수동",
+      "aliases": [
+        "문수동점",
+        "여수문수동점",
+        "문수점",
+        "여수문수",
+        "문수로"
+      ],
+      "latitude": 34.7540420012193,
+      "longitude": 127.702415127997,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 43
+    },
+    {
+      "name": "학동",
+      "aliases": [
+        "학동점",
+        "여수학동점",
+        "여수학동"
+      ],
+      "latitude": 34.76226936113018,
+      "longitude": 127.66047126040752,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 18
+    },
+    {
+      "name": "웅천동",
+      "aliases": [
+        "웅천동점",
+        "여수웅천동점",
+        "웅천점",
+        "여수웅천"
+      ],
+      "latitude": 34.74663187782629,
+      "longitude": 127.67506303922202,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 28
+    },
+    {
+      "name": "국동",
+      "aliases": [
+        "국동점",
+        "여수국동점",
+        "여수국동",
+        "국동항점"
+      ],
+      "latitude": 34.7308751622601,
+      "longitude": 127.717337451004,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 25
+    },
+    {
+      "name": "소호동",
+      "aliases": [
+        "소호동점",
+        "여수소호동점",
+        "소호점",
+        "여수소호"
+      ],
+      "latitude": 34.7447987088417,
+      "longitude": 127.652159971683,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 5
+    },
+    {
+      "name": "신기동",
+      "aliases": [
+        "신기동점",
+        "여수신기동점",
+        "신기점",
+        "여수신기"
+      ],
+      "latitude": 34.7606836306995,
+      "longitude": 127.67222922221472,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 21
+    },
+    {
+      "name": "돌산",
+      "aliases": [
+        "돌산점",
+        "여수돌산점",
+        "여수돌산"
+      ],
+      "latitude": 34.720104856398216,
+      "longitude": 127.7513141450105,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 14
+    },
+    {
+      "name": "미평동",
+      "aliases": [
+        "미평동점",
+        "여수미평동점",
+        "미평점",
+        "여수미평"
+      ],
+      "latitude": 34.7704535921765,
+      "longitude": 127.704419289949,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 9
+    },
+    {
+      "name": "둔덕동",
+      "aliases": [
+        "둔덕동점",
+        "여수둔덕동점",
+        "둔덕점",
+        "여수둔덕"
+      ],
+      "latitude": 34.7685937887888,
+      "longitude": 127.694077034621,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 3
+    },
+    {
+      "name": "봉계동",
+      "aliases": [
+        "봉계동점",
+        "여수봉계동점",
+        "봉계점",
+        "여수봉계"
+      ],
+      "latitude": 34.78422971488397,
+      "longitude": 127.692964188596,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 3
+    },
+    {
+      "name": "덕충동",
+      "aliases": [
+        "덕충동점",
+        "여수덕충동점",
+        "덕충점",
+        "여수덕충",
+        "엑스포점",
+        "엑스포광장점"
+      ],
+      "latitude": 34.7528841557547,
+      "longitude": 127.743087991811,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 17
+    },
+    {
+      "name": "죽림",
+      "aliases": [
+        "죽림점",
+        "여수죽림점",
+        "여수죽림"
+      ],
+      "latitude": 34.76373638318145,
+      "longitude": 127.63792620883018,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 14
+    },
+    {
+      "name": "선원동",
+      "aliases": [
+        "선원동점",
+        "여수선원동점",
+        "선원점",
+        "선원동",
+        "무선점",
+        "여수무선"
+      ],
+      "latitude": 34.7728611089318,
+      "longitude": 127.650113137588,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 17
+    },
+    {
+      "name": "화장동",
+      "aliases": [
+        "화장동점",
+        "여수화장동점",
+        "화장점",
+        "화장동"
+      ],
+      "latitude": 34.77383615675095,
+      "longitude": 127.645237243305,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 7
+    },
+    {
+      "name": "안산동",
+      "aliases": [
+        "안산동점",
+        "여수안산동점",
+        "안산점",
+        "안산동"
+      ],
+      "latitude": 34.7605353808195,
+      "longitude": 127.65108379858331,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 3
+    },
+    {
+      "name": "봉산동",
+      "aliases": [
+        "봉산동점",
+        "여수봉산동점",
+        "봉산점",
+        "여수봉산"
+      ],
+      "latitude": 34.7337350903112,
+      "longitude": 127.72259557870424,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 15
+    },
+    {
+      "name": "신월동",
+      "aliases": [
+        "신월동점",
+        "여수신월동점",
+        "신월점",
+        "여수신월"
+      ],
+      "latitude": 34.725883559728004,
+      "longitude": 127.7121195257445,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 4
+    },
+    {
+      "name": "고소동",
+      "aliases": [
+        "고소동점",
+        "여수고소동점",
+        "고소점"
+      ],
+      "latitude": null,
+      "longitude": null,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 0
+    },
+    {
+      "name": "교동",
+      "aliases": [
+        "교동점",
+        "여수교동점",
+        "여수교동"
+      ],
+      "latitude": 34.74000136563868,
+      "longitude": 127.73178724517136,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 14
+    },
+    {
+      "name": "중앙동",
+      "aliases": [
+        "중앙동점",
+        "여수중앙동점",
+        "중앙점",
+        "여수중앙"
+      ],
+      "latitude": 34.7404340909068,
+      "longitude": 127.736436491229,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 7
+    },
+    {
+      "name": "충무동",
+      "aliases": [
+        "충무동점",
+        "여수충무동점",
+        "충무점",
+        "여수충무"
+      ],
+      "latitude": 34.741325319286105,
+      "longitude": 127.73143358852201,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 4
+    },
+    {
+      "name": "공화동",
+      "aliases": [
+        "공화동점",
+        "여수공화동점",
+        "공화점"
+      ],
+      "latitude": 34.7448756101134,
+      "longitude": 127.7425534563172,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 5
+    },
+    {
+      "name": "관문동",
+      "aliases": [
+        "관문동점",
+        "여수관문동점",
+        "관문점",
+        "여수관문"
+      ],
+      "latitude": 34.7429375282874,
+      "longitude": 127.7410520241515,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 4
+    },
+    {
+      "name": "종화동",
+      "aliases": [
+        "종화동점",
+        "여수종화동점",
+        "종화점"
+      ],
+      "latitude": 34.73808234017599,
+      "longitude": 127.74378070635461,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 2
+    },
+    {
+      "name": "수정동",
+      "aliases": [
+        "수정동점",
+        "여수수정동점",
+        "수정점"
+      ],
+      "latitude": 34.7432462725732,
+      "longitude": 127.749028178854,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 1
+    },
+    {
+      "name": "오림동",
+      "aliases": [
+        "오림동점",
+        "여수오림동점",
+        "오림점"
+      ],
+      "latitude": 34.7558625400933,
+      "longitude": 127.716615186282,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 1
+    },
+    {
+      "name": "광무동",
+      "aliases": [
+        "광무동점",
+        "여수광무동점",
+        "광무점"
+      ],
+      "latitude": 34.74281852389172,
+      "longitude": 127.72784945481999,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 1
+    },
+    {
+      "name": "봉강동",
+      "aliases": [
+        "봉강동점",
+        "여수봉강동점",
+        "봉강점"
+      ],
+      "latitude": 34.73817368728055,
+      "longitude": 127.724354440853,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 2
+    },
+    {
+      "name": "서교동",
+      "aliases": [
+        "서교동점",
+        "여수서교동점",
+        "서교점"
+      ],
+      "latitude": 34.7438803276745,
+      "longitude": 127.728911246475,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 1
+    },
+    {
+      "name": "연등동",
+      "aliases": [
+        "연등동점",
+        "여수연등동점",
+        "연등점"
+      ],
+      "latitude": 34.74935816996432,
+      "longitude": 127.72769495854006,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 1
+    },
+    {
+      "name": "여천동",
+      "aliases": [
+        "여천동점",
+        "여수여천동점",
+        "여천점",
+        "여수여천"
+      ],
+      "latitude": 34.7605353808195,
+      "longitude": 127.668822746876,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 11
+    },
+    {
+      "name": "소라",
+      "aliases": [
+        "소라점",
+        "여수소라점",
+        "소라면"
+      ],
+      "latitude": null,
+      "longitude": null,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 0
+    },
+    {
+      "name": "율촌",
+      "aliases": [
+        "율촌점",
+        "여수율촌점",
+        "율촌면"
+      ],
+      "latitude": null,
+      "longitude": null,
+      "type": "neighborhood-centroid",
+      "source": "median-of-existing-verified-store-coordinates",
+      "evidence_count": 0
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="대동여수음식지도">
+  <rect width="512" height="512" rx="112" fill="#fff"/>
+  <path d="M294 34 169 242h83l-45 236 142-247h-86z" fill="#ff5a1f"/>
+  <path d="M53 272c74-17 161-27 261-27h91l50-25v25h25v22h-25v25l-50-25h-91c-100 0-187 8-261 24z" fill="#0b2b57"/>
+  <path d="M421 231h61M421 249h67M421 267h67M421 285h61" fill="none" stroke="#0b2b57" stroke-width="13" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,573 @@
+{
+  "storeMappings": [
+    {
+      "store_id": "687febad1f2bf0dd",
+      "storeName": "공차 여서점",
+      "brandName": "공차",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "gongcha",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.easymembership.gongcha",
+          "packageName": "com.easymembership.gongcha",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/gongcha.png"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "공차",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 공차 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "72747cfe04586176",
+      "storeName": "공차 여수해양공원점",
+      "brandName": "공차",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "gongcha",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.easymembership.gongcha",
+          "packageName": "com.easymembership.gongcha",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/gongcha.png"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "공차",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 공차 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "d0400d97c15c0a02",
+      "storeName": "공차 웅천점",
+      "brandName": "공차",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "gongcha",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.easymembership.gongcha",
+          "packageName": "com.easymembership.gongcha",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/gongcha.png"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "공차",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 공차 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "dc01f52e24fc6b2b",
+      "storeName": "교촌치킨 국동점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "b115c4e54c35d82e",
+      "storeName": "교촌치킨 덕충점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "4e2bf615062e7234",
+      "storeName": "교촌치킨 돌산점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "c97c66bc78a649ea",
+      "storeName": "교촌치킨 둔덕점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "84fc553896d0b051",
+      "storeName": "교촌치킨 문수점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "04ae2e96e82f63ef",
+      "storeName": "교촌치킨 신기점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "dfb50765a5f3a8ab",
+      "storeName": "교촌치킨 안산점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "99ade7376cceea13",
+      "storeName": "교촌치킨 여서점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "6126fa948ce536e6",
+      "storeName": "교촌치킨 웅천점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "8e930495e2e94c21",
+      "storeName": "교촌치킨 죽림무선점",
+      "brandName": "교촌치킨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "kyochon",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.order.kyochonchicken",
+          "packageName": "com.order.kyochonchicken",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/kyochon.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "afe9497576e46e1e",
+      "storeName": "던킨 여수롯데마트점",
+      "brandName": "던킨",
+      "orderChannels": {
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "던킨",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 던킨 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "a2939cd769593c56",
+      "storeName": "뚜레쥬르 여수돌산점",
+      "brandName": "뚜레쥬르",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "tous-les-jours",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=kr.co.tlj.app",
+          "packageName": "kr.co.tlj.app",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/tous-les-jours.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "03f6d7c59d6d1a45",
+      "storeName": "뚜레쥬르 여수엑스포타운점",
+      "brandName": "뚜레쥬르",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "tous-les-jours",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=kr.co.tlj.app",
+          "packageName": "kr.co.tlj.app",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/tous-les-jours.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "e4707894d7a253d7",
+      "storeName": "반올림피자 여수3호점피자(교동)",
+      "brandName": "반올림피자",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "banolim-pizza",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.banolim.pizza.app",
+          "packageName": "com.banolim.pizza.app",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/banolim-pizza.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "a43b83f3f712fc43",
+      "storeName": "반올림피자 여수점(신기동)",
+      "brandName": "반올림피자",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "banolim-pizza",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.banolim.pizza.app",
+          "packageName": "com.banolim.pizza.app",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/banolim-pizza.jpg"
+        }
+      }
+    },
+    {
+      "store_id": "10f225b9ca817dc4",
+      "storeName": "배스킨라빈스 여수국동점",
+      "brandName": "배스킨라빈스",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "baskin-robbins",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=kr.co.baskinrobbins.client",
+          "packageName": "kr.co.baskinrobbins.client",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/baskin-robbins.jpg"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "배스킨라빈스",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 배스킨라빈스 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "989fc2e054bb87c9",
+      "storeName": "배스킨라빈스 여수충무점",
+      "brandName": "배스킨라빈스",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "baskin-robbins",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=kr.co.baskinrobbins.client",
+          "packageName": "kr.co.baskinrobbins.client",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/baskin-robbins.jpg"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "배스킨라빈스",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 배스킨라빈스 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "6fcebc9381432d73",
+      "storeName": "투썸플레이스 웅천점",
+      "brandName": "투썸플레이스",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "twosome-place",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.cj.twosome",
+          "packageName": "com.cj.twosome",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/twosome-place.png"
+        }
+      }
+    },
+    {
+      "store_id": "728262018f22a2cc",
+      "storeName": "투썸플레이스 한재사거리점",
+      "brandName": "투썸플레이스",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "twosome-place",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.cj.twosome",
+          "packageName": "com.cj.twosome",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/twosome-place.png"
+        }
+      }
+    },
+    {
+      "store_id": "b17cdef5234b021b",
+      "storeName": "파리바게뜨 여수교동점",
+      "brandName": "파리바게뜨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "paris-baguette",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.pb.android",
+          "packageName": "com.pb.android",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/paris-baguette.png"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "파리바게뜨",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 파리바게뜨 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "e9dc60119d9cdfb5",
+      "storeName": "파리바게뜨 여수국동점",
+      "brandName": "파리바게뜨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "paris-baguette",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.pb.android",
+          "packageName": "com.pb.android",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/paris-baguette.png"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "파리바게뜨",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 파리바게뜨 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "6059e7ea81c9f4d1",
+      "storeName": "파리바게뜨 여수엑스포점",
+      "brandName": "파리바게뜨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "paris-baguette",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.pb.android",
+          "packageName": "com.pb.android",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/paris-baguette.png"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "파리바게뜨",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 파리바게뜨 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "1bdc59414a5c8b64",
+      "storeName": "파리바게뜨 여수중앙점",
+      "brandName": "파리바게뜨",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "paris-baguette",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.pb.android",
+          "packageName": "com.pb.android",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/paris-baguette.png"
+        },
+        "happyOrder": {
+          "provider": "happyorder",
+          "brandName": "파리바게뜨",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=com.happypointcard.happyorder",
+          "packageName": "com.happypointcard.happyorder",
+          "buttonLabel": "해피오더에서 파리바게뜨 찾기",
+          "notice": "주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.",
+          "linkType": "app_install_or_open",
+          "directStoreLink": false,
+          "icon": "assets/order-channels/happyorder.png"
+        }
+      }
+    },
+    {
+      "store_id": "e16359de9292f582",
+      "storeName": "피자알볼로 여수엑스포점(수정동)",
+      "brandName": "피자알볼로",
+      "orderChannels": {
+        "brandApp": {
+          "provider": "pizza-alvolo",
+          "platform": "Android",
+          "appLink": "https://play.google.com/store/apps/details?id=m.pizzaalvolo",
+          "packageName": "m.pizzaalvolo",
+          "buttonLabel": "브랜드앱 설치·열기",
+          "linkType": "android_app_install",
+          "directStoreLink": false,
+          "icon": "assets/brand-apps/pizza-alvolo.png"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "selection": "stable-hash-store-id",
+  "brands": {
+    "비비큐": [
+      "assets/photo-batch-3-refresh/card/bbq.webp",
+      "assets/store-photos/485a846f6445df/02.webp",
+      "assets/store-photos/0abd7147b7d6b1dd/01.jpg",
+      "assets/notion-recovery-180/450856a6b5fd4846/01.png"
+    ],
+    "60계치킨": [
+      "assets/store-photos/af8b15c5b69a94/02.webp",
+      "assets/store-photos/af8b15c5b69a94/01.webp",
+      "assets/store-photos/af8b15c5b69a94/04.webp",
+      "assets/notion-recovery-180/fb798d3119a28415/01.png"
+    ],
+    "더벤티": [
+      "assets/store-photos/e982b7aa80a2e4/01.webp",
+      "assets/store-photos/e982b7aa80a2e4/02.webp",
+      "assets/store-photos/e982b7aa80a2e4/03.webp",
+      "assets/store-photos/e982b7aa80a2e4/04.webp",
+      "assets/store-photos/e982b7aa80a2e4/05.webp",
+      "assets/notion-recovery-180/452526604d3b10c4/01.jpg"
+    ]
+  },
+  "assignments": {
+    "066197a9443c3145": "assets/store-photos/485a846f6445df/02.webp",
+    "4059491d8dbb4159": "assets/photo-batch-3-refresh/card/bbq.webp",
+    "572e4a658f762cbe": "assets/notion-recovery-180/450856a6b5fd4846/01.png",
+    "e2645d79ef555a24": "assets/photo-batch-3-refresh/card/bbq.webp",
+    "c1df1c34732d2757": "assets/notion-recovery-180/450856a6b5fd4846/01.png",
+    "e32f28eff787161a": "assets/notion-recovery-180/450856a6b5fd4846/01.png",
+    "9cba7b46fed409a9": "assets/notion-recovery-180/450856a6b5fd4846/01.png",
+    "39f3c8acab504b00": "assets/store-photos/af8b15c5b69a94/01.webp",
+    "9ee73ce6168105ec": "assets/store-photos/e982b7aa80a2e4/02.webp"
+  }
+}

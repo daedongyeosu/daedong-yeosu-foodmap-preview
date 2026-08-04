@@ -1,0 +1,904 @@
+{
+  "stores": [
+    {
+      "store_id": "53300b03ac188a38",
+      "storeName": "BHC 돌산점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "ecff9d7b88d1c8fb",
+      "storeName": "BHC 여수국동점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "043d814d4c3c1e13",
+      "storeName": "BHC 여수문수점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "b373a08350017273",
+      "storeName": "BHC 여수미평점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "5f9d2fdf4666eb73",
+      "storeName": "BHC 여수봉계둔덕점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "b285c40f90621c5c",
+      "storeName": "BHC 여수소호점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "08c9054aa0115345",
+      "storeName": "BHC 여수엑스포광장점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "fb3ad6747507444d",
+      "storeName": "BHC 여수여서점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "800e9f2ab3c24e8f",
+      "storeName": "BHC 여수웅천점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "c9df0658ace5336b",
+      "storeName": "BHC 여수죽림무선점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "4152cf5c2c0c2dab",
+      "storeName": "BHC 여수학동점",
+      "brandName": "BHC",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.foodtechkorea.bhc",
+      "packageName": "com.foodtechkorea.bhc",
+      "icon": "assets/brand-apps/com.foodtechkorea.bhc.png"
+    },
+    {
+      "store_id": "0df58cf68356ebff",
+      "storeName": "굽네치킨&피자 관문점",
+      "brandName": "굽네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.goobne.chicken",
+      "packageName": "kr.co.goobne.chicken",
+      "icon": "assets/brand-apps/kr.co.goobne.chicken.png"
+    },
+    {
+      "store_id": "32f005992963d474",
+      "storeName": "굽네치킨&피자 돌산점",
+      "brandName": "굽네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.goobne.chicken",
+      "packageName": "kr.co.goobne.chicken",
+      "icon": "assets/brand-apps/kr.co.goobne.chicken.png"
+    },
+    {
+      "store_id": "c194972cb20f2229",
+      "storeName": "굽네치킨&피자 무선점(화장동)",
+      "brandName": "굽네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.goobne.chicken",
+      "packageName": "kr.co.goobne.chicken",
+      "icon": "assets/brand-apps/kr.co.goobne.chicken.png"
+    },
+    {
+      "store_id": "d556f1478e479e75",
+      "storeName": "굽네치킨&피자 봉산국동점",
+      "brandName": "굽네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.goobne.chicken",
+      "packageName": "kr.co.goobne.chicken",
+      "icon": "assets/brand-apps/kr.co.goobne.chicken.png"
+    },
+    {
+      "store_id": "6fd217d22e3ad371",
+      "storeName": "굽네치킨&피자 여서점",
+      "brandName": "굽네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.goobne.chicken",
+      "packageName": "kr.co.goobne.chicken",
+      "icon": "assets/brand-apps/kr.co.goobne.chicken.png"
+    },
+    {
+      "store_id": "33558e3cc2ad9dbd",
+      "storeName": "굽네치킨&피자 여천점(신기동)",
+      "brandName": "굽네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.goobne.chicken",
+      "packageName": "kr.co.goobne.chicken",
+      "icon": "assets/brand-apps/kr.co.goobne.chicken.png"
+    },
+    {
+      "store_id": "33c73743521674c6",
+      "storeName": "굽네치킨&피자 웅천점",
+      "brandName": "굽네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.goobne.chicken",
+      "packageName": "kr.co.goobne.chicken",
+      "icon": "assets/brand-apps/kr.co.goobne.chicken.png"
+    },
+    {
+      "store_id": "72e0104c30277686",
+      "storeName": "굽네치킨&피자 죽림점",
+      "brandName": "굽네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.goobne.chicken",
+      "packageName": "kr.co.goobne.chicken",
+      "icon": "assets/brand-apps/kr.co.goobne.chicken.png"
+    },
+    {
+      "store_id": "1a9ef3c649eefc17",
+      "storeName": "기영이숯불두마리치킨 여천점(안산동)",
+      "brandName": "기영이숯불두마리치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.kiyoung2",
+      "packageName": "com.wmpoplus.kiyoung2",
+      "icon": "assets/brand-apps/com.wmpoplus.kiyoung2.png"
+    },
+    {
+      "store_id": "f0b4ebfd7df44a75",
+      "storeName": "꾸브라꼬 숯불치킨 여천 신기동점",
+      "brandName": "꾸브라꼬숯불치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.kkubeurakko",
+      "packageName": "com.wmpoplus.kkubeurakko",
+      "icon": "assets/brand-apps/com.wmpoplus.kkubeurakko.png"
+    },
+    {
+      "store_id": "119e21e06f1471b6",
+      "storeName": "네네치킨 국동점",
+      "brandName": "네네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.fuse_smart_nene",
+      "packageName": "com.fuse_smart_nene",
+      "icon": "assets/brand-apps/com.fuse_smart_nene.png"
+    },
+    {
+      "store_id": "2875fb8206bbf1a6",
+      "storeName": "네네치킨 무선지구점(선원동)",
+      "brandName": "네네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.fuse_smart_nene",
+      "packageName": "com.fuse_smart_nene",
+      "icon": "assets/brand-apps/com.fuse_smart_nene.png"
+    },
+    {
+      "store_id": "190c9c9cea69da3b",
+      "storeName": "네네치킨 신기점",
+      "brandName": "네네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.fuse_smart_nene",
+      "packageName": "com.fuse_smart_nene",
+      "icon": "assets/brand-apps/com.fuse_smart_nene.png"
+    },
+    {
+      "store_id": "54a0c1a2addb92d6",
+      "storeName": "네네치킨 안산,소호점",
+      "brandName": "네네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.fuse_smart_nene",
+      "packageName": "com.fuse_smart_nene",
+      "icon": "assets/brand-apps/com.fuse_smart_nene.png"
+    },
+    {
+      "store_id": "f63bbae9b9a80813",
+      "storeName": "네네치킨 엑스포점",
+      "brandName": "네네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.fuse_smart_nene",
+      "packageName": "com.fuse_smart_nene",
+      "icon": "assets/brand-apps/com.fuse_smart_nene.png"
+    },
+    {
+      "store_id": "4cacbf0f8d535667",
+      "storeName": "네네치킨 여서문수점",
+      "brandName": "네네치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.fuse_smart_nene",
+      "packageName": "com.fuse_smart_nene",
+      "icon": "assets/brand-apps/com.fuse_smart_nene.png"
+    },
+    {
+      "store_id": "b8267998349b16e1",
+      "storeName": "노랑통닭 여서문수점",
+      "brandName": "노랑통닭",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.norangtongdak.app",
+      "packageName": "com.norangtongdak.app",
+      "icon": "assets/brand-apps/com.norangtongdak.app.png"
+    },
+    {
+      "store_id": "40673a86169d791f",
+      "storeName": "노랑통닭 여수밤바다점(중앙동)",
+      "brandName": "노랑통닭",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.norangtongdak.app",
+      "packageName": "com.norangtongdak.app",
+      "icon": "assets/brand-apps/com.norangtongdak.app.png"
+    },
+    {
+      "store_id": "aea70baec8c61d25",
+      "storeName": "노랑통닭 웅천점",
+      "brandName": "노랑통닭",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.norangtongdak.app",
+      "packageName": "com.norangtongdak.app",
+      "icon": "assets/brand-apps/com.norangtongdak.app.png"
+    },
+    {
+      "store_id": "ce40f493bcd2ca2b",
+      "storeName": "노랑통닭 죽림점",
+      "brandName": "노랑통닭",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.norangtongdak.app",
+      "packageName": "com.norangtongdak.app",
+      "icon": "assets/brand-apps/com.norangtongdak.app.png"
+    },
+    {
+      "store_id": "f0804947cebd20cc",
+      "storeName": "노브랜드버거 여수여서점",
+      "brandName": "노브랜드버거",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.nbbmobileorder.shinsegaefood",
+      "packageName": "com.nbbmobileorder.shinsegaefood",
+      "icon": "assets/brand-apps/com.nbbmobileorder.shinsegaefood.png"
+    },
+    {
+      "store_id": "f0c36824f150a779",
+      "storeName": "더벤티 여수국동서희스타힐스점",
+      "brandName": "더벤티",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.theventi",
+      "packageName": "kr.co.theventi",
+      "icon": "assets/brand-apps/kr.co.theventi.jpg"
+    },
+    {
+      "store_id": "aa29edc20eb6da8b",
+      "storeName": "더벤티 여수돌산점",
+      "brandName": "더벤티",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.theventi",
+      "packageName": "kr.co.theventi",
+      "icon": "assets/brand-apps/kr.co.theventi.jpg"
+    },
+    {
+      "store_id": "8d6b7abaf3f7f596",
+      "storeName": "더벤티 여수수산시장점(교동)",
+      "brandName": "더벤티",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.theventi",
+      "packageName": "kr.co.theventi",
+      "icon": "assets/brand-apps/kr.co.theventi.jpg"
+    },
+    {
+      "store_id": "aae3c781ba45f8a3",
+      "storeName": "더벤티 여수이순신광장점(중앙동)",
+      "brandName": "더벤티",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.theventi",
+      "packageName": "kr.co.theventi",
+      "icon": "assets/brand-apps/kr.co.theventi.jpg"
+    },
+    {
+      "store_id": "4990a1c1dc208fce",
+      "storeName": "더벤티 여수해양공원점(중앙동)",
+      "brandName": "더벤티",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.theventi",
+      "packageName": "kr.co.theventi",
+      "icon": "assets/brand-apps/kr.co.theventi.jpg"
+    },
+    {
+      "store_id": "2f4c3cfb0866c4a4",
+      "storeName": "도미노피자 여천점(학동)",
+      "brandName": "도미노피자",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.d2.dominos",
+      "packageName": "kr.co.d2.dominos",
+      "icon": "assets/brand-apps/kr.co.d2.dominos.jpg"
+    },
+    {
+      "store_id": "68ba9ebef219905e",
+      "storeName": "두마리찜닭 두찜 여수문수점",
+      "brandName": "두찜",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.twozzim",
+      "packageName": "com.wmpoplus.twozzim",
+      "icon": "assets/brand-apps/com.wmpoplus.twozzim.jpg"
+    },
+    {
+      "store_id": "720324ed8ea3a46e",
+      "storeName": "두마리찜닭 두찜 여수엑스포점",
+      "brandName": "두찜",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.twozzim",
+      "packageName": "com.wmpoplus.twozzim",
+      "icon": "assets/brand-apps/com.wmpoplus.twozzim.jpg"
+    },
+    {
+      "store_id": "d9a3b065f1cd0cf8",
+      "storeName": "두마리찜닭 두찜 여수웅천점",
+      "brandName": "두찜",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.twozzim",
+      "packageName": "com.wmpoplus.twozzim",
+      "icon": "assets/brand-apps/com.wmpoplus.twozzim.jpg"
+    },
+    {
+      "store_id": "11161bd0b4783703",
+      "storeName": "맘스터치 무선점",
+      "brandName": "맘스터치",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.momstouch.moms",
+      "packageName": "kr.co.momstouch.moms",
+      "icon": "assets/brand-apps/kr.co.momstouch.moms.png"
+    },
+    {
+      "store_id": "a7d0d397991605ec",
+      "storeName": "맘스터치 여천 학동점",
+      "brandName": "맘스터치",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.momstouch.moms",
+      "packageName": "kr.co.momstouch.moms",
+      "icon": "assets/brand-apps/kr.co.momstouch.moms.png"
+    },
+    {
+      "store_id": "3b07bfa30f252db8",
+      "storeName": "맘스터치 웅천점",
+      "brandName": "맘스터치",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.momstouch.moms",
+      "packageName": "kr.co.momstouch.moms",
+      "icon": "assets/brand-apps/kr.co.momstouch.moms.png"
+    },
+    {
+      "store_id": "f7d93ad21c1a93d7",
+      "storeName": "맘스터치 엑스포점",
+      "brandName": "맘스터치",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.momstouch.moms",
+      "packageName": "kr.co.momstouch.moms",
+      "icon": "assets/brand-apps/kr.co.momstouch.moms.png"
+    },
+    {
+      "store_id": "1acf6756b7471125",
+      "storeName": "맘스터치 중앙점",
+      "brandName": "맘스터치",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.momstouch.moms",
+      "packageName": "kr.co.momstouch.moms",
+      "icon": "assets/brand-apps/kr.co.momstouch.moms.png"
+    },
+    {
+      "store_id": "88b98e5ecb968c2c",
+      "storeName": "맥도날드 여수미평DT점",
+      "brandName": "맥도날드",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.mcdonalds.mobileapp",
+      "packageName": "com.mcdonalds.mobileapp",
+      "icon": "assets/brand-apps/com.mcdonalds.mobileapp.jpg"
+    },
+    {
+      "store_id": "8dfdc5de41e3eca9",
+      "storeName": "맥도날드 여수학동DT점",
+      "brandName": "맥도날드",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.mcdonalds.mobileapp",
+      "packageName": "com.mcdonalds.mobileapp",
+      "icon": "assets/brand-apps/com.mcdonalds.mobileapp.jpg"
+    },
+    {
+      "store_id": "48113ac49e27c620",
+      "storeName": "메가MGC커피 문수점",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "9999f4db1009d483",
+      "storeName": "메가MGC커피 미평점",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "4289ad6217815b70",
+      "storeName": "메가MGC커피 여서사거리점",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "d14f1e6669383a88",
+      "storeName": "메가MGC커피 여수교동점",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "d5ab6e067ab79cb9",
+      "storeName": "메가MGC커피 여수신기점",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "9d7d7e2f99658a9c",
+      "storeName": "메가MGC커피 여수엑스포점",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "3a60142ebc07e295",
+      "storeName": "메가MGC커피 여수웅천점",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "08eecf0379470865",
+      "storeName": "메가MGC커피 여수진남시장점(학동)",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "62cd152fab8dc42e",
+      "storeName": "메가MGC커피 여수진남주유소점(봉계동)",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "9a4e8ea87951b54e",
+      "storeName": "메가MGC커피 여천점(학동)",
+      "brandName": "메가MGC커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.megacoffee",
+      "packageName": "co.kr.waldlust.megacoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.megacoffee.png"
+    },
+    {
+      "store_id": "f25d8111c5d1b135",
+      "storeName": "멕시카나치킨 국동점",
+      "brandName": "멕시카나치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.sponge.mexicanadelivery",
+      "packageName": "kr.sponge.mexicanadelivery",
+      "icon": "assets/brand-apps/kr.sponge.mexicanadelivery.jpg"
+    },
+    {
+      "store_id": "183a9d859fd9518d",
+      "storeName": "멕시카나치킨 무선죽림점",
+      "brandName": "멕시카나치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.sponge.mexicanadelivery",
+      "packageName": "kr.sponge.mexicanadelivery",
+      "icon": "assets/brand-apps/kr.sponge.mexicanadelivery.jpg"
+    },
+    {
+      "store_id": "e313a8628fc0916a",
+      "storeName": "멕시카나치킨 신기점",
+      "brandName": "멕시카나치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.sponge.mexicanadelivery",
+      "packageName": "kr.sponge.mexicanadelivery",
+      "icon": "assets/brand-apps/kr.sponge.mexicanadelivery.jpg"
+    },
+    {
+      "store_id": "aef73537733e9387",
+      "storeName": "멕시카나치킨 여서점",
+      "brandName": "멕시카나치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.sponge.mexicanadelivery",
+      "packageName": "kr.sponge.mexicanadelivery",
+      "icon": "assets/brand-apps/kr.sponge.mexicanadelivery.jpg"
+    },
+    {
+      "store_id": "6a7625bd1d16ac3b",
+      "storeName": "미스터피자 웅천점",
+      "brandName": "미스터피자",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.mrpizza.order",
+      "packageName": "com.mrpizza.order",
+      "icon": "assets/brand-apps/com.mrpizza.order.png"
+    },
+    {
+      "store_id": "7b80f8d10b67089e",
+      "storeName": "버거킹 웅천점",
+      "brandName": "버거킹",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.burgerkinghybrid",
+      "packageName": "kr.co.burgerkinghybrid",
+      "icon": "assets/brand-apps/kr.co.burgerkinghybrid.png"
+    },
+    {
+      "store_id": "ba870ddfedb99508",
+      "storeName": "본죽&비빔밥 여수미평점",
+      "brandName": "본죽",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.bonif.bonmembership",
+      "packageName": "co.kr.bonif.bonmembership",
+      "icon": "assets/brand-apps/co.kr.bonif.bonmembership.jpg"
+    },
+    {
+      "store_id": "ddc27f852308889a",
+      "storeName": "본죽 여수국동점",
+      "brandName": "본죽",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.bonif.bonmembership",
+      "packageName": "co.kr.bonif.bonmembership",
+      "icon": "assets/brand-apps/co.kr.bonif.bonmembership.jpg"
+    },
+    {
+      "store_id": "b58c688c90df4687",
+      "storeName": "본죽&비빔밥 여수중앙점",
+      "brandName": "본죽",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.bonif.bonmembership",
+      "packageName": "co.kr.bonif.bonmembership",
+      "icon": "assets/brand-apps/co.kr.bonif.bonmembership.jpg"
+    },
+    {
+      "store_id": "b978240417a18e51",
+      "storeName": "부어치킨 여수학동점",
+      "brandName": "부어치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.fuse_smart_boor",
+      "packageName": "com.fuse_smart_boor",
+      "icon": "assets/brand-apps/com.fuse_smart_boor.jpg"
+    },
+    {
+      "store_id": "16b4130f35ec93ae",
+      "storeName": "부어치킨&버거 여수소호점",
+      "brandName": "부어치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.fuse_smart_boor",
+      "packageName": "com.fuse_smart_boor",
+      "icon": "assets/brand-apps/com.fuse_smart_boor.jpg"
+    },
+    {
+      "store_id": "066197a9443c3145",
+      "storeName": "비비큐 여수돌산점",
+      "brandName": "비비큐",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.genesiskorea.bbqchicken",
+      "packageName": "kr.co.genesiskorea.bbqchicken",
+      "icon": "assets/brand-apps/kr.co.genesiskorea.bbqchicken.jpg"
+    },
+    {
+      "store_id": "4059491d8dbb4159",
+      "storeName": "비비큐 여수무선점",
+      "brandName": "비비큐",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.genesiskorea.bbqchicken",
+      "packageName": "kr.co.genesiskorea.bbqchicken",
+      "icon": "assets/brand-apps/kr.co.genesiskorea.bbqchicken.jpg"
+    },
+    {
+      "store_id": "572e4a658f762cbe",
+      "storeName": "비비큐 여수신기행운점",
+      "brandName": "비비큐",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.genesiskorea.bbqchicken",
+      "packageName": "kr.co.genesiskorea.bbqchicken",
+      "icon": "assets/brand-apps/kr.co.genesiskorea.bbqchicken.jpg"
+    },
+    {
+      "store_id": "e2645d79ef555a24",
+      "storeName": "비비큐 여수엑스포점",
+      "brandName": "비비큐",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.genesiskorea.bbqchicken",
+      "packageName": "kr.co.genesiskorea.bbqchicken",
+      "icon": "assets/brand-apps/kr.co.genesiskorea.bbqchicken.jpg"
+    },
+    {
+      "store_id": "b73ca9b4a41f7502",
+      "storeName": "비비큐 여수웅천점",
+      "brandName": "비비큐",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.genesiskorea.bbqchicken",
+      "packageName": "kr.co.genesiskorea.bbqchicken",
+      "icon": "assets/brand-apps/kr.co.genesiskorea.bbqchicken.jpg"
+    },
+    {
+      "store_id": "c1df1c34732d2757",
+      "storeName": "비비큐 여수죽림점",
+      "brandName": "비비큐",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.genesiskorea.bbqchicken",
+      "packageName": "kr.co.genesiskorea.bbqchicken",
+      "icon": "assets/brand-apps/kr.co.genesiskorea.bbqchicken.jpg"
+    },
+    {
+      "store_id": "e32f28eff787161a",
+      "storeName": "비비큐 여수충무점",
+      "brandName": "비비큐",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.genesiskorea.bbqchicken",
+      "packageName": "kr.co.genesiskorea.bbqchicken",
+      "icon": "assets/brand-apps/kr.co.genesiskorea.bbqchicken.jpg"
+    },
+    {
+      "store_id": "9cba7b46fed409a9",
+      "storeName": "비비큐 여수학동점",
+      "brandName": "비비큐",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.genesiskorea.bbqchicken",
+      "packageName": "kr.co.genesiskorea.bbqchicken",
+      "icon": "assets/brand-apps/kr.co.genesiskorea.bbqchicken.jpg"
+    },
+    {
+      "store_id": "0104c356b7c6428c",
+      "storeName": "순살만공격 여수여서점",
+      "brandName": "순살만공격",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.sunsalmanattack",
+      "packageName": "com.wmpoplus.sunsalmanattack",
+      "icon": "assets/brand-apps/com.wmpoplus.sunsalmanattack.png"
+    },
+    {
+      "store_id": "3733c57e37212005",
+      "storeName": "아주커치킨 관문점",
+      "brandName": "아주커치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.ajuker",
+      "packageName": "com.wmpoplus.ajuker",
+      "icon": "assets/brand-apps/com.wmpoplus.ajuker.jpg"
+    },
+    {
+      "store_id": "b25a59f2207a9e10",
+      "storeName": "아주커치킨 무선점",
+      "brandName": "아주커치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.ajuker",
+      "packageName": "com.wmpoplus.ajuker",
+      "icon": "assets/brand-apps/com.wmpoplus.ajuker.jpg"
+    },
+    {
+      "store_id": "cef7263a330f4e0f",
+      "storeName": "아주커치킨 여수국동점",
+      "brandName": "아주커치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.ajuker",
+      "packageName": "com.wmpoplus.ajuker",
+      "icon": "assets/brand-apps/com.wmpoplus.ajuker.jpg"
+    },
+    {
+      "store_id": "7d9f7e5be4bb49db",
+      "storeName": "아주커치킨 여수돌산대교점",
+      "brandName": "아주커치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.ajuker",
+      "packageName": "com.wmpoplus.ajuker",
+      "icon": "assets/brand-apps/com.wmpoplus.ajuker.jpg"
+    },
+    {
+      "store_id": "9a94c05bdeca2d9e",
+      "storeName": "아주커치킨 학동점",
+      "brandName": "아주커치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.ajuker",
+      "packageName": "com.wmpoplus.ajuker",
+      "icon": "assets/brand-apps/com.wmpoplus.ajuker.jpg"
+    },
+    {
+      "store_id": "7a91bd1d1f218c97",
+      "storeName": "이디야 여수대교동점",
+      "brandName": "이디야커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.ediya.coupon",
+      "packageName": "com.ediya.coupon",
+      "icon": "assets/brand-apps/com.ediya.coupon.jpg"
+    },
+    {
+      "store_id": "0fcde82a0f46ee28",
+      "storeName": "이디야커피 여수돌산우두리점",
+      "brandName": "이디야커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.ediya.coupon",
+      "packageName": "com.ediya.coupon",
+      "icon": "assets/brand-apps/com.ediya.coupon.jpg"
+    },
+    {
+      "store_id": "43b4908cf2161b80",
+      "storeName": "이디야커피 여수연등메트하임점",
+      "brandName": "이디야커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.ediya.coupon",
+      "packageName": "com.ediya.coupon",
+      "icon": "assets/brand-apps/com.ediya.coupon.jpg"
+    },
+    {
+      "store_id": "c68d21da9b32f1eb",
+      "storeName": "자담치킨 여수엑스포점",
+      "brandName": "자담치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.fooddash.jadam2",
+      "packageName": "kr.co.fooddash.jadam2",
+      "icon": "assets/brand-apps/kr.co.fooddash.jadam2.png"
+    },
+    {
+      "store_id": "4ae622b733f163c7",
+      "storeName": "자담치킨 여수여서점",
+      "brandName": "자담치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.fooddash.jadam2",
+      "packageName": "kr.co.fooddash.jadam2",
+      "icon": "assets/brand-apps/kr.co.fooddash.jadam2.png"
+    },
+    {
+      "store_id": "58228e47bba2b29c",
+      "storeName": "자담치킨 여수웅천점",
+      "brandName": "자담치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.fooddash.jadam2",
+      "packageName": "kr.co.fooddash.jadam2",
+      "icon": "assets/brand-apps/kr.co.fooddash.jadam2.png"
+    },
+    {
+      "store_id": "c6b947813051ac38",
+      "storeName": "자담치킨 여수죽림점",
+      "brandName": "자담치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.fooddash.jadam2",
+      "packageName": "kr.co.fooddash.jadam2",
+      "icon": "assets/brand-apps/kr.co.fooddash.jadam2.png"
+    },
+    {
+      "store_id": "1894da97ed277235",
+      "storeName": "자담치킨 여수학동점",
+      "brandName": "자담치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=kr.co.fooddash.jadam2",
+      "packageName": "kr.co.fooddash.jadam2",
+      "icon": "assets/brand-apps/kr.co.fooddash.jadam2.png"
+    },
+    {
+      "store_id": "8c8ee85a0bc3b219",
+      "storeName": "처갓집양념치킨 무선점",
+      "brandName": "처갓집양념치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.cheogajip",
+      "packageName": "com.wmpoplus.cheogajip",
+      "icon": "assets/brand-apps/com.wmpoplus.cheogajip.png"
+    },
+    {
+      "store_id": "b6c5400a34504bc0",
+      "storeName": "처갓집양념치킨 문수점",
+      "brandName": "처갓집양념치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.cheogajip",
+      "packageName": "com.wmpoplus.cheogajip",
+      "icon": "assets/brand-apps/com.wmpoplus.cheogajip.png"
+    },
+    {
+      "store_id": "96f341e2aced2187",
+      "storeName": "처갓집양념치킨 신기점",
+      "brandName": "처갓집양념치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.cheogajip",
+      "packageName": "com.wmpoplus.cheogajip",
+      "icon": "assets/brand-apps/com.wmpoplus.cheogajip.png"
+    },
+    {
+      "store_id": "ad437cdcefd55447",
+      "storeName": "처갓집양념치킨 웅천점",
+      "brandName": "처갓집양념치킨",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.cheogajip",
+      "packageName": "com.wmpoplus.cheogajip",
+      "icon": "assets/brand-apps/com.wmpoplus.cheogajip.png"
+    },
+    {
+      "store_id": "9ab837d6e24d69df",
+      "storeName": "카페요아정 여수엑스포점",
+      "brandName": "카페요아정",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.wmpoplus.yoajung",
+      "packageName": "com.wmpoplus.yoajung",
+      "icon": "assets/brand-apps/com.wmpoplus.yoajung.png"
+    },
+    {
+      "store_id": "3d91b86995f619d6",
+      "storeName": "프랭크버거 여수여서점",
+      "brandName": "프랭크버거",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.frankfnb.frankburger",
+      "packageName": "com.frankfnb.frankburger",
+      "icon": "assets/brand-apps/com.frankfnb.frankburger.png"
+    },
+    {
+      "store_id": "afb901f3a32de6e8",
+      "storeName": "피자헛 여수문수점",
+      "brandName": "피자헛",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.pizzahut.android",
+      "packageName": "com.pizzahut.android",
+      "icon": "assets/brand-apps/com.pizzahut.android.png"
+    },
+    {
+      "store_id": "05634c81541f6bda",
+      "storeName": "피자헛 여수시청점",
+      "brandName": "피자헛",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=com.pizzahut.android",
+      "packageName": "com.pizzahut.android",
+      "icon": "assets/brand-apps/com.pizzahut.android.png"
+    },
+    {
+      "store_id": "7b221aa6623bd0a2",
+      "storeName": "하이오커피 여수신월국동항점",
+      "brandName": "하이오커피",
+      "buttonLabel": "브랜드앱 설치·열기",
+      "appLink": "https://play.google.com/store/apps/details?id=co.kr.waldlust.hiocoffee",
+      "packageName": "co.kr.waldlust.hiocoffee",
+      "icon": "assets/brand-apps/co.kr.waldlust.hiocoffee.jpg"
+    }
+  ]
+}

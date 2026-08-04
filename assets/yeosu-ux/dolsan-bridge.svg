@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 467" role="img" aria-labelledby="title desc">
+  <title id="title">돌산공원 시점의 여수 돌산대교 단순화 벡터</title>
+  <desc id="desc">돌산공원에서 내려다본 원근에 맞춰 가까운 A형 주탑은 크게, 먼 주탑은 작게 표현하고 사선 상판과 직선 사장 케이블, 산 능선과 바다를 배치한 돌산대교</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#031126"/><stop offset=".62" stop-color="#102b4c"/><stop offset="1" stop-color="#3c5e76"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0d4967"/><stop offset="1" stop-color="#031723"/></linearGradient>
+    <linearGradient id="farLight" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffca68"/><stop offset="1" stop-color="#ef5b92"/></linearGradient>
+    <linearGradient id="nearLight" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#60e0cf"/><stop offset="1" stop-color="#547ef5"/></linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="960" height="467" fill="url(#sky)"/>
+  <g fill="#d9ebf4" opacity=".65"><circle cx="93" cy="57" r="1.5"/><circle cx="173" cy="92" r="1.2"/><circle cx="412" cy="48" r="1.4"/><circle cx="732" cy="66" r="1.5"/><circle cx="876" cy="106" r="1.3"/></g>
+
+  <!-- 돌산공원에서 바라본 여수항 산 능선과 도심 -->
+  <path d="M0 228C78 192 149 210 213 231C288 256 348 208 419 220C493 234 540 203 611 216C686 230 769 187 845 210C886 222 925 211 960 201V327H0Z" fill="#081a29"/>
+  <path d="M0 274C88 252 147 286 225 266C314 243 381 284 462 263C565 236 658 283 758 251C832 228 893 256 960 241V330H0Z" fill="#0a2535"/>
+  <g fill="#ffd272" opacity=".82" filter="url(#glow)">
+    <rect x="38" y="258" width="4" height="4"/><rect x="66" y="248" width="4" height="4"/><rect x="96" y="263" width="5" height="4"/><rect x="127" y="246" width="4" height="4"/>
+    <rect x="158" y="258" width="4" height="4"/><rect x="196" y="250" width="5" height="4"/><rect x="760" y="238" width="4" height="4"/><rect x="799" y="226" width="5" height="4"/>
+    <rect x="836" y="243" width="4" height="4"/><rect x="881" y="224" width="5" height="4"/><rect x="918" y="234" width="4" height="4"/>
+  </g>
+  <rect y="316" width="960" height="151" fill="url(#sea)"/>
+
+  <!-- 원근이 있는 낮고 긴 상판: 오른쪽 돌산 쪽이 가깝고 크게 보임 -->
+  <path d="M22 295L936 267L944 284L31 315Z" fill="#192633" stroke="#8795a1" stroke-width="3"/>
+  <path d="M28 292L936 265" fill="none" stroke="#ffd37c" stroke-width="4" filter="url(#glow)"/>
+  <g fill="#fff0b5">
+    <circle cx="57" cy="291" r="2"/><circle cx="102" cy="289" r="2"/><circle cx="147" cy="288" r="2"/><circle cx="192" cy="286" r="2"/>
+    <circle cx="237" cy="285" r="2"/><circle cx="282" cy="284" r="2"/><circle cx="327" cy="282" r="2"/><circle cx="372" cy="281" r="2"/>
+    <circle cx="417" cy="279" r="2"/><circle cx="462" cy="278" r="2"/><circle cx="507" cy="277" r="2"/><circle cx="552" cy="275" r="2"/>
+    <circle cx="597" cy="274" r="2"/><circle cx="642" cy="273" r="2"/><circle cx="687" cy="271" r="2"/><circle cx="732" cy="270" r="2"/>
+    <circle cx="777" cy="269" r="2"/><circle cx="822" cy="267" r="2"/><circle cx="867" cy="266" r="2"/><circle cx="912" cy="265" r="2"/>
+  </g>
+
+  <!-- 먼 주탑: 더 작고 높게 보이는 원근 -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M320 284L346 151L372 281" fill="none" stroke="#ffad65" stroke-width="11"/>
+    <path d="M333 217H359M338 181H354" stroke="#ff718b" stroke-width="7"/>
+    <path d="M346 151V282" stroke="#ffe4bd" stroke-width="2.4" opacity=".7"/>
+    <g stroke="url(#farLight)" stroke-width="2.5" opacity=".95">
+      <path d="M346 162L158 287"/><path d="M346 175L202 286"/><path d="M346 188L246 285"/><path d="M346 201L286 284"/>
+      <path d="M346 162L518 276"/><path d="M346 175L479 277"/><path d="M346 188L437 279"/><path d="M346 201L399 280"/>
+    </g>
+  </g>
+
+  <!-- 가까운 주탑: 돌산공원 쪽에서 더 크고 넓게 보임 -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M615 274L650 78L687 271" fill="none" stroke="#55dccb" stroke-width="15" filter="url(#glow)"/>
+    <path d="M631 190H670M639 137H661" stroke="#589cf0" stroke-width="9"/>
+    <path d="M650 78V272" stroke="#d8ffff" stroke-width="3" opacity=".72"/>
+    <g stroke="url(#nearLight)" stroke-width="3" opacity=".96">
+      <path d="M650 94L442 279"/><path d="M650 110L489 277"/><path d="M650 128L535 276"/><path d="M650 148L578 275"/>
+      <path d="M650 94L924 266"/><path d="M650 110L862 267"/><path d="M650 128L804 269"/><path d="M650 148L748 270"/>
+    </g>
+  </g>
+
+  <!-- 바다의 원근 반사 -->
+  <g opacity=".46" filter="url(#glow)">
+    <path d="M334 330L346 438L360 329" fill="url(#farLight)"/>
+    <path d="M632 322L650 465L669 320" fill="url(#nearLight)"/>
+    <path d="M54 354C164 368 249 344 346 371C434 395 515 359 590 379" fill="none" stroke="#ef5c8c" stroke-width="4"/>
+    <path d="M428 385C516 358 590 395 650 373C731 345 814 369 911 345" fill="none" stroke="#52d9c9" stroke-width="4"/>
+  </g>
+  <g fill="none" stroke="#78c7d8" stroke-linecap="round" opacity=".34">
+    <path d="M18 386H162"/><path d="M91 431H251"/><path d="M292 409H454"/><path d="M515 443H681"/><path d="M744 400H934"/>
+  </g>
+</svg>

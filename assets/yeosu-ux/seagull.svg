@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" role="img" aria-label="찜과 공유 반응용 작은 갈매기">
+  <path d="M11 9C8 5 4 3 1 5C4 5 6 7 8 10Z" fill="#fff" stroke="#415c6b" stroke-width="1" stroke-linejoin="round"/>
+  <path d="M11 9C14 5 18 3 21 5C18 5 16 7 14 10Z" fill="#fff" stroke="#415c6b" stroke-width="1" stroke-linejoin="round"/>
+  <path d="M8 10C9 13 13 13 14 10L11 8Z" fill="#edf5f6" stroke="#415c6b" stroke-width="1"/>
+  <circle cx="12.6" cy="9.6" r=".55" fill="#17232a"/>
+  <path d="M14.1 10L16.4 10.7L14.2 11.3Z" fill="#ff9b3d"/>
+</svg>
