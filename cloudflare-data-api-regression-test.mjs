@@ -50,10 +50,11 @@ assert.throws(() => api.detail('../private'), /식별자/);
 
 const index = fs.readFileSync('index.html', 'utf8');
 const app = fs.readFileSync('app.js', 'utf8');
+const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
 const services = fs.readFileSync('store-service-info.js', 'utf8');
 const menus = fs.readFileSync('store-menu-preview.js', 'utf8');
 assert(index.indexOf('data-api.js') < index.indexOf('app.js'), 'API client must load before the application');
-assert(index.indexOf('data-api-runtime.js') > index.indexOf('store-menu-preview.js'), 'detail wrapper must load after experience layers');
+assert(index.indexOf('data-api-runtime.js') < index.indexOf('app.js'), 'secure detail loader must be ready before the application');
 assert(!index.includes('ddangyo-menu-map.js'));
 assert(!index.includes('ddangyo-preview-runtime.js'));
 assert(!app.includes('data/stores.json'));
@@ -62,23 +63,36 @@ assert(!services.includes('store-menu-search-index'));
 assert(!menus.includes('store-menu-content/'));
 assert(menus.includes('window.daedongDataApi.menu(storeId)'));
 assert(app.includes('window.daedongDataApi?.catalog?.()'));
+assert(app.includes('await secureDetail.enrich(store, normalizedStore)'));
+assert(finalExperience.includes('const opened=await fxOriginalOpenStore(store)'));
 assert(services.includes('window.daedongDataApi.services()'));
 
-const openedStores = [];
+const expectedRoutes = [
+  ['direct', '가게바로주문'],
+  ['mukkebi', '먹깨비'],
+  ['chak', 'CHAK 지역상품권'],
+  ['phone', '전화주문'],
+  ['yogiyo', '요기요'],
+  ['coupang', '쿠팡이츠'],
+  ['baemin', '배달의민족']
+].map(([key, name]) => ({key, name, url: `https://example.test/${key}`, enabled: true}));
 const runtimeContext = {
   window: {
     daedongDataApi: {
-      detail: async storeId => ({
+      detail: async storeId => storeId === 'b'.repeat(16) ? ({
+        id: storeId,
+        routes: expectedRoutes.slice(0, 1)
+      }) : ({
         id: storeId,
         address: '여수시 검증로 1',
-        routes: [{key: 'direct', name: '전화주문', url: 'tel:0610000000'}]
+        routes: expectedRoutes
       })
     }
   },
-  openStore: store => openedStores.push(store),
-  normalizedStore: raw => ({...raw, detailNormalized: true}),
   console,
+  Array,
   Map,
+  Set,
   Object,
   String,
   Boolean,
@@ -88,12 +102,33 @@ const runtimeContext = {
 };
 vm.createContext(runtimeContext);
 vm.runInContext(fs.readFileSync('data-api-runtime.js', 'utf8'), runtimeContext);
-const lazyStore = {id: 'a'.repeat(16), name: '검증가게', hasMenu: true, channelKeys: ['direct']};
-await runtimeContext.openStore(lazyStore);
-assert.equal(openedStores.length, 1, 'detail view must open after lazy API enrichment');
-assert.equal(openedStores[0].address, '여수시 검증로 1');
-assert.equal(openedStores[0].detailNormalized, true);
-assert.equal(openedStores[0].hasMenu, true, 'catalog menu availability must survive detail normalization');
-assert.equal(openedStores[0].__secureDetailReady, true);
+const normalizeDetail = raw => ({
+  ...raw,
+  detailNormalized: true,
+  routes: raw.routes.map(route => ({...route}))
+});
+const lazyStore = {
+  id: 'a'.repeat(16),
+  name: '검증가게',
+  hasMenu: true,
+  channelKeys: expectedRoutes.map(route => route.key)
+};
+await runtimeContext.window.daedongSecureStoreDetail.enrich(lazyStore, normalizeDetail);
+assert.equal(lazyStore.address, '여수시 검증로 1');
+assert.equal(lazyStore.detailNormalized, true);
+assert.equal(lazyStore.hasMenu, true, 'catalog menu availability must survive detail normalization');
+assert.equal(lazyStore.__secureDetailReady, true);
+assert.deepEqual(plain(lazyStore.routes.map(route => route.key)), plain(expectedRoutes.map(route => route.key)));
+
+const incompleteStore = {
+  id: 'b'.repeat(16),
+  name: '누락검증가게',
+  channelKeys: expectedRoutes.map(route => route.key)
+};
+await assert.rejects(
+  runtimeContext.window.daedongSecureStoreDetail.enrich(incompleteStore, normalizeDetail),
+  /주문경로가 일부 누락/
+);
+assert.notEqual(incompleteStore.__secureDetailReady, true, 'incomplete detail must never be marked ready');
 
 console.log('PASS Cloudflare preview API client contract');

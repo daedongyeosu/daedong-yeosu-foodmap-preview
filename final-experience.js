@@ -124,7 +124,7 @@ brandsModal=function(){fxOpenBrandHub('channels');};
 
 function fxAppAction(item,type){const platform=fxPlatform(),isHappy=type==='happy';const label=isHappy?item.buttonLabel:'브랜드앱 설치·열기';if(platform==='ios')return `<div class="platform-note"><img src="${escapeHtml(item.icon)}" alt=""><span><b>${escapeHtml(label)}</b><small>현재 Android 앱만 확인됨</small></span><span>iPhone 안내</span></div>`;return `<a href="${escapeHtml(item.appLink)}" target="_blank" rel="noopener" data-final-app-channel="${type}"><img src="${escapeHtml(item.icon)}" alt=""><span><b>${escapeHtml(label)}</b><small>Android · 특정 지점 딥링크 아님</small></span><b>›</b></a>`;}
 function fxEnhanceStoreDetail(store){const detail=$('#modalContent .store-detail');if(!detail)return;const brand=fxBrandByStore.get(String(store.id)),happy=fxHappyByStore.get(String(store.id));if(brand||happy){const target=detail.querySelector('.store-other-wrap')||detail.querySelector('.detail-personal-actions');const html=`<div class="brand-store-actions">${brand?fxAppAction(brand,'brand'):''}${happy?fxAppAction(happy,'happy'):''}</div>`;target?.insertAdjacentHTML('beforebegin',html);}const quick=detail.querySelectorAll('.detail-quick-link .quick-icon');quick.forEach(icon=>{const text=icon.parentElement.textContent;icon.innerHTML=text.includes('네이버')?fxSvg('map'):fxSvg('card');});const actions=detail.querySelector('.detail-personal-actions');if(actions){actions.classList.add('final-personal-actions');actions.insertAdjacentHTML('beforeend',`<button type="button" class="detail-personal-btn glass-action" data-share-store="${escapeHtml(store.id)}">공유하기</button>`);}}
-openStore=function(store){if(!fxVisible(store))return;fxOriginalOpenStore(store);fxEnhanceStoreDetail(store);};
+openStore=async function(store){if(!fxVisible(store))return false;const opened=await fxOriginalOpenStore(store);if(opened===false)return false;fxEnhanceStoreDetail(store);return opened;};
 
 function fxDiversifySearchPhotos(items){const remaining=[...items],result=[];if(remaining.length)result.push(remaining.shift());while(remaining.length){const previous=fxPhoto(result.at(-1).store),counts=new Map();remaining.forEach(item=>counts.set(fxPhoto(item.store),(counts.get(fxPhoto(item.store))||0)+1));let index=-1,best=-1;remaining.forEach((item,i)=>{const photo=fxPhoto(item.store),count=counts.get(photo)||0;if(photo!==previous&&count>best){index=i;best=count;}});if(index<0)index=0;result.push(remaining.splice(index,1)[0]);}return result;}
 function fxRankSearchMatches(matches){
@@ -310,7 +310,8 @@ async function fxOpenSharedStoreFromUrl(){
   const store=fxStoreById(storeId);
   if(store&&fxVisible(store)){
    history.replaceState(history.state,'',fxSharedStoreHomeUrl());
-   openStore(store);
+   const opened=await openStore(store);
+   if(opened===false)return false;
    if(history.state?.daedongModal)history.replaceState(history.state,'',sharedStoreUrl);
    return true;
   }

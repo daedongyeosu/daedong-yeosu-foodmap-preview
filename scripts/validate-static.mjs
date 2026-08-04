@@ -48,7 +48,8 @@ check(!index.includes('콩산소 전용 대동여수음식지도'), '콩산소 �
 check(!index.includes('손수김밥 전용 대동여수음식지도'), '손수김밥 전용 표기 제거 유지');
 check(index.includes('anonymous-analytics-1'), '운영 분석 코드 캐시 버전');
 check(index.indexOf('data-api.js') < index.indexOf('app.js'), '보안 API를 앱보다 먼저 연결');
-check(index.indexOf('data-api-runtime.js') > index.indexOf('store-menu-preview.js'), '가게 상세 API를 최종 화면에 연결');
+check(index.indexOf('data-api-runtime.js') < index.indexOf('app.js'), '가게 상세 API를 앱 코어보다 먼저 연결');
+check(app.includes('await secureDetail.enrich(store, normalizedStore)'), '가게 상세를 완전히 받은 뒤 최종 화면 표시');
 check(!app.includes('data/stores.json'), '공개 가게 원본 런타임 참조 제거');
 check(app.includes('window.daedongDataApi?.catalog?.()'), '가게 목록 보안 API 사용');
 check(!index.includes('ddangyo-menu-map.js'), '공개 메뉴 경로표 런타임 제거');
