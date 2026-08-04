@@ -92,12 +92,18 @@ const RC3_CARD_PRIMARY_CHANNELS = Object.freeze([
   ['phone', 'phoneOrder']
 ]);
 
+function rc3CardChannelFallback(store, key) {
+  if (key === 'phone' && RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(store?.id || ''))) return null;
+  if (!storeHasChannel(store, key)) return null;
+  return {key, name: APP_META[key]?.label || key};
+}
+
 function rc3PrimaryCardChannels(store) {
   const channels = resolveStoreChannels(store);
   const primary = {...channels.primaryOrder};
   if (!primary.brandApp) primary.brandApp = routeFor(store, 'brand') || null;
   return RC3_CARD_PRIMARY_CHANNELS
-    .map(([key, field]) => ({key, channel: primary[field]}))
+    .map(([key, field]) => ({key, channel: primary[field] || rc3CardChannelFallback(store, key)}))
     .filter(item => Boolean(item.channel));
 }
 
