@@ -866,3 +866,22 @@ body.store-service-overview-open {
     font-size: 10px;
   }
 }
+
+.store-service-gift-app-link {
+  min-height: 52px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 1px solid #c9dcf2;
+  border-radius: 14px;
+  background: #eef6ff;
+  color: #244f7d;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.store-service-gift-app-link b {
+  font-weight: 900;
+}

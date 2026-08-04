@@ -295,8 +295,9 @@ function rc3EnhanceStoreDetail(store) {
   detail.querySelectorAll('.brand-store-actions').forEach(node => node.remove());
   detail.querySelector('.store-other-wrap')?.remove();
   const gallery = detail.querySelector('.detail-meta');
-  const utilities = [channels.utilities.naverMap, channels.utilities.localGiftApp].filter(Boolean).map(item => `<a class="detail-quick-link" data-detail-only="${escapeHtml(item.key)}" href="${escapeHtml(item.url)}" target="_blank" rel="noopener"><span class="quick-icon">${item.key === 'naver' ? '🗺️' : '💳'}</span><span>${escapeHtml(item.name === 'CHAK 지역상품권' ? '지역상품권앱' : item.name)}</span></a>`).join('');
-  const primary = [channels.primaryOrder.directOrder, channels.primaryOrder.mukkebi, channels.primaryOrder.ddangyo, channels.primaryOrder.ondongne].filter(Boolean).map(route => routeLink(route, 'local-order-route')).join('');
+  const utilities = [channels.utilities.naverMap].filter(Boolean).map(item => `<a class="detail-quick-link" data-detail-only="${escapeHtml(item.key)}" href="${escapeHtml(item.url)}" target="_blank" rel="noopener"><span class="quick-icon">🗺️</span><span>${escapeHtml(item.name)}</span></a>`).join('');
+  const direct = [channels.primaryOrder.directOrder].filter(Boolean).map(route => routeLink(route, 'local-order-route')).join('');
+  const community = [channels.primaryOrder.mukkebi, channels.primaryOrder.ddangyo, channels.primaryOrder.ondongne].filter(Boolean).map(route => routeLink(route, 'local-order-route')).join('');
   const phoneOrder = channels.primaryOrder.phoneOrder;
   const phone = phoneOrder?.url
     ? routeLink(phoneOrder, 'local-order-route')
@@ -306,7 +307,10 @@ function rc3EnhanceStoreDetail(store) {
   const apps = channels.primaryOrder.brandApp || channels.happyOrder ? `<div class="brand-store-actions">${channels.primaryOrder.brandApp ? fxAppAction(channels.primaryOrder.brandApp, 'brand') : ''}${channels.happyOrder ? fxAppAction(channels.happyOrder, 'happy') : ''}</div>` : '';
   const hasExternal = Object.values(channels.externalOrder).some(Boolean);
   const other = hasExternal ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"><span>다른 주문방법 보기</span><b>›</b></button></div>` : '';
-  gallery?.insertAdjacentHTML('afterend', `${utilities ? `<div class="detail-quick-links">${utilities}</div>` : ''}<div class="detail-routes local-detail-routes">${primary}${apps}${phone || (!primary && !apps ? '<p class="muted">등록된 주문방법을 확인 중입니다.</p>' : '')}</div>${other}`);
+  if (utilities) gallery?.insertAdjacentHTML('afterend', `<div class="detail-quick-links">${utilities}</div>`);
+  const menuEntry = detail.querySelector('[data-store-menu-preview]');
+  const orderAnchor = menuEntry || detail.querySelector('.detail-meta-row') || gallery;
+  orderAnchor?.insertAdjacentHTML('afterend', `<div class="detail-routes local-detail-routes">${direct}${apps}${community}${phone || (!direct && !apps && !community ? '<p class="muted">등록된 주문방법을 확인 중입니다.</p>' : '')}</div>${other}`);
 }
 
 const rc3OpenStoreBase = openStore;

@@ -463,8 +463,10 @@
     `;
   }
 
-  function detailPanelMarkup(info, status) {
+  function detailPanelMarkup(info, status, giftRoute) {
     const displayLines = Array.isArray(info?.hours?.displayLines) ? info.hours.displayLines : [];
+    const availableBenefits = detailBenefitItems(info).filter(item => item.state === 'available');
+    const giftAvailable = availableBenefits.some(item => item.key === 'yeosu-seomseom-pay');
     return `
       <header>
         <div>
@@ -484,12 +486,15 @@
           ? displayLines.map(line => `<span>${escapeHtml(formatCustomerHours24(line))}</span>`).join('')
           : '<span class="is-unknown">확인된 영업시간이 없습니다.</span>'}
       </div>
-      <div class="store-service-detail-benefits" aria-label="주문앱별 상품권 및 무료배달 확인 상태">
-        ${detailBenefitItems(info).map(detailBenefitMarkup).join('')}
-      </div>
-      <footer>
-        <span>상품권·쿠폰·무료배달은 혜택 옆에 적힌 주문앱에서 이용할 수 있습니다. 미확인은 아직 사용 가능 여부가 확인되지 않은 정보입니다.</span>
-      </footer>
+      ${availableBenefits.length ? `
+        <div class="store-service-detail-benefits" aria-label="현재 이용 가능한 주문앱별 혜택">
+          ${availableBenefits.map(detailBenefitMarkup).join('')}
+        </div>
+        <footer>
+          <span>표시된 상품권·쿠폰·무료배달은 혜택 옆에 적힌 주문앱에서 이용할 수 있습니다.</span>
+        </footer>
+      ` : ''}
+      ${giftAvailable && giftRoute?.url ? `<a class="store-service-gift-app-link" href="${escapeHtml(giftRoute.url)}" target="_blank" rel="noopener"><span aria-hidden="true">💳</span><b>지역상품권앱 열기</b><strong>›</strong></a>` : ''}
     `;
   }
 
@@ -515,9 +520,12 @@
       const storeId = String(detail.dataset.storeId || '');
       const info = serviceData.stores?.[storeId];
       const status = storeStatus(info);
+      const store = storeById(storeId);
+      const giftRoute = typeof routeFor === 'function' ? routeFor(store, 'chak') : null;
       const signature = JSON.stringify({
         status,
         info: info || null,
+        giftUrl: giftRoute?.url || '',
         programs: serviceData.programs || [],
         deliveryBenefits: serviceData.deliveryBenefits || []
       });
@@ -529,11 +537,9 @@
       }
       if (panel.dataset.storeServiceSignature !== signature) {
         panel.dataset.storeServiceSignature = signature;
-        panel.innerHTML = detailPanelMarkup(info, status);
+        panel.innerHTML = detailPanelMarkup(info, status, giftRoute);
       }
-      const target = detail.querySelector('[data-store-menu-preview]')
-        || detail.querySelector('.detail-routes')
-        || detail.querySelector('.detail-personal-actions');
+      const target = detail.querySelector('.detail-personal-actions');
       if (target && panel.nextElementSibling !== target) target.before(panel);
       else if (!target && !panel.isConnected) detail.append(panel);
     });
