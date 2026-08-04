@@ -28,6 +28,7 @@ jobs:
           node --check store-menu-preview.js
       - name: Verify API client and existing static contracts
         run: |
+          node scripts/audit-public-repository.mjs
           node cloudflare-data-api-regression-test.mjs
           node scripts/validate-static.mjs
           node scripts/validate-data.mjs
