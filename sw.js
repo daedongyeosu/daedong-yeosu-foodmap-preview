@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v2';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v3-kakao-order';
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
