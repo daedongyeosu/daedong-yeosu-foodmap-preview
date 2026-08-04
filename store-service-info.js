@@ -605,8 +605,12 @@
         topStatus = document.createElement('span');
         topStatus.dataset.storeServiceTopStatus = '';
       }
-      topStatus.className = `store-service-status store-service-top-status is-${status.state}`;
-      topStatus.innerHTML = `<i aria-hidden="true"></i>${escapeHtml(status.label)}`;
+      const topStatusSignature = `${status.state}:${status.label}`;
+      if (topStatus.dataset.storeServiceStatusSignature !== topStatusSignature) {
+        topStatus.dataset.storeServiceStatusSignature = topStatusSignature;
+        topStatus.className = `store-service-status store-service-top-status is-${status.state}`;
+        topStatus.innerHTML = `<i aria-hidden="true"></i>${escapeHtml(status.label)}`;
+      }
       if (!topStatus.isConnected) detail.append(topStatus);
       if (!panel.isConnected) detail.append(panel);
       organizeStoreUtilities(detail, info, panel);

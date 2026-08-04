@@ -88,6 +88,13 @@ assert.match(service, /naver\.classList\.add\('store-detail-map-quick'\)/);
 assert.match(service, /giftSource\.cloneNode\(true\)/);
 assert.match(service, /item\.key === 'yeosu-seomseom-pay' && item\.state === 'available'/);
 assert.match(service, /giftButton\.classList\.add\('store-service-gift-app-link'\)/);
+assert.match(service, /topStatus\.dataset\.storeServiceStatusSignature !== topStatusSignature/);
+assert.match(service, /topStatus\.dataset\.storeServiceStatusSignature = topStatusSignature/);
+assert.match(
+  service,
+  /if \(topStatus\.dataset\.storeServiceStatusSignature !== topStatusSignature\) \{[\s\S]*?topStatus\.className = `store-service-status store-service-top-status is-\$\{status\.state\}`;[\s\S]*?topStatus\.innerHTML =/,
+  '같은 영업상태는 다시 렌더링하지 않아 MutationObserver 반복 실행을 막아야 합니다.'
+);
 
 const directIndex = rc3.indexOf('${direct}');
 const brandIndex = rc3.indexOf('${apps}', directIndex);
@@ -102,7 +109,7 @@ assert.match(appStyle, /\.final-personal-actions \[data-share-store\]\{grid-colu
 
 assert.match(html, /app\.css\?v=[^"\n]*store-popup-order-1/);
 assert.match(html, /store-service-info\.css\?v=store-service-11-map-gift-placement-1/);
-assert.match(html, /store-service-info\.js\?v=store-service-18-map-gift-placement-1/);
+assert.match(html, /store-service-info\.js\?v=store-service-19-mobile-freeze-fix-1/);
 assert.match(html, /store-menu-preview\.js\?v=store-menu-19-map-gift-placement-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*store-popup-order-1/);
 
