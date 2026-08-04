@@ -746,6 +746,29 @@ function overviewSearchText(entry) {
     return contextMatched && (entry.menuMatches.length > 0 || rawTokens.every(token => text.includes(token)));
   }
 
+  function overviewQueryPriority(entry) {
+    const compact = normalize(overviewQuery);
+    if (!compact) return 0;
+    const store = entry.store || {};
+    const name = normalize(store.name);
+    if (name === compact) return 0;
+    if (name.startsWith(compact)) return 1;
+    if (name.includes(compact)) return 2;
+    const identity = normalize(searchTextValues([
+      store.realBusinessName,
+      store.brandName,
+      store.branchName,
+      store.shopInShopNames,
+      store.storeAliases,
+      store.aliases,
+      store.searchAliases
+    ]).join(' '));
+    if (identity.includes(compact)) return 3;
+    const nonMenuText = normalize(overviewSearchText({...entry, menuMatches: []}));
+    if (nonMenuText.includes(compact)) return 4;
+    return entry.menuMatches.length ? 5 : 6;
+  }
+
   function filteredOverviewEntries() {
     const scoped = overviewEntries().filter(entry => {
       if (!entryMatchesQuery(entry)) return false;
@@ -756,14 +779,16 @@ function overviewSearchText(entry) {
       return true;
     });
 
+    const queryOrder = (a, b) => overviewQueryPriority(a) - overviewQueryPriority(b);
     if (locationMode === 'nearby' && referenceCoordinate()) {
       scoped.sort((a, b) => (
-        a.areaDistance - b.areaDistance
+        queryOrder(a, b)
+        || a.areaDistance - b.areaDistance
         || a.area.localeCompare(b.area, 'ko')
         || a.index - b.index
       ));
     } else {
-      scoped.sort((a, b) => a.index - b.index);
+      scoped.sort((a, b) => queryOrder(a, b) || a.index - b.index);
     }
     return scoped;
   }

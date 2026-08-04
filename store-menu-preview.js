@@ -67,6 +67,25 @@
     return menu;
   }
 
+  function menuDisplayPriority(item) {
+    const category = String(item?.category || '').normalize('NFKC').replace(/\s+/g, '').toLowerCase();
+    if (/주류|술|소주|맥주|막걸리|와인/.test(category)) return 40;
+    if (/음료|커피|차|에이드|주스|탄산/.test(category)) return 30;
+    if (/추가|사이드|곁들임|토핑|옵션|소스|피클|밥류/.test(category)) return 20;
+    return 0;
+  }
+
+  function orderedMenu(menu) {
+    const items = Array.isArray(menu?.items) ? menu.items : [];
+    return {
+      ...menu,
+      items: items
+        .map((item, index) => ({item, index, priority: menuDisplayPriority(item)}))
+        .sort((a, b) => a.priority - b.priority || a.index - b.index)
+        .map(entry => entry.item)
+    };
+  }
+
   function channelUrl(channel) {
     return channel?.url || channel?.appLink || '';
   }
@@ -450,13 +469,20 @@
     document.body.classList.add('store-menu-open');
     pushMenuHistory('preview');
     try {
+      if (store.__secureDetailReady !== true) {
+        const secureDetail = window.daedongSecureStoreDetail;
+        if (!secureDetail || typeof secureDetail.enrich !== 'function') {
+          throw new Error('이 가게의 주문방법을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
+        }
+        await secureDetail.enrich(store, typeof normalizedStore === 'function' ? normalizedStore : undefined);
+      }
       const [menu] = await Promise.all([
         loadMenu(storeId),
         window.daedongStoreServiceInfo?.ready || Promise.resolve()
       ]);
       activeStore = store;
-      activeMenu = menu;
-      overlay.innerHTML = previewMarkup(menu, store);
+      activeMenu = orderedMenu(menu);
+      overlay.innerHTML = previewMarkup(activeMenu, store);
       const preview = overlay.querySelector('.store-menu-preview');
       const scrollRoot = overlay.querySelector('.store-menu-scroll');
       scrollRoot?.addEventListener('scroll', () => handleMenuScroll(scrollRoot), {passive: true});
