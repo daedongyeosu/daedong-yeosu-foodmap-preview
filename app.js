@@ -1,7 +1,6 @@
 'use strict';
 
 const ASSET_VERSION = 'phone-route-restoration-1';
-const DATA_URL = `data/stores.json?v=${ASSET_VERSION}`;
 const PHOTO_MANIFEST_URL = 'data/photo-manifest.json';
 const PHOTO_POLICY_URL = 'data/photo-policy.json';
 const NEIGHBORHOOD_URL = 'data/yeosu-neighborhoods.json';
@@ -602,11 +601,14 @@ function normalizedStore(raw, index) {
     tags: [raw.category, raw.district, raw.address, ...(raw.shopInShopNames || [])].filter(Boolean), routes,
     managed: Boolean(raw.managed), sharedManaged: Boolean(raw.sharedManaged), pinPosition: raw.pinPosition,
     forceBottom: Boolean(raw.forceBottom), lat, lng, coordinateSource,
+    channelKeys: Array.isArray(raw.channelKeys) ? [...new Set(raw.channelKeys.map(String))] : routes.map(route => route.key),
+    hasMenu: Boolean(raw.hasMenu),
     neighborhoods: inferredNeighborhoods, locationSource, neighborhoodConfidence: locationSource==='store-name-branch'?'high':inferredNeighborhoods.length?'verified':'none', sourceType:raw.source?.type||''
   };
 }
 function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
 function routeFor(store, key) { return (Array.isArray(store?.routes) ? store.routes : []).find(route => route?.key === key); }
+function storeHasChannel(store, key) { return Boolean(routeFor(store, key) || store?.channelKeys?.includes?.(key)); }
 function brandMatchesStore(store, brand) { const text = storeText(store); return brand.aliases.some(alias => text.includes(normalize(alias))); }
 function brandCount(brand) { return stores.filter(store => brandMatchesStore(store, brand)).length; }
 function haversine(a, b) {
@@ -911,7 +913,7 @@ function filteredStores() {
 }
 function miniRoutes(store) {
   const keys = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand', 'yogiyo', 'coupang', 'baemin'];
-  return keys.filter(key => routeFor(store, key)).slice(0, 6).map(key => appIcon(key, 'miniapp-icon')).join('');
+  return keys.filter(key => storeHasChannel(store, key)).slice(0, 6).map(key => appIcon(key, 'miniapp-icon')).join('');
 }
 function storeCard(store) {
   const distanceLabel = store.coordinateSource === 'district-centroid' ? '동네 중심 기준 약' : '현재 위치에서 약';
@@ -1045,7 +1047,7 @@ function appBrowserPhoto(store) {
   return photo ? `<img class="app-browser-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)}" loading="lazy" data-photo-kind="card">` : `<span class="app-browser-photo-placeholder">${categoryIcon(store.cat, 'category-placeholder-icon')}</span>`;
 }
 function appRegisteredStores(key) {
-  return stores.filter(store => routeFor(store, key)).map(store => ({store, distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null})).sort((a, b) => {
+  return stores.filter(store => storeHasChannel(store, key)).map(store => ({store, distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null})).sort((a, b) => {
     if (a.distance !== null && b.distance !== null) return a.distance - b.distance;
     if (a.distance !== null) return -1; if (b.distance !== null) return 1;
     const aPin = Number.isFinite(Number(a.store.pinPosition)) ? Number(a.store.pinPosition) : 9999;
@@ -1211,7 +1213,15 @@ async function fetchJson(url, fallback) {
 }
 async function initialize() {
   renderHero(); renderPromos();
-  const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([fetchJson(DATA_URL, []), fetchJson(PHOTO_MANIFEST_URL, {entries: []}), fetchJson(PHOTO_POLICY_URL, {}), fetchJson(NEIGHBORHOOD_URL,{neighborhoods:[]})]);
+  const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([
+    window.daedongDataApi?.catalog?.().catch(error => {
+      console.error('보안 데이터 API에서 가게목록을 불러오지 못했습니다.', error);
+      return [];
+    }) || Promise.resolve([]),
+    fetchJson(PHOTO_MANIFEST_URL, {entries: []}),
+    fetchJson(PHOTO_POLICY_URL, {}),
+    fetchJson(NEIGHBORHOOD_URL,{neighborhoods:[]})
+  ]);
   yeosuNeighborhoods=neighborhoodData.neighborhoods||[];neighborhoodByName=new Map(yeosuNeighborhoods.map(item=>[item.name,item]));
   photoResolver = new PhotoResolver(manifest, policy);
   const safeRawStores = Array.isArray(rawStores) ? rawStores : [];

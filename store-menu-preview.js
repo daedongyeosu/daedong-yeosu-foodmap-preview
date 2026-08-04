@@ -1,32 +1,6 @@
 'use strict';
 
 (() => {
-  const LEGACY_MENU_STORES = Object.freeze({
-    a089d1d54720b48e: Object.freeze({
-      path: 'store-menu-content/a089d1d54720b48e/menu.json',
-      entryImage: 'store-menu-content/a089d1d54720b48e/main.jpg',
-      itemCount: 53
-    }),
-    '2f4c3cfb0866c4a4': Object.freeze({
-      path: 'store-menu-content/domino/menu.json',
-      entryImage: 'store-menu-content/domino/main.jpg',
-      itemCount: 70
-    }),
-    dc638b23f8cf3c5b: Object.freeze({
-      path: 'store-menu-content/domino/menu.json',
-      entryImage: 'store-menu-content/domino/main.jpg',
-      itemCount: 70
-    }),
-    '7bc7239e6b509c44': Object.freeze({
-      path: 'store-menu-content/surasanggung/menu.json',
-      entryImage: 'store-menu-content/surasanggung/main.jpg',
-      itemCount: 46
-    })
-  });
-  const MENU_STORES = Object.freeze({
-    ...(window.DAEDONG_DDANGYO_MENU_STORES || {}),
-    ...LEGACY_MENU_STORES
-  });
   const menuCache = new Map();
   let activeStore = null;
   let activeMenu = null;
@@ -63,20 +37,22 @@
   }
 
   function ensureMenuEntryButton() {
-    for (const storeId of Object.keys(MENU_STORES)) {
-      const menuStore = MENU_STORES[storeId];
+    const sourceStores = typeof stores !== 'undefined' && Array.isArray(stores) ? stores : [];
+    for (const store of sourceStores.filter(item => item?.hasMenu === true)) {
+      const storeId = String(store.id || store.store_id || '');
       const detail = document.querySelector(`#modalContent .store-detail[data-store-id="${storeId}"]`);
       if (!detail || detail.querySelector('[data-store-menu-preview]')) continue;
       const target = detail.querySelector('.detail-routes') || detail.querySelector('.detail-personal-actions');
       if (!target) continue;
+      const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
       target.insertAdjacentHTML('beforebegin', `
         <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
-          <img src="${menuStore.entryImage}" alt="">
+          ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="">` : ''}
           <span>
             <b>음식보기</b>
             <small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small>
           </span>
-          <strong>${menuStore.itemCount}개 ›</strong>
+          <strong>메뉴 보기 ›</strong>
         </button>
       `);
     }
@@ -84,9 +60,7 @@
 
   async function loadMenu(storeId) {
     if (menuCache.has(storeId)) return menuCache.get(storeId);
-    const response = await fetch(MENU_STORES[storeId].path, {cache: 'no-store'});
-    if (!response.ok) throw new Error(`메뉴 정보를 불러오지 못했습니다. (${response.status})`);
-    const menu = await response.json();
+    const menu = await window.daedongDataApi.menu(storeId);
     menuCache.set(storeId, menu);
     return menu;
   }
@@ -834,7 +808,7 @@
 
   window.daedongMenuPreview = Object.freeze({
     open: (storeId, options = {}) => openMenuPreview(storeId, null, options),
-    has: storeId => Boolean(MENU_STORES[String(storeId)])
+    has: storeId => Boolean(storeById(storeId)?.hasMenu)
   });
 
   new MutationObserver(ensureMenuEntryButton).observe(document.documentElement, {childList: true, subtree: true});

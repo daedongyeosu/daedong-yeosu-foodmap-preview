@@ -1,8 +1,6 @@
 'use strict';
 
 (() => {
-  const DATA_URL = 'store-service-info.json?v=store-service-12-yeseo-complete';
-  const MENU_SEARCH_URL = 'data/store-menu-search-index.json?v=menu-search-4-yeseo-complete';
   const HISTORY_KEY = 'daedongStoreServiceOverview';
   const CLOSING_SOON_MINUTES = 60;
   const MENU_MATCH_PREVIEW_LIMIT = 4;
@@ -40,6 +38,7 @@
   let menuSearchData = {stores: {}};
   let menuSearchState = 'idle';
   let menuSearchPromise = null;
+  let menuSearchQuery = '';
   let renderedSourceCount = 0;
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({
@@ -99,6 +98,7 @@
   }
 
   function menuMatchesForStore(storeId, query, store) {
+    if (normalize(menuSearchQuery) !== normalize(query)) return [];
     const record = menuSearchData.stores?.[String(storeId)];
     const spec = menuSearchSpec(query);
     if (!record || !spec) return [];
@@ -110,33 +110,28 @@
     }));
   }
 
-  function ensureMenuSearchData() {
-    if (menuSearchPromise) return menuSearchPromise;
+  function ensureMenuSearchData(query = overviewQuery) {
+    const requestedQuery = String(query || '').trim();
+    if (!requestedQuery) return Promise.resolve({stores: {}});
+    if (menuSearchPromise && normalize(menuSearchQuery) === normalize(requestedQuery)) return menuSearchPromise;
+    menuSearchQuery = requestedQuery;
     menuSearchState = 'loading';
-    menuSearchPromise = fetch(MENU_SEARCH_URL, {cache: 'force-cache'})
-      .then(response => {
-        if (!response.ok) throw new Error(`메뉴 검색자료를 불러오지 못했습니다. (${response.status})`);
-        return response.json();
-      })
-      .then(async data => {
-        if (data?.stores) return data;
-        if (!Array.isArray(data?.chunks)) return {stores: {}};
-        const chunks = await Promise.all(data.chunks.map(async path => {
-          const response = await fetch(`${path}?v=menu-search-2`, {cache: 'force-cache'});
-          if (!response.ok) throw new Error(`메뉴 검색자료 조각을 불러오지 못했습니다. (${response.status})`);
-          return response.json();
-        }));
-        return {...data, stores: Object.assign({}, ...chunks.map(chunk => chunk?.stores || {}))};
-      })
+    menuSearchData = {stores: {}};
+    menuSearchPromise = window.daedongDataApi.menuSearch(requestedQuery)
       .then(data => {
-        menuSearchData = data?.stores ? data : {stores: {}};
-        menuSearchState = 'ready';
+        if (normalize(menuSearchQuery) === normalize(requestedQuery)) {
+          menuSearchData = data?.stores ? data : {stores: {}};
+          menuSearchState = 'ready';
+        }
         return menuSearchData;
       })
       .catch(error => {
-        menuSearchState = 'error';
+        if (normalize(menuSearchQuery) === normalize(requestedQuery)) menuSearchState = 'error';
         console.warn(error);
         return menuSearchData;
+      })
+      .finally(() => {
+        if (normalize(menuSearchQuery) === normalize(requestedQuery)) menuSearchPromise = null;
       });
     return menuSearchPromise;
   }
@@ -979,8 +974,9 @@ function overviewSearchText(entry) {
     const overlay = document.querySelector('[data-store-service-overview-overlay]');
     if (!overlay || overlay.hidden) return;
     const requestedQuery = overviewQuery;
-    if (overviewQuery && !benefitDefinitionForQuery(overviewQuery) && menuSearchState === 'idle') {
-      ensureMenuSearchData().then(() => {
+    if (overviewQuery && !benefitDefinitionForQuery(overviewQuery)
+      && (menuSearchState === 'idle' || normalize(menuSearchQuery) !== normalize(overviewQuery))) {
+      ensureMenuSearchData(requestedQuery).then(() => {
         if (overviewQuery === requestedQuery) refreshOverviewQueryResults();
       });
     }
@@ -1015,9 +1011,10 @@ function overviewSearchText(entry) {
   }
 
   function renderOverview({focusQuery = false, focusSection = ''} = {}) {
-    if (overviewQuery && !benefitDefinitionForQuery(overviewQuery) && menuSearchState === 'idle') {
+    if (overviewQuery && !benefitDefinitionForQuery(overviewQuery)
+      && (menuSearchState === 'idle' || normalize(menuSearchQuery) !== normalize(overviewQuery))) {
       const requestedQuery = overviewQuery;
-      ensureMenuSearchData().then(() => {
+      ensureMenuSearchData(requestedQuery).then(() => {
         const currentOverlay = document.querySelector('[data-store-service-overview-overlay]');
         if (currentOverlay && !currentOverlay.hidden && overviewQuery === requestedQuery) renderOverview();
       });
@@ -1097,11 +1094,7 @@ function overviewSearchText(entry) {
     });
   }
 
-  const ready = fetch(DATA_URL, {cache: 'no-store'})
-    .then(response => {
-      if (!response.ok) throw new Error(`영업·혜택 정보를 불러오지 못했습니다. (${response.status})`);
-      return response.json();
-    })
+  const ready = window.daedongDataApi.services()
     .then(data => {
       serviceData = data;
       ensureOverviewButtons();

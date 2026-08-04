@@ -1,0 +1,63 @@
+'use strict';
+
+(() => {
+  const BASE_URL = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev';
+  const CLIENT_HEADER = 'daedong-preview-web-v1-20260804';
+  const JSON_HEADERS = Object.freeze({
+    Accept: 'application/json',
+    'X-Daedong-Client': CLIENT_HEADER
+  });
+  const cache = new Map();
+
+  function safeStoreId(value) {
+    const id = String(value || '').toLowerCase();
+    if (!/^[a-f0-9]{16}$/.test(id)) throw new Error('올바르지 않은 가게 식별자입니다.');
+    return id;
+  }
+
+  async function request(path, {cacheKey = '', signal} = {}) {
+    if (cacheKey && cache.has(cacheKey)) return cache.get(cacheKey);
+    const pending = fetch(`${BASE_URL}${path}`, {
+      method: 'GET',
+      mode: 'cors',
+      credentials: 'omit',
+      cache: 'no-store',
+      headers: JSON_HEADERS,
+      signal
+    }).then(async response => {
+      if (!response.ok) throw new Error(`데이터를 불러오지 못했습니다. (${response.status})`);
+      return response.json();
+    }).catch(error => {
+      if (cacheKey) cache.delete(cacheKey);
+      throw error;
+    });
+    if (cacheKey) cache.set(cacheKey, pending);
+    return pending;
+  }
+
+  const catalog = () => request('/api/catalog', {cacheKey: 'catalog'});
+  const services = () => request('/api/services', {cacheKey: 'services'});
+  const detail = storeId => {
+    const id = safeStoreId(storeId);
+    return request(`/api/store/${id}`, {cacheKey: `detail:${id}`});
+  };
+  const menu = storeId => {
+    const id = safeStoreId(storeId);
+    return request(`/api/store/${id}/menu`, {cacheKey: `menu:${id}`});
+  };
+  const menuSearch = query => {
+    const value = String(query || '').trim();
+    if (!value || value.length > 40 || /[%_]/.test(value)) return Promise.resolve({stores: {}});
+    const key = value.normalize('NFKC').toLowerCase();
+    return request(`/api/menu-search?q=${encodeURIComponent(value)}`, {cacheKey: `search:${key}`});
+  };
+
+  window.daedongDataApi = Object.freeze({
+    baseUrl: BASE_URL,
+    catalog,
+    services,
+    detail,
+    menu,
+    menuSearch
+  });
+})();
