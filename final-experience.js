@@ -87,7 +87,7 @@ async function fxOpenRegisteredAppOrder(button){
   sendAnalyticsEvent('order_click',{storeId:store.id,storeName:store.name,channel:key,surface:'app_store_list'});
   fxRememberAppBrowserReturn(key);
   delete button.dataset.routeBusy;button.removeAttribute('aria-busy');
-  location.assign(href);
+  if(key==='ddangyo')await openDdangyoRoute(href);else location.assign(href);
  }catch{window.alert(`${APP_META[key]?.label||'주문앱'} 주문주소를 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.`);}finally{delete button.dataset.routeBusy;button.removeAttribute('aria-busy');}
 }
 
