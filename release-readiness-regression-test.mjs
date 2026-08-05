@@ -7,6 +7,7 @@ const rc3 = fs.readFileSync('rc3-fixes.js', 'utf8');
 const rc6 = fs.readFileSync('rc6-fixes.js', 'utf8');
 const rc7 = fs.readFileSync('rc7-address-map.js', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
+const storeMenuPreview = fs.readFileSync('store-menu-preview.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
 const phoneRuntime = JSON.parse(fs.readFileSync('data/phone-order-runtime.json', 'utf8'));
 
@@ -117,6 +118,13 @@ assert.deepEqual(Array.from(rankedIds).slice(0, 3), ['open-general', 'closing-ge
   '노출 대상을 자르기 전에 영업 중 → 곧 종료 → 시간 미확인 순을 보장해야 합니다.');
 assert.match(rc6, /rc6ApplyRainExposure\(sortStoresByBusinessStatus\(ranked\),8\)/,
   '가까운 가게도 영업상태 정렬 후 노출 수를 제한해야 합니다.');
+
+const primaryOrderMarkupSource = functionSource(storeMenuPreview, 'primaryOrderMarkup');
+assert.equal(
+  (primaryOrderMarkupSource.match(/channels\.primaryOrder\?\.brandApp/g) || []).length,
+  1,
+  '음식 미리보기 주문방법에 브랜드앱을 중복 표시하면 안 됩니다.'
+);
 
 assert.match(html, /<div class="build-mark" hidden><\/div>/, '고객 화면에 내부 검수 후보 문구를 노출하면 안 됩니다.');
 assert.doesNotMatch(rc6, /온라인 검수 후보/, 'RC6 초기화가 내부 검수 문구를 되살리면 안 됩니다.');

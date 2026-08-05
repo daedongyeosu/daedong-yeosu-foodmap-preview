@@ -68,3 +68,11 @@ jobs:
           node store-service-sensitive-counts-regression-test.mjs
           node turtle-ship-hero-regression-test.mjs
           node unified-search-menu-order-regression-test.mjs
+      - name: Install mobile browser checker
+        run: |
+          npm install --no-save --no-package-lock playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Verify deployed preview menu photos and navigation
+        env:
+          BASE_URL: https://preview.daedongmap.com
+        run: node scripts/browser-alien-pizza-menu-search.mjs
