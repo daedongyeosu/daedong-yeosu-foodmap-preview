@@ -55,6 +55,15 @@ assert.match(service,
 assert.match(serviceStyle,
   /data-store-service-status="closing-soon"[\s\S]*color: #815116;[\s\S]*background: #fff0cb;/,
   '곧 종료는 경고 의미의 호박색으로 표시해야 합니다.');
+assert.match(serviceStyle,
+  /\.store-service-overview-list \{[\s\S]*?gap: 16px;/,
+  '검색 결과의 가게별 카드 사이에는 눈에 띄는 간격이 있어야 합니다.');
+assert.match(serviceStyle,
+  /\.store-service-overview-group \{[\s\S]*?border: 2px solid #9fb0c2;[\s\S]*?box-shadow: 0 7px 20px rgba\(18, 42, 74, \.1\);/,
+  '가게 정보 전체는 진한 외곽선과 그림자로 한 덩어리임을 분명히 보여야 합니다.');
+assert.match(serviceStyle,
+  /\.store-service-menu-matches \{[\s\S]*?border-top: 2px solid #d7c4b8;/,
+  '가게 기본정보와 일치 메뉴 사이의 내부 구분선도 분명해야 합니다.');
 
 assert.match(menu,
   /if \(store\.__secureDetailReady !== true\)[\s\S]*secureDetail\.enrich\(store/,
@@ -71,6 +80,8 @@ assert.match(menu,
 
 assert.match(html, /store-service-info\.css\?v=store-service-12-search-status-order-1/,
   '영업상태 색상 수정본 캐시 버전이 필요합니다.');
+assert.match(html, /store-service-info\.css\?v=[^"\n]*search-store-boundary-1/,
+  '검색 가게별 경계선 수정본 캐시 버전이 필요합니다.');
 assert.match(html, /store-service-info\.js\?v=store-service-25-menu-search-status-order-1/,
   '검색 수정본 캐시 버전이 필요합니다.');
 assert.match(html, /store-menu-preview\.js\?v=store-menu-22-customer-popup-order-1/,

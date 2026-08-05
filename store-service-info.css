@@ -613,15 +613,15 @@ body.store-service-overview-open {
 
 .store-service-overview-list {
   display: grid;
-  gap: 9px;
+  gap: 16px;
 }
 
 .store-service-overview-group {
   overflow: hidden;
   background: #fff;
-  border: 1px solid #dfe4ec;
-  border-radius: 17px;
-  box-shadow: 0 6px 18px rgba(18, 42, 74, .05);
+  border: 2px solid #9fb0c2;
+  border-radius: 18px;
+  box-shadow: 0 7px 20px rgba(18, 42, 74, .1);
 }
 
 .store-service-overview-card {
@@ -719,7 +719,7 @@ body.store-service-overview-open {
 .store-service-menu-matches {
   padding: 12px;
   background: linear-gradient(180deg, #fff9f5, #fff);
-  border-top: 1px solid #f0e1d9;
+  border-top: 2px solid #d7c4b8;
 }
 
 .store-service-menu-matches > header {
