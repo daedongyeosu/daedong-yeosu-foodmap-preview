@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
+const rc3 = fs.readFileSync('rc3-fixes.js', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
 
@@ -49,13 +50,41 @@ assert.deepEqual(Array.from(actual), [
   'closed-managed'
 ], '지금 가까운 가게의 최종 카드도 영업상태 순서를 지켜야 합니다.');
 
+let resolveServiceReady;
+const serviceReady = new Promise(resolve => { resolveServiceReady = resolve; });
+const readyContext = {
+  rc3ServiceReadyRefreshInstalled: false,
+  renderCount: 0,
+  console,
+  Promise
+};
+readyContext.fxRenderRails = () => { readyContext.renderCount += 1; };
+readyContext.window = {
+  daedongStoreServiceInfo: {ready: serviceReady},
+  requestAnimationFrame(callback) { callback(); }
+};
+vm.createContext(readyContext);
+vm.runInContext(`${functionSource(rc3, 'rc3RefreshRailsAfterServiceReady')};this.refresh=rc3RefreshRailsAfterServiceReady;`, readyContext);
+readyContext.refresh();
+assert.equal(readyContext.renderCount, 0, '영업정보가 준비되기 전에는 완료 후 재정렬을 예약만 해야 합니다.');
+resolveServiceReady({stores: {}});
+await serviceReady;
+await Promise.resolve();
+assert.equal(readyContext.renderCount, 1, '영업정보가 준비되면 실제 추천 레일을 다시 그려야 합니다.');
+
 assert.match(rc2, /const key = `\$\{status\}:\$\{bucket\}:\$\{tier\}`/,
   '추천 레일의 무작위 다양화는 같은 영업상태 안에서만 해야 합니다.');
 assert.match(rc2, /const finish = \(\) => sortStoresByBusinessStatus\(result\)/,
   '추천 레일의 중복제거·다양화가 끝난 뒤 영업상태를 최종 검증해야 합니다.');
+assert.match(rc3, /const cards = sortStoresByBusinessStatus\(rc2RailCandidates\(spec, globallyUsed, 8, useCounts\)\)/,
+  '입맛 없을 때를 포함한 실제 최종 추천 카드도 영업상태 순으로 다시 검증해야 합니다.');
+assert.match(rc3, /daedong-store-service-ready[\s\S]*?fxRenderRails\(\)/,
+  '영업정보 준비 전 그려진 추천 레일은 영업정보가 준비된 뒤 다시 그려야 합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^']*nearby-status-final-1/,
   '브라우저가 가까운 가게 최종 정렬 수정본을 새로 받아야 합니다.');
-assert.match(html, /final-experience\.js\?v=[^\"]*nearby-status-final-1/,
+assert.match(finalExperience, /rc3-fixes\.js\?v=[^']*recommend-status-final-1/,
+  '브라우저가 실제 추천 카드 렌더링 수정본을 새로 받아야 합니다.');
+assert.match(html, /final-experience\.js\?v=[^\"]*recommend-status-final-1/,
   '브라우저가 가까운 가게 캐시 갱신 코드가 담긴 상위 스크립트도 새로 받아야 합니다.');
 
 console.log('nearby rail status ranking regression: PASS');

@@ -24,6 +24,25 @@ const rc3RailPointers = new Map();
 const rc3PhysicalMapPending = new Map();
 let rc3InternalPhoneByStore = new Map();
 let rc3EventsInstalled = false;
+let rc3ServiceReadyRefreshInstalled = false;
+
+function rc3RefreshRailsAfterServiceReady() {
+  if (rc3ServiceReadyRefreshInstalled) return;
+  const ready = window.daedongStoreServiceInfo?.ready;
+  if (!ready || typeof ready.then !== 'function') return;
+  rc3ServiceReadyRefreshInstalled = true;
+  Promise.resolve(ready).then(() => {
+    window.requestAnimationFrame(() => {
+      if (typeof fxRenderRails === 'function') fxRenderRails();
+    });
+  }).catch(error => console.error('store-service-rail-refresh-failed', error));
+}
+
+window.addEventListener('daedong-store-service-ready', () => {
+  window.requestAnimationFrame(() => {
+    if (typeof fxRenderRails === 'function') fxRenderRails();
+  });
+});
 
 function rc3Icon(id, className = 'category-color-icon') {
   return `<svg class="${className}" aria-hidden="true"><use href="${RC3_ICON_SPRITE}#${id}"></use></svg>`;
@@ -150,7 +169,7 @@ fxRenderRails = function rc3RenderRails() {
     const globallyUsed = new Set();
     const useCounts = new Map();
     root.innerHTML = fxSelectedRails().map(spec => {
-      const cards = rc2RailCandidates(spec, globallyUsed, 8, useCounts);
+      const cards = sortStoresByBusinessStatus(rc2RailCandidates(spec, globallyUsed, 8, useCounts));
       const allCandidates = fxRankStores(spec);
       return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">현재 표시할 추천 가게가 없습니다.</p>'}</div></section>`;
     }).join('');
@@ -581,7 +600,9 @@ fxInstallEvents = function rc3InstallEvents() {
 
 const rc3InitializeBase = fxInitialize;
 fxInitialize = async function rc3Initialize() {
+  rc3RefreshRailsAfterServiceReady();
   await rc3InitializeBase();
+  rc3RefreshRailsAfterServiceReady();
   const internalPhones = await fetchJson(RC3_PHONE_INTERNAL_URL, {stores: []});
   rc3InternalPhoneByStore = new Map((internalPhones.stores || []).map(item => [String(item.store_id), item]));
   const activeStoreId = String($('#modalContent .store-detail')?.dataset.storeId || '');
