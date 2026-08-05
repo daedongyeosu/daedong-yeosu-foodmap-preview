@@ -459,7 +459,7 @@ window.setTimeout(() => {
   if (!resolveCatalogReady) return;
   console.warn('가게목록 준비 시간이 초과되어 나머지 화면을 먼저 엽니다.');
   finishCatalogReady([]);
-}, 8000);
+}, 24000);
 
 function normalize(value) { return String(value ?? '').trim().toLowerCase().replace(/[\s·&()\-_/.,]/g, ''); }
 function canonicalSearchAliases(raw) {
@@ -1339,7 +1339,7 @@ async function openStore(store) {
 
 async function fetchJson(url, fallback) {
   const controller = new AbortController();
-  const timeoutId = window.setTimeout(() => controller.abort(), 6500);
+  const timeoutId = window.setTimeout(() => controller.abort(), 12000);
   try {
     const separator = url.includes('?') ? '&' : '?';
     const response = await fetch(`${url}${separator}request=${Date.now()}`, {cache: 'no-store', signal: controller.signal});
@@ -1354,7 +1354,7 @@ async function fetchJson(url, fallback) {
 async function initialize() {
   renderHero(); renderPromos();
   const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([
-    window.daedongDataApi?.catalog?.({timeoutMs: 6500}).catch(error => {
+    window.daedongDataApi?.catalog?.({timeoutMs: 20000}).catch(error => {
       console.error('보안 데이터 API에서 가게목록을 불러오지 못했습니다.', error);
       return [];
     }) || Promise.resolve([]),

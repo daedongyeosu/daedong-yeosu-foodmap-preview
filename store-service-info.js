@@ -1231,10 +1231,10 @@ function overviewSearchText(entry) {
 
   async function loadServiceData() {
     let lastError = null;
-    for (const delay of [0, 800]) {
+    for (const delay of [0, 1200]) {
       if (delay) await wait(delay);
       try {
-        return await window.daedongDataApi.services({timeoutMs: 4000});
+        return await window.daedongDataApi.services({timeoutMs: 20000});
       } catch (error) {
         lastError = error;
       }
@@ -1285,13 +1285,13 @@ function overviewSearchText(entry) {
   }
 
   const ready = beginServiceLoad();
-  catalogReadyPromise = settleWithin(window.daedongCatalogReady || Promise.resolve([]), 9000)
+  catalogReadyPromise = settleWithin(window.daedongCatalogReady || Promise.resolve([]), 26000)
     .then(result => {
       catalogLoadState = result.status === 'fulfilled' && sourceStores().length ? 'ready' : 'error';
       refreshServiceSurfaces();
       return result;
     });
-  settleWithin(window.daedongLocationRankingReady || Promise.resolve(false), 16000)
+  settleWithin(window.daedongLocationRankingReady || Promise.resolve(false), 36000)
     .then(() => refreshServiceSurfaces());
 
   window.daedongStoreServiceInfo = Object.freeze({

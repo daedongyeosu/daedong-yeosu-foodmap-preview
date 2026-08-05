@@ -9,27 +9,27 @@ const services = fs.readFileSync(new URL('./store-service-info.js', import.meta.
 const html = fs.readFileSync(new URL('./index.html', import.meta.url), 'utf8');
 const serviceWorker = fs.readFileSync(new URL('./sw.js', import.meta.url), 'utf8');
 
-assert.match(api, /const REQUEST_TIMEOUT_MS = 8000/);
+assert.match(api, /const REQUEST_TIMEOUT_MS = 25000/);
 assert.match(api, /const requestAbort = createRequestAbort\(signal, timeoutMs\)/);
 assert.match(api, /signal: requestAbort\.signal/);
 assert.match(api, /\.finally\(requestAbort\.cleanup\)/);
 assert.match(app, /finishCatalogReady\(\[\]\)/,
   '가게목록 준비 promise는 실패·지연 시에도 반드시 종료되어야 합니다.');
-assert.match(app, /catalog\?\.\(\{timeoutMs: 6500\}\)/);
-assert.match(finalExperience, /fxFinishLocationRankingReady\(false\);\s*\},15000\)/,
+assert.match(app, /catalog\?\.\(\{timeoutMs: 20000\}\)/);
+assert.match(finalExperience, /fxFinishLocationRankingReady\(false\);\s*\},35000\)/,
   '위치정렬 준비 promise는 모바일에서 무한 대기하면 안 됩니다.');
 assert.match(services, /const ready = beginServiceLoad\(\)/);
-assert.match(services, /catalogReadyPromise = settleWithin\([\s\S]*9000\)/);
-assert.match(services, /settleWithin\(window\.daedongLocationRankingReady[\s\S]*16000\)/);
+assert.match(services, /catalogReadyPromise = settleWithin\([\s\S]*26000\)/);
+assert.match(services, /settleWithin\(window\.daedongLocationRankingReady[\s\S]*36000\)/);
 assert.doesNotMatch(services, /Promise\.all\(\[\s*loadServiceData\(\)/,
   '영업정보를 위치정렬 promise와 다시 결합하면 안 됩니다.');
 assert.match(services, /loadFailed \? '다시 확인' : '확인 중'/,
   '실패 상태가 로딩 문구로 영구 위장되면 안 됩니다.');
-assert.match(html, /cloudflare-preview-api-2-request-timeout-1/);
-assert.match(html, /catalog-ready-watchdog-1/);
-assert.match(html, /location-ranking-watchdog-1/);
-assert.match(html, /store-service-21-mobile-ready-unblock-1/);
-assert.match(serviceWorker, /daedong-yeosu-app-shell-v4-mobile-ready-unblock/);
+assert.match(html, /cloudflare-preview-api-3-mobile-deadline-1/);
+assert.match(html, /catalog-ready-watchdog-2/);
+assert.match(html, /location-ranking-watchdog-2/);
+assert.match(html, /store-service-22-mobile-api-deadline-1/);
+assert.match(serviceWorker, /daedong-yeosu-app-shell-v5-mobile-api-deadline/);
 
 const never = new Promise(() => {});
 const servicePayload = {programs: [], stores: {['a'.repeat(16)]: {hours: {}}}};

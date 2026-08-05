@@ -7,7 +7,7 @@
     Accept: 'application/json',
     'X-Daedong-Client': CLIENT_HEADER
   });
-  const REQUEST_TIMEOUT_MS = 8000;
+  const REQUEST_TIMEOUT_MS = 25000;
   const cache = new Map();
 
   function safeStoreId(value) {
