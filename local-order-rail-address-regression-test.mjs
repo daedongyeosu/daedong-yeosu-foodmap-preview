@@ -42,6 +42,8 @@ const stores = Array.from({length: 8}, (_, index) => ({
 }));
 const context = {
   fxRankStores: () => stores,
+  storeBusinessStatusPriority: () => 0,
+  sortStoresByBusinessStatus: list => [...list],
   rc2RandomizedRailStores: list => [...list],
   rc6OwnershipTier: () => 0,
   rc2BrandKey: store => `brand-${store.id}`,
