@@ -54,6 +54,24 @@ appRegisteredStores=function(key){return fxOriginalAppRegisteredStores(key).filt
 function fxCategoryMarkup(name){return categoryButtonMarkup(name);}
 renderCategories=renderCategoryGrid;
 
+function fxRegisteredAppCardMarkup(store,key,isExternal=false){
+ const meta=APP_META[key]||{label:key};
+ const routeLabel=`${meta.label}로 바로 주문`;
+ return `<article class="app-browser-card app-browser-direct-card"><button type="button" class="app-browser-direct-link glass-action" data-app-store-order="${escapeHtml(store.id)}" data-app-key="${escapeHtml(key)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small><span>${isExternal?`<span class="external-app-card-label">${escapeHtml(routeLabel)}</span>`:`${appIcon(key,'app-browser-app-icon')}<b class="app-browser-direct-label">${escapeHtml(routeLabel)}</b>`}</span></span><b aria-hidden="true">›</b></button><button type="button" class="app-browser-info-button" data-app-store-info="${escapeHtml(store.id)}">ⓘ 가게정보</button></article>`;
+}
+async function fxOpenRegisteredAppOrder(button){
+ const store=fxStoreById(button.dataset.appStoreOrder),key=button.dataset.appKey;if(!store||!key)return;
+ button.disabled=true;
+ try{
+  if(store.__secureDetailReady!==true)await window.daedongSecureStoreDetail?.enrich?.(store);
+  const route=routeFor(store,key),href=route?safeHref(route.url):'#';
+  if(!route||href==='#'){await openStore(store);return;}
+  if(EXTERNAL_APP_KEYS.includes(key))rememberSelectedExternal(store,key);
+  sendAnalyticsEvent('order_click',{storeId:store.id,storeName:store.name,channel:key,surface:'app_store_list'});
+  location.assign(href);
+ }catch{await openStore(store);}finally{button.disabled=false;}
+}
+
 function fxThemeMatch(store,spec){const text=storeText(store);return spec.pattern?spec.pattern.test(text):true;}
 function fxRankStores(spec){return stores.filter(fxVisible).filter(store=>fxThemeMatch(store,spec)).map(store=>{const distance=fxDistance(store);const low=['direct','mukkebi','ddangyo','ondongne'].some(key=>storeHasChannel(store,key));let score=spec.pattern?80:20;if(distance!==null)score+=Math.max(0,32-distance*4);if(low)score+=12;if(store.managed)score+=8;else if(store.sharedManaged)score+=5;if(spec.kind==='near'&&distance!==null)score+=Math.max(0,120-distance*25);if(spec.kind==='local'&&low)score+=80;if(spec.kind==='new')score+=Math.max(0,500-(store.rawIndex||0));return{store,distance,score};}).sort((a,b)=>b.score-a.score||(a.distance??999)-(b.distance??999)||a.store.name.localeCompare(b.store.name,'ko')).map(item=>({...item.store,distance:item.distance}));}
 const FX_RAIL_SPECS=[
@@ -77,7 +95,7 @@ function fxAppBrowserMarkup(key,selectedCategory='추천'){
  const meta=APP_META[key],all=appRegisteredStores(key),cats=categoriesFromStores(all);const filtered=selectedCategory==='추천'?all:all.filter(store=>storeMatchesCategory(store,selectedCategory)),list=applyCategoryPriorityOverrides(filtered,selectedCategory);
  const isExternal=EXTERNAL_APP_KEYS.includes(key);
  const chips=`<nav class="app-browser-category-chips"><button type="button" data-app-category="추천" class="${selectedCategory==='추천'?'active':''}">추천</button>${cats.map(cat=>`<button type="button" data-app-category="${escapeHtml(cat)}" class="${selectedCategory===cat?'active':''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
- const cards=list.map(store=>`<button type="button" class="app-browser-card glass-action" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small><span>${isExternal?`<span class="external-app-card-label">${escapeHtml(meta.label)}</span>`:appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
+ const cards=list.map(store=>fxRegisteredAppCardMarkup(store,key,isExternal)).join('');
  return `<section class="app-browser"><header class="app-browser-head${isExternal?' external-app-browser-head':''}">${isExternal?'':appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards||'<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${isExternal?externalAppNoticeMarkup():''}</section>`;
 }
 openAppBrowser=function(key,selectedCategory='추천'){if(!['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'].includes(key))return;openModal(fxAppBrowserMarkup(key,selectedCategory));$('#modal').dataset.appBrowserKey=key;$('#modal').dataset.appBrowserCategory=selectedCategory;};
@@ -353,6 +371,8 @@ function fxInstallEvents(){
   const directBrand=event.target.closest('[data-direct-brand]');if(directBrand){fxOpenBrandHub('direct-stores',directBrand.dataset.directBrand);return;}
   const happyCat=event.target.closest('[data-happy-category]');if(happyCat){fxOpenBrandHub('happy-brands',happyCat.dataset.happyCategory);return;}
   const happyBrand=event.target.closest('[data-happy-brand]');if(happyBrand){fxOpenBrandHub('happy-stores',happyBrand.dataset.happyBrand);return;}
+  const appStoreInfo=event.target.closest('[data-app-store-info]');if(appStoreInfo){const store=fxStoreById(appStoreInfo.dataset.appStoreInfo);if(store)openStore(store);return;}
+  const appStoreOrder=event.target.closest('[data-app-store-order]');if(appStoreOrder){event.preventDefault();void fxOpenRegisteredAppOrder(appStoreOrder);return;}
   const channelStore=event.target.closest('[data-channel-store-id]');if(channelStore){const store=fxStoreById(channelStore.dataset.channelStoreId);if(store)openStore(store);return;}
   const searchStore=event.target.closest('[data-search-store-id]');if(searchStore){const store=fxStoreById(searchStore.dataset.searchStoreId);if(store)openStore(store);return;}
   const share=event.target.closest('[data-share-store]');if(share){const store=fxStoreById(share.dataset.shareStore);if(store)fxShare(store,share);return;}
@@ -404,7 +424,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-1-secure-detail-await-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-1-secure-detail-await-1-app-list-direct-order-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
