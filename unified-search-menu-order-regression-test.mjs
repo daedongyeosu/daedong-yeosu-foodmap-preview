@@ -9,7 +9,7 @@ assert.match(service,
   /function overviewQueryPriority\(entry\)[\s\S]*name\.startsWith\(compact\)[\s\S]*name\.includes\(compact\)[\s\S]*entry\.menuMatches\.length \? 5 : 6/,
   '가게명 완전·앞부분·포함 일치를 메뉴 일치보다 우선해야 합니다.');
 assert.match(service,
-  /scoped\.sort\(\(a, b\) => \([\s\S]*queryOrder\(a, b\)[\s\S]*a\.areaDistance - b\.areaDistance/,
+  /function compareOverviewEntries\(a, b\)[\s\S]*const queryOrder = overviewQueryPriority\(a\) - overviewQueryPriority\(b\)[\s\S]*a\.areaDistance - b\.areaDistance/,
   '가까운 순을 사용해도 가게명 검색 우선순위를 먼저 적용해야 합니다.');
 
 assert.match(menu,

@@ -449,6 +449,8 @@ let neighborhoodByName = new Map();
 let categoryPriorityOverrides = {...LOCATION_CATEGORY_PRIORITY_OVERRIDES};
 let modalHistoryActive = false;
 let ignoreNextPop = false;
+let resolveCatalogReady;
+window.daedongCatalogReady = new Promise(resolve => { resolveCatalogReady = resolve; });
 
 function normalize(value) { return String(value ?? '').trim().toLowerCase().replace(/[\s·&()\-_/.,]/g, ''); }
 function canonicalSearchAliases(raw) {
@@ -583,6 +585,21 @@ function districtCoordinate(value) {
   const points=neighborhoodsFor(value).map(neighborhoodPoint).filter(Boolean);if(!points.length)return null;
   return {lat:points.reduce((sum,point)=>sum+point.lat,0)/points.length,lng:points.reduce((sum,point)=>sum+point.lng,0)/points.length};
 }
+function closestNeighborhoodForCoordinates(coords) {
+  if (!coords || !Number.isFinite(Number(coords.lat)) || !Number.isFinite(Number(coords.lng))) return '';
+  const point = {lat:Number(coords.lat), lng:Number(coords.lng)};
+  return yeosuNeighborhoods
+    .map(item => ({name:item.name, point:neighborhoodPoint(item.name)}))
+    .filter(item => item.point)
+    .map(item => ({...item, distance:haversine(point,item.point)}))
+    .sort((a,b)=>a.distance-b.distance)[0]?.name || '';
+}
+function normalizedNeighborhoodNames(...values) {
+  return [...new Set(values.flatMap(value => {
+    if (Array.isArray(value)) return value.flatMap(item => neighborhoodsFor(item));
+    return neighborhoodsFor(value);
+  }).filter(Boolean))];
+}
 function imagePathFromValue(value) {
   if (typeof value === 'string') return value.trim();
   if (!value || typeof value !== 'object') return '';
@@ -669,10 +686,12 @@ function normalizedStore(raw, index) {
   const addressNeighborhoods=/여수시/.test(String(raw.address||''))?neighborhoodsFor(raw.address):[];
   const branchText=[branchName,name].filter(Boolean).join(' '), branchNeighborhoods=/점|지점|항|지구/.test(branchText)?neighborhoodsFor(branchText):[];
   const notionNeighborhoods=neighborhoodsFor(area);
+  const suppliedNeighborhoods=normalizedNeighborhoodNames(raw.neighborhoods||[]);
+  const coordinateNeighborhood=lat!==null&&lng!==null?closestNeighborhoodForCoordinates({lat,lng}):'';
   const inferredNeighborhoods=addressNeighborhoods.length
     ? addressNeighborhoods
-    : [...new Set([...branchNeighborhoods,...notionNeighborhoods])];
-  const locationSource=addressNeighborhoods.length?'verified-address':branchNeighborhoods.length?'store-name-branch':notionNeighborhoods.length?'notion-or-canonical-neighborhood':'unresolved';
+    : [...new Set([...suppliedNeighborhoods,...branchNeighborhoods,...notionNeighborhoods,...(coordinateNeighborhood?[coordinateNeighborhood]:[])])];
+  const locationSource=addressNeighborhoods.length?'verified-address':suppliedNeighborhoods.length?'catalog-neighborhood':branchNeighborhoods.length?'store-name-branch':notionNeighborhoods.length?'notion-or-canonical-neighborhood':coordinateNeighborhood?'catalog-coordinate-neighborhood':'unresolved';
   return {
     id, store_id: id, name, realBusinessName: raw.realBusinessName || '',
     notionPageId: raw.notionPageId || '', notionUrl: raw.notionUrl || '', brandName, branchName, searchAliases, searchIndex,
@@ -684,7 +703,8 @@ function normalizedStore(raw, index) {
     forceBottom: Boolean(raw.forceBottom), lat, lng, coordinateSource,
     channelKeys: Array.isArray(raw.channelKeys) ? [...new Set(raw.channelKeys.map(String))] : routes.map(route => route.key),
     hasMenu: Boolean(raw.hasMenu),
-    neighborhoods: inferredNeighborhoods, locationSource, neighborhoodConfidence: locationSource==='store-name-branch'?'high':inferredNeighborhoods.length?'verified':'none', sourceType:raw.source?.type||''
+    neighborhoods: inferredNeighborhoods, primaryNeighborhood:inferredNeighborhoods[0]||'', locationSource, neighborhoodConfidence: locationSource==='store-name-branch'?'high':inferredNeighborhoods.length?'verified':'none', sourceType:raw.source?.type||'',
+    addedAt:raw.addedAt||raw.createdAt||raw.importedAt||''
   };
 }
 function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
@@ -964,7 +984,12 @@ function relevance(store, query) {
   if (normalize(store.cat).includes(q)) return 70; if (normalize(store.area).includes(q)) return 60;
   return text.includes(q) ? 50 : 0;
 }
-function storeNeighborhoods(store) { return neighborhoodsFor([store?.area,store?.district,store?.address,store?.name].filter(Boolean).join(' ')); }
+function storeNeighborhoods(store) {
+  return normalizedNeighborhoodNames(
+    Array.isArray(store?.neighborhoods)?store.neighborhoods:[],
+    [store?.primaryNeighborhood,store?.area,store?.district,store?.address,store?.name].filter(Boolean).join(' ')
+  );
+}
 function storeMatchesLocation(store, location) {
   const selected=neighborhoodFor(location); if(!selected)return normalize(store.area).includes(normalize(location));
   return storeNeighborhoods(store).includes(selected);
@@ -1356,7 +1381,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const entry = analyticsEntryContext();
   sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: entry.storeId ? 'store_entry' : 'home'});
   document.addEventListener('click', trackAnalyticsRouteClick, true);
-  initialize();
+  initialize().then(result => resolveCatalogReady?.(result)).catch(error => {
+    console.error('가게목록 초기화를 완료하지 못했습니다.', error);
+    resolveCatalogReady?.([]);
+  });
   $('#mainSearch').addEventListener('input', () => $('#clearMainSearch').hidden = !$('#mainSearch').value);
   $('#mainSearch').addEventListener('keydown', event => { if (event.key === 'Enter') $('#searchBtn').click(); });
   $('#clearMainSearch').addEventListener('click', () => { $('#mainSearch').value = ''; state.query = ''; $('#clearMainSearch').hidden = true; renderStores({resetCount: true}); $('#mainSearch').focus(); });
