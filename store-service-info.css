@@ -838,6 +838,31 @@ body.store-service-overview-open {
 }
 
 @media (max-width: 720px) {
+  #recommendSection > .section-head:has(#resetCategoryBtn:not([hidden])) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px 10px;
+  }
+
+  #recommendSection > .section-head:has(#resetCategoryBtn:not([hidden])) > h2 {
+    grid-column: 1 / -1;
+    min-width: max-content;
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+
+  #recommendSection > .section-head:has(#resetCategoryBtn:not([hidden])) > #resetCategoryBtn {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  #recommendSection > .section-head:has(#resetCategoryBtn:not([hidden])) > .store-service-overview-button {
+    grid-column: 2;
+    justify-self: end;
+    margin-left: 0;
+  }
+
   .store-service-overview-button {
     min-height: 34px;
     padding: 0 10px;
