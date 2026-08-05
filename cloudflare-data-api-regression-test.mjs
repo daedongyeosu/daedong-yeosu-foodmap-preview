@@ -3,12 +3,26 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const calls = [];
+const alienStoreId = 'a089d1d54720b48e';
 const responses = new Map([
   ['/api/catalog', [{id: 'a'.repeat(16), name: '검증가게'}]],
   [`/api/store/${'a'.repeat(16)}`, {id: 'a'.repeat(16), routes: []}],
   [`/api/store/${'a'.repeat(16)}/menu`, {storeId: 'a'.repeat(16), items: []}],
+  [`/api/store/${alienStoreId}/menu`, {
+    storeId: alienStoreId,
+    mainImage: '',
+    items: [
+      {id: 'pepperoni', name: '[짭짤] 페퍼로니', image: ''},
+      {id: 'chipperoni', name: '치퍼로니', image: ''}
+    ]
+  }],
   ['/api/services', {programs: [], stores: {}}],
-  ['/api/menu-search?q=%EC%A1%B1%EB%B0%9C', {stores: {}}]
+  ['/api/menu-search?q=%EC%A1%B1%EB%B0%9C', {stores: {}}],
+  ['/api/menu-search?q=%EC%99%B8%EA%B3%84%EC%9D%B8', {
+    stores: {
+      [alienStoreId]: {i: [['pepperoni', '[짭짤] 페퍼로니', '피자', '']]}
+    }
+  }]
 ]);
 const context = {
   window: {setTimeout, clearTimeout},
@@ -43,12 +57,35 @@ assert.equal(calls[0].init.cache, 'no-store');
 assert.ok(calls[0].init.signal instanceof AbortSignal, 'API request must carry a bounded abort signal');
 assert.deepEqual(plain(await api.detail('A'.repeat(16))), {id: 'a'.repeat(16), routes: []});
 assert.deepEqual(plain(await api.menu('a'.repeat(16))), {storeId: 'a'.repeat(16), items: []});
+const alienMenu = plain(await api.menu(alienStoreId));
+assert.equal(alienMenu.mainImage, `store-menu-content/${alienStoreId}/main.jpg`);
+assert.deepEqual(
+  alienMenu.items.map(item => item.image),
+  [
+    `store-menu-content/${alienStoreId}/pepperoni.jpg`,
+    `store-menu-content/${alienStoreId}/chipperoni.jpg`
+  ],
+  'curated menu photos must survive an empty secure API image field'
+);
 assert.deepEqual(plain(await api.services()), {programs: [], stores: {}});
 assert.deepEqual(plain(await api.menuSearch('족발')), {stores: {}});
+const alienSearch = plain(await api.menuSearch('외계인'));
+assert.equal(
+  alienSearch.stores[alienStoreId].i[0][3],
+  `store-menu-content/${alienStoreId}/pepperoni.jpg`,
+  'menu-search cards must use the same curated photo fallback'
+);
 const beforeInvalid = calls.length;
 assert.deepEqual(plain(await api.menuSearch('%')), {stores: {}});
 assert.equal(calls.length, beforeInvalid, 'wildcard search must not leave the browser');
 assert.throws(() => api.detail('../private'), /식별자/);
+
+const alienPhotoRoot = `store-menu-content/${alienStoreId}`;
+const alienPhotoFiles = fs.readdirSync(alienPhotoRoot).filter(file => file.endsWith('.jpg'));
+assert.equal(alienPhotoFiles.length, 54, 'representative photo and all 53 menu photos must remain in the preview bundle');
+for (const image of [alienMenu.mainImage, ...alienMenu.items.map(item => item.image)]) {
+  assert.ok(fs.existsSync(image), `curated menu photo must exist: ${image}`);
+}
 
 const index = fs.readFileSync('index.html', 'utf8');
 const app = fs.readFileSync('app.js', 'utf8');
