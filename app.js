@@ -451,6 +451,15 @@ let modalHistoryActive = false;
 let ignoreNextPop = false;
 let resolveCatalogReady;
 window.daedongCatalogReady = new Promise(resolve => { resolveCatalogReady = resolve; });
+function finishCatalogReady(value) {
+  resolveCatalogReady?.(value);
+  resolveCatalogReady = null;
+}
+window.setTimeout(() => {
+  if (!resolveCatalogReady) return;
+  console.warn('가게목록 준비 시간이 초과되어 나머지 화면을 먼저 엽니다.');
+  finishCatalogReady([]);
+}, 8000);
 
 function normalize(value) { return String(value ?? '').trim().toLowerCase().replace(/[\s·&()\-_/.,]/g, ''); }
 function canonicalSearchAliases(raw) {
@@ -1329,19 +1338,23 @@ async function openStore(store) {
 }
 
 async function fetchJson(url, fallback) {
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), 6500);
   try {
     const separator = url.includes('?') ? '&' : '?';
-    const response = await fetch(`${url}${separator}request=${Date.now()}`, {cache: 'no-store'});
+    const response = await fetch(`${url}${separator}request=${Date.now()}`, {cache: 'no-store', signal: controller.signal});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {
     console.error(`${url} 로딩 실패`, error); return fallback;
+  } finally {
+    window.clearTimeout(timeoutId);
   }
 }
 async function initialize() {
   renderHero(); renderPromos();
   const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([
-    window.daedongDataApi?.catalog?.().catch(error => {
+    window.daedongDataApi?.catalog?.({timeoutMs: 6500}).catch(error => {
       console.error('보안 데이터 API에서 가게목록을 불러오지 못했습니다.', error);
       return [];
     }) || Promise.resolve([]),
@@ -1381,9 +1394,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const entry = analyticsEntryContext();
   sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: entry.storeId ? 'store_entry' : 'home'});
   document.addEventListener('click', trackAnalyticsRouteClick, true);
-  initialize().then(result => resolveCatalogReady?.(result)).catch(error => {
+  initialize().then(result => finishCatalogReady(result)).catch(error => {
     console.error('가게목록 초기화를 완료하지 못했습니다.', error);
-    resolveCatalogReady?.([]);
+    finishCatalogReady([]);
   });
   $('#mainSearch').addEventListener('input', () => $('#clearMainSearch').hidden = !$('#mainSearch').value);
   $('#mainSearch').addEventListener('keydown', event => { if (event.key === 'Enter') $('#searchBtn').click(); });

@@ -25,6 +25,11 @@ window.DAEDONG_WEATHER_CONFIG=window.DAEDONG_WEATHER_CONFIG||{enabled:false,prox
 let fxResolveLocationRankingReady;
 window.daedongLocationRankingReady=new Promise(resolve=>{fxResolveLocationRankingReady=resolve;});
 function fxFinishLocationRankingReady(value){fxResolveLocationRankingReady?.(value);fxResolveLocationRankingReady=null;}
+window.setTimeout(()=>{
+ if(!fxResolveLocationRankingReady)return;
+ console.warn('위치 기반 정렬 준비 시간이 초과되어 기본 목록을 먼저 엽니다.');
+ fxFinishLocationRankingReady(false);
+},15000);
 
 let fxBrandData={stores:[],brands:[]};
 let fxSupplement={storeMappings:[],directApps:[]};

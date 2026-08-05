@@ -27,6 +27,9 @@
 
   let serviceData = {programs: [], stores: {}};
   let serviceLoadState = 'loading';
+  let catalogLoadState = 'loading';
+  let serviceReadyPromise = null;
+  let catalogReadyPromise = null;
   let lastFocused = null;
   let pendingStoreId = '';
   let activeStatus = 'all';
@@ -617,12 +620,13 @@
       ), 0);
       const countNode = entry.querySelector('[data-store-finder-open-count]');
       const countReady = serviceLoadState === 'ready' && source.length > 0;
-      const nextCount = countReady ? String(count) : '확인 중';
+      const loadFailed = serviceLoadState === 'error' || catalogLoadState === 'error';
+      const nextCount = countReady ? String(count) : loadFailed ? '다시 확인' : '확인 중';
       if (countNode && countNode.textContent !== nextCount) countNode.textContent = nextCount;
       const quickStatus = entry.querySelector('[data-store-service-quick-status]');
       if (quickStatus) {
-        quickStatus.dataset.storeServiceLoadState = countReady ? 'ready' : serviceLoadState;
-        quickStatus.setAttribute('aria-busy', countReady ? 'false' : 'true');
+        quickStatus.dataset.storeServiceLoadState = countReady ? 'ready' : loadFailed ? 'error' : 'loading';
+        quickStatus.setAttribute('aria-busy', countReady || loadFailed ? 'false' : 'true');
       }
     }
   }
@@ -1202,12 +1206,35 @@ function overviewSearchText(entry) {
 
   const wait = milliseconds => new Promise(resolve => window.setTimeout(resolve, milliseconds));
 
+  function settleWithin(promise, milliseconds) {
+    return new Promise(resolve => {
+      let settled = false;
+      const finish = result => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(timeoutId);
+        resolve(result);
+      };
+      const timeoutId = window.setTimeout(() => finish({status: 'timeout'}), milliseconds);
+      Promise.resolve(promise).then(
+        value => finish({status: 'fulfilled', value}),
+        error => finish({status: 'rejected', error})
+      );
+    });
+  }
+
+  function refreshServiceSurfaces() {
+    ensureOverviewButtons();
+    decorateStoreCards();
+    decorateStoreDetails();
+  }
+
   async function loadServiceData() {
     let lastError = null;
-    for (const delay of [0, 800, 1800]) {
+    for (const delay of [0, 800]) {
       if (delay) await wait(delay);
       try {
-        return await window.daedongDataApi.services();
+        return await window.daedongDataApi.services({timeoutMs: 4000});
       } catch (error) {
         lastError = error;
       }
@@ -1215,41 +1242,57 @@ function overviewSearchText(entry) {
     throw lastError || new Error('영업시간 정보를 불러오지 못했습니다.');
   }
 
-  function openQuickStatus(trigger) {
+  function beginServiceLoad() {
+    if (serviceLoadState === 'loading' && serviceReadyPromise) return serviceReadyPromise;
+    serviceLoadState = 'loading';
+    refreshServiceSurfaces();
+    serviceReadyPromise = loadServiceData()
+      .then(data => {
+        serviceData = data;
+        serviceLoadState = 'ready';
+        refreshServiceSurfaces();
+        return data;
+      })
+      .catch(error => {
+        serviceLoadState = 'error';
+        console.warn(error);
+        refreshServiceSurfaces();
+        return serviceData;
+      })
+      .finally(() => {
+        serviceReadyPromise = null;
+      });
+    return serviceReadyPromise;
+  }
+
+  async function openQuickStatus(trigger) {
     if (serviceLoadState === 'ready' && sourceStores().length) {
       showOverview(trigger, {status: trigger.dataset.storeServiceQuickStatus || 'open'});
       return;
     }
     trigger.setAttribute('aria-busy', 'true');
-    ready.then(() => {
-      trigger.setAttribute('aria-busy', 'false');
-      if (serviceLoadState === 'ready' && sourceStores().length) {
-        showOverview(trigger, {status: trigger.dataset.storeServiceQuickStatus || 'open'});
-      } else {
-        showOverview(trigger, {status: 'all'});
-      }
-    });
+    if (serviceLoadState === 'error') await beginServiceLoad();
+    else await (serviceReadyPromise || ready);
+    await catalogReadyPromise;
+    trigger.setAttribute('aria-busy', 'false');
+    if (serviceLoadState === 'ready' && sourceStores().length) {
+      showOverview(trigger, {status: trigger.dataset.storeServiceQuickStatus || 'open'});
+    } else if (catalogLoadState === 'error' && !sourceStores().length) {
+      window.location.reload();
+    } else {
+      showOverview(trigger, {status: 'all'});
+    }
   }
 
-  const ready = Promise.all([
-    loadServiceData(),
-    window.daedongCatalogReady || Promise.resolve(),
-    window.daedongLocationRankingReady || Promise.resolve(false)
-  ])
-    .then(([data]) => {
-      serviceData = data;
-      serviceLoadState = 'ready';
-      ensureOverviewButtons();
-      decorateStoreCards();
-      decorateStoreDetails();
-      return data;
-    })
-    .catch(error => {
-      serviceLoadState = 'error';
-      console.warn(error);
-      ensureOverviewButtons();
-      return serviceData;
+  const ready = beginServiceLoad();
+  catalogReadyPromise = settleWithin(window.daedongCatalogReady || Promise.resolve([]), 9000)
+    .then(result => {
+      catalogLoadState = result.status === 'fulfilled' && sourceStores().length ? 'ready' : 'error';
+      refreshServiceSurfaces();
+      return result;
     });
+  settleWithin(window.daedongLocationRankingReady || Promise.resolve(false), 16000)
+    .then(() => refreshServiceSurfaces());
 
   window.daedongStoreServiceInfo = Object.freeze({
     ready,

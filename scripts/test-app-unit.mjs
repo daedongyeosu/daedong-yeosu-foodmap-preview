@@ -52,3 +52,4 @@ if (baseApp) {
 
 console.log('PASS unit tests complete');
 await import('../location-ranking-unification-regression-test.mjs');
+await import('../mobile-initialization-unblock-regression-test.mjs');

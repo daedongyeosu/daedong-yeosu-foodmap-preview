@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v3-kakao-order';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v4-mobile-ready-unblock';
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
