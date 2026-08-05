@@ -21,6 +21,7 @@ const RC3_BLOCKED_PHONE_ROUTE_STORES = new Set([
   '0ad5341dc696d4f1'  // 맛있는 반찬: another store's placeholder page
 ]);
 const rc3RailPointers = new Map();
+const rc3PhysicalMapPending = new Map();
 let rc3InternalPhoneByStore = new Map();
 let rc3EventsInstalled = false;
 
@@ -185,6 +186,62 @@ function rc3FormatPhone(value) {
   return digits.replace(/^(\d{3})(\d{3,4})(\d{4})$/, '$1-$2-$3');
 }
 
+function rc3SamePhysicalPlace(left, right) {
+  if (!left || !right) return false;
+  if ([left.lat, left.lng, right.lat, right.lng].every(Number.isFinite)) {
+    return haversine({lat: left.lat, lng: left.lng}, {lat: right.lat, lng: right.lng}) <= 0.05;
+  }
+  const leftAddress = normalize(left.address || '');
+  const rightAddress = normalize(right.address || '');
+  return Boolean(leftAddress && rightAddress && leftAddress === rightAddress);
+}
+
+function rc3VerifiedPhysicalMap(store) {
+  const url = safeHref(store?.naverMap || '');
+  if (url === '#') return null;
+  const ownAudit = rc2NaverByStore.get(String(store?.id));
+  if (ownAudit?.status === 'verified') return {key: 'naver', name: '네이버지도', url};
+  if (store?.__verifiedPhysicalMapSource) return {key: 'naver', name: '네이버지도', url};
+  return null;
+}
+
+async function rc3RecoverVerifiedPhysicalMap(store) {
+  const id = String(store?.id || '');
+  if (!id || rc3VerifiedPhysicalMap(store) || rc3PhysicalMapPending.has(id)) return rc3PhysicalMapPending.get(id);
+  const phone = rc3VerifiedPhone(store);
+  if (!phone) return null;
+  const candidates = stores
+    .filter(candidate => String(candidate.id) !== id)
+    .filter(candidate => rc3Digits(rc3InternalPhoneByStore.get(String(candidate.id))?.phone) === phone)
+    .filter(candidate => rc2NaverByStore.get(String(candidate.id))?.status === 'verified')
+    .filter(candidate => {
+      if (![store.lat, store.lng, candidate.lat, candidate.lng].every(Number.isFinite)) return true;
+      return rc3SamePhysicalPlace(store, candidate);
+    });
+  if (!candidates.length) return null;
+  const pending = (async () => {
+    for (const candidate of candidates) {
+      try {
+        await window.daedongSecureStoreDetail?.enrich?.(candidate, normalizedStore);
+      } catch (error) {
+        console.warn('physical-map-candidate-load-failed', candidate.id, error);
+        continue;
+      }
+      if (rc3VerifiedPhone(candidate) !== phone || !rc3SamePhysicalPlace(store, candidate)) continue;
+      const verifiedMap = rc3VerifiedPhysicalMap(candidate);
+      if (!verifiedMap) continue;
+      store.naverMap = verifiedMap.url;
+      store.__verifiedPhysicalMapSource = String(candidate.id);
+      const activeDetail = $('#modalContent .store-detail');
+      if (activeDetail?.dataset.storeId === id) rc3EnhanceStoreDetail(store);
+      return verifiedMap;
+    }
+    return null;
+  })().finally(() => rc3PhysicalMapPending.delete(id));
+  rc3PhysicalMapPending.set(id, pending);
+  return pending;
+}
+
 fxPhoneStores = function rc3PhoneStores(category = '추천') {
   let list = stores
     .filter(fxVisible)
@@ -211,10 +268,9 @@ fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천') {
 };
 
 fxOpenPhoneConfirm = function rc3OpenPhoneConfirm(id) {
-  const item = fxPhoneByStore.get(String(id));
   const store = fxStoreById(id);
   const phone = rc3VerifiedPhone(store);
-  if (!item?.clickableTel || !store || !phone) return;
+  if (!store || !phone || RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(id))) return;
   openModal(`<section class="phone-order-confirm" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)} 전화주문</h2><div class="phone-confirm-photo">${fxCardPhoto(store)}</div><p>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p>${rc3PopupUtilityLinks(store)}<p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p><p class="verified-phone-number">${escapeHtml(rc3FormatPhone(phone))}</p><div class="phone-confirm-actions"><a class="phone-call-link" data-rc3-final-phone href="tel:${escapeHtml(phone)}">전화 걸기</a><button class="phone-cancel" type="button" data-phone-cancel>취소</button></div></section>`);
   $('#modal').dataset.activeStoreId = store.id;
   history.replaceState({...history.state, storeId: String(store.id)}, '');
@@ -232,14 +288,14 @@ function resolveStoreChannels(store) {
   const route = key => routeFor(safeStore, key) || null;
   const phone = rc3VerifiedPhone(safeStore);
   const phoneRoute = route('phone');
-  const phoneOrder = phone && fxPhoneByStore.get(String(safeStore.id))?.clickableTel
+  const phoneOrder = phone && !RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(safeStore.id))
     ? {key: 'phone', name: '전화주문', phone}
     : phoneRoute && !RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(safeStore.id))
       ? phoneRoute
       : null;
   return {
     utilities: {
-      naverMap: safeStore.naverMap && safeStore.naverMap !== '#' ? {key: 'naver', name: '네이버지도', url: safeStore.naverMap} : null,
+      naverMap: rc3VerifiedPhysicalMap(safeStore),
       localGiftApp: route('chak')
     },
     primaryOrder: {
@@ -318,6 +374,7 @@ openStore = async function rc3OpenStore(store) {
   const opened = await rc3OpenStoreBase(store);
   if (opened === false) return false;
   rc3EnhanceStoreDetail(store);
+  void rc3RecoverVerifiedPhysicalMap(store);
   return opened;
 };
 
