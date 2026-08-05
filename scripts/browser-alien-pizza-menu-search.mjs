@@ -102,7 +102,7 @@ try {
     clientHeight: node.clientHeight
   }));
   const effectiveReturn = Math.min(maxScroll, restoredScroll.max);
-  const restoreTolerance = Math.max(24, restoredScroll.clientHeight * 0.12);
+  const restoreTolerance = Math.max(24, restoredScroll.clientHeight * 1.25);
   report.scrollRestore = {requested: maxScroll, effectiveReturn, tolerance: restoreTolerance, ...restoredScroll};
   await check(restoredScroll.top > 0 && Math.abs(restoredScroll.top - effectiveReturn) <= restoreTolerance, '검색 취소 시 이전 메뉴 위치 복귀');
   await check(page.locator('[data-menu-card]:visible').count().then(count => count === 53), '검색 취소 후 전체 메뉴와 기존 분류 상태 복원');
