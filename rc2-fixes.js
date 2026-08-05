@@ -369,7 +369,7 @@ fxAppBrowserMarkup = function rc2AppBrowserMarkup(key, selectedCategory = '추�
   const list = applyCategoryPriorityOverrides(filtered, selectedCategory);
   const isExternal = EXTERNAL_APP_KEYS.includes(key);
   const chips = `<nav class="app-browser-category-chips"><button type="button" data-app-category="추천" class="${selectedCategory === '추천' ? 'active' : ''}">추천</button>${cats.map(cat => `<button type="button" data-app-category="${escapeHtml(cat)}" class="${selectedCategory === cat ? 'active' : ''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
-  const cards = list.map(store => `<button type="button" class="app-browser-card glass-action" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</small><span>${isExternal ? `<span class="external-app-card-label">${escapeHtml(meta.label)}</span>` : appIcon(key, 'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
+  const cards = list.map(store => fxRegisteredAppCardMarkup(store, key, isExternal)).join('');
   return `<section class="app-browser"><header class="app-browser-head${isExternal ? ' external-app-browser-head' : ''}">${isExternal ? '' : appIcon(key, 'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}${rc2SelectedCategoryMarkup(selectedCategory)}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${isExternal ? externalAppNoticeMarkup() : ''}</section>`;
 };
 
@@ -673,6 +673,10 @@ fxInstallEvents = function rc2InstallEvents() {
     if (railStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(railStore.dataset.railStoreId); if (store) openStore(store); return; }
     const appCategory = event.target.closest('[data-app-category]');
     if (appCategory) { event.preventDefault(); event.stopImmediatePropagation(); openAppBrowser($('#modal').dataset.appBrowserKey, appCategory.dataset.appCategory); return; }
+    const appStoreInfo = event.target.closest('[data-app-store-info]');
+    if (appStoreInfo) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(appStoreInfo.dataset.appStoreInfo); if (store) openStore(store); return; }
+    const appStoreOrder = event.target.closest('[data-app-store-order]');
+    if (appStoreOrder) { event.preventDefault(); event.stopImmediatePropagation(); void fxOpenRegisteredAppOrder(appStoreOrder); return; }
     const appStore = event.target.closest('[data-app-store-id]');
     if (appStore) {
       event.preventDefault(); event.stopImmediatePropagation();

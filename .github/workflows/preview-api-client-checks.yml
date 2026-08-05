@@ -35,6 +35,7 @@ jobs:
       - name: Verify preserved preview experience
         run: |
           node analytics-owner-exclusion-regression-test.mjs
+          node app-list-direct-order-regression-test.mjs
           node app-browser-category-label-regression-test.mjs
           node coarse-region-analytics-regression-test.mjs
           node community-intro-regression-test.mjs
