@@ -616,7 +616,7 @@
         <nav aria-label="빠른 가게 찾기 조건">
           <button type="button" data-store-service-quick-status="open">🟢 지금 영업 중 <b data-store-finder-open-count></b></button>
           <button type="button" data-store-service-quick-benefit>🎁 혜택 찾기</button>
-          <button type="button" data-store-service-quick-location="all">전체 동네</button>
+          <button type="button" data-store-service-quick-location="all">동네 선택</button>
         </nav>
       `;
       searchRow.after(entry);
