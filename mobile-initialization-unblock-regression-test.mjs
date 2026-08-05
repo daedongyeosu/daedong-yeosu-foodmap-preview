@@ -25,7 +25,7 @@ assert.doesNotMatch(services, /Promise\.all\(\[\s*loadServiceData\(\)/,
   '영업정보를 위치정렬 promise와 다시 결합하면 안 됩니다.');
 assert.match(services, /loadFailed \? '다시 확인' : '확인 중'/,
   '실패 상태가 로딩 문구로 영구 위장되면 안 됩니다.');
-assert.match(html, /cloudflare-preview-api-3-mobile-deadline-1/);
+assert.match(html, /cloudflare-preview-api-4-curated-menu-photos-1/);
 assert.match(html, /catalog-ready-watchdog-2/);
 assert.match(html, /location-ranking-watchdog-2/);
 assert.match(html, /store-service-25-menu-search-status-order-1/);
