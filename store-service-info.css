@@ -128,6 +128,19 @@ body.store-service-overview-open {
   gap: 5px;
 }
 
+.store-service-card-status-only {
+  display: flex;
+  width: fit-content;
+  margin-top: 7px;
+  pointer-events: none;
+}
+
+.store-service-card-status-only .store-service-status {
+  min-height: 22px;
+  padding-inline: 7px;
+  font-size: 10px;
+}
+
 .store-service-status,
 .store-service-card-payment,
 .store-service-card-unknown {

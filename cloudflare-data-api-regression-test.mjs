@@ -57,6 +57,7 @@ const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
 const rc3 = fs.readFileSync('rc3-fixes.js', 'utf8');
 const services = fs.readFileSync('store-service-info.js', 'utf8');
 const menus = fs.readFileSync('store-menu-preview.js', 'utf8');
+const phoneRuntime = JSON.parse(fs.readFileSync('data/phone-order-runtime.json', 'utf8'));
 assert(index.indexOf('data-api.js') < index.indexOf('app.js'), 'API client must load before the application');
 assert(index.indexOf('data-api-runtime.js') < index.indexOf('app.js'), 'secure detail loader must be ready before the application');
 assert(!index.includes('ddangyo-menu-map.js'));
@@ -184,11 +185,12 @@ assert.match(resolveSource, /phone && !RC3_BLOCKED_PHONE_ROUTE_STORES\.has/, 'se
 assert.doesNotMatch(resolveSource, /phone && fxPhoneByStore/, 'valid detail phones must not disappear when store ids change');
 assert.match(resolveSource, /naverMap: rc3VerifiedPhysicalMap\(safeStore\)/, 'map links must use the verified physical-place resolver');
 
-const phoneConfirmStart = rc3.indexOf('fxOpenPhoneConfirm = function rc3OpenPhoneConfirm');
+const phoneConfirmStart = rc3.indexOf('fxOpenPhoneConfirm = async function rc3OpenPhoneConfirm');
 const phoneConfirmEnd = rc3.indexOf('function rc3RouteButton', phoneConfirmStart);
 const phoneConfirmSource = rc3.slice(phoneConfirmStart, phoneConfirmEnd);
 assert.doesNotMatch(phoneConfirmSource, /fxPhoneByStore\.get/, 'phone confirmation must accept a valid secure detail phone');
 assert.match(phoneConfirmSource, /RC3_BLOCKED_PHONE_ROUTE_STORES\.has/, 'known placeholder phone records must remain blocked');
+assert.match(phoneConfirmSource, /daedongSecureStoreDetail/, 'card-only phone markers must load the secure phone before confirmation');
 
 const physicalMapStart = rc3.indexOf('async function rc3RecoverVerifiedPhysicalMap');
 const physicalMapEnd = rc3.indexOf('fxPhoneStores =', physicalMapStart);
@@ -199,5 +201,11 @@ assert.match(physicalMapSource, /rc3SamePhysicalPlace\(store, candidate\)/, 'phy
 assert.doesNotMatch(physicalMapSource, /store\.routes|routes\.push/, 'shop-in-shop order routes must never be copied from a parent store');
 assert.match(rc3, /rc3EnhanceStoreDetail\(store\);\s*void rc3RecoverVerifiedPhysicalMap\(store\);/, 'detail rendering must recover shared physical utilities after secure detail loads');
 assert.match(rc3, /rc3InternalPhoneByStore = new Map[\s\S]*?activeStoreId[\s\S]*?void rc3RecoverVerifiedPhysicalMap\(activeStore\)/, 'a shared-store deep link must retry map recovery after the phone index finishes loading');
+assert.match(rc3, /fxPhoneByStore\.has\(id\)[\s\S]*?store\.channelKeys[\s\S]*?'phone'/, 'verified phone markers must hydrate card channel keys');
+assert.equal(new Set(phoneRuntime.storeMappings.map(item => String(item.store_id))).size, phoneRuntime.storeMappings.length, 'phone card markers must stay unique');
+assert(phoneRuntime.storeMappings.some(item => item.store_id === 'cddefac029bc4e71' && item.clickableTel === true), '폭탄치밥 card must expose the verified phone marker');
+assert.match(services, /rail-card\[data-rail-card-store\]/, 'recommendation rail cards must show opening status');
+assert.match(services, /rc5-category-card\[data-rc5-store\]/, 'category cards must show opening status');
+assert.match(services, /data-store-service-card-status-only/, 'compact customer cards must receive a status badge');
 
 console.log('PASS Cloudflare preview API client contract');

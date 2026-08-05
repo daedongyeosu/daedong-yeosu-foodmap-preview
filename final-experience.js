@@ -1,7 +1,7 @@
 'use strict';
 
 /* Final local experience layer. Frozen store/order datasets remain read-only. */
-const FX_PHONE_URL='data/phone-order-runtime.json?v=channel-recovery-06';
+const FX_PHONE_URL='data/phone-order-runtime.json?v=channel-recovery-07-card-markers';
 const FX_BRAND_URL='data/brand-app-mapping.json';
 const FX_BRAND_SUPPLEMENT_URL='data/brand-app-missing-nine-supplement.json';
 const FX_HAPPY_URL='data/happyorder-channel-research.json';
@@ -462,7 +462,7 @@ fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-1-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
