@@ -74,6 +74,7 @@ assert.equal(coordinateContext.coordinateStores.length, 2, '실제 좌표가 있
 const newRailContext = {
   rc6RankCandidatesByCustomerLocation: candidates => candidates,
   rc6OwnershipTier: store => store.tier,
+  storeBusinessStatusPriority: store => store.statusRank ?? 2,
   Number,
   Date,
   String
