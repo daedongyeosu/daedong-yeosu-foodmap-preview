@@ -13,6 +13,11 @@ assert.match(finalExperience, /const routeLabel=`\$\{meta\.label\} 바로가기`
 assert.match(finalExperience, /가게정보 더보기/);
 assert.match(finalExperience, /음식보기 · 영업시간 · 쿠폰 등/);
 assert.match(finalExperience, /function fxOpenRegisteredAppOrder\(button\)[\s\S]*?daedongSecureStoreDetail[\s\S]*?routeFor\(store,key\)[\s\S]*?location\.assign\(href\)/);
+assert.match(finalExperience, /enrich\?\.\(store,typeof normalizedStore==='function'\?normalizedStore:undefined\)/);
+assert.doesNotMatch(finalExperience.match(/async function fxOpenRegisteredAppOrder\(button\)\{[\s\S]*?\n\}/)?.[0]||'', /openStore\(store\)/);
+assert.match(finalExperience, /window\.addEventListener\('pageshow',fxRestoreRegisteredAppButtons\)/);
+assert.match(finalExperience, /if\(!document\.hidden\)fxRestoreRegisteredAppButtons\(\)/);
+assert.match(finalExperience, /appStoreOrder\)\{event\.preventDefault\(\);event\.stopImmediatePropagation\(\)/);
 assert.match(finalExperience, /surface:'app_store_list'/);
 assert.match(finalExperience, /\['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'\]/);
 assert.match(rc2, /fxRegisteredAppCardMarkup\(store, key, isExternal\)/);
@@ -24,5 +29,6 @@ assert.match(css, /\.app-browser-info-button\{width:100%;min-height:62px/);
 assert.match(css, /\.app-browser-direct-label,\.external-app-card-label\{display:block;font-size:14px;font-weight:900;white-space:nowrap\}/);
 assert.match(html, /app\.css\?v=[^"\n]*app-list-direct-order-4-full-label-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*app-list-direct-order-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*app-route-return-fix-1/);
 
 console.log('app-list-direct-order-regression-test: pass');
