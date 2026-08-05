@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+
+const app = fs.readFileSync('app.js', 'utf8');
+const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
+const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
+const menu = fs.readFileSync('store-menu-preview.js', 'utf8');
+const event = fs.readFileSync('mukkebi-summer-event.js', 'utf8');
+const html = fs.readFileSync('index.html', 'utf8');
+
+assert.match(app, /const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1'/);
+assert.match(app, /function markExternalAppDeparture\(\)[\s\S]*?sessionStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, '1'\)/);
+assert.match(app, /const MOBILE_SAME_TAB_ORDER_KEYS = new Set\(\['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin'\]\)/);
+assert.match(app, /link\?\.dataset\?\.menuOrder[\s\S]*?link\?\.dataset\?\.menuStickyOrder[\s\S]*?link\?\.dataset\?\.menuStickyExternal[\s\S]*?link\?\.dataset\?\.menuExternalKey/);
+assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?markExternalAppDeparture\(\)[\s\S]*?rc2RememberExternalReturn[\s\S]*?window\.location\.assign\(href\)/);
+assert.match(app, /document\.addEventListener\('click', handleMobileOrderLinkClick, true\)/);
+
+assert.match(app, /function isCustomerUsableExternalRoute\(key, value\)/);
+assert.match(app, /baemin: new Set\(\['baemin\.com', 'www\.baemin\.com'\]\)/);
+assert.match(app, /return \{\.\.\.route, key, url, customerUsable: isCustomerUsableExternalRoute\(key, url\)\}/);
+assert.match(app, /route\?\.key === key && route\?\.customerUsable !== false/);
+assert.match(app, /store\?\.__secureDetailReady === true && EXTERNAL_APP_KEYS\.includes\(key\)/);
+
+const comparedStart = rc2.indexOf("const comparedExternal = event.target.closest('a[data-community-original]')");
+const comparedEnd = rc2.indexOf('const externalLink =', comparedStart);
+const comparedHandler = rc2.slice(comparedStart, comparedEnd);
+assert.match(comparedHandler, /rc2RememberExternalReturn\(\)/);
+assert.match(comparedHandler, /window\.location\.assign\(href\)/);
+assert.doesNotMatch(comparedHandler, /window\.open|history\.back/);
+assert.match(rc2, /function rc2RememberExternalReturn\(\) \{[\s\S]*?daedongMarkExternalAppDeparture/);
+assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key\)\{[\s\S]*?daedongMarkExternalAppDeparture/);
+
+assert.match(menu, /data-menu-external-key="\$\{escapeMenuHtml\(key\)\}"/);
+assert.match(menu, /data-menu-sticky-external="\$\{escapeMenuHtml\(key\)\}"/);
+
+assert.match(event, /const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV1'/);
+assert.match(event, /const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1'/);
+assert.match(event, /seenThisSession\(\) \|\| returningFromOrderApp\(\)/);
+assert.match(event, /sessionStorage\.setItem\(SEEN_SESSION_KEY, '1'\)/);
+
+assert.match(html, /app\.js\?v=[^"\n]*simple-app-return-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*simple-app-return-1/);
+assert.match(html, /store-menu-preview\.js\?v=[^"\n]*simple-app-return-1/);
+assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*simple-app-return-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*simple-app-return-1/);
+
+console.log('simple-app-return-regression-test: pass');

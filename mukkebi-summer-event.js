@@ -7,6 +7,8 @@
   const orderButton = document.getElementById('mukkebiSummerOrder');
   const communityIntro = document.getElementById('communityIntro');
   const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDate';
+  const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV1';
+  const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
   let opened = false;
 
@@ -25,8 +27,18 @@
     catch { return false; }
   }
 
+  function seenThisSession() {
+    try { return sessionStorage.getItem(SEEN_SESSION_KEY) === '1'; }
+    catch { return false; }
+  }
+
+  function returningFromOrderApp() {
+    try { return sessionStorage.getItem(EXTERNAL_APP_DEPARTURE_KEY) === '1'; }
+    catch { return false; }
+  }
+
   function canOpen() {
-    if (opened || Date.now() >= EVENT_END || hiddenToday()) return false;
+    if (opened || seenThisSession() || returningFromOrderApp() || Date.now() >= EVENT_END || hiddenToday()) return false;
     if (new URLSearchParams(location.search).has('store')) return false;
     const modal = document.getElementById('modal');
     const startupAd = document.getElementById('startupAd');
@@ -36,6 +48,7 @@
   function openEvent() {
     if (!canOpen()) return;
     opened = true;
+    try { sessionStorage.setItem(SEEN_SESSION_KEY, '1'); } catch {}
     eventLayer.hidden = false;
     eventLayer.setAttribute('aria-hidden', 'false');
     closeButton?.focus({preventScroll:true});

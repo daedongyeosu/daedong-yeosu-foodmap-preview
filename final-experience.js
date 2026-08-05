@@ -70,6 +70,7 @@ function fxRegisteredAppCardMarkup(store,key,isExternal=false){
  return `<article class="app-browser-card app-browser-direct-card"><button type="button" class="app-browser-direct-link glass-action" data-app-store-order="${escapeHtml(store.id)}" data-app-key="${escapeHtml(key)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small><span><b class="app-browser-direct-label">${escapeHtml(routeLabel)}</b></span></span><b class="app-browser-direct-arrow" aria-hidden="true">›</b></button><button type="button" class="app-browser-info-button" data-app-store-info="${escapeHtml(store.id)}"><span><b>가게정보 더보기</b><small>음식보기 · 영업시간 · 쿠폰 등</small></span><b aria-hidden="true">›</b></button></article>`;
 }
 function fxRememberAppBrowserReturn(key){
+ window.daedongMarkExternalAppDeparture?.();
  const modal=$('#modal'),card=modal?.querySelector('.modal-card');
  sessionStorage.setItem(FX_APP_BROWSER_RETURN,JSON.stringify({key,category:modal?.dataset.appBrowserCategory||'추천',modalScroll:card?.scrollTop||0,pageScroll:Number(document.body.dataset.lockScrollY||window.scrollY||0),savedAt:Date.now()}));
 }
@@ -458,7 +459,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
