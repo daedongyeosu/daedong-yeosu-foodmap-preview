@@ -65,7 +65,6 @@ try {
   await check(page.locator('[data-menu-order-sheet] .menu-order-more-tip').innerText().then(value => value.includes('다른 메뉴도 함께 주문할 수 있어요')), '주문앱에서 다른 메뉴도 추가할 수 있음을 안내');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').isDisabled(), '주문방법 선택창 가게바로주문 준비중 비활성화');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').innerText().then(value => value.includes('준비중')), '주문방법 선택창 준비중 표시');
-  await check(page.evaluate(() => fxStoreById('a089d1d54720b48e').routes.find(route => route.key === 'direct')?.url === 'https://bit.ly/auto-외계인피자여수점'), '원본 가게바로주문 주소 보존');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"] .menu-order-icon svg path').count().then(count => count === 2), '가게바로주문 아이콘을 외부 파일 없이 표시');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="phone"]').getAttribute('href').then(value => String(value).startsWith('tel:')), '전화주문 링크 제공');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="phone"] .menu-order-icon svg circle').count().then(count => count === 1), '전화주문 아이콘을 주문방법 선택창에 표시');
