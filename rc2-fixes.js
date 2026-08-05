@@ -275,10 +275,7 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
     const storeId = String(store.id);
     const useCount = useCounts.get(storeId) || 0;
     if (selectedIds.has(storeId)) return;
-    if (allowReuse) {
-      const protectedLocationRail = spec.kind === 'local';
-      if ((!protectedLocationRail && (!spec.pattern || useCount < 1)) || useCount >= 2) return;
-    } else if (globallyUsed.has(storeId) || useCount > 0) {
+    if (!allowReuse && (globallyUsed.has(storeId) || useCount > 0)) {
       return;
     }
     const brandKey = rc2BrandKey(store);
@@ -322,7 +319,7 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
     return result;
   }
   fillGroups(groups);
-  if (spec.kind === 'local' && result.length < limit) fillGroups(groups, true);
+  if (result.length < limit) fillGroups(groups, true);
   return result;
 }
 
