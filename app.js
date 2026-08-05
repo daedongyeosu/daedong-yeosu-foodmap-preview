@@ -469,6 +469,70 @@ function categoryButtonMarkup(name) {
   return `<button type="button" class="category glass-action ${state.category === name ? 'active' : ''}" data-cat="${escapeHtml(name)}">${categoryIcon(name, 'category-main-icon')}<span>${escapeHtml(name)}</span></button>`;
 }
 function safeHref(value) { let raw=String(value??'').trim();if(/^http:\/\/(?:www\.)?mukkebi\.com\//i.test(raw))raw=raw.replace(/^http:/i,'https:');if(!/^(?:https?:|tel:)/i.test(raw))return '#';try { const url = new URL(raw); return ['http:', 'https:', 'tel:'].includes(url.protocol) ? url.href : '#'; } catch { return '#'; } }
+const DDANGYO_SHORT_HOST = 'fdofd.ddangyo.com';
+const DDANGYO_RESOLVE_URL = 'https://fdofd.ddangyo.com/shorturl/view';
+const DDANGYO_ANDROID_PACKAGE = 'com.shinhan.o2o';
+const DDANGYO_RETRY_INTENT_KEY = 'daedongDdangyoRetryIntentV1';
+function isAndroidBrowser() { return /Android/i.test(String(navigator.userAgent || '')); }
+function ddangyoShortCode(value) {
+  try {
+    const url = new URL(String(value || ''));
+    if (url.hostname !== DDANGYO_SHORT_HOST || !/\/gateway1\.html$/i.test(url.pathname)) return '';
+    return String(url.search || '').replace(/^\?/, '').split('&')[0].trim();
+  } catch { return ''; }
+}
+function ddangyoHelpUrl() { return new URL('ddangyo-open-help.html', location.href).href; }
+async function resolveDdangyoOriginUrl(routeUrl) {
+  const shortCode = ddangyoShortCode(routeUrl);
+  if (!shortCode) throw new Error('invalid ddangyo short link');
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 4500);
+  try {
+    const response = await fetch(DDANGYO_RESOLVE_URL, {
+      method: 'POST', mode: 'cors', cache: 'no-store',
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify({dma_request:{short_url:shortCode}}), signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`ddangyo resolve HTTP ${response.status}`);
+    const data = await response.json();
+    const originUrl = String(data?.result?.dma_short_url_info?.origin_url || '').trim();
+    if (!originUrl.includes('menuUrl=') || !originUrl.includes('patsto_no=')) throw new Error('ddangyo store route unavailable');
+    if (/[#;]/.test(originUrl) || !/^[-A-Za-z0-9%._~=&/?+]+$/.test(originUrl)) throw new Error('unsafe ddangyo route');
+    return originUrl;
+  } finally { clearTimeout(timer); }
+}
+function ddangyoAndroidIntent(originUrl) {
+  const fallback = encodeURIComponent(ddangyoHelpUrl());
+  return `intent://o2o/deeplink/${originUrl}#Intent;scheme=ddangyo;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${DDANGYO_ANDROID_PACKAGE};S.browser_fallback_url=${fallback};end;`;
+}
+async function openDdangyoRoute(routeUrl) {
+  const href = safeHref(routeUrl);
+  if (href === '#') throw new Error('invalid ddangyo route');
+  if (!isAndroidBrowser()) { location.assign(href); return; }
+  try {
+    const originUrl = await resolveDdangyoOriginUrl(href);
+    const intent = ddangyoAndroidIntent(originUrl);
+    sessionStorage.setItem(DDANGYO_RETRY_INTENT_KEY, intent);
+    location.assign(intent);
+  } catch (error) {
+    console.warn('땡겨요 앱 연결주소를 준비하지 못했습니다.', error);
+    location.assign(ddangyoHelpUrl());
+  }
+}
+function handleDdangyoOrderLinkClick(event) {
+  if (!isAndroidBrowser() || !(event.target instanceof Element)) return;
+  const link = event.target.closest('a[href]');
+  if (!link) return;
+  const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
+  if (key !== 'ddangyo') return;
+  const href = safeHref(link.getAttribute('href'));
+  if (href === '#') return;
+  event.preventDefault(); event.stopImmediatePropagation();
+  trackAnalyticsRouteClick(event);
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
+  void openDdangyoRoute(href);
+}
+document.addEventListener('click', handleDdangyoOrderLinkClick, true);
 const KAKAO_SAME_TAB_ORDER_KEYS = new Set(['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin']);
 function isKakaoInAppBrowser() { return /KAKAOTALK/i.test(String(navigator.userAgent || '')); }
 function handleKakaoOrderLinkClick(event) {
