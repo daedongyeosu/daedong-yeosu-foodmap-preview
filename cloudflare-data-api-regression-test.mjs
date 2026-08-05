@@ -66,12 +66,12 @@ assert(!services.includes('store-service-info.json'));
 assert(!services.includes('store-menu-search-index'));
 assert(!menus.includes('store-menu-content/'));
 assert(menus.includes('window.daedongDataApi.menu(storeId)'));
-assert(app.includes('window.daedongDataApi?.catalog?.({timeoutMs: 6500})'));
+assert(app.includes('window.daedongDataApi?.catalog?.({timeoutMs: 20000})'));
 assert(app.includes('await secureDetail.enrich(store, normalizedStore)'));
 assert(finalExperience.includes('const opened=await fxOriginalOpenStore(store)'));
 assert(rc2.includes('const opened = await fxOriginalOpenStore(store)'));
 assert(rc3.includes('const opened = await rc3OpenStoreBase(store)'));
-assert(services.includes('window.daedongDataApi.services({timeoutMs: 4000})'));
+assert(services.includes('window.daedongDataApi.services({timeoutMs: 20000})'));
 
 const expectedRoutes = [
   ['direct', '가게바로주문'],
