@@ -34,6 +34,6 @@ assert.match(runtime, /formatCustomerHours24\(status\.detail\)/);
 assert.match(runtime, /formatCustomerHours24\(status\.today\)/);
 assert.match(runtime, /formatCustomerHours24\(entry\.status\.today\)/);
 assert.match(runtime, /displayLines\.map\(line => `<span>\$\{escapeHtml\(formatCustomerHours24\(line\)\)\}<\/span>`\)/);
-assert.match(html, /store-service-24-neighborhood-picker-label-1/);
+assert.match(html, /store-service-25-menu-search-status-order-1/);
 
 console.log(`PASS: 고객용 영업시간 ${markedLines.length}줄을 24시간제로 통일`);

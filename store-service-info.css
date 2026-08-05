@@ -518,6 +518,54 @@ body.store-service-overview-open {
   border-color: #173357;
 }
 
+.store-service-filter-block nav button[data-store-service-status="open"] {
+  color: #17643a;
+  background: #e5f8ed;
+  border-color: #bfe8cf;
+}
+
+.store-service-filter-block nav button[data-store-service-status="closing-soon"] {
+  color: #815116;
+  background: #fff0cb;
+  border-color: #f0d28d;
+}
+
+.store-service-filter-block nav button[data-store-service-status="unknown"] {
+  color: #596579;
+  background: #edf0f4;
+  border-color: #d7dde6;
+}
+
+.store-service-filter-block nav button[data-store-service-status="closed"] {
+  color: #8b3030;
+  background: #ffe8e8;
+  border-color: #f2caca;
+}
+
+.store-service-filter-block nav button[data-store-service-status="open"].active {
+  color: #fff;
+  background: #208a4d;
+  border-color: #208a4d;
+}
+
+.store-service-filter-block nav button[data-store-service-status="closing-soon"].active {
+  color: #fff;
+  background: #d48612;
+  border-color: #d48612;
+}
+
+.store-service-filter-block nav button[data-store-service-status="unknown"].active {
+  color: #fff;
+  background: #6b7789;
+  border-color: #6b7789;
+}
+
+.store-service-filter-block nav button[data-store-service-status="closed"].active {
+  color: #fff;
+  background: #bd4141;
+  border-color: #bd4141;
+}
+
 .store-service-location-controls select {
   max-width: 160px;
   padding-right: 28px;
