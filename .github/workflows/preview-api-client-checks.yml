@@ -45,6 +45,7 @@ jobs:
           node coarse-region-analytics-regression-test.mjs
           node community-intro-regression-test.mjs
           node external-app-text-regression-test.mjs
+          node global-business-status-ranking-regression-test.mjs
           node hero-carousel-forward-only-regression-test.mjs
           node hero-store-direct-popup-regression-test.mjs
           node home-address-ux-regression-test.mjs
