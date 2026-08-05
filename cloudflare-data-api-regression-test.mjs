@@ -198,5 +198,6 @@ assert.match(physicalMapSource, /status === 'verified'/, 'physical map recovery 
 assert.match(physicalMapSource, /rc3SamePhysicalPlace\(store, candidate\)/, 'physical map recovery must require the same address or nearby coordinates');
 assert.doesNotMatch(physicalMapSource, /store\.routes|routes\.push/, 'shop-in-shop order routes must never be copied from a parent store');
 assert.match(rc3, /rc3EnhanceStoreDetail\(store\);\s*void rc3RecoverVerifiedPhysicalMap\(store\);/, 'detail rendering must recover shared physical utilities after secure detail loads');
+assert.match(rc3, /rc3InternalPhoneByStore = new Map[\s\S]*?activeStoreId[\s\S]*?void rc3RecoverVerifiedPhysicalMap\(activeStore\)/, 'a shared-store deep link must retry map recovery after the phone index finishes loading');
 
 console.log('PASS Cloudflare preview API client contract');
