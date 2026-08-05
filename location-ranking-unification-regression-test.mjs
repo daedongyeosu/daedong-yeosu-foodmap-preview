@@ -95,8 +95,14 @@ assert.match(rc2, /spec\.kind === 'new' \? group\.stores : rc2RandomizedRailStor
 
 const serviceOrderContext = {
   locationMode: 'nearby',
+  overviewQuery: '',
+  activeStatus: 'all',
   referenceCoordinate: () => ({lat: 34.76, lng: 127.67}),
-  overviewQueryPriority: () => 0
+  overviewIdentityPriority: () => 0,
+  overviewStatusPriority: () => 0,
+  overviewMenuEvidencePriority: () => 0,
+  String,
+  Boolean
 };
 vm.createContext(serviceOrderContext);
 vm.runInContext(functionSource(services, 'compareOverviewEntries'), serviceOrderContext);
@@ -112,6 +118,27 @@ serviceOrderContext.locationMode = 'all';
 const allOrder = vm.runInContext('[...rows].sort(compareOverviewEntries).map(row => row.id)', serviceOrderContext);
 assert.deepEqual(Array.from(allOrder), ['other-managed', 'local-general', 'local-managed'],
   '여수 전체 모드에서는 기존 가게 순서를 보존해야 합니다.');
+
+serviceOrderContext.locationMode = 'nearby';
+serviceOrderContext.overviewQuery = '아이스크림';
+serviceOrderContext.overviewIdentityPriority = row => row.identityPriority ?? 4;
+serviceOrderContext.overviewStatusPriority = row => ({open: 0, 'closing-soon': 1, unknown: 2, closed: 3})[row.status.state];
+serviceOrderContext.overviewMenuEvidencePriority = row => row.menuEvidencePriority;
+serviceOrderContext.searchRows = [
+  {id: 'unknown-local-photo', identityPriority: 4, status: {state: 'unknown'}, menuEvidencePriority: 0, locationBucket: 0, ownershipTier: 0, areaDistance: 0.1, area: '신기동', index: 0},
+  {id: 'open-local-category', identityPriority: 4, status: {state: 'open'}, menuEvidencePriority: 2, locationBucket: 0, ownershipTier: 2, areaDistance: 0.2, area: '신기동', index: 1},
+  {id: 'open-nearby-photo', identityPriority: 4, status: {state: 'open'}, menuEvidencePriority: 0, locationBucket: 1, ownershipTier: 2, areaDistance: 2.0, area: '미평동', index: 2},
+  {id: 'closing-local-photo', identityPriority: 4, status: {state: 'closing-soon'}, menuEvidencePriority: 0, locationBucket: 0, ownershipTier: 0, areaDistance: 0.3, area: '신기동', index: 3},
+  {id: 'closed-local-photo', identityPriority: 4, status: {state: 'closed'}, menuEvidencePriority: 0, locationBucket: 0, ownershipTier: 0, areaDistance: 0.4, area: '신기동', index: 4}
+];
+const searchOrder = vm.runInContext('[...searchRows].sort(compareOverviewEntries).map(row => row.id)', serviceOrderContext);
+assert.deepEqual(Array.from(searchOrder), [
+  'open-nearby-photo',
+  'open-local-category',
+  'closing-local-photo',
+  'unknown-local-photo',
+  'closed-local-photo'
+], '검색 결과에만 영업상태와 실제 메뉴 근거 우선순위를 적용해야 합니다.');
 assert.match(services, /entry\.areas\.includes\(ensureSelectedArea\(\)\)/,
   '복수 동네 가게는 어느 등록 동네를 선택해도 포함되어야 합니다.');
 assert.match(services, /storeCoordinate\s*\? distanceBetween\(reference, storeCoordinate\)/,

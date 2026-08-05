@@ -3,7 +3,13 @@
 (() => {
   const HISTORY_KEY = 'daedongStoreServiceOverview';
   const CLOSING_SOON_MINUTES = 60;
-  const MENU_MATCH_PREVIEW_LIMIT = 4;
+  const MENU_MATCH_PREVIEW_LIMIT = 2;
+  const STATUS_SORT_PRIORITY = Object.freeze({
+    open: 0,
+    'closing-soon': 1,
+    unknown: 2,
+    closed: 3
+  });
   const WEEK_KEYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
   const WEEK_FROM_SHORT = {
     Sun: 'sun',
@@ -106,12 +112,15 @@
     const record = menuSearchData.stores?.[String(storeId)];
     const spec = menuSearchSpec(query);
     if (!record || !spec) return [];
-    return (record.i || []).filter(item => menuItemMatches(item, spec, store)).map(item => ({
-      id: String(item[0] || ''),
-      name: String(item[1] || ''),
-      category: String(item[2] || ''),
-      image: String(item[3] || '')
-    }));
+    return (record.i || [])
+      .filter(item => menuItemMatches(item, spec, store))
+      .map(item => ({
+        id: String(item[0] || ''),
+        name: String(item[1] || ''),
+        category: String(item[2] || ''),
+        image: String(item[3] || '')
+      }))
+      .sort((a, b) => Number(Boolean(b.image)) - Number(Boolean(a.image)));
   }
 
   function ensureMenuSearchData(query = overviewQuery) {
@@ -829,7 +838,7 @@ function overviewSearchText(entry) {
     return contextMatched && (entry.menuMatches.length > 0 || rawTokens.every(token => text.includes(token)));
   }
 
-  function overviewQueryPriority(entry) {
+  function overviewIdentityPriority(entry) {
     const compact = normalize(overviewQuery);
     if (!compact) return 0;
     const store = entry.store || {};
@@ -847,15 +856,33 @@ function overviewSearchText(entry) {
       store.searchAliases
     ]).join(' '));
     if (identity.includes(compact)) return 3;
-    const nonMenuText = normalize(overviewSearchText({...entry, menuMatches: []}));
-    if (nonMenuText.includes(compact)) return 4;
-    return entry.menuMatches.length ? 5 : 6;
+    return 4;
+  }
+
+  function overviewStatusPriority(entry) {
+    return STATUS_SORT_PRIORITY[entry?.status?.state] ?? 4;
+  }
+
+  function overviewMenuEvidencePriority(entry) {
+    const matches = Array.isArray(entry?.menuMatches) ? entry.menuMatches : [];
+    if (matches.some(item => item.image)) return 0;
+    if (matches.length) return 1;
+    return 2;
   }
 
   function compareOverviewEntries(a, b) {
-    const queryOrder = overviewQueryPriority(a) - overviewQueryPriority(b);
+    const hasQuery = Boolean(String(overviewQuery || '').trim());
+    const identityOrder = hasQuery ? overviewIdentityPriority(a) - overviewIdentityPriority(b) : 0;
+    const statusOrder = hasQuery || activeStatus === 'open'
+      ? overviewStatusPriority(a) - overviewStatusPriority(b)
+      : 0;
+    const menuEvidenceOrder = hasQuery
+      ? overviewMenuEvidencePriority(a) - overviewMenuEvidencePriority(b)
+      : 0;
     if (locationMode === 'nearby' && referenceCoordinate()) {
-      return queryOrder
+      return identityOrder
+        || statusOrder
+        || menuEvidenceOrder
         || a.locationBucket - b.locationBucket
         || a.ownershipTier - b.ownershipTier
         || a.areaDistance - b.areaDistance
@@ -863,12 +890,14 @@ function overviewSearchText(entry) {
         || a.index - b.index;
     }
     if (locationMode === 'selected') {
-      return queryOrder
+      return identityOrder
+        || statusOrder
+        || menuEvidenceOrder
         || a.ownershipTier - b.ownershipTier
         || a.areaDistance - b.areaDistance
         || a.index - b.index;
     }
-    return queryOrder || a.index - b.index;
+    return identityOrder || statusOrder || menuEvidenceOrder || a.index - b.index;
   }
 
   function filteredOverviewEntries() {
@@ -911,8 +940,8 @@ function overviewSearchText(entry) {
       ['all', '전체', null],
       ['open', '지금 영업 중', counts.openNow],
       ['closing-soon', '곧 종료', counts['closing-soon']],
-      ['closed', '영업 종료', null],
-      ['unknown', '시간 미확인', null]
+      ['unknown', '시간 미확인', null],
+      ['closed', '영업 종료', null]
     ];
   }
 
