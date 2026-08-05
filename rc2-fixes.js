@@ -261,11 +261,12 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
   const result = [];
   const groups = [];
   for (const store of fxRankStores(spec)) {
+    const status = storeBusinessStatusPriority(store);
     const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
     const tier = typeof rc6OwnershipTier === 'function' ? rc6OwnershipTier(store) : 2;
-    const key = `${bucket}:${tier}`;
+    const key = `${status}:${bucket}:${tier}`;
     const last = groups[groups.length - 1];
-    if (!last || last.key !== key) groups.push({key, bucket, stores: [store]});
+    if (!last || last.key !== key) groups.push({key, status, bucket, stores: [store]});
     else last.stores.push(store);
   }
   for (const group of groups) {
@@ -304,8 +305,9 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
   };
   const localGroups = groups.filter(group => group.bucket === 0);
   const otherGroups = groups.filter(group => group.bucket !== 0);
+  const finish = () => sortStoresByBusinessStatus(result);
   if (spec.pattern && localGroups.length) {
-    if (fillGroups(localGroups)) return result;
+    if (fillGroups(localGroups)) return finish();
     const nearbyTarget = Math.min(limit, result.length + 2);
     const nearbyStores = otherGroups.flatMap(group => group.stores).sort((a, b) => {
       const aDistance = Number(a.rc6SortDistance ?? a.distance ?? a.rc6NeighborhoodDistance);
@@ -313,14 +315,14 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
       return (Number.isFinite(aDistance) ? aDistance : Infinity) - (Number.isFinite(bDistance) ? bDistance : Infinity);
     });
     fillGroups([{stores: nearbyStores}], false, nearbyTarget);
-    if (result.length >= limit) return result;
-    if (fillGroups(localGroups, true)) return result;
+    if (result.length >= limit) return finish();
+    if (fillGroups(localGroups, true)) return finish();
     fillGroups(otherGroups);
-    return result;
+    return finish();
   }
   fillGroups(groups);
   if (result.length < limit) fillGroups(groups, true);
-  return result;
+  return finish();
 }
 
 function rc2RailCard(store) {
