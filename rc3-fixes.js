@@ -95,6 +95,9 @@ const RC3_CARD_PRIMARY_CHANNELS = Object.freeze([
 
 function rc3CardChannelFallback(store, key) {
   if (key === 'phone' && RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(store?.id || ''))) return null;
+  if (key === 'phone' && fxPhoneByStore.has(String(store?.id || ''))) {
+    return {key, name: APP_META[key]?.label || key};
+  }
   if (!storeHasChannel(store, key)) return null;
   return {key, name: APP_META[key]?.label || key};
 }
@@ -579,11 +582,6 @@ fxInstallEvents = function rc3InstallEvents() {
 const rc3InitializeBase = fxInitialize;
 fxInitialize = async function rc3Initialize() {
   await rc3InitializeBase();
-  for (const store of stores) {
-    const id = String(store.id || '');
-    if (!id || RC3_BLOCKED_PHONE_ROUTE_STORES.has(id) || !fxPhoneByStore.has(id)) continue;
-    store.channelKeys = [...new Set([...(Array.isArray(store.channelKeys) ? store.channelKeys : []), 'phone'])];
-  }
   const internalPhones = await fetchJson(RC3_PHONE_INTERNAL_URL, {stores: []});
   rc3InternalPhoneByStore = new Map((internalPhones.stores || []).map(item => [String(item.store_id), item]));
   const activeStoreId = String($('#modalContent .store-detail')?.dataset.storeId || '');

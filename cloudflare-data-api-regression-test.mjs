@@ -152,6 +152,10 @@ const cardContext = {
     ['phone', 'phoneOrder']
   ],
   RC3_BLOCKED_PHONE_ROUTE_STORES: new Set(['blocked-phone-store']),
+  fxPhoneByStore: new Map([
+    ['marker-store', {clickableTel: true}],
+    ['blocked-phone-store', {clickableTel: true}]
+  ]),
   APP_META: {
     direct: {label: '가게바로주문'},
     mukkebi: {label: '먹깨비'},
@@ -172,6 +176,11 @@ const catalogCardKeys = vm.runInContext(
   cardContext
 );
 assert.deepEqual(plain(catalogCardKeys), ['direct', 'mukkebi', 'ddangyo', 'phone'], 'catalog channelKeys must restore card icons without exposing URLs');
+const markerCardKeys = vm.runInContext(
+  `rc3PrimaryCardChannels({id: 'marker-store', channelKeys: ['ddangyo']}).map(item => item.key)`,
+  cardContext
+);
+assert.deepEqual(plain(markerCardKeys), ['ddangyo', 'phone'], 'verified phone markers must add card icons without changing channelKeys');
 const blockedPhoneKeys = vm.runInContext(
   `rc3PrimaryCardChannels({id: 'blocked-phone-store', channelKeys: ['mukkebi', 'phone']}).map(item => item.key)`,
   cardContext
@@ -201,7 +210,8 @@ assert.match(physicalMapSource, /rc3SamePhysicalPlace\(store, candidate\)/, 'phy
 assert.doesNotMatch(physicalMapSource, /store\.routes|routes\.push/, 'shop-in-shop order routes must never be copied from a parent store');
 assert.match(rc3, /rc3EnhanceStoreDetail\(store\);\s*void rc3RecoverVerifiedPhysicalMap\(store\);/, 'detail rendering must recover shared physical utilities after secure detail loads');
 assert.match(rc3, /rc3InternalPhoneByStore = new Map[\s\S]*?activeStoreId[\s\S]*?void rc3RecoverVerifiedPhysicalMap\(activeStore\)/, 'a shared-store deep link must retry map recovery after the phone index finishes loading');
-assert.match(rc3, /fxPhoneByStore\.has\(id\)[\s\S]*?store\.channelKeys[\s\S]*?'phone'/, 'verified phone markers must hydrate card channel keys');
+assert.match(rc3, /key === 'phone' && fxPhoneByStore\.has/, 'verified phone markers must render phone icons on customer cards');
+assert.doesNotMatch(rc3, /store\.channelKeys\s*=\s*\[\.\.\.new Set[\s\S]*?'phone'/, 'phone card markers must not alter secure-detail route expectations');
 assert.equal(new Set(phoneRuntime.storeMappings.map(item => String(item.store_id))).size, phoneRuntime.storeMappings.length, 'phone card markers must stay unique');
 assert(phoneRuntime.storeMappings.some(item => item.store_id === 'cddefac029bc4e71' && item.clickableTel === true), '폭탄치밥 card must expose the verified phone marker');
 assert.match(services, /rail-card\[data-rail-card-store\]/, 'recommendation rail cards must show opening status');
