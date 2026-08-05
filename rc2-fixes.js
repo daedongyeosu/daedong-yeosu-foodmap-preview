@@ -607,18 +607,12 @@ function rc2StartAmbient(firstEntry = false) {
 }
 
 function rc2RememberExternalReturn() {
+  window.daedongMarkExternalAppDeparture?.();
   const modal = $('#modal');
   const storeId = modal?.dataset.activeStoreId || modal?.querySelector('[data-store-id]')?.dataset.storeId || history.state?.storeId;
   if (!storeId) return;
   const card = modal.querySelector('.modal-card');
   sessionStorage.setItem(RC2_EXTERNAL_RETURN, JSON.stringify({storeId: String(storeId), pageScroll: Number(document.body.dataset.lockScrollY || 0), modalScroll: card?.scrollTop || 0, savedAt: Date.now()}));
-}
-
-function rc2OpenYogiyoSameTab(link) {
-  if (!link?.href) return false;
-  rc2RememberExternalReturn();
-  window.location.assign(link.href);
-  return true;
 }
 
 async function rc2RestoreAfterExternalPage() {
@@ -722,20 +716,13 @@ fxInstallEvents = function rc2InstallEvents() {
     }
     const favorite = event.target.closest('[data-favorite-store]');
     if (favorite) fxGull(favorite, true);
-    const yogiyoExternal = event.target.closest('a[data-community-original="yogiyo"]');
-    if (yogiyoExternal) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      rc2OpenYogiyoSameTab(yogiyoExternal);
-      return;
-    }
     const comparedExternal = event.target.closest('a[data-community-original]');
     if (comparedExternal && rc2ModalStack.at(-1)?.html.includes('class="store-detail"')) {
       event.preventDefault();
       event.stopImmediatePropagation();
       rc2RememberExternalReturn();
-      window.open(comparedExternal.href, '_blank', 'noopener');
-      history.back();
+      const href = safeHref(comparedExternal.getAttribute('href'));
+      if (href !== '#') window.location.assign(href);
       return;
     }
     const externalLink = event.target.closest('a[target="_blank"],a[data-final-app-channel],a[data-detail-only]');

@@ -212,17 +212,17 @@
   function otherOrderMarkup(store) {
     const external = orderChannels(store).externalOrder || {};
     const definitions = [
-      ['요기요', external.yogiyo],
-      ['쿠팡이츠', external.coupangEats],
-      ['배달의민족', external.baemin]
-    ].filter(([, channel]) => Boolean(channelUrl(channel)));
+      ['yogiyo', '요기요', external.yogiyo],
+      ['coupang', '쿠팡이츠', external.coupangEats],
+      ['baemin', '배달의민족', external.baemin]
+    ].filter(([, , channel]) => Boolean(channelUrl(channel)));
     if (!definitions.length) return '';
     return `
       <div class="menu-other-orders">
         <div class="menu-other-order-list" data-menu-other-list aria-live="polite" hidden>
           <p>다른 주문앱을 선택하세요</p>
-          ${definitions.map(([label, channel]) => `
-            <a href="${escapeMenuHtml(channelUrl(channel))}" target="_blank" rel="noopener">
+          ${definitions.map(([key, label, channel]) => `
+            <a href="${escapeMenuHtml(channelUrl(channel))}" target="_blank" rel="noopener" data-menu-external-key="${escapeMenuHtml(key)}">
               <span>${label}</span><b>›</b>
             </a>
           `).join('')}

@@ -16,6 +16,7 @@ const SELECTED_EXTERNAL_KEY = 'daedongSelectedExternalV1';
 const SELECTED_ORDER_COMPAT_KEY = 'DaedongSelectedOrderApp';
 const ADDRESS_KEY = 'daedongDeliveryAddressV2';
 const ADDRESS_BOOK_KEY = 'daedongAddressBookV2';
+const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
 const FEEDBACK_FORM_URL = 'https://www.notion.so/8ae3728176e344fdaee3475a97d03740';
 const SMALL_BUSINESS_ASSOCIATION_URL = 'https://bit.ly/여수시소상공인연합회공지';
 const ANALYTICS_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/events';
@@ -64,6 +65,11 @@ const GLOBAL_EXTERNAL_APPS = {
   baemin: {label: '배달의민족'}
 };
 const EXTERNAL_APP_NOTICE_TEXT = '앱 이름은 주문 경로 안내를 위해 표시되며, 대동여수음식지도와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
+
+function markExternalAppDeparture() {
+  try { sessionStorage.setItem(EXTERNAL_APP_DEPARTURE_KEY, '1'); } catch {}
+}
+if (typeof window !== 'undefined') window.daedongMarkExternalAppDeparture = markExternalAppDeparture;
 
 const BRAND_GROUPS = [
   {name: '치킨·버거', brands: [
@@ -540,6 +546,7 @@ function handleDdangyoOrderLinkClick(event) {
   if (href === '#') return;
   event.preventDefault(); event.stopImmediatePropagation();
   trackAnalyticsRouteClick(event);
+  markExternalAppDeparture();
   if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
   void openDdangyoRoute(href);
 }
@@ -557,10 +564,39 @@ function handleKakaoOrderLinkClick(event) {
   event.preventDefault();
   event.stopImmediatePropagation();
   trackAnalyticsRouteClick(event);
+  markExternalAppDeparture();
   if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
   window.location.assign(href);
 }
 document.addEventListener('click', handleKakaoOrderLinkClick, true);
+const MOBILE_SAME_TAB_ORDER_KEYS = new Set(['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin']);
+function mobileOrderRouteKey(link) {
+  const raw = String(
+    link?.dataset?.routeKey ||
+    link?.dataset?.communityOriginal ||
+    link?.dataset?.finalAppChannel ||
+    link?.dataset?.menuOrder ||
+    link?.dataset?.menuStickyOrder ||
+    link?.dataset?.menuStickyExternal ||
+    link?.dataset?.menuExternalKey ||
+    ''
+  );
+  return raw === 'coupang-eats' ? 'coupang' : raw;
+}
+function handleMobileOrderLinkClick(event) {
+  if (!/(?:android|iphone|ipad|ipod)/i.test(String(navigator.userAgent || '')) || !(event.target instanceof Element)) return;
+  const link = event.target.closest('a[href]');
+  if (!link || !MOBILE_SAME_TAB_ORDER_KEYS.has(mobileOrderRouteKey(link))) return;
+  const href = safeHref(link.getAttribute('href'));
+  if (href === '#') return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  trackAnalyticsRouteClick(event);
+  markExternalAppDeparture();
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
+  window.location.assign(href);
+}
+document.addEventListener('click', handleMobileOrderLinkClick, true);
 function routeKey(name) {
   const text = normalize(name);
   if (text.includes('가게바로')) return 'direct';
@@ -668,11 +704,34 @@ function applyCategoryPriorityOverrides(list, category) {
     return {item, index, tier};
   }).sort((a, b) => a.tier - b.tier || a.index - b.index).map(row => row.item);
 }
+function isCustomerUsableExternalRoute(key, value) {
+  if (!EXTERNAL_APP_KEYS.includes(key)) return true;
+  try {
+    const url = new URL(value);
+    const host = url.hostname.toLowerCase();
+    const genericHosts = {
+      baemin: new Set(['baemin.com', 'www.baemin.com']),
+      yogiyo: new Set(['yogiyo.co.kr', 'www.yogiyo.co.kr']),
+      coupang: new Set(['coupangeats.com', 'www.coupangeats.com', 'coupang.com', 'www.coupang.com'])
+    };
+    if (!genericHosts[key]?.has(host)) return true;
+    const path = url.pathname.replace(/\/+$/, '') || '/';
+    const genericPaths = key === 'yogiyo' ? new Set(['/', '/mobile']) : new Set(['/']);
+    if (!genericPaths.has(path)) return true;
+    const meaningfulQuery = [...url.searchParams.values()].some(item => String(item || '').trim());
+    const meaningfulHash = decodeURIComponent(url.hash || '').replace(/^#\/?/, '').trim();
+    return Boolean(meaningfulQuery || meaningfulHash);
+  } catch { return false; }
+}
 function normalizedStore(raw, index) {
   const sourceRoutes = Array.isArray(raw?.routes) ? raw.routes : [];
   const routes = sourceRoutes
     .filter(route => route && route.enabled !== false && route.url && safeHref(route.url) !== '#')
-    .map(route => ({...route, key: routeKey(route.name), url: safeHref(route.url)}));
+    .map(route => {
+      const key = routeKey(route.name);
+      const url = safeHref(route.url);
+      return {...route, key, url, customerUsable: isCustomerUsableExternalRoute(key, url)};
+    });
   const area = raw.district || raw.area || '';
   const rawLat = parseCoordinate(raw.latitude ?? raw.lat);
   const rawLng = parseCoordinate(raw.longitude ?? raw.lng);
@@ -717,8 +776,12 @@ function normalizedStore(raw, index) {
   };
 }
 function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
-function routeFor(store, key) { return (Array.isArray(store?.routes) ? store.routes : []).find(route => route?.key === key); }
-function storeHasChannel(store, key) { return Boolean(routeFor(store, key) || store?.channelKeys?.includes?.(key)); }
+function routeFor(store, key) { return (Array.isArray(store?.routes) ? store.routes : []).find(route => route?.key === key && route?.customerUsable !== false); }
+function storeHasChannel(store, key) {
+  if (routeFor(store, key)) return true;
+  if (store?.__secureDetailReady === true && EXTERNAL_APP_KEYS.includes(key)) return false;
+  return Boolean(store?.channelKeys?.includes?.(key));
+}
 function brandMatchesStore(store, brand) { const text = storeText(store); return brand.aliases.some(alias => text.includes(normalize(alias))); }
 function brandCount(brand) { return stores.filter(store => brandMatchesStore(store, brand)).length; }
 function haversine(a, b) {

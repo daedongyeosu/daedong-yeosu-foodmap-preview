@@ -29,6 +29,7 @@ jobs:
           node --check rc7-address-map.js
           node --check store-service-info.js
           node --check store-menu-preview.js
+          node --check mukkebi-summer-event.js
       - name: Verify API client and existing static contracts
         run: |
           node scripts/audit-public-repository.mjs
@@ -47,6 +48,7 @@ jobs:
           node hero-store-direct-popup-regression-test.mjs
           node home-address-ux-regression-test.mjs
           node saved-address-flow-regression-test.mjs
+          node simple-app-return-regression-test.mjs
           node inapp-location-recovery-regression-test.mjs
           node kakao-order-link-regression-test.mjs
           node location-ranking-unification-regression-test.mjs
