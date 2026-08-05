@@ -19,7 +19,7 @@ assert.match(menu,
   '늦게 생성되는 음식보기 버튼도 영업상태 뒤, 주문방법 앞에 배치해야 합니다.');
 assert.doesNotMatch(menu, /const servicePanel = detail\.querySelector\('\[data-store-service-detail\]'\)/);
 assert.match(html, /store-service-info\.css\?v=store-service-11-customer-popup-order-1/);
-assert.match(html, /store-service-info\.js\?v=store-service-23-customer-popup-order-1/);
+assert.match(html, /store-service-info\.js\?v=store-service-24-neighborhood-picker-label-1/);
 assert.match(html, /store-menu-preview\.js\?v=store-menu-22-customer-popup-order-1/);
 
 console.log('store-popup-info-menu-order-regression-test: pass');

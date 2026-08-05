@@ -44,10 +44,12 @@ assert.match(addressMap, /shortAddress\(label, state\.location\)/);
 assert.doesNotMatch(service, /data-store-service-address-change/);
 assert.doesNotMatch(service, />주소 변경<\/button>/);
 assert.match(service, /`\$\{location\} 기준 · 가까운 순`/);
+assert.match(service, /data-store-service-quick-location="all">동네 선택<\/button>/);
+assert.doesNotMatch(service, />전체 동네<\/button>/);
 assert.match(style, /grid-template-columns:\s*auto minmax\(0, 1fr\);/);
 assert.doesNotMatch(style, /\.store-finder-location button/);
 
 assert.match(html, /home-address-short-1/);
-assert.match(html, /store-service-23-customer-popup-order-1/);
+assert.match(html, /store-service-24-neighborhood-picker-label-1/);
 
 console.log('home address UX regression checks passed');

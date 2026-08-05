@@ -25,7 +25,7 @@ assert.match(menu,
   /menuChromeRevealTimer = window\.setTimeout\(\(\) => \{[\s\S]*?menu-chrome-hidden[\s\S]*?\}, 1200\);/,
   '사진 탐색을 멈춘 뒤 검색창과 주문방법은 1.2초 후에 다시 나타나야 합니다.');
 
-assert.match(html, /store-service-info\.js\?v=store-service-23-customer-popup-order-1/,
+assert.match(html, /store-service-info\.js\?v=store-service-24-neighborhood-picker-label-1/,
   '검색 수정본 캐시 버전이 필요합니다.');
 assert.match(html, /store-menu-preview\.js\?v=store-menu-22-customer-popup-order-1/,
   '메뉴 수정본 캐시 버전이 필요합니다.');
