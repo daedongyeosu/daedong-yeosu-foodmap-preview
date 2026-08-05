@@ -12,6 +12,6 @@ assert.match(menu,
   /const servicePanel = detail\.querySelector\('\[data-store-service-detail\]'\)[\s\S]*?insertAdjacentHTML\(servicePanel \? 'afterend' : 'beforebegin'/,
   '늦게 생성되는 음식보기 버튼도 영업시간·혜택 바로 뒤에 배치해야 합니다.');
 assert.match(html, /store-service-info\.js\?v=store-service-19-popup-info-first-1/);
-assert.match(html, /store-menu-preview\.js\?v=store-menu-20-popup-info-first-1/);
+assert.match(html, /store-menu-preview\.js\?v=store-menu-21-chrome-reveal-delay-1/);
 
 console.log('store-popup-info-menu-order-regression-test: pass');

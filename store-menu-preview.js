@@ -451,7 +451,7 @@
     menuChromeRevealTimer = window.setTimeout(() => {
       preview.classList.remove('menu-chrome-hidden');
       menuChromeRevealTimer = 0;
-    }, 500);
+    }, 1200);
   }
 
   async function openMenuPreview(storeId, trigger, options = {}) {
