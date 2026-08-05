@@ -463,7 +463,7 @@ fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1-release-readiness-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
@@ -475,9 +475,9 @@ fxRc2Script.onload=()=>{
    fxRc5Script.async=false;
    fxRc5Script.onload=()=>{
     const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=location-store-hero-1-handsu-copy-spacing-1';document.head.append(css);
-    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1';
+    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1';
     script.onload=()=>{
-     const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=address-home-return-1-coarse-region-1-inapp-location-recovery-1-outside-yeosu-full-list-1-saved-address-first-1';
+     const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=address-home-return-1-coarse-region-1-inapp-location-recovery-1-outside-yeosu-full-list-1-saved-address-first-1-release-readiness-1';
      addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{try{await window.daedongCatalogReady;await fxInitialize();await rc6Initialize();window.rc7Initialize?.();await fxOpenSharedStoreFromUrl();fxFinishLocationRankingReady(true);}catch(error){console.error('위치 기반 가게 정렬을 초기화하지 못했습니다.',error);fxFinishLocationRankingReady(false);}},0);};
      addressScript.onerror=()=>{console.error('RC7 주소·지도 검수 레이어를 불러오지 못했습니다.');fxFinishLocationRankingReady(false);};
      document.head.append(addressScript);
