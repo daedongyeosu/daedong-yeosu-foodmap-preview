@@ -11,7 +11,7 @@ const responses = new Map([
   ['/api/menu-search?q=%EC%A1%B1%EB%B0%9C', {stores: {}}]
 ]);
 const context = {
-  window: {},
+  window: {setTimeout, clearTimeout},
   fetch: async (url, init) => {
     const parsed = new URL(url);
     calls.push({url, path: `${parsed.pathname}${parsed.search}`, init});
@@ -25,7 +25,8 @@ const context = {
   Map,
   Set,
   String,
-  Error
+  Error,
+  AbortController
 };
 vm.createContext(context);
 vm.runInContext(fs.readFileSync('data-api.js', 'utf8'), context);
@@ -39,6 +40,7 @@ assert.equal(calls.filter(call => call.path === '/api/catalog').length, 1, 'cata
 assert.equal(calls[0].init.headers['X-Daedong-Client'], 'daedong-preview-web-v1-20260804');
 assert.equal(calls[0].init.credentials, 'omit');
 assert.equal(calls[0].init.cache, 'no-store');
+assert.ok(calls[0].init.signal instanceof AbortSignal, 'API request must carry a bounded abort signal');
 assert.deepEqual(plain(await api.detail('A'.repeat(16))), {id: 'a'.repeat(16), routes: []});
 assert.deepEqual(plain(await api.menu('a'.repeat(16))), {storeId: 'a'.repeat(16), items: []});
 assert.deepEqual(plain(await api.services()), {programs: [], stores: {}});
@@ -64,12 +66,12 @@ assert(!services.includes('store-service-info.json'));
 assert(!services.includes('store-menu-search-index'));
 assert(!menus.includes('store-menu-content/'));
 assert(menus.includes('window.daedongDataApi.menu(storeId)'));
-assert(app.includes('window.daedongDataApi?.catalog?.()'));
+assert(app.includes('window.daedongDataApi?.catalog?.({timeoutMs: 6500})'));
 assert(app.includes('await secureDetail.enrich(store, normalizedStore)'));
 assert(finalExperience.includes('const opened=await fxOriginalOpenStore(store)'));
 assert(rc2.includes('const opened = await fxOriginalOpenStore(store)'));
 assert(rc3.includes('const opened = await rc3OpenStoreBase(store)'));
-assert(services.includes('window.daedongDataApi.services()'));
+assert(services.includes('window.daedongDataApi.services({timeoutMs: 4000})'));
 
 const expectedRoutes = [
   ['direct', '가게바로주문'],

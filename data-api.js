@@ -7,6 +7,7 @@
     Accept: 'application/json',
     'X-Daedong-Client': CLIENT_HEADER
   });
+  const REQUEST_TIMEOUT_MS = 8000;
   const cache = new Map();
 
   function safeStoreId(value) {
@@ -15,28 +16,44 @@
     return id;
   }
 
-  async function request(path, {cacheKey = '', signal} = {}) {
+  function createRequestAbort(signal, timeoutMs) {
+    const controller = new AbortController();
+    const abort = () => controller.abort();
+    if (signal?.aborted) abort();
+    else signal?.addEventListener?.('abort', abort, {once: true});
+    const timeoutId = window.setTimeout(abort, Math.max(1000, Number(timeoutMs) || REQUEST_TIMEOUT_MS));
+    return {
+      signal: controller.signal,
+      cleanup() {
+        window.clearTimeout(timeoutId);
+        signal?.removeEventListener?.('abort', abort);
+      }
+    };
+  }
+
+  async function request(path, {cacheKey = '', signal, timeoutMs = REQUEST_TIMEOUT_MS} = {}) {
     if (cacheKey && cache.has(cacheKey)) return cache.get(cacheKey);
+    const requestAbort = createRequestAbort(signal, timeoutMs);
     const pending = fetch(`${BASE_URL}${path}`, {
       method: 'GET',
       mode: 'cors',
       credentials: 'omit',
       cache: 'no-store',
       headers: JSON_HEADERS,
-      signal
+      signal: requestAbort.signal
     }).then(async response => {
       if (!response.ok) throw new Error(`데이터를 불러오지 못했습니다. (${response.status})`);
       return response.json();
     }).catch(error => {
       if (cacheKey) cache.delete(cacheKey);
       throw error;
-    });
+    }).finally(requestAbort.cleanup);
     if (cacheKey) cache.set(cacheKey, pending);
     return pending;
   }
 
-  const catalog = () => request('/api/catalog', {cacheKey: 'catalog'});
-  const services = () => request('/api/services', {cacheKey: 'services'});
+  const catalog = options => request('/api/catalog', {cacheKey: 'catalog', ...options});
+  const services = options => request('/api/services', {cacheKey: 'services', ...options});
   const detail = storeId => {
     const id = safeStoreId(storeId);
     return request(`/api/store/${id}`, {cacheKey: `detail:${id}`});
