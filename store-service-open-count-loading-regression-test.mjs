@@ -19,6 +19,6 @@ assert.match(runtime, /if \(serviceLoadState === 'ready' && sourceStores\(\)\.le
   '영업시간과 가게목록이 준비된 뒤에만 영업 중 필터를 열어야 합니다.');
 assert.match(runtime, /else \{\s*showOverview\(trigger, \{status: 'all'\}\)/,
   '영업시간 확인 실패 시 빈 영업 중 결과가 아니라 전체 가게를 보여줘야 합니다.');
-assert.match(html, /store-service-info\.js\?v=store-service-22-mobile-api-deadline-1/);
+assert.match(html, /store-service-info\.js\?v=store-service-23-customer-popup-order-1/);
 
 console.log('PASS: 영업시간 로딩 중 0곳 오표시와 빈 목록 진입을 방지합니다.');

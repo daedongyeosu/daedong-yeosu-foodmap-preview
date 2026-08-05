@@ -6,12 +6,20 @@ const menu = fs.readFileSync('store-menu-preview.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
 
 assert.match(service,
-  /const target = detail\.querySelector\('\[data-store-menu-preview\]'\)[\s\S]*?detail\.querySelector\('\.detail-routes'\)[\s\S]*?target\.before\(panel\)/,
-  '영업시간·혜택은 음식보기와 주문방법보다 먼저 배치해야 합니다.');
+  /const topStatusTarget = detail\.querySelector\('\[data-store-menu-preview\]'\)[\s\S]*?detail\.querySelector\('\.detail-routes'\)[\s\S]*?topStatusTarget\.before\(topStatus\)/,
+  '현재 영업상태는 음식보기 바로 앞에 배치해야 합니다.');
+assert.match(service,
+  /const actionsTarget = detail\.querySelector\('\.detail-personal-actions'\)[\s\S]*?actionsTarget\.before\(panel\)/,
+  '영업시간·혜택은 주문방법 뒤, 하단 개인기능 앞에 배치해야 합니다.');
+assert.doesNotMatch(service,
+  /<h3>영업시간·주문앱별 혜택<\/h3>\s*<\/div>\s*<span class="store-service-status/,
+  '영업상태는 상세 이용정보 안에 중복 표시하지 않아야 합니다.');
 assert.match(menu,
-  /const servicePanel = detail\.querySelector\('\[data-store-service-detail\]'\)[\s\S]*?insertAdjacentHTML\(servicePanel \? 'afterend' : 'beforebegin'/,
-  '늦게 생성되는 음식보기 버튼도 영업시간·혜택 바로 뒤에 배치해야 합니다.');
-assert.match(html, /store-service-info\.js\?v=store-service-22-mobile-api-deadline-1/);
-assert.match(html, /store-menu-preview\.js\?v=store-menu-21-chrome-reveal-delay-1/);
+  /const topStatus = detail\.querySelector\('\[data-store-service-top-status\]'\)[\s\S]*?insertAdjacentHTML\(topStatus \? 'afterend' : 'beforebegin'/,
+  '늦게 생성되는 음식보기 버튼도 영업상태 뒤, 주문방법 앞에 배치해야 합니다.');
+assert.doesNotMatch(menu, /const servicePanel = detail\.querySelector\('\[data-store-service-detail\]'\)/);
+assert.match(html, /store-service-info\.css\?v=store-service-11-customer-popup-order-1/);
+assert.match(html, /store-service-info\.js\?v=store-service-23-customer-popup-order-1/);
+assert.match(html, /store-menu-preview\.js\?v=store-menu-22-customer-popup-order-1/);
 
 console.log('store-popup-info-menu-order-regression-test: pass');

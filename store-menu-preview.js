@@ -42,13 +42,13 @@
       const storeId = String(store.id || store.store_id || '');
       const detail = document.querySelector(`#modalContent .store-detail[data-store-id="${storeId}"]`);
       if (!detail || detail.querySelector('[data-store-menu-preview]')) continue;
-      const servicePanel = detail.querySelector('[data-store-service-detail]');
-      const target = servicePanel
+      const topStatus = detail.querySelector('[data-store-service-top-status]');
+      const target = topStatus
         || detail.querySelector('.detail-routes')
         || detail.querySelector('.detail-personal-actions');
       if (!target) continue;
       const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
-      target.insertAdjacentHTML(servicePanel ? 'afterend' : 'beforebegin', `
+      target.insertAdjacentHTML(topStatus ? 'afterend' : 'beforebegin', `
         <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
           ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="">` : ''}
           <span>

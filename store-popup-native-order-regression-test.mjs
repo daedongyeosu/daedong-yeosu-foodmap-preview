@@ -46,14 +46,17 @@ assert.match(rc3Enhance, /const orderAnchor = menuEntry \|\| detail\.querySelect
 assert.match(rc3Enhance, /\$\{direct\}\$\{apps\}\$\{community\}\$\{phone/);
 
 const decorateDetails = extractFunction(service, 'decorateStoreDetails');
-assert.match(decorateDetails, /const target = detail\.querySelector\('\[data-store-menu-preview\]'\)[\s\S]*?detail\.querySelector\('\.detail-routes'\)[\s\S]*?detail\.querySelector\('\.detail-personal-actions'\)/);
-assert.match(decorateDetails, /target\.before\(panel\)/);
+assert.match(decorateDetails, /const topStatusTarget = detail\.querySelector\('\[data-store-menu-preview\]'\)[\s\S]*?detail\.querySelector\('\.detail-routes'\)[\s\S]*?detail\.querySelector\('\.detail-personal-actions'\)/);
+assert.match(decorateDetails, /topStatusTarget\.before\(topStatus\)/);
+assert.match(decorateDetails, /const actionsTarget = detail\.querySelector\('\.detail-personal-actions'\)/);
+assert.match(decorateDetails, /actionsTarget\.before\(panel\)/);
 assert.match(service, /detailBenefitItems\(info\)\.filter\(item => item\.state === 'available'\)/);
 assert.match(service, /giftAvailable && giftRoute\?\.url/);
 assert.match(service, /class="store-service-gift-app-link"/);
 
 const menuFallback = extractFunction(menu, 'ensureMenuEntryButton');
-assert.match(menuFallback, /detail\.querySelector\('\[data-store-service-detail\]'\)[\s\S]*?detail\.querySelector\('\.detail-routes'\)/);
+assert.match(menuFallback, /detail\.querySelector\('\[data-store-service-top-status\]'\)[\s\S]*?detail\.querySelector\('\.detail-routes'\)/);
+assert.doesNotMatch(menuFallback, /detail\.querySelector\('\[data-store-service-detail\]'\)/);
 assert.doesNotMatch(`${app}\n${rc3}\n${service}\n${menu}`, /daedongArrangeStoreDetail/);
 
 assert.match(style, /\.store-modal \.modal-close\{position:absolute;/);
@@ -61,13 +64,14 @@ assert.doesNotMatch(style, /\.store-modal \.modal-close\{position:sticky;/);
 assert.match(style, /\.detail-meta-row\{display:grid;/);
 assert.match(style, /\.final-personal-actions \[data-share-store\]\{grid-column:1\/-1\}/);
 assert.match(serviceStyle, /\.store-service-gift-app-link \{/);
+assert.match(serviceStyle, /\.store-service-top-status \{/);
 
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*store-popup-native-order-1/);
 assert.match(html, /app\.css\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /app\.js\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*store-popup-native-order-1/);
-assert.match(html, /store-service-info\.css\?v=store-service-10-native-order-1/);
-assert.match(html, /store-service-info\.js\?v=store-service-22-mobile-api-deadline-1/);
-assert.match(html, /store-menu-preview\.js\?v=store-menu-21-chrome-reveal-delay-1/);
+assert.match(html, /store-service-info\.css\?v=store-service-11-customer-popup-order-1/);
+assert.match(html, /store-service-info\.js\?v=store-service-23-customer-popup-order-1/);
+assert.match(html, /store-menu-preview\.js\?v=store-menu-22-customer-popup-order-1/);
 
 console.log('PASS: 가게 팝업 최초 생성 순서·혜택·지도·하단버튼·모바일 반복방지 유지');
