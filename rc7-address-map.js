@@ -76,6 +76,42 @@
     return [item?.address, item?.detail, item?.type].map(value => String(value || '').trim()).join('|');
   }
 
+  function localAddress(value = '') {
+    return String(value || '')
+      .replace(/^(?:(?:전남광주|광주전남)통합특별시|전라남도|전남|광주광역시)\s*/u, '')
+      .replace(/^여수시\s*/u, '')
+      .trim();
+  }
+
+  function addressArea(item = {}) {
+    return neighborhoodFor(item.area) || neighborhoodFor(item.region3) || neighborhoodFor(item.address) || '';
+  }
+
+  function conciseAddress(item = {}) {
+    const area = addressArea(item);
+    const local = localAddress(item.address || item.label || '');
+    const street = area ? local.replace(new RegExp(`^${area}\\s*`, 'u'), '').trim() : local;
+    const text = area && street ? `${area} · ${street}` : area || street || '주소 미설정';
+    return text.length > 27 ? `${text.slice(0, 27)}…` : text;
+  }
+
+  function savedAddressTitle(item = {}) {
+    const nickname = String(item.nickname || '').trim();
+    const area = addressArea(item);
+    return nickname ? [nickname, area].filter(Boolean).join(' · ') : conciseAddress(item);
+  }
+
+  function fullAddress(item = {}) {
+    return [item.address, item.detail].map(value => String(value || '').trim()).filter(Boolean).join(' ');
+  }
+
+  function savedAddressIcon(item = {}) {
+    const nickname = String(item.nickname || '').trim();
+    if (nickname === '우리집') return '⌂';
+    if (nickname === '회사') return '▣';
+    return item.type === 'current' ? '⌖' : '●';
+  }
+
   function savedAddresses() {
     const current = getSavedAddress();
     const result = [];
@@ -100,13 +136,13 @@
     const activeKey = addressKey(getSavedAddress());
     return renderedAddresses.map((item, index) => {
       const active = addressKey(item) === activeKey;
-      const icon = item.type === 'current' ? '⌖' : item.type === 'postcode' ? '⌂' : '📍';
-      const detail = [item.address, item.detail].filter(Boolean).join(' ');
+      const title = savedAddressTitle(item);
+      const detail = fullAddress(item) || item.area || '여수';
       return `<article class="rc7-saved-card ${active ? 'active' : ''}">
-        <button type="button" class="rc7-saved-select" data-rc7-saved="${index}" aria-label="${escapeHtml(item.label)} 주소 선택">
-          <span class="rc7-saved-icon" aria-hidden="true">${icon}</span>
-          <span class="rc7-saved-copy"><b>${escapeHtml(item.label)}</b><small>${escapeHtml(detail || item.area || '여수')}</small></span>
-          <span class="rc7-saved-state">${active ? '사용 중' : '선택'}</span>
+        <button type="button" class="rc7-saved-select" data-rc7-saved="${index}" aria-label="${escapeHtml(title)} 주소 바로 사용">
+          <span class="rc7-saved-icon" aria-hidden="true">${savedAddressIcon(item)}</span>
+          <span class="rc7-saved-copy"><b>${escapeHtml(title)}</b><small>${escapeHtml(detail)}</small></span>
+          <span class="rc7-saved-state">${active ? '사용 중' : '바로 선택'}</span>
         </button>
         <button type="button" class="rc7-saved-delete" data-rc7-delete="${index}" aria-label="${escapeHtml(item.label)} 저장 주소 삭제">삭제</button>
       </article>`;
@@ -178,14 +214,17 @@
   function syncMainAddress() {
     const label = String(state.addressLabel || state.location || '여수시 전체').trim();
     const configured = label && label !== '여수시 전체';
+    const current = getSavedAddress() || {address: label, label, area: state.location};
     const short = configured ? shortAddress(label, state.location) : '주소 설정';
+    const title = configured ? savedAddressTitle(current) : '배달받을 주소를 설정해 주세요';
+    const complete = configured ? fullAddress(current) || label : '주소를 설정하면 가까운 가게부터 볼 수 있습니다';
     const top = document.querySelector('#locationText');
     const main = document.querySelector('#activeAddressText');
     const hint = document.querySelector('#activeAddressHint');
     const button = document.querySelector('#locationBtn');
     if (top) top.textContent = short;
-    if (main) main.textContent = configured ? label : '배달받을 주소를 설정해 주세요';
-    if (hint) hint.textContent = configured ? (state.sortByDistance && state.coords ? '이 위치에서 가까운 가게부터 안내합니다' : `${state.location || '여수'} 기준으로 안내합니다`) : '주소를 설정하면 가까운 가게부터 볼 수 있습니다';
+    if (main) main.textContent = title;
+    if (hint) hint.textContent = complete;
     if (button) button.setAttribute('aria-label', configured ? `현재 배달 위치 ${label}. 주소 변경` : '배달 주소 설정');
   }
 
@@ -199,18 +238,32 @@
     const detailInput = document.querySelector('#addressDetailInput');
     const detail = String(detailInput?.value || addressDraft?.detail || '').trim();
     const coords = validCoords(addressDraft?.coords);
-    const preview = document.querySelector('#addressSelectedPreview');
+    const nickname = String(document.querySelector('#addressNicknameInput')?.value || addressDraft?.nickname || '').trim();
     const confirm = document.querySelector('#addressConfirmBtn');
     const addressText = document.querySelector('#rc7MapAddress');
-    const launchText = document.querySelector('[data-rc5-postcode-open] span');
-    if (preview) {
+    const mapConfirm = document.querySelector('[data-rc7-map-confirm]');
+    const mapArea = currentAreaForCoords(coords);
+    const searchedArea = addressDraft?.addressArea || addressAreaFor(base);
+    const mismatch = Boolean(coords && mapArea && searchedArea && searchedArea !== '여수시 전체' && mapArea !== searchedArea);
+    const previewItem = {...addressDraft, address: base, detail, nickname};
+    document.querySelectorAll('[data-rc7-selected-preview]').forEach(preview => {
       preview.innerHTML = base
-        ? `<span class="rc7-preview-icon" aria-hidden="true">📍</span><span><small>선택한 배달 위치</small><b>${escapeHtml(base)}</b><em>${escapeHtml(detail || (coords ? '지도 위치가 함께 저장됩니다.' : '지도를 움직여 정확한 위치를 맞출 수 있습니다.'))}</em></span>`
-        : '<span class="rc7-preview-icon" aria-hidden="true">📍</span><span><small>선택한 배달 위치</small><b>주소를 검색하거나 저장된 주소를 선택하세요.</b><em>현재 위치 버튼도 사용할 수 있습니다.</em></span>';
+        ? `<span class="rc7-preview-icon" aria-hidden="true">●</span><span><small>선택한 배달 위치</small><b>${escapeHtml(conciseAddress(previewItem))}</b><em>${escapeHtml(fullAddress(previewItem) || '지도에서 위치를 확인해 주세요.')}</em></span>`
+        : '<span class="rc7-preview-icon" aria-hidden="true">●</span><span><small>새 배달 위치</small><b>주소를 먼저 검색해 주세요.</b><em>검색 뒤 지도와 상세주소를 차례로 확인합니다.</em></span>';
+    });
+    if (confirm) confirm.disabled = !base || (!addressDraft?.mapVerified && !addressDraft?.mapUnavailable);
+    if (mapConfirm) mapConfirm.disabled = !base || (!coords && !addressDraft?.mapUnavailable) || mismatch;
+    if (addressText) addressText.textContent = mapArea ? `지도 핀 · ${mapArea}` : (coords ? '지도 핀 위치 확인 중' : '지도를 움직여 배달 위치를 선택하세요');
+    const mapStatus = document.querySelector('#rc7MapStatus');
+    if (mapStatus) {
+      mapStatus.classList.toggle('is-mismatch', mismatch);
+      mapStatus.textContent = mismatch
+        ? `검색 주소는 ${searchedArea}, 지도 핀은 ${mapArea}입니다. 같은 동네로 핀을 옮겨 주세요.`
+        : coords
+          ? `${mapArea || '선택한 위치'}의 지도 핀을 확인한 뒤 아래 버튼을 눌러 주세요.`
+          : '지도를 움직이거나 원하는 곳을 눌러 핀을 맞춰 주세요.';
     }
-    if (confirm) confirm.disabled = !base;
-    if (addressText) addressText.textContent = base || '지도를 움직여 배달 위치를 선택하세요';
-    if (launchText) launchText.textContent = base || '도로명, 건물명 또는 지번으로 검색';
+    document.querySelectorAll('[data-rc7-nickname]').forEach(button => button.classList.toggle('active', button.dataset.rc7Nickname === nickname));
     if (map) setTimeout(() => map?.invalidateSize(), 0);
   }
 
@@ -222,6 +275,84 @@
     setTimeout(() => { mapProgrammaticMove = false; }, 350);
   }
 
+  function showAddressStep(name) {
+    document.querySelectorAll('[data-rc7-step]').forEach(section => {
+      section.hidden = section.dataset.rc7Step !== name;
+    });
+    if (name === 'map') {
+      if (!map) requestAnimationFrame(initializeMap);
+      else setTimeout(() => map.invalidateSize(), 0);
+    }
+    document.querySelector('.rc7-address-main')?.scrollTo({top: 0, behavior: 'auto'});
+    renderDraft();
+  }
+
+  async function geocodeAddress(address) {
+    const value = String(address || '').trim();
+    if (!value) return null;
+    try {
+      const params = new URLSearchParams({
+        format: 'jsonv2',
+        q: value,
+        countrycodes: 'kr',
+        limit: '1',
+        addressdetails: '1',
+        'accept-language': 'ko'
+      });
+      const response = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
+        headers: {accept: 'application/json'},
+        signal: AbortSignal.timeout(5000)
+      });
+      if (!response.ok) return null;
+      const [result] = await response.json();
+      return validCoords({lat: result?.lat, lng: result?.lon});
+    } catch {
+      return null;
+    }
+  }
+
+  async function openMapStep({locateAddress = false} = {}) {
+    addressDraft = {...(addressDraft || {}), mapVerified: false, mapUnavailable: false};
+    showAddressStep('map');
+    if (!locateAddress || validCoords(addressDraft?.coords)) return;
+    const status = document.querySelector('#rc7MapStatus');
+    if (status) status.textContent = '검색한 주소의 지도 위치를 찾고 있습니다…';
+    const coords = await geocodeAddress(addressDraft.address);
+    if (!coords || !document.querySelector('[data-rc7-step="map"]:not([hidden])')) {
+      if (status) status.textContent = '정확한 좌표를 찾지 못했습니다. 지도를 움직여 핀을 직접 맞춰 주세요.';
+      return;
+    }
+    addressDraft = {
+      ...addressDraft,
+      coords,
+      mapArea: currentAreaForCoords(coords),
+      sortByDistance: true,
+      coordinateSource: 'address-geocode'
+    };
+    moveMap(coords, {zoom: 17});
+    renderDraft();
+  }
+
+  function confirmMapPosition() {
+    const coords = validCoords(addressDraft?.coords);
+    const mapArea = currentAreaForCoords(coords);
+    const searchedArea = addressDraft?.addressArea || addressAreaFor(addressDraft?.address || '');
+    const mismatch = Boolean(coords && mapArea && searchedArea && searchedArea !== '여수시 전체' && mapArea !== searchedArea);
+    if ((!coords && !addressDraft?.mapUnavailable) || mismatch) {
+      renderDraft();
+      return;
+    }
+    addressDraft = {
+      ...addressDraft,
+      mapVerified: true,
+      mapArea: mapArea || addressDraft?.mapArea || '',
+      area: mapArea || (searchedArea !== '여수시 전체' ? searchedArea : addressDraft?.area || '여수시 전체'),
+      sortByDistance: Boolean(coords)
+    };
+    showAddressStep('detail');
+    setTimeout(() => document.querySelector('#addressDetailInput')?.focus(), 0);
+  }
+
   function chooseAddress(value, extra = {}) {
     const address = String(value || '').trim();
     const coords = validCoords(extra.coords);
@@ -229,14 +360,22 @@
     const regionValue = key => Object.prototype.hasOwnProperty.call(extra, key)
       ? String(extra[key] || '')
       : String(addressDraft?.[key] || '');
+    const draftValue = key => Object.prototype.hasOwnProperty.call(extra, key)
+      ? String(extra[key] || '')
+      : String(addressDraft?.[key] || '');
     addressDraft = {
       ...(addressDraft || {}),
       address,
+      detail: draftValue('detail'),
+      nickname: draftValue('nickname'),
       area,
+      addressArea: extra.addressArea || area,
       coords,
       sortByDistance: Boolean(coords && extra.sortByDistance !== false),
       type: extra.type || 'recent',
       coordinateSource: extra.coordinateSource || (coords ? 'selected-location' : ''),
+      mapVerified: Boolean(extra.mapVerified),
+      mapUnavailable: false,
       region1: regionValue('region1'),
       region2: regionValue('region2'),
       region3: regionValue('region3'),
@@ -262,10 +401,12 @@
       ...(addressDraft || {}),
       address: currentAddress || `${area === '여수시 전체' ? '여수시' : area} 지도에서 선택한 위치`,
       area,
+      mapArea: localArea,
       coords: point,
       sortByDistance: true,
       type: addressDraft?.type === 'postcode' ? 'postcode' : 'map',
       coordinateSource: 'map-selection',
+      mapVerified: false,
       region1: localArea ? '전라남도' : (addressDraft?.region1 || ''),
       region2: localArea ? '여수시' : (addressDraft?.region2 || ''),
       region3: localArea || addressDraft?.region3 || '',
@@ -283,6 +424,8 @@
     const view = mapViewForDraft();
     if (!window.L) {
       element.innerHTML = '<div class="rc7-map-unavailable"><b>지도를 불러오지 못했습니다.</b><span>주소와 현재 위치 기능은 그대로 사용할 수 있습니다.</span></div>';
+      addressDraft = {...(addressDraft || {}), mapUnavailable: true};
+      renderDraft();
       return;
     }
     map = window.L.map(element, {zoomControl: true, attributionControl: true, preferCanvas: true});
@@ -318,35 +461,48 @@
   function addressModal() {
     const saved = getSavedAddress();
     addressDraft = saved
-      ? {...saved, coords: validCoords(saved.coords), detail: saved.detail || ''}
-      : {address: state.addressLabel === '여수시 전체' ? '' : state.addressLabel, detail: '', area: state.location, coords: validCoords(state.coords), sortByDistance: Boolean(state.coords), type: 'recent'};
+      ? {...saved, coords: validCoords(saved.coords), detail: saved.detail || '', mapVerified: Boolean(validCoords(saved.coords))}
+      : {address: '', detail: '', area: '여수시 전체', coords: null, sortByDistance: false, type: 'recent', mapVerified: false};
     openModal(`<section class="address-single-sheet rc7-address-sheet" data-address-single>
       <div class="rc5-address-form rc7-address-main">
-        <header class="rc7-address-head"><span>배달 위치</span><h2 id="modalTitle">주소 설정</h2><p>지도와 저장 주소로 원하는 위치를 빠르게 바꿀 수 있습니다.</p></header>
-        ${inAppBrowserNoticeMarkup()}
-        <div id="addressSelectedPreview" class="address-selected-preview rc7-selected-preview"></div>
-        <button class="rc5-address-launch rc7-address-search" type="button" data-rc5-postcode-open>
-          <span>${escapeHtml(addressDraft.address || '도로명, 건물명 또는 지번으로 검색')}</span><b>검색</b>
-        </button>
-        <button id="gpsLocationBtn" class="current-location-btn rc7-current-location" type="button"><span class="rc7-gps-symbol" aria-hidden="true">⌖</span><span>현재 위치 다시 확인</span></button>
-        <section id="rc7LocationRecovery" class="rc7-location-recovery" hidden role="status">
-          <span class="rc7-location-recovery-symbol" aria-hidden="true">!</span>
-          <span><b>위치 확인이 어려운가요?</b><small id="rc7LocationRecoveryCopy">주소 검색이나 지도 선택으로도 배달 위치를 정할 수 있습니다.</small></span>
-          <div><button type="button" data-rc5-postcode-open>주소 검색</button><button type="button" data-rc7-map-select>지도에서 선택</button></div>
+        <section class="rc7-address-step rc7-saved-step" data-rc7-step="saved">
+          <header class="rc7-address-head"><span>배달 위치</span><h2 id="modalTitle">어디로 배달할까요?</h2><p>저장한 주소를 누르면 바로 적용됩니다.</p></header>
+          ${inAppBrowserNoticeMarkup()}
+          <section class="rc7-saved-section rc7-saved-first"><div class="address-section-title"><div><small>빠른 주소 선택</small><h3>저장된 주소</h3></div><span>한 번 눌러 바로 적용</span></div><div id="rc7SavedAddressList" class="rc7-saved-list">${savedAddressMarkup()}</div></section>
+          <div class="rc7-address-actions">
+            <button class="rc7-new-address" type="button" data-rc5-postcode-open><span aria-hidden="true">＋</span><span><b>새 주소 등록</b><small>주소 검색부터 시작</small></span><strong>›</strong></button>
+            <button id="gpsLocationBtn" class="current-location-btn rc7-current-location" type="button"><span class="rc7-gps-symbol" aria-hidden="true">⌖</span><span>현재 위치 다시 확인</span></button>
+          </div>
+          <section id="rc7LocationRecovery" class="rc7-location-recovery" hidden role="status">
+            <span class="rc7-location-recovery-symbol" aria-hidden="true">!</span>
+            <span><b>위치 확인이 어려운가요?</b><small id="rc7LocationRecoveryCopy">주소 검색으로도 배달 위치를 정할 수 있습니다.</small></span>
+            <div><button type="button" data-rc5-postcode-open>주소 검색</button><button type="button" data-rc7-map-select>지도에서 선택</button></div>
+          </section>
         </section>
-        <section class="rc7-map-section" aria-labelledby="rc7MapTitle">
-          <header><div><small>지도에서 위치 조정</small><h3 id="rc7MapTitle">핀을 배달 위치에 맞춰 주세요</h3></div><button type="button" data-rc7-map-current aria-label="현재 위치로 지도 이동">⌖</button></header>
-          <div class="rc7-map-wrap"><div id="deliveryAddressMap" aria-label="배달 위치 선택 지도"></div><div class="rc7-center-pin" aria-hidden="true"><span></span></div></div>
-          <div class="rc7-map-copy"><b id="rc7MapAddress"></b><small id="rc7MapHint">지도를 움직이거나 원하는 곳을 눌러 위치를 선택하세요.</small></div>
+
+        <section class="rc7-address-step rc7-map-step" data-rc7-step="map" hidden>
+          <header class="rc7-step-head"><button type="button" data-rc7-step-back="saved" aria-label="주소 선택으로 돌아가기">←</button><span><small>2단계</small><h2>지도에서 위치 확인</h2></span></header>
+          <div class="address-selected-preview rc7-selected-preview" data-rc7-selected-preview></div>
+          <section class="rc7-map-section" aria-labelledby="rc7MapTitle">
+            <header><div><small>지도 위치 확인</small><h3 id="rc7MapTitle">핀을 정확한 위치에 맞춰 주세요</h3></div><button type="button" data-rc7-map-current aria-label="현재 위치로 지도 이동">⌖</button></header>
+            <div class="rc7-map-wrap"><div id="deliveryAddressMap" aria-label="배달 위치 선택 지도"></div><div class="rc7-center-pin" aria-hidden="true"><span></span></div></div>
+            <div class="rc7-map-copy"><b id="rc7MapAddress"></b><small id="rc7MapHint">지도를 움직이거나 원하는 곳을 눌러 위치를 선택하세요.</small></div>
+          </section>
+          <p id="rc7MapStatus" class="rc7-map-status" role="status">지도 핀 위치를 확인해 주세요.</p>
+          <button class="address-confirm-btn rc7-confirm" type="button" data-rc7-map-confirm>이 위치가 맞아요</button>
         </section>
-        <label class="address-detail-label rc7-detail-label"><span>상세주소 <small>선택사항</small></span><input id="addressDetailInput" value="${escapeHtml(addressDraft.detail || '')}" placeholder="동·호수, 건물명" autocomplete="address-line2"></label>
-        <section class="rc7-saved-section"><div class="address-section-title"><div><small>이 기기에 저장됨</small><h3>저장된 주소</h3></div><span>누르면 바로 전환</span></div><div id="rc7SavedAddressList" class="rc7-saved-list">${savedAddressMarkup()}</div></section>
-        <button id="addressConfirmBtn" class="address-confirm-btn rc7-confirm" type="button">이 위치로 설정하기</button>
+
+        <section class="rc7-address-step rc7-detail-step" data-rc7-step="detail" hidden>
+          <header class="rc7-step-head"><button type="button" data-rc7-step-back="map" aria-label="지도 위치 확인으로 돌아가기">←</button><span><small>3단계</small><h2>상세주소 저장</h2></span></header>
+          <div class="address-selected-preview rc7-selected-preview" data-rc7-selected-preview></div>
+          <label class="address-detail-label rc7-detail-label"><span>상세주소 <small>선택사항</small></span><input id="addressDetailInput" value="${escapeHtml(addressDraft.detail || '')}" placeholder="예: 101동 101호, 2층" autocomplete="address-line2"></label>
+          <fieldset class="rc7-nickname-field"><legend>주소 이름 <small>선택사항</small></legend><div><button type="button" data-rc7-nickname="우리집">⌂ 우리집</button><button type="button" data-rc7-nickname="회사">▣ 회사</button><button type="button" data-rc7-nickname="기타">● 기타</button></div><input id="addressNicknameInput" value="${escapeHtml(addressDraft.nickname || '')}" maxlength="12" placeholder="예: 부모님댁, 사무실"></fieldset>
+          <button id="addressConfirmBtn" class="address-confirm-btn rc7-confirm" type="button">이 주소로 설정하기</button>
+        </section>
       </div>
-      <section class="rc5-postcode-view" hidden><header class="rc5-postcode-head"><button type="button" class="rc5-postcode-back" data-rc5-postcode-close>← 돌아가기</button><strong>주소 검색</strong></header><div class="rc5-postcode-frame" data-rc5-postcode-frame></div></section>
+      <section class="rc5-postcode-view" hidden><header class="rc5-postcode-head"><button type="button" class="rc5-postcode-back" data-rc5-postcode-close>← 돌아가기</button><strong>새 주소 검색</strong></header><p class="rc7-postcode-help">도로명·건물명·지번으로 찾은 뒤 지도 위치를 한 번 더 확인합니다.</p><div class="rc5-postcode-frame" data-rc5-postcode-frame></div></section>
     </section>`);
     renderDraft();
-    requestAnimationFrame(initializeMap);
   }
 
   function sizePostcodeFrame(frame) {
@@ -393,7 +549,10 @@
           ].filter(Boolean).join(' '));
           chooseAddressBase(address, {
             area,
+            addressArea: area,
             coords: null,
+            detail: '',
+            nickname: '',
             sortByDistance: false,
             type: 'postcode',
             region1: data.sido || '',
@@ -405,13 +564,12 @@
           if (label) label.textContent = address;
           form.hidden = false;
           view.hidden = true;
-          renderAddressDraft();
-          setTimeout(() => document.querySelector('#addressDetailInput')?.focus(), 0);
+          void openMapStep({locateAddress: true});
         },
         onclose() {
           form.hidden = false;
           view.hidden = true;
-          setTimeout(() => map?.invalidateSize(), 0);
+          showAddressStep('saved');
         }
       });
       postcode.embed(frame, {autoClose: false});
@@ -462,6 +620,7 @@
           sortByDistance: false,
           type: 'current',
           coordinateSource: 'browser-geolocation',
+          mapVerified: true,
           region1: region.region1 || '',
           region2: region.region2 || '',
           region3: region.region3 || '',
@@ -469,6 +628,8 @@
         });
         const hint = document.querySelector('#rc7MapHint');
         if (hint) hint.textContent = '현재 위치가 여수 외 지역이라 여수 전체 가게를 보여드립니다.';
+        addressDraft = {...addressDraft, mapUnavailable: true, mapVerified: true};
+        showAddressStep('detail');
         return;
       }
       const area = region.region3 || region.region2 || '여수시 전체';
@@ -477,6 +638,7 @@
       button.innerHTML = `<span class="rc7-gps-symbol" aria-hidden="true">✓</span><span>${accuracy <= 300 ? '현재 위치 확인 완료' : '위치 확인 완료 · 지도에서 한 번 확인해 주세요'}</span>`;
       chooseAddress(`현재 위치${area !== '여수시 전체' ? ` · ${area}` : ''}`, {
         area,
+        addressArea: area,
         coords,
         sortByDistance: true,
         type: 'current',
@@ -486,6 +648,7 @@
         region3: region.region3 || '',
         regionSource: 'browser_geolocation'
       });
+      void openMapStep();
       const hint = document.querySelector('#rc7MapHint');
       if (hint) hint.textContent = accuracy <= 300 ? '휴대전화의 현재 위치로 지도를 이동했습니다.' : `위치 오차가 약 ${Math.round(accuracy)}m입니다. 지도를 움직여 조정할 수 있습니다.`;
     }, error => {
@@ -498,13 +661,7 @@
   function selectSavedAddress(index) {
     const item = renderedAddresses[Number(index)];
     if (!item) return;
-    addressDraft = {...item, coords: validCoords(item.coords), sortByDistance: Boolean(validCoords(item.coords))};
-    const input = document.querySelector('#addressDetailInput');
-    if (input) input.value = item.detail || '';
-    renderDraft();
-    const view = mapViewForDraft();
-    moveMap(view.coords, {zoom: view.zoom});
-    document.querySelector('.rc7-selected-preview')?.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    activateAddress(item);
   }
 
   function deleteSavedAddress(index) {
@@ -515,6 +672,27 @@
     renderSavedAddresses();
   }
 
+  function activateAddress(raw) {
+    if (!raw) return;
+    const coords = validCoords(raw.coords);
+    const item = {
+      ...raw,
+      label: String(raw.label || fullAddress(raw) || raw.address || '').trim(),
+      area: String(raw.area || currentAreaForCoords(coords) || addressAreaFor(raw.address || '') || '여수시 전체'),
+      coords,
+      sortByDistance: Boolean(coords)
+    };
+    writeLocalJson(ADDRESS_KEY, item);
+    state.location = item.area;
+    state.addressLabel = item.label;
+    state.coords = coords;
+    state.sortByDistance = Boolean(coords);
+    saveLocationState(item.label, coords, Boolean(coords), item);
+    syncMainAddress();
+    hardClose();
+    setTimeout(showHomeAfterAddressCommit, 60);
+  }
+
   function commitAddress() {
     const base = String(addressDraft?.address || '').trim();
     if (!base) {
@@ -522,15 +700,28 @@
       return;
     }
     const detail = String(document.querySelector('#addressDetailInput')?.value || '').trim();
+    const nickname = String(document.querySelector('#addressNicknameInput')?.value || '').trim();
     const coords = validCoords(addressDraft?.coords);
     const inferred = addressAreaFor(base);
-    const area = inferred !== '여수시 전체' ? inferred : (currentAreaForCoords(coords) || addressDraft?.area || '여수시 전체');
+    const mapArea = currentAreaForCoords(coords);
+    const searchedArea = addressDraft?.addressArea || inferred;
+    if (coords && mapArea && searchedArea && searchedArea !== '여수시 전체' && mapArea !== searchedArea) {
+      addressDraft = {...addressDraft, mapVerified: false};
+      showAddressStep('map');
+      return;
+    }
+    if (!addressDraft?.mapVerified && !addressDraft?.mapUnavailable) {
+      showAddressStep('map');
+      return;
+    }
+    const area = mapArea || (inferred !== '여수시 전체' ? inferred : (addressDraft?.area || '여수시 전체'));
     const label = [base, detail].filter(Boolean).join(' ');
     const item = {
       type: addressDraft?.type || 'recent',
       address: base,
       detail,
       label,
+      nickname,
       area,
       coords,
       sortByDistance: Boolean(coords),
@@ -538,16 +729,8 @@
       ...analyticsCoarseRegion(addressDraft),
       createdAt: new Date().toISOString()
     };
-    writeLocalJson(ADDRESS_KEY, item);
     saveAddressBook([item, ...getAddressBook().filter(old => addressKey(old) !== addressKey(item))]);
-    state.location = area;
-    state.addressLabel = label;
-    state.coords = coords;
-    state.sortByDistance = Boolean(coords);
-    saveLocationState(label, coords, Boolean(coords), item);
-    syncMainAddress();
-    hardClose();
-    setTimeout(showHomeAfterAddressCommit, 60);
+    activateAddress(item);
   }
 
   function handleClick(event) {
@@ -562,10 +745,34 @@
     if (mapSelect) {
       event.preventDefault();
       event.stopImmediatePropagation();
-      const section = document.querySelector('.rc7-map-section');
-      section?.scrollIntoView({behavior: 'smooth', block: 'start'});
-      const hint = document.querySelector('#rc7MapHint');
-      if (hint) hint.textContent = '지도를 움직이거나 원하는 곳을 눌러 위치를 선택하세요.';
+      if (!addressDraft?.address) chooseAddress(`${state.location || '여수시'} 지도에서 선택한 위치`, {area: state.location || '여수시 전체'});
+      void openMapStep();
+      return;
+    }
+    const mapConfirm = event.target.closest('[data-rc7-map-confirm]');
+    if (mapConfirm) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      confirmMapPosition();
+      return;
+    }
+    const stepBack = event.target.closest('[data-rc7-step-back]');
+    if (stepBack) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      showAddressStep(stepBack.dataset.rc7StepBack || 'saved');
+      return;
+    }
+    const nickname = event.target.closest('[data-rc7-nickname]');
+    if (nickname) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      const input = document.querySelector('#addressNicknameInput');
+      if (!input) return;
+      input.value = nickname.dataset.rc7Nickname === '기타' ? '' : nickname.dataset.rc7Nickname;
+      addressDraft = {...(addressDraft || {}), nickname: input.value};
+      renderDraft();
+      if (nickname.dataset.rc7Nickname === '기타') input.focus();
       return;
     }
     const gps = event.target.closest('#gpsLocationBtn');
@@ -622,12 +829,12 @@
     if (postcodeCloseBase) {
       rc5ClosePostcode = function rc7ClosePostcode() {
         postcodeCloseBase();
-        setTimeout(() => map?.invalidateSize(), 0);
+        showAddressStep('saved');
       };
     }
     document.addEventListener('click', handleClick, true);
     document.addEventListener('input', event => {
-      if (event.target.id === 'addressDetailInput') renderDraft();
+      if (event.target.id === 'addressDetailInput' || event.target.id === 'addressNicknameInput') renderDraft();
     });
     syncMainAddress();
     const build = document.querySelector('.build-mark');
