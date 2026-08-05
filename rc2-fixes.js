@@ -210,7 +210,7 @@ function rc2RepresentativeMethod(store) {
   return '주문방법 확인';
 }
 
-const RC2_RAIL_RANDOM_SEED = String(Date.now()) + '-' + String(Math.random());
+const RC2_RAIL_RANDOM_SEED = new Date().toLocaleDateString('sv-SE', {timeZone: 'Asia/Seoul'});
 
 function rc2StringSeed(value) {
   let hash = 2166136261;
@@ -269,13 +269,13 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
     else last.stores.push(store);
   }
   for (const group of groups) {
-    group.stores = rc2RandomizedRailStores(group.stores, spec, group.key);
+    group.stores = spec.kind === 'new' ? group.stores : rc2RandomizedRailStores(group.stores, spec, group.key);
   }
   const addStore = (store, relaxDiversity = false, allowReuse = false) => {
     const storeId = String(store.id);
     const useCount = useCounts.get(storeId) || 0;
     if (selectedIds.has(storeId)) return;
-    if (!allowReuse && (globallyUsed.has(storeId) || useCount > 0)) {
+    if (!allowReuse && spec.kind !== 'new' && (globallyUsed.has(storeId) || useCount > 0)) {
       return;
     }
     const brandKey = rc2BrandKey(store);

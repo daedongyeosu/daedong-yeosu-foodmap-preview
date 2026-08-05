@@ -316,8 +316,33 @@
     return sourceStores().find(store => storeIdOf(store) === String(id)) || null;
   }
 
+  function storeAreas(store) {
+    const values = [
+      ...(Array.isArray(store?.neighborhoods) ? store.neighborhoods : []),
+      store?.primaryNeighborhood,
+      store?.area,
+      store?.neighborhood,
+      store?.district,
+      store?.address,
+      store?.name
+    ].filter(Boolean);
+    const names = typeof neighborhoodsFor === 'function'
+      ? values.flatMap(value => neighborhoodsFor(value))
+      : values.map(value => String(value || '').trim()).filter(value => neighborhoodRecord(value));
+    const unique = [...new Set(names.filter(Boolean))];
+    if (unique.length) return unique;
+    const point = coordinateOf(store);
+    if (!point) return [];
+    const closest = neighborhoodRecords()
+      .map(item => ({name:item.name, point:coordinateOf(item)}))
+      .filter(item => item.point)
+      .map(item => ({...item, distance:distanceBetween(point,item.point)}))
+      .sort((a,b)=>a.distance-b.distance)[0]?.name;
+    return closest ? [closest] : [];
+  }
+
   function storeArea(store) {
-    return String(store?.area || store?.neighborhood || '동네 미확인').trim() || '동네 미확인';
+    return storeAreas(store)[0] || '동네 미확인';
   }
 
   function benefitScope(entry, definition) {
@@ -640,6 +665,27 @@
     return null;
   }
 
+  function activeNeighborhood() {
+    if (locationMode === 'selected') return ensureSelectedArea();
+    if (typeof state === 'undefined') return '';
+    const explicit = [state.location, state.addressLabel]
+      .filter(value => value && value !== '여수시 전체')
+      .flatMap(value => typeof neighborhoodsFor === 'function' ? neighborhoodsFor(value) : [String(value).trim()])
+      .find(Boolean);
+    if (explicit) return explicit;
+    const current = coordinateOf(state.coords);
+    return current && typeof closestNeighborhoodForCoordinates === 'function'
+      ? closestNeighborhoodForCoordinates(current)
+      : '';
+  }
+
+  function ownershipTier(store) {
+    if (typeof rc6OwnershipTier === 'function') return rc6OwnershipTier(store);
+    if (store?.managed) return 0;
+    if (store?.sharedManaged) return 1;
+    return 2;
+  }
+
   function distanceBetween(a, b) {
     if (!a || !b) return Number.POSITIVE_INFINITY;
     if (typeof haversine === 'function') return haversine(a, b);
@@ -655,7 +701,7 @@
   function availableAreas() {
     const seen = new Set();
     return sourceStores()
-      .map(storeArea)
+      .flatMap(storeAreas)
       .filter(area => {
         if (area === '동네 미확인' || seen.has(area)) return false;
         seen.add(area);
@@ -676,18 +722,28 @@
 
   function overviewEntries() {
     const reference = referenceCoordinate();
+    const neighborhood = activeNeighborhood();
     return sourceStores().map((store, index) => {
       const storeId = storeIdOf(store);
       const info = serviceData.stores?.[storeId];
-      const area = storeArea(store);
-      const areaCoordinate = coordinateOf(neighborhoodRecord(area));
+      const areas = storeAreas(store);
+      const area = areas[0] || '동네 미확인';
+      const storeCoordinate = coordinateOf(store);
+      const areaDistance = !reference
+        ? Number.POSITIVE_INFINITY
+        : storeCoordinate
+          ? distanceBetween(reference, storeCoordinate)
+          : Math.min(...areas.map(name => distanceBetween(reference, coordinateOf(neighborhoodRecord(name)))), Number.POSITIVE_INFINITY);
       return {
         storeId,
         store,
         info,
         area,
+        areas,
         index,
-        areaDistance: reference ? distanceBetween(reference, areaCoordinate) : Number.POSITIVE_INFINITY,
+        locationBucket: neighborhood && areas.includes(neighborhood) ? 0 : neighborhood ? 1 : 2,
+        ownershipTier: ownershipTier(store),
+        areaDistance,
         status: storeStatus(info),
         benefits: benefitLabels(info),
         menuMatches: menuMatchesForStore(storeId, overviewQuery, store)
@@ -779,27 +835,36 @@ function overviewSearchText(entry) {
     return entry.menuMatches.length ? 5 : 6;
   }
 
+  function compareOverviewEntries(a, b) {
+    const queryOrder = overviewQueryPriority(a) - overviewQueryPriority(b);
+    if (locationMode === 'nearby' && referenceCoordinate()) {
+      return queryOrder
+        || a.locationBucket - b.locationBucket
+        || a.ownershipTier - b.ownershipTier
+        || a.areaDistance - b.areaDistance
+        || a.area.localeCompare(b.area, 'ko')
+        || a.index - b.index;
+    }
+    if (locationMode === 'selected') {
+      return queryOrder
+        || a.ownershipTier - b.ownershipTier
+        || a.areaDistance - b.areaDistance
+        || a.index - b.index;
+    }
+    return queryOrder || a.index - b.index;
+  }
+
   function filteredOverviewEntries() {
     const scoped = overviewEntries().filter(entry => {
       if (!entryMatchesQuery(entry)) return false;
-      if (locationMode === 'selected' && entry.area !== ensureSelectedArea()) return false;
+      if (locationMode === 'selected' && !entry.areas.includes(ensureSelectedArea())) return false;
       if (activeStatus === 'open' && !['open', 'closing-soon'].includes(entry.status.state)) return false;
       if (activeStatus !== 'all' && activeStatus !== 'open' && entry.status.state !== activeStatus) return false;
       if (activeBenefit !== 'all' && !acceptsBenefit(entry.info, activeBenefit)) return false;
       return true;
     });
 
-    const queryOrder = (a, b) => overviewQueryPriority(a) - overviewQueryPriority(b);
-    if (locationMode === 'nearby' && referenceCoordinate()) {
-      scoped.sort((a, b) => (
-        queryOrder(a, b)
-        || a.areaDistance - b.areaDistance
-        || a.area.localeCompare(b.area, 'ko')
-        || a.index - b.index
-      ));
-    } else {
-      scoped.sort((a, b) => queryOrder(a, b) || a.index - b.index);
-    }
+    scoped.sort(compareOverviewEntries);
     return scoped;
   }
 
@@ -918,7 +983,7 @@ function overviewSearchText(entry) {
     ensureSelectedArea();
     const allEntries = overviewEntries();
     const locationAndBenefitEntries = allEntries.filter(entry => (
-      (locationMode !== 'selected' || entry.area === selectedArea)
+      (locationMode !== 'selected' || entry.areas.includes(selectedArea))
       && (activeBenefit === 'all' || acceptsBenefit(entry.info, activeBenefit))
       && entryMatchesQuery(entry)
     ));
@@ -1166,8 +1231,12 @@ function overviewSearchText(entry) {
     });
   }
 
-  const ready = loadServiceData()
-    .then(data => {
+  const ready = Promise.all([
+    loadServiceData(),
+    window.daedongCatalogReady || Promise.resolve(),
+    window.daedongLocationRankingReady || Promise.resolve(false)
+  ])
+    .then(([data]) => {
       serviceData = data;
       serviceLoadState = 'ready';
       ensureOverviewButtons();
