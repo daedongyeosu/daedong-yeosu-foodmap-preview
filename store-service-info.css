@@ -183,6 +183,11 @@ body.store-service-overview-open {
   background: #d34a4a;
 }
 
+.store-service-top-status {
+  width: fit-content;
+  margin: 0 3px 9px;
+}
+
 .store-service-card-hours {
   color: #647087;
   font-size: 11px;

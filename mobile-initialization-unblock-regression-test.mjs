@@ -28,7 +28,7 @@ assert.match(services, /loadFailed \? '다시 확인' : '확인 중'/,
 assert.match(html, /cloudflare-preview-api-3-mobile-deadline-1/);
 assert.match(html, /catalog-ready-watchdog-2/);
 assert.match(html, /location-ranking-watchdog-2/);
-assert.match(html, /store-service-22-mobile-api-deadline-1/);
+assert.match(html, /store-service-23-customer-popup-order-1/);
 assert.match(serviceWorker, /daedong-yeosu-app-shell-v5-mobile-api-deadline/);
 
 const never = new Promise(() => {});

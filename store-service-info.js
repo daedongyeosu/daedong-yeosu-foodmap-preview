@@ -502,9 +502,6 @@
           <span>가게 이용정보</span>
           <h3>영업시간·주문앱별 혜택</h3>
         </div>
-        <span class="store-service-status is-${escapeHtml(status.state)}">
-          <i aria-hidden="true"></i>${escapeHtml(status.label)}
-        </span>
       </header>
       <p class="store-service-detail-today">
         <b>${escapeHtml(formatCustomerHours24(status.detail))}</b>
@@ -568,11 +565,27 @@
         panel.dataset.storeServiceSignature = signature;
         panel.innerHTML = detailPanelMarkup(info, status, giftRoute);
       }
-      const target = detail.querySelector('[data-store-menu-preview]')
+
+      let topStatus = detail.querySelector('[data-store-service-top-status]');
+      if (!topStatus) {
+        topStatus = document.createElement('span');
+        topStatus.dataset.storeServiceTopStatus = '';
+      }
+      const topStatusSignature = `${status.state}:${status.label}`;
+      if (topStatus.dataset.storeServiceStatusSignature !== topStatusSignature) {
+        topStatus.dataset.storeServiceStatusSignature = topStatusSignature;
+        topStatus.className = `store-service-status store-service-top-status is-${status.state}`;
+        topStatus.innerHTML = `<i aria-hidden="true"></i>${escapeHtml(status.label)}`;
+      }
+      const topStatusTarget = detail.querySelector('[data-store-menu-preview]')
         || detail.querySelector('.detail-routes')
         || detail.querySelector('.detail-personal-actions');
-      if (target && panel.nextElementSibling !== target) target.before(panel);
-      else if (!target && !panel.isConnected) detail.append(panel);
+      if (topStatusTarget && topStatus.nextElementSibling !== topStatusTarget) topStatusTarget.before(topStatus);
+      else if (!topStatusTarget && !topStatus.isConnected) detail.append(topStatus);
+
+      const actionsTarget = detail.querySelector('.detail-personal-actions');
+      if (actionsTarget && panel.nextElementSibling !== actionsTarget) actionsTarget.before(panel);
+      else if (!actionsTarget && !panel.isConnected) detail.append(panel);
     });
   }
 
