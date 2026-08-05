@@ -313,6 +313,19 @@
     };
   }
 
+  function statusPriorityForStore(storeOrId, date = new Date()) {
+    const store = storeOrId?.store || storeOrId;
+    const storeId = typeof store === 'object' ? storeIdOf(store) : String(store || '');
+    return STATUS_SORT_PRIORITY[storeStatus(serviceData.stores?.[storeId], date).state] ?? STATUS_SORT_PRIORITY.unknown;
+  }
+
+  function sortStoresByStatusPriority(list, date = new Date()) {
+    return (Array.isArray(list) ? list : [])
+      .map((item, index) => ({item, index}))
+      .sort((a, b) => statusPriorityForStore(a.item, date) - statusPriorityForStore(b.item, date) || a.index - b.index)
+      .map(row => row.item);
+  }
+
   function sourceStores() {
     if (typeof stores !== 'undefined' && Array.isArray(stores)) return stores;
     if (typeof allStores !== 'undefined' && Array.isArray(allStores)) return allStores;
@@ -916,9 +929,7 @@ function overviewSearchText(entry) {
   function compareOverviewEntries(a, b) {
     const hasQuery = Boolean(String(overviewQuery || '').trim());
     const identityOrder = hasQuery ? overviewIdentityPriority(a) - overviewIdentityPriority(b) : 0;
-    const statusOrder = hasQuery || activeStatus === 'open'
-      ? overviewStatusPriority(a) - overviewStatusPriority(b)
-      : 0;
+    const statusOrder = overviewStatusPriority(a) - overviewStatusPriority(b);
     const menuEvidenceOrder = hasQuery
       ? overviewMenuEvidencePriority(a) - overviewMenuEvidencePriority(b)
       : 0;
@@ -1336,6 +1347,17 @@ function overviewSearchText(entry) {
         serviceData = data;
         serviceLoadState = 'ready';
         refreshServiceSurfaces();
+        if (typeof window.CustomEvent === 'function') {
+          window.dispatchEvent(new window.CustomEvent('daedong-store-service-ready'));
+        }
+        window.setTimeout(() => {
+          if (typeof renderStores === 'function') renderStores({resetCount: false});
+          if (typeof fxRenderRails === 'function') fxRenderRails();
+          if (typeof rc6RenderHero === 'function') {
+            rc6HeroRenderKey = '';
+            rc6RenderHero();
+          }
+        }, 0);
         return data;
       })
       .catch(error => {
@@ -1383,6 +1405,8 @@ function overviewSearchText(entry) {
     ready,
     get: storeId => serviceData.stores?.[String(storeId)] || null,
     status: (storeId, date) => storeStatus(serviceData.stores?.[String(storeId)], date),
+    statusPriority: statusPriorityForStore,
+    sortByStatus: sortStoresByStatusPriority,
     showOverview
   });
 
@@ -1528,6 +1552,9 @@ document.addEventListener('input', event => {
   }).observe(document.documentElement, {childList: true, subtree: true});
 
   window.setInterval(() => {
+    if (serviceLoadState === 'ready' && typeof renderStores === 'function') {
+      renderStores({resetCount: false});
+    }
     document.querySelectorAll('[data-store-service-card-meta]').forEach(node => node.remove());
     decorateStoreCards();
     decorateStoreDetails();

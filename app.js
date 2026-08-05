@@ -696,6 +696,19 @@ function categoryPriorityOrderedIdsForRule(rule, now = Date.now()) {
 function categoryPriorityOrderedStoreIds(category) {
   return categoryPriorityOrderedIdsForRule(categoryPriorityRule(category));
 }
+function storeBusinessStatusPriority(store) {
+  const rank = window.daedongStoreServiceInfo?.statusPriority?.(store);
+  return Number.isFinite(rank) ? rank : 2;
+}
+function compareStoreBusinessStatus(a, b) {
+  return storeBusinessStatusPriority(a?.store || a) - storeBusinessStatusPriority(b?.store || b);
+}
+function sortStoresByBusinessStatus(list) {
+  return (Array.isArray(list) ? list : [])
+    .map((item, index) => ({item, index}))
+    .sort((a, b) => compareStoreBusinessStatus(a.item, b.item) || a.index - b.index)
+    .map(row => row.item);
+}
 function applyCategoryPriorityOverrides(list, category) {
   const input = Array.isArray(list) ? list : [];
   const rule = categoryPriorityRule(category);
@@ -709,7 +722,7 @@ function applyCategoryPriorityOverrides(list, category) {
     const orderedRank = ordered.get(id);
     const tier = orderedRank !== undefined ? orderedRank : ordered.size + (top.has(id) ? 0 : bottom.has(id) ? 2 : 1);
     return {item, index, tier};
-  }).sort((a, b) => a.tier - b.tier || a.index - b.index).map(row => row.item);
+  }).sort((a, b) => compareStoreBusinessStatus(a.item, b.item) || a.tier - b.tier || a.index - b.index).map(row => row.item);
 }
 function isCustomerUsableExternalRoute(key, value) {
   if (!EXTERNAL_APP_KEYS.includes(key)) return true;
@@ -1081,6 +1094,8 @@ function filteredStores() {
     .filter(({store}) => storeMatchesCategory(store, state.category))
     .filter(({store}) => !brand || brandMatchesStore(store, brand))
     .sort((a, b) => {
+      const statusOrder = compareStoreBusinessStatus(a, b);
+      if (statusOrder) return statusOrder;
       if (state.sortByDistance) {
         if (a.distance !== null && b.distance !== null) return a.distance - b.distance;
         if (a.distance !== null) return -1;
@@ -1233,6 +1248,8 @@ function appBrowserPhoto(store) {
 }
 function appRegisteredStores(key) {
   return stores.filter(store => storeHasChannel(store, key)).map(store => ({store, distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null})).sort((a, b) => {
+    const statusOrder = compareStoreBusinessStatus(a, b);
+    if (statusOrder) return statusOrder;
     if (a.distance !== null && b.distance !== null) return a.distance - b.distance;
     if (a.distance !== null) return -1; if (b.distance !== null) return 1;
     const aPin = Number.isFinite(Number(a.store.pinPosition)) ? Number(a.store.pinPosition) : 9999;
