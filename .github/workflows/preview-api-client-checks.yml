@@ -26,6 +26,7 @@ jobs:
           node --check final-experience.js
           node --check rc2-fixes.js
           node --check rc6-fixes.js
+          node --check rc7-address-map.js
           node --check store-service-info.js
           node --check store-menu-preview.js
       - name: Verify API client and existing static contracts
@@ -45,6 +46,7 @@ jobs:
           node hero-carousel-forward-only-regression-test.mjs
           node hero-store-direct-popup-regression-test.mjs
           node home-address-ux-regression-test.mjs
+          node saved-address-flow-regression-test.mjs
           node inapp-location-recovery-regression-test.mjs
           node kakao-order-link-regression-test.mjs
           node location-ranking-unification-regression-test.mjs
