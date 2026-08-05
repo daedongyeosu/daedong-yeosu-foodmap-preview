@@ -26,6 +26,7 @@
   });
 
   let serviceData = {programs: [], stores: {}};
+  let serviceLoadState = 'loading';
   let lastFocused = null;
   let pendingStoreId = '';
   let activeStatus = 'all';
@@ -585,12 +586,19 @@
       const label = entry.querySelector('[data-store-finder-location-label]');
       const nextLabel = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
       if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
-      const count = sourceStores().reduce((total, store) => (
+      const source = sourceStores();
+      const count = source.reduce((total, store) => (
         ['open', 'closing-soon'].includes(storeStatus(serviceData.stores?.[storeIdOf(store)]).state) ? total + 1 : total
       ), 0);
       const countNode = entry.querySelector('[data-store-finder-open-count]');
-      const nextCount = String(count);
+      const countReady = serviceLoadState === 'ready' && source.length > 0;
+      const nextCount = countReady ? String(count) : '확인 중';
       if (countNode && countNode.textContent !== nextCount) countNode.textContent = nextCount;
+      const quickStatus = entry.querySelector('[data-store-service-quick-status]');
+      if (quickStatus) {
+        quickStatus.dataset.storeServiceLoadState = countReady ? 'ready' : serviceLoadState;
+        quickStatus.setAttribute('aria-busy', countReady ? 'false' : 'true');
+      }
     }
   }
 
@@ -1127,16 +1135,50 @@ function overviewSearchText(entry) {
     });
   }
 
-  const ready = window.daedongDataApi.services()
+  const wait = milliseconds => new Promise(resolve => window.setTimeout(resolve, milliseconds));
+
+  async function loadServiceData() {
+    let lastError = null;
+    for (const delay of [0, 800, 1800]) {
+      if (delay) await wait(delay);
+      try {
+        return await window.daedongDataApi.services();
+      } catch (error) {
+        lastError = error;
+      }
+    }
+    throw lastError || new Error('영업시간 정보를 불러오지 못했습니다.');
+  }
+
+  function openQuickStatus(trigger) {
+    if (serviceLoadState === 'ready' && sourceStores().length) {
+      showOverview(trigger, {status: trigger.dataset.storeServiceQuickStatus || 'open'});
+      return;
+    }
+    trigger.setAttribute('aria-busy', 'true');
+    ready.then(() => {
+      trigger.setAttribute('aria-busy', 'false');
+      if (serviceLoadState === 'ready' && sourceStores().length) {
+        showOverview(trigger, {status: trigger.dataset.storeServiceQuickStatus || 'open'});
+      } else {
+        showOverview(trigger, {status: 'all'});
+      }
+    });
+  }
+
+  const ready = loadServiceData()
     .then(data => {
       serviceData = data;
+      serviceLoadState = 'ready';
       ensureOverviewButtons();
       decorateStoreCards();
       decorateStoreDetails();
       return data;
     })
     .catch(error => {
+      serviceLoadState = 'error';
       console.warn(error);
+      ensureOverviewButtons();
       return serviceData;
     });
 
@@ -1190,7 +1232,7 @@ document.addEventListener('input', event => {
     }
     const quickStatus = event.target.closest('[data-store-service-quick-status]');
     if (quickStatus) {
-      showOverview(quickStatus, {status: quickStatus.dataset.storeServiceQuickStatus || 'open'});
+      openQuickStatus(quickStatus);
       return;
     }
     const quickBenefit = event.target.closest('[data-store-service-quick-benefit]');
