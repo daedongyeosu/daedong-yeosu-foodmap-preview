@@ -91,9 +91,10 @@ try {
   await page.locator('[data-menu-search-clear]').click();
   await check(page.locator('[data-menu-result-count]').innerText().then(value => value.trim() === '53'), '검색어 지우기 시 전체 53개 메뉴 복원');
   await check(preview.evaluate(node => node.classList.contains('menu-search-active')), '검색어를 지워도 검색 모드 유지');
+  await page.waitForTimeout(500);
 
   await page.locator('[data-menu-search-cancel]').click();
-  await page.waitForFunction(() => !document.querySelector('.store-menu-preview')?.classList.contains('menu-search-active'));
+  await page.waitForFunction(() => !document.querySelector('.store-menu-preview')?.classList.contains('menu-search-active'), null, {timeout: 5000});
   await page.waitForFunction(expected => {
     const node = document.querySelector('.store-menu-scroll');
     return Boolean(node && Math.abs(node.scrollTop - expected) <= 2);
