@@ -2,7 +2,7 @@
 
 /* RC3 fixes only. Store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
 const RC3_ICON_SPRITE = CATEGORY_ICON_SPRITE;
-const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-06';
+const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-07-card-markers';
 const RC3_APP_PARTICLE = Object.freeze({
   yogiyo: '요기요로',
   baemin: '배달의민족으로',
@@ -245,8 +245,12 @@ async function rc3RecoverVerifiedPhysicalMap(store) {
 fxPhoneStores = function rc3PhoneStores(category = '추천') {
   let list = stores
     .filter(fxVisible)
-    .map(store => ({store, phoneOrder: resolveStoreChannels(store).primaryOrder.phoneOrder}))
-    .filter(item => Boolean(item.phoneOrder));
+    .map(store => ({
+      store,
+      phoneOrder: resolveStoreChannels(store).primaryOrder.phoneOrder,
+      hasPhoneMarker: fxPhoneByStore.has(String(store.id)) && !RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(store.id))
+    }))
+    .filter(item => Boolean(item.phoneOrder || item.hasPhoneMarker));
   if (category !== '추천') list = list.filter(item => storeMatchesCategory(item.store, category));
   return applyCategoryPriorityOverrides(list.sort((a, b) => (fxDistance(a.store) ?? 999) - (fxDistance(b.store) ?? 999) || a.store.name.localeCompare(b.store.name, 'ko')), category);
 };
@@ -259,7 +263,7 @@ fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천') {
   const chips = `<nav class="app-browser-category-chips"><button type="button" data-phone-category="추천" class="${category === '추천' ? 'active' : ''}">추천</button>${cats.map(cat => `<button type="button" data-phone-category="${escapeHtml(cat)}" class="${category === cat ? 'active' : ''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
   const cards = list.map(({store, phoneOrder}) => {
     const content = `${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b>`;
-    return phoneOrder.url
+    return phoneOrder?.url
       ? `<a class="phone-order-card glass-action" href="${escapeHtml(phoneOrder.url)}" target="_blank" rel="noopener" data-phone-route-store-id="${escapeHtml(store.id)}">${content}</a>`
       : `<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${content}</button>`;
   }).join('');
@@ -267,10 +271,19 @@ fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천') {
   rc2RevealSelectedCategory();
 };
 
-fxOpenPhoneConfirm = function rc3OpenPhoneConfirm(id) {
+fxOpenPhoneConfirm = async function rc3OpenPhoneConfirm(id) {
   const store = fxStoreById(id);
-  const phone = rc3VerifiedPhone(store);
-  if (!store || !phone || RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(id))) return;
+  if (!store || RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(id))) return;
+  let phone = rc3VerifiedPhone(store);
+  if (!phone && fxPhoneByStore.has(String(id))) {
+    try {
+      await window.daedongSecureStoreDetail?.enrich?.(store, normalizedStore);
+      phone = rc3VerifiedPhone(store);
+    } catch (error) {
+      console.warn('phone-confirm-detail-load-failed', id, error);
+    }
+  }
+  if (!phone) return;
   openModal(`<section class="phone-order-confirm" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)} 전화주문</h2><div class="phone-confirm-photo">${fxCardPhoto(store)}</div><p>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p>${rc3PopupUtilityLinks(store)}<p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p><p class="verified-phone-number">${escapeHtml(rc3FormatPhone(phone))}</p><div class="phone-confirm-actions"><a class="phone-call-link" data-rc3-final-phone href="tel:${escapeHtml(phone)}">전화 걸기</a><button class="phone-cancel" type="button" data-phone-cancel>취소</button></div></section>`);
   $('#modal').dataset.activeStoreId = store.id;
   history.replaceState({...history.state, storeId: String(store.id)}, '');
@@ -566,6 +579,11 @@ fxInstallEvents = function rc3InstallEvents() {
 const rc3InitializeBase = fxInitialize;
 fxInitialize = async function rc3Initialize() {
   await rc3InitializeBase();
+  for (const store of stores) {
+    const id = String(store.id || '');
+    if (!id || RC3_BLOCKED_PHONE_ROUTE_STORES.has(id) || !fxPhoneByStore.has(id)) continue;
+    store.channelKeys = [...new Set([...(Array.isArray(store.channelKeys) ? store.channelKeys : []), 'phone'])];
+  }
   const internalPhones = await fetchJson(RC3_PHONE_INTERNAL_URL, {stores: []});
   rc3InternalPhoneByStore = new Map((internalPhones.stores || []).map(item => [String(item.store_id), item]));
   const activeStoreId = String($('#modalContent .store-detail')?.dataset.storeId || '');

@@ -445,6 +445,10 @@
     `;
   }
 
+  function cardStatusMarkup(status) {
+    return `<span class="store-service-status is-${escapeHtml(status.state)}"><i aria-hidden="true"></i>${escapeHtml(status.label)}</span>`;
+  }
+
   function detailBenefitItems(info) {
     const payments = new Map((info?.payments || []).map(payment => [payment.key, payment]));
     const delivery = new Map((info?.delivery || []).map(benefit => [benefit.key, benefit]));
@@ -535,18 +539,57 @@
 
   function decorateStoreCards() {
     document.querySelectorAll('#storeGrid .store-card[data-id]').forEach(card => {
-      if (card.querySelector('[data-store-service-card-meta]')) return;
       const info = serviceData.stores?.[String(card.dataset.id)];
       const status = storeStatus(info);
       const benefits = benefitLabels(info);
-      const meta = document.createElement('div');
-      meta.className = 'store-service-card-meta';
-      meta.dataset.storeServiceCardMeta = '';
-      meta.innerHTML = cardMetaMarkup(status, benefits, info);
+      const signature = JSON.stringify({status, benefits, empty: emptyBenefitLabel(info)});
+      let meta = card.querySelector('[data-store-service-card-meta]');
+      if (!meta) {
+        meta = document.createElement('div');
+        meta.className = 'store-service-card-meta';
+        meta.dataset.storeServiceCardMeta = '';
+      }
+      if (meta.dataset.storeServiceSignature !== signature) {
+        meta.dataset.storeServiceSignature = signature;
+        meta.innerHTML = cardMetaMarkup(status, benefits, info);
+      }
       const copy = card.querySelector('.store-info');
       const routes = copy?.querySelector('.miniapps');
-      if (routes) routes.before(meta);
-      else copy?.append(meta);
+      if (routes && meta.nextElementSibling !== routes) routes.before(meta);
+      else if (!routes && copy && !meta.isConnected) copy.append(meta);
+    });
+
+    const compactCards = new Map();
+    const addCompactCard = (card, id) => {
+      const storeId = String(id || '');
+      if (card && storeId && !compactCards.has(card)) compactCards.set(card, storeId);
+    };
+    document.querySelectorAll('.rail-card[data-rail-card-store]').forEach(card => addCompactCard(card, card.dataset.railCardStore));
+    document.querySelectorAll('.rail-card[data-rail-store-id]').forEach(card => addCompactCard(card, card.dataset.railStoreId));
+    document.querySelectorAll('.rc5-category-card[data-rc5-store]').forEach(card => addCompactCard(card, card.dataset.rc5Store));
+    document.querySelectorAll('.channel-store-card[data-channel-store-id]').forEach(card => addCompactCard(card, card.dataset.channelStoreId));
+    document.querySelectorAll('.app-browser-card[data-search-store-id]').forEach(card => addCompactCard(card, card.dataset.searchStoreId));
+    document.querySelectorAll('.app-browser-card[data-app-store-id]').forEach(card => addCompactCard(card, card.dataset.appStoreId));
+    document.querySelectorAll('.phone-order-card[data-phone-store-id]').forEach(card => addCompactCard(card, card.dataset.phoneStoreId));
+    document.querySelectorAll('.phone-order-card[data-phone-route-store-id]').forEach(card => addCompactCard(card, card.dataset.phoneRouteStoreId));
+    document.querySelectorAll('[data-app-store-order]').forEach(control => addCompactCard(control.closest('.app-browser-card') || control, control.dataset.appStoreOrder));
+
+    compactCards.forEach((storeId, card) => {
+      const status = storeStatus(serviceData.stores?.[storeId]);
+      const signature = `${status.state}:${status.label}`;
+      let badge = card.querySelector('[data-store-service-card-status-only]');
+      if (!badge) {
+        badge = document.createElement('span');
+        badge.className = 'store-service-card-status-only';
+        badge.dataset.storeServiceCardStatusOnly = '';
+      }
+      if (badge.dataset.storeServiceSignature !== signature) {
+        badge.dataset.storeServiceSignature = signature;
+        badge.innerHTML = cardStatusMarkup(status);
+      }
+      const target = card.querySelector('.rail-card-copy, .rc5-card-copy, .app-browser-info')
+        || card.querySelector(':scope > span');
+      if (target && badge.parentElement !== target) target.append(badge);
     });
   }
 
