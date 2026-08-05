@@ -68,6 +68,6 @@ assert.match(html, /app\.js\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /store-service-info\.css\?v=store-service-10-native-order-1/);
 assert.match(html, /store-service-info\.js\?v=store-service-19-popup-info-first-1/);
-assert.match(html, /store-menu-preview\.js\?v=store-menu-20-popup-info-first-1/);
+assert.match(html, /store-menu-preview\.js\?v=store-menu-21-chrome-reveal-delay-1/);
 
 console.log('PASS: 가게 팝업 최초 생성 순서·혜택·지도·하단버튼·모바일 반복방지 유지');
