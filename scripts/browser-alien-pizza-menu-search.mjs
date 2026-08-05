@@ -28,6 +28,9 @@ try {
   await page.locator('[data-store-menu-preview="a089d1d54720b48e"]').click();
   await page.waitForSelector('.store-menu-preview', {timeout: 5000});
   await check(page.evaluate(() => history.state?.daedongMenuPreview === true), '음식 미리보기를 브라우저 뒤로가기 단계로 등록');
+  await check(page.locator('.store-menu-hero > img').getAttribute('src').then(value => value === 'store-menu-content/a089d1d54720b48e/main.jpg'), '외계인피자 대표 음식사진 복원');
+  await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === 53), '외계인피자 전체 메뉴 53개 음식사진 복원');
+  await check(page.locator('[data-menu-card].is-text-only').count().then(count => count === 0), '사진이 저장된 메뉴를 글자 카드로 대체하지 않음');
 
   const preview = page.locator('.store-menu-preview');
   const scroll = page.locator('.store-menu-scroll');
