@@ -498,7 +498,13 @@ function ddangyoShortCode(value) {
     return String(url.search || '').replace(/^\?/, '').split('&')[0].trim();
   } catch { return ''; }
 }
-function ddangyoHelpUrl() { return new URL('ddangyo-open-help.html', location.href).href; }
+function ddangyoHelpUrl(originUrl = '', routeUrl = '') {
+  const url = new URL('ddangyo-open-help.html', location.href);
+  url.searchParams.set('v', 'ddangyo-retry-touch-1');
+  if (originUrl) url.searchParams.set('origin', originUrl);
+  if (routeUrl) url.searchParams.set('route', routeUrl);
+  return url.href;
+}
 async function resolveDdangyoOriginUrl(routeUrl) {
   const shortCode = ddangyoShortCode(routeUrl);
   if (!shortCode) throw new Error('invalid ddangyo short link');
@@ -518,8 +524,8 @@ async function resolveDdangyoOriginUrl(routeUrl) {
     return originUrl;
   } finally { clearTimeout(timer); }
 }
-function ddangyoAndroidIntent(originUrl) {
-  const fallback = encodeURIComponent(ddangyoHelpUrl());
+function ddangyoAndroidIntent(originUrl, routeUrl = '') {
+  const fallback = encodeURIComponent(ddangyoHelpUrl(originUrl, routeUrl));
   return `intent://o2o/deeplink/${originUrl}#Intent;scheme=ddangyo;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${DDANGYO_ANDROID_PACKAGE};S.browser_fallback_url=${fallback};end;`;
 }
 async function openDdangyoRoute(routeUrl) {
@@ -528,12 +534,13 @@ async function openDdangyoRoute(routeUrl) {
   if (!isAndroidBrowser()) { location.assign(href); return; }
   try {
     const originUrl = await resolveDdangyoOriginUrl(href);
-    const intent = ddangyoAndroidIntent(originUrl);
+    const intent = ddangyoAndroidIntent(originUrl, href);
     sessionStorage.setItem(DDANGYO_RETRY_INTENT_KEY, intent);
+    try { localStorage.setItem(DDANGYO_RETRY_INTENT_KEY, intent); } catch {}
     location.assign(intent);
   } catch (error) {
     console.warn('땡겨요 앱 연결주소를 준비하지 못했습니다.', error);
-    location.assign(ddangyoHelpUrl());
+    location.assign(ddangyoHelpUrl('', href));
   }
 }
 function handleDdangyoOrderLinkClick(event) {

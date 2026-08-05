@@ -50,6 +50,7 @@ jobs:
           node saved-address-flow-regression-test.mjs
           node simple-app-return-regression-test.mjs
           node direct-app-return-no-home-regression-test.mjs
+          node ddangyo-retry-touch-regression-test.mjs
           node inapp-location-recovery-regression-test.mjs
           node kakao-order-link-regression-test.mjs
           node location-ranking-unification-regression-test.mjs
