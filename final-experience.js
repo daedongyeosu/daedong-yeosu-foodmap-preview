@@ -61,15 +61,21 @@ function fxRegisteredAppCardMarkup(store,key,isExternal=false){
 }
 async function fxOpenRegisteredAppOrder(button){
  const store=fxStoreById(button.dataset.appStoreOrder),key=button.dataset.appKey;if(!store||!key)return;
- button.disabled=true;
+ if(button.dataset.routeBusy==='true')return;
+ button.dataset.routeBusy='true';button.setAttribute('aria-busy','true');
  try{
-  if(store.__secureDetailReady!==true)await window.daedongSecureStoreDetail?.enrich?.(store);
+  if(store.__secureDetailReady!==true)await window.daedongSecureStoreDetail?.enrich?.(store,typeof normalizedStore==='function'?normalizedStore:undefined);
   const route=routeFor(store,key),href=route?safeHref(route.url):'#';
-  if(!route||href==='#'){await openStore(store);return;}
+  if(!route||href==='#')throw new Error('order route unavailable');
   if(EXTERNAL_APP_KEYS.includes(key))rememberSelectedExternal(store,key);
   sendAnalyticsEvent('order_click',{storeId:store.id,storeName:store.name,channel:key,surface:'app_store_list'});
+  delete button.dataset.routeBusy;button.removeAttribute('aria-busy');
   location.assign(href);
- }catch{await openStore(store);}finally{button.disabled=false;}
+ }catch{window.alert(`${APP_META[key]?.label||'주문앱'} 주문주소를 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.`);}finally{delete button.dataset.routeBusy;button.removeAttribute('aria-busy');}
+}
+
+function fxRestoreRegisteredAppButtons(){
+ $$('[data-app-store-order]').forEach(button=>{button.disabled=false;delete button.dataset.routeBusy;button.removeAttribute('aria-busy');});
 }
 
 function fxThemeMatch(store,spec){const text=storeText(store);return spec.pattern?spec.pattern.test(text):true;}
@@ -372,7 +378,7 @@ function fxInstallEvents(){
   const happyCat=event.target.closest('[data-happy-category]');if(happyCat){fxOpenBrandHub('happy-brands',happyCat.dataset.happyCategory);return;}
   const happyBrand=event.target.closest('[data-happy-brand]');if(happyBrand){fxOpenBrandHub('happy-stores',happyBrand.dataset.happyBrand);return;}
   const appStoreInfo=event.target.closest('[data-app-store-info]');if(appStoreInfo){const store=fxStoreById(appStoreInfo.dataset.appStoreInfo);if(store)openStore(store);return;}
-  const appStoreOrder=event.target.closest('[data-app-store-order]');if(appStoreOrder){event.preventDefault();void fxOpenRegisteredAppOrder(appStoreOrder);return;}
+  const appStoreOrder=event.target.closest('[data-app-store-order]');if(appStoreOrder){event.preventDefault();event.stopImmediatePropagation();void fxOpenRegisteredAppOrder(appStoreOrder);return;}
   const channelStore=event.target.closest('[data-channel-store-id]');if(channelStore){const store=fxStoreById(channelStore.dataset.channelStoreId);if(store)openStore(store);return;}
   const searchStore=event.target.closest('[data-search-store-id]');if(searchStore){const store=fxStoreById(searchStore.dataset.searchStoreId);if(store)openStore(store);return;}
   const share=event.target.closest('[data-share-store]');if(share){const store=fxStoreById(share.dataset.shareStore);if(store)fxShare(store,share);return;}
@@ -380,7 +386,8 @@ function fxInstallEvents(){
   const finalLocal=event.target.closest('.detail-route[data-route-key="direct"],.detail-route[data-route-key="mukkebi"],.detail-route[data-route-key="ddangyo"],.detail-route[data-route-key="ondongne"],.community-choice-link');if(finalLocal)fxBattle();
  },true);
  document.addEventListener('keydown',event=>{if(event.key==='Enter'&&event.target.id==='fxSearchInput'){event.preventDefault();fxSearchModal(event.target.value);}});
- document.addEventListener('visibilitychange',()=>document.documentElement.classList.toggle('page-hidden',document.hidden));
+ window.addEventListener('pageshow',fxRestoreRegisteredAppButtons);
+ document.addEventListener('visibilitychange',()=>{document.documentElement.classList.toggle('page-hidden',document.hidden);if(!document.hidden)fxRestoreRegisteredAppButtons();});
 }
 
 async function fxInitialize(){
