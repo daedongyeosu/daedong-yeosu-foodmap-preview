@@ -568,6 +568,9 @@ fxInitialize = async function rc3Initialize() {
   await rc3InitializeBase();
   const internalPhones = await fetchJson(RC3_PHONE_INTERNAL_URL, {stores: []});
   rc3InternalPhoneByStore = new Map((internalPhones.stores || []).map(item => [String(item.store_id), item]));
+  const activeStoreId = String($('#modalContent .store-detail')?.dataset.storeId || '');
+  const activeStore = activeStoreId ? fxStoreById(activeStoreId) : null;
+  if (activeStore) void rc3RecoverVerifiedPhysicalMap(activeStore);
   renderCategories();
   fxRenderRails();
 };
