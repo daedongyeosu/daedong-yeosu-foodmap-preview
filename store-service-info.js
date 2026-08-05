@@ -539,7 +539,9 @@
         panel.dataset.storeServiceSignature = signature;
         panel.innerHTML = detailPanelMarkup(info, status, giftRoute);
       }
-      const target = detail.querySelector('.detail-personal-actions');
+      const target = detail.querySelector('[data-store-menu-preview]')
+        || detail.querySelector('.detail-routes')
+        || detail.querySelector('.detail-personal-actions');
       if (target && panel.nextElementSibling !== target) target.before(panel);
       else if (!target && !panel.isConnected) detail.append(panel);
     });
