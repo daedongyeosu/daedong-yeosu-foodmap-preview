@@ -177,4 +177,26 @@ const blockedPhoneKeys = vm.runInContext(
 );
 assert.deepEqual(plain(blockedPhoneKeys), ['mukkebi'], 'blocked placeholder phones must stay hidden on cards');
 
+const resolveStart = rc3.indexOf('function resolveStoreChannels');
+const resolveEnd = rc3.indexOf('globalThis.resolveStoreChannels', resolveStart);
+const resolveSource = rc3.slice(resolveStart, resolveEnd);
+assert.match(resolveSource, /phone && !RC3_BLOCKED_PHONE_ROUTE_STORES\.has/, 'secure detail phone must not depend on the stale catalog phone index');
+assert.doesNotMatch(resolveSource, /phone && fxPhoneByStore/, 'valid detail phones must not disappear when store ids change');
+assert.match(resolveSource, /naverMap: rc3VerifiedPhysicalMap\(safeStore\)/, 'map links must use the verified physical-place resolver');
+
+const phoneConfirmStart = rc3.indexOf('fxOpenPhoneConfirm = function rc3OpenPhoneConfirm');
+const phoneConfirmEnd = rc3.indexOf('function rc3RouteButton', phoneConfirmStart);
+const phoneConfirmSource = rc3.slice(phoneConfirmStart, phoneConfirmEnd);
+assert.doesNotMatch(phoneConfirmSource, /fxPhoneByStore\.get/, 'phone confirmation must accept a valid secure detail phone');
+assert.match(phoneConfirmSource, /RC3_BLOCKED_PHONE_ROUTE_STORES\.has/, 'known placeholder phone records must remain blocked');
+
+const physicalMapStart = rc3.indexOf('async function rc3RecoverVerifiedPhysicalMap');
+const physicalMapEnd = rc3.indexOf('fxPhoneStores =', physicalMapStart);
+const physicalMapSource = rc3.slice(physicalMapStart, physicalMapEnd);
+assert.match(physicalMapSource, /rc3InternalPhoneByStore/, 'physical map recovery must require the same verified phone');
+assert.match(physicalMapSource, /status === 'verified'/, 'physical map recovery must require a verified Naver map source');
+assert.match(physicalMapSource, /rc3SamePhysicalPlace\(store, candidate\)/, 'physical map recovery must require the same address or nearby coordinates');
+assert.doesNotMatch(physicalMapSource, /store\.routes|routes\.push/, 'shop-in-shop order routes must never be copied from a parent store');
+assert.match(rc3, /rc3EnhanceStoreDetail\(store\);\s*void rc3RecoverVerifiedPhysicalMap\(store\);/, 'detail rendering must recover shared physical utilities after secure detail loads');
+
 console.log('PASS Cloudflare preview API client contract');
