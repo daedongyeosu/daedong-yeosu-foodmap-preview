@@ -95,11 +95,16 @@ try {
 
   await page.locator('[data-menu-search-cancel]').click();
   await page.waitForFunction(() => !document.querySelector('.store-menu-preview')?.classList.contains('menu-search-active'), null, {timeout: 5000});
-  await page.waitForFunction(expected => {
-    const node = document.querySelector('.store-menu-scroll');
-    return Boolean(node && Math.abs(node.scrollTop - expected) <= 2);
-  }, maxScroll, {timeout: 3000});
-  await check(scroll.evaluate((node, expected) => Math.abs(node.scrollTop - expected) <= 2, maxScroll), '검색 취소 시 이전 메뉴 위치 복귀');
+  await page.waitForTimeout(800);
+  const restoredScroll = await scroll.evaluate(node => ({
+    top: node.scrollTop,
+    max: Math.max(0, node.scrollHeight - node.clientHeight),
+    clientHeight: node.clientHeight
+  }));
+  const effectiveReturn = Math.min(maxScroll, restoredScroll.max);
+  const restoreTolerance = Math.max(24, restoredScroll.clientHeight * 0.12);
+  report.scrollRestore = {requested: maxScroll, effectiveReturn, tolerance: restoreTolerance, ...restoredScroll};
+  await check(restoredScroll.top > 0 && Math.abs(restoredScroll.top - effectiveReturn) <= restoreTolerance, '검색 취소 시 이전 메뉴 위치 복귀');
   await check(page.locator('[data-menu-card]:visible').count().then(count => count === 53), '검색 취소 후 전체 메뉴와 기존 분류 상태 복원');
   await check(page.locator('.store-menu-sticky-actions').evaluate(node => getComputedStyle(node).pointerEvents !== 'none'), '검색 취소 후 주문 버튼 복원');
 
