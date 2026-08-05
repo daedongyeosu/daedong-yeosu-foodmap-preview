@@ -16,7 +16,9 @@ assert.match(rc2, /fxRegisteredAppCardMarkup\(store, key, isExternal\)/);
 assert.match(rc2, /data-app-store-info[\s\S]*?data-app-store-order/);
 assert.match(css, /\.app-browser-direct-card/);
 assert.match(css, /\.app-browser-info-button/);
-assert.match(html, /app\.css\?v=[^"\n]*app-list-direct-order-1/);
+assert.match(css, /\.app-browser-direct-card\{display:block;position:relative/);
+assert.match(css, /\.app-browser-info-button\{position:absolute;right:9px;bottom:8px/);
+assert.match(html, /app\.css\?v=[^"\n]*app-list-direct-order-2-mobile-card-fix-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*app-list-direct-order-1/);
 
 console.log('app-list-direct-order-regression-test: pass');
