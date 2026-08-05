@@ -622,19 +622,24 @@ function rc2OpenYogiyoSameTab(link) {
   return true;
 }
 
-function rc2RestoreAfterExternalPage() {
+async function rc2RestoreAfterExternalPage() {
   let saved = null;
   try { saved = JSON.parse(sessionStorage.getItem(RC2_EXTERNAL_RETURN) || 'null'); } catch {}
   if (!saved || Date.now() - Number(saved.savedAt || 0) > 30 * 60 * 1000) return;
-  if (!$('#modal')?.hidden) return;
+  if (!$('#modal')?.hidden) {
+    sessionStorage.removeItem(RC2_EXTERNAL_RETURN);
+    return true;
+  }
   const store = fxStoreById(saved.storeId);
   if (!store) return;
-  openStore(store);
+  const opened = await openStore(store);
+  if (opened === false) return false;
   requestAnimationFrame(() => {
     const card = $('#modal .modal-card');
     if (card) card.scrollTop = Number(saved.modalScroll || 0);
   });
   sessionStorage.removeItem(RC2_EXTERNAL_RETURN);
+  return true;
 }
 
 fxOrderClick = function rc2OrderClick(button) {
@@ -747,10 +752,15 @@ fxInstallEvents = function rc2InstallEvents() {
   document.addEventListener('visibilitychange', () => {
     document.documentElement.classList.toggle('page-hidden', document.hidden);
     if (document.hidden) rc2StopAmbient();
-    else rc2StartAmbient(false);
+    else {
+      rc2StartAmbient(false);
+      void rc2RestoreAfterExternalPage();
+      fxRestoreAppBrowserReturn?.();
+    }
   });
-  window.addEventListener('pageshow', event => {
-    if (event.persisted || performance.getEntriesByType('navigation')[0]?.type === 'back_forward') rc2RestoreAfterExternalPage();
+  window.addEventListener('pageshow', () => {
+    void rc2RestoreAfterExternalPage();
+    fxRestoreAppBrowserReturn?.();
   });
 };
 
@@ -774,5 +784,7 @@ fxInitialize = async function rc2Initialize() {
   fxRenderRails();
   await fxInitWeather();
   rc2ScrubCustomerCounts(document);
+  await rc2RestoreAfterExternalPage();
+  fxRestoreAppBrowserReturn?.();
   rc2StartAmbient(true);
 };

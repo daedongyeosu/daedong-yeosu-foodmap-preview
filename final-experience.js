@@ -15,6 +15,7 @@ const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
 const FX_HOME_SHARE_URL='https://daedongmap.com/';
 const FX_HOME_SHARE_TEXT='여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.';
 const FX_STORE_SHARE_PARAM='store';
+const FX_APP_BROWSER_RETURN='daedongAppBrowserReturnV1';
 const FX_HIDDEN_STORE_IDS=new Set([
  '6092aabddf5f7194', // 롯데리아 중앙점
  'e0c6949efb48f4b2' // 롯데리아 이마트점
@@ -59,6 +60,21 @@ function fxRegisteredAppCardMarkup(store,key,isExternal=false){
  const routeLabel=`${meta.label} 바로가기`;
  return `<article class="app-browser-card app-browser-direct-card"><button type="button" class="app-browser-direct-link glass-action" data-app-store-order="${escapeHtml(store.id)}" data-app-key="${escapeHtml(key)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small><span><b class="app-browser-direct-label">${escapeHtml(routeLabel)}</b></span></span><b class="app-browser-direct-arrow" aria-hidden="true">›</b></button><button type="button" class="app-browser-info-button" data-app-store-info="${escapeHtml(store.id)}"><span><b>가게정보 더보기</b><small>음식보기 · 영업시간 · 쿠폰 등</small></span><b aria-hidden="true">›</b></button></article>`;
 }
+function fxRememberAppBrowserReturn(key){
+ const modal=$('#modal'),card=modal?.querySelector('.modal-card');
+ sessionStorage.setItem(FX_APP_BROWSER_RETURN,JSON.stringify({key,category:modal?.dataset.appBrowserCategory||'추천',modalScroll:card?.scrollTop||0,pageScroll:Number(document.body.dataset.lockScrollY||window.scrollY||0),savedAt:Date.now()}));
+}
+function fxRestoreAppBrowserReturn(){
+ let saved=null;try{saved=JSON.parse(sessionStorage.getItem(FX_APP_BROWSER_RETURN)||'null');}catch{}
+ if(!saved||Date.now()-Number(saved.savedAt||0)>30*60*1000){sessionStorage.removeItem(FX_APP_BROWSER_RETURN);return false;}
+ const modal=$('#modal');
+ if(!modal?.hidden){sessionStorage.removeItem(FX_APP_BROWSER_RETURN);return true;}
+ if(!['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'].includes(saved.key))return false;
+ window.scrollTo(0,Number(saved.pageScroll||0));
+ openAppBrowser(saved.key,saved.category||'추천');
+ requestAnimationFrame(()=>{const card=$('#modal .modal-card');if(card)card.scrollTop=Number(saved.modalScroll||0);});
+ sessionStorage.removeItem(FX_APP_BROWSER_RETURN);return true;
+}
 async function fxOpenRegisteredAppOrder(button){
  const store=fxStoreById(button.dataset.appStoreOrder),key=button.dataset.appKey;if(!store||!key)return;
  if(button.dataset.routeBusy==='true')return;
@@ -69,6 +85,7 @@ async function fxOpenRegisteredAppOrder(button){
   if(!route||href==='#')throw new Error('order route unavailable');
   if(EXTERNAL_APP_KEYS.includes(key))rememberSelectedExternal(store,key);
   sendAnalyticsEvent('order_click',{storeId:store.id,storeName:store.name,channel:key,surface:'app_store_list'});
+  fxRememberAppBrowserReturn(key);
   delete button.dataset.routeBusy;button.removeAttribute('aria-busy');
   location.assign(href);
  }catch{window.alert(`${APP_META[key]?.label||'주문앱'} 주문주소를 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.`);}finally{delete button.dataset.routeBusy;button.removeAttribute('aria-busy');}
@@ -386,7 +403,7 @@ function fxInstallEvents(){
   const finalLocal=event.target.closest('.detail-route[data-route-key="direct"],.detail-route[data-route-key="mukkebi"],.detail-route[data-route-key="ddangyo"],.detail-route[data-route-key="ondongne"],.community-choice-link');if(finalLocal)fxBattle();
  },true);
  document.addEventListener('keydown',event=>{if(event.key==='Enter'&&event.target.id==='fxSearchInput'){event.preventDefault();fxSearchModal(event.target.value);}});
- window.addEventListener('pageshow',fxRestoreRegisteredAppButtons);
+ window.addEventListener('pageshow',()=>{fxRestoreRegisteredAppButtons();fxRestoreAppBrowserReturn();});
  document.addEventListener('visibilitychange',()=>{document.documentElement.classList.toggle('page-hidden',document.hidden);if(!document.hidden)fxRestoreRegisteredAppButtons();});
 }
 
@@ -396,6 +413,7 @@ async function fxInitialize(){
  APP_META.phone.icon='assets/ui/phone.svg';
  fxRenderRails();
  await fxInitWeather();
+ fxRestoreAppBrowserReturn();
  if(!sessionStorage.getItem(FX_ENTRY_SESSION)){sessionStorage.setItem(FX_ENTRY_SESSION,'1');setTimeout(()=>fxFireworks(false),280);}
 }
 
@@ -431,7 +449,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-1-secure-detail-await-1-app-list-direct-order-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
