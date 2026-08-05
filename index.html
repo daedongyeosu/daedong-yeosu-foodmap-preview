@@ -18,6 +18,41 @@
   <link rel="icon" href="/app-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/logo.png">
   <title>대동여수음식지도</title>
+  <style id="externalReturnBootStyle">
+    html.daedong-external-return-pending body{min-height:100dvh;background:#103a5a}
+    html.daedong-external-return-pending body>*{visibility:hidden!important}
+    html.daedong-external-return-pending body::before,
+    html.daedong-external-return-pending body::after{visibility:visible!important;position:fixed;z-index:99999;pointer-events:none}
+    html.daedong-external-return-pending body::before{content:'보던 가게로 바로 돌아가는 중';inset:0;display:grid;place-items:center;padding-top:72px;background:linear-gradient(180deg,#0d3554,#1d628d);color:#fff;font:900 18px/1.4 system-ui,-apple-system,'Noto Sans KR',sans-serif}
+    html.daedong-external-return-pending body::after{content:'';left:50%;top:calc(50% - 28px);width:34px;height:34px;margin:-17px;border:4px solid rgba(255,255,255,.34);border-top-color:#ff6a2e;border-radius:50%;animation:daedong-return-spin .75s linear infinite}
+    @keyframes daedong-return-spin{to{transform:rotate(360deg)}}
+  </style>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let released = false;
+      window.daedongFinishExternalReturnBoot = () => {
+        if (released) return;
+        released = true;
+        root.classList.remove('daedong-external-return-pending');
+      };
+      try {
+        const maxAge = 30 * 60 * 1000;
+        const candidates = [
+          ['daedongExternalReturnRc2', 'storeId'],
+          ['daedongAppBrowserReturnV1', 'key']
+        ];
+        const pending = candidates.some(([storageKey, requiredField]) => {
+          const saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
+          const age = Date.now() - Number(saved?.savedAt || 0);
+          return Boolean(saved?.[requiredField]) && age >= 0 && age < maxAge;
+        });
+        if (!pending) return;
+        root.classList.add('daedong-external-return-pending');
+        window.setTimeout(window.daedongFinishExternalReturnBoot, 12000);
+      } catch { window.daedongFinishExternalReturnBoot(); }
+    })();
+  </script>
   <link rel="preload" as="image" href="images/01.png">
   <link rel="preload" as="image" href="assets/ui/category-icons-color.svg?v=category-first-paint-1">
   <link rel="preload" as="image" href="assets/yeosu-rc6/dolsan-day-mobile.webp" media="(max-width: 767px)">
@@ -199,7 +234,7 @@
   <script src="data-api.js?v=cloudflare-preview-api-3-mobile-deadline-1" defer></script>
   <script src="data-api-runtime.js?v=cloudflare-preview-api-2" defer></script>
   <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-hero-forward-only-1-lower-promo-details-6-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-startup-popup-disabled-1-anonymous-analytics-1-coarse-region-1-owner-exclusion-1-outside-yeosu-full-list-1-direct-coming-soon-1-home-address-short-1-secure-detail-core-1-store-popup-native-order-1-kakao-order-same-tab-1-ddangyo-direct-launch-1-location-ranking-unified-1-catalog-ready-watchdog-2-simple-app-return-1" defer></script>
-  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-3-local-channel-marker-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1-unified-menu-search-2-secure-detail-await-3-card-channel-keys-1-store-popup-native-order-1-app-list-direct-order-1-app-route-return-fix-1-app-browser-return-state-1-ddangyo-direct-launch-1-location-ranking-ready-1-location-ranking-watchdog-2-saved-address-first-1-simple-app-return-1" defer></script>
+  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-3-local-channel-marker-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1-unified-menu-search-2-secure-detail-await-3-card-channel-keys-1-store-popup-native-order-1-app-list-direct-order-1-app-route-return-fix-1-app-browser-return-state-1-ddangyo-direct-launch-1-location-ranking-ready-1-location-ranking-watchdog-2-saved-address-first-1-simple-app-return-1-direct-return-no-home-1" defer></script>
   <script src="store-list-horizontal-pager.js?v=1" defer></script>
   <script src="turtle-ship-hero.js?v=message-colors-popup-15s-1" defer></script>
   <script src="store-service-info.js?v=store-service-25-menu-search-status-order-1-card-status-1" defer></script>

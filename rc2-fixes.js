@@ -618,13 +618,20 @@ function rc2RememberExternalReturn() {
 async function rc2RestoreAfterExternalPage() {
   let saved = null;
   try { saved = JSON.parse(sessionStorage.getItem(RC2_EXTERNAL_RETURN) || 'null'); } catch {}
-  if (!saved || Date.now() - Number(saved.savedAt || 0) > 30 * 60 * 1000) return;
-  if (!$('#modal')?.hidden) {
+  if (!saved || Date.now() - Number(saved.savedAt || 0) > 30 * 60 * 1000) return false;
+  const modal = $('#modal');
+  const visibleStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
+  if (!modal?.hidden && modal.querySelector('.store-detail') && String(visibleStoreId || '') === String(saved.storeId)) {
     sessionStorage.removeItem(RC2_EXTERNAL_RETURN);
     return true;
   }
   const store = fxStoreById(saved.storeId);
-  if (!store) return;
+  if (!store) return false;
+  if (!modal?.hidden) {
+    rc2ModalStack.length = 0;
+    rc2NativeHardClose({fromPop: true});
+  }
+  scrollWindowInstant(Number(saved.pageScroll || 0));
   const opened = await openStore(store);
   if (opened === false) return false;
   requestAnimationFrame(() => {
@@ -766,11 +773,18 @@ fxInitialize = async function rc2Initialize() {
   rc2NaverByStore.clear();
   for (const item of naver.stores || []) rc2NaverByStore.set(String(item.store_id), item);
   APP_META.phone.icon = 'assets/ui/phone.svg';
+  rc2ScrubCustomerCounts(document);
+  let restoredStore = false;
+  let restoredAppBrowser = false;
+  try {
+    const restoredStoreResult = await rc2RestoreAfterExternalPage();
+    restoredStore = Boolean(restoredStoreResult);
+    if (!restoredStore) restoredAppBrowser = Boolean(fxRestoreAppBrowserReturn?.());
+  } finally {
+    window.daedongFinishExternalReturnBoot?.();
+  }
   renderCategories();
   fxRenderRails();
   await fxInitWeather();
-  rc2ScrubCustomerCounts(document);
-  await rc2RestoreAfterExternalPage();
-  fxRestoreAppBrowserReturn?.();
-  rc2StartAmbient(true);
+  rc2StartAmbient(!restoredStore && !restoredAppBrowser);
 };
