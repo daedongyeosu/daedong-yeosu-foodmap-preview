@@ -34,7 +34,7 @@ const actionsIndex = popupMarkup.indexOf('<div class="detail-personal-actions">'
 
 assert.ok(metaIndex >= 0, '기본정보·지도 묶음이 최초 팝업 HTML에 있어야 합니다.');
 assert.ok(metaIndex < menuIndex && menuIndex < routesIndex && routesIndex < actionsIndex,
-  '최초 팝업은 기본정보·지도 → 음식보기 → 주문수단 → 하단기능 순서여야 합니다.');
+  '최초 팝업 골격은 기본정보·지도 → 음식보기 → 주문수단 → 하단기능 순서여야 합니다.');
 assert.match(app, /function storeMenuPreviewEntryMarkup\(store\)/);
 assert.match(app, /store\?\.hasMenu !== true/);
 assert.doesNotMatch(openStoreSource, /routeFor\(store,'chak'\).*quick\.push/);
@@ -46,8 +46,8 @@ assert.match(rc3Enhance, /const orderAnchor = menuEntry \|\| detail\.querySelect
 assert.match(rc3Enhance, /\$\{direct\}\$\{apps\}\$\{community\}\$\{phone/);
 
 const decorateDetails = extractFunction(service, 'decorateStoreDetails');
-assert.match(decorateDetails, /const target = detail\.querySelector\('\.detail-personal-actions'\)/);
-assert.doesNotMatch(decorateDetails, /target = detail\.querySelector\('\[data-store-menu-preview\]'\)/);
+assert.match(decorateDetails, /const target = detail\.querySelector\('\[data-store-menu-preview\]'\)[\s\S]*?detail\.querySelector\('\.detail-routes'\)[\s\S]*?detail\.querySelector\('\.detail-personal-actions'\)/);
+assert.match(decorateDetails, /target\.before\(panel\)/);
 assert.match(service, /detailBenefitItems\(info\)\.filter\(item => item\.state === 'available'\)/);
 assert.match(service, /giftAvailable && giftRoute\?\.url/);
 assert.match(service, /class="store-service-gift-app-link"/);
@@ -67,7 +67,7 @@ assert.match(html, /app\.css\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /app\.js\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /store-service-info\.css\?v=store-service-10-native-order-1/);
-assert.match(html, /store-service-info\.js\?v=store-service-18-store-name-first-1/);
-assert.match(html, /store-menu-preview\.js\?v=store-menu-19-order-routes-and-sides-last-1/);
+assert.match(html, /store-service-info\.js\?v=store-service-19-popup-info-first-1/);
+assert.match(html, /store-menu-preview\.js\?v=store-menu-20-popup-info-first-1/);
 
 console.log('PASS: 가게 팝업 최초 생성 순서·혜택·지도·하단버튼·모바일 반복방지 유지');

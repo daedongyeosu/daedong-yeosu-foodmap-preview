@@ -22,9 +22,9 @@ assert.match(menu,
   /activeMenu = orderedMenu\(menu\);[\s\S]*previewMarkup\(activeMenu, store\)/,
   '정렬된 메뉴를 음식보기에 렌더링해야 합니다.');
 
-assert.match(html, /store-service-info\.js\?v=store-service-18-store-name-first-1/,
+assert.match(html, /store-service-info\.js\?v=store-service-19-popup-info-first-1/,
   '검색 수정본 캐시 버전이 필요합니다.');
-assert.match(html, /store-menu-preview\.js\?v=store-menu-19-order-routes-and-sides-last-1/,
+assert.match(html, /store-menu-preview\.js\?v=store-menu-20-popup-info-first-1/,
   '메뉴 수정본 캐시 버전이 필요합니다.');
 
 console.log('unified-search-menu-order-regression-test: pass');

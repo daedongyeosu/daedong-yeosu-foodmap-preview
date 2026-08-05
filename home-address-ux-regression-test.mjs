@@ -48,6 +48,6 @@ assert.match(style, /grid-template-columns:\s*auto minmax\(0, 1fr\);/);
 assert.doesNotMatch(style, /\.store-finder-location button/);
 
 assert.match(html, /home-address-short-1/);
-assert.match(html, /store-service-18-store-name-first-1/);
+assert.match(html, /store-service-19-popup-info-first-1/);
 
 console.log('home address UX regression checks passed');
