@@ -113,6 +113,7 @@ try {
   await page.screenshot({path: 'browser-alien-pizza-menu-search-failure.png', fullPage: false}).catch(() => {});
 } finally {
   fs.writeFileSync('browser-alien-pizza-menu-search-report.json', `${JSON.stringify(report, null, 2)}\n`);
+  console.log(JSON.stringify(report, null, 2));
   await browser.close();
 }
 
