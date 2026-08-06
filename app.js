@@ -124,7 +124,8 @@ const CATEGORY_ICON_RULES = [
 ];
 const HERO_BANNERS = Array.from({length: 17}, (_, index) => {
   const number = String(index + 1).padStart(2, '0');
-  return {desktop: `images/${number}.png`, mobile: `images/${number}.png`, fallback: `images/${number}.png`, alt: `대동여수음식지도 배너 ${index + 1}`};
+  const optimized = index === 0 ? 'images/01.webp' : `images/${number}.png`;
+  return {desktop: optimized, mobile: optimized, fallback: `images/${number}.png`, alt: `대동여수음식지도 배너 ${index + 1}`};
 });
 const PROMOS = [
   {kind: 'rider', title: '배송기사 모집', desc: '여수 지역 베테랑 기사님을 기다립니다.'},
