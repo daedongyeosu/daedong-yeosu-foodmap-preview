@@ -29,21 +29,21 @@ const targets = [
     id: 'f7385d8006310630',
     name: '국민학교',
     itemCount: 55,
-    serviceTexts: ['매일 오후 03:00 ~ 익일 오전 01:00', '땡겨요 · 여수섬섬페이 사용 가능 확인'],
+    serviceTexts: ['매일 오후 03:00 ~ 익일 오전 01:00', '먹깨비·땡겨요 · 여수섬섬페이 사용 가능 확인'],
     screenshot: '/tmp/browser-ddangyo-school.png'
   },
   {
     id: '6390834d3238c3eb',
     name: '황금아구 미평점',
     itemCount: 17,
-    serviceTexts: ['휴무 매주 일요일', '브레이크 타임 평일 오후 03:00 ~ 오후 05:00', '땡겨요 · 고유가 피해지원금 사용 가능 확인', '땡겨요 · 여수섬섬페이 사용 가능 확인', '땡겨요 · 무료배달 확인'],
+    serviceTexts: ['휴무 매주 일요일', '브레이크 타임 평일 오후 03:00 ~ 오후 05:00', '땡겨요 · 고유가 피해지원금 사용 가능 확인', '먹깨비·땡겨요 · 여수섬섬페이 사용 가능 확인', '땡겨요 · 무료배달 확인'],
     screenshot: '/tmp/browser-ddangyo-hwang.png'
   },
   {
     id: '2b78b30bde243ae6',
     name: '바른보쌈1990 여수웅천점',
     itemCount: 40,
-    serviceTexts: ['매일 오전 10:30 ~ 오후 09:30', '땡겨요 · 여수섬섬페이 사용 가능 확인'],
+    serviceTexts: ['매일 오전 10:30 ~ 오후 09:30', '먹깨비·땡겨요 · 여수섬섬페이 사용 가능 확인'],
     screenshot: '/tmp/browser-ddangyo-bareun.png'
   },
   {

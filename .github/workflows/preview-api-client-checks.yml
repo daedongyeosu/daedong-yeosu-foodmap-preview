@@ -65,6 +65,7 @@ jobs:
           node photo-viewer-removal-regression-test.mjs
           node rain-mode-admin-integration-regression-test.mjs
           node release-readiness-regression-test.mjs
+          node seomseom-joint-app-scope-regression-test.mjs
           node store-popup-info-menu-order-regression-test.mjs
           node store-popup-native-order-regression-test.mjs
           node store-service-open-count-loading-regression-test.mjs
