@@ -3,7 +3,7 @@
 .mukkebi-summer-card{position:relative;width:min(100%,420px);max-height:calc(100dvh - 36px);overflow:auto;border:1px solid rgba(255,255,255,.8);border-radius:28px;background:#fff;box-shadow:0 24px 70px rgba(0,20,50,.42)}
 .mukkebi-summer-close{position:absolute;z-index:2;top:14px;right:14px;width:48px;height:48px;border:3px solid #d89400;border-radius:50%;background:#fff;color:#10345e;font-size:30px;font-weight:700;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.16)}
 .mukkebi-summer-head{padding:76px 22px 25px;text-align:center;color:#fff;background:radial-gradient(circle at 82% 16%,rgba(255,255,255,.24) 0 8%,transparent 9%),linear-gradient(145deg,#00bfdc,#0875d9 66%,#064bb7)}
-.mukkebi-summer-partners{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:0 0 18px;font-size:15px;font-weight:800;line-height:1.35}
+.mukkebi-summer-partners{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:0 0 18px;font-size:15px;font-weight:800;line-height:1.35;word-break:keep-all}
 .mukkebi-summer-partners span,.mukkebi-summer-partners strong{white-space:nowrap}
 .mukkebi-summer-partners strong{padding:3px 9px;border-radius:999px;background:rgba(0,43,112,.38);color:#fff36a;font-size:18px;font-weight:900}
 .mukkebi-summer-kicker{margin:0 0 3px;font-size:19px;font-weight:900}
