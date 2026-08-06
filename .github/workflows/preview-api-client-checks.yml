@@ -59,6 +59,7 @@ jobs:
           node location-ranking-unification-regression-test.mjs
           node local-order-rail-address-regression-test.mjs
           node mobile-initialization-unblock-regression-test.mjs
+          node mukkebi-event-header-regression-test.mjs
           node nearby-rail-status-ranking-regression-test.mjs
           node outside-yeosu-full-list-regression-test.mjs
           node photo-viewer-removal-regression-test.mjs
