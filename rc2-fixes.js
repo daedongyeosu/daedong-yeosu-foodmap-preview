@@ -276,7 +276,7 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
     const storeId = String(store.id);
     const useCount = useCounts.get(storeId) || 0;
     if (selectedIds.has(storeId)) return;
-    if (!allowReuse && spec.kind !== 'new' && (globallyUsed.has(storeId) || useCount > 0)) {
+    if (!allowReuse && (globallyUsed.has(storeId) || useCount > 0)) {
       return;
     }
     const brandKey = rc2BrandKey(store);
@@ -325,6 +325,34 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
   return finish();
 }
 
+function rc2DiversifyRailLead(cards, recentLeads = []) {
+  const ordered = [...cards];
+  if (ordered.length < 2 || !recentLeads.length) return ordered;
+  const firstStatus = storeBusinessStatusPriority(ordered[0]);
+  const firstBucket = Number.isFinite(ordered[0].rc6LocationBucket) ? ordered[0].rc6LocationBucket : 9;
+  const ownershipTier = store => typeof rc6OwnershipTier === 'function' ? rc6OwnershipTier(store) : 2;
+  const firstTier = ownershipTier(ordered[0]);
+  const recentIds = new Set(recentLeads.map(store => String(store?.id || '')));
+  const recentPhotos = new Set(recentLeads.map(store => fxPhoto(store)).filter(Boolean));
+  const samePriorityBand = store => storeBusinessStatusPriority(store) === firstStatus
+    && (Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9) === firstBucket
+    && ownershipTier(store) === firstTier;
+  let replacementIndex = ordered.findIndex((store, index) => index > 0
+    && samePriorityBand(store)
+    && !recentIds.has(String(store.id))
+    && !recentPhotos.has(fxPhoto(store)));
+  if (replacementIndex < 0) {
+    replacementIndex = ordered.findIndex((store, index) => index > 0
+      && samePriorityBand(store)
+      && !recentIds.has(String(store.id)));
+  }
+  if (replacementIndex > 0) {
+    const [replacement] = ordered.splice(replacementIndex, 1);
+    ordered.unshift(replacement);
+  }
+  return ordered;
+}
+
 function rc2RailCard(store) {
   return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}"><button type="button" class="rail-card-open glass-action" data-rail-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-method">${escapeHtml(rc2RepresentativeMethod(store))}</span><button type="button" class="rail-order-button glass-action" data-rail-store-id="${escapeHtml(store.id)}">주문방법 보기</button></footer></article>`;
 }
@@ -340,8 +368,13 @@ fxRenderRails = function rc2RenderRails() {
   root.hidden = false;
   const globallyUsed = new Set();
   const useCounts = new Map();
+  const recentLeads = [];
   root.innerHTML = fxSelectedRails().map(spec => {
-    const cards = rc2RailCandidates(spec, globallyUsed, 8, useCounts);
+    const cards = rc2DiversifyRailLead(rc2RailCandidates(spec, globallyUsed, 8, useCounts), recentLeads);
+    if (cards[0]) {
+      recentLeads.push(cards[0]);
+      if (recentLeads.length > 3) recentLeads.shift();
+    }
     const allCandidates = fxRankStores(spec);
     return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track">${cards.map(rc2RailCard).join('') || '<p class="empty">추천 가게를 확인 중입니다.</p>'}</div></section>`;
   }).join('');

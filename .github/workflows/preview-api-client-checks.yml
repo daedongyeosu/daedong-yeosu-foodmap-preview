@@ -25,6 +25,7 @@ jobs:
           node --check app.js
           node --check final-experience.js
           node --check rc2-fixes.js
+          node --check rc3-fixes.js
           node --check rc6-fixes.js
           node --check rc7-address-map.js
           node --check store-service-info.js
@@ -56,6 +57,7 @@ jobs:
           node inapp-location-recovery-regression-test.mjs
           node kakao-order-link-regression-test.mjs
           node location-ranking-unification-regression-test.mjs
+          node local-order-rail-address-regression-test.mjs
           node mobile-initialization-unblock-regression-test.mjs
           node nearby-rail-status-ranking-regression-test.mjs
           node outside-yeosu-full-list-regression-test.mjs
