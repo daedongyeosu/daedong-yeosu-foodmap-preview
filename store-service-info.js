@@ -4,6 +4,10 @@
   const HISTORY_KEY = 'daedongStoreServiceOverview';
   const CLOSING_SOON_MINUTES = 60;
   const MENU_MATCH_PREVIEW_LIMIT = 2;
+  const SEOMSEOM_APP_SCOPE = Object.freeze({
+    appKeys: Object.freeze(['mukkebi', 'ddangyo']),
+    appLabel: '먹깨비·땡겨요'
+  });
   const STATUS_SORT_PRIORITY = Object.freeze({
     open: 0,
     'closing-soon': 1,
@@ -371,6 +375,13 @@
   }
 
   function benefitScope(entry, definition) {
+    const key = String(entry?.key || definition?.key || '');
+    if (key === 'yeosu-seomseom-pay') {
+      return {
+        appKeys: [...SEOMSEOM_APP_SCOPE.appKeys],
+        appLabel: SEOMSEOM_APP_SCOPE.appLabel
+      };
+    }
     const appKeys = Array.isArray(entry?.appKeys) && entry.appKeys.length
       ? entry.appKeys
       : Array.isArray(definition?.appKeys) ? definition.appKeys : [];
@@ -873,7 +884,8 @@ function overviewSearchText(entry) {
       ...(serviceData.deliveryBenefits || [])
     ].find(definition => {
       const label = normalize(definition.label);
-      const searchable = normalize(`${definition.label || ''} ${definition.appLabel || ''} ${definition.key || ''}`);
+      const scope = benefitScope(null, definition);
+      const searchable = normalize(`${definition.label || ''} ${scope.appLabel} ${definition.key || ''}`);
       return searchable.includes(compact) || (label && compact.includes(label));
     }) || null;
   }
@@ -1092,8 +1104,8 @@ function overviewSearchText(entry) {
     const areas = availableAreas();
     const benefitFilters = [
       ['all', '전체 혜택'],
-      ...(serviceData.programs || []).map(program => [program.key, `${program.appLabel || '적용 주문앱 미확인'} ${program.label}`]),
-      ...(serviceData.deliveryBenefits || []).map(benefit => [benefit.key, `${benefit.appLabel || '적용 주문앱 미확인'} ${benefit.label}`])
+      ...(serviceData.programs || []).map(program => [program.key, `${benefitScope(null, program).appLabel} ${program.label}`]),
+      ...(serviceData.deliveryBenefits || []).map(benefit => [benefit.key, `${benefitScope(null, benefit).appLabel} ${benefit.label}`])
     ];
     renderedSourceCount = allEntries.length;
 
