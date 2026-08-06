@@ -25,6 +25,7 @@ jobs:
           node --check app.js
           node --check final-experience.js
           node --check rc2-fixes.js
+          node --check rc3-fixes.js
           node --check rc6-fixes.js
           node --check rc7-address-map.js
           node --check store-service-info.js
@@ -56,14 +57,24 @@ jobs:
           node inapp-location-recovery-regression-test.mjs
           node kakao-order-link-regression-test.mjs
           node location-ranking-unification-regression-test.mjs
+          node local-order-rail-address-regression-test.mjs
           node mobile-initialization-unblock-regression-test.mjs
           node nearby-rail-status-ranking-regression-test.mjs
           node outside-yeosu-full-list-regression-test.mjs
           node photo-viewer-removal-regression-test.mjs
           node rain-mode-admin-integration-regression-test.mjs
+          node release-readiness-regression-test.mjs
           node store-popup-info-menu-order-regression-test.mjs
           node store-popup-native-order-regression-test.mjs
           node store-service-open-count-loading-regression-test.mjs
           node store-service-sensitive-counts-regression-test.mjs
           node turtle-ship-hero-regression-test.mjs
           node unified-search-menu-order-regression-test.mjs
+      - name: Install mobile browser checker
+        run: |
+          npm install --no-save --no-package-lock playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Verify deployed preview menu photos and navigation
+        env:
+          BASE_URL: https://preview.daedongmap.com
+        run: node scripts/browser-alien-pizza-menu-search.mjs

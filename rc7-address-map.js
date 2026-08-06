@@ -838,7 +838,10 @@
     });
     syncMainAddress();
     const build = document.querySelector('.build-mark');
-    if (build) build.textContent = '대동여수음식지도 RC7 주소·지도 UX 검수 후보';
+    if (build) {
+      build.hidden = true;
+      build.textContent = '';
+    }
   }
 
   window.rc7Initialize = initialize;

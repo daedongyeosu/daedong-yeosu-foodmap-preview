@@ -18,7 +18,8 @@ const RC3_FEEDBACK_CHANNELS = Object.freeze([
 ]);
 const RC3_BLOCKED_PHONE_ROUTE_STORES = new Set([
   '09de7c8235046632', // 불족대가 미평점: placeholder number
-  '0ad5341dc696d4f1'  // 맛있는 반찬: another store's placeholder page
+  '0ad5341dc696d4f1', // 맛있는 반찬: another store's placeholder page
+  '9ee73ce6168105ec'  // 더벤티 여수국동항점: another store's phone/order page
 ]);
 const rc3RailPointers = new Map();
 const rc3PhysicalMapPending = new Map();
@@ -168,8 +169,16 @@ fxRenderRails = function rc3RenderRails() {
   try {
     const globallyUsed = new Set();
     const useCounts = new Map();
+    const recentLeads = [];
     root.innerHTML = fxSelectedRails().map(spec => {
-      const cards = sortStoresByBusinessStatus(rc2RailCandidates(spec, globallyUsed, 8, useCounts));
+      const cards = rc2DiversifyRailLead(
+        sortStoresByBusinessStatus(rc2RailCandidates(spec, globallyUsed, 8, useCounts)),
+        recentLeads
+      );
+      if (cards[0]) {
+        recentLeads.push(cards[0]);
+        if (recentLeads.length > 3) recentLeads.shift();
+      }
       const allCandidates = fxRankStores(spec);
       return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">현재 표시할 추천 가게가 없습니다.</p>'}</div></section>`;
     }).join('');
@@ -197,13 +206,19 @@ function rc3Digits(value) {
 function rc3VerifiedPhone(store) {
   const mapped = rc3InternalPhoneByStore.get(String(store?.id));
   const digits = rc3Digits(mapped?.phone || store?.phone);
-  const valid = /^(?:0\d{8,11}|1[568]\d{6,7})$/.test(digits);
+  const valid = /^02\d{7,8}$/.test(digits)
+    || /^0(?:3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{7,8}$/.test(digits)
+    || /^050[2-8]\d{7,8}$/.test(digits)
+    || /^01[016789]\d{7,8}$/.test(digits)
+    || /^070\d{8}$/.test(digits)
+    || /^1[568]\d{6}$/.test(digits);
   return valid ? digits : '';
 }
 
 function rc3FormatPhone(value) {
   const digits = rc3Digits(value);
   if (/^02\d{7,8}$/.test(digits)) return digits.replace(/^(02)(\d{3,4})(\d{4})$/, '$1-$2-$3');
+  if (/^050[2-8]\d{7,8}$/.test(digits)) return digits.replace(/^(050[2-8])(\d{3,4})(\d{4})$/, '$1-$2-$3');
   if (/^01[016789]\d{7,8}$/.test(digits) || /^070\d{8}$/.test(digits)) return digits.replace(/^(\d{3})(\d{3,4})(\d{4})$/, '$1-$2-$3');
   return digits.replace(/^(\d{3})(\d{3,4})(\d{4})$/, '$1-$2-$3');
 }

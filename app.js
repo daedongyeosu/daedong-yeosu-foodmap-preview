@@ -8,6 +8,12 @@ const EXTERNAL_APP_KEYS = ['yogiyo', 'coupang', 'baemin'];
 const LOW_FEE_KEYS = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand', 'phone'];
 const LOCAL_DETAIL_KEYS = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand'];
 const DETAIL_ONLY_KEYS = ['phone', 'chak'];
+const BLOCKED_STORE_ROUTE_KEYS = Object.freeze({
+  '09de7c8235046632': new Set(['phone']),
+  '0ad5341dc696d4f1': new Set(['phone']),
+  // 더벤티 여수국동항점에 다른 가게(배스킨라빈스)의 주문·전화 경로가 연결된 원본 데이터 차단.
+  '9ee73ce6168105ec': new Set(['direct', 'phone', 'yogiyo', 'coupang', 'baemin'])
+});
 const FAVORITE_KEY = 'daedongFavoriteStoresV2';
 const RECENT_KEY = 'daedongRecentStoresV2';
 const FEEDBACK_QUEUE_KEY = 'daedongFeedbackQueueV1';
@@ -743,6 +749,10 @@ function isCustomerUsableExternalRoute(key, value) {
     return Boolean(meaningfulQuery || meaningfulHash);
   } catch { return false; }
 }
+function isPlaceholderAreaLabel(value) {
+  const normalized = normalize(value);
+  return !normalized || /^(?:홈화면|전체|전체동네|동네미확인|미확인|없음)$/i.test(normalized);
+}
 function normalizedStore(raw, index) {
   const sourceRoutes = Array.isArray(raw?.routes) ? raw.routes : [];
   const routes = sourceRoutes
@@ -752,7 +762,7 @@ function normalizedStore(raw, index) {
       const url = safeHref(route.url);
       return {...route, key, url, customerUsable: isCustomerUsableExternalRoute(key, url)};
     });
-  const area = raw.district || raw.area || '';
+  const rawArea = String(raw.district || raw.area || '').trim();
   const rawLat = parseCoordinate(raw.latitude ?? raw.lat);
   const rawLng = parseCoordinate(raw.longitude ?? raw.lng);
   const lat = rawLat !== null && rawLng !== null ? rawLat : null;
@@ -770,23 +780,24 @@ function normalizedStore(raw, index) {
       .filter(Boolean)
   )];
   const searchAliases = canonicalSearchAliases(raw);
-  const searchIndex = normalize([name, raw.realBusinessName, brandName, branchName, area, primaryCategory, ...categoryValues, ...searchAliases, ...(raw.shopInShopNames || [])].filter(Boolean).join(' '));
   const addressNeighborhoods=/여수시/.test(String(raw.address||''))?neighborhoodsFor(raw.address):[];
   const branchText=[branchName,name].filter(Boolean).join(' '), branchNeighborhoods=/점|지점|항|지구/.test(branchText)?neighborhoodsFor(branchText):[];
-  const notionNeighborhoods=neighborhoodsFor(area);
+  const notionNeighborhoods=isPlaceholderAreaLabel(rawArea)?[]:neighborhoodsFor(rawArea);
   const suppliedNeighborhoods=normalizedNeighborhoodNames(raw.neighborhoods||[]);
   const coordinateNeighborhood=lat!==null&&lng!==null?closestNeighborhoodForCoordinates({lat,lng}):'';
   const inferredNeighborhoods=addressNeighborhoods.length
     ? addressNeighborhoods
     : [...new Set([...suppliedNeighborhoods,...branchNeighborhoods,...notionNeighborhoods,...(coordinateNeighborhood?[coordinateNeighborhood]:[])])];
   const locationSource=addressNeighborhoods.length?'verified-address':suppliedNeighborhoods.length?'catalog-neighborhood':branchNeighborhoods.length?'store-name-branch':notionNeighborhoods.length?'notion-or-canonical-neighborhood':coordinateNeighborhood?'catalog-coordinate-neighborhood':'unresolved';
+  const area=!rawArea||isPlaceholderAreaLabel(rawArea)?inferredNeighborhoods[0]||'여수':rawArea;
+  const searchIndex = normalize([name, raw.realBusinessName, brandName, branchName, area, primaryCategory, ...categoryValues, ...searchAliases, ...(raw.shopInShopNames || [])].filter(Boolean).join(' '));
   return {
     id, store_id: id, name, realBusinessName: raw.realBusinessName || '',
     notionPageId: raw.notionPageId || '', notionUrl: raw.notionUrl || '', brandName, branchName, searchAliases, searchIndex,
     shopInShopNames: raw.shopInShopNames || [], area, cat: primaryCategory, categories: categoryValues,
     address: raw.address || '', phone: raw.phone || '', naverMap: safeHref(raw.naverMap || ''),
     legacyImage: legacyImages[0] || '', legacyImages,
-    tags: [raw.category, raw.district, raw.address, ...(raw.shopInShopNames || [])].filter(Boolean), routes,
+    tags: [raw.category, area, raw.address, ...(raw.shopInShopNames || [])].filter(Boolean), routes,
     managed: Boolean(raw.managed), sharedManaged: Boolean(raw.sharedManaged), pinPosition: raw.pinPosition,
     forceBottom: Boolean(raw.forceBottom), lat, lng, coordinateSource,
     channelKeys: Array.isArray(raw.channelKeys) ? [...new Set(raw.channelKeys.map(String))] : routes.map(route => route.key),
@@ -796,8 +807,15 @@ function normalizedStore(raw, index) {
   };
 }
 function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
-function routeFor(store, key) { return (Array.isArray(store?.routes) ? store.routes : []).find(route => route?.key === key && route?.customerUsable !== false); }
+function storeRouteIsBlocked(store, key) {
+  return Boolean(BLOCKED_STORE_ROUTE_KEYS[String(store?.id || store?.store_id || '')]?.has(String(key || '')));
+}
+function routeFor(store, key) {
+  if (storeRouteIsBlocked(store, key)) return undefined;
+  return (Array.isArray(store?.routes) ? store.routes : []).find(route => route?.key === key && route?.customerUsable !== false);
+}
 function storeHasChannel(store, key) {
+  if (storeRouteIsBlocked(store, key)) return false;
   if (routeFor(store, key)) return true;
   if (store?.__secureDetailReady === true && EXTERNAL_APP_KEYS.includes(key)) return false;
   return Boolean(store?.channelKeys?.includes?.(key));

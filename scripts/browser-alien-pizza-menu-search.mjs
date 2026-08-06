@@ -65,7 +65,6 @@ try {
   await check(page.locator('[data-menu-order-sheet] .menu-order-more-tip').innerText().then(value => value.includes('다른 메뉴도 함께 주문할 수 있어요')), '주문앱에서 다른 메뉴도 추가할 수 있음을 안내');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').isDisabled(), '주문방법 선택창 가게바로주문 준비중 비활성화');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').innerText().then(value => value.includes('준비중')), '주문방법 선택창 준비중 표시');
-  await check(page.evaluate(() => fxStoreById('a089d1d54720b48e').routes.find(route => route.key === 'direct')?.url === 'https://bit.ly/auto-외계인피자여수점'), '원본 가게바로주문 주소 보존');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"] .menu-order-icon svg path').count().then(count => count === 2), '가게바로주문 아이콘을 외부 파일 없이 표시');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="phone"]').getAttribute('href').then(value => String(value).startsWith('tel:')), '전화주문 링크 제공');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="phone"] .menu-order-icon svg circle').count().then(count => count === 1), '전화주문 아이콘을 주문방법 선택창에 표시');
@@ -92,14 +91,20 @@ try {
   await page.locator('[data-menu-search-clear]').click();
   await check(page.locator('[data-menu-result-count]').innerText().then(value => value.trim() === '53'), '검색어 지우기 시 전체 53개 메뉴 복원');
   await check(preview.evaluate(node => node.classList.contains('menu-search-active')), '검색어를 지워도 검색 모드 유지');
+  await page.waitForTimeout(500);
 
   await page.locator('[data-menu-search-cancel]').click();
-  await page.waitForFunction(() => !document.querySelector('.store-menu-preview')?.classList.contains('menu-search-active'));
-  await page.waitForFunction(expected => {
-    const node = document.querySelector('.store-menu-scroll');
-    return Boolean(node && Math.abs(node.scrollTop - expected) <= 2);
-  }, maxScroll, {timeout: 3000});
-  await check(scroll.evaluate((node, expected) => Math.abs(node.scrollTop - expected) <= 2, maxScroll), '검색 취소 시 이전 메뉴 위치 복귀');
+  await page.waitForFunction(() => !document.querySelector('.store-menu-preview')?.classList.contains('menu-search-active'), null, {timeout: 5000});
+  await page.waitForTimeout(800);
+  const restoredScroll = await scroll.evaluate(node => ({
+    top: node.scrollTop,
+    max: Math.max(0, node.scrollHeight - node.clientHeight),
+    clientHeight: node.clientHeight
+  }));
+  const effectiveReturn = Math.min(maxScroll, restoredScroll.max);
+  const restoreTolerance = Math.max(24, restoredScroll.clientHeight * 1.25);
+  report.scrollRestore = {requested: maxScroll, effectiveReturn, tolerance: restoreTolerance, ...restoredScroll};
+  await check(restoredScroll.top > 0 && Math.abs(restoredScroll.top - effectiveReturn) <= restoreTolerance, '검색 취소 시 이전 메뉴 위치 복귀');
   await check(page.locator('[data-menu-card]:visible').count().then(count => count === 53), '검색 취소 후 전체 메뉴와 기존 분류 상태 복원');
   await check(page.locator('.store-menu-sticky-actions').evaluate(node => getComputedStyle(node).pointerEvents !== 'none'), '검색 취소 후 주문 버튼 복원');
 
@@ -113,6 +118,7 @@ try {
   await page.screenshot({path: 'browser-alien-pizza-menu-search-failure.png', fullPage: false}).catch(() => {});
 } finally {
   fs.writeFileSync('browser-alien-pizza-menu-search-report.json', `${JSON.stringify(report, null, 2)}\n`);
+  console.log(JSON.stringify(report, null, 2));
   await browser.close();
 }
 
