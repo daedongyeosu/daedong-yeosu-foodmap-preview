@@ -36,6 +36,17 @@ assert.equal(classes.has('daedong-external-return-pending'), false, '가게 복�
 assert.match(rc2, /visibleStoreId[\s\S]*?modal\.querySelector\('\.store-detail'\)[\s\S]*?saved\.storeId/);
 assert.match(rc2, /rc2ModalStack\.length = 0;[\s\S]*?rc2NativeHardClose\(\{fromPop: true\}\)/);
 assert.match(rc2, /scrollWindowInstant\(Number\(saved\.pageScroll \|\| 0\)\)[\s\S]*?await openStore\(store\)/);
+assert.match(rc2, /storeSnapshot: storeSnapshot && storeSnapshot\.html\.length <= 500000/);
+assert.match(rc2, /\[current, \.\.\.rc2ModalStack\.slice\(\)\.reverse\(\)\]/);
+
+const modalPosition = html.indexOf('id="modal"');
+const snapshotBootPosition = html.indexOf('id="externalReturnSnapshotBoot"');
+const deferredAppPosition = html.indexOf('<script src="app.js');
+assert.ok(modalPosition > -1 && modalPosition < snapshotBootPosition && snapshotBootPosition < deferredAppPosition, '저장된 가게 팝업은 앱 초기화보다 먼저 복원되어야 합니다.');
+assert.match(html, /saved\?\.storeSnapshot/);
+assert.match(html, /modalContent\.replaceChildren\(template\.content\.cloneNode\(true\)\)/);
+assert.match(html, /window\.daedongImmediateExternalReturnStoreId = String\(saved\.storeId\)/);
+assert.match(html, /window\.daedongFinishExternalReturnBoot\?\.\(\)/);
 
 const initializeStart = rc2.indexOf('fxInitialize = async function rc2Initialize()');
 const initialize = rc2.slice(initializeStart);
@@ -47,7 +58,7 @@ assert.ok(firstRestore < initialize.indexOf('await fxInitWeather()'), '가게 �
 assert.match(initialize, /finally \{[\s\S]*?daedongFinishExternalReturnBoot/);
 assert.match(initialize, /rc2StartAmbient\(!restoredStore && !restoredAppBrowser\)/);
 
-assert.match(html, /final-experience\.js\?v=[^"\n]*direct-return-no-home-1[^"\n]*external-return-fast-1/);
-assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*direct-return-no-home-1[^'\n]*external-return-fast-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*direct-return-no-home-1[^"\n]*external-return-fast-1[^"\n]*instant-store-snapshot-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*direct-return-no-home-1[^'\n]*external-return-fast-1[^'\n]*instant-store-snapshot-1/);
 
 console.log('direct-app-return-no-home-regression-test: pass');
