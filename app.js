@@ -1023,8 +1023,11 @@ class InfiniteCarousel {
 }
 
 function renderHero() {
-  $('#heroTrack').innerHTML = HERO_BANNERS.map((banner, index) => `<article class="carousel-slide hero-slide" data-hero-index="${index}"><picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${banner.alt}" width="1200" height="700" decoding="async" fetchpriority="${index === 0 ? 'high' : 'auto'}" loading="${index === 0 ? 'eager' : 'lazy'}" onerror="this.onerror=null;this.src='${banner.fallback}'"></picture></article>`).join('');
-  heroCarousel = new InfiniteCarousel($('#heroCarousel'), {interval: 3500});
+  heroCarousel?.destroy();
+  heroCarousel = null;
+  $('#heroTrack').innerHTML = '';
+  $('#heroCarousel .carousel-dots').innerHTML = '';
+  $('.hero').hidden = true;
 }
 function renderPromos() {
   $('#promoTrack').innerHTML = PROMOS.map(promo => {
