@@ -19,10 +19,10 @@ assert.match(finalExperience, /window\.addEventListener\('pageshow',\(\)=>\{fxRe
 assert.match(finalExperience, /if\(!document\.hidden\)fxRestoreRegisteredAppButtons\(\)/);
 assert.match(finalExperience, /appStoreOrder\)\{event\.preventDefault\(\);event\.stopImmediatePropagation\(\)/);
 assert.match(finalExperience, /const FX_APP_BROWSER_RETURN='daedongAppBrowserReturnV1'/);
-assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key\)/);
+assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key,anchorStoreId=''\)/);
 assert.match(finalExperience, /category:modal\?\.dataset\.appBrowserCategory\|\|'추천'/);
 assert.match(finalExperience, /modalScroll:card\?\.scrollTop\|\|0/);
-assert.match(finalExperience, /fxRememberAppBrowserReturn\(key\)[\s\S]*?location\.assign\(href\)/);
+assert.match(finalExperience, /fxRememberAppBrowserReturn\(key,store\.id\)[\s\S]*?location\.assign\(href\)/);
 assert.match(finalExperience, /function fxRestoreAppBrowserReturn\(\)[\s\S]*?openAppBrowser\(saved\.key,saved\.category\|\|'추천'\)/);
 assert.match(finalExperience, /fxRestoreAppBrowserReturn\(\);[\s\S]*?if\(!sessionStorage\.getItem\(FX_ENTRY_SESSION\)\)/);
 assert.match(rc2, /async function rc2RestoreAfterExternalPage\(\)/);

@@ -11,11 +11,13 @@ const bodyStart = html.indexOf('<body>');
 const bootClass = html.indexOf('daedong-external-return-pending');
 assert.ok(bootClass > -1 && bootClass < headEnd && headEnd < bodyStart, '복귀 차단막은 홈 본문보다 먼저 준비되어야 합니다.');
 assert.match(html, /html\.daedong-external-return-pending body>\*\{visibility:hidden!important\}/);
-assert.match(html, /보던 가게로 바로 돌아가는 중/);
+assert.match(html, /보던 화면으로 바로 돌아가는 중/);
 assert.match(html, /\['daedongExternalReturnRc2', 'storeId'\]/);
 assert.match(html, /\['daedongAppBrowserReturnV1', 'key'\]/);
 assert.match(html, /window\.daedongFinishExternalReturnBoot/);
-assert.match(html, /window\.setTimeout\(window\.daedongFinishExternalReturnBoot, 2500\)/);
+assert.doesNotMatch(html, /window\.setTimeout\(window\.daedongFinishExternalReturnBoot, 2500\)/);
+assert.match(html, /localStorage\.getItem\(key\)/);
+assert.match(html, /saved\.returnToken && saved\.returnToken === history\.state/);
 
 const bootScript = html.match(/<script>\s*([\s\S]*?daedongFinishExternalReturnBoot[\s\S]*?)<\/script>/)?.[1] || '';
 assert.ok(bootScript, '복귀 첫 화면 스크립트를 찾아야 합니다.');
@@ -23,7 +25,9 @@ const classes = new Set();
 const context = {
   document: {documentElement: {classList: {add: value => classes.add(value), remove: value => classes.delete(value)}}},
   sessionStorage: {getItem: key => key === 'daedongExternalReturnRc2' ? JSON.stringify({storeId:'store-1', savedAt:Date.now()}) : null},
-  window: {setTimeout() {}},
+  localStorage: {getItem() { return null; }},
+  history: {state: null},
+  window: {},
   Date,
   JSON
 };
@@ -43,7 +47,7 @@ const modalPosition = html.indexOf('id="modal"');
 const snapshotBootPosition = html.indexOf('id="externalReturnSnapshotBoot"');
 const deferredAppPosition = html.indexOf('<script src="app.js');
 assert.ok(modalPosition > -1 && modalPosition < snapshotBootPosition && snapshotBootPosition < deferredAppPosition, '저장된 가게 팝업은 앱 초기화보다 먼저 복원되어야 합니다.');
-assert.match(html, /saved\?\.storeSnapshot/);
+assert.match(html, /storeSaved\?\.storeSnapshot/);
 assert.match(html, /modalContent\.replaceChildren\(template\.content\.cloneNode\(true\)\)/);
 assert.match(html, /window\.daedongImmediateExternalReturnStoreId = String\(saved\.storeId\)/);
 assert.match(html, /window\.daedongFinishExternalReturnBoot\?\.\(\)/);

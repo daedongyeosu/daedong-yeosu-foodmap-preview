@@ -23,7 +23,7 @@
     html.daedong-external-return-pending body>*{visibility:hidden!important}
     html.daedong-external-return-pending body::before,
     html.daedong-external-return-pending body::after{visibility:visible!important;position:fixed;z-index:99999;pointer-events:none}
-    html.daedong-external-return-pending body::before{content:'보던 가게로 바로 돌아가는 중';inset:0;display:grid;place-items:center;padding-top:72px;background:linear-gradient(180deg,#0d3554,#1d628d);color:#fff;font:900 18px/1.4 system-ui,-apple-system,'Noto Sans KR',sans-serif}
+    html.daedong-external-return-pending body::before{content:'보던 화면으로 바로 돌아가는 중';inset:0;display:grid;place-items:center;padding-top:72px;background:linear-gradient(180deg,#0d3554,#1d628d);color:#fff;font:900 18px/1.4 system-ui,-apple-system,'Noto Sans KR',sans-serif}
     html.daedong-external-return-pending body::after{content:'';left:50%;top:calc(50% - 28px);width:34px;height:34px;margin:-17px;border:4px solid rgba(255,255,255,.34);border-top-color:#ff6a2e;border-radius:50%;animation:daedong-return-spin .75s linear infinite}
     @keyframes daedong-return-spin{to{transform:rotate(360deg)}}
   </style>
@@ -38,18 +38,27 @@
       };
       try {
         const maxAge = 30 * 60 * 1000;
+        const tokenState = 'daedongExternalReturnToken';
+        const readSaved = key => {
+          let saved = null;
+          try { saved = JSON.parse(sessionStorage.getItem(key) || 'null'); } catch {}
+          let age = Date.now() - Number(saved?.savedAt || 0);
+          if (saved && age >= 0 && age < maxAge) return saved;
+          try { saved = JSON.parse(localStorage.getItem(key) || 'null'); } catch { saved = null; }
+          age = Date.now() - Number(saved?.savedAt || 0);
+          if (!saved || age < 0 || age >= maxAge) return null;
+          return saved.returnToken && saved.returnToken === history.state?.[tokenState] ? saved : null;
+        };
+        window.daedongReadEarlyExternalReturn = readSaved;
         const candidates = [
           ['daedongExternalReturnRc2', 'storeId'],
           ['daedongAppBrowserReturnV1', 'key']
         ];
-        const pending = candidates.some(([storageKey, requiredField]) => {
-          const saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
-          const age = Date.now() - Number(saved?.savedAt || 0);
-          return Boolean(saved?.[requiredField]) && age >= 0 && age < maxAge;
-        });
+        const pending = candidates.map(([storageKey, requiredField]) => ({storageKey, requiredField, saved: readSaved(storageKey)}))
+          .find(item => Boolean(item.saved?.[item.requiredField]));
         if (!pending) return;
+        window.daedongPendingExternalReturn = pending;
         root.classList.add('daedong-external-return-pending');
-        window.setTimeout(window.daedongFinishExternalReturnBoot, 2500);
       } catch { window.daedongFinishExternalReturnBoot(); }
     })();
   </script>
@@ -275,14 +284,20 @@
   <script id="externalReturnSnapshotBoot">
     (() => {
       try {
-        const saved = JSON.parse(sessionStorage.getItem('daedongExternalReturnRc2') || 'null');
-        const snapshot = saved?.storeSnapshot;
-        const age = Date.now() - Number(saved?.savedAt || 0);
-        if (!saved?.storeId || age < 0 || age >= 30 * 60 * 1000 || !snapshot?.html || snapshot.html.length > 500000) return;
+        const storeSaved = window.daedongReadEarlyExternalReturn?.('daedongExternalReturnRc2');
+        const browserSaved = storeSaved ? null : window.daedongReadEarlyExternalReturn?.('daedongAppBrowserReturnV1');
+        const saved = storeSaved || browserSaved;
+        const snapshot = storeSaved?.storeSnapshot || browserSaved?.modalSnapshot;
+        const surface = storeSaved ? 'store' : browserSaved ? 'app-browser' : '';
+        if (!saved || !snapshot?.html || snapshot.html.length > 500000) return;
         const template = document.createElement('template');
         template.innerHTML = String(snapshot.html);
-        const detail = template.content.querySelector('.store-detail[data-store-id]');
-        if (String(detail?.dataset.storeId || '') !== String(saved.storeId)) return;
+        if (surface === 'store') {
+          const detail = template.content.querySelector('.store-detail[data-store-id]');
+          if (String(detail?.dataset.storeId || '') !== String(saved.storeId)) return;
+        } else {
+          if (!saved.key || !template.content.querySelector('.app-browser')) return;
+        }
         template.content.querySelectorAll('script,style,iframe,object,embed,base,meta').forEach(node => node.remove());
         template.content.querySelectorAll('*').forEach(node => {
           for (const attribute of [...node.attributes]) {
@@ -296,8 +311,12 @@
         const overlay = document.getElementById('overlay');
         if (!modal || !modalContent || !overlay) return;
         modalContent.replaceChildren(template.content.cloneNode(true));
-        modal.className = 'modal store-modal';
-        modal.dataset.activeStoreId = String(saved.storeId);
+        modal.className = surface === 'store' ? 'modal store-modal' : 'modal app-browser-modal';
+        if (surface === 'store') modal.dataset.activeStoreId = String(saved.storeId);
+        else {
+          modal.dataset.appBrowserKey = String(saved.key);
+          modal.dataset.appBrowserCategory = String(saved.category || '추천');
+        }
         overlay.hidden = false;
         modal.hidden = false;
         const pageScroll = Number.isFinite(Number(saved.pageScroll)) ? Math.max(0, Number(saved.pageScroll)) : 0;
@@ -306,10 +325,31 @@
         document.body.classList.add('modal-open');
         Object.assign(document.body.style, {position:'fixed', top:`-${pageScroll}px`, left:'0', right:'0', width:'100%', overflow:'hidden'});
         const card = modal.querySelector('.modal-card');
-        if (card) card.scrollTop = Math.max(0, Number(snapshot.scrollTop || saved.modalScroll || 0));
-        try { history.replaceState({...history.state, daedongModal:true, rc2ModalDepth:1, storeId:String(saved.storeId)}, ''); } catch {}
-        window.daedongImmediateExternalReturnStoreId = String(saved.storeId);
-        window.daedongFinishExternalReturnBoot?.();
+        const anchor = snapshot.anchor || saved.anchor;
+        const resolveAnchor = () => {
+          if (!card || !anchor) return null;
+          try {
+            if (anchor.kind === 'id') return card.querySelector(`#${CSS.escape(String(anchor.value || ''))}`);
+            if (anchor.kind === 'attribute' && /^data-[a-z0-9-]+$/i.test(anchor.name || '')) {
+              return [...card.querySelectorAll(`[${anchor.name}]`)].find(element => element.getAttribute(anchor.name) === String(anchor.value ?? '')) || null;
+            }
+            if (anchor.kind === 'class') return card.querySelectorAll(`.${CSS.escape(String(anchor.value || ''))}`)[Number(anchor.index || 0)] || null;
+          } catch {}
+          return null;
+        };
+        const align = () => {
+          const element = resolveAnchor();
+          if (!element) return;
+          const delta = element.getBoundingClientRect().top - card.getBoundingClientRect().top - Number(anchor.offset || 0);
+          if (Math.abs(delta) > 0.5) card.scrollTop = Math.max(0, card.scrollTop + delta);
+        };
+        if (card) {
+          card.scrollTop = Math.max(0, Number(snapshot.scrollTop || saved.modalScroll || 0));
+          requestAnimationFrame(align);
+        }
+        try { history.replaceState({...history.state, daedongModal:true, rc2ModalDepth:1, ...(surface === 'store' ? {storeId:String(saved.storeId)} : {})}, ''); } catch {}
+        if (surface === 'store') window.daedongImmediateExternalReturnStoreId = String(saved.storeId);
+        if (!storeSaved?.menuState) window.daedongFinishExternalReturnBoot?.();
       } catch {}
     })();
   </script>
@@ -341,11 +381,11 @@
   <script src="data-api.js?v=cloudflare-preview-api-4-curated-menu-photos-1" defer></script>
   <script src="data-api-runtime.js?v=cloudflare-preview-api-2" defer></script>
   <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-hero-forward-only-1-lower-promo-details-6-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-startup-popup-disabled-1-anonymous-analytics-1-coarse-region-1-owner-exclusion-1-outside-yeosu-full-list-1-direct-coming-soon-1-home-address-short-1-secure-detail-core-1-store-popup-native-order-1-kakao-order-same-tab-1-ddangyo-direct-launch-1-location-ranking-unified-1-catalog-ready-watchdog-2-simple-app-return-1-ddangyo-retry-touch-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-notion-hero-return-1-rider-evergreen-1" defer></script>
-  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-local-channel-marker-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1-unified-menu-search-2-secure-detail-await-3-card-channel-keys-1-store-popup-native-order-1-app-list-direct-order-1-app-route-return-fix-1-app-browser-return-state-1-ddangyo-direct-launch-1-location-ranking-ready-1-location-ranking-watchdog-2-saved-address-first-1-simple-app-return-1-direct-return-no-home-1-business-status-ranking-1-nearby-status-final-1-recommend-status-final-1-release-readiness-1-external-return-fast-1-instant-store-snapshot-1-hero-open-only-clean-controls-1-three-main-ads-restored-1-notion-hero-return-1" defer></script>
+  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-local-channel-marker-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1-unified-menu-search-2-secure-detail-await-3-card-channel-keys-1-store-popup-native-order-1-app-list-direct-order-1-app-route-return-fix-1-app-browser-return-state-1-ddangyo-direct-launch-1-location-ranking-ready-1-location-ranking-watchdog-2-saved-address-first-1-simple-app-return-1-direct-return-no-home-1-business-status-ranking-1-nearby-status-final-1-recommend-status-final-1-release-readiness-1-external-return-fast-1-instant-store-snapshot-1-hero-open-only-clean-controls-1-three-main-ads-restored-1-notion-hero-return-1-all-order-app-exact-return-1" defer></script>
   <script src="store-list-horizontal-pager.js?v=1" defer></script>
   <script src="turtle-ship-hero.js?v=message-colors-popup-15s-1" defer></script>
   <script src="store-service-info.js?v=store-service-25-menu-search-status-order-1-card-status-1-business-status-ranking-1-seomseom-merchant-label-1" defer></script>
-  <script src="store-menu-preview.js?v=store-menu-22-customer-popup-order-1-simple-app-return-1" defer></script>
+  <script src="store-menu-preview.js?v=store-menu-22-customer-popup-order-1-simple-app-return-1-all-order-app-exact-return-1" defer></script>
   <script src="pwa-register.js?v=android-pwa-1-preview-redeploy-1-kakao-cache-reset-1-mobile-api-deadline-1" defer></script>
   <script src="mukkebi-summer-event.js?v=20260801-1-simple-app-return-1" defer></script>
 </body>
