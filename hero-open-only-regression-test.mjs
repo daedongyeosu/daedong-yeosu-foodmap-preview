@@ -13,7 +13,7 @@ assert.doesNotMatch(baseHero, /HERO_BANNERS\.map/);
 
 assert.match(rc6, /function rc6HeroStoreIsOpen\(store\)\{return storeBusinessStatusPriority\(store\)<=1;\}/);
 assert.match(rc6, /stores\.filter\(store=>fxVisible\(store\)&&rc6HeroStoreIsOpen\(store\)/);
-assert.match(rc6, /function rc6HeroEntries\(\)[\s\S]*return rc6DailyHeroOrder\(rc6ManagedStoreHeroEntries\(\)\);/);
+assert.match(rc6, /function rc6HeroEntries\(\)[\s\S]*return rc6InterleaveHeroEntries\(rc6DailyHeroOrder\(rc6ManagedStoreHeroEntries\(\)\),rc6SpecialHeroEntries\(\)\);/);
 assert.match(rc6, /if\(hero\)hero\.hidden=!entries\.length/);
 assert.doesNotMatch(rc6, /rankedStore\?\.proximityLabel/);
 assert.doesNotMatch(rc6, /<small>\$\{escapeHtml\(proximity\)\}<\/small>/);
