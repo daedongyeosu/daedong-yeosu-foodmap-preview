@@ -171,10 +171,11 @@ fxRenderRails = function rc3RenderRails() {
     const useCounts = new Map();
     const recentLeads = [];
     root.innerHTML = fxSelectedRails().map(spec => {
-      const cards = rc2DiversifyRailLead(
+      const diversifiedCards = rc2DiversifyRailLead(
         sortStoresByBusinessStatus(rc2RailCandidates(spec, globallyUsed, 8, useCounts)),
         recentLeads
       );
+      const cards = rc2ApplyManagedRegionPriority(diversifiedCards, spec, 8, fxRankStores(spec));
       if (cards[0]) {
         recentLeads.push(cards[0]);
         if (recentLeads.length > 3) recentLeads.shift();

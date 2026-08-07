@@ -416,6 +416,12 @@ function rc2ManagedRegionPriorityNeighborhood() {
   return '';
 }
 
+function rc2ManagedRegionDailyPosition(spec, priorityId, dayKey = RC2_RAIL_RANDOM_SEED) {
+  const timestamp = Date.parse(`${dayKey}T00:00:00Z`);
+  const dayNumber = Number.isFinite(timestamp) ? Math.floor(timestamp / 86400000) : 0;
+  return (dayNumber + rc2StringSeed(`${spec?.id || ''}|${priorityId}`)) % 3;
+}
+
 function rc2ApplyManagedRegionPriority(cards, spec, limit, rankedStores = []) {
   const priorityId = RC2_MANAGED_REGION_PRIORITY_STORE_BY_RAIL[spec?.id];
   if (!priorityId || !rc2ManagedRegionPriorityNeighborhood()) {
@@ -423,11 +429,16 @@ function rc2ApplyManagedRegionPriority(cards, spec, limit, rankedStores = []) {
   }
   const rankedById = new Map(rankedStores.map(store => [String(store.id), store]));
   const priority = rankedById.get(priorityId) || fxStoreById(priorityId);
-  if (!priority || !fxVisible(priority)) return sortStoresByBusinessStatus(cards).slice(0, limit);
+  if (!priority || !fxVisible(priority) || storeBusinessStatusPriority(priority) !== 0) {
+    return sortStoresByBusinessStatus(cards).slice(0, limit);
+  }
   const normalSlotCount = Math.max(0, limit - 1);
   const normal = sortStoresByBusinessStatus(cards.filter(store => String(store.id) !== priorityId))
     .slice(0, normalSlotCount);
-  return sortStoresByBusinessStatus([priority, ...normal]).slice(0, limit);
+  const openNormalCount = normal.filter(store => storeBusinessStatusPriority(store) === 0).length;
+  const insertionIndex = Math.min(rc2ManagedRegionDailyPosition(spec, priorityId), openNormalCount);
+  normal.splice(insertionIndex, 0, priority);
+  return normal.slice(0, limit);
 }
 
 function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map()) {
