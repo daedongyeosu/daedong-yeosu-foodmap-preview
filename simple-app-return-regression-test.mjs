@@ -28,7 +28,7 @@ assert.match(comparedHandler, /rc2RememberExternalReturn\(\)/);
 assert.match(comparedHandler, /window\.location\.assign\(href\)/);
 assert.doesNotMatch(comparedHandler, /window\.open|history\.back/);
 assert.match(rc2, /function rc2RememberExternalReturn\(\) \{[\s\S]*?daedongMarkExternalAppDeparture/);
-assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key\)\{[\s\S]*?daedongMarkExternalAppDeparture/);
+assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key,anchorStoreId=''\)\{[\s\S]*?daedongMarkExternalAppDeparture/);
 
 assert.match(menu, /data-menu-external-key="\$\{escapeMenuHtml\(key\)\}"/);
 assert.match(menu, /data-menu-sticky-external="\$\{escapeMenuHtml\(key\)\}"/);

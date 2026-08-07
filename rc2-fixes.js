@@ -3,6 +3,10 @@
 /* RC2 fixes only. Frozen store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
 const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json';
 const RC2_EXTERNAL_RETURN = 'daedongExternalReturnRc2';
+const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
+const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
+const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
+const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
 const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
 const rc2NativeOpenModal = openModal;
 const rc2NativeHardClose = hardClose;
@@ -14,6 +18,144 @@ let rc2ModalRestoring = false;
 let rc2ReplaceNextModal = false;
 let rc2AmbientTimers = [];
 let rc2PeriodicTimer = 0;
+let rc2DeferredStoreReturnPosition = null;
+
+function rc2FreshReturnState(saved) {
+  const age = Date.now() - Number(saved?.savedAt || 0);
+  return Boolean(saved && age >= 0 && age < RC2_RETURN_MAX_AGE);
+}
+
+function rc2ParseReturnState(storage, key) {
+  try { return JSON.parse(storage.getItem(key) || 'null'); } catch { return null; }
+}
+
+function rc2ReadReturnState(key) {
+  const sessionSaved = rc2ParseReturnState(sessionStorage, key);
+  if (rc2FreshReturnState(sessionSaved)) return sessionSaved;
+  const persistentSaved = rc2ParseReturnState(localStorage, key);
+  if (!rc2FreshReturnState(persistentSaved)) return null;
+  return persistentSaved.returnToken && persistentSaved.returnToken === history.state?.[RC2_RETURN_TOKEN_STATE]
+    ? persistentSaved
+    : null;
+}
+
+function rc2StoreReturnState(storage, key, payload) {
+  try {
+    storage.setItem(key, JSON.stringify(payload));
+    return;
+  } catch {}
+  const compact = {...payload};
+  delete compact.storeSnapshot;
+  delete compact.modalSnapshot;
+  try { storage.setItem(key, JSON.stringify(compact)); } catch {}
+}
+
+function rc2WriteReturnState(key, value) {
+  const returnToken = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  const payload = {...value, returnToken, savedAt: Date.now()};
+  for (const storageKey of RC2_RETURN_STORAGE_KEYS) {
+    if (storageKey === key) continue;
+    try { sessionStorage.removeItem(storageKey); } catch {}
+    try { localStorage.removeItem(storageKey); } catch {}
+  }
+  try { history.replaceState({...history.state, [RC2_RETURN_TOKEN_STATE]: returnToken}, ''); } catch {}
+  rc2StoreReturnState(sessionStorage, key, payload);
+  rc2StoreReturnState(localStorage, key, payload);
+  return payload;
+}
+
+function rc2ClearReturnState(key, saved = null) {
+  try { sessionStorage.removeItem(key); } catch {}
+  try { localStorage.removeItem(key); } catch {}
+  const token = saved?.returnToken;
+  if (!token || history.state?.[RC2_RETURN_TOKEN_STATE] !== token) return;
+  try {
+    const next = {...history.state};
+    delete next[RC2_RETURN_TOKEN_STATE];
+    history.replaceState(next, '');
+  } catch {}
+}
+
+const RC2_RETURN_ANCHOR_ATTRIBUTES = [
+  'data-menu-id', 'data-app-store-order', 'data-app-store-info', 'data-store-menu-preview',
+  'data-store-service-menu-id', 'data-store-service-store-id', 'data-benefit-app', 'data-store-id'
+];
+const RC2_RETURN_ANCHOR_SELECTOR = [
+  '#modalTitle', '[data-menu-id]', '[data-app-store-order]', '[data-app-store-info]',
+  '[data-store-menu-preview]', '[data-store-service-menu-id]', '[data-store-service-store-id]',
+  '[data-benefit-app]', '.detail-meta-row', '.detail-routes', '.store-other-wrap',
+  '.brand-store-actions', '.detail-personal-actions'
+].join(',');
+
+function rc2ReturnAnchorDescriptor(element, card) {
+  if (!element || !card) return null;
+  const cardRect = card.getBoundingClientRect();
+  const rect = element.getBoundingClientRect();
+  if (element.id) return {kind: 'id', value: element.id, offset: rect.top - cardRect.top};
+  for (const attribute of RC2_RETURN_ANCHOR_ATTRIBUTES) {
+    if (!element.hasAttribute(attribute)) continue;
+    return {kind: 'attribute', name: attribute, value: element.getAttribute(attribute), offset: rect.top - cardRect.top};
+  }
+  const className = [...element.classList].find(value => /^[a-z][a-z0-9_-]+$/i.test(value));
+  if (!className) return null;
+  const matches = [...card.querySelectorAll(`.${CSS.escape(className)}`)];
+  return {kind: 'class', value: className, index: Math.max(0, matches.indexOf(element)), offset: rect.top - cardRect.top};
+}
+
+function rc2CaptureReturnAnchor(card, preferredElement = null) {
+  if (!card) return null;
+  if (preferredElement && card.contains(preferredElement)) return rc2ReturnAnchorDescriptor(preferredElement, card);
+  const cardRect = card.getBoundingClientRect();
+  const candidates = [...card.querySelectorAll(RC2_RETURN_ANCHOR_SELECTOR)]
+    .filter(element => {
+      const rect = element.getBoundingClientRect();
+      return rect.height > 0 && rect.bottom > cardRect.top + 4 && rect.top < cardRect.bottom - 4;
+    })
+    .sort((a, b) => Math.abs(a.getBoundingClientRect().top - cardRect.top) - Math.abs(b.getBoundingClientRect().top - cardRect.top));
+  return rc2ReturnAnchorDescriptor(candidates[0], card);
+}
+
+function rc2ResolveReturnAnchor(card, anchor) {
+  if (!card || !anchor) return null;
+  try {
+    if (anchor.kind === 'id') return card.querySelector(`#${CSS.escape(String(anchor.value || ''))}`);
+    if (anchor.kind === 'attribute' && RC2_RETURN_ANCHOR_ATTRIBUTES.includes(anchor.name)) {
+      return [...card.querySelectorAll(`[${anchor.name}]`)].find(element => element.getAttribute(anchor.name) === String(anchor.value ?? '')) || null;
+    }
+    if (anchor.kind === 'class') return card.querySelectorAll(`.${CSS.escape(String(anchor.value || ''))}`)[Number(anchor.index || 0)] || null;
+  } catch {}
+  return null;
+}
+
+function rc2ApplyReturnPosition(card, saved, useFallback = false) {
+  if (!card || !saved) return false;
+  if (useFallback) card.scrollTop = Math.max(0, Number(saved.modalScroll || saved.scrollTop || 0));
+  const anchor = rc2ResolveReturnAnchor(card, saved.anchor);
+  if (!anchor) return false;
+  const currentOffset = anchor.getBoundingClientRect().top - card.getBoundingClientRect().top;
+  const delta = currentOffset - Number(saved.anchor.offset || 0);
+  if (Math.abs(delta) > 0.5) card.scrollTop = Math.max(0, card.scrollTop + delta);
+  return true;
+}
+
+function rc2StabilizeReturnPosition(saved, card = $('#modal .modal-card')) {
+  if (!card || !saved) return;
+  let cancelled = false;
+  const cancel = () => { cancelled = true; };
+  for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) card.addEventListener(type, cancel, {once: true, passive: true});
+  const apply = useFallback => { if (!cancelled && card.isConnected) rc2ApplyReturnPosition(card, saved, useFallback); };
+  requestAnimationFrame(() => {
+    apply(true);
+    requestAnimationFrame(() => apply(false));
+  });
+  for (const delay of [120, 360, 800, 1600]) setTimeout(() => apply(false), delay);
+}
+
+window.daedongReadExternalReturnState = rc2ReadReturnState;
+window.daedongWriteExternalReturnState = rc2WriteReturnState;
+window.daedongClearExternalReturnState = rc2ClearReturnState;
+window.daedongCaptureReturnAnchor = rc2CaptureReturnAnchor;
+window.daedongStabilizeReturnPosition = rc2StabilizeReturnPosition;
 
 function rc2Icon(id, className = 'category-local-icon') {
   return `<svg class="${className}" aria-hidden="true"><use href="${RC2_ICON_SPRITE}#${id}"></use></svg>`;
@@ -59,6 +201,7 @@ function rc2SnapshotModal() {
     className: modal?.className || 'modal',
     dataset: modal ? {...modal.dataset} : {},
     scrollTop: card?.scrollTop || 0,
+    anchor: rc2CaptureReturnAnchor(card),
     pageScroll: Number(document.body.dataset.lockScrollY || window.scrollY || 0),
     photoIndex: detailCarousel?.logicalIndex?.() ?? 0
   };
@@ -77,10 +220,7 @@ function rc2RestoreSnapshot(snapshot) {
     detailCarousel = new InfiniteCarousel(carouselRoot, {interval: 3500});
     detailCarousel.goTo?.(snapshot.photoIndex || 0);
   }
-  requestAnimationFrame(() => {
-    const card = modal.querySelector('.modal-card');
-    if (card) card.scrollTop = snapshot.scrollTop || 0;
-  });
+  rc2StabilizeReturnPosition({modalScroll: snapshot.scrollTop || 0, anchor: snapshot.anchor}, modal.querySelector('.modal-card'));
   rc2ModalRestoring = false;
   rc2ScrubCustomerCounts(modal);
 }
@@ -644,7 +784,8 @@ function rc2StartAmbient(firstEntry = false) {
 function rc2RememberExternalReturn() {
   window.daedongMarkExternalAppDeparture?.();
   const modal = $('#modal');
-  const storeId = modal?.dataset.activeStoreId || modal?.querySelector('[data-store-id]')?.dataset.storeId || history.state?.storeId;
+  const menuState = window.daedongMenuReturn?.capture?.() || null;
+  const storeId = menuState?.storeId || modal?.dataset.activeStoreId || modal?.querySelector('[data-store-id]')?.dataset.storeId || history.state?.storeId;
   if (!storeId) return;
   const current = rc2SnapshotModal();
   const storeSnapshot = [current, ...rc2ModalStack.slice().reverse()].find(snapshot => {
@@ -655,31 +796,34 @@ function rc2RememberExternalReturn() {
   });
   const payload = {
     storeId: String(storeId),
+    surface: menuState ? 'menu' : 'store',
     pageScroll: Number(storeSnapshot?.pageScroll ?? document.body.dataset.lockScrollY ?? 0),
     modalScroll: Number(storeSnapshot?.scrollTop || 0),
-    savedAt: Date.now(),
+    anchor: storeSnapshot?.anchor || null,
+    menuState,
     storeSnapshot: storeSnapshot && storeSnapshot.html.length <= 500000 ? {
       html: storeSnapshot.html,
       scrollTop: Number(storeSnapshot.scrollTop || 0),
-      photoIndex: Number(storeSnapshot.photoIndex || 0)
+      photoIndex: Number(storeSnapshot.photoIndex || 0),
+      anchor: storeSnapshot.anchor || null
     } : null
   };
-  try {
-    sessionStorage.setItem(RC2_EXTERNAL_RETURN, JSON.stringify(payload));
-  } catch {
-    delete payload.storeSnapshot;
-    try { sessionStorage.setItem(RC2_EXTERNAL_RETURN, JSON.stringify(payload)); } catch {}
-  }
+  rc2WriteReturnState(RC2_EXTERNAL_RETURN, payload);
 }
 
 async function rc2RestoreAfterExternalPage() {
-  let saved = null;
-  try { saved = JSON.parse(sessionStorage.getItem(RC2_EXTERNAL_RETURN) || 'null'); } catch {}
-  if (!saved || Date.now() - Number(saved.savedAt || 0) > 30 * 60 * 1000) return false;
+  const saved = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
+  if (!saved) return false;
   const modal = $('#modal');
   const visibleStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
   if (!modal?.hidden && modal.querySelector('.store-detail') && String(visibleStoreId || '') === String(saved.storeId)) {
-    sessionStorage.removeItem(RC2_EXTERNAL_RETURN);
+    rc2DeferredStoreReturnPosition = saved;
+    rc2StabilizeReturnPosition(saved);
+    if (saved.menuState) {
+      const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
+      if (!restoredMenu) return false;
+    }
+    rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
     return true;
   }
   const store = fxStoreById(saved.storeId);
@@ -691,12 +835,19 @@ async function rc2RestoreAfterExternalPage() {
   scrollWindowInstant(Number(saved.pageScroll || 0));
   const opened = await openStore(store);
   if (opened === false) return false;
-  requestAnimationFrame(() => {
-    const card = $('#modal .modal-card');
-    if (card) card.scrollTop = Number(saved.modalScroll || 0);
-  });
-  sessionStorage.removeItem(RC2_EXTERNAL_RETURN);
+  rc2DeferredStoreReturnPosition = saved;
+  rc2StabilizeReturnPosition(saved);
+  if (saved.menuState) {
+    const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
+    if (!restoredMenu) return false;
+  }
+  rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
   return true;
+}
+
+async function rc2RestoreExternalSurface() {
+  if (await rc2RestoreAfterExternalPage()) return true;
+  return Boolean(fxRestoreAppBrowserReturn?.());
 }
 
 fxOrderClick = function rc2OrderClick(button) {
@@ -803,14 +954,16 @@ fxInstallEvents = function rc2InstallEvents() {
     document.documentElement.classList.toggle('page-hidden', document.hidden);
     if (document.hidden) rc2StopAmbient();
     else {
-      rc2StartAmbient(false);
-      void rc2RestoreAfterExternalPage();
-      fxRestoreAppBrowserReturn?.();
+      void rc2RestoreExternalSurface().then(restored => {
+        if (restored) window.daedongFinishExternalReturnBoot?.();
+        else rc2StartAmbient(false);
+      });
     }
   });
   window.addEventListener('pageshow', () => {
-    void rc2RestoreAfterExternalPage();
-    fxRestoreAppBrowserReturn?.();
+    void rc2RestoreExternalSurface().then(restored => {
+      if (restored) window.daedongFinishExternalReturnBoot?.();
+    });
   });
 };
 
@@ -821,7 +974,8 @@ fxInitialize = async function rc2Initialize() {
   try {
     const restoredStoreResult = await rc2RestoreAfterExternalPage();
     restoredStore = Boolean(restoredStoreResult);
-    if (restoredStore) window.daedongFinishExternalReturnBoot?.();
+    if (!restoredStore) restoredAppBrowser = Boolean(fxRestoreAppBrowserReturn?.());
+    if (restoredStore || restoredAppBrowser) window.daedongFinishExternalReturnBoot?.();
   } catch (error) {
     console.warn('저장된 가게를 먼저 복원하지 못했습니다.', error);
   }
@@ -845,17 +999,27 @@ fxInitialize = async function rc2Initialize() {
   if (restoredStore) {
     const activeStore = fxStoreById($('#modal')?.dataset.activeStoreId);
     if (activeStore) fxEnhanceStoreDetail(activeStore);
+    if (rc2DeferredStoreReturnPosition) rc2StabilizeReturnPosition(rc2DeferredStoreReturnPosition);
   }
   try {
-    if (!restoredStore) {
+    if (!restoredStore && !restoredAppBrowser) {
       restoredStore = Boolean(await rc2RestoreAfterExternalPage());
       if (!restoredStore) restoredAppBrowser = Boolean(fxRestoreAppBrowserReturn?.());
     }
   } finally {
+    if (!restoredStore) {
+      const staleStoreReturn = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
+      if (staleStoreReturn) rc2ClearReturnState(RC2_EXTERNAL_RETURN, staleStoreReturn);
+    }
+    if (!restoredAppBrowser) {
+      const staleBrowserReturn = rc2ReadReturnState(RC2_APP_BROWSER_RETURN);
+      if (staleBrowserReturn) rc2ClearReturnState(RC2_APP_BROWSER_RETURN, staleBrowserReturn);
+    }
     window.daedongFinishExternalReturnBoot?.();
   }
   renderCategories();
   fxRenderRails();
   await fxInitWeather();
+  setTimeout(() => { rc2DeferredStoreReturnPosition = null; }, 2200);
   rc2StartAmbient(!restoredStore && !restoredAppBrowser);
 };

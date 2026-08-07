@@ -339,7 +339,7 @@
     }, {});
     const featuredCategories = menu.categories.filter(category => category !== '전체').slice(0, 3);
     return `
-      <section class="store-menu-preview" role="dialog" aria-modal="true" aria-labelledby="storeMenuTitle">
+      <section class="store-menu-preview" data-store-id="${escapeMenuHtml(store.id)}" role="dialog" aria-modal="true" aria-labelledby="storeMenuTitle">
         <header class="store-menu-topbar">
           <button type="button" data-menu-preview-close aria-label="메뉴 미리보기 닫기">‹</button>
           <strong>음식 미리보기</strong>
@@ -435,6 +435,71 @@
     preview?.classList.remove('menu-chrome-hidden');
   }
 
+  function captureMenuReturnState() {
+    const preview = document.querySelector('[data-store-menu-overlay]:not([hidden]) .store-menu-preview');
+    const scrollRoot = preview?.querySelector('.store-menu-scroll');
+    const storeId = preview?.dataset.storeId || activeStore?.id;
+    if (!preview || !scrollRoot || !storeId) return null;
+    const rootRect = scrollRoot.getBoundingClientRect();
+    const visibleCards = [...preview.querySelectorAll('[data-menu-card]:not([hidden])')]
+      .filter(card => {
+        const rect = card.getBoundingClientRect();
+        return rect.height > 0 && rect.bottom > rootRect.top && rect.top < rootRect.bottom;
+      })
+      .sort((a, b) => Math.abs(a.getBoundingClientRect().top - rootRect.top) - Math.abs(b.getBoundingClientRect().top - rootRect.top));
+    const anchorCard = visibleCards[0] || null;
+    const orderSheet = preview.querySelector('[data-menu-order-sheet]');
+    return {
+      storeId: String(storeId),
+      scrollTop: Number(scrollRoot.scrollTop || 0),
+      anchorMenuId: String(anchorCard?.dataset.menuId || ''),
+      anchorOffset: anchorCard ? anchorCard.getBoundingClientRect().top - rootRect.top : 0,
+      category: preview.querySelector('[data-menu-category].active')?.dataset.menuCategory || '전체',
+      query: preview.querySelector('[data-menu-search]')?.value || '',
+      searchActive: preview.classList.contains('menu-search-active'),
+      selectedMenuId: orderSheet && !orderSheet.hidden ? String(lastMenuSelection?.dataset.menuId || '') : ''
+    };
+  }
+
+  function stabilizeMenuReturnPosition(preview, saved) {
+    const scrollRoot = preview?.querySelector('.store-menu-scroll');
+    if (!scrollRoot || !saved) return;
+    let cancelled = false;
+    const cancel = () => { cancelled = true; };
+    for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) scrollRoot.addEventListener(type, cancel, {once: true, passive: true});
+    const apply = useFallback => {
+      if (cancelled || !scrollRoot.isConnected) return;
+      if (useFallback) scrollRoot.scrollTop = Math.max(0, Number(saved.scrollTop || 0));
+      const anchor = [...preview.querySelectorAll('[data-menu-id]')]
+        .find(card => String(card.dataset.menuId || '') === String(saved.anchorMenuId || ''));
+      if (!anchor) return;
+      const delta = anchor.getBoundingClientRect().top - scrollRoot.getBoundingClientRect().top - Number(saved.anchorOffset || 0);
+      if (Math.abs(delta) > 0.5) scrollRoot.scrollTop = Math.max(0, scrollRoot.scrollTop + delta);
+    };
+    requestAnimationFrame(() => {
+      apply(true);
+      requestAnimationFrame(() => apply(false));
+    });
+    for (const delay of [120, 360, 800, 1600]) setTimeout(() => apply(false), delay);
+  }
+
+  function applyMenuReturnState(preview, saved) {
+    if (!preview || !saved) return;
+    const category = [...preview.querySelectorAll('[data-menu-category]')]
+      .find(button => String(button.dataset.menuCategory || '') === String(saved.category || '전체'));
+    if (category) preview.querySelectorAll('[data-menu-category]').forEach(button => button.classList.toggle('active', button === category));
+    const input = preview.querySelector('[data-menu-search]');
+    if (input) input.value = String(saved.query || '');
+    preview.classList.toggle('menu-search-active', Boolean(saved.searchActive));
+    filterMenus(preview);
+    stabilizeMenuReturnPosition(preview, saved);
+    if (saved.selectedMenuId) {
+      const selected = [...preview.querySelectorAll('[data-menu-card]')]
+        .find(card => String(card.dataset.menuId || '') === String(saved.selectedMenuId));
+      if (selected) requestAnimationFrame(() => openMenuOrderSheet(selected));
+    }
+  }
+
   function handleMenuScroll(scrollRoot) {
     const preview = scrollRoot.closest('.store-menu-preview');
     if (!preview) return;
@@ -456,7 +521,15 @@
 
   async function openMenuPreview(storeId, trigger, options = {}) {
     const store = storeById(storeId);
-    if (!store || document.body.classList.contains('store-menu-open')) return;
+    if (!store) return null;
+    if (document.body.classList.contains('store-menu-open')) {
+      const current = document.querySelector('[data-store-menu-overlay]:not([hidden]) .store-menu-preview');
+      if (String(current?.dataset.storeId || '') === String(storeId)) {
+        if (options.returnState) applyMenuReturnState(current, options.returnState);
+        return current;
+      }
+      return null;
+    }
     lastFocused = trigger || document.activeElement;
     let overlay = document.querySelector('[data-store-menu-overlay]');
     if (!overlay) {
@@ -468,7 +541,7 @@
     overlay.hidden = false;
     overlay.innerHTML = `<div class="store-menu-loading" role="status">${escapeMenuHtml(store.name || '가게')} 메뉴를 불러오는 중입니다…</div>`;
     document.body.classList.add('store-menu-open');
-    pushMenuHistory('preview');
+    if (!history.state?.[MENU_HISTORY.preview]) pushMenuHistory('preview');
     try {
       if (store.__secureDetailReady !== true) {
         const secureDetail = window.daedongSecureStoreDetail;
@@ -500,7 +573,9 @@
           .find(item => String(item.dataset.menuId || '') === requestedMenuId && !item.hidden);
         if (card) window.requestAnimationFrame(() => openMenuOrderSheet(card));
       }
+      if (options.returnState) applyMenuReturnState(preview, options.returnState);
       overlay.querySelector('[data-menu-preview-close]')?.focus();
+      return preview;
     } catch (error) {
       overlay.innerHTML = `
         <div class="store-menu-load-error" role="alert">
@@ -508,6 +583,7 @@
           <button type="button" data-menu-preview-close>닫기</button>
         </div>
       `;
+      return null;
     }
   }
 
@@ -838,6 +914,10 @@
   window.daedongMenuPreview = Object.freeze({
     open: (storeId, options = {}) => openMenuPreview(storeId, null, options),
     has: storeId => Boolean(storeById(storeId)?.hasMenu)
+  });
+  window.daedongMenuReturn = Object.freeze({
+    capture: captureMenuReturnState,
+    restore: async saved => Boolean(await openMenuPreview(saved?.storeId, null, {returnState: saved}))
   });
 
   new MutationObserver(ensureMenuEntryButton).observe(document.documentElement, {childList: true, subtree: true});
