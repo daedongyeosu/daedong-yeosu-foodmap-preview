@@ -34,6 +34,7 @@ function rc6ApplyRainExposure(candidates,limit){
 function rc6RandomizeGull(gull){const curve=()=>`${Math.round(-20+Math.random()*40)}px`,bank=()=>`${Math.round(-11+Math.random()*22)}deg`;['a','b','c','d','e'].forEach(key=>gull.style.setProperty(`--curve-${key}`,curve()));['start','a','b','c','d','end'].forEach(key=>gull.style.setProperty(`--bank-${key}`,bank()));gull.style.setProperty('--flap',`${(.44+Math.random()*.34).toFixed(2)}s`);}
 function rc6Gulls(){const shell=document.querySelector('.yeosu-night-shell');if(!shell||shell.querySelector('.rc6-gulls'))return;const layer=document.createElement('div');layer.className='rc6-gulls';layer.setAttribute('aria-hidden','true');[[12,22,11,-2,.8],[20,29,13,-6,1],[27,18,9,-9,.7],[33,25,14,-3,.9]].forEach(([y,size,duration,delay,scale],i)=>{layer.insertAdjacentHTML('beforeend',`<svg class="rc6-gull" style="--y:${y}%;--size:${size}px;--duration:${duration}s;--delay:${delay}s;--scale:${scale};--x:${62+i*8}%" viewBox="0 0 32 14"><g class="rc6-gull-flap"><path d="M2 10 Q9 2 16 9 Q23 2 30 10"/></g></svg>`);const gull=layer.lastElementChild;rc6RandomizeGull(gull);gull.addEventListener('animationiteration',event=>{if(event.target===gull)rc6RandomizeGull(gull);});});shell.prepend(layer);}
 const RC6_DAILY_HERO_LIMIT=15,RC6_DAILY_STORE_HERO_LIMIT=12;
+const RC6_MAIN_SPECIAL_HERO_KEYS=new Set(['18','19','20']);
 function rc6SeoulDay(now=new Date()){
  const parts=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now);
  const values={};for(const part of parts)if(part.type!=='literal')values[part.type]=part.value;
@@ -58,7 +59,7 @@ function rc6DailyHeroOrder(entries,day=rc6SeoulDay()){
  return groups.flatMap(group=>rc6RotateHeroGroup(group.items,locationKey+'|'+group.key,day.number)).slice(0,RC6_DAILY_STORE_HERO_LIMIT);
 }
 function rc6SpecialHeroEntries(day=rc6SeoulDay()){
- const specials=Object.entries(rc6BannerTargets).filter(([,target])=>target.status==='notion'&&target.notionUrl&&target.image).map(([key,target],index)=>({banner:{desktop:target.image,mobile:target.image},index:HERO_BANNERS.length+index,key:`notion-${key}`,target,store:null,tier:3,kind:'notion'}));
+ const specials=Object.entries(rc6BannerTargets).filter(([key,target])=>RC6_MAIN_SPECIAL_HERO_KEYS.has(String(key))&&target.status==='notion'&&target.notionUrl&&target.image).map(([key,target],index)=>({banner:{desktop:target.image,mobile:target.image},index:HERO_BANNERS.length+index,key:`notion-${key}`,target,store:null,tier:3,kind:'notion'}));
  return rc6RotateHeroGroup(specials,'notion-specials',day.number);
 }
 function rc6InterleaveHeroEntries(managed,specials){
@@ -123,7 +124,7 @@ function rc6CampaignHeroEntries(){
 }
 function rc6HeroEntries(){
  const campaignEntries=rc6CampaignHeroEntries();if(campaignEntries.length)return campaignEntries;
- return rc6DailyHeroOrder(rc6ManagedStoreHeroEntries());
+ return rc6InterleaveHeroEntries(rc6DailyHeroOrder(rc6ManagedStoreHeroEntries()),rc6SpecialHeroEntries());
 }
 function rc6RenderHero(){
  const track=document.querySelector('#heroTrack'),hero=document.querySelector('.hero'),dots=document.querySelector('#heroCarousel .carousel-dots');if(!track)return;
