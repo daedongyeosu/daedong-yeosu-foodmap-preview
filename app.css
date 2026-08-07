@@ -275,3 +275,66 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
   margin:auto;
   border-radius:15px;
 }
+
+/* Evergreen rider recruitment stays visible without covering food discovery. */
+.rider-evergreen-strip{
+  position:relative;
+  z-index:3;
+  padding:8px 16px 14px;
+}
+.rider-evergreen-button{
+  width:100%;
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:10px 12px 10px 17px;
+  border:1px solid rgba(255,255,255,.88);
+  border-radius:18px;
+  background:linear-gradient(120deg,#061638,#12366d 64%,#174d83);
+  color:#fff;
+  text-align:left;
+  box-shadow:0 8px 22px rgba(4,23,55,.2);
+}
+.rider-evergreen-button:active{transform:scale(.992)}
+.rider-evergreen-button:focus-visible{
+  outline:3px solid #ffb38f;
+  outline-offset:2px;
+}
+.rider-evergreen-copy{
+  min-width:0;
+  display:grid;
+  gap:3px;
+}
+.rider-evergreen-copy small{
+  color:#ffdc48;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.02em;
+}
+.rider-evergreen-copy strong{
+  font-size:clamp(17px,4.6vw,21px);
+  line-height:1.2;
+  white-space:nowrap;
+}
+.rider-evergreen-cta{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  min-height:38px;
+  padding:0 12px;
+  border-radius:999px;
+  background:#ff5a1f;
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+  white-space:nowrap;
+}
+.rider-evergreen-cta span{font-size:20px;line-height:1}
+@media(max-width:360px){
+  .rider-evergreen-strip{padding-left:12px;padding-right:12px}
+  .rider-evergreen-button{gap:8px;padding-left:13px}
+  .rider-evergreen-cta{padding:0 9px;font-size:11px}
+}
