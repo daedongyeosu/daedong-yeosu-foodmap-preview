@@ -127,7 +127,7 @@ const HERO_BANNERS = Array.from({length: 17}, (_, index) => {
   return {desktop: `images/${number}.png`, mobile: `images/${number}.png`, fallback: `images/${number}.png`, alt: `대동여수음식지도 배너 ${index + 1}`};
 });
 const PROMOS = [
-  {kind: 'rider', title: '배송기사 모집', desc: '여수 지역 베테랑 기사님을 기다립니다.'},
+  {kind: 'rider', title: '배송기사님 상시모집', desc: '여수 지역 베테랑 기사님을 기다립니다.'},
   {kind: 'store', title: '배달대행 가맹점 모집', desc: '가게 사장님을 위한 주문·홍보·배달 연결'},
   {kind: 'join', title: '먹깨비·땡겨요·온동네 가입 안내', desc: '저수수료 주문경로를 한 번에 연결하세요.'},
   {kind: 'new', title: '신규 오픈 가게 광고', desc: '새로 문을 연 여수 가게를 빠르게 알립니다.'},
@@ -135,7 +135,7 @@ const PROMOS = [
 ];
 const PROMO_CAROUSEL_DETAILS = {
   rider: {
-    title: '배송기사님 모집',
+    title: '배송기사님 상시모집',
     image: 'assets/promos/rider-recruitment-portrait-v2.webp',
     imageAlt: '대동여수음식지도 배송기사 모집 안내',
     imageWidth: 853,
@@ -1517,6 +1517,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#locationBtn').addEventListener('click', areaModal);
   $('#topFavoriteBtn').addEventListener('click', favoritesModal);
   $('#topRecentBtn').addEventListener('click', recentModal);
+  $('#riderRecruitmentBanner')?.addEventListener('click', () => openPromoCarouselDetail('rider'));
   const promoTrack = $('#promoTrack');
   const promoShell = $('#promoCarousel .carousel-shell');
   let promoTapStart = null;

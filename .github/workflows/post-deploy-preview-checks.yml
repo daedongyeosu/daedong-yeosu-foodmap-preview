@@ -34,6 +34,10 @@ jobs:
         env:
           BASE_URL: https://preview.daedongmap.com
         run: node scripts/browser-notion-hero-return.mjs
+      - name: Verify deployed rider recruitment banner
+        env:
+          BASE_URL: https://preview.daedongmap.com
+        run: node scripts/browser-rider-evergreen-banner.mjs
       - name: Preserve verification reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -46,5 +50,9 @@ jobs:
             browser-notion-hero-return-report.json
             browser-notion-hero-return-immediate.png
             browser-notion-hero-return-settled.png
+            browser-rider-evergreen-banner-report.json
+            browser-rider-evergreen-banner.png
+            browser-rider-evergreen-popup.png
+            browser-rider-evergreen-failure.png
           if-no-files-found: ignore
           retention-days: 14
