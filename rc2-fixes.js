@@ -646,8 +646,30 @@ function rc2RememberExternalReturn() {
   const modal = $('#modal');
   const storeId = modal?.dataset.activeStoreId || modal?.querySelector('[data-store-id]')?.dataset.storeId || history.state?.storeId;
   if (!storeId) return;
-  const card = modal.querySelector('.modal-card');
-  sessionStorage.setItem(RC2_EXTERNAL_RETURN, JSON.stringify({storeId: String(storeId), pageScroll: Number(document.body.dataset.lockScrollY || 0), modalScroll: card?.scrollTop || 0, savedAt: Date.now()}));
+  const current = rc2SnapshotModal();
+  const storeSnapshot = [current, ...rc2ModalStack.slice().reverse()].find(snapshot => {
+    if (!snapshot?.html) return false;
+    const template = document.createElement('template');
+    template.innerHTML = snapshot.html;
+    return String(template.content.querySelector('.store-detail[data-store-id]')?.dataset.storeId || '') === String(storeId);
+  });
+  const payload = {
+    storeId: String(storeId),
+    pageScroll: Number(storeSnapshot?.pageScroll ?? document.body.dataset.lockScrollY ?? 0),
+    modalScroll: Number(storeSnapshot?.scrollTop || 0),
+    savedAt: Date.now(),
+    storeSnapshot: storeSnapshot && storeSnapshot.html.length <= 500000 ? {
+      html: storeSnapshot.html,
+      scrollTop: Number(storeSnapshot.scrollTop || 0),
+      photoIndex: Number(storeSnapshot.photoIndex || 0)
+    } : null
+  };
+  try {
+    sessionStorage.setItem(RC2_EXTERNAL_RETURN, JSON.stringify(payload));
+  } catch {
+    delete payload.storeSnapshot;
+    try { sessionStorage.setItem(RC2_EXTERNAL_RETURN, JSON.stringify(payload)); } catch {}
+  }
 }
 
 async function rc2RestoreAfterExternalPage() {
