@@ -797,7 +797,8 @@ fxInitialize = async function rc2Initialize() {
   let restoredStore = false;
   let restoredAppBrowser = false;
   try {
-    restoredStore = Boolean(await rc2RestoreAfterExternalPage());
+    const restoredStoreResult = await rc2RestoreAfterExternalPage();
+    restoredStore = Boolean(restoredStoreResult);
     if (restoredStore) window.daedongFinishExternalReturnBoot?.();
   } catch (error) {
     console.warn('저장된 가게를 먼저 복원하지 못했습니다.', error);
