@@ -33,6 +33,7 @@ const context = {
   rc2BrandKey: store => store.id,
   fxPhoto: store => `${store.id}.jpg`,
   sortStoresByBusinessStatus: stores => [...stores].sort((a, b) => a.statusRank - b.statusRank),
+  rc2ApplyManagedRegionPriority: stores => [...stores].sort((a, b) => a.statusRank - b.statusRank),
   state: {location: '둔덕동', addressLabel: '둔덕동', coords: null},
   Number,
   String,
@@ -74,9 +75,9 @@ assert.equal(readyContext.renderCount, 1, '영업정보가 준비되면 실제 �
 
 assert.match(rc2, /const key = `\$\{status\}:\$\{bucket\}:\$\{tier\}`/,
   '추천 레일의 무작위 다양화는 같은 영업상태 안에서만 해야 합니다.');
-assert.match(rc2, /const finish = \(\) => sortStoresByBusinessStatus\(result\)/,
+assert.match(rc2, /const finish = \(\) => rc2ApplyManagedRegionPriority\(result, spec, limit, rankedStores\)/,
   '추천 레일의 중복제거·다양화가 끝난 뒤 영업상태를 최종 검증해야 합니다.');
-assert.match(rc3, /const cards = rc2DiversifyRailLead\([\s\S]{0,160}?sortStoresByBusinessStatus\(rc2RailCandidates\(spec, globallyUsed, 8, useCounts\)\)/,
+assert.match(rc3, /const diversifiedCards = rc2DiversifyRailLead\([\s\S]{0,160}?sortStoresByBusinessStatus\(rc2RailCandidates\(spec, globallyUsed, 8, useCounts\)\)/,
   '입맛 없을 때를 포함한 실제 최종 추천 카드도 영업상태 순으로 다시 검증해야 합니다.');
 assert.match(rc3, /daedong-store-service-ready[\s\S]*?fxRenderRails\(\)/,
   '영업정보 준비 전 그려진 추천 레일은 영업정보가 준비된 뒤 다시 그려야 합니다.');

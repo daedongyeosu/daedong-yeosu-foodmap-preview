@@ -52,6 +52,7 @@ const context = {
   storeBusinessStatusPriority: store => store.statusRank ?? 0,
   sortStoresByBusinessStatus: list => [...list],
   rc2RandomizedRailStores: list => [...list],
+  rc2ApplyManagedRegionPriority: list => [...list],
   rc6OwnershipTier: store => store.tier ?? 0,
   rc2BrandKey: store => `brand-${store.id}`,
   fxPhoto: store => store.photo
