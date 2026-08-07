@@ -15,7 +15,7 @@ assert.match(html, /보던 가게로 바로 돌아가는 중/);
 assert.match(html, /\['daedongExternalReturnRc2', 'storeId'\]/);
 assert.match(html, /\['daedongAppBrowserReturnV1', 'key'\]/);
 assert.match(html, /window\.daedongFinishExternalReturnBoot/);
-assert.match(html, /window\.setTimeout\(window\.daedongFinishExternalReturnBoot, 12000\)/);
+assert.match(html, /window\.setTimeout\(window\.daedongFinishExternalReturnBoot, 2500\)/);
 
 const bootScript = html.match(/<script>\s*([\s\S]*?daedongFinishExternalReturnBoot[\s\S]*?)<\/script>/)?.[1] || '';
 assert.ok(bootScript, '복귀 첫 화면 스크립트를 찾아야 합니다.');
@@ -39,11 +39,15 @@ assert.match(rc2, /scrollWindowInstant\(Number\(saved\.pageScroll \|\| 0\)\)[\s\
 
 const initializeStart = rc2.indexOf('fxInitialize = async function rc2Initialize()');
 const initialize = rc2.slice(initializeStart);
-assert.ok(initialize.indexOf('await rc2RestoreAfterExternalPage()') < initialize.indexOf('await fxInitWeather()'), '가게 복원은 날씨 로딩보다 먼저 끝나야 합니다.');
+const firstRestore = initialize.indexOf('await rc2RestoreAfterExternalPage()');
+const supplementaryLoad = initialize.indexOf('const [brand, supplement, happy, phone, naver] = await Promise.all');
+assert.ok(firstRestore > -1 && firstRestore < supplementaryLoad, '보던 가게는 브랜드·전화·지도 보조자료보다 먼저 복원해야 합니다.');
+assert.ok(initialize.indexOf('window.daedongFinishExternalReturnBoot?.()') < supplementaryLoad, '가게가 복원되면 차단 화면을 즉시 닫아야 합니다.');
+assert.ok(firstRestore < initialize.indexOf('await fxInitWeather()'), '가게 복원은 날씨 로딩보다 먼저 끝나야 합니다.');
 assert.match(initialize, /finally \{[\s\S]*?daedongFinishExternalReturnBoot/);
 assert.match(initialize, /rc2StartAmbient\(!restoredStore && !restoredAppBrowser\)/);
 
-assert.match(html, /final-experience\.js\?v=[^"\n]*direct-return-no-home-1/);
-assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*direct-return-no-home-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*direct-return-no-home-1[^"\n]*external-return-fast-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*direct-return-no-home-1[^'\n]*external-return-fast-1/);
 
 console.log('direct-app-return-no-home-regression-test: pass');

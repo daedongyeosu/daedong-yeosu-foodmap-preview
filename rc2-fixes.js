@@ -516,7 +516,7 @@ fxEnhanceStoreDetail = function rc2EnhanceStoreDetail(store) {
   if (!detail) return;
   const mapAudit = rc2NaverByStore.get(String(store.id));
   const naverLink = detail.querySelector('.detail-quick-link[data-detail-only="naver"]');
-  if (!mapAudit || mapAudit.status !== 'verified') naverLink?.remove();
+  if (rc2NaverByStore.size && (!mapAudit || mapAudit.status !== 'verified')) naverLink?.remove();
   const brand = fxBrandByStore.get(String(store.id));
   const happy = fxHappyByStore.get(String(store.id));
   if (brand || happy) {
@@ -793,6 +793,17 @@ fxInstallEvents = function rc2InstallEvents() {
 };
 
 fxInitialize = async function rc2Initialize() {
+  rc2ScrubCustomerCounts(document);
+  let restoredStore = false;
+  let restoredAppBrowser = false;
+  try {
+    const restoredStoreResult = await rc2RestoreAfterExternalPage();
+    restoredStore = Boolean(restoredStoreResult);
+    if (restoredStore) window.daedongFinishExternalReturnBoot?.();
+  } catch (error) {
+    console.warn('저장된 가게를 먼저 복원하지 못했습니다.', error);
+  }
+
   const [brand, supplement, happy, phone, naver] = await Promise.all([
     fetchJson(FX_BRAND_URL, {stores: [], brands: []}),
     fetchJson(FX_BRAND_SUPPLEMENT_URL, {storeMappings: [], directApps: []}),
@@ -808,13 +819,16 @@ fxInitialize = async function rc2Initialize() {
   rc2NaverByStore.clear();
   for (const item of naver.stores || []) rc2NaverByStore.set(String(item.store_id), item);
   APP_META.phone.icon = 'assets/ui/phone.svg';
-  rc2ScrubCustomerCounts(document);
-  let restoredStore = false;
-  let restoredAppBrowser = false;
+
+  if (restoredStore) {
+    const activeStore = fxStoreById($('#modal')?.dataset.activeStoreId);
+    if (activeStore) fxEnhanceStoreDetail(activeStore);
+  }
   try {
-    const restoredStoreResult = await rc2RestoreAfterExternalPage();
-    restoredStore = Boolean(restoredStoreResult);
-    if (!restoredStore) restoredAppBrowser = Boolean(fxRestoreAppBrowserReturn?.());
+    if (!restoredStore) {
+      restoredStore = Boolean(await rc2RestoreAfterExternalPage());
+      if (!restoredStore) restoredAppBrowser = Boolean(fxRestoreAppBrowserReturn?.());
+    }
   } finally {
     window.daedongFinishExternalReturnBoot?.();
   }
