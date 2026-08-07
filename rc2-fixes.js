@@ -793,6 +793,7 @@ fxInstallEvents = function rc2InstallEvents() {
 };
 
 fxInitialize = async function rc2Initialize() {
+  rc2ScrubCustomerCounts(document);
   let restoredStore = false;
   let restoredAppBrowser = false;
   try {
@@ -817,7 +818,6 @@ fxInitialize = async function rc2Initialize() {
   rc2NaverByStore.clear();
   for (const item of naver.stores || []) rc2NaverByStore.set(String(item.store_id), item);
   APP_META.phone.icon = 'assets/ui/phone.svg';
-  rc2ScrubCustomerCounts(document);
 
   if (restoredStore) {
     const activeStore = fxStoreById($('#modal')?.dataset.activeStoreId);
