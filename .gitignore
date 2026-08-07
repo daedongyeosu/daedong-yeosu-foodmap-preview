@@ -1,2 +1,7 @@
 data-validation-report.json
 static-validation-report.json
+regression-suite-report.json
+browser-*-report.json
+browser-*.png
+approved-ux-*.html
+approved-ux-*.json

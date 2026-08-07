@@ -26,6 +26,8 @@ jobs:
           node --check final-experience.js
           node --check rc2-fixes.js
           node --check rc3-fixes.js
+          node --check rc4-fixes.js
+          node --check rc5-fixes.js
           node --check rc6-fixes.js
           node --check rc7-address-map.js
           node --check store-service-info.js
@@ -38,44 +40,26 @@ jobs:
           node scripts/validate-static.mjs
           node scripts/validate-data.mjs
       - name: Verify preserved preview experience
-        run: |
-          node analytics-owner-exclusion-regression-test.mjs
-          node app-list-direct-order-regression-test.mjs
-          node app-browser-category-label-regression-test.mjs
-          node category-heading-layout-regression-test.mjs
-          node coarse-region-analytics-regression-test.mjs
-          node community-intro-regression-test.mjs
-          node external-app-text-regression-test.mjs
-          node global-business-status-ranking-regression-test.mjs
-          node hero-carousel-forward-only-regression-test.mjs
-          node hero-store-direct-popup-regression-test.mjs
-          node home-address-ux-regression-test.mjs
-          node saved-address-flow-regression-test.mjs
-          node simple-app-return-regression-test.mjs
-          node direct-app-return-no-home-regression-test.mjs
-          node ddangyo-retry-touch-regression-test.mjs
-          node inapp-location-recovery-regression-test.mjs
-          node kakao-order-link-regression-test.mjs
-          node location-ranking-unification-regression-test.mjs
-          node local-order-rail-address-regression-test.mjs
-          node mobile-initialization-unblock-regression-test.mjs
-          node mukkebi-event-header-regression-test.mjs
-          node nearby-rail-status-ranking-regression-test.mjs
-          node outside-yeosu-full-list-regression-test.mjs
-          node photo-viewer-removal-regression-test.mjs
-          node rain-mode-admin-integration-regression-test.mjs
-          node release-readiness-regression-test.mjs
-          node store-popup-info-menu-order-regression-test.mjs
-          node store-popup-native-order-regression-test.mjs
-          node store-service-open-count-loading-regression-test.mjs
-          node store-service-sensitive-counts-regression-test.mjs
-          node turtle-ship-hero-regression-test.mjs
-          node unified-search-menu-order-regression-test.mjs
+        run: node scripts/run-regression-suite.mjs
       - name: Install mobile browser checker
         run: |
           npm install --no-save --no-package-lock playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Verify deployed preview menu photos and navigation
+      - name: Verify current deployed preview integration reference
         env:
           BASE_URL: https://preview.daedongmap.com
         run: node scripts/browser-alien-pizza-menu-search.mjs
+      - name: Preserve PR verification reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-pr-verification
+          path: |
+            static-validation-report.json
+            data-validation-report.json
+            regression-suite-report.json
+            browser-alien-pizza-menu-search-report.json
+            browser-alien-pizza-menu-search.png
+            browser-alien-pizza-menu-search-failure.png
+          if-no-files-found: ignore
+          retention-days: 14

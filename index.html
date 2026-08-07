@@ -206,6 +206,66 @@
   <nav class="bottom-nav"><button type="button" data-tab="home" class="active"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#store"></use></svg><span>홈</span></button><button type="button" data-tab="search"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#search"></use></svg><span>검색</span></button><button type="button" data-tab="favorite"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#heart"></use></svg><span>찜한가게</span></button><button type="button" data-tab="recent"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#recent"></use></svg><span>최근방문</span></button><button type="button" data-tab="mypage"><svg class="ui-icon" aria-hidden="true"><use href="assets/ui/ui-icons.svg#location"></use></svg><span>마이페이지</span></button></nav>
   <div id="overlay" class="overlay" hidden></div>
   <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button class="modal-close" type="button" aria-label="닫기">×</button><div id="modalContent"></div></div></div>
+  <script id="notionHeroReturnSnapshotBoot">
+    (() => {
+      const storageKey = 'daedongNotionHeroReturnV1';
+      const readSnapshot = () => {
+        try {
+          const saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
+          const age = Date.now() - Number(saved?.savedAt || 0);
+          const notionUrl = new URL(saved?.notionUrl || '', location.href);
+          const rawImage = String(saved?.image || '');
+          const inlineImage = /^data:image\/(?:png|jpe?g|webp|gif|avif);base64,/i.test(rawImage) && rawImage.length <= 500000;
+          const imageUrl = inlineImage ? null : new URL(rawImage, location.href);
+          if (age < 0 || age >= 30 * 60 * 1000 || notionUrl.protocol !== 'https:' || (!inlineImage && imageUrl.origin !== location.origin)) throw new Error('expired');
+          return {...saved, notionUrl:notionUrl.href, image:inlineImage ? rawImage : imageUrl.href};
+        } catch {
+          sessionStorage.removeItem(storageKey);
+          return null;
+        }
+      };
+      window.daedongRestoreNotionHeroSnapshot = () => {
+        const saved = readSnapshot();
+        const hero = document.querySelector('.hero');
+        const track = document.getElementById('heroTrack');
+        const dots = document.querySelector('#heroCarousel .carousel-dots');
+        if (!saved || !hero || !track || !dots) return false;
+        if (track.children.length > 1 && !track.querySelector('[data-rc6-notion-return-snapshot]')) {
+          sessionStorage.removeItem(storageKey);
+          hero.hidden = false;
+          return true;
+        }
+        const slide = document.createElement('button');
+        slide.type = 'button';
+        slide.className = 'carousel-slide hero-slide rc6-hero-target';
+        slide.dataset.heroIndex = String(Math.max(0, Number(saved.displayIndex) || 0));
+        slide.dataset.rc6BannerNotion = saved.notionUrl;
+        slide.dataset.rc6NotionReturnSnapshot = '1';
+        slide.setAttribute('aria-label', saved.alt || '노션에서 자세히 보기');
+        const image = document.createElement('img');
+        image.src = saved.image;
+        image.alt = saved.alt || '노션 광고';
+        image.width = 1200;
+        image.height = 675;
+        image.decoding = 'async';
+        image.loading = 'eager';
+        slide.append(image);
+        slide.addEventListener('click', () => location.assign(saved.notionUrl), {once:true});
+        track.classList.remove('is-animated');
+        track.style.transform = 'translate3d(0,0,0)';
+        track.replaceChildren(slide);
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'active';
+        dot.setAttribute('aria-label', '현재 슬라이드');
+        dots.replaceChildren(dot);
+        hero.hidden = false;
+        return true;
+      };
+      window.daedongRestoreNotionHeroSnapshot();
+      window.addEventListener('pageshow', () => window.daedongRestoreNotionHeroSnapshot?.());
+    })();
+  </script>
   <script id="externalReturnSnapshotBoot">
     (() => {
       try {
@@ -274,8 +334,8 @@
   <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
   <script src="data-api.js?v=cloudflare-preview-api-4-curated-menu-photos-1" defer></script>
   <script src="data-api-runtime.js?v=cloudflare-preview-api-2" defer></script>
-  <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-hero-forward-only-1-lower-promo-details-6-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-startup-popup-disabled-1-anonymous-analytics-1-coarse-region-1-owner-exclusion-1-outside-yeosu-full-list-1-direct-coming-soon-1-home-address-short-1-secure-detail-core-1-store-popup-native-order-1-kakao-order-same-tab-1-ddangyo-direct-launch-1-location-ranking-unified-1-catalog-ready-watchdog-2-simple-app-return-1-ddangyo-retry-touch-1-business-status-ranking-1-release-readiness-1-hero-open-only-1" defer></script>
-  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-local-channel-marker-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1-unified-menu-search-2-secure-detail-await-3-card-channel-keys-1-store-popup-native-order-1-app-list-direct-order-1-app-route-return-fix-1-app-browser-return-state-1-ddangyo-direct-launch-1-location-ranking-ready-1-location-ranking-watchdog-2-saved-address-first-1-simple-app-return-1-direct-return-no-home-1-business-status-ranking-1-nearby-status-final-1-recommend-status-final-1-release-readiness-1-external-return-fast-1-instant-store-snapshot-1-hero-open-only-clean-controls-1-three-main-ads-restored-1" defer></script>
+  <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-hero-forward-only-1-lower-promo-details-6-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-startup-popup-disabled-1-anonymous-analytics-1-coarse-region-1-owner-exclusion-1-outside-yeosu-full-list-1-direct-coming-soon-1-home-address-short-1-secure-detail-core-1-store-popup-native-order-1-kakao-order-same-tab-1-ddangyo-direct-launch-1-location-ranking-unified-1-catalog-ready-watchdog-2-simple-app-return-1-ddangyo-retry-touch-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-notion-hero-return-1" defer></script>
+  <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-local-channel-marker-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1-unified-menu-search-2-secure-detail-await-3-card-channel-keys-1-store-popup-native-order-1-app-list-direct-order-1-app-route-return-fix-1-app-browser-return-state-1-ddangyo-direct-launch-1-location-ranking-ready-1-location-ranking-watchdog-2-saved-address-first-1-simple-app-return-1-direct-return-no-home-1-business-status-ranking-1-nearby-status-final-1-recommend-status-final-1-release-readiness-1-external-return-fast-1-instant-store-snapshot-1-hero-open-only-clean-controls-1-three-main-ads-restored-1-notion-hero-return-1" defer></script>
   <script src="store-list-horizontal-pager.js?v=1" defer></script>
   <script src="turtle-ship-hero.js?v=message-colors-popup-15s-1" defer></script>
   <script src="store-service-info.js?v=store-service-25-menu-search-status-order-1-card-status-1-business-status-ranking-1-seomseom-merchant-label-1" defer></script>
