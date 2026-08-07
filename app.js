@@ -1025,6 +1025,7 @@ class InfiniteCarousel {
 function renderHero() {
   heroCarousel?.destroy();
   heroCarousel = null;
+  if (window.daedongRestoreNotionHeroSnapshot?.()) return;
   $('#heroTrack').innerHTML = '';
   $('#heroCarousel .carousel-dots').innerHTML = '';
   $('.hero').hidden = true;

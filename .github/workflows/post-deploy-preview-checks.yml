@@ -1,0 +1,50 @@
+name: Verify deployed preview
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-deployed-preview
+  cancel-in-progress: true
+
+jobs:
+  verify-deployed-preview:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install mobile browser checker
+        run: |
+          npm install --no-save --no-package-lock playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Verify deployed preview core flow
+        env:
+          BASE_URL: https://preview.daedongmap.com
+        run: node scripts/browser-smoke.mjs
+      - name: Verify deployed Notion banner return
+        env:
+          BASE_URL: https://preview.daedongmap.com
+        run: node scripts/browser-notion-hero-return.mjs
+      - name: Preserve verification reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployed-preview-verification
+          path: |
+            browser-smoke-report.json
+            browser-mobile.png
+            browser-mobile-failure.png
+            browser-notion-hero-return-report.json
+            browser-notion-hero-return-immediate.png
+            browser-notion-hero-return-settled.png
+          if-no-files-found: ignore
+          retention-days: 14

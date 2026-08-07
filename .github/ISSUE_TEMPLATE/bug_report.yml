@@ -1,0 +1,46 @@
+name: 고객 화면 오류
+description: 대동여수음식지도 preview에서 재현되는 오류를 표준 형식으로 기록합니다.
+title: "[오류] "
+labels: [bug]
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: 실제로 보이는 문제
+      description: 고객이 어떤 순서로 조작했을 때 무엇이 잘못 보이는지 적습니다.
+      placeholder: 예) 노션 광고에서 뒤로가기를 누르면 메인 슬라이드가 수초 동안 사라집니다.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대 결과
+      placeholder: 예) 뒤로오는 즉시 보던 광고가 표시돼야 합니다.
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 기기와 브라우저
+      placeholder: 예) 갤럭시 / 카카오톡 인앱브라우저
+  - type: textarea
+    id: scope
+    attributes:
+      label: 변경 대상과 변경 금지 항목
+      placeholder: 예) 노션 광고 복귀만 수정. 가게·광고 목록과 운영 사이트는 변경 금지.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 사진·영상·주소
+      description: 재현 화면이나 확인할 preview 주소를 첨부합니다.
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: 배포 경계
+      options:
+        - label: preview에서 먼저 수정하고 검증합니다.
+          required: true
+        - label: 별도 승인 전 운영 사이트를 변경하지 않습니다.
+          required: true
