@@ -351,14 +351,14 @@ function rc2RepresentativeMethod(store) {
 }
 
 const RC2_RAIL_RANDOM_SEED = new Date().toLocaleDateString('sv-SE', {timeZone: 'Asia/Seoul'});
-const RC2_MANAGED_REGION_PRIORITY_STORE_IDS = Object.freeze([
-  '7bc7239e6b509c44', // 수라상궁 조선국밥 여서점
-  'd86586aaef8454c9', // 조선밀면&냉면 여수여서점
-  '04910f606ba038a6', // 오워래 수제 돈까스
-  '84c118675c0caa4c'  // 바오탕수 여서점
-]);
+const RC2_MANAGED_REGION_PRIORITY_STORE_BY_RAIL = Object.freeze({
+  today: '7bc7239e6b509c44', // 수라상궁 조선국밥 여서점
+  near: 'd86586aaef8454c9', // 조선밀면&냉면 여수여서점
+  local: '04910f606ba038a6', // 오워래 수제 돈까스
+  group: '84c118675c0caa4c', // 바오탕수 여서점
+  solo: '0cc943f6a58888d0' // 왕창 돼지두루치기 여서점
+});
 const RC2_MANAGED_REGION_PRIORITY_NEIGHBORHOODS = new Set(['여서동', '문수동', '오림동']);
-const RC2_MANAGED_REGION_PRIORITY_RAILS = new Set(['today', 'near', 'local', 'group', 'solo']);
 
 function rc2StringSeed(value) {
   let hash = 2166136261;
@@ -417,19 +417,17 @@ function rc2ManagedRegionPriorityNeighborhood() {
 }
 
 function rc2ApplyManagedRegionPriority(cards, spec, limit, rankedStores = []) {
-  if (!RC2_MANAGED_REGION_PRIORITY_RAILS.has(spec?.id) || !rc2ManagedRegionPriorityNeighborhood()) {
+  const priorityId = RC2_MANAGED_REGION_PRIORITY_STORE_BY_RAIL[spec?.id];
+  if (!priorityId || !rc2ManagedRegionPriorityNeighborhood()) {
     return sortStoresByBusinessStatus(cards).slice(0, limit);
   }
   const rankedById = new Map(rankedStores.map(store => [String(store.id), store]));
-  const priority = RC2_MANAGED_REGION_PRIORITY_STORE_IDS
-    .map(id => rankedById.get(id) || fxStoreById(id))
-    .filter(store => store && fxVisible(store));
-  if (!priority.length) return sortStoresByBusinessStatus(cards).slice(0, limit);
-  const priorityIds = new Set(priority.map(store => String(store.id)));
-  const normalSlotCount = Math.max(0, limit - priority.length);
-  const normal = sortStoresByBusinessStatus(cards.filter(store => !priorityIds.has(String(store.id))))
+  const priority = rankedById.get(priorityId) || fxStoreById(priorityId);
+  if (!priority || !fxVisible(priority)) return sortStoresByBusinessStatus(cards).slice(0, limit);
+  const normalSlotCount = Math.max(0, limit - 1);
+  const normal = sortStoresByBusinessStatus(cards.filter(store => String(store.id) !== priorityId))
     .slice(0, normalSlotCount);
-  return sortStoresByBusinessStatus([...priority, ...normal]).slice(0, limit);
+  return sortStoresByBusinessStatus([priority, ...normal]).slice(0, limit);
 }
 
 function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map()) {
