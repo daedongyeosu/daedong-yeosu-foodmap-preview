@@ -379,8 +379,19 @@
     return {appKeys, appLabel};
   }
 
+  function benefitAppDisplayLabel(benefit) {
+    const appLabel = String(benefit?.appLabel || '적용 주문앱 미확인').trim();
+    if (benefit?.key !== 'yeosu-seomseom-pay') return appLabel;
+    const appKeys = Array.isArray(benefit?.appKeys) ? benefit.appKeys : [];
+    if (appKeys.includes('ddangyo') || normalize(appLabel).includes('땡겨요')) return '먹깨비·땡겨요';
+    if (appKeys.includes('mukkebi') || normalize(appLabel).includes('먹깨비')) return '먹깨비';
+    return appLabel;
+  }
+
   function scopedBenefitLabel(benefit) {
-    return `${benefit.appLabel || '적용 주문앱 미확인'} ${benefit.label}`.trim();
+    const appLabel = benefitAppDisplayLabel(benefit);
+    if (benefit?.key === 'yeosu-seomseom-pay') return `${appLabel} 여수섬섬페이 가맹점`;
+    return `${appLabel} ${benefit.label}`.trim();
   }
 
   function paymentLabels(info) {
@@ -495,7 +506,13 @@
     const isDelivery = item.kind === 'delivery';
     const appLabel = item.appLabel || '적용 주문앱 미확인';
     let stateLabel;
-    if (item.key === 'ddangyo-coupon') {
+    if (item.key === 'yeosu-seomseom-pay') {
+      stateLabel = item.state === 'available'
+        ? scopedBenefitLabel(item)
+        : item.state === 'unavailable'
+          ? `${benefitAppDisplayLabel(item)} 여수섬섬페이 가맹점 아님`
+          : `${benefitAppDisplayLabel(item)} 여수섬섬페이 가맹점 미확인`;
+    } else if (item.key === 'ddangyo-coupon') {
       stateLabel = item.state === 'available'
         ? `${appLabel} · 쿠폰 있음 확인`
         : item.state === 'unavailable' ? `${appLabel} · 현재 쿠폰 없음 확인` : `${appLabel} · 쿠폰 미확인`;
@@ -1092,8 +1109,8 @@ function overviewSearchText(entry) {
     const areas = availableAreas();
     const benefitFilters = [
       ['all', '전체 혜택'],
-      ...(serviceData.programs || []).map(program => [program.key, `${program.appLabel || '적용 주문앱 미확인'} ${program.label}`]),
-      ...(serviceData.deliveryBenefits || []).map(benefit => [benefit.key, `${benefit.appLabel || '적용 주문앱 미확인'} ${benefit.label}`])
+      ...(serviceData.programs || []).map(program => [program.key, scopedBenefitLabel(program)]),
+      ...(serviceData.deliveryBenefits || []).map(benefit => [benefit.key, scopedBenefitLabel(benefit)])
     ];
     renderedSourceCount = allEntries.length;
 
