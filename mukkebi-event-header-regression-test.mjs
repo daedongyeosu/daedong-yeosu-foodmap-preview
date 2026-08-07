@@ -11,7 +11,7 @@ assert.match(
 );
 assert.match(
   html,
-  /mukkebi-summer-event\.css\?v=20260807-viewport-fit-1/,
+  /mukkebi-summer-event\.css\?v=20260807-viewport-fit-1-close-glow-removed-1/,
   '수정된 팝업 스타일이 고객 브라우저 캐시에 가려지지 않아야 합니다.',
 );
 assert.match(css, /\.mukkebi-summer-head\{[^}]*padding:76px 22px 25px/, '일반 화면에서는 닫기 버튼 전용 상단 공간을 유지해야 합니다.');
@@ -19,6 +19,9 @@ assert.match(css, /\.mukkebi-summer-partners strong\{[^}]*font-size:18px/, '일�
 assert.match(css, /\.mukkebi-summer-partners span,\.mukkebi-summer-partners strong\{white-space:nowrap\}/, '기관명과 먹깨비 단어 내부가 줄바꿈되면 안 됩니다.');
 assert.match(css, /\.mukkebi-summer-partners\{[^}]*word-break:keep-all/, 'Android 글자 확대에서도 한글 단어 중간 줄바꿈을 막아야 합니다.');
 assert.match(css, /\.mukkebi-summer-close\{[^}]*width:48px;height:48px/, '닫기 버튼은 충분한 터치 크기를 유지해야 합니다.');
+const headerRule = css.match(/\.mukkebi-summer-head\{[^}]*\}/)?.[0] || '';
+assert.doesNotMatch(headerRule, /radial-gradient/, '닫기 버튼 주변의 장식용 원형 음영은 없어야 합니다.');
+assert.match(headerRule, /background:linear-gradient\(145deg,#00bfdc,#0875d9 66%,#064bb7\)/, '기존 파란 배경 그라데이션은 유지해야 합니다.');
 
 const compactMatch = css.match(/@media\(max-height:700px\)\{([\s\S]*?)\n\}/);
 assert.ok(compactMatch, '세로가 짧은 모바일 화면용 팝업 배치가 있어야 합니다.');
