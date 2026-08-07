@@ -351,6 +351,14 @@ function rc2RepresentativeMethod(store) {
 }
 
 const RC2_RAIL_RANDOM_SEED = new Date().toLocaleDateString('sv-SE', {timeZone: 'Asia/Seoul'});
+const RC2_MANAGED_REGION_PRIORITY_STORE_IDS = Object.freeze([
+  '7bc7239e6b509c44', // 수라상궁 조선국밥 여서점
+  'd86586aaef8454c9', // 조선밀면&냉면 여수여서점
+  '04910f606ba038a6', // 오워래 수제 돈까스
+  '84c118675c0caa4c'  // 바오탕수 여서점
+]);
+const RC2_MANAGED_REGION_PRIORITY_NEIGHBORHOODS = new Set(['여서동', '문수동', '오림동']);
+const RC2_MANAGED_REGION_PRIORITY_RAILS = new Set(['today', 'near', 'local', 'group', 'solo']);
 
 function rc2StringSeed(value) {
   let hash = 2166136261;
@@ -394,13 +402,44 @@ function rc2RandomizedRailStores(stores, spec, groupKey) {
   return result;
 }
 
+function rc2ManagedRegionPriorityNeighborhood() {
+  const selected = neighborhoodFor(state.location) || neighborhoodFor(state.addressLabel);
+  if (RC2_MANAGED_REGION_PRIORITY_NEIGHBORHOODS.has(selected)) return selected;
+  const addressText = `${state.location || ''} ${state.addressLabel || ''}`;
+  for (const neighborhood of RC2_MANAGED_REGION_PRIORITY_NEIGHBORHOODS) {
+    if (addressText.includes(neighborhood)) return neighborhood;
+  }
+  if (state.coords && typeof rc6ClosestNeighborhood === 'function') {
+    const closest = rc6ClosestNeighborhood(state.coords);
+    if (RC2_MANAGED_REGION_PRIORITY_NEIGHBORHOODS.has(closest)) return closest;
+  }
+  return '';
+}
+
+function rc2ApplyManagedRegionPriority(cards, spec, limit, rankedStores = []) {
+  if (!RC2_MANAGED_REGION_PRIORITY_RAILS.has(spec?.id) || !rc2ManagedRegionPriorityNeighborhood()) {
+    return sortStoresByBusinessStatus(cards).slice(0, limit);
+  }
+  const rankedById = new Map(rankedStores.map(store => [String(store.id), store]));
+  const priority = RC2_MANAGED_REGION_PRIORITY_STORE_IDS
+    .map(id => rankedById.get(id) || fxStoreById(id))
+    .filter(store => store && fxVisible(store));
+  if (!priority.length) return sortStoresByBusinessStatus(cards).slice(0, limit);
+  const priorityIds = new Set(priority.map(store => String(store.id)));
+  const normalSlotCount = Math.max(0, limit - priority.length);
+  const normal = sortStoresByBusinessStatus(cards.filter(store => !priorityIds.has(String(store.id))))
+    .slice(0, normalSlotCount);
+  return sortStoresByBusinessStatus([...priority, ...normal]).slice(0, limit);
+}
+
 function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map()) {
   const brandKeys = new Set();
   const photoKeys = new Set();
   const selectedIds = new Set();
   const result = [];
   const groups = [];
-  for (const store of fxRankStores(spec)) {
+  const rankedStores = fxRankStores(spec);
+  for (const store of rankedStores) {
     const status = storeBusinessStatusPriority(store);
     const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
     const tier = typeof rc6OwnershipTier === 'function' ? rc6OwnershipTier(store) : 2;
@@ -445,7 +484,7 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
   };
   const localGroups = groups.filter(group => group.bucket === 0);
   const otherGroups = groups.filter(group => group.bucket !== 0);
-  const finish = () => sortStoresByBusinessStatus(result);
+  const finish = () => rc2ApplyManagedRegionPriority(result, spec, limit, rankedStores);
   if (spec.pattern && localGroups.length) {
     if (fillGroups(localGroups)) return finish();
     const nearbyTarget = Math.min(limit, result.length + 2);
