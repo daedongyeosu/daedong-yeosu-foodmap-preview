@@ -6,7 +6,8 @@
   const images = isGoheung
     ? [
         ['assets/goheung/goheung-sunset-launchpad-v2.webp', 'all'],
-        ['assets/goheung/goheung-rocket-sprite-v2.webp', 'all']
+        ['assets/goheung/goheung-liftoff-burst-v3.webp', 'all'],
+        ['assets/goheung/goheung-rocket-flight-v3.webp', 'all']
       ]
     : [
         ['assets/yeosu-rc6/dolsan-day-mobile.webp', '(max-width: 767px)'],

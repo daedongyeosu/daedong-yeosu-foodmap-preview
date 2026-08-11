@@ -65,7 +65,8 @@
     media.setAttribute('aria-hidden', 'true');
     const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
     const saveData = Boolean(navigator.connection?.saveData);
-    media.innerHTML = `<span class="goheung-launch-smoke${reduceMotion || saveData ? ' is-static' : ''}"></span><img class="goheung-rocket-flight${reduceMotion || saveData ? ' is-static' : ''}" src="assets/goheung/goheung-rocket-sprite-v2.webp" width="360" height="540" alt="" decoding="async">`;
+    const staticClass = reduceMotion || saveData ? ' is-static' : '';
+    media.innerHTML = `<span class="goheung-ground-smoke${staticClass}"></span><span class="goheung-launch-flash${staticClass}"></span><img class="goheung-liftoff-burst${staticClass}" src="assets/goheung/goheung-liftoff-burst-v3.webp" width="760" height="760" alt="" decoding="async"><img class="goheung-rocket-flight${staticClass}" src="assets/goheung/goheung-rocket-flight-v3.webp" width="620" height="620" alt="" decoding="async">`;
     shell.prepend(media);
   }
 
