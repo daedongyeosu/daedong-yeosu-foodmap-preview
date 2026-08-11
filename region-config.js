@@ -65,11 +65,7 @@
     media.setAttribute('aria-hidden', 'true');
     const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
     const saveData = Boolean(navigator.connection?.saveData);
-    if (!reduceMotion && !saveData) {
-      media.innerHTML = '<video muted loop playsinline preload="metadata" poster="assets/goheung/goheung-rocket-poster.webp"><source src="assets/goheung/goheung-rocket-hero.mp4" type="video/mp4"></video>';
-      const video = media.querySelector('video');
-      video?.play().catch(() => {});
-    }
+    media.innerHTML = `<span class="goheung-launch-smoke${reduceMotion || saveData ? ' is-static' : ''}"></span><img class="goheung-rocket-flight${reduceMotion || saveData ? ' is-static' : ''}" src="assets/goheung/goheung-rocket-sprite-v2.webp" width="360" height="540" alt="" decoding="async">`;
     shell.prepend(media);
   }
 

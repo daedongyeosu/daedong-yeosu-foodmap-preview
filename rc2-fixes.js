@@ -767,6 +767,7 @@ function rc2ReleaseAllPresses() {
 }
 
 fxFormation = function rc2Formation() {
+  if (RC2_IS_GOHEUNG) return;
   const lane = $('#navalLane');
   if (!lane) return;
   lane.querySelectorAll('.turtle-ship').forEach(node => node.remove());
@@ -781,6 +782,7 @@ fxFormation = function rc2Formation() {
 };
 
 fxFireworks = function rc2Fireworks(withToast = false) {
+  if (RC2_IS_GOHEUNG) return;
   const layer = $('#microFxLayer');
   if (!layer || document.hidden || layer.querySelector('.firework')) return;
   if (fxReduced()) {
@@ -816,6 +818,7 @@ function rc2StopAmbient() {
 
 function rc2SchedulePeriodicFirework() {
   clearTimeout(rc2PeriodicTimer);
+  if (RC2_IS_GOHEUNG) return;
   const delay = 25000 + Math.round(Math.random() * 10000);
   rc2PeriodicTimer = setTimeout(() => {
     if (!document.hidden && !fxLowPower()) fxFireworks(false);
@@ -825,6 +828,7 @@ function rc2SchedulePeriodicFirework() {
 
 function rc2StartAmbient(firstEntry = false) {
   rc2StopAmbient();
+  if (RC2_IS_GOHEUNG) return;
   if (firstEntry) {
     rc2AmbientTimers.push(setTimeout(() => fxFireworks(false), 1000));
     rc2AmbientTimers.push(setTimeout(() => fxFormation(), 1500));
