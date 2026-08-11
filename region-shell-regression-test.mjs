@@ -4,6 +4,8 @@ import fs from 'node:fs';
 const read = file => fs.readFileSync(new URL(file, import.meta.url), 'utf8');
 const index = read('./index.html');
 const region = read('./region-config.js');
+const regionCss = read('./region-config.css');
+const regionBoot = read('./region-boot.js');
 const api = read('./data-api.js');
 const app = read('./app.js');
 const finalExperience = read('./final-experience.js');
@@ -40,5 +42,17 @@ assert.equal(goheung.regionCode, 'goheung');
 assert.equal(goheung.storeCountVisibleToCustomers, false, '고객에게 전체 가게 수를 노출하면 안 됩니다.');
 assert.deepEqual(goheung.stores, [], '검증된 고흥 수집본이 없을 때 여수 가게로 채우면 안 됩니다.');
 assert.match(rc7, /DAEDONG_REGION\?\.code[^\n]+!== 'yeosu'/, '여수 전용 주소 지도는 고흥에서 실행되면 안 됩니다.');
+
+assert.match(region, /goheung-rocket-sprite-v2\.webp/, '고흥 우주선 레이어가 누락되었습니다.');
+assert.doesNotMatch(region, /goheung-rocket-hero\.mp4|<video/, '고흥 홈은 트래픽이 큰 동영상 배경을 사용하면 안 됩니다.');
+assert.match(regionCss, /goheung-sunset-launchpad-v2\.webp/, '글자 없는 고흥 노을 발사대 배경이 누락되었습니다.');
+assert.match(regionCss, /@keyframes goheung-rocket-launch/, '고흥 우주선 상승 연출이 누락되었습니다.');
+assert.match(regionCss, /html\[data-region="goheung"\] \.rc6-gulls\{z-index:1\}/, '고흥 바다 갈매기 연출을 유지해야 합니다.');
+assert.match(regionCss, /html\[data-region="goheung"\] \.firework\{display:none!important\}/, '고흥 불꽃놀이 요소를 숨겨야 합니다.');
+assert.match(finalExperience, /FX_REGION\.code==='goheung'\|\|fxReduced\(\)/, '고흥에서는 불꽃놀이 생성을 중단해야 합니다.');
+assert.match(rc2, /function rc2StartAmbient\(firstEntry = false\) \{[\s\S]*?if \(RC2_IS_GOHEUNG\) return;/, '고흥에서는 불꽃놀이 타이머를 시작하면 안 됩니다.');
+assert.match(regionBoot, /goheung-sunset-launchpad-v2\.webp/, '고흥 배경을 첫 화면에서 미리 불러와야 합니다.');
+assert.ok(fs.statSync(new URL('./assets/goheung/goheung-sunset-launchpad-v2.webp', import.meta.url)).size < 150_000, '고흥 배경 파일은 150KB 미만이어야 합니다.');
+assert.ok(fs.statSync(new URL('./assets/goheung/goheung-rocket-sprite-v2.webp', import.meta.url)).size < 50_000, '고흥 우주선 파일은 50KB 미만이어야 합니다.');
 
 console.log('PASS 여수 운영 기본값·고흥 공통 쉘·지역 데이터 격리');

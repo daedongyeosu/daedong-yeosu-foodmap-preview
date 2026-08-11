@@ -234,10 +234,10 @@ function fxSearchModal(query=''){
 }
 
 function fxRipple(x,y){if(fxReduced())return;for(let i=0;i<2;i++){const ring=document.createElement('i');ring.className=`ripple-ring ${i?'second':''}`;ring.style.left=`${x}px`;ring.style.top=`${y}px`;document.body.append(ring);setTimeout(()=>ring.remove(),480);}}
-function fxFormation(){const lane=$('#navalLane');if(!lane)return;lane.querySelectorAll('.turtle-ship').forEach(node=>node.remove());[['',7],['escort',2],['escort two',13]].forEach(([cls,bottom])=>{const ship=document.createElement('i');ship.className=`turtle-ship ${cls}`;ship.style.left='18px';ship.style.bottom=`${bottom}px`;lane.append(ship);setTimeout(()=>ship.remove(),680);});}
+function fxFormation(){if(FX_REGION.code==='goheung')return;const lane=$('#navalLane');if(!lane)return;lane.querySelectorAll('.turtle-ship').forEach(node=>node.remove());[['',7],['escort',2],['escort two',13]].forEach(([cls,bottom])=>{const ship=document.createElement('i');ship.className=`turtle-ship ${cls}`;ship.style.left='18px';ship.style.bottom=`${bottom}px`;lane.append(ship);setTimeout(()=>ship.remove(),680);});}
 function fxBridgeLight(){const layer=$('.bridge-light-layer');if(!layer)return;layer.classList.remove('active');void layer.offsetWidth;layer.classList.add('active');setTimeout(()=>layer.classList.remove('active'),620);}
-function fxFireworks(withToast=false){if(fxReduced()||fxLowPower())return;const layer=$('#microFxLayer');if(!layer)return;for(const [left,top] of [['12%','38px'],['84%','53px'],['68%','26px']]){const fire=document.createElement('i');fire.className='firework';fire.style.left=left;fire.style.top=top;layer.append(fire);setTimeout(()=>fire.remove(),700);}if(withToast){const toast=document.createElement('div');toast.className='success-toast';toast.textContent=`${FX_REGION_NAME}에 힘이 되는 주문길을 선택했어요`;layer.append(toast);setTimeout(()=>toast.remove(),1200);}}
-function fxBattle({phone=false}={}){fxFormation();fxBridgeLight();if(phone||fxReduced()||fxLowPower()||sessionStorage.getItem(FX_BATTLE_SESSION))return;sessionStorage.setItem(FX_BATTLE_SESSION,'1');const lane=$('#navalLane');if(!lane)return;for(const cls of ['enemy-ship','battle-smoke','cannon-flash','cannon-ball']){const node=document.createElement('i');node.className=cls;lane.append(node);setTimeout(()=>node.remove(),1250);}fxFireworks(true);}
+function fxFireworks(withToast=false){if(FX_REGION.code==='goheung'||fxReduced()||fxLowPower())return;const layer=$('#microFxLayer');if(!layer)return;for(const [left,top] of [['12%','38px'],['84%','53px'],['68%','26px']]){const fire=document.createElement('i');fire.className='firework';fire.style.left=left;fire.style.top=top;layer.append(fire);setTimeout(()=>fire.remove(),700);}if(withToast){const toast=document.createElement('div');toast.className='success-toast';toast.textContent=`${FX_REGION_NAME}에 힘이 되는 주문길을 선택했어요`;layer.append(toast);setTimeout(()=>toast.remove(),1200);}}
+function fxBattle({phone=false}={}){if(FX_REGION.code==='goheung')return;fxFormation();fxBridgeLight();if(phone||fxReduced()||fxLowPower()||sessionStorage.getItem(FX_BATTLE_SESSION))return;sessionStorage.setItem(FX_BATTLE_SESSION,'1');const lane=$('#navalLane');if(!lane)return;for(const cls of ['enemy-ship','battle-smoke','cannon-flash','cannon-ball']){const node=document.createElement('i');node.className=cls;lane.append(node);setTimeout(()=>node.remove(),1250);}fxFireworks(true);}
 function fxGull(target,favorite=false){if(fxReduced()||fxLowPower())return;const r=target.getBoundingClientRect(),g=document.createElement('i');g.className=`gull-fx ${favorite?'favorite':''}`;g.style.left=`${r.left+r.width/2}px`;g.style.top=`${r.top}px`;document.body.append(g);setTimeout(()=>g.remove(),520);}
 function fxStoreShareUrl(store){
  const url=new URL(FX_HOME_SHARE_URL);
@@ -444,7 +444,7 @@ async function fxInitialize(){
  fxRenderRails();
  await fxInitWeather();
  fxRestoreAppBrowserReturn();
- if(!sessionStorage.getItem(FX_ENTRY_SESSION)){sessionStorage.setItem(FX_ENTRY_SESSION,'1');setTimeout(()=>fxFireworks(false),280);}
+ if(!sessionStorage.getItem(FX_ENTRY_SESSION)){if(FX_REGION.code!=='goheung'){sessionStorage.setItem(FX_ENTRY_SESSION,'1');setTimeout(()=>fxFireworks(false),280);}}
 }
 
 const fxRc2Style=document.createElement('link');
@@ -479,7 +479,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');

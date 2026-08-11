@@ -1,11 +1,33 @@
 html[data-region="goheung"] .yeosu-night-shell{
-  background-image:linear-gradient(180deg,rgba(4,29,57,.13),rgba(4,43,70,.22)),url('assets/goheung/goheung-rocket-poster.webp')!important;
-  background-position:center center!important;background-size:cover!important
+  background-image:linear-gradient(180deg,rgba(4,29,57,.08),rgba(4,43,70,.15)),url('assets/goheung/goheung-sunset-launchpad-v2.webp')!important;
+  background-position:center top!important;background-size:cover!important
 }
-html[data-region="goheung"] .yeosu-night-shell::before{background:linear-gradient(180deg,rgba(3,22,48,.1),rgba(4,42,70,.2))!important}
-html[data-region="goheung"] .turtle-ship-hero-scene,html[data-region="goheung"] .weather-layer,html[data-region="goheung"] .bridge-light-layer{display:none!important}
-.region-hero-media{position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
-.region-hero-media video{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.92}
+html[data-region="goheung"] .yeosu-night-shell::before{background:linear-gradient(180deg,rgba(3,22,48,.06),rgba(4,42,70,.12))!important}
+html[data-region="goheung"] .yeosu-night-shell::after{content:none!important;display:none!important;background:none!important}
+html[data-region="goheung"] .turtle-ship-hero-scene,
+html[data-region="goheung"] .weather-layer,
+html[data-region="goheung"] .bridge-light-layer,
+html[data-region="goheung"] .firework-layer,
+html[data-region="goheung"] .firework{display:none!important}
+.region-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+html[data-region="goheung"] .rc6-gulls{z-index:1}
+.goheung-rocket-flight{position:absolute;z-index:1;top:40%;right:6%;width:clamp(72px,19vw,142px);height:auto;opacity:0;transform-origin:center 82%;filter:drop-shadow(0 7px 12px rgba(255,116,36,.28));will-change:transform,opacity;animation:goheung-rocket-launch 14s cubic-bezier(.37,.03,.24,1) infinite}
+.goheung-launch-smoke{position:absolute;z-index:0;top:59%;right:1%;width:clamp(120px,34vw,250px);aspect-ratio:1.8;border-radius:50%;opacity:0;background:radial-gradient(ellipse at 58% 60%,rgba(255,246,225,.88) 0 17%,rgba(229,219,207,.64) 32%,rgba(190,188,190,.24) 54%,transparent 73%);filter:blur(4px);will-change:transform,opacity;animation:goheung-launch-smoke 14s ease-out infinite}
+.goheung-rocket-flight.is-static{top:24%;right:7%;opacity:.96;transform:translate3d(0,0,0) scale(.86);animation:none}
+.goheung-launch-smoke.is-static{display:none}
+@keyframes goheung-rocket-launch{
+  0%,4%{opacity:0;transform:translate3d(0,20vh,0) scale(.67)}
+  9%{opacity:.98;transform:translate3d(0,15vh,0) scale(.7)}
+  62%{opacity:1;transform:translate3d(-2vw,-40vh,0) scale(.9)}
+  83%{opacity:.92;transform:translate3d(-4vw,-65vh,0) scale(.98)}
+  94%,100%{opacity:0;transform:translate3d(-5vw,-82vh,0) scale(1.04)}
+}
+@keyframes goheung-launch-smoke{
+  0%,4%{opacity:0;transform:translate3d(0,10vh,0) scale(.45)}
+  9%{opacity:.72;transform:translate3d(0,7vh,0) scale(.7)}
+  24%{opacity:.55;transform:translate3d(-2vw,2vh,0) scale(1.08)}
+  40%,100%{opacity:0;transform:translate3d(-4vw,-1vh,0) scale(1.4)}
+}
 .region-picker-sheet{display:grid;gap:14px}.region-picker-sheet>h2,.region-picker-sheet>h3,.region-picker-sheet>p{margin:0}
 .region-picker-sheet>p{color:#64727d;font-size:13px;line-height:1.5}
 .region-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
@@ -16,4 +38,12 @@ html[data-region="goheung"] .turtle-ship-hero-scene,html[data-region="goheung"] 
 .region-area-grid button,.region-address-button{min-height:45px;border:1px solid #dce5eb;border-radius:13px;background:#fff;color:#123852;font-weight:850}
 .region-address-button{width:100%}
 @media(max-width:420px){.region-area-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(prefers-reduced-motion:reduce){.region-hero-media video{display:none}}
+@media(min-width:768px){
+  html[data-region="goheung"] .yeosu-night-shell{background-position:center 42%!important}
+  .goheung-rocket-flight{right:15%;width:126px}
+  .goheung-launch-smoke{right:9%}
+}
+@media(prefers-reduced-motion:reduce){
+  .goheung-rocket-flight{top:24%;right:7%;opacity:.96;transform:translate3d(0,0,0) scale(.86);animation:none}
+  .goheung-launch-smoke{display:none}
+}

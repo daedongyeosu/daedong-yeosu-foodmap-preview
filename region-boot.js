@@ -4,7 +4,10 @@
   const isGoheung = new URLSearchParams(location.search).get('region') === 'goheung';
   document.documentElement.dataset.region = isGoheung ? 'goheung' : 'yeosu';
   const images = isGoheung
-    ? [['assets/goheung/goheung-rocket-poster.webp', 'all']]
+    ? [
+        ['assets/goheung/goheung-sunset-launchpad-v2.webp', 'all'],
+        ['assets/goheung/goheung-rocket-sprite-v2.webp', 'all']
+      ]
     : [
         ['assets/yeosu-rc6/dolsan-day-mobile.webp', '(max-width: 767px)'],
         ['assets/yeosu-rc6/dolsan-day-desktop.webp', '(min-width: 768px)'],
