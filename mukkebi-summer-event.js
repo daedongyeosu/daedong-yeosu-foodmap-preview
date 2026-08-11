@@ -2,6 +2,13 @@
 
 (() => {
   const eventLayer = document.getElementById('mukkebiSummerEvent');
+  if (window.DAEDONG_REGION?.code === 'goheung') {
+    if (eventLayer) {
+      eventLayer.hidden = true;
+      eventLayer.setAttribute('aria-hidden', 'true');
+    }
+    return;
+  }
   const closeButton = document.getElementById('mukkebiSummerClose');
   const hideTodayButton = document.getElementById('mukkebiSummerHideToday');
   const orderButton = document.getElementById('mukkebiSummerOrder');

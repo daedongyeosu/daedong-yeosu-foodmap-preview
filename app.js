@@ -160,11 +160,11 @@ const PROMO_CAROUSEL_DETAILS = {
   join: {
     phone: '010-4797-7803'
   },
-  notice: {
+  notice: ACTIVE_REGION.code === 'yeosu' ? {
     externalUrl: SMALL_BUSINESS_ASSOCIATION_URL,
     ariaLabel: '소상공인협회 공지 노션에서 자세히 보기',
     showCta: false
-  }
+  } : null
 };
 
 const $ = selector => document.querySelector(selector);
@@ -296,6 +296,7 @@ function analyticsRegionContext() {
   return analyticsCoarseRegion(selected);
 }
 function sendAnalyticsEvent(eventType, details = {}) {
+  if (ACTIVE_REGION.code !== 'yeosu') return;
   if (analyticsOwnerExcluded()) return;
   const entry = analyticsEntryContext();
   const region = analyticsRegionContext();

@@ -6,7 +6,13 @@ const index = read('./index.html');
 const region = read('./region-config.js');
 const api = read('./data-api.js');
 const app = read('./app.js');
+const finalExperience = read('./final-experience.js');
+const rc2 = read('./rc2-fixes.js');
+const rc3 = read('./rc3-fixes.js');
+const rc6 = read('./rc6-fixes.js');
 const rc7 = read('./rc7-address-map.js');
+const turtle = read('./turtle-ship-hero.js');
+const summerEvent = read('./mukkebi-summer-event.js');
 const goheung = JSON.parse(read('./data/goheung-catalog.json'));
 
 assert.match(index, /class="yeosu-night-shell"/, '여수·고흥은 같은 홈 쉘을 사용해야 합니다.');
@@ -22,6 +28,14 @@ assert.match(app, /regionStorageKey\('daedongDeliveryAddressV2'\)/, '주소는 �
 
 assert.match(api, /IS_GOHEUNG \? '' : 'https:\/\/daedong-yeosu-data-api-preview/, '고흥에서 여수 API를 호출하면 안 됩니다.');
 assert.match(api, /payload\?\.regionCode !== 'goheung'/, '고흥 자료의 지역 코드를 검증해야 합니다.');
+assert.match(app, /ACTIVE_REGION\.code !== 'yeosu'\) return;/, '고흥 이용기록을 여수 분석 서버로 보내면 안 됩니다.');
+assert.match(app, /notice: ACTIVE_REGION\.code === 'yeosu'/, '여수 소상공인 링크를 고흥 소식에 노출하면 안 됩니다.');
+assert.match(finalExperience, /FX_YEOSU_ONLY_DATA_PATHS/, '고흥에서 여수 보조자료 호출을 차단해야 합니다.');
+assert.match(rc2, /RC2_IS_GOHEUNG \? Promise\.resolve/, '고흥에서 여수 주문채널 보조자료를 읽으면 안 됩니다.');
+assert.match(rc3, /RC3_IS_GOHEUNG \? \{stores: \[\]\}/, '고흥에서 여수 내부 전화자료를 읽으면 안 됩니다.');
+assert.match(rc6, /if\(RC6_IS_GOHEUNG\)return\[\];/, '고흥 메인 슬라이드에 여수 광고를 섞으면 안 됩니다.');
+assert.match(turtle, /DAEDONG_REGION\?\.code === 'goheung'\) return;/, '고흥에서 여수 거북선 연출을 실행하면 안 됩니다.');
+assert.match(summerEvent, /DAEDONG_REGION\?\.code === 'goheung'/, '고흥에서 여수 먹깨비 행사를 실행하면 안 됩니다.');
 assert.equal(goheung.regionCode, 'goheung');
 assert.equal(goheung.storeCountVisibleToCustomers, false, '고객에게 전체 가게 수를 노출하면 안 됩니다.');
 assert.deepEqual(goheung.stores, [], '검증된 고흥 수집본이 없을 때 여수 가게로 채우면 안 됩니다.');

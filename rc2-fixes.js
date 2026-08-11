@@ -11,6 +11,7 @@ const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
 const RC2_REGION = window.DAEDONG_REGION || {shortName: '여수', mapName: '대동여수음식지도'};
 const RC2_REGION_NAME = RC2_REGION.shortName || '여수';
 const RC2_MAP_NAME = RC2_REGION.mapName || '대동여수음식지도';
+const RC2_IS_GOHEUNG = RC2_REGION.code === 'goheung';
 const rc2NativeOpenModal = openModal;
 const rc2NativeHardClose = hardClose;
 const rc2ModalStack = [];
@@ -1032,11 +1033,11 @@ fxInitialize = async function rc2Initialize() {
   }
 
   const [brand, supplement, happy, phone, naver] = await Promise.all([
-    fetchJson(FX_BRAND_URL, {stores: [], brands: []}),
-    fetchJson(FX_BRAND_SUPPLEMENT_URL, {storeMappings: [], directApps: []}),
-    fetchJson(FX_HAPPY_URL, {candidateStoreMappings: [], currentScreenBrands: [], categories: []}),
-    fetchJson(FX_PHONE_URL, {storeMappings: []}),
-    fetchJson(RC2_NAVER_AUDIT_URL, {stores: []})
+    RC2_IS_GOHEUNG ? Promise.resolve({stores: [], brands: []}) : fetchJson(FX_BRAND_URL, {stores: [], brands: []}),
+    RC2_IS_GOHEUNG ? Promise.resolve({storeMappings: [], directApps: []}) : fetchJson(FX_BRAND_SUPPLEMENT_URL, {storeMappings: [], directApps: []}),
+    RC2_IS_GOHEUNG ? Promise.resolve({candidateStoreMappings: [], currentScreenBrands: [], categories: []}) : fetchJson(FX_HAPPY_URL, {candidateStoreMappings: [], currentScreenBrands: [], categories: []}),
+    RC2_IS_GOHEUNG ? Promise.resolve({storeMappings: []}) : fetchJson(FX_PHONE_URL, {storeMappings: []}),
+    RC2_IS_GOHEUNG ? Promise.resolve({stores: []}) : fetchJson(RC2_NAVER_AUDIT_URL, {stores: []})
   ]);
   fxBrandData = brand;
   fxSupplement = supplement;

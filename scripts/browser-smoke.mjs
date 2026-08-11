@@ -51,6 +51,7 @@ try {
   await page.waitForSelector('#storeGrid .store-card', {timeout: 15000});
   await check(page.locator('#locationBtn').isVisible(), '위치 버튼 표시');
   await check(page.locator('#homeShareBtn').isVisible(), '공유 버튼 표시');
+  await page.waitForSelector('#heroTrack .carousel-slide', {timeout: 15000});
   await check(page.locator('#heroTrack .carousel-slide').count().then(count => count > 2), '메인 슬라이드 표시');
   await check(page.locator('#storeGrid .store-card').count().then(count => count > 0), '가게 목록 표시');
   await check(page.locator('#startupAd').isHidden(), '첫 접속 모집 팝업 중단');

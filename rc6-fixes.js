@@ -1,4 +1,5 @@
 const RC6_RAIN_MODE_URL='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/rain-mode';
+const RC6_REGION_CODE=window.DAEDONG_REGION?.code||'yeosu',RC6_IS_GOHEUNG=RC6_REGION_CODE==='goheung';
 const RC6_REGION_NAME=window.DAEDONG_REGION?.shortName||'여수',RC6_DEFAULT_AREA=window.DAEDONG_REGION?.defaultArea||'여수시 전체';
 let rc6Coordinates={},rc6BannerTargets={},rc6StorePriority={},rc6HeroCampaigns={campaigns:{},virtualStores:{}},rc6RainMode='normal',rc6CampaignVirtualStores=new Map(),rc6StoreByIdBase=null,rc6ManagedStoreIds=new Set(),rc6SharedManagedStoreIds=new Set(),rc6Pointer=null,rc6LocationCache={key:'',stores:[]},rc6ChannelSortingInstalled=false,rc6HeroRenderKey='',rc6HeroDayTimer=0,rc6ActiveHeroDay='';
 const rc6AppRegisteredStoresBase=appRegisteredStores;
@@ -10,6 +11,7 @@ function rc6ApplyCoordinates(){canonicalStores.forEach(store=>{const row=rc6Coor
 function rc6ApplyStorePriority(){rc6ManagedStoreIds=new Set((rc6StorePriority.managedStoreIds||[]).map(String));rc6SharedManagedStoreIds=new Set((rc6StorePriority.sharedManagedStoreIds||[]).map(String));categoryPriorityOverrides={...LOCATION_CATEGORY_PRIORITY_OVERRIDES,...(rc6StorePriority.categoryPriorityOverrides||{})};canonicalStores.forEach(store=>{const id=String(store.id);store.managed=rc6ManagedStoreIds.has(id);store.sharedManaged=!store.managed&&rc6SharedManagedStoreIds.has(id);});rc6LocationCache={key:'',stores:[]};}
 function rc6OwnershipTier(store){const id=String(store?.id??store?.store_id??'');return rc6ManagedStoreIds.has(id)?0:rc6SharedManagedStoreIds.has(id)?1:2;}
 async function rc6LoadRainMode(){
+ if(RC6_IS_GOHEUNG)return'normal';
  try{const response=await fetch(RC6_RAIN_MODE_URL,{cache:'no-store',headers:{accept:'application/json'},signal:AbortSignal.timeout(4500)});if(!response.ok)throw new Error('rain mode');const data=await response.json();return['normal','rain1','rain2','rain3'].includes(data?.mode)?data.mode:'normal';}catch{return'normal';}
 }
 function rc6RainManagedRatio(){return rc6RainMode==='rain1'?.7:rc6RainMode==='rain2'?.4:rc6RainMode==='rain3'?0:1;}
@@ -68,6 +70,7 @@ function rc6DailyHeroOrder(entries,day=rc6SeoulDay()){
  return groups.flatMap(group=>rc6RotateHeroGroup(group.items,locationKey+'|'+group.key,day.number)).slice(0,RC6_DAILY_STORE_HERO_LIMIT);
 }
 function rc6SpecialHeroEntries(day=rc6SeoulDay()){
+ if(RC6_IS_GOHEUNG)return[];
  const specials=Object.entries(rc6BannerTargets).filter(([key,target])=>RC6_MAIN_SPECIAL_HERO_KEYS.has(String(key))&&target.status==='notion'&&target.notionUrl&&target.image).map(([key,target],index)=>({banner:{desktop:target.image,mobile:target.image},index:HERO_BANNERS.length+index,key:`notion-${key}`,target,store:null,tier:3,kind:'notion'}));
  return rc6RotateHeroGroup(specials,'notion-specials',day.number);
 }
@@ -113,6 +116,7 @@ function rc6RequestedHeroCampaign(){
  return store?{campaign,store}:null;
 }
 function rc6CampaignHeroEntries(){
+ if(RC6_IS_GOHEUNG)return[];
  const requested=rc6RequestedHeroCampaign();if(!requested)return[];
  const{campaign,store}=requested;
  const slideDefinitions=Array.isArray(campaign.slides)&&campaign.slides.length
