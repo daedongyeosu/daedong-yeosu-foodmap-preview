@@ -2,6 +2,7 @@
 
 /* RC3 fixes only. Store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
 const RC3_ICON_SPRITE = CATEGORY_ICON_SPRITE;
+const RC3_REGION_NAME = window.DAEDONG_REGION?.shortName || '여수';
 const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-07-card-markers';
 const RC3_APP_PARTICLE = Object.freeze({
   yogiyo: '요기요로',
@@ -155,7 +156,7 @@ function rc3RailCard(store, spec) {
   const distance=spec?.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';
   const locationLabel=spec?.kind==='near'?(distance||store.proximityLabel||''):'';
   const channelIcons=rc3PrimaryCardIcons(store);
-  return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}" data-rc3-rail-open="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-channel-icons" aria-label="이용 가능한 기본 주문방법">${channelIcons||'<span class="rail-method">주문방법 확인</span>'}</span></footer></article>`;
+  return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}" data-rc3-rail-open="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area || RC3_REGION_NAME)} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-channel-icons" aria-label="이용 가능한 기본 주문방법">${channelIcons||'<span class="rail-method">주문방법 확인</span>'}</span></footer></article>`;
 }
 fxRenderRails = function rc3RenderRails() {
   const root = $('#recommendRails');
@@ -186,7 +187,7 @@ fxRenderRails = function rc3RenderRails() {
   } catch (error) {
     console.error('recommendation-render-failed', error);
     const fallback = (Array.isArray(stores) ? stores : []).slice(0, 8).map(store => rc3RailCard(store, {kind: 'fallback'})).join('');
-    root.innerHTML = `<section class="recommend-rail" data-rail="fallback"><header class="recommend-rail-head"><div><h2>오늘의 추천</h2><p>현재 확인 가능한 여수 가게</p></div></header><div class="recommend-track">${fallback || '<p class="empty">가게 정보를 다시 불러와 주세요.</p>'}</div></section>`;
+    root.innerHTML = `<section class="recommend-rail" data-rail="fallback"><header class="recommend-rail-head"><div><h2>오늘의 추천</h2><p>현재 확인 가능한 ${escapeHtml(RC3_REGION_NAME)} 가게</p></div></header><div class="recommend-track">${fallback || '<p class="empty">가게 정보를 다시 불러와 주세요.</p>'}</div></section>`;
   } finally {
     root.querySelectorAll('p').forEach(node => { if (node.textContent.trim() === '추천 가게를 확인 중입니다.') node.remove(); });
   }
@@ -300,7 +301,7 @@ fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천') {
   if (!$('#modal')?.hidden && $('#modalContent .phone-order-sheet')) rc2ReplaceModal();
   const chips = `<nav class="app-browser-category-chips"><button type="button" data-phone-category="추천" class="${category === '추천' ? 'active' : ''}">추천</button>${cats.map(cat => `<button type="button" data-phone-category="${escapeHtml(cat)}" class="${category === cat ? 'active' : ''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
   const cards = list.map(({store, phoneOrder}) => {
-    const content = `${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b>`;
+    const content = `${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC3_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b>`;
     return phoneOrder?.url
       ? `<a class="phone-order-card glass-action" href="${escapeHtml(phoneOrder.url)}" target="_blank" rel="noopener" data-phone-route-store-id="${escapeHtml(store.id)}">${content}</a>`
       : `<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${content}</button>`;
@@ -322,7 +323,7 @@ fxOpenPhoneConfirm = async function rc3OpenPhoneConfirm(id) {
     }
   }
   if (!phone) return;
-  openModal(`<section class="phone-order-confirm" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)} 전화주문</h2><div class="phone-confirm-photo">${fxCardPhoto(store)}</div><p>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p>${rc3PopupUtilityLinks(store)}<p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p><p class="verified-phone-number">${escapeHtml(rc3FormatPhone(phone))}</p><div class="phone-confirm-actions"><a class="phone-call-link" data-rc3-final-phone href="tel:${escapeHtml(phone)}">전화 걸기</a><button class="phone-cancel" type="button" data-phone-cancel>취소</button></div></section>`);
+  openModal(`<section class="phone-order-confirm" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)} 전화주문</h2><div class="phone-confirm-photo">${fxCardPhoto(store)}</div><p>${escapeHtml(store.area || RC3_REGION_NAME)} · ${escapeHtml(store.cat)}</p>${rc3PopupUtilityLinks(store)}<p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p><p class="verified-phone-number">${escapeHtml(rc3FormatPhone(phone))}</p><div class="phone-confirm-actions"><a class="phone-call-link" data-rc3-final-phone href="tel:${escapeHtml(phone)}">전화 걸기</a><button class="phone-cancel" type="button" data-phone-cancel>취소</button></div></section>`);
   $('#modal').dataset.activeStoreId = store.id;
   history.replaceState({...history.state, storeId: String(store.id)}, '');
 };

@@ -350,7 +350,7 @@
           <section class="store-menu-hero">
             <img src="${escapeMenuHtml(menu.mainImage)}" alt="${escapeMenuHtml(menu.displayName)}" fetchpriority="high">
             <div>
-              <span>대동여수음식지도 · 음식 미리보기</span>
+              <span>${escapeMenuHtml(window.DAEDONG_REGION?.mapName || '대동여수음식지도')} · 음식 미리보기</span>
               <p>${featuredCategories.map(escapeMenuHtml).join(' · ')}</p>
               <h1 id="storeMenuTitle">${escapeMenuHtml(menu.displayName)}</h1>
               <p>주문방법을 고르기 전에 사진과 설명으로 메뉴를 먼저 살펴보세요.</p>

@@ -2,6 +2,7 @@
 
 (() => {
   const HISTORY_KEY = 'daedongStoreServiceOverview';
+  const DEFAULT_AREA = window.DAEDONG_REGION?.defaultArea || '여수시 전체';
   const CLOSING_SOON_MINUTES = 60;
   const MENU_MATCH_PREVIEW_LIMIT = 2;
   const STATUS_SORT_PRIORITY = Object.freeze({
@@ -705,7 +706,7 @@
     }
     if (entry) {
       const location = typeof state !== 'undefined' ? String(state.location || '') : '';
-      const hasLocation = location && location !== '여수시 전체';
+      const hasLocation = location && location !== DEFAULT_AREA;
       const label = entry.querySelector('[data-store-finder-location-label]');
       const nextLabel = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
       if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
@@ -757,7 +758,7 @@
     if (typeof state !== 'undefined') {
       const current = coordinateOf(state.coords);
       if (current) return current;
-      if (state.location && state.location !== '여수시 전체') {
+      if (state.location && state.location !== DEFAULT_AREA) {
         return coordinateOf(neighborhoodRecord(state.location));
       }
     }
@@ -768,7 +769,7 @@
     if (locationMode === 'selected') return ensureSelectedArea();
     if (typeof state === 'undefined') return '';
     const explicit = [state.location, state.addressLabel]
-      .filter(value => value && value !== '여수시 전체')
+      .filter(value => value && value !== DEFAULT_AREA)
       .flatMap(value => typeof neighborhoodsFor === 'function' ? neighborhoodsFor(value) : [String(value).trim()])
       .find(Boolean);
     if (explicit) return explicit;
@@ -813,7 +814,7 @@
     const areas = availableAreas();
     if (selectedArea && areas.includes(selectedArea)) return selectedArea;
     const current = typeof state !== 'undefined' ? String(state.location || '') : '';
-    selectedArea = current && current !== '여수시 전체' && areas.includes(current)
+    selectedArea = current && current !== DEFAULT_AREA && areas.includes(current)
       ? current
       : (areas[0] || '');
     return selectedArea;
@@ -998,7 +999,7 @@ function overviewSearchText(entry) {
     if (locationMode === 'all') return '여수 전체 · 기존 가게순서';
     if (locationMode === 'selected') return `${ensureSelectedArea() || '선택한 동네'} 가게만`;
     if (referenceCoordinate()) {
-      const label = typeof state !== 'undefined' && state.location && state.location !== '여수시 전체'
+      const label = typeof state !== 'undefined' && state.location && state.location !== DEFAULT_AREA
         ? state.location
         : '현재 위치';
       return `${label} 기준 · 가까운 동네부터`;

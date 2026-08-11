@@ -1,9 +1,15 @@
 'use strict';
 
 const ASSET_VERSION = 'phone-route-restoration-1';
+const ACTIVE_REGION = (typeof window !== 'undefined' && window.DAEDONG_REGION) || Object.freeze({code:'yeosu',shortName:'여수',cityName:'여수시',mapName:'대동여수음식지도',defaultArea:'여수시 전체',neighborhoodUrl:'data/yeosu-neighborhoods.json',storageKey:key=>key});
+const REGION_SHORT_NAME = ACTIVE_REGION.shortName;
+const REGION_CITY_NAME = ACTIVE_REGION.cityName;
+const REGION_MAP_NAME = ACTIVE_REGION.mapName;
+const REGION_DEFAULT_AREA = ACTIVE_REGION.defaultArea;
+const regionStorageKey = key => typeof ACTIVE_REGION.storageKey === 'function' ? ACTIVE_REGION.storageKey(key) : key;
 const PHOTO_MANIFEST_URL = 'data/photo-manifest.json';
 const PHOTO_POLICY_URL = 'data/photo-policy.json';
-const NEIGHBORHOOD_URL = 'data/yeosu-neighborhoods.json';
+const NEIGHBORHOOD_URL = ACTIVE_REGION.neighborhoodUrl || 'data/yeosu-neighborhoods.json';
 const EXTERNAL_APP_KEYS = ['yogiyo', 'coupang', 'baemin'];
 const LOW_FEE_KEYS = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand', 'phone'];
 const LOCAL_DETAIL_KEYS = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand'];
@@ -14,14 +20,16 @@ const BLOCKED_STORE_ROUTE_KEYS = Object.freeze({
   // 더벤티 여수국동항점에 다른 가게(배스킨라빈스)의 주문·전화 경로가 연결된 원본 데이터 차단.
   '9ee73ce6168105ec': new Set(['direct', 'phone', 'yogiyo', 'coupang', 'baemin'])
 });
-const FAVORITE_KEY = 'daedongFavoriteStoresV2';
-const RECENT_KEY = 'daedongRecentStoresV2';
+const FAVORITE_KEY = regionStorageKey('daedongFavoriteStoresV2');
+const RECENT_KEY = regionStorageKey('daedongRecentStoresV2');
 const FEEDBACK_QUEUE_KEY = 'daedongFeedbackQueueV1';
 const VISITOR_KEY = 'daedongVisitorKeyV1';
-const SELECTED_EXTERNAL_KEY = 'daedongSelectedExternalV1';
-const SELECTED_ORDER_COMPAT_KEY = 'DaedongSelectedOrderApp';
-const ADDRESS_KEY = 'daedongDeliveryAddressV2';
-const ADDRESS_BOOK_KEY = 'daedongAddressBookV2';
+const SELECTED_EXTERNAL_KEY = regionStorageKey('daedongSelectedExternalV1');
+const SELECTED_ORDER_COMPAT_KEY = regionStorageKey('DaedongSelectedOrderApp');
+const ADDRESS_KEY = regionStorageKey('daedongDeliveryAddressV2');
+const ADDRESS_BOOK_KEY = regionStorageKey('daedongAddressBookV2');
+const SAVED_LOCATION_KEY = regionStorageKey('savedLocation');
+const LOCATION_KEY = regionStorageKey('location');
 const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
 const FEEDBACK_FORM_URL = 'https://www.notion.so/8ae3728176e344fdaee3475a97d03740';
 const SMALL_BUSINESS_ASSOCIATION_URL = 'https://bit.ly/여수시소상공인연합회공지';
@@ -124,20 +132,20 @@ const CATEGORY_ICON_RULES = [
 ];
 const HERO_BANNERS = Array.from({length: 17}, (_, index) => {
   const number = String(index + 1).padStart(2, '0');
-  return {desktop: `images/${number}.png`, mobile: `images/${number}.png`, fallback: `images/${number}.png`, alt: `대동여수음식지도 배너 ${index + 1}`};
+  return {desktop: `images/${number}.png`, mobile: `images/${number}.png`, fallback: `images/${number}.png`, alt: `${REGION_MAP_NAME} 배너 ${index + 1}`};
 });
 const PROMOS = [
-  {kind: 'rider', title: '배송기사님 상시모집', desc: '여수 지역 베테랑 기사님을 기다립니다.'},
+  {kind: 'rider', title: '배송기사님 상시모집', desc: `${REGION_SHORT_NAME} 지역 베테랑 기사님을 기다립니다.`},
   {kind: 'store', title: '배달대행 가맹점 모집', desc: '가게 사장님을 위한 주문·홍보·배달 연결'},
   {kind: 'join', title: '먹깨비·땡겨요·온동네 가입 안내', desc: '저수수료 주문경로를 한 번에 연결하세요.'},
-  {kind: 'new', title: '신규 오픈 가게 광고', desc: '새로 문을 연 여수 가게를 빠르게 알립니다.'},
-  {kind: 'notice', title: '소상공인협회 알림', desc: '여수 소상공인에게 필요한 소식을 전합니다.'}
+  {kind: 'new', title: '신규 오픈 가게 광고', desc: `새로 문을 연 ${REGION_SHORT_NAME} 가게를 빠르게 알립니다.`},
+  {kind: 'notice', title: '소상공인협회 알림', desc: `${REGION_SHORT_NAME} 소상공인에게 필요한 소식을 전합니다.`}
 ];
 const PROMO_CAROUSEL_DETAILS = {
   rider: {
     title: '배송기사님 상시모집',
     image: 'assets/promos/rider-recruitment-portrait-v2.webp',
-    imageAlt: '대동여수음식지도 배송기사 모집 안내',
+    imageAlt: `${REGION_MAP_NAME} 배송기사 모집 안내`,
     imageWidth: 853,
     imageHeight: 1844,
     imageOnly: true
@@ -266,9 +274,9 @@ function analyticsCoarseRegion(input = {}) {
   }
   const area = analyticsRegionPart(input.area, 3);
   if (!region3 && area) region3 = area;
-  if (region3 && !region2 && (text.includes('여수') || input.area === region3)) {
+  if (region3 && !region2 && (text.includes(REGION_SHORT_NAME) || input.area === region3)) {
     region1 ||= '전라남도';
-    region2 = '여수시';
+    region2 = REGION_CITY_NAME;
   }
   const rawSource = String(input.regionSource || '').trim();
   const allowedSources = new Set(['address_search', 'browser_geolocation', 'map_selection', 'saved_address']);
@@ -284,7 +292,7 @@ function analyticsCoarseRegion(input = {}) {
   return {region1, region2, region3, regionSource};
 }
 function analyticsRegionContext() {
-  const selected = readLocalJson(ADDRESS_KEY, null) || readLocalJson('savedLocation', null) || {};
+  const selected = readLocalJson(ADDRESS_KEY, null) || readLocalJson(SAVED_LOCATION_KEY, null) || {};
   return analyticsCoarseRegion(selected);
 }
 function sendAnalyticsEvent(eventType, details = {}) {
@@ -387,27 +395,38 @@ function hydrateSelectedOrderApp() { const selected = selectedOrderSnapshot(); i
 function isExplicitOutsideYeosuCurrent(item = {}) {
   if (String(item.type || '').trim() !== 'current') return false;
   const region2 = String(item.region2 || '').trim();
+  if (ACTIVE_REGION.code !== 'yeosu') return Boolean(region2) && !region2.includes(REGION_SHORT_NAME);
   return Boolean(region2) && !/(?:여수|yeosu)/i.test(region2);
 }
 function normalizeOutsideYeosuCurrent(item) {
   if (!item || typeof item !== 'object' || !isExplicitOutsideYeosuCurrent(item)) return item;
+  if (ACTIVE_REGION.code === 'yeosu') {
+    return {
+      ...item,
+      label: '여수 외 지역 · 전체 가게 보기',
+      address: '여수 외 지역 · 전체 가게 보기',
+      area: '여수시 전체',
+      coords: null,
+      sortByDistance: false
+    };
+  }
   return {
     ...item,
-    label: '여수 외 지역 · 전체 가게 보기',
-    address: '여수 외 지역 · 전체 가게 보기',
-    area: '여수시 전체',
+    label: `${REGION_SHORT_NAME} 외 지역 · 전체 가게 보기`,
+    address: `${REGION_SHORT_NAME} 외 지역 · 전체 가게 보기`,
+    area: REGION_DEFAULT_AREA,
     coords: null,
     sortByDistance: false
   };
 }
 function loadSavedLocation() {
   try {
-    const saved = normalizeOutsideYeosuCurrent(JSON.parse(localStorage.getItem('savedLocation') || 'null'));
+    const saved = normalizeOutsideYeosuCurrent(JSON.parse(localStorage.getItem(SAVED_LOCATION_KEY) || 'null'));
     if (!saved || typeof saved !== 'object') return null;
     const lat = Number(saved.coords?.lat), lng = Number(saved.coords?.lng);
     return {
-      label: String(saved.label || saved.address || '').trim() || '여수시 전체',
-      area: String(saved.area || '').trim() || '여수시 전체',
+      label: String(saved.label || saved.address || '').trim() || REGION_DEFAULT_AREA,
+      area: String(saved.area || '').trim() || REGION_DEFAULT_AREA,
       address: String(saved.address || saved.label || '').trim(),
       detail: String(saved.detail || '').trim(),
       coords: Number.isFinite(lat) && Number.isFinite(lng) ? {lat, lng} : null,
@@ -440,8 +459,8 @@ const LOCATION_CATEGORY_PRIORITY_OVERRIDES = {
 };
 const state = {
   query: '', category: '전체', brandId: '', visibleCount: 40,
-  location: savedLocation?.area || localStorage.getItem('location') || '여수시 전체',
-  addressLabel: savedLocation?.label || localStorage.getItem('location') || '여수시 전체',
+  location: savedLocation?.area || localStorage.getItem(LOCATION_KEY) || REGION_DEFAULT_AREA,
+  addressLabel: savedLocation?.label || localStorage.getItem(LOCATION_KEY) || REGION_DEFAULT_AREA,
   coords: savedLocation?.coords || null,
   sortByDistance: savedLocation?.sortByDistance || false
 };
@@ -754,6 +773,8 @@ function isPlaceholderAreaLabel(value) {
   return !normalized || /^(?:홈화면|전체|전체동네|동네미확인|미확인|없음)$/i.test(normalized);
 }
 function normalizedStore(raw, index) {
+  const activeCityName = typeof REGION_CITY_NAME !== 'undefined' ? REGION_CITY_NAME : '여수시';
+  const activeShortName = typeof REGION_SHORT_NAME !== 'undefined' ? REGION_SHORT_NAME : '여수';
   const sourceRoutes = Array.isArray(raw?.routes) ? raw.routes : [];
   const routes = sourceRoutes
     .filter(route => route && route.enabled !== false && route.url && safeHref(route.url) !== '#')
@@ -780,7 +801,7 @@ function normalizedStore(raw, index) {
       .filter(Boolean)
   )];
   const searchAliases = canonicalSearchAliases(raw);
-  const addressNeighborhoods=/여수시/.test(String(raw.address||''))?neighborhoodsFor(raw.address):[];
+  const addressNeighborhoods=new RegExp(activeCityName).test(String(raw.address||''))?neighborhoodsFor(raw.address):[];
   const branchText=[branchName,name].filter(Boolean).join(' '), branchNeighborhoods=/점|지점|항|지구/.test(branchText)?neighborhoodsFor(branchText):[];
   const notionNeighborhoods=isPlaceholderAreaLabel(rawArea)?[]:neighborhoodsFor(rawArea);
   const suppliedNeighborhoods=normalizedNeighborhoodNames(raw.neighborhoods||[]);
@@ -789,7 +810,7 @@ function normalizedStore(raw, index) {
     ? addressNeighborhoods
     : [...new Set([...suppliedNeighborhoods,...branchNeighborhoods,...notionNeighborhoods,...(coordinateNeighborhood?[coordinateNeighborhood]:[])])];
   const locationSource=addressNeighborhoods.length?'verified-address':suppliedNeighborhoods.length?'catalog-neighborhood':branchNeighborhoods.length?'store-name-branch':notionNeighborhoods.length?'notion-or-canonical-neighborhood':coordinateNeighborhood?'catalog-coordinate-neighborhood':'unresolved';
-  const area=!rawArea||isPlaceholderAreaLabel(rawArea)?inferredNeighborhoods[0]||'여수':rawArea;
+  const area=!rawArea||isPlaceholderAreaLabel(rawArea)?inferredNeighborhoods[0]||activeShortName:rawArea;
   const searchIndex = normalize([name, raw.realBusinessName, brandName, branchName, area, primaryCategory, ...categoryValues, ...searchAliases, ...(raw.shopInShopNames || [])].filter(Boolean).join(' '));
   return {
     id, store_id: id, name, realBusinessName: raw.realBusinessName || '',
@@ -1074,7 +1095,10 @@ function appIcon(key, cls = '') {
   return `<span class="${cls} miniemoji">${meta.icon}</span>`;
 }
 function externalAppNoticeMarkup() {
-  return `<p class="external-app-notice" role="note"><span aria-hidden="true">ⓘ</span><span>${escapeHtml(EXTERNAL_APP_NOTICE_TEXT)}</span></p>`;
+  const text = REGION_MAP_NAME === '대동여수음식지도'
+    ? EXTERNAL_APP_NOTICE_TEXT
+    : `앱 이름은 주문 경로 안내를 위해 표시되며, ${REGION_MAP_NAME}와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.`;
+  return `<p class="external-app-notice" role="note"><span aria-hidden="true">ⓘ</span><span>${escapeHtml(text)}</span></p>`;
 }
 function mainCategories() {
   const preferred = CATEGORY_PREFERRED.filter(name => categories.includes(name));
@@ -1112,7 +1136,7 @@ function filteredStores() {
   const brand = state.brandId ? BRAND_BY_ID[state.brandId] : null;
   const list = stores.map(store => ({store, score: relevance(store, state.query), distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null}))
     .filter(item => item.score > 0)
-    .filter(({store}) => state.sortByDistance || state.location === '여수시 전체' || storeMatchesLocation(store,state.location))
+    .filter(({store}) => state.sortByDistance || state.location === REGION_DEFAULT_AREA || storeMatchesLocation(store,state.location))
     .filter(({store}) => storeMatchesCategory(store, state.category))
     .filter(({store}) => !brand || brandMatchesStore(store, brand))
     .sort((a, b) => {
@@ -1143,7 +1167,7 @@ function storeCard(store) {
     ? `<span class="distance-note">${distanceLabel} ${store.distance < 1 ? `${Math.round(store.distance * 1000)}m` : `${store.distance.toFixed(1)}km`}</span>`
     : state.sortByDistance ? '<span class="distance-note distance-pending">거리 정보 준비 중</span>' : '';
   const favorite = isFavorite(store.id);
-  return `<article class="store-card" data-id="${escapeHtml(store.id)}">${photoResolver.markup(store, 'card')}<div class="store-info"><h3 title="${escapeHtml(store.name)}">${escapeHtml(store.name)}</h3><p>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p>${distance}<div class="miniapps">${miniRoutes(store)}</div></div><button class="card-favorite ${favorite ? 'active' : ''}" type="button" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite ? '찜 해제' : '찜하기'}</span></button></article>`;
+  return `<article class="store-card" data-id="${escapeHtml(store.id)}">${photoResolver.markup(store, 'card')}<div class="store-info"><h3 title="${escapeHtml(store.name)}">${escapeHtml(store.name)}</h3><p>${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${distance}<div class="miniapps">${miniRoutes(store)}</div></div><button class="card-favorite ${favorite ? 'active' : ''}" type="button" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite ? '찜 해제' : '찜하기'}</span></button></article>`;
 }
 function renderStores({scroll = false, resetCount = false} = {}) {
   if (resetCount) state.visibleCount = 40;
@@ -1154,7 +1178,7 @@ function renderStores({scroll = false, resetCount = false} = {}) {
   else if (state.category !== '전체') title = `${state.category} 가게`;
   else if (state.query) title = `'${state.query}' 검색 결과`;
   else if (state.sortByDistance) title = '내 위치에서 가까운 가게';
-  else if (state.location !== '여수시 전체') title = `${state.location} 추천`;
+  else if (state.location !== REGION_DEFAULT_AREA) title = `${state.location} 추천`;
   $('#recommendSection h2').textContent = title;
   $('#resetCategoryBtn').hidden = state.category === '전체' && !state.brandId && !state.query;
   $('#storeGrid').innerHTML = visible.length ? visible.map(storeCard).join('') : '<div class="empty">조건에 맞는 가게가 아직 없습니다.</div>';
@@ -1164,7 +1188,7 @@ function renderStores({scroll = false, resetCount = false} = {}) {
   if (state.query) filters.push(`검색어 ${state.query}`);
   if (state.category !== '전체') filters.push(state.category);
   if (state.brandId) filters.push(BRAND_BY_ID[state.brandId].label);
-  if (state.sortByDistance) filters.push('현재 위치순'); else if (state.location !== '여수시 전체') filters.push(state.location);
+  if (state.sortByDistance) filters.push('현재 위치순'); else if (state.location !== REGION_DEFAULT_AREA) filters.push(state.location);
   $('#searchSummary').hidden = !filters.length;
   $('#searchSummary').innerHTML = filters.length ? `<span>${filters.map(escapeHtml).join(' · ')}</span><button id="clearSearch" class="text-btn" type="button">검색·카테고리 초기화</button>` : '';
   renderCategories();
@@ -1288,7 +1312,7 @@ function appBrowserMarkup(key, selectedCategory = '추천') {
   const filtered = selectedCategory === '추천' ? all : all.filter(store => storeMatchesCategory(store, selectedCategory));
   const list = applyCategoryPriorityOverrides(filtered, selectedCategory);
   const chips = `<nav class="app-browser-category-chips" aria-label="음식 카테고리"><button type="button" data-app-category="추천" class="${selectedCategory === '추천' ? 'active' : ''}">추천</button>${categoriesForApp.map(category => `<button type="button" data-app-category="${escapeHtml(category)}" class="${selectedCategory === category ? 'active' : ''}">${categoryIcon(category, 'category-chip-icon')} ${escapeHtml(category)}</button>`).join('')}</nav>`;
-  const cards = list.map(store => `<button type="button" class="app-browser-card" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}${Number.isFinite(store.appDistance) ? ` · ${store.appDistance < 1 ? `${Math.round(store.appDistance*1000)}m` : `${store.appDistance.toFixed(1)}km`}` : ''}</small><span class="app-browser-only-icon">${isExternal ? `<span class="external-app-card-label">${escapeHtml(meta.label)}</span>` : appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
+  const cards = list.map(store => `<button type="button" class="app-browser-card" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}${Number.isFinite(store.appDistance) ? ` · ${store.appDistance < 1 ? `${Math.round(store.appDistance*1000)}m` : `${store.appDistance.toFixed(1)}km`}` : ''}</small><span class="app-browser-only-icon">${isExternal ? `<span class="external-app-card-label">${escapeHtml(meta.label)}</span>` : appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
   return `<section class="app-browser" data-app-key="${key}" data-app-category-current="${escapeHtml(selectedCategory)}"><header class="app-browser-head${isExternal ? ' external-app-browser-head' : ''}">${isExternal ? '' : appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>${escapeHtml(meta.label)}에 실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${isExternal ? externalAppNoticeMarkup() : ''}</section>`;
 }
 function openAppBrowser(key, selectedCategory = '추천') {
@@ -1299,7 +1323,7 @@ function openAppBrowser(key, selectedCategory = '추천') {
 function globalExternalGuide(key) { openAppBrowser(key); }
 function savedStoreList(title, ids, emptyText) {
   const list = ids.map(id => stores.find(store => String(store.id) === String(id))).filter(Boolean);
-  openModal(`<section class="personal-list-sheet"><h2 id="modalTitle">${escapeHtml(title)}</h2><div class="personal-store-list">${list.length ? list.map(store => `<button type="button" class="personal-store-row" data-personal-store="${escapeHtml(store.id)}">${appBrowserPhoto(store)}<span><b>${escapeHtml(store.name)}</b><small>${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</small></span><i>›</i></button>`).join('') : `<p class="personal-empty">${escapeHtml(emptyText)}</p>`}</div></section>`);
+  openModal(`<section class="personal-list-sheet"><h2 id="modalTitle">${escapeHtml(title)}</h2><div class="personal-store-list">${list.length ? list.map(store => `<button type="button" class="personal-store-row" data-personal-store="${escapeHtml(store.id)}">${appBrowserPhoto(store)}<span><b>${escapeHtml(store.name)}</b><small>${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</small></span><i>›</i></button>`).join('') : `<p class="personal-empty">${escapeHtml(emptyText)}</p>`}</div></section>`);
 }
 function favoritesModal() { savedStoreList('찜한 가게', favoriteIds(), '아직 찜한 가게가 없습니다.'); }
 function recentModal() { savedStoreList('최근 방문 가게', readLocalJson(RECENT_KEY, []).map(item => String(item.storeId ?? item.id ?? item)), '아직 방문한 가게가 없습니다.'); }
@@ -1323,7 +1347,7 @@ function copyQueuedReport(reportId) {
 function brandLogo(brand) { return brand.icon ? `<img src="${brand.icon}" alt="${escapeHtml(brand.label)}" loading="lazy"><span hidden>${escapeHtml(brand.label)}</span>` : '<span class="order-icon">🏷️</span>'; }
 function brandsModal() {
   const groups = BRAND_GROUPS.map(group => `<section class="brand-category"><h3>${group.name}</h3><div class="brand-grid">${group.brands.map(brand => `<button type="button" class="brand-tile" data-brand-id="${brand.id}">${brandLogo(brand)}<b>${escapeHtml(brand.label)}</b></button>`).join('')}</div></section>`).join('');
-  openModal(`<h2 id="modalTitle">브랜드앱 주문 가능 가게</h2><p>브랜드를 누르면 여수에 등록된 해당 브랜드 가게만 모아 보여드립니다.</p>${groups}`);
+  openModal(`<h2 id="modalTitle">브랜드앱 주문 가능 가게</h2><p>브랜드를 누르면 ${REGION_SHORT_NAME}에 등록된 해당 브랜드 가게만 모아 보여드립니다.</p>${groups}`);
 }
 function allCategoriesModal() {
   openModal(`<h2 id="modalTitle">전체 음식 카테고리</h2><div class="all-category-list">${categories.map(name => `<button type="button" data-modal-cat="${escapeHtml(name)}">${categoryIcon(name, 'category-modal-icon')}<b>${escapeHtml(name)}</b></button>`).join('')}</div>`);
@@ -1332,19 +1356,21 @@ function getSavedAddress() { return normalizeOutsideYeosuCurrent(readLocalJson(A
 function getAddressBook() { return readLocalJson(ADDRESS_BOOK_KEY, []).map(normalizeOutsideYeosuCurrent); }
 function saveAddressBook(list) { writeLocalJson(ADDRESS_BOOK_KEY, list.slice(0, 12)); }
 function shortAddress(text = '', area = '') {
-  const value = String(text).trim() || '여수시 전체';
+  const cityName = typeof REGION_CITY_NAME !== 'undefined' ? REGION_CITY_NAME : '여수시';
+  const defaultArea = typeof REGION_DEFAULT_AREA !== 'undefined' ? REGION_DEFAULT_AREA : '여수시 전체';
+  const value = String(text).trim() || defaultArea;
   const neighborhood = neighborhoodFor(area) || neighborhoodFor(value);
-  if (neighborhood) return `여수시 ${neighborhood}`;
+  if (neighborhood) return `${cityName} ${neighborhood}`;
   const shortened = value.replace(/^(?:(?:전남광주|광주전남)통합특별시|전라남도|전남|광주광역시)\s*/u, '').trim() || value;
   return shortened.length > 18 ? `${shortened.slice(0, 18)}…` : shortened;
 }
 function saveLocationState(label, coords = null, sortByDistance = false, meta = {}) {
   const region = analyticsCoarseRegion(meta);
   const saved = {label, area:meta.area || label, address:meta.address || label, detail:meta.detail || '', type:meta.type || 'recent', coords, sortByDistance, ...region, savedAt:new Date().toISOString()};
-  localStorage.setItem('savedLocation', JSON.stringify(saved)); localStorage.setItem('location', saved.area);
+  localStorage.setItem(SAVED_LOCATION_KEY, JSON.stringify(saved)); localStorage.setItem(LOCATION_KEY, saved.area);
 }
-function addressAreas() { return ['여수시 전체', ...new Set(stores.map(store => store.area).filter(Boolean))].sort((a,b)=>a==='여수시 전체'?-1:a.localeCompare(b,'ko')); }
-function addressAreaFor(text='') { const neighborhood=neighborhoodFor(text); if(neighborhood)return neighborhood; const normalized=normalize(text); return addressAreas().find(area=>area!=='여수시 전체'&&normalized.includes(normalize(area))) || (text==='여수시 전체'?'여수시 전체':'여수시 전체'); }
+function addressAreas() { return [REGION_DEFAULT_AREA, ...new Set(stores.map(store => store.area).filter(Boolean))].sort((a,b)=>a===REGION_DEFAULT_AREA?-1:a.localeCompare(b,'ko')); }
+function addressAreaFor(text='') { const neighborhood=neighborhoodFor(text); if(neighborhood)return neighborhood; const normalized=normalize(text); return addressAreas().find(area=>area!==REGION_DEFAULT_AREA&&normalized.includes(normalize(area))) || REGION_DEFAULT_AREA; }
 function renderAddressDraft() {
   const preview = $('#addressSelectedPreview'); if (!preview) return;
   const base = String(addressDraft?.address || '').trim(), detail = String($('#addressDetailInput')?.value || addressDraft?.detail || '').trim();
@@ -1356,11 +1382,11 @@ function renderAddressResults(query='') {
   const value=String(query).trim(), areas=addressAreas();
   const matches=areas.filter(area=>!value || normalize(area).includes(normalize(value))).slice(0,12);
   const typed=value && !matches.some(area=>normalize(area)===normalize(value)) ? `<button type="button" data-address-base="${escapeHtml(value)}"><span>📍</span><b>${escapeHtml(value)}</b><small>입력한 주소 사용</small></button>` : '';
-  target.innerHTML = typed + matches.map(area=>`<button type="button" data-address-base="${escapeHtml(area)}"><span>📍</span><b>${escapeHtml(area)}</b><small>여수 지역 주소</small></button>`).join('') || '<p class="address-empty">검색된 주소가 없습니다.</p>';
+  target.innerHTML = typed + matches.map(area=>`<button type="button" data-address-base="${escapeHtml(area)}"><span>📍</span><b>${escapeHtml(area)}</b><small>${REGION_SHORT_NAME} 지역 주소</small></button>`).join('') || '<p class="address-empty">검색된 주소가 없습니다.</p>';
 }
 function areaModal() {
   const saved=getSavedAddress(); const recent=getAddressBook();
-  addressDraft = saved ? {...saved, coords:saved.coords || (saved.latitude&&saved.longitude?{lat:Number(saved.latitude),lng:Number(saved.longitude)}:null)} : {address:state.addressLabel==='여수시 전체'?'':state.addressLabel, detail:'', area:state.location, coords:state.coords, sortByDistance:state.sortByDistance, type:'recent'};
+  addressDraft = saved ? {...saved, coords:saved.coords || (saved.latitude&&saved.longitude?{lat:Number(saved.latitude),lng:Number(saved.longitude)}:null)} : {address:state.addressLabel===REGION_DEFAULT_AREA?'':state.addressLabel, detail:'', area:state.location, coords:state.coords, sortByDistance:state.sortByDistance, type:'recent'};
   openModal(`<section class="address-single-sheet" data-address-single><header><h2 id="modalTitle">배달 주소 설정</h2><p>주소 검색·상세주소·최근주소·현재 위치·선택 완료를 이 화면에서 한 번에 처리합니다.</p></header><div class="address-search-row"><div class="searchbox"><input id="addressSearchInput" placeholder="예: 여서동, 웅천동, 쌍봉로 368" autocomplete="street-address"><button id="clearAddressSearch" class="input-clear" type="button" hidden>×</button></div><button id="addressSearchBtn" type="button">주소검색</button></div><div id="addressSearchResults" class="address-search-results"></div><button id="gpsLocationBtn" class="current-location-btn" type="button">⌖ <span>현재 위치 사용</span></button><div id="addressSelectedPreview" class="address-selected-preview"></div><label class="address-detail-label">상세주소<input id="addressDetailInput" value="${escapeHtml(addressDraft?.detail || '')}" placeholder="동·호수, 건물명, 상세 위치" autocomplete="address-line2"></label><section class="address-recent"><div class="address-section-title"><h3>최근 주소</h3><span>최대 12개 저장</span></div><div class="address-recent-list">${recent.length?recent.map((item,index)=>`<button type="button" data-address-recent="${index}"><span>${item.type==='current'?'⌖':'📍'}</span><b>${escapeHtml(item.label||item.address)}</b><small>${escapeHtml([item.address,item.detail].filter(Boolean).join(' '))}</small></button>`).join(''):'<p class="address-empty">아직 저장된 주소가 없습니다.</p>'}</div></section><button id="addressConfirmBtn" class="address-confirm-btn" type="button">이 주소로 선택 완료</button></section>`);
   $('#addressSearchInput').value = addressDraft?.address || ''; renderAddressResults(addressDraft?.address || ''); renderAddressDraft();
 }
@@ -1368,17 +1394,17 @@ function chooseAddressBase(value, extra={}) { addressDraft={...(addressDraft||{}
 function commitAddressSelection() {
   const base=String(addressDraft?.address || $('#addressSearchInput')?.value || '').trim(); if(!base){$('#addressSearchInput')?.focus();return;}
   const detail=String($('#addressDetailInput')?.value||'').trim(), full=[base,detail].filter(Boolean).join(' '), coords=addressDraft?.coords||null, sortByDistance=Boolean(addressDraft?.sortByDistance&&coords);
-  const inferredArea=addressAreaFor(base), area=inferredArea!=='여수시 전체'?inferredArea:(addressDraft?.area||'여수시 전체');
+  const inferredArea=addressAreaFor(base), area=inferredArea!==REGION_DEFAULT_AREA?inferredArea:(addressDraft?.area||REGION_DEFAULT_AREA);
   const item={type:addressDraft?.type||'recent',address:base,detail,label:full,area,coords,sortByDistance,...analyticsCoarseRegion(addressDraft),createdAt:new Date().toISOString()};
   writeLocalJson(ADDRESS_KEY,item); saveAddressBook([item,...getAddressBook().filter(old=>old.label!==item.label||old.type!==item.type)]);
-  state.location=item.area||'여수시 전체'; state.addressLabel=item.label; state.coords=coords; state.sortByDistance=sortByDistance;
+  state.location=item.area||REGION_DEFAULT_AREA; state.addressLabel=item.label; state.coords=coords; state.sortByDistance=sortByDistance;
   saveLocationState(item.label,coords,sortByDistance,item); $('#locationText').textContent=shortAddress(item.label,item.area); hardClose(); setTimeout(showHomeAfterAddressCommit,60);
 }
 function useCurrentLocation() {
   const button=$('#gpsLocationBtn'); if(!button)return;
   if(!navigator.geolocation){button.innerHTML='⌖ <span>이 기기는 위치 기능을 지원하지 않습니다</span>';return;}
   button.disabled=true;button.innerHTML='⌖ <span>현재 위치 확인 중…</span>';
-  navigator.geolocation.getCurrentPosition(position=>{button.disabled=false;button.innerHTML='⌖ <span>현재 위치 확인 완료</span>';chooseAddressBase('현재 위치',{area:'여수시 전체',coords:{lat:position.coords.latitude,lng:position.coords.longitude},sortByDistance:true,type:'current'});},error=>{button.disabled=false;button.innerHTML=`⌖ <span>${error.code===1?'위치 권한을 허용해 주세요':'현재 위치를 확인하지 못했습니다'}</span>`;},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
+  navigator.geolocation.getCurrentPosition(position=>{button.disabled=false;button.innerHTML='⌖ <span>현재 위치 확인 완료</span>';chooseAddressBase('현재 위치',{area:REGION_DEFAULT_AREA,coords:{lat:position.coords.latitude,lng:position.coords.longitude},sortByDistance:true,type:'current'});},error=>{button.disabled=false;button.innerHTML=`⌖ <span>${error.code===1?'위치 권한을 허용해 주세요':'현재 위치를 확인하지 못했습니다'}</span>`;},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
 }
 function myPage() {
   openModal(`<h2 id="modalTitle">마이페이지</h2><p>로그인 없이 이 기기에 저장된 정보입니다.</p><div class="my-list"><button type="button" data-open-favorites>♡ 찜한 가게</button><button type="button" data-open-recent>◷ 최근 방문 가게</button><button type="button">📍 저장 지역 — ${escapeHtml(state.location)}</button><button type="button" data-open-guide>❓ 주문방법 안내</button><button type="button">✉ 광고 문의</button></div>`);
@@ -1401,7 +1427,7 @@ function feeGuideMarkup(store, selectedRoute, {fromBrowser = false} = {}) {
   const localRoutes = LOW_FEE_KEYS.map(key => routeFor(store, key)).filter(Boolean);
   const selectedMeta = APP_META[selectedRoute.key] || {label:selectedRoute.name};
   const continueLabel = orderAppContinueLabel(selectedRoute.key, selectedMeta.label);
-  return `<section id="feeGuidePanel" class="community-guide" data-selected-app="${selectedRoute.key}" data-store-id="${escapeHtml(store.id)}"><span class="community-order-kicker">같은 여수, 함께 이어가는 주문</span><h2 id="modalTitle">주문하기 전에 이용 가능한 방법을 함께 확인해 보세요</h2><p class="community-order-lead">가격과 배달비를 비교해 고객님께 맞는 방법을 자유롭게 선택하세요.</p><div class="community-choice-list">${localRoutes.length ? localRoutes.map(route => routeLink(route,'community-choice-link low-fee-route')).join('') : '<p class="muted">이 가게에 등록된 지역 주문방법이 아직 없습니다.</p>'}</div><p class="community-original-label">선택한 가게</p><strong class="selected-store-name">${escapeHtml(store.name)}</strong><p class="community-original-label">처음 선택한 주문방법</p><a class="selected-app-continue community-choice-original external-text-route" href="${escapeHtml(selectedRoute.url)}" target="_blank" rel="noopener" data-community-original="${selectedRoute.key}"><span><b>${escapeHtml(store.name)}</b><small>${escapeHtml(continueLabel)} 계속 주문하기</small></span><b>›</b></a>${externalAppNoticeMarkup()}${fromBrowser ? `<button type="button" class="community-back" data-back-app-browser="${selectedRoute.key}">← ${escapeHtml(selectedMeta.label)} 가게목록으로</button>` : ''}<p class="community-order-note">어떤 주문방법을 선택해도 됩니다. 고객님의 비용과 편의를 먼저 확인해 주세요.</p></section>`;
+  return `<section id="feeGuidePanel" class="community-guide" data-selected-app="${selectedRoute.key}" data-store-id="${escapeHtml(store.id)}"><span class="community-order-kicker">같은 ${REGION_SHORT_NAME}, 함께 이어가는 주문</span><h2 id="modalTitle">주문하기 전에 이용 가능한 방법을 함께 확인해 보세요</h2><p class="community-order-lead">가격과 배달비를 비교해 고객님께 맞는 방법을 자유롭게 선택하세요.</p><div class="community-choice-list">${localRoutes.length ? localRoutes.map(route => routeLink(route,'community-choice-link low-fee-route')).join('') : '<p class="muted">이 가게에 등록된 지역 주문방법이 아직 없습니다.</p>'}</div><p class="community-original-label">선택한 가게</p><strong class="selected-store-name">${escapeHtml(store.name)}</strong><p class="community-original-label">처음 선택한 주문방법</p><a class="selected-app-continue community-choice-original external-text-route" href="${escapeHtml(selectedRoute.url)}" target="_blank" rel="noopener" data-community-original="${selectedRoute.key}"><span><b>${escapeHtml(store.name)}</b><small>${escapeHtml(continueLabel)} 계속 주문하기</small></span><b>›</b></a>${externalAppNoticeMarkup()}${fromBrowser ? `<button type="button" class="community-back" data-back-app-browser="${selectedRoute.key}">← ${escapeHtml(selectedMeta.label)} 가게목록으로</button>` : ''}<p class="community-order-note">어떤 주문방법을 선택해도 됩니다. 고객님의 비용과 편의를 먼저 확인해 주세요.</p></section>`;
 }
 function openCommunityChoice(store, key, options = {}) {
   const selectedRoute = routeFor(store,key); if (!selectedRoute) return;
@@ -1440,7 +1466,7 @@ async function openStore(store) {
   const selectedCta = selectedRoute ? `<button type="button" class="selected-order-cta external-text-route" data-external-route-key="${selectedRoute.key}"><span>처음 선택한 ${escapeHtml(APP_META[selectedRoute.key].label)}로 주문하기</span><b>›</b></button>` : '';
   const favorite=isFavorite(store.id);
   const menuEntry = storeMenuPreviewEntryMarkup(store);
-  openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || '여수')} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}</div>${menuEntry}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
+  openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}</div>${menuEntry}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
   const carouselRoot = $('#detailPhotoCarousel'); if (carouselRoot) detailCarousel = new InfiniteCarousel(carouselRoot,{interval:3500});
   $('#modal').dataset.activeStoreId=store.id;
   return true;
@@ -1628,6 +1654,6 @@ document.addEventListener('DOMContentLoaded', () => {
   startupAd.addEventListener('click', event => { if (event.target === startupAd) closeStartupAd(); });
   $('.startup-card').addEventListener('click', event => event.stopPropagation());
   $('#hideToday').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); localStorage.setItem('hideStartup', today); closeStartupAd(); });
-  $('#startupDetails').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); setTimeout(() => openModal(`<h2 id="modalTitle">대동여수음식지도 모집·광고 안내</h2><div class="guide-list">${PROMOS.map(promo => `<button type="button">${promo.title}<br><small>${promo.desc}</small></button>`).join('')}</div>`), 60); });
+  $('#startupDetails').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); setTimeout(() => openModal(`<h2 id="modalTitle">${REGION_MAP_NAME} 모집·광고 안내</h2><div class="guide-list">${PROMOS.map(promo => `<button type="button">${promo.title}<br><small>${promo.desc}</small></button>`).join('')}</div>`), 60); });
   window.addEventListener('popstate', () => { if(ignoreNextPop){ignoreNextPop=false;return;} if (!startupAd.hidden) { closeStartupAd({fromPop:true}); return; } if (!$('#modal').hidden) hardClose({fromPop:true}); });
 });

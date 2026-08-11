@@ -1,7 +1,10 @@
 'use strict';
 
 (() => {
-  const BASE_URL = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev';
+  const ACTIVE_REGION = window.DAEDONG_REGION || {code: 'yeosu'};
+  const IS_GOHEUNG = ACTIVE_REGION.code === 'goheung';
+  const BASE_URL = IS_GOHEUNG ? '' : 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev';
+  const GOHEUNG_CATALOG_URL = 'data/goheung-catalog.json';
   const CLIENT_HEADER = 'daedong-preview-web-v1-20260804';
   const JSON_HEADERS = Object.freeze({
     Accept: 'application/json',
@@ -9,6 +12,7 @@
   });
   const REQUEST_TIMEOUT_MS = 25000;
   const cache = new Map();
+  let goheungCatalogPromise = null;
   const CURATED_MENU_IMAGE_ROOTS = Object.freeze({
     a089d1d54720b48e: 'store-menu-content/a089d1d54720b48e'
   });
@@ -80,6 +84,7 @@
   }
 
   async function request(path, {cacheKey = '', signal, timeoutMs = REQUEST_TIMEOUT_MS} = {}) {
+    if (IS_GOHEUNG) throw new Error('고흥 자료는 여수 API와 분리되어 있습니다.');
     if (cacheKey && cache.has(cacheKey)) return cache.get(cacheKey);
     const requestAbort = createRequestAbort(signal, timeoutMs);
     const pending = fetch(`${BASE_URL}${path}`, {
@@ -100,14 +105,50 @@
     return pending;
   }
 
-  const catalog = options => request('/api/catalog', {cacheKey: 'catalog', ...options});
-  const services = options => request('/api/services', {cacheKey: 'services', ...options});
+  async function goheungCatalog() {
+    if (!goheungCatalogPromise) {
+      goheungCatalogPromise = fetch(`${GOHEUNG_CATALOG_URL}?request=${Date.now()}`, {
+        method: 'GET',
+        credentials: 'same-origin',
+        cache: 'no-store',
+        headers: {Accept: 'application/json'}
+      }).then(async response => {
+        if (!response.ok) throw new Error(`고흥 자료를 불러오지 못했습니다. (${response.status})`);
+        const payload = await response.json();
+        if (payload?.regionCode !== 'goheung' || !Array.isArray(payload?.stores)) {
+          throw new Error('고흥 전용 자료가 아니므로 적용을 차단했습니다.');
+        }
+        return payload;
+      }).catch(error => {
+        goheungCatalogPromise = null;
+        throw error;
+      });
+    }
+    return goheungCatalogPromise;
+  }
+
+  const catalog = options => IS_GOHEUNG
+    ? goheungCatalog().then(payload => payload.stores)
+    : request('/api/catalog', {cacheKey: 'catalog', ...options});
+  const services = options => IS_GOHEUNG
+    ? goheungCatalog().then(payload => payload.services || {})
+    : request('/api/services', {cacheKey: 'services', ...options});
   const detail = storeId => {
     const id = safeStoreId(storeId);
+    if (IS_GOHEUNG) return goheungCatalog().then(payload => {
+      const value = payload.details?.[id];
+      if (!value) throw new Error('해당 고흥 가게 상세자료를 확인 중입니다.');
+      return value;
+    });
     return request(`/api/store/${id}`, {cacheKey: `detail:${id}`});
   };
   const menu = storeId => {
     const id = safeStoreId(storeId);
+    if (IS_GOHEUNG) return goheungCatalog().then(payload => {
+      const value = payload.menus?.[id];
+      if (!value) throw new Error('해당 고흥 가게 메뉴자료를 확인 중입니다.');
+      return value;
+    });
     return request(`/api/store/${id}/menu`, {cacheKey: `menu:${id}`})
       .then(payload => restoreCuratedMenuImages(id, payload));
   };
@@ -115,12 +156,14 @@
     const value = String(query || '').trim();
     if (!value || value.length > 40 || /[%_]/.test(value)) return Promise.resolve({stores: {}});
     const key = value.normalize('NFKC').toLowerCase();
+    if (IS_GOHEUNG) return Promise.resolve({stores: {}});
     return request(`/api/menu-search?q=${encodeURIComponent(value)}`, {cacheKey: `search:${key}`})
       .then(restoreCuratedMenuSearchImages);
   };
 
   window.daedongDataApi = Object.freeze({
     baseUrl: BASE_URL,
+    regionCode: ACTIVE_REGION.code,
     catalog,
     services,
     detail,
