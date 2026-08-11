@@ -11,22 +11,42 @@ html[data-region="goheung"] .firework-layer,
 html[data-region="goheung"] .firework{display:none!important}
 .region-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 html[data-region="goheung"] .rc6-gulls{z-index:1}
-.goheung-rocket-flight{position:absolute;z-index:1;top:40%;right:6%;width:clamp(72px,19vw,142px);height:auto;opacity:0;transform-origin:center 82%;filter:drop-shadow(0 7px 12px rgba(255,116,36,.28));will-change:transform,opacity;animation:goheung-rocket-launch 14s cubic-bezier(.37,.03,.24,1) infinite}
-.goheung-launch-smoke{position:absolute;z-index:0;top:59%;right:1%;width:clamp(120px,34vw,250px);aspect-ratio:1.8;border-radius:50%;opacity:0;background:radial-gradient(ellipse at 58% 60%,rgba(255,246,225,.88) 0 17%,rgba(229,219,207,.64) 32%,rgba(190,188,190,.24) 54%,transparent 73%);filter:blur(4px);will-change:transform,opacity;animation:goheung-launch-smoke 14s ease-out infinite}
-.goheung-rocket-flight.is-static{top:24%;right:7%;opacity:.96;transform:translate3d(0,0,0) scale(.86);animation:none}
-.goheung-launch-smoke.is-static{display:none}
-@keyframes goheung-rocket-launch{
-  0%,4%{opacity:0;transform:translate3d(0,20vh,0) scale(.67)}
-  9%{opacity:.98;transform:translate3d(0,15vh,0) scale(.7)}
-  62%{opacity:1;transform:translate3d(-2vw,-40vh,0) scale(.9)}
-  83%{opacity:.92;transform:translate3d(-4vw,-65vh,0) scale(.98)}
-  94%,100%{opacity:0;transform:translate3d(-5vw,-82vh,0) scale(1.04)}
+.goheung-liftoff-burst{position:absolute;z-index:2;top:20%;right:-22%;width:clamp(390px,122vw,840px);height:auto;opacity:0;transform-origin:center 74%;filter:drop-shadow(0 12px 20px rgba(255,111,24,.38));will-change:transform,opacity;animation:goheung-liftoff-burst 12s cubic-bezier(.2,.02,.2,1) infinite}
+.goheung-rocket-flight{position:absolute;z-index:2;top:25%;right:-2%;width:clamp(250px,72vw,540px);height:auto;opacity:0;transform-origin:center 68%;filter:drop-shadow(0 10px 18px rgba(255,116,20,.42));will-change:transform,opacity;animation:goheung-rocket-launch 12s cubic-bezier(.22,.03,.18,1) infinite}
+.goheung-ground-smoke{position:absolute;z-index:1;top:57%;right:-27%;width:145vw;max-width:1050px;aspect-ratio:2.4;border-radius:50%;opacity:0;background:radial-gradient(ellipse at 50% 55%,rgba(255,250,238,.96) 0 12%,rgba(239,228,213,.86) 23%,rgba(202,201,204,.58) 40%,rgba(143,154,166,.25) 58%,transparent 74%);filter:blur(8px);will-change:transform,opacity;animation:goheung-ground-smoke 12s ease-out infinite}
+.goheung-launch-flash{position:absolute;z-index:1;top:45%;right:-16%;width:100vw;max-width:760px;aspect-ratio:1;border-radius:50%;opacity:0;background:radial-gradient(circle,rgba(255,255,238,.98) 0 5%,rgba(255,190,72,.72) 15%,rgba(255,105,24,.24) 34%,transparent 63%);mix-blend-mode:screen;filter:blur(7px);will-change:transform,opacity;animation:goheung-launch-flash 12s ease-out infinite}
+.goheung-liftoff-burst.is-static,.goheung-ground-smoke.is-static,.goheung-launch-flash.is-static{display:none}
+.goheung-rocket-flight.is-static{top:20%;right:0;opacity:.96;width:clamp(250px,70vw,500px);transform:translate3d(0,0,0) scale(.72);animation:none}
+@keyframes goheung-liftoff-burst{
+  0%,4%{opacity:0;transform:translate3d(0,24vh,0) scale(1.2)}
+  7%{opacity:.98;transform:translate3d(0,21vh,0) scale(1.18)}
+  10%{opacity:1;transform:translate3d(-2px,19vh,0) scale(1.17)}
+  13%{opacity:1;transform:translate3d(3px,17vh,0) scale(1.15)}
+  18%{opacity:1;transform:translate3d(-2px,12vh,0) scale(1.1)}
+  25%{opacity:.96;transform:translate3d(0,3vh,0) scale(1.02)}
+  32%,100%{opacity:0;transform:translate3d(-1vw,-12vh,0) scale(.92)}
 }
-@keyframes goheung-launch-smoke{
-  0%,4%{opacity:0;transform:translate3d(0,10vh,0) scale(.45)}
-  9%{opacity:.72;transform:translate3d(0,7vh,0) scale(.7)}
-  24%{opacity:.55;transform:translate3d(-2vw,2vh,0) scale(1.08)}
-  40%,100%{opacity:0;transform:translate3d(-4vw,-1vh,0) scale(1.4)}
+@keyframes goheung-rocket-launch{
+  0%,20%{opacity:0;transform:translate3d(0,18vh,0) scale(1.05)}
+  25%{opacity:.88;transform:translate3d(0,8vh,0) scale(1)}
+  32%{opacity:1;transform:translate3d(-1vw,-6vh,0) scale(.94)}
+  55%{opacity:1;transform:translate3d(-3vw,-48vh,0) scale(.76)}
+  76%{opacity:.94;transform:translate3d(-5vw,-91vh,0) scale(.55)}
+  84%,100%{opacity:0;transform:translate3d(-7vw,-112vh,0) scale(.42)}
+}
+@keyframes goheung-ground-smoke{
+  0%,4%{opacity:0;transform:translate3d(0,10vh,0) scale(.42)}
+  8%{opacity:.95;transform:translate3d(0,6vh,0) scale(.62)}
+  18%{opacity:.88;transform:translate3d(-2vw,1vh,0) scale(1)}
+  31%{opacity:.58;transform:translate3d(-5vw,-2vh,0) scale(1.25)}
+  45%,100%{opacity:0;transform:translate3d(-8vw,-4vh,0) scale(1.52)}
+}
+@keyframes goheung-launch-flash{
+  0%,4%{opacity:0;transform:scale(.35)}
+  7%{opacity:.95;transform:scale(.72)}
+  12%{opacity:.72;transform:scale(1)}
+  21%{opacity:.28;transform:scale(1.2)}
+  29%,100%{opacity:0;transform:scale(1.35)}
 }
 .region-picker-sheet{display:grid;gap:14px}.region-picker-sheet>h2,.region-picker-sheet>h3,.region-picker-sheet>p{margin:0}
 .region-picker-sheet>p{color:#64727d;font-size:13px;line-height:1.5}
@@ -40,10 +60,12 @@ html[data-region="goheung"] .rc6-gulls{z-index:1}
 @media(max-width:420px){.region-area-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:768px){
   html[data-region="goheung"] .yeosu-night-shell{background-position:center 42%!important}
-  .goheung-rocket-flight{right:15%;width:126px}
-  .goheung-launch-smoke{right:9%}
+  .goheung-liftoff-burst{right:-1%;width:780px}
+  .goheung-rocket-flight{right:10%;width:480px}
+  .goheung-ground-smoke{right:-2%;width:900px}
+  .goheung-launch-flash{right:0;width:700px}
 }
 @media(prefers-reduced-motion:reduce){
-  .goheung-rocket-flight{top:24%;right:7%;opacity:.96;transform:translate3d(0,0,0) scale(.86);animation:none}
-  .goheung-launch-smoke{display:none}
+  .goheung-liftoff-burst,.goheung-ground-smoke,.goheung-launch-flash{display:none}
+  .goheung-rocket-flight{top:20%;right:0;opacity:.96;width:clamp(250px,70vw,500px);transform:translate3d(0,0,0) scale(.72);animation:none}
 }
