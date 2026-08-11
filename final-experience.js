@@ -1,6 +1,9 @@
 'use strict';
 
 /* Final local experience layer. Frozen store/order datasets remain read-only. */
+const FX_REGION=window.DAEDONG_REGION||{code:'yeosu',shortName:'여수',mapName:'대동여수음식지도'};
+const FX_REGION_NAME=FX_REGION.shortName||'여수';
+const FX_MAP_NAME=FX_REGION.mapName||'대동여수음식지도';
 const FX_PHONE_URL='data/phone-order-runtime.json?v=channel-recovery-07-card-markers';
 const FX_BRAND_URL='data/brand-app-mapping.json';
 const FX_BRAND_SUPPLEMENT_URL='data/brand-app-missing-nine-supplement.json';
@@ -12,8 +15,8 @@ const FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS={
 const FX_BATTLE_SESSION='daedongNavalSuccessPlayedV1';
 const FX_ENTRY_SESSION='daedongEntryFireworkPlayedV1';
 const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
-const FX_HOME_SHARE_URL='https://daedongmap.com/';
-const FX_HOME_SHARE_TEXT='여수 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.';
+const FX_HOME_SHARE_URL=FX_REGION.code==='yeosu'?'https://daedongmap.com/':new URL(window.daedongRegionUrl?.(FX_REGION.code)||window.location.href,window.location.origin).href;
+const FX_HOME_SHARE_TEXT=`${FX_REGION_NAME} 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.`;
 const FX_STORE_SHARE_PARAM='store';
 const FX_APP_BROWSER_RETURN='daedongAppBrowserReturnV1';
 const FX_HIDDEN_STORE_IDS=new Set([
@@ -67,7 +70,7 @@ renderCategories=renderCategoryGrid;
 function fxRegisteredAppCardMarkup(store,key,isExternal=false){
  const meta=APP_META[key]||{label:key};
  const routeLabel=`${meta.label} 바로가기`;
- return `<article class="app-browser-card app-browser-direct-card"><button type="button" class="app-browser-direct-link glass-action" data-app-store-order="${escapeHtml(store.id)}" data-app-key="${escapeHtml(key)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small><span><b class="app-browser-direct-label">${escapeHtml(routeLabel)}</b></span></span><b class="app-browser-direct-arrow" aria-hidden="true">›</b></button><button type="button" class="app-browser-info-button" data-app-store-info="${escapeHtml(store.id)}"><span><b>가게정보 더보기</b><small>음식보기 · 영업시간 · 쿠폰 등</small></span><b aria-hidden="true">›</b></button></article>`;
+ return `<article class="app-browser-card app-browser-direct-card"><button type="button" class="app-browser-direct-link glass-action" data-app-store-order="${escapeHtml(store.id)}" data-app-key="${escapeHtml(key)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small><span><b class="app-browser-direct-label">${escapeHtml(routeLabel)}</b></span></span><b class="app-browser-direct-arrow" aria-hidden="true">›</b></button><button type="button" class="app-browser-info-button" data-app-store-info="${escapeHtml(store.id)}"><span><b>가게정보 더보기</b><small>음식보기 · 영업시간 · 쿠폰 등</small></span><b aria-hidden="true">›</b></button></article>`;
 }
 function fxRememberAppBrowserReturn(key,anchorStoreId=''){
  window.daedongMarkExternalAppDeparture?.();
@@ -117,19 +120,19 @@ function fxThemeMatch(store,spec){const text=storeText(store);return spec.patter
 function fxRankStores(spec){return stores.filter(fxVisible).filter(store=>fxThemeMatch(store,spec)).map(store=>{const distance=fxDistance(store);const low=['direct','mukkebi','ddangyo','ondongne'].some(key=>storeHasChannel(store,key));let score=spec.pattern?80:20;if(distance!==null)score+=Math.max(0,32-distance*4);if(low)score+=12;if(store.managed)score+=8;else if(store.sharedManaged)score+=5;if(spec.kind==='near'&&distance!==null)score+=Math.max(0,120-distance*25);if(spec.kind==='local'&&low)score+=80;if(spec.kind==='new')score+=Number(store.rawIndex)||0;return{store,distance,score};}).sort((a,b)=>compareStoreBusinessStatus(a,b)||b.score-a.score||(a.distance??999)-(b.distance??999)||a.store.name.localeCompare(b.store.name,'ko')).map(item=>({...item.store,distance:item.distance}));}
 const FX_RAIL_SPECS=[
  {id:'near',kind:'near',title:'지금 가까운 가게',desc:'선택한 위치를 먼저 반영해요'},
- {id:'local',kind:'local',title:'여수에 힘이 되는 주문',desc:'지역 주문경로가 확인된 가게'},
+ {id:'local',kind:'local',title:`${FX_REGION_NAME}에 힘이 되는 주문`,desc:'지역 주문경로가 확인된 가게'},
  {id:'solo',title:'나 혼자 술 한잔',desc:'혼자 즐기기 좋은 안주와 소량 메뉴',pattern:/닭발|곱창|회|족발|보쌈|치킨|닭강정|국물|분식|야식|주점/},
  {id:'group',title:'오늘은 회식이다',desc:'여럿이 나누기 좋은 메뉴',pattern:/회|해산물|족발|보쌈|치킨|고기|삼겹|아귀|해물찜|찜닭|탕|전골/},
  {id:'warm',title:'왕후의 밥, 걸인의 찬',desc:'소박해도 마음까지 따뜻해지는 한 끼',pattern:/백반|집밥|국밥|찌개|죽|김치찜|도시락|반찬|한식/},
  {id:'appetite',title:'입맛 없을 때',desc:'매콤하고 새콤한 음식',pattern:/냉면|밀면|쫄면|비빔|마라|떡볶이|김치/},
- {id:'rain',title:'비 오는 날',desc:'현재 여수에 비가 올 때 생각나는 음식',pattern:/전|국밥|찌개|탕|수제비|칼국수|짬뽕|부침/},
+ {id:'rain',title:'비 오는 날',desc:`현재 ${FX_REGION_NAME}에 비가 올 때 생각나는 음식`,pattern:/전|국밥|찌개|탕|수제비|칼국수|짬뽕|부침/},
  {id:'noodle',title:'면 음식이 당길 때',desc:'국수·면·짬뽕 한 그릇',pattern:/면|국수|짬뽕|짜장|파스타|우동|라멘/},
  {id:'sweet',title:'시원하고 달달한 것이 당길 때',desc:'카페·빙수·디저트',pattern:/카페|커피|디저트|빙수|아이스크림|베이커리|떡/},
  {id:'mood',title:'기분전환이 필요할 때',desc:'평소와 다른 메뉴',pattern:/피자|버거|치킨|마라|아시안|돈까스|일식/},
  {id:'new',kind:'new',title:'새로 들어온 가게',desc:'최근 지도에 등록된 가게'}
 ];
 function fxSelectedRails(){const hour=new Date().getHours();const ids=fxRainState!=='clear'?['rain','near','local','warm','noodle','new']:hour>=17?['near','local','group','solo','mood','new']:['near','local','warm','appetite','sweet','new'];return ids.slice(0,6).map(id=>FX_RAIL_SPECS.find(spec=>spec.id===id));}
-function fxRenderRails(){const root=$('#recommendRails');if(!root)return;if(state.category!=='전체'||state.query||state.brandId){root.hidden=true;root.innerHTML='';return;}root.hidden=false;const used=new Set();root.innerHTML=fxSelectedRails().map(spec=>{const list=fxRankStores(spec).filter(store=>!used.has(String(store.id))).slice(0,8);list.forEach(store=>used.add(String(store.id)));const cards=list.map(store=>{const distance=spec.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';const locationLabel=distance||store.proximityLabel||'';return `<button type="button" class="rail-card glass-action" data-rail-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</p></span></button>`}).join('');const empty=spec.kind==='near'?'주소에서 동네를 확인하면 가까운 권역의 가게를 보여드립니다.':'추천 가게를 확인 중입니다.';return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div></header><div class="recommend-track">${cards||`<p class="empty">${empty}</p>`}</div></section>`;}).join('');}
+function fxRenderRails(){const root=$('#recommendRails');if(!root)return;if(state.category!=='전체'||state.query||state.brandId){root.hidden=true;root.innerHTML='';return;}root.hidden=false;const used=new Set();root.innerHTML=fxSelectedRails().map(spec=>{const list=fxRankStores(spec).filter(store=>!used.has(String(store.id))).slice(0,8);list.forEach(store=>used.add(String(store.id)));const cards=list.map(store=>{const distance=spec.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';const locationLabel=distance||store.proximityLabel||'';return `<button type="button" class="rail-card glass-action" data-rail-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</p></span></button>`}).join('');const empty=spec.kind==='near'?'주소에서 동네를 확인하면 가까운 권역의 가게를 보여드립니다.':'추천 가게를 확인 중입니다.';return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div></header><div class="recommend-track">${cards||`<p class="empty">${empty}</p>`}</div></section>`;}).join('');}
 renderStores=function(options={}){fxOriginalRenderStores(options);fxRenderRails();};
 
 function fxAppBrowserMarkup(key,selectedCategory='추천'){
@@ -146,10 +149,10 @@ function fxPhoneStores(category='추천'){let list=fxPhoneData.storeMappings.map
 function fxOpenPhoneDirectory(category='추천'){
  const all=fxPhoneStores(),cats=categoriesFromStores(all.map(item=>item.store));const list=fxPhoneStores(category);
  const chips=`<nav class="app-browser-category-chips"><button type="button" data-phone-category="추천" class="${category==='추천'?'active':''}">추천</button>${cats.map(cat=>`<button type="button" data-phone-category="${escapeHtml(cat)}" class="${category===cat?'active':''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
- const cards=list.map(({store})=>`<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
+ const cards=list.map(({store})=>`<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
  openModal(`<section class="phone-order-sheet"><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다. 전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p>${chips}<div class="phone-order-list">${cards||'<p class="empty">확인 가능한 전화페이지가 없습니다.</p>'}</div></section>`);
 }
-function fxOpenPhoneConfirm(id){const item=fxPhoneByStore.get(String(id)),store=fxStoreById(id),phone=String(store?.phone||'').replace(/[^0-9]/g,'');const valid=/^02\d{7,8}$/.test(phone)||/^0(?:3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{7,8}$/.test(phone)||/^01[016789]\d{7,8}$/.test(phone)||/^070\d{8}$/.test(phone);if(!item?.clickableTel||!store||!valid)return;openModal(`<section class="phone-order-confirm" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)} 전화주문</h2><div class="phone-confirm-photo">${fxCardPhoto(store)}</div><p>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</p><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다. 전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p><div class="phone-confirm-actions"><a class="phone-call-link" href="tel:${escapeHtml(phone)}">전화 걸기</a><button class="phone-cancel" type="button" data-phone-cancel>취소</button></div></section>`);$('#modal').dataset.activeStoreId=store.id;}
+function fxOpenPhoneConfirm(id){const item=fxPhoneByStore.get(String(id)),store=fxStoreById(id),phone=String(store?.phone||'').replace(/[^0-9]/g,'');const valid=/^02\d{7,8}$/.test(phone)||/^0(?:3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{7,8}$/.test(phone)||/^01[016789]\d{7,8}$/.test(phone)||/^070\d{8}$/.test(phone);if(!item?.clickableTel||!store||!valid)return;openModal(`<section class="phone-order-confirm" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)} 전화주문</h2><div class="phone-confirm-photo">${fxCardPhoto(store)}</div><p>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</p><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다. 전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p><div class="phone-confirm-actions"><a class="phone-call-link" href="tel:${escapeHtml(phone)}">전화 걸기</a><button class="phone-cancel" type="button" data-phone-cancel>취소</button></div></section>`);$('#modal').dataset.activeStoreId=store.id;}
 
 function fxBuildIndexes(){
  fxBrandByStore.clear();fxHappyByStore.clear();fxPhoneByStore.clear();
@@ -174,10 +177,10 @@ function fxDirectBrands(){const map=new Map();for(const [id,item] of fxBrandBySt
 function fxOpenBrandHub(view='channels',value=''){
  if(view==='channels'){openModal(`<section class="brand-app-hub"><h2 id="modalTitle">브랜드앱 주문</h2><p>직접 브랜드앱과 공통 주문채널 해피오더를 각각 선택할 수 있습니다.</p><div class="brand-app-grid"><button type="button" class="brand-app-tile glass-action" data-brand-view="direct">${fxSvg('store','order-svg')}<b>직접 브랜드앱</b><small>Android 앱</small></button><button type="button" class="brand-app-tile glass-action" data-brand-view="happy"><img src="assets/order-channels/happyorder.png" alt="해피오더"><b>해피오더</b><small>공통 주문채널</small></button></div></section>`);return;}
  if(view==='direct'){const cards=fxDirectBrands().map(brand=>`<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}">${brand.icon?`<img src="${escapeHtml(brand.icon)}" alt="">`:fxSvg('store','order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');openModal(`<section class="brand-app-hub"><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p><div class="brand-app-grid">${cards}</div></section>`);return;}
- if(view==='direct-stores'){const brand=fxDirectBrands().find(item=>item.name===value);const cards=(brand?.stores||[]).map(fxStoreById).filter(fxVisible).map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');openModal(`<section class="brand-app-hub"><h2 id="modalTitle">${escapeHtml(value)}</h2><p>대동여수음식지도에 등록된 해당 브랜드 여수 지점입니다.</p><div class="channel-store-list">${cards}</div></section>`);return;}
+ if(view==='direct-stores'){const brand=fxDirectBrands().find(item=>item.name===value);const cards=(brand?.stores||[]).map(fxStoreById).filter(fxVisible).map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');openModal(`<section class="brand-app-hub"><h2 id="modalTitle">${escapeHtml(value)}</h2><p>${escapeHtml(FX_MAP_NAME)}에 등록된 해당 브랜드 ${escapeHtml(FX_REGION_NAME)} 지점입니다.</p><div class="channel-store-list">${cards}</div></section>`);return;}
  if(view==='happy'){const cats=[...new Set((fxHappyData.currentScreenBrands||[]).map(item=>item.category).filter(Boolean))];openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더</h2><p>카테고리를 선택한 뒤 해피오더에서 확인된 브랜드와 여수 지점을 찾아보세요.</p><div class="brand-app-grid">${cats.map(cat=>`<button type="button" class="brand-app-tile glass-action" data-happy-category="${escapeHtml(cat)}">${fxSvg('food','order-svg')}<b>${escapeHtml(cat)}</b></button>`).join('')}</div></section>`);return;}
  if(view==='happy-brands'){const brands=(fxHappyData.currentScreenBrands||[]).filter(item=>item.category===value&&item.currentScreenConfirmed);openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><div class="happyorder-brand-grid">${brands.map(brand=>`<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}">${brand.brandSelectionImage?`<img src="${escapeHtml(brand.brandSelectionImage)}" alt="">`:`<img src="assets/order-channels/happyorder.png" alt="">`}<b>${escapeHtml(brand.brandName)}</b></button>`).join('')}</div></section>`);return;}
- if(view==='happy-stores'){const ids=[...fxHappyByStore].filter(([,item])=>item.brandName===value).map(([id])=>id);const cards=ids.map(fxStoreById).filter(fxVisible).map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p><div class="channel-store-list">${cards}</div></section>`);}
+ if(view==='happy-stores'){const ids=[...fxHappyByStore].filter(([,item])=>item.brandName===value).map(([id])=>id);const cards=ids.map(fxStoreById).filter(fxVisible).map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p><div class="channel-store-list">${cards}</div></section>`);}
 }
 brandsModal=function(){fxOpenBrandHub('channels');};
 
@@ -197,7 +200,7 @@ function fxRankSearchMatches(matches){
  });
 }
 let fxSearchRenderToken=0;
-function fxSearchCard({store}){return `<button type="button" class="app-browser-card glass-action" data-search-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||'여수')} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`;}
+function fxSearchCard({store}){return `<button type="button" class="app-browser-card glass-action" data-search-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`;}
 function fxRenderSearchResults(query=''){
  const target=$('#fxSearchResults');if(!target)return;const q=String(query).trim(),token=++fxSearchRenderToken;
  target.removeAttribute('aria-label');target.removeAttribute('aria-busy');
@@ -224,7 +227,7 @@ function fxSearchModal(query=''){
 function fxRipple(x,y){if(fxReduced())return;for(let i=0;i<2;i++){const ring=document.createElement('i');ring.className=`ripple-ring ${i?'second':''}`;ring.style.left=`${x}px`;ring.style.top=`${y}px`;document.body.append(ring);setTimeout(()=>ring.remove(),480);}}
 function fxFormation(){const lane=$('#navalLane');if(!lane)return;lane.querySelectorAll('.turtle-ship').forEach(node=>node.remove());[['',7],['escort',2],['escort two',13]].forEach(([cls,bottom])=>{const ship=document.createElement('i');ship.className=`turtle-ship ${cls}`;ship.style.left='18px';ship.style.bottom=`${bottom}px`;lane.append(ship);setTimeout(()=>ship.remove(),680);});}
 function fxBridgeLight(){const layer=$('.bridge-light-layer');if(!layer)return;layer.classList.remove('active');void layer.offsetWidth;layer.classList.add('active');setTimeout(()=>layer.classList.remove('active'),620);}
-function fxFireworks(withToast=false){if(fxReduced()||fxLowPower())return;const layer=$('#microFxLayer');if(!layer)return;for(const [left,top] of [['12%','38px'],['84%','53px'],['68%','26px']]){const fire=document.createElement('i');fire.className='firework';fire.style.left=left;fire.style.top=top;layer.append(fire);setTimeout(()=>fire.remove(),700);}if(withToast){const toast=document.createElement('div');toast.className='success-toast';toast.textContent='여수에 힘이 되는 주문길을 선택했어요';layer.append(toast);setTimeout(()=>toast.remove(),1200);}}
+function fxFireworks(withToast=false){if(fxReduced()||fxLowPower())return;const layer=$('#microFxLayer');if(!layer)return;for(const [left,top] of [['12%','38px'],['84%','53px'],['68%','26px']]){const fire=document.createElement('i');fire.className='firework';fire.style.left=left;fire.style.top=top;layer.append(fire);setTimeout(()=>fire.remove(),700);}if(withToast){const toast=document.createElement('div');toast.className='success-toast';toast.textContent=`${FX_REGION_NAME}에 힘이 되는 주문길을 선택했어요`;layer.append(toast);setTimeout(()=>toast.remove(),1200);}}
 function fxBattle({phone=false}={}){fxFormation();fxBridgeLight();if(phone||fxReduced()||fxLowPower()||sessionStorage.getItem(FX_BATTLE_SESSION))return;sessionStorage.setItem(FX_BATTLE_SESSION,'1');const lane=$('#navalLane');if(!lane)return;for(const cls of ['enemy-ship','battle-smoke','cannon-flash','cannon-ball']){const node=document.createElement('i');node.className=cls;lane.append(node);setTimeout(()=>node.remove(),1250);}fxFireworks(true);}
 function fxGull(target,favorite=false){if(fxReduced()||fxLowPower())return;const r=target.getBoundingClientRect(),g=document.createElement('i');g.className=`gull-fx ${favorite?'favorite':''}`;g.style.left=`${r.left+r.width/2}px`;g.style.top=`${r.top}px`;document.body.append(g);setTimeout(()=>g.remove(),520);}
 function fxStoreShareUrl(store){
@@ -243,7 +246,7 @@ function fxOpenStoreShare(store,target){
  openModal(`<section class="home-share-sheet store-share-sheet" data-store-share-id="${escapeHtml(store.id)}">
   <h2 id="modalTitle">${escapeHtml(store.name)} 공유하기</h2>
   <p>가게 주소를 복사해 카카오톡·문자 등으로 공유해보세요.</p>
-  <div class="home-share-preview store-share-preview">${photo?`<img src="${escapeHtml(photo)}" alt="${escapeHtml(store.name)}">`:`<img src="assets/logo.png" alt="대동여수음식지도">`}<span><b>${escapeHtml(store.name)}</b><small>가게를 바로 여는 대동여수음식지도 주소</small></span></div>
+  <div class="home-share-preview store-share-preview">${photo?`<img src="${escapeHtml(photo)}" alt="${escapeHtml(store.name)}">`:`<img src="assets/logo.png" alt="${escapeHtml(FX_MAP_NAME)}">`}<span><b>${escapeHtml(store.name)}</b><small>가게를 바로 여는 ${escapeHtml(FX_MAP_NAME)} 주소</small></span></div>
   <label class="store-share-url-label" for="storeShareUrl">가게 공유주소</label>
   <div class="store-share-url-row">
    <input id="storeShareUrl" class="store-share-url" type="text" readonly value="${escapeHtml(url)}" data-store-share-url>
@@ -276,8 +279,8 @@ async function fxCopyStoreShareUrl(storeId){
 async function fxShareStore(storeId,target){
  const store=fxStoreById(storeId);
  if(!store)return;
- const url=fxStoreShareUrl(store),title=`${store.name} · 대동여수음식지도`;
- const payload={title,text:`${store.name} 가게 정보를 대동여수음식지도에서 확인해보세요.`,url};
+ const url=fxStoreShareUrl(store),title=`${store.name} · ${FX_MAP_NAME}`;
+ const payload={title,text:`${store.name} 가게 정보를 ${FX_MAP_NAME}에서 확인해보세요.`,url};
  if(!navigator.share||(navigator.canShare&&!navigator.canShare(payload))){
   await fxCopyStoreShareUrl(store.id);
   return;
@@ -312,7 +315,7 @@ async function fxCopyHomeShareUrl(){
    document.body.append(input);input.select();const copied=document.execCommand('copy');input.remove();if(!copied)throw new Error('copy failed');
   }
   fxSetHomeShareStatus('링크를 복사했습니다. 원하는 대화방에 붙여넣어 주세요.');
-  fxShareToast('대동여수음식지도 링크를 복사했습니다.');
+  fxShareToast(`${FX_MAP_NAME} 링크를 복사했습니다.`);
  }catch{
   fxSetHomeShareStatus('복사가 차단되었습니다. 아래 주소를 길게 눌러 복사해 주세요.');
   fxShareToast('공유 링크: daedongmap.com');
@@ -321,11 +324,11 @@ async function fxCopyHomeShareUrl(){
 function fxOpenHomeShare(target){
  fxGull(target,false);
  openModal(`<section class="home-share-sheet">
-  <h2 id="modalTitle">대동여수음식지도 공유하기</h2>
-  <p>가게 한 곳이 아니라 대동여수음식지도 홈 전체를 가족·지인에게 알려주세요.</p>
-  <div class="home-share-preview"><img src="assets/logo.png" alt=""><span><b>대동여수음식지도</b><small>${FX_HOME_SHARE_URL}</small></span></div>
+  <h2 id="modalTitle">${escapeHtml(FX_MAP_NAME)} 공유하기</h2>
+  <p>가게 한 곳이 아니라 ${escapeHtml(FX_MAP_NAME)} 홈 전체를 가족·지인에게 알려주세요.</p>
+  <div class="home-share-preview"><img src="assets/logo.png" alt=""><span><b>${escapeHtml(FX_MAP_NAME)}</b><small>${FX_HOME_SHARE_URL}</small></span></div>
   <div class="home-share-actions">
-   <button class="home-share-action glass-action" type="button" data-home-share-action>대동여수음식지도 공유하기</button>
+   <button class="home-share-action glass-action" type="button" data-home-share-action>${escapeHtml(FX_MAP_NAME)} 공유하기</button>
   </div>
   <p class="home-share-status" role="status" aria-live="polite" data-home-share-status>휴대폰 공유창을 지원하지 않으면 링크가 자동으로 복사됩니다.</p>
  </section>`);
@@ -333,7 +336,7 @@ function fxOpenHomeShare(target){
 async function fxShareHome(target){
  if(target?.disabled)return;
  fxGull(target,false);
- const payload={title:'대동여수음식지도',text:FX_HOME_SHARE_TEXT,url:FX_HOME_SHARE_URL};
+ const payload={title:FX_MAP_NAME,text:FX_HOME_SHARE_TEXT,url:FX_HOME_SHARE_URL};
  if(!navigator.share||(navigator.canShare&&!navigator.canShare(payload))){
   fxSetHomeShareStatus('이 브라우저는 휴대폰 공유창을 지원하지 않아 링크를 복사합니다.');
   await fxCopyHomeShareUrl();

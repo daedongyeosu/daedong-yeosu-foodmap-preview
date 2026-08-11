@@ -813,6 +813,7 @@
 
   function initialize() {
     if (installed) return;
+    if (window.DAEDONG_REGION?.code && window.DAEDONG_REGION.code !== 'yeosu') return;
     installed = true;
     const hardCloseBase = hardClose;
     const postcodeCloseBase = typeof rc5ClosePostcode === 'function' ? rc5ClosePostcode : null;
