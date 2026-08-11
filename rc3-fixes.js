@@ -3,6 +3,7 @@
 /* RC3 fixes only. Store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
 const RC3_ICON_SPRITE = CATEGORY_ICON_SPRITE;
 const RC3_REGION_NAME = window.DAEDONG_REGION?.shortName || '여수';
+const RC3_IS_GOHEUNG = window.DAEDONG_REGION?.code === 'goheung';
 const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-07-card-markers';
 const RC3_APP_PARTICLE = Object.freeze({
   yogiyo: '요기요로',
@@ -620,7 +621,7 @@ fxInitialize = async function rc3Initialize() {
   rc3RefreshRailsAfterServiceReady();
   await rc3InitializeBase();
   rc3RefreshRailsAfterServiceReady();
-  const internalPhones = await fetchJson(RC3_PHONE_INTERNAL_URL, {stores: []});
+  const internalPhones = RC3_IS_GOHEUNG ? {stores: []} : await fetchJson(RC3_PHONE_INTERNAL_URL, {stores: []});
   rc3InternalPhoneByStore = new Map((internalPhones.stores || []).map(item => [String(item.store_id), item]));
   const activeStoreId = String($('#modalContent .store-detail')?.dataset.storeId || '');
   const activeStore = activeStoreId ? fxStoreById(activeStoreId) : null;

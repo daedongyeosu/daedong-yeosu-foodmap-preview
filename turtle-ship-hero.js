@@ -5,6 +5,7 @@
  * 데이터·가게 목록·주문 경로·팝업 이벤트에는 연결하지 않는다.
  */
 (() => {
+  if (window.DAEDONG_REGION?.code === 'goheung') return;
   const SEQUENCE_SESSION_KEY = 'daedongCommunityIntroPlayedV4';
   const INTRO_DURATION = 15000;
   const INTRO_CLOSE_DURATION = 240;
