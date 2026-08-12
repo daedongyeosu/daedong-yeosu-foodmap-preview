@@ -66,7 +66,7 @@
     const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
     const saveData = Boolean(navigator.connection?.saveData);
     const staticClass = reduceMotion || saveData ? ' is-static' : '';
-    media.innerHTML = `<span class="goheung-ground-smoke${staticClass}"></span><span class="goheung-launch-flash${staticClass}"></span><img class="goheung-rocket-flight${staticClass}" src="assets/goheung/goheung-rocket-flight-v3.webp" width="620" height="620" alt="" decoding="async">`;
+    media.innerHTML = `<span class="goheung-ground-smoke${staticClass}"></span><span class="goheung-smoke-column${staticClass}"></span><span class="goheung-ignition-core${staticClass}"></span><span class="goheung-launch-flash${staticClass}"></span><img class="goheung-rocket-flight${staticClass}" src="assets/goheung/goheung-rocket-flight-v3.webp" width="620" height="620" alt="" decoding="async">`;
     shell.prepend(media);
   }
 
