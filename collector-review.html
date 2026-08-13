@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#071f3d">
   <title>요기요 수집 검수 | 대동여수음식지도 Preview</title>
   <link rel="icon" href="/app-icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="collector-review.css?v=1">
+  <link rel="stylesheet" href="collector-review.css?v=2">
 </head>
 <body>
   <header class="review-header">
@@ -22,9 +22,12 @@
       <p>기존 가게 자료는 덮어쓰지 않고 부족한 항목만 보충 후보로 표시합니다. 신규 가게도 승인 전에는 고객 목록에 들어가지 않습니다.</p>
     </section>
     <section id="summary" class="summary-grid" aria-label="수집 현황">
-      <article><b id="totalCount">-</b><span>후보 가게</span></article>
-      <article><b id="menuCount">-</b><span>수집 메뉴</span></article>
+      <article><b id="collectedCount">-</b><span>전체 수집본</span></article>
+      <article><b id="totalCount">-</b><span>중복 제외 가게</span></article>
+      <article><b id="duplicateCount">-</b><span>반복 수집 제외</span></article>
+      <article><b id="menuCount">-</b><span>고유 가게 메뉴</span></article>
       <article><b id="photoCount">-</b><span>사진 확인 메뉴</span></article>
+      <article><b id="linkCount">-</b><span>요기요 링크 가게</span></article>
     </section>
     <section class="review-tools">
       <label><span class="sr-only">가게명 검색</span><input id="searchInput" type="search" placeholder="가게명 또는 주소 검색"></label>
@@ -42,6 +45,6 @@
     <div class="dialog-head"><strong id="detailTitle">가게 후보</strong><button id="detailClose" type="button" aria-label="닫기">×</button></div>
     <div id="detailBody"></div>
   </dialog>
-  <script src="collector-review.js?v=1" defer></script>
+  <script src="collector-review.js?v=2" defer></script>
 </body>
 </html>

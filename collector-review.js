@@ -3,10 +3,11 @@
 (() => {
   const API_BASE = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev';
   const API_HEADERS = Object.freeze({Accept: 'application/json', 'X-Daedong-Client': 'daedong-preview-web-v1-20260804'});
-  const state = {candidates: [], filter: 'all', query: ''};
+  const state = {candidates: [], filter: 'all', query: '', summary: {}};
   const elements = {
     list: document.getElementById('candidateList'), status: document.getElementById('statusMessage'),
-    total: document.getElementById('totalCount'), menus: document.getElementById('menuCount'), photos: document.getElementById('photoCount'),
+    collected: document.getElementById('collectedCount'), total: document.getElementById('totalCount'), duplicates: document.getElementById('duplicateCount'),
+    menus: document.getElementById('menuCount'), photos: document.getElementById('photoCount'), links: document.getElementById('linkCount'),
     search: document.getElementById('searchInput'), filters: document.getElementById('filterTabs'), refresh: document.getElementById('refreshBtn'),
     dialog: document.getElementById('detailDialog'), detailTitle: document.getElementById('detailTitle'), detailBody: document.getElementById('detailBody'),
   };
@@ -36,7 +37,9 @@
 
   function render() {
     const rows = visibleCandidates();
-    elements.status.textContent = state.candidates.length ? `여수 수집 후보 ${rows.length}개를 표시합니다.` : '아직 화면에 표시할 여수 수집 후보가 없습니다.';
+    elements.status.textContent = state.candidates.length
+      ? `중복을 제외한 여수 가게 ${rows.length}개를 표시합니다. 반복 수집본은 최신 자료 1건만 사용합니다.`
+      : '아직 화면에 표시할 여수 수집 후보가 없습니다.';
     if (!rows.length) {
       elements.list.innerHTML = '<div class="empty-card">조건에 맞는 가게 후보가 없습니다.<br>자동전송된 자료가 들어오면 이 화면에 나타납니다.</div>';
       return;
@@ -71,11 +74,24 @@
     elements.refresh.disabled = true;
     elements.status.textContent = '수집 자료를 불러오는 중입니다.';
     try {
-      const payload = await api('/api/collector-review/candidates?limit=100');
-      state.candidates = Array.isArray(payload.candidates) ? payload.candidates : [];
-      elements.total.textContent = String(payload.summary?.total ?? state.candidates.length);
-      elements.menus.textContent = String(payload.summary?.menus ?? 0);
-      elements.photos.textContent = String(payload.summary?.photoMenus ?? 0);
+      let offset = 0;
+      let payload = await api('/api/collector-review/candidates?limit=100&offset=0');
+      const candidates = Array.isArray(payload.candidates) ? [...payload.candidates] : [];
+      while (payload.pagination?.hasMore && candidates.length < 5000) {
+        offset += Number(payload.pagination.returned || 0);
+        if (!payload.pagination.returned) break;
+        payload = await api(`/api/collector-review/candidates?limit=100&offset=${offset}`);
+        candidates.push(...(Array.isArray(payload.candidates) ? payload.candidates : []));
+      }
+      state.candidates = candidates;
+      state.summary = payload.summary || {};
+      elements.collected.textContent = String(state.summary.collectedRecords ?? state.candidates.length);
+      elements.total.textContent = String(state.summary.uniqueStores ?? state.summary.total ?? state.candidates.length);
+      elements.duplicates.textContent = String(state.summary.duplicateCollections ?? 0);
+      elements.menus.textContent = String(state.summary.menus ?? 0);
+      elements.photos.textContent = state.summary.photoMetricsPending
+        ? `${state.summary.photoMenus ?? 0}+` : String(state.summary.photoMenus ?? 0);
+      elements.links.textContent = String(state.summary.linkedStores ?? 0);
       render();
     } catch (error) {
       elements.status.textContent = error.message;
