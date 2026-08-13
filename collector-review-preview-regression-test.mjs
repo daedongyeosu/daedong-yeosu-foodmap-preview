@@ -20,6 +20,12 @@ test('Collector review page is explicitly Preview-only and customer-hidden', () 
   assert.match(page, /noindex,nofollow,noarchive/);
   assert.match(script, /payload\.regionCode !== 'yeosu'/);
   assert.match(script, /payload\.customerVisible !== false/);
+  assert.match(page, /id="existingCount"/);
+  assert.match(page, /id="newStoreCount"/);
+  assert.match(page, /id="reviewCount"/);
+  assert.match(script, /state\.summary\.existing/);
+  assert.match(script, /state\.summary\.newStore/);
+  assert.match(script, /state\.summary\.review/);
 });
 
 test('Collector review client never renders internal identifiers or menu prices', () => {

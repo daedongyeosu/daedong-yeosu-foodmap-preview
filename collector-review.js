@@ -7,6 +7,7 @@
   const elements = {
     list: document.getElementById('candidateList'), status: document.getElementById('statusMessage'),
     collected: document.getElementById('collectedCount'), total: document.getElementById('totalCount'), duplicates: document.getElementById('duplicateCount'),
+    existing: document.getElementById('existingCount'), newStore: document.getElementById('newStoreCount'), review: document.getElementById('reviewCount'),
     menus: document.getElementById('menuCount'), photos: document.getElementById('photoCount'), links: document.getElementById('linkCount'),
     search: document.getElementById('searchInput'), filters: document.getElementById('filterTabs'), refresh: document.getElementById('refreshBtn'),
     dialog: document.getElementById('detailDialog'), detailTitle: document.getElementById('detailTitle'), detailBody: document.getElementById('detailBody'),
@@ -92,6 +93,9 @@
       elements.collected.textContent = String(state.summary.collectedRecords ?? state.candidates.length);
       elements.total.textContent = String(state.summary.uniqueStores ?? state.summary.total ?? state.candidates.length);
       elements.duplicates.textContent = String(state.summary.duplicateCollections ?? 0);
+      elements.existing.textContent = String(state.summary.existing ?? 0);
+      elements.newStore.textContent = String(state.summary.newStore ?? 0);
+      elements.review.textContent = String(state.summary.review ?? 0);
       elements.menus.textContent = String(state.summary.menus ?? 0);
       elements.photos.textContent = state.summary.photoMetricsPending
         ? `${state.summary.photoMenus ?? 0}+` : String(state.summary.photoMenus ?? 0);
