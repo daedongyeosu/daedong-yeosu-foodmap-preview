@@ -54,7 +54,7 @@
       const link = safeYogiyoUrl(candidate.store?.sourceUrl);
       return `<article class="candidate-card" data-batch-id="${escapeHtml(candidate.batchId)}">
         <header><div><h2>${escapeHtml(candidate.store?.displayName || '가게명 확인 필요')}</h2><address>${escapeHtml(candidate.store?.address || '주소 확인 필요')}</address></div><span class="decision ${kind}">${decisionLabel(candidate)}</span></header>
-        <div class="card-metrics"><span>메뉴 ${Number(candidate.menuCount || 0)}개</span><span>사진 ${Number(candidate.photoMenuCount || 0)}개</span><span>${escapeHtml(prettyDate(candidate.receivedAt || candidate.updatedAt))}</span></div>
+        <div class="card-metrics"><span>메뉴 ${Number(candidate.menuCount || 0)}개</span><span>사진 화면 증거 ${Number(candidate.photoMenuCount || 0)}개</span><span>${escapeHtml(prettyDate(candidate.receivedAt || candidate.updatedAt))}</span></div>
         <div class="card-actions"><button type="button" data-open-detail="${escapeHtml(candidate.batchId)}">메뉴 검수</button>${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">요기요 링크</a>` : '<a aria-disabled="true">링크 없음</a>'}</div>
       </article>`;
     }).join('');
@@ -68,8 +68,8 @@
       const {candidate} = await api(`/api/collector-review/candidates/${encodeURIComponent(batchId)}`);
       elements.detailTitle.textContent = candidate.store?.displayName || '가게 후보';
       const link = safeYogiyoUrl(candidate.store?.sourceUrl);
-      const menuHtml = candidate.menus?.length ? candidate.menus.map(menu => `<article class="menu-item"><strong>${escapeHtml(menu.name)}</strong>${menu.category ? `<p>${escapeHtml(menu.category)}</p>` : ''}${menu.description ? `<p>${escapeHtml(menu.description)}</p>` : ''}<span class="menu-evidence">${menu.hasPhoto ? `사진 확인 · ${escapeHtml(menu.photoEvidenceName || '저장됨')}` : '사진 없음 메뉴 보존'}${menu.detailEvidenceCount ? ` · 상세 ${menu.detailEvidenceCount}장` : ''}</span></article>`).join('') : '<div class="empty-card">보존된 메뉴가 없습니다.</div>';
-      elements.detailBody.innerHTML = `<div class="detail-content"><div class="detail-meta"><b>${escapeHtml(decisionLabel(candidate))}</b><span>${escapeHtml(candidate.store?.address || '주소 확인 필요')}</span><span>수집 메뉴 ${Number(candidate.menuCount || 0)}개 · 사진 확인 ${Number(candidate.photoMenuCount || 0)}개</span>${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">요기요 원본 링크 열기</a>` : '<span>요기요 링크 없음</span>'}<span>승인 전 고객 가게목록에는 반영되지 않습니다.</span></div><div class="menu-list">${menuHtml}</div></div>`;
+      const menuHtml = candidate.menus?.length ? candidate.menus.map(menu => `<article class="menu-item"><strong>${escapeHtml(menu.name)}</strong>${menu.category ? `<p>${escapeHtml(menu.category)}</p>` : ''}${menu.description ? `<p>${escapeHtml(menu.description)}</p>` : ''}<span class="menu-evidence">${menu.hasPhoto ? `사진 화면 저장 · 정제 대기 · ${escapeHtml(menu.photoEvidenceName || '저장됨')}` : '사진 없음 메뉴 보존'}${menu.detailEvidenceCount ? ` · 상세 ${menu.detailEvidenceCount}장` : ''}</span></article>`).join('') : '<div class="empty-card">보존된 메뉴가 없습니다.</div>';
+      elements.detailBody.innerHTML = `<div class="detail-content"><div class="detail-meta"><b>${escapeHtml(decisionLabel(candidate))}</b><span>${escapeHtml(candidate.store?.address || '주소 확인 필요')}</span><span>수집 메뉴 ${Number(candidate.menuCount || 0)}개 · 사진 화면 증거 ${Number(candidate.photoMenuCount || 0)}개(정제 전)</span>${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">요기요 원본 링크 열기</a>` : '<span>요기요 링크 없음</span>'}<span>승인 전 고객 가게목록에는 반영되지 않습니다.</span></div><div class="menu-list">${menuHtml}</div></div>`;
     } catch (error) {
       elements.detailBody.innerHTML = `<div class="detail-content"><div class="empty-card">${escapeHtml(error.message)}</div></div>`;
     }
@@ -80,16 +80,17 @@
     elements.status.textContent = '수집 자료를 불러오는 중입니다.';
     try {
       let offset = 0;
-      let payload = await api('/api/collector-review/candidates?limit=100&offset=0');
+      let payload = await api('/api/collector-review/candidates?limit=40&offset=0');
+      const summary = payload.summary || {};
       const candidates = Array.isArray(payload.candidates) ? [...payload.candidates] : [];
       while (payload.pagination?.hasMore && candidates.length < 5000) {
         offset += Number(payload.pagination.returned || 0);
         if (!payload.pagination.returned) break;
-        payload = await api(`/api/collector-review/candidates?limit=100&offset=${offset}`);
+        payload = await api(`/api/collector-review/candidates?limit=40&offset=${offset}&summary=0`);
         candidates.push(...(Array.isArray(payload.candidates) ? payload.candidates : []));
       }
       state.candidates = candidates;
-      state.summary = payload.summary || {};
+      state.summary = summary;
       elements.collected.textContent = String(state.summary.collectedRecords ?? state.candidates.length);
       elements.total.textContent = String(state.summary.uniqueStores ?? state.summary.total ?? state.candidates.length);
       elements.duplicates.textContent = String(state.summary.duplicateCollections ?? 0);
