@@ -16,7 +16,11 @@
   const decisionKind = candidate => candidate.matchDecision === 'existing_store_fill_missing_only' ? 'existing' : candidate.matchDecision === 'new_store_candidate' ? 'newStore' : 'review';
   const decisionLabel = candidate => ({existing:'기존가게 보충 후보',newStore:'신규가게 후보',review:'확인 필요'})[decisionKind(candidate)];
   const prettyDate = value => { const date = new Date(value); return Number.isNaN(date.getTime()) ? '' : new Intl.DateTimeFormat('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(date); };
-  const safeYogiyoUrl = value => { try { const url = new URL(value); return url.protocol === 'https:' ? url.href : ''; } catch { return ''; } };
+  const safeYogiyoUrl = value => { try {
+    const url = new URL(value); const host = url.hostname.toLowerCase();
+    const allowed = host === 'yogiyo.onelink.me' || ((host === 'yogiyo.co.kr' || host.endsWith('.yogiyo.co.kr')) && host !== 'rev-static.yogiyo.co.kr');
+    return url.protocol === 'https:' && allowed && !/\.(?:avif|gif|jpe?g|png|svg|webp)$/i.test(url.pathname) ? url.href : '';
+  } catch { return ''; } };
 
   async function api(path) {
     const response = await fetch(`${API_BASE}${path}`, {method:'GET',mode:'cors',credentials:'omit',cache:'no-store',headers:API_HEADERS});
