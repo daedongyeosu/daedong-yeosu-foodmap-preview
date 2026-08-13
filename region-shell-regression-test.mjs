@@ -43,12 +43,12 @@ assert.equal(goheung.storeCountVisibleToCustomers, false, '고객에게 전체 �
 assert.deepEqual(goheung.stores, [], '검증된 고흥 수집본이 없을 때 여수 가게로 채우면 안 됩니다.');
 assert.match(rc7, /DAEDONG_REGION\?\.code[^\n]+!== 'yeosu'/, '여수 전용 주소 지도는 고흥에서 실행되면 안 됩니다.');
 
-assert.match(region, /goheung-liftoff-burst-v3\.webp/, '고흥 근접 발사 장면이 누락되었습니다.');
+assert.doesNotMatch(region, /goheung-liftoff-burst-v3\.webp/, '연기를 함께 끌고 가는 구형 근접 발사 레이어가 다시 사용되면 안 됩니다.');
 assert.match(region, /goheung-rocket-flight-v3\.webp/, '고흥 상승 우주선 레이어가 누락되었습니다.');
 assert.doesNotMatch(region, /goheung-rocket-hero\.mp4|<video/, '고흥 홈은 트래픽이 큰 동영상 배경을 사용하면 안 됩니다.');
 assert.match(regionCss, /goheung-sunset-launchpad-v2\.webp/, '글자 없는 고흥 노을 발사대 배경이 누락되었습니다.');
 assert.match(regionCss, /@keyframes goheung-rocket-launch/, '고흥 우주선 상승 연출이 누락되었습니다.');
-assert.match(regionCss, /@keyframes goheung-liftoff-burst/, '고흥 근접 발사 연출이 누락되었습니다.');
+assert.doesNotMatch(regionCss, /@keyframes goheung-liftoff-burst/, '구형 근접 발사 애니메이션이 다시 실행되면 안 됩니다.');
 assert.match(regionCss, /@keyframes goheung-ground-smoke/, '고흥 발사대 연기 확산 연출이 누락되었습니다.');
 assert.match(regionCss, /html\[data-region="goheung"\] \.rc6-gulls\{z-index:1\}/, '고흥 바다 갈매기 연출을 유지해야 합니다.');
 assert.match(regionCss, /html\[data-region="goheung"\] \.firework\{display:none!important\}/, '고흥 불꽃놀이 요소를 숨겨야 합니다.');
