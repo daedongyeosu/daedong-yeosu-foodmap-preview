@@ -8,6 +8,9 @@ const context = await browser.newContext({
   viewport: {width: 390, height: 844},
   locale: 'ko-KR'
 });
+await context.addInitScript(() => {
+  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
+});
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 await context.route('**/*.woff2', route => route.abort());
 const page = await context.newPage();
