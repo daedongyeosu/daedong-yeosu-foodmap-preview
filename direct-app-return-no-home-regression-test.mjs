@@ -17,7 +17,7 @@ assert.match(html, /\['daedongAppBrowserReturnV1', 'key'\]/);
 assert.match(html, /window\.daedongFinishExternalReturnBoot/);
 assert.doesNotMatch(html, /window\.setTimeout\(window\.daedongFinishExternalReturnBoot, 2500\)/);
 assert.match(html, /localStorage\.getItem\(key\)/);
-assert.match(html, /saved\.returnToken && saved\.returnToken === history\.state/);
+assert.match(html, /saved\.returnToken && \([\s\S]*?saved\.returnToken === history\.state[\s\S]*?saved\.returnToken === marker\?\.returnToken/);
 
 const bootScript = html.match(/<script>\s*([\s\S]*?daedongFinishExternalReturnBoot[\s\S]*?)<\/script>/)?.[1] || '';
 assert.ok(bootScript, '복귀 첫 화면 스크립트를 찾아야 합니다.');
