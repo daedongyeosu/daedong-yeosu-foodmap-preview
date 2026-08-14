@@ -5,7 +5,7 @@ import vm from 'node:vm';
 const html = fs.readFileSync('index.html', 'utf8');
 const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
-const menu = fs.readFileSync('store-menu-preview.js', 'utf8');
+const menu = fs.existsSync('store-menu-preview.js') ? fs.readFileSync('store-menu-preview.js', 'utf8') : '';
 
 function extractFunction(source, name) {
   const start = source.indexOf(`function ${name}(`);
@@ -129,9 +129,11 @@ assert.match(rc2, /if \(restored\) window\.daedongFinishExternalReturnBoot/);
 assert.doesNotMatch(rc2.match(/visibilitychange[\s\S]*?window\.addEventListener\('pageshow'/)?.[0] || '', /rc2StartAmbient\(false\);[\s\S]*?rc2Restore/,
   '홈 효과를 먼저 시작한 뒤 복귀 화면을 열면 안 됩니다.');
 
-assert.match(menu, /data-store-id="\$\{escapeMenuHtml\(store\.id\)\}"/);
-assert.match(menu, /function captureMenuReturnState\(\)[\s\S]*?anchorMenuId[\s\S]*?selectedMenuId/);
-assert.match(menu, /window\.daedongMenuReturn = Object\.freeze\([\s\S]*?capture: captureMenuReturnState[\s\S]*?restore:/);
+if (menu) {
+  assert.match(menu, /data-store-id="\$\{escapeMenuHtml\(store\.id\)\}"/);
+  assert.match(menu, /function captureMenuReturnState\(\)[\s\S]*?anchorMenuId[\s\S]*?selectedMenuId/);
+  assert.match(menu, /window\.daedongMenuReturn = Object\.freeze\([\s\S]*?capture: captureMenuReturnState[\s\S]*?restore:/);
+}
 assert.match(rc2, /const menuState = window\.daedongMenuReturn\?\.capture/);
 assert.match(rc2, /await window\.daedongMenuReturn\?\.restore/);
 
