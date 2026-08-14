@@ -5,6 +5,10 @@
   const DEFAULT_AREA = window.DAEDONG_REGION?.defaultArea || '여수시 전체';
   const CLOSING_SOON_MINUTES = 60;
   const MENU_MATCH_PREVIEW_LIMIT = 2;
+  const RECENT_SEARCH_LIMIT = 10;
+  const RECENT_SEARCH_KEY = typeof window.DAEDONG_REGION?.storageKey === 'function'
+    ? window.DAEDONG_REGION.storageKey('daedongRecentSearchStoresV1')
+    : 'daedongRecentSearchStoresV1';
   const STATUS_SORT_PRIORITY = Object.freeze({
     open: 0,
     'closing-soon': 1,
@@ -340,6 +344,64 @@
   function storeById(id) {
     if (typeof fxStoreById === 'function') return fxStoreById(id);
     return sourceStores().find(store => storeIdOf(store) === String(id)) || null;
+  }
+
+  function readRecentSearchStores() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(RECENT_SEARCH_KEY) || '[]');
+      return Array.isArray(saved) ? saved.filter(item => item?.storeId).slice(0, RECENT_SEARCH_LIMIT) : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function writeRecentSearchStores(items) {
+    try { localStorage.setItem(RECENT_SEARCH_KEY, JSON.stringify(items.slice(0, RECENT_SEARCH_LIMIT))); } catch {}
+  }
+
+  function rememberRecentSearchStore(storeId, query = overviewQuery) {
+    const store = storeById(storeId);
+    const id = storeIdOf(store) || String(storeId || '');
+    if (!id || !store) return;
+    const item = {
+      storeId: id,
+      storeName: String(store.name || '가게'),
+      query: String(query || store.name || '').trim(),
+      searchedAt: Date.now()
+    };
+    writeRecentSearchStores([item, ...readRecentSearchStores().filter(saved => String(saved.storeId) !== id)]);
+  }
+
+  function recentSearchMarkup() {
+    const items = readRecentSearchStores()
+      .map(item => ({...item, store: storeById(item.storeId)}))
+      .filter(item => item.store);
+    return `
+      <section class="store-service-recent-search" data-store-service-recent-searches ${overviewQuery || !items.length ? 'hidden' : ''}>
+        <div class="store-service-recent-head">
+          <b>최근 검색한 가게</b>
+          <button type="button" data-store-service-recent-clear>전체 삭제</button>
+        </div>
+        <div class="store-service-recent-list">
+          ${items.map(item => `
+            <button type="button" data-store-service-recent-store-id="${escapeHtml(item.storeId)}">
+              <strong>${escapeHtml(item.store.name || item.storeName)}</strong>
+              <small>${escapeHtml(item.query ? `‘${item.query}’ 검색` : '최근 검색')}</small>
+            </button>
+          `).join('')}
+        </div>
+      </section>
+    `;
+  }
+
+  function captureSearchState() {
+    return {
+      query: String(overviewQuery || ''),
+      status: activeStatus,
+      benefit: activeBenefit,
+      locationMode,
+      selectedArea
+    };
   }
 
   function storeAreas(store) {
@@ -1135,6 +1197,8 @@ function overviewSearchText(entry) {
           <button type="button" data-store-service-query-clear aria-label="검색어 지우기" ${overviewQuery ? '' : 'hidden'}>×</button>
         </form>
 
+        ${recentSearchMarkup()}
+
         <div class="store-service-overview-result" aria-live="polite">
           <b>${escapeHtml(overviewResultLabel(entries))}</b>
           <span>${escapeHtml(locationDescription())}</span>
@@ -1208,12 +1272,14 @@ function overviewSearchText(entry) {
     const result = overlay.querySelector('.store-service-overview-result');
     const list = overlay.querySelector('.store-service-overview-list');
     const clear = overlay.querySelector('[data-store-service-query-clear]');
+    const recent = overlay.querySelector('[data-store-service-recent-searches]');
     if (result) {
       result.querySelector('b').textContent = overviewResultLabel(entries);
       result.querySelector('span').textContent = locationDescription();
     }
     if (list) list.innerHTML = overviewListMarkup(entries);
     if (clear) clear.hidden = !String(overviewQuery || '').trim();
+    if (recent) recent.hidden = Boolean(String(overviewQuery || '').trim());
     if (scrollToResults) {
       overlay.querySelector('[data-store-service-query]')?.blur();
       window.requestAnimationFrame(() => {
@@ -1425,7 +1491,8 @@ function overviewSearchText(entry) {
     status: (storeId, date) => storeStatus(serviceData.stores?.[String(storeId)], date),
     statusPriority: statusPriorityForStore,
     sortByStatus: sortStoresByStatusPriority,
-    showOverview
+    showOverview,
+    captureSearchState
   });
 
   document.addEventListener('compositionstart', event => {
@@ -1496,6 +1563,24 @@ document.addEventListener('input', event => {
       input?.focus();
       return;
     }
+    if (event.target.closest('[data-store-service-recent-clear]')) {
+      writeRecentSearchStores([]);
+      renderOverview({focusQuery: true});
+      return;
+    }
+    const recentStore = event.target.closest('[data-store-service-recent-store-id]');
+    if (recentStore) {
+      pendingStoreId = recentStore.dataset.storeServiceRecentStoreId || '';
+      const recentRecord = readRecentSearchStores().find(item => String(item.storeId) === pendingStoreId);
+      rememberRecentSearchStore(pendingStoreId, recentRecord?.query);
+      if (history.state?.[HISTORY_KEY]) history.back();
+      else {
+        hideOverview({restoreFocus: false});
+        openStoreAfterOverview(pendingStoreId);
+        pendingStoreId = '';
+      }
+      return;
+    }
     const statusFilter = event.target.closest('[data-store-service-status]');
     if (statusFilter) {
       activeStatus = statusFilter.dataset.storeServiceStatus || 'all';
@@ -1517,6 +1602,7 @@ document.addEventListener('input', event => {
     }
     const menuCard = event.target.closest('[data-store-service-menu-open]');
     if (menuCard) {
+      if (String(overviewQuery || '').trim()) rememberRecentSearchStore(menuCard.dataset.storeServiceMenuStoreId, overviewQuery);
       pendingMenuOpen = {
         storeId: menuCard.dataset.storeServiceMenuStoreId || '',
         menuId: menuCard.dataset.storeServiceMenuId || '',
@@ -1533,6 +1619,7 @@ document.addEventListener('input', event => {
     }
     const storeCard = event.target.closest('[data-store-service-store-id]');
     if (storeCard) {
+      if (String(overviewQuery || '').trim()) rememberRecentSearchStore(storeCard.dataset.storeServiceStoreId, overviewQuery);
       pendingStoreId = storeCard.dataset.storeServiceStoreId || '';
       if (history.state?.[HISTORY_KEY]) history.back();
       else {
