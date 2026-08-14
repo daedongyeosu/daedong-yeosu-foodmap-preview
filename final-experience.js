@@ -88,7 +88,7 @@ function fxRememberAppBrowserReturn(key,anchorStoreId=''){
  const anchorElement=anchorStoreId?anchorCandidates.find(element=>String(element.dataset.appStoreOrder||'')===String(anchorStoreId)):null;
  const anchor=window.daedongCaptureReturnAnchor?.(card,anchorElement)||null;
  const html=content?.innerHTML||'';
- const payload={key,category:modal?.dataset.appBrowserCategory||'추천',anchorStoreId:String(anchorStoreId||''),anchor,modalScroll:card?.scrollTop||0,pageScroll:Number(document.body.dataset.lockScrollY||window.scrollY||0),modalSnapshot:html&&html.length<=500000?{html}:null};
+ const payload={key,category:modal?.dataset.appBrowserCategory||'추천',anchorStoreId:String(anchorStoreId||''),anchor,modalScroll:card?.scrollTop||0,pageScroll:Number(document.body.dataset.lockScrollY||window.scrollY||0),searchState:window.daedongStoreServiceInfo?.captureSearchState?.()||null,modalSnapshot:html&&html.length<=500000?{html}:null};
  if(window.daedongWriteExternalReturnState)window.daedongWriteExternalReturnState(FX_APP_BROWSER_RETURN,payload);
  else sessionStorage.setItem(FX_APP_BROWSER_RETURN,JSON.stringify({...payload,savedAt:Date.now()}));
 }
@@ -102,6 +102,7 @@ function fxRestoreAppBrowserReturn(){
  if(!modal?.hidden)hardClose({fromPop:true});
  window.scrollTo(0,Number(saved.pageScroll||0));
  openAppBrowser(saved.key,saved.category||'추천');
+ if(modal?.hidden||modal.dataset.appBrowserKey!==saved.key)return false;
  window.daedongStabilizeReturnPosition?.(saved);
  window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);return true;
 }
@@ -479,7 +480,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1-sequential-app-return-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  const fxRc3Script=document.createElement('script');
