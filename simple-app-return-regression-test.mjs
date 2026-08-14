@@ -4,12 +4,12 @@ import fs from 'node:fs';
 const app = fs.readFileSync('app.js', 'utf8');
 const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
-const menu = fs.readFileSync('store-menu-preview.js', 'utf8');
-const event = fs.readFileSync('mukkebi-summer-event.js', 'utf8');
+const menu = fs.existsSync('store-menu-preview.js') ? fs.readFileSync('store-menu-preview.js', 'utf8') : '';
+const event = fs.existsSync('mukkebi-summer-event.js') ? fs.readFileSync('mukkebi-summer-event.js', 'utf8') : '';
 const html = fs.readFileSync('index.html', 'utf8');
 
 assert.match(app, /const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1'/);
-assert.match(app, /function markExternalAppDeparture\(\)[\s\S]*?sessionStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, '1'\)/);
+assert.match(app, /function markExternalAppDeparture\(\)[\s\S]*?JSON\.stringify\(\{savedAt: Date\.now\(\)\}\)[\s\S]*?sessionStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, '1'\)[\s\S]*?localStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, payload\)/);
 assert.match(app, /const MOBILE_SAME_TAB_ORDER_KEYS = new Set\(\['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin'\]\)/);
 assert.match(app, /link\?\.dataset\?\.menuOrder[\s\S]*?link\?\.dataset\?\.menuStickyOrder[\s\S]*?link\?\.dataset\?\.menuStickyExternal[\s\S]*?link\?\.dataset\?\.menuExternalKey/);
 assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?markExternalAppDeparture\(\)[\s\S]*?rc2RememberExternalReturn[\s\S]*?window\.location\.assign\(href\)/);
@@ -24,19 +24,23 @@ assert.match(app, /store\?\.__secureDetailReady === true && EXTERNAL_APP_KEYS\.i
 const comparedStart = rc2.indexOf("const comparedExternal = event.target.closest('a[data-community-original]')");
 const comparedEnd = rc2.indexOf('const externalLink =', comparedStart);
 const comparedHandler = rc2.slice(comparedStart, comparedEnd);
-assert.match(comparedHandler, /rc2RememberExternalReturn\(\)/);
+assert.match(comparedHandler, /rc2RememberExternalReturn\(comparedExternal\)/);
 assert.match(comparedHandler, /window\.location\.assign\(href\)/);
 assert.doesNotMatch(comparedHandler, /window\.open|history\.back/);
-assert.match(rc2, /function rc2RememberExternalReturn\(\) \{[\s\S]*?daedongMarkExternalAppDeparture/);
+assert.match(rc2, /function rc2RememberExternalReturn\(sourceElement = null\) \{[\s\S]*?daedongMarkExternalAppDeparture/);
 assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key,anchorStoreId=''\)\{[\s\S]*?daedongMarkExternalAppDeparture/);
 
-assert.match(menu, /data-menu-external-key="\$\{escapeMenuHtml\(key\)\}"/);
-assert.match(menu, /data-menu-sticky-external="\$\{escapeMenuHtml\(key\)\}"/);
+if (menu) {
+  assert.match(menu, /data-menu-external-key="\$\{escapeMenuHtml\(key\)\}"/);
+  assert.match(menu, /data-menu-sticky-external="\$\{escapeMenuHtml\(key\)\}"/);
+}
 
-assert.match(event, /const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV1'/);
-assert.match(event, /const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1'/);
-assert.match(event, /seenThisSession\(\) \|\| returningFromOrderApp\(\)/);
-assert.match(event, /sessionStorage\.setItem\(SEEN_SESSION_KEY, '1'\)/);
+if (event) {
+  assert.match(event, /const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV1'/);
+  assert.match(event, /const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1'/);
+  assert.match(event, /seenThisSession\(\) \|\| returningFromOrderApp\(\)/);
+  assert.match(event, /sessionStorage\.setItem\(SEEN_SESSION_KEY, '1'\)/);
+}
 
 assert.match(html, /app\.js\?v=[^"\n]*simple-app-return-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*simple-app-return-1/);

@@ -81,7 +81,9 @@ const GLOBAL_EXTERNAL_APPS = {
 const EXTERNAL_APP_NOTICE_TEXT = '앱 이름은 주문 경로 안내를 위해 표시되며, 대동여수음식지도와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
 
 function markExternalAppDeparture() {
+  const payload = JSON.stringify({savedAt: Date.now()});
   try { sessionStorage.setItem(EXTERNAL_APP_DEPARTURE_KEY, '1'); } catch {}
+  try { localStorage.setItem(EXTERNAL_APP_DEPARTURE_KEY, payload); } catch {}
 }
 if (typeof window !== 'undefined') window.daedongMarkExternalAppDeparture = markExternalAppDeparture;
 
