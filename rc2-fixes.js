@@ -23,6 +23,8 @@ let rc2ReplaceNextModal = false;
 let rc2AmbientTimers = [];
 let rc2PeriodicTimer = 0;
 let rc2DeferredStoreReturnPosition = null;
+let rc2StoreRestorePromise = null;
+let rc2SurfaceRestorePromise = null;
 
 function rc2FreshReturnState(saved) {
   const age = Date.now() - Number(saved?.savedAt || 0);
@@ -33,12 +35,23 @@ function rc2ParseReturnState(storage, key) {
   try { return JSON.parse(storage.getItem(key) || 'null'); } catch { return null; }
 }
 
+function rc2ReadDepartureMarker() {
+  const sessionMarker = rc2ParseReturnState(sessionStorage, EXTERNAL_APP_DEPARTURE_KEY);
+  if (rc2FreshReturnState(sessionMarker)) return sessionMarker;
+  const persistentMarker = rc2ParseReturnState(localStorage, EXTERNAL_APP_DEPARTURE_KEY);
+  return rc2FreshReturnState(persistentMarker) ? persistentMarker : null;
+}
+
 function rc2ReadReturnState(key) {
   const sessionSaved = rc2ParseReturnState(sessionStorage, key);
   if (rc2FreshReturnState(sessionSaved)) return sessionSaved;
   const persistentSaved = rc2ParseReturnState(localStorage, key);
   if (!rc2FreshReturnState(persistentSaved)) return null;
-  return persistentSaved.returnToken && persistentSaved.returnToken === history.state?.[RC2_RETURN_TOKEN_STATE]
+  const marker = rc2ReadDepartureMarker();
+  return persistentSaved.returnToken && (
+    persistentSaved.returnToken === history.state?.[RC2_RETURN_TOKEN_STATE]
+    || persistentSaved.returnToken === marker?.returnToken
+  )
     ? persistentSaved
     : null;
 }
@@ -65,6 +78,9 @@ function rc2WriteReturnState(key, value) {
   try { history.replaceState({...history.state, [RC2_RETURN_TOKEN_STATE]: returnToken}, ''); } catch {}
   rc2StoreReturnState(sessionStorage, key, payload);
   rc2StoreReturnState(localStorage, key, payload);
+  const departureMarker = {returnToken, savedAt: payload.savedAt};
+  rc2StoreReturnState(sessionStorage, EXTERNAL_APP_DEPARTURE_KEY, departureMarker);
+  rc2StoreReturnState(localStorage, EXTERNAL_APP_DEPARTURE_KEY, departureMarker);
   return payload;
 }
 
@@ -72,6 +88,11 @@ function rc2ClearReturnState(key, saved = null) {
   try { sessionStorage.removeItem(key); } catch {}
   try { localStorage.removeItem(key); } catch {}
   const token = saved?.returnToken;
+  const marker = rc2ReadDepartureMarker();
+  if (token && marker?.returnToken === token) {
+    try { sessionStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
+    try { localStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
+  }
   if (!token || history.state?.[RC2_RETURN_TOKEN_STATE] !== token) return;
   try {
     const next = {...history.state};
@@ -837,7 +858,19 @@ function rc2StartAmbient(firstEntry = false) {
   rc2SchedulePeriodicFirework();
 }
 
-function rc2RememberExternalReturn() {
+function rc2ExternalAppKey(element) {
+  if (!element) return '';
+  return String(
+    element.dataset?.routeKey
+    || element.dataset?.finalAppChannel
+    || element.dataset?.appKey
+    || element.dataset?.menuExternalKey
+    || element.dataset?.menuStickyExternal
+    || ''
+  );
+}
+
+function rc2RememberExternalReturn(sourceElement = null) {
   window.daedongMarkExternalAppDeparture?.();
   const modal = $('#modal');
   const menuState = window.daedongMenuReturn?.capture?.() || null;
@@ -856,6 +889,8 @@ function rc2RememberExternalReturn() {
     pageScroll: Number(storeSnapshot?.pageScroll ?? document.body.dataset.lockScrollY ?? 0),
     modalScroll: Number(storeSnapshot?.scrollTop || 0),
     anchor: storeSnapshot?.anchor || null,
+    searchState: window.daedongStoreServiceInfo?.captureSearchState?.() || null,
+    selectedAppKey: rc2ExternalAppKey(sourceElement),
     menuState,
     storeSnapshot: storeSnapshot && storeSnapshot.html.length <= 500000 ? {
       html: storeSnapshot.html,
@@ -868,11 +903,33 @@ function rc2RememberExternalReturn() {
 }
 
 async function rc2RestoreAfterExternalPage() {
-  const saved = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
-  if (!saved) return false;
-  const modal = $('#modal');
-  const visibleStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
-  if (!modal?.hidden && modal.querySelector('.store-detail') && String(visibleStoreId || '') === String(saved.storeId)) {
+  if (rc2StoreRestorePromise) return rc2StoreRestorePromise;
+  const restoreTask = (async () => {
+    const saved = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
+    if (!saved) return false;
+    const modal = $('#modal');
+    const visibleStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
+    if (!modal?.hidden && modal.querySelector('.store-detail') && String(visibleStoreId || '') === String(saved.storeId)) {
+      rc2DeferredStoreReturnPosition = saved;
+      rc2StabilizeReturnPosition(saved);
+      if (saved.menuState) {
+        const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
+        if (!restoredMenu) return false;
+      }
+      rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
+      return true;
+    }
+    const store = fxStoreById(saved.storeId);
+    if (!store) return false;
+    if (!modal?.hidden) {
+      rc2ModalStack.length = 0;
+      rc2NativeHardClose({fromPop: true});
+    }
+    scrollWindowInstant(Number(saved.pageScroll || 0));
+    const opened = await openStore(store);
+    if (opened === false) return false;
+    const restoredStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
+    if (modal?.hidden || String(restoredStoreId || '') !== String(saved.storeId)) return false;
     rc2DeferredStoreReturnPosition = saved;
     rc2StabilizeReturnPosition(saved);
     if (saved.menuState) {
@@ -881,29 +938,27 @@ async function rc2RestoreAfterExternalPage() {
     }
     rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
     return true;
+  })();
+  rc2StoreRestorePromise = restoreTask;
+  try {
+    return await restoreTask;
+  } finally {
+    if (rc2StoreRestorePromise === restoreTask) rc2StoreRestorePromise = null;
   }
-  const store = fxStoreById(saved.storeId);
-  if (!store) return false;
-  if (!modal?.hidden) {
-    rc2ModalStack.length = 0;
-    rc2NativeHardClose({fromPop: true});
-  }
-  scrollWindowInstant(Number(saved.pageScroll || 0));
-  const opened = await openStore(store);
-  if (opened === false) return false;
-  rc2DeferredStoreReturnPosition = saved;
-  rc2StabilizeReturnPosition(saved);
-  if (saved.menuState) {
-    const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
-    if (!restoredMenu) return false;
-  }
-  rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
-  return true;
 }
 
 async function rc2RestoreExternalSurface() {
-  if (await rc2RestoreAfterExternalPage()) return true;
-  return Boolean(fxRestoreAppBrowserReturn?.());
+  if (rc2SurfaceRestorePromise) return rc2SurfaceRestorePromise;
+  const restoreTask = (async () => {
+    if (await rc2RestoreAfterExternalPage()) return true;
+    return Boolean(fxRestoreAppBrowserReturn?.());
+  })();
+  rc2SurfaceRestorePromise = restoreTask;
+  try {
+    return await restoreTask;
+  } finally {
+    if (rc2SurfaceRestorePromise === restoreTask) rc2SurfaceRestorePromise = null;
+  }
 }
 
 fxOrderClick = function rc2OrderClick(button) {
@@ -991,13 +1046,13 @@ fxInstallEvents = function rc2InstallEvents() {
     if (comparedExternal && rc2ModalStack.at(-1)?.html.includes('class="store-detail"')) {
       event.preventDefault();
       event.stopImmediatePropagation();
-      rc2RememberExternalReturn();
+      rc2RememberExternalReturn(comparedExternal);
       const href = safeHref(comparedExternal.getAttribute('href'));
       if (href !== '#') window.location.assign(href);
       return;
     }
     const externalLink = event.target.closest('a[target="_blank"],a[data-final-app-channel],a[data-detail-only]');
-    if (externalLink) rc2RememberExternalReturn();
+    if (externalLink) rc2RememberExternalReturn(externalLink);
     const finalLocal = event.target.closest('.detail-route[data-route-key="direct"],.detail-route[data-route-key="mukkebi"],.detail-route[data-route-key="ddangyo"],.detail-route[data-route-key="ondongne"],.community-choice-link');
     if (finalLocal) fxBattle();
   }, true);
