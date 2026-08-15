@@ -1609,7 +1609,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryButton = event.target.closest('[data-modal-cat]');
     if (categoryButton) { state.category = categoryButton.dataset.modalCat; state.brandId = ''; state.query = ''; $('#mainSearch').value = ''; closeModal(); setTimeout(() => renderStores({scroll: true, resetCount: true}), 60); return; }
     const toggle = event.target.closest('.store-other-toggle');
-    if (toggle) { event.preventDefault(); event.stopPropagation(); const menu = toggle.closest('.store-other-wrap').querySelector('.store-other-popover'); $$('.store-other-popover').forEach(item => { if (item !== menu) item.hidden = true; }); menu.hidden = !menu.hidden; return; }
+    if (toggle) { event.preventDefault(); event.stopPropagation(); const menu = toggle.closest('.store-other-wrap')?.querySelector('.store-other-popover'); if (!menu) return; $$('.store-other-popover').forEach(item => { if (item !== menu) item.hidden = true; }); menu.hidden = !menu.hidden; return; }
     const otherClose = event.target.closest('.store-other-close');
     if (otherClose) { event.preventDefault(); event.stopPropagation(); const menu = otherClose.closest('.store-other-popover'); if (menu) menu.hidden = true; return; }
     const externalButton = event.target.closest('[data-external-route-key]');

@@ -395,6 +395,17 @@ function rc3OpenOrderMethods(store) {
   $('#modal').dataset.activeStoreId = store.id;
 }
 
+function rc3BindOrderMethodsTrigger(detail) {
+  const trigger = detail?.querySelector('[data-rc3-other-methods]');
+  if (!trigger || trigger.dataset.rc3DirectBound === '1') return;
+  trigger.dataset.rc3DirectBound = '1';
+  trigger.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    rc3OpenOrderMethods(fxStoreById(trigger.dataset.rc3OtherMethods));
+  });
+}
+
 function rc3EnhanceStoreDetail(store) {
   const detail = $('#modalContent .store-detail');
   if (!detail) return;
@@ -415,11 +426,12 @@ function rc3EnhanceStoreDetail(store) {
       : '';
   const apps = channels.primaryOrder.brandApp || channels.happyOrder ? `<div class="brand-store-actions">${channels.primaryOrder.brandApp ? fxAppAction(channels.primaryOrder.brandApp, 'brand') : ''}${channels.happyOrder ? fxAppAction(channels.happyOrder, 'happy') : ''}</div>` : '';
   const hasExternal = Object.values(channels.externalOrder).some(Boolean);
-  const other = hasExternal ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"><span>다른 주문방법 보기</span><b>›</b></button></div>` : '';
+  const other = hasExternal ? `<div class="store-other-wrap"><button class="detail-route rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"><span>다른 주문방법 보기</span><b>›</b></button></div>` : '';
   if (utilities) gallery?.insertAdjacentHTML('afterend', `<div class="detail-quick-links">${utilities}</div>`);
   const menuEntry = detail.querySelector('[data-store-menu-preview]');
   const orderAnchor = menuEntry || detail.querySelector('.detail-meta-row') || gallery;
   orderAnchor?.insertAdjacentHTML('afterend', `<div class="detail-routes local-detail-routes">${direct}${apps}${community}${phone || (!direct && !apps && !community ? '<p class="muted">등록된 주문방법을 확인 중입니다.</p>' : '')}</div>${other}`);
+  rc3BindOrderMethodsTrigger(detail);
 }
 
 const rc3OpenStoreBase = openStore;
