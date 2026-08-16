@@ -454,7 +454,7 @@ fxRc2Style.href='rc2-fixes.css?v=phone-route-restoration-1';
 document.head.append(fxRc2Style);
 const fxRc3Style=document.createElement('link');
 fxRc3Style.rel='stylesheet';
-fxRc3Style.href='rc3-fixes.css?v=selected-category-label-1-popup-utility-links-1-selected-store-top-1';
+fxRc3Style.href='rc3-fixes.css?v=selected-category-label-1-popup-utility-links-1-selected-store-top-1-order-methods-mobile-touch-2';
 document.head.append(fxRc3Style);
 const fxRc4Style=document.createElement('link');
 fxRc4Style.rel='stylesheet';
@@ -485,7 +485,7 @@ fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  fxInstallEvents();
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1-release-readiness-1-managed-region-priority-3-goheung-isolation-2-other-order-method-touch-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1-release-readiness-1-managed-region-priority-3-goheung-isolation-2-other-order-method-touch-1-order-methods-mobile-touch-2';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
