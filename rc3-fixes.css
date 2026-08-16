@@ -48,7 +48,31 @@
 .rc3-rail-order-button { position: relative; z-index: 2; }
 
 .store-other-popover { display: none !important; }
-.rc3-order-methods-trigger { margin-bottom: 9px; }
+.rc3-order-methods-trigger {
+  position: relative;
+  z-index: 4;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 9px;
+  pointer-events: auto !important;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 90, 31, .12);
+}
+.rc3-order-methods-trigger > span:first-child {
+  min-width: 0;
+  font-weight: 850;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.rc3-order-methods-trigger > b {
+  justify-self: end;
+}
+.rc3-order-methods-trigger > * {
+  pointer-events: none !important;
+}
 .order-methods-sheet .selected-store-name,
 .community-guide .selected-store-name {
   display: block;
