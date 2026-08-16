@@ -404,6 +404,8 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
   return true;
 }
 
+let rc3OrderMethodsGhostClickUntil = 0;
+
 function rc3BindOrderMethodsTrigger(detail) {
   const trigger = detail?.querySelector('[data-rc3-other-methods]');
   if (!trigger || trigger.dataset.rc3DirectBound === '1') return;
@@ -425,6 +427,7 @@ function rc3BindOrderMethodsTrigger(detail) {
       return;
     }
     clearTouchPointer();
+    rc3OrderMethodsGhostClickUntil = Date.now() + 800;
     trigger.dataset.rc3LastTouchActivation = String(Date.now());
     rc3ActivateOrderMethodsTrigger(trigger, event);
   }, {passive: false});
@@ -593,6 +596,11 @@ function rc3OnPointerEnd(event) {
 }
 
 function rc3HandleClick(event) {
+  if (Date.now() < rc3OrderMethodsGhostClickUntil) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    return;
+  }
   const allMain = event.target.closest('[data-cat="전체"]');
   if (allMain) {
     event.preventDefault();

@@ -3,6 +3,33 @@ import {chromium} from 'playwright';
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 const report = {success: false, viewport: {width: 390, height: 844}, checks: [], errors: [], stores: []};
+const stores = [
+  {
+    store_id: 'a100000000000001',
+    name: '본스치킨 미평점',
+    district: '미평동',
+    category: '치킨',
+    categories: ['치킨'],
+    channelKeys: ['yogiyo', 'baemin'],
+    routes: [
+      {name: '요기요', url: 'https://orders.example.test/yogiyo/vons', enabled: true},
+      {name: '배달의민족', url: 'https://orders.example.test/baemin/vons', enabled: true}
+    ]
+  },
+  {
+    store_id: 'a100000000000002',
+    name: '손수김밥 양지점',
+    district: '미평동',
+    category: '한식',
+    categories: ['한식'],
+    channelKeys: ['yogiyo', 'baemin'],
+    routes: [
+      {name: '요기요', url: 'https://orders.example.test/yogiyo/handsu', enabled: true},
+      {name: '배달의민족', url: 'https://orders.example.test/baemin/handsu', enabled: true}
+    ]
+  }
+];
+const detailsById = new Map(stores.map(store => [store.store_id, store]));
 const browser = await chromium.launch({headless: true});
 const context = await browser.newContext({
   viewport: report.viewport,
@@ -16,6 +43,25 @@ await context.addInitScript(() => {
 });
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 await context.route('**/*.woff2', route => route.abort());
+await context.route('**/api/catalog', route => route.fulfill({
+  status: 200,
+  contentType: 'application/json',
+  body: JSON.stringify(stores)
+}));
+await context.route('**/api/services', route => route.fulfill({
+  status: 200,
+  contentType: 'application/json',
+  body: JSON.stringify({programs: [], stores: {}})
+}));
+await context.route('**/api/store/*', route => {
+  const id = new URL(route.request().url()).pathname.split('/').filter(Boolean).at(-1);
+  const detail = detailsById.get(id);
+  return route.fulfill({
+    status: detail ? 200 : 404,
+    contentType: 'application/json',
+    body: JSON.stringify(detail || {error: 'not found'})
+  });
+});
 const page = await context.newPage();
 page.on('pageerror', error => report.errors.push(error.message));
 
@@ -27,7 +73,8 @@ const check = async (condition, message) => {
 
 async function checkStore(storeName, screenshotName) {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
-  await page.waitForSelector('#storeGrid .store-card', {timeout: 25000});
+  await page.evaluate(() => window.daedongCatalogReady);
+  await page.waitForFunction(() => typeof window.openStore === 'function', null, {timeout: 25000});
   await page.locator('#mainSearch').fill(storeName);
   const card = page.locator('#storeGrid .store-card').filter({hasText: storeName}).first();
   await card.waitFor({state: 'visible', timeout: 10000});
@@ -75,6 +122,11 @@ try {
   report.success = true;
 } catch (error) {
   report.failure = error.stack || String(error);
+  report.debug = await page.evaluate(() => ({
+    modalHidden: document.querySelector('#modal')?.hidden,
+    modalText: document.querySelector('#modal')?.innerText?.slice(0, 1000) || '',
+    modalHtml: document.querySelector('#modal')?.innerHTML?.slice(0, 2000) || ''
+  })).catch(() => null);
   await page.screenshot({path: 'browser-other-order-method-touch-failure.png', fullPage: false}).catch(() => {});
 } finally {
   fs.writeFileSync('browser-other-order-method-touch-report.json', `${JSON.stringify(report, null, 2)}\n`);

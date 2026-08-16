@@ -17,6 +17,8 @@ assert(!rc3Trigger[1].split(/\s+/).includes('store-other-toggle'), '새 버튼�
 assert.match(rc3, /function rc3BindOrderMethodsTrigger\(detail\)/, '버튼 자체의 직접 동작 보조 경로가 없습니다.');
 assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\)/, '버튼 활성화 경로가 한곳으로 통합되지 않았습니다.');
 assert.match(rc3, /trigger\.addEventListener\('pointerup',[\s\S]*?rc3ActivateOrderMethodsTrigger\(trigger, event\)/, '휴대폰 터치 종료 시 주문방법을 여는 보조 경로가 없습니다.');
+assert.match(rc3, /rc3OrderMethodsGhostClickUntil = Date\.now\(\) \+ 800/, '터치 직후 새 모달의 주문앱으로 새는 ghost click 차단 시간이 없습니다.');
+assert.match(rc3, /Date\.now\(\) < rc3OrderMethodsGhostClickUntil[\s\S]*?stopImmediatePropagation/, 'ghost click이 document capture 단계에서 차단되지 않습니다.');
 assert.match(rc3, /Math\.hypot\([\s\S]*?\) > 10\) touchPointer\.moved = true;/, '스크롤 중 잘못 열리는 것을 막는 터치 이동 판정이 없습니다.');
 assert.match(rc3, /trigger\.addEventListener\('click',[\s\S]*?rc3ActivateOrderMethodsTrigger\(trigger, event\)/, '클릭·키보드 보조 경로가 해당 가게 주문방법을 열지 않습니다.');
 assert.match(rc3, /orderAnchor\?\.insertAdjacentHTML[\s\S]*?rc3BindOrderMethodsTrigger\(detail\);/, '가게 상세를 그린 뒤 직접 동작 보조 경로가 연결되지 않습니다.');
