@@ -77,6 +77,20 @@
       } catch { window.daedongFinishExternalReturnBoot(); }
     })();
   </script>
+  <script>
+    window.sentryOnLoad = function () {
+      Sentry.init({
+        environment: 'preview',
+        tracesSampleRate: 0.1,
+        replaysSessionSampleRate: 0,
+        replaysOnErrorSampleRate: 0
+      });
+    };
+  </script>
+  <script
+    src="https://js.sentry-cdn.com/9b3322133b3df1341f937d5efe673e65.min.js"
+    crossorigin="anonymous"
+  ></script>
   <link rel="preload" as="image" href="images/01.png">
   <link rel="preload" as="image" href="assets/ui/category-icons-color.svg?v=category-first-paint-1">
   <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
