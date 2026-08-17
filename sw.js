@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v6-official-app-icon';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v7-bold-app-icon';
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
