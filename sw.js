@@ -1,11 +1,15 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v5-mobile-api-deadline';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v6-official-app-icon';
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
   '/app-icon.svg',
-  '/assets/logo.png'
+  '/assets/logo.png',
+  '/assets/app-icons/daedong-app-icon-192.png',
+  '/assets/app-icons/daedong-app-icon-512.png',
+  '/assets/app-icons/daedong-app-icon-maskable-192.png',
+  '/assets/app-icons/daedong-app-icon-maskable-512.png'
 ];
 const APP_SHELL_PATHS = new Set(APP_SHELL.map(value => new URL(value, self.location.origin).pathname));
 
