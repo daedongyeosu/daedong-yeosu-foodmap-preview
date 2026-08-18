@@ -29,7 +29,7 @@ assert.match(html, /cloudflare-preview-api-4-curated-menu-photos-1/);
 assert.match(html, /catalog-ready-watchdog-2/);
 assert.match(html, /location-ranking-watchdog-2/);
 assert.match(html, /store-service-25-menu-search-status-order-1/);
-assert.match(serviceWorker, /daedong-yeosu-app-shell-v7-bold-app-icon/);
+assert.match(serviceWorker, /daedong-yeosu-app-shell-v8-instant-detail/);
 
 const never = new Promise(() => {});
 const servicePayload = {programs: [], stores: {['a'.repeat(16)]: {hours: {}}}};
