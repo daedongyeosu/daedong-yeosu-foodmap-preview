@@ -895,19 +895,19 @@ class PhotoResolver {
     const photo = this.resolve(store);
     if (!photo) return placeholderMarkup(kind);
     const cls = kind === 'detail' ? 'detail-photo' : 'store-photo';
-    return `<img class="${cls}" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)}" loading="lazy" data-photo-kind="${kind}" data-photo-source="${escapeHtml(photo.source)}">`;
+    return `<img class="${cls}" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)}" loading="${kind === 'detail' ? 'eager' : 'lazy'}" decoding="async"${kind === 'detail' ? ' fetchpriority="high"' : ''} data-photo-kind="${kind}" data-photo-source="${escapeHtml(photo.source)}">`;
   }
   galleryMarkup(store) {
     const photos = this.resolveGallery(store);
     if (!photos.length) return placeholderMarkup('detail');
     if (photos.length === 1) {
       const photo = photos[0];
-      return `<div class="detail-single-photo"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 1" loading="lazy" data-photo-kind="detail" data-photo-source="${escapeHtml(photo.source)}"></div>`;
+      return `<div class="detail-single-photo"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 1" loading="eager" decoding="async" fetchpriority="high" data-photo-kind="detail" data-photo-source="${escapeHtml(photo.source)}"></div>`;
     }
     return `<div id="detailPhotoCarousel" class="carousel-controller detail-photo-carousel" data-original-count="${photos.length}">
       <div class="carousel-shell detail-photo-frame">
         <button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 가게사진">‹</button>
-        <div class="carousel-track">${photos.map((photo, index) => `<article class="carousel-slide detail-photo-slide"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 ${index + 1}" loading="lazy" data-photo-kind="detail" data-photo-source="${escapeHtml(photo.source)}"></article>`).join('')}</div>
+        <div class="carousel-track">${photos.map((photo, index) => `<article class="carousel-slide detail-photo-slide"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 ${index + 1}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async"${index === 0 ? ' fetchpriority="high"' : ''} data-photo-kind="detail" data-photo-source="${escapeHtml(photo.source)}"></article>`).join('')}</div>
         <button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 가게사진">›</button>
       </div><div class="carousel-dots" aria-label="가게사진 위치"></div></div>`;
   }
@@ -1439,6 +1439,12 @@ function openCommunityChoice(store, key, options = {}) {
 }
 async function openStore(store) {
   if (!store) return false;
+  const loadingPhoto = photoResolver?.resolve?.(store);
+  const loadingPhotoMarkup = loadingPhoto
+    ? `<div class="detail-single-photo detail-loading-photo"><img class="detail-photo" src="${escapeHtml(loadingPhoto.src)}" alt="${escapeHtml(store.name)} 사진" loading="eager" decoding="async" fetchpriority="high" data-photo-kind="detail" data-photo-source="${escapeHtml(loadingPhoto.source)}"></div>`
+    : placeholderMarkup('detail');
+  openModal(`<article class="store-detail store-detail-loading" data-store-id="${escapeHtml(store.id)}" aria-busy="true"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${loadingPhotoMarkup}<div class="store-detail-skeleton" role="status" aria-live="polite"><span class="store-detail-skeleton-line is-wide"></span><span class="store-detail-skeleton-line"></span><span class="store-detail-skeleton-button"></span><span class="store-detail-skeleton-button"></span><b>가게 정보를 불러오는 중입니다…</b></div></article>`);
+  $('#modal').dataset.activeStoreId = store.id;
   const secureDetail = window.daedongSecureStoreDetail;
   if (store.__secureDetailReady !== true) {
     if (!secureDetail || typeof secureDetail.enrich !== 'function') {
@@ -1449,10 +1455,13 @@ async function openStore(store) {
       await secureDetail.enrich(store, normalizedStore);
     } catch (error) {
       console.warn('가게 상세정보를 불러오지 못했습니다.', error);
-      openModal('<section class="store-detail-load-error"><h2 id="modalTitle">주문방법을 불러오지 못했습니다</h2><p>잠시 후 가게를 다시 열어 주세요.</p></section>');
+      if ($('#modal').dataset.activeStoreId === store.id && !$('#modal').hidden) {
+        openModal('<section class="store-detail-load-error"><h2 id="modalTitle">주문방법을 불러오지 못했습니다</h2><p>잠시 후 가게를 다시 열어 주세요.</p></section>');
+      }
       return false;
     }
   }
+  if ($('#modal').dataset.activeStoreId !== store.id || $('#modal').hidden) return false;
   addRecentStore(store);
   sendAnalyticsEvent('store_open', {storeId: store.id, storeName: store.name, surface: 'store_detail'});
   const selectedRoute = selectedExternalForStore(store);
