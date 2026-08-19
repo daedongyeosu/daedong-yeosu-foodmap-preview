@@ -143,14 +143,22 @@ function rc6RenderHero(){
  const track=document.querySelector('#heroTrack'),hero=document.querySelector('.hero'),dots=document.querySelector('#heroCarousel .carousel-dots');if(!track)return;
  const notionReturn=rc6ReadNotionHeroReturn();
  const day=rc6SeoulDay(),entries=rc6HeroEntries(),renderKey=day.key+'|'+entries.map(item=>item.key).join('|')+'|'+[state.location,state.addressLabel,state.coords?.lat??'',state.coords?.lng??''].join('|');
+ if(!entries.length){
+  rc6HeroRenderKey='';
+  if(!track.querySelector('img')){
+   if(!track.querySelector('[data-hero-placeholder]'))track.innerHTML='<div class="carousel-slide hero-slide hero-loading-slide" data-hero-placeholder aria-hidden="true"><span class="hero-loading-sheen"></span></div>';
+   dots?.replaceChildren();
+   if(hero){hero.hidden=false;hero.setAttribute('aria-busy','true');}
+  }
+  return;
+ }
  if(rc6HeroRenderKey===renderKey&&track.children.length)return;rc6HeroRenderKey=renderKey;if(heroCarousel)heroCarousel.destroy();
  track.innerHTML=entries.map((item,displayIndex)=>{const{banner,target,store}=item,isNotion=item.kind==='notion',isPhoto=['photo','campaign-photo'].includes(item.presentation),isCampaign=item.presentation==='campaign-photo',showCampaignCopy=!isCampaign||item.campaignShowCopy!==false,label=isNotion?`${target.label} 노션에서 자세히 보기`:`${store.name} 가게 상세 보기`,targetAttr=isNotion?`data-rc6-banner-notion="${escapeHtml(target.notionUrl)}"`:`data-rc6-banner-store="${escapeHtml(store.id)}"`;let media;if(isNotion){media=`<img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="675" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}>`;}else if(isPhoto){const title=item.campaignTitle||store.name,meta=item.campaignMeta||[store.area,store.cat].filter(Boolean).join(' · '),copy=showCampaignCopy?`<span class="rc6-store-hero-copy"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(meta)}</span></span>`:'';media=`<span class="rc6-store-hero-media${isCampaign?' rc6-campaign-hero-media':''}${showCampaignCopy?'':' rc6-campaign-photo-only'}"><img src="${escapeHtml(banner.desktop)}" alt="${escapeHtml(title)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}>${copy}</span>`;}else{media=`<picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}></picture>`;}return `<button type="button" class="carousel-slide hero-slide rc6-hero-target${isCampaign?' rc6-campaign-hero':''}" data-hero-index="${displayIndex}" ${targetAttr} aria-label="${escapeHtml(label)}">${media}</button>`}).join('');
- if(dots&&!entries.length)dots.replaceChildren();
  if(hero){
-  hero.hidden=!entries.length;
+  hero.hidden=false;
   const firstImage=track.querySelector('img');
   const finishLoading=()=>hero.removeAttribute('aria-busy');
-  if(!entries.length||!firstImage||firstImage.complete)finishLoading();
+  if(!firstImage||firstImage.complete)finishLoading();
   else{
    hero.setAttribute('aria-busy','true');
    firstImage.addEventListener('load',finishLoading,{once:true});
