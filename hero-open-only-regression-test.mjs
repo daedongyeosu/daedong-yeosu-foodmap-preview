@@ -17,7 +17,7 @@ assert.doesNotMatch(baseHero, /HERO_BANNERS\.map/);
 assert.match(rc6, /function rc6HeroStoreIsOpen\(store\)\{return storeBusinessStatusPriority\(store\)<=1;\}/);
 assert.match(rc6, /stores\.filter\(store=>fxVisible\(store\)&&rc6HeroStoreIsOpen\(store\)/);
 assert.match(rc6, /function rc6HeroEntries\(\)[\s\S]*return rc6InterleaveHeroEntries\(rc6DailyHeroOrder\(rc6ManagedStoreHeroEntries\(\)\),rc6SpecialHeroEntries\(\)\);/);
-assert.match(rc6, /hero\.hidden=!entries\.length/);
+assert.match(rc6, /hero\.hidden=false/);
 assert.match(rc6, /fetchpriority="high"/);
 assert.match(rc6, /firstImage\.addEventListener\('load',finishLoading/);
 assert.match(rc6, /if\(!entries\.length\)[\s\S]*data-hero-placeholder/);
