@@ -21,7 +21,6 @@ const rc2NaverByStore = new Map();
 let rc2ModalRestoring = false;
 let rc2ReplaceNextModal = false;
 let rc2AmbientTimers = [];
-let rc2PeriodicTimer = 0;
 let rc2DeferredStoreReturnPosition = null;
 let rc2StoreRestorePromise = null;
 let rc2SurfaceRestorePromise = null;
@@ -802,60 +801,15 @@ fxFormation = function rc2Formation() {
   });
 };
 
-fxFireworks = function rc2Fireworks(withToast = false) {
-  if (RC2_IS_GOHEUNG) return;
-  const layer = $('#microFxLayer');
-  if (!layer || document.hidden || layer.querySelector('.firework')) return;
-  if (fxReduced()) {
-    fxBridgeLight();
-    layer.classList.add('reduced-firework-flash');
-    setTimeout(() => layer.classList.remove('reduced-firework-flash'), 180);
-    return;
-  }
-  for (const [left, top, delay] of [['10%', '40px', '0ms'], ['86%', '62px', '80ms'], ['72%', '28px', '145ms']]) {
-    const fire = document.createElement('i');
-    fire.className = 'firework';
-    fire.style.left = left;
-    fire.style.top = top;
-    fire.style.animationDelay = delay;
-    layer.append(fire);
-    setTimeout(() => fire.remove(), 900);
-  }
-  if (withToast) {
-    const toast = document.createElement('div');
-    toast.className = 'success-toast';
-    toast.textContent = `${RC2_REGION_NAME}에 힘이 되는 주문길을 선택했어요`;
-    layer.append(toast);
-    setTimeout(() => toast.remove(), 1200);
-  }
-};
-
 function rc2StopAmbient() {
   rc2AmbientTimers.forEach(clearTimeout);
   rc2AmbientTimers = [];
-  clearTimeout(rc2PeriodicTimer);
-  rc2PeriodicTimer = 0;
-}
-
-function rc2SchedulePeriodicFirework() {
-  clearTimeout(rc2PeriodicTimer);
-  if (RC2_IS_GOHEUNG) return;
-  const delay = 25000 + Math.round(Math.random() * 10000);
-  rc2PeriodicTimer = setTimeout(() => {
-    if (!document.hidden && !fxLowPower()) fxFireworks(false);
-    rc2SchedulePeriodicFirework();
-  }, delay);
 }
 
 function rc2StartAmbient(firstEntry = false) {
   rc2StopAmbient();
   if (RC2_IS_GOHEUNG) return;
-  if (firstEntry) {
-    rc2AmbientTimers.push(setTimeout(() => fxFireworks(false), 1000));
-    rc2AmbientTimers.push(setTimeout(() => fxFormation(), 1500));
-    rc2AmbientTimers.push(setTimeout(() => fxFireworks(false), 5000));
-  }
-  rc2SchedulePeriodicFirework();
+  if (firstEntry) rc2AmbientTimers.push(setTimeout(() => fxFormation(), 1500));
 }
 
 function rc2ExternalAppKey(element) {

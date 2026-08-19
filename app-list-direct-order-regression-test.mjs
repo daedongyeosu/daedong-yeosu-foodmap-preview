@@ -24,7 +24,7 @@ assert.match(finalExperience, /category:modal\?\.dataset\.appBrowserCategory\|\|
 assert.match(finalExperience, /modalScroll:card\?\.scrollTop\|\|0/);
 assert.match(finalExperience, /fxRememberAppBrowserReturn\(key,store\.id\)[\s\S]*?location\.assign\(href\)/);
 assert.match(finalExperience, /function fxRestoreAppBrowserReturn\(\)[\s\S]*?openAppBrowser\(saved\.key,saved\.category\|\|'추천'\)/);
-assert.match(finalExperience, /fxRestoreAppBrowserReturn\(\);[\s\S]*?if\(!sessionStorage\.getItem\(FX_ENTRY_SESSION\)\)/);
+assert.match(finalExperience, /fxRestoreAppBrowserReturn\(\);\s*\}/);
 assert.match(rc2, /async function rc2RestoreAfterExternalPage\(\)/);
 assert.match(rc2, /const opened = await openStore\(store\)/);
 assert.match(rc2, /window\.addEventListener\('pageshow', \(\) => \{[\s\S]*?rc2RestoreAfterExternalPage\(\)[\s\S]*?fxRestoreAppBrowserReturn\?\.\(\)/);

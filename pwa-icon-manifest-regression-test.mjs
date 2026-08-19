@@ -32,5 +32,5 @@ for (const [purpose, sizes, src] of expected) {
   assert.ok(serviceWorker.includes(`'${src}'`), `${src}는 앱 셸 캐시에 포함해야 합니다.`);
 }
 
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v9-main-logo'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v10-logo-frame-no-fireworks'/);
 console.log('PWA official app icon manifest regression: PASS');
