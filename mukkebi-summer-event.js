@@ -66,11 +66,18 @@
     eventLayer.setAttribute('aria-hidden', 'true');
   }
 
+  function dismissEventImmediately(event) {
+    event?.preventDefault();
+    event?.stopPropagation();
+    closeEvent();
+  }
+
   function waitUntilExistingPopupCloses() {
     if (canOpen()) window.setTimeout(openEvent, 220);
   }
 
-  closeButton?.addEventListener('click', closeEvent);
+  closeButton?.addEventListener('pointerdown', dismissEventImmediately);
+  closeButton?.addEventListener('click', dismissEventImmediately);
   hideTodayButton?.addEventListener('click', () => {
     try { localStorage.setItem(HIDE_DATE_KEY, localDateKey()); }
     catch {}

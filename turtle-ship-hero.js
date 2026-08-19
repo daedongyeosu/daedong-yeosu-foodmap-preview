@@ -93,13 +93,17 @@
     sailWhenHomeIsClear();
   }
 
-  function finishIntro() {
+  function finishIntro({immediate = false} = {}) {
     if (introClosing) return;
     introClosing = true;
     clearTimeout(introTimer);
     clearTimeout(introCloseTimer);
     if (!intro) {
       sailWhenHomeIsClear();
+      return;
+    }
+    if (immediate) {
+      completeIntroClose();
       return;
     }
     intro.classList.remove('is-visible');
@@ -109,6 +113,12 @@
       completeIntroClose,
       reduced ? 0 : INTRO_CLOSE_DURATION
     );
+  }
+
+  function dismissIntroImmediately(event) {
+    event?.preventDefault();
+    event?.stopPropagation();
+    finishIntro({immediate:true});
   }
 
   function playIntroThenSail() {
@@ -149,7 +159,8 @@
     if (layer) layerObserver.observe(layer, {attributes:true, attributeFilter:['hidden']});
   }
 
-  introClose?.addEventListener('click', finishIntro);
+  introClose?.addEventListener('pointerdown', dismissIntroImmediately);
+  introClose?.addEventListener('click', dismissIntroImmediately);
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && intro && !intro.hidden) finishIntro();
   });
