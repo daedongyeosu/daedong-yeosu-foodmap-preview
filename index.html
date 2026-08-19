@@ -25,13 +25,14 @@
   <title>대동여수음식지도</title>
   <style id="criticalHeroLoadingStyle">
     .hero[aria-busy="true"]{display:block;padding:0 16px;margin-top:0}
-    .hero[aria-busy="true"] .hero-frame{min-height:180px;border-radius:24px;overflow:hidden;background:#e8eef3}
+    .hero[aria-busy="true"] .hero-frame{position:relative;min-height:180px;border-radius:24px;overflow:hidden;background:#e8eef3}
+    .hero[aria-busy="true"] .hero-frame::after{content:"";position:absolute;z-index:9;inset:0;pointer-events:none;transform:translateX(-100%);background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.68) 48%,transparent 76%);animation:hero-loading-sheen 1.15s ease-in-out infinite}
     .hero[aria-busy="true"] .carousel-arrow{visibility:hidden}
     .hero-loading-slide{position:relative;height:285px;overflow:hidden;background:linear-gradient(135deg,#dce6ed 0%,#edf3f7 52%,#dce6ed 100%)}
-    .hero-loading-sheen{position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.68) 48%,transparent 76%);animation:hero-loading-sheen 1.15s ease-in-out infinite}
+    .hero-loading-sheen{display:none}
     @keyframes hero-loading-sheen{to{transform:translateX(100%)}}
     @media(max-width:520px){.hero-loading-slide{height:auto;min-height:180px;aspect-ratio:1200/700}}
-    @media(prefers-reduced-motion:reduce){.hero-loading-sheen{animation:none}}
+    @media(prefers-reduced-motion:reduce){.hero[aria-busy="true"] .hero-frame::after{animation:none}}
   </style>
   <script src="region-boot.js?v=goheung-grounded-liftoff-6-hero-priority-1"></script>
   <style id="externalReturnBootStyle">
