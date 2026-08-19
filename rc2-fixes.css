@@ -53,7 +53,6 @@
 .battle-smoke,
 .cannon-flash,
 .cannon-ball,
-.firework,
 .gull-fx { pointer-events: none !important; }
 .order-item.pressing,
 .glass-action.pressing {
@@ -282,19 +281,6 @@ body.modal-open { overflow: hidden !important; overscroll-behavior: none !import
   82% { opacity: 1; }
   100% { transform: translateX(155px); opacity: 0; }
 }
-.firework {
-  width: 7px;
-  height: 7px;
-  background: #fff4ad;
-  box-shadow: 0 -18px #fff, 13px -13px #ff8c70, 18px 0 #8ee6ff, 13px 13px #ffe69a, 0 18px #ff8c70, -13px 13px #8ee6ff, -18px 0 #fff, -13px -13px #ffe69a;
-  filter: drop-shadow(0 0 5px rgba(255, 235, 170, .85));
-  animation-duration: .68s;
-}
-.micro-fx-layer.reduced-firework-flash {
-  background: radial-gradient(circle at 14% 12%, rgba(255, 235, 163, .34), transparent 22%), radial-gradient(circle at 84% 15%, rgba(127, 220, 255, .3), transparent 20%);
-  opacity: .8;
-}
-.page-hidden .firework,
 .page-hidden .turtle-ship,
 .page-hidden .rain-drop { animation-play-state: paused !important; }
 
@@ -314,5 +300,4 @@ body.modal-open { overflow: hidden !important; overscroll-behavior: none !import
   .turtle-ship { display: block !important; animation: none !important; opacity: .75; left: 44% !important; }
   .turtle-ship.escort { left: 35% !important; opacity: .5; }
   .turtle-ship.escort.two { left: 55% !important; opacity: .5; }
-  .micro-fx-layer.reduced-firework-flash { transition: opacity .16s ease; }
 }

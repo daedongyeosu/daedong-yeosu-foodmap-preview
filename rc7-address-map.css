@@ -70,12 +70,12 @@
 }
 .topbar .brand-word b{font:inherit}.topbar .brand-word em{font:inherit;font-style:normal;color:#ef531d}
 .topbar .brand-symbol{
-  position:relative;flex:0 0 57px;width:57px;height:56px;overflow:hidden;border-radius:50%;
+  position:relative;flex:0 0 57px;width:57px;height:56px;overflow:hidden;border-radius:15px;
   background:#fff;border:1px solid rgba(255,115,55,.34);box-shadow:0 4px 13px rgba(11,48,76,.16)
 }
 .topbar .brand-symbol img{
   display:block;width:100%!important;height:100%!important;max-width:none!important;
-  border-radius:50%!important;object-fit:cover!important;filter:none!important
+  border-radius:14px!important;object-fit:contain!important;filter:none!important
 }
 .topbar .brand-word-right{letter-spacing:-1.3px}
 

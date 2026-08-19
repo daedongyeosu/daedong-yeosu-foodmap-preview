@@ -6,9 +6,7 @@ html[data-region="goheung"] .yeosu-night-shell::before{background:linear-gradien
 html[data-region="goheung"] .yeosu-night-shell::after{content:none!important;display:none!important;background:none!important}
 html[data-region="goheung"] .turtle-ship-hero-scene,
 html[data-region="goheung"] .weather-layer,
-html[data-region="goheung"] .bridge-light-layer,
-html[data-region="goheung"] .firework-layer,
-html[data-region="goheung"] .firework{display:none!important}
+html[data-region="goheung"] .bridge-light-layer{display:none!important}
 .region-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 html[data-region="goheung"] .rc6-gulls{z-index:1}
 .goheung-rocket-flight{position:absolute;z-index:5;top:49%;right:1%;width:clamp(250px,72vw,530px);height:auto;opacity:0;transform-origin:center 78%;filter:brightness(1.12) drop-shadow(0 12px 22px rgba(255,120,22,.5));will-change:transform,opacity;animation:goheung-rocket-launch 12s cubic-bezier(.2,.04,.13,1) infinite}

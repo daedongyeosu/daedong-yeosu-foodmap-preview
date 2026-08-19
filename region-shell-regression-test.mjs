@@ -51,9 +51,9 @@ assert.match(regionCss, /@keyframes goheung-rocket-launch/, '고흥 우주선 �
 assert.doesNotMatch(regionCss, /@keyframes goheung-liftoff-burst/, '구형 근접 발사 애니메이션이 다시 실행되면 안 됩니다.');
 assert.match(regionCss, /@keyframes goheung-ground-smoke/, '고흥 발사대 연기 확산 연출이 누락되었습니다.');
 assert.match(regionCss, /html\[data-region="goheung"\] \.rc6-gulls\{z-index:1\}/, '고흥 바다 갈매기 연출을 유지해야 합니다.');
-assert.match(regionCss, /html\[data-region="goheung"\] \.firework\{display:none!important\}/, '고흥 불꽃놀이 요소를 숨겨야 합니다.');
-assert.match(finalExperience, /FX_REGION\.code==='goheung'\|\|fxReduced\(\)/, '고흥에서는 불꽃놀이 생성을 중단해야 합니다.');
-assert.match(rc2, /function rc2StartAmbient\(firstEntry = false\) \{[\s\S]*?if \(RC2_IS_GOHEUNG\) return;/, '고흥에서는 불꽃놀이 타이머를 시작하면 안 됩니다.');
+assert.doesNotMatch(regionCss, /firework/i, '지역별 불꽃놀이 잔여 스타일이 남으면 안 됩니다.');
+assert.doesNotMatch(finalExperience, /firework/i, '지역과 관계없이 불꽃놀이를 생성하면 안 됩니다.');
+assert.doesNotMatch(rc2, /firework/i, '배경 불꽃놀이 타이머를 다시 추가하면 안 됩니다.');
 assert.match(regionBoot, /goheung-sunset-launchpad-v2\.webp/, '고흥 배경을 첫 화면에서 미리 불러와야 합니다.');
 assert.ok(fs.statSync(new URL('./assets/goheung/goheung-sunset-launchpad-v2.webp', import.meta.url)).size < 150_000, '고흥 배경 파일은 150KB 미만이어야 합니다.');
 assert.ok(fs.statSync(new URL('./assets/goheung/goheung-liftoff-burst-v3.webp', import.meta.url)).size < 70_000, '고흥 근접 발사 파일은 70KB 미만이어야 합니다.');
