@@ -74,8 +74,8 @@
   background:#fff;border:1px solid rgba(255,115,55,.34);box-shadow:0 4px 13px rgba(11,48,76,.16)
 }
 .topbar .brand-symbol img{
-  position:absolute;left:50%;top:0;width:112px!important;height:75px!important;max-width:none!important;
-  border-radius:0!important;object-fit:fill!important;transform:translateX(-50%);filter:saturate(1.06) contrast(1.02)
+  display:block;width:100%!important;height:100%!important;max-width:none!important;
+  border-radius:50%!important;object-fit:cover!important;filter:none!important
 }
 .topbar .brand-word-right{letter-spacing:-1.3px}
 
@@ -240,7 +240,7 @@
   }
   .topbar .brand-word{font-size:40px;letter-spacing:-.9px}.topbar .brand-word-right{letter-spacing:-1.2px}
   .topbar .brand-symbol{flex-basis:56px;width:56px;height:55px}
-  .topbar .brand-symbol img{width:110px!important;height:74px!important}
+  .topbar .brand-symbol img{width:100%!important;height:100%!important}
   .topbar .location-chip{max-width:calc(100% - 112px)!important}
 }
 @media(max-width:520px){
@@ -258,7 +258,7 @@
   .topbar .brand-wordmark{width:calc(100vw - 12px);height:65px;bottom:2px;padding:1px;gap:6px}
   .topbar .brand-word{font-size:36px;letter-spacing:-.7px}.topbar .brand-word-right{letter-spacing:-1px}
   .topbar .brand-symbol{flex-basis:52px;width:52px;height:51px}
-  .topbar .brand-symbol img{width:102px!important;height:68px!important}
+  .topbar .brand-symbol img{width:100%!important;height:100%!important}
   .topbar-actions{gap:5px}
   .topbar-actions .icon-btn{width:42px;height:42px;min-width:42px}
   .topbar .location-chip{max-width:calc(100% - 96px)!important}
@@ -266,7 +266,7 @@
 @media(max-width:340px){
   .topbar .brand-word{font-size:33px}
   .topbar .brand-symbol{flex-basis:48px;width:48px;height:47px}
-  .topbar .brand-symbol img{width:94px!important;height:63px!important}
+  .topbar .brand-symbol img{width:100%!important;height:100%!important}
 }
 @media(max-height:720px){.rc7-map-wrap{height:205px}.rc7-saved-list{max-height:180px}}
 @media(min-width:768px){.yeosu-night-shell{background-image:linear-gradient(180deg,rgba(7,47,78,.1),rgba(4,43,70,.16)),url('assets/yeosu-rc6/dolsan-day-desktop.webp')!important;background-position:center center!important}}

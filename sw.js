@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v8-instant-detail';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v9-main-logo';
 const RUNTIME_CACHE = 'daedong-yeosu-runtime-v1';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [
