@@ -22,9 +22,10 @@ function functionSource(source, name) {
 
 const baseHero = functionSource(app, 'renderHero');
 assert.ok(
-  baseHero.indexOf('daedongRestoreNotionHeroSnapshot') < baseHero.indexOf("$('#heroTrack').innerHTML = ''"),
-  '초기 렌더링이 저장된 노션 광고를 지우기 전에 즉시 복원을 시도해야 합니다.'
+  baseHero.indexOf('daedongRestoreNotionHeroSnapshot') < baseHero.indexOf("const track = $('#heroTrack')"),
+  '초기 렌더링이 로딩 뼈대를 다루기 전에 저장된 노션 광고를 즉시 복원해야 합니다.'
 );
+assert.match(baseHero, /hero\?\.removeAttribute\('aria-busy'\)/);
 assert.match(rc6, /const RC6_NOTION_HERO_RETURN='daedongNotionHeroReturnV1'/);
 assert.match(rc6, /rc6RememberNotionHeroReturn\(p\.slide\);location\.assign\(url\.href\)/);
 assert.match(rc6, /const notionReturn=rc6ReadNotionHeroReturn\(\)/);
