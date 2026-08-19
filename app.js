@@ -1049,10 +1049,20 @@ class InfiniteCarousel {
 function renderHero() {
   heroCarousel?.destroy();
   heroCarousel = null;
-  if (window.daedongRestoreNotionHeroSnapshot?.()) return;
-  $('#heroTrack').innerHTML = '';
+  const hero = $('.hero');
+  if (window.daedongRestoreNotionHeroSnapshot?.()) {
+    hero?.removeAttribute('aria-busy');
+    return;
+  }
+  const track = $('#heroTrack');
+  if (track && !track.querySelector('[data-hero-placeholder]')) {
+    track.innerHTML = '<div class="carousel-slide hero-slide hero-loading-slide" data-hero-placeholder aria-hidden="true"><span class="hero-loading-sheen"></span></div>';
+  }
   $('#heroCarousel .carousel-dots').innerHTML = '';
-  $('.hero').hidden = true;
+  if (hero) {
+    hero.hidden = false;
+    hero.setAttribute('aria-busy', 'true');
+  }
 }
 function renderPromos() {
   $('#promoTrack').innerHTML = PROMOS.map(promo => {
