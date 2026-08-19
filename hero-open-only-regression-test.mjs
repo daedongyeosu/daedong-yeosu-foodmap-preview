@@ -20,6 +20,8 @@ assert.match(rc6, /function rc6HeroEntries\(\)[\s\S]*return rc6InterleaveHeroEnt
 assert.match(rc6, /hero\.hidden=!entries\.length/);
 assert.match(rc6, /fetchpriority="high"/);
 assert.match(rc6, /firstImage\.addEventListener\('load',finishLoading/);
+assert.match(rc6, /if\(!entries\.length\)[\s\S]*data-hero-placeholder/);
+assert.match(rc6, /if\(!entries\.length\)[\s\S]*rc6HeroRenderKey=''/);
 assert.doesNotMatch(rc6, /rankedStore\?\.proximityLabel/);
 assert.doesNotMatch(rc6, /<small>\$\{escapeHtml\(proximity\)\}<\/small>/);
 assert.match(css, /\.hero \.carousel-arrow\{display:none!important\}/);
@@ -31,6 +33,8 @@ assert.match(regionBoot, /link\.fetchPriority = priority/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*hero-open-only-clean-controls-1/);
 assert.match(html, /rc6-fixes\.css\?v=[^"\n]*hero-clean-controls-1/);
 assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*hero-open-only-1[^'\n]*hero-area-label-removed-1/);
+assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*keep-placeholder-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*keep-placeholder-1/);
 assert.match(finalExperience, /rc6-fixes\.css\?v=[^'\n]*hero-clean-controls-1/);
 
 console.log('hero-open-only-regression-test: pass');
