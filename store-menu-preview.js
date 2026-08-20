@@ -550,10 +550,7 @@
         }
         await secureDetail.enrich(store, typeof normalizedStore === 'function' ? normalizedStore : undefined);
       }
-      const [menu] = await Promise.all([
-        loadMenu(storeId),
-        window.daedongStoreServiceInfo?.ready || Promise.resolve()
-      ]);
+      const menu = await loadMenu(storeId);
       activeStore = store;
       activeMenu = orderedMenu(menu);
       overlay.innerHTML = previewMarkup(activeMenu, store);
