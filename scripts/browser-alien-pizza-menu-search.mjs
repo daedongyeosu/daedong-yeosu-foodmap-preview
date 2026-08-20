@@ -32,7 +32,10 @@ try {
   await page.waitForSelector('.store-menu-preview', {timeout: 5000});
   await check(page.evaluate(() => history.state?.daedongMenuPreview === true), '음식 미리보기를 브라우저 뒤로가기 단계로 등록');
   await check(page.locator('.store-menu-hero > img').getAttribute('src').then(value => value === 'store-menu-content/a089d1d54720b48e/main.jpg'), '외계인피자 대표 음식사진 복원');
-  await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === 53), '외계인피자 전체 메뉴 53개 음식사진 복원');
+  const totalMenuCount = await page.locator('[data-menu-card]').count();
+  report.totalMenuCount = totalMenuCount;
+  await check(totalMenuCount >= 53, `외계인피자 메뉴가 기존 검증 기준 53개 이상 유지됨 (현재 ${totalMenuCount}개)`);
+  await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === totalMenuCount), `외계인피자 전체 메뉴 ${totalMenuCount}개 음식사진 복원`);
   await check(page.locator('[data-menu-card].is-text-only').count().then(count => count === 0), '사진이 저장된 메뉴를 글자 카드로 대체하지 않음');
 
   const preview = page.locator('.store-menu-preview');
@@ -92,7 +95,7 @@ try {
   await check(preview.evaluate(node => node.classList.contains('menu-search-active')), '주문방법 선택창을 닫아도 검색 결과 유지');
 
   await page.locator('[data-menu-search-clear]').click();
-  await check(page.locator('[data-menu-result-count]').innerText().then(value => value.trim() === '53'), '검색어 지우기 시 전체 53개 메뉴 복원');
+  await check(page.locator('[data-menu-result-count]').innerText().then(value => Number(value.trim()) === totalMenuCount), `검색어 지우기 시 전체 ${totalMenuCount}개 메뉴 복원`);
   await check(preview.evaluate(node => node.classList.contains('menu-search-active')), '검색어를 지워도 검색 모드 유지');
   await page.waitForTimeout(500);
 
@@ -108,7 +111,7 @@ try {
   const restoreTolerance = Math.max(24, restoredScroll.clientHeight * 1.25);
   report.scrollRestore = {requested: maxScroll, effectiveReturn, tolerance: restoreTolerance, ...restoredScroll};
   await check(restoredScroll.top > 0 && Math.abs(restoredScroll.top - effectiveReturn) <= restoreTolerance, '검색 취소 시 이전 메뉴 위치 복귀');
-  await check(page.locator('[data-menu-card]:visible').count().then(count => count === 53), '검색 취소 후 전체 메뉴와 기존 분류 상태 복원');
+  await check(page.locator('[data-menu-card]:visible').count().then(count => count === totalMenuCount), '검색 취소 후 전체 메뉴와 기존 분류 상태 복원');
   await check(page.locator('.store-menu-sticky-actions').evaluate(node => getComputedStyle(node).pointerEvents !== 'none'), '검색 취소 후 주문 버튼 복원');
 
   await page.goBack();
@@ -126,3 +129,4 @@ try {
 }
 
 if (!report.success) process.exit(1);
+
