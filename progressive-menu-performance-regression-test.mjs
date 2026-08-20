@@ -25,12 +25,16 @@ assert.match(menu, /scheduleNextChunk = \(priority = 'idle'\)[\s\S]*priority ===
   '사용자가 끝으로 스크롤한 경우 프레임·타이머 제한과 무관하게 다음 12개 메뉴를 즉시 표시해야 합니다.');
 assert.doesNotMatch(menu, /distanceFromBottom/,
   '사진·글꼴 로딩 중 변하는 스크롤 높이로 다음 메뉴 표시 여부를 결정하면 안 됩니다.');
+assert.match(menu, /scrollChunkLocked: false[\s\S]*if \(!scrollRoot \|\| state\.scrollChunkLocked\) return[\s\S]*state\.scrollChunkLocked = true[\s\S]*150/,
+  '한 번의 손가락 스크롤에서 연속 이벤트가 발생해도 메뉴 묶음은 하나만 추가해야 합니다.');
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*interaction-priority-1/,
   '설치형 앱도 우선순위 렌더링 코드를 즉시 받도록 캐시 키를 갱신해야 합니다.');
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*direct-scroll-chunk-1/,
   '설치형 앱도 직접 메뉴 묶음 렌더링 코드를 즉시 받아야 합니다.');
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*scroll-intent-chunk-1/,
   '설치형 앱도 스크롤 의도 기반 메뉴 묶음 코드를 즉시 받아야 합니다.');
+assert.match(html, /store-menu-preview\.js\?v=[^"\n]*scroll-chunk-lock-1/,
+  '설치형 앱도 연속 스크롤 묶음 잠금 코드를 즉시 받아야 합니다.');
 assert.match(menu, /addEventListener\('pointerdown'[\s\S]*data-menu-preview-close[\s\S]*requestCloseMenuPreview\(\)/,
   '메뉴 닫기 버튼은 click을 기다리지 말고 터치 시작 즉시 닫혀야 합니다.');
 assert.match(menu, /data-menu-image-src=/);

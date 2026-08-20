@@ -477,7 +477,7 @@
     );
     const pendingItems = items.filter(item => !renderedIds.has(String(item.id || '')));
     preview.__menuRenderState?.cleanup?.();
-    const state = {run, renderedIds, pendingItems, cursor: 0};
+    const state = {run, renderedIds, pendingItems, cursor: 0, scrollChunkLocked: false, scrollUnlockTimer: 0};
     preview.__menuRenderState = state;
     grid.setAttribute('aria-busy', String(pendingItems.length > 0));
     if (status) status.hidden = pendingItems.length === 0;
@@ -492,6 +492,8 @@
       menuRenderObserver = null;
       if (onProgressiveScroll) scrollRoot?.removeEventListener('scroll', onProgressiveScroll);
       onProgressiveScroll = null;
+      window.clearTimeout(state.scrollUnlockTimer);
+      state.scrollUnlockTimer = 0;
     };
     state.cleanup = cleanupProgressiveTriggers;
     const appendChunk = deadline => {
@@ -544,11 +546,17 @@
       });
       menuRenderObserver.observe(status);
       onProgressiveScroll = () => {
-        if (!scrollRoot) return;
+        if (!scrollRoot || state.scrollChunkLocked) return;
         // Layout height can still be settling while remote images and fonts
         // decode. The first real scroll is a stronger intent signal than a
         // transient distance calculation, so prepare exactly one small chunk.
+        state.scrollChunkLocked = true;
         scheduleNextChunk('interaction');
+        window.clearTimeout(state.scrollUnlockTimer);
+        state.scrollUnlockTimer = window.setTimeout(() => {
+          state.scrollChunkLocked = false;
+          state.scrollUnlockTimer = 0;
+        }, 150);
       };
       scrollRoot?.addEventListener('scroll', onProgressiveScroll, {passive: true});
       return;
