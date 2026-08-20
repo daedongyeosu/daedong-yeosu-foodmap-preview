@@ -21,18 +21,12 @@ assert.match(menu, /menuRenderObserver = new IntersectionObserver[\s\S]*rootMarg
   '남은 메뉴 카드는 사용자가 목록 아래쪽에 접근할 때만 추가해야 합니다.');
 assert.match(menu, /addEventListener\('scroll', onProgressiveScroll, \{passive: true\}\)/,
   '교차 감지 신호를 놓쳐도 실제 스크롤에서 다음 메뉴 묶음을 준비해야 합니다.');
-assert.match(menu, /scheduleNextChunk = \(priority = 'idle'\)[\s\S]*priority === 'interaction'[\s\S]*requestAnimationFrame\([\s\S]*runChunk\(null\)[\s\S]*scheduleNextChunk\('interaction'\)/,
-  '사용자가 끝으로 스크롤한 경우 유휴 시간을 기다리지 않고 다음 프레임에 메뉴 묶음을 표시해야 합니다.');
-assert.match(menu, /const fallbackTimer = window\.setTimeout\(\(\) => runChunk\(null\), 0\)[\s\S]*window\.clearTimeout\(fallbackTimer\)/,
-  '백그라운드 WebView가 화면 프레임을 제한해도 다음 메뉴 묶음은 즉시 표시해야 합니다.');
-assert.match(menu, /let chunkCompleted = false[\s\S]*if \(chunkCompleted \|\| token !== chunkScheduleToken\) return[\s\S]*chunkCompleted = true/,
-  '프레임과 타이머가 모두 실행돼도 같은 스크롤에서 메뉴 묶음을 두 번 추가하면 안 됩니다.');
+assert.match(menu, /scheduleNextChunk = \(priority = 'idle'\)[\s\S]*priority === 'interaction'[\s\S]*runChunk\(null\)[\s\S]*scheduleNextChunk\('interaction'\)/,
+  '사용자가 끝으로 스크롤한 경우 프레임·타이머 제한과 무관하게 다음 12개 메뉴를 즉시 표시해야 합니다.');
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*interaction-priority-1/,
   '설치형 앱도 우선순위 렌더링 코드를 즉시 받도록 캐시 키를 갱신해야 합니다.');
-assert.match(html, /store-menu-preview\.js\?v=[^"\n]*background-frame-fallback-1/,
-  '설치형 앱도 백그라운드 프레임 안전장치를 즉시 받아야 합니다.');
-assert.match(html, /store-menu-preview\.js\?v=[^"\n]*single-chunk-race-1/,
-  '설치형 앱도 중복 메뉴 렌더 방지 코드를 즉시 받아야 합니다.');
+assert.match(html, /store-menu-preview\.js\?v=[^"\n]*direct-scroll-chunk-1/,
+  '설치형 앱도 직접 메뉴 묶음 렌더링 코드를 즉시 받아야 합니다.');
 assert.match(menu, /addEventListener\('pointerdown'[\s\S]*data-menu-preview-close[\s\S]*requestCloseMenuPreview\(\)/,
   '메뉴 닫기 버튼은 click을 기다리지 말고 터치 시작 즉시 닫혀야 합니다.');
 assert.match(menu, /data-menu-image-src=/);

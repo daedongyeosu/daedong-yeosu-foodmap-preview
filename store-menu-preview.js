@@ -521,21 +521,15 @@
       if (chunkScheduled && priority !== 'interaction') return;
       chunkScheduled = true;
       const token = ++chunkScheduleToken;
-      let chunkCompleted = false;
       const runChunk = deadline => {
-        if (chunkCompleted || token !== chunkScheduleToken) return;
-        chunkCompleted = true;
+        if (token !== chunkScheduleToken) return;
         appendChunk(deadline);
       };
       if (priority === 'interaction') {
-        // Headless/background WebViews can throttle requestAnimationFrame even
-        // after a real scroll. Race it with a zero-delay task so reaching the
-        // end of the list always reveals the next menu chunk promptly.
-        const fallbackTimer = window.setTimeout(() => runChunk(null), 0);
-        requestAnimationFrame(() => {
-          window.clearTimeout(fallbackTimer);
-          runChunk(null);
-        });
+        // The chunk is intentionally capped at 12 cards. Rendering this small
+        // batch in the scroll task is more reliable than waiting for a frame or
+        // timer that a background/embedded WebView may throttle indefinitely.
+        runChunk(null);
         return;
       }
       scheduleMenuRenderTask(runChunk);
