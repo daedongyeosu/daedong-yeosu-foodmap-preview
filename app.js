@@ -482,7 +482,11 @@ let yeosuNeighborhoods = [];
 let neighborhoodByName = new Map();
 let categoryPriorityOverrides = {...LOCATION_CATEGORY_PRIORITY_OVERRIDES};
 let modalHistoryActive = false;
-let ignoreNextPop = false;
+let ignoreNextPop = 0;
+function suppressNextModalPop() {
+  ignoreNextPop += 1;
+}
+window.daedongSuppressNextModalPop = suppressNextModalPop;
 let resolveCatalogReady;
 window.daedongCatalogReady = new Promise(resolve => { resolveCatalogReady = resolve; });
 function finishCatalogReady(value) {
@@ -1304,7 +1308,7 @@ function hardClose({fromPop = false} = {}) {
   if ($('#moreAppsPopover')) $('#moreAppsPopover').hidden = true;
   if ($('#startupAd')) $('#startupAd').hidden = true;
   unlockPage(); modalHistoryActive = false;
-  if (!fromPop && history.state?.daedongModal) { ignoreNextPop = true; history.back(); }
+  if (!fromPop && history.state?.daedongModal) { suppressNextModalPop(); history.back(); }
 }
 function closeModal(options = {}) { hardClose(options); }
 window.hardClose = hardClose; window.hideModal = hardClose; window.closeModal = hardClose;
@@ -1468,6 +1472,7 @@ async function openStore(store) {
   const secureDetail = window.daedongSecureStoreDetail;
   if (store.__secureDetailReady !== true) {
     if (!secureDetail || typeof secureDetail.enrich !== 'function') {
+      if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
       openModal('<section class="store-detail-load-error"><h2 id="modalTitle">주문방법을 불러오지 못했습니다</h2><p>페이지를 새로고침한 뒤 가게를 다시 열어 주세요.</p></section>');
       return false;
     }
@@ -1476,6 +1481,7 @@ async function openStore(store) {
     } catch (error) {
       console.warn('가게 상세정보를 불러오지 못했습니다.', error);
       if ($('#modal').dataset.activeStoreId === store.id && !$('#modal').hidden) {
+        if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
         openModal('<section class="store-detail-load-error"><h2 id="modalTitle">주문방법을 불러오지 못했습니다</h2><p>잠시 후 가게를 다시 열어 주세요.</p></section>');
       }
       return false;
@@ -1498,6 +1504,7 @@ async function openStore(store) {
   const selectedCta = selectedRoute ? `<button type="button" class="selected-order-cta external-text-route" data-external-route-key="${selectedRoute.key}"><span>처음 선택한 ${escapeHtml(APP_META[selectedRoute.key].label)}로 주문하기</span><b>›</b></button>` : '';
   const favorite=isFavorite(store.id);
   const menuEntry = storeMenuPreviewEntryMarkup(store);
+  if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
   openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}</div>${menuEntry}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
   const carouselRoot = $('#detailPhotoCarousel'); if (carouselRoot) detailCarousel = new InfiniteCarousel(carouselRoot,{interval:3500});
   $('#modal').dataset.activeStoreId=store.id;
@@ -1632,7 +1639,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', event => { if (!pop.hidden && !event.target.closest('#moreAppsPopover') && !event.target.closest('#moreAppsBtn')) pop.hidden = true; });
 
   $$('[data-open]').forEach(button => button.addEventListener('click', () => ({mypage: myPage, guide, brands: brandsModal}[button.dataset.open] || guide)()));
-  $('.modal-close').addEventListener('click', () => hardClose());
+  const modalCloseButton = $('.modal-close');
+  modalCloseButton.addEventListener('pointerdown', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    hardClose();
+  });
+  modalCloseButton.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (!$('#modal').hidden) hardClose();
+  });
   $('#overlay').addEventListener('click', () => hardClose());
   $('#modal').addEventListener('click', event => { if (event.target === $('#modal')) hardClose(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('#modal').hidden) hardClose(); });
@@ -1694,7 +1711,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const today = new Date().toLocaleDateString('sv-SE', {timeZone: 'Asia/Seoul'}), startupAd = $('#startupAd');
   let startupHistoryOpen = false;
   const openStartupAd = () => { startupAd.hidden = false; lockPage(); if (!startupHistoryOpen) { history.pushState({daedongStartup:true}, ''); startupHistoryOpen = true; } };
-  const closeStartupAd = ({fromPop = false} = {}) => { if (startupAd.hidden) return; startupAd.hidden = true; const goBack = !fromPop && startupHistoryOpen && history.state?.daedongStartup; startupHistoryOpen = false; if (!layerStillOpen()) unlockPage(); if (goBack) { ignoreNextPop=true; history.back(); } };
+  const closeStartupAd = ({fromPop = false} = {}) => { if (startupAd.hidden) return; startupAd.hidden = true; const goBack = !fromPop && startupHistoryOpen && history.state?.daedongStartup; startupHistoryOpen = false; if (!layerStillOpen()) unlockPage(); if (goBack) { suppressNextModalPop(); history.back(); } };
   const entryParams = new URLSearchParams(location.search);
   const requestedSharedStoreId = entryParams.get('store');
   const requestedHeroStoreId = entryParams.get('hero');
@@ -1706,5 +1723,5 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.startup-card').addEventListener('click', event => event.stopPropagation());
   $('#hideToday').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); localStorage.setItem('hideStartup', today); closeStartupAd(); });
   $('#startupDetails').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); setTimeout(() => openModal(`<h2 id="modalTitle">${REGION_MAP_NAME} 모집·광고 안내</h2><div class="guide-list">${PROMOS.map(promo => `<button type="button">${promo.title}<br><small>${promo.desc}</small></button>`).join('')}</div>`), 60); });
-  window.addEventListener('popstate', () => { if(ignoreNextPop){ignoreNextPop=false;return;} if (!startupAd.hidden) { closeStartupAd({fromPop:true}); return; } if (!$('#modal').hidden) hardClose({fromPop:true}); });
+  window.addEventListener('popstate', () => { if(ignoreNextPop>0){ignoreNextPop-=1;return;} if (!startupAd.hidden) { closeStartupAd({fromPop:true}); return; } if (!$('#modal').hidden) hardClose({fromPop:true}); });
 });
