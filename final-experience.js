@@ -141,7 +141,33 @@ const FX_RAIL_SPECS=[
  {id:'new',kind:'new',title:'새로 들어온 가게',desc:'최근 지도에 등록된 가게'}
 ];
 function fxSelectedRails(){const hour=new Date().getHours();const ids=fxRainState!=='clear'?['rain','near','local','warm','noodle','new']:hour>=17?['near','local','group','solo','mood','new']:['near','local','warm','appetite','sweet','new'];return ids.slice(0,6).map(id=>FX_RAIL_SPECS.find(spec=>spec.id===id));}
-function fxRenderRails(){const root=$('#recommendRails');if(!root)return;if(state.category!=='전체'||state.query||state.brandId){root.hidden=true;root.innerHTML='';return;}root.hidden=false;const used=new Set();root.innerHTML=fxSelectedRails().map(spec=>{const list=fxRankStores(spec).filter(store=>!used.has(String(store.id))).slice(0,8);list.forEach(store=>used.add(String(store.id)));const cards=list.map(store=>{const distance=spec.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';const locationLabel=distance||store.proximityLabel||'';return `<button type="button" class="rail-card glass-action" data-rail-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</p></span></button>`}).join('');const empty=spec.kind==='near'?'주소에서 동네를 확인하면 가까운 권역의 가게를 보여드립니다.':'추천 가게를 확인 중입니다.';return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div></header><div class="recommend-track">${cards||`<p class="empty">${empty}</p>`}</div></section>`;}).join('');}
+let fxRailRenderVersion=0;
+function fxRailMarkup(spec,used){
+ const list=fxRankStores(spec).filter(store=>!used.has(String(store.id))).slice(0,8);
+ list.forEach(store=>used.add(String(store.id)));
+ const cards=list.map(store=>{const distance=spec.kind==='near'&&Number.isFinite(store.distance)?`약 ${store.distance<1?`${Math.round(store.distance*1000)}m`:`${store.distance.toFixed(1)}km`}`:'';const locationLabel=distance||store.proximityLabel||'';return `<button type="button" class="rail-card glass-action" data-rail-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</p></span></button>`}).join('');
+ const empty=spec.kind==='near'?'주소에서 동네를 확인하면 가까운 권역의 가게를 보여드립니다.':'추천 가게를 확인 중입니다.';
+ return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div></header><div class="recommend-track">${cards||`<p class="empty">${empty}</p>`}</div></section>`;
+}
+function fxRenderRails(){
+ const root=$('#recommendRails');
+ const version=++fxRailRenderVersion;
+ if(!root)return;
+ if(state.category!=='전체'||state.query||state.brandId){root.hidden=true;root.innerHTML='';root.removeAttribute('aria-busy');return;}
+ root.hidden=false;
+ root.innerHTML='';
+ root.setAttribute('aria-busy','true');
+ const specs=fxSelectedRails(),used=new Set();
+ let index=0;
+ const renderNext=()=>{
+  if(version!==fxRailRenderVersion||state.category!=='전체'||state.query||state.brandId)return;
+  const spec=specs[index++];
+  if(!spec){root.removeAttribute('aria-busy');return;}
+  root.insertAdjacentHTML('beforeend',fxRailMarkup(spec,used));
+  window.setTimeout(renderNext,0);
+ };
+ window.setTimeout(renderNext,0);
+}
 renderStores=function(options={}){fxOriginalRenderStores(options);fxRenderRails();};
 
 function fxAppBrowserMarkup(key,selectedCategory='추천'){
