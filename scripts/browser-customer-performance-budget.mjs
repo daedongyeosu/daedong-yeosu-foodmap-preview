@@ -258,6 +258,7 @@ try {
   report.measurements.brokenVisibleMenuImages = menuImageState.brokenVisible;
   await page.locator('[data-store-menu-overlay]:not([hidden]) .store-menu-scroll').evaluate((scroll) => {
     scroll.scrollTop = scroll.scrollHeight;
+    scroll.dispatchEvent(new Event('scroll'));
   });
   await page.waitForFunction((initialCount) => document.querySelectorAll(
     '[data-store-menu-overlay]:not([hidden]) [data-menu-card]'
