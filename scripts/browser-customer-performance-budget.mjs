@@ -36,10 +36,14 @@ const budgets = {
   detailReadyMs: numberFromEnv('PERF_DETAIL_READY_MS', 3000),
   menuSkeletonMs: numberFromEnv('PERF_MENU_SKELETON_MS', 250),
   menuReadyMs: numberFromEnv('PERF_MENU_READY_MS', 3500),
+  menuCloseMs: numberFromEnv('PERF_MENU_CLOSE_MS', 300),
   menuBackMs: numberFromEnv('PERF_MENU_BACK_MS', 700),
+  detailCloseMs: numberFromEnv('PERF_DETAIL_CLOSE_MS', 300),
   homeDomNodes: numberFromEnv('PERF_HOME_DOM_NODES', 2200),
   detailDomNodes: numberFromEnv('PERF_DETAIL_DOM_NODES', 2500),
   menuDomNodes: numberFromEnv('PERF_MENU_DOM_NODES', 3500),
+  menuCardsAtReady: numberFromEnv('PERF_MENU_CARDS_AT_READY', 12),
+  loadedMenuImagesAfterIdle: numberFromEnv('PERF_LOADED_MENU_IMAGES_AFTER_IDLE', 24),
   maxLongTaskMs: numberFromEnv('PERF_MAX_LONG_TASK_MS', 1000),
   totalLongTaskMs: numberFromEnv('PERF_TOTAL_LONG_TASK_MS', 4000)
 };
@@ -179,13 +183,54 @@ try {
   await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 5000});
   report.measurements.menuReadyMs = elapsed(menuStartedAt);
   report.measurements.menuDomNodes = await domNodes();
-  report.measurements.menuCards = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card]').count();
+  report.measurements.menuCardsAtReady = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card]').count();
 
   await page.waitForTimeout(1200);
-  report.measurements.visibleMenuImages = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card] img:visible').count();
-  report.measurements.brokenVisibleMenuImages = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card] img:visible').evaluateAll((images) =>
-    images.filter((image) => image.complete && image.naturalWidth === 0).length
-  );
+  report.measurements.menuCardsAfterIdle = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card]').count();
+  const menuImageState = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card] img').evaluateAll((images) => {
+    const scroll = document.querySelector('[data-store-menu-overlay]:not([hidden]) .store-menu-scroll');
+    const viewport = scroll?.getBoundingClientRect();
+    const intersectsViewport = (image) => {
+      if (!viewport) return false;
+      const rect = image.getBoundingClientRect();
+      return rect.bottom >= viewport.top && rect.top <= viewport.bottom
+        && rect.right >= viewport.left && rect.left <= viewport.right;
+    };
+    return {
+      total: images.length,
+      loaded: images.filter((image) => image.hasAttribute('src')).length,
+      visible: images.filter(intersectsViewport).length,
+      brokenVisible: images.filter((image) => intersectsViewport(image)
+        && image.hasAttribute('src') && image.complete && image.naturalWidth === 0).length
+    };
+  });
+  report.measurements.totalMenuImagesAfterIdle = menuImageState.total;
+  report.measurements.loadedMenuImagesAfterIdle = menuImageState.loaded;
+  report.measurements.visibleMenuImagesAfterIdle = menuImageState.visible;
+  report.measurements.brokenVisibleMenuImages = menuImageState.brokenVisible;
+  await page.locator('[data-store-menu-overlay]:not([hidden]) .store-menu-scroll').evaluate((scroll) => {
+    scroll.scrollTop = scroll.scrollHeight;
+  });
+  await page.waitForFunction((initialCount) => document.querySelectorAll(
+    '[data-store-menu-overlay]:not([hidden]) [data-menu-card]'
+  ).length > initialCount, report.measurements.menuCardsAtReady, {timeout: 2500});
+  report.measurements.menuCardsAfterScroll = await page.locator(
+    '[data-store-menu-overlay]:not([hidden]) [data-menu-card]'
+  ).count();
+  report.measurements.progressiveMenuChunkAfterScroll = report.measurements.menuCardsAfterScroll
+    > report.measurements.menuCardsAtReady;
+
+  const menuCloseStartedAt = performance.now();
+  await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-preview-close]').last().dispatchEvent('pointerdown', {
+    pointerType: 'touch',
+    isPrimary: true,
+    button: 0
+  });
+  await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true, null, {timeout: 1000});
+  report.measurements.menuCloseMs = elapsed(menuCloseStartedAt);
+
+  await menuButton.click();
+  await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 5000});
 
   const backStartedAt = performance.now();
   await page.goBack({waitUntil: 'commit'}).catch(() => {});
@@ -194,6 +239,22 @@ try {
   report.measurements.detailRestoredAfterBack = await page.locator(
     `#modal:not([hidden]) .store-detail[data-store-id="${targetStoreId}"]`
   ).isVisible();
+
+  const detailCloseStartedAt = performance.now();
+  await page.locator('#modal:not([hidden]) .modal-close').dispatchEvent('pointerdown', {
+    pointerType: 'touch',
+    isPrimary: true,
+    button: 0
+  });
+  await page.waitForTimeout(50);
+  report.measurements.detailCloseStateAfter50Ms = await page.evaluate(() => ({
+    hidden: document.querySelector('#modal')?.hidden === true,
+    activeStoreId: document.querySelector('#modal')?.dataset.activeStoreId || '',
+    historyState: history.state || null,
+    bodyClasses: document.body.className
+  }));
+  await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true, null, {timeout: 1000});
+  report.measurements.detailCloseMs = elapsed(detailCloseStartedAt);
 
   const longTasks = await page.evaluate(() => window.__qaLongTasks || []);
   report.measurements.longTaskCount = longTasks.length;
@@ -223,13 +284,18 @@ try {
   check('detail-ready', report.measurements.detailReadyMs, budgets.detailReadyMs);
   check('menu-skeleton-immediate', report.measurements.menuSkeletonMs, budgets.menuSkeletonMs);
   check('menu-ready', report.measurements.menuReadyMs, budgets.menuReadyMs);
+  check('menu-close-immediate', report.measurements.menuCloseMs, budgets.menuCloseMs);
   check('menu-back-immediate', report.measurements.menuBackMs, budgets.menuBackMs);
+  check('detail-close-immediate', report.measurements.detailCloseMs, budgets.detailCloseMs);
   check('home-dom-budget', report.measurements.homeDomNodes, budgets.homeDomNodes);
   check('detail-dom-budget', report.measurements.detailDomNodes, budgets.detailDomNodes);
   check('menu-dom-budget', report.measurements.menuDomNodes, budgets.menuDomNodes);
+  check('menu-cards-at-ready-budget', report.measurements.menuCardsAtReady, budgets.menuCardsAtReady);
+  check('loaded-menu-images-after-idle-budget', report.measurements.loadedMenuImagesAfterIdle, budgets.loadedMenuImagesAfterIdle);
   check('single-long-task-budget', report.measurements.maxLongTaskMs, budgets.maxLongTaskMs);
   check('total-long-task-budget', report.measurements.totalLongTaskMs, budgets.totalLongTaskMs);
   exactCheck('broken-visible-menu-images', report.measurements.brokenVisibleMenuImages, 0);
+  exactCheck('progressive-menu-chunk-after-scroll', report.measurements.progressiveMenuChunkAfterScroll, true);
   exactCheck('relevant-network-failures', report.relevantNetworkFailures.length, 0);
   exactCheck('page-errors', report.errors.length, 0);
   exactCheck('detail-restored-after-back', report.measurements.detailRestoredAfterBack, true);
