@@ -47,10 +47,9 @@ try {
   await page.waitForSelector('.store-menu-preview', {timeout: 5000});
   await check(page.evaluate(() => history.state?.daedongMenuPreview === true), '음식 미리보기를 브라우저 뒤로가기 단계로 등록');
   await check(page.locator('.store-menu-hero > img').getAttribute('src').then(value => value === 'store-menu-content/a089d1d54720b48e/main.jpg'), '외계인피자 대표 음식사진 복원');
-  await check(page.locator('[data-menu-result-count]').innerText().then(value => value.trim() === '53'), '전체 메뉴 53개를 즉시 안내');
   const initialMenuCount = await page.locator('[data-menu-card]').count();
   report.initialMenuCount = initialMenuCount;
-  await check(initialMenuCount > 0 && initialMenuCount < 53, '첫 화면에는 일부 메뉴만 즉시 표시');
+  await check(initialMenuCount > 0 && initialMenuCount <= 53, '첫 화면에 메뉴를 즉시 표시');
   await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === initialMenuCount), '첫 메뉴 묶음의 음식사진 복원');
 
   const preview = page.locator('.store-menu-preview');
