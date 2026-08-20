@@ -67,6 +67,10 @@ jobs:
         env:
           BASE_URL: https://preview.daedongmap.com
         run: node scripts/browser-alien-pizza-menu-search.mjs
+      - name: Enforce customer mobile performance budget
+        env:
+          BASE_URL: https://preview.daedongmap.com
+        run: node scripts/browser-customer-performance-budget.mjs
       - name: Preserve PR verification reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -79,6 +83,9 @@ jobs:
             browser-alien-pizza-menu-search-report.json
             browser-alien-pizza-menu-search.png
             browser-alien-pizza-menu-search-failure.png
+            browser-customer-performance-budget-report.json
+            browser-customer-performance-budget.png
+            browser-customer-performance-budget-failure.png
             browser-rider-evergreen-banner-report.json
             browser-rider-evergreen-banner.png
             browser-rider-evergreen-popup.png
