@@ -18,7 +18,6 @@ assert.match(app, /finishCatalogReady\(result\);\s*window\.setTimeout\(hydrateDe
 assert.match(menu, /const menu = await loadMenu\(storeId\)/);
 assert.doesNotMatch(menu, /loadMenu\(storeId\)[\s\S]{0,160}daedongStoreServiceInfo\?\.ready/,
   '메뉴 본문은 큰 영업정보 전체 다운로드를 기다리면 안 됩니다.');
-
 const brandFontData = brandCss.match(/data:font\/woff2;base64,([^")]+)/)?.[1] || '';
 assert.ok(Buffer.from(brandFontData, 'base64').length <= 10_000,
   '메인 글자 로고 부분 글꼴은 10KB를 넘으면 안 됩니다.');
@@ -27,5 +26,9 @@ const inlineOrderIcons = [...html.matchAll(/data:image\/webp;base64,([^"]+)/g)]
 assert.ok(inlineOrderIcons.length >= 2, '첫 화면 주문앱 아이콘은 소형 인라인 WebP여야 합니다.');
 assert.ok(inlineOrderIcons.slice(0, 2).every(size => size <= 15_000),
   '첫 화면 주문앱 아이콘은 각각 15KB를 넘으면 안 됩니다.');
+assert.match(app, /compactHomeIcon[\s\S]{0,240}data:image\//,
+  '상세 주문앱 아이콘도 첫 화면의 소형 이미지를 재사용해야 합니다.');
+assert.match(menu, /compactHomeIcon[\s\S]{0,260}escapeMenuHtml\(compactHomeIcon \|\| fallback\)/,
+  '메뉴 주문앱 아이콘도 첫 화면의 소형 이미지를 재사용해야 합니다.');
 
 console.log('PASS: 초기 화면의 불필요한 대형 자산을 막고 주문앱 아이콘 용량 예산을 지킵니다.');
