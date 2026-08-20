@@ -161,9 +161,11 @@
 
   function suppressMenuClosePopstate() {
     menuHistoryClosePending = true;
+    document.documentElement.dataset.daedongMenuHistoryClose = '1';
     window.clearTimeout(menuHistoryCloseTimer);
     menuHistoryCloseTimer = window.setTimeout(() => {
       menuHistoryClosePending = false;
+      delete document.documentElement.dataset.daedongMenuHistoryClose;
     }, 1200);
   }
 
@@ -1047,6 +1049,7 @@
     if (menuHistoryClosePending) {
       menuHistoryClosePending = false;
       window.clearTimeout(menuHistoryCloseTimer);
+      delete document.documentElement.dataset.daedongMenuHistoryClose;
       event.stopImmediatePropagation();
       return;
     }
