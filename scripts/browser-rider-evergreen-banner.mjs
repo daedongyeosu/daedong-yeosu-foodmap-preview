@@ -3,8 +3,16 @@ import {chromium} from 'playwright';
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 const report = {success: false, viewport: {width: 390, height: 844}, checks: [], errors: []};
-const browser = await chromium.launch({headless: true});
+const browserExecutablePath = process.env.CODEX_BROWSER_EXECUTABLE_PATH || '';
+const browser = await chromium.launch({
+  headless: true,
+  ...(browserExecutablePath ? {executablePath: browserExecutablePath} : {})
+});
 const context = await browser.newContext({viewport: report.viewport, locale: 'ko-KR'});
+await context.addInitScript(() => {
+  sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
+  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
+});
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 const page = await context.newPage();
 page.on('pageerror', error => report.errors.push(error.message));
@@ -30,7 +38,16 @@ try {
   const modal = page.locator('#modal:not([hidden]).promo-image-only-modal');
   await modal.waitFor({state: 'visible', timeout: 5000});
   const image = modal.locator('img[src*="rider-recruitment-portrait-v2.webp"]');
+  await image.waitFor({state: 'visible', timeout: 5000});
   await check(image.isVisible(), '등록된 배송기사 모집 사진을 즉시 팝업으로 표시');
+  await page.waitForFunction(
+    selector => {
+      const element = document.querySelector(selector);
+      return element instanceof HTMLImageElement && element.complete && element.naturalWidth > 0;
+    },
+    '#modal:not([hidden]).promo-image-only-modal img[src*="rider-recruitment-portrait-v2.webp"]',
+    {timeout: 10000}
+  );
   await check(image.evaluate(element => element.complete && element.naturalWidth > 0), '배송기사 모집 사진 정상 로드');
   await check(modal.locator('.modal-close').isVisible(), '팝업 닫기 버튼 표시');
   await page.screenshot({path: 'browser-rider-evergreen-popup.png', fullPage: false});
@@ -44,3 +61,4 @@ try {
 }
 
 if (!report.success) process.exit(1);
+
