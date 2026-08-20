@@ -136,7 +136,7 @@ function rc3PrimaryCardChannels(store) {
 function rc3PrimaryChannelIcon(key, channel, className) {
   const cls = escapeHtml(className);
   if (key === 'brand') {
-    if (channel?.icon) return `<img class="${cls}" src="${escapeHtml(channel.icon)}" alt="브랜드앱" title="브랜드앱">`;
+    if (channel?.icon) return `<img class="${cls}" src="${escapeHtml(mobilePhotoPath(channel.icon))}" alt="브랜드앱" title="브랜드앱">`;
     return `<svg class="${cls} rc3-order-channel-svg" role="img" aria-label="브랜드앱"><use href="assets/ui/ui-icons.svg#store"></use></svg>`;
   }
   if (key === 'phone') return `<img class="${cls}" src="assets/ui/phone.svg" alt="전화주문" title="전화주문">`;

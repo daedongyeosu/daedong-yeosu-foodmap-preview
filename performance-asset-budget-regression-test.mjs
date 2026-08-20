@@ -8,12 +8,12 @@ const brandCss = fs.readFileSync(new URL('./rc7-address-map.css', import.meta.ur
 
 assert.doesNotMatch(html, /rel="preload"[^>]+images\/01\.png/,
   '현재 홈에서 사용하지 않는 1MB 이미지를 선다운로드하면 안 됩니다.');
-assert.match(html, /data-deferred-src="images\/burgerking\.png"[^>]+loading="lazy"[^>]+decoding="async"/,
+assert.match(html, /data-deferred-src="images\/burgerking\.mobile\.webp"[^>]+loading="lazy"[^>]+decoding="async"/,
   '화면 아래 브랜드 아이콘은 가게목록 뒤에 지연 로딩해야 합니다.');
-assert.match(html, /data-deferred-src="assets\/ondongne\.png"[^>]+loading="lazy"[^>]+decoding="async"/,
+assert.match(html, /data-deferred-src="assets\/ondongne\.mobile\.webp"[^>]+loading="lazy"[^>]+decoding="async"/,
   '화면 아래 주문앱 아이콘은 가게목록 뒤에 지연 로딩해야 합니다.');
 assert.match(app, /function hydrateDeferredHomeImages\(\)[\s\S]*image\.src = image\.dataset\.deferredSrc/);
-assert.match(app, /finishCatalogReady\(result\);\s*window\.setTimeout\(hydrateDeferredHomeImages, 6000\)/,
+assert.match(app, /finishCatalogReady\(result\);[\s\S]{0,120}window\.setTimeout\(hydrateDeferredHomeImages, 6000\)/,
   '지연 이미지는 반드시 가게목록을 먼저 표시한 뒤 요청해야 합니다.');
 assert.match(menu, /const menuPromise = loadMenu\(storeId\)/,
   '메뉴 요청은 상세정보 요청과 동시에 시작해야 합니다.');
@@ -24,6 +24,10 @@ assert.doesNotMatch(menu, /loadMenu\(storeId\)[\s\S]{0,160}daedongStoreServiceIn
 const brandFontData = brandCss.match(/data:font\/woff2;base64,([^")]+)/)?.[1] || '';
 assert.ok(Buffer.from(brandFontData, 'base64').length <= 10_000,
   '메인 글자 로고 부분 글꼴은 10KB를 넘으면 안 됩니다.');
+assert.doesNotMatch(brandCss, /@font-face/,
+  '대형 글자 로고 글꼴을 초기 CSS에서 요청하면 첫 화면 회선을 막습니다.');
+assert.match(app, /function deferBrandFont\(\)[\s\S]*60000/,
+  '대형 글자 로고 글꼴은 가게목록 표시 이후로 미뤄야 합니다.');
 const inlineOrderIcons = [...html.matchAll(/data:image\/webp;base64,([^"]+)/g)]
   .map(match => Buffer.from(match[1], 'base64').length);
 assert.ok(inlineOrderIcons.length >= 2, '첫 화면 주문앱 아이콘은 소형 인라인 WebP여야 합니다.');

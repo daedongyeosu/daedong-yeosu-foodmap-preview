@@ -131,15 +131,15 @@
     }
     if (key === 'brand') {
       return channel?.icon
-        ? `<img src="${escapeMenuHtml(channel.icon)}" alt="">`
+        ? `<img src="${escapeMenuHtml(window.mobilePhotoPath?.(channel.icon) || channel.icon)}" alt="">`
         : storeIconMarkup();
     }
     if (key === 'mukkebi' || key === 'ddangyo') {
       const compactHomeIcon = document.querySelector(`[data-order-key="${key}"] img`)?.getAttribute('src');
-      const fallback = key === 'mukkebi' ? 'assets/mukkebi-v7.png' : 'assets/ddangyo-v7.png';
+      const fallback = key === 'mukkebi' ? 'assets/mukkebi-v7.mobile.webp' : 'assets/ddangyo-v7.mobile.webp';
       return `<img src="${escapeMenuHtml(compactHomeIcon || fallback)}" alt="">`;
     }
-    if (key === 'ondongne') return '<img src="assets/ondongne.png" alt="">';
+    if (key === 'ondongne') return '<img src="assets/ondongne.mobile.webp" alt="">';
     if (key === 'phone') return phoneIconMarkup();
     return '';
   }
@@ -918,9 +918,10 @@
   }
 
   document.addEventListener('pointerdown', event => {
-    if (event.button !== 0 || !event.isPrimary || !event.target.closest('[data-menu-preview-close]')) return;
+    if (event.button !== 0 || !event.target.closest('[data-menu-preview-close]')) return;
     menuClosePointerAt = performance.now();
     event.preventDefault();
+    event.stopImmediatePropagation();
     requestCloseMenuPreview();
   }, {capture: true});
 

@@ -8,6 +8,8 @@ const REGION_MAP_NAME = ACTIVE_REGION.mapName;
 const REGION_DEFAULT_AREA = ACTIVE_REGION.defaultArea;
 const regionStorageKey = key => typeof ACTIVE_REGION.storageKey === 'function' ? ACTIVE_REGION.storageKey(key) : key;
 const PHOTO_MANIFEST_URL = 'data/photo-manifest.json';
+const MOBILE_PHOTO_SUFFIX = '.mobile.webp';
+const INITIAL_STORE_BATCH_SIZE = 16;
 const PHOTO_POLICY_URL = 'data/photo-policy.json';
 const NEIGHBORHOOD_URL = ACTIVE_REGION.neighborhoodUrl || 'data/yeosu-neighborhoods.json';
 const EXTERNAL_APP_KEYS = ['yogiyo', 'coupang', 'baemin'];
@@ -461,7 +463,7 @@ const LOCATION_CATEGORY_PRIORITY_OVERRIDES = {
   }
 };
 const state = {
-  query: '', category: '전체', brandId: '', visibleCount: 40,
+  query: '', category: '전체', brandId: '', visibleCount: INITIAL_STORE_BATCH_SIZE,
   location: savedLocation?.area || localStorage.getItem(LOCATION_KEY) || REGION_DEFAULT_AREA,
   addressLabel: savedLocation?.label || localStorage.getItem(LOCATION_KEY) || REGION_DEFAULT_AREA,
   coords: savedLocation?.coords || null,
@@ -498,6 +500,39 @@ function hydrateDeferredHomeImages() {
     image.src = image.dataset.deferredSrc;
     delete image.dataset.deferredSrc;
   });
+}
+
+function mobilePhotoPath(path) {
+  const value = String(path || '').trim();
+  if (!value || /^(?:data:|https?:)/i.test(value) || /\.(?:webp|avif)(?:\?|$)/i.test(value)) return value;
+  return value.replace(/\.(?:png|jpe?g|gif)(\?.*)?$/i, `${MOBILE_PHOTO_SUFFIX}$1`);
+}
+
+let deferredPhotoObserver = null;
+function loadDeferredPhoto(image) {
+  const source = image?.dataset?.photoSrc;
+  if (!source) return;
+  image.src = source;
+  delete image.dataset.photoSrc;
+  deferredPhotoObserver?.unobserve(image);
+}
+function observeDeferredPhotos(root = document) {
+  const images = [...(root.querySelectorAll?.('img[data-photo-src]') || [])];
+  if (!images.length) return;
+  if (!('IntersectionObserver' in window)) {
+    images.forEach(loadDeferredPhoto);
+    return;
+  }
+  deferredPhotoObserver ||= new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) loadDeferredPhoto(entry.target);
+    });
+  }, {rootMargin: '420px 0px'});
+  images.forEach(image => deferredPhotoObserver.observe(image));
+}
+function photoSourceAttributes(source, {deferred = false} = {}) {
+  const safe = escapeHtml(mobilePhotoPath(source));
+  return deferred ? `data-photo-src="${safe}"` : `src="${safe}"`;
 }
 window.setTimeout(() => {
   if (!resolveCatalogReady) return;
@@ -894,18 +929,18 @@ class PhotoResolver {
     const entry = this.entryFor(store);
     if (entry && this.classificationAllowed(entry)) {
       const paths = uniquePaths([entry.src, ...(entry.additionalSrcs || []), ...(entry.gallery || [])]).filter(path => this.validPath(path, store));
-      if (paths.length) return paths.map(src => ({src, source: entry.source || 'manifest', classification: entry.classification}));
+      if (paths.length) return paths.map(src => ({src: mobilePhotoPath(src), source: entry.source || 'manifest', classification: entry.classification}));
     }
     return uniquePaths(store.legacyImages || [store.legacyImage])
       .filter(path => this.validPath(path, store))
-      .map(src => ({src, source: 'verified-legacy-direct-file', classification: 'legacy_unclassified'}));
+      .map(src => ({src: mobilePhotoPath(src), source: 'verified-legacy-direct-file', classification: 'legacy_unclassified'}));
   }
   resolve(store) { return this.resolveGallery(store)[0] || null; }
-  markup(store, kind = 'card') {
+  markup(store, kind = 'card', options = {}) {
     const photo = this.resolve(store);
     if (!photo) return placeholderMarkup(kind);
     const cls = kind === 'detail' ? 'detail-photo' : 'store-photo';
-    return `<img class="${cls}" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)}" loading="${kind === 'detail' ? 'eager' : 'lazy'}" decoding="async"${kind === 'detail' ? ' fetchpriority="high"' : ''} data-photo-kind="${kind}" data-photo-source="${escapeHtml(photo.source)}">`;
+    return `<img class="${cls}" ${photoSourceAttributes(photo.src, options)} alt="${escapeHtml(store.name)}" loading="${kind === 'detail' ? 'eager' : 'lazy'}" decoding="async"${kind === 'detail' ? ' fetchpriority="high"' : ''} data-photo-kind="${kind}" data-photo-source="${escapeHtml(photo.source)}">`;
   }
   galleryMarkup(store) {
     const photos = this.resolveGallery(store);
@@ -1117,7 +1152,7 @@ function appIcon(key, cls = '') {
   const compactHomeIcon = ['mukkebi','ddangyo'].includes(key)
     ? document.querySelector(`[data-order-key="${key}"] img`)?.getAttribute('src')
     : '';
-  const icon = compactHomeIcon || meta.icon;
+  const icon = mobilePhotoPath(compactHomeIcon || meta.icon);
   if (String(icon).includes('/') || String(icon).startsWith('http') || String(icon).startsWith('data:image/')) return `<img class="${cls}" src="${icon}" alt="${meta.label}">`;
   return `<span class="${cls} miniemoji">${meta.icon}</span>`;
 }
@@ -1188,16 +1223,16 @@ function miniRoutes(store) {
   const keys = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand', 'yogiyo', 'coupang', 'baemin'];
   return keys.filter(key => storeHasChannel(store, key)).slice(0, 6).map(key => appIcon(key, 'miniapp-icon')).join('');
 }
-function storeCard(store) {
+function storeCard(store, index = 0) {
   const distanceLabel = store.coordinateSource === 'district-centroid' ? '동네 중심 기준 약' : '현재 위치에서 약';
   const distance = Number.isFinite(store.distance)
     ? `<span class="distance-note">${distanceLabel} ${store.distance < 1 ? `${Math.round(store.distance * 1000)}m` : `${store.distance.toFixed(1)}km`}</span>`
     : state.sortByDistance ? '<span class="distance-note distance-pending">거리 정보 준비 중</span>' : '';
   const favorite = isFavorite(store.id);
-  return `<article class="store-card" data-id="${escapeHtml(store.id)}">${photoResolver.markup(store, 'card')}<div class="store-info"><h3 title="${escapeHtml(store.name)}">${escapeHtml(store.name)}</h3><p>${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${distance}<div class="miniapps">${miniRoutes(store)}</div></div><button class="card-favorite ${favorite ? 'active' : ''}" type="button" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite ? '찜 해제' : '찜하기'}</span></button></article>`;
+  return `<article class="store-card" data-id="${escapeHtml(store.id)}">${photoResolver.markup(store, 'card', {deferred:index >= 4})}<div class="store-info"><h3 title="${escapeHtml(store.name)}">${escapeHtml(store.name)}</h3><p>${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${distance}<div class="miniapps">${miniRoutes(store)}</div></div><button class="card-favorite ${favorite ? 'active' : ''}" type="button" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite ? '찜 해제' : '찜하기'}</span></button></article>`;
 }
 function renderStores({scroll = false, resetCount = false} = {}) {
-  if (resetCount) state.visibleCount = 40;
+  if (resetCount) state.visibleCount = INITIAL_STORE_BATCH_SIZE;
   const list = filteredStores(), visible = list.slice(0, state.visibleCount);
   let title = '오늘의 추천';
   if (state.brandId) title = `${BRAND_BY_ID[state.brandId].label} 가게`;
@@ -1209,6 +1244,7 @@ function renderStores({scroll = false, resetCount = false} = {}) {
   $('#recommendSection h2').textContent = title;
   $('#resetCategoryBtn').hidden = state.category === '전체' && !state.brandId && !state.query;
   $('#storeGrid').innerHTML = visible.length ? visible.map(storeCard).join('') : '<div class="empty">조건에 맞는 가게가 아직 없습니다.</div>';
+  observeDeferredPhotos($('#storeGrid'));
   $('#loadMoreBtn').hidden = visible.length >= list.length || !list.length;
   $('#loadMoreBtn').textContent = '더보기';
   const filters = [];
@@ -1301,7 +1337,6 @@ function openModal(html) {
   setTimeout(() => $('.modal-close')?.focus(), 0);
 }
 function hardClose({fromPop = false} = {}) {
-  if (document.documentElement.dataset.daedongMenuCloseGesture === '1') return;
   detailCarousel?.destroy(); detailCarousel = null;
   const modal = $('#modal'); if (modal) { modal.hidden = true; modal.className = 'modal'; modal.removeAttribute('data-app-browser-key'); modal.removeAttribute('data-app-browser-category'); modal.removeAttribute('data-active-store-id'); }
   if ($('#modalContent')) $('#modalContent').innerHTML = '';
@@ -1372,7 +1407,7 @@ function copyQueuedReport(reportId) {
   const report=readLocalJson(FEEDBACK_QUEUE_KEY,[]).find(item=>item.reportId===reportId); if(!report)return;
   const text=[`요청 제목: ${report.storeName} 정보 수정 요청`,`가게 ID: ${report.storeId}`,`가게명: ${report.storeName}`,`요청 유형: ${report.issueType}`,`주문앱: ${report.app}`,`상세 내용: ${report.details||'없음'}`,`신고자 식별키: ${report.reporterKey}`,`페이지 URL: ${report.pageUrl}`].join('\n'); navigator.clipboard?.writeText(text);
 }
-function brandLogo(brand) { return brand.icon ? `<img src="${brand.icon}" alt="${escapeHtml(brand.label)}" loading="lazy"><span hidden>${escapeHtml(brand.label)}</span>` : '<span class="order-icon">🏷️</span>'; }
+function brandLogo(brand) { return brand.icon ? `<img src="${mobilePhotoPath(brand.icon)}" alt="${escapeHtml(brand.label)}" loading="lazy"><span hidden>${escapeHtml(brand.label)}</span>` : '<span class="order-icon">🏷️</span>'; }
 function brandsModal() {
   const groups = BRAND_GROUPS.map(group => `<section class="brand-category"><h3>${group.name}</h3><div class="brand-grid">${group.brands.map(brand => `<button type="button" class="brand-tile" data-brand-id="${brand.id}">${brandLogo(brand)}<b>${escapeHtml(brand.label)}</b></button>`).join('')}</div></section>`).join('');
   openModal(`<h2 id="modalTitle">브랜드앱 주문 가능 가게</h2><p>브랜드를 누르면 ${REGION_SHORT_NAME}에 등록된 해당 브랜드 가게만 모아 보여드립니다.</p>${groups}`);
@@ -1544,6 +1579,18 @@ async function normalizeStoresInBatches(rawStores, batchSize = 100) {
   }
   return normalized.filter(Boolean);
 }
+function deferBrandFont() {
+  if (navigator.connection?.saveData) return;
+  window.setTimeout(() => {
+    if (document.querySelector('link[data-daedong-brand-font]')) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'brand-font-deferred.css?v=1';
+    link.dataset.daedongBrandFont = '1';
+    link.addEventListener('load', () => document.fonts?.ready.then(() => document.body.classList.add('brand-font-ready')));
+    document.head.append(link);
+  }, 60000);
+}
 async function initialize() {
   renderHero(); renderPromos();
   const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([
@@ -1578,18 +1625,25 @@ function resetFilters() {
   renderStores({resetCount: true});
 }
 
+// app.js is deferred, so the document is already parsed here. Start catalog,
+// manifest and neighborhood I/O before later non-critical deferred scripts
+// finish downloading; event wiring still waits for DOMContentLoaded below.
+const catalogBootPromise = initialize();
+
 document.addEventListener('error', event => { if (event.target instanceof HTMLImageElement) handleImageError(event.target); }, true);
 document.addEventListener('DOMContentLoaded', () => {
   applyAnalyticsOwnerMode();
   const entry = analyticsEntryContext();
   sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: entry.storeId ? 'store_entry' : 'home'});
   document.addEventListener('click', trackAnalyticsRouteClick, true);
-  initialize().then(result => {
+  catalogBootPromise.then(result => {
     finishCatalogReady(result);
+    deferBrandFont();
     window.setTimeout(hydrateDeferredHomeImages, 6000);
   }).catch(error => {
     console.error('가게목록 초기화를 완료하지 못했습니다.', error);
     finishCatalogReady([]);
+    deferBrandFont();
     window.setTimeout(hydrateDeferredHomeImages, 6000);
   });
   $('#mainSearch').addEventListener('input', () => $('#clearMainSearch').hidden = !$('#mainSearch').value);
@@ -1597,7 +1651,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#clearMainSearch').addEventListener('click', () => { $('#mainSearch').value = ''; state.query = ''; $('#clearMainSearch').hidden = true; renderStores({resetCount: true}); $('#mainSearch').focus(); });
   $('#searchBtn').addEventListener('click', () => { state.query = $('#mainSearch').value.trim(); state.category = '전체'; state.brandId = ''; renderStores({scroll: true, resetCount: true}); });
   $('#categoryGrid').addEventListener('click', event => { const button = event.target.closest('[data-cat]'); if (!button) return; if (button.dataset.cat === '전체') { allCategoriesModal(); return; } state.category = button.dataset.cat; state.brandId = ''; state.query = ''; $('#mainSearch').value = ''; $('#clearMainSearch').hidden = true; renderStores({scroll: true, resetCount: true}); });
-  $('#loadMoreBtn').addEventListener('click', () => { state.visibleCount += 40; renderStores(); });
+  $('#loadMoreBtn').addEventListener('click', () => { state.visibleCount += INITIAL_STORE_BATCH_SIZE; renderStores(); });
   $('#resetCategoryBtn').addEventListener('click', resetFilters);
   $('#locationBtn').addEventListener('click', areaModal);
   $('#topFavoriteBtn').addEventListener('click', favoritesModal);

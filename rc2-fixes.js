@@ -691,7 +691,7 @@ fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
     const category = value || '전체';
     if (!$('#modal')?.hidden && $('#modalContent .direct-brand-browser')) rc2ReplaceModal();
     const brands = fxDirectBrands().filter(brand => category === '전체' || brand.category === category);
-    const cards = brands.map(brand => `<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}">${brand.icon ? `<img src="${escapeHtml(brand.icon)}" alt="">` : rc2Icon('other', 'order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');
+    const cards = brands.map(brand => `<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}">${brand.icon ? `<img src="${escapeHtml(mobilePhotoPath(brand.icon))}" alt="">` : rc2Icon('other', 'order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');
     openModal(`<section class="brand-app-hub direct-brand-browser"><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p>${rc2BrandCategoryChips(category)}${rc2SelectedCategoryMarkup(category)}<div class="brand-app-grid">${cards}</div></section>`);
     rc2RevealSelectedCategory();
     return;
@@ -712,7 +712,7 @@ fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
     const unique = new Map();
     for (const item of fxHappyData.currentScreenBrands || []) if (item.category === value && item.currentScreenConfirmed) unique.set(item.brandName, item);
     const brands = [...unique.values()];
-    openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><div class="happyorder-brand-grid">${brands.map(brand => `<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}">${brand.brandSelectionImage ? `<img src="${escapeHtml(brand.brandSelectionImage)}" alt="">` : '<img src="assets/order-channels/happyorder.png" alt="">'}<b>${escapeHtml(brand.brandName)}</b></button>`).join('')}</div></section>`);
+    openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><div class="happyorder-brand-grid">${brands.map(brand => `<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}">${brand.brandSelectionImage ? `<img src="${escapeHtml(mobilePhotoPath(brand.brandSelectionImage))}" alt="">` : '<img src="assets/order-channels/happyorder.mobile.webp" alt="">'}<b>${escapeHtml(brand.brandName)}</b></button>`).join('')}</div></section>`);
     return;
   }
   if (view === 'happy-stores') {

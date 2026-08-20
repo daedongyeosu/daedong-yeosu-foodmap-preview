@@ -30,6 +30,7 @@ const numberFromEnv = (name, fallback) => {
   const value = Number(process.env[name]);
   return Number.isFinite(value) && value > 0 ? value : fallback;
 };
+const cpuSlowdown = numberFromEnv('PERF_CPU_SLOWDOWN', 4);
 const budgets = {
   homeReadyMs: numberFromEnv('PERF_HOME_READY_MS', 7500),
   detailSkeletonMs: numberFromEnv('PERF_DETAIL_SKELETON_MS', 250),
@@ -38,11 +39,15 @@ const budgets = {
   menuReadyMs: numberFromEnv('PERF_MENU_READY_MS', 3500),
   menuBackMs: numberFromEnv('PERF_MENU_BACK_MS', 700),
   detailCloseMs: numberFromEnv('PERF_DETAIL_CLOSE_MS', 300),
-  homeDomNodes: numberFromEnv('PERF_HOME_DOM_NODES', 2200),
+  repeatMenuReadyMs: numberFromEnv('PERF_REPEAT_MENU_READY_MS', 1800),
+  homeDomNodes: numberFromEnv('PERF_HOME_DOM_NODES', 1600),
   detailDomNodes: numberFromEnv('PERF_DETAIL_DOM_NODES', 2500),
   menuDomNodes: numberFromEnv('PERF_MENU_DOM_NODES', 3500),
+  homeStoreCards: numberFromEnv('PERF_HOME_STORE_CARDS', 16),
   menuCardsAtReady: numberFromEnv('PERF_MENU_CARDS_AT_READY', 12),
   loadedMenuImagesAfterIdle: numberFromEnv('PERF_LOADED_MENU_IMAGES_AFTER_IDLE', 24),
+  homeTransferBytes: numberFromEnv('PERF_HOME_TRANSFER_BYTES', 6 * 1024 * 1024),
+  totalTransferBytes: numberFromEnv('PERF_TOTAL_TRANSFER_BYTES', 10 * 1024 * 1024),
   maxLongTaskMs: numberFromEnv('PERF_MAX_LONG_TASK_MS', 1000),
   totalLongTaskMs: numberFromEnv('PERF_TOTAL_LONG_TASK_MS', 4000)
 };
@@ -51,7 +56,7 @@ const report = {
   success: false,
   baseURL,
   targetStoreId,
-  profile: {viewport: '390x844', network: 'Fast 4G', cpuSlowdown: 4},
+  profile: {viewport: '390x844', network: 'Fast 4G', cpuSlowdown},
   budgets,
   measurements: {},
   checks: [],
@@ -81,6 +86,22 @@ if (proxyApiOrigin) {
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
   window.__qaLongTasks = [];
+  window.__qaRawPhotoMutations = [];
+  const recordRawPhotos = (root) => {
+    const images = root instanceof HTMLImageElement ? [root] : [...(root?.querySelectorAll?.('img') || [])];
+    for (const image of images) {
+      const src = image.getAttribute('src') || '';
+      if (!/\/(?:notion-recovery-180|notion-store-photos|store-photos|brand-apps)\/.*\.(?:png|jpe?g|gif)(?:[?#]|$)/i.test(src)) continue;
+      window.__qaRawPhotoMutations.push({src, className: image.className, parentClassName: image.parentElement?.className || ''});
+    }
+  };
+  addEventListener('DOMContentLoaded', () => {
+    recordRawPhotos(document);
+    new MutationObserver(records => records.forEach(record => {
+      if (record.type === 'attributes') recordRawPhotos(record.target);
+      record.addedNodes.forEach(recordRawPhotos);
+    })).observe(document.documentElement, {subtree: true, childList: true, attributes: true, attributeFilter: ['src']});
+  }, {once: true});
   new PerformanceObserver((list) => {
     window.__qaLongTasks.push(...list.getEntries().map((entry) => ({
       startTime: entry.startTime,
@@ -99,7 +120,7 @@ await cdp.send('Network.emulateNetworkConditions', {
   uploadThroughput: 90 * 1024,
   connectionType: 'cellular4g'
 });
-await cdp.send('Emulation.setCPUThrottlingRate', {rate: 4});
+await cdp.send('Emulation.setCPUThrottlingRate', {rate: cpuSlowdown});
 
 const relevantURL = (url) => {
   try {
@@ -149,6 +170,9 @@ try {
   report.measurements.homeReadyMs = elapsed(homeStartedAt);
   report.measurements.homeDomNodes = await domNodes();
   report.measurements.homeStoreCards = await page.locator('#storeGrid .store-card').count();
+  report.measurements.homeTransferBytes = await page.evaluate(() => Math.round(
+    performance.getEntriesByType('resource').reduce((sum, entry) => sum + (entry.transferSize || 0), 0)
+  ));
 
   await page.evaluate((storeId) => {
     window.__qaDetailStart = performance.now();
@@ -179,7 +203,7 @@ try {
   await menuButton.click();
   await page.waitForSelector('[data-store-menu-overlay]:not([hidden]) .store-menu-loading', {timeout: 1000});
   report.measurements.menuSkeletonMs = elapsed(menuStartedAt);
-  await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 5000});
+  await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
   report.measurements.menuReadyMs = elapsed(menuStartedAt);
   report.measurements.menuDomNodes = await domNodes();
   report.measurements.menuCardsAtReady = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card]').count();
@@ -228,8 +252,10 @@ try {
   await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true, null, {timeout: 1000});
   report.measurements.menuCloseMs = elapsed(menuCloseStartedAt);
 
+  const repeatMenuStartedAt = performance.now();
   await menuButton.click();
-  await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 5000});
+  await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
+  report.measurements.repeatMenuReadyMs = elapsed(repeatMenuStartedAt);
 
   const backStartedAt = performance.now();
   await page.goBack({waitUntil: 'commit'}).catch(() => {});
@@ -277,6 +303,21 @@ try {
       .sort((left, right) => right.durationMs - left.durationMs)
       .slice(0, 12)
   );
+  report.measurements.rawPhotoRequests = await page.evaluate(() => {
+    const rawPattern = /\/(?:notion-recovery-180|notion-store-photos|store-photos|brand-apps)\/.*\.(?:png|jpe?g|gif)(?:[?#]|$)/i;
+    return performance.getEntriesByType('resource')
+      .filter(entry => rawPattern.test(entry.name))
+      .map(entry => entry.name);
+  });
+  report.measurements.rawPhotoElements = await page.evaluate(() => [...document.images]
+    .filter(image => /\/(?:notion-recovery-180|notion-store-photos|store-photos|brand-apps)\/.*\.(?:png|jpe?g|gif)(?:[?#]|$)/i.test(image.currentSrc || image.src))
+    .map(image => ({src: image.currentSrc || image.src, className: image.className, parentClassName: image.parentElement?.className || ''})));
+  report.measurements.rawPhotoMutations = await page.evaluate(() => window.__qaRawPhotoMutations || []);
+  report.measurements.oversizedImageRequests = await page.evaluate(() =>
+    performance.getEntriesByType('resource')
+      .filter(entry => entry.initiatorType === 'img' && (entry.transferSize || 0) > 260 * 1024)
+      .map(entry => ({url: entry.name, transferBytes: Math.round(entry.transferSize || 0)}))
+  );
 
   check('home-ready', report.measurements.homeReadyMs, budgets.homeReadyMs);
   check('detail-skeleton-immediate', report.measurements.detailSkeletonMs, budgets.detailSkeletonMs);
@@ -285,14 +326,20 @@ try {
   check('menu-ready', report.measurements.menuReadyMs, budgets.menuReadyMs);
   check('menu-back-immediate', report.measurements.menuBackMs, budgets.menuBackMs);
   check('detail-close-immediate', report.measurements.detailCloseMs, budgets.detailCloseMs);
+  check('repeat-menu-ready', report.measurements.repeatMenuReadyMs, budgets.repeatMenuReadyMs);
   check('home-dom-budget', report.measurements.homeDomNodes, budgets.homeDomNodes);
   check('detail-dom-budget', report.measurements.detailDomNodes, budgets.detailDomNodes);
   check('menu-dom-budget', report.measurements.menuDomNodes, budgets.menuDomNodes);
+  check('home-store-card-budget', report.measurements.homeStoreCards, budgets.homeStoreCards);
   check('menu-cards-at-ready-budget', report.measurements.menuCardsAtReady, budgets.menuCardsAtReady);
   check('loaded-menu-images-after-idle-budget', report.measurements.loadedMenuImagesAfterIdle, budgets.loadedMenuImagesAfterIdle);
+  check('home-transfer-budget', report.measurements.homeTransferBytes, budgets.homeTransferBytes);
+  check('total-transfer-budget', report.measurements.transferBytes, budgets.totalTransferBytes);
   check('single-long-task-budget', report.measurements.maxLongTaskMs, budgets.maxLongTaskMs);
   check('total-long-task-budget', report.measurements.totalLongTaskMs, budgets.totalLongTaskMs);
   exactCheck('broken-visible-menu-images', report.measurements.brokenVisibleMenuImages, 0);
+  exactCheck('raw-photo-requests', report.measurements.rawPhotoRequests.length, 0);
+  exactCheck('oversized-image-requests', report.measurements.oversizedImageRequests.length, 0);
   exactCheck('progressive-menu-chunk-after-scroll', report.measurements.progressiveMenuChunkAfterScroll, true);
   exactCheck('relevant-network-failures', report.relevantNetworkFailures.length, 0);
   exactCheck('page-errors', report.errors.length, 0);
@@ -306,6 +353,7 @@ try {
 } finally {
   fs.writeFileSync('browser-customer-performance-budget-report.json', `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify(report, null, 2));
+  await context.unrouteAll({behavior: 'ignoreErrors'}).catch(() => {});
   await browser.close();
 }
 

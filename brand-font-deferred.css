@@ -1,0 +1,7 @@
+@font-face{
+  font-family:"Daedong Brush";
+  src:url("assets/fonts/daedong-nanum-brush-korean.woff2") format("woff2");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap
+}

@@ -19,6 +19,6 @@ assert.match(eventCss, /\.mukkebi-summer-close\{[^}]*touch-action:manipulation/)
 
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*immediate-close-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*immediate-close-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v12-performance-assets'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v15-mobile-performance-followup'/);
 
 console.log('First-entry popups immediate close regression: PASS');
