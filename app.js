@@ -489,6 +489,12 @@ function finishCatalogReady(value) {
   resolveCatalogReady?.(value);
   resolveCatalogReady = null;
 }
+function hydrateDeferredHomeImages() {
+  document.querySelectorAll('img[data-deferred-src]').forEach(image => {
+    image.src = image.dataset.deferredSrc;
+    delete image.dataset.deferredSrc;
+  });
+}
 window.setTimeout(() => {
   if (!resolveCatalogReady) return;
   console.warn('가게목록 준비 시간이 초과되어 나머지 화면을 먼저 엽니다.');
@@ -1551,9 +1557,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const entry = analyticsEntryContext();
   sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: entry.storeId ? 'store_entry' : 'home'});
   document.addEventListener('click', trackAnalyticsRouteClick, true);
-  initialize().then(result => finishCatalogReady(result)).catch(error => {
+  initialize().then(result => {
+    finishCatalogReady(result);
+    window.setTimeout(hydrateDeferredHomeImages, 6000);
+  }).catch(error => {
     console.error('가게목록 초기화를 완료하지 못했습니다.', error);
     finishCatalogReady([]);
+    window.setTimeout(hydrateDeferredHomeImages, 6000);
   });
   $('#mainSearch').addEventListener('input', () => $('#clearMainSearch').hidden = !$('#mainSearch').value);
   $('#mainSearch').addEventListener('keydown', event => { if (event.key === 'Enter') $('#searchBtn').click(); });
