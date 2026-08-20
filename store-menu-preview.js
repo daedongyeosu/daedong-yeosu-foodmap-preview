@@ -2,6 +2,7 @@
 
 (() => {
   const menuCache = new Map();
+  const menuPending = new Map();
   const INITIAL_MENU_RENDER_COUNT = 12;
   const MENU_RENDER_CHUNK_SIZE = 12;
   let activeStore = null;
@@ -48,7 +49,11 @@
     for (const store of sourceStores.filter(item => item?.hasMenu === true)) {
       const storeId = String(store.id || store.store_id || '');
       const detail = document.querySelector(`#modalContent .store-detail[data-store-id="${storeId}"]`);
-      if (!detail || detail.querySelector('[data-store-menu-preview]')) continue;
+      if (!detail) continue;
+      // The detail skeleton is already visible, so warm the menu in parallel
+      // instead of waiting for a second network round trip after the tap.
+      if (!menuCache.has(storeId) && !menuPending.has(storeId)) void loadMenu(storeId).catch(() => {});
+      if (detail.querySelector('[data-store-menu-preview]')) continue;
       const topStatus = detail.querySelector('[data-store-service-top-status]');
       const target = topStatus
         || detail.querySelector('.detail-routes')
@@ -70,9 +75,13 @@
 
   async function loadMenu(storeId) {
     if (menuCache.has(storeId)) return menuCache.get(storeId);
-    const menu = await window.daedongDataApi.menu(storeId);
-    menuCache.set(storeId, menu);
-    return menu;
+    if (menuPending.has(storeId)) return menuPending.get(storeId);
+    const pending = window.daedongDataApi.menu(storeId).then(menu => {
+      menuCache.set(storeId, menu);
+      return menu;
+    }).finally(() => menuPending.delete(storeId));
+    menuPending.set(storeId, pending);
+    return pending;
   }
 
   function menuDisplayPriority(item) {

@@ -1564,12 +1564,12 @@ async function fetchJson(url, fallback) {
 const yieldToMainThread = () => globalThis.scheduler?.yield
   ? globalThis.scheduler.yield()
   : new Promise(resolve => window.setTimeout(resolve, 0));
-async function normalizeStoresInBatches(rawStores, batchSize = 100) {
+async function normalizeStoresInBatches(rawStores, batchSize = 100, startIndex = 0) {
   const normalized = [];
   for (let index = 0; index < rawStores.length; index += 1) {
     const raw = rawStores[index];
     try {
-      normalized.push(normalizedStore(raw && typeof raw === 'object' ? raw : {}, index));
+      normalized.push(normalizedStore(raw && typeof raw === 'object' ? raw : {}, startIndex + index));
     } catch (error) {
       console.error('store-normalization-failed', raw?.store_id || raw?.id || index, error);
     }
@@ -1578,6 +1578,22 @@ async function normalizeStoresInBatches(rawStores, batchSize = 100) {
     }
   }
   return normalized.filter(Boolean);
+}
+function applyNormalizedCatalog(normalizedStores, totalCount, complete = false) {
+  allStores = normalizedStores;
+  canonicalStores = allStores.filter(store => store.customerVisible !== false && store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
+  searchableStores = canonicalStores;
+  coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);
+  stores = canonicalStores;
+  categories = [...new Set(stores.flatMap(storeCategories))].sort((a, b) => {
+    const ai = CATEGORY_PREFERRED.indexOf(a), bi = CATEGORY_PREFERRED.indexOf(b);
+    if (ai >= 0 || bi >= 0) return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi);
+    return a.localeCompare(b, 'ko');
+  });
+  window.__daedongCatalogProgress = Object.freeze({loaded: normalizedStores.length, total: totalCount, complete});
+  hydrateSelectedOrderApp();
+  $('#locationText').textContent = shortAddress(state.addressLabel || state.location, state.location);
+  renderCategories(); renderStores();
 }
 function deferBrandFont() {
   if (navigator.connection?.saveData) return;
@@ -1605,19 +1621,14 @@ async function initialize() {
   yeosuNeighborhoods=neighborhoodData.neighborhoods||[];neighborhoodByName=new Map(yeosuNeighborhoods.map(item=>[item.name,item]));
   photoResolver = new PhotoResolver(manifest, policy);
   const safeRawStores = Array.isArray(rawStores) ? rawStores : [];
-  allStores = await normalizeStoresInBatches(safeRawStores);
-  canonicalStores = allStores.filter(store => store.customerVisible !== false && store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
-  searchableStores = canonicalStores;
-  coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);
-  stores = canonicalStores;
-  categories = [...new Set(stores.flatMap(storeCategories))].sort((a, b) => {
-    const ai = CATEGORY_PREFERRED.indexOf(a), bi = CATEGORY_PREFERRED.indexOf(b);
-    if (ai >= 0 || bi >= 0) return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi);
-    return a.localeCompare(b, 'ko');
-  });
-  hydrateSelectedOrderApp();
-  $('#locationText').textContent = shortAddress(state.addressLabel || state.location, state.location);
-  renderCategories(); renderStores();
+  const firstPaintCount = Math.min(96, safeRawStores.length);
+  const firstStores = await normalizeStoresInBatches(safeRawStores.slice(0, firstPaintCount), 48);
+  applyNormalizedCatalog(firstStores, safeRawStores.length, firstPaintCount === safeRawStores.length);
+  if (firstPaintCount < safeRawStores.length) {
+    await yieldToMainThread();
+    const remainingStores = await normalizeStoresInBatches(safeRawStores.slice(firstPaintCount), 80, firstPaintCount);
+    applyNormalizedCatalog([...firstStores, ...remainingStores], safeRawStores.length, true);
+  }
 }
 function resetFilters() {
   state.query = ''; state.category = '전체'; state.brandId = '';

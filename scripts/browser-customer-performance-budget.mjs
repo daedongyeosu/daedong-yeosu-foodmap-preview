@@ -173,13 +173,18 @@ try {
   report.measurements.homeTransferBytes = await page.evaluate(() => Math.round(
     performance.getEntriesByType('resource').reduce((sum, entry) => sum + (entry.transferSize || 0), 0)
   ));
+  await page.waitForFunction((storeId) => Boolean(window.fxStoreById?.(storeId)), targetStoreId, {timeout: 45000});
 
   await page.evaluate((storeId) => {
     window.__qaDetailStart = performance.now();
     window.__qaDetailSkeletonAt = null;
+    window.__qaDetailReadyAt = null;
     const observer = new MutationObserver(() => {
       if (document.querySelector(`#modal:not([hidden]) .store-detail-loading[data-store-id="${storeId}"]`)) {
         window.__qaDetailSkeletonAt ??= performance.now();
+      }
+      if (document.querySelector(`#modal:not([hidden]) .store-detail:not(.store-detail-loading)[data-store-id="${storeId}"]`)) {
+        window.__qaDetailReadyAt ??= performance.now();
         observer.disconnect();
       }
     });
@@ -193,8 +198,8 @@ try {
   report.measurements.detailSkeletonMs = await page.evaluate(() => Math.round(
     (window.__qaDetailSkeletonAt || performance.now()) - window.__qaDetailStart
   ));
-  await page.waitForSelector(`#modal:not([hidden]) .store-detail:not(.store-detail-loading)[data-store-id="${targetStoreId}"]`, {timeout: 10000});
-  report.measurements.detailReadyMs = await page.evaluate(() => Math.round(performance.now() - window.__qaDetailStart));
+  await page.waitForFunction(() => window.__qaDetailReadyAt !== null, null, {timeout: 10000});
+  report.measurements.detailReadyMs = await page.evaluate(() => Math.round(window.__qaDetailReadyAt - window.__qaDetailStart));
   report.measurements.detailDomNodes = await domNodes();
 
   const menuButton = page.locator(`[data-store-menu-preview="${targetStoreId}"]`);
