@@ -14,6 +14,10 @@
   let menuRenderRun = 0;
   let menuRenderObserver = null;
   let menuImageObserver = null;
+  let menuImageQueue = [];
+  let activeMenuImageLoads = 0;
+  let menuImageLoadRun = 0;
+  const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2;
   let menuClosePointerAt = 0;
   const MENU_HISTORY = Object.freeze({
     preview: 'daedongMenuPreview',
@@ -381,28 +385,64 @@
     delete image.dataset.menuImageSrc;
   }
 
+  function drainMenuImageQueue() {
+    while (activeMenuImageLoads < MAX_CONCURRENT_MENU_IMAGE_LOADS && menuImageQueue.length) {
+      const {image, run} = menuImageQueue.shift();
+      if (run !== menuImageLoadRun || !image?.isConnected || !image.dataset.menuImageSrc) continue;
+      activeMenuImageLoads += 1;
+      const release = () => {
+        if (run !== menuImageLoadRun) return;
+        activeMenuImageLoads = Math.max(0, activeMenuImageLoads - 1);
+        delete image.dataset.menuImageQueued;
+        drainMenuImageQueue();
+      };
+      image.addEventListener('load', release, {once: true});
+      image.addEventListener('error', release, {once: true});
+      loadMenuImage(image);
+    }
+  }
+
+  function queueMenuImage(image) {
+    if (!image?.dataset?.menuImageSrc || image.dataset.menuImageQueued === '1') return;
+    image.dataset.menuImageQueued = '1';
+    menuImageQueue.push({image, run: menuImageLoadRun});
+    drainMenuImageQueue();
+  }
+
+  function resetMenuImageLoading({cancelActive = false} = {}) {
+    menuImageLoadRun += 1;
+    menuImageQueue = [];
+    activeMenuImageLoads = 0;
+    menuImageObserver?.disconnect();
+    menuImageObserver = null;
+    if (!cancelActive) return;
+    document.querySelectorAll('[data-store-menu-overlay] img[src]').forEach(image => {
+      image.removeAttribute('src');
+      delete image.dataset.menuImageQueued;
+    });
+  }
+
   function observeMenuImages(preview, {reset = false} = {}) {
     if (!preview) return;
     if (reset) {
-      menuImageObserver?.disconnect();
-      menuImageObserver = null;
+      resetMenuImageLoading();
     }
     const images = [...preview.querySelectorAll('img[data-menu-image-src]')];
     if (!images.length) return;
     if (typeof IntersectionObserver !== 'function') {
-      images.forEach(loadMenuImage);
+      images.forEach(queueMenuImage);
       return;
     }
     if (!menuImageObserver) {
       menuImageObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
-          loadMenuImage(entry.target);
+          queueMenuImage(entry.target);
           menuImageObserver?.unobserve(entry.target);
         });
       }, {
         root: preview.querySelector('.store-menu-scroll'),
-        rootMargin: '600px 0px'
+        rootMargin: '160px 0px'
       });
     }
     images.forEach(image => menuImageObserver.observe(image));
@@ -769,8 +809,7 @@
     menuRenderRun += 1;
     menuRenderObserver?.disconnect();
     menuRenderObserver = null;
-    menuImageObserver?.disconnect();
-    menuImageObserver = null;
+    resetMenuImageLoading({cancelActive: true});
     const overlay = document.querySelector('[data-store-menu-overlay]');
     if (overlay) {
       overlay.hidden = true;

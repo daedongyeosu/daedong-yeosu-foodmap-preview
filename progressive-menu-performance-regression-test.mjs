@@ -16,8 +16,12 @@ assert.match(menu, /menuRenderObserver = new IntersectionObserver[\s\S]*rootMarg
 assert.match(menu, /addEventListener\('pointerdown'[\s\S]*data-menu-preview-close[\s\S]*requestCloseMenuPreview\(\)/,
   '메뉴 닫기 버튼은 click을 기다리지 말고 터치 시작 즉시 닫혀야 합니다.');
 assert.match(menu, /data-menu-image-src=/);
-assert.match(menu, /new IntersectionObserver[\s\S]*rootMargin: '600px 0px'/,
+assert.match(menu, /const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2/,
+  '메뉴 사진을 한꺼번에 너무 많이 받아 터치를 막으면 안 됩니다.');
+assert.match(menu, /new IntersectionObserver[\s\S]*rootMargin: '160px 0px'/,
   '메뉴 사진은 스크롤 근처에 도달할 때만 불러와야 합니다.');
+assert.match(menu, /resetMenuImageLoading\(\{cancelActive: true\}\)/,
+  '메뉴를 닫으면 보이지 않는 사진 로딩도 취소해야 합니다.');
 assert.match(menuStyle, /content-visibility: auto/);
 assert.match(menuStyle, /contain-intrinsic-size: auto 360px/);
 
