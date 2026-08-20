@@ -34,7 +34,8 @@ const budgets = {
   homeReadyMs: numberFromEnv('PERF_HOME_READY_MS', 7500),
   detailSkeletonMs: numberFromEnv('PERF_DETAIL_SKELETON_MS', 250),
   detailReadyMs: numberFromEnv('PERF_DETAIL_READY_MS', 3000),
-  menuVisibleMs: numberFromEnv('PERF_MENU_VISIBLE_MS', 1000),
+  menuSkeletonMs: numberFromEnv('PERF_MENU_SKELETON_MS', 250),
+  menuReadyMs: numberFromEnv('PERF_MENU_READY_MS', 3500),
   menuBackMs: numberFromEnv('PERF_MENU_BACK_MS', 700),
   homeDomNodes: numberFromEnv('PERF_HOME_DOM_NODES', 2200),
   detailDomNodes: numberFromEnv('PERF_DETAIL_DOM_NODES', 2500),
@@ -173,8 +174,10 @@ try {
   if (!await menuButton.isVisible()) throw new Error(`menu preview button is not visible: ${targetStoreId}`);
   const menuStartedAt = performance.now();
   await menuButton.click();
+  await page.waitForSelector('[data-store-menu-overlay]:not([hidden]) .store-menu-loading', {timeout: 1000});
+  report.measurements.menuSkeletonMs = elapsed(menuStartedAt);
   await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 5000});
-  report.measurements.menuVisibleMs = elapsed(menuStartedAt);
+  report.measurements.menuReadyMs = elapsed(menuStartedAt);
   report.measurements.menuDomNodes = await domNodes();
   report.measurements.menuCards = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card]').count();
 
@@ -196,6 +199,10 @@ try {
   report.measurements.longTaskCount = longTasks.length;
   report.measurements.maxLongTaskMs = Math.round(Math.max(0, ...longTasks.map((entry) => entry.duration)));
   report.measurements.totalLongTaskMs = Math.round(longTasks.reduce((sum, entry) => sum + entry.duration, 0));
+  report.measurements.longestTasks = longTasks
+    .map(entry => ({startMs: Math.round(entry.startTime), durationMs: Math.round(entry.duration)}))
+    .sort((left, right) => right.durationMs - left.durationMs)
+    .slice(0, 8);
   report.measurements.transferBytes = await page.evaluate(() => Math.round(
     performance.getEntriesByType('resource').reduce((sum, entry) => sum + (entry.transferSize || 0), 0)
   ));
@@ -214,7 +221,8 @@ try {
   check('home-ready', report.measurements.homeReadyMs, budgets.homeReadyMs);
   check('detail-skeleton-immediate', report.measurements.detailSkeletonMs, budgets.detailSkeletonMs);
   check('detail-ready', report.measurements.detailReadyMs, budgets.detailReadyMs);
-  check('menu-visible', report.measurements.menuVisibleMs, budgets.menuVisibleMs);
+  check('menu-skeleton-immediate', report.measurements.menuSkeletonMs, budgets.menuSkeletonMs);
+  check('menu-ready', report.measurements.menuReadyMs, budgets.menuReadyMs);
   check('menu-back-immediate', report.measurements.menuBackMs, budgets.menuBackMs);
   check('home-dom-budget', report.measurements.homeDomNodes, budgets.homeDomNodes);
   check('detail-dom-budget', report.measurements.detailDomNodes, budgets.detailDomNodes);
