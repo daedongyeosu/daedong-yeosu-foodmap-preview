@@ -72,7 +72,13 @@ const check = async (condition, message) => {
 };
 
 async function checkStore(storeName, screenshotName) {
+  report.currentStore = storeName;
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(
+    () => window.daedongCatalogReady && typeof window.daedongCatalogReady.then === 'function',
+    null,
+    {polling: 25, timeout: 10000}
+  );
   await page.evaluate(() => window.daedongCatalogReady);
   await page.waitForFunction(() => typeof window.openStore === 'function', null, {timeout: 25000});
   await page.locator('#mainSearch').fill(storeName);
@@ -104,6 +110,11 @@ async function checkStore(storeName, screenshotName) {
   await check(trigger.isEnabled(), `${storeName} 다른 주문방법 보기 버튼 활성화`);
 
   await trigger.tap();
+  await page.waitForFunction(
+    () => document.querySelector('#modal:not([hidden]) .order-methods-sheet')?.getBoundingClientRect().height > 0,
+    null,
+    {polling: 25, timeout: 3000}
+  );
   await check(
     page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
     `${storeName} 첫 번째 터치로 다른 주문방법 선택창 열림`
@@ -130,6 +141,7 @@ try {
   await page.screenshot({path: 'browser-other-order-method-touch-failure.png', fullPage: false}).catch(() => {});
 } finally {
   fs.writeFileSync('browser-other-order-method-touch-report.json', `${JSON.stringify(report, null, 2)}\n`);
+  console.log(JSON.stringify(report, null, 2));
   await browser.close();
 }
 
