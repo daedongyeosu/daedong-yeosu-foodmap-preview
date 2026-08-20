@@ -156,10 +156,20 @@
     }
   }
 
+  let menuHistoryClosePending = false;
+  let menuHistoryCloseTimer = 0;
+
+  function suppressMenuClosePopstate() {
+    menuHistoryClosePending = true;
+    window.clearTimeout(menuHistoryCloseTimer);
+    menuHistoryCloseTimer = window.setTimeout(() => {
+      menuHistoryClosePending = false;
+    }, 1200);
+  }
+
   function requestMenuLayerBack(layer, fallback) {
     if (history.state?.[MENU_HISTORY[layer]]) {
       fallback();
-      window.daedongSuppressNextModalPop?.();
       history.back();
       return;
     }
@@ -173,7 +183,7 @@
       + Number(Boolean(state[MENU_HISTORY.order]));
     closeMenuPreview();
     if (depth > 0) {
-      window.daedongSuppressNextModalPop?.();
+      suppressMenuClosePopstate();
       history.go(-depth);
     }
   }
@@ -1034,6 +1044,12 @@
   });
 
   window.addEventListener('popstate', event => {
+    if (menuHistoryClosePending) {
+      menuHistoryClosePending = false;
+      window.clearTimeout(menuHistoryCloseTimer);
+      event.stopImmediatePropagation();
+      return;
+    }
     if (!document.body.classList.contains('store-menu-open')) return;
     let handled = false;
     const preview = document.querySelector('.store-menu-preview');
