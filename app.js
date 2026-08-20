@@ -1110,7 +1110,11 @@ function openPromoCarouselDetail(kind) {
 function appIcon(key, cls = '') {
   const meta = APP_META[key]; if (!meta) return '';
   if (EXTERNAL_APP_KEYS.includes(key)) return `<span class="${escapeHtml(`${cls} external-app-text-mark`.trim())}" aria-label="${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</span>`;
-  if (String(meta.icon).includes('/') || String(meta.icon).startsWith('http')) return `<img class="${cls}" src="${meta.icon}" alt="${meta.label}">`;
+  const compactHomeIcon = ['mukkebi','ddangyo'].includes(key)
+    ? document.querySelector(`[data-order-key="${key}"] img`)?.getAttribute('src')
+    : '';
+  const icon = compactHomeIcon || meta.icon;
+  if (String(icon).includes('/') || String(icon).startsWith('http') || String(icon).startsWith('data:image/')) return `<img class="${cls}" src="${icon}" alt="${meta.label}">`;
   return `<span class="${cls} miniemoji">${meta.icon}</span>`;
 }
 function externalAppNoticeMarkup() {
@@ -1514,6 +1518,24 @@ async function fetchJson(url, fallback) {
     window.clearTimeout(timeoutId);
   }
 }
+const yieldToMainThread = () => globalThis.scheduler?.yield
+  ? globalThis.scheduler.yield()
+  : new Promise(resolve => window.setTimeout(resolve, 0));
+async function normalizeStoresInBatches(rawStores, batchSize = 100) {
+  const normalized = [];
+  for (let index = 0; index < rawStores.length; index += 1) {
+    const raw = rawStores[index];
+    try {
+      normalized.push(normalizedStore(raw && typeof raw === 'object' ? raw : {}, index));
+    } catch (error) {
+      console.error('store-normalization-failed', raw?.store_id || raw?.id || index, error);
+    }
+    if ((index + 1) % batchSize === 0 && index + 1 < rawStores.length) {
+      await yieldToMainThread();
+    }
+  }
+  return normalized.filter(Boolean);
+}
 async function initialize() {
   renderHero(); renderPromos();
   const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([
@@ -1528,10 +1550,7 @@ async function initialize() {
   yeosuNeighborhoods=neighborhoodData.neighborhoods||[];neighborhoodByName=new Map(yeosuNeighborhoods.map(item=>[item.name,item]));
   photoResolver = new PhotoResolver(manifest, policy);
   const safeRawStores = Array.isArray(rawStores) ? rawStores : [];
-  allStores = safeRawStores.map((raw, index) => {
-    try { return normalizedStore(raw && typeof raw === 'object' ? raw : {}, index); }
-    catch (error) { console.error('store-normalization-failed', raw?.store_id || raw?.id || index, error); return null; }
-  }).filter(Boolean);
+  allStores = await normalizeStoresInBatches(safeRawStores);
   canonicalStores = allStores.filter(store => store.customerVisible !== false && store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
   searchableStores = canonicalStores;
   coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);
