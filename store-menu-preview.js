@@ -475,6 +475,7 @@
     if (!pendingItems.length) return;
 
     let chunkScheduled = false;
+    let chunkScheduleToken = 0;
     const scrollRoot = preview.querySelector('.store-menu-scroll');
     let onProgressiveScroll = null;
     const cleanupProgressiveTriggers = () => {
@@ -507,10 +508,19 @@
         cleanupProgressiveTriggers();
       }
     };
-    const scheduleNextChunk = () => {
-      if (chunkScheduled) return;
+    const scheduleNextChunk = (priority = 'idle') => {
+      if (chunkScheduled && priority !== 'interaction') return;
       chunkScheduled = true;
-      scheduleMenuRenderTask(appendChunk);
+      const token = ++chunkScheduleToken;
+      const runChunk = deadline => {
+        if (token !== chunkScheduleToken) return;
+        appendChunk(deadline);
+      };
+      if (priority === 'interaction') {
+        requestAnimationFrame(() => runChunk(null));
+        return;
+      }
+      scheduleMenuRenderTask(runChunk);
     };
     if (typeof IntersectionObserver === 'function' && status) {
       menuRenderObserver = new IntersectionObserver(entries => {
@@ -524,7 +534,7 @@
       onProgressiveScroll = () => {
         if (!scrollRoot) return;
         const distanceFromBottom = scrollRoot.scrollHeight - scrollRoot.scrollTop - scrollRoot.clientHeight;
-        if (distanceFromBottom <= 900) scheduleNextChunk();
+        if (distanceFromBottom <= 900) scheduleNextChunk('interaction');
       };
       scrollRoot?.addEventListener('scroll', onProgressiveScroll, {passive: true});
       return;
