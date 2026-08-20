@@ -39,6 +39,7 @@
   let serviceData = {programs: [], stores: {}};
   let serviceLoadState = 'loading';
   let catalogLoadState = 'loading';
+  let suppressServiceSurfaceMutations = false;
   let serviceReadyPromise = null;
   let catalogReadyPromise = null;
   let lastFocused = null;
@@ -1405,9 +1406,14 @@ function overviewSearchText(entry) {
   }
 
   function refreshServiceSurfaces() {
-    ensureOverviewButtons();
-    decorateStoreCards();
-    decorateStoreDetails();
+    suppressServiceSurfaceMutations = true;
+    try {
+      ensureOverviewButtons();
+      decorateStoreCards();
+      decorateStoreDetails();
+    } finally {
+      Promise.resolve().then(() => { suppressServiceSurfaceMutations = false; });
+    }
   }
 
   async function loadServiceData() {
@@ -1705,16 +1711,22 @@ document.addEventListener('input', event => {
       serviceSurfaceRefreshFrame = 0;
       const refreshKind = pendingServiceSurfaceRefresh;
       pendingServiceSurfaceRefresh = 0;
-      if (refreshKind & SERVICE_REFRESH_CARDS) {
-        decorateStoreCards();
-        const overlay = document.querySelector('[data-store-service-overview-overlay]');
-        if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
+      suppressServiceSurfaceMutations = true;
+      try {
+        if (refreshKind & SERVICE_REFRESH_CARDS) {
+          decorateStoreCards();
+          const overlay = document.querySelector('[data-store-service-overview-overlay]');
+          if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
+        }
+        if (refreshKind & SERVICE_REFRESH_DETAILS) decorateStoreDetails();
+      } finally {
+        Promise.resolve().then(() => { suppressServiceSurfaceMutations = false; });
       }
-      if (refreshKind & SERVICE_REFRESH_DETAILS) decorateStoreDetails();
     });
   }
 
   new MutationObserver(mutations => {
+    if (suppressServiceSurfaceMutations) return;
     const kind = mutations.reduce((value, mutation) => value | mutationServiceSurfaceKind(mutation), 0);
     if (kind) scheduleServiceSurfaceRefresh(kind);
   }).observe(document.documentElement, {childList: true, subtree: true});

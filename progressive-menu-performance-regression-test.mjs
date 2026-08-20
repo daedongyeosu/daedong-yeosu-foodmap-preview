@@ -80,6 +80,8 @@ assert.match(storeService, /refreshKind & SERVICE_REFRESH_CARDS[\s\S]*decorateSt
   '목록과 상세 장식은 각각의 화면 변경에서만 갱신해야 합니다.');
 assert.match(storeService, /closest\('\[data-store-menu-overlay\], ' \+ serviceDecorationSelector\)[\s\S]*if \(kind\) scheduleServiceSurfaceRefresh\(kind\)/,
   '메뉴 및 주문 혜택 자체 변경으로 전체 화면 감시가 재귀 실행되면 안 됩니다.');
+assert.match(storeService, /suppressServiceSurfaceMutations = true[\s\S]*Promise\.resolve\(\)\.then\(\(\) => \{ suppressServiceSurfaceMutations = false; \}\)[\s\S]*if \(suppressServiceSurfaceMutations\) return/,
+  '주문 혜택 장식이 만든 DOM 변경을 같은 감시기가 다시 처리하면 안 됩니다.');
 assert.match(html, /store-service-info\.js\?v=[^"\n]*surface-scoped-refresh-1/,
   '설치형 앱도 범위가 제한된 화면 감시 코드를 즉시 받아야 합니다.');
 
