@@ -61,7 +61,8 @@ const report = {
   measurements: {},
   checks: [],
   errors: [],
-  relevantNetworkFailures: []
+  relevantNetworkFailures: [],
+  intentionalNetworkCancellations: []
 };
 
 const browser = await chromium.launch(launchOptions);
@@ -131,13 +132,27 @@ const relevantURL = (url) => {
     return false;
   }
 };
+let menuImageCancellationExpected = false;
 page.on('pageerror', (error) => report.errors.push(error.message));
 page.on('requestfailed', (request) => {
   if (!relevantURL(request.url())) return;
+  const error = request.failure()?.errorText || 'request failed';
+  const isExpectedMenuImageCancellation = menuImageCancellationExpected
+    && request.resourceType() === 'image'
+    && /\/store-menu-content\//.test(request.url())
+    && /ERR_ABORTED/i.test(error);
+  if (isExpectedMenuImageCancellation) {
+    report.intentionalNetworkCancellations.push({
+      url: request.url(),
+      type: request.resourceType(),
+      error
+    });
+    return;
+  }
   report.relevantNetworkFailures.push({
     url: request.url(),
     type: request.resourceType(),
-    error: request.failure()?.errorText || 'request failed'
+    error
   });
 });
 page.on('response', (response) => {
@@ -254,6 +269,7 @@ try {
     > report.measurements.menuCardsAtReady;
 
   const menuCloseStartedAt = performance.now();
+  menuImageCancellationExpected = true;
   await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-preview-close]').last().dispatchEvent('pointerdown', {
     pointerType: 'touch',
     isPrimary: true,

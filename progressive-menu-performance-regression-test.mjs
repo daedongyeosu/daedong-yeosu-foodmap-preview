@@ -5,6 +5,7 @@ const html = fs.readFileSync('index.html', 'utf8');
 const menu = fs.readFileSync('store-menu-preview.js', 'utf8');
 const menuStyle = fs.readFileSync('store-menu-preview.css', 'utf8');
 const rc4 = fs.readFileSync('rc4-fixes.js', 'utf8');
+const performanceBudget = fs.readFileSync('scripts/browser-customer-performance-budget.mjs', 'utf8');
 
 assert.match(menu, /const INITIAL_MENU_RENDER_COUNT = 12/);
 assert.match(menu, /menu\.items\.slice\(0, INITIAL_MENU_RENDER_COUNT\)\.map\(item => menuCardMarkup\(item\)\)/,
@@ -24,6 +25,10 @@ assert.match(menu, /new IntersectionObserver[\s\S]*rootMargin: '160px 0px'/,
   '메뉴 사진은 스크롤 근처에 도달할 때만 불러와야 합니다.');
 assert.match(menu, /resetMenuImageLoading\(\{cancelActive: true\}\)/,
   '메뉴를 닫으면 보이지 않는 사진 로딩도 취소해야 합니다.');
+assert.match(performanceBudget, /menuImageCancellationExpected = true[\s\S]*data-menu-preview-close/,
+  '성능 검사는 메뉴 닫기 직전부터 의도된 이미지 취소를 구분해야 합니다.');
+assert.match(performanceBudget, /request\.resourceType\(\) === 'image'[\s\S]*\/\\\/store-menu-content\\\/[\s\S]*ERR_ABORTED/,
+  '성능 검사는 메뉴 사진의 ERR_ABORTED만 의도된 취소로 분류해야 합니다.');
 assert.match(menuStyle, /content-visibility: auto/);
 assert.match(menuStyle, /contain-intrinsic-size: auto 360px/);
 
