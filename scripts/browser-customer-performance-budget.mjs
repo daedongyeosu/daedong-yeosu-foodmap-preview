@@ -261,6 +261,8 @@ try {
   });
   await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true, null, {timeout: 1000});
   report.measurements.menuCloseMs = elapsed(menuCloseStartedAt);
+  await page.waitForFunction(() => !document.documentElement.dataset.daedongMenuHistoryClose
+    && !history.state?.daedongMenuPreview, null, {timeout: 2000});
 
   const repeatMenuStartedAt = performance.now();
   await menuButton.evaluate(button => button.click());

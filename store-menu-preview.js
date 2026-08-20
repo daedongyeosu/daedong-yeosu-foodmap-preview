@@ -45,32 +45,31 @@
   }
 
   function ensureMenuEntryButton() {
-    const sourceStores = typeof stores !== 'undefined' && Array.isArray(stores) ? stores : [];
-    for (const store of sourceStores.filter(item => item?.hasMenu === true)) {
-      const storeId = String(store.id || store.store_id || '');
-      const detail = document.querySelector(`#modalContent .store-detail[data-store-id="${storeId}"]`);
-      if (!detail) continue;
-      // The detail skeleton is already visible, so warm the menu in parallel
-      // instead of waiting for a second network round trip after the tap.
-      if (!menuCache.has(storeId) && !menuPending.has(storeId)) void loadMenu(storeId).catch(() => {});
-      if (detail.querySelector('[data-store-menu-preview]')) continue;
-      const topStatus = detail.querySelector('[data-store-service-top-status]');
-      const target = topStatus
-        || detail.querySelector('.detail-routes')
-        || detail.querySelector('.detail-personal-actions');
-      if (!target) continue;
-      const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
-      target.insertAdjacentHTML(topStatus ? 'afterend' : 'beforebegin', `
-        <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
-          ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="">` : ''}
-          <span>
-            <b>음식보기</b>
-            <small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small>
-          </span>
-          <strong>메뉴 보기 ›</strong>
-        </button>
-      `);
-    }
+    const detail = document.querySelector('#modalContent .store-detail[data-store-id]');
+    if (!detail) return;
+    const storeId = String(detail.dataset.storeId || '');
+    const store = storeById(storeId);
+    if (!store || store.hasMenu !== true) return;
+    // The detail skeleton is already visible, so warm the menu in parallel
+    // instead of waiting for a second network round trip after the tap.
+    if (!menuCache.has(storeId) && !menuPending.has(storeId)) void loadMenu(storeId).catch(() => {});
+    if (detail.querySelector('[data-store-menu-preview]')) return;
+    const topStatus = detail.querySelector('[data-store-service-top-status]');
+    const target = topStatus
+      || detail.querySelector('.detail-routes')
+      || detail.querySelector('.detail-personal-actions');
+    if (!target) return;
+    const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
+    target.insertAdjacentHTML(topStatus ? 'afterend' : 'beforebegin', `
+      <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
+        ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="">` : ''}
+        <span>
+          <b>음식보기</b>
+          <small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small>
+        </span>
+        <strong>메뉴 보기 ›</strong>
+      </button>
+    `);
   }
 
   async function loadMenu(storeId) {
@@ -1118,6 +1117,7 @@
     restore: async saved => Boolean(await openMenuPreview(saved?.storeId, null, {returnState: saved}))
   });
 
-  new MutationObserver(ensureMenuEntryButton).observe(document.documentElement, {childList: true, subtree: true});
+  const menuEntryRoot = document.querySelector('#modalContent');
+  if (menuEntryRoot) new MutationObserver(ensureMenuEntryButton).observe(menuEntryRoot, {childList: true, subtree: true});
   ensureMenuEntryButton();
 })();
