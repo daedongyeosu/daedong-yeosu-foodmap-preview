@@ -1301,6 +1301,7 @@ function openModal(html) {
   setTimeout(() => $('.modal-close')?.focus(), 0);
 }
 function hardClose({fromPop = false} = {}) {
+  if (document.documentElement.dataset.daedongMenuCloseGesture === '1') return;
   detailCarousel?.destroy(); detailCarousel = null;
   const modal = $('#modal'); if (modal) { modal.hidden = true; modal.className = 'modal'; modal.removeAttribute('data-app-browser-key'); modal.removeAttribute('data-app-browser-category'); modal.removeAttribute('data-active-store-id'); }
   if ($('#modalContent')) $('#modalContent').innerHTML = '';
