@@ -158,6 +158,15 @@
 
   let menuHistoryClosePending = false;
   let menuHistoryCloseTimer = 0;
+  let menuCloseGestureTimer = 0;
+
+  function guardMenuCloseGesture() {
+    document.documentElement.dataset.daedongMenuCloseGesture = '1';
+    window.clearTimeout(menuCloseGestureTimer);
+    menuCloseGestureTimer = window.setTimeout(() => {
+      delete document.documentElement.dataset.daedongMenuCloseGesture;
+    }, 600);
+  }
 
   function suppressMenuClosePopstate() {
     menuHistoryClosePending = true;
@@ -183,6 +192,7 @@
     const depth = Number(Boolean(state[MENU_HISTORY.preview]))
       + Number(Boolean(state[MENU_HISTORY.search]))
       + Number(Boolean(state[MENU_HISTORY.order]));
+    guardMenuCloseGesture();
     closeMenuPreview();
     if (depth > 0) {
       suppressMenuClosePopstate();
