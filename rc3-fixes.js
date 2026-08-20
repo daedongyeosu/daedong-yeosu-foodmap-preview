@@ -136,7 +136,7 @@ function rc3PrimaryCardChannels(store) {
 function rc3PrimaryChannelIcon(key, channel, className) {
   const cls = escapeHtml(className);
   if (key === 'brand') {
-    if (channel?.icon) return `<img class="${cls}" src="${escapeHtml(channel.icon)}" alt="브랜드앱" title="브랜드앱">`;
+    if (channel?.icon) return `<img class="${cls}" src="${escapeHtml(mobilePhotoPath(channel.icon))}" alt="브랜드앱" title="브랜드앱">`;
     return `<svg class="${cls} rc3-order-channel-svg" role="img" aria-label="브랜드앱"><use href="assets/ui/ui-icons.svg#store"></use></svg>`;
   }
   if (key === 'phone') return `<img class="${cls}" src="assets/ui/phone.svg" alt="전화주문" title="전화주문">`;
@@ -159,39 +159,59 @@ function rc3RailCard(store, spec) {
   const channelIcons=rc3PrimaryCardIcons(store);
   return `<article class="rail-card" data-rail-card-store="${escapeHtml(store.id)}" data-rc3-rail-open="${escapeHtml(store.id)}"><button type="button" class="rail-card-open rc3-rail-card-open glass-action">${fxCardPhoto(store)}<span class="rail-card-copy"><h3>${escapeHtml(store.name)}</h3><p>${locationLabel?`${escapeHtml(locationLabel)} · `:''}${escapeHtml(store.area || RC3_REGION_NAME)} · ${escapeHtml(store.cat)}</p></span></button><footer><span class="rail-channel-icons" aria-label="이용 가능한 기본 주문방법">${channelIcons||'<span class="rail-method">주문방법 확인</span>'}</span></footer></article>`;
 }
+let rc3RailRenderVersion = 0;
 fxRenderRails = function rc3RenderRails() {
   const root = $('#recommendRails');
   if (!root) return;
+  const version = ++rc3RailRenderVersion;
+  if (window.__daedongDeferRailRender) return;
   if (state.category !== '전체' || state.query || state.brandId) {
     root.hidden = true;
     root.innerHTML = '';
+    root.removeAttribute('aria-busy');
     return;
   }
   root.hidden = false;
-  try {
-    const globallyUsed = new Set();
-    const useCounts = new Map();
-    const recentLeads = [];
-    root.innerHTML = fxSelectedRails().map(spec => {
+  root.innerHTML = '';
+  root.setAttribute('aria-busy', 'true');
+  const globallyUsed = new Set();
+  const useCounts = new Map();
+  const recentLeads = [];
+  const specs = fxSelectedRails();
+  let index = 0;
+  const renderNext = () => {
+    if (version !== rc3RailRenderVersion || window.__daedongDeferRailRender) return;
+    const spec = specs[index++];
+    if (!spec) {
+      root.removeAttribute('aria-busy');
+      root.querySelectorAll('p').forEach(node => {
+        if (node.textContent.trim() === '추천 가게를 확인 중입니다.') node.remove();
+      });
+      return;
+    }
+    try {
+      const rankedStores = fxRankStores(spec);
       const diversifiedCards = rc2DiversifyRailLead(
-        sortStoresByBusinessStatus(rc2RailCandidates(spec, globallyUsed, 8, useCounts)),
+        sortStoresByBusinessStatus(rc2RailCandidates(spec, globallyUsed, 8, useCounts, rankedStores)),
         recentLeads
       );
-      const cards = rc2ApplyManagedRegionPriority(diversifiedCards, spec, 8, fxRankStores(spec));
+      const cards = rc2ApplyManagedRegionPriority(diversifiedCards, spec, 8, rankedStores);
       if (cards[0]) {
         recentLeads.push(cards[0]);
         if (recentLeads.length > 3) recentLeads.shift();
       }
-      const allCandidates = fxRankStores(spec);
-      return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">현재 표시할 추천 가게가 없습니다.</p>'}</div></section>`;
-    }).join('');
-  } catch (error) {
-    console.error('recommendation-render-failed', error);
-    const fallback = (Array.isArray(stores) ? stores : []).slice(0, 8).map(store => rc3RailCard(store, {kind: 'fallback'})).join('');
-    root.innerHTML = `<section class="recommend-rail" data-rail="fallback"><header class="recommend-rail-head"><div><h2>오늘의 추천</h2><p>현재 확인 가능한 ${escapeHtml(RC3_REGION_NAME)} 가게</p></div></header><div class="recommend-track">${fallback || '<p class="empty">가게 정보를 다시 불러와 주세요.</p>'}</div></section>`;
-  } finally {
-    root.querySelectorAll('p').forEach(node => { if (node.textContent.trim() === '추천 가게를 확인 중입니다.') node.remove(); });
-  }
+      const allCandidates = rankedStores;
+      root.insertAdjacentHTML('beforeend', `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">현재 표시할 추천 가게가 없습니다.</p>'}</div></section>`);
+    } catch (error) {
+      console.error('recommendation-render-failed', error);
+      if (!root.children.length) {
+        const fallback = (Array.isArray(stores) ? stores : []).slice(0, 8).map(store => rc3RailCard(store, {kind: 'fallback'})).join('');
+        root.innerHTML = `<section class="recommend-rail" data-rail="fallback"><header class="recommend-rail-head"><div><h2>오늘의 추천</h2><p>현재 확인 가능한 ${escapeHtml(RC3_REGION_NAME)} 가게</p></div></header><div class="recommend-track">${fallback || '<p class="empty">가게 정보를 다시 불러와 주세요.</p>'}</div></section>`;
+      }
+    }
+    window.setTimeout(renderNext, 0);
+  };
+  window.setTimeout(renderNext, 0);
 };
 
 renderStores = function rc3RenderStores(options = {}) {

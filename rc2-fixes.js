@@ -350,18 +350,31 @@ fxSelectedRails = function rc2SelectedRails() {
   return ids.map(id => RC2_RAIL_SPECS.find(spec => spec.id === id));
 };
 
+let rc2BrandKeyCache = new WeakMap();
 function rc2BrandKey(store) {
+  const cached = store && typeof store === 'object' ? rc2BrandKeyCache.get(store) : undefined;
+  if (cached !== undefined) return cached;
   const direct = fxBrandByStore.get(String(store.id));
-  if (direct?.brandName) return normalize(direct.brandName);
+  if (direct?.brandName) {
+    const result = normalize(direct.brandName);
+    rc2BrandKeyCache.set(store, result);
+    return result;
+  }
   for (const group of BRAND_GROUPS) {
     const brand = group.brands.find(item => brandMatchesStore(store, item));
-    if (brand) return normalize(brand.label);
+    if (brand) {
+      const result = normalize(brand.label);
+      rc2BrandKeyCache.set(store, result);
+      return result;
+    }
   }
   const base = String(store.realBusinessName || store.name)
     .replace(/\([^)]*\)/g, '')
     .replace(/여수|돌산|문수|국동|봉산|웅천|학동|교동|신기|덕충|죽림|미평|여서|무선|소호|중앙|충무|봉강|안산|엑스포/g, '')
     .replace(/(?:직영|본|\d+호)?지?점.*$/g, '');
-  return normalize(base) || normalize(store.name);
+  const result = normalize(base) || normalize(store.name);
+  if (store && typeof store === 'object') rc2BrandKeyCache.set(store, result);
+  return result;
 }
 
 function rc2RepresentativeMethod(store) {
@@ -465,13 +478,13 @@ function rc2ApplyManagedRegionPriority(cards, spec, limit, rankedStores = []) {
   return normal.slice(0, limit);
 }
 
-function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map()) {
+function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map(), rankedInput = null) {
   const brandKeys = new Set();
   const photoKeys = new Set();
   const selectedIds = new Set();
   const result = [];
   const groups = [];
-  const rankedStores = fxRankStores(spec);
+  const rankedStores = rankedInput || fxRankStores(spec);
   for (const store of rankedStores) {
     const status = storeBusinessStatusPriority(store);
     const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
@@ -691,7 +704,7 @@ fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
     const category = value || '전체';
     if (!$('#modal')?.hidden && $('#modalContent .direct-brand-browser')) rc2ReplaceModal();
     const brands = fxDirectBrands().filter(brand => category === '전체' || brand.category === category);
-    const cards = brands.map(brand => `<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}">${brand.icon ? `<img src="${escapeHtml(brand.icon)}" alt="">` : rc2Icon('other', 'order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');
+    const cards = brands.map(brand => `<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}">${brand.icon ? `<img src="${escapeHtml(mobilePhotoPath(brand.icon))}" alt="">` : rc2Icon('other', 'order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');
     openModal(`<section class="brand-app-hub direct-brand-browser"><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p>${rc2BrandCategoryChips(category)}${rc2SelectedCategoryMarkup(category)}<div class="brand-app-grid">${cards}</div></section>`);
     rc2RevealSelectedCategory();
     return;
@@ -712,7 +725,7 @@ fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
     const unique = new Map();
     for (const item of fxHappyData.currentScreenBrands || []) if (item.category === value && item.currentScreenConfirmed) unique.set(item.brandName, item);
     const brands = [...unique.values()];
-    openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><div class="happyorder-brand-grid">${brands.map(brand => `<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}">${brand.brandSelectionImage ? `<img src="${escapeHtml(brand.brandSelectionImage)}" alt="">` : '<img src="assets/order-channels/happyorder.png" alt="">'}<b>${escapeHtml(brand.brandName)}</b></button>`).join('')}</div></section>`);
+    openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><div class="happyorder-brand-grid">${brands.map(brand => `<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}">${brand.brandSelectionImage ? `<img src="${escapeHtml(mobilePhotoPath(brand.brandSelectionImage))}" alt="">` : '<img src="assets/order-channels/happyorder.mobile.webp" alt="">'}<b>${escapeHtml(brand.brandName)}</b></button>`).join('')}</div></section>`);
     return;
   }
   if (view === 'happy-stores') {
@@ -1059,6 +1072,7 @@ fxInitialize = async function rc2Initialize() {
   fxHappyData = happy;
   fxPhoneData = phone;
   fxBuildIndexes();
+  rc2BrandKeyCache = new WeakMap();
   rc2NaverByStore.clear();
   for (const item of naver.stores || []) rc2NaverByStore.set(String(item.store_id), item);
   APP_META.phone.icon = 'assets/ui/phone.svg';

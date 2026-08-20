@@ -39,6 +39,7 @@
   let serviceData = {programs: [], stores: {}};
   let serviceLoadState = 'loading';
   let catalogLoadState = 'loading';
+  let suppressServiceSurfaceMutations = false;
   let serviceReadyPromise = null;
   let catalogReadyPromise = null;
   let lastFocused = null;
@@ -1405,9 +1406,14 @@ function overviewSearchText(entry) {
   }
 
   function refreshServiceSurfaces() {
-    ensureOverviewButtons();
-    decorateStoreCards();
-    decorateStoreDetails();
+    suppressServiceSurfaceMutations = true;
+    try {
+      ensureOverviewButtons();
+      decorateStoreCards();
+      decorateStoreDetails();
+    } finally {
+      Promise.resolve().then(() => { suppressServiceSurfaceMutations = false; });
+    }
   }
 
   async function loadServiceData() {
@@ -1652,12 +1658,77 @@ document.addEventListener('input', event => {
     }
   }, true);
 
-  new MutationObserver(() => {
-    ensureOverviewButtons();
-    decorateStoreCards();
-    decorateStoreDetails();
-    const overlay = document.querySelector('[data-store-service-overview-overlay]');
-    if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
+  const serviceSurfaceSelector = [
+    '#storeGrid',
+    '#modalContent .store-detail[data-store-id]',
+    '#recommendSection .section-head',
+    '.main-search-row',
+    '.rail-card[data-rail-card-store]',
+    '.rail-card[data-rail-store-id]',
+    '.rc5-category-card[data-rc5-store]',
+    '.channel-store-card[data-channel-store-id]',
+    '.app-browser-card[data-search-store-id]',
+    '.app-browser-card[data-app-store-id]',
+    '.phone-order-card[data-phone-store-id]',
+    '.phone-order-card[data-phone-route-store-id]',
+    '[data-app-store-order]'
+  ].join(',');
+  const serviceDecorationSelector = [
+    '[data-store-service-card-meta]',
+    '[data-store-service-card-status-only]',
+    '[data-store-service-detail]',
+    '[data-store-service-top-status]',
+    '[data-store-service-overview-open]',
+    '[data-store-finder-quick]'
+  ].join(',');
+  const SERVICE_REFRESH_CARDS = 1;
+  const SERVICE_REFRESH_DETAILS = 2;
+  let serviceSurfaceRefreshFrame = 0;
+  let pendingServiceSurfaceRefresh = 0;
+
+  function mutationServiceSurfaceKind(mutation) {
+    const target = mutation.target instanceof Element ? mutation.target : mutation.target?.parentElement;
+    if (target?.closest('[data-store-menu-overlay], ' + serviceDecorationSelector)) return 0;
+    let kind = 0;
+    if (target?.closest('#modalContent')) kind |= SERVICE_REFRESH_DETAILS;
+    if (target?.closest('#storeGrid')) kind |= SERVICE_REFRESH_CARDS;
+    for (const node of [...mutation.addedNodes, ...mutation.removedNodes]) {
+      if (!(node instanceof Element) || node.matches(serviceDecorationSelector)) continue;
+      if (node.closest('#modalContent') || node.matches('.store-detail[data-store-id]') || node.querySelector('.store-detail[data-store-id]')) {
+        kind |= SERVICE_REFRESH_DETAILS;
+      }
+      if (node.closest('#storeGrid') || node.matches(serviceSurfaceSelector) || node.querySelector(serviceSurfaceSelector)) {
+        kind |= SERVICE_REFRESH_CARDS;
+      }
+    }
+    return kind;
+  }
+
+  function scheduleServiceSurfaceRefresh(kind) {
+    pendingServiceSurfaceRefresh |= kind;
+    if (serviceSurfaceRefreshFrame) return;
+    serviceSurfaceRefreshFrame = window.requestAnimationFrame(() => {
+      serviceSurfaceRefreshFrame = 0;
+      const refreshKind = pendingServiceSurfaceRefresh;
+      pendingServiceSurfaceRefresh = 0;
+      suppressServiceSurfaceMutations = true;
+      try {
+        if (refreshKind & SERVICE_REFRESH_CARDS) {
+          decorateStoreCards();
+          const overlay = document.querySelector('[data-store-service-overview-overlay]');
+          if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
+        }
+        if (refreshKind & SERVICE_REFRESH_DETAILS) decorateStoreDetails();
+      } finally {
+        Promise.resolve().then(() => { suppressServiceSurfaceMutations = false; });
+      }
+    });
+  }
+
+  new MutationObserver(mutations => {
+    if (suppressServiceSurfaceMutations) return;
+    const kind = mutations.reduce((value, mutation) => value | mutationServiceSurfaceKind(mutation), 0);
+    if (kind) scheduleServiceSurfaceRefresh(kind);
   }).observe(document.documentElement, {childList: true, subtree: true});
 
   window.setInterval(() => {

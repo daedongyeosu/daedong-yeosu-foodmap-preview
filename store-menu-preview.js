@@ -2,6 +2,7 @@
 
 (() => {
   const menuCache = new Map();
+  const menuPending = new Map();
   const INITIAL_MENU_RENDER_COUNT = 12;
   const MENU_RENDER_CHUNK_SIZE = 12;
   let activeStore = null;
@@ -13,6 +14,10 @@
   let menuRenderRun = 0;
   let menuRenderObserver = null;
   let menuImageObserver = null;
+  let menuImageQueue = [];
+  let activeMenuImageLoads = 0;
+  let menuImageLoadRun = 0;
+  const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2;
   let menuClosePointerAt = 0;
   const MENU_HISTORY = Object.freeze({
     preview: 'daedongMenuPreview',
@@ -44,35 +49,42 @@
   }
 
   function ensureMenuEntryButton() {
-    const sourceStores = typeof stores !== 'undefined' && Array.isArray(stores) ? stores : [];
-    for (const store of sourceStores.filter(item => item?.hasMenu === true)) {
-      const storeId = String(store.id || store.store_id || '');
-      const detail = document.querySelector(`#modalContent .store-detail[data-store-id="${storeId}"]`);
-      if (!detail || detail.querySelector('[data-store-menu-preview]')) continue;
-      const topStatus = detail.querySelector('[data-store-service-top-status]');
-      const target = topStatus
-        || detail.querySelector('.detail-routes')
-        || detail.querySelector('.detail-personal-actions');
-      if (!target) continue;
-      const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
-      target.insertAdjacentHTML(topStatus ? 'afterend' : 'beforebegin', `
-        <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
-          ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="">` : ''}
-          <span>
-            <b>음식보기</b>
-            <small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small>
-          </span>
-          <strong>메뉴 보기 ›</strong>
-        </button>
-      `);
-    }
+    const detail = document.querySelector('#modalContent .store-detail[data-store-id]');
+    if (!detail) return;
+    const storeId = String(detail.dataset.storeId || '');
+    const store = storeById(storeId);
+    if (!store || store.hasMenu !== true) return;
+    // The detail skeleton is already visible, so warm the menu in parallel
+    // instead of waiting for a second network round trip after the tap.
+    if (!menuCache.has(storeId) && !menuPending.has(storeId)) void loadMenu(storeId).catch(() => {});
+    if (detail.querySelector('[data-store-menu-preview]')) return;
+    const topStatus = detail.querySelector('[data-store-service-top-status]');
+    const target = topStatus
+      || detail.querySelector('.detail-routes')
+      || detail.querySelector('.detail-personal-actions');
+    if (!target) return;
+    const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
+    target.insertAdjacentHTML(topStatus ? 'afterend' : 'beforebegin', `
+      <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
+        ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="">` : ''}
+        <span>
+          <b>음식보기</b>
+          <small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small>
+        </span>
+        <strong>메뉴 보기 ›</strong>
+      </button>
+    `);
   }
 
   async function loadMenu(storeId) {
     if (menuCache.has(storeId)) return menuCache.get(storeId);
-    const menu = await window.daedongDataApi.menu(storeId);
-    menuCache.set(storeId, menu);
-    return menu;
+    if (menuPending.has(storeId)) return menuPending.get(storeId);
+    const pending = window.daedongDataApi.menu(storeId).then(menu => {
+      menuCache.set(storeId, menu);
+      return menu;
+    }).finally(() => menuPending.delete(storeId));
+    menuPending.set(storeId, pending);
+    return pending;
   }
 
   function menuDisplayPriority(item) {
@@ -131,15 +143,15 @@
     }
     if (key === 'brand') {
       return channel?.icon
-        ? `<img src="${escapeMenuHtml(channel.icon)}" alt="">`
+        ? `<img src="${escapeMenuHtml(window.mobilePhotoPath?.(channel.icon) || channel.icon)}" alt="">`
         : storeIconMarkup();
     }
     if (key === 'mukkebi' || key === 'ddangyo') {
       const compactHomeIcon = document.querySelector(`[data-order-key="${key}"] img`)?.getAttribute('src');
-      const fallback = key === 'mukkebi' ? 'assets/mukkebi-v7.png' : 'assets/ddangyo-v7.png';
+      const fallback = key === 'mukkebi' ? 'assets/mukkebi-v7.mobile.webp' : 'assets/ddangyo-v7.mobile.webp';
       return `<img src="${escapeMenuHtml(compactHomeIcon || fallback)}" alt="">`;
     }
-    if (key === 'ondongne') return '<img src="assets/ondongne.png" alt="">';
+    if (key === 'ondongne') return '<img src="assets/ondongne.mobile.webp" alt="">';
     if (key === 'phone') return phoneIconMarkup();
     return '';
   }
@@ -156,8 +168,6 @@
     }
   }
 
-  let menuHistoryClosePending = false;
-  let menuHistoryCloseTimer = 0;
   let menuCloseGestureTimer = 0;
 
   function guardMenuCloseGesture() {
@@ -168,19 +178,10 @@
     }, 600);
   }
 
-  function suppressMenuClosePopstate() {
-    menuHistoryClosePending = true;
-    document.documentElement.dataset.daedongMenuHistoryClose = '1';
-    window.clearTimeout(menuHistoryCloseTimer);
-    menuHistoryCloseTimer = window.setTimeout(() => {
-      menuHistoryClosePending = false;
-      delete document.documentElement.dataset.daedongMenuHistoryClose;
-    }, 1200);
-  }
-
   function requestMenuLayerBack(layer, fallback) {
     if (history.state?.[MENU_HISTORY[layer]]) {
       fallback();
+      document.documentElement.dataset.daedongMenuHistoryClose = '1';
       history.back();
       return;
     }
@@ -189,14 +190,18 @@
 
   function requestCloseMenuPreview() {
     const state = history.state || {};
-    const depth = Number(Boolean(state[MENU_HISTORY.preview]))
-      + Number(Boolean(state[MENU_HISTORY.search]))
-      + Number(Boolean(state[MENU_HISTORY.order]));
     guardMenuCloseGesture();
     closeMenuPreview();
-    if (depth > 0) {
-      suppressMenuClosePopstate();
-      history.go(-depth);
+    if (state[MENU_HISTORY.preview] || state[MENU_HISTORY.search] || state[MENU_HISTORY.order]) {
+      const cleanState = {...state};
+      delete cleanState[MENU_HISTORY.preview];
+      delete cleanState[MENU_HISTORY.search];
+      delete cleanState[MENU_HISTORY.order];
+      try {
+        history.replaceState(cleanState, '', location.href);
+      } catch {
+        // The visual close must still win even if a restrictive webview rejects history replacement.
+      }
     }
   }
 
@@ -373,28 +378,64 @@
     delete image.dataset.menuImageSrc;
   }
 
+  function drainMenuImageQueue() {
+    while (activeMenuImageLoads < MAX_CONCURRENT_MENU_IMAGE_LOADS && menuImageQueue.length) {
+      const {image, run} = menuImageQueue.shift();
+      if (run !== menuImageLoadRun || !image?.isConnected || !image.dataset.menuImageSrc) continue;
+      activeMenuImageLoads += 1;
+      const release = () => {
+        if (run !== menuImageLoadRun) return;
+        activeMenuImageLoads = Math.max(0, activeMenuImageLoads - 1);
+        delete image.dataset.menuImageQueued;
+        drainMenuImageQueue();
+      };
+      image.addEventListener('load', release, {once: true});
+      image.addEventListener('error', release, {once: true});
+      loadMenuImage(image);
+    }
+  }
+
+  function queueMenuImage(image) {
+    if (!image?.dataset?.menuImageSrc || image.dataset.menuImageQueued === '1') return;
+    image.dataset.menuImageQueued = '1';
+    menuImageQueue.push({image, run: menuImageLoadRun});
+    drainMenuImageQueue();
+  }
+
+  function resetMenuImageLoading({cancelActive = false} = {}) {
+    menuImageLoadRun += 1;
+    menuImageQueue = [];
+    activeMenuImageLoads = 0;
+    menuImageObserver?.disconnect();
+    menuImageObserver = null;
+    if (!cancelActive) return;
+    document.querySelectorAll('[data-store-menu-overlay] img[src]').forEach(image => {
+      image.removeAttribute('src');
+      delete image.dataset.menuImageQueued;
+    });
+  }
+
   function observeMenuImages(preview, {reset = false} = {}) {
     if (!preview) return;
     if (reset) {
-      menuImageObserver?.disconnect();
-      menuImageObserver = null;
+      resetMenuImageLoading();
     }
     const images = [...preview.querySelectorAll('img[data-menu-image-src]')];
     if (!images.length) return;
     if (typeof IntersectionObserver !== 'function') {
-      images.forEach(loadMenuImage);
+      images.forEach(queueMenuImage);
       return;
     }
     if (!menuImageObserver) {
       menuImageObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
-          loadMenuImage(entry.target);
+          queueMenuImage(entry.target);
           menuImageObserver?.unobserve(entry.target);
         });
       }, {
         root: preview.querySelector('.store-menu-scroll'),
-        rootMargin: '600px 0px'
+        rootMargin: '160px 0px'
       });
     }
     images.forEach(image => menuImageObserver.observe(image));
@@ -408,6 +449,23 @@
     window.setTimeout(() => callback(null), 0);
   }
 
+  function restoreProgressiveMenuPosition(preview) {
+    const target = Number(preview?.__menuRestoreTarget);
+    const scrollRoot = preview?.querySelector('.store-menu-scroll');
+    if (!scrollRoot || !Number.isFinite(target) || target <= 0) return;
+    const maxScroll = Math.max(0, scrollRoot.scrollHeight - scrollRoot.clientHeight);
+    scrollRoot.scrollTop = Math.min(target, maxScroll);
+    if (maxScroll >= target - 1) {
+      showMenuChrome(preview);
+      window.clearTimeout(preview.__menuRestoreClearTimer);
+      preview.__menuRestoreClearTimer = window.setTimeout(() => {
+        delete preview.__menuRestoreTarget;
+        delete preview.__menuRestoreClearTimer;
+        showMenuChrome(preview);
+      }, 120);
+    }
+  }
+
   function scheduleProgressiveMenuCards(preview, items, query = '') {
     const grid = preview?.querySelector('[data-menu-grid]');
     const status = preview?.querySelector('[data-menu-render-status]');
@@ -419,13 +477,26 @@
       [...grid.querySelectorAll('[data-menu-id]')].map(card => String(card.dataset.menuId || ''))
     );
     const pendingItems = items.filter(item => !renderedIds.has(String(item.id || '')));
-    const state = {run, renderedIds, pendingItems, cursor: 0};
+    preview.__menuRenderState?.cleanup?.();
+    const state = {run, renderedIds, pendingItems, cursor: 0, scrollChunkLocked: false, scrollUnlockTimer: 0};
     preview.__menuRenderState = state;
     grid.setAttribute('aria-busy', String(pendingItems.length > 0));
     if (status) status.hidden = pendingItems.length === 0;
     if (!pendingItems.length) return;
 
     let chunkScheduled = false;
+    let chunkScheduleToken = 0;
+    const scrollRoot = preview.querySelector('.store-menu-scroll');
+    let onProgressiveScroll = null;
+    const cleanupProgressiveTriggers = () => {
+      menuRenderObserver?.disconnect();
+      menuRenderObserver = null;
+      if (onProgressiveScroll) scrollRoot?.removeEventListener('scroll', onProgressiveScroll);
+      onProgressiveScroll = null;
+      window.clearTimeout(state.scrollUnlockTimer);
+      state.scrollUnlockTimer = 0;
+    };
+    state.cleanup = cleanupProgressiveTriggers;
     const appendChunk = deadline => {
       chunkScheduled = false;
       if (menuRenderRun !== run || !preview.isConnected || preview.__menuRenderState !== state) return;
@@ -441,25 +512,59 @@
       if (batch.length) {
         grid.insertAdjacentHTML('beforeend', batch.map(item => menuCardMarkup(item, query)).join(''));
         observeMenuImages(preview);
+        restoreProgressiveMenuPosition(preview);
       }
       const complete = state.cursor >= state.pendingItems.length;
       grid.setAttribute('aria-busy', String(!complete));
       if (status) status.hidden = complete;
       if (complete) {
-        menuRenderObserver?.disconnect();
-        menuRenderObserver = null;
+        cleanupProgressiveTriggers();
+      } else if (Number.isFinite(Number(preview.__menuRestoreTarget))) {
+        // Keep yielding between chunks, but do not stop halfway through a
+        // search-cancel return just because the sentinel moved below view.
+        scheduleNextChunk();
       }
+    };
+    const scheduleNextChunk = (priority = 'idle') => {
+      if (chunkScheduled && priority !== 'interaction') return;
+      chunkScheduled = true;
+      const token = ++chunkScheduleToken;
+      const runChunk = deadline => {
+        if (token !== chunkScheduleToken) return;
+        appendChunk(deadline);
+      };
+      if (priority === 'interaction') {
+        // The chunk is intentionally capped at 12 cards. Rendering this small
+        // batch in the scroll task is more reliable than waiting for a frame or
+        // timer that a background/embedded WebView may throttle indefinitely.
+        runChunk(null);
+        return;
+      }
+      scheduleMenuRenderTask(runChunk);
     };
     if (typeof IntersectionObserver === 'function' && status) {
       menuRenderObserver = new IntersectionObserver(entries => {
-        if (chunkScheduled || !entries.some(entry => entry.isIntersecting)) return;
-        chunkScheduled = true;
-        scheduleMenuRenderTask(appendChunk);
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        scheduleNextChunk();
       }, {
-        root: preview.querySelector('.store-menu-scroll'),
+        root: scrollRoot,
         rootMargin: '900px 0px'
       });
       menuRenderObserver.observe(status);
+      onProgressiveScroll = () => {
+        if (!scrollRoot || state.scrollChunkLocked) return;
+        // Layout height can still be settling while remote images and fonts
+        // decode. The first real scroll is a stronger intent signal than a
+        // transient distance calculation, so prepare exactly one small chunk.
+        state.scrollChunkLocked = true;
+        scheduleNextChunk('interaction');
+        window.clearTimeout(state.scrollUnlockTimer);
+        state.scrollUnlockTimer = window.setTimeout(() => {
+          state.scrollChunkLocked = false;
+          state.scrollUnlockTimer = 0;
+        }, 150);
+      };
+      scrollRoot?.addEventListener('scroll', onProgressiveScroll, {passive: true});
       return;
     }
     const appendFallbackChunk = deadline => {
@@ -670,6 +775,10 @@
   function handleMenuScroll(scrollRoot) {
     const preview = scrollRoot.closest('.store-menu-preview');
     if (!preview) return;
+    if (Number.isFinite(Number(preview.__menuRestoreTarget))) {
+      showMenuChrome(preview);
+      return;
+    }
     if (preview.classList.contains('menu-search-active')) {
       showMenuChrome(preview);
       return;
@@ -761,12 +870,13 @@
     menuRenderRun += 1;
     menuRenderObserver?.disconnect();
     menuRenderObserver = null;
-    menuImageObserver?.disconnect();
-    menuImageObserver = null;
+    resetMenuImageLoading({cancelActive: true});
     const overlay = document.querySelector('[data-store-menu-overlay]');
     if (overlay) {
       overlay.hidden = true;
-      overlay.innerHTML = '';
+      // Keep the hidden menu subtree until the next open replaces it. Clearing
+      // hundreds of nodes here wakes global observers after the X tap and can
+      // turn an instant visual close into a multi-second main-thread stall.
     }
     document.body.classList.remove('store-menu-open');
     activeStore = null;
@@ -854,6 +964,7 @@
   function enterMenuSearch(preview) {
     if (!preview || !window.matchMedia('(max-width: 720px)').matches) return;
     const scrollRoot = preview.querySelector('.store-menu-scroll');
+    delete preview.__menuRestoreTarget;
     if (!preview.classList.contains('menu-search-active')) {
       preview.dataset.menuSearchReturn = String(scrollRoot?.scrollTop || 0);
       preview.classList.add('menu-search-active');
@@ -877,11 +988,13 @@
     }
     preview.classList.remove('menu-search-active');
     delete preview.dataset.menuSearchReturn;
+    if (restorePosition && returnPosition > 0) preview.__menuRestoreTarget = returnPosition;
+    else delete preview.__menuRestoreTarget;
     showMenuChrome(preview);
     filterMenus(preview);
     if (restorePosition) {
       window.requestAnimationFrame(() => {
-        if (scrollRoot) scrollRoot.scrollTop = returnPosition;
+        restoreProgressiveMenuPosition(preview);
         window.requestAnimationFrame(() => showMenuChrome(preview));
       });
     }
@@ -918,9 +1031,10 @@
   }
 
   document.addEventListener('pointerdown', event => {
-    if (event.button !== 0 || !event.isPrimary || !event.target.closest('[data-menu-preview-close]')) return;
+    if (event.button !== 0 || !event.target.closest('[data-menu-preview-close]')) return;
     menuClosePointerAt = performance.now();
     event.preventDefault();
+    event.stopImmediatePropagation();
     requestCloseMenuPreview();
   }, {capture: true});
 
@@ -1056,13 +1170,6 @@
   });
 
   window.addEventListener('popstate', event => {
-    if (menuHistoryClosePending) {
-      menuHistoryClosePending = false;
-      window.clearTimeout(menuHistoryCloseTimer);
-      delete document.documentElement.dataset.daedongMenuHistoryClose;
-      event.stopImmediatePropagation();
-      return;
-    }
     if (!document.body.classList.contains('store-menu-open')) return;
     let handled = false;
     const preview = document.querySelector('.store-menu-preview');
@@ -1108,6 +1215,7 @@
     restore: async saved => Boolean(await openMenuPreview(saved?.storeId, null, {returnState: saved}))
   });
 
-  new MutationObserver(ensureMenuEntryButton).observe(document.documentElement, {childList: true, subtree: true});
+  const menuEntryRoot = document.querySelector('#modalContent');
+  if (menuEntryRoot) new MutationObserver(ensureMenuEntryButton).observe(menuEntryRoot, {childList: true, subtree: true});
   ensureMenuEntryButton();
 })();

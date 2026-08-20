@@ -11,6 +11,7 @@ const RC4_CATEGORY_ICON_MAP=Object.freeze([
  [/반찬/,'banchan'],[/베이커리|빵|떡/,'bakery'],[/한식/,'korean']
 ]);
 let rc4PostcodePromise=null;
+const rc4BrandKeyCache=new WeakMap();
 
 function rc4CategoryIconId(name){const value=String(name||'');return RC4_CATEGORY_ICON_MAP.find(([pattern])=>pattern.test(value))?.[1]||'other'}
 function rc4CategoryIcon(name,className='rc4-category-icon'){return `<svg class="${className}" aria-hidden="true"><use href="${RC4_CATEGORY_ICON_SPRITE}#${rc4CategoryIconId(name)}"></use></svg>`}
@@ -22,7 +23,7 @@ allCategoriesModal=function(){const names=['전체',...categories.filter(name=>n
 function rc4StoreHasRealCoordinates(store){return store?.coordinateSource==='store'&&Number.isFinite(store.lat)&&Number.isFinite(store.lng)}
 function rc4Distance(store){return state.coords&&rc4StoreHasRealCoordinates(store)?haversine(state.coords,{lat:store.lat,lng:store.lng}):null}
 fxDistance=rc4Distance;
-function rc4BrandKey(store){return rc2BrandKey(store)||normalize(store?.name||'').replace(/여수|본점|점/g,'').slice(0,12)}
+function rc4BrandKey(store){if(store&&rc4BrandKeyCache.has(store))return rc4BrandKeyCache.get(store);const key=rc2BrandKey(store)||normalize(store?.name||'').replace(/여수|본점|점/g,'').slice(0,12);if(store)rc4BrandKeyCache.set(store,key);return key}
 function rc4PhotoKey(store){return String(store?.photo||store?.photoFile||store?.image||'')}
 function rc4Diversify(list){const first=[],later=[],brands=new Set(),photos=new Set();for(const store of list){const brand=rc4BrandKey(store),photo=rc4PhotoKey(store);if(photo&&photos.has(photo))continue;if(!brands.has(brand)){first.push(store);brands.add(brand);if(photo)photos.add(photo)}else later.push(store)}for(const store of later){const photo=rc4PhotoKey(store);if(photo&&photos.has(photo))continue;const same=rc4BrandKey(store),lastThree=first.slice(-3).map(rc4BrandKey);if(first.length>=4&&!lastThree.includes(same)){first.push(store);if(photo)photos.add(photo)}}return first}
 function rc4LocationSort(list){const area=normalize(state.location||'');return [...list].sort((a,b)=>{const ad=rc4Distance(a),bd=rc4Distance(b);if(ad!==null||bd!==null)return ad===null?1:bd===null?-1:ad-bd;const am=area&&area!==normalize('여수시 전체')&&normalize(a.area).includes(area)?1:0,bm=area&&area!==normalize('여수시 전체')&&normalize(b.area).includes(area)?1:0;if(am!==bm)return bm-am;return 0})}

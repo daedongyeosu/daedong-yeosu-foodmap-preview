@@ -3,5 +3,6 @@ static-validation-report.json
 regression-suite-report.json
 browser-*-report.json
 browser-*.png
+node_modules/
 approved-ux-*.html
 approved-ux-*.json

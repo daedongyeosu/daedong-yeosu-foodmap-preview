@@ -32,6 +32,12 @@ assert.match(browserCheck, /hasTouch:\s*true/, '실제 터치 입력 조건 검�
 assert.match(browserCheck, /본스치킨 미평점/, '본스치킨 회귀 검사가 없습니다.');
 assert.match(browserCheck, /손수김밥 양지점/, '손수김밥 회귀 검사가 없습니다.');
 assert.match(browserCheck, /trigger\.tap\(\)/, '버튼을 마우스 클릭이 아닌 실제 터치로 검사하지 않습니다.');
+assert.match(browserCheck, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'[\s\S]*page\.evaluate\(\(\) => window\.daedongCatalogReady\)/,
+  '카탈로그 준비 Promise가 생기기 전에 검색을 시작하면 안 됩니다.');
+assert.match(browserCheck, /order-methods-sheet[\s\S]*polling: 25, timeout: 3000/,
+  '첫 터치 뒤 선택창 렌더링을 실제 DOM 상태로 확인해야 합니다.');
+assert.match(browserCheck, /console\.log\(JSON\.stringify\(report, null, 2\)\)/,
+  '브라우저 실패 원인은 CI 로그에서 바로 확인할 수 있어야 합니다.');
 assert.match(previewWorkflow, /node scripts\/browser-other-order-method-touch\.mjs/, 'PR에서 주문방법 모바일 터치 검사를 실행하지 않습니다.');
 
 assert.match(app, /const menu = toggle\.closest\('\.store-other-wrap'\)\?\.querySelector\('\.store-other-popover'\); if \(!menu\) return;/, '구형 팝업이 없는 버튼을 눌렀을 때의 안전장치가 없습니다.');
