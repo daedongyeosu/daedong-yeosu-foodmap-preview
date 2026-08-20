@@ -521,8 +521,10 @@
       if (chunkScheduled && priority !== 'interaction') return;
       chunkScheduled = true;
       const token = ++chunkScheduleToken;
+      let chunkCompleted = false;
       const runChunk = deadline => {
-        if (token !== chunkScheduleToken) return;
+        if (chunkCompleted || token !== chunkScheduleToken) return;
+        chunkCompleted = true;
         appendChunk(deadline);
       };
       if (priority === 'interaction') {
