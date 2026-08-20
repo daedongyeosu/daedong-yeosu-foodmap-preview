@@ -3,12 +3,20 @@ import {chromium} from 'playwright';
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 const report = {success: false, checks: [], warnings: [], errors: []};
-const browser = await chromium.launch({headless: true});
+const browserExecutablePath = process.env.CODEX_BROWSER_EXECUTABLE_PATH || '';
+const browser = await chromium.launch({
+  headless: true,
+  ...(browserExecutablePath ? {executablePath: browserExecutablePath} : {})
+});
 const context = await browser.newContext({
   viewport: {width: 390, height: 844},
   locale: 'ko-KR',
   geolocation: {latitude: 34.7604, longitude: 127.6622},
   permissions: ['geolocation']
+});
+await context.addInitScript(() => {
+  sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
+  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
 });
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 await context.route('**/*.woff2', route => route.abort());
@@ -52,6 +60,11 @@ try {
   await check(page.locator('#locationBtn').isVisible(), '위치 버튼 표시');
   await check(page.locator('#homeShareBtn').isVisible(), '공유 버튼 표시');
   await page.waitForSelector('#heroTrack .carousel-slide', {timeout: 15000});
+  await page.waitForFunction(
+    () => document.querySelectorAll('#heroTrack .carousel-slide').length > 2,
+    null,
+    {timeout: 15000}
+  );
   await check(page.locator('#heroTrack .carousel-slide').count().then(count => count > 2), '메인 슬라이드 표시');
   await check(page.locator('#storeGrid .store-card').count().then(count => count > 0), '가게 목록 표시');
   await check(page.locator('#startupAd').isHidden(), '첫 접속 모집 팝업 중단');
@@ -120,3 +133,4 @@ try {
 }
 
 if (!report.success) process.exit(1);
+
