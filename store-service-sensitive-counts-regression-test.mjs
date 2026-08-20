@@ -18,7 +18,7 @@ assert.doesNotMatch(runtime, /`영업시간 미확인[^`]*\$\{entries\.length\}/
 
 assert.doesNotMatch(runtime, /data-store-service-source-count/);
 assert.match(runtime, /renderedSourceCount !== sourceStores\(\)\.length/);
-assert.match(html, /store-service-25-menu-search-status-order-1[^"'\n]*seomseom-merchant-label-1/);
+assert.match(html, /store-service-26-deferred-bootstrap-1-menu-search-status-order-1[^"'\n]*seomseom-merchant-label-1/);
 assert.match(runtime, /benefit\?\.key === 'yeosu-seomseom-pay'/);
 assert.match(runtime, /return '먹깨비·땡겨요'/);
 assert.match(runtime, /여수섬섬페이 가맹점/);
