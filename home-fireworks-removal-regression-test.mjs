@@ -20,6 +20,6 @@ const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
 assert.match(html, /final-experience\.js\?v=[^"\n]*daylight-effects-cleanup-1/);
 assert.match(html, /rc7-address-map\.css\?v=[^"\n]*main-logo-frame-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v11-immediate-popup-close'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v12-performance-assets'/);
 
 console.log('Home logo frame and daytime fireworks removal regression: PASS');
