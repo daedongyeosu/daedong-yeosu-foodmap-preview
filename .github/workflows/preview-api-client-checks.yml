@@ -65,9 +65,13 @@ jobs:
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-other-order-method-touch.mjs
       - name: Enforce customer mobile performance budget
         run: |
-          python3 -m http.server 4173 >/tmp/daedong-performance-budget-server.log 2>&1 &
+          node scripts/serve-performance-budget.mjs 4173 >/tmp/daedong-performance-budget-server.log 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
+          for attempt in {1..20}; do
+            curl --silent --fail http://127.0.0.1:4173/ >/dev/null && break
+            sleep 0.25
+          done
           BASE_URL=http://127.0.0.1:4173 \
           PERF_PROXY_API_ORIGIN=https://daedong-yeosu-data-api-preview.sisakim.workers.dev \
           node scripts/browser-customer-performance-budget.mjs
