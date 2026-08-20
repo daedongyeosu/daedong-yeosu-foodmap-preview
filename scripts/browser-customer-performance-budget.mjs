@@ -205,7 +205,9 @@ try {
   const menuButton = page.locator(`[data-store-menu-preview="${targetStoreId}"]`);
   if (!await menuButton.isVisible()) throw new Error(`menu preview button is not visible: ${targetStoreId}`);
   const menuStartedAt = performance.now();
-  await menuButton.click();
+  // Exercise the application's delegated click path without letting
+  // Playwright's actionability polling become the measured bottleneck.
+  await menuButton.evaluate(button => button.click());
   await page.waitForSelector('[data-store-menu-overlay]:not([hidden]) .store-menu-loading', {timeout: 1000});
   report.measurements.menuSkeletonMs = elapsed(menuStartedAt);
   await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
@@ -258,7 +260,7 @@ try {
   report.measurements.menuCloseMs = elapsed(menuCloseStartedAt);
 
   const repeatMenuStartedAt = performance.now();
-  await menuButton.click();
+  await menuButton.evaluate(button => button.click());
   await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
   report.measurements.repeatMenuReadyMs = elapsed(repeatMenuStartedAt);
 

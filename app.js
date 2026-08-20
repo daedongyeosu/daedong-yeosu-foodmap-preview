@@ -1621,12 +1621,12 @@ async function initialize() {
   yeosuNeighborhoods=neighborhoodData.neighborhoods||[];neighborhoodByName=new Map(yeosuNeighborhoods.map(item=>[item.name,item]));
   photoResolver = new PhotoResolver(manifest, policy);
   const safeRawStores = Array.isArray(rawStores) ? rawStores : [];
-  const firstPaintCount = Math.min(96, safeRawStores.length);
-  const firstStores = await normalizeStoresInBatches(safeRawStores.slice(0, firstPaintCount), 48);
+  const firstPaintCount = Math.min(32, safeRawStores.length);
+  const firstStores = await normalizeStoresInBatches(safeRawStores.slice(0, firstPaintCount), 16);
   applyNormalizedCatalog(firstStores, safeRawStores.length, firstPaintCount === safeRawStores.length);
   if (firstPaintCount < safeRawStores.length) {
     await yieldToMainThread();
-    const remainingStores = await normalizeStoresInBatches(safeRawStores.slice(firstPaintCount), 80, firstPaintCount);
+    const remainingStores = await normalizeStoresInBatches(safeRawStores.slice(firstPaintCount), 48, firstPaintCount);
     applyNormalizedCatalog([...firstStores, ...remainingStores], safeRawStores.length, true);
   }
 }
