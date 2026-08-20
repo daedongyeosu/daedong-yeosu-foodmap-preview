@@ -526,7 +526,14 @@
         appendChunk(deadline);
       };
       if (priority === 'interaction') {
-        requestAnimationFrame(() => runChunk(null));
+        // Headless/background WebViews can throttle requestAnimationFrame even
+        // after a real scroll. Race it with a zero-delay task so reaching the
+        // end of the list always reveals the next menu chunk promptly.
+        const fallbackTimer = window.setTimeout(() => runChunk(null), 0);
+        requestAnimationFrame(() => {
+          window.clearTimeout(fallbackTimer);
+          runChunk(null);
+        });
         return;
       }
       scheduleMenuRenderTask(runChunk);
