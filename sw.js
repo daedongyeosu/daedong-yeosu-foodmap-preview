@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v11-immediate-popup-close';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v12-performance-assets';
 const RUNTIME_CACHE = 'daedong-yeosu-runtime-v1';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [
