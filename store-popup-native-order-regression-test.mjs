@@ -25,7 +25,7 @@ function extractFunction(source, name) {
 }
 
 const openStoreSource = extractFunction(app, 'openStore');
-const popupStart = openStoreSource.indexOf('openModal(`<article class="store-detail"');
+const popupStart = openStoreSource.indexOf('replaceModalContent(`<article class="store-detail"');
 const popupMarkup = openStoreSource.slice(popupStart);
 const metaIndex = popupMarkup.indexOf('<div class="detail-meta-row">');
 const menuIndex = popupMarkup.indexOf('${menuEntry}');
@@ -75,3 +75,4 @@ assert.match(html, /store-service-info\.js\?v=store-service-25-menu-search-statu
 assert.match(html, /store-menu-preview\.js\?v=store-menu-22-customer-popup-order-1/);
 
 console.log('PASS: 가게 팝업 최초 생성 순서·혜택·지도·하단버튼·모바일 반복방지 유지');
+
