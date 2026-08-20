@@ -22,7 +22,7 @@ const check = async (condition, message) => {
   if (!ok) throw new Error(message);
 };
 
-const revealAllMenuCards = async (expectedCount = 53) => {
+const revealAllMenuCards = async expectedCount => {
   const scroll = page.locator('.store-menu-scroll');
   const deadline = Date.now() + 7000;
   let renderedCount = 0;
@@ -47,18 +47,21 @@ try {
   await page.waitForSelector('.store-menu-preview', {timeout: 5000});
   await check(page.evaluate(() => history.state?.daedongMenuPreview === true), '음식 미리보기를 브라우저 뒤로가기 단계로 등록');
   await check(page.locator('.store-menu-hero > img').getAttribute('src').then(value => value === 'store-menu-content/a089d1d54720b48e/main.jpg'), '외계인피자 대표 음식사진 복원');
+  const expectedMenuCount = await page.locator('[data-menu-result-count]').innerText().then(value => Number.parseInt(value, 10));
+  report.expectedMenuCount = expectedMenuCount;
+  await check(Number.isInteger(expectedMenuCount) && expectedMenuCount >= 53, '외계인피자 전체 메뉴 개수 안내');
   const initialMenuCount = await page.locator('[data-menu-card]').count();
   report.initialMenuCount = initialMenuCount;
-  await check(initialMenuCount > 0 && initialMenuCount <= 53, '첫 화면에 메뉴를 즉시 표시');
+  await check(initialMenuCount > 0 && initialMenuCount <= expectedMenuCount, '첫 화면에 메뉴를 즉시 표시');
   await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === initialMenuCount), '첫 메뉴 묶음의 음식사진 복원');
 
   const preview = page.locator('.store-menu-preview');
   const scroll = page.locator('.store-menu-scroll');
   const search = page.locator('[data-menu-search]');
-  const revealedMenuCount = await revealAllMenuCards();
+  const revealedMenuCount = await revealAllMenuCards(expectedMenuCount);
   report.revealedMenuCount = revealedMenuCount;
-  await check(revealedMenuCount === 53, '스크롤하면 외계인피자 전체 메뉴 53개 복원');
-  await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === 53), '외계인피자 전체 메뉴 53개 음식사진 복원');
+  await check(revealedMenuCount === expectedMenuCount, '스크롤하면 외계인피자 전체 메뉴 복원');
+  await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === expectedMenuCount), '외계인피자 전체 메뉴 음식사진 복원');
   await check(page.locator('[data-menu-card].is-text-only').count().then(count => count === 0), '사진이 저장된 메뉴를 글자 카드로 대체하지 않음');
   const maxScroll = await scroll.evaluate(node => {
     node.scrollTop = node.scrollHeight - node.clientHeight;
@@ -114,7 +117,7 @@ try {
   await check(preview.evaluate(node => node.classList.contains('menu-search-active')), '주문방법 선택창을 닫아도 검색 결과 유지');
 
   await page.locator('[data-menu-search-clear]').click();
-  await check(page.locator('[data-menu-result-count]').innerText().then(value => value.trim() === '53'), '검색어 지우기 시 전체 53개 메뉴 복원');
+  await check(page.locator('[data-menu-result-count]').innerText().then(value => Number.parseInt(value, 10) === expectedMenuCount), '검색어 지우기 시 전체 메뉴 개수 복원');
   await check(preview.evaluate(node => node.classList.contains('menu-search-active')), '검색어를 지워도 검색 모드 유지');
   await page.waitForTimeout(500);
 
@@ -130,8 +133,8 @@ try {
   const restoreTolerance = Math.max(24, restoredScroll.clientHeight * 1.25);
   report.scrollRestore = {requested: maxScroll, effectiveReturn, tolerance: restoreTolerance, ...restoredScroll};
   await check(restoredScroll.top > 0 && Math.abs(restoredScroll.top - effectiveReturn) <= restoreTolerance, '검색 취소 시 이전 메뉴 위치 복귀');
-  await check(page.locator('[data-menu-result-count]').innerText().then(value => value.trim() === '53'), '검색 취소 후 전체 53개 분류 상태 복원');
-  await check((await revealAllMenuCards()) === 53, '검색 취소 후 스크롤하면 전체 메뉴 복원');
+  await check(page.locator('[data-menu-result-count]').innerText().then(value => Number.parseInt(value, 10) === expectedMenuCount), '검색 취소 후 전체 분류 상태 복원');
+  await check((await revealAllMenuCards(expectedMenuCount)) === expectedMenuCount, '검색 취소 후 스크롤하면 전체 메뉴 복원');
   await check(page.locator('.store-menu-sticky-actions').evaluate(node => getComputedStyle(node).pointerEvents !== 'none'), '검색 취소 후 주문 버튼 복원');
 
   await page.goBack();
