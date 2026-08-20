@@ -82,7 +82,7 @@ assert.match(html, /store-service-info\.css\?v=store-service-13-search-status-or
   '영업상태 색상 수정본 캐시 버전이 필요합니다.');
 assert.match(html, /store-service-info\.css\?v=[^"\n]*search-store-boundary-1/,
   '검색 가게별 경계선 수정본 캐시 버전이 필요합니다.');
-assert.match(html, /store-service-info\.js\?v=store-service-25-menu-search-status-order-1/,
+assert.match(html, /store-service-info\.js\?v=store-service-26-deferred-bootstrap-1-menu-search-status-order-1/,
   '검색 수정본 캐시 버전이 필요합니다.');
 assert.match(html, /store-menu-preview\.js\?v=store-menu-22-customer-popup-order-1/,
   '메뉴 수정본 캐시 버전이 필요합니다.');

@@ -482,12 +482,22 @@ let yeosuNeighborhoods = [];
 let neighborhoodByName = new Map();
 let categoryPriorityOverrides = {...LOCATION_CATEGORY_PRIORITY_OVERRIDES};
 let modalHistoryActive = false;
-let ignoreNextPop = false;
+let ignoreNextPop = 0;
+function suppressNextModalPop() {
+  ignoreNextPop += 1;
+}
+window.daedongSuppressNextModalPop = suppressNextModalPop;
 let resolveCatalogReady;
 window.daedongCatalogReady = new Promise(resolve => { resolveCatalogReady = resolve; });
 function finishCatalogReady(value) {
   resolveCatalogReady?.(value);
   resolveCatalogReady = null;
+}
+function hydrateDeferredHomeImages() {
+  document.querySelectorAll('img[data-deferred-src]').forEach(image => {
+    image.src = image.dataset.deferredSrc;
+    delete image.dataset.deferredSrc;
+  });
 }
 window.setTimeout(() => {
   if (!resolveCatalogReady) return;
@@ -1104,7 +1114,11 @@ function openPromoCarouselDetail(kind) {
 function appIcon(key, cls = '') {
   const meta = APP_META[key]; if (!meta) return '';
   if (EXTERNAL_APP_KEYS.includes(key)) return `<span class="${escapeHtml(`${cls} external-app-text-mark`.trim())}" aria-label="${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</span>`;
-  if (String(meta.icon).includes('/') || String(meta.icon).startsWith('http')) return `<img class="${cls}" src="${meta.icon}" alt="${meta.label}">`;
+  const compactHomeIcon = ['mukkebi','ddangyo'].includes(key)
+    ? document.querySelector(`[data-order-key="${key}"] img`)?.getAttribute('src')
+    : '';
+  const icon = compactHomeIcon || meta.icon;
+  if (String(icon).includes('/') || String(icon).startsWith('http') || String(icon).startsWith('data:image/')) return `<img class="${cls}" src="${icon}" alt="${meta.label}">`;
   return `<span class="${cls} miniemoji">${meta.icon}</span>`;
 }
 function externalAppNoticeMarkup() {
@@ -1294,7 +1308,7 @@ function hardClose({fromPop = false} = {}) {
   if ($('#moreAppsPopover')) $('#moreAppsPopover').hidden = true;
   if ($('#startupAd')) $('#startupAd').hidden = true;
   unlockPage(); modalHistoryActive = false;
-  if (!fromPop && history.state?.daedongModal) { ignoreNextPop = true; history.back(); }
+  if (!fromPop && history.state?.daedongModal) { suppressNextModalPop(); history.back(); }
 }
 function closeModal(options = {}) { hardClose(options); }
 window.hardClose = hardClose; window.hideModal = hardClose; window.closeModal = hardClose;
@@ -1458,6 +1472,7 @@ async function openStore(store) {
   const secureDetail = window.daedongSecureStoreDetail;
   if (store.__secureDetailReady !== true) {
     if (!secureDetail || typeof secureDetail.enrich !== 'function') {
+      if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
       openModal('<section class="store-detail-load-error"><h2 id="modalTitle">주문방법을 불러오지 못했습니다</h2><p>페이지를 새로고침한 뒤 가게를 다시 열어 주세요.</p></section>');
       return false;
     }
@@ -1466,6 +1481,7 @@ async function openStore(store) {
     } catch (error) {
       console.warn('가게 상세정보를 불러오지 못했습니다.', error);
       if ($('#modal').dataset.activeStoreId === store.id && !$('#modal').hidden) {
+        if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
         openModal('<section class="store-detail-load-error"><h2 id="modalTitle">주문방법을 불러오지 못했습니다</h2><p>잠시 후 가게를 다시 열어 주세요.</p></section>');
       }
       return false;
@@ -1488,6 +1504,7 @@ async function openStore(store) {
   const selectedCta = selectedRoute ? `<button type="button" class="selected-order-cta external-text-route" data-external-route-key="${selectedRoute.key}"><span>처음 선택한 ${escapeHtml(APP_META[selectedRoute.key].label)}로 주문하기</span><b>›</b></button>` : '';
   const favorite=isFavorite(store.id);
   const menuEntry = storeMenuPreviewEntryMarkup(store);
+  if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
   openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}</div>${menuEntry}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
   const carouselRoot = $('#detailPhotoCarousel'); if (carouselRoot) detailCarousel = new InfiniteCarousel(carouselRoot,{interval:3500});
   $('#modal').dataset.activeStoreId=store.id;
@@ -1508,6 +1525,24 @@ async function fetchJson(url, fallback) {
     window.clearTimeout(timeoutId);
   }
 }
+const yieldToMainThread = () => globalThis.scheduler?.yield
+  ? globalThis.scheduler.yield()
+  : new Promise(resolve => window.setTimeout(resolve, 0));
+async function normalizeStoresInBatches(rawStores, batchSize = 100) {
+  const normalized = [];
+  for (let index = 0; index < rawStores.length; index += 1) {
+    const raw = rawStores[index];
+    try {
+      normalized.push(normalizedStore(raw && typeof raw === 'object' ? raw : {}, index));
+    } catch (error) {
+      console.error('store-normalization-failed', raw?.store_id || raw?.id || index, error);
+    }
+    if ((index + 1) % batchSize === 0 && index + 1 < rawStores.length) {
+      await yieldToMainThread();
+    }
+  }
+  return normalized.filter(Boolean);
+}
 async function initialize() {
   renderHero(); renderPromos();
   const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([
@@ -1522,10 +1557,7 @@ async function initialize() {
   yeosuNeighborhoods=neighborhoodData.neighborhoods||[];neighborhoodByName=new Map(yeosuNeighborhoods.map(item=>[item.name,item]));
   photoResolver = new PhotoResolver(manifest, policy);
   const safeRawStores = Array.isArray(rawStores) ? rawStores : [];
-  allStores = safeRawStores.map((raw, index) => {
-    try { return normalizedStore(raw && typeof raw === 'object' ? raw : {}, index); }
-    catch (error) { console.error('store-normalization-failed', raw?.store_id || raw?.id || index, error); return null; }
-  }).filter(Boolean);
+  allStores = await normalizeStoresInBatches(safeRawStores);
   canonicalStores = allStores.filter(store => store.customerVisible !== false && store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
   searchableStores = canonicalStores;
   coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);
@@ -1551,9 +1583,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const entry = analyticsEntryContext();
   sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: entry.storeId ? 'store_entry' : 'home'});
   document.addEventListener('click', trackAnalyticsRouteClick, true);
-  initialize().then(result => finishCatalogReady(result)).catch(error => {
+  initialize().then(result => {
+    finishCatalogReady(result);
+    window.setTimeout(hydrateDeferredHomeImages, 6000);
+  }).catch(error => {
     console.error('가게목록 초기화를 완료하지 못했습니다.', error);
     finishCatalogReady([]);
+    window.setTimeout(hydrateDeferredHomeImages, 6000);
   });
   $('#mainSearch').addEventListener('input', () => $('#clearMainSearch').hidden = !$('#mainSearch').value);
   $('#mainSearch').addEventListener('keydown', event => { if (event.key === 'Enter') $('#searchBtn').click(); });
@@ -1603,7 +1639,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', event => { if (!pop.hidden && !event.target.closest('#moreAppsPopover') && !event.target.closest('#moreAppsBtn')) pop.hidden = true; });
 
   $$('[data-open]').forEach(button => button.addEventListener('click', () => ({mypage: myPage, guide, brands: brandsModal}[button.dataset.open] || guide)()));
-  $('.modal-close').addEventListener('click', () => hardClose());
+  const modalCloseButton = $('.modal-close');
+  modalCloseButton.addEventListener('pointerdown', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    hardClose();
+  });
+  modalCloseButton.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (!$('#modal').hidden) hardClose();
+  });
   $('#overlay').addEventListener('click', () => hardClose());
   $('#modal').addEventListener('click', event => { if (event.target === $('#modal')) hardClose(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('#modal').hidden) hardClose(); });
@@ -1665,7 +1711,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const today = new Date().toLocaleDateString('sv-SE', {timeZone: 'Asia/Seoul'}), startupAd = $('#startupAd');
   let startupHistoryOpen = false;
   const openStartupAd = () => { startupAd.hidden = false; lockPage(); if (!startupHistoryOpen) { history.pushState({daedongStartup:true}, ''); startupHistoryOpen = true; } };
-  const closeStartupAd = ({fromPop = false} = {}) => { if (startupAd.hidden) return; startupAd.hidden = true; const goBack = !fromPop && startupHistoryOpen && history.state?.daedongStartup; startupHistoryOpen = false; if (!layerStillOpen()) unlockPage(); if (goBack) { ignoreNextPop=true; history.back(); } };
+  const closeStartupAd = ({fromPop = false} = {}) => { if (startupAd.hidden) return; startupAd.hidden = true; const goBack = !fromPop && startupHistoryOpen && history.state?.daedongStartup; startupHistoryOpen = false; if (!layerStillOpen()) unlockPage(); if (goBack) { suppressNextModalPop(); history.back(); } };
   const entryParams = new URLSearchParams(location.search);
   const requestedSharedStoreId = entryParams.get('store');
   const requestedHeroStoreId = entryParams.get('hero');
@@ -1677,5 +1723,5 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.startup-card').addEventListener('click', event => event.stopPropagation());
   $('#hideToday').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); localStorage.setItem('hideStartup', today); closeStartupAd(); });
   $('#startupDetails').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); setTimeout(() => openModal(`<h2 id="modalTitle">${REGION_MAP_NAME} 모집·광고 안내</h2><div class="guide-list">${PROMOS.map(promo => `<button type="button">${promo.title}<br><small>${promo.desc}</small></button>`).join('')}</div>`), 60); });
-  window.addEventListener('popstate', () => { if(ignoreNextPop){ignoreNextPop=false;return;} if (!startupAd.hidden) { closeStartupAd({fromPop:true}); return; } if (!$('#modal').hidden) hardClose({fromPop:true}); });
+  window.addEventListener('popstate', () => { if(ignoreNextPop>0){ignoreNextPop-=1;return;} if (!startupAd.hidden) { closeStartupAd({fromPop:true}); return; } if (!$('#modal').hidden) hardClose({fromPop:true}); });
 });

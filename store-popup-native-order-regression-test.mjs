@@ -71,7 +71,7 @@ assert.match(html, /app\.css\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /app\.js\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*store-popup-native-order-1/);
 assert.match(html, /store-service-info\.css\?v=store-service-13-search-status-order-1-card-status-1-search-store-boundary-1-category-heading-wrap-1/);
-assert.match(html, /store-service-info\.js\?v=store-service-25-menu-search-status-order-1/);
+assert.match(html, /store-service-info\.js\?v=store-service-26-deferred-bootstrap-1-menu-search-status-order-1/);
 assert.match(html, /store-menu-preview\.js\?v=store-menu-22-customer-popup-order-1/);
 
 console.log('PASS: 가게 팝업 최초 생성 순서·혜택·지도·하단버튼·모바일 반복방지 유지');
