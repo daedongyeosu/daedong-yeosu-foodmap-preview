@@ -171,9 +171,7 @@
     const depth = Number(Boolean(state[MENU_HISTORY.preview]))
       + Number(Boolean(state[MENU_HISTORY.search]))
       + Number(Boolean(state[MENU_HISTORY.order]));
-    closeMenuPreview();
     if (depth > 0) {
-      window.daedongSuppressNextModalPop?.();
       history.go(-depth);
       return;
     }
