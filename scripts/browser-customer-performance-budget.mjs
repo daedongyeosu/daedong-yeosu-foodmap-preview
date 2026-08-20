@@ -280,11 +280,29 @@ try {
   await page.waitForFunction(() => !document.documentElement.dataset.daedongMenuHistoryClose
     && !history.state?.daedongMenuPreview, null, {timeout: 2000});
 
-  const repeatMenuStartedAt = performance.now();
-  await menuButton.evaluate(button => button.click());
+  await menuButton.evaluate((button, storeId) => {
+    window.__qaRepeatMenuStart = performance.now();
+    window.__qaRepeatMenuReadyAt = null;
+    const recordReady = () => {
+      if (!document.querySelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${storeId}"]`)) {
+        return false;
+      }
+      window.__qaRepeatMenuReadyAt ??= performance.now();
+      return true;
+    };
+    const observer = new MutationObserver(() => {
+      if (!recordReady()) return;
+      observer.disconnect();
+    });
+    observer.observe(document.documentElement, {subtree: true, childList: true, attributes: true, attributeFilter: ['hidden']});
+    button.click();
+    recordReady();
+  }, targetStoreId);
   await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
   await page.waitForFunction(() => history.state?.daedongMenuPreview === true, null, {timeout: 1000});
-  report.measurements.repeatMenuReadyMs = elapsed(repeatMenuStartedAt);
+  report.measurements.repeatMenuReadyMs = await page.evaluate(() => Math.round(
+    window.__qaRepeatMenuReadyAt - window.__qaRepeatMenuStart
+  ));
 
   const backStartedAt = performance.now();
   await page.evaluate(() => history.back());
@@ -307,7 +325,9 @@ try {
     historyState: history.state || null,
     bodyClasses: document.body.className
   }));
-  await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true, null, {timeout: 1000});
+  if (!report.measurements.detailCloseStateAfter50Ms.hidden) {
+    await page.locator('#modal').waitFor({state: 'hidden', timeout: 1000});
+  }
   report.measurements.detailCloseMs = elapsed(detailCloseStartedAt);
 
   const longTasks = await page.evaluate(() => window.__qaLongTasks || []);
