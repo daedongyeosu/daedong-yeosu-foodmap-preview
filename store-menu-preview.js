@@ -467,6 +467,7 @@
       [...grid.querySelectorAll('[data-menu-id]')].map(card => String(card.dataset.menuId || ''))
     );
     const pendingItems = items.filter(item => !renderedIds.has(String(item.id || '')));
+    preview.__menuRenderState?.cleanup?.();
     const state = {run, renderedIds, pendingItems, cursor: 0};
     preview.__menuRenderState = state;
     grid.setAttribute('aria-busy', String(pendingItems.length > 0));
@@ -474,6 +475,15 @@
     if (!pendingItems.length) return;
 
     let chunkScheduled = false;
+    const scrollRoot = preview.querySelector('.store-menu-scroll');
+    let onProgressiveScroll = null;
+    const cleanupProgressiveTriggers = () => {
+      menuRenderObserver?.disconnect();
+      menuRenderObserver = null;
+      if (onProgressiveScroll) scrollRoot?.removeEventListener('scroll', onProgressiveScroll);
+      onProgressiveScroll = null;
+    };
+    state.cleanup = cleanupProgressiveTriggers;
     const appendChunk = deadline => {
       chunkScheduled = false;
       if (menuRenderRun !== run || !preview.isConnected || preview.__menuRenderState !== state) return;
@@ -494,20 +504,29 @@
       grid.setAttribute('aria-busy', String(!complete));
       if (status) status.hidden = complete;
       if (complete) {
-        menuRenderObserver?.disconnect();
-        menuRenderObserver = null;
+        cleanupProgressiveTriggers();
       }
+    };
+    const scheduleNextChunk = () => {
+      if (chunkScheduled) return;
+      chunkScheduled = true;
+      scheduleMenuRenderTask(appendChunk);
     };
     if (typeof IntersectionObserver === 'function' && status) {
       menuRenderObserver = new IntersectionObserver(entries => {
-        if (chunkScheduled || !entries.some(entry => entry.isIntersecting)) return;
-        chunkScheduled = true;
-        scheduleMenuRenderTask(appendChunk);
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        scheduleNextChunk();
       }, {
-        root: preview.querySelector('.store-menu-scroll'),
+        root: scrollRoot,
         rootMargin: '900px 0px'
       });
       menuRenderObserver.observe(status);
+      onProgressiveScroll = () => {
+        if (!scrollRoot) return;
+        const distanceFromBottom = scrollRoot.scrollHeight - scrollRoot.scrollTop - scrollRoot.clientHeight;
+        if (distanceFromBottom <= 900) scheduleNextChunk();
+      };
+      scrollRoot?.addEventListener('scroll', onProgressiveScroll, {passive: true});
       return;
     }
     const appendFallbackChunk = deadline => {

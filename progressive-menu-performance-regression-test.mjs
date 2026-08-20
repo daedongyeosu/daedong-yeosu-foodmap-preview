@@ -13,6 +13,8 @@ assert.match(menu, /requestIdleCallback\(callback, \{timeout: 180\}\)/,
   '나머지 메뉴 렌더링은 브라우저 유휴 시간으로 분할해야 합니다.');
 assert.match(menu, /menuRenderObserver = new IntersectionObserver[\s\S]*rootMargin: '900px 0px'/,
   '남은 메뉴 카드는 사용자가 목록 아래쪽에 접근할 때만 추가해야 합니다.');
+assert.match(menu, /addEventListener\('scroll', onProgressiveScroll, \{passive: true\}\)/,
+  '교차 감지 신호를 놓쳐도 실제 스크롤에서 다음 메뉴 묶음을 준비해야 합니다.');
 assert.match(menu, /addEventListener\('pointerdown'[\s\S]*data-menu-preview-close[\s\S]*requestCloseMenuPreview\(\)/,
   '메뉴 닫기 버튼은 click을 기다리지 말고 터치 시작 즉시 닫혀야 합니다.');
 assert.match(menu, /data-menu-image-src=/);
