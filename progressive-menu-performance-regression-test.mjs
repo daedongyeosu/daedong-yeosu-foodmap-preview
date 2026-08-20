@@ -29,6 +29,10 @@ assert.match(performanceBudget, /menuImageCancellationExpected = true[\s\S]*data
   '성능 검사는 메뉴 닫기 직전부터 의도된 이미지 취소를 구분해야 합니다.');
 assert.match(performanceBudget, /request\.resourceType\(\) === 'image'[\s\S]*\/\\\/store-menu-content\\\/[\s\S]*ERR_ABORTED/,
   '성능 검사는 메뉴 사진의 ERR_ABORTED만 의도된 취소로 분류해야 합니다.');
+assert.match(performanceBudget, /history\.state\?\.daedongMenuPreview === true[\s\S]*page\.evaluate\(\(\) => history\.back\(\)\)/,
+  '뒤로가기는 메뉴 히스토리가 준비된 뒤 실제 앱과 같은 History API로 검사해야 합니다.');
+assert.doesNotMatch(performanceBudget, /page\.goBack\(/,
+  '같은 문서의 메뉴 뒤로가기를 전체 페이지 이동 API로 검사하면 안 됩니다.');
 assert.match(menuStyle, /content-visibility: auto/);
 assert.match(menuStyle, /contain-intrinsic-size: auto 360px/);
 

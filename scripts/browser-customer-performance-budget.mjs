@@ -283,10 +283,11 @@ try {
   const repeatMenuStartedAt = performance.now();
   await menuButton.evaluate(button => button.click());
   await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
+  await page.waitForFunction(() => history.state?.daedongMenuPreview === true, null, {timeout: 1000});
   report.measurements.repeatMenuReadyMs = elapsed(repeatMenuStartedAt);
 
   const backStartedAt = performance.now();
-  await page.goBack({waitUntil: 'commit'}).catch(() => {});
+  await page.evaluate(() => history.back());
   await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true, null, {timeout: 3000});
   report.measurements.menuBackMs = elapsed(backStartedAt);
   report.measurements.detailRestoredAfterBack = await page.locator(
