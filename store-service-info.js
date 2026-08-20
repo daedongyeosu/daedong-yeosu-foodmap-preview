@@ -1652,12 +1652,45 @@ document.addEventListener('input', event => {
     }
   }, true);
 
-  new MutationObserver(() => {
-    ensureOverviewButtons();
-    decorateStoreCards();
-    decorateStoreDetails();
-    const overlay = document.querySelector('[data-store-service-overview-overlay]');
-    if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
+  const serviceSurfaceSelector = [
+    '#storeGrid',
+    '#modalContent .store-detail[data-store-id]',
+    '#recommendSection .section-head',
+    '.main-search-row',
+    '.rail-card[data-rail-card-store]',
+    '.rail-card[data-rail-store-id]',
+    '.rc5-category-card[data-rc5-store]',
+    '.channel-store-card[data-channel-store-id]',
+    '.app-browser-card[data-search-store-id]',
+    '.app-browser-card[data-app-store-id]',
+    '.phone-order-card[data-phone-store-id]',
+    '.phone-order-card[data-phone-route-store-id]',
+    '[data-app-store-order]'
+  ].join(',');
+  let serviceSurfaceRefreshFrame = 0;
+
+  function mutationTouchesServiceSurface(mutation) {
+    const target = mutation.target instanceof Element ? mutation.target : mutation.target?.parentElement;
+    if (target?.closest('[data-store-menu-overlay]')) return false;
+    if (target?.closest('#storeGrid, #modalContent, #recommendSection, .main-search-row')) return true;
+    return [...mutation.addedNodes, ...mutation.removedNodes].some(node => (
+      node instanceof Element
+      && (node.matches(serviceSurfaceSelector) || node.querySelector(serviceSurfaceSelector))
+    ));
+  }
+
+  function scheduleServiceSurfaceRefresh() {
+    if (serviceSurfaceRefreshFrame) return;
+    serviceSurfaceRefreshFrame = window.requestAnimationFrame(() => {
+      serviceSurfaceRefreshFrame = 0;
+      refreshServiceSurfaces();
+      const overlay = document.querySelector('[data-store-service-overview-overlay]');
+      if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
+    });
+  }
+
+  new MutationObserver(mutations => {
+    if (mutations.some(mutationTouchesServiceSurface)) scheduleServiceSurfaceRefresh();
   }).observe(document.documentElement, {childList: true, subtree: true});
 
   window.setInterval(() => {
