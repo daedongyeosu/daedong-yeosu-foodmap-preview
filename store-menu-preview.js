@@ -2,11 +2,18 @@
 
 (() => {
   const menuCache = new Map();
+  const INITIAL_MENU_RENDER_COUNT = 12;
+  const MENU_RENDER_CHUNK_SIZE = 12;
   let activeStore = null;
   let activeMenu = null;
+  let activeMenuById = new Map();
   let lastFocused = null;
   let lastMenuSelection = null;
   let menuChromeRevealTimer = 0;
+  let menuRenderRun = 0;
+  let menuRenderObserver = null;
+  let menuImageObserver = null;
+  let menuClosePointerAt = 0;
   const MENU_HISTORY = Object.freeze({
     preview: 'daedongMenuPreview',
     search: 'daedongMenuSearch',
@@ -151,6 +158,8 @@
 
   function requestMenuLayerBack(layer, fallback) {
     if (history.state?.[MENU_HISTORY[layer]]) {
+      fallback();
+      window.daedongSuppressNextModalPop?.();
       history.back();
       return;
     }
@@ -162,11 +171,12 @@
     const depth = Number(Boolean(state[MENU_HISTORY.preview]))
       + Number(Boolean(state[MENU_HISTORY.search]))
       + Number(Boolean(state[MENU_HISTORY.order]));
+    closeMenuPreview();
     if (depth > 0) {
+      window.daedongSuppressNextModalPop?.();
       history.go(-depth);
       return;
     }
-    closeMenuPreview();
   }
 
   function orderChannels(store) {
@@ -310,12 +320,12 @@
     `;
   }
 
-  function menuCardMarkup(item) {
+  function menuCardMarkup(item, query = '') {
     const searchText = `${item.name} ${item.description} ${item.category}`.toLowerCase();
     const photo = item.image
       ? `
         <div class="store-menu-photo">
-          <img src="${escapeMenuHtml(item.image)}" alt="${escapeMenuHtml(item.name)}" loading="lazy" decoding="async">
+          <img data-menu-image-src="${escapeMenuHtml(item.image)}" alt="${escapeMenuHtml(item.name)}" width="720" height="546" loading="lazy" decoding="async" fetchpriority="low">
           ${item.adultOnly ? '<span>19세 이상</span>' : ''}
         </div>
       `
@@ -326,13 +336,145 @@
         ${photo}
         <div class="store-menu-copy">
           ${item.adultOnly && !item.image ? '<span class="store-menu-age-badge">19세 이상</span>' : ''}
-          <p>${escapeMenuHtml(item.category)}</p>
-          <h3>${escapeMenuHtml(item.name)}</h3>
-          ${item.description ? `<div>${escapeMenuHtml(item.description)}</div>` : ''}
+          <p>${highlightedMenuHtml(item.category, query)}</p>
+          <h3>${highlightedMenuHtml(item.name, query)}</h3>
+          ${item.description ? `<div>${highlightedMenuHtml(item.description, query)}</div>` : ''}
           <span class="store-menu-card-action"><b>이 메뉴 주문하기</b><i aria-hidden="true">›</i></span>
         </div>
       </article>
     `;
+  }
+
+  function loadMenuImage(image) {
+    const source = String(image?.dataset?.menuImageSrc || '').trim();
+    if (!source || image.src) return;
+    image.src = source;
+    delete image.dataset.menuImageSrc;
+  }
+
+  function observeMenuImages(preview, {reset = false} = {}) {
+    if (!preview) return;
+    if (reset) {
+      menuImageObserver?.disconnect();
+      menuImageObserver = null;
+    }
+    const images = [...preview.querySelectorAll('img[data-menu-image-src]')];
+    if (!images.length) return;
+    if (typeof IntersectionObserver !== 'function') {
+      images.forEach(loadMenuImage);
+      return;
+    }
+    if (!menuImageObserver) {
+      menuImageObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          loadMenuImage(entry.target);
+          menuImageObserver?.unobserve(entry.target);
+        });
+      }, {
+        root: preview.querySelector('.store-menu-scroll'),
+        rootMargin: '600px 0px'
+      });
+    }
+    images.forEach(image => menuImageObserver.observe(image));
+  }
+
+  function scheduleMenuRenderTask(callback) {
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(callback, {timeout: 180});
+      return;
+    }
+    window.setTimeout(() => callback(null), 0);
+  }
+
+  function scheduleProgressiveMenuCards(preview, items, query = '') {
+    const grid = preview?.querySelector('[data-menu-grid]');
+    const status = preview?.querySelector('[data-menu-render-status]');
+    if (!grid) return;
+    menuRenderObserver?.disconnect();
+    menuRenderObserver = null;
+    const run = ++menuRenderRun;
+    const renderedIds = new Set(
+      [...grid.querySelectorAll('[data-menu-id]')].map(card => String(card.dataset.menuId || ''))
+    );
+    const pendingItems = items.filter(item => !renderedIds.has(String(item.id || '')));
+    const state = {run, renderedIds, pendingItems, cursor: 0};
+    preview.__menuRenderState = state;
+    grid.setAttribute('aria-busy', String(pendingItems.length > 0));
+    if (status) status.hidden = pendingItems.length === 0;
+    if (!pendingItems.length) return;
+
+    let chunkScheduled = false;
+    const appendChunk = deadline => {
+      chunkScheduled = false;
+      if (menuRenderRun !== run || !preview.isConnected || preview.__menuRenderState !== state) return;
+      const batch = [];
+      while (state.cursor < state.pendingItems.length && batch.length < MENU_RENDER_CHUNK_SIZE) {
+        if (batch.length >= 4 && deadline?.timeRemaining && deadline.timeRemaining() < 3) break;
+        const item = state.pendingItems[state.cursor++];
+        const id = String(item.id || '');
+        if (!id || state.renderedIds.has(id)) continue;
+        state.renderedIds.add(id);
+        batch.push(item);
+      }
+      if (batch.length) {
+        grid.insertAdjacentHTML('beforeend', batch.map(item => menuCardMarkup(item, query)).join(''));
+        observeMenuImages(preview);
+      }
+      const complete = state.cursor >= state.pendingItems.length;
+      grid.setAttribute('aria-busy', String(!complete));
+      if (status) status.hidden = complete;
+      if (complete) {
+        menuRenderObserver?.disconnect();
+        menuRenderObserver = null;
+      }
+    };
+    if (typeof IntersectionObserver === 'function' && status) {
+      menuRenderObserver = new IntersectionObserver(entries => {
+        if (chunkScheduled || !entries.some(entry => entry.isIntersecting)) return;
+        chunkScheduled = true;
+        scheduleMenuRenderTask(appendChunk);
+      }, {
+        root: preview.querySelector('.store-menu-scroll'),
+        rootMargin: '900px 0px'
+      });
+      menuRenderObserver.observe(status);
+      return;
+    }
+    const appendFallbackChunk = deadline => {
+      appendChunk(deadline);
+      if (state.cursor < state.pendingItems.length) window.setTimeout(() => scheduleMenuRenderTask(appendFallbackChunk), 120);
+    };
+    scheduleMenuRenderTask(appendFallbackChunk);
+  }
+
+  function resetProgressiveMenuCards(preview, items, query = '') {
+    const grid = preview?.querySelector('[data-menu-grid]');
+    if (!grid) return;
+    menuRenderRun += 1;
+    menuRenderObserver?.disconnect();
+    menuRenderObserver = null;
+    grid.innerHTML = items.slice(0, INITIAL_MENU_RENDER_COUNT)
+      .map(item => menuCardMarkup(item, query)).join('');
+    observeMenuImages(preview, {reset: true});
+    scheduleProgressiveMenuCards(preview, items, query);
+  }
+
+  function ensureMenuCardRendered(preview, menuId) {
+    const id = String(menuId || '');
+    if (!preview || !id) return null;
+    let card = [...preview.querySelectorAll('[data-menu-card]')]
+      .find(item => String(item.dataset.menuId || '') === id);
+    if (card) return card;
+    const item = activeMenuById.get(id);
+    const grid = preview.querySelector('[data-menu-grid]');
+    if (!item || !grid) return null;
+    grid.insertAdjacentHTML('beforeend', menuCardMarkup(item));
+    preview.__menuRenderState?.renderedIds?.add(id);
+    observeMenuImages(preview);
+    card = [...grid.querySelectorAll('[data-menu-card]')]
+      .find(candidate => String(candidate.dataset.menuId || '') === id);
+    return card || null;
   }
 
   function previewMarkup(menu, store) {
@@ -387,9 +529,10 @@
 
           <p class="store-menu-photo-disclaimer">※ 음식 사진은 실제 조리된 음식과 다를 수 있습니다.</p>
 
-          <section class="store-menu-grid" aria-live="polite">
-            ${menu.items.map(menuCardMarkup).join('')}
+          <section class="store-menu-grid" data-menu-grid aria-live="polite" aria-busy="true">
+            ${menu.items.slice(0, INITIAL_MENU_RENDER_COUNT).map(item => menuCardMarkup(item)).join('')}
           </section>
+          <p class="store-menu-render-status" data-menu-render-status role="status">나머지 메뉴를 부드럽게 준비하고 있습니다…</p>
           <p class="store-menu-no-results" data-menu-no-results hidden>검색 조건에 맞는 메뉴가 없습니다.</p>
 
           <footer class="store-menu-notice">
@@ -546,19 +689,24 @@
     document.body.classList.add('store-menu-open');
     if (!history.state?.[MENU_HISTORY.preview]) pushMenuHistory('preview');
     try {
+      let detailPromise = Promise.resolve(store);
       if (store.__secureDetailReady !== true) {
         const secureDetail = window.daedongSecureStoreDetail;
         if (!secureDetail || typeof secureDetail.enrich !== 'function') {
           throw new Error('이 가게의 주문방법을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
         }
-        await secureDetail.enrich(store, typeof normalizedStore === 'function' ? normalizedStore : undefined);
+        detailPromise = secureDetail.enrich(store, typeof normalizedStore === 'function' ? normalizedStore : undefined);
       }
-      const menu = await loadMenu(storeId);
+      const menuPromise = loadMenu(storeId);
+      const [, menu] = await Promise.all([detailPromise, menuPromise]);
       activeStore = store;
       activeMenu = orderedMenu(menu);
+      activeMenuById = new Map(activeMenu.items.map(item => [String(item.id || ''), item]));
       overlay.innerHTML = previewMarkup(activeMenu, store);
       const preview = overlay.querySelector('.store-menu-preview');
       const scrollRoot = overlay.querySelector('.store-menu-scroll');
+      observeMenuImages(preview, {reset: true});
+      scheduleProgressiveMenuCards(preview, activeMenu.items);
       scrollRoot?.addEventListener('scroll', () => handleMenuScroll(scrollRoot), {passive: true});
       const requestedQuery = String(options.query || '').trim();
       if (requestedQuery && preview) {
@@ -569,8 +717,7 @@
       }
       const requestedMenuId = String(options.menuId || '');
       if (requestedMenuId && preview) {
-        const card = [...preview.querySelectorAll('[data-menu-card]')]
-          .find(item => String(item.dataset.menuId || '') === requestedMenuId && !item.hidden);
+        const card = ensureMenuCardRendered(preview, requestedMenuId);
         if (card) window.requestAnimationFrame(() => openMenuOrderSheet(card));
       }
       if (options.returnState) applyMenuReturnState(preview, options.returnState);
@@ -590,6 +737,11 @@
   function closeMenuPreview() {
     window.clearTimeout(menuChromeRevealTimer);
     menuChromeRevealTimer = 0;
+    menuRenderRun += 1;
+    menuRenderObserver?.disconnect();
+    menuRenderObserver = null;
+    menuImageObserver?.disconnect();
+    menuImageObserver = null;
     const overlay = document.querySelector('[data-store-menu-overlay]');
     if (overlay) {
       overlay.hidden = true;
@@ -598,6 +750,7 @@
     document.body.classList.remove('store-menu-open');
     activeStore = null;
     activeMenu = null;
+    activeMenuById = new Map();
     lastMenuSelection = null;
     lastFocused?.focus?.();
     lastFocused = null;
@@ -720,14 +873,13 @@
     const category = root.classList.contains('menu-search-active')
       ? '전체'
       : root.querySelector('[data-menu-category].active')?.dataset.menuCategory || '전체';
-    let visible = 0;
-    root.querySelectorAll('[data-menu-card]').forEach(card => {
-      const matchesCategory = category === '전체' || card.dataset.category === category;
-      const matchesSearch = !query || card.dataset.search.includes(query);
-      card.hidden = !(matchesCategory && matchesSearch);
-      updateMenuCardText(card, rawQuery);
-      if (!card.hidden) visible += 1;
+    const matchingItems = activeMenu.items.filter(item => {
+      const matchesCategory = category === '전체' || String(item.category || '') === category;
+      const searchText = `${item.name || ''} ${item.description || ''} ${item.category || ''}`.toLocaleLowerCase('ko-KR');
+      return matchesCategory && (!query || searchText.includes(query));
     });
+    const visible = matchingItems.length;
+    resetProgressiveMenuCards(root, matchingItems, rawQuery);
     const count = root.querySelector('[data-menu-result-count]');
     if (count) count.textContent = String(visible);
     const label = root.querySelector('[data-menu-result-label]');
@@ -744,6 +896,13 @@
     }
   }
 
+  document.addEventListener('pointerdown', event => {
+    if (event.button !== 0 || !event.isPrimary || !event.target.closest('[data-menu-preview-close]')) return;
+    menuClosePointerAt = performance.now();
+    event.preventDefault();
+    requestCloseMenuPreview();
+  }, {capture: true});
+
   document.addEventListener('click', event => {
     const entry = event.target.closest('[data-store-menu-preview]');
     if (entry) {
@@ -751,6 +910,7 @@
       return;
     }
     if (event.target.closest('[data-menu-preview-close]')) {
+      if (performance.now() - menuClosePointerAt < 700) return;
       requestCloseMenuPreview();
       return;
     }
