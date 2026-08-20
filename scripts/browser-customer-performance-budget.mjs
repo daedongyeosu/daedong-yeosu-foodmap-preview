@@ -276,10 +276,21 @@ try {
     isPrimary: true,
     button: 0
   });
-  await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true, null, {timeout: 1000});
+  report.measurements.menuCloseStateAfterDispatch = await page.evaluate(() => ({
+    hidden: document.querySelector('[data-store-menu-overlay]')?.hidden === true,
+    bodyClasses: document.body.className,
+    historyState: history.state || null
+  }));
+  if (!report.measurements.menuCloseStateAfterDispatch.hidden) {
+    await page.waitForFunction(
+      () => document.querySelector('[data-store-menu-overlay]')?.hidden === true,
+      null,
+      {polling: 25, timeout: 1000}
+    );
+  }
   report.measurements.menuCloseMs = elapsed(menuCloseStartedAt);
   await page.waitForFunction(() => !document.documentElement.dataset.daedongMenuHistoryClose
-    && !history.state?.daedongMenuPreview, null, {timeout: 2000});
+    && !history.state?.daedongMenuPreview, null, {polling: 25, timeout: 2000});
 
   await menuButton.evaluate((button, storeId) => {
     window.__qaRepeatMenuStart = performance.now();
@@ -301,15 +312,15 @@ try {
   }, targetStoreId);
   await page.waitForFunction((storeId) => Boolean(document.querySelector(
     `[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${storeId}"]`
-  )), targetStoreId, {timeout: 12000});
-  await page.waitForFunction(() => history.state?.daedongMenuPreview === true, null, {timeout: 1000});
+  )), targetStoreId, {polling: 25, timeout: 12000});
+  await page.waitForFunction(() => history.state?.daedongMenuPreview === true, null, {polling: 25, timeout: 1000});
   report.measurements.repeatMenuReadyMs = await page.evaluate(() => Math.round(
     window.__qaRepeatMenuReadyAt - window.__qaRepeatMenuStart
   ));
 
   const backStartedAt = performance.now();
   await page.evaluate(() => history.back());
-  await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true, null, {timeout: 3000});
+  await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true, null, {polling: 25, timeout: 3000});
   report.measurements.menuBackMs = elapsed(backStartedAt);
   report.measurements.detailRestoredAfterBack = await page.locator(
     `#modal:not([hidden]) .store-detail[data-store-id="${targetStoreId}"]`
