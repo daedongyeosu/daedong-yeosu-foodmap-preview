@@ -207,6 +207,15 @@
     guardMenuCloseGesture();
     closeMenuPreview();
     if (depth > 0) {
+      const cleanState = {...state};
+      delete cleanState[MENU_HISTORY.preview];
+      delete cleanState[MENU_HISTORY.search];
+      delete cleanState[MENU_HISTORY.order];
+      try {
+        history.replaceState(cleanState, '', location.href);
+      } catch {
+        // The visual close must still win even if a restrictive webview rejects history replacement.
+      }
       suppressMenuClosePopstate();
       history.go(-depth);
     }
@@ -1189,3 +1198,4 @@
   if (menuEntryRoot) new MutationObserver(ensureMenuEntryButton).observe(menuEntryRoot, {childList: true, subtree: true});
   ensureMenuEntryButton();
 })();
+

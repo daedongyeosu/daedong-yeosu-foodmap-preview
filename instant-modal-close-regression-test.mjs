@@ -19,6 +19,8 @@ assert.match(app, /if \(typeof rc2ReplaceModal === 'function'\) rc2ReplaceModal\
   '상세 로딩 뼈대에서 완성 화면으로 바뀔 때 뒤로가기 스택을 추가하면 안 됩니다.');
 assert.match(menu, /function requestCloseMenuPreview\(\)[\s\S]*closeMenuPreview\(\);[\s\S]*history\.go\(-depth\)/,
   '메뉴 닫기는 이력 이동을 기다리지 않고 화면부터 즉시 닫아야 합니다.');
+assert.match(menu, /const cleanState = \{\.\.\.state\};[\s\S]*delete cleanState\[MENU_HISTORY\.preview\][\s\S]*delete cleanState\[MENU_HISTORY\.search\][\s\S]*delete cleanState\[MENU_HISTORY\.order\][\s\S]*history\.replaceState\(cleanState/,
+  '느린 웹뷰에서도 닫힌 메뉴의 이력 표시는 즉시 제거해 재진입이 막히지 않아야 합니다.');
 assert.match(menu, /dataset\.daedongMenuHistoryClose\s*=\s*'1'[\s\S]*history\.go\(-depth\)/,
   '메뉴 닫기 이력 이동은 상세 팝업을 보존한다는 표시를 남겨야 합니다.');
 assert.match(menu, /function guardMenuCloseGesture\(\)[\s\S]*dataset\.daedongMenuCloseGesture\s*=\s*'1'[\s\S]*600/,
@@ -33,3 +35,4 @@ assert.match(html, /app\.js\?v=[^"\n]*instant-modal-close-4/);
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*parallel-load-1-instant-close-2/);
 
 console.log('instant modal close regression: PASS');
+
