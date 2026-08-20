@@ -354,8 +354,13 @@ try {
     const seen = {targetClick: false, documentClick: false};
     button.addEventListener('click', () => { seen.targetClick = true; }, {once: true});
     document.addEventListener('click', () => { seen.documentClick = true; }, {once: true, capture: true});
+    const startedAt = performance.now();
     button.click();
-    return {...seen, hiddenAfterClick: document.querySelector('#modal')?.hidden === true};
+    return {
+      ...seen,
+      hiddenAfterClick: document.querySelector('#modal')?.hidden === true,
+      elapsedMs: performance.now() - startedAt
+    };
   });
   await page.waitForTimeout(50);
   report.measurements.detailCloseStateAfter50Ms = await page.evaluate(() => ({
@@ -367,7 +372,9 @@ try {
   if (!report.measurements.detailCloseStateAfter50Ms.hidden) {
     await page.locator('#modal').waitFor({state: 'hidden', timeout: 1000});
   }
-  report.measurements.detailCloseMs = elapsed(detailCloseStartedAt);
+  report.measurements.detailCloseMs = report.measurements.detailCloseDispatch.hiddenAfterClick
+    ? Math.round(report.measurements.detailCloseDispatch.elapsedMs)
+    : elapsed(detailCloseStartedAt);
 
   const longTasks = await page.evaluate(() => window.__qaLongTasks || []);
   report.measurements.longTaskCount = longTasks.length;
