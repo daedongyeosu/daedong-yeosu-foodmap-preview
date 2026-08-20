@@ -299,7 +299,9 @@ try {
     button.click();
     recordReady();
   }, targetStoreId);
-  await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
+  await page.waitForFunction((storeId) => Boolean(document.querySelector(
+    `[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${storeId}"]`
+  )), targetStoreId, {timeout: 12000});
   await page.waitForFunction(() => history.state?.daedongMenuPreview === true, null, {timeout: 1000});
   report.measurements.repeatMenuReadyMs = await page.evaluate(() => Math.round(
     window.__qaRepeatMenuReadyAt - window.__qaRepeatMenuStart

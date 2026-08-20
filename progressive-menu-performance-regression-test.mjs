@@ -36,6 +36,8 @@ assert.doesNotMatch(performanceBudget, /page\.goBack\(/,
   '같은 문서의 메뉴 뒤로가기를 전체 페이지 이동 API로 검사하면 안 됩니다.');
 assert.match(performanceBudget, /__qaRepeatMenuStart = performance\.now\(\)[\s\S]*__qaRepeatMenuReadyAt \?\?= performance\.now\(\)/,
   '반복 메뉴 표시 시간은 검사기 바깥이 아니라 실제 브라우저 DOM 표시 시점으로 측정해야 합니다.');
+assert.match(performanceBudget, /waitForFunction\(\(storeId\) => Boolean\(document\.querySelector\([\s\S]*data-store-menu-overlay[\s\S]*targetStoreId/,
+  '반복 메뉴 준비 검사는 애니메이션 안정성 판정이 아니라 실제 DOM 표시 상태를 기다려야 합니다.');
 assert.match(performanceBudget, /if \(!report\.measurements\.detailCloseStateAfter50Ms\.hidden\)[\s\S]*state: 'hidden'/,
   '상세 화면이 이미 즉시 닫혔다면 불필요한 외부 폴링을 반복하면 안 됩니다.');
 assert.match(performanceBudget, /scroll\.scrollTop = scroll\.scrollHeight;[\s\S]*dispatchEvent\(new Event\('scroll'\)\)/,
