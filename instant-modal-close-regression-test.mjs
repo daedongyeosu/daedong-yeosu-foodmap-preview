@@ -17,12 +17,12 @@ assert.match(app, /document\.addEventListener\('pointerdown',[\s\S]*closest\('#m
   '상세창 닫기는 동적 화면 교체 후에도 모바일 pointerdown 순간 바로 처리해야 합니다.');
 assert.match(app, /if \(typeof rc2ReplaceModal === 'function'\) rc2ReplaceModal\(\);\s*openModal\(`<article class="store-detail"/,
   '상세 로딩 뼈대에서 완성 화면으로 바뀔 때 뒤로가기 스택을 추가하면 안 됩니다.');
-assert.match(menu, /function requestCloseMenuPreview\(\)[\s\S]*closeMenuPreview\(\);[\s\S]*history\.go\(-depth\)/,
-  '메뉴 닫기는 이력 이동을 기다리지 않고 화면부터 즉시 닫아야 합니다.');
+assert.match(menu, /function requestCloseMenuPreview\(\)[\s\S]*closeMenuPreview\(\);[\s\S]*history\.replaceState\(cleanState/,
+  '메뉴 닫기는 이력 이동을 기다리지 않고 화면과 현재 이력부터 즉시 정리해야 합니다.');
 assert.match(menu, /const cleanState = \{\.\.\.state\};[\s\S]*delete cleanState\[MENU_HISTORY\.preview\][\s\S]*delete cleanState\[MENU_HISTORY\.search\][\s\S]*delete cleanState\[MENU_HISTORY\.order\][\s\S]*history\.replaceState\(cleanState/,
   '느린 웹뷰에서도 닫힌 메뉴의 이력 표시는 즉시 제거해 재진입이 막히지 않아야 합니다.');
-assert.match(menu, /dataset\.daedongMenuHistoryClose\s*=\s*'1'[\s\S]*history\.go\(-depth\)/,
-  '메뉴 닫기 이력 이동은 상세 팝업을 보존한다는 표시를 남겨야 합니다.');
+assert.doesNotMatch(menu, /function requestCloseMenuPreview\(\)[\s\S]{0,900}history\.(?:go|back)\(/,
+  '메뉴 X 닫기는 같은 상세화면을 이력에서 다시 왕복하며 터치를 막으면 안 됩니다.');
 assert.match(menu, /function guardMenuCloseGesture\(\)[\s\S]*dataset\.daedongMenuCloseGesture\s*=\s*'1'[\s\S]*600/,
   '메뉴 닫기 제스처에는 짧은 터치 관통 방지 구간이 필요합니다.');
 assert.match(menu, /closest\('\[data-menu-preview-close\]'\)[\s\S]{0,260}event\.stopImmediatePropagation\(\);[\s\S]{0,120}requestCloseMenuPreview\(\)/,
@@ -33,5 +33,6 @@ assert.match(menu, /const menuPromise = loadMenu\(storeId\);[\s\S]*Promise\.all\
   '상세정보와 메뉴 데이터는 직렬이 아니라 병렬로 받아야 합니다.');
 assert.match(html, /app\.js\?v=[^"\n]*instant-modal-close-5/);
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*parallel-load-1-instant-close-2/);
+assert.match(html, /store-menu-preview\.js\?v=[^"\n]*history-replace-close-1/);
 
 console.log('instant modal close regression: PASS');

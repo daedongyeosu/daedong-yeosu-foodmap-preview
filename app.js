@@ -124,6 +124,7 @@ const BRAND_GROUPS = [
   ]}
 ].map(group => ({name: group.name, brands: group.brands.map(([id, label, aliases, icon]) => ({id, label, aliases, icon}))}));
 const BRAND_BY_ID = Object.fromEntries(BRAND_GROUPS.flatMap(group => group.brands).map(brand => [brand.id, brand]));
+const NORMALIZED_BRAND_ALIASES = new WeakMap();
 const SEARCH_BRAND_ALIAS_GROUPS = [
   ['BBQ', '비비큐', 'BBQ치킨', '비비큐치킨']
 ];
@@ -894,7 +895,15 @@ function storeHasChannel(store, key) {
   if (store?.__secureDetailReady === true && EXTERNAL_APP_KEYS.includes(key)) return false;
   return Boolean(store?.channelKeys?.includes?.(key));
 }
-function brandMatchesStore(store, brand) { const text = storeText(store); return brand.aliases.some(alias => text.includes(normalize(alias))); }
+function brandMatchesStore(store, brand) {
+  const text = storeText(store);
+  let aliases = NORMALIZED_BRAND_ALIASES.get(brand);
+  if (!aliases) {
+    aliases = brand.aliases.map(normalize);
+    NORMALIZED_BRAND_ALIASES.set(brand, aliases);
+  }
+  return aliases.some(alias => text.includes(alias));
+}
 function brandCount(brand) { return stores.filter(store => brandMatchesStore(store, brand)).length; }
 function haversine(a, b) {
   const R = 6371;

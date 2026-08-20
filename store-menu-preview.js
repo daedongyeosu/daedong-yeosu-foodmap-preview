@@ -168,8 +168,6 @@
     }
   }
 
-  let menuHistoryClosePending = false;
-  let menuHistoryCloseTimer = 0;
   let menuCloseGestureTimer = 0;
 
   function guardMenuCloseGesture() {
@@ -178,16 +176,6 @@
     menuCloseGestureTimer = window.setTimeout(() => {
       delete document.documentElement.dataset.daedongMenuCloseGesture;
     }, 600);
-  }
-
-  function suppressMenuClosePopstate() {
-    menuHistoryClosePending = true;
-    document.documentElement.dataset.daedongMenuHistoryClose = '1';
-    window.clearTimeout(menuHistoryCloseTimer);
-    menuHistoryCloseTimer = window.setTimeout(() => {
-      menuHistoryClosePending = false;
-      delete document.documentElement.dataset.daedongMenuHistoryClose;
-    }, 1200);
   }
 
   function requestMenuLayerBack(layer, fallback) {
@@ -201,12 +189,9 @@
 
   function requestCloseMenuPreview() {
     const state = history.state || {};
-    const depth = Number(Boolean(state[MENU_HISTORY.preview]))
-      + Number(Boolean(state[MENU_HISTORY.search]))
-      + Number(Boolean(state[MENU_HISTORY.order]));
     guardMenuCloseGesture();
     closeMenuPreview();
-    if (depth > 0) {
+    if (state[MENU_HISTORY.preview] || state[MENU_HISTORY.search] || state[MENU_HISTORY.order]) {
       const cleanState = {...state};
       delete cleanState[MENU_HISTORY.preview];
       delete cleanState[MENU_HISTORY.search];
@@ -216,8 +201,6 @@
       } catch {
         // The visual close must still win even if a restrictive webview rejects history replacement.
       }
-      suppressMenuClosePopstate();
-      history.go(-depth);
     }
   }
 
@@ -1157,13 +1140,6 @@
   });
 
   window.addEventListener('popstate', event => {
-    if (menuHistoryClosePending) {
-      menuHistoryClosePending = false;
-      window.clearTimeout(menuHistoryCloseTimer);
-      delete document.documentElement.dataset.daedongMenuHistoryClose;
-      event.stopImmediatePropagation();
-      return;
-    }
     if (!document.body.classList.contains('store-menu-open')) return;
     let handled = false;
     const preview = document.querySelector('.store-menu-preview');

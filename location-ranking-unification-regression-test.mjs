@@ -52,8 +52,8 @@ const coordinateContext = {
   Boolean
 };
 vm.createContext(coordinateContext);
-vm.runInContext(functionSource(rc6, 'rc6ApplyCoordinates'), coordinateContext);
-vm.runInContext('rc6ApplyCoordinates()', coordinateContext);
+vm.runInContext(`async ${functionSource(rc6, 'rc6ApplyCoordinates')}`, coordinateContext);
+await vm.runInContext('rc6ApplyCoordinates()', coordinateContext);
 
 const [catalogCoordinate, staticCoordinate, missingCoordinate] = coordinateContext.canonicalStores;
 assert.deepEqual(

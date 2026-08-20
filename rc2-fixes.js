@@ -350,18 +350,31 @@ fxSelectedRails = function rc2SelectedRails() {
   return ids.map(id => RC2_RAIL_SPECS.find(spec => spec.id === id));
 };
 
+let rc2BrandKeyCache = new WeakMap();
 function rc2BrandKey(store) {
+  const cached = store && typeof store === 'object' ? rc2BrandKeyCache.get(store) : undefined;
+  if (cached !== undefined) return cached;
   const direct = fxBrandByStore.get(String(store.id));
-  if (direct?.brandName) return normalize(direct.brandName);
+  if (direct?.brandName) {
+    const result = normalize(direct.brandName);
+    rc2BrandKeyCache.set(store, result);
+    return result;
+  }
   for (const group of BRAND_GROUPS) {
     const brand = group.brands.find(item => brandMatchesStore(store, item));
-    if (brand) return normalize(brand.label);
+    if (brand) {
+      const result = normalize(brand.label);
+      rc2BrandKeyCache.set(store, result);
+      return result;
+    }
   }
   const base = String(store.realBusinessName || store.name)
     .replace(/\([^)]*\)/g, '')
     .replace(/여수|돌산|문수|국동|봉산|웅천|학동|교동|신기|덕충|죽림|미평|여서|무선|소호|중앙|충무|봉강|안산|엑스포/g, '')
     .replace(/(?:직영|본|\d+호)?지?점.*$/g, '');
-  return normalize(base) || normalize(store.name);
+  const result = normalize(base) || normalize(store.name);
+  if (store && typeof store === 'object') rc2BrandKeyCache.set(store, result);
+  return result;
 }
 
 function rc2RepresentativeMethod(store) {
@@ -465,13 +478,13 @@ function rc2ApplyManagedRegionPriority(cards, spec, limit, rankedStores = []) {
   return normal.slice(0, limit);
 }
 
-function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map()) {
+function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map(), rankedInput = null) {
   const brandKeys = new Set();
   const photoKeys = new Set();
   const selectedIds = new Set();
   const result = [];
   const groups = [];
-  const rankedStores = fxRankStores(spec);
+  const rankedStores = rankedInput || fxRankStores(spec);
   for (const store of rankedStores) {
     const status = storeBusinessStatusPriority(store);
     const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
@@ -1059,6 +1072,7 @@ fxInitialize = async function rc2Initialize() {
   fxHappyData = happy;
   fxPhoneData = phone;
   fxBuildIndexes();
+  rc2BrandKeyCache = new WeakMap();
   rc2NaverByStore.clear();
   for (const item of naver.stores || []) rc2NaverByStore.set(String(item.store_id), item);
   APP_META.phone.icon = 'assets/ui/phone.svg';

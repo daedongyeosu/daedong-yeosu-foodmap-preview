@@ -9,6 +9,7 @@ const RC5_ICON_MAP=Object.freeze([
  [/반찬/,'banchan'],[/베이커리|빵|떡/,'bakery'],[/한식/,'korean']
 ]);
 const rc5Pointers=new Map();
+const rc5BrandKeyCache=new WeakMap();
 
 function rc5IconId(name){const value=String(name||'');return RC5_ICON_MAP.find(([pattern])=>pattern.test(value))?.[1]||'other'}
 function rc5Icon(name,cls='rc5-category-icon'){return `<svg class="${cls}" aria-hidden="true"><use href="${RC5_ICON_SPRITE}#${rc5IconId(name)}"></use></svg>`}
@@ -17,7 +18,7 @@ fxCategoryMarkup=name=>rc5CategoryButton(name,false);
 renderCategories=renderCategoryGrid;
 allCategoriesModal=function(){const names=['전체',...categories.filter(name=>name!=='전체')];openModal(`<section class="category-modal"><h2 id="modalTitle">전체 음식 카테고리</h2><div class="all-category-list rc5-category-list">${names.map(name=>rc5CategoryButton(name,true)).join('')}</div></section>`);requestAnimationFrame(()=>{$('#modal .modal-card').scrollTop=0})};
 
-function rc5BrandKey(store){const mapped=rc2BrandKey(store);if(mapped&&mapped!==normalize(store?.name||''))return mapped;let name=String(store?.name||'').replace(/\([^)]*\)/g,'').replace(/\s+/g,' ').trim();name=name.replace(/\s+(?:여수)?[^\s]{1,10}(?:점|본점)$/,'').trim();const first=name.split(' ')[0];if(/(?:통닭|치킨|피자|버거|커피|카페)$/.test(first))return normalize(first);return normalize(name)}
+function rc5BrandKey(store){if(store&&rc5BrandKeyCache.has(store))return rc5BrandKeyCache.get(store);const mapped=rc2BrandKey(store);let key;if(mapped&&mapped!==normalize(store?.name||''))key=mapped;else{let name=String(store?.name||'').replace(/\([^)]*\)/g,'').replace(/\s+/g,' ').trim();name=name.replace(/\s+(?:여수)?[^\s]{1,10}(?:점|본점)$/,'').trim();const first=name.split(' ')[0];key=/(?:통닭|치킨|피자|버거|커피|카페)$/.test(first)?normalize(first):normalize(name)}if(store)rc5BrandKeyCache.set(store,key);return key}
 function rc5PhotoKey(store){return String(fxPhoto(store)||'')}
 function rc5Diversify(input){const unique=[],deferred=[],ids=new Set(),brands=new Set(),photos=new Set();for(const store of input){const id=String(store.id),brand=rc5BrandKey(store),photo=rc5PhotoKey(store);if(ids.has(id)||photo&&photos.has(photo))continue;ids.add(id);if(brands.has(brand)){deferred.push(store);continue}brands.add(brand);if(photo)photos.add(photo);unique.push(store)}for(const store of deferred){const photo=rc5PhotoKey(store),brand=rc5BrandKey(store);if(photo&&photos.has(photo)||unique.slice(-3).some(item=>rc5BrandKey(item)===brand))continue;if(unique.length>=4){unique.push(store);if(photo)photos.add(photo)}}return unique}
 
