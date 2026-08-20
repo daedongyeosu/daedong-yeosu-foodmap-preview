@@ -127,8 +127,11 @@
         ? `<img src="${escapeMenuHtml(channel.icon)}" alt="">`
         : storeIconMarkup();
     }
-    if (key === 'mukkebi') return '<img src="assets/mukkebi-v7.png" alt="">';
-    if (key === 'ddangyo') return '<img src="assets/ddangyo-v7.png" alt="">';
+    if (key === 'mukkebi' || key === 'ddangyo') {
+      const compactHomeIcon = document.querySelector(`[data-order-key="${key}"] img`)?.getAttribute('src');
+      const fallback = key === 'mukkebi' ? 'assets/mukkebi-v7.png' : 'assets/ddangyo-v7.png';
+      return `<img src="${escapeMenuHtml(compactHomeIcon || fallback)}" alt="">`;
+    }
     if (key === 'ondongne') return '<img src="assets/ondongne.png" alt="">';
     if (key === 'phone') return phoneIconMarkup();
     return '';
