@@ -1667,30 +1667,56 @@ document.addEventListener('input', event => {
     '.phone-order-card[data-phone-route-store-id]',
     '[data-app-store-order]'
   ].join(',');
+  const serviceDecorationSelector = [
+    '[data-store-service-card-meta]',
+    '[data-store-service-card-status-only]',
+    '[data-store-service-detail]',
+    '[data-store-service-top-status]',
+    '[data-store-service-overview-open]',
+    '[data-store-finder-quick]'
+  ].join(',');
+  const SERVICE_REFRESH_CARDS = 1;
+  const SERVICE_REFRESH_DETAILS = 2;
   let serviceSurfaceRefreshFrame = 0;
+  let pendingServiceSurfaceRefresh = 0;
 
-  function mutationTouchesServiceSurface(mutation) {
+  function mutationServiceSurfaceKind(mutation) {
     const target = mutation.target instanceof Element ? mutation.target : mutation.target?.parentElement;
-    if (target?.closest('[data-store-menu-overlay]')) return false;
-    if (target?.closest('#storeGrid, #modalContent, #recommendSection, .main-search-row')) return true;
-    return [...mutation.addedNodes, ...mutation.removedNodes].some(node => (
-      node instanceof Element
-      && (node.matches(serviceSurfaceSelector) || node.querySelector(serviceSurfaceSelector))
-    ));
+    if (target?.closest('[data-store-menu-overlay], ' + serviceDecorationSelector)) return 0;
+    let kind = 0;
+    if (target?.closest('#modalContent')) kind |= SERVICE_REFRESH_DETAILS;
+    if (target?.closest('#storeGrid')) kind |= SERVICE_REFRESH_CARDS;
+    for (const node of [...mutation.addedNodes, ...mutation.removedNodes]) {
+      if (!(node instanceof Element) || node.matches(serviceDecorationSelector)) continue;
+      if (node.closest('#modalContent') || node.matches('.store-detail[data-store-id]') || node.querySelector('.store-detail[data-store-id]')) {
+        kind |= SERVICE_REFRESH_DETAILS;
+      }
+      if (node.closest('#storeGrid') || node.matches(serviceSurfaceSelector) || node.querySelector(serviceSurfaceSelector)) {
+        kind |= SERVICE_REFRESH_CARDS;
+      }
+    }
+    return kind;
   }
 
-  function scheduleServiceSurfaceRefresh() {
+  function scheduleServiceSurfaceRefresh(kind) {
+    pendingServiceSurfaceRefresh |= kind;
     if (serviceSurfaceRefreshFrame) return;
     serviceSurfaceRefreshFrame = window.requestAnimationFrame(() => {
       serviceSurfaceRefreshFrame = 0;
-      refreshServiceSurfaces();
-      const overlay = document.querySelector('[data-store-service-overview-overlay]');
-      if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
+      const refreshKind = pendingServiceSurfaceRefresh;
+      pendingServiceSurfaceRefresh = 0;
+      if (refreshKind & SERVICE_REFRESH_CARDS) {
+        decorateStoreCards();
+        const overlay = document.querySelector('[data-store-service-overview-overlay]');
+        if (overlay && !overlay.hidden && renderedSourceCount !== sourceStores().length) renderOverview();
+      }
+      if (refreshKind & SERVICE_REFRESH_DETAILS) decorateStoreDetails();
     });
   }
 
   new MutationObserver(mutations => {
-    if (mutations.some(mutationTouchesServiceSurface)) scheduleServiceSurfaceRefresh();
+    const kind = mutations.reduce((value, mutation) => value | mutationServiceSurfaceKind(mutation), 0);
+    if (kind) scheduleServiceSurfaceRefresh(kind);
   }).observe(document.documentElement, {childList: true, subtree: true});
 
   window.setInterval(() => {

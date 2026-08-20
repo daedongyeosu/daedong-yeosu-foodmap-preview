@@ -74,11 +74,13 @@ assert.doesNotMatch(deployedIntegration, /page\.goBack\(/,
 assert.match(menuStyle, /content-visibility: auto/);
 assert.match(menuStyle, /contain-intrinsic-size: auto 360px/);
 
-assert.match(storeService, /target\?\.closest\('\[data-store-menu-overlay\]'\)\) return false/,
-  '메뉴 묶음을 추가할 때 주문 혜택 감시기가 전체 가게 목록을 다시 훑으면 안 됩니다.');
-assert.match(storeService, /let serviceSurfaceRefreshFrame = 0[\s\S]*requestAnimationFrame[\s\S]*mutations\.some\(mutationTouchesServiceSurface\)/,
-  '관련 화면 변화가 연속되더라도 주문 혜택 장식은 한 프레임에 한 번만 갱신해야 합니다.');
-assert.match(html, /store-service-info\.js\?v=[^"\n]*targeted-surface-observer-1/,
+assert.match(storeService, /SERVICE_REFRESH_CARDS = 1[\s\S]*SERVICE_REFRESH_DETAILS = 2[\s\S]*pendingServiceSurfaceRefresh \|= kind/,
+  '관련 화면 변화가 연속되더라도 영향받은 주문 혜택 화면만 한 프레임에 갱신해야 합니다.');
+assert.match(storeService, /refreshKind & SERVICE_REFRESH_CARDS[\s\S]*decorateStoreCards\(\)[\s\S]*refreshKind & SERVICE_REFRESH_DETAILS[\s\S]*decorateStoreDetails\(\)/,
+  '목록과 상세 장식은 각각의 화면 변경에서만 갱신해야 합니다.');
+assert.match(storeService, /closest\('\[data-store-menu-overlay\], ' \+ serviceDecorationSelector\)[\s\S]*if \(kind\) scheduleServiceSurfaceRefresh\(kind\)/,
+  '메뉴 및 주문 혜택 자체 변경으로 전체 화면 감시가 재귀 실행되면 안 됩니다.');
+assert.match(html, /store-service-info\.js\?v=[^"\n]*surface-scoped-refresh-1/,
   '설치형 앱도 범위가 제한된 화면 감시 코드를 즉시 받아야 합니다.');
 
 assert.doesNotMatch(html, /<script\s+src="https:\/\/js\.sentry-cdn\.com\//,
