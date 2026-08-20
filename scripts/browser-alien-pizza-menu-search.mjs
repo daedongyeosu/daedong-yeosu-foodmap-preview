@@ -80,7 +80,9 @@ try {
   await search.fill('베지');
   await page.waitForFunction(() => document.querySelector('[data-menu-result-count]')?.textContent === '1');
   await check(page.locator('[data-menu-card]:visible').count().then(count => count === 1), '베지 검색 결과 한 개만 표시');
-  await check(page.locator('[data-menu-card]:visible h3').innerText().then(value => value.includes('베지테리언')), '검색 결과 메뉴를 즉시 확인');
+  const searchResultName = await page.locator('[data-menu-card]:visible h3').innerText();
+  report.searchResultName = searchResultName;
+  await check(searchResultName.includes('베지'), '검색 결과 메뉴를 즉시 확인');
   await check(page.locator('[data-menu-card]:visible mark').count().then(count => count > 0), '메뉴명에서 일치 검색어 강조');
   await check(page.locator('[data-menu-card]:visible').boundingBox().then(box => Boolean(box && box.y < 500)), '키보드 위에서도 첫 검색 결과가 보이는 위치에 표시');
   await check(page.locator('[data-menu-card]:visible .store-menu-card-action').evaluate(node => getComputedStyle(node).display !== 'none'), '검색 결과에 주문 연결 동작 표시');
@@ -88,7 +90,7 @@ try {
   await check(page.locator('.store-menu-sticky-actions .primary').getAttribute('href').then(value => value === null), '비활성 가게바로주문 이동주소 미노출');
   await page.locator('[data-menu-card]:visible').click();
   await check(page.locator('[data-menu-order-sheet]').evaluate(node => !node.hidden), '검색 결과 메뉴 터치 시 주문방법 선택창 열림');
-  await check(page.locator('[data-selected-menu-name]').innerText().then(value => value.includes('베지테리언')), '선택한 메뉴명을 주문방법 선택창에 유지');
+  await check(page.locator('[data-selected-menu-name]').innerText().then(value => value === searchResultName), '선택한 메뉴명을 주문방법 선택창에 유지');
   await check(page.locator('[data-selected-menu-image]').getAttribute('src').then(value => Boolean(value)), '선택한 메뉴 사진을 주문방법 선택창에 유지');
   await check(page.locator('[data-menu-order-sheet] .menu-order-more-tip').innerText().then(value => value.includes('다른 메뉴도 함께 주문할 수 있어요')), '주문앱에서 다른 메뉴도 추가할 수 있음을 안내');
   await check(page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').isDisabled(), '주문방법 선택창 가게바로주문 준비중 비활성화');
@@ -109,7 +111,7 @@ try {
   await check(page.locator('[data-menu-order-sheet] [data-menu-other-list]').boundingBox().then(box => Boolean(box && box.y >= 0 && box.y < 700)), '펼친 다른 주문앱을 현재 화면 안으로 이동');
   await page.screenshot({path: 'browser-alien-pizza-menu-search.png', fullPage: false});
 
-  await page.goBack();
+  await page.evaluate(() => history.back());
   await page.waitForFunction(() => document.querySelector('[data-menu-order-sheet]')?.hidden === true);
   await check(page.locator('[data-menu-order-sheet]').evaluate(node => node.hidden), '주문방법 선택창 닫기');
   await check(page.locator('.store-menu-preview').isVisible(), '휴대폰 뒤로가기 후 음식 미리보기 유지');
@@ -137,7 +139,7 @@ try {
   await check((await revealAllMenuCards(expectedMenuCount)) === expectedMenuCount, '검색 취소 후 스크롤하면 전체 메뉴 복원');
   await check(page.locator('.store-menu-sticky-actions').evaluate(node => getComputedStyle(node).pointerEvents !== 'none'), '검색 취소 후 주문 버튼 복원');
 
-  await page.goBack();
+  await page.evaluate(() => history.back());
   await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true);
   await check(page.locator('#modal:not([hidden]) .store-detail[data-store-id="a089d1d54720b48e"]').isVisible(), '음식 미리보기에서 뒤로가기 시 가게화면으로 복귀');
 

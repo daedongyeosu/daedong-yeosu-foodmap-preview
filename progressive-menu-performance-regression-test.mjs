@@ -6,6 +6,7 @@ const menu = fs.readFileSync('store-menu-preview.js', 'utf8');
 const menuStyle = fs.readFileSync('store-menu-preview.css', 'utf8');
 const rc4 = fs.readFileSync('rc4-fixes.js', 'utf8');
 const performanceBudget = fs.readFileSync('scripts/browser-customer-performance-budget.mjs', 'utf8');
+const deployedIntegration = fs.readFileSync('scripts/browser-alien-pizza-menu-search.mjs', 'utf8');
 
 assert.match(menu, /const INITIAL_MENU_RENDER_COUNT = 12/);
 assert.match(menu, /menu\.items\.slice\(0, INITIAL_MENU_RENDER_COUNT\)\.map\(item => menuCardMarkup\(item\)\)/,
@@ -33,6 +34,12 @@ assert.match(performanceBudget, /history\.state\?\.daedongMenuPreview === true[\
   '뒤로가기는 메뉴 히스토리가 준비된 뒤 실제 앱과 같은 History API로 검사해야 합니다.');
 assert.doesNotMatch(performanceBudget, /page\.goBack\(/,
   '같은 문서의 메뉴 뒤로가기를 전체 페이지 이동 API로 검사하면 안 됩니다.');
+assert.match(deployedIntegration, /const searchResultName = await[\s\S]*searchResultName\.includes\('베지'\)/,
+  '배포 통합검사는 바뀔 수 있는 전체 메뉴명을 고정하지 말고 실제 검색 결과를 확인해야 합니다.');
+assert.match(deployedIntegration, /value === searchResultName/,
+  '검색 결과에서 고른 메뉴명이 주문방법 선택창에 그대로 유지되어야 합니다.');
+assert.doesNotMatch(deployedIntegration, /page\.goBack\(/,
+  '배포 통합검사도 실제 앱과 같은 History API 뒤로가기를 사용해야 합니다.');
 assert.match(menuStyle, /content-visibility: auto/);
 assert.match(menuStyle, /contain-intrinsic-size: auto 360px/);
 
