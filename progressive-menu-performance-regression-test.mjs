@@ -8,6 +8,9 @@ const rc4 = fs.readFileSync('rc4-fixes.js', 'utf8');
 const performanceBudget = fs.readFileSync('scripts/browser-customer-performance-budget.mjs', 'utf8');
 const deployedIntegration = fs.readFileSync('scripts/browser-alien-pizza-menu-search.mjs', 'utf8');
 
+assert.match(fs.readFileSync('app.js', 'utf8'), /history\.scrollRestoration = 'manual'/,
+  '같은 문서의 메뉴·상세 히스토리 이동에서 브라우저 자동 스크롤 복원이 터치를 막으면 안 됩니다.');
+
 assert.match(menu, /const INITIAL_MENU_RENDER_COUNT = 12/);
 assert.match(menu, /menu\.items\.slice\(0, INITIAL_MENU_RENDER_COUNT\)\.map\(item => menuCardMarkup\(item\)\)/,
   '메뉴 전체를 첫 화면에서 한꺼번에 DOM으로 만들면 안 됩니다.');
@@ -30,6 +33,9 @@ assert.match(menu, /new IntersectionObserver[\s\S]*rootMargin: '160px 0px'/,
   '메뉴 사진은 스크롤 근처에 도달할 때만 불러와야 합니다.');
 assert.match(menu, /resetMenuImageLoading\(\{cancelActive: true\}\)/,
   '메뉴를 닫으면 보이지 않는 사진 로딩도 취소해야 합니다.');
+const closeMenuBody = menu.match(/function closeMenuPreview\(\) \{([\s\S]*?)\n  \}/)?.[1] || '';
+assert.doesNotMatch(closeMenuBody, /overlay\.innerHTML\s*=\s*''/,
+  '메뉴 X 직후 큰 DOM을 비우며 전역 감시기를 깨워 터치를 막으면 안 됩니다.');
 assert.match(performanceBudget, /menuImageCancellationExpected = true[\s\S]*data-menu-preview-close/,
   '성능 검사는 메뉴 닫기 직전부터 의도된 이미지 취소를 구분해야 합니다.');
 assert.match(performanceBudget, /request\.resourceType\(\) === 'image'[\s\S]*\/\\\/store-menu-content\\\/[\s\S]*ERR_ABORTED/,

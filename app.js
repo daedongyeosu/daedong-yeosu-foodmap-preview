@@ -1,5 +1,10 @@
 'use strict';
 
+// Modal and menu layers restore the exact page offset themselves. Letting the
+// browser also capture and restore scroll state on every same-document history
+// step can serialize a large mobile DOM and stall the close/back interaction.
+try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch {}
+
 const ASSET_VERSION = 'phone-route-restoration-1';
 const ACTIVE_REGION = (typeof window !== 'undefined' && window.DAEDONG_REGION) || Object.freeze({code:'yeosu',shortName:'여수',cityName:'여수시',mapName:'대동여수음식지도',defaultArea:'여수시 전체',neighborhoodUrl:'data/yeosu-neighborhoods.json',storageKey:key=>key});
 const REGION_SHORT_NAME = ACTIVE_REGION.shortName;
@@ -1339,7 +1344,9 @@ function openModal(html) {
 function hardClose({fromPop = false} = {}) {
   detailCarousel?.destroy(); detailCarousel = null;
   const modal = $('#modal'); if (modal) { modal.hidden = true; modal.className = 'modal'; modal.removeAttribute('data-app-browser-key'); modal.removeAttribute('data-app-browser-category'); modal.removeAttribute('data-active-store-id'); }
-  if ($('#modalContent')) $('#modalContent').innerHTML = '';
+  // Keep the hidden subtree until the next modal replaces it. Clearing a large
+  // detail tree here wakes several document observers and can block the first
+  // frame after tapping X; openModal() already replaces this content safely.
   if ($('#overlay')) $('#overlay').hidden = true;
   if ($('#moreAppsPopover')) $('#moreAppsPopover').hidden = true;
   if ($('#startupAd')) $('#startupAd').hidden = true;
@@ -1579,7 +1586,7 @@ async function normalizeStoresInBatches(rawStores, batchSize = 100, startIndex =
   }
   return normalized.filter(Boolean);
 }
-function applyNormalizedCatalog(normalizedStores, totalCount, complete = false) {
+function applyNormalizedCatalog(normalizedStores, totalCount, complete = false, {refresh = true} = {}) {
   allStores = normalizedStores;
   canonicalStores = allStores.filter(store => store.customerVisible !== false && store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
   searchableStores = canonicalStores;
@@ -1593,7 +1600,11 @@ function applyNormalizedCatalog(normalizedStores, totalCount, complete = false) 
   window.__daedongCatalogProgress = Object.freeze({loaded: normalizedStores.length, total: totalCount, complete});
   hydrateSelectedOrderApp();
   $('#locationText').textContent = shortAddress(state.addressLabel || state.location, state.location);
-  renderCategories(); renderStores();
+  // The first 32 stores already provide the complete initial viewport. Avoid
+  // rebuilding that live DOM when the remaining catalog finishes in the
+  // background; the next search/filter/load-more action renders from the full
+  // arrays above without colliding with the user's current touch interaction.
+  if (refresh) { renderCategories(); renderStores(); }
 }
 function deferBrandFont() {
   if (navigator.connection?.saveData) return;
@@ -1627,7 +1638,7 @@ async function initialize() {
   if (firstPaintCount < safeRawStores.length) {
     await yieldToMainThread();
     const remainingStores = await normalizeStoresInBatches(safeRawStores.slice(firstPaintCount), 48, firstPaintCount);
-    applyNormalizedCatalog([...firstStores, ...remainingStores], safeRawStores.length, true);
+    applyNormalizedCatalog([...firstStores, ...remainingStores], safeRawStores.length, true, {refresh: false});
   }
 }
 function resetFilters() {
@@ -1705,17 +1716,18 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', event => { if (!pop.hidden && !event.target.closest('#moreAppsPopover') && !event.target.closest('#moreAppsBtn')) pop.hidden = true; });
 
   $$('[data-open]').forEach(button => button.addEventListener('click', () => ({mypage: myPage, guide, brands: brandsModal}[button.dataset.open] || guide)()));
-  const modalCloseButton = $('.modal-close');
-  modalCloseButton.addEventListener('pointerdown', event => {
+  document.addEventListener('pointerdown', event => {
+    if (!event.target.closest('#modal .modal-close')) return;
     event.preventDefault();
-    event.stopPropagation();
-    hardClose();
-  });
-  modalCloseButton.addEventListener('click', event => {
-    event.preventDefault();
-    event.stopPropagation();
+    event.stopImmediatePropagation();
     if (!$('#modal').hidden) hardClose();
-  });
+  }, {capture: true});
+  document.addEventListener('click', event => {
+    if (!event.target.closest('#modal .modal-close')) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    if (!$('#modal').hidden) hardClose();
+  }, {capture: true});
   $('#overlay').addEventListener('click', () => hardClose());
   $('#modal').addEventListener('click', event => { if (event.target === $('#modal')) hardClose(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('#modal').hidden) hardClose(); });

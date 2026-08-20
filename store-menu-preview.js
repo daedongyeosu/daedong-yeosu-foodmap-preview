@@ -851,7 +851,9 @@
     const overlay = document.querySelector('[data-store-menu-overlay]');
     if (overlay) {
       overlay.hidden = true;
-      overlay.innerHTML = '';
+      // Keep the hidden menu subtree until the next open replaces it. Clearing
+      // hundreds of nodes here wakes global observers after the X tap and can
+      // turn an instant visual close into a multi-second main-thread stall.
     }
     document.body.classList.remove('store-menu-open');
     activeStore = null;
@@ -1198,4 +1200,3 @@
   if (menuEntryRoot) new MutationObserver(ensureMenuEntryButton).observe(menuEntryRoot, {childList: true, subtree: true});
   ensureMenuEntryButton();
 })();
-

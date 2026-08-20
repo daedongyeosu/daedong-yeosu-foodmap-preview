@@ -13,8 +13,8 @@ assert.match(app, /dataset\.daedongMenuHistoryClose\s*===\s*'1'[\s\S]*delete doc
   '메뉴 이력 정리 표시는 상세 팝업 popstate보다 먼저 소비해야 합니다.');
 assert.doesNotMatch(app, /function hardClose\([\s\S]{0,180}dataset\.daedongMenuCloseGesture/,
   '메뉴 닫기 직후 상세 닫기까지 막는 전역 지연 장치를 다시 넣으면 안 됩니다.');
-assert.match(app, /modalCloseButton\.addEventListener\('pointerdown',[\s\S]*?hardClose\(\);/,
-  '상세창 닫기는 모바일 pointerdown 순간 바로 처리해야 합니다.');
+assert.match(app, /document\.addEventListener\('pointerdown',[\s\S]*closest\('#modal \.modal-close'\)[\s\S]*hardClose\(\);[\s\S]*\{capture: true\}/,
+  '상세창 닫기는 동적 화면 교체 후에도 모바일 pointerdown 순간 바로 처리해야 합니다.');
 assert.match(app, /if \(typeof rc2ReplaceModal === 'function'\) rc2ReplaceModal\(\);\s*openModal\(`<article class="store-detail"/,
   '상세 로딩 뼈대에서 완성 화면으로 바뀔 때 뒤로가기 스택을 추가하면 안 됩니다.');
 assert.match(menu, /function requestCloseMenuPreview\(\)[\s\S]*closeMenuPreview\(\);[\s\S]*history\.go\(-depth\)/,
@@ -31,8 +31,7 @@ assert.match(menu, /function requestMenuLayerBack\(layer, fallback\)[\s\S]*fallb
   '메뉴 내부 시트도 이력 이동 전에 즉시 닫혀야 합니다.');
 assert.match(menu, /const menuPromise = loadMenu\(storeId\);[\s\S]*Promise\.all\(\[detailPromise, menuPromise\]\)/,
   '상세정보와 메뉴 데이터는 직렬이 아니라 병렬로 받아야 합니다.');
-assert.match(html, /app\.js\?v=[^"\n]*instant-modal-close-4/);
+assert.match(html, /app\.js\?v=[^"\n]*instant-modal-close-5/);
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*parallel-load-1-instant-close-2/);
 
 console.log('instant modal close regression: PASS');
-

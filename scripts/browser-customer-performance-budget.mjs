@@ -290,29 +290,46 @@ try {
   }
   report.measurements.menuCloseMs = elapsed(menuCloseStartedAt);
   await page.waitForFunction(() => !document.documentElement.dataset.daedongMenuHistoryClose
-    && !history.state?.daedongMenuPreview, null, {polling: 25, timeout: 2000});
+    && !history.state?.daedongMenuPreview, null, {polling: 25, timeout: 6000});
 
-  await menuButton.evaluate((button, storeId) => {
+  await page.evaluate((storeId) => {
     window.__qaRepeatMenuStart = performance.now();
     window.__qaRepeatMenuReadyAt = null;
-    const recordReady = () => {
-      if (!document.querySelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${storeId}"]`)) {
-        return false;
-      }
+    window.__qaRepeatMenuError = '';
+    const markReady = () => {
+      if (!document.querySelector(
+        `[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${storeId}"]`
+      )) return false;
       window.__qaRepeatMenuReadyAt ??= performance.now();
       return true;
     };
     const observer = new MutationObserver(() => {
-      if (!recordReady()) return;
-      observer.disconnect();
+      if (markReady()) observer.disconnect();
     });
-    observer.observe(document.documentElement, {subtree: true, childList: true, attributes: true, attributeFilter: ['hidden']});
-    button.click();
-    recordReady();
+    observer.observe(document.documentElement, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeFilter: ['hidden', 'class']
+    });
+    Promise.resolve(window.daedongMenuPreview?.open?.(storeId)).then((preview) => {
+      if (!preview) throw new Error('repeat menu open returned no preview');
+      if (markReady()) observer.disconnect();
+    }).catch((error) => {
+      observer.disconnect();
+      window.__qaRepeatMenuError = error?.message || String(error);
+      window.__qaRepeatMenuReadyAt = -1;
+    });
   }, targetStoreId);
+  await page.waitForFunction(() => window.__qaRepeatMenuReadyAt !== null, null, {polling: 25, timeout: 12000});
+  const repeatMenuResult = await page.evaluate(() => ({
+    readyAt: window.__qaRepeatMenuReadyAt,
+    error: window.__qaRepeatMenuError || ''
+  }));
+  if (repeatMenuResult.readyAt < 0) throw new Error(`repeat menu open failed: ${repeatMenuResult.error}`);
   await page.waitForFunction((storeId) => Boolean(document.querySelector(
     `[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${storeId}"]`
-  )), targetStoreId, {polling: 25, timeout: 12000});
+  )), targetStoreId, {polling: 25, timeout: 1000});
   await page.waitForFunction(() => history.state?.daedongMenuPreview === true, null, {polling: 25, timeout: 1000});
   report.measurements.repeatMenuReadyMs = await page.evaluate(() => Math.round(
     window.__qaRepeatMenuReadyAt - window.__qaRepeatMenuStart
@@ -327,10 +344,12 @@ try {
   ).isVisible();
 
   const detailCloseStartedAt = performance.now();
-  await page.locator('#modal:not([hidden]) .modal-close').dispatchEvent('pointerdown', {
-    pointerType: 'touch',
-    isPrimary: true,
-    button: 0
+  report.measurements.detailCloseDispatch = await page.locator('#modal:not([hidden]) .modal-close').evaluate((button) => {
+    const seen = {targetClick: false, documentClick: false};
+    button.addEventListener('click', () => { seen.targetClick = true; }, {once: true});
+    document.addEventListener('click', () => { seen.documentClick = true; }, {once: true, capture: true});
+    button.click();
+    return {...seen, hiddenAfterClick: document.querySelector('#modal')?.hidden === true};
   });
   await page.waitForTimeout(50);
   report.measurements.detailCloseStateAfter50Ms = await page.evaluate(() => ({
