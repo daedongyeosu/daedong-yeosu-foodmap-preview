@@ -23,10 +23,14 @@ assert.match(menu, /addEventListener\('scroll', onProgressiveScroll, \{passive: 
   '교차 감지 신호를 놓쳐도 실제 스크롤에서 다음 메뉴 묶음을 준비해야 합니다.');
 assert.match(menu, /scheduleNextChunk = \(priority = 'idle'\)[\s\S]*priority === 'interaction'[\s\S]*runChunk\(null\)[\s\S]*scheduleNextChunk\('interaction'\)/,
   '사용자가 끝으로 스크롤한 경우 프레임·타이머 제한과 무관하게 다음 12개 메뉴를 즉시 표시해야 합니다.');
+assert.doesNotMatch(menu, /distanceFromBottom/,
+  '사진·글꼴 로딩 중 변하는 스크롤 높이로 다음 메뉴 표시 여부를 결정하면 안 됩니다.');
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*interaction-priority-1/,
   '설치형 앱도 우선순위 렌더링 코드를 즉시 받도록 캐시 키를 갱신해야 합니다.');
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*direct-scroll-chunk-1/,
   '설치형 앱도 직접 메뉴 묶음 렌더링 코드를 즉시 받아야 합니다.');
+assert.match(html, /store-menu-preview\.js\?v=[^"\n]*scroll-intent-chunk-1/,
+  '설치형 앱도 스크롤 의도 기반 메뉴 묶음 코드를 즉시 받아야 합니다.');
 assert.match(menu, /addEventListener\('pointerdown'[\s\S]*data-menu-preview-close[\s\S]*requestCloseMenuPreview\(\)/,
   '메뉴 닫기 버튼은 click을 기다리지 말고 터치 시작 즉시 닫혀야 합니다.');
 assert.match(menu, /data-menu-image-src=/);

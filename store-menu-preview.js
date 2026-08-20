@@ -545,8 +545,10 @@
       menuRenderObserver.observe(status);
       onProgressiveScroll = () => {
         if (!scrollRoot) return;
-        const distanceFromBottom = scrollRoot.scrollHeight - scrollRoot.scrollTop - scrollRoot.clientHeight;
-        if (distanceFromBottom <= 900) scheduleNextChunk('interaction');
+        // Layout height can still be settling while remote images and fonts
+        // decode. The first real scroll is a stronger intent signal than a
+        // transient distance calculation, so prepare exactly one small chunk.
+        scheduleNextChunk('interaction');
       };
       scrollRoot?.addEventListener('scroll', onProgressiveScroll, {passive: true});
       return;
