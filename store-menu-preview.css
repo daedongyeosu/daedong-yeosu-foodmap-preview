@@ -263,6 +263,9 @@ body.store-menu-open {
   position: relative;
   min-width: 0;
   overflow: hidden;
+  content-visibility: auto;
+  contain: layout paint style;
+  contain-intrinsic-size: auto 360px;
   background: #fff;
   border: 1px solid #e6e9ef;
   border-radius: 20px;
@@ -281,6 +284,20 @@ body.store-menu-open {
 }
 .store-menu-card.is-text-only {
   align-self: start;
+  contain-intrinsic-size: auto 180px;
+}
+
+.store-menu-render-status {
+  max-width: 1440px;
+  margin: 0 auto 28px;
+  padding: 0 20px;
+  color: #657086;
+  font-size: 13px;
+  font-weight: 750;
+  text-align: center;
+}
+.store-menu-render-status[hidden] {
+  display: none;
 }
 .store-menu-card.is-text-only .store-menu-copy {
   min-height: 0;
