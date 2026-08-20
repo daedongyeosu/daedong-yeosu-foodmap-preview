@@ -1723,5 +1723,19 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.startup-card').addEventListener('click', event => event.stopPropagation());
   $('#hideToday').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); localStorage.setItem('hideStartup', today); closeStartupAd(); });
   $('#startupDetails').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); setTimeout(() => openModal(`<h2 id="modalTitle">${REGION_MAP_NAME} 모집·광고 안내</h2><div class="guide-list">${PROMOS.map(promo => `<button type="button">${promo.title}<br><small>${promo.desc}</small></button>`).join('')}</div>`), 60); });
-  window.addEventListener('popstate', () => { if(ignoreNextPop>0){ignoreNextPop-=1;return;} if (!startupAd.hidden) { closeStartupAd({fromPop:true}); return; } if (!$('#modal').hidden) hardClose({fromPop:true}); });
+  window.addEventListener('popstate', () => {
+    if (document.documentElement.dataset.daedongMenuHistoryClose === '1') {
+      delete document.documentElement.dataset.daedongMenuHistoryClose;
+      return;
+    }
+    if (ignoreNextPop > 0) {
+      ignoreNextPop -= 1;
+      return;
+    }
+    if (!startupAd.hidden) {
+      closeStartupAd({fromPop: true});
+      return;
+    }
+    if (!$('#modal').hidden) hardClose({fromPop: true});
+  });
 });
