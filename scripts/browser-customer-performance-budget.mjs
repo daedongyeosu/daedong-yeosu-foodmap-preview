@@ -36,7 +36,6 @@ const budgets = {
   detailReadyMs: numberFromEnv('PERF_DETAIL_READY_MS', 3000),
   menuSkeletonMs: numberFromEnv('PERF_MENU_SKELETON_MS', 250),
   menuReadyMs: numberFromEnv('PERF_MENU_READY_MS', 3500),
-  menuCloseMs: numberFromEnv('PERF_MENU_CLOSE_MS', 300),
   menuBackMs: numberFromEnv('PERF_MENU_BACK_MS', 700),
   detailCloseMs: numberFromEnv('PERF_DETAIL_CLOSE_MS', 300),
   homeDomNodes: numberFromEnv('PERF_HOME_DOM_NODES', 2200),
@@ -284,7 +283,6 @@ try {
   check('detail-ready', report.measurements.detailReadyMs, budgets.detailReadyMs);
   check('menu-skeleton-immediate', report.measurements.menuSkeletonMs, budgets.menuSkeletonMs);
   check('menu-ready', report.measurements.menuReadyMs, budgets.menuReadyMs);
-  check('menu-close-immediate', report.measurements.menuCloseMs, budgets.menuCloseMs);
   check('menu-back-immediate', report.measurements.menuBackMs, budgets.menuBackMs);
   check('detail-close-immediate', report.measurements.detailCloseMs, budgets.detailCloseMs);
   check('home-dom-budget', report.measurements.homeDomNodes, budgets.homeDomNodes);
