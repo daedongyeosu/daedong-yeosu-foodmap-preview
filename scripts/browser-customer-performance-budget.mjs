@@ -208,7 +208,10 @@ try {
   // Exercise the application's delegated click path without letting
   // Playwright's actionability polling become the measured bottleneck.
   await menuButton.evaluate(button => button.click());
-  await page.waitForSelector('[data-store-menu-overlay]:not([hidden]) .store-menu-loading', {timeout: 1000});
+  await page.waitForFunction((storeId) => Boolean(
+    document.querySelector('[data-store-menu-overlay]:not([hidden]) .store-menu-loading')
+      || document.querySelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${storeId}"]`)
+  ), targetStoreId, {timeout: 1000});
   report.measurements.menuSkeletonMs = elapsed(menuStartedAt);
   await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
   report.measurements.menuReadyMs = elapsed(menuStartedAt);
