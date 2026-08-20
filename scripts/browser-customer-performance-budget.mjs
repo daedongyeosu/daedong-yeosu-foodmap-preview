@@ -3,13 +3,19 @@ import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 
 const loadBrowserRuntime = async () => {
+  const executablePath = process.env.CODEX_BROWSER_EXECUTABLE_PATH;
   try {
-    return {playwright: await import('playwright'), launchOptions: {headless: true}};
+    return {
+      playwright: await import('playwright'),
+      launchOptions: {
+        headless: true,
+        ...(executablePath ? {executablePath} : {})
+      }
+    };
   } catch {}
   const runtimeModules = process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES;
   if (!runtimeModules) throw new Error('playwright package is required');
   const playwright = await import(pathToFileURL(path.join(runtimeModules, 'playwright-core', 'index.mjs')).href);
-  const executablePath = process.env.CODEX_BROWSER_EXECUTABLE_PATH;
   if (!executablePath) throw new Error('CODEX_BROWSER_EXECUTABLE_PATH is required with playwright-core');
   return {
     playwright,

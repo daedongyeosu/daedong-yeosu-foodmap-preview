@@ -29,6 +29,8 @@ assert.match(menu, /closest\('\[data-menu-preview-close\]'\)[\s\S]{0,260}event\.
   '메뉴 닫기 pointerdown 자체를 소비해 아래 상세 닫기로 관통하지 않아야 합니다.');
 assert.match(menu, /function requestMenuLayerBack\(layer, fallback\)[\s\S]*fallback\(\);[\s\S]*history\.back\(\)/,
   '메뉴 내부 시트도 이력 이동 전에 즉시 닫혀야 합니다.');
+assert.match(menu, /function requestMenuLayerBack\(layer, fallback\)[\s\S]*dataset\.daedongMenuHistoryClose\s*=\s*'1'[\s\S]*history\.back\(\)/,
+  '메뉴 내부 이력 이동이 바깥 상세창을 함께 닫지 않도록 표시해야 합니다.');
 assert.match(menu, /const menuPromise = loadMenu\(storeId\);[\s\S]*Promise\.all\(\[detailPromise, menuPromise\]\)/,
   '상세정보와 메뉴 데이터는 직렬이 아니라 병렬로 받아야 합니다.');
 assert.match(html, /app\.js\?v=[^"\n]*instant-modal-close-5/);

@@ -2,12 +2,30 @@ import fs from 'node:fs';
 import {chromium} from 'playwright';
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
+const proxyApiOrigin = process.env.PERF_PROXY_API_ORIGIN || '';
 const report = {success: false, checks: [], errors: []};
-const browser = await chromium.launch({headless: true});
+const browser = await chromium.launch({
+  headless: true,
+  ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH
+    ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH}
+    : {})
+});
 const context = await browser.newContext({
   viewport: {width: 390, height: 844},
   locale: 'ko-KR'
 });
+if (proxyApiOrigin) {
+  const localOrigin = new URL(baseURL).origin;
+  await context.route(`${proxyApiOrigin}/api/**`, async route => {
+    const response = await route.fetch({
+      headers: {...route.request().headers(), origin: 'https://preview.daedongmap.com'}
+    });
+    await route.fulfill({
+      response,
+      headers: {...response.headers(), 'access-control-allow-origin': localOrigin}
+    });
+  });
+}
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
 });
@@ -78,9 +96,13 @@ try {
   await check(page.locator('.store-menu-sticky-actions').evaluate(node => getComputedStyle(node).pointerEvents === 'none'), '검색 중 주문 버튼이 결과를 가리지 않음');
 
   await search.fill('베지');
-  await page.waitForFunction(() => document.querySelector('[data-menu-result-count]')?.textContent === '1');
+  await page.waitForFunction(() => {
+    const count = document.querySelector('[data-menu-result-count]')?.textContent;
+    const name = document.querySelector('[data-menu-card]:not([hidden]) h3')?.textContent || '';
+    return count === '1' && name.includes('베지');
+  });
   await check(page.locator('[data-menu-card]:visible').count().then(count => count === 1), '베지 검색 결과 한 개만 표시');
-  const searchResultName = await page.locator('[data-menu-card]:visible h3').innerText();
+  const searchResultName = String(await page.locator('[data-menu-card]:visible h3').textContent()).trim();
   report.searchResultName = searchResultName;
   await check(searchResultName.includes('베지'), '검색 결과 메뉴를 즉시 확인');
   await check(page.locator('[data-menu-card]:visible mark').count().then(count => count > 0), '메뉴명에서 일치 검색어 강조');
@@ -125,7 +147,18 @@ try {
 
   await page.locator('[data-menu-search-cancel]').click();
   await page.waitForFunction(() => !document.querySelector('.store-menu-preview')?.classList.contains('menu-search-active'), null, {timeout: 5000});
-  await page.waitForTimeout(800);
+  await page.waitForFunction(() => history.state?.daedongMenuSearch !== true, null, {timeout: 5000});
+  await page.waitForFunction(expected => {
+    const grid = document.querySelector('[data-menu-grid]');
+    return document.querySelectorAll('[data-menu-card]').length === expected
+      && grid?.getAttribute('aria-busy') === 'false';
+  }, expectedMenuCount, {timeout: 7000});
+  await page.waitForFunction(target => {
+    const node = document.querySelector('.store-menu-scroll');
+    if (!node) return false;
+    const effectiveTarget = Math.min(target, Math.max(0, node.scrollHeight - node.clientHeight));
+    return node.scrollTop > 0 && Math.abs(node.scrollTop - effectiveTarget) <= Math.max(24, node.clientHeight * 1.25);
+  }, maxScroll, {timeout: 3000});
   const restoredScroll = await scroll.evaluate(node => ({
     top: node.scrollTop,
     max: Math.max(0, node.scrollHeight - node.clientHeight),
@@ -137,10 +170,24 @@ try {
   await check(restoredScroll.top > 0 && Math.abs(restoredScroll.top - effectiveReturn) <= restoreTolerance, '검색 취소 시 이전 메뉴 위치 복귀');
   await check(page.locator('[data-menu-result-count]').innerText().then(value => Number.parseInt(value, 10) === expectedMenuCount), '검색 취소 후 전체 분류 상태 복원');
   await check((await revealAllMenuCards(expectedMenuCount)) === expectedMenuCount, '검색 취소 후 스크롤하면 전체 메뉴 복원');
+  await page.waitForFunction(() => {
+    const node = document.querySelector('.store-menu-sticky-actions');
+    return node && getComputedStyle(node).pointerEvents !== 'none';
+  }, null, {timeout: 3000});
   await check(page.locator('.store-menu-sticky-actions').evaluate(node => getComputedStyle(node).pointerEvents !== 'none'), '검색 취소 후 주문 버튼 복원');
 
+  report.historyBeforePreviewBack = await page.evaluate(() => ({
+    state: history.state,
+    modalHidden: document.querySelector('#modal')?.hidden,
+    menuHidden: document.querySelector('[data-store-menu-overlay]')?.hidden
+  }));
   await page.evaluate(() => history.back());
   await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true);
+  report.historyAfterPreviewBack = await page.evaluate(() => ({
+    state: history.state,
+    modalHidden: document.querySelector('#modal')?.hidden,
+    detailVisible: Boolean(document.querySelector('#modal:not([hidden]) .store-detail[data-store-id="a089d1d54720b48e"]'))
+  }));
   await check(page.locator('#modal:not([hidden]) .store-detail[data-store-id="a089d1d54720b48e"]').isVisible(), '음식 미리보기에서 뒤로가기 시 가게화면으로 복귀');
 
   report.success = report.errors.length === 0;

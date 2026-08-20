@@ -80,10 +80,18 @@ jobs:
           BASE_URL=http://127.0.0.1:4173 \
           PERF_PROXY_API_ORIGIN=https://daedong-yeosu-data-api-preview.sisakim.workers.dev \
           node scripts/browser-customer-performance-budget.mjs
-      - name: Verify current deployed preview integration reference
-        env:
-          BASE_URL: https://preview.daedongmap.com
-        run: node scripts/browser-alien-pizza-menu-search.mjs
+      - name: Verify menu search integration in current PR
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-menu-search-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          for attempt in {1..20}; do
+            curl --silent --fail http://127.0.0.1:4173/ >/dev/null && break
+            sleep 0.25
+          done
+          BASE_URL=http://127.0.0.1:4173 \
+          PERF_PROXY_API_ORIGIN=https://daedong-yeosu-data-api-preview.sisakim.workers.dev \
+          node scripts/browser-alien-pizza-menu-search.mjs
       - name: Preserve PR verification reports
         if: always()
         uses: actions/upload-artifact@v4

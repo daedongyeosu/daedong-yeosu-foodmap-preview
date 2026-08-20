@@ -65,7 +65,7 @@ assert.match(performanceBudget, /if \(!report\.measurements\.detailCloseStateAft
   '상세 화면이 이미 즉시 닫혔다면 불필요한 외부 폴링을 반복하면 안 됩니다.');
 assert.match(performanceBudget, /scroll\.scrollTop = scroll\.scrollHeight;[\s\S]*dispatchEvent\(new Event\('scroll'\)\)/,
   '점진적 메뉴 검사는 실제 손가락 스크롤과 같은 scroll 신호를 발생시켜야 합니다.');
-assert.match(deployedIntegration, /const searchResultName = await[\s\S]*searchResultName\.includes\('베지'\)/,
+assert.match(deployedIntegration, /const searchResultName = String\(await[\s\S]*\.textContent\(\)\)\.trim\(\)[\s\S]*searchResultName\.includes\('베지'\)/,
   '배포 통합검사는 바뀔 수 있는 전체 메뉴명을 고정하지 말고 실제 검색 결과를 확인해야 합니다.');
 assert.match(deployedIntegration, /value === searchResultName/,
   '검색 결과에서 고른 메뉴명이 주문방법 선택창에 그대로 유지되어야 합니다.');

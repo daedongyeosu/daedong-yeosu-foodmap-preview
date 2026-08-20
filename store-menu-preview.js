@@ -181,6 +181,7 @@
   function requestMenuLayerBack(layer, fallback) {
     if (history.state?.[MENU_HISTORY[layer]]) {
       fallback();
+      document.documentElement.dataset.daedongMenuHistoryClose = '1';
       history.back();
       return;
     }
@@ -448,6 +449,23 @@
     window.setTimeout(() => callback(null), 0);
   }
 
+  function restoreProgressiveMenuPosition(preview) {
+    const target = Number(preview?.__menuRestoreTarget);
+    const scrollRoot = preview?.querySelector('.store-menu-scroll');
+    if (!scrollRoot || !Number.isFinite(target) || target <= 0) return;
+    const maxScroll = Math.max(0, scrollRoot.scrollHeight - scrollRoot.clientHeight);
+    scrollRoot.scrollTop = Math.min(target, maxScroll);
+    if (maxScroll >= target - 1) {
+      showMenuChrome(preview);
+      window.clearTimeout(preview.__menuRestoreClearTimer);
+      preview.__menuRestoreClearTimer = window.setTimeout(() => {
+        delete preview.__menuRestoreTarget;
+        delete preview.__menuRestoreClearTimer;
+        showMenuChrome(preview);
+      }, 120);
+    }
+  }
+
   function scheduleProgressiveMenuCards(preview, items, query = '') {
     const grid = preview?.querySelector('[data-menu-grid]');
     const status = preview?.querySelector('[data-menu-render-status]');
@@ -494,12 +512,17 @@
       if (batch.length) {
         grid.insertAdjacentHTML('beforeend', batch.map(item => menuCardMarkup(item, query)).join(''));
         observeMenuImages(preview);
+        restoreProgressiveMenuPosition(preview);
       }
       const complete = state.cursor >= state.pendingItems.length;
       grid.setAttribute('aria-busy', String(!complete));
       if (status) status.hidden = complete;
       if (complete) {
         cleanupProgressiveTriggers();
+      } else if (Number.isFinite(Number(preview.__menuRestoreTarget))) {
+        // Keep yielding between chunks, but do not stop halfway through a
+        // search-cancel return just because the sentinel moved below view.
+        scheduleNextChunk();
       }
     };
     const scheduleNextChunk = (priority = 'idle') => {
@@ -752,6 +775,10 @@
   function handleMenuScroll(scrollRoot) {
     const preview = scrollRoot.closest('.store-menu-preview');
     if (!preview) return;
+    if (Number.isFinite(Number(preview.__menuRestoreTarget))) {
+      showMenuChrome(preview);
+      return;
+    }
     if (preview.classList.contains('menu-search-active')) {
       showMenuChrome(preview);
       return;
@@ -937,6 +964,7 @@
   function enterMenuSearch(preview) {
     if (!preview || !window.matchMedia('(max-width: 720px)').matches) return;
     const scrollRoot = preview.querySelector('.store-menu-scroll');
+    delete preview.__menuRestoreTarget;
     if (!preview.classList.contains('menu-search-active')) {
       preview.dataset.menuSearchReturn = String(scrollRoot?.scrollTop || 0);
       preview.classList.add('menu-search-active');
@@ -960,11 +988,13 @@
     }
     preview.classList.remove('menu-search-active');
     delete preview.dataset.menuSearchReturn;
+    if (restorePosition && returnPosition > 0) preview.__menuRestoreTarget = returnPosition;
+    else delete preview.__menuRestoreTarget;
     showMenuChrome(preview);
     filterMenus(preview);
     if (restorePosition) {
       window.requestAnimationFrame(() => {
-        if (scrollRoot) scrollRoot.scrollTop = returnPosition;
+        restoreProgressiveMenuPosition(preview);
         window.requestAnimationFrame(() => showMenuChrome(preview));
       });
     }
