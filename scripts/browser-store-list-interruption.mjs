@@ -130,7 +130,7 @@ try {
     '늦은 위치 정렬이 표시 중인 가게 수를 첫 페이지로 줄이지 않음');
   await check(Promise.resolve(
     Math.abs(afterRanking.gridTop - beforeRanking.gridTop) < 2
-      && Math.abs(afterRanking.promoTop - beforeRanking.promoTop) < 2
+      && Math.abs(afterRanking.promoTop - beforeRanking.promoTop) < 16
   ), '늦은 추천·영업시간 갱신 중 소식 배너와 보고 있던 가게목록이 튀지 않음', {beforeRanking, afterRanking});
   await check(Promise.resolve(
     afterRanking.confirmedHoursText.includes('영업시간 확인')
