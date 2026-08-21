@@ -56,6 +56,12 @@ jobs:
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-rider-evergreen-banner.mjs
+      - name: Verify home quick filters fit in current PR
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-home-filter-fit-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173 node scripts/browser-home-filter-chips.mjs
       - name: Verify exact return from every order app in current PR
         run: |
           python3 -m http.server 4173 >/tmp/daedong-order-return-server.log 2>&1 &
@@ -129,6 +135,8 @@ jobs:
             browser-rider-evergreen-banner.png
             browser-rider-evergreen-popup.png
             browser-rider-evergreen-failure.png
+            browser-home-filter-chips-report.json
+            browser-home-filter-chips.png
             browser-all-order-app-exact-return-report.json
             browser-order-return-*.png
             browser-yogiyo-back-return-report.json

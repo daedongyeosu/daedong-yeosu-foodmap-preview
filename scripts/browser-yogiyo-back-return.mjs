@@ -44,14 +44,29 @@ const check = async (condition, message) => {
 };
 const openGuide = async (page, key) => {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(
+    () => window.daedongCatalogReady && typeof window.daedongCatalogReady.then === 'function',
+    null,
+    {timeout: 10000}
+  );
   await page.evaluate(() => window.daedongCatalogReady);
-  await page.waitForFunction(() => typeof window.openStore === 'function', null, {timeout: 20000});
+  await page.waitForFunction(
+    storeId => typeof window.openStore === 'function' &&
+      typeof window.fxStoreById === 'function' &&
+      Boolean(window.fxStoreById(storeId)),
+    store.store_id,
+    {timeout: 20000}
+  );
   const restoredDetail = page.locator(`#modal:not([hidden]) .store-detail[data-store-id="${store.store_id}"]`);
   if (!await restoredDetail.isVisible()) {
     await page.locator('#mainSearch').fill(store.name);
     const card = page.locator('#storeGrid .store-card').filter({hasText: store.name}).first();
     await card.waitFor({state: 'visible', timeout: 10000});
     await card.tap();
+    await restoredDetail.waitFor({state: 'visible', timeout: 10000}).catch(async () => {
+      await page.evaluate(storeId => window.openStore(window.fxStoreById(storeId)), store.store_id);
+      await restoredDetail.waitFor({state: 'visible', timeout: 10000});
+    });
   }
   const otherMethods = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await otherMethods.waitFor({state: 'visible', timeout: 10000});

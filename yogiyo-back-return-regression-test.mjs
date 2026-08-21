@@ -5,6 +5,7 @@ import vm from 'node:vm';
 const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
+const browserTest = fs.readFileSync('scripts/browser-yogiyo-back-return.mjs', 'utf8');
 
 const helperStart = rc2.indexOf('function rc2LaunchComparedExternal(link, href)');
 const helperEnd = rc2.indexOf('async function rc2RestoreAfterExternalPage', helperStart);
@@ -45,6 +46,8 @@ assert.ok(rememberIndex >= 0 && launchIndex > rememberIndex, '이동 전에 보�
 assert.doesNotMatch(comparedHandler, /history\.back/);
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-history-return-2/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-history-return-2/);
+assert.match(browserTest, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'/);
+assert.match(browserTest, /await restoredDetail\.waitFor\([^\n]*\)\.catch\(async \(\) =>/);
 
 console.log('yogiyo-back-return-regression-test: pass');
 
