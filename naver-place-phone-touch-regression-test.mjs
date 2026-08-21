@@ -37,5 +37,7 @@ assert.match(experience, /trusted-naver-place-1-direct-phone-link-1/,
   '휴대전화가 네이버지도·전화 수정본을 즉시 받도록 rc3 캐시 버전을 올려야 합니다.');
 assert.match(html, /trusted-naver-place-1/,
   '상세 API 신뢰 규칙의 캐시 버전을 올려야 합니다.');
+assert.match(html, /final-experience\.js\?v=[^"']*trusted-naver-place-1-direct-phone-link-1/,
+  '상위 스크립트 캐시도 갱신해 새 rc3 전화 링크 수정본을 실제로 불러와야 합니다.');
 
 console.log('Naver place and phone touch regression: PASS');
