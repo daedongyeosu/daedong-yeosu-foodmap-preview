@@ -17,7 +17,7 @@ const context = vm.createContext({
   localStorage: {getItem: () => null, setItem: () => {}},
   sessionStorage: {getItem: () => null, setItem: () => {}},
   location: new URL('https://daedongmap.com/'),
-  document: {querySelector: () => null, querySelectorAll: () => [], referrer: ''},
+  document: {querySelector: () => null, querySelectorAll: () => [], addEventListener: () => {}, referrer: ''},
   navigator: {},
   globalThis: {},
 });
