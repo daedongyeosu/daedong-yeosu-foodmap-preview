@@ -549,4 +549,3 @@ fxRc2Script.onload=()=>{
 };
 fxRc2Script.onerror=()=>{console.error('RC2 검수 수정 레이어를 불러오지 못했습니다.');fxFinishLocationRankingReady(false);};
 document.head.append(fxRc2Script);
-
