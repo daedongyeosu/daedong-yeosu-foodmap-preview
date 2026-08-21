@@ -156,6 +156,7 @@ try {
   await page.waitForFunction(() => document.querySelector('[data-store-service-overview-overlay]')?.hidden === true, null, {timeout: 1500});
   await check(serviceOverlay.evaluate(node => node.hidden), '영업시간·결제·배달혜택 화면 X가 순수 터치로 닫힘');
 
+  await page.waitForFunction(() => window.areaModal?.name === 'addressModal', null, {timeout: 8000});
   await page.locator('#locationBtn').tap();
   await page.waitForSelector('#modal:not([hidden]) [data-rc7-step="saved"]', {timeout: 3000});
   await page.evaluate(() => {
@@ -177,6 +178,17 @@ try {
   await dispatchTouch(orderSheet.locator('.menu-order-sheet-panel [data-menu-order-sheet-close]'));
   await page.waitForFunction(() => document.querySelector('[data-menu-order-sheet]')?.hidden === true, null, {timeout: 1500});
   await check(page.locator('.store-menu-preview').isVisible(), '주문방법 선택 시트 X가 순수 터치로 닫히고 음식 미리보기 유지');
+  await dispatchTouch(page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-preview-close]').first());
+  await page.waitForFunction(() => document.querySelector('[data-store-menu-overlay]')?.hidden === true, null, {timeout: 1500});
+  await dispatchTouch(page.locator('#modal .modal-close'));
+  await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true, null, {timeout: 1500});
+  await waitForModalHistory();
+
+  await page.waitForFunction(() => typeof rc2OpenRailList === 'function', null, {timeout: 3000});
+  await page.evaluate(() => rc2OpenRailList('near'));
+  await page.waitForFunction(() => document.querySelector('#modalTitle')?.textContent === '지금 가까운 가게', null, {timeout: 1500});
+  await dispatchTouch(page.locator('#modal .modal-close'));
+  await check(page.locator('#modal').evaluate(node => node.hidden), '지금 가까운 가게 X가 순수 touchstart/touchend로 닫힘');
 
   await page.screenshot({path: 'browser-modal-close-touch.png', fullPage: false});
   report.success = report.errors.length === 0;
