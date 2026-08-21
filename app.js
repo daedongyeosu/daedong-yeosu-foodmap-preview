@@ -626,6 +626,7 @@ async function openDdangyoRoute(routeUrl) {
 function handleDdangyoOrderLinkClick(event) {
   if (!isAndroidBrowser() || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
+  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link) return;
   const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
   if (key !== 'ddangyo') return;
