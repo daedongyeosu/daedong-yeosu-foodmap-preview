@@ -97,8 +97,15 @@ function fxRestoreAppBrowserReturn(){
  if(!saved||Date.now()-Number(saved.savedAt||0)>30*60*1000){window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);try{sessionStorage.removeItem(FX_APP_BROWSER_RETURN);}catch{}return false;}
  const modal=$('#modal');
  if(!['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'].includes(saved.key)){window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);return false;}
- if(!modal?.hidden&&modal.dataset.appBrowserKey===saved.key){window.daedongStabilizeReturnPosition?.(saved);window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);return true;}
- if(!modal?.hidden)hardClose({fromPop:true});
+ const visibleSameApp=!modal?.hidden&&modal.dataset.appBrowserKey===saved.key;
+ const restoredCards=visibleSameApp?modal.querySelectorAll('[data-app-store-order]').length:0;
+ if(visibleSameApp&&restoredCards>0){window.daedongStabilizeReturnPosition?.(saved);window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);return true;}
+ // Kakao may recreate this page after the order app was opened. In that cold
+ // return, pageshow/focus can run before the catalog has finished loading. Do
+ // not replace a missing snapshot with a false "no stores" result or consume
+ // the one-shot return state; rc2Initialize retries after daedongCatalogReady.
+ if(window.__daedongCatalogProgress?.complete!==true)return false;
+ if(!modal?.hidden&&!visibleSameApp)hardClose({fromPop:true});
  window.scrollTo(0,Number(saved.pageScroll||0));
  openAppBrowser(saved.key,saved.category||'추천');
  if(modal?.hidden||modal.dataset.appBrowserKey!==saved.key)return false;
@@ -542,3 +549,4 @@ fxRc2Script.onload=()=>{
 };
 fxRc2Script.onerror=()=>{console.error('RC2 검수 수정 레이어를 불러오지 못했습니다.');fxFinishLocationRankingReady(false);};
 document.head.append(fxRc2Script);
+
