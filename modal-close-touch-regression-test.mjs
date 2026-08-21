@@ -11,6 +11,7 @@ const rc5 = fs.readFileSync('rc5-fixes.js', 'utf8');
 const rc7 = fs.readFileSync('rc7-address-map.js', 'utf8');
 const intro = fs.readFileSync('turtle-ship-hero.js', 'utf8');
 const summer = fs.readFileSync('mukkebi-summer-event.js', 'utf8');
+const browserTest = fs.readFileSync('scripts/browser-modal-close-touch.mjs', 'utf8');
 
 assert.match(app, /function installDaedongTapAction\(\{selector, activate\}\)/,
   '모든 닫기·돌아가기 화면이 공유할 신뢰 가능한 탭 처리기가 필요합니다.');
@@ -59,5 +60,7 @@ assert.match(html, /store-menu-preview\.js\?v=[^"\n]*order-sheet-touch-close-1/)
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*shared-touch-close-1/);
 assert.match(finalExperience, /rc5-fixes\.js\?v=[^'\n]*postcode-touch-back-1/);
 assert.match(finalExperience, /rc7-address-map\.js\?v=[^'\n]*step-touch-back-1/);
+assert.match(browserTest, /rc2OpenRailList\('near'\)[\s\S]*지금 가까운 가게 X가 순수 touchstart\/touchend로 닫힘/,
+  '사진에서 확인된 지금 가까운 가게 추천창 X를 실제 모바일 브라우저에서 검사해야 합니다.');
 
 console.log('modal close touch regression: PASS');
