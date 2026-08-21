@@ -947,7 +947,10 @@ class PhotoResolver {
     const failed = store?.__failedPhotoPaths instanceof Set ? store.__failedPhotoPaths : new Set();
     return uniquePaths(paths)
       .filter(path => this.validPath(path, store))
-      .map(mobilePhotoPath)
+      .map(path => {
+        const mobile = mobilePhotoPath(path);
+        return mobile !== path && failed.has(photoUrlKey(mobile)) ? path : mobile;
+      })
       .filter(path => !failed.has(photoUrlKey(path)));
   }
   resolveGallery(store) {
