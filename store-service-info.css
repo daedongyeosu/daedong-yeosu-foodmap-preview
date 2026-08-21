@@ -1014,6 +1014,20 @@ body.store-service-overview-open {
 }
 
 @media (max-width: 520px) {
+  .store-finder-quick nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, .8fr);
+    gap: 5px;
+    overflow-x: visible;
+  }
+
+  .store-finder-quick nav button {
+    width: 100%;
+    min-width: 0;
+    padding: 0 6px;
+    font-size: 11px;
+  }
+
   .store-service-card-meta {
     gap: 4px;
   }
@@ -1026,6 +1040,18 @@ body.store-service-overview-open {
 
   .store-service-overview-payments b {
     padding: 6px 8px;
+    font-size: 10px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .store-finder-quick nav {
+    gap: 4px;
+  }
+
+  .store-finder-quick nav button {
+    padding: 0 4px;
     font-size: 10px;
   }
 }
