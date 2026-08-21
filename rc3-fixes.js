@@ -425,40 +425,67 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
 }
 
 let rc3OrderMethodsGhostClickUntil = 0;
+let rc3OrderMethodsGhostClickStoreId = '';
+const rc3OrderMethodsPointers = new Map();
+
+function rc3OrderMethodsTriggerFromEvent(event) {
+  return event?.target?.closest?.('[data-rc3-other-methods]') || null;
+}
+
+function rc3ResetOrderMethodsTouchState() {
+  rc3OrderMethodsPointers.clear();
+  rc3OrderMethodsGhostClickUntil = 0;
+  rc3OrderMethodsGhostClickStoreId = '';
+}
+
+function rc3OnOrderMethodsPointerDown(event) {
+  if (event.pointerType !== 'touch' || event.isPrimary === false) return;
+  const trigger = rc3OrderMethodsTriggerFromEvent(event);
+  if (!trigger) return;
+  rc3OrderMethodsPointers.set(event.pointerId, {
+    trigger,
+    storeId: String(trigger.dataset.rc3OtherMethods || ''),
+    x: event.clientX,
+    y: event.clientY,
+    moved: false
+  });
+}
+
+function rc3OnOrderMethodsPointerMove(event) {
+  const state = rc3OrderMethodsPointers.get(event.pointerId);
+  if (!state) return;
+  if (Math.hypot(event.clientX - state.x, event.clientY - state.y) > 10) state.moved = true;
+}
+
+function rc3OnOrderMethodsPointerCancel(event) {
+  rc3OrderMethodsPointers.delete(event.pointerId);
+}
+
+function rc3OnOrderMethodsPointerUp(event) {
+  const state = rc3OrderMethodsPointers.get(event.pointerId);
+  if (!state) return;
+  rc3OrderMethodsPointers.delete(event.pointerId);
+  if (event.pointerType !== 'touch' || state.moved) return;
+
+  const eventTrigger = rc3OrderMethodsTriggerFromEvent(event);
+  const trigger = eventTrigger?.dataset.rc3OtherMethods === state.storeId
+    ? eventTrigger
+    : state.trigger?.isConnected
+      ? state.trigger
+      : [...document.querySelectorAll('[data-rc3-other-methods]')]
+          .find(node => node.dataset.rc3OtherMethods === state.storeId);
+  if (!trigger) return;
+
+  rc3OrderMethodsGhostClickUntil = Date.now() + 800;
+  rc3OrderMethodsGhostClickStoreId = state.storeId;
+  rc3ActivateOrderMethodsTrigger(trigger, event);
+}
 
 function rc3BindOrderMethodsTrigger(detail) {
   const trigger = detail?.querySelector('[data-rc3-other-methods]');
-  if (!trigger || trigger.dataset.rc3DirectBound === '1') return;
-  trigger.dataset.rc3DirectBound = '1';
-  let touchPointer = null;
-  const clearTouchPointer = () => { touchPointer = null; };
-  trigger.addEventListener('pointerdown', event => {
-    if (event.pointerType !== 'touch' || event.isPrimary === false) return;
-    touchPointer = {id: event.pointerId, x: event.clientX, y: event.clientY, moved: false};
-  }, {passive: true});
-  trigger.addEventListener('pointermove', event => {
-    if (!touchPointer || touchPointer.id !== event.pointerId) return;
-    if (Math.hypot(event.clientX - touchPointer.x, event.clientY - touchPointer.y) > 10) touchPointer.moved = true;
-  }, {passive: true});
-  trigger.addEventListener('pointercancel', clearTouchPointer, {passive: true});
-  trigger.addEventListener('pointerup', event => {
-    if (event.pointerType !== 'touch' || !touchPointer || touchPointer.id !== event.pointerId || touchPointer.moved) {
-      clearTouchPointer();
-      return;
-    }
-    clearTouchPointer();
-    rc3OrderMethodsGhostClickUntil = Date.now() + 800;
-    trigger.dataset.rc3LastTouchActivation = String(Date.now());
-    rc3ActivateOrderMethodsTrigger(trigger, event);
-  }, {passive: false});
-  trigger.addEventListener('click', event => {
-    if (Date.now() - Number(trigger.dataset.rc3LastTouchActivation || 0) < 700) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      return;
-    }
-    rc3ActivateOrderMethodsTrigger(trigger, event);
-  });
+  if (!trigger) return;
+  trigger.removeAttribute('data-rc3-direct-bound');
+  trigger.dataset.rc3DelegatedTouch = '1';
 }
 
 function rc3EnhanceStoreDetail(store) {
@@ -616,11 +643,6 @@ function rc3OnPointerEnd(event) {
 }
 
 function rc3HandleClick(event) {
-  if (Date.now() < rc3OrderMethodsGhostClickUntil) {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    return;
-  }
   const allMain = event.target.closest('[data-cat="전체"]');
   if (allMain) {
     event.preventDefault();
@@ -646,6 +668,12 @@ function rc3HandleClick(event) {
   }
   const other = event.target.closest('[data-rc3-other-methods]');
   if (other) {
+    const storeId = String(other.dataset.rc3OtherMethods || '');
+    if (Date.now() < rc3OrderMethodsGhostClickUntil && storeId === rc3OrderMethodsGhostClickStoreId) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      return;
+    }
     rc3ActivateOrderMethodsTrigger(other, event);
     return;
   }
@@ -675,6 +703,16 @@ fxInstallEvents = function rc3InstallEvents() {
   rc3InstallEventsBase();
   if (rc3EventsInstalled) return;
   rc3EventsInstalled = true;
+  document.addEventListener('pointerdown', rc3OnOrderMethodsPointerDown, true);
+  document.addEventListener('pointermove', rc3OnOrderMethodsPointerMove, true);
+  document.addEventListener('pointerup', rc3OnOrderMethodsPointerUp, true);
+  document.addEventListener('pointercancel', rc3OnOrderMethodsPointerCancel, true);
+  window.addEventListener('pageshow', rc3ResetOrderMethodsTouchState, true);
+  window.addEventListener('pagehide', rc3ResetOrderMethodsTouchState, true);
+  window.addEventListener('blur', rc3ResetOrderMethodsTouchState, true);
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') rc3ResetOrderMethodsTouchState();
+  }, true);
   document.addEventListener('pointerdown', rc3OnPointerDown, true);
   document.addEventListener('pointermove', rc3OnPointerMove, true);
   document.addEventListener('pointerup', rc3OnPointerEnd, true);
