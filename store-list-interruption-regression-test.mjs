@@ -39,8 +39,10 @@ assert.match(ranking, /renderStores\(\{resetCount:!preservePager\}\)/,
   '위치 정렬 준비가 늦게 끝나도 사용 중인 목록을 첫 페이지로 초기화하면 안 됩니다.');
 assert.match(ranking, /window\.daedongRestoreStorePagerState\?\.\(pagerSnapshot\)/);
 assert.match(experience, /function fxRenderRailsWithoutMovingActiveList\(\)/);
-assert.match(experience, /section\.getBoundingClientRect\(\)\.top-before/,
+assert.match(experience, /function fxCommitRailsWithoutMovingActiveList\(root,staging\)[\s\S]*section\.getBoundingClientRect\(\)\.top-before/,
   '추천 영역을 늦게 갱신해도 보고 있던 가게목록의 화면 위치를 보존해야 합니다.');
+assert.match(experience, /root\.replaceChildren\(\.\.\.staging\.childNodes\)/,
+  '추천 영역은 완성된 결과를 한 번에 교체해 소식 배너가 순간적으로 끼어들지 않아야 합니다.');
 
 assert.match(html, /store-list-horizontal-pager\.css\?v=visible-results-1/);
 assert.match(html, /id="storePagerStatus"[^>]*aria-live="polite"/);
@@ -48,5 +50,6 @@ assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1/);
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*list-position-stable-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*atomic-rail-refresh-1/);
 
 console.log('store list interruption regression: PASS');
