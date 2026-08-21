@@ -415,12 +415,33 @@ function rc3OpenOrderMethods(store) {
   $('#modal').dataset.activeStoreId = store.id;
 }
 
+function rc3OrderMethodsMode(channels) {
+  const primary = channels?.primaryOrder || {};
+  const external = channels?.externalOrder || {};
+  const hasLocalOrderApp = [primary.directOrder, primary.mukkebi, primary.ddangyo, primary.ondongne].some(Boolean);
+  const externalKeys = [
+    ['yogiyo', external.yogiyo],
+    ['coupang', external.coupangEats],
+    ['baemin', external.baemin]
+  ].filter(([, route]) => Boolean(route)).map(([key]) => key);
+  const singleExternalKey = !hasLocalOrderApp && externalKeys.length === 1 && externalKeys[0] === 'yogiyo'
+    ? 'yogiyo'
+    : '';
+  return {
+    hasExternal: externalKeys.length > 0,
+    singleExternalKey,
+    label: singleExternalKey ? '요기요로 주문하기' : '다른 주문방법 보기'
+  };
+}
+
 function rc3ActivateOrderMethodsTrigger(trigger, event) {
   const store = fxStoreById(trigger?.dataset.rc3OtherMethods || $('#modal')?.dataset.activeStoreId);
   if (!store) return false;
   event?.preventDefault();
   event?.stopImmediatePropagation();
-  rc3OpenOrderMethods(store);
+  const singleExternalKey = String(trigger?.dataset.rc3SingleExternal || '');
+  if (singleExternalKey) openCommunityChoice(store, singleExternalKey);
+  else rc3OpenOrderMethods(store);
   return true;
 }
 
@@ -578,8 +599,9 @@ function rc3EnhanceStoreDetail(store) {
       ? `<button type="button" class="detail-route local-order-route" data-rc3-phone-store="${escapeHtml(store.id)}"><img class="detail-route-icon" src="assets/ui/phone.svg" alt=""><span>전화주문</span><b>›</b></button>`
       : '';
   const apps = channels.primaryOrder.brandApp || channels.happyOrder ? `<div class="brand-store-actions">${channels.primaryOrder.brandApp ? fxAppAction(channels.primaryOrder.brandApp, 'brand') : ''}${channels.happyOrder ? fxAppAction(channels.happyOrder, 'happy') : ''}</div>` : '';
-  const hasExternal = Object.values(channels.externalOrder).some(Boolean);
-  const other = hasExternal ? `<div class="store-other-wrap"><button class="detail-route rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}" aria-haspopup="dialog"><span>다른 주문방법 보기</span><b aria-hidden="true">›</b></button></div>` : '';
+  const orderMethodsMode = rc3OrderMethodsMode(channels);
+  const singleExternalAttribute = orderMethodsMode.singleExternalKey ? ` data-rc3-single-external="${escapeHtml(orderMethodsMode.singleExternalKey)}"` : '';
+  const other = orderMethodsMode.hasExternal ? `<div class="store-other-wrap"><button class="detail-route rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"${singleExternalAttribute} aria-haspopup="dialog"><span>${escapeHtml(orderMethodsMode.label)}</span><b aria-hidden="true">›</b></button></div>` : '';
   if (utilities) gallery?.insertAdjacentHTML('afterend', `<div class="detail-quick-links">${utilities}</div>`);
   const menuEntry = detail.querySelector('[data-store-menu-preview]');
   const orderAnchor = menuEntry || detail.querySelector('.detail-meta-row') || gallery;
