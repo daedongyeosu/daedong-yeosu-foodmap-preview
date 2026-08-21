@@ -24,6 +24,7 @@ assert.match(rc2, /window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rc
 assert.match(rc2, /window\.addEventListener\('focus', restoreAfterNativeResume\)/, '카카오 외부 앱에서 돌아올 때 focus만 발생하는 경우도 복원해야 합니다.');
 const externalBranch = rc2.slice(rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)'), rc2.indexOf('const externalLink', rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)')));
 assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.assign/, '카카오 WebView 원본 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
+assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '주문앱은 원본 Preview와 분리된 화면으로 명시적으로 열어야 합니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(rc3, /document\.visibilityState === 'visible'/, '앱 복귀로 화면이 다시 보일 때 터치 상태를 초기화해야 합니다.');
