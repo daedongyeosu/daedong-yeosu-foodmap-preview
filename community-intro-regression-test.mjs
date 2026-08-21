@@ -45,8 +45,12 @@ assert.match(js, /const INTRO_DURATION = 15000/);
 assert.match(js, /sessionStorage\.getItem/);
 assert.match(js, /sessionStorage\.setItem/);
 assert.match(js, /new URLSearchParams\(location\.search\)\.has\('store'\)/);
-assert.match(js, /introClose\?\.addEventListener\('pointerdown', dismissIntroImmediately\)/);
-assert.match(js, /introClose\?\.addEventListener\('click', dismissIntroImmediately\)/);
+assert.match(js, /window\.installDaedongTapAction\(\{[\s\S]*selector: '#communityIntroClose'[\s\S]*dismissIntroImmediately\(event\)/,
+  '첫 안내 X는 스크롤 제스처와 구분되는 공통 모바일 탭 경로를 사용해야 합니다.');
+assert.doesNotMatch(js, /introClose\?\.addEventListener\('pointerdown', dismissIntroImmediately\)/,
+  '손가락을 대는 순간 닫으면 스크롤 시작을 닫기로 오인할 수 있습니다.');
+assert.match(js, /introClose\?\.addEventListener\('click', dismissIntroImmediately\)/,
+  '공통 탭 유틸리티를 쓸 수 없는 환경의 클릭 대체 경로를 유지해야 합니다.');
 assert.match(js, /function finishIntro\(\{immediate = false\} = \{\}\)[\s\S]*?if \(immediate\) \{[\s\S]*?completeIntroClose\(\);[\s\S]*?return;/);
 assert.match(js, /completeIntroClose[\s\S]*sailWhenHomeIsClear/);
 assert.doesNotMatch(js, /AudioContext|new Audio|\.play\(/, '첫 진입 연출에는 소리를 추가하지 않습니다.');
