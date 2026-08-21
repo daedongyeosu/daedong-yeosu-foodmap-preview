@@ -349,6 +349,10 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
 .store-detail-skeleton-line{height:15px;width:58%}.store-detail-skeleton-line.is-wide{width:82%}
 .store-detail-skeleton-button{height:52px;width:100%;margin-top:2px}
 .store-detail-skeleton b{font-size:13px;margin-top:2px}
+.store-detail-retry{margin:18px 0;padding:18px;border:2px solid #f4c9b5;border-radius:20px;background:#fff8f4;color:#102f56}
+.store-detail-retry strong{display:block;font-size:18px}
+.store-detail-retry p{margin:8px 0 14px;color:#617087;line-height:1.55}
+.store-detail-retry button{min-height:48px;padding:0 18px;border:0;border-radius:14px;background:#ff5a24;color:#fff;font:inherit;font-weight:800}
 @keyframes store-detail-shell-pulse{0%{background-position:110% 0}100%{background-position:-110% 0}}
 @keyframes store-detail-shell-shimmer{to{transform:translateX(110%)}}
 @media(prefers-reduced-motion:reduce){.store-detail-loading .detail-loading-photo::after,.store-detail-skeleton-line,.store-detail-skeleton-button{animation:none}}
