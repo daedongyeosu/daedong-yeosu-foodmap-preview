@@ -42,13 +42,28 @@ await context.route('**/api/catalog', route => route.fulfill({
   contentType: 'application/json',
   body: JSON.stringify(stores)
 }));
-await context.route('**/api/services', route => route.fulfill({
-  status: 200,
-  contentType: 'application/json',
-  body: JSON.stringify({programs: [], stores: {}})
-}));
+await context.route('**/api/services', async route => {
+  await new Promise(resolve => setTimeout(resolve, 3500));
+  await route.fulfill({
+    status: 200,
+    contentType: 'application/json',
+    body: JSON.stringify({
+      programs: [],
+      stores: {
+        'pager-store-001': {
+          hours: {
+            displayLines: [
+              '2026-08-13 확인 08:00–14:00, 15:00–19:00',
+              '휴무일 매월 첫번째 월요일'
+            ]
+          }
+        }
+      }
+    })
+  });
+});
 await context.route('**/data/store-coordinates.json*', async route => {
-  await new Promise(resolve => setTimeout(resolve, 1800));
+  await new Promise(resolve => setTimeout(resolve, 4500));
   await route.fulfill({status: 200, contentType: 'application/json', body: '{}'});
 });
 
@@ -88,14 +103,24 @@ try {
   const beforeRanking = await page.evaluate(() => ({
     left: document.querySelector('#storeGrid')?.scrollLeft || 0,
     previousVisible: !document.querySelector('#storePrevBtn')?.hidden,
-    visibleCount: document.querySelectorAll('#storeGrid .store-card').length
+    visibleCount: document.querySelectorAll('#storeGrid .store-card').length,
+    gridTop: document.querySelector('#storeGrid')?.getBoundingClientRect().top ?? -1,
+    promoTop: document.querySelector('.promo-section')?.getBoundingClientRect().top ?? -1,
+    scrollY: window.scrollY
   }));
-  await page.evaluate(() => window.daedongLocationRankingReady);
-  await page.waitForTimeout(100);
+  await Promise.all([
+    page.evaluate(() => window.daedongLocationRankingReady),
+    page.evaluate(() => window.daedongStoreServiceInfo?.ready)
+  ]);
+  await page.waitForTimeout(250);
   const afterRanking = await page.evaluate(() => ({
     left: document.querySelector('#storeGrid')?.scrollLeft || 0,
     previousVisible: !document.querySelector('#storePrevBtn')?.hidden,
     visibleCount: document.querySelectorAll('#storeGrid .store-card').length,
+    gridTop: document.querySelector('#storeGrid')?.getBoundingClientRect().top ?? -1,
+    promoTop: document.querySelector('.promo-section')?.getBoundingClientRect().top ?? -1,
+    scrollY: window.scrollY,
+    confirmedHoursText: document.querySelector('#storeGrid .store-card[data-id="pager-store-001"] [data-store-service-card-meta]')?.textContent?.replace(/\s+/g, ' ').trim() || '',
     introHidden: document.querySelector('#communityIntro')?.hidden,
     eventHidden: document.querySelector('#mukkebiSummerEvent')?.hidden
   }));
@@ -103,6 +128,15 @@ try {
     '늦은 위치 정렬 뒤에도 다음 가게 페이지와 이전 버튼 유지', {beforeRanking, afterRanking});
   await check(Promise.resolve(afterRanking.visibleCount >= beforeRanking.visibleCount),
     '늦은 위치 정렬이 표시 중인 가게 수를 첫 페이지로 줄이지 않음');
+  await check(Promise.resolve(
+    Math.abs(afterRanking.gridTop - beforeRanking.gridTop) < 2
+      && Math.abs(afterRanking.promoTop - beforeRanking.promoTop) < 2
+  ), '늦은 추천·영업시간 갱신 중 소식 배너와 보고 있던 가게목록이 튀지 않음', {beforeRanking, afterRanking});
+  await check(Promise.resolve(
+    afterRanking.confirmedHoursText.includes('영업시간 확인')
+      && afterRanking.confirmedHoursText.includes('08:00–14:00, 15:00–19:00')
+      && !afterRanking.confirmedHoursText.includes('시간 미확인')
+  ), '요일별 구조가 없어도 수집된 요기요 영업시간을 가게 카드에 표시', {text: afterRanking.confirmedHoursText});
   await check(Promise.resolve(afterRanking.introHidden && afterRanking.eventHidden),
     '목록 사용 중 안내창과 행사창이 뒤늦게 끼어들지 않음');
 
