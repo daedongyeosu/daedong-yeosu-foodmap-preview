@@ -427,6 +427,7 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
 let rc3OrderMethodsGhostClickUntil = 0;
 let rc3OrderMethodsGhostClickStoreId = '';
 const rc3OrderMethodsPointers = new Map();
+const rc3OrderMethodsTouches = new Map();
 
 function rc3OrderMethodsTriggerFromEvent(event) {
   return event?.target?.closest?.('[data-rc3-other-methods]') || null;
@@ -434,8 +435,19 @@ function rc3OrderMethodsTriggerFromEvent(event) {
 
 function rc3ResetOrderMethodsTouchState() {
   rc3OrderMethodsPointers.clear();
+  rc3OrderMethodsTouches.clear();
   rc3OrderMethodsGhostClickUntil = 0;
   rc3OrderMethodsGhostClickStoreId = '';
+}
+
+function rc3OrderMethodsGhostActive(storeId) {
+  return Date.now() < rc3OrderMethodsGhostClickUntil
+    && String(storeId || '') === rc3OrderMethodsGhostClickStoreId;
+}
+
+function rc3MarkOrderMethodsActivation(storeId) {
+  rc3OrderMethodsGhostClickUntil = Date.now() + 800;
+  rc3OrderMethodsGhostClickStoreId = String(storeId || '');
 }
 
 function rc3OnOrderMethodsPointerDown(event) {
@@ -465,7 +477,7 @@ function rc3OnOrderMethodsPointerUp(event) {
   const state = rc3OrderMethodsPointers.get(event.pointerId);
   if (!state) return;
   rc3OrderMethodsPointers.delete(event.pointerId);
-  if (event.pointerType !== 'touch' || state.moved) return;
+  if (event.pointerType !== 'touch' || state.moved || rc3OrderMethodsGhostActive(state.storeId)) return;
 
   const eventTrigger = rc3OrderMethodsTriggerFromEvent(event);
   const trigger = eventTrigger?.dataset.rc3OtherMethods === state.storeId
@@ -476,9 +488,67 @@ function rc3OnOrderMethodsPointerUp(event) {
           .find(node => node.dataset.rc3OtherMethods === state.storeId);
   if (!trigger) return;
 
-  rc3OrderMethodsGhostClickUntil = Date.now() + 800;
-  rc3OrderMethodsGhostClickStoreId = state.storeId;
+  rc3MarkOrderMethodsActivation(state.storeId);
   rc3ActivateOrderMethodsTrigger(trigger, event);
+}
+
+function rc3TouchByIdentifier(list, identifier) {
+  return [...(list || [])].find(touch => touch.identifier === identifier) || null;
+}
+
+function rc3OnOrderMethodsTouchStart(event) {
+  if (event.touches?.length !== 1) return;
+  const trigger = rc3OrderMethodsTriggerFromEvent(event);
+  const touch = event.changedTouches?.[0] || event.touches[0];
+  if (!trigger || !touch) return;
+  rc3OrderMethodsTouches.set(touch.identifier, {
+    trigger,
+    storeId: String(trigger.dataset.rc3OtherMethods || ''),
+    x: touch.clientX,
+    y: touch.clientY,
+    moved: false
+  });
+}
+
+function rc3OnOrderMethodsTouchMove(event) {
+  for (const [identifier, state] of rc3OrderMethodsTouches) {
+    const touch = rc3TouchByIdentifier(event.touches, identifier)
+      || rc3TouchByIdentifier(event.changedTouches, identifier);
+    if (!touch) continue;
+    if (Math.hypot(touch.clientX - state.x, touch.clientY - state.y) > 10) state.moved = true;
+  }
+}
+
+function rc3OnOrderMethodsTouchCancel(event) {
+  for (const touch of [...(event.changedTouches || [])]) {
+    rc3OrderMethodsTouches.delete(touch.identifier);
+  }
+}
+
+function rc3OnOrderMethodsTouchEnd(event) {
+  for (const touch of [...(event.changedTouches || [])]) {
+    const state = rc3OrderMethodsTouches.get(touch.identifier);
+    if (!state) continue;
+    rc3OrderMethodsTouches.delete(touch.identifier);
+    if (state.moved || rc3OrderMethodsGhostActive(state.storeId)) continue;
+
+    const hit = document.elementFromPoint(touch.clientX, touch.clientY);
+    const hitTrigger = hit?.closest?.('[data-rc3-other-methods]');
+    const eventTrigger = rc3OrderMethodsTriggerFromEvent(event);
+    const trigger = hitTrigger?.dataset.rc3OtherMethods === state.storeId
+      ? hitTrigger
+      : eventTrigger?.dataset.rc3OtherMethods === state.storeId
+        ? eventTrigger
+        : state.trigger?.isConnected
+          ? state.trigger
+          : [...document.querySelectorAll('[data-rc3-other-methods]')]
+              .find(node => node.dataset.rc3OtherMethods === state.storeId);
+    if (!trigger) continue;
+
+    rc3MarkOrderMethodsActivation(state.storeId);
+    rc3ActivateOrderMethodsTrigger(trigger, event);
+    return;
+  }
 }
 
 function rc3BindOrderMethodsTrigger(detail) {
@@ -669,7 +739,7 @@ function rc3HandleClick(event) {
   const other = event.target.closest('[data-rc3-other-methods]');
   if (other) {
     const storeId = String(other.dataset.rc3OtherMethods || '');
-    if (Date.now() < rc3OrderMethodsGhostClickUntil && storeId === rc3OrderMethodsGhostClickStoreId) {
+    if (rc3OrderMethodsGhostActive(storeId)) {
       event.preventDefault();
       event.stopImmediatePropagation();
       return;
@@ -707,6 +777,10 @@ fxInstallEvents = function rc3InstallEvents() {
   document.addEventListener('pointermove', rc3OnOrderMethodsPointerMove, true);
   document.addEventListener('pointerup', rc3OnOrderMethodsPointerUp, true);
   document.addEventListener('pointercancel', rc3OnOrderMethodsPointerCancel, true);
+  document.addEventListener('touchstart', rc3OnOrderMethodsTouchStart, {capture: true, passive: true});
+  document.addEventListener('touchmove', rc3OnOrderMethodsTouchMove, {capture: true, passive: true});
+  document.addEventListener('touchend', rc3OnOrderMethodsTouchEnd, {capture: true, passive: false});
+  document.addEventListener('touchcancel', rc3OnOrderMethodsTouchCancel, {capture: true, passive: true});
   window.addEventListener('pageshow', rc3ResetOrderMethodsTouchState, true);
   window.addEventListener('pagehide', rc3ResetOrderMethodsTouchState, true);
   window.addEventListener('blur', rc3ResetOrderMethodsTouchState, true);
