@@ -4,6 +4,23 @@
   if (!window.daedongDataApi) return;
   const pendingDetails = new Map();
 
+  function detailHasTrustedNaverPlace(detail) {
+    const phone = String(detail?.phone || '').replace(/\D/g, '');
+    const validPhone = /^02\d{7,8}$/.test(phone)
+      || /^0(?:3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{7,8}$/.test(phone)
+      || /^050[2-8]\d{7,8}$/.test(phone)
+      || /^01[016789]\d{7,8}$/.test(phone)
+      || /^070\d{8}$/.test(phone);
+    if (!validPhone || !String(detail?.address || '').trim()) return false;
+    try {
+      const url = new URL(String(detail?.naverMap || '').trim());
+      return ['map.naver.com', 'm.map.naver.com'].includes(url.hostname.toLowerCase())
+        && /^\/p\/entry\/place\/\d+(?:\/|$)/.test(url.pathname);
+    } catch {
+      return false;
+    }
+  }
+
   function mergeStoreDetails(primary, additions) {
     const details = [primary, ...additions].filter(Boolean);
     const routeMap = new Map();
@@ -50,6 +67,7 @@
         }))
       ]).then(details => {
         const detail = mergeStoreDetails(details[0], details.slice(1));
+        const trustedPhysicalMapDetail = details.find(detailHasTrustedNaverPlace);
         const expectedRouteKeys = [...new Set(
           (Array.isArray(store.channelKeys) ? store.channelKeys : [])
             .map(value => String(value || '').trim())
@@ -68,6 +86,9 @@
         }
         Object.assign(store, normalized, {
           hasMenu: Boolean(store.hasMenu),
+          __verifiedPhysicalMapSource: trustedPhysicalMapDetail
+            ? String(trustedPhysicalMapDetail.id || trustedPhysicalMapDetail.store_id || id)
+            : store.__verifiedPhysicalMapSource,
           __secureDetailReady: true
         });
         return store;
