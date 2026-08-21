@@ -89,7 +89,9 @@ jobs:
             curl --silent --fail http://127.0.0.1:4173/ >/dev/null && break
             sleep 0.25
           done
-          BASE_URL=http://127.0.0.1:4173 node scripts/browser-original-photo-fallback.mjs
+          BASE_URL=http://127.0.0.1:4173 \
+          PERF_PROXY_API_ORIGIN=https://daedong-yeosu-data-api-preview.sisakim.workers.dev \
+          node scripts/browser-original-photo-fallback.mjs
       - name: Enforce customer mobile performance budget
         run: |
           node scripts/serve-performance-budget.mjs 4173 >/tmp/daedong-performance-budget-server.log 2>&1 &
