@@ -18,7 +18,8 @@
   let activeMenuImageLoads = 0;
   let menuImageLoadRun = 0;
   const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2;
-  let menuClosePointerAt = 0;
+  let menuCloseActivatedAt = 0;
+  const menuCloseTouches = new Map();
   const MENU_HISTORY = Object.freeze({
     preview: 'daedongMenuPreview',
     search: 'daedongMenuSearch',
@@ -202,6 +203,66 @@
       } catch {
         // The visual close must still win even if a restrictive webview rejects history replacement.
       }
+    }
+  }
+
+  function activateMenuPreviewClose(event) {
+    const now = performance.now();
+    if (menuCloseActivatedAt > 0 && now - menuCloseActivatedAt < 700) return false;
+    menuCloseActivatedAt = now;
+    event?.preventDefault?.();
+    event?.stopImmediatePropagation?.();
+    requestCloseMenuPreview();
+    return true;
+  }
+
+  function menuPreviewCloseTarget(event) {
+    return event.target?.closest?.('[data-menu-preview-close]') || null;
+  }
+
+  function menuCloseTouchByIdentifier(list, identifier) {
+    return [...(list || [])].find(touch => touch.identifier === identifier) || null;
+  }
+
+  function onMenuCloseTouchStart(event) {
+    if (event.touches?.length !== 1) return;
+    const target = menuPreviewCloseTarget(event);
+    const touch = event.changedTouches?.[0] || event.touches[0];
+    if (!target || !touch) return;
+    menuCloseTouches.set(touch.identifier, {
+      target,
+      x: touch.clientX,
+      y: touch.clientY,
+      moved: false
+    });
+  }
+
+  function onMenuCloseTouchMove(event) {
+    for (const [identifier, state] of menuCloseTouches) {
+      const touch = menuCloseTouchByIdentifier(event.touches, identifier)
+        || menuCloseTouchByIdentifier(event.changedTouches, identifier);
+      if (!touch) continue;
+      if (Math.hypot(touch.clientX - state.x, touch.clientY - state.y) > 10) state.moved = true;
+    }
+  }
+
+  function onMenuCloseTouchCancel(event) {
+    for (const touch of [...(event.changedTouches || [])]) menuCloseTouches.delete(touch.identifier);
+  }
+
+  function onMenuCloseTouchEnd(event) {
+    for (const touch of [...(event.changedTouches || [])]) {
+      const state = menuCloseTouches.get(touch.identifier);
+      if (!state) continue;
+      menuCloseTouches.delete(touch.identifier);
+      if (state.moved || (menuCloseActivatedAt > 0 && performance.now() - menuCloseActivatedAt < 700)) continue;
+      const hit = document.elementFromPoint(touch.clientX, touch.clientY);
+      const target = hit?.closest?.('[data-menu-preview-close]')
+        || menuPreviewCloseTarget(event)
+        || (state.target?.isConnected ? state.target : null);
+      if (!target) continue;
+      activateMenuPreviewClose(event);
+      return;
     }
   }
 
@@ -814,6 +875,8 @@
       overlay.dataset.storeMenuOverlay = '';
       document.body.append(overlay);
     }
+    menuCloseActivatedAt = 0;
+    menuCloseTouches.clear();
     overlay.hidden = false;
     overlay.innerHTML = `<div class="store-menu-loading" role="status">${escapeMenuHtml(store.name || '가게')} 메뉴를 불러오는 중입니다…</div>`;
     document.body.classList.add('store-menu-open');
@@ -882,6 +945,7 @@
     activeStore = null;
     activeMenu = null;
     activeMenuById = new Map();
+    menuCloseTouches.clear();
     lastMenuSelection = null;
     lastFocused?.focus?.();
     lastFocused = null;
@@ -1031,12 +1095,14 @@
   }
 
   document.addEventListener('pointerdown', event => {
-    if (event.button !== 0 || !event.target.closest('[data-menu-preview-close]')) return;
-    menuClosePointerAt = performance.now();
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    requestCloseMenuPreview();
+    if (event.button !== 0 || !menuPreviewCloseTarget(event)) return;
+    activateMenuPreviewClose(event);
   }, {capture: true});
+
+  document.addEventListener('touchstart', onMenuCloseTouchStart, {capture: true, passive: true});
+  document.addEventListener('touchmove', onMenuCloseTouchMove, {capture: true, passive: true});
+  document.addEventListener('touchend', onMenuCloseTouchEnd, {capture: true, passive: false});
+  document.addEventListener('touchcancel', onMenuCloseTouchCancel, {capture: true, passive: true});
 
   document.addEventListener('click', event => {
     const entry = event.target.closest('[data-store-menu-preview]');
@@ -1044,9 +1110,8 @@
       openMenuPreview(entry.dataset.storeMenuPreview, entry);
       return;
     }
-    if (event.target.closest('[data-menu-preview-close]')) {
-      if (performance.now() - menuClosePointerAt < 700) return;
-      requestCloseMenuPreview();
+    if (menuPreviewCloseTarget(event)) {
+      activateMenuPreviewClose(event);
       return;
     }
     const closeOrderSheet = event.target.closest('[data-menu-order-sheet-close]');
