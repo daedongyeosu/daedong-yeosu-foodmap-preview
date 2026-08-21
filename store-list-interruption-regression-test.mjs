@@ -14,6 +14,11 @@ assert.doesNotMatch(pager, /behavior:[^\n]*smooth|setTimeout\([^\n]*460|visibleC
   '다음 가게 버튼에 460ms 애니메이션이나 40개 일괄 렌더링을 다시 넣으면 안 됩니다.');
 assert.match(pager, /Math\.max\(4,pageSize\*2\)/,
   '뒤쪽 페이지 준비는 현재 화면에 필요한 소량의 카드만 추가해야 합니다.');
+assert.match(pager, /status\.textContent=`가게 \$\{rangeStart\}–\$\{rangeEnd\} \/ 전체 \$\{total\}곳`/,
+  '현재 표시 중인 가게 범위를 버튼 위에 알려야 합니다.');
+assert.match(pager, /function revealStoreListPagerResults\(grid\)/);
+assert.match(pager, /scrollStoreListPagerTo\(targetPage,\{reveal:true\}\)/,
+  '다음·이전 버튼을 누르면 새 가게 카드 시작 위치를 바로 보여줘야 합니다.');
 assert.match(pager, /window\.daedongHasHomeInteraction=hasStoreListPagerCustomerInteraction/,
   '뒤늦은 팝업과 정렬 갱신이 고객의 목록 사용 여부를 확인할 수 있어야 합니다.');
 assert.match(pager, /document\.addEventListener\('pointerdown',markStoreListPagerCustomerInteraction/);
@@ -37,7 +42,9 @@ assert.match(experience, /function fxRenderRailsWithoutMovingActiveList\(\)/);
 assert.match(experience, /section\.getBoundingClientRect\(\)\.top-before/,
   '추천 영역을 늦게 갱신해도 보고 있던 가게목록의 화면 위치를 보존해야 합니다.');
 
-assert.match(html, /store-list-horizontal-pager\.js\?v=instant-page-no-interrupt-1/);
+assert.match(html, /store-list-horizontal-pager\.css\?v=visible-results-1/);
+assert.match(html, /id="storePagerStatus"[^>]*aria-live="polite"/);
+assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1/);
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*list-position-stable-1/);
