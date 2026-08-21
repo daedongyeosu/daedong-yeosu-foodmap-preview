@@ -66,7 +66,7 @@
     const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
     target.insertAdjacentHTML(topStatus ? 'afterend' : 'beforebegin', `
       <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
-        ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="">` : ''}
+        ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="" data-photo-kind="menu-entry" data-photo-store-id="${escapeMenuHtml(storeId)}">` : ''}
         <span>
           <b>음식보기</b>
           <small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small>
@@ -351,7 +351,7 @@
     const photo = item.image
       ? `
         <div class="store-menu-photo">
-          <img data-menu-image-src="${escapeMenuHtml(item.image)}" alt="${escapeMenuHtml(item.name)}" width="720" height="546" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-menu-image-src="${escapeMenuHtml(item.image)}" alt="${escapeMenuHtml(item.name)}" data-photo-kind="card" width="720" height="546" loading="lazy" decoding="async" fetchpriority="low">
           ${item.adultOnly ? '<span>19세 이상</span>' : ''}
         </div>
       `
@@ -619,7 +619,7 @@
 
         <main class="store-menu-scroll">
           <section class="store-menu-hero">
-            <img src="${escapeMenuHtml(menu.mainImage)}" alt="${escapeMenuHtml(menu.displayName)}" fetchpriority="high">
+            <img src="${escapeMenuHtml(menu.mainImage)}" alt="${escapeMenuHtml(menu.displayName)}" fetchpriority="high" data-photo-kind="detail" data-photo-store-id="${escapeMenuHtml(store.id)}">
             <div>
               <span>${escapeMenuHtml(window.DAEDONG_REGION?.mapName || '대동여수음식지도')} · 음식 미리보기</span>
               <p>${featuredCategories.map(escapeMenuHtml).join(' · ')}</p>
