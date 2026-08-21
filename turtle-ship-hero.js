@@ -70,6 +70,10 @@
     } catch {}
   }
 
+  function customerAlreadyInteracted() {
+    return window.daedongHasHomeInteraction?.() === true;
+  }
+
   function homeIsClear() {
     const startupAd = document.getElementById('startupAd');
     const modal = document.getElementById('modal');
@@ -123,6 +127,11 @@
 
   function playIntroThenSail() {
     if (sequenceStarted || sequenceAlreadyPlayed()) return;
+    if (customerAlreadyInteracted()) {
+      sequenceStarted = true;
+      rememberSequence();
+      return;
+    }
     sequenceStarted = true;
     rememberSequence();
 
@@ -146,12 +155,22 @@
 
   function waitForClearHome() {
     if (new URLSearchParams(location.search).has('store')) return;
+    if (customerAlreadyInteracted()) {
+      sequenceStarted = true;
+      rememberSequence();
+      return;
+    }
     if (!homeIsClear()) return;
     window.setTimeout(() => {
+      if (customerAlreadyInteracted()) {
+        sequenceStarted = true;
+        rememberSequence();
+        return;
+      }
       if (!homeIsClear()) return;
       if (!sequenceStarted && !sequenceAlreadyPlayed()) playIntroThenSail();
       else if (sequenceStarted && intro?.hidden && !sailStarted) sailWhenHomeIsClear();
-    }, 320);
+    }, 0);
   }
 
   const layerObserver = new MutationObserver(waitForClearHome);
@@ -189,11 +208,11 @@
     document.addEventListener('DOMContentLoaded', () => {
       syncPassageCenter();
       window.setTimeout(syncPassageCenter, 800);
-      window.setTimeout(waitForClearHome, 900);
+      window.setTimeout(waitForClearHome, 0);
     }, {once:true});
   } else {
     syncPassageCenter();
     window.setTimeout(syncPassageCenter, 800);
-    window.setTimeout(waitForClearHome, 900);
+    window.setTimeout(waitForClearHome, 0);
   }
 })();
