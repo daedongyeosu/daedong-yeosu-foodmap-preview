@@ -12,6 +12,12 @@ assert.match(
 );
 
 assert.match(
+  experience,
+  /function fxCardPhoto\(store\)\{const src=fxPhoto\(store\);const options=\{deferred:false\};/,
+  'recommendation and modal card photos must always receive a real src attribute'
+);
+
+assert.match(
   app,
   /\$\('#modalContent'\)\.innerHTML = html;\s*observeDeferredPhotos\(\$\('#modalContent'\)\);/,
   'new modal content must hydrate deferred photos immediately'
@@ -25,8 +31,8 @@ assert.match(
 
 assert.match(
   html,
-  /final-experience\.js\?v=[^"\n]*deferred-photo-hydration-1/,
-  'final-experience.js cache key must change for the deferred photo hydration fix'
+  /final-experience\.js\?v=[^"\n]*reliable-card-photo-src-1/,
+  'final-experience.js cache key must change for the reliable card photo fix'
 );
 
 console.log('deferred photo hydration regression test passed');
