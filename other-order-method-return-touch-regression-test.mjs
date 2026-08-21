@@ -27,9 +27,11 @@ assert.match(rc2, /const prepareStoreSurface = Boolean\(sourceElement\?\.matches
 assert.match(rc2, /window\.addEventListener\('focus', restoreAfterNativeResume\)/, '카카오 외부 앱에서 돌아올 때 focus만 발생하는 경우도 복원해야 합니다.');
 const externalBranch = rc2.slice(rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)'), rc2.indexOf('const externalLink', rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)')));
 assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.assign/, '카카오 WebView 원본 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
-assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '원본 Preview를 가게 상세로 안정화한 뒤 주문앱을 분리된 화면으로 열어야 합니다.');
+assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?rc2LaunchComparedExternal\(comparedExternal, href\)/, '원본 Preview를 가게 상세로 안정화한 뒤 주문앱별 복귀 방식으로 열어야 합니다.');
+assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?=== 'yogiyo'[\s\S]*?window\.location\.assign\(href\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '요기요는 뒤로가기 기록을 남기고 배민·쿠팡이츠는 원본 Preview와 분리해야 합니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
+assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');
 assert.match(browserCheck, /dataset\.testPreparedBeforeReturn = '1'[\s\S]*dataset\.testPreparedBeforeReturn === '1'[\s\S]*준비된 가게 상세 DOM을 유지/, '출발 전에 준비한 가게 상세 DOM을 복귀 중 유지하는 실제 브라우저 검사가 없습니다.');
 assert.match(rc3, /document\.visibilityState === 'visible'/, '앱 복귀로 화면이 다시 보일 때 터치 상태를 초기화해야 합니다.');
 assert.match(rc3, /trigger\.removeAttribute\('data-rc3-direct-bound'\)/, 'HTML 스냅샷에 남은 과거 직접 바인딩 표식을 제거해야 합니다.');

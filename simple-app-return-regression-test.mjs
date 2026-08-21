@@ -25,9 +25,9 @@ const comparedStart = rc2.indexOf("const comparedExternal = event.target.closest
 const comparedEnd = rc2.indexOf('const externalLink =', comparedStart);
 const comparedHandler = rc2.slice(comparedStart, comparedEnd);
 assert.match(comparedHandler, /rc2RememberExternalReturn\(comparedExternal\)/);
-assert.doesNotMatch(comparedHandler, /window\.location\.assign\(href\)/, '가게 상세의 원본 Preview WebView를 같은 탭 이동으로 파괴하면 안 됩니다.');
+assert.match(comparedHandler, /rc2LaunchComparedExternal\(comparedExternal, href\)/, '저장 후 주문앱별 복귀 방식으로 실행해야 합니다.');
 assert.match(comparedHandler, /event\.preventDefault\(\)[\s\S]*?event\.stopImmediatePropagation\(\)/, '구형 클릭 처리기와 앵커 기본 이동을 막아야 합니다.');
-assert.match(comparedHandler, /if \(href !== '#'\) window\.open\(href, '_blank', 'noopener'\)/, '카카오 원본 Preview와 분리된 화면으로 주문앱을 열어야 합니다.');
+assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?communityOriginal \|\| ''\) === 'yogiyo'[\s\S]*?window\.location\.assign\(href\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '요기요만 같은 탭, 나머지는 별도 화면이어야 합니다.');
 assert.doesNotMatch(comparedHandler, /history\.back/);
 assert.match(rc2, /function rc2RememberExternalReturn\(sourceElement = null\) \{[\s\S]*?daedongMarkExternalAppDeparture/);
 assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key,anchorStoreId=''\)\{[\s\S]*?daedongMarkExternalAppDeparture/);

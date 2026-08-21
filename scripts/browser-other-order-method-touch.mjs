@@ -131,7 +131,7 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   );
   await page.screenshot({path: screenshotName, fullPage: false});
 
-  const externalRoute = page.locator('.order-methods-sheet [data-rc3-external-route]').first();
+  const externalRoute = page.locator('.order-methods-sheet [data-rc3-external-route="baemin"]');
   await externalRoute.tap();
   const guide = page.locator('#modal:not([hidden]) .community-guide');
   await guide.waitFor({state: 'visible', timeout: 3000});
@@ -145,7 +145,7 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   await externalPage.waitForLoadState('domcontentloaded');
   await check(
     Promise.resolve(externalPage.url() === expectedExternalURL),
-    `${storeName} 외부 주문앱을 원본 Preview와 분리된 화면으로 열기`
+    `${storeName} 배달의민족을 원본 Preview와 분리된 화면으로 열기`
   );
   const preparedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await preparedTrigger.waitFor({state: 'visible', timeout: 3000});

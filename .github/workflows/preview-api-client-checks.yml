@@ -62,6 +62,12 @@ jobs:
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-all-order-app-exact-return.mjs
+      - name: Verify Yogiyo browser-back return in current PR
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-yogiyo-back-return-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173 node scripts/browser-yogiyo-back-return.mjs
       - name: Verify other order methods mobile touch in current PR
         run: |
           python3 -m http.server 4173 >/tmp/daedong-order-method-touch-server.log 2>&1 &
@@ -125,6 +131,9 @@ jobs:
             browser-rider-evergreen-failure.png
             browser-all-order-app-exact-return-report.json
             browser-order-return-*.png
+            browser-yogiyo-back-return-report.json
+            browser-yogiyo-back-return.png
+            browser-yogiyo-back-return-failure.png
             browser-other-order-method-touch-report.json
             browser-other-order-method-touch-vons.png
             browser-other-order-method-touch-handsu.png
