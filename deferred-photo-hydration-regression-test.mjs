@@ -7,8 +7,8 @@ const html = fs.readFileSync(new URL('./index.html', import.meta.url), 'utf8');
 
 assert.match(
   experience,
-  /root\.insertAdjacentHTML\('beforeend',fxRailMarkup\(spec,used\)\);\s*observeDeferredPhotos\(root\);/,
-  'progressively inserted recommendation cards must hydrate their deferred photos'
+  /root\.replaceChildren\(\.\.\.staging\.childNodes\);[\s\S]*observeDeferredPhotos\(root\);/,
+  'atomically inserted recommendation cards must hydrate their deferred photos'
 );
 
 assert.match(
