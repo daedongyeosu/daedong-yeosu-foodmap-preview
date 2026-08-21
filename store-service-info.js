@@ -5,6 +5,8 @@
   const DEFAULT_AREA = window.DAEDONG_REGION?.defaultArea || '여수시 전체';
   const CLOSING_SOON_MINUTES = 60;
   const MENU_MATCH_PREVIEW_LIMIT = 2;
+  const OVERVIEW_RENDER_BATCH_SIZE = 36;
+  const OVERVIEW_QUERY_DEBOUNCE_MS = 180;
   const RECENT_SEARCH_LIMIT = 10;
   const RECENT_SEARCH_KEY = typeof window.DAEDONG_REGION?.storageKey === 'function'
     ? window.DAEDONG_REGION.storageKey('daedongRecentSearchStoresV1')
@@ -50,11 +52,14 @@
   let selectedArea = '';
   let overviewQuery = '';
   let overviewQueryComposing = false;
+  let overviewQueryTimer = 0;
+  let overviewVisibleCount = OVERVIEW_RENDER_BATCH_SIZE;
   let pendingMenuOpen = null;
   let menuSearchData = {stores: {}};
   let menuSearchState = 'idle';
   let menuSearchPromise = null;
   let menuSearchQuery = '';
+  let menuSearchAbortController = null;
   let renderedSourceCount = 0;
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({
@@ -133,10 +138,13 @@
     const requestedQuery = String(query || '').trim();
     if (!requestedQuery) return Promise.resolve({stores: {}});
     if (menuSearchPromise && normalize(menuSearchQuery) === normalize(requestedQuery)) return menuSearchPromise;
+    menuSearchAbortController?.abort();
+    const requestController = new AbortController();
+    menuSearchAbortController = requestController;
     menuSearchQuery = requestedQuery;
     menuSearchState = 'loading';
     menuSearchData = {stores: {}};
-    menuSearchPromise = window.daedongDataApi.menuSearch(requestedQuery)
+    menuSearchPromise = window.daedongDataApi.menuSearch(requestedQuery, {signal: requestController.signal})
       .then(data => {
         if (normalize(menuSearchQuery) === normalize(requestedQuery)) {
           menuSearchData = data?.stores ? data : {stores: {}};
@@ -145,12 +153,17 @@
         return menuSearchData;
       })
       .catch(error => {
-        if (normalize(menuSearchQuery) === normalize(requestedQuery)) menuSearchState = 'error';
-        console.warn(error);
+        if (normalize(menuSearchQuery) === normalize(requestedQuery)) {
+          menuSearchState = requestController.signal.aborted ? 'idle' : 'error';
+        }
+        if (!requestController.signal.aborted) console.warn(error);
         return menuSearchData;
       })
       .finally(() => {
-        if (normalize(menuSearchQuery) === normalize(requestedQuery)) menuSearchPromise = null;
+        if (normalize(menuSearchQuery) === normalize(requestedQuery)) {
+          menuSearchPromise = null;
+          if (menuSearchAbortController === requestController) menuSearchAbortController = null;
+        }
       });
     return menuSearchPromise;
   }
@@ -1202,10 +1215,14 @@ function overviewSearchText(entry) {
   }
 
   function overviewListMarkup(entries) {
+    const visibleEntries = entries.slice(0, overviewVisibleCount);
+    const loadMore = entries.length > visibleEntries.length
+      ? `<button type="button" class="store-service-overview-more" data-store-service-load-more>가게 ${Math.min(OVERVIEW_RENDER_BATCH_SIZE, entries.length - visibleEntries.length)}곳 더 보기 <small>전체 ${entries.length}곳</small></button>`
+      : '';
     if (overviewQuery && menuSearchState === 'loading') {
-      return `${entries.map(overviewCardMarkup).join('')}<p class="store-service-menu-loading">등록된 메뉴판을 함께 검색하고 있습니다…</p>`;
+      return `${visibleEntries.map(overviewCardMarkup).join('')}${loadMore}<p class="store-service-menu-loading">등록된 메뉴판을 함께 검색하고 있습니다…</p>`;
     }
-    if (entries.length) return entries.map(overviewCardMarkup).join('');
+    if (entries.length) return `${visibleEntries.map(overviewCardMarkup).join('')}${loadMore}`;
     return '<p class="store-service-overview-empty">이 조건으로 확인되는 가게가 아직 없습니다.<small>다른 검색어·영업상태·혜택·지역범위를 선택해 보세요.</small></p>';
   }
 
@@ -1339,6 +1356,16 @@ function overviewSearchText(entry) {
     }
   }
 
+  function scheduleOverviewQueryRefresh({scrollToResults = false, immediate = false} = {}) {
+    window.clearTimeout(overviewQueryTimer);
+    overviewVisibleCount = OVERVIEW_RENDER_BATCH_SIZE;
+    if (overviewQueryComposing) return;
+    overviewQueryTimer = window.setTimeout(() => {
+      overviewQueryTimer = 0;
+      refreshOverviewQueryResults({scrollToResults});
+    }, immediate ? 0 : OVERVIEW_QUERY_DEBOUNCE_MS);
+  }
+
   function ensureOverviewOverlay() {
     let overlay = document.querySelector('[data-store-service-overview-overlay]');
     if (overlay) return overlay;
@@ -1382,6 +1409,7 @@ function overviewSearchText(entry) {
     activeBenefit = options.benefit || 'all';
     locationMode = options.locationMode || 'nearby';
     overviewQuery = String(options.query || '').trim();
+    overviewVisibleCount = OVERVIEW_RENDER_BATCH_SIZE;
     renderOverview();
     overlay.hidden = false;
     document.body.classList.add('store-service-overview-open');
@@ -1557,22 +1585,24 @@ function overviewSearchText(entry) {
     captureSearchState
   });
 
-  document.addEventListener('compositionstart', event => {
+document.addEventListener('compositionstart', event => {
   if (!event.target.matches('[data-store-service-query]')) return;
   overviewQueryComposing = true;
+  window.clearTimeout(overviewQueryTimer);
 });
 
 document.addEventListener('compositionend', event => {
   if (!event.target.matches('[data-store-service-query]')) return;
   overviewQueryComposing = false;
   overviewQuery = event.target.value;
-  refreshOverviewQueryResults();
+  scheduleOverviewQueryRefresh({immediate: true});
 });
 
 document.addEventListener('input', event => {
   if (!event.target.matches('[data-store-service-query]')) return;
   overviewQuery = event.target.value;
-  refreshOverviewQueryResults();
+  if (overviewQueryComposing || event.isComposing) return;
+  scheduleOverviewQueryRefresh();
 });
 
   document.addEventListener('submit', event => {
@@ -1582,13 +1612,14 @@ document.addEventListener('input', event => {
     const input = form.querySelector('[data-store-service-query]');
     overviewQueryComposing = false;
     overviewQuery = input?.value || '';
-    refreshOverviewQueryResults({scrollToResults: true});
+    scheduleOverviewQueryRefresh({scrollToResults: true, immediate: true});
   });
 
   document.addEventListener('change', event => {
     if (!event.target.matches('[data-store-service-area]')) return;
     selectedArea = event.target.value;
     locationMode = 'selected';
+    overviewVisibleCount = OVERVIEW_RENDER_BATCH_SIZE;
     renderOverview();
   });
 
@@ -1627,7 +1658,7 @@ document.addEventListener('input', event => {
       overviewQuery = '';
       const input = document.querySelector('[data-store-service-query]');
       if (input) input.value = '';
-      refreshOverviewQueryResults();
+      scheduleOverviewQueryRefresh({immediate: true});
       input?.focus();
       return;
     }
@@ -1652,12 +1683,14 @@ document.addEventListener('input', event => {
     const statusFilter = event.target.closest('[data-store-service-status]');
     if (statusFilter) {
       activeStatus = statusFilter.dataset.storeServiceStatus || 'all';
+      overviewVisibleCount = OVERVIEW_RENDER_BATCH_SIZE;
       renderOverview();
       return;
     }
     const benefitFilter = event.target.closest('[data-store-service-benefit]');
     if (benefitFilter) {
       activeBenefit = benefitFilter.dataset.storeServiceBenefit || 'all';
+      overviewVisibleCount = OVERVIEW_RENDER_BATCH_SIZE;
       renderOverview();
       return;
     }
@@ -1665,7 +1698,13 @@ document.addEventListener('input', event => {
     if (locationFilter) {
       locationMode = locationFilter.dataset.storeServiceLocationMode || 'nearby';
       if (locationMode === 'selected') ensureSelectedArea();
+      overviewVisibleCount = OVERVIEW_RENDER_BATCH_SIZE;
       renderOverview();
+      return;
+    }
+    if (event.target.closest('[data-store-service-load-more]')) {
+      overviewVisibleCount += OVERVIEW_RENDER_BATCH_SIZE;
+      refreshOverviewQueryResults();
       return;
     }
     const menuCard = event.target.closest('[data-store-service-menu-open]');

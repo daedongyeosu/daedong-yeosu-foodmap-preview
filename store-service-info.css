@@ -693,6 +693,25 @@ body.store-service-overview-open {
   gap: 16px;
 }
 
+.store-service-overview-more {
+  width: 100%;
+  min-height: 54px;
+  padding: 10px 16px;
+  color: #17385f;
+  background: #eef5ff;
+  border: 2px solid #b7c8dd;
+  border-radius: 16px;
+  font: inherit;
+  font-weight: 850;
+}
+
+.store-service-overview-more small {
+  display: block;
+  margin-top: 2px;
+  color: #65758b;
+  font-size: 11px;
+}
+
 .store-service-overview-group {
   overflow: hidden;
   background: #fff;
