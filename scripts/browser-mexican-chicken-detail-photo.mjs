@@ -19,8 +19,12 @@ if (process.env.PATCH_APP_FROM_LOCAL === '1') {
 if (proxyApiOrigin) {
   const localOrigin = new URL(baseURL).origin;
   await context.route(`${proxyApiOrigin}/api/**`, async route => {
-    const response = await route.fetch({headers: {...route.request().headers(), origin: 'https://preview.daedongmap.com'}});
-    await route.fulfill({response, headers: {...response.headers(), 'access-control-allow-origin': localOrigin}});
+    try {
+      const response = await route.fetch({headers: {...route.request().headers(), origin: 'https://preview.daedongmap.com'}});
+      await route.fulfill({response, headers: {...response.headers(), 'access-control-allow-origin': localOrigin}});
+    } catch {
+      await route.abort('failed').catch(() => {});
+    }
   });
 }
 await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1'));
