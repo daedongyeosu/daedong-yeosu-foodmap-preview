@@ -25,10 +25,14 @@ const details = {
     {name: '먹깨비', key: 'mukkebi', url: 'https://mukkebi.com/store', enabled: true},
     {name: '요기요', key: 'yogiyo', url: 'https://ws.yogiyo.co.kr/old', enabled: true}
   ]},
-  [collectorId]: {...catalog[0], address: '전남 여수시 신기동 100-9', images: [
+  [collectorId]: {...catalog[0], address: '전남 여수시 신기동 100-9', phone: '0507-1391-0226',
+    naverMap: 'https://map.naver.com/p/entry/place/1511961967', images: [
     {card: collectorImage, detail: collectorImage},
     {card: 'assets/logo-192.png', detail: 'assets/logo-192.png'}
-  ], routes: [{name: '요기요', key: 'yogiyo', url: 'https://ws.yogiyo.co.kr/new', enabled: true}]}
+  ], routes: [
+    {name: '전화주문', key: 'phone', url: 'tel:050713910226', enabled: true},
+    {name: '요기요', key: 'yogiyo', url: 'https://ws.yogiyo.co.kr/new', enabled: true}
+  ]}
 };
 
 const report = {success: false, checks: [], errors: []};
@@ -91,10 +95,16 @@ try {
   const detailSnapshot = await page.evaluate(() => {
     const detail = document.querySelector('#modal .store-detail');
     return {
-      slides: detail?.querySelectorAll('#detailPhotoCarousel .carousel-slide').length || 0
+      slides: detail?.querySelectorAll('#detailPhotoCarousel .carousel-slide').length || 0,
+      naverMap: detail?.querySelector('a[data-detail-only="naver"]')?.getAttribute('href') || '',
+      phone: detail?.querySelector('a[data-route-key="phone"]')?.getAttribute('href') || ''
     };
   });
   await check(Promise.resolve(detailSnapshot.slides >= 3), '상세 화면에서 기존 사진과 신규 수집 사진을 함께 보존', detailSnapshot);
+  await check(Promise.resolve(detailSnapshot.naverMap === 'https://map.naver.com/p/entry/place/1511961967'),
+    '주소·전화가 확인된 신규 수집 네이버 장소 링크를 상세 화면에 표시', detailSnapshot);
+  await check(Promise.resolve(/^tel:\d{9,12}$/.test(detailSnapshot.phone)),
+    '전화주문을 모바일에서 직접 누를 수 있는 tel 링크로 표시', detailSnapshot);
   await page.evaluate(() => document.querySelector('[data-rc3-other-methods]')?.click());
   await page.waitForFunction(() => document.querySelector('#modalTitle')?.textContent === '다른 주문방법 보기', null, {timeout: 2000});
   const orderMethodsText = await page.locator('#modalContent').textContent();

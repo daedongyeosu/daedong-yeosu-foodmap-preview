@@ -362,7 +362,7 @@ function resolveStoreChannels(store) {
   const phone = rc3VerifiedPhone(safeStore);
   const phoneRoute = route('phone');
   const phoneOrder = phone && !RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(safeStore.id))
-    ? {key: 'phone', name: '전화주문', phone}
+    ? {key: 'phone', name: '전화주문', phone, url: `tel:${phone}`}
     : phoneRoute && !RC3_BLOCKED_PHONE_ROUTE_STORES.has(String(safeStore.id))
       ? phoneRoute
       : null;
