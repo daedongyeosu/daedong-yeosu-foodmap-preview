@@ -159,8 +159,18 @@
     if (layer) layerObserver.observe(layer, {attributes:true, attributeFilter:['hidden']});
   }
 
-  introClose?.addEventListener('pointerdown', dismissIntroImmediately);
-  introClose?.addEventListener('click', dismissIntroImmediately);
+  if (typeof window.installDaedongTapAction === 'function') {
+    window.installDaedongTapAction({
+      selector: '#communityIntroClose',
+      activate(target, event) {
+        if (!intro || intro.hidden || target !== introClose) return false;
+        dismissIntroImmediately(event);
+        return true;
+      }
+    });
+  } else {
+    introClose?.addEventListener('click', dismissIntroImmediately);
+  }
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && intro && !intro.hidden) finishIntro();
   });
