@@ -4,6 +4,33 @@
   if (!window.daedongDataApi) return;
   const pendingDetails = new Map();
 
+  function mergeStoreDetails(primary, additions) {
+    const details = [primary, ...additions].filter(Boolean);
+    const routeMap = new Map();
+    const images = [];
+    for (const detail of details) {
+      for (const image of Array.isArray(detail.images) ? detail.images : []) {
+        const value = typeof image === 'string' ? image : image?.detail || image?.card || image?.src || image?.url;
+        if (value && !images.some(item => (typeof item === 'string' ? item : item?.detail || item?.card || item?.src || item?.url) === value)) images.push(image);
+      }
+      for (const route of Array.isArray(detail.routes) ? detail.routes : []) {
+        const key = String(route?.key || route?.name || '').trim();
+        if (key) routeMap.set(key, route);
+      }
+    }
+    return {
+      ...additions.reduce((merged, detail) => ({...merged, ...detail}), {}),
+      ...primary,
+      address: primary?.address || additions.find(detail => detail?.address)?.address || '',
+      phone: primary?.phone || additions.find(detail => detail?.phone)?.phone || '',
+      naverMap: primary?.naverMap || additions.find(detail => detail?.naverMap)?.naverMap || '',
+      image: primary?.image || additions.find(detail => detail?.image)?.image || '',
+      img: primary?.img || primary?.image || additions.find(detail => detail?.img || detail?.image)?.img || additions.find(detail => detail?.image)?.image || '',
+      images,
+      routes: [...routeMap.values()]
+    };
+  }
+
   async function enrichStore(store, normalizeStore) {
     const id = String(store?.id || store?.store_id || '');
     if (!/^[a-f0-9]{16}$/i.test(id)) return store;
@@ -12,13 +39,23 @@
       throw new Error('가게 상세정보 정규화 기능을 사용할 수 없습니다.');
     }
     if (!pendingDetails.has(id)) {
-      pendingDetails.set(id, window.daedongDataApi.detail(id).then(detail => {
+      const mergedStoreIds = [...new Set((Array.isArray(store.mergedStoreIds) ? store.mergedStoreIds : [])
+        .map(value => String(value || '').toLowerCase())
+        .filter(value => /^[a-f0-9]{16}$/.test(value) && value !== id))];
+      pendingDetails.set(id, Promise.all([
+        window.daedongDataApi.detail(id),
+        ...mergedStoreIds.map(storeId => window.daedongDataApi.detail(storeId).catch(error => {
+          console.warn('병합된 신규 가게 상세정보를 불러오지 못했습니다.', storeId, error);
+          return null;
+        }))
+      ]).then(details => {
+        const detail = mergeStoreDetails(details[0], details.slice(1));
         const expectedRouteKeys = [...new Set(
           (Array.isArray(store.channelKeys) ? store.channelKeys : [])
             .map(value => String(value || '').trim())
             .filter(Boolean)
         )];
-        const raw = {...store, ...detail, hasMenu: store.hasMenu};
+        const raw = {...store, ...detail, id, store_id: id, mergedStoreIds, hasMenu: store.hasMenu};
         const normalized = normalizeStore(raw, Number(store.rawIndex || 0));
         const loadedRouteKeys = new Set(
           (Array.isArray(normalized?.routes) ? normalized.routes : [])
