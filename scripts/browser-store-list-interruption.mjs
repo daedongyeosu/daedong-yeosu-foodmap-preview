@@ -66,12 +66,21 @@ try {
   await page.waitForFunction(() => document.querySelectorAll('#storeGrid .store-card').length >= 16, null, {timeout: 10000});
   const next = page.locator('#loadMoreBtn');
   await next.waitFor({state: 'visible', timeout: 5000});
+  await next.scrollIntoViewIfNeeded();
 
   const startedAt = Date.now();
   await next.tap();
   await page.waitForFunction(() => document.querySelector('#storeGrid')?.scrollLeft > 20, null, {timeout: 800});
   const transitionMs = Date.now() - startedAt;
   await check(Promise.resolve(transitionMs < 250), '다음 가게가 250ms 안에 표시됨', {transitionMs});
+  const revealedPage = await page.evaluate(() => ({
+    gridTop: document.querySelector('#storeGrid')?.getBoundingClientRect().top ?? -1,
+    status: document.querySelector('#storePagerStatus')?.textContent?.trim() || ''
+  }));
+  await check(Promise.resolve(revealedPage.gridTop >= 0 && revealedPage.gridTop < 80),
+    '버튼을 누르면 새 가게 카드 시작 위치가 화면 위에 바로 나타남', revealedPage);
+  await check(Promise.resolve(/^가게 3–4 \/ 전체 36곳$/.test(revealedPage.status)),
+    '현재 표시 중인 가게 범위를 직관적으로 안내', revealedPage);
   await check(page.evaluate(() => window.daedongHasHomeInteraction?.() === true), '첫 목록 터치를 고객 상호작용으로 기록');
 
   const beforeRanking = await page.evaluate(() => ({
