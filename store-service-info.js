@@ -231,6 +231,19 @@
 
   function storeStatus(info, date = new Date()) {
     if (!info?.hours?.weekly) {
+      const displayLines = Array.isArray(info?.hours?.displayLines)
+        ? info.hours.displayLines.map(line => String(line || '').trim()).filter(Boolean)
+        : [];
+      if (displayLines.length) {
+        const hoursLine = displayLines.find(line => /\d{1,2}:\d{2}/.test(line)) || displayLines[0];
+        const confirmedHours = hoursLine.replace(/^\d{4}-\d{2}-\d{2}\s*확인\s*/, '').trim();
+        return {
+          state: 'unknown',
+          label: '영업시간 확인',
+          detail: confirmedHours || '확인된 영업시간 있음',
+          today: '현재 영업 여부는 주문앱에서 확인'
+        };
+      }
       return {
         state: 'unknown',
         label: '시간 미확인',
@@ -1447,7 +1460,6 @@ function overviewSearchText(entry) {
         }
         window.setTimeout(() => {
           if (typeof renderStores === 'function') renderStores({resetCount: false});
-          if (typeof fxRenderRails === 'function') fxRenderRails();
           if (typeof rc6RenderHero === 'function') {
             rc6HeroRenderKey = '';
             rc6RenderHero();
