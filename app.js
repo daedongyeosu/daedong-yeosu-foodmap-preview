@@ -1792,6 +1792,14 @@ function openCommunityChoice(store, key, options = {}) {
   const selected = rememberSelectedExternal(store,key);
   openModal(feeGuideMarkup(store,{...selectedRoute,url:selected?.url||selectedRoute.url},options));
 }
+function storeDetailUnavailableMarkup(store, error) {
+  const favorite = isFavorite(store.id);
+  const retryAfter = Number(error?.retryAfter || 0);
+  const busyMessage = Number(error?.status) === 429
+    ? (retryAfter > 60 ? '요청이 잠시 몰렸습니다. 가게 기본정보는 그대로 볼 수 있으며 주문방법만 다시 확인해 주세요.' : '가게 기본정보는 표시했습니다. 잠시 후 주문방법을 다시 확인해 주세요.')
+    : '가게 기본정보는 표시했습니다. 주문방법 연결만 일시적으로 확인하지 못했습니다.';
+  return `<article class="store-detail store-detail-degraded" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p></div>${storeMenuPreviewEntryMarkup(store)}<section class="store-detail-retry" role="status"><strong>가게 화면은 계속 이용할 수 있습니다</strong><p>${escapeHtml(busyMessage)}</p><button type="button" data-store-detail-retry="${escapeHtml(store.id)}">주문방법 다시 확인</button></section><div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`;
+}
 async function openStore(store) {
   if (!store) return false;
   const loadingPhoto = photoResolver?.resolve?.(store);
@@ -1807,7 +1815,8 @@ async function openStore(store) {
   if (store.__secureDetailReady !== true) {
     if (!secureDetail || typeof secureDetail.enrich !== 'function') {
       if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
-      openModal('<section class="store-detail-load-error"><h2 id="modalTitle">주문방법을 불러오지 못했습니다</h2><p>페이지를 새로고침한 뒤 가게를 다시 열어 주세요.</p></section>');
+      openModal(storeDetailUnavailableMarkup(store, new Error('상세정보 기능 준비 중')));
+      $('#modal').dataset.activeStoreId = store.id;
       return false;
     }
     try {
@@ -1816,7 +1825,8 @@ async function openStore(store) {
       console.warn('가게 상세정보를 불러오지 못했습니다.', error);
       if ($('#modal').dataset.activeStoreId === store.id && !$('#modal').hidden) {
         if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
-        openModal('<section class="store-detail-load-error"><h2 id="modalTitle">주문방법을 불러오지 못했습니다</h2><p>잠시 후 가게를 다시 열어 주세요.</p></section>');
+        openModal(storeDetailUnavailableMarkup(store, error));
+        $('#modal').dataset.activeStoreId = store.id;
       }
       return false;
     }
@@ -2078,6 +2088,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (toggle) { event.preventDefault(); event.stopPropagation(); const menu = toggle.closest('.store-other-wrap')?.querySelector('.store-other-popover'); if (!menu) return; $$('.store-other-popover').forEach(item => { if (item !== menu) item.hidden = true; }); menu.hidden = !menu.hidden; return; }
     const externalButton = event.target.closest('[data-external-route-key]');
     if (externalButton) { event.preventDefault(); event.stopPropagation(); const store=stores.find(item=>item.id===$('#modal').dataset.activeStoreId || item.id===externalButton.closest('[data-store-id]')?.dataset.storeId); if(store) openCommunityChoice(store,externalButton.dataset.externalRouteKey); return; }
+    const detailRetry=event.target.closest('[data-store-detail-retry]'); if(detailRetry){event.preventDefault();event.stopPropagation();const store=stores.find(item=>item.id===detailRetry.dataset.storeDetailRetry);if(store)openStore(store);return;}
     const favoriteButton=event.target.closest('[data-favorite-store]'); if(favoriteButton){event.preventDefault();event.stopPropagation();toggleFavorite(favoriteButton.dataset.favoriteStore);return;}
     const feedbackButton=event.target.closest('[data-feedback-store]'); if(feedbackButton){event.preventDefault();event.stopPropagation();const store=stores.find(item=>item.id===feedbackButton.dataset.feedbackStore);if(store)feedbackModal(store);return;}
     const personalStore=event.target.closest('[data-personal-store]'); if(personalStore){const store=stores.find(item=>item.id===personalStore.dataset.personalStore);if(store)openStore(store);return;}
