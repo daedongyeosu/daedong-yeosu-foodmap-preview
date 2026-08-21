@@ -1026,8 +1026,9 @@ fxInstallEvents = function rc2InstallEvents() {
     if (comparedExternal && hasStoreDetailInModalFlow) {
       rc2RememberExternalReturn(comparedExternal);
       const href = safeHref(comparedExternal.getAttribute('href'));
-      if (href === '#') event.preventDefault();
+      event.preventDefault();
       event.stopImmediatePropagation();
+      if (href !== '#') window.open(href, '_blank', 'noopener');
       return;
     }
     const externalLink = event.target.closest('a[target="_blank"],a[data-final-app-channel],a[data-detail-only]');
