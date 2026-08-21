@@ -94,7 +94,6 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
 
   const trigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await trigger.waitFor({state: 'visible', timeout: 10000});
-  await trigger.evaluate(element => { element.dataset.testOriginalTrigger = '1'; });
   const layout = await trigger.evaluate(element => {
     const span = element.querySelector('span');
     const style = getComputedStyle(element);
@@ -148,6 +147,13 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     Promise.resolve(externalPage.url() === expectedExternalURL),
     `${storeName} 외부 주문앱을 원본 Preview와 분리된 화면으로 열기`
   );
+  const preparedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
+  await preparedTrigger.waitFor({state: 'visible', timeout: 3000});
+  await preparedTrigger.evaluate(element => { element.dataset.testPreparedBeforeReturn = '1'; });
+  await check(
+    preparedTrigger.isVisible(),
+    `${storeName} 외부 주문앱이 열린 동안 원본 Preview를 가게 상세로 미리 안정화`
+  );
   await externalPage.close();
   await page.bringToFront();
 
@@ -178,8 +184,8 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
 
   const returnedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await check(
-    returnedTrigger.evaluate(element => element.dataset.testOriginalTrigger !== '1'),
-    `${storeName} 복귀 뒤 상세 화면을 새 DOM으로 재구성`
+    returnedTrigger.evaluate(element => element.dataset.testPreparedBeforeReturn === '1'),
+    `${storeName} 복귀 뒤 준비된 가게 상세 DOM을 유지해 터치 중 재구성하지 않음`
   );
   const returnedHitTarget = await returnedTrigger.evaluate(element => {
     const rect = element.getBoundingClientRect();
@@ -220,3 +226,4 @@ try {
 }
 
 if (!report.success) process.exit(1);
+
