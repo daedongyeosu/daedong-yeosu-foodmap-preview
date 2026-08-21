@@ -35,7 +35,8 @@ const context = await browser.newContext({
   viewport: report.viewport,
   isMobile: true,
   hasTouch: true,
-  locale: 'ko-KR'
+  locale: 'ko-KR',
+  userAgent: 'Mozilla/5.0 (Linux; Android 15; SM-S938N Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36 KAKAOTALK 25.7.2'
 });
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
@@ -43,6 +44,11 @@ await context.addInitScript(() => {
 });
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 await context.route('**/*.woff2', route => route.abort());
+await context.route('https://orders.example.test/**', route => route.fulfill({
+  status: 200,
+  contentType: 'text/html; charset=utf-8',
+  body: '<!doctype html><html><title>외부 주문앱</title><body>외부 주문앱 화면</body></html>'
+}));
 await context.route('**/api/catalog', route => route.fulfill({
   status: 200,
   contentType: 'application/json',
@@ -124,6 +130,54 @@ async function checkStore(storeName, screenshotName) {
     `${storeName} 실제 등록된 외부 주문앱 선택지 표시`
   );
   await page.screenshot({path: screenshotName, fullPage: false});
+
+  const externalRoute = page.locator('.order-methods-sheet [data-rc3-external-route]').first();
+  await externalRoute.tap();
+  const guide = page.locator('#modal:not([hidden]) .community-guide');
+  await guide.waitFor({state: 'visible', timeout: 3000});
+  const externalLink = guide.locator('a[data-community-original]');
+  await externalLink.waitFor({state: 'visible', timeout: 3000});
+  const expectedExternalURL = await externalLink.getAttribute('href');
+
+  await Promise.all([
+    page.waitForURL(url => url.hostname === 'orders.example.test', {timeout: 5000}),
+    externalLink.tap()
+  ]);
+  await check(
+    Promise.resolve(page.url() === expectedExternalURL),
+    `${storeName} 외부 주문앱을 새 탭이 아닌 복귀 가능한 현재 탭으로 열기`
+  );
+
+  await page.goBack({waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(
+    id => {
+      const modal = document.querySelector('#modal:not([hidden])');
+      const detail = modal?.querySelector(`.store-detail[data-store-id="${CSS.escape(id)}"]`);
+      const button = detail?.querySelector('[data-rc3-other-methods]');
+      return Boolean(button && getComputedStyle(button).pointerEvents === 'auto');
+    },
+    storeName === '본스치킨 미평점' ? 'a100000000000001' : 'a100000000000002',
+    {polling: 25, timeout: 5000}
+  );
+
+  const returnedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
+  const returnedHitTarget = await returnedTrigger.evaluate(element => {
+    const rect = element.getBoundingClientRect();
+    const hit = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
+    return Boolean(hit && (hit === element || element.contains(hit)));
+  });
+  await check(Promise.resolve(returnedHitTarget), `${storeName} 복귀 뒤 버튼 위에 투명 가림막 없음`);
+
+  await returnedTrigger.tap();
+  await page.waitForFunction(
+    () => document.querySelector('#modal:not([hidden]) .order-methods-sheet')?.getBoundingClientRect().height > 0,
+    null,
+    {polling: 25, timeout: 3000}
+  );
+  await check(
+    page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
+    `${storeName} 외부 주문앱 복귀 뒤 두 번째 터치로 다시 열림`
+  );
 }
 
 try {
