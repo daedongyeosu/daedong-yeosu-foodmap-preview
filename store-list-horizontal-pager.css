@@ -1,5 +1,7 @@
-.store-pager-controls{display:grid;grid-template-columns:1fr;gap:9px;margin-top:14px}
-.store-pager-controls.both-directions{grid-template-columns:1fr 1fr}
+.store-pager-controls{display:grid;gap:9px;margin-top:14px}
+.store-pager-status{margin:0;text-align:center;color:#667085;font-size:13px;font-weight:800;line-height:1.4}
+.store-pager-buttons{display:grid;grid-template-columns:1fr;gap:9px}
+.store-pager-controls.both-directions .store-pager-buttons{grid-template-columns:1fr 1fr}
 .store-pager-controls[hidden]{display:none!important}
 .store-pager-controls .load-more{margin-top:0}
 .store-page-prev{color:#30343c}
