@@ -837,7 +837,7 @@ function rc2ExternalAppKey(element) {
   );
 }
 
-function rc2RememberExternalReturn(sourceElement = null, {prepareStoreSurface = false} = {}) {
+function rc2RememberExternalReturn(sourceElement = null) {
   window.daedongMarkExternalAppDeparture?.();
   const modal = $('#modal');
   const menuState = window.daedongMenuReturn?.capture?.() || null;
@@ -850,6 +850,7 @@ function rc2RememberExternalReturn(sourceElement = null, {prepareStoreSurface = 
     template.innerHTML = snapshot.html;
     return String(template.content.querySelector('.store-detail[data-store-id]')?.dataset.storeId || '') === String(storeId);
   });
+  const prepareStoreSurface = Boolean(sourceElement?.matches?.('a[data-community-original]'));
   const payload = {
     storeId: String(storeId),
     surface: menuState ? 'menu' : 'store',
@@ -878,7 +879,7 @@ function rc2RememberExternalReturn(sourceElement = null, {prepareStoreSurface = 
   return payload;
 }
 
-async function rc2RestoreAfterExternalPage() {
+async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
   if (rc2StoreRestorePromise) return rc2StoreRestorePromise;
   const restoreTask = (async () => {
     const saved = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
@@ -931,10 +932,10 @@ async function rc2RestoreAfterExternalPage() {
   }
 }
 
-async function rc2RestoreExternalSurface() {
+async function rc2RestoreExternalSurface({rebuildExisting = false} = {}) {
   if (rc2SurfaceRestorePromise) return rc2SurfaceRestorePromise;
   const restoreTask = (async () => {
-    if (await rc2RestoreAfterExternalPage()) return true;
+    if (await rc2RestoreAfterExternalPage({rebuildExisting})) return true;
     return Boolean(fxRestoreAppBrowserReturn?.());
   })();
   rc2SurfaceRestorePromise = restoreTask;
@@ -1037,7 +1038,7 @@ fxInstallEvents = function rc2InstallEvents() {
       const href = safeHref(comparedExternal.getAttribute('href'));
       event.preventDefault();
       event.stopImmediatePropagation();
-      rc2RememberExternalReturn(comparedExternal, {prepareStoreSurface: true});
+      rc2RememberExternalReturn(comparedExternal);
       if (href !== '#') window.open(href, '_blank', 'noopener');
       return;
     }
@@ -1055,14 +1056,14 @@ fxInstallEvents = function rc2InstallEvents() {
     document.documentElement.classList.toggle('page-hidden', document.hidden);
     if (document.hidden) rc2StopAmbient();
     else {
-      void rc2RestoreExternalSurface().then(restored => {
+      void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
         if (restored) window.daedongFinishExternalReturnBoot?.();
         else rc2StartAmbient(false);
       });
     }
   });
   const restoreAfterNativeResume = () => {
-    void rc2RestoreExternalSurface().then(restored => {
+    void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
       if (restored) window.daedongFinishExternalReturnBoot?.();
     });
   };
