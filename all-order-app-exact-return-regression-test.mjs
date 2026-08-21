@@ -144,4 +144,3 @@ assert.match(html, /store-menu-preview\.js\?v=[^"\n]*all-order-app-exact-return-
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*all-order-app-exact-return-1/);
 
 console.log('all-order-app-exact-return-regression-test: pass');
-
