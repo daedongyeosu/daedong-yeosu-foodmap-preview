@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import {chromium} from 'playwright';
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
+const proxyApiOrigin = process.env.PERF_PROXY_API_ORIGIN || '';
 const targetIds = [
   '116a9f7b45941e78','b91093385f1baa6a','e81c1980fff43a29',
   '5c881a3751b1c6cf','a638ac9c079a28c0','a1e8130ec540e37f'
@@ -15,6 +16,17 @@ const context = await browser.newContext({viewport: {width: 390, height: 844}, l
 if (process.env.PATCH_APP_FROM_LOCAL === '1') {
   const patchedApp = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
   await context.route('**/app.js?*', route => route.fulfill({status: 200, contentType: 'text/javascript; charset=utf-8', body: patchedApp}));
+}
+if (proxyApiOrigin) {
+  const localOrigin = new URL(baseURL).origin;
+  await context.route(`${proxyApiOrigin}/api/**`, async route => {
+    try {
+      const response = await route.fetch({headers: {...route.request().headers(), origin: 'https://preview.daedongmap.com'}});
+      await route.fulfill({response, headers: {...response.headers(), 'access-control-allow-origin': localOrigin}});
+    } catch {
+      await route.abort('failed').catch(() => {});
+    }
+  });
 }
 await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1'));
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
