@@ -869,14 +869,21 @@ function rc2RememberExternalReturn(sourceElement = null) {
   rc2WriteReturnState(RC2_EXTERNAL_RETURN, payload);
 }
 
-async function rc2RestoreAfterExternalPage() {
+async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
   if (rc2StoreRestorePromise) return rc2StoreRestorePromise;
   const restoreTask = (async () => {
     const saved = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
     if (!saved) return false;
     const modal = $('#modal');
     const visibleStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
-    if (!modal?.hidden && modal.querySelector('.store-detail') && String(visibleStoreId || '') === String(saved.storeId)) {
+    const visibleStoreMatches = Boolean(
+      !modal?.hidden
+      && modal.querySelector('.store-detail')
+      && String(visibleStoreId || '') === String(saved.storeId)
+    );
+    const store = fxStoreById(saved.storeId);
+    if (!store) return false;
+    if (visibleStoreMatches && !rebuildExisting) {
       rc2DeferredStoreReturnPosition = saved;
       rc2StabilizeReturnPosition(saved);
       if (saved.menuState) {
@@ -886,11 +893,11 @@ async function rc2RestoreAfterExternalPage() {
       rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
       return true;
     }
-    const store = fxStoreById(saved.storeId);
-    if (!store) return false;
     if (!modal?.hidden) {
+      window.daedongResetOrderMethodsTouchState?.();
       rc2ModalStack.length = 0;
       rc2NativeHardClose({fromPop: true});
+      await new Promise(resolve => requestAnimationFrame(() => resolve()));
     }
     scrollWindowInstant(Number(saved.pageScroll || 0));
     const opened = await openStore(store);
@@ -914,10 +921,10 @@ async function rc2RestoreAfterExternalPage() {
   }
 }
 
-async function rc2RestoreExternalSurface() {
+async function rc2RestoreExternalSurface({rebuildExisting = false} = {}) {
   if (rc2SurfaceRestorePromise) return rc2SurfaceRestorePromise;
   const restoreTask = (async () => {
-    if (await rc2RestoreAfterExternalPage()) return true;
+    if (await rc2RestoreAfterExternalPage({rebuildExisting})) return true;
     return Boolean(fxRestoreAppBrowserReturn?.());
   })();
   rc2SurfaceRestorePromise = restoreTask;
@@ -1017,11 +1024,11 @@ fxInstallEvents = function rc2InstallEvents() {
       || rc2ModalStack.some(snapshot => snapshot?.html?.includes('class="store-detail"'))
     );
     if (comparedExternal && hasStoreDetailInModalFlow) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
       rc2RememberExternalReturn(comparedExternal);
       const href = safeHref(comparedExternal.getAttribute('href'));
-      if (href !== '#') window.location.assign(href);
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      if (href !== '#') window.open(href, '_blank', 'noopener');
       return;
     }
     const externalLink = event.target.closest('a[target="_blank"],a[data-final-app-channel],a[data-detail-only]');
@@ -1038,17 +1045,20 @@ fxInstallEvents = function rc2InstallEvents() {
     document.documentElement.classList.toggle('page-hidden', document.hidden);
     if (document.hidden) rc2StopAmbient();
     else {
-      void rc2RestoreExternalSurface().then(restored => {
+      void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
         if (restored) window.daedongFinishExternalReturnBoot?.();
         else rc2StartAmbient(false);
       });
     }
   });
-  window.addEventListener('pageshow', () => {
-    void rc2RestoreExternalSurface().then(restored => {
+  const restoreAfterNativeResume = () => {
+    void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
       if (restored) window.daedongFinishExternalReturnBoot?.();
     });
-  });
+  };
+  window.addEventListener('pageshow', restoreAfterNativeResume);
+  window.addEventListener('focus', restoreAfterNativeResume);
+  document.addEventListener('resume', restoreAfterNativeResume);
 };
 
 fxInitialize = async function rc2Initialize() {

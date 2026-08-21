@@ -77,7 +77,7 @@ const check = async (condition, message) => {
   if (!ok) throw new Error(message);
 };
 
-async function checkStore(storeName, screenshotName) {
+async function checkStore(storeName, screenshotName, {nativeResume = false} = {}) {
   report.currentStore = storeName;
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForFunction(
@@ -94,6 +94,7 @@ async function checkStore(storeName, screenshotName) {
 
   const trigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await trigger.waitFor({state: 'visible', timeout: 10000});
+  await trigger.evaluate(element => { element.dataset.testOriginalTrigger = '1'; });
   const layout = await trigger.evaluate(element => {
     const span = element.querySelector('span');
     const style = getComputedStyle(element);
@@ -139,16 +140,31 @@ async function checkStore(storeName, screenshotName) {
   await externalLink.waitFor({state: 'visible', timeout: 3000});
   const expectedExternalURL = await externalLink.getAttribute('href');
 
-  await Promise.all([
-    page.waitForURL(url => url.hostname === 'orders.example.test', {timeout: 5000}),
-    externalLink.tap()
-  ]);
+  const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
+  await externalLink.tap();
+  const externalPage = await externalPagePromise;
+  await externalPage.waitForLoadState('domcontentloaded');
   await check(
-    Promise.resolve(page.url() === expectedExternalURL),
-    `${storeName} 외부 주문앱을 새 탭이 아닌 복귀 가능한 현재 탭으로 열기`
+    Promise.resolve(externalPage.url() === expectedExternalURL),
+    `${storeName} 외부 주문앱을 원본 Preview와 분리된 화면으로 열기`
   );
+  await externalPage.close();
+  await page.bringToFront();
 
-  await page.goBack({waitUntil: 'domcontentloaded'});
+  if (nativeResume) {
+    await page.evaluate(async () => {
+      let hidden = true;
+      Object.defineProperty(document, 'hidden', {configurable: true, get: () => hidden});
+      Object.defineProperty(document, 'visibilityState', {configurable: true, get: () => hidden ? 'hidden' : 'visible'});
+      document.dispatchEvent(new Event('visibilitychange'));
+      await new Promise(resolve => setTimeout(resolve, 30));
+      hidden = false;
+      document.dispatchEvent(new Event('visibilitychange'));
+      window.dispatchEvent(new Event('focus'));
+    });
+  } else {
+    await page.evaluate(() => window.dispatchEvent(new Event('focus')));
+  }
   await page.waitForFunction(
     id => {
       const modal = document.querySelector('#modal:not([hidden])');
@@ -161,6 +177,10 @@ async function checkStore(storeName, screenshotName) {
   );
 
   const returnedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
+  await check(
+    returnedTrigger.evaluate(element => element.dataset.testOriginalTrigger !== '1'),
+    `${storeName} 복귀 뒤 상세 화면을 새 DOM으로 재구성`
+  );
   const returnedHitTarget = await returnedTrigger.evaluate(element => {
     const rect = element.getBoundingClientRect();
     const hit = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
@@ -182,7 +202,7 @@ async function checkStore(storeName, screenshotName) {
 
 try {
   await checkStore('본스치킨 미평점', 'browser-other-order-method-touch-vons.png');
-  await checkStore('손수김밥 양지점', 'browser-other-order-method-touch-handsu.png');
+  await checkStore('손수김밥 양지점', 'browser-other-order-method-touch-handsu.png', {nativeResume: true});
   await check(Promise.resolve(report.errors.length === 0), '두 가게 모바일 터치 중 브라우저 오류 없음');
   report.success = true;
 } catch (error) {

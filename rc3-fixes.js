@@ -439,6 +439,7 @@ function rc3ResetOrderMethodsTouchState() {
   rc3OrderMethodsGhostClickUntil = 0;
   rc3OrderMethodsGhostClickStoreId = '';
 }
+window.daedongResetOrderMethodsTouchState = rc3ResetOrderMethodsTouchState;
 
 function rc3OrderMethodsGhostActive(storeId) {
   return Date.now() < rc3OrderMethodsGhostClickUntil
