@@ -68,6 +68,18 @@ jobs:
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-other-order-method-touch.mjs
+      - name: Verify Mexican Chicken detail photo recovery in current PR
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-detail-photo-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          for attempt in {1..20}; do
+            curl --silent --fail http://127.0.0.1:4173/ >/dev/null && break
+            sleep 0.25
+          done
+          BASE_URL=http://127.0.0.1:4173 \
+          PERF_PROXY_API_ORIGIN=https://daedong-yeosu-data-api-preview.sisakim.workers.dev \
+          node scripts/browser-mexican-chicken-detail-photo.mjs
       - name: Enforce customer mobile performance budget
         run: |
           node scripts/serve-performance-budget.mjs 4173 >/tmp/daedong-performance-budget-server.log 2>&1 &
@@ -117,5 +129,8 @@ jobs:
             browser-other-order-method-touch-vons.png
             browser-other-order-method-touch-handsu.png
             browser-other-order-method-touch-failure.png
+            browser-mexican-chicken-detail-photo-report.json
+            browser-mexican-chicken-detail-photo.png
+            browser-mexican-chicken-detail-photo-failure.png
           if-no-files-found: ignore
           retention-days: 14
