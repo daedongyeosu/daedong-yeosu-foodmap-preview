@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
+const app = fs.readFileSync(new URL('./app.js', import.meta.url), 'utf8');
 const rc2 = fs.readFileSync(new URL('./rc2-fixes.js', import.meta.url), 'utf8');
 const rc3 = fs.readFileSync(new URL('./rc3-fixes.js', import.meta.url), 'utf8');
 const browserCheck = fs.readFileSync(new URL('./scripts/browser-other-order-method-touch.mjs', import.meta.url), 'utf8');
@@ -16,6 +17,7 @@ assert.match(rc3, /document\.addEventListener\('touchend', rc3OnOrderMethodsTouc
 assert.match(rc3, /document\.elementFromPoint\(touch\.clientX, touch\.clientY\)/, '복귀 뒤 실제 터치 지점의 최상단 버튼을 다시 확인해야 합니다.');
 assert.match(rc3, /window\.addEventListener\('pageshow', rc3ResetOrderMethodsTouchState, true\)/, '외부 앱 복귀 시 남은 포인터·터치 상태를 초기화해야 합니다.');
 assert.match(rc3, /window\.daedongResetOrderMethodsTouchState = rc3ResetOrderMethodsTouchState/, '카카오 네이티브 복귀 재구성 전에 터치 상태를 외부에서 초기화할 수 있어야 합니다.');
+assert.match(app, /const link = event\.target\.closest\('a\[href\]'\);[\s\S]*?if \(link\?\.matches\('a\[data-community-original\]\[target="_blank"\]'\)\) return;[\s\S]*?MOBILE_SAME_TAB_ORDER_KEYS/, '카카오 주문 계속 링크는 구형 같은 탭 강제 이동 처리에서 제외해야 합니다.');
 assert.match(rc2, /rc2RestoreAfterExternalPage\(\{rebuildExisting = false\} = \{\}\)/, '복귀 시 이미 보이는 상세창도 선택적으로 재구성할 수 있어야 합니다.');
 assert.match(rc2, /visibleStoreMatches && !rebuildExisting/, '일반 복원과 카카오 네이티브 복귀 재구성을 구분해야 합니다.');
 assert.match(rc2, /window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rc2NativeHardClose\([\s\S]*?await new Promise\(resolve => requestAnimationFrame/, '카카오 복귀 시 터치 상태를 비우고 기존 모달을 완전히 닫은 다음 새 화면을 열어야 합니다.');
@@ -35,6 +37,8 @@ assert.ok(
   rc3.indexOf('rc3OrderMethodsGhostActive(storeId)', clickGuardIndex) > clickGuardIndex,
   '터치 뒤 합성 클릭은 동일 가게의 주문방법 버튼에서만 차단해야 합니다.'
 );
+
+assert.match(index, /app\.js\?v=[^"\n]*kakao-community-separate-context-1/, 'app.js 캐시 버전이 갱신되어야 합니다.');
 
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {
   assert.match(source, /order-methods-return-touch-5/, `${name} 캐시 버전이 갱신되어야 합니다.`);
