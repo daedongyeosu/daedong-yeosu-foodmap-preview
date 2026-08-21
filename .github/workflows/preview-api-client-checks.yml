@@ -35,6 +35,8 @@ jobs:
           node --check rc5-fixes.js
           node --check rc6-fixes.js
           node --check rc7-address-map.js
+          node --check store-list-horizontal-pager.js
+          node --check turtle-ship-hero.js
           node --check store-service-info.js
           node --check store-menu-preview.js
           node --check mukkebi-summer-event.js
@@ -62,6 +64,16 @@ jobs:
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-home-filter-chips.mjs
+      - name: Verify instant uninterrupted store paging in current PR
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-store-pager-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          for attempt in {1..20}; do
+            curl --silent --fail http://127.0.0.1:4173/ >/dev/null && break
+            sleep 0.25
+          done
+          BASE_URL=http://127.0.0.1:4173 node scripts/browser-store-list-interruption.mjs
       - name: Verify exact return from every order app in current PR
         run: |
           python3 -m http.server 4173 >/tmp/daedong-order-return-server.log 2>&1 &
@@ -157,6 +169,9 @@ jobs:
             browser-rider-evergreen-failure.png
             browser-home-filter-chips-report.json
             browser-home-filter-chips.png
+            browser-store-list-interruption-report.json
+            browser-store-list-interruption.png
+            browser-store-list-interruption-failure.png
             browser-all-order-app-exact-return-report.json
             browser-order-return-*.png
             browser-yogiyo-back-return-report.json
