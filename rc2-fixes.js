@@ -1139,4 +1139,3 @@ fxInitialize = async function rc2Initialize() {
   setTimeout(() => { rc2DeferredStoreReturnPosition = null; }, 2200);
   rc2StartAmbient(!restoredStore && !restoredAppBrowser);
 };
-
