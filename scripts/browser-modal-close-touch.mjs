@@ -107,6 +107,8 @@ try {
   await dispatchTouch(page.locator('#communityIntroClose'));
   await check(intro.evaluate(node => node.hidden), '첫 안내창 X가 순수 touchstart/touchend로 닫힘');
 
+  await page.reload({waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(() => typeof window.installDaedongTapAction === 'function', null, {timeout: 15000});
   const summer = page.locator('#mukkebiSummerEvent');
   await summer.waitFor({state: 'visible', timeout: 5000});
   await dispatchTouch(page.locator('#mukkebiSummerClose'));

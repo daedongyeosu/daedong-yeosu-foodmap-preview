@@ -8,6 +8,15 @@ let storeListPagerFrame=0;
 let storeListPagerScrollFrame=0;
 let storeListPagerProgrammatic=false;
 let storeListPagerObserver=null;
+let storeListPagerCustomerInteracted=false;
+
+function markStoreListPagerCustomerInteraction(){
+  storeListPagerCustomerInteracted=true;
+}
+function hasStoreListPagerCustomerInteraction(){
+  return storeListPagerCustomerInteracted;
+}
+window.daedongHasHomeInteraction=hasStoreListPagerCustomerInteraction;
 
 function storeListPagerElements(){
   return {
@@ -93,11 +102,36 @@ function scrollStoreListPagerTo(page){
   const left=Math.max(0,target.offsetLeft-cards[0].offsetLeft);
   storeListPagerPage=nextPage;
   storeListPagerProgrammatic=true;
+  grid.scrollLeft=left;
   applyStoreListPager();
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  grid.scrollTo({left,behavior:reduced?'auto':'smooth'});
-  window.setTimeout(()=>{storeListPagerProgrammatic=false;readStoreListPagerScroll()},460);
+  requestAnimationFrame(()=>{
+    storeListPagerProgrammatic=false;
+    readStoreListPagerScroll();
+  });
 }
+function captureStoreListPagerState(){
+  const {grid}=storeListPagerElements();
+  return {
+    page:storeListPagerPage,
+    context:storeListPagerContext,
+    scrollLeft:grid?.scrollLeft||0,
+    visibleCount:Number(state.visibleCount||0)
+  };
+}
+function restoreStoreListPagerState(snapshot){
+  const {grid}=storeListPagerElements();
+  if(!grid||!snapshot||!storeListPagerEligible(grid))return false;
+  state.visibleCount=Math.max(Number(state.visibleCount||0),Number(snapshot.visibleCount||0));
+  storeListPagerContext=storeListPagerContextKey();
+  const {cards,pageSize,maxPage}=storeListPagerMetrics(grid);
+  storeListPagerPage=Math.max(0,Math.min(Number(snapshot.page||0),maxPage));
+  const target=cards[Math.min(cards.length-1,storeListPagerPage*pageSize)];
+  grid.scrollLeft=target?Math.max(0,target.offsetLeft-cards[0].offsetLeft):Math.max(0,Number(snapshot.scrollLeft||0));
+  applyStoreListPager();
+  return true;
+}
+window.daedongCaptureStorePagerState=captureStoreListPagerState;
+window.daedongRestoreStorePagerState=restoreStoreListPagerState;
 function moveStoreListPager(direction){
   const {grid}=storeListPagerElements();
   if(!storeListPagerEligible(grid))return false;
@@ -106,9 +140,12 @@ function moveStoreListPager(direction){
   if(targetPage===storeListPagerPage)return true;
   const targetIndex=targetPage*pageSize;
   if(targetIndex>=cards.length&&cards.length<total){
-    state.visibleCount=Math.min(total,Math.max(Number(state.visibleCount||0)+40,targetIndex+pageSize));
+    const previousVisibility=grid.style.visibility;
+    grid.style.visibility='hidden';
+    state.visibleCount=Math.min(total,Math.max(Number(state.visibleCount||0)+Math.max(4,pageSize*2),targetIndex+pageSize));
     renderStores();
-    requestAnimationFrame(()=>requestAnimationFrame(()=>scrollStoreListPagerTo(targetPage)));
+    scrollStoreListPagerTo(targetPage);
+    grid.style.visibility=previousVisibility;
   }else scrollStoreListPagerTo(targetPage);
   return true;
 }
@@ -116,6 +153,10 @@ function initializeStoreListPager(){
   const {grid}=storeListPagerElements();
   if(!grid||grid.dataset.storePagerReady==='1'){scheduleStoreListPager();return}
   grid.dataset.storePagerReady='1';
+  document.addEventListener('pointerdown',markStoreListPagerCustomerInteraction,{capture:true,passive:true});
+  document.addEventListener('touchstart',markStoreListPagerCustomerInteraction,{capture:true,passive:true});
+  document.addEventListener('wheel',markStoreListPagerCustomerInteraction,{capture:true,passive:true});
+  document.addEventListener('keydown',markStoreListPagerCustomerInteraction,true);
   grid.addEventListener('scroll',scheduleStoreListPagerScrollRead,{passive:true});
   storeListPagerObserver=new MutationObserver(scheduleStoreListPager);
   storeListPagerObserver.observe(grid,{childList:true});

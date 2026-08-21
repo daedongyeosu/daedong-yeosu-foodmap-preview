@@ -1,0 +1,120 @@
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+
+const require = createRequire(import.meta.url);
+const {chromium} = require('playwright');
+
+const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
+const stores = Array.from({length: 36}, (_, index) => ({
+  store_id: `pager-store-${String(index + 1).padStart(3, '0')}`,
+  name: `페이지 전환 검증 가게 ${index + 1}`,
+  district: index % 2 ? '문수동' : '여서동',
+  category: index % 3 ? '한식' : '치킨',
+  categories: [index % 3 ? '한식' : '치킨'],
+  lat: 34.75 + index / 10000,
+  lng: 127.69 + index / 10000,
+  channelKeys: ['phone'],
+  routes: [{name: '전화주문', url: 'tel:0610000000', enabled: true}]
+}));
+
+const report = {success: false, checks: [], errors: []};
+const browser = await chromium.launch({
+  headless: true,
+  ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH
+    ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH}
+    : {})
+});
+const context = await browser.newContext({
+  viewport: {width: 390, height: 844},
+  isMobile: true,
+  hasTouch: true,
+  locale: 'ko-KR',
+  userAgent: 'Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36 KAKAOTALK 25.6.0'
+});
+await context.addInitScript(() => {
+  sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
+  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
+});
+await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
+await context.route('**/*.woff2', route => route.abort());
+await context.route('**/api/catalog', route => route.fulfill({
+  status: 200,
+  contentType: 'application/json',
+  body: JSON.stringify(stores)
+}));
+await context.route('**/api/services', route => route.fulfill({
+  status: 200,
+  contentType: 'application/json',
+  body: JSON.stringify({programs: [], stores: {}})
+}));
+await context.route('**/data/store-coordinates.json*', async route => {
+  await new Promise(resolve => setTimeout(resolve, 1800));
+  await route.fulfill({status: 200, contentType: 'application/json', body: '{}'});
+});
+
+const page = await context.newPage();
+page.on('pageerror', error => report.errors.push(error.message));
+
+const check = async (condition, message, detail = null) => {
+  const ok = await condition;
+  report.checks.push({message, ok, ...(detail ? {detail} : {})});
+  if (!ok) throw new Error(message);
+};
+
+try {
+  await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(() => document.querySelectorAll('#storeGrid .store-card').length >= 16, null, {timeout: 10000});
+  const next = page.locator('#loadMoreBtn');
+  await next.waitFor({state: 'visible', timeout: 5000});
+
+  const startedAt = Date.now();
+  await next.tap();
+  await page.waitForFunction(() => document.querySelector('#storeGrid')?.scrollLeft > 20, null, {timeout: 800});
+  const transitionMs = Date.now() - startedAt;
+  await check(Promise.resolve(transitionMs < 250), '다음 가게가 250ms 안에 표시됨', {transitionMs});
+  await check(page.evaluate(() => window.daedongHasHomeInteraction?.() === true), '첫 목록 터치를 고객 상호작용으로 기록');
+
+  const beforeRanking = await page.evaluate(() => ({
+    left: document.querySelector('#storeGrid')?.scrollLeft || 0,
+    previousVisible: !document.querySelector('#storePrevBtn')?.hidden,
+    visibleCount: document.querySelectorAll('#storeGrid .store-card').length
+  }));
+  await page.evaluate(() => window.daedongLocationRankingReady);
+  await page.waitForTimeout(100);
+  const afterRanking = await page.evaluate(() => ({
+    left: document.querySelector('#storeGrid')?.scrollLeft || 0,
+    previousVisible: !document.querySelector('#storePrevBtn')?.hidden,
+    visibleCount: document.querySelectorAll('#storeGrid .store-card').length,
+    introHidden: document.querySelector('#communityIntro')?.hidden,
+    eventHidden: document.querySelector('#mukkebiSummerEvent')?.hidden
+  }));
+  await check(Promise.resolve(beforeRanking.left > 20 && afterRanking.left > 20 && afterRanking.previousVisible),
+    '늦은 위치 정렬 뒤에도 다음 가게 페이지와 이전 버튼 유지', {beforeRanking, afterRanking});
+  await check(Promise.resolve(afterRanking.visibleCount >= beforeRanking.visibleCount),
+    '늦은 위치 정렬이 표시 중인 가게 수를 첫 페이지로 줄이지 않음');
+  await check(Promise.resolve(afterRanking.introHidden && afterRanking.eventHidden),
+    '목록 사용 중 안내창과 행사창이 뒤늦게 끼어들지 않음');
+
+  await page.screenshot({path: 'browser-store-list-interruption.png', fullPage: false});
+  report.transitionMs = transitionMs;
+  report.success = report.errors.length === 0;
+} catch (error) {
+  report.failure = error.stack || String(error);
+  report.diagnostics = await page.evaluate(() => ({
+    url: location.href,
+    readyState: document.readyState,
+    cards: document.querySelectorAll('#storeGrid .store-card').length,
+    scrollLeft: document.querySelector('#storeGrid')?.scrollLeft || 0,
+    nextHidden: document.querySelector('#loadMoreBtn')?.hidden,
+    previousHidden: document.querySelector('#storePrevBtn')?.hidden,
+    introHidden: document.querySelector('#communityIntro')?.hidden,
+    eventHidden: document.querySelector('#mukkebiSummerEvent')?.hidden
+  })).catch(diagnosticError => ({error: diagnosticError.message}));
+  await page.screenshot({path: 'browser-store-list-interruption-failure.png', fullPage: false}).catch(() => {});
+} finally {
+  fs.writeFileSync('browser-store-list-interruption-report.json', `${JSON.stringify(report, null, 2)}\n`);
+  console.log(JSON.stringify(report, null, 2));
+  await browser.close();
+}
+
+if (!report.success) process.exit(1);

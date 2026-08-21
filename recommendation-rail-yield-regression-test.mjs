@@ -23,7 +23,10 @@ assert.doesNotMatch(rc3, /root\.innerHTML = fxSelectedRails\(\)\.map/);
 assert.match(rc3, /const rankedStores = fxRankStores\(spec\)/);
 assert.match(rc3, /rc2RailCandidates\(spec, globallyUsed, 8, useCounts, rankedStores\)/);
 assert.match(experience, /window\.__daedongDeferRailRender=true/);
-assert.match(experience, /await rc6Initialize\(\);window\.__daedongDeferRailRender=false;fxRenderRails\(\)/);
+assert.match(experience, /function fxRenderRailsWithoutMovingActiveList\(\)/);
+assert.match(experience, /const section=\$\('#recommendSection'\)/);
+assert.match(experience, /scrollWindowInstant\(window\.scrollY\+delta\)/);
+assert.match(experience, /await rc6Initialize\(\);window\.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList\(\)/);
 assert.match(experience, /selectionChanged=next!==fxRainState/);
 assert.match(experience, /if\(selectionChanged\)fxRenderRails\(\)/);
 
