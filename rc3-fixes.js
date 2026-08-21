@@ -172,8 +172,8 @@ fxRenderRails = function rc3RenderRails() {
     return;
   }
   root.hidden = false;
-  root.innerHTML = '';
   root.setAttribute('aria-busy', 'true');
+  const staging = document.createElement('div');
   const globallyUsed = new Set();
   const useCounts = new Map();
   const recentLeads = [];
@@ -183,10 +183,10 @@ fxRenderRails = function rc3RenderRails() {
     if (version !== rc3RailRenderVersion || window.__daedongDeferRailRender) return;
     const spec = specs[index++];
     if (!spec) {
-      root.removeAttribute('aria-busy');
-      root.querySelectorAll('p').forEach(node => {
+      staging.querySelectorAll('p').forEach(node => {
         if (node.textContent.trim() === '추천 가게를 확인 중입니다.') node.remove();
       });
+      fxCommitRailsWithoutMovingActiveList(root, staging);
       return;
     }
     try {
@@ -201,12 +201,12 @@ fxRenderRails = function rc3RenderRails() {
         if (recentLeads.length > 3) recentLeads.shift();
       }
       const allCandidates = rankedStores;
-      root.insertAdjacentHTML('beforeend', `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">현재 표시할 추천 가게가 없습니다.</p>'}</div></section>`);
+      staging.insertAdjacentHTML('beforeend', `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track" data-rc3-rail-track="${spec.id}">${cards.map(store=>rc3RailCard(store,spec)).join('') || '<p class="empty">현재 표시할 추천 가게가 없습니다.</p>'}</div></section>`);
     } catch (error) {
       console.error('recommendation-render-failed', error);
-      if (!root.children.length) {
+      if (!staging.children.length) {
         const fallback = (Array.isArray(stores) ? stores : []).slice(0, 8).map(store => rc3RailCard(store, {kind: 'fallback'})).join('');
-        root.innerHTML = `<section class="recommend-rail" data-rail="fallback"><header class="recommend-rail-head"><div><h2>오늘의 추천</h2><p>현재 확인 가능한 ${escapeHtml(RC3_REGION_NAME)} 가게</p></div></header><div class="recommend-track">${fallback || '<p class="empty">가게 정보를 다시 불러와 주세요.</p>'}</div></section>`;
+        staging.innerHTML = `<section class="recommend-rail" data-rail="fallback"><header class="recommend-rail-head"><div><h2>오늘의 추천</h2><p>현재 확인 가능한 ${escapeHtml(RC3_REGION_NAME)} 가게</p></div></header><div class="recommend-track">${fallback || '<p class="empty">가게 정보를 다시 불러와 주세요.</p>'}</div></section>`;
       }
     }
     window.setTimeout(renderNext, 0);
