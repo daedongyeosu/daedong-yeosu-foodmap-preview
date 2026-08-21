@@ -1104,6 +1104,17 @@
   document.addEventListener('touchend', onMenuCloseTouchEnd, {capture: true, passive: false});
   document.addEventListener('touchcancel', onMenuCloseTouchCancel, {capture: true, passive: true});
 
+  window.installDaedongTapAction?.({
+    selector: '[data-menu-order-sheet-close]',
+    activate(target) {
+      const preview = target.closest('.store-menu-preview');
+      const sheet = target.closest('[data-menu-order-sheet]');
+      if (!preview || !sheet || sheet.hidden) return false;
+      requestMenuLayerBack('order', () => closeMenuOrderSheet(preview));
+      return true;
+    }
+  });
+
   document.addEventListener('click', event => {
     const entry = event.target.closest('[data-store-menu-preview]');
     if (entry) {
@@ -1112,12 +1123,6 @@
     }
     if (menuPreviewCloseTarget(event)) {
       activateMenuPreviewClose(event);
-      return;
-    }
-    const closeOrderSheet = event.target.closest('[data-menu-order-sheet-close]');
-    if (closeOrderSheet) {
-      const preview = closeOrderSheet.closest('.store-menu-preview');
-      requestMenuLayerBack('order', () => closeMenuOrderSheet(preview));
       return;
     }
     const selectedMenu = event.target.closest('[data-menu-select]');
