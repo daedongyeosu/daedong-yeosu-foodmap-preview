@@ -48,6 +48,14 @@
     if (element) element.textContent = value;
   }
 
+  function regionWithWaGwa(name) {
+    const text = String(name || '');
+    const lastCode = text.charCodeAt(text.length - 1);
+    const offset = lastCode - 0xac00;
+    const hasFinalConsonant = offset >= 0 && offset <= 0xd7a3 - 0xac00 && offset % 28 !== 0;
+    return `${text}${hasFinalConsonant ? '과' : '와'}`;
+  }
+
   function applyMetadata() {
     document.title = active.mapName;
     document.querySelector('meta[name="description"]')?.setAttribute('content', `${active.shortName} 음식점과 주문방법을 한눈에 찾는 ${active.mapName}`);
@@ -78,7 +86,7 @@
     replaceText('.community-intro-kicker', `${active.shortName}의 맛을 오래 이어가는 주문`);
     replaceText('#communityIntroTitle', `${active.shortName}에서 주문한다면,`);
     replaceText('.community-intro-lead', `${active.shortName}을 한 번 더 생각해 주세요.`);
-    replaceText('.promo-section .section-head h2', `${active.shortName}과 함께하는 소식`);
+    replaceText('.promo-section .section-head h2', `${regionWithWaGwa(active.shortName)} 함께하는 소식`);
     const brand = document.querySelector('.brand-wordmark');
     brand?.setAttribute('aria-label', `${active.mapName} 홈`);
     document.querySelector('[data-share-home]')?.setAttribute('aria-label', `${active.mapName} 공유하기`);
