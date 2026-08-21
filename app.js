@@ -666,6 +666,75 @@ window.setTimeout(() => {
 }, 24000);
 
 function normalize(value) { return String(value ?? '').trim().toLowerCase().replace(/[\s·&()\-_/.,]/g, ''); }
+function canonicalDuplicateStoreName(value) {
+  return normalize(String(value || '').replace(/\s*\(([^()]*(?:동|읍|면|리|지구))\)\s*$/u, ''));
+}
+function isYogiyoOnlyCollectorStore(store) {
+  const keys = [...new Set((Array.isArray(store?.channelKeys) ? store.channelKeys : []).map(String).filter(Boolean))];
+  return keys.length === 1 && keys[0] === 'yogiyo';
+}
+function duplicateStoreLocationKey(store) {
+  return normalize(store?.primaryNeighborhood || store?.neighborhoods?.[0] || store?.area || '');
+}
+function duplicateStoreRichness(store) {
+  return (store?.managed ? 1000 : 0)
+    + (store?.sharedManaged ? 500 : 0)
+    + ((store?.channelKeys?.length || 0) * 20)
+    + (Number.isFinite(store?.lat) && Number.isFinite(store?.lng) ? 100 : 0)
+    + (store?.legacyImage ? 10 : 0);
+}
+function mergeDuplicateStore(primary, duplicate) {
+  const routeMap = new Map((primary.routes || []).map(route => [route.key || route.name, route]));
+  for (const route of duplicate.routes || []) {
+    const key = route.key || route.name;
+    if (!routeMap.has(key)) routeMap.set(key, route);
+  }
+  const primaryCategory = String(primary.cat || '').trim();
+  const duplicateCategory = String(duplicate.cat || '').trim();
+  const category = !primaryCategory || primaryCategory === '기타' ? duplicateCategory || primaryCategory : primaryCategory;
+  const primaryCategories = (primary.categories || []).filter(value => value && value !== '기타');
+  const mergedCategories = primaryCategories.length
+    ? primaryCategories
+    : [...new Set([...(primary.categories || []), ...(duplicate.categories || [])].filter(Boolean))];
+  return Object.assign(primary, {
+    address: primary.address || duplicate.address || '',
+    phone: primary.phone || duplicate.phone || '',
+    naverMap: primary.naverMap && primary.naverMap !== '#' ? primary.naverMap : duplicate.naverMap,
+    legacyImage: primary.legacyImage || duplicate.legacyImage || '',
+    legacyImages: uniquePaths([...(primary.legacyImages || []), ...(duplicate.legacyImages || [])]),
+    routes: [...routeMap.values()],
+    channelKeys: [...new Set([...(primary.channelKeys || []), ...(duplicate.channelKeys || [])])],
+    categories: mergedCategories,
+    cat: category || '기타',
+    hasMenu: Boolean(primary.hasMenu || duplicate.hasMenu),
+    searchAliases: [...new Set([...(primary.searchAliases || []), duplicate.name, ...(duplicate.searchAliases || [])].filter(Boolean))],
+    mergedStoreIds: [...new Set([...(primary.mergedStoreIds || []), duplicate.id, ...(duplicate.mergedStoreIds || [])].map(String).filter(Boolean))]
+  });
+}
+function mergeYogiyoCollectorDuplicates(list) {
+  const groups = new Map();
+  for (const store of Array.isArray(list) ? list : []) {
+    const name = canonicalDuplicateStoreName(store?.name);
+    const area = duplicateStoreLocationKey(store);
+    if (!name || !area) continue;
+    const key = `${name}:${area}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(store);
+  }
+  const hidden = new Set();
+  for (const group of groups.values()) {
+    if (group.length < 2) continue;
+    const collectors = group.filter(isYogiyoOnlyCollectorStore);
+    const established = group.filter(store => !isYogiyoOnlyCollectorStore(store));
+    if (!collectors.length || !established.length) continue;
+    const primary = established.sort((a, b) => duplicateStoreRichness(b) - duplicateStoreRichness(a))[0];
+    for (const duplicate of collectors) {
+      mergeDuplicateStore(primary, duplicate);
+      hidden.add(duplicate);
+    }
+  }
+  return list.filter(store => !hidden.has(store));
+}
 function canonicalSearchAliases(raw) {
   const explicit = Array.isArray(raw.searchAliases) ? raw.searchAliases : [];
   const identity = normalize([raw.name, raw.realBusinessName, raw.brandName].filter(Boolean).join(' '));
@@ -1000,7 +1069,8 @@ function normalizedStore(raw, index) {
     channelKeys: Array.isArray(raw.channelKeys) ? [...new Set(raw.channelKeys.map(String))] : routes.map(route => route.key),
     hasMenu: Boolean(raw.hasMenu),
     neighborhoods: inferredNeighborhoods, primaryNeighborhood:inferredNeighborhoods[0]||'', locationSource, neighborhoodConfidence: locationSource==='store-name-branch'?'high':inferredNeighborhoods.length?'verified':'none', sourceType:raw.source?.type||'',
-    addedAt:raw.addedAt||raw.createdAt||raw.importedAt||''
+    addedAt:raw.addedAt||raw.createdAt||raw.importedAt||'',
+    mergedStoreIds:Array.isArray(raw.mergedStoreIds)?[...new Set(raw.mergedStoreIds.map(String).filter(Boolean))]:[]
   };
 }
 function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
@@ -1808,7 +1878,7 @@ async function normalizeStoresInBatches(rawStores, batchSize = 100, startIndex =
   return normalized.filter(Boolean);
 }
 function applyNormalizedCatalog(normalizedStores, totalCount, complete = false, {refresh = true} = {}) {
-  allStores = normalizedStores;
+  allStores = mergeYogiyoCollectorDuplicates(normalizedStores);
   canonicalStores = allStores.filter(store => store.customerVisible !== false && store.store_id && store.name && store.name.trim() !== '' && store.name !== '제목 없음');
   searchableStores = canonicalStores;
   coordinateStores = canonicalStores.filter(store => store.coordinateVerified === true);

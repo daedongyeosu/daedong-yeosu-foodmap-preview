@@ -335,7 +335,7 @@
   function statusPriorityForStore(storeOrId, date = new Date()) {
     const store = storeOrId?.store || storeOrId;
     const storeId = typeof store === 'object' ? storeIdOf(store) : String(store || '');
-    return STATUS_SORT_PRIORITY[storeStatus(serviceData.stores?.[storeId], date).state] ?? STATUS_SORT_PRIORITY.unknown;
+    return STATUS_SORT_PRIORITY[storeStatus(serviceInfoForStore(store || storeId), date).state] ?? STATUS_SORT_PRIORITY.unknown;
   }
 
   function sortStoresByStatusPriority(list, date = new Date()) {
@@ -358,6 +358,35 @@
   function storeById(id) {
     if (typeof fxStoreById === 'function') return fxStoreById(id);
     return sourceStores().find(store => storeIdOf(store) === String(id)) || null;
+  }
+
+  function mergeServiceCollections(rows, key) {
+    const merged = new Map();
+    for (const row of rows) {
+      for (const item of Array.isArray(row?.[key]) ? row[key] : []) {
+        const identity = `${item?.key || ''}:${(item?.appKeys || []).map(String).sort().join(',')}`;
+        const existing = merged.get(identity);
+        if (!existing || (existing.status !== 'accepted' && item?.status === 'accepted')) merged.set(identity, item);
+      }
+    }
+    return [...merged.values()];
+  }
+
+  function serviceInfoForStore(storeOrId) {
+    const store = typeof storeOrId === 'object' ? storeOrId : storeById(storeOrId);
+    const storeId = storeIdOf(store) || String(storeOrId || '');
+    const ids = [...new Set([storeId, ...(store?.mergedStoreIds || [])].map(String).filter(Boolean))];
+    const rows = ids.map(id => serviceData.stores?.[id]).filter(Boolean);
+    if (!rows.length) return null;
+    if (rows.length === 1) return rows[0];
+    const weeklyHours = rows.find(row => row?.hours?.weekly)?.hours;
+    const confirmedHours = rows.find(row => Array.isArray(row?.hours?.displayLines) && row.hours.displayLines.length)?.hours;
+    return {
+      ...Object.assign({}, ...rows.slice().reverse()),
+      hours: weeklyHours || confirmedHours || rows.find(row => row?.hours)?.hours,
+      payments: mergeServiceCollections(rows, 'payments'),
+      delivery: mergeServiceCollections(rows, 'delivery')
+    };
   }
 
   function readRecentSearchStores() {
@@ -646,7 +675,7 @@
 
   function decorateStoreCards() {
     document.querySelectorAll('#storeGrid .store-card[data-id]').forEach(card => {
-      const info = serviceData.stores?.[String(card.dataset.id)];
+      const info = serviceInfoForStore(String(card.dataset.id));
       const status = storeStatus(info);
       const benefits = benefitLabels(info);
       const signature = JSON.stringify({status, benefits, empty: emptyBenefitLabel(info)});
@@ -682,7 +711,7 @@
     document.querySelectorAll('[data-app-store-order]').forEach(control => addCompactCard(control.closest('.app-browser-card') || control, control.dataset.appStoreOrder));
 
     compactCards.forEach((storeId, card) => {
-      const status = storeStatus(serviceData.stores?.[storeId]);
+      const status = storeStatus(serviceInfoForStore(storeId));
       const signature = `${status.state}:${status.label}`;
       let badge = card.querySelector('[data-store-service-card-status-only]');
       if (!badge) {
@@ -703,7 +732,7 @@
   function decorateStoreDetails() {
     document.querySelectorAll('#modalContent .store-detail[data-store-id]').forEach(detail => {
       const storeId = String(detail.dataset.storeId || '');
-      const info = serviceData.stores?.[storeId];
+      const info = serviceInfoForStore(storeId);
       const status = storeStatus(info);
       const store = storeById(storeId);
       const giftRoute = typeof routeFor === 'function' ? routeFor(store, 'chak') : null;
@@ -788,7 +817,7 @@
       if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
       const source = sourceStores();
       const count = source.reduce((total, store) => (
-        ['open', 'closing-soon'].includes(storeStatus(serviceData.stores?.[storeIdOf(store)]).state) ? total + 1 : total
+        ['open', 'closing-soon'].includes(storeStatus(serviceInfoForStore(store)).state) ? total + 1 : total
       ), 0);
       const countNode = entry.querySelector('[data-store-finder-open-count]');
       const countReady = serviceLoadState === 'ready' && source.length > 0;
@@ -901,7 +930,7 @@
     const neighborhood = activeNeighborhood();
     return sourceStores().map((store, index) => {
       const storeId = storeIdOf(store);
-      const info = serviceData.stores?.[storeId];
+      const info = serviceInfoForStore(store);
       const areas = storeAreas(store);
       const area = areas[0] || '동네 미확인';
       const storeCoordinate = coordinateOf(store);
@@ -1097,6 +1126,9 @@ function overviewSearchText(entry) {
     const menuSpec = menuSearchSpec(overviewQuery);
     const menuMatches = entry.menuMatches || [];
     const menuPreview = menuMatches.slice(0, MENU_MATCH_PREVIEW_LIMIT);
+    const rawImage = String(entry.store?.legacyImage || entry.store?.legacyImages?.[0] || '').trim();
+    const storeImage = rawImage;
+    const hoursSummary = entry.status.label === '영업시간 확인' ? entry.status.detail : entry.status.today;
     const menuMarkup = menuMatches.length ? `
       <section class="store-service-menu-matches" aria-label="${escapeHtml(entry.store?.name || '가게')} 일치 메뉴">
         <header>
@@ -1125,9 +1157,13 @@ function overviewSearchText(entry) {
     return `
       <article class="store-service-overview-group">
         <button type="button" class="store-service-overview-card" data-store-service-store-id="${escapeHtml(entry.storeId)}">
+          <span class="store-service-overview-card-image" aria-hidden="true">
+            <span>🍽️</span>
+            ${storeImage ? `<img src="${escapeHtml(storeImage)}" alt="" loading="lazy" decoding="async">` : ''}
+          </span>
           <span class="store-service-overview-card-main">
             <strong>${escapeHtml(entry.store?.name || '가게 정보')}</strong>
-            <small>${escapeHtml(entry.area)} · ${escapeHtml(formatCustomerHours24(entry.status.today))}</small>
+            <small>${escapeHtml(entry.area)} · ${escapeHtml(formatCustomerHours24(hoursSummary))}</small>
           </span>
           <span class="store-service-status is-${escapeHtml(entry.status.state)}">
             <i aria-hidden="true"></i>${escapeHtml(entry.status.label)}
@@ -1513,8 +1549,8 @@ function overviewSearchText(entry) {
 
   window.daedongStoreServiceInfo = Object.freeze({
     ready,
-    get: storeId => serviceData.stores?.[String(storeId)] || null,
-    status: (storeId, date) => storeStatus(serviceData.stores?.[String(storeId)], date),
+    get: storeId => serviceInfoForStore(storeId),
+    status: (storeId, date) => storeStatus(serviceInfoForStore(storeId), date),
     statusPriority: statusPriorityForStore,
     sortByStatus: sortStoresByStatusPriority,
     showOverview,
