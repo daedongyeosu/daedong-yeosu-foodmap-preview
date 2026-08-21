@@ -64,4 +64,3 @@ assert.match(finalExperience, /rc3-fixes\.css\?v=[^'\n]*order-methods-return-tou
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.js 캐시 갱신 표식이 없습니다.');
 
 console.log('other-order-method-touch-regression: PASS');
-
