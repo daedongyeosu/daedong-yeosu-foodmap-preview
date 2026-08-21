@@ -1345,6 +1345,7 @@ function openModal(html) {
   const modal = $('#modal'), wasHidden = modal.hidden;
   detailCarousel?.destroy(); detailCarousel = null;
   $('#modalContent').innerHTML = html;
+  observeDeferredPhotos($('#modalContent'));
   classifyModal();
   $('#overlay').hidden = false; modal.hidden = false; lockPage();
   if (wasHidden && !history.state?.daedongModal) { history.pushState({daedongModal:true}, ''); modalHistoryActive = true; }

@@ -164,6 +164,7 @@ function fxRenderRails(){
   const spec=specs[index++];
   if(!spec){root.removeAttribute('aria-busy');return;}
   root.insertAdjacentHTML('beforeend',fxRailMarkup(spec,used));
+  observeDeferredPhotos(root);
   window.setTimeout(renderNext,0);
  };
  window.setTimeout(renderNext,0);
