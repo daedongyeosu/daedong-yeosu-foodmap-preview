@@ -65,7 +65,7 @@ function fxLowPower(){return Number(navigator.hardwareConcurrency||8)<=4||Number
 function fxReduced(){return matchMedia('(prefers-reduced-motion: reduce)').matches;}
 function fxStoreById(id){return stores.find(store=>String(store.id)===String(id));}
 function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]||FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS[String(store?.id)]||photoResolver?.resolve(store)?.src||'';}
-function fxCardPhoto(store){const src=fxPhoto(store);const options={deferred:true};return src?`<img ${photoSourceAttributes(src,options)} alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
+function fxCardPhoto(store){const src=fxPhoto(store);const options={deferred:false};return src?`<img ${photoSourceAttributes(src,options)} alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
 function fxDistance(store){return state.coords&&store.lat!==null&&store.lng!==null?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;}
 
 normalizedStore=function(raw,index){const store=fxOriginalNormalizedStore(raw,index);store.customerVisible=!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(raw.name)!=='제목없음';store.rawIndex=index;return store;};
