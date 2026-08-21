@@ -32,7 +32,8 @@ assert.doesNotMatch(rc3, /trigger\.addEventListener\('pointer(?:down|move|up|can
 assert.match(rc3, /orderAnchor\?\.insertAdjacentHTML[\s\S]*?rc3BindOrderMethodsTrigger\(detail\);/, '가게 상세를 그린 뒤 위임 터치 표식이 연결되지 않습니다.');
 
 assert.match(rc2, /rc2ModalStack\.some\(snapshot => snapshot\?\.html\?\.includes\('class="store-detail"'\)\)/, '여러 겹 주문 모달에서도 원래 가게 상세 복귀 경로를 찾지 못합니다.');
-assert.match(rc2, /if \(comparedExternal && hasStoreDetailInModalFlow\)[\s\S]*?window\.location\.assign\(href\)/, '외부 주문앱을 현재 탭으로 열어 같은 가게로 복귀할 수 없습니다.');
+assert.match(rc2, /if \(comparedExternal && hasStoreDetailInModalFlow\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?event\.stopImmediatePropagation\(\)/, '외부 주문앱 이동 전에 같은 가게 복귀 상태를 저장해야 합니다.');
+assert.doesNotMatch(rc2.match(/if \(comparedExternal && hasStoreDetailInModalFlow\)[\s\S]*?const externalLink =/)?.[0] || '', /window\.location\.assign\(href\)/, '카카오 원본 Preview 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
 
 assert.match(rc3Css, /\.rc3-order-methods-trigger\s*\{[\s\S]*?grid-template-columns:\s*minmax\(0,\s*1fr\)\s+auto\s*!important;[\s\S]*?pointer-events:\s*auto\s*!important;[\s\S]*?touch-action:\s*manipulation;/, '다른 주문방법 버튼의 두 칸 가로 배치와 전체 터치 영역이 고정되지 않았습니다.');
 assert.match(rc3Css, /\.rc3-order-methods-trigger\s*>\s*span:first-child\s*\{[\s\S]*?white-space:\s*nowrap;[\s\S]*?word-break:\s*keep-all;/, '다른 주문방법 문구의 한 줄 표시가 고정되지 않았습니다.');
@@ -44,7 +45,8 @@ assert.match(browserCheck, /본스치킨 미평점/, '본스치킨 회귀 검사
 assert.match(browserCheck, /손수김밥 양지점/, '손수김밥 회귀 검사가 없습니다.');
 assert.match(browserCheck, /trigger\.tap\(\)/, '버튼을 마우스 클릭이 아닌 실제 터치로 검사하지 않습니다.');
 assert.match(browserCheck, /SM-S938N[\s\S]*KAKAOTALK/, '실제 신고 기종과 카카오 인앱 브라우저 조건이 없습니다.');
-assert.match(browserCheck, /externalLink\.tap\(\)[\s\S]*page\.goBack/, '외부 주문앱으로 나갔다가 같은 탭으로 복귀하는 검사가 없습니다.');
+assert.match(browserCheck, /context\.waitForEvent\('page'[\s\S]*externalLink\.tap\(\)[\s\S]*externalPage\.close\(\)[\s\S]*page\.bringToFront\(\)/, '외부 주문앱을 별도 화면으로 열고 원본 Preview로 복귀하는 검사가 없습니다.');
+assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)[\s\S]*window\.dispatchEvent\(new Event\('focus'\)\)/, '카카오 네이티브 숨김·복귀 수명주기 검사가 없습니다.');
 assert.match(browserCheck, /returnedTrigger\.tap\(\)[\s\S]*외부 주문앱 복귀 뒤 두 번째 터치로 다시 열림/, '외부 앱 복귀 뒤 다른 주문방법을 다시 터치하는 검사가 없습니다.');
 assert.match(browserCheck, /document\.elementFromPoint/, '복귀 뒤 투명 가림막이 버튼을 덮는지 검사하지 않습니다.');
 assert.match(browserCheck, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'[\s\S]*page\.evaluate\(\(\) => window\.daedongCatalogReady\)/,
@@ -57,8 +59,8 @@ assert.match(previewWorkflow, /node scripts\/browser-other-order-method-touch\.m
 
 assert.match(app, /const menu = toggle\.closest\('\.store-other-wrap'\)\?\.querySelector\('\.store-other-popover'\); if \(!menu\) return;/, '구형 팝업이 없는 버튼을 눌렀을 때의 안전장치가 없습니다.');
 assert.match(html, /app\.js\?v=[^"\n]*other-order-method-touch-1/, 'app.js 캐시 갱신 표식이 없습니다.');
-assert.match(html, /final-experience\.js\?v=[^"\n]*order-methods-return-touch-4/, 'final-experience.js 캐시 갱신 표식이 없습니다.');
-assert.match(finalExperience, /rc3-fixes\.css\?v=[^'\n]*order-methods-return-touch-4/, 'rc3-fixes.css 캐시 갱신 표식이 없습니다.');
-assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*order-methods-return-touch-4/, 'rc3-fixes.js 캐시 갱신 표식이 없습니다.');
+assert.match(html, /final-experience\.js\?v=[^"\n]*order-methods-return-touch-5/, 'final-experience.js 캐시 갱신 표식이 없습니다.');
+assert.match(finalExperience, /rc3-fixes\.css\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.css 캐시 갱신 표식이 없습니다.');
+assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.js 캐시 갱신 표식이 없습니다.');
 
 console.log('other-order-method-touch-regression: PASS');
