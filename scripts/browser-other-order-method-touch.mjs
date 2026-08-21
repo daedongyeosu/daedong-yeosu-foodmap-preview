@@ -27,10 +27,38 @@ const stores = [
       {name: '요기요', url: 'https://orders.example.test/yogiyo/handsu', enabled: true},
       {name: '배달의민족', url: 'https://orders.example.test/baemin/handsu', enabled: true}
     ]
+  },
+  {
+    store_id: 'a100000000000003',
+    name: '요기요 단독 검증가게',
+    district: '신기동',
+    category: '고기/구이',
+    categories: ['고기/구이'],
+    phone: '061-123-4567',
+    channelKeys: ['phone', 'yogiyo'],
+    routes: [
+      {name: '전화주문', url: 'tel:0611234567', enabled: true},
+      {name: '요기요', url: 'https://orders.example.test/yogiyo/only', enabled: true}
+    ]
+  },
+  {
+    store_id: 'a100000000000004',
+    name: '지역앱 추가 검증가게',
+    district: '신기동',
+    category: '고기/구이',
+    categories: ['고기/구이'],
+    channelKeys: ['mukkebi', 'yogiyo'],
+    routes: [
+      {name: '먹깨비', url: 'https://orders.example.test/mukkebi/added', enabled: true},
+      {name: '요기요', url: 'https://orders.example.test/yogiyo/with-local', enabled: true}
+    ]
   }
 ];
 const detailsById = new Map(stores.map(store => [store.store_id, store]));
-const browser = await chromium.launch({headless: true});
+const browser = await chromium.launch({
+  headless: true,
+  ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH} : {})
+});
 const context = await browser.newContext({
   viewport: report.viewport,
   isMobile: true,
@@ -206,10 +234,48 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   );
 }
 
+async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiyo = false} = {}) {
+  report.currentStore = storeName;
+  await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(
+    () => window.daedongCatalogReady && typeof window.daedongCatalogReady.then === 'function',
+    null,
+    {polling: 25, timeout: 10000}
+  );
+  await page.evaluate(() => window.daedongCatalogReady);
+  await page.waitForFunction(() => typeof window.openStore === 'function', null, {timeout: 25000});
+  await page.locator('#mainSearch').fill(storeName);
+  const card = page.locator('#storeGrid .store-card').filter({hasText: storeName}).first();
+  await card.waitFor({state: 'visible', timeout: 10000});
+  await card.tap();
+
+  const trigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
+  await trigger.waitFor({state: 'visible', timeout: 10000});
+  await check(trigger.locator('span').innerText().then(text => text.trim() === expectedLabel), `${storeName} 버튼 문구가 ${expectedLabel}`);
+  await check(
+    trigger.getAttribute('data-rc3-single-external').then(value => singleYogiyo ? value === 'yogiyo' : value === null),
+    `${storeName} 주문앱 구성에 맞는 버튼 동작 지정`
+  );
+  await trigger.tap();
+  if (singleYogiyo) {
+    await check(
+      page.locator('#modal:not([hidden]) .community-guide[data-selected-app="yogiyo"]').isVisible(),
+      `${storeName} 요기요 주문 안내로 바로 이동`
+    );
+  } else {
+    await check(
+      page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
+      `${storeName} 지역 주문앱 추가 뒤 다른 주문방법 선택창 유지`
+    );
+  }
+}
+
 try {
   await checkStore('본스치킨 미평점', 'browser-other-order-method-touch-vons.png');
   await checkStore('손수김밥 양지점', 'browser-other-order-method-touch-handsu.png', {nativeResume: true});
-  await check(Promise.resolve(report.errors.length === 0), '두 가게 모바일 터치 중 브라우저 오류 없음');
+  await checkConditionalOrderLabel('요기요 단독 검증가게', '요기요로 주문하기', {singleYogiyo: true});
+  await checkConditionalOrderLabel('지역앱 추가 검증가게', '다른 주문방법 보기');
+  await check(Promise.resolve(report.errors.length === 0), '네 가게 모바일 터치 중 브라우저 오류 없음');
   report.success = true;
 } catch (error) {
   report.failure = error.stack || String(error);
