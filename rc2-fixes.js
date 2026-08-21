@@ -879,6 +879,16 @@ function rc2RememberExternalReturn(sourceElement = null) {
   return payload;
 }
 
+function rc2LaunchComparedExternal(link, href) {
+  if (!link || href === '#') return false;
+  if (String(link.dataset?.communityOriginal || '') === 'yogiyo') {
+    window.location.assign(href);
+    return true;
+  }
+  window.open(href, '_blank', 'noopener');
+  return true;
+}
+
 async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
   if (rc2StoreRestorePromise) return rc2StoreRestorePromise;
   const restoreTask = (async () => {
@@ -1039,7 +1049,7 @@ fxInstallEvents = function rc2InstallEvents() {
       event.preventDefault();
       event.stopImmediatePropagation();
       rc2RememberExternalReturn(comparedExternal);
-      if (href !== '#') window.open(href, '_blank', 'noopener');
+      rc2LaunchComparedExternal(comparedExternal, href);
       return;
     }
     const externalLink = event.target.closest('a[target="_blank"],a[data-final-app-channel],a[data-detail-only]');
@@ -1129,3 +1139,4 @@ fxInitialize = async function rc2Initialize() {
   setTimeout(() => { rc2DeferredStoreReturnPosition = null; }, 2200);
   rc2StartAmbient(!restoredStore && !restoredAppBrowser);
 };
+
