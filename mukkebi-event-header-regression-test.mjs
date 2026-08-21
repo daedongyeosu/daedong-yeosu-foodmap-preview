@@ -21,7 +21,10 @@ assert.match(css, /\.mukkebi-summer-partners span,\.mukkebi-summer-partners stro
 assert.match(css, /\.mukkebi-summer-partners\{[^}]*word-break:keep-all/, 'Android 글자 확대에서도 한글 단어 중간 줄바꿈을 막아야 합니다.');
 assert.match(css, /\.mukkebi-summer-close\{[^}]*width:48px;height:48px/, '닫기 버튼은 충분한 터치 크기를 유지해야 합니다.');
 assert.match(css, /\.mukkebi-summer-close\{[^}]*touch-action:manipulation/, 'Android 터치에서 닫기 버튼 입력을 지연하면 안 됩니다.');
-assert.match(js, /closeButton\?\.addEventListener\('pointerdown', dismissEventImmediately\)/, '먹깨비 팝업은 누르는 즉시 닫혀야 합니다.');
+assert.match(js, /window\.installDaedongTapAction\(\{[\s\S]*selector: '#mukkebiSummerClose'[\s\S]*dismissEventImmediately\(event\)/,
+  '먹깨비 팝업 X는 스크롤 제스처와 구분되는 공통 모바일 탭 경로를 사용해야 합니다.');
+assert.doesNotMatch(js, /closeButton\?\.addEventListener\('pointerdown', dismissEventImmediately\)/,
+  '손가락을 대는 순간 닫으면 스크롤 시작을 닫기로 오인할 수 있습니다.');
 assert.match(js, /function dismissEventImmediately\(event\)[\s\S]*?closeEvent\(\)/, '먹깨비 팝업 닫기 뒤처리 전에 화면부터 숨겨야 합니다.');
 const headerRule = css.match(/\.mukkebi-summer-head\{[^}]*\}/)?.[0] || '';
 assert.doesNotMatch(headerRule, /radial-gradient/, '닫기 버튼 주변의 장식용 원형 음영은 없어야 합니다.');

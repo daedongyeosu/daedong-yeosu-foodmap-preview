@@ -5,6 +5,124 @@
 // step can serialize a large mobile DOM and stall the close/back interaction.
 try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch {}
 
+const DAEDONG_TAP_MOVE_TOLERANCE = 10;
+const DAEDONG_TAP_DEDUPE_WINDOW_MS = 80;
+const DAEDONG_TAP_GHOST_WINDOW_MS = 700;
+let daedongGhostClick = null;
+
+function daedongEventPoint(event) {
+  const point = event?.changedTouches?.[0] || event?.touches?.[0] || event;
+  return {
+    x: Number.isFinite(point?.clientX) ? point.clientX : 0,
+    y: Number.isFinite(point?.clientY) ? point.clientY : 0
+  };
+}
+
+function consumeDaedongEvent(event) {
+  event?.preventDefault?.();
+  event?.stopImmediatePropagation?.();
+}
+
+function rememberDaedongGhostClick(event) {
+  const point = daedongEventPoint(event);
+  daedongGhostClick = {
+    x: point.x,
+    y: point.y,
+    until: performance.now() + DAEDONG_TAP_GHOST_WINDOW_MS
+  };
+}
+
+document.addEventListener('click', event => {
+  const guard = daedongGhostClick;
+  if (!guard || performance.now() > guard.until) {
+    daedongGhostClick = null;
+    return;
+  }
+  const point = daedongEventPoint(event);
+  if (Math.hypot(point.x - guard.x, point.y - guard.y) > 28) return;
+  daedongGhostClick = null;
+  consumeDaedongEvent(event);
+}, true);
+
+function installDaedongTapAction({selector, activate}) {
+  const pointerStarts = new Map();
+  const touchStarts = new Map();
+  let activatedAt = 0;
+
+  const targetFor = event => event?.target?.closest?.(selector) || null;
+  const moved = (start, point) => Math.hypot(point.x - start.x, point.y - start.y) > DAEDONG_TAP_MOVE_TOLERANCE;
+  const activateOnce = (event, target) => {
+    const now = performance.now();
+    if (now - activatedAt < DAEDONG_TAP_DEDUPE_WINDOW_MS) {
+      consumeDaedongEvent(event);
+      return true;
+    }
+    if (activate(target, event) === false) return false;
+    activatedAt = now;
+    rememberDaedongGhostClick(event);
+    consumeDaedongEvent(event);
+    return true;
+  };
+
+  document.addEventListener('pointerdown', event => {
+    if (event.button !== 0) return;
+    const target = targetFor(event);
+    if (!target) return;
+    const point = daedongEventPoint(event);
+    pointerStarts.set(event.pointerId, {target, ...point, dragged: false});
+  }, true);
+  document.addEventListener('pointermove', event => {
+    const start = pointerStarts.get(event.pointerId);
+    if (start && moved(start, daedongEventPoint(event))) start.dragged = true;
+  }, true);
+  const finishPointer = event => {
+    const start = pointerStarts.get(event.pointerId);
+    if (!start) return;
+    pointerStarts.delete(event.pointerId);
+    if (event.type === 'pointercancel' || start.dragged) return;
+    const hit = document.elementFromPoint(event.clientX, event.clientY)?.closest?.(selector);
+    if (hit !== start.target) return;
+    activateOnce(event, start.target);
+  };
+  document.addEventListener('pointerup', finishPointer, true);
+  document.addEventListener('pointercancel', finishPointer, true);
+
+  document.addEventListener('touchstart', event => {
+    if (event.touches?.length !== 1) return;
+    const target = targetFor(event);
+    const touch = event.changedTouches?.[0] || event.touches?.[0];
+    if (!target || !touch) return;
+    touchStarts.set(touch.identifier, {target, x: touch.clientX, y: touch.clientY, dragged: false});
+  }, {capture: true, passive: true});
+  document.addEventListener('touchmove', event => {
+    for (const touch of [...(event.changedTouches || event.touches || [])]) {
+      const start = touchStarts.get(touch.identifier);
+      if (start && moved(start, {x: touch.clientX, y: touch.clientY})) start.dragged = true;
+    }
+  }, {capture: true, passive: true});
+  const finishTouch = event => {
+    for (const touch of [...(event.changedTouches || [])]) {
+      const start = touchStarts.get(touch.identifier);
+      if (!start) continue;
+      touchStarts.delete(touch.identifier);
+      if (event.type === 'touchcancel' || start.dragged) continue;
+      const hit = document.elementFromPoint(touch.clientX, touch.clientY)?.closest?.(selector);
+      if (hit !== start.target) continue;
+      activateOnce(event, start.target);
+      return;
+    }
+  };
+  document.addEventListener('touchend', finishTouch, {capture: true, passive: false});
+  document.addEventListener('touchcancel', finishTouch, {capture: true, passive: true});
+
+  document.addEventListener('click', event => {
+    const target = targetFor(event);
+    if (target) activateOnce(event, target);
+  }, true);
+}
+
+if (typeof window !== 'undefined') window.installDaedongTapAction = installDaedongTapAction;
+
 const ASSET_VERSION = 'phone-route-restoration-1';
 const ACTIVE_REGION = (typeof window !== 'undefined' && window.DAEDONG_REGION) || Object.freeze({code:'yeosu',shortName:'여수',cityName:'여수시',mapName:'대동여수음식지도',defaultArea:'여수시 전체',neighborhoodUrl:'data/yeosu-neighborhoods.json',storageKey:key=>key});
 const REGION_SHORT_NAME = ACTIVE_REGION.shortName;
@@ -1815,24 +1933,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const pop = $('#moreAppsPopover');
   $('#moreAppsBtn').addEventListener('click', event => { event.stopPropagation(); pop.hidden = !pop.hidden; });
-  $('.popover-close').addEventListener('click', () => pop.hidden = true);
+  installDaedongTapAction({
+    selector: '.popover-close',
+    activate() {
+      if (pop.hidden) return false;
+      pop.hidden = true;
+      return true;
+    }
+  });
   document.addEventListener('click', event => { if (!pop.hidden && !event.target.closest('#moreAppsPopover') && !event.target.closest('#moreAppsBtn')) pop.hidden = true; });
 
   $$('[data-open]').forEach(button => button.addEventListener('click', () => ({mypage: myPage, guide, brands: brandsModal}[button.dataset.open] || guide)()));
-  document.addEventListener('pointerdown', event => {
-    if (!event.target.closest('#modal .modal-close')) return;
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    if (!$('#modal').hidden) hardClose();
-  }, {capture: true});
-  document.addEventListener('click', event => {
-    if (!event.target.closest('#modal .modal-close')) return;
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    if (!$('#modal').hidden) hardClose();
-  }, {capture: true});
-  $('#overlay').addEventListener('click', () => hardClose());
-  $('#modal').addEventListener('click', event => { if (event.target === $('#modal')) hardClose(); });
+  installDaedongTapAction({
+    selector: '#modal .modal-close',
+    activate() {
+      if ($('#modal').hidden) return false;
+      hardClose();
+      return true;
+    }
+  });
+  installDaedongTapAction({
+    selector: '#overlay',
+    activate(target, event) {
+      if (event.target !== target || $('#modal').hidden) return false;
+      hardClose();
+      return true;
+    }
+  });
+  installDaedongTapAction({
+    selector: '#modal',
+    activate(target, event) {
+      if (event.target !== target || target.hidden) return false;
+      hardClose();
+      return true;
+    }
+  });
+  installDaedongTapAction({
+    selector: '[data-back-app-browser]',
+    activate(target) {
+      openAppBrowser(target.dataset.backAppBrowser);
+      return true;
+    }
+  });
+  installDaedongTapAction({
+    selector: '.store-other-close',
+    activate(target) {
+      const menu = target.closest('.store-other-popover');
+      if (!menu || menu.hidden) return false;
+      menu.hidden = true;
+      return true;
+    }
+  });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('#modal').hidden) hardClose(); });
 
   document.addEventListener('click', event => {
@@ -1849,15 +2000,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (appCategory) { const key=$('#modal').dataset.appBrowserKey; openAppBrowser(key,appCategory.dataset.appCategory); return; }
     const appStore = event.target.closest('[data-app-store-id]');
     if (appStore) { const store=stores.find(item=>item.id===appStore.dataset.appStoreId); if(store) openCommunityChoice(store,appStore.dataset.appKey,{fromBrowser:true}); return; }
-    const backApp = event.target.closest('[data-back-app-browser]'); if (backApp) { openAppBrowser(backApp.dataset.backAppBrowser); return; }
     const brandButton = event.target.closest('[data-brand-id]');
     if (brandButton) { state.brandId = brandButton.dataset.brandId; state.category = '전체'; state.query = ''; $('#mainSearch').value = ''; closeModal(); setTimeout(() => renderStores({scroll: true, resetCount: true}), 60); return; }
     const categoryButton = event.target.closest('[data-modal-cat]');
     if (categoryButton) { state.category = categoryButton.dataset.modalCat; state.brandId = ''; state.query = ''; $('#mainSearch').value = ''; closeModal(); setTimeout(() => renderStores({scroll: true, resetCount: true}), 60); return; }
     const toggle = event.target.closest('.store-other-toggle');
     if (toggle) { event.preventDefault(); event.stopPropagation(); const menu = toggle.closest('.store-other-wrap')?.querySelector('.store-other-popover'); if (!menu) return; $$('.store-other-popover').forEach(item => { if (item !== menu) item.hidden = true; }); menu.hidden = !menu.hidden; return; }
-    const otherClose = event.target.closest('.store-other-close');
-    if (otherClose) { event.preventDefault(); event.stopPropagation(); const menu = otherClose.closest('.store-other-popover'); if (menu) menu.hidden = true; return; }
     const externalButton = event.target.closest('[data-external-route-key]');
     if (externalButton) { event.preventDefault(); event.stopPropagation(); const store=stores.find(item=>item.id===$('#modal').dataset.activeStoreId || item.id===externalButton.closest('[data-store-id]')?.dataset.storeId); if(store) openCommunityChoice(store,externalButton.dataset.externalRouteKey); return; }
     const favoriteButton=event.target.closest('[data-favorite-store]'); if(favoriteButton){event.preventDefault();event.stopPropagation();toggleFavorite(favoriteButton.dataset.favoriteStore);return;}
@@ -1899,14 +2047,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const startupBypassHeroStoreIds = new Set(['67a9e4f14c8c7ea4','cfde2617224f33a0']);
   const startupAdEnabled = false; // Opening-day decision: keep the recruitment startup popup disabled.
   if (startupAdEnabled && !requestedSharedStoreId && !startupBypassHeroStoreIds.has(String(requestedHeroStoreId||'')) && localStorage.getItem('hideStartup') !== today) setTimeout(openStartupAd, 600);
-  $('.startup-close').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); });
-  startupAd.addEventListener('click', event => { if (event.target === startupAd) closeStartupAd(); });
+  installDaedongTapAction({selector: '.startup-close', activate() { closeStartupAd(); return true; }});
+  installDaedongTapAction({
+    selector: '#startupAd',
+    activate(target, event) {
+      if (event.target !== target || target.hidden) return false;
+      closeStartupAd();
+      return true;
+    }
+  });
   $('.startup-card').addEventListener('click', event => event.stopPropagation());
   $('#hideToday').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); localStorage.setItem('hideStartup', today); closeStartupAd(); });
   $('#startupDetails').addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); closeStartupAd(); setTimeout(() => openModal(`<h2 id="modalTitle">${REGION_MAP_NAME} 모집·광고 안내</h2><div class="guide-list">${PROMOS.map(promo => `<button type="button">${promo.title}<br><small>${promo.desc}</small></button>`).join('')}</div>`), 60); });
   window.addEventListener('popstate', () => {
     if (document.documentElement.dataset.daedongMenuHistoryClose === '1') {
       delete document.documentElement.dataset.daedongMenuHistoryClose;
+      return;
+    }
+    if (document.documentElement.dataset.daedongServiceHistoryClose === '1') {
+      delete document.documentElement.dataset.daedongServiceHistoryClose;
       return;
     }
     if (ignoreNextPop > 0) {

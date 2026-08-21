@@ -76,8 +76,18 @@
     if (canOpen()) window.setTimeout(openEvent, 220);
   }
 
-  closeButton?.addEventListener('pointerdown', dismissEventImmediately);
-  closeButton?.addEventListener('click', dismissEventImmediately);
+  if (typeof window.installDaedongTapAction === 'function') {
+    window.installDaedongTapAction({
+      selector: '#mukkebiSummerClose',
+      activate(target, event) {
+        if (!opened || target !== closeButton) return false;
+        dismissEventImmediately(event);
+        return true;
+      }
+    });
+  } else {
+    closeButton?.addEventListener('click', dismissEventImmediately);
+  }
   hideTodayButton?.addEventListener('click', () => {
     try { localStorage.setItem(HIDE_DATE_KEY, localDateKey()); }
     catch {}

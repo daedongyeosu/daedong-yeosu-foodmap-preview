@@ -385,10 +385,15 @@ body.store-service-overview-open {
 }
 
 .store-service-overview > header {
+  position: sticky;
+  top: -1px;
+  z-index: 5;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
+  padding: 8px 0 10px;
+  background: #f8f9fc;
 }
 
 .store-service-overview > header span {
