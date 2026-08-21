@@ -96,6 +96,7 @@ let stabilized = null;
 let cleared = null;
 const restoreContext = {
   window: {
+    __daedongCatalogProgress: {complete: true},
     daedongReadExternalReturnState: () => restoreSaved,
     daedongStabilizeReturnPosition: saved => { stabilized = saved; },
     daedongClearExternalReturnState: (key, saved) => { cleared = {key, saved}; },
