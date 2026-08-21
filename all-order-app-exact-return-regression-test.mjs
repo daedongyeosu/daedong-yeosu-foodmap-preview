@@ -124,7 +124,7 @@ assert.equal(fakeCard.scrollTop, 550, '비동기 렌더링으로 기준 항목�
 
 assert.match(rc2, /RC2_RETURN_STORAGE_KEYS = \[RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN\]/);
 assert.match(rc2, /for \(const delay of \[120, 360, 800, 1600\]\)/, '사진·메뉴 렌더링 뒤 위치를 다시 맞춰야 합니다.');
-assert.match(rc2, /async function rc2RestoreExternalSurface\(\)[\s\S]*?rc2RestoreAfterExternalPage\(\)[\s\S]*?fxRestoreAppBrowserReturn/);
+assert.match(rc2, /async function rc2RestoreExternalSurface\(\{rebuildExisting = false\} = \{\}\)[\s\S]*?rc2RestoreAfterExternalPage\(\{rebuildExisting\}\)[\s\S]*?fxRestoreAppBrowserReturn/);
 assert.match(rc2, /if \(restored\) window\.daedongFinishExternalReturnBoot/);
 assert.doesNotMatch(rc2.match(/visibilitychange[\s\S]*?window\.addEventListener\('pageshow'/)?.[0] || '', /rc2StartAmbient\(false\);[\s\S]*?rc2Restore/,
   '홈 효과를 먼저 시작한 뒤 복귀 화면을 열면 안 됩니다.');
