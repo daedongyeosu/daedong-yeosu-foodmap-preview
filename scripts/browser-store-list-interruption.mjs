@@ -64,6 +64,8 @@ const check = async (condition, message, detail = null) => {
 try {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForFunction(() => document.querySelectorAll('#storeGrid .store-card').length >= 16, null, {timeout: 10000});
+  await check(page.locator('.promo-section .section-head h2').evaluate(node => node.textContent?.trim() === '여수와 함께하는 소식'),
+    '여수 지역 소식 제목의 와/과 표기가 정확함');
   const next = page.locator('#loadMoreBtn');
   await next.waitFor({state: 'visible', timeout: 5000});
   await next.scrollIntoViewIfNeeded();
