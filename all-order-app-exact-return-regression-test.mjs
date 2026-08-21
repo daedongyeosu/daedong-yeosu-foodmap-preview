@@ -96,6 +96,7 @@ let stabilized = null;
 let cleared = null;
 const restoreContext = {
   window: {
+    __daedongCatalogProgress: {complete: true},
     daedongReadExternalReturnState: () => restoreSaved,
     daedongStabilizeReturnPosition: saved => { stabilized = saved; },
     daedongClearExternalReturnState: (key, saved) => { cleared = {key, saved}; },
@@ -143,3 +144,4 @@ assert.match(html, /store-menu-preview\.js\?v=[^"\n]*all-order-app-exact-return-
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*all-order-app-exact-return-1/);
 
 console.log('all-order-app-exact-return-regression-test: pass');
+
