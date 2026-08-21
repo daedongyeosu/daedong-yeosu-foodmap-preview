@@ -11,13 +11,16 @@ const app = fs.readFileSync('app.js', 'utf8');
 
 assert.match(experience, /let fxRailRenderVersion=0/);
 assert.match(experience, /function fxRailMarkup\(spec,used\)/);
-assert.match(experience, /root\.insertAdjacentHTML\('beforeend',fxRailMarkup\(spec,used\)\)/);
+assert.match(experience, /staging\.insertAdjacentHTML\('beforeend',fxRailMarkup\(spec,used\)\)/);
+assert.match(experience, /function fxCommitRailsWithoutMovingActiveList\(root,staging\)/);
+assert.match(experience, /root\.replaceChildren\(\.\.\.staging\.childNodes\)/,
+  '추천 가게는 기존 화면을 비우지 않고 완성된 결과를 한 번에 교체해야 합니다.');
 assert.match(experience, /window\.setTimeout\(renderNext,0\)/);
 assert.doesNotMatch(experience, /root\.innerHTML=fxSelectedRails\(\)\.map/);
 
 assert.match(rc3, /let rc3RailRenderVersion = 0/);
 assert.match(rc3, /if \(window\.__daedongDeferRailRender\) return/);
-assert.match(rc3, /root\.insertAdjacentHTML\('beforeend'/);
+assert.match(rc3, /staging\.insertAdjacentHTML\('beforeend'/);
 assert.match(rc3, /window\.setTimeout\(renderNext, 0\)/);
 assert.doesNotMatch(rc3, /root\.innerHTML = fxSelectedRails\(\)\.map/);
 assert.match(rc3, /const rankedStores = fxRankStores\(spec\)/);
