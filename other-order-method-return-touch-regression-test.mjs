@@ -19,15 +19,17 @@ assert.match(rc3, /window\.addEventListener\('pageshow', rc3ResetOrderMethodsTou
 assert.match(rc3, /window\.daedongResetOrderMethodsTouchState = rc3ResetOrderMethodsTouchState/, '카카오 네이티브 복귀 재구성 전에 터치 상태를 외부에서 초기화할 수 있어야 합니다.');
 assert.match(app, /function handleKakaoOrderLinkClick\(event\)[\s\S]*?if \(link\?\.matches\('a\[data-community-original\]\[target="_blank"\]'\)\) return;[\s\S]*?window\.location\.assign\(href\)/, '카카오 전용 같은 탭 처리기가 주문 계속 링크를 가로채면 안 됩니다.');
 assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?if \(link\?\.matches\('a\[data-community-original\]\[target="_blank"\]'\)\) return;[\s\S]*?window\.location\.assign\(href\)/, '모바일 공통 같은 탭 처리기가 주문 계속 링크를 가로채면 안 됩니다.');
-assert.match(rc2, /rc2RestoreAfterExternalPage\(\{rebuildExisting = false\} = \{\}\)/, '복귀 시 이미 보이는 상세창도 선택적으로 재구성할 수 있어야 합니다.');
-assert.match(rc2, /visibleStoreMatches && !rebuildExisting/, '일반 복원과 카카오 네이티브 복귀 재구성을 구분해야 합니다.');
-assert.match(rc2, /window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rc2NativeHardClose\([\s\S]*?await new Promise\(resolve => requestAnimationFrame/, '카카오 복귀 시 터치 상태를 비우고 기존 모달을 완전히 닫은 다음 새 화면을 열어야 합니다.');
+assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '복귀 시 같은 가게 상세가 보이면 터치 상태만 비우고 기존 DOM을 유지해야 합니다.');
+const visibleStoreBranch = rc2.slice(rc2.indexOf('if (visibleStoreMatches)'), rc2.indexOf('if (!modal?.hidden)', rc2.indexOf('if (visibleStoreMatches)')));
+assert.doesNotMatch(visibleStoreBranch, /rc2NativeHardClose|openStore\(/, '같은 가게 상세를 복귀 중 닫고 다시 만들면 실제 터치와 경쟁합니다.');
+assert.match(rc2, /prepareStoreSurface && storeSnapshot && storeSnapshot !== current[\s\S]*?rc2ModalStack\.length = 0;[\s\S]*?rc2RestoreSnapshot\(storeSnapshot\)/, '외부 주문앱을 열기 전에 원본 Preview를 가게 상세 화면으로 안정화해야 합니다.');
 assert.match(rc2, /window\.addEventListener\('focus', restoreAfterNativeResume\)/, '카카오 외부 앱에서 돌아올 때 focus만 발생하는 경우도 복원해야 합니다.');
 const externalBranch = rc2.slice(rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)'), rc2.indexOf('const externalLink', rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)')));
 assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.assign/, '카카오 WebView 원본 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
-assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '주문앱은 원본 Preview와 분리된 화면으로 명시적으로 열어야 합니다.');
+assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal, \{prepareStoreSurface: true\}\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '원본 Preview를 가게 상세로 안정화한 뒤 주문앱을 분리된 화면으로 열어야 합니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
+assert.match(browserCheck, /dataset\.testPreparedBeforeReturn = '1'[\s\S]*dataset\.testPreparedBeforeReturn === '1'[\s\S]*준비된 가게 상세 DOM을 유지/, '출발 전에 준비한 가게 상세 DOM을 복귀 중 유지하는 실제 브라우저 검사가 없습니다.');
 assert.match(rc3, /document\.visibilityState === 'visible'/, '앱 복귀로 화면이 다시 보일 때 터치 상태를 초기화해야 합니다.');
 assert.match(rc3, /trigger\.removeAttribute\('data-rc3-direct-bound'\)/, 'HTML 스냅샷에 남은 과거 직접 바인딩 표식을 제거해야 합니다.');
 assert.doesNotMatch(rc3, /trigger\.addEventListener\('pointer(?:down|up|move|cancel)'/, 'HTML 복원 시 사라지는 노드 전용 포인터 리스너를 다시 사용하면 안 됩니다.');
@@ -41,6 +43,8 @@ assert.ok(
 );
 
 assert.match(index, /app\.js\?v=[^"\n]*kakao-community-separate-context-1/, 'app.js 캐시 버전이 갱신되어야 합니다.');
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*order-methods-return-stable-dom-1/, 'rc2 복귀 수정 캐시 버전이 갱신되어야 합니다.');
+assert.match(index, /final-experience\.js\?v=[^"\n]*order-methods-return-stable-dom-1/, '복귀 수정 로더 캐시 버전이 갱신되어야 합니다.');
 
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {
   assert.match(source, /order-methods-return-touch-5/, `${name} 캐시 버전이 갱신되어야 합니다.`);
@@ -49,3 +53,4 @@ for (const [name, source] of [['final-experience.js', finalExperience], ['index.
 }
 
 console.log('PASS 외부 주문앱 복귀 후 다른 주문방법 보기 재터치 회귀검사');
+
