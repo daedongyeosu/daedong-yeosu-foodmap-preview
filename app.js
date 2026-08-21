@@ -1017,6 +1017,23 @@ async function loadMenuPhotoFallbacks(store) {
   store.__menuPhotoFallbacks = photos;
   return photos;
 }
+function recoverVisibleDetailPhoto(store) {
+  const modal = $('#modal');
+  const detail = $('#modalContent .store-detail[data-store-id]');
+  if (!store || !modal || modal.hidden || String(modal.dataset.activeStoreId || '') !== String(store.id) || String(detail?.dataset.storeId || '') !== String(store.id)) return false;
+  const placeholder = detail.querySelector('.detail-photo-placeholder');
+  if (!placeholder) return false;
+  const markup = photoResolver.galleryMarkup(store);
+  if (!markup || markup.includes('detail-photo-placeholder')) return false;
+  const currentPhotoSurface = placeholder.closest('.detail-single-photo, .detail-photo-carousel') || placeholder;
+  currentPhotoSurface.replaceWith(document.createRange().createContextualFragment(markup));
+  const carouselRoot = $('#detailPhotoCarousel');
+  if (carouselRoot) {
+    detailCarousel?.destroy?.();
+    detailCarousel = new InfiniteCarousel(carouselRoot,{interval:3500});
+  }
+  return true;
+}
 function finalImageFallback(image) {
   if (!image.isConnected) return;
   if (image.dataset.photoKind === 'menu-entry') {
@@ -1036,7 +1053,10 @@ async function handleImageError(image) {
   store.__failedPhotoPaths.add(photoUrlKey(image.currentSrc || image.src));
   image.dataset.photoRecoveryPending = 'true';
   await loadMenuPhotoFallbacks(store);
-  if (!image.isConnected) return;
+  if (!image.isConnected) {
+    recoverVisibleDetailPhoto(store);
+    return;
+  }
   const next = photoResolver.resolveGallery(store)
     .find(photo => !store.__failedPhotoPaths.has(photoUrlKey(photo.src)));
   delete image.dataset.photoRecoveryPending;
@@ -1592,6 +1612,9 @@ async function openStore(store) {
     : placeholderMarkup('detail');
   openModal(`<article class="store-detail store-detail-loading" data-store-id="${escapeHtml(store.id)}" aria-busy="true"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${loadingPhotoMarkup}<div class="store-detail-skeleton" role="status" aria-live="polite"><span class="store-detail-skeleton-line is-wide"></span><span class="store-detail-skeleton-line"></span><span class="store-detail-skeleton-button"></span><span class="store-detail-skeleton-button"></span><b>가게 정보를 불러오는 중입니다…</b></div></article>`);
   $('#modal').dataset.activeStoreId = store.id;
+  if (!loadingPhoto && store.hasMenu === true) {
+    void loadMenuPhotoFallbacks(store).then(() => recoverVisibleDetailPhoto(store));
+  }
   const secureDetail = window.daedongSecureStoreDetail;
   if (store.__secureDetailReady !== true) {
     if (!secureDetail || typeof secureDetail.enrich !== 'function') {
