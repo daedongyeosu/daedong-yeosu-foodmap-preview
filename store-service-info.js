@@ -1362,8 +1362,12 @@ function overviewSearchText(entry) {
   }
 
   function requestOverviewClose() {
-    if (history.state?.[HISTORY_KEY]) history.back();
-    else hideOverview();
+    const shouldGoBack = Boolean(history.state?.[HISTORY_KEY]);
+    hideOverview();
+    if (shouldGoBack) {
+      document.documentElement.dataset.daedongServiceHistoryClose = '1';
+      history.back();
+    }
   }
 
   function openStoreAfterOverview(storeId) {
@@ -1540,6 +1544,16 @@ document.addEventListener('input', event => {
     renderOverview();
   });
 
+  window.installDaedongTapAction?.({
+    selector: '[data-store-service-overview-close]',
+    activate(target) {
+      const overlay = target.closest('[data-store-service-overview-overlay]');
+      if (!overlay || overlay.hidden) return false;
+      requestOverviewClose();
+      return true;
+    }
+  });
+
   document.addEventListener('click', event => {
     const opener = event.target.closest('[data-store-service-overview-open], [data-store-service-search-open]');
     if (opener) {
@@ -1559,10 +1573,6 @@ document.addEventListener('input', event => {
     const quickLocation = event.target.closest('[data-store-service-quick-location]');
     if (quickLocation) {
       showOverview(quickLocation, {locationMode: quickLocation.dataset.storeServiceQuickLocation || 'all'});
-      return;
-    }
-    if (event.target.closest('[data-store-service-overview-close]')) {
-      requestOverviewClose();
       return;
     }
     if (event.target.closest('[data-store-service-query-clear]')) {
