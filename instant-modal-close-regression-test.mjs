@@ -25,8 +25,10 @@ assert.doesNotMatch(menu, /function requestCloseMenuPreview\(\)[\s\S]{0,900}hist
   '메뉴 X 닫기는 같은 상세화면을 이력에서 다시 왕복하며 터치를 막으면 안 됩니다.');
 assert.match(menu, /function guardMenuCloseGesture\(\)[\s\S]*dataset\.daedongMenuCloseGesture\s*=\s*'1'[\s\S]*600/,
   '메뉴 닫기 제스처에는 짧은 터치 관통 방지 구간이 필요합니다.');
-assert.match(menu, /closest\('\[data-menu-preview-close\]'\)[\s\S]{0,260}event\.stopImmediatePropagation\(\);[\s\S]{0,120}requestCloseMenuPreview\(\)/,
-  '메뉴 닫기 pointerdown 자체를 소비해 아래 상세 닫기로 관통하지 않아야 합니다.');
+assert.match(menu, /addEventListener\('pointerdown'[\s\S]{0,220}menuPreviewCloseTarget\(event\)[\s\S]{0,120}activateMenuPreviewClose\(event\)/,
+  '메뉴 닫기 pointerdown은 공통 닫기 경로로 즉시 전달되어야 합니다.');
+assert.match(menu, /function activateMenuPreviewClose\(event\)[\s\S]{0,360}event\?\.stopImmediatePropagation\?\.\(\);[\s\S]{0,120}requestCloseMenuPreview\(\)/,
+  '공통 메뉴 닫기 경로가 이벤트를 소비해 아래 상세 닫기로 관통하지 않아야 합니다.');
 assert.match(menu, /function requestMenuLayerBack\(layer, fallback\)[\s\S]*fallback\(\);[\s\S]*history\.back\(\)/,
   '메뉴 내부 시트도 이력 이동 전에 즉시 닫혀야 합니다.');
 assert.match(menu, /function requestMenuLayerBack\(layer, fallback\)[\s\S]*dataset\.daedongMenuHistoryClose\s*=\s*'1'[\s\S]*history\.back\(\)/,

@@ -35,8 +35,10 @@ assert.match(html, /store-menu-preview\.js\?v=[^"\n]*scroll-intent-chunk-1/,
   '설치형 앱도 스크롤 의도 기반 메뉴 묶음 코드를 즉시 받아야 합니다.');
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*scroll-chunk-lock-1/,
   '설치형 앱도 연속 스크롤 묶음 잠금 코드를 즉시 받아야 합니다.');
-assert.match(menu, /addEventListener\('pointerdown'[\s\S]*data-menu-preview-close[\s\S]*requestCloseMenuPreview\(\)/,
-  '메뉴 닫기 버튼은 click을 기다리지 말고 터치 시작 즉시 닫혀야 합니다.');
+assert.match(menu, /addEventListener\('pointerdown'[\s\S]*menuPreviewCloseTarget\(event\)[\s\S]*activateMenuPreviewClose\(event\)/,
+  '메뉴 닫기 버튼은 click을 기다리지 말고 포인터 시작 즉시 공통 닫기 경로를 실행해야 합니다.');
+assert.match(menu, /function activateMenuPreviewClose\(event\)[\s\S]*requestCloseMenuPreview\(\)/,
+  '포인터·터치·클릭은 같은 메뉴 닫기 경로를 사용해야 합니다.');
 assert.match(menu, /data-menu-image-src=/);
 assert.match(menu, /const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2/,
   '메뉴 사진을 한꺼번에 너무 많이 받아 터치를 막으면 안 됩니다.');
