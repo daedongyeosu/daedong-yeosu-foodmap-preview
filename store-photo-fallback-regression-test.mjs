@@ -8,6 +8,7 @@ const index = readFileSync(new URL('./index.html', import.meta.url), 'utf8');
 assert.match(app, /const menuPhotoFallbackCache = new Map\(\)/);
 assert.match(app, /async function loadMenuPhotoFallbacks\(store\)/);
 assert.match(app, /source: 'verified-menu-fallback'/);
+assert.match(app, /return mobile !== path && failed\.has\(photoUrlKey\(mobile\)\) \? path : mobile/);
 assert.match(app, /function recoverVisibleDetailPhoto\(store\)/);
 assert.match(app, /currentPhotoSurface\.replaceWith\(document\.createRange\(\)\.createContextualFragment\(markup\)\)/);
 assert.match(app, /if \(!image\.isConnected\) \{\s*recoverVisibleDetailPhoto\(store\);\s*return;\s*\}/);
@@ -19,6 +20,7 @@ assert.match(menu, /data-menu-image-src="\$\{escapeMenuHtml\(item\.image\)\}"[^>
 assert.match(menu, /data-photo-kind="detail" data-photo-store-id="\$\{escapeMenuHtml\(store\.id\)\}"/);
 assert.match(menu, /data-photo-kind="menu-entry" data-photo-store-id="\$\{escapeMenuHtml\(storeId\)\}"/);
 assert.match(index, /detail-photo-menu-fallback-refresh-1/);
+assert.match(index, /mobile-photo-original-fallback-1/);
 assert.match(index, /broken-photo-menu-fallback-1/);
 assert.match(index, /broken-photo-fallback-1/);
 
