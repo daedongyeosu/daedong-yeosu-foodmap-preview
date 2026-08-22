@@ -81,24 +81,54 @@ try {
   await page.waitForFunction(() => document.querySelectorAll('#storeGrid .store-card').length >= 16, null, {timeout: 10000});
   await check(page.locator('.promo-section .section-head h2').evaluate(node => node.textContent?.trim() === '여수와 함께하는 소식'),
     '여수 지역 소식 제목의 와/과 표기가 정확함');
-  const next = page.locator('#loadMoreBtn');
-  await next.waitFor({state: 'visible', timeout: 5000});
-  await next.scrollIntoViewIfNeeded();
+  const grid = page.locator('#storeGrid');
+  await grid.scrollIntoViewIfNeeded();
+  await check(page.locator('#storePagerControls').isHidden(),
+    '전체 가게 목록의 하단 이전·다음 화살표를 표시하지 않음');
 
+  const beforeSwipe = await page.evaluate(() => ({
+    gridTop: document.querySelector('#storeGrid')?.getBoundingClientRect().top ?? -1,
+    scrollY: window.scrollY
+  }));
   const startedAt = Date.now();
-  await next.tap();
+  await grid.evaluate(node => {
+    const bounds = node.getBoundingClientRect();
+    const y = bounds.top + Math.min(120, Math.max(30, bounds.height / 3));
+    const start = new Touch({identifier: 1, target: node, clientX: bounds.right - 36, clientY: y});
+    const end = new Touch({identifier: 1, target: node, clientX: bounds.left + 36, clientY: y});
+    node.dispatchEvent(new TouchEvent('touchstart', {
+      bubbles: true,
+      cancelable: true,
+      touches: [start],
+      targetTouches: [start],
+      changedTouches: [start]
+    }));
+    node.dispatchEvent(new TouchEvent('touchend', {
+      bubbles: true,
+      cancelable: true,
+      touches: [],
+      targetTouches: [],
+      changedTouches: [end]
+    }));
+  });
   await page.waitForFunction(() => document.querySelector('#storeGrid')?.scrollLeft > 20, null, {timeout: 800});
   const transitionMs = Date.now() - startedAt;
-  await check(Promise.resolve(transitionMs < 250), '다음 가게가 250ms 안에 표시됨', {transitionMs});
+  await check(Promise.resolve(transitionMs < 250), '좌우 스와이프 후 다음 가게가 250ms 안에 표시됨', {transitionMs});
   const revealedPage = await page.evaluate(() => ({
     gridTop: document.querySelector('#storeGrid')?.getBoundingClientRect().top ?? -1,
-    status: document.querySelector('#storePagerStatus')?.textContent?.trim() || ''
+    scrollY: window.scrollY,
+    status: document.querySelector('#storePagerStatus')?.textContent?.trim() || '',
+    controlsDisplay: getComputedStyle(document.querySelector('#storePagerControls')).display
   }));
-  await check(Promise.resolve(revealedPage.gridTop >= 0 && revealedPage.gridTop < 80),
-    '버튼을 누르면 새 가게 카드 시작 위치가 화면 위에 바로 나타남', revealedPage);
+  await check(Promise.resolve(
+    Math.abs(revealedPage.gridTop - beforeSwipe.gridTop) < 2
+      && Math.abs(revealedPage.scrollY - beforeSwipe.scrollY) < 2
+  ), '좌우 스와이프가 세로 화면 위치를 움직이지 않음', {beforeSwipe, revealedPage});
+  await check(Promise.resolve(revealedPage.controlsDisplay === 'none'),
+    '스와이프 전환 후에도 하단 화살표 영역이 나타나지 않음', revealedPage);
   await check(Promise.resolve(/^가게 3–4 \/ 전체 36곳$/.test(revealedPage.status)),
-    '현재 표시 중인 가게 범위를 직관적으로 안내', revealedPage);
-  await check(page.evaluate(() => window.daedongHasHomeInteraction?.() === true), '첫 목록 터치를 고객 상호작용으로 기록');
+    '현재 표시 중인 가게 범위를 내부 상태로 정확히 갱신', revealedPage);
+  await check(page.evaluate(() => window.daedongHasHomeInteraction?.() === true), '첫 목록 스와이프를 고객 상호작용으로 기록');
 
   const beforeRanking = await page.evaluate(() => ({
     left: document.querySelector('#storeGrid')?.scrollLeft || 0,
@@ -125,7 +155,7 @@ try {
     eventHidden: document.querySelector('#mukkebiSummerEvent')?.hidden
   }));
   await check(Promise.resolve(beforeRanking.left > 20 && afterRanking.left > 20 && afterRanking.previousVisible),
-    '늦은 위치 정렬 뒤에도 다음 가게 페이지와 이전 버튼 유지', {beforeRanking, afterRanking});
+    '늦은 위치 정렬 뒤에도 스와이프한 다음 가게 페이지 상태 유지', {beforeRanking, afterRanking});
   await check(Promise.resolve(afterRanking.visibleCount >= beforeRanking.visibleCount),
     '늦은 위치 정렬이 표시 중인 가게 수를 첫 페이지로 줄이지 않음');
   await check(Promise.resolve(
