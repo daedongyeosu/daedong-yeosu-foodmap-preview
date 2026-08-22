@@ -55,6 +55,7 @@
   let overviewQueryTimer = 0;
   let overviewVisibleCount = OVERVIEW_RENDER_BATCH_SIZE;
   let pendingMenuOpen = null;
+  let overviewSuspendedForChild = false;
   let menuSearchData = {stores: {}};
   let menuSearchState = 'idle';
   let menuSearchPromise = null;
@@ -1434,8 +1435,28 @@ function overviewSearchText(entry) {
       overlay.innerHTML = '';
     }
     document.body.classList.remove('store-service-overview-open');
+    overviewSuspendedForChild = false;
     if (restoreFocus) lastFocused?.focus?.();
     lastFocused = null;
+  }
+
+  function suspendOverviewForChild() {
+    const overlay = document.querySelector('[data-store-service-overview-overlay]');
+    if (!overlay || overlay.hidden) return false;
+    overlay.hidden = true;
+    document.body.classList.remove('store-service-overview-open');
+    overviewSuspendedForChild = true;
+    return true;
+  }
+
+  function resumeOverviewAfterChild() {
+    const overlay = document.querySelector('[data-store-service-overview-overlay]');
+    if (!overviewSuspendedForChild || !overlay) return false;
+    overlay.hidden = false;
+    document.body.classList.add('store-service-overview-open');
+    overviewSuspendedForChild = false;
+    window.requestAnimationFrame(() => overlay.querySelector('[data-store-service-overview-close]')?.focus());
+    return true;
   }
 
   function requestOverviewClose() {
@@ -1672,7 +1693,12 @@ document.addEventListener('input', event => {
       pendingStoreId = recentStore.dataset.storeServiceRecentStoreId || '';
       const recentRecord = readRecentSearchStores().find(item => String(item.storeId) === pendingStoreId);
       rememberRecentSearchStore(pendingStoreId, recentRecord?.query);
-      if (history.state?.[HISTORY_KEY]) history.back();
+      if (history.state?.[HISTORY_KEY]) {
+        const storeId = pendingStoreId;
+        pendingStoreId = '';
+        suspendOverviewForChild();
+        openStoreAfterOverview(storeId);
+      }
       else {
         hideOverview({restoreFocus: false});
         openStoreAfterOverview(pendingStoreId);
@@ -1715,7 +1741,12 @@ document.addEventListener('input', event => {
         menuId: menuCard.dataset.storeServiceMenuId || '',
         query: overviewQuery
       };
-      if (history.state?.[HISTORY_KEY]) history.back();
+      if (history.state?.[HISTORY_KEY]) {
+        const request = pendingMenuOpen;
+        pendingMenuOpen = null;
+        suspendOverviewForChild();
+        openMenuAfterOverview(request);
+      }
       else {
         const request = pendingMenuOpen;
         pendingMenuOpen = null;
@@ -1728,7 +1759,12 @@ document.addEventListener('input', event => {
     if (storeCard) {
       if (String(overviewQuery || '').trim()) rememberRecentSearchStore(storeCard.dataset.storeServiceStoreId, overviewQuery);
       pendingStoreId = storeCard.dataset.storeServiceStoreId || '';
-      if (history.state?.[HISTORY_KEY]) history.back();
+      if (history.state?.[HISTORY_KEY]) {
+        const storeId = pendingStoreId;
+        pendingStoreId = '';
+        suspendOverviewForChild();
+        openStoreAfterOverview(storeId);
+      }
       else {
         hideOverview({restoreFocus: false});
         openStoreAfterOverview(pendingStoreId);
@@ -1739,6 +1775,10 @@ document.addEventListener('input', event => {
 
   window.addEventListener('popstate', event => {
     const overlay = document.querySelector('[data-store-service-overview-overlay]');
+    if (event.state?.[HISTORY_KEY] && overviewSuspendedForChild) {
+      resumeOverviewAfterChild();
+      return;
+    }
     if (!overlay || overlay.hidden || event.state?.[HISTORY_KEY]) return;
     event.stopImmediatePropagation();
     hideOverview({restoreFocus: !pendingStoreId && !pendingMenuOpen});
