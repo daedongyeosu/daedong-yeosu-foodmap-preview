@@ -152,8 +152,12 @@ function moveStoreListPager(direction,{reveal=true,fromPage=storeListPagerPage}=
   const {grid}=storeListPagerElements();
   if(!storeListPagerEligible(grid))return false;
   const {cards,total,pageSize,maxPage}=storeListPagerMetrics(grid);
-  const targetPage=Math.max(0,Math.min(Number(fromPage||0)+(direction==='prev'?-1:1),maxPage));
-  if(targetPage===storeListPagerPage)return true;
+  const originPage=Math.max(0,Math.min(Number(fromPage||0),maxPage));
+  const targetPage=Math.max(0,Math.min(originPage+(direction==='prev'?-1:1),maxPage));
+  if(targetPage===originPage){
+    scrollStoreListPagerTo(originPage,{reveal});
+    return true;
+  }
   const targetIndex=targetPage*pageSize;
   if(targetIndex>=cards.length&&cards.length<total){
     const previousVisibility=grid.style.visibility;
