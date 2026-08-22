@@ -5,6 +5,25 @@
 // step can serialize a large mobile DOM and stall the close/back interaction.
 try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch {}
 
+// A brand-new visit or reload must begin at the top. Back/forward navigation is
+// excluded because the app restores the exact list/detail position itself.
+const DAEDONG_ENTRY_NAVIGATION_TYPE = (() => {
+  try { return performance.getEntriesByType('navigation')[0]?.type || 'navigate'; }
+  catch { return 'navigate'; }
+})();
+const DAEDONG_SHOULD_RESET_ENTRY_SCROLL = DAEDONG_ENTRY_NAVIGATION_TYPE !== 'back_forward';
+function resetFreshEntryScroll() {
+  if (!DAEDONG_SHOULD_RESET_ENTRY_SCROLL) return;
+  const scrollingElement = document.scrollingElement || document.documentElement;
+  if (scrollingElement) scrollingElement.scrollTop = 0;
+  if (document.body) document.body.scrollTop = 0;
+  window.scrollTo(0, 0);
+}
+if (DAEDONG_SHOULD_RESET_ENTRY_SCROLL) {
+  resetFreshEntryScroll();
+  window.addEventListener('pageshow', resetFreshEntryScroll, {once: true});
+}
+
 const DAEDONG_TAP_MOVE_TOLERANCE = 10;
 const DAEDONG_TAP_DEDUPE_WINDOW_MS = 80;
 const DAEDONG_TAP_GHOST_WINDOW_MS = 700;
@@ -1244,6 +1263,21 @@ async function handleImageError(image) {
   if (!(store.__failedPhotoPaths instanceof Set)) store.__failedPhotoPaths = new Set();
   store.__failedPhotoPaths.add(photoUrlKey(image.currentSrc || image.src));
   image.dataset.photoRecoveryPending = 'true';
+
+  // The original file is already known when only its mobile WebP derivative
+  // failed. Switch immediately instead of leaving a broken image visible while
+  // the optional menu-photo API request is in flight.
+  const immediateNext = photoResolver.resolveGallery(store)
+    .find(photo => !store.__failedPhotoPaths.has(photoUrlKey(photo.src)));
+  if (immediateNext) {
+    delete image.dataset.photoRecoveryPending;
+    delete image.dataset.photoSrc;
+    delete image.dataset.deferredSrc;
+    image.dataset.photoSource = immediateNext.source;
+    image.src = immediateNext.src;
+    return;
+  }
+
   await loadMenuPhotoFallbacks(store);
   if (!image.isConnected) {
     recoverVisibleDetailPhoto(store);
