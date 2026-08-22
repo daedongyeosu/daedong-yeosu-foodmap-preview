@@ -6,3 +6,7 @@
 .store-pager-controls .load-more{margin-top:0}
 .store-page-prev{color:#30343c}
 .store-page-next{color:#172330}
+
+.store-grid.store-pager-swipe-enabled{scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;cursor:grab}
+.store-grid.store-pager-swipe-enabled:active{cursor:grabbing}
+.store-grid.store-pager-swipe-enabled + .store-pager-controls{display:none!important}
