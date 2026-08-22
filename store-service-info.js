@@ -62,6 +62,13 @@
   let menuSearchQuery = '';
   let menuSearchAbortController = null;
   let renderedSourceCount = 0;
+  const serviceInfoCache = new Map();
+  let openCountCache = {serviceData: null, source: null, minute: -1, count: 0};
+
+  function invalidateServiceCaches() {
+    serviceInfoCache.clear();
+    openCountCache = {serviceData: null, source: null, minute: -1, count: 0};
+  }
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({
     '&': '&amp;',
@@ -354,8 +361,12 @@
 
   function sortStoresByStatusPriority(list, date = new Date()) {
     return (Array.isArray(list) ? list : [])
-      .map((item, index) => ({item, index}))
-      .sort((a, b) => statusPriorityForStore(a.item, date) - statusPriorityForStore(b.item, date) || a.index - b.index)
+      .map((item, index) => ({
+        item,
+        index,
+        priority: statusPriorityForStore(item, date)
+      }))
+      .sort((a, b) => a.priority - b.priority || a.index - b.index)
       .map(row => row.item);
   }
 
@@ -389,18 +400,25 @@
   function serviceInfoForStore(storeOrId) {
     const store = typeof storeOrId === 'object' ? storeOrId : storeById(storeOrId);
     const storeId = storeIdOf(store) || String(storeOrId || '');
+    if (storeId && serviceInfoCache.has(storeId)) return serviceInfoCache.get(storeId);
     const ids = [...new Set([storeId, ...(store?.mergedStoreIds || [])].map(String).filter(Boolean))];
     const rows = ids.map(id => serviceData.stores?.[id]).filter(Boolean);
-    if (!rows.length) return null;
-    if (rows.length === 1) return rows[0];
-    const weeklyHours = rows.find(row => row?.hours?.weekly)?.hours;
-    const confirmedHours = rows.find(row => Array.isArray(row?.hours?.displayLines) && row.hours.displayLines.length)?.hours;
-    return {
-      ...Object.assign({}, ...rows.slice().reverse()),
-      hours: weeklyHours || confirmedHours || rows.find(row => row?.hours)?.hours,
-      payments: mergeServiceCollections(rows, 'payments'),
-      delivery: mergeServiceCollections(rows, 'delivery')
-    };
+    let result = null;
+    if (rows.length === 1) {
+      result = rows[0];
+    } else if (rows.length > 1) {
+      const verifiedWeeklyHours = rows.find(row => row?.hours?.weekly && row.hours.provisional !== true)?.hours;
+      const provisionalWeeklyHours = rows.find(row => row?.hours?.weekly)?.hours;
+      const confirmedHours = rows.find(row => Array.isArray(row?.hours?.displayLines) && row.hours.displayLines.length)?.hours;
+      result = {
+        ...Object.assign({}, ...rows.slice().reverse()),
+        hours: verifiedWeeklyHours || provisionalWeeklyHours || confirmedHours || rows.find(row => row?.hours)?.hours,
+        payments: mergeServiceCollections(rows, 'payments'),
+        delivery: mergeServiceCollections(rows, 'delivery')
+      };
+    }
+    if (storeId) serviceInfoCache.set(storeId, result);
+    return result;
   }
 
   function readRecentSearchStores() {
@@ -583,6 +601,9 @@
         <i aria-hidden="true"></i>${escapeHtml(status.label)}
       </span>
       <span class="store-service-card-hours">${escapeHtml(formatCustomerHours24(status.detail))}</span>
+      ${info?.hours?.provisional === true
+        ? '<span class="store-service-card-hours is-provisional">정확한 시간은 주문앱 확인</span>'
+        : ''}
       ${benefits.length
         ? benefits.slice(0, 3).map(benefit => benefitBadgeMarkup(benefit, 'store-service-card-payment')).join('')
         : `<span class="store-service-card-unknown">${escapeHtml(emptyBenefitLabel(info))}</span>`}
@@ -674,6 +695,9 @@
         ${displayLines.length
           ? displayLines.map(line => `<span>${escapeHtml(formatCustomerHours24(line))}</span>`).join('')
           : '<span class="is-unknown">확인된 영업시간이 없습니다.</span>'}
+        ${info?.hours?.provisional === true
+          ? `<span class="is-provisional">※ ${escapeHtml(info.hours.notice || '정확한 영업시간은 해당 주문앱에서 확인')}</span>`
+          : ''}
       </div>
       ${availableBenefits.length ? `
         <div class="store-service-detail-benefits" aria-label="현재 이용 가능한 주문앱별 혜택">
@@ -791,6 +815,20 @@
     });
   }
 
+  function currentOpenStoreCount(source, date = new Date()) {
+    const minute = Math.floor(date.getTime() / 60000);
+    if (
+      openCountCache.serviceData === serviceData
+      && openCountCache.source === source
+      && openCountCache.minute === minute
+    ) return openCountCache.count;
+    const count = source.reduce((total, store) => (
+      ['open', 'closing-soon'].includes(storeStatus(serviceInfoForStore(store), date).state) ? total + 1 : total
+    ), 0);
+    openCountCache = {serviceData, source, minute, count};
+    return count;
+  }
+
   function ensureOverviewButtons() {
     if (!document.querySelector('[data-store-service-overview-open]')) {
       const head = document.querySelector('#recommendSection .section-head');
@@ -830,9 +868,7 @@
       const nextLabel = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
       if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
       const source = sourceStores();
-      const count = source.reduce((total, store) => (
-        ['open', 'closing-soon'].includes(storeStatus(serviceInfoForStore(store)).state) ? total + 1 : total
-      ), 0);
+      const count = currentOpenStoreCount(source);
       const countNode = entry.querySelector('[data-store-finder-open-count]');
       const countReady = serviceLoadState === 'ready' && source.length > 0;
       const loadFailed = serviceLoadState === 'error' || catalogLoadState === 'error';
@@ -1492,7 +1528,7 @@ function overviewSearchText(entry) {
   }
 
   const wait = milliseconds => new Promise(resolve => window.setTimeout(resolve, milliseconds));
-  const SERVICE_BOOT_DELAY_MS = 6000;
+  const SERVICE_BOOT_FALLBACK_MS = 1200;
 
   function settleWithin(promise, milliseconds) {
     return new Promise(resolve => {
@@ -1542,6 +1578,7 @@ function overviewSearchText(entry) {
     serviceReadyPromise = loadServiceData()
       .then(data => {
         serviceData = data;
+        invalidateServiceCaches();
         serviceLoadState = 'ready';
         refreshServiceSurfaces();
         if (typeof window.CustomEvent === 'function') {
@@ -1589,11 +1626,12 @@ function overviewSearchText(entry) {
 
   const ready = Promise.race([
     window.daedongCatalogReady || Promise.resolve([]),
-    wait(4000)
-  ]).then(() => wait(SERVICE_BOOT_DELAY_MS)).then(() => beginServiceLoad());
+    wait(SERVICE_BOOT_FALLBACK_MS)
+  ]).then(() => beginServiceLoad());
   catalogReadyPromise = settleWithin(window.daedongCatalogReady || Promise.resolve([]), 26000)
     .then(result => {
       catalogLoadState = result.status === 'fulfilled' && sourceStores().length ? 'ready' : 'error';
+      invalidateServiceCaches();
       refreshServiceSurfaces();
       return result;
     });

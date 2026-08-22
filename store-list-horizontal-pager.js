@@ -8,6 +8,8 @@ let storeListPagerFrame=0;
 let storeListPagerScrollFrame=0;
 let storeListPagerProgrammatic=false;
 let storeListPagerObserver=null;
+let storeListPagerResizeObserver=null;
+let storeListPagerLayout=null;
 let storeListPagerCustomerInteracted=false;
 let storeListPagerTouch=null;
 let storeListPagerSuppressClickUntil=0;
@@ -36,21 +38,36 @@ function storeListPagerEligible(grid){
 function storeListPagerContextKey(){
   return [state.category,state.query,state.brandId,state.location,state.sortByDistance?'distance':'area'].join('\u0000');
 }
+function invalidateStoreListPagerLayout(){
+  storeListPagerLayout=null;
+}
 function storeListPagerMetrics(grid){
+  const context=storeListPagerContextKey();
+  if(storeListPagerLayout?.grid===grid&&storeListPagerLayout.context===context){
+    return storeListPagerLayout.metrics;
+  }
   const cards=Array.from(grid?.children||[]).filter(node=>node.classList?.contains('store-card'));
   const total=storeListPagerEligible(grid)?filteredStores().length:cards.length;
-  if(!cards.length)return{cards,total,pageSize:1,maxPage:0};
-  const firstLeft=cards[0].offsetLeft;
+  if(!cards.length){
+    const metrics={cards,positions:[],total,pageSize:1,maxPage:0,firstLeft:0};
+    storeListPagerLayout={grid,context,metrics};
+    return metrics;
+  }
+  const positions=cards.map(card=>card.offsetLeft);
+  const firstLeft=positions[0];
   const viewportEnd=firstLeft+Math.max(1,grid.clientWidth)-1;
-  const pageSize=Math.max(1,cards.filter(card=>card.offsetLeft<viewportEnd).length);
-  return{cards,total,pageSize,maxPage:Math.max(0,Math.ceil(total/pageSize)-1)};
+  const pageSize=Math.max(1,positions.filter(left=>left<viewportEnd).length);
+  const metrics={cards,positions,total,pageSize,maxPage:Math.max(0,Math.ceil(total/pageSize)-1),firstLeft};
+  storeListPagerLayout={grid,context,metrics};
+  return metrics;
 }
-function applyStoreListPager(){
+function applyStoreListPager(measuredMetrics=null){
   const {controls,grid,status,prev,next}=storeListPagerElements();
   if(!controls||!grid||!status||!prev||!next)return;
   if(!storeListPagerEligible(grid)){
     storeListPagerPage=0;
     storeListPagerContext='';
+    invalidateStoreListPagerLayout();
     status.textContent='';
     grid.classList.remove('store-pager-swipe-enabled');
     prev.hidden=true;
@@ -63,8 +80,10 @@ function applyStoreListPager(){
     storeListPagerContext=context;
     storeListPagerPage=0;
     grid.scrollLeft=0;
+    invalidateStoreListPagerLayout();
+    measuredMetrics=null;
   }
-  const {total,pageSize,maxPage}=storeListPagerMetrics(grid);
+  const {total,pageSize,maxPage}=measuredMetrics||storeListPagerMetrics(grid);
   storeListPagerPage=Math.max(0,Math.min(storeListPagerPage,maxPage));
   const rangeStart=storeListPagerPage*pageSize+1;
   const rangeEnd=Math.min(total,rangeStart+pageSize-1);
@@ -85,18 +104,18 @@ function readStoreListPagerScroll(){
   if(storeListPagerProgrammatic)return;
   const {grid}=storeListPagerElements();
   if(!storeListPagerEligible(grid))return;
-  const {cards,pageSize,maxPage}=storeListPagerMetrics(grid);
+  const metrics=storeListPagerMetrics(grid);
+  const {cards,positions,pageSize,maxPage,firstLeft}=metrics;
   if(!cards.length)return;
-  const firstLeft=cards[0].offsetLeft;
   const targetLeft=grid.scrollLeft+firstLeft;
   let nearestIndex=0;
   let nearestDistance=Infinity;
-  cards.forEach((card,index)=>{
-    const distance=Math.abs(card.offsetLeft-targetLeft);
+  positions.forEach((left,index)=>{
+    const distance=Math.abs(left-targetLeft);
     if(distance<nearestDistance){nearestDistance=distance;nearestIndex=index}
   });
   storeListPagerPage=Math.max(0,Math.min(Math.round(nearestIndex/pageSize),maxPage));
-  applyStoreListPager();
+  applyStoreListPager(metrics);
 }
 function scheduleStoreListPagerScrollRead(){
   if(storeListPagerScrollFrame)cancelAnimationFrame(storeListPagerScrollFrame);
@@ -110,15 +129,16 @@ function revealStoreListPagerResults(grid){
 function scrollStoreListPagerTo(page,{reveal=false}={}){
   const {grid}=storeListPagerElements();
   if(!storeListPagerEligible(grid))return;
-  const {cards,pageSize,maxPage}=storeListPagerMetrics(grid);
+  const metrics=storeListPagerMetrics(grid);
+  const {cards,positions,pageSize,maxPage,firstLeft}=metrics;
   const nextPage=Math.max(0,Math.min(page,maxPage));
-  const target=cards[Math.min(cards.length-1,nextPage*pageSize)];
-  if(!target)return;
-  const left=Math.max(0,target.offsetLeft-cards[0].offsetLeft);
+  const targetIndex=Math.min(cards.length-1,nextPage*pageSize);
+  if(targetIndex<0)return;
+  const left=Math.max(0,positions[targetIndex]-firstLeft);
   storeListPagerPage=nextPage;
   storeListPagerProgrammatic=true;
   grid.scrollLeft=left;
-  applyStoreListPager();
+  applyStoreListPager(metrics);
   if(reveal)revealStoreListPagerResults(grid);
   requestAnimationFrame(()=>{
     storeListPagerProgrammatic=false;
@@ -139,11 +159,13 @@ function restoreStoreListPagerState(snapshot){
   if(!grid||!snapshot||!storeListPagerEligible(grid))return false;
   state.visibleCount=Math.max(Number(state.visibleCount||0),Number(snapshot.visibleCount||0));
   storeListPagerContext=storeListPagerContextKey();
-  const {cards,pageSize,maxPage}=storeListPagerMetrics(grid);
+  invalidateStoreListPagerLayout();
+  const metrics=storeListPagerMetrics(grid);
+  const {cards,positions,pageSize,maxPage,firstLeft}=metrics;
   storeListPagerPage=Math.max(0,Math.min(Number(snapshot.page||0),maxPage));
-  const target=cards[Math.min(cards.length-1,storeListPagerPage*pageSize)];
-  grid.scrollLeft=target?Math.max(0,target.offsetLeft-cards[0].offsetLeft):Math.max(0,Number(snapshot.scrollLeft||0));
-  applyStoreListPager();
+  const targetIndex=Math.min(cards.length-1,storeListPagerPage*pageSize);
+  grid.scrollLeft=targetIndex>=0?Math.max(0,positions[targetIndex]-firstLeft):Math.max(0,Number(snapshot.scrollLeft||0));
+  applyStoreListPager(metrics);
   return true;
 }
 window.daedongCaptureStorePagerState=captureStoreListPagerState;
@@ -164,6 +186,7 @@ function moveStoreListPager(direction,{reveal=true,fromPage=storeListPagerPage}=
     grid.style.visibility='hidden';
     state.visibleCount=Math.min(total,Math.max(Number(state.visibleCount||0)+Math.max(4,pageSize*2),targetIndex+pageSize));
     renderStores();
+    invalidateStoreListPagerLayout();
     scrollStoreListPagerTo(targetPage,{reveal});
     grid.style.visibility=previousVisibility;
   }else scrollStoreListPagerTo(targetPage,{reveal});
@@ -214,9 +237,17 @@ function initializeStoreListPager(){
   grid.addEventListener('touchend',finishStoreListPagerSwipe,{passive:true});
   grid.addEventListener('touchcancel',cancelStoreListPagerSwipe,{passive:true});
   grid.addEventListener('keydown',handleStoreListPagerKeydown);
-  storeListPagerObserver=new MutationObserver(scheduleStoreListPager);
+  const invalidateAndScheduleStoreListPager=()=>{
+    invalidateStoreListPagerLayout();
+    scheduleStoreListPager();
+  };
+  storeListPagerObserver=new MutationObserver(invalidateAndScheduleStoreListPager);
   storeListPagerObserver.observe(grid,{childList:true});
-  window.addEventListener('resize',scheduleStoreListPager,{passive:true});
+  if(typeof ResizeObserver==='function'){
+    storeListPagerResizeObserver=new ResizeObserver(invalidateAndScheduleStoreListPager);
+    storeListPagerResizeObserver.observe(grid);
+  }
+  window.addEventListener('resize',invalidateAndScheduleStoreListPager,{passive:true});
   document.addEventListener('click',event=>{
     if(Date.now()<storeListPagerSuppressClickUntil&&event.target.closest('#storeGrid')){
       event.preventDefault();

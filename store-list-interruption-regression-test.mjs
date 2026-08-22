@@ -8,6 +8,7 @@ const event = fs.readFileSync('mukkebi-summer-event.js', 'utf8');
 const ranking = fs.readFileSync('rc6-fixes.js', 'utf8');
 const experience = fs.readFileSync('final-experience.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
+const serviceInfo = fs.readFileSync('store-service-info.js', 'utf8');
 
 assert.match(pager, /grid\.scrollLeft=left;[\s\S]*requestAnimationFrame\(\(\)=>\{[\s\S]*storeListPagerProgrammatic=false/,
   '다음 가게 버튼은 긴 부드러운 스크롤 대기 없이 같은 프레임에 이동해야 합니다.');
@@ -34,6 +35,16 @@ assert.match(pager, /controls\.hidden=true/,
   '전체 가게 목록에서는 하단 이전·다음 화살표를 숨겨야 합니다.');
 assert.match(pager, /storeListPagerSuppressClickUntil=Date\.now\(\)\+500/,
   '스와이프가 가게 카드 터치로 오인되면 안 됩니다.');
+assert.match(pager, /const positions=cards\.map\(card=>card\.offsetLeft\)/,
+  '카드 위치는 한 번에 읽어 레이아웃 강제 재계산을 최소화해야 합니다.');
+assert.match(pager, /storeListPagerLayout\?\.grid===grid[\s\S]*return storeListPagerLayout\.metrics/,
+  '스크롤 중에는 측정한 카드 배치를 재사용해야 합니다.');
+assert.match(pager, /positions\.forEach\(\(left,index\)=>/,
+  '스크롤 위치 판정은 캐시된 카드 좌표를 사용해야 합니다.');
+assert.match(pager, /applyStoreListPager\(metrics\)/,
+  '같은 프레임 안에서 이미 측정한 배치를 다시 측정하면 안 됩니다.');
+assert.equal((pager.match(/offsetLeft/g)||[]).length,1,
+  'offsetLeft 읽기는 일괄 좌표 수집 한 곳에만 있어야 합니다.');
 assert.match(pagerCss, /store-pager-swipe-enabled\{[^}]*scroll-snap-type:x mandatory/);
 assert.match(pagerCss, /store-pager-swipe-enabled \+ \.store-pager-controls\{display:none!important\}/,
   '스와이프 목록이 활성화되는 즉시 하단 화살표 영역을 CSS에서도 감춰 깜빡임을 막아야 합니다.');
@@ -59,10 +70,18 @@ assert.match(experience, /root\.replaceChildren\(\.\.\.staging\.childNodes\)/,
 
 assert.match(html, /store-list-horizontal-pager\.css\?v=visible-results-1-swipe-paging-1/);
 assert.match(html, /id="storePagerStatus"[^>]*aria-live="polite"/);
-assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-swipe-paging-1/);
+assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-swipe-paging-1-layout-cache-1/);
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*list-position-stable-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*atomic-rail-refresh-1/);
+
+assert.match(serviceInfo, /const SERVICE_BOOT_FALLBACK_MS = 1200;/,
+  '영업시간은 화면 진입 후 최대 1.2초 안에 불러오기 시작해야 합니다.');
+assert.match(serviceInfo, /Promise\.race\(\[[\s\S]*wait\(SERVICE_BOOT_FALLBACK_MS\)[\s\S]*\]\)\.then\(\(\) => beginServiceLoad\(\)\)/,
+  '카탈로그가 준비되면 추가 지연 없이 영업시간을 불러와야 합니다.');
+assert.doesNotMatch(serviceInfo, /SERVICE_BOOT_DELAY_MS|wait\(6000\)/,
+  '고객 화면에 영업시간을 6초 늦게 표시하는 지연을 다시 넣으면 안 됩니다.');
+assert.match(html, /store-service-info\.js\?v=[^"\n]*fast-hours-bootstrap-1/);
 
 console.log('store list interruption regression: PASS');
