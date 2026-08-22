@@ -19,7 +19,11 @@ function resetFreshEntryScroll() {
   if (document.body) document.body.scrollTop = 0;
   window.scrollTo(0, 0);
 }
-if (DAEDONG_SHOULD_RESET_ENTRY_SCROLL) {
+if (
+  DAEDONG_SHOULD_RESET_ENTRY_SCROLL &&
+  typeof window !== 'undefined' &&
+  typeof document !== 'undefined'
+) {
   resetFreshEntryScroll();
   window.addEventListener('pageshow', resetFreshEntryScroll, {once: true});
 }
