@@ -40,11 +40,11 @@ assert.match(finalExperience, /pager-stable-refresh-1-hero-photo-recovery-1/);
 assert.match(index, /fresh-entry-top-1/);
 assert.match(index, /hero-photo-recovery-1/);
 
-assert.match(service, /const resolvedPhoto = typeof photoResolver !== 'undefined'[\\s\\S]*?photoResolver\\.resolve\\(entry\\.store\\)/,
+assert.match(service, /const resolvedPhoto = typeof photoResolver !== 'undefined'[\s\S]*?photoResolver\.resolve\(entry\.store\)/,
   'the integrated store finder must use the shared photo manifest resolver');
-assert.match(service, /const storeImage = String\\(resolvedPhoto\\?\\.src \\|\\| rawImage\\)\\.trim\\(\\)/,
+assert.match(service, /const storeImage = String\(resolvedPhoto\?\.src \|\| rawImage\)\.trim\(\)/,
   'manifest photos must win while legacy photos remain a safe fallback');
-assert.match(service, /data-photo-kind="card" data-photo-store-id="\\$\\{escapeHtml\\(entry\\.storeId\\)\\}" data-photo-source="\\$\\{escapeHtml\\(storeImageSource\\)\\}"/,
+assert.match(service, /data-photo-kind="card" data-photo-store-id="\$\{escapeHtml\(entry\.storeId\)\}" data-photo-source="\$\{escapeHtml\(storeImageSource\)\}"/,
   'finder photos must participate in the shared broken-image recovery path');
 assert.match(index, /service-overview-manifest-photo-1/,
   'the finder script cache key must change with the manifest-photo fix');
