@@ -34,4 +34,7 @@ test('Collector review client never renders internal identifiers or menu prices'
   }
   assert.match(script, /요기요 원본 링크 열기/);
   assert.match(script, /사진 없음 메뉴 보존/);
+  assert.match(page, /사진 화면 증거\(정제 전\)/);
+  assert.match(script, /summary=0/);
+  assert.doesNotMatch(script, />사진 \$\{Number\(candidate\.photoMenuCount/);
 });
