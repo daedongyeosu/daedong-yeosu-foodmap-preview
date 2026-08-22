@@ -691,7 +691,16 @@ window.setTimeout(() => {
 
 function normalize(value) { return String(value ?? '').trim().toLowerCase().replace(/[\s·&()\-_/.,]/g, ''); }
 function canonicalDuplicateStoreName(value) {
-  return normalize(String(value || '').replace(/\s*\(([^()]*(?:동|읍|면|리|지구))\)\s*$/u, ''));
+  const withoutNeighborhoodSuffix = String(value || '').replace(/\s*\(([^()]*(?:동|읍|면|리|지구))\)\s*$/u, '');
+  const normalizedName = normalize(withoutNeighborhoodSuffix);
+  const cityMarker = normalize(typeof REGION_SHORT_NAME === 'string' ? REGION_SHORT_NAME : '여수');
+  if (!cityMarker || !normalizedName.endsWith('점')) return normalizedName;
+  const markerIndex = normalizedName.indexOf(cityMarker, 2);
+  if (markerIndex < 2) return normalizedName;
+  const branchName = normalizedName.slice(markerIndex + cityMarker.length);
+  return branchName.endsWith('점') && branchName.length > 1
+    ? `${normalizedName.slice(0, markerIndex)}${branchName}`
+    : normalizedName;
 }
 function isYogiyoOnlyCollectorStore(store) {
   const keys = [...new Set((Array.isArray(store?.channelKeys) ? store.channelKeys : []).map(String).filter(Boolean))];
