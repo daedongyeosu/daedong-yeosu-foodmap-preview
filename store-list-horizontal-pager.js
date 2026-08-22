@@ -131,6 +131,7 @@ function captureStoreListPagerState(){
     page:storeListPagerPage,
     context:storeListPagerContext,
     scrollLeft:grid?.scrollLeft||0,
+    viewportTop:grid?.getBoundingClientRect().top??null,
     visibleCount:Number(state.visibleCount||0)
   };
 }
@@ -144,6 +145,15 @@ function restoreStoreListPagerState(snapshot){
   const target=cards[Math.min(cards.length-1,storeListPagerPage*pageSize)];
   grid.scrollLeft=target?Math.max(0,target.offsetLeft-cards[0].offsetLeft):Math.max(0,Number(snapshot.scrollLeft||0));
   applyStoreListPager();
+  const previousViewportTop=Number(snapshot.viewportTop);
+  if(Number.isFinite(previousViewportTop)){
+    const viewportDelta=grid.getBoundingClientRect().top-previousViewportTop;
+    if(Math.abs(viewportDelta)>0.5){
+      const nextTop=Math.max(0,window.scrollY+viewportDelta);
+      if(typeof scrollWindowInstant==='function')scrollWindowInstant(nextTop);
+      else window.scrollTo(0,nextTop);
+    }
+  }
   return true;
 }
 window.daedongCaptureStorePagerState=captureStoreListPagerState;
