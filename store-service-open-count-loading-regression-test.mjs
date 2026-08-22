@@ -11,7 +11,7 @@ assert.match(runtime, /for \(const delay of \[0, 1200\]\)/,
   '모바일 웹뷰의 일시적인 서비스 API 실패를 재시도해야 합니다.');
 assert.match(runtime, /window\.daedongDataApi\.services\(\{timeoutMs: 20000\}\)/,
   '모바일 웹뷰에서 서비스 API 요청이 무한 대기하면 안 됩니다.');
-assert.match(runtime, /const SERVICE_BOOT_DELAY_MS = 6000/);
+assert.match(runtime, /const SERVICE_BOOT_DELAY_MS = 1200/);
 assert.match(runtime, /const ready = Promise\.race\(\[\s*window\.daedongCatalogReady \|\| Promise\.resolve\(\[\]\),\s*wait\(4000\)\s*\]\)\.then\(\(\) => wait\(SERVICE_BOOT_DELAY_MS\)\)\.then\(\(\) => beginServiceLoad\(\)\)/,
   '영업시간은 첫 가게목록 표시 뒤에 준비되어 초기 회선 경합을 피해야 합니다.');
 assert.doesNotMatch(runtime, /Promise\.all\(\[\s*loadServiceData\(\)[\s\S]*daedongLocationRankingReady/,
