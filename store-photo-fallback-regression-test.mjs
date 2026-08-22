@@ -21,5 +21,6 @@ assert.match(menu, /data-photo-kind="menu-entry" data-photo-store-id="\$\{escape
 assert.match(index, /detail-photo-menu-fallback-refresh-1/);
 assert.match(index, /broken-photo-menu-fallback-1/);
 assert.match(index, /broken-photo-fallback-1/);
+assert.match(app, /return mobile !== path && failed\.has\(photoUrlKey\(mobile\)\) \? path : mobile;/);
 
 console.log('store photo fallback regression checks passed');
