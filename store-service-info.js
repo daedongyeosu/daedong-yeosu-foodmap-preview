@@ -62,6 +62,13 @@
   let menuSearchQuery = '';
   let menuSearchAbortController = null;
   let renderedSourceCount = 0;
+  const serviceInfoCache = new Map();
+  let openCountCache = {serviceData: null, source: null, minute: -1, count: 0};
+
+  function invalidateServiceCaches() {
+    serviceInfoCache.clear();
+    openCountCache = {serviceData: null, source: null, minute: -1, count: 0};
+  }
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({
     '&': '&amp;',
@@ -393,18 +400,24 @@
   function serviceInfoForStore(storeOrId) {
     const store = typeof storeOrId === 'object' ? storeOrId : storeById(storeOrId);
     const storeId = storeIdOf(store) || String(storeOrId || '');
+    if (storeId && serviceInfoCache.has(storeId)) return serviceInfoCache.get(storeId);
     const ids = [...new Set([storeId, ...(store?.mergedStoreIds || [])].map(String).filter(Boolean))];
     const rows = ids.map(id => serviceData.stores?.[id]).filter(Boolean);
-    if (!rows.length) return null;
-    if (rows.length === 1) return rows[0];
-    const weeklyHours = rows.find(row => row?.hours?.weekly)?.hours;
-    const confirmedHours = rows.find(row => Array.isArray(row?.hours?.displayLines) && row.hours.displayLines.length)?.hours;
-    return {
-      ...Object.assign({}, ...rows.slice().reverse()),
-      hours: weeklyHours || confirmedHours || rows.find(row => row?.hours)?.hours,
-      payments: mergeServiceCollections(rows, 'payments'),
-      delivery: mergeServiceCollections(rows, 'delivery')
-    };
+    let result = null;
+    if (rows.length === 1) {
+      result = rows[0];
+    } else if (rows.length > 1) {
+      const weeklyHours = rows.find(row => row?.hours?.weekly)?.hours;
+      const confirmedHours = rows.find(row => Array.isArray(row?.hours?.displayLines) && row.hours.displayLines.length)?.hours;
+      result = {
+        ...Object.assign({}, ...rows.slice().reverse()),
+        hours: weeklyHours || confirmedHours || rows.find(row => row?.hours)?.hours,
+        payments: mergeServiceCollections(rows, 'payments'),
+        delivery: mergeServiceCollections(rows, 'delivery')
+      };
+    }
+    if (storeId) serviceInfoCache.set(storeId, result);
+    return result;
   }
 
   function readRecentSearchStores() {
@@ -795,6 +808,20 @@
     });
   }
 
+  function currentOpenStoreCount(source, date = new Date()) {
+    const minute = Math.floor(date.getTime() / 60000);
+    if (
+      openCountCache.serviceData === serviceData
+      && openCountCache.source === source
+      && openCountCache.minute === minute
+    ) return openCountCache.count;
+    const count = source.reduce((total, store) => (
+      ['open', 'closing-soon'].includes(storeStatus(serviceInfoForStore(store), date).state) ? total + 1 : total
+    ), 0);
+    openCountCache = {serviceData, source, minute, count};
+    return count;
+  }
+
   function ensureOverviewButtons() {
     if (!document.querySelector('[data-store-service-overview-open]')) {
       const head = document.querySelector('#recommendSection .section-head');
@@ -834,9 +861,7 @@
       const nextLabel = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
       if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
       const source = sourceStores();
-      const count = source.reduce((total, store) => (
-        ['open', 'closing-soon'].includes(storeStatus(serviceInfoForStore(store)).state) ? total + 1 : total
-      ), 0);
+      const count = currentOpenStoreCount(source);
       const countNode = entry.querySelector('[data-store-finder-open-count]');
       const countReady = serviceLoadState === 'ready' && source.length > 0;
       const loadFailed = serviceLoadState === 'error' || catalogLoadState === 'error';
@@ -1546,6 +1571,7 @@ function overviewSearchText(entry) {
     serviceReadyPromise = loadServiceData()
       .then(data => {
         serviceData = data;
+        invalidateServiceCaches();
         serviceLoadState = 'ready';
         refreshServiceSurfaces();
         if (typeof window.CustomEvent === 'function') {
@@ -1598,6 +1624,7 @@ function overviewSearchText(entry) {
   catalogReadyPromise = settleWithin(window.daedongCatalogReady || Promise.resolve([]), 26000)
     .then(result => {
       catalogLoadState = result.status === 'fulfilled' && sourceStores().length ? 'ready' : 'error';
+      invalidateServiceCaches();
       refreshServiceSurfaces();
       return result;
     });
