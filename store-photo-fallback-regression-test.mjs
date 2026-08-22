@@ -6,6 +6,7 @@ const finalExperience = readFileSync(new URL('./final-experience.js', import.met
 const app = readFileSync(new URL('./app.js', import.meta.url), 'utf8');
 const menu = readFileSync(new URL('./store-menu-preview.js', import.meta.url), 'utf8');
 const index = readFileSync(new URL('./index.html', import.meta.url), 'utf8');
+const service = readFileSync(new URL('./store-service-info.js', import.meta.url), 'utf8');
 
 assert.match(app, /const menuPhotoFallbackCache = new Map\(\)/);
 assert.match(app, /async function loadMenuPhotoFallbacks\(store\)/);
@@ -38,5 +39,14 @@ assert.match(app, /window\.addEventListener\('pageshow', resetFreshEntryScroll, 
 assert.match(finalExperience, /pager-stable-refresh-1-hero-photo-recovery-1/);
 assert.match(index, /fresh-entry-top-1/);
 assert.match(index, /hero-photo-recovery-1/);
+
+assert.match(service, /const resolvedPhoto = typeof photoResolver !== 'undefined'[\\s\\S]*?photoResolver\\.resolve\\(entry\\.store\\)/,
+  'the integrated store finder must use the shared photo manifest resolver');
+assert.match(service, /const storeImage = String\\(resolvedPhoto\\?\\.src \\|\\| rawImage\\)\\.trim\\(\\)/,
+  'manifest photos must win while legacy photos remain a safe fallback');
+assert.match(service, /data-photo-kind="card" data-photo-store-id="\\$\\{escapeHtml\\(entry\\.storeId\\)\\}" data-photo-source="\\$\\{escapeHtml\\(storeImageSource\\)\\}"/,
+  'finder photos must participate in the shared broken-image recovery path');
+assert.match(index, /service-overview-manifest-photo-1/,
+  'the finder script cache key must change with the manifest-photo fix');
 
 console.log('store photo fallback regression checks passed');
