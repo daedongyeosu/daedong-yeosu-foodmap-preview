@@ -354,8 +354,12 @@
 
   function sortStoresByStatusPriority(list, date = new Date()) {
     return (Array.isArray(list) ? list : [])
-      .map((item, index) => ({item, index}))
-      .sort((a, b) => statusPriorityForStore(a.item, date) - statusPriorityForStore(b.item, date) || a.index - b.index)
+      .map((item, index) => ({
+        item,
+        index,
+        priority: statusPriorityForStore(item, date)
+      }))
+      .sort((a, b) => a.priority - b.priority || a.index - b.index)
       .map(row => row.item);
   }
 
