@@ -18,9 +18,9 @@ assert.match(app, /finishCatalogReady\(\[\]\)/,
 assert.match(app, /catalog\?\.\(\{timeoutMs: 20000\}\)/);
 assert.match(finalExperience, /fxFinishLocationRankingReady\(false\);\s*\},35000\)/,
   '위치정렬 준비 promise는 모바일에서 무한 대기하면 안 됩니다.');
-assert.match(services, /const SERVICE_BOOT_DELAY_MS = 1200/);
-assert.match(services, /const ready = Promise\.race\(\[\s*window\.daedongCatalogReady \|\| Promise\.resolve\(\[\]\),\s*wait\(4000\)\s*\]\)\.then\(\(\) => wait\(SERVICE_BOOT_DELAY_MS\)\)\.then\(\(\) => beginServiceLoad\(\)\)/,
-  '큰 영업정보 요청은 가게목록 첫 화면과 회선을 다투지 않아야 합니다.');
+assert.match(services, /const SERVICE_BOOT_FALLBACK_MS = 1200/);
+assert.match(services, /const ready = Promise\.race\(\[\s*window\.daedongCatalogReady \|\| Promise\.resolve\(\[\]\),\s*wait\(SERVICE_BOOT_FALLBACK_MS\)\s*\]\)\.then\(\(\) => beginServiceLoad\(\)\)/,
+  '영업정보 요청은 가게목록 준비 직후 시작하고, 목록 지연 시 1.2초 안에 독립 시작해야 합니다.');
 assert.match(services, /catalogReadyPromise = settleWithin\([\s\S]*26000\)/);
 assert.match(services, /settleWithin\(window\.daedongLocationRankingReady[\s\S]*36000\)/);
 assert.doesNotMatch(services, /Promise\.all\(\[\s*loadServiceData\(\)/,
@@ -79,7 +79,7 @@ const runtimeContext = {
   console
 };
 vm.createContext(runtimeContext);
-vm.runInContext(services.replace('const SERVICE_BOOT_DELAY_MS = 1200;', 'const SERVICE_BOOT_DELAY_MS = 0;'), runtimeContext);
+vm.runInContext(services.replace('const SERVICE_BOOT_FALLBACK_MS = 1200;', 'const SERVICE_BOOT_FALLBACK_MS = 50;'), runtimeContext);
 await new Promise(resolve => setTimeout(resolve, 20));
 assert.equal(serviceCalls, 0, '가게목록 준비 전에는 큰 영업정보 요청을 시작하면 안 됩니다.');
 resolveCatalog([]);
