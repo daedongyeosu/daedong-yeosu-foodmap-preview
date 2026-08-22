@@ -25,6 +25,9 @@ assert.match(pager, /window\.daedongHasHomeInteraction=hasStoreListPagerCustomer
 assert.match(pager, /document\.addEventListener\('pointerdown',markStoreListPagerCustomerInteraction/);
 assert.match(pager, /window\.daedongCaptureStorePagerState=captureStoreListPagerState/);
 assert.match(pager, /window\.daedongRestoreStorePagerState=restoreStoreListPagerState/);
+assert.match(pager, /viewportTop:grid\?\.getBoundingClientRect\(\)\.top\?\?null/);
+assert.match(pager, /const viewportDelta=grid\.getBoundingClientRect\(\)\.top-previousViewportTop[\s\S]*scrollWindowInstant\(nextTop\)/,
+  '늦은 영업시간·정렬 갱신 뒤에도 스와이프 중인 목록의 세로 화면 위치를 복원해야 합니다.');
 assert.match(pager, /const STORE_LIST_PAGER_SWIPE_MIN_DISTANCE=48/);
 assert.match(pager, /grid\.addEventListener\('touchstart',beginStoreListPagerSwipe,\{passive:true\}\)/);
 assert.match(pager, /grid\.addEventListener\('touchend',finishStoreListPagerSwipe,\{passive:true\}\)/);
