@@ -1492,7 +1492,7 @@ function overviewSearchText(entry) {
   }
 
   const wait = milliseconds => new Promise(resolve => window.setTimeout(resolve, milliseconds));
-  const SERVICE_BOOT_DELAY_MS = 6000;
+  const SERVICE_BOOT_FALLBACK_MS = 1200;
 
   function settleWithin(promise, milliseconds) {
     return new Promise(resolve => {
@@ -1589,8 +1589,8 @@ function overviewSearchText(entry) {
 
   const ready = Promise.race([
     window.daedongCatalogReady || Promise.resolve([]),
-    wait(4000)
-  ]).then(() => wait(SERVICE_BOOT_DELAY_MS)).then(() => beginServiceLoad());
+    wait(SERVICE_BOOT_FALLBACK_MS)
+  ]).then(() => beginServiceLoad());
   catalogReadyPromise = settleWithin(window.daedongCatalogReady || Promise.resolve([]), 26000)
     .then(result => {
       catalogLoadState = result.status === 'fulfilled' && sourceStores().length ? 'ready' : 'error';
