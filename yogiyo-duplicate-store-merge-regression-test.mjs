@@ -32,6 +32,40 @@ const collector = {
 const otherArea = {...collector, id: 'aaaaaaaaaaaaaaaa', area: '문수동', primaryNeighborhood: '문수동'};
 
 const merged = helpers.mergeYogiyoCollectorDuplicates([established, collector, otherArea]);
+
+const goobneEstablished = {
+  ...established,
+  id: '33558e3cc2ad9dbd',
+  name: '굽네치킨&피자 여천점(신기동)',
+  phone: '0616860017',
+  naverMap: 'https://map.naver.com/p/entry/place/123456789',
+  legacyImage: '/goobne-existing.webp',
+  legacyImages: ['/goobne-existing.webp'],
+  channelKeys: ['direct', 'mukkebi', 'ddangyo', 'phone']
+};
+const goobneCollector = {
+  ...collector,
+  id: '9c9a742f34824ea7',
+  name: '굽네치킨&피자 여수여천점',
+  legacyImage: '/goobne-yogiyo.webp',
+  legacyImages: ['/goobne-yogiyo.webp']
+};
+const mergedGoobne = helpers.mergeYogiyoCollectorDuplicates([goobneEstablished, goobneCollector]);
+assert.equal(mergedGoobne.length, 1, '요기요가 지점명 앞에 여수를 붙인 가게도 기존 대표 가게와 합쳐야 합니다.');
+assert.equal(mergedGoobne[0].id, goobneEstablished.id, '여수 접두 별칭을 합쳐도 기존 대표 ID를 유지해야 합니다.');
+assert.deepEqual(mergedGoobne[0].mergedStoreIds, [goobneCollector.id], '요기요 상세 ID를 대표 가게에 연결해야 합니다.');
+assert.equal(mergedGoobne[0].phone, '0616860017', '기존 대표 가게 전화번호를 보존해야 합니다.');
+assert.equal(mergedGoobne[0].naverMap, 'https://map.naver.com/p/entry/place/123456789', '기존 네이버지도 링크를 보존해야 합니다.');
+assert.deepEqual(mergedGoobne[0].legacyImages, ['/goobne-existing.webp', '/goobne-yogiyo.webp'], '기존 사진과 요기요 사진을 모두 보존해야 합니다.');
+
+const cityNamedStore = {...established, id: 'bbbbbbbbbbbbbbbb', name: '여수김치찌개', area: '학동', primaryNeighborhood: '학동'};
+const unrelatedCollector = {...collector, id: 'cccccccccccccccc', name: '김치찌개', area: '학동', primaryNeighborhood: '학동'};
+assert.equal(
+  helpers.mergeYogiyoCollectorDuplicates([cityNamedStore, unrelatedCollector]).length,
+  2,
+  '가게명 맨 앞의 실제 여수 명칭까지 지워 서로 다른 가게를 합치면 안 됩니다.'
+);
+
 assert.equal(merged.length, 2, '같은 동네의 기존 가게와 요기요 단독 신규 레코드는 한 가게로 합쳐야 합니다.');
 assert.equal(merged[0].id, established.id, '주문경로와 좌표가 많은 기존 관리 ID를 보존해야 합니다.');
 assert.deepEqual(merged[0].mergedStoreIds, [collector.id], '신규 수집 ID를 영업시간·상세사진 결합용 별칭으로 보존해야 합니다.');
@@ -49,7 +83,7 @@ assert.match(service, /store-service-overview-card-image/,
   '통합 검색 결과에서 가게 대표사진을 표시해야 합니다.');
 assert.match(css, /grid-template-columns:\s*68px minmax\(0, 1fr\) auto 22px/,
   '대표사진을 포함한 검색 카드 레이아웃을 유지해야 합니다.');
-assert.match(html, /yogiyo-duplicate-merge-1/,
+assert.match(html, /yogiyo-duplicate-merge-2/,
   '고객 휴대폰이 중복 병합 및 검색 사진 수정본을 즉시 받도록 캐시 버전을 올려야 합니다.');
 
 console.log('Yogiyo duplicate store merge regression: PASS');
