@@ -407,11 +407,12 @@
     if (rows.length === 1) {
       result = rows[0];
     } else if (rows.length > 1) {
-      const weeklyHours = rows.find(row => row?.hours?.weekly)?.hours;
+      const verifiedWeeklyHours = rows.find(row => row?.hours?.weekly && row.hours.provisional !== true)?.hours;
+      const provisionalWeeklyHours = rows.find(row => row?.hours?.weekly)?.hours;
       const confirmedHours = rows.find(row => Array.isArray(row?.hours?.displayLines) && row.hours.displayLines.length)?.hours;
       result = {
         ...Object.assign({}, ...rows.slice().reverse()),
-        hours: weeklyHours || confirmedHours || rows.find(row => row?.hours)?.hours,
+        hours: verifiedWeeklyHours || provisionalWeeklyHours || confirmedHours || rows.find(row => row?.hours)?.hours,
         payments: mergeServiceCollections(rows, 'payments'),
         delivery: mergeServiceCollections(rows, 'delivery')
       };
@@ -600,6 +601,9 @@
         <i aria-hidden="true"></i>${escapeHtml(status.label)}
       </span>
       <span class="store-service-card-hours">${escapeHtml(formatCustomerHours24(status.detail))}</span>
+      ${info?.hours?.provisional === true
+        ? '<span class="store-service-card-hours is-provisional">정확한 시간은 주문앱 확인</span>'
+        : ''}
       ${benefits.length
         ? benefits.slice(0, 3).map(benefit => benefitBadgeMarkup(benefit, 'store-service-card-payment')).join('')
         : `<span class="store-service-card-unknown">${escapeHtml(emptyBenefitLabel(info))}</span>`}
@@ -691,6 +695,9 @@
         ${displayLines.length
           ? displayLines.map(line => `<span>${escapeHtml(formatCustomerHours24(line))}</span>`).join('')
           : '<span class="is-unknown">확인된 영업시간이 없습니다.</span>'}
+        ${info?.hours?.provisional === true
+          ? `<span class="is-provisional">※ ${escapeHtml(info.hours.notice || '정확한 영업시간은 해당 주문앱에서 확인')}</span>`
+          : ''}
       </div>
       ${availableBenefits.length ? `
         <div class="store-service-detail-benefits" aria-label="현재 이용 가능한 주문앱별 혜택">
