@@ -35,6 +35,7 @@ const merged = helpers.mergeYogiyoCollectorDuplicates([established, collector, o
 
 const goobneEstablished = {
   ...established,
+  mergedStoreIds: [],
   id: '33558e3cc2ad9dbd',
   name: '굽네치킨&피자 여천점(신기동)',
   phone: '0616860017',
@@ -45,6 +46,7 @@ const goobneEstablished = {
 };
 const goobneCollector = {
   ...collector,
+  mergedStoreIds: [],
   id: '9c9a742f34824ea7',
   name: '굽네치킨&피자 여수여천점',
   legacyImage: '/goobne-yogiyo.webp',
