@@ -11,9 +11,9 @@ assert.match(runtime, /for \(const delay of \[0, 1200\]\)/,
   '모바일 웹뷰의 일시적인 서비스 API 실패를 재시도해야 합니다.');
 assert.match(runtime, /window\.daedongDataApi\.services\(\{timeoutMs: 20000\}\)/,
   '모바일 웹뷰에서 서비스 API 요청이 무한 대기하면 안 됩니다.');
-assert.match(runtime, /const SERVICE_BOOT_DELAY_MS = 1200/);
-assert.match(runtime, /const ready = Promise\.race\(\[\s*window\.daedongCatalogReady \|\| Promise\.resolve\(\[\]\),\s*wait\(4000\)\s*\]\)\.then\(\(\) => wait\(SERVICE_BOOT_DELAY_MS\)\)\.then\(\(\) => beginServiceLoad\(\)\)/,
-  '영업시간은 첫 가게목록 표시 뒤에 준비되어 초기 회선 경합을 피해야 합니다.');
+assert.match(runtime, /const SERVICE_BOOT_FALLBACK_MS = 1200/);
+assert.match(runtime, /const ready = Promise\.race\(\[\s*window\.daedongCatalogReady \|\| Promise\.resolve\(\[\]\),\s*wait\(SERVICE_BOOT_FALLBACK_MS\)\s*\]\)\.then\(\(\) => beginServiceLoad\(\)\)/,
+  '영업시간은 가게목록 준비 직후 시작하고, 목록 지연 시 1.2초 안에 준비를 시작해야 합니다.');
 assert.doesNotMatch(runtime, /Promise\.all\(\[\s*loadServiceData\(\)[\s\S]*daedongLocationRankingReady/,
   '위치정렬 지연이 영업정보를 막으면 안 됩니다.');
 assert.match(runtime, /if \(serviceLoadState === 'ready' && sourceStores\(\)\.length\)[\s\S]*showOverview\(trigger, \{status:/,
