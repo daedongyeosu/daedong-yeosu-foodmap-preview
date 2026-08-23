@@ -5,13 +5,10 @@
 // step can serialize a large mobile DOM and stall the close/back interaction.
 try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch {}
 
-// A brand-new visit or reload must begin at the top. Back/forward navigation is
-// excluded because the app restores the exact list/detail position itself.
-const DAEDONG_ENTRY_NAVIGATION_TYPE = (() => {
-  try { return performance.getEntriesByType('navigation')[0]?.type || 'navigate'; }
-  catch { return 'navigate'; }
-})();
-const DAEDONG_SHOULD_RESET_ENTRY_SCROLL = DAEDONG_ENTRY_NAVIGATION_TYPE !== 'back_forward';
+// A fresh visit must begin at the top, including a reused Kakao in-app-browser
+// history entry. Only an explicitly marked order-app return may preserve the
+// previous list/detail position; the early boot script validates that marker.
+const DAEDONG_SHOULD_RESET_ENTRY_SCROLL = !globalThis.daedongPendingExternalReturn;
 function resetFreshEntryScroll() {
   if (!DAEDONG_SHOULD_RESET_ENTRY_SCROLL) return;
   const scrollingElement = document.scrollingElement || document.documentElement;

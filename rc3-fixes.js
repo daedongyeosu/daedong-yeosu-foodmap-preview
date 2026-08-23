@@ -473,6 +473,8 @@ function rc3MarkOrderMethodsActivation(storeId) {
 }
 
 function rc3OnOrderMethodsPointerDown(event) {
+  const external = event.target?.closest?.('[data-rc3-external-route]');
+  if (external) external.dataset.rc3SelectionStartedAt = String(Date.now());
   if (event.pointerType !== 'touch' || event.isPrimary === false) return;
   const trigger = rc3OrderMethodsTriggerFromEvent(event);
   if (!trigger) return;
@@ -519,6 +521,8 @@ function rc3TouchByIdentifier(list, identifier) {
 }
 
 function rc3OnOrderMethodsTouchStart(event) {
+  const external = event.target?.closest?.('[data-rc3-external-route]');
+  if (external) external.dataset.rc3SelectionStartedAt = String(Date.now());
   if (event.touches?.length !== 1) return;
   const trigger = rc3OrderMethodsTriggerFromEvent(event);
   const touch = event.changedTouches?.[0] || event.touches[0];
@@ -578,6 +582,14 @@ function rc3BindOrderMethodsTrigger(detail) {
   if (!trigger) return;
   trigger.removeAttribute('data-rc3-direct-bound');
   trigger.dataset.rc3DelegatedTouch = '1';
+}
+
+function rc3ShouldBlockOrderMethodSelection(external, event, storeId) {
+  if (!rc3OrderMethodsGhostActive(storeId) || Number(event?.detail || 0) === 0) return false;
+  const startedAt = Number(external?.dataset?.rc3SelectionStartedAt || 0);
+  if (external?.dataset) delete external.dataset.rc3SelectionStartedAt;
+  const age = Date.now() - startedAt;
+  return !(startedAt > 0 && age >= 0 && age < 1200);
 }
 
 function rc3EnhanceStoreDetail(store) {
@@ -781,7 +793,9 @@ function rc3HandleClick(event) {
   if (external) {
     event.preventDefault();
     event.stopImmediatePropagation();
-    const store = fxStoreById(external.dataset.storeId || $('#modal').dataset.activeStoreId);
+    const storeId = String(external.dataset.storeId || $('#modal').dataset.activeStoreId || '');
+    if (rc3ShouldBlockOrderMethodSelection(external, event, storeId)) return;
+    const store = fxStoreById(storeId);
     if (store) openCommunityChoice(store, external.dataset.rc3ExternalRoute);
     return;
   }

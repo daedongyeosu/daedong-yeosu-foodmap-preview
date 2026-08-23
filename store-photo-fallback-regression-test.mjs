@@ -32,12 +32,13 @@ assert.ok(app.indexOf('const immediateNext = photoResolver.resolveGallery(store)
   'the immediate original-photo fallback must run before the optional menu request');
 assert.match(rc6, /data-photo-kind="card" data-photo-store-id="\$\{escapeHtml\(store\.id\)\}" data-photo-source="hero"/,
   'managed hero photos must use the shared photo recovery path');
-assert.match(app, /const DAEDONG_SHOULD_RESET_ENTRY_SCROLL = DAEDONG_ENTRY_NAVIGATION_TYPE !== 'back_forward'/,
-  'new visits and reloads must reset to the top without breaking back\/forward restoration');
+assert.match(app, /const DAEDONG_SHOULD_RESET_ENTRY_SCROLL = !globalThis\.daedongPendingExternalReturn;/,
+  'fresh and reused visits must reset to the top while validated order-app returns preserve position');
 assert.match(app, /window\.addEventListener\('pageshow', resetFreshEntryScroll, \{once: true\}\)/,
   'the top reset must run after browser scroll restoration settles');
 assert.match(finalExperience, /pager-stable-refresh-1-hero-photo-recovery-1/);
 assert.match(index, /fresh-entry-top-1/);
+assert.match(index, /fresh-entry-explicit-return-1/);
 assert.match(index, /hero-photo-recovery-1/);
 
 assert.match(service, /const resolvedPhoto = typeof photoResolver !== 'undefined'[\s\S]*?photoResolver\.resolve\(entry\.store\)/,

@@ -24,6 +24,8 @@ assert.match(rc3, /document\.addEventListener\('touchend', rc3OnOrderMethodsTouc
 assert.match(rc3, /document\.elementFromPoint\(touch\.clientX, touch\.clientY\)/, '복귀 뒤 실제 최상단 터치 대상을 다시 확인하지 않습니다.');
 assert.match(rc3, /function rc3MarkOrderMethodsActivation\(storeId\)[\s\S]*?Date\.now\(\) \+ 800/, '터치 직후 새 모달의 주문앱으로 새는 ghost click 차단 시간이 없습니다.');
 assert.match(rc3, /function rc3OrderMethodsGhostActive\(storeId\)[\s\S]*?rc3OrderMethodsGhostClickStoreId/, 'ghost click이 해당 주문방법 버튼에서만 차단되지 않습니다.');
+assert.match(rc3, /function rc3ShouldBlockOrderMethodSelection\(external, event, storeId\)[\s\S]*?rc3OrderMethodsGhostActive\(storeId\)[\s\S]*?rc3SelectionStartedAt[\s\S]*?age < 1200/, '새 선택창으로 새는 합성 클릭은 막고 실제 두 번째 터치는 허용해야 합니다.');
+assert.match(rc3, /const external = event\.target\.closest\('\[data-rc3-external-route\]'\);[\s\S]*?rc3ShouldBlockOrderMethodSelection\(external, event, storeId\)[\s\S]*?openCommunityChoice/, '새 선택창의 주문앱 버튼을 열기 전에 잔여 클릭을 차단해야 합니다.');
 assert.match(rc3, /Math\.hypot\([\s\S]*?\) > 10\) state\.moved = true;/, '스크롤 중 잘못 열리는 것을 막는 터치 이동 판정이 없습니다.');
 assert.match(rc3, /const other = event\.target\.closest\('\[data-rc3-other-methods\]'\);[\s\S]*?rc3ActivateOrderMethodsTrigger\(other, event\)/, '클릭·키보드 보조 경로가 해당 가게 주문방법을 열지 않습니다.');
 assert.match(rc3, /window\.addEventListener\('pageshow', rc3ResetOrderMethodsTouchState, true\)/, '외부 주문앱에서 복귀할 때 남은 터치 상태를 초기화하지 않습니다.');
@@ -62,5 +64,6 @@ assert.match(html, /app\.js\?v=[^"\n]*other-order-method-touch-1/, 'app.js 캐�
 assert.match(html, /final-experience\.js\?v=[^"\n]*order-methods-return-touch-5/, 'final-experience.js 캐시 갱신 표식이 없습니다.');
 assert.match(finalExperience, /rc3-fixes\.css\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.css 캐시 갱신 표식이 없습니다.');
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.js 캐시 갱신 표식이 없습니다.');
+assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*mobile-order-selection-ghost-1/, '주문방법 잔여 클릭 수정의 캐시 갱신 표식이 없습니다.');
 
 console.log('other-order-method-touch-regression: PASS');

@@ -533,7 +533,7 @@ fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  fxInstallEvents();
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1-release-readiness-1-managed-region-priority-3-goheung-isolation-2-other-order-method-touch-1-order-methods-return-touch-5-mobile-photo-delivery-1-single-rank-per-rail-1-progressive-rails-1-single-yogiyo-cta-1-trusted-naver-place-1-direct-phone-link-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1-release-readiness-1-managed-region-priority-3-goheung-isolation-2-other-order-method-touch-1-order-methods-return-touch-5-mobile-photo-delivery-1-single-rank-per-rail-1-progressive-rails-1-single-yogiyo-cta-1-trusted-naver-place-1-direct-phone-link-1-mobile-order-selection-ghost-1';
  fxRc3Script.src+='-atomic-rail-refresh-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
