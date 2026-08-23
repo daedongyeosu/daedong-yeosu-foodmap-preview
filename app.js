@@ -165,6 +165,13 @@ const BLOCKED_STORE_ROUTE_KEYS = Object.freeze({
   // 더벤티 여수국동항점에 다른 가게(배스킨라빈스)의 주문·전화 경로가 연결된 원본 데이터 차단.
   '9ee73ce6168105ec': new Set(['direct', 'phone', 'yogiyo', 'coupang', 'baemin'])
 });
+const KNOWN_BLANK_DETAIL_PHOTO_IDS = new Set([
+  '38088586441c38df8530.webp',
+  'e8c5f7d70617bbedcbbe.webp',
+  'd3477ed0d9edeba67c6f.webp',
+  '9803efcb39118e4bfc9f.webp',
+  'aca21bc9cc32528edfbd.webp'
+]);
 const FAVORITE_KEY = regionStorageKey('daedongFavoriteStoresV2');
 const RECENT_KEY = regionStorageKey('daedongRecentStoresV2');
 const FEEDBACK_QUEUE_KEY = 'daedongFeedbackQueueV1';
@@ -699,6 +706,18 @@ function canonicalDuplicateStoreName(value) {
     ? `${normalizedName.slice(0, markerIndex)}${branchName}`
     : normalizedName;
 }
+function isYogiyoMenuPhotoPath(path) {
+  return /\/assets\/yogiyo-menu\//i.test(String(path || ''));
+}
+function isKnownBlankDetailPhotoPath(path) {
+  const clean = String(path || '').split(/[?#]/, 1)[0];
+  return KNOWN_BLANK_DETAIL_PHOTO_IDS.has(clean.slice(clean.lastIndexOf('/') + 1).toLowerCase());
+}
+function detailPhotoAuditAttributes(path) {
+  return isYogiyoMenuPhotoPath(path)
+    ? ' crossorigin="anonymous" data-detail-photo-crop-audit="yogiyo-menu"'
+    : '';
+}
 function isYogiyoOnlyCollectorStore(store) {
   const keys = [...new Set((Array.isArray(store?.channelKeys) ? store.channelKeys : []).map(String).filter(Boolean))];
   return keys.length === 1 && keys[0] === 'yogiyo';
@@ -1159,7 +1178,7 @@ class PhotoResolver {
   }
   validPath(path, store) {
     const value = String(path || '').trim();
-    return Boolean(value && !this.suspiciousPath(value, store) && /\.(png|jpe?g|webp|gif|avif)(\?|$)/i.test(value) && !/\.(pdf|docx?|xlsx?|txt)(\?|$)/i.test(value));
+    return Boolean(value && !isKnownBlankDetailPhotoPath(value) && !this.suspiciousPath(value, store) && /\.(png|jpe?g|webp|gif|avif)(\?|$)/i.test(value) && !/\.(pdf|docx?|xlsx?|txt)(\?|$)/i.test(value));
   }
   usablePaths(paths, store) {
     const failed = store?.__failedPhotoPaths instanceof Set ? store.__failedPhotoPaths : new Set();
@@ -1194,12 +1213,12 @@ class PhotoResolver {
     if (!photos.length) return placeholderMarkup('detail');
     if (photos.length === 1) {
       const photo = photos[0];
-      return `<div class="detail-single-photo"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 1" loading="eager" decoding="async" fetchpriority="high" data-photo-kind="detail" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="${escapeHtml(photo.source)}"></div>`;
+      return `<div class="detail-single-photo"><img class="detail-photo"${detailPhotoAuditAttributes(photo.src)} src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 1" loading="eager" decoding="async" fetchpriority="high" data-photo-kind="detail" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="${escapeHtml(photo.source)}"></div>`;
     }
     return `<div id="detailPhotoCarousel" class="carousel-controller detail-photo-carousel" data-original-count="${photos.length}">
       <div class="carousel-shell detail-photo-frame">
         <button class="carousel-arrow prev" type="button" data-carousel-prev aria-label="이전 가게사진">‹</button>
-        <div class="carousel-track">${photos.map((photo, index) => `<article class="carousel-slide detail-photo-slide"><img class="detail-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 ${index + 1}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async"${index === 0 ? ' fetchpriority="high"' : ''} data-photo-kind="detail" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="${escapeHtml(photo.source)}"></article>`).join('')}</div>
+        <div class="carousel-track">${photos.map((photo, index) => `<article class="carousel-slide detail-photo-slide"><img class="detail-photo"${detailPhotoAuditAttributes(photo.src)} src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)} 사진 ${index + 1}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async"${index === 0 ? ' fetchpriority="high"' : ''} data-photo-kind="detail" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="${escapeHtml(photo.source)}"></article>`).join('')}</div>
         <button class="carousel-arrow next" type="button" data-carousel-next aria-label="다음 가게사진">›</button>
       </div><div class="carousel-dots" aria-label="가게사진 위치"></div></div>`;
   }
@@ -1254,6 +1273,61 @@ function recoverVisibleDetailPhoto(store) {
     detailCarousel = new InfiniteCarousel(carouselRoot,{interval:3500});
   }
   return true;
+}
+
+function auditDetailPhotoCrop(image) {
+  if (!image?.matches?.('img.detail-photo[data-detail-photo-crop-audit="yogiyo-menu"]') || image.dataset.detailPhotoCropChecked === 'true') return;
+  if (!image.complete || !image.naturalWidth || !image.naturalHeight) return;
+  image.dataset.detailPhotoCropChecked = 'true';
+  try {
+    const targetRatio = 5 / 4;
+    const width = image.naturalWidth;
+    const height = image.naturalHeight;
+    const sourceRatio = width / height;
+    let sx = 0, sy = 0, sw = width, sh = height;
+    if (sourceRatio < targetRatio) {
+      sh = width / targetRatio;
+      sy = (height - sh) / 2;
+    } else if (sourceRatio > targetRatio) {
+      sw = height * targetRatio;
+      sx = (width - sw) / 2;
+    }
+    const sampleWidth = 160;
+    const sampleHeight = 128;
+    const canvas = document.createElement('canvas');
+    canvas.width = sampleWidth;
+    canvas.height = sampleHeight;
+    const context = canvas.getContext('2d', {willReadFrequently: true});
+    if (!context) return;
+    context.drawImage(image, sx, sy, sw, sh, 0, 0, sampleWidth, sampleHeight);
+    const pixels = context.getImageData(0, 0, sampleWidth, sampleHeight).data;
+    const darkRows = [];
+    for (let y = 0; y < sampleHeight; y += 1) {
+      let dark = 0;
+      for (let x = 0; x < sampleWidth; x += 1) {
+        const offset = (y * sampleWidth + x) * 4;
+        if (pixels[offset] <= 24 && pixels[offset + 1] <= 24 && pixels[offset + 2] <= 24 && pixels[offset + 3] >= 230) dark += 1;
+      }
+      darkRows.push(dark / sampleWidth >= 0.90);
+    }
+    const searchLimit = Math.max(1, Math.ceil(sampleHeight * 0.04));
+    const start = darkRows.slice(0, searchLimit).findIndex(Boolean);
+    if (start < 0) return;
+    let run = 0;
+    for (const dark of darkRows.slice(start)) {
+      if (!dark) break;
+      run += 1;
+    }
+    if (run / sampleHeight < 0.02) return;
+    const bandEnd = sy + ((start + run + 1) / sampleHeight) * sh;
+    const visibleBottom = sy + sh;
+    const desiredTop = Math.min(visibleBottom - 1, bandEnd + sh * 0.01);
+    const zoom = Math.min(1.75, Math.max(1.05, sh / Math.max(1, visibleBottom - desiredTop)));
+    image.style.setProperty('--detail-photo-zoom', zoom.toFixed(3));
+    image.classList.add('detail-photo-auto-cropped');
+  } catch (error) {
+    console.warn('가게사진 검은 여백 자동 보정 생략', error);
+  }
 }
 function finalImageFallback(image) {
   if (!image.isConnected) return;
@@ -1317,6 +1391,7 @@ class InfiniteCarousel {
     this.next = root.querySelector('[data-carousel-next]');
     this.interval = interval;
     this.onChange = typeof onChange === 'function' ? onChange : null;
+    this.nativeScroll = root.classList.contains('detail-photo-carousel');
     this.timer = null;
     this.dragStart = null;
     this.listeners = [];
@@ -1328,6 +1403,12 @@ class InfiniteCarousel {
     this.build(); this.bind(); this.start();
   }
   build() {
+    if (this.nativeScroll) {
+      this.current = 0;
+      this.track.classList.add('detail-photo-native-track');
+      this.renderDots();
+      return;
+    }
     if (this.count > 1) {
       this.track.prepend(this.original[this.count - 1].cloneNode(true));
       this.track.append(this.original[0].cloneNode(true));
@@ -1367,6 +1448,26 @@ class InfiniteCarousel {
     };
     bindArrow(this.prev, -1);
     bindArrow(this.next, 1);
+    if (this.nativeScroll) {
+      this.listen(this.shell, 'dragstart', event => event.preventDefault());
+      this.listen(this.track, 'scroll', () => {
+        if (this.scrollFrame) return;
+        this.scrollFrame = requestAnimationFrame(() => {
+          this.scrollFrame = 0;
+          const width = this.track.clientWidth || 1;
+          const index = Math.max(0, Math.min(this.count - 1, Math.round(this.track.scrollLeft / width)));
+          if (index !== this.current) {
+            this.current = index;
+            this.updateDots();
+          }
+        });
+      }, {passive: true});
+      this.listen(this.dots, 'click', event => {
+        const button = event.target.closest('[data-slide]');
+        if (button) this.goTo(Number(button.dataset.slide));
+      });
+      return;
+    }
     this.listen(this.track, 'transitionend', () => this.normalizePosition());
     this.listen(this.shell, 'dragstart', event => event.preventDefault());
     if ('PointerEvent' in window) {
@@ -1396,7 +1497,7 @@ class InfiniteCarousel {
       if (button) this.goTo(Number(button.dataset.slide));
     });
   }
-  logicalIndex() { return this.count <= 1 ? 0 : (this.current - 1 + this.count) % this.count; }
+  logicalIndex() { return this.nativeScroll ? this.current : this.count <= 1 ? 0 : (this.current - 1 + this.count) % this.count; }
   renderDots() { if (!this.dots) return; this.dots.innerHTML = this.original.map((_, index) => `<button type="button" data-slide="${index}" aria-label="${index + 1}번째 슬라이드"></button>`).join(''); this.updateDots(); }
   updateDots() { if (this.dots) [...this.dots.children].forEach((dot, index) => dot.classList.toggle('active', index === this.logicalIndex())); this.onChange?.(this.logicalIndex(), this.count); }
   jump(animated = true) { if (!this.count) return; this.track.classList.toggle('is-animated', animated); this.track.style.transform = `translate3d(-${this.current * 100}%,0,0)`; this.updateDots(); }
@@ -1410,21 +1511,39 @@ class InfiniteCarousel {
   }
   move(direction) {
     if (this.count <= 1) return;
+    if (this.nativeScroll) {
+      const next = (this.current + direction + this.count) % this.count;
+      this.goTo(next);
+      return;
+    }
     this.normalizeCurrent();
     this.current += direction;
     this.jump(true);
     clearTimeout(this.normalizeTimer);
     this.normalizeTimer = setTimeout(() => this.normalizePosition(), 520);
   }
-  goTo(index) { if (this.count <= 1) return; this.current = Math.max(0, Math.min(this.count - 1, index)) + 1; this.jump(true); this.restart(); }
+  goTo(index) {
+    if (this.count <= 1) return;
+    if (this.nativeScroll) {
+      this.current = Math.max(0, Math.min(this.count - 1, index));
+      const left = this.current * (this.track.clientWidth || 0);
+      try { this.track.scrollTo({left, behavior: 'smooth'}); } catch { this.track.scrollLeft = left; }
+      this.updateDots();
+      return;
+    }
+    this.current = Math.max(0, Math.min(this.count - 1, index)) + 1;
+    this.jump(true);
+    this.restart();
+  }
   normalizePosition() { this.normalizeCurrent(); }
-  start() { if (this.destroyed || this.count <= 1 || this.timer || !(this.interval > 0)) return; this.timer = setInterval(() => this.move(1), this.interval); }
+  start() { if (this.nativeScroll || this.destroyed || this.count <= 1 || this.timer || !(this.interval > 0)) return; this.timer = setInterval(() => this.move(1), this.interval); }
   stop() { if (this.timer) { clearInterval(this.timer); this.timer = null; } }
   restart() { this.stop(); this.start(); }
   destroy() {
     this.destroyed = true;
     this.stop();
     clearTimeout(this.normalizeTimer);
+    if (this.scrollFrame) cancelAnimationFrame(this.scrollFrame);
     this.dragStart = null;
     this.listeners.forEach(({target, type, handler, options}) => target.removeEventListener(type, handler, options));
     this.listeners = [];
@@ -2002,6 +2121,7 @@ function resetFilters() {
 const catalogBootPromise = initialize();
 
 document.addEventListener('error', event => { if (event.target instanceof HTMLImageElement) handleImageError(event.target); }, true);
+document.addEventListener('load', event => { if (event.target instanceof HTMLImageElement) auditDetailPhotoCrop(event.target); }, true);
 document.addEventListener('DOMContentLoaded', () => {
   applyAnalyticsOwnerMode();
   const entry = analyticsEntryContext();
