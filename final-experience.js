@@ -68,7 +68,19 @@ function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]
 function fxCardPhoto(store){const src=fxPhoto(store);const options={deferred:false};return src?`<img ${photoSourceAttributes(src,options)} alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
 function fxDistance(store){return state.coords&&store.lat!==null&&store.lng!==null?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;}
 
-normalizedStore=function(raw,index){const store=fxOriginalNormalizedStore(raw,index);store.customerVisible=!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(raw.name)!=='제목없음';store.rawIndex=index;return store;};
+normalizedStore=function(raw,index){
+ const store=fxOriginalNormalizedStore(raw,index);
+ // The Yeosu customer catalog must never surface a card that only has menu
+ // photos but no verified way to act on it.  The collector catalog's
+ // channelKeys are the release gate: empty means no order app, telephone, or
+ // trusted place route has survived synchronization yet.  Keep the server
+ // record and menu assets intact for later verification, but hide it from all
+ // customer-facing lists in the meantime.
+ const hasCustomerRoute=FX_REGION.code!=='yeosu'||store.channelKeys.some(Boolean);
+ store.customerVisible=hasCustomerRoute&&!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(raw.name)!=='제목없음';
+ store.rawIndex=index;
+ return store;
+};
 filteredStores=function(){return fxOriginalFilteredStores().filter(fxVisible);};
 appRegisteredStores=function(key){return fxOriginalAppRegisteredStores(key).filter(fxVisible);};
 
@@ -133,7 +145,17 @@ function fxRestoreRegisteredAppButtons(){
 }
 
 function fxThemeMatch(store,spec){const text=storeText(store);return spec.pattern?spec.pattern.test(text):true;}
-function fxRankStores(spec){return stores.filter(fxVisible).filter(store=>fxThemeMatch(store,spec)).map(store=>{const distance=fxDistance(store);const low=['direct','mukkebi','ddangyo','ondongne'].some(key=>storeHasChannel(store,key));let score=spec.pattern?80:20;if(distance!==null)score+=Math.max(0,32-distance*4);if(low)score+=12;if(store.managed)score+=8;else if(store.sharedManaged)score+=5;if(spec.kind==='near'&&distance!==null)score+=Math.max(0,120-distance*25);if(spec.kind==='local'&&low)score+=80;if(spec.kind==='new')score+=Number(store.rawIndex)||0;return{store,distance,score};}).sort((a,b)=>compareStoreBusinessStatus(a,b)||b.score-a.score||(a.distance??999)-(b.distance??999)||a.store.name.localeCompare(b.store.name,'ko')).map(item=>({...item.store,distance:item.distance}));}
+function fxHasCustomerAction(store){
+ const resolved=globalThis.resolveStoreChannels?.(store);
+ if(resolved){
+  const primary=Object.values(resolved.primaryOrder||{});
+  const external=Object.values(resolved.externalOrder||{});
+  return Boolean(resolved.utilities?.naverMap||resolved.happyOrder||[...primary,...external].some(Boolean));
+ }
+ const orderKeys=['direct','mukkebi','ddangyo','ondongne','phone','yogiyo','coupang','baemin'];
+ return orderKeys.some(key=>storeHasChannel(store,key))||fxBrandByStore.has(String(store.id))||fxHappyByStore.has(String(store.id));
+}
+function fxRankStores(spec){return stores.filter(fxVisible).filter(fxHasCustomerAction).filter(store=>fxThemeMatch(store,spec)).map(store=>{const distance=fxDistance(store);const low=['direct','mukkebi','ddangyo','ondongne'].some(key=>storeHasChannel(store,key));let score=spec.pattern?80:20;if(distance!==null)score+=Math.max(0,32-distance*4);if(low)score+=12;if(store.managed)score+=8;else if(store.sharedManaged)score+=5;if(spec.kind==='near'&&distance!==null)score+=Math.max(0,120-distance*25);if(spec.kind==='local'&&low)score+=80;if(spec.kind==='new')score+=Number(store.rawIndex)||0;return{store,distance,score};}).sort((a,b)=>compareStoreBusinessStatus(a,b)||b.score-a.score||(a.distance??999)-(b.distance??999)||a.store.name.localeCompare(b.store.name,'ko')).map(item=>({...item.store,distance:item.distance}));}
 const FX_RAIL_SPECS=[
  {id:'near',kind:'near',title:'지금 가까운 가게',desc:'선택한 위치를 먼저 반영해요'},
  {id:'local',kind:'local',title:`${FX_REGION_NAME}에 힘이 되는 주문`,desc:'지역 주문경로가 확인된 가게'},

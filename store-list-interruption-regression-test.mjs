@@ -25,16 +25,17 @@ assert.match(pager, /window\.daedongHasHomeInteraction=hasStoreListPagerCustomer
 assert.match(pager, /document\.addEventListener\('pointerdown',markStoreListPagerCustomerInteraction/);
 assert.match(pager, /window\.daedongCaptureStorePagerState=captureStoreListPagerState/);
 assert.match(pager, /window\.daedongRestoreStorePagerState=restoreStoreListPagerState/);
-assert.match(pager, /const STORE_LIST_PAGER_SWIPE_MIN_DISTANCE=48/);
-assert.match(pager, /grid\.addEventListener\('touchstart',beginStoreListPagerSwipe,\{passive:true\}\)/);
-assert.match(pager, /grid\.addEventListener\('touchend',finishStoreListPagerSwipe,\{passive:true\}\)/);
-assert.match(pager, /moveStoreListPager\(deltaX<0\?'next':'prev',\{reveal:false,fromPage:gesture\.page\}\)/,
-  '한 번의 가로 스와이프는 시작한 페이지를 기준으로 정확히 한 페이지만 이동해야 합니다.');
+assert.match(pager, /grid\.scrollLeft=Math\.max\(0,Number\(snapshot\.scrollLeft\|\|0\)\)/,
+  '목록으로 돌아오면 고객이 멈춘 가로 위치를 그대로 복원해야 합니다.');
+assert.doesNotMatch(pager, /STORE_LIST_PAGER_SWIPE_MIN_DISTANCE|beginStoreListPagerSwipe|finishStoreListPagerSwipe|storeListPagerSuppressClickUntil/,
+  '손을 떼면 자동으로 다음 페이지에 고정하는 스와이프 재배치를 다시 넣으면 안 됩니다.');
 assert.match(pager, /controls\.hidden=true/,
   '전체 가게 목록에서는 하단 이전·다음 화살표를 숨겨야 합니다.');
-assert.match(pager, /storeListPagerSuppressClickUntil=Date\.now\(\)\+500/,
-  '스와이프가 가게 카드 터치로 오인되면 안 됩니다.');
-assert.match(pagerCss, /store-pager-swipe-enabled\{[^}]*scroll-snap-type:x mandatory/);
+assert.match(pagerCss, /store-pager-swipe-enabled\{[^}]*scroll-snap-type:none/);
+assert.match(pagerCss, /\.recommend-track,[\s\S]*scroll-snap-type:none!important/,
+  '추천·검색·카테고리 가게 목록은 고객이 멈춘 위치에 그대로 머물러야 합니다.');
+assert.match(pagerCss, /\.recommend-track>\.rail-card,[\s\S]*scroll-snap-align:none!important/,
+  '가게 카드를 자동으로 끝점에 맞추는 스냅 지점을 다시 넣으면 안 됩니다.');
 assert.match(pagerCss, /store-pager-swipe-enabled \+ \.store-pager-controls\{display:none!important\}/,
   '스와이프 목록이 활성화되는 즉시 하단 화살표 영역을 CSS에서도 감춰 깜빡임을 막아야 합니다.');
 
@@ -57,9 +58,9 @@ assert.match(experience, /function fxCommitRailsWithoutMovingActiveList\(root,st
 assert.match(experience, /root\.replaceChildren\(\.\.\.staging\.childNodes\)/,
   '추천 영역은 완성된 결과를 한 번에 교체해 소식 배너가 순간적으로 끼어들지 않아야 합니다.');
 
-assert.match(html, /store-list-horizontal-pager\.css\?v=visible-results-1-swipe-paging-1/);
+assert.match(html, /store-list-horizontal-pager\.css\?v=visible-results-1-free-scroll-1/);
 assert.match(html, /id="storePagerStatus"[^>]*aria-live="polite"/);
-assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-swipe-paging-1/);
+assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-free-scroll-1/);
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*list-position-stable-1/);

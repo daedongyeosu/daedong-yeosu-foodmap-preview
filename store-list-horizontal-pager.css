@@ -7,6 +7,16 @@
 .store-page-prev{color:#30343c}
 .store-page-next{color:#172330}
 
-.store-grid.store-pager-swipe-enabled{scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;cursor:grab}
+.store-grid.store-pager-swipe-enabled{scroll-snap-type:none;-webkit-overflow-scrolling:touch;cursor:grab}
 .store-grid.store-pager-swipe-enabled:active{cursor:grabbing}
 .store-grid.store-pager-swipe-enabled + .store-pager-controls{display:none!important}
+
+/* Store lists follow the customer's finger and remain exactly where released. */
+.store-grid,
+.recommend-track,
+.rc4-category-result-track,
+.rc5-category-result-track{scroll-snap-type:none!important}
+.store-grid>.store-card,
+.recommend-track>.rail-card,
+.rc4-category-result-track>.rail-card,
+.rc5-category-result-track>.rc5-category-card{scroll-snap-align:none!important;scroll-snap-stop:normal!important}
