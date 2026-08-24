@@ -816,7 +816,7 @@
           <b data-store-finder-location-label>주소를 설정하면 가까운 순</b>
         </div>
         <nav aria-label="빠른 가게 찾기 조건">
-          <button type="button" data-store-service-quick-status="open">🟢 지금 영업 중 <b data-store-finder-open-count></b></button>
+          <button type="button" data-store-service-quick-status="open">🟢 지금 영업 중</button>
           <button type="button" data-store-service-quick-benefit>🎁 혜택 찾기</button>
           <button type="button" data-store-service-quick-location="all">동네 선택</button>
         </nav>
@@ -829,15 +829,8 @@
       const label = entry.querySelector('[data-store-finder-location-label]');
       const nextLabel = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
       if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
-      const source = sourceStores();
-      const count = source.reduce((total, store) => (
-        ['open', 'closing-soon'].includes(storeStatus(serviceInfoForStore(store)).state) ? total + 1 : total
-      ), 0);
-      const countNode = entry.querySelector('[data-store-finder-open-count]');
-      const countReady = serviceLoadState === 'ready' && source.length > 0;
+      const countReady = serviceLoadState === 'ready' && sourceStores().length > 0;
       const loadFailed = serviceLoadState === 'error' || catalogLoadState === 'error';
-      const nextCount = countReady ? String(count) : loadFailed ? '다시 확인' : '확인 중';
-      if (countNode && countNode.textContent !== nextCount) countNode.textContent = nextCount;
       const quickStatus = entry.querySelector('[data-store-service-quick-status]');
       if (quickStatus) {
         quickStatus.dataset.storeServiceLoadState = countReady ? 'ready' : loadFailed ? 'error' : 'loading';

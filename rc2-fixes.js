@@ -881,8 +881,15 @@ function rc2RememberExternalReturn(sourceElement = null) {
 
 function rc2LaunchComparedExternal(link, href) {
   if (!link || href === '#') return false;
-  if (String(link.dataset?.communityOriginal || '') === 'yogiyo') {
-    window.location.assign(href);
+  const rawKey = String(
+    link?.dataset?.communityOriginal ||
+    link?.dataset?.routeKey ||
+    link?.dataset?.finalAppChannel ||
+    ''
+  );
+  const key = rawKey === 'coupang-eats' ? 'coupang' : rawKey;
+  if (typeof window.daedongLaunchMobileRoute === 'function' && ['mukkebi', 'ddangyo', 'yogiyo', 'coupang', 'baemin'].includes(key)) {
+    void window.daedongLaunchMobileRoute(key, href);
     return true;
   }
   window.open(href, '_blank', 'noopener');

@@ -47,7 +47,7 @@ assert.match(browserCheck, /본스치킨 미평점/, '본스치킨 회귀 검사
 assert.match(browserCheck, /손수김밥 양지점/, '손수김밥 회귀 검사가 없습니다.');
 assert.match(browserCheck, /trigger\.tap\(\)/, '버튼을 마우스 클릭이 아닌 실제 터치로 검사하지 않습니다.');
 assert.match(browserCheck, /SM-S938N[\s\S]*KAKAOTALK/, '실제 신고 기종과 카카오 인앱 브라우저 조건이 없습니다.');
-assert.match(browserCheck, /context\.waitForEvent\('page'[\s\S]*externalLink\.tap\(\)[\s\S]*externalPage\.close\(\)[\s\S]*page\.bringToFront\(\)/, '외부 주문앱을 별도 화면으로 열고 원본 Preview로 복귀하는 검사가 없습니다.');
+assert.match(browserCheck, /window\.daedongLaunchMobileRoute = \(key, href\)[\s\S]*externalLink\.tap\(\)[\s\S]*launch\?\.key === 'baemin'[\s\S]*new URL\(page\.url\(\)\)\.origin === baseOrigin/, '외부 주문앱을 Android 패키지 경로로 열면서 원본 Preview 현재 탭을 보존하는 검사가 없습니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)[\s\S]*window\.dispatchEvent\(new Event\('focus'\)\)/, '카카오 네이티브 숨김·복귀 수명주기 검사가 없습니다.');
 assert.match(browserCheck, /returnedTrigger\.tap\(\)[\s\S]*외부 주문앱 복귀 뒤 두 번째 터치로 다시 열림/, '외부 앱 복귀 뒤 다른 주문방법을 다시 터치하는 검사가 없습니다.');
 assert.match(browserCheck, /document\.elementFromPoint/, '복귀 뒤 투명 가림막이 버튼을 덮는지 검사하지 않습니다.');

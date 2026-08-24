@@ -352,7 +352,7 @@ body.store-menu-open {
   font-weight: 750;
 }
 .store-menu-card:hover .store-menu-photo img {
-  transform: scale(1.025);
+  transform: scale(calc(var(--detail-photo-zoom, 1) * 1.025));
 }
 .store-menu-photo span {
   position: absolute;

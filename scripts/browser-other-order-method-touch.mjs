@@ -1,7 +1,22 @@
 import fs from 'node:fs';
-import {chromium} from 'playwright';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+
+const loadBrowserRuntime = async () => {
+  try {
+    const playwright = await import('playwright');
+    return {chromium: playwright.chromium, launchOptions: {headless: true}};
+  } catch {}
+  const runtimeModules = process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES;
+  if (!runtimeModules) throw new Error('playwright 패키지를 찾을 수 없습니다.');
+  const playwright = await import(pathToFileURL(path.join(runtimeModules, 'playwright', 'index.mjs')).href);
+  return {chromium: playwright.chromium, launchOptions: {headless: true}};
+};
+
+const {chromium, launchOptions} = await loadBrowserRuntime();
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
+const baseOrigin = new URL(baseURL).origin;
 const report = {success: false, viewport: {width: 390, height: 844}, checks: [], errors: [], stores: []};
 const stores = [
   {
@@ -56,7 +71,7 @@ const stores = [
 ];
 const detailsById = new Map(stores.map(store => [store.store_id, store]));
 const browser = await chromium.launch({
-  headless: true,
+  ...launchOptions,
   ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH} : {})
 });
 const context = await browser.newContext({
@@ -177,13 +192,21 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   await externalLink.waitFor({state: 'visible', timeout: 3000});
   const expectedExternalURL = await externalLink.getAttribute('href');
 
-  const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
+  await page.evaluate(() => {
+    window.__testedMobileLaunches = [];
+    window.daedongLaunchMobileRoute = (key, href) => {
+      window.__testedMobileLaunches.push({key, href});
+    };
+  });
   await externalLink.tap();
-  const externalPage = await externalPagePromise;
-  await externalPage.waitForLoadState('domcontentloaded');
+  const launch = await page.evaluate(() => window.__testedMobileLaunches.at(-1) || null);
   await check(
-    Promise.resolve(externalPage.url() === expectedExternalURL),
-    `${storeName} 배달의민족을 원본 Preview와 분리된 화면으로 열기`
+    Promise.resolve(launch?.key === 'baemin' && launch?.href === expectedExternalURL),
+    `${storeName} 배달의민족 Android 앱 패키지 경로로 열기`
+  );
+  await check(
+    Promise.resolve(new URL(page.url()).origin === baseOrigin && context.pages().length === 1),
+    `${storeName} 외부 주문앱을 열 때 원본 Preview 현재 탭 보존`
   );
   const preparedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await preparedTrigger.waitFor({state: 'visible', timeout: 3000});
@@ -192,9 +215,6 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     preparedTrigger.isVisible(),
     `${storeName} 외부 주문앱이 열린 동안 원본 Preview를 가게 상세로 미리 안정화`
   );
-  await externalPage.close();
-  await page.bringToFront();
-
   if (nativeResume) {
     await page.evaluate(async () => {
       let hidden = true;

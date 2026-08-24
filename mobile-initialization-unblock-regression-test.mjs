@@ -25,8 +25,10 @@ assert.match(services, /catalogReadyPromise = settleWithin\([\s\S]*26000\)/);
 assert.match(services, /settleWithin\(window\.daedongLocationRankingReady[\s\S]*36000\)/);
 assert.doesNotMatch(services, /Promise\.all\(\[\s*loadServiceData\(\)/,
   '영업정보를 위치정렬 promise와 다시 결합하면 안 됩니다.');
-assert.match(services, /loadFailed \? '다시 확인' : '확인 중'/,
-  '실패 상태가 로딩 문구로 영구 위장되면 안 됩니다.');
+assert.match(services, /quickStatus\.dataset\.storeServiceLoadState = countReady \? 'ready' : loadFailed \? 'error' : 'loading'/,
+  '숫자를 노출하지 않더라도 영업정보 준비·실패 상태는 접근성 상태로 구분되어야 합니다.');
+assert.doesNotMatch(services, /nextCount|quickStatus\.textContent\s*=/,
+  '홈 바로가기에는 전체 가게를 합산한 영업 중 숫자를 다시 노출하면 안 됩니다.');
 assert.match(html, /cloudflare-preview-api-4-curated-menu-photos-1/);
 assert.match(html, /catalog-ready-watchdog-2/);
 assert.match(html, /location-ranking-watchdog-2/);

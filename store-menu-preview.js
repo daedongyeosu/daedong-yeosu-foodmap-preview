@@ -412,7 +412,7 @@
     const photo = item.image
       ? `
         <div class="store-menu-photo">
-          <img data-menu-image-src="${escapeMenuHtml(item.image)}" alt="${escapeMenuHtml(item.name)}" data-photo-kind="card" width="720" height="546" loading="lazy" decoding="async" fetchpriority="low">
+          <img data-menu-image-src="${escapeMenuHtml(item.image)}" alt="${escapeMenuHtml(item.name)}" data-photo-kind="card" data-photo-crop-audit="yogiyo-menu" width="720" height="546" loading="lazy" decoding="async" fetchpriority="low">
           ${item.adultOnly ? '<span>19세 이상</span>' : ''}
         </div>
       `
@@ -669,7 +669,8 @@
       result[item.category] = (result[item.category] || 0) + 1;
       return result;
     }, {});
-    const featuredCategories = menu.categories.filter(category => category !== '전체').slice(0, 3);
+    const categoryCandidates = menu.categories.filter(category => category !== '전체');
+    const featuredCategories = categoryCandidates.length > 1 ? categoryCandidates.slice(0, 3) : [];
     return `
       <section class="store-menu-preview" data-store-id="${escapeMenuHtml(store.id)}" role="dialog" aria-modal="true" aria-labelledby="storeMenuTitle">
         <header class="store-menu-topbar">
@@ -680,7 +681,7 @@
 
         <main class="store-menu-scroll">
           <section class="store-menu-hero">
-            <img src="${escapeMenuHtml(menu.mainImage)}" alt="${escapeMenuHtml(menu.displayName)}" fetchpriority="high" data-photo-kind="detail" data-photo-store-id="${escapeMenuHtml(store.id)}">
+            <img src="${escapeMenuHtml(menu.mainImage)}" alt="${escapeMenuHtml(menu.displayName)}" fetchpriority="high" data-photo-kind="detail" data-photo-crop-audit="yogiyo-menu" data-photo-store-id="${escapeMenuHtml(store.id)}">
             <div>
               <span>${escapeMenuHtml(window.DAEDONG_REGION?.mapName || '대동여수음식지도')} · 음식 미리보기</span>
               <p>${featuredCategories.map(escapeMenuHtml).join(' · ')}</p>

@@ -5,8 +5,10 @@ const runtime = fs.readFileSync(new URL('./store-service-info.js', import.meta.u
 const html = fs.readFileSync(new URL('./index.html', import.meta.url), 'utf8');
 
 assert.match(runtime, /let serviceLoadState = 'loading'/);
-assert.match(runtime, /const nextCount = countReady \? String\(count\) : loadFailed \? '다시 확인' : '확인 중'/,
-  '영업시간 로딩 전의 빈 데이터를 0곳으로 표시하면 안 됩니다.');
+assert.doesNotMatch(runtime, /data-store-finder-open-count/,
+  '홈 빠른 필터에는 내부 전체 영업 가게 수를 노출하면 안 됩니다.');
+assert.match(runtime, /const countReady = serviceLoadState === 'ready' && sourceStores\(\)\.length > 0/,
+  '가게 수를 표시하지 않아도 필터 데이터 준비 여부는 확인해야 합니다.');
 assert.match(runtime, /for \(const delay of \[0, 1200\]\)/,
   '모바일 웹뷰의 일시적인 서비스 API 실패를 재시도해야 합니다.');
 assert.match(runtime, /window\.daedongDataApi\.services\(\{timeoutMs: 20000\}\)/,

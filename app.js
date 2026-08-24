@@ -713,11 +713,12 @@ function isKnownBlankDetailPhotoPath(path) {
   const clean = String(path || '').split(/[?#]/, 1)[0];
   return KNOWN_BLANK_DETAIL_PHOTO_IDS.has(clean.slice(clean.lastIndexOf('/') + 1).toLowerCase());
 }
-function detailPhotoAuditAttributes(path) {
+function photoCropAuditAttributes(path) {
   return isYogiyoMenuPhotoPath(path)
-    ? ' crossorigin="anonymous" data-detail-photo-crop-audit="yogiyo-menu"'
+    ? ' crossorigin="anonymous" data-photo-crop-audit="yogiyo-menu"'
     : '';
 }
+const detailPhotoAuditAttributes = photoCropAuditAttributes;
 function isYogiyoOnlyCollectorStore(store) {
   const keys = [...new Set((Array.isArray(store?.channelKeys) ? store.channelKeys : []).map(String).filter(Boolean))];
   return keys.length === 1 && keys[0] === 'yogiyo';
@@ -876,6 +877,33 @@ function handleDdangyoOrderLinkClick(event) {
 }
 document.addEventListener('click', handleDdangyoOrderLinkClick, true);
 const KAKAO_SAME_TAB_ORDER_KEYS = new Set(['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin']);
+const ANDROID_ROUTE_PACKAGES = Object.freeze({
+  mukkebi: 'mukkebi.user.app.android',
+  yogiyo: 'com.fineapp.yogiyo',
+  coupang: 'com.coupang.mobile.eats',
+  baemin: 'com.woowahan.bros',
+  naver: 'com.nhn.android.nmap'
+});
+function androidPackageIntent(key, href) {
+  if (!isAndroidBrowser() || !ANDROID_ROUTE_PACKAGES[key]) return '';
+  try {
+    const url = new URL(href, location.href);
+    if (!['http:', 'https:'].includes(url.protocol)) return '';
+    const scheme = url.protocol.slice(0, -1);
+    const path = `${url.host}${url.pathname}${url.search}${url.hash}`;
+    return `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${ANDROID_ROUTE_PACKAGES[key]};S.browser_fallback_url=${encodeURIComponent(url.href)};end;`;
+  } catch {
+    return '';
+  }
+}
+async function launchMobileRoute(key, href) {
+  if (key === 'ddangyo') {
+    await openDdangyoRoute(href);
+    return;
+  }
+  window.location.assign(androidPackageIntent(key, href) || href);
+}
+window.daedongLaunchMobileRoute = launchMobileRoute;
 function isKakaoInAppBrowser() { return /KAKAOTALK/i.test(String(navigator.userAgent || '')); }
 function handleKakaoOrderLinkClick(event) {
   if (!isKakaoInAppBrowser() || !(event.target instanceof Element)) return;
@@ -891,7 +919,7 @@ function handleKakaoOrderLinkClick(event) {
   trackAnalyticsRouteClick(event);
   markExternalAppDeparture();
   if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
-  window.location.assign(href);
+  void launchMobileRoute(key, href);
 }
 document.addEventListener('click', handleKakaoOrderLinkClick, true);
 const MOBILE_SAME_TAB_ORDER_KEYS = new Set(['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin']);
@@ -920,9 +948,22 @@ function handleMobileOrderLinkClick(event) {
   trackAnalyticsRouteClick(event);
   markExternalAppDeparture();
   if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
-  window.location.assign(href);
+  void launchMobileRoute(mobileOrderRouteKey(link), href);
 }
 document.addEventListener('click', handleMobileOrderLinkClick, true);
+function handleAndroidMapLinkClick(event) {
+  if (!isAndroidBrowser() || !(event.target instanceof Element)) return;
+  const link = event.target.closest('a[href][data-detail-only="naver"],a[href][data-route-key="naver"]');
+  if (!link) return;
+  const href = safeHref(link.getAttribute('href'));
+  if (href === '#') return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  markExternalAppDeparture();
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn(link);
+  void launchMobileRoute('naver', href);
+}
+document.addEventListener('click', handleAndroidMapLinkClick, true);
 function routeKey(name) {
   const text = normalize(name);
   if (text.includes('가게바로')) return 'direct';
@@ -1206,7 +1247,7 @@ class PhotoResolver {
     const photo = this.resolve(store);
     if (!photo) return placeholderMarkup(kind);
     const cls = kind === 'detail' ? 'detail-photo' : 'store-photo';
-    return `<img class="${cls}" ${photoSourceAttributes(photo.src, options)} alt="${escapeHtml(store.name)}" loading="${kind === 'detail' ? 'eager' : 'lazy'}" decoding="async"${kind === 'detail' ? ' fetchpriority="high"' : ''} data-photo-kind="${kind}" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="${escapeHtml(photo.source)}">`;
+    return `<img class="${cls}"${photoCropAuditAttributes(photo.src)} ${photoSourceAttributes(photo.src, options)} alt="${escapeHtml(store.name)}" loading="${kind === 'detail' ? 'eager' : 'lazy'}" decoding="async"${kind === 'detail' ? ' fetchpriority="high"' : ''} data-photo-kind="${kind}" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="${escapeHtml(photo.source)}">`;
   }
   galleryMarkup(store) {
     const photos = this.resolveGallery(store);
@@ -1276,7 +1317,7 @@ function recoverVisibleDetailPhoto(store) {
 }
 
 function auditDetailPhotoCrop(image) {
-  if (!image?.matches?.('img.detail-photo[data-detail-photo-crop-audit="yogiyo-menu"]') || image.dataset.detailPhotoCropChecked === 'true') return;
+  if (!image?.matches?.('img[data-photo-crop-audit="yogiyo-menu"]') || image.dataset.detailPhotoCropChecked === 'true') return;
   if (!image.complete || !image.naturalWidth || !image.naturalHeight) return;
   image.dataset.detailPhotoCropChecked = 'true';
   try {
@@ -1805,6 +1846,8 @@ function hardClose({fromPop = false} = {}) {
   if ($('#overlay')) $('#overlay').hidden = true;
   if ($('#moreAppsPopover')) $('#moreAppsPopover').hidden = true;
   if ($('#startupAd')) $('#startupAd').hidden = true;
+  document.activeElement?.blur?.();
+  $$('.bottom-nav button').forEach(item => item.classList.toggle('active', item.dataset.tab === 'home'));
   unlockPage(); modalHistoryActive = false;
   if (!fromPop && history.state?.daedongModal) { suppressNextModalPop(); history.back(); }
 }
@@ -1813,9 +1856,12 @@ window.hardClose = hardClose; window.hideModal = hardClose; window.closeModal = 
 function guide() {
   openModal(`<h2 id="modalTitle">원하는 방법으로 편하게 주문하세요</h2><p>가게마다 이용 가능한 주문방법을 한눈에 확인할 수 있습니다. 가게를 먼저 선택한 뒤 원하는 경로를 확인해 주세요.</p>`);
 }
+function adInquiryModal() {
+  openModal(`<h2 id="modalTitle">광고 문의</h2><p>대동여수음식지도 광고·가게정보 문의는 아래 연락처로 보내 주세요. 전화를 누르면 발신 전 확인 화면만 열립니다.</p><div class="my-list"><a class="detail-route" href="tel:01047977803"><span>전화 문의</span><b>010-4797-7803</b></a><a class="detail-route" href="mailto:sisakim@naver.com"><span>이메일 문의</span><b>sisakim@naver.com</b></a></div>`);
+}
 function appBrowserPhoto(store) {
   const photo = photoResolver.resolve(store);
-  return photo ? `<img class="app-browser-photo" src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)}" loading="lazy" data-photo-kind="card">` : `<span class="app-browser-photo-placeholder">${categoryIcon(store.cat, 'category-placeholder-icon')}</span>`;
+  return photo ? `<img class="app-browser-photo"${photoCropAuditAttributes(photo.src)} src="${escapeHtml(photo.src)}" alt="${escapeHtml(store.name)}" loading="lazy" data-photo-kind="card">` : `<span class="app-browser-photo-placeholder">${categoryIcon(store.cat, 'category-placeholder-icon')}</span>`;
 }
 function appRegisteredStores(key) {
   return stores.filter(store => storeHasChannel(store, key)).map(store => ({store, distance: state.coords && store.lat !== null && store.lng !== null ? haversine(state.coords, {lat: store.lat, lng: store.lng}) : null})).sort((a, b) => {
@@ -1932,7 +1978,7 @@ function useCurrentLocation() {
   navigator.geolocation.getCurrentPosition(position=>{button.disabled=false;button.innerHTML='⌖ <span>현재 위치 확인 완료</span>';chooseAddressBase('현재 위치',{area:REGION_DEFAULT_AREA,coords:{lat:position.coords.latitude,lng:position.coords.longitude},sortByDistance:true,type:'current'});},error=>{button.disabled=false;button.innerHTML=`⌖ <span>${error.code===1?'위치 권한을 허용해 주세요':'현재 위치를 확인하지 못했습니다'}</span>`;},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
 }
 function myPage() {
-  openModal(`<h2 id="modalTitle">마이페이지</h2><p>로그인 없이 이 기기에 저장된 정보입니다.</p><div class="my-list"><button type="button" data-open-favorites>♡ 찜한 가게</button><button type="button" data-open-recent>◷ 최근 방문 가게</button><button type="button">📍 저장 지역 — ${escapeHtml(state.location)}</button><button type="button" data-open-guide>❓ 주문방법 안내</button><button type="button">✉ 광고 문의</button></div>`);
+  openModal(`<h2 id="modalTitle">마이페이지</h2><p>로그인 없이 이 기기에 저장된 정보입니다.</p><div class="my-list"><button type="button" data-open-favorites>♡ 찜한 가게</button><button type="button" data-open-recent>◷ 최근 방문 가게</button><button type="button" data-open-address>📍 저장 지역 — ${escapeHtml(state.location)}</button><button type="button" data-open-guide>❓ 주문방법 안내</button><button type="button" data-open-ad-inquiry>✉ 광고 문의</button></div>`);
 }
 function routeLink(route, extraClass = '') {
   if (route.key === 'direct') {
@@ -2123,6 +2169,14 @@ const catalogBootPromise = initialize();
 document.addEventListener('error', event => { if (event.target instanceof HTMLImageElement) handleImageError(event.target); }, true);
 document.addEventListener('load', event => { if (event.target instanceof HTMLImageElement) auditDetailPhotoCrop(event.target); }, true);
 document.addEventListener('DOMContentLoaded', () => {
+  const collectorEntry = $('#collectorReviewEntry');
+  if (collectorEntry && new URLSearchParams(location.search).get('collector-review') === '1') collectorEntry.hidden = false;
+  const noticeCount = $('[data-notice-count]');
+  if (noticeCount) {
+    noticeCount.textContent = String(PROMOS.length);
+    noticeCount.hidden = PROMOS.length === 0;
+    $('#noticeBtn')?.setAttribute('aria-label', `알림 ${PROMOS.length}개`);
+  }
   applyAnalyticsOwnerMode();
   const entry = analyticsEntryContext();
   sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: entry.storeId ? 'store_entry' : 'home'});
@@ -2264,12 +2318,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if(event.target.closest('[data-open-recent]')){recentModal();return;}
     if(event.target.closest('[data-open-guide]')){guide();return;}
     if(event.target.closest('[data-open-address]')){areaModal();return;}
+    if(event.target.closest('[data-open-ad-inquiry]')){adInquiryModal();return;}
+    const noticePromo=event.target.closest('[data-notice-promo]');if(noticePromo){openPromoCarouselDetail(noticePromo.dataset.noticePromo);return;}
     const copyButton=event.target.closest('[data-feedback-copy]');if(copyButton){copyQueuedReport(copyButton.dataset.feedbackCopy);return;}
     if (!event.target.closest('.store-other-wrap')) $$('.store-other-popover').forEach(item => item.hidden = true);
   });
 
   $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) openStore(store); });
-  $('#noticeBtn').addEventListener('click', () => openModal(`<h2 id="modalTitle">알림</h2><div class="my-list">${PROMOS.map(promo => `<button type="button">${promo.title}</button>`).join('')}</div>`));
+  $('#noticeBtn').addEventListener('click', () => openModal(`<h2 id="modalTitle">알림</h2><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div>`));
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
     $$('.bottom-nav button').forEach(item => item.classList.remove('active')); button.classList.add('active');

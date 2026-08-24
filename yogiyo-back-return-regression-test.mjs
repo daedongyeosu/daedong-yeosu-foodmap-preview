@@ -14,10 +14,12 @@ const helperSource = rc2.slice(helperStart, helperEnd);
 
 const assigned = [];
 const opened = [];
+const launched = [];
 const sandbox = {
   window: {
     location: {assign: href => assigned.push(href)},
-    open: (...args) => opened.push(args)
+    open: (...args) => opened.push(args),
+    daedongLaunchMobileRoute: (key, href) => launched.push([key, href])
   }
 };
 vm.runInNewContext(`${helperSource}; globalThis.launchComparedExternal = rc2LaunchComparedExternal;`, sandbox);
@@ -31,11 +33,13 @@ sandbox.launchComparedExternal({dataset: {communityOriginal: 'yogiyo'}}, urls.yo
 sandbox.launchComparedExternal({dataset: {communityOriginal: 'coupang'}}, urls.coupang);
 sandbox.launchComparedExternal({dataset: {communityOriginal: 'baemin'}}, urls.baemin);
 
-assert.deepEqual(assigned, [urls.yogiyo], '요기요만 현재 탭으로 이동해 브라우저 뒤로가기 기록을 남겨야 합니다.');
-assert.deepEqual(opened, [
-  [urls.coupang, '_blank', 'noopener'],
-  [urls.baemin, '_blank', 'noopener']
-], '쿠팡이츠와 배달의민족은 기존처럼 별도 화면으로 열어야 합니다.');
+assert.deepEqual(launched, [
+  ['yogiyo', urls.yogiyo],
+  ['coupang', urls.coupang],
+  ['baemin', urls.baemin]
+], '요기요·쿠팡이츠·배달의민족은 현재 Preview 문서를 파괴하지 않는 앱 패키지 경로로 열어야 합니다.');
+assert.deepEqual(assigned, [], '주문앱 이동 때문에 Preview 현재 탭을 외부 주소로 교체하면 안 됩니다.');
+assert.deepEqual(opened, [], '지원 주문앱을 일반 새 창으로 열면 앱 복귀가 불안정해집니다.');
 
 const comparedStart = rc2.indexOf("const comparedExternal = event.target.closest('a[data-community-original]')");
 const comparedEnd = rc2.indexOf('const externalLink =', comparedStart);
