@@ -585,10 +585,13 @@ function rc3BindOrderMethodsTrigger(detail) {
 }
 
 function rc3ShouldBlockOrderMethodSelection(external, event, storeId) {
-  if (!rc3OrderMethodsGhostActive(storeId) || Number(event?.detail || 0) === 0) return false;
+  if (Number(event?.detail || 0) === 0) return false;
   const startedAt = Number(external?.dataset?.rc3SelectionStartedAt || 0);
   if (external?.dataset) delete external.dataset.rc3SelectionStartedAt;
   const age = Date.now() - startedAt;
+  // A delayed synthetic click from the trigger can land on the first route
+  // after the sheet replaces the detail. Only a pointer/touch that actually
+  // started on this newly rendered route may activate it.
   return !(startedAt > 0 && age >= 0 && age < 1200);
 }
 
@@ -634,7 +637,7 @@ feeGuideMarkup = function rc3FeeGuideMarkup(store, selectedRoute, {fromBrowser =
   const localRoutes = LOW_FEE_KEYS.map(key => routeFor(store, key)).filter(Boolean);
   const selectedMeta = APP_META[selectedRoute.key] || {label: selectedRoute.name};
   const continueLabel = RC3_APP_PARTICLE[selectedRoute.key] || `${selectedMeta.label} 앱으로`;
-  return `<section id="feeGuidePanel" class="community-guide" data-selected-app="${selectedRoute.key}" data-store-id="${escapeHtml(store.id)}"><span class="community-order-kicker">같은 여수, 함께 이어가는 주문</span><div class="community-selected-store"><p class="community-original-label">선택한 가게</p><strong class="selected-store-name">${escapeHtml(store.name)}</strong></div><h2 id="modalTitle">주문하기 전에 이용 가능한 방법을 함께 확인해 보세요</h2><p class="community-order-lead">가격과 배달비를 비교해 고객님께 맞는 방법을 자유롭게 선택하세요.</p>${rc3PopupUtilityLinks(store, {includeChak: false})}<div class="community-choice-list">${localRoutes.length ? localRoutes.map(route => routeLink(route, 'community-choice-link low-fee-route')).join('') : '<p class="muted">이 가게에 등록된 지역 주문방법이 아직 없습니다.</p>'}</div><p class="community-original-label">처음 선택한 주문방법</p><a class="selected-app-continue community-choice-original external-text-route" href="${escapeHtml(selectedRoute.url)}" target="_blank" rel="noopener" data-community-original="${selectedRoute.key}"><span><b>${escapeHtml(store.name)}</b><small>${escapeHtml(continueLabel)} 계속 주문하기</small></span><b>›</b></a>${externalAppNoticeMarkup()}${fromBrowser ? `<button type="button" class="community-back" data-back-app-browser="${selectedRoute.key}">← ${escapeHtml(selectedMeta.label)} 가게목록으로</button>` : ''}<p class="community-order-note">어떤 주문방법을 선택해도 됩니다. 고객님의 비용과 편의를 먼저 확인해 주세요.</p></section>`;
+  return `<section id="feeGuidePanel" class="community-guide" data-selected-app="${selectedRoute.key}" data-store-id="${escapeHtml(store.id)}"><span class="community-order-kicker">같은 여수, 함께 이어가는 주문</span><div class="community-selected-store"><p class="community-original-label">선택한 가게</p><strong class="selected-store-name">${escapeHtml(store.name)}</strong></div><h2 id="modalTitle">주문하기 전에 이용 가능한 방법을 함께 확인해 보세요</h2><p class="community-order-lead">가격과 배달비를 비교해 고객님께 맞는 방법을 자유롭게 선택하세요.</p>${rc3PopupUtilityLinks(store, {includeChak: false})}<div class="community-choice-list">${localRoutes.length ? localRoutes.map(route => routeLink(route, 'community-choice-link low-fee-route')).join('') : '<p class="muted">이 가게에 등록된 지역 주문방법이 아직 없습니다.</p>'}</div><p class="community-original-label">선택한 주문앱</p><a class="selected-app-continue community-choice-original external-text-route" href="${escapeHtml(selectedRoute.url)}" target="_blank" rel="noopener" data-community-original="${selectedRoute.key}"><span><b>${escapeHtml(store.name)}</b><small>${escapeHtml(continueLabel)} 주문하기</small></span><b>›</b></a>${externalAppNoticeMarkup()}${fromBrowser ? `<button type="button" class="community-back" data-back-app-browser="${selectedRoute.key}">← ${escapeHtml(selectedMeta.label)} 가게목록으로</button>` : ''}<p class="community-order-note">어떤 주문방법을 선택해도 됩니다. 고객님의 비용과 편의를 먼저 확인해 주세요.</p></section>`;
 };
 
 function rc3FeedbackApplicationFields() {
