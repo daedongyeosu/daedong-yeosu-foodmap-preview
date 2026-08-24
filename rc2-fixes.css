@@ -197,7 +197,8 @@ body.modal-open { overflow: hidden !important; overscroll-behavior: none !import
   overflow: hidden;
   padding: 0;
   color: #172330;
-  scroll-snap-align: start;
+  scroll-snap-align: none;
+  scroll-snap-stop: normal;
 }
 .rail-card-open {
   width: 100%;

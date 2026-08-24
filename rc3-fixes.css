@@ -26,7 +26,7 @@
   max-width: 100% !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: none;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-inline: contain;
   touch-action: pan-x pan-y;
