@@ -68,7 +68,19 @@ function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]
 function fxCardPhoto(store){const src=fxPhoto(store);const options={deferred:false};return src?`<img ${photoSourceAttributes(src,options)} alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
 function fxDistance(store){return state.coords&&store.lat!==null&&store.lng!==null?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;}
 
-normalizedStore=function(raw,index){const store=fxOriginalNormalizedStore(raw,index);store.customerVisible=!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(raw.name)!=='제목없음';store.rawIndex=index;return store;};
+normalizedStore=function(raw,index){
+ const store=fxOriginalNormalizedStore(raw,index);
+ // The Yeosu customer catalog must never surface a card that only has menu
+ // photos but no verified way to act on it.  The collector catalog's
+ // channelKeys are the release gate: empty means no order app, telephone, or
+ // trusted place route has survived synchronization yet.  Keep the server
+ // record and menu assets intact for later verification, but hide it from all
+ // customer-facing lists in the meantime.
+ const hasCustomerRoute=FX_REGION.code!=='yeosu'||store.channelKeys.some(Boolean);
+ store.customerVisible=hasCustomerRoute&&!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(raw.name)!=='제목없음';
+ store.rawIndex=index;
+ return store;
+};
 filteredStores=function(){return fxOriginalFilteredStores().filter(fxVisible);};
 appRegisteredStores=function(key){return fxOriginalAppRegisteredStores(key).filter(fxVisible);};
 

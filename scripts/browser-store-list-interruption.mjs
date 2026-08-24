@@ -92,28 +92,27 @@ try {
   }));
   const startedAt = Date.now();
   await grid.evaluate(node => {
-    const bounds = node.getBoundingClientRect();
-    const y = bounds.top + Math.min(120, Math.max(30, bounds.height / 3));
-    const start = new Touch({identifier: 1, target: node, clientX: bounds.right - 36, clientY: y});
-    const end = new Touch({identifier: 1, target: node, clientX: bounds.left + 36, clientY: y});
-    node.dispatchEvent(new TouchEvent('touchstart', {
+    // Native overflow scrolling is performed by the browser compositor, so a
+    // synthetic touchend must not invoke an application-side page jump. Set a
+    // deliberately non-card-aligned position and emit the same interaction
+    // signals the pager observes. The exact offset is also the regression
+    // check that the list stays wherever the customer stops it.
+    node.dispatchEvent(new PointerEvent('pointerdown', {
       bubbles: true,
-      cancelable: true,
-      touches: [start],
-      targetTouches: [start],
-      changedTouches: [start]
+      pointerType: 'touch',
+      isPrimary: true
     }));
-    node.dispatchEvent(new TouchEvent('touchend', {
-      bubbles: true,
-      cancelable: true,
-      touches: [],
-      targetTouches: [],
-      changedTouches: [end]
-    }));
+    node.scrollLeft = Math.min(137, Math.max(0, node.scrollWidth - node.clientWidth));
+    node.dispatchEvent(new Event('scroll'));
   });
   await page.waitForFunction(() => document.querySelector('#storeGrid')?.scrollLeft > 20, null, {timeout: 800});
+  await page.waitForTimeout(60);
   const transitionMs = Date.now() - startedAt;
-  await check(Promise.resolve(transitionMs < 250), '좌우 스와이프 후 다음 가게가 250ms 안에 표시됨', {transitionMs});
+  await check(Promise.resolve(transitionMs < 250), '자유 스크롤 위치가 250ms 안에 반영됨', {transitionMs});
+  await check(page.evaluate(() => {
+    const left = document.querySelector('#storeGrid')?.scrollLeft || 0;
+    return left >= 130 && left <= 144;
+  }), '고객이 멈춘 중간 위치를 카드 끝점으로 자동 고정하지 않음');
   const revealedPage = await page.evaluate(() => ({
     gridTop: document.querySelector('#storeGrid')?.getBoundingClientRect().top ?? -1,
     scrollY: window.scrollY,
