@@ -34,6 +34,10 @@
     '"': '&quot;'
   })[char]);
 
+  const menuCropAuditAttributes = source => /\/assets\/yogiyo-menu\//i.test(String(source || ''))
+    ? ' crossorigin="anonymous" data-photo-crop-audit="yogiyo-menu"'
+    : '';
+
   function storeById(id) {
     if (typeof fxStoreById === 'function') {
       const store = fxStoreById(id);
@@ -67,7 +71,7 @@
     const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
     target.insertAdjacentHTML(topStatus ? 'afterend' : 'beforebegin', `
       <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
-        ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="" data-photo-kind="menu-entry" data-photo-store-id="${escapeMenuHtml(storeId)}">` : ''}
+        ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="" data-photo-kind="menu-entry" data-photo-store-id="${escapeMenuHtml(storeId)}"${menuCropAuditAttributes(entryImage)}>` : ''}
         <span>
           <b>음식보기</b>
           <small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small>

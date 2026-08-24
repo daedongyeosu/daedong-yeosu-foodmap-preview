@@ -11,7 +11,8 @@
       || /^050[2-8]\d{7,8}$/.test(phone)
       || /^01[016789]\d{7,8}$/.test(phone)
       || /^070\d{8}$/.test(phone);
-    if (!validPhone || !String(detail?.address || '').trim()) return false;
+    const explicitlyVerified = detail?.naverMapVerified === true;
+    if ((!validPhone && !explicitlyVerified) || !String(detail?.address || '').trim()) return false;
     try {
       const url = new URL(String(detail?.naverMap || '').trim());
       return ['map.naver.com', 'm.map.naver.com'].includes(url.hostname.toLowerCase())

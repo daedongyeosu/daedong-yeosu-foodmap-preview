@@ -7,6 +7,8 @@ const menu = fs.readFileSync('store-menu-preview.js', 'utf8');
 const service = fs.readFileSync('store-service-info.js', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
 const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
+const rc3 = fs.readFileSync('rc3-fixes.js', 'utf8');
+const regionConfig = fs.readFileSync('region-config.js', 'utf8');
 
 // D-001/D-002: customer home must not expose reviewer tools or a huge aggregate count.
 assert.match(html, /id="collectorReviewEntry"[^>]*hidden/);
@@ -24,7 +26,17 @@ assert.match(app, /openPromoCarouselDetail\(noticePromo\.dataset\.noticePromo\)/
 assert.match(app, /img\[data-photo-crop-audit="yogiyo-menu"\]/);
 assert.match(app, /photoCropAuditAttributes\(photo\.src\)/);
 assert.match(menu, /data-photo-crop-audit="yogiyo-menu"/);
+assert.match(app, /data-photo-kind="menu-entry"[\s\S]*photoCropAuditAttributes\(entryImage\)/);
+assert.match(menu, /data-photo-kind="menu-entry"[\s\S]*menuCropAuditAttributes\(entryImage\)/);
 assert.match(menu, /categoryCandidates\.length > 1 \? categoryCandidates\.slice\(0, 3\) : \[\]/);
+
+// D-014/D-015: Korean region particles must be grammatically correct, and a
+// completed detail response with no route must not pretend to be loading forever.
+assert.match(regionConfig, /function regionWithEulReul\(name\)/);
+assert.match(regionConfig, /regionWithEulReul\(active\.shortName\)/);
+assert.doesNotMatch(regionConfig, /`\$\{active\.shortName\}을 한 번 더 생각해 주세요\.`/);
+assert.match(rc3, /현재 확인된 주문방법이 없습니다\. 정보 수정 요청으로 알려주세요\./);
+assert.doesNotMatch(rc3, /등록된 주문방법을 확인 중입니다\./);
 
 // D-008/D-009/D-010/D-012: every My Page row acts, closing restores Home, and
 // the hidden control cannot retain a stale focus outline.
