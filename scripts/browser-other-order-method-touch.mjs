@@ -157,6 +157,16 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     page.locator('.order-methods-sheet [data-rc3-external-route]').count().then(count => count > 0),
     `${storeName} 실제 등록된 외부 주문앱 선택지 표시`
   );
+  await page.locator('.order-methods-sheet [data-rc3-external-route]').first().evaluate(element => {
+    element.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true, detail: 1, view: window}));
+  });
+  await check(
+    Promise.all([
+      page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
+      page.locator('#modal:not([hidden]) .community-guide').count()
+    ]).then(([visible, guideCount]) => visible && guideCount === 0),
+    `${storeName} 잔여 합성 클릭이 첫 주문앱으로 새지 않음`
+  );
   await page.screenshot({path: screenshotName, fullPage: false});
 
   const externalRoute = page.locator('.order-methods-sheet [data-rc3-external-route="baemin"]');

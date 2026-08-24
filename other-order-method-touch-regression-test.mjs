@@ -24,7 +24,7 @@ assert.match(rc3, /document\.addEventListener\('touchend', rc3OnOrderMethodsTouc
 assert.match(rc3, /document\.elementFromPoint\(touch\.clientX, touch\.clientY\)/, '복귀 뒤 실제 최상단 터치 대상을 다시 확인하지 않습니다.');
 assert.match(rc3, /function rc3MarkOrderMethodsActivation\(storeId\)[\s\S]*?Date\.now\(\) \+ 800/, '터치 직후 새 모달의 주문앱으로 새는 ghost click 차단 시간이 없습니다.');
 assert.match(rc3, /function rc3OrderMethodsGhostActive\(storeId\)[\s\S]*?rc3OrderMethodsGhostClickStoreId/, 'ghost click이 해당 주문방법 버튼에서만 차단되지 않습니다.');
-assert.match(rc3, /function rc3ShouldBlockOrderMethodSelection\(external, event, storeId\)[\s\S]*?rc3OrderMethodsGhostActive\(storeId\)[\s\S]*?rc3SelectionStartedAt[\s\S]*?age < 1200/, '새 선택창으로 새는 합성 클릭은 막고 실제 두 번째 터치는 허용해야 합니다.');
+assert.match(rc3, /function rc3ShouldBlockOrderMethodSelection\(external, event, storeId\)[\s\S]*?Number\(event\?\.detail \|\| 0\) === 0[\s\S]*?rc3SelectionStartedAt[\s\S]*?age < 1200/, '새 선택창으로 새는 합성 클릭은 항상 막고 실제 두 번째 터치와 키보드 선택은 허용해야 합니다.');
 assert.match(rc3, /const external = event\.target\.closest\('\[data-rc3-external-route\]'\);[\s\S]*?rc3ShouldBlockOrderMethodSelection\(external, event, storeId\)[\s\S]*?openCommunityChoice/, '새 선택창의 주문앱 버튼을 열기 전에 잔여 클릭을 차단해야 합니다.');
 assert.match(rc3, /Math\.hypot\([\s\S]*?\) > 10\) state\.moved = true;/, '스크롤 중 잘못 열리는 것을 막는 터치 이동 판정이 없습니다.');
 assert.match(rc3, /const other = event\.target\.closest\('\[data-rc3-other-methods\]'\);[\s\S]*?rc3ActivateOrderMethodsTrigger\(other, event\)/, '클릭·키보드 보조 경로가 해당 가게 주문방법을 열지 않습니다.');
@@ -55,6 +55,8 @@ assert.match(browserCheck, /window\.daedongCatalogReady && typeof window\.daedon
   '카탈로그 준비 Promise가 생기기 전에 검색을 시작하면 안 됩니다.');
 assert.match(browserCheck, /order-methods-sheet[\s\S]*polling: 25, timeout: 3000/,
   '첫 터치 뒤 선택창 렌더링을 실제 DOM 상태로 확인해야 합니다.');
+assert.match(browserCheck, /잔여 합성 클릭이 첫 주문앱으로 새지 않음/,
+  '삼성 인앱 브라우저의 잔여 합성 클릭 재현 검사가 없습니다.');
 assert.match(browserCheck, /console\.log\(JSON\.stringify\(report, null, 2\)\)/,
   '브라우저 실패 원인은 CI 로그에서 바로 확인할 수 있어야 합니다.');
 assert.match(previewWorkflow, /node scripts\/browser-other-order-method-touch\.mjs/, 'PR에서 주문방법 모바일 터치 검사를 실행하지 않습니다.');
@@ -64,6 +66,6 @@ assert.match(html, /app\.js\?v=[^"\n]*other-order-method-touch-1/, 'app.js 캐�
 assert.match(html, /final-experience\.js\?v=[^"\n]*order-methods-return-touch-5/, 'final-experience.js 캐시 갱신 표식이 없습니다.');
 assert.match(finalExperience, /rc3-fixes\.css\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.css 캐시 갱신 표식이 없습니다.');
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.js 캐시 갱신 표식이 없습니다.');
-assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*mobile-order-selection-ghost-1/, '주문방법 잔여 클릭 수정의 캐시 갱신 표식이 없습니다.');
+assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*mobile-order-selection-ghost-2/, '주문방법 잔여 클릭 수정의 캐시 갱신 표식이 없습니다.');
 
 console.log('other-order-method-touch-regression: PASS');
