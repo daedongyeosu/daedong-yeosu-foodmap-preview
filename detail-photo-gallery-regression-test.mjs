@@ -22,8 +22,8 @@ assert.match(app, /this\.listen\(this\.track, 'scroll',[\s\S]*Math\.round\(this\
 assert.match(app, /this\.track\.scrollTo\(\{left, behavior: 'smooth'\}\)/, 'arrows and dots must scroll the native gallery');
 assert.match(app, /start\(\) \{ if \(this\.nativeScroll \|\|/, 'detail galleries must not move automatically while a visitor is viewing them');
 
-assert.match(app, /data-detail-photo-crop-audit="yogiyo-menu"/, 'collected menu photos must opt in to black-band inspection');
-assert.match(app, /function auditDetailPhotoCrop\(image\)[\s\S]*getImageData[\s\S]*detail-photo-auto-cropped/, 'detail photos must inspect and remove a dark top band');
+assert.match(app, /data-photo-crop-audit="yogiyo-menu"/, 'collected menu photos must opt in to shared black-band inspection');
+assert.match(app, /function auditDetailPhotoCrop\(image\)[\s\S]*img\[data-photo-crop-audit="yogiyo-menu"\][\s\S]*getImageData[\s\S]*detail-photo-auto-cropped/, 'all customer photo surfaces must inspect and remove a dark top band');
 assert.match(app, /document\.addEventListener\('load',[\s\S]*auditDetailPhotoCrop/, 'crop inspection must run after each detail photo loads');
 
 assert.match(css, /\.detail-photo-carousel \.detail-photo-native-track\{[^}]*overflow-x:auto[^}]*scroll-snap-type:x mandatory[^}]*touch-action:pan-x pan-y/, 'native gallery CSS must follow horizontal finger movement and snap per photo');

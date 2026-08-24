@@ -7,11 +7,14 @@ const page = fs.readFileSync(new URL('./collector-review.html', import.meta.url)
 const script = fs.readFileSync(new URL('./collector-review.js', import.meta.url), 'utf8');
 const css = fs.readFileSync(new URL('./collector-review-entry.css', import.meta.url), 'utf8');
 
-test('Preview home exposes a Yeosu-only collector review entry without changing store data', () => {
-  assert.match(index, /href="\/collector-review\.html"/);
+test('Preview home keeps the collector review entry hidden unless the explicit reviewer query is present', () => {
+  assert.match(index, /id="collectorReviewEntry"[^>]*href="\/collector-review\.html"[^>]*hidden/);
   assert.match(index, /data-yeosu-only/);
   assert.match(css, /data-region="goheung".*display:none/s);
   assert.doesNotMatch(index, /collector-review.*data-order-key/);
+  const app = fs.readFileSync(new URL('./app.js', import.meta.url), 'utf8');
+  assert.match(app, /get\('collector-review'\) === '1'/);
+  assert.match(app, /collectorEntry\.hidden = false/);
 });
 
 test('Collector review page is explicitly Preview-only and customer-hidden', () => {

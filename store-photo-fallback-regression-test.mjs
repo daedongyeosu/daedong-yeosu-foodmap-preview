@@ -19,7 +19,7 @@ assert.match(app, /store\.__failedPhotoPaths\.add\(photoUrlKey\(image\.currentSr
 assert.match(app, /delete image\.dataset\.photoSrc/);
 assert.match(app, /data-photo-store-id="\$\{escapeHtml\(store\.id\)\}"/);
 assert.match(menu, /data-menu-image-src="\$\{escapeMenuHtml\(item\.image\)\}"[^>]+data-photo-kind="card"/);
-assert.match(menu, /data-photo-kind="detail" data-photo-store-id="\$\{escapeMenuHtml\(store\.id\)\}"/);
+assert.match(menu, /data-photo-kind="detail"[^>]+data-photo-store-id="\$\{escapeMenuHtml\(store\.id\)\}"/);
 assert.match(menu, /data-photo-kind="menu-entry" data-photo-store-id="\$\{escapeMenuHtml\(storeId\)\}"/);
 assert.match(index, /detail-photo-menu-fallback-refresh-1/);
 assert.match(index, /broken-photo-menu-fallback-1/);

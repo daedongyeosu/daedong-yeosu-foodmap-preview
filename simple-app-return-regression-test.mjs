@@ -12,7 +12,7 @@ assert.match(app, /const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartu
 assert.match(app, /function markExternalAppDeparture\(\)[\s\S]*?JSON\.stringify\(\{savedAt: Date\.now\(\)\}\)[\s\S]*?sessionStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, '1'\)[\s\S]*?localStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, payload\)/);
 assert.match(app, /const MOBILE_SAME_TAB_ORDER_KEYS = new Set\(\['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin'\]\)/);
 assert.match(app, /link\?\.dataset\?\.menuOrder[\s\S]*?link\?\.dataset\?\.menuStickyOrder[\s\S]*?link\?\.dataset\?\.menuStickyExternal[\s\S]*?link\?\.dataset\?\.menuExternalKey/);
-assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?markExternalAppDeparture\(\)[\s\S]*?rc2RememberExternalReturn[\s\S]*?window\.location\.assign\(href\)/);
+assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?markExternalAppDeparture\(\)[\s\S]*?rc2RememberExternalReturn[\s\S]*?launchMobileRoute\(mobileOrderRouteKey\(link\), href\)/);
 assert.match(app, /document\.addEventListener\('click', handleMobileOrderLinkClick, true\)/);
 
 assert.match(app, /function isCustomerUsableExternalRoute\(key, value\)/);
@@ -27,7 +27,7 @@ const comparedHandler = rc2.slice(comparedStart, comparedEnd);
 assert.match(comparedHandler, /rc2RememberExternalReturn\(comparedExternal\)/);
 assert.match(comparedHandler, /rc2LaunchComparedExternal\(comparedExternal, href\)/, '저장 후 주문앱별 복귀 방식으로 실행해야 합니다.');
 assert.match(comparedHandler, /event\.preventDefault\(\)[\s\S]*?event\.stopImmediatePropagation\(\)/, '구형 클릭 처리기와 앵커 기본 이동을 막아야 합니다.');
-assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?communityOriginal \|\| ''\) === 'yogiyo'[\s\S]*?window\.location\.assign\(href\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '요기요만 같은 탭, 나머지는 별도 화면이어야 합니다.');
+assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?daedongLaunchMobileRoute[\s\S]*?\['mukkebi', 'ddangyo', 'yogiyo', 'coupang', 'baemin'\][\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '설치된 Android 주문앱은 현재 Preview를 보존하는 패키지 인텐트를 사용해야 합니다.');
 assert.doesNotMatch(comparedHandler, /history\.back/);
 assert.match(rc2, /function rc2RememberExternalReturn\(sourceElement = null\) \{[\s\S]*?daedongMarkExternalAppDeparture/);
 assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key,anchorStoreId=''\)\{[\s\S]*?daedongMarkExternalAppDeparture/);

@@ -17,8 +17,8 @@ assert.match(rc3, /document\.addEventListener\('touchend', rc3OnOrderMethodsTouc
 assert.match(rc3, /document\.elementFromPoint\(touch\.clientX, touch\.clientY\)/, '복귀 뒤 실제 터치 지점의 최상단 버튼을 다시 확인해야 합니다.');
 assert.match(rc3, /window\.addEventListener\('pageshow', rc3ResetOrderMethodsTouchState, true\)/, '외부 앱 복귀 시 남은 포인터·터치 상태를 초기화해야 합니다.');
 assert.match(rc3, /window\.daedongResetOrderMethodsTouchState = rc3ResetOrderMethodsTouchState/, '카카오 네이티브 복귀 재구성 전에 터치 상태를 외부에서 초기화할 수 있어야 합니다.');
-assert.match(app, /function handleKakaoOrderLinkClick\(event\)[\s\S]*?if \(link\?\.matches\('a\[data-community-original\]\[target="_blank"\]'\)\) return;[\s\S]*?window\.location\.assign\(href\)/, '카카오 전용 같은 탭 처리기가 주문 계속 링크를 가로채면 안 됩니다.');
-assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?if \(link\?\.matches\('a\[data-community-original\]\[target="_blank"\]'\)\) return;[\s\S]*?window\.location\.assign\(href\)/, '모바일 공통 같은 탭 처리기가 주문 계속 링크를 가로채면 안 됩니다.');
+assert.match(app, /function handleKakaoOrderLinkClick\(event\)[\s\S]*?if \(link\?\.matches\('a\[data-community-original\]\[target="_blank"\]'\)\) return;[\s\S]*?void launchMobileRoute\(key, href\)/, '카카오 전용 처리기는 비교화면의 주문 계속 링크를 가로채지 않고 앱 패키지 경로를 사용해야 합니다.');
+assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?if \(link\?\.matches\('a\[data-community-original\]\[target="_blank"\]'\)\) return;[\s\S]*?void launchMobileRoute\(mobileOrderRouteKey\(link\), href\)/, '모바일 공통 처리기는 비교화면의 주문 계속 링크를 가로채지 않고 앱 패키지 경로를 사용해야 합니다.');
 assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '복귀 시 같은 가게 상세가 보이면 터치 상태만 비우고 기존 DOM을 유지해야 합니다.');
 const visibleStoreBranch = rc2.slice(rc2.indexOf('if (visibleStoreMatches)'), rc2.indexOf('if (!modal?.hidden)', rc2.indexOf('if (visibleStoreMatches)')));
 assert.doesNotMatch(visibleStoreBranch, /rc2NativeHardClose|openStore\(/, '같은 가게 상세를 복귀 중 닫고 다시 만들면 실제 터치와 경쟁합니다.');
@@ -28,7 +28,7 @@ assert.match(rc2, /window\.addEventListener\('focus', restoreAfterNativeResume\)
 const externalBranch = rc2.slice(rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)'), rc2.indexOf('const externalLink', rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)')));
 assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.assign/, '카카오 WebView 원본 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
 assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?rc2LaunchComparedExternal\(comparedExternal, href\)/, '원본 Preview를 가게 상세로 안정화한 뒤 주문앱별 복귀 방식으로 열어야 합니다.');
-assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?=== 'yogiyo'[\s\S]*?window\.location\.assign\(href\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '요기요는 뒤로가기 기록을 남기고 배민·쿠팡이츠는 원본 Preview와 분리해야 합니다.');
+assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?window\.daedongLaunchMobileRoute[\s\S]*?\['mukkebi', 'ddangyo', 'yogiyo', 'coupang', 'baemin'\]\.includes\(key\)[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '지원 주문앱은 Android 패키지 경로로 열고 알 수 없는 경로만 별도 화면으로 열어야 합니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');
