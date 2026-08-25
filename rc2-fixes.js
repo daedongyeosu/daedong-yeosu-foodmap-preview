@@ -5,6 +5,7 @@ const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json';
 const RC2_EXTERNAL_RETURN = 'daedongExternalReturnRc2';
 const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
+const RC2_RETURN_TOKEN_PARAM = '__ddret';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
 const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
 const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
@@ -42,17 +43,18 @@ function rc2ReadDepartureMarker() {
 }
 
 function rc2ReadReturnState(key) {
-  const sessionSaved = rc2ParseReturnState(sessionStorage, key);
-  if (rc2FreshReturnState(sessionSaved)) return sessionSaved;
-  const persistentSaved = rc2ParseReturnState(localStorage, key);
-  if (!rc2FreshReturnState(persistentSaved)) return null;
-  const marker = rc2ReadDepartureMarker();
-  return persistentSaved.returnToken && (
-    persistentSaved.returnToken === history.state?.[RC2_RETURN_TOKEN_STATE]
-    || persistentSaved.returnToken === marker?.returnToken
-  )
-    ? persistentSaved
-    : null;
+  let urlToken = '';
+  try { urlToken = new URL(location.href).searchParams.get(RC2_RETURN_TOKEN_PARAM) || ''; } catch {}
+  const historyToken = String(history.state?.[RC2_RETURN_TOKEN_STATE] || '');
+  for (const storage of [sessionStorage, localStorage]) {
+    const saved = rc2ParseReturnState(storage, key);
+    const savedToken = String(saved?.returnToken || '');
+    if (
+      rc2FreshReturnState(saved) && savedToken
+      && (savedToken === historyToken || savedToken === urlToken)
+    ) return saved;
+  }
+  return null;
 }
 
 function rc2StoreReturnState(storage, key, payload) {
@@ -74,7 +76,15 @@ function rc2WriteReturnState(key, value) {
     try { sessionStorage.removeItem(storageKey); } catch {}
     try { localStorage.removeItem(storageKey); } catch {}
   }
-  try { history.replaceState({...history.state, [RC2_RETURN_TOKEN_STATE]: returnToken}, ''); } catch {}
+  try {
+    const returnUrl = new URL(location.href);
+    returnUrl.searchParams.set(RC2_RETURN_TOKEN_PARAM, returnToken);
+    history.replaceState(
+      {...history.state, [RC2_RETURN_TOKEN_STATE]: returnToken},
+      '',
+      `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}`
+    );
+  } catch {}
   rc2StoreReturnState(sessionStorage, key, payload);
   rc2StoreReturnState(localStorage, key, payload);
   const departureMarker = {returnToken, savedAt: payload.savedAt};
@@ -92,11 +102,20 @@ function rc2ClearReturnState(key, saved = null) {
     try { sessionStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
     try { localStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
   }
-  if (!token || history.state?.[RC2_RETURN_TOKEN_STATE] !== token) return;
+  let urlToken = '';
+  let returnUrl = null;
+  try {
+    returnUrl = new URL(location.href);
+    urlToken = returnUrl.searchParams.get(RC2_RETURN_TOKEN_PARAM) || '';
+  } catch {}
+  const historyMatches = Boolean(token && history.state?.[RC2_RETURN_TOKEN_STATE] === token);
+  const urlMatches = Boolean(token && urlToken === token);
+  if (!historyMatches && !urlMatches) return;
   try {
     const next = {...history.state};
     delete next[RC2_RETURN_TOKEN_STATE];
-    history.replaceState(next, '');
+    if (urlMatches) returnUrl.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
+    history.replaceState(next, '', returnUrl ? `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}` : undefined);
   } catch {}
 }
 
