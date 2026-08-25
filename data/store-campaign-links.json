@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "baseUrl": "https://daedongmap.com/",
+  "campaigns": [
+    {
+      "storeId": "67a9e4f14c8c7ea4",
+      "name": "손수김밥 양지점",
+      "url": "https://daedongmap.com/?hero=67a9e4f14c8c7ea4",
+      "previewUrl": "https://preview.daedongmap.com/?hero=67a9e4f14c8c7ea4",
+      "qrAsset": "assets/qr/sonsugimbap-yangji.svg"
+    },
+    {
+      "storeId": "cfde2617224f33a0",
+      "name": "콩산소 음식연구소",
+      "url": "https://daedongmap.com/?hero=cfde2617224f33a0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=cfde2617224f33a0",
+      "qrAsset": "assets/qr/kongsanso-food-lab.svg"
+    },
+    {
+      "storeId": "421ecef35a879687",
+      "name": "탐나는피자 여수점",
+      "url": "https://daedongmap.com/?hero=421ecef35a879687",
+      "previewUrl": "https://preview.daedongmap.com/?hero=421ecef35a879687",
+      "qrAsset": "assets/qr/tamnaneun-pizza-yeosu.svg"
+    },
+    {
+      "storeId": "068b2ae8fe32874a",
+      "name": "1인피자 피자먹다 여수여서점",
+      "url": "https://daedongmap.com/?hero=068b2ae8fe32874a",
+      "previewUrl": "https://preview.daedongmap.com/?hero=068b2ae8fe32874a",
+      "qrAsset": "assets/qr/eat-pizza-yeosu-yeoseo.svg"
+    },
+    {
+      "storeId": "0abd7147b7d6b1dd",
+      "name": "비비큐 미평둔덕점",
+      "url": "https://daedongmap.com/?hero=0abd7147b7d6b1dd",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0abd7147b7d6b1dd",
+      "qrAsset": "assets/qr/bbq-mipyeong-dundeok.svg"
+    },
+    {
+      "storeId": "f8a71a5a2344ee7f",
+      "name": "프랭크버거 미평점",
+      "url": "https://daedongmap.com/?hero=f8a71a5a2344ee7f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f8a71a5a2344ee7f",
+      "qrAsset": "assets/qr/frank-burger-mipyeong.svg"
+    },
+    {
+      "storeId": "fb798d3119a28415",
+      "name": "60계치킨 여수미평점",
+      "url": "https://daedongmap.com/?hero=fb798d3119a28415",
+      "previewUrl": "https://preview.daedongmap.com/?hero=fb798d3119a28415",
+      "qrAsset": "assets/qr/60chicken-yeosu-mipyeong.svg"
+    },
+    {
+      "storeId": "a089d1d54720b48e",
+      "name": "외계인피자 여수점",
+      "url": "https://daedongmap.com/?hero=a089d1d54720b48e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a089d1d54720b48e",
+      "qrAsset": "assets/qr/alien-pizza-yeosu.svg"
+    },
+    {
+      "storeId": "aa0a00258c22f377",
+      "name": "뽕뜨락피자 여수여서점",
+      "url": "https://daedongmap.com/?hero=aa0a00258c22f377",
+      "previewUrl": "https://preview.daedongmap.com/?hero=aa0a00258c22f377",
+      "qrAsset": "assets/qr/ppongtteurak-pizza-yeosu-yeoseo.svg"
+    }
+  ]
+}

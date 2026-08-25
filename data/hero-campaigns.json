@@ -34,6 +34,113 @@
         13
       ]
     },
+    "421ecef35a879687": {
+      "storeId": "421ecef35a879687",
+      "slug": "tamnaneun-pizza-yeosu",
+      "label": "탐나는피자 여수점 전용 대동여수음식지도",
+      "title": "탐나는피자 여수점",
+      "meta": "문수동 · 피자",
+      "images": [
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/727782359dedf9c87870.webp",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/40d8caaf14e6c6cedbac.webp",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/dd59df14bf58936ae2e1.webp",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/13453ed634accd984d6e.webp",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/69cf23cd284a756817ad.webp",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/853ea1801d96ed5fc802.webp"
+      ],
+      "copySlides": [1]
+    },
+    "068b2ae8fe32874a": {
+      "storeId": "068b2ae8fe32874a",
+      "slug": "eat-pizza-yeosu-yeoseo",
+      "label": "1인피자 피자먹다 여수여서점 전용 대동여수음식지도",
+      "title": "1인피자 피자먹다 여수여서점",
+      "meta": "여서동 · 1인 피자",
+      "images": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/cd8afe10-0a22-4aa5-871d-f4fe518a8876.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0ed128cb-dc47-4c6c-b0aa-02c2cffd85cd.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8bc7ed0e-6a0d-44b8-9457-5ba715c0154c.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bc7ebe62-e2a9-41b5-b295-aa032cd3fa2e.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a2fc71e3-6606-45de-9f34-16d369734a3b.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/abe8351c-22e9-4321-bcd8-89ad277e3274.jpg"
+      ],
+      "copySlides": [1]
+    },
+    "0abd7147b7d6b1dd": {
+      "storeId": "0abd7147b7d6b1dd",
+      "slug": "bbq-mipyeong-dundeok",
+      "label": "비비큐 미평둔덕점 전용 대동여수음식지도",
+      "title": "비비큐 미평둔덕점",
+      "meta": "미평·둔덕 · 치킨",
+      "images": [
+        "assets/store-photos/0abd7147b7d6b1dd/01.jpg"
+      ],
+      "copySlides": [1]
+    },
+    "f8a71a5a2344ee7f": {
+      "storeId": "f8a71a5a2344ee7f",
+      "slug": "frank-burger-mipyeong",
+      "label": "프랭크버거 미평점 전용 대동여수음식지도",
+      "title": "프랭크버거 미평점",
+      "meta": "미평·둔덕 · 수제버거",
+      "images": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/cad7a29f-3c19-4fee-bfe1-c54f712f37d8.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/7d062453-f07d-4f03-9195-7594fa2b6240.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/01555070-96b7-4adc-b620-c5fe8c4482af.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/09/89537722-45cc-4836-92e2-417e088b025b.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/c2bbbec2-19c9-4ba0-ae72-e2fd1c03804d.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/07/ef9d90ae-6ef4-4e10-b45a-b39ded0b592e.jpg"
+      ],
+      "copySlides": [1]
+    },
+    "fb798d3119a28415": {
+      "storeId": "fb798d3119a28415",
+      "slug": "60chicken-yeosu-mipyeong",
+      "label": "60계치킨 여수미평점 전용 대동여수음식지도",
+      "title": "60계치킨 여수미평점",
+      "meta": "미평동 · 치킨",
+      "images": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/05/e352255f-2895-4987-b541-0357eada7556.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/04/b1a6247f-c3c0-490c-8618-87724894289f.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/2a207038-3c11-4343-bc3e-d28c9b18bc1b.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/bffdf7be-bfe3-42e6-a618-12455e864878.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/0352994c-efce-42b7-88d4-e4a673beadbe.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/cb58dfd6-6c35-491f-9c65-9c7925c8c616.jpg"
+      ],
+      "copySlides": [1]
+    },
+    "a089d1d54720b48e": {
+      "storeId": "a089d1d54720b48e",
+      "slug": "alien-pizza-yeosu",
+      "label": "외계인피자 여수점 전용 대동여수음식지도",
+      "title": "외계인피자 여수점",
+      "meta": "문수동 · 피자·스파게티",
+      "images": [
+        "store-menu-content/a089d1d54720b48e/main.jpg",
+        "store-menu-content/a089d1d54720b48e/corn-cheese.jpg",
+        "store-menu-content/a089d1d54720b48e/cheese.jpg",
+        "store-menu-content/a089d1d54720b48e/pepperoni.jpg",
+        "store-menu-content/a089d1d54720b48e/half-half.jpg",
+        "store-menu-content/a089d1d54720b48e/four-flavor.jpg"
+      ],
+      "copySlides": [1]
+    },
+    "aa0a00258c22f377": {
+      "storeId": "aa0a00258c22f377",
+      "slug": "ppongtteurak-pizza-yeosu-yeoseo",
+      "label": "뽕뜨락피자 여수여서점 전용 대동여수음식지도",
+      "title": "뽕뜨락피자 여수여서점",
+      "meta": "여서동 · 피자",
+      "images": [
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/b24e7113-2db2-4469-8f60-329a861bc701.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/36fb8719-b7f5-4623-b2f4-7d99facbceb1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/5a6c6090-c9d8-4e1d-a7fb-8d80b830e3ea.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e823d685-dc6d-4765-b4f8-5bfbf0e05fd4.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/11/8d37adac-d479-4d66-8468-63ca47ec95d1.jpg",
+        "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/d45493ff-09de-4611-bb38-6fb54ff757b6.jpg"
+      ],
+      "copySlides": [1]
+    },
     "cfde2617224f33a0": {
       "storeId": "cfde2617224f33a0",
       "slug": "kongsanso-store-family",
