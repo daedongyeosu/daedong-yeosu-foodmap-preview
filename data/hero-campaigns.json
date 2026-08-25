@@ -144,15 +144,15 @@
     "cfde2617224f33a0": {
       "storeId": "cfde2617224f33a0",
       "slug": "kongsanso-store-family",
-      "label": "콩산소 전용 대동여수음식지도",
-      "title": "콩산소",
-      "meta": "문수동 · 음식 연구소",
+      "label": "콩산소 (음식 연구소) 전용 대동여수음식지도",
+      "title": "콩산소 (음식 연구소)",
+      "meta": "여서동 · 고기/구이",
       "slides": [
         {
           "storeId": "cfde2617224f33a0",
           "image": "assets/campaigns/kongsanso-family/kongsanso/01-family-menu.webp",
-          "title": "콩산소",
-          "meta": "문수동 · 음식 연구소"
+          "title": "콩산소 (음식 연구소)",
+          "meta": "여서동 · 고기/구이"
         },
         {
           "storeId": "1d691d8e74499d31",
