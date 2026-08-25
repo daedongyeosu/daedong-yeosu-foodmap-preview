@@ -8,10 +8,13 @@ const service = fs.readFileSync('store-service-info.js', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
 const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
 
-// D-001/D-002: customer home must not expose reviewer tools or a huge aggregate count.
+// D-001/D-002: customer home hides the total catalog count while preserving the
+// useful, time-sensitive count of stores that are currently open.
 assert.match(html, /id="collectorReviewEntry"[^>]*hidden/);
 assert.match(app, /get\('collector-review'\) === '1'/);
-assert.doesNotMatch(service, /data-store-finder-open-count/);
+assert.match(service, /data-store-finder-open-count/);
+assert.match(service, /const nextCount = countReady \? String\(count\) : loadFailed \? '다시 확인' : '확인 중'/);
+assert.doesNotMatch(service, /data-store-finder-total-count/);
 
 // D-003: the badge and the actionable notice rows share one PROMOS source of truth.
 assert.match(html, /data-notice-count hidden/);

@@ -1080,6 +1080,11 @@ body.store-service-overview-open {
     font-size: 11px;
   }
 
+  .store-finder-quick nav button:first-child {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
   .store-service-card-meta {
     gap: 4px;
   }
