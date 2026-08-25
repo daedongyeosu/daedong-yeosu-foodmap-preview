@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from 'node:fs';
 
 const expected = [
   ['67a9e4f14c8c7ea4', '손수김밥 양지점'],
-  ['cfde2617224f33a0', '콩산소 음식연구소'],
+  ['cfde2617224f33a0', '콩산소 (음식 연구소)'],
   ['421ecef35a879687', '탐나는피자 여수점'],
   ['068b2ae8fe32874a', '1인피자 피자먹다 여수여서점'],
   ['0abd7147b7d6b1dd', '비비큐 미평둔덕점'],
@@ -52,8 +52,8 @@ for (const campaign of Object.values(heroData.campaigns)) {
   }
 }
 
-assert.match(rc6, /hero-campaigns\.json\?v=store-campaign-nine-1/, 'The hero campaign data cache must be refreshed.');
-assert.match(loader, /rc6-fixes\.js\?v=[^'\n]*store-campaign-nine-1/, 'The RC6 script cache must be refreshed.');
-assert.match(index, /final-experience\.js\?v=[^"\n]*store-campaign-nine-1/, 'The final loader cache must be refreshed.');
+assert.match(rc6, /hero-campaigns\.json\?v=store-campaign-nine-2/, 'The hero campaign data cache must be refreshed.');
+assert.match(loader, /rc6-fixes\.js\?v=[^'\n]*store-campaign-nine-2/, 'The RC6 script cache must be refreshed.');
+assert.match(index, /final-experience\.js\?v=[^"\n]*store-campaign-nine-2/, 'The final loader cache must be refreshed.');
 
 console.log('store-campaign-nine-regression-test: pass');
