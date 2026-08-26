@@ -48,6 +48,7 @@
 
   function customerAlreadyInteracted() {
     return customerInteracted ||
+      window.daedongEarlyHomeInteraction === true ||
       window.daedongHasHomeInteraction?.() === true ||
       Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16;
   }
@@ -63,7 +64,12 @@
     if (new URLSearchParams(location.search).has('store')) return false;
     const modal = document.getElementById('modal');
     const startupAd = document.getElementById('startupAd');
-    return (communityIntro?.hidden ?? true) && (modal?.hidden ?? true) && (startupAd?.hidden ?? true);
+    const serviceOverview = document.querySelector('[data-store-service-overview-overlay]');
+    return (communityIntro?.hidden ?? true) &&
+      (modal?.hidden ?? true) &&
+      (startupAd?.hidden ?? true) &&
+      (serviceOverview?.hidden ?? true) &&
+      !document.body.classList.contains('store-service-overview-open');
   }
 
   function openEvent() {

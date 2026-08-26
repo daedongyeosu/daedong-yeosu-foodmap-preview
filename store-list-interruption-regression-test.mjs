@@ -61,9 +61,9 @@ assert.match(experience, /root\.replaceChildren\(\.\.\.staging\.childNodes\)/,
 
 assert.match(html, /store-list-horizontal-pager\.css\?v=visible-results-1-free-scroll-1/);
 assert.match(html, /id="storePagerStatus"[^>]*aria-live="polite"/);
-assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-free-scroll-1/);
+assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-free-scroll-1-early-interaction-1/);
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*no-late-interrupt-1/);
-assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-2-scroll-cancel-1/);
+assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-3-scroll-cancel-1-layer-guard-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*list-position-stable-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*atomic-rail-refresh-1/);
 
