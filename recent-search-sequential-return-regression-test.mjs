@@ -29,7 +29,7 @@ assert.match(app, /sessionStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, '1'\)/,
 assert.match(app, /localStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, payload\)/,
   '안드로이드가 페이지를 재생성해도 출발 증거가 남아야 합니다.');
 assert.match(rc2, /function rc2ReadDepartureMarker\(\)/);
-assert.match(rc2, /savedToken === historyToken \|\| savedToken === urlToken/);
+assert.match(rc2, /savedToken === historyToken[\s\S]*?savedToken === urlToken[\s\S]*?savedToken === departureToken/);
 assert.match(rc2, /returnUrl\.searchParams\.set\(RC2_RETURN_TOKEN_PARAM, returnToken\)/);
 assert.match(rc2, /const departureMarker = \{returnToken, savedAt: payload\.savedAt\}/);
 assert.match(rc2, /searchState: window\.daedongStoreServiceInfo\?\.captureSearchState\?\.\(\) \|\| null/);
@@ -57,7 +57,11 @@ function bootWithUrlToken(urlToken) {
       return null;
     }, removeItem() {}},
     history: {state: null, replaceState() {}},
-    window: {}, URL, String, Date, JSON
+    window: {}, URL, String, Date, JSON,
+    performance: {
+      getEntriesByType(type) { return type === 'navigation' ? [{type: 'navigate'}] : []; },
+      navigation: {type: 0}
+    }
   };
   vm.createContext(context);
   vm.runInContext(bootScript, context);

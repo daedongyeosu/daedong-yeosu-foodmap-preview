@@ -20,7 +20,7 @@ function makeStorage(initial = {}) {
   };
 }
 
-function runBoot({href = 'https://preview.daedongmap.com/', historyState = null, session = {}, local = {}} = {}) {
+function runBoot({href = 'https://preview.daedongmap.com/', historyState = null, session = {}, local = {}, navigationType = 'navigate'} = {}) {
   const classes = new Set();
   const replaced = [];
   const sessionStorage = makeStorage(session);
@@ -42,7 +42,11 @@ function runBoot({href = 'https://preview.daedongmap.com/', historyState = null,
     URL,
     String,
     Date,
-    JSON
+    JSON,
+    performance: {
+      getEntriesByType(type) { return type === 'navigation' ? [{type: navigationType}] : []; },
+      navigation: {type: navigationType === 'back_forward' ? 2 : 0}
+    }
   };
   vm.createContext(context);
   vm.runInContext(bootScript, context);
@@ -66,6 +70,16 @@ assert.equal(freshKakao.sessionStorage.has('daedongExternalReturnRc2'), false,
   '새 방문에서 세션 복귀 기록을 지워 이후의 잘못된 중간 화면 복원을 막아야 합니다.');
 assert.equal(freshKakao.localStorage.has('daedongExternalAppDepartureV1'), false,
   '새 방문에서 과거 주문앱 출발 표식을 지워야 합니다.');
+
+const cleanBackForwardReturn = runBoot({
+  navigationType: 'back_forward',
+  session: {
+    daedongExternalReturnRc2: saved,
+    daedongExternalAppDepartureV1: marker
+  }
+});
+assert.equal(cleanBackForwardReturn.classes.has('daedong-external-return-pending'), true,
+  '카카오가 URL 토큰을 버려도 실제 뒤로가기 재진입과 정확한 출발 표식이 함께 맞으면 복원해야 합니다.');
 
 const urlReturn = runBoot({
   href: 'https://preview.daedongmap.com/?__ddret=return-token-1',
@@ -103,8 +117,8 @@ assert.match(app, /resetFreshEntryScroll\(\{force: true\}\)/,
 assert.match(rc2, /const RC2_RETURN_TOKEN_PARAM = '__ddret'/);
 assert.match(rc2, /returnUrl\.searchParams\.set\(RC2_RETURN_TOKEN_PARAM, returnToken\)/,
   '주문앱 출발 전에 같은 화면에만 일회용 복귀표식을 기록해야 합니다.');
-assert.match(rc2, /savedToken === historyToken \|\| savedToken === urlToken/,
-  '저장소에 값이 있다는 이유만으로 복귀하지 말고 현재 화면 표식도 일치해야 합니다.');
+assert.match(rc2, /savedToken === historyToken[\s\S]*?savedToken === urlToken[\s\S]*?savedToken === departureToken/,
+  '저장소에 값이 있다는 이유만으로 복귀하지 말고 URL·history 또는 실제 뒤로가기 출발 표식이 일치해야 합니다.');
 assert.doesNotMatch(rc2, /if \(rc2FreshReturnState\(sessionSaved\)\) return sessionSaved/,
   '과거 세션 값만으로 카카오톡 새 방문을 중간 위치로 보내면 안 됩니다.');
 assert.match(html, /final-experience\.js\?v=[^"\n]*kakao-fresh-entry-token-1/);

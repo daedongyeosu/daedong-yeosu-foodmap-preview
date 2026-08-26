@@ -41,19 +41,30 @@ const context = await browser.newContext({
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
   window.__kakaoReturnEvents = [];
+  // Force a real cross-document back-forward reload instead of BFCache so the
+  // early boot script is exercised exactly as it is in Kakao's WebView.
+  window.addEventListener('unload', () => {});
   // Chromium cannot launch an Android intent in CI. Intercept the same detail
   // route before the production handler, save the production return state, and
   // navigate to the HTTP fallback page that Kakao leaves in its own history.
-  document.addEventListener('click', event => {
+  document.addEventListener('click', async event => {
     const link = event.target instanceof Element
       ? event.target.closest('a[data-route-key="mukkebi"]')
       : null;
     if (!link || typeof window.rc2RememberExternalReturn !== 'function') return;
     event.preventDefault();
     event.stopImmediatePropagation();
+    const cleanReturnHref = location.href;
     window.markExternalAppDeparture?.();
     window.rc2RememberExternalReturn();
     sessionStorage.setItem('__kakaoGuardHref', location.href);
+    // Real Kakao discards the page's replaceState/pushState URL changes when
+    // it hands the intent to an app. Recreate that native behavior: return to
+    // the lower entry, strip its JS token, then replace it with the fallback.
+    const returnedToLowerEntry = new Promise(resolve => window.addEventListener('popstate', resolve, {once: true}));
+    history.back();
+    await returnedToLowerEntry;
+    history.replaceState({}, '', cleanReturnHref);
     window.location.replace(link.href);
   }, true);
   for (const type of ['pagehide', 'pageshow', 'popstate', 'focus', 'blur']) {
@@ -103,6 +114,7 @@ try {
   report.events = await page.evaluate(() => window.__kakaoReturnEvents || []);
   const guardedHref = await page.evaluate(() => sessionStorage.getItem('__kakaoGuardHref') || '');
   await check(Promise.resolve(new URL(guardedHref).searchParams.has('__ddguard')), 'Android 보호 기록의 주소가 실제 복귀 주소와 구분됨');
+  await check(Promise.resolve(!new URL(page.url()).searchParams.has('__ddret')), '카카오가 토큰 URL을 버린 실제 깨끗한 주소로 뒤로옴');
   await check(detail.isVisible(), '먹깨비 중간 웹페이지에서 뒤로 왔을 때 원래 가게 상세 유지');
   report.success = report.errors.length === 0;
 } catch (error) {

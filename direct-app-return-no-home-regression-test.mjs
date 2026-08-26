@@ -17,7 +17,7 @@ assert.match(html, /\['daedongAppBrowserReturnV1', 'key'\]/);
 assert.match(html, /window\.daedongFinishExternalReturnBoot/);
 assert.doesNotMatch(html, /window\.setTimeout\(window\.daedongFinishExternalReturnBoot, 2500\)/);
 assert.match(html, /storage\.getItem\(key\)/);
-assert.match(html, /savedToken === historyToken \|\| savedToken === urlToken/);
+assert.match(html, /savedToken === historyToken[\s\S]*?savedToken === urlToken[\s\S]*?hasMatchingDepartureMarker\(savedToken\)/);
 
 const bootScript = html.match(/<script>\s*([\s\S]*?daedongFinishExternalReturnBoot[\s\S]*?)<\/script>/)?.[1] || '';
 assert.ok(bootScript, '복귀 첫 화면 스크립트를 찾아야 합니다.');
@@ -37,7 +37,11 @@ const context = {
   URL,
   String,
   Date,
-  JSON
+  JSON,
+  performance: {
+    getEntriesByType(type) { return type === 'navigation' ? [{type: 'navigate'}] : []; },
+    navigation: {type: 0}
+  }
 };
 vm.createContext(context);
 vm.runInContext(bootScript, context);

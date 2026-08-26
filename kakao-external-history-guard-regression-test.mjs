@@ -9,6 +9,14 @@ const browserTest = fs.readFileSync('scripts/browser-kakao-cross-document-return
 assert.match(rc2, /const RC2_RETURN_GUARD_STATE = 'daedongExternalReturnGuard'/);
 assert.match(rc2, /const RC2_RETURN_GUARD_PARAM = '__ddguard'/);
 assert.match(rc2, /const RC2_NEEDS_EXTERNAL_HISTORY_GUARD = \/Android\/i/);
+assert.match(rc2, /navigationEntry\?\.type === 'back_forward'/);
+assert.match(
+  rc2,
+  /savedToken === historyToken[\s\S]*?savedToken === urlToken[\s\S]*?savedToken === departureToken/,
+  '카카오가 JS 기록을 버려도 뒤로가기 재진입과 정확한 출발 토큰이 함께 맞으면 복원해야 합니다.'
+);
+assert.match(html, /const historyReentry = navigationEntry\?\.type === 'back_forward'/);
+assert.match(html, /hasMatchingDepartureMarker\(savedToken\)/);
 assert.match(
   rc2,
   /history\.replaceState\([\s\S]*?if \(RC2_NEEDS_EXTERNAL_HISTORY_GUARD\) \{[\s\S]*?guardUrl\.searchParams\.set\(RC2_RETURN_GUARD_PARAM, returnToken\)[\s\S]*?history\.pushState\([\s\S]*?RC2_RETURN_GUARD_STATE/,
@@ -25,8 +33,9 @@ assert.match(
   '외부 앱에서 직접 복귀한 경우 일회용 보호 주소도 제거해야 합니다.'
 );
 assert.match(browserTest, /window\.location\.replace\(link\.href\)/);
+assert.match(browserTest, /history\.replaceState\(\{\}, '', cleanReturnHref\)/);
 assert.match(browserTest, /원래 가게 상세 유지/);
-assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*android-distinct-history-guard-1/);
-assert.match(html, /final-experience\.js\?v=[^"\n]*android-distinct-history-guard-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*back-forward-departure-marker-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*back-forward-departure-marker-1/);
 
 console.log('kakao-external-history-guard-regression-test: pass');
