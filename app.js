@@ -25,6 +25,35 @@ if (
   window.addEventListener('pageshow', resetFreshEntryScroll, {once: true});
 }
 
+// Chrome can reuse an already-running installed PWA when its launcher icon is
+// tapped. A same-URL navigation does not necessarily rerun the page, so consume
+// the launch event explicitly. Long-lived clients reload once to refresh the
+// catalog and service state; the session marker prevents a reload loop.
+const DAEDONG_LAUNCH_RELOAD_MARKER = 'daedong-installed-launch-reloaded';
+const DAEDONG_APP_BOOT_AT = typeof performance !== 'undefined' ? performance.now() : 0;
+let daedongLaunchReloadComplete = false;
+try {
+  daedongLaunchReloadComplete = sessionStorage.getItem(DAEDONG_LAUNCH_RELOAD_MARKER) === '1';
+  if (daedongLaunchReloadComplete) sessionStorage.removeItem(DAEDONG_LAUNCH_RELOAD_MARKER);
+} catch {}
+
+function resetInstalledAppLaunch() {
+  if (globalThis.daedongPendingExternalReturn) return;
+  const clientAge = typeof performance !== 'undefined' ? performance.now() - DAEDONG_APP_BOOT_AT : 0;
+  if (!daedongLaunchReloadComplete && clientAge > 1500) {
+    try { sessionStorage.setItem(DAEDONG_LAUNCH_RELOAD_MARKER, '1'); } catch {}
+    location.reload();
+    return;
+  }
+  resetFreshEntryScroll();
+  requestAnimationFrame(resetFreshEntryScroll);
+  window.setTimeout(resetFreshEntryScroll, 120);
+}
+
+if (typeof window !== 'undefined' && typeof window.launchQueue?.setConsumer === 'function') {
+  window.launchQueue.setConsumer(resetInstalledAppLaunch);
+}
+
 const DAEDONG_TAP_MOVE_TOLERANCE = 10;
 const DAEDONG_TAP_DEDUPE_WINDOW_MS = 80;
 const DAEDONG_TAP_GHOST_WINDOW_MS = 700;
