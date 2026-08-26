@@ -18,6 +18,8 @@
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
   let opened = false;
+  let customerInteracted = false;
+  let initialOpenTimer = 0;
 
   if (!eventLayer) return;
 
@@ -45,7 +47,15 @@
   }
 
   function customerAlreadyInteracted() {
-    return window.daedongHasHomeInteraction?.() === true;
+    return customerInteracted ||
+      window.daedongHasHomeInteraction?.() === true ||
+      Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16;
+  }
+
+  function markCustomerInteraction() {
+    customerInteracted = true;
+    window.clearTimeout(initialOpenTimer);
+    initialOpenTimer = 0;
   }
 
   function canOpen() {
@@ -76,9 +86,22 @@
     closeEvent();
   }
 
-  function waitUntilExistingPopupCloses() {
-    if (canOpen()) window.setTimeout(openEvent, 0);
+  function scheduleInitialOpen() {
+    window.clearTimeout(initialOpenTimer);
+    initialOpenTimer = window.setTimeout(() => {
+      initialOpenTimer = 0;
+      openEvent();
+    }, 600);
   }
+
+  for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) {
+    document.addEventListener(type, markCustomerInteraction, {capture:true, passive:true, once:true});
+  }
+  window.addEventListener('scroll', () => {
+    if (Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16) {
+      markCustomerInteraction();
+    }
+  }, {passive:true});
 
   if (typeof window.installDaedongTapAction === 'function') {
     window.installDaedongTapAction({
@@ -106,14 +129,9 @@
     if (event.key === 'Escape' && !eventLayer.hidden) closeEvent();
   });
 
-  const observer = new MutationObserver(waitUntilExistingPopupCloses);
-  for (const layer of [communityIntro, document.getElementById('modal'), document.getElementById('startupAd')]) {
-    if (layer) observer.observe(layer, {attributes:true, attributeFilter:['hidden']});
-  }
-
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => window.setTimeout(waitUntilExistingPopupCloses, 0), {once:true});
+    document.addEventListener('DOMContentLoaded', scheduleInitialOpen, {once:true});
   } else {
-    window.setTimeout(waitUntilExistingPopupCloses, 0);
+    scheduleInitialOpen();
   }
 })();

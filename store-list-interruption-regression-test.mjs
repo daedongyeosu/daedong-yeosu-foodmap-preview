@@ -44,8 +44,9 @@ assert.match(intro, /window\.setTimeout\(waitForClearHome, 0\)/,
   '첫 안내는 사용자가 목록을 보기 시작한 뒤 늦게 나타나면 안 됩니다.');
 assert.doesNotMatch(intro, /setTimeout\(waitForClearHome, 900\)|\}, 320\);/);
 assert.match(event, /customerAlreadyInteracted\(\)/);
-assert.match(event, /window\.setTimeout\(openEvent, 0\)/);
-assert.doesNotMatch(event, /setTimeout\(openEvent, 220\)|waitUntilExistingPopupCloses, 1100/,
+assert.match(event, /function markCustomerInteraction\(\)[\s\S]*clearTimeout\(initialOpenTimer\)/);
+assert.match(event, /window\.addEventListener\('scroll'/);
+assert.doesNotMatch(event, /waitUntilExistingPopupCloses|new MutationObserver/,
   '행사창은 사용 중인 목록 위에 뒤늦게 나타나면 안 됩니다.');
 
 assert.match(ranking, /preservePager=window\.daedongHasHomeInteraction\?\.\(\)===true/);
@@ -62,7 +63,7 @@ assert.match(html, /store-list-horizontal-pager\.css\?v=visible-results-1-free-s
 assert.match(html, /id="storePagerStatus"[^>]*aria-live="polite"/);
 assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-free-scroll-1/);
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*no-late-interrupt-1/);
-assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-1/);
+assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-2-scroll-cancel-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*list-position-stable-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*atomic-rail-refresh-1/);
 
