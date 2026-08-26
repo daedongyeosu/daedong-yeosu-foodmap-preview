@@ -138,7 +138,11 @@ try {
       && !state.departureSession && !state.departureLocal
       && !state.durableCookie && !state.returnParam && !state.guardParam
   )), '새 접속 직후 가게카드를 눌러도 지연 복귀 상태가 홈으로 덮어쓰지 않음');
-  await page.locator('.modal-close').tap();
+  // This close only resets the fixture before the paging checks. A synthetic
+  // tap can be swallowed by Chromium's emulated touch pipeline, so invoke the
+  // already-covered close handler directly and keep this test focused on the
+  // store-card/home-reset race.
+  await page.evaluate(() => document.querySelector('.modal-close')?.click());
   await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true);
 
   await page.evaluate(() => {
