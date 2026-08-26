@@ -7,10 +7,11 @@ const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
 const RC2_RETURN_GUARD_STATE = 'daedongExternalReturnGuard';
 const RC2_RETURN_TOKEN_PARAM = '__ddret';
+const RC2_RETURN_GUARD_PARAM = '__ddguard';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
 const RC2_FOCUS_ONLY_RETURN_DELAY_MS = 650;
 const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
-const RC2_IS_KAKAO_WEBVIEW = /KAKAOTALK/i.test(String(navigator.userAgent || ''));
+const RC2_NEEDS_EXTERNAL_HISTORY_GUARD = /Android/i.test(String(navigator.userAgent || ''));
 const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
 const RC2_REGION = window.DAEDONG_REGION || {shortName: '여수', mapName: '대동여수음식지도'};
 const RC2_REGION_NAME = RC2_REGION.shortName || '여수';
@@ -98,16 +99,18 @@ function rc2WriteReturnState(key, value) {
       '',
       protectedUrl
     );
-    // Kakao's Android WebView can replace the current preview history entry
+    // Android in-app browsers can replace the current preview history entry
     // with an order app's HTTP fallback page while resolving an intent. Keep a
-    // second, sacrificial entry above the real return entry: whether Kakao
-    // appends or replaces the fallback, Back still reaches a tokened preview
-    // entry instead of the older home-only entry.
-    if (RC2_IS_KAKAO_WEBVIEW) {
+    // visibly distinct, sacrificial entry above the real return entry. Kakao
+    // can collapse same-URL pushState entries, so the guard must have its own
+    // one-shot URL as well as its own state marker.
+    if (RC2_NEEDS_EXTERNAL_HISTORY_GUARD) {
+      const guardUrl = new URL(returnUrl.href);
+      guardUrl.searchParams.set(RC2_RETURN_GUARD_PARAM, returnToken);
       history.pushState(
         {...protectedState, [RC2_RETURN_GUARD_STATE]: returnToken},
         '',
-        protectedUrl
+        `${guardUrl.pathname}${guardUrl.search}${guardUrl.hash}`
       );
     }
   } catch {}
@@ -130,19 +133,23 @@ function rc2ClearReturnState(key, saved = null) {
     try { localStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
   }
   let urlToken = '';
+  let guardToken = '';
   let returnUrl = null;
   try {
     returnUrl = new URL(location.href);
     urlToken = returnUrl.searchParams.get(RC2_RETURN_TOKEN_PARAM) || '';
+    guardToken = returnUrl.searchParams.get(RC2_RETURN_GUARD_PARAM) || '';
   } catch {}
   const historyMatches = Boolean(token && history.state?.[RC2_RETURN_TOKEN_STATE] === token);
   const urlMatches = Boolean(token && urlToken === token);
-  if (!historyMatches && !urlMatches) return;
+  const guardMatches = Boolean(token && guardToken === token);
+  if (!historyMatches && !urlMatches && !guardMatches) return;
   try {
     const next = {...history.state};
     delete next[RC2_RETURN_TOKEN_STATE];
     if (next[RC2_RETURN_GUARD_STATE] === token) delete next[RC2_RETURN_GUARD_STATE];
     if (urlMatches) returnUrl.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
+    if (guardMatches) returnUrl.searchParams.delete(RC2_RETURN_GUARD_PARAM);
     history.replaceState(next, '', returnUrl ? `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}` : undefined);
   } catch {}
 }
