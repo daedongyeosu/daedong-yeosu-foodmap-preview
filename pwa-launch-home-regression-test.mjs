@@ -15,12 +15,16 @@ assert.match(app, /window\.scrollTo\(0, 0\)/,
   '시작 주소가 다시 열리면 홈 최상단으로 이동해야 합니다.');
 assert.match(app, /window\.launchQueue\.setConsumer\(resetInstalledAppLaunch\)/,
   '실행 중인 설치형 앱의 아이콘 재실행 이벤트를 직접 처리해야 합니다.');
+assert.match(app, /const DAEDONG_INSTALLED_APP_CONTEXT = isInstalledAppLaunchContext\(\)/,
+  '일반 카카오 웹 화면과 설치형 앱의 생명주기를 명시적으로 구분해야 합니다.');
+assert.match(app, /if \(DAEDONG_INSTALLED_APP_CONTEXT && typeof window\.launchQueue/,
+  '설치 앱이 아닌 웹 화면에는 런처 재실행 처리를 등록하면 안 됩니다.');
 assert.match(app, /document\.addEventListener\('visibilitychange'/,
   '런처가 실행 이벤트 없이 기존 창만 다시 보이게 해도 홈 최상단을 복구해야 합니다.');
 assert.match(app, /window\.addEventListener\('blur'/,
-  '카카오 인앱브라우저가 문서 가시성을 유지한 채 백그라운드로 가는 경우를 기록해야 합니다.');
+  '설치형 Android 래퍼가 문서 가시성을 유지한 채 백그라운드로 가는 경우를 기록해야 합니다.');
 assert.match(app, /window\.addEventListener\('focus'/,
-  '카카오 인앱브라우저 창이 다시 전면에 오면 홈 최상단을 복구해야 합니다.');
+  '설치형 Android 래퍼 창이 다시 전면에 오면 홈 최상단을 복구해야 합니다.');
 assert.match(app, /window\.addEventListener\('pageshow', \(\) =>/,
   'PWABuilder 설치형 앱이 기존 Chrome 작업을 다시 보여줄 때도 홈을 복구해야 합니다.');
 assert.match(app, /document\.addEventListener\('resume', resetInstalledAppLaunch\)/,

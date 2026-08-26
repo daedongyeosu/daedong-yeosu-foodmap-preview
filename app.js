@@ -26,16 +26,27 @@ if (
 }
 
 // Chrome can reuse an already-running installed PWA when its launcher icon is
-// tapped. A same-URL navigation does not necessarily rerun the page, so consume
-// the launch event explicitly. Long-lived clients reload once to refresh the
-// catalog and service state; the session marker prevents a reload loop.
+// tapped. This lifecycle belongs only to an installed/Android-wrapper launch.
+// A regular browser, including Kakao's in-app browser, must never inherit its
+// reload, focus, timer-gap, or opening-touch handlers.
+function isInstalledAppLaunchContext() {
+  const source = new URLSearchParams(globalThis.location?.search || '').get('source');
+  const standaloneDisplay = typeof window !== 'undefined'
+    && typeof window.matchMedia === 'function'
+    && window.matchMedia('(display-mode: standalone)').matches;
+  const iosStandalone = globalThis.navigator?.standalone === true;
+  return source === 'android-app' || standaloneDisplay || iosStandalone;
+}
+const DAEDONG_INSTALLED_APP_CONTEXT = isInstalledAppLaunchContext();
 const DAEDONG_LAUNCH_RELOAD_MARKER = 'daedong-installed-launch-reloaded';
 const DAEDONG_APP_BOOT_AT = typeof performance !== 'undefined' ? performance.now() : 0;
 let daedongLaunchReloadComplete = false;
-try {
-  daedongLaunchReloadComplete = sessionStorage.getItem(DAEDONG_LAUNCH_RELOAD_MARKER) === '1';
-  if (daedongLaunchReloadComplete) sessionStorage.removeItem(DAEDONG_LAUNCH_RELOAD_MARKER);
-} catch {}
+if (DAEDONG_INSTALLED_APP_CONTEXT) {
+  try {
+    daedongLaunchReloadComplete = sessionStorage.getItem(DAEDONG_LAUNCH_RELOAD_MARKER) === '1';
+    if (daedongLaunchReloadComplete) sessionStorage.removeItem(DAEDONG_LAUNCH_RELOAD_MARKER);
+  } catch {}
+}
 
 function settleInstalledAppAtHome() {
   const resetReopenedAppScroll = () => resetFreshEntryScroll({force: true});
@@ -72,6 +83,7 @@ function hasValidatedExternalReturnInFlight() {
 }
 
 function resetInstalledAppLaunch() {
+  if (!DAEDONG_INSTALLED_APP_CONTEXT) return;
   if (hasValidatedExternalReturnInFlight()) return;
   const clientAge = typeof performance !== 'undefined' ? performance.now() - DAEDONG_APP_BOOT_AT : 0;
   if (!daedongLaunchReloadComplete && clientAge > 1500) {
@@ -82,7 +94,7 @@ function resetInstalledAppLaunch() {
   settleInstalledAppAtHome();
 }
 
-if (typeof window !== 'undefined' && typeof window.launchQueue?.setConsumer === 'function') {
+if (DAEDONG_INSTALLED_APP_CONTEXT && typeof window.launchQueue?.setConsumer === 'function') {
   window.launchQueue.setConsumer(resetInstalledAppLaunch);
 }
 
@@ -90,7 +102,7 @@ if (typeof window !== 'undefined' && typeof window.launchQueue?.setConsumer === 
 // do not deliver a second LaunchQueue event. Treat a genuine hidden -> visible
 // transition as an app-icon reopen as well. The explicit external-return flag
 // above keeps order-app returns at the customer's previous store position.
-if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+if (DAEDONG_INSTALLED_APP_CONTEXT && typeof window !== 'undefined' && typeof document !== 'undefined') {
   // PWABuilder's Android wrapper can bring its existing Chrome Custom Tab task
   // to the foreground without dispatching launchQueue, focus, or a reliable
   // visibility transition. A repeated pageshow, a Page Lifecycle resume, and a
@@ -115,10 +127,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     resetInstalledAppLaunch();
   });
 
-// Samsung's Kakao in-app browser can keep the document "visible" while its
-// Android window is backgrounded. Window blur/focus is the remaining reliable
-// signal for that resume path, so cover it without touching ordinary element
-// focus changes.
+  // Some Android wrappers keep the document "visible" while their task is
+  // backgrounded. Window blur/focus supplements the installed-app signals.
   let daedongInstalledAppWasBlurred = false;
   window.addEventListener('blur', () => {
     daedongInstalledAppWasBlurred = true;
@@ -152,9 +162,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       window.setTimeout(armDaedongResumeHeartbeat, 5000);
     }, {once: true});
   }
-  // Kakao can deliver the opening tap before it resumes JavaScript timers.
-  // Detect that stopped-clock gap on the tap itself so the preserved middle
-  // scroll position never becomes the customer's first visible screen.
+  // An Android wrapper can deliver the launcher tap before JavaScript timers
+  // resume. This detector is intentionally absent from ordinary web pages.
   document.addEventListener('pointerdown', detectDaedongResumeGap, {capture: true, passive: true});
   document.addEventListener('touchstart', detectDaedongResumeGap, {capture: true, passive: true});
   window.setInterval(detectDaedongResumeGap, DAEDONG_RESUME_HEARTBEAT_MS);
@@ -782,6 +791,9 @@ window.daedongCatalogReady = new Promise(resolve => { resolveCatalogReady = reso
 function finishCatalogReady(value) {
   resolveCatalogReady?.(value);
   resolveCatalogReady = null;
+  if (!DAEDONG_ENTRY_STARTED_WITH_EXTERNAL_RETURN) {
+    window.daedongReleaseFreshEntryTop?.();
+  }
 }
 function hydrateDeferredHomeImages() {
   document.querySelectorAll('img[data-deferred-src]').forEach(image => {
