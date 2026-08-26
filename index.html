@@ -47,9 +47,12 @@
       const freshEntryTimers = [];
       const FRESH_ENTRY_SETTLE_MS = 20000;
       const FRESH_ENTRY_PULSE_MS = 200;
+      const FRESH_ENTRY_OPENING_TAP_GRACE_MS = 3000;
+      const FRESH_ENTRY_DRAG_DISTANCE = 12;
       let freshEntrySettling = false;
       let freshEntryEligible = false;
       let freshEntryStartedAt = 0;
+      let freshEntryPointerStart = null;
       try {
         if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
       } catch {}
@@ -63,7 +66,30 @@
         window.daedongEarlyHomeInteraction = true;
         stopFreshEntrySettle();
       };
-      for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) {
+      const interactionPoint = event => {
+        const touch = event.touches?.[0] || event.changedTouches?.[0];
+        return touch
+          ? {x: Number(touch.clientX || 0), y: Number(touch.clientY || 0)}
+          : {x: Number(event.clientX || 0), y: Number(event.clientY || 0)};
+      };
+      const rememberFreshEntryPointer = event => {
+        freshEntryPointerStart = interactionPoint(event);
+        // Kakao can pass the chat-link opening tap into the new WebView. That
+        // tap is navigation, not an instruction to preserve an old scroll.
+        if (performance.now() >= FRESH_ENTRY_OPENING_TAP_GRACE_MS) markEarlyHomeInteraction();
+      };
+      const markFreshEntryDrag = event => {
+        if (!freshEntryPointerStart) return;
+        const point = interactionPoint(event);
+        if (Math.hypot(point.x - freshEntryPointerStart.x, point.y - freshEntryPointerStart.y) >= FRESH_ENTRY_DRAG_DISTANCE) {
+          markEarlyHomeInteraction();
+        }
+      };
+      document.addEventListener('pointerdown', rememberFreshEntryPointer, {capture:true, passive:true});
+      document.addEventListener('touchstart', rememberFreshEntryPointer, {capture:true, passive:true});
+      document.addEventListener('pointermove', markFreshEntryDrag, {capture:true, passive:true});
+      document.addEventListener('touchmove', markFreshEntryDrag, {capture:true, passive:true});
+      for (const type of ['wheel', 'keydown']) {
         document.addEventListener(type, markEarlyHomeInteraction, {capture:true, passive:true, once:true});
       }
       const keepFreshEntryAtTop = () => {

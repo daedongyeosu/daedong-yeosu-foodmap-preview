@@ -14,6 +14,13 @@ assert.match(earlyBoot, /window\.daedongArmFreshEntryTop = \(\) =>/);
 assert.match(earlyBoot, /FRESH_ENTRY_SETTLE_MS = 20000/,
   '카카오 인앱브라우저의 늦은 콘텐츠·스크롤 복원까지 최초 진입 상단을 지켜야 합니다.');
 assert.match(earlyBoot, /FRESH_ENTRY_PULSE_MS = 200/);
+assert.match(earlyBoot, /FRESH_ENTRY_OPENING_TAP_GRACE_MS = 3000/,
+  '카카오 채팅 링크를 누른 터치가 새 WebView에 전달돼도 첫 화면 보호를 해제하면 안 됩니다.');
+assert.match(earlyBoot, /document\.addEventListener\('pointerdown', rememberFreshEntryPointer/);
+assert.match(earlyBoot, /document\.addEventListener\('pointermove', markFreshEntryDrag/,
+  '단순 링크 터치와 실제 고객 스크롤 동작을 구분해야 합니다.');
+assert.doesNotMatch(earlyBoot, /\['pointerdown', 'touchstart', 'wheel', 'keydown'\]/,
+  '카카오가 전달한 첫 pointerdown만으로 최상단 보호를 중단하면 안 됩니다.');
 assert.match(earlyBoot, /setTimeout\(pulseFreshEntryTop, FRESH_ENTRY_PULSE_MS\)/,
   '최초 진입 보정 시간 동안 늦은 중간 스크롤 복원을 반복해서 되돌려야 합니다.');
 assert.match(earlyBoot, /window\.addEventListener\('pageshow'[\s\S]*daedongArmFreshEntryTop/,
