@@ -8,6 +8,7 @@ const brandPoolPath = path.join(root, 'data', 'brand-photo-pools.json');
 const brandMappingPath = path.join(root, 'data', 'brand-app-mapping.json');
 const brandSupplementPath = path.join(root, 'data', 'brand-app-missing-nine-supplement.json');
 const happyOrderPath = path.join(root, 'data', 'happyorder-channel-research.json');
+const notionStoreDirectory = path.join(root, 'images', 'notion-stores');
 const suffix = '.mobile.webp';
 
 async function loadSharp() {
@@ -69,6 +70,10 @@ const brandMapping = JSON.parse(await fs.readFile(brandMappingPath, 'utf8'));
 const brandSupplement = JSON.parse(await fs.readFile(brandSupplementPath, 'utf8'));
 const happyOrder = JSON.parse(await fs.readFile(happyOrderPath, 'utf8'));
 const sources = localPhotoPaths(manifest, brandPool, brandMapping, brandSupplement, happyOrder);
+for (const file of await fs.readdir(notionStoreDirectory)) {
+  if (!/\.(?:png|jpe?g|gif)$/i.test(file)) continue;
+  sources.set(path.posix.join('images', 'notion-stores', file), 720);
+}
 let created = 0;
 let reused = 0;
 let sourceBytes = 0;

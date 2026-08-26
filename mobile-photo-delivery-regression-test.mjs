@@ -38,6 +38,9 @@ collectIcons(brandMapping);
 collectIcons(brandSupplement);
 collectIcons(happyOrder);
 values.push('images/momstouch.jpg', 'images/ajukeo.jpg', 'images/burgerking.png', 'images/lotteria.jpg', 'images/mcdonalds.jpg', 'images/nobrandburger.png', 'images/frankburger.png', 'images/gyedong.jpg', 'images/doozzim.jpg', 'assets/ondongne.png', 'assets/mukkebi-v7.png', 'assets/ddangyo-v7.png');
+for (const file of fs.readdirSync(path.join(root, 'images', 'notion-stores'))) {
+  if (/\.(?:png|jpe?g|gif)$/i.test(file)) values.push(path.posix.join('images', 'notion-stores', file));
+}
 const originals = [...new Set(values
   .map(value => String(value || '').trim())
   .filter(value => value && !/^(?:data:|https?:)/i.test(value))
