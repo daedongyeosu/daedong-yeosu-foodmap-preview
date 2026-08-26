@@ -86,6 +86,43 @@ try {
     '전체 가게 목록의 하단 이전·다음 화살표를 표시하지 않음');
 
   await page.evaluate(() => {
+    document.body.dispatchEvent(new PointerEvent('pointerdown', {
+      bubbles: true,
+      pointerType: 'touch',
+      isPrimary: true,
+      clientX: 180,
+      clientY: 420
+    }));
+    document.body.dispatchEvent(new PointerEvent('pointermove', {
+      bubbles: true,
+      pointerType: 'touch',
+      isPrimary: true,
+      clientX: 180,
+      clientY: 390
+    }));
+  });
+  const beforeBenefitsScrollY = await page.evaluate(() => window.scrollY);
+  const benefitsButton = page.locator('[data-store-service-overview-open]');
+  await benefitsButton.scrollIntoViewIfNeeded();
+  const benefitsBox = await benefitsButton.boundingBox();
+  if (!benefitsBox) throw new Error('주문앱별 혜택 버튼의 터치 좌표를 찾을 수 없음');
+  await page.touchscreen.tap(
+    benefitsBox.x + benefitsBox.width / 2,
+    benefitsBox.y + benefitsBox.height / 2
+  );
+  await page.waitForFunction(() => {
+    const overlay = document.querySelector('[data-store-service-overview-overlay]');
+    return overlay && !overlay.hidden;
+  });
+  await check(page.evaluate(() => (
+    !document.querySelector('[data-store-service-overview-overlay]')?.hidden
+      && document.querySelector('#modal')?.hidden === true
+  )), '실제 터치로 혜택 버튼을 눌러도 뒤쪽 가게 대신 혜택 화면만 열림');
+  await page.locator('[data-store-service-overview-close]').tap();
+  await page.waitForFunction(() => document.querySelector('[data-store-service-overview-overlay]')?.hidden === true);
+  await page.evaluate(scrollY => window.scrollTo(0, scrollY), beforeBenefitsScrollY);
+
+  await page.evaluate(() => {
     // A real customer begins a vertical scroll with a touch/pointer gesture.
     // Signal that intent before Playwright performs its programmatic
     // scrollIntoView so the fresh-entry guard does not classify this

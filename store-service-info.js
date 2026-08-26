@@ -1651,6 +1651,14 @@ document.addEventListener('input', event => {
   });
 
   window.installDaedongTapAction?.({
+    selector: '[data-store-service-overview-open], [data-store-service-search-open]',
+    activate(target) {
+      showOverview(target);
+      return true;
+    }
+  });
+
+  window.installDaedongTapAction?.({
     selector: '[data-store-service-overview-close]',
     activate(target) {
       const overlay = target.closest('[data-store-service-overview-overlay]');
@@ -1663,6 +1671,8 @@ document.addEventListener('input', event => {
   document.addEventListener('click', event => {
     const opener = event.target.closest('[data-store-service-overview-open], [data-store-service-search-open]');
     if (opener) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
       showOverview(opener);
       return;
     }
