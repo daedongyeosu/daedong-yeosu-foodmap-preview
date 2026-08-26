@@ -20,7 +20,7 @@ function makeStorage(initial = {}) {
   };
 }
 
-function runBoot({href = 'https://preview.daedongmap.com/', historyState = null, session = {}, local = {}, navigationType = 'navigate'} = {}) {
+function runBoot({href = 'https://preview.daedongmap.com/', historyState = null, session = {}, local = {}, navigationType = 'navigate', cookie = ''} = {}) {
   const classes = new Set();
   const replaced = [];
   const sessionStorage = makeStorage(session);
@@ -32,9 +32,13 @@ function runBoot({href = 'https://preview.daedongmap.com/', historyState = null,
       replaced.push(nextUrl);
     }
   };
+  const document = {
+    cookie,
+    documentElement: {classList: {add: value => classes.add(value), remove: value => classes.delete(value)}}
+  };
   const context = {
-    document: {documentElement: {classList: {add: value => classes.add(value), remove: value => classes.delete(value)}}},
-    location: {href},
+    document,
+    location: {href, protocol: new URL(href).protocol},
     sessionStorage,
     localStorage,
     history,
@@ -50,7 +54,7 @@ function runBoot({href = 'https://preview.daedongmap.com/', historyState = null,
   };
   vm.createContext(context);
   vm.runInContext(bootScript, context);
-  return {classes, replaced, sessionStorage, localStorage, history, window: context.window};
+  return {classes, replaced, sessionStorage, localStorage, history, window: context.window, document};
 }
 
 const now = Date.now();
@@ -80,6 +84,31 @@ const cleanBackForwardReturn = runBoot({
 });
 assert.equal(cleanBackForwardReturn.classes.has('daedong-external-return-pending'), true,
   '카카오가 URL 토큰을 버려도 실제 뒤로가기 재진입과 정확한 출발 표식이 함께 맞으면 복원해야 합니다.');
+
+const durableCookieValue = encodeURIComponent(JSON.stringify({
+  storageKey: 'daedongExternalReturnRc2',
+  returnToken: 'return-token-1',
+  savedAt: now,
+  payload: JSON.parse(saved)
+}));
+const storageLostBackForwardReturn = runBoot({
+  navigationType: 'back_forward',
+  cookie: `daedongOrderReturnV1=${durableCookieValue}`
+});
+assert.equal(storageLostBackForwardReturn.classes.has('daedong-external-return-pending'), true,
+  '카카오가 Web Storage를 모두 잃어도 실제 뒤로가기와 30분 이내 일회용 쿠키가 맞으면 복원해야 합니다.');
+assert.equal(storageLostBackForwardReturn.sessionStorage.has('daedongExternalReturnRc2'), true,
+  '초기 부트가 내구성 쿠키의 최소 복귀정보를 세션 저장소에 다시 세워야 합니다.');
+assert.equal(storageLostBackForwardReturn.localStorage.has('daedongExternalAppDepartureV1'), true,
+  '복원 전에 쿠키 토큰과 같은 출발 표식을 다시 세워야 합니다.');
+
+const freshEntryWithDurableCookie = runBoot({
+  cookie: `daedongOrderReturnV1=${durableCookieValue}`
+});
+assert.equal(freshEntryWithDurableCookie.classes.has('daedong-external-return-pending'), false,
+  '일반 새 링크는 내구성 쿠키가 남아 있어도 홈 최상단이어야 합니다.');
+assert.match(freshEntryWithDurableCookie.document.cookie, /Max-Age=0/,
+  '일반 새 링크는 오래된 내구성 쿠키를 즉시 만료시켜야 합니다.');
 
 const urlReturn = runBoot({
   href: 'https://preview.daedongmap.com/?__ddret=return-token-1',
@@ -117,6 +146,8 @@ assert.match(app, /resetFreshEntryScroll\(\{force: true\}\)/,
 assert.match(rc2, /const RC2_RETURN_TOKEN_PARAM = '__ddret'/);
 assert.match(rc2, /returnUrl\.searchParams\.set\(RC2_RETURN_TOKEN_PARAM, returnToken\)/,
   '주문앱 출발 전에 같은 화면에만 일회용 복귀표식을 기록해야 합니다.');
+assert.match(rc2, /rc2WriteDurableReturn\(key, payload\)/,
+  '카카오가 Web Storage를 잃는 실제 휴대전화에서는 최소 복귀정보를 일회용 자사 쿠키에도 남겨야 합니다.');
 assert.match(rc2, /savedToken === historyToken[\s\S]*?savedToken === urlToken[\s\S]*?savedToken === departureToken/,
   '저장소에 값이 있다는 이유만으로 복귀하지 말고 URL·history 또는 실제 뒤로가기 출발 표식이 일치해야 합니다.');
 assert.doesNotMatch(rc2, /if \(rc2FreshReturnState\(sessionSaved\)\) return sessionSaved/,
