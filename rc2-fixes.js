@@ -8,6 +8,7 @@ const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
 const RC2_RETURN_GUARD_STATE = 'daedongExternalReturnGuard';
 const RC2_RETURN_TOKEN_PARAM = '__ddret';
 const RC2_RETURN_GUARD_PARAM = '__ddguard';
+const RC2_DURABLE_RETURN_COOKIE = 'daedongOrderReturnV1';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
 const RC2_FOCUS_ONLY_RETURN_DELAY_MS = 650;
 const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
@@ -91,6 +92,53 @@ function rc2StoreReturnState(storage, key, payload) {
   try { storage.setItem(key, JSON.stringify(compact)); } catch {}
 }
 
+function rc2ReadDurableReturn() {
+  try {
+    const prefix = `${RC2_DURABLE_RETURN_COOKIE}=`;
+    const raw = document.cookie.split('; ').find(item => item.startsWith(prefix));
+    return raw ? JSON.parse(decodeURIComponent(raw.slice(prefix.length))) : null;
+  } catch {
+    return null;
+  }
+}
+
+function rc2WriteDurableReturn(storageKey, payload) {
+  const compact = {...payload};
+  delete compact.storeSnapshot;
+  delete compact.modalSnapshot;
+  let container = {
+    storageKey,
+    returnToken: compact.returnToken,
+    savedAt: compact.savedAt,
+    payload: compact
+  };
+  let encoded = encodeURIComponent(JSON.stringify(container));
+  if (encoded.length > 3400) {
+    delete compact.anchor;
+    delete compact.searchState;
+    delete compact.menuState;
+    container = {...container, payload: compact};
+    encoded = encodeURIComponent(JSON.stringify(container));
+  }
+  if (encoded.length > 3400) return false;
+  try {
+    const secure = location.protocol === 'https:' ? '; Secure' : '';
+    document.cookie = `${RC2_DURABLE_RETURN_COOKIE}=${encoded}; Max-Age=1800; Path=/; SameSite=Lax${secure}`;
+    return rc2ReadDurableReturn()?.returnToken === compact.returnToken;
+  } catch {
+    return false;
+  }
+}
+
+function rc2ClearDurableReturn(returnToken = '') {
+  const saved = rc2ReadDurableReturn();
+  if (returnToken && String(saved?.returnToken || '') !== String(returnToken)) return;
+  try {
+    const secure = location.protocol === 'https:' ? '; Secure' : '';
+    document.cookie = `${RC2_DURABLE_RETURN_COOKIE}=; Max-Age=0; Path=/; SameSite=Lax${secure}`;
+  } catch {}
+}
+
 function rc2ResetExternalDepartureLifecycle() {
   rc2ExternalDepartureBlurred = false;
   rc2ExternalDepartureHidden = false;
@@ -136,6 +184,7 @@ function rc2WriteReturnState(key, value) {
   const departureMarker = {returnToken, savedAt: payload.savedAt};
   rc2StoreReturnState(sessionStorage, EXTERNAL_APP_DEPARTURE_KEY, departureMarker);
   rc2StoreReturnState(localStorage, EXTERNAL_APP_DEPARTURE_KEY, departureMarker);
+  rc2WriteDurableReturn(key, payload);
   return payload;
 }
 
@@ -149,6 +198,7 @@ function rc2ClearReturnState(key, saved = null) {
     try { sessionStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
     try { localStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
   }
+  if (token && rc2IsHistoryReentry()) rc2ClearDurableReturn(token);
   let urlToken = '';
   let guardToken = '';
   let returnUrl = null;

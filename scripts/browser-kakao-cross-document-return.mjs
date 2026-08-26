@@ -65,6 +65,13 @@ await context.addInitScript(() => {
     history.back();
     await returnedToLowerEntry;
     history.replaceState({}, '', cleanReturnHref);
+    // The actual Kakao WebView reports back_forward correctly but loses both
+    // Web Storage copies while resolving the installed-app intent. Preserve
+    // only the first-party durable cookie and reproduce that exact failure.
+    for (const key of ['daedongExternalReturnRc2', 'daedongAppBrowserReturnV1', 'daedongExternalAppDepartureV1']) {
+      sessionStorage.removeItem(key);
+      localStorage.removeItem(key);
+    }
     window.location.replace(link.href);
   }, true);
   for (const type of ['pagehide', 'pageshow', 'popstate', 'focus', 'blur']) {

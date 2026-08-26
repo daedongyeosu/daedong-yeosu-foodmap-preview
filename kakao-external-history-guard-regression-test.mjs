@@ -17,6 +17,11 @@ assert.match(
 );
 assert.match(html, /const historyReentry = navigationEntry\?\.type === 'back_forward'/);
 assert.match(html, /hasMatchingDepartureMarker\(savedToken\)/);
+assert.match(html, /const durableReturnCookie = 'daedongOrderReturnV1'/);
+assert.match(html, /historyReentry[\s\S]*?durablePayload\?\.\[durableRequiredField\][\s\S]*?sessionStorage\.setItem\(durableStorageKey, saved\)/,
+  '실제 뒤로가기에서만 일회용 쿠키로 잃어버린 Web Storage를 재구성해야 합니다.');
+assert.match(rc2, /function rc2ClearReturnState\([\s\S]*?if \(token && rc2IsHistoryReentry\(\)\) rc2ClearDurableReturn\(token\)/,
+  '일회용 쿠키는 실제 뒤로가기 복원이 끝났을 때만 소비해야 합니다.');
 assert.match(
   rc2,
   /history\.replaceState\([\s\S]*?if \(RC2_NEEDS_EXTERNAL_HISTORY_GUARD\) \{[\s\S]*?guardUrl\.searchParams\.set\(RC2_RETURN_GUARD_PARAM, returnToken\)[\s\S]*?history\.pushState\([\s\S]*?RC2_RETURN_GUARD_STATE/,
@@ -34,8 +39,10 @@ assert.match(
 );
 assert.match(browserTest, /window\.location\.replace\(link\.href\)/);
 assert.match(browserTest, /history\.replaceState\(\{\}, '', cleanReturnHref\)/);
+assert.match(browserTest, /sessionStorage\.removeItem\(key\)[\s\S]*?localStorage\.removeItem\(key\)/,
+  '브라우저 재현도 실제 카카오처럼 Web Storage 손실을 포함해야 합니다.');
 assert.match(browserTest, /원래 가게 상세 유지/);
-assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*back-forward-departure-marker-1/);
-assert.match(html, /final-experience\.js\?v=[^"\n]*back-forward-departure-marker-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*durable-return-cookie-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*durable-return-cookie-1/);
 
 console.log('kakao-external-history-guard-regression-test: pass');
