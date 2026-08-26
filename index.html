@@ -210,6 +210,46 @@
         const historyReentry = navigationEntry?.type === 'back_forward'
           || Number(performance.navigation?.type) === 2;
         window.daedongEntryIsHistoryReturn = historyReentry;
+        if (entryUrl.searchParams.get('dddiag') === '1') {
+          const diagRead = (storage, key) => {
+            try { return JSON.parse(storage.getItem(key) || 'null'); } catch { return null; }
+          };
+          const diagMarkerSession = diagRead(sessionStorage, departureKey);
+          const diagMarkerLocal = diagRead(localStorage, departureKey);
+          const diagRc2Session = diagRead(sessionStorage, storageKeys[0]);
+          const diagRc2Local = diagRead(localStorage, storageKeys[0]);
+          const diagAppSession = diagRead(sessionStorage, storageKeys[1]);
+          const diagAppLocal = diagRead(localStorage, storageKeys[1]);
+          const shortToken = value => String(value || '').slice(0, 8) || '-';
+          const diagText = [
+            `nav=${String(navigationEntry?.type || 'none')}`,
+            `legacy=${String(performance.navigation?.type ?? 'none')}`,
+            `history=${history.length}`,
+            `ref=${document.referrer ? new URL(document.referrer).host : '-'}`,
+            `url=${shortToken(urlToken)}`,
+            `state=${shortToken(historyToken)}`,
+            `markerS=${shortToken(diagMarkerSession?.returnToken)}`,
+            `markerL=${shortToken(diagMarkerLocal?.returnToken)}`,
+            `rc2S=${shortToken(diagRc2Session?.returnToken)}`,
+            `rc2L=${shortToken(diagRc2Local?.returnToken)}`,
+            `appS=${shortToken(diagAppSession?.returnToken)}`,
+            `appL=${shortToken(diagAppLocal?.returnToken)}`
+          ].join(' | ');
+          window.daedongReturnDiagnostic = diagText;
+          const showDiagnostic = () => {
+            if (document.getElementById('daedongReturnDiagnostic')) return;
+            const output = document.createElement('pre');
+            output.id = 'daedongReturnDiagnostic';
+            output.textContent = diagText;
+            output.style.cssText = 'position:fixed;z-index:2147483647;left:4px;right:4px;top:4px;margin:0;padding:6px;background:rgba(0,0,0,.9);color:#7cff9b;font:11px/1.25 monospace;white-space:pre-wrap;overflow-wrap:anywhere;pointer-events:none';
+            document.body.append(output);
+          };
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showDiagnostic, {once:true});
+          } else {
+            showDiagnostic();
+          }
+        }
         const hasMatchingDepartureMarker = savedToken => {
           if (!historyReentry || !savedToken) return false;
           for (const storage of [sessionStorage, localStorage]) {
