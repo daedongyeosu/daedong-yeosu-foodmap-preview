@@ -32,7 +32,7 @@ assert.ok(app.indexOf('const immediateNext = photoResolver.resolveGallery(store)
   'the immediate original-photo fallback must run before the optional menu request');
 assert.match(rc6, /data-photo-kind="card" data-photo-store-id="\$\{escapeHtml\(store\.id\)\}" data-photo-source="hero"/,
   'managed hero photos must use the shared photo recovery path');
-assert.match(app, /const DAEDONG_SHOULD_RESET_ENTRY_SCROLL = !globalThis\.daedongPendingExternalReturn;/,
+assert.match(app, /const DAEDONG_ENTRY_STARTED_WITH_EXTERNAL_RETURN = Boolean\(globalThis\.daedongEntryHadExternalReturn\);/,
   'fresh and reused visits must reset to the top while validated order-app returns preserve position');
 assert.match(app, /window\.addEventListener\('pageshow', resetFreshEntryScroll, \{once: true\}\)/,
   'the top reset must run after browser scroll restoration settles');

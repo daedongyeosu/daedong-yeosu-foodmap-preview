@@ -80,6 +80,13 @@ const liveReturn = runBoot({
 });
 assert.equal(liveReturn.classes.has('daedong-external-return-pending'), true,
   '같은 화면의 history 표식이 일치하면 보던 위치 복귀를 허용해야 합니다.');
+assert.equal(liveReturn.window.daedongEntryHadExternalReturn, true,
+  '현재 진입이 실제 주문앱 복귀였다는 사실은 초기 화면 보호용으로 따로 기록해야 합니다.');
+liveReturn.window.daedongFinishExternalReturnBoot();
+assert.equal(liveReturn.window.daedongPendingExternalReturn, null,
+  '복귀 화면 구성이 끝나면 실시간 복귀 표식을 해제해 다음 앱 재접속을 막지 않아야 합니다.');
+assert.equal(liveReturn.window.daedongEntryHadExternalReturn, true,
+  '실시간 표식을 해제해도 현재 진입의 화면 위치 보호 기록은 유지해야 합니다.');
 
 const mismatchedUrl = runBoot({
   href: 'https://preview.daedongmap.com/?store=abc&__ddret=wrong-token#app',
@@ -90,7 +97,9 @@ assert.equal(mismatchedUrl.classes.has('daedong-external-return-pending'), false
 assert.equal(mismatchedUrl.replaced.at(-1), '/?store=abc#app',
   '일치하지 않는 일회용 표식만 제거하고 다른 공유주소 정보는 보존해야 합니다.');
 
-assert.match(app, /const DAEDONG_SHOULD_RESET_ENTRY_SCROLL = !globalThis\.daedongPendingExternalReturn/);
+assert.match(app, /const DAEDONG_ENTRY_STARTED_WITH_EXTERNAL_RETURN = Boolean\(globalThis\.daedongEntryHadExternalReturn\)/);
+assert.match(app, /resetFreshEntryScroll\(\{force: true\}\)/,
+  '복귀 완료 후 재접속은 과거 진입 상태를 강제로 무시하고 홈 최상단으로 보내야 합니다.');
 assert.match(rc2, /const RC2_RETURN_TOKEN_PARAM = '__ddret'/);
 assert.match(rc2, /returnUrl\.searchParams\.set\(RC2_RETURN_TOKEN_PARAM, returnToken\)/,
   '주문앱 출발 전에 같은 화면에만 일회용 복귀표식을 기록해야 합니다.');
@@ -99,6 +108,8 @@ assert.match(rc2, /savedToken === historyToken \|\| savedToken === urlToken/,
 assert.doesNotMatch(rc2, /if \(rc2FreshReturnState\(sessionSaved\)\) return sessionSaved/,
   '과거 세션 값만으로 카카오톡 새 방문을 중간 위치로 보내면 안 됩니다.');
 assert.match(html, /final-experience\.js\?v=[^"\n]*kakao-fresh-entry-token-1/);
+assert.match(html, /app\.js\?v=[^"\n]*external-return-lifecycle-1/,
+  '기존 휴대폰 런타임 캐시에 남은 app.js와 구분되는 주소가 필요합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*kakao-fresh-entry-token-1/);
 
 console.log('kakao-fresh-entry-scroll-regression-test: pass');
