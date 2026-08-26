@@ -72,6 +72,16 @@ try {
   report.initialMenuCount = initialMenuCount;
   await check(initialMenuCount > 0 && initialMenuCount <= expectedMenuCount, '첫 화면에 메뉴를 즉시 표시');
   await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === initialMenuCount), '첫 메뉴 묶음의 음식사진 복원');
+  const mobileOrderDock = await page.locator('.store-menu-sticky-actions').evaluate(node => ({
+    height: node.getBoundingClientRect().height,
+    headerDisplay: getComputedStyle(node.querySelector('header')).display,
+    navRows: getComputedStyle(node.querySelector('nav')).gridTemplateRows
+  }));
+  report.mobileOrderDock = mobileOrderDock;
+  await check(
+    mobileOrderDock.height <= 60 && mobileOrderDock.headerDisplay === 'none' && !String(mobileOrderDock.navRows).includes(' '),
+    `휴대폰 하단 주문창을 버튼 한 줄로 표시: ${JSON.stringify(mobileOrderDock)}`
+  );
 
   const preview = page.locator('.store-menu-preview');
   const scroll = page.locator('.store-menu-scroll');

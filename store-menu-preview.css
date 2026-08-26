@@ -1046,16 +1046,30 @@ body.store-menu-open {
   .store-menu-sticky-actions {
     width: calc(100% - 18px);
     bottom: max(8px, env(safe-area-inset-bottom));
+    padding: 6px;
+    gap: 0;
     transition: transform .22s ease, opacity .14s ease;
   }
+  .store-menu-sticky-actions > header {
+    display: none;
+  }
   .store-menu-sticky-actions > nav {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
   }
   .store-menu-sticky-actions > nav > a,
   .store-menu-sticky-actions > nav > button {
     min-height: 42px;
     padding: 5px 4px;
     font-size: 10px;
+  }
+  .store-menu-sticky-actions > nav > button.is-direct b {
+    display: block;
+    white-space: nowrap;
+  }
+  .store-menu-sticky-actions > nav > button.is-direct small {
+    display: none;
   }
   .store-menu-preview.menu-search-active .store-menu-scroll {
     padding-top: 0;
