@@ -34,7 +34,9 @@ const context = await browser.newContext({
   isMobile: true,
   hasTouch: true,
   locale: 'ko-KR',
-  userAgent: 'Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36 KAKAOTALK 25.6.0'
+  // Real Kakao Android builds do not consistently expose a KAKAOTALK token.
+  // The return guard must therefore work from the Android platform signal.
+  userAgent: 'Mozilla/5.0 (Linux; Android 15; SM-S938N) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36'
 });
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
@@ -51,6 +53,7 @@ await context.addInitScript(() => {
     event.stopImmediatePropagation();
     window.markExternalAppDeparture?.();
     window.rc2RememberExternalReturn();
+    sessionStorage.setItem('__kakaoGuardHref', location.href);
     window.location.replace(link.href);
   }, true);
   for (const type of ['pagehide', 'pageshow', 'popstate', 'focus', 'blur']) {
@@ -98,6 +101,8 @@ try {
   await page.goBack({waitUntil: 'domcontentloaded'});
   await page.waitForTimeout(800);
   report.events = await page.evaluate(() => window.__kakaoReturnEvents || []);
+  const guardedHref = await page.evaluate(() => sessionStorage.getItem('__kakaoGuardHref') || '');
+  await check(Promise.resolve(new URL(guardedHref).searchParams.has('__ddguard')), 'Android 보호 기록의 주소가 실제 복귀 주소와 구분됨');
   await check(detail.isVisible(), '먹깨비 중간 웹페이지에서 뒤로 왔을 때 원래 가게 상세 유지');
   report.success = report.errors.length === 0;
 } catch (error) {
