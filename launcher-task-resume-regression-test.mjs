@@ -3,8 +3,14 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const source = fs.readFileSync('app.js', 'utf8');
+const html = fs.readFileSync('index.html', 'utf8');
 const bootSource = source.slice(0, source.indexOf('const DAEDONG_TAP_MOVE_TOLERANCE'));
 assert.ok(bootSource.length > 0, '설치형 앱 시작 코드를 분리할 수 있어야 합니다.');
+assert.match(bootSource, /document\.addEventListener\('pointerdown', detectDaedongResumeGap/,
+  '카카오가 타이머보다 먼저 전달한 재개 터치에서도 중단된 시간 간격을 확인해야 합니다.');
+assert.match(bootSource, /document\.addEventListener\('touchstart', detectDaedongResumeGap/);
+assert.match(html, /app\.js\?v=[^"\n]*kakao-pointer-resume-1/,
+  '고객의 기존 캐시에 남은 앱 코드를 새 재개 감지 버전으로 교체해야 합니다.');
 
 let wallNow = 0;
 let reloads = 0;
@@ -99,6 +105,28 @@ wallNow = 14000;
 dispatch(windowListeners, 'pageshow');
 assert.equal(scrollingElement.scrollTop, 0,
   '주문앱 복귀 유예시간이 지난 뒤 앱 아이콘으로 재실행하면 홈으로 이동해야 합니다.');
+
+scrollingElement.scrollTop = 770;
+body.scrollTop = 770;
+wallNow = 17000;
+dispatch(documentListeners, 'pointerdown');
+assert.equal(scrollingElement.scrollTop, 0,
+  '카카오가 타이머 재개보다 먼저 첫 터치를 전달해도 기존 중간 위치를 홈으로 되돌려야 합니다.');
+
+scrollingElement.scrollTop = 650;
+body.scrollTop = 650;
+wallNow = 17500;
+dispatch(documentListeners, 'pointerdown');
+assert.equal(scrollingElement.scrollTop, 650,
+  '정상 실행 중 이어지는 고객 터치는 홈으로 강제 이동시키면 안 됩니다.');
+
+sandbox.daedongReadEarlyExternalReturn = () => ({returnToken: 'valid-order-return'});
+scrollingElement.scrollTop = 880;
+body.scrollTop = 880;
+wallNow = 22000;
+dispatch(documentListeners, 'pointerdown');
+assert.equal(scrollingElement.scrollTop, 880,
+  '검증된 주문앱 복귀의 첫 터치는 중단 시간이 길어도 보던 위치를 보존해야 합니다.');
 assert.equal(reloads, 0, '검증 과정에서 불필요한 새로고침이 발생하면 안 됩니다.');
 
 console.log('launcher task resume regression: PASS');

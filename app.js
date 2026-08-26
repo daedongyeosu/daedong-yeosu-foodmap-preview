@@ -137,6 +137,14 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     daedongLastResumeHeartbeatAt = Date.now();
     daedongResumeHeartbeatArmed = true;
   };
+  const detectDaedongResumeGap = () => {
+    const now = Date.now();
+    const gap = now - daedongLastResumeHeartbeatAt;
+    daedongLastResumeHeartbeatAt = now;
+    if (!daedongResumeHeartbeatArmed || gap < DAEDONG_RESUME_GAP_MS || document.visibilityState === 'hidden') return false;
+    resetInstalledAppLaunch();
+    return true;
+  };
   if (document.readyState === 'complete') {
     window.setTimeout(armDaedongResumeHeartbeat, 5000);
   } else {
@@ -144,13 +152,12 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       window.setTimeout(armDaedongResumeHeartbeat, 5000);
     }, {once: true});
   }
-  window.setInterval(() => {
-    const now = Date.now();
-    const gap = now - daedongLastResumeHeartbeatAt;
-    daedongLastResumeHeartbeatAt = now;
-    if (!daedongResumeHeartbeatArmed || gap < DAEDONG_RESUME_GAP_MS || document.visibilityState === 'hidden') return;
-    resetInstalledAppLaunch();
-  }, DAEDONG_RESUME_HEARTBEAT_MS);
+  // Kakao can deliver the opening tap before it resumes JavaScript timers.
+  // Detect that stopped-clock gap on the tap itself so the preserved middle
+  // scroll position never becomes the customer's first visible screen.
+  document.addEventListener('pointerdown', detectDaedongResumeGap, {capture: true, passive: true});
+  document.addEventListener('touchstart', detectDaedongResumeGap, {capture: true, passive: true});
+  window.setInterval(detectDaedongResumeGap, DAEDONG_RESUME_HEARTBEAT_MS);
 }
 
 const DAEDONG_TAP_MOVE_TOLERANCE = 10;
