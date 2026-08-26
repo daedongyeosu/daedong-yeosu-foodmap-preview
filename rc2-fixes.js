@@ -11,6 +11,7 @@ const RC2_RETURN_GUARD_PARAM = '__ddguard';
 const RC2_DURABLE_RETURN_COOKIE = 'daedongOrderReturnV1';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
 const RC2_FOCUS_ONLY_RETURN_DELAY_MS = 650;
+const RC2_EXTERNAL_RETURN_POP_GUARD_MS = 1500;
 const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
 const RC2_NEEDS_EXTERNAL_HISTORY_GUARD = /Android/i.test(String(navigator.userAgent || ''));
 const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
@@ -32,6 +33,7 @@ let rc2StoreRestorePromise = null;
 let rc2SurfaceRestorePromise = null;
 let rc2ExternalDepartureBlurred = false;
 let rc2ExternalDepartureHidden = false;
+let rc2ExternalReturnPopGuardUntil = 0;
 
 function rc2FreshReturnState(saved) {
   const age = Date.now() - Number(saved?.savedAt || 0);
@@ -440,6 +442,27 @@ openModal = function rc2OpenModal(html) {
 };
 
 hardClose = function rc2HardClose(options = {}) {
+  if (options.fromPop) {
+    const pendingReturn = rc2PendingExternalReturnState();
+    const restoredImmediatelyBeforePop = Date.now() < rc2ExternalReturnPopGuardUntil;
+    if (pendingReturn || restoredImmediatelyBeforePop) {
+      // Kakao's bottom browser Back and Android's system Back do not resume the
+      // same way. On the system-Back path the original preview WebView resumes
+      // and then delivers a popstate to the still-open store modal. Treat that
+      // pop as the external-app return itself, not as a request to close the
+      // store detail and expose Home.
+      rc2ExternalReturnPopGuardUntil = 0;
+      if (pendingReturn) {
+        rc2ExternalDepartureHidden = true;
+        void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
+          if (!restored) return;
+          rc2ResetExternalDepartureLifecycle();
+          window.daedongFinishExternalReturnBoot?.();
+        });
+      }
+      return;
+    }
+  }
   if (options.fromPop && rc2ModalStack.length) {
     rc2RestoreSnapshot(rc2ModalStack.pop());
     return;
@@ -1161,7 +1184,13 @@ function rc2RestoreAfterConfirmedResume({rebuildExisting = true} = {}) {
     return Promise.resolve(false);
   }
   return rc2RestoreExternalSurface({rebuildExisting}).then(restored => {
-    if (restored) rc2ResetExternalDepartureLifecycle();
+    if (restored) {
+      // Some Android/Kakao builds restore on visibilitychange first and emit
+      // the system-Back popstate immediately afterwards. Preserve exactly that
+      // next pop for a short window so it cannot close the restored detail.
+      rc2ExternalReturnPopGuardUntil = Date.now() + RC2_EXTERNAL_RETURN_POP_GUARD_MS;
+      rc2ResetExternalDepartureLifecycle();
+    }
     return restored;
   });
 }
