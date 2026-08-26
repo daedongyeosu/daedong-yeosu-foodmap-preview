@@ -63,8 +63,9 @@ if (typeof window !== 'undefined' && typeof window.launchQueue?.setConsumer === 
 // do not deliver a second LaunchQueue event. Treat a genuine hidden -> visible
 // transition as an app-icon reopen as well. The explicit external-return flag
 // above keeps order-app returns at the customer's previous store position.
-let daedongInstalledAppWasHidden = document.visibilityState === 'hidden';
-document.addEventListener('visibilitychange', () => {
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  let daedongInstalledAppWasHidden = document.visibilityState === 'hidden';
+  document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden') {
     daedongInstalledAppWasHidden = true;
     return;
@@ -72,7 +73,22 @@ document.addEventListener('visibilitychange', () => {
   if (!daedongInstalledAppWasHidden) return;
   daedongInstalledAppWasHidden = false;
   resetInstalledAppLaunch();
-});
+  });
+
+// Samsung's Kakao in-app browser can keep the document "visible" while its
+// Android window is backgrounded. Window blur/focus is the remaining reliable
+// signal for that resume path, so cover it without touching ordinary element
+// focus changes.
+  let daedongInstalledAppWasBlurred = false;
+  window.addEventListener('blur', () => {
+    daedongInstalledAppWasBlurred = true;
+  });
+  window.addEventListener('focus', () => {
+    if (!daedongInstalledAppWasBlurred) return;
+    daedongInstalledAppWasBlurred = false;
+    resetInstalledAppLaunch();
+  });
+}
 
 const DAEDONG_TAP_MOVE_TOLERANCE = 10;
 const DAEDONG_TAP_DEDUPE_WINDOW_MS = 80;
