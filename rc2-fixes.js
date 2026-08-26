@@ -144,6 +144,39 @@ function rc2ResetExternalDepartureLifecycle() {
   rc2ExternalDepartureHidden = false;
 }
 
+function rc2ConfirmIntentionalStoreOpen() {
+  // A real store-card click supersedes every delayed fresh-entry or external
+  // return task. Kakao can deliver those lifecycle callbacks after the click;
+  // leaving them armed lets a newly opened detail be replaced by home.
+  globalThis.daedongMarkHomeInteraction?.();
+  rc2ResetExternalDepartureLifecycle();
+  for (const key of RC2_RETURN_STORAGE_KEYS) {
+    try { sessionStorage.removeItem(key); } catch {}
+    try { localStorage.removeItem(key); } catch {}
+  }
+  try { sessionStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
+  try { localStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
+  rc2ClearDurableReturn();
+  try {
+    const url = new URL(location.href);
+    const next = {...history.state};
+    delete next[RC2_RETURN_TOKEN_STATE];
+    delete next[RC2_RETURN_GUARD_STATE];
+    url.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
+    url.searchParams.delete(RC2_RETURN_GUARD_PARAM);
+    history.replaceState(next, '', `${url.pathname}${url.search}${url.hash}`);
+  } catch {}
+  globalThis.daedongFinishExternalReturnBoot?.();
+}
+
+function rc2OpenStoreFromCustomer(store) {
+  if (!store) return false;
+  rc2ConfirmIntentionalStoreOpen();
+  return openStore(store);
+}
+
+window.daedongConfirmIntentionalStoreOpen = rc2ConfirmIntentionalStoreOpen;
+
 function rc2WriteReturnState(key, value) {
   rc2ResetExternalDepartureLifecycle();
   const returnToken = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
@@ -1152,11 +1185,18 @@ fxInstallEvents = function rc2InstallEvents() {
     const railMore = event.target.closest('[data-rail-more]');
     if (railMore) { event.preventDefault(); event.stopImmediatePropagation(); rc2OpenRailList(railMore.dataset.railMore); return; }
     const railStore = event.target.closest('[data-rail-store-id]');
-    if (railStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(railStore.dataset.railStoreId); if (store) openStore(store); return; }
+    if (railStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(railStore.dataset.railStoreId); if (store) rc2OpenStoreFromCustomer(store); return; }
+    const homeStore = event.target.closest('#storeGrid .store-card[data-id]');
+    if (homeStore && !event.target.closest('button,a')) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      rc2OpenStoreFromCustomer(fxStoreById(homeStore.dataset.id));
+      return;
+    }
     const appCategory = event.target.closest('[data-app-category]');
     if (appCategory) { event.preventDefault(); event.stopImmediatePropagation(); openAppBrowser($('#modal').dataset.appBrowserKey, appCategory.dataset.appCategory); return; }
     const appStoreInfo = event.target.closest('[data-app-store-info]');
-    if (appStoreInfo) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(appStoreInfo.dataset.appStoreInfo); if (store) openStore(store); return; }
+    if (appStoreInfo) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(appStoreInfo.dataset.appStoreInfo); if (store) rc2OpenStoreFromCustomer(store); return; }
     const appStoreOrder = event.target.closest('[data-app-store-order]');
     if (appStoreOrder) { event.preventDefault(); event.stopImmediatePropagation(); void fxOpenRegisteredAppOrder(appStoreOrder); return; }
     const appStore = event.target.closest('[data-app-store-id]');
@@ -1166,7 +1206,7 @@ fxInstallEvents = function rc2InstallEvents() {
       const key = appStore.dataset.appKey;
       if (store) {
         if (['yogiyo', 'coupang', 'baemin'].includes(key)) openCommunityChoice(store, key, {fromBrowser: true});
-        else openStore(store);
+        else rc2OpenStoreFromCustomer(store);
       }
       return;
     }
@@ -1186,9 +1226,9 @@ fxInstallEvents = function rc2InstallEvents() {
     const happyBrand = event.target.closest('[data-happy-brand]');
     if (happyBrand) { event.preventDefault(); event.stopImmediatePropagation(); fxOpenBrandHub('happy-stores', happyBrand.dataset.happyBrand); return; }
     const channelStore = event.target.closest('[data-channel-store-id]');
-    if (channelStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(channelStore.dataset.channelStoreId); if (store) openStore(store); return; }
+    if (channelStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(channelStore.dataset.channelStoreId); if (store) rc2OpenStoreFromCustomer(store); return; }
     const searchStore = event.target.closest('[data-search-store-id]');
-    if (searchStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(searchStore.dataset.searchStoreId); if (store) openStore(store); return; }
+    if (searchStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(searchStore.dataset.searchStoreId); if (store) rc2OpenStoreFromCustomer(store); return; }
     if (event.target.id === 'fxSearchRun') { event.preventDefault(); event.stopImmediatePropagation(); fxSearchModal($('#fxSearchInput')?.value || ''); return; }
     const share = event.target.closest('[data-share-store]');
     if (share) {

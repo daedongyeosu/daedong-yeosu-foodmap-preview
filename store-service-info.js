@@ -1477,6 +1477,7 @@ function overviewSearchText(entry) {
   function openStoreAfterOverview(storeId) {
     const store = storeById(storeId);
     if (store && typeof openStore === 'function') {
+      window.daedongConfirmIntentionalStoreOpen?.();
       openStore(store);
       return;
     }

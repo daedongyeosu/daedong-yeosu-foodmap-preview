@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v25-late-webview-restore-guard';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v26-store-card-intent-guard';
 const RUNTIME_CACHE = 'daedong-yeosu-runtime-v2-mobile-photo-delivery';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [
