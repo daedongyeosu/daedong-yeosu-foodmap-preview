@@ -86,6 +86,66 @@ try {
     '전체 가게 목록의 하단 이전·다음 화살표를 표시하지 않음');
 
   await page.evaluate(() => {
+    const token = 'stale-card-return-token';
+    const saved = JSON.stringify({
+      storeId: 'pager-store-036',
+      returnToken: token,
+      savedAt: Date.now()
+    });
+    const marker = JSON.stringify({returnToken: token, savedAt: Date.now()});
+    for (const storage of [sessionStorage, localStorage]) {
+      storage.setItem('daedongExternalReturnRc2', saved);
+      storage.setItem('daedongExternalAppDepartureV1', marker);
+    }
+    document.cookie = `daedongOrderReturnV1=${encodeURIComponent(JSON.stringify({
+      storageKey: 'daedongExternalReturnRc2',
+      returnToken: token,
+      savedAt: Date.now(),
+      payload: JSON.parse(saved)
+    }))}; Path=/; SameSite=Lax`;
+    const url = new URL(location.href);
+    url.searchParams.set('__ddret', token);
+    url.searchParams.set('__ddguard', token);
+    history.replaceState({
+      ...history.state,
+      daedongExternalReturnToken: token,
+      daedongExternalReturnGuard: token
+    }, '', `${url.pathname}${url.search}${url.hash}`);
+    window.daedongEarlyHomeInteraction = false;
+    window.daedongArmFreshEntryTop?.();
+  });
+  await page.evaluate(() => {
+    const card = document.querySelector('#storeGrid .store-card[data-id]');
+    card?.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true, view: window}));
+  });
+  await page.waitForTimeout(1700);
+  await check(page.evaluate(() => ({
+    modalOpen: document.querySelector('#modal')?.hidden === false,
+    chosenId: document.querySelector('#modal')?.dataset.activeStoreId || '',
+    freshEntrySettling: document.documentElement.classList.contains('daedong-fresh-entry-settling'),
+    staleSession: sessionStorage.getItem('daedongExternalReturnRc2'),
+    staleLocal: localStorage.getItem('daedongExternalReturnRc2'),
+    departureSession: sessionStorage.getItem('daedongExternalAppDepartureV1'),
+    departureLocal: localStorage.getItem('daedongExternalAppDepartureV1'),
+    durableCookie: document.cookie.includes('daedongOrderReturnV1='),
+    returnParam: new URL(location.href).searchParams.has('__ddret'),
+    guardParam: new URL(location.href).searchParams.has('__ddguard')
+  })).then(state => (
+    state.modalOpen
+      && state.chosenId === 'pager-store-001'
+      && !state.freshEntrySettling
+      && !state.staleSession && !state.staleLocal
+      && !state.departureSession && !state.departureLocal
+      && !state.durableCookie && !state.returnParam && !state.guardParam
+  )), '새 접속 직후 가게카드를 눌러도 지연 복귀 상태가 홈으로 덮어쓰지 않음');
+  // This close only resets the fixture before the paging checks. A synthetic
+  // tap can be swallowed by Chromium's emulated touch pipeline, so invoke the
+  // already-covered close handler directly and keep this test focused on the
+  // store-card/home-reset race.
+  await page.evaluate(() => document.querySelector('.modal-close')?.click());
+  await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true);
+
+  await page.evaluate(() => {
     document.body.dispatchEvent(new PointerEvent('pointerdown', {
       bubbles: true,
       pointerType: 'touch',
@@ -194,10 +254,10 @@ try {
     promoTop: document.querySelector('.promo-section')?.getBoundingClientRect().top ?? -1,
     scrollY: window.scrollY
   }));
-  await Promise.all([
-    page.evaluate(() => window.daedongLocationRankingReady),
-    page.evaluate(() => window.daedongStoreServiceInfo?.ready)
-  ]);
+  await page.waitForFunction(() => (
+    document.querySelector('#storeGrid .store-card[data-id="pager-store-001"] [data-store-service-card-meta]')
+      ?.textContent?.includes('08:00–14:00')
+  ), null, {timeout: 10000});
   await page.waitForTimeout(250);
   const afterRanking = await page.evaluate(() => ({
     left: document.querySelector('#storeGrid')?.scrollLeft || 0,

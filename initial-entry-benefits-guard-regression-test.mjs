@@ -66,6 +66,6 @@ assert.match(eventJs, /function scheduleInitialOpen\(\) \{[\s\S]*if \(!AUTO_OPEN
   '자동 행사창 예약 자체를 중단해 혜택 화면과 홈 화면을 가로채지 않아야 합니다.');
 assert.match(html, /store-list-horizontal-pager\.js\?v=[^"\n]*early-interaction-2/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*auto-popup-disabled-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v25-late-webview-restore-guard'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v26-store-card-intent-guard'/);
 
 console.log('initial-entry-benefits-guard-regression-test: pass');
