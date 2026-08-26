@@ -26,6 +26,6 @@ assert.match(handler, /launchMobileRoute\(key, href\)/);
 
 assert.match(html, /app\.js\?v=[^"\n]*kakao-order-same-tab-1/);
 assert.match(html, /pwa-register\.js\?v=[^"\n]*kakao-cache-reset-1/);
-assert.match(serviceWorker, /daedong-yeosu-app-shell-v15-mobile-performance-followup/);
+assert.match(serviceWorker, /daedong-yeosu-app-shell-v16-launch-home/);
 
 console.log('PASS: 카카오톡 주문앱은 현재 창 이동·복귀 저장·먹깨비 HTTPS·캐시 초기화 유지');
