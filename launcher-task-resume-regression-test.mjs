@@ -85,6 +85,20 @@ wallNow = 6000;
 intervals.at(-1)();
 assert.equal(scrollingElement.scrollTop, 680,
   '검증된 주문앱 복귀 중에는 보던 위치를 홈 초기화로 덮어쓰면 안 됩니다.');
+sandbox.daedongReadEarlyExternalReturn = () => null;
+wallNow = 7000;
+dispatch(windowListeners, 'pageshow');
+assert.equal(scrollingElement.scrollTop, 680,
+  '주문앱 복귀 토큰을 소비한 직후 이어지는 pageshow도 보던 위치를 보존해야 합니다.');
+wallNow = 8000;
+sandbox.daedongLastValidatedExternalReturnAt = wallNow;
+dispatch(windowListeners, 'pageshow');
+assert.equal(scrollingElement.scrollTop, 680,
+  '복귀 처리기가 토큰을 소비했다고 알린 직후에도 보던 위치를 보존해야 합니다.');
+wallNow = 14000;
+dispatch(windowListeners, 'pageshow');
+assert.equal(scrollingElement.scrollTop, 0,
+  '주문앱 복귀 유예시간이 지난 뒤 앱 아이콘으로 재실행하면 홈으로 이동해야 합니다.');
 assert.equal(reloads, 0, '검증 과정에서 불필요한 새로고침이 발생하면 안 됩니다.');
 
 console.log('launcher task resume regression: PASS');

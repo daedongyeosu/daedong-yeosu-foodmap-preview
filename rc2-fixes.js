@@ -71,6 +71,7 @@ function rc2StoreReturnState(storage, key, payload) {
 function rc2WriteReturnState(key, value) {
   const returnToken = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
   const payload = {...value, returnToken, savedAt: Date.now()};
+  globalThis.daedongLastValidatedExternalReturnAt = payload.savedAt;
   for (const storageKey of RC2_RETURN_STORAGE_KEYS) {
     if (storageKey === key) continue;
     try { sessionStorage.removeItem(storageKey); } catch {}
@@ -94,6 +95,7 @@ function rc2WriteReturnState(key, value) {
 }
 
 function rc2ClearReturnState(key, saved = null) {
+  if (saved?.returnToken) globalThis.daedongLastValidatedExternalReturnAt = Date.now();
   try { sessionStorage.removeItem(key); } catch {}
   try { localStorage.removeItem(key); } catch {}
   const token = saved?.returnToken;

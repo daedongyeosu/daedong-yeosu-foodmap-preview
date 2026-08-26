@@ -47,12 +47,28 @@ function settleInstalledAppAtHome() {
   window.setTimeout(resetReopenedAppScroll, 1800);
 }
 
+const DAEDONG_EXTERNAL_RETURN_GRACE_MS = 5000;
+let daedongLastValidatedExternalReturnAt = 0;
+
 function hasValidatedExternalReturnInFlight() {
-  if (globalThis.daedongPendingExternalReturn) return true;
+  const sharedReturnAt = Number(globalThis.daedongLastValidatedExternalReturnAt || 0);
+  if (sharedReturnAt > daedongLastValidatedExternalReturnAt) {
+    daedongLastValidatedExternalReturnAt = sharedReturnAt;
+  }
+  if (globalThis.daedongPendingExternalReturn) {
+    daedongLastValidatedExternalReturnAt = Date.now();
+    return true;
+  }
   const readReturn = globalThis.daedongReadEarlyExternalReturn;
-  if (typeof readReturn !== 'function') return false;
-  return ['daedongExternalReturnRc2', 'daedongAppBrowserReturnV1']
-    .some(key => Boolean(readReturn(key)));
+  const hasSavedReturn = typeof readReturn === 'function' &&
+    ['daedongExternalReturnRc2', 'daedongAppBrowserReturnV1']
+      .some(key => Boolean(readReturn(key)));
+  if (hasSavedReturn) {
+    daedongLastValidatedExternalReturnAt = Date.now();
+    return true;
+  }
+  return daedongLastValidatedExternalReturnAt > 0 &&
+    Date.now() - daedongLastValidatedExternalReturnAt < DAEDONG_EXTERNAL_RETURN_GRACE_MS;
 }
 
 function resetInstalledAppLaunch() {
