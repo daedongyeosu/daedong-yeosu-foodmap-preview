@@ -48,7 +48,11 @@ function bootContext({historyToken = '', urlToken = ''} = {}) {
     sessionStorage: {getItem() { return null; }, removeItem() {}},
     localStorage: {getItem: key => key === 'daedongAppBrowserReturnV1' ? JSON.stringify(saved) : null, removeItem() {}},
     history: {state: historyToken ? {daedongExternalReturnToken: historyToken} : null, replaceState() {}},
-    window: {}, URL, String, Date, JSON
+    window: {}, URL, String, Date, JSON,
+    performance: {
+      getEntriesByType(type) { return type === 'navigation' ? [{type: 'navigate'}] : []; },
+      navigation: {type: 0}
+    }
   };
   vm.createContext(context);
   vm.runInContext(bootScript, context);

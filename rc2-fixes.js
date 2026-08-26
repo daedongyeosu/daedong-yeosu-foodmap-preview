@@ -48,16 +48,33 @@ function rc2ReadDepartureMarker() {
   return rc2FreshReturnState(persistentMarker) ? persistentMarker : null;
 }
 
+function rc2IsHistoryReentry() {
+  if (globalThis.daedongEntryIsHistoryReturn === true) return true;
+  try {
+    const navigationEntry = performance.getEntriesByType?.('navigation')?.[0];
+    return navigationEntry?.type === 'back_forward' || Number(performance.navigation?.type) === 2;
+  } catch {
+    return false;
+  }
+}
+
 function rc2ReadReturnState(key) {
   let urlToken = '';
   try { urlToken = new URL(location.href).searchParams.get(RC2_RETURN_TOKEN_PARAM) || ''; } catch {}
   const historyToken = String(history.state?.[RC2_RETURN_TOKEN_STATE] || '');
+  const departureToken = rc2IsHistoryReentry()
+    ? String(rc2ReadDepartureMarker()?.returnToken || '')
+    : '';
   for (const storage of [sessionStorage, localStorage]) {
     const saved = rc2ParseReturnState(storage, key);
     const savedToken = String(saved?.returnToken || '');
     if (
       rc2FreshReturnState(saved) && savedToken
-      && (savedToken === historyToken || savedToken === urlToken)
+      && (
+        savedToken === historyToken
+        || savedToken === urlToken
+        || savedToken === departureToken
+      )
     ) return saved;
   }
   return null;
