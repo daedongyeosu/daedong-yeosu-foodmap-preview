@@ -22,7 +22,10 @@ assert.match(pager, /scrollStoreListPagerTo\(targetPage,\{reveal\}\)/,
   '버튼과 스와이프가 같은 즉시 이동 경로를 사용해야 합니다.');
 assert.match(pager, /window\.daedongHasHomeInteraction=hasStoreListPagerCustomerInteraction/,
   '뒤늦은 팝업과 정렬 갱신이 고객의 목록 사용 여부를 확인할 수 있어야 합니다.');
-assert.match(pager, /document\.addEventListener\('pointerdown',markStoreListPagerCustomerInteraction/);
+assert.match(pager, /storeListPagerGridPointerActive[\s\S]*markStoreListPagerVerifiedCustomerInteraction\(\)/,
+  '실제 가로 이동이 확인된 뒤에만 고객의 목록 사용으로 기록해야 합니다.');
+assert.doesNotMatch(pager, /document\.addEventListener\('pointerdown',markStoreListPagerCustomerInteraction/,
+  '카카오 링크를 연 첫 터치를 목록 사용으로 오인하면 안 됩니다.');
 assert.match(pager, /window\.daedongCaptureStorePagerState=captureStoreListPagerState/);
 assert.match(pager, /window\.daedongRestoreStorePagerState=restoreStoreListPagerState/);
 assert.match(pager, /grid\.scrollLeft=Math\.max\(0,Number\(snapshot\.scrollLeft\|\|0\)\)/,
@@ -61,7 +64,7 @@ assert.match(experience, /root\.replaceChildren\(\.\.\.staging\.childNodes\)/,
 
 assert.match(html, /store-list-horizontal-pager\.css\?v=visible-results-1-free-scroll-1/);
 assert.match(html, /id="storePagerStatus"[^>]*aria-live="polite"/);
-assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-free-scroll-1-early-interaction-1/);
+assert.match(html, /store-list-horizontal-pager\.js\?v=visible-results-1-free-scroll-1-early-interaction-2/);
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*no-late-interrupt-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-3-scroll-cancel-1-layer-guard-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*list-position-stable-1/);

@@ -9,9 +9,15 @@ let storeListPagerScrollFrame=0;
 let storeListPagerProgrammatic=false;
 let storeListPagerObserver=null;
 let storeListPagerCustomerInteracted=false;
+let storeListPagerGridPointerActive=false;
+let storeListPagerLastObservedLeft=0;
 
 function markStoreListPagerCustomerInteraction(){
   storeListPagerCustomerInteracted=true;
+}
+function markStoreListPagerVerifiedCustomerInteraction(){
+  markStoreListPagerCustomerInteraction();
+  globalThis.daedongMarkHomeInteraction?.();
 }
 function hasStoreListPagerCustomerInteraction(){
   return storeListPagerCustomerInteracted||globalThis.daedongEarlyHomeInteraction===true;
@@ -96,6 +102,14 @@ function readStoreListPagerScroll(){
   applyStoreListPager();
 }
 function scheduleStoreListPagerScrollRead(){
+  const {grid}=storeListPagerElements();
+  const nextLeft=Number(grid?.scrollLeft||0);
+  if(
+    !storeListPagerProgrammatic
+    && storeListPagerGridPointerActive
+    && Math.abs(nextLeft-storeListPagerLastObservedLeft)>1
+  ) markStoreListPagerVerifiedCustomerInteraction();
+  storeListPagerLastObservedLeft=nextLeft;
   if(storeListPagerScrollFrame)cancelAnimationFrame(storeListPagerScrollFrame);
   storeListPagerScrollFrame=requestAnimationFrame(()=>{storeListPagerScrollFrame=0;readStoreListPagerScroll()});
 }
@@ -177,8 +191,16 @@ function initializeStoreListPager(){
   grid.dataset.storePagerReady='1';
   grid.tabIndex=0;
   grid.setAttribute('aria-label','가게 목록. 좌우로 자유롭게 밀어 가게를 볼 수 있습니다.');
-  document.addEventListener('pointerdown',markStoreListPagerCustomerInteraction,{capture:true,passive:true});
-  document.addEventListener('touchstart',markStoreListPagerCustomerInteraction,{capture:true,passive:true});
+  storeListPagerLastObservedLeft=Number(grid.scrollLeft||0);
+  grid.addEventListener('pointerdown',()=>{
+    storeListPagerGridPointerActive=true;
+  },{passive:true});
+  grid.addEventListener('touchstart',()=>{
+    storeListPagerGridPointerActive=true;
+  },{passive:true});
+  for(const type of ['pointerup','pointercancel','touchend','touchcancel']){
+    document.addEventListener(type,()=>{storeListPagerGridPointerActive=false},{capture:true,passive:true});
+  }
   document.addEventListener('wheel',markStoreListPagerCustomerInteraction,{capture:true,passive:true});
   document.addEventListener('keydown',markStoreListPagerCustomerInteraction,true);
   grid.addEventListener('scroll',scheduleStoreListPagerScrollRead,{passive:true});
