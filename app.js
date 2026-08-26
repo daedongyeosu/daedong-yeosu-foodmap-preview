@@ -8,16 +8,16 @@ try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; 
 // A fresh visit must begin at the top, including a reused Kakao in-app-browser
 // history entry. Only an explicitly marked order-app return may preserve the
 // previous list/detail position; the early boot script validates that marker.
-const DAEDONG_SHOULD_RESET_ENTRY_SCROLL = !globalThis.daedongPendingExternalReturn;
-function resetFreshEntryScroll() {
-  if (!DAEDONG_SHOULD_RESET_ENTRY_SCROLL) return;
+const DAEDONG_ENTRY_STARTED_WITH_EXTERNAL_RETURN = Boolean(globalThis.daedongEntryHadExternalReturn);
+function resetFreshEntryScroll({force = false} = {}) {
+  if (!force && DAEDONG_ENTRY_STARTED_WITH_EXTERNAL_RETURN) return;
   const scrollingElement = document.scrollingElement || document.documentElement;
   if (scrollingElement) scrollingElement.scrollTop = 0;
   if (document.body) document.body.scrollTop = 0;
   window.scrollTo(0, 0);
 }
 if (
-  DAEDONG_SHOULD_RESET_ENTRY_SCROLL &&
+  !DAEDONG_ENTRY_STARTED_WITH_EXTERNAL_RETURN &&
   typeof window !== 'undefined' &&
   typeof document !== 'undefined'
 ) {
@@ -38,12 +38,13 @@ try {
 } catch {}
 
 function settleInstalledAppAtHome() {
-  resetFreshEntryScroll();
-  requestAnimationFrame(resetFreshEntryScroll);
-  window.setTimeout(resetFreshEntryScroll, 120);
-  window.setTimeout(resetFreshEntryScroll, 360);
-  window.setTimeout(resetFreshEntryScroll, 900);
-  window.setTimeout(resetFreshEntryScroll, 1800);
+  const resetReopenedAppScroll = () => resetFreshEntryScroll({force: true});
+  resetReopenedAppScroll();
+  requestAnimationFrame(resetReopenedAppScroll);
+  window.setTimeout(resetReopenedAppScroll, 120);
+  window.setTimeout(resetReopenedAppScroll, 360);
+  window.setTimeout(resetReopenedAppScroll, 900);
+  window.setTimeout(resetReopenedAppScroll, 1800);
 }
 
 function resetInstalledAppLaunch() {
