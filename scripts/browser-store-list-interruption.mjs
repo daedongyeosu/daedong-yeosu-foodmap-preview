@@ -76,6 +76,36 @@ const check = async (condition, message, detail = null) => {
   if (!ok) throw new Error(message);
 };
 
+const seedStaleReturnState = () => page.evaluate(() => {
+  const token = `stale-card-return-token-${Date.now()}`;
+  const saved = JSON.stringify({
+    storeId: 'pager-store-036',
+    returnToken: token,
+    savedAt: Date.now()
+  });
+  const marker = JSON.stringify({returnToken: token, savedAt: Date.now()});
+  for (const storage of [sessionStorage, localStorage]) {
+    storage.setItem('daedongExternalReturnRc2', saved);
+    storage.setItem('daedongExternalAppDepartureV1', marker);
+  }
+  document.cookie = `daedongOrderReturnV1=${encodeURIComponent(JSON.stringify({
+    storageKey: 'daedongExternalReturnRc2',
+    returnToken: token,
+    savedAt: Date.now(),
+    payload: JSON.parse(saved)
+  }))}; Path=/; SameSite=Lax`;
+  const url = new URL(location.href);
+  url.searchParams.set('__ddret', token);
+  url.searchParams.set('__ddguard', token);
+  history.replaceState({
+    ...history.state,
+    daedongExternalReturnToken: token,
+    daedongExternalReturnGuard: token
+  }, '', `${url.pathname}${url.search}${url.hash}`);
+  window.daedongEarlyHomeInteraction = false;
+  window.daedongArmFreshEntryTop?.();
+});
+
 try {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForFunction(() => document.querySelectorAll('#storeGrid .store-card').length >= 16, null, {timeout: 10000});
@@ -85,35 +115,7 @@ try {
   await check(page.locator('#storePagerControls').isHidden(),
     '전체 가게 목록의 하단 이전·다음 화살표를 표시하지 않음');
 
-  await page.evaluate(() => {
-    const token = 'stale-card-return-token';
-    const saved = JSON.stringify({
-      storeId: 'pager-store-036',
-      returnToken: token,
-      savedAt: Date.now()
-    });
-    const marker = JSON.stringify({returnToken: token, savedAt: Date.now()});
-    for (const storage of [sessionStorage, localStorage]) {
-      storage.setItem('daedongExternalReturnRc2', saved);
-      storage.setItem('daedongExternalAppDepartureV1', marker);
-    }
-    document.cookie = `daedongOrderReturnV1=${encodeURIComponent(JSON.stringify({
-      storageKey: 'daedongExternalReturnRc2',
-      returnToken: token,
-      savedAt: Date.now(),
-      payload: JSON.parse(saved)
-    }))}; Path=/; SameSite=Lax`;
-    const url = new URL(location.href);
-    url.searchParams.set('__ddret', token);
-    url.searchParams.set('__ddguard', token);
-    history.replaceState({
-      ...history.state,
-      daedongExternalReturnToken: token,
-      daedongExternalReturnGuard: token
-    }, '', `${url.pathname}${url.search}${url.hash}`);
-    window.daedongEarlyHomeInteraction = false;
-    window.daedongArmFreshEntryTop?.();
-  });
+  await seedStaleReturnState();
   await page.evaluate(() => {
     const card = document.querySelector('#storeGrid .store-card[data-id]');
     card?.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true, view: window}));
@@ -142,6 +144,34 @@ try {
   // tap can be swallowed by Chromium's emulated touch pipeline, so invoke the
   // already-covered close handler directly and keep this test focused on the
   // store-card/home-reset race.
+  await page.evaluate(() => document.querySelector('.modal-close')?.click());
+  await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true);
+
+  await page.waitForSelector('[data-rc3-rail-open]');
+  await seedStaleReturnState();
+  const rc3RailCard = page.locator('[data-rc3-rail-open]').first();
+  const rc3RailStoreId = await rc3RailCard.getAttribute('data-rc3-rail-open');
+  await rc3RailCard.scrollIntoViewIfNeeded();
+  await rc3RailCard.tap();
+  await page.waitForTimeout(1700);
+  await check(page.evaluate(expectedId => ({
+    modalOpen: document.querySelector('#modal')?.hidden === false,
+    chosenId: document.querySelector('#modal')?.dataset.activeStoreId || '',
+    freshEntrySettling: document.documentElement.classList.contains('daedong-fresh-entry-settling'),
+    staleSession: sessionStorage.getItem('daedongExternalReturnRc2'),
+    staleLocal: localStorage.getItem('daedongExternalReturnRc2'),
+    departureSession: sessionStorage.getItem('daedongExternalAppDepartureV1'),
+    departureLocal: localStorage.getItem('daedongExternalAppDepartureV1'),
+    durableCookie: document.cookie.includes('daedongOrderReturnV1='),
+    expectedId
+  }), rc3RailStoreId).then(state => (
+    state.modalOpen
+      && state.chosenId === state.expectedId
+      && !state.freshEntrySettling
+      && !state.staleSession && !state.staleLocal
+      && !state.departureSession && !state.departureLocal
+      && !state.durableCookie
+  )), '실제 카카오 터치 순서의 추천 가게카드도 상세를 열고 지연 홈 초기화를 차단함');
   await page.evaluate(() => document.querySelector('.modal-close')?.click());
   await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true);
 

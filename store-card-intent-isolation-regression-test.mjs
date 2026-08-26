@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
+const rc3 = fs.readFileSync('rc3-fixes.js', 'utf8');
 const service = fs.readFileSync('store-service-info.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
 const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
@@ -59,14 +60,23 @@ assert.equal(sandbox.history.url, '/?fresh=1', '일회성 복귀 주소 표식�
 
 assert.match(rc2, /#storeGrid \.store-card\[data-id\][\s\S]*rc2OpenStoreFromCustomer/,
   '홈 가게목록 카드는 고객 선택 격리를 거쳐야 합니다.');
+assert.match(rc2, /RC2_STORE_INTENT_SELECTOR[\s\S]*\[data-rc3-rail-open\][\s\S]*function rc2PrepareStoreIntent/,
+  '추천 가게카드는 손가락이 닿는 첫 순간부터 지연 초기화를 중단해야 합니다.');
+assert.match(rc2, /addEventListener\('pointerdown', rc2PrepareStoreIntent, true\)/,
+  '카카오 포인터 시작 시점의 추천 가게카드 의도를 가로채야 합니다.');
+assert.match(rc2, /rc3RailStore[\s\S]{0,320}rc2OpenStoreFromCustomer/,
+  'RC3 추천 카드의 실제 클릭도 고객 선택 격리를 거쳐야 합니다.');
+assert.match(rc3, /dataset\.rc3Gesture === 'drag'[\s\S]*daedongConfirmIntentionalStoreOpen\?\.\(\)[\s\S]*openStore\(store\)/,
+  'RC3 자체 예비 경로도 상세 열기 전에 지연 초기화를 종료해야 합니다.');
 for (const selector of ['railStore', 'appStoreInfo', 'channelStore', 'searchStore']) {
   assert.match(rc2, new RegExp(`${selector}[\\s\\S]{0,260}rc2OpenStoreFromCustomer`), `${selector} 경로를 격리해야 합니다.`);
 }
 assert.match(service, /function openStoreAfterOverview\(storeId\)[\s\S]*daedongConfirmIntentionalStoreOpen\?\.\(\)[\s\S]*openStore\(store\)/,
   '통합 가게찾기 카드도 같은 격리를 사용해야 합니다.');
-assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*store-card-intent-1/);
-assert.match(html, /final-experience\.js\?v=[^"\n]*store-card-intent-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*store-card-intent-2/);
+assert.match(finalExperience, /fxRc3Script\.src\+='-atomic-rail-refresh-1-store-card-intent-2'/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*store-card-intent-2/);
 assert.match(html, /store-service-info\.js\?v=[^"\n]*store-card-intent-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v26-store-card-intent-guard'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v27-store-card-touchstart-intent-guard'/);
 
 console.log('store card intentional navigation isolation regression: PASS');

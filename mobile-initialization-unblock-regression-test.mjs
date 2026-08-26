@@ -35,7 +35,7 @@ assert.match(html, /cloudflare-preview-api-4-curated-menu-photos-1/);
 assert.match(html, /catalog-ready-watchdog-2/);
 assert.match(html, /location-ranking-watchdog-2/);
 assert.match(html, /store-service-26-deferred-bootstrap-1-menu-search-status-order-1/);
-assert.match(serviceWorker, /daedong-yeosu-app-shell-v26-store-card-intent-guard/);
+assert.match(serviceWorker, /daedong-yeosu-app-shell-v27-store-card-touchstart-intent-guard/);
 assert.match(app, /const catalogBootPromise = initialize\(\)/,
   '가게목록 요청은 후속 지연 스크립트를 기다리지 않고 시작해야 합니다.');
 
