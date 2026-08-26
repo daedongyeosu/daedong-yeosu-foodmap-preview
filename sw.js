@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v22-launcher-resume-gap';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v23-mukkebi-no-late-popup';
 const RUNTIME_CACHE = 'daedong-yeosu-runtime-v2-mobile-photo-delivery';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [
