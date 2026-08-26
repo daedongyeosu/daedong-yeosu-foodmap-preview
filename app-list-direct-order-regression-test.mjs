@@ -27,7 +27,7 @@ assert.match(finalExperience, /function fxRestoreAppBrowserReturn\(\)[\s\S]*?ope
 assert.match(finalExperience, /fxRestoreAppBrowserReturn\(\);\s*\}/);
 assert.match(rc2, /async function rc2RestoreAfterExternalPage\(\{rebuildExisting = false\} = \{\}\)/);
 assert.match(rc2, /const opened = await openStore\(store\)/);
-assert.match(rc2, /const restoreAfterNativeResume = \(\) => \{[\s\S]*?rc2RestoreExternalSurface\(\{rebuildExisting: true\}\)[\s\S]*?window\.addEventListener\('pageshow', restoreAfterNativeResume\)[\s\S]*?window\.addEventListener\('focus', restoreAfterNativeResume\)/);
+assert.match(rc2, /const restoreAfterNativeResume = \(\) => \{[\s\S]*?rc2RestoreAfterConfirmedResume\(\{rebuildExisting: true\}\)[\s\S]*?window\.addEventListener\('pageshow', restoreAfterNativeResume\)[\s\S]*?window\.addEventListener\('focus', \(\) => rc2RestoreAfterConfirmedResume/);
 assert.match(rc2, /rc2ScrubCustomerCounts\(document\);[\s\S]*?await rc2RestoreAfterExternalPage\(\);[\s\S]*?fxRestoreAppBrowserReturn\?\.\(\)/);
 assert.match(finalExperience, /surface:'app_store_list'/);
 assert.match(finalExperience, /\['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'\]/);

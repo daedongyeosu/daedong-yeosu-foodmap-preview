@@ -151,6 +151,82 @@ const coldReturnPage = async () => {
 };
 
 try {
+  const lifecyclePage = await readyPage();
+  await lifecyclePage.evaluate(() => {
+    window.__departureLifecycleLaunches = [];
+    window.daedongLaunchMobileRoute = (key, href) => {
+      window.__departureLifecycleLaunches.push({key, href});
+    };
+    openAppBrowser('baemin');
+  });
+  const lifecycleTarget = lifecyclePage.locator('#modal:not([hidden]) [data-app-store-order]').nth(8);
+  await lifecycleTarget.waitFor({state: 'visible', timeout: 5000});
+  await lifecycleTarget.scrollIntoViewIfNeeded();
+  const lifecycleStoreId = await lifecycleTarget.getAttribute('data-app-store-order');
+  await lifecycleTarget.click();
+  await lifecyclePage.waitForFunction(() => window.__departureLifecycleLaunches?.length === 1, null, {timeout: 5000});
+  const storedBeforeBounce = await lifecyclePage.evaluate(() => Boolean(
+    JSON.parse(sessionStorage.getItem('daedongAppBrowserReturnV1') || 'null')?.returnToken
+  ));
+  await check(Promise.resolve(storedBeforeBounce), '주문앱 실행 직후 일회용 복귀표 저장');
+
+  await lifecyclePage.evaluate(() => {
+    window.dispatchEvent(new Event('blur'));
+    window.dispatchEvent(new Event('focus'));
+  });
+  await lifecyclePage.waitForTimeout(120);
+  const afterDepartureBounce = await lifecyclePage.evaluate(() => ({
+    returnStateKept: Boolean(JSON.parse(sessionStorage.getItem('daedongAppBrowserReturnV1') || 'null')?.returnToken),
+    correctApp: document.querySelector('#modal:not([hidden])')?.dataset.appBrowserKey === 'baemin'
+  }));
+  await check(Promise.resolve(afterDepartureBounce.returnStateKept), '출발 중 blur→focus 튐에서 복귀표를 소비하지 않음');
+  await check(Promise.resolve(afterDepartureBounce.correctApp), '출발 중 가짜 focus에서 배달의민족 목록 유지');
+
+  await lifecyclePage.evaluate(async () => {
+    let hidden = true;
+    Object.defineProperty(document, 'hidden', {configurable: true, get: () => hidden});
+    Object.defineProperty(document, 'visibilityState', {configurable: true, get: () => hidden ? 'hidden' : 'visible'});
+    document.dispatchEvent(new Event('visibilitychange'));
+    await new Promise(resolve => setTimeout(resolve, 30));
+    hidden = false;
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await lifecyclePage.waitForFunction(() => !sessionStorage.getItem('daedongAppBrowserReturnV1'), null, {timeout: 5000});
+  const afterConfirmedReturn = await lifecyclePage.evaluate(storeId => ({
+    correctApp: document.querySelector('#modal:not([hidden])')?.dataset.appBrowserKey === 'baemin',
+    sameStorePresent: Boolean(document.querySelector(`[data-app-store-order="${CSS.escape(storeId)}"]`)),
+    returnStateCleared: !sessionStorage.getItem('daedongAppBrowserReturnV1')
+  }), lifecycleStoreId);
+  await check(Promise.resolve(afterConfirmedReturn.correctApp), '실제 hidden→visible 복귀 뒤 배달의민족 목록 유지');
+  await check(Promise.resolve(afterConfirmedReturn.sameStorePresent), '실제 복귀 뒤 눌렀던 가게가 있는 동일 목록 유지');
+  await check(Promise.resolve(afterConfirmedReturn.returnStateCleared), '실제 복귀가 끝난 뒤에만 일회용 복귀표 소비');
+  report.departureLifecycle = {storeId: lifecycleStoreId, afterDepartureBounce, afterConfirmedReturn};
+  await lifecyclePage.close();
+
+  const focusOnlyPage = await readyPage();
+  await focusOnlyPage.evaluate(() => {
+    window.daedongLaunchMobileRoute = () => {};
+    openAppBrowser('yogiyo');
+  });
+  const focusOnlyTarget = focusOnlyPage.locator('#modal:not([hidden]) [data-app-store-order]').nth(6);
+  await focusOnlyTarget.waitFor({state: 'visible', timeout: 5000});
+  await focusOnlyTarget.click();
+  await focusOnlyPage.waitForFunction(() => Boolean(
+    JSON.parse(sessionStorage.getItem('daedongAppBrowserReturnV1') || 'null')?.returnToken
+  ), null, {timeout: 5000});
+  await focusOnlyPage.evaluate(() => window.dispatchEvent(new Event('blur')));
+  await focusOnlyPage.waitForTimeout(720);
+  await focusOnlyPage.evaluate(() => window.dispatchEvent(new Event('focus')));
+  await focusOnlyPage.waitForFunction(() => !sessionStorage.getItem('daedongAppBrowserReturnV1'), null, {timeout: 5000});
+  const focusOnlyReturn = await focusOnlyPage.evaluate(() => ({
+    correctApp: document.querySelector('#modal:not([hidden])')?.dataset.appBrowserKey === 'yogiyo',
+    returnStateCleared: !sessionStorage.getItem('daedongAppBrowserReturnV1')
+  }));
+  await check(Promise.resolve(focusOnlyReturn.correctApp), 'hidden 신호가 없는 blur→focus 복귀에서도 요기요 목록 유지');
+  await check(Promise.resolve(focusOnlyReturn.returnStateCleared), '충분히 지난 focus 단독 복귀는 정상적으로 일회용 복귀표 소비');
+  report.departureLifecycle.focusOnlyReturn = focusOnlyReturn;
+  await focusOnlyPage.close();
+
   for (const app of appDefinitions) {
     const page = await readyPage();
     await page.evaluate(key => openAppBrowser(key), app.key);

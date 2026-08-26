@@ -24,7 +24,7 @@ const visibleStoreBranch = rc2.slice(rc2.indexOf('if (visibleStoreMatches)'), rc
 assert.doesNotMatch(visibleStoreBranch, /rc2NativeHardClose|openStore\(/, '같은 가게 상세를 복귀 중 닫고 다시 만들면 실제 터치와 경쟁합니다.');
 assert.match(rc2, /prepareStoreSurface && storeSnapshot && storeSnapshot !== current[\s\S]*?rc2ModalStack\.length = 0;[\s\S]*?rc2RestoreSnapshot\(storeSnapshot\)/, '외부 주문앱을 열기 전에 원본 Preview를 가게 상세 화면으로 안정화해야 합니다.');
 assert.match(rc2, /const prepareStoreSurface = Boolean\(sourceElement\?\.matches\?\.\('a\[data-community-original\]'\)\)/, '다른 주문방법의 외부 주문앱 링크에서만 출발 전 상세 화면을 안정화해야 합니다.');
-assert.match(rc2, /window\.addEventListener\('focus', restoreAfterNativeResume\)/, '카카오 외부 앱에서 돌아올 때 focus만 발생하는 경우도 복원해야 합니다.');
+assert.match(rc2, /window\.addEventListener\('focus', \(\) => rc2RestoreAfterConfirmedResume/, '카카오 외부 앱에서 돌아올 때 focus만 발생하는 경우도 출발 확인 뒤 복원해야 합니다.');
 const externalBranch = rc2.slice(rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)'), rc2.indexOf('const externalLink', rc2.indexOf('if (comparedExternal && hasStoreDetailInModalFlow)')));
 assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.assign/, '카카오 WebView 원본 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
 assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?rc2LaunchComparedExternal\(comparedExternal, href\)/, '원본 Preview를 가게 상세로 안정화한 뒤 주문앱별 복귀 방식으로 열어야 합니다.');

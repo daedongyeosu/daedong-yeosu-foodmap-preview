@@ -131,8 +131,8 @@ assert.match(rc2, /for \(const delay of \[120, 360, 800, 1600\]\)/, '사진·메
 assert.match(rc2, /async function rc2RestoreExternalSurface\(\{rebuildExisting = false\} = \{\}\)[\s\S]*?rc2RestoreAfterExternalPage\(\{rebuildExisting\}\)[\s\S]*?fxRestoreAppBrowserReturn/);
 assert.match(rc2, /if \(restored\) window\.daedongFinishExternalReturnBoot/);
 const nativeResumeLifecycle = rc2.match(/visibilitychange[\s\S]*?window\.addEventListener\('pageshow'/)?.[0] || '';
-assert.match(nativeResumeLifecycle, /rc2RestoreExternalSurface\(\{rebuildExisting: true\}\)[\s\S]*?if \(restored\)[\s\S]*?else rc2StartAmbient\(false\)/,
-  '복귀 화면 복원을 먼저 시도하고 저장 상태가 없을 때만 홈 효과를 시작해야 합니다.');
+assert.match(nativeResumeLifecycle, /rc2RestoreAfterConfirmedResume\(\{rebuildExisting: true\}\)[\s\S]*?if \(restored\)[\s\S]*?else rc2StartAmbient\(false\)/,
+  '실제 출발이 확인된 뒤 복귀 화면을 먼저 복원하고 저장 상태가 없을 때만 홈 효과를 시작해야 합니다.');
 
 if (menu) {
   assert.match(menu, /data-store-id="\$\{escapeMenuHtml\(store\.id\)\}"/);
