@@ -144,6 +144,17 @@ function rc2ResetExternalDepartureLifecycle() {
   rc2ExternalDepartureHidden = false;
 }
 
+const RC2_STORE_INTENT_SELECTOR = [
+  '[data-rc3-rail-open]',
+  '[data-rail-store-id]',
+  '#storeGrid .store-card[data-id]',
+  '[data-app-store-info]',
+  '[data-app-store-id]',
+  '[data-channel-store-id]',
+  '[data-search-store-id]'
+].join(',');
+let rc2LastStoreIntentStartAt = -Infinity;
+
 function rc2ConfirmIntentionalStoreOpen() {
   // A real store-card click supersedes every delayed fresh-entry or external
   // return task. Kakao can deliver those lifecycle callbacks after the click;
@@ -173,6 +184,14 @@ function rc2OpenStoreFromCustomer(store) {
   if (!store) return false;
   rc2ConfirmIntentionalStoreOpen();
   return openStore(store);
+}
+
+function rc2PrepareStoreIntent(event) {
+  if (!event.target?.closest?.(RC2_STORE_INTENT_SELECTOR)) return;
+  const now = performance.now();
+  if (now - rc2LastStoreIntentStartAt < 120) return;
+  rc2LastStoreIntentStartAt = now;
+  rc2ConfirmIntentionalStoreOpen();
 }
 
 window.daedongConfirmIntentionalStoreOpen = rc2ConfirmIntentionalStoreOpen;
@@ -1161,6 +1180,8 @@ fxOrderClick = function rc2OrderClick(button) {
 fxInstallEvents = function rc2InstallEvents() {
   if (window.daedongCoreEventsInstalled) return;
   window.daedongCoreEventsInstalled = true;
+  document.addEventListener('pointerdown', rc2PrepareStoreIntent, true);
+  document.addEventListener('touchstart', rc2PrepareStoreIntent, {capture: true, passive: true});
   document.addEventListener('pointerdown', fxPressStart, true);
   document.addEventListener('pointerup', rc2ReleaseAllPresses, true);
   document.addEventListener('pointercancel', rc2ReleaseAllPresses, true);
@@ -1184,6 +1205,8 @@ fxInstallEvents = function rc2InstallEvents() {
     }
     const railMore = event.target.closest('[data-rail-more]');
     if (railMore) { event.preventDefault(); event.stopImmediatePropagation(); rc2OpenRailList(railMore.dataset.railMore); return; }
+    const rc3RailStore = event.target.closest('[data-rc3-rail-open]');
+    if (rc3RailStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(rc3RailStore.dataset.rc3RailOpen); if (store) rc2OpenStoreFromCustomer(store); return; }
     const railStore = event.target.closest('[data-rail-store-id]');
     if (railStore) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(railStore.dataset.railStoreId); if (store) rc2OpenStoreFromCustomer(store); return; }
     const homeStore = event.target.closest('#storeGrid .store-card[data-id]');

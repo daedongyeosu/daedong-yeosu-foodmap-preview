@@ -771,7 +771,10 @@ function rc3HandleClick(event) {
     event.stopImmediatePropagation();
     if (railOpen.dataset.rc3Gesture === 'drag') return;
     const store = fxStoreById(railOpen.dataset.rc3RailOpen);
-    if (store) openStore(store);
+    if (store) {
+      window.daedongConfirmIntentionalStoreOpen?.();
+      openStore(store);
+    }
     return;
   }
   const other = event.target.closest('[data-rc3-other-methods]');
