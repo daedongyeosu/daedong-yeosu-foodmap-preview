@@ -58,6 +58,14 @@ assert.equal(sandbox.daedongEarlyHomeInteraction, undefined,
 assert.equal(scrollingElement.scrollTop, 0,
   '첫 링크 터치 뒤 카카오가 복원한 중간 위치를 다시 최상단으로 되돌려야 합니다.');
 
+sandbox.daedongMarkHomeInteraction();
+assert.equal(sandbox.daedongEarlyHomeInteraction, true,
+  '실제 조작을 확인한 지연 화면은 최초 진입 상단 보호를 명시적으로 해제할 수 있어야 합니다.');
+
+// Start a second isolated run for the direct drag path.
+sandbox.daedongEarlyHomeInteraction = undefined;
+sandbox.daedongArmFreshEntryTop();
+
 clock = 400;
 dispatch('pointerdown', {clientX: 220, clientY: 640});
 dispatch('pointermove', {clientX: 220, clientY: 590});

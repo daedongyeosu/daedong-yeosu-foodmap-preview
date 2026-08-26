@@ -28,12 +28,22 @@ assert.match(earlyBoot, /window\.addEventListener\('pageshow'[\s\S]*daedongArmFr
 assert.match(earlyBoot, /document\.addEventListener\('visibilitychange'[\s\S]*visibilityState === 'visible'[\s\S]*daedongArmFreshEntryTop/);
 assert.match(earlyBoot, /window\.daedongEarlyHomeInteraction = true[\s\S]*stopFreshEntrySettle\(\)/,
   '고객이 화면을 만진 뒤에는 상단 보정이 고객 스크롤을 덮어쓰지 않아야 합니다.');
+assert.match(earlyBoot, /window\.daedongMarkHomeInteraction = markEarlyHomeInteraction/,
+  '늦게 준비되는 화면도 실제 고객 조작이 확인된 순간 상단 보정을 해제할 수 있어야 합니다.');
 assert.match(html, /if \(!pending\) \{[\s\S]*window\.daedongArmFreshEntryTop\?\.\(\)/,
   '검증된 주문앱 복귀가 아닌 새 진입에서만 상단 보정을 시작해야 합니다.');
 assert.match(html, /html\.daedong-fresh-entry-settling\{scroll-behavior:auto!important;overflow-anchor:none\}/);
 
 assert.match(pager, /storeListPagerCustomerInteracted\|\|globalThis\.daedongEarlyHomeInteraction===true/,
   '목록 스크립트 준비 전의 첫 터치도 고객 상호작용으로 이어받아야 합니다.');
+assert.match(pager, /storeListPagerGridPointerActive[\s\S]*Math\.abs\(nextLeft-storeListPagerLastObservedLeft\)>1[\s\S]*markStoreListPagerVerifiedCustomerInteraction\(\)/,
+  '가게목록의 실제 가로 이동이 확인되면 최초 진입 상단 보호를 해제해야 합니다.');
+assert.match(pager, /globalThis\.daedongMarkHomeInteraction\?\.\(\)/,
+  '확인된 가게목록 스와이프를 초기 상단 보호 코드에 전달해야 합니다.');
+assert.doesNotMatch(pager, /document\.addEventListener\('pointerdown',markStoreListPagerCustomerInteraction/,
+  '카카오 링크를 연 첫 터치를 가게목록 고객 조작으로 오인하면 안 됩니다.');
+assert.doesNotMatch(pager, /document\.addEventListener\('touchstart',markStoreListPagerCustomerInteraction/,
+  '카카오 링크의 첫 터치 신호만으로 늦은 추천 영역 위치를 보존하면 안 됩니다.');
 assert.match(eventJs, /window\.daedongEarlyHomeInteraction === true/,
   '먹깨비 행사창은 늦게 로드돼도 앞선 고객 터치를 알아야 합니다.');
 assert.match(eventJs, /document\.querySelector\('\[data-store-service-overview-overlay\]'\)/);
@@ -43,7 +53,7 @@ assert.match(eventJs, /const AUTO_OPEN_ENABLED = false/,
   '먹깨비 행사창은 홈 진입이나 카카오 작업 복귀 때 자동으로 열리면 안 됩니다.');
 assert.match(eventJs, /function scheduleInitialOpen\(\) \{[\s\S]*if \(!AUTO_OPEN_ENABLED\) return;/,
   '자동 행사창 예약 자체를 중단해 혜택 화면과 홈 화면을 가로채지 않아야 합니다.');
-assert.match(html, /store-list-horizontal-pager\.js\?v=[^"\n]*early-interaction-1/);
+assert.match(html, /store-list-horizontal-pager\.js\?v=[^"\n]*early-interaction-2/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*auto-popup-disabled-1/);
 assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v24-initial-top-benefits-guard'/);
 
