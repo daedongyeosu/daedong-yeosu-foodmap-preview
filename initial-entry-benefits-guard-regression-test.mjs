@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
 const html = fs.readFileSync('index.html', 'utf8');
+const app = fs.readFileSync('app.js', 'utf8');
 const eventJs = fs.readFileSync('mukkebi-summer-event.js', 'utf8');
 const pager = fs.readFileSync('store-list-horizontal-pager.js', 'utf8');
 const serviceWorker = fs.readFileSync('sw.js', 'utf8');
@@ -11,9 +12,10 @@ assert.ok(earlyBoot, '첫 화면 복귀 판별보다 앞선 초기화 코드를 
 assert.match(earlyBoot, /history\.scrollRestoration = 'manual'/,
   '브라우저가 중간 스크롤을 복원하기 전에 head에서 수동 복원으로 바꿔야 합니다.');
 assert.match(earlyBoot, /window\.daedongArmFreshEntryTop = \(\) =>/);
-assert.match(earlyBoot, /FRESH_ENTRY_SETTLE_MS = 20000/,
-  '카카오 인앱브라우저의 늦은 콘텐츠·스크롤 복원까지 최초 진입 상단을 지켜야 합니다.');
-assert.match(earlyBoot, /FRESH_ENTRY_PULSE_MS = 200/);
+assert.match(earlyBoot, /FRESH_ENTRY_SAFETY_RELEASE_MS = 10000/,
+  '초기화가 실패해도 화면 잠금이 영구적으로 남으면 안 됩니다.');
+assert.doesNotMatch(earlyBoot, /FRESH_ENTRY_SETTLE_MS|FRESH_ENTRY_PULSE_MS|pulseFreshEntryTop/,
+  '장시간 반복 보정으로 고객 스크롤과 충돌하면 안 됩니다.');
 assert.match(earlyBoot, /FRESH_ENTRY_OPENING_TAP_GRACE_MS = 3000/,
   '카카오 채팅 링크를 누른 터치가 새 WebView에 전달돼도 첫 화면 보호를 해제하면 안 됩니다.');
 assert.match(earlyBoot, /document\.addEventListener\('pointerdown', rememberFreshEntryPointer/);
@@ -21,18 +23,21 @@ assert.match(earlyBoot, /document\.addEventListener\('pointermove', markFreshEnt
   '단순 링크 터치와 실제 고객 스크롤 동작을 구분해야 합니다.');
 assert.doesNotMatch(earlyBoot, /\['pointerdown', 'touchstart', 'wheel', 'keydown'\]/,
   '카카오가 전달한 첫 pointerdown만으로 최상단 보호를 중단하면 안 됩니다.');
-assert.match(earlyBoot, /setTimeout\(pulseFreshEntryTop, FRESH_ENTRY_PULSE_MS\)/,
-  '최초 진입 보정 시간 동안 늦은 중간 스크롤 복원을 반복해서 되돌려야 합니다.');
-assert.match(earlyBoot, /window\.addEventListener\('pageshow'[\s\S]*daedongArmFreshEntryTop/,
-  '카카오 인앱브라우저가 기존 페이지를 다시 표시해도 새 진입 상단을 확인해야 합니다.');
-assert.match(earlyBoot, /document\.addEventListener\('visibilitychange'[\s\S]*visibilityState === 'visible'[\s\S]*daedongArmFreshEntryTop/);
+assert.match(earlyBoot, /window\.daedongReleaseFreshEntryTop = \(\) =>[\s\S]*requestAnimationFrame/,
+  '첫 카탈로그 레이아웃이 준비된 뒤 페인트 경계에서 상단 잠금을 해제해야 합니다.');
+assert.doesNotMatch(earlyBoot, /window\.addEventListener\('pageshow'[\s\S]*daedongArmFreshEntryTop/,
+  '카카오 화면이 다시 보일 때마다 최초 진입 잠금을 재가동하면 안 됩니다.');
+assert.doesNotMatch(earlyBoot, /document\.addEventListener\('visibilitychange'[\s\S]*daedongArmFreshEntryTop/);
 assert.match(earlyBoot, /window\.daedongEarlyHomeInteraction = true[\s\S]*stopFreshEntrySettle\(\)/,
   '고객이 화면을 만진 뒤에는 상단 보정이 고객 스크롤을 덮어쓰지 않아야 합니다.');
 assert.match(earlyBoot, /window\.daedongMarkHomeInteraction = markEarlyHomeInteraction/,
   '늦게 준비되는 화면도 실제 고객 조작이 확인된 순간 상단 보정을 해제할 수 있어야 합니다.');
 assert.match(html, /if \(!pending\) \{[\s\S]*window\.daedongArmFreshEntryTop\?\.\(\)/,
   '검증된 주문앱 복귀가 아닌 새 진입에서만 상단 보정을 시작해야 합니다.');
-assert.match(html, /html\.daedong-fresh-entry-settling\{scroll-behavior:auto!important;overflow-anchor:none\}/);
+assert.match(html, /html\.daedong-fresh-entry-settling body\{[^}]*overflow-y:hidden!important/,
+  '초기 레이아웃 전에는 WebView가 과거 중간 위치를 복원하지 못하도록 스크롤을 잠가야 합니다.');
+assert.match(app, /function finishCatalogReady\(value\)[\s\S]*window\.daedongReleaseFreshEntryTop\?\.\(\)/,
+  '첫 가게목록이 준비되는 시점이 최초 진입 잠금의 정상 해제 지점이어야 합니다.');
 
 assert.match(pager, /storeListPagerCustomerInteracted\|\|globalThis\.daedongEarlyHomeInteraction===true/,
   '목록 스크립트 준비 전의 첫 터치도 고객 상호작용으로 이어받아야 합니다.');

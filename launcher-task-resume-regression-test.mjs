@@ -7,7 +7,7 @@ const html = fs.readFileSync('index.html', 'utf8');
 const bootSource = source.slice(0, source.indexOf('const DAEDONG_TAP_MOVE_TOLERANCE'));
 assert.ok(bootSource.length > 0, '설치형 앱 시작 코드를 분리할 수 있어야 합니다.');
 assert.match(bootSource, /document\.addEventListener\('pointerdown', detectDaedongResumeGap/,
-  '카카오가 타이머보다 먼저 전달한 재개 터치에서도 중단된 시간 간격을 확인해야 합니다.');
+  '설치형 Android 래퍼가 타이머보다 먼저 전달한 재개 터치에서도 중단된 시간 간격을 확인해야 합니다.');
 assert.match(bootSource, /document\.addEventListener\('touchstart', detectDaedongResumeGap/);
 assert.match(html, /app\.js\?v=[^"\n]*kakao-pointer-resume-1/,
   '고객의 기존 캐시에 남은 앱 코드를 새 재개 감지 버전으로 교체해야 합니다.');
@@ -35,10 +35,11 @@ function dispatch(registry, type) {
 
 const sandbox = {
   console,
+  URLSearchParams,
   Date: {now: () => wallNow},
   performance: {now: () => 3000},
   history: {scrollRestoration: 'auto'},
-  location: {reload: () => { reloads += 1; }},
+  location: {search: '?source=android-app', reload: () => { reloads += 1; }},
   sessionStorage: {
     getItem: key => sessionValues.get(key) ?? null,
     setItem: (key, value) => sessionValues.set(key, String(value)),
@@ -55,6 +56,7 @@ const sandbox = {
   requestAnimationFrame: listener => listener(),
   setTimeout: listener => { listener(); return 1; },
   setInterval: listener => { intervals.push(listener); return intervals.length; },
+  matchMedia: () => ({matches: false}),
   addEventListener: (type, listener, options) => addListener(windowListeners, type, listener, options),
   scrollTo: (_x, y) => {
     scrollingElement.scrollTop = y;
