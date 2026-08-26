@@ -23,11 +23,13 @@ assert.match(app, /window\.addEventListener\('focus'/,
   '카카오 인앱브라우저 창이 다시 전면에 오면 홈 최상단을 복구해야 합니다.');
 assert.match(app, /window\.setTimeout\(resetFreshEntryScroll, 360\)/,
   '안드로이드가 앱 복귀 후 늦게 스크롤을 복원해도 다시 최상단으로 고정해야 합니다.');
+assert.match(app, /window\.setTimeout\(resetFreshEntryScroll, 1800\)/,
+  '설치형 앱의 늦은 레이아웃·스크롤 앵커 복원 뒤에도 최종 위치를 다시 고정해야 합니다.');
 assert.match(app, /sessionStorage\.setItem\(DAEDONG_LAUNCH_RELOAD_MARKER, '1'\)/,
   '오래 실행된 앱은 최신 가게 자료를 다시 받도록 한 번만 새로고침해야 합니다.');
 assert.match(app, /globalThis\.daedongPendingExternalReturn/,
   '주문앱에서 돌아오는 동작은 홈 초기화에서 제외해야 합니다.');
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v19-focus-reopen'/,
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v20-late-scroll-settle'/,
   '기존 설치본도 새 manifest를 내려받도록 앱 셸 캐시 버전을 올려야 합니다.');
 
 console.log('pwa-launch-home-regression-test: pass');

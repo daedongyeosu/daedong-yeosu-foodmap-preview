@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v19-focus-reopen';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v20-late-scroll-settle';
 const RUNTIME_CACHE = 'daedong-yeosu-runtime-v2-mobile-photo-delivery';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [

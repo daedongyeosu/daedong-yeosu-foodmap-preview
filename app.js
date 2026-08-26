@@ -42,6 +42,8 @@ function settleInstalledAppAtHome() {
   requestAnimationFrame(resetFreshEntryScroll);
   window.setTimeout(resetFreshEntryScroll, 120);
   window.setTimeout(resetFreshEntryScroll, 360);
+  window.setTimeout(resetFreshEntryScroll, 900);
+  window.setTimeout(resetFreshEntryScroll, 1800);
 }
 
 function resetInstalledAppLaunch() {
