@@ -837,6 +837,9 @@
   function handleMenuScroll(scrollRoot) {
     const preview = scrollRoot.closest('.store-menu-preview');
     if (!preview) return;
+    const currentScrollTop = Number(scrollRoot.scrollTop || 0);
+    const previousScrollTop = Number(preview.__menuLastScrollTop);
+    preview.__menuLastScrollTop = currentScrollTop;
     if (Number.isFinite(Number(preview.__menuRestoreTarget))) {
       showMenuChrome(preview);
       return;
@@ -845,16 +848,15 @@
       showMenuChrome(preview);
       return;
     }
-    if (!window.matchMedia('(max-width: 720px)').matches || scrollRoot.scrollTop <= 56) {
+    if (!window.matchMedia('(max-width: 720px)').matches || currentScrollTop <= 56) {
       showMenuChrome(preview);
       return;
     }
-    preview.classList.add('menu-chrome-hidden');
-    window.clearTimeout(menuChromeRevealTimer);
-    menuChromeRevealTimer = window.setTimeout(() => {
-      preview.classList.remove('menu-chrome-hidden');
-      menuChromeRevealTimer = 0;
-    }, 1200);
+    if (!Number.isFinite(previousScrollTop) || currentScrollTop > previousScrollTop + 2) {
+      preview.classList.add('menu-chrome-hidden');
+      return;
+    }
+    if (currentScrollTop < previousScrollTop - 2) showMenuChrome(preview);
   }
 
   async function openMenuPreview(storeId, trigger, options = {}) {

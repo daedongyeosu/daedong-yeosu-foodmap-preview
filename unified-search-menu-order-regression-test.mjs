@@ -75,8 +75,8 @@ assert.match(menu,
   /activeMenu = orderedMenu\(menu\);[\s\S]*previewMarkup\(activeMenu, store\)/,
   '정렬된 메뉴를 음식보기에 렌더링해야 합니다.');
 assert.match(menu,
-  /menuChromeRevealTimer = window\.setTimeout\(\(\) => \{[\s\S]*?menu-chrome-hidden[\s\S]*?\}, 1200\);/,
-  '사진 탐색을 멈춘 뒤 검색창과 주문방법은 1.2초 후에 다시 나타나야 합니다.');
+  /currentScrollTop > previousScrollTop \+ 2[\s\S]*?menu-chrome-hidden[\s\S]*?currentScrollTop < previousScrollTop - 2\) showMenuChrome\(preview\)/,
+  '사진을 아래로 탐색할 때 주문방법을 숨기고 위로 돌아올 때만 다시 나타내야 합니다.');
 
 assert.match(html, /store-service-info\.css\?v=store-service-13-search-status-order-1-card-status-1-search-store-boundary-1-category-heading-wrap-1/,
   '영업상태 색상 수정본 캐시 버전이 필요합니다.');
