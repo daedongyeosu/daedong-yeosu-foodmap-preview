@@ -85,6 +85,9 @@
     closeButton?.focus({preventScroll:true});
   }
 
+  // Reserved for an explicit campaign entry. Automatic opening stays off.
+  window.daedongOpenMukkebiSummerEvent = openEvent;
+
   function closeEvent() {
     eventLayer.hidden = true;
     eventLayer.setAttribute('aria-hidden', 'true');
