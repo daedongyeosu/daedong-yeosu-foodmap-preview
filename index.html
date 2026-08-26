@@ -45,7 +45,11 @@
     (() => {
       const root = document.documentElement;
       const freshEntryTimers = [];
+      const FRESH_ENTRY_SETTLE_MS = 20000;
+      const FRESH_ENTRY_PULSE_MS = 200;
       let freshEntrySettling = false;
+      let freshEntryEligible = false;
+      let freshEntryStartedAt = 0;
       try {
         if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
       } catch {}
@@ -69,18 +73,37 @@
         if (document.body) document.body.scrollTop = 0;
         window.scrollTo(0, 0);
       };
+      const pulseFreshEntryTop = () => {
+        if (!freshEntrySettling || window.daedongEarlyHomeInteraction === true) return;
+        keepFreshEntryAtTop();
+        if (Date.now() - freshEntryStartedAt >= FRESH_ENTRY_SETTLE_MS) {
+          stopFreshEntrySettle();
+          return;
+        }
+        freshEntryTimers.push(window.setTimeout(pulseFreshEntryTop, FRESH_ENTRY_PULSE_MS));
+      };
       window.daedongArmFreshEntryTop = () => {
         if (window.daedongEarlyHomeInteraction === true) return;
+        stopFreshEntrySettle();
+        freshEntryEligible = true;
         freshEntrySettling = true;
+        freshEntryStartedAt = Date.now();
         root.classList.add('daedong-fresh-entry-settling');
         keepFreshEntryAtTop();
-        for (const delay of [120, 360, 900, 1800]) {
-          freshEntryTimers.push(window.setTimeout(() => {
-            keepFreshEntryAtTop();
-            if (delay === 1800) stopFreshEntrySettle();
-          }, delay));
-        }
+        freshEntryTimers.push(window.setTimeout(pulseFreshEntryTop, FRESH_ENTRY_PULSE_MS));
       };
+      window.addEventListener('pageshow', () => {
+        if (freshEntryEligible && window.daedongEarlyHomeInteraction !== true) {
+          window.daedongArmFreshEntryTop();
+        }
+      }, {capture:true});
+      document.addEventListener('visibilitychange', () => {
+        if (
+          document.visibilityState === 'visible'
+          && freshEntryEligible
+          && window.daedongEarlyHomeInteraction !== true
+        ) window.daedongArmFreshEntryTop();
+      });
     })();
   </script>
   <script>
