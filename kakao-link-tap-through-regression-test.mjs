@@ -47,7 +47,11 @@ function createFreshEntryRuntime() {
     },
     addEventListener,
     requestAnimationFrame: listener => { listener(); return 1; },
-    setTimeout: listener => { const id = nextTimer++; timers.set(id, listener); return id; },
+    setTimeout: (listener, delay = 0) => {
+      const id = nextTimer++;
+      timers.set(id, {listener, delay: Number(delay) || 0});
+      return id;
+    },
     clearTimeout: id => timers.delete(id),
     scrollTo: (_x, y) => { scrollingElement.scrollTop = y; body.scrollTop = y; }
   };
@@ -59,6 +63,15 @@ function createFreshEntryRuntime() {
     scrollingElement,
     body,
     dispatch,
+    runTimersThrough(maxDelay) {
+      const pending = [...timers.entries()]
+        .filter(([, timer]) => timer.delay <= maxDelay)
+        .sort((left, right) => left[1].delay - right[1].delay);
+      for (const [id, timer] of pending) {
+        if (!timers.delete(id)) continue;
+        timer.listener();
+      }
+    },
     setClock(value) { clock = value; }
   };
 }
@@ -75,13 +88,35 @@ assert.equal(opening.sandbox.daedongEarlyHomeInteraction, undefined,
 assert.equal(opening.rootClasses.has('daedong-fresh-entry-settling'), true,
   '링크를 연 터치가 최초 화면 잠금을 조기에 풀면 안 됩니다.');
 
+opening.sandbox.daedongReleaseFreshEntryTop();
+assert.equal(opening.rootClasses.has('daedong-fresh-entry-settling'), true,
+  '가게목록이 먼저 준비돼도 WebView 로드가 끝나기 전에는 상단 보호를 풀면 안 됩니다.');
+
+// The actual Kakao WebView can restore its saved offset after the catalog has
+// already rendered. This is the device-only race that the previous test missed.
 opening.scrollingElement.scrollTop = 760;
 opening.body.scrollTop = 760;
-opening.sandbox.daedongReleaseFreshEntryTop();
-assert.equal(opening.rootClasses.has('daedong-fresh-entry-settling'), false,
-  '첫 카탈로그가 준비되면 잠금을 한 번만 해제해야 합니다.');
+opening.dispatch('scroll');
 assert.equal(opening.scrollingElement.scrollTop, 0,
-  '잠금을 해제하는 마지막 페인트에서도 홈 최상단을 유지해야 합니다.');
+  '가게목록 준비 뒤에 도착한 WebView 스크롤 복원도 즉시 최상단으로 되돌려야 합니다.');
+
+opening.dispatch('load');
+opening.scrollingElement.scrollTop = 920;
+opening.body.scrollTop = 920;
+opening.dispatch('scroll');
+assert.equal(opening.scrollingElement.scrollTop, 0,
+  'load 직후 늦게 도착한 WebView 스크롤 복원도 안정화 구간에서 막아야 합니다.');
+opening.runTimersThrough(5000);
+assert.equal(opening.rootClasses.has('daedong-fresh-entry-settling'), false,
+  'load와 가게목록 준비 뒤 안정화 구간이 끝나면 잠금을 해제해야 합니다.');
+assert.equal(opening.scrollingElement.scrollTop, 0,
+  '잠금을 해제한 마지막 화면도 홈 최상단이어야 합니다.');
+
+opening.scrollingElement.scrollTop = 430;
+opening.body.scrollTop = 430;
+opening.dispatch('scroll');
+assert.equal(opening.scrollingElement.scrollTop, 430,
+  '초기 안정화가 끝난 뒤 고객이 이동한 위치는 강제로 되돌리면 안 됩니다.');
 
 const dragging = createFreshEntryRuntime();
 dragging.sandbox.daedongArmFreshEntryTop();

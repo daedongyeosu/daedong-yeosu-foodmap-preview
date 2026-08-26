@@ -45,7 +45,7 @@ assert.match(app, /globalThis\.daedongPendingExternalReturn/,
   '주문앱에서 돌아오는 동작은 홈 초기화에서 제외해야 합니다.');
 assert.match(app, /resetFreshEntryScroll\(\{force: true\}\)/,
   '주문앱 복귀가 끝난 뒤 앱을 다시 열면 이전 진입 상태와 무관하게 홈을 초기화해야 합니다.');
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v24-initial-top-benefits-guard'/,
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v25-late-webview-restore-guard'/,
   '기존 설치본도 새 manifest를 내려받도록 앱 셸 캐시 버전을 올려야 합니다.');
 
 console.log('pwa-launch-home-regression-test: pass');

@@ -82,10 +82,30 @@ try {
   await check(page.locator('.promo-section .section-head h2').evaluate(node => node.textContent?.trim() === '여수와 함께하는 소식'),
     '여수 지역 소식 제목의 와/과 표기가 정확함');
   const grid = page.locator('#storeGrid');
-  await grid.scrollIntoViewIfNeeded();
   await check(page.locator('#storePagerControls').isHidden(),
     '전체 가게 목록의 하단 이전·다음 화살표를 표시하지 않음');
 
+  await page.evaluate(() => {
+    // A real customer begins a vertical scroll with a touch/pointer gesture.
+    // Signal that intent before Playwright performs its programmatic
+    // scrollIntoView so the fresh-entry guard does not classify this
+    // test-only jump as a late WebView scroll restoration.
+    document.body.dispatchEvent(new PointerEvent('pointerdown', {
+      bubbles: true,
+      pointerType: 'touch',
+      isPrimary: true,
+      clientX: 180,
+      clientY: 420
+    }));
+    document.body.dispatchEvent(new PointerEvent('pointermove', {
+      bubbles: true,
+      pointerType: 'touch',
+      isPrimary: true,
+      clientX: 180,
+      clientY: 390
+    }));
+  });
+  await grid.scrollIntoViewIfNeeded();
   const beforeSwipe = await page.evaluate(() => ({
     gridTop: document.querySelector('#storeGrid')?.getBoundingClientRect().top ?? -1,
     scrollY: window.scrollY
