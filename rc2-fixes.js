@@ -5,10 +5,12 @@ const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json';
 const RC2_EXTERNAL_RETURN = 'daedongExternalReturnRc2';
 const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
+const RC2_RETURN_GUARD_STATE = 'daedongExternalReturnGuard';
 const RC2_RETURN_TOKEN_PARAM = '__ddret';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
 const RC2_FOCUS_ONLY_RETURN_DELAY_MS = 650;
 const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
+const RC2_IS_KAKAO_WEBVIEW = /KAKAOTALK/i.test(String(navigator.userAgent || ''));
 const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
 const RC2_REGION = window.DAEDONG_REGION || {shortName: '여수', mapName: '대동여수음식지도'};
 const RC2_REGION_NAME = RC2_REGION.shortName || '여수';
@@ -89,11 +91,25 @@ function rc2WriteReturnState(key, value) {
   try {
     const returnUrl = new URL(location.href);
     returnUrl.searchParams.set(RC2_RETURN_TOKEN_PARAM, returnToken);
+    const protectedState = {...history.state, [RC2_RETURN_TOKEN_STATE]: returnToken};
+    const protectedUrl = `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}`;
     history.replaceState(
-      {...history.state, [RC2_RETURN_TOKEN_STATE]: returnToken},
+      protectedState,
       '',
-      `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}`
+      protectedUrl
     );
+    // Kakao's Android WebView can replace the current preview history entry
+    // with an order app's HTTP fallback page while resolving an intent. Keep a
+    // second, sacrificial entry above the real return entry: whether Kakao
+    // appends or replaces the fallback, Back still reaches a tokened preview
+    // entry instead of the older home-only entry.
+    if (RC2_IS_KAKAO_WEBVIEW) {
+      history.pushState(
+        {...protectedState, [RC2_RETURN_GUARD_STATE]: returnToken},
+        '',
+        protectedUrl
+      );
+    }
   } catch {}
   rc2StoreReturnState(sessionStorage, key, payload);
   rc2StoreReturnState(localStorage, key, payload);
@@ -125,6 +141,7 @@ function rc2ClearReturnState(key, saved = null) {
   try {
     const next = {...history.state};
     delete next[RC2_RETURN_TOKEN_STATE];
+    if (next[RC2_RETURN_GUARD_STATE] === token) delete next[RC2_RETURN_GUARD_STATE];
     if (urlMatches) returnUrl.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
     history.replaceState(next, '', returnUrl ? `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}` : undefined);
   } catch {}
