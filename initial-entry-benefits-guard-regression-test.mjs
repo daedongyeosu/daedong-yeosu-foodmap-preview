@@ -23,8 +23,14 @@ assert.match(earlyBoot, /document\.addEventListener\('pointermove', markFreshEnt
   '단순 링크 터치와 실제 고객 스크롤 동작을 구분해야 합니다.');
 assert.doesNotMatch(earlyBoot, /\['pointerdown', 'touchstart', 'wheel', 'keydown'\]/,
   '카카오가 전달한 첫 pointerdown만으로 최상단 보호를 중단하면 안 됩니다.');
-assert.match(earlyBoot, /window\.daedongReleaseFreshEntryTop = \(\) =>[\s\S]*requestAnimationFrame/,
-  '첫 카탈로그 레이아웃이 준비된 뒤 페인트 경계에서 상단 잠금을 해제해야 합니다.');
+assert.match(earlyBoot, /window\.daedongReleaseFreshEntryTop = \(\) =>[\s\S]*freshEntryCatalogReady = true[\s\S]*scheduleStableFreshEntryRelease\(\)/,
+  '첫 카탈로그 레이아웃 준비는 즉시 해제가 아니라 안정화 시작 신호여야 합니다.');
+assert.match(earlyBoot, /window\.addEventListener\('load',[\s\S]*freshEntryLoadReady = true[\s\S]*scheduleStableFreshEntryRelease\(\)/,
+  'WebView 전체 로드가 끝날 때까지 초기 상단 보호를 유지해야 합니다.');
+assert.match(earlyBoot, /window\.addEventListener\('scroll', blockLateFreshEntryRestore/,
+  '카카오가 뒤늦게 복원한 중간 스크롤을 이벤트로 감지해야 합니다.');
+assert.match(earlyBoot, /const finishStableFreshEntry = \(\) =>[\s\S]*requestAnimationFrame[\s\S]*stopFreshEntrySettle\(\)/,
+  '마지막 비정상 스크롤 뒤 안정화된 페인트 경계에서만 상단 잠금을 해제해야 합니다.');
 assert.doesNotMatch(earlyBoot, /window\.addEventListener\('pageshow'[\s\S]*daedongArmFreshEntryTop/,
   '카카오 화면이 다시 보일 때마다 최초 진입 잠금을 재가동하면 안 됩니다.');
 assert.doesNotMatch(earlyBoot, /document\.addEventListener\('visibilitychange'[\s\S]*daedongArmFreshEntryTop/);
@@ -37,7 +43,7 @@ assert.match(html, /if \(!pending\) \{[\s\S]*window\.daedongArmFreshEntryTop\?\.
 assert.match(html, /html\.daedong-fresh-entry-settling body\{[^}]*overflow-y:hidden!important/,
   '초기 레이아웃 전에는 WebView가 과거 중간 위치를 복원하지 못하도록 스크롤을 잠가야 합니다.');
 assert.match(app, /function finishCatalogReady\(value\)[\s\S]*window\.daedongReleaseFreshEntryTop\?\.\(\)/,
-  '첫 가게목록이 준비되는 시점이 최초 진입 잠금의 정상 해제 지점이어야 합니다.');
+  '첫 가게목록 준비 시점을 초기 진입 안정화 조건에 전달해야 합니다.');
 
 assert.match(pager, /storeListPagerCustomerInteracted\|\|globalThis\.daedongEarlyHomeInteraction===true/,
   '목록 스크립트 준비 전의 첫 터치도 고객 상호작용으로 이어받아야 합니다.');
@@ -60,6 +66,6 @@ assert.match(eventJs, /function scheduleInitialOpen\(\) \{[\s\S]*if \(!AUTO_OPEN
   '자동 행사창 예약 자체를 중단해 혜택 화면과 홈 화면을 가로채지 않아야 합니다.');
 assert.match(html, /store-list-horizontal-pager\.js\?v=[^"\n]*early-interaction-2/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*auto-popup-disabled-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v24-initial-top-benefits-guard'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v25-late-webview-restore-guard'/);
 
 console.log('initial-entry-benefits-guard-regression-test: pass');
