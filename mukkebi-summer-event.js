@@ -17,6 +17,10 @@
   const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV1';
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
+  // Never interrupt the home screen or the order-benefits flow with an
+  // automatic campaign layer. The markup remains available for an explicit
+  // campaign entry, but app/browser resume must stay on the requested screen.
+  const AUTO_OPEN_ENABLED = false;
   let opened = false;
   let customerInteracted = false;
   let initialOpenTimer = 0;
@@ -81,6 +85,9 @@
     closeButton?.focus({preventScroll:true});
   }
 
+  // Reserved for an explicit campaign entry. Automatic opening stays off.
+  window.daedongOpenMukkebiSummerEvent = openEvent;
+
   function closeEvent() {
     eventLayer.hidden = true;
     eventLayer.setAttribute('aria-hidden', 'true');
@@ -94,6 +101,7 @@
 
   function scheduleInitialOpen() {
     window.clearTimeout(initialOpenTimer);
+    if (!AUTO_OPEN_ENABLED) return;
     initialOpenTimer = window.setTimeout(() => {
       initialOpenTimer = 0;
       openEvent();
