@@ -21,6 +21,16 @@ assert.match(app, /window\.addEventListener\('blur'/,
   '카카오 인앱브라우저가 문서 가시성을 유지한 채 백그라운드로 가는 경우를 기록해야 합니다.');
 assert.match(app, /window\.addEventListener\('focus'/,
   '카카오 인앱브라우저 창이 다시 전면에 오면 홈 최상단을 복구해야 합니다.');
+assert.match(app, /window\.addEventListener\('pageshow', \(\) =>/,
+  'PWABuilder 설치형 앱이 기존 Chrome 작업을 다시 보여줄 때도 홈을 복구해야 합니다.');
+assert.match(app, /document\.addEventListener\('resume', resetInstalledAppLaunch\)/,
+  'Android Page Lifecycle resume 경로에서도 앱 아이콘 재실행을 처리해야 합니다.');
+assert.match(app, /const DAEDONG_RESUME_GAP_MS = 2500/,
+  '런처가 브라우저 이벤트를 누락해도 백그라운드 타이머 중단 간격으로 재실행을 찾아야 합니다.');
+assert.match(app, /window\.setTimeout\(armDaedongResumeHeartbeat, 5000\)/,
+  '첫 화면 초기화 작업의 긴 실행을 앱 재개로 오인하지 않도록 안정화 뒤 감시해야 합니다.');
+assert.match(app, /hasValidatedExternalReturnInFlight\(\)/,
+  '주문앱의 검증된 일회용 복귀는 설치형 앱 홈 초기화와 구분해야 합니다.');
 assert.match(app, /window\.setTimeout\(resetReopenedAppScroll, 360\)/,
   '안드로이드가 앱 복귀 후 늦게 스크롤을 복원해도 다시 최상단으로 고정해야 합니다.');
 assert.match(app, /window\.setTimeout\(resetReopenedAppScroll, 1800\)/,
@@ -31,7 +41,7 @@ assert.match(app, /globalThis\.daedongPendingExternalReturn/,
   '주문앱에서 돌아오는 동작은 홈 초기화에서 제외해야 합니다.');
 assert.match(app, /resetFreshEntryScroll\(\{force: true\}\)/,
   '주문앱 복귀가 끝난 뒤 앱을 다시 열면 이전 진입 상태와 무관하게 홈을 초기화해야 합니다.');
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v21-external-return-lifecycle'/,
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v22-launcher-resume-gap'/,
   '기존 설치본도 새 manifest를 내려받도록 앱 셸 캐시 버전을 올려야 합니다.');
 
 console.log('pwa-launch-home-regression-test: pass');

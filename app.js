@@ -47,8 +47,16 @@ function settleInstalledAppAtHome() {
   window.setTimeout(resetReopenedAppScroll, 1800);
 }
 
+function hasValidatedExternalReturnInFlight() {
+  if (globalThis.daedongPendingExternalReturn) return true;
+  const readReturn = globalThis.daedongReadEarlyExternalReturn;
+  if (typeof readReturn !== 'function') return false;
+  return ['daedongExternalReturnRc2', 'daedongAppBrowserReturnV1']
+    .some(key => Boolean(readReturn(key)));
+}
+
 function resetInstalledAppLaunch() {
-  if (globalThis.daedongPendingExternalReturn) return;
+  if (hasValidatedExternalReturnInFlight()) return;
   const clientAge = typeof performance !== 'undefined' ? performance.now() - DAEDONG_APP_BOOT_AT : 0;
   if (!daedongLaunchReloadComplete && clientAge > 1500) {
     try { sessionStorage.setItem(DAEDONG_LAUNCH_RELOAD_MARKER, '1'); } catch {}
@@ -67,15 +75,28 @@ if (typeof window !== 'undefined' && typeof window.launchQueue?.setConsumer === 
 // transition as an app-icon reopen as well. The explicit external-return flag
 // above keeps order-app returns at the customer's previous store position.
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  // PWABuilder's Android wrapper can bring its existing Chrome Custom Tab task
+  // to the foreground without dispatching launchQueue, focus, or a reliable
+  // visibility transition. A repeated pageshow, a Page Lifecycle resume, and a
+  // resumed timer gap cover those launcher-icon paths. The exact one-shot
+  // order-app return token above remains the only reason to preserve position.
+  let daedongPageShowCount = 0;
+  window.addEventListener('pageshow', () => {
+    daedongPageShowCount += 1;
+    if (daedongPageShowCount === 1) return;
+    resetInstalledAppLaunch();
+  });
+  document.addEventListener('resume', resetInstalledAppLaunch);
+
   let daedongInstalledAppWasHidden = document.visibilityState === 'hidden';
   document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'hidden') {
-    daedongInstalledAppWasHidden = true;
-    return;
-  }
-  if (!daedongInstalledAppWasHidden) return;
-  daedongInstalledAppWasHidden = false;
-  resetInstalledAppLaunch();
+    if (document.visibilityState === 'hidden') {
+      daedongInstalledAppWasHidden = true;
+      return;
+    }
+    if (!daedongInstalledAppWasHidden) return;
+    daedongInstalledAppWasHidden = false;
+    resetInstalledAppLaunch();
   });
 
 // Samsung's Kakao in-app browser can keep the document "visible" while its
@@ -91,6 +112,29 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     daedongInstalledAppWasBlurred = false;
     resetInstalledAppLaunch();
   });
+
+  const DAEDONG_RESUME_GAP_MS = 2500;
+  const DAEDONG_RESUME_HEARTBEAT_MS = 700;
+  let daedongLastResumeHeartbeatAt = Date.now();
+  let daedongResumeHeartbeatArmed = false;
+  const armDaedongResumeHeartbeat = () => {
+    daedongLastResumeHeartbeatAt = Date.now();
+    daedongResumeHeartbeatArmed = true;
+  };
+  if (document.readyState === 'complete') {
+    window.setTimeout(armDaedongResumeHeartbeat, 5000);
+  } else {
+    window.addEventListener('load', () => {
+      window.setTimeout(armDaedongResumeHeartbeat, 5000);
+    }, {once: true});
+  }
+  window.setInterval(() => {
+    const now = Date.now();
+    const gap = now - daedongLastResumeHeartbeatAt;
+    daedongLastResumeHeartbeatAt = now;
+    if (!daedongResumeHeartbeatArmed || gap < DAEDONG_RESUME_GAP_MS || document.visibilityState === 'hidden') return;
+    resetInstalledAppLaunch();
+  }, DAEDONG_RESUME_HEARTBEAT_MS);
 }
 
 const DAEDONG_TAP_MOVE_TOLERANCE = 10;
