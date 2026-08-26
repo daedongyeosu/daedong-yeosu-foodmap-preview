@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v23-mukkebi-no-late-popup';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v24-initial-top-benefits-guard';
 const RUNTIME_CACHE = 'daedong-yeosu-runtime-v2-mobile-photo-delivery';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [

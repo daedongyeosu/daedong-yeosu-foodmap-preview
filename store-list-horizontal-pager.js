@@ -14,7 +14,7 @@ function markStoreListPagerCustomerInteraction(){
   storeListPagerCustomerInteracted=true;
 }
 function hasStoreListPagerCustomerInteraction(){
-  return storeListPagerCustomerInteracted;
+  return storeListPagerCustomerInteracted||globalThis.daedongEarlyHomeInteraction===true;
 }
 window.daedongHasHomeInteraction=hasStoreListPagerCustomerInteraction;
 

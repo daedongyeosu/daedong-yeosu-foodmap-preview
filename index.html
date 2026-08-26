@@ -32,6 +32,7 @@
   <script src="mobile-performance-observer.js?v=actual-device-v1"></script>
   <script src="region-boot.js?v=goheung-grounded-liftoff-6-hero-priority-1"></script>
   <style id="externalReturnBootStyle">
+    html.daedong-fresh-entry-settling{scroll-behavior:auto!important;overflow-anchor:none}
     html.daedong-external-return-pending body{min-height:100dvh;background:#103a5a}
     html.daedong-external-return-pending body>*{visibility:hidden!important}
     html.daedong-external-return-pending body::before,
@@ -40,6 +41,48 @@
     html.daedong-external-return-pending body::after{content:'';left:50%;top:calc(50% - 28px);width:34px;height:34px;margin:-17px;border:4px solid rgba(255,255,255,.34);border-top-color:#ff6a2e;border-radius:50%;animation:daedong-return-spin .75s linear infinite}
     @keyframes daedong-return-spin{to{transform:rotate(360deg)}}
   </style>
+  <script data-daedong-fresh-entry-boot>
+    (() => {
+      const root = document.documentElement;
+      const freshEntryTimers = [];
+      let freshEntrySettling = false;
+      try {
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      } catch {}
+
+      const stopFreshEntrySettle = () => {
+        freshEntrySettling = false;
+        while (freshEntryTimers.length) window.clearTimeout(freshEntryTimers.pop());
+        root.classList.remove('daedong-fresh-entry-settling');
+      };
+      const markEarlyHomeInteraction = () => {
+        window.daedongEarlyHomeInteraction = true;
+        stopFreshEntrySettle();
+      };
+      for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) {
+        document.addEventListener(type, markEarlyHomeInteraction, {capture:true, passive:true, once:true});
+      }
+      const keepFreshEntryAtTop = () => {
+        if (!freshEntrySettling || window.daedongEarlyHomeInteraction === true) return;
+        const scrollingElement = document.scrollingElement || root;
+        if (scrollingElement) scrollingElement.scrollTop = 0;
+        if (document.body) document.body.scrollTop = 0;
+        window.scrollTo(0, 0);
+      };
+      window.daedongArmFreshEntryTop = () => {
+        if (window.daedongEarlyHomeInteraction === true) return;
+        freshEntrySettling = true;
+        root.classList.add('daedong-fresh-entry-settling');
+        keepFreshEntryAtTop();
+        for (const delay of [120, 360, 900, 1800]) {
+          freshEntryTimers.push(window.setTimeout(() => {
+            keepFreshEntryAtTop();
+            if (delay === 1800) stopFreshEntrySettle();
+          }, delay));
+        }
+      };
+    })();
+  </script>
   <script>
     (() => {
       const root = document.documentElement;
@@ -84,6 +127,7 @@
         const pending = candidates.map(([storageKey, requiredField]) => ({storageKey, requiredField, saved: readSaved(storageKey)}))
           .find(item => Boolean(item.saved?.[item.requiredField]));
         if (!pending) {
+          window.daedongArmFreshEntryTop?.();
           for (const key of [...storageKeys, departureKey]) {
             try { sessionStorage.removeItem(key); } catch {}
             try { localStorage.removeItem(key); } catch {}
@@ -99,7 +143,10 @@
         window.daedongEntryHadExternalReturn = true;
         window.daedongPendingExternalReturn = pending;
         root.classList.add('daedong-external-return-pending');
-      } catch { window.daedongFinishExternalReturnBoot(); }
+      } catch {
+        window.daedongArmFreshEntryTop?.();
+        window.daedongFinishExternalReturnBoot();
+      }
     })();
   </script>
   <!-- Sentry monitoring: preserve early errors but keep the heavy replay bundle out of the initial touch window. -->
@@ -463,11 +510,11 @@
   <script src="data-api-runtime.js?v=cloudflare-preview-api-2-yogiyo-duplicate-merge-2-trusted-naver-place-1" defer></script>
   <script src="app.js?v=photo-viewer-removed-1-store-share-deep-link-1-phone-route-restoration-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-hero-forward-only-1-lower-promo-details-6-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-startup-popup-disabled-1-anonymous-analytics-1-coarse-region-1-owner-exclusion-1-outside-yeosu-full-list-1-direct-coming-soon-1-home-address-short-1-secure-detail-core-1-store-popup-native-order-1-kakao-order-same-tab-1-ddangyo-direct-launch-1-location-ranking-unified-1-catalog-ready-watchdog-2-simple-app-return-1-ddangyo-retry-touch-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-notion-hero-return-1-rider-evergreen-1-goheung-isolation-2-sequential-app-return-1-other-order-method-touch-1-instant-detail-shell-1-instant-hero-loading-1-performance-assets-1-instant-modal-close-5-detail-return-2-mobile-photo-delivery-1-early-catalog-2-progressive-catalog-2-brand-font-after-interaction-1-catalog-background-stable-1-manual-history-scroll-1-brand-alias-cache-1-deferred-photo-hydration-1-broken-photo-menu-fallback-1-detail-photo-menu-fallback-refresh-1-kakao-community-separate-context-1-modal-touch-close-1-yogiyo-duplicate-merge-2-detail-degraded-fallback-1-mobile-photo-original-fallback-2-fresh-entry-top-1-first-hero-webp-1-fresh-entry-explicit-return-1-detail-native-swipe-1-photo-black-band-auto-crop-1-mobile-customer-qa-1-external-return-lifecycle-1-launcher-resume-gap-1" defer></script>
   <script src="final-experience.js?v=selected-category-label-2-store-share-deep-link-2-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-cross-section-dedupe-1-search-location-order-1-yogiyo-return-only-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-local-channel-marker-1-lotteria-hidden-1-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-category-more-card-touch-1-inapp-location-recovery-1-outside-yeosu-full-list-1-store-share-copy-2-shared-store-back-home-1-unified-menu-search-2-secure-detail-await-3-card-channel-keys-1-store-popup-native-order-1-app-list-direct-order-1-app-route-return-fix-1-app-browser-return-state-1-ddangyo-direct-launch-1-location-ranking-ready-1-location-ranking-watchdog-2-saved-address-first-1-simple-app-return-1-direct-return-no-home-1-business-status-ranking-1-nearby-status-final-1-recommend-status-final-1-release-readiness-1-external-return-fast-1-instant-store-snapshot-1-hero-open-only-clean-controls-1-three-main-ads-restored-1-notion-hero-return-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1-sequential-app-return-1-instant-external-interaction-1-other-order-method-touch-1-order-methods-return-touch-5-instant-hero-loading-1-keep-placeholder-1-daylight-effects-cleanup-1-postcode-on-demand-1-mobile-photo-delivery-1-brand-icon-delivery-1-rail-bootstrap-dedupe-1-weather-rail-dedupe-1-deferred-photo-hydration-1-reliable-card-photo-src-1-order-methods-return-stable-dom-1-yogiyo-history-return-2-app-browser-return-catalog-ready-1-list-position-stable-1-atomic-rail-refresh-1-trusted-naver-place-1-direct-phone-link-1-hero-photo-recovery-1-recommend-actionable-only-1-customer-action-gate-1-mobile-order-selection-ghost-2-order-method-copy-1-mobile-customer-qa-1-kakao-fresh-entry-token-1-store-campaign-nine-2" defer></script>
-  <script src="store-list-horizontal-pager.js?v=visible-results-1-free-scroll-1" defer></script>
+  <script src="store-list-horizontal-pager.js?v=visible-results-1-free-scroll-1-early-interaction-1" defer></script>
   <script src="turtle-ship-hero.js?v=message-colors-popup-15s-1-goheung-isolation-2-immediate-close-1-shared-touch-close-1-no-late-interrupt-1" defer></script>
   <script src="store-service-info.js?v=store-service-26-deferred-bootstrap-1-menu-search-status-order-1-card-status-1-business-status-ranking-1-seomseom-merchant-label-1-recent-search-return-1-targeted-surface-observer-1-surface-scoped-refresh-1-observer-reentry-guard-1-shared-touch-close-1-confirmed-hours-fallback-1-yogiyo-duplicate-merge-2-ime-debounce-1-progressive-results-1-detail-search-return-1-service-overview-manifest-photo-1-mobile-customer-qa-1-home-open-count-1" defer></script>
   <script src="store-menu-preview.js?v=store-menu-22-customer-popup-order-1-simple-app-return-1-all-order-app-exact-return-1-performance-assets-1-service-unblock-1-parallel-load-1-instant-close-2-progressive-render-1-detail-return-3-mobile-photo-delivery-1-touch-reliability-1-menu-prefetch-2-active-detail-observer-1-image-queue-1-scroll-fallback-1-interaction-priority-1-history-clean-1-retain-hidden-dom-1-direct-scroll-chunk-1-scroll-intent-chunk-1-scroll-chunk-lock-1-history-replace-close-1-progressive-scroll-restore-1-layer-pop-suppress-1-broken-photo-fallback-1-kakao-touch-close-1-order-sheet-touch-close-1-mobile-customer-qa-2-directional-order-dock-1" defer></script>
   <script src="pwa-register.js?v=android-pwa-1-preview-redeploy-1-kakao-cache-reset-1-mobile-api-deadline-1-runtime-static-cache-1" defer></script>
-  <script src="mukkebi-summer-event.js?v=20260801-1-simple-app-return-1-goheung-isolation-2-immediate-close-1-shared-touch-close-1-no-late-interrupt-2-scroll-cancel-1" defer></script>
+  <script src="mukkebi-summer-event.js?v=20260801-1-simple-app-return-1-goheung-isolation-2-immediate-close-1-shared-touch-close-1-no-late-interrupt-3-scroll-cancel-1-layer-guard-1" defer></script>
 </body>
 </html>
