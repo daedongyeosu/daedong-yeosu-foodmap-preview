@@ -7,6 +7,7 @@ const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
 const RC2_RETURN_TOKEN_PARAM = '__ddret';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
+const RC2_FOCUS_ONLY_RETURN_DELAY_MS = 650;
 const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
 const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
 const RC2_REGION = window.DAEDONG_REGION || {shortName: '여수', mapName: '대동여수음식지도'};
@@ -25,6 +26,8 @@ let rc2AmbientTimers = [];
 let rc2DeferredStoreReturnPosition = null;
 let rc2StoreRestorePromise = null;
 let rc2SurfaceRestorePromise = null;
+let rc2ExternalDepartureBlurred = false;
+let rc2ExternalDepartureHidden = false;
 
 function rc2FreshReturnState(saved) {
   const age = Date.now() - Number(saved?.savedAt || 0);
@@ -68,7 +71,13 @@ function rc2StoreReturnState(storage, key, payload) {
   try { storage.setItem(key, JSON.stringify(compact)); } catch {}
 }
 
+function rc2ResetExternalDepartureLifecycle() {
+  rc2ExternalDepartureBlurred = false;
+  rc2ExternalDepartureHidden = false;
+}
+
 function rc2WriteReturnState(key, value) {
+  rc2ResetExternalDepartureLifecycle();
   const returnToken = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
   const payload = {...value, returnToken, savedAt: Date.now()};
   globalThis.daedongLastValidatedExternalReturnAt = payload.savedAt;
@@ -984,6 +993,36 @@ async function rc2RestoreExternalSurface({rebuildExisting = false} = {}) {
   }
 }
 
+function rc2PendingExternalReturnState() {
+  for (const key of RC2_RETURN_STORAGE_KEYS) {
+    const saved = rc2ReadReturnState(key);
+    if (saved) return saved;
+  }
+  return null;
+}
+
+function rc2RestoreAfterConfirmedResume({rebuildExisting = true} = {}) {
+  const saved = rc2PendingExternalReturnState();
+  if (!saved) return Promise.resolve(false);
+  const age = Date.now() - Number(saved.savedAt || 0);
+  const confirmed = rc2ExternalDepartureHidden
+    || (rc2ExternalDepartureBlurred && age >= RC2_FOCUS_ONLY_RETURN_DELAY_MS);
+  if (!confirmed) {
+    // Android/Kakao can briefly blur and focus the WebView while handing the
+    // intent to an order app. That is still the departure, not the return.
+    // Forget only that bounce; a real app switch emits another blur, hidden,
+    // or pagehide signal before the customer comes back.
+    if (rc2ExternalDepartureBlurred && age < RC2_FOCUS_ONLY_RETURN_DELAY_MS) {
+      rc2ExternalDepartureBlurred = false;
+    }
+    return Promise.resolve(false);
+  }
+  return rc2RestoreExternalSurface({rebuildExisting}).then(restored => {
+    if (restored) rc2ResetExternalDepartureLifecycle();
+    return restored;
+  });
+}
+
 fxOrderClick = function rc2OrderClick(button) {
   const key = button.dataset.orderKey;
   $$('.order-item').forEach(item => item.classList.remove('selected'));
@@ -1002,6 +1041,9 @@ fxInstallEvents = function rc2InstallEvents() {
   document.addEventListener('pointerup', rc2ReleaseAllPresses, true);
   document.addEventListener('pointercancel', rc2ReleaseAllPresses, true);
   window.addEventListener('blur', rc2ReleaseAllPresses);
+  window.addEventListener('blur', () => {
+    if (rc2PendingExternalReturnState()) rc2ExternalDepartureBlurred = true;
+  });
   document.addEventListener('click', event => {
     const order = event.target.closest('[data-order-key]');
     if (order) {
@@ -1092,22 +1134,34 @@ fxInstallEvents = function rc2InstallEvents() {
   });
   document.addEventListener('visibilitychange', () => {
     document.documentElement.classList.toggle('page-hidden', document.hidden);
-    if (document.hidden) rc2StopAmbient();
+    if (document.hidden) {
+      if (rc2PendingExternalReturnState()) rc2ExternalDepartureHidden = true;
+      rc2StopAmbient();
+      return;
+    }
     else {
-      void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
+      void rc2RestoreAfterConfirmedResume({rebuildExisting: true}).then(restored => {
         if (restored) window.daedongFinishExternalReturnBoot?.();
         else rc2StartAmbient(false);
       });
     }
   });
+  window.addEventListener('pagehide', () => {
+    if (rc2PendingExternalReturnState()) rc2ExternalDepartureHidden = true;
+  });
   const restoreAfterNativeResume = () => {
-    void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
+    void rc2RestoreAfterConfirmedResume({rebuildExisting: true}).then(restored => {
       if (restored) window.daedongFinishExternalReturnBoot?.();
     });
   };
   window.addEventListener('pageshow', restoreAfterNativeResume);
-  window.addEventListener('focus', restoreAfterNativeResume);
-  document.addEventListener('resume', restoreAfterNativeResume);
+  window.addEventListener('focus', () => rc2RestoreAfterConfirmedResume({rebuildExisting: true}).then(restored => {
+    if (restored) window.daedongFinishExternalReturnBoot?.();
+  }));
+  document.addEventListener('resume', () => {
+    if (rc2PendingExternalReturnState()) rc2ExternalDepartureHidden = true;
+    restoreAfterNativeResume();
+  });
 };
 
 fxInitialize = async function rc2Initialize() {
