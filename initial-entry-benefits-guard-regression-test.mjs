@@ -11,8 +11,14 @@ assert.ok(earlyBoot, '첫 화면 복귀 판별보다 앞선 초기화 코드를 
 assert.match(earlyBoot, /history\.scrollRestoration = 'manual'/,
   '브라우저가 중간 스크롤을 복원하기 전에 head에서 수동 복원으로 바꿔야 합니다.');
 assert.match(earlyBoot, /window\.daedongArmFreshEntryTop = \(\) =>/);
-assert.match(earlyBoot, /\[120, 360, 900, 1800\]/,
-  '안드로이드의 늦은 스크롤 복원 뒤에도 최초 진입을 다시 상단으로 맞춰야 합니다.');
+assert.match(earlyBoot, /FRESH_ENTRY_SETTLE_MS = 20000/,
+  '카카오 인앱브라우저의 늦은 콘텐츠·스크롤 복원까지 최초 진입 상단을 지켜야 합니다.');
+assert.match(earlyBoot, /FRESH_ENTRY_PULSE_MS = 200/);
+assert.match(earlyBoot, /setTimeout\(pulseFreshEntryTop, FRESH_ENTRY_PULSE_MS\)/,
+  '최초 진입 보정 시간 동안 늦은 중간 스크롤 복원을 반복해서 되돌려야 합니다.');
+assert.match(earlyBoot, /window\.addEventListener\('pageshow'[\s\S]*daedongArmFreshEntryTop/,
+  '카카오 인앱브라우저가 기존 페이지를 다시 표시해도 새 진입 상단을 확인해야 합니다.');
+assert.match(earlyBoot, /document\.addEventListener\('visibilitychange'[\s\S]*visibilityState === 'visible'[\s\S]*daedongArmFreshEntryTop/);
 assert.match(earlyBoot, /window\.daedongEarlyHomeInteraction = true[\s\S]*stopFreshEntrySettle\(\)/,
   '고객이 화면을 만진 뒤에는 상단 보정이 고객 스크롤을 덮어쓰지 않아야 합니다.');
 assert.match(html, /if \(!pending\) \{[\s\S]*window\.daedongArmFreshEntryTop\?\.\(\)/,
