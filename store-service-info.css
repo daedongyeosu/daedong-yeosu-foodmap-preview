@@ -3,6 +3,8 @@ body.store-service-overview-open {
 }
 
 .store-service-overview-button {
+  position: relative;
+  z-index: 3;
   min-height: 38px;
   margin-left: auto;
   padding: 0 13px;
@@ -14,6 +16,17 @@ body.store-service-overview-open {
   border: 1px solid #cddff7;
   border-radius: 999px;
   white-space: nowrap;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+#recommendSection {
+  isolation: isolate;
+}
+
+#recommendSection > .section-head {
+  position: relative;
+  z-index: 2;
 }
 
 .store-service-overview-button span {
