@@ -32,7 +32,7 @@ assert.doesNotMatch(
 );
 assert.match(
   serviceWorker,
-  /CACHE_NAME = 'daedong-yeosu-app-shell-v17-launch-consumer'/,
+  /CACHE_NAME = 'daedong-yeosu-app-shell-v18-launch-settle'/,
   '기존 설치본도 새 메인 로고를 받도록 앱 셸 캐시 버전을 갱신해야 합니다.'
 );
 

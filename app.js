@@ -37,6 +37,13 @@ try {
   if (daedongLaunchReloadComplete) sessionStorage.removeItem(DAEDONG_LAUNCH_RELOAD_MARKER);
 } catch {}
 
+function settleInstalledAppAtHome() {
+  resetFreshEntryScroll();
+  requestAnimationFrame(resetFreshEntryScroll);
+  window.setTimeout(resetFreshEntryScroll, 120);
+  window.setTimeout(resetFreshEntryScroll, 360);
+}
+
 function resetInstalledAppLaunch() {
   if (globalThis.daedongPendingExternalReturn) return;
   const clientAge = typeof performance !== 'undefined' ? performance.now() - DAEDONG_APP_BOOT_AT : 0;
@@ -45,14 +52,27 @@ function resetInstalledAppLaunch() {
     location.reload();
     return;
   }
-  resetFreshEntryScroll();
-  requestAnimationFrame(resetFreshEntryScroll);
-  window.setTimeout(resetFreshEntryScroll, 120);
+  settleInstalledAppAtHome();
 }
 
 if (typeof window !== 'undefined' && typeof window.launchQueue?.setConsumer === 'function') {
   window.launchQueue.setConsumer(resetInstalledAppLaunch);
 }
+
+// Some Android launchers merely foreground an existing standalone window and
+// do not deliver a second LaunchQueue event. Treat a genuine hidden -> visible
+// transition as an app-icon reopen as well. The explicit external-return flag
+// above keeps order-app returns at the customer's previous store position.
+let daedongInstalledAppWasHidden = document.visibilityState === 'hidden';
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') {
+    daedongInstalledAppWasHidden = true;
+    return;
+  }
+  if (!daedongInstalledAppWasHidden) return;
+  daedongInstalledAppWasHidden = false;
+  resetInstalledAppLaunch();
+});
 
 const DAEDONG_TAP_MOVE_TOLERANCE = 10;
 const DAEDONG_TAP_DEDUPE_WINDOW_MS = 80;
