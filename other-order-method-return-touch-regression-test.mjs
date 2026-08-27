@@ -39,7 +39,7 @@ assert.doesNotMatch(rc2, /document\.addEventListener\('pointerdown', rc2SettleRe
 assert.match(rc3, /document\.visibilityState === 'visible'/, '앱 복귀로 화면이 다시 보일 때 터치 상태를 초기화해야 합니다.');
 assert.match(rc3, /trigger\.removeAttribute\('data-rc3-direct-bound'\)/, 'HTML 스냅샷에 남은 과거 직접 바인딩 표식을 제거해야 합니다.');
 assert.doesNotMatch(rc3, /trigger\.addEventListener\('pointer(?:down|up|move|cancel)'/, 'HTML 복원 시 사라지는 노드 전용 포인터 리스너를 다시 사용하면 안 됩니다.');
-assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?daedongConfirmIntentionalSurfaceNavigation\?\.\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)[\s\S]*?rc3OpenOrderMethods\(store\)/, '실기기에서 남은 복귀 생명주기가 새 주문방법 창을 되돌리지 못하도록 첫 활성화를 원자적으로 처리해야 합니다.');
+assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?rc3OpenOrderMethods\(store\)[\s\S]*?setTimeout\(\(\) => \{[\s\S]*?daedongConfirmIntentionalSurfaceNavigation\?\.\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)/, '실기기에서는 복귀 작업을 즉시 무효화하고 주문방법 창을 먼저 표시한 뒤 history를 정리해야 합니다.');
 
 const clickGuardIndex = rc3.indexOf("const other = event.target.closest('[data-rc3-other-methods]')");
 const globalClickHandlerIndex = rc3.indexOf('function rc3HandleClick(event)');
