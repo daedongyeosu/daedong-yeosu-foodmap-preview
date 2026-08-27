@@ -149,6 +149,25 @@ try {
     reopenedKakaoLink.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
     '카카오톡 링크 재진입 뒤 요기요·쿠팡이츠·배달의민족 목록 열린 상태 복원'
   );
+  await reopenedKakaoLink.waitForFunction(() => {
+    const buttons = [...document.querySelectorAll('#modal:not([hidden]) [data-rc3-external-route]')];
+    return buttons.length === 3 && buttons.every(button => button.__rc3DirectExternalRouteBound === true);
+  }, null, {timeout: 5000});
+  await check(Promise.resolve(true), '카카오톡 링크 재진입 뒤 복원된 주문앱 버튼 3개에 실물 터치 직접 재연결');
+  for (const key of ['yogiyo', 'coupang', 'baemin']) {
+    const restoredRoute = reopenedKakaoLink.locator(`#modal:not([hidden]) [data-rc3-external-route="${key}"]`);
+    await restoredRoute.waitFor({state: 'visible', timeout: 5000});
+    const reopenedExternalPromise = context.waitForEvent('page', {timeout: 5000});
+    await restoredRoute.tap();
+    const reopenedExternal = await reopenedExternalPromise;
+    await reopenedExternal.waitForLoadState('domcontentloaded');
+    await check(
+      Promise.resolve(reopenedExternal.url().includes(`/${key}/`)),
+      `카카오톡 링크 재진입 뒤 복원된 ${key} 버튼 실제 터치 실행`
+    );
+    await reopenedExternal.close();
+    await reopenedKakaoLink.bringToFront();
+  }
   await reopenedKakaoLink.screenshot({path: 'browser-yogiyo-detached-link-return.png', fullPage: false});
   await reopenedKakaoLink.close();
   report.success = report.errors.length === 0;

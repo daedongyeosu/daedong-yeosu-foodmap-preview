@@ -35,6 +35,12 @@ assert.match(rc3, /function rc3ActivateOrderMethodsFallback\(trigger, event\)[\s
 assert.match(rc3, /data-rc3-other-methods=[\s\S]*?onclick="return window\.daedongActivateOrderMethodsFallback \? window\.daedongActivateOrderMethodsFallback\(this, event\) : false"/, '카카오가 이벤트 없는 HTML만 복원해도 버튼 자체에 지속 가능한 클릭 대체 경로가 남아야 합니다.');
 assert.match(rc3, /function rc3BindOrderMethodsTrigger\(detail, \{force = false\} = \{\}\)[\s\S]*?force && trigger\.__rc3DirectOrderMethodsBound[\s\S]*?cloneNode\(true\)[\s\S]*?replaceWith\(replacement\)/, '복귀 재연결은 카카오가 남긴 오래된 바인딩 표식을 믿지 말고 버튼 노드를 교체해야 합니다.');
 assert.match(rc3, /window\.daedongRebindOrderMethodsTrigger = \(\) => \{[\s\S]*?rc3BindOrderMethodsTrigger\([\s\S]*?\{force: true\}\)/, '주문앱 복귀 재연결은 강제 모드로 실행되어야 합니다.');
+assert.match(rc3, /function rc3BindExternalOrderRoutes\(detail, \{force = false\} = \{\}\)[\s\S]*?__rc3DirectExternalRouteBound[\s\S]*?addEventListener\('pointerup'[\s\S]*?addEventListener\('touchend'[\s\S]*?addEventListener\('click'/,
+  '복원된 요기요·쿠팡이츠·배달의민족 버튼 자체가 포인터·원시 터치·클릭을 직접 처리해야 합니다.');
+assert.match(rc3, /window\.daedongRebindOrderMethodsTrigger = \(\) => \{[\s\S]*?rc3BindExternalOrderRoutes\(detail, \{force: true\}\)/,
+  '새 문서형 카카오 복귀 후 외부 주문앱 버튼도 강제로 새 터치 노드에 다시 연결해야 합니다.');
+assert.match(rc3, /new MutationObserver\(rc3QueueRestoredOrderControlsRebind\)[\s\S]*?childList: true, subtree: true[\s\S]*?rc3QueueRestoredOrderControlsRebind\(\)/,
+  '초기 스크립트보다 늦게 스냅샷 DOM이 들어와도 복원된 주문앱 버튼을 자동으로 직접 재연결해야 합니다.');
 assert.match(rc3, /window\.daedongActivateOrderMethodsTrigger = rc3ActivateOrderMethodsTrigger/, '초기 공용 터치 계층이 주문방법 버튼을 직접 열 수 있어야 합니다.');
 const earlyBridgeIndex = finalExperience.indexOf("selector:'[data-rc3-other-methods]'");
 const rc2LoaderIndex = finalExperience.indexOf("const fxRc2Script=document.createElement('script')");
@@ -58,6 +64,7 @@ for (const [name, source] of [['final-experience.js', finalExperience], ['index.
   assert.match(source, /return-document-reload-1/, `${name} 카카오 복귀 문서 재로드 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /return-document-navigation-1/, `${name} 카카오 복귀 강제 문서 이동 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /stable-separated-order-return-[12]/, `${name} 원본 상세 DOM 보존 복귀 캐시 버전이 갱신되어야 합니다.`);
+  assert.match(source, /restored-external-route-direct-touch-1/, `${name} 복원된 외부 주문앱 버튼 직접 터치 캐시 버전이 갱신되어야 합니다.`);
 }
 assert.match(index, /real-second-tap-after-sheet-1/, '새 주문방법 화면의 정상 두 번째 터치 수정 캐시 버전이 갱신되어야 합니다.');
 assert.match(app, /function kakaoPreviewFallbackUrl\(key\)[\s\S]*?key !== 'coupang' \|\| !isKakaoInAppBrowser\(\)[\s\S]*?KAKAO_APP_FALLBACK_PARAM/, '카카오 쿠팡 fallback은 멈춘 외부 웹페이지 대신 Preview 복귀 문서를 사용해야 합니다.');
