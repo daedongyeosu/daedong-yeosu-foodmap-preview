@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const rc2 = fs.readFileSync('rc2-fixes.js', 'utf8');
+const app = fs.readFileSync('app.js', 'utf8');
 const rc3 = fs.readFileSync('rc3-fixes.js', 'utf8');
 const service = fs.readFileSync('store-service-info.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
@@ -60,6 +61,8 @@ assert.equal(sandbox.history.url, '/?fresh=1', '일회성 복귀 주소 표식�
 
 assert.match(rc2, /#storeGrid \.store-card\[data-id\][\s\S]*rc2OpenStoreFromCustomer/,
   '홈 가게목록 카드는 고객 선택 격리를 거쳐야 합니다.');
+assert.match(app, /\$\('#storeGrid'\)\.addEventListener\('click',[\s\S]*?daedongConfirmIntentionalStoreOpen\?\.\(\); openStore\(store\)/,
+  '복귀 보호기 설치 직전의 기본 가게카드 클릭도 지연 복귀 상태를 먼저 정리해야 합니다.');
 assert.match(rc2, /RC2_STORE_INTENT_SELECTOR[\s\S]*\[data-rc3-rail-open\][\s\S]*function rc2PrepareStoreIntent/,
   '추천 가게카드는 손가락이 닿는 첫 순간부터 지연 초기화를 중단해야 합니다.');
 assert.match(rc2, /addEventListener\('pointerdown', rc2PrepareStoreIntent, true\)/,

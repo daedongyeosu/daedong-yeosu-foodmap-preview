@@ -2468,7 +2468,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!event.target.closest('.store-other-wrap')) $$('.store-other-popover').forEach(item => item.hidden = true);
   });
 
-  $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) openStore(store); });
+  $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) { window.daedongConfirmIntentionalStoreOpen?.(); openStore(store); } });
   $('#noticeBtn').addEventListener('click', () => openModal(`<h2 id="modalTitle">알림</h2><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div>`));
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
