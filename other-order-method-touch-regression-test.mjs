@@ -15,7 +15,7 @@ const rc3Trigger = rc3.match(/<button class="([^"]*rc3-order-methods-trigger[^"]
 assert(rc3Trigger, '새 다른 주문방법 버튼을 찾을 수 없습니다.');
 assert(!rc3Trigger[1].split(/\s+/).includes('store-other-toggle'), '새 버튼이 구형 팝업 처리기와 다시 충돌합니다.');
 
-assert.match(rc3, /function rc3BindOrderMethodsTrigger\(detail\)/, '버튼의 위임 터치 경로 표식이 없습니다.');
+assert.match(rc3, /function rc3BindOrderMethodsTrigger\(detail, \{force = false\} = \{\}\)/, '버튼의 위임 터치 경로 표식이 없습니다.');
 assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\)/, '버튼 활성화 경로가 한곳으로 통합되지 않았습니다.');
 assert.match(rc3, /document\.addEventListener\('pointerdown', rc3OnOrderMethodsPointerDown, true\)/, 'HTML 복원 뒤에도 살아 있는 document pointerdown 경로가 없습니다.');
 assert.match(rc3, /document\.addEventListener\('pointerup', rc3OnOrderMethodsPointerUp, true\)/, 'HTML 복원 뒤에도 살아 있는 document pointerup 경로가 없습니다.');

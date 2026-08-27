@@ -483,6 +483,18 @@ function rc3MarkOrderMethodsActivation(storeId) {
   rc3OrderMethodsGhostClickStoreId = String(storeId || '');
 }
 
+function rc3ActivateOrderMethodsFallback(trigger, event) {
+  const storeId = String(trigger?.dataset.rc3OtherMethods || '');
+  if (rc3OrderMethodsGhostActive(storeId)) {
+    event?.preventDefault?.();
+    event?.stopImmediatePropagation?.();
+    return false;
+  }
+  rc3MarkOrderMethodsActivation(storeId);
+  return rc3ActivateOrderMethodsTrigger(trigger, event);
+}
+window.daedongActivateOrderMethodsFallback = rc3ActivateOrderMethodsFallback;
+
 function rc3OnOrderMethodsPointerDown(event) {
   const external = event.target?.closest?.('[data-rc3-external-route]');
   if (external) external.dataset.rc3SelectionStartedAt = String(Date.now());
@@ -588,9 +600,14 @@ function rc3OnOrderMethodsTouchEnd(event) {
   }
 }
 
-function rc3BindOrderMethodsTrigger(detail) {
-  const trigger = detail?.querySelector('[data-rc3-other-methods]');
+function rc3BindOrderMethodsTrigger(detail, {force = false} = {}) {
+  let trigger = detail?.querySelector('[data-rc3-other-methods]');
   if (!trigger) return;
+  if (force && trigger.__rc3DirectOrderMethodsBound) {
+    const replacement = trigger.cloneNode(true);
+    trigger.replaceWith(replacement);
+    trigger = replacement;
+  }
   // rc2 serializes and rebuilds the store detail before an external app is
   // launched. Data attributes survive that rebuild, DOM listeners do not, so
   // use a non-serializable element property as the real binding guard.
@@ -653,7 +670,7 @@ function rc3BindOrderMethodsTrigger(detail) {
   trigger.addEventListener('click', event => activateDirect(event));
 }
 window.daedongRebindOrderMethodsTrigger = () => {
-  rc3BindOrderMethodsTrigger($('#modalContent .store-detail'));
+  rc3BindOrderMethodsTrigger($('#modalContent .store-detail'), {force: true});
 };
 
 function rc3ShouldBlockOrderMethodSelection(external, event, storeId) {
@@ -688,7 +705,7 @@ function rc3EnhanceStoreDetail(store) {
   const apps = channels.primaryOrder.brandApp || channels.happyOrder ? `<div class="brand-store-actions">${channels.primaryOrder.brandApp ? fxAppAction(channels.primaryOrder.brandApp, 'brand') : ''}${channels.happyOrder ? fxAppAction(channels.happyOrder, 'happy') : ''}</div>` : '';
   const orderMethodsMode = rc3OrderMethodsMode(channels);
   const singleExternalAttribute = orderMethodsMode.singleExternalKey ? ` data-rc3-single-external="${escapeHtml(orderMethodsMode.singleExternalKey)}"` : '';
-  const other = orderMethodsMode.hasExternal ? `<div class="store-other-wrap"><button class="detail-route rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"${singleExternalAttribute} aria-haspopup="dialog"><span>${escapeHtml(orderMethodsMode.label)}</span><b aria-hidden="true">›</b></button></div>` : '';
+  const other = orderMethodsMode.hasExternal ? `<div class="store-other-wrap"><button class="detail-route rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"${singleExternalAttribute} aria-haspopup="dialog" onclick="return window.daedongActivateOrderMethodsFallback ? window.daedongActivateOrderMethodsFallback(this, event) : false"><span>${escapeHtml(orderMethodsMode.label)}</span><b aria-hidden="true">›</b></button></div>` : '';
   if (utilities) gallery?.insertAdjacentHTML('afterend', `<div class="detail-quick-links">${utilities}</div>`);
   const menuEntry = detail.querySelector('[data-store-menu-preview]');
   const orderAnchor = menuEntry || detail.querySelector('.detail-meta-row') || gallery;
