@@ -36,6 +36,7 @@ let rc2ExternalDepartureHidden = false;
 let rc2RestoredReturnLease = null;
 let rc2RestoredReturnSettleTimer = 0;
 let rc2ReturnLifecycleEpoch = 0;
+let rc2SnapshotSurfaceResetSequence = 0;
 const rc2PositionStabilizers = new WeakMap();
 
 function rc2FreshReturnState(saved) {
@@ -554,6 +555,29 @@ function rc2RestoreSnapshot(snapshot) {
   window.daedongRebindOrderMethodsTrigger?.();
 }
 
+function rc2RestoreSnapshotAfterNativeSurfaceReset(snapshot) {
+  if (!snapshot) return;
+  const sequence = ++rc2SnapshotSurfaceResetSequence;
+  const root = document.documentElement;
+  const bootWasPending = root.classList.contains('daedong-external-return-pending');
+  root.classList.add('daedong-external-return-pending');
+  window.daedongResetOrderMethodsTouchState?.();
+  // Samsung Kakao WebView can keep the hit-test surface that belonged to the
+  // nested order-method sheet even after its HTML is replaced with the saved
+  // store detail. Scrolling then works natively, but every button in the
+  // restored detail is untappable. Lower the native modal for two rendered
+  // frames before restoring the snapshot so WebView rebuilds that surface.
+  rc2NativeHardClose({fromPop: true});
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    if (sequence !== rc2SnapshotSurfaceResetSequence) return;
+    try {
+      rc2RestoreSnapshot(snapshot);
+    } finally {
+      if (!bootWasPending) root.classList.remove('daedong-external-return-pending');
+    }
+  }));
+}
+
 openModal = function rc2OpenModal(html) {
   const modal = $('#modal');
   const wasHidden = !modal || modal.hidden;
@@ -590,7 +614,7 @@ hardClose = function rc2HardClose(options = {}) {
     }
   }
   if (options.fromPop && rc2ModalStack.length) {
-    rc2RestoreSnapshot(rc2ModalStack.pop());
+    rc2RestoreSnapshotAfterNativeSurfaceReset(rc2ModalStack.pop());
     return;
   }
   if (!options.fromPop && rc2ModalStack.length) {

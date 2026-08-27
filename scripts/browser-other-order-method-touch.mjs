@@ -185,6 +185,39 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     page.locator('.order-methods-sheet [data-rc3-external-route]').count().then(count => count > 0),
     `${storeName} 실제 등록된 외부 주문앱 선택지 표시`
   );
+  await page.evaluate(() => {
+    window.__snapshotSurfaceResetObserved = {modalHidden: false, bootCover: false};
+    const modal = document.getElementById('modal');
+    new MutationObserver(() => {
+      if (modal?.hidden) window.__snapshotSurfaceResetObserved.modalHidden = true;
+    }).observe(modal, {attributes: true, attributeFilter: ['hidden']});
+    new MutationObserver(() => {
+      if (document.documentElement.classList.contains('daedong-external-return-pending')) {
+        window.__snapshotSurfaceResetObserved.bootCover = true;
+      }
+    }).observe(document.documentElement, {attributes: true, attributeFilter: ['class']});
+  });
+  await page.evaluate(() => window.hardClose({fromPop: true}));
+  await page.waitForFunction(() => (
+    !document.documentElement.classList.contains('daedong-external-return-pending')
+    && Boolean(document.querySelector('#modal:not([hidden]) .store-detail [data-rc3-other-methods]'))
+  ), null, {polling: 25, timeout: 3000});
+  const surfaceReset = await page.evaluate(() => window.__snapshotSurfaceResetObserved);
+  await check(
+    Promise.resolve(surfaceReset?.modalHidden && surfaceReset?.bootCover),
+    `${storeName} 주문방법 화면에서 상세 재진입 전 카카오 네이티브 모달 표면 재생성`
+  );
+  const reenteredTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
+  await reenteredTrigger.tap();
+  await page.waitForFunction(
+    () => document.querySelector('#modal:not([hidden]) .order-methods-sheet')?.getBoundingClientRect().height > 0,
+    null,
+    {polling: 25, timeout: 3000}
+  );
+  await check(
+    page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
+    `${storeName} 상세 재진입 뒤 첫 터치로 다른 주문방법 선택창 다시 열림`
+  );
   await page.locator('.order-methods-sheet [data-rc3-external-route]').first().evaluate(element => {
     element.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true, detail: 1, view: window}));
   });
