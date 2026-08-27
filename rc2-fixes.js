@@ -5,15 +5,12 @@ const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json';
 const RC2_EXTERNAL_RETURN = 'daedongExternalReturnRc2';
 const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
-const RC2_RETURN_GUARD_STATE = 'daedongExternalReturnGuard';
 const RC2_RETURN_TOKEN_PARAM = '__ddret';
 const RC2_RETURN_GUARD_PARAM = '__ddguard';
 const RC2_DURABLE_RETURN_COOKIE = 'daedongOrderReturnV1';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
 const RC2_FOCUS_ONLY_RETURN_DELAY_MS = 650;
-const RC2_EXTERNAL_RETURN_POP_GUARD_MS = 1500;
 const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
-const RC2_NEEDS_EXTERNAL_HISTORY_GUARD = /Android/i.test(String(navigator.userAgent || ''));
 const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
 const RC2_REGION = window.DAEDONG_REGION || {shortName: '여수', mapName: '대동여수음식지도'};
 const RC2_REGION_NAME = RC2_REGION.shortName || '여수';
@@ -33,8 +30,8 @@ let rc2StoreRestorePromise = null;
 let rc2SurfaceRestorePromise = null;
 let rc2ExternalDepartureBlurred = false;
 let rc2ExternalDepartureHidden = false;
-let rc2ExternalReturnPopGuardUntil = 0;
-let rc2ExpectedExternalHistoryPopToken = '';
+let rc2RestoredReturnLease = null;
+const rc2PositionStabilizers = new WeakMap();
 
 function rc2FreshReturnState(saved) {
   const age = Date.now() - Number(saved?.savedAt || 0);
@@ -164,7 +161,7 @@ function rc2ConfirmIntentionalStoreOpen() {
   // leaving them armed lets a newly opened detail be replaced by home.
   globalThis.daedongMarkHomeInteraction?.();
   rc2ResetExternalDepartureLifecycle();
-  rc2ExpectedExternalHistoryPopToken = '';
+  rc2RestoredReturnLease = null;
   for (const key of RC2_RETURN_STORAGE_KEYS) {
     try { sessionStorage.removeItem(key); } catch {}
     try { localStorage.removeItem(key); } catch {}
@@ -176,7 +173,7 @@ function rc2ConfirmIntentionalStoreOpen() {
     const url = new URL(location.href);
     const next = {...history.state};
     delete next[RC2_RETURN_TOKEN_STATE];
-    delete next[RC2_RETURN_GUARD_STATE];
+    delete next.daedongExternalReturnGuard;
     url.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
     url.searchParams.delete(RC2_RETURN_GUARD_PARAM);
     history.replaceState(next, '', `${url.pathname}${url.search}${url.hash}`);
@@ -220,20 +217,11 @@ function rc2WriteReturnState(key, value) {
       '',
       protectedUrl
     );
-    // Android in-app browsers can replace the current preview history entry
-    // with an order app's HTTP fallback page while resolving an intent. Keep a
-    // visibly distinct, sacrificial entry above the real return entry. Kakao
-    // can collapse same-URL pushState entries, so the guard must have its own
-    // one-shot URL as well as its own state marker.
-    if (RC2_NEEDS_EXTERNAL_HISTORY_GUARD) {
-      const guardUrl = new URL(returnUrl.href);
-      guardUrl.searchParams.set(RC2_RETURN_GUARD_PARAM, returnToken);
-      history.pushState(
-        {...protectedState, [RC2_RETURN_GUARD_STATE]: returnToken},
-        '',
-        `${guardUrl.pathname}${guardUrl.search}${guardUrl.hash}`
-      );
-    }
+    // Keep the existing Preview entry in place. Adding a sacrificial history
+    // entry here made Kakao/Samsung deliver a delayed popstate after the app
+    // had already returned, which closed the restored modal and exposed Home.
+    // The exact URL token plus the first-party durable cookie already cover a
+    // true cross-document fallback without mutating the customer's Back stack.
   } catch {}
   rc2StoreReturnState(sessionStorage, key, payload);
   rc2StoreReturnState(localStorage, key, payload);
@@ -270,55 +258,10 @@ function rc2ClearReturnState(key, saved = null) {
   try {
     const next = {...history.state};
     delete next[RC2_RETURN_TOKEN_STATE];
-    if (next[RC2_RETURN_GUARD_STATE] === token) delete next[RC2_RETURN_GUARD_STATE];
     if (urlMatches) returnUrl.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
     if (guardMatches) returnUrl.searchParams.delete(RC2_RETURN_GUARD_PARAM);
     history.replaceState(next, '', returnUrl ? `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}` : undefined);
   } catch {}
-}
-
-function rc2NormalizeReturnedHistory(saved) {
-  const token = String(saved?.returnToken || '');
-  if (!token || !RC2_NEEDS_EXTERNAL_HISTORY_GUARD) return false;
-  let guardToken = '';
-  try { guardToken = new URL(location.href).searchParams.get(RC2_RETURN_GUARD_PARAM) || ''; } catch {}
-  const isGuardEntry = history.state?.[RC2_RETURN_GUARD_STATE] === token || guardToken === token;
-  if (!isGuardEntry) return false;
-  // Every launch adds one sacrificial Android history entry. Collapse it as
-  // part of the successful return instead of leaving an extra entry for the
-  // customer's next launch. The matching token makes the resulting popstate
-  // distinguishable from an intentional Back action even on repeated trips.
-  rc2ExpectedExternalHistoryPopToken = token;
-  try {
-    history.back();
-    return true;
-  } catch {
-    rc2ExpectedExternalHistoryPopToken = '';
-    return false;
-  }
-}
-
-function rc2ConsumeExpectedExternalHistoryPop() {
-  const token = String(rc2ExpectedExternalHistoryPopToken || '');
-  if (!token) return false;
-  let url = null;
-  let urlToken = '';
-  try {
-    url = new URL(location.href);
-    urlToken = url.searchParams.get(RC2_RETURN_TOKEN_PARAM) || '';
-  } catch {}
-  const historyToken = String(history.state?.[RC2_RETURN_TOKEN_STATE] || '');
-  if (historyToken !== token && urlToken !== token) return false;
-  rc2ExpectedExternalHistoryPopToken = '';
-  try {
-    const next = {...history.state, daedongModal: true, rc2ModalDepth: 1};
-    delete next[RC2_RETURN_TOKEN_STATE];
-    if (next[RC2_RETURN_GUARD_STATE] === token) delete next[RC2_RETURN_GUARD_STATE];
-    if (urlToken === token) url.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
-    url?.searchParams.delete(RC2_RETURN_GUARD_PARAM);
-    history.replaceState(next, '', url ? `${url.pathname}${url.search}${url.hash}` : undefined);
-  } catch {}
-  return true;
 }
 
 const RC2_RETURN_ANCHOR_ATTRIBUTES = [
@@ -385,15 +328,66 @@ function rc2ApplyReturnPosition(card, saved, useFallback = false) {
 
 function rc2StabilizeReturnPosition(saved, card = $('#modal .modal-card')) {
   if (!card || !saved) return;
+  rc2PositionStabilizers.get(card)?.();
   let cancelled = false;
-  const cancel = () => { cancelled = true; };
-  for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) card.addEventListener(type, cancel, {once: true, passive: true});
+  let queued = false;
+  let resizeObserver = null;
+  let mutationObserver = null;
+  let safetyTimer = 0;
   const apply = useFallback => { if (!cancelled && card.isConnected) rc2ApplyReturnPosition(card, saved, useFallback); };
+  const queueApply = () => {
+    if (cancelled || queued) return;
+    queued = true;
+    requestAnimationFrame(() => {
+      queued = false;
+      apply(false);
+    });
+  };
+  const cancel = () => {
+    if (cancelled) return;
+    cancelled = true;
+    resizeObserver?.disconnect();
+    mutationObserver?.disconnect();
+    if (safetyTimer) clearTimeout(safetyTimer);
+    for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) card.removeEventListener(type, cancel);
+    card.removeEventListener('load', queueApply, true);
+    rc2PositionStabilizers.delete(card);
+  };
+  for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) card.addEventListener(type, cancel, {once: true, passive: true});
   requestAnimationFrame(() => {
     apply(true);
     requestAnimationFrame(() => apply(false));
   });
-  for (const delay of [120, 360, 800, 1600]) setTimeout(() => apply(false), delay);
+  for (const delay of [120, 360, 800, 1600, 3200]) setTimeout(() => apply(false), delay);
+  if (typeof ResizeObserver === 'function') {
+    resizeObserver = new ResizeObserver(queueApply);
+    resizeObserver.observe(card);
+    const content = card.firstElementChild;
+    if (content) resizeObserver.observe(content);
+  }
+  if (typeof MutationObserver === 'function') {
+    mutationObserver = new MutationObserver(queueApply);
+    mutationObserver.observe(card, {childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'hidden', 'class']});
+  }
+  card.addEventListener('load', queueApply, true);
+  safetyTimer = setTimeout(cancel, 8000);
+  rc2PositionStabilizers.set(card, cancel);
+}
+
+function rc2ArmRestoredReturnLease(key, saved) {
+  if (!RC2_RETURN_STORAGE_KEYS.includes(key) || !saved?.returnToken) return false;
+  rc2RestoredReturnLease = {key, saved};
+  globalThis.daedongLastValidatedExternalReturnAt = Date.now();
+  return true;
+}
+
+function rc2SettleRestoredReturnLease() {
+  const lease = rc2RestoredReturnLease;
+  if (!lease) return false;
+  rc2RestoredReturnLease = null;
+  rc2ClearReturnState(lease.key, lease.saved);
+  rc2ClearDurableReturn(lease.saved.returnToken);
+  return true;
 }
 
 window.daedongReadExternalReturnState = rc2ReadReturnState;
@@ -401,6 +395,7 @@ window.daedongWriteExternalReturnState = rc2WriteReturnState;
 window.daedongClearExternalReturnState = rc2ClearReturnState;
 window.daedongCaptureReturnAnchor = rc2CaptureReturnAnchor;
 window.daedongStabilizeReturnPosition = rc2StabilizeReturnPosition;
+window.daedongArmRestoredReturnLease = rc2ArmRestoredReturnLease;
 
 function rc2Icon(id, className = 'category-local-icon') {
   return `<svg class="${className}" aria-hidden="true"><use href="${RC2_ICON_SPRITE}#${id}"></use></svg>`;
@@ -489,24 +484,19 @@ openModal = function rc2OpenModal(html) {
 
 hardClose = function rc2HardClose(options = {}) {
   if (options.fromPop) {
-    if (typeof rc2ConsumeExpectedExternalHistoryPop === 'function' && rc2ConsumeExpectedExternalHistoryPop()) return;
     const pendingReturn = rc2PendingExternalReturnState();
-    const restoredImmediatelyBeforePop = Date.now() < rc2ExternalReturnPopGuardUntil;
-    if (pendingReturn || restoredImmediatelyBeforePop) {
+    if (pendingReturn) {
       // Kakao's bottom browser Back and Android's system Back do not resume the
       // same way. On the system-Back path the original preview WebView resumes
       // and then delivers a popstate to the still-open store modal. Treat that
       // pop as the external-app return itself, not as a request to close the
       // store detail and expose Home.
-      rc2ExternalReturnPopGuardUntil = 0;
-      if (pendingReturn) {
-        rc2ExternalDepartureHidden = true;
-        void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
-          if (!restored) return;
-          rc2ResetExternalDepartureLifecycle();
-          window.daedongFinishExternalReturnBoot?.();
-        });
-      }
+      rc2ExternalDepartureHidden = true;
+      void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
+        if (!restored) return;
+        rc2ResetExternalDepartureLifecycle();
+        window.daedongFinishExternalReturnBoot?.();
+      });
       return;
     }
   }
@@ -1162,8 +1152,7 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
         const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
         if (!restoredMenu) return false;
       }
-      rc2NormalizeReturnedHistory(saved);
-      rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
+      rc2ArmRestoredReturnLease(RC2_EXTERNAL_RETURN, saved);
       return true;
     }
     if (!modal?.hidden) {
@@ -1183,8 +1172,7 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
       const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
       if (!restoredMenu) return false;
     }
-    rc2NormalizeReturnedHistory(saved);
-    rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
+    rc2ArmRestoredReturnLease(RC2_EXTERNAL_RETURN, saved);
     return true;
   })();
   rc2StoreRestorePromise = restoreTask;
@@ -1235,10 +1223,6 @@ function rc2RestoreAfterConfirmedResume({rebuildExisting = true} = {}) {
   }
   return rc2RestoreExternalSurface({rebuildExisting}).then(restored => {
     if (restored) {
-      // Some Android/Kakao builds restore on visibilitychange first and emit
-      // the system-Back popstate immediately afterwards. Preserve exactly that
-      // next pop for a short window so it cannot close the restored detail.
-      rc2ExternalReturnPopGuardUntil = Date.now() + RC2_EXTERNAL_RETURN_POP_GUARD_MS;
       rc2ResetExternalDepartureLifecycle();
     }
     return restored;
@@ -1261,6 +1245,10 @@ fxInstallEvents = function rc2InstallEvents() {
   window.daedongCoreEventsInstalled = true;
   document.addEventListener('pointerdown', rc2PrepareStoreIntent, true);
   document.addEventListener('touchstart', rc2PrepareStoreIntent, {capture: true, passive: true});
+  document.addEventListener('pointerdown', rc2SettleRestoredReturnLease, true);
+  document.addEventListener('touchstart', rc2SettleRestoredReturnLease, {capture: true, passive: true});
+  document.addEventListener('wheel', rc2SettleRestoredReturnLease, {capture: true, passive: true});
+  document.addEventListener('keydown', rc2SettleRestoredReturnLease, true);
   document.addEventListener('pointerdown', fxPressStart, true);
   document.addEventListener('pointerup', rc2ReleaseAllPresses, true);
   document.addEventListener('pointercancel', rc2ReleaseAllPresses, true);

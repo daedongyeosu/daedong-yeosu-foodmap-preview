@@ -34,6 +34,7 @@ function restoreScenario({catalogComplete, visible, cardCount}) {
   let opened = 0;
   let cleared = 0;
   let stabilized = 0;
+  let armed = 0;
   const modal = {
     hidden: !visible,
     dataset: visible ? {appBrowserKey: 'mukkebi'} : {},
@@ -44,6 +45,7 @@ function restoreScenario({catalogComplete, visible, cardCount}) {
       __daedongCatalogProgress: {complete: catalogComplete},
       daedongReadExternalReturnState: () => saved,
       daedongStabilizeReturnPosition: () => { stabilized += 1; },
+      daedongArmRestoredReturnLease: () => { armed += 1; },
       daedongClearExternalReturnState: () => { cleared += 1; },
       scrollTo() {}
     },
@@ -61,27 +63,27 @@ function restoreScenario({catalogComplete, visible, cardCount}) {
   };
   vm.createContext(context);
   const restored = vm.runInContext(`const FX_APP_BROWSER_RETURN='daedongAppBrowserReturnV1';${restoreSource};fxRestoreAppBrowserReturn();`, context);
-  return {restored, opened, cleared, stabilized};
+  return {restored, opened, cleared, stabilized, armed};
 }
 
 assert.deepEqual(
   restoreScenario({catalogComplete: false, visible: false, cardCount: 0}),
-  {restored: false, opened: 0, cleared: 0, stabilized: 0},
+  {restored: false, opened: 0, cleared: 0, stabilized: 0, armed: 0},
   '가게목록 준비 전에는 빈 먹깨비 목록을 만들거나 복귀 상태를 지우면 안 됩니다.'
 );
 assert.deepEqual(
   restoreScenario({catalogComplete: false, visible: true, cardCount: 0}),
-  {restored: false, opened: 0, cleared: 0, stabilized: 0},
+  {restored: false, opened: 0, cleared: 0, stabilized: 0, armed: 0},
   '먼저 열린 빈 목록도 가게목록 준비 전에는 정상 복귀로 확정하면 안 됩니다.'
 );
 assert.deepEqual(
   restoreScenario({catalogComplete: true, visible: true, cardCount: 0}),
-  {restored: true, opened: 1, cleared: 1, stabilized: 1},
+  {restored: true, opened: 1, cleared: 0, stabilized: 1, armed: 1},
   '가게목록 준비 뒤에는 먼저 열린 빈 목록을 실제 먹깨비 가게목록으로 다시 그려야 합니다.'
 );
 assert.deepEqual(
   restoreScenario({catalogComplete: false, visible: true, cardCount: 3}),
-  {restored: true, opened: 0, cleared: 1, stabilized: 1},
+  {restored: true, opened: 0, cleared: 0, stabilized: 1, armed: 1},
   '첫 화면 스냅샷에 실제 가게가 있으면 즉시 복귀를 유지해야 합니다.'
 );
 

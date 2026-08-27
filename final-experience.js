@@ -111,7 +111,7 @@ function fxRestoreAppBrowserReturn(){
  if(!['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'].includes(saved.key)){window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);return false;}
  const visibleSameApp=!modal?.hidden&&modal.dataset.appBrowserKey===saved.key;
  const restoredCards=visibleSameApp?modal.querySelectorAll('[data-app-store-order]').length:0;
- if(visibleSameApp&&restoredCards>0){window.daedongStabilizeReturnPosition?.(saved);window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);return true;}
+ if(visibleSameApp&&restoredCards>0){window.daedongStabilizeReturnPosition?.(saved);window.daedongArmRestoredReturnLease?.(FX_APP_BROWSER_RETURN,saved);return true;}
  // Kakao may recreate this page after the order app was opened. In that cold
  // return, pageshow/focus can run before the catalog has finished loading. Do
  // not replace a missing snapshot with a false "no stores" result or consume
@@ -122,7 +122,7 @@ function fxRestoreAppBrowserReturn(){
  openAppBrowser(saved.key,saved.category||'추천');
  if(modal?.hidden||modal.dataset.appBrowserKey!==saved.key)return false;
  window.daedongStabilizeReturnPosition?.(saved);
- window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);return true;
+ window.daedongArmRestoredReturnLease?.(FX_APP_BROWSER_RETURN,saved);return true;
 }
 async function fxOpenRegisteredAppOrder(button){
  const store=fxStoreById(button.dataset.appStoreOrder),key=button.dataset.appKey;if(!store||!key)return;
@@ -550,7 +550,7 @@ document.addEventListener('click',event=>{
 },true);
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1-sequential-app-return-1-instant-external-interaction-1-daylight-effects-cleanup-1-mobile-photo-delivery-1-brand-key-cache-1-ranked-input-1-order-methods-return-stable-dom-1-yogiyo-history-return-2-mobile-customer-qa-1-kakao-fresh-entry-token-1-order-app-confirmed-resume-1-kakao-external-history-guard-1-android-distinct-history-guard-1-back-forward-departure-marker-1-durable-return-cookie-1-store-card-intent-2-android-system-back-return-1-repeated-selected-app-return-1-selected-original-direct-launch-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1-sequential-app-return-1-instant-external-interaction-1-daylight-effects-cleanup-1-mobile-photo-delivery-1-brand-key-cache-1-ranked-input-1-order-methods-return-stable-dom-1-yogiyo-history-return-2-mobile-customer-qa-1-kakao-fresh-entry-token-1-order-app-confirmed-resume-1-kakao-external-history-guard-1-android-distinct-history-guard-1-back-forward-departure-marker-1-durable-return-cookie-1-store-card-intent-2-android-system-back-return-1-repeated-selected-app-return-1-selected-original-direct-launch-1-single-entry-return-1-anchor-lease-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  fxInstallEvents();
