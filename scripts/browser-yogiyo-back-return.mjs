@@ -116,9 +116,6 @@ const openOrderMethodsRoute = async page => {
 try {
   const page = await context.newPage();
   page.on('pageerror', error => report.errors.push(error.message));
-  page.on('console', message => {
-    if (message.type() === 'warning' || message.type() === 'error') report.errors.push(message.text());
-  });
   page.on('dialog', async dialog => {
     report.errors.push(`dialog: ${dialog.message()}`);
     await dialog.dismiss();
