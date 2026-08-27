@@ -66,5 +66,7 @@ assert.match(app, /function kakaoPreviewFallbackUrl\(key\)[\s\S]*?key !== 'coupa
 assert.match(rc2, /const RC2_APP_FALLBACK_PARAM = '__ddappfallback'/, 'Preview fallback URL 표식을 복귀 완료 후 정리할 수 있어야 합니다.');
 assert.match(rc2, /function rc2ClearReturnState\(key, saved = null\)[\s\S]*?returnUrl\.searchParams\.delete\(RC2_APP_FALLBACK_PARAM\)/, '복귀 상태를 정리할 때 Preview fallback URL 표식도 제거해야 합니다.');
 assert.match(index, /appFallbackParam = '__ddappfallback'[\s\S]*?entryUrl\.searchParams\.delete\(appFallbackParam\)/, '유효한 복귀 상태가 없는 진입에서도 Preview fallback 표식이 남으면 안 됩니다.');
+assert.match(app, /function coupangDirectStoreIntent\(url, browserFallbackUrl\)[\s\S]*?intent:\/\/storedetail\/\?storeId=[\s\S]*?scheme=coupangeats/, '쿠팡 앱은 외부 웹 resolver를 거치지 않고 가게 상세 딥링크로 바로 열어야 합니다.');
+assert.match(index, /coupang-direct-store-deeplink-1/, '쿠팡 직접 가게 상세 딥링크 캐시 버전이 갱신되어야 합니다.');
 
 console.log('PASS 외부 주문앱 복귀 뒤 다른 주문방법 첫 터치 회귀검사');
