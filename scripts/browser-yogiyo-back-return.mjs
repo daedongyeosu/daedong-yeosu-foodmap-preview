@@ -33,6 +33,7 @@ const store = {
 };
 const yogiyoWebURL = 'https://www.yogiyo.co.kr/mobile/?lat=34.7523658&lng=127.7031405#/332930';
 const report = {success: false, checks: [], errors: []};
+const yogiyoNavigations = [];
 const browser = await chromium.launch({...launchOptions, ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH} : {})});
 const context = await browser.newContext({
   viewport: {width: 390, height: 844},
@@ -64,11 +65,19 @@ await context.route('**/api/store/**', route => {
     body: JSON.stringify(body)
   });
 });
-await context.route('https://www.yogiyo.co.kr/mobile/**', route => route.fulfill({
-  status: 200,
-  contentType: 'text/html; charset=utf-8',
-  body: '<!doctype html><meta name="viewport" content="width=device-width"><title>요기요 가게</title><main><h1>요기요 복귀 검증가게</h1><button>바로 주문하기</button></main>'
-}));
+await context.route('https://www.yogiyo.co.kr/mobile/**', route => {
+  const request = route.request();
+  yogiyoNavigations.push({
+    method: request.method(),
+    isNavigation: request.isNavigationRequest(),
+    referer: request.headers().referer || ''
+  });
+  return route.fulfill({
+    status: 200,
+    contentType: 'text/html; charset=utf-8',
+    body: '<!doctype html><meta name="viewport" content="width=device-width"><title>요기요 가게</title><main><h1>요기요 복귀 검증가게</h1><button>바로 주문하기</button></main>'
+  });
+});
 
 const check = async (condition, message) => {
   const ok = await condition;
@@ -124,8 +133,16 @@ try {
   let surface = await openOrderMethodsRoute(page);
 
   for (let attempt = 1; attempt <= 2; attempt += 1) {
+    const priorNavigationCount = yogiyoNavigations.length;
     await surface.route.tap();
     await page.waitForURL(url => url.href === yogiyoWebURL, {timeout: 10000});
+    const navigation = yogiyoNavigations.at(-1);
+    await check(Promise.resolve(
+      yogiyoNavigations.length === priorNavigationCount + 1
+      && navigation?.method === 'GET'
+      && navigation?.isNavigation === true
+      && navigation?.referer === ''
+    ), `${attempt}회차: 네이티브 앱 호출을 피하는 무참조 브라우저 GET 폼 이동`);
     await check(Promise.resolve(context.pages().length === 1), `${attempt}회차: 요기요를 새 앱·새 창으로 분리하지 않음`);
     await check(page.locator('h1').filter({hasText: store.name}).isVisible(), `${attempt}회차: 요기요 웹 가게 상세 직접 표시`);
 
