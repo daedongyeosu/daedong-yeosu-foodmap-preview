@@ -140,12 +140,11 @@ try {
       && !state.departureSession && !state.departureLocal
       && !state.durableCookie && !state.returnParam && !state.guardParam
   )), '새 접속 직후 가게카드를 눌러도 지연 복귀 상태가 홈으로 덮어쓰지 않음');
-  // This close only resets the fixture before the paging checks. Calling the
-  // DOM button's synthetic click can be consumed by the shared Kakao ghost-click
-  // guard on slower CI runners, so invoke the already-covered close function
-  // directly and keep this test focused on the store-card/home-reset race.
-  await page.evaluate(() => window.hardClose?.({fromPop: true}));
-  await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true);
+  // Start the next fixture on a clean document. A close action here can race
+  // the deliberately seeded return lifecycle on slower CI runners, while modal
+  // closing itself is covered by dedicated browser tests.
+  await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(() => document.querySelectorAll('#storeGrid .store-card').length >= 16, null, {timeout: 10000});
 
   await page.waitForSelector('[data-rc3-rail-open]');
   await seedStaleReturnState();
@@ -172,8 +171,8 @@ try {
       && !state.departureSession && !state.departureLocal
       && !state.durableCookie
   )), '실제 카카오 터치 순서의 추천 가게카드도 상세를 열고 지연 홈 초기화를 차단함');
-  await page.evaluate(() => window.hardClose?.({fromPop: true}));
-  await page.waitForFunction(() => document.querySelector('#modal')?.hidden === true);
+  await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(() => document.querySelectorAll('#storeGrid .store-card').length >= 16, null, {timeout: 10000});
 
   await page.evaluate(() => {
     document.body.dispatchEvent(new PointerEvent('pointerdown', {
