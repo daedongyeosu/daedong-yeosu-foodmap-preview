@@ -78,7 +78,7 @@ for (const selector of ['railStore', 'appStoreInfo', 'channelStore', 'searchStor
 assert.match(service, /function openStoreAfterOverview\(storeId\)[\s\S]*daedongConfirmIntentionalStoreOpen\?\.\(\)[\s\S]*openStore\(store\)/,
   '통합 가게찾기 카드도 같은 격리를 사용해야 합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*store-card-intent-2/);
-assert.match(finalExperience, /fxRc3Script\.src\+='-atomic-rail-refresh-1-store-card-intent-2'/);
+assert.match(finalExperience, /fxRc3Script\.src\+='-atomic-rail-refresh-1-store-card-intent-2-return-activation-atomic-1'/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*store-card-intent-2/);
 assert.match(html, /store-service-info\.js\?v=[^"\n]*store-card-intent-1/);
 assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v27-store-card-touchstart-intent-guard'/);
