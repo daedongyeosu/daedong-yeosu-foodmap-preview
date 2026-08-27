@@ -8,6 +8,8 @@ const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
 const RC2_RETURN_TOKEN_PARAM = '__ddret';
 const RC2_RETURN_GUARD_PARAM = '__ddguard';
 const RC2_APP_FALLBACK_PARAM = '__ddappfallback';
+const RC2_ORDER_METHOD_REENTRY = 'daedongOrderMethodReentryV1';
+const RC2_ORDER_METHOD_REENTRY_PARAM = '__ddom';
 const RC2_DURABLE_RETURN_COOKIE = 'daedongOrderReturnV1';
 const RC2_RETURN_DOCUMENT_RELOAD = 'daedongExternalReturnDocumentReloadV1';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
@@ -578,6 +580,41 @@ function rc2RestoreSnapshotAfterNativeSurfaceReset(snapshot) {
   }));
 }
 
+function rc2NavigateOrderMethodReentry(snapshot) {
+  if (!snapshot?.html) return false;
+  const template = document.createElement('template');
+  template.innerHTML = String(snapshot.html);
+  const storeId = String(template.content.querySelector('.store-detail[data-store-id]')?.dataset.storeId || '');
+  if (!storeId) return false;
+  const token = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  const saved = {
+    token,
+    storeId,
+    modalScroll: Number(snapshot.scrollTop || 0),
+    pageScroll: Number(snapshot.pageScroll || 0),
+    savedAt: Date.now()
+  };
+  try {
+    sessionStorage.setItem(RC2_ORDER_METHOD_REENTRY, JSON.stringify(saved));
+    const url = new URL(location.href);
+    url.searchParams.set('store', storeId);
+    url.searchParams.set(RC2_ORDER_METHOD_REENTRY_PARAM, token);
+    url.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
+    url.searchParams.delete(RC2_RETURN_GUARD_PARAM);
+    url.searchParams.delete(RC2_APP_FALLBACK_PARAM);
+    document.documentElement.classList.add('daedong-external-return-pending');
+    // Kakao can leave the entire restored modal without a native hit target.
+    // A same-document DOM rebuild and even a two-frame hide/show are not
+    // sufficient on a real finger path. Replace the document so WebView must
+    // create a new compositor and hit-test surface for the saved store.
+    location.replace(`${url.pathname}${url.search}${url.hash}`);
+    return true;
+  } catch {
+    try { sessionStorage.removeItem(RC2_ORDER_METHOD_REENTRY); } catch {}
+    return false;
+  }
+}
+
 openModal = function rc2OpenModal(html) {
   const modal = $('#modal');
   const wasHidden = !modal || modal.hidden;
@@ -614,7 +651,9 @@ hardClose = function rc2HardClose(options = {}) {
     }
   }
   if (options.fromPop && rc2ModalStack.length) {
-    rc2RestoreSnapshotAfterNativeSurfaceReset(rc2ModalStack.pop());
+    const snapshot = rc2ModalStack.pop();
+    if ($('#modalContent .order-methods-sheet') && rc2NavigateOrderMethodReentry(snapshot)) return;
+    rc2RestoreSnapshotAfterNativeSurfaceReset(snapshot);
     return;
   }
   if (!options.fromPop && rc2ModalStack.length) {

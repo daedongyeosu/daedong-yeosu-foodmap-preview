@@ -48,8 +48,11 @@ assert.match(rc3, /trigger\.addEventListener\('touchstart'[\s\S]*?trigger\.addEv
 assert.match(rc3, /window\.daedongRebindOrderMethodsTrigger = \(\) => \{[\s\S]*?rc3BindOrderMethodsTrigger/, '스냅샷 복원 직후 직접 터치를 다시 연결하는 공개 훅이 필요합니다.');
 assert.match(rc2, /function rc2RestoreSnapshot\(snapshot\) \{[\s\S]*?rc2ScrubCustomerCounts\(modal\);[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\)/, '외부 앱 출발 전에 DOM 스냅샷을 다시 만들면 주문방법 버튼 이벤트도 즉시 다시 연결해야 합니다.');
 assert.match(rc2, /function rc2RestoreSnapshotAfterNativeSurfaceReset\(snapshot\) \{[\s\S]*?daedong-external-return-pending[\s\S]*?rc2NativeHardClose\(\{fromPop: true\}\)[\s\S]*?requestAnimationFrame\(\(\) => requestAnimationFrame\(\(\) => \{[\s\S]*?rc2RestoreSnapshot\(snapshot\)/, '주문방법 화면에서 상세로 재진입할 때 카카오의 오래된 모달 터치 표면을 두 프레임 완전히 내려야 합니다.');
-assert.match(rc2, /if \(options\.fromPop && rc2ModalStack\.length\) \{[\s\S]*?rc2RestoreSnapshotAfterNativeSurfaceReset\(rc2ModalStack\.pop\(\)\)/, '히스토리 뒤로가기로 주문방법 화면을 닫는 경로는 네이티브 표면 재생성 복원을 사용해야 합니다.');
-assert.match(browserCheck, /__snapshotSurfaceResetObserved[\s\S]*?window\.hardClose\(\{fromPop: true\}\)[\s\S]*?상세 재진입 뒤 첫 터치로 다른 주문방법 선택창 다시 열림/, '실제 브라우저 검사는 주문방법 화면을 닫고 상세로 다시 들어온 직후의 첫 터치를 포함해야 합니다.');
+assert.match(rc2, /function rc2NavigateOrderMethodReentry\(snapshot\) \{[\s\S]*?sessionStorage\.setItem\(RC2_ORDER_METHOD_REENTRY[\s\S]*?RC2_ORDER_METHOD_REENTRY_PARAM[\s\S]*?location\.replace\(/, '실제 손가락 경로에서는 주문방법 상세 재진입을 새 문서로 교체해 카카오의 죽은 네이티브 터치 표면을 폐기해야 합니다.');
+assert.match(rc2, /if \(options\.fromPop && rc2ModalStack\.length\) \{[\s\S]*?order-methods-sheet[\s\S]*?rc2NavigateOrderMethodReentry\(snapshot\)[\s\S]*?rc2RestoreSnapshotAfterNativeSurfaceReset\(snapshot\)/, '주문방법 화면을 닫는 경로는 문서 재생성을 우선하고 실패할 때만 기존 표면 복원을 사용해야 합니다.');
+assert.match(index, /orderMethodReentryKey = 'daedongOrderMethodReentryV1'[\s\S]*?daedongPendingOrderMethodReentry[\s\S]*?daedong-external-return-pending/, '새 문서는 가게 상세가 준비될 때까지 홈 대신 복귀 보호화면을 유지해야 합니다.');
+assert.match(finalExperience, /function fxFinishOrderMethodReentry\(saved[\s\S]*?sessionStorage\.removeItem\(FX_ORDER_METHOD_REENTRY\)[\s\S]*?FX_ORDER_METHOD_REENTRY_PARAM[\s\S]*?daedongFinishExternalReturnBoot/, '새 상세가 준비되면 스크롤을 복원하고 일회용 재진입 표식을 정리해야 합니다.');
+assert.match(browserCheck, /reentryDocumentStartedAt[\s\S]*?\.modal-close'\)\.tap\(\)[\s\S]*?performance\.timeOrigin !== previous[\s\S]*?markerInStorage[\s\S]*?상세 재진입 뒤 첫 터치로 다른 주문방법 선택창 다시 열림/, '실제 브라우저 검사는 닫기 실제 터치, 새 문서 생성, 상세 재진입 직후 첫 터치를 포함해야 합니다.');
 assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?rc3OpenOrderMethods\(store\)[\s\S]*?setTimeout\(\(\) => \{[\s\S]*?daedongConfirmIntentionalSurfaceNavigation\?\.\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)/, '실기기에서는 복귀 작업을 즉시 무효화하고 주문방법 창을 먼저 표시한 뒤 history를 정리해야 합니다.');
 
 const clickGuardIndex = rc3.indexOf("const other = event.target.closest('[data-rc3-other-methods]')");
@@ -71,6 +74,8 @@ assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*return-document-navigatio
 assert.match(index, /final-experience\.js\?v=[^"\n]*return-document-navigation-1/, '강제 문서 이동 수정 로더 캐시 버전이 갱신되어야 합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*reentered-order-method-surface-1/, '상세 재진입 터치 표면 수정 rc2 캐시 버전이 갱신되어야 합니다.');
 assert.match(index, /final-experience\.js\?v=[^"\n]*reentered-order-method-surface-1/, '상세 재진입 터치 표면 수정 로더 캐시 버전이 갱신되어야 합니다.');
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*physical-order-reentry-document-1/, '실손 터치 재진입 문서 수정 rc2 캐시 버전이 갱신되어야 합니다.');
+assert.match(index, /final-experience\.js\?v=[^"\n]*physical-order-reentry-document-1/, '실손 터치 재진입 문서 수정 로더 캐시 버전이 갱신되어야 합니다.');
 
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {
   assert.match(source, /order-methods-return-touch-5/, `${name} 캐시 버전이 갱신되어야 합니다.`);

@@ -185,27 +185,29 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     page.locator('.order-methods-sheet [data-rc3-external-route]').count().then(count => count > 0),
     `${storeName} 실제 등록된 외부 주문앱 선택지 표시`
   );
-  await page.evaluate(() => {
-    window.__snapshotSurfaceResetObserved = {modalHidden: false, bootCover: false};
-    const modal = document.getElementById('modal');
-    new MutationObserver(() => {
-      if (modal?.hidden) window.__snapshotSurfaceResetObserved.modalHidden = true;
-    }).observe(modal, {attributes: true, attributeFilter: ['hidden']});
-    new MutationObserver(() => {
-      if (document.documentElement.classList.contains('daedong-external-return-pending')) {
-        window.__snapshotSurfaceResetObserved.bootCover = true;
-      }
-    }).observe(document.documentElement, {attributes: true, attributeFilter: ['class']});
-  });
-  await page.evaluate(() => window.hardClose({fromPop: true}));
-  await page.waitForFunction(() => (
-    !document.documentElement.classList.contains('daedong-external-return-pending')
+  const reentryDocumentStartedAt = await page.evaluate(() => performance.timeOrigin);
+  await page.locator('#modal:not([hidden]) .modal-close').tap();
+  await page.waitForFunction(previous => (
+    performance.timeOrigin !== previous
+    && !document.documentElement.classList.contains('daedong-external-return-pending')
     && Boolean(document.querySelector('#modal:not([hidden]) .store-detail [data-rc3-other-methods]'))
-  ), null, {polling: 25, timeout: 3000});
-  const surfaceReset = await page.evaluate(() => window.__snapshotSurfaceResetObserved);
+  ), reentryDocumentStartedAt, {polling: 25, timeout: 20000});
+  const reentryDocument = await page.evaluate(() => ({
+    navigationType: performance.getEntriesByType('navigation')[0]?.type || '',
+    markerInUrl: new URL(location.href).searchParams.has('__ddom'),
+    markerInStorage: Boolean(sessionStorage.getItem('daedongOrderMethodReentryV1')),
+    storeInUrl: new URL(location.href).searchParams.get('store') || ''
+  }));
   await check(
-    Promise.resolve(surfaceReset?.modalHidden && surfaceReset?.bootCover),
-    `${storeName} 주문방법 화면에서 상세 재진입 전 카카오 네이티브 모달 표면 재생성`
+    Promise.resolve(
+      reentryDocument.navigationType === 'reload'
+      || reentryDocument.navigationType === 'navigate'
+    ),
+    `${storeName} 주문방법 화면에서 상세 재진입 전 카카오 WebView 문서 재생성`
+  );
+  await check(
+    Promise.resolve(!reentryDocument.markerInUrl && !reentryDocument.markerInStorage && Boolean(reentryDocument.storeInUrl)),
+    `${storeName} 상세 재진입 문서의 일회용 표식 정리 및 가게 주소 유지`
   );
   const reenteredTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await reenteredTrigger.tap();
