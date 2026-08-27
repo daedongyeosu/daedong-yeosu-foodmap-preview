@@ -52,6 +52,6 @@ for (const [key, packageName] of Object.entries({
 assert.match(app, /function handleAndroidMapLinkClick\(event\)/);
 assert.match(app, /launchMobileRoute\('naver', href\)/);
 assert.match(finalExperience, /daedongLaunchMobileRoute\(key,href\)/);
-assert.match(rc2, /daedongLaunchMobileRoute\(key, href\)/);
+assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?window\.open\(href, '_blank', 'noopener'\)/);
 
 console.log('PASS: fixed-number S25 customer QA regressions are guarded');

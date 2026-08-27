@@ -14,12 +14,10 @@ const helperSource = rc2.slice(helperStart, helperEnd);
 
 const assigned = [];
 const opened = [];
-const launched = [];
 const sandbox = {
   window: {
     location: {assign: href => assigned.push(href)},
-    open: (...args) => opened.push(args),
-    daedongLaunchMobileRoute: (key, href) => launched.push([key, href])
+    open: (...args) => opened.push(args)
   }
 };
 vm.runInNewContext(`${helperSource}; globalThis.launchComparedExternal = rc2LaunchComparedExternal;`, sandbox);
@@ -33,13 +31,12 @@ sandbox.launchComparedExternal({dataset: {communityOriginal: 'yogiyo'}}, urls.yo
 sandbox.launchComparedExternal({dataset: {communityOriginal: 'coupang'}}, urls.coupang);
 sandbox.launchComparedExternal({dataset: {communityOriginal: 'baemin'}}, urls.baemin);
 
-assert.deepEqual(launched, [
-  ['yogiyo', urls.yogiyo],
-  ['coupang', urls.coupang],
-  ['baemin', urls.baemin]
-], '요기요·쿠팡이츠·배달의민족은 현재 Preview 문서를 파괴하지 않는 앱 패키지 경로로 열어야 합니다.');
 assert.deepEqual(assigned, [], '주문앱 이동 때문에 Preview 현재 탭을 외부 주소로 교체하면 안 됩니다.');
-assert.deepEqual(opened, [], '지원 주문앱을 일반 새 창으로 열면 앱 복귀가 불안정해집니다.');
+assert.deepEqual(opened, [
+  [urls.yogiyo, '_blank', 'noopener'],
+  [urls.coupang, '_blank', 'noopener'],
+  [urls.baemin, '_blank', 'noopener']
+], '요기요·쿠팡이츠·배달의민족은 원본 Preview 상세 DOM을 보존하는 별도 실행 경로로 열어야 합니다.');
 
 const comparedStart = rc2.indexOf("const comparedExternal = event.target.closest('a[data-community-original]')");
 const comparedEnd = rc2.indexOf('const externalLink =', comparedStart);
@@ -50,8 +47,11 @@ assert.ok(rememberIndex >= 0 && launchIndex > rememberIndex, '이동 전에 보�
 assert.doesNotMatch(comparedHandler, /history\.back/);
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-history-return-2/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-history-return-2/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*stable-separated-order-return-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*stable-separated-order-return-2/);
 assert.match(browserTest, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'/);
 assert.match(browserTest, /await restoredDetail\.waitFor\([^\n]*\)\.catch\(async \(\) =>/);
+assert.match(browserTest, /context\.waitForEvent\('page'[\s\S]*externalPage\.close\(\)[\s\S]*testStableReturn/, '실제 브라우저 검사는 주문앱 분리 실행 뒤 같은 상세 DOM 복귀를 확인해야 합니다.');
 
 console.log('yogiyo-back-return-regression-test: pass');
 

@@ -530,6 +530,8 @@ function rc3ResetOrderMethodsTouchState() {
   rc3OrderMethodsTouches.clear();
   rc3OrderMethodsGhostClickUntil = 0;
   rc3OrderMethodsGhostClickStoreId = '';
+  rc3ExternalRouteActivationUntil = 0;
+  rc3ExternalRouteActivationKey = '';
 }
 window.daedongResetOrderMethodsTouchState = rc3ResetOrderMethodsTouchState;
 
