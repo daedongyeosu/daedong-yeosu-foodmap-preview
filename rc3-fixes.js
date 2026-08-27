@@ -439,10 +439,10 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
   if (!store) return false;
   event?.preventDefault();
   event?.stopImmediatePropagation();
-  // A late Android/Kakao return signal can arrive after this activation and
-  // replace the newly opened sheet with the store detail again. Consume the
-  // restored-return lease inside the same pointer/touch/click handler before
-  // opening the next modal so the customer's first tap completes atomically.
+  // Treat this completed tap as a new surface-navigation intent. Clearing the
+  // full Android/Kakao return lifecycle (not only the active lease) prevents
+  // any delayed resume callback from replacing the newly opened sheet.
+  window.daedongConfirmIntentionalSurfaceNavigation?.();
   window.daedongSettleRestoredReturnLeaseNow?.();
   const singleExternalKey = String(trigger?.dataset.rc3SingleExternal || '');
   if (singleExternalKey) openCommunityChoice(store, singleExternalKey);

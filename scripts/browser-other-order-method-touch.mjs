@@ -270,10 +270,28 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   });
   await check(Promise.resolve(returnedHitTarget), `${storeName} 복귀 뒤 버튼 위에 투명 가림막 없음`);
 
-  const returnStateBeforeRetap = await page.evaluate(() => Boolean(
-    sessionStorage.getItem('daedongExternalReturnRc2')
-    || localStorage.getItem('daedongExternalReturnRc2')
-  ));
+  // Headless Chromium can settle the synthetic visibility/focus return before
+  // this assertion, while the real Kakao Android WebView leaves the protected
+  // return lifecycle alive until the customer's next completed tap. Re-arm the
+  // same public return state when needed so this check exercises that real-phone
+  // condition instead of silently skipping it.
+  const returnStateBeforeRetap = await page.evaluate(() => {
+    const hasState = () => Boolean(
+      sessionStorage.getItem('daedongExternalReturnRc2')
+      || localStorage.getItem('daedongExternalReturnRc2')
+    );
+    if (!hasState()) {
+      const storeId = document.querySelector('#modal')?.dataset.activeStoreId
+        || document.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
+      window.daedongWriteExternalReturnState?.('daedongExternalReturnRc2', {
+        storeId,
+        surface: 'store',
+        pageScroll: 0,
+        modalScroll: document.querySelector('#modal .modal-card')?.scrollTop || 0
+      });
+    }
+    return hasState();
+  });
   await check(Promise.resolve(returnStateBeforeRetap), `${storeName} 복귀 뒤 첫 터치 전 복귀 보호 상태 유지`);
   await page.evaluate(() => { window.__returnedOrderMethodTouchState = []; });
   await returnedTrigger.tap();

@@ -18,7 +18,8 @@ assert.match(rc2, /function rc2SettleRestoredReturnLease\(\) \{[\s\S]*?rc2ReadRe
 assert.match(rc2, /function rc2WriteReturnState\(key, value\) \{\s*rc2CancelRestoredReturnSettlement\(\);/, '새 주문앱 출발 전에 이전 복귀 상태 정리 예약을 취소해야 합니다.');
 assert.match(rc2, /function rc2SettleRestoredReturnLeaseNow\(\) \{[\s\S]*?clearTimeout\(rc2RestoredReturnSettleTimer\)[\s\S]*?rc2SettleRestoredReturnLease\(\)/, '주문방법 창을 열기 직전에 예약을 취소하고 복귀 상태를 즉시 확정해야 합니다.');
 assert.match(rc2, /window\.daedongSettleRestoredReturnLeaseNow = rc2SettleRestoredReturnLeaseNow/, '주문방법 버튼에서 원자적으로 복귀 상태를 확정할 수 있어야 합니다.');
-assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?preventDefault\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)[\s\S]*?(?:rc3OpenOrderMethods|openCommunityChoice)/, '복귀 뒤 첫 버튼 활성화는 보호 상태를 끝낸 다음 주문방법 화면을 열어야 합니다.');
+assert.match(rc2, /window\.daedongConfirmIntentionalSurfaceNavigation = rc2ConfirmIntentionalStoreOpen/, '복귀 후 새 화면 이동은 남은 복귀 생명주기를 모두 취소할 수 있어야 합니다.');
+assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?preventDefault\(\)[\s\S]*?daedongConfirmIntentionalSurfaceNavigation\?\.\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)[\s\S]*?(?:rc3OpenOrderMethods|openCommunityChoice)/, '복귀 뒤 첫 버튼 활성화는 전체 복귀 생명주기를 끝낸 다음 주문방법 화면을 열어야 합니다.');
 assert.match(browserCheck, /pointerdown[\s\S]*returnStatePresent[\s\S]*pointerup[\s\S]*returnStatePresent/, '실제 브라우저 검사에서 재터치 전체 동안 복귀 상태가 유지되는지 확인해야 합니다.');
 assert.match(browserCheck, /재터치 완료 뒤 복귀 보호 상태 정리/, '버튼 활성화 뒤 복귀 상태가 정리되는지 확인해야 합니다.');
 assert.match(exactReturnCheck, /dispatchEvent\('pointerup'/, '정확 복귀 검사도 고객의 완료된 상호작용으로 복귀 상태를 정리해야 합니다.');
@@ -26,6 +27,7 @@ assert.match(exactReturnCheck, /dispatchEvent\('pointerup'/, '정확 복귀 검�
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {
   assert.match(source, /return-first-tap-2/, `${name} 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /return-activation-atomic-1/, `${name} 실기기 재터치 수정 캐시 버전이 갱신되어야 합니다.`);
+  assert.match(source, /return-intent-cancel-1/, `${name} 실기기 복귀 생명주기 취소 캐시 버전이 갱신되어야 합니다.`);
 }
 
 console.log('PASS 외부 주문앱 복귀 뒤 다른 주문방법 첫 터치 회귀검사');
