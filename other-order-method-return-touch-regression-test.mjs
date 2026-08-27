@@ -33,6 +33,9 @@ assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychang
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');
 assert.match(browserCheck, /dataset\.testPreparedBeforeReturn = '1'[\s\S]*dataset\.testPreparedBeforeReturn === '1'[\s\S]*준비된 가게 상세 DOM을 유지/, '출발 전에 준비한 가게 상세 DOM을 복귀 중 유지하는 실제 브라우저 검사가 없습니다.');
+assert.match(browserCheck, /pointerdown[\s\S]*returnStatePresent[\s\S]*pointerup[\s\S]*returnStatePresent/, '복귀 뒤 첫 재터치 도중 history 토큰을 그대로 유지하는 검사가 필요합니다.');
+assert.match(rc2, /document\.addEventListener\('pointerup', rc2ScheduleRestoredReturnSettlement, true\)/, '복귀 상태는 첫 손가락 누름이 아니라 활성화가 끝난 뒤 정리해야 합니다.');
+assert.doesNotMatch(rc2, /document\.addEventListener\('pointerdown', rc2SettleRestoredReturnLease/, '첫 pointerdown에서 history를 바꾸면 카카오 WebView가 버튼 클릭을 취소할 수 있습니다.');
 assert.match(rc3, /document\.visibilityState === 'visible'/, '앱 복귀로 화면이 다시 보일 때 터치 상태를 초기화해야 합니다.');
 assert.match(rc3, /trigger\.removeAttribute\('data-rc3-direct-bound'\)/, 'HTML 스냅샷에 남은 과거 직접 바인딩 표식을 제거해야 합니다.');
 assert.doesNotMatch(rc3, /trigger\.addEventListener\('pointer(?:down|up|move|cancel)'/, 'HTML 복원 시 사라지는 노드 전용 포인터 리스너를 다시 사용하면 안 됩니다.');
@@ -48,6 +51,7 @@ assert.ok(
 assert.match(index, /app\.js\?v=[^"\n]*kakao-community-separate-context-1/, 'app.js 캐시 버전이 갱신되어야 합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*order-methods-return-stable-dom-1/, 'rc2 복귀 수정 캐시 버전이 갱신되어야 합니다.');
 assert.match(index, /final-experience\.js\?v=[^"\n]*order-methods-return-stable-dom-1/, '복귀 수정 로더 캐시 버전이 갱신되어야 합니다.');
+assert.match(index, /final-experience\.js\?v=[^"\n]*return-first-tap-1/, '복귀 뒤 첫 터치 수정 로더 캐시 버전이 갱신되어야 합니다.');
 
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {
   assert.match(source, /order-methods-return-touch-5/, `${name} 캐시 버전이 갱신되어야 합니다.`);
