@@ -1306,15 +1306,15 @@ async function rc2LaunchComparedExternal(link, href) {
     || ''
   );
   const routeKey = rawKey === 'coupang-eats' ? 'coupang' : rawKey;
-  const kakaoAndroid = /KAKAOTALK/i.test(String(globalThis.navigator?.userAgent || ''))
-    && /Android/i.test(String(globalThis.navigator?.userAgent || ''));
-  if (routeKey === 'yogiyo' && kakaoAndroid) {
+  const androidBrowser = /Android/i.test(String(globalThis.navigator?.userAgent || ''));
+  if (routeKey === 'yogiyo' && androidBrowser) {
     // Yogiyo's native app exits its own Android task to the launcher, which
     // disconnects the customer from the still-alive Kakao Preview document.
     // Resolve the trusted store shortlink server-side and keep both pages in
     // Kakao's own history so one Android Back returns to this exact detail.
-    // Samsung Internet hands a scripted HTTPS navigation to Yogiyo's native
-    // app, but a browser GET form stays in the web history on the same phone.
+    // Kakao can reopen the return page in Samsung Internet without preserving
+    // a KAKAOTALK user-agent token. Apply the browser GET form to every Android
+    // browser so both the initial tap and every post-Back tap stay usable.
     const storeId = String(
       link.dataset?.storeId
       || link.closest?.('[data-store-id]')?.dataset?.storeId

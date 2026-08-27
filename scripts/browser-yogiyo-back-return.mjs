@@ -40,7 +40,7 @@ const context = await browser.newContext({
   isMobile: true,
   hasTouch: true,
   locale: 'ko-KR',
-  userAgent: 'Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36 KAKAOTALK 25.6.0'
+  userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/30.0 Chrome/143.0.0.0 Mobile Safari/537.36'
 });
 await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1'));
 if (process.env.PATCH_RC2_FROM_LOCAL === '1') {
