@@ -1203,6 +1203,11 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
     if (visibleStoreMatches) {
       if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
       window.daedongResetOrderMethodsTouchState?.();
+      // Kakao can recreate the visible history entry from its own WebView
+      // snapshot. The markup still matches the saved store, but node-local
+      // listeners from the pre-departure document are gone. Rebind before the
+      // first customer tap instead of treating matching markup as sufficient.
+      window.daedongRebindOrderMethodsTrigger?.();
       rc2DeferredStoreReturnPosition = saved;
       rc2StabilizeReturnPosition(saved);
       if (saved.menuState) {
@@ -1227,6 +1232,7 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
     if (opened === false || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
     const restoredStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
     if (modal?.hidden || String(restoredStoreId || '') !== String(saved.storeId)) return false;
+    window.daedongRebindOrderMethodsTrigger?.();
     rc2DeferredStoreReturnPosition = saved;
     rc2StabilizeReturnPosition(saved);
     if (saved.menuState) {
