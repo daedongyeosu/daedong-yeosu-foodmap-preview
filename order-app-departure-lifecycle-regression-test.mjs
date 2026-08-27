@@ -22,7 +22,7 @@ assert.match(rc2, /visibilitychange[\s\S]*?if \(document\.hidden\) \{[\s\S]*?rc2
   '백그라운드 진입은 복원이 아니라 출발 확인으로 기록해야 합니다.');
 assert.match(rc2, /window\.addEventListener\('pagehide',[\s\S]*?rc2ExternalDepartureHidden = true;/,
   'visibilitychange를 생략하는 Android WebView도 pagehide로 출발을 확인해야 합니다.');
-assert.match(rc2, /window\.addEventListener\('focus', \(\) => rc2RestoreAfterConfirmedResume/,
+assert.match(rc2, /window\.addEventListener\('focus', \(\) => \{[\s\S]*?rc2RestoreOpenInlineOrderMethodsFromPendingState\(\)[\s\S]*?rc2RestoreAfterConfirmedResume/,
   'focus는 확인 절차를 거친 뒤에만 복원을 시도해야 합니다.');
 assert.doesNotMatch(rc2, /window\.addEventListener\('focus', restoreAfterNativeResume\)/,
   '모든 focus를 즉시 복귀로 처리하면 주문앱 출발 중 저장 상태가 삭제됩니다.');
