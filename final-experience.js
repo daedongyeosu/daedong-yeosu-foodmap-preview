@@ -26,6 +26,8 @@ const FX_WEATHER_CACHE='daedongYeosuWeatherV1';
 const FX_HOME_SHARE_URL=FX_REGION.code==='yeosu'?'https://daedongmap.com/':new URL(window.daedongRegionUrl?.(FX_REGION.code)||window.location.href,window.location.origin).href;
 const FX_HOME_SHARE_TEXT=`${FX_REGION_NAME} 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.`;
 const FX_STORE_SHARE_PARAM='store';
+const FX_ORDER_METHOD_REENTRY='daedongOrderMethodReentryV1';
+const FX_ORDER_METHOD_REENTRY_PARAM='__ddom';
 const FX_APP_BROWSER_RETURN='daedongAppBrowserReturnV1';
 const FX_HIDDEN_STORE_IDS=new Set([
  '6092aabddf5f7194', // 롯데리아 중앙점
@@ -441,22 +443,47 @@ function fxSharedStoreHomeUrl(){
  const query=url.searchParams.toString();
  return `${url.pathname}${query?`?${query}`:''}${url.hash}`;
 }
+function fxPendingOrderMethodReentry(storeId){
+ const saved=window.daedongPendingOrderMethodReentry;
+ const token=new URLSearchParams(location.search).get(FX_ORDER_METHOD_REENTRY_PARAM)||'';
+ const age=Date.now()-Number(saved?.savedAt||0);
+ return saved&&age>=0&&age<2*60*1000&&String(saved.storeId||'')===String(storeId||'')&&String(saved.token||'')===token?saved:null;
+}
+function fxFinishOrderMethodReentry(saved,{restorePosition=false}={}){
+ if(!saved)return;
+ if(restorePosition){
+  const card=document.querySelector('#modal:not([hidden]) .modal-card');
+  const align=()=>{if(card)card.scrollTop=Math.max(0,Number(saved.modalScroll||0));};
+  align();requestAnimationFrame(()=>{align();requestAnimationFrame(align);});
+ }
+ try{sessionStorage.removeItem(FX_ORDER_METHOD_REENTRY);}catch{}
+ window.daedongPendingOrderMethodReentry=null;
+ try{
+  const url=new URL(location.href);
+  url.searchParams.delete(FX_ORDER_METHOD_REENTRY_PARAM);
+  history.replaceState(history.state,'',`${url.pathname}${url.search}${url.hash}`);
+ }catch{}
+ window.daedongFinishExternalReturnBoot?.();
+}
 async function fxOpenSharedStoreFromUrl(){
  const storeId=fxRequestedSharedStoreId();
  if(!storeId)return false;
+ const orderMethodReentry=fxPendingOrderMethodReentry(storeId);
  const sharedStoreUrl=`${location.pathname}${location.search}${location.hash}`;
  for(let attempt=0;attempt<50;attempt+=1){
   const store=fxStoreById(storeId);
   if(store&&fxVisible(store)){
    history.replaceState(history.state,'',fxSharedStoreHomeUrl());
    const opened=await openStore(store);
-   if(opened===false)return false;
+   if(opened===false){fxFinishOrderMethodReentry(orderMethodReentry);return false;}
    if(history.state?.daedongModal)history.replaceState(history.state,'',sharedStoreUrl);
+   fxFinishOrderMethodReentry(orderMethodReentry,{restorePosition:true});
    return true;
   }
   await new Promise(resolve=>setTimeout(resolve,100));
  }
  console.warn('공유된 가게를 찾지 못했습니다.',storeId);
+ fxFinishOrderMethodReentry(orderMethodReentry);
  return false;
 }
 function fxHandleHomeShareClick(event){
@@ -566,7 +593,7 @@ window.installDaedongTapAction?.({
 });
 
 const fxRc2Script=document.createElement('script');
-fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1-sequential-app-return-1-instant-external-interaction-1-daylight-effects-cleanup-1-mobile-photo-delivery-1-brand-key-cache-1-ranked-input-1-order-methods-return-stable-dom-1-yogiyo-history-return-2-mobile-customer-qa-1-kakao-fresh-entry-token-1-order-app-confirmed-resume-1-kakao-external-history-guard-1-android-distinct-history-guard-1-back-forward-departure-marker-1-durable-return-cookie-1-store-card-intent-2-android-system-back-return-1-repeated-selected-app-return-1-selected-original-direct-launch-1-single-entry-return-1-anchor-lease-1-return-first-tap-2-return-activation-atomic-1-return-intent-cancel-1-return-early-tap-bridge-1-restored-button-direct-touch-1-visible-return-rebind-1-visible-return-detail-rebuild-1-visible-return-modal-reset-1-return-document-reload-1-return-document-navigation-1-reentered-order-method-surface-1';
+fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1-sequential-app-return-1-instant-external-interaction-1-daylight-effects-cleanup-1-mobile-photo-delivery-1-brand-key-cache-1-ranked-input-1-order-methods-return-stable-dom-1-yogiyo-history-return-2-mobile-customer-qa-1-kakao-fresh-entry-token-1-order-app-confirmed-resume-1-kakao-external-history-guard-1-android-distinct-history-guard-1-back-forward-departure-marker-1-durable-return-cookie-1-store-card-intent-2-android-system-back-return-1-repeated-selected-app-return-1-selected-original-direct-launch-1-single-entry-return-1-anchor-lease-1-return-first-tap-2-return-activation-atomic-1-return-intent-cancel-1-return-early-tap-bridge-1-restored-button-direct-touch-1-visible-return-rebind-1-visible-return-detail-rebuild-1-visible-return-modal-reset-1-return-document-reload-1-return-document-navigation-1-reentered-order-method-surface-1-physical-order-reentry-document-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  fxInstallEvents();
