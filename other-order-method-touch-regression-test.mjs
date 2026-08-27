@@ -24,7 +24,10 @@ assert.match(rc3, /document\.addEventListener\('touchend', rc3OnOrderMethodsTouc
 assert.match(rc3, /document\.elementFromPoint\(touch\.clientX, touch\.clientY\)/, '복귀 뒤 실제 최상단 터치 대상을 다시 확인하지 않습니다.');
 assert.match(rc3, /function rc3MarkOrderMethodsActivation\(storeId\)[\s\S]*?Date\.now\(\) \+ 800/, '터치 직후 새 모달의 주문앱으로 새는 ghost click 차단 시간이 없습니다.');
 assert.match(rc3, /function rc3OrderMethodsGhostActive\(storeId\)[\s\S]*?rc3OrderMethodsGhostClickStoreId/, 'ghost click이 해당 주문방법 버튼에서만 차단되지 않습니다.');
-assert.match(rc3, /function rc3ActivateExternalOrderRoute\(external, event\)[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?openCommunityChoice\(store, routeKey\)/, '복귀 뒤 주문앱 항목 활성화가 한 경로에서 복귀 작업을 취소하고 안내 화면을 열어야 합니다.');
+assert.match(rc3, /function rc3ActivateExternalOrderRoute\(external, event\)[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?rc3LaunchExternalOrderRoute\(store, routeKey, external\)/, '복귀 뒤 주문앱 항목 활성화가 한 경로에서 복귀 작업을 취소하고 앱을 직접 실행해야 합니다.');
+const directExternalLaunch = rc3.match(/function rc3LaunchExternalOrderRoute\(store, routeKey, sourceElement\) \{[\s\S]*?\n\}/)?.[0] || '';
+assert.match(directExternalLaunch, /rc3SetInlineOrderMethods\(inlineTrigger, false\)[\s\S]*?rc2RememberExternalReturn\(sourceElement\)[\s\S]*?rc2LaunchComparedExternal\(sourceElement, href\)/, '선택창을 닫고 복귀 상태를 저장한 뒤 주문앱을 한 번에 실행해야 합니다.');
+assert.doesNotMatch(directExternalLaunch, /openCommunityChoice|openModal/, '요기요·쿠팡이츠·배달의민족 선택 뒤 같은 주문앱을 다시 묻는 화면을 열면 안 됩니다.');
 assert.doesNotMatch(rc3, /rc3ShouldBlockOrderMethodSelection|rc3SelectionStartedAt/, '앱 복귀 때 유실될 수 있는 pointerdown 시각으로 실제 주문앱 터치를 차단하면 안 됩니다.');
 assert.match(rc3, /data-rc3-external-route=[\s\S]*?onclick="return window\.daedongActivateExternalOrderRouteFallback/, '복원된 주문앱 항목에도 직접 클릭 대체 경로가 남아 있어야 합니다.');
 assert.match(rc3, /Math\.hypot\([\s\S]*?\) > 10\) state\.moved = true;/, '스크롤 중 잘못 열리는 것을 막는 터치 이동 판정이 없습니다.');
@@ -56,13 +59,16 @@ assert.match(browserCheck, /본스치킨 미평점/, '본스치킨 회귀 검사
 assert.match(browserCheck, /손수김밥 양지점/, '손수김밥 회귀 검사가 없습니다.');
 assert.match(browserCheck, /trigger\.tap\(\)/, '버튼을 마우스 클릭이 아닌 실제 터치로 검사하지 않습니다.');
 assert.match(browserCheck, /SM-S938N[\s\S]*KAKAOTALK/, '실제 신고 기종과 카카오 인앱 브라우저 조건이 없습니다.');
-assert.match(browserCheck, /context\.waitForEvent\('page'[\s\S]*externalLink\.tap\(\)[\s\S]*externalPage\.close\(\)[\s\S]*page\.bringToFront\(\)[\s\S]*testPreparedBeforeReturn === '1'/, '주문앱을 별도 화면으로 열고 원본 Preview 상세 DOM을 보존하는 검사가 없습니다.');
+assert.match(browserCheck, /context\.waitForEvent\('page'[\s\S]*externalRoute\.tap\(\)[\s\S]*externalPage\.close\(\)[\s\S]*page\.bringToFront\(\)[\s\S]*testPreparedBeforeReturn === '1'/, '주문앱 항목 한 번의 터치로 별도 실행하고 원본 Preview 상세 DOM을 보존하는 검사가 없습니다.');
 assert.match(html, /app\.js\?v=[^"\n]*stable-separated-order-return-1/, '별도 주문앱 복귀 app.js 캐시 버전이 갱신되어야 합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*stable-separated-order-return-1/, '별도 주문앱 복귀 rc2 캐시 버전이 갱신되어야 합니다.');
 assert.match(html, /final-experience\.js\?v=[^"\n]*stable-separated-order-return-2/, '별도 주문앱 복귀 로더 캐시 버전이 갱신되어야 합니다.');
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*direct-order-app-one-tap-1/, '한 번 선택 주문앱 직접 실행 rc2 캐시 버전이 갱신되어야 합니다.');
+assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*direct-order-app-one-tap-1/, '한 번 선택 주문앱 직접 실행 rc3 캐시 버전이 갱신되어야 합니다.');
+assert.match(html, /final-experience\.js\?v=[^"\n]*direct-order-app-one-tap-1/, '한 번 선택 주문앱 직접 실행 로더 캐시 버전이 갱신되어야 합니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)[\s\S]*window\.dispatchEvent\(new Event\('focus'\)\)/, '카카오 네이티브 숨김·복귀 수명주기 검사가 없습니다.');
 assert.match(browserCheck, /returnedTrigger\.tap\(\)[\s\S]*외부 주문앱 복귀 뒤 두 번째 터치로 다시 열림/, '외부 앱 복귀 뒤 다른 주문방법을 다시 터치하는 검사가 없습니다.');
-assert.match(browserCheck, /returnedExternalRoute[\s\S]*MouseEvent\('click',[\s\S]*detail:\s*1[\s\S]*복귀 뒤 pointerdown 없이 전달된 주문앱 선택도 처리/, '외부 앱 복귀 뒤 pointerdown이 유실된 주문앱 선택 검사가 없습니다.');
+assert.match(browserCheck, /returnedExternalRoute[\s\S]*MouseEvent\('click',[\s\S]*detail:\s*1[\s\S]*복귀 뒤 pointerdown 없이 전달된 주문앱 선택도 곧바로 실행/, '외부 앱 복귀 뒤 pointerdown이 유실된 주문앱 선택의 직접 실행 검사가 없습니다.');
 assert.match(browserCheck, /document\.elementFromPoint/, '복귀 뒤 투명 가림막이 버튼을 덮는지 검사하지 않습니다.');
 assert.match(browserCheck, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'[\s\S]*page\.evaluate\(\(\) => window\.daedongCatalogReady\)/,
   '카탈로그 준비 Promise가 생기기 전에 검색을 시작하면 안 됩니다.');

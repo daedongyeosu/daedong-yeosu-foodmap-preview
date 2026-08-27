@@ -231,15 +231,12 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   await page.screenshot({path: screenshotName, fullPage: false});
 
   const externalRoute = page.locator('.order-methods-sheet [data-rc3-external-route="baemin"]');
-  await externalRoute.tap();
-  const guide = page.locator('#modal:not([hidden]) .community-guide');
-  await guide.waitFor({state: 'visible', timeout: 3000});
-  const externalLink = guide.locator('a[data-community-original]');
-  await externalLink.waitFor({state: 'visible', timeout: 3000});
-  const expectedExternalURL = await externalLink.getAttribute('href');
-
+  const expectedExternalURL = await externalRoute.evaluate(element => {
+    const store = window.fxStoreById?.(element.dataset.storeId);
+    return window.routeFor?.(store, element.dataset.rc3ExternalRoute)?.url || '';
+  });
   const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
-  await externalLink.tap();
+  await externalRoute.tap();
   const externalPage = await externalPagePromise;
   await externalPage.waitForLoadState('domcontentloaded');
   await check(
@@ -350,6 +347,7 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   // Exercise that exact sequence instead of accepting only a full Playwright
   // tap, which would hide the real-device failure.
   const returnedExternalRoute = page.locator('#modal:not([hidden]) [data-rc3-external-route="baemin"]');
+  const returnedExternalPagePromise = context.waitForEvent('page', {timeout: 5000});
   await returnedExternalRoute.evaluate(element => {
     element.dispatchEvent(new MouseEvent('click', {
       bubbles: true,
@@ -358,8 +356,14 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
       view: window
     }));
   });
-  await page.locator('#modal:not([hidden]) .community-guide[data-selected-app="baemin"]').waitFor({state: 'visible', timeout: 3000});
-  await check(Promise.resolve(true), `${storeName} 복귀 뒤 pointerdown 없이 전달된 주문앱 선택도 처리`);
+  const returnedExternalPage = await returnedExternalPagePromise;
+  await returnedExternalPage.waitForLoadState('domcontentloaded');
+  await check(
+    Promise.resolve(returnedExternalPage.url() === expectedExternalURL),
+    `${storeName} 복귀 뒤 pointerdown 없이 전달된 주문앱 선택도 곧바로 실행`
+  );
+  await returnedExternalPage.close();
+  await page.bringToFront();
 }
 
 async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiyo = false} = {}) {
@@ -384,13 +388,23 @@ async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiy
     trigger.getAttribute('data-rc3-single-external').then(value => singleYogiyo ? value === 'yogiyo' : value === null),
     `${storeName} 주문앱 구성에 맞는 버튼 동작 지정`
   );
-  await trigger.tap();
   if (singleYogiyo) {
+    const expectedExternalURL = await trigger.evaluate(element => {
+      const store = window.fxStoreById?.(element.dataset.rc3OtherMethods);
+      return window.routeFor?.(store, element.dataset.rc3SingleExternal)?.url || '';
+    });
+    const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
+    await trigger.tap();
+    const externalPage = await externalPagePromise;
+    await externalPage.waitForLoadState('domcontentloaded');
     await check(
-      page.locator('#modal:not([hidden]) .community-guide[data-selected-app="yogiyo"]').isVisible(),
-      `${storeName} 요기요 주문 안내로 바로 이동`
+      Promise.resolve(externalPage.url() === expectedExternalURL),
+      `${storeName} 추가 확인 없이 요기요로 바로 이동`
     );
+    await externalPage.close();
+    await page.bringToFront();
   } else {
+    await trigger.tap();
     await check(
       page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
       `${storeName} 지역 주문앱 추가 뒤 다른 주문방법 선택창 유지`

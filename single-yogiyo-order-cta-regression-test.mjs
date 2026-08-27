@@ -24,7 +24,8 @@ assert.equal(
 );
 assert.equal(rc3OrderMethodsMode({primaryOrder: {}, externalOrder: {}}).hasExternal, false);
 assert.match(source, /data-rc3-single-external/);
-assert.match(source, /if \(singleExternalKey\) \{[\s\S]*?openCommunityChoice\(store, singleExternalKey\)/);
+assert.match(source, /if \(singleExternalKey\) \{[\s\S]*?rc3LaunchExternalOrderRoute\(store, singleExternalKey, trigger\)/);
+assert.doesNotMatch(source.match(/if \(singleExternalKey\) \{[\s\S]*?\} else \{/)?.[0] || '', /openCommunityChoice/, '요기요 단독 버튼도 추가 확인 없이 바로 실행해야 합니다.');
 assert.match(html, /single-yogiyo-cta-1/);
 
 console.log('single Yogiyo order CTA regression: PASS');

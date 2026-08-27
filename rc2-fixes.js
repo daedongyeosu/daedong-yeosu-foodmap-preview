@@ -1214,6 +1214,8 @@ function rc2ExternalAppKey(element) {
   if (!element) return '';
   return String(
     element.dataset?.communityOriginal
+    || element.dataset?.rc3ExternalRoute
+    || element.dataset?.rc3SingleExternal
     || element.dataset?.routeKey
     || element.dataset?.finalAppChannel
     || element.dataset?.appKey
@@ -1236,7 +1238,9 @@ function rc2RememberExternalReturn(sourceElement = null) {
     template.innerHTML = snapshot.html;
     return String(template.content.querySelector('.store-detail[data-store-id]')?.dataset.storeId || '') === String(storeId);
   });
-  const prepareStoreSurface = Boolean(sourceElement?.matches?.('a[data-community-original]'));
+  const prepareStoreSurface = Boolean(sourceElement?.matches?.(
+    'a[data-community-original],[data-rc3-external-route],[data-rc3-single-external]'
+  ));
   const payload = {
     storeId: String(storeId),
     surface: menuState ? 'menu' : 'store',

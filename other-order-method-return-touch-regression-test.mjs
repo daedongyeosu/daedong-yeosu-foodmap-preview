@@ -26,7 +26,7 @@ assert.match(visibleStoreBranch, /daedongResetOrderMethodsTouchState\?\.\(\);[\s
 assert.doesNotMatch(visibleStoreBranch, /rc2NativeHardClose|openStore\(|location\.replace|rc2NavigateReturnedDocumentOnce|rc2ReturnRebuiltToken/, '이미 보이는 가게 상세를 닫거나 재구성하거나 새 문서로 이동하면 실기기 두 번째 터치가 다시 끊깁니다.');
 assert.match(rc2, /const opened = await openStore\(store\);[\s\S]*?restoredStoreId[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '가게 상세를 새로 연 복귀 경로도 위치를 고정하기 전에 주문방법 버튼을 다시 연결해야 합니다.');
 assert.match(rc2, /prepareStoreSurface && storeSnapshot && storeSnapshot !== current[\s\S]*?rc2ModalStack\.length = 0;[\s\S]*?rc2RestoreSnapshot\(storeSnapshot\)/, '외부 주문앱을 열기 전에 원본 Preview를 가게 상세 화면으로 안정화해야 합니다.');
-assert.match(rc2, /const prepareStoreSurface = Boolean\(sourceElement\?\.matches\?\.\('a\[data-community-original\]'\)\)/, '다른 주문방법의 외부 주문앱 링크에서만 출발 전 상세 화면을 안정화해야 합니다.');
+assert.match(rc2, /const prepareStoreSurface = Boolean\(sourceElement\?\.matches\?\.\([\s\S]*?data-community-original[\s\S]*?data-rc3-external-route[\s\S]*?data-rc3-single-external/, '주문앱 항목을 한 번 눌러 바로 출발하는 경우에도 상세 화면을 안정화해야 합니다.');
 assert.match(rc2, /window\.addEventListener\('focus', \(\) => rc2RestoreAfterConfirmedResume/, '카카오 외부 앱에서 돌아올 때 focus만 발생하는 경우도 출발 확인 뒤 복원해야 합니다.');
 const externalBranch = rc2.slice(rc2.indexOf('if (comparedExternal)'), rc2.indexOf('const externalLink', rc2.indexOf('if (comparedExternal)')));
 assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.assign/, '카카오 WebView 원본 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
