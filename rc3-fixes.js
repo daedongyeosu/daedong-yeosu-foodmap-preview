@@ -483,8 +483,8 @@ function rc3LaunchExternalOrderRoute(store, routeKey, sourceElement) {
   const route = routeFor(store, routeKey);
   const href = safeHref(route?.url);
   if (!route || href === '#') return false;
-  const inlineTrigger = sourceElement?.closest?.('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
-  if (inlineTrigger) rc3SetInlineOrderMethods(inlineTrigger, false);
+  // Leave the app list expanded in the preserved Preview document. When the
+  // customer returns from one order app, the other apps stay one tap away.
   rc2RememberExternalReturn(sourceElement);
   return rc2LaunchComparedExternal(sourceElement, href);
 }

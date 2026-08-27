@@ -119,6 +119,7 @@ try {
     await page.locator(`#modal:not([hidden]) .store-detail[data-store-id="${store.store_id}"]`).waitFor({state: 'visible', timeout: 10000});
     await check(Promise.resolve(true), `${key}: 앱 복귀 수명주기 뒤 보던 가게 상세 유지`);
     await check(preparedTrigger.evaluate((element, expectedKey) => element.dataset.testStableReturn === expectedKey, key), `${key}: 앱 복귀 뒤 준비된 동일 상세 DOM 유지`);
+    await check(page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(), `${key}: 앱 복귀 뒤 주문앱 목록 열린 상태 유지`);
     if (key === 'yogiyo') await page.screenshot({path: 'browser-yogiyo-back-return.png', fullPage: false});
     await page.close();
   }

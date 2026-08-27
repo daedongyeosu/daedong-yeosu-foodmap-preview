@@ -41,8 +41,7 @@ const rc2LoaderIndex = finalExperience.indexOf("const fxRc2Script=document.creat
 assert.ok(earlyBridgeIndex >= 0 && earlyBridgeIndex < rc2LoaderIndex, '주문방법 첫 터치 브리지는 동적 복귀 스크립트보다 먼저 등록되어야 합니다.');
 assert.match(finalExperience, /selector:'\[data-rc3-other-methods\]'[\s\S]*?window\.daedongActivateOrderMethodsFallback[\s\S]*?return typeof activate==='function'\?activate\(target,event\):false/, '공용 pointerup/touchend 계층도 중복 열림 방지 경로로 복귀 버튼을 직접 활성화해야 합니다.');
 assert.match(app, /function clearDaedongGhostClickOnNewPress\(\)[\s\S]*?daedongGhostClick = null[\s\S]*?document\.addEventListener\('pointerdown', clearDaedongGhostClickOnNewPress, true\)[\s\S]*?document\.addEventListener\('touchstart', clearDaedongGhostClickOnNewPress/, '새로운 실제 터치는 이전 화면에서 남은 가짜 클릭 방지표를 해제해야 합니다.');
-assert.match(browserCheck, /pointerdown[\s\S]*returnStatePresent[\s\S]*pointerup[\s\S]*returnStatePresent/, '실제 브라우저 검사에서 재터치 전체 동안 복귀 상태가 유지되는지 확인해야 합니다.');
-assert.match(browserCheck, /재터치 완료 뒤 복귀 보호 상태 정리/, '버튼 활성화 뒤 복귀 상태가 정리되는지 확인해야 합니다.');
+assert.match(browserCheck, /외부 주문앱 복귀 뒤 주문앱 목록 열린 상태 유지[\s\S]*목록을 다시 열지 않고 다른 주문앱 곧바로 실행/, '실제 브라우저 검사는 복귀 뒤 추가 터치 없이 다른 주문앱을 선택해야 합니다.');
 assert.match(exactReturnCheck, /dispatchEvent\('pointerup'/, '정확 복귀 검사도 고객의 완료된 상호작용으로 복귀 상태를 정리해야 합니다.');
 
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {

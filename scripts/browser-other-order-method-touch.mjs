@@ -251,6 +251,10 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     preparedTrigger.isVisible(),
     `${storeName} 외부 주문앱이 열린 동안 원본 Preview를 가게 상세로 미리 안정화`
   );
+  await check(
+    page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
+    `${storeName} 외부 주문앱이 열린 동안 주문앱 목록을 닫지 않음`
+  );
   await externalPage.close();
   await page.bringToFront();
   if (nativeResume) {
@@ -293,60 +297,19 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     return Boolean(hit && (hit === element || element.contains(hit)));
   });
   await check(Promise.resolve(returnedHitTarget), `${storeName} 복귀 뒤 버튼 위에 투명 가림막 없음`);
-
-  // Headless Chromium can settle the synthetic visibility/focus return before
-  // this assertion, while the real Kakao Android WebView leaves the protected
-  // return lifecycle alive until the customer's next completed tap. Re-arm the
-  // same public return state when needed so this check exercises that real-phone
-  // condition instead of silently skipping it.
-  const returnStateBeforeRetap = await page.evaluate(() => {
-    const hasState = () => Boolean(
-      sessionStorage.getItem('daedongExternalReturnRc2')
-      || localStorage.getItem('daedongExternalReturnRc2')
-    );
-    if (!hasState()) {
-      const storeId = document.querySelector('#modal')?.dataset.activeStoreId
-        || document.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
-      window.daedongWriteExternalReturnState?.('daedongExternalReturnRc2', {
-        storeId,
-        surface: 'store',
-        pageScroll: 0,
-        modalScroll: document.querySelector('#modal .modal-card')?.scrollTop || 0
-      });
-    }
-    return hasState();
-  });
-  await check(Promise.resolve(returnStateBeforeRetap), `${storeName} 복귀 뒤 첫 터치 전 복귀 보호 상태 유지`);
-  await page.evaluate(() => { window.__returnedOrderMethodTouchState = []; });
-  await returnedTrigger.tap();
-  await page.waitForFunction(
-    () => document.querySelector('#modal:not([hidden]) .order-methods-sheet')?.getBoundingClientRect().height > 0,
-    null,
-    {polling: 25, timeout: 3000}
-  );
   await check(
     page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
-    `${storeName} 외부 주문앱 복귀 뒤 두 번째 터치로 다시 열림`
+    `${storeName} 외부 주문앱 복귀 뒤 주문앱 목록 열린 상태 유지`
   );
-  const retapLifecycle = await page.evaluate(() => window.__returnedOrderMethodTouchState || []);
-  await check(
-    Promise.resolve(
-      retapLifecycle.some(item => item.type === 'pointerdown' && item.returnStatePresent)
-      && retapLifecycle.some(item => item.type === 'pointerup' && item.returnStatePresent)
-    ),
-    `${storeName} 재터치의 pointerdown·pointerup 동안 history 복귀 토큰을 변경하지 않음`
-  );
-  await page.waitForFunction(() => (
-    !sessionStorage.getItem('daedongExternalReturnRc2')
-    && !localStorage.getItem('daedongExternalReturnRc2')
-  ), null, {polling: 25, timeout: 3000});
-  await check(Promise.resolve(true), `${storeName} 재터치 완료 뒤 복귀 보호 상태 정리`);
 
   // Samsung Kakao WebView can deliver the first route selection after native
   // app return as click without the pointerdown timestamp used before pause.
-  // Exercise that exact sequence instead of accepting only a full Playwright
-  // tap, which would hide the real-device failure.
-  const returnedExternalRoute = page.locator('#modal:not([hidden]) [data-rc3-external-route="baemin"]');
+  // Choose a different app directly from the list preserved across return.
+  const returnedExternalRoute = page.locator('#modal:not([hidden]) [data-rc3-external-route="yogiyo"]');
+  const returnedExpectedURL = await returnedExternalRoute.evaluate(element => {
+    const store = window.fxStoreById?.(element.dataset.storeId);
+    return store?.routes?.find(route => route.key === element.dataset.rc3ExternalRoute)?.url || '';
+  });
   const returnedExternalPagePromise = context.waitForEvent('page', {timeout: 5000});
   await returnedExternalRoute.evaluate(element => {
     element.dispatchEvent(new MouseEvent('click', {
@@ -359,8 +322,8 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   const returnedExternalPage = await returnedExternalPagePromise;
   await returnedExternalPage.waitForLoadState('domcontentloaded');
   await check(
-    Promise.resolve(returnedExternalPage.url() === expectedExternalURL),
-    `${storeName} 복귀 뒤 pointerdown 없이 전달된 주문앱 선택도 곧바로 실행`
+    Promise.resolve(returnedExternalPage.url() === returnedExpectedURL),
+    `${storeName} 복귀 뒤 목록을 다시 열지 않고 다른 주문앱 곧바로 실행`
   );
   await returnedExternalPage.close();
   await page.bringToFront();
