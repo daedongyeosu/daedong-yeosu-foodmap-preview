@@ -24,8 +24,9 @@ assert.match(rc3, /document\.addEventListener\('touchend', rc3OnOrderMethodsTouc
 assert.match(rc3, /document\.elementFromPoint\(touch\.clientX, touch\.clientY\)/, '복귀 뒤 실제 최상단 터치 대상을 다시 확인하지 않습니다.');
 assert.match(rc3, /function rc3MarkOrderMethodsActivation\(storeId\)[\s\S]*?Date\.now\(\) \+ 800/, '터치 직후 새 모달의 주문앱으로 새는 ghost click 차단 시간이 없습니다.');
 assert.match(rc3, /function rc3OrderMethodsGhostActive\(storeId\)[\s\S]*?rc3OrderMethodsGhostClickStoreId/, 'ghost click이 해당 주문방법 버튼에서만 차단되지 않습니다.');
-assert.match(rc3, /function rc3ShouldBlockOrderMethodSelection\(external, event, storeId\)[\s\S]*?Number\(event\?\.detail \|\| 0\) === 0[\s\S]*?rc3SelectionStartedAt[\s\S]*?age < 1200/, '새 선택창으로 새는 합성 클릭은 항상 막고 실제 두 번째 터치와 키보드 선택은 허용해야 합니다.');
-assert.match(rc3, /const external = event\.target\.closest\('\[data-rc3-external-route\]'\);[\s\S]*?rc3ShouldBlockOrderMethodSelection\(external, event, storeId\)[\s\S]*?openCommunityChoice/, '새 선택창의 주문앱 버튼을 열기 전에 잔여 클릭을 차단해야 합니다.');
+assert.match(rc3, /function rc3ActivateExternalOrderRoute\(external, event\)[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?openCommunityChoice\(store, routeKey\)/, '복귀 뒤 주문앱 항목 활성화가 한 경로에서 복귀 작업을 취소하고 안내 화면을 열어야 합니다.');
+assert.doesNotMatch(rc3, /rc3ShouldBlockOrderMethodSelection|rc3SelectionStartedAt/, '앱 복귀 때 유실될 수 있는 pointerdown 시각으로 실제 주문앱 터치를 차단하면 안 됩니다.');
+assert.match(rc3, /data-rc3-external-route=[\s\S]*?onclick="return window\.daedongActivateExternalOrderRouteFallback/, '복원된 주문앱 항목에도 직접 클릭 대체 경로가 남아 있어야 합니다.');
 assert.match(rc3, /Math\.hypot\([\s\S]*?\) > 10\) state\.moved = true;/, '스크롤 중 잘못 열리는 것을 막는 터치 이동 판정이 없습니다.');
 assert.match(rc3, /const other = event\.target\.closest\('\[data-rc3-other-methods\]'\);[\s\S]*?rc3ActivateOrderMethodsTrigger\(other, event\)/, '클릭·키보드 보조 경로가 해당 가게 주문방법을 열지 않습니다.');
 assert.match(rc3, /window\.addEventListener\('pageshow', rc3ResetOrderMethodsTouchState, true\)/, '외부 주문앱에서 복귀할 때 남은 터치 상태를 초기화하지 않습니다.');
@@ -39,6 +40,7 @@ const inlineOpenFunction = rc3.match(/function rc3OpenOrderMethods\(store, trigg
 assert.match(inlineOpenFunction, /rc3SetInlineOrderMethods\(trigger, panel\.hidden\)/, '주문방법 버튼은 같은 상세 DOM의 hidden 상태만 전환해야 합니다.');
 assert.doesNotMatch(inlineOpenFunction, /openModal|history\.|location\./, '주문방법 보기에서 모달·히스토리·문서를 교체하면 실기기 두 번째 터치가 다시 죽습니다.');
 assert.match(finalExperience, /selector:'\[data-rc3-order-methods-close\]'[\s\S]*?daedongCloseInlineOrderMethods/, '인라인 닫기 버튼도 공용 원시 터치 경로를 사용해야 합니다.');
+assert.match(finalExperience, /selector:'\[data-rc3-external-route\]'[\s\S]*?daedongActivateExternalOrderRouteFallback/, '주문앱 항목도 pointerup·touchend·click 공용 경로를 사용해야 합니다.');
 
 assert.match(rc2, /const storeSnapshot = \[current, \.\.\.rc2ModalStack\.slice\(\)\.reverse\(\)\]\.find\(snapshot => \{[\s\S]*?\.store-detail\[data-store-id\]/, '여러 겹 주문 모달에서도 원래 가게 상세 복귀 경로를 찾지 못합니다.');
 assert.match(rc2, /if \(comparedExternal\)[\s\S]*?event\.stopImmediatePropagation\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)/, '외부 주문앱 이동 전에 진입 화면과 관계없이 같은 가게 복귀 상태를 저장하고 화면을 안정화해야 합니다.');
@@ -57,13 +59,12 @@ assert.match(browserCheck, /SM-S938N[\s\S]*KAKAOTALK/, '실제 신고 기종과 
 assert.match(browserCheck, /window\.daedongLaunchMobileRoute = \(key, href\)[\s\S]*externalLink\.tap\(\)[\s\S]*launch\?\.key === 'baemin'[\s\S]*new URL\(page\.url\(\)\)\.origin === baseOrigin/, '외부 주문앱을 Android 패키지 경로로 열면서 원본 Preview 현재 탭을 보존하는 검사가 없습니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)[\s\S]*window\.dispatchEvent\(new Event\('focus'\)\)/, '카카오 네이티브 숨김·복귀 수명주기 검사가 없습니다.');
 assert.match(browserCheck, /returnedTrigger\.tap\(\)[\s\S]*외부 주문앱 복귀 뒤 두 번째 터치로 다시 열림/, '외부 앱 복귀 뒤 다른 주문방법을 다시 터치하는 검사가 없습니다.');
+assert.match(browserCheck, /returnedExternalRoute[\s\S]*MouseEvent\('click',[\s\S]*detail:\s*1[\s\S]*복귀 뒤 pointerdown 없이 전달된 주문앱 선택도 처리/, '외부 앱 복귀 뒤 pointerdown이 유실된 주문앱 선택 검사가 없습니다.');
 assert.match(browserCheck, /document\.elementFromPoint/, '복귀 뒤 투명 가림막이 버튼을 덮는지 검사하지 않습니다.');
 assert.match(browserCheck, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'[\s\S]*page\.evaluate\(\(\) => window\.daedongCatalogReady\)/,
   '카탈로그 준비 Promise가 생기기 전에 검색을 시작하면 안 됩니다.');
 assert.match(browserCheck, /order-methods-sheet[\s\S]*polling: 25, timeout: 3000/,
   '첫 터치 뒤 선택창 렌더링을 실제 DOM 상태로 확인해야 합니다.');
-assert.match(browserCheck, /잔여 합성 클릭이 첫 주문앱으로 새지 않음/,
-  '삼성 인앱 브라우저의 잔여 합성 클릭 재현 검사가 없습니다.');
 assert.match(browserCheck, /console\.log\(JSON\.stringify\(report, null, 2\)\)/,
   '브라우저 실패 원인은 CI 로그에서 바로 확인할 수 있어야 합니다.');
 assert.match(previewWorkflow, /node scripts\/browser-other-order-method-touch\.mjs/, 'PR에서 주문방법 모바일 터치 검사를 실행하지 않습니다.');
@@ -77,5 +78,7 @@ assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*mobile-order-selection-gh
 assert.match(html, /final-experience\.js\?v=[^"\n]*inline-order-methods-1/, '인라인 주문방법 로더 캐시 갱신 표식이 없습니다.');
 assert.match(finalExperience, /rc3-fixes\.css\?v=[^'\n]*inline-order-methods-1/, '인라인 주문방법 CSS 캐시 갱신 표식이 없습니다.');
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*inline-order-methods-1/, '인라인 주문방법 스크립트 캐시 갱신 표식이 없습니다.');
+assert.match(html, /final-experience\.js\?v=[^"\n]*external-route-return-touch-1/, '복귀 뒤 주문앱 항목 터치 로더 캐시 갱신 표식이 없습니다.');
+assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*external-route-return-touch-1/, '복귀 뒤 주문앱 항목 터치 스크립트 캐시 갱신 표식이 없습니다.');
 
 console.log('other-order-method-touch-regression: PASS');

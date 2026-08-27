@@ -228,16 +228,6 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
     `${storeName} 인라인 닫기 뒤 두 번째 터치로 다른 주문방법 선택창 다시 열림`
   );
-  await page.locator('.order-methods-sheet [data-rc3-external-route]').first().evaluate(element => {
-    element.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true, detail: 1, view: window}));
-  });
-  await check(
-    Promise.all([
-      page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
-      page.locator('#modal:not([hidden]) .community-guide').count()
-    ]).then(([visible, guideCount]) => visible && guideCount === 0),
-    `${storeName} 잔여 합성 클릭이 첫 주문앱으로 새지 않음`
-  );
   await page.screenshot({path: screenshotName, fullPage: false});
 
   const externalRoute = page.locator('.order-methods-sheet [data-rc3-external-route="baemin"]');
@@ -383,6 +373,22 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     && !localStorage.getItem('daedongExternalReturnRc2')
   ), null, {polling: 25, timeout: 3000});
   await check(Promise.resolve(true), `${storeName} 재터치 완료 뒤 복귀 보호 상태 정리`);
+
+  // Samsung Kakao WebView can deliver the first route selection after native
+  // app return as click without the pointerdown timestamp used before pause.
+  // Exercise that exact sequence instead of accepting only a full Playwright
+  // tap, which would hide the real-device failure.
+  const returnedExternalRoute = page.locator('#modal:not([hidden]) [data-rc3-external-route="baemin"]');
+  await returnedExternalRoute.evaluate(element => {
+    element.dispatchEvent(new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+      detail: 1,
+      view: window
+    }));
+  });
+  await page.locator('#modal:not([hidden]) .community-guide[data-selected-app="baemin"]').waitFor({state: 'visible', timeout: 3000});
+  await check(Promise.resolve(true), `${storeName} 복귀 뒤 pointerdown 없이 전달된 주문앱 선택도 처리`);
 }
 
 async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiyo = false} = {}) {

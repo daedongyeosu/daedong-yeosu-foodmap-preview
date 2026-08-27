@@ -608,6 +608,13 @@ window.installDaedongTapAction?.({
   return typeof close==='function'?close(target,event):false;
  }
 });
+window.installDaedongTapAction?.({
+ selector:'[data-rc3-external-route]',
+ activate(target,event){
+  const activate=window.daedongActivateExternalOrderRouteFallback;
+  return typeof activate==='function'?activate(target,event):false;
+ }
+});
 
 const fxRc2Script=document.createElement('script');
 fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1-sequential-app-return-1-instant-external-interaction-1-daylight-effects-cleanup-1-mobile-photo-delivery-1-brand-key-cache-1-ranked-input-1-order-methods-return-stable-dom-1-yogiyo-history-return-2-mobile-customer-qa-1-kakao-fresh-entry-token-1-order-app-confirmed-resume-1-kakao-external-history-guard-1-android-distinct-history-guard-1-back-forward-departure-marker-1-durable-return-cookie-1-store-card-intent-2-android-system-back-return-1-repeated-selected-app-return-1-selected-original-direct-launch-1-single-entry-return-1-anchor-lease-1-return-first-tap-2-return-activation-atomic-1-return-intent-cancel-1-return-early-tap-bridge-1-restored-button-direct-touch-1-visible-return-rebind-1-visible-return-detail-rebuild-1-visible-return-modal-reset-1-return-document-reload-1-return-document-navigation-1-reentered-order-method-surface-1-physical-order-reentry-document-1';
@@ -615,7 +622,7 @@ fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  fxInstallEvents();
  const fxRc3Script=document.createElement('script');
- fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1-release-readiness-1-managed-region-priority-3-goheung-isolation-2-other-order-method-touch-1-order-methods-return-touch-5-mobile-photo-delivery-1-single-rank-per-rail-1-progressive-rails-1-single-yogiyo-cta-1-trusted-naver-place-1-direct-phone-link-1-mobile-order-selection-ghost-2-order-method-copy-1-restored-inline-fallback-1-inline-order-methods-1';
+ fxRc3Script.src='rc3-fixes.js?v=selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1-release-readiness-1-managed-region-priority-3-goheung-isolation-2-other-order-method-touch-1-order-methods-return-touch-5-mobile-photo-delivery-1-single-rank-per-rail-1-progressive-rails-1-single-yogiyo-cta-1-trusted-naver-place-1-direct-phone-link-1-mobile-order-selection-ghost-2-order-method-copy-1-restored-inline-fallback-1-inline-order-methods-1-external-route-return-touch-1';
  fxRc3Script.src+='-atomic-rail-refresh-1-store-card-intent-2-return-activation-atomic-1-return-intent-cancel-1-return-early-tap-bridge-1-order-sheet-before-history-1-restored-button-direct-touch-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
