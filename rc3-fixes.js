@@ -464,11 +464,7 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
   window.daedongInvalidatePendingReturnRestores?.();
   const singleExternalKey = String(trigger?.dataset.rc3SingleExternal || '');
   if (singleExternalKey) {
-    openCommunityChoice(store, singleExternalKey);
-    setTimeout(() => {
-      window.daedongConfirmIntentionalSurfaceNavigation?.();
-      window.daedongSettleRestoredReturnLeaseNow?.();
-    }, 0);
+    rc3LaunchExternalOrderRoute(store, singleExternalKey, trigger);
   } else {
     // Keep the same store-detail DOM and native hit-test surface. Replacing the
     // modal, history entry, or document after close is what repeatedly leaves
@@ -482,6 +478,16 @@ window.daedongActivateOrderMethodsTrigger = rc3ActivateOrderMethodsTrigger;
 
 let rc3ExternalRouteActivationUntil = 0;
 let rc3ExternalRouteActivationKey = '';
+
+function rc3LaunchExternalOrderRoute(store, routeKey, sourceElement) {
+  const route = routeFor(store, routeKey);
+  const href = safeHref(route?.url);
+  if (!route || href === '#') return false;
+  const inlineTrigger = sourceElement?.closest?.('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
+  if (inlineTrigger) rc3SetInlineOrderMethods(inlineTrigger, false);
+  rc2RememberExternalReturn(sourceElement);
+  return rc2LaunchComparedExternal(sourceElement, href);
+}
 
 function rc3ActivateExternalOrderRoute(external, event) {
   const routeKey = String(external?.dataset.rc3ExternalRoute || '');
@@ -501,14 +507,7 @@ function rc3ActivateExternalOrderRoute(external, event) {
   // every one of those as a complete customer activation; do not require a
   // preceding pointerdown timestamp that may have been lost during resume.
   window.daedongInvalidatePendingReturnRestores?.();
-  const inlineTrigger = external.closest('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
-  if (inlineTrigger) rc3SetInlineOrderMethods(inlineTrigger, false);
-  openCommunityChoice(store, routeKey);
-  setTimeout(() => {
-    window.daedongConfirmIntentionalSurfaceNavigation?.();
-    window.daedongSettleRestoredReturnLeaseNow?.();
-  }, 0);
-  return true;
+  return rc3LaunchExternalOrderRoute(store, routeKey, external);
 }
 
 function rc3ActivateExternalOrderRouteFallback(external, event) {

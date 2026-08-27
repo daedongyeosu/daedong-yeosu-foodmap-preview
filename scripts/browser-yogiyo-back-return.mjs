@@ -56,7 +56,7 @@ const check = async (condition, message) => {
   report.checks.push({message, ok});
   if (!ok) throw new Error(message);
 };
-const openGuide = async (page, key) => {
+const openOrderMethodsRoute = async (page, key) => {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForFunction(
     () => window.daedongCatalogReady && typeof window.daedongCatalogReady.then === 'function',
@@ -85,20 +85,22 @@ const openGuide = async (page, key) => {
   const otherMethods = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await otherMethods.waitFor({state: 'visible', timeout: 10000});
   await otherMethods.click();
-  await page.locator(`.order-methods-sheet [data-rc3-external-route="${key}"]`).click({timeout: 5000});
-  const guide = page.locator(`#modal:not([hidden]) .community-guide[data-selected-app="${key}"]`);
-  await guide.waitFor({state: 'visible', timeout: 5000});
-  return guide.locator(`a[data-community-original="${key}"]`);
+  const route = page.locator(`.order-methods-sheet [data-rc3-external-route="${key}"]`);
+  await route.waitFor({state: 'visible', timeout: 5000});
+  return route;
 };
 
 try {
   for (const key of ['yogiyo', 'coupang', 'baemin']) {
     const page = await context.newPage();
     page.on('pageerror', error => report.errors.push(error.message));
-    const link = await openGuide(page, key);
-    const expectedURL = await link.getAttribute('href');
+    const route = await openOrderMethodsRoute(page, key);
+    const expectedURL = await route.evaluate(element => {
+      const selectedStore = window.fxStoreById?.(element.dataset.storeId);
+      return selectedStore?.routes?.find(item => item.key === element.dataset.rc3ExternalRoute)?.url || '';
+    });
     const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
-    await link.click();
+    await route.click();
     const externalPage = await externalPagePromise;
     await externalPage.waitForLoadState('domcontentloaded');
     await check(Promise.resolve(externalPage.url() === expectedURL), `${key}: 원본 Preview와 분리된 주문앱 경로 선택`);
