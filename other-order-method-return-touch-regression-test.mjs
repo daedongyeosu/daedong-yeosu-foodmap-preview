@@ -37,7 +37,7 @@ assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychang
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');
 assert.match(browserCheck, /context\.waitForEvent\('page'[\s\S]*dataset\.testPreparedBeforeReturn = '1'[\s\S]*externalPage\.close\(\)[\s\S]*dataset\.testPreparedBeforeReturn === '1'[\s\S]*준비된 상세 DOM을 그대로 유지/, '별도 주문앱 화면을 닫고 돌아왔을 때 같은 상세 DOM을 보존하는 실제 브라우저 검사가 없습니다.');
-assert.match(browserCheck, /pointerdown[\s\S]*returnStatePresent[\s\S]*pointerup[\s\S]*returnStatePresent/, '복귀 뒤 첫 재터치 도중 history 토큰을 그대로 유지하는 검사가 필요합니다.');
+assert.match(browserCheck, /외부 주문앱 복귀 뒤 주문앱 목록 열린 상태 유지[\s\S]*data-rc3-external-route="yogiyo"[\s\S]*목록을 다시 열지 않고 다른 주문앱 곧바로 실행/, '복귀 뒤 목록을 그대로 유지하고 다른 주문앱을 즉시 선택하는 검사가 필요합니다.');
 assert.match(rc2, /document\.addEventListener\('pointerup', rc2ScheduleRestoredReturnSettlement, true\)/, '복귀 상태는 첫 손가락 누름이 아니라 활성화가 끝난 뒤 정리해야 합니다.');
 assert.doesNotMatch(rc2, /document\.addEventListener\('pointerdown', rc2SettleRestoredReturnLease/, '첫 pointerdown에서 history를 바꾸면 카카오 WebView가 버튼 클릭을 취소할 수 있습니다.');
 assert.match(rc3, /document\.visibilityState === 'visible'/, '앱 복귀로 화면이 다시 보일 때 터치 상태를 초기화해야 합니다.');
