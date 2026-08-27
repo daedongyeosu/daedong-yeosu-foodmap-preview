@@ -44,6 +44,10 @@ assert.match(js, /daedongCommunityIntroPlayedV4/);
 assert.match(js, /const INTRO_DURATION = 15000/);
 assert.match(js, /sessionStorage\.getItem/);
 assert.match(js, /sessionStorage\.setItem/);
+assert.match(js, /window\.daedongEntryHadExternalReturn === true/,
+  '주문앱에서 돌아오는 화면에는 첫 방문 안내를 다시 띄우면 안 됩니다.');
+assert.match(js, /daedong-external-return-pending/,
+  '주문앱 복귀 화면을 구성하는 동안 첫 방문 안내가 복원을 가로막으면 안 됩니다.');
 assert.match(js, /new URLSearchParams\(location\.search\)\.has\('store'\)/);
 assert.match(js, /window\.installDaedongTapAction\(\{[\s\S]*selector: '#communityIntroClose'[\s\S]*dismissIntroImmediately\(event\)/,
   '첫 안내 X는 스크롤 제스처와 구분되는 공통 모바일 탭 경로를 사용해야 합니다.');

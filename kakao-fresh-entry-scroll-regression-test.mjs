@@ -102,6 +102,13 @@ assert.equal(storageLostBackForwardReturn.sessionStorage.has('daedongExternalRet
 assert.equal(storageLostBackForwardReturn.localStorage.has('daedongExternalAppDepartureV1'), true,
   '복원 전에 쿠키 토큰과 같은 출발 표식을 다시 세워야 합니다.');
 
+const storageLostUrlReturn = runBoot({
+  href: 'https://preview.daedongmap.com/?__ddret=return-token-1',
+  cookie: `daedongOrderReturnV1=${durableCookieValue}`
+});
+assert.equal(storageLostUrlReturn.classes.has('daedong-external-return-pending'), true,
+  'Web Storage가 사라져도 URL과 내구성 쿠키의 일회용 토큰이 같으면 복귀 화면을 보호해야 합니다.');
+
 const freshEntryWithDurableCookie = runBoot({
   cookie: `daedongOrderReturnV1=${durableCookieValue}`
 });

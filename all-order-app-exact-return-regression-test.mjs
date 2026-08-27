@@ -38,6 +38,8 @@ function extractFunction(source, name) {
 const bootScript = html.match(/<script>\s*([\s\S]*?daedongFinishExternalReturnBoot[\s\S]*?)<\/script>/)?.[1] || '';
 assert.ok(bootScript, '첫 페인트 복귀 차단 스크립트를 찾아야 합니다.');
 assert.doesNotMatch(bootScript, /2500|setTimeout/, '복귀 준비 전 메인 화면을 시간만으로 노출하면 안 됩니다.');
+assert.match(html, /let restoredPayload = durablePayload;[\s\S]*?existing\?\.storeSnapshot\?\.html[\s\S]*?existing\?\.modalSnapshot\?\.html[\s\S]*?restoredPayload = existing/,
+  '작은 복귀 쿠키가 이미 저장된 전체 가게·주문앱 화면 복사본을 덮어쓰면 안 됩니다.');
 
 function bootContext({historyToken = '', urlToken = ''} = {}) {
   const classes = new Set();

@@ -143,10 +143,10 @@ const readyPage = async () => {
   return page;
 };
 
-const coldReturnPage = async () => {
+const coldReturnPage = async (returnURL = baseURL) => {
   const page = await context.newPage();
   page.on('pageerror', error => report.errors.push(error.message));
-  await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await page.goto(returnURL, {waitUntil: 'domcontentloaded'});
   return page;
 };
 
@@ -229,6 +229,12 @@ try {
 
   for (const app of appDefinitions) {
     const page = await readyPage();
+    await page.evaluate(() => {
+      window.__exactReturnLaunches = [];
+      window.daedongLaunchMobileRoute = (key, href) => {
+        window.__exactReturnLaunches.push({key, href});
+      };
+    });
     await page.evaluate(key => openAppBrowser(key), app.key);
     const buttons = page.locator('#modal:not([hidden]) [data-app-store-order]');
     await buttons.first().waitFor({state: 'visible', timeout: 5000});
@@ -245,11 +251,13 @@ try {
       };
     });
     await target.click();
-    await page.waitForURL(url => url.origin !== baseOrigin, {timeout: 10000});
-    await check(Promise.resolve(true), `${app.label}: 외부 주문앱으로 이동`);
+    await page.waitForFunction(() => window.__exactReturnLaunches?.length === 1, null, {timeout: 10000});
+    const launch = await page.evaluate(() => window.__exactReturnLaunches.at(-1));
+    await check(Promise.resolve(launch?.key === app.key), `${app.label}: 올바른 외부 주문앱 직접 실행`);
+    const returnURL = page.url();
     await page.close();
 
-    const returned = await coldReturnPage();
+    const returned = await coldReturnPage(returnURL);
     const immediate = await returned.evaluate(({key, storeId}) => {
       const modal = document.getElementById('modal');
       const target = document.querySelector(`[data-app-store-order="${CSS.escape(storeId)}"]`);
@@ -260,9 +268,22 @@ try {
         homeBootVisible: document.documentElement.classList.contains('daedong-external-return-pending')
       };
     }, {key: app.key, storeId: before.storeId});
-    await check(Promise.resolve(immediate.modalVisible && immediate.correctApp), `${app.label}: 홈 화면을 거치지 않고 주문앱 가게목록 즉시 복구`);
-    await check(Promise.resolve(immediate.correctStore), `${app.label}: 누른 가게가 있는 동일 목록 복구`);
+    await check(Promise.resolve(
+      (immediate.modalVisible && immediate.correctApp && immediate.correctStore)
+      || immediate.homeBootVisible
+    ), `${app.label}: 홈 화면을 노출하지 않고 복귀 화면 또는 보호 화면 즉시 표시`);
     await returned.waitForFunction(() => !document.documentElement.classList.contains('daedong-external-return-pending'), null, {timeout: 20000});
+    await returned.locator(`[data-app-store-order="${before.storeId}"]`).waitFor({state: 'visible', timeout: 20000});
+    const settled = await returned.evaluate(({key, storeId}) => {
+      const modal = document.getElementById('modal');
+      return {
+        modalVisible: Boolean(modal && !modal.hidden),
+        correctApp: modal?.dataset.appBrowserKey === key,
+        correctStore: Boolean(document.querySelector(`[data-app-store-order="${CSS.escape(storeId)}"]`))
+      };
+    }, {key: app.key, storeId: before.storeId});
+    await check(Promise.resolve(settled.modalVisible && settled.correctApp), `${app.label}: 주문앱 가게목록 복구 완료`);
+    await check(Promise.resolve(settled.correctStore), `${app.label}: 누른 가게가 있는 동일 목록 복구`);
     await returned.waitForTimeout(1800);
     const after = await returned.locator(`[data-app-store-order="${before.storeId}"]`).evaluate(element => {
       const modalCard = element.closest('.modal-card');
@@ -273,7 +294,7 @@ try {
     });
     const offsetDelta = Math.abs(after.offset - before.offset);
     await check(Promise.resolve(offsetDelta <= 3), `${app.label}: 보던 가게의 화면 위치 유지`);
-    report.apps.push({key: app.key, label: app.label, storeId: before.storeId, before, after, offsetDelta, immediate});
+    report.apps.push({key: app.key, label: app.label, storeId: before.storeId, before, after, offsetDelta, immediate, settled});
     await returned.screenshot({path: `browser-order-return-${app.key}.png`, fullPage: false});
     await returned.close();
   }
@@ -290,11 +311,18 @@ try {
   const orderSheet = menuPreview.locator('[data-menu-order-sheet]:not([hidden])');
   await orderSheet.waitFor({state: 'visible', timeout: 5000});
   await orderSheet.locator('[data-menu-other-toggle]').click();
+  await menuPage.evaluate(() => {
+    window.__exactReturnLaunches = [];
+    window.daedongLaunchMobileRoute = (key, href) => {
+      window.__exactReturnLaunches.push({key, href});
+    };
+  });
   await orderSheet.locator('[data-menu-external-key="baemin"]').click();
-  await menuPage.waitForURL(url => url.origin !== baseOrigin, {timeout: 10000});
+  await menuPage.waitForFunction(() => window.__exactReturnLaunches?.length === 1, null, {timeout: 10000});
+  const menuReturnURL = menuPage.url();
   await menuPage.close();
 
-  const returnedMenu = await coldReturnPage();
+  const returnedMenu = await coldReturnPage(menuReturnURL);
   await returnedMenu.locator(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${menuStoreId}"]`).waitFor({state: 'visible', timeout: 20000});
   await returnedMenu.locator('[data-menu-order-sheet]:not([hidden]) [data-selected-menu-name]').waitFor({state: 'visible', timeout: 10000});
   const menuResult = await returnedMenu.evaluate(({storeId}) => ({

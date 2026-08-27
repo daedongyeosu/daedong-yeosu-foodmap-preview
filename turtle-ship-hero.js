@@ -71,7 +71,9 @@
   }
 
   function customerAlreadyInteracted() {
-    return window.daedongHasHomeInteraction?.() === true;
+    return window.daedongHasHomeInteraction?.() === true
+      || window.daedongEntryHadExternalReturn === true
+      || document.documentElement.classList.contains('daedong-external-return-pending');
   }
 
   function homeIsClear() {
