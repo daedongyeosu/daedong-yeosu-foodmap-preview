@@ -27,6 +27,10 @@ assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?daedongResetOrderMethods
 assert.match(rc2, /function rc2ConfirmIntentionalStoreOpen\(\) \{[\s\S]*?rc2InvalidatePendingReturnRestores\(\)/, '첫 터치에서 지연 복귀 작업부터 취소해야 합니다.');
 assert.match(rc2, /const restoreEpoch = rc2ReturnLifecycleEpoch[\s\S]*?rc2ReturnRestoreCancelled\(restoreEpoch\)/, '비동기 복귀 작업은 화면을 바꾸기 전에 취소 세대를 확인해야 합니다.');
 assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?preventDefault\(\)[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?(?:rc3OpenOrderMethods|openCommunityChoice)[\s\S]*?setTimeout\(\(\) => \{[\s\S]*?daedongConfirmIntentionalSurfaceNavigation\?\.\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)[\s\S]*?\}, 0\)/, '카카오 첫 터치는 주문방법 화면을 먼저 열고 history 정리는 다음 작업으로 미뤄야 합니다.');
+assert.match(rc3, /function rc3ActivateOrderMethodsFallback\(trigger, event\)[\s\S]*?rc3OrderMethodsGhostActive\(storeId\)[\s\S]*?rc3MarkOrderMethodsActivation\(storeId\)[\s\S]*?rc3ActivateOrderMethodsTrigger\(trigger, event\)/, '복원된 HTML 버튼의 클릭 대체 경로도 중복 실행을 막고 주문방법 화면을 열어야 합니다.');
+assert.match(rc3, /data-rc3-other-methods=[\s\S]*?onclick="return window\.daedongActivateOrderMethodsFallback \? window\.daedongActivateOrderMethodsFallback\(this, event\) : false"/, '카카오가 이벤트 없는 HTML만 복원해도 버튼 자체에 지속 가능한 클릭 대체 경로가 남아야 합니다.');
+assert.match(rc3, /function rc3BindOrderMethodsTrigger\(detail, \{force = false\} = \{\}\)[\s\S]*?force && trigger\.__rc3DirectOrderMethodsBound[\s\S]*?cloneNode\(true\)[\s\S]*?replaceWith\(replacement\)/, '복귀 재연결은 카카오가 남긴 오래된 바인딩 표식을 믿지 말고 버튼 노드를 교체해야 합니다.');
+assert.match(rc3, /window\.daedongRebindOrderMethodsTrigger = \(\) => \{[\s\S]*?rc3BindOrderMethodsTrigger\([\s\S]*?\{force: true\}\)/, '주문앱 복귀 재연결은 강제 모드로 실행되어야 합니다.');
 assert.match(rc3, /window\.daedongActivateOrderMethodsTrigger = rc3ActivateOrderMethodsTrigger/, '초기 공용 터치 계층이 주문방법 버튼을 직접 열 수 있어야 합니다.');
 const earlyBridgeIndex = finalExperience.indexOf("selector:'[data-rc3-other-methods]'");
 const rc2LoaderIndex = finalExperience.indexOf("const fxRc2Script=document.createElement('script')");
@@ -45,6 +49,7 @@ for (const [name, source] of [['final-experience.js', finalExperience], ['index.
   assert.match(source, /order-sheet-before-history-1/, `${name} 카카오 주문방법 화면 우선 표시 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /restored-button-direct-touch-1/, `${name} 복원된 버튼 직접 터치 수정 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /visible-return-rebind-1/, `${name} 카카오 보이는 상세 복귀 재연결 캐시 버전이 갱신되어야 합니다.`);
+  assert.match(source, /restored-inline-fallback-1/, `${name} 카카오 복원 HTML 클릭 대체 경로 캐시 버전이 갱신되어야 합니다.`);
 }
 assert.match(index, /real-second-tap-after-sheet-1/, '새 주문방법 화면의 정상 두 번째 터치 수정 캐시 버전이 갱신되어야 합니다.');
 
