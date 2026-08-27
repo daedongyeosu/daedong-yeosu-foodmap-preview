@@ -84,6 +84,19 @@ const context = await browser.newContext({
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
   sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
+  window.__returnedOrderMethodTouchState = [];
+  const recordReturnedOrderMethodTouch = event => {
+    if (!event.target?.closest?.('[data-rc3-other-methods]')) return;
+    window.__returnedOrderMethodTouchState.push({
+      type: event.type,
+      returnStatePresent: Boolean(
+        sessionStorage.getItem('daedongExternalReturnRc2')
+        || localStorage.getItem('daedongExternalReturnRc2')
+      )
+    });
+  };
+  document.addEventListener('pointerdown', recordReturnedOrderMethodTouch, true);
+  document.addEventListener('pointerup', recordReturnedOrderMethodTouch, true);
 });
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 await context.route('**/*.woff2', route => route.abort());
@@ -208,6 +221,7 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     Promise.resolve(new URL(page.url()).origin === baseOrigin && context.pages().length === 1),
     `${storeName} 외부 주문앱을 열 때 원본 Preview 현재 탭 보존`
   );
+  await page.evaluate(() => window.dispatchEvent(new Event('blur')));
   const preparedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await preparedTrigger.waitFor({state: 'visible', timeout: 3000});
   await preparedTrigger.evaluate(element => { element.dataset.testPreparedBeforeReturn = '1'; });
@@ -227,6 +241,10 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
       window.dispatchEvent(new Event('focus'));
     });
   } else {
+    // A focus-only Kakao return is accepted after the short hand-off bounce
+    // window. Model actual time spent in the order app instead of an immediate
+    // synthetic focus that the production code correctly ignores.
+    await page.waitForTimeout(700);
     await page.evaluate(() => window.dispatchEvent(new Event('focus')));
   }
   await page.waitForFunction(
@@ -252,6 +270,12 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   });
   await check(Promise.resolve(returnedHitTarget), `${storeName} 복귀 뒤 버튼 위에 투명 가림막 없음`);
 
+  const returnStateBeforeRetap = await page.evaluate(() => Boolean(
+    sessionStorage.getItem('daedongExternalReturnRc2')
+    || localStorage.getItem('daedongExternalReturnRc2')
+  ));
+  await check(Promise.resolve(returnStateBeforeRetap), `${storeName} 복귀 뒤 첫 터치 전 복귀 보호 상태 유지`);
+  await page.evaluate(() => { window.__returnedOrderMethodTouchState = []; });
   await returnedTrigger.tap();
   await page.waitForFunction(
     () => document.querySelector('#modal:not([hidden]) .order-methods-sheet')?.getBoundingClientRect().height > 0,
@@ -262,6 +286,19 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
     `${storeName} 외부 주문앱 복귀 뒤 두 번째 터치로 다시 열림`
   );
+  const retapLifecycle = await page.evaluate(() => window.__returnedOrderMethodTouchState || []);
+  await check(
+    Promise.resolve(
+      retapLifecycle.some(item => item.type === 'pointerdown' && item.returnStatePresent)
+      && retapLifecycle.some(item => item.type === 'pointerup' && item.returnStatePresent)
+    ),
+    `${storeName} 재터치의 pointerdown·pointerup 동안 history 복귀 토큰을 변경하지 않음`
+  );
+  await page.waitForFunction(() => (
+    !sessionStorage.getItem('daedongExternalReturnRc2')
+    && !localStorage.getItem('daedongExternalReturnRc2')
+  ), null, {polling: 25, timeout: 3000});
+  await check(Promise.resolve(true), `${storeName} 재터치 완료 뒤 복귀 보호 상태 정리`);
 }
 
 async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiyo = false} = {}) {

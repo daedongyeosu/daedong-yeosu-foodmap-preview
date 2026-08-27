@@ -36,6 +36,7 @@ const sandbox = {
   },
   URL,
   rc2ResetExternalDepartureLifecycle() {},
+  rc2CancelRestoredReturnSettlement() {},
   rc2ClearDurableReturn() { durableCleared += 1; },
   openStore(store) { openedStore = store; return true; }
 };

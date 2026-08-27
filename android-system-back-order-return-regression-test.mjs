@@ -81,7 +81,10 @@ assert.match(rc2, /function rc2ArmRestoredReturnLease\(key, saved\)[\s\S]*?rc2Re
   '복원 직후에는 일회용 복귀표를 고객의 첫 조작까지 유지해야 합니다.');
 assert.match(rc2, /function rc2SettleRestoredReturnLease\(\)[\s\S]*?rc2ClearReturnState\(lease\.key, lease\.saved\)[\s\S]*?rc2ClearDurableReturn/,
   '고객이 복원 화면을 확인한 뒤에만 저장소와 쿠키의 복귀표를 함께 정리해야 합니다.');
-assert.match(rc2, /document\.addEventListener\('pointerdown', rc2SettleRestoredReturnLease, true\)/);
+assert.doesNotMatch(rc2, /document\.addEventListener\('(pointerdown|touchstart)', rc2(Settle|Schedule)RestoredReturn/,
+  '첫 손가락이 닿는 동안 history를 변경하면 카카오 WebView가 같은 탭의 클릭을 취소할 수 있습니다.');
+assert.match(rc2, /document\.addEventListener\('pointerup', rc2ScheduleRestoredReturnSettlement, true\)/);
+assert.match(rc2, /document\.addEventListener\('touchend', rc2ScheduleRestoredReturnSettlement/);
 
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*android-system-back-return-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*android-system-back-return-1/);

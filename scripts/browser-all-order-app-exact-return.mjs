@@ -211,7 +211,7 @@ try {
   }));
   await check(Promise.resolve(afterDelayedSystemPop.correctApp), '1.5초 뒤 늦게 도착한 시스템 뒤로가기에도 목록 유지');
   await check(Promise.resolve(afterDelayedSystemPop.returnStateKept), '늦은 시스템 뒤로가기 처리 뒤에도 고객 조작 전 복귀표 유지');
-  await lifecyclePage.locator('#modal:not([hidden]) .modal-card').dispatchEvent('pointerdown', {pointerId: 1, button: 0, clientX: 180, clientY: 420});
+  await lifecyclePage.locator('#modal:not([hidden]) .modal-card').dispatchEvent('pointerup', {pointerId: 1, button: 0, clientX: 180, clientY: 420});
   await lifecyclePage.waitForFunction(() => !sessionStorage.getItem('daedongAppBrowserReturnV1'), null, {timeout: 5000});
   await check(Promise.resolve(true), '복귀 화면에서 고객이 조작하면 일회용 복귀표 소비');
   report.departureLifecycle = {storeId: lifecycleStoreId, afterDepartureBounce, afterConfirmedReturn, afterDelayedSystemPop};
@@ -237,7 +237,7 @@ try {
   }));
   await check(Promise.resolve(focusOnlyReturn.correctApp), 'hidden 신호가 없는 blur→focus 복귀에서도 요기요 목록 유지');
   await check(Promise.resolve(focusOnlyReturn.returnStateKept), '충분히 지난 focus 단독 복귀도 고객 조작 전까지 복귀표 유지');
-  await focusOnlyPage.locator('#modal:not([hidden]) .modal-card').dispatchEvent('pointerdown', {pointerId: 2, button: 0, clientX: 180, clientY: 420});
+  await focusOnlyPage.locator('#modal:not([hidden]) .modal-card').dispatchEvent('pointerup', {pointerId: 2, button: 0, clientX: 180, clientY: 420});
   await focusOnlyPage.waitForFunction(() => !sessionStorage.getItem('daedongAppBrowserReturnV1'), null, {timeout: 5000});
   report.departureLifecycle.focusOnlyReturn = focusOnlyReturn;
   await focusOnlyPage.close();
@@ -312,7 +312,7 @@ try {
     await check(Promise.resolve(offsetDelta <= 3), `${app.label}: 보던 가게의 화면 위치 유지`);
     report.apps.push({key: app.key, label: app.label, storeId: before.storeId, before, after, offsetDelta, immediate, settled});
     await returned.screenshot({path: `browser-order-return-${app.key}.png`, fullPage: false});
-    await returned.locator('#modal:not([hidden]) .modal-card').dispatchEvent('pointerdown', {
+    await returned.locator('#modal:not([hidden]) .modal-card').dispatchEvent('pointerup', {
       pointerId: 3,
       button: 0,
       clientX: 180,
@@ -360,7 +360,7 @@ try {
   await check(Promise.resolve(menuResult.selectedMenu === '복귀 검증 메뉴 11'), '가게 음식보기에서 주문앱 복귀 시 선택한 메뉴 주문창 복구');
   report.menu = menuResult;
   await returnedMenu.screenshot({path: 'browser-order-return-menu.png', fullPage: false});
-  await returnedMenu.locator('[data-store-menu-overlay]:not([hidden]) .store-menu-preview').dispatchEvent('pointerdown', {
+  await returnedMenu.locator('[data-store-menu-overlay]:not([hidden]) .store-menu-preview').dispatchEvent('pointerup', {
     pointerId: 4,
     button: 0,
     clientX: 180,

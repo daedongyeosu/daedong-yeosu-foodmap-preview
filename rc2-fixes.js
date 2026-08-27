@@ -10,6 +10,7 @@ const RC2_RETURN_GUARD_PARAM = '__ddguard';
 const RC2_DURABLE_RETURN_COOKIE = 'daedongOrderReturnV1';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
 const RC2_FOCUS_ONLY_RETURN_DELAY_MS = 650;
+const RC2_RETURN_SETTLE_DELAY_MS = 500;
 const RC2_RETURN_STORAGE_KEYS = [RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN];
 const RC2_ICON_SPRITE = 'assets/ui/category-icons.svg';
 const RC2_REGION = window.DAEDONG_REGION || {shortName: '여수', mapName: '대동여수음식지도'};
@@ -31,6 +32,7 @@ let rc2SurfaceRestorePromise = null;
 let rc2ExternalDepartureBlurred = false;
 let rc2ExternalDepartureHidden = false;
 let rc2RestoredReturnLease = null;
+let rc2RestoredReturnSettleTimer = 0;
 const rc2PositionStabilizers = new WeakMap();
 
 function rc2FreshReturnState(saved) {
@@ -161,7 +163,7 @@ function rc2ConfirmIntentionalStoreOpen() {
   // leaving them armed lets a newly opened detail be replaced by home.
   globalThis.daedongMarkHomeInteraction?.();
   rc2ResetExternalDepartureLifecycle();
-  rc2RestoredReturnLease = null;
+  rc2CancelRestoredReturnSettlement();
   for (const key of RC2_RETURN_STORAGE_KEYS) {
     try { sessionStorage.removeItem(key); } catch {}
     try { localStorage.removeItem(key); } catch {}
@@ -198,6 +200,7 @@ function rc2PrepareStoreIntent(event) {
 window.daedongConfirmIntentionalStoreOpen = rc2ConfirmIntentionalStoreOpen;
 
 function rc2WriteReturnState(key, value) {
+  rc2CancelRestoredReturnSettlement();
   rc2ResetExternalDepartureLifecycle();
   const returnToken = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
   const payload = {...value, returnToken, savedAt: Date.now()};
@@ -376,17 +379,41 @@ function rc2StabilizeReturnPosition(saved, card = $('#modal .modal-card')) {
 
 function rc2ArmRestoredReturnLease(key, saved) {
   if (!RC2_RETURN_STORAGE_KEYS.includes(key) || !saved?.returnToken) return false;
+  if (rc2RestoredReturnSettleTimer) {
+    clearTimeout(rc2RestoredReturnSettleTimer);
+    rc2RestoredReturnSettleTimer = 0;
+  }
   rc2RestoredReturnLease = {key, saved};
   globalThis.daedongLastValidatedExternalReturnAt = Date.now();
   return true;
 }
 
+function rc2CancelRestoredReturnSettlement() {
+  if (rc2RestoredReturnSettleTimer) clearTimeout(rc2RestoredReturnSettleTimer);
+  rc2RestoredReturnSettleTimer = 0;
+  rc2RestoredReturnLease = null;
+}
+
 function rc2SettleRestoredReturnLease() {
   const lease = rc2RestoredReturnLease;
   if (!lease) return false;
+  const current = rc2ReadReturnState(lease.key);
+  if (String(current?.returnToken || '') !== String(lease.saved.returnToken || '')) {
+    rc2RestoredReturnLease = null;
+    return false;
+  }
   rc2RestoredReturnLease = null;
   rc2ClearReturnState(lease.key, lease.saved);
   rc2ClearDurableReturn(lease.saved.returnToken);
+  return true;
+}
+
+function rc2ScheduleRestoredReturnSettlement() {
+  if (!rc2RestoredReturnLease || rc2RestoredReturnSettleTimer) return false;
+  rc2RestoredReturnSettleTimer = setTimeout(() => {
+    rc2RestoredReturnSettleTimer = 0;
+    rc2SettleRestoredReturnLease();
+  }, RC2_RETURN_SETTLE_DELAY_MS);
   return true;
 }
 
@@ -1245,10 +1272,10 @@ fxInstallEvents = function rc2InstallEvents() {
   window.daedongCoreEventsInstalled = true;
   document.addEventListener('pointerdown', rc2PrepareStoreIntent, true);
   document.addEventListener('touchstart', rc2PrepareStoreIntent, {capture: true, passive: true});
-  document.addEventListener('pointerdown', rc2SettleRestoredReturnLease, true);
-  document.addEventListener('touchstart', rc2SettleRestoredReturnLease, {capture: true, passive: true});
-  document.addEventListener('wheel', rc2SettleRestoredReturnLease, {capture: true, passive: true});
-  document.addEventListener('keydown', rc2SettleRestoredReturnLease, true);
+  document.addEventListener('pointerup', rc2ScheduleRestoredReturnSettlement, true);
+  document.addEventListener('touchend', rc2ScheduleRestoredReturnSettlement, {capture: true, passive: true});
+  document.addEventListener('wheel', rc2ScheduleRestoredReturnSettlement, {capture: true, passive: true});
+  document.addEventListener('keyup', rc2ScheduleRestoredReturnSettlement, true);
   document.addEventListener('pointerdown', fxPressStart, true);
   document.addEventListener('pointerup', rc2ReleaseAllPresses, true);
   document.addEventListener('pointercancel', rc2ReleaseAllPresses, true);
