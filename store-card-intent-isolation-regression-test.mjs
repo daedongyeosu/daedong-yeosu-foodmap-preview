@@ -27,6 +27,7 @@ const sandbox = {
   RC2_RETURN_GUARD_STATE: 'daedongExternalReturnGuard',
   RC2_RETURN_TOKEN_PARAM: '__ddret',
   RC2_RETURN_GUARD_PARAM: '__ddguard',
+  RC2_APP_FALLBACK_PARAM: '__ddappfallback',
   sessionStorage: storage(),
   localStorage: storage(),
   location: {href: 'https://daedongmap.com/?fresh=1&__ddret=old&__ddguard=old'},

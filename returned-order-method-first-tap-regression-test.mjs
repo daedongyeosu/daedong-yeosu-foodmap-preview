@@ -62,5 +62,9 @@ for (const [name, source] of [['final-experience.js', finalExperience], ['index.
   assert.match(source, /return-document-navigation-1/, `${name} 카카오 복귀 강제 문서 이동 캐시 버전이 갱신되어야 합니다.`);
 }
 assert.match(index, /real-second-tap-after-sheet-1/, '새 주문방법 화면의 정상 두 번째 터치 수정 캐시 버전이 갱신되어야 합니다.');
+assert.match(app, /function kakaoPreviewFallbackUrl\(key\)[\s\S]*?key !== 'coupang' \|\| !isKakaoInAppBrowser\(\)[\s\S]*?KAKAO_APP_FALLBACK_PARAM/, '카카오 쿠팡 fallback은 멈춘 외부 웹페이지 대신 Preview 복귀 문서를 사용해야 합니다.');
+assert.match(rc2, /const RC2_APP_FALLBACK_PARAM = '__ddappfallback'/, 'Preview fallback URL 표식을 복귀 완료 후 정리할 수 있어야 합니다.');
+assert.match(rc2, /function rc2ClearReturnState\(key, saved = null\)[\s\S]*?returnUrl\.searchParams\.delete\(RC2_APP_FALLBACK_PARAM\)/, '복귀 상태를 정리할 때 Preview fallback URL 표식도 제거해야 합니다.');
+assert.match(index, /appFallbackParam = '__ddappfallback'[\s\S]*?entryUrl\.searchParams\.delete\(appFallbackParam\)/, '유효한 복귀 상태가 없는 진입에서도 Preview fallback 표식이 남으면 안 됩니다.');
 
 console.log('PASS 외부 주문앱 복귀 뒤 다른 주문방법 첫 터치 회귀검사');

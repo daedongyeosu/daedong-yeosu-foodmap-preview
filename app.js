@@ -1040,6 +1040,17 @@ const ANDROID_ROUTE_PACKAGES = Object.freeze({
   baemin: 'com.woowahan.bros',
   naver: 'com.nhn.android.nmap'
 });
+const KAKAO_APP_FALLBACK_PARAM = '__ddappfallback';
+function kakaoPreviewFallbackUrl(key) {
+  if (key !== 'coupang' || !isKakaoInAppBrowser()) return '';
+  try {
+    const fallbackUrl = new URL(location.href);
+    fallbackUrl.searchParams.set(KAKAO_APP_FALLBACK_PARAM, key);
+    return fallbackUrl.href;
+  } catch {
+    return '';
+  }
+}
 function androidPackageIntent(key, href) {
   if (!isAndroidBrowser() || !ANDROID_ROUTE_PACKAGES[key]) return '';
   try {
@@ -1047,7 +1058,13 @@ function androidPackageIntent(key, href) {
     if (!['http:', 'https:'].includes(url.protocol)) return '';
     const scheme = url.protocol.slice(0, -1);
     const path = `${url.host}${url.pathname}${url.search}${url.hash}`;
-    return `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${ANDROID_ROUTE_PACKAGES[key]};S.browser_fallback_url=${encodeURIComponent(url.href)};end;`;
+    // Kakao on Samsung can retain the fallback page as an extra browser
+    // history entry even after Coupang Eats opens successfully. Returning
+    // through that third-party page leaves the old Preview Activity visible
+    // but unable to deliver taps. Keep the fallback in the already-tokenized
+    // Preview document so Android Back returns to a fresh first-party surface.
+    const browserFallbackUrl = kakaoPreviewFallbackUrl(key) || url.href;
+    return `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${ANDROID_ROUTE_PACKAGES[key]};S.browser_fallback_url=${encodeURIComponent(browserFallbackUrl)};end;`;
   } catch {
     return '';
   }
