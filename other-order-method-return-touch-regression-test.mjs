@@ -20,6 +20,9 @@ assert.match(rc3, /window\.daedongResetOrderMethodsTouchState = rc3ResetOrderMet
 assert.match(app, /function handleKakaoOrderLinkClick\(event\)[\s\S]*?rc2RememberExternalReturn\(link\)[\s\S]*?void window\.daedongLaunchMobileRoute\(key, href\)/, '카카오 전용 처리기는 비교화면의 주문 계속 링크도 복귀 상태를 저장한 뒤 앱 패키지 경로로 열어야 합니다.');
 assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?rc2RememberExternalReturn\(link\)[\s\S]*?void window\.daedongLaunchMobileRoute\(mobileOrderRouteKey\(link\), href\)/, '모바일 공통 처리기는 비교화면의 주문 계속 링크도 복귀 상태를 저장한 뒤 앱 패키지 경로로 열어야 합니다.');
 assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rebuildExisting[\s\S]*?rc2NativeHardClose\(\{fromPop: true\}\)[\s\S]*?await openStore\(store\)[\s\S]*?rc2StabilizeReturnPosition\(saved, \$\('#modal \.modal-card'\)\)/, '복귀 시 같은 가게가 보여도 카카오의 오래된 네이티브 모달 표면을 내린 뒤 새 상세 DOM으로 교체해야 합니다.');
+assert.match(rc2, /function rc2ReloadReturnedDocumentOnce\(saved\) \{[\s\S]*?RC2_RETURN_DOCUMENT_RELOAD[\s\S]*?daedong-external-return-pending[\s\S]*?location\.reload\(\)/, 'DOM 밖에 남은 카카오 WebView 터치 표면은 복귀 토큰별 문서 재로드로 갱신해야 합니다.');
+assert.match(rc2, /documentReturnToken[\s\S]*?documentFreshForReturn[\s\S]*?rc2ReloadReturnedDocumentOnce\(saved\)/, '현재 문서가 해당 복귀 토큰으로 새로 만들어지지 않았을 때만 재로드해야 합니다.');
+assert.match(index, /window\.daedongEntryExternalReturnToken = String\(pending\.saved\.returnToken \|\| ''\)/, '새 문서의 조기 복원 단계가 담당 복귀 토큰을 기록해야 합니다.');
 const visibleStoreBranch = rc2.slice(rc2.indexOf('if (visibleStoreMatches)'), rc2.indexOf('if (!modal?.hidden)', rc2.indexOf('if (visibleStoreMatches)')));
 assert.match(visibleStoreBranch, /daedong-external-return-pending[\s\S]*?rc2NativeHardClose\(\{fromPop: true\}\)[\s\S]*?requestAnimationFrame\(\(\) => requestAnimationFrame\(resolve\)\)[\s\S]*?rc2ReplaceNextModal = true[\s\S]*?await openStore\(store\)[\s\S]*?rc2ReturnRebuiltToken[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved/, '카카오 복귀 상세는 홈을 가리는 동안 네이티브 표면을 두 프레임 내린 뒤 같은 히스토리 엔트리에서 재구성해야 합니다.');
 assert.match(rc2, /const opened = await openStore\(store\);[\s\S]*?restoredStoreId[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '가게 상세를 새로 연 복귀 경로도 위치를 고정하기 전에 주문방법 버튼을 다시 연결해야 합니다.');
@@ -33,7 +36,7 @@ assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?wi
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');
-assert.match(browserCheck, /dataset\.testPreparedBeforeReturn = '1'[\s\S]*dataset\.testPreparedBeforeReturn !== '1'[\s\S]*오래된 상세 DOM을 첫 터치 전에 전체 재구성/, '출발 전 상세 DOM을 복귀 시 새 터치 표면으로 교체하는 실제 브라우저 검사가 없습니다.');
+assert.match(browserCheck, /dataset\.testPreparedBeforeReturn = '1'[\s\S]*navigationType === 'reload'[\s\S]*dataset\.testPreparedBeforeReturn !== '1'[\s\S]*오래된 상세 DOM이 새 문서 스냅샷으로 교체됨/, '출발 전 상세 DOM을 복귀 시 새 문서와 터치 표면으로 교체하는 실제 브라우저 검사가 없습니다.');
 assert.match(browserCheck, /pointerdown[\s\S]*returnStatePresent[\s\S]*pointerup[\s\S]*returnStatePresent/, '복귀 뒤 첫 재터치 도중 history 토큰을 그대로 유지하는 검사가 필요합니다.');
 assert.match(rc2, /document\.addEventListener\('pointerup', rc2ScheduleRestoredReturnSettlement, true\)/, '복귀 상태는 첫 손가락 누름이 아니라 활성화가 끝난 뒤 정리해야 합니다.');
 assert.doesNotMatch(rc2, /document\.addEventListener\('pointerdown', rc2SettleRestoredReturnLease/, '첫 pointerdown에서 history를 바꾸면 카카오 WebView가 버튼 클릭을 취소할 수 있습니다.');
@@ -58,6 +61,8 @@ assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*order-methods-return-stab
 assert.match(index, /final-experience\.js\?v=[^"\n]*order-methods-return-stable-dom-1/, '복귀 수정 로더 캐시 버전이 갱신되어야 합니다.');
 assert.match(index, /final-experience\.js\?v=[^"\n]*return-first-tap-2/, '복귀 뒤 첫 터치 수정 로더 캐시 버전이 갱신되어야 합니다.');
 assert.match(index, /final-experience\.js\?v=[^"\n]*return-intent-cancel-1/, '복귀 뒤 전체 생명주기 취소 로더 캐시 버전이 갱신되어야 합니다.');
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*return-document-reload-1/, '문서 재로드 수정 rc2 캐시 버전이 갱신되어야 합니다.');
+assert.match(index, /final-experience\.js\?v=[^"\n]*return-document-reload-1/, '문서 재로드 수정 로더 캐시 버전이 갱신되어야 합니다.');
 
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {
   assert.match(source, /order-methods-return-touch-5/, `${name} 캐시 버전이 갱신되어야 합니다.`);
