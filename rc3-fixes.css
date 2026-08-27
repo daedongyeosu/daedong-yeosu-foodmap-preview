@@ -73,6 +73,36 @@
 .rc3-order-methods-trigger > * {
   pointer-events: none !important;
 }
+.rc3-order-methods-inline[hidden] { display: none !important; }
+.rc3-order-methods-inline {
+  position: relative;
+  z-index: 5;
+  margin: -1px 0 12px;
+  padding: 14px;
+  border: 1px solid #ffd2c2;
+  border-radius: 18px;
+  background: #fff8f4;
+  box-shadow: 0 8px 22px rgba(24, 55, 78, .08);
+}
+.rc3-order-methods-inline-head { position: relative; padding-right: 48px; }
+.rc3-order-methods-inline-head > span { color: #657080; font-size: 12px; font-weight: 800; }
+.rc3-order-methods-inline .selected-store-name { margin-bottom: 5px; }
+.rc3-order-methods-inline-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e3e7eb;
+  border-radius: 50%;
+  background: #fff;
+  color: #20262d;
+  font-size: 26px;
+  line-height: 1;
+  pointer-events: auto !important;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(255, 90, 31, .12);
+}
 .order-methods-sheet .selected-store-name,
 .community-guide .selected-store-name {
   display: block;

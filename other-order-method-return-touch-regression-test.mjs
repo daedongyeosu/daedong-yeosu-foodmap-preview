@@ -58,8 +58,10 @@ assert.match(finalExperience, /function fxOpenSharedStoreFromUrl\(\)[\s\S]*?fxPr
 assert.match(finalExperience, /function fxFinishOrderMethodReentry\(saved[\s\S]*?sessionStorage\.removeItem\(FX_ORDER_METHOD_REENTRY\)[\s\S]*?requestAnimationFrame\(\(\)=>requestAnimationFrame\([\s\S]*?daedongFinishExternalReturnBoot/, '새 상세가 두 프레임 그려진 뒤 복귀 보호화면을 해제해야 합니다.');
 const finishOrderReentry = finalExperience.match(/function fxFinishOrderMethodReentry\(saved[\s\S]*?\n\}/)?.[0] || '';
 assert.doesNotMatch(finishOrderReentry, /history\.replaceState/, '상세 모달을 만든 뒤 history를 바꾸면 실제 버튼 표면이 다시 죽을 수 있습니다.');
-assert.match(browserCheck, /reentryDocumentStartedAt[\s\S]*?\.modal-close'\)\.tap\(\)[\s\S]*?performance\.timeOrigin !== previous[\s\S]*?markerInStorage[\s\S]*?상세 재진입 뒤 첫 터치로 다른 주문방법 선택창 다시 열림/, '실제 브라우저 검사는 닫기 실제 터치, 새 문서 생성, 상세 재진입 직후 첫 터치를 포함해야 합니다.');
-assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?rc3OpenOrderMethods\(store\)[\s\S]*?setTimeout\(\(\) => \{[\s\S]*?daedongConfirmIntentionalSurfaceNavigation\?\.\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)/, '실기기에서는 복귀 작업을 즉시 무효화하고 주문방법 창을 먼저 표시한 뒤 history를 정리해야 합니다.');
+assert.match(browserCheck, /inlineDocumentStartedAt[\s\S]*?data-rc3-order-methods-close[\s\S]*?timeOrigin === inlineDocumentStartedAt[\s\S]*?url === inlineDocumentUrl[\s\S]*?인라인 닫기 뒤 두 번째 터치로 다른 주문방법 선택창 다시 열림/, '실제 브라우저 검사는 닫기와 두 번째 터치 사이에 문서·URL이 그대로인지 확인해야 합니다.');
+assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?if \(singleExternalKey\)[\s\S]*?else \{[\s\S]*?rc3OpenOrderMethods\(store, trigger\)/, '여러 주문방법 보기는 외부 복귀·히스토리 처리 없이 같은 상세의 인라인 영역만 열어야 합니다.');
+const inlineOrderMethods = rc3.match(/function rc3OpenOrderMethods\(store, trigger\) \{[\s\S]*?\n\}/)?.[0] || '';
+assert.doesNotMatch(inlineOrderMethods, /openModal|history\.|location\./, '두 번째 실손 터치를 위해 주문방법 열기/닫기에서 표면 교체를 완전히 제거해야 합니다.');
 
 const clickGuardIndex = rc3.indexOf("const other = event.target.closest('[data-rc3-other-methods]')");
 const globalClickHandlerIndex = rc3.indexOf('function rc3HandleClick(event)');
@@ -83,6 +85,7 @@ assert.match(index, /final-experience\.js\?v=[^"\n]*reentered-order-method-surfa
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*physical-order-reentry-document-1/, '실손 터치 재진입 문서 수정 rc2 캐시 버전이 갱신되어야 합니다.');
 assert.match(index, /final-experience\.js\?v=[^"\n]*physical-order-reentry-document-1/, '실손 터치 재진입 문서 수정 로더 캐시 버전이 갱신되어야 합니다.');
 assert.match(index, /final-experience\.js\?v=[^"\n]*physical-order-hit-surface-1/, '실손 히트테스트 표면 수정 로더 캐시 버전이 갱신되어야 합니다.');
+assert.match(index, /final-experience\.js\?v=[^"\n]*inline-order-methods-1/, '인라인 주문방법 구조 변경 로더 캐시 버전이 갱신되어야 합니다.');
 
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {
   assert.match(source, /order-methods-return-touch-5/, `${name} 캐시 버전이 갱신되어야 합니다.`);

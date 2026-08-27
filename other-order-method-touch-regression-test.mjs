@@ -34,6 +34,11 @@ assert.match(rc3, /trigger\.addEventListener\('pointerdown'[\s\S]*?trigger\.addE
 assert.match(rc3, /trigger\.addEventListener\('touchstart'[\s\S]*?trigger\.addEventListener\('touchend'/, '문서 위임이 끊긴 카카오 복귀 화면을 위한 버튼 직접 터치 경로가 없습니다.');
 assert.match(rc2, /function rc2RestoreSnapshot\(snapshot\) \{[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\)/, 'HTML 스냅샷 복원 직후 버튼 직접 이벤트를 다시 연결하지 않습니다.');
 assert.match(rc3, /orderAnchor\?\.insertAdjacentHTML[\s\S]*?rc3BindOrderMethodsTrigger\(detail\);/, '가게 상세를 그린 뒤 위임 터치 표식이 연결되지 않습니다.');
+assert.match(rc3, /data-rc3-inline-order-methods=[\s\S]*?hidden[\s\S]*?data-rc3-order-methods-close/, '외부 주문방법은 가게 상세 DOM 안에 처음부터 숨김 상태로 렌더링되어야 합니다.');
+const inlineOpenFunction = rc3.match(/function rc3OpenOrderMethods\(store, trigger\) \{[\s\S]*?\n\}/)?.[0] || '';
+assert.match(inlineOpenFunction, /rc3SetInlineOrderMethods\(trigger, panel\.hidden\)/, '주문방법 버튼은 같은 상세 DOM의 hidden 상태만 전환해야 합니다.');
+assert.doesNotMatch(inlineOpenFunction, /openModal|history\.|location\./, '주문방법 보기에서 모달·히스토리·문서를 교체하면 실기기 두 번째 터치가 다시 죽습니다.');
+assert.match(finalExperience, /selector:'\[data-rc3-order-methods-close\]'[\s\S]*?daedongCloseInlineOrderMethods/, '인라인 닫기 버튼도 공용 원시 터치 경로를 사용해야 합니다.');
 
 assert.match(rc2, /const storeSnapshot = \[current, \.\.\.rc2ModalStack\.slice\(\)\.reverse\(\)\]\.find\(snapshot => \{[\s\S]*?\.store-detail\[data-store-id\]/, '여러 겹 주문 모달에서도 원래 가게 상세 복귀 경로를 찾지 못합니다.');
 assert.match(rc2, /if \(comparedExternal\)[\s\S]*?event\.stopImmediatePropagation\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)/, '외부 주문앱 이동 전에 진입 화면과 관계없이 같은 가게 복귀 상태를 저장하고 화면을 안정화해야 합니다.');
@@ -69,5 +74,8 @@ assert.match(html, /final-experience\.js\?v=[^"\n]*order-methods-return-touch-5/
 assert.match(finalExperience, /rc3-fixes\.css\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.css 캐시 갱신 표식이 없습니다.');
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*order-methods-return-touch-5/, 'rc3-fixes.js 캐시 갱신 표식이 없습니다.');
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*mobile-order-selection-ghost-2/, '주문방법 잔여 클릭 수정의 캐시 갱신 표식이 없습니다.');
+assert.match(html, /final-experience\.js\?v=[^"\n]*inline-order-methods-1/, '인라인 주문방법 로더 캐시 갱신 표식이 없습니다.');
+assert.match(finalExperience, /rc3-fixes\.css\?v=[^'\n]*inline-order-methods-1/, '인라인 주문방법 CSS 캐시 갱신 표식이 없습니다.');
+assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*inline-order-methods-1/, '인라인 주문방법 스크립트 캐시 갱신 표식이 없습니다.');
 
 console.log('other-order-method-touch-regression: PASS');

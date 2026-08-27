@@ -405,15 +405,34 @@ function rc3PopupUtilityLinks(store, {includeChak = true} = {}) {
   return `<div class="detail-quick-links popup-utility-links${utilities.length === 1 ? ' single' : ''}" aria-label="가게 이용 정보">${links}</div>`;
 }
 
-function rc3OpenOrderMethods(store) {
-  if (!store) return;
-  const channels = resolveStoreChannels(store);
-  const routes = Object.values(channels.externalOrder).filter(Boolean);
-  const routeMarkup = routes.map(route => rc3RouteButton(store, route)).join('');
-  if (!routeMarkup) return;
-  openModal(`<section class="order-methods-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">다른 주문방법 보기</h2><span>선택한 가게</span><strong class="selected-store-name">${escapeHtml(store.name)}</strong><div class="order-methods-list">${routeMarkup}</div>${externalAppNoticeMarkup()}</section>`);
-  $('#modal').dataset.activeStoreId = store.id;
+function rc3SetInlineOrderMethods(trigger, open) {
+  const wrap = trigger?.closest('.store-other-wrap');
+  const panel = wrap?.querySelector('[data-rc3-inline-order-methods]');
+  if (!trigger || !panel) return false;
+  panel.hidden = !open;
+  trigger.setAttribute('aria-expanded', String(open));
+  const label = trigger.querySelector('span');
+  const arrow = trigger.querySelector('b');
+  if (label) label.textContent = open ? '다른 주문방법 닫기' : String(trigger.dataset.rc3OrderMethodsLabel || '다른 주문방법 보기');
+  if (arrow) arrow.textContent = open ? '⌃' : '›';
+  return true;
 }
+
+function rc3OpenOrderMethods(store, trigger) {
+  if (!store || !trigger) return false;
+  const panel = trigger.closest('.store-other-wrap')?.querySelector('[data-rc3-inline-order-methods]');
+  if (!panel) return false;
+  return rc3SetInlineOrderMethods(trigger, panel.hidden);
+}
+
+function rc3CloseInlineOrderMethods(closeButton, event) {
+  const trigger = closeButton?.closest('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
+  if (!trigger) return false;
+  event?.preventDefault?.();
+  event?.stopImmediatePropagation?.();
+  return rc3SetInlineOrderMethods(trigger, false);
+}
+window.daedongCloseInlineOrderMethods = rc3CloseInlineOrderMethods;
 
 function rc3OrderMethodsMode(channels) {
   const primary = channels?.primaryOrder || {};
@@ -439,19 +458,24 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
   if (!store) return false;
   event?.preventDefault();
   event?.stopImmediatePropagation();
-  // Stop every stale async restore immediately, but do not mutate history or
-  // storage inside the real pointerup/touchend. Samsung Kakao WebView can drop
-  // the DOM transition when replaceState runs before this tap paints.
+  // Cancel an older external-app restore before it can rebuild this same store
+  // detail after the customer's completed tap. This only invalidates async
+  // work; it does not replace the current DOM, URL, or history entry.
   window.daedongInvalidatePendingReturnRestores?.();
   const singleExternalKey = String(trigger?.dataset.rc3SingleExternal || '');
-  if (singleExternalKey) openCommunityChoice(store, singleExternalKey);
-  else rc3OpenOrderMethods(store);
-  // The new sheet is now synchronously visible. Finish URL/return-token cleanup
-  // in the next task so it cannot cancel the customer's completed tap.
-  setTimeout(() => {
-    window.daedongConfirmIntentionalSurfaceNavigation?.();
-    window.daedongSettleRestoredReturnLeaseNow?.();
-  }, 0);
+  if (singleExternalKey) {
+    openCommunityChoice(store, singleExternalKey);
+    setTimeout(() => {
+      window.daedongConfirmIntentionalSurfaceNavigation?.();
+      window.daedongSettleRestoredReturnLeaseNow?.();
+    }, 0);
+  } else {
+    // Keep the same store-detail DOM and native hit-test surface. Replacing the
+    // modal, history entry, or document after close is what repeatedly leaves
+    // Samsung Kakao WebView with visible pixels but an untappable button.
+    rc3OpenOrderMethods(store, trigger);
+    setTimeout(() => window.daedongSettleRestoredReturnLeaseNow?.(), 0);
+  }
   return true;
 }
 window.daedongActivateOrderMethodsTrigger = rc3ActivateOrderMethodsTrigger;
@@ -705,7 +729,11 @@ function rc3EnhanceStoreDetail(store) {
   const apps = channels.primaryOrder.brandApp || channels.happyOrder ? `<div class="brand-store-actions">${channels.primaryOrder.brandApp ? fxAppAction(channels.primaryOrder.brandApp, 'brand') : ''}${channels.happyOrder ? fxAppAction(channels.happyOrder, 'happy') : ''}</div>` : '';
   const orderMethodsMode = rc3OrderMethodsMode(channels);
   const singleExternalAttribute = orderMethodsMode.singleExternalKey ? ` data-rc3-single-external="${escapeHtml(orderMethodsMode.singleExternalKey)}"` : '';
-  const other = orderMethodsMode.hasExternal ? `<div class="store-other-wrap"><button class="detail-route rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}"${singleExternalAttribute} aria-haspopup="dialog" onclick="return window.daedongActivateOrderMethodsFallback ? window.daedongActivateOrderMethodsFallback(this, event) : false"><span>${escapeHtml(orderMethodsMode.label)}</span><b aria-hidden="true">›</b></button></div>` : '';
+  const externalRoutes = Object.values(channels.externalOrder).filter(Boolean);
+  const inlineMethods = !orderMethodsMode.singleExternalKey && externalRoutes.length
+    ? `<section class="order-methods-sheet rc3-order-methods-inline" data-rc3-inline-order-methods="${escapeHtml(store.id)}" data-store-id="${escapeHtml(store.id)}" hidden><div class="rc3-order-methods-inline-head"><span>선택한 가게</span><strong class="selected-store-name">${escapeHtml(store.name)}</strong><button type="button" class="rc3-order-methods-inline-close" data-rc3-order-methods-close aria-label="다른 주문방법 닫기" onclick="return window.daedongCloseInlineOrderMethods ? window.daedongCloseInlineOrderMethods(this, event) : false">×</button></div><div class="order-methods-list">${externalRoutes.map(route => rc3RouteButton(store, route)).join('')}</div>${externalAppNoticeMarkup()}</section>`
+    : '';
+  const other = orderMethodsMode.hasExternal ? `<div class="store-other-wrap"><button class="detail-route rc3-order-methods-trigger" type="button" data-rc3-other-methods="${escapeHtml(store.id)}" data-rc3-order-methods-label="${escapeHtml(orderMethodsMode.label)}"${singleExternalAttribute} aria-expanded="false"${orderMethodsMode.singleExternalKey ? ' aria-haspopup="dialog"' : ''} onclick="return window.daedongActivateOrderMethodsFallback ? window.daedongActivateOrderMethodsFallback(this, event) : false"><span>${escapeHtml(orderMethodsMode.label)}</span><b aria-hidden="true">›</b></button>${inlineMethods}</div>` : '';
   if (utilities) gallery?.insertAdjacentHTML('afterend', `<div class="detail-quick-links">${utilities}</div>`);
   const menuEntry = detail.querySelector('[data-store-menu-preview]');
   const orderAnchor = menuEntry || detail.querySelector('.detail-meta-row') || gallery;
@@ -877,6 +905,11 @@ function rc3HandleClick(event) {
     rc3ActivateOrderMethodsTrigger(other, event);
     return;
   }
+  const inlineClose = event.target.closest('[data-rc3-order-methods-close]');
+  if (inlineClose) {
+    rc3CloseInlineOrderMethods(inlineClose, event);
+    return;
+  }
   const phone = event.target.closest('[data-rc3-phone-store]');
   if (phone) {
     event.preventDefault();
@@ -891,7 +924,11 @@ function rc3HandleClick(event) {
     const storeId = String(external.dataset.storeId || $('#modal').dataset.activeStoreId || '');
     if (rc3ShouldBlockOrderMethodSelection(external, event, storeId)) return;
     const store = fxStoreById(storeId);
-    if (store) openCommunityChoice(store, external.dataset.rc3ExternalRoute);
+    if (store) {
+      const inlineTrigger = external.closest('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
+      if (inlineTrigger) rc3SetInlineOrderMethods(inlineTrigger, false);
+      openCommunityChoice(store, external.dataset.rc3ExternalRoute);
+    }
     return;
   }
   if (event.target.closest('[data-rc3-final-phone]')) {
