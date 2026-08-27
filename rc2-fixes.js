@@ -198,6 +198,7 @@ function rc2PrepareStoreIntent(event) {
 }
 
 window.daedongConfirmIntentionalStoreOpen = rc2ConfirmIntentionalStoreOpen;
+window.daedongConfirmIntentionalSurfaceNavigation = rc2ConfirmIntentionalStoreOpen;
 
 function rc2WriteReturnState(key, value) {
   rc2CancelRestoredReturnSettlement();
