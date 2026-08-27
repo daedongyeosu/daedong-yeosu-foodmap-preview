@@ -1269,7 +1269,7 @@ function rc2RememberExternalReturn(sourceElement = null) {
   return payload;
 }
 
-function rc2LaunchComparedExternal(link, href) {
+async function rc2LaunchComparedExternal(link, href) {
   if (!link || href === '#') return false;
   const rawKey = String(
     link.dataset?.rc3ExternalRoute
@@ -1282,16 +1282,40 @@ function rc2LaunchComparedExternal(link, href) {
   const kakaoAndroid = /KAKAOTALK/i.test(String(globalThis.navigator?.userAgent || ''))
     && /Android/i.test(String(globalThis.navigator?.userAgent || ''));
   if (routeKey === 'yogiyo' && kakaoAndroid) {
-    // Let Kakao follow Yogiyo's verified HTTPS handoff itself. Forcing the
-    // Yogiyo package intent creates a separate Android task whose own Exit
-    // action returns to the launcher, even while Preview is still alive.
-    // Kakao's HTTPS handoff keeps the browser as the caller/back destination.
-    if (typeof window.daedongLaunchYogiyoFromCurrentKakao === 'function') {
-      void window.daedongLaunchYogiyoFromCurrentKakao(href);
-    } else {
-      window.location.assign(href);
+    // Yogiyo's native app exits its own Android task to the launcher, which
+    // disconnects the customer from the still-alive Kakao Preview document.
+    // Resolve the trusted store shortlink server-side and keep both pages in
+    // Kakao's own history so one Android Back returns to this exact detail.
+    const storeId = String(
+      link.dataset?.storeId
+      || link.closest?.('[data-store-id]')?.dataset?.storeId
+      || document.querySelector?.('#modal')?.dataset?.activeStoreId
+      || ''
+    );
+    const store = typeof fxStoreById === 'function' ? fxStoreById(storeId) : null;
+    if (!store || !window.daedongDataApi?.yogiyoWebRoute) {
+      window.alert('요기요 주문화면을 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.');
+      return false;
     }
-    return true;
+    if (link.dataset?.routeBusy === 'true') return true;
+    link.dataset.routeBusy = 'true';
+    link.setAttribute?.('aria-busy', 'true');
+    try {
+      const resolved = await window.daedongDataApi.yogiyoWebRoute(store.id, {lat: store.lat, lng: store.lng});
+      const yogiyoUrl = String(resolved?.url || '');
+      if (!/^https:\/\/www\.yogiyo\.co\.kr\/mobile\/\?lat=[^#&]+&lng=[^#&]+#\/\d{1,12}$/.test(yogiyoUrl)) {
+        throw new Error('invalid Yogiyo web route');
+      }
+      window.location.assign(yogiyoUrl);
+      return true;
+    } catch (error) {
+      console.warn('yogiyo-web-route-failed', storeId, error);
+      window.alert('요기요 주문화면을 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.');
+      return false;
+    } finally {
+      delete link.dataset.routeBusy;
+      link.removeAttribute?.('aria-busy');
+    }
   }
   // Keep the already prepared Preview store detail in its original Kakao
   // WebView for order apps whose external context survives Kakao reliably.
@@ -1519,7 +1543,7 @@ fxInstallEvents = function rc2InstallEvents() {
       event.preventDefault();
       event.stopImmediatePropagation();
       rc2RememberExternalReturn(comparedExternal);
-      rc2LaunchComparedExternal(comparedExternal, href);
+      void rc2LaunchComparedExternal(comparedExternal, href);
       return;
     }
     const externalLink = event.target.closest('a[target="_blank"],a[data-final-app-channel],a[data-detail-only]');

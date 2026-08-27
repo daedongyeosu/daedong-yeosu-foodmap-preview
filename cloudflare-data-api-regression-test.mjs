@@ -8,6 +8,11 @@ const responses = new Map([
   ['/api/catalog', [{id: 'a'.repeat(16), name: '검증가게'}]],
   [`/api/store/${'a'.repeat(16)}`, {id: 'a'.repeat(16), routes: []}],
   [`/api/store/${'a'.repeat(16)}/menu`, {storeId: 'a'.repeat(16), items: []}],
+  [`/api/store/${'a'.repeat(16)}/yogiyo-web?lat=34.7523658&lng=127.7031405`, {
+    storeId: 'a'.repeat(16),
+    shopId: '332930',
+    url: 'https://www.yogiyo.co.kr/mobile/?lat=34.7523658&lng=127.7031405#/332930'
+  }],
   [`/api/store/${alienStoreId}/menu`, {
     storeId: alienStoreId,
     mainImage: '',
@@ -57,6 +62,12 @@ assert.equal(calls[0].init.cache, 'no-store');
 assert.ok(calls[0].init.signal instanceof AbortSignal, 'API request must carry a bounded abort signal');
 assert.deepEqual(plain(await api.detail('A'.repeat(16))), {id: 'a'.repeat(16), routes: []});
 assert.deepEqual(plain(await api.menu('a'.repeat(16))), {storeId: 'a'.repeat(16), items: []});
+assert.deepEqual(plain(await api.yogiyoWebRoute('a'.repeat(16), {lat: 34.7523658, lng: 127.7031405})), {
+  storeId: 'a'.repeat(16),
+  shopId: '332930',
+  url: 'https://www.yogiyo.co.kr/mobile/?lat=34.7523658&lng=127.7031405#/332930'
+});
+assert.throws(() => api.yogiyoWebRoute('a'.repeat(16), {lat: 0, lng: 0}), /위치/);
 const alienMenu = plain(await api.menu(alienStoreId));
 assert.equal(alienMenu.mainImage, `store-menu-content/${alienStoreId}/main.jpg`);
 assert.deepEqual(
@@ -96,6 +107,7 @@ const services = fs.readFileSync('store-service-info.js', 'utf8');
 const menus = fs.readFileSync('store-menu-preview.js', 'utf8');
 const phoneRuntime = JSON.parse(fs.readFileSync('data/phone-order-runtime.json', 'utf8'));
 assert(index.indexOf('data-api.js') < index.indexOf('app.js'), 'API client must load before the application');
+assert.match(index, /data-api\.js\?v=[^"\n]*yogiyo-web-route-1/, 'Yogiyo web resolver must bypass stale customer caches');
 assert(index.indexOf('data-api-runtime.js') < index.indexOf('app.js'), 'secure detail loader must be ready before the application');
 assert(!index.includes('ddangyo-menu-map.js'));
 assert(!index.includes('ddangyo-preview-runtime.js'));

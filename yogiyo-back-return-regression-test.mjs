@@ -7,20 +7,33 @@ const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
 const browserTest = fs.readFileSync('scripts/browser-yogiyo-back-return.mjs', 'utf8');
 
-const helperStart = rc2.indexOf('function rc2LaunchComparedExternal(link, href)');
+const helperStart = rc2.indexOf('async function rc2LaunchComparedExternal(link, href)');
 const helperEnd = rc2.indexOf('async function rc2RestoreAfterExternalPage', helperStart);
 assert.ok(helperStart >= 0 && helperEnd > helperStart, '주문앱 비교화면 전용 실행기가 있어야 합니다.');
 const helperSource = rc2.slice(helperStart, helperEnd);
 
 const assigned = [];
 const opened = [];
-const kakaoYogiyoLaunches = [];
+const alerts = [];
+const store = {id: 'a'.repeat(16), lat: 34.7523658, lng: 127.7031405};
+const resolvedYogiyoUrl = 'https://www.yogiyo.co.kr/mobile/?lat=34.7523658&lng=127.7031405#/332930';
 const sandbox = {
   navigator: {userAgent: 'Mozilla/5.0 (Linux; Android 15) KAKAOTALK 25.6.0'},
+  document: {querySelector: () => null},
+  fxStoreById: id => id === store.id ? store : null,
+  console,
   window: {
     location: {assign: href => assigned.push(href)},
     open: (...args) => opened.push(args),
-    daedongLaunchYogiyoFromCurrentKakao: href => kakaoYogiyoLaunches.push(href)
+    alert: message => alerts.push(message),
+    daedongDataApi: {
+      yogiyoWebRoute: async (id, coordinates) => {
+        assert.equal(id, store.id);
+        assert.equal(coordinates.lat, store.lat);
+        assert.equal(coordinates.lng, store.lng);
+        return {storeId: id, shopId: '332930', url: resolvedYogiyoUrl};
+      }
+    }
   }
 };
 vm.runInNewContext(`${helperSource}; globalThis.launchComparedExternal = rc2LaunchComparedExternal;`, sandbox);
@@ -30,12 +43,18 @@ const urls = {
   coupang: 'https://orders.example.test/coupang/store',
   baemin: 'https://orders.example.test/baemin/store'
 };
-sandbox.launchComparedExternal({dataset: {communityOriginal: 'yogiyo'}}, urls.yogiyo);
-sandbox.launchComparedExternal({dataset: {communityOriginal: 'coupang'}}, urls.coupang);
-sandbox.launchComparedExternal({dataset: {communityOriginal: 'baemin'}}, urls.baemin);
+const link = (key, includeStore = false) => ({
+  dataset: {communityOriginal: key, ...(includeStore ? {storeId: store.id} : {})},
+  closest: () => null,
+  setAttribute() {},
+  removeAttribute() {}
+});
+await sandbox.launchComparedExternal(link('yogiyo', true), urls.yogiyo);
+await sandbox.launchComparedExternal(link('coupang'), urls.coupang);
+await sandbox.launchComparedExternal(link('baemin'), urls.baemin);
 
-assert.deepEqual(assigned, [], '주문앱 이동 때문에 Preview 현재 탭을 외부 주소로 교체하면 안 됩니다.');
-assert.deepEqual(kakaoYogiyoLaunches, [urls.yogiyo], '카카오 Android의 요기요는 카카오가 직접 처리하는 HTTPS 경로로 실행해야 합니다.');
+assert.deepEqual(assigned, [resolvedYogiyoUrl], '카카오 Android의 요기요는 같은 방문기록의 웹 가게 상세로 이동해야 합니다.');
+assert.deepEqual(alerts, []);
 assert.deepEqual(opened, [
   [urls.coupang, '_blank', 'noopener'],
   [urls.baemin, '_blank', 'noopener']
@@ -56,9 +75,11 @@ assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-live-preview-task-
 assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-live-preview-task-1/);
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-kakao-https-return-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-kakao-https-return-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-kakao-web-return-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-kakao-web-return-1/);
 assert.match(browserTest, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'/);
 assert.match(browserTest, /await restoredDetail\.waitFor\([^\n]*\)\.catch\(async \(\) =>/);
-assert.match(browserTest, /installYogiyoKakaoHandoffProbe[\s\S]*__testedYogiyoKakaoHandoffs[\s\S]*testStableReturn/, '실제 브라우저 검사는 요기요 HTTPS 앱 전환 뒤 같은 상세 DOM 복귀를 확인해야 합니다.');
+assert.match(browserTest, /yogiyo-web[\s\S]*page\.goBack[\s\S]*testStableReturn/, '실제 브라우저 검사는 요기요 웹 상세에서 뒤로가기 한 번으로 같은 상세 DOM 복귀를 확인해야 합니다.');
 
 console.log('yogiyo-back-return-regression-test: pass');
 
