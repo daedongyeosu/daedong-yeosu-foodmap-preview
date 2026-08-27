@@ -1352,6 +1352,34 @@ async function rc2LaunchComparedExternal(link, href) {
   return true;
 }
 
+function rc2SnapshotKeepsInlineOrderMethodsOpen(snapshot) {
+  const html = String(snapshot?.html || '');
+  if (!html) return false;
+  const template = document.createElement('template');
+  template.innerHTML = html;
+  const trigger = template.content.querySelector('[data-rc3-other-methods]');
+  const panel = template.content.querySelector('[data-rc3-inline-order-methods]');
+  return Boolean(
+    trigger
+    && panel
+    && trigger.getAttribute('aria-expanded') === 'true'
+    && !panel.hidden
+  );
+}
+
+function rc2RestoreOpenInlineOrderMethodsFromPendingState() {
+  const saved = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
+  if (!saved || !rc2SnapshotKeepsInlineOrderMethodsOpen(saved.storeSnapshot)) return false;
+  const modal = $('#modal');
+  const detail = modal?.querySelector('.store-detail[data-store-id]');
+  if (
+    modal?.hidden
+    || !detail
+    || String(detail.dataset.storeId || '') !== String(saved.storeId || '')
+  ) return false;
+  return Boolean(window.daedongRestoreInlineOrderMethodsOpen?.(detail));
+}
+
 async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
   if (rc2StoreRestorePromise) return rc2StoreRestorePromise;
   const restoreEpoch = rc2ReturnLifecycleEpoch;
@@ -1374,6 +1402,9 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
       // this already-visible surface after an external app return is what made
       // the real Kakao WebView's next physical tap disappear.
       window.daedongRebindOrderMethodsTrigger?.();
+      if (rc2SnapshotKeepsInlineOrderMethodsOpen(saved.storeSnapshot)) {
+        window.daedongRestoreInlineOrderMethodsOpen?.(modal.querySelector('.store-detail'));
+      }
       rc2DeferredStoreReturnPosition = saved;
       rc2StabilizeReturnPosition(saved, $('#modal .modal-card'));
       if (saved.menuState) {
@@ -1399,6 +1430,9 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
     const restoredStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
     if (modal?.hidden || String(restoredStoreId || '') !== String(saved.storeId)) return false;
     window.daedongRebindOrderMethodsTrigger?.();
+    if (rc2SnapshotKeepsInlineOrderMethodsOpen(saved.storeSnapshot)) {
+      window.daedongRestoreInlineOrderMethodsOpen?.(modal.querySelector('.store-detail'));
+    }
     rc2DeferredStoreReturnPosition = saved;
     rc2StabilizeReturnPosition(saved);
     if (saved.menuState) {
@@ -1593,6 +1627,7 @@ fxInstallEvents = function rc2InstallEvents() {
       return;
     }
     else {
+      rc2RestoreOpenInlineOrderMethodsFromPendingState();
       void rc2RestoreAfterConfirmedResume({rebuildExisting: true}).then(restored => {
         if (restored) window.daedongFinishExternalReturnBoot?.();
         else rc2StartAmbient(false);
@@ -1603,14 +1638,18 @@ fxInstallEvents = function rc2InstallEvents() {
     if (rc2PendingExternalReturnState()) rc2ExternalDepartureHidden = true;
   });
   const restoreAfterNativeResume = () => {
+    rc2RestoreOpenInlineOrderMethodsFromPendingState();
     void rc2RestoreAfterConfirmedResume({rebuildExisting: true}).then(restored => {
       if (restored) window.daedongFinishExternalReturnBoot?.();
     });
   };
   window.addEventListener('pageshow', restoreAfterNativeResume);
-  window.addEventListener('focus', () => rc2RestoreAfterConfirmedResume({rebuildExisting: true}).then(restored => {
-    if (restored) window.daedongFinishExternalReturnBoot?.();
-  }));
+  window.addEventListener('focus', () => {
+    rc2RestoreOpenInlineOrderMethodsFromPendingState();
+    rc2RestoreAfterConfirmedResume({rebuildExisting: true}).then(restored => {
+      if (restored) window.daedongFinishExternalReturnBoot?.();
+    });
+  });
   document.addEventListener('resume', () => {
     if (rc2PendingExternalReturnState()) rc2ExternalDepartureHidden = true;
     restoreAfterNativeResume();

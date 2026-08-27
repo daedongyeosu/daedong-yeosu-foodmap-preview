@@ -43,10 +43,27 @@ const context = await browser.newContext({
   userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/30.0 Chrome/143.0.0.0 Mobile Safari/537.36'
 });
 await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1'));
+await context.addInitScript(({previewOrigin}) => {
+  window.addEventListener('pageshow', () => {
+    if (location.origin !== previewOrigin || !sessionStorage.getItem('daedongExternalReturnRc2')) return;
+    const trigger = document.querySelector('[data-rc3-other-methods]');
+    const panel = document.querySelector('[data-rc3-inline-order-methods]');
+    if (!trigger || !panel || panel.hidden) return;
+    // Samsung Internet can revive the same detail DOM with the inline panel's
+    // native visibility reset. Reproduce that real-device resume before the
+    // application's pageshow restore handler runs.
+    panel.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.querySelector('span').textContent = '다른 주문방법 보기';
+    trigger.querySelector('b').textContent = '›';
+  }, true);
+}, {previewOrigin: baseOrigin});
 if (process.env.PATCH_RC2_FROM_LOCAL === '1') {
   const patchedRc2 = fs.readFileSync(new URL('../rc2-fixes.js', import.meta.url), 'utf8');
+  const patchedRc3 = fs.readFileSync(new URL('../rc3-fixes.js', import.meta.url), 'utf8');
   const patchedDataApi = fs.readFileSync(new URL('../data-api.js', import.meta.url), 'utf8');
   await context.route('**/rc2-fixes.js*', route => route.fulfill({status: 200, contentType: 'text/javascript; charset=utf-8', body: patchedRc2}));
+  await context.route('**/rc3-fixes.js*', route => route.fulfill({status: 200, contentType: 'text/javascript; charset=utf-8', body: patchedRc3}));
   await context.route('**/data-api.js*', route => route.fulfill({status: 200, contentType: 'text/javascript; charset=utf-8', body: patchedDataApi}));
 }
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
@@ -85,7 +102,7 @@ const check = async (condition, message) => {
   if (!ok) throw new Error(message);
 };
 
-const openOrderMethodsRoute = async page => {
+const openOrderMethodsRoute = async (page, {allowOpen = true} = {}) => {
   if (new URL(page.url()).origin !== baseOrigin) await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForFunction(
     () => window.daedongCatalogReady && typeof window.daedongCatalogReady.then === 'function',
@@ -113,9 +130,9 @@ const openOrderMethodsRoute = async page => {
   const otherMethods = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await otherMethods.waitFor({state: 'visible', timeout: 10000});
   const orderMethodsSheet = page.locator('#modal:not([hidden]) .order-methods-sheet');
-  if (!await orderMethodsSheet.isVisible()) await otherMethods.tap();
+  if (!await orderMethodsSheet.isVisible() && allowOpen) await otherMethods.tap();
   const route = page.locator('.order-methods-sheet [data-rc3-external-route="yogiyo"]');
-  await route.waitFor({state: 'visible', timeout: 5000});
+  if (allowOpen || await orderMethodsSheet.isVisible()) await route.waitFor({state: 'visible', timeout: 5000});
   if (!await otherMethods.evaluate(element => Boolean(element.dataset.testStableReturn))) {
     await otherMethods.evaluate(element => { element.dataset.testStableReturn = 'yogiyo'; });
   }
@@ -148,7 +165,7 @@ try {
 
     await page.goBack({waitUntil: 'domcontentloaded'});
     await page.waitForURL(url => url.origin === baseOrigin, {timeout: 10000});
-    surface = await openOrderMethodsRoute(page);
+    surface = await openOrderMethodsRoute(page, {allowOpen: false});
     await check(surface.restoredDetail.isVisible(), `${attempt}회차: 뒤로가기 한 번으로 원래 가게 상세 복귀`);
     await check(surface.orderMethodsSheet.isVisible(), `${attempt}회차: 요기요·쿠팡이츠·배달의민족 목록 열린 상태 유지`);
     await check(surface.otherMethods.evaluate(element => element.dataset.testStableReturn === 'yogiyo'), `${attempt}회차: 새 화면이 아닌 동일 상세 DOM 유지`);

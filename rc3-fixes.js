@@ -425,6 +425,13 @@ function rc3OpenOrderMethods(store, trigger) {
   return rc3SetInlineOrderMethods(trigger, panel.hidden);
 }
 
+function rc3RestoreInlineOrderMethodsOpen(detail = $('#modalContent .store-detail')) {
+  const trigger = detail?.querySelector?.('[data-rc3-other-methods]');
+  if (!trigger) return false;
+  return rc3SetInlineOrderMethods(trigger, true);
+}
+window.daedongRestoreInlineOrderMethodsOpen = rc3RestoreInlineOrderMethodsOpen;
+
 function rc3CloseInlineOrderMethods(closeButton, event) {
   const trigger = closeButton?.closest('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
   if (!trigger) return false;
