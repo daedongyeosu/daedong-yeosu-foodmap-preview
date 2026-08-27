@@ -29,12 +29,14 @@ assert.match(earlyBoot, /window\.addEventListener\('load',[\s\S]*freshEntryLoadR
   'WebView 전체 로드가 끝날 때까지 초기 상단 보호를 유지해야 합니다.');
 assert.match(earlyBoot, /window\.addEventListener\('scroll', blockLateFreshEntryRestore/,
   '카카오가 뒤늦게 복원한 중간 스크롤을 이벤트로 감지해야 합니다.');
-assert.match(earlyBoot, /const finishStableFreshEntry = \(\) =>[\s\S]*requestAnimationFrame[\s\S]*stopFreshEntrySettle\(\)/,
-  '마지막 비정상 스크롤 뒤 안정화된 페인트 경계에서만 상단 잠금을 해제해야 합니다.');
+assert.match(earlyBoot, /const finishStableFreshEntry = \(\) =>[\s\S]*requestAnimationFrame[\s\S]*releaseFreshEntryVisualLock\(\)/,
+  '마지막 비정상 스크롤 뒤 안정화된 페인트 경계에서 화면 잠금만 해제해야 합니다.');
+assert.match(earlyBoot, /freshEntryLateGuardActive = true[\s\S]*FRESH_ENTRY_SAFETY_RELEASE_MS/,
+  '화면 잠금 해제 뒤에도 카카오의 지연된 자동 스크롤 복원을 제한 시간 동안 감시해야 합니다.');
 assert.doesNotMatch(earlyBoot, /window\.addEventListener\('pageshow'[\s\S]*daedongArmFreshEntryTop/,
   '카카오 화면이 다시 보일 때마다 최초 진입 잠금을 재가동하면 안 됩니다.');
 assert.doesNotMatch(earlyBoot, /document\.addEventListener\('visibilitychange'[\s\S]*daedongArmFreshEntryTop/);
-assert.match(earlyBoot, /window\.daedongEarlyHomeInteraction = true[\s\S]*stopFreshEntrySettle\(\)/,
+assert.match(earlyBoot, /window\.daedongEarlyHomeInteraction = true[\s\S]*stopFreshEntryGuard\(\)/,
   '고객이 화면을 만진 뒤에는 상단 보정이 고객 스크롤을 덮어쓰지 않아야 합니다.');
 assert.match(earlyBoot, /window\.daedongMarkHomeInteraction = markEarlyHomeInteraction/,
   '늦게 준비되는 화면도 실제 고객 조작이 확인된 순간 상단 보정을 해제할 수 있어야 합니다.');

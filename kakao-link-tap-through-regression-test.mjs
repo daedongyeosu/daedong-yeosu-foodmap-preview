@@ -115,8 +115,16 @@ assert.equal(opening.scrollingElement.scrollTop, 0,
 opening.scrollingElement.scrollTop = 430;
 opening.body.scrollTop = 430;
 opening.dispatch('scroll');
+assert.equal(opening.scrollingElement.scrollTop, 0,
+  '초기 잠금 해제 뒤 고객 동작 없이 도착한 카카오의 지연 복원은 최상단으로 되돌려야 합니다.');
+
+opening.setClock(5000);
+opening.dispatch('pointerdown', {clientX: 220, clientY: 640});
+opening.scrollingElement.scrollTop = 430;
+opening.body.scrollTop = 430;
+opening.dispatch('scroll');
 assert.equal(opening.scrollingElement.scrollTop, 430,
-  '초기 안정화가 끝난 뒤 고객이 이동한 위치는 강제로 되돌리면 안 됩니다.');
+  '초기 안정화 뒤 실제 고객 터치가 확인되면 이동한 위치를 강제로 되돌리면 안 됩니다.');
 
 const dragging = createFreshEntryRuntime();
 dragging.sandbox.daedongArmFreshEntryTop();
