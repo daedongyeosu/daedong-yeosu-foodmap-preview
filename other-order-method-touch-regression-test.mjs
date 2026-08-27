@@ -29,8 +29,10 @@ assert.match(rc3, /const external = event\.target\.closest\('\[data-rc3-external
 assert.match(rc3, /Math\.hypot\([\s\S]*?\) > 10\) state\.moved = true;/, '스크롤 중 잘못 열리는 것을 막는 터치 이동 판정이 없습니다.');
 assert.match(rc3, /const other = event\.target\.closest\('\[data-rc3-other-methods\]'\);[\s\S]*?rc3ActivateOrderMethodsTrigger\(other, event\)/, '클릭·키보드 보조 경로가 해당 가게 주문방법을 열지 않습니다.');
 assert.match(rc3, /window\.addEventListener\('pageshow', rc3ResetOrderMethodsTouchState, true\)/, '외부 주문앱에서 복귀할 때 남은 터치 상태를 초기화하지 않습니다.');
-assert.match(rc3, /trigger\.removeAttribute\('data-rc3-direct-bound'\)/, 'HTML 스냅샷에 남은 과거 직접 바인딩 표식을 제거하지 않습니다.');
-assert.doesNotMatch(rc3, /trigger\.addEventListener\('pointer(?:down|move|up|cancel)'/, 'HTML 복원 시 사라지는 노드 직접 포인터 리스너가 다시 생겼습니다.');
+assert.match(rc3, /if \(trigger\.__rc3DirectOrderMethodsBound\) return/, 'HTML 스냅샷과 구분되는 직접 바인딩 가드가 없습니다.');
+assert.match(rc3, /trigger\.addEventListener\('pointerdown'[\s\S]*?trigger\.addEventListener\('pointerup'/, '문서 위임이 끊긴 카카오 복귀 화면을 위한 버튼 직접 포인터 경로가 없습니다.');
+assert.match(rc3, /trigger\.addEventListener\('touchstart'[\s\S]*?trigger\.addEventListener\('touchend'/, '문서 위임이 끊긴 카카오 복귀 화면을 위한 버튼 직접 터치 경로가 없습니다.');
+assert.match(rc2, /function rc2RestoreSnapshot\(snapshot\) \{[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\)/, 'HTML 스냅샷 복원 직후 버튼 직접 이벤트를 다시 연결하지 않습니다.');
 assert.match(rc3, /orderAnchor\?\.insertAdjacentHTML[\s\S]*?rc3BindOrderMethodsTrigger\(detail\);/, '가게 상세를 그린 뒤 위임 터치 표식이 연결되지 않습니다.');
 
 assert.match(rc2, /const storeSnapshot = \[current, \.\.\.rc2ModalStack\.slice\(\)\.reverse\(\)\]\.find\(snapshot => \{[\s\S]*?\.store-detail\[data-store-id\]/, '여러 겹 주문 모달에서도 원래 가게 상세 복귀 경로를 찾지 못합니다.');

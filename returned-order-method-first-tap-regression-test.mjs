@@ -42,6 +42,7 @@ for (const [name, source] of [['final-experience.js', finalExperience], ['index.
   assert.match(source, /return-intent-cancel-1/, `${name} 실기기 복귀 생명주기 취소 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /return-early-tap-bridge-1/, `${name} 카카오 복귀 첫 터치 브리지 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /order-sheet-before-history-1/, `${name} 카카오 주문방법 화면 우선 표시 캐시 버전이 갱신되어야 합니다.`);
+  assert.match(source, /restored-button-direct-touch-1/, `${name} 복원된 버튼 직접 터치 수정 캐시 버전이 갱신되어야 합니다.`);
 }
 assert.match(index, /real-second-tap-after-sheet-1/, '새 주문방법 화면의 정상 두 번째 터치 수정 캐시 버전이 갱신되어야 합니다.');
 
