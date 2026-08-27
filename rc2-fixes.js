@@ -408,6 +408,12 @@ function rc2SettleRestoredReturnLease() {
   return true;
 }
 
+function rc2SettleRestoredReturnLeaseNow() {
+  if (rc2RestoredReturnSettleTimer) clearTimeout(rc2RestoredReturnSettleTimer);
+  rc2RestoredReturnSettleTimer = 0;
+  return rc2SettleRestoredReturnLease();
+}
+
 function rc2ScheduleRestoredReturnSettlement() {
   if (!rc2RestoredReturnLease || rc2RestoredReturnSettleTimer) return false;
   rc2RestoredReturnSettleTimer = setTimeout(() => {
@@ -423,6 +429,7 @@ window.daedongClearExternalReturnState = rc2ClearReturnState;
 window.daedongCaptureReturnAnchor = rc2CaptureReturnAnchor;
 window.daedongStabilizeReturnPosition = rc2StabilizeReturnPosition;
 window.daedongArmRestoredReturnLease = rc2ArmRestoredReturnLease;
+window.daedongSettleRestoredReturnLeaseNow = rc2SettleRestoredReturnLeaseNow;
 
 function rc2Icon(id, className = 'category-local-icon') {
   return `<svg class="${className}" aria-hidden="true"><use href="${RC2_ICON_SPRITE}#${id}"></use></svg>`;
