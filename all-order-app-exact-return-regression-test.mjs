@@ -102,13 +102,13 @@ const restoreSaved = {...written.payload, savedAt: Date.now()};
 const restoreModal = {hidden: true, dataset: {}};
 let opened = null;
 let stabilized = null;
-let cleared = null;
+let armed = null;
 const restoreContext = {
   window: {
     __daedongCatalogProgress: {complete: true},
     daedongReadExternalReturnState: () => restoreSaved,
     daedongStabilizeReturnPosition: saved => { stabilized = saved; },
-    daedongClearExternalReturnState: (key, saved) => { cleared = {key, saved}; },
+    daedongArmRestoredReturnLease: (key, saved) => { armed = {key, saved}; },
     scrollTo() {}
   },
   sessionStorage: {getItem() { return null; }, removeItem() {}},
@@ -122,7 +122,7 @@ const restored = vm.runInContext(`const FX_APP_BROWSER_RETURN='daedongAppBrowser
 assert.equal(restored, true);
 assert.deepEqual(opened, {key: 'baemin', category: '한식'});
 assert.equal(stabilized.anchorStoreId, 'store-42', '재정렬 뒤에도 눌렀던 가게를 기준으로 위치를 맞춰야 합니다.');
-assert.equal(cleared.key, 'daedongAppBrowserReturnV1');
+assert.equal(armed.key, 'daedongAppBrowserReturnV1', '복귀표는 복원 직후가 아니라 고객의 첫 조작 뒤에 정리해야 합니다.');
 
 const applyPositionSource = extractFunction(rc2, 'rc2ApplyReturnPosition');
 const fakeCard = {scrollTop: 400, getBoundingClientRect: () => ({top: 100})};
@@ -133,7 +133,7 @@ vm.runInContext(`${applyPositionSource};rc2ApplyReturnPosition(card,{anchor:{off
 assert.equal(fakeCard.scrollTop, 550, '비동기 렌더링으로 기준 항목이 150px 밀리면 스크롤도 150px 보정해야 합니다.');
 
 assert.match(rc2, /RC2_RETURN_STORAGE_KEYS = \[RC2_EXTERNAL_RETURN, RC2_APP_BROWSER_RETURN\]/);
-assert.match(rc2, /for \(const delay of \[120, 360, 800, 1600\]\)/, '사진·메뉴 렌더링 뒤 위치를 다시 맞춰야 합니다.');
+assert.match(rc2, /for \(const delay of \[120, 360, 800, 1600, 3200\]\)/, '사진·메뉴 렌더링 뒤 위치를 다시 맞춰야 합니다.');
 assert.match(rc2, /async function rc2RestoreExternalSurface\(\{rebuildExisting = false\} = \{\}\)[\s\S]*?rc2RestoreAfterExternalPage\(\{rebuildExisting\}\)[\s\S]*?fxRestoreAppBrowserReturn/);
 assert.match(rc2, /if \(restored\) window\.daedongFinishExternalReturnBoot/);
 const nativeResumeLifecycle = rc2.match(/visibilitychange[\s\S]*?window\.addEventListener\('pageshow'/)?.[0] || '';

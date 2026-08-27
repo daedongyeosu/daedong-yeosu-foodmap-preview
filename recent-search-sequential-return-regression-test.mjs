@@ -37,10 +37,10 @@ assert.match(rc2, /selectedAppKey: rc2ExternalAppKey\(sourceElement\)/);
 assert.match(finalExperience, /searchState:window\.daedongStoreServiceInfo\?\.captureSearchState\?\.\(\)\|\|null/);
 assert.match(rc2, /if \(rc2StoreRestorePromise\) return rc2StoreRestorePromise/);
 assert.match(rc2, /if \(rc2SurfaceRestorePromise\) return rc2SurfaceRestorePromise/);
-assert.match(rc2, /if \(modal\?\.hidden \|\| String\(restoredStoreId \|\| ''\) !== String\(saved\.storeId\)\) return false;[\s\S]*?rc2ClearReturnState/,
-  '정확한 가게 화면이 확인되기 전에 복귀정보를 지우면 안 됩니다.');
-assert.match(finalExperience, /if\(modal\?\.hidden\|\|modal\.dataset\.appBrowserKey!==saved\.key\)return false;[\s\S]*?daedongClearExternalReturnState/,
-  '정확한 주문앱 가게목록이 확인되기 전에 복귀정보를 지우면 안 됩니다.');
+assert.match(rc2, /if \(modal\?\.hidden \|\| String\(restoredStoreId \|\| ''\) !== String\(saved\.storeId\)\) return false;[\s\S]*?rc2ArmRestoredReturnLease/,
+  '정확한 가게 화면이 확인된 뒤에만 고객 첫 조작까지 복귀정보를 유지해야 합니다.');
+assert.match(finalExperience, /if\(modal\?\.hidden\|\|modal\.dataset\.appBrowserKey!==saved\.key\)return false;[\s\S]*?daedongArmRestoredReturnLease/,
+  '정확한 주문앱 가게목록이 확인된 뒤에만 고객 첫 조작까지 복귀정보를 유지해야 합니다.');
 
 const bootScript = html.match(/<script>\s*([\s\S]*?daedongFinishExternalReturnBoot[\s\S]*?)<\/script>/)?.[1] || '';
 assert.ok(bootScript, '첫 화면 복귀 보호 스크립트를 찾아야 합니다.');
