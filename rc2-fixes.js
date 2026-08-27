@@ -8,6 +8,7 @@ const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
 const RC2_RETURN_TOKEN_PARAM = '__ddret';
 const RC2_RETURN_GUARD_PARAM = '__ddguard';
 const RC2_DURABLE_RETURN_COOKIE = 'daedongOrderReturnV1';
+const RC2_RETURN_DOCUMENT_RELOAD = 'daedongExternalReturnDocumentReloadV1';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
 const RC2_FOCUS_ONLY_RETURN_DELAY_MS = 650;
 const RC2_RETURN_SETTLE_DELAY_MS = 500;
@@ -43,6 +44,31 @@ function rc2FreshReturnState(saved) {
 
 function rc2ParseReturnState(storage, key) {
   try { return JSON.parse(storage.getItem(key) || 'null'); } catch { return null; }
+}
+
+function rc2ReadReturnDocumentReload() {
+  const marker = rc2ParseReturnState(sessionStorage, RC2_RETURN_DOCUMENT_RELOAD);
+  return rc2FreshReturnState(marker) ? marker : null;
+}
+
+function rc2ClearReturnDocumentReload(returnToken = '') {
+  const marker = rc2ReadReturnDocumentReload();
+  if (returnToken && String(marker?.returnToken || '') !== String(returnToken)) return;
+  try { sessionStorage.removeItem(RC2_RETURN_DOCUMENT_RELOAD); } catch {}
+}
+
+function rc2ReloadReturnedDocumentOnce(saved) {
+  const returnToken = String(saved?.returnToken || '');
+  if (!returnToken || String(rc2ReadReturnDocumentReload()?.returnToken || '') === returnToken) return false;
+  try {
+    sessionStorage.setItem(RC2_RETURN_DOCUMENT_RELOAD, JSON.stringify({returnToken, savedAt: Date.now()}));
+    document.documentElement.classList.add('daedong-external-return-pending');
+    location.reload();
+    return true;
+  } catch {
+    rc2ClearReturnDocumentReload(returnToken);
+    return false;
+  }
 }
 
 function rc2ReadDepartureMarker() {
@@ -186,6 +212,7 @@ function rc2ConfirmIntentionalStoreOpen() {
   }
   try { sessionStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
   try { localStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
+  rc2ClearReturnDocumentReload();
   rc2ClearDurableReturn();
   try {
     const url = new URL(location.href);
@@ -220,6 +247,7 @@ function rc2WriteReturnState(key, value) {
   rc2InvalidatePendingReturnRestores();
   rc2CancelRestoredReturnSettlement();
   rc2ResetExternalDepartureLifecycle();
+  rc2ClearReturnDocumentReload();
   const returnToken = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
   const payload = {...value, returnToken, savedAt: Date.now()};
   globalThis.daedongLastValidatedExternalReturnAt = payload.savedAt;
@@ -258,6 +286,7 @@ function rc2ClearReturnState(key, saved = null) {
   try { sessionStorage.removeItem(key); } catch {}
   try { localStorage.removeItem(key); } catch {}
   const token = saved?.returnToken;
+  if (token) rc2ClearReturnDocumentReload(token);
   const marker = rc2ReadDepartureMarker();
   if (token && marker?.returnToken === token) {
     try { sessionStorage.removeItem(EXTERNAL_APP_DEPARTURE_KEY); } catch {}
@@ -1203,6 +1232,15 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
     if (visibleStoreMatches) {
       if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
       window.daedongResetOrderMethodsTouchState?.();
+      const returnToken = String(saved.returnToken || '');
+      const documentReturnToken = String(globalThis.daedongEntryExternalReturnToken || '');
+      const documentFreshForReturn = Boolean(returnToken && documentReturnToken === returnToken);
+      // A Kakao history resume can preserve the correct pixels while its
+      // WebView keeps a stale native hit-test surface over the old document.
+      // DOM replacement cannot refresh that browser-owned layer. Reload this
+      // return token once; the early snapshot boot reconstructs the exact store
+      // and scroll position before revealing the new document.
+      if (rebuildExisting && !documentFreshForReturn && rc2ReloadReturnedDocumentOnce(saved)) return true;
       // Kakao can resume a visually correct history snapshot whose native
       // hit-test layer no longer delivers any DOM event inside the old modal.
       // Rebinding or cloning the button cannot repair that WebView-owned
@@ -1210,7 +1248,7 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
       // the whole detail once for this return token. The short boot cover keeps
       // Home from flashing while Android drops the stale hit-test layer.
       const rebuiltToken = String(modal.dataset.rc2ReturnRebuiltToken || '');
-      if (rebuildExisting && rebuiltToken !== String(saved.returnToken || '')) {
+      if (rebuildExisting && !documentFreshForReturn && rebuiltToken !== returnToken) {
         const root = document.documentElement;
         const bootWasPending = root.classList.contains('daedong-external-return-pending');
         root.classList.add('daedong-external-return-pending');
@@ -1234,7 +1272,7 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
         const rebuiltStoreId = rebuiltModal?.dataset.activeStoreId
           || rebuiltModal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
         if (rebuiltModal?.hidden || String(rebuiltStoreId || '') !== String(saved.storeId)) return false;
-        rebuiltModal.dataset.rc2ReturnRebuiltToken = String(saved.returnToken || '');
+        rebuiltModal.dataset.rc2ReturnRebuiltToken = returnToken;
       }
       window.daedongRebindOrderMethodsTrigger?.();
       rc2DeferredStoreReturnPosition = saved;

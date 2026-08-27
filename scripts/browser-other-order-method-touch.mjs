@@ -259,9 +259,32 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   );
 
   const returnedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
+  const returnedDocument = await page.evaluate(() => {
+    let saved = null;
+    try {
+      saved = JSON.parse(
+        sessionStorage.getItem('daedongExternalReturnRc2')
+        || localStorage.getItem('daedongExternalReturnRc2')
+        || 'null'
+      );
+    } catch {}
+    return {
+      entryToken: String(window.daedongEntryExternalReturnToken || ''),
+      savedToken: String(saved?.returnToken || ''),
+      navigationType: performance.getEntriesByType('navigation')[0]?.type || ''
+    };
+  });
+  await check(
+    Promise.resolve(
+      returnedDocument.entryToken
+      && returnedDocument.entryToken === returnedDocument.savedToken
+      && returnedDocument.navigationType === 'reload'
+    ),
+    `${storeName} 카카오 복귀 토큰으로 전체 문서를 한 번 새로 생성`
+  );
   await check(
     returnedTrigger.evaluate(element => element.dataset.testPreparedBeforeReturn !== '1'),
-    `${storeName} 복귀 뒤 카카오가 보존한 오래된 상세 DOM을 첫 터치 전에 전체 재구성`
+    `${storeName} 복귀 뒤 카카오가 보존한 오래된 상세 DOM이 새 문서 스냅샷으로 교체됨`
   );
   const returnedHitTarget = await returnedTrigger.evaluate(element => {
     const rect = element.getBoundingClientRect();
