@@ -42,7 +42,7 @@
     html.daedong-external-return-pending body::after{content:'';left:50%;top:calc(50% - 28px);width:34px;height:34px;margin:-17px;border:4px solid rgba(255,255,255,.34);border-top-color:#ff6a2e;border-radius:50%;animation:daedong-return-spin .75s linear infinite}
     @keyframes daedong-return-spin{to{transform:rotate(360deg)}}
   </style>
-  <!-- entry-lifecycle-v2-late-webview-restore -->
+  <!-- entry-lifecycle-v3-delayed-kakao-scroll-restore -->
   <script data-daedong-fresh-entry-boot>
     (() => {
       const root = document.documentElement;
@@ -51,6 +51,7 @@
       const FRESH_ENTRY_OPENING_TAP_GRACE_MS = 3000;
       const FRESH_ENTRY_DRAG_DISTANCE = 12;
       let freshEntrySettling = false;
+      let freshEntryLateGuardActive = false;
       let freshEntryCatalogReady = false;
       let freshEntryLoadReady = document.readyState === 'complete';
       let freshEntrySafetyTimer = 0;
@@ -60,17 +61,24 @@
         if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
       } catch {}
 
-      const stopFreshEntrySettle = () => {
+      const stopFreshEntryGuard = () => {
         freshEntrySettling = false;
+        freshEntryLateGuardActive = false;
         if (freshEntrySafetyTimer) window.clearTimeout(freshEntrySafetyTimer);
         if (freshEntryStabilityTimer) window.clearTimeout(freshEntryStabilityTimer);
         freshEntrySafetyTimer = 0;
         freshEntryStabilityTimer = 0;
         root.classList.remove('daedong-fresh-entry-settling');
       };
+      const releaseFreshEntryVisualLock = () => {
+        freshEntrySettling = false;
+        if (freshEntryStabilityTimer) window.clearTimeout(freshEntryStabilityTimer);
+        freshEntryStabilityTimer = 0;
+        root.classList.remove('daedong-fresh-entry-settling');
+      };
       const markEarlyHomeInteraction = () => {
         window.daedongEarlyHomeInteraction = true;
-        stopFreshEntrySettle();
+        stopFreshEntryGuard();
       };
       // Deferred widgets can use this only after they have confirmed a real
       // customer gesture (for example, the horizontal store list actually
@@ -86,6 +94,8 @@
         freshEntryPointerStart = interactionPoint(event);
         // Kakao can pass the chat-link opening tap into the new WebView. That
         // tap is navigation, not an instruction to preserve an old scroll.
+        // Once that propagation window has passed, a new pointerdown is a real
+        // customer interaction and the late restore guard must stand down.
         if (performance.now() >= FRESH_ENTRY_OPENING_TAP_GRACE_MS) markEarlyHomeInteraction();
       };
       const markFreshEntryDrag = event => {
@@ -103,7 +113,7 @@
         document.addEventListener(type, markEarlyHomeInteraction, {capture:true, passive:true, once:true});
       }
       const keepFreshEntryAtTop = ({force = false} = {}) => {
-        if (!force && (!freshEntrySettling || window.daedongEarlyHomeInteraction === true)) return;
+        if (!force && (!freshEntryLateGuardActive || window.daedongEarlyHomeInteraction === true)) return;
         const scrollingElement = document.scrollingElement || root;
         if (scrollingElement) scrollingElement.scrollTop = 0;
         if (document.body) document.body.scrollTop = 0;
@@ -120,7 +130,10 @@
           window.requestAnimationFrame(() => {
             if (!freshEntrySettling || window.daedongEarlyHomeInteraction === true) return;
             keepFreshEntryAtTop({force:true});
-            stopFreshEntrySettle();
+            // Unlock the page as soon as the first screen is stable, but keep
+            // the event-driven guard alive. Kakao WebView can restore an old
+            // native offset several seconds after load/catalog completion.
+            releaseFreshEntryVisualLock();
           });
         });
       };
@@ -138,7 +151,7 @@
         }, FRESH_ENTRY_STABILITY_MS);
       };
       const blockLateFreshEntryRestore = () => {
-        if (!freshEntrySettling || window.daedongEarlyHomeInteraction === true) return;
+        if (!freshEntryLateGuardActive || window.daedongEarlyHomeInteraction === true) return;
         const scrollingElement = document.scrollingElement || root;
         const offset = Math.max(
           Number(scrollingElement?.scrollTop || 0),
@@ -149,7 +162,7 @@
         keepFreshEntryAtTop({force:true});
         // Stability starts again after every late native restoration. This is
         // event-driven, so it does not fight normal scrolling after release.
-        scheduleStableFreshEntryRelease();
+        if (freshEntrySettling) scheduleStableFreshEntryRelease();
       };
       window.addEventListener('scroll', blockLateFreshEntryRestore, {capture:true, passive:true});
       if (!freshEntryLoadReady) {
@@ -168,17 +181,18 @@
       };
       window.daedongArmFreshEntryTop = () => {
         if (window.daedongEarlyHomeInteraction === true) return;
-        stopFreshEntrySettle();
+        stopFreshEntryGuard();
         freshEntryCatalogReady = false;
         freshEntrySettling = true;
+        freshEntryLateGuardActive = true;
         root.classList.add('daedong-fresh-entry-settling');
         keepFreshEntryAtTop();
         // A broken catalog request must never leave the page locked. Normal
         // releases happen much earlier from the application bootstrap when the first list exists.
         freshEntrySafetyTimer = window.setTimeout(() => {
-          if (!freshEntrySettling) return;
+          if (!freshEntryLateGuardActive) return;
           keepFreshEntryAtTop({force:true});
-          stopFreshEntrySettle();
+          stopFreshEntryGuard();
         }, FRESH_ENTRY_SAFETY_RELEASE_MS);
       };
     })();
