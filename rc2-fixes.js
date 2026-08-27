@@ -1281,11 +1281,16 @@ function rc2LaunchComparedExternal(link, href) {
   const routeKey = rawKey === 'coupang-eats' ? 'coupang' : rawKey;
   const kakaoAndroid = /KAKAOTALK/i.test(String(globalThis.navigator?.userAgent || ''))
     && /Android/i.test(String(globalThis.navigator?.userAgent || ''));
-  if (routeKey === 'yogiyo' && kakaoAndroid && typeof window.daedongLaunchMobileRoute === 'function') {
-    // Launch Yogiyo as an Android package intent from the current Kakao task.
-    // The Preview WebView stays underneath, so Android Back reveals the exact
-    // same store detail instead of dropping the customer into the chat room.
-    void window.daedongLaunchMobileRoute(routeKey, href);
+  if (routeKey === 'yogiyo' && kakaoAndroid) {
+    // Let Kakao follow Yogiyo's verified HTTPS handoff itself. Forcing the
+    // Yogiyo package intent creates a separate Android task whose own Exit
+    // action returns to the launcher, even while Preview is still alive.
+    // Kakao's HTTPS handoff keeps the browser as the caller/back destination.
+    if (typeof window.daedongLaunchYogiyoFromCurrentKakao === 'function') {
+      void window.daedongLaunchYogiyoFromCurrentKakao(href);
+    } else {
+      window.location.assign(href);
+    }
     return true;
   }
   // Keep the already prepared Preview store detail in its original Kakao

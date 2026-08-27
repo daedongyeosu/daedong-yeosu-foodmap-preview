@@ -14,13 +14,13 @@ const helperSource = rc2.slice(helperStart, helperEnd);
 
 const assigned = [];
 const opened = [];
-const mobileLaunches = [];
+const kakaoYogiyoLaunches = [];
 const sandbox = {
   navigator: {userAgent: 'Mozilla/5.0 (Linux; Android 15) KAKAOTALK 25.6.0'},
   window: {
     location: {assign: href => assigned.push(href)},
     open: (...args) => opened.push(args),
-    daedongLaunchMobileRoute: (key, href) => mobileLaunches.push([key, href])
+    daedongLaunchYogiyoFromCurrentKakao: href => kakaoYogiyoLaunches.push(href)
   }
 };
 vm.runInNewContext(`${helperSource}; globalThis.launchComparedExternal = rc2LaunchComparedExternal;`, sandbox);
@@ -35,9 +35,7 @@ sandbox.launchComparedExternal({dataset: {communityOriginal: 'coupang'}}, urls.c
 sandbox.launchComparedExternal({dataset: {communityOriginal: 'baemin'}}, urls.baemin);
 
 assert.deepEqual(assigned, [], '주문앱 이동 때문에 Preview 현재 탭을 외부 주소로 교체하면 안 됩니다.');
-assert.deepEqual(mobileLaunches, [
-  ['yogiyo', urls.yogiyo]
-], '카카오 Android의 요기요는 원래 Preview WebView를 살려두는 앱 intent 경로로 실행해야 합니다.');
+assert.deepEqual(kakaoYogiyoLaunches, [urls.yogiyo], '카카오 Android의 요기요는 카카오가 직접 처리하는 HTTPS 경로로 실행해야 합니다.');
 assert.deepEqual(opened, [
   [urls.coupang, '_blank', 'noopener'],
   [urls.baemin, '_blank', 'noopener']
@@ -56,9 +54,11 @@ assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*stable-separated-order-re
 assert.match(html, /final-experience\.js\?v=[^"\n]*stable-separated-order-return-2/);
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-live-preview-task-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-live-preview-task-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-kakao-https-return-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-kakao-https-return-1/);
 assert.match(browserTest, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'/);
 assert.match(browserTest, /await restoredDetail\.waitFor\([^\n]*\)\.catch\(async \(\) =>/);
-assert.match(browserTest, /installYogiyoIntentProbe[\s\S]*__testedMobileLaunches[\s\S]*testStableReturn/, '실제 브라우저 검사는 요기요 intent 실행 뒤 같은 상세 DOM 복귀를 확인해야 합니다.');
+assert.match(browserTest, /installYogiyoKakaoHandoffProbe[\s\S]*__testedYogiyoKakaoHandoffs[\s\S]*testStableReturn/, '실제 브라우저 검사는 요기요 HTTPS 앱 전환 뒤 같은 상세 DOM 복귀를 확인해야 합니다.');
 
 console.log('yogiyo-back-return-regression-test: pass');
 

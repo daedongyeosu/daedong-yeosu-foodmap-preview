@@ -90,10 +90,10 @@ const openOrderMethodsRoute = async (page, key) => {
   await route.waitFor({state: 'visible', timeout: 5000});
   return route;
 };
-const installYogiyoIntentProbe = page => page.evaluate(() => {
-  window.__testedMobileLaunches = [];
-  window.daedongLaunchMobileRoute = (key, href) => {
-    window.__testedMobileLaunches.push({key, href});
+const installYogiyoKakaoHandoffProbe = page => page.evaluate(() => {
+  window.__testedYogiyoKakaoHandoffs = [];
+  window.daedongLaunchYogiyoFromCurrentKakao = href => {
+    window.__testedYogiyoKakaoHandoffs.push({href});
     return true;
   };
 });
@@ -111,10 +111,10 @@ try {
     await preparedTrigger.waitFor({state: 'visible', timeout: 5000});
     await preparedTrigger.evaluate((element, routeKey) => { element.dataset.testStableReturn = routeKey; }, key);
     if (key === 'yogiyo') {
-      await installYogiyoIntentProbe(page);
+      await installYogiyoKakaoHandoffProbe(page);
       await route.tap();
-      const launch = await page.evaluate(() => window.__testedMobileLaunches.at(-1) || null);
-      await check(Promise.resolve(launch?.key === 'yogiyo' && launch?.href === expectedURL), 'yogiyo: 현재 카카오 작업에서 Android 앱 intent 실행');
+      const launch = await page.evaluate(() => window.__testedYogiyoKakaoHandoffs.at(-1) || null);
+      await check(Promise.resolve(launch?.href === expectedURL), 'yogiyo: 현재 카카오가 처리하는 HTTPS 앱 전환 실행');
       await check(Promise.resolve(new URL(await page.url()).origin === baseOrigin), 'yogiyo: 살아 있는 원본 Preview 주소 유지');
       await check(Promise.resolve(context.pages().length === 1), 'yogiyo: Preview WebView를 새 창으로 교체하지 않음');
     } else {
@@ -144,7 +144,7 @@ try {
   const detachedPreviewPage = await context.newPage();
   detachedPreviewPage.on('pageerror', error => report.errors.push(error.message));
   const detachedYogiyoRoute = await openOrderMethodsRoute(detachedPreviewPage, 'yogiyo');
-  await installYogiyoIntentProbe(detachedPreviewPage);
+  await installYogiyoKakaoHandoffProbe(detachedPreviewPage);
   await detachedYogiyoRoute.click();
   await detachedPreviewPage.close();
 
@@ -167,15 +167,15 @@ try {
     return buttons.length === 3 && buttons.every(button => button.__rc3DirectExternalRouteBound === true);
   }, null, {timeout: 5000});
   await check(Promise.resolve(true), '카카오톡 링크 재진입 뒤 복원된 주문앱 버튼 3개에 실물 터치 직접 재연결');
-  await installYogiyoIntentProbe(reopenedKakaoLink);
+  await installYogiyoKakaoHandoffProbe(reopenedKakaoLink);
   for (const key of ['yogiyo', 'coupang', 'baemin']) {
     const restoredRoute = reopenedKakaoLink.locator(`#modal:not([hidden]) [data-rc3-external-route="${key}"]`);
     await restoredRoute.waitFor({state: 'visible', timeout: 5000});
     if (key === 'yogiyo') {
       await restoredRoute.tap();
       await check(
-        reopenedKakaoLink.evaluate(() => window.__testedMobileLaunches.at(-1)?.key === 'yogiyo'),
-        '카카오톡 링크 재진입 뒤 복원된 yogiyo 버튼이 Android 앱 intent 실행'
+        reopenedKakaoLink.evaluate(() => Boolean(window.__testedYogiyoKakaoHandoffs.at(-1)?.href)),
+        '카카오톡 링크 재진입 뒤 복원된 yogiyo 버튼이 카카오 HTTPS 앱 전환 실행'
       );
       await reopenedKakaoLink.waitForTimeout(500);
     } else {
@@ -197,7 +197,7 @@ try {
   const stalePreviewPage = await context.newPage();
   stalePreviewPage.on('pageerror', error => report.errors.push(error.message));
   const staleYogiyoRoute = await openOrderMethodsRoute(stalePreviewPage, 'yogiyo');
-  await installYogiyoIntentProbe(stalePreviewPage);
+  await installYogiyoKakaoHandoffProbe(stalePreviewPage);
   await staleYogiyoRoute.tap();
   await stalePreviewPage.evaluate(() => {
     const staleSavedAt = Date.now() - (6 * 60 * 1000);
