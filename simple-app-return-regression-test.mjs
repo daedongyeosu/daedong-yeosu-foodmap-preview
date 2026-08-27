@@ -12,7 +12,7 @@ assert.match(app, /const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartu
 assert.match(app, /function markExternalAppDeparture\(\)[\s\S]*?JSON\.stringify\(\{savedAt: Date\.now\(\)\}\)[\s\S]*?sessionStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, '1'\)[\s\S]*?localStorage\.setItem\(EXTERNAL_APP_DEPARTURE_KEY, payload\)/);
 assert.match(app, /const MOBILE_SAME_TAB_ORDER_KEYS = new Set\(\['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin'\]\)/);
 assert.match(app, /link\?\.dataset\?\.menuOrder[\s\S]*?link\?\.dataset\?\.menuStickyOrder[\s\S]*?link\?\.dataset\?\.menuStickyExternal[\s\S]*?link\?\.dataset\?\.menuExternalKey/);
-assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?markExternalAppDeparture\(\)[\s\S]*?rc2RememberExternalReturn[\s\S]*?launchMobileRoute\(mobileOrderRouteKey\(link\), href\)/);
+assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?markExternalAppDeparture\(\)[\s\S]*?rc2RememberExternalReturn[\s\S]*?daedongLaunchMobileRoute\(mobileOrderRouteKey\(link\), href\)/);
 assert.match(app, /document\.addEventListener\('click', handleMobileOrderLinkClick, true\)/);
 
 assert.match(app, /function isCustomerUsableExternalRoute\(key, value\)/);

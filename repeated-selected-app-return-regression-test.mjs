@@ -27,6 +27,27 @@ assert.doesNotMatch(selectedCta, /data-external-route-key|처음 선택한/,
 
 assert.match(rc2, /function rc2ExternalAppKey\(element\)[\s\S]*?element\.dataset\?\.communityOriginal/,
   '바로 실행한 선택 앱 키도 복귀 상태에 기록해야 합니다.');
+for (const handlerName of ['handleDdangyoOrderLinkClick', 'handleKakaoOrderLinkClick', 'handleMobileOrderLinkClick']) {
+  const handlerStart = app.indexOf(`function ${handlerName}(`);
+  const handlerEnd = app.indexOf("document.addEventListener('click'", handlerStart);
+  assert.ok(handlerStart >= 0 && handlerEnd > handlerStart, `${handlerName}: 모바일 주문앱 클릭 처리기를 찾아야 합니다.`);
+  const handler = app.slice(handlerStart, handlerEnd);
+  assert.doesNotMatch(handler, /data-community-original[^\n]*return/,
+    `${handlerName}: 처음 선택한 주문앱만 일반 웹 링크로 우회하면 안 됩니다.`);
+  assert.match(handler, /rc2RememberExternalReturn\(link\)/,
+    `${handlerName}: 직접 실행 전에 선택 앱과 가게 복귀 상태를 함께 저장해야 합니다.`);
+  assert.match(handler, /daedongLaunchMobileRoute|openDdangyoRoute/,
+    `${handlerName}: 구글 플레이 웹페이지 대신 앱 직접 실행 경로를 사용해야 합니다.`);
+}
+const comparedHandlerStart = rc2.indexOf("const comparedExternal = event.target.closest('a[data-community-original]')");
+const comparedHandlerEnd = rc2.indexOf('const externalLink =', comparedHandlerStart);
+assert.ok(comparedHandlerStart >= 0 && comparedHandlerEnd > comparedHandlerStart,
+  '선택 주문앱 전용 클릭 처리를 찾아야 합니다.');
+const comparedHandler = rc2.slice(comparedHandlerStart, comparedHandlerEnd);
+assert.match(comparedHandler, /if \(comparedExternal\) \{[\s\S]*?event\.preventDefault\(\)[\s\S]*?event\.stopImmediatePropagation\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?rc2LaunchComparedExternal\(comparedExternal, href\)/,
+  '가게 상세 유무와 관계없이 선택 주문앱 링크를 가로채 앱 직접 실행과 복귀 저장을 해야 합니다.');
+assert.doesNotMatch(comparedHandler, /hasStoreDetailInModalFlow|window\.open|target.?_blank/,
+  '앱목록에서 들어온 비교화면도 일반 웹 새 창이나 가게상세 존재 조건으로 빠지면 안 됩니다.');
 assert.match(rc2, /let rc2ExpectedExternalHistoryPopToken = '';/,
   '외부앱 복귀 뒤 정리할 방문기록을 정확한 일회용 토큰으로 추적해야 합니다.');
 assert.match(rc2, /function rc2NormalizeReturnedHistory\(saved\)[\s\S]*?RC2_RETURN_GUARD_STATE[\s\S]*?history\.back\(\)/,

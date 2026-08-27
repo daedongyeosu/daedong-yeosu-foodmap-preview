@@ -1343,11 +1343,7 @@ fxInstallEvents = function rc2InstallEvents() {
     const favorite = event.target.closest('[data-favorite-store]');
     if (favorite) fxGull(favorite, true);
     const comparedExternal = event.target.closest('a[data-community-original]');
-    const hasStoreDetailInModalFlow = Boolean(
-      $('#modalContent .store-detail[data-store-id]')
-      || rc2ModalStack.some(snapshot => snapshot?.html?.includes('class="store-detail"'))
-    );
-    if (comparedExternal && hasStoreDetailInModalFlow) {
+    if (comparedExternal) {
       const href = safeHref(comparedExternal.getAttribute('href'));
       event.preventDefault();
       event.stopImmediatePropagation();

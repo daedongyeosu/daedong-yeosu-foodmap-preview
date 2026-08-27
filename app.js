@@ -1010,7 +1010,6 @@ async function openDdangyoRoute(routeUrl) {
 function handleDdangyoOrderLinkClick(event) {
   if (!isAndroidBrowser() || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
-  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link) return;
   const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
   if (key !== 'ddangyo') return;
@@ -1019,7 +1018,7 @@ function handleDdangyoOrderLinkClick(event) {
   event.preventDefault(); event.stopImmediatePropagation();
   trackAnalyticsRouteClick(event);
   markExternalAppDeparture();
-  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn(link);
   void openDdangyoRoute(href);
 }
 document.addEventListener('click', handleDdangyoOrderLinkClick, true);
@@ -1055,7 +1054,6 @@ function isKakaoInAppBrowser() { return /KAKAOTALK/i.test(String(navigator.userA
 function handleKakaoOrderLinkClick(event) {
   if (!isKakaoInAppBrowser() || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
-  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link) return;
   const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
   if (!KAKAO_SAME_TAB_ORDER_KEYS.has(key)) return;
@@ -1065,8 +1063,8 @@ function handleKakaoOrderLinkClick(event) {
   event.stopImmediatePropagation();
   trackAnalyticsRouteClick(event);
   markExternalAppDeparture();
-  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
-  void launchMobileRoute(key, href);
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn(link);
+  void window.daedongLaunchMobileRoute(key, href);
 }
 document.addEventListener('click', handleKakaoOrderLinkClick, true);
 const MOBILE_SAME_TAB_ORDER_KEYS = new Set(['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin']);
@@ -1086,7 +1084,6 @@ function mobileOrderRouteKey(link) {
 function handleMobileOrderLinkClick(event) {
   if (!/(?:android|iphone|ipad|ipod)/i.test(String(navigator.userAgent || '')) || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
-  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link || !MOBILE_SAME_TAB_ORDER_KEYS.has(mobileOrderRouteKey(link))) return;
   const href = safeHref(link.getAttribute('href'));
   if (href === '#') return;
@@ -1094,8 +1091,8 @@ function handleMobileOrderLinkClick(event) {
   event.stopImmediatePropagation();
   trackAnalyticsRouteClick(event);
   markExternalAppDeparture();
-  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
-  void launchMobileRoute(mobileOrderRouteKey(link), href);
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn(link);
+  void window.daedongLaunchMobileRoute(mobileOrderRouteKey(link), href);
 }
 document.addEventListener('click', handleMobileOrderLinkClick, true);
 function handleAndroidMapLinkClick(event) {
