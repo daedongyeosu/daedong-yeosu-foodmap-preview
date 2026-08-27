@@ -3,6 +3,7 @@ import fs from 'node:fs';
 
 const rc2 = fs.readFileSync(new URL('./rc2-fixes.js', import.meta.url), 'utf8');
 const rc3 = fs.readFileSync(new URL('./rc3-fixes.js', import.meta.url), 'utf8');
+const app = fs.readFileSync(new URL('./app.js', import.meta.url), 'utf8');
 const browserCheck = fs.readFileSync(new URL('./scripts/browser-other-order-method-touch.mjs', import.meta.url), 'utf8');
 const exactReturnCheck = fs.readFileSync(new URL('./scripts/browser-all-order-app-exact-return.mjs', import.meta.url), 'utf8');
 const finalExperience = fs.readFileSync(new URL('./final-experience.js', import.meta.url), 'utf8');
@@ -29,6 +30,7 @@ const earlyBridgeIndex = finalExperience.indexOf("selector:'[data-rc3-other-meth
 const rc2LoaderIndex = finalExperience.indexOf("const fxRc2Script=document.createElement('script')");
 assert.ok(earlyBridgeIndex >= 0 && earlyBridgeIndex < rc2LoaderIndex, '주문방법 첫 터치 브리지는 동적 복귀 스크립트보다 먼저 등록되어야 합니다.');
 assert.match(finalExperience, /selector:'\[data-rc3-other-methods\]'[\s\S]*?window\.daedongActivateOrderMethodsTrigger[\s\S]*?return typeof activate==='function'\?activate\(target,event\):false/, '공용 pointerup/touchend 계층이 복귀 버튼을 직접 활성화해야 합니다.');
+assert.match(app, /function clearDaedongGhostClickOnNewPress\(\)[\s\S]*?daedongGhostClick = null[\s\S]*?document\.addEventListener\('pointerdown', clearDaedongGhostClickOnNewPress, true\)[\s\S]*?document\.addEventListener\('touchstart', clearDaedongGhostClickOnNewPress/, '새로운 실제 터치는 이전 화면에서 남은 가짜 클릭 방지표를 해제해야 합니다.');
 assert.match(browserCheck, /pointerdown[\s\S]*returnStatePresent[\s\S]*pointerup[\s\S]*returnStatePresent/, '실제 브라우저 검사에서 재터치 전체 동안 복귀 상태가 유지되는지 확인해야 합니다.');
 assert.match(browserCheck, /재터치 완료 뒤 복귀 보호 상태 정리/, '버튼 활성화 뒤 복귀 상태가 정리되는지 확인해야 합니다.');
 assert.match(exactReturnCheck, /dispatchEvent\('pointerup'/, '정확 복귀 검사도 고객의 완료된 상호작용으로 복귀 상태를 정리해야 합니다.');
@@ -39,5 +41,6 @@ for (const [name, source] of [['final-experience.js', finalExperience], ['index.
   assert.match(source, /return-intent-cancel-1/, `${name} 실기기 복귀 생명주기 취소 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /return-early-tap-bridge-1/, `${name} 카카오 복귀 첫 터치 브리지 캐시 버전이 갱신되어야 합니다.`);
 }
+assert.match(index, /real-second-tap-after-sheet-1/, '새 주문방법 화면의 정상 두 번째 터치 수정 캐시 버전이 갱신되어야 합니다.');
 
 console.log('PASS 외부 주문앱 복귀 뒤 다른 주문방법 첫 터치 회귀검사');

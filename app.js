@@ -196,6 +196,16 @@ function rememberDaedongGhostClick(event) {
   };
 }
 
+// A synthetic click has no new pointer/touch start. If the customer really
+// starts a second tap after a sheet replaced the first button, that is a new
+// intent even when the new control happens to occupy nearly the same screen
+// coordinates. Clear the coordinate-only guard before that real tap finishes.
+function clearDaedongGhostClickOnNewPress() {
+  daedongGhostClick = null;
+}
+document.addEventListener('pointerdown', clearDaedongGhostClickOnNewPress, true);
+document.addEventListener('touchstart', clearDaedongGhostClickOnNewPress, {capture: true, passive: true});
+
 document.addEventListener('click', event => {
   const guard = daedongGhostClick;
   if (!guard || performance.now() > guard.until) {
