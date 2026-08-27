@@ -449,6 +449,7 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
   else rc3OpenOrderMethods(store);
   return true;
 }
+window.daedongActivateOrderMethodsTrigger = rc3ActivateOrderMethodsTrigger;
 
 let rc3OrderMethodsGhostClickUntil = 0;
 let rc3OrderMethodsGhostClickStoreId = '';
