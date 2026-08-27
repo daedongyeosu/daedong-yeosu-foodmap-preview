@@ -96,17 +96,19 @@ try {
     const page = await context.newPage();
     page.on('pageerror', error => report.errors.push(error.message));
     const link = await openGuide(page, key);
-    await page.evaluate(() => {
-      window.__testedMobileLaunches = [];
-      window.daedongLaunchMobileRoute = (routeKey, href) => {
-        window.__testedMobileLaunches.push({key: routeKey, href});
-      };
-    });
+    const expectedURL = await link.getAttribute('href');
+    const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
     await link.click();
-    const launch = await page.evaluate(() => window.__testedMobileLaunches.at(-1) || null);
-    await check(Promise.resolve(launch?.key === key), `${key}: 올바른 Android 앱 패키지 경로 선택`);
+    const externalPage = await externalPagePromise;
+    await externalPage.waitForLoadState('domcontentloaded');
+    await check(Promise.resolve(externalPage.url() === expectedURL), `${key}: 원본 Preview와 분리된 주문앱 경로 선택`);
     await check(Promise.resolve(new URL(await page.url()).origin === baseOrigin), `${key}: 원본 Preview 현재 탭 보존`);
-    await check(Promise.resolve(context.pages().length === 1), `${key}: 불필요한 외부 웹 팝업을 만들지 않음`);
+    await check(Promise.resolve(context.pages().length === 2), `${key}: 주문앱만 별도 실행하고 Preview 상세 유지`);
+    const preparedTrigger = page.locator(`#modal:not([hidden]) .store-detail[data-store-id="${store.store_id}"] [data-rc3-other-methods]`);
+    await preparedTrigger.waitFor({state: 'visible', timeout: 5000});
+    await preparedTrigger.evaluate((element, routeKey) => { element.dataset.testStableReturn = routeKey; }, key);
+    await externalPage.close();
+    await page.bringToFront();
     await page.evaluate(() => {
       document.dispatchEvent(new Event('visibilitychange'));
       window.dispatchEvent(new Event('focus'));
@@ -114,6 +116,7 @@ try {
     });
     await page.locator(`#modal:not([hidden]) .store-detail[data-store-id="${store.store_id}"]`).waitFor({state: 'visible', timeout: 10000});
     await check(Promise.resolve(true), `${key}: 앱 복귀 수명주기 뒤 보던 가게 상세 유지`);
+    await check(preparedTrigger.evaluate((element, expectedKey) => element.dataset.testStableReturn === expectedKey, key), `${key}: 앱 복귀 뒤 준비된 동일 상세 DOM 유지`);
     if (key === 'yogiyo') await page.screenshot({path: 'browser-yogiyo-back-return.png', fullPage: false});
     await page.close();
   }

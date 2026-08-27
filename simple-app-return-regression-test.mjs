@@ -27,7 +27,8 @@ const comparedHandler = rc2.slice(comparedStart, comparedEnd);
 assert.match(comparedHandler, /rc2RememberExternalReturn\(comparedExternal\)/);
 assert.match(comparedHandler, /rc2LaunchComparedExternal\(comparedExternal, href\)/, '저장 후 주문앱별 복귀 방식으로 실행해야 합니다.');
 assert.match(comparedHandler, /event\.preventDefault\(\)[\s\S]*?event\.stopImmediatePropagation\(\)/, '구형 클릭 처리기와 앵커 기본 이동을 막아야 합니다.');
-assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?daedongLaunchMobileRoute[\s\S]*?\['mukkebi', 'ddangyo', 'yogiyo', 'coupang', 'baemin'\][\s\S]*?window\.open\(href, '_blank', 'noopener'\)/, '설치된 Android 주문앱은 현재 Preview를 보존하는 패키지 인텐트를 사용해야 합니다.');
+assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?window\.open\(href, '_blank', 'noopener'\)[\s\S]*?return true/, '비교화면 주문앱은 현재 Preview 상세 DOM을 보존하는 별도 실행 경로를 사용해야 합니다.');
+assert.doesNotMatch(rc2.match(/function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?\n\}/)?.[0] || '', /daedongLaunchMobileRoute|location\.assign/);
 assert.doesNotMatch(comparedHandler, /history\.back/);
 assert.match(rc2, /function rc2RememberExternalReturn\(sourceElement = null\) \{[\s\S]*?daedongMarkExternalAppDeparture/);
 assert.match(finalExperience, /function fxRememberAppBrowserReturn\(key,anchorStoreId=''\)\{[\s\S]*?daedongMarkExternalAppDeparture/);
@@ -49,5 +50,8 @@ assert.match(html, /final-experience\.js\?v=[^"\n]*simple-app-return-1/);
 assert.match(html, /store-menu-preview\.js\?v=[^"\n]*simple-app-return-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*simple-app-return-1/);
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*simple-app-return-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*stable-separated-order-return-1/);
+assert.match(html, /app\.js\?v=[^"\n]*stable-separated-order-return-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*stable-separated-order-return-2/);
 
 console.log('simple-app-return-regression-test: pass');

@@ -238,21 +238,13 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   await externalLink.waitFor({state: 'visible', timeout: 3000});
   const expectedExternalURL = await externalLink.getAttribute('href');
 
-  await page.evaluate(() => {
-    window.__testedMobileLaunches = [];
-    window.daedongLaunchMobileRoute = (key, href) => {
-      window.__testedMobileLaunches.push({key, href});
-    };
-  });
+  const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
   await externalLink.tap();
-  const launch = await page.evaluate(() => window.__testedMobileLaunches.at(-1) || null);
+  const externalPage = await externalPagePromise;
+  await externalPage.waitForLoadState('domcontentloaded');
   await check(
-    Promise.resolve(launch?.key === 'baemin' && launch?.href === expectedExternalURL),
-    `${storeName} 배달의민족 Android 앱 패키지 경로로 열기`
-  );
-  await check(
-    Promise.resolve(new URL(page.url()).origin === baseOrigin && context.pages().length === 1),
-    `${storeName} 외부 주문앱을 열 때 원본 Preview 현재 탭 보존`
+    Promise.resolve(externalPage.url() === expectedExternalURL),
+    `${storeName} 주문앱을 원본 Preview와 분리된 화면으로 열기`
   );
   await page.evaluate(() => window.dispatchEvent(new Event('blur')));
   const preparedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
@@ -262,6 +254,8 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     preparedTrigger.isVisible(),
     `${storeName} 외부 주문앱이 열린 동안 원본 Preview를 가게 상세로 미리 안정화`
   );
+  await externalPage.close();
+  await page.bringToFront();
   if (nativeResume) {
     await page.evaluate(async () => {
       let hidden = true;
@@ -292,32 +286,9 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   );
 
   const returnedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
-  const returnedDocument = await page.evaluate(() => {
-    let saved = null;
-    try {
-      saved = JSON.parse(
-        sessionStorage.getItem('daedongExternalReturnRc2')
-        || localStorage.getItem('daedongExternalReturnRc2')
-        || 'null'
-      );
-    } catch {}
-    return {
-      entryToken: String(window.daedongEntryExternalReturnToken || ''),
-      savedToken: String(saved?.returnToken || ''),
-      navigationType: performance.getEntriesByType('navigation')[0]?.type || ''
-    };
-  });
   await check(
-    Promise.resolve(
-      returnedDocument.entryToken
-      && returnedDocument.entryToken === returnedDocument.savedToken
-      && returnedDocument.navigationType === 'navigate'
-    ),
-    `${storeName} 카카오 복귀 토큰 URL 이동으로 전체 문서를 한 번 새로 생성`
-  );
-  await check(
-    returnedTrigger.evaluate(element => element.dataset.testPreparedBeforeReturn !== '1'),
-    `${storeName} 복귀 뒤 카카오가 보존한 오래된 상세 DOM이 새 문서 스냅샷으로 교체됨`
+    returnedTrigger.evaluate(element => element.dataset.testPreparedBeforeReturn === '1'),
+    `${storeName} 복귀 뒤 준비된 상세 DOM을 그대로 유지`
   );
   const returnedHitTarget = await returnedTrigger.evaluate(element => {
     const rect = element.getBoundingClientRect();

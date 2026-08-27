@@ -31,8 +31,8 @@ for (const handlerName of ['handleDdangyoOrderLinkClick', 'handleKakaoOrderLinkC
   const handlerEnd = app.indexOf("document.addEventListener('click'", handlerStart);
   assert.ok(handlerStart >= 0 && handlerEnd > handlerStart, `${handlerName}: 모바일 주문앱 클릭 처리기를 찾아야 합니다.`);
   const handler = app.slice(handlerStart, handlerEnd);
-  assert.doesNotMatch(handler, /data-community-original[^\n]*return/,
-    `${handlerName}: 처음 선택한 주문앱만 일반 웹 링크로 우회하면 안 됩니다.`);
+  assert.match(handler, /data-community-original[^\n]*return/,
+    `${handlerName}: 비교화면 주문앱 링크는 같은 탭 실행기보다 별도 복귀 경로가 처리해야 합니다.`);
   assert.match(handler, /rc2RememberExternalReturn\(link\)/,
     `${handlerName}: 직접 실행 전에 선택 앱과 가게 복귀 상태를 함께 저장해야 합니다.`);
   assert.match(handler, /daedongLaunchMobileRoute|openDdangyoRoute/,
@@ -47,6 +47,7 @@ assert.match(comparedHandler, /if \(comparedExternal\) \{[\s\S]*?event\.preventD
   '가게 상세 유무와 관계없이 선택 주문앱 링크를 가로채 앱 직접 실행과 복귀 저장을 해야 합니다.');
 assert.doesNotMatch(comparedHandler, /hasStoreDetailInModalFlow|window\.open|target.?_blank/,
   '앱목록에서 들어온 비교화면도 일반 웹 새 창이나 가게상세 존재 조건으로 빠지면 안 됩니다.');
+assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?window\.open\(href, '_blank', 'noopener'\)[\s\S]*?return true/, '비교화면 주문앱은 원본 상세 DOM을 남긴 채 별도 실행해야 합니다.');
 const writeStart = rc2.indexOf('function rc2WriteReturnState(key, value)');
 const writeEnd = rc2.indexOf('function rc2ClearReturnState', writeStart);
 const writeReturnState = rc2.slice(writeStart, writeEnd);
@@ -64,5 +65,8 @@ assert.match(rc2, /function rc2SettleRestoredReturnLease\(\)[\s\S]*?rc2ClearRetu
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*repeated-selected-app-return-1/);
 assert.match(html, /app\.js\?v=[^"\n]*repeated-selected-app-return-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*repeated-selected-app-return-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*stable-separated-order-return-1/);
+assert.match(html, /app\.js\?v=[^"\n]*stable-separated-order-return-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*stable-separated-order-return-2/);
 
 console.log('PASS 요기요·쿠팡이츠·배달의민족 즉시 실행 및 앱별 연속 2회 동일 화면 복귀');

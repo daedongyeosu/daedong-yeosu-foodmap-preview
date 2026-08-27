@@ -1267,17 +1267,11 @@ function rc2RememberExternalReturn(sourceElement = null) {
 
 function rc2LaunchComparedExternal(link, href) {
   if (!link || href === '#') return false;
-  const rawKey = String(
-    link?.dataset?.communityOriginal ||
-    link?.dataset?.routeKey ||
-    link?.dataset?.finalAppChannel ||
-    ''
-  );
-  const key = rawKey === 'coupang-eats' ? 'coupang' : rawKey;
-  if (typeof window.daedongLaunchMobileRoute === 'function' && ['mukkebi', 'ddangyo', 'yogiyo', 'coupang', 'baemin'].includes(key)) {
-    void window.daedongLaunchMobileRoute(key, href);
-    return true;
-  }
+  // Keep the already prepared Preview store detail in its original Kakao
+  // WebView. This is the return path that worked on the real Galaxy device:
+  // the external order route opens separately, and Android resumes the exact
+  // same store DOM instead of a same-tab intent history entry with a stale
+  // native hit-test surface.
   window.open(href, '_blank', 'noopener');
   return true;
 }
@@ -1300,49 +1294,9 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
     if (visibleStoreMatches) {
       if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
       window.daedongResetOrderMethodsTouchState?.();
-      const returnToken = String(saved.returnToken || '');
-      const documentReturnToken = String(globalThis.daedongEntryExternalReturnToken || '');
-      const documentFreshForReturn = Boolean(returnToken && documentReturnToken === returnToken);
-      // A Kakao history resume can preserve the correct pixels while its
-      // WebView keeps a stale native hit-test surface over the old document.
-      // DOM replacement and location.reload() can both reuse that browser-owned
-      // layer on a real Kakao WebView. Replace the current history entry with a
-      // token-guarded URL once; the early snapshot boot reconstructs the exact
-      // store and scroll position before revealing the forced new document.
-      if (rebuildExisting && !documentFreshForReturn && rc2NavigateReturnedDocumentOnce(saved)) return true;
-      // Kakao can resume a visually correct history snapshot whose native
-      // hit-test layer no longer delivers any DOM event inside the old modal.
-      // Rebinding or cloning the button cannot repair that WebView-owned
-      // surface. Hide the native modal surface for two frames before replacing
-      // the whole detail once for this return token. The short boot cover keeps
-      // Home from flashing while Android drops the stale hit-test layer.
-      const rebuiltToken = String(modal.dataset.rc2ReturnRebuiltToken || '');
-      if (rebuildExisting && !documentFreshForReturn && rebuiltToken !== returnToken) {
-        const root = document.documentElement;
-        const bootWasPending = root.classList.contains('daedong-external-return-pending');
-        root.classList.add('daedong-external-return-pending');
-        rc2NativeHardClose({fromPop: true});
-        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-        if (rc2ReturnRestoreCancelled(restoreEpoch)) {
-          if (!bootWasPending) root.classList.remove('daedong-external-return-pending');
-          return false;
-        }
-        scrollWindowInstant(Number(saved.pageScroll || 0));
-        rc2ReplaceNextModal = true;
-        let rebuilt = false;
-        try {
-          rebuilt = await openStore(store);
-        } finally {
-          rc2ReplaceNextModal = false;
-          if (!bootWasPending) root.classList.remove('daedong-external-return-pending');
-        }
-        if (rebuilt === false || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
-        const rebuiltModal = $('#modal');
-        const rebuiltStoreId = rebuiltModal?.dataset.activeStoreId
-          || rebuiltModal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
-        if (rebuiltModal?.hidden || String(rebuiltStoreId || '') !== String(saved.storeId)) return false;
-        rebuiltModal.dataset.rc2ReturnRebuiltToken = returnToken;
-      }
+      // Preserve the prepared detail element exactly. Rebuilding or navigating
+      // this already-visible surface after an external app return is what made
+      // the real Kakao WebView's next physical tap disappear.
       window.daedongRebindOrderMethodsTrigger?.();
       rc2DeferredStoreReturnPosition = saved;
       rc2StabilizeReturnPosition(saved, $('#modal .modal-card'));

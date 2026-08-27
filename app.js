@@ -1020,6 +1020,7 @@ async function openDdangyoRoute(routeUrl) {
 function handleDdangyoOrderLinkClick(event) {
   if (!isAndroidBrowser() || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
+  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link) return;
   const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
   if (key !== 'ddangyo') return;
@@ -1100,6 +1101,7 @@ function isKakaoInAppBrowser() { return /KAKAOTALK/i.test(String(navigator.userA
 function handleKakaoOrderLinkClick(event) {
   if (!isKakaoInAppBrowser() || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
+  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link) return;
   const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
   if (!KAKAO_SAME_TAB_ORDER_KEYS.has(key)) return;
@@ -1130,6 +1132,7 @@ function mobileOrderRouteKey(link) {
 function handleMobileOrderLinkClick(event) {
   if (!/(?:android|iphone|ipad|ipod)/i.test(String(navigator.userAgent || '')) || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
+  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link || !MOBILE_SAME_TAB_ORDER_KEYS.has(mobileOrderRouteKey(link))) return;
   const href = safeHref(link.getAttribute('href'));
   if (href === '#') return;
