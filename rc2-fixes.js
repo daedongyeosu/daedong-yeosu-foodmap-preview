@@ -159,6 +159,7 @@ function rc2InvalidatePendingReturnRestores() {
 function rc2ReturnRestoreCancelled(epoch) {
   return epoch !== rc2ReturnLifecycleEpoch;
 }
+window.daedongInvalidatePendingReturnRestores = rc2InvalidatePendingReturnRestores;
 
 const RC2_STORE_INTENT_SELECTOR = [
   '[data-rc3-rail-open]',

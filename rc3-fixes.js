@@ -439,14 +439,19 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
   if (!store) return false;
   event?.preventDefault();
   event?.stopImmediatePropagation();
-  // Treat this completed tap as a new surface-navigation intent. Clearing the
-  // full Android/Kakao return lifecycle (not only the active lease) prevents
-  // any delayed resume callback from replacing the newly opened sheet.
-  window.daedongConfirmIntentionalSurfaceNavigation?.();
-  window.daedongSettleRestoredReturnLeaseNow?.();
+  // Stop every stale async restore immediately, but do not mutate history or
+  // storage inside the real pointerup/touchend. Samsung Kakao WebView can drop
+  // the DOM transition when replaceState runs before this tap paints.
+  window.daedongInvalidatePendingReturnRestores?.();
   const singleExternalKey = String(trigger?.dataset.rc3SingleExternal || '');
   if (singleExternalKey) openCommunityChoice(store, singleExternalKey);
   else rc3OpenOrderMethods(store);
+  // The new sheet is now synchronously visible. Finish URL/return-token cleanup
+  // in the next task so it cannot cancel the customer's completed tap.
+  setTimeout(() => {
+    window.daedongConfirmIntentionalSurfaceNavigation?.();
+    window.daedongSettleRestoredReturnLeaseNow?.();
+  }, 0);
   return true;
 }
 window.daedongActivateOrderMethodsTrigger = rc3ActivateOrderMethodsTrigger;
