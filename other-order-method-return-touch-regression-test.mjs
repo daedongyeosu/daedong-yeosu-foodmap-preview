@@ -33,12 +33,13 @@ assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.
 assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?rc2LaunchComparedExternal\(comparedExternal, href\)/, '원본 Preview를 가게 상세로 안정화한 뒤 주문앱별 복귀 방식으로 열어야 합니다.');
 assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?window\.open\(href, '_blank', 'noopener'\)[\s\S]*?return true/, '비교화면 주문앱은 원본 Preview 상세 DOM을 보존하는 별도 실행 경로를 사용해야 합니다.');
 const comparedLauncher = rc2.match(/function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?\n\}/)?.[0] || '';
-assert.match(comparedLauncher, /routeKey === 'yogiyo'[\s\S]*?kakaoAndroid[\s\S]*?daedongLaunchYogiyoFromCurrentKakao[\s\S]*?window\.location\.assign\(href\)/, '카카오 Android 요기요만 카카오가 직접 처리하는 HTTPS 앱 전환을 사용해야 합니다.');
+assert.match(comparedLauncher, /routeKey === 'yogiyo'[\s\S]*?kakaoAndroid[\s\S]*?daedongDataApi\.yogiyoWebRoute[\s\S]*?window\.location\.assign\(yogiyoUrl\)/, '카카오 Android 요기요는 같은 카카오 방문기록의 웹 가게 상세로 이동해야 합니다.');
+assert.doesNotMatch(comparedLauncher, /daedongLaunchYogiyoFromCurrentKakao/, '요기요 네이티브 앱 작업으로 넘기면 삼성 홈으로 끊길 수 있습니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');
 assert.match(browserCheck, /context\.waitForEvent\('page'[\s\S]*dataset\.testPreparedBeforeReturn = '1'[\s\S]*externalPage\.close\(\)[\s\S]*dataset\.testPreparedBeforeReturn === '1'[\s\S]*준비된 상세 DOM을 그대로 유지/, '별도 주문앱 화면을 닫고 돌아왔을 때 같은 상세 DOM을 보존하는 실제 브라우저 검사가 없습니다.');
-assert.match(browserCheck, /외부 주문앱 복귀 뒤 주문앱 목록 열린 상태 유지[\s\S]*data-rc3-external-route="yogiyo"[\s\S]*목록을 다시 열지 않고 다른 주문앱 곧바로 실행/, '복귀 뒤 목록을 그대로 유지하고 다른 주문앱을 즉시 선택하는 검사가 필요합니다.');
+assert.match(browserCheck, /외부 주문앱 복귀 뒤 주문앱 목록 열린 상태 유지[\s\S]*data-rc3-external-route="coupang"[\s\S]*목록을 다시 열지 않고 다른 주문앱 곧바로 실행/, '복귀 뒤 목록을 그대로 유지하고 다른 주문앱을 즉시 선택하는 검사가 필요합니다.');
 assert.match(rc2, /document\.addEventListener\('pointerup', rc2ScheduleRestoredReturnSettlement, true\)/, '복귀 상태는 첫 손가락 누름이 아니라 활성화가 끝난 뒤 정리해야 합니다.');
 assert.doesNotMatch(rc2, /document\.addEventListener\('pointerdown', rc2SettleRestoredReturnLease/, '첫 pointerdown에서 history를 바꾸면 카카오 WebView가 버튼 클릭을 취소할 수 있습니다.');
 assert.match(rc3, /document\.visibilityState === 'visible'/, '앱 복귀로 화면이 다시 보일 때 터치 상태를 초기화해야 합니다.');

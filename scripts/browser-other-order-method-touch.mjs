@@ -25,9 +25,12 @@ const stores = [
     district: '미평동',
     category: '치킨',
     categories: ['치킨'],
-    channelKeys: ['yogiyo', 'baemin'],
+    lat: 34.7523658,
+    lng: 127.7031405,
+    channelKeys: ['yogiyo', 'coupang', 'baemin'],
     routes: [
       {name: '요기요', url: 'https://orders.example.test/yogiyo/vons', enabled: true},
+      {name: '쿠팡이츠', url: 'https://orders.example.test/coupang/vons', enabled: true},
       {name: '배달의민족', url: 'https://orders.example.test/baemin/vons', enabled: true}
     ]
   },
@@ -37,9 +40,12 @@ const stores = [
     district: '미평동',
     category: '한식',
     categories: ['한식'],
-    channelKeys: ['yogiyo', 'baemin'],
+    lat: 34.7601,
+    lng: 127.7101,
+    channelKeys: ['yogiyo', 'coupang', 'baemin'],
     routes: [
       {name: '요기요', url: 'https://orders.example.test/yogiyo/handsu', enabled: true},
+      {name: '쿠팡이츠', url: 'https://orders.example.test/coupang/handsu', enabled: true},
       {name: '배달의민족', url: 'https://orders.example.test/baemin/handsu', enabled: true}
     ]
   },
@@ -49,6 +55,8 @@ const stores = [
     district: '신기동',
     category: '고기/구이',
     categories: ['고기/구이'],
+    lat: 34.761,
+    lng: 127.711,
     phone: '061-123-4567',
     channelKeys: ['phone', 'yogiyo'],
     routes: [
@@ -124,15 +132,27 @@ await context.route('**/api/services', route => route.fulfill({
   contentType: 'application/json',
   body: JSON.stringify({programs: [], stores: {}})
 }));
-await context.route('**/api/store/*', route => {
-  const id = new URL(route.request().url()).pathname.split('/').filter(Boolean).at(-1);
+await context.route('**/api/store/**', route => {
+  const requestUrl = new URL(route.request().url());
+  const parts = requestUrl.pathname.split('/').filter(Boolean);
+  const isYogiyoWeb = parts.at(-1) === 'yogiyo-web';
+  const id = isYogiyoWeb ? parts.at(-2) : parts.at(-1);
   const detail = detailsById.get(id);
+  const body = isYogiyoWeb && detail
+    ? {storeId: id, shopId: '332930', url: `https://www.yogiyo.co.kr/mobile/?lat=${detail.lat}&lng=${detail.lng}#/332930`}
+    : detail || {error: 'not found'};
   return route.fulfill({
     status: detail ? 200 : 404,
     contentType: 'application/json',
-    body: JSON.stringify(detail || {error: 'not found'})
+    headers: {'Access-Control-Allow-Origin': baseOrigin},
+    body: JSON.stringify(body)
   });
 });
+await context.route('https://www.yogiyo.co.kr/mobile/**', route => route.fulfill({
+  status: 200,
+  contentType: 'text/html; charset=utf-8',
+  body: '<!doctype html><meta name="viewport" content="width=device-width"><title>요기요 가게</title><h1>요기요 주문화면</h1>'
+}));
 const page = await context.newPage();
 page.on('pageerror', error => report.errors.push(error.message));
 
@@ -140,6 +160,14 @@ const check = async (condition, message) => {
   const ok = await condition;
   report.checks.push({message, ok});
   if (!ok) throw new Error(message);
+};
+
+const resetScenarioState = async () => {
+  await page.evaluate(() => {
+    sessionStorage.clear();
+    localStorage.clear();
+  });
+  await context.clearCookies();
 };
 
 async function checkStore(storeName, screenshotName, {nativeResume = false} = {}) {
@@ -305,7 +333,7 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   // Samsung Kakao WebView can deliver the first route selection after native
   // app return as click without the pointerdown timestamp used before pause.
   // Choose a different app directly from the list preserved across return.
-  const returnedExternalRoute = page.locator('#modal:not([hidden]) [data-rc3-external-route="yogiyo"]');
+  const returnedExternalRoute = page.locator('#modal:not([hidden]) [data-rc3-external-route="coupang"]');
   const returnedExpectedURL = await returnedExternalRoute.evaluate(element => {
     const store = window.fxStoreById?.(element.dataset.storeId);
     return store?.routes?.find(route => route.key === element.dataset.rc3ExternalRoute)?.url || '';
@@ -327,6 +355,7 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   );
   await returnedExternalPage.close();
   await page.bringToFront();
+  await resetScenarioState();
 }
 
 async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiyo = false} = {}) {
@@ -352,20 +381,13 @@ async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiy
     `${storeName} 주문앱 구성에 맞는 버튼 동작 지정`
   );
   if (singleYogiyo) {
-    const expectedExternalURL = await trigger.evaluate(element => {
-      const store = window.fxStoreById?.(element.dataset.rc3OtherMethods);
-      return window.routeFor?.(store, element.dataset.rc3SingleExternal)?.url || '';
-    });
-    const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
     await trigger.tap();
-    const externalPage = await externalPagePromise;
-    await externalPage.waitForLoadState('domcontentloaded');
+    await page.waitForURL(url => url.hostname === 'www.yogiyo.co.kr' && url.hash === '#/332930', {timeout: 5000});
     await check(
-      Promise.resolve(externalPage.url() === expectedExternalURL),
-      `${storeName} 추가 확인 없이 요기요로 바로 이동`
+      page.locator('h1').filter({hasText: '요기요 주문화면'}).isVisible(),
+      `${storeName} 추가 확인 없이 같은 카카오 방문기록의 요기요 웹으로 바로 이동`
     );
-    await externalPage.close();
-    await page.bringToFront();
+    await page.goBack({waitUntil: 'domcontentloaded'});
   } else {
     await trigger.tap();
     await check(
@@ -373,6 +395,7 @@ async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiy
       `${storeName} 지역 주문앱 추가 뒤 다른 주문방법 선택창 유지`
     );
   }
+  await resetScenarioState();
 }
 
 try {

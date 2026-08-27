@@ -170,6 +170,22 @@
     return request(`/api/store/${id}/menu`, {cacheKey: `menu:${id}`, ...options})
       .then(payload => restoreCuratedMenuImages(id, payload));
   };
+  const yogiyoWebRoute = (storeId, coordinates = {}, options = {}) => {
+    const id = safeStoreId(storeId);
+    const lat = Number(coordinates.lat);
+    const lng = Number(coordinates.lng);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)
+      || lat < 32 || lat > 39 || lng < 124 || lng > 132) {
+      throw new Error('가게 위치를 확인할 수 없습니다.');
+    }
+    if (IS_GOHEUNG) throw new Error('고흥 요기요 주문경로는 준비 중입니다.');
+    const latText = String(lat);
+    const lngText = String(lng);
+    return request(`/api/store/${id}/yogiyo-web?lat=${encodeURIComponent(latText)}&lng=${encodeURIComponent(lngText)}`, {
+      cacheKey: `yogiyo-web:${id}:${latText}:${lngText}`,
+      ...options
+    });
+  };
   const menuSearch = (query, options = {}) => {
     const value = String(query || '').trim();
     if (!value || value.length > 40 || /[%_]/.test(value)) return Promise.resolve({stores: {}});
@@ -186,6 +202,7 @@
     services,
     detail,
     menu,
+    yogiyoWebRoute,
     menuSearch
   });
 })();
