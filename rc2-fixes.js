@@ -1206,16 +1206,28 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
       // Kakao can resume a visually correct history snapshot whose native
       // hit-test layer no longer delivers any DOM event inside the old modal.
       // Rebinding or cloning the button cannot repair that WebView-owned
-      // surface. Replace the whole detail once for this return token while
-      // keeping the same modal/history entry and saved scroll anchor.
+      // surface. Hide the native modal surface for two frames before replacing
+      // the whole detail once for this return token. The short boot cover keeps
+      // Home from flashing while Android drops the stale hit-test layer.
       const rebuiltToken = String(modal.dataset.rc2ReturnRebuiltToken || '');
       if (rebuildExisting && rebuiltToken !== String(saved.returnToken || '')) {
+        const root = document.documentElement;
+        const bootWasPending = root.classList.contains('daedong-external-return-pending');
+        root.classList.add('daedong-external-return-pending');
+        rc2NativeHardClose({fromPop: true});
+        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        if (rc2ReturnRestoreCancelled(restoreEpoch)) {
+          if (!bootWasPending) root.classList.remove('daedong-external-return-pending');
+          return false;
+        }
+        scrollWindowInstant(Number(saved.pageScroll || 0));
         rc2ReplaceNextModal = true;
         let rebuilt = false;
         try {
           rebuilt = await openStore(store);
         } finally {
           rc2ReplaceNextModal = false;
+          if (!bootWasPending) root.classList.remove('daedong-external-return-pending');
         }
         if (rebuilt === false || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
         const rebuiltModal = $('#modal');
