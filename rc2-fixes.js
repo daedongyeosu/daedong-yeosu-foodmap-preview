@@ -33,6 +33,7 @@ let rc2ExternalDepartureBlurred = false;
 let rc2ExternalDepartureHidden = false;
 let rc2RestoredReturnLease = null;
 let rc2RestoredReturnSettleTimer = 0;
+let rc2ReturnLifecycleEpoch = 0;
 const rc2PositionStabilizers = new WeakMap();
 
 function rc2FreshReturnState(saved) {
@@ -146,6 +147,19 @@ function rc2ResetExternalDepartureLifecycle() {
   rc2ExternalDepartureHidden = false;
 }
 
+function rc2InvalidatePendingReturnRestores() {
+  rc2ReturnLifecycleEpoch += 1;
+  // A promise that already captured the previous epoch may still resolve, but
+  // it is no longer allowed to mutate the customer's newly selected surface.
+  rc2StoreRestorePromise = null;
+  rc2SurfaceRestorePromise = null;
+  return rc2ReturnLifecycleEpoch;
+}
+
+function rc2ReturnRestoreCancelled(epoch) {
+  return epoch !== rc2ReturnLifecycleEpoch;
+}
+
 const RC2_STORE_INTENT_SELECTOR = [
   '[data-rc3-rail-open]',
   '[data-rail-store-id]',
@@ -162,6 +176,7 @@ function rc2ConfirmIntentionalStoreOpen() {
   // return task. Kakao can deliver those lifecycle callbacks after the click;
   // leaving them armed lets a newly opened detail be replaced by home.
   globalThis.daedongMarkHomeInteraction?.();
+  rc2InvalidatePendingReturnRestores();
   rc2ResetExternalDepartureLifecycle();
   rc2CancelRestoredReturnSettlement();
   for (const key of RC2_RETURN_STORAGE_KEYS) {
@@ -201,6 +216,7 @@ window.daedongConfirmIntentionalStoreOpen = rc2ConfirmIntentionalStoreOpen;
 window.daedongConfirmIntentionalSurfaceNavigation = rc2ConfirmIntentionalStoreOpen;
 
 function rc2WriteReturnState(key, value) {
+  rc2InvalidatePendingReturnRestores();
   rc2CancelRestoredReturnSettlement();
   rc2ResetExternalDepartureLifecycle();
   const returnToken = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
@@ -1167,9 +1183,10 @@ function rc2LaunchComparedExternal(link, href) {
 
 async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
   if (rc2StoreRestorePromise) return rc2StoreRestorePromise;
+  const restoreEpoch = rc2ReturnLifecycleEpoch;
   const restoreTask = (async () => {
     const saved = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
-    if (!saved) return false;
+    if (!saved || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
     const modal = $('#modal');
     const visibleStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
     const visibleStoreMatches = Boolean(
@@ -1180,33 +1197,39 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
     const store = fxStoreById(saved.storeId);
     if (!store) return false;
     if (visibleStoreMatches) {
+      if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
       window.daedongResetOrderMethodsTouchState?.();
       rc2DeferredStoreReturnPosition = saved;
       rc2StabilizeReturnPosition(saved);
       if (saved.menuState) {
         const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
-        if (!restoredMenu) return false;
+        if (!restoredMenu || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
       }
+      if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
       rc2ArmRestoredReturnLease(RC2_EXTERNAL_RETURN, saved);
       return true;
     }
     if (!modal?.hidden) {
+      if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
       window.daedongResetOrderMethodsTouchState?.();
       rc2ModalStack.length = 0;
       rc2NativeHardClose({fromPop: true});
       await new Promise(resolve => requestAnimationFrame(() => resolve()));
+      if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
     }
+    if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
     scrollWindowInstant(Number(saved.pageScroll || 0));
     const opened = await openStore(store);
-    if (opened === false) return false;
+    if (opened === false || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
     const restoredStoreId = modal?.dataset.activeStoreId || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
     if (modal?.hidden || String(restoredStoreId || '') !== String(saved.storeId)) return false;
     rc2DeferredStoreReturnPosition = saved;
     rc2StabilizeReturnPosition(saved);
     if (saved.menuState) {
       const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
-      if (!restoredMenu) return false;
+      if (!restoredMenu || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
     }
+    if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
     rc2ArmRestoredReturnLease(RC2_EXTERNAL_RETURN, saved);
     return true;
   })();
@@ -1220,8 +1243,10 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
 
 async function rc2RestoreExternalSurface({rebuildExisting = false} = {}) {
   if (rc2SurfaceRestorePromise) return rc2SurfaceRestorePromise;
+  const restoreEpoch = rc2ReturnLifecycleEpoch;
   const restoreTask = (async () => {
-    if (await rc2RestoreAfterExternalPage({rebuildExisting})) return true;
+    if (await rc2RestoreAfterExternalPage({rebuildExisting})) return !rc2ReturnRestoreCancelled(restoreEpoch);
+    if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
     return Boolean(fxRestoreAppBrowserReturn?.());
   })();
   rc2SurfaceRestorePromise = restoreTask;
