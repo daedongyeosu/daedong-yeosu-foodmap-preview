@@ -24,7 +24,7 @@ assert.equal(
 );
 assert.equal(rc3OrderMethodsMode({primaryOrder: {}, externalOrder: {}}).hasExternal, false);
 assert.match(source, /data-rc3-single-external/);
-assert.match(source, /if \(singleExternalKey\) openCommunityChoice\(store, singleExternalKey\)/);
+assert.match(source, /if \(singleExternalKey\) \{[\s\S]*?openCommunityChoice\(store, singleExternalKey\)/);
 assert.match(html, /single-yogiyo-cta-1/);
 
 console.log('single Yogiyo order CTA regression: PASS');

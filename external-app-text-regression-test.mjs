@@ -29,6 +29,6 @@ assert(rc2.includes('class="external-app-choice-label">요기요</span>'), '요�
 assert(rc2.includes('class="external-app-choice-label">쿠팡이츠</span>'), '쿠팡이츠 글자 선택지가 없습니다.');
 assert(rc2.includes('class="external-app-choice-label">배달의민족</span>'), '배달의민족 글자 선택지가 없습니다.');
 assert(rc3.includes('class="detail-route external-text-route"'), '가게별 다른 주문방법이 글자 전용 행으로 바뀌지 않았습니다.');
-assert(rc3.includes('<div class="order-methods-list">${routeMarkup}</div>${externalAppNoticeMarkup()}'), '가게별 다른 주문방법 안내 문구가 없습니다.');
+assert(rc3.includes('<div class="order-methods-list">${externalRoutes.map(route => rc3RouteButton(store, route)).join(\'\')}</div>${externalAppNoticeMarkup()}'), '가게별 인라인 주문방법 안내 문구가 없습니다.');
 
 console.log('external-app-text-regression: PASS');
