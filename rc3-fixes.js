@@ -591,9 +591,70 @@ function rc3OnOrderMethodsTouchEnd(event) {
 function rc3BindOrderMethodsTrigger(detail) {
   const trigger = detail?.querySelector('[data-rc3-other-methods]');
   if (!trigger) return;
-  trigger.removeAttribute('data-rc3-direct-bound');
-  trigger.dataset.rc3DelegatedTouch = '1';
+  // rc2 serializes and rebuilds the store detail before an external app is
+  // launched. Data attributes survive that rebuild, DOM listeners do not, so
+  // use a non-serializable element property as the real binding guard.
+  if (trigger.__rc3DirectOrderMethodsBound) return;
+  trigger.__rc3DirectOrderMethodsBound = true;
+  trigger.dataset.rc3DirectBound = '1';
+
+  let pointerStart = null;
+  let touchStart = null;
+  const consume = event => {
+    event?.preventDefault?.();
+    event?.stopImmediatePropagation?.();
+  };
+  const activateDirect = event => {
+    const storeId = String(trigger.dataset.rc3OtherMethods || '');
+    if (rc3OrderMethodsGhostActive(storeId)) {
+      consume(event);
+      return true;
+    }
+    rc3MarkOrderMethodsActivation(storeId);
+    return rc3ActivateOrderMethodsTrigger(trigger, event);
+  };
+
+  trigger.addEventListener('pointerdown', event => {
+    if (event.button !== 0 || event.isPrimary === false) return;
+    pointerStart = {x: event.clientX, y: event.clientY, moved: false};
+  });
+  trigger.addEventListener('pointermove', event => {
+    if (!pointerStart) return;
+    if (Math.hypot(event.clientX - pointerStart.x, event.clientY - pointerStart.y) > 10) pointerStart.moved = true;
+  });
+  trigger.addEventListener('pointercancel', () => { pointerStart = null; });
+  trigger.addEventListener('pointerup', event => {
+    const start = pointerStart;
+    pointerStart = null;
+    if (!start || start.moved) return;
+    activateDirect(event);
+  });
+
+  trigger.addEventListener('touchstart', event => {
+    if (event.touches?.length !== 1) return;
+    const touch = event.changedTouches?.[0] || event.touches[0];
+    if (!touch) return;
+    touchStart = {identifier: touch.identifier, x: touch.clientX, y: touch.clientY, moved: false};
+  }, {passive: true});
+  trigger.addEventListener('touchmove', event => {
+    if (!touchStart) return;
+    const touch = rc3TouchByIdentifier(event.touches, touchStart.identifier)
+      || rc3TouchByIdentifier(event.changedTouches, touchStart.identifier);
+    if (touch && Math.hypot(touch.clientX - touchStart.x, touch.clientY - touchStart.y) > 10) touchStart.moved = true;
+  }, {passive: true});
+  trigger.addEventListener('touchcancel', () => { touchStart = null; }, {passive: true});
+  trigger.addEventListener('touchend', event => {
+    const start = touchStart;
+    const touch = start ? rc3TouchByIdentifier(event.changedTouches, start.identifier) : null;
+    touchStart = null;
+    if (!start || !touch || start.moved) return;
+    activateDirect(event);
+  }, {passive: false});
+  trigger.addEventListener('click', event => activateDirect(event));
 }
+window.daedongRebindOrderMethodsTrigger = () => {
+  rc3BindOrderMethodsTrigger($('#modalContent .store-detail'));
+};
 
 function rc3ShouldBlockOrderMethodSelection(external, event, storeId) {
   if (Number(event?.detail || 0) === 0) return false;

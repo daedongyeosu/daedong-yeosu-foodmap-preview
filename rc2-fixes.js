@@ -515,6 +515,9 @@ function rc2RestoreSnapshot(snapshot) {
   rc2StabilizeReturnPosition({modalScroll: snapshot.scrollTop || 0, anchor: snapshot.anchor}, modal.querySelector('.modal-card'));
   rc2ModalRestoring = false;
   rc2ScrubCustomerCounts(modal);
+  // Snapshot restoration replaces the DOM nodes. Reattach interactions that
+  // intentionally live on the restored store button itself before departure.
+  window.daedongRebindOrderMethodsTrigger?.();
 }
 
 openModal = function rc2OpenModal(html) {

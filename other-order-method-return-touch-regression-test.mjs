@@ -37,8 +37,11 @@ assert.match(browserCheck, /pointerdown[\s\S]*returnStatePresent[\s\S]*pointerup
 assert.match(rc2, /document\.addEventListener\('pointerup', rc2ScheduleRestoredReturnSettlement, true\)/, '복귀 상태는 첫 손가락 누름이 아니라 활성화가 끝난 뒤 정리해야 합니다.');
 assert.doesNotMatch(rc2, /document\.addEventListener\('pointerdown', rc2SettleRestoredReturnLease/, '첫 pointerdown에서 history를 바꾸면 카카오 WebView가 버튼 클릭을 취소할 수 있습니다.');
 assert.match(rc3, /document\.visibilityState === 'visible'/, '앱 복귀로 화면이 다시 보일 때 터치 상태를 초기화해야 합니다.');
-assert.match(rc3, /trigger\.removeAttribute\('data-rc3-direct-bound'\)/, 'HTML 스냅샷에 남은 과거 직접 바인딩 표식을 제거해야 합니다.');
-assert.doesNotMatch(rc3, /trigger\.addEventListener\('pointer(?:down|up|move|cancel)'/, 'HTML 복원 시 사라지는 노드 전용 포인터 리스너를 다시 사용하면 안 됩니다.');
+assert.match(rc3, /if \(trigger\.__rc3DirectOrderMethodsBound\) return/, '직접 바인딩 여부는 HTML 스냅샷에 직렬화되지 않는 DOM 속성으로 판단해야 합니다.');
+assert.match(rc3, /trigger\.addEventListener\('pointerdown'[\s\S]*?trigger\.addEventListener\('pointerup'/, '복귀한 카카오 WebView가 문서 위임을 놓쳐도 버튼 자체가 포인터 탭을 처리해야 합니다.');
+assert.match(rc3, /trigger\.addEventListener\('touchstart'[\s\S]*?trigger\.addEventListener\('touchend'/, '복귀한 Android WebView에서 버튼 자체의 원시 터치 완료를 처리해야 합니다.');
+assert.match(rc3, /window\.daedongRebindOrderMethodsTrigger = \(\) => \{[\s\S]*?rc3BindOrderMethodsTrigger/, '스냅샷 복원 직후 직접 터치를 다시 연결하는 공개 훅이 필요합니다.');
+assert.match(rc2, /function rc2RestoreSnapshot\(snapshot\) \{[\s\S]*?rc2ScrubCustomerCounts\(modal\);[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\)/, '외부 앱 출발 전에 DOM 스냅샷을 다시 만들면 주문방법 버튼 이벤트도 즉시 다시 연결해야 합니다.');
 assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?rc3OpenOrderMethods\(store\)[\s\S]*?setTimeout\(\(\) => \{[\s\S]*?daedongConfirmIntentionalSurfaceNavigation\?\.\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)/, '실기기에서는 복귀 작업을 즉시 무효화하고 주문방법 창을 먼저 표시한 뒤 history를 정리해야 합니다.');
 
 const clickGuardIndex = rc3.indexOf("const other = event.target.closest('[data-rc3-other-methods]')");
