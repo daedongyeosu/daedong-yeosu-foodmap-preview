@@ -34,6 +34,7 @@ let rc2SurfaceRestorePromise = null;
 let rc2ExternalDepartureBlurred = false;
 let rc2ExternalDepartureHidden = false;
 let rc2ExternalReturnPopGuardUntil = 0;
+let rc2ExpectedExternalHistoryPopToken = '';
 
 function rc2FreshReturnState(saved) {
   const age = Date.now() - Number(saved?.savedAt || 0);
@@ -163,6 +164,7 @@ function rc2ConfirmIntentionalStoreOpen() {
   // leaving them armed lets a newly opened detail be replaced by home.
   globalThis.daedongMarkHomeInteraction?.();
   rc2ResetExternalDepartureLifecycle();
+  rc2ExpectedExternalHistoryPopToken = '';
   for (const key of RC2_RETURN_STORAGE_KEYS) {
     try { sessionStorage.removeItem(key); } catch {}
     try { localStorage.removeItem(key); } catch {}
@@ -273,6 +275,50 @@ function rc2ClearReturnState(key, saved = null) {
     if (guardMatches) returnUrl.searchParams.delete(RC2_RETURN_GUARD_PARAM);
     history.replaceState(next, '', returnUrl ? `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}` : undefined);
   } catch {}
+}
+
+function rc2NormalizeReturnedHistory(saved) {
+  const token = String(saved?.returnToken || '');
+  if (!token || !RC2_NEEDS_EXTERNAL_HISTORY_GUARD) return false;
+  let guardToken = '';
+  try { guardToken = new URL(location.href).searchParams.get(RC2_RETURN_GUARD_PARAM) || ''; } catch {}
+  const isGuardEntry = history.state?.[RC2_RETURN_GUARD_STATE] === token || guardToken === token;
+  if (!isGuardEntry) return false;
+  // Every launch adds one sacrificial Android history entry. Collapse it as
+  // part of the successful return instead of leaving an extra entry for the
+  // customer's next launch. The matching token makes the resulting popstate
+  // distinguishable from an intentional Back action even on repeated trips.
+  rc2ExpectedExternalHistoryPopToken = token;
+  try {
+    history.back();
+    return true;
+  } catch {
+    rc2ExpectedExternalHistoryPopToken = '';
+    return false;
+  }
+}
+
+function rc2ConsumeExpectedExternalHistoryPop() {
+  const token = String(rc2ExpectedExternalHistoryPopToken || '');
+  if (!token) return false;
+  let url = null;
+  let urlToken = '';
+  try {
+    url = new URL(location.href);
+    urlToken = url.searchParams.get(RC2_RETURN_TOKEN_PARAM) || '';
+  } catch {}
+  const historyToken = String(history.state?.[RC2_RETURN_TOKEN_STATE] || '');
+  if (historyToken !== token && urlToken !== token) return false;
+  rc2ExpectedExternalHistoryPopToken = '';
+  try {
+    const next = {...history.state, daedongModal: true, rc2ModalDepth: 1};
+    delete next[RC2_RETURN_TOKEN_STATE];
+    if (next[RC2_RETURN_GUARD_STATE] === token) delete next[RC2_RETURN_GUARD_STATE];
+    if (urlToken === token) url.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
+    url?.searchParams.delete(RC2_RETURN_GUARD_PARAM);
+    history.replaceState(next, '', url ? `${url.pathname}${url.search}${url.hash}` : undefined);
+  } catch {}
+  return true;
 }
 
 const RC2_RETURN_ANCHOR_ATTRIBUTES = [
@@ -443,6 +489,7 @@ openModal = function rc2OpenModal(html) {
 
 hardClose = function rc2HardClose(options = {}) {
   if (options.fromPop) {
+    if (typeof rc2ConsumeExpectedExternalHistoryPop === 'function' && rc2ConsumeExpectedExternalHistoryPop()) return;
     const pendingReturn = rc2PendingExternalReturnState();
     const restoredImmediatelyBeforePop = Date.now() < rc2ExternalReturnPopGuardUntil;
     if (pendingReturn || restoredImmediatelyBeforePop) {
@@ -1024,7 +1071,8 @@ function rc2StartAmbient(firstEntry = false) {
 function rc2ExternalAppKey(element) {
   if (!element) return '';
   return String(
-    element.dataset?.routeKey
+    element.dataset?.communityOriginal
+    || element.dataset?.routeKey
     || element.dataset?.finalAppChannel
     || element.dataset?.appKey
     || element.dataset?.menuExternalKey
@@ -1114,6 +1162,7 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
         const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
         if (!restoredMenu) return false;
       }
+      rc2NormalizeReturnedHistory(saved);
       rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
       return true;
     }
@@ -1134,6 +1183,7 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
       const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
       if (!restoredMenu) return false;
     }
+    rc2NormalizeReturnedHistory(saved);
     rc2ClearReturnState(RC2_EXTERNAL_RETURN, saved);
     return true;
   })();
@@ -1293,11 +1343,7 @@ fxInstallEvents = function rc2InstallEvents() {
     const favorite = event.target.closest('[data-favorite-store]');
     if (favorite) fxGull(favorite, true);
     const comparedExternal = event.target.closest('a[data-community-original]');
-    const hasStoreDetailInModalFlow = Boolean(
-      $('#modalContent .store-detail[data-store-id]')
-      || rc2ModalStack.some(snapshot => snapshot?.html?.includes('class="store-detail"'))
-    );
-    if (comparedExternal && hasStoreDetailInModalFlow) {
+    if (comparedExternal) {
       const href = safeHref(comparedExternal.getAttribute('href'));
       event.preventDefault();
       event.stopImmediatePropagation();

@@ -33,9 +33,9 @@ assert.match(rc3, /trigger\.removeAttribute\('data-rc3-direct-bound'\)/, 'HTML �
 assert.doesNotMatch(rc3, /trigger\.addEventListener\('pointer(?:down|move|up|cancel)'/, 'HTML 복원 시 사라지는 노드 직접 포인터 리스너가 다시 생겼습니다.');
 assert.match(rc3, /orderAnchor\?\.insertAdjacentHTML[\s\S]*?rc3BindOrderMethodsTrigger\(detail\);/, '가게 상세를 그린 뒤 위임 터치 표식이 연결되지 않습니다.');
 
-assert.match(rc2, /rc2ModalStack\.some\(snapshot => snapshot\?\.html\?\.includes\('class="store-detail"'\)\)/, '여러 겹 주문 모달에서도 원래 가게 상세 복귀 경로를 찾지 못합니다.');
-assert.match(rc2, /if \(comparedExternal && hasStoreDetailInModalFlow\)[\s\S]*?event\.stopImmediatePropagation\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)/, '외부 주문앱 이동 전에 같은 가게 복귀 상태를 저장하고 화면을 안정화해야 합니다.');
-assert.doesNotMatch(rc2.match(/if \(comparedExternal && hasStoreDetailInModalFlow\)[\s\S]*?const externalLink =/)?.[0] || '', /window\.location\.assign\(href\)/, '카카오 원본 Preview 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
+assert.match(rc2, /const storeSnapshot = \[current, \.\.\.rc2ModalStack\.slice\(\)\.reverse\(\)\]\.find\(snapshot => \{[\s\S]*?\.store-detail\[data-store-id\]/, '여러 겹 주문 모달에서도 원래 가게 상세 복귀 경로를 찾지 못합니다.');
+assert.match(rc2, /if \(comparedExternal\)[\s\S]*?event\.stopImmediatePropagation\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)/, '외부 주문앱 이동 전에 진입 화면과 관계없이 같은 가게 복귀 상태를 저장하고 화면을 안정화해야 합니다.');
+assert.doesNotMatch(rc2.match(/if \(comparedExternal\)[\s\S]*?const externalLink =/)?.[0] || '', /window\.location\.assign\(href\)/, '카카오 원본 Preview 화면을 일반 웹 주소로 교체하면 안 됩니다.');
 
 assert.match(rc3Css, /\.rc3-order-methods-trigger\s*\{[\s\S]*?grid-template-columns:\s*minmax\(0,\s*1fr\)\s+auto\s*!important;[\s\S]*?pointer-events:\s*auto\s*!important;[\s\S]*?touch-action:\s*manipulation;/, '다른 주문방법 버튼의 두 칸 가로 배치와 전체 터치 영역이 고정되지 않았습니다.');
 assert.match(rc3Css, /\.rc3-order-methods-trigger\s*>\s*span:first-child\s*\{[\s\S]*?white-space:\s*nowrap;[\s\S]*?word-break:\s*keep-all;/, '다른 주문방법 문구의 한 줄 표시가 고정되지 않았습니다.');

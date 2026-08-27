@@ -1010,7 +1010,6 @@ async function openDdangyoRoute(routeUrl) {
 function handleDdangyoOrderLinkClick(event) {
   if (!isAndroidBrowser() || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
-  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link) return;
   const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
   if (key !== 'ddangyo') return;
@@ -1019,7 +1018,7 @@ function handleDdangyoOrderLinkClick(event) {
   event.preventDefault(); event.stopImmediatePropagation();
   trackAnalyticsRouteClick(event);
   markExternalAppDeparture();
-  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn(link);
   void openDdangyoRoute(href);
 }
 document.addEventListener('click', handleDdangyoOrderLinkClick, true);
@@ -1055,7 +1054,6 @@ function isKakaoInAppBrowser() { return /KAKAOTALK/i.test(String(navigator.userA
 function handleKakaoOrderLinkClick(event) {
   if (!isKakaoInAppBrowser() || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
-  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link) return;
   const key = String(link.dataset.routeKey || link.dataset.communityOriginal || link.dataset.finalAppChannel || '');
   if (!KAKAO_SAME_TAB_ORDER_KEYS.has(key)) return;
@@ -1065,8 +1063,8 @@ function handleKakaoOrderLinkClick(event) {
   event.stopImmediatePropagation();
   trackAnalyticsRouteClick(event);
   markExternalAppDeparture();
-  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
-  void launchMobileRoute(key, href);
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn(link);
+  void window.daedongLaunchMobileRoute(key, href);
 }
 document.addEventListener('click', handleKakaoOrderLinkClick, true);
 const MOBILE_SAME_TAB_ORDER_KEYS = new Set(['mukkebi','ddangyo','ondongne','brand','happy','yogiyo','coupang','baemin']);
@@ -1086,7 +1084,6 @@ function mobileOrderRouteKey(link) {
 function handleMobileOrderLinkClick(event) {
   if (!/(?:android|iphone|ipad|ipod)/i.test(String(navigator.userAgent || '')) || !(event.target instanceof Element)) return;
   const link = event.target.closest('a[href]');
-  if (link?.matches('a[data-community-original][target="_blank"]')) return;
   if (!link || !MOBILE_SAME_TAB_ORDER_KEYS.has(mobileOrderRouteKey(link))) return;
   const href = safeHref(link.getAttribute('href'));
   if (href === '#') return;
@@ -1094,8 +1091,8 @@ function handleMobileOrderLinkClick(event) {
   event.stopImmediatePropagation();
   trackAnalyticsRouteClick(event);
   markExternalAppDeparture();
-  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn();
-  void launchMobileRoute(mobileOrderRouteKey(link), href);
+  if (typeof rc2RememberExternalReturn === 'function') rc2RememberExternalReturn(link);
+  void window.daedongLaunchMobileRoute(mobileOrderRouteKey(link), href);
 }
 document.addEventListener('click', handleMobileOrderLinkClick, true);
 function handleAndroidMapLinkClick(event) {
@@ -2205,7 +2202,7 @@ async function openStore(store) {
   const external = EXTERNAL_APP_KEYS.map(key=>routeFor(store,key)).filter(Boolean);
   const otherRoutes = [phoneRoute,...external].filter(Boolean);
   const otherMenu = otherRoutes.length ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle external-text-route" type="button"><span>다른 주문방법 보기</span><b>›</b></button><div class="store-other-popover" hidden><button type="button" class="store-other-close" aria-label="다른 주문방법 닫기">×</button>${otherRoutes.map(route => route.key === 'phone' ? routeLink(route,'store-other-link') : `<button type="button" class="store-other-link external-text-route" data-external-route-key="${route.key}"><span>${escapeHtml(route.name)}</span><b>›</b></button>`).join('')}${externalAppNoticeMarkup()}</div></div>` : '';
-  const selectedCta = selectedRoute ? `<button type="button" class="selected-order-cta external-text-route" data-external-route-key="${selectedRoute.key}"><span>처음 선택한 ${escapeHtml(APP_META[selectedRoute.key].label)}로 주문하기</span><b>›</b></button>` : '';
+  const selectedCta = selectedRoute ? `<a class="selected-order-cta external-text-route" href="${escapeHtml(selectedRoute.url)}" data-community-original="${selectedRoute.key}" target="_blank" rel="noopener"><span>${escapeHtml(APP_META[selectedRoute.key].label)}로 바로 주문하기</span><b>›</b></a>` : '';
   const favorite=isFavorite(store.id);
   const menuEntry = storeMenuPreviewEntryMarkup(store);
   if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
@@ -2471,7 +2468,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!event.target.closest('.store-other-wrap')) $$('.store-other-popover').forEach(item => item.hidden = true);
   });
 
-  $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) openStore(store); });
+  $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) { window.daedongConfirmIntentionalStoreOpen?.(); openStore(store); } });
   $('#noticeBtn').addEventListener('click', () => openModal(`<h2 id="modalTitle">알림</h2><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div>`));
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
