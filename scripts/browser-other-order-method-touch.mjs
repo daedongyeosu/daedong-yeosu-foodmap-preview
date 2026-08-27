@@ -260,8 +260,8 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
 
   const returnedTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await check(
-    returnedTrigger.evaluate(element => element.dataset.testPreparedBeforeReturn === '1'),
-    `${storeName} 복귀 뒤 준비된 가게 상세 DOM을 유지해 터치 중 재구성하지 않음`
+    returnedTrigger.evaluate(element => element.dataset.testPreparedBeforeReturn !== '1'),
+    `${storeName} 복귀 뒤 카카오가 보존한 오래된 상세 DOM을 첫 터치 전에 전체 재구성`
   );
   const returnedHitTarget = await returnedTrigger.evaluate(element => {
     const rect = element.getBoundingClientRect();

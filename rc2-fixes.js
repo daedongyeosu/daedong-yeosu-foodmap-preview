@@ -1203,13 +1203,30 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
     if (visibleStoreMatches) {
       if (rc2ReturnRestoreCancelled(restoreEpoch)) return false;
       window.daedongResetOrderMethodsTouchState?.();
-      // Kakao can recreate the visible history entry from its own WebView
-      // snapshot. The markup still matches the saved store, but node-local
-      // listeners from the pre-departure document are gone. Rebind before the
-      // first customer tap instead of treating matching markup as sufficient.
+      // Kakao can resume a visually correct history snapshot whose native
+      // hit-test layer no longer delivers any DOM event inside the old modal.
+      // Rebinding or cloning the button cannot repair that WebView-owned
+      // surface. Replace the whole detail once for this return token while
+      // keeping the same modal/history entry and saved scroll anchor.
+      const rebuiltToken = String(modal.dataset.rc2ReturnRebuiltToken || '');
+      if (rebuildExisting && rebuiltToken !== String(saved.returnToken || '')) {
+        rc2ReplaceNextModal = true;
+        let rebuilt = false;
+        try {
+          rebuilt = await openStore(store);
+        } finally {
+          rc2ReplaceNextModal = false;
+        }
+        if (rebuilt === false || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
+        const rebuiltModal = $('#modal');
+        const rebuiltStoreId = rebuiltModal?.dataset.activeStoreId
+          || rebuiltModal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId;
+        if (rebuiltModal?.hidden || String(rebuiltStoreId || '') !== String(saved.storeId)) return false;
+        rebuiltModal.dataset.rc2ReturnRebuiltToken = String(saved.returnToken || '');
+      }
       window.daedongRebindOrderMethodsTrigger?.();
       rc2DeferredStoreReturnPosition = saved;
-      rc2StabilizeReturnPosition(saved);
+      rc2StabilizeReturnPosition(saved, $('#modal .modal-card'));
       if (saved.menuState) {
         const restoredMenu = await window.daedongMenuReturn?.restore?.(saved.menuState);
         if (!restoredMenu || rc2ReturnRestoreCancelled(restoreEpoch)) return false;
