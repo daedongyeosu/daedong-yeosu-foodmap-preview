@@ -50,10 +50,16 @@ const link = (key, includeStore = false) => ({
   removeAttribute() {}
 });
 await sandbox.launchComparedExternal(link('yogiyo', true), urls.yogiyo);
+await sandbox.launchComparedExternal({
+  dataset: {rc3SingleExternal: 'yogiyo', storeId: store.id},
+  closest: () => null,
+  setAttribute() {},
+  removeAttribute() {}
+}, urls.yogiyo);
 await sandbox.launchComparedExternal(link('coupang'), urls.coupang);
 await sandbox.launchComparedExternal(link('baemin'), urls.baemin);
 
-assert.deepEqual(assigned, [resolvedYogiyoUrl], '카카오 Android의 요기요는 같은 방문기록의 웹 가게 상세로 이동해야 합니다.');
+assert.deepEqual(assigned, [resolvedYogiyoUrl, resolvedYogiyoUrl], '목록·단독 버튼의 카카오 Android 요기요는 같은 방문기록의 웹 가게 상세로 이동해야 합니다.');
 assert.deepEqual(alerts, []);
 assert.deepEqual(opened, [
   [urls.coupang, '_blank', 'noopener'],

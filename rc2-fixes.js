@@ -1273,6 +1273,7 @@ async function rc2LaunchComparedExternal(link, href) {
   if (!link || href === '#') return false;
   const rawKey = String(
     link.dataset?.rc3ExternalRoute
+    || link.dataset?.rc3SingleExternal
     || link.dataset?.communityOriginal
     || link.dataset?.routeKey
     || link.dataset?.finalAppChannel

@@ -71,7 +71,7 @@ assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*keep-order-app-list-on-re
 assert.match(html, /final-experience\.js\?v=[^"\n]*keep-order-app-list-on-return-1/, '복귀 뒤 주문앱 목록 유지 로더 캐시 버전이 갱신되어야 합니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)[\s\S]*window\.dispatchEvent\(new Event\('focus'\)\)/, '카카오 네이티브 숨김·복귀 수명주기 검사가 없습니다.');
 assert.match(browserCheck, /외부 주문앱이 열린 동안 주문앱 목록을 닫지 않음[\s\S]*외부 주문앱 복귀 뒤 주문앱 목록 열린 상태 유지/, '외부 앱에서 돌아왔을 때 주문앱 목록이 열린 상태인지 검사하지 않습니다.');
-assert.match(browserCheck, /returnedExternalRoute[\s\S]*data-rc3-external-route="yogiyo"[\s\S]*MouseEvent\('click',[\s\S]*detail:\s*1[\s\S]*목록을 다시 열지 않고 다른 주문앱 곧바로 실행/, '외부 앱 복귀 뒤 다른 주문앱을 추가 단계 없이 직접 실행하는 검사가 없습니다.');
+assert.match(browserCheck, /returnedExternalRoute[\s\S]*data-rc3-external-route="coupang"[\s\S]*MouseEvent\('click',[\s\S]*detail:\s*1[\s\S]*목록을 다시 열지 않고 다른 주문앱 곧바로 실행/, '외부 앱 복귀 뒤 다른 주문앱을 추가 단계 없이 직접 실행하는 검사가 없습니다.');
 assert.match(browserCheck, /document\.elementFromPoint/, '복귀 뒤 투명 가림막이 버튼을 덮는지 검사하지 않습니다.');
 assert.match(browserCheck, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'[\s\S]*page\.evaluate\(\(\) => window\.daedongCatalogReady\)/,
   '카탈로그 준비 Promise가 생기기 전에 검색을 시작하면 안 됩니다.');
