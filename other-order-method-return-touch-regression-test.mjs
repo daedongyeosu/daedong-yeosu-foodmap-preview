@@ -22,6 +22,8 @@ assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?rc2Rememb
 assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '복귀 시 같은 가게 상세가 보이면 터치 상태만 비우고 기존 DOM을 유지해야 합니다.');
 const visibleStoreBranch = rc2.slice(rc2.indexOf('if (visibleStoreMatches)'), rc2.indexOf('if (!modal?.hidden)', rc2.indexOf('if (visibleStoreMatches)')));
 assert.doesNotMatch(visibleStoreBranch, /rc2NativeHardClose|openStore\(/, '같은 가게 상세를 복귀 중 닫고 다시 만들면 실제 터치와 경쟁합니다.');
+assert.match(visibleStoreBranch, /daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '카카오가 기존 상세 마크업만 복원한 경우 첫 터치 전에 버튼 직접 이벤트를 다시 연결해야 합니다.');
+assert.match(rc2, /const opened = await openStore\(store\);[\s\S]*?restoredStoreId[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '가게 상세를 새로 연 복귀 경로도 위치를 고정하기 전에 주문방법 버튼을 다시 연결해야 합니다.');
 assert.match(rc2, /prepareStoreSurface && storeSnapshot && storeSnapshot !== current[\s\S]*?rc2ModalStack\.length = 0;[\s\S]*?rc2RestoreSnapshot\(storeSnapshot\)/, '외부 주문앱을 열기 전에 원본 Preview를 가게 상세 화면으로 안정화해야 합니다.');
 assert.match(rc2, /const prepareStoreSurface = Boolean\(sourceElement\?\.matches\?\.\('a\[data-community-original\]'\)\)/, '다른 주문방법의 외부 주문앱 링크에서만 출발 전 상세 화면을 안정화해야 합니다.');
 assert.match(rc2, /window\.addEventListener\('focus', \(\) => rc2RestoreAfterConfirmedResume/, '카카오 외부 앱에서 돌아올 때 focus만 발생하는 경우도 출발 확인 뒤 복원해야 합니다.');
