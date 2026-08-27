@@ -7,6 +7,7 @@ const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
 const RC2_RETURN_TOKEN_PARAM = '__ddret';
 const RC2_RETURN_GUARD_PARAM = '__ddguard';
+const RC2_APP_FALLBACK_PARAM = '__ddappfallback';
 const RC2_DURABLE_RETURN_COOKIE = 'daedongOrderReturnV1';
 const RC2_RETURN_DOCUMENT_RELOAD = 'daedongExternalReturnDocumentReloadV1';
 const RC2_RETURN_MAX_AGE = 30 * 60 * 1000;
@@ -223,6 +224,7 @@ function rc2ConfirmIntentionalStoreOpen() {
     delete next.daedongExternalReturnGuard;
     url.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
     url.searchParams.delete(RC2_RETURN_GUARD_PARAM);
+    url.searchParams.delete(RC2_APP_FALLBACK_PARAM);
     history.replaceState(next, '', `${url.pathname}${url.search}${url.hash}`);
   } catch {}
   globalThis.daedongFinishExternalReturnBoot?.();
@@ -312,6 +314,7 @@ function rc2ClearReturnState(key, saved = null) {
     delete next[RC2_RETURN_TOKEN_STATE];
     if (urlMatches) returnUrl.searchParams.delete(RC2_RETURN_TOKEN_PARAM);
     if (guardMatches) returnUrl.searchParams.delete(RC2_RETURN_GUARD_PARAM);
+    returnUrl.searchParams.delete(RC2_APP_FALLBACK_PARAM);
     history.replaceState(next, '', returnUrl ? `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}` : undefined);
   } catch {}
 }
