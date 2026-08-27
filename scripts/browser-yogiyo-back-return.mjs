@@ -84,7 +84,8 @@ const openOrderMethodsRoute = async (page, key) => {
   }
   const otherMethods = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await otherMethods.waitFor({state: 'visible', timeout: 10000});
-  await otherMethods.click();
+  const orderMethodsSheet = page.locator('#modal:not([hidden]) .order-methods-sheet');
+  if (!await orderMethodsSheet.isVisible()) await otherMethods.click();
   const route = page.locator(`.order-methods-sheet [data-rc3-external-route="${key}"]`);
   await route.waitFor({state: 'visible', timeout: 5000});
   return route;
@@ -123,6 +124,33 @@ try {
     if (key === 'yogiyo') await page.screenshot({path: 'browser-yogiyo-back-return.png', fullPage: false});
     await page.close();
   }
+
+  const detachedPreviewPage = await context.newPage();
+  detachedPreviewPage.on('pageerror', error => report.errors.push(error.message));
+  const detachedYogiyoRoute = await openOrderMethodsRoute(detachedPreviewPage, 'yogiyo');
+  const detachedExternalPromise = context.waitForEvent('page', {timeout: 5000});
+  await detachedYogiyoRoute.click();
+  const detachedExternalPage = await detachedExternalPromise;
+  await detachedExternalPage.waitForLoadState('domcontentloaded');
+  await detachedPreviewPage.close();
+  await detachedExternalPage.close();
+
+  const reopenedKakaoLink = await context.newPage();
+  reopenedKakaoLink.on('pageerror', error => report.errors.push(error.message));
+  await reopenedKakaoLink.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await check(
+    reopenedKakaoLink.evaluate(() => globalThis.daedongEntryIsDetachedKakaoReturn === true),
+    '요기요가 Preview 문서를 끊은 뒤 카카오톡 원래 링크 재진입을 복귀로 판별'
+  );
+  const reopenedStore = reopenedKakaoLink.locator(`#modal:not([hidden]) .store-detail[data-store-id="${store.store_id}"]`);
+  await reopenedStore.waitFor({state: 'visible', timeout: 20000});
+  await check(Promise.resolve(true), '카카오톡 링크 재진입 뒤 방금 보던 가게 상세 복원');
+  await check(
+    reopenedKakaoLink.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
+    '카카오톡 링크 재진입 뒤 요기요·쿠팡이츠·배달의민족 목록 열린 상태 복원'
+  );
+  await reopenedKakaoLink.screenshot({path: 'browser-yogiyo-detached-link-return.png', fullPage: false});
+  await reopenedKakaoLink.close();
   report.success = report.errors.length === 0;
 } catch (error) {
   report.failure = error.stack || String(error);

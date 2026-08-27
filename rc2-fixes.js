@@ -98,7 +98,7 @@ function rc2ReadReturnState(key) {
   let urlToken = '';
   try { urlToken = new URL(location.href).searchParams.get(RC2_RETURN_TOKEN_PARAM) || ''; } catch {}
   const historyToken = String(history.state?.[RC2_RETURN_TOKEN_STATE] || '');
-  const departureToken = rc2IsHistoryReentry()
+  const departureToken = (rc2IsHistoryReentry() || globalThis.daedongEntryIsDetachedKakaoReturn === true)
     ? String(rc2ReadDepartureMarker()?.returnToken || '')
     : '';
   for (const storage of [sessionStorage, localStorage]) {
