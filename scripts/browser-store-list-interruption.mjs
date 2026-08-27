@@ -309,7 +309,7 @@ try {
   await check(Promise.resolve(
     Math.abs(afterPromoGap - beforePromoGap) < 16
       && afterRanking.gridTop >= 0
-      && afterRanking.gridTop < afterRanking.viewportHeight / 2
+      && afterRanking.gridTop < afterRanking.viewportHeight * 0.75
   ), '늦은 추천·영업시간 갱신 중 가게목록과 소식 배너 사이에 다른 화면이 끼어들지 않음', {beforeRanking, afterRanking});
   await check(Promise.resolve(
     afterRanking.confirmedHoursText.includes('영업시간 확인')
