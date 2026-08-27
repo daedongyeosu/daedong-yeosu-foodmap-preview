@@ -1051,19 +1051,38 @@ function kakaoPreviewFallbackUrl(key) {
     return '';
   }
 }
+function coupangDirectStoreIntent(url, browserFallbackUrl) {
+  if (
+    url.hostname.toLowerCase() !== 'web.coupangeats.com'
+    || url.pathname.replace(/\/+$/, '') !== '/share'
+  ) return '';
+  const storeId = String(url.searchParams.get('storeId') || '');
+  const rawDishId = String(url.searchParams.get('dishId') || '');
+  if (!/^\d{1,12}$/.test(storeId) || (rawDishId && !/^\d{1,12}$/.test(rawDishId))) return '';
+  const dishId = rawDishId || 'null';
+  // Coupang Eats only registers the public web host for its auth callback.
+  // Its store links are resolved by the web fallback into this installed-app
+  // route. Build that route directly so Kakao never inserts the
+  // third-party resolver page into the customer's Android Back stack.
+  return `intent://storedetail/?storeId=${encodeURIComponent(storeId)}&dishId=${encodeURIComponent(dishId)}#Intent;scheme=coupangeats;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${ANDROID_ROUTE_PACKAGES.coupang};S.browser_fallback_url=${encodeURIComponent(browserFallbackUrl)};end;`;
+}
 function androidPackageIntent(key, href) {
   if (!isAndroidBrowser() || !ANDROID_ROUTE_PACKAGES[key]) return '';
   try {
     const url = new URL(href, location.href);
     if (!['http:', 'https:'].includes(url.protocol)) return '';
-    const scheme = url.protocol.slice(0, -1);
-    const path = `${url.host}${url.pathname}${url.search}${url.hash}`;
     // Kakao on Samsung can retain the fallback page as an extra browser
     // history entry even after Coupang Eats opens successfully. Returning
     // through that third-party page leaves the old Preview Activity visible
     // but unable to deliver taps. Keep the fallback in the already-tokenized
     // Preview document so Android Back returns to a fresh first-party surface.
     const browserFallbackUrl = kakaoPreviewFallbackUrl(key) || url.href;
+    if (key === 'coupang') {
+      const directStoreIntent = coupangDirectStoreIntent(url, browserFallbackUrl);
+      if (directStoreIntent) return directStoreIntent;
+    }
+    const scheme = url.protocol.slice(0, -1);
+    const path = `${url.host}${url.pathname}${url.search}${url.hash}`;
     return `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${ANDROID_ROUTE_PACKAGES[key]};S.browser_fallback_url=${encodeURIComponent(browserFallbackUrl)};end;`;
   } catch {
     return '';
