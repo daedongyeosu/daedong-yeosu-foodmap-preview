@@ -17,6 +17,7 @@ assert.match(rc3, /document\.addEventListener\('touchend', rc3OnOrderMethodsTouc
 assert.match(rc3, /document\.elementFromPoint\(touch\.clientX, touch\.clientY\)/, '복귀 뒤 실제 터치 지점의 최상단 버튼을 다시 확인해야 합니다.');
 assert.match(rc3, /window\.addEventListener\('pageshow', rc3ResetOrderMethodsTouchState, true\)/, '외부 앱 복귀 시 남은 포인터·터치 상태를 초기화해야 합니다.');
 assert.match(rc3, /window\.daedongResetOrderMethodsTouchState = rc3ResetOrderMethodsTouchState/, '카카오 네이티브 복귀 재구성 전에 터치 상태를 외부에서 초기화할 수 있어야 합니다.');
+assert.match(finalExperience, /selector:'\[data-rc3-other-methods\]'[\s\S]*?window\.daedongActivateOrderMethodsFallback/, '공용 터치와 버튼 직접 터치가 같은 중복 방지 경로를 사용해 동일 주문방법 화면을 두 번 쌓지 않아야 합니다.');
 assert.match(app, /function handleKakaoOrderLinkClick\(event\)[\s\S]*?rc2RememberExternalReturn\(link\)[\s\S]*?void window\.daedongLaunchMobileRoute\(key, href\)/, '카카오 전용 처리기는 비교화면의 주문 계속 링크도 복귀 상태를 저장한 뒤 앱 패키지 경로로 열어야 합니다.');
 assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?rc2RememberExternalReturn\(link\)[\s\S]*?void window\.daedongLaunchMobileRoute\(mobileOrderRouteKey\(link\), href\)/, '모바일 공통 처리기는 비교화면의 주문 계속 링크도 복귀 상태를 저장한 뒤 앱 패키지 경로로 열어야 합니다.');
 assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rebuildExisting[\s\S]*?rc2NativeHardClose\(\{fromPop: true\}\)[\s\S]*?await openStore\(store\)[\s\S]*?rc2StabilizeReturnPosition\(saved, \$\('#modal \.modal-card'\)\)/, '복귀 시 같은 가게가 보여도 카카오의 오래된 네이티브 모달 표면을 내린 뒤 새 상세 DOM으로 교체해야 합니다.');
@@ -46,6 +47,9 @@ assert.match(rc3, /trigger\.addEventListener\('pointerdown'[\s\S]*?trigger\.addE
 assert.match(rc3, /trigger\.addEventListener\('touchstart'[\s\S]*?trigger\.addEventListener\('touchend'/, '복귀한 Android WebView에서 버튼 자체의 원시 터치 완료를 처리해야 합니다.');
 assert.match(rc3, /window\.daedongRebindOrderMethodsTrigger = \(\) => \{[\s\S]*?rc3BindOrderMethodsTrigger/, '스냅샷 복원 직후 직접 터치를 다시 연결하는 공개 훅이 필요합니다.');
 assert.match(rc2, /function rc2RestoreSnapshot\(snapshot\) \{[\s\S]*?rc2ScrubCustomerCounts\(modal\);[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\)/, '외부 앱 출발 전에 DOM 스냅샷을 다시 만들면 주문방법 버튼 이벤트도 즉시 다시 연결해야 합니다.');
+assert.match(rc2, /function rc2RestoreSnapshotAfterNativeSurfaceReset\(snapshot\) \{[\s\S]*?daedong-external-return-pending[\s\S]*?rc2NativeHardClose\(\{fromPop: true\}\)[\s\S]*?requestAnimationFrame\(\(\) => requestAnimationFrame\(\(\) => \{[\s\S]*?rc2RestoreSnapshot\(snapshot\)/, '주문방법 화면에서 상세로 재진입할 때 카카오의 오래된 모달 터치 표면을 두 프레임 완전히 내려야 합니다.');
+assert.match(rc2, /if \(options\.fromPop && rc2ModalStack\.length\) \{[\s\S]*?rc2RestoreSnapshotAfterNativeSurfaceReset\(rc2ModalStack\.pop\(\)\)/, '히스토리 뒤로가기로 주문방법 화면을 닫는 경로는 네이티브 표면 재생성 복원을 사용해야 합니다.');
+assert.match(browserCheck, /__snapshotSurfaceResetObserved[\s\S]*?window\.hardClose\(\{fromPop: true\}\)[\s\S]*?상세 재진입 뒤 첫 터치로 다른 주문방법 선택창 다시 열림/, '실제 브라우저 검사는 주문방법 화면을 닫고 상세로 다시 들어온 직후의 첫 터치를 포함해야 합니다.');
 assert.match(rc3, /function rc3ActivateOrderMethodsTrigger\(trigger, event\) \{[\s\S]*?daedongInvalidatePendingReturnRestores\?\.\(\)[\s\S]*?rc3OpenOrderMethods\(store\)[\s\S]*?setTimeout\(\(\) => \{[\s\S]*?daedongConfirmIntentionalSurfaceNavigation\?\.\(\)[\s\S]*?daedongSettleRestoredReturnLeaseNow\?\.\(\)/, '실기기에서는 복귀 작업을 즉시 무효화하고 주문방법 창을 먼저 표시한 뒤 history를 정리해야 합니다.');
 
 const clickGuardIndex = rc3.indexOf("const other = event.target.closest('[data-rc3-other-methods]')");
@@ -65,6 +69,8 @@ assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*return-document-reload-1/
 assert.match(index, /final-experience\.js\?v=[^"\n]*return-document-reload-1/, '문서 재로드 수정 로더 캐시 버전이 갱신되어야 합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*return-document-navigation-1/, '강제 문서 이동 수정 rc2 캐시 버전이 갱신되어야 합니다.');
 assert.match(index, /final-experience\.js\?v=[^"\n]*return-document-navigation-1/, '강제 문서 이동 수정 로더 캐시 버전이 갱신되어야 합니다.');
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*reentered-order-method-surface-1/, '상세 재진입 터치 표면 수정 rc2 캐시 버전이 갱신되어야 합니다.');
+assert.match(index, /final-experience\.js\?v=[^"\n]*reentered-order-method-surface-1/, '상세 재진입 터치 표면 수정 로더 캐시 버전이 갱신되어야 합니다.');
 
 for (const [name, source] of [['final-experience.js', finalExperience], ['index.html', index]]) {
   assert.match(source, /order-methods-return-touch-5/, `${name} 캐시 버전이 갱신되어야 합니다.`);
