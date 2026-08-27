@@ -24,6 +24,7 @@ assert.match(rc2, /let rc2ReturnLifecycleEpoch = 0/, '진행 중인 카카오 �
 assert.match(rc2, /function rc2InvalidatePendingReturnRestores\(\)[\s\S]*?rc2ReturnLifecycleEpoch \+= 1[\s\S]*?rc2StoreRestorePromise = null[\s\S]*?rc2SurfaceRestorePromise = null/, '새 화면 선택 시 대기 중인 모든 복귀 작업을 무효화해야 합니다.');
 assert.match(rc2, /window\.daedongInvalidatePendingReturnRestores = rc2InvalidatePendingReturnRestores/, '카카오 첫 터치에서 history 변경 없이 복귀 작업만 먼저 무효화할 수 있어야 합니다.');
 assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?rc2ReturnRebuiltToken[\s\S]*?rebuildExisting[\s\S]*?rc2ReplaceNextModal = true[\s\S]*?await openStore\(store\)[\s\S]*?rc2ReturnRebuiltToken = String\(saved\.returnToken/, '카카오가 자체 복원한 오래된 가게 상세는 같은 복귀 토큰에서 한 번 전체 재구성해야 합니다.');
+assert.match(rc2, /daedong-external-return-pending[\s\S]*?rc2NativeHardClose\(\{fromPop: true\}\)[\s\S]*?requestAnimationFrame\(\(\) => requestAnimationFrame\(resolve\)\)/, '카카오의 오래된 네이티브 터치 표면을 홈 노출 없이 두 프레임 완전히 내려야 합니다.');
 assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved, \$\('#modal \.modal-card'\)\)/, '재구성한 가게 상세에 터치 연결과 정확한 스크롤 복원을 다시 적용해야 합니다.');
 assert.match(rc2, /function rc2ConfirmIntentionalStoreOpen\(\) \{[\s\S]*?rc2InvalidatePendingReturnRestores\(\)/, '첫 터치에서 지연 복귀 작업부터 취소해야 합니다.');
 assert.match(rc2, /const restoreEpoch = rc2ReturnLifecycleEpoch[\s\S]*?rc2ReturnRestoreCancelled\(restoreEpoch\)/, '비동기 복귀 작업은 화면을 바꾸기 전에 취소 세대를 확인해야 합니다.');
@@ -52,6 +53,7 @@ for (const [name, source] of [['final-experience.js', finalExperience], ['index.
   assert.match(source, /visible-return-rebind-1/, `${name} 카카오 보이는 상세 복귀 재연결 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /restored-inline-fallback-1/, `${name} 카카오 복원 HTML 클릭 대체 경로 캐시 버전이 갱신되어야 합니다.`);
   assert.match(source, /visible-return-detail-rebuild-1/, `${name} 카카오 복원 상세 전체 재구성 캐시 버전이 갱신되어야 합니다.`);
+  assert.match(source, /visible-return-modal-reset-1/, `${name} 카카오 네이티브 모달 표면 초기화 캐시 버전이 갱신되어야 합니다.`);
 }
 assert.match(index, /real-second-tap-after-sheet-1/, '새 주문방법 화면의 정상 두 번째 터치 수정 캐시 버전이 갱신되어야 합니다.');
 
