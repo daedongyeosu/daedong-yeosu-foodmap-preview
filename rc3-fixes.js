@@ -351,7 +351,7 @@ fxOpenPhoneConfirm = async function rc3OpenPhoneConfirm(id) {
 
 function rc3RouteButton(store, route) {
   if (['yogiyo', 'coupang', 'baemin'].includes(route.key)) {
-    return `<button type="button" class="detail-route external-text-route" data-rc3-external-route="${escapeHtml(route.key)}" data-store-id="${escapeHtml(store.id)}"><span>${escapeHtml(route.name)}</span><b>›</b></button>`;
+    return `<button type="button" class="detail-route external-text-route" data-rc3-external-route="${escapeHtml(route.key)}" data-store-id="${escapeHtml(store.id)}" onclick="return window.daedongActivateExternalOrderRouteFallback ? window.daedongActivateExternalOrderRouteFallback(this, event) : false"><span>${escapeHtml(route.name)}</span><b>›</b></button>`;
   }
   return `<a class="detail-route" href="${escapeHtml(route.url)}" target="_blank" rel="noopener" data-route-key="${escapeHtml(route.key)}">${appIcon(route.key, 'detail-route-icon')}<span>${escapeHtml(route.name)}</span><b>›</b></a>`;
 }
@@ -480,6 +480,42 @@ function rc3ActivateOrderMethodsTrigger(trigger, event) {
 }
 window.daedongActivateOrderMethodsTrigger = rc3ActivateOrderMethodsTrigger;
 
+let rc3ExternalRouteActivationUntil = 0;
+let rc3ExternalRouteActivationKey = '';
+
+function rc3ActivateExternalOrderRoute(external, event) {
+  const routeKey = String(external?.dataset.rc3ExternalRoute || '');
+  const storeId = String(external?.dataset.storeId || $('#modal')?.dataset.activeStoreId || '');
+  const activationKey = `${storeId}:${routeKey}`;
+  const store = fxStoreById(storeId);
+  if (!external || !routeKey || !store) return false;
+
+  event?.preventDefault?.();
+  event?.stopImmediatePropagation?.();
+  if (Date.now() < rc3ExternalRouteActivationUntil && activationKey === rc3ExternalRouteActivationKey) return true;
+  rc3ExternalRouteActivationUntil = Date.now() + 800;
+  rc3ExternalRouteActivationKey = activationKey;
+
+  // Kakao WebView can resume an external-app return with only one of
+  // pointerup, touchend, or click reaching the restored route button. Treat
+  // every one of those as a complete customer activation; do not require a
+  // preceding pointerdown timestamp that may have been lost during resume.
+  window.daedongInvalidatePendingReturnRestores?.();
+  const inlineTrigger = external.closest('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
+  if (inlineTrigger) rc3SetInlineOrderMethods(inlineTrigger, false);
+  openCommunityChoice(store, routeKey);
+  setTimeout(() => {
+    window.daedongConfirmIntentionalSurfaceNavigation?.();
+    window.daedongSettleRestoredReturnLeaseNow?.();
+  }, 0);
+  return true;
+}
+
+function rc3ActivateExternalOrderRouteFallback(external, event) {
+  return rc3ActivateExternalOrderRoute(external, event);
+}
+window.daedongActivateExternalOrderRouteFallback = rc3ActivateExternalOrderRouteFallback;
+
 let rc3OrderMethodsGhostClickUntil = 0;
 let rc3OrderMethodsGhostClickStoreId = '';
 const rc3OrderMethodsPointers = new Map();
@@ -520,8 +556,6 @@ function rc3ActivateOrderMethodsFallback(trigger, event) {
 window.daedongActivateOrderMethodsFallback = rc3ActivateOrderMethodsFallback;
 
 function rc3OnOrderMethodsPointerDown(event) {
-  const external = event.target?.closest?.('[data-rc3-external-route]');
-  if (external) external.dataset.rc3SelectionStartedAt = String(Date.now());
   if (event.pointerType !== 'touch' || event.isPrimary === false) return;
   const trigger = rc3OrderMethodsTriggerFromEvent(event);
   if (!trigger) return;
@@ -568,8 +602,6 @@ function rc3TouchByIdentifier(list, identifier) {
 }
 
 function rc3OnOrderMethodsTouchStart(event) {
-  const external = event.target?.closest?.('[data-rc3-external-route]');
-  if (external) external.dataset.rc3SelectionStartedAt = String(Date.now());
   if (event.touches?.length !== 1) return;
   const trigger = rc3OrderMethodsTriggerFromEvent(event);
   const touch = event.changedTouches?.[0] || event.touches[0];
@@ -696,17 +728,6 @@ function rc3BindOrderMethodsTrigger(detail, {force = false} = {}) {
 window.daedongRebindOrderMethodsTrigger = () => {
   rc3BindOrderMethodsTrigger($('#modalContent .store-detail'), {force: true});
 };
-
-function rc3ShouldBlockOrderMethodSelection(external, event, storeId) {
-  if (Number(event?.detail || 0) === 0) return false;
-  const startedAt = Number(external?.dataset?.rc3SelectionStartedAt || 0);
-  if (external?.dataset) delete external.dataset.rc3SelectionStartedAt;
-  const age = Date.now() - startedAt;
-  // A delayed synthetic click from the trigger can land on the first route
-  // after the sheet replaces the detail. Only a pointer/touch that actually
-  // started on this newly rendered route may activate it.
-  return !(startedAt > 0 && age >= 0 && age < 1200);
-}
 
 function rc3EnhanceStoreDetail(store) {
   const detail = $('#modalContent .store-detail');
@@ -919,16 +940,7 @@ function rc3HandleClick(event) {
   }
   const external = event.target.closest('[data-rc3-external-route]');
   if (external) {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    const storeId = String(external.dataset.storeId || $('#modal').dataset.activeStoreId || '');
-    if (rc3ShouldBlockOrderMethodSelection(external, event, storeId)) return;
-    const store = fxStoreById(storeId);
-    if (store) {
-      const inlineTrigger = external.closest('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
-      if (inlineTrigger) rc3SetInlineOrderMethods(inlineTrigger, false);
-      openCommunityChoice(store, external.dataset.rc3ExternalRoute);
-    }
+    rc3ActivateExternalOrderRoute(external, event);
     return;
   }
   if (event.target.closest('[data-rc3-final-phone]')) {
