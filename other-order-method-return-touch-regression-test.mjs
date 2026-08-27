@@ -19,10 +19,10 @@ assert.match(rc3, /window\.addEventListener\('pageshow', rc3ResetOrderMethodsTou
 assert.match(rc3, /window\.daedongResetOrderMethodsTouchState = rc3ResetOrderMethodsTouchState/, '카카오 네이티브 복귀 재구성 전에 터치 상태를 외부에서 초기화할 수 있어야 합니다.');
 assert.match(app, /function handleKakaoOrderLinkClick\(event\)[\s\S]*?rc2RememberExternalReturn\(link\)[\s\S]*?void window\.daedongLaunchMobileRoute\(key, href\)/, '카카오 전용 처리기는 비교화면의 주문 계속 링크도 복귀 상태를 저장한 뒤 앱 패키지 경로로 열어야 합니다.');
 assert.match(app, /function handleMobileOrderLinkClick\(event\)[\s\S]*?rc2RememberExternalReturn\(link\)[\s\S]*?void window\.daedongLaunchMobileRoute\(mobileOrderRouteKey\(link\), href\)/, '모바일 공통 처리기는 비교화면의 주문 계속 링크도 복귀 상태를 저장한 뒤 앱 패키지 경로로 열어야 합니다.');
-assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '복귀 시 같은 가게 상세가 보이면 터치 상태만 비우고 기존 DOM을 유지해야 합니다.');
+assert.match(rc2, /if \(visibleStoreMatches\) \{[\s\S]*?window\.daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?rebuildExisting[\s\S]*?await openStore\(store\)[\s\S]*?rc2StabilizeReturnPosition\(saved, \$\('#modal \.modal-card'\)\)/, '복귀 시 같은 가게가 보여도 카카오의 오래된 터치 표면을 새 상세 DOM으로 교체해야 합니다.');
 const visibleStoreBranch = rc2.slice(rc2.indexOf('if (visibleStoreMatches)'), rc2.indexOf('if (!modal?.hidden)', rc2.indexOf('if (visibleStoreMatches)')));
-assert.doesNotMatch(visibleStoreBranch, /rc2NativeHardClose|openStore\(/, '같은 가게 상세를 복귀 중 닫고 다시 만들면 실제 터치와 경쟁합니다.');
-assert.match(visibleStoreBranch, /daedongResetOrderMethodsTouchState\?\.\(\);[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '카카오가 기존 상세 마크업만 복원한 경우 첫 터치 전에 버튼 직접 이벤트를 다시 연결해야 합니다.');
+assert.doesNotMatch(visibleStoreBranch, /rc2NativeHardClose/, '같은 가게 상세를 닫아 홈을 노출하지 않고 현재 모달 안에서 교체해야 합니다.');
+assert.match(visibleStoreBranch, /rc2ReplaceNextModal = true[\s\S]*?await openStore\(store\)[\s\S]*?rc2ReturnRebuiltToken[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved/, '카카오 복귀 상세는 같은 히스토리 엔트리에서 한 번 재구성한 뒤 터치와 위치를 복원해야 합니다.');
 assert.match(rc2, /const opened = await openStore\(store\);[\s\S]*?restoredStoreId[\s\S]*?daedongRebindOrderMethodsTrigger\?\.\(\);[\s\S]*?rc2StabilizeReturnPosition\(saved\)/, '가게 상세를 새로 연 복귀 경로도 위치를 고정하기 전에 주문방법 버튼을 다시 연결해야 합니다.');
 assert.match(rc2, /prepareStoreSurface && storeSnapshot && storeSnapshot !== current[\s\S]*?rc2ModalStack\.length = 0;[\s\S]*?rc2RestoreSnapshot\(storeSnapshot\)/, '외부 주문앱을 열기 전에 원본 Preview를 가게 상세 화면으로 안정화해야 합니다.');
 assert.match(rc2, /const prepareStoreSurface = Boolean\(sourceElement\?\.matches\?\.\('a\[data-community-original\]'\)\)/, '다른 주문방법의 외부 주문앱 링크에서만 출발 전 상세 화면을 안정화해야 합니다.');
@@ -34,7 +34,7 @@ assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?wi
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');
-assert.match(browserCheck, /dataset\.testPreparedBeforeReturn = '1'[\s\S]*dataset\.testPreparedBeforeReturn === '1'[\s\S]*준비된 가게 상세 DOM을 유지/, '출발 전에 준비한 가게 상세 DOM을 복귀 중 유지하는 실제 브라우저 검사가 없습니다.');
+assert.match(browserCheck, /dataset\.testPreparedBeforeReturn = '1'[\s\S]*dataset\.testPreparedBeforeReturn !== '1'[\s\S]*오래된 상세 DOM을 첫 터치 전에 전체 재구성/, '출발 전 상세 DOM을 복귀 시 새 터치 표면으로 교체하는 실제 브라우저 검사가 없습니다.');
 assert.match(browserCheck, /pointerdown[\s\S]*returnStatePresent[\s\S]*pointerup[\s\S]*returnStatePresent/, '복귀 뒤 첫 재터치 도중 history 토큰을 그대로 유지하는 검사가 필요합니다.');
 assert.match(rc2, /document\.addEventListener\('pointerup', rc2ScheduleRestoredReturnSettlement, true\)/, '복귀 상태는 첫 손가락 누름이 아니라 활성화가 끝난 뒤 정리해야 합니다.');
 assert.doesNotMatch(rc2, /document\.addEventListener\('pointerdown', rc2SettleRestoredReturnLease/, '첫 pointerdown에서 history를 바꾸면 카카오 WebView가 버튼 클릭을 취소할 수 있습니다.');
