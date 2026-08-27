@@ -1269,6 +1269,32 @@ function rc2RememberExternalReturn(sourceElement = null) {
   return payload;
 }
 
+function rc2SubmitYogiyoBrowserNavigation(yogiyoUrl) {
+  const target = new URL(yogiyoUrl);
+  let referrerMeta = document.querySelector('meta[data-daedong-yogiyo-browser-nav]');
+  if (!referrerMeta) {
+    referrerMeta = document.createElement('meta');
+    referrerMeta.name = 'referrer';
+    referrerMeta.content = 'no-referrer';
+    referrerMeta.dataset.daedongYogiyoBrowserNav = '';
+    document.head.appendChild(referrerMeta);
+  }
+  const form = document.createElement('form');
+  form.method = 'get';
+  form.action = `${target.origin}${target.pathname}${target.hash}`;
+  form.target = '_self';
+  form.hidden = true;
+  for (const [name, value] of target.searchParams) {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = name;
+    input.value = value;
+    form.appendChild(input);
+  }
+  document.body.appendChild(form);
+  form.submit();
+}
+
 async function rc2LaunchComparedExternal(link, href) {
   if (!link || href === '#') return false;
   const rawKey = String(
@@ -1287,6 +1313,8 @@ async function rc2LaunchComparedExternal(link, href) {
     // disconnects the customer from the still-alive Kakao Preview document.
     // Resolve the trusted store shortlink server-side and keep both pages in
     // Kakao's own history so one Android Back returns to this exact detail.
+    // Samsung Internet hands a scripted HTTPS navigation to Yogiyo's native
+    // app, but a browser GET form stays in the web history on the same phone.
     const storeId = String(
       link.dataset?.storeId
       || link.closest?.('[data-store-id]')?.dataset?.storeId
@@ -1307,7 +1335,7 @@ async function rc2LaunchComparedExternal(link, href) {
       if (!/^https:\/\/www\.yogiyo\.co\.kr\/mobile\/\?lat=[^#&]+&lng=[^#&]+#\/\d{1,12}$/.test(yogiyoUrl)) {
         throw new Error('invalid Yogiyo web route');
       }
-      window.location.assign(yogiyoUrl);
+      rc2SubmitYogiyoBrowserNavigation(yogiyoUrl);
       return true;
     } catch (error) {
       console.warn('yogiyo-web-route-failed', storeId, error);

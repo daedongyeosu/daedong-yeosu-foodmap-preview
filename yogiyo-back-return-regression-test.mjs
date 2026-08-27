@@ -7,23 +7,45 @@ const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
 const browserTest = fs.readFileSync('scripts/browser-yogiyo-back-return.mjs', 'utf8');
 
-const helperStart = rc2.indexOf('async function rc2LaunchComparedExternal(link, href)');
+const helperStart = rc2.indexOf('function rc2SubmitYogiyoBrowserNavigation(yogiyoUrl)');
 const helperEnd = rc2.indexOf('async function rc2RestoreAfterExternalPage', helperStart);
 assert.ok(helperStart >= 0 && helperEnd > helperStart, '주문앱 비교화면 전용 실행기가 있어야 합니다.');
 const helperSource = rc2.slice(helperStart, helperEnd);
 
-const assigned = [];
+const submitted = [];
 const opened = [];
 const alerts = [];
+let referrerMeta = null;
+const createElement = tagName => {
+  if (tagName === 'form') return {
+    children: [],
+    appendChild(child) { this.children.push(child); },
+    submit() {
+      submitted.push({
+        method: this.method,
+        action: this.action,
+        target: this.target,
+        hidden: this.hidden,
+        fields: Object.fromEntries(this.children.map(child => [child.name, child.value]))
+      });
+    }
+  };
+  return {dataset: {}};
+};
 const store = {id: 'a'.repeat(16), lat: 34.7523658, lng: 127.7031405};
 const resolvedYogiyoUrl = 'https://www.yogiyo.co.kr/mobile/?lat=34.7523658&lng=127.7031405#/332930';
 const sandbox = {
+  URL,
   navigator: {userAgent: 'Mozilla/5.0 (Linux; Android 15) KAKAOTALK 25.6.0'},
-  document: {querySelector: () => null},
+  document: {
+    querySelector: selector => selector === 'meta[data-daedong-yogiyo-browser-nav]' ? referrerMeta : null,
+    createElement,
+    head: {appendChild(element) { referrerMeta = element; }},
+    body: {appendChild() {}}
+  },
   fxStoreById: id => id === store.id ? store : null,
   console,
   window: {
-    location: {assign: href => assigned.push(href)},
     open: (...args) => opened.push(args),
     alert: message => alerts.push(message),
     daedongDataApi: {
@@ -59,7 +81,26 @@ await sandbox.launchComparedExternal({
 await sandbox.launchComparedExternal(link('coupang'), urls.coupang);
 await sandbox.launchComparedExternal(link('baemin'), urls.baemin);
 
-assert.deepEqual(assigned, [resolvedYogiyoUrl, resolvedYogiyoUrl], '목록·단독 버튼의 카카오 Android 요기요는 같은 방문기록의 웹 가게 상세로 이동해야 합니다.');
+assert.deepEqual(submitted, [
+  {
+    method: 'get',
+    action: 'https://www.yogiyo.co.kr/mobile/#/332930',
+    target: '_self',
+    hidden: true,
+    fields: {lat: '34.7523658', lng: '127.7031405'}
+  },
+  {
+    method: 'get',
+    action: 'https://www.yogiyo.co.kr/mobile/#/332930',
+    target: '_self',
+    hidden: true,
+    fields: {lat: '34.7523658', lng: '127.7031405'}
+  }
+], '목록·단독 버튼의 카카오 Android 요기요는 네이티브 앱을 부르지 않는 브라우저 GET 폼으로 이동해야 합니다.');
+assert.equal(referrerMeta?.name, 'referrer');
+assert.equal(referrerMeta?.content, 'no-referrer');
+assert.match(helperSource, /form\.method = 'get'[\s\S]*form\.target = '_self'[\s\S]*form\.submit\(\)/);
+assert.doesNotMatch(helperSource, /window\.location\.assign/);
 assert.deepEqual(alerts, []);
 assert.deepEqual(opened, [
   [urls.coupang, '_blank', 'noopener'],
@@ -83,6 +124,8 @@ assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-kakao-https-return
 assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-kakao-https-return-1/);
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-kakao-web-return-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-kakao-web-return-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*yogiyo-native-bypass-form-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-native-bypass-form-1/);
 assert.match(browserTest, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'/);
 assert.match(browserTest, /await restoredDetail\.waitFor\([^\n]*\)\.catch\(async \(\) =>/);
 assert.match(browserTest, /yogiyo-web[\s\S]*page\.goBack[\s\S]*testStableReturn/, '실제 브라우저 검사는 요기요 웹 상세에서 뒤로가기 한 번으로 같은 상세 DOM 복귀를 확인해야 합니다.');

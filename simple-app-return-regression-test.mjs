@@ -29,7 +29,9 @@ assert.match(comparedHandler, /rc2LaunchComparedExternal\(comparedExternal, href
 assert.match(comparedHandler, /event\.preventDefault\(\)[\s\S]*?event\.stopImmediatePropagation\(\)/, '구형 클릭 처리기와 앵커 기본 이동을 막아야 합니다.');
 assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?window\.open\(href, '_blank', 'noopener'\)[\s\S]*?return true/, '비교화면 주문앱은 현재 Preview 상세 DOM을 보존하는 별도 실행 경로를 사용해야 합니다.');
 const comparedLauncher = rc2.match(/function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?\n\}/)?.[0] || '';
-assert.match(comparedLauncher, /routeKey === 'yogiyo'[\s\S]*?kakaoAndroid[\s\S]*?daedongDataApi\.yogiyoWebRoute[\s\S]*?window\.location\.assign\(yogiyoUrl\)/);
+assert.match(comparedLauncher, /routeKey === 'yogiyo'[\s\S]*?kakaoAndroid[\s\S]*?daedongDataApi\.yogiyoWebRoute[\s\S]*?rc2SubmitYogiyoBrowserNavigation\(yogiyoUrl\)/);
+assert.match(rc2, /function rc2SubmitYogiyoBrowserNavigation[\s\S]*?form\.method = 'get'[\s\S]*?form\.target = '_self'[\s\S]*?form\.submit\(\)/);
+assert.doesNotMatch(comparedLauncher, /window\.location\.assign/);
 assert.doesNotMatch(comparedLauncher, /daedongLaunchYogiyoFromCurrentKakao/);
 assert.doesNotMatch(comparedHandler, /history\.back/);
 assert.match(rc2, /function rc2RememberExternalReturn\(sourceElement = null\) \{[\s\S]*?daedongMarkExternalAppDeparture/);
