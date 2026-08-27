@@ -170,6 +170,50 @@ try {
   }
   await reopenedKakaoLink.screenshot({path: 'browser-yogiyo-detached-link-return.png', fullPage: false});
   await reopenedKakaoLink.close();
+
+  const stalePreviewPage = await context.newPage();
+  stalePreviewPage.on('pageerror', error => report.errors.push(error.message));
+  const staleYogiyoRoute = await openOrderMethodsRoute(stalePreviewPage, 'yogiyo');
+  const staleExternalPromise = context.waitForEvent('page', {timeout: 5000});
+  await staleYogiyoRoute.tap();
+  const staleExternalPage = await staleExternalPromise;
+  await staleExternalPage.waitForLoadState('domcontentloaded');
+  await stalePreviewPage.evaluate(() => {
+    const staleSavedAt = Date.now() - (6 * 60 * 1000);
+    const keys = ['daedongExternalReturnRc2', 'daedongAppBrowserReturnV1', 'daedongExternalAppDepartureV1'];
+    for (const storage of [sessionStorage, localStorage]) {
+      for (const key of keys) {
+        try {
+          const saved = JSON.parse(storage.getItem(key) || 'null');
+          if (!saved) continue;
+          saved.savedAt = staleSavedAt;
+          storage.setItem(key, JSON.stringify(saved));
+        } catch {}
+      }
+    }
+    try {
+      const prefix = 'daedongOrderReturnV1=';
+      const raw = document.cookie.split('; ').find(item => item.startsWith(prefix));
+      const durable = raw ? JSON.parse(decodeURIComponent(raw.slice(prefix.length))) : null;
+      if (durable) {
+        durable.savedAt = staleSavedAt;
+        if (durable.payload) durable.payload.savedAt = staleSavedAt;
+        document.cookie = `${prefix}${encodeURIComponent(JSON.stringify(durable))}; Max-Age=1800; Path=/; SameSite=Lax`;
+      }
+    } catch {}
+  });
+  await stalePreviewPage.close();
+  await staleExternalPage.close();
+
+  const staleKakaoLink = await context.newPage();
+  staleKakaoLink.on('pageerror', error => report.errors.push(error.message));
+  await staleKakaoLink.goto(baseURL, {waitUntil: 'domcontentloaded'});
+  await staleKakaoLink.waitForFunction(() => globalThis.daedongEntryHadExternalReturn !== true, null, {timeout: 5000});
+  await check(
+    staleKakaoLink.evaluate(() => document.querySelector('#modal')?.hidden === true),
+    '카카오 링크 재진입이 5분을 넘으면 이전 가게를 버리고 홈에서 새로 시작'
+  );
+  await staleKakaoLink.close();
   report.success = report.errors.length === 0;
 } catch (error) {
   report.failure = error.stack || String(error);
