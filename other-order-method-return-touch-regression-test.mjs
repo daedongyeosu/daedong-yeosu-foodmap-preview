@@ -32,7 +32,9 @@ const externalBranch = rc2.slice(rc2.indexOf('if (comparedExternal)'), rc2.index
 assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.assign/, '카카오 WebView 원본 화면을 같은 탭 이동으로 파괴하면 안 됩니다.');
 assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?rc2LaunchComparedExternal\(comparedExternal, href\)/, '원본 Preview를 가게 상세로 안정화한 뒤 주문앱별 복귀 방식으로 열어야 합니다.');
 assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?window\.open\(href, '_blank', 'noopener'\)[\s\S]*?return true/, '비교화면 주문앱은 원본 Preview 상세 DOM을 보존하는 별도 실행 경로를 사용해야 합니다.');
-assert.doesNotMatch(rc2.match(/function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?\n\}/)?.[0] || '', /daedongLaunchMobileRoute|location\.assign/, '비교화면 주문앱을 같은 WebView 기록으로 실행하면 안 됩니다.');
+const comparedLauncher = rc2.match(/function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?\n\}/)?.[0] || '';
+assert.match(comparedLauncher, /routeKey === 'yogiyo'[\s\S]*?kakaoAndroid[\s\S]*?daedongLaunchMobileRoute\(routeKey, href\)/, '카카오 Android 요기요만 기존 Preview를 아래에 살려두는 앱 intent로 실행해야 합니다.');
+assert.doesNotMatch(comparedLauncher, /location\.assign/, '비교화면 주문앱이 Preview 현재 주소를 교체하면 안 됩니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');

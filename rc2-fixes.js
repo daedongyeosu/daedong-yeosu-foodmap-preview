@@ -1271,11 +1271,25 @@ function rc2RememberExternalReturn(sourceElement = null) {
 
 function rc2LaunchComparedExternal(link, href) {
   if (!link || href === '#') return false;
+  const rawKey = String(
+    link.dataset?.rc3ExternalRoute
+    || link.dataset?.communityOriginal
+    || link.dataset?.routeKey
+    || link.dataset?.finalAppChannel
+    || ''
+  );
+  const routeKey = rawKey === 'coupang-eats' ? 'coupang' : rawKey;
+  const kakaoAndroid = /KAKAOTALK/i.test(String(globalThis.navigator?.userAgent || ''))
+    && /Android/i.test(String(globalThis.navigator?.userAgent || ''));
+  if (routeKey === 'yogiyo' && kakaoAndroid && typeof window.daedongLaunchMobileRoute === 'function') {
+    // Launch Yogiyo as an Android package intent from the current Kakao task.
+    // The Preview WebView stays underneath, so Android Back reveals the exact
+    // same store detail instead of dropping the customer into the chat room.
+    void window.daedongLaunchMobileRoute(routeKey, href);
+    return true;
+  }
   // Keep the already prepared Preview store detail in its original Kakao
-  // WebView. This is the return path that worked on the real Galaxy device:
-  // the external order route opens separately, and Android resumes the exact
-  // same store DOM instead of a same-tab intent history entry with a stale
-  // native hit-test surface.
+  // WebView for order apps whose external context survives Kakao reliably.
   window.open(href, '_blank', 'noopener');
   return true;
 }

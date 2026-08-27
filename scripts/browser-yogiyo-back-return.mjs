@@ -90,6 +90,13 @@ const openOrderMethodsRoute = async (page, key) => {
   await route.waitFor({state: 'visible', timeout: 5000});
   return route;
 };
+const installYogiyoIntentProbe = page => page.evaluate(() => {
+  window.__testedMobileLaunches = [];
+  window.daedongLaunchMobileRoute = (key, href) => {
+    window.__testedMobileLaunches.push({key, href});
+    return true;
+  };
+});
 
 try {
   for (const key of ['yogiyo', 'coupang', 'baemin']) {
@@ -100,17 +107,26 @@ try {
       const selectedStore = window.fxStoreById?.(element.dataset.storeId);
       return selectedStore?.routes?.find(item => item.key === element.dataset.rc3ExternalRoute)?.url || '';
     });
-    const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
-    await route.click();
-    const externalPage = await externalPagePromise;
-    await externalPage.waitForLoadState('domcontentloaded');
-    await check(Promise.resolve(externalPage.url() === expectedURL), `${key}: 원본 Preview와 분리된 주문앱 경로 선택`);
-    await check(Promise.resolve(new URL(await page.url()).origin === baseOrigin), `${key}: 원본 Preview 현재 탭 보존`);
-    await check(Promise.resolve(context.pages().length === 2), `${key}: 주문앱만 별도 실행하고 Preview 상세 유지`);
     const preparedTrigger = page.locator(`#modal:not([hidden]) .store-detail[data-store-id="${store.store_id}"] [data-rc3-other-methods]`);
     await preparedTrigger.waitFor({state: 'visible', timeout: 5000});
     await preparedTrigger.evaluate((element, routeKey) => { element.dataset.testStableReturn = routeKey; }, key);
-    await externalPage.close();
+    if (key === 'yogiyo') {
+      await installYogiyoIntentProbe(page);
+      await route.tap();
+      const launch = await page.evaluate(() => window.__testedMobileLaunches.at(-1) || null);
+      await check(Promise.resolve(launch?.key === 'yogiyo' && launch?.href === expectedURL), 'yogiyo: 현재 카카오 작업에서 Android 앱 intent 실행');
+      await check(Promise.resolve(new URL(await page.url()).origin === baseOrigin), 'yogiyo: 살아 있는 원본 Preview 주소 유지');
+      await check(Promise.resolve(context.pages().length === 1), 'yogiyo: Preview WebView를 새 창으로 교체하지 않음');
+    } else {
+      const externalPagePromise = context.waitForEvent('page', {timeout: 5000});
+      await route.click();
+      const externalPage = await externalPagePromise;
+      await externalPage.waitForLoadState('domcontentloaded');
+      await check(Promise.resolve(externalPage.url() === expectedURL), `${key}: 원본 Preview와 분리된 주문앱 경로 선택`);
+      await check(Promise.resolve(new URL(await page.url()).origin === baseOrigin), `${key}: 원본 Preview 현재 탭 보존`);
+      await check(Promise.resolve(context.pages().length === 2), `${key}: 주문앱만 별도 실행하고 Preview 상세 유지`);
+      await externalPage.close();
+    }
     await page.bringToFront();
     await page.evaluate(() => {
       document.dispatchEvent(new Event('visibilitychange'));
@@ -128,12 +144,9 @@ try {
   const detachedPreviewPage = await context.newPage();
   detachedPreviewPage.on('pageerror', error => report.errors.push(error.message));
   const detachedYogiyoRoute = await openOrderMethodsRoute(detachedPreviewPage, 'yogiyo');
-  const detachedExternalPromise = context.waitForEvent('page', {timeout: 5000});
+  await installYogiyoIntentProbe(detachedPreviewPage);
   await detachedYogiyoRoute.click();
-  const detachedExternalPage = await detachedExternalPromise;
-  await detachedExternalPage.waitForLoadState('domcontentloaded');
   await detachedPreviewPage.close();
-  await detachedExternalPage.close();
 
   const reopenedKakaoLink = await context.newPage();
   reopenedKakaoLink.on('pageerror', error => report.errors.push(error.message));
@@ -154,19 +167,29 @@ try {
     return buttons.length === 3 && buttons.every(button => button.__rc3DirectExternalRouteBound === true);
   }, null, {timeout: 5000});
   await check(Promise.resolve(true), '카카오톡 링크 재진입 뒤 복원된 주문앱 버튼 3개에 실물 터치 직접 재연결');
+  await installYogiyoIntentProbe(reopenedKakaoLink);
   for (const key of ['yogiyo', 'coupang', 'baemin']) {
     const restoredRoute = reopenedKakaoLink.locator(`#modal:not([hidden]) [data-rc3-external-route="${key}"]`);
     await restoredRoute.waitFor({state: 'visible', timeout: 5000});
-    const reopenedExternalPromise = context.waitForEvent('page', {timeout: 5000});
-    await restoredRoute.tap();
-    const reopenedExternal = await reopenedExternalPromise;
-    await reopenedExternal.waitForLoadState('domcontentloaded');
-    await check(
-      Promise.resolve(reopenedExternal.url().includes(`/${key}/`)),
-      `카카오톡 링크 재진입 뒤 복원된 ${key} 버튼 실제 터치 실행`
-    );
-    await reopenedExternal.close();
-    await reopenedKakaoLink.bringToFront();
+    if (key === 'yogiyo') {
+      await restoredRoute.tap();
+      await check(
+        reopenedKakaoLink.evaluate(() => window.__testedMobileLaunches.at(-1)?.key === 'yogiyo'),
+        '카카오톡 링크 재진입 뒤 복원된 yogiyo 버튼이 Android 앱 intent 실행'
+      );
+      await reopenedKakaoLink.waitForTimeout(500);
+    } else {
+      const reopenedExternalPromise = context.waitForEvent('page', {timeout: 5000});
+      await restoredRoute.tap();
+      const reopenedExternal = await reopenedExternalPromise;
+      await reopenedExternal.waitForLoadState('domcontentloaded');
+      await check(
+        Promise.resolve(reopenedExternal.url().includes(`/${key}/`)),
+        `카카오톡 링크 재진입 뒤 복원된 ${key} 버튼 실제 터치 실행`
+      );
+      await reopenedExternal.close();
+      await reopenedKakaoLink.bringToFront();
+    }
   }
   await reopenedKakaoLink.screenshot({path: 'browser-yogiyo-detached-link-return.png', fullPage: false});
   await reopenedKakaoLink.close();
@@ -174,10 +197,8 @@ try {
   const stalePreviewPage = await context.newPage();
   stalePreviewPage.on('pageerror', error => report.errors.push(error.message));
   const staleYogiyoRoute = await openOrderMethodsRoute(stalePreviewPage, 'yogiyo');
-  const staleExternalPromise = context.waitForEvent('page', {timeout: 5000});
+  await installYogiyoIntentProbe(stalePreviewPage);
   await staleYogiyoRoute.tap();
-  const staleExternalPage = await staleExternalPromise;
-  await staleExternalPage.waitForLoadState('domcontentloaded');
   await stalePreviewPage.evaluate(() => {
     const staleSavedAt = Date.now() - (6 * 60 * 1000);
     const keys = ['daedongExternalReturnRc2', 'daedongAppBrowserReturnV1', 'daedongExternalAppDepartureV1'];
@@ -203,7 +224,6 @@ try {
     } catch {}
   });
   await stalePreviewPage.close();
-  await staleExternalPage.close();
 
   const staleKakaoLink = await context.newPage();
   staleKakaoLink.on('pageerror', error => report.errors.push(error.message));
