@@ -132,6 +132,18 @@
 }
 .order-methods-list { display: grid; gap: 9px; margin-top: 14px; }
 .order-methods-list .detail-route { width: 100%; }
+.order-methods-list [data-rc3-external-route] {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto !important;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 90, 31, .12);
+}
+.order-methods-list [data-rc3-external-route] > * {
+  pointer-events: none !important;
+}
 .order-methods-sheet .brand-store-actions { margin-top: 9px; }
 
 .phone-order-confirm .phone-confirm-photo img,

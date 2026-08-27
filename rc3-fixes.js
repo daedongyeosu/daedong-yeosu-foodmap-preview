@@ -726,9 +726,85 @@ function rc3BindOrderMethodsTrigger(detail, {force = false} = {}) {
   }, {passive: false});
   trigger.addEventListener('click', event => activateDirect(event));
 }
+
+function rc3BindExternalOrderRoutes(detail, {force = false} = {}) {
+  const routes = [...(detail?.querySelectorAll('[data-rc3-external-route]') || [])];
+  for (let route of routes) {
+    if (force && route.__rc3DirectExternalRouteBound) {
+      const replacement = route.cloneNode(true);
+      route.replaceWith(replacement);
+      route = replacement;
+    }
+    if (route.__rc3DirectExternalRouteBound) continue;
+    route.__rc3DirectExternalRouteBound = true;
+    route.dataset.rc3DirectRouteBound = '1';
+
+    let pointerStart = null;
+    let touchStart = null;
+    const activateDirect = event => rc3ActivateExternalOrderRoute(route, event);
+
+    route.addEventListener('pointerdown', event => {
+      if (event.button !== 0 || event.isPrimary === false) return;
+      pointerStart = {x: event.clientX, y: event.clientY, moved: false};
+    });
+    route.addEventListener('pointermove', event => {
+      if (!pointerStart) return;
+      if (Math.hypot(event.clientX - pointerStart.x, event.clientY - pointerStart.y) > 10) pointerStart.moved = true;
+    });
+    route.addEventListener('pointercancel', () => { pointerStart = null; });
+    route.addEventListener('pointerup', event => {
+      const start = pointerStart;
+      pointerStart = null;
+      if (!start || start.moved) return;
+      activateDirect(event);
+    });
+
+    route.addEventListener('touchstart', event => {
+      if (event.touches?.length !== 1) return;
+      const touch = event.changedTouches?.[0] || event.touches[0];
+      if (!touch) return;
+      touchStart = {identifier: touch.identifier, x: touch.clientX, y: touch.clientY, moved: false};
+    }, {passive: true});
+    route.addEventListener('touchmove', event => {
+      if (!touchStart) return;
+      const touch = rc3TouchByIdentifier(event.touches, touchStart.identifier)
+        || rc3TouchByIdentifier(event.changedTouches, touchStart.identifier);
+      if (touch && Math.hypot(touch.clientX - touchStart.x, touch.clientY - touchStart.y) > 10) touchStart.moved = true;
+    }, {passive: true});
+    route.addEventListener('touchcancel', () => { touchStart = null; }, {passive: true});
+    route.addEventListener('touchend', event => {
+      const start = touchStart;
+      const touch = start ? rc3TouchByIdentifier(event.changedTouches, start.identifier) : null;
+      touchStart = null;
+      if (!start || !touch || start.moved) return;
+      activateDirect(event);
+    }, {passive: false});
+    route.addEventListener('click', event => activateDirect(event));
+  }
+}
+
 window.daedongRebindOrderMethodsTrigger = () => {
-  rc3BindOrderMethodsTrigger($('#modalContent .store-detail'), {force: true});
+  const detail = $('#modalContent .store-detail');
+  rc3BindOrderMethodsTrigger(detail, {force: true});
+  rc3BindExternalOrderRoutes(detail, {force: true});
 };
+
+let rc3RestoredControlsRebindFrame = 0;
+function rc3QueueRestoredOrderControlsRebind() {
+  if (rc3RestoredControlsRebindFrame) return;
+  rc3RestoredControlsRebindFrame = requestAnimationFrame(() => {
+    rc3RestoredControlsRebindFrame = 0;
+    const detail = $('#modalContent .store-detail');
+    rc3BindOrderMethodsTrigger(detail);
+    rc3BindExternalOrderRoutes(detail);
+  });
+}
+const rc3RestoredControlsRoot = $('#modalContent');
+const rc3RestoredControlsObserver = rc3RestoredControlsRoot && typeof MutationObserver === 'function'
+  ? new MutationObserver(rc3QueueRestoredOrderControlsRebind)
+  : null;
+rc3RestoredControlsObserver?.observe(rc3RestoredControlsRoot, {childList: true, subtree: true});
+rc3QueueRestoredOrderControlsRebind();
 
 function rc3EnhanceStoreDetail(store) {
   const detail = $('#modalContent .store-detail');
@@ -761,6 +837,7 @@ function rc3EnhanceStoreDetail(store) {
   const orderAnchor = menuEntry || detail.querySelector('.detail-meta-row') || gallery;
   orderAnchor?.insertAdjacentHTML('afterend', `<div class="detail-routes local-detail-routes">${direct}${apps}${community}${phone || (!direct && !apps && !community ? '<p class="muted">등록된 주문방법을 확인 중입니다.</p>' : '')}</div>${other}`);
   rc3BindOrderMethodsTrigger(detail);
+  rc3BindExternalOrderRoutes(detail);
 }
 
 const rc3OpenStoreBase = openStore;
