@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+  <meta name="daedong-release" content="detached-kakao-return-grace-5m-1">
   <meta name="theme-color" content="#ff5a1f">
   <meta name="description" content="여수 음식점과 주문방법을 한눈에 찾는 대동여수음식지도">
   <meta property="og:type" content="website">
@@ -213,6 +214,7 @@
       };
       try {
         const maxAge = 30 * 60 * 1000;
+        const detachedKakaoMaxAge = 5 * 60 * 1000;
         const tokenState = 'daedongExternalReturnToken';
         const tokenParam = '__ddret';
         const appFallbackParam = '__ddappfallback';
@@ -271,14 +273,14 @@
         const durableStorageKey = String(durableReturn?.storageKey || '');
         const durableToken = String(durableReturn?.returnToken || '');
         const durableRequiredField = durableStorageKey === storageKeys[0] ? 'storeId' : 'key';
-        const hasDepartureToken = savedToken => {
+        const hasDepartureToken = (savedToken, allowedAge = maxAge) => {
           if (!savedToken) return false;
           for (const storage of [sessionStorage, localStorage]) {
             let marker = null;
             try { marker = JSON.parse(storage.getItem(departureKey) || 'null'); } catch {}
             const age = Date.now() - Number(marker?.savedAt || 0);
             if (
-              marker && age >= 0 && age < maxAge
+              marker && age >= 0 && age < allowedAge
               && String(marker.returnToken || '') === savedToken
             ) return true;
           }
@@ -286,7 +288,7 @@
         };
         const detachedKakaoDurableReturn = Boolean(
           detachedKakaoEntry
-          && durableAge >= 0 && durableAge < maxAge
+          && durableAge >= 0 && durableAge < detachedKakaoMaxAge
           && durableToken && durableToken === String(durablePayload?.returnToken || '')
         );
         if (
@@ -321,7 +323,7 @@
         }
         const hasMatchingDepartureMarker = savedToken => {
           if (!historyReentry && !detachedKakaoEntry) return false;
-          return hasDepartureToken(savedToken);
+          return hasDepartureToken(savedToken, historyReentry ? maxAge : detachedKakaoMaxAge);
         };
         const readSaved = key => {
           for (const storage of [sessionStorage, localStorage]) {
