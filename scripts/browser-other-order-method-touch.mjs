@@ -94,6 +94,15 @@ await context.addInitScript(() => {
         || localStorage.getItem('daedongExternalReturnRc2')
       )
     });
+    setTimeout(() => {
+      const trigger = document.querySelector('#modal:not([hidden]) [data-rc3-other-methods]');
+      const panel = trigger?.closest('.store-other-wrap')?.querySelector('[data-rc3-inline-order-methods]');
+      window.__returnedOrderMethodTouchState.push({
+        type: `${event.type}-after`,
+        expanded: trigger?.getAttribute('aria-expanded') || '',
+        panelHidden: panel?.hidden
+      });
+    }, 0);
   };
   document.addEventListener('pointerdown', recordReturnedOrderMethodTouch, true);
   document.addEventListener('pointerup', recordReturnedOrderMethodTouch, true);
@@ -185,29 +194,28 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     page.locator('.order-methods-sheet [data-rc3-external-route]').count().then(count => count > 0),
     `${storeName} 실제 등록된 외부 주문앱 선택지 표시`
   );
-  const reentryDocumentStartedAt = await page.evaluate(() => performance.timeOrigin);
-  await page.locator('#modal:not([hidden]) .modal-close').tap();
-  await page.waitForFunction(previous => (
-    performance.timeOrigin !== previous
-    && !document.documentElement.classList.contains('daedong-external-return-pending')
-    && Boolean(document.querySelector('#modal:not([hidden]) .store-detail [data-rc3-other-methods]'))
-  ), reentryDocumentStartedAt, {polling: 25, timeout: 20000});
-  const reentryDocument = await page.evaluate(() => ({
-    navigationType: performance.getEntriesByType('navigation')[0]?.type || '',
+  const inlineDocumentStartedAt = await page.evaluate(() => performance.timeOrigin);
+  const inlineDocumentUrl = page.url();
+  await page.locator('#modal:not([hidden]) [data-rc3-order-methods-close]').tap();
+  await page.waitForFunction(
+    () => document.querySelector('#modal:not([hidden]) [data-rc3-inline-order-methods]')?.hidden === true,
+    null,
+    {polling: 25, timeout: 3000}
+  );
+  const inlineCloseState = await page.evaluate(() => ({
+    timeOrigin: performance.timeOrigin,
+    url: location.href,
     markerInUrl: new URL(location.href).searchParams.has('__ddom'),
     markerInStorage: Boolean(sessionStorage.getItem('daedongOrderMethodReentryV1')),
-    storeInUrl: new URL(location.href).searchParams.get('store') || ''
+    detailVisible: Boolean(document.querySelector('#modal:not([hidden]) .store-detail [data-rc3-other-methods]'))
   }));
   await check(
-    Promise.resolve(
-      reentryDocument.navigationType === 'reload'
-      || reentryDocument.navigationType === 'navigate'
-    ),
-    `${storeName} 주문방법 화면에서 상세 재진입 전 카카오 WebView 문서 재생성`
+    Promise.resolve(inlineCloseState.timeOrigin === inlineDocumentStartedAt && inlineCloseState.url === inlineDocumentUrl),
+    `${storeName} 주문방법 닫기에서 문서·URL·히스토리 표면을 교체하지 않음`
   );
   await check(
-    Promise.resolve(!reentryDocument.markerInUrl && !reentryDocument.markerInStorage && Boolean(reentryDocument.storeInUrl)),
-    `${storeName} 상세 재진입 문서의 일회용 표식 정리 및 가게 주소 유지`
+    Promise.resolve(!inlineCloseState.markerInUrl && !inlineCloseState.markerInStorage && inlineCloseState.detailVisible),
+    `${storeName} 인라인 닫기 뒤 같은 가게 상세 유지`
   );
   const reenteredTrigger = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await reenteredTrigger.tap();
@@ -218,7 +226,7 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   );
   await check(
     page.locator('#modal:not([hidden]) .order-methods-sheet').isVisible(),
-    `${storeName} 상세 재진입 뒤 첫 터치로 다른 주문방법 선택창 다시 열림`
+    `${storeName} 인라인 닫기 뒤 두 번째 터치로 다른 주문방법 선택창 다시 열림`
   );
   await page.locator('.order-methods-sheet [data-rc3-external-route]').first().evaluate(element => {
     element.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true, detail: 1, view: window}));
@@ -425,7 +433,8 @@ try {
   report.debug = await page.evaluate(() => ({
     modalHidden: document.querySelector('#modal')?.hidden,
     modalText: document.querySelector('#modal')?.innerText?.slice(0, 1000) || '',
-    modalHtml: document.querySelector('#modal')?.innerHTML?.slice(0, 2000) || ''
+    modalHtml: document.querySelector('#modal')?.innerHTML?.slice(0, 2000) || '',
+    returnedTouchState: window.__returnedOrderMethodTouchState || []
   })).catch(() => null);
   await page.screenshot({path: 'browser-other-order-method-touch-failure.png', fullPage: false}).catch(() => {});
 } finally {
