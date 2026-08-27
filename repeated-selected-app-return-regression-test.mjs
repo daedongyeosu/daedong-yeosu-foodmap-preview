@@ -8,6 +8,11 @@ const finalExperience = fs.readFileSync(new URL('./final-experience.js', import.
 const html = fs.readFileSync(new URL('./index.html', import.meta.url), 'utf8');
 
 const selectedCta = app.match(/const selectedCta = selectedRoute \? `([^`]+)` : '';/)?.[1] || '';
+const externalAppKeys = app.match(/const EXTERNAL_APP_KEYS = \[([^\]]+)\];/)?.[1]
+  ?.split(',')
+  .map(value => value.trim().replaceAll("'", '')) || [];
+assert.deepEqual(externalAppKeys, ['yogiyo', 'coupang', 'baemin'],
+  '공통 바로가기 검사는 요기요·쿠팡이츠·배달의민족 전체를 대상으로 해야 합니다.');
 assert.ok(selectedCta, '가게 상세의 선택 주문앱 바로가기 마크업을 찾아야 합니다.');
 assert.match(selectedCta, /^<a /, '이미 선택한 주문앱은 안내창을 다시 열지 말고 바로 실행하는 링크여야 합니다.');
 assert.match(selectedCta, /href="\$\{escapeHtml\(selectedRoute\.url\)\}"/,
@@ -66,7 +71,9 @@ const context = {
 vm.createContext(context);
 vm.runInContext(`${normalizeSource}\n${consumeSource}`, context);
 
-for (const token of ['first-coupang-trip', 'second-coupang-trip']) {
+for (const appKey of externalAppKeys) {
+ for (const trip of [1, 2]) {
+  const token = `${appKey}-trip-${trip}`;
   let backCount = 0;
   let replaced = null;
   context.location.href = `https://preview.daedongmap.com/?__ddret=${token}&__ddguard=${token}`;
@@ -90,10 +97,11 @@ for (const token of ['first-coupang-trip', 'second-coupang-trip']) {
   assert.doesNotMatch(replaced.url, /__ddret|__ddguard/, `${token}: 사용한 URL 복귀표식을 남기면 안 됩니다.`);
   assert.equal(vm.runInContext('rc2ConsumeExpectedExternalHistoryPop()', context), false,
     `${token}: 같은 popstate를 두 번 소비하면 실제 뒤로가기를 막습니다.`);
+ }
 }
 
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*repeated-selected-app-return-1/);
 assert.match(html, /app\.js\?v=[^"\n]*repeated-selected-app-return-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*repeated-selected-app-return-1/);
 
-console.log('PASS 선택 주문앱 즉시 실행 및 연속 2회 동일 화면 복귀');
+console.log('PASS 요기요·쿠팡이츠·배달의민족 즉시 실행 및 앱별 연속 2회 동일 화면 복귀');
