@@ -57,13 +57,15 @@ function rc2ClearReturnDocumentReload(returnToken = '') {
   try { sessionStorage.removeItem(RC2_RETURN_DOCUMENT_RELOAD); } catch {}
 }
 
-function rc2ReloadReturnedDocumentOnce(saved) {
+function rc2NavigateReturnedDocumentOnce(saved) {
   const returnToken = String(saved?.returnToken || '');
   if (!returnToken || String(rc2ReadReturnDocumentReload()?.returnToken || '') === returnToken) return false;
   try {
     sessionStorage.setItem(RC2_RETURN_DOCUMENT_RELOAD, JSON.stringify({returnToken, savedAt: Date.now()}));
     document.documentElement.classList.add('daedong-external-return-pending');
-    location.reload();
+    const returnUrl = new URL(location.href);
+    returnUrl.searchParams.set(RC2_RETURN_GUARD_PARAM, returnToken);
+    location.replace(`${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}`);
     return true;
   } catch {
     rc2ClearReturnDocumentReload(returnToken);
@@ -1237,10 +1239,11 @@ async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
       const documentFreshForReturn = Boolean(returnToken && documentReturnToken === returnToken);
       // A Kakao history resume can preserve the correct pixels while its
       // WebView keeps a stale native hit-test surface over the old document.
-      // DOM replacement cannot refresh that browser-owned layer. Reload this
-      // return token once; the early snapshot boot reconstructs the exact store
-      // and scroll position before revealing the new document.
-      if (rebuildExisting && !documentFreshForReturn && rc2ReloadReturnedDocumentOnce(saved)) return true;
+      // DOM replacement and location.reload() can both reuse that browser-owned
+      // layer on a real Kakao WebView. Replace the current history entry with a
+      // token-guarded URL once; the early snapshot boot reconstructs the exact
+      // store and scroll position before revealing the forced new document.
+      if (rebuildExisting && !documentFreshForReturn && rc2NavigateReturnedDocumentOnce(saved)) return true;
       // Kakao can resume a visually correct history snapshot whose native
       // hit-test layer no longer delivers any DOM event inside the old modal.
       // Rebinding or cloning the button cannot repair that WebView-owned

@@ -278,9 +278,9 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     Promise.resolve(
       returnedDocument.entryToken
       && returnedDocument.entryToken === returnedDocument.savedToken
-      && returnedDocument.navigationType === 'reload'
+      && returnedDocument.navigationType === 'navigate'
     ),
-    `${storeName} 카카오 복귀 토큰으로 전체 문서를 한 번 새로 생성`
+    `${storeName} 카카오 복귀 토큰 URL 이동으로 전체 문서를 한 번 새로 생성`
   );
   await check(
     returnedTrigger.evaluate(element => element.dataset.testPreparedBeforeReturn !== '1'),
