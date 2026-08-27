@@ -449,6 +449,15 @@ function fxPendingOrderMethodReentry(storeId){
  const age=Date.now()-Number(saved?.savedAt||0);
  return saved&&age>=0&&age<2*60*1000&&String(saved.storeId||'')===String(storeId||'')&&String(saved.token||'')===token?saved:null;
 }
+function fxPrepareOrderMethodReentryUrl(saved){
+ if(!saved)return false;
+ try{
+  const url=new URL(location.href);
+  url.searchParams.delete(FX_ORDER_METHOD_REENTRY_PARAM);
+  history.replaceState(history.state,'',`${url.pathname}${url.search}${url.hash}`);
+  return true;
+ }catch{return false;}
+}
 function fxFinishOrderMethodReentry(saved,{restorePosition=false}={}){
  if(!saved)return;
  if(restorePosition){
@@ -458,17 +467,18 @@ function fxFinishOrderMethodReentry(saved,{restorePosition=false}={}){
  }
  try{sessionStorage.removeItem(FX_ORDER_METHOD_REENTRY);}catch{}
  window.daedongPendingOrderMethodReentry=null;
- try{
-  const url=new URL(location.href);
-  url.searchParams.delete(FX_ORDER_METHOD_REENTRY_PARAM);
-  history.replaceState(history.state,'',`${url.pathname}${url.search}${url.hash}`);
- }catch{}
- window.daedongFinishExternalReturnBoot?.();
+ // The store detail was built normally behind the opaque boot cover. Give its
+ // native hit-test surface two painted frames before removing that cover.
+ requestAnimationFrame(()=>requestAnimationFrame(()=>window.daedongFinishExternalReturnBoot?.()));
 }
 async function fxOpenSharedStoreFromUrl(){
  const storeId=fxRequestedSharedStoreId();
  if(!storeId)return false;
  const orderMethodReentry=fxPendingOrderMethodReentry(storeId);
+ // URL mutation after openStore() leaves correct pixels but a dead native
+ // button surface in Samsung Kakao WebView. Strip the one-time marker before
+ // the modal DOM exists; every later history entry is then already clean.
+ fxPrepareOrderMethodReentryUrl(orderMethodReentry);
  const sharedStoreUrl=`${location.pathname}${location.search}${location.hash}`;
  for(let attempt=0;attempt<50;attempt+=1){
   const store=fxStoreById(storeId);
