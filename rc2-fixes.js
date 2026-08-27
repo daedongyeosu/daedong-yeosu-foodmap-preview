@@ -1379,6 +1379,7 @@ function rc2RestoreOpenInlineOrderMethodsFromPendingState() {
   ) return false;
   return Boolean(window.daedongRestoreInlineOrderMethodsOpen?.(detail));
 }
+window.daedongRestoreOpenInlineOrderMethodsFromPendingState = rc2RestoreOpenInlineOrderMethodsFromPendingState;
 
 async function rc2RestoreAfterExternalPage({rebuildExisting = false} = {}) {
   if (rc2StoreRestorePromise) return rc2StoreRestorePromise;

@@ -432,6 +432,26 @@ function rc3RestoreInlineOrderMethodsOpen(detail = $('#modalContent .store-detai
 }
 window.daedongRestoreInlineOrderMethodsOpen = rc3RestoreInlineOrderMethodsOpen;
 
+let rc3PendingOrderMethodsRestoreTimer = 0;
+function rc3SchedulePendingOrderMethodsRestore(attempt = 0) {
+  let hasReturnToken = false;
+  try { hasReturnToken = new URL(location.href).searchParams.has('__ddret'); } catch {}
+  if (!hasReturnToken) return;
+  clearTimeout(rc3PendingOrderMethodsRestoreTimer);
+  if (window.daedongRestoreOpenInlineOrderMethodsFromPendingState?.()) return;
+  if (attempt >= 50) return;
+  rc3PendingOrderMethodsRestoreTimer = setTimeout(
+    () => rc3SchedulePendingOrderMethodsRestore(attempt + 1),
+    100
+  );
+}
+rc3SchedulePendingOrderMethodsRestore();
+window.addEventListener('pageshow', () => rc3SchedulePendingOrderMethodsRestore(), true);
+window.addEventListener('focus', () => rc3SchedulePendingOrderMethodsRestore(), true);
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') rc3SchedulePendingOrderMethodsRestore();
+}, true);
+
 function rc3CloseInlineOrderMethods(closeButton, event) {
   const trigger = closeButton?.closest('.store-other-wrap')?.querySelector('[data-rc3-other-methods]');
   if (!trigger) return false;

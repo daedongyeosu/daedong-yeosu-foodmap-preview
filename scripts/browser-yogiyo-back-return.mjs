@@ -56,6 +56,11 @@ await context.addInitScript(({previewOrigin}) => {
     trigger.setAttribute('aria-expanded', 'false');
     trigger.querySelector('span').textContent = '다른 주문방법 보기';
     trigger.querySelector('b').textContent = '›';
+    const restoreInline = window.daedongRestoreInlineOrderMethodsOpen;
+    if (typeof restoreInline === 'function') {
+      delete window.daedongRestoreInlineOrderMethodsOpen;
+      setTimeout(() => { window.daedongRestoreInlineOrderMethodsOpen = restoreInline; }, 150);
+    }
   }, true);
 }, {previewOrigin: baseOrigin});
 if (process.env.PATCH_RC2_FROM_LOCAL === '1') {
@@ -130,7 +135,10 @@ const openOrderMethodsRoute = async (page, {allowOpen = true} = {}) => {
   const otherMethods = page.locator('#modal:not([hidden]) [data-rc3-other-methods]');
   await otherMethods.waitFor({state: 'visible', timeout: 10000});
   const orderMethodsSheet = page.locator('#modal:not([hidden]) .order-methods-sheet');
-  if (!await orderMethodsSheet.isVisible() && allowOpen) await otherMethods.tap();
+  if (!await orderMethodsSheet.isVisible()) {
+    if (allowOpen) await otherMethods.tap();
+    else await orderMethodsSheet.waitFor({state: 'visible', timeout: 2000}).catch(() => {});
+  }
   const route = page.locator('.order-methods-sheet [data-rc3-external-route="yogiyo"]');
   if (allowOpen || await orderMethodsSheet.isVisible()) await route.waitFor({state: 'visible', timeout: 5000});
   if (!await otherMethods.evaluate(element => Boolean(element.dataset.testStableReturn))) {

@@ -132,13 +132,19 @@ assert.match(html, /final-experience\.js\?v=[^"\n]*yogiyo-android-browser-form-1
 assert.match(rc2, /function rc2SnapshotKeepsInlineOrderMethodsOpen[\s\S]*?aria-expanded'[\s\S]*?!panel\.hidden/);
 assert.match(rc2, /if \(visibleStoreMatches\)[\s\S]*?daedongRebindOrderMethodsTrigger[\s\S]*?rc2SnapshotKeepsInlineOrderMethodsOpen\(saved\.storeSnapshot\)[\s\S]*?daedongRestoreInlineOrderMethodsOpen/);
 assert.match(rc2, /function rc2RestoreOpenInlineOrderMethodsFromPendingState[\s\S]*?rc2ReadReturnState\(RC2_EXTERNAL_RETURN\)[\s\S]*?daedongRestoreInlineOrderMethodsOpen/);
+assert.match(rc2, /window\.daedongRestoreOpenInlineOrderMethodsFromPendingState = rc2RestoreOpenInlineOrderMethodsFromPendingState/);
 assert.match(rc2, /const restoreAfterNativeResume = \(\) => \{[\s\S]*?rc2RestoreOpenInlineOrderMethodsFromPendingState\(\)[\s\S]*?rc2RestoreAfterConfirmedResume/);
 assert.match(rc3, /function rc3RestoreInlineOrderMethodsOpen[\s\S]*?rc3SetInlineOrderMethods\(trigger, true\)[\s\S]*?daedongRestoreInlineOrderMethodsOpen/);
+assert.match(rc3, /function rc3SchedulePendingOrderMethodsRestore[\s\S]*?__ddret[\s\S]*?daedongRestoreOpenInlineOrderMethodsFromPendingState[\s\S]*?attempt >= 50[\s\S]*?setTimeout/);
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*restored-open-order-methods-1/);
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*restored-open-order-methods-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*restored-open-order-methods-1/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*restored-open-order-methods-ready-1/);
+assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*restored-open-order-methods-ready-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*restored-open-order-methods-ready-1/);
 assert.match(browserTest, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'/);
 assert.match(browserTest, /addEventListener\('pageshow'[\s\S]*?panel\.hidden = true[\s\S]*?allowOpen: false/, '브라우저 검사는 삼성 인터넷이 복귀 DOM의 열린 목록을 닫는 현상을 재현한 뒤 앱이 자동 복원하는지 확인해야 합니다.');
+assert.match(browserTest, /delete window\.daedongRestoreInlineOrderMethodsOpen[\s\S]*?setTimeout[\s\S]*?150/, '브라우저 검사는 전체 문서 복귀에서 rc2보다 rc3 복원 함수가 늦게 준비되는 순서도 재현해야 합니다.');
 assert.match(browserTest, /await restoredDetail\.waitFor\([^\n]*\)\.catch\(async \(\) =>/);
 assert.match(browserTest, /yogiyo-web[\s\S]*page\.goBack[\s\S]*testStableReturn/, '실제 브라우저 검사는 요기요 웹 상세에서 뒤로가기 한 번으로 같은 상세 DOM 복귀를 확인해야 합니다.');
 
