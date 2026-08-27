@@ -2205,7 +2205,7 @@ async function openStore(store) {
   const external = EXTERNAL_APP_KEYS.map(key=>routeFor(store,key)).filter(Boolean);
   const otherRoutes = [phoneRoute,...external].filter(Boolean);
   const otherMenu = otherRoutes.length ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle external-text-route" type="button"><span>다른 주문방법 보기</span><b>›</b></button><div class="store-other-popover" hidden><button type="button" class="store-other-close" aria-label="다른 주문방법 닫기">×</button>${otherRoutes.map(route => route.key === 'phone' ? routeLink(route,'store-other-link') : `<button type="button" class="store-other-link external-text-route" data-external-route-key="${route.key}"><span>${escapeHtml(route.name)}</span><b>›</b></button>`).join('')}${externalAppNoticeMarkup()}</div></div>` : '';
-  const selectedCta = selectedRoute ? `<button type="button" class="selected-order-cta external-text-route" data-external-route-key="${selectedRoute.key}"><span>처음 선택한 ${escapeHtml(APP_META[selectedRoute.key].label)}로 주문하기</span><b>›</b></button>` : '';
+  const selectedCta = selectedRoute ? `<a class="selected-order-cta external-text-route" href="${escapeHtml(selectedRoute.url)}" data-community-original="${selectedRoute.key}" target="_blank" rel="noopener"><span>${escapeHtml(APP_META[selectedRoute.key].label)}로 바로 주문하기</span><b>›</b></a>` : '';
   const favorite=isFavorite(store.id);
   const menuEntry = storeMenuPreviewEntryMarkup(store);
   if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
