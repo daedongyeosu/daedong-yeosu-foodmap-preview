@@ -13,7 +13,7 @@
   const hideTodayButton = document.getElementById('mukkebiSummerHideToday');
   const orderButton = document.getElementById('mukkebiSummerOrder');
   const communityIntro = document.getElementById('communityIntro');
-  const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDate';
+  const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDateV2';
   const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV2';
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
@@ -32,6 +32,7 @@
     && !RETURN_QUERY_KEYS.some(key => entryUrl.searchParams.has(key))
     && document.wasDiscarded !== true
     && (!navigationType || navigationType === 'navigate');
+  window.daedongMukkebiAutoOpenPending = AUTO_OPEN_ELIGIBLE;
   let opened = false;
   let customerInteracted = false;
   let initialOpenTimer = 0;
@@ -73,6 +74,13 @@
     customerInteracted = true;
     window.clearTimeout(initialOpenTimer);
     initialOpenTimer = 0;
+    settleAutomaticOpen();
+  }
+
+  function settleAutomaticOpen() {
+    if (window.daedongMukkebiAutoOpenPending !== true) return;
+    window.daedongMukkebiAutoOpenPending = false;
+    window.dispatchEvent(new Event('daedong:mukkebi-auto-open-settled'));
   }
 
   function interactionPoint(event) {
@@ -139,10 +147,14 @@
 
   function scheduleInitialOpen() {
     window.clearTimeout(initialOpenTimer);
-    if (!AUTO_OPEN_ELIGIBLE) return;
+    if (!AUTO_OPEN_ELIGIBLE) {
+      settleAutomaticOpen();
+      return;
+    }
     initialOpenTimer = window.setTimeout(() => {
       initialOpenTimer = 0;
       openEvent({automatic: true});
+      settleAutomaticOpen();
     }, 600);
   }
 

@@ -41,6 +41,9 @@ assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*font-size
 assert.match(css, /@media\(max-width:767px\) and \(max-height:720px\)/);
 
 assert.match(js, /daedongCommunityIntroPlayedV4/);
+assert.match(js, /document\.getElementById\('mukkebiSummerEvent'\)/);
+assert.match(js, /window\.daedongMukkebiAutoOpenPending !== true/);
+assert.match(js, /daedong:mukkebi-auto-open-settled/);
 assert.match(js, /const INTRO_DURATION = 15000/);
 assert.match(js, /sessionStorage\.getItem/);
 assert.match(js, /sessionStorage\.setItem/);

@@ -33,7 +33,7 @@ const browser = await chromium.launch({
   ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH} : {})
 });
 
-const newContext = async () => {
+const newContext = async ({introPlayed = true} = {}) => {
   const context = await browser.newContext({
     viewport: {width: 390, height: 844},
     isMobile: true,
@@ -41,9 +41,11 @@ const newContext = async () => {
     locale: 'ko-KR',
     userAgent: 'Mozilla/5.0 (Linux; Android 15; SM-S938N) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36 KAKAOTALK 25.7.2'
   });
-  await context.addInitScript(() => {
-    sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
-  });
+  if (introPlayed) {
+    await context.addInitScript(() => {
+      sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
+    });
+  }
   await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
   await context.route('**/*.woff2', route => route.abort());
   await context.route('**/api/catalog', route => route.fulfill({
@@ -72,6 +74,28 @@ const check = async (condition, message) => {
 };
 
 try {
+  const startupOrderContext = await newContext({introPlayed: false});
+  await startupOrderContext.addInitScript(() => {
+    const now = new Date();
+    const legacyDate = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    try { localStorage.setItem('daedongMukkebiSummerEventHiddenDate', legacyDate); } catch {}
+  });
+  const startupOrderPage = await startupOrderContext.newPage();
+  startupOrderPage.on('pageerror', error => report.errors.push(`startup-order: ${error.message}`));
+  await startupOrderPage.goto(`${baseURL}?mukkebi-startup-order-test=1`, {waitUntil: 'domcontentloaded'});
+  await startupOrderPage.locator('#mukkebiSummerEvent').waitFor({state: 'visible', timeout: 5000});
+  await check(startupOrderPage.evaluate(() => (
+    document.querySelector('#mukkebiSummerEvent')?.hidden === false
+      && document.querySelector('#communityIntro')?.hidden === true
+  )), '과거 오늘 숨김 기록과 첫 안내창이 있는 신규 고객도 먹깨비 팝업을 먼저 표시');
+  await startupOrderPage.locator('#mukkebiSummerClose').tap();
+  await startupOrderPage.locator('#communityIntro').waitFor({state: 'visible', timeout: 3000});
+  await check(startupOrderPage.evaluate(() => (
+    document.querySelector('#mukkebiSummerEvent')?.hidden === true
+      && document.querySelector('#communityIntro')?.hidden === false
+  )), '먹깨비 팝업을 닫은 뒤 기존 첫 안내창을 순서대로 표시');
+  await startupOrderContext.close();
+
   const freshContext = await newContext();
   const freshPage = await freshContext.newPage();
   freshPage.on('pageerror', error => report.errors.push(`fresh: ${error.message}`));
