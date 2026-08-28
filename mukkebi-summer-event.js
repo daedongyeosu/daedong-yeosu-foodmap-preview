@@ -15,6 +15,7 @@
   const communityIntro = document.getElementById('communityIntro');
   const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDateV2';
   const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV2';
+  const COMMUNITY_INTRO_SESSION_KEY = 'daedongCommunityIntroPlayedV4';
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
   const AUTO_OPEN_ENABLED = true;
@@ -125,7 +126,12 @@
   function openEvent({automatic = false} = {}) {
     if (!canOpen({automatic})) return;
     opened = true;
-    try { sessionStorage.setItem(SEEN_SESSION_KEY, '1'); } catch {}
+    try {
+      sessionStorage.setItem(SEEN_SESSION_KEY, '1');
+      // One campaign message per visit is enough. Mark the general startup
+      // intro as handled so closing this event never opens another popup.
+      sessionStorage.setItem(COMMUNITY_INTRO_SESSION_KEY, '1');
+    } catch {}
     eventLayer.hidden = false;
     eventLayer.setAttribute('aria-hidden', 'false');
     closeButton?.focus({preventScroll:true});
