@@ -136,6 +136,11 @@ assert.match(rc2, /window\.daedongRestoreOpenInlineOrderMethodsFromPendingState 
 assert.match(rc2, /const restoreAfterNativeResume = \(\) => \{[\s\S]*?rc2RestoreOpenInlineOrderMethodsFromPendingState\(\)[\s\S]*?rc2RestoreAfterConfirmedResume/);
 assert.match(rc3, /function rc3RestoreInlineOrderMethodsOpen[\s\S]*?rc3SetInlineOrderMethods\(trigger, true\)[\s\S]*?daedongRestoreInlineOrderMethodsOpen/);
 assert.match(rc3, /function rc3SchedulePendingOrderMethodsRestore[\s\S]*?__ddret[\s\S]*?daedongRestoreOpenInlineOrderMethodsFromPendingState[\s\S]*?attempt >= 50[\s\S]*?setTimeout/);
+assert.match(rc3, /data-rc3-external-href="\$\{escapeHtml\(safeHref\(route\.url\)\)\}"/);
+assert.match(rc3, /const embeddedHref = safeHref\(sourceElement\?\.dataset\?\.rc3ExternalHref[\s\S]*?embeddedHref !== '#' \? embeddedHref : safeHref\(route\?\.url\)/);
+assert.match(rc3, /if \(!external \|\| !routeKey\) return false/);
+assert.doesNotMatch(rc3, /if \(!external \|\| !routeKey \|\| !store\) return false/);
+assert.match(rc2, /const lat = Number\(store\?\.lat \?\? link\.dataset\?\.storeLat\)[\s\S]*?yogiyoWebRoute\(storeId, \{lat, lng\}\)/);
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*restored-open-order-methods-1/);
 assert.match(finalExperience, /rc3-fixes\.js\?v=[^'\n]*restored-open-order-methods-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*restored-open-order-methods-1/);
@@ -145,6 +150,7 @@ assert.match(html, /final-experience\.js\?v=[^"\n]*restored-open-order-methods-r
 assert.match(browserTest, /window\.daedongCatalogReady && typeof window\.daedongCatalogReady\.then === 'function'/);
 assert.match(browserTest, /addEventListener\('pageshow'[\s\S]*?panel\.hidden = true[\s\S]*?allowOpen: false/, '브라우저 검사는 삼성 인터넷이 복귀 DOM의 열린 목록을 닫는 현상을 재현한 뒤 앱이 자동 복원하는지 확인해야 합니다.');
 assert.match(browserTest, /delete window\.daedongRestoreInlineOrderMethodsOpen[\s\S]*?setTimeout[\s\S]*?150/, '브라우저 검사는 전체 문서 복귀에서 rc2보다 rc3 복원 함수가 늦게 준비되는 순서도 재현해야 합니다.');
+assert.match(browserTest, /catalogOnlyStore = \{\.\.\.current, routes: \[\], __secureDetailReady: false\}[\s\S]*?window\.fxStoreById = id/, '브라우저 검사는 상세를 연 뒤 전체 카탈로그 객체가 교체되어 현재 객체의 routes가 사라지는 실제 장시간 경과 조건을 재현해야 합니다.');
 assert.match(browserTest, /await restoredDetail\.waitFor\([^\n]*\)\.catch\(async \(\) =>/);
 assert.match(browserTest, /yogiyo-web[\s\S]*page\.goBack[\s\S]*testStableReturn/, '실제 브라우저 검사는 요기요 웹 상세에서 뒤로가기 한 번으로 같은 상세 DOM 복귀를 확인해야 합니다.');
 

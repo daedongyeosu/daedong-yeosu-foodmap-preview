@@ -158,6 +158,20 @@ try {
   let surface = await openOrderMethodsRoute(page);
 
   for (let attempt = 1; attempt <= 2; attempt += 1) {
+    if (attempt === 1) {
+      await check(
+        surface.route.evaluate(element => /^https:\/\//.test(String(element.dataset.rc3ExternalHref || ''))),
+        '주문앱 버튼이 전체 카탈로그 교체 후에도 쓸 자체 주문 URL을 보존'
+      );
+      await page.evaluate(storeId => {
+        const originalLookup = window.fxStoreById;
+        const current = originalLookup(storeId);
+        const catalogOnlyStore = {...current, routes: [], __secureDetailReady: false};
+        window.fxStoreById = id => String(id) === String(storeId)
+          ? catalogOnlyStore
+          : originalLookup(id);
+      }, store.store_id);
+    }
     const priorNavigationCount = yogiyoNavigations.length;
     await surface.route.tap();
     await page.waitForURL(url => url.href === yogiyoWebURL, {timeout: 10000});

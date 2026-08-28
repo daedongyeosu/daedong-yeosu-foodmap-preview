@@ -351,7 +351,9 @@ fxOpenPhoneConfirm = async function rc3OpenPhoneConfirm(id) {
 
 function rc3RouteButton(store, route) {
   if (['yogiyo', 'coupang', 'baemin'].includes(route.key)) {
-    return `<button type="button" class="detail-route external-text-route" data-rc3-external-route="${escapeHtml(route.key)}" data-store-id="${escapeHtml(store.id)}" onclick="return window.daedongActivateExternalOrderRouteFallback ? window.daedongActivateExternalOrderRouteFallback(this, event) : false"><span>${escapeHtml(route.name)}</span><b>›</b></button>`;
+    const lat = Number.isFinite(Number(store?.lat)) ? String(store.lat) : '';
+    const lng = Number.isFinite(Number(store?.lng)) ? String(store.lng) : '';
+    return `<button type="button" class="detail-route external-text-route" data-rc3-external-route="${escapeHtml(route.key)}" data-rc3-external-href="${escapeHtml(safeHref(route.url))}" data-store-id="${escapeHtml(store.id)}" data-store-lat="${escapeHtml(lat)}" data-store-lng="${escapeHtml(lng)}" onclick="return window.daedongActivateExternalOrderRouteFallback ? window.daedongActivateExternalOrderRouteFallback(this, event) : false"><span>${escapeHtml(route.name)}</span><b>›</b></button>`;
   }
   return `<a class="detail-route" href="${escapeHtml(route.url)}" target="_blank" rel="noopener" data-route-key="${escapeHtml(route.key)}">${appIcon(route.key, 'detail-route-icon')}<span>${escapeHtml(route.name)}</span><b>›</b></a>`;
 }
@@ -507,9 +509,10 @@ let rc3ExternalRouteActivationUntil = 0;
 let rc3ExternalRouteActivationKey = '';
 
 function rc3LaunchExternalOrderRoute(store, routeKey, sourceElement) {
-  const route = routeFor(store, routeKey);
-  const href = safeHref(route?.url);
-  if (!route || href === '#') return false;
+  const route = store ? routeFor(store, routeKey) : null;
+  const embeddedHref = safeHref(sourceElement?.dataset?.rc3ExternalHref || '');
+  const href = embeddedHref !== '#' ? embeddedHref : safeHref(route?.url);
+  if (href === '#') return false;
   // Leave the app list expanded in the preserved Preview document. When the
   // customer returns from one order app, the other apps stay one tap away.
   rc2RememberExternalReturn(sourceElement);
@@ -521,7 +524,7 @@ function rc3ActivateExternalOrderRoute(external, event) {
   const storeId = String(external?.dataset.storeId || $('#modal')?.dataset.activeStoreId || '');
   const activationKey = `${storeId}:${routeKey}`;
   const store = fxStoreById(storeId);
-  if (!external || !routeKey || !store) return false;
+  if (!external || !routeKey) return false;
 
   event?.preventDefault?.();
   event?.stopImmediatePropagation?.();
