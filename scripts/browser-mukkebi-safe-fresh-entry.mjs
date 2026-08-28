@@ -89,11 +89,12 @@ try {
       && document.querySelector('#communityIntro')?.hidden === true
   )), '과거 오늘 숨김 기록과 첫 안내창이 있는 신규 고객도 먹깨비 팝업을 먼저 표시');
   await startupOrderPage.locator('#mukkebiSummerClose').tap();
-  await startupOrderPage.locator('#communityIntro').waitFor({state: 'visible', timeout: 3000});
+  await startupOrderPage.waitForTimeout(1200);
   await check(startupOrderPage.evaluate(() => (
     document.querySelector('#mukkebiSummerEvent')?.hidden === true
-      && document.querySelector('#communityIntro')?.hidden === false
-  )), '먹깨비 팝업을 닫은 뒤 기존 첫 안내창을 순서대로 표시');
+      && document.querySelector('#communityIntro')?.hidden === true
+      && sessionStorage.getItem('daedongCommunityIntroPlayedV4') === '1'
+  )), '먹깨비 팝업을 닫은 뒤 다른 안내 팝업을 연달아 표시하지 않음');
   await startupOrderContext.close();
 
   const freshContext = await newContext();

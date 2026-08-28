@@ -106,9 +106,14 @@ try {
   await summer.waitFor({state: 'visible', timeout: 5000});
   await dispatchTouch(page.locator('#mukkebiSummerClose'));
   await check(summer.evaluate(node => node.hidden), '먹깨비 행사창 X가 순수 touchstart/touchend로 닫힘');
+  await page.waitForTimeout(900);
+  await check(page.locator('#communityIntro').evaluate(node => node.hidden), '먹깨비 행사창을 닫은 직후 다른 팝업이 연달아 뜨지 않음');
 
+  await page.evaluate(() => sessionStorage.removeItem('daedongCommunityIntroPlayedV4'));
+  await page.reload({waitUntil: 'domcontentloaded'});
+  await page.waitForFunction(() => typeof window.installDaedongTapAction === 'function', null, {timeout: 15000});
   const intro = page.locator('#communityIntro');
-  await intro.waitFor({state: 'visible', timeout: 3000});
+  await intro.waitFor({state: 'visible', timeout: 5000});
   await dispatchTouch(page.locator('#communityIntroClose'));
   await check(intro.evaluate(node => node.hidden), '첫 안내창 X가 순수 touchstart/touchend로 닫힘');
 

@@ -7,6 +7,8 @@ const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
 assert.match(eventJs, /let customerInteracted = false/);
 assert.match(eventJs, /const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDateV2'/);
+assert.match(eventJs, /const COMMUNITY_INTRO_SESSION_KEY = 'daedongCommunityIntroPlayedV4'/);
+assert.match(eventJs, /sessionStorage\.setItem\(COMMUNITY_INTRO_SESSION_KEY, '1'\)/);
 assert.match(eventJs, /window\.daedongMukkebiAutoOpenPending = AUTO_OPEN_ELIGIBLE/);
 assert.match(eventJs, /daedong:mukkebi-auto-open-settled/);
 assert.match(eventJs, /window\.daedongHasHomeInteraction\?\.\(\) === true/);
@@ -21,7 +23,7 @@ assert.match(eventJs, /window\.addEventListener\('scroll'/);
 assert.match(eventJs, /function scheduleInitialOpen\(\)[\s\S]*}, 600\)/);
 assert.doesNotMatch(eventJs, /new MutationObserver\(waitUntilExistingPopupCloses\)/);
 assert.doesNotMatch(eventJs, /function waitUntilExistingPopupCloses/);
-assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-3-scroll-cancel-1-layer-guard-1[^"]*kakao-opening-touch-1-startup-order-1/);
+assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-3-scroll-cancel-1-layer-guard-1[^"]*kakao-opening-touch-1-startup-order-1-no-consecutive-popup-1/);
 assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v27-store-card-touchstart-intent-guard'/);
 
 console.log('Mukkebi no-late-popup regression: PASS');
