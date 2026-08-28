@@ -61,7 +61,7 @@ const stores = [
     channelKeys: ['phone', 'yogiyo'],
     routes: [
       {name: '전화주문', url: 'tel:0611234567', enabled: true},
-      {name: '요기요', url: 'https://orders.example.test/yogiyo/only', enabled: true}
+      {name: '요기요', url: 'https://ws.yogiyo.co.kr/48zrgs', enabled: true}
     ]
   },
   {
@@ -381,13 +381,25 @@ async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiy
     `${storeName} 주문앱 구성에 맞는 버튼 동작 지정`
   );
   if (singleYogiyo) {
+    await page.evaluate(() => {
+      window.__singleYogiyoNativeLaunches = [];
+      window.daedongLaunchMobileRoute = async (key, href) => {
+        window.__singleYogiyoNativeLaunches.push({key, href});
+      };
+    });
     await trigger.tap();
-    await page.waitForURL(url => url.hostname === 'www.yogiyo.co.kr' && url.hash === '#/332930', {timeout: 5000});
+    await page.waitForFunction(() => window.__singleYogiyoNativeLaunches?.length === 1, null, {timeout: 5000});
     await check(
-      page.locator('h1').filter({hasText: '요기요 주문화면'}).isVisible(),
-      `${storeName} 추가 확인 없이 같은 카카오 방문기록의 요기요 웹으로 바로 이동`
+      page.evaluate(() => {
+        const launch = window.__singleYogiyoNativeLaunches?.[0];
+        return launch?.key === 'yogiyo' && launch?.href === 'https://ws.yogiyo.co.kr/48zrgs';
+      }),
+      `${storeName} 추가 확인 없이 정상 요기요 앱 가게 화면으로 바로 실행`
     );
-    await page.goBack({waitUntil: 'domcontentloaded'});
+    await check(
+      Promise.resolve(new URL(page.url()).origin === baseOrigin),
+      `${storeName} 요기요 실행 뒤 원본 Preview 문서 유지`
+    );
   } else {
     await trigger.tap();
     await check(
