@@ -1322,7 +1322,9 @@ async function rc2LaunchComparedExternal(link, href) {
       || ''
     );
     const store = typeof fxStoreById === 'function' ? fxStoreById(storeId) : null;
-    if (!store || !window.daedongDataApi?.yogiyoWebRoute) {
+    const lat = Number(store?.lat ?? link.dataset?.storeLat);
+    const lng = Number(store?.lng ?? link.dataset?.storeLng);
+    if (!storeId || !Number.isFinite(lat) || !Number.isFinite(lng) || !window.daedongDataApi?.yogiyoWebRoute) {
       window.alert('요기요 주문화면을 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.');
       return false;
     }
@@ -1330,7 +1332,7 @@ async function rc2LaunchComparedExternal(link, href) {
     link.dataset.routeBusy = 'true';
     link.setAttribute?.('aria-busy', 'true');
     try {
-      const resolved = await window.daedongDataApi.yogiyoWebRoute(store.id, {lat: store.lat, lng: store.lng});
+      const resolved = await window.daedongDataApi.yogiyoWebRoute(storeId, {lat, lng});
       const yogiyoUrl = String(resolved?.url || '');
       if (!/^https:\/\/www\.yogiyo\.co\.kr\/mobile\/\?lat=[^#&]+&lng=[^#&]+#\/\d{1,12}$/.test(yogiyoUrl)) {
         throw new Error('invalid Yogiyo web route');
