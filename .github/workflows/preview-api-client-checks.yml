@@ -64,6 +64,12 @@ jobs:
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-home-filter-chips.mjs
+      - name: Verify safe Mukkebi popup on fresh home entry
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-mukkebi-fresh-entry-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173 node scripts/browser-mukkebi-safe-fresh-entry.mjs
       - name: Verify instant uninterrupted store paging in current PR
         run: |
           python3 -m http.server 4173 >/tmp/daedong-store-pager-server.log 2>&1 &
@@ -169,6 +175,9 @@ jobs:
             browser-rider-evergreen-failure.png
             browser-home-filter-chips-report.json
             browser-home-filter-chips.png
+            browser-mukkebi-safe-fresh-entry-report.json
+            browser-mukkebi-safe-fresh-entry-popup.png
+            browser-mukkebi-safe-fresh-entry-menu.png
             browser-store-list-interruption-report.json
             browser-store-list-interruption.png
             browser-store-list-interruption-failure.png
