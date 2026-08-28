@@ -74,8 +74,8 @@
     initialOpenTimer = 0;
   }
 
-  function canOpen() {
-    if (!AUTO_OPEN_ELIGIBLE || document.visibilityState !== 'visible') return false;
+  function canOpen({automatic = false} = {}) {
+    if (automatic && (!AUTO_OPEN_ELIGIBLE || document.visibilityState !== 'visible')) return false;
     if (opened || seenThisSession() || returningFromOrderApp() || customerAlreadyInteracted() || Date.now() >= EVENT_END || hiddenToday()) return false;
     const modal = document.getElementById('modal');
     const startupAd = document.getElementById('startupAd');
@@ -87,8 +87,8 @@
       !document.body.classList.contains('store-service-overview-open');
   }
 
-  function openEvent() {
-    if (!canOpen()) return;
+  function openEvent({automatic = false} = {}) {
+    if (!canOpen({automatic})) return;
     opened = true;
     try { sessionStorage.setItem(SEEN_SESSION_KEY, '1'); } catch {}
     eventLayer.hidden = false;
@@ -97,7 +97,7 @@
   }
 
   // Reserved for an explicit campaign entry. Automatic opening stays off.
-  window.daedongOpenMukkebiSummerEvent = openEvent;
+  window.daedongOpenMukkebiSummerEvent = () => openEvent();
 
   function closeEvent() {
     eventLayer.hidden = true;
@@ -115,7 +115,7 @@
     if (!AUTO_OPEN_ELIGIBLE) return;
     initialOpenTimer = window.setTimeout(() => {
       initialOpenTimer = 0;
-      openEvent();
+      openEvent({automatic: true});
     }, 600);
   }
 

@@ -71,8 +71,12 @@ assert.match(eventJs, /const AUTO_OPEN_ELIGIBLE = AUTO_OPEN_ENABLED[\s\S]*?!glob
   '문서 생성 시점의 주문앱 복귀 상태를 고정해 복원 도중 표식이 지워져도 행사창이 끼어들지 않아야 합니다.');
 assert.match(eventJs, /document\.wasDiscarded !== true[\s\S]*navigationType === 'navigate'/,
   '폐기 탭 복원·새로고침·뒤로가기로 되살아난 문서는 새 행사 진입으로 취급하면 안 됩니다.');
-assert.match(eventJs, /function canOpen\(\) \{[\s\S]*!AUTO_OPEN_ELIGIBLE \|\| document\.visibilityState !== 'visible'/,
+assert.match(eventJs, /function canOpen\(\{automatic = false\} = \{\}\) \{[\s\S]*automatic && \(!AUTO_OPEN_ELIGIBLE \|\| document\.visibilityState !== 'visible'\)/,
   '백그라운드 문서나 복귀 문서에서는 행사창을 열면 안 됩니다.');
+assert.match(eventJs, /window\.daedongOpenMukkebiSummerEvent = \(\) => openEvent\(\)/,
+  '관리자가 명시적으로 행사창을 여는 기존 진입은 자동 복귀 차단 조건과 분리해야 합니다.');
+assert.match(eventJs, /function scheduleInitialOpen\(\)[\s\S]*openEvent\(\{automatic: true\}\)/,
+  '600ms 자동표시만 최초 홈 전용 안전 조건을 사용해야 합니다.');
 assert.match(eventJs, /function scheduleInitialOpen\(\) \{[\s\S]*if \(!AUTO_OPEN_ELIGIBLE\) return;/,
   '안전한 최초 홈 문서가 아니면 자동 행사창 예약 자체를 중단해야 합니다.');
 assert.match(html, /store-list-horizontal-pager\.js\?v=[^"\n]*early-interaction-2/);
