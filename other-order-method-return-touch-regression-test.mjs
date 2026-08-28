@@ -33,10 +33,8 @@ assert.doesNotMatch(externalBranch, /preventDefault\(\)[\s\S]*window\.location\.
 assert.match(externalBranch, /event\.preventDefault\(\)[\s\S]*?rc2RememberExternalReturn\(comparedExternal\)[\s\S]*?rc2LaunchComparedExternal\(comparedExternal, href\)/, '원본 Preview를 가게 상세로 안정화한 뒤 주문앱별 복귀 방식으로 열어야 합니다.');
 assert.match(rc2, /function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?window\.open\(href, '_blank', 'noopener'\)[\s\S]*?return true/, '비교화면 주문앱은 원본 Preview 상세 DOM을 보존하는 별도 실행 경로를 사용해야 합니다.');
 const comparedLauncher = rc2.match(/function rc2LaunchComparedExternal\(link, href\) \{[\s\S]*?\n\}/)?.[0] || '';
-assert.match(comparedLauncher, /routeKey === 'yogiyo'[\s\S]*?androidBrowser[\s\S]*?daedongDataApi\.yogiyoWebRoute[\s\S]*?rc2SubmitYogiyoBrowserNavigation\(yogiyoUrl\)/, 'Android 요기요는 카카오·삼성 인터넷 모두 같은 브라우저 방문기록의 웹 가게 상세로 이동해야 합니다.');
-assert.match(rc2, /function rc2SubmitYogiyoBrowserNavigation[\s\S]*?form\.method = 'get'[\s\S]*?form\.target = '_self'[\s\S]*?form\.submit\(\)/, 'S25에서 요기요 네이티브 앱 호출을 피하는 브라우저 GET 폼 이동이 필요합니다.');
-assert.doesNotMatch(comparedLauncher, /window\.location\.assign/, '요기요 HTTPS 주소를 스크립트로 직접 이동하면 S25가 네이티브 앱을 다시 실행합니다.');
-assert.doesNotMatch(comparedLauncher, /daedongLaunchYogiyoFromCurrentKakao/, '요기요 네이티브 앱 작업으로 넘기면 삼성 홈으로 끊길 수 있습니다.');
+assert.match(comparedLauncher, /routeKey === 'yogiyo'[\s\S]*?androidBrowser[\s\S]*?daedongLaunchMobileRoute\('yogiyo', href\)/, 'Android 요기요는 원본 가게 링크를 정상 네이티브 앱 화면으로 열어야 합니다.');
+assert.doesNotMatch(comparedLauncher, /yogiyoWebRoute|rc2SubmitYogiyoBrowserNavigation|www\.yogiyo\.co\.kr\/mobile/, '뒤로가기 우회를 위해 구형 요기요 웹 화면으로 바꾸면 안 됩니다.');
 assert.match(browserCheck, /document\.dispatchEvent\(new Event\('visibilitychange'\)\)/, '브라우저 회귀검사는 카카오 네이티브 숨김→복귀 수명주기를 재현해야 합니다.');
 assert.match(browserCheck, /window\.dispatchEvent\(new Event\('focus'\)\)/, '브라우저 회귀검사는 focus만 오는 복귀도 재현해야 합니다.');
 assert.match(browserCheck, /data-rc3-external-route="baemin"/, '별도 화면 복귀 검사는 요기요가 아닌 배달의민족 경로를 사용해야 합니다.');

@@ -26,14 +26,12 @@ const store = {
   lng: 127.7031405,
   channelKeys: ['yogiyo', 'coupang', 'baemin'],
   routes: [
-    {name: '요기요', url: 'https://orders.example.test/yogiyo/return-test', enabled: true},
+    {name: '요기요', url: 'https://ws.yogiyo.co.kr/48zrgs', enabled: true},
     {name: '쿠팡이츠', url: 'https://orders.example.test/coupang/return-test', enabled: true},
     {name: '배달의민족', url: 'https://orders.example.test/baemin/return-test', enabled: true}
   ]
 };
-const yogiyoWebURL = 'https://www.yogiyo.co.kr/mobile/?lat=34.7523658&lng=127.7031405#/332930';
 const report = {success: false, checks: [], errors: []};
-const yogiyoNavigations = [];
 const browser = await chromium.launch({...launchOptions, ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH} : {})});
 const context = await browser.newContext({
   viewport: {width: 390, height: 844},
@@ -76,28 +74,11 @@ await context.route('**/*.woff2', route => route.abort());
 await context.route('**/api/catalog', route => route.fulfill({status: 200, contentType: 'application/json', body: JSON.stringify([store])}));
 await context.route('**/api/services', route => route.fulfill({status: 200, contentType: 'application/json', body: JSON.stringify({programs: [], stores: {}})}));
 await context.route('**/api/store/**', route => {
-  const pathname = new URL(route.request().url()).pathname;
-  const body = pathname.endsWith('/yogiyo-web')
-    ? {storeId: store.store_id, shopId: '332930', url: yogiyoWebURL}
-    : store;
   return route.fulfill({
     status: 200,
     contentType: 'application/json',
     headers: {'Access-Control-Allow-Origin': baseOrigin},
-    body: JSON.stringify(body)
-  });
-});
-await context.route('https://www.yogiyo.co.kr/mobile/**', route => {
-  const request = route.request();
-  yogiyoNavigations.push({
-    method: request.method(),
-    isNavigation: request.isNavigationRequest(),
-    referer: request.headers().referer || ''
-  });
-  return route.fulfill({
-    status: 200,
-    contentType: 'text/html; charset=utf-8',
-    body: '<!doctype html><meta name="viewport" content="width=device-width"><title>요기요 가게</title><main><h1>요기요 복귀 검증가게</h1><button>바로 주문하기</button></main>'
+    body: JSON.stringify(store)
   });
 });
 
@@ -156,8 +137,15 @@ try {
   });
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   let surface = await openOrderMethodsRoute(page);
+  await page.evaluate(() => {
+    window.__yogiyoNativeLaunches = [];
+    window.daedongLaunchMobileRoute = async (key, href) => {
+      window.__yogiyoNativeLaunches.push({key, href});
+    };
+  });
 
   for (let attempt = 1; attempt <= 2; attempt += 1) {
+    if (attempt > 1) await page.waitForTimeout(900);
     if (attempt === 1) {
       await check(
         surface.route.evaluate(element => /^https:\/\//.test(String(element.dataset.rc3ExternalHref || ''))),
@@ -172,23 +160,21 @@ try {
           : originalLookup(id);
       }, store.store_id);
     }
-    const priorNavigationCount = yogiyoNavigations.length;
     await surface.route.tap();
-    await page.waitForURL(url => url.href === yogiyoWebURL, {timeout: 10000});
-    const navigation = yogiyoNavigations.at(-1);
-    await check(Promise.resolve(
-      yogiyoNavigations.length === priorNavigationCount + 1
-      && navigation?.method === 'GET'
-      && navigation?.isNavigation === true
-      && navigation?.referer === ''
-    ), `${attempt}회차: 네이티브 앱 호출을 피하는 무참조 브라우저 GET 폼 이동`);
-    await check(Promise.resolve(context.pages().length === 1), `${attempt}회차: 요기요를 새 앱·새 창으로 분리하지 않음`);
-    await check(page.locator('h1').filter({hasText: store.name}).isVisible(), `${attempt}회차: 요기요 웹 가게 상세 직접 표시`);
+    await page.waitForFunction(expected => window.__yogiyoNativeLaunches?.length === expected, attempt);
+    await check(page.evaluate(({attempt, href}) => {
+      const launch = window.__yogiyoNativeLaunches?.[attempt - 1];
+      return launch?.key === 'yogiyo' && launch?.href === href;
+    }, {attempt, href: store.routes[0].url}), `${attempt}회차: 원본 요기요 가게 링크를 네이티브 앱 실행기로 전달`);
+    await check(Promise.resolve(new URL(page.url()).origin === baseOrigin), `${attempt}회차: Preview 문서를 웹 요기요로 교체하지 않음`);
 
-    await page.goBack({waitUntil: 'domcontentloaded'});
-    await page.waitForURL(url => url.origin === baseOrigin, {timeout: 10000});
+    await page.evaluate(() => {
+      window.dispatchEvent(new PageTransitionEvent('pageshow', {persisted: true}));
+      document.dispatchEvent(new Event('visibilitychange'));
+      window.dispatchEvent(new Event('focus'));
+    });
     surface = await openOrderMethodsRoute(page, {allowOpen: false});
-    await check(surface.restoredDetail.isVisible(), `${attempt}회차: 뒤로가기 한 번으로 원래 가게 상세 복귀`);
+    await check(surface.restoredDetail.isVisible(), `${attempt}회차: 앱 복귀 뒤 원래 가게 상세 복원`);
     await check(surface.orderMethodsSheet.isVisible(), `${attempt}회차: 요기요·쿠팡이츠·배달의민족 목록 열린 상태 유지`);
     await check(surface.otherMethods.evaluate(element => element.dataset.testStableReturn === 'yogiyo'), `${attempt}회차: 새 화면이 아닌 동일 상세 DOM 유지`);
     await check(surface.route.isEnabled(), `${attempt}회차: 복귀한 요기요 버튼 재터치 가능`);
