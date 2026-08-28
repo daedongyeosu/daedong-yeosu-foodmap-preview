@@ -102,18 +102,15 @@ try {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForFunction(() => typeof window.installDaedongTapAction === 'function', null, {timeout: 15000});
 
-  const intro = page.locator('#communityIntro');
-  await intro.waitFor({state: 'visible', timeout: 8000});
-  await dispatchTouch(page.locator('#communityIntroClose'));
-  await check(intro.evaluate(node => node.hidden), '첫 안내창 X가 순수 touchstart/touchend로 닫힘');
-
-  await page.reload({waitUntil: 'domcontentloaded'});
-  await page.waitForFunction(() => typeof window.installDaedongTapAction === 'function', null, {timeout: 15000});
   const summer = page.locator('#mukkebiSummerEvent');
-  await page.evaluate(() => window.daedongOpenMukkebiSummerEvent?.());
   await summer.waitFor({state: 'visible', timeout: 5000});
   await dispatchTouch(page.locator('#mukkebiSummerClose'));
   await check(summer.evaluate(node => node.hidden), '먹깨비 행사창 X가 순수 touchstart/touchend로 닫힘');
+
+  const intro = page.locator('#communityIntro');
+  await intro.waitFor({state: 'visible', timeout: 3000});
+  await dispatchTouch(page.locator('#communityIntroClose'));
+  await check(intro.evaluate(node => node.hidden), '첫 안내창 X가 순수 touchstart/touchend로 닫힘');
 
   await page.evaluate(() => {
     const sentinel = document.createElement('button');
