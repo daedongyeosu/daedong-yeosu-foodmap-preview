@@ -53,7 +53,7 @@ const context = await browser.newContext({
   locale: 'ko-KR',
   userAgent: 'Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36 KAKAOTALK 25.6.0',
 });
-await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1'));
+await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1'));
 await context.route('**/data-api.js*', (route) => route.fulfill({
   status: 200,
   contentType: 'text/javascript; charset=utf-8',

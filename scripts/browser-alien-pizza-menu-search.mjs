@@ -27,7 +27,7 @@ if (proxyApiOrigin) {
   });
 }
 await context.addInitScript(() => {
-  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
+  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1');
 });
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 await context.route('**/*.woff2', route => route.abort());

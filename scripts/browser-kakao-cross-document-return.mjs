@@ -39,7 +39,7 @@ const context = await browser.newContext({
   userAgent: 'Mozilla/5.0 (Linux; Android 15; SM-S938N) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36'
 });
 await context.addInitScript(() => {
-  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1');
+  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1');
   window.__kakaoReturnEvents = [];
   // Force a real cross-document back-forward reload instead of BFCache so the
   // early boot script is exercised exactly as it is in Kakao's WebView.

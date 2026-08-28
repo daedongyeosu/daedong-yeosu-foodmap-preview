@@ -14,7 +14,7 @@
   const orderButton = document.getElementById('mukkebiSummerOrder');
   const communityIntro = document.getElementById('communityIntro');
   const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDate';
-  const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV1';
+  const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV2';
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
   const AUTO_OPEN_ENABLED = true;
@@ -35,6 +35,7 @@
   let opened = false;
   let customerInteracted = false;
   let initialOpenTimer = 0;
+  let interactionStart = null;
 
   if (!eventLayer) return;
 
@@ -72,6 +73,32 @@
     customerInteracted = true;
     window.clearTimeout(initialOpenTimer);
     initialOpenTimer = 0;
+  }
+
+  function interactionPoint(event) {
+    const point = event.touches?.[0] || event.changedTouches?.[0] || event;
+    const x = Number(point?.clientX);
+    const y = Number(point?.clientY);
+    return Number.isFinite(x) && Number.isFinite(y) ? {x, y} : null;
+  }
+
+  function rememberInteractionStart(event) {
+    interactionStart = interactionPoint(event);
+  }
+
+  function markMovedInteraction(event) {
+    const point = interactionPoint(event);
+    if (!interactionStart || !point) return;
+    if (Math.hypot(point.x - interactionStart.x, point.y - interactionStart.y) > 12) {
+      markCustomerInteraction();
+    }
+  }
+
+  function markActionableClick(event) {
+    const target = event.target instanceof Element ? event.target : null;
+    if (target?.closest('a, button, input, select, textarea, [role="button"], [data-order-key]')) {
+      markCustomerInteraction();
+    }
   }
 
   function canOpen({automatic = false} = {}) {
@@ -119,7 +146,16 @@
     }, 600);
   }
 
-  for (const type of ['pointerdown', 'touchstart', 'wheel', 'keydown']) {
+  // KakaoTalk can carry the touch that opened this WebView into the new
+  // document. A lone pointerdown/touchstart is therefore not proof that the
+  // customer interacted with this page. Cancel only after verified movement
+  // or an actual actionable click.
+  document.addEventListener('pointerdown', rememberInteractionStart, {capture:true, passive:true});
+  document.addEventListener('pointermove', markMovedInteraction, {capture:true, passive:true});
+  document.addEventListener('touchstart', rememberInteractionStart, {capture:true, passive:true});
+  document.addEventListener('touchmove', markMovedInteraction, {capture:true, passive:true});
+  document.addEventListener('click', markActionableClick, {capture:true, passive:true});
+  for (const type of ['wheel', 'keydown']) {
     document.addEventListener(type, markCustomerInteraction, {capture:true, passive:true, once:true});
   }
   window.addEventListener('scroll', () => {

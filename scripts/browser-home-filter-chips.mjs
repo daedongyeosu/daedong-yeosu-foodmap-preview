@@ -23,7 +23,7 @@ try {
       locale: 'ko-KR',
       userAgent: 'Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36 KAKAOTALK 25.6.0'
     });
-    await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV1', '1'));
+    await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1'));
     if (process.env.PATCH_STORE_SERVICE_CSS_FROM_LOCAL === '1') {
       const css = fs.readFileSync(new URL('../store-service-info.css', import.meta.url), 'utf8');
       await context.route('**/store-service-info.css*', route => route.fulfill({status: 200, contentType: 'text/css; charset=utf-8', body: css}));
