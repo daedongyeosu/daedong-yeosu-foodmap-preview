@@ -95,7 +95,7 @@ try {
   await freshPage.waitForTimeout(900);
   await check(freshPage.evaluate(() => (
     document.querySelector('#mukkebiSummerEvent')?.hidden === true
-      && sessionStorage.getItem('daedongMukkebiSummerEventSeenSessionV1') === '1'
+      && sessionStorage.getItem('daedongMukkebiSummerEventSeenSessionV2') === '1'
   )), '팝업을 닫은 뒤 앱 복귀 신호가 와도 같은 세션에서 다시 표시하지 않음');
 
   await freshPage.locator('[data-order-key="mukkebi"]').tap();
@@ -129,11 +129,11 @@ try {
     '주문앱 복귀 주소에서는 먹깨비 팝업 예약 자체를 차단');
   await returnContext.close();
 
-  const interactionContext = await newContext();
-  const interactionPage = await interactionContext.newPage();
-  interactionPage.on('pageerror', error => report.errors.push(`interaction: ${error.message}`));
-  await interactionPage.goto(`${baseURL}?mukkebi-interaction-test=1`, {waitUntil: 'domcontentloaded'});
-  await interactionPage.evaluate(() => {
+  const openingTouchContext = await newContext();
+  const openingTouchPage = await openingTouchContext.newPage();
+  openingTouchPage.on('pageerror', error => report.errors.push(`opening-touch: ${error.message}`));
+  await openingTouchPage.goto(`${baseURL}?mukkebi-opening-touch-test=1`, {waitUntil: 'domcontentloaded'});
+  await openingTouchPage.evaluate(() => {
     document.body.dispatchEvent(new PointerEvent('pointerdown', {
       bubbles: true,
       pointerType: 'touch',
@@ -142,9 +142,32 @@ try {
       clientY: 420
     }));
   });
+  await openingTouchPage.locator('#mukkebiSummerEvent').waitFor({state: 'visible', timeout: 5000});
+  await check(openingTouchPage.locator('#mukkebiSummerEvent').isVisible(),
+    '카카오톡에서 이어진 최초 접촉만으로 팝업을 취소하지 않음');
+  await openingTouchContext.close();
+
+  const interactionContext = await newContext();
+  const interactionPage = await interactionContext.newPage();
+  interactionPage.on('pageerror', error => report.errors.push(`interaction: ${error.message}`));
+  await interactionPage.goto(`${baseURL}?mukkebi-interaction-test=1`, {waitUntil: 'domcontentloaded'});
+  await interactionPage.evaluate(() => {
+    for (const [type, clientX, clientY] of [
+      ['pointerdown', 180, 420],
+      ['pointermove', 180, 450]
+    ]) {
+      document.body.dispatchEvent(new PointerEvent(type, {
+        bubbles: true,
+        pointerType: 'touch',
+        isPrimary: true,
+        clientX,
+        clientY
+      }));
+    }
+  });
   await interactionPage.waitForTimeout(1200);
   await check(interactionPage.locator('#mukkebiSummerEvent').isHidden(),
-    '고객이 먼저 화면을 터치하면 지연 팝업을 취소');
+    '고객의 실제 화면 이동이 확인되면 지연 팝업을 취소');
   await interactionContext.close();
 
   report.success = report.errors.length === 0;

@@ -81,6 +81,7 @@ assert.match(eventJs, /function scheduleInitialOpen\(\) \{[\s\S]*if \(!AUTO_OPEN
   '안전한 최초 홈 문서가 아니면 자동 행사창 예약 자체를 중단해야 합니다.');
 assert.match(html, /store-list-horizontal-pager\.js\?v=[^"\n]*early-interaction-2/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*fresh-entry-popup-1/);
+assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*kakao-opening-touch-1/);
 assert.match(browserCheck, /완전히 새로 들어온 홈에서만 먹깨비 팝업 한 번 표시/);
 assert.match(browserCheck, /PageTransitionEvent\('pageshow'[\s\S]*같은 세션에서 다시 표시하지 않음/);
 assert.match(browserCheck, /__ddret=mukkebi-return-test[\s\S]*주문앱 복귀 주소에서는 먹깨비 팝업 예약 자체를 차단/);
