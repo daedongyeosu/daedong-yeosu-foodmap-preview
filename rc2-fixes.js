@@ -1269,32 +1269,6 @@ function rc2RememberExternalReturn(sourceElement = null) {
   return payload;
 }
 
-function rc2SubmitYogiyoBrowserNavigation(yogiyoUrl) {
-  const target = new URL(yogiyoUrl);
-  let referrerMeta = document.querySelector('meta[data-daedong-yogiyo-browser-nav]');
-  if (!referrerMeta) {
-    referrerMeta = document.createElement('meta');
-    referrerMeta.name = 'referrer';
-    referrerMeta.content = 'no-referrer';
-    referrerMeta.dataset.daedongYogiyoBrowserNav = '';
-    document.head.appendChild(referrerMeta);
-  }
-  const form = document.createElement('form');
-  form.method = 'get';
-  form.action = `${target.origin}${target.pathname}${target.hash}`;
-  form.target = '_self';
-  form.hidden = true;
-  for (const [name, value] of target.searchParams) {
-    const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = name;
-    input.value = value;
-    form.appendChild(input);
-  }
-  document.body.appendChild(form);
-  form.submit();
-}
-
 async function rc2LaunchComparedExternal(link, href) {
   if (!link || href === '#') return false;
   const rawKey = String(
@@ -1308,44 +1282,14 @@ async function rc2LaunchComparedExternal(link, href) {
   const routeKey = rawKey === 'coupang-eats' ? 'coupang' : rawKey;
   const androidBrowser = /Android/i.test(String(globalThis.navigator?.userAgent || ''));
   if (routeKey === 'yogiyo' && androidBrowser) {
-    // Yogiyo's native app exits its own Android task to the launcher, which
-    // disconnects the customer from the still-alive Kakao Preview document.
-    // Resolve the trusted store shortlink server-side and keep both pages in
-    // Kakao's own history so one Android Back returns to this exact detail.
-    // Kakao can reopen the return page in Samsung Internet without preserving
-    // a KAKAOTALK user-agent token. Apply the browser GET form to every Android
-    // browser so both the initial tap and every post-Back tap stay usable.
-    const storeId = String(
-      link.dataset?.storeId
-      || link.closest?.('[data-store-id]')?.dataset?.storeId
-      || document.querySelector?.('#modal')?.dataset?.activeStoreId
-      || ''
-    );
-    const store = typeof fxStoreById === 'function' ? fxStoreById(storeId) : null;
-    const lat = Number(store?.lat ?? link.dataset?.storeLat);
-    const lng = Number(store?.lng ?? link.dataset?.storeLng);
-    if (!storeId || !Number.isFinite(lat) || !Number.isFinite(lng) || !window.daedongDataApi?.yogiyoWebRoute) {
-      window.alert('요기요 주문화면을 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.');
-      return false;
-    }
-    if (link.dataset?.routeBusy === 'true') return true;
-    link.dataset.routeBusy = 'true';
-    link.setAttribute?.('aria-busy', 'true');
-    try {
-      const resolved = await window.daedongDataApi.yogiyoWebRoute(storeId, {lat, lng});
-      const yogiyoUrl = String(resolved?.url || '');
-      if (!/^https:\/\/www\.yogiyo\.co\.kr\/mobile\/\?lat=[^#&]+&lng=[^#&]+#\/\d{1,12}$/.test(yogiyoUrl)) {
-        throw new Error('invalid Yogiyo web route');
-      }
-      rc2SubmitYogiyoBrowserNavigation(yogiyoUrl);
+    // The Preview return snapshot was already persisted by
+    // rc2RememberExternalReturn. Keep that document alive, but hand the
+    // original ws.yogiyo.co.kr store link to Yogiyo's installed Android app.
+    // Replacing it with Yogiyo's legacy mobile web page makes the customer see
+    // the wrong product and still does not make Android task return reliable.
+    if (typeof window.daedongLaunchMobileRoute === 'function') {
+      await window.daedongLaunchMobileRoute('yogiyo', href);
       return true;
-    } catch (error) {
-      console.warn('yogiyo-web-route-failed', storeId, error);
-      window.alert('요기요 주문화면을 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.');
-      return false;
-    } finally {
-      delete link.dataset.routeBusy;
-      link.removeAttribute?.('aria-busy');
     }
   }
   // Keep the already prepared Preview store detail in its original Kakao
