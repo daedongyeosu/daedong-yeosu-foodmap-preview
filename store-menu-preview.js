@@ -18,6 +18,7 @@
   let activeMenuImageLoads = 0;
   let menuImageLoadRun = 0;
   const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2;
+  const OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1';
   let menuCloseActivatedAt = 0;
   const menuCloseTouches = new Map();
   const MENU_HISTORY = Object.freeze({
@@ -33,6 +34,14 @@
     "'": '&#39;',
     '"': '&quot;'
   })[char]);
+
+  function menuHeroImage(menu) {
+    const image = String(menu?.mainImage || '').trim();
+    if (!image || /^(?:\.\/|\/)?assets\/logo\.png(?:[?#].*)?$/i.test(image)) {
+      return OFFICIAL_MENU_PLACEHOLDER_IMAGE;
+    }
+    return image;
+  }
 
   function storeById(id) {
     if (typeof fxStoreById === 'function') {
@@ -671,6 +680,7 @@
     }, {});
     const categoryCandidates = menu.categories.filter(category => category !== '전체');
     const featuredCategories = categoryCandidates.length > 1 ? categoryCandidates.slice(0, 3) : [];
+    const heroImage = menuHeroImage(menu);
     return `
       <section class="store-menu-preview" data-store-id="${escapeMenuHtml(store.id)}" role="dialog" aria-modal="true" aria-labelledby="storeMenuTitle">
         <header class="store-menu-topbar">
@@ -681,7 +691,7 @@
 
         <main class="store-menu-scroll">
           <section class="store-menu-hero">
-            <img src="${escapeMenuHtml(menu.mainImage)}" alt="${escapeMenuHtml(menu.displayName)}" fetchpriority="high" data-photo-kind="detail" data-photo-crop-audit="yogiyo-menu" data-photo-store-id="${escapeMenuHtml(store.id)}">
+            <img src="${escapeMenuHtml(heroImage)}" alt="${escapeMenuHtml(menu.displayName)}" fetchpriority="high" data-photo-kind="detail" data-photo-crop-audit="yogiyo-menu" data-photo-store-id="${escapeMenuHtml(store.id)}">
             <div>
               <span>${escapeMenuHtml(window.DAEDONG_REGION?.mapName || '대동여수음식지도')} · 음식 미리보기</span>
               <p>${featuredCategories.map(escapeMenuHtml).join(' · ')}</p>

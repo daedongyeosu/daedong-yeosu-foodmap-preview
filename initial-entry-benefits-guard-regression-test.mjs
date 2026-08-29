@@ -88,6 +88,6 @@ assert.match(browserCheck, /완전히 새로 들어온 홈에서만 먹깨비 �
 assert.match(browserCheck, /PageTransitionEvent\('pageshow'[\s\S]*같은 세션에서 다시 표시하지 않음/);
 assert.match(browserCheck, /__ddret=mukkebi-return-test[\s\S]*주문앱 복귀 주소에서는 먹깨비 팝업 예약 자체를 차단/);
 assert.match(browserCheck, /data-order-key="mukkebi"[\s\S]*행사 팝업이 메뉴를 덮지 않음/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v28-official-brand-cache-refresh'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v29-menu-placeholder-logo'/);
 
 console.log('initial-entry-benefits-guard-regression-test: pass');
