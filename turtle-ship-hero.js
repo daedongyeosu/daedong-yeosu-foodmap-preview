@@ -80,11 +80,9 @@
     const startupAd = document.getElementById('startupAd');
     const modal = document.getElementById('modal');
     const mukkebiEvent = document.getElementById('mukkebiSummerEvent');
-    const introReadyAt = Number(window.daedongCommunityIntroReadyAt || 0);
     return (startupAd?.hidden ?? true)
       && (modal?.hidden ?? true)
       && (mukkebiEvent?.hidden ?? true)
-      && (!introReadyAt || Date.now() >= introReadyAt)
       && window.daedongMukkebiAutoOpenPending !== true;
   }
 
@@ -102,6 +100,7 @@
       intro.classList.remove('is-visible', 'is-closing', 'is-reduced');
     }
     introClose?.blur();
+    window.dispatchEvent(new Event('daedong:community-intro-closed'));
     sailWhenHomeIsClear();
   }
 
@@ -190,7 +189,6 @@
     if (layer) layerObserver.observe(layer, {attributes:true, attributeFilter:['hidden']});
   }
   window.addEventListener('daedong:mukkebi-auto-open-settled', waitForClearHome);
-  window.addEventListener('daedong:mukkebi-followup-ready', waitForClearHome);
 
   if (typeof window.installDaedongTapAction === 'function') {
     window.installDaedongTapAction({

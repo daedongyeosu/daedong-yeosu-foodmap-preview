@@ -83,25 +83,24 @@ try {
   const startupOrderPage = await startupOrderContext.newPage();
   startupOrderPage.on('pageerror', error => report.errors.push(`startup-order: ${error.message}`));
   await startupOrderPage.goto(`${baseURL}?mukkebi-startup-order-test=1`, {waitUntil: 'domcontentloaded'});
-  await startupOrderPage.locator('#mukkebiSummerEvent').waitFor({state: 'visible', timeout: 5000});
+  await startupOrderPage.locator('#communityIntro').waitFor({state: 'visible', timeout: 5000});
   await check(startupOrderPage.evaluate(() => (
-    document.querySelector('#mukkebiSummerEvent')?.hidden === false
-      && document.querySelector('#communityIntro')?.hidden === true
-  )), '과거 오늘 숨김 기록과 첫 안내창이 있는 신규 고객도 먹깨비 팝업을 먼저 표시');
-  await startupOrderPage.locator('#mukkebiSummerClose').tap();
+    document.querySelector('#communityIntro')?.hidden === false
+      && document.querySelector('#mukkebiSummerEvent')?.hidden === true
+  )), '신규 고객에게 일반 주문 안내 팝업을 먼저 표시');
+  await startupOrderPage.locator('#communityIntroClose').tap();
   await startupOrderPage.waitForTimeout(1200);
   await check(startupOrderPage.evaluate(() => (
     document.querySelector('#mukkebiSummerEvent')?.hidden === true
       && document.querySelector('#communityIntro')?.hidden === true
-      && sessionStorage.getItem('daedongCommunityIntroPlayedV4') !== '1'
-  )), '먹깨비 팝업을 닫은 직후에는 다른 안내 팝업을 급하게 이어서 표시하지 않음');
-  await startupOrderPage.locator('#communityIntro').waitFor({state: 'visible', timeout: 5000});
-  await check(startupOrderPage.evaluate(() => (
-    document.querySelector('#mukkebiSummerEvent')?.hidden === true
-      && document.querySelector('#communityIntro')?.hidden === false
       && sessionStorage.getItem('daedongCommunityIntroPlayedV4') === '1'
-  )), '3초의 화면 여유 뒤 일반 주문 안내 팝업을 자연스럽게 표시');
-  await startupOrderPage.screenshot({path: 'browser-mukkebi-natural-followup-popup.png', fullPage: false});
+  )), '일반 안내를 닫은 직후에는 먹깨비 팝업을 급하게 이어서 표시하지 않음');
+  await startupOrderPage.locator('#mukkebiSummerEvent').waitFor({state: 'visible', timeout: 5000});
+  await check(startupOrderPage.evaluate(() => (
+    document.querySelector('#communityIntro')?.hidden === true
+      && document.querySelector('#mukkebiSummerEvent')?.hidden === false
+  )), '3초의 화면 여유 뒤 먹깨비 팝업을 두 번째로 자연스럽게 표시');
+  await startupOrderPage.screenshot({path: 'browser-mukkebi-second-popup.png', fullPage: false});
   await startupOrderContext.close();
 
   const freshContext = await newContext();

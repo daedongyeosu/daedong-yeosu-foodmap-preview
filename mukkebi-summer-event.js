@@ -17,7 +17,7 @@
   const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV2';
   const COMMUNITY_INTRO_SESSION_KEY = 'daedongCommunityIntroPlayedV4';
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
-  const FOLLOWUP_INTRO_DELAY = 3000;
+  const FOLLOWUP_CAMPAIGN_DELAY = 3000;
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
   const AUTO_OPEN_ENABLED = true;
   const RETURN_QUERY_KEYS = ['store', '__ddret', '__ddom', '__ddappfallback'];
@@ -34,11 +34,13 @@
     && !RETURN_QUERY_KEYS.some(key => entryUrl.searchParams.has(key))
     && document.wasDiscarded !== true
     && (!navigationType || navigationType === 'navigate');
-  window.daedongMukkebiAutoOpenPending = AUTO_OPEN_ELIGIBLE;
+  // The general community intro owns the first startup slot. The Mukkebi
+  // campaign is queued only after that intro has fully closed.
+  window.daedongMukkebiAutoOpenPending = false;
   let opened = false;
   let customerInteracted = false;
-  let initialOpenTimer = 0;
-  let followupIntroTimer = 0;
+  let followupCampaignTimer = 0;
+  let waitingAfterIntroClose = false;
   let interactionStart = null;
 
   if (!eventLayer) return;
@@ -67,6 +69,10 @@
   }
 
   function customerAlreadyInteracted() {
+    if (waitingAfterIntroClose) {
+      return customerInteracted ||
+        Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16;
+    }
     return customerInteracted ||
       window.daedongEarlyHomeInteraction === true ||
       window.daedongHasHomeInteraction?.() === true ||
@@ -75,8 +81,10 @@
 
   function markCustomerInteraction() {
     customerInteracted = true;
-    window.clearTimeout(initialOpenTimer);
-    initialOpenTimer = 0;
+    window.clearTimeout(followupCampaignTimer);
+    followupCampaignTimer = 0;
+    waitingAfterIntroClose = false;
+    window.daedongMukkebiReadyAt = 0;
     settleAutomaticOpen();
   }
 
@@ -107,6 +115,7 @@
 
   function markActionableClick(event) {
     const target = event.target instanceof Element ? event.target : null;
+    if (target?.closest('#communityIntro')) return;
     if (target?.closest('a, button, input, select, textarea, [role="button"], [data-order-key]')) {
       markCustomerInteraction();
     }
@@ -137,30 +146,25 @@
   // Reserved for an explicit campaign entry. Automatic opening stays off.
   window.daedongOpenMukkebiSummerEvent = () => openEvent();
 
-  function scheduleCommunityIntroFollowup() {
-    window.clearTimeout(followupIntroTimer);
-    const readyAt = Date.now() + FOLLOWUP_INTRO_DELAY;
-    window.daedongCommunityIntroReadyAt = readyAt;
-    followupIntroTimer = window.setTimeout(() => {
-      followupIntroTimer = 0;
-      if (window.daedongCommunityIntroReadyAt === readyAt) {
-        window.daedongCommunityIntroReadyAt = 0;
+  function scheduleCampaignFollowup() {
+    if (!AUTO_OPEN_ELIGIBLE || opened || seenThisSession() || hiddenToday()) return;
+    window.clearTimeout(followupCampaignTimer);
+    waitingAfterIntroClose = true;
+    const readyAt = Date.now() + FOLLOWUP_CAMPAIGN_DELAY;
+    window.daedongMukkebiReadyAt = readyAt;
+    followupCampaignTimer = window.setTimeout(() => {
+      followupCampaignTimer = 0;
+      waitingAfterIntroClose = false;
+      if (window.daedongMukkebiReadyAt === readyAt) {
+        window.daedongMukkebiReadyAt = 0;
       }
-      window.dispatchEvent(new Event('daedong:mukkebi-followup-ready'));
-    }, FOLLOWUP_INTRO_DELAY);
+      openEvent({automatic: true});
+      settleAutomaticOpen();
+    }, FOLLOWUP_CAMPAIGN_DELAY);
   }
 
-  function rememberCommunityIntroAsHandled() {
-    window.clearTimeout(followupIntroTimer);
-    followupIntroTimer = 0;
-    window.daedongCommunityIntroReadyAt = 0;
-    try { sessionStorage.setItem(COMMUNITY_INTRO_SESSION_KEY, '1'); } catch {}
-  }
-
-  function closeEvent({showCommunityIntro = true} = {}) {
+  function closeEvent() {
     if (eventLayer.hidden) return;
-    if (showCommunityIntro) scheduleCommunityIntroFollowup();
-    else rememberCommunityIntroAsHandled();
     eventLayer.hidden = true;
     eventLayer.setAttribute('aria-hidden', 'true');
   }
@@ -172,16 +176,15 @@
   }
 
   function scheduleInitialOpen() {
-    window.clearTimeout(initialOpenTimer);
     if (!AUTO_OPEN_ELIGIBLE) {
       settleAutomaticOpen();
       return;
     }
-    initialOpenTimer = window.setTimeout(() => {
-      initialOpenTimer = 0;
-      openEvent({automatic: true});
-      settleAutomaticOpen();
-    }, 600);
+    let introAlreadyPlayed = false;
+    try { introAlreadyPlayed = sessionStorage.getItem(COMMUNITY_INTRO_SESSION_KEY) === '1'; }
+    catch {}
+    if (introAlreadyPlayed && (communityIntro?.hidden ?? true)) scheduleCampaignFollowup();
+    else settleAutomaticOpen();
   }
 
   // KakaoTalk can carry the touch that opened this WebView into the new
@@ -220,13 +223,14 @@
     closeEvent();
   });
   orderButton?.addEventListener('click', () => {
-    closeEvent({showCommunityIntro:false});
+    closeEvent();
     const mukkebiButton = document.querySelector('[data-order-key="mukkebi"]');
     if (mukkebiButton instanceof HTMLElement) window.setTimeout(() => mukkebiButton.click(), 80);
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !eventLayer.hidden) closeEvent();
   });
+  window.addEventListener('daedong:community-intro-closed', scheduleCampaignFollowup);
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', scheduleInitialOpen, {once:true});
