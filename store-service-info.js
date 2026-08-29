@@ -269,7 +269,13 @@
     const now = calendarParts(date);
     const minutes = (now.hour * 60) + now.minute;
     const previous = shiftCalendar(now, -1);
-    const previousPeriods = info.hours.weekly[previous.weekday] || [];
+    const observedWeekdays = Array.isArray(info.hours.observedWeekdays)
+      ? info.hours.observedWeekdays.map(value => String(value || '').toLowerCase())
+      : [];
+    const isPartialWeekly = info.hours.partialWeekly === true && observedWeekdays.length > 0;
+    const previousPeriods = !isPartialWeekly || observedWeekdays.includes(previous.weekday)
+      ? info.hours.weekly[previous.weekday] || []
+      : [];
 
     const activeBreak = breakFor(info.hours, now);
 
@@ -297,6 +303,18 @@
             : `오늘 ${(info.hours.weekly[now.weekday] || []).map(periodLabel).join(', ') || '영업시간 없음'}`
         );
       }
+    }
+
+    if (isPartialWeekly && !observedWeekdays.includes(now.weekday)) {
+      const displayLines = Array.isArray(info.hours.displayLines)
+        ? info.hours.displayLines.map(line => String(line || '').trim()).filter(Boolean)
+        : [];
+      return {
+        state: 'unknown',
+        label: '영업시간 확인',
+        detail: displayLines[0] || '요기요에서 확인된 다른 요일 영업시간 있음',
+        today: '오늘 영업시간은 주문앱에서 확인'
+      };
     }
 
     const closure = closureFor(info.hours, now);
