@@ -1,15 +1,16 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v27-store-card-touchstart-intent-guard';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v28-official-brand-cache-refresh';
 const RUNTIME_CACHE = 'daedong-yeosu-runtime-v2-mobile-photo-delivery';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
-  '/app-icon.svg',
-  '/assets/logo.png',
+  '/app-icon.svg?v=official-brand-20260830-1',
   '/assets/app-icons/daedong-app-icon-192.png',
+  '/assets/app-icons/daedong-app-icon-192.png?v=official-brand-20260830-1',
   '/assets/app-icons/daedong-app-icon-512.png',
+  '/assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1',
   '/assets/app-icons/daedong-app-icon-maskable-192.png',
   '/assets/app-icons/daedong-app-icon-maskable-512.png'
 ];

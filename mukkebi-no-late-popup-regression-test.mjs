@@ -24,6 +24,6 @@ assert.match(eventJs, /function scheduleInitialOpen\(\)[\s\S]*}, 600\)/);
 assert.doesNotMatch(eventJs, /new MutationObserver\(waitUntilExistingPopupCloses\)/);
 assert.doesNotMatch(eventJs, /function waitUntilExistingPopupCloses/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*no-late-interrupt-3-scroll-cancel-1-layer-guard-1[^"]*kakao-opening-touch-1-startup-order-1-no-consecutive-popup-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v27-store-card-touchstart-intent-guard'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v28-official-brand-cache-refresh'/);
 
 console.log('Mukkebi no-late-popup regression: PASS');

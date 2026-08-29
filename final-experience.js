@@ -325,7 +325,7 @@ function fxOpenStoreShare(store,target){
  openModal(`<section class="home-share-sheet store-share-sheet" data-store-share-id="${escapeHtml(store.id)}">
   <h2 id="modalTitle">${escapeHtml(store.name)} 공유하기</h2>
   <p>가게 주소를 복사해 카카오톡·문자 등으로 공유해보세요.</p>
-  <div class="home-share-preview store-share-preview">${photo?`<img src="${escapeHtml(photo)}" alt="${escapeHtml(store.name)}">`:`<img src="assets/logo.png" alt="${escapeHtml(FX_MAP_NAME)}">`}<span><b>${escapeHtml(store.name)}</b><small>가게를 바로 여는 ${escapeHtml(FX_MAP_NAME)} 주소</small></span></div>
+  <div class="home-share-preview store-share-preview">${photo?`<img src="${escapeHtml(photo)}" alt="${escapeHtml(store.name)}">`:`<img src="assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1" alt="${escapeHtml(FX_MAP_NAME)}">`}<span><b>${escapeHtml(store.name)}</b><small>가게를 바로 여는 ${escapeHtml(FX_MAP_NAME)} 주소</small></span></div>
   <label class="store-share-url-label" for="storeShareUrl">가게 공유주소</label>
   <div class="store-share-url-row">
    <input id="storeShareUrl" class="store-share-url" type="text" readonly value="${escapeHtml(url)}" data-store-share-url>
@@ -405,7 +405,7 @@ function fxOpenHomeShare(target){
  openModal(`<section class="home-share-sheet">
   <h2 id="modalTitle">${escapeHtml(FX_MAP_NAME)} 공유하기</h2>
   <p>가게 한 곳이 아니라 ${escapeHtml(FX_MAP_NAME)} 홈 전체를 가족·지인에게 알려주세요.</p>
-  <div class="home-share-preview"><img src="assets/logo.png" alt=""><span><b>${escapeHtml(FX_MAP_NAME)}</b><small>${FX_HOME_SHARE_URL}</small></span></div>
+  <div class="home-share-preview"><img src="assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1" alt=""><span><b>${escapeHtml(FX_MAP_NAME)}</b><small>${FX_HOME_SHARE_URL}</small></span></div>
   <div class="home-share-actions">
    <button class="home-share-action glass-action" type="button" data-home-share-action>${escapeHtml(FX_MAP_NAME)} 공유하기</button>
   </div>

@@ -23,6 +23,6 @@ assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*immediate-close-1/);
 assert.match(html, /turtle-ship-hero\.js\?v=[^"\n]*shared-touch-close-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*immediate-close-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*shared-touch-close-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v27-store-card-touchstart-intent-guard'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v28-official-brand-cache-refresh'/);
 
 console.log('First-entry popups immediate close regression: PASS');
