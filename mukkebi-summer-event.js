@@ -17,6 +17,7 @@
   const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV2';
   const COMMUNITY_INTRO_SESSION_KEY = 'daedongCommunityIntroPlayedV4';
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
+  const FOLLOWUP_INTRO_DELAY = 3000;
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
   const AUTO_OPEN_ENABLED = true;
   const RETURN_QUERY_KEYS = ['store', '__ddret', '__ddom', '__ddappfallback'];
@@ -37,6 +38,7 @@
   let opened = false;
   let customerInteracted = false;
   let initialOpenTimer = 0;
+  let followupIntroTimer = 0;
   let interactionStart = null;
 
   if (!eventLayer) return;
@@ -126,12 +128,7 @@
   function openEvent({automatic = false} = {}) {
     if (!canOpen({automatic})) return;
     opened = true;
-    try {
-      sessionStorage.setItem(SEEN_SESSION_KEY, '1');
-      // One campaign message per visit is enough. Mark the general startup
-      // intro as handled so closing this event never opens another popup.
-      sessionStorage.setItem(COMMUNITY_INTRO_SESSION_KEY, '1');
-    } catch {}
+    try { sessionStorage.setItem(SEEN_SESSION_KEY, '1'); } catch {}
     eventLayer.hidden = false;
     eventLayer.setAttribute('aria-hidden', 'false');
     closeButton?.focus({preventScroll:true});
@@ -140,7 +137,30 @@
   // Reserved for an explicit campaign entry. Automatic opening stays off.
   window.daedongOpenMukkebiSummerEvent = () => openEvent();
 
-  function closeEvent() {
+  function scheduleCommunityIntroFollowup() {
+    window.clearTimeout(followupIntroTimer);
+    const readyAt = Date.now() + FOLLOWUP_INTRO_DELAY;
+    window.daedongCommunityIntroReadyAt = readyAt;
+    followupIntroTimer = window.setTimeout(() => {
+      followupIntroTimer = 0;
+      if (window.daedongCommunityIntroReadyAt === readyAt) {
+        window.daedongCommunityIntroReadyAt = 0;
+      }
+      window.dispatchEvent(new Event('daedong:mukkebi-followup-ready'));
+    }, FOLLOWUP_INTRO_DELAY);
+  }
+
+  function rememberCommunityIntroAsHandled() {
+    window.clearTimeout(followupIntroTimer);
+    followupIntroTimer = 0;
+    window.daedongCommunityIntroReadyAt = 0;
+    try { sessionStorage.setItem(COMMUNITY_INTRO_SESSION_KEY, '1'); } catch {}
+  }
+
+  function closeEvent({showCommunityIntro = true} = {}) {
+    if (eventLayer.hidden) return;
+    if (showCommunityIntro) scheduleCommunityIntroFollowup();
+    else rememberCommunityIntroAsHandled();
     eventLayer.hidden = true;
     eventLayer.setAttribute('aria-hidden', 'true');
   }
@@ -200,7 +220,7 @@
     closeEvent();
   });
   orderButton?.addEventListener('click', () => {
-    closeEvent();
+    closeEvent({showCommunityIntro:false});
     const mukkebiButton = document.querySelector('[data-order-key="mukkebi"]');
     if (mukkebiButton instanceof HTMLElement) window.setTimeout(() => mukkebiButton.click(), 80);
   });

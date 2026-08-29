@@ -48,6 +48,19 @@ function storeListPagerMetrics(grid){
   const pageSize=Math.max(1,cards.filter(card=>card.offsetLeft<viewportEnd).length);
   return{cards,total,pageSize,maxPage:Math.max(0,Math.ceil(total/pageSize)-1)};
 }
+function hydrateStoreListPagerPhotos(grid){
+  if(!grid||typeof loadDeferredPhoto!=='function')return;
+  const viewportWidth=Math.max(1,Number(grid.clientWidth||0));
+  const visibleStart=Math.max(0,Number(grid.scrollLeft||0)-viewportWidth*.25);
+  const visibleEnd=Number(grid.scrollLeft||0)+viewportWidth*1.5;
+  grid.querySelectorAll('img[data-photo-src]').forEach(image=>{
+    const card=image.closest('.store-card');
+    if(!card)return;
+    const cardStart=Number(card.offsetLeft||0);
+    const cardEnd=cardStart+Math.max(1,Number(card.offsetWidth||0));
+    if(cardEnd>=visibleStart&&cardStart<=visibleEnd)loadDeferredPhoto(image);
+  });
+}
 function applyStoreListPager(){
   const {controls,grid,status,prev,next}=storeListPagerElements();
   if(!controls||!grid||!status||!prev||!next)return;
@@ -77,6 +90,7 @@ function applyStoreListPager(){
   prev.hidden=storeListPagerPage===0;
   next.hidden=storeListPagerPage>=maxPage;
   grid.classList.add('store-pager-swipe-enabled');
+  hydrateStoreListPagerPhotos(grid);
   controls.hidden=true;
   controls.classList.toggle('both-directions',!prev.hidden&&!next.hidden);
 }
@@ -103,6 +117,7 @@ function readStoreListPagerScroll(){
 }
 function scheduleStoreListPagerScrollRead(){
   const {grid}=storeListPagerElements();
+  hydrateStoreListPagerPhotos(grid);
   const nextLeft=Number(grid?.scrollLeft||0);
   if(
     !storeListPagerProgrammatic
