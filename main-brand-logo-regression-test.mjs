@@ -7,13 +7,13 @@ const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
 assert.match(
   html,
-  /<span class="brand-symbol"[^>]*><img src="app-icon\.svg" alt=""><\/span>/,
+  /<span class="brand-symbol"[^>]*><img src="app-icon\.svg\?v=official-brand-20260830-1" alt=""><\/span>/,
   '메인 워드마크의 중앙 심볼은 최종 앱 아이콘을 사용해야 합니다.'
 );
 assert.doesNotMatch(
   html,
-  /<span class="brand-symbol"[^>]*><img src="assets\/logo\.png"/,
-  '메인 워드마크가 예전 로고 이미지를 다시 사용하면 안 됩니다.'
+  /<span class="brand-symbol"[^>]*><img src="(?:assets\/logo\.png|app-icon\.svg)"/,
+  '메인 워드마크가 예전 로고 또는 캐시된 무버전 아이콘을 다시 사용하면 안 됩니다.'
 );
 assert.match(
   css,
@@ -32,8 +32,13 @@ assert.doesNotMatch(
 );
 assert.match(
   serviceWorker,
-  /CACHE_NAME = 'daedong-yeosu-app-shell-v27-store-card-touchstart-intent-guard'/,
+  /CACHE_NAME = 'daedong-yeosu-app-shell-v28-official-brand-cache-refresh'/,
   '기존 설치본도 새 메인 로고를 받도록 앱 셸 캐시 버전을 갱신해야 합니다.'
+);
+assert.match(
+  serviceWorker,
+  /'\/app-icon\.svg\?v=official-brand-20260830-1'/,
+  '서비스 워커도 버전이 지정된 공식 로고를 캐시해야 합니다.'
 );
 
 console.log('Main brand final app icon regression: PASS');
