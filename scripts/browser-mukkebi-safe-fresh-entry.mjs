@@ -93,8 +93,15 @@ try {
   await check(startupOrderPage.evaluate(() => (
     document.querySelector('#mukkebiSummerEvent')?.hidden === true
       && document.querySelector('#communityIntro')?.hidden === true
+      && sessionStorage.getItem('daedongCommunityIntroPlayedV4') !== '1'
+  )), '먹깨비 팝업을 닫은 직후에는 다른 안내 팝업을 급하게 이어서 표시하지 않음');
+  await startupOrderPage.locator('#communityIntro').waitFor({state: 'visible', timeout: 5000});
+  await check(startupOrderPage.evaluate(() => (
+    document.querySelector('#mukkebiSummerEvent')?.hidden === true
+      && document.querySelector('#communityIntro')?.hidden === false
       && sessionStorage.getItem('daedongCommunityIntroPlayedV4') === '1'
-  )), '먹깨비 팝업을 닫은 뒤 다른 안내 팝업을 연달아 표시하지 않음');
+  )), '3초의 화면 여유 뒤 일반 주문 안내 팝업을 자연스럽게 표시');
+  await startupOrderPage.screenshot({path: 'browser-mukkebi-natural-followup-popup.png', fullPage: false});
   await startupOrderContext.close();
 
   const freshContext = await newContext();
