@@ -941,6 +941,7 @@
   }
 
   function closeMenuPreview() {
+    const wasOpen = document.body.classList.contains('store-menu-open');
     window.clearTimeout(menuChromeRevealTimer);
     menuChromeRevealTimer = 0;
     menuRenderRun += 1;
@@ -962,6 +963,7 @@
     lastMenuSelection = null;
     lastFocused?.focus?.();
     lastFocused = null;
+    if (wasOpen) document.dispatchEvent(new CustomEvent('daedong:menu-preview-closed'));
   }
 
   function openMenuOrderSheet(card) {

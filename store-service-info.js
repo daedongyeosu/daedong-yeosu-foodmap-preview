@@ -1830,6 +1830,10 @@ document.addEventListener('input', event => {
     }
   }, true);
 
+  document.addEventListener('daedong:menu-preview-closed', () => {
+    if (history.state?.[HISTORY_KEY] && overviewSuspendedForChild) resumeOverviewAfterChild();
+  });
+
   const serviceSurfaceSelector = [
     '#storeGrid',
     '#modalContent .store-detail[data-store-id]',
