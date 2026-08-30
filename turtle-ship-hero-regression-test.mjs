@@ -7,7 +7,7 @@ const finalCss = fs.readFileSync('final-experience.css', 'utf8');
 
 const checks = [
   ['새 거북선 장면이 홈 배경에 존재', html.includes('id="turtleShipHeroScene"')],
-  ['거북선 CSS·JS 캐시 버전 갱신', html.includes('turtle-ship-hero.css?v=message-colors-popup-15s-1-immediate-close-1') && html.includes('turtle-ship-hero.js?v=message-colors-popup-15s-1-goheung-isolation-2-immediate-close-1')],
+  ['거북선 CSS·JS 캐시 버전 갱신', html.includes('turtle-ship-hero.css?v=community-order-priority-1-message-colors-popup-15s-1-immediate-close-1') && html.includes('turtle-ship-hero.js?v=message-colors-popup-15s-1-goheung-isolation-2-immediate-close-1')],
   ['버튼 유리판만 30%로 조정', html.includes('final-experience.css?v=category-first-paint-1-turtle-glass-1') && finalCss.includes('--order-glass:rgba(255,255,255,.30)') && finalCss.includes('backdrop-filter:blur(2px)')],
   ['북서향 후방 3/4 구도 명시', html.includes('data-heading="northwest-rear-three-quarter"')],
   ['북서향 모바일 압축 자산 사용', html.includes('turtle-ship-northwest-mobile-v4.webp')],

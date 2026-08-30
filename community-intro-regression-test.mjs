@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 const html = fs.readFileSync('index.html', 'utf8');
 const css = fs.readFileSync('turtle-ship-hero.css', 'utf8');
 const js = fs.readFileSync('turtle-ship-hero.js', 'utf8');
+const regionJs = fs.readFileSync('region-config.js', 'utf8');
 
 const expectedOrderKeys = ['direct', 'mukkebi', 'ddangyo', 'brand', 'ondongne', 'phone', 'other'];
 const actualOrderKeys = [...html.matchAll(/data-order-key="([^"]+)"/g)].map(match => match[1]);
@@ -13,12 +14,13 @@ assert.match(html, /id="communityIntro" class="community-intro" hidden aria-hidd
 assert.match(html, /id="communityIntroClose"[^>]*aria-label="안내 닫기"/);
 assert.match(html, /여수에서 주문한다면,/);
 assert.match(html, /여수를 한 번 더 생각해 주세요\./);
-assert.match(html, /가게바로주문 · 먹깨비 · 땡겨요/);
-assert.match(html, /브랜드앱 · 전화주문을 먼저 살펴보세요\./);
-assert.match(html, /오늘의 작은 선택이/);
-assert.match(html, /우리가 아끼는 여수의 맛을 내일로 이어갑니다\./);
-assert.match(html, /💚 여수의 가게를 응원하는/);
-assert.match(html, /가장 쉬운 방법입니다\./);
+assert.match(html, /class="community-intro-action">주문 전, 가게에 힘이 되는 방법부터 선택해 주세요\.<\/strong>/);
+assert.match(html, /class="community-intro-methods">가게바로주문 · 먹깨비 · 땡겨요<br>브랜드앱 · 전화주문<\/strong>/);
+assert.match(html, /수수료 부담은 낮추고,/);
+assert.match(html, /여수의 맛은 더 오래 이어집니다\./);
+assert.doesNotMatch(html, /브랜드앱 · 전화주문을 먼저 살펴보세요\./);
+assert.doesNotMatch(html, /오늘의 작은 선택이/);
+assert.doesNotMatch(html, /가장 쉬운 방법입니다\./);
 assert.match(html, /가게에 힘이 되는 주문방법/);
 assert.match(html, /가게바로주문·먹깨비·땡겨요·브랜드앱·전화주문을 먼저 살펴보세요\./);
 assert.match(html, /여수의 맛을 찾는 날마다, 대동여수음식지도\./);
@@ -34,6 +36,21 @@ assert.match(css, /@media\(prefers-reduced-motion:reduce\)/);
 assert.match(css, /\.community-intro-card\{[\s\S]*background:/);
 assert.match(css, /\.community-intro-close\{/);
 assert.match(css, /community-popup-progress 15s linear/);
+assert.match(css, /\.community-intro-card h2\{[\s\S]*font-size:clamp\(18px,4vw,23px\)/,
+  '기존 지역 메시지는 보조 크기로 낮춰야 합니다.');
+assert.match(css, /\.community-intro-action\{[\s\S]*font-size:clamp\(20px,4\.8vw,27px\)[\s\S]*font-weight:950/,
+  '고객 행동 문구는 기존 지역 메시지보다 크고 진해야 합니다.');
+assert.match(css, /\.community-intro-methods\{[\s\S]*font-size:clamp\(21px,5\.2vw,29px\)[\s\S]*font-weight:950/,
+  '주문방법 목록이 팝업에서 가장 크게 보여야 합니다.');
+assert.match(html, /turtle-ship-hero\.css\?v=community-order-priority-1-/,
+  '기존 방문자도 새 팝업 위계를 받도록 CSS 캐시 버전을 갱신해야 합니다.');
+assert.match(html, /region-config\.js\?v=korean-particle-fix-2/,
+  '기존 방문자도 올바른 지역명 조사를 받도록 지역 설정 캐시 버전을 갱신해야 합니다.');
+assert.match(regionJs, /function regionWithEulReul\(name\)/,
+  '지역명 받침에 맞춰 을\/를 조사를 선택해야 합니다.');
+assert.match(regionJs, /replaceText\('\.community-intro-lead', `\$\{regionWithEulReul\(active\.shortName\)\} 한 번 더 생각해 주세요\.`\)/,
+  '여수을 같은 잘못된 지역명 조사가 화면에 나오면 안 됩니다.');
+assert.doesNotMatch(regionJs, /`\$\{active\.shortName\}을 한 번 더 생각해 주세요\.`/);
 assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*color:#fff/);
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*background:transparent/);
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*color:#ffe95c/);
