@@ -9,11 +9,13 @@ const classStart = source.indexOf('class InfiniteCarousel');
 const classEnd = source.indexOf('\nfunction renderHero()', classStart);
 
 assert(classStart >= 0 && classEnd > classStart, 'InfiniteCarousel source was not found');
-assert.match(source, /setInterval\(\(\) => this\.move\(1\), this\.interval\)/, 'automatic movement must always advance');
+assert.match(source, /constructor\(root, \{interval = 0, onChange = null\} = \{\}\)/, 'carousels must be still by default');
 assert.match(source, /Math\.abs\(deltaX\) > Math\.abs\(deltaY\) \* 1\.15/, 'vertical scrolling must not become a slide swipe');
 assert.match(source, /removeEventListener\(type, handler, options\)/, 'destroy must detach all carousel listeners');
 assert.match(indexSource, /app\.js\?v=[^"]*hero-forward-only-1/, 'app.js cache version must expose the fix');
-assert.match(rc6Source, /interval:3500/, 'main slide interval must remain 3.5 seconds');
+assert.match(indexSource, /app\.js\?v=[^"]*manual-carousels-1/, 'customers must receive the manual-only carousel build');
+assert.match(rc6Source, /interval:0/, 'main slides must move only after customer input');
+assert.doesNotMatch(source, /new InfiniteCarousel\([^\n]+interval:\s*3500/, 'app carousel autoplay remained');
 assert.match(rc6Source, /neighborhoodFor\(state\.location\)\|\|neighborhoodFor\(state\.addressLabel\)/, 'customer neighborhood priority must remain connected');
 assert.match(rc6Source, /RC6_DAILY_STORE_HERO_LIMIT=12/, 'the 12 location-ranked store banners must remain unchanged');
 
@@ -130,25 +132,18 @@ const context = vm.createContext({
 vm.runInContext(`${source.slice(classStart, classEnd)}\nglobalThis.InfiniteCarousel = InfiniteCarousel;`, context);
 const InfiniteCarousel = context.InfiniteCarousel;
 
-const automatic = makeRoot();
-const automaticCarousel = new InfiniteCarousel(automatic.root, {interval: 3500});
-const automaticTimer = [...intervals.values()][0];
-assert.equal(automaticTimer.delay, 3500, 'automatic timer changed');
-const indexes = [automaticCarousel.logicalIndex()];
-for (let step = 0; step < 7; step += 1) {
-  automaticTimer.callback();
-  automaticCarousel.normalizePosition();
-  indexes.push(automaticCarousel.logicalIndex());
-}
-assert.deepEqual(indexes, [0, 1, 2, 3, 0, 1, 2, 3], 'automatic slides did not move forward in a loop');
-automaticCarousel.destroy();
-assert.equal(intervals.size, 0, 'destroy left an automatic timer behind');
-assert.equal(automatic.shell.listenerCount(), 0, 'destroy left shell listeners behind');
-assert.equal(automatic.track.listenerCount(), 0, 'destroy left track listeners behind');
-assert.equal(automatic.root.listenerCount(), 0, 'destroy left root listeners behind');
+const still = makeRoot();
+const stillCarousel = new InfiniteCarousel(still.root);
+const stillIndex = stillCarousel.logicalIndex();
+assert.equal(intervals.size, 0, 'a carousel started moving without customer input');
+assert.equal(stillCarousel.logicalIndex(), stillIndex, 'a still carousel changed slides');
+stillCarousel.destroy();
+assert.equal(still.shell.listenerCount(), 0, 'destroy left shell listeners behind');
+assert.equal(still.track.listenerCount(), 0, 'destroy left track listeners behind');
+assert.equal(still.root.listenerCount(), 0, 'destroy left root listeners behind');
 
 const gestures = makeRoot();
-const gestureCarousel = new InfiniteCarousel(gestures.root, {interval: 3500});
+const gestureCarousel = new InfiniteCarousel(gestures.root, {interval: 0});
 gestures.shell.emit('pointerdown', {clientX: 200, clientY: 100, pointerId: 1});
 gestures.shell.emit('pointerup', {clientX: 145, clientY: 250, pointerId: 1});
 assert.equal(gestureCarousel.logicalIndex(), 0, 'vertical scrolling moved the slide');
@@ -162,8 +157,8 @@ gestures.shell.emit('pointerup', {clientX: 130, clientY: 105, pointerId: 3});
 assert.equal(gestureCarousel.logicalIndex(), stoppedIndex, 'destroyed carousel still reacted to gestures');
 
 console.log(JSON.stringify({
-  automaticIndexes: indexes,
-  intervalMs: automaticTimer.delay,
+  staysStillWithoutInput: true,
+  intervalMs: 0,
   verticalScrollIgnored: true,
   oldListenersRemoved: true,
   neighborhoodRankingUntouched: true,

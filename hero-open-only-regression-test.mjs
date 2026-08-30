@@ -51,7 +51,7 @@ assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*hero-open-only-1[^'\n]*he
 assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*hero-stable-height-1/);
 assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*keep-placeholder-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*keep-placeholder-1/);
-assert.match(html, /final-experience\.js\?v=[^"\n]*hero-stable-height-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*manual-carousels-1/);
 assert.match(finalExperience, /rc6-fixes\.css\?v=[^'\n]*hero-clean-controls-1/);
 
 console.log('hero-open-only-regression-test: pass');
