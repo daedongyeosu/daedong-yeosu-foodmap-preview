@@ -27,8 +27,10 @@ assert.match(rc3, /const rankedStores = fxRankStores\(spec\)/);
 assert.match(rc3, /rc2RailCandidates\(spec, globallyUsed, 8, useCounts, rankedStores\)/);
 assert.match(experience, /window\.__daedongDeferRailRender=true/);
 assert.match(experience, /function fxRenderRailsWithoutMovingActiveList\(\)/);
-assert.match(experience, /const section=\$\('#recommendSection'\)/);
-assert.match(experience, /scrollWindowInstant\(window\.scrollY\+delta\)/);
+assert.doesNotMatch(experience, /const section=\$\('#recommendSection'\)/,
+  '추천 목록 갱신이 고객의 현재 화면 위치를 추적하면 안 됩니다.');
+assert.doesNotMatch(experience, /scrollWindowInstant\(window\.scrollY\+delta\)/,
+  '추천 목록 갱신이 고객의 스크롤 위치를 강제로 바꾸면 안 됩니다.');
 assert.match(experience, /await rc6Initialize\(\);window\.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList\(\)/);
 assert.match(experience, /selectionChanged=next!==fxRainState/);
 assert.match(experience, /if\(selectionChanged\)fxRenderRails\(\)/);
