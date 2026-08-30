@@ -364,3 +364,6 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
 @keyframes store-detail-shell-pulse{0%{background-position:110% 0}100%{background-position:-110% 0}}
 @keyframes store-detail-shell-shimmer{to{transform:translateX(110%)}}
 @media(prefers-reduced-motion:reduce){.store-detail-loading .detail-loading-photo::after,.store-detail-skeleton-line,.store-detail-skeleton-button{animation:none}}
+
+/* Keep branches identifiable anywhere a compact store card is rendered. */
+.store-branch-badge{display:inline-flex;align-items:center;margin-right:5px;padding:2px 6px;border-radius:999px;background:#edf5ff;color:#214f80;font-size:10px;line-height:1.25;vertical-align:1px;white-space:nowrap}
