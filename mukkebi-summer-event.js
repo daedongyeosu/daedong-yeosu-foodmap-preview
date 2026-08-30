@@ -17,7 +17,7 @@
   const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV2';
   const COMMUNITY_INTRO_SESSION_KEY = 'daedongCommunityIntroPlayedV4';
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
-  const FOLLOWUP_INTRO_DELAY = 3000;
+  const FOLLOWUP_CAMPAIGN_DELAY = 3000;
   const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
   const AUTO_OPEN_ENABLED = true;
   const RETURN_QUERY_KEYS = ['store', '__ddret', '__ddom', '__ddappfallback'];
@@ -34,14 +34,18 @@
     && !RETURN_QUERY_KEYS.some(key => entryUrl.searchParams.has(key))
     && document.wasDiscarded !== true
     && (!navigationType || navigationType === 'navigate');
-  window.daedongMukkebiAutoOpenPending = AUTO_OPEN_ELIGIBLE;
+  // The general community intro owns the first startup slot. The Mukkebi
+  // campaign is queued only after that intro has fully closed.
+  window.daedongMukkebiAutoOpenPending = false;
   let opened = false;
   let customerInteracted = false;
-  let initialOpenTimer = 0;
-  let followupIntroTimer = 0;
+  let followupCampaignTimer = 0;
+  let waitingAfterIntroClose = false;
   let interactionStart = null;
 
   if (!eventLayer) return;
+  eventLayer.dataset.controllerState = 'ready';
+  eventLayer.dataset.autoOpenEligible = String(AUTO_OPEN_ELIGIBLE);
 
   function localDateKey() {
     const now = new Date();
@@ -67,16 +71,23 @@
   }
 
   function customerAlreadyInteracted() {
+    if (waitingAfterIntroClose) {
+      return customerInteracted ||
+        Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16;
+    }
     return customerInteracted ||
       window.daedongEarlyHomeInteraction === true ||
       window.daedongHasHomeInteraction?.() === true ||
       Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16;
   }
 
-  function markCustomerInteraction() {
+  function markCustomerInteraction(reason = 'unknown') {
     customerInteracted = true;
-    window.clearTimeout(initialOpenTimer);
-    initialOpenTimer = 0;
+    eventLayer.dataset.interactionReason = String(reason);
+    window.clearTimeout(followupCampaignTimer);
+    followupCampaignTimer = 0;
+    waitingAfterIntroClose = false;
+    window.daedongMukkebiReadyAt = 0;
     settleAutomaticOpen();
   }
 
@@ -94,40 +105,68 @@
   }
 
   function rememberInteractionStart(event) {
+    const target = event.target instanceof Element ? event.target : null;
+    const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
+    if (target?.closest('#communityIntro') || path.includes(communityIntro)) {
+      interactionStart = null;
+      return;
+    }
     interactionStart = interactionPoint(event);
+  }
+
+  function clearInteractionStart() {
+    interactionStart = null;
   }
 
   function markMovedInteraction(event) {
     const point = interactionPoint(event);
     if (!interactionStart || !point) return;
     if (Math.hypot(point.x - interactionStart.x, point.y - interactionStart.y) > 12) {
-      markCustomerInteraction();
+      markCustomerInteraction('gesture-moved');
     }
   }
 
   function markActionableClick(event) {
     const target = event.target instanceof Element ? event.target : null;
+    const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
+    if (target?.closest('#communityIntro') || path.includes(communityIntro)) return;
     if (target?.closest('a, button, input, select, textarea, [role="button"], [data-order-key]')) {
-      markCustomerInteraction();
+      markCustomerInteraction(`action-click:${target.id || target.tagName.toLowerCase()}`);
     }
   }
 
-  function canOpen({automatic = false} = {}) {
-    if (automatic && (!AUTO_OPEN_ELIGIBLE || document.visibilityState !== 'visible')) return false;
-    if (opened || seenThisSession() || returningFromOrderApp() || customerAlreadyInteracted() || Date.now() >= EVENT_END || hiddenToday()) return false;
+  function canOpen({automatic = false, afterCommunityIntro = false} = {}) {
+    const block = reason => {
+      eventLayer.dataset.blockReason = reason;
+      return false;
+    };
+    delete eventLayer.dataset.blockReason;
+    if ((automatic || afterCommunityIntro) && document.visibilityState !== 'visible') return block('document-hidden');
+    if (automatic && !AUTO_OPEN_ELIGIBLE) return block('automatic-ineligible');
+    if (opened) return block('already-opened');
+    if (seenThisSession()) return block('seen-session');
+    if (returningFromOrderApp()) return block('order-app-return');
+    if (customerAlreadyInteracted()) return block('customer-interacted');
+    if (Date.now() >= EVENT_END) return block('campaign-ended');
+    if (hiddenToday()) return block('hidden-today');
     const modal = document.getElementById('modal');
     const startupAd = document.getElementById('startupAd');
     const serviceOverview = document.querySelector('[data-store-service-overview-overlay]');
-    return (communityIntro?.hidden ?? true) &&
+    const clear = (communityIntro?.hidden ?? true) &&
       (modal?.hidden ?? true) &&
       (startupAd?.hidden ?? true) &&
       (serviceOverview?.hidden ?? true) &&
       !document.body.classList.contains('store-service-overview-open');
+    return clear || block('overlay-open');
   }
 
-  function openEvent({automatic = false} = {}) {
-    if (!canOpen({automatic})) return;
+  function openEvent({automatic = false, afterCommunityIntro = false} = {}) {
+    if (!canOpen({automatic, afterCommunityIntro})) {
+      eventLayer.dataset.controllerState = 'blocked';
+      return;
+    }
     opened = true;
+    eventLayer.dataset.controllerState = 'open';
     try { sessionStorage.setItem(SEEN_SESSION_KEY, '1'); } catch {}
     eventLayer.hidden = false;
     eventLayer.setAttribute('aria-hidden', 'false');
@@ -137,30 +176,30 @@
   // Reserved for an explicit campaign entry. Automatic opening stays off.
   window.daedongOpenMukkebiSummerEvent = () => openEvent();
 
-  function scheduleCommunityIntroFollowup() {
-    window.clearTimeout(followupIntroTimer);
-    const readyAt = Date.now() + FOLLOWUP_INTRO_DELAY;
-    window.daedongCommunityIntroReadyAt = readyAt;
-    followupIntroTimer = window.setTimeout(() => {
-      followupIntroTimer = 0;
-      if (window.daedongCommunityIntroReadyAt === readyAt) {
-        window.daedongCommunityIntroReadyAt = 0;
+  function scheduleCampaignFollowup() {
+    // Closing the verified first community intro is itself the fresh-entry
+    // proof. Do not lose the second popup merely because a browser reports an
+    // unusual navigation type after creating or restoring its WebView.
+    if (opened || seenThisSession() || hiddenToday()) return;
+    eventLayer.dataset.controllerState = 'scheduled';
+    window.clearTimeout(followupCampaignTimer);
+    waitingAfterIntroClose = true;
+    const readyAt = Date.now() + FOLLOWUP_CAMPAIGN_DELAY;
+    window.daedongMukkebiReadyAt = readyAt;
+    followupCampaignTimer = window.setTimeout(() => {
+      followupCampaignTimer = 0;
+      if (window.daedongMukkebiReadyAt === readyAt) {
+        window.daedongMukkebiReadyAt = 0;
       }
-      window.dispatchEvent(new Event('daedong:mukkebi-followup-ready'));
-    }, FOLLOWUP_INTRO_DELAY);
+      eventLayer.dataset.controllerState = 'opening';
+      openEvent({afterCommunityIntro: true});
+      waitingAfterIntroClose = false;
+      settleAutomaticOpen();
+    }, FOLLOWUP_CAMPAIGN_DELAY);
   }
 
-  function rememberCommunityIntroAsHandled() {
-    window.clearTimeout(followupIntroTimer);
-    followupIntroTimer = 0;
-    window.daedongCommunityIntroReadyAt = 0;
-    try { sessionStorage.setItem(COMMUNITY_INTRO_SESSION_KEY, '1'); } catch {}
-  }
-
-  function closeEvent({showCommunityIntro = true} = {}) {
+  function closeEvent() {
     if (eventLayer.hidden) return;
-    if (showCommunityIntro) scheduleCommunityIntroFollowup();
-    else rememberCommunityIntroAsHandled();
     eventLayer.hidden = true;
     eventLayer.setAttribute('aria-hidden', 'true');
   }
@@ -172,16 +211,15 @@
   }
 
   function scheduleInitialOpen() {
-    window.clearTimeout(initialOpenTimer);
     if (!AUTO_OPEN_ELIGIBLE) {
       settleAutomaticOpen();
       return;
     }
-    initialOpenTimer = window.setTimeout(() => {
-      initialOpenTimer = 0;
-      openEvent({automatic: true});
-      settleAutomaticOpen();
-    }, 600);
+    let introAlreadyPlayed = false;
+    try { introAlreadyPlayed = sessionStorage.getItem(COMMUNITY_INTRO_SESSION_KEY) === '1'; }
+    catch {}
+    if (introAlreadyPlayed && (communityIntro?.hidden ?? true)) scheduleCampaignFollowup();
+    else settleAutomaticOpen();
   }
 
   // KakaoTalk can carry the touch that opened this WebView into the new
@@ -190,15 +228,19 @@
   // or an actual actionable click.
   document.addEventListener('pointerdown', rememberInteractionStart, {capture:true, passive:true});
   document.addEventListener('pointermove', markMovedInteraction, {capture:true, passive:true});
+  document.addEventListener('pointerup', clearInteractionStart, {capture:true, passive:true});
+  document.addEventListener('pointercancel', clearInteractionStart, {capture:true, passive:true});
   document.addEventListener('touchstart', rememberInteractionStart, {capture:true, passive:true});
   document.addEventListener('touchmove', markMovedInteraction, {capture:true, passive:true});
+  document.addEventListener('touchend', clearInteractionStart, {capture:true, passive:true});
+  document.addEventListener('touchcancel', clearInteractionStart, {capture:true, passive:true});
   document.addEventListener('click', markActionableClick, {capture:true, passive:true});
   for (const type of ['wheel', 'keydown']) {
-    document.addEventListener(type, markCustomerInteraction, {capture:true, passive:true, once:true});
+    document.addEventListener(type, () => markCustomerInteraction(type), {capture:true, passive:true, once:true});
   }
   window.addEventListener('scroll', () => {
     if (Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16) {
-      markCustomerInteraction();
+      markCustomerInteraction('scroll');
     }
   }, {passive:true});
 
@@ -220,13 +262,14 @@
     closeEvent();
   });
   orderButton?.addEventListener('click', () => {
-    closeEvent({showCommunityIntro:false});
+    closeEvent();
     const mukkebiButton = document.querySelector('[data-order-key="mukkebi"]');
     if (mukkebiButton instanceof HTMLElement) window.setTimeout(() => mukkebiButton.click(), 80);
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !eventLayer.hidden) closeEvent();
   });
+  window.addEventListener('daedong:community-intro-closed', scheduleCampaignFollowup);
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', scheduleInitialOpen, {once:true});
