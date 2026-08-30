@@ -94,10 +94,16 @@ function rc6HeroRequiredChannelKeys(){
  });
 }
 function rc6HeroHasRequiredChannels(store){return rc6HeroRequiredChannelKeys().every(key=>storeHasChannel(store,key));}
-function rc6HeroLowFeeIcons(store,extraClass=''){
- const keys=rc6HeroRequiredChannelKeys().filter(key=>storeHasChannel(store,key));
- const labels=keys.map(key=>APP_META[key]?.label||key).join(' · ');
- return keys.length?`<span class="rc6-hero-low-fee-icons${extraClass?` ${escapeHtml(extraClass)}`:''}" aria-label="이 가게에서 주문 가능한 저수수료 주문: ${escapeHtml(labels)}">${keys.map(key=>appIcon(key,'rc6-hero-low-fee-icon')).join('')}</span>`:'';
+function rc6HeroOrderFooter(store){
+ const methods=rc6HeroRequiredChannelKeys().filter(key=>storeHasChannel(store,key)).map(key=>({key,label:APP_META[key]?.label||key}));
+ const brand=fxBrandByStore.get(String(store.id));
+ if(brand)methods.push({key:'brand',label:'브랜드앱',icon:brand.icon});
+ const labels=methods.map(item=>item.label).join(' · ');
+ const items=methods.map(item=>{
+  const icon=item.key==='brand'&&item.icon?`<img class="rc6-hero-order-icon" src="${escapeHtml(mobilePhotoPath(item.icon))}" alt="">`:appIcon(item.key,'rc6-hero-order-icon');
+  return `<span class="rc6-hero-order-method">${icon}<b>${escapeHtml(item.label)}</b></span>`;
+ }).join('');
+ return methods.length?`<span class="rc6-hero-order-footer" style="--rc6-order-count:${methods.length}" aria-label="이 가게에서 주문 가능한 주문 방법: ${escapeHtml(labels)}">${items}</span>`:'';
 }
 function rc6ManagedStoreHeroEntries(){
  const staticById=rc6StaticHeroBannersByStore();
@@ -165,7 +171,7 @@ function rc6RenderHero(){
   return;
  }
  if(rc6HeroRenderKey===renderKey&&track.children.length)return;rc6HeroRenderKey=renderKey;if(heroCarousel)heroCarousel.destroy();
- track.innerHTML=entries.map((item,displayIndex)=>{const{banner,target,store}=item,isNotion=item.kind==='notion',isPhoto=['photo','campaign-photo'].includes(item.presentation),isCampaign=item.presentation==='campaign-photo',showCampaignCopy=!isCampaign||item.campaignShowCopy!==false,label=isNotion?`${target.label} 노션에서 자세히 보기`:`${store.name} 가게 상세 보기`,targetAttr=isNotion?`data-rc6-banner-notion="${escapeHtml(target.notionUrl)}"`:`data-rc6-banner-store="${escapeHtml(store.id)}"`;let media;if(isNotion){media=`<img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="675" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}>`;}else if(isPhoto){const title=item.campaignTitle||store.name,meta=item.campaignMeta||[store.area,store.cat].filter(Boolean).join(' · '),lowFeeIcons=rc6HeroLowFeeIcons(store),copy=showCampaignCopy?`<span class="rc6-store-hero-copy"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(meta)}</span>${lowFeeIcons}</span>`:'';media=`<span class="rc6-store-hero-media${isCampaign?' rc6-campaign-hero-media':''}${showCampaignCopy?'':' rc6-campaign-photo-only'}"><img src="${escapeHtml(banner.desktop)}" alt="${escapeHtml(title)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'} data-photo-kind="card" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="hero">${copy}</span>`;}else{media=`<picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}></picture>${rc6HeroLowFeeIcons(store,'rc6-hero-creative-icons')}`;}return `<button type="button" class="carousel-slide hero-slide rc6-hero-target${isCampaign?' rc6-campaign-hero':''}" data-hero-index="${displayIndex}" ${targetAttr} aria-label="${escapeHtml(label)}">${media}</button>`}).join('');
+ track.innerHTML=entries.map((item,displayIndex)=>{const{banner,target,store}=item,isNotion=item.kind==='notion',isPhoto=['photo','campaign-photo'].includes(item.presentation),isCampaign=item.presentation==='campaign-photo',showCampaignCopy=!isCampaign||item.campaignShowCopy!==false,label=isNotion?`${target.label} 노션에서 자세히 보기`:`${store.name} 가게 상세 보기`,targetAttr=isNotion?`data-rc6-banner-notion="${escapeHtml(target.notionUrl)}"`:`data-rc6-banner-store="${escapeHtml(store.id)}"`;let media;if(isNotion){media=`<img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="675" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}>`;}else if(isPhoto){const title=item.campaignTitle||store.name,meta=item.campaignMeta||[store.area,store.cat].filter(Boolean).join(' · '),copy=showCampaignCopy?`<span class="rc6-store-hero-copy"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(meta)}</span></span>`:'';media=`<span class="rc6-store-hero-media${isCampaign?' rc6-campaign-hero-media':''}${showCampaignCopy?'':' rc6-campaign-photo-only'}"><img src="${escapeHtml(banner.desktop)}" alt="${escapeHtml(title)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'} data-photo-kind="card" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="hero">${copy}</span>${rc6HeroOrderFooter(store)}`;}else{media=`<picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}></picture>${rc6HeroOrderFooter(store)}`;}return `<button type="button" class="carousel-slide hero-slide rc6-hero-target${isCampaign?' rc6-campaign-hero':''}" data-hero-index="${displayIndex}" ${targetAttr} aria-label="${escapeHtml(label)}">${media}</button>`}).join('');
  if(hero){
   hero.hidden=false;
   const firstImage=track.querySelector('img');
