@@ -34,6 +34,7 @@
 .rc6-store-hero-copy strong:first-child{margin-top:0}
 .rc6-store-hero-copy>span{margin-top:7px;font-size:clamp(13px,2.5vw,23px);font-weight:750;opacity:.94}
 .rc6-hero-order-footer{display:grid;grid-template-columns:repeat(var(--rc6-order-count),minmax(0,1fr));align-items:stretch;min-height:62px;padding:8px 10px;background:#fff;border-top:1px solid #d7e1e8;color:#073b5b;text-shadow:none}
+.rc6-hero-info-footer{display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;letter-spacing:-.02em}
 .rc6-hero-order-method{display:flex;min-width:0;align-items:center;justify-content:center;gap:7px;padding:4px 8px;border-right:1px solid #e4eaee;font-size:clamp(11px,2.7vw,15px);font-weight:900;line-height:1.15;white-space:nowrap}
 .rc6-hero-order-method:last-child{border-right:0}
 .rc6-hero-order-method b{overflow:hidden;text-overflow:ellipsis}

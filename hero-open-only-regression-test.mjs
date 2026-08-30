@@ -23,9 +23,12 @@ assert.match(rc6, /stores\.filter\(store=>fxVisible\(store\)&&rc6HeroHasRequired
 assert.match(rc6, /function rc6HeroOrderFooter\(store\)/);
 assert.match(rc6, /fxBrandByStore\.get\(String\(store\.id\)\)/);
 assert.match(rc6, /class="rc6-hero-order-footer"/);
+assert.match(rc6, /function rc6HeroSpecialFooter\(\)/);
+assert.match(rc6, /여수 지역 소식 · 자세히 보기/);
 assert.match(rc6, /class="rc6-hero-order-method"/);
 assert.match(rc6, /<b>\$\{escapeHtml\(item\.label\)\}<\/b>/);
 assert.match(css, /\.rc6-hero-order-footer/);
+assert.match(css, /\.rc6-hero-info-footer/);
 assert.match(css, /\.rc6-hero-order-method/);
 assert.doesNotMatch(css, /\.rc6-hero-creative-icons/);
 assert.match(rc6, /function rc6HeroEntries\(\)[\s\S]*return rc6InterleaveHeroEntries\(rc6DailyHeroOrder\(rc6ManagedStoreHeroEntries\(\)\),rc6SpecialHeroEntries\(\)\);/);
@@ -45,10 +48,10 @@ assert.match(regionBoot, /link\.fetchPriority = priority/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*hero-open-only-clean-controls-1/);
 assert.match(html, /rc6-fixes\.css\?v=[^"\n]*hero-clean-controls-1/);
 assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*hero-open-only-1[^'\n]*hero-area-label-removed-1/);
-assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*hero-order-footer-brand-1/);
+assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*hero-stable-height-1/);
 assert.match(finalExperience, /rc6-fixes\.js\?v=[^'\n]*keep-placeholder-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*keep-placeholder-1/);
-assert.match(html, /final-experience\.js\?v=[^"\n]*hero-order-footer-brand-1/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*hero-stable-height-1/);
 assert.match(finalExperience, /rc6-fixes\.css\?v=[^'\n]*hero-clean-controls-1/);
 
 console.log('hero-open-only-regression-test: pass');
