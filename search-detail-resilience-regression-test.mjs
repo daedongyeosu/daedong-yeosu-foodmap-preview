@@ -25,7 +25,7 @@ assert.match(service, /const OVERVIEW_RENDER_BATCH_SIZE = 36/);
 assert.match(service, /overviewQueryComposing \|\| event\.isComposing\) return/);
 assert.match(service, /scheduleOverviewQueryRefresh\(\{immediate: true\}\)/);
 assert.match(service, /menuSearchAbortController\?\.abort\(\)/);
-assert.match(service, /menuSearch\(requestedQuery, \{signal: requestController\.signal\}\)/);
+assert.match(service, /menuSearch\(searchQuery, \{signal: requestController\.signal\}\)/);
 
 const listContext = {
   overviewVisibleCount: 36,

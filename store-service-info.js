@@ -98,7 +98,8 @@
   }
 
   const MENU_FAMILIES = [
-    {key: '빙수', label: '빙수', matches: value => value.includes('빙수'), terms: ['빙수']},
+    {key: '빙수', label: '빙수', matches: value => ['빙수', '설빙'].some(term => value.includes(term)), queries: ['빙수', '설빙'], terms: ['빙수', '설빙']},
+    {key: '김밥', label: '김밥', matches: value => ['김밥', '김빱', '주먹밥'].some(term => value.includes(term)), queries: ['김밥', '김빱', '주먹밥'], terms: ['김밥', '김빱', '꼬마김밥', '마약김밥', '충무김밥', '삼각김밥', '주먹밥']},
     {key: '족발', label: '족발', matches: value => value.includes('족발') || value.includes('불족'), terms: ['족발', '불족', '냉채족']},
     {key: '치킨', label: '치킨', matches: value => ['치킨', '통닭', '닭강정'].some(term => value.includes(term)), terms: ['치킨', '통닭', '닭강정', '후라이드', '양념', '간장', '순살', '윙봉']},
     {key: '커피', label: '커피', matches: value => ['커피', '아메리카노', '에스프레소', '콜드브루'].some(term => value.includes(term)), terms: ['커피', '아메리카노', '에스프레소', '카페라떼', '카푸치노', '마키아토', '콜드브루', '핸드드립']},
@@ -111,6 +112,29 @@
     const family = MENU_FAMILIES.find(item => item.matches(value));
     if (family) return family;
     return value ? {key: value, label: String(query || '').trim(), matches: () => true, terms: [value]} : null;
+  }
+
+  function menuSearchQueries(query) {
+    const spec = menuSearchSpec(query);
+    if (!spec || !MENU_FAMILIES.includes(spec)) return [String(query || '').trim()].filter(Boolean);
+    return [...new Set((spec.queries || [spec.key]).map(String).map(value => value.trim()).filter(Boolean))];
+  }
+
+  function mergeMenuSearchResults(results) {
+    const merged = {stores: {}};
+    (results || []).forEach(result => {
+      Object.entries(result?.stores || {}).forEach(([storeId, record]) => {
+        const target = merged.stores[storeId] ||= {i: []};
+        const seen = new Set(target.i.map(item => String(item?.[0] || '')));
+        (record?.i || []).forEach(item => {
+          const itemId = String(item?.[0] || '');
+          if (!itemId || seen.has(itemId)) return;
+          seen.add(itemId);
+          target.i.push(item);
+        });
+      });
+    });
+    return merged;
   }
 
   function menuItemMatches(item, spec, store) {
@@ -151,8 +175,12 @@
     menuSearchQuery = requestedQuery;
     menuSearchState = 'loading';
     menuSearchData = {stores: {}};
-    menuSearchPromise = window.daedongDataApi.menuSearch(requestedQuery, {signal: requestController.signal})
-      .then(data => {
+    const searchQueries = menuSearchQueries(requestedQuery);
+    menuSearchPromise = Promise.all(searchQueries.map(searchQuery => (
+      window.daedongDataApi.menuSearch(searchQuery, {signal: requestController.signal})
+    )))
+      .then(results => {
+        const data = mergeMenuSearchResults(results);
         if (normalize(menuSearchQuery) === normalize(requestedQuery)) {
           menuSearchData = data?.stores ? data : {stores: {}};
           menuSearchState = 'ready';
