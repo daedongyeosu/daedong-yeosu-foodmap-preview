@@ -870,6 +870,23 @@ function isKnownBlankDetailPhotoPath(path) {
   const clean = String(path || '').split(/[?#]/, 1)[0];
   return KNOWN_BLANK_DETAIL_PHOTO_IDS.has(clean.slice(clean.lastIndexOf('/') + 1).toLowerCase());
 }
+function isOfficialStorePlaceholderImage(path) {
+  const clean = String(path || '').split(/[?#]/, 1)[0].replace(/\\/g, '/');
+  return /(?:^|\/)assets\/logo\.png$/i.test(clean)
+    || /(?:^|\/)assets\/app-icons\/daedong-app-icon(?:-maskable)?-(?:192|512)\.png$/i.test(clean);
+}
+function storeBranchLabel(store) {
+  const explicit = String(store?.branchName || '').trim().replace(/^여수/u, '');
+  if (explicit) return explicit;
+  const name = String(store?.name || '').trim();
+  if (/본점/u.test(name)) return '본점';
+  const match = name.match(/(?:^|[-\s(])(?:여수)?([가-힣A-Za-z0-9]+점)(?:\)|$)/u);
+  return String(match?.[1] || '').trim();
+}
+function storeBranchBadgeMarkup(store, className = 'store-branch-badge') {
+  const label = storeBranchLabel(store);
+  return label ? `<b class="${escapeHtml(className)}">${escapeHtml(label)}</b>` : '';
+}
 function photoCropAuditAttributes(path) {
   return isYogiyoMenuPhotoPath(path)
     ? ' crossorigin="anonymous" data-photo-crop-audit="yogiyo-menu"'
@@ -1412,7 +1429,7 @@ class PhotoResolver {
   }
   validPath(path, store) {
     const value = String(path || '').trim();
-    return Boolean(value && !isKnownBlankDetailPhotoPath(value) && !this.suspiciousPath(value, store) && /\.(png|jpe?g|webp|gif|avif)(\?|$)/i.test(value) && !/\.(pdf|docx?|xlsx?|txt)(\?|$)/i.test(value));
+    return Boolean(value && !isKnownBlankDetailPhotoPath(value) && !isOfficialStorePlaceholderImage(value) && !this.suspiciousPath(value, store) && /\.(png|jpe?g|webp|gif|avif)(\?|$)/i.test(value) && !/\.(pdf|docx?|xlsx?|txt)(\?|$)/i.test(value));
   }
   usablePaths(paths, store) {
     const failed = store?.__failedPhotoPaths instanceof Set ? store.__failedPhotoPaths : new Set();
@@ -1922,7 +1939,7 @@ function storeCard(store, index = 0) {
     ? `<span class="distance-note">${distanceLabel} ${store.distance < 1 ? `${Math.round(store.distance * 1000)}m` : `${store.distance.toFixed(1)}km`}</span>`
     : state.sortByDistance ? '<span class="distance-note distance-pending">거리 정보 준비 중</span>' : '';
   const favorite = isFavorite(store.id);
-  return `<article class="store-card" data-id="${escapeHtml(store.id)}">${photoResolver.markup(store, 'card', {deferred:index >= 4})}<div class="store-info"><h3 title="${escapeHtml(store.name)}">${escapeHtml(store.name)}</h3><p>${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${distance}<div class="miniapps">${miniRoutes(store)}</div></div><button class="card-favorite ${favorite ? 'active' : ''}" type="button" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite ? '찜 해제' : '찜하기'}</span></button></article>`;
+  return `<article class="store-card" data-id="${escapeHtml(store.id)}">${photoResolver.markup(store, 'card', {deferred:index >= 4})}<div class="store-info"><h3 title="${escapeHtml(store.name)}">${escapeHtml(store.name)}</h3><p>${storeBranchBadgeMarkup(store)}${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${distance}<div class="miniapps">${miniRoutes(store)}</div></div><button class="card-favorite ${favorite ? 'active' : ''}" type="button" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite ? '찜 해제' : '찜하기'}</span></button></article>`;
 }
 function renderStores({scroll = false, resetCount = false} = {}) {
   if (resetCount) state.visibleCount = INITIAL_STORE_BATCH_SIZE;
@@ -2076,7 +2093,7 @@ function appBrowserMarkup(key, selectedCategory = '추천') {
   const filtered = selectedCategory === '추천' ? all : all.filter(store => storeMatchesCategory(store, selectedCategory));
   const list = applyCategoryPriorityOverrides(filtered, selectedCategory);
   const chips = `<nav class="app-browser-category-chips" aria-label="음식 카테고리"><button type="button" data-app-category="추천" class="${selectedCategory === '추천' ? 'active' : ''}">추천</button>${categoriesForApp.map(category => `<button type="button" data-app-category="${escapeHtml(category)}" class="${selectedCategory === category ? 'active' : ''}">${categoryIcon(category, 'category-chip-icon')} ${escapeHtml(category)}</button>`).join('')}</nav>`;
-  const cards = list.map(store => `<button type="button" class="app-browser-card" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}${Number.isFinite(store.appDistance) ? ` · ${store.appDistance < 1 ? `${Math.round(store.appDistance*1000)}m` : `${store.appDistance.toFixed(1)}km`}` : ''}</small><span class="app-browser-only-icon">${isExternal ? `<span class="external-app-card-label">${escapeHtml(meta.label)}</span>` : appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
+  const cards = list.map(store => `<button type="button" class="app-browser-card" data-app-store-id="${escapeHtml(store.id)}" data-app-key="${key}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${storeBranchBadgeMarkup(store)}${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}${Number.isFinite(store.appDistance) ? ` · ${store.appDistance < 1 ? `${Math.round(store.appDistance*1000)}m` : `${store.appDistance.toFixed(1)}km`}` : ''}</small><span class="app-browser-only-icon">${isExternal ? `<span class="external-app-card-label">${escapeHtml(meta.label)}</span>` : appIcon(key,'app-browser-app-icon')}</span></span><b>›</b></button>`).join('');
   return `<section class="app-browser" data-app-key="${key}" data-app-category-current="${escapeHtml(selectedCategory)}"><header class="app-browser-head${isExternal ? ' external-app-browser-head' : ''}">${isExternal ? '' : appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>${escapeHtml(meta.label)}에 실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${isExternal ? externalAppNoticeMarkup() : ''}</section>`;
 }
 function openAppBrowser(key, selectedCategory = '추천') {
