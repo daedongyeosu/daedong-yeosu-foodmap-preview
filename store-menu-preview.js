@@ -1256,7 +1256,6 @@
 
   window.addEventListener('popstate', event => {
     if (!document.body.classList.contains('store-menu-open')) return;
-    let handled = false;
     const preview = document.querySelector('.store-menu-preview');
     if (!preview) {
       event.stopImmediatePropagation();
@@ -1264,19 +1263,20 @@
       return;
     }
     const sheet = preview.querySelector('[data-menu-order-sheet]');
-    if (sheet && !sheet.hidden && !event.state?.[MENU_HISTORY.order]) {
+    if (sheet && !sheet.hidden) {
       closeMenuOrderSheet(preview);
-      handled = true;
+      event.stopImmediatePropagation();
+      return;
     }
-    if (preview.classList.contains('menu-search-active') && !event.state?.[MENU_HISTORY.search]) {
+    if (preview.classList.contains('menu-search-active')) {
       exitMenuSearch(preview);
-      handled = true;
+      event.stopImmediatePropagation();
+      return;
     }
     if (!event.state?.[MENU_HISTORY.preview]) {
       closeMenuPreview();
-      handled = true;
+      event.stopImmediatePropagation();
     }
-    if (handled) event.stopImmediatePropagation();
   }, true);
 
   window.addEventListener('resize', () => {
