@@ -184,7 +184,7 @@ function rc6RenderHero(){
    firstImage.addEventListener('error',finishLoading,{once:true});
   }
  }
- if(entries.length){heroCarousel=new InfiniteCarousel(document.querySelector('#heroCarousel'),{interval:3500});if(notionReturn){const slides=[...track.querySelectorAll(':scope > [data-rc6-banner-notion]')],returnIndex=slides.findIndex(slide=>{try{return new URL(slide.dataset.rc6BannerNotion,location.href).href===notionReturn.notionUrl;}catch{return false;}});const displayIndex=returnIndex>=0?Number(slides[returnIndex].dataset.heroIndex):Number(notionReturn.displayIndex);if(Number.isInteger(displayIndex)&&displayIndex>=0&&displayIndex<entries.length&&heroCarousel.count>1){heroCarousel.current=displayIndex+1;heroCarousel.jump(false);}sessionStorage.removeItem(RC6_NOTION_HERO_RETURN);}}
+ if(entries.length){heroCarousel=new InfiniteCarousel(document.querySelector('#heroCarousel'),{interval:0});if(notionReturn){const slides=[...track.querySelectorAll(':scope > [data-rc6-banner-notion]')],returnIndex=slides.findIndex(slide=>{try{return new URL(slide.dataset.rc6BannerNotion,location.href).href===notionReturn.notionUrl;}catch{return false;}});const displayIndex=returnIndex>=0?Number(slides[returnIndex].dataset.heroIndex):Number(notionReturn.displayIndex);if(Number.isInteger(displayIndex)&&displayIndex>=0&&displayIndex<entries.length&&heroCarousel.count>1){heroCarousel.current=displayIndex+1;heroCarousel.jump(false);}sessionStorage.removeItem(RC6_NOTION_HERO_RETURN);}}
 }
 function rc6WatchHeroDay(){
  rc6ActiveHeroDay=rc6SeoulDay().key;if(rc6HeroDayTimer)clearInterval(rc6HeroDayTimer);

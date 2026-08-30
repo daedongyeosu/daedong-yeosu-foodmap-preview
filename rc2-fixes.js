@@ -546,7 +546,7 @@ function rc2RestoreSnapshot(snapshot) {
   Object.assign(modal.dataset, snapshot.dataset);
   const carouselRoot = $('#detailPhotoCarousel');
   if (carouselRoot) {
-    detailCarousel = new InfiniteCarousel(carouselRoot, {interval: 3500});
+    detailCarousel = new InfiniteCarousel(carouselRoot, {interval: 0});
     detailCarousel.goTo?.(snapshot.photoIndex || 0);
   }
   rc2StabilizeReturnPosition({modalScroll: snapshot.scrollTop || 0, anchor: snapshot.anchor}, modal.querySelector('.modal-card'));
