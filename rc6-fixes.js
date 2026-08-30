@@ -38,6 +38,7 @@ function rc6RandomizeGull(gull){const curve=()=>`${Math.round(-20+Math.random()*
 function rc6Gulls(){const shell=document.querySelector('.yeosu-night-shell');if(!shell||shell.querySelector('.rc6-gulls'))return;const layer=document.createElement('div');layer.className='rc6-gulls';layer.setAttribute('aria-hidden','true');[[12,22,11,-2,.8],[20,29,13,-6,1],[27,18,9,-9,.7],[33,25,14,-3,.9]].forEach(([y,size,duration,delay,scale],i)=>{layer.insertAdjacentHTML('beforeend',`<svg class="rc6-gull" style="--y:${y}%;--size:${size}px;--duration:${duration}s;--delay:${delay}s;--scale:${scale};--x:${62+i*8}%" viewBox="0 0 32 14"><g class="rc6-gull-flap"><path d="M2 10 Q9 2 16 9 Q23 2 30 10"/></g></svg>`);const gull=layer.lastElementChild;rc6RandomizeGull(gull);gull.addEventListener('animationiteration',event=>{if(event.target===gull)rc6RandomizeGull(gull);});});shell.prepend(layer);}
 const RC6_DAILY_HERO_LIMIT=15,RC6_DAILY_STORE_HERO_LIMIT=12;
 const RC6_MAIN_SPECIAL_HERO_KEYS=new Set(['18','19','20']);
+const RC6_HERO_LOW_FEE_CHANNEL_KEYS=['direct','ondongne','mukkebi','ddangyo','phone'];
 const RC6_NOTION_HERO_RETURN='daedongNotionHeroReturnV1';
 function rc6ReadNotionHeroReturn(){
  try{const saved=JSON.parse(sessionStorage.getItem(RC6_NOTION_HERO_RETURN)||'null'),age=Date.now()-Number(saved?.savedAt||0);if(!saved?.notionUrl||!saved?.image||age<0||age>=30*60*1000){sessionStorage.removeItem(RC6_NOTION_HERO_RETURN);return null;}return saved;}catch{sessionStorage.removeItem(RC6_NOTION_HERO_RETURN);return null;}
@@ -86,10 +87,21 @@ function rc6StaticHeroBannersByStore(){
  HERO_BANNERS.forEach((banner,index)=>{const key=String(index+1).padStart(2,'0'),target=rc6BannerTargets[key]||{};if(target.status==='mapped'&&target.storeId)byId.set(String(target.storeId),{banner,key,target});});
  return byId;
 }
-function rc6HeroStoreIsOpen(store){return storeBusinessStatusPriority(store)<=1;}
+function rc6HeroRequiredChannelKeys(){
+ return RC6_HERO_LOW_FEE_CHANNEL_KEYS.filter(key=>{
+  const serviceButton=document.querySelector(`[data-order-key="${key}"]`);
+  return !serviceButton?.disabled;
+ });
+}
+function rc6HeroHasRequiredChannels(store){return rc6HeroRequiredChannelKeys().every(key=>storeHasChannel(store,key));}
+function rc6HeroLowFeeIcons(store){
+ const keys=rc6HeroRequiredChannelKeys().filter(key=>storeHasChannel(store,key));
+ const labels=keys.map(key=>APP_META[key]?.label||key).join(' · ');
+ return keys.length?`<span class="rc6-hero-low-fee-icons" aria-label="이 가게에서 주문 가능한 저수수료 주문: ${escapeHtml(labels)}">${keys.map(key=>appIcon(key,'rc6-hero-low-fee-icon')).join('')}</span>`:'';
+}
 function rc6ManagedStoreHeroEntries(){
  const staticById=rc6StaticHeroBannersByStore();
- const candidates=stores.filter(store=>fxVisible(store)&&rc6HeroStoreIsOpen(store)&&(rc6RainMode==='normal'?rc6OwnershipTier(store)<2:true));
+ const candidates=stores.filter(store=>fxVisible(store)&&rc6HeroHasRequiredChannels(store)&&(rc6RainMode==='normal'?rc6OwnershipTier(store)<2:true));
  return rc6ApplyRainExposure(rc6RankCandidatesByCustomerLocation(candidates),RC6_DAILY_STORE_HERO_LIMIT).map((rankedStore,index)=>{
   const id=String(rankedStore.id),preset=staticById.get(id),photo=fxPhoto(rankedStore),banner=preset?.banner||(photo?{desktop:photo,mobile:photo}:null);
   if(!banner)return null;
@@ -153,7 +165,7 @@ function rc6RenderHero(){
   return;
  }
  if(rc6HeroRenderKey===renderKey&&track.children.length)return;rc6HeroRenderKey=renderKey;if(heroCarousel)heroCarousel.destroy();
- track.innerHTML=entries.map((item,displayIndex)=>{const{banner,target,store}=item,isNotion=item.kind==='notion',isPhoto=['photo','campaign-photo'].includes(item.presentation),isCampaign=item.presentation==='campaign-photo',showCampaignCopy=!isCampaign||item.campaignShowCopy!==false,label=isNotion?`${target.label} 노션에서 자세히 보기`:`${store.name} 가게 상세 보기`,targetAttr=isNotion?`data-rc6-banner-notion="${escapeHtml(target.notionUrl)}"`:`data-rc6-banner-store="${escapeHtml(store.id)}"`;let media;if(isNotion){media=`<img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="675" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}>`;}else if(isPhoto){const title=item.campaignTitle||store.name,meta=item.campaignMeta||[store.area,store.cat].filter(Boolean).join(' · '),copy=showCampaignCopy?`<span class="rc6-store-hero-copy"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(meta)}</span></span>`:'';media=`<span class="rc6-store-hero-media${isCampaign?' rc6-campaign-hero-media':''}${showCampaignCopy?'':' rc6-campaign-photo-only'}"><img src="${escapeHtml(banner.desktop)}" alt="${escapeHtml(title)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'} data-photo-kind="card" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="hero">${copy}</span>`;}else{media=`<picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}></picture>`;}return `<button type="button" class="carousel-slide hero-slide rc6-hero-target${isCampaign?' rc6-campaign-hero':''}" data-hero-index="${displayIndex}" ${targetAttr} aria-label="${escapeHtml(label)}">${media}</button>`}).join('');
+ track.innerHTML=entries.map((item,displayIndex)=>{const{banner,target,store}=item,isNotion=item.kind==='notion',isPhoto=['photo','campaign-photo'].includes(item.presentation),isCampaign=item.presentation==='campaign-photo',showCampaignCopy=!isCampaign||item.campaignShowCopy!==false,label=isNotion?`${target.label} 노션에서 자세히 보기`:`${store.name} 가게 상세 보기`,targetAttr=isNotion?`data-rc6-banner-notion="${escapeHtml(target.notionUrl)}"`:`data-rc6-banner-store="${escapeHtml(store.id)}"`;let media;if(isNotion){media=`<img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="675" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}>`;}else if(isPhoto){const title=item.campaignTitle||store.name,meta=item.campaignMeta||[store.area,store.cat].filter(Boolean).join(' · '),lowFeeIcons=rc6HeroLowFeeIcons(store),copy=showCampaignCopy?`<span class="rc6-store-hero-copy"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(meta)}</span>${lowFeeIcons}</span>`:'';media=`<span class="rc6-store-hero-media${isCampaign?' rc6-campaign-hero-media':''}${showCampaignCopy?'':' rc6-campaign-photo-only'}"><img src="${escapeHtml(banner.desktop)}" alt="${escapeHtml(title)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'} data-photo-kind="card" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="hero">${copy}</span>`;}else{media=`<picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}></picture>`;}return `<button type="button" class="carousel-slide hero-slide rc6-hero-target${isCampaign?' rc6-campaign-hero':''}" data-hero-index="${displayIndex}" ${targetAttr} aria-label="${escapeHtml(label)}">${media}</button>`}).join('');
  if(hero){
   hero.hidden=false;
   const firstImage=track.querySelector('img');

@@ -14,8 +14,15 @@ assert.match(baseHero, /hero\.hidden = false/);
 assert.match(baseHero, /hero\.setAttribute\('aria-busy', 'true'\)/);
 assert.doesNotMatch(baseHero, /HERO_BANNERS\.map/);
 
-assert.match(rc6, /function rc6HeroStoreIsOpen\(store\)\{return storeBusinessStatusPriority\(store\)<=1;\}/);
-assert.match(rc6, /stores\.filter\(store=>fxVisible\(store\)&&rc6HeroStoreIsOpen\(store\)/);
+assert.doesNotMatch(rc6, /rc6HeroStoreIsOpen/);
+assert.match(rc6, /const RC6_HERO_LOW_FEE_CHANNEL_KEYS=\['direct','ondongne','mukkebi','ddangyo','phone'\];/);
+assert.match(rc6, /function rc6HeroRequiredChannelKeys\(\)/);
+assert.match(rc6, /return !serviceButton\?\.disabled/);
+assert.match(rc6, /function rc6HeroHasRequiredChannels\(store\)\{return rc6HeroRequiredChannelKeys\(\)\.every\(key=>storeHasChannel\(store,key\)\);\}/);
+assert.match(rc6, /stores\.filter\(store=>fxVisible\(store\)&&rc6HeroHasRequiredChannels\(store\)/);
+assert.match(rc6, /function rc6HeroLowFeeIcons\(store\)/);
+assert.match(rc6, /class="rc6-hero-low-fee-icons"/);
+assert.match(css, /\.rc6-hero-low-fee-icons/);
 assert.match(rc6, /function rc6HeroEntries\(\)[\s\S]*return rc6InterleaveHeroEntries\(rc6DailyHeroOrder\(rc6ManagedStoreHeroEntries\(\)\),rc6SpecialHeroEntries\(\)\);/);
 assert.match(rc6, /hero\.hidden=false/);
 assert.match(rc6, /fetchpriority="high"/);
