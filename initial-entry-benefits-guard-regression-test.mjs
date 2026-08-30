@@ -71,8 +71,8 @@ assert.match(eventJs, /const AUTO_OPEN_ELIGIBLE = AUTO_OPEN_ENABLED[\s\S]*?!glob
   '문서 생성 시점의 주문앱 복귀 상태를 고정해 복원 도중 표식이 지워져도 행사창이 끼어들지 않아야 합니다.');
 assert.match(eventJs, /document\.wasDiscarded !== true[\s\S]*navigationType === 'navigate'/,
   '폐기 탭 복원·새로고침·뒤로가기로 되살아난 문서는 새 행사 진입으로 취급하면 안 됩니다.');
-assert.match(eventJs, /function canOpen\(\{automatic = false\} = \{\}\) \{[\s\S]*automatic && \(!AUTO_OPEN_ELIGIBLE \|\| document\.visibilityState !== 'visible'\)/,
-  '백그라운드 문서나 복귀 문서에서는 행사창을 열면 안 됩니다.');
+assert.match(eventJs, /function canOpen\(\{automatic = false, afterCommunityIntro = false\} = \{\}\) \{[\s\S]*\(automatic \|\| afterCommunityIntro\) && document\.visibilityState !== 'visible'[\s\S]*automatic && !AUTO_OPEN_ELIGIBLE/,
+  '자동 진입은 복귀 문서를 차단하고, 첫 안내 후속 진입도 백그라운드에서는 열면 안 됩니다.');
 assert.match(eventJs, /window\.daedongOpenMukkebiSummerEvent = \(\) => openEvent\(\)/,
   '관리자가 명시적으로 행사창을 여는 기존 진입은 자동 복귀 차단 조건과 분리해야 합니다.');
 assert.match(eventJs, /function scheduleInitialOpen\(\)[\s\S]*scheduleCampaignFollowup\(\)/,
@@ -85,7 +85,7 @@ assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*kakao-opening-touch-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*startup-order-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*natural-followup-1/,
   '두 시작 안내 사이에 자연스러운 간격을 두는 최신 코드가 배포되어야 합니다.');
-assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*mukkebi-second-1/,
+assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*mukkebi-second-4/,
   '먹깨비 행사창을 두 번째로 표시하는 최신 팝업 순서 코드가 배포되어야 합니다.');
 assert.match(browserCheck, /완전히 새로 들어온 홈에서만 먹깨비 팝업 한 번 표시/);
 assert.match(browserCheck, /PageTransitionEvent\('pageshow'[\s\S]*같은 세션에서 다시 표시하지 않음/);

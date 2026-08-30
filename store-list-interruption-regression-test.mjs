@@ -47,7 +47,7 @@ assert.match(intro, /window\.setTimeout\(waitForClearHome, 0\)/,
   '첫 안내는 사용자가 목록을 보기 시작한 뒤 늦게 나타나면 안 됩니다.');
 assert.doesNotMatch(intro, /setTimeout\(waitForClearHome, 900\)|\}, 320\);/);
 assert.match(event, /customerAlreadyInteracted\(\)/);
-assert.match(event, /function markCustomerInteraction\(\)[\s\S]*clearTimeout\(followupCampaignTimer\)/);
+assert.match(event, /function markCustomerInteraction\([^)]*\)[\s\S]*clearTimeout\(followupCampaignTimer\)/);
 assert.match(event, /window\.addEventListener\('scroll'/);
 assert.doesNotMatch(event, /waitUntilExistingPopupCloses|new MutationObserver/,
   '행사창은 사용 중인 목록 위에 뒤늦게 나타나면 안 됩니다.');

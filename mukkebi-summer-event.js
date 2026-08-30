@@ -44,6 +44,8 @@
   let interactionStart = null;
 
   if (!eventLayer) return;
+  eventLayer.dataset.controllerState = 'ready';
+  eventLayer.dataset.autoOpenEligible = String(AUTO_OPEN_ELIGIBLE);
 
   function localDateKey() {
     const now = new Date();
@@ -79,8 +81,9 @@
       Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16;
   }
 
-  function markCustomerInteraction() {
+  function markCustomerInteraction(reason = 'unknown') {
     customerInteracted = true;
+    eventLayer.dataset.interactionReason = String(reason);
     window.clearTimeout(followupCampaignTimer);
     followupCampaignTimer = 0;
     waitingAfterIntroClose = false;
@@ -102,41 +105,68 @@
   }
 
   function rememberInteractionStart(event) {
+    const target = event.target instanceof Element ? event.target : null;
+    const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
+    if (target?.closest('#communityIntro') || path.includes(communityIntro)) {
+      interactionStart = null;
+      return;
+    }
     interactionStart = interactionPoint(event);
+  }
+
+  function clearInteractionStart() {
+    interactionStart = null;
   }
 
   function markMovedInteraction(event) {
     const point = interactionPoint(event);
     if (!interactionStart || !point) return;
     if (Math.hypot(point.x - interactionStart.x, point.y - interactionStart.y) > 12) {
-      markCustomerInteraction();
+      markCustomerInteraction('gesture-moved');
     }
   }
 
   function markActionableClick(event) {
     const target = event.target instanceof Element ? event.target : null;
-    if (target?.closest('#communityIntro')) return;
+    const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
+    if (target?.closest('#communityIntro') || path.includes(communityIntro)) return;
     if (target?.closest('a, button, input, select, textarea, [role="button"], [data-order-key]')) {
-      markCustomerInteraction();
+      markCustomerInteraction(`action-click:${target.id || target.tagName.toLowerCase()}`);
     }
   }
 
-  function canOpen({automatic = false} = {}) {
-    if (automatic && (!AUTO_OPEN_ELIGIBLE || document.visibilityState !== 'visible')) return false;
-    if (opened || seenThisSession() || returningFromOrderApp() || customerAlreadyInteracted() || Date.now() >= EVENT_END || hiddenToday()) return false;
+  function canOpen({automatic = false, afterCommunityIntro = false} = {}) {
+    const block = reason => {
+      eventLayer.dataset.blockReason = reason;
+      return false;
+    };
+    delete eventLayer.dataset.blockReason;
+    if ((automatic || afterCommunityIntro) && document.visibilityState !== 'visible') return block('document-hidden');
+    if (automatic && !AUTO_OPEN_ELIGIBLE) return block('automatic-ineligible');
+    if (opened) return block('already-opened');
+    if (seenThisSession()) return block('seen-session');
+    if (returningFromOrderApp()) return block('order-app-return');
+    if (customerAlreadyInteracted()) return block('customer-interacted');
+    if (Date.now() >= EVENT_END) return block('campaign-ended');
+    if (hiddenToday()) return block('hidden-today');
     const modal = document.getElementById('modal');
     const startupAd = document.getElementById('startupAd');
     const serviceOverview = document.querySelector('[data-store-service-overview-overlay]');
-    return (communityIntro?.hidden ?? true) &&
+    const clear = (communityIntro?.hidden ?? true) &&
       (modal?.hidden ?? true) &&
       (startupAd?.hidden ?? true) &&
       (serviceOverview?.hidden ?? true) &&
       !document.body.classList.contains('store-service-overview-open');
+    return clear || block('overlay-open');
   }
 
-  function openEvent({automatic = false} = {}) {
-    if (!canOpen({automatic})) return;
+  function openEvent({automatic = false, afterCommunityIntro = false} = {}) {
+    if (!canOpen({automatic, afterCommunityIntro})) {
+      eventLayer.dataset.controllerState = 'blocked';
+      return;
+    }
     opened = true;
+    eventLayer.dataset.controllerState = 'open';
     try { sessionStorage.setItem(SEEN_SESSION_KEY, '1'); } catch {}
     eventLayer.hidden = false;
     eventLayer.setAttribute('aria-hidden', 'false');
@@ -147,18 +177,23 @@
   window.daedongOpenMukkebiSummerEvent = () => openEvent();
 
   function scheduleCampaignFollowup() {
-    if (!AUTO_OPEN_ELIGIBLE || opened || seenThisSession() || hiddenToday()) return;
+    // Closing the verified first community intro is itself the fresh-entry
+    // proof. Do not lose the second popup merely because a browser reports an
+    // unusual navigation type after creating or restoring its WebView.
+    if (opened || seenThisSession() || hiddenToday()) return;
+    eventLayer.dataset.controllerState = 'scheduled';
     window.clearTimeout(followupCampaignTimer);
     waitingAfterIntroClose = true;
     const readyAt = Date.now() + FOLLOWUP_CAMPAIGN_DELAY;
     window.daedongMukkebiReadyAt = readyAt;
     followupCampaignTimer = window.setTimeout(() => {
       followupCampaignTimer = 0;
-      waitingAfterIntroClose = false;
       if (window.daedongMukkebiReadyAt === readyAt) {
         window.daedongMukkebiReadyAt = 0;
       }
-      openEvent({automatic: true});
+      eventLayer.dataset.controllerState = 'opening';
+      openEvent({afterCommunityIntro: true});
+      waitingAfterIntroClose = false;
       settleAutomaticOpen();
     }, FOLLOWUP_CAMPAIGN_DELAY);
   }
@@ -193,15 +228,19 @@
   // or an actual actionable click.
   document.addEventListener('pointerdown', rememberInteractionStart, {capture:true, passive:true});
   document.addEventListener('pointermove', markMovedInteraction, {capture:true, passive:true});
+  document.addEventListener('pointerup', clearInteractionStart, {capture:true, passive:true});
+  document.addEventListener('pointercancel', clearInteractionStart, {capture:true, passive:true});
   document.addEventListener('touchstart', rememberInteractionStart, {capture:true, passive:true});
   document.addEventListener('touchmove', markMovedInteraction, {capture:true, passive:true});
+  document.addEventListener('touchend', clearInteractionStart, {capture:true, passive:true});
+  document.addEventListener('touchcancel', clearInteractionStart, {capture:true, passive:true});
   document.addEventListener('click', markActionableClick, {capture:true, passive:true});
   for (const type of ['wheel', 'keydown']) {
-    document.addEventListener(type, markCustomerInteraction, {capture:true, passive:true, once:true});
+    document.addEventListener(type, () => markCustomerInteraction(type), {capture:true, passive:true, once:true});
   }
   window.addEventListener('scroll', () => {
     if (Math.abs(Number(window.scrollY || document.documentElement.scrollTop || 0)) > 16) {
-      markCustomerInteraction();
+      markCustomerInteraction('scroll');
     }
   }, {passive:true});
 
