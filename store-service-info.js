@@ -1070,14 +1070,16 @@ function overviewMenuContextText(entry) {
     const identityText = normalize(overviewIdentitySearchText(entry));
     const spec = menuSearchSpec(raw);
     const compact = normalize(raw);
-    if (identityText.includes(compact)) return true;
     const rawTokens = raw.split(/\s+/).map(normalize).filter(Boolean);
     if (spec && MENU_FAMILIES.includes(spec)) {
+      const isExactFamilyQuery = compact === normalize(spec.key);
+      if (!isExactFamilyQuery && identityText.includes(compact)) return true;
       const context = normalize(overviewMenuContextText(entry));
       const contextTokens = rawTokens.filter(token => !spec.matches(token));
       return entry.menuMatches.length > 0
         && contextTokens.every(token => context.includes(token));
     }
+    if (identityText.includes(compact)) return true;
     if (text.includes(compact)) return true;
     const familyTokens = spec && spec.key !== compact
       ? rawTokens.filter(token => !spec.matches(token))
