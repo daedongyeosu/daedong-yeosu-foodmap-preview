@@ -1035,7 +1035,7 @@ body.store-service-overview-open {
   }
 
   .store-service-overview-card {
-    grid-template-columns: 58px minmax(0, 1fr) auto 18px;
+    grid-template-columns: 58px minmax(0, 1fr) 18px;
     padding: 13px;
   }
 
@@ -1047,6 +1047,31 @@ body.store-service-overview-open {
 
   .store-service-overview-card-main strong {
     font-size: 15px;
+  }
+
+  .store-service-overview-card-main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .store-service-overview-card > .store-service-status {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .store-service-overview-payments {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .store-service-overview-card-image,
+  .store-service-overview-card > i {
+    grid-row: 1 / 4;
+  }
+
+  .store-service-overview-card > i {
+    grid-column: 3;
   }
 
   .store-service-menu-matches > div {
