@@ -174,17 +174,9 @@ const FX_RAIL_SPECS=[
 function fxSelectedRails(){const hour=new Date().getHours();const ids=fxRainState!=='clear'?['rain','near','local','warm','noodle','new']:hour>=17?['near','local','group','solo','mood','new']:['near','local','warm','appetite','sweet','new'];return ids.slice(0,6).map(id=>FX_RAIL_SPECS.find(spec=>spec.id===id));}
 let fxRailRenderVersion=0;
 function fxCommitRailsWithoutMovingActiveList(root,staging){
- const section=$('#recommendSection');
- const preserve=window.daedongHasHomeInteraction?.()===true&&section;
- const before=preserve?section.getBoundingClientRect().top:0;
  root.replaceChildren(...staging.childNodes);
  root.removeAttribute('aria-busy');
  observeDeferredPhotos(root);
- if(!preserve)return;
- const delta=section.getBoundingClientRect().top-before;
- if(Math.abs(delta)<.5)return;
- if(typeof scrollWindowInstant==='function')scrollWindowInstant(window.scrollY+delta);
- else window.scrollTo(0,window.scrollY+delta);
 }
 function fxRailMarkup(spec,used){
  const list=fxRankStores(spec).filter(store=>!used.has(String(store.id))).slice(0,8);

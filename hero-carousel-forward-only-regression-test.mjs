@@ -6,6 +6,7 @@ const source = await readFile(new URL('./app.js', import.meta.url), 'utf8');
 const indexSource = await readFile(new URL('./index.html', import.meta.url), 'utf8');
 const cssSource = await readFile(new URL('./app.css', import.meta.url), 'utf8');
 const rc6Source = await readFile(new URL('./rc6-fixes.js', import.meta.url), 'utf8');
+const finalSource = await readFile(new URL('./final-experience.js', import.meta.url), 'utf8');
 const classStart = source.indexOf('class InfiniteCarousel');
 const classEnd = source.indexOf('\nfunction renderHero()', classStart);
 
@@ -17,6 +18,7 @@ assert.match(indexSource, /app\.js\?v=[^"]*hero-forward-only-1/, 'app.js cache v
 assert.match(indexSource, /app\.js\?v=[^"]*manual-carousels-1/, 'customers must receive the manual-only carousel build');
 assert.match(indexSource, /app\.css\?v=[^"]*stable-scroll-position-1/, 'customers must receive the stable scroll build');
 assert.match(cssSource, /html,body\{[^}]*overflow-anchor:none/, 'browser scroll anchoring must not move the customer viewport');
+assert.doesNotMatch(finalSource, /scrollWindowInstant\(window\.scrollY\+delta\)/, 'late recommendation rendering must not force the customer viewport');
 assert.match(rc6Source, /interval:0/, 'main slides must move only after customer input');
 assert.doesNotMatch(source, /new InfiniteCarousel\([^\n]+interval:\s*3500/, 'app carousel autoplay remained');
 assert.match(rc6Source, /neighborhoodFor\(state\.location\)\|\|neighborhoodFor\(state\.addressLabel\)/, 'customer neighborhood priority must remain connected');
