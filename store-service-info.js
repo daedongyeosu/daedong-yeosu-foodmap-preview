@@ -76,6 +76,12 @@
     .replace(/\s+/g, '')
     .toLowerCase();
 
+  const formatStoreDisplayName = value => String(value || '가게 정보')
+    .replace(/([가-힣])\s*[-–—]+\s*(?=[가-힣])/g, '$1 ')
+    .replace(/\s+[-–—]\s+/g, ' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+
   function formatCustomerHours24(value) {
     const convert = (period, rawHour, rawMinute) => {
       const marker = String(period || '').replace(/\./g, '').toLowerCase();
@@ -1168,7 +1174,7 @@ function overviewSearchText(entry) {
     const storeImageSource = String(resolvedPhoto?.source || (rawImage ? 'verified-legacy-direct-file' : '')).trim();
     const hoursSummary = entry.status.label === '영업시간 확인' ? entry.status.detail : entry.status.today;
     const menuMarkup = menuMatches.length ? `
-      <section class="store-service-menu-matches" aria-label="${escapeHtml(entry.store?.name || '가게')} 일치 메뉴">
+      <section class="store-service-menu-matches" aria-label="${escapeHtml(formatStoreDisplayName(entry.store?.name || '가게'))} 일치 메뉴">
         <header>
           <b>‘${escapeHtml(menuSpec?.label || overviewQuery)}’ 일치 메뉴</b>
           <span>${menuMatches.length}개</span>
@@ -1200,7 +1206,7 @@ function overviewSearchText(entry) {
             ${storeImage ? `<img src="${escapeHtml(storeImage)}" alt="" loading="lazy" decoding="async" data-photo-kind="card" data-photo-store-id="${escapeHtml(entry.storeId)}" data-photo-source="${escapeHtml(storeImageSource)}">` : ''}
           </span>
           <span class="store-service-overview-card-main">
-            <strong>${escapeHtml(entry.store?.name || '가게 정보')}</strong>
+            <strong>${escapeHtml(formatStoreDisplayName(entry.store?.name))}</strong>
             <small>${escapeHtml(entry.area)} · ${escapeHtml(formatCustomerHours24(hoursSummary))}</small>
           </span>
           <span class="store-service-status is-${escapeHtml(entry.status.state)}">
