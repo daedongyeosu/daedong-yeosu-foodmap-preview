@@ -778,10 +778,11 @@ body.store-service-overview-open {
 }
 
 .store-service-overview-card-main strong {
-  overflow: hidden;
   font-size: 16px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.35;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .store-service-overview-card-main small {
