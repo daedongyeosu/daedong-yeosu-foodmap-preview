@@ -1028,6 +1028,28 @@ function overviewSearchText(entry) {
   ]).filter(Boolean).join(' ');
 }
 
+function overviewIdentitySearchText(entry) {
+  const store = entry.store || {};
+  return searchTextValues([
+    store.name,
+    store.realBusinessName,
+    store.brandName,
+    store.branchName,
+    store.shopInShopNames,
+    store.storeAliases,
+    store.aliases,
+    store.searchAliases
+  ]).filter(Boolean).join(' ');
+}
+
+function overviewMenuContextText(entry) {
+  return searchTextValues([
+    overviewIdentitySearchText(entry),
+    entry.area,
+    entry.areas
+  ]).filter(Boolean).join(' ');
+}
+
   function benefitDefinitionForQuery(query) {
     const compact = normalize(query);
     if (!compact) return null;
@@ -1045,10 +1067,18 @@ function overviewSearchText(entry) {
     const raw = String(overviewQuery || '').trim();
     if (!raw) return true;
     const text = normalize(overviewSearchText(entry));
+    const identityText = normalize(overviewIdentitySearchText(entry));
     const spec = menuSearchSpec(raw);
     const compact = normalize(raw);
-    if (text.includes(compact)) return true;
+    if (identityText.includes(compact)) return true;
     const rawTokens = raw.split(/\s+/).map(normalize).filter(Boolean);
+    if (spec && MENU_FAMILIES.includes(spec)) {
+      const context = normalize(overviewMenuContextText(entry));
+      const contextTokens = rawTokens.filter(token => !spec.matches(token));
+      return entry.menuMatches.length > 0
+        && contextTokens.every(token => context.includes(token));
+    }
+    if (text.includes(compact)) return true;
     const familyTokens = spec && spec.key !== compact
       ? rawTokens.filter(token => !spec.matches(token))
       : [];
