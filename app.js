@@ -1504,7 +1504,7 @@ function recoverVisibleDetailPhoto(store) {
   const carouselRoot = $('#detailPhotoCarousel');
   if (carouselRoot) {
     detailCarousel?.destroy?.();
-    detailCarousel = new InfiniteCarousel(carouselRoot,{interval:3500});
+    detailCarousel = new InfiniteCarousel(carouselRoot,{interval:0});
   }
   return true;
 }
@@ -1615,7 +1615,7 @@ async function handleImageError(image) {
 }
 
 class InfiniteCarousel {
-  constructor(root, {interval = 3500, onChange = null} = {}) {
+  constructor(root, {interval = 0, onChange = null} = {}) {
     this.root = root;
     if (!root) return;
     this.shell = root.querySelector('.carousel-shell');
@@ -1815,7 +1815,7 @@ function renderPromos() {
     }
     return `<article class="carousel-slide promo-card ${promo.kind}">${content}</article>`;
   }).join('');
-  promoCarousel = new InfiniteCarousel($('#promoCarousel'), {interval: 3500});
+  promoCarousel = new InfiniteCarousel($('#promoCarousel'), {interval: 0});
 }
 function openPromoCarouselDetail(kind) {
   const promo = PROMOS.find(item => item.kind === kind);
@@ -2256,7 +2256,7 @@ async function openStore(store) {
   const menuEntry = storeMenuPreviewEntryMarkup(store);
   if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
   openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}</div>${menuEntry}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
-  const carouselRoot = $('#detailPhotoCarousel'); if (carouselRoot) detailCarousel = new InfiniteCarousel(carouselRoot,{interval:3500});
+  const carouselRoot = $('#detailPhotoCarousel'); if (carouselRoot) detailCarousel = new InfiniteCarousel(carouselRoot,{interval:0});
   $('#modal').dataset.activeStoreId=store.id;
   return true;
 }

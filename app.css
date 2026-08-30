@@ -2,7 +2,7 @@
 :root{--orange:#ff5a1f;--orange-soft:#fff4ef;--navy:#071a42;--bg:#f6f7f9;--line:#e6e9ef;--muted:#697080;--text:#151820;--radius:20px;--shadow:0 10px 28px rgba(7,26,66,.14)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-html,body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color:var(--text);overflow-x:hidden}
+html,body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color:var(--text);overflow-x:hidden;overflow-anchor:none}
 button,a,input{font:inherit}button{cursor:pointer}img{max-width:100%}a{color:inherit}
 #app{max-width:760px;margin:auto;background:#fff;min-height:100vh;padding-bottom:88px}
 .topbar{display:grid;grid-template-columns:minmax(118px,1fr) minmax(120px,240px) minmax(42px,1fr);align-items:center;gap:8px;padding:8px 16px 6px}.location-chip,.icon-btn,.text-btn{border:0;background:transparent}.location-chip{font-weight:850;display:flex;gap:4px;align-items:center;min-height:40px}.icon-btn{position:relative;font-size:25px;justify-self:end}.badge{position:absolute;right:-4px;top:-5px;background:#e21;color:#fff;font-size:11px;border-radius:50%;width:18px;height:18px;display:grid;place-items:center}
