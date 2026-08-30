@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 
 const source = await readFile(new URL('./app.js', import.meta.url), 'utf8');
 const indexSource = await readFile(new URL('./index.html', import.meta.url), 'utf8');
+const cssSource = await readFile(new URL('./app.css', import.meta.url), 'utf8');
 const rc6Source = await readFile(new URL('./rc6-fixes.js', import.meta.url), 'utf8');
 const classStart = source.indexOf('class InfiniteCarousel');
 const classEnd = source.indexOf('\nfunction renderHero()', classStart);
@@ -14,6 +15,8 @@ assert.match(source, /Math\.abs\(deltaX\) > Math\.abs\(deltaY\) \* 1\.15/, 'vert
 assert.match(source, /removeEventListener\(type, handler, options\)/, 'destroy must detach all carousel listeners');
 assert.match(indexSource, /app\.js\?v=[^"]*hero-forward-only-1/, 'app.js cache version must expose the fix');
 assert.match(indexSource, /app\.js\?v=[^"]*manual-carousels-1/, 'customers must receive the manual-only carousel build');
+assert.match(indexSource, /app\.css\?v=[^"]*stable-scroll-position-1/, 'customers must receive the stable scroll build');
+assert.match(cssSource, /html,body\{[^}]*overflow-anchor:none/, 'browser scroll anchoring must not move the customer viewport');
 assert.match(rc6Source, /interval:0/, 'main slides must move only after customer input');
 assert.doesNotMatch(source, /new InfiniteCarousel\([^\n]+interval:\s*3500/, 'app carousel autoplay remained');
 assert.match(rc6Source, /neighborhoodFor\(state\.location\)\|\|neighborhoodFor\(state\.addressLabel\)/, 'customer neighborhood priority must remain connected');
