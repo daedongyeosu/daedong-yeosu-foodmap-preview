@@ -43,11 +43,15 @@ assert.match(index, /hero-photo-recovery-1/);
 
 assert.match(service, /const resolvedPhoto = typeof photoResolver !== 'undefined'[\s\S]*?photoResolver\.resolve\(entry\.store\)/,
   'the integrated store finder must use the shared photo manifest resolver');
-assert.match(service, /const storeImage = String\(resolvedPhoto\?\.src \|\| rawImage\)\.trim\(\)/,
+assert.match(service, /const resolvedStoreImage = String\(resolvedPhoto\?\.src \|\| rawImage\)\.trim\(\)/,
   'manifest photos must win while legacy photos remain a safe fallback');
+assert.match(service, /rawIsOfficialPlaceholder \? matchedMenuImage : \(resolvedStoreImage \|\| matchedMenuImage\)/,
+  'the official app logo must yield to a verified food photo in search results');
 assert.match(service, /data-photo-kind="card" data-photo-store-id="\$\{escapeHtml\(entry\.storeId\)\}" data-photo-source="\$\{escapeHtml\(storeImageSource\)\}"/,
   'finder photos must participate in the shared broken-image recovery path');
 assert.match(index, /service-overview-manifest-photo-1/,
   'the finder script cache key must change with the manifest-photo fix');
+assert.match(index, /food-photo-promotion-1/,
+  'the finder script cache key must change with the official-logo food-photo fallback');
 
 console.log('store photo fallback regression checks passed');

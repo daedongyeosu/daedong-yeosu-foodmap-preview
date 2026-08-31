@@ -1230,8 +1230,14 @@ function overviewMenuContextText(entry) {
       ? photoResolver.resolve(entry.store)
       : null;
     const rawImage = String(entry.store?.legacyImage || entry.store?.legacyImages?.[0] || '').trim();
-    const storeImage = String(resolvedPhoto?.src || rawImage).trim();
-    const storeImageSource = String(resolvedPhoto?.source || (rawImage ? 'verified-legacy-direct-file' : '')).trim();
+    const resolvedStoreImage = String(resolvedPhoto?.src || rawImage).trim();
+    const matchedMenuImage = String(menuMatches.find(item => item.image)?.image || '').trim();
+    const rawIsOfficialPlaceholder = typeof isOfficialStorePlaceholderImage === 'function'
+      && isOfficialStorePlaceholderImage(resolvedStoreImage);
+    const storeImage = rawIsOfficialPlaceholder ? matchedMenuImage : (resolvedStoreImage || matchedMenuImage);
+    const storeImageSource = storeImage === matchedMenuImage
+      ? 'verified-menu-search-fallback'
+      : String(resolvedPhoto?.source || (rawImage ? 'verified-legacy-direct-file' : '')).trim();
     const hoursSummary = entry.status.label === '영업시간 확인' ? entry.status.detail : entry.status.today;
     const menuMarkup = menuMatches.length ? `
       <section class="store-service-menu-matches" aria-label="${escapeHtml(formatStoreDisplayName(entry.store?.name || '가게'))} 일치 메뉴">

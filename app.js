@@ -870,6 +870,11 @@ function isKnownBlankDetailPhotoPath(path) {
   const clean = String(path || '').split(/[?#]/, 1)[0];
   return KNOWN_BLANK_DETAIL_PHOTO_IDS.has(clean.slice(clean.lastIndexOf('/') + 1).toLowerCase());
 }
+function isOfficialStorePlaceholderImage(path) {
+  const clean = String(path || '').split(/[?#]/, 1)[0].replace(/\\/g, '/');
+  return /(?:^|\/)assets\/logo\.png$/i.test(clean)
+    || /(?:^|\/)assets\/app-icons\/daedong-app-icon(?:-maskable)?-(?:192|512)\.png$/i.test(clean);
+}
 function photoCropAuditAttributes(path) {
   return isYogiyoMenuPhotoPath(path)
     ? ' crossorigin="anonymous" data-photo-crop-audit="yogiyo-menu"'
@@ -1412,7 +1417,7 @@ class PhotoResolver {
   }
   validPath(path, store) {
     const value = String(path || '').trim();
-    return Boolean(value && !isKnownBlankDetailPhotoPath(value) && !this.suspiciousPath(value, store) && /\.(png|jpe?g|webp|gif|avif)(\?|$)/i.test(value) && !/\.(pdf|docx?|xlsx?|txt)(\?|$)/i.test(value));
+    return Boolean(value && !isKnownBlankDetailPhotoPath(value) && !isOfficialStorePlaceholderImage(value) && !this.suspiciousPath(value, store) && /\.(png|jpe?g|webp|gif|avif)(\?|$)/i.test(value) && !/\.(pdf|docx?|xlsx?|txt)(\?|$)/i.test(value));
   }
   usablePaths(paths, store) {
     const failed = store?.__failedPhotoPaths instanceof Set ? store.__failedPhotoPaths : new Set();
@@ -1495,8 +1500,13 @@ function recoverVisibleDetailPhoto(store) {
   const modal = $('#modal');
   const detail = $('#modalContent .store-detail[data-store-id]');
   if (!store || !modal || modal.hidden || String(modal.dataset.activeStoreId || '') !== String(store.id) || String(detail?.dataset.storeId || '') !== String(store.id)) return false;
+  const resolved = photoResolver.resolve(store);
+  const menuEntry = detail.querySelector('[data-store-menu-preview]');
+  if (resolved && menuEntry && !menuEntry.querySelector('img')) {
+    menuEntry.insertAdjacentHTML('afterbegin', `<img src="${escapeHtml(resolved.src)}" alt="" data-photo-kind="menu-entry" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="${escapeHtml(resolved.source)}">`);
+  }
   const placeholder = detail.querySelector('.detail-photo-placeholder');
-  if (!placeholder) return false;
+  if (!placeholder) return Boolean(resolved);
   const markup = photoResolver.galleryMarkup(store);
   if (!markup || markup.includes('detail-photo-placeholder')) return false;
   const currentPhotoSurface = placeholder.closest('.detail-single-photo, .detail-photo-carousel') || placeholder;
@@ -2184,7 +2194,7 @@ function orderAppContinueLabel(key, fallback = '') {
 }
 function storeMenuPreviewEntryMarkup(store) {
   if (store?.hasMenu !== true) return '';
-  const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
+  const entryImage = photoResolver?.resolve?.(store)?.src || '';
   return `<button class="store-menu-preview-entry" type="button" data-store-menu-preview="${escapeHtml(store.id)}">${entryImage ? `<img src="${escapeHtml(entryImage)}" alt="" data-photo-kind="menu-entry" data-photo-store-id="${escapeHtml(store.id)}">` : ''}<span><b>음식보기</b><small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small></span><strong>메뉴 보기 ›</strong></button>`;
 }
 function feeGuideMarkup(store, selectedRoute, {fromBrowser = false} = {}) {

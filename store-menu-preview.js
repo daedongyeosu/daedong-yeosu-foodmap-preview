@@ -36,11 +36,13 @@
   })[char]);
 
   function menuHeroImage(menu) {
-    const image = String(menu?.mainImage || '').trim();
-    if (!image || /^(?:\.\/|\/)?assets\/logo\.png(?:[?#].*)?$/i.test(image)) {
-      return OFFICIAL_MENU_PLACEHOLDER_IMAGE;
-    }
-    return image;
+    const candidates = [menu?.mainImage, ...(Array.isArray(menu?.items) ? menu.items.map(item => item?.image) : [])];
+    return candidates
+      .map(value => String(value || '').trim())
+      .find(image => image
+        && !/^(?:\.\/|\/)?assets\/logo\.png(?:[?#].*)?$/i.test(image)
+        && !/(?:^|\/)assets\/app-icons\/daedong-app-icon(?:-maskable)?-(?:192|512)\.png(?:[?#].*)?$/i.test(image))
+      || OFFICIAL_MENU_PLACEHOLDER_IMAGE;
   }
 
   function storeById(id) {
@@ -73,7 +75,7 @@
       || detail.querySelector('.detail-routes')
       || detail.querySelector('.detail-personal-actions');
     if (!target) return;
-    const entryImage = photoResolver?.resolve?.(store)?.src || store.legacyImage || '';
+    const entryImage = photoResolver?.resolve?.(store)?.src || '';
     target.insertAdjacentHTML(topStatus ? 'afterend' : 'beforebegin', `
       <button class="store-menu-preview-entry" type="button" data-store-menu-preview="${storeId}">
         ${entryImage ? `<img src="${escapeMenuHtml(entryImage)}" alt="" data-photo-kind="menu-entry" data-photo-store-id="${escapeMenuHtml(storeId)}">` : ''}

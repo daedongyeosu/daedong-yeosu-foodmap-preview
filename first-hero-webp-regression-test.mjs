@@ -16,7 +16,7 @@ assert.doesNotMatch(html, /rel="preload" as="image" href="images\/01\.png"/,
   '1MB가 넘는 PNG 배너를 초기 화면에서 미리 받으면 안 됩니다.');
 assert.match(html, /<img src="app-icon\.svg\?v=official-brand-20260830-1" alt="">/,
   '현재의 가벼운 SVG 헤더 로고를 유지해야 합니다.');
-assert.match(serviceWorker, /daedong-yeosu-app-shell-v29-menu-placeholder-logo/,
+assert.match(serviceWorker, /daedong-yeosu-app-shell-v30-food-photo-promotion/,
   '최신 서비스워커 캐시 전략을 예전 구현으로 되돌리면 안 됩니다.');
 
 console.log('PASS: 첫 광고 배너를 200KB 이하 WebP로 제공하고 최신 성능 구조를 유지합니다.');
