@@ -18,7 +18,7 @@
     a089d1d54720b48e: 'store-menu-content/a089d1d54720b48e'
   });
   const STATIC_MENU_URLS = Object.freeze({
-    '2da10529e7fb987c': 'data/tamnaneun-pizza-menu.json?v=tamnaneun-canonical-1'
+    '421ecef35a879687': 'data/tamnaneun-pizza-menu.json?v=tamnaneun-dedicated-2'
   });
 
   function safeStoreId(value) {

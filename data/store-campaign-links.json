@@ -17,11 +17,10 @@
       "qrAsset": "assets/qr/kongsanso-food-lab.svg"
     },
     {
-      "storeId": "2da10529e7fb987c",
+      "storeId": "421ecef35a879687",
       "name": "탐나는피자 여수점",
-      "entryMode": "store",
-      "url": "https://daedongmap.com/?store=2da10529e7fb987c",
-      "previewUrl": "https://preview.daedongmap.com/?store=2da10529e7fb987c",
+      "url": "https://daedongmap.com/?hero=421ecef35a879687",
+      "previewUrl": "https://preview.daedongmap.com/?hero=421ecef35a879687",
       "qrAsset": "assets/qr/tamnaneun-pizza-yeosu.svg"
     },
     {

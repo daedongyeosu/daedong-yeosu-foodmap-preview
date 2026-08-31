@@ -109,9 +109,18 @@ try {
   await page.waitForTimeout(900);
   const summer = page.locator('#mukkebiSummerEvent');
   await check(summer.evaluate(node => node.hidden), '첫 안내창을 닫은 직후 먹깨비 팝업이 연달아 뜨지 않음');
-  await summer.waitFor({state: 'visible', timeout: 5000});
-  await dispatchTouch(page.locator('#mukkebiSummerClose'));
-  await check(summer.evaluate(node => node.hidden), '두 번째 먹깨비 행사창 X가 순수 touchstart/touchend로 닫힘');
+  await page.waitForFunction(() => {
+    const popup = document.querySelector('#mukkebiSummerEvent');
+    return popup?.hidden === false || popup?.dataset.blockReason === 'campaign-ended';
+  }, null, {timeout: 5000});
+  const summerCampaignEnded = await summer.getAttribute('data-block-reason') === 'campaign-ended';
+  if (summerCampaignEnded) {
+    await check(summer.isHidden(), '종료된 먹깨비 행사는 공용 닫기 검증 중에도 표시하지 않음');
+  } else {
+    await summer.waitFor({state: 'visible', timeout: 5000});
+    await dispatchTouch(page.locator('#mukkebiSummerClose'));
+    await check(summer.evaluate(node => node.hidden), '두 번째 먹깨비 행사창 X가 순수 touchstart/touchend로 닫힘');
+  }
 
   await page.evaluate(() => {
     const sentinel = document.createElement('button');

@@ -429,9 +429,11 @@ function fxRequestedSharedStoreId(){
  const value=new URLSearchParams(location.search).get(FX_STORE_SHARE_PARAM);
  return value?String(value).trim():'';
 }
-function fxSharedStoreHomeUrl(){
+function fxSharedStoreHomeUrl(storeId){
  const url=new URL(location.href);
  url.searchParams.delete(FX_STORE_SHARE_PARAM);
+ const campaignStoreId=window.daedongResolveHeroCampaignStoreId?.(storeId)||'';
+ if(campaignStoreId)url.searchParams.set('hero',campaignStoreId);
  const query=url.searchParams.toString();
  return `${url.pathname}${query?`?${query}`:''}${url.hash}`;
 }
@@ -464,18 +466,23 @@ function fxFinishOrderMethodReentry(saved,{restorePosition=false}={}){
  requestAnimationFrame(()=>requestAnimationFrame(()=>window.daedongFinishExternalReturnBoot?.()));
 }
 async function fxOpenSharedStoreFromUrl(){
- const storeId=fxRequestedSharedStoreId();
- if(!storeId)return false;
+ const requestedStoreId=fxRequestedSharedStoreId();
+ if(!requestedStoreId)return false;
+ const campaignStoreId=window.daedongResolveHeroCampaignStoreId?.(requestedStoreId)||'';
+ const storeId=campaignStoreId||requestedStoreId;
  const orderMethodReentry=fxPendingOrderMethodReentry(storeId);
  // URL mutation after openStore() leaves correct pixels but a dead native
  // button surface in Samsung Kakao WebView. Strip the one-time marker before
  // the modal DOM exists; every later history entry is then already clean.
  fxPrepareOrderMethodReentryUrl(orderMethodReentry);
- const sharedStoreUrl=`${location.pathname}${location.search}${location.hash}`;
+ const sharedUrl=new URL(location.href);
+ sharedUrl.searchParams.set(FX_STORE_SHARE_PARAM,storeId);
+ if(campaignStoreId)sharedUrl.searchParams.set('hero',campaignStoreId);
+ const sharedStoreUrl=`${sharedUrl.pathname}${sharedUrl.search}${sharedUrl.hash}`;
  for(let attempt=0;attempt<50;attempt+=1){
   const store=fxStoreById(storeId);
   if(store&&fxVisible(store)){
-   history.replaceState(history.state,'',fxSharedStoreHomeUrl());
+   history.replaceState(history.state,'',fxSharedStoreHomeUrl(requestedStoreId));
    const opened=await openStore(store);
    if(opened===false){fxFinishOrderMethodReentry(orderMethodReentry);return false;}
    if(history.state?.daedongModal)history.replaceState(history.state,'',sharedStoreUrl);
@@ -628,7 +635,7 @@ fxRc2Script.onload=()=>{
    fxRc5Script.async=false;
    fxRc5Script.onload=()=>{
     const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=location-store-hero-1-handsu-copy-spacing-1-hero-clean-controls-1-hero-order-footer-2';document.head.append(css);
-    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-hero-area-label-removed-1-three-main-ads-restored-1-notion-hero-return-1-goheung-isolation-2-instant-hero-loading-1-keep-placeholder-1-coordinate-yield-1-pager-stable-refresh-1-hero-photo-recovery-1-store-campaign-nine-2-tamnaneun-canonical-1-hero-stable-height-1-manual-carousels-1';
+    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-hero-area-label-removed-1-three-main-ads-restored-1-notion-hero-return-1-goheung-isolation-2-instant-hero-loading-1-keep-placeholder-1-coordinate-yield-1-pager-stable-refresh-1-hero-photo-recovery-1-store-campaign-nine-2-tamnaneun-menu-hero-3-hero-stable-height-1-manual-carousels-1';
     script.onload=()=>{
      const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=address-home-return-1-coarse-region-1-inapp-location-recovery-1-outside-yeosu-full-list-1-saved-address-first-1-release-readiness-1-step-touch-back-1';
      addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{window.__daedongDeferRailRender=true;try{await window.daedongCatalogReady;await fxInitialize();await rc6Initialize();window.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList();window.rc7Initialize?.();await fxOpenSharedStoreFromUrl();fxFinishLocationRankingReady(true);}catch(error){window.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList();console.error('위치 기반 가게 정렬을 초기화하지 못했습니다.',error);fxFinishLocationRankingReady(false);}},0);};

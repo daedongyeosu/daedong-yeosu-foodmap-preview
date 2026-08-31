@@ -95,12 +95,22 @@ try {
       && document.querySelector('#communityIntro')?.hidden === true
       && sessionStorage.getItem('daedongCommunityIntroPlayedV4') === '1'
   )), '일반 안내를 닫은 직후에는 먹깨비 팝업을 급하게 이어서 표시하지 않음');
-  await startupOrderPage.locator('#mukkebiSummerEvent').waitFor({state: 'visible', timeout: 5000});
-  await check(startupOrderPage.evaluate(() => (
-    document.querySelector('#communityIntro')?.hidden === true
-      && document.querySelector('#mukkebiSummerEvent')?.hidden === false
-  )), '3초의 화면 여유 뒤 먹깨비 팝업을 두 번째로 자연스럽게 표시');
-  await startupOrderPage.screenshot({path: 'browser-mukkebi-second-popup.png', fullPage: false});
+  await startupOrderPage.waitForFunction(() => {
+    const popup = document.querySelector('#mukkebiSummerEvent');
+    return popup?.hidden === false || popup?.dataset.blockReason === 'campaign-ended';
+  }, null, {timeout: 5000});
+  const startupCampaignEnded = await startupOrderPage.locator('#mukkebiSummerEvent').getAttribute('data-block-reason') === 'campaign-ended';
+  if (startupCampaignEnded) {
+    await check(startupOrderPage.locator('#mukkebiSummerEvent').isHidden(),
+      '종료된 먹깨비 행사는 일반 안내 뒤에도 다시 표시하지 않음');
+  } else {
+    await startupOrderPage.locator('#mukkebiSummerEvent').waitFor({state: 'visible', timeout: 5000});
+    await check(startupOrderPage.evaluate(() => (
+      document.querySelector('#communityIntro')?.hidden === true
+        && document.querySelector('#mukkebiSummerEvent')?.hidden === false
+    )), '3초의 화면 여유 뒤 먹깨비 팝업을 두 번째로 자연스럽게 표시');
+    await startupOrderPage.screenshot({path: 'browser-mukkebi-second-popup.png', fullPage: false});
+  }
   await startupOrderContext.close();
 
   const freshContext = await newContext();
@@ -108,26 +118,35 @@ try {
   freshPage.on('pageerror', error => report.errors.push(`fresh: ${error.message}`));
   await freshPage.goto(`${baseURL}?mukkebi-fresh-entry-test=1`, {waitUntil: 'domcontentloaded'});
   const popup = freshPage.locator('#mukkebiSummerEvent');
-  await popup.waitFor({state: 'visible', timeout: 5000});
-  await check(freshPage.evaluate(() => (
-    document.querySelector('#mukkebiSummerEvent')?.hidden === false
-      && document.querySelector('#modal')?.hidden === true
-      && !window.daedongEntryHadExternalReturn
-  )), '완전히 새로 들어온 홈에서만 먹깨비 팝업 한 번 표시');
-  await freshPage.screenshot({path: 'browser-mukkebi-safe-fresh-entry-popup.png', fullPage: false});
+  await freshPage.waitForFunction(() => {
+    const popup = document.querySelector('#mukkebiSummerEvent');
+    return popup?.hidden === false || popup?.dataset.blockReason === 'campaign-ended';
+  }, null, {timeout: 5000});
+  const freshCampaignEnded = await popup.getAttribute('data-block-reason') === 'campaign-ended';
+  if (freshCampaignEnded) {
+    await check(popup.isHidden(), '종료된 먹깨비 행사는 새 홈에서도 표시하지 않음');
+  } else {
+    await popup.waitFor({state: 'visible', timeout: 5000});
+    await check(freshPage.evaluate(() => (
+      document.querySelector('#mukkebiSummerEvent')?.hidden === false
+        && document.querySelector('#modal')?.hidden === true
+        && !window.daedongEntryHadExternalReturn
+    )), '완전히 새로 들어온 홈에서만 먹깨비 팝업 한 번 표시');
+    await freshPage.screenshot({path: 'browser-mukkebi-safe-fresh-entry-popup.png', fullPage: false});
 
-  await freshPage.locator('#mukkebiSummerClose').tap();
-  await popup.waitFor({state: 'hidden', timeout: 1000});
-  await freshPage.evaluate(() => {
-    window.dispatchEvent(new PageTransitionEvent('pageshow', {persisted: true}));
-    document.dispatchEvent(new Event('visibilitychange'));
-    window.dispatchEvent(new Event('focus'));
-  });
-  await freshPage.waitForTimeout(900);
-  await check(freshPage.evaluate(() => (
-    document.querySelector('#mukkebiSummerEvent')?.hidden === true
-      && sessionStorage.getItem('daedongMukkebiSummerEventSeenSessionV2') === '1'
-  )), '팝업을 닫은 뒤 앱 복귀 신호가 와도 같은 세션에서 다시 표시하지 않음');
+    await freshPage.locator('#mukkebiSummerClose').tap();
+    await popup.waitFor({state: 'hidden', timeout: 1000});
+    await freshPage.evaluate(() => {
+      window.dispatchEvent(new PageTransitionEvent('pageshow', {persisted: true}));
+      document.dispatchEvent(new Event('visibilitychange'));
+      window.dispatchEvent(new Event('focus'));
+    });
+    await freshPage.waitForTimeout(900);
+    await check(freshPage.evaluate(() => (
+      document.querySelector('#mukkebiSummerEvent')?.hidden === true
+        && sessionStorage.getItem('daedongMukkebiSummerEventSeenSessionV2') === '1'
+    )), '팝업을 닫은 뒤 앱 복귀 신호가 와도 같은 세션에서 다시 표시하지 않음');
+  }
 
   await freshPage.locator('[data-order-key="mukkebi"]').tap();
   await freshPage.locator('#modal:not([hidden])').waitFor({state: 'visible', timeout: 5000});
@@ -173,9 +192,18 @@ try {
       clientY: 420
     }));
   });
-  await openingTouchPage.locator('#mukkebiSummerEvent').waitFor({state: 'visible', timeout: 5000});
-  await check(openingTouchPage.locator('#mukkebiSummerEvent').isVisible(),
-    '카카오톡에서 이어진 최초 접촉만으로 팝업을 취소하지 않음');
+  await openingTouchPage.waitForFunction(() => {
+    const popup = document.querySelector('#mukkebiSummerEvent');
+    return popup?.hidden === false || popup?.dataset.blockReason === 'campaign-ended';
+  }, null, {timeout: 5000});
+  const openingPopup = openingTouchPage.locator('#mukkebiSummerEvent');
+  const openingCampaignEnded = await openingPopup.getAttribute('data-block-reason') === 'campaign-ended';
+  if (openingCampaignEnded) {
+    await check(openingPopup.isHidden(), '종료된 먹깨비 행사는 최초 접촉 뒤에도 표시하지 않음');
+  } else {
+    await openingPopup.waitFor({state: 'visible', timeout: 5000});
+    await check(openingPopup.isVisible(), '카카오톡에서 이어진 최초 접촉만으로 팝업을 취소하지 않음');
+  }
   await openingTouchContext.close();
 
   const interactionContext = await newContext();

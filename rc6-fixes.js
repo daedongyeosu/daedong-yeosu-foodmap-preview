@@ -127,11 +127,24 @@ function rc6PrepareCampaignStores(){
  });
  if(!rc6StoreByIdBase)rc6StoreByIdBase=fxStoreById;
  fxStoreById=id=>rc6CampaignVirtualStores.get(String(id))||rc6StoreByIdBase(id);
+ window.daedongResolveHeroCampaignStoreId=rc6ResolveHeroCampaignStoreId;
+}
+function rc6HeroCampaignForEntryStoreId(id){
+ const entryId=String(id||'');if(!entryId)return null;
+ const direct=rc6HeroCampaigns?.campaigns?.[entryId];
+ if(direct)return direct;
+ return Object.values(rc6HeroCampaigns?.campaigns||{}).find(campaign=>(campaign.entryStoreIds||[]).map(String).includes(entryId))||null;
+}
+function rc6ResolveHeroCampaignStoreId(id){
+ const campaign=rc6HeroCampaignForEntryStoreId(id);
+ return campaign?String(campaign.storeId||id||''):'';
 }
 function rc6RequestedHeroCampaign(){
- const storeId=new URLSearchParams(location.search).get('hero');
- const campaign=rc6HeroCampaigns?.campaigns?.[String(storeId||'')];
- if(!campaign||String(campaign.storeId)!==String(storeId))return null;
+ const params=new URLSearchParams(location.search);
+ const requestedId=params.get('hero')||params.get('store');
+ const campaign=rc6HeroCampaignForEntryStoreId(requestedId);
+ if(!campaign)return null;
+ const storeId=String(campaign.storeId||requestedId||'');
  const store=rc6CampaignStoreById(storeId);
  return store?{campaign,store}:null;
 }
@@ -247,5 +260,5 @@ function rc6RankNewStoresByCustomerLocation(candidates){const ranked=rc6RankCand
 function rc6LocationRankedRail(spec,originalRank){let ranked;if(spec.kind==='near')ranked=rc6NearStores();else{let candidates=spec.kind==='new'?stores.filter(fxVisible):originalRank(spec);if(spec.kind==='local')candidates=candidates.filter(store=>['direct','mukkebi','ddangyo','ondongne'].some(key=>storeHasChannel(store,key)));ranked=spec.kind==='new'?rc6RankNewStoresByCustomerLocation(candidates):rc6RankCandidatesByCustomerLocation(candidates);}return rc6ApplyRainExposure(sortStoresByBusinessStatus(ranked),8);}
 const rc6CommitAddressBase=commitAddressSelection;
 function rc6CommitAddress(){if(addressDraft?.type!=='current'){rc6CommitAddressBase();return;}const coords=addressDraft.coords;if(!coords)return;state.location=RC6_DEFAULT_AREA;state.addressLabel='현재 위치';state.coords=coords;state.sortByDistance=true;sessionStorage.setItem('rc6LocationActive','1');document.querySelector('#locationText').textContent='현재 위치';hardClose();setTimeout(showHomeAfterAddressCommit,60);}
-const rc6HeroDataPromise=Promise.all([fetchJson('data/store-coordinates.json',{}),fetchJson('data/banner-targets.json?v=notion-banner-15',{}),fetchJson('data/store-priority.json',{}),fetchJson('data/hero-campaigns.json?v=tamnaneun-canonical-1',{campaigns:{},virtualStores:{}}),rc6LoadRainMode()]);
+const rc6HeroDataPromise=Promise.all([fetchJson('data/store-coordinates.json',{}),fetchJson('data/banner-targets.json?v=notion-banner-15',{}),fetchJson('data/store-priority.json',{}),fetchJson('data/hero-campaigns.json?v=tamnaneun-menu-hero-3',{campaigns:{},virtualStores:{}}),rc6LoadRainMode()]);
 async function rc6Initialize(){await window.daedongCatalogReady;[rc6Coordinates,rc6BannerTargets,rc6StorePriority,rc6HeroCampaigns,rc6RainMode]=await rc6HeroDataPromise;rc6PrepareCampaignStores();await rc6ApplyCoordinates();rc6ApplyStorePriority();rc4StoreHasRealCoordinates=rc6Verified;fxDistance=store=>state.coords&&rc6Verified(store)?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;const originalRank=fxRankStores,originalFiltered=filteredStores,originalRenderStores=renderStores;fxRankStores=spec=>rc6LocationRankedRail(spec,originalRank);filteredStores=()=>{const base=originalFiltered(),orderedIds=(!state.query&&!state.brandId)?categoryPriorityOrderedStoreIds(state.category):[];if(!orderedIds.length)return applyCategoryPriorityOverrides(rc6RankCandidatesByCustomerLocation(base),state.category);const existing=new Set(base.map(store=>String(store.id))),forced=orderedIds.map(id=>stores.find(store=>String(store.id)===id)).filter(store=>store&&!existing.has(String(store.id))&&fxVisible(store)&&storeMatchesCategory(store,state.category));return applyCategoryPriorityOverrides(rc6RankCandidatesByCustomerLocation([...forced,...base]),state.category);};rc5CategoryStores=rc6CategoryStoresByCustomerLocation;rc4CategoryList=rc6CategoryStoresByCustomerLocation;rc6InstallChannelLocationSorting();useCurrentLocation=rc6UseCurrentLocation;commitAddressSelection=rc6CommitAddress;renderStores=function rc6RenderStores(options={}){rc6RenderHero();return originalRenderStores(options);};const preservePager=window.daedongHasHomeInteraction?.()===true,pagerSnapshot=preservePager?window.daedongCaptureStorePagerState?.():null;rc6RenderHero();rc6WatchHeroDay();rc6HeroEvents();rc6Gulls();renderStores({resetCount:!preservePager});if(preservePager)window.daedongRestoreStorePagerState?.(pagerSnapshot);fxRenderRails();const build=document.querySelector('.build-mark');if(build){build.hidden=true;build.textContent='';}}

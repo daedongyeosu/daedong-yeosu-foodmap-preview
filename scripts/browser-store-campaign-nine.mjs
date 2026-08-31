@@ -34,8 +34,18 @@ const stores = campaignDefinitions.map((entry, index) => ({
   categories: ['음식점'],
   rawIndex: index,
   hasMenu: false,
-  channelKeys: ['phone'],
-  routes: [{ name: '전화주문', url: 'tel:0610000000', enabled: true }],
+  channelKeys: entry.storeId === '421ecef35a879687'
+    ? ['mukkebi', 'ddangyo', 'phone', 'yogiyo', 'coupang']
+    : ['phone'],
+  routes: entry.storeId === '421ecef35a879687'
+    ? [
+        { name: '먹깨비', key: 'mukkebi', url: 'https://mukkebi.com/store', enabled: true },
+        { name: '땡겨요', key: 'ddangyo', url: 'https://ddangyo.example/store', enabled: true },
+        { name: '전화주문', key: 'phone', url: 'tel:0610000000', enabled: true },
+        { name: '요기요', key: 'yogiyo', url: 'https://yogiyo.example/store', enabled: true },
+        { name: '쿠팡이츠', key: 'coupang', url: 'https://coupangeats.example/store', enabled: true },
+      ]
+    : [{ name: '전화주문', key: 'phone', url: 'tel:0610000000', enabled: true }],
 }));
 const storeById = Object.fromEntries(stores.map((store) => [store.id, store]));
 const transparentPng = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M/wHwAEAQH/2TBKAAAAAElFTkSuQmCC', 'base64');
@@ -109,6 +119,27 @@ try {
     const slideIndexes = await campaignSlides.evaluateAll((slides) => slides.map((slide) => slide.dataset.heroIndex));
     const slideCount = new Set(slideIndexes).size;
     if (slideCount !== expectedSlides) throw new Error(`${entry.name}: 전용 배너 수가 ${slideCount}/${expectedSlides}입니다.`);
+    if (entry.storeId === '421ecef35a879687') {
+      const renderedCopy = await campaignSlides.evaluateAll((slides) => {
+        const unique = new Map();
+        slides.forEach(slide => {
+          const index = Number(slide.dataset.heroIndex);
+          if (!unique.has(index)) unique.set(index, {
+            index,
+            storeName: slide.querySelector('.rc6-store-hero-copy strong')?.textContent?.trim() || '',
+            menuName: slide.querySelector('.rc6-store-hero-copy > span')?.textContent?.trim() || '',
+          });
+        });
+        return [...unique.values()].sort((a, b) => a.index - b.index);
+      });
+      const expectedMenuNames = campaign.slides.map(slide => slide.meta);
+      if (renderedCopy.some(item => item.storeName !== campaign.title)) {
+        throw new Error('탐나는피자 전용 배너의 위쪽 가게명이 정확하지 않습니다.');
+      }
+      if (JSON.stringify(renderedCopy.map(item => item.menuName)) !== JSON.stringify(expectedMenuNames)) {
+        throw new Error('탐나는피자 전용 배너의 아래쪽 메뉴명이 사진 순서와 일치하지 않습니다.');
+      }
+    }
 
     const first = page.locator('.rc6-campaign-hero[data-hero-index="0"]').first();
     const box = await first.boundingBox();
@@ -144,6 +175,52 @@ try {
     }
     await page.close();
   }
+
+  const legacyEntryId = '2da10529e7fb987c';
+  const canonicalStoreId = '421ecef35a879687';
+  const legacyPage = await context.newPage();
+  activePage = legacyPage;
+  await legacyPage.goto(`${baseURL}?store=${legacyEntryId}`, { waitUntil: 'domcontentloaded' });
+  await legacyPage.locator(`#modal:not([hidden]) .store-detail[data-store-id="${canonicalStoreId}"]`).waitFor({
+    state: 'visible',
+    timeout: 15000,
+  });
+  const initialLegacyHome = await legacyPage.evaluate((storeId) => ({
+    slideCount: new Set([...document.querySelectorAll('#heroTrack > .hero-slide')].map(slide => slide.dataset.heroIndex)).size,
+    campaignSlideCount: new Set([...document.querySelectorAll(`#heroTrack > .rc6-campaign-hero[data-rc6-banner-store="${storeId}"]`)].map(slide => slide.dataset.heroIndex)).size,
+    foreignSlideCount: document.querySelectorAll(`#heroTrack > .hero-slide:not(.rc6-campaign-hero), #heroTrack > .rc6-campaign-hero:not([data-rc6-banner-store="${storeId}"])`).length,
+    openedStoreId: document.querySelector('#modal:not([hidden]) .store-detail')?.dataset.storeId || '',
+  }), canonicalStoreId);
+  const tamnaneunCampaign = heroData.campaigns[canonicalStoreId];
+  const expectedTamnaneunSlides = tamnaneunCampaign.slides?.length || tamnaneunCampaign.images?.length || 0;
+  if (initialLegacyHome.openedStoreId !== canonicalStoreId) {
+    throw new Error('탐나는피자 이전 QR이 통합 가게 상세를 열지 못합니다.');
+  }
+  if (initialLegacyHome.slideCount !== expectedTamnaneunSlides || initialLegacyHome.campaignSlideCount !== expectedTamnaneunSlides || initialLegacyHome.foreignSlideCount) {
+    throw new Error('탐나는피자 이전 QR의 홈 배너에 다른 광고가 섞였습니다.');
+  }
+  await legacyPage.locator('#modal .modal-close').tap();
+  await legacyPage.waitForFunction((storeId) => (
+    document.querySelector('#modal')?.hidden
+    && new URLSearchParams(location.search).get('hero') === storeId
+    && !new URLSearchParams(location.search).has('store')
+  ), canonicalStoreId, { timeout: 5000 });
+  const closedLegacyHome = await legacyPage.evaluate((storeId) => ({
+    search: location.search,
+    slideCount: new Set([...document.querySelectorAll('#heroTrack > .hero-slide')].map(slide => slide.dataset.heroIndex)).size,
+    campaignSlideCount: new Set([...document.querySelectorAll(`#heroTrack > .rc6-campaign-hero[data-rc6-banner-store="${storeId}"]`)].map(slide => slide.dataset.heroIndex)).size,
+    foreignSlideCount: document.querySelectorAll(`#heroTrack > .hero-slide:not(.rc6-campaign-hero), #heroTrack > .rc6-campaign-hero:not([data-rc6-banner-store="${storeId}"])`).length,
+  }), canonicalStoreId);
+  if (closedLegacyHome.slideCount !== expectedTamnaneunSlides || closedLegacyHome.campaignSlideCount !== expectedTamnaneunSlides || closedLegacyHome.foreignSlideCount) {
+    throw new Error('탐나는피자 상세를 닫은 뒤 전용 배너가 일반 광고로 바뀝니다.');
+  }
+  report.legacyTamnaneunQr = {
+    legacyEntryId,
+    canonicalStoreId,
+    initialLegacyHome,
+    closedLegacyHome,
+  };
+  await legacyPage.close();
   report.success = report.stores.length === manifest.campaigns.length && report.errors.length === 0;
 } catch (error) {
   report.failure = error.stack || String(error);
