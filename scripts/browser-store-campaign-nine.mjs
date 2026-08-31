@@ -23,7 +23,11 @@ for (const campaign of Object.values(heroData.campaigns)) {
     }
   }
 }
-const stores = campaignDefinitions.map((entry, index) => ({
+// The deployed preview catalog can expose a newly unified store detail before
+// the catalog list itself is refreshed. Omit Tamnaneun's canonical ID from the
+// fixture so this check exercises the campaign virtual-store fallback used by
+// real QR visitors instead of accidentally masking it with fixture data.
+const stores = campaignDefinitions.filter(entry => entry.storeId !== '421ecef35a879687').map((entry, index) => ({
   store_id: entry.storeId,
   id: entry.storeId,
   name: entry.name,
