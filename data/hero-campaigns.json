@@ -44,15 +44,22 @@
       "label": "탐나는피자 여수점 전용 대동여수음식지도",
       "title": "탐나는피자 여수점",
       "meta": "문수동 · 피자",
-      "images": [
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/9c49604757b5dcee52b315c845402bf42273b19121b551e0349dbd58d766cd1e.jpg",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/6b4f907773039925c62a37dffdea48fa9021a18f2c3db1d95ba02058acfa1a81.jpg",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/3fbc224b190e2973c52727c01795ffc583cef86270bee534c863438f36d096c1.jpg",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/8105befa7b40a27957a3c02f73889f376e12de4859f6c5aac4e2325d3086f256.jpg",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/4b2b64e46389724445d671290c2b4099fac3e9796d6216e68841577022e50dc8.jpg",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/42a0beb19ef67eb5b88d22653585f70f592e6b6de597126f35810a87bee92fe7.jpg"
-      ],
-      "copySlides": [1]
+      "slides": [
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/9c49604757b5dcee52b315c845402bf42273b19121b551e0349dbd58d766cd1e.jpg","title":"탐나는피자 여수점","meta":"TamNa 피자(1+1) 두판+음료 set"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/6b4f907773039925c62a37dffdea48fa9021a18f2c3db1d95ba02058acfa1a81.jpg","title":"탐나는피자 여수점","meta":"TamNa 반반"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/8105befa7b40a27957a3c02f73889f376e12de4859f6c5aac4e2325d3086f256.jpg","title":"탐나는피자 여수점","meta":"TamNa 4가지맛"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/4b2b64e46389724445d671290c2b4099fac3e9796d6216e68841577022e50dc8.jpg","title":"탐나는피자 여수점","meta":"TamNa +사이드+음료 세트"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/bb6d884e639c9bb478aa2f06e4815b9f9103f169dd09d9dbd220d8a410b12b18.jpg","title":"탐나는피자 여수점","meta":"탐나는 치즈피자"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/5820be276415b104daeeb09256e93fdd557135cf547b123192e1b2927a5b64fb.jpg","title":"탐나는피자 여수점","meta":"탐나는 고르곤졸라+꿀소스1P"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/44111ced436f84caeb9f75b918db276294e8d9c0447ca2e3179f5f39e5c652a9.jpg","title":"탐나는피자 여수점","meta":"탐나는 알로하와이안"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/54843a3cd42bc423c1e8f0bf8bd6bd28cee46d6640971e285cc16cb5c1744afb.jpg","title":"탐나는피자 여수점","meta":"탐나는 슈퍼 콤비네이션"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/62620a5bbc31d1979493220560badd690f8f60ac890939dc6f04650ea4af5efb.jpg","title":"탐나는피자 여수점","meta":"탐나는 포테이토"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/c8fb188ab362f17ff8b7aeeded8512d20c146739da6b5a0e22120478ba7024fe.jpg","title":"탐나는피자 여수점","meta":"탐나는 스위트 고구마 피자"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/737a9bfd2f8ab5ca61a3fe1a7d93c9480e4b9cf2eadc0c2097e180aedb8fbe96.jpg","title":"탐나는피자 여수점","meta":"탐나는 프렌치 핫독피자"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/8ece837dc41c99c0e4c4345fc250b0535c39e10367f7d1bf5955bf4af0681ddc.jpg","title":"탐나는피자 여수점","meta":"탐나는 소불고기 피자"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/fe8a64586e36a69c3ec2cee713ff7a805370d160cc4b6ac20ba0d9f62f182db6.jpg","title":"탐나는피자 여수점","meta":"탐나는 화이트쉬림플렉스"},
+        {"storeId":"421ecef35a879687","image":"https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/c0895dcff040753eff915522885e6f633b545d5e3aacb89fa7331a3c1199ce3c.jpg","title":"탐나는피자 여수점","meta":"탐나는 칠리치킨 쉬림프"}
+      ]
     },
     "068b2ae8fe32874a": {
       "storeId": "068b2ae8fe32874a",

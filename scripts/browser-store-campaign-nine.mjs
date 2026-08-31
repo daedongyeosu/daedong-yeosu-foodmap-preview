@@ -119,6 +119,27 @@ try {
     const slideIndexes = await campaignSlides.evaluateAll((slides) => slides.map((slide) => slide.dataset.heroIndex));
     const slideCount = new Set(slideIndexes).size;
     if (slideCount !== expectedSlides) throw new Error(`${entry.name}: 전용 배너 수가 ${slideCount}/${expectedSlides}입니다.`);
+    if (entry.storeId === '421ecef35a879687') {
+      const renderedCopy = await campaignSlides.evaluateAll((slides) => {
+        const unique = new Map();
+        slides.forEach(slide => {
+          const index = Number(slide.dataset.heroIndex);
+          if (!unique.has(index)) unique.set(index, {
+            index,
+            storeName: slide.querySelector('.rc6-store-hero-copy strong')?.textContent?.trim() || '',
+            menuName: slide.querySelector('.rc6-store-hero-copy > span')?.textContent?.trim() || '',
+          });
+        });
+        return [...unique.values()].sort((a, b) => a.index - b.index);
+      });
+      const expectedMenuNames = campaign.slides.map(slide => slide.meta);
+      if (renderedCopy.some(item => item.storeName !== campaign.title)) {
+        throw new Error('탐나는피자 전용 배너의 위쪽 가게명이 정확하지 않습니다.');
+      }
+      if (JSON.stringify(renderedCopy.map(item => item.menuName)) !== JSON.stringify(expectedMenuNames)) {
+        throw new Error('탐나는피자 전용 배너의 아래쪽 메뉴명이 사진 순서와 일치하지 않습니다.');
+      }
+    }
 
     const first = page.locator('.rc6-campaign-hero[data-hero-index="0"]').first();
     const box = await first.boundingBox();
@@ -170,7 +191,8 @@ try {
     foreignSlideCount: document.querySelectorAll(`#heroTrack > .hero-slide:not(.rc6-campaign-hero), #heroTrack > .rc6-campaign-hero:not([data-rc6-banner-store="${storeId}"])`).length,
     openedStoreId: document.querySelector('#modal:not([hidden]) .store-detail')?.dataset.storeId || '',
   }), canonicalStoreId);
-  const expectedTamnaneunSlides = heroData.campaigns[canonicalStoreId].images.length;
+  const tamnaneunCampaign = heroData.campaigns[canonicalStoreId];
+  const expectedTamnaneunSlides = tamnaneunCampaign.slides?.length || tamnaneunCampaign.images?.length || 0;
   if (initialLegacyHome.openedStoreId !== canonicalStoreId) {
     throw new Error('탐나는피자 이전 QR이 통합 가게 상세를 열지 못합니다.');
   }
