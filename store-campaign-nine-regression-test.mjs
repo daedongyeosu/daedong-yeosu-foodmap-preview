@@ -31,8 +31,9 @@ for (const [storeId, name] of expected) {
   const item = manifest.campaigns.find((entry) => entry.storeId === storeId);
   const campaign = heroData.campaigns[storeId];
   assert.ok(item, `${name}: campaign link is missing.`);
-  assert.equal(item.url, `https://daedongmap.com/?hero=${storeId}`, `${name}: production link is wrong.`);
-  assert.equal(item.previewUrl, `https://preview.daedongmap.com/?hero=${storeId}`, `${name}: preview link is wrong.`);
+  const entryParam = item.entryMode === 'store' ? 'store' : 'hero';
+  assert.equal(item.url, `https://daedongmap.com/?${entryParam}=${storeId}`, `${name}: production link is wrong.`);
+  assert.equal(item.previewUrl, `https://preview.daedongmap.com/?${entryParam}=${storeId}`, `${name}: preview link is wrong.`);
   assert.ok(campaign, `${name}: hero campaign is missing.`);
   assert.equal(campaign.storeId, storeId, `${name}: hero campaign points at another store.`);
   assert.ok((campaign.images?.length || campaign.slides?.length) > 0, `${name}: hero campaign has no photo.`);
