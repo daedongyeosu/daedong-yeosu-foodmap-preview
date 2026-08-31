@@ -84,6 +84,6 @@ assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*store-card-intent-2/);
 assert.match(finalExperience, /fxRc3Script\.src\+='-atomic-rail-refresh-1-store-card-intent-2-return-activation-atomic-1-return-intent-cancel-1-return-early-tap-bridge-1-order-sheet-before-history-1-restored-button-direct-touch-1'/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*store-card-intent-2/);
 assert.match(html, /store-service-info\.js\?v=[^"\n]*store-card-intent-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v29-menu-placeholder-logo'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v30-coupang-photo-quarantine'/);
 
 console.log('store card intentional navigation isolation regression: PASS');
