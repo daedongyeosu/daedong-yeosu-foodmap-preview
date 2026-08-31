@@ -27,8 +27,8 @@ assert.ok(virtualStore.routes.some(route => route.key === 'yogiyo' && /^https:\/
 assert.ok(virtualStore.routes.some(route => route.key === 'phone' && route.url === 'tel:0616520908'), '전화주문 경로가 필요합니다.');
 
 const link = links.campaigns.find(entry => entry.storeId === canonicalId);
-assert.equal(link?.url, `https://daedongmap.com/?hero=${canonicalId}`);
-assert.equal(link?.previewUrl, `https://preview.daedongmap.com/?hero=${canonicalId}`);
+assert.equal(link?.url, `https://daedongmap.com/?store=${canonicalId}`);
+assert.equal(link?.previewUrl, `https://preview.daedongmap.com/?store=${canonicalId}`);
 
 assert.equal(menu.storeId, canonicalId);
 assert.equal(menu.items.length, 56, '수집된 전체 메뉴 56개를 전용 음식지도에서 확인할 수 있어야 합니다.');

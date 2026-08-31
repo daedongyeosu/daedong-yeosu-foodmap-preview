@@ -19,8 +19,9 @@
     {
       "storeId": "2da10529e7fb987c",
       "name": "탐나는피자 여수점",
-      "url": "https://daedongmap.com/?hero=2da10529e7fb987c",
-      "previewUrl": "https://preview.daedongmap.com/?hero=2da10529e7fb987c",
+      "entryMode": "store",
+      "url": "https://daedongmap.com/?store=2da10529e7fb987c",
+      "previewUrl": "https://preview.daedongmap.com/?store=2da10529e7fb987c",
       "qrAsset": "assets/qr/tamnaneun-pizza-yeosu.svg"
     },
     {
