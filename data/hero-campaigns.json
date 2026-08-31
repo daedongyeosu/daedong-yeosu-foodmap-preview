@@ -34,19 +34,19 @@
         13
       ]
     },
-    "421ecef35a879687": {
-      "storeId": "421ecef35a879687",
+    "2da10529e7fb987c": {
+      "storeId": "2da10529e7fb987c",
       "slug": "tamnaneun-pizza-yeosu",
       "label": "탐나는피자 여수점 전용 대동여수음식지도",
       "title": "탐나는피자 여수점",
       "meta": "문수동 · 피자",
       "images": [
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/727782359dedf9c87870.webp",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/40d8caaf14e6c6cedbac.webp",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/dd59df14bf58936ae2e1.webp",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/13453ed634accd984d6e.webp",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/69cf23cd284a756817ad.webp",
-        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/asset/assets/yogiyo-menu/421ecef35a879687/853ea1801d96ed5fc802.webp"
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/9c49604757b5dcee52b315c845402bf42273b19121b551e0349dbd58d766cd1e.jpg",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/6b4f907773039925c62a37dffdea48fa9021a18f2c3db1d95ba02058acfa1a81.jpg",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/3fbc224b190e2973c52727c01795ffc583cef86270bee534c863438f36d096c1.jpg",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/8105befa7b40a27957a3c02f73889f376e12de4859f6c5aac4e2325d3086f256.jpg",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/4b2b64e46389724445d671290c2b4099fac3e9796d6216e68841577022e50dc8.jpg",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/42a0beb19ef67eb5b88d22653585f70f592e6b6de597126f35810a87bee92fe7.jpg"
       ],
       "copySlides": [1]
     },
@@ -197,6 +197,39 @@
           "meta": "문수동 · 한식·면요리"
         }
       ]
+    }
+  },
+  "virtualStores": {
+    "2da10529e7fb987c": {
+      "name": "탐나는피자 여수점",
+      "district": "문수동",
+      "category": "피자",
+      "categories": ["피자"],
+      "address": "전라남도 여수시 문수동 83-14 1층",
+      "phone": "061-652-0908",
+      "hasMenu": true,
+      "trustedDetail": true,
+      "image": "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/9c49604757b5dcee52b315c845402bf42273b19121b551e0349dbd58d766cd1e.jpg",
+      "images": [
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/9c49604757b5dcee52b315c845402bf42273b19121b551e0349dbd58d766cd1e.jpg",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/6b4f907773039925c62a37dffdea48fa9021a18f2c3db1d95ba02058acfa1a81.jpg",
+        "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/8105befa7b40a27957a3c02f73889f376e12de4859f6c5aac4e2325d3086f256.jpg"
+      ],
+      "routes": [
+        {
+          "name": "요기요",
+          "key": "yogiyo",
+          "url": "https://ws.yogiyo.co.kr/n7tto2",
+          "enabled": true
+        },
+        {
+          "name": "전화주문",
+          "key": "phone",
+          "url": "tel:0616520908",
+          "enabled": true
+        }
+      ],
+      "channelKeys": ["yogiyo", "phone"]
     }
   }
 }

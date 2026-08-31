@@ -17,6 +17,9 @@
   const CURATED_MENU_IMAGE_ROOTS = Object.freeze({
     a089d1d54720b48e: 'store-menu-content/a089d1d54720b48e'
   });
+  const STATIC_MENU_URLS = Object.freeze({
+    '2da10529e7fb987c': 'data/tamnaneun-pizza-menu.json?v=tamnaneun-canonical-1'
+  });
 
   function safeStoreId(value) {
     const id = String(value || '').toLowerCase();
@@ -167,6 +170,14 @@
       if (!value) throw new Error('해당 고흥 가게 메뉴자료를 확인 중입니다.');
       return value;
     });
+    const staticUrl = STATIC_MENU_URLS[id];
+    if (staticUrl) {
+      return fetch(staticUrl, {cache: 'no-store', credentials: 'same-origin', signal: options.signal})
+        .then(response => {
+          if (!response.ok) throw new Error(`메뉴 자료를 불러오지 못했습니다. (${response.status})`);
+          return response.json();
+        });
+    }
     return request(`/api/store/${id}/menu`, {cacheKey: `menu:${id}`, ...options})
       .then(payload => restoreCuratedMenuImages(id, payload));
   };
