@@ -35,11 +35,28 @@
     '"': '&quot;'
   })[char]);
 
+  function isQuarantinedMenuImage(value) {
+    const clean = String(value || '').split(/[?#]/, 1)[0].replace(/\\/g, '/');
+    return /\/api\/media\/coupang-menu\/v1\/[a-f0-9]{64}\.jpg$/i.test(clean);
+  }
+
+  function menuWithoutQuarantinedImages(menu) {
+    if (!menu || typeof menu !== 'object') return menu;
+    return {
+      ...menu,
+      mainImage: isQuarantinedMenuImage(menu.mainImage) ? '' : menu.mainImage,
+      items: (Array.isArray(menu.items) ? menu.items : []).map(item => (
+        isQuarantinedMenuImage(item?.image) ? {...item, image: ''} : item
+      ))
+    };
+  }
+
   function menuHeroImage(menu) {
     const candidates = [menu?.mainImage, ...(Array.isArray(menu?.items) ? menu.items.map(item => item?.image) : [])];
     return candidates
       .map(value => String(value || '').trim())
       .find(image => image
+        && !isQuarantinedMenuImage(image)
         && !/^(?:\.\/|\/)?assets\/logo\.png(?:[?#].*)?$/i.test(image)
         && !/(?:^|\/)assets\/app-icons\/daedong-app-icon(?:-maskable)?-(?:192|512)\.png(?:[?#].*)?$/i.test(image))
       || OFFICIAL_MENU_PLACEHOLDER_IMAGE;
@@ -92,8 +109,9 @@
     if (menuCache.has(storeId)) return menuCache.get(storeId);
     if (menuPending.has(storeId)) return menuPending.get(storeId);
     const pending = window.daedongDataApi.menu(storeId).then(menu => {
-      menuCache.set(storeId, menu);
-      return menu;
+      const safeMenu = menuWithoutQuarantinedImages(menu);
+      menuCache.set(storeId, safeMenu);
+      return safeMenu;
     }).finally(() => menuPending.delete(storeId));
     menuPending.set(storeId, pending);
     return pending;

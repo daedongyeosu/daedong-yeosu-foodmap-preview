@@ -1231,10 +1231,15 @@ function overviewMenuContextText(entry) {
       : null;
     const rawImage = String(entry.store?.legacyImage || entry.store?.legacyImages?.[0] || '').trim();
     const resolvedStoreImage = String(resolvedPhoto?.src || rawImage).trim();
-    const matchedMenuImage = String(menuMatches.find(item => item.image)?.image || '').trim();
+    const matchedMenuImage = String(menuMatches.find(item => item.image
+      && !(typeof isQuarantinedCollectedPhoto === 'function' && isQuarantinedCollectedPhoto(item.image)))?.image || '').trim();
     const rawIsOfficialPlaceholder = typeof isOfficialStorePlaceholderImage === 'function'
       && isOfficialStorePlaceholderImage(resolvedStoreImage);
-    const storeImage = rawIsOfficialPlaceholder ? matchedMenuImage : (resolvedStoreImage || matchedMenuImage);
+    const rawIsQuarantinedPhoto = typeof isQuarantinedCollectedPhoto === 'function'
+      && isQuarantinedCollectedPhoto(resolvedStoreImage);
+    const storeImage = rawIsOfficialPlaceholder || rawIsQuarantinedPhoto
+      ? matchedMenuImage
+      : (resolvedStoreImage || matchedMenuImage);
     const storeImageSource = storeImage === matchedMenuImage
       ? 'verified-menu-search-fallback'
       : String(resolvedPhoto?.source || (rawImage ? 'verified-legacy-direct-file' : '')).trim();

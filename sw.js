@@ -1,7 +1,7 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v30-food-photo-promotion';
-const RUNTIME_CACHE = 'daedong-yeosu-runtime-v3-food-photo-promotion';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v31-yogiyo-representative-only';
+const RUNTIME_CACHE = 'daedong-yeosu-runtime-v4-yogiyo-representative-only';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [
   '/',
