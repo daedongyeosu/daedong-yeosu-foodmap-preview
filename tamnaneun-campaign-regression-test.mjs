@@ -12,6 +12,19 @@ const rc6 = readFileSync('rc6-fixes.js', 'utf8');
 assert.ok(campaigns.campaigns[canonicalId], '탐나는피자 캠페인은 실제 가게 ID를 사용해야 합니다.');
 assert.equal(campaigns.campaigns[legacyQrId], undefined, '주문경로가 일부뿐인 이전 QR ID를 독립 캠페인으로 남기면 안 됩니다.');
 assert.deepEqual(campaigns.campaigns[canonicalId].entryStoreIds, [canonicalId, legacyQrId], '이전 QR도 통합 캠페인으로 교정되어야 합니다.');
+const virtualStore = campaigns.virtualStores[canonicalId];
+assert.ok(virtualStore, '실제 목록에 통합 ID가 늦게 반영되어도 전용 화면은 통합 가게를 사용해야 합니다.');
+assert.equal(campaigns.virtualStores[legacyQrId], undefined, '부분 주문경로만 가진 이전 가게를 전용 화면의 기준으로 사용하면 안 됩니다.');
+assert.deepEqual(
+  new Set(virtualStore.channelKeys),
+  new Set(['mukkebi', 'ddangyo', 'yogiyo', 'coupang', 'baemin', 'phone']),
+  '전용 가게 보조정보에는 확인된 전체 주문경로가 있어야 합니다.',
+);
+assert.deepEqual(
+  new Set(virtualStore.routes.filter(route => route.enabled).map(route => route.key)),
+  new Set(virtualStore.channelKeys),
+  '주문경로 아이콘과 실제 연결 주소가 서로 일치해야 합니다.',
+);
 const heroSlides = campaigns.campaigns[canonicalId].slides;
 assert.equal(heroSlides.length, 14, '탐나는피자 전용 메인배너는 일반 메인과 같은 14개 카드로 구성해야 합니다.');
 assert.equal(campaigns.campaigns[canonicalId].images, undefined, '메뉴명이 없는 사진 배열을 사용하면 안 됩니다.');

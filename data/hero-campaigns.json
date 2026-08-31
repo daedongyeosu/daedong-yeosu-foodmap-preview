@@ -211,7 +211,7 @@
     }
   },
   "virtualStores": {
-    "2da10529e7fb987c": {
+    "421ecef35a879687": {
       "name": "탐나는피자 여수점",
       "district": "문수동",
       "category": "피자",
@@ -228,9 +228,33 @@
       ],
       "routes": [
         {
+          "name": "먹깨비",
+          "key": "mukkebi",
+          "url": "http://mukkebi.com/shop.php?data=224116",
+          "enabled": true
+        },
+        {
+          "name": "땡겨요",
+          "key": "ddangyo",
+          "url": "https://fdofd.ddangyo.com/gateway1.html?cDMgeag",
+          "enabled": true
+        },
+        {
           "name": "요기요",
           "key": "yogiyo",
-          "url": "https://ws.yogiyo.co.kr/n7tto2",
+          "url": "https://ws.yogiyo.co.kr/59a3je",
+          "enabled": true
+        },
+        {
+          "name": "쿠팡이츠",
+          "key": "coupang",
+          "url": "https://web.coupangeats.com/share?storeId=1051128&dishId&key=2cec49f2-20b7-4681-8d76-299ae7dd3633",
+          "enabled": true
+        },
+        {
+          "name": "배달의민족",
+          "key": "baemin",
+          "url": "https://s.baemin.com/bf000KDmCaZqf",
           "enabled": true
         },
         {
@@ -240,7 +264,7 @@
           "enabled": true
         }
       ],
-      "channelKeys": ["yogiyo", "phone"]
+      "channelKeys": ["mukkebi", "ddangyo", "yogiyo", "coupang", "baemin", "phone"]
     }
   }
 }
