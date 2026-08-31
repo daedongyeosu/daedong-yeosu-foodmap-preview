@@ -1168,6 +1168,7 @@ body.store-menu-open {
   }
   .store-menu-preview.menu-search-active .store-menu-sticky-actions {
     display: none;
+    pointer-events: none;
   }
   .menu-order-sheet {
     padding: 0;
