@@ -34,8 +34,12 @@
         13
       ]
     },
-    "2da10529e7fb987c": {
-      "storeId": "2da10529e7fb987c",
+    "421ecef35a879687": {
+      "storeId": "421ecef35a879687",
+      "entryStoreIds": [
+        "421ecef35a879687",
+        "2da10529e7fb987c"
+      ],
       "slug": "tamnaneun-pizza-yeosu",
       "label": "탐나는피자 여수점 전용 대동여수음식지도",
       "title": "탐나는피자 여수점",
