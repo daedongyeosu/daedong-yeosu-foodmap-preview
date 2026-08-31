@@ -875,6 +875,10 @@ function isOfficialStorePlaceholderImage(path) {
   return /(?:^|\/)assets\/logo\.png$/i.test(clean)
     || /(?:^|\/)assets\/app-icons\/daedong-app-icon(?:-maskable)?-(?:192|512)\.png$/i.test(clean);
 }
+function isQuarantinedCollectedPhoto(path) {
+  const clean = String(path || '').split(/[?#]/, 1)[0].replace(/\\/g, '/');
+  return /\/api\/media\/coupang-menu\/v1\/[a-f0-9]{64}\.jpg$/i.test(clean);
+}
 function photoCropAuditAttributes(path) {
   return isYogiyoMenuPhotoPath(path)
     ? ' crossorigin="anonymous" data-photo-crop-audit="yogiyo-menu"'
@@ -1417,7 +1421,7 @@ class PhotoResolver {
   }
   validPath(path, store) {
     const value = String(path || '').trim();
-    return Boolean(value && !isKnownBlankDetailPhotoPath(value) && !isOfficialStorePlaceholderImage(value) && !this.suspiciousPath(value, store) && /\.(png|jpe?g|webp|gif|avif)(\?|$)/i.test(value) && !/\.(pdf|docx?|xlsx?|txt)(\?|$)/i.test(value));
+    return Boolean(value && !isKnownBlankDetailPhotoPath(value) && !isOfficialStorePlaceholderImage(value) && !isQuarantinedCollectedPhoto(value) && !this.suspiciousPath(value, store) && /\.(png|jpe?g|webp|gif|avif)(\?|$)/i.test(value) && !/\.(pdf|docx?|xlsx?|txt)(\?|$)/i.test(value));
   }
   usablePaths(paths, store) {
     const failed = store?.__failedPhotoPaths instanceof Set ? store.__failedPhotoPaths : new Set();

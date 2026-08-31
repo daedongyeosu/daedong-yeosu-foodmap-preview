@@ -17,9 +17,9 @@ assert.match(menu, /assets\\\/app-icons\\\/daedong-app-icon/);
 assert.match(menu, /\|\| OFFICIAL_MENU_PLACEHOLDER_IMAGE/);
 assert.match(menu, /const entryImage = photoResolver\?\.resolve\?\.\(store\)\?\.src \|\| '';/);
 
-assert.match(service, /const matchedMenuImage = String\(menuMatches\.find\(item => item\.image\)\?\.image \|\| ''\)\.trim\(\)/);
-assert.match(service, /rawIsOfficialPlaceholder \? matchedMenuImage/);
+assert.match(service, /const matchedMenuImage = String\(menuMatches\.find\(item => item\.image[\s\S]*?\)\?\.image \|\| ''\)\.trim\(\)/);
+assert.match(service, /rawIsOfficialPlaceholder \|\| rawIsQuarantinedPhoto/);
 assert.match(index, /food-photo-promotion-1/);
-assert.match(sw, /app-shell-v30-food-photo-promotion/);
+assert.match(sw, /app-shell-v31-yogiyo-representative-only/);
 
 console.log('food photo promotion regression passed');

@@ -45,7 +45,7 @@ assert.match(service, /const resolvedPhoto = typeof photoResolver !== 'undefined
   'the integrated store finder must use the shared photo manifest resolver');
 assert.match(service, /const resolvedStoreImage = String\(resolvedPhoto\?\.src \|\| rawImage\)\.trim\(\)/,
   'manifest photos must win while legacy photos remain a safe fallback');
-assert.match(service, /rawIsOfficialPlaceholder \? matchedMenuImage : \(resolvedStoreImage \|\| matchedMenuImage\)/,
+assert.match(service, /rawIsOfficialPlaceholder \|\| rawIsQuarantinedPhoto[\s\S]*?\? matchedMenuImage[\s\S]*?: \(resolvedStoreImage \|\| matchedMenuImage\)/,
   'the official app logo must yield to a verified food photo in search results');
 assert.match(service, /data-photo-kind="card" data-photo-store-id="\$\{escapeHtml\(entry\.storeId\)\}" data-photo-source="\$\{escapeHtml\(storeImageSource\)\}"/,
   'finder photos must participate in the shared broken-image recovery path');
