@@ -19,6 +19,14 @@ assert.match(html, /rail-adjacent-visual-dedupe-1/,
   'The deployed page must invalidate the adjacent recommendation dedupe cache.');
 assert.match(experience, /rc2-fixes\.js\?v=[^'\n]*rail-adjacent-visual-dedupe-1/,
   'The RC2 recommendation layer must load the adjacent recommendation dedupe fix.');
+assert.match(html, /photo-qualified-new-store-1/,
+  'The deployed page must invalidate the unverified new-store photo cache.');
+assert.match(experience, /rc2-fixes\.js\?v=[^'\n]*photo-qualified-new-store-1/,
+  'The RC2 recommendation layer must load the verified-photo new-store filter.');
+assert.match(source, /spec\.kind\s*!==\s*'new'\s*\|\|\s*rc2HasVerifiedRecommendationPhoto\(store\)/,
+  'The new-store rail must only accept stores with a verified customer-facing photo.');
+assert.match(locationSource, /spec\.kind==='new'\?stores\.filter\(store=>fxVisible\(store\)&&rc2HasVerifiedRecommendationPhoto\(store\)\)/,
+  'Location ranking must not reintroduce image-less stores into the new-store rail.');
 assert.doesNotMatch(source, /spec\.kind\s*!==\s*'new'[\s\S]{0,120}?globallyUsed/,
   'New-store rails must prefer stores not already shown before reusing earlier cards.');
 assert.match(locationSource, /spec\.kind\s*===\s*'local'[\s\S]*?storeHasChannel\(store,key\)/,
@@ -55,7 +63,8 @@ const context = {
   rc2ApplyManagedRegionPriority: list => [...list],
   rc6OwnershipTier: store => store.tier ?? 0,
   rc2BrandKey: store => `brand-${store.id}`,
-  fxPhoto: store => store.photo
+  fxPhoto: store => store.photo,
+  rc2HasVerifiedRecommendationPhoto: store => Boolean(store.photo && !store.placeholder && !store.quarantined)
 };
 vm.createContext(context);
 vm.runInContext(`${candidateFunction};${diversifyFunction};this.pick=rc2RailCandidates;this.diversify=rc2DiversifyRailLead;`, context);
@@ -86,6 +95,16 @@ assert.equal(firstRail.length, 8);
 assert.equal(newRail.length, 8);
 assert.equal(newRail.filter(store => firstRail.some(previous => previous.id === store.id)).length, 0,
   'The new-store rail must use unseen candidates before repeating an earlier card.');
+
+context.fxRankStores = () => [
+  {id: 'verified', photo: 'verified-food.jpg', rc6LocationBucket: 0},
+  {id: 'missing', photo: '', rc6LocationBucket: 0},
+  {id: 'placeholder', photo: 'app-icon.png', placeholder: true, rc6LocationBucket: 0},
+  {id: 'quarantined', photo: 'collector.jpg', quarantined: true, rc6LocationBucket: 0}
+];
+const qualifiedNewStores = context.pick({id: 'new', kind: 'new'}, new Set(), 8, new Map());
+assert.deepEqual(Array.from(qualifiedNewStores, store => store.id), ['verified'],
+  'The new-store rail must hide missing, placeholder, and quarantined collector photos.');
 
 const repeatedLead = {id: 'repeat', photo: 'same-photo.jpg', statusRank: 0};
 const freshLead = {id: 'fresh', photo: 'fresh-photo.jpg', statusRank: 0};

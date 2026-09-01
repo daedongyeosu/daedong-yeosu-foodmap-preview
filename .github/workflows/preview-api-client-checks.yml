@@ -64,6 +64,12 @@ jobs:
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-home-filter-chips.mjs
+      - name: Verify new-store rail uses only verified photos
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-new-store-photo-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173 node scripts/browser-new-store-verified-photo.mjs
       - name: Verify safe Mukkebi popup on fresh home entry
         run: |
           python3 -m http.server 4173 >/tmp/daedong-mukkebi-fresh-entry-server.log 2>&1 &
