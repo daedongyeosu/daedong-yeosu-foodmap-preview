@@ -824,6 +824,11 @@ function rc2RandomizedRailStores(stores, spec, groupKey) {
   return result;
 }
 
+function rc2HasVerifiedRecommendationPhoto(store) {
+  const photo = fxPhoto(store);
+  return Boolean(photo && !isOfficialStorePlaceholderImage(photo) && !isQuarantinedCollectedPhoto(photo));
+}
+
 function rc2ManagedRegionPriorityNeighborhood() {
   const selected = neighborhoodFor(state.location) || neighborhoodFor(state.addressLabel);
   if (RC2_MANAGED_REGION_PRIORITY_NEIGHBORHOODS.has(selected)) return selected;
@@ -869,7 +874,8 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
   const selectedIds = new Set();
   const result = [];
   const groups = [];
-  const rankedStores = rankedInput || fxRankStores(spec);
+  const rankedStores = (rankedInput || fxRankStores(spec))
+    .filter(store => spec.kind !== 'new' || rc2HasVerifiedRecommendationPhoto(store));
   for (const store of rankedStores) {
     const status = storeBusinessStatusPriority(store);
     const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
@@ -985,7 +991,7 @@ fxRenderRails = function rc2RenderRails() {
       recentLeads.push(cards[0]);
       if (recentLeads.length > 3) recentLeads.shift();
     }
-    const allCandidates = fxRankStores(spec);
+    const allCandidates = fxRankStores(spec).filter(store => spec.kind !== 'new' || rc2HasVerifiedRecommendationPhoto(store));
     return `<section class="recommend-rail" data-rail="${spec.id}"><header class="recommend-rail-head"><div><h2>${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p></div>${allCandidates.length > cards.length ? `<button type="button" data-rail-more="${spec.id}">이 추천 가게 더보기</button>` : ''}</header><div class="recommend-track">${cards.map(rc2RailCard).join('') || '<p class="empty">추천 가게를 확인 중입니다.</p>'}</div></section>`;
   }).join('');
 };
