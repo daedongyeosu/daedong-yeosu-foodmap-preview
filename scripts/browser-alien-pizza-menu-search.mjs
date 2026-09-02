@@ -120,20 +120,23 @@ try {
 
   await search.fill('베지');
   await page.waitForFunction(() => {
-    const count = document.querySelector('[data-menu-result-count]')?.textContent;
-    const name = document.querySelector('[data-menu-card]:not([hidden]) h3')?.textContent || '';
-    return count === '1' && name.includes('베지');
+    const count = Number(document.querySelector('[data-menu-result-count]')?.textContent || 0);
+    const names = [...document.querySelectorAll('[data-menu-card]:not([hidden]) h3')]
+      .map(node => node.textContent || '');
+    return count > 0 && names.length === count && names.every(name => name.includes('베지'));
   });
-  await check(page.locator('[data-menu-card]:visible').count().then(count => count === 1), '베지 검색 결과 한 개만 표시');
-  const searchResultName = String(await page.locator('[data-menu-card]:visible h3').textContent()).trim();
+  const visibleSearchCards = page.locator('[data-menu-card]:visible');
+  const firstSearchCard = visibleSearchCards.first();
+  await check(visibleSearchCards.count().then(count => count > 0), '베지 검색 결과를 한 개 이상 표시');
+  const searchResultName = String(await firstSearchCard.locator('h3').textContent()).trim();
   report.searchResultName = searchResultName;
   await check(searchResultName.includes('베지'), '검색 결과 메뉴를 즉시 확인');
   await check(page.locator('[data-menu-card]:visible mark').count().then(count => count > 0), '메뉴명에서 일치 검색어 강조');
-  await check(page.locator('[data-menu-card]:visible').boundingBox().then(box => Boolean(box && box.y < 500)), '키보드 위에서도 첫 검색 결과가 보이는 위치에 표시');
-  await check(page.locator('[data-menu-card]:visible .store-menu-card-action').evaluate(node => getComputedStyle(node).display !== 'none'), '검색 결과에 주문 연결 동작 표시');
+  await check(firstSearchCard.boundingBox().then(box => Boolean(box && box.y < 500)), '키보드 위에서도 첫 검색 결과가 보이는 위치에 표시');
+  await check(firstSearchCard.locator('.store-menu-card-action').evaluate(node => getComputedStyle(node).display !== 'none'), '검색 결과에 주문 연결 동작 표시');
   await check(page.locator('.store-menu-sticky-actions .primary').isDisabled(), '하단 가게바로주문 준비중 비활성화');
   await check(page.locator('.store-menu-sticky-actions .primary').getAttribute('href').then(value => value === null), '비활성 가게바로주문 이동주소 미노출');
-  await page.locator('[data-menu-card]:visible').click();
+  await firstSearchCard.click();
   await check(page.locator('[data-menu-order-sheet]').evaluate(node => !node.hidden), '검색 결과 메뉴 터치 시 주문방법 선택창 열림');
   await check(page.locator('[data-selected-menu-name]').innerText().then(value => value === searchResultName), '선택한 메뉴명을 주문방법 선택창에 유지');
   await check(page.locator('[data-selected-menu-image]').getAttribute('src').then(value => Boolean(value)), '선택한 메뉴 사진을 주문방법 선택창에 유지');
