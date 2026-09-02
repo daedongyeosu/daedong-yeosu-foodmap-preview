@@ -65,7 +65,7 @@ function fxSvg(id,cls='ui-icon'){return `<svg class="${cls}" aria-hidden="true">
 function fxPlatform(){const ua=navigator.userAgent||'';if(/iphone|ipad|ipod/i.test(ua))return'ios';if(/android/i.test(ua))return'android';return'other';}
 function fxLowPower(){return Number(navigator.hardwareConcurrency||8)<=4||Number(navigator.deviceMemory||8)<=4;}
 function fxReduced(){return matchMedia('(prefers-reduced-motion: reduce)').matches;}
-function fxStoreById(id){return stores.find(store=>String(store.id)===String(id));}
+function fxStoreById(id){const requested=String(id);return stores.find(store=>String(store.id)===requested||(store.mergedStoreIds||[]).some(mergedId=>String(mergedId)===requested));}
 function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]||FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS[String(store?.id)]||photoResolver?.resolve(store)?.src||'';}
 function fxCardPhoto(store){const src=fxPhoto(store);const options={deferred:false};return src?`<img ${photoSourceAttributes(src,options)} alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
 function fxDistance(store){return state.coords&&store.lat!==null&&store.lng!==null?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;}
