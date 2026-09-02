@@ -11,6 +11,13 @@
     'X-Daedong-Client': CLIENT_HEADER
   });
   const REQUEST_TIMEOUT_MS = 25000;
+  // Customer-facing temporary visibility controls. Store detail/menu blobs remain
+  // intact so a hidden store can be restored without rebuilding its data.
+  const CUSTOMER_HIDDEN_STORE_IDS = new Set([
+    '732120ab53b3f457', // 여수분식 문수점
+    '8d21bc80dd49679e', // 빵위에치즈 여수점
+    '19ebb8a649b24af5'  // 1인피자 빵위에치즈 미니8 여수점
+  ]);
   const cache = new Map();
   const requestFailures = new Map();
   let goheungCatalogPromise = null;
@@ -148,9 +155,27 @@
     return goheungCatalogPromise;
   }
 
+  function customerVisibleStores(stores) {
+    if (!Array.isArray(stores)) return [];
+    return stores.filter(store => {
+      const id = String(store?.id || store?.store_id || '').toLowerCase();
+      return !CUSTOMER_HIDDEN_STORE_IDS.has(id);
+    });
+  }
+
+  function customerVisibleMenuSearch(payload) {
+    if (!payload?.stores || typeof payload.stores !== 'object') return payload;
+    const stores = Object.fromEntries(
+      Object.entries(payload.stores).filter(([storeId]) =>
+        !CUSTOMER_HIDDEN_STORE_IDS.has(String(storeId || '').toLowerCase())
+      )
+    );
+    return {...payload, stores};
+  }
+
   const catalog = options => IS_GOHEUNG
-    ? goheungCatalog().then(payload => payload.stores)
-    : request('/api/catalog', {cacheKey: 'catalog', ...options});
+    ? goheungCatalog().then(payload => customerVisibleStores(payload.stores))
+    : request('/api/catalog', {cacheKey: 'catalog', ...options}).then(customerVisibleStores);
   const services = options => IS_GOHEUNG
     ? goheungCatalog().then(payload => payload.services || {})
     : request('/api/services', {cacheKey: 'services', ...options});
@@ -203,6 +228,7 @@
     const key = value.normalize('NFKC').toLowerCase();
     if (IS_GOHEUNG) return Promise.resolve({stores: {}});
     return request(`/api/menu-search?q=${encodeURIComponent(value)}`, {cacheKey: `search:${key}`, ...options})
+      .then(customerVisibleMenuSearch)
       .then(restoreCuratedMenuSearchImages);
   };
 
