@@ -173,14 +173,31 @@
     return {...payload, stores};
   }
 
+  function customerVisibleServices(services) {
+    if (!services || typeof services !== 'object') return {};
+    return Object.fromEntries(
+      Object.entries(services).filter(([storeId]) =>
+        !CUSTOMER_HIDDEN_STORE_IDS.has(String(storeId || '').toLowerCase())
+      )
+    );
+  }
+
+  function customerVisibleStoreId(value) {
+    const id = safeStoreId(value);
+    if (CUSTOMER_HIDDEN_STORE_IDS.has(id)) {
+      throw new Error('현재 지도에 표시되지 않는 가게입니다.');
+    }
+    return id;
+  }
+
   const catalog = options => IS_GOHEUNG
     ? goheungCatalog().then(payload => customerVisibleStores(payload.stores))
     : request('/api/catalog', {cacheKey: 'catalog', ...options}).then(customerVisibleStores);
   const services = options => IS_GOHEUNG
-    ? goheungCatalog().then(payload => payload.services || {})
-    : request('/api/services', {cacheKey: 'services', ...options});
+    ? goheungCatalog().then(payload => customerVisibleServices(payload.services || {}))
+    : request('/api/services', {cacheKey: 'services', ...options}).then(customerVisibleServices);
   const detail = (storeId, options = {}) => {
-    const id = safeStoreId(storeId);
+    const id = customerVisibleStoreId(storeId);
     if (IS_GOHEUNG) return goheungCatalog().then(payload => {
       const value = payload.details?.[id];
       if (!value) throw new Error('해당 고흥 가게 상세자료를 확인 중입니다.');
@@ -189,7 +206,7 @@
     return request(`/api/store/${id}`, {cacheKey: `detail:${id}`, ...options});
   };
   const menu = (storeId, options = {}) => {
-    const id = safeStoreId(storeId);
+    const id = customerVisibleStoreId(storeId);
     if (IS_GOHEUNG) return goheungCatalog().then(payload => {
       const value = payload.menus?.[id];
       if (!value) throw new Error('해당 고흥 가게 메뉴자료를 확인 중입니다.');
@@ -207,7 +224,7 @@
       .then(payload => restoreCuratedMenuImages(id, payload));
   };
   const yogiyoWebRoute = (storeId, coordinates = {}, options = {}) => {
-    const id = safeStoreId(storeId);
+    const id = customerVisibleStoreId(storeId);
     const lat = Number(coordinates.lat);
     const lng = Number(coordinates.lng);
     if (!Number.isFinite(lat) || !Number.isFinite(lng)
