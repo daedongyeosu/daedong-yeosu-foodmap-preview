@@ -337,7 +337,7 @@ const ADDRESS_BOOK_KEY = regionStorageKey('daedongAddressBookV2');
 const SAVED_LOCATION_KEY = regionStorageKey('savedLocation');
 const LOCATION_KEY = regionStorageKey('location');
 const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
-const FEEDBACK_FORM_URL = 'https://www.notion.so/8ae3728176e344fdaee3475a97d03740';
+const FEEDBACK_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/feedback';
 const SMALL_BUSINESS_ASSOCIATION_URL = 'https://bit.ly/여수시소상공인연합회공지';
 const ANALYTICS_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/events';
 const ANALYTICS_SESSION_KEY = 'daedongAnalyticsSessionV1';
@@ -2157,20 +2157,67 @@ function favoritesModal() { savedStoreList('찜한 가게', favoriteIds(), '아�
 function recentModal() { savedStoreList('최근 방문 가게', readLocalJson(RECENT_KEY, []).map(item => String(item.storeId ?? item.id ?? item)), '아직 방문한 가게가 없습니다.'); }
 function feedbackModal(store) {
   const appOptions = ['해당 없음','먹깨비','땡겨요','온동네','배달의민족','쿠팡이츠','요기요','가게바로주문','전화주문'];
-  const channels=['먹깨비','땡겨요','온동네','요기요','쿠팡이츠','배달의민족','브랜드앱 상담','전화주문 등록','기타 확인이 필요한 기존 주문채널'];
-  openModal(`<section class="feedback-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">정보 수정 요청</h2><p>입력한 내용은 다른 고객에게 공개되지 않습니다.</p><form id="storeFeedbackForm"><label>가게명<input name="storeName" value="${escapeHtml(store.name)}" readonly required></label><label>요청 종류<select name="issueType" data-rc3-issue-type required><option value="">선택하세요</option><option>사진 오류</option><option>전화번호 오류</option><option>주문앱에서 가게 없음</option><option>폐업·휴업 의심</option><option>주소·위치 오류</option><option>사장님 주문앱 입점 신청</option></select></label><label data-rc3-related-app>관련 주문앱<select name="app">${appOptions.map(item => `<option>${item}</option>`).join('')}</select></label><div class="feedback-app-fields" data-rc3-application-fields hidden><label>신청자 이름<input name="applicantName" disabled></label><label>연락 가능한 전화번호<input name="contactPhone" inputmode="tel" disabled></label><label>가게와의 관계<select name="relationship" disabled><option value="">선택하세요</option><option>사장님</option><option>직원</option><option>기타</option></select></label><fieldset><legend>희망 주문앱</legend><div class="feedback-channel-list">${channels.map(channel=>`<label><input type="checkbox" name="channels" value="${escapeHtml(channel)}" disabled><span>${escapeHtml(channel)}</span></label>`).join('')}</div></fieldset><label class="feedback-consent"><input type="checkbox" name="privacyConsent" value="동의" disabled><span>개인정보 수집·연락에 동의합니다.</span></label></div><button type="submit" class="feedback-submit">접수 내용 준비하기</button></form><small>전송 전 비공개 접수폼에서 내용을 다시 확인할 수 있습니다.</small></section>`);
+  openModal(`<section class="feedback-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">정보 수정 요청</h2><p>관리자가 확인할 수 있도록 바로 접수합니다. 입력한 내용은 다른 고객에게 공개되지 않습니다.</p><form id="storeFeedbackForm"><label>가게명<input name="storeName" value="${escapeHtml(store.name)}" readonly required></label><label>요청 종류<select name="issueType" required><option value="">선택하세요</option><option>사진 오류</option><option>전화번호 오류</option><option>주문앱에서 가게 없음</option><option>폐업·휴업 의심</option><option>주소·위치 오류</option><option>기타</option></select></label><label>관련 주문앱<select name="app">${appOptions.map(item => `<option>${item}</option>`).join('')}</select></label><label>수정할 내용<textarea name="details" maxlength="1200" rows="5" placeholder="잘못된 내용과 올바른 정보를 알려주세요." required></textarea></label><p class="feedback-error" data-feedback-error hidden></p><button type="submit" class="feedback-submit">관리자에게 수정 요청 보내기</button></form><small>서버에서 접수번호를 받은 경우에만 접수가 완료됩니다.</small></section>`);
+}
+
+function allFeedbackQueue() { return readLocalJson(FEEDBACK_QUEUE_KEY, []); }
+function feedbackQueue() { return allFeedbackQueue().filter(item => item?.transport === 'direct-admin-v1'); }
+function saveFeedbackQueue(items) { writeLocalJson(FEEDBACK_QUEUE_KEY, items.slice(0, 100)); }
+function queueFeedback(report) { saveFeedbackQueue([report, ...allFeedbackQueue().filter(item => item.reportId !== report.reportId)]); }
+function removeQueuedFeedback(reportId) { saveFeedbackQueue(allFeedbackQueue().filter(item => item.reportId !== reportId)); }
+async function deliverFeedbackReport(report) {
+  const response = await fetch(FEEDBACK_ENDPOINT, {
+    method: 'POST',
+    mode: 'cors',
+    credentials: 'omit',
+    cache: 'no-store',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      requestId: report.reportId,
+      storeId: report.storeId,
+      storeName: report.storeName,
+      issueType: report.issueType,
+      app: report.app,
+      details: report.details,
+      applicantName: report.applicantName,
+      contactPhone: report.contactPhone,
+      relationship: report.relationship,
+      channels: report.channels,
+      privacyConsent: report.privacyConsent,
+      pageUrl: report.pageUrl,
+      clientTime: report.createdAt
+    })
+  });
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok || payload.accepted !== true || payload.requestId !== report.reportId) {
+    const error = new Error(payload.error || '수정 요청을 접수하지 못했습니다.');
+    error.status = response.status;
+    throw error;
+  }
+  removeQueuedFeedback(report.reportId);
+  return payload;
+}
+async function retryQueuedFeedbackReports() {
+  if (!navigator.onLine) return;
+  for (const report of feedbackQueue().slice().reverse()) {
+    try { await deliverFeedbackReport(report); }
+    catch { return; }
+  }
+}
+function feedbackSuccessModal(report) {
+  openModal(`<section class="feedback-complete"><h2 id="modalTitle">수정 요청이 접수되었습니다</h2><p><strong>${escapeHtml(report.storeName)}</strong>의 요청을 관리자가 확인하겠습니다.</p><p class="feedback-receipt">접수번호 ${escapeHtml(report.reportId)}</p><button type="button" data-modal-close>확인</button></section>`);
+}
+function feedbackFailureModal(report, message='수정 요청을 접수하지 못했습니다.') {
+  openModal(`<section class="feedback-complete feedback-failed"><h2 id="modalTitle">아직 접수되지 않았습니다</h2><p>${escapeHtml(message)} 인터넷 연결을 확인한 뒤 다시 보내주세요.</p><button type="button" data-feedback-retry="${escapeHtml(report.reportId)}">다시 보내기</button><small>요청 내용은 이 기기에 보관되어 자동으로 다시 시도됩니다.</small></section>`);
 }
 async function submitFeedback(form) {
   const store = stores.find(item => String(item.id) === String(form.closest('.feedback-sheet')?.dataset.storeId)); if (!store) return;
-  const data = new FormData(form); const report = {reportId: globalThis.crypto?.randomUUID?.() || `report-${Date.now()}`, storeId:String(store.id), storeName:store.name, issueType:String(data.get('issueType')||''), app:String(data.get('app')||'해당 없음'), details:String(data.get('details')||''), reporterKey:visitorKey(), pageUrl:location.href, createdAt:new Date().toISOString(), status:'접수 대기'};
-  writeLocalJson(FEEDBACK_QUEUE_KEY,[report,...readLocalJson(FEEDBACK_QUEUE_KEY,[])].slice(0,100));
-  const text=[`요청 제목: ${report.storeName} 정보 수정 요청`,`가게 ID: ${report.storeId}`,`가게명: ${report.storeName}`,`요청 유형: ${report.issueType}`,`주문앱: ${report.app}`,`상세 내용: ${report.details||'없음'}`,`신고자 식별키: ${report.reporterKey}`,`페이지 URL: ${report.pageUrl}`].join('\n');
-  try { await navigator.clipboard?.writeText(text); } catch {}
-  openModal(`<section class="feedback-complete"><h2 id="modalTitle">접수 내용을 준비했습니다</h2><p>아래 비공개 접수폼을 열면 가게를 다시 찾을 필요 없이 지금 작성한 내용을 붙여넣을 수 있습니다.</p><a href="${FEEDBACK_FORM_URL}" target="_blank" rel="noopener">비공개 접수폼 열기</a><button type="button" data-feedback-copy="${escapeHtml(report.reportId)}">접수 내용 다시 복사</button></section>`);
-}
-function copyQueuedReport(reportId) {
-  const report=readLocalJson(FEEDBACK_QUEUE_KEY,[]).find(item=>item.reportId===reportId); if(!report)return;
-  const text=[`요청 제목: ${report.storeName} 정보 수정 요청`,`가게 ID: ${report.storeId}`,`가게명: ${report.storeName}`,`요청 유형: ${report.issueType}`,`주문앱: ${report.app}`,`상세 내용: ${report.details||'없음'}`,`신고자 식별키: ${report.reporterKey}`,`페이지 URL: ${report.pageUrl}`].join('\n'); navigator.clipboard?.writeText(text);
+  if (!form.reportValidity()) return;
+  const submitButton=form.querySelector('[type="submit"]'); if(submitButton){submitButton.disabled=true;submitButton.textContent='접수 중…';}
+  const data = new FormData(form); const report = {transport:'direct-admin-v1',reportId:globalThis.crypto?.randomUUID?.() || `report-${Date.now()}`,storeId:String(store.id),storeName:store.name,issueType:String(data.get('issueType')||''),app:String(data.get('app')||'해당 없음'),details:String(data.get('details')||'').trim(),pageUrl:location.href,createdAt:new Date().toISOString()};
+  queueFeedback(report);
+  try { await deliverFeedbackReport(report); feedbackSuccessModal(report); }
+  catch(error) { feedbackFailureModal(report,error instanceof Error?error.message:'수정 요청을 접수하지 못했습니다.'); }
 }
 function brandLogo(brand) { return brand.icon ? `<img src="${mobilePhotoPath(brand.icon)}" alt="${escapeHtml(brand.label)}" loading="lazy"><span hidden>${escapeHtml(brand.label)}</span>` : '<span class="order-icon">🏷️</span>'; }
 function brandsModal() {
@@ -2587,7 +2634,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if(event.target.closest('[data-open-address]')){areaModal();return;}
     if(event.target.closest('[data-open-ad-inquiry]')){adInquiryModal();return;}
     const noticePromo=event.target.closest('[data-notice-promo]');if(noticePromo){openPromoCarouselDetail(noticePromo.dataset.noticePromo);return;}
-    const copyButton=event.target.closest('[data-feedback-copy]');if(copyButton){copyQueuedReport(copyButton.dataset.feedbackCopy);return;}
+    const feedbackRetry=event.target.closest('[data-feedback-retry]');if(feedbackRetry){const report=feedbackQueue().find(item=>item.reportId===feedbackRetry.dataset.feedbackRetry);if(!report)return;feedbackRetry.disabled=true;feedbackRetry.textContent='다시 보내는 중…';deliverFeedbackReport(report).then(()=>feedbackSuccessModal(report)).catch(error=>feedbackFailureModal(report,error instanceof Error?error.message:'수정 요청을 접수하지 못했습니다.'));return;}
+    if(event.target.closest('[data-modal-close]')){hardClose();return;}
     if (!event.target.closest('.store-other-wrap')) $$('.store-other-popover').forEach(item => item.hidden = true);
   });
 
@@ -2608,6 +2656,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('input', event => { if(event.target.id==='addressSearchInput'){ $('#clearAddressSearch').hidden=!event.target.value; } if(event.target.id==='addressDetailInput') renderAddressDraft(); });
   document.addEventListener('keydown', event => { if(event.key==='Enter'&&event.target.id==='addressSearchInput'){event.preventDefault();renderAddressResults(event.target.value);} if(event.key==='Enter'&&event.target.id==='addressDetailInput'){event.preventDefault();commitAddressSelection();} });
   document.addEventListener('submit', event => { if(event.target.id!=='storeFeedbackForm')return; event.preventDefault(); submitFeedback(event.target); });
+  window.addEventListener('online', () => void retryQueuedFeedbackReports());
+  if(navigator.onLine) setTimeout(() => void retryQueuedFeedbackReports(), 1600);
 
   const today = new Date().toLocaleDateString('sv-SE', {timeZone: 'Asia/Seoul'}), startupAd = $('#startupAd');
   let startupHistoryOpen = false;

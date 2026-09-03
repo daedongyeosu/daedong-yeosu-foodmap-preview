@@ -892,7 +892,7 @@ function rc3FeedbackApplicationFields() {
 
 feedbackModal = function rc3FeedbackModal(store) {
   const appOptions = ['해당 없음', '먹깨비', '땡겨요', '온동네', '배달의민족', '쿠팡이츠', '요기요', '가게바로주문', '전화주문'];
-  openModal(`<section class="feedback-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">정보 수정 요청</h2><p>입력한 내용은 다른 고객에게 공개되지 않습니다.</p><form id="storeFeedbackForm"><label>가게명<input name="storeName" value="${escapeHtml(store.name)}" readonly required></label><label>요청 종류<select name="issueType" data-rc3-issue-type required><option value="">선택하세요</option><option>사진 오류</option><option>전화번호 오류</option><option>주문앱에서 가게 없음</option><option>폐업·휴업 의심</option><option>주소·위치 오류</option><option>사장님 주문앱 입점 신청</option></select></label><label data-rc3-related-app>관련 주문앱<select name="app">${appOptions.map(item => `<option>${item}</option>`).join('')}</select></label>${rc3FeedbackApplicationFields()}<button type="submit" class="feedback-submit">접수 내용 준비하기</button></form><small>전송 전 비공개 접수폼에서 내용을 다시 확인할 수 있습니다.</small></section>`);
+  openModal(`<section class="feedback-sheet" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">정보 수정 요청</h2><p>관리자가 확인할 수 있도록 바로 접수합니다. 입력한 내용은 다른 고객에게 공개되지 않습니다.</p><form id="storeFeedbackForm"><label>가게명<input name="storeName" value="${escapeHtml(store.name)}" readonly required></label><label>요청 종류<select name="issueType" data-rc3-issue-type required><option value="">선택하세요</option><option>사진 오류</option><option>전화번호 오류</option><option>주문앱에서 가게 없음</option><option>폐업·휴업 의심</option><option>주소·위치 오류</option><option>사장님 주문앱 입점 신청</option><option>기타</option></select></label><label data-rc3-related-app>관련 주문앱<select name="app">${appOptions.map(item => `<option>${item}</option>`).join('')}</select></label><label>수정할 내용<textarea name="details" maxlength="1200" rows="5" placeholder="잘못된 내용과 올바른 정보를 알려주세요." required></textarea></label>${rc3FeedbackApplicationFields()}<button type="submit" class="feedback-submit">관리자에게 수정 요청 보내기</button></form><small>서버에서 접수번호를 받은 경우에만 접수가 완료됩니다.</small></section>`);
 };
 
 function rc3ToggleApplicationFields(select) {
@@ -942,7 +942,13 @@ submitFeedback = async function rc3SubmitFeedback(form) {
     return;
   }
   if (error) error.hidden = true;
+  const submitButton = form.querySelector('[type="submit"]');
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = '접수 중…';
+  }
   const report = {
+    transport: 'direct-admin-v1',
     reportId: globalThis.crypto?.randomUUID?.() || `report-${Date.now()}`,
     storeId: String(store.id),
     storeName: store.name,
@@ -953,19 +959,18 @@ submitFeedback = async function rc3SubmitFeedback(form) {
     relationship: application ? String(data.get('relationship') || '') : '',
     channels,
     privacyConsent: application && data.get('privacyConsent') === '동의',
-    reporterKey: visitorKey(),
+    details: String(data.get('details') || '').trim(),
     pageUrl: location.href,
     createdAt: new Date().toISOString(),
     status: '접수 대기'
   };
-  writeLocalJson(FEEDBACK_QUEUE_KEY, [report, ...readLocalJson(FEEDBACK_QUEUE_KEY, [])].slice(0, 100));
-  try { await navigator.clipboard?.writeText(rc3FeedbackText(report)); } catch {}
-  openModal(`<section class="feedback-complete"><h2 id="modalTitle">접수 내용을 준비했습니다</h2><p>비공개 접수폼에서 내용을 확인한 뒤 직접 제출해 주세요. 이 화면만으로 접수가 완료되지는 않습니다.</p><a href="${FEEDBACK_FORM_URL}" target="_blank" rel="noopener">비공개 접수폼 열기</a><button type="button" data-feedback-copy="${escapeHtml(report.reportId)}">접수 내용 다시 복사</button></section>`);
-};
-
-copyQueuedReport = function rc3CopyQueuedReport(reportId) {
-  const report = readLocalJson(FEEDBACK_QUEUE_KEY, []).find(item => item.reportId === reportId);
-  if (report) navigator.clipboard?.writeText(rc3FeedbackText(report));
+  queueFeedback(report);
+  try {
+    await deliverFeedbackReport(report);
+    feedbackSuccessModal(report);
+  } catch (caught) {
+    feedbackFailureModal(report, caught instanceof Error ? caught.message : '수정 요청을 접수하지 못했습니다.');
+  }
 };
 
 function rc3RailPointerTarget(event) {
