@@ -49,7 +49,7 @@ assert.match(
 );
 assert.match(
   finalExperience,
-  /rc3-fixes\.js\?v=selected-category-label-1/,
+  /rc3-fixes\.js\?v=direct-feedback-admin-1-selected-category-label-1/,
   'The phone category-label runtime must bypass older cached RC3 copies.',
 );
 assert.match(
@@ -59,7 +59,7 @@ assert.match(
 );
 assert.match(
   index,
-  /final-experience\.js\?v=selected-category-label-2/,
+  /final-experience\.js\?v=direct-feedback-admin-1-selected-category-label-2/,
   'The runtime loader must bypass older cached copies.',
 );
 
