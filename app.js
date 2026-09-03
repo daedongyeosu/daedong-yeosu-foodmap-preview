@@ -341,6 +341,7 @@ const FEEDBACK_FORM_URL = 'https://www.notion.so/8ae3728176e344fdaee3475a97d0374
 const SMALL_BUSINESS_ASSOCIATION_URL = 'https://bit.ly/여수시소상공인연합회공지';
 const ANALYTICS_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/events';
 const ANALYTICS_SESSION_KEY = 'daedongAnalyticsSessionV1';
+const ANALYTICS_QUEUE_KEY = 'daedongAnalyticsQueueV1';
 const ANALYTICS_OWNER_EXCLUSION_KEY = 'daedongAnalyticsOwnerExcludedV1';
 const ANALYTICS_OWNER_MODE_PARAM = 'owner_stats';
 const ANALYTICS_REGION_1_ALIASES = new Map([
@@ -364,6 +365,7 @@ const ANALYTICS_REGION_1_ALIASES = new Map([
 ]);
 let analyticsFallbackVisitorId = '';
 let analyticsFallbackSessionId = '';
+let analyticsFlushPromise = null;
 
 const APP_META = {
   direct: {label: '가게바로주문', icon: '🏪'},
@@ -533,7 +535,10 @@ function applyAnalyticsOwnerMode() {
   const mode = String(params.get(ANALYTICS_OWNER_MODE_PARAM) || '').trim().toLowerCase();
   if (mode !== 'exclude' && mode !== 'include') return;
   try {
-    if (mode === 'exclude') localStorage.setItem(ANALYTICS_OWNER_EXCLUSION_KEY, '1');
+    if (mode === 'exclude') {
+      localStorage.setItem(ANALYTICS_OWNER_EXCLUSION_KEY, '1');
+      localStorage.removeItem(ANALYTICS_QUEUE_KEY);
+    }
     else localStorage.removeItem(ANALYTICS_OWNER_EXCLUSION_KEY);
   } catch {}
   params.delete(ANALYTICS_OWNER_MODE_PARAM);
@@ -605,19 +610,74 @@ function analyticsRegionContext() {
   const selected = readLocalJson(ADDRESS_KEY, null) || readLocalJson(SAVED_LOCATION_KEY, null) || {};
   return analyticsCoarseRegion(selected);
 }
+function analyticsStoreIdentity(value, fallbackName = '') {
+  const requestedId = String(value || '').trim().toLowerCase();
+  if (!/^[a-f0-9]{16}$/.test(requestedId)) return {storeId: '', storeName: ''};
+  const campaignId = String(window.daedongResolveHeroCampaignStoreId?.(requestedId) || requestedId).toLowerCase();
+  const store = stores.find(item => String(item.id) === campaignId || (item.mergedStoreIds || []).some(id => String(id) === requestedId));
+  return {
+    storeId: String(store?.id || campaignId),
+    storeName: String(store?.name || fallbackName || '').slice(0, 120)
+  };
+}
+function analyticsQueueRead() {
+  try {
+    const value = JSON.parse(localStorage.getItem(ANALYTICS_QUEUE_KEY) || '[]');
+    return Array.isArray(value) ? value.filter(item => item?.eventId).slice(-100) : [];
+  } catch { return []; }
+}
+function analyticsQueueWrite(queue) {
+  try { localStorage.setItem(ANALYTICS_QUEUE_KEY, JSON.stringify(queue.slice(-100))); return true; }
+  catch { return false; }
+}
+async function analyticsDeliver(payload) {
+  const response = await fetch(ANALYTICS_ENDPOINT, {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    headers: {'Content-Type': 'text/plain;charset=UTF-8'},
+    mode: 'cors',
+    credentials: 'omit',
+    keepalive: true
+  });
+  if (!response.ok) throw new Error(`analytics-${response.status}`);
+}
+function flushAnalyticsQueue() {
+  if (analyticsOwnerExcluded() || analyticsFlushPromise) return analyticsFlushPromise;
+  analyticsFlushPromise = (async () => {
+    for (;;) {
+      const queue = analyticsQueueRead();
+      const payload = queue[0];
+      if (!payload) break;
+      try { await analyticsDeliver(payload); }
+      catch { break; }
+      const remaining = analyticsQueueRead().filter(item => item.eventId !== payload.eventId);
+      analyticsQueueWrite(remaining);
+    }
+  })().finally(() => { analyticsFlushPromise = null; });
+  return analyticsFlushPromise;
+}
+function beaconPendingAnalyticsEvents() {
+  if (analyticsOwnerExcluded()) return;
+  for (const payload of analyticsQueueRead().slice(0, 10)) {
+    try {
+      navigator.sendBeacon?.(ANALYTICS_ENDPOINT, new Blob([JSON.stringify(payload)], {type: 'text/plain;charset=UTF-8'}));
+    } catch {}
+  }
+}
 function sendAnalyticsEvent(eventType, details = {}) {
   if (ACTIVE_REGION.code !== 'yeosu') return;
   if (analyticsOwnerExcluded()) return;
   const entry = analyticsEntryContext();
   const region = analyticsRegionContext();
+  const store = analyticsStoreIdentity(details.storeId || entry.storeId, details.storeName);
   const payload = {
     eventId: analyticsRandomId('event'),
     eventType,
     visitorId: analyticsVisitorId(),
     sessionId: analyticsSessionId(),
     entrySource: entry.entrySource,
-    storeId: String(details.storeId || '').slice(0, 80),
-    storeName: String(details.storeName || '').slice(0, 120),
+    storeId: store.storeId,
+    storeName: store.storeName,
     channel: String(details.channel || '').slice(0, 40),
     surface: String(details.surface || '').slice(0, 60),
     region1: region.region1,
@@ -626,20 +686,10 @@ function sendAnalyticsEvent(eventType, details = {}) {
     regionSource: region.regionSource,
     clientTime: new Date().toISOString()
   };
-  const body = JSON.stringify(payload);
-  try {
-    if (navigator.sendBeacon?.(ANALYTICS_ENDPOINT, new Blob([body], {type: 'text/plain;charset=UTF-8'}))) return;
-  } catch {}
-  try {
-    fetch(ANALYTICS_ENDPOINT, {
-      method: 'POST',
-      body,
-      headers: {'Content-Type': 'text/plain;charset=UTF-8'},
-      mode: 'cors',
-      credentials: 'omit',
-      keepalive: true
-    }).catch(() => {});
-  } catch {}
+  const queue = analyticsQueueRead();
+  queue.push(payload);
+  if (analyticsQueueWrite(queue)) void flushAnalyticsQueue();
+  else void analyticsDeliver(payload).catch(() => {});
 }
 function analyticsStoreForElement(element) {
   const id = String(
@@ -2228,6 +2278,7 @@ async function openStore(store) {
     : placeholderMarkup('detail');
   openModal(`<article class="store-detail store-detail-loading" data-store-id="${escapeHtml(store.id)}" aria-busy="true"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${loadingPhotoMarkup}<div class="store-detail-skeleton" role="status" aria-live="polite"><span class="store-detail-skeleton-line is-wide"></span><span class="store-detail-skeleton-line"></span><span class="store-detail-skeleton-button"></span><span class="store-detail-skeleton-button"></span><b>가게 정보를 불러오는 중입니다…</b></div></article>`);
   $('#modal').dataset.activeStoreId = store.id;
+  sendAnalyticsEvent('store_open', {storeId: store.id, storeName: store.name, surface: 'store_detail'});
   if (!loadingPhoto && store.hasMenu === true) {
     void loadMenuPhotoFallbacks(store).then(() => recoverVisibleDetailPhoto(store));
   }
@@ -2253,7 +2304,6 @@ async function openStore(store) {
   }
   if ($('#modal').dataset.activeStoreId !== store.id || $('#modal').hidden) return false;
   addRecentStore(store);
-  sendAnalyticsEvent('store_open', {storeId: store.id, storeName: store.name, surface: 'store_detail'});
   const selectedRoute = selectedExternalForStore(store);
   const quick = [];
   if (store.naverMap && store.naverMap !== '#') quick.push(`<a class="detail-quick-link" data-detail-only="naver" href="${escapeHtml(store.naverMap)}" target="_blank" rel="noopener"><span class="quick-icon">🗺️</span><span>네이버지도</span></a>`);
@@ -2386,17 +2436,27 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   applyAnalyticsOwnerMode();
   const entry = analyticsEntryContext();
-  sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: entry.storeId ? 'store_entry' : 'home'});
+  const analyticsVisitAfterCatalog = Boolean(entry.storeId);
+  if (!analyticsVisitAfterCatalog) sendAnalyticsEvent('visit', {surface: 'home'});
+  void flushAnalyticsQueue();
+  window.addEventListener('online', () => void flushAnalyticsQueue());
+  window.addEventListener('pagehide', beaconPendingAnalyticsEvents);
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') beaconPendingAnalyticsEvents();
+    else void flushAnalyticsQueue();
+  });
   document.addEventListener('click', trackAnalyticsRouteClick, true);
   catalogBootPromise.then(result => {
     finishCatalogReady(result);
     deferBrandFont();
     window.setTimeout(hydrateDeferredHomeImages, 6000);
+    if (analyticsVisitAfterCatalog) sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: 'store_entry'});
   }).catch(error => {
     console.error('가게목록 초기화를 완료하지 못했습니다.', error);
     finishCatalogReady([]);
     deferBrandFont();
     window.setTimeout(hydrateDeferredHomeImages, 6000);
+    if (analyticsVisitAfterCatalog) sendAnalyticsEvent('visit', {storeId: entry.storeId, surface: 'store_entry'});
   });
   $('#mainSearch').addEventListener('input', () => $('#clearMainSearch').hidden = !$('#mainSearch').value);
   $('#mainSearch').addEventListener('keydown', event => { if (event.key === 'Enter') $('#searchBtn').click(); });

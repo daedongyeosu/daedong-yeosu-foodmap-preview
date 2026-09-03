@@ -24,7 +24,7 @@ assert.match(addressMap, /chooseAddress\(`현재 위치[\s\S]*?coords,[\s\S]*?so
 
 const cacheToken = 'outside-yeosu-full-list-1';
 assert.ok(experience.includes(`rc7-address-map.js?v=address-home-return-1-coarse-region-1-inapp-location-recovery-1-${cacheToken}`));
-assert.ok(index.includes(`owner-exclusion-1-${cacheToken}`));
+assert.match(index, new RegExp(`owner-exclusion-1-[^\"]*${cacheToken}`));
 assert.ok(index.includes(`inapp-location-recovery-1-${cacheToken}`));
 
 console.log('outside Yeosu full-list regression checks passed');
