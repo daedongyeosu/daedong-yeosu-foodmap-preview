@@ -6,11 +6,11 @@ const eventJs = fs.readFileSync(new URL('./mukkebi-summer-event.js', import.meta
 
 for (const requiredCopy of [
   '2026여수세계섬박람회 기념',
-  '5천 원 할인',
+  '5천 원 할인쿠폰',
   '09.01.(화) ~ 10.31.(토)',
   '15,000원 이상 주문 시',
   '5천 원 즉시 할인',
-  '시민·관광객 누구나',
+  '먹깨비 앱 이용 시민·관광객',
   '매일 선착순 500매',
   '1일 1회',
   '총 18,000매',
