@@ -6,7 +6,7 @@ const html = fs.readFileSync('index.html', 'utf8');
 const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
 assert.match(eventJs, /let customerInteracted = false/);
-assert.match(eventJs, /const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDateV2'/);
+assert.match(eventJs, /const HIDE_DATE_KEY = 'daedongMukkebiIslandExpoEventHiddenDateV1'/);
 assert.match(eventJs, /const COMMUNITY_INTRO_SESSION_KEY = 'daedongCommunityIntroPlayedV4'/);
 assert.match(eventJs, /const FOLLOWUP_CAMPAIGN_DELAY = 3000/);
 assert.match(eventJs, /window\.daedongMukkebiAutoOpenPending = false/,

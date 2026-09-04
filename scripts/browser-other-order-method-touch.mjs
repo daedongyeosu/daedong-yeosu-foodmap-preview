@@ -91,7 +91,7 @@ const context = await browser.newContext({
 });
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
-  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1');
+  sessionStorage.setItem('daedongMukkebiIslandExpoEventSeenSessionV1', '1');
   window.__returnedOrderMethodTouchState = [];
   const recordReturnedOrderMethodTouch = event => {
     if (!event.target?.closest?.('[data-rc3-other-methods]')) return;

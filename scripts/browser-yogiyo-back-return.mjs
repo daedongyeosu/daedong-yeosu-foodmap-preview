@@ -40,7 +40,7 @@ const context = await browser.newContext({
   locale: 'ko-KR',
   userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/30.0 Chrome/143.0.0.0 Mobile Safari/537.36'
 });
-await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1'));
+await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiIslandExpoEventSeenSessionV1', '1'));
 await context.addInitScript(({previewOrigin}) => {
   window.addEventListener('pageshow', () => {
     if (location.origin !== previewOrigin || !sessionStorage.getItem('daedongExternalReturnRc2')) return;

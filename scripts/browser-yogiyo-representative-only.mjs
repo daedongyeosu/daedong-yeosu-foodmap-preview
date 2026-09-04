@@ -22,7 +22,7 @@ const browser = await chromium.launch({
 const context = await browser.newContext({viewport: {width: 390, height: 844}, isMobile: true, hasTouch: true, locale: 'ko-KR'});
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
-  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1');
+  sessionStorage.setItem('daedongMukkebiIslandExpoEventSeenSessionV1', '1');
 });
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 await context.route('**/*.woff2', route => route.abort());

@@ -41,7 +41,7 @@ if (menu) {
 }
 
 if (event) {
-  assert.match(event, /const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV2'/);
+  assert.match(event, /const SEEN_SESSION_KEY = 'daedongMukkebiIslandExpoEventSeenSessionV1'/);
   assert.match(event, /const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1'/);
   assert.match(event, /seenThisSession\(\)/);
   assert.match(event, /returningFromOrderApp\(\)/);

@@ -25,7 +25,7 @@ const context = await browser.newContext({
   userAgent: 'Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36 KAKAOTALK 25.6.0',
 });
 await context.addInitScript(() => {
-  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1');
+  sessionStorage.setItem('daedongMukkebiIslandExpoEventSeenSessionV1', '1');
   localStorage.setItem('hideStartup', new Date().toISOString().slice(0, 10));
 });
 const corsHeaders = {

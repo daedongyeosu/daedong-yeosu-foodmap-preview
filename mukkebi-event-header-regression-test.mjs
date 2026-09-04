@@ -7,12 +7,12 @@ const js = fs.readFileSync('mukkebi-summer-event.js', 'utf8');
 
 assert.match(
   html,
-  /class="mukkebi-summer-partners"><span>여수시 · 전남신용보증재단<\/span><strong>먹깨비<\/strong>/,
+  /class="mukkebi-summer-partners"><span>여수시<\/span><strong>먹깨비<\/strong>/,
   '기관명과 먹깨비 이름은 화면 확대 시 글자 중간이 잘리지 않도록 분리해야 합니다.',
 );
 assert.match(
   html,
-  /mukkebi-summer-event\.css\?v=20260807-viewport-fit-1-close-glow-removed-1-immediate-close-1/,
+  /mukkebi-summer-event\.css\?v=20260807-viewport-fit-1-close-glow-removed-1-immediate-close-1-island-expo-coupon-2/,
   '수정된 팝업 스타일이 고객 브라우저 캐시에 가려지지 않아야 합니다.',
 );
 assert.match(css, /\.mukkebi-summer-head\{[^}]*padding:76px 22px 25px/, '일반 화면에서는 닫기 버튼 전용 상단 공간을 유지해야 합니다.');
@@ -37,6 +37,7 @@ assert.match(compact, /\.mukkebi-summer-event\{padding:8px\}/, '짧은 화면에
 assert.match(compact, /\.mukkebi-summer-card\{[^}]*max-height:calc\(100dvh - 16px\)/, '팝업은 짧은 화면의 표시 영역 안에 들어가야 합니다.');
 assert.match(compact, /\.mukkebi-summer-head\{padding:62px 14px 13px\}/, '48px 닫기 버튼 공간을 남기면서 제목 영역 높이를 줄여야 합니다.');
 assert.match(compact, /\.mukkebi-summer-details\{grid-template-columns:1fr 1fr/, '네 개의 행사 안내는 두 열로 유지해 한 화면에 보여야 합니다.');
+assert.match(css, /\.mukkebi-summer-details li\{[^}]*word-break:keep-all/, '한글 안내가 글자 중간에서 잘리면 안 됩니다.');
 assert.match(compact, /\.mukkebi-summer-order\{padding:9px 11px/, '주문 버튼은 보이면서도 세로 공간을 과도하게 차지하지 않아야 합니다.');
 assert.match(compact, /\.mukkebi-summer-hide\{margin-top:5px/, '오늘 하루 보지 않기 버튼도 같은 화면에 보여야 합니다.');
 assert.match(css, /@media\(max-height:560px\)/, '더 짧은 브라우저 화면을 위한 추가 압축 배치가 있어야 합니다.');

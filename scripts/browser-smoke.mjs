@@ -16,7 +16,7 @@ const context = await browser.newContext({
 });
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
-  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1');
+  sessionStorage.setItem('daedongMukkebiIslandExpoEventSeenSessionV1', '1');
 });
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 await context.route('**/*.woff2', route => route.abort());
