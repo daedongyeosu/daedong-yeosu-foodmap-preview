@@ -144,7 +144,7 @@ try {
     await freshPage.waitForTimeout(900);
     await check(freshPage.evaluate(() => (
       document.querySelector('#mukkebiSummerEvent')?.hidden === true
-        && sessionStorage.getItem('daedongMukkebiSummerEventSeenSessionV2') === '1'
+        && sessionStorage.getItem('daedongMukkebiIslandExpoEventSeenSessionV1') === '1'
     )), '팝업을 닫은 뒤 앱 복귀 신호가 와도 같은 세션에서 다시 표시하지 않음');
   }
 

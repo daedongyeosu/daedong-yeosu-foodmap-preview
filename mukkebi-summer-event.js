@@ -13,12 +13,13 @@
   const hideTodayButton = document.getElementById('mukkebiSummerHideToday');
   const orderButton = document.getElementById('mukkebiSummerOrder');
   const communityIntro = document.getElementById('communityIntro');
-  const HIDE_DATE_KEY = 'daedongMukkebiSummerEventHiddenDateV2';
-  const SEEN_SESSION_KEY = 'daedongMukkebiSummerEventSeenSessionV2';
+  const HIDE_DATE_KEY = 'daedongMukkebiIslandExpoEventHiddenDateV1';
+  const SEEN_SESSION_KEY = 'daedongMukkebiIslandExpoEventSeenSessionV1';
   const COMMUNITY_INTRO_SESSION_KEY = 'daedongCommunityIntroPlayedV4';
   const EXTERNAL_APP_DEPARTURE_KEY = 'daedongExternalAppDepartureV1';
   const FOLLOWUP_CAMPAIGN_DELAY = 3000;
-  const EVENT_END = new Date('2026-09-01T00:00:00+09:00').getTime();
+  const EVENT_START = new Date('2026-09-01T00:00:00+09:00').getTime();
+  const EVENT_END = new Date('2026-11-01T00:00:00+09:00').getTime();
   const AUTO_OPEN_ENABLED = true;
   const RETURN_QUERY_KEYS = ['store', '__ddret', '__ddom', '__ddappfallback'];
   const entryUrl = new URL(location.href);
@@ -147,6 +148,7 @@
     if (seenThisSession()) return block('seen-session');
     if (returningFromOrderApp()) return block('order-app-return');
     if (customerAlreadyInteracted()) return block('customer-interacted');
+    if (Date.now() < EVENT_START) return block('campaign-not-started');
     if (Date.now() >= EVENT_END) return block('campaign-ended');
     if (hiddenToday()) return block('hidden-today');
     const modal = document.getElementById('modal');

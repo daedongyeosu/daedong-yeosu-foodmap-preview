@@ -11,7 +11,7 @@ const browser = await chromium.launch({
 const context = await browser.newContext({viewport: report.viewport, locale: 'ko-KR'});
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
-  sessionStorage.setItem('daedongMukkebiSummerEventSeenSessionV2', '1');
+  sessionStorage.setItem('daedongMukkebiIslandExpoEventSeenSessionV1', '1');
 });
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
 const page = await context.newPage();
