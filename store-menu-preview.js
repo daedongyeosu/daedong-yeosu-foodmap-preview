@@ -23,6 +23,7 @@
   const MENU_SUFFIX_PRICE_PATTERN = /(?:가격\s*[:：]?\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?\s*(?:원|₩|krw|usd)(?:\s*[~～~-]\s*(?:(?:₩|\$|krw|usd)\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?\s*(?:원|₩|krw|usd)?)?/giu;
   const MENU_BARE_PRICE_PATTERN = /^(?:가격\s*[:：]?\s*)?(?:\d{1,3}(?:,\d{3})+|\d{4,6})$/u;
   const MENU_PRIVATE_PRICE_FIELDS = ['price', 'menu_unitprc', 'menuPrice', 'salePrice', 'discountPrice', 'originalPrice', 'unitPrice', 'basePrice'];
+  const MENU_HIDDEN_MEMBERSHIP_PATTERN = /(?:와우|wow)\s*회원/iu;
   let menuCloseActivatedAt = 0;
   const menuCloseTouches = new Map();
   const MENU_HISTORY = Object.freeze({
@@ -66,6 +67,8 @@
   }
 
   function publicMenuItem(item) {
+    if ([item?.name, item?.description, item?.category]
+      .some(value => MENU_HIDDEN_MEMBERSHIP_PATTERN.test(String(value || '').normalize('NFKC')))) return null;
     const next = {...item, description: publicMenuDescription(item?.description)};
     for (const key of MENU_PRIVATE_PRICE_FIELDS) delete next[key];
     if (isQuarantinedMenuImage(next.image)) next.image = '';
@@ -85,6 +88,7 @@
     const groups = new Map();
     (Array.isArray(menu.items) ? menu.items : []).forEach((source, index) => {
       const item = publicMenuItem(source);
+      if (!item) return;
       const key = publicMenuIdentity(item.name) || `__unnamed__${index}`;
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push({item, index});
