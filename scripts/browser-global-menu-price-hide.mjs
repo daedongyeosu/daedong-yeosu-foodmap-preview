@@ -48,7 +48,10 @@ try {
   await check(!/(?:\d{1,3}(?:,\d{3})+|\d+)\s*(?:원|₩|KRW|USD)/i.test(text), '메뉴 화면에 가격이 전혀 표시되지 않음');
 
   await page.locator('[data-menu-search]').fill('설렁탕');
-  const names = await page.locator('[data-menu-card]:visible h3').allInnerTexts();
+  await page.waitForFunction(() => [...document.querySelectorAll('[data-menu-card]:not([hidden]) h3')]
+    .every(node => String(node.textContent || '').trim().length > 0));
+  const names = await page.locator('[data-menu-card]:visible h3')
+    .evaluateAll(nodes => nodes.map(node => String(node.textContent || '').trim()));
   report.seolleongtangNames = names;
   await check(names.includes('설렁탕(공기밥포함)') && names.includes('특설렁탕(공기밥포함)'), '사진 있는 대표 설렁탕 메뉴를 보존');
   await check(!names.includes('설렁탕') && !names.includes('특 설렁탕'), '이름만 조금 다른 중복 설렁탕 메뉴를 제거');
