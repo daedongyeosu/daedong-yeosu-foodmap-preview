@@ -55,6 +55,16 @@ try {
   report.seolleongtangNames = names;
   await check(names.includes('설렁탕(공기밥포함)') && names.includes('특설렁탕(공기밥포함)'), '사진 있는 대표 설렁탕 메뉴를 보존');
   await check(!names.includes('설렁탕') && !names.includes('특 설렁탕'), '이름만 조금 다른 중복 설렁탕 메뉴를 제거');
+
+  await page.locator('[data-menu-preview-close]').first().click();
+  await page.waitForSelector('[data-store-menu-overlay]', {state: 'hidden', timeout: 5000});
+  await page.evaluate(() => openStore(fxStoreById('68ba9ebef219905e')));
+  await page.waitForSelector('#modal:not([hidden]) .store-detail[data-store-id="68ba9ebef219905e"]', {timeout: 5000});
+  await page.locator('[data-store-menu-preview="68ba9ebef219905e"]').click();
+  await page.waitForSelector('.store-menu-preview', {timeout: 5000});
+  const membershipText = await page.locator('.store-menu-preview').innerText();
+  await check(!/(?:와우|wow)\s*회원/iu.test(membershipText), '모든 메뉴에서 와우회원 표시를 제거');
+  await check(!/(?:\d{1,3}(?:,\d{3})+|\d+)\s*(?:원|₩|KRW|USD)/i.test(membershipText), '와우회원 원본이 있던 가게에서도 가격을 표시하지 않음');
   await page.screenshot({path: 'browser-global-menu-price-hide.png', fullPage: false});
   report.success = report.errors.length === 0;
 } catch (error) {
