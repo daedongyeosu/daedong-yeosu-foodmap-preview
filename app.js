@@ -453,6 +453,75 @@ const PROMOS = [
   {kind: 'new', title: '신규 오픈 가게 광고', desc: `새로 문을 연 ${REGION_SHORT_NAME} 가게를 빠르게 알립니다.`},
   {kind: 'notice', title: '소상공인협회 알림', desc: `${REGION_SHORT_NAME} 소상공인에게 필요한 소식을 전합니다.`}
 ];
+const YEOSU_LIFE_CATEGORIES = ['전체', '혜택', '행사', '모집', '교통', '뉴스'];
+const YEOSU_LIFE_NEWS = [
+  {
+    id: 'chak-special-202609', category: '혜택', icon: '💳', period: '9월 특별혜택',
+    title: '섬섬여수페이 최대 20% 특별할인',
+    summary: '15% 충전 할인 판매분 이용 시 결제 5% 즉시 할인을 더해 최대 20% 혜택을 받을 수 있습니다.',
+    detail: '9월 2일 131억 원 규모 15% 할인 판매를 시작하고, 소진 뒤에는 100억 원 규모 10% 할인 판매로 전환됩니다. 결제 할인은 여수사랑상품권 가맹점에서 카드·QR 모두 5%, 월 최대 2만 5천 원입니다. 월 구매 한도는 50만 원, 보유 한도는 70만 원입니다.',
+    warning: '판매 물량은 조기 소진될 수 있습니다. 현재 충전 할인율과 판매 여부는 CHAK 앱에서 반드시 확인하세요.',
+    source: '뉴시스 · 여수시 발표', verified: '2026.09.04 확인', linkLabel: '발표 기사 보기 ›',
+    url: 'https://mobile.newsis.com/view_amp.html?ar_id=NISX20260827_0003765183', featured: true
+  },
+  {
+    id: 'mukkebi-island-coupon', category: '혜택', icon: '🍽️', period: '9.1~10.31',
+    title: '먹깨비 1만5천 원 주문 시 5천 원 할인',
+    summary: '시민·관광객 누구나, 하루 1회 사용할 수 있으며 매일 선착순 500매입니다.',
+    detail: '2026여수세계섬박람회 기념 먹깨비 할인 행사입니다. 1만 5천 원 이상 주문 시 5천 원을 즉시 할인하며, 총 1만 8천 매가 준비되어 예산 소진 시 조기 종료될 수 있습니다.',
+    warning: '쿠폰 노출과 잔여 수량은 먹깨비 앱 주문 화면에서 최종 확인하세요.',
+    source: '여수시 관광문화', verified: '2026.09.04 확인',
+    url: 'https://www.yeosu.go.kr/tour/information/news/tour_news?idx=15852&mode=view', featured: true
+  },
+  {
+    id: 'island-ferry-half', category: '교통', icon: '⛴️', period: '9.5~11.4',
+    title: '섬박람회 기간 타지역민 여객선 운임 반값',
+    summary: '여수 섬을 찾는 타지역민에게 일반인 운임의 50%를 지원합니다.',
+    detail: '2026여수세계섬박람회 기간 여수의 섬을 방문하는 타지역민 대상 여객선 운임 지원 안내입니다. 항로·대상·예매 조건은 공식 안내에서 확인하세요.',
+    warning: '모든 승선권에 자동 적용되는 것은 아니므로 예매 전 대상 항로와 조건을 확인하세요.',
+    source: '여수시 관광문화', verified: '2026.09.04 확인',
+    url: 'https://www.yeosu.go.kr/tour/information/news/tour_news?idx=15859&mode=view', featured: true
+  },
+  {
+    id: 'island-lodging-discount', category: '혜택', icon: '🏨', period: '섬박람회 기간',
+    title: '섬박람회 입장권 연계 숙박 할인',
+    summary: '입장권 소지자가 이용할 수 있는 참여 숙박업소 할인 정보를 확인하세요.',
+    detail: '참여 숙박업소, 할인율, 이용 조건은 업소마다 다를 수 있습니다. 예약 전에 공식 참여 목록과 증빙 방법을 확인하세요.',
+    warning: '숙박업소별 예약 가능 여부와 할인 조건은 해당 업소에 다시 확인하세요.',
+    source: '여수시 관광문화', verified: '2026.09.04 확인',
+    url: 'https://www.yeosu.go.kr/tour/information/news/tour_news?idx=15862&mode=view'
+  },
+  {
+    id: 'yeosu-recruit-board', category: '모집', icon: '📣', period: '수시 갱신',
+    title: '여수시 모집·공고 한곳에서 확인',
+    summary: '시민 참여, 지원사업, 채용과 각종 접수 공고를 여수시 원문에서 확인합니다.',
+    detail: '모집 공고는 접수기간이 짧거나 조기 마감될 수 있어 공식 게시일과 마감일을 먼저 확인하는 것이 좋습니다.',
+    warning: '대동여수음식지도는 핵심 내용을 요약하며 신청은 반드시 여수시 공식 원문을 기준으로 진행하세요.',
+    source: '여수시청 고시공고', verified: '2026.09.04 확인',
+    url: 'https://www.yeosu.go.kr/www/govt/news/notify/new_notify'
+  },
+  {
+    id: 'island-expo-schedule', category: '행사', icon: '🏝️', period: '9.5~11.4',
+    title: '2026여수세계섬박람회 일정 확인',
+    summary: '행사장별 프로그램과 관람 일정을 공식 사이트에서 확인하세요.',
+    detail: '방문 전에 날짜별 행사와 행사장 위치, 운영시간을 공식 일정표에서 확인하면 이동 계획을 세우기 쉽습니다.',
+    warning: '행사 일정은 현장 사정에 따라 바뀔 수 있으므로 방문 당일 다시 확인하세요.',
+    source: '2026여수세계섬박람회', verified: '2026.09.04 확인',
+    url: 'https://island.yeosu2026.or.kr/expo_schedule'
+  },
+  {
+    id: 'yeosu-official-news', category: '뉴스', icon: '📰', period: '매일 확인',
+    title: '여수시 인터넷신문 거북선여수',
+    summary: '여수시 정책, 시민 혜택과 지역 현장 소식을 공식 인터넷신문에서 확인하세요.',
+    detail: '대동여수음식지도에서는 시민 생활과 관련이 큰 제목과 짧은 요약만 보여주고, 전체 내용은 원문으로 연결하는 방식입니다.',
+    warning: '기사 전체 내용과 변경 사항은 여수시청 원문을 기준으로 확인하세요.',
+    source: '여수시청 거북선여수', verified: '2026.09.04 확인',
+    url: 'https://news.yeosu.go.kr/'
+  }
+];
+const CHAK_ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.komscochak.m2.client';
+const CHAK_IOS_URL = 'https://apps.apple.com/kr/app/%EC%A7%80%EC%97%AD%EC%83%81%ED%92%88%EA%B6%8C-chak/id6449449658';
+const CHAK_YEOSU_GUIDE_URL = 'https://news.yeosu.go.kr/news/articleView.html?idxno=34946';
 const PROMO_CAROUSEL_DETAILS = {
   rider: {
     title: '배송기사님 상시모집',
@@ -1903,6 +1972,82 @@ function openPromoCarouselDetail(kind) {
   }
   openModal(`<div class="promo-signup-detail"><h2 id="modalTitle">${escapeHtml(title)}</h2><p>${escapeHtml(promo.desc)}</p><strong>가입 문의 ${escapeHtml(details.phone)}</strong></div>`);
 }
+function lifeNewsCardMarkup(item) {
+  return `<article class="life-news-card">
+    <div class="life-news-card-head"><span class="life-news-card-icon" aria-hidden="true">${escapeHtml(item.icon)}</span><div><span class="life-news-category">${escapeHtml(item.category)}</span><span class="life-news-period">${escapeHtml(item.period)}</span></div></div>
+    <h3>${escapeHtml(item.title)}</h3>
+    <p>${escapeHtml(item.summary)}</p>
+    <p class="life-news-detail">${escapeHtml(item.detail)}</p>
+    <div class="life-news-caution"><b>꼭 확인</b><span>${escapeHtml(item.warning)}</span></div>
+    <div class="life-news-source-row"><span><b>출처</b> ${escapeHtml(item.source)}<small>${escapeHtml(item.verified)}</small></span><button type="button" data-life-url="${escapeHtml(item.url)}">${escapeHtml(item.linkLabel || '공식 원문 보기 ›')}</button></div>
+  </article>`;
+}
+function renderYeosuLifeHome() {
+  const section = $('#yeosuLifeSection');
+  if (!section) return;
+  const isYeosu = ACTIVE_REGION.code === 'yeosu';
+  section.hidden = !isYeosu;
+  if (!isYeosu) return;
+  const highlights = $('#yeosuLifeHighlights');
+  if (!highlights) return;
+  highlights.innerHTML = YEOSU_LIFE_NEWS.filter(item => item.featured).map(item => `<button class="yeosu-life-highlight" type="button" data-life-item="${escapeHtml(item.id)}" aria-haspopup="dialog">
+    <span class="yeosu-life-highlight-icon" aria-hidden="true">${escapeHtml(item.icon)}</span>
+    <span class="yeosu-life-highlight-copy"><small>${escapeHtml(item.category)} · ${escapeHtml(item.period)}</small><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.summary)}</span></span>
+    <span class="yeosu-life-highlight-arrow" aria-hidden="true">›</span>
+  </button>`).join('');
+}
+function openYeosuLifeNews(category = '전체') {
+  const selected = YEOSU_LIFE_CATEGORIES.includes(category) ? category : '전체';
+  const items = selected === '전체' ? YEOSU_LIFE_NEWS : YEOSU_LIFE_NEWS.filter(item => item.category === selected);
+  openModal(`<div class="yeosu-life-modal">
+    <span class="yeosu-life-modal-kicker">여수시 공식자료 중심</span>
+    <h2 id="modalTitle">오늘의 여수생활정보</h2>
+    <p class="yeosu-life-modal-lead">생활에 필요한 핵심만 짧게 정리하고 원문을 함께 연결합니다.</p>
+    <div class="yeosu-life-tabs" role="tablist" aria-label="여수생활정보 분류">${YEOSU_LIFE_CATEGORIES.map(name => `<button type="button" role="tab" aria-selected="${String(name === selected)}" class="${name === selected ? 'active' : ''}" data-life-filter="${escapeHtml(name)}">${escapeHtml(name)}</button>`).join('')}</div>
+    <div class="life-news-list">${items.length ? items.map(lifeNewsCardMarkup).join('') : '<p class="life-news-empty">현재 확인된 소식이 없습니다.</p>'}</div>
+    <p class="yeosu-life-disclaimer">대동여수음식지도는 내용을 쉽게 요약해 안내합니다. 신청·결제·예약 전에는 각 기관의 공식 원문에서 최신 내용을 확인해 주세요.</p>
+  </div>`);
+}
+function openYeosuLifeItem(id) {
+  const item = YEOSU_LIFE_NEWS.find(entry => entry.id === id);
+  if (!item) return;
+  openModal(`<div class="yeosu-life-modal yeosu-life-single">
+    <span class="yeosu-life-modal-kicker">여수생활정보 · ${escapeHtml(item.category)}</span>
+    <h2 id="modalTitle">${escapeHtml(item.title)}</h2>
+    ${lifeNewsCardMarkup(item)}
+    <button class="life-news-all-button" type="button" data-life-filter="전체">다른 여수생활정보도 보기</button>
+  </div>`);
+}
+function openChakBenefitGuide() {
+  openModal(`<div class="yeosu-life-modal chak-guide">
+    <span class="yeosu-life-modal-kicker">결제혜택 · 주문앱이 아닙니다</span>
+    <h2 id="modalTitle">섬섬여수페이(CHAK) 사용법</h2>
+    <p class="chak-guide-lead">먹깨비·땡겨요는 <b>주문하는 앱</b>, CHAK은 여수사랑상품권을 충전하고 가맹점에서 <b>결제하는 앱</b>입니다.</p>
+    <section class="chak-special-box" aria-label="현재 섬섬여수페이 특별혜택">
+      <small>2026여수세계섬박람회 기념</small>
+      <strong>충전 15% + 결제 5%<br><em>최대 20% 혜택</em></strong>
+      <p>15% 판매분 소진 뒤에는 10% 할인 판매로 전환됩니다. 결제 5% 할인은 월 최대 2만 5천 원입니다.</p>
+      <b>현재 충전 할인율·판매 여부는 CHAK 앱에서 최종 확인</b>
+    </section>
+    <ol class="chak-steps">
+      <li><span>1</span><div><b>CHAK 설치</b><p>휴대폰에 ‘지역상품권 chak’ 앱을 설치하고 회원가입합니다.</p></div></li>
+      <li><span>2</span><div><b>여수 선택</b><p>지역에서 여수를 선택하고 ‘섬섬여수페이’를 등록합니다.</p></div></li>
+      <li><span>3</span><div><b>계좌 연결·충전</b><p>본인 계좌를 연결한 뒤 앱에 표시되는 현재 할인율을 확인하고 충전합니다.</p></div></li>
+      <li><span>4</span><div><b>가맹점에서 결제</b><p>CHAK에 표시된 가맹점에서 섬섬여수페이 카드 또는 매장 QR을 이용합니다.</p></div></li>
+    </ol>
+    <div class="chak-limit-note"><b>중요</b><p>모든 음식점에서 되는 것은 아닙니다. 주문하기 전에 CHAK 앱에서 해당 가게가 여수사랑상품권 가맹점인지 확인하세요. 먹깨비나 땡겨요 주문 결제에 자동으로 적용된다고 표시하지 않습니다.</p></div>
+    <div class="chak-guide-actions">
+      <button type="button" data-life-url="${CHAK_ANDROID_URL}">안드로이드 설치</button>
+      <button type="button" data-life-url="${CHAK_IOS_URL}">아이폰 설치</button>
+      <button type="button" class="secondary" data-life-url="${CHAK_YEOSU_GUIDE_URL}">여수시 공식 사용안내</button>
+      <button type="button" class="secondary" data-life-item="chak-special-202609">특별할인 상세보기</button>
+    </div>
+  </div>`);
+}
+function openNotifications() {
+  const lifeMarkup = ACTIVE_REGION.code === 'yeosu' ? `<section class="notice-life-group"><h3>여수생활정보</h3><button type="button" data-open-chak-benefit><b>💳 섬섬여수페이 특별혜택</b><small>CHAK 사용법과 현재 할인 확인</small></button><button type="button" data-life-item="mukkebi-island-coupon"><b>🍽️ 먹깨비 5천 원 할인</b><small>9월 1일~10월 31일 · 매일 선착순</small></button><button type="button" data-life-filter="전체"><b>📍 여수생활정보 전체 보기</b><small>혜택·행사·모집·교통·뉴스</small></button></section>` : '';
+  openModal(`<div class="notification-center"><h2 id="modalTitle">알림</h2>${lifeMarkup}<section class="notice-promo-group"><h3>대동소식</h3><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div></section></div>`);
+}
 function appIcon(key, cls = '') {
   const meta = APP_META[key]; if (!meta) return '';
   if (EXTERNAL_APP_KEYS.includes(key)) return `<span class="${escapeHtml(`${cls} external-app-text-mark`.trim())}" aria-label="${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</span>`;
@@ -2083,6 +2228,7 @@ function classifyModal() {
   else if ($('#modalContent .promo-detail-image-only')) modal.classList.add('promo-detail-modal', 'promo-image-only-modal');
   else if ($('#modalContent .promo-detail')) modal.classList.add('promo-detail-modal');
   else if ($('#modalContent .promo-signup-detail')) modal.classList.add('promo-signup-modal');
+  else if ($('#modalContent .yeosu-life-modal')) modal.classList.add('yeosu-life-sheet-modal');
 }
 function openModal(html) {
   const modal = $('#modal'), wasHidden = modal.hidden;
@@ -2437,7 +2583,7 @@ function deferBrandFont() {
   }, 60000);
 }
 async function initialize() {
-  renderHero(); renderPromos();
+  renderHero(); renderPromos(); renderYeosuLifeHome();
   const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([
     window.daedongDataApi?.catalog?.({timeoutMs: 20000}).catch(error => {
       console.error('보안 데이터 API에서 가게목록을 불러오지 못했습니다.', error);
@@ -2633,6 +2779,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if(event.target.closest('[data-open-guide]')){guide();return;}
     if(event.target.closest('[data-open-address]')){areaModal();return;}
     if(event.target.closest('[data-open-ad-inquiry]')){adInquiryModal();return;}
+    const lifeFilter=event.target.closest('[data-life-filter]');if(lifeFilter){openYeosuLifeNews(lifeFilter.dataset.lifeFilter);return;}
+    const lifeItem=event.target.closest('[data-life-item]');if(lifeItem){openYeosuLifeItem(lifeItem.dataset.lifeItem);return;}
+    if(event.target.closest('[data-open-chak-benefit]')){openChakBenefitGuide();return;}
+    const lifeUrl=event.target.closest('[data-life-url]');if(lifeUrl){try{const url=new URL(lifeUrl.dataset.lifeUrl,location.href);if(url.protocol==='https:')location.assign(url.href);}catch(error){console.warn('Invalid Yeosu life information URL',error);}return;}
     const noticePromo=event.target.closest('[data-notice-promo]');if(noticePromo){openPromoCarouselDetail(noticePromo.dataset.noticePromo);return;}
     const feedbackRetry=event.target.closest('[data-feedback-retry]');if(feedbackRetry){const report=feedbackQueue().find(item=>item.reportId===feedbackRetry.dataset.feedbackRetry);if(!report)return;feedbackRetry.disabled=true;feedbackRetry.textContent='다시 보내는 중…';deliverFeedbackReport(report).then(()=>feedbackSuccessModal(report)).catch(error=>feedbackFailureModal(report,error instanceof Error?error.message:'수정 요청을 접수하지 못했습니다.'));return;}
     if(event.target.closest('[data-modal-close]')){hardClose();return;}
@@ -2640,7 +2790,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) { window.daedongConfirmIntentionalStoreOpen?.(); openStore(store); } });
-  $('#noticeBtn').addEventListener('click', () => openModal(`<h2 id="modalTitle">알림</h2><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div>`));
+  $('#noticeBtn').addEventListener('click', openNotifications);
+  $('#yeosuLifeMoreBtn')?.addEventListener('click', () => openYeosuLifeNews('전체'));
+  $('#chakBenefitBtn')?.addEventListener('click', openChakBenefitGuide);
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
     $$('.bottom-nav button').forEach(item => item.classList.remove('active')); button.classList.add('active');
