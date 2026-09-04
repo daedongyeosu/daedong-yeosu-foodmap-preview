@@ -13,7 +13,7 @@ assert.match(app, /!isQuarantinedCollectedPhoto\(value\)/);
 
 assert.match(menu, /function menuWithoutQuarantinedImages\(menu\)/);
 assert.match(menu, /mainImage: isQuarantinedMenuImage\(menu\.mainImage\) \? '' : menu\.mainImage/);
-assert.match(menu, /isQuarantinedMenuImage\(item\?\.image\) \? \{\.\.\.item, image: ''\}/);
+assert.match(menu, /if \(isQuarantinedMenuImage\(next\.image\)\) next\.image = ''/);
 
 assert.match(service, /isQuarantinedCollectedPhoto\(item\.image\)/);
 assert.match(service, /rawIsOfficialPlaceholder \|\| rawIsQuarantinedPhoto/);

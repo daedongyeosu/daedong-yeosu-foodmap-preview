@@ -19,6 +19,10 @@
   let menuImageLoadRun = 0;
   const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2;
   const OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1';
+  const MENU_PREFIX_PRICE_PATTERN = /(?:가격\s*[:：]?\s*)?(?:₩|\$|krw|usd)\s*(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:\s*(?:원|krw|usd))?/giu;
+  const MENU_SUFFIX_PRICE_PATTERN = /(?:가격\s*[:：]?\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?\s*(?:원|₩|krw|usd)(?:\s*[~～~-]\s*(?:(?:₩|\$|krw|usd)\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?\s*(?:원|₩|krw|usd)?)?/giu;
+  const MENU_BARE_PRICE_PATTERN = /^(?:가격\s*[:：]?\s*)?(?:\d{1,3}(?:,\d{3})+|\d{4,6})$/u;
+  const MENU_PRIVATE_PRICE_FIELDS = ['price', 'menu_unitprc', 'menuPrice', 'salePrice', 'discountPrice', 'originalPrice', 'unitPrice', 'basePrice'];
   let menuCloseActivatedAt = 0;
   const menuCloseTouches = new Map();
   const MENU_HISTORY = Object.freeze({
@@ -40,14 +44,67 @@
     return /\/api\/media\/coupang-menu\/v1\/[a-f0-9]{64}\.jpg$/i.test(clean);
   }
 
+  function publicMenuDescription(value) {
+    const text = String(value || '').normalize('NFKC')
+      .replace(MENU_PREFIX_PRICE_PATTERN, ' ')
+      .replace(MENU_SUFFIX_PRICE_PATTERN, ' ')
+      .replace(/^[\s·•|/,:：;~～-]+|[\s·•|/,:：;~～-]+$/g, ' ')
+      .replace(/\s*([·•|])\s*\1+/g, ' $1 ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    return MENU_BARE_PRICE_PATTERN.test(text) ? '' : text;
+  }
+
+  function publicMenuIdentity(value) {
+    return String(value || '').normalize('NFKC')
+      .replace(/^(?:(?:[\[(（【]\s*(?:new|best|hit|추천|인기|대표|신메뉴)\s*[\])）】])|(?:new|best|hit))\s*/i, '')
+      .replace(/\s*[\[(（【]\s*(?:(?:공기|공깃)\s*)?밥\s*(?:은\s*)?(?:포함|제공)(?:\s*(?:입니다|됨))?\s*[\])）】]\s*/giu, ' ')
+      .replace(/\s+(?:(?:공기|공깃)\s*)?밥\s*(?:은\s*)?(?:포함|제공)(?:\s*(?:입니다|됨))?\s*$/giu, '')
+      .toLocaleLowerCase('ko-KR')
+      .replace(/[™®]/g, '')
+      .replace(/[^\p{L}\p{N}]/gu, '');
+  }
+
+  function publicMenuItem(item) {
+    const next = {...item, description: publicMenuDescription(item?.description)};
+    for (const key of MENU_PRIVATE_PRICE_FIELDS) delete next[key];
+    if (isQuarantinedMenuImage(next.image)) next.image = '';
+    next.__sourceIds = [...new Set([...(Array.isArray(item?.__sourceIds) ? item.__sourceIds : []), String(item?.id || '')].filter(Boolean))];
+    return next;
+  }
+
+  function publicMenuItemQuality(item, index) {
+    return (item.image ? 1_000_000 : 0)
+      + (item.description ? 100_000 + Math.min(item.description.length, 10_000) : 0)
+      + (item.category ? 10_000 : 0)
+      - index / 100_000;
+  }
+
   function menuWithoutQuarantinedImages(menu) {
     if (!menu || typeof menu !== 'object') return menu;
+    const groups = new Map();
+    (Array.isArray(menu.items) ? menu.items : []).forEach((source, index) => {
+      const item = publicMenuItem(source);
+      const key = publicMenuIdentity(item.name) || `__unnamed__${index}`;
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push({item, index});
+    });
+    const items = [...groups.values()].map(candidates => {
+      const ranked = [...candidates].sort((left, right) => publicMenuItemQuality(right.item, right.index) - publicMenuItemQuality(left.item, left.index));
+      const winner = {...ranked[0].item};
+      winner.image = ranked.map(candidate => candidate.item.image).find(Boolean) || '';
+      winner.category = ranked.map(candidate => candidate.item.category).find(Boolean) || '';
+      winner.description = ranked.map(candidate => candidate.item.description)
+        .filter(Boolean).sort((left, right) => right.length - left.length || left.localeCompare(right, 'ko'))[0] || '';
+      winner.__sourceIds = [...new Set(candidates.flatMap(candidate => candidate.item.__sourceIds || []))];
+      return {item: winner, index: Math.min(...candidates.map(candidate => candidate.index))};
+    }).sort((left, right) => left.index - right.index).map(entry => entry.item);
+    const categories = ['전체', ...new Set(items.map(item => String(item.category || '').trim()).filter(Boolean))];
     return {
       ...menu,
       mainImage: isQuarantinedMenuImage(menu.mainImage) ? '' : menu.mainImage,
-      items: (Array.isArray(menu.items) ? menu.items : []).map(item => (
-        isQuarantinedMenuImage(item?.image) ? {...item, image: ''} : item
-      ))
+      categories,
+      items
     };
   }
 
@@ -685,11 +742,15 @@
     const item = activeMenuById.get(id);
     const grid = preview.querySelector('[data-menu-grid]');
     if (!item || !grid) return null;
+    const canonicalId = String(item.id || id);
+    card = [...preview.querySelectorAll('[data-menu-card]')]
+      .find(candidate => String(candidate.dataset.menuId || '') === canonicalId);
+    if (card) return card;
     grid.insertAdjacentHTML('beforeend', menuCardMarkup(item));
-    preview.__menuRenderState?.renderedIds?.add(id);
+    preview.__menuRenderState?.renderedIds?.add(canonicalId);
     observeMenuImages(preview);
     card = [...grid.querySelectorAll('[data-menu-card]')]
-      .find(candidate => String(candidate.dataset.menuId || '') === id);
+      .find(candidate => String(candidate.dataset.menuId || '') === canonicalId);
     return card || null;
   }
 
@@ -927,7 +988,9 @@
       const [, menu] = await Promise.all([detailPromise, menuPromise]);
       activeStore = store;
       activeMenu = orderedMenu(menu);
-      activeMenuById = new Map(activeMenu.items.map(item => [String(item.id || ''), item]));
+      activeMenuById = new Map(activeMenu.items.flatMap(item => (
+        (item.__sourceIds || [item.id]).map(id => [String(id || ''), item])
+      )));
       overlay.innerHTML = previewMarkup(activeMenu, store);
       const preview = overlay.querySelector('.store-menu-preview');
       const scrollRoot = overlay.querySelector('.store-menu-scroll');
