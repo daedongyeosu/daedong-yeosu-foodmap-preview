@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "source": "꼬르륵 전체가게(1).xlsx",
   "matchingPolicy": "store-and-branch-name plus address neighborhood; phone numbers ignored",
   "managedStoreIds": [
@@ -144,16 +144,19 @@
     "43384f472418faec",
     "5a4fee4e5893eb6c",
     "c05575dae26cfbae",
-    "b8267998349b16e1",
     "bb036844c501c40a",
     "c0bab6826b36d95f",
     "5deb911df92c645a",
     "411052fdc9de5d44",
     "4e877826c5a4b649",
-    "361f855efc21c1c2",
     "7b221aa6623bd0a2"
   ],
   "sharedManagedStoreIds": [],
+  "deprioritizedStoreIds": [
+    "361f855efc21c1c2",
+    "b8267998349b16e1",
+    "14feb7cbd67ef7e2"
+  ],
   "categoryPriorityOverrides": {
     "햄버거/샌드위치/토스트/핫도그": {
       "scope": "all-neighborhoods",
@@ -176,8 +179,9 @@
   "stats": {
     "operatingExcelRows": 246,
     "matchedExcelRows": 149,
-    "managedCanonicalStores": 149,
+    "managedCanonicalStores": 147,
     "sharedManagedCanonicalStores": 0,
+    "deprioritizedCanonicalStores": 3,
     "needsReviewRows": 14,
     "unmatchedRows": 83
   }

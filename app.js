@@ -1475,7 +1475,7 @@ function normalizedStore(raw, index) {
     address: raw.address || '', phone: raw.phone || '', naverMap: safeHref(raw.naverMap || ''),
     legacyImage: legacyImages[0] || '', legacyImages,
     tags: [raw.category, area, raw.address, ...(raw.shopInShopNames || [])].filter(Boolean), routes,
-    managed: Boolean(raw.managed), sharedManaged: Boolean(raw.sharedManaged), pinPosition: raw.pinPosition,
+    managed: Boolean(raw.managed), sharedManaged: Boolean(raw.sharedManaged), deprioritized: Boolean(raw.deprioritized), pinPosition: raw.pinPosition,
     forceBottom: Boolean(raw.forceBottom), lat, lng, coordinateSource,
     channelKeys: Array.isArray(raw.channelKeys) ? [...new Set(raw.channelKeys.map(String))] : routes.map(route => route.key),
     hasMenu: Boolean(raw.hasMenu),
@@ -2106,6 +2106,7 @@ function filteredStores() {
     .sort((a, b) => {
       const statusOrder = compareStoreBusinessStatus(a, b);
       if (statusOrder) return statusOrder;
+      if (a.store.deprioritized !== b.store.deprioritized) return a.store.deprioritized ? 1 : -1;
       if (state.sortByDistance) {
         if (a.distance !== null && b.distance !== null) return a.distance - b.distance;
         if (a.distance !== null) return -1;
