@@ -191,6 +191,9 @@
   }
 
   function menuDisplayPriority(item) {
+    if (item?.__kind === 'alcohol') return 40;
+    if (item?.__kind === 'drink') return 30;
+    if (item?.__kind === 'option') return 20;
     const category = String(item?.category || '').normalize('NFKC').replace(/\s+/g, '').toLowerCase();
     if (/주류|술|소주|맥주|막걸리|와인/.test(category)) return 40;
     if (/음료|커피|차|에이드|주스|탄산/.test(category)) return 30;
@@ -200,18 +203,10 @@
 
   function orderedMenu(menu) {
     const items = Array.isArray(menu?.items) ? menu.items : [];
-    const extraKinds = new Set(['drink', 'alcohol', 'option']);
-    const extras = items.filter(item => extraKinds.has(item.__kind));
-    const store = storeById(menu?.storeId);
-    const cafe = /카페|커피|베이커리|디저트/.test([store?.name, store?.category, store?.cat, store?.categories].flat().join(' '));
-    const foldExtras = !cafe && items.length - extras.length >= 3 && extras.length < items.length * 0.6;
     return {
       ...menu,
-      __foldExtras: foldExtras,
-      __extraCount: foldExtras ? extras.length : 0,
       items: items
-        .map((item, index) => ({item: {...item, __compact: foldExtras && extraKinds.has(item.__kind)}, index,
-          priority: foldExtras && extraKinds.has(item.__kind) ? 50 : menuDisplayPriority(item)}))
+        .map((item, index) => ({item, index, priority: menuDisplayPriority(item)}))
         .sort((a, b) => a.priority - b.priority || a.index - b.index)
         .map(entry => entry.item)
     };
@@ -529,7 +524,7 @@
       : '';
     const textOnlyClass = item.image ? '' : ' is-text-only';
     return `
-      <article class="store-menu-card${textOnlyClass}${item.__compact ? ' is-compact-extra' : ''}" role="button" tabindex="0" aria-label="${escapeMenuHtml(item.name)} 주문방법 보기" data-menu-card data-menu-select data-menu-id="${escapeMenuHtml(item.id)}" data-category="${escapeMenuHtml(item.category)}" data-search="${escapeMenuHtml(searchText)}" data-menu-has-photo="${item.image ? 'true' : 'false'}">
+      <article class="store-menu-card${textOnlyClass}" role="button" tabindex="0" aria-label="${escapeMenuHtml(item.name)} 주문방법 보기" data-menu-card data-menu-select data-menu-id="${escapeMenuHtml(item.id)}" data-category="${escapeMenuHtml(item.category)}" data-search="${escapeMenuHtml(searchText)}" data-menu-has-photo="${item.image ? 'true' : 'false'}">
         ${photo}
         <div class="store-menu-copy">
           ${item.adultOnly && !item.image ? '<span class="store-menu-age-badge">19세 이상</span>' : ''}
@@ -564,7 +559,7 @@
     return `<details class="store-menu-variants" data-menu-variants>
       <summary>용량·구성 및 사진 보기</summary>
       <ul>${variants.map(variant => `<li>
-        ${variant.image ? `<img data-menu-image-src="${escapeMenuHtml(variant.image)}" alt="${escapeMenuHtml(variant.name)}" width="76" height="76" loading="lazy" decoding="async">` : ''}
+        ${variant.image ? `<img data-menu-image-src="${escapeMenuHtml(variant.image)}" alt="${escapeMenuHtml(variant.name)}" width="720" height="546" loading="lazy" decoding="async">` : ''}
         <span><b>${escapeMenuHtml(variant.name)}</b>${variant.description ? `<small>${escapeMenuHtml(variant.description)}</small>` : ''}</span>
       </li>`).join('')}</ul>
       <small>용량·구성은 선택한 주문앱에서 확인해 주세요.</small>
@@ -572,7 +567,7 @@
   }
 
   function initialMenuItems(menu) {
-    return menu.__foldExtras ? menu.items.filter(item => !item.__compact) : menu.items;
+    return menu.items;
   }
 
   function drainMenuImageQueue() {
@@ -862,7 +857,6 @@
             ${initialMenuItems(menu).slice(0, INITIAL_MENU_RENDER_COUNT).map(item => menuCardMarkup(item)).join('')}
           </section>
           <p class="store-menu-render-status" data-menu-render-status role="status">나머지 메뉴를 부드럽게 준비하고 있습니다…</p>
-          ${menu.__extraCount ? `<button type="button" class="store-menu-extras-toggle" data-menu-extras-toggle aria-expanded="false">음료·주류·추가 메뉴 ${menu.__extraCount}개 보기</button>` : ''}
           <p class="store-menu-no-results" data-menu-no-results hidden>검색 조건에 맞는 메뉴가 없습니다.</p>
 
           <footer class="store-menu-notice">
@@ -933,7 +927,6 @@
       category: preview.querySelector('[data-menu-category].active')?.dataset.menuCategory || '전체',
       query: preview.querySelector('[data-menu-search]')?.value || '',
       searchActive: preview.classList.contains('menu-search-active'),
-      extrasExpanded: preview.dataset.menuExtrasExpanded === 'true',
       selectedMenuId: orderSheet && !orderSheet.hidden ? String(lastMenuSelection?.dataset.menuId || '') : '',
       selectedVariantId: orderSheet && !orderSheet.hidden ? lastMenuVariantId : ''
     };
@@ -969,7 +962,6 @@
     const input = preview.querySelector('[data-menu-search]');
     if (input) input.value = String(saved.query || '');
     preview.classList.toggle('menu-search-active', Boolean(saved.searchActive));
-    preview.dataset.menuExtrasExpanded = String(Boolean(saved.extrasExpanded));
     filterMenus(preview);
     stabilizeMenuReturnPosition(preview, saved);
     if (saved.selectedMenuId) {
@@ -1236,8 +1228,7 @@
     const matchingItems = activeMenu.items.filter(item => {
       const matchesCategory = category === '전체' || String(item.category || '') === category;
       const searchText = `${item.name || ''} ${item.description || ''} ${item.category || ''} ${item.__searchText || ''}`.toLocaleLowerCase('ko-KR');
-      const showExtra = !item.__compact || query || category !== '전체' || root.dataset.menuExtrasExpanded === 'true';
-      return showExtra && matchesCategory && (!query || searchText.includes(query));
+      return matchesCategory && (!query || searchText.includes(query));
     });
     const visible = matchingItems.length;
     resetProgressiveMenuCards(root, matchingItems, rawQuery);
@@ -1249,13 +1240,6 @@
     if (clear) clear.hidden = !rawQuery;
     const empty = root.querySelector('[data-menu-no-results]');
     if (empty) empty.hidden = visible !== 0;
-    const extrasToggle = root.querySelector('[data-menu-extras-toggle]');
-    if (extrasToggle) {
-      extrasToggle.hidden = Boolean(query || category !== '전체');
-      const expanded = root.dataset.menuExtrasExpanded === 'true';
-      extrasToggle.setAttribute('aria-expanded', String(expanded));
-      extrasToggle.textContent = expanded ? '음료·주류·추가 메뉴 접기' : `음료·주류·추가 메뉴 ${activeMenu.__extraCount}개 보기`;
-    }
     if (revealResults && root.classList.contains('menu-search-active')) {
       const scrollRoot = root.querySelector('.store-menu-scroll');
       window.requestAnimationFrame(() => {
@@ -1287,13 +1271,6 @@
 
   document.addEventListener('click', event => {
     if (event.target.closest('[data-menu-variants]')) return;
-    const extrasToggle = event.target.closest('[data-menu-extras-toggle]');
-    if (extrasToggle) {
-      const preview = extrasToggle.closest('.store-menu-preview');
-      preview.dataset.menuExtrasExpanded = String(preview.dataset.menuExtrasExpanded !== 'true');
-      filterMenus(preview);
-      return;
-    }
     const entry = event.target.closest('[data-store-menu-preview]');
     if (entry) {
       openMenuPreview(entry.dataset.storeMenuPreview, entry);

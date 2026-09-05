@@ -47,7 +47,9 @@ try {
   await page.locator(`[data-store-menu-preview="${storeId}"]`).click();
   await page.locator('.store-menu-preview').waitFor();
   const preview = page.locator('.store-menu-preview');
-  check(await page.locator('[data-menu-card]').count() === 4, 'four food families, drinks collapsed, instructions excluded');
+  check(await page.locator('[data-menu-card]').count() === 7, 'all seven food, drink and alcohol families render immediately; instructions excluded');
+  check(await page.locator('[data-menu-extras-toggle]').count() === 0, 'no extra action is required to reveal drinks or alcohol');
+  check(await page.locator('.is-compact-extra').count() === 0, 'no menu family uses a compact card');
   const family = page.locator('[data-menu-card]').filter({has: page.locator('h3', {hasText: /^등심 꿔바로우/})});
   check(await family.count() === 1, 'photo/no-photo tangsuyuk shown once');
   await family.locator('summary').click();
@@ -56,18 +58,59 @@ try {
   await family.locator('details img').first().waitFor({state: 'visible'});
   await page.waitForFunction(() => [...document.querySelectorAll('[data-menu-variants][open] img')].every(img => img.complete && img.naturalWidth > 0));
   check(true, 'original variant photo loads when the family is expanded');
+  const variantPhotoSizes = await family.locator('details img').evaluateAll(images => images.map(image => ({
+    width: image.getBoundingClientRect().width, height: image.getBoundingClientRect().height,
+    availableWidth: image.parentElement.clientWidth,
+    intrinsicWidth: image.getAttribute('width'), intrinsicHeight: image.getAttribute('height')
+  })));
+  report.variantPhotoSizes = variantPhotoSizes;
+  check(variantPhotoSizes.length > 0 && variantPhotoSizes.every(size => size.intrinsicWidth === '720' && size.intrinsicHeight === '546'),
+    'expanded original variant photos keep full-size 720 by 546 dimensions');
+  check(variantPhotoSizes.every(size => size.width >= size.availableWidth - 1 && size.width > 250 && size.height > 150),
+    'expanded original variant photos fill the available width instead of becoming thumbnails');
   check(await page.locator('[data-menu-order-sheet]').isHidden(), 'opening variants does not launch order sheet');
   await family.locator('summary').click();
-  await page.locator('[data-menu-extras-toggle]').click();
-  check(await page.locator('.is-compact-extra').count() === 3, 'drinks and alcohol shown as compact rows');
-  const sizes = await page.locator('.is-compact-extra .store-menu-photo').evaluateAll(nodes => nodes.map(n => n.getBoundingClientRect().height));
-  check(sizes.every(h => h <= 80), 'drink photos remain small on mobile');
+  const drinkCards = page.locator('[data-menu-card]').filter({has: page.locator('h3', {hasText: /^(?:코카콜라|진로)/})});
+  check(await drinkCards.count() === 3, 'drinks and alcohol are already present in the complete menu');
+  const foodPhotoSize = await family.locator('.store-menu-photo').evaluate(node => ({
+    width: node.getBoundingClientRect().width, height: node.getBoundingClientRect().height
+  }));
+  const drinkPhotoSizes = await drinkCards.locator('.store-menu-photo').evaluateAll(nodes => nodes.map(node => ({
+    width: node.getBoundingClientRect().width, height: node.getBoundingClientRect().height,
+    availableWidth: node.closest('[data-menu-card]').clientWidth,
+    intrinsicWidth: node.querySelector('img').getAttribute('width'), intrinsicHeight: node.querySelector('img').getAttribute('height')
+  })));
+  report.drinkPhotoSizes = drinkPhotoSizes;
+  check(drinkPhotoSizes.length === 3 && drinkPhotoSizes.every(size => size.intrinsicWidth === '720' && size.intrinsicHeight === '546'),
+    'drink and alcohol images keep the same full-size dimensions as food');
+  check(drinkPhotoSizes.every(size => size.width >= size.availableWidth - 1 && size.height > 150
+    && Math.abs(size.width - foodPhotoSize.width) <= 1 && Math.abs(size.height - foodPhotoSize.height) <= 1),
+    'drink and alcohol photos use the same large full-width layout as food on mobile');
   const search = page.locator('[data-menu-search]');
   await search.fill('계란볶음밥');
   check(await page.locator('[data-menu-card]').count() === 1, 'alternate word order finds the existing family');
   check(!/와우회원|신기동.*추가|18,?000원/.test(await preview.innerText()), 'no guide/membership/price on customer screen');
   await search.fill('콜라');
   check(await page.locator('[data-menu-card]').count() === 2, 'ordinary and zero cola remain distinct searchable families');
+  const colaFamily = page.locator('[data-menu-card][data-menu-id="g"]');
+  const searchPhotoSize = await colaFamily.locator('.store-menu-photo').evaluate(node => ({
+    width: node.getBoundingClientRect().width, height: node.getBoundingClientRect().height
+  }));
+  check(searchPhotoSize.width > 0 && searchPhotoSize.width <= 120 && searchPhotoSize.height <= 120,
+    'existing search-result thumbnail layout remains unchanged');
+  await colaFamily.locator('summary').click();
+  await colaFamily.locator('details img').first().waitFor({state: 'visible'});
+  await page.waitForFunction(() => [...document.querySelectorAll('[data-menu-variants][open] img')].every(img => img.complete && img.naturalWidth > 0));
+  const searchVariantPhoto = await colaFamily.locator('details img').first().evaluate(image => ({
+    width: image.getBoundingClientRect().width, height: image.getBoundingClientRect().height,
+    availableWidth: image.parentElement.clientWidth,
+    intrinsicWidth: image.getAttribute('width'), intrinsicHeight: image.getAttribute('height')
+  }));
+  report.searchVariantPhoto = searchVariantPhoto;
+  check(searchVariantPhoto.width >= searchVariantPhoto.availableWidth - 1 && searchVariantPhoto.width > 250
+    && searchVariantPhoto.height > 150 && searchVariantPhoto.intrinsicWidth === '720' && searchVariantPhoto.intrinsicHeight === '546',
+    'expanded original photo stays full-width even inside compact search results');
+  await colaFamily.locator('summary').click();
   await page.evaluate(id => window.daedongMenuPreview.open(id, {menuId: 'l'}), storeId);
   check(await page.locator('[data-selected-menu-name]').innerText() === '코카콜라 355ml', 'exact search variant keeps its original quantity');
   check(await page.locator('[data-selected-menu-image]').isHidden(), '355ml without photo never borrows a 350ml photo');

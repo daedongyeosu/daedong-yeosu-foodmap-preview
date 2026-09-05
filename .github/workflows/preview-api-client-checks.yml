@@ -137,7 +137,7 @@ jobs:
             sleep 0.25
           done
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-modal-close-touch.mjs
-      - name: Verify lossless menu families and compact extras on mobile
+      - name: Verify visible menu families and full-size photos on mobile
         run: |
           python3 -m http.server 4173 >/tmp/daedong-menu-families-server.log 2>&1 &
           SERVER_PID=$!

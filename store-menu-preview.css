@@ -1239,54 +1239,17 @@ body.store-menu-open {
 }
 .store-menu-variants ul { list-style: none; padding: 0; margin: 0; }
 .store-menu-variants li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  display: block;
   padding: 12px 0;
   border-top: 1px solid #e9edf3;
 }
-.store-menu-variants li img { width: 76px; height: 76px; object-fit: contain; border-radius: 8px; flex: 0 0 76px; }
-.store-menu-variants li span { min-width: 0; overflow-wrap: anywhere; }
+.store-menu-variants li img { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 8px; margin-bottom: 10px; }
+.store-menu-variants li span { display: block; min-width: 0; overflow-wrap: anywhere; }
 .store-menu-variants li b { display: block; font-size: 14px; }
 .store-menu-variants small { display: block; font-size: 12px; line-height: 1.5; margin-top: 5px; }
 @media (max-width: 720px) {
   .store-menu-preview.menu-search-active .store-menu-card > .store-menu-photo { align-self: start; }
 }
-.store-menu-extras-toggle {
-  display: block;
-  width: calc(100% - 32px);
-  margin: 18px auto;
-  padding: 16px;
-  min-height: 48px;
-  border: 1px solid #cbd7e4;
-  border-radius: 14px;
-  background: #fff;
-  color: #143355;
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
-}
-.store-menu-extras-toggle[hidden] { display: none; }
-.store-menu-card.is-compact-extra {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 80px;
-  align-items: start;
-  min-height: 0;
-}
-.store-menu-card.is-compact-extra.is-text-only { grid-template-columns: 1fr; }
-.store-menu-card.is-compact-extra > .store-menu-photo {
-  grid-column: 2;
-  grid-row: 1;
-  width: 72px;
-  height: 72px;
-  margin: 14px 8px 0 0;
-  aspect-ratio: 1;
-  border: 0;
-}
-.store-menu-card.is-compact-extra > .store-menu-photo img { object-fit: contain; }
-.store-menu-card.is-compact-extra > .store-menu-copy { grid-column: 1; grid-row: 1; padding: 14px; min-height: 0; }
-.store-menu-card.is-compact-extra .store-menu-copy h3 { font-size: 16px; }
-.store-menu-card.is-compact-extra .store-menu-card-action { margin-top: 8px; }
 
 @media (prefers-reduced-motion: reduce) {
   .store-menu-photo img,
