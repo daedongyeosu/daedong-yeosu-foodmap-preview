@@ -24,6 +24,11 @@ const fixture = {storeId, displayName: store.name, mainImage: 'assets/logo.png',
   {id: 'j', name: '시전동(신기동)', description: '', image: '', category: '신기동(시전동)에서 주문 시 추가해주세요.'},
   {id: 'k', name: '와우회원 전용', description: '', image: '', category: ''}
 ]};
+fixture.__menuNotes = [
+  {id: 'delivery-note', kind: 'delivery', text: '일부 지역 추가 배달비 2,000원', sourceIds: ['delivery-note']},
+  {id: 'food-note', kind: 'description', text: '만두피가 약간 매콤합니다.', sourceIds: ['food-note']},
+  {id: 'html-note', kind: 'description', text: '<img src=x onerror=alert(1)>', sourceIds: ['html-note']},
+];
 const report = {success: false, checks: [], errors: []};
 const browser = await chromium.launch({headless: true, ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH} : {})});
 const context = await browser.newContext({viewport: {width: 390, height: 844}, isMobile: true, hasTouch: true, locale: 'ko-KR'});
@@ -47,6 +52,11 @@ try {
   await page.locator(`[data-store-menu-preview="${storeId}"]`).click();
   await page.locator('.store-menu-preview').waitFor();
   const preview = page.locator('.store-menu-preview');
+  const notes = preview.locator('[data-menu-notes]');
+  check(await notes.count() === 1, 'delivery and description guidance is separate from food cards');
+  check((await notes.innerText()).includes('만두피가 약간 매콤합니다.'), 'orphan food description remains readable');
+  check(!/2,000|2000/.test(await notes.innerText()), 'guidance never leaks prices');
+  check(await notes.locator('img').count() === 0, 'guidance renders source markup as text, not active HTML');
   check(await page.locator('[data-menu-card]').count() === 7, 'all seven food, drink and alcohol families render immediately; instructions excluded');
   check(await page.locator('[data-menu-extras-toggle]').count() === 0, 'no extra action is required to reveal drinks or alcohol');
   check(await page.locator('.is-compact-extra').count() === 0, 'no menu family uses a compact card');

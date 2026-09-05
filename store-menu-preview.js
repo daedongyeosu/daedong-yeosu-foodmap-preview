@@ -799,6 +799,25 @@
     return card || null;
   }
 
+  function menuNotesMarkup(menu) {
+    const notes = Array.isArray(menu?.__menuNotes) ? menu.__menuNotes : [];
+    const seen = new Set();
+    const safeNotes = notes.flatMap(note => {
+      if (!note || !['delivery', 'description'].includes(note.kind)) return [];
+      const text = publicMenuDescription(note.text);
+      if (!text || MENU_HIDDEN_MEMBERSHIP_PATTERN.test(text) || seen.has(text)) return [];
+      seen.add(text);
+      return [{kind: note.kind, text}];
+    });
+    if (!safeNotes.length) return '';
+    return `<aside class="store-menu-notes" data-menu-notes aria-label="주문과 메뉴 안내">
+      ${[['delivery', '배달 안내'], ['description', '메뉴 안내']].map(([kind, title]) => {
+        const entries = safeNotes.filter(note => note.kind === kind);
+        return entries.length ? `<section><h2>${title}</h2><ul>${entries.map(note => `<li>${escapeMenuHtml(note.text)}</li>`).join('')}</ul></section>` : '';
+      }).join('')}
+    </aside>`;
+  }
+
   function previewMarkup(menu, store) {
     const counts = menu.items.reduce((result, item) => {
       result[item.category] = (result[item.category] || 0) + 1;
@@ -831,6 +850,8 @@
               </dl>
             </div>
           </section>
+
+          ${menuNotesMarkup(menu)}
 
           <section class="store-menu-tools">
             <div class="store-menu-search-row">
