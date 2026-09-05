@@ -11,6 +11,10 @@ const expected = [
   ['fb798d3119a28415', '60계치킨 여수미평점'],
   ['a089d1d54720b48e', '외계인피자 여수점'],
   ['aa0a00258c22f377', '뽕뜨락피자 여수여서점'],
+  ['7bc7239e6b509c44', '수라상궁조선국밥 여서점'],
+  ['d86586aaef8454c9', '조선밀면&냉면 여수여서점'],
+  ['84c118675c0caa4c', '바오탕수 여서점'],
+  ['04910f606ba038a6', '오워래 수제돈까스 여서점'],
 ];
 
 const kongsansoFamilyStoreIds = [
@@ -30,8 +34,8 @@ const rc6 = readFileSync('rc6-fixes.js', 'utf8');
 const loader = readFileSync('final-experience.js', 'utf8');
 const index = readFileSync('index.html', 'utf8');
 
-assert.equal(manifest.campaigns.length, 9, 'The public campaign-link list must contain exactly nine approved stores.');
-assert.equal(Object.keys(heroData.campaigns).length, 9, 'Each approved store must have one hero campaign.');
+assert.equal(manifest.campaigns.length, expected.length, 'The public campaign-link list must contain exactly the approved stores.');
+assert.equal(Object.keys(heroData.campaigns).length, expected.length, 'Each approved store must have one hero campaign.');
 assert.deepEqual(
   manifest.campaigns.map(({ storeId, name }) => [storeId, name]),
   expected,
