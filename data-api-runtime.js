@@ -51,6 +51,9 @@
   async function enrichStore(store, normalizeStore) {
     const id = String(store?.id || store?.store_id || '');
     if (!/^[a-f0-9]{16}$/i.test(id)) return store;
+    if (window.daedongDataApi.isCustomerHiddenStoreId?.(id)) {
+      throw new Error('현재 지도에 표시되지 않는 가게입니다.');
+    }
     if (store.__secureDetailReady === true) return store;
     if (typeof normalizeStore !== 'function') {
       throw new Error('가게 상세정보 정규화 기능을 사용할 수 없습니다.');

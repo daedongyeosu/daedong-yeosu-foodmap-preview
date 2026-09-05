@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
+import { runInNewContext } from 'node:vm';
 
 const expected = [
   ['67a9e4f14c8c7ea4', '손수김밥 양지점'],
@@ -33,6 +34,16 @@ const heroData = JSON.parse(readFileSync('data/hero-campaigns.json', 'utf8'));
 const rc6 = readFileSync('rc6-fixes.js', 'utf8');
 const loader = readFileSync('final-experience.js', 'utf8');
 const index = readFileSync('index.html', 'utf8');
+const dataApiContext = { window: {} };
+runInNewContext(readFileSync('data-api.js', 'utf8'), dataApiContext);
+const isCustomerHiddenStoreId = dataApiContext.window.daedongDataApi?.isCustomerHiddenStoreId;
+assert.equal(typeof isCustomerHiddenStoreId, 'function', 'Campaign entry points must share the customer visibility policy.');
+for (const storeId of ['2da10529e7fb987c', '421ecef35a879687']) {
+  assert.equal(isCustomerHiddenStoreId(storeId), true, '탐나는피자의 실제·가상 ID는 고객 화면에서 모두 숨겨야 합니다.');
+}
+for (const [storeId, name] of expected.filter(([id]) => id !== '421ecef35a879687')) {
+  assert.equal(isCustomerHiddenStoreId(storeId), false, `${name}: unrelated approved campaigns must remain visible.`);
+}
 
 assert.equal(manifest.campaigns.length, expected.length, 'The public campaign-link list must contain exactly the approved stores.');
 assert.equal(Object.keys(heroData.campaigns).length, expected.length, 'Each approved store must have one hero campaign.');
@@ -92,7 +103,7 @@ const tamnaneun = heroData.campaigns['421ecef35a879687'];
 assert.deepEqual(
   tamnaneun.entryStoreIds,
   ['421ecef35a879687', '2da10529e7fb987c'],
-  '탐나는피자의 통합 ID와 이전 요기요 QR ID가 함께 연결되어야 합니다.',
+  '탐나는피자를 고객 화면에서 숨겨도 복구용 통합 ID와 이전 요기요 QR ID 연결은 보존해야 합니다.',
 );
 assert.match(rc6, /params\.get\('hero'\)\|\|params\.get\('store'\)/, '가게 상세 QR도 전용 배너 모드로 인식해야 합니다.');
 assert.match(loader, /daedongResolveHeroCampaignStoreId/, '가게 상세 QR은 통합 가게 ID로 교정되어야 합니다.');
