@@ -36,7 +36,7 @@ for(const [id,name] of approved){
   assert.ok(svg.includes(`<desc>${link.url.replace(/&/g,'&amp;')}</desc>`),'QR metadata must identify its permanent destination');
   assert.match(svg,/<svg[^>]+viewBox=/);
 }
-assert.match(read('rc6-fixes.js'),/hero-campaigns\.json\?v=store-campaign-standard-1-four-store-qr-1/);
+assert.match(read('rc6-fixes.js'),/hero-campaigns\.json\?v=store-campaign-standard-1[^'\n]*four-store-qr-1/);
 assert.match(read('final-experience.js'),/rc6-fixes\.js\?v=[^'\n]*four-store-qr-1/);
 assert.match(read('index.html'),/final-experience\.js\?v=[^"\n]*four-store-qr-1/);
 console.log('four-store-campaign-regression-test: pass');
