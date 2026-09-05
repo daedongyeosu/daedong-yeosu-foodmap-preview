@@ -15,6 +15,7 @@ const expected = [
   ['d86586aaef8454c9', '조선밀면&냉면 여수여서점'],
   ['84c118675c0caa4c', '바오탕수 여서점'],
   ['04910f606ba038a6', '오워래 수제돈까스 여서점'],
+  ['d9730ed96e5fbd9a', '틈 돈까스 미평점'],
 ];
 
 const kongsansoFamilyStoreIds = [

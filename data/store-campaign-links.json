@@ -92,6 +92,13 @@
       "url": "https://daedongmap.com/?hero=04910f606ba038a6",
       "previewUrl": "https://preview.daedongmap.com/?hero=04910f606ba038a6",
       "qrAsset": "assets/qr/oworae-donkatsu-yeoseo.svg"
+    },
+    {
+      "storeId": "d9730ed96e5fbd9a",
+      "name": "틈 돈까스 미평점",
+      "url": "https://daedongmap.com/?hero=d9730ed96e5fbd9a",
+      "previewUrl": "https://preview.daedongmap.com/?hero=d9730ed96e5fbd9a",
+      "qrAsset": "assets/qr/teum-donkatsu-mipyeong.svg"
     }
   ]
 }
