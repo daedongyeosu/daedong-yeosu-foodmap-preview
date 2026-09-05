@@ -1,5 +1,287 @@
 {
   "campaigns": {
+    "2017de4f9111f3ce": {
+      "storeId": "2017de4f9111f3ce",
+      "slug": "kim-samgyeop-kimchi-jjim",
+      "label": "김사장 삼겹 통김치찜 전용 대동여수음식지도",
+      "title": "김사장 삼겹 통김치찜",
+      "meta": "문수동 · 한식",
+      "layout": "food14-plus3",
+      "slides": [
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0a2e4c08-735a-4d4e-88c6-7591ef9273ca.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "1인분 삼겹살 통김치찜"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/be9e3d8b-8635-4719-b164-206401bb852f.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "메밀 물막국수"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/03/898bff33-1e83-4eb9-81c3-234f272f2a7b.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "메밀 비빔 막국수"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/440d39c0-4429-47f7-b2df-5a08ddcfd156.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "[해장] 콩나물국밥 얼큰"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/395a0cf0-186d-45fd-800b-ff1fd1a5cca4.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "1인 뒷다리살 수제떡갈비 도시락"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/cbbe13c7-b947-4ffa-ae8f-c52c6ccf6f59.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "얼큰 순두부 찌개"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/5446aaba-04f7-4ca1-81c8-eccd62113a46.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "[고기폭탄 300g ] 진국 토종순대국밥"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/09/0aeecb13-9ae2-4335-9908-a4636e0f91ef.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "해장 황태해장국"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/185f555b-183a-4c0c-92c3-bbc31e7faeb9.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "[고기폭탄 300g] 진국 살코기국밥"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/b2400ab4-1f2f-499b-9320-db2ab0dea986.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "콩나물 돼지 김치찌개"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/12/b5bb33a5-b760-420e-809c-900f8c350471.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "진국 우거지 뼈다귀 해장국"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/146af90c-7819-4c58-8f2c-f1178a24dfed.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "해장 비빔냉면"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/78e644df-22be-4f60-adc3-8d1f2de9ee88.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "[첫주문 대박] 소고기 쌀국수"
+        },
+        {
+          "storeId": "2017de4f9111f3ce",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/233b8f29-ed1a-4c20-9142-bc10a7963807.jpg",
+          "title": "김사장 삼겹 통김치찜",
+          "meta": "방신름 생야채 비빔밥"
+        }
+      ]
+    },
+    "93ae27237a8e75c4": {
+      "storeId": "93ae27237a8e75c4",
+      "slug": "memil-flower-makguksu",
+      "label": "메밀꽃 필 막국수 전용 대동여수음식지도",
+      "title": "메밀꽃 필 막국수",
+      "meta": "문수동 · 면요리",
+      "layout": "food14-plus3",
+      "slides": [
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/682d84aa-3e3f-4690-b348-58c4d52bf393.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "속풀이 메밀꽃 물막국수"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/1a04b6ea-53c7-4865-9fc0-2188dc8fd120.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "속풀이 메밀꽃 비빔 막국수"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/0bc12a36-ad9c-44c9-a4b3-38086be02593.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "진한 콩국수(소면,깍두기)"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/c3e252c4-e5a8-4b22-a650-20ff3bb085ae.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "열무 물국수(소면,깍두기)"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/a4a465bc-d75d-4e42-809c-ee1508aea877.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "해장 물냉면"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/07/3e57c0a3-9b74-4bef-a706-ddc2e4482e90.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "해장 비빔냉면"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/2a23d547-59e4-4966-a5f6-b88cc2761043.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "1인분 삼겹 통김치찜"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5e26e398-5a9c-4abc-83df-0e75db99292b.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "해장 콩나물국밥 얼큰"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/5c1430e5-d2c9-4b67-92f7-bd186d8d9cba.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "해장 콩나물국밥 담백"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/43672714-9441-4fdd-956e-859b12aa8304.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "쫀득 감자 찐만두 8알 +간장"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/105a8359-dc50-46a4-9de6-4fbc85addce4.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "두툼 고기 찐왕만두 5알 +간장"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/33b73abd-39af-4544-aa5b-196bb5d26f3a.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "1인 한돈떡갈비 도시락"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/04/0b57715d-26b1-4dfb-8997-f668b0398df3.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "산소 콩나물 돼지 김치찌개"
+        },
+        {
+          "storeId": "93ae27237a8e75c4",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/15fab213-fd36-4c56-82cc-21c010dc253b.jpg",
+          "title": "메밀꽃 필 막국수",
+          "meta": "[첫주문 대박] 소고기 쌀국수"
+        }
+      ]
+    },
+    "1d691d8e74499d31": {
+      "storeId": "1d691d8e74499d31",
+      "slug": "cho-chef-pho",
+      "label": "조쉐프의 쌀국수 전용 대동여수음식지도",
+      "title": "조쉐프의 쌀국수",
+      "meta": "문수동 · 면요리",
+      "layout": "food14-plus3",
+      "slides": [
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/41c6966e-46f8-43c6-bfc3-9fe9de34730c.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "[주문율 1위] 소고기 쌀국수"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/905bd9bb-978b-444e-b6a9-bf37a6855b74.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "[HOT] 매운 소고기 쌀국수"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/37ba0b6c-dbd5-4202-9ce3-6113fad3743d.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "남부(호치민)쌀국수"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/8f6b7931-0441-4e96-ab7f-d7e13144469f.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "[강력추천] 불맛 연탄불고기 나시고랭 (볶음밥)"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/be4627948d55ecacdb4f3b90d18e76a9293231aaa04480a4e94e166178f2f161.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "등심 꿔바로우"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/948130e325cb000b1a1c70bdc65a6b0b70726c96536aa7de54d21cd98f92f61d.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "고추장 연탄불고기300g"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/2183a65a-c723-4f15-9846-6717e526c338.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "연탄불고기300g"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/1096cc06f013c924102645ae5dae6b89f389267ef821555c5d23b8544b44a8b8.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "등심돈까스130g +특제소스"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/be96b31df582502fc79a8d75ade0869e6f442a5d7a5eb0f29fc4cf032bc3e2b1.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "멘보샤 6p"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/media/yogiyo-menu/v1/05a01b7aaf8e74c44d6cf07c1da5a3e4166b2e145e5a9ece7c9ecedb284e4fdc.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "쫀득한 육즙만두"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/01/00bc8311-6c4a-4352-83f0-4f0225dd5d7a.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "꽉찬 고기만두튀김"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d89bb3cb-29b0-4bb7-887c-d101d6301425.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "[가성비] 1인 등심돈까스 SET"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/c881f559-1fd5-4490-b2c4-0d850e66fa51.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "[먹잘알] 1인 간편튀김 SET"
+        },
+        {
+          "storeId": "1d691d8e74499d31",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/03/d2c0b200-6abf-483a-9deb-1416ea550c8a.jpg",
+          "title": "조쉐프의 쌀국수",
+          "meta": "[둘이푸짐하게] 쌀국수 + 나시고랭(볶음밥)"
+        }
+      ]
+    },
     "7bc7239e6b509c44": {
       "storeId": "7bc7239e6b509c44",
       "slug": "surasanggung-joseon-gukbap-yeoseo",

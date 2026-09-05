@@ -3,6 +3,27 @@
   "baseUrl": "https://daedongmap.com/",
   "campaigns": [
     {
+      "storeId": "2017de4f9111f3ce",
+      "name": "김사장 삼겹 통김치찜",
+      "url": "https://daedongmap.com/?hero=2017de4f9111f3ce",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2017de4f9111f3ce",
+      "qrAsset": "assets/qr/kim-samgyeop-kimchi-jjim.svg"
+    },
+    {
+      "storeId": "93ae27237a8e75c4",
+      "name": "메밀꽃 필 막국수",
+      "url": "https://daedongmap.com/?hero=93ae27237a8e75c4",
+      "previewUrl": "https://preview.daedongmap.com/?hero=93ae27237a8e75c4",
+      "qrAsset": "assets/qr/memil-flower-makguksu.svg"
+    },
+    {
+      "storeId": "1d691d8e74499d31",
+      "name": "조쉐프의 쌀국수",
+      "url": "https://daedongmap.com/?hero=1d691d8e74499d31",
+      "previewUrl": "https://preview.daedongmap.com/?hero=1d691d8e74499d31",
+      "qrAsset": "assets/qr/cho-chef-pho.svg"
+    },
+    {
       "storeId": "67a9e4f14c8c7ea4",
       "name": "손수김밥 양지점",
       "url": "https://daedongmap.com/?hero=67a9e4f14c8c7ea4",
