@@ -15,6 +15,19 @@ const production = new URL(base).hostname === 'daedongmap.com';
 const out = process.env.CAMPAIGN_REPORT_DIR || root;
 const ids = ['7bc7239e6b509c44','d86586aaef8454c9','84c118675c0caa4c','04910f606ba038a6'];
 const data = JSON.parse(fs.readFileSync(path.join(root,'data/hero-campaigns.json')));
+const targets = JSON.parse(fs.readFileSync(path.join(root,'data/banner-targets.json')));
+const ads = ['18','19','20'].map(key=>({url:targets[key].notionUrl,image:targets[key].image}));
+async function assertComposition(page,id){
+  const entries=await page.locator('#heroTrack > [data-hero-index]').evaluateAll(nodes=>[...new Map(nodes.map(n=>[n.dataset.heroIndex,{
+    index:Number(n.dataset.heroIndex),storeId:n.dataset.rc6BannerStore||'',url:n.dataset.rc6BannerNotion||'',image:n.querySelector('img')?.getAttribute('src'),
+  }])).values()].sort((a,b)=>a.index-b.index));
+  assert.equal(entries.length,17,'Fourteen food slides plus three general ads must remain visible');
+  assert.deepEqual(entries.map(e=>e.index),Array.from({length:17},(_,i)=>i));
+  const food=entries.filter(e=>e.storeId);
+  assert.equal(food.length,14);
+  assert.ok(food.every(e=>e.storeId===id),'No foreign store photos');
+  assert.deepEqual(entries.filter(e=>e.url).map(({index,url,image})=>({index,url,image})),ads.map((ad,i)=>({index:[4,9,14][i],...ad})));
+}
 const browser = await playwright.chromium.launch({headless:true,...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{})});
 const context = await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,locale:'ko-KR',serviceWorkers:'block'});
 await context.addInitScript(()=>{
@@ -54,7 +67,8 @@ try {
       index:n.dataset.heroIndex,storeId:n.dataset.rc6BannerStore,title:n.querySelector('.rc6-store-hero-copy strong')?.textContent?.trim(),
       meta:n.querySelector('.rc6-store-hero-copy > span')?.textContent?.trim(),image:n.querySelector('img')?.getAttribute('src'),
     }])).values()].sort((a,b)=>Number(a.index)-Number(b.index)));
-    assert.equal(slides.length,8);
+    assert.equal(slides.length,14);
+    await assertComposition(page,id);
     assert.deepEqual(slides.map(s=>s.title),data.campaigns[id].slides.map(s=>s.title));
     assert.deepEqual(slides.map(s=>s.meta),data.campaigns[id].slides.map(s=>s.meta));
     assert.deepEqual(slides.map(s=>s.image),data.campaigns[id].slides.map(s=>s.image));
@@ -79,15 +93,19 @@ try {
     await detail.waitFor({timeout:10000});
     await page.locator('#modal .modal-close').tap();
     await page.waitForFunction(id=>document.querySelector('#modal')?.hidden && new URL(location.href).searchParams.get('hero')===id,id);
-    assert.equal(await page.locator(selector).evaluateAll(nodes=>new Set(nodes.map(n=>n.dataset.heroIndex)).size),8);
+    await assertComposition(page,id);
     await first.tap();
     await detail.waitFor({timeout:10000});
     await page.locator(`[data-store-menu-preview="${id}"]`).tap();
     const menu=page.locator('.store-menu-preview');
     await menu.waitFor({timeout:15000});
+    await menu.locator('[data-menu-card]').first().waitFor({state:'visible',timeout:15000});
+    const menuCards=await menu.locator('[data-menu-card]').count();
+    assert.ok(menuCards>0,'A heading without actual menu cards is not a working menu');
     assert.equal(await menu.locator('h1').innerText(),data.campaigns[id].title);
     assert.doesNotMatch(await menu.innerText(),/\d[\d,]*\s*원(?:\s|$)|와우\s*회원/);
-    report.stores.push({id,name:data.campaigns[id].title,slides:8,photos,qrOpensDedicatedMap:true,initialDetailAutoOpen:production,closePreservesCampaign:true,bannerReopensDetail:true,menuOpens:true,mobileWidth:box.width});
+    await assertComposition(page,id);
+    report.stores.push({id,name:data.campaigns[id].title,slides:17,foodSlides:14,generalAds:3,photos,qrOpensDedicatedMap:true,initialDetailAutoOpen:production,closePreservesCampaign:true,bannerReopensDetail:true,menuOpens:true,menuCards,mobileWidth:box.width});
     await page.close(); active=null;
   }
   assert.equal(report.errors.length,0,JSON.stringify(report.errors));
