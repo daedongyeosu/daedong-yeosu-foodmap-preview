@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+
+const html = fs.readFileSync('index.html', 'utf8');
+const ui = fs.readFileSync('store-menu-preview.js', 'utf8');
+const search = fs.readFileSync('store-service-info.js', 'utf8');
+const css = fs.readFileSync('store-menu-preview.css', 'utf8');
+assert(html.indexOf('menu-family-model.js') < html.indexOf('store-service-info.js'));
+assert(html.indexOf('menu-family-model.js') < html.indexOf('store-menu-preview.js?v='));
+assert.match(ui, /daedongMenuFamilies\.project\(menu/);
+assert.match(search, /daedongMenuFamilies\.groupSearchRows\(matches\)/);
+assert.match(ui, /__variants: \(item\.__variants \|\| \[\]\)\.map\(publicMenuItem\)/, 'variant photos use existing quarantine and price guards');
+assert.match(ui, /function menuVariantsMarkup/);
+assert.match(ui, /data-menu-variants/);
+assert.match(ui, /event\.target\.closest\('\[data-menu-variants\]'\)\) return/);
+assert.match(ui, /__sourceIds \|\| \[item\.id\]/, 'old search IDs still resolve to a family card');
+assert.match(ui, /item\.__searchText \|\| ''/, 'original wording remains searchable');
+assert.match(ui, /!cafe && items\.length - extras\.length >= 3/, 'cafes keep drink-led menus visible');
+assert.match(ui, /query \|\| category !== '전체' \|\| root\.dataset\.menuExtrasExpanded/);
+assert.match(ui, /extrasExpanded: preview\.dataset\.menuExtrasExpanded/);
+assert.match(ui, /openMenuOrderSheet\(card, requestedMenuId\)/, 'search preserves the exact original variant');
+assert.match(ui, /selectedVariantId: orderSheet/, 'return state preserves the exact original variant');
+assert.match(ui, /const item = variant \|\| family/, 'variant photo is not replaced with another quantity photo');
+assert.match(ui, /Object\.entries\(variant\)/, 'future structured options are not silently deduplicated');
+assert.match(css, /\.store-menu-card\.is-compact-extra/);
+assert.match(html, /store-menu-preview\.js\?v=[^"\n]*family-cards-1/);
+assert.match(html, /store-service-info\.js\?v=[^"\n]*family-cards-1/);
+console.log('PASS menu family UI contracts (shared grouping, all variants, search, optional extras, cached assets)');

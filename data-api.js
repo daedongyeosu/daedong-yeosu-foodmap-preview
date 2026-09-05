@@ -24,6 +24,22 @@
   const CURATED_MENU_IMAGE_ROOTS = Object.freeze({
     a089d1d54720b48e: 'store-menu-content/a089d1d54720b48e'
   });
+  // Only shipped files may be used as a fallback. Collector-generated menu IDs
+  // are not asset filenames; a syntactically valid ID does not prove a JPG exists.
+  const CURATED_MENU_IMAGE_IDS = Object.freeze({
+    a089d1d54720b48e: new Set([
+      'alien-stick', 'bacon-cheddar', 'bacon-potato', 'bulgogi', 'cajun-fries',
+      'cass-500', 'chamisul-fresh', 'cheese-ball', 'cheese-spaghetti', 'cheese-stick',
+      'cheese', 'chicken-tender', 'chipperoni', 'coca-cola-zero', 'coca-cola',
+      'combination', 'corn-cheese', 'fire-chicken-spaghetti', 'four-flavor', 'four-set',
+      'garlic-sauce', 'half-half', 'half-set', 'hawaiian', 'hot-sauce', 'hot-wings',
+      'jinro', 'karaage', 'main', 'meat-bomb-pizza', 'meat-spaghetti', 'mini-hotdog',
+      'parmesan', 'pepperoni', 'pickle', 'potato-potato', 'pulled-pork', 'pumpkin',
+      'shrimp-pizza', 'shrimp-ring', 'side-l', 'side-m', 'side2-l', 'side2-m',
+      'smoked-chicken', 'spicy-cheese-spaghetti', 'sprite', 'sweet-potato', 'taco',
+      'terra-500', 'two-ll', 'two-ml', 'two-mm', 'vegetarian'
+    ])
+  });
   const STATIC_MENU_URLS = Object.freeze({
     '421ecef35a879687': 'data/tamnaneun-pizza-menu.json?v=tamnaneun-dedicated-2'
   });
@@ -35,11 +51,12 @@
   }
 
   function curatedMenuImage(storeId, itemId = '') {
-    const root = CURATED_MENU_IMAGE_ROOTS[String(storeId || '').toLowerCase()];
+    const owner = String(storeId || '').toLowerCase();
+    const root = CURATED_MENU_IMAGE_ROOTS[owner];
     if (!root) return '';
     const id = String(itemId || '').trim();
     if (!id) return `${root}/main.jpg`;
-    return /^[a-z0-9][a-z0-9-]{0,80}$/i.test(id) ? `${root}/${id}.jpg` : '';
+    return CURATED_MENU_IMAGE_IDS[owner]?.has(id) ? `${root}/${id}.jpg` : '';
   }
 
   function restoreCuratedMenuImages(storeId, payload) {

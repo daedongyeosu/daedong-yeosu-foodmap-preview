@@ -10,6 +10,7 @@
   let activeMenuById = new Map();
   let lastFocused = null;
   let lastMenuSelection = null;
+  let lastMenuVariantId = '';
   let menuChromeRevealTimer = 0;
   let menuRenderRun = 0;
   let menuRenderObserver = null;
@@ -85,6 +86,17 @@
 
   function menuWithoutQuarantinedImages(menu) {
     if (!menu || typeof menu !== 'object') return menu;
+    if (window.daedongMenuFamilies?.project) {
+      const projected = window.daedongMenuFamilies.project(menu, {store: storeById(menu.storeId)});
+      return {
+        ...projected,
+        mainImage: isQuarantinedMenuImage(menu.mainImage) ? '' : menu.mainImage,
+        items: projected.items.map(item => ({
+          ...publicMenuItem(item),
+          __variants: (item.__variants || []).map(publicMenuItem).filter(Boolean)
+        }))
+      };
+    }
     const groups = new Map();
     (Array.isArray(menu.items) ? menu.items : []).forEach((source, index) => {
       const item = publicMenuItem(source);
@@ -188,10 +200,18 @@
 
   function orderedMenu(menu) {
     const items = Array.isArray(menu?.items) ? menu.items : [];
+    const extraKinds = new Set(['drink', 'alcohol', 'option']);
+    const extras = items.filter(item => extraKinds.has(item.__kind));
+    const store = storeById(menu?.storeId);
+    const cafe = /카페|커피|베이커리|디저트/.test([store?.name, store?.category, store?.cat, store?.categories].flat().join(' '));
+    const foldExtras = !cafe && items.length - extras.length >= 3 && extras.length < items.length * 0.6;
     return {
       ...menu,
+      __foldExtras: foldExtras,
+      __extraCount: foldExtras ? extras.length : 0,
       items: items
-        .map((item, index) => ({item, index, priority: menuDisplayPriority(item)}))
+        .map((item, index) => ({item: {...item, __compact: foldExtras && extraKinds.has(item.__kind)}, index,
+          priority: foldExtras && extraKinds.has(item.__kind) ? 50 : menuDisplayPriority(item)}))
         .sort((a, b) => a.priority - b.priority || a.index - b.index)
         .map(entry => entry.item)
     };
@@ -498,7 +518,7 @@
   }
 
   function menuCardMarkup(item, query = '') {
-    const searchText = `${item.name} ${item.description} ${item.category}`.toLowerCase();
+    const searchText = `${item.name} ${item.description} ${item.category} ${item.__searchText || ''}`.toLowerCase();
     const photo = item.image
       ? `
         <div class="store-menu-photo">
@@ -509,7 +529,7 @@
       : '';
     const textOnlyClass = item.image ? '' : ' is-text-only';
     return `
-      <article class="store-menu-card${textOnlyClass}" role="button" tabindex="0" aria-label="${escapeMenuHtml(item.name)} 주문방법 보기" data-menu-card data-menu-select data-menu-id="${escapeMenuHtml(item.id)}" data-category="${escapeMenuHtml(item.category)}" data-search="${escapeMenuHtml(searchText)}" data-menu-has-photo="${item.image ? 'true' : 'false'}">
+      <article class="store-menu-card${textOnlyClass}${item.__compact ? ' is-compact-extra' : ''}" role="button" tabindex="0" aria-label="${escapeMenuHtml(item.name)} 주문방법 보기" data-menu-card data-menu-select data-menu-id="${escapeMenuHtml(item.id)}" data-category="${escapeMenuHtml(item.category)}" data-search="${escapeMenuHtml(searchText)}" data-menu-has-photo="${item.image ? 'true' : 'false'}">
         ${photo}
         <div class="store-menu-copy">
           ${item.adultOnly && !item.image ? '<span class="store-menu-age-badge">19세 이상</span>' : ''}
@@ -518,6 +538,7 @@
           ${item.description ? `<div>${highlightedMenuHtml(item.description, query)}</div>` : ''}
           <span class="store-menu-card-action"><b>이 메뉴 주문하기</b><i aria-hidden="true">›</i></span>
         </div>
+        ${menuVariantsMarkup(item)}
       </article>
     `;
   }
@@ -527,6 +548,31 @@
     if (!source || image.src) return;
     image.src = source;
     delete image.dataset.menuImageSrc;
+  }
+
+  function menuVariantsMarkup(item) {
+    const seen = new Set();
+    const variants = (item.__variants || []).filter(variant => {
+      // Do not suppress variants if a later API schema adds distinct options.
+      const key = JSON.stringify(Object.fromEntries(Object.entries(variant)
+        .filter(([field]) => !['id', 'itemId', 'storeId', 'store_id'].includes(field) && !field.startsWith('__'))));
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+    if (variants.length < 2) return '';
+    return `<details class="store-menu-variants" data-menu-variants>
+      <summary>용량·구성 및 사진 보기</summary>
+      <ul>${variants.map(variant => `<li>
+        ${variant.image ? `<img data-menu-image-src="${escapeMenuHtml(variant.image)}" alt="${escapeMenuHtml(variant.name)}" width="76" height="76" loading="lazy" decoding="async">` : ''}
+        <span><b>${escapeMenuHtml(variant.name)}</b>${variant.description ? `<small>${escapeMenuHtml(variant.description)}</small>` : ''}</span>
+      </li>`).join('')}</ul>
+      <small>용량·구성은 선택한 주문앱에서 확인해 주세요.</small>
+    </details>`;
+  }
+
+  function initialMenuItems(menu) {
+    return menu.__foldExtras ? menu.items.filter(item => !item.__compact) : menu.items;
   }
 
   function drainMenuImageQueue() {
@@ -813,9 +859,10 @@
           <p class="store-menu-photo-disclaimer">※ 음식 사진은 실제 조리된 음식과 다를 수 있습니다.</p>
 
           <section class="store-menu-grid" data-menu-grid aria-live="polite" aria-busy="true">
-            ${menu.items.slice(0, INITIAL_MENU_RENDER_COUNT).map(item => menuCardMarkup(item)).join('')}
+            ${initialMenuItems(menu).slice(0, INITIAL_MENU_RENDER_COUNT).map(item => menuCardMarkup(item)).join('')}
           </section>
           <p class="store-menu-render-status" data-menu-render-status role="status">나머지 메뉴를 부드럽게 준비하고 있습니다…</p>
+          ${menu.__extraCount ? `<button type="button" class="store-menu-extras-toggle" data-menu-extras-toggle aria-expanded="false">음료·주류·추가 메뉴 ${menu.__extraCount}개 보기</button>` : ''}
           <p class="store-menu-no-results" data-menu-no-results hidden>검색 조건에 맞는 메뉴가 없습니다.</p>
 
           <footer class="store-menu-notice">
@@ -886,7 +933,9 @@
       category: preview.querySelector('[data-menu-category].active')?.dataset.menuCategory || '전체',
       query: preview.querySelector('[data-menu-search]')?.value || '',
       searchActive: preview.classList.contains('menu-search-active'),
-      selectedMenuId: orderSheet && !orderSheet.hidden ? String(lastMenuSelection?.dataset.menuId || '') : ''
+      extrasExpanded: preview.dataset.menuExtrasExpanded === 'true',
+      selectedMenuId: orderSheet && !orderSheet.hidden ? String(lastMenuSelection?.dataset.menuId || '') : '',
+      selectedVariantId: orderSheet && !orderSheet.hidden ? lastMenuVariantId : ''
     };
   }
 
@@ -920,12 +969,13 @@
     const input = preview.querySelector('[data-menu-search]');
     if (input) input.value = String(saved.query || '');
     preview.classList.toggle('menu-search-active', Boolean(saved.searchActive));
+    preview.dataset.menuExtrasExpanded = String(Boolean(saved.extrasExpanded));
     filterMenus(preview);
     stabilizeMenuReturnPosition(preview, saved);
     if (saved.selectedMenuId) {
       const selected = [...preview.querySelectorAll('[data-menu-card]')]
         .find(card => String(card.dataset.menuId || '') === String(saved.selectedMenuId));
-      if (selected) requestAnimationFrame(() => openMenuOrderSheet(selected));
+      if (selected) requestAnimationFrame(() => openMenuOrderSheet(selected, saved.selectedVariantId));
     }
   }
 
@@ -961,6 +1011,10 @@
       const current = document.querySelector('[data-store-menu-overlay]:not([hidden]) .store-menu-preview');
       if (String(current?.dataset.storeId || '') === String(storeId)) {
         if (options.returnState) applyMenuReturnState(current, options.returnState);
+        if (options.menuId) {
+          const card = ensureMenuCardRendered(current, options.menuId);
+          if (card) openMenuOrderSheet(card, options.menuId);
+        }
         return current;
       }
       return null;
@@ -999,7 +1053,7 @@
       const preview = overlay.querySelector('.store-menu-preview');
       const scrollRoot = overlay.querySelector('.store-menu-scroll');
       observeMenuImages(preview, {reset: true});
-      scheduleProgressiveMenuCards(preview, activeMenu.items);
+      scheduleProgressiveMenuCards(preview, initialMenuItems(activeMenu));
       scrollRoot?.addEventListener('scroll', () => handleMenuScroll(scrollRoot), {passive: true});
       const requestedQuery = String(options.query || '').trim();
       if (requestedQuery && preview) {
@@ -1011,7 +1065,7 @@
       const requestedMenuId = String(options.menuId || '');
       if (requestedMenuId && preview) {
         const card = ensureMenuCardRendered(preview, requestedMenuId);
-        if (card) window.requestAnimationFrame(() => openMenuOrderSheet(card));
+        if (card) window.requestAnimationFrame(() => openMenuOrderSheet(card, requestedMenuId));
       }
       if (options.returnState) applyMenuReturnState(preview, options.returnState);
       overlay.querySelector('[data-menu-preview-close]')?.focus();
@@ -1048,15 +1102,19 @@
     activeMenuById = new Map();
     menuCloseTouches.clear();
     lastMenuSelection = null;
+    lastMenuVariantId = '';
     lastFocused?.focus?.();
     lastFocused = null;
     if (wasOpen) document.dispatchEvent(new CustomEvent('daedong:menu-preview-closed'));
   }
 
-  function openMenuOrderSheet(card) {
+  function openMenuOrderSheet(card, requestedVariantId = '') {
     const preview = card?.closest('.store-menu-preview');
     const sheet = preview?.querySelector('[data-menu-order-sheet]');
-    const item = activeMenu?.items.find(menuItem => String(menuItem.id) === card?.dataset.menuId);
+    const family = activeMenu?.items.find(menuItem => String(menuItem.id) === card?.dataset.menuId);
+    const variant = requestedVariantId && family?.__variants?.find(candidate =>
+      (candidate.__sourceIds || [candidate.id]).some(id => String(id) === String(requestedVariantId)));
+    const item = variant || family;
     if (!preview || !sheet || !item) return;
     const image = sheet.querySelector('[data-selected-menu-image]');
     const selected = sheet.querySelector('.menu-order-selected');
@@ -1079,6 +1137,7 @@
     preview.querySelector('[data-menu-search]')?.blur();
     showMenuChrome(preview);
     lastMenuSelection = card;
+    lastMenuVariantId = variant ? String(requestedVariantId) : '';
     sheet.hidden = false;
     preview.classList.add('menu-order-sheet-open');
     if (!history.state?.[MENU_HISTORY.order]) pushMenuHistory('order');
@@ -1094,6 +1153,7 @@
     preview.classList.remove('menu-order-sheet-open');
     if (restoreFocus) lastMenuSelection?.focus?.();
     lastMenuSelection = null;
+    lastMenuVariantId = '';
     return true;
   }
 
@@ -1175,8 +1235,9 @@
       : root.querySelector('[data-menu-category].active')?.dataset.menuCategory || '전체';
     const matchingItems = activeMenu.items.filter(item => {
       const matchesCategory = category === '전체' || String(item.category || '') === category;
-      const searchText = `${item.name || ''} ${item.description || ''} ${item.category || ''}`.toLocaleLowerCase('ko-KR');
-      return matchesCategory && (!query || searchText.includes(query));
+      const searchText = `${item.name || ''} ${item.description || ''} ${item.category || ''} ${item.__searchText || ''}`.toLocaleLowerCase('ko-KR');
+      const showExtra = !item.__compact || query || category !== '전체' || root.dataset.menuExtrasExpanded === 'true';
+      return showExtra && matchesCategory && (!query || searchText.includes(query));
     });
     const visible = matchingItems.length;
     resetProgressiveMenuCards(root, matchingItems, rawQuery);
@@ -1188,6 +1249,13 @@
     if (clear) clear.hidden = !rawQuery;
     const empty = root.querySelector('[data-menu-no-results]');
     if (empty) empty.hidden = visible !== 0;
+    const extrasToggle = root.querySelector('[data-menu-extras-toggle]');
+    if (extrasToggle) {
+      extrasToggle.hidden = Boolean(query || category !== '전체');
+      const expanded = root.dataset.menuExtrasExpanded === 'true';
+      extrasToggle.setAttribute('aria-expanded', String(expanded));
+      extrasToggle.textContent = expanded ? '음료·주류·추가 메뉴 접기' : `음료·주류·추가 메뉴 ${activeMenu.__extraCount}개 보기`;
+    }
     if (revealResults && root.classList.contains('menu-search-active')) {
       const scrollRoot = root.querySelector('.store-menu-scroll');
       window.requestAnimationFrame(() => {
@@ -1218,6 +1286,14 @@
   });
 
   document.addEventListener('click', event => {
+    if (event.target.closest('[data-menu-variants]')) return;
+    const extrasToggle = event.target.closest('[data-menu-extras-toggle]');
+    if (extrasToggle) {
+      const preview = extrasToggle.closest('.store-menu-preview');
+      preview.dataset.menuExtrasExpanded = String(preview.dataset.menuExtrasExpanded !== 'true');
+      filterMenus(preview);
+      return;
+    }
     const entry = event.target.closest('[data-store-menu-preview]');
     if (entry) {
       openMenuPreview(entry.dataset.storeMenuPreview, entry);
@@ -1283,6 +1359,12 @@
       }
     }
   });
+
+  document.addEventListener('toggle', event => {
+    if (event.target.matches?.('[data-menu-variants]') && event.target.open) {
+      observeMenuImages(event.target.closest('.store-menu-preview'));
+    }
+  }, true);
 
   document.addEventListener('focusin', event => {
     if (event.target.matches('[data-menu-search]')) {

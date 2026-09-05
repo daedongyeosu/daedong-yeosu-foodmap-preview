@@ -154,7 +154,7 @@
     const record = menuSearchData.stores?.[String(storeId)];
     const spec = menuSearchSpec(query);
     if (!record || !spec) return [];
-    return (record.i || [])
+    const matches = (record.i || [])
       .filter(item => menuItemMatches(item, spec, store))
       .map(item => ({
         id: String(item[0] || ''),
@@ -162,7 +162,10 @@
         category: String(item[2] || ''),
         image: String(item[3] || '')
       }))
-      .sort((a, b) => Number(Boolean(b.image)) - Number(Boolean(a.image)));
+      .map(item => ({...item, storeId: String(storeId)}));
+    const grouped = window.daedongMenuFamilies?.groupSearchRows
+      ? window.daedongMenuFamilies.groupSearchRows(matches) : matches;
+    return grouped.sort((a, b) => Number(Boolean(b.image)) - Number(Boolean(a.image)));
   }
 
   function ensureMenuSearchData(query = overviewQuery) {

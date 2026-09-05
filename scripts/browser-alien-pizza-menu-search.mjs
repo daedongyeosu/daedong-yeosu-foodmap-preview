@@ -3,6 +3,7 @@ import {chromium} from 'playwright';
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 const proxyApiOrigin = process.env.PERF_PROXY_API_ORIGIN || '';
+const storeId = 'a089d1d54720b48e';
 const report = {success: false, checks: [], errors: []};
 const browser = await chromium.launch({
   headless: true,
@@ -40,6 +41,15 @@ const check = async (condition, message) => {
   if (!ok) throw new Error(message);
 };
 
+// The display policy excludes quarantined/placeholder references, but never
+// requires a new photo for an original which did not have one.
+const usableSourcePhoto = value => {
+  const clean = String(value || '').trim().split(/[?#]/, 1)[0].replace(/\\/g, '/');
+  return Boolean(clean)
+    && !/\/api\/media\/coupang-menu\/v1\/[a-f0-9]{64}\.jpg$/i.test(clean)
+    && !/daedong-app-icon|placeholder|food-photo-preparing/i.test(clean);
+};
+
 const revealAllMenuCards = async expectedCount => {
   const scroll = page.locator('.store-menu-scroll');
   const deadline = Date.now() + 7000;
@@ -56,6 +66,9 @@ const revealAllMenuCards = async expectedCount => {
 };
 
 try {
+  // Capture the real response already requested by the UI, including prefetch.
+  const menuResponsePending = page.waitForResponse(response =>
+    new URL(response.url()).pathname === `/api/store/${storeId}/menu`, {timeout: 30000});
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForSelector('#storeGrid .store-card', {timeout: 15000});
   await page.waitForFunction(() => typeof fxStoreById === 'function' && typeof openStore === 'function');
@@ -63,15 +76,46 @@ try {
   await page.waitForSelector('#modal:not([hidden]) .store-detail[data-store-id="a089d1d54720b48e"]', {timeout: 5000});
   await page.locator('[data-store-menu-preview="a089d1d54720b48e"]').click();
   await page.waitForSelector('.store-menu-preview', {timeout: 5000});
+  const menuResponse = await menuResponsePending;
+  await check(menuResponse.ok(), '실제 API 메뉴 응답을 사진 보존 대조의 원본으로 사용');
+  const rawMenu = await menuResponse.json();
+  const projection = await page.evaluate(menu => {
+    const model = window.daedongMenuFamilies;
+    if (!model?.project) throw new Error('메뉴 family 표시 모델을 찾을 수 없습니다.');
+    const result = model.project(menu, {store: fxStoreById(menu.storeId)});
+    return {
+      families: result.items.map(item => ({id: String(item.id), sourceIds: item.__sourceIds, kind: item.__kind})),
+      excluded: result.__audit.excluded
+    };
+  }, rawMenu);
+  const rawItems = Array.isArray(rawMenu.items) ? rawMenu.items : [];
+  const sourceIdsOf = item => [item.id, item.itemId, ...(item.__sourceIds || [])].filter(Boolean).map(String);
+  const photoFamilies = projection.families.map(family => {
+    const sources = rawItems.filter(item => sourceIdsOf(item).some(id => family.sourceIds.includes(id)));
+    return {...family, sourceImages: [...new Set(sources.map(item => item.image).filter(usableSourcePhoto))]};
+  });
+  const coveredSourceIds = new Set(projection.families.flatMap(family => family.sourceIds));
+  const excludedSourceIds = new Set(projection.excluded.flatMap(item => item.sourceIds || [item.id]));
+  await check(rawItems.length > 0 && rawItems.every(item => sourceIdsOf(item).every(id =>
+    coveredSourceIds.has(id) || excludedSourceIds.has(id))), '전체 원본 메뉴 ID가 family 또는 사유 있는 제외 기록에 보존');
+  await check(rawItems.filter(item => usableSourcePhoto(item.image)).every(item =>
+    sourceIdsOf(item).some(id => coveredSourceIds.has(id))), '사진 있는 원본 메뉴를 표시 family에서 누락하지 않음');
+  report.sourceMenuCount = rawItems.length;
+  report.familyCount = projection.families.length;
   await check(page.evaluate(() => history.state?.daedongMenuPreview === true), '음식 미리보기를 브라우저 뒤로가기 단계로 등록');
   await check(page.locator('.store-menu-hero > img').getAttribute('src').then(value => value === 'store-menu-content/a089d1d54720b48e/main.jpg'), '외계인피자 대표 음식사진 복원');
   const expectedMenuCount = await page.locator('[data-menu-result-count]').innerText().then(value => Number.parseInt(value, 10));
   report.expectedMenuCount = expectedMenuCount;
   await check(Number.isInteger(expectedMenuCount) && expectedMenuCount >= 53, '외계인피자 전체 메뉴 개수 안내');
+  await check(expectedMenuCount === projection.families.length, '안내 개수가 원본 ID를 보존한 전체 family 수와 일치');
   const initialMenuCount = await page.locator('[data-menu-card]').count();
   report.initialMenuCount = initialMenuCount;
   await check(initialMenuCount > 0 && initialMenuCount <= expectedMenuCount, '첫 화면에 메뉴를 즉시 표시');
-  await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === initialMenuCount), '첫 메뉴 묶음의 음식사진 복원');
+  const initialPhotoCards = await page.locator('[data-menu-card]').evaluateAll(nodes => nodes.map(node => ({
+    id: node.dataset.menuId, hasPhoto: node.dataset.menuHasPhoto === 'true'
+  })));
+  await check(initialPhotoCards.every(card => card.hasPhoto === Boolean(photoFamilies.find(family =>
+    family.id === card.id)?.sourceImages.length)), '첫 메뉴 묶음은 사진 있는 원본 family에 음식사진 표시');
   const mobileOrderDock = await page.locator('.store-menu-sticky-actions').evaluate(node => ({
     height: node.getBoundingClientRect().height,
     headerDisplay: getComputedStyle(node.querySelector('header')).display,
@@ -99,11 +143,41 @@ try {
     '위로 이동하면 주문창을 다시 표시'
   );
   await scroll.evaluate(node => { node.scrollTop = 0; });
+  const extraCount = projection.families.filter(item => ['drink', 'alcohol', 'option'].includes(item.kind)).length;
+  const extrasToggle = page.locator('[data-menu-extras-toggle]');
+  report.collapsedExtraCount = extraCount;
+  await check(extraCount > 0 && await extrasToggle.getAttribute('aria-expanded') === 'false', '음료·주류·추가 메뉴는 처음에 접힌 상태로 표시');
+  const defaultMenuCount = expectedMenuCount - extraCount;
+  await check((await revealAllMenuCards(defaultMenuCount)) === defaultMenuCount, '접힌 음료를 제외한 기본 메뉴 family를 스크롤로 모두 표시');
+  await extrasToggle.click();
+  await check(extrasToggle.getAttribute('aria-expanded').then(value => value === 'true'), '음료 펼치기 버튼으로 접힌 family를 명시적으로 표시');
   const revealedMenuCount = await revealAllMenuCards(expectedMenuCount);
   report.revealedMenuCount = revealedMenuCount;
-  await check(revealedMenuCount === expectedMenuCount, '스크롤하면 외계인피자 전체 메뉴 복원');
-  await check(page.locator('[data-menu-card][data-menu-has-photo="true"]').count().then(count => count === expectedMenuCount), '외계인피자 전체 메뉴 음식사진 복원');
-  await check(page.locator('[data-menu-card].is-text-only').count().then(count => count === 0), '사진이 저장된 메뉴를 글자 카드로 대체하지 않음');
+  await check(revealedMenuCount === expectedMenuCount, '음료 펼침과 스크롤 후 외계인피자 전체 family 표시');
+  const renderedCards = await page.locator('[data-menu-card]').evaluateAll(nodes => nodes.map(node => {
+    const image = node.querySelector('.store-menu-photo > img');
+    return {id: node.dataset.menuId, hasPhoto: node.dataset.menuHasPhoto === 'true', textOnly: node.classList.contains('is-text-only'),
+      image: image?.getAttribute('data-menu-image-src') || image?.getAttribute('src') || ''};
+  }));
+  const renderedById = new Map(renderedCards.map(card => [card.id, card]));
+  const missingPhotoFamilies = photoFamilies.filter(family => family.sourceImages.length
+    && (!renderedById.get(family.id)?.hasPhoto || renderedById.get(family.id)?.textOnly));
+  const ungroundedPhotos = renderedCards.filter(card => card.hasPhoto
+    && !photoFamilies.find(family => family.id === card.id)?.sourceImages.includes(card.image));
+  report.photoCoverage = {
+    sourcePhotoCount: rawItems.filter(item => usableSourcePhoto(item.image)).length,
+    expectedPhotoFamilyCount: photoFamilies.filter(family => family.sourceImages.length).length,
+    renderedPhotoFamilyCount: renderedCards.filter(card => card.hasPhoto).length,
+    textOnlyFamilyCount: renderedCards.filter(card => card.textOnly).length,
+    missingPhotoFamilyIds: missingPhotoFamilies.map(family => family.id),
+    ungroundedPhotoFamilyIds: ungroundedPhotos.map(card => card.id),
+    ungroundedPhotos
+  };
+  await check(renderedById.size === expectedMenuCount && photoFamilies.every(family => renderedById.has(family.id)), '총 개수뿐 아니라 모든 family ID를 화면에 유지');
+  await check(missingPhotoFamilies.length === 0, '사용 가능한 원본사진이 있는 모든 family를 사진카드로 유지');
+  await check(ungroundedPhotos.length === 0, '사진카드는 해당 family의 실제 원본사진만 사용');
+  await check(report.photoCoverage.renderedPhotoFamilyCount === report.photoCoverage.expectedPhotoFamilyCount,
+    '사진 없는 원본 family에 임의 사진을 요구하거나 만들지 않음');
   const maxScroll = await scroll.evaluate(node => {
     node.scrollTop = node.scrollHeight - node.clientHeight;
     return node.scrollTop;
@@ -223,6 +297,7 @@ try {
 } finally {
   fs.writeFileSync('browser-alien-pizza-menu-search-report.json', `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify(report, null, 2));
+  await context.unrouteAll({behavior: 'ignoreErrors'});
   await browser.close();
 }
 

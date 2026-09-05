@@ -39,6 +39,7 @@ jobs:
           node --check turtle-ship-hero.js
           node --check store-service-info.js
           node --check store-menu-preview.js
+          node --check menu-family-model.js
           node --check mukkebi-summer-event.js
       - name: Verify API client and existing static contracts
         run: |
@@ -136,6 +137,12 @@ jobs:
             sleep 0.25
           done
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-modal-close-touch.mjs
+      - name: Verify lossless menu families and compact extras on mobile
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-menu-families-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173 node scripts/browser-menu-families.mjs
       - name: Enforce customer mobile performance budget
         run: |
           node scripts/serve-performance-budget.mjs 4173 >/tmp/daedong-performance-budget-server.log 2>&1 &
@@ -202,6 +209,9 @@ jobs:
             browser-menu-preview-close-touch-report.json
             browser-menu-preview-close-touch.png
             browser-menu-preview-close-touch-failure.png
+            browser-menu-families-report.json
+            browser-menu-families.png
+            browser-menu-families-failure.png
             browser-modal-close-touch-report.json
             browser-modal-close-touch.png
             browser-modal-close-touch-failure.png
