@@ -143,21 +143,18 @@ try {
     '위로 이동하면 주문창을 다시 표시'
   );
   await scroll.evaluate(node => { node.scrollTop = 0; });
-  const extraCount = projection.families.filter(item => ['drink', 'alcohol', 'option'].includes(item.kind)).length;
-  const extrasToggle = page.locator('[data-menu-extras-toggle]');
-  report.collapsedExtraCount = extraCount;
-  await check(extraCount > 0 && await extrasToggle.getAttribute('aria-expanded') === 'false', '음료·주류·추가 메뉴는 처음에 접힌 상태로 표시');
-  const defaultMenuCount = expectedMenuCount - extraCount;
-  await check((await revealAllMenuCards(defaultMenuCount)) === defaultMenuCount, '접힌 음료를 제외한 기본 메뉴 family를 스크롤로 모두 표시');
-  await extrasToggle.click();
-  await check(extrasToggle.getAttribute('aria-expanded').then(value => value === 'true'), '음료 펼치기 버튼으로 접힌 family를 명시적으로 표시');
+  await check(page.locator('[data-menu-extras-toggle]').count().then(count => count === 0), '음료·주류·추가 메뉴를 숨기는 별도 펼침 버튼 없음');
   const revealedMenuCount = await revealAllMenuCards(expectedMenuCount);
   report.revealedMenuCount = revealedMenuCount;
-  await check(revealedMenuCount === expectedMenuCount, '음료 펼침과 스크롤 후 외계인피자 전체 family 표시');
+  await check(revealedMenuCount === expectedMenuCount, '추가 펼침 없이 스크롤만으로 외계인피자 전체 family 표시');
+  await check(page.locator('.is-compact-extra').count().then(count => count === 0), '음료·주류를 작은 별도 카드로 축소하지 않음');
   const renderedCards = await page.locator('[data-menu-card]').evaluateAll(nodes => nodes.map(node => {
     const image = node.querySelector('.store-menu-photo > img');
+    const photo = node.querySelector('.store-menu-photo');
     return {id: node.dataset.menuId, hasPhoto: node.dataset.menuHasPhoto === 'true', textOnly: node.classList.contains('is-text-only'),
-      image: image?.getAttribute('data-menu-image-src') || image?.getAttribute('src') || ''};
+      image: image?.getAttribute('data-menu-image-src') || image?.getAttribute('src') || '',
+      photoWidth: photo?.getBoundingClientRect().width || 0, photoHeight: photo?.getBoundingClientRect().height || 0,
+      availableWidth: node.clientWidth, intrinsicWidth: image?.getAttribute('width'), intrinsicHeight: image?.getAttribute('height')};
   }));
   const renderedById = new Map(renderedCards.map(card => [card.id, card]));
   const missingPhotoFamilies = photoFamilies.filter(family => family.sourceImages.length
@@ -178,6 +175,12 @@ try {
   await check(ungroundedPhotos.length === 0, '사진카드는 해당 family의 실제 원본사진만 사용');
   await check(report.photoCoverage.renderedPhotoFamilyCount === report.photoCoverage.expectedPhotoFamilyCount,
     '사진 없는 원본 family에 임의 사진을 요구하거나 만들지 않음');
+  const beveragePhotoCards = photoFamilies.filter(family => ['drink', 'alcohol'].includes(family.kind) && family.sourceImages.length)
+    .map(family => renderedById.get(family.id));
+  report.beveragePhotoCount = beveragePhotoCards.length;
+  await check(beveragePhotoCards.length > 0 && beveragePhotoCards.every(card => card.hasPhoto
+    && card.photoWidth >= card.availableWidth - 1 && card.photoWidth > 250 && card.photoHeight > 150
+    && card.intrinsicWidth === '720' && card.intrinsicHeight === '546'), '음료·주류 원본사진을 음식과 같은 큰 전체 너비로 표시');
   const maxScroll = await scroll.evaluate(node => {
     node.scrollTop = node.scrollHeight - node.clientHeight;
     return node.scrollTop;
