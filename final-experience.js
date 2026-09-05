@@ -60,12 +60,12 @@ const fxOriginalRenderStores=renderStores;
 const fxOriginalOpenStore=openStore;
 const fxOriginalAppRegisteredStores=appRegisteredStores;
 
-function fxVisible(store){return Boolean(store&&store.customerVisible!==false&&!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(store.name)!=='제목없음'&&normalize(store.name)!=='이름없는가게');}
+function fxVisible(store){return Boolean(store&&store.customerVisible!==false&&!window.daedongDataApi?.isCustomerHiddenStoreId?.(store.id||store.store_id)&&!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(store.name)!=='제목없음'&&normalize(store.name)!=='이름없는가게');}
 function fxSvg(id,cls='ui-icon'){return `<svg class="${cls}" aria-hidden="true"><use href="assets/ui/ui-icons.svg#${id}"></use></svg>`;}
 function fxPlatform(){const ua=navigator.userAgent||'';if(/iphone|ipad|ipod/i.test(ua))return'ios';if(/android/i.test(ua))return'android';return'other';}
 function fxLowPower(){return Number(navigator.hardwareConcurrency||8)<=4||Number(navigator.deviceMemory||8)<=4;}
 function fxReduced(){return matchMedia('(prefers-reduced-motion: reduce)').matches;}
-function fxStoreById(id){const requested=String(id);return stores.find(store=>String(store.id)===requested||(store.mergedStoreIds||[]).some(mergedId=>String(mergedId)===requested));}
+function fxStoreById(id){const requested=String(id),isHidden=value=>globalThis.window?.daedongDataApi?.isCustomerHiddenStoreId?.(value);if(isHidden(requested))return undefined;return stores.find(store=>!isHidden(store.id||store.store_id)&&(String(store.id)===requested||(store.mergedStoreIds||[]).some(mergedId=>String(mergedId)===requested)));}
 function fxPhoto(store){return fxBrandPhotoPool.assignments?.[String(store?.id)]||FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS[String(store?.id)]||photoResolver?.resolve(store)?.src||'';}
 function fxCardPhoto(store){const src=fxPhoto(store);const options={deferred:false};return src?`<img ${photoSourceAttributes(src,options)} alt="${escapeHtml(store.name)}" loading="lazy" decoding="async">`:`<span class="app-browser-photo-placeholder">${fxSvg('food','category-local-icon')}</span>`;}
 function fxDistance(store){return state.coords&&store.lat!==null&&store.lng!==null?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;}
@@ -79,7 +79,7 @@ normalizedStore=function(raw,index){
  // record and menu assets intact for later verification, but hide it from all
  // customer-facing lists in the meantime.
  const hasCustomerRoute=FX_REGION.code!=='yeosu'||store.channelKeys.some(Boolean);
- store.customerVisible=hasCustomerRoute&&!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(raw.name)!=='제목없음';
+ store.customerVisible=hasCustomerRoute&&!window.daedongDataApi?.isCustomerHiddenStoreId?.(store.id||store.store_id)&&!FX_HIDDEN_STORE_IDS.has(String(store.id||store.store_id))&&normalize(raw.name)!=='제목없음';
  store.rawIndex=index;
  return store;
 };
@@ -635,7 +635,7 @@ fxRc2Script.onload=()=>{
    fxRc5Script.async=false;
    fxRc5Script.onload=()=>{
     const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=location-store-hero-1-handsu-copy-spacing-1-hero-clean-controls-1-hero-order-footer-2';document.head.append(css);
-    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-hero-area-label-removed-1-three-main-ads-restored-1-notion-hero-return-1-goheung-isolation-2-instant-hero-loading-1-keep-placeholder-1-coordinate-yield-1-pager-stable-refresh-1-hero-photo-recovery-1-store-campaign-nine-2-tamnaneun-menu-hero-4-store-campaign-standard-1-hero-stable-height-1-manual-carousels-1-former-managed-bottom-1-four-store-qr-1-four-store-14-plus-3-1-teum-campaign-1';
+    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-hero-area-label-removed-1-three-main-ads-restored-1-notion-hero-return-1-goheung-isolation-2-instant-hero-loading-1-keep-placeholder-1-coordinate-yield-1-pager-stable-refresh-1-hero-photo-recovery-1-store-campaign-nine-2-tamnaneun-menu-hero-4-store-campaign-standard-1-hero-stable-height-1-manual-carousels-1-former-managed-bottom-1-four-store-qr-1-four-store-14-plus-3-1-hide-tamnaneun-1-teum-campaign-1';
     script.onload=()=>{
      const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=address-home-return-1-coarse-region-1-inapp-location-recovery-1-outside-yeosu-full-list-1-saved-address-first-1-release-readiness-1-step-touch-back-1';
      addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{window.__daedongDeferRailRender=true;try{await window.daedongCatalogReady;await fxInitialize();await rc6Initialize();window.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList();window.rc7Initialize?.();await fxOpenSharedStoreFromUrl();fxFinishLocationRankingReady(true);}catch(error){window.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList();console.error('위치 기반 가게 정렬을 초기화하지 못했습니다.',error);fxFinishLocationRankingReady(false);}},0);};

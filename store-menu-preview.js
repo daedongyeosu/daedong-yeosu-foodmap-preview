@@ -1018,8 +1018,10 @@
   }
 
   async function openMenuPreview(storeId, trigger, options = {}) {
+    if (window.daedongDataApi?.isCustomerHiddenStoreId?.(storeId)) return null;
     const store = storeById(storeId);
     if (!store) return null;
+    if (window.daedongDataApi?.isCustomerHiddenStoreId?.(store.id || store.store_id)) return null;
     if (document.body.classList.contains('store-menu-open')) {
       const current = document.querySelector('[data-store-menu-overlay]:not([hidden]) .store-menu-preview');
       if (String(current?.dataset.storeId || '') === String(storeId)) {

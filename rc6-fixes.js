@@ -116,24 +116,31 @@ function rc6ManagedStoreHeroEntries(){
  }).filter(Boolean);
 }
 function rc6CampaignStoreById(id){
- return rc6CampaignVirtualStores.get(String(id))||stores.find(item=>String(item.id)===String(id));
+ if(window.daedongDataApi?.isCustomerHiddenStoreId?.(id))return undefined;
+ const store=rc6CampaignVirtualStores.get(String(id))||stores.find(item=>String(item.id)===String(id));
+ return window.daedongDataApi?.isCustomerHiddenStoreId?.(store?.id||store?.store_id)?undefined:store;
 }
 function rc6PrepareCampaignStores(){
  rc6CampaignVirtualStores=new Map();
  Object.entries(rc6HeroCampaigns?.virtualStores||{}).forEach(([id,raw],index)=>{
+  if(window.daedongDataApi?.isCustomerHiddenStoreId?.(id))return;
   const store=normalizedStore({...raw,id,store_id:id},100000+index);
   if(raw?.trustedDetail===true)store.__secureDetailReady=true;
   rc6CampaignVirtualStores.set(String(id),store);
  });
  if(!rc6StoreByIdBase)rc6StoreByIdBase=fxStoreById;
- fxStoreById=id=>rc6CampaignVirtualStores.get(String(id))||rc6StoreByIdBase(id);
+ fxStoreById=id=>{
+  if(window.daedongDataApi?.isCustomerHiddenStoreId?.(id))return undefined;
+  const store=rc6CampaignVirtualStores.get(String(id))||rc6StoreByIdBase(id);
+  return window.daedongDataApi?.isCustomerHiddenStoreId?.(store?.id||store?.store_id)?undefined:store;
+ };
  window.daedongResolveHeroCampaignStoreId=rc6ResolveHeroCampaignStoreId;
 }
 function rc6HeroCampaignForEntryStoreId(id){
- const entryId=String(id||'');if(!entryId)return null;
+ const entryId=String(id||'');if(!entryId||window.daedongDataApi?.isCustomerHiddenStoreId?.(entryId))return null;
  const direct=rc6HeroCampaigns?.campaigns?.[entryId];
- if(direct)return direct;
- return Object.values(rc6HeroCampaigns?.campaigns||{}).find(campaign=>(campaign.entryStoreIds||[]).map(String).includes(entryId))||null;
+ if(direct)return window.daedongDataApi?.isCustomerHiddenStoreId?.(direct.storeId||entryId)?null:direct;
+ return Object.values(rc6HeroCampaigns?.campaigns||{}).find(campaign=>!window.daedongDataApi?.isCustomerHiddenStoreId?.(campaign.storeId)&&(campaign.entryStoreIds||[]).map(String).includes(entryId))||null;
 }
 function rc6ResolveHeroCampaignStoreId(id){
  const campaign=rc6HeroCampaignForEntryStoreId(id);

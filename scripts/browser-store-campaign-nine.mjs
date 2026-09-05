@@ -13,8 +13,16 @@ async function loadChromium() {
 
 const chromium = await loadChromium();
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:8765/';
+const output = process.env.OUTPUT_DIR || '.';
+fs.mkdirSync(output, { recursive: true });
 const manifest = JSON.parse(fs.readFileSync(new URL('../data/store-campaign-links.json', import.meta.url), 'utf8'));
 const heroData = JSON.parse(fs.readFileSync(new URL('../data/hero-campaigns.json', import.meta.url), 'utf8'));
+const dataApiSource = fs.readFileSync(new URL('../data-api.js', import.meta.url), 'utf8');
+const tamnaneunHiddenStoreIds = ['2da10529e7fb987c', '421ecef35a879687'];
+const bannerTargets = JSON.parse(fs.readFileSync(new URL('../data/banner-targets.json', import.meta.url), 'utf8'));
+const expectedFood14Plus3Ads = ['18', '19', '20'].map((key, index) => ({
+  index: [4, 9, 14][index], url: bannerTargets[key].notionUrl, image: bannerTargets[key].image,
+}));
 const campaignDefinitions = [...manifest.campaigns];
 for (const campaign of Object.values(heroData.campaigns)) {
   for (const slide of campaign.slides || []) {
@@ -23,10 +31,8 @@ for (const campaign of Object.values(heroData.campaigns)) {
     }
   }
 }
-// The deployed preview catalog can expose a newly unified store detail before
-// the catalog list itself is refreshed. Omit Tamnaneun's canonical ID from the
-// fixture so this check exercises the campaign virtual-store fallback used by
-// real QR visitors instead of accidentally masking it with fixture data.
+// Keep Tamnaneun's canonical ID absent from the fixture: its preserved
+// campaign virtual-store fallback must not recreate a customer-hidden store.
 const routeKeysByStoreId = new Map([
   ['67a9e4f14c8c7ea4', ['direct', 'mukkebi', 'ddangyo', 'phone', 'yogiyo', 'baemin', 'coupang']],
   ['068b2ae8fe32874a', ['direct', 'mukkebi', 'ddangyo', 'phone', 'yogiyo', 'baemin', 'coupang']],
@@ -91,7 +97,8 @@ await context.addInitScript(() => sessionStorage.setItem('daedongMukkebiIslandEx
 await context.route('**/data-api.js*', (route) => route.fulfill({
   status: 200,
   contentType: 'text/javascript; charset=utf-8',
-  body: `window.daedongDataApi=Object.freeze({
+  body: `${dataApiSource}\nwindow.daedongDataApi=Object.freeze({
+    ...window.daedongDataApi,
     baseUrl:'fixture',regionCode:'yeosu',
     catalog:()=>Promise.resolve(${JSON.stringify(stores)}),
     services:()=>Promise.resolve({programs:[],stores:{}}),
@@ -122,6 +129,58 @@ await context.route('https://daedong-yeosu-data-api-preview.sisakim.workers.dev/
   body: transparentPng,
 }));
 
+
+async function assertFood14Plus3(page, campaign) {
+  const entries = await page.locator('#heroTrack > [data-hero-index]').evaluateAll(nodes => (
+    [...new Map(nodes.map(node => [Number(node.dataset.heroIndex), {
+      index: Number(node.dataset.heroIndex),
+      storeId: node.dataset.rc6BannerStore || '',
+      url: node.dataset.rc6BannerNotion || '',
+      image: node.querySelector('img')?.getAttribute('src') || '',
+      title: node.querySelector('.rc6-store-hero-copy strong')?.textContent?.trim() || '',
+      meta: node.querySelector('.rc6-store-hero-copy > span')?.textContent?.trim() || '',
+    }])).values()].sort((a, b) => a.index - b.index)
+  ));
+  const food = entries.filter(entry => entry.storeId);
+  const expectedFood = campaign.slides.map(slide => ({
+    storeId: String(slide.storeId || campaign.storeId), image: slide.image, title: slide.title, meta: slide.meta,
+  }));
+  const ads = entries.filter(entry => entry.url).map(({index, url, image}) => ({index, url, image}));
+  if (campaign.slides.length !== 14 || food.length !== 14 || entries.length !== 17
+    || JSON.stringify(entries.map(entry => entry.index)) !== JSON.stringify(Array.from({length: 17}, (_, index) => index))
+    || food.some(entry => entry.storeId !== campaign.storeId)
+    || JSON.stringify(food.map(({storeId, image, title, meta}) => ({storeId, image, title, meta}))) !== JSON.stringify(expectedFood)
+    || JSON.stringify(ads) !== JSON.stringify(expectedFood14Plus3Ads)) {
+    throw new Error(`${campaign.title}: 14음식 원문·3지정광고 URL/이미지/위치(5·10·15) 구성이 다릅니다.`);
+  }
+}
+
+async function assertTamnaneunHidden(page, entryLabel) {
+  await page.waitForFunction(() => (
+    window.__daedongCatalogProgress?.complete === true
+    && typeof window.daedongResolveHeroCampaignStoreId === 'function'
+    && typeof rc6HeroRenderKey === 'string' && rc6HeroRenderKey.length > 0
+    && document.querySelector('#heroTrack > .hero-slide:not([data-hero-placeholder])')
+  ), null, { timeout: 15000 });
+  const result = await page.evaluate(hiddenIds => ({
+    policyHidden: hiddenIds.every(id => window.daedongDataApi.isCustomerHiddenStoreId(id)),
+    resolvedIds: hiddenIds.map(id => window.daedongResolveHeroCampaignStoreId(id)),
+    storeLookups: hiddenIds.map(id => Boolean(fxStoreById(id))),
+    hiddenReferences: [...document.querySelectorAll(
+      '[data-store-id], [data-rc6-banner-store], [data-store-menu-preview], [data-personal-store], [data-app-store-order], [data-app-store-info]'
+    )].filter(element => [...element.attributes].some(attribute => hiddenIds.includes(attribute.value))).length,
+    ordinarySlides: document.querySelectorAll('#heroTrack > .hero-slide:not([data-hero-placeholder])').length,
+    visibleStoreCards: document.querySelectorAll('#storeGrid .store-card').length,
+  }), tamnaneunHiddenStoreIds);
+  if (!result.policyHidden || result.resolvedIds.some(Boolean) || result.storeLookups.some(Boolean) || result.hiddenReferences) {
+    throw new Error(`${entryLabel}: 숨긴 탐나는피자의 가게·메뉴·전용 배너 진입점이 남아 있습니다. ${JSON.stringify(result)}`);
+  }
+  if (!result.ordinarySlides || !result.visibleStoreCards) {
+    throw new Error(`${entryLabel}: 숨김 확인 중 다른 가게와 홈 배너도 사라졌습니다.`);
+  }
+  return { hidden: true, ...result };
+}
+
 try {
   for (const entry of manifest.campaigns) {
     const page = await context.newPage();
@@ -131,6 +190,12 @@ try {
       if (message.type() === 'error') report.errors.push(`${entry.name}: ${message.text()}`);
     });
     await page.goto(`${baseURL}?hero=${entry.storeId}`, { waitUntil: 'domcontentloaded' });
+    if (tamnaneunHiddenStoreIds.includes(entry.storeId)) {
+      const hidden = await assertTamnaneunHidden(page, entry.name);
+      report.stores.push({ storeId: entry.storeId, name: entry.name, ...hidden });
+      await page.close();
+      continue;
+    }
     await page.waitForFunction(
       (storeId) => document.querySelector(`.rc6-campaign-hero[data-rc6-banner-store="${storeId}"]`),
       entry.storeId,
@@ -138,10 +203,12 @@ try {
     );
 
     const campaign = heroData.campaigns[entry.storeId];
+    const isFood14Plus3 = campaign.layout === 'food14-plus3';
     if (!Array.isArray(campaign.slides) || !campaign.slides.length || campaign.images?.length) {
       throw new Error(`${entry.name}: 탐나는피자 표준 slides 구조가 아닙니다.`);
     }
     const expectedSlides = campaign.slides.length;
+    const expectedGeneralAds = isFood14Plus3 ? 3 : 0;
     const campaignSlides = page.locator('.rc6-campaign-hero');
     const slideIndexes = await campaignSlides.evaluateAll((slides) => slides.map((slide) => slide.dataset.heroIndex));
     const slideCount = new Set(slideIndexes).size;
@@ -177,11 +244,15 @@ try {
       throw new Error(`${entry.name}: 전용지도 허용 가게 구성이 잘못되었습니다.`);
     }
     const foreignSlideCount = await page.locator(
-      '#heroTrack > .hero-slide:not(.rc6-campaign-hero), #heroTrack > .rc6-campaign-hero:not([data-rc6-banner-store])',
+      isFood14Plus3
+        ? '#heroTrack > .hero-slide:not(.rc6-campaign-hero):not([data-rc6-banner-notion]), #heroTrack > .rc6-campaign-hero:not([data-rc6-banner-store])'
+        : '#heroTrack > .hero-slide:not(.rc6-campaign-hero), #heroTrack > .rc6-campaign-hero:not([data-rc6-banner-store])',
     ).count();
     if (foreignSlideCount) {
       throw new Error(`${entry.name}: 전용지도에 일반 광고나 연결되지 않은 가게가 섞였습니다.`);
     }
+
+    if (isFood14Plus3) await assertFood14Plus3(page, campaign);
 
     const first = page.locator('.rc6-campaign-hero[data-hero-index="0"]').first();
     const box = await first.boundingBox();
@@ -222,65 +293,41 @@ try {
     ), entry.storeId, { timeout: 5000 });
     const closedCampaign = await page.evaluate((allowedIds) => ({
       slideCount: new Set([...document.querySelectorAll('#heroTrack > .rc6-campaign-hero')].map(slide => slide.dataset.heroIndex)).size,
-      ordinarySlides: document.querySelectorAll('#heroTrack > .hero-slide:not(.rc6-campaign-hero)').length,
+      ordinarySlides: new Set([...document.querySelectorAll('#heroTrack > .hero-slide:not(.rc6-campaign-hero)')].map(slide => slide.dataset.heroIndex)).size,
       foreignSlides: [...document.querySelectorAll('#heroTrack > .rc6-campaign-hero')]
         .filter(slide => !allowedIds.includes(slide.dataset.rc6BannerStore)).length,
     }), [...allowedStoreIds]);
-    if (closedCampaign.slideCount !== expectedSlides || closedCampaign.ordinarySlides || closedCampaign.foreignSlides) {
+    if (closedCampaign.slideCount !== expectedSlides || closedCampaign.ordinarySlides !== expectedGeneralAds || closedCampaign.foreignSlides) {
       throw new Error(`${entry.name}: 상세를 닫은 뒤 전용 배너 구성이 유지되지 않습니다.`);
     }
+    if (isFood14Plus3) await assertFood14Plus3(page, campaign);
     if (entry.storeId === '068b2ae8fe32874a') {
-      await page.screenshot({ path: 'browser-store-campaign-nine.png', fullPage: false });
+      await page.screenshot({ path: path.join(output, 'browser-store-campaign-nine.png'), fullPage: false });
     }
     await page.close();
   }
 
-  const legacyEntryId = '2da10529e7fb987c';
-  const canonicalStoreId = '421ecef35a879687';
-  const legacyPage = await context.newPage();
-  activePage = legacyPage;
-  await legacyPage.goto(`${baseURL}?store=${legacyEntryId}`, { waitUntil: 'domcontentloaded' });
-  await legacyPage.locator(`#modal:not([hidden]) .store-detail[data-store-id="${canonicalStoreId}"]`).waitFor({
-    state: 'visible',
-    timeout: 15000,
-  });
-  const initialLegacyHome = await legacyPage.evaluate((storeId) => ({
-    slideCount: new Set([...document.querySelectorAll('#heroTrack > .hero-slide')].map(slide => slide.dataset.heroIndex)).size,
-    campaignSlideCount: new Set([...document.querySelectorAll(`#heroTrack > .rc6-campaign-hero[data-rc6-banner-store="${storeId}"]`)].map(slide => slide.dataset.heroIndex)).size,
-    foreignSlideCount: document.querySelectorAll(`#heroTrack > .hero-slide:not(.rc6-campaign-hero), #heroTrack > .rc6-campaign-hero:not([data-rc6-banner-store="${storeId}"])`).length,
-    openedStoreId: document.querySelector('#modal:not([hidden]) .store-detail')?.dataset.storeId || '',
-  }), canonicalStoreId);
-  const tamnaneunCampaign = heroData.campaigns[canonicalStoreId];
-  const expectedTamnaneunSlides = tamnaneunCampaign.slides?.length || tamnaneunCampaign.images?.length || 0;
-  if (initialLegacyHome.openedStoreId !== canonicalStoreId) {
-    throw new Error('탐나는피자 이전 QR이 통합 가게 상세를 열지 못합니다.');
+  report.hiddenTamnaneunEntries = [];
+  for (const [parameter, storeId] of [
+    ['store', '2da10529e7fb987c'],
+    ['hero', '2da10529e7fb987c'],
+    ['store', '421ecef35a879687'],
+  ]) {
+    const hiddenPage = await context.newPage();
+    activePage = hiddenPage;
+    hiddenPage.on('pageerror', error => report.errors.push(`탐나는피자 ${parameter}=${storeId}: ${error.message}`));
+    hiddenPage.on('console', message => {
+      if (message.type() === 'error') report.errors.push(`탐나는피자 ${parameter}=${storeId}: ${message.text()}`);
+    });
+    await hiddenPage.goto(`${baseURL}?${parameter}=${storeId}`, { waitUntil: 'domcontentloaded' });
+    const result = await assertTamnaneunHidden(hiddenPage, `탐나는피자 ${parameter}=${storeId}`);
+    report.hiddenTamnaneunEntries.push({ parameter, storeId, ...result });
+    await hiddenPage.close();
   }
-  if (initialLegacyHome.slideCount !== expectedTamnaneunSlides || initialLegacyHome.campaignSlideCount !== expectedTamnaneunSlides || initialLegacyHome.foreignSlideCount) {
-    throw new Error('탐나는피자 이전 QR의 홈 배너에 다른 광고가 섞였습니다.');
-  }
-  await legacyPage.locator('#modal .modal-close').tap();
-  await legacyPage.waitForFunction((storeId) => (
-    document.querySelector('#modal')?.hidden
-    && new URLSearchParams(location.search).get('hero') === storeId
-    && !new URLSearchParams(location.search).has('store')
-  ), canonicalStoreId, { timeout: 5000 });
-  const closedLegacyHome = await legacyPage.evaluate((storeId) => ({
-    search: location.search,
-    slideCount: new Set([...document.querySelectorAll('#heroTrack > .hero-slide')].map(slide => slide.dataset.heroIndex)).size,
-    campaignSlideCount: new Set([...document.querySelectorAll(`#heroTrack > .rc6-campaign-hero[data-rc6-banner-store="${storeId}"]`)].map(slide => slide.dataset.heroIndex)).size,
-    foreignSlideCount: document.querySelectorAll(`#heroTrack > .hero-slide:not(.rc6-campaign-hero), #heroTrack > .rc6-campaign-hero:not([data-rc6-banner-store="${storeId}"])`).length,
-  }), canonicalStoreId);
-  if (closedLegacyHome.slideCount !== expectedTamnaneunSlides || closedLegacyHome.campaignSlideCount !== expectedTamnaneunSlides || closedLegacyHome.foreignSlideCount) {
-    throw new Error('탐나는피자 상세를 닫은 뒤 전용 배너가 일반 광고로 바뀝니다.');
-  }
-  report.legacyTamnaneunQr = {
-    legacyEntryId,
-    canonicalStoreId,
-    initialLegacyHome,
-    closedLegacyHome,
-  };
-  await legacyPage.close();
-  report.success = report.stores.length === manifest.campaigns.length && report.errors.length === 0;
+  report.legacyTamnaneunQr = report.hiddenTamnaneunEntries[0];
+  report.success = report.stores.length === manifest.campaigns.length
+    && report.hiddenTamnaneunEntries.length === 3
+    && report.errors.length === 0;
 } catch (error) {
   report.failure = error.stack || String(error);
   report.debug = await activePage?.evaluate(() => ({
@@ -299,7 +346,7 @@ try {
     heroHtml: document.querySelector('#heroTrack')?.innerHTML?.slice(0, 3000) || '',
   })).catch(() => null);
 } finally {
-  fs.writeFileSync('browser-store-campaign-nine-report.json', `${JSON.stringify(report, null, 2)}\n`);
+  fs.writeFileSync(path.join(output, 'browser-store-campaign-nine-report.json'), `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify(report, null, 2));
   await browser.close();
 }

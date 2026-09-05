@@ -16,7 +16,9 @@
   const CUSTOMER_HIDDEN_STORE_IDS = new Set([
     '732120ab53b3f457', // 여수분식 문수점
     '8d21bc80dd49679e', // 빵위에치즈 여수점
-    '19ebb8a649b24af5'  // 1인피자 빵위에치즈 미니8 여수점
+    '19ebb8a649b24af5', // 1인피자 빵위에치즈 미니8 여수점
+    '2da10529e7fb987c', // 탐나는피자 여수점 — 수집 가게
+    '421ecef35a879687'  // 탐나는피자 여수점 — 전용 지도
   ]);
   const cache = new Map();
   const requestFailures = new Map();
@@ -172,6 +174,10 @@
     return goheungCatalogPromise;
   }
 
+  function isCustomerHiddenStoreId(value) {
+    return CUSTOMER_HIDDEN_STORE_IDS.has(String(value || '').trim().toLowerCase());
+  }
+
   function customerVisibleStores(stores) {
     if (!Array.isArray(stores)) return [];
     return stores.filter(store => {
@@ -269,6 +275,7 @@
   window.daedongDataApi = Object.freeze({
     baseUrl: BASE_URL,
     regionCode: ACTIVE_REGION.code,
+    isCustomerHiddenStoreId,
     catalog,
     services,
     detail,
