@@ -13,8 +13,12 @@ const base = process.env.BASE_URL || 'https://preview.daedongmap.com/';
 const local = process.env.CAMPAIGN_LOCAL_OVERRIDE === '1';
 const production = new URL(base).hostname === 'daedongmap.com';
 const out = process.env.CAMPAIGN_REPORT_DIR || root;
-const ids = ['7bc7239e6b509c44','d86586aaef8454c9','84c118675c0caa4c','04910f606ba038a6'];
+const ids = process.env.CAMPAIGN_STORE_IDS
+  ? process.env.CAMPAIGN_STORE_IDS.split(',').map(id=>id.trim())
+  : ['7bc7239e6b509c44','d86586aaef8454c9','84c118675c0caa4c','04910f606ba038a6'];
 const data = JSON.parse(fs.readFileSync(path.join(root,'data/hero-campaigns.json')));
+assert.ok(ids.length>0 && new Set(ids).size===ids.length,'Select distinct campaign IDs');
+assert.ok(ids.every(id=>/^[a-f0-9]{16}$/.test(id) && data.campaigns[id]),'Unknown campaign ID');
 const targets = JSON.parse(fs.readFileSync(path.join(root,'data/banner-targets.json')));
 const ads = ['18','19','20'].map(key=>({url:targets[key].notionUrl,image:targets[key].image}));
 async function assertComposition(page,id){

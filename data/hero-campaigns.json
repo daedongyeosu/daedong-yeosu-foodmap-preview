@@ -845,6 +845,100 @@
           "meta": "비빔국수"
         }
       ]
+    },
+    "d9730ed96e5fbd9a": {
+      "storeId": "d9730ed96e5fbd9a",
+      "slug": "teum-donkatsu-mipyeong",
+      "label": "틈 돈까스 미평점 전용 대동여수음식지도",
+      "title": "틈 돈까스 미평점",
+      "meta": "미평동 · 돈까스·덮밥·면류",
+      "slides": [
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/08/af5b181e-101d-4b4a-9256-f30727e42e3e.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "안심돈까스"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/05/4a0c8cd7-9202-487a-bbe9-1d0a0787beed.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "등심돈까스"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/e813389e-4da4-43b8-804b-9e3c13e573f3.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "치즈돈까스"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/09/47149dab-18f0-49cc-a26e-be077d738b5a.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "매운돈까스"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/06/8d761415-1eae-4c3e-aaa0-c5d9dd89f318.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "안심 반 치즈 반"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/7a946175-28e9-4ca4-b208-5332baaccdc8.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "연어덮밥"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/04/56a37604-cf45-42b2-95d3-a6d81ddcb532.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "연어장 덮밥"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/03/433998b9-c2a5-4e4c-a4cf-a66f420d9a2f.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "소불고기덮밥"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/1e659947-9d11-4626-b46b-8fb0bacd67e0.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "돈까스 덮밥"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/b7bdf53b-c11e-4dbc-8464-92fde26af583.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "새우튀김덮밥"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/05/cfe30a47-3871-4dd6-a63a-3be67e3e47af.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "치킨가라아게덮밥"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/11/a088a3c5-a72a-49ad-afb9-6bc1512bd7ff.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "야끼소바"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/9237efb8-4cee-4b3b-b4f6-32ed638d5191.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "우동"
+        },
+        {
+          "storeId": "d9730ed96e5fbd9a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/08/d7cddb7a-d311-4925-aa94-eea8b5518103.jpg",
+          "title": "틈 돈까스 미평점",
+          "meta": "냉모밀"
+        }
+      ],
+      "layout": "food14-plus3"
     }
   },
   "virtualStores": {
