@@ -13,8 +13,10 @@ assert.match(fs.readFileSync('app.js', 'utf8'), /history\.scrollRestoration = 'm
   '같은 문서의 메뉴·상세 히스토리 이동에서 브라우저 자동 스크롤 복원이 터치를 막으면 안 됩니다.');
 
 assert.match(menu, /const INITIAL_MENU_RENDER_COUNT = 12/);
-assert.match(menu, /menu\.items\.slice\(0, INITIAL_MENU_RENDER_COUNT\)\.map\(item => menuCardMarkup\(item\)\)/,
+assert.match(menu, /initialMenuItems\(menu\)\.slice\(0, INITIAL_MENU_RENDER_COUNT\)\.map\(item => menuCardMarkup\(item\)\)/,
   '메뉴 전체를 첫 화면에서 한꺼번에 DOM으로 만들면 안 됩니다.');
+assert.match(menu, /function initialMenuItems\(menu\)[\s\S]*menu\.__foldExtras \? menu\.items\.filter\(item => !item\.__compact\) : menu\.items/,
+  '접힌 부가 메뉴만 첫 묶음에서 제외하고 일반 음식은 전부 점진적으로 표시해야 합니다.');
 assert.match(menu, /requestIdleCallback\(callback, \{timeout: 180\}\)/,
   '나머지 메뉴 렌더링은 브라우저 유휴 시간으로 분할해야 합니다.');
 assert.match(menu, /menuRenderObserver = new IntersectionObserver[\s\S]*rootMargin: '900px 0px'/,
