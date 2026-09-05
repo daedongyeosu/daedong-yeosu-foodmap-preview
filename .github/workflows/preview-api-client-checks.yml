@@ -53,6 +53,12 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.55.0
           npx playwright install --with-deps chromium
+      - name: Verify hidden Tamnaneun store and preserved customer routes
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-hidden-store-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173 OUTPUT_DIR=browser-tamnaneun-hidden node scripts/browser-tamnaneun-hidden.mjs
       - name: Verify rider recruitment banner in current PR
         run: |
           python3 -m http.server 4173 >/tmp/daedong-rider-banner-server.log 2>&1 &
@@ -176,6 +182,7 @@ jobs:
             static-validation-report.json
             data-validation-report.json
             regression-suite-report.json
+            browser-tamnaneun-hidden/
             browser-alien-pizza-menu-search-report.json
             browser-alien-pizza-menu-search.png
             browser-alien-pizza-menu-search-failure.png
