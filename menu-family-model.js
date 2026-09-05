@@ -6,7 +6,7 @@
   if (root) root.daedongMenuFamilies = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
-  const VERSION = 'menu-families-2-four-store-20260905';
+  const VERSION = 'menu-families-3-reviewed-campaigns-20260905';
   const tidy = value => String(value == null ? '' : value).normalize('NFKC').replace(/\s+/g, ' ').trim();
   const compact = value => tidy(value).toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
   const unique = values => [...new Set(values.map(value => String(value == null ? '' : value)).filter(Boolean))];
@@ -22,6 +22,9 @@
   // inventory. The tuple is [normalized store ID, exact source ID, tidy name].
   // Fingerprints are equality guards, not encryption or authentication.
   const REVIEWED_STORE_HASHES = new Set([
+    'd8739b057b8d76537dbf588f3c889ca7b6af8cd79a8f26e05c07965921a0f316',
+    '8d7b2c0b2c5ba5b24715b3ffc50103c03b4a1e0ea6422ee2ee65b0f4dcbcc3a1',
+    '4f87552b6b1ffb3a0bd8291d8aa4267bb37d19616a6e58353a13982738b976eb',
     '35dae42783bc9bf4f5276cba27b02eb434624d2523c93afaf2bcf1d17ef2c357',
     'f1c1fb5e77c430f08815be7ba7c4f84cb8517ccc956237d5e00a4b498850025b',
     'ce45065b3fe8459ca4a0180d1f474c166199f905fbe6ad1774bfe3e642f95011',
@@ -31,6 +34,28 @@
   const headingRule = { kind: 'notice', reason: 'reviewed-section-heading', emptyDescription: true };
   const descriptionRule = { kind: 'notice', reason: 'reviewed-description-note', noteKind: 'description' };
   const REVIEWED_CLEANUP = new Map([
+    ["c80346ec912ae356cfeb9b125e22aa2f6b15bcb04b54f7d5a47800cf5fac0514",{"family":"50124f94159c484bc72f66b110ac24b920f7c6bab14d9e805407d80d70867735","descriptionHash":"3881abcd7a3046bf716f1d00975c72c1396312fecf0a969c39e20fee0aab6408","categoryHash":"79342f2b54d126db58510b61804316123c4cb7b872f0b562c6746c2d01c6e339"}],
+    ["4d1b957cd3f56ad86890314472236e53635161dabc48e44902bbeebde44f6ead",{"family":"50124f94159c484bc72f66b110ac24b920f7c6bab14d9e805407d80d70867735","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["ecbface8cde15d9c57785bac332cd240f9549fd8e3a5efd6b3be3933a2eee5af",{"family":"73bdc9104e8152c1478115e18cee92109bcb9c7b15d5baca141638c359b45a06","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"79342f2b54d126db58510b61804316123c4cb7b872f0b562c6746c2d01c6e339"}],
+    ["a4150a4c8f8ae084ea6309aa5cd2757f645316f0256ceadb40456b345304009e",{"family":"73bdc9104e8152c1478115e18cee92109bcb9c7b15d5baca141638c359b45a06","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["3a2b547cb47ce67fd8862e5ee41e60f75d3a4ea46e5b2ea3176a9ab4e95693c1",{"family":"338135603dc7c868340dc96c38453c895e266e382a3095238f4f728b9f503e67","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"79342f2b54d126db58510b61804316123c4cb7b872f0b562c6746c2d01c6e339"}],
+    ["174a3c7a87095b5fb38bc5dce0387954aa19e705e8f39d0887848ed4340d43f1",{"family":"338135603dc7c868340dc96c38453c895e266e382a3095238f4f728b9f503e67","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["2016ae14fee777d3e5850bdda73e0a1a33b491a05b45ca952f5454c7ae83bc5c",{"family":"20b5f06e736d4f68d2dfa9127afca26ab40faa2c3fdf1916b005dc0fb0969e2f","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"c48bed2afaf8b4b4c0e8150b878438a146887b03a6f24a08a6bf11f0926b0a5a"}],
+    ["a354f2a2d7ec9ba8c2d0955eac3b941c9c746bb7715da61dcc80c94ad6d6783d",{"family":"20b5f06e736d4f68d2dfa9127afca26ab40faa2c3fdf1916b005dc0fb0969e2f","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["6a73415822f7593b767bc9b05911232afd252714f5afd557228aeee8ada7f8ae",{"family":"300ecf84b3cdd8ec891154e2ed9698e9fcd8ca101c3aa03d8766706cc6e93563","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"c48bed2afaf8b4b4c0e8150b878438a146887b03a6f24a08a6bf11f0926b0a5a"}],
+    ["b2750faa82fd1c164ccb940910f309401e7563ff4fcd2c64375aecd373b76811",{"family":"300ecf84b3cdd8ec891154e2ed9698e9fcd8ca101c3aa03d8766706cc6e93563","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["bc7fee8ad1a09ef1f8a7636e364a9423f88ca19befa10558485b38e980f01adb",{"family":"e51a2260fd678ec35af18ac154d9c80ac345e287a9d409403d3b7dd3941e165c","descriptionHash":"6f800cf1abd6e396e64ed2bc5038005fb0c1520894af0a07019a06329f1a3e22","categoryHash":"75236f3747cc919b0331077be2819d1ac3fee9a4a1df2b439aaf83a0d82b4984"}],
+    ["8b9a25969e568ba9700f0d3ea421d513c0ac0498abe1ea3f79c2ae20f3917026",{"family":"e51a2260fd678ec35af18ac154d9c80ac345e287a9d409403d3b7dd3941e165c","descriptionHash":"31b0e79e3be23cfcde2e3ff2c4e489abdcb621598e795bf38468b10b365ef364","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["3b717da2e612e8c0a25a93146dd4ee0f3a941883b4f077fc0318a8bce0571714",{"kind":"notice","reason":"reviewed-delivery-note","noteKind":"delivery","noteArea":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"1962045b4124490539ac59a415e44236e506e49e8a93baa3fb445d3c361fb80c"}],
+    ["e29b4f934d63c1f3829aec57547f5c99324558089f6af0135980def28dba9cc0",{"kind":"notice","reason":"reviewed-delivery-note","noteKind":"delivery","noteArea":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"1962045b4124490539ac59a415e44236e506e49e8a93baa3fb445d3c361fb80c"}],
+    ["2cc0b77c8ec7b022483c5241fc68267f16a0a9c6062a96cdfb990f83ba5071ab",{"kind":"notice","reason":"reviewed-delivery-note","noteKind":"delivery","noteArea":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"be8db94f23612aee7cb61c6b47acf2337d08650548602b0be2935d270fb31de8"}],
+    ["52075d36414af468ff4372ff9cfa308f2cb3c2ca28c31bf250fc2b3e44842cc1",{"kind":"notice","reason":"reviewed-section-heading","emptyDescription":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["a306e13bd08db0e543f098291fb91c77bcf0452e8da8936fa19f0dcf16cf6286",{"kind":"notice","reason":"reviewed-description-note","noteKind":"description","emptyDescription":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["3800c9b020285022534d837a92f2d4dfb95dd30c7bd362ccc050e3e79167a8e6",{"kind":"notice","reason":"reviewed-description-note","noteKind":"description","emptyDescription":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["c2357f7537e34ed81c0fdcda0661c3c878feb1859c3ffe781c3d76ab9857d36b",{"kind":"notice","reason":"reviewed-description-note","noteKind":"description","emptyDescription":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["9240bdafdefb3cdcf34bebd4d1e54f57a19591c3d183c7148add731922d6074a",{"kind":"notice","reason":"reviewed-description-note","noteKind":"description","emptyDescription":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["4a411b534f038e299e7b4e1d7ce00e81dde94d8ba7fd72055ddc13946e0f8b6b",{"kind":"notice","reason":"reviewed-description-note","noteKind":"description","emptyDescription":true,"descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
+    ["dc7c857b9b50309256507a476d9683077264ff37c659f2c69468af11df21feca",{"suppressImageHash":"e7839b3b66e03282ab1f8bab1a944f485423f2a0e3304075d7a1b7d880ac90a5","descriptionHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","categoryHash":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}],
     ['9bb73f1f0b9c67961ec9a35aec3e25a75d57312810d1bd91e380ee11c5bb158f', deliveryRule],
     ['a75e9ce3506305693868f125987c0fd4664ccf7c9b9fc01b81bbeca78e9b1517', headingRule],
     ['53bed90594b02e73ac8a10db437f20703044ebd9786555e18bab7f2a3c6025f1', headingRule],
@@ -124,6 +149,10 @@
     const id = String(item && (item.id || item.itemId) || '');
     const rule = REVIEWED_CLEANUP.get(sha256(JSON.stringify([owner, id, tidy(item && item.name)])));
     if (!rule) return null;
+    // Partial search rows can omit fields; changed populated evidence fails open.
+    if (rule.descriptionHash && has(item, 'description') && sha256(tidy(item.description)) !== rule.descriptionHash) return null;
+    if (rule.categoryHash && has(item, 'category') && sha256(tidy(item.category)) !== rule.categoryHash) return null;
+    if (rule.suppressImageHash && sha256(photoKey(item?.image)) !== rule.suppressImageHash) return null;
     if (rule.kind === 'notice' && tidy(item && item.image)) return null;
     if (rule.emptyDescription && tidy(item && item.description)) return null;
     return rule;
@@ -131,6 +160,8 @@
 
   function reviewedFeatures(item, rule) {
     const parts = features(item);
+    // Equality-reviewed families keep original quantity metadata and all variants.
+    if (rule?.family) return { ...parts, key: `reviewed-${rule.family}` };
     if (!rule?.count) return parts;
     const name = tidy(item.name).replace(/\s*(\d+)\s*(?:EA|개)$/iu, '$1개');
     return { ...parts, base: name,
@@ -304,6 +335,11 @@
       if (owner && owner !== 'anonymous-menu') variant.storeId = owner;
       // Guard against the raw name, before price sanitization can change it.
       const rule = reviewedRule(source, store);
+      if (rule?.suppressImageHash) {
+        // Keep the raw API image untouched; do not show a verified wrong product label.
+        variant.image = '';
+        review.push({ reason: 'reviewed-image-label-mismatch', sourceIds: variant.__sourceIds.slice() });
+      }
       const originalKind = classify(variant, store, true);
       const kind = originalKind === 'membership' ? originalKind : rule?.kind || originalKind;
       if (kind === 'notice' || kind === 'membership') {
@@ -313,7 +349,9 @@
         excluded.push(entry);
         if (kind !== 'membership' && rule?.noteKind) {
           const deliveryCategory = noteText(variant.category);
-          const primary = rule.noteKind === 'delivery'
+          const primary = rule.noteKind === 'delivery' && rule.noteArea
+            ? `${noteText(variant.name)}: ${deliveryCategory}. 자세한 내용은 주문앱에서 확인해주세요.`
+            : rule.noteKind === 'delivery'
             ? `${/배달비/.test(deliveryCategory) ? deliveryCategory.replace(/추가\s*배달비/gu, '추가 배달비') : noteText(variant.name)}는 주문앱에서 확인해주세요.`
             : noteText(variant.name);
           const text = unique([primary, noteText(variant.description)].filter(value => tidy(value))).join('\n');
@@ -348,6 +386,7 @@
       if (has(first, 'itemId')) card.itemId = first.itemId;
       const firstRule = reviewedRule(originals[first.__inputIndex], store);
       card.name = firstRule?.correctCheeseTypo ? stripPromo(first.name).replace('치츠', '치즈')
+        : firstRule?.family ? stripPromo(first.name)
         : firstRule?.count ? reviewedFeatures(first, firstRule).base
         : (variants.length > 1 ? features(first).base || stripPromo(first.name) : stripPromo(first.name));
       card.image = (ranked.find(entry => realPhoto(entry.variant.image)) || {}).variant?.image || '';
