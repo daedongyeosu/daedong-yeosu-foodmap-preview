@@ -43,6 +43,7 @@
     ])
   });
   const STATIC_MENU_URLS = Object.freeze({
+    '17d9bf1de3d671fd': 'data/haeinine-yeoseo-menu.json?v=haeinine-menu-preview-1',
     '421ecef35a879687': 'data/tamnaneun-pizza-menu.json?v=tamnaneun-dedicated-2'
   });
 
@@ -183,6 +184,9 @@
     return stores.filter(store => {
       const id = String(store?.id || store?.store_id || '').toLowerCase();
       return !CUSTOMER_HIDDEN_STORE_IDS.has(id);
+    }).map(store => {
+      const id = String(store?.id || store?.store_id || '').toLowerCase();
+      return STATIC_MENU_URLS[id] && store?.hasMenu !== true ? {...store, hasMenu: true} : store;
     });
   }
 
