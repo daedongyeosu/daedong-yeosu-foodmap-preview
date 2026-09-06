@@ -1,5 +1,57 @@
 {
   "campaigns": {
+    "17d9bf1de3d671fd": {
+      "storeId": "17d9bf1de3d671fd",
+      "slug": "haeinine-yeoseo",
+      "label": "해인이네 전용 대동여수음식지도",
+      "title": "해인이네",
+      "meta": "먹깨비 등록 메뉴",
+      "layout": "food14-plus3",
+      "slides": [
+        {
+          "storeId": "17d9bf1de3d671fd",
+          "image": "assets/campaigns/haeinine-yeoseo/01-dongtaetang.png",
+          "title": "해인이네",
+          "meta": "동태탕"
+        },
+        {
+          "storeId": "17d9bf1de3d671fd",
+          "image": "assets/campaigns/haeinine-yeoseo/02-kkotgetang.png",
+          "title": "해인이네",
+          "meta": "꽃게탕"
+        },
+        {
+          "storeId": "17d9bf1de3d671fd",
+          "image": "assets/campaigns/haeinine-yeoseo/03-jeyuk.png",
+          "title": "해인이네",
+          "meta": "국내산 제육볶음"
+        },
+        {
+          "storeId": "17d9bf1de3d671fd",
+          "image": "assets/campaigns/haeinine-yeoseo/04-nakji.png",
+          "title": "해인이네",
+          "meta": "낙지볶음"
+        },
+        {
+          "storeId": "17d9bf1de3d671fd",
+          "image": "assets/campaigns/haeinine-yeoseo/05-mackerel.png",
+          "title": "해인이네",
+          "meta": "고등어구이"
+        },
+        {
+          "storeId": "17d9bf1de3d671fd",
+          "image": "assets/campaigns/haeinine-yeoseo/06-galchi.png",
+          "title": "해인이네",
+          "meta": "갈치조림"
+        },
+        {
+          "storeId": "17d9bf1de3d671fd",
+          "image": "assets/campaigns/haeinine-yeoseo/07-galbijjim.png",
+          "title": "해인이네",
+          "meta": "양푼이 돼지갈비찜"
+        }
+      ]
+    },
     "2017de4f9111f3ce": {
       "storeId": "2017de4f9111f3ce",
       "slug": "kim-samgyeop-kimchi-jjim",
