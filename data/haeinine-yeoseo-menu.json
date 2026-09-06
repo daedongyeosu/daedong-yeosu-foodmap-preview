@@ -1,0 +1,16 @@
+{
+  "storeId": "17d9bf1de3d671fd",
+  "storeName": "해인이네 여서점",
+  "displayName": "해인이네 여서점",
+  "mainImage": "assets/campaigns/haeinine-yeoseo/01-dongtaetang.png",
+  "categories": ["전체", "먹깨비 메뉴"],
+  "items": [
+    {"id":"haeinine-1","name":"동태탕","description":"","category":"먹깨비 메뉴","image":"assets/campaigns/haeinine-yeoseo/01-dongtaetang.png"},
+    {"id":"haeinine-2","name":"꽃게탕","description":"","category":"먹깨비 메뉴","image":"assets/campaigns/haeinine-yeoseo/02-kkotgetang.png"},
+    {"id":"haeinine-3","name":"국내산 제육볶음","description":"","category":"먹깨비 메뉴","image":"assets/campaigns/haeinine-yeoseo/03-jeyuk.png"},
+    {"id":"haeinine-4","name":"낙지볶음","description":"","category":"먹깨비 메뉴","image":"assets/campaigns/haeinine-yeoseo/04-nakji.png"},
+    {"id":"haeinine-5","name":"고등어구이","description":"","category":"먹깨비 메뉴","image":"assets/campaigns/haeinine-yeoseo/05-mackerel.png"},
+    {"id":"haeinine-6","name":"갈치조림","description":"","category":"먹깨비 메뉴","image":"assets/campaigns/haeinine-yeoseo/06-galchi.png"},
+    {"id":"haeinine-7","name":"양푼이 돼지갈비찜","description":"","category":"먹깨비 메뉴","image":"assets/campaigns/haeinine-yeoseo/07-galbijjim.png"}
+  ]
+}

@@ -17,6 +17,8 @@ const output = process.env.OUTPUT_DIR || '.';
 fs.mkdirSync(output, { recursive: true });
 const manifest = JSON.parse(fs.readFileSync(new URL('../data/store-campaign-links.json', import.meta.url), 'utf8'));
 const heroData = JSON.parse(fs.readFileSync(new URL('../data/hero-campaigns.json', import.meta.url), 'utf8'));
+const haeinineStoreId = '17d9bf1de3d671fd';
+const haeinineMenu = JSON.parse(fs.readFileSync(new URL('../data/haeinine-yeoseo-menu.json', import.meta.url), 'utf8'));
 const dataApiSource = fs.readFileSync(new URL('../data-api.js', import.meta.url), 'utf8');
 const tamnaneunHiddenStoreIds = ['2da10529e7fb987c', '421ecef35a879687'];
 const bannerTargets = JSON.parse(fs.readFileSync(new URL('../data/banner-targets.json', import.meta.url), 'utf8'));
@@ -92,7 +94,7 @@ const stores = campaignDefinitions.filter(entry => entry.storeId !== '421ecef35a
     cat: '음식점',
     categories: ['음식점'],
     rawIndex: index,
-    hasMenu: false,
+    hasMenu: entry.storeId === haeinineStoreId,
     channelKeys,
     routes: channelKeys.map(fixtureRoute),
   };
@@ -123,7 +125,7 @@ await context.route('**/data-api.js*', (route) => route.fulfill({
     catalog:()=>Promise.resolve(${JSON.stringify(stores)}),
     services:()=>Promise.resolve({programs:[],stores:{}}),
     detail:(id)=>Promise.resolve(${JSON.stringify(storeById)}[id]||{}),
-    menu:()=>Promise.resolve({items:[]}),menuSearch:()=>Promise.resolve({stores:{}})
+    menu:(id)=>Promise.resolve(id==='${haeinineStoreId}'?${JSON.stringify(haeinineMenu)}:{items:[]}),menuSearch:()=>Promise.resolve({stores:{}})
   });`,
 }));
 const corsHeaders = {
@@ -201,6 +203,46 @@ async function assertTamnaneunHidden(page, entryLabel) {
     throw new Error(`${entryLabel}: 숨김 확인 중 다른 가게와 홈 배너도 사라졌습니다.`);
   }
   return { hidden: true, ...result };
+}
+
+async function assertHaeinineMenuPreview(page) {
+  const detail = page.locator(`#modal:not([hidden]) .store-detail[data-store-id="${haeinineStoreId}"]`);
+  const entry = detail.locator(`[data-store-menu-preview="${haeinineStoreId}"]`);
+  await entry.waitFor({ state: 'visible', timeout: 10000 });
+  await entry.tap();
+  const preview = page.locator(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${haeinineStoreId}"]`);
+  await preview.waitFor({ state: 'visible', timeout: 10000 });
+  const cards = await preview.locator('[data-menu-card]').evaluateAll(nodes => nodes.map(node => ({
+    name: node.querySelector('h3')?.textContent?.trim() || '',
+    image: node.querySelector('img')?.dataset.menuImageSrc || node.querySelector('img')?.getAttribute('src') || '',
+  })));
+  const expected = haeinineMenu.items.map(item => ({ name: item.name, image: item.image }));
+  if (JSON.stringify(cards) !== JSON.stringify(expected)) {
+    throw new Error(`해인이네 여서점: 음식 미리보기 7개 메뉴명·사진 구성이 다릅니다. ${JSON.stringify(cards)}`);
+  }
+  if (await preview.getByText(/\d[\d,]*원/u).count()) {
+    throw new Error('해인이네 여서점: 고객 음식 미리보기에 가격이 표시됩니다.');
+  }
+  await page.screenshot({path: path.join(output, 'browser-haeinine-menu-preview.png'), fullPage: false});
+  const closeButton = preview.locator('[data-menu-preview-close]').last();
+  const box = await closeButton.boundingBox();
+  if (!box) throw new Error('해인이네 여서점: 음식 미리보기 닫기 버튼 위치를 확인할 수 없습니다.');
+  await closeButton.evaluate((button, position) => {
+    const touch = {identifier: 71, clientX: position.x, clientY: position.y};
+    const dispatch = (type, touches, changedTouches) => {
+      const event = new Event(type, {bubbles: true, cancelable: true});
+      Object.defineProperties(event, {
+        touches: {value: touches},
+        targetTouches: {value: touches},
+        changedTouches: {value: changedTouches},
+      });
+      button.dispatchEvent(event);
+    };
+    dispatch('touchstart', [touch], [touch]);
+    dispatch('touchend', [], [touch]);
+  }, {x: box.x + box.width / 2, y: box.y + box.height / 2});
+  await preview.waitFor({ state: 'hidden', timeout: 10000 });
+  await detail.waitFor({ state: 'visible', timeout: 10000 });
 }
 
 try {
@@ -296,6 +338,7 @@ try {
       state: 'visible',
       timeout: 10000,
     });
+    if (entry.storeId === haeinineStoreId) await assertHaeinineMenuPreview(page);
 
     report.stores.push({
       storeId: entry.storeId,
