@@ -20,9 +20,29 @@ const heroData = JSON.parse(fs.readFileSync(new URL('../data/hero-campaigns.json
 const dataApiSource = fs.readFileSync(new URL('../data-api.js', import.meta.url), 'utf8');
 const tamnaneunHiddenStoreIds = ['2da10529e7fb987c', '421ecef35a879687'];
 const bannerTargets = JSON.parse(fs.readFileSync(new URL('../data/banner-targets.json', import.meta.url), 'utf8'));
-const expectedFood14Plus3Ads = ['18', '19', '20'].map((key, index) => ({
-  index: [4, 9, 14][index], url: bannerTargets[key].notionUrl, image: bannerTargets[key].image,
+const food14Plus3Ads = ['18', '19', '20'].map(key => ({
+  url: bannerTargets[key].notionUrl, image: bannerTargets[key].image,
 }));
+function expectedFood14Plus3Ads(foodCount) {
+  const insertionPhotoIndexes = [3, 7, 11];
+  const adIndexes = [];
+  let renderedCount = 0;
+  let usedAds = 0;
+  for (let photoIndex = 0; photoIndex < foodCount; photoIndex += 1) {
+    renderedCount += 1;
+    if (usedAds < food14Plus3Ads.length && photoIndex === insertionPhotoIndexes[usedAds]) {
+      adIndexes.push(renderedCount);
+      renderedCount += 1;
+      usedAds += 1;
+    }
+  }
+  while (usedAds < food14Plus3Ads.length) {
+    adIndexes.push(renderedCount);
+    renderedCount += 1;
+    usedAds += 1;
+  }
+  return food14Plus3Ads.map((ad, index) => ({ index: adIndexes[index], ...ad }));
+}
 const campaignDefinitions = [...manifest.campaigns];
 for (const campaign of Object.values(heroData.campaigns)) {
   for (const slide of campaign.slides || []) {
@@ -142,16 +162,18 @@ async function assertFood14Plus3(page, campaign) {
     }])).values()].sort((a, b) => a.index - b.index)
   ));
   const food = entries.filter(entry => entry.storeId);
-  const expectedFood = campaign.slides.map(slide => ({
+  const expectedFood = campaign.slides.slice(0, 14).map(slide => ({
     storeId: String(slide.storeId || campaign.storeId), image: slide.image, title: slide.title, meta: slide.meta,
   }));
   const ads = entries.filter(entry => entry.url).map(({index, url, image}) => ({index, url, image}));
-  if (campaign.slides.length !== 14 || food.length !== 14 || entries.length !== 17
-    || JSON.stringify(entries.map(entry => entry.index)) !== JSON.stringify(Array.from({length: 17}, (_, index) => index))
+  const expectedAds = expectedFood14Plus3Ads(expectedFood.length);
+  const expectedEntryCount = expectedFood.length + expectedAds.length;
+  if (!expectedFood.length || food.length !== expectedFood.length || entries.length !== expectedEntryCount
+    || JSON.stringify(entries.map(entry => entry.index)) !== JSON.stringify(Array.from({length: expectedEntryCount}, (_, index) => index))
     || food.some(entry => entry.storeId !== campaign.storeId)
     || JSON.stringify(food.map(({storeId, image, title, meta}) => ({storeId, image, title, meta}))) !== JSON.stringify(expectedFood)
-    || JSON.stringify(ads) !== JSON.stringify(expectedFood14Plus3Ads)) {
-    throw new Error(`${campaign.title}: 14음식 원문·3지정광고 URL/이미지/위치(5·10·15) 구성이 다릅니다.`);
+    || JSON.stringify(ads) !== JSON.stringify(expectedAds)) {
+    throw new Error(`${campaign.title}: ${expectedFood.length}개 음식 원문·3개 지정광고의 URL·이미지·위치 구성이 다릅니다.`);
   }
 }
 

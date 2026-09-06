@@ -3,6 +3,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
 
 const expected = [
+  ['17d9bf1de3d671fd', '해인이네 여서점'],
   ['2017de4f9111f3ce', '김사장 삼겹 통김치찜'],
   ['93ae27237a8e75c4', '메밀꽃 필 막국수'],
   ['1d691d8e74499d31', '조쉐프의 쌀국수'],
