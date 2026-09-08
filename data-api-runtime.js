@@ -35,7 +35,7 @@
         if (key) routeMap.set(key, route);
       }
     }
-    return {
+    const result = {
       ...additions.reduce((merged, detail) => ({...merged, ...detail}), {}),
       ...primary,
       address: primary?.address || additions.find(detail => detail?.address)?.address || '',
@@ -46,6 +46,17 @@
       images,
       routes: [...routeMap.values()]
     };
+    // Explicit administrator edits override alias enrichment, including removals.
+    for (const key of primary?.nativeOverrideFields || []) {
+      if (['name','phone','address','district','category','nativeHours','nativeDescription','naverMap'].includes(key)) result[key] = primary[key];
+    }
+    for (const key of primary?.nativeOverrideRoutes || []) {
+      if (!['mukkebi','ddangyo','yogiyo','coupang','baemin','direct','phone'].includes(key)) continue;
+      result.routes = result.routes.filter(route => route.key !== key);
+      const route = (primary.routes || []).find(route => route.key === key);
+      if (route) result.routes.push(route);
+    }
+    return result;
   }
 
   async function enrichStore(store, normalizeStore) {

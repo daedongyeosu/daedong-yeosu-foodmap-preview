@@ -1473,6 +1473,8 @@ function normalizedStore(raw, index) {
     notionPageId: raw.notionPageId || '', notionUrl: raw.notionUrl || '', brandName, branchName, searchAliases, searchIndex,
     shopInShopNames: raw.shopInShopNames || [], area, cat: primaryCategory, categories: categoryValues,
     address: raw.address || '', phone: raw.phone || '', naverMap: safeHref(raw.naverMap || ''),
+    nativeHours: String(raw.nativeHours || ''), nativeDescription: String(raw.nativeDescription || ''),
+    nativeHoursSet: raw.nativeHoursSet === true, nativePhotos: Array.isArray(raw.nativePhotos) ? raw.nativePhotos : [],
     legacyImage: legacyImages[0] || '', legacyImages,
     tags: [raw.category, area, raw.address, ...(raw.shopInShopNames || [])].filter(Boolean), routes,
     managed: Boolean(raw.managed), sharedManaged: Boolean(raw.sharedManaged), deprioritized: Boolean(raw.deprioritized), pinPosition: raw.pinPosition,
@@ -1485,6 +1487,10 @@ function normalizedStore(raw, index) {
   };
 }
 function storeText(store) { return store.searchIndex || normalize([store.name, store.realBusinessName, ...store.shopInShopNames, store.area, store.cat, ...store.tags].join(' ')); }
+function nativeStoreInformation(store) {
+  if (!store.nativeDescription && !store.nativeHours) return '';
+  return `<section class="store-native-information" aria-label="가게에서 등록한 안내">${store.nativeDescription?`<h3>가게 소개 · 메뉴 안내</h3><p style="white-space:pre-line">${escapeHtml(store.nativeDescription)}</p>`:''}${store.nativeHours?`<h3>영업시간 · 쉬는 날</h3><p style="white-space:pre-line">${escapeHtml(store.nativeHours)}</p>`:''}</section>`;
+}
 function storeRouteIsBlocked(store, key) {
   return Boolean(BLOCKED_STORE_ROUTE_KEYS[String(store?.id || store?.store_id || '')]?.has(String(key || '')));
 }
@@ -1555,7 +1561,7 @@ class PhotoResolver {
   resolveGallery(store) {
     const entry = this.entryFor(store);
     if (entry && this.classificationAllowed(entry)) {
-      const paths = this.usablePaths([entry.src, ...(entry.additionalSrcs || []), ...(entry.gallery || [])], store);
+      const paths = this.usablePaths([entry.src, ...(entry.additionalSrcs || []), ...(entry.gallery || []), ...(store.nativePhotos || [])], store);
       if (paths.length) return paths.map(src => ({src, source: entry.source || 'manifest', classification: entry.classification}));
     }
     const legacy = this.usablePaths(store.legacyImages || [store.legacyImage], store);
@@ -2513,7 +2519,7 @@ async function openStore(store) {
   const favorite=isFavorite(store.id);
   const menuEntry = storeMenuPreviewEntryMarkup(store);
   if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
-  openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}</div>${menuEntry}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
+openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}</div>${nativeStoreInformation(store)}${menuEntry}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
   const carouselRoot = $('#detailPhotoCarousel'); if (carouselRoot) detailCarousel = new InfiniteCarousel(carouselRoot,{interval:0});
   $('#modal').dataset.activeStoreId=store.id;
   return true;
