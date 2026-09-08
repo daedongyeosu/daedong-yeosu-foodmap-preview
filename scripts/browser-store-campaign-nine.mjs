@@ -299,7 +299,13 @@ try {
     if (JSON.stringify(renderedSlides.map(({storeId, storeName, menuName}) => ({storeId, storeName, menuName}))) !== JSON.stringify(expectedCopy)) {
       throw new Error(`${entry.name}: 배너의 가게명·메뉴명·연결 가게가 표준 데이터와 다릅니다.`);
     }
-    if (renderedSlides.some(item => !item.storeName || !item.menuName || !item.footer)) {
+    // Collected stores may have no available low-fee route; preserve exclusions.
+    const expectedFooterPresence = await page.evaluate(ids => ids.map(id => {
+      const store = fxStoreById(id);
+      return rc6HeroRequiredChannelKeys().some(key => storeHasChannel(store, key))
+        || fxBrandByStore.has(String(id));
+    }), expectedCopy.map(item => item.storeId));
+    if (renderedSlides.some((item, index) => !item.storeName || !item.menuName || Boolean(item.footer) !== expectedFooterPresence[index])) {
       throw new Error(`${entry.name}: 가게명·메뉴명·주문방법 중 비어 있는 표시가 있습니다.`);
     }
     const allowedStoreIds = new Set(campaign.slides.map(slide => String(slide.storeId || campaign.storeId)));
@@ -348,7 +354,7 @@ try {
       mobileWidth: Math.round(box.width),
       detailOpened: true,
       menuNamesMatched: true,
-      orderFootersPresent: true,
+      orderFootersMatchAvailableChannels: true,
       allowedStoreCount: allowedStoreIds.size,
     });
     await page.locator('#modal .modal-close').tap();
