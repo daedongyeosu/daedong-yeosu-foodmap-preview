@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const batch=read('data/collected-campaign-stores.json'),ids=new Set(batch.map(x=>x.storeId));
+assert.equal(batch.length,252);assert.equal(ids.size,252);
+assert.equal(hash(batch),'44c0563df86ad472f030f0e58deeb9cfd4eb0f957d0c440721a1370f70c1f642');
+assert.ok(batch.every(x=>/^[a-f0-9]{16}$/.test(x.storeId)&&Object.keys(x).sort().join(',')==='name,storeId'));
+const h=read('data/hero-campaigns.json'),m=read('data/store-campaign-links.json');
+const baselineHero={...h,campaigns:Object.fromEntries(Object.entries(h.campaigns).filter(([id])=>!ids.has(id)))};
+const baselineManifest={...m,campaigns:m.campaigns.filter(x=>!ids.has(x.storeId))};
+assert.equal(hash(baselineHero),'9f9dc27af6bddb1a5db0c27205f5e7f9581406724fc465dc699aeab505de1232','Existing campaigns and virtual stores unchanged');
+assert.equal(hash(baselineManifest),'e7492e80f54e143f33eed430b98a71772aa638e95064761f0fe3744f78b2638e','Existing links unchanged');
+let textBanners=0;
+for(const {storeId,name} of batch){
+ const c=h.campaigns[storeId],l=m.campaigns.find(x=>x.storeId===storeId);
+ assert.equal(c.storeId,storeId);assert.equal(c.title,name);assert.equal(c.slides.length,1);
+ assert.equal(c.slides[0].storeId,storeId);assert.equal(c.slides[0].title,name);
+ assert.equal(l.url,`https://daedongmap.com/?hero=${storeId}`);
+ assert.equal(l.previewUrl,`https://preview.daedongmap.com/?hero=${storeId}`);
+ if(c.slides[0].image.startsWith('assets/campaigns/collected-stores/'))textBanners++;
+ const svg=fs.readFileSync(l.qrAsset,'utf8'),size=Number(svg.match(/viewBox="0 0 (\d+) \d+"/)[1]);
+ const cells=[...svg.matchAll(/M(\d+) (\d+)h1v1h-1z/g)].map(x=>[Number(x[1]),Number(x[2])]);
+ assert.equal(Math.min(...cells.map(x=>x[0])),0);assert.equal(Math.min(...cells.map(x=>x[1])),0);
+ assert.equal(Math.max(...cells.map(x=>x[0])),size-1);assert.equal(Math.max(...cells.map(x=>x[1])),size-1);
+}
+assert.equal(textBanners,43);
+for(const f of ['rc6-fixes.js','final-experience.js','index.html'])assert.match(fs.readFileSync(f,'utf8'),/collected-shopinshop-1/);
+console.log('Collected shop-in-shop: 252 dedicated destinations; margin 0; previous campaigns unchanged');

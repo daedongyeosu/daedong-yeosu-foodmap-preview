@@ -127,6 +127,1770 @@
       "url": "https://daedongmap.com/?hero=d9730ed96e5fbd9a",
       "previewUrl": "https://preview.daedongmap.com/?hero=d9730ed96e5fbd9a",
       "qrAsset": "assets/qr/teum-donkatsu-mipyeong.svg"
+    },
+    {
+      "storeId": "60224c0c4e6a4cfb",
+      "name": "피자팬다&치킨 본점",
+      "url": "https://daedongmap.com/?hero=60224c0c4e6a4cfb",
+      "previewUrl": "https://preview.daedongmap.com/?hero=60224c0c4e6a4cfb",
+      "qrAsset": "assets/qr/collected-60224c0c4e6a4cfb.svg"
+    },
+    {
+      "storeId": "e48541ed379a9d09",
+      "name": "덕수파스타 여수점",
+      "url": "https://daedongmap.com/?hero=e48541ed379a9d09",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e48541ed379a9d09",
+      "qrAsset": "assets/qr/collected-e48541ed379a9d09.svg"
+    },
+    {
+      "storeId": "ddfe30e801fed73f",
+      "name": "탕참 탕수육참잘하는집 여수점(여서동)",
+      "url": "https://daedongmap.com/?hero=ddfe30e801fed73f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=ddfe30e801fed73f",
+      "qrAsset": "assets/qr/collected-ddfe30e801fed73f.svg"
+    },
+    {
+      "storeId": "19ae04f80e0e3ba6",
+      "name": "순살 참잘튀기는집 여수점(여서동)",
+      "url": "https://daedongmap.com/?hero=19ae04f80e0e3ba6",
+      "previewUrl": "https://preview.daedongmap.com/?hero=19ae04f80e0e3ba6",
+      "qrAsset": "assets/qr/collected-19ae04f80e0e3ba6.svg"
+    },
+    {
+      "storeId": "2857b7140087f6ab",
+      "name": "치코두마리파닭 여서점",
+      "url": "https://daedongmap.com/?hero=2857b7140087f6ab",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2857b7140087f6ab",
+      "qrAsset": "assets/qr/collected-2857b7140087f6ab.svg"
+    },
+    {
+      "storeId": "df16b7312c25da31",
+      "name": "위대한 닭뽀끼&짜파구리 여서점",
+      "url": "https://daedongmap.com/?hero=df16b7312c25da31",
+      "previewUrl": "https://preview.daedongmap.com/?hero=df16b7312c25da31",
+      "qrAsset": "assets/qr/collected-df16b7312c25da31.svg"
+    },
+    {
+      "storeId": "796e9fd8e3672604",
+      "name": "홍탕 덕충점",
+      "url": "https://daedongmap.com/?hero=796e9fd8e3672604",
+      "previewUrl": "https://preview.daedongmap.com/?hero=796e9fd8e3672604",
+      "qrAsset": "assets/qr/collected-796e9fd8e3672604.svg"
+    },
+    {
+      "storeId": "315dee55700b0a02",
+      "name": "못말리는파닭 덕충점",
+      "url": "https://daedongmap.com/?hero=315dee55700b0a02",
+      "previewUrl": "https://preview.daedongmap.com/?hero=315dee55700b0a02",
+      "qrAsset": "assets/qr/collected-315dee55700b0a02.svg"
+    },
+    {
+      "storeId": "815c0895b7dcfaa8",
+      "name": "계동치킨 덕충점",
+      "url": "https://daedongmap.com/?hero=815c0895b7dcfaa8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=815c0895b7dcfaa8",
+      "qrAsset": "assets/qr/collected-815c0895b7dcfaa8.svg"
+    },
+    {
+      "storeId": "0eea4a740e820fd3",
+      "name": "타코아찌 타코야끼전문점 문수점",
+      "url": "https://daedongmap.com/?hero=0eea4a740e820fd3",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0eea4a740e820fd3",
+      "qrAsset": "assets/qr/collected-0eea4a740e820fd3.svg"
+    },
+    {
+      "storeId": "1945b6a42e0da33c",
+      "name": "쉐프의 생 안심탕수육 문수점",
+      "url": "https://daedongmap.com/?hero=1945b6a42e0da33c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=1945b6a42e0da33c",
+      "qrAsset": "assets/qr/collected-1945b6a42e0da33c.svg"
+    },
+    {
+      "storeId": "f84a5e983f0793ab",
+      "name": "피나치공-여수웅천점",
+      "url": "https://daedongmap.com/?hero=f84a5e983f0793ab",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f84a5e983f0793ab",
+      "qrAsset": "assets/qr/collected-f84a5e983f0793ab.svg"
+    },
+    {
+      "storeId": "194738a7ff2258a6",
+      "name": "뿌리공스 여수웅천점",
+      "url": "https://daedongmap.com/?hero=194738a7ff2258a6",
+      "previewUrl": "https://preview.daedongmap.com/?hero=194738a7ff2258a6",
+      "qrAsset": "assets/qr/collected-194738a7ff2258a6.svg"
+    },
+    {
+      "storeId": "e16359de9292f582",
+      "name": "피자알볼로 여수엑스포점(수정동)",
+      "url": "https://daedongmap.com/?hero=e16359de9292f582",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e16359de9292f582",
+      "qrAsset": "assets/qr/collected-e16359de9292f582.svg"
+    },
+    {
+      "storeId": "16669581b8dc378d",
+      "name": "땅스부대찌개 여서점",
+      "url": "https://daedongmap.com/?hero=16669581b8dc378d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=16669581b8dc378d",
+      "qrAsset": "assets/qr/collected-16669581b8dc378d.svg"
+    },
+    {
+      "storeId": "fd8d24a45e887938",
+      "name": "땅스즉석떡볶이 여서점",
+      "url": "https://daedongmap.com/?hero=fd8d24a45e887938",
+      "previewUrl": "https://preview.daedongmap.com/?hero=fd8d24a45e887938",
+      "qrAsset": "assets/qr/collected-fd8d24a45e887938.svg"
+    },
+    {
+      "storeId": "bf2718b01040ef53",
+      "name": "탕수육가장잘튀기는집 여수여서점",
+      "url": "https://daedongmap.com/?hero=bf2718b01040ef53",
+      "previewUrl": "https://preview.daedongmap.com/?hero=bf2718b01040ef53",
+      "qrAsset": "assets/qr/collected-bf2718b01040ef53.svg"
+    },
+    {
+      "storeId": "a71aa4409764fe30",
+      "name": "돼지게티",
+      "url": "https://daedongmap.com/?hero=a71aa4409764fe30",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a71aa4409764fe30",
+      "qrAsset": "assets/qr/collected-a71aa4409764fe30.svg"
+    },
+    {
+      "storeId": "f8588c18933ce3d1",
+      "name": "발리다포차 웅천점",
+      "url": "https://daedongmap.com/?hero=f8588c18933ce3d1",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f8588c18933ce3d1",
+      "qrAsset": "assets/qr/collected-f8588c18933ce3d1.svg"
+    },
+    {
+      "storeId": "5dba8f202d30e790",
+      "name": "위드락",
+      "url": "https://daedongmap.com/?hero=5dba8f202d30e790",
+      "previewUrl": "https://preview.daedongmap.com/?hero=5dba8f202d30e790",
+      "qrAsset": "assets/qr/collected-5dba8f202d30e790.svg"
+    },
+    {
+      "storeId": "be72c26527f22a36",
+      "name": "이백장돈까스 신기점",
+      "url": "https://daedongmap.com/?hero=be72c26527f22a36",
+      "previewUrl": "https://preview.daedongmap.com/?hero=be72c26527f22a36",
+      "qrAsset": "assets/qr/collected-be72c26527f22a36.svg"
+    },
+    {
+      "storeId": "a031d396da0bd915",
+      "name": "밥장인 돼지찌개 여수점",
+      "url": "https://daedongmap.com/?hero=a031d396da0bd915",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a031d396da0bd915",
+      "qrAsset": "assets/qr/collected-a031d396da0bd915.svg"
+    },
+    {
+      "storeId": "5c623277799849cd",
+      "name": "고기듬뿍국물두루치기-여천점",
+      "url": "https://daedongmap.com/?hero=5c623277799849cd",
+      "previewUrl": "https://preview.daedongmap.com/?hero=5c623277799849cd",
+      "qrAsset": "assets/qr/collected-5c623277799849cd.svg"
+    },
+    {
+      "storeId": "9407e6bd4e71b539",
+      "name": "수원왕갈비통닭 여서점",
+      "url": "https://daedongmap.com/?hero=9407e6bd4e71b539",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9407e6bd4e71b539",
+      "qrAsset": "assets/qr/collected-9407e6bd4e71b539.svg"
+    },
+    {
+      "storeId": "a6f3cc0da6d5c044",
+      "name": "통큰두마리찜닭 여서점",
+      "url": "https://daedongmap.com/?hero=a6f3cc0da6d5c044",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a6f3cc0da6d5c044",
+      "qrAsset": "assets/qr/collected-a6f3cc0da6d5c044.svg"
+    },
+    {
+      "storeId": "ef6039739857460b",
+      "name": "방가네소고기국밥-여수여서점",
+      "url": "https://daedongmap.com/?hero=ef6039739857460b",
+      "previewUrl": "https://preview.daedongmap.com/?hero=ef6039739857460b",
+      "qrAsset": "assets/qr/collected-ef6039739857460b.svg"
+    },
+    {
+      "storeId": "bc6152833cd076f5",
+      "name": "전골의법칙 얼큰한곱창전골 문수점",
+      "url": "https://daedongmap.com/?hero=bc6152833cd076f5",
+      "previewUrl": "https://preview.daedongmap.com/?hero=bc6152833cd076f5",
+      "qrAsset": "assets/qr/collected-bc6152833cd076f5.svg"
+    },
+    {
+      "storeId": "a6ff0bcfc0afe5b6",
+      "name": "화끈하게매운 핫불닭발&오돌뼈 여서점",
+      "url": "https://daedongmap.com/?hero=a6ff0bcfc0afe5b6",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a6ff0bcfc0afe5b6",
+      "qrAsset": "assets/qr/collected-a6ff0bcfc0afe5b6.svg"
+    },
+    {
+      "storeId": "e456f248cbe542a3",
+      "name": "청년다방 여서점",
+      "url": "https://daedongmap.com/?hero=e456f248cbe542a3",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e456f248cbe542a3",
+      "qrAsset": "assets/qr/collected-e456f248cbe542a3.svg"
+    },
+    {
+      "storeId": "e57c51a4f6294349",
+      "name": "계근상 여수본점(문수동)",
+      "url": "https://daedongmap.com/?hero=e57c51a4f6294349",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e57c51a4f6294349",
+      "qrAsset": "assets/qr/collected-e57c51a4f6294349.svg"
+    },
+    {
+      "storeId": "2e39c9f951d19c05",
+      "name": "닭특수부대 직화닭특수부위 여수대표본점",
+      "url": "https://daedongmap.com/?hero=2e39c9f951d19c05",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2e39c9f951d19c05",
+      "qrAsset": "assets/qr/collected-2e39c9f951d19c05.svg"
+    },
+    {
+      "storeId": "3a529ecea2703a90",
+      "name": "닭가대표 숯불직화구이치킨 여수점",
+      "url": "https://daedongmap.com/?hero=3a529ecea2703a90",
+      "previewUrl": "https://preview.daedongmap.com/?hero=3a529ecea2703a90",
+      "qrAsset": "assets/qr/collected-3a529ecea2703a90.svg"
+    },
+    {
+      "storeId": "c123553460271e78",
+      "name": "나는문어 타코야끼 여수여서점",
+      "url": "https://daedongmap.com/?hero=c123553460271e78",
+      "previewUrl": "https://preview.daedongmap.com/?hero=c123553460271e78",
+      "qrAsset": "assets/qr/collected-c123553460271e78.svg"
+    },
+    {
+      "storeId": "6bb198cd74849680",
+      "name": "빠삭강정 여수봉산점",
+      "url": "https://daedongmap.com/?hero=6bb198cd74849680",
+      "previewUrl": "https://preview.daedongmap.com/?hero=6bb198cd74849680",
+      "qrAsset": "assets/qr/collected-6bb198cd74849680.svg"
+    },
+    {
+      "storeId": "74914ff35d06477d",
+      "name": "별별김밥 봉산점",
+      "url": "https://daedongmap.com/?hero=74914ff35d06477d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=74914ff35d06477d",
+      "qrAsset": "assets/qr/collected-74914ff35d06477d.svg"
+    },
+    {
+      "storeId": "868b9241b17148c9",
+      "name": "이집닭강정잘하네 공화점",
+      "url": "https://daedongmap.com/?hero=868b9241b17148c9",
+      "previewUrl": "https://preview.daedongmap.com/?hero=868b9241b17148c9",
+      "qrAsset": "assets/qr/collected-868b9241b17148c9.svg"
+    },
+    {
+      "storeId": "02ba7f0819eebd23",
+      "name": "빠삭한 순살치킨을 위해 소스 얹어주는 집 여수점",
+      "url": "https://daedongmap.com/?hero=02ba7f0819eebd23",
+      "previewUrl": "https://preview.daedongmap.com/?hero=02ba7f0819eebd23",
+      "qrAsset": "assets/qr/collected-02ba7f0819eebd23.svg"
+    },
+    {
+      "storeId": "3dc3c29b883e3114",
+      "name": "닭이랑놀자 관문점",
+      "url": "https://daedongmap.com/?hero=3dc3c29b883e3114",
+      "previewUrl": "https://preview.daedongmap.com/?hero=3dc3c29b883e3114",
+      "qrAsset": "assets/qr/collected-3dc3c29b883e3114.svg"
+    },
+    {
+      "storeId": "70d308ee26f63df0",
+      "name": "새우치킨덤 여천점",
+      "url": "https://daedongmap.com/?hero=70d308ee26f63df0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=70d308ee26f63df0",
+      "qrAsset": "assets/qr/collected-70d308ee26f63df0.svg"
+    },
+    {
+      "storeId": "5b491452a236e2eb",
+      "name": "타코잉닭 신기점",
+      "url": "https://daedongmap.com/?hero=5b491452a236e2eb",
+      "previewUrl": "https://preview.daedongmap.com/?hero=5b491452a236e2eb",
+      "qrAsset": "assets/qr/collected-5b491452a236e2eb.svg"
+    },
+    {
+      "storeId": "6ac53e2bad74de03",
+      "name": "조선만듀 신기점",
+      "url": "https://daedongmap.com/?hero=6ac53e2bad74de03",
+      "previewUrl": "https://preview.daedongmap.com/?hero=6ac53e2bad74de03",
+      "qrAsset": "assets/qr/collected-6ac53e2bad74de03.svg"
+    },
+    {
+      "storeId": "688fb0384476f98f",
+      "name": "돈도니밥도둑짜글이 여수신기점",
+      "url": "https://daedongmap.com/?hero=688fb0384476f98f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=688fb0384476f98f",
+      "qrAsset": "assets/qr/collected-688fb0384476f98f.svg"
+    },
+    {
+      "storeId": "56708b019ed7b079",
+      "name": "98도씨국밥-신기점",
+      "url": "https://daedongmap.com/?hero=56708b019ed7b079",
+      "previewUrl": "https://preview.daedongmap.com/?hero=56708b019ed7b079",
+      "qrAsset": "assets/qr/collected-56708b019ed7b079.svg"
+    },
+    {
+      "storeId": "1fa79cc57b456b11",
+      "name": "욕쟁이할매 불냉면 여천점",
+      "url": "https://daedongmap.com/?hero=1fa79cc57b456b11",
+      "previewUrl": "https://preview.daedongmap.com/?hero=1fa79cc57b456b11",
+      "qrAsset": "assets/qr/collected-1fa79cc57b456b11.svg"
+    },
+    {
+      "storeId": "79ac3e809c5896c1",
+      "name": "삼형제 김치찌개&김치찜",
+      "url": "https://daedongmap.com/?hero=79ac3e809c5896c1",
+      "previewUrl": "https://preview.daedongmap.com/?hero=79ac3e809c5896c1",
+      "qrAsset": "assets/qr/collected-79ac3e809c5896c1.svg"
+    },
+    {
+      "storeId": "d859df48b211d3f0",
+      "name": "조선매운국물갈비찜 여천점",
+      "url": "https://daedongmap.com/?hero=d859df48b211d3f0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=d859df48b211d3f0",
+      "qrAsset": "assets/qr/collected-d859df48b211d3f0.svg"
+    },
+    {
+      "storeId": "103ad6ec1ed79917",
+      "name": "웍쟁이 제육고수",
+      "url": "https://daedongmap.com/?hero=103ad6ec1ed79917",
+      "previewUrl": "https://preview.daedongmap.com/?hero=103ad6ec1ed79917",
+      "qrAsset": "assets/qr/collected-103ad6ec1ed79917.svg"
+    },
+    {
+      "storeId": "c44c2b3a9228b0d1",
+      "name": "1키로공룡닭강정 여수봉계점",
+      "url": "https://daedongmap.com/?hero=c44c2b3a9228b0d1",
+      "previewUrl": "https://preview.daedongmap.com/?hero=c44c2b3a9228b0d1",
+      "qrAsset": "assets/qr/collected-c44c2b3a9228b0d1.svg"
+    },
+    {
+      "storeId": "b42031690a2ce3c8",
+      "name": "올떡 여수봉계점",
+      "url": "https://daedongmap.com/?hero=b42031690a2ce3c8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b42031690a2ce3c8",
+      "qrAsset": "assets/qr/collected-b42031690a2ce3c8.svg"
+    },
+    {
+      "storeId": "264e0566dcc4f42d",
+      "name": "진탱 불곱창&불닭발 봉계점",
+      "url": "https://daedongmap.com/?hero=264e0566dcc4f42d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=264e0566dcc4f42d",
+      "qrAsset": "assets/qr/collected-264e0566dcc4f42d.svg"
+    },
+    {
+      "storeId": "b2b796461ee30ef2",
+      "name": "예원닭강정 여수1호점(문수동)",
+      "url": "https://daedongmap.com/?hero=b2b796461ee30ef2",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b2b796461ee30ef2",
+      "qrAsset": "assets/qr/collected-b2b796461ee30ef2.svg"
+    },
+    {
+      "storeId": "92f4faa988a87728",
+      "name": "타코이찌 타코야끼전문점 문수점",
+      "url": "https://daedongmap.com/?hero=92f4faa988a87728",
+      "previewUrl": "https://preview.daedongmap.com/?hero=92f4faa988a87728",
+      "qrAsset": "assets/qr/collected-92f4faa988a87728.svg"
+    },
+    {
+      "storeId": "c938cc2ee278ce23",
+      "name": "배떡 여수점",
+      "url": "https://daedongmap.com/?hero=c938cc2ee278ce23",
+      "previewUrl": "https://preview.daedongmap.com/?hero=c938cc2ee278ce23",
+      "qrAsset": "assets/qr/collected-c938cc2ee278ce23.svg"
+    },
+    {
+      "storeId": "ba52f83c8e4835af",
+      "name": "신신닭발&오돌뼈 여수점",
+      "url": "https://daedongmap.com/?hero=ba52f83c8e4835af",
+      "previewUrl": "https://preview.daedongmap.com/?hero=ba52f83c8e4835af",
+      "qrAsset": "assets/qr/collected-ba52f83c8e4835af.svg"
+    },
+    {
+      "storeId": "7504a8acdb530e62",
+      "name": "이가네 나주곰탕&설렁탕 여수점",
+      "url": "https://daedongmap.com/?hero=7504a8acdb530e62",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7504a8acdb530e62",
+      "qrAsset": "assets/qr/collected-7504a8acdb530e62.svg"
+    },
+    {
+      "storeId": "a7e9203f7de8d4f0",
+      "name": "1키로 공룡 닭강정 여수문수점",
+      "url": "https://daedongmap.com/?hero=a7e9203f7de8d4f0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a7e9203f7de8d4f0",
+      "qrAsset": "assets/qr/collected-a7e9203f7de8d4f0.svg"
+    },
+    {
+      "storeId": "dddc8ea5032e3c62",
+      "name": "카페 브라운",
+      "url": "https://daedongmap.com/?hero=dddc8ea5032e3c62",
+      "previewUrl": "https://preview.daedongmap.com/?hero=dddc8ea5032e3c62",
+      "qrAsset": "assets/qr/collected-dddc8ea5032e3c62.svg"
+    },
+    {
+      "storeId": "7e3eda9a864e1bb8",
+      "name": "두손떡볶이 여수점",
+      "url": "https://daedongmap.com/?hero=7e3eda9a864e1bb8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7e3eda9a864e1bb8",
+      "qrAsset": "assets/qr/collected-7e3eda9a864e1bb8.svg"
+    },
+    {
+      "storeId": "ad60c27c371518b7",
+      "name": "아임타코야끼&카페 여수점",
+      "url": "https://daedongmap.com/?hero=ad60c27c371518b7",
+      "previewUrl": "https://preview.daedongmap.com/?hero=ad60c27c371518b7",
+      "qrAsset": "assets/qr/collected-ad60c27c371518b7.svg"
+    },
+    {
+      "storeId": "02bed6e23cbbf188",
+      "name": "양아 치킨 여수점(문수동)",
+      "url": "https://daedongmap.com/?hero=02bed6e23cbbf188",
+      "previewUrl": "https://preview.daedongmap.com/?hero=02bed6e23cbbf188",
+      "qrAsset": "assets/qr/collected-02bed6e23cbbf188.svg"
+    },
+    {
+      "storeId": "c143aca89697f5aa",
+      "name": "후라이드 참 맛있는집 여수학동점",
+      "url": "https://daedongmap.com/?hero=c143aca89697f5aa",
+      "previewUrl": "https://preview.daedongmap.com/?hero=c143aca89697f5aa",
+      "qrAsset": "assets/qr/collected-c143aca89697f5aa.svg"
+    },
+    {
+      "storeId": "764ac01669937810",
+      "name": "골목포차&치킨",
+      "url": "https://daedongmap.com/?hero=764ac01669937810",
+      "previewUrl": "https://preview.daedongmap.com/?hero=764ac01669937810",
+      "qrAsset": "assets/qr/collected-764ac01669937810.svg"
+    },
+    {
+      "storeId": "4035a431dbd1fb3d",
+      "name": "순살나라 파닭왕자 여수학동점",
+      "url": "https://daedongmap.com/?hero=4035a431dbd1fb3d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=4035a431dbd1fb3d",
+      "qrAsset": "assets/qr/collected-4035a431dbd1fb3d.svg"
+    },
+    {
+      "storeId": "08e139da370bba2a",
+      "name": "모락로제떡볶이&닭강정 여수여문점",
+      "url": "https://daedongmap.com/?hero=08e139da370bba2a",
+      "previewUrl": "https://preview.daedongmap.com/?hero=08e139da370bba2a",
+      "qrAsset": "assets/qr/collected-08e139da370bba2a.svg"
+    },
+    {
+      "storeId": "90fed609e43aafb2",
+      "name": "이라이타코야끼&카페1리터 여문점",
+      "url": "https://daedongmap.com/?hero=90fed609e43aafb2",
+      "previewUrl": "https://preview.daedongmap.com/?hero=90fed609e43aafb2",
+      "qrAsset": "assets/qr/collected-90fed609e43aafb2.svg"
+    },
+    {
+      "storeId": "7bd092f25cc8dd8c",
+      "name": "호아 커피앤디저트",
+      "url": "https://daedongmap.com/?hero=7bd092f25cc8dd8c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7bd092f25cc8dd8c",
+      "qrAsset": "assets/qr/collected-7bd092f25cc8dd8c.svg"
+    },
+    {
+      "storeId": "e334f4707bd1046f",
+      "name": "떡순이 알찬만두 문수점",
+      "url": "https://daedongmap.com/?hero=e334f4707bd1046f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e334f4707bd1046f",
+      "qrAsset": "assets/qr/collected-e334f4707bd1046f.svg"
+    },
+    {
+      "storeId": "1921d1d5c7710872",
+      "name": "모두의 죽 교동점(영업시간06시~02시까지)",
+      "url": "https://daedongmap.com/?hero=1921d1d5c7710872",
+      "previewUrl": "https://preview.daedongmap.com/?hero=1921d1d5c7710872",
+      "qrAsset": "assets/qr/collected-1921d1d5c7710872.svg"
+    },
+    {
+      "storeId": "b1beeb518c437d02",
+      "name": "60일숙성 명품김치찜&김치찌개&쌈밥 교동점",
+      "url": "https://daedongmap.com/?hero=b1beeb518c437d02",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b1beeb518c437d02",
+      "qrAsset": "assets/qr/collected-b1beeb518c437d02.svg"
+    },
+    {
+      "storeId": "98779281080288d1",
+      "name": "제복이네 짜글이&제육쌈밥&두루치기 교동점",
+      "url": "https://daedongmap.com/?hero=98779281080288d1",
+      "previewUrl": "https://preview.daedongmap.com/?hero=98779281080288d1",
+      "qrAsset": "assets/qr/collected-98779281080288d1.svg"
+    },
+    {
+      "storeId": "acb4e4548de86f88",
+      "name": "밥수레",
+      "url": "https://daedongmap.com/?hero=acb4e4548de86f88",
+      "previewUrl": "https://preview.daedongmap.com/?hero=acb4e4548de86f88",
+      "qrAsset": "assets/qr/collected-acb4e4548de86f88.svg"
+    },
+    {
+      "storeId": "72f43b13ec8436f7",
+      "name": "속초냉면&직화제육 교동점",
+      "url": "https://daedongmap.com/?hero=72f43b13ec8436f7",
+      "previewUrl": "https://preview.daedongmap.com/?hero=72f43b13ec8436f7",
+      "qrAsset": "assets/qr/collected-72f43b13ec8436f7.svg"
+    },
+    {
+      "storeId": "9edba048ff8c3b2e",
+      "name": "이가네 나주곰탕&설렁탕 교동점",
+      "url": "https://daedongmap.com/?hero=9edba048ff8c3b2e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9edba048ff8c3b2e",
+      "qrAsset": "assets/qr/collected-9edba048ff8c3b2e.svg"
+    },
+    {
+      "storeId": "91806c266ead3108",
+      "name": "배불이 순대국&돼지국밥 교동점",
+      "url": "https://daedongmap.com/?hero=91806c266ead3108",
+      "previewUrl": "https://preview.daedongmap.com/?hero=91806c266ead3108",
+      "qrAsset": "assets/qr/collected-91806c266ead3108.svg"
+    },
+    {
+      "storeId": "b2a05ccb34bcbbbc",
+      "name": "참맛죽 여수점",
+      "url": "https://daedongmap.com/?hero=b2a05ccb34bcbbbc",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b2a05ccb34bcbbbc",
+      "qrAsset": "assets/qr/collected-b2a05ccb34bcbbbc.svg"
+    },
+    {
+      "storeId": "5caf409776519dd6",
+      "name": "고기듬뿍 국물두루치기 문수점",
+      "url": "https://daedongmap.com/?hero=5caf409776519dd6",
+      "previewUrl": "https://preview.daedongmap.com/?hero=5caf409776519dd6",
+      "qrAsset": "assets/qr/collected-5caf409776519dd6.svg"
+    },
+    {
+      "storeId": "77b1600313d1d6d4",
+      "name": "쭈신쭈왕 문수점",
+      "url": "https://daedongmap.com/?hero=77b1600313d1d6d4",
+      "previewUrl": "https://preview.daedongmap.com/?hero=77b1600313d1d6d4",
+      "qrAsset": "assets/qr/collected-77b1600313d1d6d4.svg"
+    },
+    {
+      "storeId": "0bcf02e9bd40b7d0",
+      "name": "뿅가야채곱창 문수점",
+      "url": "https://daedongmap.com/?hero=0bcf02e9bd40b7d0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0bcf02e9bd40b7d0",
+      "qrAsset": "assets/qr/collected-0bcf02e9bd40b7d0.svg"
+    },
+    {
+      "storeId": "73dca5f85fec0d8b",
+      "name": "죽생각 여수점",
+      "url": "https://daedongmap.com/?hero=73dca5f85fec0d8b",
+      "previewUrl": "https://preview.daedongmap.com/?hero=73dca5f85fec0d8b",
+      "qrAsset": "assets/qr/collected-73dca5f85fec0d8b.svg"
+    },
+    {
+      "storeId": "e540a0be28e38398",
+      "name": "강남아씨죽다이어트 여수문수점",
+      "url": "https://daedongmap.com/?hero=e540a0be28e38398",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e540a0be28e38398",
+      "qrAsset": "assets/qr/collected-e540a0be28e38398.svg"
+    },
+    {
+      "storeId": "215d025987786df2",
+      "name": "찹쌀품은 삼계탕 문수점",
+      "url": "https://daedongmap.com/?hero=215d025987786df2",
+      "previewUrl": "https://preview.daedongmap.com/?hero=215d025987786df2",
+      "qrAsset": "assets/qr/collected-215d025987786df2.svg"
+    },
+    {
+      "storeId": "3c62ab40bf66608e",
+      "name": "참숯이면돼지 문수점",
+      "url": "https://daedongmap.com/?hero=3c62ab40bf66608e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=3c62ab40bf66608e",
+      "qrAsset": "assets/qr/collected-3c62ab40bf66608e.svg"
+    },
+    {
+      "storeId": "a75505094208bb61",
+      "name": "1988응답하라추억의옛날도시락 고소동점",
+      "url": "https://daedongmap.com/?hero=a75505094208bb61",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a75505094208bb61",
+      "qrAsset": "assets/qr/collected-a75505094208bb61.svg"
+    },
+    {
+      "storeId": "8df8f77db6d9a205",
+      "name": "청담낙곱새 고소동점",
+      "url": "https://daedongmap.com/?hero=8df8f77db6d9a205",
+      "previewUrl": "https://preview.daedongmap.com/?hero=8df8f77db6d9a205",
+      "qrAsset": "assets/qr/collected-8df8f77db6d9a205.svg"
+    },
+    {
+      "storeId": "7d656b9342aabd94",
+      "name": "청담곱떡 고소동점",
+      "url": "https://daedongmap.com/?hero=7d656b9342aabd94",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7d656b9342aabd94",
+      "qrAsset": "assets/qr/collected-7d656b9342aabd94.svg"
+    },
+    {
+      "storeId": "fdbef839aba0d28b",
+      "name": "낭만해물범벅",
+      "url": "https://daedongmap.com/?hero=fdbef839aba0d28b",
+      "previewUrl": "https://preview.daedongmap.com/?hero=fdbef839aba0d28b",
+      "qrAsset": "assets/qr/collected-fdbef839aba0d28b.svg"
+    },
+    {
+      "storeId": "81f4a2d7ef343793",
+      "name": "낭만밤바다포차 중앙점",
+      "url": "https://daedongmap.com/?hero=81f4a2d7ef343793",
+      "previewUrl": "https://preview.daedongmap.com/?hero=81f4a2d7ef343793",
+      "qrAsset": "assets/qr/collected-81f4a2d7ef343793.svg"
+    },
+    {
+      "storeId": "1c7675beb53ef23b",
+      "name": "초량갈비쌈냉면-문수점",
+      "url": "https://daedongmap.com/?hero=1c7675beb53ef23b",
+      "previewUrl": "https://preview.daedongmap.com/?hero=1c7675beb53ef23b",
+      "qrAsset": "assets/qr/collected-1c7675beb53ef23b.svg"
+    },
+    {
+      "storeId": "2246bd401ad4d69f",
+      "name": "밥부르기니-여수문수점",
+      "url": "https://daedongmap.com/?hero=2246bd401ad4d69f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2246bd401ad4d69f",
+      "qrAsset": "assets/qr/collected-2246bd401ad4d69f.svg"
+    },
+    {
+      "storeId": "dabbebff4fca3c56",
+      "name": "대패가1900 문수점",
+      "url": "https://daedongmap.com/?hero=dabbebff4fca3c56",
+      "previewUrl": "https://preview.daedongmap.com/?hero=dabbebff4fca3c56",
+      "qrAsset": "assets/qr/collected-dabbebff4fca3c56.svg"
+    },
+    {
+      "storeId": "3a33f3bc732c6bae",
+      "name": "수육보쌈 25시포차(여서동)",
+      "url": "https://daedongmap.com/?hero=3a33f3bc732c6bae",
+      "previewUrl": "https://preview.daedongmap.com/?hero=3a33f3bc732c6bae",
+      "qrAsset": "assets/qr/collected-3a33f3bc732c6bae.svg"
+    },
+    {
+      "storeId": "f17f729605bb5945",
+      "name": "키로족발 여수점(여서동)",
+      "url": "https://daedongmap.com/?hero=f17f729605bb5945",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f17f729605bb5945",
+      "qrAsset": "assets/qr/collected-f17f729605bb5945.svg"
+    },
+    {
+      "storeId": "de00a38f4c4fe9d4",
+      "name": "불의제육 여서점",
+      "url": "https://daedongmap.com/?hero=de00a38f4c4fe9d4",
+      "previewUrl": "https://preview.daedongmap.com/?hero=de00a38f4c4fe9d4",
+      "qrAsset": "assets/qr/collected-de00a38f4c4fe9d4.svg"
+    },
+    {
+      "storeId": "eb1005c7067bc9d4",
+      "name": "족팔계왕족발",
+      "url": "https://daedongmap.com/?hero=eb1005c7067bc9d4",
+      "previewUrl": "https://preview.daedongmap.com/?hero=eb1005c7067bc9d4",
+      "qrAsset": "assets/qr/collected-eb1005c7067bc9d4.svg"
+    },
+    {
+      "storeId": "3f441930b8d18783",
+      "name": "1980밀면회관&냉면 문수점",
+      "url": "https://daedongmap.com/?hero=3f441930b8d18783",
+      "previewUrl": "https://preview.daedongmap.com/?hero=3f441930b8d18783",
+      "qrAsset": "assets/qr/collected-3f441930b8d18783.svg"
+    },
+    {
+      "storeId": "6df173b638236d49",
+      "name": "콩산소",
+      "url": "https://daedongmap.com/?hero=6df173b638236d49",
+      "previewUrl": "https://preview.daedongmap.com/?hero=6df173b638236d49",
+      "qrAsset": "assets/qr/collected-6df173b638236d49.svg"
+    },
+    {
+      "storeId": "e4cc22a96a3f921c",
+      "name": "김사장 삼겹 통김치찜 & 닭갈비 여수문수점",
+      "url": "https://daedongmap.com/?hero=e4cc22a96a3f921c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e4cc22a96a3f921c",
+      "qrAsset": "assets/qr/collected-e4cc22a96a3f921c.svg"
+    },
+    {
+      "storeId": "4b5980481e1d5f41",
+      "name": "박스터지는 두마리치킨 여수문수점",
+      "url": "https://daedongmap.com/?hero=4b5980481e1d5f41",
+      "previewUrl": "https://preview.daedongmap.com/?hero=4b5980481e1d5f41",
+      "qrAsset": "assets/qr/collected-4b5980481e1d5f41.svg"
+    },
+    {
+      "storeId": "a53ffe9bec36c74e",
+      "name": "그놈포차 여수문수점",
+      "url": "https://daedongmap.com/?hero=a53ffe9bec36c74e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a53ffe9bec36c74e",
+      "qrAsset": "assets/qr/collected-a53ffe9bec36c74e.svg"
+    },
+    {
+      "storeId": "412a676f1835c1c5",
+      "name": "뉴마왕핫도그&커피-여수점",
+      "url": "https://daedongmap.com/?hero=412a676f1835c1c5",
+      "previewUrl": "https://preview.daedongmap.com/?hero=412a676f1835c1c5",
+      "qrAsset": "assets/qr/collected-412a676f1835c1c5.svg"
+    },
+    {
+      "storeId": "0dc55aa0dd2dc7da",
+      "name": "뉴마왕볶음밥&타코야끼 여수점",
+      "url": "https://daedongmap.com/?hero=0dc55aa0dd2dc7da",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0dc55aa0dd2dc7da",
+      "qrAsset": "assets/qr/collected-0dc55aa0dd2dc7da.svg"
+    },
+    {
+      "storeId": "03809451afc7b09b",
+      "name": "소유 커피&디저트 웅천점",
+      "url": "https://daedongmap.com/?hero=03809451afc7b09b",
+      "previewUrl": "https://preview.daedongmap.com/?hero=03809451afc7b09b",
+      "qrAsset": "assets/qr/collected-03809451afc7b09b.svg"
+    },
+    {
+      "storeId": "18523a81a7ad3fc3",
+      "name": "빙수맛집눈꽃마을",
+      "url": "https://daedongmap.com/?hero=18523a81a7ad3fc3",
+      "previewUrl": "https://preview.daedongmap.com/?hero=18523a81a7ad3fc3",
+      "qrAsset": "assets/qr/collected-18523a81a7ad3fc3.svg"
+    },
+    {
+      "storeId": "1bb0bca213ae64b0",
+      "name": "삼첩분식 여수점",
+      "url": "https://daedongmap.com/?hero=1bb0bca213ae64b0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=1bb0bca213ae64b0",
+      "qrAsset": "assets/qr/collected-1bb0bca213ae64b0.svg"
+    },
+    {
+      "storeId": "22f9173b538573ef",
+      "name": "덮덮밥 여수점",
+      "url": "https://daedongmap.com/?hero=22f9173b538573ef",
+      "previewUrl": "https://preview.daedongmap.com/?hero=22f9173b538573ef",
+      "qrAsset": "assets/qr/collected-22f9173b538573ef.svg"
+    },
+    {
+      "storeId": "7199393ca5d3e88a",
+      "name": "1km휴게소분식-여수학동점",
+      "url": "https://daedongmap.com/?hero=7199393ca5d3e88a",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7199393ca5d3e88a",
+      "qrAsset": "assets/qr/collected-7199393ca5d3e88a.svg"
+    },
+    {
+      "storeId": "9313488437c85e0d",
+      "name": "떡깨비 학동점",
+      "url": "https://daedongmap.com/?hero=9313488437c85e0d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9313488437c85e0d",
+      "qrAsset": "assets/qr/collected-9313488437c85e0d.svg"
+    },
+    {
+      "storeId": "ad27b4934a868052",
+      "name": "홍곱도리탕-여수학동점",
+      "url": "https://daedongmap.com/?hero=ad27b4934a868052",
+      "previewUrl": "https://preview.daedongmap.com/?hero=ad27b4934a868052",
+      "qrAsset": "assets/qr/collected-ad27b4934a868052.svg"
+    },
+    {
+      "storeId": "6a8ac81c3d419701",
+      "name": "분식집 막내아들 여수점",
+      "url": "https://daedongmap.com/?hero=6a8ac81c3d419701",
+      "previewUrl": "https://preview.daedongmap.com/?hero=6a8ac81c3d419701",
+      "qrAsset": "assets/qr/collected-6a8ac81c3d419701.svg"
+    },
+    {
+      "storeId": "94821ec35996feff",
+      "name": "스콘의 정석",
+      "url": "https://daedongmap.com/?hero=94821ec35996feff",
+      "previewUrl": "https://preview.daedongmap.com/?hero=94821ec35996feff",
+      "qrAsset": "assets/qr/collected-94821ec35996feff.svg"
+    },
+    {
+      "storeId": "31ffaa41b54a57aa",
+      "name": "이라이타코야끼 봉산점",
+      "url": "https://daedongmap.com/?hero=31ffaa41b54a57aa",
+      "previewUrl": "https://preview.daedongmap.com/?hero=31ffaa41b54a57aa",
+      "qrAsset": "assets/qr/collected-31ffaa41b54a57aa.svg"
+    },
+    {
+      "storeId": "634cd6c2572df494",
+      "name": "도도닭발&오돌뼈 봉산점",
+      "url": "https://daedongmap.com/?hero=634cd6c2572df494",
+      "previewUrl": "https://preview.daedongmap.com/?hero=634cd6c2572df494",
+      "qrAsset": "assets/qr/collected-634cd6c2572df494.svg"
+    },
+    {
+      "storeId": "d19810627d63e95c",
+      "name": "허참봉 곰탕&갈비탕 봉산점",
+      "url": "https://daedongmap.com/?hero=d19810627d63e95c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=d19810627d63e95c",
+      "qrAsset": "assets/qr/collected-d19810627d63e95c.svg"
+    },
+    {
+      "storeId": "43780265104bccba",
+      "name": "핵떡 여수봉산점",
+      "url": "https://daedongmap.com/?hero=43780265104bccba",
+      "previewUrl": "https://preview.daedongmap.com/?hero=43780265104bccba",
+      "qrAsset": "assets/qr/collected-43780265104bccba.svg"
+    },
+    {
+      "storeId": "9abb1d4db21758ad",
+      "name": "카레상 봉산점",
+      "url": "https://daedongmap.com/?hero=9abb1d4db21758ad",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9abb1d4db21758ad",
+      "qrAsset": "assets/qr/collected-9abb1d4db21758ad.svg"
+    },
+    {
+      "storeId": "9b2419177903b1d8",
+      "name": "찜스틸러갈비찜 봉산점",
+      "url": "https://daedongmap.com/?hero=9b2419177903b1d8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9b2419177903b1d8",
+      "qrAsset": "assets/qr/collected-9b2419177903b1d8.svg"
+    },
+    {
+      "storeId": "dfa033316cfcecf7",
+      "name": "맵도리닭 봉산점",
+      "url": "https://daedongmap.com/?hero=dfa033316cfcecf7",
+      "previewUrl": "https://preview.daedongmap.com/?hero=dfa033316cfcecf7",
+      "qrAsset": "assets/qr/collected-dfa033316cfcecf7.svg"
+    },
+    {
+      "storeId": "9509311543276bbf",
+      "name": "삼첩분식 미평점",
+      "url": "https://daedongmap.com/?hero=9509311543276bbf",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9509311543276bbf",
+      "qrAsset": "assets/qr/collected-9509311543276bbf.svg"
+    },
+    {
+      "storeId": "27d2701c8071c98f",
+      "name": "맛있게 꿉다, 꿉삼겹 미평점",
+      "url": "https://daedongmap.com/?hero=27d2701c8071c98f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=27d2701c8071c98f",
+      "qrAsset": "assets/qr/collected-27d2701c8071c98f.svg"
+    },
+    {
+      "storeId": "45dc9cf61ba55263",
+      "name": "덮덮밥 미평점",
+      "url": "https://daedongmap.com/?hero=45dc9cf61ba55263",
+      "previewUrl": "https://preview.daedongmap.com/?hero=45dc9cf61ba55263",
+      "qrAsset": "assets/qr/collected-45dc9cf61ba55263.svg"
+    },
+    {
+      "storeId": "2a565cd367594b6d",
+      "name": "동동빙수",
+      "url": "https://daedongmap.com/?hero=2a565cd367594b6d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2a565cd367594b6d",
+      "qrAsset": "assets/qr/collected-2a565cd367594b6d.svg"
+    },
+    {
+      "storeId": "534095329094125f",
+      "name": "120겹파이-여수점",
+      "url": "https://daedongmap.com/?hero=534095329094125f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=534095329094125f",
+      "qrAsset": "assets/qr/collected-534095329094125f.svg"
+    },
+    {
+      "storeId": "c7a234ae0185bdee",
+      "name": "아차산매운떡볶이 여수점",
+      "url": "https://daedongmap.com/?hero=c7a234ae0185bdee",
+      "previewUrl": "https://preview.daedongmap.com/?hero=c7a234ae0185bdee",
+      "qrAsset": "assets/qr/collected-c7a234ae0185bdee.svg"
+    },
+    {
+      "storeId": "e1089d6ba40ec342",
+      "name": "명품1인도시락&시원냉면밀면(국동)",
+      "url": "https://daedongmap.com/?hero=e1089d6ba40ec342",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e1089d6ba40ec342",
+      "qrAsset": "assets/qr/collected-e1089d6ba40ec342.svg"
+    },
+    {
+      "storeId": "7f48f499a367b2b8",
+      "name": "직화구이 바싹 족발닭발보쌈",
+      "url": "https://daedongmap.com/?hero=7f48f499a367b2b8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7f48f499a367b2b8",
+      "qrAsset": "assets/qr/collected-7f48f499a367b2b8.svg"
+    },
+    {
+      "storeId": "3ee3568a9498fe1d",
+      "name": "모두의타코야키-여수여천점",
+      "url": "https://daedongmap.com/?hero=3ee3568a9498fe1d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=3ee3568a9498fe1d",
+      "qrAsset": "assets/qr/collected-3ee3568a9498fe1d.svg"
+    },
+    {
+      "storeId": "d0c01cd4ef9821c3",
+      "name": "여수 오리날개 튀김 여천점(신기동)",
+      "url": "https://daedongmap.com/?hero=d0c01cd4ef9821c3",
+      "previewUrl": "https://preview.daedongmap.com/?hero=d0c01cd4ef9821c3",
+      "qrAsset": "assets/qr/collected-d0c01cd4ef9821c3.svg"
+    },
+    {
+      "storeId": "b8c2dcaa9ef57af5",
+      "name": "행복분식 문수점",
+      "url": "https://daedongmap.com/?hero=b8c2dcaa9ef57af5",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b8c2dcaa9ef57af5",
+      "qrAsset": "assets/qr/collected-b8c2dcaa9ef57af5.svg"
+    },
+    {
+      "storeId": "7892e4e1eaff8b30",
+      "name": "덮밥슈퍼 여수하멜점",
+      "url": "https://daedongmap.com/?hero=7892e4e1eaff8b30",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7892e4e1eaff8b30",
+      "qrAsset": "assets/qr/collected-7892e4e1eaff8b30.svg"
+    },
+    {
+      "storeId": "7af7ffc2da561850",
+      "name": "하루빙수 여서점",
+      "url": "https://daedongmap.com/?hero=7af7ffc2da561850",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7af7ffc2da561850",
+      "qrAsset": "assets/qr/collected-7af7ffc2da561850.svg"
+    },
+    {
+      "storeId": "83f635e7ea7d737e",
+      "name": "파파핫도그 여서점",
+      "url": "https://daedongmap.com/?hero=83f635e7ea7d737e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=83f635e7ea7d737e",
+      "qrAsset": "assets/qr/collected-83f635e7ea7d737e.svg"
+    },
+    {
+      "storeId": "8483c83a97b2b2fa",
+      "name": "맛나지롱",
+      "url": "https://daedongmap.com/?hero=8483c83a97b2b2fa",
+      "previewUrl": "https://preview.daedongmap.com/?hero=8483c83a97b2b2fa",
+      "qrAsset": "assets/qr/collected-8483c83a97b2b2fa.svg"
+    },
+    {
+      "storeId": "57760e9d4b220bb1",
+      "name": "빙빙빙 냉면",
+      "url": "https://daedongmap.com/?hero=57760e9d4b220bb1",
+      "previewUrl": "https://preview.daedongmap.com/?hero=57760e9d4b220bb1",
+      "qrAsset": "assets/qr/collected-57760e9d4b220bb1.svg"
+    },
+    {
+      "storeId": "a0fa8cfd70fc7385",
+      "name": "광안천지식당&국밥-여천점",
+      "url": "https://daedongmap.com/?hero=a0fa8cfd70fc7385",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a0fa8cfd70fc7385",
+      "qrAsset": "assets/qr/collected-a0fa8cfd70fc7385.svg"
+    },
+    {
+      "storeId": "8f685b46362a968e",
+      "name": "다마수제타코야끼-여수점",
+      "url": "https://daedongmap.com/?hero=8f685b46362a968e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=8f685b46362a968e",
+      "qrAsset": "assets/qr/collected-8f685b46362a968e.svg"
+    },
+    {
+      "storeId": "d007db5ae652bcae",
+      "name": "빙수하우스",
+      "url": "https://daedongmap.com/?hero=d007db5ae652bcae",
+      "previewUrl": "https://preview.daedongmap.com/?hero=d007db5ae652bcae",
+      "qrAsset": "assets/qr/collected-d007db5ae652bcae.svg"
+    },
+    {
+      "storeId": "4b8ea4cbc481a3ee",
+      "name": "골목짬뽕 여서점",
+      "url": "https://daedongmap.com/?hero=4b8ea4cbc481a3ee",
+      "previewUrl": "https://preview.daedongmap.com/?hero=4b8ea4cbc481a3ee",
+      "qrAsset": "assets/qr/collected-4b8ea4cbc481a3ee.svg"
+    },
+    {
+      "storeId": "a4ba6805e73e7e76",
+      "name": "짜장왕 왕서방 여서점",
+      "url": "https://daedongmap.com/?hero=a4ba6805e73e7e76",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a4ba6805e73e7e76",
+      "qrAsset": "assets/qr/collected-a4ba6805e73e7e76.svg"
+    },
+    {
+      "storeId": "b26794c6856a2481",
+      "name": "뉴욕핫도그",
+      "url": "https://daedongmap.com/?hero=b26794c6856a2481",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b26794c6856a2481",
+      "qrAsset": "assets/qr/collected-b26794c6856a2481.svg"
+    },
+    {
+      "storeId": "cb6098165692c227",
+      "name": "김치찜은 못참지 미평점",
+      "url": "https://daedongmap.com/?hero=cb6098165692c227",
+      "previewUrl": "https://preview.daedongmap.com/?hero=cb6098165692c227",
+      "qrAsset": "assets/qr/collected-cb6098165692c227.svg"
+    },
+    {
+      "storeId": "b35253a84223d451",
+      "name": "부대볶음은 못참지 미평점",
+      "url": "https://daedongmap.com/?hero=b35253a84223d451",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b35253a84223d451",
+      "qrAsset": "assets/qr/collected-b35253a84223d451.svg"
+    },
+    {
+      "storeId": "ce5dccb3d6031316",
+      "name": "마선생 얼큰국밥",
+      "url": "https://daedongmap.com/?hero=ce5dccb3d6031316",
+      "previewUrl": "https://preview.daedongmap.com/?hero=ce5dccb3d6031316",
+      "qrAsset": "assets/qr/collected-ce5dccb3d6031316.svg"
+    },
+    {
+      "storeId": "1e7308d1e28fe49e",
+      "name": "갈비냉면 문수점",
+      "url": "https://daedongmap.com/?hero=1e7308d1e28fe49e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=1e7308d1e28fe49e",
+      "qrAsset": "assets/qr/collected-1e7308d1e28fe49e.svg"
+    },
+    {
+      "storeId": "452a2799075b6075",
+      "name": "진리국밥 여수신기점",
+      "url": "https://daedongmap.com/?hero=452a2799075b6075",
+      "previewUrl": "https://preview.daedongmap.com/?hero=452a2799075b6075",
+      "qrAsset": "assets/qr/collected-452a2799075b6075.svg"
+    },
+    {
+      "storeId": "20afb51f11c9dd23",
+      "name": "한돈 제육대감 신기점",
+      "url": "https://daedongmap.com/?hero=20afb51f11c9dd23",
+      "previewUrl": "https://preview.daedongmap.com/?hero=20afb51f11c9dd23",
+      "qrAsset": "assets/qr/collected-20afb51f11c9dd23.svg"
+    },
+    {
+      "storeId": "f58b53f029285459",
+      "name": "냉면의고수&덮밥-여수신기점",
+      "url": "https://daedongmap.com/?hero=f58b53f029285459",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f58b53f029285459",
+      "qrAsset": "assets/qr/collected-f58b53f029285459.svg"
+    },
+    {
+      "storeId": "0cea3bbab3bcb182",
+      "name": "찌개랑갈비랑 여수신기점",
+      "url": "https://daedongmap.com/?hero=0cea3bbab3bcb182",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0cea3bbab3bcb182",
+      "qrAsset": "assets/qr/collected-0cea3bbab3bcb182.svg"
+    },
+    {
+      "storeId": "d7a377dbf7158954",
+      "name": "육식사관학교 여수신기점",
+      "url": "https://daedongmap.com/?hero=d7a377dbf7158954",
+      "previewUrl": "https://preview.daedongmap.com/?hero=d7a377dbf7158954",
+      "qrAsset": "assets/qr/collected-d7a377dbf7158954.svg"
+    },
+    {
+      "storeId": "c34a81ea7ed1d578",
+      "name": "여수 김치찜 참 잘하는집 봉산점",
+      "url": "https://daedongmap.com/?hero=c34a81ea7ed1d578",
+      "previewUrl": "https://preview.daedongmap.com/?hero=c34a81ea7ed1d578",
+      "qrAsset": "assets/qr/collected-c34a81ea7ed1d578.svg"
+    },
+    {
+      "storeId": "f68c9f29515c518e",
+      "name": "곱도리辛 낙곱새 봉산점",
+      "url": "https://daedongmap.com/?hero=f68c9f29515c518e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f68c9f29515c518e",
+      "qrAsset": "assets/qr/collected-f68c9f29515c518e.svg"
+    },
+    {
+      "storeId": "919cbb39a2892b91",
+      "name": "제육의법칙-여수학동점",
+      "url": "https://daedongmap.com/?hero=919cbb39a2892b91",
+      "previewUrl": "https://preview.daedongmap.com/?hero=919cbb39a2892b91",
+      "qrAsset": "assets/qr/collected-919cbb39a2892b91.svg"
+    },
+    {
+      "storeId": "65c908d7b367de45",
+      "name": "육식사관학교 여서점",
+      "url": "https://daedongmap.com/?hero=65c908d7b367de45",
+      "previewUrl": "https://preview.daedongmap.com/?hero=65c908d7b367de45",
+      "qrAsset": "assets/qr/collected-65c908d7b367de45.svg"
+    },
+    {
+      "storeId": "2524c5a9954d4ba8",
+      "name": "찌개랑갈비랑 여서점",
+      "url": "https://daedongmap.com/?hero=2524c5a9954d4ba8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2524c5a9954d4ba8",
+      "qrAsset": "assets/qr/collected-2524c5a9954d4ba8.svg"
+    },
+    {
+      "storeId": "0cd249b7e9aa289f",
+      "name": "싸움의고수 여수문수점",
+      "url": "https://daedongmap.com/?hero=0cd249b7e9aa289f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0cd249b7e9aa289f",
+      "qrAsset": "assets/qr/collected-0cd249b7e9aa289f.svg"
+    },
+    {
+      "storeId": "9034fee6710be283",
+      "name": "국수와 김밥",
+      "url": "https://daedongmap.com/?hero=9034fee6710be283",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9034fee6710be283",
+      "qrAsset": "assets/qr/collected-9034fee6710be283.svg"
+    },
+    {
+      "storeId": "7c9ca9471d15acc4",
+      "name": "제육대가 여수미평점",
+      "url": "https://daedongmap.com/?hero=7c9ca9471d15acc4",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7c9ca9471d15acc4",
+      "qrAsset": "assets/qr/collected-7c9ca9471d15acc4.svg"
+    },
+    {
+      "storeId": "09de7c8235046632",
+      "name": "불족대가 미평점",
+      "url": "https://daedongmap.com/?hero=09de7c8235046632",
+      "previewUrl": "https://preview.daedongmap.com/?hero=09de7c8235046632",
+      "qrAsset": "assets/qr/collected-09de7c8235046632.svg"
+    },
+    {
+      "storeId": "d6275e9ab2dca40d",
+      "name": "볶음밥도사-여수문수점",
+      "url": "https://daedongmap.com/?hero=d6275e9ab2dca40d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=d6275e9ab2dca40d",
+      "qrAsset": "assets/qr/collected-d6275e9ab2dca40d.svg"
+    },
+    {
+      "storeId": "f00e9192694c7cd0",
+      "name": "오므라이스팝니다-여수문수점",
+      "url": "https://daedongmap.com/?hero=f00e9192694c7cd0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f00e9192694c7cd0",
+      "qrAsset": "assets/qr/collected-f00e9192694c7cd0.svg"
+    },
+    {
+      "storeId": "382dd89b36993ff8",
+      "name": "이동천 시원냉면 여서점",
+      "url": "https://daedongmap.com/?hero=382dd89b36993ff8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=382dd89b36993ff8",
+      "qrAsset": "assets/qr/collected-382dd89b36993ff8.svg"
+    },
+    {
+      "storeId": "67f5b4a369c1c6d9",
+      "name": "김치찌개참잘하는집 여서점",
+      "url": "https://daedongmap.com/?hero=67f5b4a369c1c6d9",
+      "previewUrl": "https://preview.daedongmap.com/?hero=67f5b4a369c1c6d9",
+      "qrAsset": "assets/qr/collected-67f5b4a369c1c6d9.svg"
+    },
+    {
+      "storeId": "94fd76dc2861933c",
+      "name": "스팸많이주는부대찌개 여서점",
+      "url": "https://daedongmap.com/?hero=94fd76dc2861933c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=94fd76dc2861933c",
+      "qrAsset": "assets/qr/collected-94fd76dc2861933c.svg"
+    },
+    {
+      "storeId": "360b32bc2f5a850c",
+      "name": "1키로 오리스타 여서점",
+      "url": "https://daedongmap.com/?hero=360b32bc2f5a850c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=360b32bc2f5a850c",
+      "qrAsset": "assets/qr/collected-360b32bc2f5a850c.svg"
+    },
+    {
+      "storeId": "a619d570c472a521",
+      "name": "미스터보쌈 여천점",
+      "url": "https://daedongmap.com/?hero=a619d570c472a521",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a619d570c472a521",
+      "qrAsset": "assets/qr/collected-a619d570c472a521.svg"
+    },
+    {
+      "storeId": "bb9aef1788a685c6",
+      "name": "청년뚝배기 덕충점",
+      "url": "https://daedongmap.com/?hero=bb9aef1788a685c6",
+      "previewUrl": "https://preview.daedongmap.com/?hero=bb9aef1788a685c6",
+      "qrAsset": "assets/qr/collected-bb9aef1788a685c6.svg"
+    },
+    {
+      "storeId": "f58bf8f877dcacd5",
+      "name": "정담오리바베큐 여수엑스포점",
+      "url": "https://daedongmap.com/?hero=f58bf8f877dcacd5",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f58bf8f877dcacd5",
+      "qrAsset": "assets/qr/collected-f58bf8f877dcacd5.svg"
+    },
+    {
+      "storeId": "035a33c7b2204db6",
+      "name": "진국 설렁탕&해장국",
+      "url": "https://daedongmap.com/?hero=035a33c7b2204db6",
+      "previewUrl": "https://preview.daedongmap.com/?hero=035a33c7b2204db6",
+      "qrAsset": "assets/qr/collected-035a33c7b2204db6.svg"
+    },
+    {
+      "storeId": "da46c2fa0f47744b",
+      "name": "호세야 오리바베큐 엑스포점",
+      "url": "https://daedongmap.com/?hero=da46c2fa0f47744b",
+      "previewUrl": "https://preview.daedongmap.com/?hero=da46c2fa0f47744b",
+      "qrAsset": "assets/qr/collected-da46c2fa0f47744b.svg"
+    },
+    {
+      "storeId": "2723324111f200b8",
+      "name": "설악칡냉면 여문점",
+      "url": "https://daedongmap.com/?hero=2723324111f200b8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2723324111f200b8",
+      "qrAsset": "assets/qr/collected-2723324111f200b8.svg"
+    },
+    {
+      "storeId": "54fd901a0b754ee1",
+      "name": "집으로 삼겹구이 문수점",
+      "url": "https://daedongmap.com/?hero=54fd901a0b754ee1",
+      "previewUrl": "https://preview.daedongmap.com/?hero=54fd901a0b754ee1",
+      "qrAsset": "assets/qr/collected-54fd901a0b754ee1.svg"
+    },
+    {
+      "storeId": "91cc31c37aa68d62",
+      "name": "고궁 갈비탕&갈비찜&육개장 문수점",
+      "url": "https://daedongmap.com/?hero=91cc31c37aa68d62",
+      "previewUrl": "https://preview.daedongmap.com/?hero=91cc31c37aa68d62",
+      "qrAsset": "assets/qr/collected-91cc31c37aa68d62.svg"
+    },
+    {
+      "storeId": "5768a9d8a72502ef",
+      "name": "조선제일 감자탕&뼈해장국 여서점",
+      "url": "https://daedongmap.com/?hero=5768a9d8a72502ef",
+      "previewUrl": "https://preview.daedongmap.com/?hero=5768a9d8a72502ef",
+      "qrAsset": "assets/qr/collected-5768a9d8a72502ef.svg"
+    },
+    {
+      "storeId": "313fa3678c72a47f",
+      "name": "뚜선장 쭈꾸미호 여수점",
+      "url": "https://daedongmap.com/?hero=313fa3678c72a47f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=313fa3678c72a47f",
+      "qrAsset": "assets/qr/collected-313fa3678c72a47f.svg"
+    },
+    {
+      "storeId": "20c4d1a484e47732",
+      "name": "돈쌈대패 문수점",
+      "url": "https://daedongmap.com/?hero=20c4d1a484e47732",
+      "previewUrl": "https://preview.daedongmap.com/?hero=20c4d1a484e47732",
+      "qrAsset": "assets/qr/collected-20c4d1a484e47732.svg"
+    },
+    {
+      "storeId": "9dfd510d9bacac38",
+      "name": "김선생불닭발 여수점",
+      "url": "https://daedongmap.com/?hero=9dfd510d9bacac38",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9dfd510d9bacac38",
+      "qrAsset": "assets/qr/collected-9dfd510d9bacac38.svg"
+    },
+    {
+      "storeId": "455d17a622d0d0e8",
+      "name": "김사부의곱창명가 여수점",
+      "url": "https://daedongmap.com/?hero=455d17a622d0d0e8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=455d17a622d0d0e8",
+      "qrAsset": "assets/qr/collected-455d17a622d0d0e8.svg"
+    },
+    {
+      "storeId": "28d026e568750a34",
+      "name": "낙곱새녀석들-여천점",
+      "url": "https://daedongmap.com/?hero=28d026e568750a34",
+      "previewUrl": "https://preview.daedongmap.com/?hero=28d026e568750a34",
+      "qrAsset": "assets/qr/collected-28d026e568750a34.svg"
+    },
+    {
+      "storeId": "e6339c85e31322fa",
+      "name": "울엄마 김치찜 갈비찜 중앙점",
+      "url": "https://daedongmap.com/?hero=e6339c85e31322fa",
+      "previewUrl": "https://preview.daedongmap.com/?hero=e6339c85e31322fa",
+      "qrAsset": "assets/qr/collected-e6339c85e31322fa.svg"
+    },
+    {
+      "storeId": "4168d1f57f8da02f",
+      "name": "종포수산 중앙점",
+      "url": "https://daedongmap.com/?hero=4168d1f57f8da02f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=4168d1f57f8da02f",
+      "qrAsset": "assets/qr/collected-4168d1f57f8da02f.svg"
+    },
+    {
+      "storeId": "fbf90dcb8bf85a24",
+      "name": "명품육회 오림동점",
+      "url": "https://daedongmap.com/?hero=fbf90dcb8bf85a24",
+      "previewUrl": "https://preview.daedongmap.com/?hero=fbf90dcb8bf85a24",
+      "qrAsset": "assets/qr/collected-fbf90dcb8bf85a24.svg"
+    },
+    {
+      "storeId": "f79b0a88e15c5788",
+      "name": "봉여사 아구&뽈찜",
+      "url": "https://daedongmap.com/?hero=f79b0a88e15c5788",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f79b0a88e15c5788",
+      "qrAsset": "assets/qr/collected-f79b0a88e15c5788.svg"
+    },
+    {
+      "storeId": "4bcdc1afae583cda",
+      "name": "김치찌개&김치찜의 왕 킹치찌개찜 여수시청점",
+      "url": "https://daedongmap.com/?hero=4bcdc1afae583cda",
+      "previewUrl": "https://preview.daedongmap.com/?hero=4bcdc1afae583cda",
+      "qrAsset": "assets/qr/collected-4bcdc1afae583cda.svg"
+    },
+    {
+      "storeId": "87e0f42f9eee4e06",
+      "name": "대패가1900-여수시청점",
+      "url": "https://daedongmap.com/?hero=87e0f42f9eee4e06",
+      "previewUrl": "https://preview.daedongmap.com/?hero=87e0f42f9eee4e06",
+      "qrAsset": "assets/qr/collected-87e0f42f9eee4e06.svg"
+    },
+    {
+      "storeId": "59aa4cad5c74ae8a",
+      "name": "초량갈비쌈냉면-여수시청점",
+      "url": "https://daedongmap.com/?hero=59aa4cad5c74ae8a",
+      "previewUrl": "https://preview.daedongmap.com/?hero=59aa4cad5c74ae8a",
+      "qrAsset": "assets/qr/collected-59aa4cad5c74ae8a.svg"
+    },
+    {
+      "storeId": "eed84e4bf80aa1fb",
+      "name": "내가바라던 비빔밥 여수학동점",
+      "url": "https://daedongmap.com/?hero=eed84e4bf80aa1fb",
+      "previewUrl": "https://preview.daedongmap.com/?hero=eed84e4bf80aa1fb",
+      "qrAsset": "assets/qr/collected-eed84e4bf80aa1fb.svg"
+    },
+    {
+      "storeId": "a3297f2e48bf9793",
+      "name": "마형제 족발보쌈 학동점",
+      "url": "https://daedongmap.com/?hero=a3297f2e48bf9793",
+      "previewUrl": "https://preview.daedongmap.com/?hero=a3297f2e48bf9793",
+      "qrAsset": "assets/qr/collected-a3297f2e48bf9793.svg"
+    },
+    {
+      "storeId": "8bc468a9baa551b4",
+      "name": "청년국밥 여수 2호점",
+      "url": "https://daedongmap.com/?hero=8bc468a9baa551b4",
+      "previewUrl": "https://preview.daedongmap.com/?hero=8bc468a9baa551b4",
+      "qrAsset": "assets/qr/collected-8bc468a9baa551b4.svg"
+    },
+    {
+      "storeId": "13632d0b9e0b3d6a",
+      "name": "고려녹두삼계탕&갈비찜",
+      "url": "https://daedongmap.com/?hero=13632d0b9e0b3d6a",
+      "previewUrl": "https://preview.daedongmap.com/?hero=13632d0b9e0b3d6a",
+      "qrAsset": "assets/qr/collected-13632d0b9e0b3d6a.svg"
+    },
+    {
+      "storeId": "90ce0c698aac336e",
+      "name": "울엄니식당",
+      "url": "https://daedongmap.com/?hero=90ce0c698aac336e",
+      "previewUrl": "https://preview.daedongmap.com/?hero=90ce0c698aac336e",
+      "qrAsset": "assets/qr/collected-90ce0c698aac336e.svg"
+    },
+    {
+      "storeId": "815bbef267cabaf1",
+      "name": "엄마김치찜&갈비찜",
+      "url": "https://daedongmap.com/?hero=815bbef267cabaf1",
+      "previewUrl": "https://preview.daedongmap.com/?hero=815bbef267cabaf1",
+      "qrAsset": "assets/qr/collected-815bbef267cabaf1.svg"
+    },
+    {
+      "storeId": "3ba70b92e3916c97",
+      "name": "울엄니도시락",
+      "url": "https://daedongmap.com/?hero=3ba70b92e3916c97",
+      "previewUrl": "https://preview.daedongmap.com/?hero=3ba70b92e3916c97",
+      "qrAsset": "assets/qr/collected-3ba70b92e3916c97.svg"
+    },
+    {
+      "storeId": "25893c565c1564bd",
+      "name": "진리국밥 여서점",
+      "url": "https://daedongmap.com/?hero=25893c565c1564bd",
+      "previewUrl": "https://preview.daedongmap.com/?hero=25893c565c1564bd",
+      "qrAsset": "assets/qr/collected-25893c565c1564bd.svg"
+    },
+    {
+      "storeId": "30a0e203e34900b0",
+      "name": "한돈제육대감 여서점",
+      "url": "https://daedongmap.com/?hero=30a0e203e34900b0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=30a0e203e34900b0",
+      "qrAsset": "assets/qr/collected-30a0e203e34900b0.svg"
+    },
+    {
+      "storeId": "cf4e002eb03dfa50",
+      "name": "주가네김치찌개&찜(여수본점)",
+      "url": "https://daedongmap.com/?hero=cf4e002eb03dfa50",
+      "previewUrl": "https://preview.daedongmap.com/?hero=cf4e002eb03dfa50",
+      "qrAsset": "assets/qr/collected-cf4e002eb03dfa50.svg"
+    },
+    {
+      "storeId": "338efafbb9ecf571",
+      "name": "귀한김치찜 여수웅천점",
+      "url": "https://daedongmap.com/?hero=338efafbb9ecf571",
+      "previewUrl": "https://preview.daedongmap.com/?hero=338efafbb9ecf571",
+      "qrAsset": "assets/qr/collected-338efafbb9ecf571.svg"
+    },
+    {
+      "storeId": "66e43657703c868c",
+      "name": "국밥관 여수웅천점",
+      "url": "https://daedongmap.com/?hero=66e43657703c868c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=66e43657703c868c",
+      "qrAsset": "assets/qr/collected-66e43657703c868c.svg"
+    },
+    {
+      "storeId": "18503945dc9c16c8",
+      "name": "홍紅 곱도리탕 봉강점",
+      "url": "https://daedongmap.com/?hero=18503945dc9c16c8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=18503945dc9c16c8",
+      "qrAsset": "assets/qr/collected-18503945dc9c16c8.svg"
+    },
+    {
+      "storeId": "2f939a1b44f5f7ec",
+      "name": "골목낙곱새 1977 봉강점",
+      "url": "https://daedongmap.com/?hero=2f939a1b44f5f7ec",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2f939a1b44f5f7ec",
+      "qrAsset": "assets/qr/collected-2f939a1b44f5f7ec.svg"
+    },
+    {
+      "storeId": "5fd5f9ecd8251999",
+      "name": "대박삼겹김치찜",
+      "url": "https://daedongmap.com/?hero=5fd5f9ecd8251999",
+      "previewUrl": "https://preview.daedongmap.com/?hero=5fd5f9ecd8251999",
+      "qrAsset": "assets/qr/collected-5fd5f9ecd8251999.svg"
+    },
+    {
+      "storeId": "dfc0af61fd54f776",
+      "name": "진교동 조선김치찜 여수신기점",
+      "url": "https://daedongmap.com/?hero=dfc0af61fd54f776",
+      "previewUrl": "https://preview.daedongmap.com/?hero=dfc0af61fd54f776",
+      "qrAsset": "assets/qr/collected-dfc0af61fd54f776.svg"
+    },
+    {
+      "storeId": "cbfaa6903a400586",
+      "name": "진교동찜닭-여수신기점",
+      "url": "https://daedongmap.com/?hero=cbfaa6903a400586",
+      "previewUrl": "https://preview.daedongmap.com/?hero=cbfaa6903a400586",
+      "qrAsset": "assets/qr/collected-cbfaa6903a400586.svg"
+    },
+    {
+      "storeId": "cf169d6bbf8830f8",
+      "name": "밥앤동 볶음밥&우동 충무점",
+      "url": "https://daedongmap.com/?hero=cf169d6bbf8830f8",
+      "previewUrl": "https://preview.daedongmap.com/?hero=cf169d6bbf8830f8",
+      "qrAsset": "assets/qr/collected-cf169d6bbf8830f8.svg"
+    },
+    {
+      "storeId": "49814996a90d2a3d",
+      "name": "슬기로운돼지생활(문수동)",
+      "url": "https://daedongmap.com/?hero=49814996a90d2a3d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=49814996a90d2a3d",
+      "qrAsset": "assets/qr/collected-49814996a90d2a3d.svg"
+    },
+    {
+      "storeId": "57bb58bd63f0de94",
+      "name": "구운돼지 문수점",
+      "url": "https://daedongmap.com/?hero=57bb58bd63f0de94",
+      "previewUrl": "https://preview.daedongmap.com/?hero=57bb58bd63f0de94",
+      "qrAsset": "assets/qr/collected-57bb58bd63f0de94.svg"
+    },
+    {
+      "storeId": "82fb6c389b7aced5",
+      "name": "종가찜 문수점",
+      "url": "https://daedongmap.com/?hero=82fb6c389b7aced5",
+      "previewUrl": "https://preview.daedongmap.com/?hero=82fb6c389b7aced5",
+      "qrAsset": "assets/qr/collected-82fb6c389b7aced5.svg"
+    },
+    {
+      "storeId": "21a676f860851a5a",
+      "name": "정말 맛있는 김치찌개 문수점",
+      "url": "https://daedongmap.com/?hero=21a676f860851a5a",
+      "previewUrl": "https://preview.daedongmap.com/?hero=21a676f860851a5a",
+      "qrAsset": "assets/qr/collected-21a676f860851a5a.svg"
+    },
+    {
+      "storeId": "7029c9ac9b7631cd",
+      "name": "미친불냉면 여수여천점",
+      "url": "https://daedongmap.com/?hero=7029c9ac9b7631cd",
+      "previewUrl": "https://preview.daedongmap.com/?hero=7029c9ac9b7631cd",
+      "qrAsset": "assets/qr/collected-7029c9ac9b7631cd.svg"
+    },
+    {
+      "storeId": "814e74bdb10935c0",
+      "name": "마선생얼큰국밥-여수여천점",
+      "url": "https://daedongmap.com/?hero=814e74bdb10935c0",
+      "previewUrl": "https://preview.daedongmap.com/?hero=814e74bdb10935c0",
+      "qrAsset": "assets/qr/collected-814e74bdb10935c0.svg"
+    },
+    {
+      "storeId": "adf19703b76d7747",
+      "name": "갈비냉면 여천점",
+      "url": "https://daedongmap.com/?hero=adf19703b76d7747",
+      "previewUrl": "https://preview.daedongmap.com/?hero=adf19703b76d7747",
+      "qrAsset": "assets/qr/collected-adf19703b76d7747.svg"
+    },
+    {
+      "storeId": "3b9ca4eda8819b5c",
+      "name": "제육대가 여천점",
+      "url": "https://daedongmap.com/?hero=3b9ca4eda8819b5c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=3b9ca4eda8819b5c",
+      "qrAsset": "assets/qr/collected-3b9ca4eda8819b5c.svg"
+    },
+    {
+      "storeId": "5bc1cef8362365a5",
+      "name": "매운맛 땡길때 밥장인 엑스포점",
+      "url": "https://daedongmap.com/?hero=5bc1cef8362365a5",
+      "previewUrl": "https://preview.daedongmap.com/?hero=5bc1cef8362365a5",
+      "qrAsset": "assets/qr/collected-5bc1cef8362365a5.svg"
+    },
+    {
+      "storeId": "187287f22433bfcf",
+      "name": "더 진한 소한마리탕&국밥 엑스포점",
+      "url": "https://daedongmap.com/?hero=187287f22433bfcf",
+      "previewUrl": "https://preview.daedongmap.com/?hero=187287f22433bfcf",
+      "qrAsset": "assets/qr/collected-187287f22433bfcf.svg"
+    },
+    {
+      "storeId": "195af7ec512059b2",
+      "name": "황제돈 공화점",
+      "url": "https://daedongmap.com/?hero=195af7ec512059b2",
+      "previewUrl": "https://preview.daedongmap.com/?hero=195af7ec512059b2",
+      "qrAsset": "assets/qr/collected-195af7ec512059b2.svg"
+    },
+    {
+      "storeId": "485ad1139b230bcf",
+      "name": "여수족발 엑스포점",
+      "url": "https://daedongmap.com/?hero=485ad1139b230bcf",
+      "previewUrl": "https://preview.daedongmap.com/?hero=485ad1139b230bcf",
+      "qrAsset": "assets/qr/collected-485ad1139b230bcf.svg"
+    },
+    {
+      "storeId": "0a3c4d3491aeeb61",
+      "name": "쑝쑝 도시락 관문점",
+      "url": "https://daedongmap.com/?hero=0a3c4d3491aeeb61",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0a3c4d3491aeeb61",
+      "qrAsset": "assets/qr/collected-0a3c4d3491aeeb61.svg"
+    },
+    {
+      "storeId": "fbed2b2b3e8a7852",
+      "name": "쑝쑝돈까스 여수관문점",
+      "url": "https://daedongmap.com/?hero=fbed2b2b3e8a7852",
+      "previewUrl": "https://preview.daedongmap.com/?hero=fbed2b2b3e8a7852",
+      "qrAsset": "assets/qr/collected-fbed2b2b3e8a7852.svg"
+    },
+    {
+      "storeId": "cd471d9be6620693",
+      "name": "이순신갈비탕 여서점",
+      "url": "https://daedongmap.com/?hero=cd471d9be6620693",
+      "previewUrl": "https://preview.daedongmap.com/?hero=cd471d9be6620693",
+      "qrAsset": "assets/qr/collected-cd471d9be6620693.svg"
+    },
+    {
+      "storeId": "b9501772f0f6b1fb",
+      "name": "청하대 영빈관 여서점",
+      "url": "https://daedongmap.com/?hero=b9501772f0f6b1fb",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b9501772f0f6b1fb",
+      "qrAsset": "assets/qr/collected-b9501772f0f6b1fb.svg"
+    },
+    {
+      "storeId": "53bfb32926455221",
+      "name": "한식전문 혼밥대장 공화동점",
+      "url": "https://daedongmap.com/?hero=53bfb32926455221",
+      "previewUrl": "https://preview.daedongmap.com/?hero=53bfb32926455221",
+      "qrAsset": "assets/qr/collected-53bfb32926455221.svg"
+    },
+    {
+      "storeId": "4391cea41df014b3",
+      "name": "한국전통춘천닭갈비 공화동점",
+      "url": "https://daedongmap.com/?hero=4391cea41df014b3",
+      "previewUrl": "https://preview.daedongmap.com/?hero=4391cea41df014b3",
+      "qrAsset": "assets/qr/collected-4391cea41df014b3.svg"
+    },
+    {
+      "storeId": "6772d4141d54e74d",
+      "name": "엄마미안 김치찜 공화동점",
+      "url": "https://daedongmap.com/?hero=6772d4141d54e74d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=6772d4141d54e74d",
+      "qrAsset": "assets/qr/collected-6772d4141d54e74d.svg"
+    },
+    {
+      "storeId": "09dc33ce2f8f08d3",
+      "name": "쭈꾸미닭 공화점",
+      "url": "https://daedongmap.com/?hero=09dc33ce2f8f08d3",
+      "previewUrl": "https://preview.daedongmap.com/?hero=09dc33ce2f8f08d3",
+      "qrAsset": "assets/qr/collected-09dc33ce2f8f08d3.svg"
+    },
+    {
+      "storeId": "217d38b37c2b4d5b",
+      "name": "통큰한방삼계탕 공화점",
+      "url": "https://daedongmap.com/?hero=217d38b37c2b4d5b",
+      "previewUrl": "https://preview.daedongmap.com/?hero=217d38b37c2b4d5b",
+      "qrAsset": "assets/qr/collected-217d38b37c2b4d5b.svg"
+    },
+    {
+      "storeId": "d1c9de66c95c1d46",
+      "name": "덮밥전문점 고기그릇 공화동점",
+      "url": "https://daedongmap.com/?hero=d1c9de66c95c1d46",
+      "previewUrl": "https://preview.daedongmap.com/?hero=d1c9de66c95c1d46",
+      "qrAsset": "assets/qr/collected-d1c9de66c95c1d46.svg"
+    },
+    {
+      "storeId": "161c7c3156aa5a34",
+      "name": "닭익는마을 공화점",
+      "url": "https://daedongmap.com/?hero=161c7c3156aa5a34",
+      "previewUrl": "https://preview.daedongmap.com/?hero=161c7c3156aa5a34",
+      "qrAsset": "assets/qr/collected-161c7c3156aa5a34.svg"
+    },
+    {
+      "storeId": "0533a8506dc3f667",
+      "name": "우쿠야 공화점",
+      "url": "https://daedongmap.com/?hero=0533a8506dc3f667",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0533a8506dc3f667",
+      "qrAsset": "assets/qr/collected-0533a8506dc3f667.svg"
+    },
+    {
+      "storeId": "0a4aaf8ee1103e4f",
+      "name": "여수족발(신기동)",
+      "url": "https://daedongmap.com/?hero=0a4aaf8ee1103e4f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=0a4aaf8ee1103e4f",
+      "qrAsset": "assets/qr/collected-0a4aaf8ee1103e4f.svg"
+    },
+    {
+      "storeId": "1ddcb01bb576c2e3",
+      "name": "바른보쌈1990 문수점",
+      "url": "https://daedongmap.com/?hero=1ddcb01bb576c2e3",
+      "previewUrl": "https://preview.daedongmap.com/?hero=1ddcb01bb576c2e3",
+      "qrAsset": "assets/qr/collected-1ddcb01bb576c2e3.svg"
+    },
+    {
+      "storeId": "06f2a251304b0a51",
+      "name": "한끼국밥&갈비찜 국동점",
+      "url": "https://daedongmap.com/?hero=06f2a251304b0a51",
+      "previewUrl": "https://preview.daedongmap.com/?hero=06f2a251304b0a51",
+      "qrAsset": "assets/qr/collected-06f2a251304b0a51.svg"
+    },
+    {
+      "storeId": "52aac4b5adef4d89",
+      "name": "을찌로국물떡볶이 국동점",
+      "url": "https://daedongmap.com/?hero=52aac4b5adef4d89",
+      "previewUrl": "https://preview.daedongmap.com/?hero=52aac4b5adef4d89",
+      "qrAsset": "assets/qr/collected-52aac4b5adef4d89.svg"
+    },
+    {
+      "storeId": "de1d344e8798f0dd",
+      "name": "인생냉면 국동점",
+      "url": "https://daedongmap.com/?hero=de1d344e8798f0dd",
+      "previewUrl": "https://preview.daedongmap.com/?hero=de1d344e8798f0dd",
+      "qrAsset": "assets/qr/collected-de1d344e8798f0dd.svg"
+    },
+    {
+      "storeId": "950ba1c64e791621",
+      "name": "돈도니밥도둑짜글이 국동점",
+      "url": "https://daedongmap.com/?hero=950ba1c64e791621",
+      "previewUrl": "https://preview.daedongmap.com/?hero=950ba1c64e791621",
+      "qrAsset": "assets/qr/collected-950ba1c64e791621.svg"
+    },
+    {
+      "storeId": "30fff2720e2ce0c9",
+      "name": "봉명가닭도리탕 국동점",
+      "url": "https://daedongmap.com/?hero=30fff2720e2ce0c9",
+      "previewUrl": "https://preview.daedongmap.com/?hero=30fff2720e2ce0c9",
+      "qrAsset": "assets/qr/collected-30fff2720e2ce0c9.svg"
+    },
+    {
+      "storeId": "c26995210f249627",
+      "name": "응큼떡볶이 여수점",
+      "url": "https://daedongmap.com/?hero=c26995210f249627",
+      "previewUrl": "https://preview.daedongmap.com/?hero=c26995210f249627",
+      "qrAsset": "assets/qr/collected-c26995210f249627.svg"
+    },
+    {
+      "storeId": "b22e961a2bed3729",
+      "name": "인생냉면 가야밀면 여서점",
+      "url": "https://daedongmap.com/?hero=b22e961a2bed3729",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b22e961a2bed3729",
+      "qrAsset": "assets/qr/collected-b22e961a2bed3729.svg"
+    },
+    {
+      "storeId": "31d479a979a700cf",
+      "name": "아성짬뽕 직화맛집 여서점",
+      "url": "https://daedongmap.com/?hero=31d479a979a700cf",
+      "previewUrl": "https://preview.daedongmap.com/?hero=31d479a979a700cf",
+      "qrAsset": "assets/qr/collected-31d479a979a700cf.svg"
+    },
+    {
+      "storeId": "852b5da8f5e3e3dc",
+      "name": "킹짬뽕 본점(여서동)",
+      "url": "https://daedongmap.com/?hero=852b5da8f5e3e3dc",
+      "previewUrl": "https://preview.daedongmap.com/?hero=852b5da8f5e3e3dc",
+      "qrAsset": "assets/qr/collected-852b5da8f5e3e3dc.svg"
+    },
+    {
+      "storeId": "cdf241640091abac",
+      "name": "쑝쑝돈까스 문수점",
+      "url": "https://daedongmap.com/?hero=cdf241640091abac",
+      "previewUrl": "https://preview.daedongmap.com/?hero=cdf241640091abac",
+      "qrAsset": "assets/qr/collected-cdf241640091abac.svg"
+    },
+    {
+      "storeId": "8d9e961a6ffd106f",
+      "name": "쑝쑝돈까스 여수미평점",
+      "url": "https://daedongmap.com/?hero=8d9e961a6ffd106f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=8d9e961a6ffd106f",
+      "qrAsset": "assets/qr/collected-8d9e961a6ffd106f.svg"
+    },
+    {
+      "storeId": "f57b6ed2e480011d",
+      "name": "막국수파는집 문수본점",
+      "url": "https://daedongmap.com/?hero=f57b6ed2e480011d",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f57b6ed2e480011d",
+      "qrAsset": "assets/qr/collected-f57b6ed2e480011d.svg"
+    },
+    {
+      "storeId": "55ef78aa24e1eac6",
+      "name": "Boss짬뽕 직화제육 미평점",
+      "url": "https://daedongmap.com/?hero=55ef78aa24e1eac6",
+      "previewUrl": "https://preview.daedongmap.com/?hero=55ef78aa24e1eac6",
+      "qrAsset": "assets/qr/collected-55ef78aa24e1eac6.svg"
+    },
+    {
+      "storeId": "4e83618703e993b5",
+      "name": "걸작떡볶이치킨 여수중앙점",
+      "url": "https://daedongmap.com/?hero=4e83618703e993b5",
+      "previewUrl": "https://preview.daedongmap.com/?hero=4e83618703e993b5",
+      "qrAsset": "assets/qr/collected-4e83618703e993b5.svg"
+    },
+    {
+      "storeId": "2909b3dc166a5ee7",
+      "name": "시우푸드 봉산점",
+      "url": "https://daedongmap.com/?hero=2909b3dc166a5ee7",
+      "previewUrl": "https://preview.daedongmap.com/?hero=2909b3dc166a5ee7",
+      "qrAsset": "assets/qr/collected-2909b3dc166a5ee7.svg"
+    },
+    {
+      "storeId": "401e4210d0416b54",
+      "name": "자연산오징어회 봉산점",
+      "url": "https://daedongmap.com/?hero=401e4210d0416b54",
+      "previewUrl": "https://preview.daedongmap.com/?hero=401e4210d0416b54",
+      "qrAsset": "assets/qr/collected-401e4210d0416b54.svg"
+    },
+    {
+      "storeId": "295dc97b6abaf2e2",
+      "name": "중국관",
+      "url": "https://daedongmap.com/?hero=295dc97b6abaf2e2",
+      "previewUrl": "https://preview.daedongmap.com/?hero=295dc97b6abaf2e2",
+      "qrAsset": "assets/qr/collected-295dc97b6abaf2e2.svg"
+    },
+    {
+      "storeId": "576a1f68d57eaf29",
+      "name": "몬스터탕수육 여수학동점",
+      "url": "https://daedongmap.com/?hero=576a1f68d57eaf29",
+      "previewUrl": "https://preview.daedongmap.com/?hero=576a1f68d57eaf29",
+      "qrAsset": "assets/qr/collected-576a1f68d57eaf29.svg"
+    },
+    {
+      "storeId": "9a494eae325155d9",
+      "name": "컬투치킨 여수점",
+      "url": "https://daedongmap.com/?hero=9a494eae325155d9",
+      "previewUrl": "https://preview.daedongmap.com/?hero=9a494eae325155d9",
+      "qrAsset": "assets/qr/collected-9a494eae325155d9.svg"
+    },
+    {
+      "storeId": "f7f78ea24637cd25",
+      "name": "오동도 회포차 수정점",
+      "url": "https://daedongmap.com/?hero=f7f78ea24637cd25",
+      "previewUrl": "https://preview.daedongmap.com/?hero=f7f78ea24637cd25",
+      "qrAsset": "assets/qr/collected-f7f78ea24637cd25.svg"
+    },
+    {
+      "storeId": "254d63ce598f1e6c",
+      "name": "냉삼집 수정점",
+      "url": "https://daedongmap.com/?hero=254d63ce598f1e6c",
+      "previewUrl": "https://preview.daedongmap.com/?hero=254d63ce598f1e6c",
+      "qrAsset": "assets/qr/collected-254d63ce598f1e6c.svg"
+    },
+    {
+      "storeId": "b16e0ede6fecba9f",
+      "name": "과일의숲 돌산점",
+      "url": "https://daedongmap.com/?hero=b16e0ede6fecba9f",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b16e0ede6fecba9f",
+      "qrAsset": "assets/qr/collected-b16e0ede6fecba9f.svg"
+    },
+    {
+      "storeId": "66f78262c4f9aa55",
+      "name": "코리엔탈깻잎두마리치킨 선원점",
+      "url": "https://daedongmap.com/?hero=66f78262c4f9aa55",
+      "previewUrl": "https://preview.daedongmap.com/?hero=66f78262c4f9aa55",
+      "qrAsset": "assets/qr/collected-66f78262c4f9aa55.svg"
+    },
+    {
+      "storeId": "b88f6b8e8fd14ad3",
+      "name": "청담피자 여수죽림점",
+      "url": "https://daedongmap.com/?hero=b88f6b8e8fd14ad3",
+      "previewUrl": "https://preview.daedongmap.com/?hero=b88f6b8e8fd14ad3",
+      "qrAsset": "assets/qr/collected-b88f6b8e8fd14ad3.svg"
     }
   ]
 }
