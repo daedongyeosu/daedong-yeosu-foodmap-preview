@@ -30,7 +30,7 @@ for(const page of pages){
   const bytes=fs.readFileSync(path.join(root,asset.path));
   if(crypto.createHash('sha256').update(bytes).digest('hex')!==asset.sha256)throw Error('Asset checksum mismatch: '+key);
  }
- const gallery=page.media.map((m,i)=>{const src='/'+manifest[page.slug+'/'+m.file].path;return m.type==='video'?`<video controls playsinline preload="none" aria-label="${esc(page.title)} 영상"><source src="${src}" type="video/mp4">영상을 재생할 수 없습니다.</video>`:`<a href="${src}" aria-label="${esc(page.title)} 사진 ${i+1} 크게 보기"><img src="${src}" alt="${esc(page.title)} 사진 ${i+1}" loading="lazy" decoding="async"></a>`;}).join('\n');
+ const gallery=page.media.map((m,i)=>{const src='/'+manifest[page.slug+'/'+m.file].path;return m.type==='video'?`<video controls playsinline preload="none" aria-label="${esc(page.title)} 영상"><source src="${src}" type="video/mp4">영상을 재생할 수 없습니다.</video><a class="video-download" href="${src}" download>영상 파일 내려받기</a>`:`<a href="${src}" aria-label="${esc(page.title)} 사진 ${i+1} 크게 보기"><img src="${src}" alt="${esc(page.title)} 사진 ${i+1}" loading="lazy" decoding="async"></a>`;}).join('\n');
  const sections=page.sections.map(s=>`<section><h2>${esc(s.heading)}</h2>${s.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}</section>`).join('\n');
  const html=`<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(page.title)} | 대동여수음식지도</title><meta name="description" content="${esc(page.sections[0].paragraphs[0])}"><link rel="stylesheet" href="../page.css?v=1"><script src="../page.js?v=1" defer></script></head>

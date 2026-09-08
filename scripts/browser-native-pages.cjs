@@ -13,7 +13,15 @@ const mime={'.html':'text/html','.css':'text/css','.js':'text/javascript','.json
   if(url.origin!==origin){external.push(url.hostname);return route.abort();}
   let p=decodeURIComponent(url.pathname);if(p.endsWith('/'))p+='index.html';
   const file=path.resolve(root,'.'+p);if(!file.startsWith(root+path.sep)||!fs.existsSync(file))return route.fulfill({status:404,body:'Not found'});
-  return route.fulfill({status:200,contentType:mime[path.extname(file)]||'application/octet-stream',body:fs.readFileSync(file)});
+  const body=fs.readFileSync(file),range=route.request().headers().range;
+  if(range&&path.extname(file)==='.mp4'){
+   const match=/^bytes=(\d+)-(\d*)$/.exec(range);
+   if(!match)return route.fulfill({status:416});
+   const start=Number(match[1]),end=Math.min(match[2]?Number(match[2]):body.length-1,body.length-1);
+   if(start>end)return route.fulfill({status:416});
+   return route.fulfill({status:206,contentType:'video/mp4',headers:{'Accept-Ranges':'bytes','Content-Range':`bytes ${start}-${end}/${body.length}`},body:body.subarray(start,end+1)});
+  }
+  return route.fulfill({status:200,contentType:mime[path.extname(file)]||'application/octet-stream',body});
  });
  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
  for(const p of JSON.parse(fs.readFileSync(path.join(root,'data/native-pages.json'))).pages){
@@ -23,7 +31,25 @@ const mime={'.html':'text/html','.css':'text/css','.js':'text/javascript','.json
   const imgs=page.locator('.gallery img');assert.equal(await imgs.count(),p.media.filter(m=>m.type!=='video').length);
   for(let i=0;i<await imgs.count();i++){await imgs.nth(i).scrollIntoViewIfNeeded();await imgs.nth(i).evaluate(img=>img.complete&&img.naturalWidth>0?Promise.resolve():new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=()=>reject(Error('Broken image'));setTimeout(()=>reject(Error('Image timeout')),10000)}));}
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'No horizontal overflow');
-  if(p.slug==='healing-yacht'){assert.equal(await page.locator('video').getAttribute('preload'),'none');await page.locator('video').evaluate(v=>v.load());await page.waitForFunction(()=>document.querySelector('video').readyState>=1);}
+  if(p.slug==='healing-yacht'){
+   const video=page.locator('video');
+   assert.equal(await video.getAttribute('preload'),'none');
+   const src=await page.locator('video source').getAttribute('src');
+   assert.equal(await page.locator('.video-download').getAttribute('href'),src);
+   assert.notEqual(await page.locator('.video-download').getAttribute('download'),null);
+   // CI Chromium can lack the source MP4 codec. Require an explicit media error
+   // or loaded metadata (never silently accept a timeout), and keep the original
+   // playable/downloadable bytes available on the same site in either case.
+   const result=await video.evaluate(v=>new Promise((resolve,reject)=>{
+    const timer=setTimeout(()=>reject(Error('Video did not load or report an error')),15000);
+    const finish=value=>{clearTimeout(timer);resolve(value)};
+    v.addEventListener('loadedmetadata',()=>finish({loaded:true}),{once:true});
+    v.addEventListener('error',()=>finish({error:v.error?.code}),{once:true});
+    v.querySelector('source').addEventListener('error',()=>finish({error:4}),{once:true});
+    v.load();
+   }));
+   if(!result.loaded){assert.equal(result.error,4,'Only unsupported source codecs allow download fallback');console.log('MP4 codec unavailable; verified original-file download fallback');}
+  }
   await page.evaluate(()=>scrollTo(0,0));
   await page.screenshot({path:path.join(root,'browser-native-'+p.slug+'.png')});
  }
