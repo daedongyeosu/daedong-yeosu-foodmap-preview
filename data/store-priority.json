@@ -15,7 +15,6 @@
     "9a494eae325155d9",
     "9ee73ce6168105ec",
     "8f4cfdc693976989",
-    "0987413e7ca12e2a",
     "2fb0f76b3d55052b",
     "30d2edbcabcca6ec",
     "cfde2617224f33a0",
@@ -155,7 +154,8 @@
   "deprioritizedStoreIds": [
     "361f855efc21c1c2",
     "b8267998349b16e1",
-    "14feb7cbd67ef7e2"
+    "14feb7cbd67ef7e2",
+    "0987413e7ca12e2a"
   ],
   "categoryPriorityOverrides": {
     "햄버거/샌드위치/토스트/핫도그": {
@@ -179,9 +179,9 @@
   "stats": {
     "operatingExcelRows": 246,
     "matchedExcelRows": 149,
-    "managedCanonicalStores": 147,
+    "managedCanonicalStores": 146,
     "sharedManagedCanonicalStores": 0,
-    "deprioritizedCanonicalStores": 3,
+    "deprioritizedCanonicalStores": 4,
     "needsReviewRows": 14,
     "unmatchedRows": 83
   }

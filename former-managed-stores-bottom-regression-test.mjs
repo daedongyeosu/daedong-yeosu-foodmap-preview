@@ -15,16 +15,17 @@ const priority = JSON.parse(prioritySource);
 const formerStores = [
   ['361f855efc21c1c2', '가마치통닭 여서점'],
   ['b8267998349b16e1', '노랑통닭 여서문수점'],
-  ['14feb7cbd67ef7e2', '1인피자 미니8 여수점']
+  ['14feb7cbd67ef7e2', '1인피자 미니8 여수점'],
+  ['0987413e7ca12e2a', '백년족발']
 ];
 const formerIds = formerStores.map(([id]) => id);
 
-assert.deepEqual(priority.deprioritizedStoreIds, formerIds, '가맹 종료 세 가게를 정확히 후순위 목록에 둬야 합니다.');
+assert.deepEqual(priority.deprioritizedStoreIds, formerIds, '가맹 종료 네 가게를 정확히 후순위 목록에 둬야 합니다.');
 for (const [id, name] of formerStores) {
   assert.ok(!priority.managedStoreIds.includes(id), `${name}은 가맹점 우선목록에서 빠져야 합니다.`);
 }
-assert.equal(priority.stats.managedCanonicalStores, 147, '가맹점 수는 두 곳 제외 결과와 일치해야 합니다.');
-assert.equal(priority.stats.deprioritizedCanonicalStores, 3, '후순위 가게 수를 명시해야 합니다.');
+assert.equal(priority.stats.managedCanonicalStores, 146, '백년족발 우선권 해제 후 가맹점 수가 일치해야 합니다.');
+assert.equal(priority.stats.deprioritizedCanonicalStores, 4, '후순위 가게 수를 명시해야 합니다.');
 
 function extractFunction(source, name) {
   const start = source.indexOf(`function ${name}(`);
