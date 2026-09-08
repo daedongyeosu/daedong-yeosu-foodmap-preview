@@ -38,6 +38,9 @@ await context.addInitScript(() => {
 });
 const json = value => ({status: 200, contentType: 'application/json', body: JSON.stringify(value)});
 await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
+// Keep this menu fixture independent of deployed administrator data/network timing.
+await context.route('**/api/native/public/catalog', route => route.fulfill(json({items: [], cursor: null})));
+await context.route('**/api/native/public/store/*', route => route.fulfill({status: 404, contentType: 'application/json', body: '{}'}));
 await context.route('**/api/catalog', route => route.fulfill(json([store])));
 await context.route('**/api/services', route => route.fulfill(json({programs: [], stores: {}})));
 await context.route(`**/api/store/${storeId}`, route => route.fulfill(json(store)));
@@ -47,7 +50,7 @@ page.on('pageerror', error => report.errors.push(error.message));
 function check(value, label) { assert.ok(value, label); report.checks.push(label); }
 try {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
-  await page.waitForFunction(() => typeof openStore === 'function' && typeof fxStoreById === 'function');
+  await page.waitForFunction(id => typeof openStore === 'function' && typeof fxStoreById === 'function' && Boolean(fxStoreById(id)), storeId);
   await page.evaluate(id => openStore(fxStoreById(id)), storeId);
   await page.locator(`[data-store-menu-preview="${storeId}"]`).click();
   await page.locator('.store-menu-preview').waitFor();
