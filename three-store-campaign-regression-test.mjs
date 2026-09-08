@@ -44,7 +44,9 @@ assert.equal(hash(data.campaigns.cfde2617224f33a0), '917ab83086f1299c22573a67254
 assert.equal(hash(data.virtualStores), production
   ? '24a766e6d06eabe45598fedf09e2b1c426296683caff19d877f2acc548ebab87'
   : '88eb6fcedc47abfe3601ff841934f2a4d2e60efd0826e805de20614949dfd254');
-assert.equal(hash(adKeys.map(key => targets[key])), '21ac623690772af84a5052fe04660132868f5c85290895a1710e486ff69c7615', 'The three original advertisements must not change');
+// The approved migration changes destinations only; all original ad content remains pinned.
+const legacyAdUrls = {'18':'https://bit.ly/여수시소상공인연합회공지','19':'https://bit.ly/여수힐링요트','20':'https://app.notion.com/p/3a6da158dd2a81dca351fa710f81d705'};
+assert.equal(hash(adKeys.map(key => ({...targets[key], notionUrl:legacyAdUrls[key]}))), '21ac623690772af84a5052fe04660132868f5c85290895a1710e486ff69c7615', 'The three original advertisements must not change except for their approved native destinations');
 
 const start = source.indexOf('function rc6CampaignHeroEntries(){');
 const end = source.indexOf('\nfunction rc6HeroEntries()', start);
