@@ -37,6 +37,7 @@ const kongsansoFamilyStoreIds = [
 const manifest = JSON.parse(readFileSync('data/store-campaign-links.json', 'utf8'));
 // Keep the previously approved prefix exact; audit the explicitly added batch separately.
 expected.push(...JSON.parse(readFileSync('data/collected-campaign-stores.json', 'utf8')).map(({storeId,name})=>[storeId,name]));
+expected.push(...JSON.parse(readFileSync('data/verified-campaign-stores.json', 'utf8')).map(({storeId,name})=>[storeId,name]));
 const heroData = JSON.parse(readFileSync('data/hero-campaigns.json', 'utf8'));
 const rc6 = readFileSync('rc6-fixes.js', 'utf8');
 const loader = readFileSync('final-experience.js', 'utf8');

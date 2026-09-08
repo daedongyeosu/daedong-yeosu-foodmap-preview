@@ -5298,6 +5298,1958 @@
         }
       ],
       "layout": "food14-plus3"
+    },
+    "884d23981fd2429a": {
+      "storeId": "884d23981fd2429a",
+      "slug": "verified-884d23981fd2429a",
+      "label": "네네치킨 둔덕미평점 전용 대동여수음식지도",
+      "title": "네네치킨 둔덕미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "884d23981fd2429a",
+          "image": "assets/notion-recovery-180/884d23981fd2429a/01.png",
+          "title": "네네치킨 둔덕미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "49470f61773e41e2": {
+      "storeId": "49470f61773e41e2",
+      "slug": "verified-49470f61773e41e2",
+      "label": "유림식당 전용 대동여수음식지도",
+      "title": "유림식당",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "49470f61773e41e2",
+          "image": "assets/notion-recovery-180/49470f61773e41e2/01.png",
+          "title": "유림식당",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "dc638b23f8cf3c5b": {
+      "storeId": "dc638b23f8cf3c5b",
+      "slug": "verified-dc638b23f8cf3c5b",
+      "label": "도미노피자 문수점 전용 대동여수음식지도",
+      "title": "도미노피자 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "assets/notion-recovery-180/dc638b23f8cf3c5b/01.png",
+          "title": "도미노피자 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "4e877826c5a4b649": {
+      "storeId": "4e877826c5a4b649",
+      "slug": "verified-4e877826c5a4b649",
+      "label": "낙지천국 문수점 전용 대동여수음식지도",
+      "title": "낙지천국 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "4e877826c5a4b649",
+          "image": "assets/notion-store-photos/4e877826c5a4b6/01.webp",
+          "title": "낙지천국 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "0d3062d5a5b94697": {
+      "storeId": "0d3062d5a5b94697",
+      "slug": "verified-0d3062d5a5b94697",
+      "label": "다기야치킨 여문점 전용 대동여수음식지도",
+      "title": "다기야치킨 여문점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "0d3062d5a5b94697",
+          "image": "assets/notion-recovery-180/0d3062d5a5b94697/01.png",
+          "title": "다기야치킨 여문점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "4ec7dd8e93675267": {
+      "storeId": "4ec7dd8e93675267",
+      "slug": "verified-4ec7dd8e93675267",
+      "label": "이모야분식 전용 대동여수음식지도",
+      "title": "이모야분식",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "4ec7dd8e93675267",
+          "image": "assets/notion-recovery-180/4ec7dd8e93675267/01.png",
+          "title": "이모야분식",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "a037743d0ee273e2": {
+      "storeId": "a037743d0ee273e2",
+      "slug": "verified-a037743d0ee273e2",
+      "label": "정성집밥 전용 대동여수음식지도",
+      "title": "정성집밥",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "a037743d0ee273e2",
+          "image": "assets/store-photos/436fd5ecbccce8/01.webp",
+          "title": "정성집밥",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "13c8e99cd1a7d7a1": {
+      "storeId": "13c8e99cd1a7d7a1",
+      "slug": "verified-13c8e99cd1a7d7a1",
+      "label": "하나옛날통닭 문수점 전용 대동여수음식지도",
+      "title": "하나옛날통닭 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "13c8e99cd1a7d7a1",
+          "image": "assets/notion-recovery-180/13c8e99cd1a7d7a1/01.jpg",
+          "title": "하나옛날통닭 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "4597954f924a4979": {
+      "storeId": "4597954f924a4979",
+      "slug": "verified-4597954f924a4979",
+      "label": "황금마차 전용 대동여수음식지도",
+      "title": "황금마차",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "4597954f924a4979",
+          "image": "assets/notion-recovery-180/4597954f924a4979/01.png",
+          "title": "황금마차",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "d409f6d9118b7bad": {
+      "storeId": "d409f6d9118b7bad",
+      "slug": "verified-d409f6d9118b7bad",
+      "label": "황금손 반찬 전용 대동여수음식지도",
+      "title": "황금손 반찬",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "d409f6d9118b7bad",
+          "image": "assets/store-photos/5acaf4e7afacac/01.webp",
+          "title": "황금손 반찬",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "2cddfb9ee60f0d7b": {
+      "storeId": "2cddfb9ee60f0d7b",
+      "slug": "verified-2cddfb9ee60f0d7b",
+      "label": "컴포즈커피 여수문수광장점 전용 대동여수음식지도",
+      "title": "컴포즈커피 여수문수광장점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "2cddfb9ee60f0d7b",
+          "image": "assets/notion-recovery-180/2cddfb9ee60f0d7b/01.jpg",
+          "title": "컴포즈커피 여수문수광장점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "f6d0e57091aa21ab": {
+      "storeId": "f6d0e57091aa21ab",
+      "slug": "verified-f6d0e57091aa21ab",
+      "label": "굽네치킨&피자 문수점 전용 대동여수음식지도",
+      "title": "굽네치킨&피자 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "f6d0e57091aa21ab",
+          "image": "assets/notion-recovery-180/f6d0e57091aa21ab/01.jpg",
+          "title": "굽네치킨&피자 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "39f3c8acab504b00": {
+      "storeId": "39f3c8acab504b00",
+      "slug": "verified-39f3c8acab504b00",
+      "label": "60계치킨 여수여서문수점 전용 대동여수음식지도",
+      "title": "60계치킨 여수여서문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "39f3c8acab504b00",
+          "image": "assets/store-photos/af8b15c5b69a94/01.webp",
+          "title": "60계치킨 여수여서문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "c05575dae26cfbae": {
+      "storeId": "c05575dae26cfbae",
+      "slug": "verified-c05575dae26cfbae",
+      "label": "또래김밥 문수점 전용 대동여수음식지도",
+      "title": "또래김밥 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c05575dae26cfbae",
+          "image": "assets/store-photos/0654f4094ff440/01.webp",
+          "title": "또래김밥 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "2bd8ea8779f87995": {
+      "storeId": "2bd8ea8779f87995",
+      "slug": "verified-2bd8ea8779f87995",
+      "label": "리얼펍살얼음맥주 여수문수점 전용 대동여수음식지도",
+      "title": "리얼펍살얼음맥주 여수문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "2bd8ea8779f87995",
+          "image": "assets/notion-recovery-180/2bd8ea8779f87995/01.png",
+          "title": "리얼펍살얼음맥주 여수문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "fde6adecf898f77c": {
+      "storeId": "fde6adecf898f77c",
+      "slug": "verified-fde6adecf898f77c",
+      "label": "바삭바삭한 맛전 전용 대동여수음식지도",
+      "title": "바삭바삭한 맛전",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "fde6adecf898f77c",
+          "image": "assets/campaigns/verified-stores/fde6adecf898f77c.svg",
+          "title": "바삭바삭한 맛전",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "86c20cb35e0fc19b": {
+      "storeId": "86c20cb35e0fc19b",
+      "slug": "verified-86c20cb35e0fc19b",
+      "label": "밥풀릭스 여수문수점 전용 대동여수음식지도",
+      "title": "밥풀릭스 여수문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "86c20cb35e0fc19b",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/e658049b-a4ba-4020-98c2-c88bb401d17c.jpg",
+          "title": "밥풀릭스 여수문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "a7d684d2ce59e962": {
+      "storeId": "a7d684d2ce59e962",
+      "slug": "verified-a7d684d2ce59e962",
+      "label": "부뚜막 문수점 전용 대동여수음식지도",
+      "title": "부뚜막 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "a7d684d2ce59e962",
+          "image": "assets/store-photos/45fef92505a619/01.webp",
+          "title": "부뚜막 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "43384f472418faec": {
+      "storeId": "43384f472418faec",
+      "slug": "verified-43384f472418faec",
+      "label": "삼마 문수점 전용 대동여수음식지도",
+      "title": "삼마 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "43384f472418faec",
+          "image": "assets/store-photos/87c82590ea6e99/01.webp",
+          "title": "삼마 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "4d45e2363f0a18dd": {
+      "storeId": "4d45e2363f0a18dd",
+      "slug": "verified-4d45e2363f0a18dd",
+      "label": "아구회관 전용 대동여수음식지도",
+      "title": "아구회관",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "4d45e2363f0a18dd",
+          "image": "assets/notion-recovery-180/4d45e2363f0a18dd/01.png",
+          "title": "아구회관",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "36856e4f20cae7d0": {
+      "storeId": "36856e4f20cae7d0",
+      "slug": "verified-36856e4f20cae7d0",
+      "label": "짱구김밥 문수점 전용 대동여수음식지도",
+      "title": "짱구김밥 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "36856e4f20cae7d0",
+          "image": "assets/store-photos/1142f3ea797a19/01.webp",
+          "title": "짱구김밥 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "5deb911df92c645a": {
+      "storeId": "5deb911df92c645a",
+      "slug": "verified-5deb911df92c645a",
+      "label": "포우머그 문수점 전용 대동여수음식지도",
+      "title": "포우머그 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "5deb911df92c645a",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/f6f244e8-f7b7-4690-84b0-c7ea650d7268.jpg",
+          "title": "포우머그 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "0f82d1d73f86371d": {
+      "storeId": "0f82d1d73f86371d",
+      "slug": "verified-0f82d1d73f86371d",
+      "label": "가마치통닭 여수전남대점 전용 대동여수음식지도",
+      "title": "가마치통닭 여수전남대점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "0f82d1d73f86371d",
+          "image": "assets/notion-recovery-180/0f82d1d73f86371d/01.jpg",
+          "title": "가마치통닭 여수전남대점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "2cccd02c50e16e55": {
+      "storeId": "2cccd02c50e16e55",
+      "slug": "verified-2cccd02c50e16e55",
+      "label": "79대포 여수미평점 전용 대동여수음식지도",
+      "title": "79대포 여수미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "2cccd02c50e16e55",
+          "image": "assets/campaigns/verified-stores/2cccd02c50e16e55.svg",
+          "title": "79대포 여수미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "f7385d8006310630": {
+      "storeId": "f7385d8006310630",
+      "slug": "verified-f7385d8006310630",
+      "label": "국민학교 전용 대동여수음식지도",
+      "title": "국민학교",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "f7385d8006310630",
+          "image": "assets/notion-recovery-180/f7385d8006310630/01.png",
+          "title": "국민학교",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "895a9425dc41ddf7": {
+      "storeId": "895a9425dc41ddf7",
+      "slug": "verified-895a9425dc41ddf7",
+      "label": "금성칡냉면 미평점 전용 대동여수음식지도",
+      "title": "금성칡냉면 미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "895a9425dc41ddf7",
+          "image": "assets/notion-recovery-180/895a9425dc41ddf7/01.png",
+          "title": "금성칡냉면 미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "d6602c793047b361": {
+      "storeId": "d6602c793047b361",
+      "slug": "verified-d6602c793047b361",
+      "label": "뚜레쥬르 여수미평점 전용 대동여수음식지도",
+      "title": "뚜레쥬르 여수미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "d6602c793047b361",
+          "image": "assets/notion-recovery-180/d6602c793047b361/01.png",
+          "title": "뚜레쥬르 여수미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "57ae8848b4ccc2a1": {
+      "storeId": "57ae8848b4ccc2a1",
+      "slug": "verified-57ae8848b4ccc2a1",
+      "label": "본스치킨 미평점 전용 대동여수음식지도",
+      "title": "본스치킨 미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "57ae8848b4ccc2a1",
+          "image": "assets/notion-recovery-180/57ae8848b4ccc2a1/01.png",
+          "title": "본스치킨 미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "6daf3c1e0dfb68fe": {
+      "storeId": "6daf3c1e0dfb68fe",
+      "slug": "verified-6daf3c1e0dfb68fe",
+      "label": "서울깍두기 미평직영점 전용 대동여수음식지도",
+      "title": "서울깍두기 미평직영점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "6daf3c1e0dfb68fe",
+          "image": "assets/notion-recovery-180/6daf3c1e0dfb68fe/01.jpg",
+          "title": "서울깍두기 미평직영점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "c59a5a8f5a91ce24": {
+      "storeId": "c59a5a8f5a91ce24",
+      "slug": "verified-c59a5a8f5a91ce24",
+      "label": "수해복마라탕 여수미평점 전용 대동여수음식지도",
+      "title": "수해복마라탕 여수미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c59a5a8f5a91ce24",
+          "image": "assets/notion-recovery-180/c59a5a8f5a91ce24/01.png",
+          "title": "수해복마라탕 여수미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "cea43a5971a17628": {
+      "storeId": "cea43a5971a17628",
+      "slug": "verified-cea43a5971a17628",
+      "label": "아주커치킨 미평점 전용 대동여수음식지도",
+      "title": "아주커치킨 미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "cea43a5971a17628",
+          "image": "assets/notion-recovery-180/cea43a5971a17628/01.png",
+          "title": "아주커치킨 미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "4b2a2803e3a4c80a": {
+      "storeId": "4b2a2803e3a4c80a",
+      "slug": "verified-4b2a2803e3a4c80a",
+      "label": "양철북곱창 미평점 전용 대동여수음식지도",
+      "title": "양철북곱창 미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "4b2a2803e3a4c80a",
+          "image": "assets/notion-recovery-180/4b2a2803e3a4c80a/01.png",
+          "title": "양철북곱창 미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "5e78641189926cca": {
+      "storeId": "5e78641189926cca",
+      "slug": "verified-5e78641189926cca",
+      "label": "엄마손 전용 대동여수음식지도",
+      "title": "엄마손",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "5e78641189926cca",
+          "image": "assets/campaigns/verified-stores/5e78641189926cca.svg",
+          "title": "엄마손",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "a4eec3c764528112": {
+      "storeId": "a4eec3c764528112",
+      "slug": "verified-a4eec3c764528112",
+      "label": "역전할머니맥주 여수미평점 전용 대동여수음식지도",
+      "title": "역전할머니맥주 여수미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "a4eec3c764528112",
+          "image": "assets/notion-recovery-180/a4eec3c764528112/01.jpg",
+          "title": "역전할머니맥주 여수미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "76235bf473121cbe": {
+      "storeId": "76235bf473121cbe",
+      "slug": "verified-76235bf473121cbe",
+      "label": "족발자리 전용 대동여수음식지도",
+      "title": "족발자리",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "76235bf473121cbe",
+          "image": "assets/notion-recovery-180/76235bf473121cbe/01.png",
+          "title": "족발자리",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "9af017d533d36ab4": {
+      "storeId": "9af017d533d36ab4",
+      "slug": "verified-9af017d533d36ab4",
+      "label": "커피샵붕어빵 전용 대동여수음식지도",
+      "title": "커피샵붕어빵",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "9af017d533d36ab4",
+          "image": "assets/notion-recovery-180/9af017d533d36ab4/01.jpg",
+          "title": "커피샵붕어빵",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "d696a7c25651c706": {
+      "storeId": "d696a7c25651c706",
+      "slug": "verified-d696a7c25651c706",
+      "label": "피자스쿨  미평점 전용 대동여수음식지도",
+      "title": "피자스쿨  미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "d696a7c25651c706",
+          "image": "assets/notion-recovery-180/d696a7c25651c706/01.jpg",
+          "title": "피자스쿨  미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "9f89e6d7784cf4a2": {
+      "storeId": "9f89e6d7784cf4a2",
+      "slug": "verified-9f89e6d7784cf4a2",
+      "label": "피자프렌드 미평점 전용 대동여수음식지도",
+      "title": "피자프렌드 미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "9f89e6d7784cf4a2",
+          "image": "assets/notion-recovery-180/9f89e6d7784cf4a2/01.jpg",
+          "title": "피자프렌드 미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "b5e31af3d61fc8fe": {
+      "storeId": "b5e31af3d61fc8fe",
+      "slug": "verified-b5e31af3d61fc8fe",
+      "label": "맥시칸치킨 미평점 전용 대동여수음식지도",
+      "title": "맥시칸치킨 미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "b5e31af3d61fc8fe",
+          "image": "images/notion-stores/60cf2fa91644.png",
+          "title": "맥시칸치킨 미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "6390834d3238c3eb": {
+      "storeId": "6390834d3238c3eb",
+      "slug": "verified-6390834d3238c3eb",
+      "label": "황금아구 미평점 전용 대동여수음식지도",
+      "title": "황금아구 미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "6390834d3238c3eb",
+          "image": "assets/notion-recovery-180/6390834d3238c3eb/01.png",
+          "title": "황금아구 미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "5b408dab11c7b1dd": {
+      "storeId": "5b408dab11c7b1dd",
+      "slug": "verified-5b408dab11c7b1dd",
+      "label": "케이키팩토리 전용 대동여수음식지도",
+      "title": "케이키팩토리",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "5b408dab11c7b1dd",
+          "image": "assets/notion-recovery-180/5b408dab11c7b1dd/01.png",
+          "title": "케이키팩토리",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "9fb6e32d9f70edc1": {
+      "storeId": "9fb6e32d9f70edc1",
+      "slug": "verified-9fb6e32d9f70edc1",
+      "label": "두찜 여수 봉계점 전용 대동여수음식지도",
+      "title": "두찜 여수 봉계점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "9fb6e32d9f70edc1",
+          "image": "assets/notion-recovery-180/9fb6e32d9f70edc1/01.png",
+          "title": "두찜 여수 봉계점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "0bf8b6178a1596ca": {
+      "storeId": "0bf8b6178a1596ca",
+      "slug": "verified-0bf8b6178a1596ca",
+      "label": "조선다방 봉계점 전용 대동여수음식지도",
+      "title": "조선다방 봉계점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "0bf8b6178a1596ca",
+          "image": "assets/notion-recovery-180/0bf8b6178a1596ca/01.png",
+          "title": "조선다방 봉계점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "d89dce51902e9756": {
+      "storeId": "d89dce51902e9756",
+      "slug": "verified-d89dce51902e9756",
+      "label": "써브웨이 여서점 전용 대동여수음식지도",
+      "title": "써브웨이 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "d89dce51902e9756",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/06/f8f797de-070f-4a65-88b3-c2951a12aa5a.jpg",
+          "title": "써브웨이 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "dba6beeeb774318f": {
+      "storeId": "dba6beeeb774318f",
+      "slug": "verified-dba6beeeb774318f",
+      "label": "베트남쌀국수 123 ZO 전용 대동여수음식지도",
+      "title": "베트남쌀국수 123 ZO",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "dba6beeeb774318f",
+          "image": "assets/campaigns/verified-stores/dba6beeeb774318f.svg",
+          "title": "베트남쌀국수 123 ZO",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "8f3251e2788d4931": {
+      "storeId": "8f3251e2788d4931",
+      "slug": "verified-8f3251e2788d4931",
+      "label": "금마차 여서점 전용 대동여수음식지도",
+      "title": "금마차 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "8f3251e2788d4931",
+          "image": "assets/store-photos/82b3979d671e07/02.webp",
+          "title": "금마차 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "888abbb8bf28aa2f": {
+      "storeId": "888abbb8bf28aa2f",
+      "slug": "verified-888abbb8bf28aa2f",
+      "label": "김종구식 맛치킨 전기바베큐 옛날통닭 여서점 전용 대동여수음식지도",
+      "title": "김종구식 맛치킨 전기바베큐 옛날통닭 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "888abbb8bf28aa2f",
+          "image": "assets/notion-recovery-180/888abbb8bf28aa2f/01.jpg",
+          "title": "김종구식 맛치킨 전기바베큐 옛날통닭 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "3a5417b7d9525787": {
+      "storeId": "3a5417b7d9525787",
+      "slug": "verified-3a5417b7d9525787",
+      "label": "노랑고래 찹쌀꽈배기 여수여서직영점 전용 대동여수음식지도",
+      "title": "노랑고래 찹쌀꽈배기 여수여서직영점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "3a5417b7d9525787",
+          "image": "images/notion-stores/965d3e5201f0.png",
+          "title": "노랑고래 찹쌀꽈배기 여수여서직영점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "eb850ecfb17945a7": {
+      "storeId": "eb850ecfb17945a7",
+      "slug": "verified-eb850ecfb17945a7",
+      "label": "당빙땡 여수점 전용 대동여수음식지도",
+      "title": "당빙땡 여수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "eb850ecfb17945a7",
+          "image": "assets/notion-recovery-180/eb850ecfb17945a7/01.png",
+          "title": "당빙땡 여수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "40c638502decc604": {
+      "storeId": "40c638502decc604",
+      "slug": "verified-40c638502decc604",
+      "label": "백억 흑미 꼬마김밥 전용 대동여수음식지도",
+      "title": "백억 흑미 꼬마김밥",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "40c638502decc604",
+          "image": "assets/notion-recovery-180/40c638502decc604/01.png",
+          "title": "백억 흑미 꼬마김밥",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "320d26d67b993c4a": {
+      "storeId": "320d26d67b993c4a",
+      "slug": "verified-320d26d67b993c4a",
+      "label": "아로이태국음식전문점 전용 대동여수음식지도",
+      "title": "아로이태국음식전문점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "320d26d67b993c4a",
+          "image": "assets/store-photos/64ae0aed88873e/01.webp",
+          "title": "아로이태국음식전문점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "a0e873ce4d21b431": {
+      "storeId": "a0e873ce4d21b431",
+      "slug": "verified-a0e873ce4d21b431",
+      "label": "와쭈 본점 전용 대동여수음식지도",
+      "title": "와쭈 본점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "a0e873ce4d21b431",
+          "image": "assets/campaigns/verified-stores/a0e873ce4d21b431.svg",
+          "title": "와쭈 본점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "3bfcc2140b2e0e0c": {
+      "storeId": "3bfcc2140b2e0e0c",
+      "slug": "verified-3bfcc2140b2e0e0c",
+      "label": "요거트월드 여서점 전용 대동여수음식지도",
+      "title": "요거트월드 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "3bfcc2140b2e0e0c",
+          "image": "assets/notion-recovery-180/3bfcc2140b2e0e0c/01.png",
+          "title": "요거트월드 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "39b2241021f9616c": {
+      "storeId": "39b2241021f9616c",
+      "slug": "verified-39b2241021f9616c",
+      "label": "우주호떡 여서점 전용 대동여수음식지도",
+      "title": "우주호떡 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "39b2241021f9616c",
+          "image": "assets/store-photos/a1ddbdb2582610/02.webp",
+          "title": "우주호떡 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "a4aaeb8049d4e9f9": {
+      "storeId": "a4aaeb8049d4e9f9",
+      "slug": "verified-a4aaeb8049d4e9f9",
+      "label": "우쿠야 여수여서점 전용 대동여수음식지도",
+      "title": "우쿠야 여수여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "a4aaeb8049d4e9f9",
+          "image": "assets/notion-recovery-180/a4aaeb8049d4e9f9/01.png",
+          "title": "우쿠야 여수여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "c8633f33e72e2e0a": {
+      "storeId": "c8633f33e72e2e0a",
+      "slug": "verified-c8633f33e72e2e0a",
+      "label": "웡김밥 여서점 전용 대동여수음식지도",
+      "title": "웡김밥 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c8633f33e72e2e0a",
+          "image": "assets/store-photos/3bb9d92dca8f20/02.webp",
+          "title": "웡김밥 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "bb036844c501c40a": {
+      "storeId": "bb036844c501c40a",
+      "slug": "verified-bb036844c501c40a",
+      "label": "콩시루 여서점 전용 대동여수음식지도",
+      "title": "콩시루 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "bb036844c501c40a",
+          "image": "assets/store-photos/a042dbba2cf41d/01.webp",
+          "title": "콩시루 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "ba7577041d64a394": {
+      "storeId": "ba7577041d64a394",
+      "slug": "verified-ba7577041d64a394",
+      "label": "탕화쿵푸마라탕 여서점 전용 대동여수음식지도",
+      "title": "탕화쿵푸마라탕 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "ba7577041d64a394",
+          "image": "assets/notion-recovery-180/ba7577041d64a394/01.jpg",
+          "title": "탕화쿵푸마라탕 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "687febad1f2bf0dd": {
+      "storeId": "687febad1f2bf0dd",
+      "slug": "verified-687febad1f2bf0dd",
+      "label": "공차 여서점 전용 대동여수음식지도",
+      "title": "공차 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "687febad1f2bf0dd",
+          "image": "assets/store-photos/0601ce584a820b/02.webp",
+          "title": "공차 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "30d2edbcabcca6ec": {
+      "storeId": "30d2edbcabcca6ec",
+      "slug": "verified-30d2edbcabcca6ec",
+      "label": "뚜레쥬르 여수여서점 전용 대동여수음식지도",
+      "title": "뚜레쥬르 여수여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "30d2edbcabcca6ec",
+          "image": "assets/notion-recovery-180/30d2edbcabcca6ec/01.png",
+          "title": "뚜레쥬르 여수여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "92c0c6cc2688ef0d": {
+      "storeId": "92c0c6cc2688ef0d",
+      "slug": "verified-92c0c6cc2688ef0d",
+      "label": "미미꼬마김밥 여서점 전용 대동여수음식지도",
+      "title": "미미꼬마김밥 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "92c0c6cc2688ef0d",
+          "image": "assets/notion-recovery-180/92c0c6cc2688ef0d/01.png",
+          "title": "미미꼬마김밥 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "34817ff59a6bc66d": {
+      "storeId": "34817ff59a6bc66d",
+      "slug": "verified-34817ff59a6bc66d",
+      "label": "우리할매떡볶이 여서점 전용 대동여수음식지도",
+      "title": "우리할매떡볶이 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "34817ff59a6bc66d",
+          "image": "assets/store-photos/e7f1470821d785/02.webp",
+          "title": "우리할매떡볶이 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "0e6d7a1000b1c53b": {
+      "storeId": "0e6d7a1000b1c53b",
+      "slug": "verified-0e6d7a1000b1c53b",
+      "label": "우사골설렁탕 여서동본점 전용 대동여수음식지도",
+      "title": "우사골설렁탕 여서동본점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "0e6d7a1000b1c53b",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/06/e56faa83-6922-4f9f-b1d7-a3a0a592c941.jpg",
+          "title": "우사골설렁탕 여서동본점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "5aa4432158274a35": {
+      "storeId": "5aa4432158274a35",
+      "slug": "verified-5aa4432158274a35",
+      "label": "이화수 전통 육개장 전용 대동여수음식지도",
+      "title": "이화수 전통 육개장",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "5aa4432158274a35",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2021/12/ftp00000-0000-0000-0000-000000001467.jpg",
+          "title": "이화수 전통 육개장",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "65cc1845e542d5fb": {
+      "storeId": "65cc1845e542d5fb",
+      "slug": "verified-65cc1845e542d5fb",
+      "label": "후라이드참잘하는집 여서문수점 전용 대동여수음식지도",
+      "title": "후라이드참잘하는집 여서문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "65cc1845e542d5fb",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2026/05/4df49bc5-f66f-43d2-94b2-f8120e4b3ece.jpg",
+          "title": "후라이드참잘하는집 여서문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "c0bab6826b36d95f": {
+      "storeId": "c0bab6826b36d95f",
+      "slug": "verified-c0bab6826b36d95f",
+      "label": "그루브 여서점 전용 대동여수음식지도",
+      "title": "그루브 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c0bab6826b36d95f",
+          "image": "assets/notion-store-photos/c0bab6826b36d9/01.webp",
+          "title": "그루브 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "3ce970c7c8a12e2b": {
+      "storeId": "3ce970c7c8a12e2b",
+      "slug": "verified-3ce970c7c8a12e2b",
+      "label": "꼬꼬하우스 전용 대동여수음식지도",
+      "title": "꼬꼬하우스",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "3ce970c7c8a12e2b",
+          "image": "assets/campaigns/verified-stores/3ce970c7c8a12e2b.svg",
+          "title": "꼬꼬하우스",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "da81c19f4ce50220": {
+      "storeId": "da81c19f4ce50220",
+      "slug": "verified-da81c19f4ce50220",
+      "label": "치폴리니 여서점 전용 대동여수음식지도",
+      "title": "치폴리니 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "da81c19f4ce50220",
+          "image": "assets/store-photos/a183973dfd2f24/02.webp",
+          "title": "치폴리니 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "47b56ab22cab7ce0": {
+      "storeId": "47b56ab22cab7ce0",
+      "slug": "verified-47b56ab22cab7ce0",
+      "label": "또바기 여서점 전용 대동여수음식지도",
+      "title": "또바기 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "47b56ab22cab7ce0",
+          "image": "assets/store-photos/5983cba8a4624b/02.webp",
+          "title": "또바기 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "b1995040582014bf": {
+      "storeId": "b1995040582014bf",
+      "slug": "verified-b1995040582014bf",
+      "label": "용우동 여서점 전용 대동여수음식지도",
+      "title": "용우동 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "b1995040582014bf",
+          "image": "assets/notion-recovery-180/b1995040582014bf/01.jpg",
+          "title": "용우동 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "f617bdb93ac0246f": {
+      "storeId": "f617bdb93ac0246f",
+      "slug": "verified-f617bdb93ac0246f",
+      "label": "제육에 진심을 담아 전용 대동여수음식지도",
+      "title": "제육에 진심을 담아",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "f617bdb93ac0246f",
+          "image": "assets/notion-recovery-180/f617bdb93ac0246f/01.jpg",
+          "title": "제육에 진심을 담아",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "c6568ee1688504c7": {
+      "storeId": "c6568ee1688504c7",
+      "slug": "verified-c6568ee1688504c7",
+      "label": "착한쭝식 여서점(먹깨비,땡겨요로 주문시 군만두 서비스!!) 전용 대동여수음식지도",
+      "title": "착한쭝식 여서점(먹깨비,땡겨요로 주문시 군만두 서비스!!)",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c6568ee1688504c7",
+          "image": "assets/notion-recovery-180/c6568ee1688504c7/01.jpg",
+          "title": "착한쭝식 여서점(먹깨비,땡겨요로 주문시 군만두 서비스!!)",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "d77bf57a99d5a355": {
+      "storeId": "d77bf57a99d5a355",
+      "slug": "verified-d77bf57a99d5a355",
+      "label": "피자나라치킨공주 여서점 전용 대동여수음식지도",
+      "title": "피자나라치킨공주 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "d77bf57a99d5a355",
+          "image": "assets/notion-recovery-180/d77bf57a99d5a355/01.jpg",
+          "title": "피자나라치킨공주 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "884076b36adf9697": {
+      "storeId": "884076b36adf9697",
+      "slug": "verified-884076b36adf9697",
+      "label": "촌닭두마리치킨 오림점 전용 대동여수음식지도",
+      "title": "촌닭두마리치킨 오림점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "884076b36adf9697",
+          "image": "assets/notion-recovery-180/884076b36adf9697/01.png",
+          "title": "촌닭두마리치킨 오림점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "478795eb80081c91": {
+      "storeId": "478795eb80081c91",
+      "slug": "verified-478795eb80081c91",
+      "label": "커피어클락 전용 대동여수음식지도",
+      "title": "커피어클락",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "478795eb80081c91",
+          "image": "assets/notion-recovery-180/478795eb80081c91/01.png",
+          "title": "커피어클락",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "227dffaa95581fca": {
+      "storeId": "227dffaa95581fca",
+      "slug": "verified-227dffaa95581fca",
+      "label": "내가 조선의 국밥이다 그랜드터미널점 전용 대동여수음식지도",
+      "title": "내가 조선의 국밥이다 그랜드터미널점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "227dffaa95581fca",
+          "image": "assets/campaigns/verified-stores/227dffaa95581fca.svg",
+          "title": "내가 조선의 국밥이다 그랜드터미널점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "b929bcd743be8b12": {
+      "storeId": "b929bcd743be8b12",
+      "slug": "verified-b929bcd743be8b12",
+      "label": "장충동왕족발 여수점 전용 대동여수음식지도",
+      "title": "장충동왕족발 여수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "b929bcd743be8b12",
+          "image": "assets/notion-recovery-180/b929bcd743be8b12/01.png",
+          "title": "장충동왕족발 여수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "7b80f8d10b67089e": {
+      "storeId": "7b80f8d10b67089e",
+      "slug": "verified-7b80f8d10b67089e",
+      "label": "버거킹 웅천점 전용 대동여수음식지도",
+      "title": "버거킹 웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "7b80f8d10b67089e",
+          "image": "assets/store-photos/e7959d1e8832a8/01.webp",
+          "title": "버거킹 웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "b73ca9b4a41f7502": {
+      "storeId": "b73ca9b4a41f7502",
+      "slug": "verified-b73ca9b4a41f7502",
+      "label": "비비큐 여수웅천점 전용 대동여수음식지도",
+      "title": "비비큐 여수웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "b73ca9b4a41f7502",
+          "image": "assets/store-photos/485a846f6445df/02.webp",
+          "title": "비비큐 여수웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "e0b8938e6479e37c": {
+      "storeId": "e0b8938e6479e37c",
+      "slug": "verified-e0b8938e6479e37c",
+      "label": "꼬치의품격-웅천점 전용 대동여수음식지도",
+      "title": "꼬치의품격-웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "e0b8938e6479e37c",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/3e63b196374216427f87bf18b0bdedc4ee1bb1d454c5ff4cc12a46d17ab637ba.jpg",
+          "title": "꼬치의품격-웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "8267d44bb04b48c0": {
+      "storeId": "8267d44bb04b48c0",
+      "slug": "verified-8267d44bb04b48c0",
+      "label": "던킨 여수웅천점 전용 대동여수음식지도",
+      "title": "던킨 여수웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "8267d44bb04b48c0",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/08/01a982cc-af44-4f30-bcba-a3181bde947f.jpg",
+          "title": "던킨 여수웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "cc97a2338805f0c2": {
+      "storeId": "cc97a2338805f0c2",
+      "slug": "verified-cc97a2338805f0c2",
+      "label": "라홍방마라탕 웅천점 전용 대동여수음식지도",
+      "title": "라홍방마라탕 웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "cc97a2338805f0c2",
+          "image": "assets/store-photos/96d2ceb4906fe9/01.webp",
+          "title": "라홍방마라탕 웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "0c043a05826345f6": {
+      "storeId": "0c043a05826345f6",
+      "slug": "verified-0c043a05826345f6",
+      "label": "배스킨라빈스 여수마리나점 전용 대동여수음식지도",
+      "title": "배스킨라빈스 여수마리나점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "0c043a05826345f6",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/ef713016-acf6-47ba-b86f-90278bf36874.jpg",
+          "title": "배스킨라빈스 여수마리나점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "64f186878b60bc52": {
+      "storeId": "64f186878b60bc52",
+      "slug": "verified-64f186878b60bc52",
+      "label": "배스킨라빈스 여수웅천점 전용 대동여수음식지도",
+      "title": "배스킨라빈스 여수웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "64f186878b60bc52",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/06/4cd4905f-4693-43bb-aa7b-0669c109661b.jpg",
+          "title": "배스킨라빈스 여수웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "2d02a2e077e2f5b7": {
+      "storeId": "2d02a2e077e2f5b7",
+      "slug": "verified-2d02a2e077e2f5b7",
+      "label": "블루웨일 더 후르츠 여수웅천점 전용 대동여수음식지도",
+      "title": "블루웨일 더 후르츠 여수웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "2d02a2e077e2f5b7",
+          "image": "assets/campaigns/verified-stores/2d02a2e077e2f5b7.svg",
+          "title": "블루웨일 더 후르츠 여수웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "3de8202985e65f35": {
+      "storeId": "3de8202985e65f35",
+      "slug": "verified-3de8202985e65f35",
+      "label": "스텔라떡볶이 웅천점 전용 대동여수음식지도",
+      "title": "스텔라떡볶이 웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "3de8202985e65f35",
+          "image": "images/notion-stores/ec029d333ebc.png",
+          "title": "스텔라떡볶이 웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "b218c9f269d44fa8": {
+      "storeId": "b218c9f269d44fa8",
+      "slug": "verified-b218c9f269d44fa8",
+      "label": "시니롱 웅천점 전용 대동여수음식지도",
+      "title": "시니롱 웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "b218c9f269d44fa8",
+          "image": "assets/store-photos/4b39c979033d52/01.webp",
+          "title": "시니롱 웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "dba993195f019e3e": {
+      "storeId": "dba993195f019e3e",
+      "slug": "verified-dba993195f019e3e",
+      "label": "웅천국밥 전용 대동여수음식지도",
+      "title": "웅천국밥",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "dba993195f019e3e",
+          "image": "assets/campaigns/verified-stores/dba993195f019e3e.svg",
+          "title": "웅천국밥",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "571770a25990ba97": {
+      "storeId": "571770a25990ba97",
+      "slug": "verified-571770a25990ba97",
+      "label": "웅천횟집 전용 대동여수음식지도",
+      "title": "웅천횟집",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "571770a25990ba97",
+          "image": "assets/store-photos/1d1c0178d935c2/01.webp",
+          "title": "웅천횟집",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "4663ccf86e9128fa": {
+      "storeId": "4663ccf86e9128fa",
+      "slug": "verified-4663ccf86e9128fa",
+      "label": "청담피자 여수웅천 전용 대동여수음식지도",
+      "title": "청담피자 여수웅천",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "4663ccf86e9128fa",
+          "image": "assets/notion-store-photos/4663ccf86e9128/01.webp",
+          "title": "청담피자 여수웅천",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "b149ddce75f56d8a": {
+      "storeId": "b149ddce75f56d8a",
+      "slug": "verified-b149ddce75f56d8a",
+      "label": "피자스쿨 여수웅천점 전용 대동여수음식지도",
+      "title": "피자스쿨 여수웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "b149ddce75f56d8a",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/740aa048e3e31662c11c7702806030869c1aa29e0ec7758d27ed87d3deedecc4.jpg",
+          "title": "피자스쿨 여수웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "0b2913f84e22bd3d": {
+      "storeId": "0b2913f84e22bd3d",
+      "slug": "verified-0b2913f84e22bd3d",
+      "label": "하이오커피 웅천마리나점 전용 대동여수음식지도",
+      "title": "하이오커피 웅천마리나점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "0b2913f84e22bd3d",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/7b71c8c984905e266b984b45a512bbbd7b06a72ad96a7b2709eeb20f47c2eb50.jpg",
+          "title": "하이오커피 웅천마리나점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "c56d65926bf2b224": {
+      "storeId": "c56d65926bf2b224",
+      "slug": "verified-c56d65926bf2b224",
+      "label": "아주커치킨 둔덕점 전용 대동여수음식지도",
+      "title": "아주커치킨 둔덕점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c56d65926bf2b224",
+          "image": "assets/notion-recovery-180/c56d65926bf2b224/01.jpg",
+          "title": "아주커치킨 둔덕점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "d09fa15da80ff88e": {
+      "storeId": "d09fa15da80ff88e",
+      "slug": "verified-d09fa15da80ff88e",
+      "label": "1989마라탕 봉강점 전용 대동여수음식지도",
+      "title": "1989마라탕 봉강점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "d09fa15da80ff88e",
+          "image": "assets/notion-store-photos/d09fa15da80ff8/01.webp",
+          "title": "1989마라탕 봉강점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "f0f1211ec16d7730": {
+      "storeId": "f0f1211ec16d7730",
+      "slug": "verified-f0f1211ec16d7730",
+      "label": "88시장버거 여수신월점 전용 대동여수음식지도",
+      "title": "88시장버거 여수신월점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "f0f1211ec16d7730",
+          "image": "assets/notion-recovery-180/f0f1211ec16d7730/01.png",
+          "title": "88시장버거 여수신월점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "dc67f48b1278de3b": {
+      "storeId": "dc67f48b1278de3b",
+      "slug": "verified-dc67f48b1278de3b",
+      "label": "가장맛있는족발 여수신월점 전용 대동여수음식지도",
+      "title": "가장맛있는족발 여수신월점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "dc67f48b1278de3b",
+          "image": "assets/notion-store-photos/dc67f48b1278de/01.webp",
+          "title": "가장맛있는족발 여수신월점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "dc01f52e24fc6b2b": {
+      "storeId": "dc01f52e24fc6b2b",
+      "slug": "verified-dc01f52e24fc6b2b",
+      "label": "교촌치킨 국동점 전용 대동여수음식지도",
+      "title": "교촌치킨 국동점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "dc01f52e24fc6b2b",
+          "image": "assets/photo-batch-2-vetted/282.webp",
+          "title": "교촌치킨 국동점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "fb32c4e0939b5468": {
+      "storeId": "fb32c4e0939b5468",
+      "slug": "verified-fb32c4e0939b5468",
+      "label": "김밥나라 국동점 전용 대동여수음식지도",
+      "title": "김밥나라 국동점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "fb32c4e0939b5468",
+          "image": "assets/notion-store-photos/fb32c4e0939b54/01.webp",
+          "title": "김밥나라 국동점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "10b54f62f36e9854": {
+      "storeId": "10b54f62f36e9854",
+      "slug": "verified-10b54f62f36e9854",
+      "label": "내조국 국밥 여수관문점 전용 대동여수음식지도",
+      "title": "내조국 국밥 여수관문점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "10b54f62f36e9854",
+          "image": "assets/notion-recovery-180/10b54f62f36e9854/01.png",
+          "title": "내조국 국밥 여수관문점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "711596e9d930aab0": {
+      "storeId": "711596e9d930aab0",
+      "slug": "verified-711596e9d930aab0",
+      "label": "냠냠치킨 국동점 전용 대동여수음식지도",
+      "title": "냠냠치킨 국동점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "711596e9d930aab0",
+          "image": "assets/notion-store-photos/711596e9d930aa/01.webp",
+          "title": "냠냠치킨 국동점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "be3dad4a5fed7843": {
+      "storeId": "be3dad4a5fed7843",
+      "slug": "verified-be3dad4a5fed7843",
+      "label": "노상치킨 여수점 전용 대동여수음식지도",
+      "title": "노상치킨 여수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "be3dad4a5fed7843",
+          "image": "assets/campaigns/verified-stores/be3dad4a5fed7843.svg",
+          "title": "노상치킨 여수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "83efed7d2768d111": {
+      "storeId": "83efed7d2768d111",
+      "slug": "verified-83efed7d2768d111",
+      "label": "늘 커피 전용 대동여수음식지도",
+      "title": "늘 커피",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "83efed7d2768d111",
+          "image": "assets/notion-recovery-180/83efed7d2768d111/01.jpg",
+          "title": "늘 커피",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "4e44728a4ea3bcef": {
+      "storeId": "4e44728a4ea3bcef",
+      "slug": "verified-4e44728a4ea3bcef",
+      "label": "꽃게장&갈치조림 전문점 늘푸른식당 봉산점 전용 대동여수음식지도",
+      "title": "꽃게장&갈치조림 전문점 늘푸른식당 봉산점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "4e44728a4ea3bcef",
+          "image": "assets/store-photos/1dd8ce12870172/01.webp",
+          "title": "꽃게장&갈치조림 전문점 늘푸른식당 봉산점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "ff4065c9a9506f66": {
+      "storeId": "ff4065c9a9506f66",
+      "slug": "verified-ff4065c9a9506f66",
+      "label": "짚신매운갈비찜 여수봉산점 전용 대동여수음식지도",
+      "title": "짚신매운갈비찜 여수봉산점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "ff4065c9a9506f66",
+          "image": "assets/campaigns/verified-stores/ff4065c9a9506f66.svg",
+          "title": "짚신매운갈비찜 여수봉산점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "a60a8b15c1648b9b": {
+      "storeId": "a60a8b15c1648b9b",
+      "slug": "verified-a60a8b15c1648b9b",
+      "label": "여수 돌산 꽈배기 전용 대동여수음식지도",
+      "title": "여수 돌산 꽈배기",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "a60a8b15c1648b9b",
+          "image": "assets/notion-recovery-180/a60a8b15c1648b9b/01.jpg",
+          "title": "여수 돌산 꽈배기",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "411052fdc9de5d44": {
+      "storeId": "411052fdc9de5d44",
+      "slug": "verified-411052fdc9de5d44",
+      "label": "모노데일리 남산점 전용 대동여수음식지도",
+      "title": "모노데일리 남산점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "411052fdc9de5d44",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/07/3b1784bd-c0b6-4108-8926-cdc35cb48dd8.jpg",
+          "title": "모노데일리 남산점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "67d28f42d21c125f": {
+      "storeId": "67d28f42d21c125f",
+      "slug": "verified-67d28f42d21c125f",
+      "label": "서희국밥&족발 국동본점 전용 대동여수음식지도",
+      "title": "서희국밥&족발 국동본점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "67d28f42d21c125f",
+          "image": "images/notion-stores/3f131b726545.png",
+          "title": "서희국밥&족발 국동본점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "bc3a339f361dab7b": {
+      "storeId": "bc3a339f361dab7b",
+      "slug": "verified-bc3a339f361dab7b",
+      "label": "신포우리만두-봉산점 전용 대동여수음식지도",
+      "title": "신포우리만두-봉산점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "bc3a339f361dab7b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/7495302889fb094d4ec563aab31fa66c672288552520cf84622e91d8e763eeff.jpg",
+          "title": "신포우리만두-봉산점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "d8898d6795807bd7": {
+      "storeId": "d8898d6795807bd7",
+      "slug": "verified-d8898d6795807bd7",
+      "label": "압구정날라리 여수점 전용 대동여수음식지도",
+      "title": "압구정날라리 여수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "d8898d6795807bd7",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/f874b3460fd38841dd48781abd06cf5a5fdfb95b29f0613c899fd1af31355153.jpg",
+          "title": "압구정날라리 여수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "8cb29ac81df85b54": {
+      "storeId": "8cb29ac81df85b54",
+      "slug": "verified-8cb29ac81df85b54",
+      "label": "여수언니 교동점 전용 대동여수음식지도",
+      "title": "여수언니 교동점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "8cb29ac81df85b54",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2022/10/cafed0a9-b40e-462a-b032-a51d3e698762.jpg",
+          "title": "여수언니 교동점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "4e5bc543b1be9f22": {
+      "storeId": "4e5bc543b1be9f22",
+      "slug": "verified-4e5bc543b1be9f22",
+      "label": "역전할머니맥주 봉산점 전용 대동여수음식지도",
+      "title": "역전할머니맥주 봉산점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "4e5bc543b1be9f22",
+          "image": "assets/notion-recovery-180/4e5bc543b1be9f22/01.jpg",
+          "title": "역전할머니맥주 봉산점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "7a91bd1d1f218c97": {
+      "storeId": "7a91bd1d1f218c97",
+      "slug": "verified-7a91bd1d1f218c97",
+      "label": "이디야 여수대교동점 전용 대동여수음식지도",
+      "title": "이디야 여수대교동점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "7a91bd1d1f218c97",
+          "image": "assets/store-photos/354a6c79d46d66/03.webp",
+          "title": "이디야 여수대교동점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "fe09f5cbf190ca3d": {
+      "storeId": "fe09f5cbf190ca3d",
+      "slug": "verified-fe09f5cbf190ca3d",
+      "label": "테그42 여수관문점 전용 대동여수음식지도",
+      "title": "테그42 여수관문점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "fe09f5cbf190ca3d",
+          "image": "assets/notion-recovery-180/fe09f5cbf190ca3d/01.jpg",
+          "title": "테그42 여수관문점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "6b13f2db6e79b4eb": {
+      "storeId": "6b13f2db6e79b4eb",
+      "slug": "verified-6b13f2db6e79b4eb",
+      "label": "평양보쌈왕족발 전용 대동여수음식지도",
+      "title": "평양보쌈왕족발",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "6b13f2db6e79b4eb",
+          "image": "assets/store-photos/549be7a22c8eb5/02.webp",
+          "title": "평양보쌈왕족발",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "c87b8aa579b69ea1": {
+      "storeId": "c87b8aa579b69ea1",
+      "slug": "verified-c87b8aa579b69ea1",
+      "label": "하이오커피 여수교동점 전용 대동여수음식지도",
+      "title": "하이오커피 여수교동점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c87b8aa579b69ea1",
+          "image": "assets/notion-recovery-180/c87b8aa579b69ea1/01.jpg",
+          "title": "하이오커피 여수교동점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "7b221aa6623bd0a2": {
+      "storeId": "7b221aa6623bd0a2",
+      "slug": "verified-7b221aa6623bd0a2",
+      "label": "하이오커피 여수신월국동항점 전용 대동여수음식지도",
+      "title": "하이오커피 여수신월국동항점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "7b221aa6623bd0a2",
+          "image": "assets/notion-store-photos/7b221aa6623bd0/01.webp",
+          "title": "하이오커피 여수신월국동항점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "8c939f0fed5cbd1d": {
+      "storeId": "8c939f0fed5cbd1d",
+      "slug": "verified-8c939f0fed5cbd1d",
+      "label": "황토장군 치킨 바베큐 전용 대동여수음식지도",
+      "title": "황토장군 치킨 바베큐",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "8c939f0fed5cbd1d",
+          "image": "assets/campaigns/verified-stores/8c939f0fed5cbd1d.svg",
+          "title": "황토장군 치킨 바베큐",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "68ba9ebef219905e": {
+      "storeId": "68ba9ebef219905e",
+      "slug": "verified-68ba9ebef219905e",
+      "label": "두마리찜닭 두찜 여수문수점 전용 대동여수음식지도",
+      "title": "두마리찜닭 두찜 여수문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "68ba9ebef219905e",
+          "image": "assets/store-photos/f1dca6e514242f/01.webp",
+          "title": "두마리찜닭 두찜 여수문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "d36bacce0ced6414": {
+      "storeId": "d36bacce0ced6414",
+      "slug": "verified-d36bacce0ced6414",
+      "label": "뚜레쥬르 여수웅천롯데캐슬점 전용 대동여수음식지도",
+      "title": "뚜레쥬르 여수웅천롯데캐슬점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "d36bacce0ced6414",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2024/06/bc61ed53-7d8b-4db2-af51-1d86e01458e8.jpg",
+          "title": "뚜레쥬르 여수웅천롯데캐슬점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "6286966a0169a76b": {
+      "storeId": "6286966a0169a76b",
+      "slug": "verified-6286966a0169a76b",
+      "label": "배스킨라빈스 여수미평점 전용 대동여수음식지도",
+      "title": "배스킨라빈스 여수미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "6286966a0169a76b",
+          "image": "assets/notion-recovery-180/6286966a0169a76b/01.png",
+          "title": "배스킨라빈스 여수미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "6c346115a1a4bed3": {
+      "storeId": "6c346115a1a4bed3",
+      "slug": "verified-6c346115a1a4bed3",
+      "label": "요아정-여수웅천점 전용 대동여수음식지도",
+      "title": "요아정-여수웅천점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "6c346115a1a4bed3",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/69f80218f0d74dbe3a0b1670741eadd55d2cc36062dba3a76e4183efd47593d5.jpg",
+          "title": "요아정-여수웅천점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
+    },
+    "450856a6b5fd4846": {
+      "storeId": "450856a6b5fd4846",
+      "slug": "verified-450856a6b5fd4846",
+      "label": "비비큐 여수여서점 전용 대동여수음식지도",
+      "title": "비비큐 여수여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "450856a6b5fd4846",
+          "image": "assets/notion-recovery-180/450856a6b5fd4846/01.png",
+          "title": "비비큐 여수여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ],
+      "layout": "food14-plus3"
     }
   },
   "virtualStores": {
