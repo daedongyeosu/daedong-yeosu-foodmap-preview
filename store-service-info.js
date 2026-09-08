@@ -445,7 +445,12 @@
     const store = typeof storeOrId === 'object' ? storeOrId : storeById(storeOrId);
     const storeId = storeIdOf(store) || String(storeOrId || '');
     const ids = [...new Set([storeId, ...(store?.mergedStoreIds || [])].map(String).filter(Boolean))];
-    const rows = ids.map(id => serviceData.stores?.[id]).filter(Boolean);
+    let rows = ids.map(id => serviceData.stores?.[id]).filter(Boolean);
+    // Free-text hours must not inherit an obsolete open/closed calculation.
+    if (store?.nativeHoursSet === true) {
+      const hours = {displayLines: String(store.nativeHours || '').split(/\r?\n/).filter(Boolean)};
+      rows = rows.length ? rows.map(row => ({...row, hours})) : [{hours}];
+    }
     if (!rows.length) return null;
     if (rows.length === 1) return rows[0];
     const weeklyHours = rows.find(row => row?.hours?.weekly)?.hours;

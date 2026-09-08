@@ -3,14 +3,16 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 let fetchCount = 0;
+let nativeFetchCount = 0;
 const context = {
   window: {
     setTimeout,
     clearTimeout,
     DAEDONG_REGION: {code: 'yeosu'}
   },
-  fetch: async () => {
-    fetchCount += 1;
+  fetch: async url => {
+    if(url.includes('/api/native/public/'))nativeFetchCount += 1;
+    else fetchCount += 1;
     return {
       ok: false,
       status: 429,
@@ -43,5 +45,6 @@ assert.equal(firstError?.status, 429);
 assert.equal(firstError?.retryAfter, 55);
 await assert.rejects(api.detail('0123456789abcdef'), error => error?.status === 429);
 assert.equal(fetchCount, 1, '같은 429를 받은 직후 재터치가 API를 연속 호출하면 안 됩니다.');
+assert.equal(nativeFetchCount, 1, '자체 게시 API도 오류 직후 연속 재호출을 막아야 합니다.');
 
 console.log('data API rate-limit regression: PASS');

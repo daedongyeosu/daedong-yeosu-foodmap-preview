@@ -11,6 +11,70 @@
     'X-Daedong-Client': CLIENT_HEADER
   });
   const REQUEST_TIMEOUT_MS = 25000;
+  const NATIVE_BASE = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/native/public';
+  let nativeCatalogPromise = null;
+  const nativeRequests = new Map();
+  const nativeFailures = new Map();
+  async function nativeRequest(path) {
+    const failure=nativeFailures.get(path);
+    if(failure&&failure.until>Date.now())throw failure.error;
+    if(nativeRequests.has(path))return nativeRequests.get(path);
+    const pending=(async()=>{
+    const abort = createRequestAbort(null, 4000);
+    try {
+      const response = await fetch(NATIVE_BASE + path, {credentials:'omit', mode:'cors', cache:'no-store', signal:abort.signal});
+      if (response.status === 404) return null;
+      if (!response.ok) throw new Error('자체 게시 자료를 불러오지 못했습니다.');
+      return await response.json();
+    } finally { abort.cleanup(); }
+    })().catch(error=>{nativeRequests.delete(path);nativeFailures.set(path,{error,until:Date.now()+15000});throw error;});
+    nativeRequests.set(path,pending);
+    return pending;
+  }
+  function nativeCatalog() {
+    if (!nativeCatalogPromise) nativeCatalogPromise = (async()=>{
+      const items=[]; let cursor=null;
+      for(let page=0;page<100;page++) {
+        const data=await nativeRequest('/catalog'+(cursor?'?cursor='+encodeURIComponent(cursor):''));
+        if(!data||!Array.isArray(data.items))throw new Error('자체 게시 목록 형식 오류');
+        items.push(...data.items);cursor=data.cursor;if(!cursor)return items;
+      }
+      throw new Error('자체 게시 목록이 너무 큽니다.');
+    })().catch(error=>{nativeCatalogPromise=null;console.warn('기존 가게 자료를 사용합니다.',error);return [];});
+    return nativeCatalogPromise;
+  }
+  function mergeNativeCatalog(stores, published) {
+    const updates=new Map(published.filter(p=>/^[a-f0-9]{16}$/.test(p.id)).map(p=>[p.id,p]));
+    const merge=(store,p)=>{
+      const channels=new Set(store.channelKeys||[]);
+      for(const [key,enabled] of Object.entries(p.routeStates||{})){if(enabled)channels.add(key);else channels.delete(key);}
+      return {...store,...p.fields,...(Object.hasOwn(p.fields||{},'category')?{categories:[p.fields.category]}:{}),...(p.photo&&!store.image?{image:p.photo,images:[p.photo]}:{}),...(p.hoursOverridden?{nativeHours:'',nativeHoursSet:true}:{}),id:p.id,store_id:p.id,channelKeys:[...channels],nativePublished:true};
+    };
+    const result=stores.map(store=>{const id=store.id||store.store_id,p=updates.get(id);updates.delete(id);return p?merge(store,p):store;});
+    for(const p of updates.values())if(p.isNew)result.push(merge({name:p.name,hasMenu:false},p));
+    return result;
+  }
+  function mergeNativeDetail(base, patch) {
+    if(!patch)return base;
+    const out={...base,id:patch.id,store_id:patch.id};
+    for(const [key,value] of Object.entries(patch.fields||{})) {
+      const target={hours:'nativeHours',description:'nativeDescription',mapUrl:'naverMap'}[key]||key;
+      if(['name','phone','address','district','category','nativeHours','nativeDescription','naverMap'].includes(target))out[target]=value;
+    }
+    const routes=new Map((base?.routes||[]).map(r=>[r.key,r]));
+    const labels={mukkebi:'먹깨비',ddangyo:'땡겨요',yogiyo:'요기요',coupang:'쿠팡이츠',baemin:'배달의민족',direct:'가게바로주문'};
+    for(const [key,url] of Object.entries(patch.routes||{}))if(Object.hasOwn(labels,key)){if(url)routes.set(key,{...routes.get(key),key,name:labels[key],url});else routes.delete(key);}
+    if(Object.hasOwn(patch.fields||{},'phone')){if(out.phone)routes.set('phone',{key:'phone',name:'전화주문',url:'tel:'+out.phone.replace(/[^+0-9]/g,'')});else routes.delete('phone');}
+    out.routes=[...routes.values()];
+    out.nativePhotos=patch.photos||[];
+    out.nativeOverrideFields=Object.keys(patch.fields||{}).map(key=>({hours:'nativeHours',description:'nativeDescription',mapUrl:'naverMap'}[key]||key));
+    out.nativeOverrideRoutes=[...Object.keys(patch.routes||{}),...(Object.hasOwn(patch.fields||{},'phone')?['phone']:[])];
+    if(Object.hasOwn(patch.fields||{},'category'))out.categories=[out.category];
+    if(Object.hasOwn(patch.fields||{},'hours'))out.nativeHoursSet=true;
+    out.images=[...(base?.images||[]),...(patch.photos||[]).map(src=>({card:src,detail:src}))];
+    if(!out.image&&patch.photos?.length){out.image=patch.photos[0];out.img=out.image;}
+    return out;
+  }
   // Customer-facing temporary visibility controls. Store detail/menu blobs remain
   // intact so a hidden store can be restored without rebuilding its data.
   const CUSTOMER_HIDDEN_STORE_IDS = new Set([
@@ -219,7 +283,7 @@
 
   const catalog = options => IS_GOHEUNG
     ? goheungCatalog().then(payload => customerVisibleStores(payload.stores))
-    : request('/api/catalog', {cacheKey: 'catalog', ...options}).then(customerVisibleStores);
+    : Promise.all([request('/api/catalog', {cacheKey: 'catalog', ...options}),nativeCatalog()]).then(([stores,published])=>customerVisibleStores(mergeNativeCatalog(stores,published)));
   const services = options => IS_GOHEUNG
     ? goheungCatalog().then(payload => customerVisibleServices(payload.services || {}))
     : request('/api/services', {cacheKey: 'services', ...options}).then(customerVisibleServices);
@@ -230,7 +294,10 @@
       if (!value) throw new Error('해당 고흥 가게 상세자료를 확인 중입니다.');
       return value;
     });
-    return request(`/api/store/${id}`, {cacheKey: `detail:${id}`, ...options});
+    return Promise.all([
+      request(`/api/store/${id}`, {cacheKey: `detail:${id}`, ...options}).catch(error=>{if(error.status===404)return null;throw error;}),
+      nativeRequest('/store/'+id).catch(error=>{console.warn('자체 게시 내용 확인 실패',error);return null;})
+    ]).then(([base,patch])=>{if(!base&&!patch)throw new Error('가게 상세자료를 찾지 못했습니다.');return mergeNativeDetail(base,patch);});
   };
   const menu = (storeId, options = {}) => {
     const id = customerVisibleStoreId(storeId);
