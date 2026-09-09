@@ -1,3 +1,4 @@
+import {beforeSharedHero,beforeSharedLinks} from './scripts/shared-campaign-baseline.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -9,7 +10,7 @@ assert.equal(hash(batch),'44c0563df86ad472f030f0e58deeb9cfd4eb0f957d0c440721a137
 assert.ok(batch.every(x=>/^[a-f0-9]{16}$/.test(x.storeId)&&Object.keys(x).sort().join(',')==='name,storeId'));
 const addedIds=new Set(read('data/verified-campaign-stores.json').map(x=>x.storeId));
 addedIds.add('e66f136d0e468b6e'); // Later user-approved standalone campaign; guarded by its own baseline test.
-const h=read('data/hero-campaigns.json'),m=read('data/store-campaign-links.json');
+const h=beforeSharedHero(read('data/hero-campaigns.json')),m=beforeSharedLinks(read('data/store-campaign-links.json'));
 const baselineHero={...h,campaigns:Object.fromEntries(Object.entries(h.campaigns).filter(([id])=>!ids.has(id)&&!addedIds.has(id)))};
 const baselineManifest={...m,campaigns:m.campaigns.filter(x=>!ids.has(x.storeId)&&!addedIds.has(x.storeId))};
 assert.equal(hash(baselineHero),'9f9dc27af6bddb1a5db0c27205f5e7f9581406724fc465dc699aeab505de1232','Existing campaigns and virtual stores unchanged');

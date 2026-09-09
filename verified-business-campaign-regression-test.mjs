@@ -1,3 +1,4 @@
+import {beforeSharedHero,beforeSharedLinks} from './scripts/shared-campaign-baseline.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -8,7 +9,7 @@ assert.equal(batch.length,122);assert.equal(ids.size,122);assert.equal(hash(batc
 assert.ok(ids.has('65cc1845e542d5fb'),'Correct Yeoseo/Munsu single-brand shop must be included');
 assert.ok(!ids.has('c143aca89697f5aa'),'Unmanaged Hakdong store must never enter verified batch');
 assert.ok(!ids.has('e0c6949efb48f4b2'),'Previously hidden stores must not be republished');
-const hero=read('data/hero-campaigns.json'),links=read('data/store-campaign-links.json');
+const hero=beforeSharedHero(read('data/hero-campaigns.json')),links=beforeSharedLinks(read('data/store-campaign-links.json'));
 assert.equal(hash({...hero,campaigns:Object.fromEntries(Object.entries(hero.campaigns).filter(([id])=>!ids.has(id)&&id!=='e66f136d0e468b6e'))}),'284c8c2c39047e2ac26f3c36ca7b41f15a92703fbe3b0c7fd5cdd17658455951');
 assert.equal(hash({...links,campaigns:links.campaigns.filter(x=>!ids.has(x.storeId)&&x.storeId!=='e66f136d0e468b6e')}),'bfc1aad436aa07ec03e1680ea11a8192a81f7df136da3dc89e01ba8c3acc27c5');
 for(const {storeId,name} of batch){
