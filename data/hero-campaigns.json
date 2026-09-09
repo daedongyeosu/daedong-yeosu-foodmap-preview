@@ -5340,9 +5340,87 @@
       "slides": [
         {
           "storeId": "dc638b23f8cf3c5b",
-          "image": "assets/notion-recovery-180/dc638b23f8cf3c5b/01.png",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/f85047febf270b46897e25cc5b925ec49bc303a2478982e3ee53b5c976633a9c.jpg",
           "title": "도미노피자 문수점",
-          "meta": "가게 정보와 주문방법"
+          "meta": "무진장 슈림프 스테이크 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/8cfe8c01fbf7263d16591f71161fbacb74f0ac4bfa9446070324eb618078dcce.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "LA 치즈폴레 갈비 스테이크 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/c34846cc81c10d55d7e6d0c1ee1c152a8f4d9df60c1913be5bbc96529b3225f6.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "랍스터 슈림프 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/5dd5995d65fbda20e174be87f35502547c657834665806304be62defffc4b5be.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "와일드 와일드 웨스트 스테이크 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/726d2106bde6d1a090cf443afea395e636dcacdaf65593a270cc5d560ef0dba3.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "베스트 콰트로 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/d6b58f833889f486808fea1cb2d53019ecf19fa0e15e39dcdaf354a458c2f1ad.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "블랙타이거 슈림프 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/46f25b7f3c162a4b0e921bbb2067b3532f630e541f8672d229be887a63975a34.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "무진장 슈림프 스테이크+포테이토 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/a955e12a12b8e5d6aca6a60127b6ff2980ff3beeb394b05da8c113266622e425.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "무진장 슈림프 스테이크+랍스터 슈림프 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/a75f2320cb3eb0352585ccd441bd508f60c1deb983cdb009819acdaff83ed1c0.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "더블 미트 할라피뇨 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/1b9b417e458ceef26472dc49fcd4dbf47f368bac4e6fbbabc49429425cffe8f4.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "그릴드 패티 치즈 버거 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/4c56a8694920c79db3d89a6b84b66a063651411d30b2f57b4270eea3163dcf05.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "포테이토 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/43644c9ee9468f67fd502e54ef510c9c43e044963883b0913da8aac06da67488.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "슈퍼디럭스 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/e0373bc6ea40e4782b30039727be5e133e9f00fdbeff055d16c161a3ba01340e.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "리얼불고기 L"
+        },
+        {
+          "storeId": "dc638b23f8cf3c5b",
+          "image": "https://daedong-yeosu-data-api.sisakim.workers.dev/api/media/yogiyo-menu/v1/c61b7a8ee6eaa8922abeb1beb059dfa73845bd32dcc2fe5c3fd5bc644e141e01.jpg",
+          "title": "도미노피자 문수점",
+          "meta": "필라델피아 치즈 스테이크 L"
         }
       ],
       "layout": "food14-plus3"

@@ -1,7 +1,7 @@
 const RC6_RAIN_MODE_URL='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/rain-mode';
 const RC6_REGION_CODE=window.DAEDONG_REGION?.code||'yeosu',RC6_IS_GOHEUNG=RC6_REGION_CODE==='goheung';
 const RC6_REGION_NAME=window.DAEDONG_REGION?.shortName||'여수',RC6_DEFAULT_AREA=window.DAEDONG_REGION?.defaultArea||'여수시 전체';
-let rc6Coordinates={},rc6BannerTargets={},rc6StorePriority={},rc6HeroCampaigns={campaigns:{},virtualStores:{}},rc6RainMode='normal',rc6CampaignVirtualStores=new Map(),rc6StoreByIdBase=null,rc6ManagedStoreIds=new Set(),rc6SharedManagedStoreIds=new Set(),rc6DeprioritizedStoreIds=new Set(),rc6Pointer=null,rc6LocationCache={key:'',stores:[]},rc6ChannelSortingInstalled=false,rc6HeroRenderKey='',rc6HeroDayTimer=0,rc6ActiveHeroDay='';
+let rc6Coordinates={},rc6BannerTargets={},rc6StorePriority={},rc6HeroCampaigns={campaigns:{},virtualStores:{}},rc6RainMode='normal',rc6CampaignVirtualStores=new Map(),rc6CampaignMenuSlides=new Map(),rc6StoreByIdBase=null,rc6ManagedStoreIds=new Set(),rc6SharedManagedStoreIds=new Set(),rc6DeprioritizedStoreIds=new Set(),rc6Pointer=null,rc6LocationCache={key:'',stores:[]},rc6ChannelSortingInstalled=false,rc6HeroRenderKey='',rc6HeroDayTimer=0,rc6ActiveHeroDay='';
 const rc6AppRegisteredStoresBase=appRegisteredStores;
 const rc6PhoneStoresBase=fxPhoneStores;
 const rc6DirectBrandsBase=fxDirectBrands;
@@ -169,12 +169,41 @@ function rc6RequestedHeroCampaign(){
  const store=rc6CampaignStoreById(storeId);
  return store?{campaign,store}:null;
 }
+function rc6CampaignMenuImage(value){
+ const image=String(value||'').trim();
+ if(!image||/^(?:\.\/|\/)?assets\/logo\.png(?:[?#].*)?$/i.test(image)||/(?:^|\/)assets\/app-icons\/daedong-app-icon/i.test(image))return'';
+ return image;
+}
+function rc6BuildCampaignMenuSlides(menu,campaign,store){
+ const items=Array.isArray(menu?.items)?menu.items:[],slides=[],seen=new Set();
+ for(const item of items){
+  const image=rc6CampaignMenuImage(item?.image),key=image.toLowerCase();
+  if(!image||seen.has(key))continue;
+  seen.add(key);
+  slides.push({storeId:String(campaign.storeId||store.id),image,title:campaign.title||store.name,meta:String(item?.name||'메뉴 사진').trim()||'메뉴 사진'});
+  if(slides.length>=14)break;
+ }
+ return slides;
+}
+async function rc6LoadRequestedCampaignMenuSlides(){
+ const requested=rc6RequestedHeroCampaign();if(!requested||requested.campaign.layout!=='food14-plus3'||typeof window.daedongDataApi?.menu!=='function')return;
+ const{campaign,store}=requested,staticSlides=Array.isArray(campaign.slides)?campaign.slides.filter(slide=>slide?.image):[];
+ if(staticSlides.length>=14)return;
+ try{
+  const menu=await window.daedongDataApi.menu(String(store.id)),menuSlides=rc6BuildCampaignMenuSlides(menu,campaign,store);
+  if(menuSlides.length<=staticSlides.length)return;
+  rc6CampaignMenuSlides.set(String(store.id),menuSlides);rc6HeroRenderKey='';rc6RenderHero();
+ }catch(error){console.warn('가게전용 메뉴 배너 자동 채우기 실패',error);}
+}
 function rc6CampaignHeroEntries(){
  if(RC6_IS_GOHEUNG)return[];
  const requested=rc6RequestedHeroCampaign();if(!requested)return[];
  const{campaign,store}=requested;
  const standardLayout=campaign.layout==='food14-plus3';
- const slideDefinitions=Array.isArray(campaign.slides)&&campaign.slides.length
+ const hydratedSlides=standardLayout?rc6CampaignMenuSlides.get(String(store.id)):null;
+ const slideDefinitions=Array.isArray(hydratedSlides)&&hydratedSlides.length
+  ?hydratedSlides
+  :Array.isArray(campaign.slides)&&campaign.slides.length
   ?campaign.slides
   :(campaign.images||[]).map(image=>({storeId:campaign.storeId,image,title:campaign.title,meta:campaign.meta}));
  const campaignCopySlides=new Set((campaign.copySlides||[]).map(Number));
@@ -283,5 +312,5 @@ function rc6RankNewStoresByCustomerLocation(candidates){const ranked=rc6RankCand
 function rc6LocationRankedRail(spec,originalRank){let ranked;if(spec.kind==='near')ranked=rc6RankCandidatesByCustomerLocation(rc6NearStores());else{let candidates=spec.kind==='new'?stores.filter(store=>fxVisible(store)&&rc2HasVerifiedRecommendationPhoto(store)):originalRank(spec);if(spec.kind==='local')candidates=candidates.filter(store=>['direct','mukkebi','ddangyo','ondongne'].some(key=>storeHasChannel(store,key)));ranked=spec.kind==='new'?rc6RankNewStoresByCustomerLocation(candidates):rc6RankCandidatesByCustomerLocation(candidates);}return rc6ApplyRainExposure(sortStoresByBusinessStatus(ranked),8);}
 const rc6CommitAddressBase=commitAddressSelection;
 function rc6CommitAddress(){if(addressDraft?.type!=='current'){rc6CommitAddressBase();return;}const coords=addressDraft.coords;if(!coords)return;state.location=RC6_DEFAULT_AREA;state.addressLabel='현재 위치';state.coords=coords;state.sortByDistance=true;sessionStorage.setItem('rc6LocationActive','1');document.querySelector('#locationText').textContent='현재 위치';hardClose();setTimeout(showHomeAfterAddressCommit,60);}
-const rc6HeroDataPromise=Promise.all([fetchJson('data/store-coordinates.json',{}),fetchJson('data/banner-targets.json?v=native-pages-1',{}),fetchJson('data/store-priority.json?v=former-managed-bottom-1-baeknyeon-ended-1-shared-referral-2',{}),fetchJson('data/hero-campaigns.json?v=store-campaign-standard-1-four-store-qr-1-four-store-14-plus-3-1-teum-campaign-1-three-store-campaign-1-haeinine-campaign-1-collected-shopinshop-1-managed-business-1',{campaigns:{},virtualStores:{}}),rc6LoadRainMode()]);
-async function rc6Initialize(){await window.daedongCatalogReady;[rc6Coordinates,rc6BannerTargets,rc6StorePriority,rc6HeroCampaigns,rc6RainMode]=await rc6HeroDataPromise;rc6PrepareCampaignStores();await rc6ApplyCoordinates();rc6ApplyStorePriority();rc6ConfigurePartnerPriority();rc4StoreHasRealCoordinates=rc6Verified;fxDistance=store=>state.coords&&rc6Verified(store)?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;const originalRank=fxRankStores,originalFiltered=filteredStores,originalRenderStores=renderStores;fxRankStores=spec=>rc6LocationRankedRail(spec,originalRank);filteredStores=()=>{const base=originalFiltered(),orderedIds=(!state.query&&!state.brandId)?categoryPriorityOrderedStoreIds(state.category):[];if(!orderedIds.length)return applyCategoryPriorityOverrides(rc6RankCandidatesByCustomerLocation(base),state.category);const existing=new Set(base.map(store=>String(store.id))),forced=orderedIds.map(id=>stores.find(store=>String(store.id)===id)).filter(store=>store&&!existing.has(String(store.id))&&fxVisible(store)&&storeMatchesCategory(store,state.category));return applyCategoryPriorityOverrides(rc6RankCandidatesByCustomerLocation([...forced,...base]),state.category);};rc5CategoryStores=rc6CategoryStoresByCustomerLocation;rc4CategoryList=rc6CategoryStoresByCustomerLocation;rc6InstallChannelLocationSorting();useCurrentLocation=rc6UseCurrentLocation;commitAddressSelection=rc6CommitAddress;renderStores=function rc6RenderStores(options={}){rc6RenderHero();return originalRenderStores(options);};const preservePager=window.daedongHasHomeInteraction?.()===true,pagerSnapshot=preservePager?window.daedongCaptureStorePagerState?.():null;rc6RenderHero();rc6WatchHeroDay();rc6HeroEvents();rc6Gulls();renderStores({resetCount:!preservePager});if(preservePager)window.daedongRestoreStorePagerState?.(pagerSnapshot);fxRenderRails();const build=document.querySelector('.build-mark');if(build){build.hidden=true;build.textContent='';}}
+const rc6HeroDataPromise=Promise.all([fetchJson('data/store-coordinates.json',{}),fetchJson('data/banner-targets.json?v=native-pages-1',{}),fetchJson('data/store-priority.json?v=former-managed-bottom-1-baeknyeon-ended-1-shared-referral-2',{}),fetchJson('data/hero-campaigns.json?v=store-campaign-standard-1-auto-menu-fill-1-domino-munsu-14-1-four-store-qr-1-four-store-14-plus-3-1-teum-campaign-1-three-store-campaign-1-haeinine-campaign-1-collected-shopinshop-1-managed-business-1',{campaigns:{},virtualStores:{}}),rc6LoadRainMode()]);
+async function rc6Initialize(){await window.daedongCatalogReady;[rc6Coordinates,rc6BannerTargets,rc6StorePriority,rc6HeroCampaigns,rc6RainMode]=await rc6HeroDataPromise;rc6PrepareCampaignStores();await rc6ApplyCoordinates();rc6ApplyStorePriority();rc6ConfigurePartnerPriority();rc4StoreHasRealCoordinates=rc6Verified;fxDistance=store=>state.coords&&rc6Verified(store)?haversine(state.coords,{lat:store.lat,lng:store.lng}):null;const originalRank=fxRankStores,originalFiltered=filteredStores,originalRenderStores=renderStores;fxRankStores=spec=>rc6LocationRankedRail(spec,originalRank);filteredStores=()=>{const base=originalFiltered(),orderedIds=(!state.query&&!state.brandId)?categoryPriorityOrderedStoreIds(state.category):[];if(!orderedIds.length)return applyCategoryPriorityOverrides(rc6RankCandidatesByCustomerLocation(base),state.category);const existing=new Set(base.map(store=>String(store.id))),forced=orderedIds.map(id=>stores.find(store=>String(store.id)===id)).filter(store=>store&&!existing.has(String(store.id))&&fxVisible(store)&&storeMatchesCategory(store,state.category));return applyCategoryPriorityOverrides(rc6RankCandidatesByCustomerLocation([...forced,...base]),state.category);};rc5CategoryStores=rc6CategoryStoresByCustomerLocation;rc4CategoryList=rc6CategoryStoresByCustomerLocation;rc6InstallChannelLocationSorting();useCurrentLocation=rc6UseCurrentLocation;commitAddressSelection=rc6CommitAddress;renderStores=function rc6RenderStores(options={}){rc6RenderHero();return originalRenderStores(options);};const preservePager=window.daedongHasHomeInteraction?.()===true,pagerSnapshot=preservePager?window.daedongCaptureStorePagerState?.():null;rc6RenderHero();void rc6LoadRequestedCampaignMenuSlides();rc6WatchHeroDay();rc6HeroEvents();rc6Gulls();renderStores({resetCount:!preservePager});if(preservePager)window.daedongRestoreStorePagerState?.(pagerSnapshot);fxRenderRails();const build=document.querySelector('.build-mark');if(build){build.hidden=true;build.textContent='';}}

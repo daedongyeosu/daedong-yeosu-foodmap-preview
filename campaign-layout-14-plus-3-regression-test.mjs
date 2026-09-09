@@ -48,6 +48,7 @@ function execute(input, options = {}) {
     RC6_IS_GOHEUNG: options.goheung || false,
     rc6RequestedHeroCampaign: () => options.noRequest ? null : {campaign:stableInput, store},
     rc6CampaignStoreById: id => byId.get(String(id)),
+    rc6CampaignMenuSlides: new Map(),
     rc6BannerTargets: freeze(clone(options.targets || targets)),
     HERO_BANNERS: Array.from({length:21}, () => ({})),
   });

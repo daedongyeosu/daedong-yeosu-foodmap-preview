@@ -66,6 +66,7 @@ const context = vm.createContext({
   RC6_IS_GOHEUNG: false,
   rc6RequestedHeroCampaign: () => ({ campaign, store }),
   rc6CampaignStoreById: (storeId) => storeId === id ? store : null,
+  rc6CampaignMenuSlides: new Map(),
   rc6BannerTargets: targets,
   HERO_BANNERS: Array.from({ length: 21 }, () => ({})),
 });
