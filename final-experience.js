@@ -426,7 +426,8 @@ async function fxShareHome(target){
  }
 }
 function fxRequestedSharedStoreId(){
- const value=new URLSearchParams(location.search).get(FX_STORE_SHARE_PARAM);
+ const params=new URLSearchParams(location.search);
+ const value=params.get(FX_STORE_SHARE_PARAM)||params.get('hero');
  return value?String(value).trim():'';
 }
 function fxSharedStoreHomeUrl(storeId){
