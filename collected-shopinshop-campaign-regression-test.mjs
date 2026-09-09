@@ -7,9 +7,10 @@ const batch=read('data/collected-campaign-stores.json'),ids=new Set(batch.map(x=
 assert.equal(batch.length,252);assert.equal(ids.size,252);
 assert.equal(hash(batch),'44c0563df86ad472f030f0e58deeb9cfd4eb0f957d0c440721a1370f70c1f642');
 assert.ok(batch.every(x=>/^[a-f0-9]{16}$/.test(x.storeId)&&Object.keys(x).sort().join(',')==='name,storeId'));
+const addedIds=new Set(read('data/verified-campaign-stores.json').map(x=>x.storeId));
 const h=read('data/hero-campaigns.json'),m=read('data/store-campaign-links.json');
-const baselineHero={...h,campaigns:Object.fromEntries(Object.entries(h.campaigns).filter(([id])=>!ids.has(id)))};
-const baselineManifest={...m,campaigns:m.campaigns.filter(x=>!ids.has(x.storeId))};
+const baselineHero={...h,campaigns:Object.fromEntries(Object.entries(h.campaigns).filter(([id])=>!ids.has(id)&&!addedIds.has(id)))};
+const baselineManifest={...m,campaigns:m.campaigns.filter(x=>!ids.has(x.storeId)&&!addedIds.has(x.storeId))};
 assert.equal(hash(baselineHero),'9f9dc27af6bddb1a5db0c27205f5e7f9581406724fc465dc699aeab505de1232','Existing campaigns and virtual stores unchanged');
 assert.equal(hash(baselineManifest),'e7492e80f54e143f33eed430b98a71772aa638e95064761f0fe3744f78b2638e','Existing links unchanged');
 let textBanners=0;
