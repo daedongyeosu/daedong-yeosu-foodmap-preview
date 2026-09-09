@@ -27,7 +27,7 @@ assert.equal(context('shared-yeosu',true).rc6PartnerActive(),false);
 assert.match(fn(app,'applyCategoryPriorityOverrides'),/rc6ApplyPartnerPriority\(input\)/);
 assert.match(fn(rc2,'rc2ApplyManagedRegionPriority'),/rc6ApplyPartnerPriority\(cards\)/);
 assert.match(rc6,/rc6ApplyStorePriority\(\);rc6ConfigurePartnerPriority\(\)/);
-assert.match(rc6,/RC6_PARTNER_KEY=new URLSearchParams\(location.search\)/);
+assert.match(rc6,/RC6_PARTNER_KEY=location.pathname==='\/s'\?'shared-yeosu':''/);
 const service=fs.readFileSync('store-service-info.js','utf8');
 Object.assign(c,{overviewQuery:'',overviewIdentityPriority:()=>0,overviewStatusPriority:e=>e.rank,overviewMenuEvidencePriority:()=>0,locationMode:'all',referenceCoordinate:()=>null});
 vm.runInContext(fn(service,'compareOverviewEntries'),c);

@@ -7,7 +7,7 @@ const rc6PhoneStoresBase=fxPhoneStores;
 const rc6DirectBrandsBase=fxDirectBrands;
 const rc6OpenBrandHubBase=fxOpenBrandHub;
 // Referral priority belongs to this document's URL, never to saved customer state.
-const RC6_PARTNER_KEY=new URLSearchParams(location.search).get('partner')||'';
+const RC6_PARTNER_KEY=location.pathname==='/s'?'shared-yeosu':'';
 let rc6PartnerStoreIds=new Set();
 function rc6PartnerActive(){return !RC6_IS_GOHEUNG&&rc6PartnerStoreIds.size>0;}
 function rc6PartnerTier(store){return rc6PartnerActive()&&!rc6PartnerStoreIds.has(String(store?.id??store?.store_id??''))?1:0;}
