@@ -1164,10 +1164,13 @@ function overviewMenuContextText(entry) {
     const menuEvidenceOrder = hasQuery
       ? overviewMenuEvidencePriority(a) - overviewMenuEvidencePriority(b)
       : 0;
+    const referralOrder = typeof rc6PartnerActive === 'function' && rc6PartnerActive()
+      ? rc6PartnerTier({id:a.storeId}) - rc6PartnerTier({id:b.storeId}) : 0;
     if (locationMode === 'nearby' && referenceCoordinate()) {
       return identityOrder
         || statusOrder
         || menuEvidenceOrder
+        || referralOrder
         || a.locationBucket - b.locationBucket
         || a.ownershipTier - b.ownershipTier
         || a.areaDistance - b.areaDistance
@@ -1178,11 +1181,12 @@ function overviewMenuContextText(entry) {
       return identityOrder
         || statusOrder
         || menuEvidenceOrder
+        || referralOrder
         || a.ownershipTier - b.ownershipTier
         || a.areaDistance - b.areaDistance
         || a.index - b.index;
     }
-    return identityOrder || statusOrder || menuEvidenceOrder || a.index - b.index;
+    return identityOrder || statusOrder || menuEvidenceOrder || referralOrder || a.index - b.index;
   }
 
   function filteredOverviewEntries() {
