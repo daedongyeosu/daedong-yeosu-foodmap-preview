@@ -39,6 +39,7 @@ const manifest = JSON.parse(readFileSync('data/store-campaign-links.json', 'utf8
 expected.push(...JSON.parse(readFileSync('data/collected-campaign-stores.json', 'utf8')).map(({storeId,name})=>[storeId,name]));
 expected.push(...JSON.parse(readFileSync('data/verified-campaign-stores.json', 'utf8')).map(({storeId,name})=>[storeId,name]));
 const heroData = JSON.parse(readFileSync('data/hero-campaigns.json', 'utf8'));
+expected.push(['e66f136d0e468b6e', '아주커치킨 문수점']);
 const rc6 = readFileSync('rc6-fixes.js', 'utf8');
 const loader = readFileSync('final-experience.js', 'utf8');
 const index = readFileSync('index.html', 'utf8');

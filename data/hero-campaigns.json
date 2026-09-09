@@ -7328,6 +7328,101 @@
         }
       ],
       "layout": "food14-plus3"
+    },
+    "e66f136d0e468b6e": {
+      "storeId": "e66f136d0e468b6e",
+      "slug": "ajuker-munsu",
+      "label": "아주커치킨 문수점 전용 대동여수음식지도",
+      "title": "아주커치킨 문수점",
+      "meta": "치킨·순살·윙봉 메뉴와 주문방법",
+      "layout": "food14-plus3",
+      "storeHeroLimit": 14,
+      "slides": [
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-01.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "후라이드치킨"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-02.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "양념치킨"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-03.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "간장치킨"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-04.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "매콤양념치킨"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-05.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "반반치킨"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-06.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "순살치킨"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-07.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "순살양념"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-08.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "순살간장"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-09.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "순살반반"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-10.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "후라이드 윙봉"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-11.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "양념윙봉"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-12.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "간장윙봉"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-13.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "반반윙봉"
+        },
+        {
+          "storeId": "e66f136d0e468b6e",
+          "image": "assets/campaigns/ajuker-munsu/menu-14.webp",
+          "title": "아주커치킨 문수점",
+          "meta": "감자튀김 케이준"
+        }
+      ]
     }
   },
   "virtualStores": {
