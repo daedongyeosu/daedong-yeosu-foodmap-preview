@@ -48,6 +48,7 @@ function execute(input, options = {}) {
     RC6_IS_GOHEUNG: options.goheung || false,
     rc6RequestedHeroCampaign: () => options.noRequest ? null : {campaign:stableInput, store},
     rc6CampaignStoreById: id => byId.get(String(id)),
+    rc6CampaignMenuSlides: new Map(),
     rc6BannerTargets: freeze(clone(options.targets || targets)),
     HERO_BANNERS: Array.from({length:21}, () => ({})),
   });
@@ -56,55 +57,12 @@ function execute(input, options = {}) {
   return result;
 }
 
-// Frozen legacy contract: Preview used per-campaign advertisements and no cap;
-// production used the common three advertisements and a fourteen-photo cap.
-// This oracle intentionally does not read the new layout flag.
-function legacyReference(input, options = {}) {
-  if (options.goheung || options.noRequest) return [];
-  const byId = new Map((options.stores || [fixtureStore, fixturePeer]).map(store => [String(store.id), store]));
-  const store = byId.get(String(input.storeId));
-  const definitions = input.slides?.length ? input.slides : (input.images || []).map(image => ({
-    storeId:input.storeId, image, title:input.title, meta:input.meta,
-  }));
-  const copySlides = new Set((input.copySlides || []).map(Number));
-  let photos = definitions.map((slide, index) => {
-    const slideStore = byId.get(String(slide.storeId || input.storeId));
-    if (!slideStore || !slide.image) return null;
-    return {
-      banner:{desktop:slide.image, mobile:slide.image}, index,
-      key:'campaign-' + store.id + '-' + slideStore.id + '-' + (index + 1),
-      target:{label:slide.title || slideStore.name}, store:slideStore, rankedStore:slideStore,
-      tier:0, kind:'store', presentation:slide.presentation || 'campaign-photo',
-      campaignLabel:slide.label || input.label, campaignTitle:slide.title || slideStore.name,
-      campaignMeta:slide.meta || [slideStore.area, slideStore.cat].filter(Boolean).join(' · '),
-      campaignShowCopy:typeof slide.showCopy === 'boolean' ? slide.showCopy : (!copySlides.size || copySlides.has(index + 1)),
-    };
-  }).filter(Boolean);
-  if (production) photos = photos.slice(0, 14);
-  const bannerTargets = options.targets || targets;
-  const keys = production ? ['18','19','20'] : (input.specialBannerKeys || []);
-  const ads = keys.map(String).filter(key => {
-    const target = bannerTargets[key];
-    return target?.status === 'notion' && target.notionUrl && target.image;
-  }).map((key, index) => ({
-    banner:{desktop:bannerTargets[key].image, mobile:bannerTargets[key].image},
-    index:21 + index, key:'campaign-notion-' + key, target:bannerTargets[key],
-    store:null, tier:3, kind:'notion',
-  }));
-  const result = [];
-  let usedAds = 0;
-  photos.forEach((photo, index) => {
-    result.push(photo);
-    if (usedAds < ads.length && index === [3,7,11][usedAds]) result.push(ads[usedAds++]);
-  });
-  return clone(result.concat(ads.slice(usedAds)));
-}
 let checks = 0;
 function check(name, run) {
   run();
   checks++;
 }
-function assertStandard(entries, expectedFoods = 14) {
+function assertStandard(entries, expectedFoods = 14, expectedTargets = targets) {
   const foods = entries.filter(entry => entry.kind === 'store');
   const ads = entries.filter(entry => entry.kind === 'notion');
   assert.equal(foods.length, expectedFoods);
@@ -112,7 +70,7 @@ function assertStandard(entries, expectedFoods = 14) {
   assert.equal(entries.length, expectedFoods + 3);
   assert.deepEqual(ads.map(entry => entry.key), ['campaign-notion-18','campaign-notion-19','campaign-notion-20']);
   assert.deepEqual(ads.map(entry => [entry.banner.desktop, entry.target.notionUrl]),
-    ['18','19','20'].map(key => [targets[key].image, targets[key].notionUrl]));
+    ['18','19','20'].map(key => [expectedTargets[key].image, expectedTargets[key].notionUrl]));
   assert.equal(new Set(foods.map(entry => entry.key)).size, expectedFoods);
   if (expectedFoods === 14) assert.deepEqual(entries.flatMap((entry, index) => entry.kind === 'notion' ? [index] : []), [4,9,14]);
 }
@@ -145,16 +103,18 @@ check('Missing advertisement data is not guessed or replaced by a foreign advert
   assert.deepEqual(entries.filter(entry => entry.kind === 'notion').map(entry => entry.key), ['campaign-notion-18','campaign-notion-20']);
 });
 for (const value of [undefined, null, false, true, '', 'Food14-plus3', 'food14-plus3 ', 'food14-plus-three', ['food14-plus3'], {layout:'food14-plus3'}]) {
-  check('Non-exact layout preserves the environment legacy contract: ' + JSON.stringify(value), () => {
+  check('Every dedicated campaign uses the common fourteen-plus-three contract: ' + JSON.stringify(value), () => {
     const input = campaign(20, {layout:value, specialBannerKeys:['99','18'], copySlides:[1,3]});
     input.slides[1].storeId = fixturePeer.id;
     input.slides[2].showCopy = false;
-    assert.deepEqual(execute(input), legacyReference(input));
+    const entries = execute(input);
+    assertStandard(entries);
+    assert.deepEqual(entries.filter(entry => entry.kind === 'store').map(entry => entry.banner.desktop), slides(14).map(slide => slide.image));
   });
 }
-check('Legacy image-only campaigns retain their supported behavior', () => {
+check('Legacy image-only campaigns use the common fourteen-plus-three contract', () => {
   const input = campaign(0, {images:slides(16).map(slide => slide.image), meta:'Fixture Legacy', specialBannerKeys:['99']});
-  assert.deepEqual(execute(input), legacyReference(input));
+  assertStandard(execute(input));
 });
 check('No request and isolated region produce no campaign entries', () => {
   const input = campaign(14, {layout:'food14-plus3'});
@@ -170,13 +130,16 @@ const actualTargets = JSON.parse(readFileSync('data/banner-targets.json', 'utf8'
 let legacyCampaigns = 0;
 for (const input of Object.values(actualData.campaigns)) {
   if (input.layout === 'food14-plus3') continue;
-  check('Existing unflagged campaign retains the frozen runtime contract', () => {
+  check('Existing unflagged campaign uses the common dedicated-store contract', () => {
     const ids = [...new Set([input.storeId, ...(input.slides || []).map(slide => slide.storeId || input.storeId)])];
     const storeList = ids.map(id => ({id, name:'Fixture Existing Store', area:'Fixture Area', cat:'Food'}));
     const options = {stores:storeList, targets:actualTargets};
-    assert.deepEqual(execute(input, options), legacyReference(input, options));
+    const validPhotos = input.slides?.length
+      ? input.slides.filter(slide => slide?.image && ids.includes(slide.storeId || input.storeId)).length
+      : (input.images || []).filter(Boolean).length;
+    assertStandard(execute(input, options), Math.min(validPhotos, 14), actualTargets);
   });
   legacyCampaigns++;
 }
 console.log('campaign-layout-14-plus-3-regression-test: pass (' + checks + ' checks; ' +
-  (production ? 'production' : 'preview') + '; ' + legacyCampaigns + ' existing unflagged campaigns preserved)');
+  (production ? 'production' : 'preview') + '; ' + legacyCampaigns + ' existing unflagged campaigns standardized)');

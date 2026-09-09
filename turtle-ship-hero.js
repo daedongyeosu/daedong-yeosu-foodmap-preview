@@ -9,6 +9,13 @@
   const SEQUENCE_SESSION_KEY = 'daedongCommunityIntroPlayedV4';
   const INTRO_DURATION = 15000;
   const INTRO_CLOSE_DURATION = 240;
+  const entryParams = new URLSearchParams(location.search);
+  const dedicatedEntryStoreId = String(
+    window.daedongDedicatedEntryStoreId
+    || entryParams.get('hero')
+    || entryParams.get('store')
+    || ''
+  ).trim();
   const intro = document.getElementById('communityIntro');
   const introClose = document.getElementById('communityIntroClose');
   const scene = document.getElementById('turtleShipHeroScene');
@@ -22,6 +29,10 @@
   let sequenceStarted = false;
   let sailStarted = false;
   let introClosing = false;
+  let dedicatedStoreDetailOpened = false;
+  let dedicatedStoreDetailClosed = false;
+
+  if (dedicatedEntryStoreId) window.daedongDedicatedStorePopupSequencePending = true;
 
   function syncPassageCenter() {
     if (!shell || !passage) return;
@@ -70,10 +81,51 @@
     } catch {}
   }
 
-  function customerAlreadyInteracted() {
-    return window.daedongHasHomeInteraction?.() === true
-      || window.daedongEntryHadExternalReturn === true
+  function externalReturnActive() {
+    return window.daedongEntryHadExternalReturn === true
+      || window.daedongEntryIsHistoryReturn === true
+      || window.daedongEntryIsDetachedKakaoReturn === true
+      || window.daedongPendingExternalReturn
       || document.documentElement.classList.contains('daedong-external-return-pending');
+  }
+
+  function dedicatedStoreMatches(storeId) {
+    const activeStoreId = String(storeId || '').trim();
+    const canonicalStoreId = String(
+      window.daedongResolveHeroCampaignStoreId?.(dedicatedEntryStoreId)
+      || dedicatedEntryStoreId
+    ).trim();
+    return Boolean(activeStoreId) && (
+      activeStoreId === dedicatedEntryStoreId
+      || activeStoreId === canonicalStoreId
+    );
+  }
+
+  function updateDedicatedStorePhase() {
+    if (!dedicatedEntryStoreId) return 'none';
+    const modal = document.getElementById('modal');
+    const detail = modal?.querySelector('.store-detail[data-store-id]');
+    const activeStoreId = String(
+      modal?.dataset.activeStoreId || detail?.dataset.storeId || ''
+    ).trim();
+    if (modal && !modal.hidden && detail && dedicatedStoreMatches(activeStoreId)) {
+      dedicatedStoreDetailOpened = true;
+      return 'open';
+    }
+    if (dedicatedStoreDetailOpened && (modal?.hidden ?? true)) {
+      dedicatedStoreDetailClosed = true;
+      return 'closed';
+    }
+    if (dedicatedStoreDetailClosed) return 'closed';
+    return dedicatedStoreDetailOpened ? 'open' : 'waiting';
+  }
+
+  function customerAlreadyInteracted() {
+    if (externalReturnActive()) return true;
+    // Scrolling or closing the requested store is part of the QR flow, not a
+    // request to cancel the two notices that follow that store.
+    if (dedicatedEntryStoreId && dedicatedStoreDetailClosed) return false;
+    return window.daedongHasHomeInteraction?.() === true;
   }
 
   function homeIsClear() {
@@ -133,10 +185,15 @@
   }
 
   function playIntroThenSail() {
-    if (sequenceStarted || sequenceAlreadyPlayed()) return;
+    if (sequenceStarted || sequenceAlreadyPlayed()) {
+      if (dedicatedEntryStoreId) window.daedongDedicatedStorePopupSequencePending = false;
+      return;
+    }
+    if (dedicatedEntryStoreId && !dedicatedStoreDetailClosed) return;
     if (customerAlreadyInteracted()) {
       sequenceStarted = true;
       rememberSequence();
+      if (dedicatedEntryStoreId) window.daedongDedicatedStorePopupSequencePending = false;
       return;
     }
     sequenceStarted = true;
@@ -161,17 +218,32 @@
   }
 
   function waitForClearHome() {
-    if (new URLSearchParams(location.search).has('store')) return;
+    const dedicatedPhase = updateDedicatedStorePhase();
+    if (dedicatedEntryStoreId) {
+      if (externalReturnActive()) {
+        sequenceStarted = true;
+        rememberSequence();
+        window.daedongDedicatedStorePopupSequencePending = false;
+        return;
+      }
+      // Never let a general notice cover the requested store while it loads or
+      // while the customer is viewing it. The sequence starts only after Close.
+      if (dedicatedPhase !== 'closed') return;
+    }
     if (customerAlreadyInteracted()) {
       sequenceStarted = true;
       rememberSequence();
+      if (dedicatedEntryStoreId) window.daedongDedicatedStorePopupSequencePending = false;
       return;
     }
     if (!homeIsClear()) return;
     window.setTimeout(() => {
+      updateDedicatedStorePhase();
+      if (dedicatedEntryStoreId && !dedicatedStoreDetailClosed) return;
       if (customerAlreadyInteracted()) {
         sequenceStarted = true;
         rememberSequence();
+        if (dedicatedEntryStoreId) window.daedongDedicatedStorePopupSequencePending = false;
         return;
       }
       if (!homeIsClear()) return;

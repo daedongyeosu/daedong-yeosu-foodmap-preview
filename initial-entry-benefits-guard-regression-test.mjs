@@ -65,9 +65,9 @@ assert.match(eventJs, /serviceOverview\?\.hidden[\s\S]*store-service-overview-op
   '주문앱별 혜택 화면이 열려 있으면 먹깨비 행사창을 열지 않아야 합니다.');
 assert.match(eventJs, /const AUTO_OPEN_ENABLED = true/,
   '먹깨비 행사창은 안전한 새 홈 진입에서 한 번 표시되어야 합니다.');
-assert.match(eventJs, /const RETURN_QUERY_KEYS = \['store', '__ddret', '__ddom', '__ddappfallback'\]/,
-  '가게 공유·주문앱 복귀·주문방법 재진입 주소에서는 행사창을 예약하면 안 됩니다.');
-assert.match(eventJs, /const AUTO_OPEN_ELIGIBLE = AUTO_OPEN_ENABLED[\s\S]*?!globalThis\.daedongEntryHadExternalReturn[\s\S]*?!globalThis\.daedongEntryIsHistoryReturn[\s\S]*?!globalThis\.daedongEntryIsDetachedKakaoReturn[\s\S]*?!globalThis\.daedongPendingExternalReturn/,
+assert.match(eventJs, /const RETURN_QUERY_KEYS = \['store', 'hero', '__ddret', '__ddom', '__ddappfallback'\]/,
+  '가게전용 QR과 주문앱 복귀·주문방법 재진입 주소에서는 행사창이 첫 화면을 가로채면 안 됩니다.');
+assert.match(eventJs, /const AUTO_OPEN_ELIGIBLE = AUTO_OPEN_ENABLED[\s\S]*?!dedicatedEntryStoreId[\s\S]*?!globalThis\.daedongEntryHadExternalReturn[\s\S]*?!globalThis\.daedongEntryIsHistoryReturn[\s\S]*?!globalThis\.daedongEntryIsDetachedKakaoReturn[\s\S]*?!globalThis\.daedongPendingExternalReturn/,
   '문서 생성 시점의 주문앱 복귀 상태를 고정해 복원 도중 표식이 지워져도 행사창이 끼어들지 않아야 합니다.');
 assert.match(eventJs, /document\.wasDiscarded !== true[\s\S]*navigationType === 'navigate'/,
   '폐기 탭 복원·새로고침·뒤로가기로 되살아난 문서는 새 행사 진입으로 취급하면 안 됩니다.');
@@ -78,7 +78,11 @@ assert.match(eventJs, /window\.daedongOpenMukkebiSummerEvent = \(\) => openEvent
 assert.match(eventJs, /function scheduleInitialOpen\(\)[\s\S]*scheduleCampaignFollowup\(\)/,
   '첫 일반 안내가 이미 끝난 안전한 최초 홈에서만 먹깨비 후속 팝업을 예약해야 합니다.');
 assert.match(eventJs, /function scheduleInitialOpen\(\) \{[\s\S]*if \(!AUTO_OPEN_ELIGIBLE\) \{[\s\S]*settleAutomaticOpen\(\);[\s\S]*return;/,
-  '안전한 최초 홈 문서가 아니면 자동 행사창 예약 자체를 중단해야 합니다.');
+  '가게전용 QR이나 안전한 최초 홈 문서가 아니면 행사창이 첫 화면에 자동으로 끼어들면 안 됩니다.');
+assert.match(eventJs, /window\.addEventListener\('daedong:community-intro-closed', scheduleCampaignFollowup\)/,
+  '가게전용 QR에서는 가게와 지역 주문 안내가 끝난 뒤에만 먹깨비 행사창을 이어서 열어야 합니다.');
+assert.match(eventJs, /function isDedicatedStoreSequenceInteraction\([\s\S]*daedongDedicatedStorePopupSequencePending[\s\S]*#modal \.store-detail, #modal \.modal-close/,
+  '해당 가게를 보거나 닫는 동작을 후속 팝업 취소로 오인하면 안 됩니다.');
 assert.match(html, /store-list-horizontal-pager\.js\?v=[^"\n]*early-interaction-2/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*fresh-entry-popup-1/);
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*kakao-opening-touch-1/);
@@ -87,6 +91,8 @@ assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*natural-followup-1/,
   '두 시작 안내 사이에 자연스러운 간격을 두는 최신 코드가 배포되어야 합니다.');
 assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*mukkebi-second-4/,
   '먹깨비 행사창을 두 번째로 표시하는 최신 팝업 순서 코드가 배포되어야 합니다.');
+assert.match(html, /mukkebi-summer-event\.js\?v=[^"\n]*store-qr-popup-sequence-1/,
+  '가게전용 QR의 세 단계 팝업 순서 코드가 기존 방문자에게도 갱신되어야 합니다.');
 assert.match(browserCheck, /완전히 새로 들어온 홈에서만 먹깨비 팝업 한 번 표시/);
 assert.match(browserCheck, /PageTransitionEvent\('pageshow'[\s\S]*같은 세션에서 다시 표시하지 않음/);
 assert.match(browserCheck, /__ddret=mukkebi-return-test[\s\S]*주문앱 복귀 주소에서는 먹깨비 팝업 예약 자체를 차단/);

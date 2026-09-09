@@ -68,7 +68,14 @@ assert.match(js, /window\.daedongEntryHadExternalReturn === true/,
   '주문앱에서 돌아오는 화면에는 첫 방문 안내를 다시 띄우면 안 됩니다.');
 assert.match(js, /daedong-external-return-pending/,
   '주문앱 복귀 화면을 구성하는 동안 첫 방문 안내가 복원을 가로막으면 안 됩니다.');
-assert.match(js, /new URLSearchParams\(location\.search\)\.has\('store'\)/);
+assert.match(js, /const dedicatedEntryStoreId = String\([\s\S]*entryParams\.get\('hero'\)[\s\S]*entryParams\.get\('store'\)/,
+  '가게전용 QR의 hero와 store 주소를 모두 같은 전용 진입으로 판별해야 합니다.');
+assert.match(js, /if \(dedicatedEntryStoreId\) window\.daedongDedicatedStorePopupSequencePending = true/,
+  '가게전용 QR에서는 가게 안내 뒤의 두 팝업 순서를 명시적으로 유지해야 합니다.');
+assert.match(js, /const dedicatedPhase = updateDedicatedStorePhase\(\)[\s\S]*if \(dedicatedPhase !== 'closed'\) return/,
+  '해당 가게 팝업을 닫기 전에는 지역 주문 안내가 가게를 덮으면 안 됩니다.');
+assert.doesNotMatch(js, /new URLSearchParams\(location\.search\)\.has\('store'\)/,
+  '가게전용 QR을 이유로 후속 안내 전체를 영구 차단하면 안 됩니다.');
 assert.match(js, /window\.installDaedongTapAction\(\{[\s\S]*selector: '#communityIntroClose'[\s\S]*dismissIntroImmediately\(event\)/,
   '첫 안내 X는 스크롤 제스처와 구분되는 공통 모바일 탭 경로를 사용해야 합니다.');
 assert.doesNotMatch(js, /introClose\?\.addEventListener\('pointerdown', dismissIntroImmediately\)/,

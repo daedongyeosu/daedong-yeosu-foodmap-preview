@@ -61,6 +61,7 @@ function render(campaign) {
     RC6_IS_GOHEUNG:false,
     rc6RequestedHeroCampaign:() => ({campaign:input, store}),
     rc6CampaignStoreById:id => String(id) === store.id ? store : null,
+    rc6CampaignMenuSlides:new Map(),
     rc6BannerTargets:freeze(clone(targets)),
     HERO_BANNERS:Array.from({length:21}, () => ({})),
   });

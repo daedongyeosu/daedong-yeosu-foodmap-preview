@@ -21,13 +21,20 @@
   const EVENT_START = new Date('2026-09-01T00:00:00+09:00').getTime();
   const EVENT_END = new Date('2026-11-01T00:00:00+09:00').getTime();
   const AUTO_OPEN_ENABLED = true;
-  const RETURN_QUERY_KEYS = ['store', '__ddret', '__ddom', '__ddappfallback'];
+  const RETURN_QUERY_KEYS = ['store', 'hero', '__ddret', '__ddom', '__ddappfallback'];
   const entryUrl = new URL(location.href);
+  const dedicatedEntryStoreId = String(
+    globalThis.daedongDedicatedEntryStoreId
+    || entryUrl.searchParams.get('hero')
+    || entryUrl.searchParams.get('store')
+    || ''
+  ).trim();
   const navigationType = performance.getEntriesByType?.('navigation')?.[0]?.type || '';
   // Decide once, while this document is being created. Return markers can be
   // consumed later by rc2, but that must never turn a resumed order-app page
   // into a fresh campaign entry after the requested store has been restored.
   const AUTO_OPEN_ELIGIBLE = AUTO_OPEN_ENABLED
+    && !dedicatedEntryStoreId
     && !globalThis.daedongEntryHadExternalReturn
     && !globalThis.daedongEntryIsHistoryReturn
     && !globalThis.daedongEntryIsDetachedKakaoReturn
@@ -105,10 +112,26 @@
     return Number.isFinite(x) && Number.isFinite(y) ? {x, y} : null;
   }
 
+  function isDedicatedStoreSequenceInteraction(target, path = []) {
+    if (!dedicatedEntryStoreId || window.daedongDedicatedStorePopupSequencePending !== true) return false;
+    const modal = document.getElementById('modal');
+    const detail = modal?.querySelector('.store-detail[data-store-id]');
+    if (!modal || modal.hidden || !detail) return false;
+    return Boolean(
+      target?.closest('#modal .store-detail, #modal .modal-close')
+      || path.includes(detail)
+      || path.includes(modal.querySelector('.modal-close'))
+    );
+  }
+
   function rememberInteractionStart(event) {
     const target = event.target instanceof Element ? event.target : null;
     const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
     if (target?.closest('#communityIntro') || path.includes(communityIntro)) {
+      interactionStart = null;
+      return;
+    }
+    if (isDedicatedStoreSequenceInteraction(target, path)) {
       interactionStart = null;
       return;
     }
@@ -131,6 +154,7 @@
     const target = event.target instanceof Element ? event.target : null;
     const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
     if (target?.closest('#communityIntro') || path.includes(communityIntro)) return;
+    if (isDedicatedStoreSequenceInteraction(target, path)) return;
     if (target?.closest('a, button, input, select, textarea, [role="button"], [data-order-key]')) {
       markCustomerInteraction(`action-click:${target.id || target.tagName.toLowerCase()}`);
     }
@@ -168,6 +192,7 @@
       return;
     }
     opened = true;
+    window.daedongDedicatedStorePopupSequencePending = false;
     eventLayer.dataset.controllerState = 'open';
     try { sessionStorage.setItem(SEEN_SESSION_KEY, '1'); } catch {}
     eventLayer.hidden = false;
@@ -175,14 +200,17 @@
     closeButton?.focus({preventScroll:true});
   }
 
-  // Reserved for an explicit campaign entry. Automatic opening stays off.
+  // Keep the explicit campaign entry separate from the guarded startup flow.
   window.daedongOpenMukkebiSummerEvent = () => openEvent();
 
   function scheduleCampaignFollowup() {
     // Closing the verified first community intro is itself the fresh-entry
     // proof. Do not lose the second popup merely because a browser reports an
     // unusual navigation type after creating or restoring its WebView.
-    if (opened || seenThisSession() || hiddenToday()) return;
+    if (opened || seenThisSession() || hiddenToday()) {
+      window.daedongDedicatedStorePopupSequencePending = false;
+      return;
+    }
     eventLayer.dataset.controllerState = 'scheduled';
     window.clearTimeout(followupCampaignTimer);
     waitingAfterIntroClose = true;
@@ -196,6 +224,7 @@
       eventLayer.dataset.controllerState = 'opening';
       openEvent({afterCommunityIntro: true});
       waitingAfterIntroClose = false;
+      window.daedongDedicatedStorePopupSequencePending = false;
       settleAutomaticOpen();
     }, FOLLOWUP_CAMPAIGN_DELAY);
   }
