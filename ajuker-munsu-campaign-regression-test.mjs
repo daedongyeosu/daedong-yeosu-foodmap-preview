@@ -1,3 +1,4 @@
+import {beforeSharedHero,beforeSharedLinks} from './scripts/shared-campaign-baseline.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -5,7 +6,7 @@ import vm from 'node:vm';
 const read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
 const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const id='e66f136d0e468b6e',name='아주커치킨 문수점';
-const hero=read('data/hero-campaigns.json'),links=read('data/store-campaign-links.json');
+const hero=beforeSharedHero(read('data/hero-campaigns.json')),links=beforeSharedLinks(read('data/store-campaign-links.json'));
 const campaign=hero.campaigns[id],link=links.campaigns.find(x=>x.storeId===id);
 assert.ok(campaign && link, '문수점 전용 구성이 있어야 합니다.');
 assert.equal(campaign.storeId,id);assert.equal(campaign.title,name);

@@ -1,0 +1,1455 @@
+{
+  "version": 1,
+  "previewOriginalPizza": {
+    "storeId": "068b2ae8fe32874a",
+    "slug": "eat-pizza-yeosu-yeoseo",
+    "label": "1인피자 피자먹다 여수여서점 전용 대동여수음식지도",
+    "title": "1인피자 피자먹다 여수여서점",
+    "meta": "여서동 · 1인 피자",
+    "slides": [
+      {
+        "storeId": "068b2ae8fe32874a",
+        "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/cd8afe10-0a22-4aa5-871d-f4fe518a8876.jpg",
+        "title": "1인피자 피자먹다 여수여서점",
+        "meta": "[1인] 피자&파스타 세트"
+      },
+      {
+        "storeId": "068b2ae8fe32874a",
+        "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/0ed128cb-dc47-4c6c-b0aa-02c2cffd85cd.jpg",
+        "title": "1인피자 피자먹다 여수여서점",
+        "meta": "[2인] 둘이먹다"
+      },
+      {
+        "storeId": "068b2ae8fe32874a",
+        "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/8bc7ed0e-6a0d-44b8-9457-5ba715c0154c.jpg",
+        "title": "1인피자 피자먹다 여수여서점",
+        "meta": "[국내산불고기] 스위트 불고기피자"
+      },
+      {
+        "storeId": "068b2ae8fe32874a",
+        "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/bc7ebe62-e2a9-41b5-b295-aa032cd3fa2e.jpg",
+        "title": "1인피자 피자먹다 여수여서점",
+        "meta": "[1인] 혼자먹다"
+      },
+      {
+        "storeId": "068b2ae8fe32874a",
+        "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/a2fc71e3-6606-45de-9f34-16d369734a3b.jpg",
+        "title": "1인피자 피자먹다 여수여서점",
+        "meta": "[오직피자] 피자만 4판"
+      },
+      {
+        "storeId": "068b2ae8fe32874a",
+        "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/12/abe8351c-22e9-4321-bcd8-89ad277e3274.jpg",
+        "title": "1인피자 피자먹다 여수여서점",
+        "meta": "[8가지맛] 플래터 A"
+      }
+    ]
+  },
+  "stores": [
+    {
+      "storeId": "04036067da3dde5f",
+      "name": "킹콩부대찌개 여수점",
+      "foodPhotoCount": 6,
+      "slideCount": 6,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "0d916d20f9173b17a9678dab1f34e3f5fcffaae453e935bc3faf6ced6289c180",
+      "imageDigest": "c402522632578217b6d8a38b56b5be5379c22729f1b63b7bfe5128d1b9493d71",
+      "linkHash": "714f8fda3c80049b8689915fbd72e14469d335acb762d042185f6a307cf000cf",
+      "qrHash": "8f6ebb4194bf22dc23ff7cc2f9efd69a85bdb5667b8380150605f15375eb5f00"
+    },
+    {
+      "storeId": "058bd6567dd3019c",
+      "name": "감성낙곱새-문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "90ed2bfc96defed001c64c5fc187ad1ab0af8c22e5d7981f230c772078a1be07",
+      "imageDigest": "10c14be7548d6d59d1be570d4df1d09138aa11f07dfcf82aaa4b0a81bb977aea",
+      "linkHash": "b42c1a05c69c804ae8c96c26d4c45fb995ab0c4c6f64c4455de58cd3e7af526d",
+      "qrHash": "5e78a6a43b8abbda64390feb1c0ff5f7ef579f58e4171256e1e649b89e1fb195"
+    },
+    {
+      "storeId": "0619092f600c5be4",
+      "name": "배스킨라빈스 여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "79b9bbb3c75b8e800711c4ce75a18fae46dc7b8724d38d33f6a231d1e91ac344",
+      "imageDigest": "c09251ca986ac2f9cf9015dc4fec622b36ff29ace20c0eba3fe72236ed725e2e",
+      "linkHash": "d7d8546af840a1026189d9bb6a744c93347a7d91301c2887c84febfb5c34d8bd",
+      "qrHash": "c3a3628811715ec656e40c187e33d73c9e818e90663edfeb2514077cf3e34df9"
+    },
+    {
+      "storeId": "068b2ae8fe32874a",
+      "name": "1인피자 피자먹다 여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": true,
+      "added": false,
+      "campaignHash": "9c01d7c2d06c7bfa18900c77b0d5344face3b39ac745bdc48c2978f384d71e5f",
+      "imageDigest": "5718e215fddfe4edfe4cebf8d3b084f994446d449a48bc115785c05f0655eb40",
+      "linkHash": "9fd23064423806d0a3178d6ed827d0265ebc4f2838452733e43648554c1c2159",
+      "qrHash": "0f8645c3cf0b8f6bf6ba1e1b68995b66a2b1c8cfe2ee85fd75834aaa424d08ca"
+    },
+    {
+      "storeId": "071664b07428a1d3",
+      "name": "여수회포차",
+      "foodPhotoCount": 2,
+      "slideCount": 2,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "2d95ba4274e0d959235c8992e5e9a027b32454222cb6eb9f0c130149160816e6",
+      "imageDigest": "c4b9335189eedb7fe7b9daeb7c31dacc210fb33aa8b550c7e12dcd6fd3d4b4be",
+      "linkHash": "254bebbca7981d31670ea0f8b9609ccad3cf87c1638849058f147d20a7870d9e",
+      "qrHash": "8e84e5b5ab9240931b067aaf47b59d85615367ce28d2a460a603061400168fe0"
+    },
+    {
+      "storeId": "078947ccc4df31cd",
+      "name": "임실치즈피자 여수점",
+      "foodPhotoCount": 4,
+      "slideCount": 4,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "35fc1d820ceb9a1af1cb74458952a23e7e6774e658274eddfed0553e3bb5a035",
+      "imageDigest": "a2e39c01d895e7f2d5db1055104ad47ffaacae9a8d8203aef831c02b5d4d5ec0",
+      "linkHash": "713b06e54e0a46371c495f3b7e5123d92693598a9facd3094619e74264cf1bca",
+      "qrHash": "257be880c9abfa81deda2a7556340d9ceb50d826b0c90714540c64243c0c48de"
+    },
+    {
+      "storeId": "0836fdf722805702",
+      "name": "굽네치킨&피자 여수미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "3679be0976c5cacff0565fc73d067b88b2602d798383d722e50d2ee96f237bcb",
+      "imageDigest": "4b9b0e1c602bb4dafe46e368443787c9d60ac8fc00709c187e63e94277ca99cb",
+      "linkHash": "74cbcfa7a21d5834a189ce359d1c5edeb281c148fc9abe15dd3276652fbee06a",
+      "qrHash": "21c9e3fdd3daf29379f2f00786dde9d535d6884312e6f09a1bcfd40494ca5f8d"
+    },
+    {
+      "storeId": "08e5e26653436fef",
+      "name": "알토랑반찬 여수문수본점",
+      "foodPhotoCount": 1,
+      "slideCount": 1,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "9699598f629a1203846f800d14994b8a9a515ad0757e4dd5016a5af4a133ac7a",
+      "imageDigest": "2d46dddd682f9a4ecde3eefb230e7c3d1099318d45f07709ecfb55478e7cae94",
+      "linkHash": "73f7f010d3b5a9f4c9c3c3dd926b6eb3c2b9e940b7eef182209f1d4a2dfd02dd",
+      "qrHash": "d2c5f81d84c30011d1abe272a583c0637cd79c12edbcd39a26506ff127eec6f1"
+    },
+    {
+      "storeId": "0987413e7ca12e2a",
+      "name": "백년족발",
+      "foodPhotoCount": 6,
+      "slideCount": 6,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "cfb2be7fe58256f450d38a29f7c6b2e2a3ac689b4317438ab42c19088f61f3de",
+      "imageDigest": "d281e6d9c0139c984a7832cf782bda274bfd8f48918ac69355001ec2e4cac83e",
+      "linkHash": "4d7e22a9de7047389a77b567db683c58037aff52f7a47219e37abec946eeebb5",
+      "qrHash": "b9735637b573aeb62df70cb22e6080b7b5a992c1cb778448bc27a425d21ea448"
+    },
+    {
+      "storeId": "0ad5341dc696d4f1",
+      "name": "맛있는 반찬",
+      "foodPhotoCount": 7,
+      "slideCount": 7,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "f721cab22050d99fd9a7b9b109197b133f9a0671b6d55771bdc327ce8cfaa9eb",
+      "imageDigest": "c4d2e0c7d63c1b2b546d86d109826c43daa1ad401defd1dc8ac96e6c78572fa5",
+      "linkHash": "cd93ef5093506ffd9094c79ee350b85cf48b64106830d84f50969dfc85faa0a1",
+      "qrHash": "9e308e10caffe113592bf0948bbcf43c204401a5f8a0ce746e34b89d4cef7ed8"
+    },
+    {
+      "storeId": "0b7affc0719f0e49",
+      "name": "존마틴버거 여서점",
+      "foodPhotoCount": 10,
+      "slideCount": 10,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "2af0a173cce301768c1d35a69f75f8bfa8d7a238789c8c4c36d10b87e900abfc",
+      "imageDigest": "53f5dac5f7ac0baa95e83b4eeca8674ab8ebdfaeedf2ec5aabb502d85a474c9c",
+      "linkHash": "a6ebba600c52949ebb33561d705ed06b3ed16ccb5211c125431c449fa468d738",
+      "qrHash": "22008b63162e75136fd93ac3168dfb223f382ff15348824358ffbcce8e08412b"
+    },
+    {
+      "storeId": "0e4267fb0e1bac45",
+      "name": "불야시불닭발-여수문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "cf88a17a4d31dc0270ab61d9a0b281ae1f9375a8de726d467e3c113f9be7e264",
+      "imageDigest": "204043e65b20747eeb9c65054db4f966b73968f88de679ca34954e82375820f9",
+      "linkHash": "73a4d9faab6bcdf070f7b65141953cdcfe0f2b899c5be263af047ea53b1df74f",
+      "qrHash": "e89bd34513e64b8bb4757c98a2a886dfa2c7dd7d62a8a504079303a48b9578bb"
+    },
+    {
+      "storeId": "11442d3b3328f951",
+      "name": "인생아구찜 여수문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "292475acb925bdd41142cf47efb6f1eb55517b6749c1f60687e5df2d2f7f870c",
+      "imageDigest": "2679bdb4f192300f6624a5002fa34d755f2d9151ee4754426f9cbe70bfc2d7ed",
+      "linkHash": "35e6ccf75457dd28726c989548c2abd661bff08c5a13fb51281929aea12838c8",
+      "qrHash": "bfe689b6389242409d1db0492d96b660b28bd811bd02e0ca192a47a7277b8f91"
+    },
+    {
+      "storeId": "115416d8f8939ff3",
+      "name": "여정식당 여문점",
+      "foodPhotoCount": 4,
+      "slideCount": 4,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "24bca5957b0b681f4fca58e3ddfd36c05bbcbe1e2dbca4f6f354d355bc19d1d5",
+      "imageDigest": "a2457b636147a5acc7a4b7cf26c15892db7228982f56b02645993e3044d24ff1",
+      "linkHash": "229a341731bec56a2d283dd1084ebb2c6d99546147d358e9249ac61ffa3a66f3",
+      "qrHash": "ac13011577bae993b53e23020e3bc8d285963108ee6052b290edc1acd424b77d"
+    },
+    {
+      "storeId": "153ce13058ce4fb4",
+      "name": "숯불한돈왕갈비전문황금소나무",
+      "foodPhotoCount": 5,
+      "slideCount": 5,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "0b24b431958639b9aab4126968718bd60c0251bc6d2023ea07d6549926123a68",
+      "imageDigest": "41e19a9e3772a3a2fd8dbda25837e6e66a817aeed9af36e37dfc885046435bc5",
+      "linkHash": "7f43755a1d0442cbbeb4b2ef0aba8031930a88f5bcb73f25f65662c0184987ef",
+      "qrHash": "82e598208878664144e5644c95d790865594ad9c384eea5d8040aae44c10b571"
+    },
+    {
+      "storeId": "1d729c41283c6026",
+      "name": "맘스터치 여수미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "1f931484324032f2e6bd480f35d8af8f2450d63d2030dfcf8c95dc5bcdc37e52",
+      "imageDigest": "4f4ae862a2720271fc0af9a16eefdfdbd4a8dc7b9e416cb23a286040174ec9c5",
+      "linkHash": "796c01584384a9f962c7e2807a5212ae678387f2b136b2c0563d0c8f34e1ba06",
+      "qrHash": "aa5fab684b539da7840cd64e30fb7bfe6889194c6ebc11d3b789b2af74bc97aa"
+    },
+    {
+      "storeId": "1ecbe36dd1efafed",
+      "name": "돈치킨 여수둔덕봉계점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "853af83ec31810d474cbeeb8fbc0391771e0ecabd3d1785aa56b36befaab4de8",
+      "imageDigest": "c5e875567d1118eebb9e892dba54b995e7d6012454eca903b9ec69d5d8dccaa5",
+      "linkHash": "c8a194dce7ad79be03b4cd4190a2e8ac188606fbe7d73f6bae4567ff3d517179",
+      "qrHash": "9f4a0a3a7a14cd744af48acda453cdfbc06f9722e8b92e19e62c2798d3d81fd3"
+    },
+    {
+      "storeId": "1ed1cc571c81df01",
+      "name": "홍콩반점0410 여수문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "54de01aefe54304f7a78e4a140e9af267e0204db094e0f772e7cbb2e88af1a8c",
+      "imageDigest": "f79735981c395d159c935bdbf9523faf94596fcf64cd9a7e11173b6ff531b8f2",
+      "linkHash": "0d01facf74fcb5d92c4cb4209d16f37facbffa68841f56a071f94bfdf2506ca6",
+      "qrHash": "673f3a71bd8cdcf50b591d199652e45cb4e63cc31d5da0d1ebcce3185b9c0635"
+    },
+    {
+      "storeId": "22ebc6971dc00dc4",
+      "name": "김여사네 김치&반찬가게",
+      "foodPhotoCount": 0,
+      "slideCount": 1,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "55fb21ecf047726c74fb71fca83f40e0551e549cb6d1c2213c61e0a845c8dd5c",
+      "imageDigest": "9cbf5ae79b6e594ae4e33934e5792d30a639ab4df4a846586361f54903f3f6d2",
+      "linkHash": "241b394d0ce7c2b0aab233205b599546d81170a07f0b1fac54e0d758268e66f4",
+      "qrHash": "78b5e1565eaaf137d699d3f0803bc7db567276681e4a7189298bf433083374c9"
+    },
+    {
+      "storeId": "23c2371e33a9cb1a",
+      "name": "파스타입니다 문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "74551bb38f2744bf7482e2b33c5928eaf577f870d6fe3a57067cf78fe46900f2",
+      "imageDigest": "9ba33a05d41ec321336436663cc50fc64a1a9aa41b1b115c611b91b0b7542682",
+      "linkHash": "ba8e096c249b8f9feaf0bc3e80ed8eb97c66a1a1fe2027857b66f1331e455f31",
+      "qrHash": "474b6f939a904f82863b151d9a96517f36bd6ac95d5b2912ef56ffb2c2fa532c"
+    },
+    {
+      "storeId": "25893c565c1564bd",
+      "name": "진리국밥 여서점",
+      "foodPhotoCount": 0,
+      "slideCount": 1,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "4f65a6b4dc1e5bc04f593053ca21488e461892c5d67b1835e6b77cd2605ddd02",
+      "imageDigest": "c167aa9fcc3dae1c7e74ac0793970442bf8ad350bcbec919b3f61b69bbea751e",
+      "linkHash": "631e0ca25ccd8263883d2e0cd11ba0760261d4833b943b040a8c85e82c8374d9",
+      "qrHash": "f507325fd63ce06ecf01b5fe1c44c3ce9d757b4597ef26ce367254c84062f90c"
+    },
+    {
+      "storeId": "268ba80569c864f3",
+      "name": "상하이짬뽕-여수문수점",
+      "foodPhotoCount": 13,
+      "slideCount": 13,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "410111925080771fd9416634140291c3628a39d40652b43c5c69ff0b2b1e462e",
+      "imageDigest": "6d3854ce45f6b06b16e56ffc39123c83266047e3772be55849b57aae92adefb7",
+      "linkHash": "777f9a219effcedf4002342dab33d272a701f0503c8aa34dcd42f48bc33014f3",
+      "qrHash": "5a224c9ba08f1dca491dedacce370bb906399e958164818bf8a8793341f3a241"
+    },
+    {
+      "storeId": "295dc97b6abaf2e2",
+      "name": "중국관",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "5d6dad611017824a130a723b1640f6c0f2bbb02fa6ee7f3e3eff31658c3d80fb",
+      "imageDigest": "7a96291386074d277f300221e894adc3c743d3e6a80f02482820f5b7e70bba11",
+      "linkHash": "22cec775f55fe6fa108ab493c64e3a1f10c891839e097b44cd8799d851f48241",
+      "qrHash": "0ecf02e4614d33d6f21764dff4c2a5bf51fbfdb024ec267b9f6c0437f4cb94e9"
+    },
+    {
+      "storeId": "2a45528686ae88b8",
+      "name": "더벤티 여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "1bc03f9f5d16feeb3a108a85c2d87fa969fce90dcb19a65f5df49f023bba5c89",
+      "imageDigest": "749538ebc360dc296c1e721437dac7a4a071b8014845278a3721bb623f4cdc84",
+      "linkHash": "2ce271a0c2a8ce3c14750b2033d94d9cf64d022932adecd68b9ec492f07ab33e",
+      "qrHash": "c76a9d0648766f4a3799da2e352288a0f73937e9da0f96cdfd7e50254170125f"
+    },
+    {
+      "storeId": "311e2ea8ad6b9869",
+      "name": "1인피자탐나미니박스-여수점",
+      "foodPhotoCount": 11,
+      "slideCount": 11,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "0cd7fc464f235df97b1946ef8e7fd5d23d799a350bcfcda5e73790233816c96c",
+      "imageDigest": "919788da33f747ee280dfd2f2b7f1304cfb32f5b5b8cfcb3ac02f73620b0a797",
+      "linkHash": "76902cccee22117f9826900425799f138c7a035e863677c466614b2a4e8b8d44",
+      "qrHash": "55a640a3a815441a0e48330782fa320f9622023af8c2fb01f6e887016ccf2474"
+    },
+    {
+      "storeId": "340a17ea324662dc",
+      "name": "천화마라탕",
+      "foodPhotoCount": 3,
+      "slideCount": 3,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "354ef092d91f145cfba9fa537aef180d6aca70d1e56d1dc492301fe47e127730",
+      "imageDigest": "0a675801919575207e82642ce20991192e774b182d17750839646b4955beacdd",
+      "linkHash": "25292dad5c9875493836f8b9ff5e0c1ad3e3a26412d9b7b7eeb06f72196997d4",
+      "qrHash": "f0f591ee3b33a84800eeb1b7d5b6c743dea1be29424f337dccdc416f25f36bfe"
+    },
+    {
+      "storeId": "361f855efc21c1c2",
+      "name": "가마치통닭 여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "0b5172821ca0e5bb46d04d42062dcf29df065e307ac8203dbec1deca79aef72d",
+      "imageDigest": "396bab2efdcaefc48f5bfbf6f266ff9286494b67c91566ccb82b7df69aa5f092",
+      "linkHash": "31c1465523d0abb27e0f6b74ac9bc73a5830e3e37c305c442f1c16bf888623bc",
+      "qrHash": "7e08ebd59923f91dbd68ad1d0ab668cb7dc06b65870b9a55bfc339616daab1cb"
+    },
+    {
+      "storeId": "36419c4127ce96c4",
+      "name": "호미스피자 여수점",
+      "foodPhotoCount": 6,
+      "slideCount": 6,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "865dc88b34c3e6ea1341fe5681bff80f64a261eb04b1224f70e2a9a906da2ed7",
+      "imageDigest": "8beef93792b2d36cd7d62262faf64f7f43cbdee05abdfb7a676d37aba9563494",
+      "linkHash": "b519590e7aa5a993911747d15327ace947f77899d4225735d5293db7271c212a",
+      "qrHash": "3abb8cfee10c57fbb3ad998f5031a5bccdf47b5d42968d8e44d550a040dbdabb"
+    },
+    {
+      "storeId": "38f4e2e9e89a61b9",
+      "name": "여서 육감 문수점",
+      "foodPhotoCount": 9,
+      "slideCount": 9,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "7e6457c03c5758b87cdcd454e3c81021a8cdf0e5c85ca863372ab64da808d4c7",
+      "imageDigest": "2a8bb653e206f64128df8bfab5c85ca78ffb63716f9c503a89c8235dcac9cc39",
+      "linkHash": "1cfedcb508dee33eea19b31b296a2da684e2c7e3437aa03cec6014aec49d56cd",
+      "qrHash": "9c5955275618ceacc6142161383bbcd1c50b341e9e73439facd270ba59535158"
+    },
+    {
+      "storeId": "39c1c22e17276c78",
+      "name": "입큰아구&알곤이찜-여수점",
+      "foodPhotoCount": 6,
+      "slideCount": 6,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "83487e682e59aae768c690990941ca20d4f5e89b5e115a3235d883a5d8fef755",
+      "imageDigest": "dfc4713a163a687c27b32402ef3b42073cbfc76512eccd8abb205ef63498da62",
+      "linkHash": "f6020211c48b1bf331feb4e016d4ec0f6eef57722f2b00868240842b1dde51d5",
+      "qrHash": "f09090a54b07f71f77cdd9839365482fb582f4005a557aedcc4dccc7d2ac240c"
+    },
+    {
+      "storeId": "3a6078da746f1953",
+      "name": "라홍방마라탕 문수점",
+      "foodPhotoCount": 4,
+      "slideCount": 4,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "cf935096bd97ccf5ab70e90825a93ca614983861055e03763b0b320552883147",
+      "imageDigest": "92618ea907434bc0399f167c52e4e0a5f47a8c9c8a823e3552590ff4b2707d08",
+      "linkHash": "1e7b8288133dc57df8bb3cb849496f53d783b2a7420f0c2d8cd798c1d4eea1c7",
+      "qrHash": "f3a418f7806b07b7b766b9939c927892a18fc4f72e3e6246ce37bb372fa4cf90"
+    },
+    {
+      "storeId": "3ca0807ea15bebda",
+      "name": "버거킹-여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "333c85dee40f5591eb0fcac19e8f5083bca22377c48a080fa6f38b5a79e4f6e4",
+      "imageDigest": "a8162c49ef40a6dce1d8d2be02712a1092283ef1cc3bea3704a96d812042d366",
+      "linkHash": "3e3f1cb5deeb7ab0e4528fa0ae947f3e90202af5766cbe611ed9c68fa853c218",
+      "qrHash": "92a44be6f34f19e89ceeff42bf1b3a86a2c9f6fbddece0037488452a3271de93"
+    },
+    {
+      "storeId": "3d512878922a19db",
+      "name": "초이커피",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "6fe6de39550558812ad08374dd1a8f4ffc9ae8ef720a93fa4828722a6d382003",
+      "imageDigest": "dec532523237ef0f3e5e3be7f846c0112fa029cfe3288748cfcfd7bfd1d91fe4",
+      "linkHash": "ad5265fb4947e02c04f0fdf3c84c807470e90dcedbe8af15748557ad807a7885",
+      "qrHash": "45bb3df7b09000c36295222cac38403d79970f61103a2921293ff2ce7b059917"
+    },
+    {
+      "storeId": "446987616ddf6443",
+      "name": "내조국 국밥 터미널점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "b214309eea1795651f340ee792b66fdb0c72434f950b2fe71255b1f1fa7211e3",
+      "imageDigest": "b92238c7911f6c0794ff457a6b504bb61554bcfb16daf58317149b69828eb021",
+      "linkHash": "21fa908066f81a2f9f238fbd823454c3a38437ad70f230dd9fa90452a20b1796",
+      "qrHash": "e27efcf31a54664502703a111b429432cba2f115d9c06874328457202903f520"
+    },
+    {
+      "storeId": "450eb70e506c2de9",
+      "name": "금쪽갈비 여수점",
+      "foodPhotoCount": 6,
+      "slideCount": 6,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "26f46a820a97a08d0cd02e72d609a07dd1a201321636bffe10f2f9dce7302be4",
+      "imageDigest": "85e23755f307e86f4136adfde471064836d700f60502f15a61553568a2a3ef91",
+      "linkHash": "22ccd94ea234149139357e7d4b93cda97cdd7c7186581b3597a69dd98f08ba2c",
+      "qrHash": "4a5270bb506626b3255b6aac3133f494eb14073eaea1608fc8cf33ebf29fd247"
+    },
+    {
+      "storeId": "452526604d3b10c4",
+      "name": "더벤티 미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "750ee92b2183f8102595221da551ea37960fc5c06fbf30b981acf37540b53366",
+      "imageDigest": "79da9ac7dc8ad1fb485d19977f68654c488063b4e1c5f4c318fc61618db640d6",
+      "linkHash": "850fbc901b46e5c91f55f433e4131c88223e204e939470528b4e010da42a55f2",
+      "qrHash": "40a07ccf2c2092b12df2887962bd5e681ea954caf7b0216fc55397fc615deef5"
+    },
+    {
+      "storeId": "4674f8f434b1796a",
+      "name": "바다양푼이동태탕/찜 문수점",
+      "foodPhotoCount": 3,
+      "slideCount": 3,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "52b618b02f8639098bb022d86d4cf5e820fe8a3419bbd5f6a5a338f7a13b3bbe",
+      "imageDigest": "f7398ee1dac77a52671522d92b354307e7444d00c3368eae3f3f9ac3a55200d0",
+      "linkHash": "121ca698074889ab124b60d32093fbd2c47276d43f5fbb62fb70eba50f427662",
+      "qrHash": "561ee7d6a1c70a58fe39de8dbee487401af4bfe33db9713836d6e8101c49283e"
+    },
+    {
+      "storeId": "48033be58064b50c",
+      "name": "오븐에꾸운닭 여문점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "e7b0e946206873af052b065321841885934c995ecdbee92ca5d9535509c0bbe8",
+      "imageDigest": "65eeb342c5a5fa8f0f3aef406009b879cd0c98d549d4a439be111ec2a23d5e61",
+      "linkHash": "33d1960200da7281ae21a231b5fb1d003ba179ccab4349210a63bd3d01bd9b70",
+      "qrHash": "253e329fe7d0a0e808405b29c449b8187aee059382bc458c0c1267bfe6907b81"
+    },
+    {
+      "storeId": "4a03cc414bf38135",
+      "name": "앳퍼즈",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "2a7c3060c44a78f7536ec3c98f21236fe240acb713be48db5e599d3e0101813d",
+      "imageDigest": "7cfbd5689667b3166b9139f7a6e899fec99b3c5e878786c433e47c8d2f844823",
+      "linkHash": "f8f4f5600e3cdfb76449a65f15cb5758b8d3daaa8224541c68e794f98caf49bc",
+      "qrHash": "e965dd85cf1091b94260403cc1432539a7c88eb33309f565b34178b0f8b4ac15"
+    },
+    {
+      "storeId": "4bf72e42f7bbe1d6",
+      "name": "청년피자 여수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "65a02467fc0947555b203cdd78ed771944d21c0a9bb21d47bd289dd184a712d4",
+      "imageDigest": "0935793552c9efaa49e94ade3cdaedc964312f6c9a7a4efd81d2c1476d29c9c3",
+      "linkHash": "f68248562a0a2f6b30d95200e8636eb1379876ca2435406475a1a9bef59e795f",
+      "qrHash": "aedc2fb099deb0e3722d718cb15e095ff0de751a143d97c1695b790f5d0ec4ea"
+    },
+    {
+      "storeId": "4f037e971e5f6336",
+      "name": "오꾸닭 미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "35d7b0b6285d907bf42f5b5c02289c6fdd784af0744e2ac58e823ca0a6a35f2e",
+      "imageDigest": "42c1a105822112ec8ac308b8497e9c20fa28b6f9236350553b91ef8499c28b84",
+      "linkHash": "40d83d070c89d79d98e2ca7f8890f842d8021aac428d5e05fe248e6a97035dfa",
+      "qrHash": "726774073ea2c6dadfd025a2c4b4f63a4db87137512a763c89b60b55e520f4fd"
+    },
+    {
+      "storeId": "51ed482a660b8247",
+      "name": "바삭한 휴게소 여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "f1065d76845559f9bd3c433351c40d86a4f650c781c1ecd6e41c26283b4aebbb",
+      "imageDigest": "94ed248325e7c7335d1867d03cf873022278bbf325ed8c33320e8df2c0e4c969",
+      "linkHash": "71300316ffb4bfb1f7fa56808702c68b4cc4a90d2716494297474da915c6e05a",
+      "qrHash": "da76cf4667e878c36fee7016fe4b3b865bd3c0e6bdba56241bcc9552c0c26751"
+    },
+    {
+      "storeId": "5f46f2c8517e2bfd",
+      "name": "투썸플레이스 여수둔덕점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "11f9098951f1772f80c4d81280f87639c814c460caef7da5596c626346e80718",
+      "imageDigest": "7348f721aa66d8bd2d3aeed5f629c7f471297c20a38e0f1d38b4402c5e51bb2e",
+      "linkHash": "2cd2a61ec094eaf711c455004d0c782ff80a67b9b7ffb20599ea4f285d46ec32",
+      "qrHash": "264bb64756d4b9ddf5b9953d63fd65e45ffd63b68b0245a7ae407c9303bca0bc"
+    },
+    {
+      "storeId": "6047251f50214125",
+      "name": "햄토피아토스트 여서점",
+      "foodPhotoCount": 11,
+      "slideCount": 11,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "96f0624854a7dddc3b8f319c0a2a06bad18d01bab7b48c6220c35d26fd4792a5",
+      "imageDigest": "a049182ee5eb2a7d3b689ea4fe722db20b89f289da5b08f8bcf53fd4b0eedf4b",
+      "linkHash": "9a9a75665b24eba11ce5da85ad4454c646bdfdc82b819c9dfd8ec5db7203ab51",
+      "qrHash": "5d6dd55add40a16d6b0f9fc0eaad6957d28461e72b725a97a610f628eac17513"
+    },
+    {
+      "storeId": "6739ddf6736ef934",
+      "name": "여수하늘",
+      "foodPhotoCount": 11,
+      "slideCount": 11,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "4606d20719ae4a6407bd2583c3008da18776afc28ec78400e20c275944a65f98",
+      "imageDigest": "88d6fd3b34c85743ed16eb8e56d2313091904bccf51718c1531d973d290a6e03",
+      "linkHash": "55b9766ed22d1b7b9a7d5fc683ffdb3104bb757b032c52e100dc239455e34282",
+      "qrHash": "3c3a89943e2e36c62ed88341b75c3be6d852c9992618b1efe2d7b3fe135f4145"
+    },
+    {
+      "storeId": "68360b2d1b0e6457",
+      "name": "컴포즈커피 여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "42e63b9e65a3a8750516ce66b51f7c053c375a69cb1810109eda04e33559542e",
+      "imageDigest": "4a2daec2767b8eb85b93f069cc903dd2967b5e87b6947434d8746af77ef7f4fc",
+      "linkHash": "d55da5fe0132c0a5c0bb2209a9e577fa62064c47bbd5c99266e8b506e5155644",
+      "qrHash": "52e94a2896b767890f023e9b50079c4306d10f5023b0d6c50dfd23f7b6c36867"
+    },
+    {
+      "storeId": "6c3386fc9f4a5b5b",
+      "name": "백수초밥",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "869f053ba8e75beed03a130ea96df2acb326b23e77029a5f2c28199d443c8fa9",
+      "imageDigest": "f6854a0a9b81c9ce20d9b4d0b49e74da08ec44785c5f5bc25586b272fe1b569d",
+      "linkHash": "de9b51dba823f4717d5736fce4980dd4b8f4a7d6bce23b840c0a564560c0eb9b",
+      "qrHash": "373228d82b7ffa5f318b86c689a1dfd14facabd7207483def991ac418fa26ffe"
+    },
+    {
+      "storeId": "6d48c7e2bca79c18",
+      "name": "계동치킨 여문점(먹깨비,땡겨요로 주문시 음료스 서비스)",
+      "foodPhotoCount": 9,
+      "slideCount": 9,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "0d0f6a8e0d947263b5585355026db0c11bd16761db3a1b73bd3be55a3217551d",
+      "imageDigest": "7e02a5291fd44fc16c5c938ef7faaacbf019a5c705179b6267e4e0aa53e45a49",
+      "linkHash": "f09b8a68456fa3e4ae7ed109d26670daedd45a375e0d9a02f3bce2e3c033195b",
+      "qrHash": "4744136f6e013347b1aa42a4fcccf139c2e185ff6964a212fc7eb854c407fcad"
+    },
+    {
+      "storeId": "709d27cafd434e30",
+      "name": "시민족발보쌈",
+      "foodPhotoCount": 11,
+      "slideCount": 11,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "f089f04dc9a6264959f0667f6cf3a6af18f4d7718493c6ee62657015fbf8e2fa",
+      "imageDigest": "3a8a4f187b466b9aed39cadae33f6e38cc1a41410a40ecc2758f5ccc76ffe7af",
+      "linkHash": "a030827d0cf45e7041a352bc8c14c0ed69f037a727a380e2f42c8b97a3378895",
+      "qrHash": "8defa75f2f51236a03c342fafb5fe0236b8ada8b0b5051761c3b13f71010b42c"
+    },
+    {
+      "storeId": "718031989449bc32",
+      "name": "가장맛있는족발 여수여서점",
+      "foodPhotoCount": 3,
+      "slideCount": 3,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "7a43440ccaf64c2400e8fd43c87aa3d3a5d1f801bb7cbeb6d9c8a80d2d2e2daa",
+      "imageDigest": "c533d28fba5ff2f735b2f9015f9394787f2614dadacd1d0a01f9ae1d38c7ee5e",
+      "linkHash": "9730c3ce29b199446c13379ff28e27694124bd74ae86be1d1cfd08bb217b7af9",
+      "qrHash": "dd10307650874cda1daaadf86af1c863c8215e56f8db9d9dfe743643bcfef15a"
+    },
+    {
+      "storeId": "720bbd7fb87816a7",
+      "name": "반올림피자 여수미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "6e1e3aba1652e50b5798ba73a61f5bab289045e2eb023eb29b3fb8f0ce6bb36a",
+      "imageDigest": "37ecff057cca2e0e26e5dbd0e9f6c85bab08508ac532c8f9987662061e21d664",
+      "linkHash": "c204af4cf55449888704e239e0998cf64d1f8438e68c8047ab77c0a358014dfa",
+      "qrHash": "826d4eb5c92f2bf29f70f5cb9ef42cc4b1e65941311b72a4da0c9886fcf1d48a"
+    },
+    {
+      "storeId": "7432d966de3f75ab",
+      "name": "감탄떡볶이 문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "5f755ea65c15b31d66675ec758f59e89977dafd6d7838beebc6c144154fd01a1",
+      "imageDigest": "2e2ef5f5a2dedf148f5788e6d554df63625b7a01b815012847921fbd1c1f1888",
+      "linkHash": "185c13a7c32806b5eaa15a02f59dff3381dbe101d14be8d7437b9233b46686a6",
+      "qrHash": "42e228be5ef2c9bb49aa3bc52da125653c490925f7e05cb68bda0cc88b39890c"
+    },
+    {
+      "storeId": "75b59b6f39651fc8",
+      "name": "자담치킨 여수미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "9353f9e4e7df71affe8786b7b0c8caa23f2982bbb0aee8199270e9a842312a7a",
+      "imageDigest": "8b69b449bedd7992c8fbbfbc990a9d1060d1aeb2673d37d03c98f79a75cf3f1c",
+      "linkHash": "307bf082973e32b88847c607047c1d3a80cc66b989958f9f161f6a44559d0aef",
+      "qrHash": "1f152a8aaeb500a44791ee05149779247ac223a6b804b82f4799da3d3e40ae90"
+    },
+    {
+      "storeId": "78366e913c324782",
+      "name": "정남옥 여수점",
+      "foodPhotoCount": 10,
+      "slideCount": 10,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "b0cbadf5f3b788c5592b364caea92b1326dde3ff1ec3573c7e2c96893d646c81",
+      "imageDigest": "d13e045cd67b7908aa8c147acf1ede922af21e58ea36c34305702b746ad33ddc",
+      "linkHash": "53fc938978ff782aeec3be4e28fe83ed8c2cbe4d8d36e60de0c456f41a8ce1c0",
+      "qrHash": "17d8a7b927677eca4c7f1839227d8a5157d18e09c5050210d6911a9efd7889eb"
+    },
+    {
+      "storeId": "7a01cce02afa8141",
+      "name": "주가네김치찌개&찜 여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "a26f845461583de4299e427117118fa6f172cbf264dd0ad1d3cba82c50d696aa",
+      "imageDigest": "0bf6e8dbdec1f4059b0103a8e2a009689eb06c5367cc3c8c1b3cfc38a04b304d",
+      "linkHash": "3f09095fe3fc01666b0c89e2556155536e09186ca5dc03ceeee1f80b65fd28cf",
+      "qrHash": "c42265cabf3806af248108a816888a10f67aa3ab98232a40ffba6a299c5dc270"
+    },
+    {
+      "storeId": "7a151d290e01dc51",
+      "name": "미치게 본점",
+      "foodPhotoCount": 5,
+      "slideCount": 5,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "685978bdca93995983e00ecc187d2fa346682ef8529b6380772a450f4cb69ffb",
+      "imageDigest": "9ab6346f852309430246f97e42b38064ba26b91bfe77a13d614c6d13c2f07910",
+      "linkHash": "7e855edb3052a36d8f55b3f7aec68dcc9c1e50cf255423a8e1652d130fb44cf3",
+      "qrHash": "1a67f4bfbe87c3725c23aafd317159413095b018ceb656097add49a4a007e2fc"
+    },
+    {
+      "storeId": "7b354c2aa6ba7b26",
+      "name": "동네커피 문수점",
+      "foodPhotoCount": 0,
+      "slideCount": 1,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "1ce05f6c14fb4dffd64cd286410e6bdebe88b3bade74792690fb0dda71625e96",
+      "imageDigest": "70071ce2dd22ccd09cb9bff4ccf5d3f504c40a778c7910960b45061de5d57541",
+      "linkHash": "ac1668018faf8c2a4e735e83501a0d34840430d484d0756bc70faa0516b2e0cc",
+      "qrHash": "996e9accaba820f3e48390a92907229aa4ff80070eb5ca662da21d576dcfd7ad"
+    },
+    {
+      "storeId": "7c03a236a9c011b4",
+      "name": "봉구스밥버거 문수점",
+      "foodPhotoCount": 4,
+      "slideCount": 4,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "08df2adeafc95e62439c416033d3135c37585d0cf9a454f55350c25fc57d089e",
+      "imageDigest": "8d722ec0f1106c19af26fe61ef0fd018c05133d94976e0516c3873429617bd80",
+      "linkHash": "022e73bc55640e567e4b743356428b79bb78bf65be101f61feac9cf8a83eb970",
+      "qrHash": "9f27aa12203061adcef7b6ce57383cfde28eba6f95ec29ecddb5f84f01910758"
+    },
+    {
+      "storeId": "7c9ca9471d15acc4",
+      "name": "제육대가 여수미평점",
+      "foodPhotoCount": 5,
+      "slideCount": 5,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "b6924eb13f69b84fde41a4809016284dd804750e6eefadd872027db6434a46ef",
+      "imageDigest": "5e2d1f3623964c1fc9b3a86749fc414c989b490a85443ae4ee6b193fb383789e",
+      "linkHash": "ead0d794de74941e209a0350af1e0d0af68946361297852a31287038fac54781",
+      "qrHash": "87ab89fa44441e24afbbadc9f2e1240428f3fca282938cadb1985135b5081193"
+    },
+    {
+      "storeId": "87690c0088d25fc5",
+      "name": "호맥 여수웅천점",
+      "foodPhotoCount": 0,
+      "slideCount": 1,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "e17ffa3407d5f4d66eaa451d903c5e1bda263a3d0dcb040fd872f680db6b57e5",
+      "imageDigest": "087b7567fa67941004c35aff80aadffd99017ccea5bc865e5393e44ac64dd6e6",
+      "linkHash": "81670c4424811baebe80d7c4f6b6374ada897cc451c188c53c9288bedb541dcd",
+      "qrHash": "620a6756c8190c6b13f238a8f2864fcdc02cd0630c301b2e09df701559417010"
+    },
+    {
+      "storeId": "8d36892e33e3536b",
+      "name": "봉명동내커피 여수문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "5eb68d470e6d440d3698c2a2a3707d28ae55ed0df8be83bea00013fde4f2d235",
+      "imageDigest": "0c98c09f971716a0f1d3e045df86d79f08173710400fa9fa1c6e7bcd65e289ec",
+      "linkHash": "2ef6fcf4b1a0350f4961acd8b974d013efae86ca48901acf0946dce4237ef8a4",
+      "qrHash": "a8d1e4f2ed69b208be2ef60da08db0d5583c6c25722f06b97fe9b29f4351a7c7"
+    },
+    {
+      "storeId": "8d96b4a2fa768050",
+      "name": "영커피 여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "252cbc5a13de0b87c7245e13565f23233cd4654284a4051e302923bcce3011ed",
+      "imageDigest": "16108e8e185ed9b5af7216089a232dd844d12267d3aadf2aa89c4c80622830fc",
+      "linkHash": "f792a0e6342cd5c76e2051d1733579656a49b8cefd01b6f29d3f836302dd6aa7",
+      "qrHash": "68640563a8d3132ac321b35648a1b0a118f44676a3969b1bd697c6d7319e9977"
+    },
+    {
+      "storeId": "8d9e961a6ffd106f",
+      "name": "쑝쑝돈까스 여수미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "df5c99b28ca6e8a19b7f822b2f1b3ccdaff7ce724a70a668501e31b4b7bb86a4",
+      "imageDigest": "d543aaaf07d3f554671a8725b8758132e53fbfd7438dfc9407eca980dd268bc1",
+      "linkHash": "b9142f344e37e03d28592de546899d282186179cf5181fc65f9cd39a8989553c",
+      "qrHash": "611b2d7258b91199486ebcb8724172068b248c38d93becd07c5df92a058ef789"
+    },
+    {
+      "storeId": "8f66820256615aa8",
+      "name": "미태리 여수웅천점",
+      "foodPhotoCount": 0,
+      "slideCount": 1,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "1e5da3c7c2bb771b6615186f2894d4168540793a875450c7bd4ee6021dea3be3",
+      "imageDigest": "ad1b082a8fde4ac7fc4988682d4631eb7d01b4c3af883e820e94dbd801d20e53",
+      "linkHash": "a94b0b884a7cb901652f7f5ef7ef792dec660d657b8a5be3f71b78e194423682",
+      "qrHash": "2f14f5b835fc48683ee25d136d2346560034320940a0510e0bdf5bead2e3efe7"
+    },
+    {
+      "storeId": "903ac7154119b6eb",
+      "name": "함흥냉면전문점함흥옥류",
+      "foodPhotoCount": 13,
+      "slideCount": 13,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "604a92f467aca2e6b7acaf0c438526988414f60c6a72277fa7a90ddca1676bb8",
+      "imageDigest": "be910c6b3d2048fa57afdce77b47c0716afd9d1fc56e091efb5670c067fd472e",
+      "linkHash": "b433027af9d18d73c266c4e9f6ae687074cc94f275b73ce54e82db0a9a14afed",
+      "qrHash": "b217809f118168204699ed0598e8ae064aefb5c341d76710448c500d46d25845"
+    },
+    {
+      "storeId": "90cd1600c54ce7d0",
+      "name": "서영이네김밥 미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "53f9c48870e977913e583dbcb8804e3db16e7cb4aa74dc2890b203adc8af7349",
+      "imageDigest": "fca941e6ad5b35e5622035950d6b5247f68b006b72fb8ac7fedadad0572fa1ea",
+      "linkHash": "76c3345629d5f7fccb4970c81a28ba6a1c0f64e3f73b83c26d90ea56a441c5be",
+      "qrHash": "7bbf6bedb76118d309d0236ef84a76ded85862e6f330d5a99a3cb23620d7eb48"
+    },
+    {
+      "storeId": "9846929c4427576a",
+      "name": "푸라닭치킨 여수문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "aaf2a344c24fd76cc84fb6dad34e4d3974dbfb62b187576966efb0220ca2040f",
+      "imageDigest": "3243761a49b04b737ef25f17ca0c86b71fa0bd82aaea047a9165664e8d67dcf7",
+      "linkHash": "5489f4ac14a2b4fc8cd750f18a33e5bdd10ae478bd5fe50e2b517b508834ffaa",
+      "qrHash": "07b1342edcf28995b456f9be9717f4149c4f6d629c2675445d2b1a5e2a0dea38"
+    },
+    {
+      "storeId": "9ad90be6a8c96862",
+      "name": "회먹다",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "18c9e782f0b84392e9cfc6d2c6d5f75a48acfc474618f6be7fb7fe44e3587002",
+      "imageDigest": "c7e51f721632ddbb14aedd97d864eb24f0ed0a6e8cf70efa1a3f517654d88225",
+      "linkHash": "97553ea9410ebbadfca4209c1f7b9467b2095a355c2a4a003e892706e8f7c496",
+      "qrHash": "02f5101f48b98c0d612b31fd403fc04e398a374eabc9b49276982a2073bd5018"
+    },
+    {
+      "storeId": "9c7b5c85a8c79a6a",
+      "name": "마라월드 마라탕&마라상궈 여수문수점",
+      "foodPhotoCount": 13,
+      "slideCount": 13,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "ae45d3637b8f7611ffd7280cbdda3c3d9436b1a0142a7f013ed7a7a0d603baf8",
+      "imageDigest": "8e5d136554aa5e9cba8705a1f2bc0d8c06e9ac00031f7ed0cc230a46a785d1ae",
+      "linkHash": "202d95966be11f30ab932dda957bba0fd149075371b77d8636e46a081fbdd0e8",
+      "qrHash": "364f93f28f81f5d8bdc7345021641719fa498818389a1974ddf806702b197321"
+    },
+    {
+      "storeId": "a8218795099e637e",
+      "name": "오늘은 오므라이스 여수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "54b924e4f2b3108be510e07386b8a4e5bc016c26100289dae21e35935e450c11",
+      "imageDigest": "b7f20f2aab8bb0493671f5efcace96392110c8e6705cf12b2644147aa7b03390",
+      "linkHash": "f5174ce33054b25cca2d97e40fe19c1a6f247eb303f85010fe3fe0a18c742d32",
+      "qrHash": "22bb43433b4511841cf687363db9f6a1c80bab637fa6af5d0127c1a2b0c79990"
+    },
+    {
+      "storeId": "adf7b4ab161ec9d2",
+      "name": "RIB&TABLE 바베큐립 전문점(미평동)",
+      "foodPhotoCount": 4,
+      "slideCount": 4,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "0679353e9d21f4b78c9597d5e5708e779b8783b2ad41414c158fe8b0c7de35ea",
+      "imageDigest": "9e45255406620c24356d3081b42d86c063318ac298e99a7a77cfa46bdb8290cf",
+      "linkHash": "cdd8d8cdd5a25c7904ed0b1349f0238f9e38a2f7b779ca7f3639dc13622f33ba",
+      "qrHash": "e3e26bcfa4e2d81313589feb174fa83ca605a24addb17ceacadaeb4401680f0b"
+    },
+    {
+      "storeId": "ae191cbd3ba55e57",
+      "name": "하루끼우동 여수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "bb5b118d8d19a5ef401a8ee70384518242ac506f83541382d9c8b1ba8a7b9555",
+      "imageDigest": "bdd176fc9439461956d42d7b355eb1327315623a6454c75ff2d40b7804b53226",
+      "linkHash": "285d4ae1be5f38078a3987cc46d7acdfbcd0ad4706113dc76bfe117742c0e1a3",
+      "qrHash": "95e6acc28f8a14b86b3b735337c5e0e5de86dc251eaff95595ef0965927f38b4"
+    },
+    {
+      "storeId": "b016e6c2fc4217ea",
+      "name": "요아정 여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "0800da5e527d1dbfe2c5cc33c0a5287e3a37e05cf4633884dce30f72d56e6d9d",
+      "imageDigest": "0a8a40d1ca82cc34edf5202ff99fac314e906713a25a4241e4ea85b717c9b1c6",
+      "linkHash": "b89df357b26656286ee35776813df69087ef34df58072295ce23f0cea5353ea9",
+      "qrHash": "206d8f90dd92f4d490a7310ebbba7473123a4146293515a5e3989bec980b914c"
+    },
+    {
+      "storeId": "b2a05ccb34bcbbbc",
+      "name": "참맛죽 여수점",
+      "foodPhotoCount": 6,
+      "slideCount": 6,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "d04ea0112ba6fb34c053c976a97a8353b848960a56d5e5d74292ace3287ab88a",
+      "imageDigest": "4bca5e6841965f811ce776fc57f55a6be23d355aab1ad8352763e3961a4ffb9f",
+      "linkHash": "918437650f7f30f85aee32c3daedd69cb5dd3c7e94a04c7919bd26b4e981a0be",
+      "qrHash": "77c5b30e74273e38c0b8e308f59703fd16151f16c858bf89090fff3a7c187d9c"
+    },
+    {
+      "storeId": "b6d8f721f526761f",
+      "name": "원할머니보쌈족발 여수여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "f4f98168ac58ff82ce079d81ef1ce3370e1993b583d66f9f5ad919bfa211af79",
+      "imageDigest": "a9277e0a68ecb49947a721672143d377d4c26eedef4994d6b6e4011061bd73c1",
+      "linkHash": "3495c6f5e2031a9720b4838dff1f6f4b6c2cecd705660c4eeec384291c0ca2bd",
+      "qrHash": "a464f31e5219c0a1aaf0dc97166acc8874e2e38cb178813630ca7e099300a4b5"
+    },
+    {
+      "storeId": "b8267998349b16e1",
+      "name": "노랑통닭 여서문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "35376bae28cbaba6fdfee7f7964077652bc79c39979ed00d26a24d345fe7d25f",
+      "imageDigest": "e72511a10989f20de8971cb3eedbf2e2df11a27551f258ae531851facbdd6d26",
+      "linkHash": "bf44b4953eb61594746f45e0a29411092d05faa3f09d2a3b8752c7bf54c88b4e",
+      "qrHash": "cad3aa563d1a3fe514a4d335caf609a04cba9c26a10122c901cf8bceba962730"
+    },
+    {
+      "storeId": "b878080708bef825",
+      "name": "여수싱싱회&육회 문수본점",
+      "foodPhotoCount": 8,
+      "slideCount": 8,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "264f7de335b45c80a80c555ec321ed6feda8b2f0f9d7c0c690ebb1803e4e7fbe",
+      "imageDigest": "242aeb2335e2b6c04975ac6109a328b0f4c883147a91de170cf43e465219a40f",
+      "linkHash": "2ff83fae67fc81fa4b12ef9fd1802733a7b0f26295817e1c7d489d7ba4f62f16",
+      "qrHash": "9d63a898d6b5620f9ace089a8f0ac8613388509c1ea660cb9d46f7cc5422f16d"
+    },
+    {
+      "storeId": "ba870ddfedb99508",
+      "name": "본죽&비빔밥 여수미평점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "468014ebe1efb76551b9d763f3c13e6165e0e92ad06303aaa0de3cafee1fcbe1",
+      "imageDigest": "c52e07771c7acb87fb09b9c1ba9424db68fd57dde3d160fdccb1e2cd286d82fd",
+      "linkHash": "2b20746a1b28550fc6b2979d0533f6b8a89a1a7494301dd029e4c2a18974ca85",
+      "qrHash": "d9a304d1d414d232ad68efaaecf666a1cd6ea071e20a0bf15e73b7552b649310"
+    },
+    {
+      "storeId": "bf2718b01040ef53",
+      "name": "탕수육가장잘튀기는집 여수여서점",
+      "foodPhotoCount": 0,
+      "slideCount": 1,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "8184fa9cb37e003acf531972c087acaf94c57998796baf3410a167d5b53c8178",
+      "imageDigest": "bfeb4ab1479a53d28e5e3c45e60e95b98c330db4ae5816ee8d937325f3db301b",
+      "linkHash": "3184fd97a2d47aea91b3bba0df8adc74101623c4a36c030df6da5f4d88591cdb",
+      "qrHash": "26f3e0f437f960a41041f6c30519b4f86a9239951232f8a83b4c1acb51b60463"
+    },
+    {
+      "storeId": "c26995210f249627",
+      "name": "응큼떡볶이 여수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "e4330ea28cdd7a20e69de76f01b2f245fd603dd8ba19b2fa7afd8755ffe56b8f",
+      "imageDigest": "218a67a860a6bb47149fae385376d284a8258b18ba58840587b38823e97758cc",
+      "linkHash": "e1ddfdbede4557abf7d501963364e0df52c011e73b5f17bcc08605dbd6cebe8e",
+      "qrHash": "42943bfe7d7a3e91745eb3bac12e4195e4df1d3a405ac6ed5647a249e43d531a"
+    },
+    {
+      "storeId": "c2aa469b555fbbf7",
+      "name": "요이참치 여수점",
+      "foodPhotoCount": 9,
+      "slideCount": 9,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "f884fc51a8db909417dfa7a71c4e54387f3f8245b8e81825afcbccff4c945deb",
+      "imageDigest": "7185189d6ab5f2366dab19d3f3d670f612cb6e5013273075c9f7c3e512043538",
+      "linkHash": "6ad1547dd8cb54b411fb176b445e845b60aba173e15d7946ac497fd4bc46735d",
+      "qrHash": "be2ce130d4990b81459487d9ef269912626086e54f6c56d32d83e356cacc0e15"
+    },
+    {
+      "storeId": "c443f150b874d4d2",
+      "name": "LA통닭&포차 여서본점",
+      "foodPhotoCount": 10,
+      "slideCount": 10,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "afe171279c1cc81ad36e71e894c9c359b6ede7c9e16b7b4069b95c955383d8a2",
+      "imageDigest": "d10af08cfd5c854a33fa05d573d4b6e0b7b80c555a9d82d3cec12ea120fe12fd",
+      "linkHash": "07fc3f3af7b954cbfa110db04923c60e9b302b8edd76b799b1d80ff868bbcf96",
+      "qrHash": "d95458aaf421af819775fa80ef82d8ab530611be9e42a8e53ca5ff840295ffb0"
+    },
+    {
+      "storeId": "c938cc2ee278ce23",
+      "name": "배떡 여수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "28d150904299c7090ed85f78e6c6d8c4a808a5c68cd151d95f02aad3a031df99",
+      "imageDigest": "9dbeb74d33c8e395ac402a231e03ef534368b40657296f6db32f32f97984373d",
+      "linkHash": "110c1867cec8245cf4d6e3b50971fb285cba5f13b20fe97a534fbc5ee4dd0e44",
+      "qrHash": "0e3d6eebfbdfe3e8d6da54aeaeea21433cbacb18b369bd5d25ac48e6be07fa88"
+    },
+    {
+      "storeId": "c97c66bc78a649ea",
+      "name": "교촌치킨 둔덕점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "1bb64f5966e912ec4fbccd744fab10c4d2c1fb8526b7d17234d489e080f1a0b7",
+      "imageDigest": "bf4f8fa89852587e4ecd92b59cff04066f54b666e4a0b51eeca36c6787237e9d",
+      "linkHash": "f6eb266dc2351998af7411422e044b881e40b6332ab1d42a1b4a75f9366cd94f",
+      "qrHash": "de450891bcf52ee3b7601bac3cb6ba900acb5b350e8208759ce92b8a381b0356"
+    },
+    {
+      "storeId": "ca83cf1b2c13f8c8",
+      "name": "본도시락 여수문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "df500a1487a4685cd9ce96ab813e055fc1b99915979e20ee24d2d2d56243c0f2",
+      "imageDigest": "d8df642880bd08768c429c6da443197950bd3dc51505cace57b97442422aad25",
+      "linkHash": "c278e9c128954060f25a4597c49df9881570a97444b45eb9f6e16fd3ae153e96",
+      "qrHash": "d93e9b26f39c510475d0b898aa8d69b992b35c5d358e04b1e27ccf5476d44bd5"
+    },
+    {
+      "storeId": "cde663cc152446e3",
+      "name": "이다크로플 여수점",
+      "foodPhotoCount": 9,
+      "slideCount": 9,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "012b883fdb9908dec50fcda28abc7f8bf1c18f550d9f0618612697511d9ca7ad",
+      "imageDigest": "cabf6fa98ee0aea4da887f06ce0f5b8cb92381d6b92482eb752a19764fe8ddd7",
+      "linkHash": "ef17b10dc7c87cca675a68137cb8c98b296c90dd01ccf8b9dd4954b7257a5a77",
+      "qrHash": "69d924dbd1328d719f4b2c740d2aaeca431fb0fac9d57c2f36e3dad1a9c39a6a"
+    },
+    {
+      "storeId": "cfe1c17e1840e7d3",
+      "name": "라홍방마라탕 여수미평점",
+      "foodPhotoCount": 9,
+      "slideCount": 9,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "31ad41666766eac2c570247e7862408581b474cfb1deeacf1b220f15fea7b807",
+      "imageDigest": "c434ea942152393ca202c5cdffe97a63e95b3235ee2073e2bcee93ac559adaa0",
+      "linkHash": "cf751695911e9df18f3d89256a570d8c941e793ded0e67249a3518e698d6ba5d",
+      "qrHash": "2172af8c25a0709da99a0f9ae77210dbbab7cb999ea9cbdedb8dab15f7b877d5"
+    },
+    {
+      "storeId": "d56b63b58242635b",
+      "name": "도야짬뽕 여서점",
+      "foodPhotoCount": 11,
+      "slideCount": 11,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "951e2212737ad776a949b0b4663b212de7b06d75af36b6b0b387ecd7a376972e",
+      "imageDigest": "c8081a4ea52eff29f90b443b5de9be43a41b3c7b1d3960260bc7a878a3d003b7",
+      "linkHash": "ae609250cd27f23cafe1352f332314398efd05a909cd5e65bed1a32bcd57145a",
+      "qrHash": "62a42c7680e314c02034b88b3ce0e6d6de0d9cdf2bee1eae5011c42c24bdedcc"
+    },
+    {
+      "storeId": "dabbebff4fca3c56",
+      "name": "대패가1900 문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "8d9efae1091fdbc3e0435a8f665dae7ea93e757efb94fbc29b271d33e94993d4",
+      "imageDigest": "744f020f5a99d21e3bf034783daae925011d6879332e0db277c29e19657c4eb5",
+      "linkHash": "03774d091ceec127d6ef86a126cb30647cacdbb784e0cf374671563c4f4ad38a",
+      "qrHash": "f15542732d6f8d042a5220a573fdd88d1448c5cc861d9e7eff6c26a14f56e61b"
+    },
+    {
+      "storeId": "de5f7fd077422974",
+      "name": "소코아 웅천점",
+      "foodPhotoCount": 3,
+      "slideCount": 3,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "794eefdbeab9a9088fd3b0fa4351ac179fc47ce0ecefe3c7af00d724c2f18e06",
+      "imageDigest": "de2f4b650abd30760717f9e260bf18627f1da7816a64a02c9a6aa1a9d758b2dc",
+      "linkHash": "f06db6997aac7fe96c09a3ad3fce1f9d97cdbda6c93c23ae5a88ff95fd3c91da",
+      "qrHash": "f2de28d742b68e6ac9650cc677d3ae93c49b7a2093eee1033c4c1552fef8599d"
+    },
+    {
+      "storeId": "e456f248cbe542a3",
+      "name": "청년다방 여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "ff2e238ffd04e48b8811d25d3340df7a9d679b31a51db6a69c58aa6e1fdf8002",
+      "imageDigest": "ae6239acc9eb5629a4687f4645d965fba36b74c4f0be65d89032ad9c0a7129a0",
+      "linkHash": "398b31d880f54d38d9c0525dc583bd4f04c543210f1ca1c0f3f8eef0e5338133",
+      "qrHash": "279f698d3aed9f0a82abaff4caa444aeba78d39fcd0dc03ac649d878065f681f"
+    },
+    {
+      "storeId": "e66f136d0e468b6e",
+      "name": "아주커치킨 문수점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": true,
+      "added": false,
+      "campaignHash": "fd9e97c58bccf28740bd0ae3ed454049f55e20e27d3e7d0e568af1325beb9592",
+      "imageDigest": "74924d4f034e15e90373389e8f888ecf8a884027841f710f9d83596ec7cc7e90",
+      "linkHash": "e856cb6fa2f72c96488b0732125d7e81146fc56a58419c2b4608b701f2817cd2",
+      "qrHash": "6ced1db1f5de62714178c9400f8ccc591f305b992ede13b4d609d895cc0c1a64"
+    },
+    {
+      "storeId": "e79944955ae26a5f",
+      "name": "무청감자탕 여수봉계점",
+      "foodPhotoCount": 8,
+      "slideCount": 8,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "c0ee32925bbbad440471e1357be8fb4d7b396b6e90481879862758d9e698dc1c",
+      "imageDigest": "1611c1f3f1a0f67bb25aad139d5545bce9b93b423b48a108f6e76343953c272c",
+      "linkHash": "950e854d70b209fb0cdd445a304388a03107685002ebc651363a4ff3361cd987",
+      "qrHash": "a677aa0e8419e79c53b2a4bbda5a314c1ada19ead7d5485313cdae722cf72d8c"
+    },
+    {
+      "storeId": "ec69425551829f69",
+      "name": "까치식당 문수점",
+      "foodPhotoCount": 3,
+      "slideCount": 3,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "a7a1090108a1b4e8b5d28db04c2e710a698692a8e1c9ecad29694bee596d2847",
+      "imageDigest": "c5c2f70c60ec02f3ce249d2d97eeda6e81ed0bce0ee504937e4d17bb0765c894",
+      "linkHash": "ac6b958b0f4a66b1196209fed9136d184f7f40806918dd2d97d8120f9afa642a",
+      "qrHash": "e7b73ecac9444c2d8a4a974d3f5019497dd6f4c4968d976154bca12d7fdca549"
+    },
+    {
+      "storeId": "f14bc5ec109f3af0",
+      "name": "빵빵김밥 여서점",
+      "foodPhotoCount": 9,
+      "slideCount": 9,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "da3a8c8412b97e0011c5463b1d0b6106eb8181e0a855abbdc18faa3bbcb227d9",
+      "imageDigest": "cc3d0815ce5fd82d16023ab27e891d82db2a8941b946ad07fdcd61fa49ecf50d",
+      "linkHash": "9b76e185a21fc8b3b07e24f874d97cea5de32a556f25a235c76d099005efac90",
+      "qrHash": "6ab149a14fcfab4b3b1a7e9f76cf5bab3c86055fff37970277fa1a97d8d52fd2"
+    },
+    {
+      "storeId": "f31d8c5f04fb7b79",
+      "name": "대박난쪽갈비 여수점",
+      "foodPhotoCount": 7,
+      "slideCount": 7,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "b72dc1eaa6d978fc2672b07699f133fd23e1eac01dc35b886ed8e01bf0c8caca",
+      "imageDigest": "53603a1c5d6a448e5721a6666d83db88dd1fd04d330748b063389f2635308436",
+      "linkHash": "8ec0928a13b3704bea92fc00e3876b46ec991a3a335d14c3dbc7566050a11c82",
+      "qrHash": "ed8689d65120bb0e278915b29a18ceb9a2c11fb298229aa2c2819b5b4ae1302d"
+    },
+    {
+      "storeId": "f65edfe1927ef379",
+      "name": "치킨마루 여수봉계점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "bc703c06db8a584599452e3dbc305d73778cdab2eb839f181875cb712ed12d13",
+      "imageDigest": "a8b7ed7056c94550abc58a30e91b6fc923176aaa1e858bcf04a20642b055d71c",
+      "linkHash": "62d98f21161731abb298cf3fc9461ad2de87e2f45d17aeeed2f2a679bd84f15b",
+      "qrHash": "90120565bedb948b7ca11d7b30af39334274d27438d3bd9a091f74a12f5ecbdd"
+    },
+    {
+      "storeId": "f7167d017e7368e7",
+      "name": "롤링파스타 여서점",
+      "foodPhotoCount": 14,
+      "slideCount": 14,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "57ca93f08a8b2d53e3c3b17d1611568cff765d63fb64de947fdf5c1d57f0f14d",
+      "imageDigest": "f249f9cc712301a9135349df9f17d5a009066e17508f228133925064ccc9f930",
+      "linkHash": "fd423da217086239f4bcc498a11d0aec6a80344d7dcaaf5542e4b48ae666be59",
+      "qrHash": "97033b6e1de4483e58ab8661650fac7ad32589cfc1f67be137c70feb83796d02"
+    },
+    {
+      "storeId": "f8fd7a9d16afbd2d",
+      "name": "파파존스 여수문수점",
+      "foodPhotoCount": 3,
+      "slideCount": 3,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "bfa33756f3e970f14887d3b85c7fc5e0be7eeaa70e72568753c14a6601810739",
+      "imageDigest": "ce41c19d1f0ed9352a726f83ddb2c2440dd3be5b8cbf22308286651b79301cf2",
+      "linkHash": "88e81573bf621e4828ee863581e83906de205e5178b497ea0e0abdf65d4fcb75",
+      "qrHash": "84cb466bedd314392ec8dc24c9d282af6fdcbb0b4828a74c152b2504f0c8edb4"
+    },
+    {
+      "storeId": "fa5bca3967c25462",
+      "name": "지코바치킨 미평점",
+      "foodPhotoCount": 4,
+      "slideCount": 4,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "d835418f5b67974179d00b301584ad0e938a647ea4e4f244402665b977852550",
+      "imageDigest": "9d4b7e03f4e318392c1e88869bb8265f89096609951c71b28aa87a1be18a4b70",
+      "linkHash": "b4f0f25b6f784a08e66948b95d0384434e3ea16bde02c673b7dd623be98e0a4a",
+      "qrHash": "e9651643534d031b317e5c1f12672b97563992d6a14bef7fb9b7a33d0eaa723b"
+    },
+    {
+      "storeId": "fbed2b2b3e8a7852",
+      "name": "쑝쑝돈까스 여수관문점",
+      "foodPhotoCount": 3,
+      "slideCount": 3,
+      "preserved": false,
+      "added": false,
+      "campaignHash": "16237cccf4b410f236c12fe3b3bec2c375c81bff52bebf5809bad37d6a100295",
+      "imageDigest": "caccd7f2f6495a25e08e79be68c3bf5c6f78d306ba8dcdb2ca7bd258ff1e00cd",
+      "linkHash": "dc620e8361ef7f2b20aa744b6a263982859377ee3af68e4f4820222065ac4a76",
+      "qrHash": "a8650d155b5db16da9e40e5f5fcbd91b12a87afdf4743b816f8ac97f6779b9c3"
+    },
+    {
+      "storeId": "fdd49a6b2567f45b",
+      "name": "텐노쇼군-여서점",
+      "foodPhotoCount": 12,
+      "slideCount": 12,
+      "preserved": false,
+      "added": true,
+      "campaignHash": "77d3a1a0c3ca7110979cd5bced2323cee69db2d691b62c416443c2e5b1ca47c6",
+      "imageDigest": "7cb58afba3d11e6b9002fe3f94fbf185c1bf6c129c77daddeec507ad4be324e1",
+      "linkHash": "3fbe546b7a63c45f2256706634006834e146366d122ca764e210c2e3dbcbeefa",
+      "qrHash": "ee0273ef0219e0663ebb7e10cbf7cf71ea22e3d01bd275189567059bb7865b8f"
+    }
+  ],
+  "originalCampaigns": {
+    "25893c565c1564bd": {
+      "storeId": "25893c565c1564bd",
+      "slug": "collected-25893c565c1564bd",
+      "label": "진리국밥 여서점 전용 대동여수음식지도",
+      "title": "진리국밥 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "25893c565c1564bd",
+          "image": "assets/campaigns/collected-stores/25893c565c1564bd.svg",
+          "title": "진리국밥 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "295dc97b6abaf2e2": {
+      "storeId": "295dc97b6abaf2e2",
+      "slug": "collected-295dc97b6abaf2e2",
+      "label": "중국관 전용 대동여수음식지도",
+      "title": "중국관",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "295dc97b6abaf2e2",
+          "image": "assets/notion-recovery-180/295dc97b6abaf2e2/01.jpg",
+          "title": "중국관",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "7c9ca9471d15acc4": {
+      "storeId": "7c9ca9471d15acc4",
+      "slug": "collected-7c9ca9471d15acc4",
+      "label": "제육대가 여수미평점 전용 대동여수음식지도",
+      "title": "제육대가 여수미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "7c9ca9471d15acc4",
+          "image": "assets/notion-recovery-180/7c9ca9471d15acc4/01.jpg",
+          "title": "제육대가 여수미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "8d9e961a6ffd106f": {
+      "storeId": "8d9e961a6ffd106f",
+      "slug": "collected-8d9e961a6ffd106f",
+      "label": "쑝쑝돈까스 여수미평점 전용 대동여수음식지도",
+      "title": "쑝쑝돈까스 여수미평점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "8d9e961a6ffd106f",
+          "image": "assets/notion-recovery-180/8d9e961a6ffd106f/01.jpg",
+          "title": "쑝쑝돈까스 여수미평점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "b2a05ccb34bcbbbc": {
+      "storeId": "b2a05ccb34bcbbbc",
+      "slug": "collected-b2a05ccb34bcbbbc",
+      "label": "참맛죽 여수점 전용 대동여수음식지도",
+      "title": "참맛죽 여수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "b2a05ccb34bcbbbc",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2023/04/500cd9dd-04ba-43d2-82f0-a54b7391ed97.jpg",
+          "title": "참맛죽 여수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "bf2718b01040ef53": {
+      "storeId": "bf2718b01040ef53",
+      "slug": "collected-bf2718b01040ef53",
+      "label": "탕수육가장잘튀기는집 여수여서점 전용 대동여수음식지도",
+      "title": "탕수육가장잘튀기는집 여수여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "bf2718b01040ef53",
+          "image": "assets/campaigns/collected-stores/bf2718b01040ef53.svg",
+          "title": "탕수육가장잘튀기는집 여수여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "c26995210f249627": {
+      "storeId": "c26995210f249627",
+      "slug": "collected-c26995210f249627",
+      "label": "응큼떡볶이 여수점 전용 대동여수음식지도",
+      "title": "응큼떡볶이 여수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c26995210f249627",
+          "image": "assets/notion-recovery-180/c26995210f249627/01.png",
+          "title": "응큼떡볶이 여수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "c938cc2ee278ce23": {
+      "storeId": "c938cc2ee278ce23",
+      "slug": "collected-c938cc2ee278ce23",
+      "label": "배떡 여수점 전용 대동여수음식지도",
+      "title": "배떡 여수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "c938cc2ee278ce23",
+          "image": "assets/notion-recovery-180/c938cc2ee278ce23/01.jpg",
+          "title": "배떡 여수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "dabbebff4fca3c56": {
+      "storeId": "dabbebff4fca3c56",
+      "slug": "collected-dabbebff4fca3c56",
+      "label": "대패가1900 문수점 전용 대동여수음식지도",
+      "title": "대패가1900 문수점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "dabbebff4fca3c56",
+          "image": "https://dwdwaxgahvp6i.cloudfront.net/shbimg/biz/img/2025/01/3b12b3c6-ea8e-405e-a371-adaabe4b81ef.jpg",
+          "title": "대패가1900 문수점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "e456f248cbe542a3": {
+      "storeId": "e456f248cbe542a3",
+      "slug": "collected-e456f248cbe542a3",
+      "label": "청년다방 여서점 전용 대동여수음식지도",
+      "title": "청년다방 여서점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "e456f248cbe542a3",
+          "image": "assets/notion-recovery-180/e456f248cbe542a3/01.jpg",
+          "title": "청년다방 여서점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    },
+    "fbed2b2b3e8a7852": {
+      "storeId": "fbed2b2b3e8a7852",
+      "slug": "collected-fbed2b2b3e8a7852",
+      "label": "쑝쑝돈까스 여수관문점 전용 대동여수음식지도",
+      "title": "쑝쑝돈까스 여수관문점",
+      "meta": "가게 정보와 주문방법",
+      "slides": [
+        {
+          "storeId": "fbed2b2b3e8a7852",
+          "image": "assets/notion-recovery-180/fbed2b2b3e8a7852/01.webp",
+          "title": "쑝쑝돈까스 여수관문점",
+          "meta": "가게 정보와 주문방법"
+        }
+      ]
+    }
+  },
+  "baselines": {
+    "production": {
+      "hero": "91bd161d280d682b46d69ce9268997cea1d8c3b920ad876f81681f74701260ff",
+      "links": "a71180aa220304c4a26b5361b9b2d58cac38aeb6059c2003bc4553027a3548db",
+      "priority": "c033a90766b111bd674897a3fe5471a05548d1bce3e7f5a9c32130628ad3f3b9",
+      "ads": "09f63f5b2489db094497919263358a7c6c1ee10b7133758a770fef70ec45c38d"
+    },
+    "preview": {
+      "hero": "ba45a6d5c938945e06b3ec53848274340dd07fab8020fc149c2b82d4b89b3535",
+      "links": "8f3ae191b58121b8052a4ae62542f969991714191b8d0d4090fb85127ecfe2ab",
+      "priority": "c033a90766b111bd674897a3fe5471a05548d1bce3e7f5a9c32130628ad3f3b9",
+      "ads": "09f63f5b2489db094497919263358a7c6c1ee10b7133758a770fef70ec45c38d"
+    }
+  }
+}
