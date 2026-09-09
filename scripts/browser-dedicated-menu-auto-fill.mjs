@@ -4,12 +4,12 @@ import path from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const storeId = process.env.CAMPAIGN_STORE_ID || '884d23981fd2429a';
+const storeId = process.env.CAMPAIGN_STORE_ID || '0abd7147b7d6b1dd';
 const base = process.env.BASE_URL || 'https://daedongmap.com/';
 const screenshotPath = process.env.OUTPUT_PATH || path.join(root, 'dedicated-menu-auto-fill.png');
 const hero = JSON.parse(fs.readFileSync(path.join(root, 'data/hero-campaigns.json'), 'utf8'));
 const campaign = hero.campaigns[storeId];
-assert.ok(campaign?.layout === 'food14-plus3');
+assert.ok(campaign && campaign.layout !== 'food14-plus3', 'Fixture must prove unflagged legacy campaigns are also standardized');
 assert.ok(campaign.slides.length < 14, 'Fixture must prove runtime menu-photo filling instead of a completed static campaign');
 
 let playwright;

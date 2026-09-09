@@ -45,8 +45,13 @@ assert.ok(!normalized.some(slide => /app-icon/.test(slide.image)), '앱 로고�
 
 assert.match(source, /staticSlides\.length>=14\)return;/, '이미 완성된 수동 배너 14장은 보존해야 합니다.');
 assert.match(source, /menuSlides\.length<=staticSlides\.length\)return;/, '자동 선별 결과가 더 적으면 기존 배너를 덮어쓰면 안 됩니다.');
-assert.match(source, /hero-campaigns\.json\?v=[^'\n]*auto-menu-fill-1-domino-munsu-14-1/);
-assert.match(readFileSync('final-experience.js', 'utf8'), /rc6-fixes\.js\?v=[^'\n]*auto-menu-fill-1-domino-munsu-14-1/);
-assert.match(readFileSync('index.html', 'utf8'), /final-experience\.js\?v=[^"\n]*auto-menu-fill-1-domino-munsu-14-1/);
+const loaderStart = source.indexOf('async function rc6LoadRequestedCampaignMenuSlides()');
+const loaderEnd = source.indexOf('\nfunction rc6CampaignHeroEntries()', loaderStart);
+assert.ok(loaderStart >= 0 && loaderEnd > loaderStart);
+assert.doesNotMatch(source.slice(loaderStart, loaderEnd), /campaign\.layout/, '모든 가게전용 QR에 자동 메뉴사진 보완을 적용해야 합니다.');
+assert.match(source, /const specialKeys=RC6_CAMPAIGN_SPECIAL_HERO_KEYS;/, '모든 가게전용 QR에 일반광고 3개를 붙여야 합니다.');
+assert.match(source, /hero-campaigns\.json\?v=[^'\n]*auto-menu-fill-all-1-domino-munsu-14-1/);
+assert.match(readFileSync('final-experience.js', 'utf8'), /rc6-fixes\.js\?v=[^'\n]*auto-menu-fill-all-1-domino-munsu-14-1/);
+assert.match(readFileSync('index.html', 'utf8'), /final-experience\.js\?v=[^"\n]*auto-menu-fill-all-1-domino-munsu-14-1/);
 
 console.log('domino-dedicated-menu-hero-regression-test: pass');
