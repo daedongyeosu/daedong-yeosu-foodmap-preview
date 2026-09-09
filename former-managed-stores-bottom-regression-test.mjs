@@ -44,6 +44,8 @@ const former = {id: formerIds[0], name: formerStores[0][1], lat: 0.1, lng: 0, st
 const managedId = priority.managedStoreIds[0];
 const managed = {id: managedId, name: '현재 가맹점', lat: 20, lng: 0, statusRank: 0};
 const rc6Context = {
+  rc6PartnerActive: () => false,
+  rc6PartnerTier: () => 0,
   rc6StorePriority: priority,
   rc6ManagedStoreIds: new Set(),
   rc6SharedManagedStoreIds: new Set(),

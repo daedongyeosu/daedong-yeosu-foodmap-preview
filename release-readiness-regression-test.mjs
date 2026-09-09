@@ -99,6 +99,7 @@ assert.equal(normalizedArea.area, '학동', '잘못된 동네명은 확인된 �
 assert.equal(normalizedArea.tags.includes('홈화면'), false, '잘못된 동네명이 검색·표시 태그에 남으면 안 됩니다.');
 
 const rankingContext = {
+  rc6PartnerActive: () => false,
   rc6RainMode: 'rain1',
   rc6RainManagedRatio: () => 0.7,
   rc6OwnershipTier: store => store.managed ? 0 : 2,

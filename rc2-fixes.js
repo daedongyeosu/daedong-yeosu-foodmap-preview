@@ -850,6 +850,7 @@ function rc2ManagedRegionDailyPosition(spec, priorityId, dayKey = RC2_RAIL_RANDO
 }
 
 function rc2ApplyManagedRegionPriority(cards, spec, limit, rankedStores = []) {
+  if (typeof rc6PartnerActive === 'function' && rc6PartnerActive()) return rc6ApplyPartnerPriority(cards).slice(0, limit);
   const priorityId = RC2_MANAGED_REGION_PRIORITY_STORE_BY_RAIL[spec?.id];
   if (!priorityId || !rc2ManagedRegionPriorityNeighborhood()) {
     return sortStoresByBusinessStatus(cards).slice(0, limit);
