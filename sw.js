@@ -7,6 +7,7 @@ const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
   '/app-icon.svg?v=official-brand-20260830-1',
+  '/assets/app-icons/daedong-share-lightning-20260909.png',
   '/assets/app-icons/daedong-app-icon-192.png',
   '/assets/app-icons/daedong-app-icon-192.png?v=official-brand-20260830-1',
   '/assets/app-icons/daedong-app-icon-512.png',
