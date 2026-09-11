@@ -173,10 +173,31 @@ const FX_RAIL_SPECS=[
 ];
 function fxSelectedRails(){const hour=new Date().getHours();const ids=fxRainState!=='clear'?['rain','near','local','warm','noodle','new']:hour>=17?['near','local','group','solo','mood','new']:['near','local','warm','appetite','sweet','new'];return ids.slice(0,6).map(id=>FX_RAIL_SPECS.find(spec=>spec.id===id));}
 let fxRailRenderVersion=0;
+// Capture immediately before an atomic update, not before its asynchronous
+// data load: the customer may have scrolled somewhere else in the meantime.
+function fxCaptureDownstreamAnchor(root){
+ if(!root?.isConnected||window.daedongHasHomeInteraction?.()!==true||window.scrollY<=0)return null;
+ if(document.body.matches('.modal-open,.store-service-overview-open,.store-menu-open'))return null;
+ let element=root.nextElementSibling;
+ while(element&&element.getBoundingClientRect().height===0)element=element.nextElementSibling;
+ if(!element)return null;
+ const top=element.getBoundingClientRect().top;
+ return top<window.innerHeight?{element,top}:null;
+}
+function fxRestoreDownstreamAnchor(anchor){
+ if(!anchor?.element?.isConnected)return;
+ const delta=anchor.element.getBoundingClientRect().top-anchor.top;
+ if(Math.abs(delta)<1)return;
+ const top=Math.max(0,window.scrollY+delta);
+ if(typeof scrollWindowInstant==='function')scrollWindowInstant(top);
+ else window.scrollTo({left:window.scrollX,top,behavior:'instant'});
+}
 function fxCommitRailsWithoutMovingActiveList(root,staging){
+ const anchor=fxCaptureDownstreamAnchor(root);
  root.replaceChildren(...staging.childNodes);
  root.removeAttribute('aria-busy');
  observeDeferredPhotos(root);
+ fxRestoreDownstreamAnchor(anchor);
 }
 function fxRailMarkup(spec,used){
  const list=fxRankStores(spec).filter(store=>!used.has(String(store.id))).slice(0,8);
@@ -636,7 +657,7 @@ fxRc2Script.onload=()=>{
    fxRc5Script.async=false;
    fxRc5Script.onload=()=>{
     const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=location-store-hero-1-handsu-copy-spacing-1-hero-clean-controls-1-hero-order-footer-2';document.head.append(css);
-    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-hero-area-label-removed-1-three-main-ads-restored-1-notion-hero-return-1-goheung-isolation-2-instant-hero-loading-1-keep-placeholder-1-coordinate-yield-1-pager-stable-refresh-1-hero-photo-recovery-1-store-campaign-nine-2-tamnaneun-menu-hero-4-store-campaign-standard-1-auto-menu-fill-all-1-domino-munsu-14-1-hero-stable-height-1-manual-carousels-1-former-managed-bottom-1-four-store-qr-1-four-store-14-plus-3-1-hide-tamnaneun-1-teum-campaign-1-three-store-campaign-1-haeinine-campaign-1-native-pages-1-baeknyeon-ended-1-collected-shopinshop-1-managed-business-1-shared-referral-2-shared-short-1-ajuker-munsu-14-1-shared102-menu-1';
+    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-hero-area-label-removed-1-three-main-ads-restored-1-notion-hero-return-1-goheung-isolation-2-instant-hero-loading-1-keep-placeholder-1-coordinate-yield-1-pager-stable-refresh-1-hero-photo-recovery-1-store-campaign-nine-2-tamnaneun-menu-hero-4-store-campaign-standard-1-auto-menu-fill-all-1-domino-munsu-14-1-hero-stable-height-1-manual-carousels-1-former-managed-bottom-1-four-store-qr-1-four-store-14-plus-3-1-hide-tamnaneun-1-teum-campaign-1-three-store-campaign-1-haeinine-campaign-1-native-pages-1-baeknyeon-ended-1-collected-shopinshop-1-managed-business-1-shared-referral-2-shared-short-1-ajuker-munsu-14-1-shared102-menu-1-active-viewport-anchor-1';
     script.onload=()=>{
      const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=address-home-return-1-coarse-region-1-inapp-location-recovery-1-outside-yeosu-full-list-1-saved-address-first-1-release-readiness-1-step-touch-back-1';
      addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{window.__daedongDeferRailRender=true;try{await window.daedongCatalogReady;await fxInitialize();await rc6Initialize();window.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList();window.rc7Initialize?.();await fxOpenSharedStoreFromUrl();fxFinishLocationRankingReady(true);}catch(error){window.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList();console.error('위치 기반 가게 정렬을 초기화하지 못했습니다.',error);fxFinishLocationRankingReady(false);}},0);};

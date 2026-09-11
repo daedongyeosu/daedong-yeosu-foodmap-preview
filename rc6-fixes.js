@@ -239,7 +239,9 @@ function rc6RenderHero(){
   }
   return;
  }
- if(rc6HeroRenderKey===renderKey&&track.children.length)return;rc6HeroRenderKey=renderKey;if(heroCarousel)heroCarousel.destroy();
+ if(rc6HeroRenderKey===renderKey&&track.children.length)return;
+ const viewportAnchor=fxCaptureDownstreamAnchor(hero);
+ rc6HeroRenderKey=renderKey;if(heroCarousel)heroCarousel.destroy();
  track.innerHTML=entries.map((item,displayIndex)=>{const{banner,target,store}=item,isNotion=item.kind==='notion',isPhoto=['photo','campaign-photo'].includes(item.presentation),isCampaign=item.presentation==='campaign-photo',showCampaignCopy=!isCampaign||item.campaignShowCopy!==false,label=isNotion?`${target.label} 자세히 보기`:`${store.name} 가게 상세 보기`,targetAttr=isNotion?`data-rc6-banner-notion="${escapeHtml(target.notionUrl)}"`:`data-rc6-banner-store="${escapeHtml(store.id)}"`;let media;if(isNotion){media=`<img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}>${rc6HeroSpecialFooter()}`;}else if(isPhoto){const title=item.campaignTitle||store.name,meta=item.campaignMeta||[store.area,store.cat].filter(Boolean).join(' · '),copy=showCampaignCopy?`<span class="rc6-store-hero-copy"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(meta)}</span></span>`:'';media=`<span class="rc6-store-hero-media${isCampaign?' rc6-campaign-hero-media':''}${showCampaignCopy?'':' rc6-campaign-photo-only'}"><img src="${escapeHtml(banner.desktop)}" alt="${escapeHtml(title)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'} data-photo-kind="card" data-photo-store-id="${escapeHtml(store.id)}" data-photo-source="hero">${copy}</span>${rc6HeroOrderFooter(store)}`;}else{media=`<picture><source media="(max-width:520px)" srcset="${banner.mobile}"><img src="${banner.desktop}" alt="${escapeHtml(label)}" width="1200" height="700" decoding="async" loading="${displayIndex?'lazy':'eager'}"${displayIndex?'':' fetchpriority="high"'}></picture>${rc6HeroOrderFooter(store)}`;}return `<button type="button" class="carousel-slide hero-slide rc6-hero-target${isCampaign?' rc6-campaign-hero':''}" data-hero-index="${displayIndex}" ${targetAttr} aria-label="${escapeHtml(label)}">${media}</button>`}).join('');
  if(hero){
   hero.hidden=false;
@@ -253,6 +255,7 @@ function rc6RenderHero(){
   }
  }
  if(entries.length){heroCarousel=new InfiniteCarousel(document.querySelector('#heroCarousel'),{interval:0});if(notionReturn){const slides=[...track.querySelectorAll(':scope > [data-rc6-banner-notion]')],returnIndex=slides.findIndex(slide=>{try{return new URL(slide.dataset.rc6BannerNotion,location.href).href===notionReturn.notionUrl;}catch{return false;}});const displayIndex=returnIndex>=0?Number(slides[returnIndex].dataset.heroIndex):Number(notionReturn.displayIndex);if(Number.isInteger(displayIndex)&&displayIndex>=0&&displayIndex<entries.length&&heroCarousel.count>1){heroCarousel.current=displayIndex+1;heroCarousel.jump(false);}sessionStorage.removeItem(RC6_NOTION_HERO_RETURN);}}
+ fxRestoreDownstreamAnchor(viewportAnchor);
 }
 function rc6WatchHeroDay(){
  rc6ActiveHeroDay=rc6SeoulDay().key;if(rc6HeroDayTimer)clearInterval(rc6HeroDayTimer);
