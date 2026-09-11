@@ -13,6 +13,7 @@
   const REQUEST_TIMEOUT_MS = 25000;
   const NATIVE_BASE = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/native/public';
   let nativeCatalogPromise = null;
+  let nativePublishedIds = null;
   const nativeRequests = new Map();
   const nativeFailures = new Map();
   async function nativeRequest(path) {
@@ -37,7 +38,11 @@
       for(let page=0;page<100;page++) {
         const data=await nativeRequest('/catalog'+(cursor?'?cursor='+encodeURIComponent(cursor):''));
         if(!data||!Array.isArray(data.items))throw new Error('자체 게시 목록 형식 오류');
-        items.push(...data.items);cursor=data.cursor;if(!cursor)return items;
+        items.push(...data.items);cursor=data.cursor;
+        if(!cursor) {
+          nativePublishedIds = new Set(items.map(item => item.id));
+          return items;
+        }
       }
       throw new Error('자체 게시 목록이 너무 큽니다.');
     })().catch(error=>{nativeCatalogPromise=null;console.warn('기존 가게 자료를 사용합니다.',error);return [];});
@@ -53,6 +58,13 @@
     const result=stores.map(store=>{const id=store.id||store.store_id,p=updates.get(id);updates.delete(id);return p?merge(store,p):store;});
     for(const p of updates.values())if(p.isNew)result.push(merge({name:p.name,hasMenu:false},p));
     return result;
+  }
+  function nativeStoreDetail(id) {
+    // A successfully loaded, complete publication snapshot proves absence.
+    // Do not repeat a slow 404 lookup for every unedited imported store.
+    // A failed/unfinished catalog leaves this null and still checks the server.
+    if (nativePublishedIds && !nativePublishedIds.has(id)) return Promise.resolve(null);
+    return nativeRequest('/store/' + id);
   }
   function mergeNativeDetail(base, patch) {
     if(!patch)return base;
@@ -296,7 +308,7 @@
     });
     return Promise.all([
       request(`/api/store/${id}`, {cacheKey: `detail:${id}`, ...options}).catch(error=>{if(error.status===404)return null;throw error;}),
-      nativeRequest('/store/'+id).catch(error=>{console.warn('자체 게시 내용 확인 실패',error);return null;})
+      nativeStoreDetail(id).catch(error=>{console.warn('자체 게시 내용 확인 실패',error);return null;})
     ]).then(([base,patch])=>{if(!base&&!patch)throw new Error('가게 상세자료를 찾지 못했습니다.');return mergeNativeDetail(base,patch);});
   };
   const menu = (storeId, options = {}) => {
@@ -354,4 +366,16 @@
     yogiyoWebRoute,
     menuSearch
   });
+
+  // Start the same region-scoped request while the larger UI scripts download.
+  // The in-flight request cache lets initialize() join it without duplicate
+  // traffic. Only warm network data here: publication merges stay at the caller,
+  // and failures keep the normal retry/backoff path (no cached empty catalogue).
+  const warmCatalog = typeof document !== 'undefined'
+    && document.currentScript?.hasAttribute('data-catalog-warmup');
+  if (warmCatalog && IS_GOHEUNG) goheungCatalog().catch(() => {});
+  else if (warmCatalog) {
+    request('/api/catalog', {cacheKey: 'catalog', timeoutMs: 20000}).catch(() => {});
+    nativeCatalog();
+  }
 })();

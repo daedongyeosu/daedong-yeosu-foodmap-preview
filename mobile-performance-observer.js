@@ -71,10 +71,12 @@
   };
   const inspectUi = () => {
     if (document.querySelector('#storeGrid .store-card')) markOnce('homeReadyMs', performance.now() - startedAt);
-    if (visible(document.querySelector('#modal .store-detail-loading'))) finishAction('detailSkeletonMs', '#modal:not([hidden]) .store-detail-loading');
-    if (visible(document.querySelector('#modal .store-detail:not(.store-detail-loading)'))) finishAction('detailReadyMs', '#modal:not([hidden]) .store-detail:not(.store-detail-loading)');
-    if (visible(document.querySelector('[data-store-menu-overlay] .store-menu-loading'))) finishAction('menuSkeletonMs', '[data-store-menu-overlay]:not([hidden]) .store-menu-loading');
-    if (visible(document.querySelector('[data-store-menu-overlay] .store-menu-preview'))) finishAction('menuReadyMs', '[data-store-menu-overlay]:not([hidden]) .store-menu-preview');
+    // Reading layout after every DOM mutation creates the very stalls this
+    // observer measures. Only inspect geometry while that action is pending.
+    if (actionStarts.has('detailSkeletonMs') && visible(document.querySelector('#modal .store-detail-loading'))) finishAction('detailSkeletonMs', '#modal:not([hidden]) .store-detail-loading');
+    if (actionStarts.has('detailReadyMs') && visible(document.querySelector('#modal .store-detail:not(.store-detail-loading)'))) finishAction('detailReadyMs', '#modal:not([hidden]) .store-detail:not(.store-detail-loading)');
+    if (actionStarts.has('menuSkeletonMs') && visible(document.querySelector('[data-store-menu-overlay] .store-menu-loading'))) finishAction('menuSkeletonMs', '[data-store-menu-overlay]:not([hidden]) .store-menu-loading');
+    if (actionStarts.has('menuReadyMs') && visible(document.querySelector('[data-store-menu-overlay] .store-menu-preview'))) finishAction('menuReadyMs', '[data-store-menu-overlay]:not([hidden]) .store-menu-preview');
   };
 
   document.addEventListener('pointerdown', event => {
