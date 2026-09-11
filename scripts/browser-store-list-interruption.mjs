@@ -209,7 +209,11 @@ try {
   )), '실제 터치로 혜택 버튼을 눌러도 뒤쪽 가게 대신 혜택 화면만 열림');
   await page.locator('[data-store-service-overview-close]').tap();
   await page.waitForFunction(() => document.querySelector('[data-store-service-overview-overlay]')?.hidden === true);
-  await page.evaluate(scrollY => window.scrollTo(0, scrollY), beforeBenefitsScrollY);
+  // This is fixture positioning, not the customer's horizontal gesture.
+  // html uses scroll-behavior:smooth; a two-argument scrollTo can still be
+  // moving after scrollIntoViewIfNeeded returns when the grid is already in
+  // view. Finish this setup instantly before taking the swipe baseline.
+  await page.evaluate(scrollY => window.scrollTo({top: scrollY, left: 0, behavior: 'instant'}), beforeBenefitsScrollY);
 
   await page.evaluate(() => {
     // A real customer begins a vertical scroll with a touch/pointer gesture.
