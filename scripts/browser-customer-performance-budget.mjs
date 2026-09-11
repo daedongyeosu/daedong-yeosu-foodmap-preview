@@ -183,6 +183,35 @@ const exactCheck = (name, actual, expected) => {
   return ok;
 };
 
+function startMenuLatencyMeasurement(button) {
+  window.__qaMenuStart = performance.now();
+  window.__qaMenuSkeletonAt = null;
+  window.__qaMenuReadyAt = null;
+  let frame = 0;
+  const observer = new MutationObserver(schedule);
+  function schedule() {
+    if (!frame) frame = requestAnimationFrame(sample);
+  }
+  function sample() {
+    frame = 0;
+    const overlay = document.querySelector('[data-store-menu-overlay]:not([hidden])');
+    const shell = overlay?.querySelector('.store-menu-loading,.store-menu-preview');
+    const ready = overlay?.querySelector('.store-menu-preview');
+    const visible = node => Boolean(node && node.getClientRects().length);
+    const at = performance.now();
+    if (visible(shell)) window.__qaMenuSkeletonAt ??= at;
+    if (visible(ready)) window.__qaMenuReadyAt ??= at;
+    if (window.__qaMenuSkeletonAt !== null && window.__qaMenuReadyAt !== null) observer.disconnect();
+    else if (at - window.__qaMenuStart < 12000) schedule();
+    else observer.disconnect();
+  }
+  observer.observe(document.documentElement, {
+    subtree: true, childList: true, attributes: true, attributeFilter: ['hidden', 'class']
+  });
+  button.click();
+  schedule();
+}
+
 try {
   const homeStartedAt = performance.now();
   await page.goto(baseURL, {waitUntil: 'domcontentloaded', timeout: 30000});
@@ -228,14 +257,20 @@ try {
   const menuStartedAt = performance.now();
   // Exercise the application's delegated click path without letting
   // Playwright's actionability polling become the measured bottleneck.
-  await menuButton.evaluate(button => button.click());
-  await page.waitForFunction((storeId) => Boolean(
-    document.querySelector('[data-store-menu-overlay]:not([hidden]) .store-menu-loading')
-      || document.querySelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${storeId}"]`)
-  ), targetStoreId, {timeout: 1000});
-  report.measurements.menuSkeletonMs = elapsed(menuStartedAt);
+  await menuButton.evaluate(startMenuLatencyMeasurement);
+  await page.waitForFunction(() => window.__qaMenuSkeletonAt !== null, null, {timeout: 1000});
+  // Keep driver timing for diagnostics, but budget the customer-visible frame
+  // on the renderer clock, as detailSkeletonMs/detailReadyMs already do.
+  report.measurements.menuSkeletonDriverMs = elapsed(menuStartedAt);
+  report.measurements.menuSkeletonMs = await page.evaluate(() => Math.round(
+    window.__qaMenuSkeletonAt - window.__qaMenuStart
+  ));
   await page.waitForSelector(`[data-store-menu-overlay]:not([hidden]) .store-menu-preview[data-store-id="${targetStoreId}"]`, {timeout: 12000});
-  report.measurements.menuReadyMs = elapsed(menuStartedAt);
+  await page.waitForFunction(() => window.__qaMenuReadyAt !== null, null, {timeout: 12000});
+  report.measurements.menuReadyDriverMs = elapsed(menuStartedAt);
+  report.measurements.menuReadyMs = await page.evaluate(() => Math.round(
+    window.__qaMenuReadyAt - window.__qaMenuStart
+  ));
   report.measurements.menuDomNodes = await domNodes();
   report.measurements.menuCardsAtReady = await page.locator('[data-store-menu-overlay]:not([hidden]) [data-menu-card]').count();
 
