@@ -365,6 +365,9 @@ const ANALYTICS_REGION_1_ALIASES = new Map([
 ]);
 let analyticsFallbackVisitorId = '';
 let analyticsFallbackSessionId = '';
+// Page-entry attribution must not change when a customer opens another store.
+// Deliberately not persisted: a later direct visit is not a partner referral.
+let analyticsInitialEntry = null;
 let analyticsFlushPromise = null;
 
 const APP_META = {
@@ -616,14 +619,20 @@ function applyAnalyticsOwnerMode() {
   try { history.replaceState(history.state, '', cleanUrl); } catch {}
 }
 function analyticsEntryContext() {
+  if (analyticsInitialEntry) return analyticsInitialEntry;
   const params = new URLSearchParams(location.search);
   const explicit = String(params.get('source') || params.get('utm_source') || '').trim().toLowerCase();
   const storeId = String(params.get('hero') || params.get('store') || '').trim();
   let entrySource = 'direct';
-  if (explicit === 'bitly' || explicit === 'legacy-bitly') entrySource = 'legacy-bitly';
+  const shared = /^\/s(?:\/index\.html|\/)?$/.test(location.pathname);
+  // Both markers together are ambiguous; never guess SMS versus QR.
+  const medium = params.has('m') !== params.has('q') ? (params.has('m') ? 'sms' : 'qr') : '';
+  if (shared) entrySource = medium ? `partner_${medium}` : 'partner_link';
+  else if (medium) entrySource = `map_${medium}`;
+  else if (explicit === 'bitly' || explicit === 'legacy-bitly') entrySource = 'legacy-bitly';
   else if (explicit === 'store_qr_legacy') entrySource = 'store_qr_legacy';
   else if (explicit === 'store_qr') entrySource = 'store_qr';
-  else if (params.has('hero')) entrySource = 'store_qr';
+  else if (params.has('hero')) entrySource = 'store_link';
   else if (params.has('store')) entrySource = 'shared_link';
   else {
     try {
@@ -631,7 +640,8 @@ function analyticsEntryContext() {
       if (referrerHost === 'bit.ly' || referrerHost.endsWith('.bitly.com')) entrySource = 'legacy-bitly';
     } catch {}
   }
-  return {entrySource, storeId};
+  analyticsInitialEntry = Object.freeze({entrySource, storeId});
+  return analyticsInitialEntry;
 }
 function analyticsRegionPart(value, depth) {
   const region = String(value || '').trim().replace(/\s+/g, ' ').slice(0, 40);
