@@ -19,7 +19,7 @@ const goheung = JSON.parse(read('./data/goheung-catalog.json'));
 
 assert.match(index, /class="yeosu-night-shell"/, '여수·고흥은 같은 홈 쉘을 사용해야 합니다.');
 assert.equal((index.match(/class="order-item/g) || []).length, 7, '주문방법 7개 구조가 바뀌면 안 됩니다.');
-assert.match(index, /region-config\.js[^>]+defer/, '지역 설정이 데이터 API보다 먼저 로드되어야 합니다.');
+assert.doesNotMatch(index.match(/<script src="region-config\.js[^>]*>/)?.[0] || '', /\b(?:async|defer)\b/, '지역 설정은 데이터 API 이전에 실행을 마쳐야 합니다.');
 assert.ok(index.indexOf('region-config.js') < index.indexOf('data-api.js'), '지역 설정 로드 순서가 잘못되었습니다.');
 
 assert.match(region, /requested === 'goheung' \? REGIONS\.goheung : REGIONS\.yeosu/, '기본 지역은 여수여야 합니다.');
