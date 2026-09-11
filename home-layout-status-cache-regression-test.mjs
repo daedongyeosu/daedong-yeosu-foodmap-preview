@@ -14,10 +14,11 @@ function fn(source, name) {
   return source.slice(start, serviceEnd + 4);
 }
 
-let docTop = 300, interaction = true, modal = false, scrollCalls = 0;
+let docTop = 300, rootTop = -100, interaction = true, modal = false, scrollCalls = 0;
 const win = {scrollY: 100, scrollX: 0, innerHeight: 844, daedongHasHomeInteraction: () => interaction};
 const anchor = {isConnected: true, getBoundingClientRect: () => ({top: docTop - win.scrollY, height: 400})};
 const root = {isConnected: true, nextElementSibling: anchor, childNodes: [],
+  getBoundingClientRect: () => ({top: rootTop}),
   replaceChildren: () => { docTop += 1900; }, removeAttribute() {}};
 const ctx = vm.createContext({window: win, document: {body: {matches: () => modal}},
   scrollWindowInstant: top => {win.scrollY = top; scrollCalls++;}, observeDeferredPhotos() {}});
@@ -29,6 +30,15 @@ assert.equal(scrollCalls, 1);
 const captured = ctx.fxCaptureDownstreamAnchor(root);
 ctx.fxRestoreDownstreamAnchor(captured);
 assert.equal(scrollCalls, 1, 'no double correction if browser anchoring already preserved the position');
+// The customer is reading upstream content. An empty rail and the downstream
+// list can both fit below it; growing that rail must not steal the viewport.
+win.scrollY = 900; docTop = 1500; rootTop = 500;
+ctx.fxCommitRailsWithoutMovingActiveList(root, {childNodes: []});
+assert.equal(win.scrollY, 900, 'late content below the viewport origin must not pull the customer down');
+assert.equal(scrollCalls, 1, 'no correction for an upstream reader');
+rootTop = 0; docTop = 1500;
+assert.equal(ctx.fxCaptureDownstreamAnchor(root), null, 'the current section itself is not a downstream anchor');
+rootTop = -100;
 for (const state of ['fresh', 'top', 'modal', 'above']) {
   win.scrollY = state === 'top' ? 0 : 100;
   interaction = state !== 'fresh'; modal = state === 'modal';
