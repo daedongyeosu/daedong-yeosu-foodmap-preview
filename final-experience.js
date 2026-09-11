@@ -178,6 +178,9 @@ let fxRailRenderVersion=0;
 function fxCaptureDownstreamAnchor(root){
  if(!root?.isConnected||window.daedongHasHomeInteraction?.()!==true||window.scrollY<=0)return null;
  if(document.body.matches('.modal-open,.store-service-overview-open,.store-menu-open'))return null;
+ // A not-yet-rendered rail can fit below the content being read. Anchoring
+ // its following list would pull that reader down when the rail grows.
+ if(root.getBoundingClientRect().top>=0)return null;
  let element=root.nextElementSibling;
  while(element&&element.getBoundingClientRect().height===0)element=element.nextElementSibling;
  if(!element)return null;
