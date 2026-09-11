@@ -1314,12 +1314,23 @@ function parseCoordinate(value) {
   const number = Number(value);
   return Number.isFinite(number) ? number : null;
 }
+let neighborhoodSearchSnapshot = null;
+let neighborhoodSearchIndex = [];
 function neighborhoodsFor(value='') {
   const text=normalize(value);if(!text)return[];
-  return yeosuNeighborhoods.filter(item=>{
-    if([item.name,...(item.aliases||[])].some(alias=>text.includes(normalize(alias))))return true;
-    const stem=normalize(item.name).replace(/동$/,'');
-    return stem.length>=2&&text.includes(stem);
+  // Neighborhood JSON is replaced as one snapshot at catalog initialization.
+  // Compile its unchanged aliases once, not for every field of every store.
+  if (neighborhoodSearchSnapshot !== yeosuNeighborhoods) {
+    neighborhoodSearchSnapshot = yeosuNeighborhoods;
+    neighborhoodSearchIndex = yeosuNeighborhoods.map(item => ({
+      name: item.name,
+      aliases: [item.name, ...(item.aliases || [])].map(normalize),
+      stem: normalize(item.name).replace(/동$/, '')
+    }));
+  }
+  return neighborhoodSearchIndex.filter(item=>{
+    if(item.aliases.some(alias=>text.includes(alias)))return true;
+    return item.stem.length>=2&&text.includes(item.stem);
   }).map(item=>item.name);
 }
 function neighborhoodFor(value='') { return neighborhoodsFor(value)[0] || ''; }
