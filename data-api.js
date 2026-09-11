@@ -202,6 +202,7 @@
       mode: 'cors',
       credentials: 'omit',
       cache: 'no-store',
+      priority: cacheKey === 'catalog' ? 'high' : 'auto',
       headers: JSON_HEADERS,
       signal: requestAbort.signal
     }).then(async response => {

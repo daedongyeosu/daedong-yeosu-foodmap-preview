@@ -8,7 +8,13 @@ const region = html.indexOf('<script src="region-config.js');
 const api = html.indexOf('<script src="data-api.js');
 assert.ok(region > 0 && region < api && api < html.indexOf('</head>'),
   'Region and cached catalog bootstrap must precede the large deferred UI scripts.');
-assert.match(html, /data-api\.js[^>]*catalog-warmup-1[^>]*defer[^>]*fetchpriority="high"/);
+assert.match(html, /data-api\.js[^>]*catalog-before-css-1[^>]*fetchpriority="high"/);
+for (const name of ['region-config', 'data-api']) {
+  const tag = html.match(new RegExp('<script src="' + name + '\\.js[^>]*>'))?.[0];
+  assert.ok(tag, name + ' bootstrap must be present');
+  assert.doesNotMatch(tag, /\b(?:async|defer)\b/, 'Catalog startup must not wait for DOM/CSS or race region config');
+}
+assert.ok(api < html.search(/<link\b[^>]*rel="stylesheet"|<style\b/), 'Catalog starts before render-blocking styles');
 assert.equal((html.match(/<script src="data-api\.js/g) || []).length, 1);
 assert.match(html, /data-api\.js[^>]*data-catalog-warmup/);
 
@@ -33,6 +39,7 @@ const flush = () => new Promise(resolve => setImmediate(resolve));
 
 const a = boot();
 assert.equal(a.calls.length, 2, 'Both source and published catalog requests start before initialize().');
+assert.equal(a.calls.find(call => /workers.dev/.test(call.url)).init.priority, 'high', 'Catalog gets network priority over decorative resources');
 let resolved = false;
 const joined = a.api.catalog().then(value => {resolved = true; return value;});
 assert.equal(a.calls.length, 2, 'The app joins in-flight network requests, never duplicates them.');
