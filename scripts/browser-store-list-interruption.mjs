@@ -306,6 +306,8 @@ try {
     '늦은 위치 정렬이 표시 중인 가게 수를 첫 페이지로 줄이지 않음');
   const beforePromoGap = beforeRanking.promoTop - beforeRanking.gridTop;
   const afterPromoGap = afterRanking.promoTop - afterRanking.gridTop;
+  await check(Promise.resolve(Math.abs(afterRanking.gridTop - beforeRanking.gridTop) < 2),
+    '늦은 추천·배너·영업상태 갱신 뒤에도 보던 가게의 화면상 위치를 2px 이내로 유지', {beforeRanking, afterRanking});
   await check(Promise.resolve(
     Math.abs(afterPromoGap - beforePromoGap) < 16
       && afterRanking.gridTop >= 0

@@ -211,11 +211,16 @@
     return Number.isFinite(hour) && Number.isFinite(minute) ? (hour * 60) + minute : NaN;
   }
 
+  let calendarMinute = NaN;
+  let calendarValue = null;
   function calendarParts(date = new Date()) {
+    const minute = Math.floor(date.getTime() / 60000);
+    if (minute === calendarMinute && calendarValue) return calendarValue;
     const parts = Object.fromEntries(formatter.formatToParts(date)
       .filter(part => part.type !== 'literal')
       .map(part => [part.type, part.value]));
-    return {
+    calendarMinute = minute;
+    calendarValue = {
       year: Number(parts.year),
       month: Number(parts.month),
       day: Number(parts.day),
@@ -223,6 +228,7 @@
       hour: Number(parts.hour),
       minute: Number(parts.minute)
     };
+    return calendarValue;
   }
 
   function shiftCalendar(parts, amount) {
@@ -401,10 +407,20 @@
     };
   }
 
+  // Cache ranks per immutable hours snapshot and minute. Refreshed hours or
+  // the next minute must recalculate opening, break and overnight boundaries.
+  const statusPriorityCache = new WeakMap();
   function statusPriorityForStore(storeOrId, date = new Date()) {
     const store = storeOrId?.store || storeOrId;
     const storeId = typeof store === 'object' ? storeIdOf(store) : String(store || '');
-    return STATUS_SORT_PRIORITY[storeStatus(serviceInfoForStore(store || storeId), date).state] ?? STATUS_SORT_PRIORITY.unknown;
+    const info = serviceInfoForStore(store || storeId);
+    const hours = info?.hours;
+    const minute = Math.floor(date.getTime() / 60000);
+    const cached = hours && statusPriorityCache.get(hours);
+    if (cached?.minute === minute && cached.loadState === serviceLoadState) return cached.rank;
+    const rank = STATUS_SORT_PRIORITY[storeStatus(info, date).state] ?? STATUS_SORT_PRIORITY.unknown;
+    if (hours && typeof hours === 'object') statusPriorityCache.set(hours, {minute, rank, loadState: serviceLoadState});
+    return rank;
   }
 
   function sortStoresByStatusPriority(list, date = new Date()) {
@@ -748,6 +764,8 @@
   }
 
   function decorateStoreCards() {
+    const viewportAnchor = typeof fxCaptureDownstreamAnchor === 'function'
+      ? fxCaptureDownstreamAnchor(document.querySelector('#recommendRails')) : null;
     document.querySelectorAll('#storeGrid .store-card[data-id]').forEach(card => {
       const info = serviceInfoForStore(String(card.dataset.id));
       const status = storeStatus(info);
@@ -801,6 +819,7 @@
         || card.querySelector(':scope > span');
       if (target && badge.parentElement !== target) target.append(badge);
     });
+    if (typeof fxRestoreDownstreamAnchor === 'function') fxRestoreDownstreamAnchor(viewportAnchor);
   }
 
   function decorateStoreDetails() {
