@@ -417,9 +417,9 @@
     const hours = info?.hours;
     const minute = Math.floor(date.getTime() / 60000);
     const cached = hours && statusPriorityCache.get(hours);
-    if (cached?.minute === minute) return cached.rank;
+    if (cached?.minute === minute && cached.loadState === serviceLoadState) return cached.rank;
     const rank = STATUS_SORT_PRIORITY[storeStatus(info, date).state] ?? STATUS_SORT_PRIORITY.unknown;
-    if (hours && typeof hours === 'object') statusPriorityCache.set(hours, {minute, rank});
+    if (hours && typeof hours === 'object') statusPriorityCache.set(hours, {minute, rank, loadState: serviceLoadState});
     return rank;
   }
 

@@ -43,7 +43,7 @@ let formats = 0;
 const formatter = new Intl.DateTimeFormat('en-US', {timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'});
 const weekly = Object.fromEntries(['sun','mon','tue','wed','thu','fri','sat'].map(day => [day, [{open: '11:00', close: '01:00'}]]));
 const info = {hours: {weekly}};
-const statusCtx = vm.createContext({Date, formatter: {formatToParts(date) {formats++; return formatter.formatToParts(date);}},
+const statusCtx = vm.createContext({Date, serviceLoadState: 'ready', formatter: {formatToParts(date) {formats++; return formatter.formatToParts(date);}},
   WEEK_FROM_SHORT: {Sun:'sun',Mon:'mon',Tue:'tue',Wed:'wed',Thu:'thu',Fri:'fri',Sat:'sat'},
   WEEK_KEYS: ['sun','mon','tue','wed','thu','fri','sat'], CLOSING_SOON_MINUTES: 30,
   STATUS_SORT_PRIORITY: {open:0,'closing-soon':1,unknown:2,closed:3}, storeIdOf: store=>store.id,
@@ -65,4 +65,12 @@ info.hours = {weekly, closures:[{type:'weekly',weekday:'fri'}]};
 assert.equal(rank('2026-09-11T13:00:00+09:00'), 3, 'new hours snapshot invalidates cache within the same minute');
 info.hours = {displayLines:['매일 11:00–01:00']};
 assert.equal(rank('2026-09-11T13:00:00+09:00'), 2, 'free-text native hours do not reuse an old open rank');
+if (fn(service, 'storeStatus').includes("serviceLoadState === 'error'")) {
+  info.hours = {weekly};
+  assert.equal(rank('2026-09-11T13:00:00+09:00'), 0);
+  statusCtx.serviceLoadState = 'error';
+  assert.equal(rank('2026-09-11T13:00:00+09:00'), 2, 'production loading failure must not reuse an open rank');
+  statusCtx.serviceLoadState = 'ready';
+  assert.equal(rank('2026-09-11T13:00:00+09:00'), 0);
+}
 console.log('PASS: active viewport anchoring and minute/snapshot-safe status ranks');
