@@ -12,7 +12,9 @@ const menu = {storeId, displayName: store.name, mainImage: store.image, categori
   {id: 'healthy', name: '간장치킨', image: '/photo-retry-test-3.png', category: '메뉴'}
 ]};
 const browser = await chromium.launch({headless: true, ...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath: process.env.CODEX_BROWSER_EXECUTABLE_PATH} : {})});
-const context = await browser.newContext({viewport: {width: 390, height: 844}, isMobile: true, hasTouch: true, locale: 'ko-KR'});
+// This fixture deliberately injects network failures. An installed SW bypasses
+// Playwright routes, making a fixture 404 look like a product retry failure.
+const context = await browser.newContext({viewport: {width: 390, height: 844}, isMobile: true, hasTouch: true, locale: 'ko-KR', serviceWorkers: 'block'});
 const json = value => ({status: 200, contentType: 'application/json', body: JSON.stringify(value)});
 await context.addInitScript(() => {
   sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');

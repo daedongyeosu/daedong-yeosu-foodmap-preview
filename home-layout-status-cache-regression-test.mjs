@@ -38,6 +38,11 @@ assert.equal(win.scrollY, 900, 'late content below the viewport origin must not 
 assert.equal(scrollCalls, 1, 'no correction for an upstream reader');
 rootTop = 0; docTop = 1500;
 assert.equal(ctx.fxCaptureDownstreamAnchor(root), null, 'the current section itself is not a downstream anchor');
+rootTop=130; docTop=win.scrollY+210;
+const visibleList=ctx.fxCaptureDownstreamAnchor(root);
+assert.ok(visibleList,'the visible list remains the anchor when an empty preceding rail starts below the viewport top');
+docTop+=1800;ctx.fxRestoreDownstreamAnchor(visibleList);
+assert.equal(anchor.getBoundingClientRect().top,210,'late initial rail expansion cannot push the actively read list away');
 rootTop = -100;
 for (const state of ['fresh', 'top', 'modal', 'above']) {
   win.scrollY = state === 'top' ? 0 : 100;
