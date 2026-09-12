@@ -133,7 +133,7 @@ function rc6ManagedStoreHeroEntries(){
 }
 function rc6CampaignStoreById(id){
  if(window.daedongDataApi?.isCustomerHiddenStoreId?.(id))return undefined;
- const store=rc6CampaignVirtualStores.get(String(id))||stores.find(item=>String(item.id)===String(id));
+ const store=rc6CampaignVirtualStores.get(String(id))||stores.find(item=>String(item.id)===String(id)||(item.mergedStoreIds||[]).some(alias=>String(alias)===String(id)));
  return window.daedongDataApi?.isCustomerHiddenStoreId?.(store?.id||store?.store_id)?undefined:store;
 }
 function rc6PrepareCampaignStores(){
@@ -156,7 +156,17 @@ function rc6HeroCampaignForEntryStoreId(id){
  const entryId=String(id||'');if(!entryId||window.daedongDataApi?.isCustomerHiddenStoreId?.(entryId))return null;
  const direct=rc6HeroCampaigns?.campaigns?.[entryId];
  if(direct)return window.daedongDataApi?.isCustomerHiddenStoreId?.(direct.storeId||entryId)?null:direct;
- return Object.values(rc6HeroCampaigns?.campaigns||{}).find(campaign=>!window.daedongDataApi?.isCustomerHiddenStoreId?.(campaign.storeId)&&(campaign.entryStoreIds||[]).map(String).includes(entryId))||null;
+ const explicit=Object.values(rc6HeroCampaigns?.campaigns||{}).find(campaign=>!window.daedongDataApi?.isCustomerHiddenStoreId?.(campaign.storeId)&&(campaign.entryStoreIds||[]).map(String).includes(entryId));
+ if(explicit)return explicit;
+ // A canonical card may inherit a previously printed campaign QR. Keep the
+ // curated campaign and its photos; resolve slide taps to the canonical store.
+ const store=rc6CampaignStoreById(entryId);if(!store)return null;
+ for(const alias of [store.id,...(store.mergedStoreIds||[])]){
+  if(window.daedongDataApi?.isCustomerHiddenStoreId?.(alias))continue;
+  const campaign=rc6HeroCampaigns?.campaigns?.[String(alias)];
+  if(campaign&&!window.daedongDataApi?.isCustomerHiddenStoreId?.(campaign.storeId))return campaign;
+ }
+ return null;
 }
 function rc6ResolveHeroCampaignStoreId(id){
  const campaign=rc6HeroCampaignForEntryStoreId(id);
