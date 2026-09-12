@@ -228,7 +228,11 @@ function rc3Digits(value) {
 
 function rc3VerifiedPhone(store) {
   const mapped = rc3InternalPhoneByStore.get(String(store?.id));
-  const digits = rc3Digits(mapped?.phone || store?.phone);
+  // The detail API already resolves source/branch verification. Its current
+  // number must win over the archived runtime index after detail hydration.
+  // Keep the index as the existing fallback when the API has no phone yet.
+  const currentPhone = store?.__secureDetailReady === true ? store?.phone : '';
+  const digits = rc3Digits(currentPhone || mapped?.phone || store?.phone);
   const valid = /^02\d{7,8}$/.test(digits)
     || /^0(?:3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{7,8}$/.test(digits)
     || /^050[2-8]\d{7,8}$/.test(digits)
