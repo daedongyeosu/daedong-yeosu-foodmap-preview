@@ -180,11 +180,16 @@ function fxCaptureDownstreamAnchor(root){
  if(document.body.matches('.modal-open,.store-service-overview-open,.store-menu-open'))return null;
  // A not-yet-rendered rail can fit below the content being read. Anchoring
  // its following list would pull that reader down when the rail grows.
- if(root.getBoundingClientRect().top>=0)return null;
+ const rootTop=root.getBoundingClientRect().top;
  let element=root.nextElementSibling;
  while(element&&element.getBoundingClientRect().height===0)element=element.nextElementSibling;
  if(!element)return null;
- const top=element.getBoundingClientRect().top;
+ const rect=element.getBoundingClientRect(),top=rect.top;
+ // An empty/updating rail may still start below the viewport origin while
+ // the following list is what the customer is reading in the viewport center.
+ // Preserve that list, but never pull a reader whose content is above it.
+ const middle=window.innerHeight/2;
+ if(rootTop>=0&&!(top<middle&&top+rect.height>middle))return null;
  return top<window.innerHeight?{element,top}:null;
 }
 function fxRestoreDownstreamAnchor(anchor){

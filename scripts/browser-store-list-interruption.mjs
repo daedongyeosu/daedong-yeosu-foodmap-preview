@@ -269,9 +269,11 @@ try {
     status: document.querySelector('#storePagerStatus')?.textContent?.trim() || '',
     controlsDisplay: getComputedStyle(document.querySelector('#storePagerControls')).display
   }));
+  // Upstream content may settle during this gesture. Its height compensation
+  // intentionally changes document scrollY while preserving the customer's
+  // screen position; asserting both offsets forbids the required correction.
   await check(Promise.resolve(
     Math.abs(revealedPage.gridTop - beforeSwipe.gridTop) < 2
-      && Math.abs(revealedPage.scrollY - beforeSwipe.scrollY) < 2
   ), '좌우 스와이프가 세로 화면 위치를 움직이지 않음', {beforeSwipe, revealedPage});
   await check(Promise.resolve(revealedPage.controlsDisplay === 'none'),
     '스와이프 전환 후에도 하단 화살표 영역이 나타나지 않음', revealedPage);

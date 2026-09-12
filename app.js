@@ -1733,6 +1733,9 @@ function finalImageFallback(image) {
   image.replaceWith(document.createRange().createContextualFragment(placeholderMarkup(image.dataset.photoKind || 'card')));
 }
 async function handleImageError(image) {
+  // Dish images own their bounded retries; a store-gallery fallback could
+  // replace one menu's photo with a different dish and race that loader.
+  if (image.dataset.menuImageManaged === '1') return;
   if (!image.matches('[data-photo-kind]') || image.dataset.photoRecoveryPending === 'true') return;
   const store = storeForPhoto(image);
   if (!store) {

@@ -154,6 +154,12 @@ jobs:
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-menu-families.mjs
+      - name: Verify menu photo failure recovery on mobile
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-photo-retry-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173 node scripts/browser-menu-photo-retry.mjs
       - name: Enforce customer mobile performance budget
         run: |
           node scripts/serve-performance-budget.mjs 4173 >/tmp/daedong-performance-budget-server.log 2>&1 &

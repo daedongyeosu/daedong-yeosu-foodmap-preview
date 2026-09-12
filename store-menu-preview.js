@@ -18,6 +18,8 @@
   let menuImageQueue = [];
   let activeMenuImageLoads = 0;
   let menuImageLoadRun = 0;
+  const menuImageTasks = new Map();
+  const MENU_IMAGE_RETRY_DELAYS = [500, 1500];
   const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2;
   const OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1';
   const MENU_PREFIX_PRICE_PATTERN = /(?:가격\s*[:：]?\s*)?(?:₩|\$|krw|usd)\s*(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:\s*(?:원|krw|usd))?/giu;
@@ -541,8 +543,32 @@
   function loadMenuImage(image) {
     const source = String(image?.dataset?.menuImageSrc || '').trim();
     if (!source || image.src) return;
+    image.dataset.menuImageManaged = '1';
+    // IntersectionObserver already selected this image and the queue limits
+    // concurrency. Native lazy loading can stall a visibility-hidden retry.
+    image.loading = 'eager';
     image.src = source;
-    delete image.dataset.menuImageSrc;
+  }
+
+  function showMenuImageFailure(image) {
+    image.hidden = true;
+    image.parentElement?.classList.add('is-menu-photo-unavailable');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'store-menu-photo-retry';
+    button.textContent = '사진 다시 불러오기';
+    button.setAttribute('aria-label', `${image.alt || '메뉴'} 사진 다시 불러오기`);
+    button.addEventListener('keydown', event => event.stopPropagation());
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      button.remove();
+      image.parentElement?.classList.remove('is-menu-photo-unavailable');
+      image.hidden = false;
+      delete image.dataset.menuImageAttempts;
+      queueMenuImage(image);
+    });
+    image.after(button);
   }
 
   function menuVariantsMarkup(item) {
@@ -575,14 +601,49 @@
       const {image, run} = menuImageQueue.shift();
       if (run !== menuImageLoadRun || !image?.isConnected || !image.dataset.menuImageSrc) continue;
       activeMenuImageLoads += 1;
-      const release = () => {
+      let settled = false;
+      let timer = 0;
+      const cleanup = () => {
+        window.clearTimeout(timer);
+        image.removeEventListener('load', onLoad);
+        image.removeEventListener('error', onError);
+        delete image.dataset.menuImageQueued;
+        menuImageTasks.delete(image);
+      };
+      const finish = success => {
+        if (settled) return;
+        settled = true;
+        cleanup();
         if (run !== menuImageLoadRun) return;
         activeMenuImageLoads = Math.max(0, activeMenuImageLoads - 1);
-        delete image.dataset.menuImageQueued;
+        if (success) {
+          image.style.visibility = '';
+          delete image.dataset.menuImageSrc;
+          delete image.dataset.menuImageAttempts;
+        } else {
+          image.removeAttribute('src');
+          const attempt = Number(image.dataset.menuImageAttempts || 0);
+          if (attempt < MENU_IMAGE_RETRY_DELAYS.length && image.isConnected) {
+            image.dataset.menuImageAttempts = String(attempt + 1);
+            image.dataset.menuImageQueued = '1';
+            timer = window.setTimeout(() => {
+              cleanup();
+              if (run === menuImageLoadRun && image.isConnected) queueMenuImage(image);
+            }, MENU_IMAGE_RETRY_DELAYS[attempt]);
+            menuImageTasks.set(image, cleanup);
+          } else if (image.isConnected) {
+            showMenuImageFailure(image);
+          }
+        }
         drainMenuImageQueue();
       };
-      image.addEventListener('load', release, {once: true});
-      image.addEventListener('error', release, {once: true});
+      const onLoad = () => finish(true);
+      const onError = () => finish(false);
+      image.style.visibility = 'hidden';
+      image.addEventListener('load', onLoad, {once: true});
+      image.addEventListener('error', onError, {once: true});
+      timer = window.setTimeout(onError, 15000);
+      menuImageTasks.set(image, cleanup);
       loadMenuImage(image);
     }
   }
@@ -596,6 +657,9 @@
 
   function resetMenuImageLoading({cancelActive = false} = {}) {
     menuImageLoadRun += 1;
+    for (const cleanup of [...menuImageTasks.values()]) cleanup();
+    menuImageTasks.clear();
+    for (const {image} of menuImageQueue) delete image.dataset.menuImageQueued;
     menuImageQueue = [];
     activeMenuImageLoads = 0;
     menuImageObserver?.disconnect();
