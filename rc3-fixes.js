@@ -4,7 +4,7 @@
 const RC3_ICON_SPRITE = CATEGORY_ICON_SPRITE;
 const RC3_REGION_NAME = window.DAEDONG_REGION?.shortName || '여수';
 const RC3_IS_GOHEUNG = window.DAEDONG_REGION?.code === 'goheung';
-const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-07-card-markers';
+const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-07-card-markers-current-contact-phone-1';
 const RC3_APP_PARTICLE = Object.freeze({
   yogiyo: '요기요로',
   baemin: '배달의민족으로',
@@ -228,11 +228,7 @@ function rc3Digits(value) {
 
 function rc3VerifiedPhone(store) {
   const mapped = rc3InternalPhoneByStore.get(String(store?.id));
-  // The detail API already resolves source/branch verification. Its current
-  // number must win over the archived runtime index after detail hydration.
-  // Keep the index as the existing fallback when the API has no phone yet.
-  const currentPhone = store?.__secureDetailReady === true ? store?.phone : '';
-  const digits = rc3Digits(currentPhone || mapped?.phone || store?.phone);
+  const digits = rc3Digits(mapped?.phone || store?.phone);
   const valid = /^02\d{7,8}$/.test(digits)
     || /^0(?:3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{7,8}$/.test(digits)
     || /^050[2-8]\d{7,8}$/.test(digits)
