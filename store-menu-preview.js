@@ -544,6 +544,9 @@
     const source = String(image?.dataset?.menuImageSrc || '').trim();
     if (!source || image.src) return;
     image.dataset.menuImageManaged = '1';
+    // IntersectionObserver already selected this image and the queue limits
+    // concurrency. Native lazy loading can stall a visibility-hidden retry.
+    image.loading = 'eager';
     image.src = source;
   }
 

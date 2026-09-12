@@ -61,4 +61,7 @@ try {
   await manual.scrollIntoViewIfNeeded();
   await page.screenshot({path: 'browser-menu-photo-retry-recovered.png'});
   console.log(JSON.stringify({success: true, viewport: '390x844', attempts, checks: ['transient recovery', 'bounded retries', 'compact fallback', 'manual recovery', 'order untouched', 'healthy image unchanged']}));
+} catch (error) {
+  console.error(JSON.stringify({attempts, images: await page.locator('img[data-menu-image-managed]').evaluateAll(images => images.map(i => ({src:i.src,complete:i.complete,width:i.naturalWidth,loading:i.loading,attempts:i.dataset.menuImageAttempts}))).catch(()=>[])}));
+  throw error;
 } finally {await browser.close();}
