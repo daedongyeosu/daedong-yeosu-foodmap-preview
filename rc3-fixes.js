@@ -4,7 +4,7 @@
 const RC3_ICON_SPRITE = CATEGORY_ICON_SPRITE;
 const RC3_REGION_NAME = window.DAEDONG_REGION?.shortName || '여수';
 const RC3_IS_GOHEUNG = window.DAEDONG_REGION?.code === 'goheung';
-const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-07-card-markers';
+const RC3_PHONE_INTERNAL_URL = 'data/phone-order-runtime.json?v=channel-recovery-07-card-markers-current-contact-phone-1';
 const RC3_APP_PARTICLE = Object.freeze({
   yogiyo: '요기요로',
   baemin: '배달의민족으로',
