@@ -1,7 +1,7 @@
 'use strict';
 
 /* RC2 fixes only. Frozen store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
-const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json';
+const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json?v=reviewed-identity-20260913';
 const RC2_EXTERNAL_RETURN = 'daedongExternalReturnRc2';
 const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
@@ -1151,12 +1151,22 @@ fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
 };
 brandsModal = function rc2BrandsModal() { fxOpenBrandHub('channels'); };
 
+function rc2NaverAuditMatches(store) {
+  const audit = rc2NaverByStore.get(String(store?.id));
+  if (audit?.status !== 'verified') return false;
+  if (!audit.place_id) return true;
+  try {
+    const url = new URL(store?.naverMap || '');
+    return url.protocol === 'https:' && url.hostname === 'map.naver.com'
+      && url.pathname.replace(/\/$/, '') === '/p/entry/place/' + audit.place_id;
+  } catch { return false; }
+}
+
 fxEnhanceStoreDetail = function rc2EnhanceStoreDetail(store) {
   const detail = $('#modalContent .store-detail');
   if (!detail) return;
-  const mapAudit = rc2NaverByStore.get(String(store.id));
   const naverLink = detail.querySelector('.detail-quick-link[data-detail-only="naver"]');
-  if (rc2NaverByStore.size && (!mapAudit || mapAudit.status !== 'verified')) naverLink?.remove();
+  if (rc2NaverByStore.size && !rc2NaverAuditMatches(store)) naverLink?.remove();
   const brand = fxBrandByStore.get(String(store.id));
   const happy = fxHappyByStore.get(String(store.id));
   if (brand || happy) {

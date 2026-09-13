@@ -898,7 +898,8 @@
     },
     {
       "store_id": "43384f472418faec",
-      "status": "unverified"
+      "status": "verified",
+      "place_id": "1042642943"
     },
     {
       "store_id": "adcbd0b7f13946a4",
@@ -1406,7 +1407,8 @@
     },
     {
       "store_id": "23e36eb3741524aa",
-      "status": "unverified"
+      "status": "verified",
+      "place_id": "4277888320"
     },
     {
       "store_id": "bb9aef1788a685c6",
@@ -1879,6 +1881,21 @@
     {
       "store_id": "17d9bf1de3d671fd",
       "status": "unverified"
+    },
+    {
+      "store_id": "c76dbc66a4867b84",
+      "status": "verified",
+      "place_id": "2005576147"
+    },
+    {
+      "store_id": "3cd502d3432e2118",
+      "status": "verified",
+      "place_id": "1526738731"
+    },
+    {
+      "store_id": "24f321d28eec1c6a",
+      "status": "verified",
+      "place_id": "2005576147"
     }
   ]
 }
