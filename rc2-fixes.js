@@ -1,7 +1,7 @@
 'use strict';
 
 /* RC2 fixes only. Frozen store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
-const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json?v=reviewed-identity-20260913';
+const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json?v=reviewed-identity-20260913-address-variants-1';
 const RC2_EXTERNAL_RETURN = 'daedongExternalReturnRc2';
 const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';

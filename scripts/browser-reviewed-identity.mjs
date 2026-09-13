@@ -8,6 +8,7 @@ fs.mkdirSync(out,{recursive:true});
 const expected = {'43384f472418faec':'1042642943','23e36eb3741524aa':'4277888320','c76dbc66a4867b84':'2005576147','3cd502d3432e2118':'1526738731','24f321d28eec1c6a':'2005576147'};
 const crossId = {"a93abf2f62c2dd79":{"placeId":"1273918555","hadPhotos":true},"fff5de01a570153c":{"placeId":"36122157","hadPhotos":true},"ec2cdfacfd81dccf":{"placeId":"1456650931","hadPhotos":false},"b89fe40efdb1a364":{"placeId":"1531309409","hadPhotos":false},"cd4a2445681f96ae":{"placeId":"36122157","hadPhotos":false},"f8448e8bb425acd5":{"placeId":"1557373600","hadPhotos":false},"87cc23220d97784d":{"placeId":"1230839526","hadPhotos":false}};
 const report = {base,viewport:'390x844',checks:[],errors:[],success:false};
+Object.assign(crossId,{"4b8ea4cbc481a3ee":{"placeId":"4263611764","hadPhotos":true},"89cc7771439aed75":{"placeId":"34013665","hadPhotos":true},"cd0c75618679aa6f":{"placeId":"2027081829","hadPhotos":true},"329f29791a4729cb":{"placeId":"1531309409","hadPhotos":true},"e1f719daeb7e71f6":{"placeId":"1627413284","hadPhotos":true},"b852080328339616":{"placeId":"1745434136","hadPhotos":true},"3cd9b1196d74ca8d":{"placeId":"16944393","hadPhotos":true},"70930337df231ca5":{"placeId":"38543812","hadPhotos":true},"bb61af3c48a4a5cc":{"placeId":"1503909875","hadPhotos":false},"cb7fecc41682d9c1":{"placeId":"2036342495","hadPhotos":false},"01ac329758f8848c":{"placeId":"37531073","hadPhotos":false}});
 const browser = await chromium.launch({headless:true,...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath:process.env.CODEX_BROWSER_EXECUTABLE_PATH}:{})});
 const context = await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,locale:'ko-KR',serviceWorkers:'block'});
 const proxy = process.env.PERF_PROXY_API_ORIGIN;
@@ -45,6 +46,25 @@ async function verify(id,place,entry) {
  await page.screenshot({path:path.join(out,id+(entry.includes('hero=')?'-hero':'')+'.png')});
 }
 try {
+ let releaseAudit;
+ const auditGate=new Promise(resolve=>{releaseAudit=resolve;});
+ const auditMatcher=url=>url.pathname==='/data/naver-map-runtime.json';
+ await context.route(auditMatcher,async route=>{await auditGate;await route.continue();});
+ try {
+  await page.goto(base+'/',{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>typeof rc3VerifiedPhysicalMap==='function'&&typeof allStores!=='undefined'&&allStores.some(s=>s.id==='43384f472418faec'));
+  await page.evaluate(()=>openStore(allStores.find(s=>s.id==='43384f472418faec')));
+  assert.equal(await page.locator('#modal a[data-detail-only="naver"]').count(),0,'not shown before audit is available');
+  await page.evaluate(()=>{window.__identityOrderNode=document.querySelector('#modal .local-detail-routes');});
+  releaseAudit();
+  const lateMap=page.locator('#modal a[data-detail-only="naver"]');
+  await lateMap.waitFor({timeout:30000});
+  assert.equal(await lateMap.getAttribute('href'),'https://map.naver.com/p/entry/place/1042642943');
+  assert.equal(await page.evaluate(()=>window.__identityOrderNode===document.querySelector('#modal .local-detail-routes')),true,'late audit preserves order DOM');
+  await page.evaluate(()=>window.daedongLocationRankingReady);
+  assert.equal(await lateMap.count(),1,'no duplicate map after initialization');
+  report.checks.push({id:'43384f472418faec',entry:'delayed-audit-early-open',passed:true});
+ } finally { releaseAudit();await context.unroute(auditMatcher); }
  for(const [id,place] of Object.entries(expected)) await verify(id,place,'/');
  await verify('a8218795099e637e','2033356705','/');
  for(const [id,record] of Object.entries(crossId)) await verify(id,record.placeId,'/');
