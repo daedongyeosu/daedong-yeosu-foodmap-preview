@@ -57,48 +57,71 @@
   function inquiry() {
     return `<section class="local-service-detail local-service-inquiry"><span class="local-service-kicker">대동여수음식지도</span><h2 id="modalTitle">우리 업체도<br>광고할 수 있나요?</h2><p class="local-service-lead">여수 고객에게 알리고 싶은 서비스가 있다면<br>광고 게재를 문의해 주세요.</p><div class="local-service-info-box"><h3>이렇게 보내주시면 됩니다</h3><ol><li>업체명과 담당자 연락처</li><li>소개할 상품 또는 서비스</li><li>게시할 사진·안내자료·연결 주소</li></ol><p>게시 위치·기간·비용은 상담 후 안내합니다.</p></div><nav class="local-service-actions" aria-label="광고 게재 문의"><a class="local-service-primary" href="tel:01047977803">광고 게재 전화 문의</a><a href="mailto:sisakim@naver.com?subject=${encodeURIComponent('대동여수음식지도 광고 게재 문의')}">이메일로 문의하기</a></nav><p class="local-service-contact-note">010-4797-7803 · sisakim@naver.com</p><p class="local-service-fineprint">보험·렌탈 상품 상담은 각 광고의 담당자에게 문의해 주세요. 이 연락처는 음식지도 광고 게재 문의용입니다.</p></section>`;
   }
-  function officialDocument() {
-    const doc = insuranceDocument;
-    return `<section class="local-service-document"><span class="local-service-document-label">공식 문서 · 선명한 원본</span><h3>작은 글씨까지<br>크게 확인하세요</h3><p>${escape(doc.title)}<br>현대해상 공시실에서 확인한 같은 상품의 공식 자료입니다.</p><div class="local-service-document-links"><a href="${doc.pdf}" target="_blank" rel="noopener" class="local-service-pdf">선명한 PDF 원본 열기 ↗ <span>전체 9쪽 · 약 140KB</span></a><a href="${doc.pdf}" download>PDF 저장하기 ↓</a><a href="${doc.source}" target="_blank" rel="noopener noreferrer">현대해상 원본 출처 ↗</a></div><details class="local-service-reader" data-document-page="1" data-document-zoom="100"><summary>화면에서 확대해 읽기 · 9쪽</summary><div class="local-service-reader-controls"><div class="local-service-reader-pages" aria-label="문서 페이지 이동"><button type="button" data-document-action="previous" disabled aria-label="이전 페이지">← 이전</button><span data-document-status aria-live="polite" aria-atomic="true">1 / 9쪽</span><button type="button" data-document-action="next" aria-label="다음 페이지">다음 →</button></div><div class="local-service-reader-zoom" aria-label="문서 확대"><button type="button" data-document-action="read">글자 크게 · 6배</button><button type="button" data-document-action="out" disabled aria-label="문서 축소">축소 −</button><button type="button" data-document-action="fit">전체 보기</button><span data-document-scale aria-live="polite">100%</span></div></div><p class="local-service-reader-hint">‘글자 크게’를 누른 뒤 문서를 좌우·위아래로 밀어서 읽으세요. PDF 원본에서는 더 확대할 수 있습니다.</p><div class="local-service-document-viewport" tabindex="0" role="region" aria-label="공식 상품요약서 확대 영역. 방향키 또는 터치로 이동"><img src="${root}hyundai-summary-1.png" alt="현대해상 하이바이크운전자보험 Hi2601 공식 상품요약서 1 / 9쪽. 자세한 원문은 위 PDF에서 확인" width="3600" height="2547" loading="lazy" decoding="async" draggable="false"></div><p class="local-service-document-error" role="status" hidden>문서 이미지를 불러오지 못했습니다. 위의 ‘선명한 PDF 원본 열기’를 이용해 주세요.</p></details><p class="local-service-document-note">9쪽 모두 원문 그대로 제공합니다. 아래의 담당자 제공 전단 4장과는 별도의 공식 상품요약서입니다. 이 요약서와 함께 약관 및 가입 시 유의사항을 확인하고, 가입 가능 여부와 현재 판매 조건은 담당자에게 확인해 주세요.</p></section>`;
+  // Four responsive, always-visible sheets. Live text stays sharp at any zoom;
+  // the supplied raster is used only for the cover artwork, never for body text.
+  // Copy provenance / limitations: assets/local-services/hyundai-readable-source.json.
+  function insuranceBrochure(ad) {
+    return `<div class="insurance-reading-tools"><span>상품안내</span><button type="button" data-insurance-font aria-pressed="false">글자 더 크게 ＋</button></div>
+      <div class="insurance-brochure">
+        <section class="insurance-sheet insurance-cover" data-insurance-sheet="1" aria-label="1장 상품 소개">
+          <span class="insurance-sheet-number">01 / 04 · 현대해상</span>
+          <h2 id="modalTitle">하이바이크<br>운전자보험</h2><p class="insurance-edition">무배당 · Hi2601</p>
+          <p class="insurance-cover-message">이륜자동차의<br><strong>운행 목적에 맞게.</strong></p>
+          <div class="insurance-cover-art" aria-hidden="true"><img src="${ad.image}" alt="" width="511" height="716" decoding="async"></div>
+          <p>출퇴근부터 배달까지,<br>사용 목적을 알리고 가입 조건을 확인하세요.</p>
+          <a class="insurance-quick-contact" href="tel:${ad.phone.replace(/-/g, '')}"><span>${escape(ad.person)}</span><strong>${ad.phone}</strong><span>전화로 문의하기 ↗</span></a>
+        </section>
+        <section class="insurance-sheet" data-insurance-sheet="2" aria-label="2장 상품특징">
+          <span class="insurance-sheet-number">02 / 04 · 상품특징</span><h3>어떻게 운행하시나요?</h3><p>가입할 때 실제 운행 목적에 맞는 구분을 선택합니다.</p>
+          <div class="insurance-use"><h4>출퇴근·일상생활</h4><strong>가정용 및 기타용도</strong><p>배달 목적 없이 출퇴근이나 일상생활에 이용하는 경우입니다.</p></div>
+          <div class="insurance-use"><h4>매장의 직접 배달</h4><strong>비유상운송배달</strong><p>음식점 등의 직원이나 운영자가 요금·대가를 직접 받지 않고 배달하는 경우입니다. 정확한 구분은 실제 업무 형태에 따라 확인하세요.</p></div>
+          <div class="insurance-use"><h4>배달대행·퀵서비스</h4><strong>유상운송배달</strong><p>배달 건별 요금 등 배달 대가를 직접 받는 경우입니다.</p></div>
+          <h4>이륜자동차 운전 중 상해</h4><p>사망·후유장해, 골절 진단·수술, 깁스치료, 입원일당, 사고부상 등을 기본계약 및 선택한 특약의 조건에 따라 보장합니다.</p>
+          <h4>운전 중 발생하는 비용손해</h4><p>사고처리지원금, 벌금, 변호사선임비용 등의 특약이 있습니다. 모든 사고에 일괄 지급되는 것은 아니며, 특약별 지급사유·한도·공제금액이 적용됩니다.</p>
+          <div class="insurance-notice"><h4>가입 전 알려야 할 운행정보</h4><ul><li>운행 목적: 가정용 및 기타 / 비유상운송 / 유상운송</li><li>이륜자동차 운전면허 보유 여부</li><li>주로 운행하는 차량의 배기량(cc)</li><li>이륜자동차 운전 경력</li></ul></div>
+          <h4>보장 대상 차량도 확인하세요</h4><p>전단은 약관에서 정한 이륜자동차를 대상으로 안내합니다. 킥보드·ATV·전동휠체어 등은 전단의 보장 제외 예시에 포함되어 있습니다. 차량의 외형만으로 판단하지 말고 약관상 차량 구분을 확인하세요.</p>
+          <p class="insurance-caution">위 내용은 해당 특약 가입 시에 적용됩니다. 실제 가입 가능 여부는 면허·운행 목적·차량 및 심사 결과에 따라 달라질 수 있습니다.</p>
+        </section>
+        <section class="insurance-sheet" data-insurance-sheet="3" aria-label="3장 가입안내 및 보장소개">
+          <span class="insurance-sheet-number">03 / 04 · 가입안내</span><h3>가입 조건과<br>보장 내용을 확인하세요</h3>
+          <dl class="insurance-facts"><div><dt>가입 나이</dt><dd>만 18세 ~ 70세</dd></div><div><dt>보험기간</dt><dd>3·5·7·10·15·20년 만기</dd></div><div><dt>보험료 납입</dt><dd>월납</dd></div><div><dt>납입기간</dt><dd>3·5·7·10년 만기: 전기납<br>15년 만기: 10년납 또는 전기납<br>20년 만기: 10년납·15년납 또는 전기납</dd></div></dl>
+          <p class="insurance-caution">전기납은 보험기간 전체에 걸쳐 보험료를 납입하는 방식입니다. 가입 나이·건강상태·과거병력·직무 등에 따라 가입금액이 제한되거나 가입이 불가능할 수 있습니다.</p>
+          <h4>기본계약</h4><p><strong>이륜자동차운전중상해사망</strong><br>이륜자동차 운전 중 교통사고로 발생한 상해로 사망한 경우 가입금액을 지급합니다.</p>
+          <h4>선택계약 · 상해 관련</h4><ul><li>후유장해: 일반 / 50% 이상 / 80% 이상</li><li>골절진단(치아파절 제외), 5대골절진단</li><li>골절수술, 5대골절수술, 상해수술</li><li>깁스치료, 입원일당(1~180일)</li><li>사고부상, 사고부상(1~11급)</li><li>사고부상(차량단독사고 제외), 사고부상(차량단독사고 제외·1~11급)</li><li>상해진단(최초진단·4주 이상)</li></ul>
+          <p class="insurance-caution">위 상해 특약은 이륜자동차 운전 중 교통사고로 발생한 상해에 대한 담보입니다. 특약마다 지급요건이 다릅니다.</p>
+          <h4>선택계약 · 비용손해 관련</h4><ul><li>이륜자동차사고처리지원금</li><li>이륜자동차사고처리지원금(중대법규위반·6주 미만 치료)</li><li>자동차사고벌금Ⅱ(대인), 자동차사고벌금(대물)</li><li>자동차사고변호사선임비용Ⅴ: 심급별Ⅱ·특정사고경찰조사포함Ⅱ / 특정사고경찰조사포함Ⅱ</li><li>자동차사고면허정지일당, 자동차사고면허취소</li><li>법률비용손해(행정소송·민사소송)</li><li>과실치사상벌금(가족), 업무상과실·중과실치사상벌금</li></ul>
+          <div class="insurance-notice"><h4>함께 확인할 가입 제한</h4><ul><li>5대골절진단·수술은 각각 골절진단·수술 특약을 먼저 가입해야 합니다.</li><li>사고부상(1~11급)은 해당 사고부상 특약의 선행 가입이 필요합니다. 차량단독사고 제외형도 같은 기준입니다.</li><li>면허정지일당·면허취소 특약은 영업용 운전자에 한해 가입할 수 있습니다.</li><li>6주 미만 치료 사고처리지원금 특약은 약관에서 정한 사고처리지원금 보장 가입이 선행되어야 합니다.</li><li>두 변호사선임비용Ⅴ 특약은 동시에 가입할 수 없습니다.</li><li>유상·비유상운송배달용의 벌금·변호사선임비용 특약은 영업용으로만 가입 가능합니다.</li><li>이륜자동차 운전이 가능한 면허 등을 보유한 운전자에 한해 가입 가능합니다.</li></ul></div>
+          <h4>용어도 알아두세요</h4><p><strong>5대골절</strong><br>머리의 으깸손상, 목·흉추·요추·골반·대퇴골의 골절을 말합니다.</p><p><strong>차량단독사고</strong><br>상대방 없이 단독으로 발생시킨 사고나, 주차 차량·물건·도로시설물 등과의 충돌·접촉 등 약관에서 정한 사고입니다. 차량단독사고 제외형은 이러한 사고를 보장하지 않습니다.</p>
+        </section>
+        <section class="insurance-sheet" data-insurance-sheet="4" aria-label="4장 가입 시 유의사항">
+          <span class="insurance-sheet-number">04 / 04 · 꼭 확인하세요</span><h3>가입 시 유의사항</h3>
+          <h4>청약 내용은 사실대로 알려주세요</h4><p>청약서의 질문에 사실대로 답하고 직접 서명해야 합니다. 직업·직무·운행 목적 등 계약 후 알려야 할 사항이 바뀌면 보험회사에 알려야 합니다. 알릴 의무를 지키지 않으면 계약 해지나 보장 제한이 생길 수 있습니다.</p>
+          <h4>보장 조건·제외사항을 함께 확인하세요</h4><p>이 화면에 나열된 특약이 모두 자동으로 포함되는 것은 아닙니다. 실제 가입한 특약과 보험증권·약관의 지급사유, 보장금액, 자기부담금 및 보험금을 지급하지 않는 사유가 적용됩니다.</p>
+          <div class="insurance-notice"><h4>변호사선임비용 공제금액</h4><p>자동차사고변호사선임비용Ⅴ(심급별Ⅱ)(특정사고경찰조사포함Ⅱ)는 해당 심급 변호사선임비용의 <strong>50%를 공제</strong>한 뒤 심급별 한도 내에서 보상하는 구조입니다. 다른 유형의 특약과 혼동하지 않도록 확인하세요.</p></div>
+          <h4>중복 가입해도 비용손해는 비례보상</h4><p>운전자비용 등 실제 손해를 보상하는 담보는 같은 손해를 보장하는 보험이 여러 개일 때 약관에 따라 비례보상합니다. 가입금액을 단순히 합쳐 모두 받는 방식이 아닙니다.</p>
+          <h4>중도 해지와 환급금</h4><p>중도 해지하면 해약환급금이 납입한 보험료보다 적거나 없을 수 있습니다. 공시이율 변동이나 중도인출 등으로 만기·해약환급금이 달라질 수 있습니다. 이 상품은 배당하지 않는 무배당 상품입니다.</p>
+          <h4>기존 보험을 바꾸기 전 확인하세요</h4><p>기존 계약을 해지하고 새로 가입하면 가입 거절, 보험료 인상 또는 보장 내용 변경 등이 생길 수 있습니다. 기존 계약과 새 계약의 조건을 먼저 비교하세요.</p>
+          <h4>청약철회·계약취소 등 권리</h4><p>청약철회, 약관·청약서 부본 교부, 설명의무, 계약취소 및 위법계약 해지 등에 관한 내용은 계약서류에서 확인하세요. 적용 기간과 예외가 있으므로 담당자에게 설명을 요청할 수 있습니다.</p>
+          <h4>보험료 납입·예금자보호</h4><p>보험료 연체로 계약이 해지될 수 있으니 납입 기일을 확인하세요. 예금자보호의 대상·한도·제외조건 및 보험계약 관련 상세 안내는 가입 시 제공되는 상품설명서에서 확인하세요.</p>
+          <p class="insurance-caution">담당자 제공 전단 4장의 구성을 바탕으로 공식 Hi2601 상품요약서를 대조해 읽기 쉽게 정리한 화면용 안내입니다. 전단·약관 전문을 그대로 전재한 문서는 아닙니다. 구체적인 보장 및 가입 조건은 약관과 담당자 설명을 확인하세요. 대동여수음식지도에서 보험 가입을 받지는 않습니다.</p>
+          <a class="insurance-customer-center" href="tel:15885656">현대해상 고객콜센터 <strong>1588-5656</strong></a>
+        </section>
+      </div>`;
   }
-  function updateDocument(button) {
-    const reader = button.closest('.local-service-reader');
-    if (!reader) return;
-    let page = Math.max(1, Math.min(insuranceDocument.pages, Number(reader.dataset.documentPage) || 1));
-    let zoom = [100, 300, 600].includes(Number(reader.dataset.documentZoom)) ? Number(reader.dataset.documentZoom) : 100;
-    const oldPage = page;
-    const action = button.dataset.documentAction;
-    if (action === 'previous') page = Math.max(1, page - 1);
-    else if (action === 'next') page = Math.min(insuranceDocument.pages, page + 1);
-    else if (action === 'read') zoom = 600;
-    else if (action === 'out') zoom = zoom === 600 ? 300 : 100;
-    else if (action === 'fit') zoom = 100;
-    else return;
-    reader.dataset.documentPage = String(page);
-    reader.dataset.documentZoom = String(zoom);
-    reader.querySelector('[data-document-status]').textContent = `${page} / ${insuranceDocument.pages}쪽`;
-    reader.querySelector('[data-document-scale]').textContent = `${zoom}%`;
-    reader.querySelector('[data-document-action="previous"]').disabled = page === 1;
-    reader.querySelector('[data-document-action="next"]').disabled = page === insuranceDocument.pages;
-    reader.querySelector('[data-document-action="out"]').disabled = zoom === 100;
-    const img = reader.querySelector('.local-service-document-viewport img');
-    if (page !== oldPage) {
-      reader.querySelector('.local-service-document-error').hidden = true;
-      img.src = `${root}hyundai-summary-${page}.png`;
-      img.alt = `현대해상 하이바이크운전자보험 Hi2601 공식 상품요약서 ${page} / ${insuranceDocument.pages}쪽. 자세한 원문은 위 PDF에서 확인`;
-    }
-    img.style.width = `${zoom}%`;
-    const viewport = reader.querySelector('.local-service-document-viewport');
-    // Keep the official page intact, but start past its wide blank print margins.
-    viewport.scrollTop = zoom > 100 ? Math.round(img.clientHeight * .08) : 0;
-    viewport.scrollLeft = zoom > 100 ? Math.round(img.clientWidth * .10) : 0;
+  function updateInsuranceFont(button) {
+    const detail = button.closest('[data-service-detail="hyundai-sinwansu"]');
+    if (!detail) return;
+    const large = detail.classList.toggle('insurance-large-text');
+    button.setAttribute('aria-pressed', String(large));
+    button.textContent = large ? '기본 글자 크기 −' : '글자 더 크게 ＋';
   }
   function detail(id) {
     if (id === 'advertise') return inquiry();
     const ad = find(id);
     if (!ad) return `<section class="local-service-detail"><h2 id="modalTitle">광고를 찾을 수 없습니다</h2><p>아래에서 현재 안내 중인 서비스를 확인해 주세요.</p><a href="/services/">생활서비스 전체 보기</a></section>`;
+    if (ad.theme === 'insurance') return `<section class="local-service-detail local-service-insurance insurance-direct" data-service-detail="${ad.id}"><span class="local-service-kicker">보험 상담 <span class="local-service-disclosure">광고</span></span>${insuranceBrochure(ad)}<div class="local-service-contact"><span>${escape(ad.person)}</span><strong>${ad.phone}</strong></div><nav class="local-service-actions" aria-label="${escape(ad.person)} 상담"><a class="local-service-primary" href="tel:${ad.phone.replace(/-/g, '')}">담당자에게 전화하기</a><a href="sms:${ad.phone.replace(/-/g, '')}">문자로 문의하기</a><a class="local-service-official" href="${escape(ad.official)}" target="_blank" rel="noopener noreferrer">현대해상 모바일 명함 보기 ↗</a></nav><footer class="insurance-source-links" aria-label="안내 출처"><span>자료 출처</span><a href="${insuranceDocument.source}" target="_blank" rel="noopener noreferrer">현대해상 Hi2601 상품요약서 ↗</a><span>담당자 제공 전단 ${ad.pages.map((src, i) => `<a href="${src}" target="_blank" rel="noopener" aria-label="제공 전단 ${i + 1}장 보기">${i + 1}장</a>`).join(' · ')}</span></footer><div class="local-service-inquiry-link"><span>여수 고객에게 우리 서비스를 알리고 싶다면</span><a href="${href('advertise')}" data-local-service-open="advertise">우리 업체도 광고하기 ›</a></div></section>`;
     const material = ad.pages
-      ? `${officialDocument()}<section class="local-service-material"><h3>담당자 제공 상품안내</h3><p>처음 전달받은 전단 4장입니다. 작은 글씨는 위의 공식 PDF로 확인해 주세요.</p><details><summary>담당자 제공 전단 4장 펼쳐 보기</summary><div class="local-service-gallery">${ad.pages.map((src, i) => `<a href="${src}" target="_blank" rel="noopener" aria-label="상품안내 ${i + 1}쪽 원본 크게 보기"><img src="${src}" alt="하이바이크운전자보험 담당자 제공 전단 ${i + 1}쪽" width="511" height="716" loading="lazy"><span>${i + 1} / 4 · 원본 크게 보기 ↗</span></a>`).join('')}</div></details><p class="local-service-fineprint">전단은 광고주가 제공했으며 원본 화질을 유지했습니다. 전단의 작은 글씨를 추측해 고쳐 쓰지 않았습니다. 가입 가능 여부와 보장 범위·제외사항 등 자세한 내용은 약관과 담당자 안내를 확인해 주세요. 대동여수음식지도에서 보험 가입을 받지는 않습니다.</p></section>`
+      ? ''
       : `<section class="local-service-material"><h3>판매·렌탈 안내 제품</h3><div class="local-service-products">${ad.products.map(p => `<span>${escape(p)}</span>`).join('')}</div><a class="local-service-original" href="${ad.image}" target="_blank" rel="noopener"><img src="${ad.image}" alt="${escape(ad.imageAlt)}" width="1082" height="660" loading="lazy"><span>제공된 안내 이미지 크게 보기 ↗</span></a><p class="local-service-fineprint">제품별 가격·계약기간·서비스 조건은 담당자에게 확인해 주세요.</p></section>`;
     return `<section class="local-service-detail local-service-${ad.theme}" data-service-detail="${ad.id}"><span class="local-service-kicker">${escape(ad.category)} <span class="local-service-disclosure">광고</span></span><h2 id="modalTitle">${escape(ad.brand)}<br>${escape(ad.title)}</h2><p class="local-service-lead">${escape(ad.description)}</p><div class="local-service-contact"><span>${escape(ad.person)}</span><strong>${ad.phone}</strong></div><nav class="local-service-actions" aria-label="${escape(ad.person)} 상담"><a class="local-service-primary" href="tel:${ad.phone.replace(/-/g, '')}">담당자에게 전화하기</a><a href="sms:${ad.phone.replace(/-/g, '')}">문자로 문의하기</a>${ad.official ? `<a class="local-service-official" href="${escape(ad.official)}" target="_blank" rel="noopener noreferrer">현대해상 모바일 명함 보기 ↗</a>` : ''}</nav>${material}<div class="local-service-inquiry-link"><span>여수 고객에게 우리 서비스를 알리고 싶다면</span><a href="${href('advertise')}" data-local-service-open="advertise">우리 업체도 광고하기 ›</a></div></section>`;
   }
@@ -114,18 +137,12 @@
   }
   function init() {
     document.addEventListener('click', event => {
-      const documentButton = event.target.closest?.('[data-document-action]');
-      if (documentButton && enabled()) { updateDocument(documentButton); return; }
+      const fontButton = event.target.closest?.('[data-insurance-font]');
+      if (fontButton && enabled()) { updateInsuranceFont(fontButton); return; }
       const link = event.target.closest?.('[data-local-service-open]');
       if (!link || event.defaultPrevented || event.button > 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       if (open(link.dataset.localServiceOpen)) event.preventDefault();
     });
-    document.addEventListener('error', event => {
-      if (event.target.matches?.('.local-service-document-viewport img')) {
-        const reader = event.target.closest('.local-service-reader');
-        if (reader) reader.querySelector('.local-service-document-error').hidden = false;
-      }
-    }, true);
     const standalone = document.getElementById('localServicePage');
     if (standalone) {
       if (!enabled()) { standalone.innerHTML = '<h1>생활서비스 준비 중</h1><a href="/">음식지도로 돌아가기</a>'; return; }

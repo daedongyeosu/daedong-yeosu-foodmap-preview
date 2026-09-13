@@ -1,0 +1,15 @@
+{
+  "product": "무배당 현대해상하이바이크운전자보험(Hi2601)",
+  "purpose": "Responsive reading adaptation of the supplied four-sheet brochure, not a pixel enhancement or a facsimile of the approved original.",
+  "originalSheets": ["hyundai-guide-1.png", "hyundai-guide-2.png", "hyundai-guide-3.png", "hyundai-guide-4.png"],
+  "officialSummary": "https://www.hi.co.kr/FileActionServlet/preview/0/data/202601/20260109095156269.pdf",
+  "officialSummarySha256": "c354d2169c5996ebb3e1a10a24c8358fc179c9faab1153391c8914fa752a86e2",
+  "mapping": {
+    "sheet1": "Supplied cover: product, edition, planner contact, cover artwork reused without changing the asset.",
+    "sheet2": "Supplied page 2: three usage classes, injury/expense categories, four disclosure fields and excluded vehicle examples. No guarantee of eligibility is added.",
+    "sheet3": "Supplied page 3 and official summary pages 1-2, 7: eligibility, payment combinations, base cover, optional covers, prerequisites, incompatible riders and definitions.",
+    "sheet4": "Supplied page 4 caution topics expressed as a reading summary; official summary pages 6-9: tiered lawyer-cost 50% deductible, proportional reimbursement, surrender risk and nonparticipating nature. Illegible legal deadlines, protection amounts, approval stamp and insurer authorization are not reconstructed or invented. Original sheets remain available as source links."
+  },
+  "display": "All four sections are rendered as live text immediately. No downloads, accordions, pagination, lazy text loading or embedded raster body text. Optional single font-size toggle affects only this insurer's detail.",
+  "deploymentScope": "preview only"
+}
