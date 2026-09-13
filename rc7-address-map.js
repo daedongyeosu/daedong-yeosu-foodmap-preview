@@ -278,6 +278,12 @@
   }
 
   function showAddressStep(name) {
+    if (name === 'map') {
+      const back = document.querySelector('[data-rc7-step="map"] [data-rc7-step-back]');
+      const detail = document.querySelector('[data-rc7-step="detail"]');
+      const saved = document.querySelector('[data-rc7-step="saved"]');
+      if (back && (detail?.hidden === false || saved?.hidden === false)) back.dataset.rc7StepBack = detail?.hidden === false ? 'detail' : 'saved';
+    }
     document.querySelectorAll('[data-rc7-step]').forEach(section => {
       section.hidden = section.dataset.rc7Step !== name;
     });
@@ -492,7 +498,7 @@
         </section>
 
         <section class="rc7-address-step rc7-map-step" data-rc7-step="map" hidden>
-          <header class="rc7-step-head"><button type="button" data-rc7-step-back="detail" aria-label="주소 입력으로 돌아가기">←</button><span><small>선택사항</small><h2>지도 위치 조정</h2></span></header>
+          <header class="rc7-step-head"><button type="button" data-rc7-step-back="saved" aria-label="이전 주소 화면으로 돌아가기">←</button><span><small>선택사항</small><h2>지도 위치 조정</h2></span></header>
           <div class="address-selected-preview rc7-selected-preview" data-rc7-selected-preview></div>
           <section class="rc7-map-section" aria-labelledby="rc7MapTitle">
             <header><div><small>선택사항</small><h3 id="rc7MapTitle">필요할 때만 위치를 조정하세요</h3></div><button type="button" data-rc7-map-current aria-label="현재 위치로 지도 이동">⌖</button></header>

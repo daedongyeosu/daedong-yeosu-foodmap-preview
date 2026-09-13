@@ -32,8 +32,8 @@ for (const [storeId, store] of Object.entries(inventory.stores)) {
     assets++;
   }
 }
-assert.equal(Object.keys(inventory.stores).length, 84);
-assert.equal(assets, 945);
+assert.equal(Object.keys(inventory.stores).length, 96);
+assert.equal(assets, 962);
 const achasan = 'c7a234ae0185bdee';
 const dish = {id: 'coupang-920304-1', name: '[걸쭉꾸덕] 아차산매운떡볶이', image: ''};
 const source = {storeId: achasan, mainImage: '', items: [dish]};
@@ -145,4 +145,12 @@ vm.runInContext('async ' + fn(address,'locateSelectedAddress'),a);
 const pending=a.locateSelectedAddress(selected);const newer={...selected,address:'다른 주소'};a.addressDraft=newer;
 resolveGeocode({lat:34.7,lng:127.6});await pending;assert.equal(a.addressDraft,newer,'late coordinate reply cannot alter newer address');
 for(const file of ['index.html','final-experience.js']) assert.match(read(file),/photo-address-priority-20260913/);
-console.log('PASS reviewed exact-menu photos (84 stores/945 owned assets), food/channel ranking, postcode one-step save and stale reply guards');
+const steps=['saved','detail','map'].map(name=>({dataset:{rc7Step:name},hidden:name!=='detail'}));
+const back={dataset:{rc7StepBack:'saved'}};
+const stepContext=vm.createContext({document:{querySelectorAll:()=>steps,querySelector:s=>s.includes('step-back')?back:s.includes('detail')?steps[1]:s.includes('saved')?steps[0]:null},map:null,requestAnimationFrame:()=>{},initializeMap:()=>{},renderDraft:()=>{}});
+vm.runInContext(fn(address,'showAddressStep'),stepContext);
+stepContext.showAddressStep('map');assert.equal(back.dataset.rc7StepBack,'detail','optional map returns to the entered address');
+stepContext.showAddressStep('saved');stepContext.showAddressStep('map');assert.equal(back.dataset.rc7StepBack,'saved','GPS/recovery map returns to address choices');
+const semanticCases=[['f58b53f029285459','coupang-712171-13','[시원+촉촉]냉면2+촉촉~ 삼겹보쌈(200g)+명태회80g'],['6df173b638236d49','ddangyo-1136055-10000082','바삭 고기 튀김왕만두 5알 +와사비 간장']];
+for(const [storeId,id,name] of semanticCases){const payload={storeId,items:[{id,name,image:''}]};assert.ok(photos.applyReviewedMenuPhotos(storeId,payload,inventory).items[0].image);payload.items[0].name+=' 다른 구성';assert.equal(photos.applyReviewedMenuPhotos(storeId,payload,inventory).items[0].image,'');}
+console.log('PASS reviewed exact-menu photos (96 stores/962 owned assets), food/channel ranking, postcode one-step save and stale reply guards');
