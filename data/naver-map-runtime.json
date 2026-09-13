@@ -1,6 +1,83 @@
 {
   "stores": [
     {
+      "store_id": "4b8ea4cbc481a3ee",
+      "status": "verified",
+      "place_id": "4263611764",
+      "source_url": "",
+      "identity_guard": "90817b3bffc9a357"
+    },
+    {
+      "store_id": "89cc7771439aed75",
+      "status": "verified",
+      "place_id": "34013665",
+      "source_url": "",
+      "identity_guard": "c1279ab0aa9c5ec6"
+    },
+    {
+      "store_id": "cd0c75618679aa6f",
+      "status": "verified",
+      "place_id": "2027081829",
+      "source_url": "",
+      "identity_guard": "93a3b1ef24baa12f"
+    },
+    {
+      "store_id": "329f29791a4729cb",
+      "status": "verified",
+      "place_id": "1531309409",
+      "source_url": "",
+      "identity_guard": "90c6487746d2c903"
+    },
+    {
+      "store_id": "e1f719daeb7e71f6",
+      "status": "verified",
+      "place_id": "1627413284",
+      "source_url": "",
+      "identity_guard": "52d538cff4203d7d"
+    },
+    {
+      "store_id": "b852080328339616",
+      "status": "verified",
+      "place_id": "1745434136",
+      "source_url": "",
+      "identity_guard": "d3b2d7b8c90b48a4"
+    },
+    {
+      "store_id": "3cd9b1196d74ca8d",
+      "status": "verified",
+      "place_id": "16944393",
+      "source_url": "",
+      "identity_guard": "499e1e5c36dc40fa"
+    },
+    {
+      "store_id": "70930337df231ca5",
+      "status": "verified",
+      "place_id": "38543812",
+      "source_url": "",
+      "identity_guard": "c15579c88bcf5b64"
+    },
+    {
+      "store_id": "bb61af3c48a4a5cc",
+      "status": "verified",
+      "place_id": "1503909875",
+      "source_url": "",
+      "identity_guard": "403ca46fa11a45d3"
+    },
+    {
+      "store_id": "cb7fecc41682d9c1",
+      "status": "verified",
+      "place_id": "2036342495",
+      "source_url": "",
+      "identity_guard": "81e2678634286ca6"
+    },
+    {
+      "store_id": "01ac329758f8848c",
+      "status": "verified",
+      "place_id": "37531073",
+      "source_url": "",
+      "identity_guard": "1bc187551055ac09"
+    },
+    {
       "store_id": "3f441930b8d18783",
       "status": "missing"
     },
@@ -174,10 +251,6 @@
     },
     {
       "store_id": "2f939a1b44f5f7ec",
-      "status": "missing"
-    },
-    {
-      "store_id": "4b8ea4cbc481a3ee",
       "status": "missing"
     },
     {
