@@ -25,7 +25,14 @@ for(const [id,place] of Object.entries(expected)){
  }
 }
 assert.equal(rc3VerifiedPhysicalMap({id:'unreviewed',naverMap:'https://naver.me/unresolved'}),null);
+const alternateId='a8218795099e637e';
+const alternateSource='https://bit.ly/네이버지도-오늘은오므라이스여수점';
+assert.equal(audits.get(alternateId)?.place_id,'2033356705');
+assert.equal(audits.get(alternateId)?.source_url,alternateSource);
+assert.equal(rc3VerifiedPhysicalMap({id:alternateId,naverMap:alternateSource,phone:''})?.url,'https://map.naver.com/p/entry/place/2033356705');
+assert.equal(rc3VerifiedPhysicalMap({id:alternateId,naverMap:new URL(alternateSource).href})?.url,'https://map.naver.com/p/entry/place/2033356705');
+assert.equal(rc3VerifiedPhysicalMap({id:alternateId,naverMap:'https://bit.ly/changed',__verifiedPhysicalMapSource:alternateId}),null);
 assert.equal(audits.get('fd8d24a45e887938')?.status,'name-mismatch','Unrelated disputed map stays held');
 assert.match(rc2,/RC2_NAVER_AUDIT_URL = 'data\/naver-map-runtime\.json\?v=reviewed-identity-20260913'/);
 assert.match(rc2,/rc2NaverByStore\.size && !rc2NaverAuditMatches\(store\)/);
-console.log('Reviewed Naver identity: 5 phone-independent exact places; wrong destination and unresolved links rejected: PASS');
+console.log('Reviewed Naver identity: 6 records; exact places and one reviewed short-link replacement; changed destinations rejected: PASS');

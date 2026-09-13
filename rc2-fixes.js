@@ -1157,6 +1157,7 @@ function rc2NaverAuditMatches(store) {
   if (!audit.place_id) return true;
   try {
     const url = new URL(store?.naverMap || '');
+    if (audit.source_url) return url.href === new URL(audit.source_url).href;
     return url.protocol === 'https:' && url.hostname === 'map.naver.com'
       && url.pathname.replace(/\/$/, '') === '/p/entry/place/' + audit.place_id;
   } catch { return false; }
@@ -1167,6 +1168,9 @@ fxEnhanceStoreDetail = function rc2EnhanceStoreDetail(store) {
   if (!detail) return;
   const naverLink = detail.querySelector('.detail-quick-link[data-detail-only="naver"]');
   if (rc2NaverByStore.size && !rc2NaverAuditMatches(store)) naverLink?.remove();
+  else if (naverLink && rc2NaverByStore.get(String(store?.id))?.source_url) {
+    naverLink.href = 'https://map.naver.com/p/entry/place/' + rc2NaverByStore.get(String(store.id)).place_id;
+  }
   const brand = fxBrandByStore.get(String(store.id));
   const happy = fxHappyByStore.get(String(store.id));
   if (brand || happy) {

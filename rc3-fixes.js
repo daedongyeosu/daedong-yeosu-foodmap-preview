@@ -262,7 +262,11 @@ function rc3VerifiedPhysicalMap(store) {
   const ownAudit = rc2NaverByStore.get(String(store?.id));
   // A reviewed alias permits this exact place, never a later changed link.
   if (ownAudit?.place_id && !rc2NaverAuditMatches(store)) return null;
-  if (ownAudit?.status === 'verified') return {key: 'naver', name: '네이버지도', url};
+  if (ownAudit?.status === 'verified') return {
+    key: 'naver', name: '네이버지도',
+    url: ownAudit.place_id && ownAudit.source_url
+      ? 'https://map.naver.com/p/entry/place/' + ownAudit.place_id : url
+  };
   if (store?.__verifiedPhysicalMapSource) return {key: 'naver', name: '네이버지도', url};
   return null;
 }

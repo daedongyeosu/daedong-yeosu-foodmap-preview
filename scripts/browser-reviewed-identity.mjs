@@ -45,6 +45,7 @@ async function verify(id,place,entry) {
 }
 try {
  for(const [id,place] of Object.entries(expected)) await verify(id,place,'/');
+ await verify('a8218795099e637e','2033356705','/');
  await verify('43384f472418faec',expected['43384f472418faec'],'/?hero=43384f472418faec&store=43384f472418faec');
  const guards=await page.evaluate(()=>{
   const id='43384f472418faec',wrong=rc3VerifiedPhysicalMap({id,naverMap:'https://map.naver.com/p/entry/place/999',__verifiedPhysicalMapSource:id});
@@ -56,6 +57,7 @@ try {
  report.success=true;
 } catch(e) {
  report.failure=e.stack||String(e);
+ report.debug=await page.evaluate(()=>({active:document.querySelector('#modal .store-detail')?.dataset.storeId,audit:typeof rc2NaverByStore!=='undefined'?rc2NaverByStore.get('a8218795099e637e'):null,store:typeof allStores!=='undefined'?allStores.find(s=>s.id==='a8218795099e637e'):null})).catch(()=>null);
  await page.screenshot({path:path.join(out,'failure.png')}).catch(()=>{});
 } finally {
  await browser.close();
