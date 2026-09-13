@@ -209,6 +209,8 @@ fxRenderRails = function rc3RenderRails() {
         staging.innerHTML = `<section class="recommend-rail" data-rail="fallback"><header class="recommend-rail-head"><div><h2>오늘의 추천</h2><p>현재 확인 가능한 ${escapeHtml(RC3_REGION_NAME)} 가게</p></div></header><div class="recommend-track">${fallback || '<p class="empty">가게 정보를 다시 불러와 주세요.</p>'}</div></section>`;
       }
     }
+    // Compose before the atomic commit so adverts cannot move an active list later.
+    if (index === 1 || index === 3) staging.insertAdjacentHTML('beforeend', window.daedongLocalServices?.card(index === 1 ? 0 : 1, 'recommendations') || '');
     window.setTimeout(renderNext, 0);
   };
   window.setTimeout(renderNext, 0);
