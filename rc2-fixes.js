@@ -618,8 +618,31 @@ function rc2NavigateOrderMethodReentry(snapshot) {
 openModal = function rc2OpenModal(html) {
   const modal = $('#modal');
   const wasHidden = !modal || modal.hidden;
-  const replacing = rc2ReplaceNextModal;
+  const dedicatedStoreId = String(window.daedongDedicatedEntryStoreId || '').trim();
+  const activeStoreId = String(
+    modal?.dataset.activeStoreId
+    || modal?.querySelector('.store-detail[data-store-id]')?.dataset.storeId
+    || ''
+  ).trim();
+  const openingStoreId = String(html || '').match(/class=["'][^"']*store-detail[^"']*["'][^>]*data-store-id=["']([^"']+)["']/i)?.[1]
+    || String(html || '').match(/data-store-id=["']([^"']+)["'][^>]*class=["'][^"']*store-detail/i)?.[1]
+    || '';
+  const replacingDedicatedStore = Boolean(
+    !wasHidden
+    && dedicatedStoreId
+    && activeStoreId
+    && activeStoreId !== dedicatedStoreId
+    && openingStoreId === dedicatedStoreId
+  );
+  const replacing = rc2ReplaceNextModal || replacingDedicatedStore;
   rc2ReplaceNextModal = false;
+  if (replacingDedicatedStore) {
+    // A newly scanned store QR wins over any stale WebView snapshot. Do not
+    // push that old store under the new popup where Close can reveal it.
+    rc2ModalStack.length = 0;
+    rc2InvalidatePendingReturnRestores();
+    rc2ResetExternalDepartureLifecycle();
+  }
   if (!wasHidden && !rc2ModalRestoring && !replacing) rc2ModalStack.push(rc2SnapshotModal());
   rc2NativeOpenModal(html);
   if (!rc2ModalRestoring) {

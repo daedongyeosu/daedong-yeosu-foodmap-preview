@@ -13,8 +13,8 @@ assert.match(app, /history\.scrollRestoration = 'manual'/,
   '브라우저가 과거 중간 스크롤을 자동 복원하지 못하게 해야 합니다.');
 assert.match(app, /window\.scrollTo\(0, 0\)/,
   '시작 주소가 다시 열리면 홈 최상단으로 이동해야 합니다.');
-assert.match(app, /window\.launchQueue\.setConsumer\(resetInstalledAppLaunch\)/,
-  '실행 중인 설치형 앱의 아이콘 재실행 이벤트를 직접 처리해야 합니다.');
+assert.match(app, /window\.launchQueue\.setConsumer\(launchParams => resetInstalledAppLaunch\(launchParams\)\)/,
+  '실행 중인 설치형 앱의 아이콘·QR 재실행 이벤트와 대상 주소를 직접 처리해야 합니다.');
 assert.match(app, /const DAEDONG_INSTALLED_APP_CONTEXT = isInstalledAppLaunchContext\(\)/,
   '일반 카카오 웹 화면과 설치형 앱의 생명주기를 명시적으로 구분해야 합니다.');
 assert.match(app, /if \(DAEDONG_INSTALLED_APP_CONTEXT && typeof window\.launchQueue/,

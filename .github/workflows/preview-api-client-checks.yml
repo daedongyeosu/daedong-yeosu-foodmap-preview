@@ -53,6 +53,12 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.55.0
           npx playwright install --with-deps chromium
+      - name: Verify installed app switches to the newly scanned store QR
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-installed-qr-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173/ OUTPUT_DIR=browser-installed-qr node scripts/browser-cross-store-qr-history.mjs
       - name: Verify native promotion pages without external publishing services
         # Native promotion pages must remain independent of Notion and Bitly.
         # This check intercepts only the preview origin and works without an API.
@@ -190,6 +196,7 @@ jobs:
         with:
           name: preview-pr-verification
           path: |
+            browser-installed-qr/
             static-validation-report.json
             data-validation-report.json
             regression-suite-report.json
