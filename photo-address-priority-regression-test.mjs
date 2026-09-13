@@ -32,8 +32,8 @@ for (const [storeId, store] of Object.entries(inventory.stores)) {
     assets++;
   }
 }
-assert.equal(Object.keys(inventory.stores).length, 96);
-assert.equal(assets, 962);
+assert.equal(Object.keys(inventory.stores).length, 284);
+assert.equal(assets, 2705);
 const achasan = 'c7a234ae0185bdee';
 const dish = {id: 'coupang-920304-1', name: '[걸쭉꾸덕] 아차산매운떡볶이', image: ''};
 const source = {storeId: achasan, mainImage: '', items: [dish]};
@@ -153,4 +153,4 @@ stepContext.showAddressStep('map');assert.equal(back.dataset.rc7StepBack,'detail
 stepContext.showAddressStep('saved');stepContext.showAddressStep('map');assert.equal(back.dataset.rc7StepBack,'saved','GPS/recovery map returns to address choices');
 const semanticCases=[['f58b53f029285459','coupang-712171-13','[시원+촉촉]냉면2+촉촉~ 삼겹보쌈(200g)+명태회80g'],['6df173b638236d49','ddangyo-1136055-10000082','바삭 고기 튀김왕만두 5알 +와사비 간장']];
 for(const [storeId,id,name] of semanticCases){const payload={storeId,items:[{id,name,image:''}]};assert.ok(photos.applyReviewedMenuPhotos(storeId,payload,inventory).items[0].image);payload.items[0].name+=' 다른 구성';assert.equal(photos.applyReviewedMenuPhotos(storeId,payload,inventory).items[0].image,'');}
-console.log('PASS reviewed exact-menu photos (96 stores/962 owned assets), food/channel ranking, postcode one-step save and stale reply guards');
+console.log('PASS reviewed exact-menu photo inventory, food/channel ranking, postcode one-step save and stale reply guards');

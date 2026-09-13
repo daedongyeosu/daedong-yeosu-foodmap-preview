@@ -132,7 +132,7 @@
   function reviewedMenuPhotoLinks() {
     if (!reviewedPhotoLinksPromise) {
       const abort = createRequestAbort(null, 2500);
-      reviewedPhotoLinksPromise = Promise.resolve().then(() => fetch('data/reviewed-menu-photo-links.json?v=photo-address-20260913', {
+      reviewedPhotoLinksPromise = Promise.resolve().then(() => fetch('data/reviewed-menu-photo-links.json?v=all-menu-photos-20260913', {
         credentials: 'same-origin', signal: abort.signal
       })).then(response => response.ok ? response.json() : null)
         .catch(() => { reviewedPhotoLinksPromise = null; return null; })
@@ -146,7 +146,8 @@
     const items = (payload.items || []).map(item => {
       const photo = entry.items?.[item.id];
       if (!photo || photo.nameHash !== menuPhotoNameHash(item.name)) return item;
-      // Keep newer photos; require the reviewed ID, name and source to agree.
+      if (photo.descriptionHash && photo.descriptionHash !== menuPhotoNameHash(item.description)) return item;
+      // Keep newer photos; reviewed composition must still agree when guarded.
       if (item.image && item.image !== photo.source && item.image !== photo.image) return item;
       return {...item, image: photo.image};
     });
@@ -162,6 +163,7 @@
         if (!Array.isArray(item)) return item;
         const photo = inventory.stores[storeId].items?.[item[0]];
         if (!photo || photo.nameHash !== menuPhotoNameHash(item[1])
+          || (photo.descriptionHash && photo.descriptionHash !== menuPhotoNameHash(item[2]))
           || (item[3] && item[3] !== photo.source && item[3] !== photo.image)) return item;
         const next = item.slice(); next[3] = photo.image; return next;
       })};
