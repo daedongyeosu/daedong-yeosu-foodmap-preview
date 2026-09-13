@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import {reviewedMenuPhotoEvidence} from './scripts/reviewed-menu-photo-evidence.mjs';
 
 const read = path => fs.readFileSync(new URL(path, import.meta.url), 'utf8');
 const source = read('data-api.js');
@@ -23,6 +24,16 @@ const dish = {id:'verified-menu',name:'순살치킨 2인분',description:'순살
 const photo = {nameHash:context.menuPhotoNameHash(dish.name),descriptionHash:context.menuPhotoNameHash(dish.description),image:'assets/reviewed-menu-photos/'+storeId+'/verified.jpg'};
 const registry = {version:1,stores:{[storeId]:{items:{[dish.id]:photo},mainImage:photo.image}}};
 const menu = {storeId,name:'가게',mainImage:'',items:[dish],routes:[{key:'mukkebi',url:'https://example.com/order'}]};
+assert.equal(reviewedMenuPhotoEvidence(storeId,dish,registry,()=>true),photo.image);
+assert.equal(reviewedMenuPhotoEvidence(storeId,dish,registry,()=>false),'','missing published file is not evidence');
+for(const changed of [{...dish,name:'뼈치킨 2인분'},{...dish,description:'다른 구성'},{...dish,id:'different'},{...dish,image:'new.jpg'}]) {
+  assert.equal(reviewedMenuPhotoEvidence(storeId,changed,registry,()=>true),'','browser evidence independently rejects stale mappings');
+}
+assert.equal(reviewedMenuPhotoEvidence('1111111111111111',dish,registry,()=>true),'');
+for(const invalid of ['assets/reviewed-menu-photos/1111111111111111/a.jpg','assets/reviewed-menu-photos/'+storeId+'/../wrong.jpg','https://example.com/photo.jpg']){
+  const wrong={stores:{[storeId]:{items:{[dish.id]:{...photo,image:invalid}}}}};
+  assert.equal(reviewedMenuPhotoEvidence(storeId,dish,wrong,()=>true),'','other-store/remote/traversal image is not evidence');
+}
 const serialize = value => JSON.parse(JSON.stringify(value));
 const original = serialize(menu);
 const filled = context.applyReviewedMenuPhotos(storeId,menu,registry);
@@ -81,4 +92,5 @@ for(const [id,store] of Object.entries(published.stores))for(const [itemId,p] of
 assert.equal(guarded,1743,'all newly reviewed mappings keep composition guards');
 assert.match(source,/reviewed-menu-photo-links\.json\?v=all-menu-photos-20260913/);
 assert.match(read('index.html'),/data-api\.js\?[^"\n]*all-menu-photos-20260913/);
+assert.match(read('scripts/browser-alien-pizza-menu-search.mjs'),/sources\.flatMap\(item => \[item\.image, reviewedPhotoFor\(item\)\]\)/,'browser coverage uses verified additional evidence, not a broad photo exemption');
 console.log('PASS verified photo reconciliation: identity/composition guards, stale source rejection, search parity, immutable fields and owned assets');
