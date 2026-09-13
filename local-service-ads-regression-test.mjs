@@ -35,7 +35,8 @@ for (const ad of ads.advertisers) {
   const markup = ads.card(ads.advertisers.indexOf(ad));
   const detail = ads.detail(ad.id);
   assert.match(markup, /local-service-disclosure">광고/);
-  assert.match(markup, /우리 업체도 광고하기/);
+  assert.doesNotMatch(markup + detail, /우리 업체도 광고하기|data-local-service-open="advertise"|local-service-inquiry-link|local-service-recruit/,
+    'Paused owner contact entry points stay absent from every ad surface');
   assert.doesNotMatch(markup, /store-card|data-id=|data-rail|영업 중|찜하기|현재 위치|data-route-key|data-channel/);
   assert.doesNotMatch(detail, /리얼펍|청년다방|향미진짬뽕|사장님|수익 보장|최저가|무료 상담/);
   assert.ok(detail.includes(`tel:${ad.phone.replace(/-/g, '')}`));
@@ -50,8 +51,15 @@ assert.match(insurance, /가입 시 유의사항/);
 assert.match(insurance, /searchLoginId=1D2544&amp;userType=62/);
 assert.doesNotMatch(insurance, /tel:01047977803/);
 const inquiry = ads.detail('advertise');
-assert.match(inquiry, /tel:01047977803/);
-assert.match(inquiry, /mailto:sisakim@naver.com/);
+assert.match(inquiry, /광고 게재 안내를 준비하고 있습니다/);
+assert.match(inquiry, /href="\/services\/"/);
+assert.doesNotMatch(inquiry, /tel:|mailto:|sms:|담당자 연락처/,
+  'Previously shared inquiry URLs must not disclose or request contacts while paused');
+const servicePage = fs.readFileSync('services/index.html', 'utf8');
+assert.doesNotMatch(source + servicePage, /010[-\s]?4797[-\s]?7803|sisakim@naver\.com/,
+  'Owner phone and email must also be absent from source and noscript fallback');
+for (const entry of [html, servicePage]) assert.match(entry, /local-service-ads\.js\?v=[^"\s]*hide-owner-contact-20260914/);
+assert.match(app, /data-open-ad-inquiry/, 'Unrelated existing site-wide inquiry entry remains unchanged');
 assert.doesNotMatch(inquiry, /01092713781|01044567165/);
 assert.doesNotMatch(ads.detail('<img onerror=alert(1)>'), /onerror/);
 assert.match(app, /daedongLocalServices\?\.interleave\(visible, storeCard, state.category === '전체' && !state.query && !state.brandId\)/);
