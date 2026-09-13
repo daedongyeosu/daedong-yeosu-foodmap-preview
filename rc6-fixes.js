@@ -280,13 +280,32 @@ function rc6LocationSourceRank(store){return store.locationSource==='verified-ad
 function rc6OrderSignals(store){return{routeCount:new Set([...(store.channelKeys||[]),...(store.routes||[]).map(route=>route?.key).filter(Boolean)]).size,ownershipTier:rc6OwnershipTier(store)};}
 // Reused by every location-based list. A logo or placeholder is not food evidence.
 function rc6DiscoveryTier(store){
- const photo=typeof fxPhoto==='function'?fxPhoto(store):'';
- const resolved=typeof photoResolver!=='undefined'?photoResolver?.resolve?.(store):null;
- const classification=String(resolved?.classification||'');
- const food=Boolean(photo&&/^(?:food|menu|menu_food)$/.test(classification)&&!isOfficialStorePlaceholderImage(photo)&&!isQuarantinedCollectedPhoto(photo)&&!/(?:logo|app-icons|order-channels|brand-icons|placeholder)/i.test(photo));
  const available=key=>!((store?.routes||[]).some(route=>route?.key===key&&route.customerUsable===false))&&storeHasChannel(store,key);
  const channels=Number(available('mukkebi'))+Number(available('ddangyo'));
- return food?(channels===2?0:channels===1?1:2):(channels===2?3:channels===1?4:5);
+ // Sort comparators and rail grouping revisit shallow copies of the same store.
+ // Reuse photo evidence within this synchronous task only; the next event must
+ // see newly hydrated, failed, reclassified or blocked photos/routes immediately.
+ let cache=null,signature=null;
+ if(store?.id&&typeof queueMicrotask==='function'){
+  if(!rc6DiscoveryTier.taskCache){
+   const next=new Map();rc6DiscoveryTier.taskCache=next;
+   queueMicrotask(()=>{if(rc6DiscoveryTier.taskCache===next)rc6DiscoveryTier.taskCache=null;});
+  }
+  cache=rc6DiscoveryTier.taskCache;
+  signature=[store.name,store.realBusinessName,store.legacyImage,store.legacyImages,store.legacyImages?.length,store.nativePhotos,store.nativePhotos?.length,store.__menuPhotoFallbacks,store.__menuPhotoFallbacks?.length,store.__failedPhotoPaths,store.__failedPhotoPaths?.size,channels,
+   typeof photoResolver==='undefined'?null:photoResolver,
+   typeof fxBrandPhotoPool==='undefined'?'':fxBrandPhotoPool.assignments?.[String(store.id)],
+   typeof FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS==='undefined'?'':FX_APPROVED_BRAND_PHOTO_ASSIGNMENTS[String(store.id)]];
+  const previous=cache.get(String(store.id));
+  if(previous&&signature.every((value,index)=>value===previous.signature[index]))return previous.tier;
+ }
+ const resolved=typeof photoResolver!=='undefined'?photoResolver?.resolve?.(store):null;
+ const photo=typeof fxPhoto==='function'?fxPhoto(store,resolved):'';
+ const classification=String(resolved?.classification||'');
+ const food=Boolean(photo&&/^(?:food|menu|menu_food)$/.test(classification)&&!isOfficialStorePlaceholderImage(photo)&&!isQuarantinedCollectedPhoto(photo)&&!/(?:logo|app-icons|order-channels|brand-icons|placeholder)/i.test(photo));
+ const tier=food?(channels===2?0:channels===1?1:2):(channels===2?3:channels===1?4:5);
+ if(cache)cache.set(String(store.id),{signature,tier});
+ return tier;
 }
 function rc6NearStores(){
  const customerHasCoords=Boolean(state.coords),selected=neighborhoodFor(state.location)||neighborhoodFor(state.addressLabel)||(customerHasCoords?rc6ClosestNeighborhood(state.coords):'');

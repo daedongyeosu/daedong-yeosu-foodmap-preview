@@ -148,10 +148,17 @@ try {
 
   await page.waitForSelector('[data-rc3-rail-open]');
   await seedStaleReturnState();
+  // The rail is below the fold. A real customer scroll releases the deliberately
+  // armed opening lock; Playwright's programmatic scrollIntoView is not a gesture
+  // and correctly gets rejected by that guard. Keep the subsequent tap real.
+  await page.mouse.wheel(0, 300);
+  await page.waitForFunction(() => window.daedongEarlyHomeInteraction === true);
   const rc3RailCard = page.locator('[data-rc3-rail-open]').first();
+  await rc3RailCard.scrollIntoViewIfNeeded();
+  // Hydration may atomically replace rails while scrolling; bind the identity
+  // being tapped, not an earlier detached card.
   const rc3RailStoreId = await rc3RailCard.getAttribute('data-rc3-rail-open');
   report.railTouchExpectedId = rc3RailStoreId;
-  await rc3RailCard.scrollIntoViewIfNeeded();
   await rc3RailCard.tap();
   await page.waitForTimeout(1700);
   await check(page.evaluate(expectedId => ({
