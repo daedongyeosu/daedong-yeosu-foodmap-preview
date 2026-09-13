@@ -2220,7 +2220,7 @@ function renderStores({scroll = false, resetCount = false} = {}) {
   else if (state.location !== REGION_DEFAULT_AREA) title = `${state.location} 추천`;
   $('#recommendSection h2').textContent = title;
   $('#resetCategoryBtn').hidden = state.category === '전체' && !state.brandId && !state.query;
-  $('#storeGrid').innerHTML = visible.length ? visible.map(storeCard).join('') : '<div class="empty">조건에 맞는 가게가 아직 없습니다.</div>';
+  $('#storeGrid').innerHTML = visible.length ? (window.daedongLocalServices?.interleave(visible, storeCard, state.category === '전체' && !state.query && !state.brandId) ?? visible.map(storeCard).join('')) : '<div class="empty">조건에 맞는 가게가 아직 없습니다.</div>';
   observeDeferredPhotos($('#storeGrid'));
   $('#loadMoreBtn').hidden = visible.length >= list.length || !list.length;
   $('#loadMoreBtn').textContent = '더보기';
