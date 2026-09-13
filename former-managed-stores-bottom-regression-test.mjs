@@ -55,6 +55,7 @@ const rc6Context = {
   canonicalStores: [former, ordinary, managed],
   rc6LocationCache: {},
   rc6NearStores: () => [former, ordinary, managed],
+  rc6DiscoveryTier: () => 0,
   compareStoreBusinessStatus: () => 0,
   Set, String, Number, Map
 };

@@ -911,7 +911,7 @@
       entry.innerHTML = `
         <div class="store-finder-location">
           <span aria-hidden="true">📍</span>
-          <b data-store-finder-location-label>주소를 설정하면 가까운 순</b>
+          <b data-store-finder-location-label>주소를 설정하면 주변 가게를 먼저</b>
         </div>
         <nav aria-label="빠른 가게 찾기 조건">
           <button type="button" data-store-service-quick-status="open">🟢 지금 영업 중 <b data-store-finder-open-count aria-live="polite">확인 중</b></button>
@@ -925,7 +925,7 @@
       const location = typeof state !== 'undefined' ? String(state.location || '') : '';
       const hasLocation = location && location !== DEFAULT_AREA;
       const label = entry.querySelector('[data-store-finder-location-label]');
-      const nextLabel = hasLocation ? `${location} 기준 · 가까운 순` : '주소를 설정하면 가까운 순';
+      const nextLabel = hasLocation ? `${location} · 음식사진·먹깨비·땡겨요 우선` : '주소를 설정하면 주변 가게를 먼저';
       if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
       const source = sourceStores();
       const countReady = serviceLoadState === 'ready' && source.length > 0;
@@ -1062,6 +1062,7 @@
         index,
         locationBucket: neighborhood && areas.includes(neighborhood) ? 0 : neighborhood ? 1 : 2,
         ownershipTier: ownershipTier(store),
+        discoveryTier: typeof rc6DiscoveryTier === 'function' ? rc6DiscoveryTier(store) : 0,
         areaDistance,
         status: storeStatus(info),
         benefits: benefitLabels(info),
@@ -1204,12 +1205,14 @@ function overviewMenuContextText(entry) {
       : 0;
     const referralOrder = typeof rc6PartnerActive === 'function' && rc6PartnerActive()
       ? rc6PartnerTier({id:a.storeId}) - rc6PartnerTier({id:b.storeId}) : 0;
+    const qualityOrder = (a.discoveryTier ?? 0) - (b.discoveryTier ?? 0);
     if (locationMode === 'nearby' && referenceCoordinate()) {
       return identityOrder
         || statusOrder
         || menuEvidenceOrder
-        || referralOrder
         || a.locationBucket - b.locationBucket
+        || qualityOrder
+        || referralOrder
         || a.ownershipTier - b.ownershipTier
         || a.areaDistance - b.areaDistance
         || a.area.localeCompare(b.area, 'ko')
@@ -1219,6 +1222,7 @@ function overviewMenuContextText(entry) {
       return identityOrder
         || statusOrder
         || menuEvidenceOrder
+        || qualityOrder
         || referralOrder
         || a.ownershipTier - b.ownershipTier
         || a.areaDistance - b.areaDistance
@@ -1429,7 +1433,7 @@ function overviewMenuContextText(entry) {
             <small>${escapeHtml(locationDescription())}</small>
           </div>
           <div class="store-service-location-controls">
-            <button type="button" data-store-service-location-mode="nearby" class="${locationMode === 'nearby' ? 'active' : ''}">내 위치 가까운 순</button>
+            <button type="button" data-store-service-location-mode="nearby" class="${locationMode === 'nearby' ? 'active' : ''}">주변 가게 우선</button>
             <button type="button" data-store-service-location-mode="selected" class="${locationMode === 'selected' ? 'active' : ''}">동네만 보기</button>
             <button type="button" data-store-service-location-mode="all" class="${locationMode === 'all' ? 'active' : ''}">여수 전체</button>
             <select data-store-service-area aria-label="볼 동네 선택">

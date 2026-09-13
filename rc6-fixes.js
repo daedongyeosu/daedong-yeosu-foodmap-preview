@@ -13,7 +13,7 @@ function rc6PartnerActive(){return !RC6_IS_GOHEUNG&&rc6PartnerStoreIds.size>0;}
 function rc6PartnerTier(store){return rc6PartnerActive()&&!rc6PartnerStoreIds.has(String(store?.id??store?.store_id??''))?1:0;}
 function rc6ApplyPartnerPriority(items){
  if(!rc6PartnerActive())return items;
- return items.map((item,index)=>({item,index,store:item?.store||item})).sort((a,b)=>compareStoreBusinessStatus(a.store,b.store)||rc6PartnerTier(a.store)-rc6PartnerTier(b.store)||a.index-b.index).map(row=>row.item);
+ return items.map((item,index)=>({item,index,store:item?.store||item,quality:rc6DiscoveryTier(item?.store||item)})).sort((a,b)=>compareStoreBusinessStatus(a.store,b.store)||(a.store.rc6LocationBucket??9)-(b.store.rc6LocationBucket??9)||a.quality-b.quality||rc6PartnerTier(a.store)-rc6PartnerTier(b.store)||a.index-b.index).map(row=>row.item);
 }
 function rc6ConfigurePartnerPriority(){
  const profiles=rc6StorePriority.referralProfiles||{};
@@ -33,7 +33,7 @@ function rc6ApplyRainExposure(candidates,limit){
  const rows=[...candidates],ratio=rc6RainManagedRatio();
  if(rc6PartnerActive())return rc6ApplyPartnerPriority(rows);if(rc6RainMode==='normal')return rows;
  const result=[],statusGroups=[];
- sortStoresByBusinessStatus(rows).forEach(store=>{const status=storeBusinessStatusPriority(store),last=statusGroups[statusGroups.length-1];if(!last||last.status!==status)statusGroups.push({status,stores:[store]});else last.stores.push(store);});
+ sortStoresByBusinessStatus(rows).forEach(store=>{const status=[storeBusinessStatusPriority(store),store.rc6LocationBucket??9,typeof rc6DiscoveryTier==='function'?rc6DiscoveryTier(store):0].join(':'),last=statusGroups[statusGroups.length-1];if(!last||last.status!==status)statusGroups.push({status,stores:[store]});else last.stores.push(store);});
  for(const group of statusGroups){
   const managed=group.stores.filter(store=>rc6OwnershipTier(store)<2),general=group.stores.filter(store=>rc6OwnershipTier(store)>=2);
   let managedIndex=0,generalIndex=0,groupPosition=0;
@@ -278,6 +278,16 @@ function rc6DiversifyDistance(rows){const result=[],pending=[...rows];while(pend
 function rc6ClosestNeighborhood(coords){return yeosuNeighborhoods.map(item=>({name:item.name,point:neighborhoodPoint(item.name)})).filter(item=>item.point).map(item=>({...item,distance:haversine(coords,item.point)})).sort((a,b)=>a.distance-b.distance)[0]?.name||'';}
 function rc6LocationSourceRank(store){return store.locationSource==='verified-address'?1:store.locationSource==='store-name-branch'?2:store.locationSource==='notion-or-canonical-neighborhood'?3:4;}
 function rc6OrderSignals(store){return{routeCount:new Set([...(store.channelKeys||[]),...(store.routes||[]).map(route=>route?.key).filter(Boolean)]).size,ownershipTier:rc6OwnershipTier(store)};}
+// Reused by every location-based list. A logo or placeholder is not food evidence.
+function rc6DiscoveryTier(store){
+ const photo=typeof fxPhoto==='function'?fxPhoto(store):'';
+ const resolved=typeof photoResolver!=='undefined'?photoResolver?.resolve?.(store):null;
+ const classification=String(resolved?.classification||'');
+ const food=Boolean(photo&&/^(?:food|menu|menu_food)$/.test(classification)&&!isOfficialStorePlaceholderImage(photo)&&!isQuarantinedCollectedPhoto(photo)&&!/(?:logo|app-icons|order-channels|brand-icons|placeholder)/i.test(photo));
+ const available=key=>!((store?.routes||[]).some(route=>route?.key===key&&route.customerUsable===false))&&storeHasChannel(store,key);
+ const channels=Number(available('mukkebi'))+Number(available('ddangyo'));
+ return food?(channels===2?0:channels===1?1:2):(channels===2?3:channels===1?4:5);
+}
 function rc6NearStores(){
  const customerHasCoords=Boolean(state.coords),selected=neighborhoodFor(state.location)||neighborhoodFor(state.addressLabel)||(customerHasCoords?rc6ClosestNeighborhood(state.coords):'');
  if(!selected&&!customerHasCoords)return[];const customerPoint=customerHasCoords?state.coords:neighborhoodPoint(selected);
@@ -285,7 +295,14 @@ function rc6NearStores(){
  const rows=canonicalStores.map(store=>{const names=store.neighborhoods?.length?store.neighborhoods:storeNeighborhoods(store),same=Boolean(selected&&names.includes(selected));const neighborhoodCandidates=names.map(name=>({name,point:neighborhoodPoint(name)})).filter(item=>item.point).map(item=>({...item,distance:customerPoint?haversine(customerPoint,item.point):Infinity})).sort((a,b)=>a.distance-b.distance);const candidate=same?selected:(neighborhoodCandidates[0]?.name||names[0]||'');const actual=customerPoint&&rc6Verified(store)?haversine(customerPoint,{lat:store.lat,lng:store.lng}):null;const neighborhoodDistance=same?0:(neighborhoodCandidates[0]?.distance??Infinity);const sourceRank=rc6LocationSourceRank(store),signals=rc6OrderSignals(store);const bucket=same?0:candidate?1:2;return{store,candidate,bucket,actual,neighborhoodDistance,sourceRank,...signals};}).sort((a,b)=>a.bucket-b.bucket||a.ownershipTier-b.ownershipTier||(a.bucket===0?(Number(a.actual===null)-Number(b.actual===null)||(a.actual??Infinity)-(b.actual??Infinity)||a.sourceRank-b.sourceRank):a.neighborhoodDistance-b.neighborhoodDistance)||b.routeCount-a.routeCount||a.store.name.localeCompare(b.store.name,'ko'));
  const grouped=[];rows.forEach(row=>{const key=`${row.bucket}:${row.ownershipTier}`,last=grouped[grouped.length-1];if(!last||last.key!==key)grouped.push({key,rows:[row]});else last.rows.push(row);});const ranked=grouped.flatMap(group=>rc6DiversifyDistance(group.rows)).map(row=>({...row.store,distance:row.actual,rc6SortDistance:row.actual??row.neighborhoodDistance,rc6LocationBucket:row.bucket,rc6OwnershipTier:row.ownershipTier,rc6NeighborhoodDistance:row.neighborhoodDistance,proximityLabel:row.actual!==null?'':row.bucket===0?`${selected}의 가게`:row.bucket===1?`${row.candidate} 주변 가게`:`${RC6_REGION_NAME}의 다른 추천 가게`,locationSource:row.store.locationSource,neighborhoodConfidence:row.store.neighborhoodConfidence}));rc6LocationCache={key:cacheKey,stores:ranked};return ranked;
 }
-function rc6RankCandidatesByCustomerLocation(candidates){const nearby=rc6NearStores();if(!nearby.length)return candidates.map((store,index)=>({store,index})).sort((a,b)=>compareStoreBusinessStatus(a,b)||rc6PartnerTier(a.store)-rc6PartnerTier(b.store)||rc6OwnershipTier(a.store)-rc6OwnershipTier(b.store)||a.index-b.index).map(item=>item.store);const rank=new Map(nearby.map((store,index)=>[String(store.id),index])),details=new Map(nearby.map(store=>[String(store.id),store]));return candidates.map((store,index)=>({store:{...store,...details.get(String(store.id))},index})).sort((a,b)=>compareStoreBusinessStatus(a,b)||rc6PartnerTier(a.store)-rc6PartnerTier(b.store)||Number(rc6OwnershipTier(a.store)===3)-Number(rc6OwnershipTier(b.store)===3)||(rank.get(String(a.store.id))??Infinity)-(rank.get(String(b.store.id))??Infinity)||a.index-b.index).map(item=>item.store);}
+function rc6RankCandidatesByCustomerLocation(candidates){
+ const nearby=rc6NearStores(),rank=new Map(nearby.map((store,index)=>[String(store.id),index])),details=new Map(nearby.map(store=>[String(store.id),store]));
+ const rows=candidates.map((store,index)=>{
+  const merged={...store,...details.get(String(store.id))};
+  return{store:merged,index,quality:rc6DiscoveryTier(merged),bucket:merged.rc6LocationBucket??9};
+ });
+ return rows.sort((a,b)=>compareStoreBusinessStatus(a,b)||a.bucket-b.bucket||a.quality-b.quality||rc6PartnerTier(a.store)-rc6PartnerTier(b.store)||rc6OwnershipTier(a.store)-rc6OwnershipTier(b.store)||(rank.get(String(a.store.id))??Infinity)-(rank.get(String(b.store.id))??Infinity)||a.index-b.index).map(item=>item.store);
+}
 function rc6CategoryCandidates(){
  const brand=state.brandId?BRAND_BY_ID[state.brandId]:null;
  return stores.map(store=>({store,score:relevance(store,state.query)}))
@@ -301,7 +318,7 @@ function rc6CategoryCandidates(){
    return b.score-a.score||a.store.name.localeCompare(b.store.name,'ko');
   }).map(item=>item.store);
 }
-function rc6DiversifyStoresByTier(input){const groups=[];input.forEach(store=>{const tier=rc6OwnershipTier(store),last=groups[groups.length-1];if(!last||last.tier!==tier)groups.push({tier,stores:[store]});else last.stores.push(store);});return groups.flatMap(group=>rc5Diversify(group.stores));}
+function rc6DiversifyStoresByTier(input){const groups=[];input.forEach(store=>{const tier=[storeBusinessStatusPriority(store),store.rc6LocationBucket??9,rc6DiscoveryTier(store),rc6OwnershipTier(store)].join(':'),last=groups[groups.length-1];if(!last||last.tier!==tier)groups.push({tier,stores:[store]});else last.stores.push(store);});return groups.flatMap(group=>rc5Diversify(group.stores));}
 function rc6CategoryStoresByCustomerLocation(){return applyCategoryPriorityOverrides(rc6DiversifyStoresByTier(rc6RankCandidatesByCustomerLocation(rc6CategoryCandidates())),state.category);}
 function rc6InstallChannelLocationSorting(){
  if(rc6ChannelSortingInstalled)return;rc6ChannelSortingInstalled=true;
@@ -323,7 +340,7 @@ function rc6InstallChannelLocationSorting(){
  };
 }
 function rc6NewnessRank(store){const timestamp=Date.parse(store?.addedAt||'');return Number.isFinite(timestamp)?timestamp:Number(store?.rawIndex)||0;}
-function rc6RankNewStoresByCustomerLocation(candidates){const ranked=rc6RankCandidatesByCustomerLocation(candidates),groups=[];ranked.forEach(store=>{const status=storeBusinessStatusPriority(store),bucket=Number.isFinite(store.rc6LocationBucket)?store.rc6LocationBucket:9,tier=rc6OwnershipTier(store),key=`${status}:${bucket}:${tier}`,last=groups[groups.length-1];if(!last||last.key!==key)groups.push({key,stores:[store]});else last.stores.push(store);});return groups.flatMap(group=>group.stores.sort((a,b)=>rc6NewnessRank(b)-rc6NewnessRank(a)||a.name.localeCompare(b.name,'ko')));}
+function rc6RankNewStoresByCustomerLocation(candidates){const ranked=rc6RankCandidatesByCustomerLocation(candidates),groups=[];ranked.forEach(store=>{const status=storeBusinessStatusPriority(store),bucket=Number.isFinite(store.rc6LocationBucket)?store.rc6LocationBucket:9,tier=rc6OwnershipTier(store),quality=typeof rc6DiscoveryTier==='function'?rc6DiscoveryTier(store):0,key=`${status}:${bucket}:${quality}:${tier}`,last=groups[groups.length-1];if(!last||last.key!==key)groups.push({key,stores:[store]});else last.stores.push(store);});return groups.flatMap(group=>group.stores.sort((a,b)=>rc6NewnessRank(b)-rc6NewnessRank(a)||a.name.localeCompare(b.name,'ko')));}
 function rc6LocationRankedRail(spec,originalRank){let ranked;if(spec.kind==='near')ranked=rc6RankCandidatesByCustomerLocation(rc6NearStores());else{let candidates=spec.kind==='new'?stores.filter(store=>fxVisible(store)&&rc2HasVerifiedRecommendationPhoto(store)):originalRank(spec);if(spec.kind==='local')candidates=candidates.filter(store=>['direct','mukkebi','ddangyo','ondongne'].some(key=>storeHasChannel(store,key)));ranked=spec.kind==='new'?rc6RankNewStoresByCustomerLocation(candidates):rc6RankCandidatesByCustomerLocation(candidates);}return rc6ApplyRainExposure(sortStoresByBusinessStatus(ranked),8);}
 const rc6CommitAddressBase=commitAddressSelection;
 function rc6CommitAddress(){if(addressDraft?.type!=='current'){rc6CommitAddressBase();return;}const coords=addressDraft.coords;if(!coords)return;state.location=RC6_DEFAULT_AREA;state.addressLabel='현재 위치';state.coords=coords;state.sortByDistance=true;sessionStorage.setItem('rc6LocationActive','1');document.querySelector('#locationText').textContent='현재 위치';hardClose();setTimeout(showHomeAfterAddressCommit,60);}

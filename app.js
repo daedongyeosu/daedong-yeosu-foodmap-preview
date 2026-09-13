@@ -1467,8 +1467,10 @@ function applyCategoryPriorityOverrides(list, category) {
     const id = String(store?.id || store?.store_id || '');
     const orderedRank = ordered.get(id);
     const tier = orderedRank !== undefined ? orderedRank : ordered.size + (top.has(id) ? 0 : bottom.has(id) ? 2 : 1);
-    return {item, index, tier};
-  }).sort((a, b) => compareStoreBusinessStatus(a.item, b.item) || a.tier - b.tier || a.index - b.index).map(row => row.item);
+    const bucket = store?.rc6LocationBucket ?? 9;
+    const quality = typeof rc6DiscoveryTier === 'function' ? rc6DiscoveryTier(store) : 0;
+    return {item, index, tier, bucket, quality};
+  }).sort((a, b) => compareStoreBusinessStatus(a.item, b.item) || a.bucket - b.bucket || a.quality - b.quality || a.tier - b.tier || a.index - b.index).map(row => row.item);
 }
 function isCustomerUsableExternalRoute(key, value) {
   if (!EXTERNAL_APP_KEYS.includes(key)) return true;
@@ -1587,6 +1589,19 @@ function haversine(a, b) {
   return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
 }
 
+// Visually reviewed existing, same-store food files. No new cross-branch assignment.
+const REVIEWED_LEGACY_FOOD_PHOTOS = Object.freeze({
+  '3f441930b8d18783': 'assets/store-photos/2822d52b9ee44f/02.webp',
+  '759915faca1feb20': 'assets/notion-store-photos/759915faca1feb/01.webp',
+  '3a09685a7db0f853': 'assets/store-photos/5334f14198255c/01.webp',
+  '91806c266ead3108': 'assets/notion-store-photos/91806c266ead31/01.webp',
+  'e6339c85e31322fa': 'assets/store-photos/0f59ba073431d3/01.webp',
+  '382dd89b36993ff8': 'assets/store-photos/330bf81fa8c3d9/02.webp',
+  'f58bf8f877dcacd5': 'assets/store-photos/eb8e7638188ad4/01.webp',
+  '27fc5651d1d3feb0': 'assets/store-photos/d09cb724f1bfd5/01.webp',
+  '36856e4f20cae7d0': 'assets/store-photos/1142f3ea797a19/01.webp',
+  '7777fc7f051bf178': 'assets/store-photos/57c217b5f456a8/02.webp'
+});
 class PhotoResolver {
   constructor(manifest, policy) {
     this.manifest = manifest || {entries: []};
@@ -1623,6 +1638,10 @@ class PhotoResolver {
       })
       .filter(path => !failed.has(photoUrlKey(path)));
   }
+  reviewedLegacyFood(store, src) {
+    const original = typeof REVIEWED_LEGACY_FOOD_PHOTOS !== 'undefined' ? REVIEWED_LEGACY_FOOD_PHOTOS[String(store?.id)] : '';
+    return Boolean(original && this.usablePaths([original], store).includes(src));
+  }
   resolveGallery(store) {
     const entry = this.entryFor(store);
     if (entry && this.classificationAllowed(entry)) {
@@ -1630,7 +1649,7 @@ class PhotoResolver {
       if (paths.length) return paths.map(src => ({src, source: entry.source || 'manifest', classification: entry.classification}));
     }
     const legacy = this.usablePaths(store.legacyImages || [store.legacyImage], store);
-    if (legacy.length) return legacy.map(src => ({src, source: 'verified-legacy-direct-file', classification: 'legacy_unclassified'}));
+    if (legacy.length) return legacy.map(src => ({src, source: 'verified-legacy-direct-file', classification: this.reviewedLegacyFood(store, src) ? 'food' : 'legacy_unclassified'}));
     return this.usablePaths(store.__menuPhotoFallbacks || [], store)
       .map(src => ({src, source: 'verified-menu-fallback', classification: 'menu'}));
   }

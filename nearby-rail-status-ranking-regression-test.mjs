@@ -73,7 +73,7 @@ await serviceReady;
 await Promise.resolve();
 assert.equal(readyContext.renderCount, 1, '영업정보가 준비되면 실제 추천 레일을 다시 그려야 합니다.');
 
-assert.match(rc2, /const key = `\$\{status\}:\$\{bucket\}:\$\{tier\}`/,
+assert.match(rc2, /const key = `\$\{status\}:\$\{bucket\}:\$\{quality\}:\$\{tier\}`/,
   '추천 레일의 무작위 다양화는 같은 영업상태 안에서만 해야 합니다.');
 assert.match(rc2, /const finish = \(\) => rc2ApplyManagedRegionPriority\(result, spec, limit, rankedStores\)/,
   '추천 레일의 중복제거·다양화가 끝난 뒤 영업상태를 최종 검증해야 합니다.');

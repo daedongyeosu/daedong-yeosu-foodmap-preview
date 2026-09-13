@@ -879,13 +879,25 @@ function rc2ApplyManagedRegionPriority(cards, spec, limit, rankedStores = []) {
   if (!priority || !fxVisible(priority) || storeBusinessStatusPriority(priority) !== 0) {
     return sortStoresByBusinessStatus(cards).slice(0, limit);
   }
+  if (typeof rc6DiscoveryTier === 'function' && cards.length >= limit) {
+    const better = cards.filter(store => storeBusinessStatusPriority(store) === 0
+      && ((store.rc6LocationBucket ?? 9) < (priority.rc6LocationBucket ?? 9)
+        || ((store.rc6LocationBucket ?? 9) === (priority.rc6LocationBucket ?? 9)
+          && rc6DiscoveryTier(store) < rc6DiscoveryTier(priority))));
+    if (better.length >= limit) return cards.slice(0, limit);
+  }
   const normalSlotCount = Math.max(0, limit - 1);
   const normal = sortStoresByBusinessStatus(cards.filter(store => String(store.id) !== priorityId))
     .slice(0, normalSlotCount);
   const openNormalCount = normal.filter(store => storeBusinessStatusPriority(store) === 0).length;
   const insertionIndex = Math.min(rc2ManagedRegionDailyPosition(spec, priorityId), openNormalCount);
   normal.splice(insertionIndex, 0, priority);
-  return normal.slice(0, limit);
+  // A promotion can rotate within its band, never ahead of a better local listing.
+  return normal.map((store, index) => ({store, index,
+    quality: typeof rc6DiscoveryTier === 'function' ? rc6DiscoveryTier(store) : 0
+  })).sort((a, b) => storeBusinessStatusPriority(a.store) - storeBusinessStatusPriority(b.store)
+    || (a.store.rc6LocationBucket ?? 9) - (b.store.rc6LocationBucket ?? 9)
+    || a.quality - b.quality || a.index - b.index).slice(0, limit).map(row => row.store);
 }
 
 function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts = new Map(), rankedInput = null) {
@@ -900,9 +912,10 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
     const status = storeBusinessStatusPriority(store);
     const bucket = Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9;
     const tier = typeof rc6OwnershipTier === 'function' ? rc6OwnershipTier(store) : 2;
-    const key = `${status}:${bucket}:${tier}`;
+    const quality = typeof rc6DiscoveryTier === 'function' ? rc6DiscoveryTier(store) : 0;
+    const key = `${status}:${bucket}:${quality}:${tier}`;
     const last = groups[groups.length - 1];
-    if (!last || last.key !== key) groups.push({key, status, bucket, stores: [store]});
+    if (!last || last.key !== key) groups.push({key, status, bucket, quality, stores: [store]});
     else last.stores.push(store);
   }
   for (const group of groups) {
@@ -936,6 +949,11 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
     for (const group of targetGroups) {
       if (fillGroup(group, false, allowReuse, target)) return true;
       if (fillGroup(group, true, allowReuse, target)) return true;
+      // Reuse a complete local listing before falling back to a lower-quality band.
+      if (!allowReuse && typeof rc6DiscoveryTier === 'function' && group.quality <= 1) {
+        if (fillGroup(group, false, true, target)) return true;
+        if (fillGroup(group, true, true, target)) return true;
+      }
     }
     return false;
   };
@@ -948,7 +966,8 @@ function rc2RailCandidates(spec, globallyUsed = new Set(), limit = 8, useCounts 
     const nearbyStores = otherGroups.flatMap(group => group.stores).sort((a, b) => {
       const aDistance = Number(a.rc6SortDistance ?? a.distance ?? a.rc6NeighborhoodDistance);
       const bDistance = Number(b.rc6SortDistance ?? b.distance ?? b.rc6NeighborhoodDistance);
-      return (Number.isFinite(aDistance) ? aDistance : Infinity) - (Number.isFinite(bDistance) ? bDistance : Infinity);
+      const qualityOrder = typeof rc6DiscoveryTier === 'function' ? rc6DiscoveryTier(a) - rc6DiscoveryTier(b) : 0;
+      return qualityOrder || (Number.isFinite(aDistance) ? aDistance : Infinity) - (Number.isFinite(bDistance) ? bDistance : Infinity);
     });
     fillGroups([{stores: nearbyStores}], false, nearbyTarget);
     if (result.length >= limit) return finish();
@@ -972,6 +991,7 @@ function rc2DiversifyRailLead(cards, recentLeads = []) {
   const recentPhotos = new Set(recentLeads.map(store => fxPhoto(store)).filter(Boolean));
   const samePriorityBand = store => storeBusinessStatusPriority(store) === firstStatus
     && (Number.isFinite(store.rc6LocationBucket) ? store.rc6LocationBucket : 9) === firstBucket
+    && (typeof rc6DiscoveryTier !== 'function' || rc6DiscoveryTier(store) === rc6DiscoveryTier(ordered[0]))
     && ownershipTier(store) === firstTier;
   let replacementIndex = ordered.findIndex((store, index) => index > 0
     && samePriorityBand(store)

@@ -270,3 +270,4 @@
 @media(max-height:720px){.rc7-map-wrap{height:205px}.rc7-saved-list{max-height:180px}}
 @media(min-width:768px){.yeosu-night-shell{background-image:linear-gradient(180deg,rgba(7,47,78,.1),rgba(4,43,70,.16)),url('assets/yeosu-rc6/dolsan-day-desktop.webp')!important;background-position:center center!important}}
 @media(prefers-reduced-motion:reduce){.rc7-gps-loading{animation:none}}
+.rc7-optional-map{display:block;width:100%;min-height:48px;margin-top:12px;border:1px solid #d7dee4;border-radius:16px;background:#fff;color:#53616d;font:inherit;font-size:15px}

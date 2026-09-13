@@ -123,6 +123,52 @@
     '421ecef35a879687': 'data/tamnaneun-pizza-menu.json?v=tamnaneun-dedicated-2'
   });
 
+  let reviewedPhotoLinksPromise = null;
+  function menuPhotoNameHash(value) {
+    let hash = 2166136261;
+    for (const char of String(value || '').normalize('NFKC').trim()) hash = Math.imul(hash ^ char.codePointAt(0), 16777619);
+    return (hash >>> 0).toString(16);
+  }
+  function reviewedMenuPhotoLinks() {
+    if (!reviewedPhotoLinksPromise) {
+      const abort = createRequestAbort(null, 2500);
+      reviewedPhotoLinksPromise = Promise.resolve().then(() => fetch('data/reviewed-menu-photo-links.json?v=photo-address-20260913', {
+        credentials: 'same-origin', signal: abort.signal
+      })).then(response => response.ok ? response.json() : null)
+        .catch(() => { reviewedPhotoLinksPromise = null; return null; })
+        .finally(() => abort.cleanup());
+    }
+    return reviewedPhotoLinksPromise;
+  }
+  function applyReviewedMenuPhotos(storeId, payload, inventory) {
+    const entry = inventory?.stores?.[storeId];
+    if (!entry || !payload || String(payload.storeId) !== String(storeId)) return payload;
+    const items = (payload.items || []).map(item => {
+      const photo = entry.items?.[item.id];
+      if (!photo || photo.nameHash !== menuPhotoNameHash(item.name)) return item;
+      // Keep newer photos; require the reviewed ID, name and source to agree.
+      if (item.image && item.image !== photo.source && item.image !== photo.image) return item;
+      return {...item, image: photo.image};
+    });
+    const confirmedHero = entry.mainImage && items.some(item => item.image === entry.mainImage);
+    return {...payload, items, mainImage: payload.mainImage || (confirmedHero ? entry.mainImage : '')};
+  }
+  function restoreReviewedMenuSearchPhotos(payload, inventory) {
+    if (!payload?.stores || !inventory?.stores) return payload;
+    const stores = {...payload.stores};
+    for (const [storeId, record] of Object.entries(stores)) {
+      if (!inventory.stores[storeId] || !Array.isArray(record?.i)) continue;
+      stores[storeId] = {...record, i: record.i.map(item => {
+        if (!Array.isArray(item)) return item;
+        const photo = inventory.stores[storeId].items?.[item[0]];
+        if (!photo || photo.nameHash !== menuPhotoNameHash(item[1])
+          || (item[3] && item[3] !== photo.source && item[3] !== photo.image)) return item;
+        const next = item.slice(); next[3] = photo.image; return next;
+      })};
+    }
+    return {...payload, stores};
+  }
+
   function safeStoreId(value) {
     const id = String(value || '').toLowerCase();
     if (!/^[a-f0-9]{16}$/.test(id)) throw new Error('올바르지 않은 가게 식별자입니다.');
@@ -327,8 +373,9 @@
           return response.json();
         });
     }
+    const reviewedPhotos = reviewedMenuPhotoLinks();
     return request(`/api/store/${id}/menu`, {cacheKey: `menu:${id}`, ...options})
-      .then(payload => restoreCuratedMenuImages(id, payload));
+      .then(async payload => applyReviewedMenuPhotos(id, restoreCuratedMenuImages(id, payload), await reviewedPhotos));
   };
   const yogiyoWebRoute = (storeId, coordinates = {}, options = {}) => {
     const id = customerVisibleStoreId(storeId);
@@ -351,9 +398,11 @@
     if (!value || value.length > 40 || /[%_]/.test(value)) return Promise.resolve({stores: {}});
     const key = value.normalize('NFKC').toLowerCase();
     if (IS_GOHEUNG) return Promise.resolve({stores: {}});
+    const reviewedPhotos = reviewedMenuPhotoLinks();
     return request(`/api/menu-search?q=${encodeURIComponent(value)}`, {cacheKey: `search:${key}`, ...options})
       .then(customerVisibleMenuSearch)
-      .then(restoreCuratedMenuSearchImages);
+      .then(restoreCuratedMenuSearchImages)
+      .then(async payload => restoreReviewedMenuSearchPhotos(payload, await reviewedPhotos));
   };
 
   window.daedongDataApi = Object.freeze({
