@@ -766,7 +766,7 @@
   function decorateStoreCards() {
     const viewportAnchor = typeof fxCaptureDownstreamAnchor === 'function'
       ? fxCaptureDownstreamAnchor(document.querySelector('#recommendRails')) : null;
-    document.querySelectorAll('#storeGrid .store-card[data-id]').forEach(card => {
+    document.querySelectorAll('#storeGrid .store-card[data-id], #modalContent .store-card[data-id]').forEach(card => {
       const info = serviceInfoForStore(String(card.dataset.id));
       const status = storeStatus(info);
       const benefits = benefitLabels(info);
@@ -796,6 +796,8 @@
     document.querySelectorAll('.rail-card[data-rail-store-id]').forEach(card => addCompactCard(card, card.dataset.railStoreId));
     document.querySelectorAll('.rc5-category-card[data-rc5-store]').forEach(card => addCompactCard(card, card.dataset.rc5Store));
     document.querySelectorAll('.channel-store-card[data-channel-store-id]').forEach(card => addCompactCard(card, card.dataset.channelStoreId));
+    document.querySelectorAll('.app-browser-card[data-channel-store-id]').forEach(card => addCompactCard(card, card.dataset.channelStoreId));
+    document.querySelectorAll('.personal-store-row[data-personal-store]').forEach(card => addCompactCard(card, card.dataset.personalStore));
     document.querySelectorAll('.app-browser-card[data-search-store-id]').forEach(card => addCompactCard(card, card.dataset.searchStoreId));
     document.querySelectorAll('.app-browser-card[data-app-store-id]').forEach(card => addCompactCard(card, card.dataset.appStoreId));
     document.querySelectorAll('.phone-order-card[data-phone-store-id]').forEach(card => addCompactCard(card, card.dataset.phoneStoreId));
@@ -817,7 +819,9 @@
       }
       const target = card.querySelector('.rail-card-copy, .rc5-card-copy, .app-browser-info')
         || card.querySelector(':scope > span');
-      if (target && badge.parentElement !== target) target.append(badge);
+      const action = target?.querySelector('.store-entry-action');
+      if (action && badge.nextElementSibling !== action) action.before(badge);
+      else if (target && badge.parentElement !== target) target.append(badge);
     });
     if (typeof fxRestoreDownstreamAnchor === 'function') fxRestoreDownstreamAnchor(viewportAnchor);
   }
@@ -1944,6 +1948,7 @@ document.addEventListener('input', event => {
 
   const serviceSurfaceSelector = [
     '#storeGrid',
+    '#modalContent .store-card[data-id]',
     '#modalContent .store-detail[data-store-id]',
     '#recommendSection .section-head',
     '.main-search-row',
@@ -1951,6 +1956,8 @@ document.addEventListener('input', event => {
     '.rail-card[data-rail-store-id]',
     '.rc5-category-card[data-rc5-store]',
     '.channel-store-card[data-channel-store-id]',
+    '.app-browser-card[data-channel-store-id]',
+    '.personal-store-row[data-personal-store]',
     '.app-browser-card[data-search-store-id]',
     '.app-browser-card[data-app-store-id]',
     '.phone-order-card[data-phone-store-id]',

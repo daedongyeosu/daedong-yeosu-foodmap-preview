@@ -8316,16 +8316,96 @@
       "slug": "collected-e57c51a4f6294349",
       "label": "계근상 여수본점(문수동) 전용 대동여수음식지도",
       "title": "계근상 여수본점(문수동)",
-      "meta": "가게 정보와 주문방법",
+      "meta": "메뉴와 주문방법",
       "slides": [
         {
           "storeId": "e57c51a4f6294349",
-          "image": "assets/notion-recovery-180/e57c51a4f6294349/01.png",
+          "image": "assets/campaigns/gyegunsang-yeosu/01.webp",
           "title": "계근상 여수본점(문수동)",
-          "meta": "가게 정보와 주문방법"
+          "meta": "1인 순살 [기본] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/02.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "1인 순살 [한우] 곱도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/03.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[계근] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/04.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[한우대창] 곱도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/05.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[꽃게폭탄] 꽃도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/06.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[순두부] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/07.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[묵은지] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/08.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "1인 순살 [순두부] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/09.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "1인 순살 [모짜치즈] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/10.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[모짜치즈] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/11.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "1인 순살 [찹쌀 누룽지] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/12.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[찹쌀 누룽지] 닭도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/13.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[새우폭탄] 새도리탕"
+        },
+        {
+          "storeId": "e57c51a4f6294349",
+          "image": "assets/campaigns/gyegunsang-yeosu/14.webp",
+          "title": "계근상 여수본점(문수동)",
+          "meta": "[사골] 백도리탕"
         }
       ],
-      "layout": "food14-plus3"
+      "layout": "food14-plus3",
+      "storeHeroLimit": 14,
+      "menuHydration": "curated-static"
     },
     "2e39c9f951d19c05": {
       "storeId": "2e39c9f951d19c05",

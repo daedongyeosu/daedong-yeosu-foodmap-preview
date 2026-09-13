@@ -154,6 +154,26 @@ body.store-service-overview-open {
   font-size: 10px;
 }
 
+/* Store discovery opens details; keep its action distinct from live status. */
+.rail-list-modal .app-browser-info {
+  min-width: 0;
+}
+
+.rail-list-modal .store-entry-action {
+  display: block;
+  margin-top: 8px;
+  color: #bf461f;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.rail-list-modal .store-service-status {
+  font-size: 11px;
+}
+
 .store-service-status,
 .store-service-card-payment,
 .store-service-card-unknown {
