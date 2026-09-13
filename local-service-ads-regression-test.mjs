@@ -43,7 +43,8 @@ for (const ad of ads.advertisers) {
   assert.ok(fs.existsSync('.' + ad.image));
 }
 const insurance = ads.detail('hyundai-sinwansu');
-assert.equal((insurance.match(/원본 크게 보기">/g) || []).length, 4);
+assert.equal((insurance.match(/data-insurance-sheet="[1-4]"/g) || []).length, 4);
+assert.equal((insurance.match(/aria-label="제공 전단 [1-4]장 보기"/g) || []).length, 4);
 for (let n = 1; n <= 4; n++) assert.ok(fs.existsSync(`assets/local-services/hyundai-guide-${n}.png`));
 assert.match(insurance, /가입 시 유의사항/);
 assert.match(insurance, /searchLoginId=1D2544&amp;userType=62/);

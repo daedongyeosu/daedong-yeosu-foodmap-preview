@@ -31,35 +31,51 @@
 .local-service-actions a.local-service-primary{background:#192f49;color:white;border-color:#192f49}
 .local-service-actions a.local-service-official{grid-column:1/-1;background:#fff7ed;color:#7a380e;border-color:#ecd8bf}
 .local-service-material{border-top:1px solid #dce4eb;margin-top:30px;padding-top:25px}
-.local-service-document{margin-top:30px;padding:22px 16px;background:#f1f6fb;border:1px solid #cfdeeb;border-radius:16px;min-width:0}
-.local-service-document-label{display:block;color:#286088;font-size:14px;font-weight:750;margin-bottom:12px}
-.local-service-document h3{font-size:26px;line-height:1.35;letter-spacing:-.035em}
-.local-service-document>p{font-size:15px;color:#41566e}
-.local-service-document-links{display:flex;flex-wrap:wrap;gap:10px 16px;margin:20px 0}
-.local-service-document-links a{display:flex;align-items:center;min-height:44px;font-size:14px;color:#294b6a;text-underline-offset:4px}
-.local-service-document-links a.local-service-pdf{width:100%;display:block;border-radius:11px;padding:14px 12px;background:#19324d;color:white;text-align:center;font-size:17px;font-weight:750;text-decoration:none}
-.local-service-pdf span{display:block;font-size:13px;font-weight:400;margin-top:4px;color:#e1ecf5}
-.local-service-reader{min-width:0}
-.local-service-reader>summary{padding:14px 10px;border:1px solid #acbfd0;border-radius:10px;background:white;font-size:15px;font-weight:750;cursor:pointer}
-.local-service-reader-controls{margin-top:16px;display:grid;gap:10px}
-.local-service-reader-pages,.local-service-reader-zoom{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
-.local-service-reader button{appearance:none;margin:0;min-height:44px;padding:8px 10px;border:1px solid #b7c9d8;border-radius:8px;background:white;color:#19324d;font:700 14px/1.4 system-ui,sans-serif;cursor:pointer;width:auto}
-.local-service-reader button:disabled{opacity:.45;cursor:default}
-.local-service-reader [data-document-action="read"]{background:#19324d;color:white;border-color:#19324d}
-.local-service-reader [data-document-status]{font-size:15px;font-weight:750}
-.local-service-reader [data-document-scale]{font-size:13px;min-width:40px;text-align:right}
-.local-service-reader p.local-service-reader-hint{font-size:14px;margin:12px 0;color:#41566e;line-height:1.65}
-.local-service-document-viewport{width:100%;height:380px;max-height:55vh;overflow:auto;border:1px solid #aebfcd;background:#dce4eb;overscroll-behavior:contain;border-radius:6px}
-.local-service-document-viewport img{display:block;width:100%;max-width:none!important;height:auto!important;border:0;border-radius:0;object-fit:contain;cursor:move}
-.local-service-detail .local-service-document-note{font-size:14px;line-height:1.75;margin:18px 0 0;color:#4a5e72}
-.local-service-reader .local-service-document-error{font-size:15px;color:#8d241c;margin-top:10px}
-.local-service-reader button:focus-visible,.local-service-document-viewport:focus-visible{outline:3px solid #146dd5;outline-offset:2px}
+.insurance-direct{--insurance-text-size:18px}
+.insurance-reading-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px;color:#5b6573;font-size:14px}
+.insurance-reading-tools button{appearance:none;min-height:44px;width:auto;padding:10px 14px;border:1px solid #cbd5df;border-radius:10px;background:#fff;color:#172f4e;font:700 15px/1.4 system-ui,sans-serif;cursor:pointer;flex-shrink:0}
+.insurance-reading-tools button:focus-visible{outline:3px solid #146dd5;outline-offset:2px}
+.insurance-reading-tools button[aria-pressed="true"]{background:#172f4e;color:white}
+.insurance-brochure{display:grid;gap:28px;min-width:0}
+.insurance-sheet{min-width:0;border:1px solid #eadbc8;border-top:5px solid #f39a32;border-radius:4px 4px 18px 18px;padding:24px 20px;background:#fffcf6;font-size:var(--insurance-text-size);line-height:1.8;overflow-wrap:anywhere}
+.insurance-sheet-number{display:block;font-size:14px;font-weight:750;letter-spacing:.06em;color:#876441;margin-bottom:18px}
+.insurance-sheet h3{font-size:1.5em!important;font-weight:850;letter-spacing:-.04em;line-height:1.4;margin:0 0 22px;word-break:keep-all;overflow-wrap:anywhere}
+.insurance-sheet h4{font-size:1.1em;font-weight:800;letter-spacing:-.03em;color:#192f49;margin:30px 0 10px;line-height:1.5;word-break:keep-all}
+.local-service-detail .insurance-sheet p{font-size:1em;line-height:1.8;margin:0 0 20px;color:#283f57;word-break:keep-all;overflow-wrap:anywhere}
+.insurance-sheet ul{margin:10px 0 24px;padding-left:1.25em;list-style:disc;display:block}
+.insurance-sheet li{display:list-item;margin:0 0 12px;font-size:1em;line-height:1.8;color:#283f57;word-break:keep-all;overflow-wrap:anywhere}
+.insurance-sheet p.insurance-caution{font-size:1em;color:#4a5766;border-left:3px solid #c5b599;padding-left:14px}
+.insurance-cover{padding:26px 24px;background:#fff}
+.insurance-cover h2{font-size:clamp(36px,9vw,50px)!important;line-height:1.15!important;color:#002453;margin-bottom:12px!important}
+.insurance-cover p.insurance-edition{font-size:16px;color:#4c5c72;margin-bottom:28px}
+.insurance-cover p.insurance-cover-message{font-size:1.4em;color:#002453;line-height:1.5;margin-bottom:22px;letter-spacing:-.04em}
+.insurance-cover-message strong{color:#ae430b}
+.insurance-cover-art{position:relative;aspect-ratio:490/388;overflow:hidden;border-radius:12px;background:#ed7f22;margin:0 0 24px}
+.insurance-cover-art img{position:absolute;display:block;width:104.29%!important;max-width:none!important;height:auto!important;top:-65.46%;left:-3.06%;border:0;border-radius:0;pointer-events:none}
+.insurance-quick-contact{display:flex;flex-direction:column;gap:3px;padding-top:18px;border-top:1px solid #dfd8cd;text-decoration:none;color:#002453;font-size:16px;line-height:1.6}
+.insurance-quick-contact strong{font-size:clamp(23px,5.8vw,30px);letter-spacing:.01em}
+.insurance-quick-contact>span:last-child{font-size:15px;color:#7b400c;margin-top:5px}
+.insurance-use{padding:18px 0;border-top:1px solid #e5d5be}
+.insurance-use h4{margin:0 0 6px}
+.insurance-use>strong{display:block;color:#a6470f;font-size:.95em;margin-bottom:8px}
+.insurance-use p{margin-bottom:0!important}
+.insurance-notice{padding:18px 16px;background:#f4eddd;border-radius:12px;margin:26px 0}
+.insurance-notice h4{margin:0 0 12px}
+.insurance-notice p:last-child,.insurance-notice ul:last-child{margin-bottom:0}
+.insurance-facts{margin:22px 0}
+.insurance-facts>div{padding:14px 0;border-bottom:1px solid #e1d7c7}
+.insurance-facts dt{font-size:.9em;color:#806045;font-weight:700;margin-bottom:4px}
+.insurance-facts dd{margin:0;color:#192f49;font-size:1em;line-height:1.8;word-break:keep-all}
+.insurance-customer-center{display:flex;flex-direction:column;gap:6px;color:#172f4e;text-decoration:none;border-top:1px solid #e1d7c7;padding-top:20px;font-size:1em}
+.insurance-customer-center strong{font-size:1.4em}
+.insurance-source-links{display:flex;flex-direction:column;gap:6px;border-top:1px solid #dce4eb;padding-top:20px;font-size:14px;line-height:1.8;color:#526276}
+.insurance-source-links a{display:inline-flex;align-items:center;min-height:44px;color:#395570;text-underline-offset:4px}
+.insurance-large-text{--insurance-text-size:23px}
+@media(max-width:440px){.local-service-page main:has(.insurance-direct){padding:20px 14px}.modal-card:has(.insurance-direct){padding-left:14px!important;padding-right:14px!important}.insurance-sheet{padding:22px 17px}.insurance-cover{padding:24px 20px}.insurance-notice{padding:16px 12px}}
 .local-service-material>p{font-size:15px;color:#566678}
 .local-service-material summary{padding:16px;border:1px solid #ccd7e1;border-radius:12px;cursor:pointer;font-size:16px;font-weight:750;color:#19324d}
-.local-service-gallery{display:grid;gap:20px;padding-top:18px}
-.local-service-gallery a,.local-service-original{display:block;color:#344e6b;font-size:14px;text-decoration:none;text-align:center}
-.local-service-gallery img,.local-service-original img{display:block;width:100%;height:auto;object-fit:contain;border:1px solid #dce4eb;border-radius:8px;margin-bottom:8px}
-.local-service-gallery img{max-width:511px;margin-left:auto;margin-right:auto}
+.local-service-original{display:block;color:#344e6b;font-size:14px;text-decoration:none;text-align:center}
+.local-service-original img{display:block;width:100%;height:auto;object-fit:contain;border:1px solid #dce4eb;border-radius:8px;margin-bottom:8px}
 .local-service-detail p.local-service-fineprint{margin:20px 0;color:#65717f;font-size:13px;line-height:1.75}
 .local-service-products{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 25px}
 .local-service-products>span{padding:5px 12px;border-radius:8px;background:#eef5fa;color:#35506b;font-size:14px}
