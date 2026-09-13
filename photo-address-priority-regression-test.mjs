@@ -62,6 +62,9 @@ assert.equal(hero.menuHeroImage({storeId: achasan, items: []}), 'real-food.jpg')
 assert.equal(hero.menuHeroImage({storeId: 'other', items: []}), 'official-logo.png');
 hero.photoResolver.resolve = () => ({src: 'store-logo.jpg', classification: 'store_logo'});
 assert.equal(hero.menuHeroImage({storeId: achasan, items: []}), 'official-logo.png');
+hero.photoResolver.resolveGallery = () => [{src:'store-logo.jpg',classification:'store_logo'}, {src:'second-food.jpg',classification:'food'}];
+assert.equal(hero.menuHeroImage({storeId: achasan, items: []}), 'second-food.jpg', 'food in a later gallery slot is not lost behind the first logo');
+assert.equal(hero.menuHeroImage({storeId:'other',items:[]}), 'official-logo.png');
 const legacyContext = vm.createContext({normalize:s=>String(s||'').toLowerCase(),uniquePaths:p=>[...new Set(p)].filter(Boolean),
   photoUrlKey:s=>s,mobilePhotoPath:s=>s,isKnownBlankDetailPhotoPath:()=>false,isOfficialStorePlaceholderImage:()=>false,isQuarantinedCollectedPhoto:()=>false});
 vm.runInContext(app.slice(app.indexOf('const REVIEWED_LEGACY_FOOD_PHOTOS ='), app.indexOf('  markup(store,',app.indexOf('class PhotoResolver {'))) + '}\nthis.resolver = new PhotoResolver(); this.reviewed = REVIEWED_LEGACY_FOOD_PHOTOS;',legacyContext);
