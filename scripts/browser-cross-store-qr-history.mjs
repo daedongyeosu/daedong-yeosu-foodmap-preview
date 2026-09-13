@@ -54,6 +54,10 @@ const stores = [
   },
 ];
 
+// Browser QA must not write synthetic visits into the live owner's statistics.
+await context.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
+await context.route(/^https:\/\/[^/]*posthog\.com\//, route => route.abort());
+
 if (/^https?:\/\/(?:127\.0\.0\.1|localhost)/.test(baseURL)) {
   const json = body => ({status: 200, contentType: 'application/json', body: JSON.stringify(body)});
   await context.route('**/api/catalog', route => route.fulfill(json(stores)));
