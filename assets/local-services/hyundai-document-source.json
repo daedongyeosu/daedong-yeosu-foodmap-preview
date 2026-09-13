@@ -1,0 +1,13 @@
+{
+  "title": "무배당 현대해상하이바이크운전자보험(Hi2601) 상품요약서",
+  "documentType": "공식 상품요약서 (담당자 제공 전단 4장과는 별도 문서)",
+  "publisher": "현대해상",
+  "sourceUrl": "https://www.hi.co.kr/FileActionServlet/preview/0/data/202601/20260109095156269.pdf",
+  "verifiedOn": "2026-09-13",
+  "pageCount": 9,
+  "pdf": "hyundai-hibike-hi2601-summary.pdf",
+  "sha256": "c354d2169c5996ebb3e1a10a24c8358fc179c9faab1153391c8914fa752a86e2",
+  "pdfModification": "none",
+  "pageImages": "hyundai-summary-1.png through hyundai-summary-9.png",
+  "render": "Poppler pdftoppm -scale-to 3600 -png; all pages, no cropping or text rewriting"
+}
