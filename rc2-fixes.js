@@ -786,13 +786,9 @@ function rc2BrandKey(store) {
 }
 
 function rc2RepresentativeMethod(store) {
-  const routeOrder = ['direct', 'mukkebi', 'ddangyo', 'ondongne'];
-  for (const key of routeOrder) if (routeFor(store, key)) return APP_META[key].label;
-  if (fxBrandByStore.has(String(store.id))) return '브랜드앱';
-  if (fxHappyByStore.has(String(store.id))) return '해피오더';
-  if (fxPhoneByStore.has(String(store.id))) return '전화주문';
-  for (const key of ['yogiyo', 'coupang', 'baemin']) if (routeFor(store, key)) return APP_META[key].label;
-  return '주문방법 확인';
+  // This card opens the store, not one particular ordering channel.
+  // A catalog may not have hydrated its routes yet: do not infer "phone only".
+  return '메뉴·주문방법 보기';
 }
 
 const RC2_RAIL_RANDOM_SEED = new Date().toLocaleDateString('sv-SE', {timeZone: 'Asia/Seoul'});
@@ -1031,7 +1027,7 @@ renderStores = function rc2RenderStores(options = {}) {
 function rc2OpenRailList(specId) {
   const spec = RC2_RAIL_SPECS.find(item => item.id === specId);
   if (!spec) return;
-  const cards = rc2RailCandidates(spec, new Set(), 40).map(store => `<button type="button" class="app-browser-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC2_REGION_NAME)} · ${escapeHtml(store.cat)}</small><span>${escapeHtml(rc2RepresentativeMethod(store))}</span></span><b>›</b></button>`).join('');
+  const cards = rc2RailCandidates(spec, new Set(), 40).map(store => `<button type="button" class="app-browser-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC2_REGION_NAME)} · ${escapeHtml(store.cat)}</small><span class="store-entry-action">${escapeHtml(rc2RepresentativeMethod(store))}</span></span><b aria-hidden="true">›</b></button>`).join('');
   openModal(`<section class="app-browser rail-list-modal"><h2 id="modalTitle">${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p><div class="app-browser-list">${cards || '<p class="empty">추천 가게를 확인 중입니다.</p>'}</div></section>`);
 }
 
