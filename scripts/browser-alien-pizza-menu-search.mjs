@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import {chromium} from 'playwright';
+import {reviewedMenuPhotoEvidence} from './reviewed-menu-photo-evidence.mjs';
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 const proxyApiOrigin = process.env.PERF_PROXY_API_ORIGIN || '';
@@ -41,8 +42,11 @@ const check = async (condition, message) => {
   if (!ok) throw new Error(message);
 };
 
-// The display policy excludes quarantined/placeholder references, but never
-// requires a new photo for an original which did not have one.
+// Preserve raw API photos plus exact, file-backed reviewed-source evidence.
+// An unreviewed empty original must still never receive an invented photo.
+const reviewedPhotoInventory = JSON.parse(fs.readFileSync(new URL('../data/reviewed-menu-photo-links.json', import.meta.url), 'utf8'));
+const reviewedPhotoFor = item => reviewedMenuPhotoEvidence(storeId, item, reviewedPhotoInventory,
+  image => fs.existsSync(new URL('../' + image, import.meta.url)));
 const usableSourcePhoto = value => {
   const clean = String(value || '').trim().split(/[?#]/, 1)[0].replace(/\\/g, '/');
   return Boolean(clean)
@@ -92,7 +96,7 @@ try {
   const sourceIdsOf = item => [item.id, item.itemId, ...(item.__sourceIds || [])].filter(Boolean).map(String);
   const photoFamilies = projection.families.map(family => {
     const sources = rawItems.filter(item => sourceIdsOf(item).some(id => family.sourceIds.includes(id)));
-    return {...family, sourceImages: [...new Set(sources.map(item => item.image).filter(usableSourcePhoto))]};
+    return {...family, sourceImages: [...new Set(sources.flatMap(item => [item.image, reviewedPhotoFor(item)]).filter(usableSourcePhoto))]};
   });
   const coveredSourceIds = new Set(projection.families.flatMap(family => family.sourceIds));
   const excludedSourceIds = new Set(projection.excluded.flatMap(item => item.sourceIds || [item.id]));
@@ -163,6 +167,7 @@ try {
     && !photoFamilies.find(family => family.id === card.id)?.sourceImages.includes(card.image));
   report.photoCoverage = {
     sourcePhotoCount: rawItems.filter(item => usableSourcePhoto(item.image)).length,
+    reviewedAdditionalPhotoCount: rawItems.filter(item => !usableSourcePhoto(item.image) && reviewedPhotoFor(item)).length,
     expectedPhotoFamilyCount: photoFamilies.filter(family => family.sourceImages.length).length,
     renderedPhotoFamilyCount: renderedCards.filter(card => card.hasPhoto).length,
     textOnlyFamilyCount: renderedCards.filter(card => card.textOnly).length,

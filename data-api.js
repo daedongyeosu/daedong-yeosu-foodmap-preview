@@ -123,22 +123,43 @@
     '421ecef35a879687': 'data/tamnaneun-pizza-menu.json?v=tamnaneun-dedicated-2'
   });
 
-  let reviewedPhotoLinksPromise = null;
+  const reviewedPhotoLinkRequests = new Map();
   function menuPhotoNameHash(value) {
     let hash = 2166136261;
     for (const char of String(value || '').normalize('NFKC').trim()) hash = Math.imul(hash ^ char.codePointAt(0), 16777619);
     return (hash >>> 0).toString(16);
   }
-  function reviewedMenuPhotoLinks() {
-    if (!reviewedPhotoLinksPromise) {
+  function reviewedMenuPhotoLinks(storeId) {
+    const id = String(storeId || '');
+    if (!/^[a-f0-9]{16}$/.test(id)) return Promise.resolve(null);
+    const bucket = id[0];
+    if (!reviewedPhotoLinkRequests.has(bucket)) {
       const abort = createRequestAbort(null, 2500);
-      reviewedPhotoLinksPromise = Promise.resolve().then(() => fetch('data/reviewed-menu-photo-links.json?v=photo-address-20260913', {
+      const pending = Promise.resolve().then(() => fetch(`data/reviewed-menu-photo-links/${bucket}.json?v=all-menu-photos-20260913`, {
         credentials: 'same-origin', signal: abort.signal
-      })).then(response => response.ok ? response.json() : null)
-        .catch(() => { reviewedPhotoLinksPromise = null; return null; })
+      })).then(response => {
+        if (!response.ok) throw new Error('메뉴 사진 목록을 불러오지 못했습니다.');
+        return response.json();
+      })
+        .catch(() => { reviewedPhotoLinkRequests.delete(bucket); return null; })
         .finally(() => abort.cleanup());
+      reviewedPhotoLinkRequests.set(bucket, pending);
     }
-    return reviewedPhotoLinksPromise;
+    return reviewedPhotoLinkRequests.get(bucket);
+  }
+  async function reviewedMenuSearchPhotoLinks(payload) {
+    const ids = [...new Map(Object.keys(payload?.stores || {})
+      .filter(id => /^[a-f0-9]{16}$/.test(id)).map(id => [id[0], id])).values()];
+    const inventory = {version: 1, stores: {}};
+    let cursor = 0;
+    // Search needs only result-store buckets. Bound fan-out and reuse detail loads.
+    await Promise.all(Array.from({length: Math.min(4, ids.length)}, async () => {
+      while (cursor < ids.length) {
+        const data = await reviewedMenuPhotoLinks(ids[cursor++]);
+        if (data?.stores) Object.assign(inventory.stores, data.stores);
+      }
+    }));
+    return inventory;
   }
   function applyReviewedMenuPhotos(storeId, payload, inventory) {
     const entry = inventory?.stores?.[storeId];
@@ -146,7 +167,8 @@
     const items = (payload.items || []).map(item => {
       const photo = entry.items?.[item.id];
       if (!photo || photo.nameHash !== menuPhotoNameHash(item.name)) return item;
-      // Keep newer photos; require the reviewed ID, name and source to agree.
+      if (photo.descriptionHash && photo.descriptionHash !== menuPhotoNameHash(item.description)) return item;
+      // Keep newer photos; reviewed composition must still agree when guarded.
       if (item.image && item.image !== photo.source && item.image !== photo.image) return item;
       return {...item, image: photo.image};
     });
@@ -162,6 +184,7 @@
         if (!Array.isArray(item)) return item;
         const photo = inventory.stores[storeId].items?.[item[0]];
         if (!photo || photo.nameHash !== menuPhotoNameHash(item[1])
+          || (photo.descriptionHash && photo.descriptionHash !== menuPhotoNameHash(item[2]))
           || (item[3] && item[3] !== photo.source && item[3] !== photo.image)) return item;
         const next = item.slice(); next[3] = photo.image; return next;
       })};
@@ -373,7 +396,7 @@
           return response.json();
         });
     }
-    const reviewedPhotos = reviewedMenuPhotoLinks();
+    const reviewedPhotos = reviewedMenuPhotoLinks(id);
     return request(`/api/store/${id}/menu`, {cacheKey: `menu:${id}`, ...options})
       .then(async payload => applyReviewedMenuPhotos(id, restoreCuratedMenuImages(id, payload), await reviewedPhotos));
   };
@@ -398,11 +421,10 @@
     if (!value || value.length > 40 || /[%_]/.test(value)) return Promise.resolve({stores: {}});
     const key = value.normalize('NFKC').toLowerCase();
     if (IS_GOHEUNG) return Promise.resolve({stores: {}});
-    const reviewedPhotos = reviewedMenuPhotoLinks();
     return request(`/api/menu-search?q=${encodeURIComponent(value)}`, {cacheKey: `search:${key}`, ...options})
       .then(customerVisibleMenuSearch)
       .then(restoreCuratedMenuSearchImages)
-      .then(async payload => restoreReviewedMenuSearchPhotos(payload, await reviewedPhotos));
+      .then(async payload => restoreReviewedMenuSearchPhotos(payload, await reviewedMenuSearchPhotoLinks(payload)));
   };
 
   window.daedongDataApi = Object.freeze({
