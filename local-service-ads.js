@@ -33,6 +33,53 @@
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const find = id => advertisers.find(ad => ad.id === id);
   const href = id => '/services/?ad=' + encodeURIComponent(id);
+  function shareUrl(id) {
+    if (!find(id)) return '';
+    const base = origin === 'preview.daedongmap.com' ? 'https://preview.daedongmap.com' :
+      ['localhost', '127.0.0.1'].includes(origin) ? location.origin : 'https://daedongmap.com';
+    return base + href(id);
+  }
+  function shareControls(ad, compact = false) {
+    return `<div class="local-service-share${compact ? ' local-service-share-compact' : ''}" data-service-share-box>
+      <div class="local-service-share-buttons"><button type="button" data-local-service-share="${ad.id}" data-share-action="share" aria-label="${escape(ad.brand + ' ' + ad.person)} 광고 공유하기">이 광고 공유하기 ↗</button><button type="button" data-local-service-share="${ad.id}" data-share-action="copy">링크 복사</button></div>
+      <p class="local-service-share-status" role="status" aria-live="polite"></p>
+      <input class="local-service-share-url" type="text" readonly hidden aria-label="복사할 광고 전용 링크" value="${escape(shareUrl(ad.id))}">
+      ${compact ? '' : '<a class="local-service-map-link" href="/">대동여수음식지도 둘러보기 →</a>'}
+    </div>`;
+  }
+  async function shareAdvertisement(button) {
+    const ad = find(button.dataset.localServiceShare);
+    if (!ad || !enabled()) return;
+    const box = button.closest('[data-service-share-box]');
+    const status = box?.querySelector('[role="status"]');
+    const input = box?.querySelector('.local-service-share-url');
+    const message = text => { if (status) status.textContent = text; };
+    const url = shareUrl(ad.id);
+    if (input) input.hidden = true;
+    message('');
+    if (button.dataset.shareAction === 'share' && typeof navigator.share === 'function') {
+      try {
+        await navigator.share({title: `${ad.brand} · ${ad.person} | 대동여수음식지도`, text: `${ad.title} 안내와 담당자 연락처를 확인하세요.`, url});
+        message('공유 창에서 선택을 마쳤습니다.');
+        return;
+      } catch (error) {
+        if (error?.name === 'AbortError') { message('공유를 취소했습니다.'); return; }
+      }
+    }
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(url);
+      message('링크를 복사했습니다. 카카오톡이나 문자에 붙여넣으세요.');
+    } catch {
+      if (input) {
+        input.hidden = false;
+        input.focus({preventScroll: true});
+        input.select();
+        input.setSelectionRange(0, input.value.length);
+      }
+      message('아래 링크를 길게 눌러 복사해 주세요.');
+    }
+  }
   function enabled() {
     return previewEnabled && (!window.DAEDONG_REGION || window.DAEDONG_REGION.code === 'yeosu')
       && (typeof ACTIVE_REGION === 'undefined' || ACTIVE_REGION.code === 'yeosu');
@@ -47,6 +94,7 @@
         <span class="local-service-ad-copy"><span class="local-service-brand">${escape(ad.brand)} <span>· ${escape(ad.category)}</span></span><strong>${headline}</strong><span class="local-service-person">${escape(ad.person)}</span><span class="local-service-ad-description">${escape(ad.description)}</span><span class="local-service-ad-cta">상세 안내 보기 <span aria-hidden="true">↗</span></span></span>
         <img src="${ad.image}" alt="${escape(ad.imageAlt)}" width="${ad.theme === 'insurance' ? 511 : 1082}" height="${ad.theme === 'insurance' ? 716 : 660}" loading="lazy" decoding="async">
       </a>
+      ${shareControls(ad, true)}
     </aside>`;
   }
   function interleave(stores, renderCard, eligible = true) {
@@ -115,7 +163,7 @@
     button.setAttribute('aria-pressed', String(large));
     button.textContent = large ? '기본 글자 크기 −' : '글자 더 크게 ＋';
   }
-  function detail(id) {
+  function detailContent(id) {
     if (id === 'advertise') return inquiry();
     const ad = find(id);
     if (!ad) return `<section class="local-service-detail"><h2 id="modalTitle">광고를 찾을 수 없습니다</h2><p>아래에서 현재 안내 중인 서비스를 확인해 주세요.</p><a href="/services/">생활서비스 전체 보기</a></section>`;
@@ -124,6 +172,11 @@
       ? ''
       : `<section class="local-service-material"><h3>판매·렌탈 안내 제품</h3><div class="local-service-products">${ad.products.map(p => `<span>${escape(p)}</span>`).join('')}</div><a class="local-service-original" href="${ad.image}" target="_blank" rel="noopener"><img src="${ad.image}" alt="${escape(ad.imageAlt)}" width="1082" height="660" loading="lazy"><span>제공된 안내 이미지 크게 보기 ↗</span></a><p class="local-service-fineprint">제품별 가격·계약기간·서비스 조건은 담당자에게 확인해 주세요.</p></section>`;
     return `<section class="local-service-detail local-service-${ad.theme}" data-service-detail="${ad.id}"><span class="local-service-kicker">${escape(ad.category)} <span class="local-service-disclosure">광고</span></span><h2 id="modalTitle">${escape(ad.brand)}<br>${escape(ad.title)}</h2><p class="local-service-lead">${escape(ad.description)}</p><div class="local-service-contact"><span>${escape(ad.person)}</span><strong>${ad.phone}</strong></div><nav class="local-service-actions" aria-label="${escape(ad.person)} 상담"><a class="local-service-primary" href="tel:${ad.phone.replace(/-/g, '')}">담당자에게 전화하기</a><a href="sms:${ad.phone.replace(/-/g, '')}">문자로 문의하기</a>${ad.official ? `<a class="local-service-official" href="${escape(ad.official)}" target="_blank" rel="noopener noreferrer">현대해상 모바일 명함 보기 ↗</a>` : ''}</nav>${material}</section>`;
+  }
+  function detail(id) {
+    const markup = detailContent(id);
+    const ad = find(id);
+    return ad ? markup.replace(/(<span class="local-service-kicker">[\s\S]*?<\/span><\/span>)/, '$1' + shareControls(ad)) : markup;
   }
   function open(id) {
     if (!enabled() || (id !== 'advertise' && !find(id))) return false;
@@ -137,6 +190,8 @@
   }
   function init() {
     document.addEventListener('click', event => {
+      const shareButton = event.target.closest?.('[data-local-service-share]');
+      if (shareButton && enabled()) { event.preventDefault(); void shareAdvertisement(shareButton); return; }
       const fontButton = event.target.closest?.('[data-insurance-font]');
       if (fontButton && enabled()) { updateInsuranceFont(fontButton); return; }
       const link = event.target.closest?.('[data-local-service-open]');
@@ -152,7 +207,7 @@
       standalone.innerHTML = id ? detail(id) : `<header class="local-service-directory-head"><span class="local-service-kicker">대동여수음식지도</span><h1>여수 생활서비스</h1><p>필요한 서비스를 살펴보고<br>담당자에게 직접 문의하세요.</p></header><div class="local-service-directory">${advertisers.map((_, i) => card(i, 'directory')).join('')}</div>`;
     }
   }
-  window.daedongLocalServices = Object.freeze({enabled, advertisers, card, interleave, detail, open});
+  window.daedongLocalServices = Object.freeze({enabled, advertisers, card, interleave, detail, open, shareUrl});
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once: true});
   else init();
 })();

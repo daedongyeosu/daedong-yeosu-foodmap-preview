@@ -19,6 +19,17 @@
 #storeGrid>.local-service-ad>.local-service-ad-main{flex:1}
 .local-service-detail{--service-accent:#b8450a;box-sizing:border-box;color:#1a2c43;max-width:680px;margin:auto;padding:12px 0 0;text-align:left;font-size:16px;line-height:1.65}
 .local-service-detail *{box-sizing:border-box}
+.local-service-share{margin:0 0 20px;min-width:0;text-align:left}
+.local-service-share-compact{padding:0 20px 16px;margin:0}
+.local-service-share-buttons{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:8px}
+.local-service-share-buttons button{appearance:none;display:flex;align-items:center;justify-content:center;min-height:48px;width:100%;padding:12px 8px;border:1px solid #b7c7d8;border-radius:12px;background:#fff;color:#19324d;font:750 14px/1.4 system-ui,sans-serif;cursor:pointer;word-break:keep-all}
+.local-service-share-buttons button:first-child{background:#19324d;color:#fff;border-color:#19324d}
+.local-service-share-buttons button:focus-visible,.local-service-share-url:focus-visible{outline:3px solid #146dd5;outline-offset:2px}
+.local-service-share .local-service-share-status{margin:8px 0 0;font-size:13px;line-height:1.5;color:#365471;overflow-wrap:anywhere}
+.local-service-share-status:empty{display:none}
+.local-service-share-url{box-sizing:border-box;width:100%;min-width:0;min-height:46px;margin-top:8px;padding:8px;border:1px solid #b7c7d8;border-radius:8px;font-size:16px;color:#19324d;background:#fff}
+.local-service-share-url[hidden]{display:none!important}
+.local-service-map-link{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;font-size:14px;color:#365471;text-underline-offset:3px}
 .local-service-detail .local-service-kicker,.local-service-kicker{display:flex;gap:9px;align-items:center;color:#536378;font-size:14px;font-weight:700;margin-bottom:14px}
 .local-service-detail h2{font-size:clamp(27px,6.4vw,38px)!important;line-height:1.3!important;letter-spacing:-.04em;word-break:keep-all;margin:0 0 16px!important}
 .local-service-detail h3{font-size:19px;line-height:1.4;margin:0 0 12px}
