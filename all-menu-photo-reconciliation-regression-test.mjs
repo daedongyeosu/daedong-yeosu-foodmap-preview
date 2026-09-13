@@ -90,7 +90,31 @@ for(const [id,store] of Object.entries(published.stores))for(const [itemId,p] of
   }
 }
 assert.equal(guarded,1743,'all newly reviewed mappings keep composition guards');
-assert.match(source,/reviewed-menu-photo-links\.json\?v=all-menu-photos-20260913/);
+assert.match(source,/reviewed-menu-photo-links\/\$\{bucket\}\.json\?v=all-menu-photos-20260913/);
+assert.doesNotMatch(source,/fetch\('data\/reviewed-menu-photo-links\.json/,'detail/search must never download the whole inventory');
+const combined={version:1,stores:{}};
+for(const bucket of '0123456789abcdef'){
+  const text=read('data/reviewed-menu-photo-links/'+bucket+'.json');
+  assert.ok(Buffer.byteLength(text)<64*1024,'one store loads a small bounded photo shard');
+  const shard=JSON.parse(text);
+  assert.ok(Object.keys(shard.stores).every(id=>id[0]===bucket));
+  Object.assign(combined.stores,shard.stores);
+}
+assert.deepEqual(combined,published,'sharding loses no reviewed photo or existing hero');
+const fetched=[],loader=vm.createContext({Map,Promise,reviewedPhotoLinkRequests:new Map(),
+  createRequestAbort:()=>({signal:undefined,cleanup:()=>{}}),
+  fetch:async url=>{fetched.push(url);const bucket=url.match(/\/([a-f0-9])\.json/)[1];return{ok:true,json:async()=>JSON.parse(read('data/reviewed-menu-photo-links/'+bucket+'.json'))};}});
+vm.runInContext(functionSource('reviewedMenuPhotoLinks'),loader);
+vm.runInContext('async '+functionSource('reviewedMenuSearchPhotoLinks'),loader);
+await Promise.all([loader.reviewedMenuPhotoLinks(storeId),loader.reviewedMenuPhotoLinks('0222222222222222')]);
+assert.equal(fetched.length,1,'same bucket shares one request');
+await loader.reviewedMenuPhotoLinks('../invalid');assert.equal(fetched.length,1,'invalid store cannot build a path');
+await loader.reviewedMenuSearchPhotoLinks({stores:{[storeId]:{},'1111111111111111':{}}});
+assert.equal(fetched.length,2,'search fetches only missing result buckets');
+await loader.reviewedMenuSearchPhotoLinks({stores:{}});assert.equal(fetched.length,2,'empty search needs no photos');
+let attempts=0;loader.reviewedPhotoLinkRequests.clear();loader.fetch=async()=>{attempts++;if(attempts===1)throw Error('transient');return{ok:true,json:async()=>({stores:{}})};};
+assert.equal(await loader.reviewedMenuPhotoLinks(storeId),null);
+await loader.reviewedMenuPhotoLinks(storeId);assert.equal(attempts,2,'transient failure never poisons photo cache');
 assert.match(read('index.html'),/data-api\.js\?[^"\n]*all-menu-photos-20260913/);
 assert.match(read('scripts/browser-alien-pizza-menu-search.mjs'),/sources\.flatMap\(item => \[item\.image, reviewedPhotoFor\(item\)\]\)/,'browser coverage uses verified additional evidence, not a broad photo exemption');
 console.log('PASS verified photo reconciliation: identity/composition guards, stale source rejection, search parity, immutable fields and owned assets');
