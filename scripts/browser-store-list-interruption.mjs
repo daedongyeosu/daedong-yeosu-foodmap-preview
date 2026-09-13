@@ -150,6 +150,7 @@ try {
   await seedStaleReturnState();
   const rc3RailCard = page.locator('[data-rc3-rail-open]').first();
   const rc3RailStoreId = await rc3RailCard.getAttribute('data-rc3-rail-open');
+  report.railTouchExpectedId = rc3RailStoreId;
   await rc3RailCard.scrollIntoViewIfNeeded();
   await rc3RailCard.tap();
   await page.waitForTimeout(1700);
@@ -305,6 +306,13 @@ try {
     confirmedHoursText: document.querySelector('#storeGrid .store-card[data-id="pager-store-001"] [data-store-service-card-meta]')?.textContent?.replace(/\s+/g, ' ').trim() || '',
     introHidden: document.querySelector('#communityIntro')?.hidden,
     eventHidden: document.querySelector('#mukkebiSummerEvent')?.hidden
+    ,modalOpen: document.querySelector('#modal')?.hidden === false
+    ,chosenId: document.querySelector('#modal')?.dataset.activeStoreId || ''
+    ,firstRailId: document.querySelector('[data-rc3-rail-open]')?.dataset.rc3RailOpen || ''
+    ,freshEntrySettling: document.documentElement.classList.contains('daedong-fresh-entry-settling')
+    ,staleSession: Boolean(sessionStorage.getItem('daedongExternalReturnRc2'))
+    ,departureSession: Boolean(sessionStorage.getItem('daedongExternalAppDepartureV1'))
+    ,durableCookie: document.cookie.includes('daedongOrderReturnV1=')
   }));
   await check(Promise.resolve(beforeRanking.left > 20 && afterRanking.left > 20 && afterRanking.previousVisible),
     '늦은 위치 정렬 뒤에도 스와이프한 다음 가게 페이지 상태 유지', {beforeRanking, afterRanking});

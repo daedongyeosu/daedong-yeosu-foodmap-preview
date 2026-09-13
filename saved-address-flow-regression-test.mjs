@@ -45,10 +45,12 @@ assert.match(selectSavedSource, /activateAddress\(item\)/);
 assert.doesNotMatch(selectSavedSource, /openMapStep|scrollTo/);
 
 const confirmMapSource = extractFunction(addressMap, 'confirmMapPosition');
-assert.match(confirmMapSource, /searchedArea/);
+assert.match(confirmMapSource, /selectedAddressArea/);
 assert.match(confirmMapSource, /mapArea/);
-assert.match(confirmMapSource, /mismatch/);
-assert.match(addressMap, /지도 핀은/);
+assert.doesNotMatch(confirmMapSource, /mismatch/);
+assert.doesNotMatch(addressMap, /같은 동네로 핀을 옮겨/);
+assert.match(addressMap, /선택사항/);
+assert.match(addressMap, /type === 'postcode'/);
 assert.match(addressMap, /nominatim\.openstreetmap\.org\/search/);
 assert.match(addressMap, /mapVerified/);
 

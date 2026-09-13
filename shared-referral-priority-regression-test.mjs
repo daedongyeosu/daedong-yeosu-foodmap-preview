@@ -10,7 +10,7 @@ assert.ok(partner.storeIds.every(id=>/^[a-f0-9]{16}$/.test(id)));
 for(const id of ['65cc1845e542d5fb','7bc7239e6b509c44','04910f606ba038a6','84c118675c0caa4c','d86586aaef8454c9'])assert.ok(!partner.storeIds.includes(id),'Known own store/shop-in-shop excluded');
 assert.deepEqual(Object.keys(partner).sort(),['enabled','storeIds']);
 function context(key='',goheung=false){
- const c=vm.createContext({RC6_PARTNER_KEY:key,RC6_IS_GOHEUNG:goheung,rc6StorePriority:config,rc6PartnerStoreIds:new Set(),rc6ManagedStoreIds:new Set(['own']),rc6SharedManagedStoreIds:new Set(),rc6DeprioritizedStoreIds:new Set(config.deprioritizedStoreIds),rc6NearStores:()=>[],compareStoreBusinessStatus:(a,b)=>(a?.store||a).rank-(b?.store||b).rank});
+ const c=vm.createContext({RC6_PARTNER_KEY:key,RC6_IS_GOHEUNG:goheung,rc6StorePriority:config,rc6PartnerStoreIds:new Set(),rc6ManagedStoreIds:new Set(['own']),rc6SharedManagedStoreIds:new Set(),rc6DeprioritizedStoreIds:new Set(config.deprioritizedStoreIds),rc6NearStores:()=>[],rc6DiscoveryTier:()=>0,compareStoreBusinessStatus:(a,b)=>(a?.store||a).rank-(b?.store||b).rank});
  for(const name of ['rc6PartnerActive','rc6PartnerTier','rc6ApplyPartnerPriority','rc6ConfigurePartnerPriority','rc6OwnershipTier','rc6RankCandidatesByCustomerLocation'])vm.runInContext(fn(rc6,name),c);
  c.rc6ConfigurePartnerPriority();return c;
 }
@@ -33,6 +33,7 @@ Object.assign(c,{overviewQuery:'',overviewIdentityPriority:()=>0,overviewStatusP
 vm.runInContext(fn(service,'compareOverviewEntries'),c);
 const sharedEntry={storeId:p.id,rank:0,index:10,area:'문수',ownershipTier:0,areaDistance:4,locationBucket:1};
 const ownEntry={storeId:'own',rank:0,index:0,area:'문수',ownershipTier:2,areaDistance:0,locationBucket:0};
-for(const mode of ['all','selected','nearby']){c.locationMode=mode;c.referenceCoordinate=()=>({lat:1,lng:1});assert.ok(c.compareOverviewEntries(sharedEntry,ownEntry)<0);assert.ok(c.compareOverviewEntries({...sharedEntry,rank:3},ownEntry)>0);}
+for(const mode of ['all','selected','nearby']){c.locationMode=mode;c.referenceCoordinate=()=>({lat:1,lng:1});assert.ok(mode==='nearby'?c.compareOverviewEntries(sharedEntry,ownEntry)>0:c.compareOverviewEntries(sharedEntry,ownEntry)<0);assert.ok(c.compareOverviewEntries({...sharedEntry,rank:3},ownEntry)>0);}
+c.locationMode='nearby';assert.ok(c.compareOverviewEntries({...sharedEntry,locationBucket:0},ownEntry)<0,'같은 지역·사진 단계 안에서는 기존 협력 가게 우선순위를 보존');
 c.overviewQuery='exact own name';c.overviewIdentityPriority=e=>e.storeId==='own'?0:1;assert.ok(c.compareOverviewEntries(sharedEntry,ownEntry)>0,'Exact query relevance preserved');
 console.log('shared referral priority regression passed: URL isolation, own exclusions, status, ordering, wrappers, unknown profile, Goheung');

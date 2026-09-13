@@ -127,7 +127,11 @@
   }
 
   function menuHeroImage(menu) {
-    const candidates = [menu?.mainImage, ...(Array.isArray(menu?.items) ? menu.items.map(item => item?.image) : [])];
+    const store = storeById(menu?.storeId);
+    // Same-store food image is a hero only, never a substitute for an individual dish.
+    const gallery = store && typeof photoResolver !== 'undefined' ? (photoResolver?.resolveGallery?.(store) || [photoResolver?.resolve?.(store)]) : [];
+    const storePhoto = gallery.find(photo => /^(food|menu|menu_food)$/.test(photo?.classification || ''))?.src || '';
+    const candidates = [menu?.mainImage, ...(Array.isArray(menu?.items) ? menu.items.map(item => item?.image) : []), storePhoto];
     return candidates
       .map(value => String(value || '').trim())
       .find(image => image

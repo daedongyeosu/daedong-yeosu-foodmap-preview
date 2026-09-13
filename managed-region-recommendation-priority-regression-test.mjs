@@ -27,7 +27,7 @@ assert.match(rc2, /rankedById\.get\(priorityId\) \|\| fxStoreById\(priorityId\)/
 assert.match(rc2, /normalSlotCount = Math\.max\(0, limit - 1\)/, '각 섹션은 배정된 가게 한 곳의 자리만 먼저 확보해야 합니다.');
 assert.match(rc2, /storeBusinessStatusPriority\(priority\) !== 0/, '영업 중이 아닌 배정 가게는 우선 자리를 확보하면 안 됩니다.');
 assert.match(rc2, /rc2ManagedRegionDailyPosition\(spec, priorityId\)/, '배정 가게는 날짜에 따라 1·2·3번째 자리를 순환해야 합니다.');
-assert.match(rc2, /const key = `\$\{status\}:\$\{bucket\}:\$\{tier\}`/, '나머지 후보는 영업상태·지역·관리 가게 순위를 유지해야 합니다.');
+assert.match(rc2, /const key = `\$\{status\}:\$\{bucket\}:\$\{quality\}:\$\{tier\}`/, '나머지 후보는 영업상태·지역·사진과 주문경로·관리 가게 순위를 유지해야 합니다.');
 assert.match(rc2, /const finish = \(\) => rc2ApplyManagedRegionPriority\(result, spec, limit, rankedStores\)/, '모든 추천 후보 생성 경로가 지정 우선순위를 거쳐야 합니다.');
 assert.match(rc3, /const cards = rc2ApplyManagedRegionPriority\(diversifiedCards, spec, 8, rankedStores\)/, '화면에 그리기 직전에도 한 번 계산한 동일 후보군으로 날짜별 1·2·3번째 자리를 최종 고정해야 합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^']*managed-region-priority-3/, '추천 코드 캐시를 갱신해야 합니다.');
