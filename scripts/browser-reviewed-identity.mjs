@@ -6,6 +6,7 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:4173';
 const out = process.env.OUTPUT_DIR || 'browser-reviewed-identity';
 fs.mkdirSync(out,{recursive:true});
 const expected = {'43384f472418faec':'1042642943','23e36eb3741524aa':'4277888320','c76dbc66a4867b84':'2005576147','3cd502d3432e2118':'1526738731','24f321d28eec1c6a':'2005576147'};
+const crossId = {"a93abf2f62c2dd79":{"placeId":"1273918555","hadPhotos":true},"fff5de01a570153c":{"placeId":"36122157","hadPhotos":true},"ec2cdfacfd81dccf":{"placeId":"1456650931","hadPhotos":false},"b89fe40efdb1a364":{"placeId":"1531309409","hadPhotos":false},"cd4a2445681f96ae":{"placeId":"36122157","hadPhotos":false},"f8448e8bb425acd5":{"placeId":"1557373600","hadPhotos":false},"87cc23220d97784d":{"placeId":"1230839526","hadPhotos":false}};
 const report = {base,viewport:'390x844',checks:[],errors:[],success:false};
 const browser = await chromium.launch({headless:true,...(process.env.CODEX_BROWSER_EXECUTABLE_PATH ? {executablePath:process.env.CODEX_BROWSER_EXECUTABLE_PATH}:{})});
 const context = await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,locale:'ko-KR',serviceWorkers:'block'});
@@ -38,14 +39,15 @@ async function verify(id,place,entry) {
  },id);
  assert(data.orders.length>0,'order routes retained');
  // The second Godwaeji record already has no photos in the saved baseline.
- if(id!=='24f321d28eec1c6a') assert(data.photoCount>0,'existing store photo retained');
- else assert.equal(await detail.locator('.detail-photo-placeholder').count(),1,'existing no-photo placeholder retained');
+ if(id!=='24f321d28eec1c6a'&&crossId[id]?.hadPhotos!==false) assert(data.photoCount>0,'existing store photo retained');
+ else if(id==='24f321d28eec1c6a') assert.equal(await detail.locator('.detail-photo-placeholder').count(),1,'existing no-photo placeholder retained');
  report.checks.push({...data,entry,passed:true});
  await page.screenshot({path:path.join(out,id+(entry.includes('hero=')?'-hero':'')+'.png')});
 }
 try {
  for(const [id,place] of Object.entries(expected)) await verify(id,place,'/');
  await verify('a8218795099e637e','2033356705','/');
+ for(const [id,record] of Object.entries(crossId)) await verify(id,record.placeId,'/');
  await verify('43384f472418faec',expected['43384f472418faec'],'/?hero=43384f472418faec&store=43384f472418faec');
  const guards=await page.evaluate(()=>{
   const id='43384f472418faec',wrong=rc3VerifiedPhysicalMap({id,naverMap:'https://map.naver.com/p/entry/place/999',__verifiedPhysicalMapSource:id});

@@ -1902,6 +1902,55 @@
       "status": "verified",
       "place_id": "2033356705",
       "source_url": "https://bit.ly/네이버지도-오늘은오므라이스여수점"
+    },
+    {
+      "store_id": "a93abf2f62c2dd79",
+      "status": "verified",
+      "place_id": "1273918555",
+      "source_url": "https://naver.me/5Kbu0eUq",
+      "identity_guard": "c977b84943745d05"
+    },
+    {
+      "store_id": "fff5de01a570153c",
+      "status": "verified",
+      "place_id": "36122157",
+      "source_url": "",
+      "identity_guard": "6a8e272f1e729f4b"
+    },
+    {
+      "store_id": "ec2cdfacfd81dccf",
+      "status": "verified",
+      "place_id": "1456650931",
+      "source_url": "",
+      "identity_guard": "d28564a6af9a1216"
+    },
+    {
+      "store_id": "b89fe40efdb1a364",
+      "status": "verified",
+      "place_id": "1531309409",
+      "source_url": "",
+      "identity_guard": "c20df367f4f7aaed"
+    },
+    {
+      "store_id": "cd4a2445681f96ae",
+      "status": "verified",
+      "place_id": "36122157",
+      "source_url": "",
+      "identity_guard": "c39a15e5bf9178d3"
+    },
+    {
+      "store_id": "f8448e8bb425acd5",
+      "status": "verified",
+      "place_id": "1557373600",
+      "source_url": "",
+      "identity_guard": "e37775fff63f20ff"
+    },
+    {
+      "store_id": "87cc23220d97784d",
+      "status": "verified",
+      "place_id": "1230839526",
+      "source_url": "",
+      "identity_guard": "6162de1b7be29bbf"
     }
   ]
 }

@@ -1151,10 +1151,24 @@ fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
 };
 brandsModal = function rc2BrandsModal() { fxOpenBrandHub('channels'); };
 
+function rc2MapIdentityFingerprint(store) {
+  // Change detection only, not authentication. No raw address is published.
+  const value = String(store?.name || '').normalize('NFKC').trim() + '|' +
+    String(store?.address || '').normalize('NFKC').replace(/^.*?(?=여수시(?:\s|$))/, '').replace(/\s/g, '');
+  let a = 2166136261, b = 2246822507;
+  for (let i = 0; i < value.length; i++) {
+    a = Math.imul(a ^ value.charCodeAt(i), 16777619);
+    b = Math.imul(b ^ value.charCodeAt(i), 3266489909);
+  }
+  return (a >>> 0).toString(16).padStart(8, '0') + (b >>> 0).toString(16).padStart(8, '0');
+}
+
 function rc2NaverAuditMatches(store) {
   const audit = rc2NaverByStore.get(String(store?.id));
   if (audit?.status !== 'verified') return false;
+  if (audit.identity_guard && audit.identity_guard !== rc2MapIdentityFingerprint(store)) return false;
   if (!audit.place_id) return true;
+  if (audit.source_url === '') return !store?.naverMap || store.naverMap === '#';
   try {
     const url = new URL(store?.naverMap || '');
     if (audit.source_url) return url.href === new URL(audit.source_url).href;
