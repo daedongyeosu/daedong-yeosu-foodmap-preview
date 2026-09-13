@@ -34,10 +34,11 @@
   function card(index = 0, placement = 'feed') {
     if (!enabled()) return '';
     const ad = advertisers[((index % advertisers.length) + advertisers.length) % advertisers.length];
+    const headline = ad.theme === 'insurance' ? '하이바이크<wbr>운전자보험' : escape(ad.title);
     return `<aside class="local-service-ad local-service-${ad.theme}" data-service-ad="${ad.id}" data-ad-placement="${escape(placement)}" aria-label="${escape(ad.brand)} 광고">
       <div class="local-service-ad-label"><span>여수 생활서비스</span><span class="local-service-disclosure">광고</span></div>
       <a class="local-service-ad-main" href="${href(ad.id)}" data-local-service-open="${ad.id}">
-        <span class="local-service-ad-copy"><span class="local-service-brand">${escape(ad.brand)} <span>· ${escape(ad.category)}</span></span><strong>${escape(ad.title)}</strong><span class="local-service-person">${escape(ad.person)}</span><span class="local-service-ad-description">${escape(ad.description)}</span><span class="local-service-ad-cta">상세 안내 보기 <span aria-hidden="true">↗</span></span></span>
+        <span class="local-service-ad-copy"><span class="local-service-brand">${escape(ad.brand)} <span>· ${escape(ad.category)}</span></span><strong>${headline}</strong><span class="local-service-person">${escape(ad.person)}</span><span class="local-service-ad-description">${escape(ad.description)}</span><span class="local-service-ad-cta">상세 안내 보기 <span aria-hidden="true">↗</span></span></span>
         <img src="${ad.image}" alt="${escape(ad.imageAlt)}" width="${ad.theme === 'insurance' ? 511 : 1082}" height="${ad.theme === 'insurance' ? 716 : 660}" loading="lazy" decoding="async">
       </a>
       <a class="local-service-recruit" href="${href('advertise')}" data-local-service-open="advertise">우리 업체도 광고하기 <span aria-hidden="true">›</span></a>
