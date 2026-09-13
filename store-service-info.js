@@ -622,8 +622,23 @@
       });
   }
 
+  function uniqueDisplayBenefits(benefits) {
+    // Keep source records intact. App-specific records can resolve to the same
+    // customer label (e.g. ddangyo and mukkebi+ddangyo Seomseom Pay).
+    const unique = new Map();
+    for (const benefit of benefits) {
+      const identity = JSON.stringify([
+        benefit.kind, benefit.key, benefit.state || '', normalize(scopedBenefitLabel(benefit))
+      ]);
+      const existing = unique.get(identity);
+      const appKeys = [...new Set([...(existing?.appKeys || []), ...(benefit.appKeys || [])])];
+      unique.set(identity, {...(existing || benefit), appKeys});
+    }
+    return [...unique.values()];
+  }
+
   function benefitLabels(info) {
-    return [...paymentLabels(info), ...deliveryLabels(info)];
+    return uniqueDisplayBenefits([...paymentLabels(info), ...deliveryLabels(info)]);
   }
 
   function hasVerifiedBenefitStatus(info) {
@@ -672,7 +687,7 @@
   function detailBenefitItems(info) {
     const payments = new Map((info?.payments || []).map(payment => [payment.key, payment]));
     const delivery = new Map((info?.delivery || []).map(benefit => [benefit.key, benefit]));
-    return [
+    return uniqueDisplayBenefits([
       ...(serviceData.programs || []).map(program => {
         const entry = payments.get(program.key);
         const value = entry?.status;
@@ -695,7 +710,7 @@
           ...benefitScope(entry, benefit)
         };
       })
-    ];
+    ]);
   }
 
   function detailBenefitMarkup(item) {
