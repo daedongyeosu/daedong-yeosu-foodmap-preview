@@ -1097,10 +1097,23 @@ fxInstallEvents = function rc3InstallEvents() {
   });
 };
 
+function rc3RefreshActiveVerifiedMap() {
+  const detail = $('#modalContent .store-detail');
+  const store = detail?.dataset.storeId ? fxStoreById(detail.dataset.storeId) : null;
+  if (!store || detail.classList.contains('store-detail-loading')) return;
+  const map = rc3VerifiedPhysicalMap(store);
+  if (!map) return;
+  const link = detail.querySelector('a[data-detail-only="naver"]');
+  if (link) { link.href = map.url; return; }
+  // Refresh only the map slot: do not replace a customer's open order sheet.
+  detail.querySelector('.detail-meta')?.insertAdjacentHTML('afterend', rc3PopupUtilityLinks(store, {includeChak: false}));
+}
+
 const rc3InitializeBase = fxInitialize;
 fxInitialize = async function rc3Initialize() {
   rc3RefreshRailsAfterServiceReady();
   await rc3InitializeBase();
+  rc3RefreshActiveVerifiedMap();
   rc3RefreshRailsAfterServiceReady();
   const internalPhones = RC3_IS_GOHEUNG ? {stores: []} : await fetchJson(RC3_PHONE_INTERNAL_URL, {stores: []});
   rc3InternalPhoneByStore = new Map((internalPhones.stores || []).map(item => [String(item.store_id), item]));

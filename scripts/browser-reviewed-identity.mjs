@@ -45,6 +45,25 @@ async function verify(id,place,entry) {
  await page.screenshot({path:path.join(out,id+(entry.includes('hero=')?'-hero':'')+'.png')});
 }
 try {
+ let releaseAudit;
+ const auditGate=new Promise(resolve=>{releaseAudit=resolve;});
+ const auditMatcher=url=>url.pathname==='/data/naver-map-runtime.json';
+ await context.route(auditMatcher,async route=>{await auditGate;await route.continue();});
+ try {
+  await page.goto(base+'/',{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>typeof rc3VerifiedPhysicalMap==='function'&&typeof allStores!=='undefined'&&allStores.some(s=>s.id==='43384f472418faec'));
+  await page.evaluate(()=>openStore(allStores.find(s=>s.id==='43384f472418faec')));
+  assert.equal(await page.locator('#modal a[data-detail-only="naver"]').count(),0,'not shown before audit is available');
+  await page.evaluate(()=>{window.__identityOrderNode=document.querySelector('#modal .local-detail-routes');});
+  releaseAudit();
+  const lateMap=page.locator('#modal a[data-detail-only="naver"]');
+  await lateMap.waitFor({timeout:30000});
+  assert.equal(await lateMap.getAttribute('href'),'https://map.naver.com/p/entry/place/1042642943');
+  assert.equal(await page.evaluate(()=>window.__identityOrderNode===document.querySelector('#modal .local-detail-routes')),true,'late audit preserves order DOM');
+  await page.evaluate(()=>window.daedongLocationRankingReady);
+  assert.equal(await lateMap.count(),1,'no duplicate map after initialization');
+  report.checks.push({id:'43384f472418faec',entry:'delayed-audit-early-open',passed:true});
+ } finally { releaseAudit();await context.unroute(auditMatcher); }
  for(const [id,place] of Object.entries(expected)) await verify(id,place,'/');
  await verify('a8218795099e637e','2033356705','/');
  for(const [id,record] of Object.entries(crossId)) await verify(id,record.placeId,'/');

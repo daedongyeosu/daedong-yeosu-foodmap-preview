@@ -43,3 +43,11 @@ assert.equal(rc2MapIdentityFingerprint({...fixture,address:'전남광주 여수�
 assert.equal(data.stores.filter(r=>r.identity_guard).length,7);
 assert.equal(audits.has('746e3a0c26e21661'),false,'No-order-route hidden record remains unchanged');
 console.log('Reviewed Naver identity: 13 customer records; exact destination, source URL and changed-identity guards: PASS');
+assert.match(rc3,/await rc3InitializeBase\(\);\s*rc3RefreshActiveVerifiedMap\(\);/,'late audit refreshes the active map slot');
+const mapRefresh=source(rc3,'rc3RefreshActiveVerifiedMap');
+assert.doesNotMatch(mapRefresh,/rc3EnhanceStoreDetail|innerHTML\s*=/,'do not rebuild order controls on late data');
+let inserted=0,href='';
+const detail={dataset:{storeId:'active'},classList:{contains:()=>false},querySelector:selector=>selector==='.detail-meta'?{insertAdjacentHTML:()=>{inserted++;}}:inserted?{set href(value){href=value;}}:null};
+const refresh=Function('$','fxStoreById','rc3VerifiedPhysicalMap','rc3PopupUtilityLinks',mapRefresh+';return rc3RefreshActiveVerifiedMap;')(()=>detail,id=>({id}),()=>({url:'https://map.naver.com/p/entry/place/123'}),()=>'<map>');
+refresh();refresh();assert.equal(inserted,1);assert.equal(href,'https://map.naver.com/p/entry/place/123');
+detail.classList.contains=()=>true;refresh();assert.equal(inserted,1,'loading detail is left to openStore');
