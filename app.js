@@ -82,9 +82,52 @@ function hasValidatedExternalReturnInFlight() {
     Date.now() - daedongLastValidatedExternalReturnAt < DAEDONG_EXTERNAL_RETURN_GRACE_MS;
 }
 
-function resetInstalledAppLaunch() {
+function installedAppQrTarget(rawTargetUrl = '') {
+  try {
+    const targetUrl = new URL(rawTargetUrl || location.href, location.href);
+    if (targetUrl.origin !== location.origin) return null;
+    const storeId = String(
+      targetUrl.searchParams.get('hero')
+      || targetUrl.searchParams.get('store')
+      || ''
+    ).trim();
+    return storeId ? {targetUrl, storeId} : null;
+  } catch {
+    return null;
+  }
+}
+
+function reconcileInstalledAppQrEntry(rawTargetUrl = '') {
+  const target = installedAppQrTarget(rawTargetUrl);
+  if (!target) return false;
+  const activeStoreId = String(
+    document.querySelector('#modal:not([hidden])')?.dataset.activeStoreId
+    || document.querySelector('#modal:not([hidden]) .store-detail')?.dataset.storeId
+    || ''
+  ).trim();
+  window.daedongDedicatedEntryStoreId = target.storeId;
+
+  // A QR opened while the installed app is already alive can be delivered as
+  // a second launch instead of a new document. The QR target is authoritative:
+  // navigate to it, or reload when the browser changed the address but retained
+  // the previous store modal.
+  if (target.targetUrl.href !== location.href) {
+    location.replace(target.targetUrl.href);
+    return true;
+  }
+  if (activeStoreId && activeStoreId !== target.storeId) {
+    location.reload();
+    return true;
+  }
+  return false;
+}
+
+function resetInstalledAppLaunch(launchParams = null) {
   if (!DAEDONG_INSTALLED_APP_CONTEXT) return;
+  const explicitQrTarget = launchParams?.targetURL || '';
+  if (explicitQrTarget && reconcileInstalledAppQrEntry(explicitQrTarget)) return;
   if (hasValidatedExternalReturnInFlight()) return;
+  if (!explicitQrTarget && reconcileInstalledAppQrEntry()) return;
   const clientAge = typeof performance !== 'undefined' ? performance.now() - DAEDONG_APP_BOOT_AT : 0;
   if (!daedongLaunchReloadComplete && clientAge > 1500) {
     try { sessionStorage.setItem(DAEDONG_LAUNCH_RELOAD_MARKER, '1'); } catch {}
@@ -95,7 +138,7 @@ function resetInstalledAppLaunch() {
 }
 
 if (DAEDONG_INSTALLED_APP_CONTEXT && typeof window.launchQueue?.setConsumer === 'function') {
-  window.launchQueue.setConsumer(resetInstalledAppLaunch);
+  window.launchQueue.setConsumer(launchParams => resetInstalledAppLaunch(launchParams));
 }
 
 // Some Android launchers merely foreground an existing standalone window and
