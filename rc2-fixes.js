@@ -1,7 +1,7 @@
 'use strict';
 
 /* RC2 fixes only. Frozen store, photo, route, brand-app, HappyOrder and banner data stay read-only. */
-const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json';
+const RC2_NAVER_AUDIT_URL = 'data/naver-map-runtime.json?v=reviewed-identity-20260913';
 const RC2_EXTERNAL_RETURN = 'daedongExternalReturnRc2';
 const RC2_APP_BROWSER_RETURN = 'daedongAppBrowserReturnV1';
 const RC2_RETURN_TOKEN_STATE = 'daedongExternalReturnToken';
@@ -1151,12 +1151,40 @@ fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
 };
 brandsModal = function rc2BrandsModal() { fxOpenBrandHub('channels'); };
 
+function rc2MapIdentityFingerprint(store) {
+  // Change detection only, not authentication. No raw address is published.
+  const value = String(store?.name || '').normalize('NFKC').trim() + '|' +
+    String(store?.address || '').normalize('NFKC').replace(/^.*?(?=여수시(?:\s|$))/, '').replace(/\s/g, '');
+  let a = 2166136261, b = 2246822507;
+  for (let i = 0; i < value.length; i++) {
+    a = Math.imul(a ^ value.charCodeAt(i), 16777619);
+    b = Math.imul(b ^ value.charCodeAt(i), 3266489909);
+  }
+  return (a >>> 0).toString(16).padStart(8, '0') + (b >>> 0).toString(16).padStart(8, '0');
+}
+
+function rc2NaverAuditMatches(store) {
+  const audit = rc2NaverByStore.get(String(store?.id));
+  if (audit?.status !== 'verified') return false;
+  if (audit.identity_guard && audit.identity_guard !== rc2MapIdentityFingerprint(store)) return false;
+  if (!audit.place_id) return true;
+  if (audit.source_url === '') return !store?.naverMap || store.naverMap === '#';
+  try {
+    const url = new URL(store?.naverMap || '');
+    if (audit.source_url) return url.href === new URL(audit.source_url).href;
+    return url.protocol === 'https:' && url.hostname === 'map.naver.com'
+      && url.pathname.replace(/\/$/, '') === '/p/entry/place/' + audit.place_id;
+  } catch { return false; }
+}
+
 fxEnhanceStoreDetail = function rc2EnhanceStoreDetail(store) {
   const detail = $('#modalContent .store-detail');
   if (!detail) return;
-  const mapAudit = rc2NaverByStore.get(String(store.id));
   const naverLink = detail.querySelector('.detail-quick-link[data-detail-only="naver"]');
-  if (rc2NaverByStore.size && (!mapAudit || mapAudit.status !== 'verified')) naverLink?.remove();
+  if (rc2NaverByStore.size && !rc2NaverAuditMatches(store)) naverLink?.remove();
+  else if (naverLink && rc2NaverByStore.get(String(store?.id))?.source_url) {
+    naverLink.href = 'https://map.naver.com/p/entry/place/' + rc2NaverByStore.get(String(store.id)).place_id;
+  }
   const brand = fxBrandByStore.get(String(store.id));
   const happy = fxHappyByStore.get(String(store.id));
   if (brand || happy) {

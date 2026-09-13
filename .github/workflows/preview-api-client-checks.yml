@@ -53,6 +53,15 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.55.0
           npx playwright install --with-deps chromium
+      - name: Verify reviewed Naver identities on mobile
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-reviewed-identity-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          BASE_URL=http://127.0.0.1:4173 \
+          PERF_PROXY_API_ORIGIN=https://daedong-yeosu-data-api-preview.sisakim.workers.dev \
+          PERF_REQUEST_ORIGIN=https://preview.daedongmap.com \
+          node scripts/browser-reviewed-identity.mjs
       - name: Verify installed app switches to the newly scanned store QR
         run: |
           python3 -m http.server 4173 >/tmp/daedong-installed-qr-server.log 2>&1 &
@@ -196,6 +205,7 @@ jobs:
         with:
           name: preview-pr-verification
           path: |
+            browser-reviewed-identity/
             browser-installed-qr/
             static-validation-report.json
             data-validation-report.json
