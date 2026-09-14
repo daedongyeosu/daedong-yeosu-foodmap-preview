@@ -41,7 +41,7 @@
   }
   function shareControls(ad, compact = false) {
     return `<div class="local-service-share${compact ? ' local-service-share-compact' : ''}" data-service-share-box>
-      <div class="local-service-share-buttons"><button type="button" data-local-service-share="${ad.id}" data-share-action="share" aria-label="${escape(ad.brand + ' ' + ad.person)} 광고 공유하기">이 광고 공유하기 ↗</button><button type="button" data-local-service-share="${ad.id}" data-share-action="copy">링크 복사</button></div>
+      <div class="local-service-share-buttons"><button type="button" data-local-service-share="${ad.id}" data-share-action="share" aria-label="${escape(ad.brand + ' ' + ad.person)} 광고 공유하기">${compact ? '공유 ↗' : '이 광고 공유하기 ↗'}</button>${compact ? '' : `<button type="button" data-local-service-share="${ad.id}" data-share-action="copy">링크 복사</button>`}</div>
       <p class="local-service-share-status" role="status" aria-live="polite"></p>
       <input class="local-service-share-url" type="text" readonly hidden aria-label="복사할 광고 전용 링크" value="${escape(shareUrl(ad.id))}">
       ${compact ? '' : '<a class="local-service-map-link" href="/">대동여수음식지도 둘러보기 →</a>'}
@@ -91,7 +91,7 @@
     return `<aside class="local-service-ad local-service-${ad.theme}" data-service-ad="${ad.id}" data-ad-placement="${escape(placement)}" aria-label="${escape(ad.brand)} 광고">
       <div class="local-service-ad-label"><span>여수 생활서비스</span><span class="local-service-disclosure">광고</span></div>
       <a class="local-service-ad-main" href="${href(ad.id)}" data-local-service-open="${ad.id}">
-        <span class="local-service-ad-copy"><span class="local-service-brand">${escape(ad.brand)} <span>· ${escape(ad.category)}</span></span><strong>${headline}</strong><span class="local-service-person">${escape(ad.person)}</span><span class="local-service-ad-description">${escape(ad.description)}</span><span class="local-service-ad-cta">상세 안내 보기 <span aria-hidden="true">↗</span></span></span>
+        <span class="local-service-ad-copy"><span class="local-service-brand">${escape(ad.brand)}</span><strong>${headline}</strong><span class="local-service-person">${escape(ad.person)} <span aria-hidden="true">›</span></span></span>
         <img src="${ad.image}" alt="${escape(ad.imageAlt)}" width="${ad.theme === 'insurance' ? 511 : 1082}" height="${ad.theme === 'insurance' ? 716 : 660}" loading="lazy" decoding="async">
       </a>
       ${shareControls(ad, true)}
