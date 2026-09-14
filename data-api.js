@@ -135,7 +135,7 @@
     const bucket = id[0];
     if (!reviewedPhotoLinkRequests.has(bucket)) {
       const abort = createRequestAbort(null, 2500);
-      const pending = Promise.resolve().then(() => fetch(`data/reviewed-menu-photo-links/${bucket}.json?v=all-menu-photos-20260913`, {
+      const pending = Promise.resolve().then(() => fetch(`data/reviewed-menu-photo-links/${bucket}.json?v=all-menu-photos-20260913-norang-20260914-norang-20260914-norang-20260914`, {
         credentials: 'same-origin', signal: abort.signal
       })).then(response => {
         if (!response.ok) throw new Error('메뉴 사진 목록을 불러오지 못했습니다.');
@@ -164,7 +164,19 @@
   function applyReviewedMenuPhotos(storeId, payload, inventory) {
     const entry = inventory?.stores?.[storeId];
     if (!entry || !payload || String(payload.storeId) !== String(storeId)) return payload;
-    const items = (payload.items || []).map(item => {
+    const supplements = entry.supplements;
+    const normalizeName = value => String(value || '').normalize('NFKC').replace(/\s+/g, '');
+    const sourceItems = (payload.items || []).map(item => {
+      const patch = supplements?.items?.[item.id];
+      if (!patch || patch.nameHash !== menuPhotoNameHash(item.name)) return item;
+      return {...item,
+        ...(!item.description && patch.description ? {description: patch.description} : {}),
+        ...(patch.category && item.category === patch.sourceCategory ? {category: patch.category} : {})};
+    });
+    for (const item of supplements?.additions || []) {
+      if (!sourceItems.some(existing => existing.id === item.id || normalizeName(existing.name) === normalizeName(item.name))) sourceItems.push({...item});
+    }
+    const items = sourceItems.map(item => {
       const photo = entry.items?.[item.id];
       if (!photo || photo.nameHash !== menuPhotoNameHash(item.name)) return item;
       if (photo.descriptionHash && photo.descriptionHash !== menuPhotoNameHash(item.description)) return item;

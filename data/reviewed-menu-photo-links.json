@@ -14655,6 +14655,105 @@
           "image": "assets/reviewed-menu-photos/523146e422e30a56/7baf5b25b88229e64b706724.jpg"
         }
       }
+    },
+    "3a5417b7d9525787": {
+      "items": {
+        "ddangyo-1221145-10000002": {
+          "nameHash": "bd4abba2",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/ee453dab28ab7ef5e5c82cec.jpg"
+        },
+        "ddangyo-1221145-10000003": {
+          "nameHash": "dde6d8d",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/3e28becacbfb8d3a454d25ce.jpg"
+        },
+        "ddangyo-1221145-10000004": {
+          "nameHash": "e4fc14bd",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/5d04c80422c8f7296f52c21c.jpg"
+        },
+        "ddangyo-1221145-10000005": {
+          "nameHash": "10bc698b",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/2d30503cf7cd0d66bd28b4ad.jpg"
+        },
+        "ddangyo-1221145-10000006": {
+          "nameHash": "165bca25",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/daaebae04b963cf7b2be3036.jpg"
+        },
+        "ddangyo-1221145-10000014": {
+          "nameHash": "97aeef57",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/3b0512ec765a1d1b36d64acb.jpg"
+        },
+        "ddangyo-1221145-10000020": {
+          "nameHash": "5426b951",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/382d8a8fa5128d92f3726187.jpg"
+        },
+        "coupang-657333-reviewed-pepsi-355": {
+          "nameHash": "ded8bd72",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/bf61699e9d6ced0cf96ec235.jpg"
+        },
+        "coupang-657333-reviewed-toreta-240": {
+          "nameHash": "b63b4bd8",
+          "image": "assets/reviewed-menu-photos/3a5417b7d9525787/df609d9f8a11e08b8dab9fa8.jpg"
+        }
+      },
+      "supplements": {
+        "items": {
+          "ddangyo-1221145-10000006": {
+            "nameHash": "165bca25",
+            "description": "치즈가 들어간 메뉴들과 연유의 궁합은 정말 말해뭐해~💕"
+          },
+          "ddangyo-1221145-10000013": {
+            "nameHash": "32313c04",
+            "description": "팥 좋아하시는 분들은 맛있다고 선물 엄청 해가셔요💕"
+          },
+          "ddangyo-1221145-10000014": {
+            "nameHash": "97aeef57",
+            "description": "달달한 고구마 앙금의 풍미를 제대로 느낄 수 있는 도너츠💕"
+          },
+          "coupang-657333-5": {
+            "nameHash": "ac89ae65",
+            "description": "꽈배기 2개+치즈도너츠 1개+크림치즈도너츠 1개+고구마치즈도너츠 1개",
+            "sourceCategory": "",
+            "category": "세트류"
+          }
+        },
+        "additions": [
+          {
+            "id": "coupang-657333-reviewed-cream-cheese",
+            "name": "크림치즈도너츠",
+            "category": "단품류",
+            "description": "크림치즈를 특히 좋아하시는 분들을 위한 크림치즈도너츠💖",
+            "image": ""
+          },
+          {
+            "id": "coupang-657333-reviewed-pepsi-355",
+            "name": "펩시 콜라 355ml",
+            "category": "음료",
+            "description": "",
+            "image": ""
+          },
+          {
+            "id": "coupang-657333-reviewed-toreta-240",
+            "name": "토레타 240ml",
+            "category": "음료",
+            "description": "",
+            "image": ""
+          },
+          {
+            "id": "coupang-657333-reviewed-cocopalm-peach-240",
+            "name": "코코팜 복숭아 240ml",
+            "category": "음료",
+            "description": "",
+            "image": ""
+          },
+          {
+            "id": "coupang-657333-reviewed-cocopalm-yogurt-240",
+            "name": "코코팜 요구르트 240ml",
+            "category": "음료",
+            "description": "",
+            "image": ""
+          }
+        ]
+      }
     }
   }
 }
