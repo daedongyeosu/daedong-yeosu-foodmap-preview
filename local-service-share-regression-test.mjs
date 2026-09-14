@@ -60,7 +60,7 @@ for (const id of ['hyundai-sinwansu', 'coway-leehyangmi']) {
   assert.ok(markup.indexOf('data-service-share-box') < markup.indexOf('<h2'), 'Sharing must be visible before the long brochure');
   assert.match(markup, /대동여수음식지도 둘러보기/);
   assert.match(markup, /readonly hidden aria-label="복사할 광고 전용 링크"/);
-  assert.equal((direct.api.card(direct.api.advertisers.findIndex(x => x.id === id)).match(/data-local-service-share=/g) || []).length, 2);
+  assert.equal((direct.api.card(direct.api.advertisers.findIndex(x => x.id === id)).match(/data-local-service-share=/g) || []).length, 1, 'Compact feed keeps one share action; detail retains share and copy');
 }
 assert.equal(shared.api.shareUrl('unknown'), '');
 assert.doesNotMatch(shared.api.detail('unknown'), /data-local-service-share/);
