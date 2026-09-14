@@ -291,6 +291,7 @@
   }
 
   function requestMenuLayerBack(layer, fallback) {
+    window.daedongConfirmIntentionalSurfaceNavigation?.();
     if (history.state?.[MENU_HISTORY[layer]]) {
       fallback();
       document.documentElement.dataset.daedongMenuHistoryClose = '1';
@@ -301,6 +302,7 @@
   }
 
   function requestCloseMenuPreview() {
+    window.daedongConfirmIntentionalSurfaceNavigation?.();
     const state = history.state || {};
     guardMenuCloseGesture();
     closeMenuPreview();
@@ -1494,6 +1496,12 @@
   window.addEventListener('popstate', event => {
     if (!document.body.classList.contains('store-menu-open')) return;
     const preview = document.querySelector('.store-menu-preview');
+    // An app-return pop must be handled before closing the selected menu,
+    // search, or preview layer. The return owner validates the exact token.
+    if (preview && window.daedongRestoreMenuExternalBack?.(preview.dataset.storeId)) {
+      event.stopImmediatePropagation();
+      return;
+    }
     if (!preview) {
       event.stopImmediatePropagation();
       closeMenuPreview();

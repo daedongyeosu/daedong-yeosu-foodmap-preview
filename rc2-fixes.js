@@ -110,6 +110,7 @@ function rc2ReadReturnState(key) {
         savedToken === historyToken
         || savedToken === urlToken
         || savedToken === departureToken
+        || savedToken === String(globalThis.daedongActiveDocumentReturnToken || '')
       )
     ) return saved;
   }
@@ -211,6 +212,7 @@ function rc2ConfirmIntentionalStoreOpen() {
   globalThis.daedongMarkHomeInteraction?.();
   rc2InvalidatePendingReturnRestores();
   rc2ResetExternalDepartureLifecycle();
+  globalThis.daedongActiveDocumentReturnToken = '';
   rc2CancelRestoredReturnSettlement();
   for (const key of RC2_RETURN_STORAGE_KEYS) {
     try { sessionStorage.removeItem(key); } catch {}
@@ -257,6 +259,10 @@ function rc2WriteReturnState(key, value) {
   rc2ClearReturnDocumentReload();
   const returnToken = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
   const payload = {...value, returnToken, savedAt: Date.now()};
+  // A same-document popstate has already replaced the URL/history token when
+  // listeners run. Retain this document's exact departure token until the
+  // customer interacts; never infer a fresh visit from another tab's storage.
+  globalThis.daedongActiveDocumentReturnToken = returnToken;
   globalThis.daedongLastValidatedExternalReturnAt = payload.savedAt;
   for (const storageKey of RC2_RETURN_STORAGE_KEYS) {
     if (storageKey === key) continue;
@@ -293,6 +299,7 @@ function rc2ClearReturnState(key, saved = null) {
   try { sessionStorage.removeItem(key); } catch {}
   try { localStorage.removeItem(key); } catch {}
   const token = saved?.returnToken;
+  if (!token || globalThis.daedongActiveDocumentReturnToken === token) globalThis.daedongActiveDocumentReturnToken = '';
   if (token) rc2ClearReturnDocumentReload(token);
   const marker = rc2ReadDepartureMarker();
   if (token && marker?.returnToken === token) {
@@ -439,6 +446,7 @@ function rc2ArmRestoredReturnLease(key, saved) {
     rc2RestoredReturnSettleTimer = 0;
   }
   rc2RestoredReturnLease = {key, saved};
+  globalThis.daedongActiveDocumentReturnToken = saved.returnToken;
   globalThis.daedongLastValidatedExternalReturnAt = Date.now();
   return true;
 }
@@ -1495,6 +1503,18 @@ function rc2PendingExternalReturnState() {
   }
   return null;
 }
+
+window.daedongRestoreMenuExternalBack = function (storeId) {
+  const saved = rc2ReadReturnState(RC2_EXTERNAL_RETURN);
+  if (!saved?.menuState || String(saved.storeId) !== String(storeId)) return false;
+  rc2ExternalDepartureHidden = true;
+  void rc2RestoreExternalSurface({rebuildExisting: true}).then(restored => {
+    if (!restored) return;
+    rc2ResetExternalDepartureLifecycle();
+    window.daedongFinishExternalReturnBoot?.();
+  });
+  return true;
+};
 
 function rc2RestoreAfterConfirmedResume({rebuildExisting = true} = {}) {
   const saved = rc2PendingExternalReturnState();
