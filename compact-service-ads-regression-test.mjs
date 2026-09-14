@@ -16,6 +16,8 @@ for(let i=0;i<2;i++){
  assert.ok(detail.includes('tel:'+ad.phone.replace(/-/g,'')));
 }
 assert.match(css,/grid-template-columns:52px minmax\(0,1fr\)/);
+assert.match(css,/#storeGrid>\.local-service-ad\{[^}]*align-self:flex-start/);
+assert.match(css,/#storeGrid>\.local-service-ad>\.local-service-ad-main\{flex:none\}/);
 assert.doesNotMatch(css,/min-height:218px|font-size:30px/);
 assert.match(css,/\.local-service-ad-copy>strong\{font-size:15px/);
 assert.match(api.detail('hyundai-sinwansu'),/data-insurance-font/);

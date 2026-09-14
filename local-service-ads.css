@@ -15,8 +15,8 @@
 .local-service-recruit>span{font-size:22px;line-height:1}
 .local-service-ad a:focus-visible,.local-service-detail a:focus-visible,.local-service-detail summary:focus-visible{outline:3px solid #146dd5;outline-offset:-3px}
 #recommendRails>.local-service-ad{margin:4px 16px 14px}
-#storeGrid>.local-service-ad{flex:0 0 100%;align-self:stretch;display:flex;flex-direction:column;scroll-snap-align:none}
-#storeGrid>.local-service-ad>.local-service-ad-main{flex:1}
+#storeGrid>.local-service-ad{flex:0 0 100%;align-self:flex-start;display:flex;flex-direction:column;scroll-snap-align:none}
+#storeGrid>.local-service-ad>.local-service-ad-main{flex:none}
 .local-service-detail{--service-accent:#b8450a;box-sizing:border-box;color:#1a2c43;max-width:680px;margin:auto;padding:12px 0 0;text-align:left;font-size:16px;line-height:1.65}
 .local-service-detail *{box-sizing:border-box}
 .local-service-share{margin:0 0 20px;min-width:0;text-align:left}
