@@ -7,10 +7,11 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DEFAULT_MODEL = 'gpt-5.6-luna';
 const DEFAULT_MAX_RECORDS = 25;
 const DEFAULT_MAX_API_CALLS = 1;
+const PHONE_SALT = crypto.randomBytes(32);
 
 const text = value => String(value ?? '').trim();
 const normalized = value => text(value).toLowerCase().replace(/[\s·ㆍ.,()\-_/]/g, '');
-const sha256 = value => crypto.createHash('sha256').update(text(value)).digest('hex');
+const phoneFingerprint = value => crypto.createHmac('sha256', PHONE_SALT).update(text(value)).digest('hex').slice(0, 12);
 
 export function routeKeys(store) {
   const direct = Array.isArray(store?.routes) ? store.routes : [];
@@ -34,7 +35,7 @@ export function publicAuditView(store, index = 0) {
     name,
     normalizedName: normalized(name),
     addressHint: address ? normalized(address).slice(0, 32) : '',
-    phoneFingerprint: phone ? sha256(phone.replace(/\D/g, '')).slice(0, 12) : '',
+    phoneFingerprint: phone ? phoneFingerprint(phone.replace(/\D/g, '')) : '',
     imageCount: new Set(images).size,
     routeKeys: routes,
     flags: [
