@@ -17,7 +17,7 @@ assert.match(app, /function installDaedongTapAction\(\{selector, activate\}\)[\s
   '공통 모바일 탭 경로는 pointerup과 touchend에서 동작해야 합니다.');
 assert.match(app, /const moved = \(start, point\) => Math\.hypot[\s\S]*DAEDONG_TAP_MOVE_TOLERANCE/,
   '손가락 이동을 탭과 구분해 스크롤 중 팝업이 닫히지 않아야 합니다.');
-assert.match(app, /installDaedongTapAction\(\{[\s\S]{0,220}selector: '#modal \.modal-close'[\s\S]{0,220}hardClose\(\)/,
+assert.match(app, /installDaedongTapAction\(\{[\s\S]{0,220}selector: '#modal \.modal-close'[\s\S]{0,220}hardClose\(\{userInitiated: true\}\)/,
   '동적으로 교체되는 상세창 X도 공통 모바일 탭 경로에서 닫혀야 합니다.');
 assert.doesNotMatch(app, /document\.addEventListener\('pointerdown',[\s\S]{0,220}closest\('#modal \.modal-close'\)[\s\S]{0,160}hardClose\(\)/,
   '상세창 X는 스크롤 시작 pointerdown을 닫기로 처리하면 안 됩니다.');

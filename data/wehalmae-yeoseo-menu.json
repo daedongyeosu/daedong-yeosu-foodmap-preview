@@ -1,0 +1,34 @@
+{
+  "storeId": "34817ff59a6bc66d",
+  "storeName": "우리할매떡볶이 여서점",
+  "displayName": "우리할매떡볶이 여서점",
+  "mainImage": "assets/store-photos/e7f1470821d785/02.webp",
+  "source": {
+    "name": "우리할매떡볶이 공식 브랜드 메뉴",
+    "url": "https://wehalmae.co.kr/",
+    "reviewedAt": "2026-09-19",
+    "notice": "지점별 판매 여부는 주문앱 또는 가게에 확인해 주세요."
+  },
+  "categories": ["떡볶이", "세트", "분식", "튀김"],
+  "items": [
+    {"id":"wehalmae-yeoseo-1","name":"가래떡떡볶이","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"떡볶이","image":""},
+    {"id":"wehalmae-yeoseo-2","name":"밀떡볶이","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"떡볶이","image":""},
+    {"id":"wehalmae-yeoseo-3","name":"짜장떡볶이","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"떡볶이","image":""},
+    {"id":"wehalmae-yeoseo-4","name":"로제떡볶이","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"떡볶이","image":""},
+    {"id":"wehalmae-yeoseo-5","name":"마라떡볶이","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"떡볶이","image":""},
+    {"id":"wehalmae-yeoseo-6","name":"마라로제떡볶이","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"떡볶이","image":""},
+    {"id":"wehalmae-yeoseo-7","name":"가래떡떡볶이 세트","description":"지점별 구성과 판매 여부는 주문 전에 확인해 주세요.","category":"세트","image":""},
+    {"id":"wehalmae-yeoseo-8","name":"밀떡볶이 세트","description":"지점별 구성과 판매 여부는 주문 전에 확인해 주세요.","category":"세트","image":""},
+    {"id":"wehalmae-yeoseo-9","name":"짜장떡볶이 세트","description":"지점별 구성과 판매 여부는 주문 전에 확인해 주세요.","category":"세트","image":""},
+    {"id":"wehalmae-yeoseo-10","name":"로제떡볶이 세트","description":"지점별 구성과 판매 여부는 주문 전에 확인해 주세요.","category":"세트","image":""},
+    {"id":"wehalmae-yeoseo-11","name":"무침만두","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"분식","image":""},
+    {"id":"wehalmae-yeoseo-12","name":"물떡","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"분식","image":""},
+    {"id":"wehalmae-yeoseo-13","name":"가래떡떡꼬치","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"분식","image":""},
+    {"id":"wehalmae-yeoseo-14","name":"곰돌이돈까스","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"분식","image":""},
+    {"id":"wehalmae-yeoseo-15","name":"국물비빔밥","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"분식","image":""},
+    {"id":"wehalmae-yeoseo-16","name":"매운어묵","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"분식","image":""},
+    {"id":"wehalmae-yeoseo-17","name":"통오징어튀김","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"튀김","image":""},
+    {"id":"wehalmae-yeoseo-18","name":"순대","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"분식","image":""},
+    {"id":"wehalmae-yeoseo-19","name":"순대볶음","description":"지점별 판매 여부는 주문 전에 확인해 주세요.","category":"분식","image":""}
+  ]
+}
