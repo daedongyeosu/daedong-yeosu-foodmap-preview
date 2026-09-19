@@ -13,7 +13,7 @@ assert.equal(createHash('sha256').update(image).digest('hex'),
   'ce56d5321f831bb609d54b9bd514ce9612fd9c5c1d5f4d760f86fdac128bebb0',
   'Sharing must use the visually verified lightning/fork PNG, not the old Korea-map logo.');
 
-for (const page of ['index.html', 's/index.html']) {
+for (const page of ['index.html']) {
   const html = fs.readFileSync(page, 'utf8');
   assert.ok(html.includes(`<meta property="og:image" content="${url}">`), page);
   assert.ok(html.includes(`<meta name="twitter:image" content="${url}">`), page);
@@ -28,4 +28,4 @@ assert.equal(shareUi.split(`src="${asset}"`).length - 1, 2,
 assert.doesNotMatch(shareUi, /assets\/app-icons\/daedong-app-icon-512/);
 assert.ok(fs.readFileSync('sw.js', 'utf8').includes(`'/${asset}'`));
 assert.match(fs.readFileSync('index.html', 'utf8'), /final-experience\.js\?v=[^"]*share-brand-20260909-1/);
-console.log('Share brand image regression: PASS (root, /s, store fallback, PNG content)');
+console.log('Share brand image regression: PASS (root, store fallback, PNG content; /s is intentionally text-only)');
