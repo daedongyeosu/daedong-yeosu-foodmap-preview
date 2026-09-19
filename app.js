@@ -2334,7 +2334,7 @@ function openModal(html) {
   if (wasHidden && !history.state?.daedongModal) { history.pushState({daedongModal:true}, ''); modalHistoryActive = true; }
   setTimeout(() => $('.modal-close')?.focus(), 0);
 }
-function hardClose({fromPop = false} = {}) {
+function hardClose({fromPop = false, userInitiated = false} = {}) {
   detailCarousel?.destroy(); detailCarousel = null;
   const modal = $('#modal'); if (modal) { modal.hidden = true; modal.className = 'modal'; modal.removeAttribute('data-app-browser-key'); modal.removeAttribute('data-app-browser-category'); modal.removeAttribute('data-active-store-id'); }
   // Keep the hidden subtree until the next modal replaces it. Clearing a large
@@ -2804,7 +2804,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selector: '#modal .modal-close',
     activate() {
       if ($('#modal').hidden) return false;
-      hardClose();
+      hardClose({userInitiated: true});
       return true;
     }
   });
@@ -2812,7 +2812,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selector: '#overlay',
     activate(target, event) {
       if (event.target !== target || $('#modal').hidden) return false;
-      hardClose();
+      hardClose({userInitiated: true});
       return true;
     }
   });
@@ -2820,7 +2820,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selector: '#modal',
     activate(target, event) {
       if (event.target !== target || target.hidden) return false;
-      hardClose();
+      hardClose({userInitiated: true});
       return true;
     }
   });
@@ -2840,7 +2840,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return true;
     }
   });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('#modal').hidden) hardClose(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('#modal').hidden) hardClose({userInitiated: true}); });
 
   document.addEventListener('click', event => {
     if (event.target.id === 'clearSearch') { resetFilters(); return; }
@@ -2879,7 +2879,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lifeUrl=event.target.closest('[data-life-url]');if(lifeUrl){try{const url=new URL(lifeUrl.dataset.lifeUrl,location.href);if(url.protocol==='https:')location.assign(url.href);}catch(error){console.warn('Invalid Yeosu life information URL',error);}return;}
     const noticePromo=event.target.closest('[data-notice-promo]');if(noticePromo){openPromoCarouselDetail(noticePromo.dataset.noticePromo);return;}
     const feedbackRetry=event.target.closest('[data-feedback-retry]');if(feedbackRetry){const report=feedbackQueue().find(item=>item.reportId===feedbackRetry.dataset.feedbackRetry);if(!report)return;feedbackRetry.disabled=true;feedbackRetry.textContent='다시 보내는 중…';deliverFeedbackReport(report).then(()=>feedbackSuccessModal(report)).catch(error=>feedbackFailureModal(report,error instanceof Error?error.message:'수정 요청을 접수하지 못했습니다.'));return;}
-    if(event.target.closest('[data-modal-close]')){hardClose();return;}
+    if(event.target.closest('[data-modal-close]')){hardClose({userInitiated:true});return;}
     if (!event.target.closest('.store-other-wrap')) $$('.store-other-popover').forEach(item => item.hidden = true);
   });
 

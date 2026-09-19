@@ -120,6 +120,7 @@
   });
   const STATIC_MENU_URLS = Object.freeze({
     '17d9bf1de3d671fd': 'data/haeinine-yeoseo-menu.json?v=haeinine-menu-preview-1',
+    '34817ff59a6bc66d': 'data/wehalmae-yeoseo-menu.json?v=wehalmae-menu-preview-1',
     '421ecef35a879687': 'data/tamnaneun-pizza-menu.json?v=tamnaneun-dedicated-2'
   });
 
