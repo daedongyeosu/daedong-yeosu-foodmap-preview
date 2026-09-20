@@ -136,7 +136,7 @@
     const bucket = id[0];
     if (!reviewedPhotoLinkRequests.has(bucket)) {
       const abort = createRequestAbort(null, 2500);
-      const pending = Promise.resolve().then(() => fetch(`data/reviewed-menu-photo-links/${bucket}.json?v=all-menu-photos-20260913-norang-20260914-norang-20260914-norang-20260914-wehalmae-20260920`, {
+      const pending = Promise.resolve().then(() => fetch(`data/reviewed-menu-photo-links/${bucket}.json?v=all-menu-photos-20260913-norang-20260914-wehalmae-20260920-brand-safe-fill-20260920`, {
         credentials: 'same-origin', signal: abort.signal
       })).then(response => {
         if (!response.ok) throw new Error('메뉴 사진 목록을 불러오지 못했습니다.');

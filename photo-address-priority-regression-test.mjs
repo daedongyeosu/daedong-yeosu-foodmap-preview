@@ -22,18 +22,26 @@ const photos = vm.createContext({});
 vm.runInContext(fn(api, 'menuPhotoNameHash') + '\n' + fn(api, 'applyReviewedMenuPhotos'), photos);
 vm.runInContext(fn(api, 'restoreReviewedMenuSearchPhotos'), photos);
 let assets = 0;
+let sharedAssets = 0;
 for (const [storeId, store] of Object.entries(inventory.stores)) {
   assert.match(storeId, /^[a-f0-9]{16}$/);
   for (const photo of Object.values(store.items)) {
     assert.match(photo.image, /^assets\/(campaigns\/shared-store-menus|reviewed-menu-photos)\//);
-    assert.ok(photo.image.includes('/' + storeId + '/'), 'asset belongs to exact store');
+    const source = inventory.sharedAssets?.[photo.image];
+    const owned = photo.image.includes('/' + storeId + '/');
+    const shared = !owned && source?.matchMethod === 'same-brand-exact-menu'
+      && photo.image.includes('/' + source.sourceStoreId + '/')
+      && Object.values(inventory.stores[source.sourceStoreId]?.items || {}).some(item => item.image === photo.image);
+    assert.ok(owned || shared, 'asset belongs to exact store or declared reviewed same-brand source');
+    if (shared) sharedAssets++;
     assert.ok(fs.statSync(new URL(photo.image, import.meta.url)).size > 0);
     assert.match(photo.nameHash, /^[a-f0-9]{1,8}$/);
     assets++;
   }
 }
-assert.equal(Object.keys(inventory.stores).length, 286);
-assert.equal(assets, 2733); // Includes 19 exact official-brand photos for 우리할매떡볶이 여서점.
+assert.equal(Object.keys(inventory.stores).length, 323);
+assert.equal(assets, 2883); // Includes 19 exact official-brand photos and 150 audited same-brand fills.
+assert.equal(sharedAssets, 150);
 const achasan = 'c7a234ae0185bdee';
 const dish = {id: 'coupang-920304-1', name: '[걸쭉꾸덕] 아차산매운떡볶이', image: ''};
 const source = {storeId: achasan, mainImage: '', items: [dish]};

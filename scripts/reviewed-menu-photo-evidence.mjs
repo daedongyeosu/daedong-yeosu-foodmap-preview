@@ -13,8 +13,15 @@ export function reviewedMenuPhotoEvidence(storeId, item, inventory, assetExists)
   if (photo.descriptionHash && photo.descriptionHash !== hash(item.description)) return '';
   if (item.image && item.image !== photo.source && item.image !== photo.image) return '';
   const image = String(photo.image || '');
-  if (!image.startsWith(`assets/reviewed-menu-photos/${storeId}/`)
-    && !image.startsWith(`assets/campaigns/shared-store-menus/${storeId}/`)) return '';
+  const sharedPhoto = inventory?.sharedAssets?.[image];
+  const sharedStoreId = String(sharedPhoto?.sourceStoreId || '');
+  const ownedByStore = image.startsWith(`assets/reviewed-menu-photos/${storeId}/`)
+    || image.startsWith(`assets/campaigns/shared-store-menus/${storeId}/`);
+  const sharedSource = sharedPhoto?.matchMethod === 'same-brand-exact-menu'
+    && /^[a-f0-9]{16}$/.test(sharedStoreId)
+    && image.startsWith(`assets/reviewed-menu-photos/${sharedStoreId}/`)
+    && Object.values(inventory?.stores?.[sharedStoreId]?.items || {}).some(item => item.image === image);
+  if (!ownedByStore && !sharedSource) return '';
   if (image.includes('..') || image.includes('\\') || !/\.(?:jpg|jpeg|png|webp)$/.test(image)) return '';
   return assetExists(image) ? image : '';
 }

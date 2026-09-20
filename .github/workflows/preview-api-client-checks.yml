@@ -169,6 +169,18 @@ jobs:
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
           BASE_URL=http://127.0.0.1:4173 node scripts/browser-menu-families.mjs
+      - name: Verify audited same-brand menu photo fill on mobile
+        run: |
+          python3 -m http.server 4173 >/tmp/daedong-menu-photo-safe-fill-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          for attempt in {1..20}; do
+            curl --silent --fail http://127.0.0.1:4173/ >/dev/null && break
+            sleep 0.25
+          done
+          BASE_URL=http://127.0.0.1:4173 \
+          PERF_PROXY_API_ORIGIN=https://daedong-yeosu-data-api-preview.sisakim.workers.dev \
+          node scripts/browser-menu-photo-safe-fill.mjs
       - name: Verify menu photo failure recovery on mobile
         run: |
           python3 -m http.server 4173 >/tmp/daedong-photo-retry-server.log 2>&1 &
@@ -247,6 +259,9 @@ jobs:
             browser-menu-families-report.json
             browser-menu-families.png
             browser-menu-families-failure.png
+            browser-menu-photo-safe-fill-report.json
+            browser-menu-photo-safe-fill.png
+            browser-menu-photo-safe-fill-failure.png
             browser-modal-close-touch-report.json
             browser-modal-close-touch.png
             browser-modal-close-touch-failure.png

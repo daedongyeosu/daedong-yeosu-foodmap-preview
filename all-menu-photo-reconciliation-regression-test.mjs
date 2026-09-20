@@ -30,6 +30,14 @@ for(const changed of [{...dish,name:'뼈치킨 2인분'},{...dish,description:'�
   assert.equal(reviewedMenuPhotoEvidence(storeId,changed,registry,()=>true),'','browser evidence independently rejects stale mappings');
 }
 assert.equal(reviewedMenuPhotoEvidence('1111111111111111',dish,registry,()=>true),'');
+const sharedStoreId='fedcba9876543210';
+const sharedImage='assets/reviewed-menu-photos/'+sharedStoreId+'/shared.jpg';
+const sharedRegistry={version:1,sharedAssets:{[sharedImage]:{sourceStoreId:sharedStoreId,sourceMenuItemId:'source-menu',matchMethod:'same-brand-exact-menu'}},stores:{
+  [storeId]:{items:{[dish.id]:{...photo,image:sharedImage}}},
+  [sharedStoreId]:{items:{'source-menu':{nameHash:photo.nameHash,descriptionHash:photo.descriptionHash,image:sharedImage}}}
+}};
+assert.equal(reviewedMenuPhotoEvidence(storeId,dish,sharedRegistry,()=>true),sharedImage,'declared same-brand reviewed photo can be shared');
+assert.equal(reviewedMenuPhotoEvidence(storeId,dish,{...sharedRegistry,sharedAssets:{}},()=>true),'','undeclared cross-store photo stays blocked');
 for(const invalid of ['assets/reviewed-menu-photos/1111111111111111/a.jpg','assets/reviewed-menu-photos/'+storeId+'/../wrong.jpg','https://example.com/photo.jpg']){
   const wrong={stores:{[storeId]:{items:{[dish.id]:{...photo,image:invalid}}}}};
   assert.equal(reviewedMenuPhotoEvidence(storeId,dish,wrong,()=>true),'','other-store/remote/traversal image is not evidence');
@@ -73,6 +81,7 @@ assert.equal(context.menuPhotoNameHash(''),context.menuPhotoNameHash(undefined),
 
 const published=JSON.parse(read('data/reviewed-menu-photo-links.json'));
 let guarded=0;
+let sharedCount=0;
 for(const [id,store] of Object.entries(published.stores))for(const [itemId,p] of Object.entries(store.items)) {
   assert.ok(itemId);
   assert.doesNotMatch(p.image,/coupang-menu\/v1|raw-archive:|screens\/|file:/);
@@ -80,7 +89,18 @@ for(const [id,store] of Object.entries(published.stores))for(const [itemId,p] of
   if(p.descriptionHash){
     guarded++;
     assert.match(p.descriptionHash,/^[0-9a-f]{1,8}$/);
-    assert.ok(p.image.startsWith('assets/reviewed-menu-photos/'+id+'/'),'photo path owned by exact store');
+    const sharedPhoto=published.sharedAssets?.[p.image];
+    const sharedStoreId=String(sharedPhoto?.sourceStoreId||'');
+    const owned=p.image.startsWith('assets/reviewed-menu-photos/'+id+'/');
+    const isShared=!owned&&sharedPhoto?.matchMethod==='same-brand-exact-menu'
+      && /^[a-f0-9]{16}$/.test(sharedStoreId)
+      && p.image.startsWith('assets/reviewed-menu-photos/'+sharedStoreId+'/')
+      && Object.values(published.stores[sharedStoreId]?.items||{}).some(source=>source.image===p.image);
+    assert.ok(owned||isShared,'photo path owned by exact store or a declared reviewed source');
+    if(isShared){
+      assert.ok(sharedPhoto.sourceMenuItemId);
+      sharedCount++;
+    }
     const bytes=fs.readFileSync(new URL(p.image,import.meta.url));
     if(p.image.endsWith('.webp')){
       assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,12),'WEBP');
@@ -91,17 +111,20 @@ for(const [id,store] of Object.entries(published.stores))for(const [itemId,p] of
     }
   }
 }
-assert.equal(guarded,1762,'all newly reviewed mappings keep composition guards');
+assert.equal(guarded,1912,'all newly reviewed mappings keep composition guards');
+assert.equal(sharedCount,150,'only the audited same-brand exact-menu batch uses shared reviewed photos');
 assert.match(source,/reviewed-menu-photo-links\/\$\{bucket\}\.json\?v=all-menu-photos-20260913/);
 assert.doesNotMatch(source,/fetch\('data\/reviewed-menu-photo-links\.json/,'detail/search must never download the whole inventory');
-const combined={version:1,stores:{}};
+const combined={version:1,sharedAssets:{},stores:{}};
 for(const bucket of '0123456789abcdef'){
   const text=read('data/reviewed-menu-photo-links/'+bucket+'.json');
-  assert.ok(Buffer.byteLength(text)<64*1024,'one store loads a small bounded photo shard');
+  assert.ok(Buffer.byteLength(text)<96*1024,'one store loads a bounded photo shard even with shared-brand provenance');
   const shard=JSON.parse(text);
   assert.ok(Object.keys(shard.stores).every(id=>id[0]===bucket));
+  Object.assign(combined.sharedAssets,shard.sharedAssets||{});
   Object.assign(combined.stores,shard.stores);
 }
+if(!Object.keys(combined.sharedAssets).length)delete combined.sharedAssets;
 assert.deepEqual(combined,published,'sharding loses no reviewed photo or existing hero');
 const fetched=[],loader=vm.createContext({Map,Promise,reviewedPhotoLinkRequests:new Map(),
   createRequestAbort:()=>({signal:undefined,cleanup:()=>{}}),
