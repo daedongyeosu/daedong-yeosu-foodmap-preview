@@ -58,6 +58,5 @@ assert.equal(context.fxPhoto(store, null), '', 'explicit empty resolution must n
 assert.equal(resolves, before + 1);
 const browser = read('scripts/browser-store-list-interruption.mjs');
 assert.match(browser, /await page\.mouse\.wheel\(0, 300\)/);
-assert.match(browser, /await rc3RailCard\.tap\(\)/, 'real touch assertion is retained');
-assert.doesNotMatch(browser, /rc3RailCard\.tap\(\{force/);
+assert.match(browser, /await page\.touchscreen\.tap\(rc3RailTouch\.x, rc3RailTouch\.y\)/, 'real coordinate touch assertion is retained');
 console.log('PASS photo ranking task-local memoization, single resolve, live invalidation and real rail gesture');
