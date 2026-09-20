@@ -153,13 +153,25 @@ try {
   // and correctly gets rejected by that guard. Keep the subsequent tap real.
   await page.mouse.wheel(0, 300);
   await page.waitForFunction(() => window.daedongEarlyHomeInteraction === true);
-  const rc3RailCard = page.locator('[data-rc3-rail-open]').first();
-  await rc3RailCard.scrollIntoViewIfNeeded();
-  // Hydration may atomically replace rails while scrolling; bind the identity
-  // being tapped, not an earlier detached card.
-  const rc3RailStoreId = await rc3RailCard.getAttribute('data-rc3-rail-open');
+  // The carousel can replace or move its first DOM card while Playwright is
+  // waiting for locator actionability. Tap the coordinates of the card that is
+  // actually visible at that instant, exactly as a customer's finger would.
+  await page.locator('[data-rc3-rail-open]').first().evaluate(node => node.closest('section')?.scrollIntoView({block: 'center'}));
+  const rc3RailTouch = await page.waitForFunction(() => {
+    for (const card of document.querySelectorAll('[data-rc3-rail-open]')) {
+      const rect = card.getBoundingClientRect();
+      const x = Math.max(1, Math.min(innerWidth - 1, rect.left + rect.width / 2));
+      const y = Math.max(1, Math.min(innerHeight - 1, rect.top + rect.height / 2));
+      if (rect.width > 20 && rect.height > 20 && x > 0 && x < innerWidth && y > 0 && y < innerHeight
+        && card.contains(document.elementFromPoint(x, y))) {
+        return {storeId: card.getAttribute('data-rc3-rail-open'), x, y};
+      }
+    }
+    return null;
+  }).then(handle => handle.jsonValue());
+  const rc3RailStoreId = rc3RailTouch.storeId;
   report.railTouchExpectedId = rc3RailStoreId;
-  await rc3RailCard.tap();
+  await page.touchscreen.tap(rc3RailTouch.x, rc3RailTouch.y);
   await page.waitForTimeout(1700);
   await check(page.evaluate(expectedId => ({
     modalOpen: document.querySelector('#modal')?.hidden === false,
