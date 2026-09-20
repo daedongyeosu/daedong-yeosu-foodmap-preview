@@ -32,8 +32,8 @@ for (const [storeId, store] of Object.entries(inventory.stores)) {
     assets++;
   }
 }
-assert.equal(Object.keys(inventory.stores).length, 285);
-assert.equal(assets, 2714); // Norang Yeoseo: nine recovered, reviewed source crops.
+assert.equal(Object.keys(inventory.stores).length, 286);
+assert.equal(assets, 2733); // Includes 19 exact official-brand photos for 우리할매떡볶이 여서점.
 const achasan = 'c7a234ae0185bdee';
 const dish = {id: 'coupang-920304-1', name: '[걸쭉꾸덕] 아차산매운떡볶이', image: ''};
 const source = {storeId: achasan, mainImage: '', items: [dish]};

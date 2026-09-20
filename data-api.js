@@ -136,7 +136,7 @@
     const bucket = id[0];
     if (!reviewedPhotoLinkRequests.has(bucket)) {
       const abort = createRequestAbort(null, 2500);
-      const pending = Promise.resolve().then(() => fetch(`data/reviewed-menu-photo-links/${bucket}.json?v=all-menu-photos-20260913-norang-20260914-norang-20260914-norang-20260914`, {
+      const pending = Promise.resolve().then(() => fetch(`data/reviewed-menu-photo-links/${bucket}.json?v=all-menu-photos-20260913-norang-20260914-norang-20260914-norang-20260914-wehalmae-20260920`, {
         credentials: 'same-origin', signal: abort.signal
       })).then(response => {
         if (!response.ok) throw new Error('메뉴 사진 목록을 불러오지 못했습니다.');
@@ -403,11 +403,13 @@
     });
     const staticUrl = STATIC_MENU_URLS[id];
     if (staticUrl) {
+      const reviewedPhotos = reviewedMenuPhotoLinks(id);
       return fetch(staticUrl, {cache: 'no-store', credentials: 'same-origin', signal: options.signal})
         .then(response => {
           if (!response.ok) throw new Error(`메뉴 자료를 불러오지 못했습니다. (${response.status})`);
           return response.json();
-        });
+        })
+        .then(async payload => applyReviewedMenuPhotos(id, restoreCuratedMenuImages(id, payload), await reviewedPhotos));
     }
     const reviewedPhotos = reviewedMenuPhotoLinks(id);
     return request(`/api/store/${id}/menu`, {cacheKey: `menu:${id}`, ...options})
