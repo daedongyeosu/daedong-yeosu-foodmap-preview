@@ -84,12 +84,14 @@ for(const [id,store] of Object.entries(published.stores))for(const [itemId,p] of
     const bytes=fs.readFileSync(new URL(p.image,import.meta.url));
     if(p.image.endsWith('.webp')){
       assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,12),'WEBP');
+    }else if(p.image.endsWith('.png')){
+      assert.equal(bytes.toString('ascii',1,4),'PNG');
     }else{
       assert.ok(p.image.endsWith('.jpg'));assert.equal(bytes[0],0xff);assert.equal(bytes[1],0xd8);
     }
   }
 }
-assert.equal(guarded,1743,'all newly reviewed mappings keep composition guards');
+assert.equal(guarded,1762,'all newly reviewed mappings keep composition guards');
 assert.match(source,/reviewed-menu-photo-links\/\$\{bucket\}\.json\?v=all-menu-photos-20260913/);
 assert.doesNotMatch(source,/fetch\('data\/reviewed-menu-photo-links\.json/,'detail/search must never download the whole inventory');
 const combined={version:1,stores:{}};
