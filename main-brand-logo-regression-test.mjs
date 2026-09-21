@@ -4,11 +4,12 @@ import fs from 'node:fs';
 const html = fs.readFileSync('index.html', 'utf8');
 const css = fs.readFileSync('rc7-address-map.css', 'utf8');
 const logo = fs.readFileSync('assets/brand/daedongmap-logo.svg', 'utf8');
+const appIcon = fs.readFileSync('app-icon.svg', 'utf8');
 const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
 assert.match(
   html,
-  /<img class="brand-logo" src="assets\/brand\/daedongmap-logo\.svg\?v=daedongmap-brand-20260922-1" alt="대동맵">/,
+  /<img class="brand-logo" src="assets\/brand\/daedongmap-logo\.svg\?v=daedongmap-brand-20260922-2" alt="대동맵">/,
   '메인 헤더는 확정한 대동맵 통합 로고를 사용해야 합니다.'
 );
 assert.doesNotMatch(html, /class="brand-word(?:\s|\")|class="brand-symbol(?:\s|\")/,
@@ -21,7 +22,11 @@ assert.match(logo, /viewBox="88 126 1593 661"/,
   '웹 로고는 불필요한 투명 여백을 제거한 뷰박스를 사용해야 합니다.');
 assert.doesNotMatch(logo, /<image\b/i,
   '메인 로고 SVG 안에 래스터 이미지를 삽입하면 안 됩니다.');
-assert.match(serviceWorker, /'\/assets\/brand\/daedongmap-logo\.svg\?v=daedongmap-brand-20260922-1'/,
+for (const asset of [logo, appIcon]) {
+  assert.match(asset, /fill="#E51B2A" stroke="#211815" stroke-width="18"/,
+    '빨간 배달통은 작은 크기에서도 동의 ㄷ으로 읽히는 공식 테두리를 유지해야 합니다.');
+}
+assert.match(serviceWorker, /'\/assets\/brand\/daedongmap-logo\.svg\?v=daedongmap-brand-20260922-2'/,
   '서비스 워커도 버전이 지정된 새 로고를 캐시해야 합니다.');
 
 console.log('Daedongmap integrated brand logo regression: PASS');

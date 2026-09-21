@@ -21,7 +21,7 @@
   const menuImageTasks = new Map();
   const MENU_IMAGE_RETRY_DELAYS = [500, 1500];
   const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2;
-  const OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1';
+  const OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets/app-icons/daedong-app-icon-512.png?v=daedongmap-brand-20260922-2';
   const MENU_PREFIX_PRICE_PATTERN = /(?:가격\s*[:：]?\s*)?(?:₩|\$|krw|usd)\s*(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:\s*(?:원|krw|usd))?/giu;
   const MENU_SUFFIX_PRICE_PATTERN = /(?:가격\s*[:：]?\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?\s*(?:원|₩|krw|usd)(?:\s*[~～~-]\s*(?:(?:₩|\$|krw|usd)\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?\s*(?:원|₩|krw|usd)?)?/giu;
   const MENU_BARE_PRICE_PATTERN = /^(?:가격\s*[:：]?\s*)?(?:\d{1,3}(?:,\d{3})+|\d{4,6})$/u;

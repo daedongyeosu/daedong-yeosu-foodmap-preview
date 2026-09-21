@@ -44,7 +44,7 @@ assert.match(css, /\.community-intro-methods\{[\s\S]*font-size:clamp\(21px,5\.2v
   '주문방법 목록이 팝업에서 가장 크게 보여야 합니다.');
 assert.match(html, /turtle-ship-hero\.css\?v=community-order-priority-1-/,
   '기존 방문자도 새 팝업 위계를 받도록 CSS 캐시 버전을 갱신해야 합니다.');
-assert.match(html, /region-config\.js\?v=[^"\n]*daedongmap-brand-20260922-1/,
+assert.match(html, /region-config\.js\?v=[^"\n]*daedongmap-brand-20260922-2/,
   '기존 방문자도 새 대동맵 브랜드 설정을 받도록 지역 설정 캐시 버전을 갱신해야 합니다.');
 assert.match(regionJs, /function regionWithEulReul\(name\)/,
   '지역명 받침에 맞춰 을\/를 조사를 선택해야 합니다.');

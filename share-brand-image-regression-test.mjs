@@ -8,9 +8,9 @@ const image = fs.readFileSync(asset);
 assert.equal(image.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
 assert.equal(image.readUInt32BE(16), 1200);
 assert.equal(image.readUInt32BE(20), 630);
-// Verified raster of the approved integrated logo, on white.
+// Verified raster of the approved outlined integrated logo, on white.
 assert.equal(createHash('sha256').update(image).digest('hex'),
-  'c12de4d5f3735e7214c06833e8b22a31e458be3d8fcc5315b849ecfa6c9b64ca',
+  '84249ff1da6d80775808606042319d04d1c0b30f763b914ed998abe32c0dbf4f',
   'Sharing must use the visually verified integrated Daedongmap logo.');
 
 for (const page of ['index.html']) {
