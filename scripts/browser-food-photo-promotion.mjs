@@ -4,7 +4,7 @@ const require = createRequire(import.meta.url);
 const {chromium} = require('playwright');
 
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
-const placeholder = 'assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1';
+const placeholder = 'assets/app-icons/daedong-app-icon-512.png?v=daedongmap-brand-20260922-2';
 const targets = [
   {
     id: '576b5087e69e7d1c',

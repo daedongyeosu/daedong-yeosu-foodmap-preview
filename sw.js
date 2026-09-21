@@ -6,12 +6,13 @@ const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
-  '/app-icon.svg?v=official-brand-20260830-1',
-  '/assets/app-icons/daedong-share-lightning-20260909.png',
+  '/app-icon.svg?v=daedongmap-brand-20260922-2',
+  '/assets/brand/daedongmap-logo.svg?v=daedongmap-brand-20260922-2',
+  '/assets/brand/daedongmap-share-1200x630.png',
   '/assets/app-icons/daedong-app-icon-192.png',
-  '/assets/app-icons/daedong-app-icon-192.png?v=official-brand-20260830-1',
+  '/assets/app-icons/daedong-app-icon-192.png?v=daedongmap-brand-20260922-2',
   '/assets/app-icons/daedong-app-icon-512.png',
-  '/assets/app-icons/daedong-app-icon-512.png?v=official-brand-20260830-1',
+  '/assets/app-icons/daedong-app-icon-512.png?v=daedongmap-brand-20260922-2',
   '/assets/app-icons/daedong-app-icon-maskable-192.png',
   '/assets/app-icons/daedong-app-icon-maskable-512.png'
 ];

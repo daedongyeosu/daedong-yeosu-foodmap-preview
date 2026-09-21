@@ -46,37 +46,14 @@
 .topbar-share-btn:active{transform:scale(.97)}
 .topbar .brand-wordmark{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;pointer-events:auto;
-  width:390px;height:72px;padding:2px 4px;gap:9px;border:0!important;border-radius:0!important;
+  width:220px;height:92px;padding:0;border:0!important;border-radius:0!important;
   display:flex;align-items:center;justify-content:center;overflow:visible!important;box-sizing:border-box;text-decoration:none;
   background:none!important;background-color:transparent!important;box-shadow:none!important;
-  filter:drop-shadow(0 1px 1px rgba(255,255,255,.92)) drop-shadow(0 3px 7px rgba(1,28,50,.23))!important;
+  filter:drop-shadow(0 1px 1px rgba(255,255,255,.88)) drop-shadow(0 3px 6px rgba(1,28,50,.2))!important;
   backdrop-filter:none!important;-webkit-backdrop-filter:none!important
 }
 .topbar .brand-wordmark::before,.topbar .brand-wordmark::after{content:none!important;display:none!important}
-.topbar .brand-word{
-  flex:0 0 auto;white-space:nowrap;color:#082f52;
-  font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;
-  font-size:39px;font-weight:900;line-height:1;letter-spacing:-1.8px;
-  -webkit-text-stroke:1px currentColor;
-  text-shadow:
-    0 0 2px rgba(255,255,255,.98),
-    0 1px 0 rgba(255,255,255,.94),
-    0 3px 6px rgba(2,28,52,.3)
-}
-.brand-font-ready .topbar .brand-word{
-  font-family:"Daedong Brush","Nanum Brush Script","Nanum Pen Script",cursive;
-  font-size:41px;font-weight:400;letter-spacing:-.9px
-}
-.topbar .brand-word b{font:inherit}.topbar .brand-word em{font:inherit;font-style:normal;color:#ef531d}
-.topbar .brand-symbol{
-  position:relative;flex:0 0 57px;width:57px;height:56px;overflow:hidden;border-radius:15px;
-  background:#fff;border:1px solid rgba(255,115,55,.34);box-shadow:0 4px 13px rgba(11,48,76,.16)
-}
-.topbar .brand-symbol img{
-  display:block;width:100%!important;height:100%!important;max-width:none!important;
-  border-radius:14px!important;object-fit:contain!important;filter:none!important
-}
-.topbar .brand-word-right{letter-spacing:-1.3px}
+.topbar .brand-logo{display:block;width:100%;height:100%;max-width:none;object-fit:contain}
 
 .address-modal{padding:0!important;align-items:flex-end!important}
 .address-modal .modal-card{
@@ -232,14 +209,10 @@
 .rc5-postcode-frame>div,.rc5-postcode-frame iframe{display:block!important;width:100%!important;height:100%!important;min-height:100%!important;border:0!important}
 
 @media(max-width:760px){
-  .topbar{min-height:142px!important;padding:6px 12px 78px!important;align-items:flex-start!important}
+  .topbar{min-height:154px!important;padding:6px 12px 92px!important;align-items:flex-start!important}
   .topbar .brand-wordmark{
-    left:50%;top:auto;bottom:4px;transform:translateX(-50%);width:min(390px,calc(100vw - 16px));height:72px;
-    padding:1px 3px;gap:8px
+    left:50%;top:auto;bottom:4px;transform:translateX(-50%);width:214px;height:89px
   }
-  .topbar .brand-word{font-size:40px;letter-spacing:-.9px}.topbar .brand-word-right{letter-spacing:-1.2px}
-  .topbar .brand-symbol{flex-basis:56px;width:56px;height:55px}
-  .topbar .brand-symbol img{width:100%!important;height:100%!important}
   .topbar .location-chip{max-width:calc(100% - 112px)!important}
 }
 @media(max-width:520px){
@@ -253,19 +226,14 @@
   .rc7-inapp-notice>button,.rc7-inapp-notice>span:last-child{grid-column:2;justify-self:start}
 }
 @media(max-width:380px){
-  .topbar{min-height:134px!important;padding-bottom:70px!important}
-  .topbar .brand-wordmark{width:calc(100vw - 12px);height:65px;bottom:2px;padding:1px;gap:6px}
-  .topbar .brand-word{font-size:36px;letter-spacing:-.7px}.topbar .brand-word-right{letter-spacing:-1px}
-  .topbar .brand-symbol{flex-basis:52px;width:52px;height:51px}
-  .topbar .brand-symbol img{width:100%!important;height:100%!important}
+  .topbar{min-height:148px!important;padding-bottom:86px!important}
+  .topbar .brand-wordmark{width:198px;height:82px;bottom:2px}
   .topbar-actions{gap:5px}
   .topbar-actions .icon-btn{width:42px;height:42px;min-width:42px}
   .topbar .location-chip{max-width:calc(100% - 96px)!important}
 }
 @media(max-width:340px){
-  .topbar .brand-word{font-size:33px}
-  .topbar .brand-symbol{flex-basis:48px;width:48px;height:47px}
-  .topbar .brand-symbol img{width:100%!important;height:100%!important}
+  .topbar .brand-wordmark{width:186px;height:77px}
 }
 @media(max-height:720px){.rc7-map-wrap{height:205px}.rc7-saved-list{max-height:180px}}
 @media(min-width:768px){.yeosu-night-shell{background-image:linear-gradient(180deg,rgba(7,47,78,.1),rgba(4,43,70,.16)),url('assets/yeosu-rc6/dolsan-day-desktop.webp')!important;background-position:center center!important}}
