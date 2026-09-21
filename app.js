@@ -432,7 +432,7 @@ const GLOBAL_EXTERNAL_APPS = {
   coupang: {label: '쿠팡이츠'},
   baemin: {label: '배달의민족'}
 };
-const EXTERNAL_APP_NOTICE_TEXT = '앱 이름은 주문 경로 안내를 위해 표시되며, 대동여수음식지도와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
+const EXTERNAL_APP_NOTICE_TEXT = '앱 이름은 주문 경로 안내를 위해 표시되며, 대동맵과 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
 
 function markExternalAppDeparture() {
   const payload = JSON.stringify({savedAt: Date.now()});
