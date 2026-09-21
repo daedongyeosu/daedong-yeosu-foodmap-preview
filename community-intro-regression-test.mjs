@@ -23,7 +23,7 @@ assert.doesNotMatch(html, /오늘의 작은 선택이/);
 assert.doesNotMatch(html, /가장 쉬운 방법입니다\./);
 assert.match(html, /가게에 힘이 되는 주문방법/);
 assert.match(html, /가게바로주문·먹깨비·땡겨요·브랜드앱·전화주문을 먼저 살펴보세요\./);
-assert.match(html, /여수의 맛을 찾는 날마다, 대동여수음식지도\./);
+assert.match(html, /대동여수음식지도의 새 이름, 대동맵/);
 assert.match(html, /community-order-message/);
 assert.match(html, /15초 후 자동으로 닫힙니다\./);
 assert.doesNotMatch(html, /자동으로 닫히며 거북선이 출항합니다\./);
@@ -44,8 +44,8 @@ assert.match(css, /\.community-intro-methods\{[\s\S]*font-size:clamp\(21px,5\.2v
   '주문방법 목록이 팝업에서 가장 크게 보여야 합니다.');
 assert.match(html, /turtle-ship-hero\.css\?v=community-order-priority-1-/,
   '기존 방문자도 새 팝업 위계를 받도록 CSS 캐시 버전을 갱신해야 합니다.');
-assert.match(html, /region-config\.js\?v=korean-particle-fix-2/,
-  '기존 방문자도 올바른 지역명 조사를 받도록 지역 설정 캐시 버전을 갱신해야 합니다.');
+assert.match(html, /region-config\.js\?v=[^"\n]*daedongmap-brand-20260922-1/,
+  '기존 방문자도 새 대동맵 브랜드 설정을 받도록 지역 설정 캐시 버전을 갱신해야 합니다.');
 assert.match(regionJs, /function regionWithEulReul\(name\)/,
   '지역명 받침에 맞춰 을\/를 조사를 선택해야 합니다.');
 assert.match(regionJs, /replaceText\('\.community-intro-lead', `\$\{regionWithEulReul\(active\.shortName\)\} 한 번 더 생각해 주세요\.`\)/,

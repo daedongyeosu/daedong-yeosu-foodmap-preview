@@ -14,8 +14,8 @@ assert.match(html, /app\.js\?v=[^"\n]*first-hero-webp-1/,
   '최적화한 배너 경로가 휴대전화 캐시에 가리지 않아야 합니다.');
 assert.doesNotMatch(html, /rel="preload" as="image" href="images\/01\.png"/,
   '1MB가 넘는 PNG 배너를 초기 화면에서 미리 받으면 안 됩니다.');
-assert.match(html, /<img src="app-icon\.svg\?v=official-brand-20260830-1" alt="">/,
-  '현재의 가벼운 SVG 헤더 로고를 유지해야 합니다.');
+assert.match(html, /<img class="brand-logo" src="assets\/brand\/daedongmap-logo\.svg\?v=daedongmap-brand-20260922-1" alt="대동맵">/,
+  '첫 화면에는 캐시 버전이 지정된 대동맵 통합 SVG를 사용해야 합니다.');
 assert.match(serviceWorker, /daedong-yeosu-app-shell-v31-yogiyo-representative-only/,
   '최신 서비스워커 캐시 전략을 예전 구현으로 되돌리면 안 됩니다.');
 
