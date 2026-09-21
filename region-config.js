@@ -1,13 +1,14 @@
 'use strict';
 
 (() => {
+  const BRAND_NAME = '대동맵';
   const REGIONS = Object.freeze({
     yeosu: Object.freeze({
       code: 'yeosu',
       shortName: '여수',
       cityName: '여수시',
       fullName: '전라남도 여수시',
-      mapName: '대동여수음식지도',
+      mapName: '대동맵',
       defaultArea: '여수시 전체',
       neighborhoodUrl: 'data/yeosu-neighborhoods.json',
       areas: []
@@ -17,7 +18,7 @@
       shortName: '고흥',
       cityName: '고흥군',
       fullName: '전라남도 고흥군',
-      mapName: '대동고흥음식지도',
+      mapName: '대동맵',
       defaultArea: '고흥군 전체',
       neighborhoodUrl: 'data/goheung-neighborhoods.json',
       areas: Object.freeze(['고흥군 전체', '고흥읍', '도양읍', '과역면', '동강면', '도덕면', '두원면', '풍양면', '포두면', '금산면', '봉래면', '동일면', '점암면', '영남면', '대서면'])
@@ -65,10 +66,10 @@
   }
 
   function applyMetadata() {
-    document.title = active.mapName;
-    document.querySelector('meta[name="description"]')?.setAttribute('content', `${active.shortName} 음식점과 주문방법을 한눈에 찾는 ${active.mapName}`);
-    document.querySelector('meta[property="og:site_name"]')?.setAttribute('content', active.mapName);
-    document.querySelector('meta[property="og:title"]')?.setAttribute('content', active.mapName);
+    document.title = BRAND_NAME;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', `${active.shortName} 음식점과 주문방법을 한눈에 찾는 ${BRAND_NAME}`);
+    document.querySelector('meta[property="og:site_name"]')?.setAttribute('content', BRAND_NAME);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', BRAND_NAME);
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', `${active.shortName} 음식점과 이용 가능한 주문방법을 한눈에 확인해보세요.`);
   }
 
@@ -89,16 +90,15 @@
   function applyVisibleIdentity() {
     document.body.dataset.region = active.code;
     replaceText('#locationText', active.defaultArea);
-    replaceText('.brand-word-left em', active.shortName);
-    replaceText('.brand-return-slogan', `${active.shortName}의 맛을 찾는 날마다, ${active.mapName}.`);
+    replaceText('.brand-return-slogan', '대동여수음식지도의 새 이름, 대동맵');
     replaceText('.community-intro-kicker', `${active.shortName}의 맛을 오래 이어가는 주문`);
     replaceText('#communityIntroTitle', `${active.shortName}에서 주문한다면,`);
     replaceText('.community-intro-lead', `${regionWithEulReul(active.shortName)} 한 번 더 생각해 주세요.`);
     replaceText('.promo-section .section-head h2', `${regionWithWaGwa(active.shortName)} 함께하는 소식`);
     const brand = document.querySelector('.brand-wordmark');
-    brand?.setAttribute('aria-label', `${active.mapName} 홈`);
-    document.querySelector('[data-share-home]')?.setAttribute('aria-label', `${active.mapName} 공유하기`);
-    document.querySelector('.external-app-notice span:last-child')?.replaceChildren(document.createTextNode(`앱 이름은 주문 경로 안내를 위해 표시되며, ${active.mapName}와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.`));
+    brand?.setAttribute('aria-label', `${BRAND_NAME} 홈`);
+    document.querySelector('[data-share-home]')?.setAttribute('aria-label', `${BRAND_NAME} 공유하기`);
+    document.querySelector('.external-app-notice span:last-child')?.replaceChildren(document.createTextNode(`앱 이름은 주문 경로 안내를 위해 표시되며, ${BRAND_NAME}과 해당 앱의 공식 제휴·후원을 의미하지 않습니다.`));
     injectGoheungHero();
   }
 
