@@ -1248,6 +1248,19 @@ function coupangDirectStoreIntent(url, browserFallbackUrl) {
   // third-party resolver page into the customer's Android Back stack.
   return `intent://storedetail/?storeId=${encodeURIComponent(storeId)}&dishId=${encodeURIComponent(dishId)}#Intent;scheme=coupangeats;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${ANDROID_ROUTE_PACKAGES.coupang};S.browser_fallback_url=${encodeURIComponent(browserFallbackUrl)};end;`;
 }
+function mukkebiDirectStoreIntent(url, browserFallbackUrl) {
+  if (
+    url.hostname.toLowerCase() !== 'live-api.mukkebi.com'
+    || url.pathname.replace(/\/+$/, '') !== '/web/deep-link/shops/open'
+  ) return '';
+  const shopId = String(url.searchParams.get('shopId') || '');
+  if (!/^\d{1,12}$/.test(shopId)) return '';
+  // Mukkebi's launcher opens store details with the mkb://params contract.
+  // Sending its HTTPS resolver back through the app package loses the original
+  // tap before the resolver can launch the custom scheme and falls through to
+  // Google Play even when the app is installed.
+  return `intent://params?twinny=${encodeURIComponent(shopId)}&isShop=Y#Intent;scheme=mkb;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=${ANDROID_ROUTE_PACKAGES.mukkebi};S.browser_fallback_url=${encodeURIComponent(browserFallbackUrl)};end;`;
+}
 function androidPackageIntent(key, href) {
   if (!isAndroidBrowser() || !ANDROID_ROUTE_PACKAGES[key]) return '';
   try {
@@ -1261,6 +1274,10 @@ function androidPackageIntent(key, href) {
     const browserFallbackUrl = kakaoPreviewFallbackUrl(key) || url.href;
     if (key === 'coupang') {
       const directStoreIntent = coupangDirectStoreIntent(url, browserFallbackUrl);
+      if (directStoreIntent) return directStoreIntent;
+    }
+    if (key === 'mukkebi') {
+      const directStoreIntent = mukkebiDirectStoreIntent(url, browserFallbackUrl);
       if (directStoreIntent) return directStoreIntent;
     }
     const scheme = url.protocol.slice(0, -1);
