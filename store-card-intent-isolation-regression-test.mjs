@@ -11,8 +11,9 @@ const finalExperience = fs.readFileSync('final-experience.js', 'utf8');
 const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
 const confirmSource = rc2.match(/function rc2ConfirmIntentionalStoreOpen\(\) \{[\s\S]*?\n\}/)?.[0] || '';
+const normalizeHistorySource = rc2.match(/function rc2NormalizeHiddenStoreCardHistory\(\) \{[\s\S]*?\n\}/)?.[0] || '';
 const openSource = rc2.match(/function rc2OpenStoreFromCustomer\(store\) \{[\s\S]*?\n\}/)?.[0] || '';
-assert.ok(confirmSource && openSource, '고객 가게카드 선택 격리 함수를 유지해야 합니다.');
+assert.ok(confirmSource && normalizeHistorySource && openSource, '고객 가게카드 선택 격리 함수를 유지해야 합니다.');
 
 const removed = [];
 let freshEntryReleased = 0;
@@ -31,9 +32,10 @@ const sandbox = {
   sessionStorage: storage(),
   localStorage: storage(),
   location: {href: 'https://daedongmap.com/?fresh=1&__ddret=old&__ddguard=old'},
+  $() { return {hidden: true}; },
   history: {
     state: {daedongModal: true, daedongExternalReturnToken: 'old', daedongExternalReturnGuard: 'old'},
-    replaceState(next, _title, url) { this.state = next; this.url = url; }
+    replaceState(next, _title, url) { this.state = next; if (url !== undefined) this.url = url; }
   },
   URL,
   rc2ResetExternalDepartureLifecycle() {},
@@ -47,7 +49,7 @@ sandbox.window = sandbox;
 sandbox.globalThis = sandbox;
 sandbox.daedongMarkHomeInteraction = () => { freshEntryReleased += 1; };
 sandbox.daedongFinishExternalReturnBoot = () => { bootReleased += 1; };
-vm.runInNewContext(`${confirmSource}\n${openSource}`, sandbox, {filename: 'store-card-intent-guard.js'});
+vm.runInNewContext(`${confirmSource}\n${normalizeHistorySource}\n${openSource}`, sandbox, {filename: 'store-card-intent-guard.js'});
 
 const chosen = {id: 'chosen-store'};
 assert.equal(sandbox.rc2OpenStoreFromCustomer(chosen), true);
@@ -58,10 +60,22 @@ assert.equal(durableCleared, 1, '이전 주문앱 쿠키 복귀 상태를 제거
 for (const key of ['daedongExternalReturnRc2', 'daedongAppBrowserReturnV1', 'daedongExternalAppDepartureV1']) {
   assert.equal(removed.filter(value => value === key).length, 2, `${key}를 두 저장소에서 제거해야 합니다.`);
 }
-assert.equal(sandbox.history.state.daedongModal, true, '현재 모달 기록은 보존해야 합니다.');
+assert.equal('daedongModal' in sandbox.history.state, false,
+  '화면은 닫혔지만 남아 있는 모달 기록을 제거해 다음 상세가 새 뒤로가기 항목을 만들게 해야 합니다.');
+assert.equal('rc2ModalDepth' in sandbox.history.state, false);
+assert.equal('storeId' in sandbox.history.state, false);
 assert.equal('daedongExternalReturnToken' in sandbox.history.state, false);
 assert.equal('daedongExternalReturnGuard' in sandbox.history.state, false);
 assert.equal(sandbox.history.url, '/?fresh=1', '일회성 복귀 주소 표식을 제거해야 합니다.');
+
+const visibleModalSandbox = {
+  history: {state: {daedongModal: true, rc2ModalDepth: 1, storeId: 'current'}, replaceState() { throw new Error('열린 모달 기록을 바꾸면 안 됩니다.'); }},
+  location: {href: 'https://daedongmap.com/'},
+  $() { return {hidden: false}; }
+};
+vm.runInNewContext(normalizeHistorySource, visibleModalSandbox, {filename: 'store-card-visible-modal-history.js'});
+assert.equal(visibleModalSandbox.rc2NormalizeHiddenStoreCardHistory(), false,
+  '가게목록 팝업 안에서 상세를 여는 정상 중첩 기록은 그대로 보존해야 합니다.');
 
 assert.match(rc2, /#storeGrid \.store-card\[data-id\][\s\S]*rc2OpenStoreFromCustomer/,
   '홈 가게목록 카드는 고객 선택 격리를 거쳐야 합니다.');
@@ -81,8 +95,10 @@ for (const selector of ['railStore', 'appStoreInfo', 'channelStore', 'searchStor
 assert.match(service, /function openStoreAfterOverview\(storeId\)[\s\S]*daedongConfirmIntentionalStoreOpen\?\.\(\)[\s\S]*openStore\(store\)/,
   '통합 가게찾기 카드도 같은 격리를 사용해야 합니다.');
 assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*store-card-intent-2/);
+assert.match(finalExperience, /rc2-fixes\.js\?v=[^'\n]*store-card-back-home-1/);
 assert.match(finalExperience, /fxRc3Script\.src\+='-atomic-rail-refresh-1-store-card-intent-2-return-activation-atomic-1-return-intent-cancel-1-return-early-tap-bridge-1-order-sheet-before-history-1-restored-button-direct-touch-1'/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*store-card-intent-2/);
+assert.match(html, /final-experience\.js\?v=[^"\n]*store-card-back-home-1/);
 assert.match(html, /store-service-info\.js\?v=[^"\n]*store-card-intent-1/);
 assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v31-yogiyo-representative-only'/);
 

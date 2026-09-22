@@ -235,9 +235,25 @@ function rc2ConfirmIntentionalStoreOpen() {
   globalThis.daedongFinishExternalReturnBoot?.();
 }
 
+function rc2NormalizeHiddenStoreCardHistory() {
+  const modal = $('#modal');
+  if (!modal?.hidden || !history.state?.daedongModal) return false;
+  const homeState = {...history.state};
+  delete homeState.daedongModal;
+  delete homeState.rc2ModalDepth;
+  delete homeState.storeId;
+  history.replaceState(homeState, '');
+  return true;
+}
+
 function rc2OpenStoreFromCustomer(store) {
   if (!store) return false;
   rc2ConfirmIntentionalStoreOpen();
+  // A restored WebView can hide the old detail while retaining its modal
+  // history marker. If that stale marker survives, the native opener does not
+  // push a new detail entry and Android Back leaves Daedongmap instead of
+  // returning to the visible store list.
+  rc2NormalizeHiddenStoreCardHistory();
   return openStore(store);
 }
 
