@@ -17,6 +17,7 @@ assert.match(app, /function androidPackageIntent\(key, href\)/);
 assert.match(app, /const KAKAO_APP_FALLBACK_PARAM = '__ddappfallback'/);
 assert.match(app, /function kakaoPreviewFallbackUrl\(key\) \{[\s\S]*?key !== 'coupang' \|\| !isKakaoInAppBrowser\(\)[\s\S]*?new URL\(location\.href\)[\s\S]*?searchParams\.set\(KAKAO_APP_FALLBACK_PARAM, key\)[\s\S]*?fallbackUrl\.href/, '카카오+쿠팡의 브라우저 fallback은 토큰이 든 Preview URL이어야 합니다.');
 assert.match(app, /function coupangDirectStoreIntent\(url, browserFallbackUrl\)[\s\S]*?web\.coupangeats\.com[\s\S]*?url\.pathname[\s\S]*?\/share[\s\S]*?storeId[\s\S]*?intent:\/\/storedetail\/\?storeId=/, '쿠팡 웹 공유 링크는 외부 웹페이지 없이 설치 앱의 가게 상세 주소로 변환해야 합니다.');
+assert.match(app, /function mukkebiDirectStoreIntent\(url, browserFallbackUrl\)[\s\S]*?live-api\.mukkebi\.com[\s\S]*?shopId[\s\S]*?intent:\/\/params\?twinny=/, '먹깨비 가게 링크는 Google Play를 경유하지 않는 공식 매장 intent로 변환해야 합니다.');
 assert.match(app, /const browserFallbackUrl = kakaoPreviewFallbackUrl\(key\) \|\| url\.href[\s\S]*?S\.browser_fallback_url=\$\{encodeURIComponent\(browserFallbackUrl\)\}/, '그 밖의 주문앱과 브라우저는 원래 외부 fallback을 유지해야 합니다.');
 assert.match(app, /window\.location\.assign\(androidPackageIntent\(key, href\) \|\| href\)/);
 assert.match(app, /document\.addEventListener\('click', handleKakaoOrderLinkClick, true\)/);
@@ -57,6 +58,18 @@ assert.match(
   intentContext.testAndroidPackageIntent('yogiyo', 'https://www.yogiyo.co.kr/mobile/#/123'),
   new RegExp(`S\\.browser_fallback_url=${encodeURIComponent('https://www.yogiyo.co.kr/mobile/#/123').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')};end;$`),
   '쿠팡 외 주문앱의 원래 fallback URL을 바꾸면 안 됩니다.'
+);
+const mukkebiWebStore = 'https://live-api.mukkebi.com/web/deep-link/shops/open?shopId=147872';
+const mukkebiIntent = intentContext.testAndroidPackageIntent('mukkebi', mukkebiWebStore);
+assert.match(
+  mukkebiIntent,
+  /^intent:\/\/params\?twinny=147872&isShop=Y#Intent;scheme=mkb;/,
+  '먹깨비 링크가 설치 앱의 동일 가게 상세 intent로 변환되지 않습니다.'
+);
+assert.match(
+  mukkebiIntent,
+  new RegExp(`S\\.browser_fallback_url=${encodeURIComponent(mukkebiWebStore).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')};end;$`),
+  '먹깨비 미설치 fallback은 원래 공식 웹 딥링크여야 합니다.'
 );
 intentContext.isKakaoInAppBrowser = () => false;
 const regularBrowserCoupangIntent = intentContext.testAndroidPackageIntent('coupang', coupangWebShare);
