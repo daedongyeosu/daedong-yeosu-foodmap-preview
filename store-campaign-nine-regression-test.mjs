@@ -35,6 +35,7 @@ const kongsansoFamilyStoreIds = [
 ];
 
 const manifest = JSON.parse(readFileSync('data/store-campaign-links.json', 'utf8'));
+const allStoreCoverage = JSON.parse(readFileSync('data/all-store-campaign-coverage.json', 'utf8'));
 // Keep the previously approved prefix exact; audit the explicitly added batch separately.
 expected.push(...JSON.parse(readFileSync('data/collected-campaign-stores.json', 'utf8')).map(({storeId,name})=>[storeId,name]));
 expected.push(...JSON.parse(readFileSync('data/verified-campaign-stores.json', 'utf8')).map(({storeId,name})=>[storeId,name]));
@@ -55,12 +56,17 @@ for (const [storeId, name] of expected.filter(([id]) => id !== '421ecef35a879687
   assert.equal(isCustomerHiddenStoreId(storeId), false, `${name}: unrelated approved campaigns must remain visible.`);
 }
 
-assert.equal(manifest.campaigns.length, expected.length, 'The public campaign-link list must contain exactly the approved stores.');
-assert.equal(Object.keys(heroData.campaigns).length, expected.length, 'Each approved store must have one hero campaign.');
+assert.equal(manifest.campaigns.length, expected.length + allStoreCoverage.addedCampaignCount, 'The public campaign-link list must contain the approved stores and the all-store batch.');
+assert.equal(Object.keys(heroData.campaigns).length, expected.length + allStoreCoverage.addedCampaignCount, 'Each approved or all-store entry must have one hero campaign.');
 assert.deepEqual(
-  manifest.campaigns.map(({ storeId, name }) => [storeId, name]),
+  manifest.campaigns.slice(0, expected.length).map(({ storeId, name }) => [storeId, name]),
   expected,
-  'Store IDs and canonical names must not be renamed or reordered accidentally.',
+  'Previously approved store IDs and canonical names must not be renamed or reordered accidentally.',
+);
+assert.deepEqual(
+  manifest.campaigns.slice(expected.length).map(({storeId}) => storeId),
+  allStoreCoverage.addedCampaignIds,
+  'The all-store batch must remain ordered exactly as its coverage snapshot.',
 );
 
 for (const [storeId, name] of expected) {
@@ -105,7 +111,7 @@ for (const campaign of Object.values(heroData.campaigns)) {
   assert.equal(new Set(images).size, images.length, `${campaign.label}: duplicate hero photos are not allowed.`);
   for (const image of images) {
     if (/^https:\/\//.test(image)) continue;
-    assert.ok(existsSync(image), `${campaign.label}: local photo is missing: ${image}`);
+    assert.ok(existsSync(image.split(/[?#]/, 1)[0]), `${campaign.label}: local photo is missing: ${image}`);
   }
 }
 
