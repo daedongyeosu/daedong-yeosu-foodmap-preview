@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="대동여수음식지도 가게 안내">
+  <rect width="1200" height="700" fill="#fff8f3"/>
+  <circle cx="600" cy="305" r="150" fill="#ff5a2f" opacity=".12"/>
+  <g fill="none" stroke="#ff4b22" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M528 194v212M672 194v212M492 194v74c0 44 36 80 80 80s80-36 80-80v-74"/>
+    <path d="M728 194v212M728 194c58 42 58 126 0 168"/>
+  </g>
+  <text x="600" y="545" text-anchor="middle" fill="#17233b" font-family="sans-serif" font-size="54" font-weight="700">가게 정보와 주문방법</text>
+</svg>
