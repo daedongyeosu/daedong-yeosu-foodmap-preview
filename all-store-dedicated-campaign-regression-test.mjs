@@ -36,12 +36,12 @@ for (const id of added) {
   const svg = fs.readFileSync(link.qrAsset, 'utf8');
   assert.match(svg, new RegExp(`data-target-url="https://daedongmap\\.com/\\?hero=${id}"`));
   const size = Number(svg.match(/viewBox="0 0 (\d+) \1"/)?.[1]);
-  assert.equal(size, 41, `${id}: 작은 인쇄용 QR은 33모듈 본체와 4모듈 인식영역을 유지해야 합니다.`);
+  assert.equal(size, 33, `${id}: QR 바깥에 추가 흰색 여백을 만들면 안 됩니다.`);
   const cells = [...svg.matchAll(/M(\d+) (\d+)h1v1h-1z/g)].map(match => [Number(match[1]), Number(match[2])]);
   assert.ok(cells.length > 0);
-  assert.ok(Math.min(...cells.flat()) >= 4, `${id}: QR 필수 흰색 인식영역이 잘리면 안 됩니다.`);
-  assert.ok(Math.max(...cells.flat()) <= 36, `${id}: QR 필수 흰색 인식영역이 잘리면 안 됩니다.`);
+  assert.equal(Math.min(...cells.flat()), 0, `${id}: QR 검정 모듈이 캔버스 가장자리부터 시작해야 합니다.`);
+  assert.equal(Math.max(...cells.flat()), 32, `${id}: QR 검정 모듈이 캔버스 가장자리까지 사용되어야 합니다.`);
 }
 
 assert.equal(new Set(manifest.campaigns.map(item => item.storeId)).size, manifest.campaigns.length, '전용 링크 ID가 중복되면 안 됩니다.');
-console.log(`All-store dedicated campaigns: ${coverage.sourceCatalogCount} catalog stores covered; ${coverage.addedCampaignCount} new; print-safe QR quiet zones verified`);
+console.log(`All-store dedicated campaigns: ${coverage.sourceCatalogCount} catalog stores covered; ${coverage.addedCampaignCount} new; borderless QR canvas verified`);
