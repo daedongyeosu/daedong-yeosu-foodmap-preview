@@ -569,7 +569,7 @@ const CHAK_ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.koms
 const CHAK_IOS_URL = 'https://apps.apple.com/kr/app/%EC%A7%80%EC%97%AD%EC%83%81%ED%92%88%EA%B6%8C-chak/id6449449658';
 const CHAK_YEOSU_GUIDE_URL = 'https://news.yeosu.go.kr/news/articleView.html?idxno=34946';
 const EGEN_HOLIDAY_MEDICAL_URL = 'https://www.e-gen.or.kr/egen/holiday_medical.do';
-const YEOSU_GAGE_URL = 'https://yeosu-shop--review-j1knfdmo.web.app';
+const YEOSU_GAGE_URL = 'https://play.google.com/store/apps/details?id=com.yeosugage.app';
 const USED_MARKET_LINKS = [
   { name: '당근', description: '우리 동네 중고거래와 나눔', url: 'https://www.daangn.com/' },
   { name: '번개장터', description: '전국 중고상품 검색과 안전결제', url: 'https://m.bunjang.co.kr/' },
@@ -2208,8 +2208,8 @@ function openYeosuGageGuide() {
     <h2 id="modalTitle">여수가게</h2>
     <p class="local-gateway-lead">여수 지역의 음식점뿐 아니라 숙박·미용·특산품·교육·수리 등 다양한 업체를 찾아볼 수 있습니다.</p>
     <div class="service-relationship-note"><b>서비스는 따로, 이동은 편하게</b><span>여수맛지도는 음식점·메뉴·주문방법을 안내하고, 여수가게는 지역 소상공인 업체 정보를 폭넓게 제공합니다.</span></div>
-    <button class="local-gateway-primary merchant" type="button" data-life-url="${YEOSU_GAGE_URL}">여수가게 둘러보기</button>
-    <p class="local-gateway-source">여수가게는 여수맛지도와 별도로 운영되는 지역상권 서비스입니다.</p>
+    <button class="local-gateway-primary merchant" type="button" data-life-url="${YEOSU_GAGE_URL}">Google Play에서 여수가게 보기</button>
+    <p class="local-gateway-source">현재는 정식 공개된 안드로이드 앱으로 연결합니다. 아이폰용은 App Store 출시가 완료되면 공식 링크를 추가합니다. 여수가게는 여수맛지도와 별도로 운영되는 지역상권 서비스입니다.</p>
   </div>`);
 }
 function lifeDirectoryMarkup(items) {

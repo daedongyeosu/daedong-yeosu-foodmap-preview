@@ -10,7 +10,7 @@ for (const marker of ['id="holidayMedicalBtn"', 'id="yeosuGageBtn"', 'id="public
 
 for (const marker of [
   "const EGEN_HOLIDAY_MEDICAL_URL = 'https://www.e-gen.or.kr/egen/holiday_medical.do'",
-  "const YEOSU_GAGE_URL = 'https://yeosu-shop--review-j1knfdmo.web.app'",
+  "const YEOSU_GAGE_URL = 'https://play.google.com/store/apps/details?id=com.yeosugage.app'",
   'function openHolidayMedicalGuide()',
   'function openPublicToiletGuide()',
   'function openYeosuGageGuide()',

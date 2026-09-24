@@ -67,10 +67,10 @@ await page.locator('#yeosuGageBtn').click();
 const yeosuGageModal = page.locator('#modal:not([hidden]) .yeosu-gage-guide');
 await yeosuGageModal.waitFor({state: 'visible'});
 const yeosuGageText = await yeosuGageModal.innerText();
-for (const text of ['여수가게', '서비스는 따로, 이동은 편하게', '지역 소상공인 업체 정보']) {
+for (const text of ['여수가게', '서비스는 따로, 이동은 편하게', '지역 소상공인 업체 정보', 'Google Play에서 여수가게 보기', '아이폰용은 App Store 출시가 완료되면']) {
   if (!yeosuGageText.includes(text)) throw new Error(`missing Yeosu Gage context: ${text}`);
 }
-if (await yeosuGageModal.locator('[data-life-url*="yeosu-shop--review-j1knfdmo.web.app"]').count() !== 1) throw new Error('Yeosu Gage link missing');
+if (await yeosuGageModal.locator('[data-life-url="https://play.google.com/store/apps/details?id=com.yeosugage.app"]').count() !== 1) throw new Error('Yeosu Gage Google Play link missing');
 await closeOpenModal();
 
 await page.locator('#publicToiletBtn').click();
