@@ -2253,20 +2253,6 @@ function openCarAccidentGuide() {
     <p class="local-gateway-source">각 보험사 공식 고객센터에서 2026.09.24 확인했습니다. 번호가 변경될 수 있으므로 통화 연결 시 보험사 안내를 다시 확인하세요.</p>
   </div>`);
 }
-function openYeosuLifeHub() {
-  openModal(`<div class="yeosu-life-modal local-gateway-guide yeosu-life-hub">
-    <span class="yeosu-life-modal-kicker">필요한 정보만 빠르게</span>
-    <h2 id="modalTitle">여수생활 전체보기</h2>
-    <p class="local-gateway-lead">자주 쓰는 여수 생활정보를 분야별로 정리했습니다.</p>
-    <div class="life-hub-grid">
-      <button type="button" data-life-gateway="used-market"><span class="life-hub-icon" aria-hidden="true">거래</span><b>중고거래</b><small>당근·번개장터·중고나라</small></button>
-      <button type="button" data-life-gateway="local-news"><span class="life-hub-icon" aria-hidden="true">소식</span><b>지역신문·생활정보</b><small>까치정보·교차로·지역뉴스</small></button>
-      <button type="button" data-open-chak-benefit><span class="life-hub-icon" aria-hidden="true">혜택</span><b>섬섬여수페이</b><small>충전·사용법·현재 혜택</small></button>
-      <button type="button" data-life-filter="전체"><span class="life-hub-icon" aria-hidden="true">오늘</span><b>오늘의 여수소식</b><small>행사·모집·교통·뉴스</small></button>
-    </div>
-    <p class="local-gateway-source">외부 서비스와 공공정보는 출처를 구분해 안내합니다.</p>
-  </div>`);
-}
 function openNotifications() {
   const lifeMarkup = ACTIVE_REGION.code === 'yeosu' ? `<section class="notice-life-group"><h3>여수생활정보</h3><button type="button" data-open-chak-benefit><b>💳 섬섬여수페이 특별혜택</b><small>CHAK 사용법과 현재 할인 확인</small></button><button type="button" data-life-item="mukkebi-island-coupon"><b>🍽️ 먹깨비 5천 원 할인</b><small>9월 1일~10월 31일 · 매일 선착순</small></button><button type="button" data-life-filter="전체"><b>📍 여수생활정보 전체 보기</b><small>혜택·행사·모집·교통·뉴스</small></button></section>` : '';
   openModal(`<div class="notification-center"><h2 id="modalTitle">알림</h2>${lifeMarkup}<section class="notice-promo-group"><h3>대동소식</h3><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div></section></div>`);
@@ -3006,7 +2992,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const lifeFilter=event.target.closest('[data-life-filter]');if(lifeFilter){openYeosuLifeNews(lifeFilter.dataset.lifeFilter);return;}
     const lifeItem=event.target.closest('[data-life-item]');if(lifeItem){openYeosuLifeItem(lifeItem.dataset.lifeItem);return;}
     if(event.target.closest('[data-open-chak-benefit]')){openChakBenefitGuide();return;}
-    const lifeGateway=event.target.closest('[data-life-gateway]');if(lifeGateway){if(lifeGateway.dataset.lifeGateway==='used-market')openUsedMarketGuide();if(lifeGateway.dataset.lifeGateway==='local-news')openLocalNewsGuide();return;}
     const lifeUrl=event.target.closest('[data-life-url]');if(lifeUrl){try{const url=new URL(lifeUrl.dataset.lifeUrl,location.href);if(url.protocol==='https:')location.assign(url.href);}catch(error){console.warn('Invalid Yeosu life information URL',error);}return;}
     const noticePromo=event.target.closest('[data-notice-promo]');if(noticePromo){openPromoCarouselDetail(noticePromo.dataset.noticePromo);return;}
     const feedbackRetry=event.target.closest('[data-feedback-retry]');if(feedbackRetry){const report=feedbackQueue().find(item=>item.reportId===feedbackRetry.dataset.feedbackRetry);if(!report)return;feedbackRetry.disabled=true;feedbackRetry.textContent='다시 보내는 중…';deliverFeedbackReport(report).then(()=>feedbackSuccessModal(report)).catch(error=>feedbackFailureModal(report,error instanceof Error?error.message:'수정 요청을 접수하지 못했습니다.'));return;}
@@ -3016,12 +3001,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) { window.daedongConfirmIntentionalStoreOpen?.(); openStore(store); } });
   $('#noticeBtn').addEventListener('click', openNotifications);
-  $('#yeosuLifeMoreBtn')?.addEventListener('click', openYeosuLifeHub);
   $('#chakBenefitBtn')?.addEventListener('click', openChakBenefitGuide);
   $('#holidayMedicalBtn')?.addEventListener('click', openHolidayMedicalGuide);
   $('#yeosuGageBtn')?.addEventListener('click', openYeosuGageGuide);
   $('#publicToiletBtn')?.addEventListener('click', openPublicToiletGuide);
   $('#carAccidentBtn')?.addEventListener('click', openCarAccidentGuide);
+  $('#usedMarketBtn')?.addEventListener('click', openUsedMarketGuide);
+  $('#localNewsBtn')?.addEventListener('click', openLocalNewsGuide);
+  $('#yeosuLifeNewsBtn')?.addEventListener('click', () => openYeosuLifeNews('전체'));
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
     $$('.bottom-nav button').forEach(item => item.classList.remove('active')); button.classList.add('active');
