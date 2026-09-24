@@ -568,6 +568,34 @@ const YEOSU_LIFE_NEWS = [
 const CHAK_ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.komscochak.m2.client';
 const CHAK_IOS_URL = 'https://apps.apple.com/kr/app/%EC%A7%80%EC%97%AD%EC%83%81%ED%92%88%EA%B6%8C-chak/id6449449658';
 const CHAK_YEOSU_GUIDE_URL = 'https://news.yeosu.go.kr/news/articleView.html?idxno=34946';
+const EGEN_HOLIDAY_MEDICAL_URL = 'https://www.e-gen.or.kr/egen/holiday_medical.do';
+const YEOSU_GAGE_URL = 'https://yeosu-shop--review-j1knfdmo.web.app';
+const USED_MARKET_LINKS = [
+  { name: '당근', description: '우리 동네 중고거래와 나눔', url: 'https://www.daangn.com/' },
+  { name: '번개장터', description: '전국 중고상품 검색과 안전결제', url: 'https://m.bunjang.co.kr/' },
+  { name: '네이버 중고나라', description: '네이버 카페 중고거래 게시판', url: 'https://cafe.naver.com/joonggonara' }
+];
+const LOCAL_INFO_LINKS = [
+  { name: '주변 공중화장실', description: '현재 위치 주변 화장실을 지도에서 검색', url: 'https://map.naver.com/p/search/%EA%B3%B5%EC%A4%91%ED%99%94%EC%9E%A5%EC%8B%A4' },
+  { name: '여수까치정보', description: '부동산·구인·중고차·생활정보', url: 'https://www.iyosu.com/' },
+  { name: '여수교차로', description: '여수 지역 생활정보와 일자리', url: 'https://www.yeosuro.com/' },
+  { name: '벼룩시장', description: '전국 생활정보와 일자리 검색', url: 'https://www.findall.co.kr/' },
+  { name: '여수시청', description: '공지·행사·채용 등 공식 시정소식', url: 'https://www.yeosu.go.kr/www/' },
+  { name: '여수MBC', description: '여수·순천·광양 지역 뉴스', url: 'https://ysmbc.co.kr/' }
+];
+const CAR_INSURANCE_CONTACTS = [
+  { name: '삼성화재', phone: '1588-5114' },
+  { name: '현대해상', phone: '1588-5656' },
+  { name: 'DB손해보험', phone: '1588-0100' },
+  { name: 'KB손해보험', phone: '1544-0114' },
+  { name: '메리츠화재', phone: '1566-7711' },
+  { name: '한화손해보험', phone: '1566-8000' },
+  { name: '롯데손해보험', phone: '1588-3344' },
+  { name: '흥국화재', phone: '1688-1688' },
+  { name: 'AXA손해보험', phone: '1566-1566' },
+  { name: '캐롯손해보험', phone: '1566-0300' },
+  { name: '하나손해보험', phone: '1566-3000' }
+];
 const PROMO_CAROUSEL_DETAILS = {
   rider: {
     title: '배송기사님 상시모집',
@@ -2154,6 +2182,91 @@ function openChakBenefitGuide() {
     </div>
   </div>`);
 }
+function openHolidayMedicalGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide medical-gateway-guide">
+    <span class="yeosu-life-modal-kicker">보건복지부 공식정보</span>
+    <h2 id="modalTitle">문 여는 병원·약국 찾기</h2>
+    <p class="local-gateway-lead">명절·공휴일·야간에 운영하는 병원과 약국을 E-Gen에서 지역과 날짜로 검색할 수 있습니다.</p>
+    <div class="medical-safety-note"><b>응급상황은 119</b><span>운영시간은 바뀔 수 있으니 방문 전에 의료기관에 전화로 확인하세요.</span></div>
+    <button class="local-gateway-primary" type="button" data-life-url="${EGEN_HOLIDAY_MEDICAL_URL}">E-Gen에서 병원·약국 찾기</button>
+    <p class="local-gateway-source">출처: 보건복지부 응급의료포털 E-Gen</p>
+  </div>`);
+}
+function openPublicToiletGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide public-toilet-guide">
+    <span class="yeosu-life-modal-kicker">현재 위치 주변에서</span>
+    <h2 id="modalTitle">가까운 공중화장실 찾기</h2>
+    <p class="local-gateway-lead">지도 앱에서 현재 위치 주변의 공중화장실을 빠르게 검색합니다.</p>
+    <div class="directory-location-note"><b>위치 권한을 허용해 주세요</b><span>개방시간과 실제 이용 가능 여부는 현장 상황에 따라 달라질 수 있습니다.</span></div>
+    <button class="local-gateway-primary toilet" type="button" data-life-url="${LOCAL_INFO_LINKS[0].url}">지도에서 주변 화장실 찾기</button>
+    <p class="local-gateway-source">행정안전부 생활안전지도 공중화장실 데이터와 지도 검색 결과를 참고해 이용하세요.</p>
+  </div>`);
+}
+function openYeosuGageGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide yeosu-gage-guide">
+    <span class="yeosu-life-modal-kicker">여수 지역상권 서비스</span>
+    <h2 id="modalTitle">여수가게</h2>
+    <p class="local-gateway-lead">여수 지역의 음식점뿐 아니라 숙박·미용·특산품·교육·수리 등 다양한 업체를 찾아볼 수 있습니다.</p>
+    <div class="service-relationship-note"><b>서비스는 따로, 이동은 편하게</b><span>여수맛지도는 음식점·메뉴·주문방법을 안내하고, 여수가게는 지역 소상공인 업체 정보를 폭넓게 제공합니다.</span></div>
+    <button class="local-gateway-primary merchant" type="button" data-life-url="${YEOSU_GAGE_URL}">여수가게 둘러보기</button>
+    <p class="local-gateway-source">여수가게는 여수맛지도와 별도로 운영되는 지역상권 서비스입니다.</p>
+  </div>`);
+}
+function lifeDirectoryMarkup(items) {
+  return `<div class="life-directory-list">${items.map(item => `<button type="button" data-life-url="${escapeHtml(item.url)}"><span><b>${escapeHtml(item.name)}</b><small>${escapeHtml(item.description)}</small></span><i aria-hidden="true">›</i></button>`).join('')}</div>`;
+}
+function openUsedMarketGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide used-market-guide">
+    <span class="yeosu-life-modal-kicker">중고거래 바로가기</span>
+    <h2 id="modalTitle">중고거래 모아보기</h2>
+    <p class="local-gateway-lead">자주 쓰는 중고거래 서비스를 한곳에서 선택할 수 있습니다.</p>
+    ${lifeDirectoryMarkup(USED_MARKET_LINKS)}
+    <div class="directory-safety-note"><b>거래 전 꼭 확인하세요</b><span>선입금 요구와 외부 메신저 유도에 주의하고, 가능하면 플랫폼 안전결제와 사람이 많은 장소의 직거래를 이용하세요.</span></div>
+    <p class="local-gateway-source">각 서비스는 여수맛지도와 별도로 운영되며 링크 제공은 제휴를 의미하지 않습니다.</p>
+  </div>`);
+}
+function openLocalNewsGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide local-news-guide">
+    <span class="yeosu-life-modal-kicker">여수 생활정보 한곳에서</span>
+    <h2 id="modalTitle">지역신문·생활정보</h2>
+    <p class="local-gateway-lead">지역 일자리·부동산·중고차·시정소식과 지역뉴스를 필요한 곳에서 바로 확인하세요.</p>
+    ${lifeDirectoryMarkup(LOCAL_INFO_LINKS)}
+    <div class="directory-location-note"><b>공중화장실 이용 전 확인</b><span>지도 앱의 위치 권한을 허용하면 주변 검색이 편리합니다. 개방시간과 실제 이용 가능 여부는 현장에서 다시 확인하세요.</span></div>
+    <p class="local-gateway-source">정보의 작성·수정 책임은 각 외부 매체에 있으며, 중요한 내용은 해당 원문에서 최종 확인하세요.</p>
+  </div>`);
+}
+function carInsuranceContactsMarkup() {
+  return `<div class="insurance-contact-list">${CAR_INSURANCE_CONTACTS.map(item => `<a href="tel:${escapeHtml(item.phone.replace(/-/g, ''))}" aria-label="${escapeHtml(item.name)} 자동차 사고접수 ${escapeHtml(item.phone)} 전화"><span><b>${escapeHtml(item.name)}</b><small>자동차 사고접수·긴급출동</small></span><strong>${escapeHtml(item.phone)}</strong><i aria-hidden="true">전화</i></a>`).join('')}</div>`;
+}
+function openCarAccidentGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide car-accident-guide">
+    <span class="yeosu-life-modal-kicker">자동차 사고 긴급연락</span>
+    <h2 id="modalTitle">사고가 났을 때 바로 전화</h2>
+    <p class="local-gateway-lead">다친 사람이 있거나 도로 위 위험이 크면 보험사보다 먼저 112 또는 119에 신고하세요.</p>
+    <div class="emergency-call-grid">
+      <a href="tel:112" aria-label="경찰 112 전화"><small>교통사고 신고</small><b>경찰 112</b><span>전화</span></a>
+      <a href="tel:119" aria-label="소방 구급 119 전화"><small>부상자·화재·구급</small><b>소방 119</b><span>전화</span></a>
+    </div>
+    <div class="car-accident-first-note"><b>먼저 안전을 확보하세요</b><span>비상등을 켜고 가능한 경우 안전한 곳으로 이동한 뒤, 사고 현장과 차량·번호판을 촬영하고 가입 보험사에 접수하세요.</span></div>
+    <h3 class="insurance-contact-title">가입 보험사 선택</h3>
+    ${carInsuranceContactsMarkup()}
+    <p class="local-gateway-source">각 보험사 공식 고객센터에서 2026.09.24 확인했습니다. 번호가 변경될 수 있으므로 통화 연결 시 보험사 안내를 다시 확인하세요.</p>
+  </div>`);
+}
+function openYeosuLifeHub() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide yeosu-life-hub">
+    <span class="yeosu-life-modal-kicker">필요한 정보만 빠르게</span>
+    <h2 id="modalTitle">여수생활 전체보기</h2>
+    <p class="local-gateway-lead">자주 쓰는 여수 생활정보를 분야별로 정리했습니다.</p>
+    <div class="life-hub-grid">
+      <button type="button" data-life-gateway="used-market"><span class="life-hub-icon" aria-hidden="true">거래</span><b>중고거래</b><small>당근·번개장터·중고나라</small></button>
+      <button type="button" data-life-gateway="local-news"><span class="life-hub-icon" aria-hidden="true">소식</span><b>지역신문·생활정보</b><small>까치정보·교차로·지역뉴스</small></button>
+      <button type="button" data-open-chak-benefit><span class="life-hub-icon" aria-hidden="true">혜택</span><b>섬섬여수페이</b><small>충전·사용법·현재 혜택</small></button>
+      <button type="button" data-life-filter="전체"><span class="life-hub-icon" aria-hidden="true">오늘</span><b>오늘의 여수소식</b><small>행사·모집·교통·뉴스</small></button>
+    </div>
+    <p class="local-gateway-source">외부 서비스와 공공정보는 출처를 구분해 안내합니다.</p>
+  </div>`);
+}
 function openNotifications() {
   const lifeMarkup = ACTIVE_REGION.code === 'yeosu' ? `<section class="notice-life-group"><h3>여수생활정보</h3><button type="button" data-open-chak-benefit><b>💳 섬섬여수페이 특별혜택</b><small>CHAK 사용법과 현재 할인 확인</small></button><button type="button" data-life-item="mukkebi-island-coupon"><b>🍽️ 먹깨비 5천 원 할인</b><small>9월 1일~10월 31일 · 매일 선착순</small></button><button type="button" data-life-filter="전체"><b>📍 여수생활정보 전체 보기</b><small>혜택·행사·모집·교통·뉴스</small></button></section>` : '';
   openModal(`<div class="notification-center"><h2 id="modalTitle">알림</h2>${lifeMarkup}<section class="notice-promo-group"><h3>대동소식</h3><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div></section></div>`);
@@ -2893,6 +3006,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lifeFilter=event.target.closest('[data-life-filter]');if(lifeFilter){openYeosuLifeNews(lifeFilter.dataset.lifeFilter);return;}
     const lifeItem=event.target.closest('[data-life-item]');if(lifeItem){openYeosuLifeItem(lifeItem.dataset.lifeItem);return;}
     if(event.target.closest('[data-open-chak-benefit]')){openChakBenefitGuide();return;}
+    const lifeGateway=event.target.closest('[data-life-gateway]');if(lifeGateway){if(lifeGateway.dataset.lifeGateway==='used-market')openUsedMarketGuide();if(lifeGateway.dataset.lifeGateway==='local-news')openLocalNewsGuide();return;}
     const lifeUrl=event.target.closest('[data-life-url]');if(lifeUrl){try{const url=new URL(lifeUrl.dataset.lifeUrl,location.href);if(url.protocol==='https:')location.assign(url.href);}catch(error){console.warn('Invalid Yeosu life information URL',error);}return;}
     const noticePromo=event.target.closest('[data-notice-promo]');if(noticePromo){openPromoCarouselDetail(noticePromo.dataset.noticePromo);return;}
     const feedbackRetry=event.target.closest('[data-feedback-retry]');if(feedbackRetry){const report=feedbackQueue().find(item=>item.reportId===feedbackRetry.dataset.feedbackRetry);if(!report)return;feedbackRetry.disabled=true;feedbackRetry.textContent='다시 보내는 중…';deliverFeedbackReport(report).then(()=>feedbackSuccessModal(report)).catch(error=>feedbackFailureModal(report,error instanceof Error?error.message:'수정 요청을 접수하지 못했습니다.'));return;}
@@ -2902,8 +3016,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) { window.daedongConfirmIntentionalStoreOpen?.(); openStore(store); } });
   $('#noticeBtn').addEventListener('click', openNotifications);
-  $('#yeosuLifeMoreBtn')?.addEventListener('click', () => openYeosuLifeNews('전체'));
+  $('#yeosuLifeMoreBtn')?.addEventListener('click', openYeosuLifeHub);
   $('#chakBenefitBtn')?.addEventListener('click', openChakBenefitGuide);
+  $('#holidayMedicalBtn')?.addEventListener('click', openHolidayMedicalGuide);
+  $('#yeosuGageBtn')?.addEventListener('click', openYeosuGageGuide);
+  $('#publicToiletBtn')?.addEventListener('click', openPublicToiletGuide);
+  $('#carAccidentBtn')?.addEventListener('click', openCarAccidentGuide);
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
     $$('.bottom-nav button').forEach(item => item.classList.remove('active')); button.classList.add('active');
