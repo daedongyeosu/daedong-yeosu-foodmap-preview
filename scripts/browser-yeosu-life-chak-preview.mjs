@@ -31,7 +31,7 @@ const homeAudit = await page.evaluate(() => ({
 }));
 if (homeAudit.viewport.join('x') !== '390x844') throw new Error(`unexpected viewport ${homeAudit.viewport.join('x')}`);
 if (/CHAK|섬섬여수페이/.test(homeAudit.orderText)) throw new Error('CHAK leaked into order methods');
-if (homeAudit.gatewayCount !== 4) throw new Error(`expected 4 life gateways, got ${homeAudit.gatewayCount}`);
+if (homeAudit.gatewayCount !== 5) throw new Error(`expected 5 life gateways, got ${homeAudit.gatewayCount}`);
 if (homeAudit.highlightCount !== 3) throw new Error(`expected 3 highlights, got ${homeAudit.highlightCount}`);
 if (homeAudit.sectionWidth > 390 || homeAudit.horizontalOverflow) throw new Error('mobile horizontal overflow detected');
 
@@ -82,6 +82,17 @@ for (const text of ['주변 공중화장실', '여수까치정보', '여수교�
 }
 if (await localNewsModal.locator('[data-life-url]').count() !== 6) throw new Error('local information links missing');
 await page.screenshot({path: 'artifacts/local-news-guide-390x844.png', fullPage: false});
+await page.locator('.modal-close').click();
+
+await page.locator('#carAccidentBtn').click();
+const carAccidentModal = page.locator('#modal:not([hidden]) .car-accident-guide');
+await carAccidentModal.waitFor({state: 'visible'});
+const carAccidentText = await carAccidentModal.innerText();
+for (const text of ['경찰 112', '소방 119', '삼성화재', '현대해상', 'DB손해보험', 'KB손해보험', '캐롯손해보험', '하나손해보험']) {
+  if (!carAccidentText.includes(text)) throw new Error(`missing car accident contact: ${text}`);
+}
+if (await carAccidentModal.locator('a[href^="tel:"]').count() !== 13) throw new Error('car accident phone links missing');
+await page.screenshot({path: 'artifacts/car-accident-guide-390x844.png', fullPage: false});
 await page.locator('.modal-close').click();
 
 await page.locator('#chakBenefitBtn').click();

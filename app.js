@@ -583,6 +583,19 @@ const LOCAL_INFO_LINKS = [
   { name: '여수시청', description: '공지·행사·채용 등 공식 시정소식', url: 'https://www.yeosu.go.kr/www/' },
   { name: '여수MBC', description: '여수·순천·광양 지역 뉴스', url: 'https://ysmbc.co.kr/' }
 ];
+const CAR_INSURANCE_CONTACTS = [
+  { name: '삼성화재', phone: '1588-5114' },
+  { name: '현대해상', phone: '1588-5656' },
+  { name: 'DB손해보험', phone: '1588-0100' },
+  { name: 'KB손해보험', phone: '1544-0114' },
+  { name: '메리츠화재', phone: '1566-7711' },
+  { name: '한화손해보험', phone: '1566-8000' },
+  { name: '롯데손해보험', phone: '1588-3344' },
+  { name: '흥국화재', phone: '1688-1688' },
+  { name: 'AXA손해보험', phone: '1566-1566' },
+  { name: '캐롯손해보험', phone: '1566-0300' },
+  { name: '하나손해보험', phone: '1566-3000' }
+];
 const PROMO_CAROUSEL_DETAILS = {
   rider: {
     title: '배송기사님 상시모집',
@@ -2195,6 +2208,24 @@ function openLocalNewsGuide() {
     <p class="local-gateway-source">정보의 작성·수정 책임은 각 외부 매체에 있으며, 중요한 내용은 해당 원문에서 최종 확인하세요.</p>
   </div>`);
 }
+function carInsuranceContactsMarkup() {
+  return `<div class="insurance-contact-list">${CAR_INSURANCE_CONTACTS.map(item => `<a href="tel:${escapeHtml(item.phone.replace(/-/g, ''))}" aria-label="${escapeHtml(item.name)} 자동차 사고접수 ${escapeHtml(item.phone)} 전화"><span><b>${escapeHtml(item.name)}</b><small>자동차 사고접수·긴급출동</small></span><strong>${escapeHtml(item.phone)}</strong><i aria-hidden="true">전화</i></a>`).join('')}</div>`;
+}
+function openCarAccidentGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide car-accident-guide">
+    <span class="yeosu-life-modal-kicker">자동차 사고 긴급연락</span>
+    <h2 id="modalTitle">사고가 났을 때 바로 전화</h2>
+    <p class="local-gateway-lead">다친 사람이 있거나 도로 위 위험이 크면 보험사보다 먼저 112 또는 119에 신고하세요.</p>
+    <div class="emergency-call-grid">
+      <a href="tel:112" aria-label="경찰 112 전화"><small>교통사고 신고</small><b>경찰 112</b><span>전화</span></a>
+      <a href="tel:119" aria-label="소방 구급 119 전화"><small>부상자·화재·구급</small><b>소방 119</b><span>전화</span></a>
+    </div>
+    <div class="car-accident-first-note"><b>먼저 안전을 확보하세요</b><span>비상등을 켜고 가능한 경우 안전한 곳으로 이동한 뒤, 사고 현장과 차량·번호판을 촬영하고 가입 보험사에 접수하세요.</span></div>
+    <h3 class="insurance-contact-title">가입 보험사 선택</h3>
+    ${carInsuranceContactsMarkup()}
+    <p class="local-gateway-source">각 보험사 공식 고객센터에서 2026.09.24 확인했습니다. 번호가 변경될 수 있으므로 통화 연결 시 보험사 안내를 다시 확인하세요.</p>
+  </div>`);
+}
 function openNotifications() {
   const lifeMarkup = ACTIVE_REGION.code === 'yeosu' ? `<section class="notice-life-group"><h3>여수생활정보</h3><button type="button" data-open-chak-benefit><b>💳 섬섬여수페이 특별혜택</b><small>CHAK 사용법과 현재 할인 확인</small></button><button type="button" data-life-item="mukkebi-island-coupon"><b>🍽️ 먹깨비 5천 원 할인</b><small>9월 1일~10월 31일 · 매일 선착순</small></button><button type="button" data-life-filter="전체"><b>📍 여수생활정보 전체 보기</b><small>혜택·행사·모집·교통·뉴스</small></button></section>` : '';
   openModal(`<div class="notification-center"><h2 id="modalTitle">알림</h2>${lifeMarkup}<section class="notice-promo-group"><h3>대동소식</h3><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div></section></div>`);
@@ -2949,6 +2980,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#yeosuGageBtn')?.addEventListener('click', openYeosuGageGuide);
   $('#usedMarketBtn')?.addEventListener('click', openUsedMarketGuide);
   $('#localNewsBtn')?.addEventListener('click', openLocalNewsGuide);
+  $('#carAccidentBtn')?.addEventListener('click', openCarAccidentGuide);
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
     $$('.bottom-nav button').forEach(item => item.classList.remove('active')); button.classList.add('active');
