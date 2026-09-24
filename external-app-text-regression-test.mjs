@@ -8,7 +8,7 @@ const finalExperience = read('./final-experience.js');
 const rc2 = read('./rc2-fixes.js');
 const rc3 = read('./rc3-fixes.js');
 
-const notice = '앱 이름은 주문 경로 안내를 위해 표시되며, 대동맵과 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
+const notice = '앱 이름은 주문 경로 안내를 위해 표시되며, 여수맛지도와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
 const externalAssets = [
   'assets/yogiyo.jpg',
   'assets/coupang-eats.jpg',

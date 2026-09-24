@@ -6,7 +6,7 @@ import fs from 'node:fs';
 const previous = {
   "storeId": "e57c51a4f6294349",
   "slug": "collected-e57c51a4f6294349",
-  "label": "계근상 여수본점(문수동) 전용 대동여수음식지도",
+  "label": "계근상 여수본점(문수동) 전용 여수맛지도",
   "title": "계근상 여수본점(문수동)",
   "meta": "가게 정보와 주문방법",
   "slides": [

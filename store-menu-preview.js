@@ -21,7 +21,7 @@
   const menuImageTasks = new Map();
   const MENU_IMAGE_RETRY_DELAYS = [500, 1500];
   const MAX_CONCURRENT_MENU_IMAGE_LOADS = 2;
-  const OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets/app-icons/daedong-app-icon-512.png?v=daedongmap-brand-20260922-2';
+  const OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets/app-icons/daedong-app-icon-512.png?v=yeosu-taste-map-20260924-preview-1';
   const MENU_PREFIX_PRICE_PATTERN = /(?:가격\s*[:：]?\s*)?(?:₩|\$|krw|usd)\s*(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:\s*(?:원|krw|usd))?/giu;
   const MENU_SUFFIX_PRICE_PATTERN = /(?:가격\s*[:：]?\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?\s*(?:원|₩|krw|usd)(?:\s*[~～~-]\s*(?:(?:₩|\$|krw|usd)\s*)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?\s*(?:원|₩|krw|usd)?)?/giu;
   const MENU_BARE_PRICE_PATTERN = /^(?:가격\s*[:：]?\s*)?(?:\d{1,3}(?:,\d{3})+|\d{4,6})$/u;
@@ -908,7 +908,7 @@
           <section class="store-menu-hero">
             <img src="${escapeMenuHtml(heroImage)}" alt="${escapeMenuHtml(menu.displayName)}" fetchpriority="high" data-photo-kind="detail" data-photo-crop-audit="yogiyo-menu" data-photo-store-id="${escapeMenuHtml(store.id)}">
             <div>
-              <span>${escapeMenuHtml(window.DAEDONG_REGION?.mapName || '대동맵')} · 음식 미리보기</span>
+              <span>${escapeMenuHtml(window.DAEDONG_REGION?.mapName || '여수맛지도')} · 음식 미리보기</span>
               <p>${featuredCategories.map(escapeMenuHtml).join(' · ')}</p>
               <h1 id="storeMenuTitle">${escapeMenuHtml(menu.displayName)}</h1>
               <p>주문방법을 고르기 전에 사진과 설명으로 메뉴를 먼저 살펴보세요.</p>

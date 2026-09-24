@@ -341,7 +341,7 @@ function installDaedongTapAction({selector, activate}) {
 if (typeof window !== 'undefined') window.installDaedongTapAction = installDaedongTapAction;
 
 const ASSET_VERSION = 'phone-route-restoration-1';
-const ACTIVE_REGION = (typeof window !== 'undefined' && window.DAEDONG_REGION) || Object.freeze({code:'yeosu',shortName:'여수',cityName:'여수시',mapName:'대동여수음식지도',defaultArea:'여수시 전체',neighborhoodUrl:'data/yeosu-neighborhoods.json',storageKey:key=>key});
+const ACTIVE_REGION = (typeof window !== 'undefined' && window.DAEDONG_REGION) || Object.freeze({code:'yeosu',shortName:'여수',cityName:'여수시',mapName:'여수맛지도',defaultArea:'여수시 전체',neighborhoodUrl:'data/yeosu-neighborhoods.json',storageKey:key=>key});
 const REGION_SHORT_NAME = ACTIVE_REGION.shortName;
 const REGION_CITY_NAME = ACTIVE_REGION.cityName;
 const REGION_MAP_NAME = ACTIVE_REGION.mapName;
@@ -432,7 +432,7 @@ const GLOBAL_EXTERNAL_APPS = {
   coupang: {label: '쿠팡이츠'},
   baemin: {label: '배달의민족'}
 };
-const EXTERNAL_APP_NOTICE_TEXT = '앱 이름은 주문 경로 안내를 위해 표시되며, 대동맵과 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
+const EXTERNAL_APP_NOTICE_TEXT = '앱 이름은 주문 경로 안내를 위해 표시되며, 여수맛지도와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.';
 
 function markExternalAppDeparture() {
   const payload = JSON.stringify({savedAt: Date.now()});
@@ -542,7 +542,7 @@ const YEOSU_LIFE_NEWS = [
     title: '여수시 모집·공고 한곳에서 확인',
     summary: '시민 참여, 지원사업, 채용과 각종 접수 공고를 여수시 원문에서 확인합니다.',
     detail: '모집 공고는 접수기간이 짧거나 조기 마감될 수 있어 공식 게시일과 마감일을 먼저 확인하는 것이 좋습니다.',
-    warning: '대동여수음식지도는 핵심 내용을 요약하며 신청은 반드시 여수시 공식 원문을 기준으로 진행하세요.',
+    warning: '여수맛지도는 핵심 내용을 요약하며 신청은 반드시 여수시 공식 원문을 기준으로 진행하세요.',
     source: '여수시청 고시공고', verified: '2026.09.04 확인',
     url: 'https://www.yeosu.go.kr/www/govt/news/notify/new_notify'
   },
@@ -559,7 +559,7 @@ const YEOSU_LIFE_NEWS = [
     id: 'yeosu-official-news', category: '뉴스', icon: '📰', period: '매일 확인',
     title: '여수시 인터넷신문 거북선여수',
     summary: '여수시 정책, 시민 혜택과 지역 현장 소식을 공식 인터넷신문에서 확인하세요.',
-    detail: '대동여수음식지도에서는 시민 생활과 관련이 큰 제목과 짧은 요약만 보여주고, 전체 내용은 원문으로 연결하는 방식입니다.',
+    detail: '여수맛지도에서는 시민 생활과 관련이 큰 제목과 짧은 요약만 보여주고, 전체 내용은 원문으로 연결하는 방식입니다.',
     warning: '기사 전체 내용과 변경 사항은 여수시청 원문을 기준으로 확인하세요.',
     source: '여수시청 거북선여수', verified: '2026.09.04 확인',
     url: 'https://news.yeosu.go.kr/'
@@ -607,7 +607,7 @@ const PROMO_CAROUSEL_DETAILS = {
   },
   store: {
     image: 'assets/promos/merchant-recruitment-portrait-v2.webp',
-    imageAlt: '대동여수음식지도 꼬르륵 배달대행 가맹점 모집 안내',
+    imageAlt: '여수맛지도 꼬르륵 배달대행 가맹점 모집 안내',
     imageWidth: 853,
     imageHeight: 1844,
     imageOnly: true
@@ -2143,7 +2143,7 @@ function openYeosuLifeNews(category = '전체') {
     <p class="yeosu-life-modal-lead">생활에 필요한 핵심만 짧게 정리하고 원문을 함께 연결합니다.</p>
     <div class="yeosu-life-tabs" role="tablist" aria-label="여수생활정보 분류">${YEOSU_LIFE_CATEGORIES.map(name => `<button type="button" role="tab" aria-selected="${String(name === selected)}" class="${name === selected ? 'active' : ''}" data-life-filter="${escapeHtml(name)}">${escapeHtml(name)}</button>`).join('')}</div>
     <div class="life-news-list">${items.length ? items.map(lifeNewsCardMarkup).join('') : '<p class="life-news-empty">현재 확인된 소식이 없습니다.</p>'}</div>
-    <p class="yeosu-life-disclaimer">대동여수음식지도는 내용을 쉽게 요약해 안내합니다. 신청·결제·예약 전에는 각 기관의 공식 원문에서 최신 내용을 확인해 주세요.</p>
+    <p class="yeosu-life-disclaimer">여수맛지도는 내용을 쉽게 요약해 안내합니다. 신청·결제·예약 전에는 각 기관의 공식 원문에서 최신 내용을 확인해 주세요.</p>
   </div>`);
 }
 function openYeosuLifeItem(id) {
@@ -2268,7 +2268,7 @@ function appIcon(key, cls = '') {
   return `<span class="${cls} miniemoji">${meta.icon}</span>`;
 }
 function externalAppNoticeMarkup() {
-  const text = REGION_MAP_NAME === '대동여수음식지도'
+  const text = REGION_MAP_NAME === '여수맛지도'
     ? EXTERNAL_APP_NOTICE_TEXT
     : `앱 이름은 주문 경로 안내를 위해 표시되며, ${REGION_MAP_NAME}와 해당 앱의 공식 제휴·후원을 의미하지 않습니다.`;
   return `<p class="external-app-notice" role="note"><span aria-hidden="true">ⓘ</span><span>${escapeHtml(text)}</span></p>`;
@@ -2470,7 +2470,7 @@ function guide() {
   openModal(`<h2 id="modalTitle">원하는 방법으로 편하게 주문하세요</h2><p>가게마다 이용 가능한 주문방법을 한눈에 확인할 수 있습니다. 가게를 먼저 선택한 뒤 원하는 경로를 확인해 주세요.</p>`);
 }
 function adInquiryModal() {
-  openModal(`<h2 id="modalTitle">광고 문의</h2><p>대동여수음식지도 광고·가게정보 문의는 아래 연락처로 보내 주세요. 전화를 누르면 발신 전 확인 화면만 열립니다.</p><div class="my-list"><a class="detail-route" href="tel:01047977803"><span>전화 문의</span><b>010-4797-7803</b></a><a class="detail-route" href="mailto:sisakim@naver.com"><span>이메일 문의</span><b>sisakim@naver.com</b></a></div>`);
+  openModal(`<h2 id="modalTitle">광고 문의</h2><p>여수맛지도 광고·가게정보 문의는 아래 연락처로 보내 주세요. 전화를 누르면 발신 전 확인 화면만 열립니다.</p><div class="my-list"><a class="detail-route" href="tel:01047977803"><span>전화 문의</span><b>010-4797-7803</b></a><a class="detail-route" href="mailto:sisakim@naver.com"><span>이메일 문의</span><b>sisakim@naver.com</b></a></div>`);
 }
 function appBrowserPhoto(store) {
   const photo = photoResolver.resolve(store);

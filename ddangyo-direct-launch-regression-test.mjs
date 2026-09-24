@@ -14,7 +14,7 @@ assert.match(finalExperience, /if\(key==='ddangyo'\)await openDdangyoRoute\(href
 
 assert.match(help, /Play 스토어는 고객님이 직접 선택할 때만 열립니다/);
 assert.match(help, /땡겨요 앱 다시 열기/);
-assert.match(help, /대동여수음식지도로 돌아가기/);
+assert.match(help, /여수맛지도로 돌아가기/);
 assert.doesNotMatch(help, /setTimeout\s*\(/);
 
 console.log('ddangyo-direct-launch-regression: PASS');

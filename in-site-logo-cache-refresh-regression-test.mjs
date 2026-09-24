@@ -7,24 +7,22 @@ const privacyHtml = fs.readFileSync('privacy/index.html', 'utf8');
 const shareUi = fs.readFileSync('final-experience.js', 'utf8');
 const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
-const version = 'daedongmap-brand-20260922-2';
-const svgUrl = `app-icon.svg?v=${version}`;
+const version = 'yeosu-taste-map-20260924-preview-1';
 const png192Url = `assets/app-icons/daedong-app-icon-192.png?v=${version}`;
 const png512Url = `assets/app-icons/daedong-app-icon-512.png?v=${version}`;
-const shareImageUrl = 'assets/brand/daedongmap-share-1200x630.png';
+const shareImageUrl = 'assets/brand/yeosu-taste-map-share-1200x630.png';
 
-assert.ok(html.includes('src="assets/brand/daedongmap-logo.svg?v=daedongmap-brand-20260922-2"'), '메인 화면 로고는 버전이 지정된 공식 통합 SVG여야 합니다.');
-assert.ok(html.includes(`href="/${svgUrl}"`), '브라우저 아이콘도 같은 버전의 공식 SVG여야 합니다.');
+assert.ok(html.includes('src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1"'), '메인 화면 로고는 버전이 지정된 공식 통합 PNG여야 합니다.');
+assert.ok(html.includes(`rel="icon" href="/${png192Url}"`), '브라우저 아이콘도 같은 버전의 공식 앱 아이콘이어야 합니다.');
 assert.ok(html.includes(`href="/${png192Url}"`), '홈 화면용 터치 아이콘은 공식 앱 아이콘이어야 합니다.');
-assert.ok(html.includes(`https://daedongmap.com/${shareImageUrl}`), '공유 미리보기는 새 대동맵 통합 로고여야 합니다.');
-assert.ok(reviewHtml.includes('href="/app-icon.svg?v=daedongmap-brand-20260922-2"'), '검수 화면 아이콘도 같은 app-icon.svg를 사용해야 합니다.');
-assert.ok(privacyHtml.includes('src="../app-icon.svg?v=daedongmap-brand-20260922-2"'), '개인정보 화면도 같은 app-icon.svg를 사용해야 합니다.');
-assert.ok(shareUi.includes(shareImageUrl), '사이트 안 공유창의 대체 로고도 새 대동맵 로고여야 합니다.');
+assert.ok(html.includes(`https://daedongmap.com/${shareImageUrl}`), '공유 미리보기는 새 여수맛지도 통합 로고여야 합니다.');
+assert.ok(reviewHtml.includes(`href="/${png192Url}"`), '검수 화면도 같은 공식 앱 아이콘을 사용해야 합니다.');
+assert.ok(privacyHtml.includes(`src="../${png192Url}"`), '개인정보 화면도 같은 공식 앱 아이콘을 사용해야 합니다.');
+assert.ok(shareUi.includes(shareImageUrl), '사이트 안 공유창의 대체 로고도 새 여수맛지도 로고여야 합니다.');
 assert.ok(serviceWorker.includes(`'/${shareImageUrl}'`), '새 공유 이미지 주소를 앱 셸에 저장해야 합니다.');
 assert.doesNotMatch(shareUi, /assets\/logo\.png/, '사이트 안 공유창이 예전 로고를 사용하면 안 됩니다.');
-assert.ok(serviceWorker.includes(`'/${svgUrl}'`), '새 공식 로고 URL을 앱 셸에 저장해야 합니다.');
 assert.ok(serviceWorker.includes(`'/${png192Url}'`), '새 터치 아이콘 URL을 앱 셸에 저장해야 합니다.');
 assert.ok(serviceWorker.includes(`'/${png512Url}'`), '새 앱 아이콘 URL을 앱 셸에 저장해야 합니다.');
-assert.doesNotMatch(serviceWorker, /'\/app-icon\.svg'/, '서비스 워커가 무버전 로고를 계속 캐시하면 안 됩니다.');
+assert.doesNotMatch(serviceWorker, /app-icon\.svg/, '서비스 워커가 예전 SVG 아이콘을 계속 캐시하면 안 됩니다.');
 
 console.log('In-site official logo cache refresh regression: PASS');

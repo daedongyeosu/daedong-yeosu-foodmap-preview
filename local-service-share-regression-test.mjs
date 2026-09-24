@@ -27,7 +27,7 @@ const shared = setup({navigator: {share: async payload => { sent.push(payload); 
 await shared.click('share');
 assert.equal(sent.length, 1);
 assert.equal(sent[0].url, 'https://preview.daedongmap.com/services/?ad=coway-leehyangmi');
-assert.match(sent[0].title, /코웨이.*이향미.*대동여수음식지도/);
+assert.match(sent[0].title, /코웨이.*이향미.*여수맛지도/);
 assert.doesNotMatch(sent[0].url, /token|store=/);
 assert.match(shared.status.textContent, /공유 창/);
 
@@ -54,11 +54,11 @@ assert.doesNotMatch(rejected.status.textContent, /복사했습니다/);
 for (const id of ['hyundai-sinwansu', 'coway-leehyangmi']) {
   const direct = setup({standalone: true, id});
   assert.match(direct.page.innerHTML, new RegExp(`data-service-detail="${id}"`));
-  assert.match(direct.document.title, /대동여수음식지도/);
+  assert.match(direct.document.title, /여수맛지도/);
   const markup = direct.api.detail(id);
   assert.equal((markup.match(/data-local-service-share=/g) || []).length, 2);
   assert.ok(markup.indexOf('data-service-share-box') < markup.indexOf('<h2'), 'Sharing must be visible before the long brochure');
-  assert.match(markup, /대동여수음식지도 둘러보기/);
+  assert.match(markup, /여수맛지도 둘러보기/);
   assert.match(markup, /readonly hidden aria-label="복사할 광고 전용 링크"/);
   assert.equal((direct.api.card(direct.api.advertisers.findIndex(x => x.id === id)).match(/data-local-service-share=/g) || []).length, 1, 'Compact feed keeps one share action; detail retains share and copy');
 }

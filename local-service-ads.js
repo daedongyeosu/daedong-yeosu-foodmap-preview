@@ -44,7 +44,7 @@
       <div class="local-service-share-buttons"><button type="button" data-local-service-share="${ad.id}" data-share-action="share" aria-label="${escape(ad.brand + ' ' + ad.person)} 광고 공유하기">${compact ? '공유 ↗' : '이 광고 공유하기 ↗'}</button>${compact ? '' : `<button type="button" data-local-service-share="${ad.id}" data-share-action="copy">링크 복사</button>`}</div>
       <p class="local-service-share-status" role="status" aria-live="polite"></p>
       <input class="local-service-share-url" type="text" readonly hidden aria-label="복사할 광고 전용 링크" value="${escape(shareUrl(ad.id))}">
-      ${compact ? '' : '<a class="local-service-map-link" href="/">대동여수음식지도 둘러보기 →</a>'}
+      ${compact ? '' : '<a class="local-service-map-link" href="/">여수맛지도 둘러보기 →</a>'}
     </div>`;
   }
   async function shareAdvertisement(button) {
@@ -59,7 +59,7 @@
     message('');
     if (button.dataset.shareAction === 'share' && typeof navigator.share === 'function') {
       try {
-        await navigator.share({title: `${ad.brand} · ${ad.person} | 대동여수음식지도`, text: `${ad.title} 안내와 담당자 연락처를 확인하세요.`, url});
+        await navigator.share({title: `${ad.brand} · ${ad.person} | 여수맛지도`, text: `${ad.title} 안내와 담당자 연락처를 확인하세요.`, url});
         message('공유 창에서 선택을 마쳤습니다.');
         return;
       } catch (error) {
@@ -103,7 +103,7 @@
   }
   function inquiry() {
     // Keep previously shared URLs usable without publishing the owner's contacts.
-    return `<section class="local-service-detail local-service-inquiry"><span class="local-service-kicker">대동여수음식지도</span><h2 id="modalTitle">광고 게재 안내</h2><p class="local-service-lead">광고 게재 안내를 준비하고 있습니다.</p><a href="/services/">생활서비스 전체 보기</a></section>`;
+    return `<section class="local-service-detail local-service-inquiry"><span class="local-service-kicker">여수맛지도</span><h2 id="modalTitle">광고 게재 안내</h2><p class="local-service-lead">광고 게재 안내를 준비하고 있습니다.</p><a href="/services/">생활서비스 전체 보기</a></section>`;
   }
   // Four responsive, always-visible sheets. Live text stays sharp at any zoom;
   // the supplied raster is used only for the cover artwork, never for body text.
@@ -151,7 +151,7 @@
           <h4>기존 보험을 바꾸기 전 확인하세요</h4><p>기존 계약을 해지하고 새로 가입하면 가입 거절, 보험료 인상 또는 보장 내용 변경 등이 생길 수 있습니다. 기존 계약과 새 계약의 조건을 먼저 비교하세요.</p>
           <h4>청약철회·계약취소 등 권리</h4><p>청약철회, 약관·청약서 부본 교부, 설명의무, 계약취소 및 위법계약 해지 등에 관한 내용은 계약서류에서 확인하세요. 적용 기간과 예외가 있으므로 담당자에게 설명을 요청할 수 있습니다.</p>
           <h4>보험료 납입·예금자보호</h4><p>보험료 연체로 계약이 해지될 수 있으니 납입 기일을 확인하세요. 예금자보호의 대상·한도·제외조건 및 보험계약 관련 상세 안내는 가입 시 제공되는 상품설명서에서 확인하세요.</p>
-          <p class="insurance-caution">담당자 제공 전단 4장의 구성을 바탕으로 공식 Hi2601 상품요약서를 대조해 읽기 쉽게 정리한 화면용 안내입니다. 전단·약관 전문을 그대로 전재한 문서는 아닙니다. 구체적인 보장 및 가입 조건은 약관과 담당자 설명을 확인하세요. 대동여수음식지도에서 보험 가입을 받지는 않습니다.</p>
+          <p class="insurance-caution">담당자 제공 전단 4장의 구성을 바탕으로 공식 Hi2601 상품요약서를 대조해 읽기 쉽게 정리한 화면용 안내입니다. 전단·약관 전문을 그대로 전재한 문서는 아닙니다. 구체적인 보장 및 가입 조건은 약관과 담당자 설명을 확인하세요. 여수맛지도에서 보험 가입을 받지는 않습니다.</p>
           <a class="insurance-customer-center" href="tel:15885656">현대해상 고객콜센터 <strong>1588-5656</strong></a>
         </section>
       </div>`;
@@ -203,8 +203,8 @@
       if (!enabled()) { standalone.innerHTML = '<h1>생활서비스 준비 중</h1><a href="/">음식지도로 돌아가기</a>'; return; }
       const id = new URLSearchParams(location.search).get('ad');
       const ad = find(id);
-      document.title = `${id === 'advertise' ? '광고 게재 안내' : ad ? ad.brand + ' ' + ad.person : '여수 생활서비스'} | 대동여수음식지도`;
-      standalone.innerHTML = id ? detail(id) : `<header class="local-service-directory-head"><span class="local-service-kicker">대동여수음식지도</span><h1>여수 생활서비스</h1><p>필요한 서비스를 살펴보고<br>담당자에게 직접 문의하세요.</p></header><div class="local-service-directory">${advertisers.map((_, i) => card(i, 'directory')).join('')}</div>`;
+      document.title = `${id === 'advertise' ? '광고 게재 안내' : ad ? ad.brand + ' ' + ad.person : '여수 생활서비스'} | 여수맛지도`;
+      standalone.innerHTML = id ? detail(id) : `<header class="local-service-directory-head"><span class="local-service-kicker">여수맛지도</span><h1>여수 생활서비스</h1><p>필요한 서비스를 살펴보고<br>담당자에게 직접 문의하세요.</p></header><div class="local-service-directory">${advertisers.map((_, i) => card(i, 'directory')).join('')}</div>`;
     }
   }
   window.daedongLocalServices = Object.freeze({enabled, advertisers, card, interleave, detail, open, shareUrl});

@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "대동맵",
-  "short_name": "대동맵",
-  "description": "여수 음식점과 이용 가능한 주문방법을 한눈에 확인하는 대동맵",
+  "name": "여수맛지도",
+  "short_name": "여수맛지도",
+  "description": "여수 음식점과 이용 가능한 주문방법을 한눈에 확인하는 여수맛지도",
   "lang": "ko-KR",
   "dir": "ltr",
   "start_url": "/?source=android-app",
@@ -14,7 +14,7 @@
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
-  "theme_color": "#ff5a1f",
+  "theme_color": "#062a5e",
   "categories": ["food", "lifestyle", "navigation"],
   "icons": [
     {
