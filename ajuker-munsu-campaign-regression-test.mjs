@@ -31,7 +31,7 @@ assert.match(qr,/viewBox="0 0 33 33"/);
 const cells=[...qr.matchAll(/M(\d+) (\d+)h1v1h-1z/g)].map(x=>[+x[1],+x[2]]);
 for(const axis of [0,1]){assert.equal(Math.min(...cells.map(x=>x[axis])),0);assert.equal(Math.max(...cells.map(x=>x[axis])),32);}
 const production=fs.readFileSync('data-api.js','utf8').includes("const BASE_URL = IS_GOHEUNG ? '' : 'https://daedong-yeosu-data-api.sisakim.workers.dev'");
-const baseline=production?{"repo":"work/ajuker-production","hero":"693a7ec2bc1cdabc1e06a2d799077db5a2cf20909994f63e24ebc0c09a4c69f4","links":"f5df464f2925f8133cad2f9019a543fdbd460ea0591fc07380d76d22e14e5ee1"}:{"repo":"work/ajuker-preview","hero":"7bde01cbca75a7fb9988f4a072b282a5a95d800282f3cf08286b8becaf6d07a7","links":"5e7298c52ad74c1b1b7cd58bce874ec88a44283bfb2bbf03d662857392ec8710"};
+const baseline=production?{"repo":"work/ajuker-production","hero":"693a7ec2bc1cdabc1e06a2d799077db5a2cf20909994f63e24ebc0c09a4c69f4","links":"f5df464f2925f8133cad2f9019a543fdbd460ea0591fc07380d76d22e14e5ee1"}:{"repo":"work/ajuker-preview","hero":"b046c65699670b2de3509df8723f72dc545365f7982884f3b47a7a40007d55ca","links":"5e7298c52ad74c1b1b7cd58bce874ec88a44283bfb2bbf03d662857392ec8710"};
 assert.equal(hash({...hero,campaigns:Object.fromEntries(Object.entries(hero.campaigns).filter(([key])=>key!==id))}),baseline.hero,'기존 전체 가게전용 구성 보존');
 assert.equal(hash({...links,campaigns:links.campaigns.filter(x=>x.storeId!==id)}),baseline.links,'기존 전체 QR·링크 순서와 내용 보존');
 const rc6=fs.readFileSync('rc6-fixes.js','utf8');

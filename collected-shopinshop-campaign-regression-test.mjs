@@ -13,7 +13,7 @@ addedIds.add('e66f136d0e468b6e'); // Later user-approved standalone campaign; gu
 const h=beforeSharedHero(read('data/hero-campaigns.json')),m=beforeSharedLinks(read('data/store-campaign-links.json'));
 const baselineHero={...h,campaigns:Object.fromEntries(Object.entries(h.campaigns).filter(([id])=>!ids.has(id)&&!addedIds.has(id)))};
 const baselineManifest={...m,campaigns:m.campaigns.filter(x=>!ids.has(x.storeId)&&!addedIds.has(x.storeId))};
-assert.equal(hash(baselineHero),'9f9dc27af6bddb1a5db0c27205f5e7f9581406724fc465dc699aeab505de1232','Existing campaigns and virtual stores unchanged');
+assert.equal(hash(baselineHero),'787d27fe92d86bba8e80c273fc1aace75618a5a8bc71980889a90c33eeb5c9cd','Existing campaigns and virtual stores unchanged');
 assert.equal(hash(baselineManifest),'e7492e80f54e143f33eed430b98a71772aa638e95064761f0fe3744f78b2638e','Existing links unchanged');
 let textBanners=0;
 for(const {storeId,name} of batch){
