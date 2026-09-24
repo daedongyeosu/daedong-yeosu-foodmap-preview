@@ -8,8 +8,9 @@ const [html, js, css] = await Promise.all([
 ]);
 
 assert.match(html, /id="yeosuLifeSection"[^>]*hidden/);
-assert.match(html, /결제혜택 · 주문앱이 아닙니다/);
+assert.match(html, /지역화폐 혜택/);
 assert.match(html, /id="chakBenefitBtn"/);
+assert.equal((html.match(/id="chakBenefitBtn"/g) || []).length, 1);
 assert.doesNotMatch(html.match(/<div class="order-grid"[\s\S]*?<\/div>/)?.[0] || '', /CHAK|섬섬여수페이/);
 
 for (const category of ['혜택', '행사', '모집', '교통', '뉴스']) {
@@ -27,7 +28,7 @@ assert.match(js, /apps\.apple\.com\/kr\/app/);
 assert.match(js, /news\.yeosu\.go\.kr\/news\/articleView\.html\?idxno=34946/);
 assert.match(js, /ACTIVE_REGION\.code === 'yeosu'/);
 assert.match(css, /\.yeosu-life-section/);
-assert.match(css, /\.chak-benefit-card/);
+assert.match(css, /\.yeosu-life-gateway\.is-chak/);
 assert.match(css, /@media\(max-width:700px\)/);
 
 console.log('yeosu life information and CHAK preview regression checks passed');

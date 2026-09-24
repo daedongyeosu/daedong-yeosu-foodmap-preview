@@ -35,13 +35,28 @@ const homeAudit = await page.evaluate(() => ({
   viewport: [window.innerWidth, window.innerHeight],
   orderText: document.querySelector('.order-grid')?.textContent || '',
   gatewayCount: document.querySelectorAll('#yeosuLifeSection .yeosu-life-gateway').length,
+  gatewayIds: [...document.querySelectorAll('#yeosuLifeSection .yeosu-life-gateway')].map(item => item.id),
+  gatewayRects: [...document.querySelectorAll('#yeosuLifeSection .yeosu-life-gateway')].map(item => {
+    const rect = item.getBoundingClientRect();
+    return {id: item.id, x: Math.round(rect.x), y: Math.round(rect.y), width: Math.round(rect.width), height: Math.round(rect.height)};
+  }),
+  merchantStyle: (() => {
+    const item = document.querySelector('#yeosuGageBtn');
+    const style = item ? getComputedStyle(item) : null;
+    return style ? {borderWidth: style.borderTopWidth, background: style.backgroundColor} : null;
+  })(),
   highlightCount: document.querySelectorAll('#yeosuLifeHighlights .yeosu-life-highlight').length,
   sectionWidth: document.querySelector('#yeosuLifeSection')?.getBoundingClientRect().width || 0,
   horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
 }));
 if (homeAudit.viewport.join('x') !== '390x844') throw new Error(`unexpected viewport ${homeAudit.viewport.join('x')}`);
 if (/CHAK|섬섬여수페이/.test(homeAudit.orderText)) throw new Error('CHAK leaked into order methods');
-if (homeAudit.gatewayCount !== 4) throw new Error(`expected 4 life gateways, got ${homeAudit.gatewayCount}`);
+if (homeAudit.gatewayCount !== 8) throw new Error(`expected 8 life gateways, got ${homeAudit.gatewayCount}`);
+if (homeAudit.gatewayIds[0] !== 'yeosuGageBtn') throw new Error('Yeosu Gage is not the first life gateway');
+if (homeAudit.gatewayIds.includes('yeosuLifeMoreBtn')) throw new Error('obsolete life hub button is still present');
+if (homeAudit.gatewayRects.some(item => Math.abs(item.width - item.height) > 3)) throw new Error(`life gateway is not square: ${JSON.stringify(homeAudit.gatewayRects)}`);
+if (new Set(homeAudit.gatewayRects.slice(0, 3).map(item => item.x)).size !== 3) throw new Error('expected three life gateways in the first mobile row');
+if (homeAudit.merchantStyle?.borderWidth !== '2px') throw new Error('Yeosu Gage emphasis is missing');
 if (homeAudit.highlightCount !== 3) throw new Error(`expected 3 highlights, got ${homeAudit.highlightCount}`);
 if (homeAudit.sectionWidth > 390 || homeAudit.horizontalOverflow) throw new Error('mobile horizontal overflow detected');
 
@@ -83,17 +98,7 @@ for (const text of ['가까운 공중화장실 찾기', '현재 위치', '지도
 if (await publicToiletModal.locator('[data-life-url*="map.naver.com"]').count() !== 1) throw new Error('public toilet map link missing');
 await closeOpenModal();
 
-await page.locator('#yeosuLifeMoreBtn').click();
-const lifeHub = page.locator('#modal:not([hidden]) .yeosu-life-hub');
-await lifeHub.waitFor({state: 'visible'});
-if (await lifeHub.locator('.life-hub-grid button').count() !== 4) throw new Error('life hub entries missing');
-const lifeHubText = await lifeHub.innerText();
-for (const text of ['중고거래', '지역신문·생활정보', '섬섬여수페이', '오늘의 여수소식']) {
-  if (!lifeHubText.includes(text)) throw new Error(`missing life hub entry: ${text}`);
-}
-await page.screenshot({path: 'artifacts/yeosu-life-hub-390x844.png', fullPage: false});
-
-await lifeHub.locator('[data-life-gateway="used-market"]').click();
+await page.locator('#usedMarketBtn').click();
 const usedMarketModal = page.locator('#modal:not([hidden]) .used-market-guide');
 await usedMarketModal.waitFor({state: 'visible'});
 const usedMarketText = await usedMarketModal.innerText();
@@ -103,8 +108,7 @@ for (const text of ['당근', '번개장터', '네이버 중고나라', '거래 
 if (await usedMarketModal.locator('[data-life-url]').count() !== 3) throw new Error('used market links missing');
 await closeOpenModal();
 
-await page.locator('#yeosuLifeMoreBtn').click();
-await page.locator('#modal:not([hidden]) .yeosu-life-hub [data-life-gateway="local-news"]').click();
+await page.locator('#localNewsBtn').click();
 const localNewsModal = page.locator('#modal:not([hidden]) .local-news-guide');
 await localNewsModal.waitFor({state: 'visible'});
 const localNewsText = await localNewsModal.innerText();
@@ -137,8 +141,7 @@ if (await chakModal.locator('[data-life-url]').count() !== 3) throw new Error('C
 await page.screenshot({path: 'artifacts/chak-guide-390x844.png', fullPage: false});
 
 await closeOpenModal();
-await page.locator('#yeosuLifeMoreBtn').click();
-await page.locator('#modal:not([hidden]) .yeosu-life-hub [data-life-filter="전체"]').click();
+await page.locator('#yeosuLifeNewsBtn').click();
 const lifeModal = page.locator('#modal:not([hidden]) .yeosu-life-modal');
 await lifeModal.waitFor({state: 'visible'});
 if (await lifeModal.locator('.yeosu-life-tabs button').count() !== 6) throw new Error('life news category tabs missing');

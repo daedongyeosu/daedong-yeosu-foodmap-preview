@@ -4,7 +4,7 @@ const index = fs.readFileSync('index.html', 'utf8');
 const app = fs.readFileSync('app.js', 'utf8');
 const css = fs.readFileSync('app.css', 'utf8');
 
-for (const marker of ['id="holidayMedicalBtn"', 'id="yeosuGageBtn"', 'id="publicToiletBtn"', 'id="carAccidentBtn"', 'yeosu-life-gateways']) {
+for (const marker of ['id="yeosuGageBtn"', 'id="holidayMedicalBtn"', 'id="publicToiletBtn"', 'id="carAccidentBtn"', 'id="usedMarketBtn"', 'id="localNewsBtn"', 'id="chakBenefitBtn"', 'id="yeosuLifeNewsBtn"', 'yeosu-life-gateways']) {
   if (!index.includes(marker)) throw new Error(`missing preview gateway markup: ${marker}`);
 }
 
@@ -17,18 +17,25 @@ for (const marker of [
   'function openUsedMarketGuide()',
   'function openLocalNewsGuide()',
   'function openCarAccidentGuide()',
-  'function openYeosuLifeHub()',
   "$('#holidayMedicalBtn')?.addEventListener('click', openHolidayMedicalGuide)",
   "$('#yeosuGageBtn')?.addEventListener('click', openYeosuGageGuide)",
   "$('#publicToiletBtn')?.addEventListener('click', openPublicToiletGuide)",
-  "$('#carAccidentBtn')?.addEventListener('click', openCarAccidentGuide)"
+  "$('#carAccidentBtn')?.addEventListener('click', openCarAccidentGuide)",
+  "$('#usedMarketBtn')?.addEventListener('click', openUsedMarketGuide)",
+  "$('#localNewsBtn')?.addEventListener('click', openLocalNewsGuide)",
+  "$('#yeosuLifeNewsBtn')?.addEventListener('click', () => openYeosuLifeNews('전체'))"
 ]) {
   if (!app.includes(marker)) throw new Error(`missing preview gateway behavior: ${marker}`);
 }
 
-if (!css.includes('@media(max-width:380px){.yeosu-life-gateways{grid-template-columns:1fr}')) {
+if (!css.includes('@media(max-width:700px){.yeosu-life-gateways{grid-template-columns:repeat(3,minmax(0,1fr))')) {
   throw new Error('mobile gateway layout contract missing');
 }
+
+if ((index.match(/id="chakBenefitBtn"/g) || []).length !== 1) throw new Error('CHAK gateway must appear exactly once');
+if (index.includes('id="yeosuLifeMoreBtn"') || app.includes('openYeosuLifeHub')) throw new Error('obsolete hidden life hub remains');
+if (index.indexOf('id="yeosuGageBtn"') > index.indexOf('id="holidayMedicalBtn"')) throw new Error('Yeosu Gage must be the first gateway');
+if (!css.includes('.yeosu-life-gateway.is-merchant{border:2px solid #1767ad')) throw new Error('Yeosu Gage visual emphasis missing');
 
 if (/YEOSU_GAGE_URL[\s\S]{0,500}(?:order|주문방법)/.test(app)) {
   throw new Error('Yeosu Gage must remain separate from restaurant order routes');
