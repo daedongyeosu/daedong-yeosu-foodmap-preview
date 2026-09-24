@@ -379,6 +379,33 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
 @media(max-width:700px){.yeosu-life-gateways{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.yeosu-life-gateway{aspect-ratio:1/1;min-height:0;padding:9px}.yeosu-life-gateway-icon{width:33px;height:33px;border-radius:10px}.yeosu-life-gateway-icon .ui-icon{width:19px;height:19px}.yeosu-life-gateway-copy small{font-size:10.5px}.yeosu-life-gateway-copy strong{font-size:14px}.yeosu-life-gateway.is-merchant .yeosu-life-gateway-copy span{font-size:9.5px}.yeosu-life-highlights{grid-template-columns:1fr}.yeosu-life-highlight{grid-template-columns:42px minmax(0,1fr) 18px;padding:12px}.yeosu-life-highlight-icon{width:42px;height:42px}.yeosu-life-highlight-copy span{-webkit-line-clamp:1}.yeosu-life-sheet-modal{padding:0;align-items:end}.yeosu-life-sheet-modal .modal-card{width:100%;max-height:94dvh;border-radius:25px 25px 0 0;padding:19px 14px calc(18px + env(safe-area-inset-bottom))}.life-news-source-row{align-items:stretch;flex-direction:column}.life-news-source-row button{width:100%}}
 @media(max-width:340px){.yeosu-life-gateways{grid-template-columns:repeat(2,minmax(0,1fr))}.yeosu-life-gateway{padding:11px}.yeosu-life-gateway-copy small{font-size:9px}.yeosu-life-gateway-copy strong{font-size:14px}.chak-guide-actions{grid-template-columns:1fr}.yeosu-life-head{align-items:flex-start}.yeosu-life-head h2{font-size:21px}}
 
+/* 2026 Chuseok homepage: one continuous seasonal photograph over the existing home UI. */
+.chuseok-continuous-shell{background:#07111b url("assets/seasonal/chuseok-2026-continuous.webp?v=20260925") top center/100% auto no-repeat;color:#fff}
+.chuseok-seasonal-hero{position:relative;min-height:clamp(430px,118vw,560px);display:flex;align-items:flex-end;justify-content:center;padding:52px 22px 54px;text-align:center;isolation:isolate}
+.chuseok-seasonal-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(2,9,18,.08) 28%,rgba(2,9,18,.42) 63%,rgba(2,9,18,.78) 100%)}
+.chuseok-seasonal-copy{max-width:650px;text-shadow:0 3px 18px rgba(0,0,0,.85)}
+.chuseok-seasonal-copy p{margin:0 0 13px;color:#f7df9b;font-size:15px;font-weight:850;letter-spacing:.08em}
+.chuseok-seasonal-copy h1{margin:0;color:#fff;font-size:clamp(25px,7.1vw,37px);line-height:1.35;letter-spacing:-.035em;word-break:keep-all}
+.chuseok-seasonal-copy span{display:block;margin-top:15px;color:#fff8e8;font-size:clamp(14px,3.8vw,17px);font-weight:700;line-height:1.7;word-break:keep-all}
+.chuseok-continuous-shell .yeosu-night-shell{background:linear-gradient(180deg,rgba(4,13,23,.34),rgba(4,13,23,.75) 45%,rgba(4,13,23,.92) 100%);color:#fff}
+.chuseok-continuous-shell .turtle-ship-hero-scene{display:none}.chuseok-continuous-shell .weather-layer,.chuseok-continuous-shell .bridge-light-layer{opacity:.12}
+
+/* The real logo remains accessible; clipped overlays create the sequential pop. */
+.brand-wordmark{position:relative;isolation:isolate}
+.brand-wordmark>.brand-logo{filter:drop-shadow(0 0 7px rgba(255,241,178,.75)) drop-shadow(0 2px 5px rgba(0,0,0,.7))}
+.brand-logo-motion{position:absolute;inset:0;pointer-events:none}
+.brand-logo-piece{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:brightness(1.12) drop-shadow(0 0 7px rgba(255,233,143,.95));animation:brandLetterPop 6.2s ease-in-out infinite;opacity:0}
+.brand-logo-piece.piece-1{clip-path:inset(0 76.6% 23% 0);animation-delay:0s}.brand-logo-piece.piece-2{clip-path:inset(0 56.8% 23% 22.8%);animation-delay:.18s}.brand-logo-piece.piece-3{clip-path:inset(0 36.5% 23% 42.5%);animation-delay:.36s}.brand-logo-piece.piece-4{clip-path:inset(0 18.8% 23% 62.7%);animation-delay:.54s}.brand-logo-piece.piece-5{clip-path:inset(0 0 23% 80.2%);animation-delay:.72s}.brand-logo-piece.piece-sub{clip-path:inset(75% 0 0 0);animation:brandSubGlow 6.2s ease-in-out .98s infinite}
+@keyframes brandLetterPop{0%,4%,100%{opacity:0;transform:translateY(0) scale(1)}7%{opacity:1;transform:translateY(-7px) scale(1.16)}12%,24%{opacity:1;transform:translateY(0) scale(1)}31%{opacity:0}}
+@keyframes brandSubGlow{0%,13%,100%{opacity:0;filter:brightness(1)}17%,28%{opacity:1;filter:brightness(1.4) drop-shadow(0 0 8px rgba(255,239,159,.95))}36%{opacity:0}}
+
+/* Compact illustrated life-information gateways. Keep the original section copy and button IDs. */
+.yeosu-life-section{padding-top:20px}.yeosu-life-head h2{font-size:26px}.yeosu-life-head p{font-size:15px;line-height:1.55}
+.yeosu-life-gateways{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.yeosu-life-gateway{aspect-ratio:auto;min-height:150px;padding:15px;border-radius:19px;gap:10px}.yeosu-life-gateway-icon{width:58px;height:58px;border-radius:16px;overflow:hidden}.yeosu-life-gateway-icon .ui-icon{width:52px;height:52px}.yeosu-life-gateway-icon img{width:100%;height:100%;object-fit:cover;border-radius:inherit}.yeosu-life-gateway-copy{gap:5px}.yeosu-life-gateway-copy small{color:#526b7d;font-size:13px;font-weight:900;line-height:1.3}.yeosu-life-gateway-copy strong{font-size:20px;line-height:1.2;letter-spacing:-.045em}.yeosu-life-gateway.is-merchant .yeosu-life-gateway-copy span{font-size:12px}.yeosu-life-gateway.is-accident .yeosu-life-gateway-copy strong{font-size:16px;white-space:nowrap;letter-spacing:-.055em}
+@media(max-width:700px){.yeosu-life-gateways{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.yeosu-life-gateway{aspect-ratio:auto;min-height:150px;padding:14px}.yeosu-life-gateway-icon{width:56px;height:56px;border-radius:15px}.yeosu-life-gateway-icon .ui-icon{width:50px;height:50px}.yeosu-life-gateway-copy small{font-size:13px}.yeosu-life-gateway-copy strong{font-size:20px}.yeosu-life-gateway.is-merchant .yeosu-life-gateway-copy span{font-size:12px}.yeosu-life-gateway.is-accident .yeosu-life-gateway-copy strong{font-size:16px}}
+@media(max-width:340px){.yeosu-life-gateways{grid-template-columns:repeat(2,minmax(0,1fr))}.yeosu-life-gateway{min-height:142px;padding:11px}.yeosu-life-gateway-copy small{font-size:12px}.yeosu-life-gateway-copy strong{font-size:18px}.yeosu-life-gateway.is-accident .yeosu-life-gateway-copy strong{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.brand-logo-piece{animation:none;opacity:0}}
+
 /* Preview: compact civic support message above the Yeosu Taste Map header. */
 .island-expo-support-banner{
   min-height:52px;

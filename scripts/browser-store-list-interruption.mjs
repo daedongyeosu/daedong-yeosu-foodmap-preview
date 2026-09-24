@@ -157,6 +157,23 @@ try {
   // waiting for locator actionability. Tap the coordinates of the card that is
   // actually visible at that instant, exactly as a customer's finger would.
   await page.locator('[data-rc3-rail-open]').first().evaluate(node => node.closest('section')?.scrollIntoView({block: 'center'}));
+  // The homepage intentionally uses smooth scrolling. Seasonal content makes
+  // this trip longer, so wait until the viewport has actually stopped before
+  // taking the customer's tap coordinates. This keeps the check strict while
+  // avoiding a tap that merely cancels an in-progress test scroll on CI.
+  await page.evaluate(() => new Promise(resolve => {
+    let previous = window.scrollY;
+    let stableFrames = 0;
+    const started = performance.now();
+    const observe = () => {
+      const current = window.scrollY;
+      stableFrames = Math.abs(current - previous) < 0.5 ? stableFrames + 1 : 0;
+      previous = current;
+      if (stableFrames >= 3 || performance.now() - started > 1800) resolve();
+      else requestAnimationFrame(observe);
+    };
+    requestAnimationFrame(observe);
+  }));
   const rc3RailTouch = await page.waitForFunction(() => {
     for (const card of document.querySelectorAll('[data-rc3-rail-open]')) {
       const rect = card.getBoundingClientRect();
