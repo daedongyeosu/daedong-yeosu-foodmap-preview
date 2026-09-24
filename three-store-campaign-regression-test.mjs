@@ -40,7 +40,7 @@ const approved = [
 // Baseline HEAD: the Kongsanso eight-slide family and all existing virtual
 // records are unchanged, including the production-only existing virtual store.
 assert.equal(data.campaigns.cfde2617224f33a0.slides.length, 8);
-assert.equal(hash(data.campaigns.cfde2617224f33a0), '917ab83086f1299c22573a67254e614f55367bbc76ee11a60934adc6b0c6d264');
+assert.equal(hash(data.campaigns.cfde2617224f33a0), '6b3f3ca5d573cf99c121b9e35469dc45b4ea12fbdb89f37f36f29796d045732d');
 assert.equal(hash(data.virtualStores), production
   ? '24a766e6d06eabe45598fedf09e2b1c426296683caff19d877f2acc548ebab87'
   : '88eb6fcedc47abfe3601ff841934f2a4d2e60efd0826e805de20614949dfd254');
@@ -82,8 +82,9 @@ for (const spec of approved) {
   assert.equal(campaign.slides[0].meta, spec.first, 'First slide must be the approved representative dish');
   assert.equal(new Set(campaign.slides.map(slide => slide.image)).size, 14);
   assert.equal(data.virtualStores[spec.id], undefined, 'Do not shadow the live canonical store');
-  assert.equal(hash(JSON.stringify(campaign).replaceAll(
-    'daedong-yeosu-data-api-preview.sisakim.workers.dev', 'daedong-yeosu-data-api.sisakim.workers.dev')),
+  assert.equal(hash(JSON.stringify(campaign)
+    .replaceAll('여수맛지도', '대동여수음식지도')
+    .replaceAll('daedong-yeosu-data-api-preview.sisakim.workers.dev', 'daedong-yeosu-data-api.sisakim.workers.dev')),
     spec.content, 'Approved owner/title/photo/menu-caption/order snapshot changed');
   assert.doesNotMatch(JSON.stringify(campaign), /(?:ddangyo|yogiyo|coupang)-[0-9]|__sourceIds|__variants|itemId|menuId/, 'No private menu source identifiers');
   for (const slide of campaign.slides) {

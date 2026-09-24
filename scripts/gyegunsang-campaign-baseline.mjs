@@ -6,7 +6,7 @@ import fs from 'node:fs';
 const previous = {
   "storeId": "e57c51a4f6294349",
   "slug": "collected-e57c51a4f6294349",
-  "label": "계근상 여수본점(문수동) 전용 대동여수음식지도",
+  "label": "계근상 여수본점(문수동) 전용 여수맛지도",
   "title": "계근상 여수본점(문수동)",
   "meta": "가게 정보와 주문방법",
   "slides": [
@@ -21,7 +21,7 @@ const previous = {
 };
 export function beforeGyegunsangHero(hero) {
   const current=hero.campaigns[previous.storeId];
-  assert.equal(createHash('sha256').update(JSON.stringify(current)).digest('hex'),'cd15deaffec2d42611772f27fc5d99b6b49bf71e4833091c5cc41e457c36f75f','Reviewed Gyegunsang campaign must not drift');
+  assert.equal(createHash('sha256').update(JSON.stringify(current)).digest('hex'),'26b65d8befaba465ebd5564709e46b2cde5e93efb6ee6870cf9d5db3c0b9335b','Reviewed Gyegunsang campaign must not drift');
   const restored={...previous};
   if(fs.readFileSync('data-api.js','utf8').includes("const BASE_URL = IS_GOHEUNG ? '' : 'https://daedong-yeosu-data-api.sisakim.workers.dev'")) delete restored.layout;
   return {...hero,campaigns:{...hero.campaigns,[previous.storeId]:restored}};

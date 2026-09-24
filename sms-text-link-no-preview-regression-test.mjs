@@ -9,7 +9,7 @@ for (const page of ['s/index.html', 'm/index.html']) {
   assert.doesNotMatch(shell, /<link[^>]+rel=["'](?:icon|canonical)/i, page);
   assert.doesNotMatch(shell, /<img\b/i, page);
   assert.doesNotMatch(shell, /assets\/|images\//i, page);
-  assert.doesNotMatch(shell, /대동여수음식지도|여수 음식점/i, page);
+  assert.doesNotMatch(shell, /여수맛지도|여수 음식점/i, page);
   assert.match(shell, /noindex,nofollow,noimageindex,nosnippet/, page);
   assert.match(shell, /location\.replace\(destination\.href\)/, page);
 }

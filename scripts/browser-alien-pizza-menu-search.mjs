@@ -245,7 +245,7 @@ try {
   await page.waitForFunction(() => document.querySelector('[data-menu-order-sheet]')?.hidden === true);
   await check(page.locator('[data-menu-order-sheet]').evaluate(node => node.hidden), '주문방법 선택창 닫기');
   await check(page.locator('.store-menu-preview').isVisible(), '휴대폰 뒤로가기 후 음식 미리보기 유지');
-  await check(page.locator('#modal:not([hidden]) .store-detail[data-store-id="a089d1d54720b48e"]').isVisible(), '휴대폰 뒤로가기 후 대동여수음식지도 가게화면 유지');
+  await check(page.locator('#modal:not([hidden]) .store-detail[data-store-id="a089d1d54720b48e"]').isVisible(), '휴대폰 뒤로가기 후 여수맛지도 가게화면 유지');
   await check(preview.evaluate(node => node.classList.contains('menu-search-active')), '주문방법 선택창을 닫아도 검색 결과 유지');
 
   await page.locator('[data-menu-search-clear]').click();

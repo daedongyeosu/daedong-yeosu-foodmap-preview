@@ -1,14 +1,14 @@
 'use strict';
 
 (() => {
-  const BRAND_NAME = '대동맵';
+  const BRAND_NAME = '여수맛지도';
   const REGIONS = Object.freeze({
     yeosu: Object.freeze({
       code: 'yeosu',
       shortName: '여수',
       cityName: '여수시',
       fullName: '전라남도 여수시',
-      mapName: '대동맵',
+      mapName: '여수맛지도',
       defaultArea: '여수시 전체',
       neighborhoodUrl: 'data/yeosu-neighborhoods.json',
       areas: []
@@ -18,7 +18,7 @@
       shortName: '고흥',
       cityName: '고흥군',
       fullName: '전라남도 고흥군',
-      mapName: '대동맵',
+      mapName: '여수맛지도',
       defaultArea: '고흥군 전체',
       neighborhoodUrl: 'data/goheung-neighborhoods.json',
       areas: Object.freeze(['고흥군 전체', '고흥읍', '도양읍', '과역면', '동강면', '도덕면', '두원면', '풍양면', '포두면', '금산면', '봉래면', '동일면', '점암면', '영남면', '대서면'])
@@ -90,7 +90,7 @@
   function applyVisibleIdentity() {
     document.body.dataset.region = active.code;
     replaceText('#locationText', active.defaultArea);
-    replaceText('.brand-return-slogan', '대동여수음식지도의 새 이름, 대동맵');
+    replaceText('.brand-return-slogan', `${active.shortName}의 맛과 주문경로를 한눈에, 여수맛지도`);
     replaceText('.community-intro-kicker', `${active.shortName}의 맛을 오래 이어가는 주문`);
     replaceText('#communityIntroTitle', `${active.shortName}에서 주문한다면,`);
     replaceText('.community-intro-lead', `${regionWithEulReul(active.shortName)} 한 번 더 생각해 주세요.`);

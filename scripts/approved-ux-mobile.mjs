@@ -23,7 +23,7 @@ const inspect = async (url, snapshot) => {
     categoryButtons: document.querySelectorAll('#categoryGrid [data-cat]').length,
     startupVisible: !document.querySelector('#startupAd')?.hasAttribute('hidden'),
     forbiddenBadges: [...document.querySelectorAll('#heroTrack *')].filter(node =>
-      ['가게카드 보기', '콩산소 전용 대동여수음식지도', '손수김밥 전용 대동여수음식지도'].includes(node.textContent?.trim())
+      ['가게카드 보기', '콩산소 전용 여수맛지도', '손수김밥 전용 여수맛지도'].includes(node.textContent?.trim())
     ).length
   }));
   fs.writeFileSync(snapshot, await page.content());

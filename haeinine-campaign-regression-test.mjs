@@ -23,7 +23,7 @@ assert.ok(campaign, '해인이네 전용 캠페인이 있어야 합니다.');
 assert.equal(heroData.virtualStores?.[id], undefined, '실제 가게와 주문 경로를 가상 가게로 가리지 않아야 합니다.');
 assert.equal(campaign.storeId, id);
 assert.equal(campaign.slug, 'haeinine-yeoseo');
-assert.equal(campaign.label, '해인이네 전용 대동여수음식지도');
+assert.equal(campaign.label, '해인이네 전용 여수맛지도');
 assert.equal(campaign.title, title);
 assert.equal(campaign.meta, '먹깨비 등록 메뉴');
 assert.equal(campaign.layout, 'food14-plus3');

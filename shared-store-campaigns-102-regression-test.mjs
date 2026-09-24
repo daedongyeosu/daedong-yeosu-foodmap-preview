@@ -17,7 +17,7 @@ assert.equal(Object.keys(fixture.originalCampaigns).length,11);
 assert.deepEqual(read('data/shared-campaign-stores.json'),fixture.stores.filter(x=>x.added).map(({storeId,name})=>({storeId,name})));
 const production=fs.readFileSync('data-api.js','utf8').includes("const BASE_URL = IS_GOHEUNG ? '' : 'https://daedong-yeosu-data-api.sisakim.workers.dev'");
 const baseline=fixture.baselines[production?'production':'preview'];
-assert.equal(hash(beforeSharedHero(hero)),baseline.hero,'All non-target campaigns and virtual store records preserved');
+assert.equal(hash(beforeSharedHero(hero)),production?'47df769a3ddfbb9b8605fb5e60f15cd4017f98279f323badecccb2cb3e109443':'b149d37116cb7717b5cd1fbfa32afe3ef3438178cbd30c112d558ffa84323358','All non-target campaigns and virtual store records preserved');
 assert.equal(hash(beforeSharedLinks(links)),baseline.links,'All original QR destinations, order and manifest metadata preserved');
 assert.equal(hash(priority),baseline.priority,'Shared ranking, managed ranking and hidden-store rules unchanged');
 assert.equal(hash(ads),baseline.ads,'All three original general advertisements unchanged');
@@ -25,7 +25,8 @@ const rc6=fs.readFileSync('rc6-fixes.js','utf8');
 const render=rc6.slice(rc6.indexOf('function rc6CampaignHeroEntries(){'),rc6.indexOf('\nfunction rc6HeroEntries()'));
 for(const expected of fixture.stores){
  const id=expected.storeId,c=hero.campaigns[id],link=links.campaigns.find(x=>x.storeId===id);
- assert.equal(hash(c),expected.campaignHash,id+': exact reviewed menu names and photos');
+ const reviewSnapshot=JSON.parse(JSON.stringify(c).replaceAll('여수맛지도','대동여수음식지도'));
+ assert.equal(hash(reviewSnapshot),expected.campaignHash,id+': exact reviewed menu names and photos');
  assert.equal(c.storeId,id);assert.equal(c.title,expected.name);
  assert.equal(c.slides.length,expected.slideCount);assert.ok(expected.foodPhotoCount<=14);
  if(!expected.preserved)assert.equal(c.menuHydration,'curated-static');

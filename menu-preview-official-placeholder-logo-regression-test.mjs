@@ -5,7 +5,7 @@ const source = fs.readFileSync(new URL('./store-menu-preview.js', import.meta.ur
 const index = fs.readFileSync(new URL('./index.html', import.meta.url), 'utf8');
 const serviceWorker = fs.readFileSync(new URL('./sw.js', import.meta.url), 'utf8');
 
-assert.match(source, /OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets\/app-icons\/daedong-app-icon-512\.png\?v=daedongmap-brand-20260922-2'/);
+assert.match(source, /OFFICIAL_MENU_PLACEHOLDER_IMAGE = 'assets\/app-icons\/daedong-app-icon-512\.png\?v=yeosu-taste-map-20260924-preview-1'/);
 assert.match(source, /assets\\\/logo\\\.png/);
 assert.match(source, /const heroImage = menuHeroImage\(menu\)/);
 assert.match(source, /escapeMenuHtml\(heroImage\)/);
