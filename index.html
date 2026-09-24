@@ -442,7 +442,7 @@
   </script>
   <link rel="preload" as="image" href="assets/ui/category-icons-color.svg?v=category-first-paint-1">
   <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
-  <link rel="stylesheet" href="app.css?v=selected-category-label-1-external-app-text-1-legacy-rail-button-hidden-1-lower-promo-details-5-direct-coming-soon-1-store-popup-native-order-1-app-list-direct-order-4-full-label-1-store-card-group-1-rider-evergreen-1-instant-detail-shell-1-detail-degraded-fallback-1-detail-native-swipe-1-photo-black-band-auto-crop-1-mobile-customer-qa-1-mobile-card-natural-height-1-stable-scroll-position-1-yeosu-life-compact-4-island-expo-support-1">
+  <link rel="stylesheet" href="app.css?v=selected-category-label-1-external-app-text-1-legacy-rail-button-hidden-1-lower-promo-details-5-direct-coming-soon-1-store-popup-native-order-1-app-list-direct-order-4-full-label-1-store-card-group-1-rider-evergreen-1-instant-detail-shell-1-detail-degraded-fallback-1-detail-native-swipe-1-photo-black-band-auto-crop-1-mobile-customer-qa-1-mobile-card-natural-height-1-stable-scroll-position-1-yeosu-life-compact-4-island-expo-support-1-chuseok-life-20260925-1">
   <link rel="stylesheet" href="store-list-horizontal-pager.css?v=visible-results-1-free-scroll-1">
   <link rel="stylesheet" href="final-experience.css?v=category-first-paint-1-turtle-glass-1-search-button-horizontal-1-store-share-copy-2-daylight-effects-cleanup-1">
   <link rel="stylesheet" href="rc6-fixes.css?v=location-store-hero-1-hero-clean-controls-1-daylight-effects-cleanup-1-hero-order-footer-2">
@@ -458,6 +458,14 @@
 </head>
 <body>
   <div id="app">
+    <div class="chuseok-continuous-shell">
+    <section class="chuseok-seasonal-hero" aria-labelledby="chuseokSeasonalTitle">
+      <div class="chuseok-seasonal-copy">
+        <p>마음까지 넉넉해지는 한가위</p>
+        <h1 id="chuseokSeasonalTitle">여수의 맛처럼 풍성하고,<br>보름달처럼 환한 한가위 보내세요.</h1>
+        <span>사랑하는 사람들과 맛있는 음식 나누며<br>따뜻하고 편안한 연휴 보내시길 바랍니다.</span>
+      </div>
+    </section>
     <div class="yeosu-night-shell" data-weather="clear">
     <div class="weather-layer" aria-hidden="true"></div>
     <div class="bridge-light-layer" aria-hidden="true"></div>
@@ -499,6 +507,14 @@
       </button>
       <a class="brand-wordmark" href="#app" aria-label="여수맛지도 홈">
         <img class="brand-logo" src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1" alt="여수맛지도">
+        <span class="brand-logo-motion" aria-hidden="true">
+          <img class="brand-logo-piece piece-1" src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1" alt="">
+          <img class="brand-logo-piece piece-2" src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1" alt="">
+          <img class="brand-logo-piece piece-3" src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1" alt="">
+          <img class="brand-logo-piece piece-4" src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1" alt="">
+          <img class="brand-logo-piece piece-5" src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1" alt="">
+          <img class="brand-logo-piece piece-sub" src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1" alt="">
+        </span>
       </a>
       <div class="topbar-actions">
         <button id="homeShareBtn" class="icon-btn topbar-share-btn glass-action" type="button" data-share-home aria-label="여수맛지도 공유하기" aria-haspopup="dialog">
@@ -570,58 +586,59 @@
       </button>
     </section>
     </div>
+    </div>
 
     <section id="yeosuLifeSection" class="section yeosu-life-section" aria-label="오늘의 여수생활정보" hidden>
       <div class="section-head yeosu-life-head">
         <div class="section-head-copy">
           <span class="yeosu-life-kicker">여수시 공식자료 중심</span>
-          <h2>오늘의 여수생활정보</h2>
+          <h2>오늘의 여수 생활정보</h2>
           <p>혜택·행사·모집·교통 소식을 짧게 보고 공식 원문에서 확인하세요.</p>
         </div>
       </div>
       <div class="yeosu-life-gateways" aria-label="여수 생활서비스 바로가기">
         <button id="yeosuGageBtn" class="yeosu-life-gateway is-merchant" type="button" aria-haspopup="dialog">
-          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#store"></use></svg></span>
+          <span class="yeosu-life-gateway-icon" aria-hidden="true"><img src="assets/brand/yeosugage-app-icon.png?v=20260925" alt=""></span>
           <span class="yeosu-life-gateway-copy">
-            <small>여수소상공인협회 공식 앱</small>
+            <small>여수소상공인연합회 앱</small>
             <strong>여수가게</strong>
             <span>여수지역 가게 가입·참여 안내</span>
           </span>
           <span class="yeosu-life-gateway-arrow" aria-hidden="true">›</span>
         </button>
         <button id="holidayMedicalBtn" class="yeosu-life-gateway is-medical" type="button" aria-haspopup="dialog">
-          <span class="yeosu-life-gateway-icon" aria-hidden="true">+</span>
+          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#hospital-pill"></use></svg></span>
           <span class="yeosu-life-gateway-copy">
-            <small>연휴·야간에도 문 여는 곳</small>
+            <small>가까운 의료기관 위치 안내</small>
             <strong>병원·약국 찾기</strong>
             <span>보건복지부 E-Gen 공식정보</span>
           </span>
           <span class="yeosu-life-gateway-arrow" aria-hidden="true">›</span>
         </button>
         <button id="publicToiletBtn" class="yeosu-life-gateway is-toilet" type="button" aria-haspopup="dialog">
-          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#location"></use></svg></span>
+          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#restroom"></use></svg></span>
           <span class="yeosu-life-gateway-copy">
-            <small>현재 위치 주변에서</small>
+            <small>내 주변 편의시설</small>
             <strong>공중화장실 찾기</strong>
             <span>지도에서 가까운 위치 검색</span>
           </span>
           <span class="yeosu-life-gateway-arrow" aria-hidden="true">›</span>
         </button>
         <button id="carAccidentBtn" class="yeosu-life-gateway is-accident" type="button" aria-haspopup="dialog">
-          <span class="yeosu-life-gateway-icon" aria-hidden="true">!</span>
+          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#car-crash"></use></svg></span>
           <span class="yeosu-life-gateway-copy">
-            <small>사고접수·긴급출동 바로 연결</small>
+            <small>보험·긴급출동 바로 연결</small>
             <strong>자동차 사고 연락처</strong>
             <span>112·119와 가입 보험사에 바로 전화</span>
           </span>
           <span class="yeosu-life-gateway-arrow" aria-hidden="true">›</span>
         </button>
         <button id="usedMarketBtn" class="yeosu-life-gateway is-market" type="button" aria-haspopup="dialog">
-          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#package"></use></svg></span>
-          <span class="yeosu-life-gateway-copy"><small>동네 물품 거래</small><strong>중고거래</strong><span>당근·번개장터·중고나라</span></span>
+          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#used-exchange"></use></svg></span>
+          <span class="yeosu-life-gateway-copy"><small>물건과 금액을 직접 확인</small><strong>중고거래</strong><span>당근·번개장터·중고나라</span></span>
         </button>
         <button id="localNewsBtn" class="yeosu-life-gateway is-news" type="button" aria-haspopup="dialog">
-          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#bell"></use></svg></span>
+          <span class="yeosu-life-gateway-icon" aria-hidden="true"><svg class="ui-icon"><use href="assets/ui/ui-icons.svg#news-sheet"></use></svg></span>
           <span class="yeosu-life-gateway-copy"><small>일자리·부동산·뉴스</small><strong>지역신문</strong><span>까치정보·교차로·지역뉴스</span></span>
         </button>
         <button id="chakBenefitBtn" class="yeosu-life-gateway is-chak" type="button" aria-haspopup="dialog">
