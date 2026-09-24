@@ -4,7 +4,7 @@ const index = fs.readFileSync('index.html', 'utf8');
 const app = fs.readFileSync('app.js', 'utf8');
 const css = fs.readFileSync('app.css', 'utf8');
 
-for (const marker of ['id="holidayMedicalBtn"', 'id="yeosuGageBtn"', 'id="usedMarketBtn"', 'id="localNewsBtn"', 'id="carAccidentBtn"', 'yeosu-life-gateways']) {
+for (const marker of ['id="holidayMedicalBtn"', 'id="yeosuGageBtn"', 'id="publicToiletBtn"', 'id="carAccidentBtn"', 'yeosu-life-gateways']) {
   if (!index.includes(marker)) throw new Error(`missing preview gateway markup: ${marker}`);
 }
 
@@ -12,14 +12,15 @@ for (const marker of [
   "const EGEN_HOLIDAY_MEDICAL_URL = 'https://www.e-gen.or.kr/egen/holiday_medical.do'",
   "const YEOSU_GAGE_URL = 'https://yeosu-shop--review-j1knfdmo.web.app'",
   'function openHolidayMedicalGuide()',
+  'function openPublicToiletGuide()',
   'function openYeosuGageGuide()',
   'function openUsedMarketGuide()',
   'function openLocalNewsGuide()',
   'function openCarAccidentGuide()',
+  'function openYeosuLifeHub()',
   "$('#holidayMedicalBtn')?.addEventListener('click', openHolidayMedicalGuide)",
   "$('#yeosuGageBtn')?.addEventListener('click', openYeosuGageGuide)",
-  "$('#usedMarketBtn')?.addEventListener('click', openUsedMarketGuide)",
-  "$('#localNewsBtn')?.addEventListener('click', openLocalNewsGuide)",
+  "$('#publicToiletBtn')?.addEventListener('click', openPublicToiletGuide)",
   "$('#carAccidentBtn')?.addEventListener('click', openCarAccidentGuide)"
 ]) {
   if (!app.includes(marker)) throw new Error(`missing preview gateway behavior: ${marker}`);

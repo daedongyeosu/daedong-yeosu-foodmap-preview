@@ -13,6 +13,16 @@ const page = await context.newPage();
 const pageErrors = [];
 page.on('pageerror', error => pageErrors.push(error.message));
 await page.route('**/api/events', route => route.fulfill({status: 204, body: ''}));
+async function closeOpenModal() {
+  await page.waitForTimeout(100);
+  await page.locator('#modal:not([hidden]) .modal-close').click();
+  await page.locator('#modal').waitFor({state: 'hidden'});
+  await page.waitForTimeout(150);
+  if (await page.locator('#modal:not([hidden])').count()) {
+    await page.evaluate(() => window.hardClose?.({fromPop: true}));
+    await page.locator('#modal').waitFor({state: 'hidden'});
+  }
+}
 
 await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
 await page.waitForTimeout(700);
@@ -31,7 +41,7 @@ const homeAudit = await page.evaluate(() => ({
 }));
 if (homeAudit.viewport.join('x') !== '390x844') throw new Error(`unexpected viewport ${homeAudit.viewport.join('x')}`);
 if (/CHAK|섬섬여수페이/.test(homeAudit.orderText)) throw new Error('CHAK leaked into order methods');
-if (homeAudit.gatewayCount !== 5) throw new Error(`expected 5 life gateways, got ${homeAudit.gatewayCount}`);
+if (homeAudit.gatewayCount !== 4) throw new Error(`expected 4 life gateways, got ${homeAudit.gatewayCount}`);
 if (homeAudit.highlightCount !== 3) throw new Error(`expected 3 highlights, got ${homeAudit.highlightCount}`);
 if (homeAudit.sectionWidth > 390 || homeAudit.horizontalOverflow) throw new Error('mobile horizontal overflow detected');
 
@@ -51,7 +61,7 @@ for (const text of ['문 여는 병원·약국 찾기', '응급상황은 119', '
   if (!medicalText.includes(text)) throw new Error(`missing medical safeguard: ${text}`);
 }
 if (await medicalModal.locator('[data-life-url*="e-gen.or.kr"]').count() !== 1) throw new Error('E-Gen official link missing');
-await page.locator('.modal-close').click();
+await closeOpenModal();
 
 await page.locator('#yeosuGageBtn').click();
 const yeosuGageModal = page.locator('#modal:not([hidden]) .yeosu-gage-guide');
@@ -61,9 +71,29 @@ for (const text of ['여수가게', '서비스는 따로, 이동은 편하게', 
   if (!yeosuGageText.includes(text)) throw new Error(`missing Yeosu Gage context: ${text}`);
 }
 if (await yeosuGageModal.locator('[data-life-url*="yeosu-shop--review-j1knfdmo.web.app"]').count() !== 1) throw new Error('Yeosu Gage link missing');
-await page.locator('.modal-close').click();
+await closeOpenModal();
 
-await page.locator('#usedMarketBtn').click();
+await page.locator('#publicToiletBtn').click();
+const publicToiletModal = page.locator('#modal:not([hidden]) .public-toilet-guide');
+await publicToiletModal.waitFor({state: 'visible'});
+const publicToiletText = await publicToiletModal.innerText();
+for (const text of ['가까운 공중화장실 찾기', '현재 위치', '지도에서 주변 화장실 찾기']) {
+  if (!publicToiletText.includes(text)) throw new Error(`missing public toilet context: ${text}`);
+}
+if (await publicToiletModal.locator('[data-life-url*="map.naver.com"]').count() !== 1) throw new Error('public toilet map link missing');
+await closeOpenModal();
+
+await page.locator('#yeosuLifeMoreBtn').click();
+const lifeHub = page.locator('#modal:not([hidden]) .yeosu-life-hub');
+await lifeHub.waitFor({state: 'visible'});
+if (await lifeHub.locator('.life-hub-grid button').count() !== 4) throw new Error('life hub entries missing');
+const lifeHubText = await lifeHub.innerText();
+for (const text of ['중고거래', '지역신문·생활정보', '섬섬여수페이', '오늘의 여수소식']) {
+  if (!lifeHubText.includes(text)) throw new Error(`missing life hub entry: ${text}`);
+}
+await page.screenshot({path: 'artifacts/yeosu-life-hub-390x844.png', fullPage: false});
+
+await lifeHub.locator('[data-life-gateway="used-market"]').click();
 const usedMarketModal = page.locator('#modal:not([hidden]) .used-market-guide');
 await usedMarketModal.waitFor({state: 'visible'});
 const usedMarketText = await usedMarketModal.innerText();
@@ -71,9 +101,10 @@ for (const text of ['당근', '번개장터', '네이버 중고나라', '거래 
   if (!usedMarketText.includes(text)) throw new Error(`missing used market entry: ${text}`);
 }
 if (await usedMarketModal.locator('[data-life-url]').count() !== 3) throw new Error('used market links missing');
-await page.locator('.modal-close').click();
+await closeOpenModal();
 
-await page.locator('#localNewsBtn').click();
+await page.locator('#yeosuLifeMoreBtn').click();
+await page.locator('#modal:not([hidden]) .yeosu-life-hub [data-life-gateway="local-news"]').click();
 const localNewsModal = page.locator('#modal:not([hidden]) .local-news-guide');
 await localNewsModal.waitFor({state: 'visible'});
 const localNewsText = await localNewsModal.innerText();
@@ -82,7 +113,7 @@ for (const text of ['주변 공중화장실', '여수까치정보', '여수교�
 }
 if (await localNewsModal.locator('[data-life-url]').count() !== 6) throw new Error('local information links missing');
 await page.screenshot({path: 'artifacts/local-news-guide-390x844.png', fullPage: false});
-await page.locator('.modal-close').click();
+await closeOpenModal();
 
 await page.locator('#carAccidentBtn').click();
 const carAccidentModal = page.locator('#modal:not([hidden]) .car-accident-guide');
@@ -93,7 +124,7 @@ for (const text of ['경찰 112', '소방 119', '삼성화재', '현대해상', 
 }
 if (await carAccidentModal.locator('a[href^="tel:"]').count() !== 13) throw new Error('car accident phone links missing');
 await page.screenshot({path: 'artifacts/car-accident-guide-390x844.png', fullPage: false});
-await page.locator('.modal-close').click();
+await closeOpenModal();
 
 await page.locator('#chakBenefitBtn').click();
 const chakModal = page.locator('#modal:not([hidden]) .chak-guide');
@@ -105,8 +136,9 @@ for (const text of ['주문앱이 아닙니다', '최대 20% 혜택', 'CHAK 앱�
 if (await chakModal.locator('[data-life-url]').count() !== 3) throw new Error('CHAK install/official links missing');
 await page.screenshot({path: 'artifacts/chak-guide-390x844.png', fullPage: false});
 
-await page.locator('.modal-close').click();
+await closeOpenModal();
 await page.locator('#yeosuLifeMoreBtn').click();
+await page.locator('#modal:not([hidden]) .yeosu-life-hub [data-life-filter="전체"]').click();
 const lifeModal = page.locator('#modal:not([hidden]) .yeosu-life-modal');
 await lifeModal.waitFor({state: 'visible'});
 if (await lifeModal.locator('.yeosu-life-tabs button').count() !== 6) throw new Error('life news category tabs missing');

@@ -2175,6 +2175,16 @@ function openHolidayMedicalGuide() {
     <p class="local-gateway-source">출처: 보건복지부 응급의료포털 E-Gen</p>
   </div>`);
 }
+function openPublicToiletGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide public-toilet-guide">
+    <span class="yeosu-life-modal-kicker">현재 위치 주변에서</span>
+    <h2 id="modalTitle">가까운 공중화장실 찾기</h2>
+    <p class="local-gateway-lead">지도 앱에서 현재 위치 주변의 공중화장실을 빠르게 검색합니다.</p>
+    <div class="directory-location-note"><b>위치 권한을 허용해 주세요</b><span>개방시간과 실제 이용 가능 여부는 현장 상황에 따라 달라질 수 있습니다.</span></div>
+    <button class="local-gateway-primary toilet" type="button" data-life-url="${LOCAL_INFO_LINKS[0].url}">지도에서 주변 화장실 찾기</button>
+    <p class="local-gateway-source">행정안전부 생활안전지도 공중화장실 데이터와 지도 검색 결과를 참고해 이용하세요.</p>
+  </div>`);
+}
 function openYeosuGageGuide() {
   openModal(`<div class="yeosu-life-modal local-gateway-guide yeosu-gage-guide">
     <span class="yeosu-life-modal-kicker">여수 지역상권 서비스</span>
@@ -2224,6 +2234,20 @@ function openCarAccidentGuide() {
     <h3 class="insurance-contact-title">가입 보험사 선택</h3>
     ${carInsuranceContactsMarkup()}
     <p class="local-gateway-source">각 보험사 공식 고객센터에서 2026.09.24 확인했습니다. 번호가 변경될 수 있으므로 통화 연결 시 보험사 안내를 다시 확인하세요.</p>
+  </div>`);
+}
+function openYeosuLifeHub() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide yeosu-life-hub">
+    <span class="yeosu-life-modal-kicker">필요한 정보만 빠르게</span>
+    <h2 id="modalTitle">여수생활 전체보기</h2>
+    <p class="local-gateway-lead">자주 쓰는 여수 생활정보를 분야별로 정리했습니다.</p>
+    <div class="life-hub-grid">
+      <button type="button" data-life-gateway="used-market"><span class="life-hub-icon" aria-hidden="true">거래</span><b>중고거래</b><small>당근·번개장터·중고나라</small></button>
+      <button type="button" data-life-gateway="local-news"><span class="life-hub-icon" aria-hidden="true">소식</span><b>지역신문·생활정보</b><small>까치정보·교차로·지역뉴스</small></button>
+      <button type="button" data-open-chak-benefit><span class="life-hub-icon" aria-hidden="true">혜택</span><b>섬섬여수페이</b><small>충전·사용법·현재 혜택</small></button>
+      <button type="button" data-life-filter="전체"><span class="life-hub-icon" aria-hidden="true">오늘</span><b>오늘의 여수소식</b><small>행사·모집·교통·뉴스</small></button>
+    </div>
+    <p class="local-gateway-source">외부 서비스와 공공정보는 출처를 구분해 안내합니다.</p>
   </div>`);
 }
 function openNotifications() {
@@ -2965,6 +2989,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lifeFilter=event.target.closest('[data-life-filter]');if(lifeFilter){openYeosuLifeNews(lifeFilter.dataset.lifeFilter);return;}
     const lifeItem=event.target.closest('[data-life-item]');if(lifeItem){openYeosuLifeItem(lifeItem.dataset.lifeItem);return;}
     if(event.target.closest('[data-open-chak-benefit]')){openChakBenefitGuide();return;}
+    const lifeGateway=event.target.closest('[data-life-gateway]');if(lifeGateway){if(lifeGateway.dataset.lifeGateway==='used-market')openUsedMarketGuide();if(lifeGateway.dataset.lifeGateway==='local-news')openLocalNewsGuide();return;}
     const lifeUrl=event.target.closest('[data-life-url]');if(lifeUrl){try{const url=new URL(lifeUrl.dataset.lifeUrl,location.href);if(url.protocol==='https:')location.assign(url.href);}catch(error){console.warn('Invalid Yeosu life information URL',error);}return;}
     const noticePromo=event.target.closest('[data-notice-promo]');if(noticePromo){openPromoCarouselDetail(noticePromo.dataset.noticePromo);return;}
     const feedbackRetry=event.target.closest('[data-feedback-retry]');if(feedbackRetry){const report=feedbackQueue().find(item=>item.reportId===feedbackRetry.dataset.feedbackRetry);if(!report)return;feedbackRetry.disabled=true;feedbackRetry.textContent='다시 보내는 중…';deliverFeedbackReport(report).then(()=>feedbackSuccessModal(report)).catch(error=>feedbackFailureModal(report,error instanceof Error?error.message:'수정 요청을 접수하지 못했습니다.'));return;}
@@ -2974,12 +2999,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $('#storeGrid').addEventListener('click', event => { if(event.target.closest('button,a'))return; const card = event.target.closest('.store-card'); if (!card) return; const store = stores.find(item => item.id === card.dataset.id); if (store) { window.daedongConfirmIntentionalStoreOpen?.(); openStore(store); } });
   $('#noticeBtn').addEventListener('click', openNotifications);
-  $('#yeosuLifeMoreBtn')?.addEventListener('click', () => openYeosuLifeNews('전체'));
+  $('#yeosuLifeMoreBtn')?.addEventListener('click', openYeosuLifeHub);
   $('#chakBenefitBtn')?.addEventListener('click', openChakBenefitGuide);
   $('#holidayMedicalBtn')?.addEventListener('click', openHolidayMedicalGuide);
   $('#yeosuGageBtn')?.addEventListener('click', openYeosuGageGuide);
-  $('#usedMarketBtn')?.addEventListener('click', openUsedMarketGuide);
-  $('#localNewsBtn')?.addEventListener('click', openLocalNewsGuide);
+  $('#publicToiletBtn')?.addEventListener('click', openPublicToiletGuide);
   $('#carAccidentBtn')?.addEventListener('click', openCarAccidentGuide);
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
