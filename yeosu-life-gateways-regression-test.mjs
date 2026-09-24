@@ -31,7 +31,7 @@ if (/YEOSU_GAGE_URL[\s\S]{0,500}(?:order|주문방법)/.test(app)) {
   throw new Error('Yeosu Gage must remain separate from restaurant order routes');
 }
 
-for (const url of ['https://www.daangn.com/', 'https://m.bunjang.co.kr/', 'https://cafe.naver.com/joonggonara', 'https://www.iyosu.com/', 'https://www.yeosuro.com/', 'https://www.findall.co.kr/', 'https://www.yeosu.go.kr/www/', 'https://ysmbc.co.kr/']) {
+for (const url of ['https://www.daangn.com/', 'https://m.bunjang.co.kr/', 'https://cafe.naver.com/joonggonara', 'https://map.naver.com/p/search/%EA%B3%B5%EC%A4%91%ED%99%94%EC%9E%A5%EC%8B%A4', 'https://www.iyosu.com/', 'https://www.yeosuro.com/', 'https://www.findall.co.kr/', 'https://www.yeosu.go.kr/www/', 'https://ysmbc.co.kr/']) {
   if (!app.includes(url)) throw new Error(`missing external directory URL: ${url}`);
 }
 

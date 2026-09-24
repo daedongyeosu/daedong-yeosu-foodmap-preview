@@ -77,10 +77,10 @@ await page.locator('#localNewsBtn').click();
 const localNewsModal = page.locator('#modal:not([hidden]) .local-news-guide');
 await localNewsModal.waitFor({state: 'visible'});
 const localNewsText = await localNewsModal.innerText();
-for (const text of ['여수까치정보', '여수교차로', '벼룩시장', '여수시청', '여수MBC']) {
+for (const text of ['주변 공중화장실', '여수까치정보', '여수교차로', '벼룩시장', '여수시청', '여수MBC', '위치 권한']) {
   if (!localNewsText.includes(text)) throw new Error(`missing local information entry: ${text}`);
 }
-if (await localNewsModal.locator('[data-life-url]').count() !== 5) throw new Error('local information links missing');
+if (await localNewsModal.locator('[data-life-url]').count() !== 6) throw new Error('local information links missing');
 await page.screenshot({path: 'artifacts/local-news-guide-390x844.png', fullPage: false});
 await page.locator('.modal-close').click();
 

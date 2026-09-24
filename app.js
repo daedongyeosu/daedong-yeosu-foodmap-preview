@@ -576,6 +576,7 @@ const USED_MARKET_LINKS = [
   { name: '네이버 중고나라', description: '네이버 카페 중고거래 게시판', url: 'https://cafe.naver.com/joonggonara' }
 ];
 const LOCAL_INFO_LINKS = [
+  { name: '주변 공중화장실', description: '현재 위치 주변 화장실을 지도에서 검색', url: 'https://map.naver.com/p/search/%EA%B3%B5%EC%A4%91%ED%99%94%EC%9E%A5%EC%8B%A4' },
   { name: '여수까치정보', description: '부동산·구인·중고차·생활정보', url: 'https://www.iyosu.com/' },
   { name: '여수교차로', description: '여수 지역 생활정보와 일자리', url: 'https://www.yeosuro.com/' },
   { name: '벼룩시장', description: '전국 생활정보와 일자리 검색', url: 'https://www.findall.co.kr/' },
@@ -2190,6 +2191,7 @@ function openLocalNewsGuide() {
     <h2 id="modalTitle">지역신문·생활정보</h2>
     <p class="local-gateway-lead">지역 일자리·부동산·중고차·시정소식과 지역뉴스를 필요한 곳에서 바로 확인하세요.</p>
     ${lifeDirectoryMarkup(LOCAL_INFO_LINKS)}
+    <div class="directory-location-note"><b>공중화장실 이용 전 확인</b><span>지도 앱의 위치 권한을 허용하면 주변 검색이 편리합니다. 개방시간과 실제 이용 가능 여부는 현장에서 다시 확인하세요.</span></div>
     <p class="local-gateway-source">정보의 작성·수정 책임은 각 외부 매체에 있으며, 중요한 내용은 해당 원문에서 최종 확인하세요.</p>
   </div>`);
 }
