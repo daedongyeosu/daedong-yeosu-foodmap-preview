@@ -387,7 +387,7 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
 .chuseok-seasonal-copy p{margin:0 0 13px;color:#f7df9b;font-size:15px;font-weight:850;letter-spacing:.08em}
 .chuseok-seasonal-copy h1{margin:0;color:#fff;font-size:clamp(25px,7.1vw,37px);line-height:1.35;letter-spacing:-.035em;word-break:keep-all}
 .chuseok-seasonal-copy span{display:block;margin-top:15px;color:#fff8e8;font-size:clamp(14px,3.8vw,17px);font-weight:700;line-height:1.7;word-break:keep-all}
-.chuseok-continuous-shell .yeosu-night-shell{background:linear-gradient(180deg,rgba(4,13,23,.34),rgba(4,13,23,.75) 45%,rgba(4,13,23,.92) 100%);color:#fff}
+.chuseok-continuous-shell .yeosu-night-shell{background:linear-gradient(180deg,rgba(4,13,23,.16),rgba(4,13,23,.5) 48%,rgba(4,13,23,.82) 100%)!important;color:#fff}
 .chuseok-continuous-shell .turtle-ship-hero-scene{display:none}.chuseok-continuous-shell .weather-layer,.chuseok-continuous-shell .bridge-light-layer{opacity:.12}
 
 /* The real logo remains accessible; clipped overlays create the sequential pop. */
