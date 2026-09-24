@@ -21,6 +21,8 @@ for (const id of ["hospital-pill","restroom","car-crash","used-exchange","news-s
 assert.match(css, /grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 assert.match(css, /yeosu-life-gateway-copy small\{[^}]*font-size:13px/);
 assert.match(css, /is-accident \.yeosu-life-gateway-copy strong\{[^}]*white-space:nowrap/);
+assert.match(css, /chuseok-continuous-shell \.yeosu-night-shell\{[^}]*background:[^}]*!important/);
+assert.doesNotMatch(css.match(/chuseok-continuous-shell \.yeosu-night-shell\{[^}]*\}/)?.[0] || "", /dolsan-day|dolsan-night/);
 for (const file of ["assets/seasonal/chuseok-2026-continuous.webp","assets/brand/yeosugage-app-icon.png"]) assert.ok(fs.existsSync(file), `missing ${file}`);
 console.log("chuseok homepage and life information regression checks passed");
 
