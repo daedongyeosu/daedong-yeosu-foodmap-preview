@@ -2204,10 +2204,10 @@ function openPublicToiletGuide() {
 }
 function openYeosuGageGuide() {
   openModal(`<div class="yeosu-life-modal local-gateway-guide yeosu-gage-guide">
-    <span class="yeosu-life-modal-kicker">여수 지역상권 서비스</span>
+    <span class="yeosu-life-modal-kicker">여수소상공인협회 공식 앱</span>
     <h2 id="modalTitle">여수가게</h2>
     <p class="local-gateway-lead">여수 지역의 음식점뿐 아니라 숙박·미용·특산품·교육·수리 등 다양한 업체를 찾아볼 수 있습니다.</p>
-    <div class="service-relationship-note"><b>서비스는 따로, 이동은 편하게</b><span>여수맛지도는 음식점·메뉴·주문방법을 안내하고, 여수가게는 지역 소상공인 업체 정보를 폭넓게 제공합니다.</span></div>
+    <div class="service-relationship-note"><b>여수지역 가게의 가입과 참여를 기다립니다</b><span>여수가게에 업체 정보를 등록해 지역 고객에게 가게를 알리고, 여수 상권을 함께 키워 주세요.</span></div>
     <button class="local-gateway-primary merchant" type="button" data-life-url="${YEOSU_GAGE_URL}">Google Play에서 여수가게 보기</button>
     <p class="local-gateway-source">현재는 정식 공개된 안드로이드 앱으로 연결합니다. 아이폰용은 App Store 출시가 완료되면 공식 링크를 추가합니다. 여수가게는 여수맛지도와 별도로 운영되는 지역상권 서비스입니다.</p>
   </div>`);
