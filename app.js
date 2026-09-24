@@ -568,6 +568,20 @@ const YEOSU_LIFE_NEWS = [
 const CHAK_ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.komscochak.m2.client';
 const CHAK_IOS_URL = 'https://apps.apple.com/kr/app/%EC%A7%80%EC%97%AD%EC%83%81%ED%92%88%EA%B6%8C-chak/id6449449658';
 const CHAK_YEOSU_GUIDE_URL = 'https://news.yeosu.go.kr/news/articleView.html?idxno=34946';
+const EGEN_HOLIDAY_MEDICAL_URL = 'https://www.e-gen.or.kr/egen/holiday_medical.do';
+const YEOSU_GAGE_URL = 'https://yeosu-shop--review-j1knfdmo.web.app';
+const USED_MARKET_LINKS = [
+  { name: '당근', description: '우리 동네 중고거래와 나눔', url: 'https://www.daangn.com/' },
+  { name: '번개장터', description: '전국 중고상품 검색과 안전결제', url: 'https://m.bunjang.co.kr/' },
+  { name: '네이버 중고나라', description: '네이버 카페 중고거래 게시판', url: 'https://cafe.naver.com/joonggonara' }
+];
+const LOCAL_INFO_LINKS = [
+  { name: '여수까치정보', description: '부동산·구인·중고차·생활정보', url: 'https://www.iyosu.com/' },
+  { name: '여수교차로', description: '여수 지역 생활정보와 일자리', url: 'https://www.yeosuro.com/' },
+  { name: '벼룩시장', description: '전국 생활정보와 일자리 검색', url: 'https://www.findall.co.kr/' },
+  { name: '여수시청', description: '공지·행사·채용 등 공식 시정소식', url: 'https://www.yeosu.go.kr/www/' },
+  { name: '여수MBC', description: '여수·순천·광양 지역 뉴스', url: 'https://ysmbc.co.kr/' }
+];
 const PROMO_CAROUSEL_DETAILS = {
   rider: {
     title: '배송기사님 상시모집',
@@ -2137,6 +2151,48 @@ function openChakBenefitGuide() {
     </div>
   </div>`);
 }
+function openHolidayMedicalGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide medical-gateway-guide">
+    <span class="yeosu-life-modal-kicker">보건복지부 공식정보</span>
+    <h2 id="modalTitle">문 여는 병원·약국 찾기</h2>
+    <p class="local-gateway-lead">명절·공휴일·야간에 운영하는 병원과 약국을 E-Gen에서 지역과 날짜로 검색할 수 있습니다.</p>
+    <div class="medical-safety-note"><b>응급상황은 119</b><span>운영시간은 바뀔 수 있으니 방문 전에 의료기관에 전화로 확인하세요.</span></div>
+    <button class="local-gateway-primary" type="button" data-life-url="${EGEN_HOLIDAY_MEDICAL_URL}">E-Gen에서 병원·약국 찾기</button>
+    <p class="local-gateway-source">출처: 보건복지부 응급의료포털 E-Gen</p>
+  </div>`);
+}
+function openYeosuGageGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide yeosu-gage-guide">
+    <span class="yeosu-life-modal-kicker">여수 지역상권 서비스</span>
+    <h2 id="modalTitle">여수가게</h2>
+    <p class="local-gateway-lead">여수 지역의 음식점뿐 아니라 숙박·미용·특산품·교육·수리 등 다양한 업체를 찾아볼 수 있습니다.</p>
+    <div class="service-relationship-note"><b>서비스는 따로, 이동은 편하게</b><span>여수맛지도는 음식점·메뉴·주문방법을 안내하고, 여수가게는 지역 소상공인 업체 정보를 폭넓게 제공합니다.</span></div>
+    <button class="local-gateway-primary merchant" type="button" data-life-url="${YEOSU_GAGE_URL}">여수가게 둘러보기</button>
+    <p class="local-gateway-source">여수가게는 여수맛지도와 별도로 운영되는 지역상권 서비스입니다.</p>
+  </div>`);
+}
+function lifeDirectoryMarkup(items) {
+  return `<div class="life-directory-list">${items.map(item => `<button type="button" data-life-url="${escapeHtml(item.url)}"><span><b>${escapeHtml(item.name)}</b><small>${escapeHtml(item.description)}</small></span><i aria-hidden="true">›</i></button>`).join('')}</div>`;
+}
+function openUsedMarketGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide used-market-guide">
+    <span class="yeosu-life-modal-kicker">중고거래 바로가기</span>
+    <h2 id="modalTitle">중고거래 모아보기</h2>
+    <p class="local-gateway-lead">자주 쓰는 중고거래 서비스를 한곳에서 선택할 수 있습니다.</p>
+    ${lifeDirectoryMarkup(USED_MARKET_LINKS)}
+    <div class="directory-safety-note"><b>거래 전 꼭 확인하세요</b><span>선입금 요구와 외부 메신저 유도에 주의하고, 가능하면 플랫폼 안전결제와 사람이 많은 장소의 직거래를 이용하세요.</span></div>
+    <p class="local-gateway-source">각 서비스는 여수맛지도와 별도로 운영되며 링크 제공은 제휴를 의미하지 않습니다.</p>
+  </div>`);
+}
+function openLocalNewsGuide() {
+  openModal(`<div class="yeosu-life-modal local-gateway-guide local-news-guide">
+    <span class="yeosu-life-modal-kicker">여수 생활정보 한곳에서</span>
+    <h2 id="modalTitle">지역신문·생활정보</h2>
+    <p class="local-gateway-lead">지역 일자리·부동산·중고차·시정소식과 지역뉴스를 필요한 곳에서 바로 확인하세요.</p>
+    ${lifeDirectoryMarkup(LOCAL_INFO_LINKS)}
+    <p class="local-gateway-source">정보의 작성·수정 책임은 각 외부 매체에 있으며, 중요한 내용은 해당 원문에서 최종 확인하세요.</p>
+  </div>`);
+}
 function openNotifications() {
   const lifeMarkup = ACTIVE_REGION.code === 'yeosu' ? `<section class="notice-life-group"><h3>여수생활정보</h3><button type="button" data-open-chak-benefit><b>💳 섬섬여수페이 특별혜택</b><small>CHAK 사용법과 현재 할인 확인</small></button><button type="button" data-life-item="mukkebi-island-coupon"><b>🍽️ 먹깨비 5천 원 할인</b><small>9월 1일~10월 31일 · 매일 선착순</small></button><button type="button" data-life-filter="전체"><b>📍 여수생활정보 전체 보기</b><small>혜택·행사·모집·교통·뉴스</small></button></section>` : '';
   openModal(`<div class="notification-center"><h2 id="modalTitle">알림</h2>${lifeMarkup}<section class="notice-promo-group"><h3>대동소식</h3><div class="my-list">${PROMOS.map(promo => `<button type="button" data-notice-promo="${escapeHtml(promo.kind)}">${escapeHtml(promo.title)}</button>`).join('')}</div></section></div>`);
@@ -2887,6 +2943,10 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#noticeBtn').addEventListener('click', openNotifications);
   $('#yeosuLifeMoreBtn')?.addEventListener('click', () => openYeosuLifeNews('전체'));
   $('#chakBenefitBtn')?.addEventListener('click', openChakBenefitGuide);
+  $('#holidayMedicalBtn')?.addEventListener('click', openHolidayMedicalGuide);
+  $('#yeosuGageBtn')?.addEventListener('click', openYeosuGageGuide);
+  $('#usedMarketBtn')?.addEventListener('click', openUsedMarketGuide);
+  $('#localNewsBtn')?.addEventListener('click', openLocalNewsGuide);
   $('.bottom-nav').addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
     $$('.bottom-nav button').forEach(item => item.classList.remove('active')); button.classList.add('active');
