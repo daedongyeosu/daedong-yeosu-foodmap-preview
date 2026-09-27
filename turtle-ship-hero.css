@@ -289,6 +289,12 @@
   letter-spacing:-.02em;
 }
 
+.order-section .community-order-message .order-secondary-line{
+  font-size:14px;
+  letter-spacing:-.055em;
+  white-space:nowrap;
+}
+
 /*
  * 거북선 때문에 주문 버튼이나 배너가 밀리지 않도록
  * 최초 열린 바다 보완 때의 간격으로 되돌린다.
