@@ -557,3 +557,33 @@
     transform:translate3d(-18%,-62%,0) scale(1.15);
   }
 }
+
+/* Mobile autumn header clarity: enlarge the domain line and keep the order heading on one line. */
+.brand-wordmark>.brand-logo{clip-path:inset(0 0 23% 0)}
+.brand-logo-motion .piece-sub{display:none}
+.brand-domain-label{
+  position:absolute;
+  left:50%;
+  bottom:3px;
+  z-index:3;
+  transform:translateX(-50%);
+  color:#052f50;
+  font-size:17px;
+  font-weight:950;
+  line-height:1;
+  letter-spacing:-.025em;
+  white-space:nowrap;
+  text-shadow:0 1px 1px rgba(255,255,255,.98),0 0 4px rgba(255,255,255,.9),0 2px 5px rgba(0,20,42,.28);
+}
+.brand-domain-label b{padding:0 2px;color:#ff5a24;font:inherit}
+.order-section .community-order-message h2{
+  max-width:100%;
+  font-size:clamp(18px,5.15vw,22px);
+  letter-spacing:-.06em;
+  line-height:1.2;
+  white-space:nowrap;
+}
+@media(max-width:380px){
+  .brand-domain-label{bottom:2px;font-size:15px}
+  .order-section .community-order-message h2{font-size:18px;letter-spacing:-.075em}
+}

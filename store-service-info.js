@@ -925,7 +925,7 @@
       const location = typeof state !== 'undefined' ? String(state.location || '') : '';
       const hasLocation = location && location !== DEFAULT_AREA;
       const label = entry.querySelector('[data-store-finder-location-label]');
-      const nextLabel = hasLocation ? `${location} · 음식사진·먹깨비·땡겨요 우선` : '주소를 설정하면 주변 가게를 먼저';
+      const nextLabel = hasLocation ? '선택한 주소 주변 가게를 먼저 보여드려요' : '주소를 설정하면 주변 가게를 먼저';
       if (label && label.textContent !== nextLabel) label.textContent = nextLabel;
       const source = sourceStores();
       const countReady = serviceLoadState === 'ready' && source.length > 0;
