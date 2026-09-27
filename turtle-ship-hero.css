@@ -291,9 +291,9 @@
   font-size:17px;
   font-weight:950;
   letter-spacing:-.02em;
-  -webkit-text-stroke:1px #073653;
+  -webkit-text-stroke:.65px rgba(255,255,255,.96);
   paint-order:stroke fill;
-  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
+  text-shadow:0 1px 1px rgba(255,255,255,.92),0 0 3px rgba(255,255,255,.74),0 2px 3px rgba(0,20,38,.28);
 }
 
 .order-section .community-order-message .order-secondary-line{
@@ -302,9 +302,9 @@
   font-weight:950;
   letter-spacing:-.055em;
   white-space:nowrap;
-  -webkit-text-stroke:1px #073653;
+  -webkit-text-stroke:.65px rgba(255,255,255,.96);
   paint-order:stroke fill;
-  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
+  text-shadow:0 1px 1px rgba(255,255,255,.92),0 0 3px rgba(255,255,255,.74),0 2px 3px rgba(0,20,38,.28);
 }
 
 .autumn-continuous-shell .order-section .text-btn{
