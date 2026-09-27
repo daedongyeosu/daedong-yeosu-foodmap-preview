@@ -55,11 +55,11 @@ assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*white-sp
   '가게에 힘이 되는 주문방법 제목은 좁은 휴대폰에서도 한 줄이어야 합니다.');
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*background:transparent/);
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*?color:#fff[\s\S]*?-webkit-text-stroke:1px #073653/);
-assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*?color:#ff4136[\s\S]*?font-size:18px[\s\S]*?-webkit-text-stroke:\.8px #073653/);
+assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*?color:#080b0d[\s\S]*?font-size:18px[\s\S]*?-webkit-text-stroke:\.8px #fff/);
 assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*font-size:15px[\s\S]*white-space:nowrap/,
   '문구는 그대로 유지하면서 주문방법 설명이 정확히 두 줄로 보여야 합니다.');
-assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*?color:#ff4136[\s\S]*?-webkit-text-stroke:\.7px #073653/,
-  '브랜드앱과 전화주문도 첫 줄과 같은 밝은 선홍색·진남색 외곽선으로 보여야 합니다.');
+assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*?color:#080b0d[\s\S]*?-webkit-text-stroke:\.7px #fff/,
+  '브랜드앱과 전화주문도 첫 줄과 같은 검정 글자·흰 외곽선으로 보여야 합니다.');
 assert.match(css, /@media\(max-width:767px\) and \(max-height:720px\)/);
 
 assert.match(js, /daedongCommunityIntroPlayedV4/);
