@@ -50,12 +50,12 @@ assert.match(regionJs, /function regionWithEulReul\(name\)/,
 assert.match(regionJs, /replaceText\('\.community-intro-lead', `\$\{regionWithEulReul\(active\.shortName\)\} 한 번 더 생각해 주세요\.`\)/,
   '여수을 같은 잘못된 지역명 조사가 화면에 나오면 안 됩니다.');
 assert.doesNotMatch(regionJs, /`\$\{active\.shortName\}을 한 번 더 생각해 주세요\.`/);
-assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*color:#062f4c/);
+assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*color:#080b0d/);
 assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*white-space:nowrap/,
   '가게에 힘이 되는 주문방법 제목은 좁은 휴대폰에서도 한 줄이어야 합니다.');
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*background:transparent/);
-assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*color:#062f4c/);
-assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*font-size:17px/);
+assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*color:#080b0d/);
+assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*color:#a91812[\s\S]*font-size:17px/);
 assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*font-size:14px[\s\S]*white-space:nowrap/,
   '문구는 그대로 유지하면서 주문방법 설명이 정확히 두 줄로 보여야 합니다.');
 assert.match(css, /@media\(max-width:767px\) and \(max-height:720px\)/);
