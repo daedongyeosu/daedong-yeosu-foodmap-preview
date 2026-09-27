@@ -291,7 +291,7 @@
   font-size:18px;
   font-weight:950;
   letter-spacing:-.02em;
-  -webkit-text-stroke:1px #fff;
+  -webkit-text-stroke:.8px #fff;
   paint-order:stroke fill;
   text-shadow:0 1px 1px rgba(255,255,255,.96),0 0 2px rgba(255,255,255,.9);
 }
@@ -302,7 +302,7 @@
   font-weight:950;
   letter-spacing:-.055em;
   white-space:nowrap;
-  -webkit-text-stroke:1px #fff;
+  -webkit-text-stroke:.7px #fff;
   paint-order:stroke fill;
   text-shadow:0 1px 1px rgba(255,255,255,.96),0 0 2px rgba(255,255,255,.9);
 }
