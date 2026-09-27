@@ -24,7 +24,11 @@ assert.match(css, /grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 assert.match(css, /yeosu-life-gateway-copy small\{[^}]*font-size:13px/);
 assert.match(css, /is-accident \.yeosu-life-gateway-copy strong\{[^}]*white-space:nowrap/);
 assert.match(css, /autumn-continuous-shell\{[^}]*autumn-dolsan-bridge-2026\.webp/);
+assert.match(css, /autumn-continuous-shell\{[^}]*background-size:100% 100%,cover/,
+  '가을 배경은 주문 버튼 아래부터 메인배너 직전까지 끊기지 않아야 합니다.');
 assert.match(css, /autumn-continuous-shell \.yeosu-night-shell\{[^}]*background:[^}]*!important/);
+assert.doesNotMatch(css, /autumn-continuous-shell \.yeosu-night-shell\{[^}]*rgba\(242,246,244,\.96\)/,
+  '주문 버튼 구역을 불투명한 흰색으로 덮으면 안 됩니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.order-item\{[^}]*rgba\(255,255,255,\.35\)/);
 assert.match(messageCss, /autumn-continuous-shell \.main-search-row\{margin-top:72px\}/);
 assert.match(messageCss, /community-order-message p strong/);
