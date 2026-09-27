@@ -38,10 +38,10 @@ assert.match(messageCss, /autumn-continuous-shell \.main-search-row\{margin-top:
 assert.match(messageCss, /community-order-message p strong/);
 assert.match(messageCss, /community-order-message h2\{[\s\S]*?color:#fff[\s\S]*?-webkit-text-stroke:1px #073653[\s\S]*?text-shadow:0 1px 2px #073653/,
   '주문방법 제목은 상단 슬로건과 같은 흰 글자·진남색 외곽선·어두운 그림자를 사용해야 합니다.');
-assert.match(messageCss, /community-order-message p strong\{[\s\S]*?color:#080b0d[\s\S]*?-webkit-text-stroke:1px #073653/,
-  '핵심 주문방법 첫 줄은 검정으로 보여야 합니다.');
-assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#080b0d[\s\S]*?-webkit-text-stroke:1px #073653/,
-  '브랜드앱·전화주문도 첫 줄과 같은 검정으로 보여야 합니다.');
+assert.match(messageCss, /community-order-message p strong\{[\s\S]*?color:#080b0d[\s\S]*?-webkit-text-stroke:\.65px rgba\(255,255,255,\.96\)[\s\S]*?text-shadow:0 1px 1px rgba\(255,255,255,\.92\)/,
+  '핵심 주문방법 첫 줄은 검정 글자와 얇은 흰 외곽선으로 또렷하게 보여야 합니다.');
+assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#080b0d[\s\S]*?-webkit-text-stroke:\.65px rgba\(255,255,255,\.96\)[\s\S]*?text-shadow:0 1px 1px rgba\(255,255,255,\.92\)/,
+  '브랜드앱·전화주문도 첫 줄과 같은 검정 글자·흰 외곽선으로 보여야 합니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.order-item strong\{[^}]*color:#080b0d/,
   '주문 버튼 이름도 진한 검정으로 보여야 합니다.');
 assert.match(serviceCss, /store-finder-quick \{[\s\S]*?background: rgba\(255, 255, 255, \.35\)/);
