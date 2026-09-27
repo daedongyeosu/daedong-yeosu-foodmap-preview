@@ -41,5 +41,7 @@
 /* Autumn home glass controls: keep text/icons opaque while every control surface uses 35% color. */
 .autumn-continuous-shell .location-chip,.autumn-continuous-shell .icon-btn,.autumn-continuous-shell .searchbox,.autumn-continuous-shell .top-quick-btn,.autumn-continuous-shell .order-item{background-color:rgba(255,255,255,.35)!important;border-color:rgba(255,255,255,.82)!important;backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important}
 .autumn-continuous-shell .order-item{box-shadow:0 8px 24px rgba(18,66,84,.12)!important}
+.autumn-continuous-shell .order-item strong{color:#080b0d!important;font-weight:950;text-shadow:0 1px 1px rgba(255,255,255,.9),0 0 3px rgba(255,255,255,.72)}
+.autumn-continuous-shell .order-item small{color:#303438!important;font-weight:900}
 .autumn-continuous-shell .main-search-row .primary-btn{background-color:rgba(255,78,30,.35)!important;border:1px solid rgba(255,255,255,.58)!important;backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important}
 .autumn-continuous-shell .island-expo-support-action{background-color:rgba(255,205,64,.35)!important;border:1px solid rgba(255,255,255,.46)!important;backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important}
