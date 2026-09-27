@@ -9,10 +9,7 @@
         ['assets/goheung/goheung-rocket-flight-v3.webp', 'all', 'low']
       ]
     : [
-        ['assets/yeosu-rc6/dolsan-day-mobile.webp', '(max-width: 767px)', 'high'],
-        ['assets/yeosu-rc6/dolsan-day-desktop.webp', '(min-width: 768px)', 'high'],
-        ['assets/yeosu-ux/turtle-ship-northwest-mobile-v4.webp', '(max-width: 767px)', 'low'],
-        ['assets/yeosu-ux/turtle-ship-northwest-v4.webp', '(min-width: 768px)', 'low']
+        ['assets/seasonal/autumn-dolsan-bridge-2026.webp', 'all', 'high']
       ];
   images.forEach(([href, media, priority]) => {
     const link = document.createElement('link');
