@@ -296,7 +296,7 @@
   letter-spacing:-.02em;
   -webkit-text-stroke:0;
   paint-order:stroke fill;
-  text-shadow:0 1px 1px rgba(0,0,0,.22);
+  text-shadow:0 1px 0 rgba(0,0,0,.22);
 }
 
 .order-section .community-order-message .order-secondary-line{
@@ -307,7 +307,7 @@
   white-space:nowrap;
   -webkit-text-stroke:0;
   paint-order:stroke fill;
-  text-shadow:0 1px 1px rgba(0,0,0,.22);
+  text-shadow:0 1px 0 rgba(0,0,0,.22);
 }
 
 .autumn-continuous-shell .order-section .text-btn{
