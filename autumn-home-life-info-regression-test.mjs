@@ -23,7 +23,7 @@ for (const id of ["hospital-pill","restroom","car-crash","used-exchange","news-s
 assert.match(css, /grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 assert.match(css, /yeosu-life-gateway-copy small\{[^}]*font-size:13px/);
 assert.match(css, /is-accident \.yeosu-life-gateway-copy strong\{[^}]*white-space:nowrap/);
-assert.match(css, /autumn-continuous-shell\{[^}]*autumn-dolsan-bridge-2026\.webp/);
+assert.match(css, /autumn-continuous-shell\{[^}]*autumn-dolsan-bridge-2026-extended\.svg/);
 assert.match(css, /autumn-continuous-shell\{[^}]*background-position:center top,center top[^}]*background-size:100% 100%,100% auto/,
   '가을 사진의 원래 크기와 상단 중앙 위치를 바꾸면 안 됩니다.');
 assert.match(css, /autumn-continuous-shell \.yeosu-night-shell\{[^}]*background:[^}]*!important/);
@@ -37,6 +37,13 @@ assert.match(experienceCss, /autumn-continuous-shell \.order-item\{[^}]*rgba\(25
 assert.match(messageCss, /autumn-continuous-shell \.main-search-row\{margin-top:72px\}/);
 assert.match(messageCss, /community-order-message p strong/);
 assert.match(serviceCss, /store-finder-quick \{[\s\S]*?background: rgba\(255, 255, 255, \.35\)/);
-for (const file of ["assets/seasonal/autumn-dolsan-bridge-2026.webp","assets/brand/yeosugage-app-icon.png"]) assert.ok(fs.existsSync(file), `missing ${file}`);
+for (const file of ["assets/seasonal/autumn-dolsan-bridge-2026.webp","assets/seasonal/autumn-dolsan-bridge-2026-extended.svg","assets/brand/yeosugage-app-icon.png"]) assert.ok(fs.existsSync(file), `missing ${file}`);
+const extendedAutumn = fs.readFileSync("assets/seasonal/autumn-dolsan-bridge-2026-extended.svg", "utf8");
+assert.match(extendedAutumn, /width="941" height="2300"/,
+  '원본 가을 사진의 가로 폭을 유지한 채 주문 버튼 뒤까지 세로만 연장해야 합니다.');
+assert.match(extendedAutumn, /href="data:image\/webp;base64,/,
+  '브라우저가 가을 사진을 빠뜨리지 않도록 연장 파일 안에 원본을 포함해야 합니다.');
+assert.match(extendedAutumn, /translate\(0 3344\) scale\(1 -1\)/,
+  '가을 사진 윗부분을 움직이지 않고 원본 아래 바다·갈대 부분만 이어야 합니다.');
 console.log("autumn homepage and life information regression checks passed");
 
