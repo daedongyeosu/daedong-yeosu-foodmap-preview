@@ -287,24 +287,24 @@
 }
 
 .order-section .community-order-message p strong{
-  color:#b21f18;
+  color:#ff4136;
   font-size:18px;
   font-weight:950;
   letter-spacing:-.02em;
-  -webkit-text-stroke:.8px #fff;
+  -webkit-text-stroke:.8px #073653;
   paint-order:stroke fill;
-  text-shadow:0 1px 1px rgba(255,255,255,.96),0 0 2px rgba(255,255,255,.9);
+  text-shadow:0 1px 1px #073653,0 2px 4px rgba(0,20,38,.65);
 }
 
 .order-section .community-order-message .order-secondary-line{
-  color:#b21f18;
+  color:#ff4136;
   font-size:15px;
   font-weight:950;
   letter-spacing:-.055em;
   white-space:nowrap;
-  -webkit-text-stroke:.7px #fff;
+  -webkit-text-stroke:.7px #073653;
   paint-order:stroke fill;
-  text-shadow:0 1px 1px rgba(255,255,255,.96),0 0 2px rgba(255,255,255,.9);
+  text-shadow:0 1px 1px #073653,0 2px 4px rgba(0,20,38,.65);
 }
 
 .autumn-continuous-shell .order-section .text-btn{
