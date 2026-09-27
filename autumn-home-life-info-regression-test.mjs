@@ -38,11 +38,13 @@ assert.match(messageCss, /autumn-continuous-shell \.main-search-row\{margin-top:
 assert.match(messageCss, /community-order-message p strong/);
 assert.match(messageCss, /community-order-message h2\{[\s\S]*?color:#fff[\s\S]*?-webkit-text-stroke:1px #073653[\s\S]*?text-shadow:0 1px 2px #073653/,
   '주문방법 제목은 상단 슬로건과 같은 흰 글자·진남색 외곽선·어두운 그림자를 사용해야 합니다.');
-assert.match(messageCss, /community-order-message p\{[\s\S]*?background:linear-gradient\(90deg,rgba\(255,255,255,\.22\),rgba\(255,255,255,\.12\) 72%,rgba\(255,255,255,0\)\)[\s\S]*?backdrop-filter:blur\(1\.3px\)/,
-  '주문방법 글자 뒤 물결은 투명한 국소 보정으로만 살짝 정리해야 합니다.');
-assert.match(messageCss, /community-order-message p strong\{[\s\S]*?color:#242424[\s\S]*?font-size:18px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
+assert.match(messageCss, /community-order-message p\{[^}]*background:linear-gradient\(90deg,rgba\(255,255,255,\.26\),rgba\(255,255,255,\.08\) 72%,rgba\(255,255,255,0\)\)/,
+  '주문방법 글자 뒤에는 흐림 없이 밝고 얇은 반투명 보정만 있어야 합니다.');
+assert.doesNotMatch(messageCss, /community-order-message p\{[^}]*(?:-webkit-)?backdrop-filter/,
+  '주문방법 글자 뒤 반투명 보정에 흐림 효과를 다시 넣으면 안 됩니다.');
+assert.match(messageCss, /community-order-message p strong\{[\s\S]*?color:#171717[\s\S]*?font-size:18px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
   '핵심 주문방법 첫 줄은 로고처럼 진회색 단색·무외곽선·약한 그림자로 보여야 합니다.');
-assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#242424[\s\S]*?font-size:15px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
+assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#171717[\s\S]*?font-size:15px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
   '브랜드앱·전화주문도 진회색 단색·무외곽선·약한 그림자로 보여야 합니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.order-item strong\{[^}]*color:#080b0d/,
   '주문 버튼 이름도 진한 검정으로 보여야 합니다.');
