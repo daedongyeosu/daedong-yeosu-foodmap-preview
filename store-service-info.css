@@ -81,8 +81,8 @@ body.store-service-overview-open {
   margin: -4px 16px 15px;
   padding: 10px 12px 12px;
   color: #173357;
-  background: rgba(255, 255, 255, .88);
-  border: 1px solid rgba(207, 222, 240, .96);
+  background: rgba(255, 255, 255, .35);
+  border: 1px solid rgba(255, 255, 255, .68);
   border-radius: 16px;
   box-shadow: 0 7px 20px rgba(21, 49, 86, .07);
   backdrop-filter: blur(7px);
@@ -119,8 +119,8 @@ body.store-service-overview-open {
   padding: 0 12px;
   flex: 0 0 auto;
   color: #324863;
-  background: #f7f9fc;
-  border: 1px solid #dce3ec;
+  background: rgba(255, 255, 255, .35);
+  border: 1px solid rgba(255, 255, 255, .7);
   border-radius: 999px;
   font-size: 12px;
   font-weight: 850;
@@ -129,8 +129,8 @@ body.store-service-overview-open {
 
 .store-finder-quick nav button:first-child {
   color: #17643a;
-  background: #eaf8ef;
-  border-color: #c8e9d4;
+  background: rgba(255, 255, 255, .35);
+  border-color: rgba(168, 224, 190, .78);
 }
 
 .store-service-card-meta {

@@ -379,16 +379,11 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
 @media(max-width:700px){.yeosu-life-gateways{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.yeosu-life-gateway{aspect-ratio:1/1;min-height:0;padding:9px}.yeosu-life-gateway-icon{width:33px;height:33px;border-radius:10px}.yeosu-life-gateway-icon .ui-icon{width:19px;height:19px}.yeosu-life-gateway-copy small{font-size:10.5px}.yeosu-life-gateway-copy strong{font-size:14px}.yeosu-life-gateway.is-merchant .yeosu-life-gateway-copy span{font-size:9.5px}.yeosu-life-highlights{grid-template-columns:1fr}.yeosu-life-highlight{grid-template-columns:42px minmax(0,1fr) 18px;padding:12px}.yeosu-life-highlight-icon{width:42px;height:42px}.yeosu-life-highlight-copy span{-webkit-line-clamp:1}.yeosu-life-sheet-modal{padding:0;align-items:end}.yeosu-life-sheet-modal .modal-card{width:100%;max-height:94dvh;border-radius:25px 25px 0 0;padding:19px 14px calc(18px + env(safe-area-inset-bottom))}.life-news-source-row{align-items:stretch;flex-direction:column}.life-news-source-row button{width:100%}}
 @media(max-width:340px){.yeosu-life-gateways{grid-template-columns:repeat(2,minmax(0,1fr))}.yeosu-life-gateway{padding:11px}.yeosu-life-gateway-copy small{font-size:9px}.yeosu-life-gateway-copy strong{font-size:14px}.chak-guide-actions{grid-template-columns:1fr}.yeosu-life-head{align-items:flex-start}.yeosu-life-head h2{font-size:21px}}
 
-/* 2026 Chuseok homepage: one continuous seasonal photograph over the existing home UI. */
-.chuseok-continuous-shell{background:#07111b url("assets/seasonal/chuseok-2026-continuous.webp?v=20260925") top center/100% auto no-repeat;color:#fff}
-.chuseok-seasonal-hero{position:relative;min-height:clamp(430px,118vw,560px);display:flex;align-items:flex-end;justify-content:center;padding:52px 22px 54px;text-align:center;isolation:isolate}
-.chuseok-seasonal-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(2,9,18,.08) 28%,rgba(2,9,18,.42) 63%,rgba(2,9,18,.78) 100%)}
-.chuseok-seasonal-copy{max-width:650px;text-shadow:0 3px 18px rgba(0,0,0,.85)}
-.chuseok-seasonal-copy p{margin:0 0 13px;color:#f7df9b;font-size:15px;font-weight:850;letter-spacing:.08em}
-.chuseok-seasonal-copy h1{margin:0;color:#fff;font-size:clamp(25px,7.1vw,37px);line-height:1.35;letter-spacing:-.035em;word-break:keep-all}
-.chuseok-seasonal-copy span{display:block;margin-top:15px;color:#fff8e8;font-size:clamp(14px,3.8vw,17px);font-weight:700;line-height:1.7;word-break:keep-all}
-.chuseok-continuous-shell .yeosu-night-shell{background:linear-gradient(180deg,rgba(4,13,23,.16),rgba(4,13,23,.5) 48%,rgba(4,13,23,.82) 100%)!important;color:#fff}
-.chuseok-continuous-shell .turtle-ship-hero-scene{display:none}.chuseok-continuous-shell .weather-layer,.chuseok-continuous-shell .bridge-light-layer{opacity:.12}
+/* Autumn homepage: one Dolsan Bridge photograph continues behind the existing home controls. */
+.autumn-continuous-shell{min-height:100vh;background-color:#dce9ee;background-image:linear-gradient(180deg,rgba(4,24,38,.12) 0%,rgba(4,24,38,.04) 24%,rgba(229,239,241,.3) 64%,rgba(239,245,244,.76) 100%),url("assets/seasonal/autumn-dolsan-bridge-2026.webp?v=20260927");background-position:center top,center top;background-size:100% 100%,100% auto;background-repeat:no-repeat;color:#0a334d}
+.autumn-continuous-shell .yeosu-night-shell{min-height:100vh;background:linear-gradient(180deg,rgba(3,23,38,.06) 0%,rgba(232,241,243,.26) 34%,rgba(232,241,243,.7) 68%,rgba(242,246,244,.96) 100%)!important;color:#0a334d}
+.autumn-continuous-shell .yeosu-night-shell::before,.autumn-continuous-shell .yeosu-night-shell::after{display:none!important}
+.autumn-continuous-shell .turtle-ship-hero-scene{display:none}.autumn-continuous-shell .weather-layer,.autumn-continuous-shell .bridge-light-layer{opacity:.08}
 
 /* The real logo remains accessible; clipped overlays create the sequential pop. */
 .brand-wordmark{position:relative;isolation:isolate}

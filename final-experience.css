@@ -37,3 +37,9 @@
 .search-popup .searchbox{display:grid;grid-template-columns:minmax(0,1fr) clamp(82px,22vw,100px);gap:8px;padding:0 8px 0 14px}
 .search-popup #fxSearchInput{min-width:0}
 .search-popup #fxSearchRun{width:100%;min-width:0;padding:0 10px;white-space:nowrap;word-break:keep-all;writing-mode:horizontal-tb;line-height:1;font-size:clamp(15px,4vw,18px)}
+
+/* Autumn home glass controls: keep text/icons opaque while every control surface uses 35% color. */
+.autumn-continuous-shell .location-chip,.autumn-continuous-shell .icon-btn,.autumn-continuous-shell .searchbox,.autumn-continuous-shell .top-quick-btn,.autumn-continuous-shell .order-item{background-color:rgba(255,255,255,.35)!important;border-color:rgba(255,255,255,.82)!important;backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important}
+.autumn-continuous-shell .order-item{box-shadow:0 8px 24px rgba(18,66,84,.12)!important}
+.autumn-continuous-shell .main-search-row .primary-btn{background-color:rgba(255,78,30,.35)!important;border:1px solid rgba(255,255,255,.58)!important;backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important}
+.autumn-continuous-shell .island-expo-support-action{background-color:rgba(255,205,64,.35)!important;border:1px solid rgba(255,255,255,.46)!important;backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important}

@@ -228,35 +228,65 @@
 .brand-return-slogan{
   position:relative;
   z-index:2;
-  margin:-7px 12px 3px;
-  color:#0a3552;
-  font-size:12px;
-  font-weight:900;
-  line-height:1.35;
-  letter-spacing:-.02em;
+  width:fit-content;
+  max-width:calc(100% - 28px);
+  margin:4px auto 0;
+  padding:4px 8px 6px;
+  border-bottom:3px solid rgba(255,214,92,.92);
+  color:#fff;
+  font-size:14px;
+  font-weight:950;
+  line-height:1.25;
+  letter-spacing:-.015em;
   text-align:center;
-  text-shadow:0 1px 4px rgba(255,255,255,.98);
+  white-space:nowrap;
+  -webkit-text-stroke:1px #073653;
+  paint-order:stroke fill;
+  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
 }
 
+.brand-return-slogan strong{
+  color:#ffd65c;
+  font:inherit;
+  -webkit-text-stroke:1px #073653;
+  paint-order:stroke fill;
+  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
+}
+
+.autumn-continuous-shell .main-search-row{margin-top:46px}
+@media(max-width:760px){.autumn-continuous-shell .main-search-row{margin-top:72px}}
+
 .order-section .community-order-message h2{
-  color:#fff;
+  display:inline-block;
+  margin:0;
+  padding:2px 3px 5px;
+  border-bottom:4px solid #ff5a24;
+  color:#062f4c;
   font-weight:950;
-  text-shadow:0 2px 3px rgba(4,29,48,.98),0 0 10px rgba(4,29,48,.62);
+  text-shadow:0 1px 2px rgba(255,255,255,.98),0 0 5px rgba(255,255,255,.82);
 }
 
 .order-section .community-order-message p{
-  display:block;
+  display:inline-block;
+  max-width:100%;
   margin-top:8px;
-  padding:0;
+  padding:2px 0 2px 10px;
   border:0;
-  border-radius:0;
+  border-left:4px solid #ff5a24;
   background:transparent;
-  color:#ffe95c;
-  font-size:clamp(15px,4vw,18px);
-  font-weight:950;
+  color:#062f4c;
+  font-size:15px;
+  font-weight:900;
   line-height:1.45;
-  letter-spacing:-.025em;
-  text-shadow:0 2px 3px rgba(4,29,48,.98);
+  letter-spacing:-.02em;
+  text-shadow:0 1px 2px rgba(255,255,255,.98),0 0 5px rgba(255,255,255,.78);
+}
+
+.order-section .community-order-message p strong{
+  color:#062f4c;
+  font-size:17px;
+  font-weight:950;
+  letter-spacing:-.02em;
 }
 
 /*
@@ -421,8 +451,8 @@
   }
 
   .brand-return-slogan{
-    margin-top:-6px;
-    font-size:11px;
+    margin-top:4px;
+    font-size:14px;
   }
 
   .turtle-ship-passage{
