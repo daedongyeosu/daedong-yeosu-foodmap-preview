@@ -51,6 +51,8 @@ assert.match(regionJs, /replaceText\('\.community-intro-lead', `\$\{regionWithEu
   '여수을 같은 잘못된 지역명 조사가 화면에 나오면 안 됩니다.');
 assert.doesNotMatch(regionJs, /`\$\{active\.shortName\}을 한 번 더 생각해 주세요\.`/);
 assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*color:#062f4c/);
+assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*white-space:nowrap/,
+  '가게에 힘이 되는 주문방법 제목은 좁은 휴대폰에서도 한 줄이어야 합니다.');
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*background:transparent/);
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*color:#062f4c/);
 assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*font-size:17px/);

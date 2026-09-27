@@ -43,7 +43,8 @@ assert.match(addressMap, /shortAddress\(label, state\.location\)/);
 
 assert.doesNotMatch(service, /data-store-service-address-change/);
 assert.doesNotMatch(service, />주소 변경<\/button>/);
-assert.match(service, /`\$\{location\} · 음식사진·먹깨비·땡겨요 우선`/);
+assert.match(service, /hasLocation \? '선택한 주소 주변 가게를 먼저 보여드려요'/);
+assert.doesNotMatch(service, /음식사진·먹깨비·땡겨요 우선/);
 assert.match(service, /data-store-service-quick-location="all">동네 선택<\/button>/);
 assert.doesNotMatch(service, />전체 동네<\/button>/);
 assert.match(style, /grid-template-columns:\s*auto minmax\(0, 1fr\);/);
