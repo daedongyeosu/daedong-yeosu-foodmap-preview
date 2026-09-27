@@ -261,11 +261,11 @@
   margin:0;
   padding:2px 3px 5px;
   border-bottom:4px solid #ff5a24;
-  color:#080b0d;
+  color:#fff;
   font-weight:950;
-  -webkit-text-stroke:.45px rgba(255,255,255,.96);
+  -webkit-text-stroke:1px #073653;
   paint-order:stroke fill;
-  text-shadow:0 1px 1px rgba(255,255,255,.98),0 0 4px rgba(255,255,255,.92),0 2px 4px rgba(255,255,255,.7);
+  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
 }
 
 .order-section .community-order-message p{
@@ -276,40 +276,43 @@
   border:0;
   border-left:4px solid #ff5a24;
   background:transparent;
-  color:#080b0d;
+  color:#fff;
   font-size:15px;
   font-weight:900;
   line-height:1.45;
   letter-spacing:-.02em;
-  -webkit-text-stroke:.35px rgba(255,255,255,.95);
+  -webkit-text-stroke:1px #073653;
   paint-order:stroke fill;
-  text-shadow:0 1px 1px rgba(255,255,255,.98),0 0 4px rgba(255,255,255,.9),0 2px 4px rgba(255,255,255,.68);
+  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
 }
 
 .order-section .community-order-message p strong{
-  color:#a91812;
+  color:#ff5a24;
   font-size:17px;
   font-weight:950;
   letter-spacing:-.02em;
-  -webkit-text-stroke:.5px rgba(255,255,255,.96);
+  -webkit-text-stroke:1px #073653;
   paint-order:stroke fill;
-  text-shadow:0 1px 1px rgba(255,255,255,.98),0 0 4px rgba(255,255,255,.92),0 2px 4px rgba(255,255,255,.72);
+  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
 }
 
 .order-section .community-order-message .order-secondary-line{
-  color:#a91812;
+  color:#ff5a24;
   font-size:14px;
   font-weight:950;
   letter-spacing:-.055em;
   white-space:nowrap;
+  -webkit-text-stroke:1px #073653;
+  paint-order:stroke fill;
+  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
 }
 
 .autumn-continuous-shell .order-section .text-btn{
-  color:#080b0d!important;
+  color:#fff!important;
   font-weight:900;
-  -webkit-text-stroke:.35px rgba(255,255,255,.96);
+  -webkit-text-stroke:1px #073653;
   paint-order:stroke fill;
-  text-shadow:0 1px 1px rgba(255,255,255,.98),0 0 4px rgba(255,255,255,.9)!important;
+  text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78)!important;
 }
 
 /*
