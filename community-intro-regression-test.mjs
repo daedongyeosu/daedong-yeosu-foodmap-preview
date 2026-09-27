@@ -58,6 +58,8 @@ assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*color:#08
 assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*color:#a91812[\s\S]*font-size:17px/);
 assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*font-size:14px[\s\S]*white-space:nowrap/,
   '문구는 그대로 유지하면서 주문방법 설명이 정확히 두 줄로 보여야 합니다.');
+assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*color:#a91812/,
+  '브랜드앱과 전화주문도 첫 줄과 같은 진한 빨강으로 보여야 합니다.');
 assert.match(css, /@media\(max-width:767px\) and \(max-height:720px\)/);
 
 assert.match(js, /daedongCommunityIntroPlayedV4/);

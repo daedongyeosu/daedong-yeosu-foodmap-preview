@@ -40,8 +40,8 @@ assert.match(messageCss, /community-order-message h2\{[\s\S]*?color:#080b0d/,
   '갈대 위 주문방법 제목은 진한 검정으로 또렷하게 보여야 합니다.');
 assert.match(messageCss, /community-order-message p strong\{[\s\S]*?color:#a91812/,
   '핵심 주문방법 첫 줄은 진한 빨강으로 구분해야 합니다.');
-assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#080b0d/,
-  '두 번째 안내 문장은 진한 검정으로 보여야 합니다.');
+assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#a91812/,
+  '브랜드앱·전화주문을 포함한 주문방법 두 줄은 모두 진한 빨강으로 보여야 합니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.order-item strong\{[^}]*color:#080b0d/,
   '주문 버튼 이름도 진한 검정으로 보여야 합니다.');
 assert.match(serviceCss, /store-finder-quick \{[\s\S]*?background: rgba\(255, 255, 255, \.35\)/);
@@ -51,7 +51,9 @@ assert.match(extendedAutumn, /width="941" height="2300"/,
   '원본 가을 사진의 가로 폭을 유지한 채 주문 버튼 뒤까지 세로만 연장해야 합니다.');
 assert.match(extendedAutumn, /href="data:image\/webp;base64,/,
   '브라우저가 가을 사진을 빠뜨리지 않도록 연장 파일 안에 원본을 포함해야 합니다.');
-assert.match(extendedAutumn, /translate\(0 3344\) scale\(1 -1\)/,
-  '가을 사진 윗부분을 움직이지 않고 원본 아래 바다·갈대 부분만 이어야 합니다.');
+assert.match(extendedAutumn, /id="autumn-photo-reeds-lowered"/,
+  '돌산대교와 하늘은 그대로 두고 갈대 구간만 아래로 내린 구성을 유지해야 합니다.');
+assert.match(extendedAutumn, /viewBox="0 1000 941 180"/,
+  '글자 뒤에는 바다 구간을 늘려 갈대가 더 아래에서 시작하게 해야 합니다.');
 console.log("autumn homepage and life information regression checks passed");
 
