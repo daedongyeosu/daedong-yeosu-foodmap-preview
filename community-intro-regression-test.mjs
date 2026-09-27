@@ -53,12 +53,13 @@ assert.doesNotMatch(regionJs, /`\$\{active\.shortName\}을 한 번 더 생각해
 assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*?color:#fff[\s\S]*?-webkit-text-stroke:1px #073653[\s\S]*?text-shadow:0 1px 2px #073653/);
 assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*white-space:nowrap/,
   '가게에 힘이 되는 주문방법 제목은 좁은 휴대폰에서도 한 줄이어야 합니다.');
-assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*?background:linear-gradient\(90deg,rgba\(255,255,255,\.22\),rgba\(255,255,255,\.12\) 72%,rgba\(255,255,255,0\)\)[\s\S]*?backdrop-filter:blur\(1\.3px\)/);
+assert.match(css, /\.order-section \.community-order-message p\{[^}]*background:linear-gradient\(90deg,rgba\(255,255,255,\.26\),rgba\(255,255,255,\.08\) 72%,rgba\(255,255,255,0\)\)/);
+assert.doesNotMatch(css, /\.order-section \.community-order-message p\{[^}]*(?:-webkit-)?backdrop-filter/);
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*?color:#fff[\s\S]*?-webkit-text-stroke:1px #073653/);
-assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*?color:#242424[\s\S]*?font-size:18px[\s\S]*?-webkit-text-stroke:0/);
+assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*?color:#171717[\s\S]*?font-size:18px[\s\S]*?-webkit-text-stroke:0/);
 assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*font-size:15px[\s\S]*white-space:nowrap/,
   '문구는 그대로 유지하면서 주문방법 설명이 정확히 두 줄로 보여야 합니다.');
-assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*?color:#242424[\s\S]*?-webkit-text-stroke:0/,
+assert.match(css, /\.order-section \.community-order-message \.order-secondary-line\{[\s\S]*?color:#171717[\s\S]*?-webkit-text-stroke:0/,
   '브랜드앱과 전화주문도 첫 줄과 같은 진회색 단색·무외곽선으로 보여야 합니다.');
 assert.match(css, /@media\(max-width:767px\) and \(max-height:720px\)/);
 
