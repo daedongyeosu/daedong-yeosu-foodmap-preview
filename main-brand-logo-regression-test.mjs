@@ -13,8 +13,8 @@ assert.match(
 );
 assert.doesNotMatch(html, /class="brand-word(?:\s|\")|class="brand-symbol(?:\s|\")/,
   '예전 조립형 워드마크가 다시 표시되면 안 됩니다.');
-assert.match(html, /<p class="brand-return-slogan">여수의 맛과 주문경로를 한눈에, 여수맛지도<\/p>/,
-  '브랜드 설명은 로고와 분리된 한 문장으로 표시해야 합니다.');
+assert.match(html, /<p class="brand-return-slogan">여수의 맛과 주문경로를 한눈에, <strong>여수맛지도<\/strong><\/p>/,
+  '브랜드 설명은 로고와 분리된 한 문장으로 표시하고 서비스명을 강조해야 합니다.');
 assert.match(css, /\.topbar \.brand-logo\{[^}]*object-fit:contain/,
   '통합 로고는 비율을 훼손하지 않고 표시해야 합니다.');
 assert.equal(logo.subarray(1, 4).toString('ascii'), 'PNG');

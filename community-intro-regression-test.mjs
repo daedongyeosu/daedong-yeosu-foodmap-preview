@@ -18,12 +18,11 @@ assert.match(html, /class="community-intro-action">주문 전, 가게에 힘이 
 assert.match(html, /class="community-intro-methods">가게바로주문 · 먹깨비 · 땡겨요<br>브랜드앱 · 전화주문<\/strong>/);
 assert.match(html, /수수료 부담은 낮추고,/);
 assert.match(html, /여수의 맛은 더 오래 이어집니다\./);
-assert.doesNotMatch(html, /브랜드앱 · 전화주문을 먼저 살펴보세요\./);
 assert.doesNotMatch(html, /오늘의 작은 선택이/);
 assert.doesNotMatch(html, /가장 쉬운 방법입니다\./);
 assert.match(html, /가게에 힘이 되는 주문방법/);
-assert.match(html, /가게바로주문·먹깨비·땡겨요·브랜드앱·전화주문을 먼저 살펴보세요\./);
-assert.match(html, /여수의 맛과 주문경로를 한눈에, 여수맛지도/);
+assert.match(html, /<strong>가게바로주문 · 먹깨비 · 땡겨요<\/strong><br>브랜드앱 · 전화주문을 먼저 살펴보세요\./);
+assert.match(html, /여수의 맛과 주문경로를 한눈에, <strong>여수맛지도<\/strong>/);
 assert.match(html, /community-order-message/);
 assert.match(html, /15초 후 자동으로 닫힙니다\./);
 assert.doesNotMatch(html, /자동으로 닫히며 거북선이 출항합니다\./);
@@ -51,10 +50,10 @@ assert.match(regionJs, /function regionWithEulReul\(name\)/,
 assert.match(regionJs, /replaceText\('\.community-intro-lead', `\$\{regionWithEulReul\(active\.shortName\)\} 한 번 더 생각해 주세요\.`\)/,
   '여수을 같은 잘못된 지역명 조사가 화면에 나오면 안 됩니다.');
 assert.doesNotMatch(regionJs, /`\$\{active\.shortName\}을 한 번 더 생각해 주세요\.`/);
-assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*color:#fff/);
+assert.match(css, /\.order-section \.community-order-message h2\{[\s\S]*color:#062f4c/);
 assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*background:transparent/);
-assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*color:#ffe95c/);
-assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*font-size:clamp\(15px,4vw,18px\)/);
+assert.match(css, /\.order-section \.community-order-message p\{[\s\S]*color:#062f4c/);
+assert.match(css, /\.order-section \.community-order-message p strong\{[\s\S]*font-size:17px/);
 assert.match(css, /@media\(max-width:767px\) and \(max-height:720px\)/);
 
 assert.match(js, /daedongCommunityIntroPlayedV4/);
