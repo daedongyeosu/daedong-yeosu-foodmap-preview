@@ -48,10 +48,16 @@ const dataApiContext = { window: {} };
 runInNewContext(readFileSync('data-api.js', 'utf8'), dataApiContext);
 const isCustomerHiddenStoreId = dataApiContext.window.daedongDataApi?.isCustomerHiddenStoreId;
 assert.equal(typeof isCustomerHiddenStoreId, 'function', 'Campaign entry points must share the customer visibility policy.');
-for (const storeId of ['2da10529e7fb987c', '421ecef35a879687']) {
-  assert.equal(isCustomerHiddenStoreId(storeId), true, '탐나는피자의 실제·가상 ID는 고객 화면에서 모두 숨겨야 합니다.');
+const hiddenCampaignStoreIds = new Set([
+  '2da10529e7fb987c',
+  '421ecef35a879687',
+  'c59a5a8f5a91ce24',
+  '9e0a2da7ddfa3d93'
+]);
+for (const storeId of hiddenCampaignStoreIds) {
+  assert.equal(isCustomerHiddenStoreId(storeId), true, '숨김 요청 가게는 캠페인 자료가 남아 있어도 고객 화면에서 열리지 않아야 합니다.');
 }
-for (const [storeId, name] of expected.filter(([id]) => id !== '421ecef35a879687')) {
+for (const [storeId, name] of expected.filter(([id]) => !hiddenCampaignStoreIds.has(id))) {
   assert.equal(isCustomerHiddenStoreId(storeId), false, `${name}: unrelated approved campaigns must remain visible.`);
 }
 
