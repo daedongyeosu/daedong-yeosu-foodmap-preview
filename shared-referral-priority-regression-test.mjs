@@ -5,9 +5,11 @@ const rc6=fs.readFileSync('rc6-fixes.js','utf8'),app=fs.readFileSync('app.js','u
 const config=JSON.parse(fs.readFileSync('data/store-priority.json','utf8'));
 function fn(source,name){const start=source.indexOf('function '+name+'(');assert.ok(start>=0);let depth=0;for(let i=source.indexOf('{',start);i<source.length;i++){if(source[i]==='{')depth++;if(source[i]==='}'&&--depth===0)return source.slice(start,i+1)}throw Error(name);}
 const partner=config.referralProfiles['shared-yeosu'];
-assert.equal(partner.enabled,true);assert.equal(partner.storeIds.length,102);assert.equal(new Set(partner.storeIds).size,102);
+assert.equal(partner.enabled,true);assert.equal(partner.storeIds.length,101);assert.equal(new Set(partner.storeIds).size,101);
 assert.ok(partner.storeIds.every(id=>/^[a-f0-9]{16}$/.test(id)));
 for(const id of ['65cc1845e542d5fb','7bc7239e6b509c44','04910f606ba038a6','84c118675c0caa4c','d86586aaef8454c9'])assert.ok(!partner.storeIds.includes(id),'Known own store/shop-in-shop excluded');
+assert.ok(!partner.storeIds.includes('e66f136d0e468b6e'),'아주커치킨 문수점은 공유 우선노출에서도 제외');
+assert.ok(config.deprioritizedStoreIds.includes('e66f136d0e468b6e'),'아주커치킨 문수점은 일반 목록에서도 후순위');
 assert.deepEqual(Object.keys(partner).sort(),['enabled','storeIds']);
 function context(key='',goheung=false){
  const c=vm.createContext({RC6_PARTNER_KEY:key,RC6_IS_GOHEUNG:goheung,rc6StorePriority:config,rc6PartnerStoreIds:new Set(),rc6ManagedStoreIds:new Set(['own']),rc6SharedManagedStoreIds:new Set(),rc6DeprioritizedStoreIds:new Set(config.deprioritizedStoreIds),rc6NearStores:()=>[],rc6DiscoveryTier:()=>0,compareStoreBusinessStatus:(a,b)=>(a?.store||a).rank-(b?.store||b).rank});
