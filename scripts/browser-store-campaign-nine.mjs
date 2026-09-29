@@ -20,7 +20,12 @@ const heroData = JSON.parse(fs.readFileSync(new URL('../data/hero-campaigns.json
 const haeinineStoreId = '17d9bf1de3d671fd';
 const haeinineMenu = JSON.parse(fs.readFileSync(new URL('../data/haeinine-yeoseo-menu.json', import.meta.url), 'utf8'));
 const dataApiSource = fs.readFileSync(new URL('../data-api.js', import.meta.url), 'utf8');
-const tamnaneunHiddenStoreIds = ['2da10529e7fb987c', '421ecef35a879687'];
+const tamnaneunHiddenStoreIds = [
+  '2da10529e7fb987c',
+  '421ecef35a879687',
+  'c59a5a8f5a91ce24',
+  '9e0a2da7ddfa3d93',
+];
 const bannerTargets = JSON.parse(fs.readFileSync(new URL('../data/banner-targets.json', import.meta.url), 'utf8'));
 const food14Plus3Ads = ['18', '19', '20'].map(key => ({
   url: bannerTargets[key].notionUrl, image: bannerTargets[key].image,
@@ -197,7 +202,7 @@ async function assertTamnaneunHidden(page, entryLabel) {
     visibleStoreCards: document.querySelectorAll('#storeGrid .store-card').length,
   }), tamnaneunHiddenStoreIds);
   if (!result.policyHidden || result.resolvedIds.some(Boolean) || result.storeLookups.some(Boolean) || result.hiddenReferences) {
-    throw new Error(`${entryLabel}: 숨긴 탐나는피자의 가게·메뉴·전용 배너 진입점이 남아 있습니다. ${JSON.stringify(result)}`);
+    throw new Error(`${entryLabel}: 숨김 요청 가게의 가게·메뉴·전용 배너 진입점이 남아 있습니다. ${JSON.stringify(result)}`);
   }
   if (!result.ordinarySlides || !result.visibleStoreCards) {
     throw new Error(`${entryLabel}: 숨김 확인 중 다른 가게와 홈 배너도 사라졌습니다.`);
