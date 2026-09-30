@@ -141,7 +141,8 @@ body.store-service-overview-open {
   text-shadow: 0 1px 2px rgba(255, 255, 255, .55);
 }
 
-.store-finder-quick nav button:active {
+.store-finder-quick nav button:active,
+.store-finder-quick nav button.pressing {
   color: #061f36;
   background: rgba(255, 255, 255, .72);
   border-color: #fff;

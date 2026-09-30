@@ -1268,7 +1268,8 @@ function rc2ReleasePress(target) {
 }
 
 fxPressStart = function rc2PressStart(event) {
-  const target = event.target.closest('.glass-action,.category,.brand-app-tile,.happyorder-brand-tile,.happy-category-tile,.phone-order-card,.channel-store-card,.primary-btn');
+  const pressSelector = '.glass-action,.category,.brand-app-tile,.happyorder-brand-tile,.happy-category-tile,.phone-order-card,.channel-store-card,.primary-btn,.location-chip,.island-expo-support-banner,.store-finder-quick nav button,.yeosu-gage-home-entry';
+  const target = event.target.closest(pressSelector);
   if (!target || target.disabled || target.getAttribute('aria-disabled') === 'true' || target.dataset.pressActive === '1') return;
   target.dataset.pressActive = '1';
   target.classList.add('pressing');
