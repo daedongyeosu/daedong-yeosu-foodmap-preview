@@ -3004,6 +3004,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#chakBenefitBtn')?.addEventListener('click', openChakBenefitGuide);
   $('#holidayMedicalBtn')?.addEventListener('click', openHolidayMedicalGuide);
   $('#yeosuGageBtn')?.addEventListener('click', openYeosuGageGuide);
+  $('#yeosuGageHomeEntry')?.addEventListener('click', openYeosuGageGuide);
   $('#publicToiletBtn')?.addEventListener('click', openPublicToiletGuide);
   $('#carAccidentBtn')?.addEventListener('click', openCarAccidentGuide);
   $('#usedMarketBtn')?.addEventListener('click', openUsedMarketGuide);
