@@ -9,6 +9,11 @@ assert.match(html, /<title>여수 배달대행 \| 맛지도 배달대행<\/title
 assert.match(html, /<h1>배달만 하지 않습니다[\s\S]*가게가 알려지도록/);
 assert.match(html, /여수맛지도를 직접 운영/);
 assert.match(html, /가게 홍보부터 주문 연결·배달까지/);
+assert.match(html, /연중무휴 · 24시간 배송/);
+assert.match(html, /"openingHours": "Mo-Su 00:00-23:59"/);
+assert.equal((html.match(/<details>/g) || []).length, 10, '차별점 6개와 FAQ 4개가 터치형 상세 설명으로 제공되어야 합니다.');
+assert.match(html, /저수수료 주문 우선 안내[\s\S]*고객의 선택권을 지키면서 가게가 부담하는 수수료를 줄이는 데 도움/);
+assert.match(html, /왜 이렇게 하나요\?/);
 assert.match(html, /href="tel:01047977803"/);
 assert.match(html, /href="mailto:sisakim@naver\.com"/);
 assert.match(html, /class="header-map-link" href="\/"[^>]*>여수맛지도 보기<\/a>/, '배달대행 페이지 상단에서 여수맛지도 메인으로 바로 돌아갈 수 있어야 합니다.');
