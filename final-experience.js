@@ -92,7 +92,77 @@ renderCategories=renderCategoryGrid;
 function fxRegisteredAppCardMarkup(store,key,isExternal=false){
  const meta=APP_META[key]||{label:key};
  const routeLabel=`${meta.label} 바로가기`;
- return `<article class="app-browser-card app-browser-direct-card"><button type="button" class="app-browser-direct-link glass-action" data-app-store-order="${escapeHtml(store.id)}" data-app-key="${escapeHtml(key)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small><span><b class="app-browser-direct-label">${escapeHtml(routeLabel)}</b></span></span><b class="app-browser-direct-arrow" aria-hidden="true">›</b></button><button type="button" class="app-browser-info-button" data-app-store-info="${escapeHtml(store.id)}"><span><b>가게정보 더보기</b><small>음식보기 · 영업시간 · 쿠폰 등</small></span><b aria-hidden="true">›</b></button></article>`;
+ return `<article class="app-browser-card app-browser-direct-card"${fxChannelStoreSearchAttrs(store)}><button type="button" class="app-browser-direct-link glass-action" data-app-store-order="${escapeHtml(store.id)}" data-app-key="${escapeHtml(key)}">${appBrowserPhoto(store)}<span class="app-browser-info"><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small><span><b class="app-browser-direct-label">${escapeHtml(routeLabel)}</b></span></span><b class="app-browser-direct-arrow" aria-hidden="true">›</b></button><button type="button" class="app-browser-info-button" data-app-store-info="${escapeHtml(store.id)}"><span><b>가게정보 더보기</b><small>음식보기 · 영업시간 · 쿠폰 등</small></span><b aria-hidden="true">›</b></button></article>`;
+}
+
+let fxChannelSearchTimer=0;
+let fxChannelSearchSequence=0;
+function fxFlattenChannelSearchValues(value,depth=0,seen=new Set()){
+ if(value===null||value===undefined||depth>4)return [];
+ if(['string','number','boolean'].includes(typeof value))return [String(value)];
+ if(typeof value!=='object'||seen.has(value))return [];
+ seen.add(value);
+ const values=Array.isArray(value)?value:Object.values(value);
+ return values.flatMap(item=>fxFlattenChannelSearchValues(item,depth+1,seen));
+}
+function fxChannelStoreSearchText(store){
+ const benefits=window.daedongStoreServiceInfo?.get?.(String(store?.id||''));
+ return fxFlattenChannelSearchValues([
+  store?.name,store?.realBusinessName,store?.brandName,store?.branchName,
+  store?.area,store?.neighborhood,store?.cat,store?.categories,store?.foodCategories,
+  store?.menuCategories,store?.tags,store?.keywords,store?.searchAliases,
+  store?.shopInShopNames,store?.storeAliases,store?.aliases,store?.searchIndex,benefits
+ ]).join(' ');
+}
+function fxChannelSearchAttrs(text,storeIds=[]){
+ const ids=[...new Set((Array.isArray(storeIds)?storeIds:[storeIds]).map(String).filter(Boolean))];
+ return ` data-channel-search-item data-channel-search-text="${escapeHtml(String(text||''))}" data-channel-search-store-ids="${escapeHtml(ids.join(','))}"`;
+}
+function fxChannelStoreSearchAttrs(store){return fxChannelSearchAttrs(fxChannelStoreSearchText(store),store?.id||'');}
+function fxChannelSearchMarkup(total,query=''){
+ return `<form class="channel-modal-search" data-channel-search-form role="search"><span class="channel-modal-search-icon" aria-hidden="true">⌕</span><input type="search" data-channel-search-input value="${escapeHtml(query)}" placeholder="메뉴·가게명·혜택 검색" aria-label="메뉴·가게명·혜택 검색" enterkeyhint="search" autocomplete="off"><button type="button" data-channel-search-clear aria-label="검색어 지우기" ${query?'':'hidden'}>×</button></form><p class="channel-modal-search-status" data-channel-search-status aria-live="polite">전체 ${Number(total)||0}개</p>`;
+}
+function fxChannelSearchEmptyMarkup(){return '<p class="channel-modal-search-empty" data-channel-search-empty hidden>검색 결과가 없습니다.<small>다른 메뉴명·가게명·혜택을 입력해 보세요.</small></p>';}
+function fxChannelSearchTokens(query){return String(query||'').trim().split(/\s+/).map(normalize).filter(Boolean);}
+function fxApplyChannelSearch(root,query,menuStoreIds=new Set()){
+ if(!root)return;
+ const tokens=fxChannelSearchTokens(query),items=[...root.querySelectorAll('[data-channel-search-item]')];
+ let visible=0;
+ for(const item of items){
+  const text=normalize(item.dataset.channelSearchText||item.textContent||'');
+  const ids=String(item.dataset.channelSearchStoreIds||'').split(',').filter(Boolean);
+  const localMatch=!tokens.length||tokens.every(token=>text.includes(token));
+  const menuMatch=tokens.length&&ids.some(id=>menuStoreIds.has(id));
+  item.hidden=!(localMatch||menuMatch);
+  if(!item.hidden)visible+=1;
+ }
+ const clear=root.querySelector('[data-channel-search-clear]');if(clear)clear.hidden=!tokens.length;
+ const status=root.querySelector('[data-channel-search-status]');if(status)status.textContent=tokens.length?`검색 결과 ${visible}개`:`전체 ${items.length}개`;
+ const empty=root.querySelector('[data-channel-search-empty]');if(empty)empty.hidden=visible>0;
+}
+function fxChannelMenuResultIds(payload){return new Set(Object.keys(payload?.stores||{}).map(String));}
+function fxRunChannelSearch(input){
+ const root=input?.closest('[data-channel-search-root]');if(!root)return;
+ const query=String(input.value||'').trim(),sequence=++fxChannelSearchSequence;
+ fxApplyChannelSearch(root,query);
+ window.clearTimeout(fxChannelSearchTimer);
+ if(!query)return;
+ fxChannelSearchTimer=window.setTimeout(async()=>{
+  let ids=new Set();
+  try{ids=fxChannelMenuResultIds(await window.daedongDataApi?.menuSearch?.(query));}catch(error){console.warn('주문경로 메뉴 검색 실패',error);}
+  if(sequence!==fxChannelSearchSequence||!input.isConnected||String(input.value||'').trim()!==query)return;
+  fxApplyChannelSearch(root,query,ids);
+ },260);
+}
+function fxActivateChannelSearch(query=''){
+ const input=$('#modalContent [data-channel-search-input]');if(!input)return;
+ input.value=query;fxRunChannelSearch(input);
+}
+if(!window.__daedongChannelSearchEventsInstalled){
+ window.__daedongChannelSearchEventsInstalled=true;
+ document.addEventListener('input',event=>{if(event.target.matches('[data-channel-search-input]'))fxRunChannelSearch(event.target);});
+ document.addEventListener('submit',event=>{if(event.target.matches('[data-channel-search-form]'))event.preventDefault();});
+ document.addEventListener('click',event=>{const clear=event.target.closest('[data-channel-search-clear]');if(!clear)return;const input=clear.closest('[data-channel-search-root]')?.querySelector('[data-channel-search-input]');if(input){input.value='';fxRunChannelSearch(input);input.focus();}},true);
 }
 function fxRememberAppBrowserReturn(key,anchorStoreId=''){
  window.daedongMarkExternalAppDeparture?.();
@@ -235,22 +305,22 @@ function fxRenderRails(){
 }
 renderStores=function(options={}){fxOriginalRenderStores(options);fxRenderRails();observeDeferredPhotos($('#recommendRails'));};
 
-function fxAppBrowserMarkup(key,selectedCategory='추천'){
+function fxAppBrowserMarkup(key,selectedCategory='추천',searchQuery=''){
  const meta=APP_META[key],all=appRegisteredStores(key),cats=categoriesFromStores(all);const filtered=selectedCategory==='추천'?all:all.filter(store=>storeMatchesCategory(store,selectedCategory)),list=applyCategoryPriorityOverrides(filtered,selectedCategory);
  const isExternal=EXTERNAL_APP_KEYS.includes(key);
  const chips=`<nav class="app-browser-category-chips"><button type="button" data-app-category="추천" class="${selectedCategory==='추천'?'active':''}">추천</button>${cats.map(cat=>`<button type="button" data-app-category="${escapeHtml(cat)}" class="${selectedCategory===cat?'active':''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
  const cards=list.map(store=>fxRegisteredAppCardMarkup(store,key,isExternal)).join('');
- return `<section class="app-browser"><header class="app-browser-head${isExternal?' external-app-browser-head':''}">${isExternal?'':appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}<div class="app-browser-list">${cards||'<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${isExternal?externalAppNoticeMarkup():''}</section>`;
+ return `<section class="app-browser" data-channel-search-root><header class="app-browser-head${isExternal?' external-app-browser-head':''}">${isExternal?'':appIcon(key,'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${fxChannelSearchMarkup(list.length,searchQuery)}${chips}<div class="app-browser-list">${cards||'<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${fxChannelSearchEmptyMarkup()}${isExternal?externalAppNoticeMarkup():''}</section>`;
 }
-openAppBrowser=function(key,selectedCategory='추천'){if(!['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'].includes(key))return;openModal(fxAppBrowserMarkup(key,selectedCategory));$('#modal').dataset.appBrowserKey=key;$('#modal').dataset.appBrowserCategory=selectedCategory;};
+openAppBrowser=function(key,selectedCategory='추천',searchQuery=''){if(!['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'].includes(key))return;openModal(fxAppBrowserMarkup(key,selectedCategory,searchQuery));$('#modal').dataset.appBrowserKey=key;$('#modal').dataset.appBrowserCategory=selectedCategory;fxActivateChannelSearch(searchQuery);};
 globalExternalGuide=function(key){openAppBrowser(key);};
 
 function fxPhoneStores(category='추천'){let list=fxPhoneData.storeMappings.map(item=>({...item,store:fxStoreById(item.store_id)})).filter(item=>fxVisible(item.store));if(category!=='추천')list=list.filter(item=>storeMatchesCategory(item.store,category));return applyCategoryPriorityOverrides(list.sort((a,b)=>(fxDistance(a.store)??999)-(fxDistance(b.store)??999)||a.store.name.localeCompare(b.store.name,'ko')),category);}
-function fxOpenPhoneDirectory(category='추천'){
+function fxOpenPhoneDirectory(category='추천',searchQuery=''){
  const all=fxPhoneStores(),cats=categoriesFromStores(all.map(item=>item.store));const list=fxPhoneStores(category);
  const chips=`<nav class="app-browser-category-chips"><button type="button" data-phone-category="추천" class="${category==='추천'?'active':''}">추천</button>${cats.map(cat=>`<button type="button" data-phone-category="${escapeHtml(cat)}" class="${category===cat?'active':''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
- const cards=list.map(({store})=>`<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
- openModal(`<section class="phone-order-sheet"><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다. 전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p>${chips}<div class="phone-order-list">${cards||'<p class="empty">확인 가능한 전화페이지가 없습니다.</p>'}</div></section>`);
+ const cards=list.map(({store})=>`<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
+ openModal(`<section class="phone-order-sheet" data-channel-search-root><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다. 전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p>${fxChannelSearchMarkup(list.length,searchQuery)}${chips}<div class="phone-order-list">${cards||'<p class="empty">확인 가능한 전화페이지가 없습니다.</p>'}</div>${fxChannelSearchEmptyMarkup()}</section>`);fxActivateChannelSearch(searchQuery);
 }
 function fxOpenPhoneConfirm(id){const item=fxPhoneByStore.get(String(id)),store=fxStoreById(id),phone=String(store?.phone||'').replace(/[^0-9]/g,'');const valid=/^02\d{7,8}$/.test(phone)||/^0(?:3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{7,8}$/.test(phone)||/^01[016789]\d{7,8}$/.test(phone)||/^070\d{8}$/.test(phone);if(!item?.clickableTel||!store||!valid)return;openModal(`<section class="phone-order-confirm" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)} 전화주문</h2><div class="phone-confirm-photo">${fxCardPhoto(store)}</div><p>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</p><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다. 전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p><div class="phone-confirm-actions"><a class="phone-call-link" href="tel:${escapeHtml(phone)}">전화 걸기</a><button class="phone-cancel" type="button" data-phone-cancel>취소</button></div></section>`);$('#modal').dataset.activeStoreId=store.id;}
 
@@ -275,12 +345,12 @@ function fxBuildIndexes(){
 }
 function fxDirectBrands(){const map=new Map();for(const [id,item] of fxBrandByStore){if(!map.has(item.brandName))map.set(item.brandName,{name:item.brandName,icon:item.icon,stores:[]});map.get(item.brandName).stores.push(id);}return [...map.values()].sort((a,b)=>a.name.localeCompare(b.name,'ko'));}
 function fxOpenBrandHub(view='channels',value=''){
- if(view==='channels'){openModal(`<section class="brand-app-hub"><h2 id="modalTitle">브랜드앱 주문</h2><p>직접 브랜드앱과 공통 주문채널 해피오더를 각각 선택할 수 있습니다.</p><div class="brand-app-grid"><button type="button" class="brand-app-tile glass-action" data-brand-view="direct">${fxSvg('store','order-svg')}<b>직접 브랜드앱</b><small>Android 앱</small></button><button type="button" class="brand-app-tile glass-action" data-brand-view="happy"><img src="assets/order-channels/happyorder.png" alt="해피오더"><b>해피오더</b><small>공통 주문채널</small></button></div></section>`);return;}
- if(view==='direct'){const cards=fxDirectBrands().map(brand=>`<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}">${brand.icon?`<img src="${escapeHtml(mobilePhotoPath(brand.icon))}" alt="">`:fxSvg('store','order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');openModal(`<section class="brand-app-hub"><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p><div class="brand-app-grid">${cards}</div></section>`);return;}
- if(view==='direct-stores'){const brand=fxDirectBrands().find(item=>item.name===value);const cards=(brand?.stores||[]).map(fxStoreById).filter(fxVisible).map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');openModal(`<section class="brand-app-hub"><h2 id="modalTitle">${escapeHtml(value)}</h2><p>${escapeHtml(FX_MAP_NAME)}에 등록된 해당 브랜드 ${escapeHtml(FX_REGION_NAME)} 지점입니다.</p><div class="channel-store-list">${cards}</div></section>`);return;}
- if(view==='happy'){const cats=[...new Set((fxHappyData.currentScreenBrands||[]).map(item=>item.category).filter(Boolean))];openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더</h2><p>카테고리를 선택한 뒤 해피오더에서 확인된 브랜드와 여수 지점을 찾아보세요.</p><div class="brand-app-grid">${cats.map(cat=>`<button type="button" class="brand-app-tile glass-action" data-happy-category="${escapeHtml(cat)}">${fxSvg('food','order-svg')}<b>${escapeHtml(cat)}</b></button>`).join('')}</div></section>`);return;}
- if(view==='happy-brands'){const brands=(fxHappyData.currentScreenBrands||[]).filter(item=>item.category===value&&item.currentScreenConfirmed);openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><div class="happyorder-brand-grid">${brands.map(brand=>`<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}">${brand.brandSelectionImage?`<img src="${escapeHtml(mobilePhotoPath(brand.brandSelectionImage))}" alt="">`:`<img src="assets/order-channels/happyorder.png" alt="">`}<b>${escapeHtml(brand.brandName)}</b></button>`).join('')}</div></section>`);return;}
- if(view==='happy-stores'){const ids=[...fxHappyByStore].filter(([,item])=>item.brandName===value).map(([id])=>id);const cards=ids.map(fxStoreById).filter(fxVisible).map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p><div class="channel-store-list">${cards}</div></section>`);}
+ if(view==='channels'){const directIds=[...fxBrandByStore.keys()],happyIds=[...fxHappyByStore.keys()];openModal(`<section class="brand-app-hub" data-channel-search-root><h2 id="modalTitle">브랜드앱 주문</h2><p>직접 브랜드앱과 공통 주문채널 해피오더를 각각 선택할 수 있습니다.</p>${fxChannelSearchMarkup(2)}<div class="brand-app-grid"><button type="button" class="brand-app-tile glass-action" data-brand-view="direct"${fxChannelSearchAttrs('직접 브랜드앱 Android 앱',directIds)}>${fxSvg('store','order-svg')}<b>직접 브랜드앱</b><small>Android 앱</small></button><button type="button" class="brand-app-tile glass-action" data-brand-view="happy"${fxChannelSearchAttrs('해피오더 공통 주문채널',happyIds)}><img src="assets/order-channels/happyorder.png" alt="해피오더"><b>해피오더</b><small>공통 주문채널</small></button></div>${fxChannelSearchEmptyMarkup()}</section>`);fxActivateChannelSearch();return;}
+ if(view==='direct'){const brands=fxDirectBrands();const cards=brands.map(brand=>`<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}"${fxChannelSearchAttrs(brand.name,brand.stores)}>${brand.icon?`<img src="${escapeHtml(mobilePhotoPath(brand.icon))}" alt="">`:fxSvg('store','order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');openModal(`<section class="brand-app-hub" data-channel-search-root><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p>${fxChannelSearchMarkup(brands.length)}<div class="brand-app-grid">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);fxActivateChannelSearch();return;}
+ if(view==='direct-stores'){const brand=fxDirectBrands().find(item=>item.name===value);const list=(brand?.stores||[]).map(fxStoreById).filter(fxVisible);const cards=list.map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');openModal(`<section class="brand-app-hub" data-channel-search-root><h2 id="modalTitle">${escapeHtml(value)}</h2><p>${escapeHtml(FX_MAP_NAME)}에 등록된 해당 브랜드 ${escapeHtml(FX_REGION_NAME)} 지점입니다.</p>${fxChannelSearchMarkup(list.length)}<div class="channel-store-list">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);fxActivateChannelSearch();return;}
+ if(view==='happy'){const cats=[...new Set((fxHappyData.currentScreenBrands||[]).map(item=>item.category).filter(Boolean))];const cards=cats.map(cat=>{const ids=[...fxHappyByStore].filter(([,item])=>item.category===cat).map(([id])=>id);return `<button type="button" class="brand-app-tile glass-action" data-happy-category="${escapeHtml(cat)}"${fxChannelSearchAttrs(cat,ids)}>${fxSvg('food','order-svg')}<b>${escapeHtml(cat)}</b></button>`;}).join('');openModal(`<section class="happyorder-hub" data-channel-search-root><h2 id="modalTitle">해피오더</h2><p>카테고리를 선택한 뒤 해피오더에서 확인된 브랜드와 여수 지점을 찾아보세요.</p>${fxChannelSearchMarkup(cats.length)}<div class="brand-app-grid">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);fxActivateChannelSearch();return;}
+ if(view==='happy-brands'){const brands=(fxHappyData.currentScreenBrands||[]).filter(item=>item.category===value&&item.currentScreenConfirmed);const cards=brands.map(brand=>{const ids=[...fxHappyByStore].filter(([,item])=>item.brandName===brand.brandName).map(([id])=>id);return `<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}"${fxChannelSearchAttrs(brand.brandName,ids)}>${brand.brandSelectionImage?`<img src="${escapeHtml(mobilePhotoPath(brand.brandSelectionImage))}" alt="">`:`<img src="assets/order-channels/happyorder.png" alt="">`}<b>${escapeHtml(brand.brandName)}</b></button>`;}).join('');openModal(`<section class="happyorder-hub" data-channel-search-root><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2>${fxChannelSearchMarkup(brands.length)}<div class="happyorder-brand-grid">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);fxActivateChannelSearch();return;}
+ if(view==='happy-stores'){const ids=[...fxHappyByStore].filter(([,item])=>item.brandName===value).map(([id])=>id);const list=ids.map(fxStoreById).filter(fxVisible);const cards=list.map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||FX_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');openModal(`<section class="happyorder-hub" data-channel-search-root><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p>${fxChannelSearchMarkup(list.length)}<div class="channel-store-list">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);fxActivateChannelSearch();}
 }
 brandsModal=function(){fxOpenBrandHub('channels');};
 
@@ -558,7 +628,8 @@ function fxInstallEvents(){
   if(event.target.closest('#searchSurface')&&!event.target.closest('#clearMainSearch')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
   if(event.target.closest('#searchBtn')){event.preventDefault();event.stopImmediatePropagation();fxSearchModal($('#mainSearch').value);return;}
   const rail=event.target.closest('[data-rail-store-id]');if(rail){const store=fxStoreById(rail.dataset.railStoreId);if(store)openStore(store);return;}
-  const phoneCat=event.target.closest('[data-phone-category]');if(phoneCat){fxOpenPhoneDirectory(phoneCat.dataset.phoneCategory);return;}
+  const appCat=event.target.closest('[data-app-category]');if(appCat){event.preventDefault();event.stopImmediatePropagation();openAppBrowser($('#modal').dataset.appBrowserKey,appCat.dataset.appCategory,$('#modalContent [data-channel-search-input]')?.value||'');return;}
+  const phoneCat=event.target.closest('[data-phone-category]');if(phoneCat){fxOpenPhoneDirectory(phoneCat.dataset.phoneCategory,$('#modalContent [data-channel-search-input]')?.value||'');return;}
   const phoneStore=event.target.closest('[data-phone-store-id]');if(phoneStore){fxOpenPhoneConfirm(phoneStore.dataset.phoneStoreId);return;}
   if(event.target.closest('[data-phone-cancel]')){hardClose();return;}
   const brandView=event.target.closest('[data-brand-view]');if(brandView){fxOpenBrandHub(brandView.dataset.brandView);return;}
@@ -654,6 +725,7 @@ window.installDaedongTapAction?.({
 
 const fxRc2Script=document.createElement('script');
 fxRc2Script.src='rc2-fixes.js?v=selected-category-label-2-store-share-deep-link-1-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-rail-cross-section-dedupe-1-yogiyo-same-tab-return-1-rail-local-repeat-fallback-3-rail-adjacent-visual-dedupe-1-photo-qualified-new-store-1-secure-detail-await-1-app-list-direct-order-1-all-app-return-state-1-location-stable-newest-1-simple-app-return-1-direct-return-no-home-1-nearby-status-final-1-external-return-fast-1-instant-store-snapshot-1-all-order-app-exact-return-1-managed-region-priority-3-goheung-isolation-2-goheung-launch-1-sequential-app-return-1-instant-external-interaction-1-daylight-effects-cleanup-1-mobile-photo-delivery-1-brand-key-cache-1-ranked-input-1-order-methods-return-stable-dom-1-yogiyo-history-return-2-mobile-customer-qa-1-kakao-fresh-entry-token-1-order-app-confirmed-resume-1-kakao-external-history-guard-1-android-distinct-history-guard-1-back-forward-departure-marker-1-durable-return-cookie-1-store-card-intent-2-store-card-back-home-1-android-system-back-return-1-repeated-selected-app-return-1-selected-original-direct-launch-1-single-entry-return-1-anchor-lease-1-return-first-tap-2-return-activation-atomic-1-return-intent-cancel-1-return-early-tap-bridge-1-restored-button-direct-touch-1-visible-return-rebind-1-visible-return-detail-rebuild-1-visible-return-modal-reset-1-return-document-reload-1-return-document-navigation-1-reentered-order-method-surface-1-physical-order-reentry-document-1-stable-separated-order-return-1-direct-order-app-one-tap-1-detached-kakao-order-return-1-yogiyo-live-preview-task-1-yogiyo-kakao-https-return-1-yogiyo-kakao-web-return-1-yogiyo-native-bypass-form-1-yogiyo-android-browser-form-1-restored-open-order-methods-1-restored-open-order-methods-ready-1-catalog-refresh-route-fallback-1-yogiyo-native-app-return-1-manual-carousels-1-shared-referral-2-installed-qr-history-20260913-reviewed-identity-20260913-address-variants-1-late-audit-1-store-entry-status-20260913-photo-address-priority-20260913-photo-tier-runtime-1-norang-return-20260914';
+fxRc2Script.src+='-order-channel-search-1';
 fxRc2Script.async=false;
 fxRc2Script.onload=()=>{
  fxInstallEvents();
@@ -661,6 +733,7 @@ fxRc2Script.onload=()=>{
  fxRc3Script.src='rc3-fixes.js?v=direct-feedback-admin-1-selected-category-label-1-phone-route-restoration-3-phone-card-markers-2-physical-map-recovery-2-multi-category-1-hamburger-priority-1-pizza-priority-2-external-app-text-1-popup-utility-links-1-selected-store-top-1-rail-use-counts-1-secure-detail-await-1-card-channel-keys-1-store-popup-native-order-1-recommend-status-final-1-release-readiness-1-managed-region-priority-3-goheung-isolation-2-other-order-method-touch-1-order-methods-return-touch-5-mobile-photo-delivery-1-single-rank-per-rail-1-progressive-rails-1-single-yogiyo-cta-1-trusted-naver-place-1-direct-phone-link-1-mobile-order-selection-ghost-2-order-method-copy-1-restored-inline-fallback-1-inline-order-methods-1-external-route-return-touch-1-stable-separated-order-return-2-direct-order-app-one-tap-1-keep-order-app-list-on-return-1-restored-open-order-methods-1-restored-open-order-methods-ready-1-catalog-refresh-route-fallback-1-current-contact-phone-1-reviewed-identity-20260913-address-variants-1-late-audit-1-local-services-preview-20260913';
  fxRc3Script.src+='-atomic-rail-refresh-1-store-card-intent-2-return-activation-atomic-1-return-intent-cancel-1-return-early-tap-bridge-1-order-sheet-before-history-1-restored-button-direct-touch-1';
  fxRc3Script.src+='-restored-external-route-direct-touch-1';
+ fxRc3Script.src+='-order-channel-search-1';
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
@@ -672,7 +745,7 @@ fxRc2Script.onload=()=>{
    fxRc5Script.async=false;
    fxRc5Script.onload=()=>{
     const css=document.createElement('link');css.rel='stylesheet';css.href='rc6-fixes.css?v=location-store-hero-1-handsu-copy-spacing-1-hero-clean-controls-1-hero-order-footer-2';document.head.append(css);
-    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-hero-area-label-removed-1-three-main-ads-restored-1-notion-hero-return-1-goheung-isolation-2-instant-hero-loading-1-keep-placeholder-1-coordinate-yield-1-pager-stable-refresh-1-hero-photo-recovery-1-store-campaign-nine-2-tamnaneun-menu-hero-4-store-campaign-standard-1-auto-menu-fill-all-1-domino-munsu-14-1-hero-stable-height-1-manual-carousels-1-former-managed-bottom-1-four-store-qr-1-four-store-14-plus-3-1-hide-tamnaneun-1-teum-campaign-1-three-store-campaign-1-haeinine-campaign-1-native-pages-1-baeknyeon-ended-1-collected-shopinshop-1-managed-business-1-shared-referral-2-shared-short-1-ajuker-munsu-14-1-shared102-menu-1-active-viewport-anchor-1-merged-campaign-alias-1-store-entry-status-20260913-photo-address-priority-20260913-photo-tier-runtime-1';
+    const script=document.createElement('script');script.src='rc6-fixes.js?v=hero-store-direct-1-multi-category-1-hamburger-priority-1-pizza-priority-2-kongsanso-store-family-1-store-badge-removed-1-handsu-copy-spacing-1-hero-card-cta-removed-1-rain-mode-admin-1-local-channel-marker-1-location-coordinate-merge-1-business-status-ranking-1-release-readiness-1-hero-open-only-1-hero-area-label-removed-1-three-main-ads-restored-1-notion-hero-return-1-goheung-isolation-2-instant-hero-loading-1-keep-placeholder-1-coordinate-yield-1-pager-stable-refresh-1-hero-photo-recovery-1-store-campaign-nine-2-tamnaneun-menu-hero-4-store-campaign-standard-1-auto-menu-fill-all-1-domino-munsu-14-1-hero-stable-height-1-manual-carousels-1-former-managed-bottom-1-four-store-qr-1-four-store-14-plus-3-1-hide-tamnaneun-1-teum-campaign-1-three-store-campaign-1-haeinine-campaign-1-native-pages-1-baeknyeon-ended-1-collected-shopinshop-1-managed-business-1-shared-referral-2-shared-short-1-ajuker-munsu-14-1-shared102-menu-1-active-viewport-anchor-1-merged-campaign-alias-1-store-entry-status-20260913-photo-address-priority-20260913-photo-tier-runtime-1-order-channel-search-1';
     script.onload=()=>{
      const addressScript=document.createElement('script');addressScript.src='rc7-address-map.js?v=address-home-return-1-coarse-region-1-inapp-location-recovery-1-outside-yeosu-full-list-1-saved-address-first-1-release-readiness-1-step-touch-back-1-photo-address-priority-20260913-photo-tier-runtime-1';
      addressScript.onload=()=>{fxInstallEvents();setTimeout(async()=>{window.__daedongDeferRailRender=true;try{await window.daedongCatalogReady;await fxInitialize();await rc6Initialize();window.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList();window.rc7Initialize?.();await fxOpenSharedStoreFromUrl();fxFinishLocationRankingReady(true);}catch(error){window.__daedongDeferRailRender=false;fxRenderRailsWithoutMovingActiveList();console.error('위치 기반 가게 정렬을 초기화하지 못했습니다.',error);fxFinishLocationRankingReady(false);}},0);};

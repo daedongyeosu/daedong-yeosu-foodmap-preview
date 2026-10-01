@@ -1075,7 +1075,7 @@ function rc2OpenRailList(specId) {
   openModal(`<section class="app-browser rail-list-modal"><h2 id="modalTitle">${escapeHtml(spec.title)}</h2><p>${escapeHtml(spec.desc)}</p><div class="app-browser-list">${cards || '<p class="empty">추천 가게를 확인 중입니다.</p>'}</div></section>`);
 }
 
-fxAppBrowserMarkup = function rc2AppBrowserMarkup(key, selectedCategory = '추천') {
+fxAppBrowserMarkup = function rc2AppBrowserMarkup(key, selectedCategory = '추천', searchQuery = '') {
   const meta = APP_META[key];
   const all = appRegisteredStores(key);
   const cats = categoriesFromStores(all);
@@ -1084,17 +1084,18 @@ fxAppBrowserMarkup = function rc2AppBrowserMarkup(key, selectedCategory = '추�
   const isExternal = EXTERNAL_APP_KEYS.includes(key);
   const chips = `<nav class="app-browser-category-chips"><button type="button" data-app-category="추천" class="${selectedCategory === '추천' ? 'active' : ''}">추천</button>${cats.map(cat => `<button type="button" data-app-category="${escapeHtml(cat)}" class="${selectedCategory === cat ? 'active' : ''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
   const cards = list.map(store => fxRegisteredAppCardMarkup(store, key, isExternal)).join('');
-  return `<section class="app-browser"><header class="app-browser-head${isExternal ? ' external-app-browser-head' : ''}">${isExternal ? '' : appIcon(key, 'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${chips}${rc2SelectedCategoryMarkup(selectedCategory)}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${isExternal ? externalAppNoticeMarkup() : ''}</section>`;
+  return `<section class="app-browser" data-channel-search-root><header class="app-browser-head${isExternal ? ' external-app-browser-head' : ''}">${isExternal ? '' : appIcon(key, 'app-browser-head-icon')}<div><h2 id="modalTitle">${escapeHtml(meta.label)} 등록 가게</h2><p>실제 주문주소가 등록된 가게만 보여드립니다.</p></div></header>${fxChannelSearchMarkup(list.length, searchQuery)}${chips}${rc2SelectedCategoryMarkup(selectedCategory)}<div class="app-browser-list">${cards || '<div class="empty">해당 조건의 가게가 없습니다.</div>'}</div>${fxChannelSearchEmptyMarkup()}${isExternal ? externalAppNoticeMarkup() : ''}</section>`;
 };
 
-openAppBrowser = function rc2OpenAppBrowser(key, selectedCategory = '추천') {
+openAppBrowser = function rc2OpenAppBrowser(key, selectedCategory = '추천', searchQuery = '') {
   if (!['direct', 'mukkebi', 'ddangyo', 'ondongne', 'yogiyo', 'coupang', 'baemin'].includes(key)) return;
   const modal = $('#modal');
   if (!modal.hidden && modal.dataset.appBrowserKey === key) rc2ReplaceModal();
-  openModal(fxAppBrowserMarkup(key, selectedCategory));
+  openModal(fxAppBrowserMarkup(key, selectedCategory, searchQuery));
   modal.dataset.appBrowserKey = key;
   modal.dataset.appBrowserCategory = selectedCategory;
   rc2RevealSelectedCategory();
+  fxActivateChannelSearch(searchQuery);
 };
 globalExternalGuide = function rc2GlobalExternalGuide(key) { openAppBrowser(key); };
 
@@ -1102,15 +1103,16 @@ function rc2OpenOtherApps() {
   openModal(`<section class="app-browser other-apps-modal"><h2 id="modalTitle">다른 주문앱</h2><p>이용할 주문앱을 선택해 등록된 가게를 확인하세요.</p><div class="other-app-choice-grid"><button type="button" class="glass-action" data-global-external="yogiyo"><span class="external-app-choice-label">요기요</span></button><button type="button" class="glass-action" data-global-external="coupang"><span class="external-app-choice-label">쿠팡이츠</span></button><button type="button" class="glass-action" data-global-external="baemin"><span class="external-app-choice-label">배달의민족</span></button></div>${externalAppNoticeMarkup()}</section>`);
 }
 
-fxOpenPhoneDirectory = function rc2OpenPhoneDirectory(category = '추천') {
+fxOpenPhoneDirectory = function rc2OpenPhoneDirectory(category = '추천', searchQuery = '') {
   const all = fxPhoneStores();
   const cats = categoriesFromStores(all.map(item => item.store));
   const list = fxPhoneStores(category);
   if (!$('#modal')?.hidden && $('#modalContent .phone-order-sheet')) rc2ReplaceModal();
   const chips = `<nav class="app-browser-category-chips"><button type="button" data-phone-category="추천" class="${category === '추천' ? 'active' : ''}">추천</button>${cats.map(cat => `<button type="button" data-phone-category="${escapeHtml(cat)}" class="${category === cat ? 'active' : ''}">${escapeHtml(cat)}</button>`).join('')}</nav>`;
-  const cards = list.map(({store}) => `<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC2_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
-  openModal(`<section class="phone-order-sheet"><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p>${chips}${rc2SelectedCategoryMarkup(category)}<div class="phone-order-list">${cards || '<p class="empty">확인 가능한 전화페이지가 없습니다.</p>'}</div></section>`);
+  const cards = list.map(({store}) => `<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC2_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
+  openModal(`<section class="phone-order-sheet" data-channel-search-root><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호를 확인한 뒤 전화 걸기 버튼을 눌러주세요.</p>${fxChannelSearchMarkup(list.length, searchQuery)}${chips}${rc2SelectedCategoryMarkup(category)}<div class="phone-order-list">${cards || '<p class="empty">확인 가능한 전화페이지가 없습니다.</p>'}</div>${fxChannelSearchEmptyMarkup()}</section>`);
   rc2RevealSelectedCategory();
+  fxActivateChannelSearch(searchQuery);
 };
 
 fxOpenPhoneConfirm = function rc2OpenPhoneConfirm(id) {
@@ -1150,43 +1152,54 @@ function rc2BrandCategoryChips(selected = '전체') {
   return `<nav class="app-browser-category-chips brand-category-chips">${order.filter(item => item === '전체' || available.has(item)).map(item => `<button type="button" data-direct-category="${item}" class="${selected === item ? 'active' : ''}">${item}</button>`).join('')}</nav>`;
 }
 
-fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '') {
+fxOpenBrandHub = function rc2OpenBrandHub(view = 'channels', value = '', searchQuery = '') {
   if (view === 'channels') {
-    openModal(`<section class="brand-app-hub"><h2 id="modalTitle">브랜드앱 주문</h2><p>직접 브랜드앱과 공통 주문채널 해피오더를 각각 선택할 수 있습니다.</p><div class="brand-app-grid"><button type="button" class="brand-app-tile glass-action" data-brand-view="direct">${fxSvg('store', 'order-svg')}<b>직접 브랜드앱</b><small>Android 앱</small></button><button type="button" class="brand-app-tile glass-action" data-brand-view="happy"><img src="assets/order-channels/happyorder.png" alt="해피오더"><b>해피오더</b><small>공통 주문채널</small></button></div></section>`);
+    const directIds = [...fxBrandByStore.keys()], happyIds = [...fxHappyByStore.keys()];
+    openModal(`<section class="brand-app-hub" data-channel-search-root><h2 id="modalTitle">브랜드앱 주문</h2><p>직접 브랜드앱과 공통 주문채널 해피오더를 각각 선택할 수 있습니다.</p>${fxChannelSearchMarkup(2)}<div class="brand-app-grid"><button type="button" class="brand-app-tile glass-action" data-brand-view="direct"${fxChannelSearchAttrs('직접 브랜드앱 Android 앱', directIds)}>${fxSvg('store', 'order-svg')}<b>직접 브랜드앱</b><small>Android 앱</small></button><button type="button" class="brand-app-tile glass-action" data-brand-view="happy"${fxChannelSearchAttrs('해피오더 공통 주문채널', happyIds)}><img src="assets/order-channels/happyorder.png" alt="해피오더"><b>해피오더</b><small>공통 주문채널</small></button></div>${fxChannelSearchEmptyMarkup()}</section>`);
+    fxActivateChannelSearch();
     return;
   }
   if (view === 'direct') {
     const category = value || '전체';
     if (!$('#modal')?.hidden && $('#modalContent .direct-brand-browser')) rc2ReplaceModal();
     const brands = fxDirectBrands().filter(brand => category === '전체' || brand.category === category);
-    const cards = brands.map(brand => `<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}">${brand.icon ? `<img src="${escapeHtml(mobilePhotoPath(brand.icon))}" alt="">` : rc2Icon('other', 'order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');
-    openModal(`<section class="brand-app-hub direct-brand-browser"><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p>${rc2BrandCategoryChips(category)}${rc2SelectedCategoryMarkup(category)}<div class="brand-app-grid">${cards}</div></section>`);
+    const cards = brands.map(brand => `<button type="button" class="brand-app-tile glass-action" data-direct-brand="${escapeHtml(brand.name)}"${fxChannelSearchAttrs(brand.name, brand.stores)}>${brand.icon ? `<img src="${escapeHtml(mobilePhotoPath(brand.icon))}" alt="">` : rc2Icon('other', 'order-svg')}<b>${escapeHtml(brand.name)}</b></button>`).join('');
+    openModal(`<section class="brand-app-hub direct-brand-browser" data-channel-search-root><h2 id="modalTitle">직접 브랜드앱</h2><p>현재 검증된 링크는 Android Google Play입니다. iPhone은 자동 이동하지 않습니다.</p>${fxChannelSearchMarkup(brands.length, searchQuery)}${rc2BrandCategoryChips(category)}${rc2SelectedCategoryMarkup(category)}<div class="brand-app-grid">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);
     rc2RevealSelectedCategory();
+    fxActivateChannelSearch(searchQuery);
     return;
   }
   if (view === 'direct-stores') {
     const brand = fxDirectBrands().find(item => item.name === value);
-    const cards = (brand?.stores || []).map(fxStoreById).filter(fxVisible).map(store => `<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC2_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
-    openModal(`<section class="brand-app-hub"><h2 id="modalTitle">${escapeHtml(value)}</h2><p>${escapeHtml(RC2_MAP_NAME)}에 등록된 해당 브랜드 ${escapeHtml(RC2_REGION_NAME)} 지점입니다.</p><div class="channel-store-list">${cards}</div></section>`);
+    const list = (brand?.stores || []).map(fxStoreById).filter(fxVisible);
+    const cards = list.map(store => `<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC2_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
+    openModal(`<section class="brand-app-hub" data-channel-search-root><h2 id="modalTitle">${escapeHtml(value)}</h2><p>${escapeHtml(RC2_MAP_NAME)}에 등록된 해당 브랜드 ${escapeHtml(RC2_REGION_NAME)} 지점입니다.</p>${fxChannelSearchMarkup(list.length)}<div class="channel-store-list">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);
+    fxActivateChannelSearch();
     return;
   }
   if (view === 'happy') {
     const categories = [...(fxHappyData.categories || [])].sort((a, b) => a.displayOrder - b.displayOrder);
     const confirmed = new Set((fxHappyData.currentScreenBrands || []).filter(item => item.currentScreenConfirmed).map(item => item.category));
-    openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더</h2><p>카테고리를 선택한 뒤 해피오더에서 확인된 브랜드와 여수 지점을 찾아보세요.</p><div class="happy-category-grid">${categories.map(item => `<button type="button" class="happy-category-tile glass-action" data-happy-category="${escapeHtml(item.categoryName)}" ${confirmed.has(item.categoryName) ? '' : 'disabled'}>${rc2Icon(rc2HappyIconId(item.categoryName), 'happy-category-icon')}<b>${escapeHtml(item.categoryName)}</b></button>`).join('')}</div></section>`);
+    const cards = categories.map(item => { const ids = [...fxHappyByStore].filter(([, entry]) => entry.category === item.categoryName).map(([id]) => id); return `<button type="button" class="happy-category-tile glass-action" data-happy-category="${escapeHtml(item.categoryName)}"${fxChannelSearchAttrs(item.categoryName, ids)} ${confirmed.has(item.categoryName) ? '' : 'disabled'}>${rc2Icon(rc2HappyIconId(item.categoryName), 'happy-category-icon')}<b>${escapeHtml(item.categoryName)}</b></button>`; }).join('');
+    openModal(`<section class="happyorder-hub" data-channel-search-root><h2 id="modalTitle">해피오더</h2><p>카테고리를 선택한 뒤 해피오더에서 확인된 브랜드와 여수 지점을 찾아보세요.</p>${fxChannelSearchMarkup(categories.length)}<div class="happy-category-grid">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);
+    fxActivateChannelSearch();
     return;
   }
   if (view === 'happy-brands') {
     const unique = new Map();
     for (const item of fxHappyData.currentScreenBrands || []) if (item.category === value && item.currentScreenConfirmed) unique.set(item.brandName, item);
     const brands = [...unique.values()];
-    openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><div class="happyorder-brand-grid">${brands.map(brand => `<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}">${brand.brandSelectionImage ? `<img src="${escapeHtml(mobilePhotoPath(brand.brandSelectionImage))}" alt="">` : '<img src="assets/order-channels/happyorder.mobile.webp" alt="">'}<b>${escapeHtml(brand.brandName)}</b></button>`).join('')}</div></section>`);
+    const cards = brands.map(brand => { const ids = [...fxHappyByStore].filter(([, item]) => item.brandName === brand.brandName).map(([id]) => id); return `<button type="button" class="happyorder-brand-tile glass-action" data-happy-brand="${escapeHtml(brand.brandName)}"${fxChannelSearchAttrs(brand.brandName, ids)}>${brand.brandSelectionImage ? `<img src="${escapeHtml(mobilePhotoPath(brand.brandSelectionImage))}" alt="">` : '<img src="assets/order-channels/happyorder.mobile.webp" alt="">'}<b>${escapeHtml(brand.brandName)}</b></button>`; }).join('');
+    openModal(`<section class="happyorder-hub" data-channel-search-root><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2>${fxChannelSearchMarkup(brands.length)}<div class="happyorder-brand-grid">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);
+    fxActivateChannelSearch();
     return;
   }
   if (view === 'happy-stores') {
     const ids = [...fxHappyByStore].filter(([, item]) => item.brandName === value).map(([id]) => id);
-    const cards = ids.map(fxStoreById).filter(fxVisible).map(store => `<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC2_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
-    openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p><div class="channel-store-list">${cards}</div></section>`);
+    const list = ids.map(fxStoreById).filter(fxVisible);
+    const cards = list.map(store => `<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC2_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
+    openModal(`<section class="happyorder-hub" data-channel-search-root><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p>${fxChannelSearchMarkup(list.length)}<div class="channel-store-list">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);
+    fxActivateChannelSearch();
   }
 };
 brandsModal = function rc2BrandsModal() { fxOpenBrandHub('channels'); };
@@ -1612,7 +1625,7 @@ fxInstallEvents = function rc2InstallEvents() {
       return;
     }
     const appCategory = event.target.closest('[data-app-category]');
-    if (appCategory) { event.preventDefault(); event.stopImmediatePropagation(); openAppBrowser($('#modal').dataset.appBrowserKey, appCategory.dataset.appCategory); return; }
+    if (appCategory) { event.preventDefault(); event.stopImmediatePropagation(); openAppBrowser($('#modal').dataset.appBrowserKey, appCategory.dataset.appCategory, $('#modalContent [data-channel-search-input]')?.value || ''); return; }
     const appStoreInfo = event.target.closest('[data-app-store-info]');
     if (appStoreInfo) { event.preventDefault(); event.stopImmediatePropagation(); const store = fxStoreById(appStoreInfo.dataset.appStoreInfo); if (store) rc2OpenStoreFromCustomer(store); return; }
     const appStoreOrder = event.target.closest('[data-app-store-order]');
@@ -1629,12 +1642,12 @@ fxInstallEvents = function rc2InstallEvents() {
       return;
     }
     const phoneCategory = event.target.closest('[data-phone-category]');
-    if (phoneCategory) { event.preventDefault(); event.stopImmediatePropagation(); fxOpenPhoneDirectory(phoneCategory.dataset.phoneCategory); return; }
+    if (phoneCategory) { event.preventDefault(); event.stopImmediatePropagation(); fxOpenPhoneDirectory(phoneCategory.dataset.phoneCategory, $('#modalContent [data-channel-search-input]')?.value || ''); return; }
     const phoneStore = event.target.closest('[data-phone-store-id]');
     if (phoneStore) { event.preventDefault(); event.stopImmediatePropagation(); fxOpenPhoneConfirm(phoneStore.dataset.phoneStoreId); return; }
     if (event.target.closest('[data-phone-cancel]')) { event.preventDefault(); event.stopImmediatePropagation(); hardClose(); return; }
     const directCategory = event.target.closest('[data-direct-category]');
-    if (directCategory) { event.preventDefault(); event.stopImmediatePropagation(); fxOpenBrandHub('direct', directCategory.dataset.directCategory); return; }
+    if (directCategory) { event.preventDefault(); event.stopImmediatePropagation(); fxOpenBrandHub('direct', directCategory.dataset.directCategory, $('#modalContent [data-channel-search-input]')?.value || ''); return; }
     const brandView = event.target.closest('[data-brand-view]');
     if (brandView) { event.preventDefault(); event.stopImmediatePropagation(); fxOpenBrandHub(brandView.dataset.brandView); return; }
     const directBrand = event.target.closest('[data-direct-brand]');

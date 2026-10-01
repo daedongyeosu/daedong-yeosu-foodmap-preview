@@ -350,12 +350,12 @@ function rc6InstallChannelLocationSorting(){
   const nearby=rc6NearStores(),rank=new Map(nearby.map((store,index)=>[String(store.id),index]));
   return rc6DirectBrandsBase().map(brand=>{const stores=rc6RankCandidatesByCustomerLocation((brand.stores||[]).map(fxStoreById).filter(Boolean));return{...brand,stores:stores.map(store=>String(store.id)),rc6Nearest:Math.min(...stores.map(store=>rank.get(String(store.id))??Infinity))};}).sort((a,b)=>a.rc6Nearest-b.rc6Nearest||a.name.localeCompare(b.name,'ko'));
  };
- fxOpenBrandHub=function rc6LocationBrandHub(view='channels',value=''){
-  if(view!=='happy-stores'){rc6OpenBrandHubBase(view,value);return;}
+ fxOpenBrandHub=function rc6LocationBrandHub(view='channels',value='',searchQuery=''){
+  if(view!=='happy-stores'){rc6OpenBrandHubBase(view,value,searchQuery);return;}
   const ids=[...fxHappyByStore].filter(([,item])=>item.brandName===value).map(([id])=>id);
   const stores=rc6RankCandidatesByCustomerLocation(ids.map(fxStoreById).filter(fxVisible));
-  const cards=stores.map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}">${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||RC6_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
-  openModal(`<section class="happyorder-hub"><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p><div class="channel-store-list">${cards}</div></section>`);
+  const cards=stores.map(store=>`<button type="button" class="channel-store-card glass-action" data-channel-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area||RC6_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b></button>`).join('');
+  openModal(`<section class="happyorder-hub" data-channel-search-root><h2 id="modalTitle">해피오더 · ${escapeHtml(value)}</h2><p>주소 설정 후 주변 주문 가능 매장이 표시됩니다. 지역과 영업 상태에 따라 일부 매장은 표시되지 않을 수 있습니다.</p>${fxChannelSearchMarkup(stores.length,searchQuery)}<div class="channel-store-list">${cards}</div>${fxChannelSearchEmptyMarkup()}</section>`);fxActivateChannelSearch(searchQuery);
  };
 }
 function rc6NewnessRank(store){const timestamp=Date.parse(store?.addedAt||'');return Number.isFinite(timestamp)?timestamp:Number(store?.rawIndex)||0;}
