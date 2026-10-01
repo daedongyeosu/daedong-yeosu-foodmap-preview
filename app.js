@@ -598,19 +598,14 @@ const CAR_INSURANCE_CONTACTS = [
 ];
 const PROMO_CAROUSEL_DETAILS = {
   rider: {
-    title: '배송기사님 상시모집',
-    image: 'assets/promos/rider-recruitment-portrait-v2.webp',
-    imageAlt: `${REGION_MAP_NAME} 배송기사 모집 안내`,
-    imageWidth: 853,
-    imageHeight: 1844,
-    imageOnly: true
+    title: '맛지도 배달대행 배송기사님 상시모집',
+    externalUrl: '/delivery/',
+    ariaLabel: '맛지도 배달대행 배송기사 모집 안내 보기'
   },
   store: {
-    image: 'assets/promos/merchant-recruitment-portrait-v2.webp',
-    imageAlt: '여수맛지도 꼬르륵 배달대행 가맹점 모집 안내',
-    imageWidth: 853,
-    imageHeight: 1844,
-    imageOnly: true
+    title: '맛지도 배달대행 가맹 문의',
+    externalUrl: '/delivery/',
+    ariaLabel: '맛지도 배달대행 가맹 및 홍보 안내 보기'
   },
   join: {
     phone: '010-4797-7803'
@@ -2871,7 +2866,6 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#locationBtn').addEventListener('click', areaModal);
   $('#topFavoriteBtn').addEventListener('click', favoritesModal);
   $('#topRecentBtn').addEventListener('click', recentModal);
-  $('#riderRecruitmentBanner')?.addEventListener('click', () => openPromoCarouselDetail('rider'));
   const promoTrack = $('#promoTrack');
   const promoShell = $('#promoCarousel .carousel-shell');
   let promoTapStart = null;

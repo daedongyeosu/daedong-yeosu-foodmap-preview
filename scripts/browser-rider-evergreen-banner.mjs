@@ -35,22 +35,11 @@ try {
   await page.screenshot({path: 'browser-rider-evergreen-banner.png', fullPage: false});
 
   await banner.click();
-  const modal = page.locator('#modal:not([hidden]).promo-image-only-modal');
-  await modal.waitFor({state: 'visible', timeout: 5000});
-  const image = modal.locator('img[src*="rider-recruitment-portrait-v2.webp"]');
-  await image.waitFor({state: 'visible', timeout: 5000});
-  await check(image.isVisible(), '등록된 배송기사 모집 사진을 즉시 팝업으로 표시');
-  await page.waitForFunction(
-    selector => {
-      const element = document.querySelector(selector);
-      return element instanceof HTMLImageElement && element.complete && element.naturalWidth > 0;
-    },
-    '#modal:not([hidden]).promo-image-only-modal img[src*="rider-recruitment-portrait-v2.webp"]',
-    {timeout: 10000}
-  );
-  await check(image.evaluate(element => element.complete && element.naturalWidth > 0), '배송기사 모집 사진 정상 로드');
-  await check(modal.locator('.modal-close').isVisible(), '팝업 닫기 버튼 표시');
-  await page.screenshot({path: 'browser-rider-evergreen-popup.png', fullPage: false});
+  await page.waitForURL(/\/delivery\/$/, {timeout: 5000});
+  await check(page.getByRole('heading', {name: '배달만 하지 않습니다. 가게가 알려지도록 함께 뜁니다.'}).count().then(count => count === 1), '맛지도 배달대행 소개 페이지 표시');
+  await check(page.locator('a[href="tel:01047977803"]').count().then(count => count >= 1), '배달대행 전화 상담 연결 표시');
+  await check(page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), '390px 모바일에서 가로 넘침 없음');
+  await page.screenshot({path: 'browser-rider-evergreen-delivery-page.png', fullPage: false});
   report.success = report.errors.length === 0;
 } catch (error) {
   report.failure = error.stack || String(error);
