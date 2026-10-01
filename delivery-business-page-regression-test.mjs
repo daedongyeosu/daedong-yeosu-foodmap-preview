@@ -14,6 +14,8 @@ assert.match(html, /"openingHours": "Mo-Su 00:00-23:59"/);
 assert.equal((html.match(/<details>/g) || []).length, 10, '차별점 6개와 FAQ 4개가 터치형 상세 설명으로 제공되어야 합니다.');
 assert.match(html, /저수수료 주문 우선 안내[\s\S]*고객의 선택권을 지키면서 가게가 부담하는 수수료를 줄이는 데 도움/);
 assert.match(html, /왜 이렇게 하나요\?/);
+assert.match(html, /맛지도 배달대행을 이용하는 가게의 메뉴·사진·주문방법과 혜택을 여수맛지도에서 고객 위치에 따라 우선 소개/);
+assert.match(html, /메인 우선 홍보/);
 assert.match(html, /href="tel:01047977803"/);
 assert.match(html, /href="mailto:sisakim@naver\.com"/);
 assert.match(html, /class="header-map-link" href="\/"[^>]*>여수맛지도 보기<\/a>/, '배달대행 페이지 상단에서 여수맛지도 메인으로 바로 돌아갈 수 있어야 합니다.');
