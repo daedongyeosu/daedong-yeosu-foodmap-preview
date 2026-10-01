@@ -27,12 +27,18 @@ try {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   const banner = page.locator('#riderRecruitmentBanner');
   await banner.waitFor({state: 'visible', timeout: 15000});
-  await banner.scrollIntoViewIfNeeded();
-  await check(banner.getByText('배송기사님 상시모집', {exact: true}).count().then(count => count === 1), '존중 표현의 상시모집 문구 표시');
-  await check(banner.getByText('모집내용 보기', {exact: false}).count().then(count => count === 1), '모집내용 보기 버튼 표시');
+  await page.waitForFunction(() => !document.documentElement.classList.contains('daedong-fresh-entry-settling'), null, {timeout: 5000}).catch(() => {});
+  await banner.evaluate(element => element.scrollIntoView({block: 'center'}));
+  await page.waitForTimeout(250);
+  await check(banner.getByText('공공주문앱 전문배송 업체', {exact: true}).count().then(count => count === 1), '공공주문앱 전문배송 정체성 표시');
+  await check(banner.getByText('맛지도 배달대행', {exact: true}).count().then(count => count === 1), '확대된 배달대행 브랜드 표시');
+  await check(banner.getByText('가게·기사님 상시 모집', {exact: true}).count().then(count => count === 1), '가게와 기사님 상시 모집 문구 표시');
+  await check(banner.getByText('자세히 보기', {exact: false}).count().then(count => count === 1), '자세히 보기 버튼 표시');
   const box = await banner.boundingBox();
-  await check(Promise.resolve(Boolean(box && box.width >= 340 && box.height >= 60)), '390px 모바일에서 누르기 쉬운 고정 배너 크기');
+  await check(Promise.resolve(Boolean(box && box.width >= 340 && box.height >= 90)), '390px 모바일에서 세 줄 정보를 담는 배너 크기');
+  await page.setViewportSize({width: 390, height: 1400});
   await page.screenshot({path: 'browser-rider-evergreen-banner.png', fullPage: false});
+  await page.setViewportSize(report.viewport);
 
   await banner.click();
   await page.waitForURL(/\/delivery\/$/, {timeout: 5000});
