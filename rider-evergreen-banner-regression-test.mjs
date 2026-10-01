@@ -19,7 +19,7 @@ assert.match(app, /rider:\s*\{[\s\S]*?externalUrl:\s*'\/delivery\/'/, '하단 �
 assert.match(app, /store:\s*\{[\s\S]*?externalUrl:\s*'\/delivery\/'/, '하단 가맹 문의 카드도 새 소개 페이지로 연결되어야 합니다.');
 assert.doesNotMatch(app, /꼬르륵 배달대행/, '고객 화면의 이전 배달대행 브랜드 문구를 제거해야 합니다.');
 assert.match(css, /\.rider-evergreen-button\s*\{[\s\S]*?min-height:92px/, '세 줄 정보가 들어간 고정 배너는 모바일에서 누르기 쉬운 높이를 유지해야 합니다.');
-assert.match(css, /\.autumn-continuous-shell \.order-section\{[\s\S]*?autumn-dolsan-bridge-2026\.webp/, '바다 배경은 주문방법 영역 아래까지 이어져야 합니다.');
+assert.match(css, /\.autumn-continuous-shell \.order-section\{[\s\S]*?autumn-dolsan-bridge-2026-extended\.svg\?v=20261001-home-glass/, '바다 배경은 주문방법 영역 아래까지 이어지며 이미 받은 홈 배경을 재사용해야 합니다.');
 assert.match(prWorkflow, /browser-rider-evergreen-banner\.mjs/, 'PR에서 390×844 모바일 배너 동작을 검사해야 합니다.');
 assert.match(deployWorkflow, /browser-rider-evergreen-banner\.mjs/, '프리뷰 배포 후에도 실제 배너 동작을 다시 검사해야 합니다.');
 
