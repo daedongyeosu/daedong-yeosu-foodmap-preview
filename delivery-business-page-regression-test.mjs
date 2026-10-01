@@ -11,6 +11,7 @@ assert.match(html, /여수맛지도를 직접 운영/);
 assert.match(html, /가게 홍보부터 주문 연결·배달까지/);
 assert.match(html, /href="tel:01047977803"/);
 assert.match(html, /href="mailto:sisakim@naver\.com"/);
+assert.match(html, /class="header-map-link" href="\/"[^>]*>여수맛지도 보기<\/a>/, '배달대행 페이지 상단에서 여수맛지도 메인으로 바로 돌아갈 수 있어야 합니다.');
 assert.match(html, /"@type": "LocalBusiness"/);
 assert.match(html, /"name": "맛지도 배달대행"/);
 assert.match(html, /"areaServed": \{"@type": "City", "name": "여수시"\}/);
