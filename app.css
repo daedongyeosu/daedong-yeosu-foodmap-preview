@@ -395,7 +395,7 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
 .autumn-continuous-shell .yeosu-night-shell::before,.autumn-continuous-shell .yeosu-night-shell::after{display:none!important}
 .autumn-continuous-shell .turtle-ship-hero-scene{display:none}.autumn-continuous-shell .weather-layer,.autumn-continuous-shell .bridge-light-layer{opacity:.08}
 .autumn-post-banner-shell{position:relative;z-index:2;background:#f6f9fc}
-.autumn-continuous-shell .order-section{background-image:linear-gradient(180deg,rgba(5,49,78,.04),rgba(5,63,98,.16)),url("assets/seasonal/autumn-dolsan-bridge-2026-extended.svg?v=20261001-home-glass");background-position:center center,center 82%;background-size:100% 100%,cover;background-repeat:no-repeat}
+.autumn-continuous-shell .yeosu-night-shell .order-section{background-image:linear-gradient(180deg,rgba(5,49,78,.04),rgba(5,63,98,.12)),url("assets/seasonal/autumn-dolsan-bridge-2026-order.webp?v=20261001-sea-no-gap");background-position:center center,center 78%;background-size:100% 100%,cover;background-repeat:no-repeat}
 .autumn-continuous-shell .turtle-ship-passage{background:linear-gradient(180deg,rgba(5,63,98,.18),rgba(5,63,98,.08))}
 .autumn-continuous-shell .autumn-post-banner-shell{padding-top:10px;background:linear-gradient(180deg,rgba(5,63,98,.08) 0,rgba(5,63,98,.08) 10px,#f6f9fc 10px,#f6f9fc 100%)}
 
