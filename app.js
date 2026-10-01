@@ -2963,7 +2963,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const globalExternal = event.target.closest('[data-global-external]');
     if (globalExternal) { pop.hidden = true; globalExternalGuide(globalExternal.dataset.globalExternal); return; }
     const appCategory = event.target.closest('[data-app-category]');
-    if (appCategory) { const key=$('#modal').dataset.appBrowserKey; openAppBrowser(key,appCategory.dataset.appCategory); return; }
+    if (appCategory) { const key=$('#modal').dataset.appBrowserKey; const query=$('#modalContent [data-channel-search-input]')?.value||''; openAppBrowser(key,appCategory.dataset.appCategory,query); return; }
     const appStore = event.target.closest('[data-app-store-id]');
     if (appStore) { const store=stores.find(item=>item.id===appStore.dataset.appStoreId); if(store) openCommunityChoice(store,appStore.dataset.appKey,{fromBrowser:true}); return; }
     const brandButton = event.target.closest('[data-brand-id]');

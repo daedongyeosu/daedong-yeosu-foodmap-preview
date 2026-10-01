@@ -322,7 +322,7 @@ fxPhoneStores = function rc3PhoneStores(category = '추천') {
   return applyCategoryPriorityOverrides(list.sort((a, b) => (fxDistance(a.store) ?? 999) - (fxDistance(b.store) ?? 999) || a.store.name.localeCompare(b.store.name, 'ko')), category);
 };
 
-fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천') {
+fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천', searchQuery = '') {
   const all = fxPhoneStores();
   const cats = categoriesFromStores(all.map(item => item.store));
   const list = fxPhoneStores(category);
@@ -331,11 +331,12 @@ fxOpenPhoneDirectory = function rc3OpenPhoneDirectory(category = '추천') {
   const cards = list.map(({store, phoneOrder}) => {
     const content = `${fxCardPhoto(store)}<span><strong>${escapeHtml(store.name)}</strong><small>${escapeHtml(store.area || RC3_REGION_NAME)} · ${escapeHtml(store.cat)}</small></span><b>›</b>`;
     return phoneOrder?.url
-      ? `<a class="phone-order-card glass-action" href="${escapeHtml(phoneOrder.url)}" target="_blank" rel="noopener" data-phone-route-store-id="${escapeHtml(store.id)}">${content}</a>`
-      : `<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}">${content}</button>`;
+      ? `<a class="phone-order-card glass-action" href="${escapeHtml(phoneOrder.url)}" target="_blank" rel="noopener" data-phone-route-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${content}</a>`
+      : `<button type="button" class="phone-order-card glass-action" data-phone-store-id="${escapeHtml(store.id)}"${fxChannelStoreSearchAttrs(store)}>${content}</button>`;
   }).join('');
-  openModal(`<section class="phone-order-sheet"><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호 또는 확인된 전화주문 페이지를 확인한 뒤 전화해 주세요.</p>${chips}${rc2SelectedCategoryMarkup(category)}<div class="phone-order-list">${cards || '<p class="empty">확인 가능한 전화주문 경로가 없습니다.</p>'}</div></section>`);
+  openModal(`<section class="phone-order-sheet" data-channel-search-root><h2 id="modalTitle">전화주문 가능한 가게</h2><p>가게를 선택해도 전화가 자동으로 걸리지 않습니다.<br>전화번호 또는 확인된 전화주문 페이지를 확인한 뒤 전화해 주세요.</p>${fxChannelSearchMarkup(list.length, searchQuery)}${chips}${rc2SelectedCategoryMarkup(category)}<div class="phone-order-list">${cards || '<p class="empty">확인 가능한 전화주문 경로가 없습니다.</p>'}</div>${fxChannelSearchEmptyMarkup()}</section>`);
   rc2RevealSelectedCategory();
+  fxActivateChannelSearch(searchQuery);
 };
 
 fxOpenPhoneConfirm = async function rc3OpenPhoneConfirm(id) {
