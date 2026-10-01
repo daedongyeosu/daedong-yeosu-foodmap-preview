@@ -28,6 +28,7 @@ assert.doesNotMatch(html, /(?:href|src)="[^"]*\/s\/?|shared-entry|shared-yeosu|r
 assert.match(sharedEntry, /noindex,nofollow/, '공유 배달대행 /s 진입 정책은 기존대로 분리 유지해야 합니다.');
 assert.doesNotMatch(sharedEntry, /delivery|맛지도 배달대행|010-4797-7803/, '공유 배달대행 /s에 맛지도 배달대행 업체정보를 추가하면 안 됩니다.');
 assert.match(css, /@media\(max-width:560px\)/);
+assert.match(css, /\.hero-art img\{width:min\(88vw,360px\);max-width:100%;height:auto/, '모바일 배달기사 사진은 화면 너비를 넘거나 지나치게 커지면 안 됩니다.');
 assert.match(css, /\.mobile-call\{position:fixed/);
 
 console.log('delivery business page regression checks passed');
