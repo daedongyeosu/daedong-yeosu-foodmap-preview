@@ -49,7 +49,10 @@ try {
   await banner.click();
   await page.waitForURL(/\/delivery\/$/, {timeout: 5000});
   await check(page.getByRole('heading', {name: /배달만 하지 않습니다\.\s*가게가 알려지도록\s*함께 뜁니다\./}).count().then(count => count === 1), '맛지도 배달대행 소개 페이지 표시');
-  await check(page.locator('a[href="tel:01047977803"]').count().then(count => count >= 1), '배달대행 전화 상담 연결 표시');
+  await check(page.locator('a[href="tel:01047977803"]').count().then(count => count === 1), '전화 문의는 페이지 제일 아래에 한 번만 표시');
+  await check(page.locator('a[href="mailto:sisakim@naver.com"]').count().then(count => count === 1), '이메일 문의는 페이지 제일 아래에 한 번만 표시');
+  await check(page.locator('a[href="sms:01047977803"]').count().then(count => count === 0), '중간 문자 문의 버튼 제거');
+  await check(page.locator('.mobile-call').count().then(count => count === 0), '중복 고정 전화 막대 제거');
   await check(page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), '390px 모바일에서 가로 넘침 없음');
   await page.screenshot({path: 'browser-rider-evergreen-delivery-page.png', fullPage: false});
   report.success = report.errors.length === 0;
