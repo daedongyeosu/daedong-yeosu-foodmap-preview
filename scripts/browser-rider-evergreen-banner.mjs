@@ -32,7 +32,7 @@ try {
   await orderSection.evaluate(element => element.scrollIntoView({block: 'start'}));
   await page.waitForTimeout(250);
   await check(orderSection.evaluate(element => getComputedStyle(element).backgroundImage === 'none'), '주문방법 영역에 중복 돌산대교 사진 없음');
-  await check(page.locator('.autumn-continuous-shell').evaluate(element => getComputedStyle(element).backgroundImage.includes('autumn-dolsan-bridge-2026-extended.svg')), '홈 상단부터 메인배너 직전까지 긴 가을 배경 한 장 적용');
+  await check(page.locator('.autumn-continuous-shell').evaluate(element => getComputedStyle(element).backgroundImage.includes('autumn-dolsan-bridge-2026-tall.webp')), '홈 상단부터 메인배너 직전까지 실제 긴 가을 사진 한 장 적용');
   await page.locator('.bottom-nav').evaluate(element => { element.style.display = 'none'; });
   await orderSection.screenshot({path: 'browser-order-sea-to-hero.png'});
   await page.locator('.bottom-nav').evaluate(element => { element.style.display = ''; });
