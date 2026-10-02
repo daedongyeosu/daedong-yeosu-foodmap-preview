@@ -23,9 +23,11 @@ for (const id of ["hospital-pill","restroom","car-crash","used-exchange","news-s
 assert.match(css, /grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 assert.match(css, /yeosu-life-gateway-copy small\{[^}]*font-size:13px/);
 assert.match(css, /is-accident \.yeosu-life-gateway-copy strong\{[^}]*white-space:nowrap/);
-assert.match(css, /autumn-continuous-shell\{[^}]*autumn-dolsan-bridge-2026-extended\.svg/);
-assert.equal((css.match(/autumn-dolsan-bridge-2026-extended\.svg/g) || []).length, 1,
+assert.match(css, /autumn-continuous-shell\{[^}]*autumn-dolsan-bridge-2026-tall\.webp/);
+assert.equal((css.match(/autumn-dolsan-bridge-2026-tall\.webp/g) || []).length, 1,
   '가을 돌산대교 배경은 홈 상단부터 메인배너 직전까지 한 번만 사용해야 합니다.');
+assert.doesNotMatch(css, /autumn-dolsan-bridge-2026-extended\.svg/,
+  '모바일 브라우저에서 조각이 투명해질 수 있는 SVG 조립 배경을 다시 사용하면 안 됩니다.');
 assert.doesNotMatch(css, /autumn-dolsan-bridge-2026-order\.webp/,
   '주문방법 영역에 돌산대교 사진을 다시 넣어 같은 다리가 반복되면 안 됩니다.');
 assert.match(css, /autumn-continuous-shell\{[^}]*background-position:center top,center top[^}]*background-size:100% 100%,100% 100%/,
@@ -59,19 +61,8 @@ assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]
 assert.match(experienceCss, /autumn-continuous-shell \.order-item strong\{[^}]*color:#05090c/,
   '주문 버튼 이름도 진한 검정으로 보여야 합니다.');
 assert.match(serviceCss, /store-finder-quick \{[\s\S]*?background: rgba\(255, 255, 255, \.2\)/);
-for (const file of ["assets/seasonal/autumn-dolsan-bridge-2026.webp","assets/seasonal/autumn-dolsan-bridge-2026-extended.svg","assets/brand/yeosugage-app-icon.png"]) assert.ok(fs.existsSync(file), `missing ${file}`);
-const extendedAutumn = fs.readFileSync("assets/seasonal/autumn-dolsan-bridge-2026-extended.svg", "utf8");
-assert.match(extendedAutumn, /width="941" height="2300"/,
-  '원본 가을 사진의 가로 폭을 유지한 채 주문 버튼 뒤까지 세로만 연장해야 합니다.');
-assert.match(extendedAutumn, /href="data:image\/webp;base64,/,
-  '브라우저가 가을 사진을 빠뜨리지 않도록 연장 파일 안에 원본을 포함해야 합니다.');
-assert.match(extendedAutumn, /id="autumn-photo-sea-extended"/,
-  '돌산대교와 하늘은 그대로 두고 바다 수면을 직접 연장한 구성을 유지해야 합니다.');
-assert.match(extendedAutumn, /y="1180" width="941" height="628" viewBox="0 980 941 200"/,
-  '두 줄 주문 버튼 전체 뒤까지 바다 수면 구간이 끊김 없이 이어져야 합니다.');
-assert.match(extendedAutumn, /transform="translate\(0 628\)"/,
-  '갈대 구간은 연장된 바다 아래, 메인배너 직전에 배치해야 합니다.');
-assert.doesNotMatch(extendedAutumn, /scale\(1 -1\)/,
-  '모바일 브라우저에서 투명 구간을 만드는 반전 복제를 다시 사용하면 안 됩니다.');
+for (const file of ["assets/seasonal/autumn-dolsan-bridge-2026.webp","assets/seasonal/autumn-dolsan-bridge-2026-tall.webp","assets/brand/yeosugage-app-icon.png"]) assert.ok(fs.existsSync(file), `missing ${file}`);
+assert.ok(fs.statSync("assets/seasonal/autumn-dolsan-bridge-2026-tall.webp").size > 100_000,
+  '긴 가을 배경은 투명 구간이 생길 수 없는 실제 래스터 사진 파일이어야 합니다.');
 console.log("autumn homepage and life information regression checks passed");
 
