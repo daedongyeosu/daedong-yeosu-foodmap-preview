@@ -45,10 +45,12 @@ assert.match(css, /autumn-continuous-shell \.autumn-post-banner-shell\{[^}]*padd
   '긴 가을 배경과 메인배너 사이에 별도의 반복 배경 띠를 넣으면 안 됩니다.');
 assert.match(css, /autumn-continuous-shell \.turtle-ship-passage\{[^}]*height:0[^}]*background:transparent/,
   '숨긴 거북선의 빈 통로가 긴 가을 배경과 메인배너 사이에 남으면 안 됩니다.');
-assert.match(experienceCss, /autumn-continuous-shell \.location-chip,[^}]*\.order-item\{[^}]*background-color:rgba\(255,255,255,\.28\)/,
-  '홈 유리 캡슐은 사진을 살리면서 글자를 읽기 쉬운 흰색 28% 농도를 유지해야 합니다.');
-assert.match(experienceCss, /\.yeosu-gage-home-entry\{[^}]*background:rgba\(255,255,255,\.28\)/,
-  '여수가게 안내 캡슐도 다른 홈 유리 캡슐과 같은 흰색 28% 농도를 사용해야 합니다.');
+assert.match(experienceCss, /autumn-continuous-shell \.location-chip,[^}]*\.order-item\{[^}]*background-color:rgba\(255,255,255,\.1\)[^}]*backdrop-filter:blur\(4px\)/,
+  '홈 유리 캡슐은 돌산대교가 보이는 맑은 유리 농도와 약한 흐림을 유지해야 합니다.');
+assert.match(experienceCss, /\.yeosu-gage-home-entry\{[^}]*background:rgba\(255,255,255,\.1\)[^}]*backdrop-filter:blur\(4px\)/,
+  '여수가게 안내 캡슐도 다른 홈 유리 캡슐과 같은 맑은 유리를 사용해야 합니다.');
+assert.match(experienceCss, /\.yeosu-gage-home-title-row>strong\{[^}]*font-size:27px/,
+  '여수가게 이름은 모바일에서 즉시 눈에 띄는 크기여야 합니다.');
 assert.match(messageCss, /autumn-continuous-shell \.main-search-row\{margin-top:72px\}/);
 assert.match(messageCss, /community-order-message p strong/);
 assert.match(messageCss, /community-order-message h2\{[\s\S]*?color:#fff[\s\S]*?-webkit-text-stroke:1px #073653[\s\S]*?text-shadow:0 1px 2px #073653/,
@@ -57,14 +59,14 @@ assert.match(messageCss, /community-order-message p\{[^}]*background:linear-grad
   '주문방법 글자 뒤에는 흐림 없이 밝고 얇은 반투명 보정만 있어야 합니다.');
 assert.doesNotMatch(messageCss, /community-order-message p\{[^}]*(?:-webkit-)?backdrop-filter/,
   '주문방법 글자 뒤 반투명 보정에 흐림 효과를 다시 넣으면 안 됩니다.');
-assert.match(messageCss, /community-order-message p strong\{[\s\S]*?color:#171717[\s\S]*?font-size:18px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
+assert.match(messageCss, /community-order-message p strong\{[\s\S]*?color:#171717[\s\S]*?font-size:20px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
   '핵심 주문방법 첫 줄은 로고처럼 진회색 단색·무외곽선·약한 그림자로 보여야 합니다.');
-assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#171717[\s\S]*?font-size:15px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
+assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#171717[\s\S]*?font-size:17px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
   '브랜드앱·전화주문도 진회색 단색·무외곽선·약한 그림자로 보여야 합니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.order-item strong\{[^}]*color:#05090c/,
   '주문 버튼 이름도 진한 검정으로 보여야 합니다.');
-assert.match(serviceCss, /store-finder-quick \{[\s\S]*?background: rgba\(255, 255, 255, \.28\)/,
-  '빠른 가게 찾기 캡슐도 흰색 28% 농도를 사용해야 합니다.');
+assert.match(serviceCss, /store-finder-quick \{[\s\S]*?background: rgba\(255, 255, 255, \.1\)[\s\S]*?backdrop-filter: blur\(4px\)/,
+  '빠른 가게 찾기 캡슐도 돌산대교가 보이는 맑은 유리를 사용해야 합니다.');
 for (const file of ["assets/seasonal/autumn-dolsan-bridge-2026.webp","assets/seasonal/autumn-dolsan-bridge-2026-tall.webp","assets/brand/yeosugage-app-icon.png"]) assert.ok(fs.existsSync(file), `missing ${file}`);
 assert.ok(fs.statSync("assets/seasonal/autumn-dolsan-bridge-2026-tall.webp").size > 100_000,
   '긴 가을 배경은 투명 구간이 생길 수 없는 실제 래스터 사진 파일이어야 합니다.');

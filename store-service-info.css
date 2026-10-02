@@ -81,12 +81,12 @@ body.store-service-overview-open {
   margin: -4px 16px 15px;
   padding: 10px 12px 12px;
   color: #173357;
-  background: rgba(255, 255, 255, .28);
-  border: 1px solid rgba(255, 255, 255, .75);
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .88);
   border-radius: 16px;
   box-shadow: 0 5px 16px rgba(4, 25, 55, .15), inset 0 1px 0 rgba(255, 255, 255, .35);
-  backdrop-filter: blur(14px) saturate(115%);
-  -webkit-backdrop-filter: blur(14px) saturate(115%);
+  backdrop-filter: blur(4px) saturate(108%);
+  -webkit-backdrop-filter: blur(4px) saturate(108%);
 }
 
 .store-finder-location {
@@ -94,7 +94,7 @@ body.store-service-overview-open {
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 7px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .store-finder-location b {
@@ -120,17 +120,17 @@ body.store-service-overview-open {
   padding: 0 12px;
   flex: 0 0 auto;
   color: #324863;
-  background: rgba(255, 255, 255, .28);
-  border: 1px solid rgba(255, 255, 255, .75);
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .88);
   border-radius: 999px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 850;
   white-space: nowrap;
 }
 
 .store-finder-quick nav button:first-child {
   color: #17643a;
-  background: rgba(255, 255, 255, .28);
+  background: rgba(255, 255, 255, .1);
   border-color: rgba(168, 224, 190, .78);
 }
 
@@ -1035,7 +1035,7 @@ body.store-service-overview-open {
   .store-service-overview-button {
     min-height: 34px;
     padding: 0 10px;
-    font-size: 11px;
+    font-size: 12.5px;
   }
 
   .store-service-search-entry {
