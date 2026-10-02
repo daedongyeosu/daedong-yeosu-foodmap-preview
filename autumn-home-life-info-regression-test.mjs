@@ -61,6 +61,14 @@ assert.doesNotMatch(messageCss, /community-order-message p\{[^}]*(?:-webkit-)?ba
   '주문방법 글자 뒤 반투명 보정에 흐림 효과를 다시 넣으면 안 됩니다.');
 assert.match(messageCss, /community-order-message p strong\{[\s\S]*?color:#171717[\s\S]*?font-size:20px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
   '핵심 주문방법 첫 줄은 로고처럼 진회색 단색·무외곽선·약한 그림자로 보여야 합니다.');
+assert.match(messageCss, /\.order-section \.section-head\{[^}]*display:grid[^}]*grid-template-columns:minmax\(0,1fr\) auto/,
+  '주문방법 제목과 이용안내는 작은 화면에서도 한 줄의 안전한 두 칸을 사용해야 합니다.');
+assert.match(messageCss, /\.order-section \.community-order-message\{[^}]*display:contents/,
+  '주문방법 설명은 제목 아래에서 전체 폭을 사용해야 합니다.');
+assert.match(messageCss, /\.order-section \.community-order-message p\{[^}]*grid-column:1\/-1[^}]*grid-row:2/,
+  '크게 표시한 주문방법 문구는 이용안내 버튼 아래의 전체 폭에서 보여야 합니다.');
+assert.match(messageCss, /autumn-continuous-shell \.order-section \.text-btn\{[^}]*grid-column:2[^}]*grid-row:1[^}]*flex:0 0 auto/,
+  '이용안내 버튼은 자신의 폭을 유지한 채 주문방법 영역 안에 남아야 합니다.');
 assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]*?color:#171717[\s\S]*?font-size:17px[\s\S]*?-webkit-text-stroke:0[\s\S]*?text-shadow:0 1px 0 rgba\(0,0,0,\.22\)/,
   '브랜드앱·전화주문도 진회색 단색·무외곽선·약한 그림자로 보여야 합니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.order-item strong\{[^}]*color:#05090c/,

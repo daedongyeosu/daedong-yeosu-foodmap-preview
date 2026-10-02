@@ -268,6 +268,27 @@
   text-shadow:0 1px 2px #073653,0 3px 7px rgba(0,20,38,.78);
 }
 
+.order-section .section-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  column-gap:10px;
+  align-items:start;
+}
+
+.order-section .community-order-message{
+  display:contents;
+}
+
+.order-section .community-order-message h2{
+  grid-column:1;
+  grid-row:1;
+}
+
+.order-section .community-order-message p{
+  grid-column:1/-1;
+  grid-row:2;
+}
+
 .order-section .community-order-message p{
   display:inline-block;
   max-width:100%;
@@ -309,6 +330,9 @@
 }
 
 .autumn-continuous-shell .order-section .text-btn{
+  grid-column:2;
+  grid-row:1;
+  flex:0 0 auto;
   color:#fff!important;
   font-weight:900;
   -webkit-text-stroke:1px #073653;
