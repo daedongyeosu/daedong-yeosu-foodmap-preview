@@ -65,9 +65,13 @@ assert.match(extendedAutumn, /width="941" height="2300"/,
   '원본 가을 사진의 가로 폭을 유지한 채 주문 버튼 뒤까지 세로만 연장해야 합니다.');
 assert.match(extendedAutumn, /href="data:image\/webp;base64,/,
   '브라우저가 가을 사진을 빠뜨리지 않도록 연장 파일 안에 원본을 포함해야 합니다.');
-assert.match(extendedAutumn, /id="autumn-photo-reeds-lowered"/,
-  '돌산대교와 하늘은 그대로 두고 갈대 구간만 아래로 내린 구성을 유지해야 합니다.');
-assert.match(extendedAutumn, /viewBox="0 1000 941 180"/,
-  '글자 뒤에는 바다 구간을 늘려 갈대가 더 아래에서 시작하게 해야 합니다.');
+assert.match(extendedAutumn, /id="autumn-photo-sea-extended"/,
+  '돌산대교와 하늘은 그대로 두고 바다 수면을 직접 연장한 구성을 유지해야 합니다.');
+assert.match(extendedAutumn, /y="1180" width="941" height="628" viewBox="0 980 941 200"/,
+  '두 줄 주문 버튼 전체 뒤까지 바다 수면 구간이 끊김 없이 이어져야 합니다.');
+assert.match(extendedAutumn, /transform="translate\(0 628\)"/,
+  '갈대 구간은 연장된 바다 아래, 메인배너 직전에 배치해야 합니다.');
+assert.doesNotMatch(extendedAutumn, /scale\(1 -1\)/,
+  '모바일 브라우저에서 투명 구간을 만드는 반전 복제를 다시 사용하면 안 됩니다.');
 console.log("autumn homepage and life information regression checks passed");
 
