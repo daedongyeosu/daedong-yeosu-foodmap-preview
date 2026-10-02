@@ -24,8 +24,14 @@ assert.match(css, /grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 assert.match(css, /yeosu-life-gateway-copy small\{[^}]*font-size:13px/);
 assert.match(css, /is-accident \.yeosu-life-gateway-copy strong\{[^}]*white-space:nowrap/);
 assert.match(css, /autumn-continuous-shell\{[^}]*autumn-dolsan-bridge-2026-extended\.svg/);
+assert.equal((css.match(/autumn-dolsan-bridge-2026-extended\.svg/g) || []).length, 1,
+  '가을 돌산대교 배경은 홈 상단부터 메인배너 직전까지 한 번만 사용해야 합니다.');
+assert.doesNotMatch(css, /autumn-dolsan-bridge-2026-order\.webp/,
+  '주문방법 영역에 돌산대교 사진을 다시 넣어 같은 다리가 반복되면 안 됩니다.');
 assert.match(css, /autumn-continuous-shell\{[^}]*background-position:center top,center top[^}]*background-size:100% 100%,100% 100%/,
   '가을 배경은 현재 홈 화면 전체 높이에 맞춘 상단 중앙 배치를 유지해야 합니다.');
+assert.match(css, /autumn-continuous-shell \.yeosu-night-shell \.order-section\{[^}]*background:transparent!important/,
+  '주문방법 영역은 긴 가을 배경 한 장이 그대로 이어지도록 투명해야 합니다.');
 assert.match(css, /autumn-continuous-shell \.yeosu-night-shell\{[^}]*background:[^}]*!important/);
 assert.doesNotMatch(css, /autumn-continuous-shell \.yeosu-night-shell\{[^}]*rgba\(242,246,244,\.96\)/,
   '주문 버튼 구역을 불투명한 흰색으로 덮으면 안 됩니다.');
@@ -33,6 +39,8 @@ assert.match(html, /<div class="autumn-post-banner-shell">\s*<section class="her
   '가을 배경은 메인배너 시작선에서 정확히 끝나야 합니다.');
 assert.match(css, /\.autumn-post-banner-shell\{[^}]*background:#f6f9fc/,
   '메인배너와 배송기사 광고 뒤에는 원래의 불투명 배경을 복원해야 합니다.');
+assert.match(css, /autumn-continuous-shell \.autumn-post-banner-shell\{[^}]*padding-top:0[^}]*background:#f6f9fc/,
+  '긴 가을 배경과 메인배너 사이에 별도의 반복 배경 띠를 넣으면 안 됩니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.location-chip,[^}]*\.order-item\{[^}]*background-color:rgba\(255,255,255,\.2\)/);
 assert.match(messageCss, /autumn-continuous-shell \.main-search-row\{margin-top:72px\}/);
 assert.match(messageCss, /community-order-message p strong/);

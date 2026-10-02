@@ -31,7 +31,8 @@ try {
   const orderSection = page.locator('.order-section');
   await orderSection.evaluate(element => element.scrollIntoView({block: 'start'}));
   await page.waitForTimeout(250);
-  await check(orderSection.evaluate(element => getComputedStyle(element).backgroundImage.includes('autumn-dolsan-bridge-2026-order.webp')), '주문방법 전체에 모바일용 바다 사진 배경 적용');
+  await check(orderSection.evaluate(element => getComputedStyle(element).backgroundImage === 'none'), '주문방법 영역에 중복 돌산대교 사진 없음');
+  await check(page.locator('.autumn-continuous-shell').evaluate(element => getComputedStyle(element).backgroundImage.includes('autumn-dolsan-bridge-2026-extended.svg')), '홈 상단부터 메인배너 직전까지 긴 가을 배경 한 장 적용');
   await page.locator('.bottom-nav').evaluate(element => { element.style.display = 'none'; });
   await orderSection.screenshot({path: 'browser-order-sea-to-hero.png'});
   await page.locator('.bottom-nav').evaluate(element => { element.style.display = ''; });
@@ -47,7 +48,7 @@ try {
 
   await banner.click();
   await page.waitForURL(/\/delivery\/$/, {timeout: 5000});
-  await check(page.getByRole('heading', {name: '배달만 하지 않습니다. 가게가 알려지도록 함께 뜁니다.'}).count().then(count => count === 1), '맛지도 배달대행 소개 페이지 표시');
+  await check(page.getByRole('heading', {name: /배달만 하지 않습니다\.\s*가게가 알려지도록\s*함께 뜁니다\./}).count().then(count => count === 1), '맛지도 배달대행 소개 페이지 표시');
   await check(page.locator('a[href="tel:01047977803"]').count().then(count => count >= 1), '배달대행 전화 상담 연결 표시');
   await check(page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), '390px 모바일에서 가로 넘침 없음');
   await page.screenshot({path: 'browser-rider-evergreen-delivery-page.png', fullPage: false});
