@@ -45,7 +45,10 @@ assert.match(css, /autumn-continuous-shell \.autumn-post-banner-shell\{[^}]*padd
   '긴 가을 배경과 메인배너 사이에 별도의 반복 배경 띠를 넣으면 안 됩니다.');
 assert.match(css, /autumn-continuous-shell \.turtle-ship-passage\{[^}]*height:0[^}]*background:transparent/,
   '숨긴 거북선의 빈 통로가 긴 가을 배경과 메인배너 사이에 남으면 안 됩니다.');
-assert.match(experienceCss, /autumn-continuous-shell \.location-chip,[^}]*\.order-item\{[^}]*background-color:rgba\(255,255,255,\.2\)/);
+assert.match(experienceCss, /autumn-continuous-shell \.location-chip,[^}]*\.order-item\{[^}]*background-color:rgba\(255,255,255,\.28\)/,
+  '홈 유리 캡슐은 사진을 살리면서 글자를 읽기 쉬운 흰색 28% 농도를 유지해야 합니다.');
+assert.match(experienceCss, /\.yeosu-gage-home-entry\{[^}]*background:rgba\(255,255,255,\.28\)/,
+  '여수가게 안내 캡슐도 다른 홈 유리 캡슐과 같은 흰색 28% 농도를 사용해야 합니다.');
 assert.match(messageCss, /autumn-continuous-shell \.main-search-row\{margin-top:72px\}/);
 assert.match(messageCss, /community-order-message p strong/);
 assert.match(messageCss, /community-order-message h2\{[\s\S]*?color:#fff[\s\S]*?-webkit-text-stroke:1px #073653[\s\S]*?text-shadow:0 1px 2px #073653/,
@@ -60,7 +63,8 @@ assert.match(messageCss, /community-order-message \.order-secondary-line\{[\s\S]
   '브랜드앱·전화주문도 진회색 단색·무외곽선·약한 그림자로 보여야 합니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.order-item strong\{[^}]*color:#05090c/,
   '주문 버튼 이름도 진한 검정으로 보여야 합니다.');
-assert.match(serviceCss, /store-finder-quick \{[\s\S]*?background: rgba\(255, 255, 255, \.2\)/);
+assert.match(serviceCss, /store-finder-quick \{[\s\S]*?background: rgba\(255, 255, 255, \.28\)/,
+  '빠른 가게 찾기 캡슐도 흰색 28% 농도를 사용해야 합니다.');
 for (const file of ["assets/seasonal/autumn-dolsan-bridge-2026.webp","assets/seasonal/autumn-dolsan-bridge-2026-tall.webp","assets/brand/yeosugage-app-icon.png"]) assert.ok(fs.existsSync(file), `missing ${file}`);
 assert.ok(fs.statSync("assets/seasonal/autumn-dolsan-bridge-2026-tall.webp").size > 100_000,
   '긴 가을 배경은 투명 구간이 생길 수 없는 실제 래스터 사진 파일이어야 합니다.');
