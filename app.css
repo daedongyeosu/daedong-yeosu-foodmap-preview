@@ -396,7 +396,7 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
 .autumn-continuous-shell .turtle-ship-hero-scene{display:none}.autumn-continuous-shell .weather-layer,.autumn-continuous-shell .bridge-light-layer{opacity:.08}
 .autumn-post-banner-shell{position:relative;z-index:2;background:#f6f9fc}
 .autumn-continuous-shell .yeosu-night-shell .order-section{background:transparent!important}
-.autumn-continuous-shell .turtle-ship-passage{background:linear-gradient(180deg,rgba(5,63,98,.18),rgba(5,63,98,.08))}
+.autumn-continuous-shell .turtle-ship-passage{height:0;background:transparent}
 .autumn-continuous-shell .autumn-post-banner-shell{padding-top:0;background:#f6f9fc}
 
 /* The real logo remains accessible; clipped overlays create the sequential pop. */
