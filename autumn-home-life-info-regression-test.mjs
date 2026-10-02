@@ -41,6 +41,8 @@ assert.match(css, /\.autumn-post-banner-shell\{[^}]*background:#f6f9fc/,
   '메인배너와 배송기사 광고 뒤에는 원래의 불투명 배경을 복원해야 합니다.');
 assert.match(css, /autumn-continuous-shell \.autumn-post-banner-shell\{[^}]*padding-top:0[^}]*background:#f6f9fc/,
   '긴 가을 배경과 메인배너 사이에 별도의 반복 배경 띠를 넣으면 안 됩니다.');
+assert.match(css, /autumn-continuous-shell \.turtle-ship-passage\{[^}]*height:0[^}]*background:transparent/,
+  '숨긴 거북선의 빈 통로가 긴 가을 배경과 메인배너 사이에 남으면 안 됩니다.');
 assert.match(experienceCss, /autumn-continuous-shell \.location-chip,[^}]*\.order-item\{[^}]*background-color:rgba\(255,255,255,\.2\)/);
 assert.match(messageCss, /autumn-continuous-shell \.main-search-row\{margin-top:72px\}/);
 assert.match(messageCss, /community-order-message p strong/);
