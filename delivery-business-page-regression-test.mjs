@@ -25,6 +25,11 @@ assert.doesNotMatch(html, /특정 배달 프로그램 전용 업체인가요\?/)
 assert.match(html, /href="tel:01047977803"/);
 assert.match(html, /href="mailto:sisakim@naver\.com"/);
 assert.match(html, /class="header-map-link" href="\/"[^>]*>여수맛지도 보기<\/a>/, '배달대행 페이지 상단에서 여수맛지도 메인으로 바로 돌아갈 수 있어야 합니다.');
+assert.match(html, /class="map-link" href="\/"[\s\S]*터치해서 가게·메뉴 보기[\s\S]*여수맛지도에서 직접 확인하기/, '중간 여수맛지도 링크는 터치할 버튼임이 분명해야 합니다.');
+assert.equal((html.match(/class="footer-action"/g) || []).length, 3, '하단 여수맛지도·전화·이메일은 각각 독립된 터치 버튼이어야 합니다.');
+assert.match(html, /가게·메뉴 보기/);
+assert.match(html, /바로 전화하기/);
+assert.match(html, /메일 보내기/);
 assert.match(html, /"@type": "LocalBusiness"/);
 assert.match(html, /"name": "맛지도 배달대행"/);
 assert.match(html, /"addressRegion": "전남광주통합특별시"/);
@@ -39,5 +44,7 @@ assert.doesNotMatch(sharedEntry, /delivery|맛지도 배달대행|010-4797-7803/
 assert.match(css, /@media\(max-width:560px\)/);
 assert.match(css, /\.hero-art img\{width:min\(88vw,360px\);max-width:100%;height:auto/, '모바일 배달기사 사진은 화면 너비를 넘거나 지나치게 커지면 안 됩니다.');
 assert.match(css, /\.mobile-call\{position:fixed/);
+assert.match(css, /\.map-link\{display:flex[\s\S]*min-height:76px/, '중간 여수맛지도 CTA는 큰 버튼 영역을 유지해야 합니다.');
+assert.match(css, /\.footer-action\{display:grid[\s\S]*min-height:76px/, '하단 빠른 이동은 누르기 쉬운 버튼 크기를 유지해야 합니다.');
 
 console.log('delivery business page regression checks passed');
