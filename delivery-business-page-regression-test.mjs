@@ -9,7 +9,7 @@ assert.match(html, /<title>여수 배달대행 \| 맛지도 배달대행<\/title
 assert.match(html, /<h1>배달만 하지 않습니다[\s\S]*가게가 알려지도록/);
 assert.match(html, /여수맛지도를 직접 운영/);
 assert.match(html, /가게 홍보부터 주문 연결·배달까지/);
-assert.match(html, /연중무휴 · 24시간 배송/);
+assert.match(html, /연중무휴 24시간 배송/);
 assert.match(html, /공공주문앱 전문배송 업체/);
 assert.match(html, /<li>공공주문앱 전문배송<\/li>/);
 assert.match(html, /"openingHours": "Mo-Su 00:00-23:59"/);
@@ -25,7 +25,7 @@ assert.doesNotMatch(html, /특정 배달 프로그램 전용 업체인가요\?/)
 assert.match(html, /href="tel:01047977803"/);
 assert.match(html, /href="mailto:sisakim@naver\.com"/);
 assert.match(html, /class="header-map-link" href="\/"[^>]*>여수맛지도 보기<\/a>/, '배달대행 페이지 상단에서 여수맛지도 메인으로 바로 돌아갈 수 있어야 합니다.');
-assert.match(html, /delivery\/delivery\.css\?v=20261003-1/, '새 CTA 디자인이 모바일 캐시에 즉시 반영되도록 CSS 주소를 갱신해야 합니다.');
+assert.match(html, /delivery\/delivery\.css\?v=20261003-contact-dedup-1/, '중복 연락처를 정리한 디자인이 모바일 캐시에 즉시 반영되어야 합니다.');
 assert.match(html, /class="map-link" href="\/"[\s\S]*가게 · 메뉴 · 주문방법을 한눈에[\s\S]*<em>여수맛지도<\/em> 바로 보기[\s\S]*터치해서 확인하세요/, '중간 버튼은 여수맛지도 이름을 가장 크게 보여주고 자연스러운 띄어쓰기를 유지해야 합니다.');
 assert.equal((html.match(/class="footer-action"/g) || []).length, 3, '하단 여수맛지도·전화·이메일은 각각 독립된 터치 버튼이어야 합니다.');
 assert.match(html, /가게·메뉴 보기/);
@@ -44,7 +44,7 @@ assert.match(sharedEntry, /noindex,nofollow/, '공유 배달대행 /s 진입 정
 assert.doesNotMatch(sharedEntry, /delivery|맛지도 배달대행|010-4797-7803/, '공유 배달대행 /s에 맛지도 배달대행 업체정보를 추가하면 안 됩니다.');
 assert.match(css, /@media\(max-width:560px\)/);
 assert.match(css, /\.hero-art img\{width:min\(88vw,360px\);max-width:100%;height:auto/, '모바일 배달기사 사진은 화면 너비를 넘거나 지나치게 커지면 안 됩니다.');
-assert.match(css, /\.mobile-call\{position:fixed/);
+assert.doesNotMatch(css, /\.mobile-call\{position:fixed/, '중복 전화 바를 제거한 현재 디자인에서 고정 전화 버튼이 다시 생기면 안 됩니다.');
 assert.match(css, /\.map-link\{display:flex[\s\S]*min-height:112px/, '중간 여수맛지도 CTA는 큰 버튼 영역을 유지해야 합니다.');
 assert.match(css, /\.map-link-copy strong em\{color:var\(--orange\)/, '여수맛지도 브랜드명은 버튼 안에서 시각적으로 강조되어야 합니다.');
 assert.match(css, /\.footer-action\{display:grid[\s\S]*min-height:76px/, '하단 빠른 이동은 누르기 쉬운 버튼 크기를 유지해야 합니다.');

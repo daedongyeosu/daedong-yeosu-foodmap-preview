@@ -7,12 +7,13 @@ const privacyHtml = fs.readFileSync('privacy/index.html', 'utf8');
 const shareUi = fs.readFileSync('final-experience.js', 'utf8');
 const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
-const version = 'yeosu-taste-map-20260924-preview-1';
-const png192Url = `assets/app-icons/daedong-app-icon-192.png?v=${version}`;
-const png512Url = `assets/app-icons/daedong-app-icon-512.png?v=${version}`;
+const brandVersion = 'yeosu-taste-map-20260924-preview-1';
+const iconVersion = 'matjido-master-20261003-preview-1';
+const png192Url = `assets/app-icons/daedong-app-icon-192.png?v=${iconVersion}`;
+const png512Url = `assets/app-icons/daedong-app-icon-512.png?v=${iconVersion}`;
 const shareImageUrl = 'assets/brand/yeosu-taste-map-share-1200x630.png';
 
-assert.ok(html.includes('src="assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1"'), '메인 화면 로고는 버전이 지정된 공식 통합 PNG여야 합니다.');
+assert.ok(html.includes(`src="assets/brand/yeosu-taste-map-logo.png?v=${brandVersion}"`), '메인 화면 로고는 버전이 지정된 여수맛지도 지역 로고여야 합니다.');
 assert.ok(html.includes(`rel="icon" href="/${png192Url}"`), '브라우저 아이콘도 같은 버전의 공식 앱 아이콘이어야 합니다.');
 assert.ok(html.includes(`href="/${png192Url}"`), '홈 화면용 터치 아이콘은 공식 앱 아이콘이어야 합니다.');
 assert.ok(html.includes(`https://daedongmap.com/${shareImageUrl}`), '공유 미리보기는 새 여수맛지도 통합 로고여야 합니다.');
