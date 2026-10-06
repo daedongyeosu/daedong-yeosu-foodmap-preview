@@ -30,8 +30,7 @@ const FX_ORDER_METHOD_REENTRY='daedongOrderMethodReentryV1';
 const FX_ORDER_METHOD_REENTRY_PARAM='__ddom';
 const FX_APP_BROWSER_RETURN='daedongAppBrowserReturnV1';
 const FX_HIDDEN_STORE_IDS=new Set([
- '6092aabddf5f7194', // 롯데리아 중앙점
- 'e0c6949efb48f4b2' // 롯데리아 이마트점
+ '6092aabddf5f7194' // 롯데리아 중앙점
 ]);
 window.DAEDONG_WEATHER_CONFIG=window.DAEDONG_WEATHER_CONFIG||{enabled:false,proxyUrl:'',cacheMinutes:18};
 
