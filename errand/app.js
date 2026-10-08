@@ -1,4 +1,5 @@
 const home = document.querySelector('#errandHome');
+const policy = document.querySelector('#policyPreview');
 const request = document.querySelector('#requestPreview');
 const postcodePanel = document.querySelector('#postcodePanel');
 const postcodeFrame = document.querySelector('#postcodeFrame');
@@ -9,10 +10,26 @@ const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
 let postcodePromise = null;
 
-function openRequest(){home.hidden=true;request.hidden=false;window.scrollTo({top:0,behavior:'smooth'});}
+function openRequest(){home.hidden=true;policy.hidden=false;request.hidden=true;window.scrollTo({top:0,behavior:'smooth'});}
 document.querySelector('#requestStart').addEventListener('click',openRequest);
 document.querySelectorAll('[data-kind]').forEach(button=>button.addEventListener('click',openRequest));
 document.querySelector('#backHome').addEventListener('click',()=>{request.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
+document.querySelector('#policyBack').addEventListener('click',()=>{policy.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
+
+const policyChecks=[...document.querySelectorAll('[data-policy-check]')];
+const policyContinue=document.querySelector('#policyContinue');
+function updatePolicyGate(){
+  const ready=policyChecks.every(input=>input.checked);
+  policyContinue.disabled=!ready;
+  policyContinue.textContent=ready?'동의하고 주소 입력하기 →':'필수 내용을 확인해 주세요';
+}
+policyChecks.forEach(input=>input.addEventListener('change',updatePolicyGate));
+policyContinue.addEventListener('click',()=>{
+  if(policyContinue.disabled)return;
+  policy.hidden=true;
+  request.hidden=false;
+  window.scrollTo({top:0,behavior:'smooth'});
+});
 
 function loadPostcode(){
   if(globalThis.daum?.Postcode)return Promise.resolve(globalThis.daum.Postcode);
