@@ -129,9 +129,10 @@ body.store-service-overview-open {
 }
 
 .store-finder-quick nav button:first-child {
-  color: #17643a;
+  color: #062f1e;
   background: rgba(255, 255, 255, .1);
-  border-color: rgba(168, 224, 190, .78);
+  border-color: rgba(114, 185, 142, .94);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .98), 0 0 5px rgba(255, 255, 255, .9);
 }
 
 .store-finder-location,

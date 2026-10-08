@@ -9,8 +9,10 @@ const workflow = fs.readFileSync('.github/workflows/preview-api-client-checks.ym
 assert.match(css, /@media \(max-width: 520px\) \{[\s\S]*?\.store-finder-quick nav \{[\s\S]*?display: grid;[\s\S]*?grid-template-columns: minmax\(0, 1\.5fr\) minmax\(0, 1fr\) minmax\(0, \.8fr\);[\s\S]*?overflow-x: visible;/, '모바일 빠른 조건은 카드 내부 3열이어야 합니다.');
 assert.match(css, /\.store-finder-quick nav button \{[\s\S]*?width: 100%;[\s\S]*?min-width: 0;[\s\S]*?min-height: 48px;[\s\S]*?padding: 0 5px;[\s\S]*?font-size: 15px;[\s\S]*?white-space: normal;/, '모바일 버튼은 읽을 수 있는 글자와 줄바꿈 가능한 폭을 사용해야 합니다.');
 assert.match(css, /\.store-finder-quick nav button:first-child \{[\s\S]*?padding-right: 4px;[\s\S]*?padding-left: 4px;/, '영업 중 숫자가 붙어도 첫 버튼 글자가 잘리지 않아야 합니다.');
+assert.match(css, /\.store-finder-quick nav button:first-child \{[\s\S]*?color: #062f1e;[\s\S]*?background: rgba\(255, 255, 255, \.1\);[\s\S]*?text-shadow: 0 1px 0 rgba\(255, 255, 255, \.98\), 0 0 5px rgba\(255, 255, 255, \.9\);/, '영업 중 버튼은 투명도를 유지하면서 짙은 글자와 밝은 외곽 대비를 사용해야 합니다.');
 assert.match(css, /@media \(max-width: 360px\) \{[\s\S]*?\.store-finder-quick nav button \{[\s\S]*?padding: 0 4px;[\s\S]*?font-size: 14px;/, '좁은 휴대폰에서도 읽을 수 있는 크기를 유지해야 합니다.');
 assert.match(html, /store-service-info\.css\?v=[^"\n]*mobile-quick-filters-fit-1/);
+assert.match(html, /store-service-info\.css\?v=[^"\n]*open-contrast/);
 assert.match(html, /store-service-info\.css\?v=[^"\n]*home-open-count-1/);
 assert.match(browserCheck, /for \(const width of \[390, 360\]\)/);
 assert.match(browserCheck, /button\.right <= metrics\.nav\.right/);
