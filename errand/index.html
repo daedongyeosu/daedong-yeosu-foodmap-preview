@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address-3-policy-gate">
+  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address-3-policy-gate-4-ai-assist">
 </head>
 <body>
   <main>
@@ -58,7 +58,16 @@
         <p class="address-verification" data-address-verification="dropoff">아직 확인된 주소가 없습니다.</p>
         <label class="address-detail" data-address-detail-wrap="dropoff" hidden>상세 위치<input data-address-detail="dropoff" placeholder="동·호수, 층수, 받는 분 안내"></label>
       </section>
-      <label>심부름 내용<textarea rows="4" placeholder="기사님이 이해할 수 있도록 부탁할 내용을 적어주세요."></textarea></label>
+      <div class="errand-content-head"><label for="errandContent">심부름 내용</label><button id="aiAssist" class="ai-assist" type="button" disabled>✨ AI에게 도움받기</button></div>
+      <textarea id="errandContent" rows="5" maxlength="800" placeholder="예: 학동 세탁소에서 결제된 검정 코트 1벌을 받아 문수동 아파트 경비실에 맡겨주세요."></textarea>
+      <p class="ai-help">짧거나 애매하게 적어도 괜찮아요. AI가 기사님이 이해하기 쉽게 정리하며, 원문은 고객이 승인하기 전까지 바뀌지 않습니다.</p>
+      <section id="aiSuggestion" class="ai-suggestion" hidden aria-live="polite">
+        <div class="ai-suggestion-title"><b>AI가 정리한 문장</b><span>내용을 확인한 뒤 사용하세요</span></div>
+        <div id="aiSuggestionText" class="ai-suggestion-text"></div>
+        <p>AI가 물품·수량·시간을 잘못 바꾸지 않았는지 반드시 확인해 주세요.</p>
+        <div class="ai-suggestion-actions"><button id="useAiSuggestion" type="button">이 문장 사용하기</button><button id="closeAiSuggestion" type="button">원문 유지</button></div>
+      </section>
+      <p id="aiStatus" class="ai-status" role="status" aria-live="polite"></p>
       <button id="addressNext" class="primary-next" type="button" disabled>주소 두 곳을 먼저 확인해 주세요</button>
       <aside>프리뷰 화면입니다. 실제 주문과 결제는 아직 발생하지 않습니다.</aside>
       <button id="backHome" class="secondary" type="button">심부름 메인으로 돌아가기</button>
@@ -70,6 +79,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261009-2-verified-address-3-policy-gate"></script>
+  <script src="app.js?v=20261009-2-verified-address-3-policy-gate-4-ai-assist"></script>
 </body>
 </html>

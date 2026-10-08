@@ -6,6 +6,13 @@ const postcodeFrame = document.querySelector('#postcodeFrame');
 const postcodeStatus = document.querySelector('#postcodeStatus');
 const postcodeTarget = document.querySelector('#postcodeTarget');
 const addressNext = document.querySelector('#addressNext');
+const errandContent = document.querySelector('#errandContent');
+const aiAssist = document.querySelector('#aiAssist');
+const aiSuggestion = document.querySelector('#aiSuggestion');
+const aiSuggestionText = document.querySelector('#aiSuggestionText');
+const aiStatus = document.querySelector('#aiStatus');
+const ERRAND_AI_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/errand/assist';
+const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
 let postcodePromise = null;
@@ -104,3 +111,73 @@ addressNext.addEventListener('click',()=>{
   if(!selectedAddresses.pickup||!selectedAddresses.dropoff)return;
   addressNext.textContent='주소 확인 완료 · 다음 단계 준비 중';
 });
+
+function updateAiAssist(){
+  aiAssist.disabled=errandContent.value.trim().length<4;
+  if(!aiAssist.disabled&&aiStatus.dataset.state==='hint')aiStatus.textContent='';
+}
+
+errandContent.addEventListener('input',()=>{
+  updateAiAssist();
+  if(!aiSuggestion.hidden){aiSuggestion.hidden=true;aiSuggestionText.textContent='';}
+});
+
+aiAssist.addEventListener('click',async()=>{
+  const original=errandContent.value.trim();
+  if(original.length<4){
+    aiStatus.dataset.state='hint';
+    aiStatus.textContent='먼저 심부름 내용을 네 글자 이상 적어주세요.';
+    errandContent.focus();
+    return;
+  }
+  aiAssist.disabled=true;
+  aiAssist.textContent='AI가 정리 중…';
+  aiSuggestion.hidden=true;
+  aiStatus.dataset.state='loading';
+  aiStatus.textContent='고객이 적은 사실만 사용해 기사 전달 문장으로 정리하고 있습니다.';
+  const controller=new AbortController();
+  const timer=setTimeout(()=>controller.abort(),15000);
+  try{
+    const response=await fetch(ERRAND_AI_ENDPOINT,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT},
+      body:JSON.stringify({text:original}),
+      signal:controller.signal,
+    });
+    if(!response.ok)throw new Error(`assist_${response.status}`);
+    const result=await response.json();
+    const suggestion=String(result?.suggestion||'').trim();
+    if(!suggestion)throw new Error('empty_assist');
+    aiSuggestionText.textContent=suggestion;
+    aiSuggestion.hidden=false;
+    aiStatus.dataset.state='ready';
+    aiStatus.textContent='AI 제안이 준비됐습니다. 원문과 비교해 확인해 주세요.';
+    aiSuggestion.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }catch(error){
+    aiStatus.dataset.state='error';
+    aiStatus.textContent=error?.name==='AbortError'?'AI 응답이 늦어지고 있습니다. 잠시 후 다시 눌러주세요.':'AI 도움을 지금 불러오지 못했습니다. 원문은 그대로 보존되었습니다.';
+  }finally{
+    clearTimeout(timer);
+    aiAssist.textContent='✨ AI에게 도움받기';
+    updateAiAssist();
+  }
+});
+
+document.querySelector('#useAiSuggestion').addEventListener('click',()=>{
+  const suggestion=aiSuggestionText.textContent.trim();
+  if(!suggestion)return;
+  errandContent.value=suggestion;
+  aiSuggestion.hidden=true;
+  aiStatus.dataset.state='applied';
+  aiStatus.textContent='AI 문장을 적용했습니다. 접수 전에 내용이 정확한지 한 번 더 확인해 주세요.';
+  updateAiAssist();
+  errandContent.focus();
+});
+
+document.querySelector('#closeAiSuggestion').addEventListener('click',()=>{
+  aiSuggestion.hidden=true;
+  aiStatus.dataset.state='';
+  aiStatus.textContent='원문을 그대로 유지했습니다.';
+});
+
+updateAiAssist();
