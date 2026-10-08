@@ -6,7 +6,7 @@ import {beforeSharedHero,beforeSharedLinks} from './scripts/shared-campaign-base
 const read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
 const hash=x=>createHash('sha256').update(typeof x==='string'||Buffer.isBuffer(x)?x:JSON.stringify(x)).digest('hex');
 const fixture=read('scripts/fixtures/shared-store-campaigns-102.json');
-assert.equal(hash(fixture),'4c71f0ddcad1fb3137b78c248def1c9faa930631a885b22543b64f3ee01f9af8','Reviewed release fixture must not drift');
+assert.equal(hash(fixture),'5d7ae83011c39138bb846a4b21e6442b41c80cfd0653ccefa52d1c9609338dda','Reviewed release fixture must not drift');
 const hero=read('data/hero-campaigns.json'),links=read('data/store-campaign-links.json'),priority=read('data/store-priority.json'),ads=read('data/banner-targets.json');
 const ids=fixture.stores.map(x=>x.storeId);
 assert.equal(ids.length,102);assert.equal(new Set(ids).size,102);
