@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address">
+  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address-3-policy-gate">
 </head>
 <body>
   <main>
@@ -28,8 +28,23 @@
       </section>
       <section class="how"><h2>이렇게 진행돼요</h2><ol><li><b>1</b><span><strong>장소와 내용을 입력</strong><small>어디서 무엇을 받아 어디로 보낼지 적어요.</small></span></li><li><b>2</b><span><strong>요금 확인 후 입금</strong><small>신청 전에 전체 금액을 먼저 확인해요.</small></span></li><li><b>3</b><span><strong>기사 배정과 실시간 확인</strong><small>픽업부터 완료까지 진행상태를 확인해요.</small></span></li></ol></section>
     </section>
+    <section id="policyPreview" class="screen policy-screen" hidden>
+      <p class="eyebrow">심부름 신청 · 1단계</p>
+      <h1 class="request-title">신청 전에<br>꼭 확인해 주세요</h1>
+      <div class="draft-banner"><b>운영정책 초안</b><span>프리뷰에서는 결제·접수가 발생하지 않으며, 정확한 금액과 법률 문구는 결제 도입 전에 최종 확정합니다.</span></div>
+      <section class="policy-card"><h2>⚠️ 이용 주의사항</h2><ul><li>기사에게 전달할 물품·수량·크기와 현장 상황을 사실대로 적어야 합니다.</li><li>주소, 연락처, 공동현관 출입방법과 받는 사람 정보를 정확히 입력해야 합니다.</li><li>기사의 안전을 위협하거나 법령·시설 규정을 위반하는 요청은 현장에서 중단될 수 있습니다.</li><li>물품 구입비를 기사가 개인 돈으로 대신 내는 구매대행은 현재 하지 않습니다.</li></ul></section>
+      <section class="policy-card is-danger"><h2>🚫 접수 불가 물품·행위</h2><ul><li>불법 약물·위조품·장물, 총포·도검·폭발물·인화성 위험물</li><li>현금·수표·유가증권, 고가 귀금속과 분실 시 대체하기 어려운 물품</li><li>살아 있는 동물, 시신·유골, 누출·파손 우려가 큰 위험 물품</li><li>스토킹·감시·불법 촬영·침입·명의도용 등 타인의 권리를 침해하는 행위</li><li>담배 구매대행은 접수하지 않습니다. 주류 등 성인 확인 품목은 운영 허용 여부가 확정되기 전까지 접수하지 않으며, 향후 허용 시 수령인의 신분증 확인과 19세 미만 전달 거부가 필수입니다.</li></ul></section>
+      <section class="policy-card"><h2>💳 요금 산정 방식</h2><p class="policy-formula">기본 수행료 + 이동거리 + 예상시간·대기 + 무게·부피 + 현장·지역 추가요금 + 결제비용</p><ul><li>엘리베이터 없는 고층, 주차·진입 곤란, 고산지대·도서·회피구역은 추가요금 또는 블록요금을 적용할 수 있습니다.</li><li>야간·악천후·장시간 대기·고중량 물품은 접수 전 추가금액을 별도로 표시합니다.</li><li>고객은 기사 배정 전에 전체 예상금액과 각 요금 항목을 확인합니다. 표시하지 않은 금액을 임의로 청구하지 않습니다.</li></ul></section>
+      <section class="policy-card"><h2>↩️ 수행 중 취소·환불</h2><ol><li><b>기사 배정 전</b><span>전액 환불을 원칙으로 합니다.</span></li><li><b>배정 후 출발 전</b><span>사전에 표시한 배차 취소비가 발생할 수 있습니다.</span></li><li><b>기사 이동 후</b><span>실제 이동거리·경과시간을 기준으로 기사 보상액을 차감하고 나머지를 환불합니다.</span></li><li><b>물품 인수 후</b><span>이동·대기 보상과 물품 반환에 필요한 비용을 함께 정산할 수 있습니다.</span></li><li><b>기사·플랫폼 귀책</b><span>고객에게 취소비를 부담시키지 않습니다.</span></li></ol><p class="policy-note">정확한 단계별 금액은 결제 전에 별도 표시하고 다시 동의를 받습니다.</p></section>
+      <div class="policy-checks">
+        <label><input type="checkbox" data-policy-check="prohibited"><span><b>[필수]</b> 불가 품목·행위와 성인 확인 품목 제한을 확인했습니다.</span></label>
+        <label><input type="checkbox" data-policy-check="fees"><span><b>[필수]</b> 요금 산정 방식과 수행 단계별 취소·환불 기준을 확인했습니다.</span></label>
+      </div>
+      <button id="policyContinue" class="primary-next" type="button" disabled>필수 내용을 확인해 주세요</button>
+      <button id="policyBack" class="secondary" type="button">심부름 메인으로 돌아가기</button>
+    </section>
     <section id="requestPreview" class="screen" hidden>
-      <p class="eyebrow">심부름 신청 · 1단계</p><h1 class="request-title">어디서 가져와<br>어디로 전달할까요?</h1>
+      <p class="eyebrow">심부름 신청 · 2단계</p><h1 class="request-title">어디서 가져와<br>어디로 전달할까요?</h1>
       <p class="address-guidance">주소를 직접 적는 방식이 아닙니다. <b>도로명주소 검색 결과에서 선택한 주소만</b> 접수할 수 있어요.</p>
       <section class="address-card" data-address-card="pickup">
         <div class="address-card-head"><b>가져올 곳</b><span>필수</span></div>
@@ -55,6 +70,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261009-2-verified-address"></script>
+  <script src="app.js?v=20261009-2-verified-address-3-policy-gate"></script>
 </body>
 </html>
