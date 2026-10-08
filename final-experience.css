@@ -66,3 +66,13 @@
 .yeosu-gage-home-copy>em{color:#082b4b;font-size:14px;line-height:1.35;font-style:normal;font-weight:950;white-space:nowrap;text-shadow:0 1px 2px rgba(255,255,255,.78)}
 .yeosu-gage-home-entry.pressing,.yeosu-gage-home-entry:active{background:rgba(255,255,255,.72)!important;border-color:#fff!important;box-shadow:inset 0 0 0 1px #fff,inset 0 1px 16px rgba(255,255,255,.62),0 4px 14px rgba(255,255,255,.22)!important;filter:brightness(1.12);transform:none!important}
 @media(max-width:360px){.yeosu-gage-home-entry-wrap{margin-inline:11px}.yeosu-gage-home-entry{min-height:96px;grid-template-columns:46px minmax(0,1fr);gap:8px;padding-inline:9px}.yeosu-gage-home-entry>img{width:46px;height:46px}.yeosu-gage-home-copy>small{font-size:11px}.yeosu-gage-home-title-row>strong{font-size:23px}.yeosu-gage-home-action{padding-inline:7px;font-size:11px}.yeosu-gage-home-copy>em{font-size:12.5px}}
+
+.matjido-errand-home-entry-wrap{margin:0 16px 14px}
+.matjido-errand-home-entry{width:100%;min-height:76px;display:grid;grid-template-columns:52px minmax(0,1fr) 24px;align-items:center;gap:12px;padding:11px 14px;border:1px solid rgba(255,255,255,.88);border-radius:18px;color:#062d4f;background:rgba(255,255,255,.1);box-shadow:0 5px 16px rgba(4,25,55,.15),inset 0 1px 0 rgba(255,255,255,.48);backdrop-filter:blur(4px) saturate(108%);-webkit-backdrop-filter:blur(4px) saturate(108%);text-decoration:none;touch-action:manipulation}
+.matjido-errand-home-icon{width:50px;height:50px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.92);border-radius:16px;background:rgba(255,255,255,.18);font-size:28px;box-shadow:inset 0 1px 0 rgba(255,255,255,.55)}
+.matjido-errand-home-copy{min-width:0;display:grid;gap:4px;text-align:left}
+.matjido-errand-home-copy strong{font-size:22px;line-height:1.08;font-weight:950;text-shadow:0 1px 2px rgba(255,255,255,.72)}
+.matjido-errand-home-copy small{overflow:hidden;color:#0c3455;font-size:14px;line-height:1.3;font-weight:850;text-overflow:ellipsis;white-space:nowrap;text-shadow:0 1px 2px rgba(255,255,255,.7)}
+.matjido-errand-home-arrow{font-size:34px;line-height:1;font-weight:700}
+.matjido-errand-home-entry:active,.matjido-errand-home-entry.pressing{background:rgba(255,255,255,.72);border-color:#fff;box-shadow:inset 0 0 0 1px #fff,inset 0 1px 16px rgba(255,255,255,.62);filter:brightness(1.12)}
+@media(max-width:380px){.matjido-errand-home-entry-wrap{margin-inline:10px}.matjido-errand-home-entry{grid-template-columns:48px minmax(0,1fr) 20px;padding-inline:11px}.matjido-errand-home-icon{width:46px;height:46px}.matjido-errand-home-copy strong{font-size:21px}.matjido-errand-home-copy small{font-size:13px}}
