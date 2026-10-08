@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261009-1">
+  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address">
 </head>
 <body>
   <main>
@@ -30,11 +30,31 @@
     </section>
     <section id="requestPreview" class="screen" hidden>
       <p class="eyebrow">심부름 신청 · 1단계</p><h1 class="request-title">어디서 가져와<br>어디로 전달할까요?</h1>
-      <label>가져올 곳<input placeholder="출발지 주소"></label><label>받을 곳<input placeholder="도착지 주소"></label><label>심부름 내용<textarea rows="4" placeholder="기사님이 이해할 수 있도록 부탁할 내용을 적어주세요."></textarea></label>
+      <p class="address-guidance">주소를 직접 적는 방식이 아닙니다. <b>도로명주소 검색 결과에서 선택한 주소만</b> 접수할 수 있어요.</p>
+      <section class="address-card" data-address-card="pickup">
+        <div class="address-card-head"><b>가져올 곳</b><span>필수</span></div>
+        <button class="address-search-button" type="button" data-address-open="pickup"><span data-address-label="pickup">도로명주소를 검색해 주세요</span><strong>주소 찾기 ›</strong></button>
+        <p class="address-verification" data-address-verification="pickup">아직 확인된 주소가 없습니다.</p>
+        <label class="address-detail" data-address-detail-wrap="pickup" hidden>상세 위치<input data-address-detail="pickup" placeholder="동·호수, 층수, 출입 방법"></label>
+      </section>
+      <section class="address-card" data-address-card="dropoff">
+        <div class="address-card-head"><b>가져다줄 곳</b><span>필수</span></div>
+        <button class="address-search-button" type="button" data-address-open="dropoff"><span data-address-label="dropoff">도로명주소를 검색해 주세요</span><strong>주소 찾기 ›</strong></button>
+        <p class="address-verification" data-address-verification="dropoff">아직 확인된 주소가 없습니다.</p>
+        <label class="address-detail" data-address-detail-wrap="dropoff" hidden>상세 위치<input data-address-detail="dropoff" placeholder="동·호수, 층수, 받는 분 안내"></label>
+      </section>
+      <label>심부름 내용<textarea rows="4" placeholder="기사님이 이해할 수 있도록 부탁할 내용을 적어주세요."></textarea></label>
+      <button id="addressNext" class="primary-next" type="button" disabled>주소 두 곳을 먼저 확인해 주세요</button>
       <aside>프리뷰 화면입니다. 실제 주문과 결제는 아직 발생하지 않습니다.</aside>
       <button id="backHome" class="secondary" type="button">심부름 메인으로 돌아가기</button>
     </section>
+    <section id="postcodePanel" class="postcode-panel" hidden aria-labelledby="postcodeTitle">
+      <header><button id="postcodeBack" type="button" aria-label="주소검색 닫기">←</button><span><b id="postcodeTitle">도로명주소 찾기</b><small id="postcodeTarget">가져올 곳 주소</small></span></header>
+      <p>도로명·건물명·지번을 검색하고 결과에서 정확한 주소를 선택하세요.</p>
+      <div id="postcodeStatus" class="postcode-status">주소검색을 불러오는 중입니다.</div>
+      <div id="postcodeFrame" class="postcode-frame"></div>
+    </section>
   </main>
-  <script src="app.js?v=20261009-1"></script>
+  <script src="app.js?v=20261009-2-verified-address"></script>
 </body>
 </html>
