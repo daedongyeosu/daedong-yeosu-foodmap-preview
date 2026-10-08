@@ -16,6 +16,7 @@ const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
 let postcodePromise = null;
+let aiDraftApplied = false;
 
 function openRequest(){home.hidden=true;policy.hidden=false;request.hidden=true;window.scrollTo({top:0,behavior:'smooth'});}
 document.querySelector('#requestStart').addEventListener('click',openRequest);
@@ -120,6 +121,10 @@ function updateAiAssist(){
 errandContent.addEventListener('input',()=>{
   updateAiAssist();
   if(!aiSuggestion.hidden){aiSuggestion.hidden=true;aiSuggestionText.textContent='';}
+  if(aiDraftApplied){
+    aiStatus.dataset.state='editing';
+    aiStatus.textContent='AI 초안을 고객이 직접 수정하고 있습니다. [고객 확인 필요] 부분과 빠진 내용을 정확하게 고쳐주세요.';
+  }
 });
 
 aiAssist.addEventListener('click',async()=>{
@@ -167,9 +172,11 @@ document.querySelector('#useAiSuggestion').addEventListener('click',()=>{
   const suggestion=aiSuggestionText.textContent.trim();
   if(!suggestion)return;
   errandContent.value=suggestion;
+  aiDraftApplied=true;
+  errandContent.classList.add('is-ai-draft');
   aiSuggestion.hidden=true;
   aiStatus.dataset.state='applied';
-  aiStatus.textContent='AI 문장을 적용했습니다. 접수 전에 내용이 정확한지 한 번 더 확인해 주세요.';
+  aiStatus.textContent='AI 초안을 입력칸에 넣었습니다. [고객 확인 필요] 부분과 나머지 문장을 직접 수정할 수 있습니다.';
   updateAiAssist();
   errandContent.focus();
 });
