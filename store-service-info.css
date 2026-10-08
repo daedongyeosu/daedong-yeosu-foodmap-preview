@@ -1152,8 +1152,11 @@ body.store-service-overview-open {
   .store-finder-quick nav button {
     width: 100%;
     min-width: 0;
-    padding: 0 6px;
-    font-size: 11px;
+    min-height: 48px;
+    padding: 0 5px;
+    font-size: 15px;
+    line-height: 1.18;
+    white-space: normal;
   }
 
   .store-finder-quick nav button:first-child {
@@ -1185,7 +1188,7 @@ body.store-service-overview-open {
 
   .store-finder-quick nav button {
     padding: 0 4px;
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 

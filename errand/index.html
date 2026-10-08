@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#174d3b">
+  <title>24시간 심부름 | 여수맛지도</title>
+  <link rel="stylesheet" href="styles.css?v=20261009-1">
+</head>
+<body>
+  <main>
+    <header><a href="../" aria-label="여수맛지도 홈으로">←</a><span><b>여수맛지도</b><small>24시간 심부름</small></span><em>시안</em></header>
+    <section id="errandHome" class="screen">
+      <p class="return-note">← 여수맛지도에서 심부름을 선택해 들어온 화면</p>
+      <article class="hero">
+        <div class="live"><i></i> 여수 전지역 · 지금 바로 기사 연결</div>
+        <p>여수맛지도 생활서비스</p>
+        <h1>24시간<br><strong>심부름</strong></h1>
+        <h2>직접 가기 어렵거나 시간이 없을 때<br>동네 기사님이 대신 전달해 드려요.</h2>
+        <div class="route" aria-hidden="true"><span>A</span><b>🛵</b><span>B</span></div>
+        <button id="requestStart" type="button">심부름 신청하기 <b>→</b></button>
+      </article>
+      <section class="needs">
+        <h2>어떤 심부름이 필요하세요?</h2>
+        <button type="button" data-kind="서류·열쇠"><span>📄</span><b>급한 서류·열쇠</b><small>회사·관공서·집으로 전달</small></button>
+        <button type="button" data-kind="결제한 상품"><span>🛍️</span><b>결제한 상품 픽업</b><small>준비된 물건을 받아서 전달</small></button>
+        <button type="button" data-kind="중고거래"><span>📦</span><b>중고거래 전달</b><small>약속장소에서 안전하게 전달</small></button>
+      </section>
+      <section class="how"><h2>이렇게 진행돼요</h2><ol><li><b>1</b><span><strong>장소와 내용을 입력</strong><small>어디서 무엇을 받아 어디로 보낼지 적어요.</small></span></li><li><b>2</b><span><strong>요금 확인 후 입금</strong><small>신청 전에 전체 금액을 먼저 확인해요.</small></span></li><li><b>3</b><span><strong>기사 배정과 실시간 확인</strong><small>픽업부터 완료까지 진행상태를 확인해요.</small></span></li></ol></section>
+    </section>
+    <section id="requestPreview" class="screen" hidden>
+      <p class="eyebrow">심부름 신청 · 1단계</p><h1 class="request-title">어디서 가져와<br>어디로 전달할까요?</h1>
+      <label>가져올 곳<input placeholder="출발지 주소"></label><label>받을 곳<input placeholder="도착지 주소"></label><label>심부름 내용<textarea rows="4" placeholder="기사님이 이해할 수 있도록 부탁할 내용을 적어주세요."></textarea></label>
+      <aside>프리뷰 화면입니다. 실제 주문과 결제는 아직 발생하지 않습니다.</aside>
+      <button id="backHome" class="secondary" type="button">심부름 메인으로 돌아가기</button>
+    </section>
+  </main>
+  <script src="app.js?v=20261009-1"></script>
+</body>
+</html>

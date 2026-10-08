@@ -921,6 +921,8 @@
       `;
       searchRow.after(entry);
     }
+    const errandEntry = document.querySelector('.matjido-errand-home-entry-wrap');
+    if (entry && errandEntry && entry.previousElementSibling !== errandEntry) entry.before(errandEntry);
     if (entry) {
       const location = typeof state !== 'undefined' ? String(state.location || '') : '';
       const hasLocation = location && location !== DEFAULT_AREA;
