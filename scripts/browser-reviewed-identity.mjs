@@ -25,7 +25,11 @@ const page = await context.newPage();
 page.on('pageerror',e=>report.errors.push(e.message));
 async function verify(id,place,entry) {
  await page.goto(base+entry,{waitUntil:'domcontentloaded'});
- await page.waitForFunction(id=>typeof allStores!=='undefined'&&allStores.some(s=>String(s.id)===id)&&typeof rc3VerifiedPhysicalMap==='function',id,{timeout:45000});
+ // This suite verifies the saved Naver identity for records spread across the
+ // full catalog. The bootstrap catalog is intentionally replaced in stages;
+ // wait for that replacement to finish before selecting a record so a later
+ // stage cannot invalidate the element chosen by this identity-only test.
+ await page.waitForFunction(id=>window.__daedongCatalogProgress?.complete===true&&typeof allStores!=='undefined'&&allStores.some(s=>String(s.id)===id)&&typeof rc3VerifiedPhysicalMap==='function',id,{timeout:45000});
  if(!entry.includes('store=')) await page.evaluate(id=>openStore(allStores.find(s=>String(s.id)===id)),id);
  const detail=page.locator('#modal:not([hidden]) .store-detail[data-store-id="'+id+'"]:not(.store-detail-loading)');
  await detail.waitFor({timeout:30000});
