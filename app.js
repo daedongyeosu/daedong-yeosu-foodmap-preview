@@ -2789,9 +2789,9 @@ function deferBrandFont() {
 }
 async function initialize() {
   renderHero(); renderPromos(); renderYeosuLifeHome();
-  const [rawStores, manifest, policy, neighborhoodData] = await Promise.all([
-    window.daedongDataApi?.catalog?.({timeoutMs: 20000}).catch(error => {
-      console.error('보안 데이터 API에서 가게목록을 불러오지 못했습니다.', error);
+  const [bootstrapStores, manifest, policy, neighborhoodData] = await Promise.all([
+    window.daedongDataApi?.catalogBootstrap?.({timeoutMs: 8000}).catch(error => {
+      console.warn('첫 화면 가게목록을 바로 불러오지 못했습니다.', error);
       return [];
     }) || Promise.resolve([]),
     fetchJson(PHOTO_MANIFEST_URL, {entries: []}),
@@ -2800,10 +2800,23 @@ async function initialize() {
   ]);
   yeosuNeighborhoods=neighborhoodData.neighborhoods||[];neighborhoodByName=new Map(yeosuNeighborhoods.map(item=>[item.name,item]));
   photoResolver = new PhotoResolver(manifest, policy);
+  const safeBootstrapStores = Array.isArray(bootstrapStores) ? bootstrapStores : [];
+  let bootstrapPainted = false;
+  if (safeBootstrapStores.length) {
+    const normalizedBootstrap = await normalizeStoresInBatches(safeBootstrapStores, 16);
+    if (normalizedBootstrap.length) {
+      applyNormalizedCatalog(normalizedBootstrap, normalizedBootstrap.length, false);
+      bootstrapPainted = true;
+    }
+  }
+  const rawStores = await (window.daedongDataApi?.catalog?.({timeoutMs: 20000}).catch(error => {
+    console.error('보안 데이터 API에서 전체 가게목록을 불러오지 못했습니다.', error);
+    return safeBootstrapStores;
+  }) || Promise.resolve(safeBootstrapStores));
   const safeRawStores = Array.isArray(rawStores) ? rawStores : [];
   const firstPaintCount = Math.min(32, safeRawStores.length);
   const firstStores = await normalizeStoresInBatches(safeRawStores.slice(0, firstPaintCount), 16);
-  applyNormalizedCatalog(firstStores, safeRawStores.length, firstPaintCount === safeRawStores.length);
+  applyNormalizedCatalog(firstStores, safeRawStores.length, firstPaintCount === safeRawStores.length, {refresh: !bootstrapPainted});
   if (firstPaintCount < safeRawStores.length) {
     await yieldToMainThread();
     const remainingStores = await normalizeStoresInBatches(safeRawStores.slice(firstPaintCount), 48, firstPaintCount);
