@@ -18,19 +18,130 @@ const itemPhotoPreview = document.querySelector('#itemPhotoPreview');
 const itemPhotoImage = document.querySelector('#itemPhotoImage');
 const itemPhotoName = document.querySelector('#itemPhotoName');
 const itemPhotoStatus = document.querySelector('#itemPhotoStatus');
+const draftResume = document.querySelector('#draftResume');
+const draftResumeTime = document.querySelector('#draftResumeTime');
 const ERRAND_AI_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/errand/assist';
 const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
+const ERRAND_DRAFT_KEY = 'matjidoErrandDraftV1';
+const ERRAND_DRAFT_TTL_MS = 24 * 60 * 60 * 1000;
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
 let postcodePromise = null;
 let aiDraftApplied = false;
 let selectedItemKind = '';
 let itemPhotoUrl = '';
+let restoringDraft = false;
+let draftSaveTimer = null;
+
+function draftSnapshot(){
+  return {
+    version:1,
+    updatedAt:Date.now(),
+    addresses:{pickup:selectedAddresses.pickup,dropoff:selectedAddresses.dropoff},
+    details:{
+      pickup:document.querySelector('[data-address-detail="pickup"]')?.value.trim()||'',
+      dropoff:document.querySelector('[data-address-detail="dropoff"]')?.value.trim()||'',
+    },
+    itemKind:selectedItemKind,
+    itemName:itemName.value.trim(),
+    itemScale:document.querySelector('[name="itemScale"]:checked')?.value||'',
+    conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value),
+    description:errandContent.value,
+  };
+}
+
+function meaningfulDraft(draft){
+  return Boolean(draft?.addresses?.pickup||draft?.addresses?.dropoff||draft?.itemKind||draft?.itemName||draft?.itemScale||draft?.conditions?.length||String(draft?.description||'').trim());
+}
+
+function showDraftResume(draft){
+  if(!meaningfulDraft(draft)){draftResume.hidden=true;return;}
+  draftResume.hidden=false;
+  const saved=new Date(Number(draft.updatedAt)||Date.now());
+  draftResumeTime.textContent=`${saved.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})} 임시 저장`;
+}
+
+function saveDraftNow(){
+  if(restoringDraft)return;
+  const draft=draftSnapshot();
+  try{
+    if(meaningfulDraft(draft))localStorage.setItem(ERRAND_DRAFT_KEY,JSON.stringify(draft));
+    else localStorage.removeItem(ERRAND_DRAFT_KEY);
+    showDraftResume(draft);
+  }catch{}
+}
+
+function scheduleDraftSave(){
+  clearTimeout(draftSaveTimer);
+  draftSaveTimer=setTimeout(saveDraftNow,250);
+}
+
+function readDraft(){
+  try{
+    const draft=JSON.parse(localStorage.getItem(ERRAND_DRAFT_KEY)||'null');
+    if(!draft||draft.version!==1||Date.now()-Number(draft.updatedAt)>ERRAND_DRAFT_TTL_MS){
+      localStorage.removeItem(ERRAND_DRAFT_KEY);
+      return null;
+    }
+    return meaningfulDraft(draft)?draft:null;
+  }catch{
+    try{localStorage.removeItem(ERRAND_DRAFT_KEY);}catch{}
+    return null;
+  }
+}
+
+function paintRestoredAddress(kind,address,detail=''){
+  if(!address?.address)return;
+  selectedAddresses[kind]={
+    address:String(address.address),
+    zonecode:String(address.zonecode||''),
+    roadAddress:String(address.roadAddress||''),
+    jibunAddress:String(address.jibunAddress||''),
+  };
+  document.querySelector(`[data-address-label="${kind}"]`).textContent=selectedAddresses[kind].address;
+  const verification=document.querySelector(`[data-address-verification="${kind}"]`);
+  verification.textContent=`✓ 임시 저장된 검색주소${selectedAddresses[kind].zonecode?` · 우편번호 ${selectedAddresses[kind].zonecode}`:''}`;
+  verification.classList.add('is-verified');
+  document.querySelector(`[data-address-detail-wrap="${kind}"]`).hidden=false;
+  document.querySelector(`[data-address-detail="${kind}"]`).value=String(detail||'');
+}
+
+function restoreDraft(draft){
+  restoringDraft=true;
+  paintRestoredAddress('pickup',draft.addresses?.pickup,draft.details?.pickup);
+  paintRestoredAddress('dropoff',draft.addresses?.dropoff,draft.details?.dropoff);
+  selectedItemKind=String(draft.itemKind||'');
+  document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.itemKind===selectedItemKind)));
+  itemName.value=String(draft.itemName||'');
+  document.querySelectorAll('[name="itemScale"]').forEach(input=>{input.checked=input.value===draft.itemScale;});
+  const conditions=new Set(Array.isArray(draft.conditions)?draft.conditions:[]);
+  document.querySelectorAll('.extra-conditions input').forEach(input=>{input.checked=conditions.has(input.value);});
+  errandContent.value=String(draft.description||'');
+  restoringDraft=false;
+  updateAiAssist();
+  updateRequestReadiness();
+  showDraftResume(draft);
+}
+
+function clearDraft(){
+  clearTimeout(draftSaveTimer);
+  try{localStorage.removeItem(ERRAND_DRAFT_KEY);}catch{}
+  selectedAddresses.pickup=null;selectedAddresses.dropoff=null;selectedItemKind='';aiDraftApplied=false;
+  document.querySelectorAll('[data-address-label]').forEach(label=>{label.textContent='도로명주소를 검색해 주세요';});
+  document.querySelectorAll('[data-address-verification]').forEach(label=>{label.textContent='아직 확인된 주소가 없습니다.';label.classList.remove('is-verified');});
+  document.querySelectorAll('[data-address-detail-wrap]').forEach(wrap=>{wrap.hidden=true;});
+  document.querySelectorAll('[data-address-detail]').forEach(input=>{input.value='';});
+  document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed','false'));
+  document.querySelectorAll('[name="itemScale"],.extra-conditions input').forEach(input=>{input.checked=false;});
+  itemName.value='';errandContent.value='';draftResume.hidden=true;
+  updateAiAssist();updateRequestReadiness();
+}
 
 function selectItemKind(kind){
   selectedItemKind=kind;
   document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.itemKind===kind)));
   updateRequestReadiness();
+  scheduleDraftSave();
 }
 
 function openRequest(kind=''){
@@ -91,6 +202,7 @@ function updateAddress(kind,data){
   document.querySelector(`[data-address-detail-wrap="${kind}"]`).hidden=false;
   closePostcode();
   updateRequestReadiness();
+  scheduleDraftSave();
   document.querySelector(`[data-address-detail="${kind}"]`)?.focus();
 }
 
@@ -168,6 +280,7 @@ function updateAiAssist(){
 errandContent.addEventListener('input',()=>{
   updateAiAssist();
   updateRequestReadiness();
+  scheduleDraftSave();
   if(!aiSuggestion.hidden){aiSuggestion.hidden=true;aiSuggestionText.textContent='';}
   if(aiDraftApplied){
     aiStatus.dataset.state='editing';
@@ -175,8 +288,9 @@ errandContent.addEventListener('input',()=>{
   }
 });
 
-itemName.addEventListener('input',updateRequestReadiness);
-document.querySelectorAll('[name="itemScale"]').forEach(input=>input.addEventListener('change',updateRequestReadiness));
+itemName.addEventListener('input',()=>{updateRequestReadiness();scheduleDraftSave();});
+document.querySelectorAll('[name="itemScale"],.extra-conditions input').forEach(input=>input.addEventListener('change',()=>{updateRequestReadiness();scheduleDraftSave();}));
+document.querySelectorAll('[data-address-detail]').forEach(input=>input.addEventListener('input',scheduleDraftSave));
 document.querySelector('#itemPhotoPick').addEventListener('click',()=>itemPhoto.click());
 itemPhoto.addEventListener('change',()=>{
   const file=itemPhoto.files?.[0];
@@ -258,6 +372,7 @@ document.querySelector('#useAiSuggestion').addEventListener('click',()=>{
   aiStatus.dataset.state='applied';
   aiStatus.textContent='AI 초안을 입력칸에 넣었습니다. [고객 확인 필요] 부분과 나머지 문장을 직접 수정할 수 있습니다.';
   updateAiAssist();
+  scheduleDraftSave();
   errandContent.focus();
 });
 
@@ -266,6 +381,12 @@ document.querySelector('#closeAiSuggestion').addEventListener('click',()=>{
   aiStatus.dataset.state='';
   aiStatus.textContent='원문을 그대로 유지했습니다.';
 });
+
+document.querySelector('#draftContinue').addEventListener('click',()=>openRequest());
+document.querySelector('#draftDelete').addEventListener('click',clearDraft);
+
+const savedDraft=readDraft();
+if(savedDraft)restoreDraft(savedDraft);
 
 updateAiAssist();
 
