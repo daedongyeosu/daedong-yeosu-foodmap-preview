@@ -381,6 +381,9 @@
   const catalog = options => IS_GOHEUNG
     ? goheungCatalog().then(payload => customerVisibleStores(payload.stores))
     : Promise.all([request('/api/catalog', {cacheKey: 'catalog', ...options}),nativeCatalog()]).then(([stores,published])=>customerVisibleStores(mergeNativeCatalog(stores,published)));
+  const catalogBootstrap = options => IS_GOHEUNG
+    ? goheungCatalog().then(payload => customerVisibleStores(payload.stores))
+    : request('/api/catalog/bootstrap', {cacheKey: 'catalog-bootstrap', ...options}).then(customerVisibleStores);
   const services = options => IS_GOHEUNG
     ? goheungCatalog().then(payload => customerVisibleServices(payload.services || {}))
     : request('/api/services', {cacheKey: 'services', ...options}).then(customerVisibleServices);
@@ -448,6 +451,7 @@
     baseUrl: BASE_URL,
     regionCode: ACTIVE_REGION.code,
     isCustomerHiddenStoreId,
+    catalogBootstrap,
     catalog,
     services,
     detail,
@@ -456,15 +460,13 @@
     menuSearch
   });
 
-  // Start the same region-scoped request while the larger UI scripts download.
-  // The in-flight request cache lets initialize() join it without duplicate
-  // traffic. Only warm network data here: publication merges stay at the caller,
-  // and failures keep the normal retry/backoff path (no cached empty catalogue).
+  // Warm only the small first-paint catalog while the larger UI scripts download.
+  // initialize() joins it, paints real cards, and starts the complete catalog
+  // afterwards so the 2,000+ record transfer cannot delay the first useful view.
   const warmCatalog = typeof document !== 'undefined'
     && document.currentScript?.hasAttribute('data-catalog-warmup');
   if (warmCatalog && IS_GOHEUNG) goheungCatalog().catch(() => {});
   else if (warmCatalog) {
-    request('/api/catalog', {cacheKey: 'catalog', timeoutMs: 20000}).catch(() => {});
-    nativeCatalog();
+    request('/api/catalog/bootstrap', {cacheKey: 'catalog-bootstrap', timeoutMs: 8000}).catch(() => {});
   }
 })();

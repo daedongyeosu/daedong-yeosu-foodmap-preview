@@ -5,6 +5,7 @@ import vm from 'node:vm';
 const calls = [];
 const alienStoreId = 'a089d1d54720b48e';
 const responses = new Map([
+  ['/api/catalog/bootstrap', [{id: 'a'.repeat(16), name: '첫화면가게'}]],
   ['/api/catalog', [{id: 'a'.repeat(16), name: '검증가게'}]],
   [`/api/store/${'a'.repeat(16)}`, {id: 'a'.repeat(16), routes: []}],
   [`/api/store/${'a'.repeat(16)}/menu`, {storeId: 'a'.repeat(16), items: []}],
@@ -53,6 +54,10 @@ vm.runInContext(fs.readFileSync('data-api.js', 'utf8'), context);
 const api = context.window.daedongDataApi;
 const plain = value => JSON.parse(JSON.stringify(value));
 assert.equal(api.baseUrl, 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev');
+assert.deepEqual(plain(await api.catalogBootstrap()), [{id: 'a'.repeat(16), name: '첫화면가게'}]);
+await api.catalogBootstrap();
+assert.equal(calls.filter(call => call.path === '/api/catalog/bootstrap').length, 1,
+  'bootstrap catalog request must be cached in memory');
 assert.deepEqual(plain(await api.catalog()), [{id: 'a'.repeat(16), name: '검증가게'}]);
 await api.catalog();
 assert.equal(calls.filter(call => call.path === '/api/catalog').length, 1, 'catalog request must be cached in memory');
