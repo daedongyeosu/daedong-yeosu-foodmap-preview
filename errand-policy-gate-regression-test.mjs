@@ -15,7 +15,7 @@ assert.match(html,/data-policy-check="prohibited"/);
 assert.match(html,/data-policy-check="fees"/);
 assert.match(html,/id="policyContinue"[^>]*disabled/);
 assert.match(js,/policyChecks\.every\(input=>input\.checked\)/);
-assert.match(js,/policy\.hidden=true;\s*request\.hidden=false/);
+assert.match(js,/showErrandStep\('request'\);\s*pushErrandStep\('request'\)/);
 assert.match(css,/\.policy-checks/);
 assert.match(html,/policy-gate/);
 

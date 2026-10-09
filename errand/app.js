@@ -40,6 +40,30 @@ let itemPhotoUrl = '';
 let restoringDraft = false;
 let draftSaveTimer = null;
 
+function showErrandStep(step){
+  home.hidden=step!=='home';
+  policy.hidden=step!=='policy';
+  request.hidden=step!=='request';
+  payment.hidden=step!=='payment';
+  tracking.hidden=step!=='tracking';
+  postcodePanel.hidden=step!=='postcode';
+  if(step!=='postcode')postcodeFrame.innerHTML='';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function pushErrandStep(step,url=location.href){
+  history.pushState({errandStep:step},'',url);
+}
+
+function currentErrandStep(){
+  if(!postcodePanel.hidden)return 'postcode';
+  if(!tracking.hidden)return 'tracking';
+  if(!payment.hidden)return 'payment';
+  if(!request.hidden)return 'request';
+  if(!policy.hidden)return 'policy';
+  return 'home';
+}
+
 function draftSnapshot(){
   return {
     version:1,
@@ -153,13 +177,14 @@ function selectItemKind(kind){
 
 function openRequest(kind=''){
   if(kind)selectItemKind(kind);
-  home.hidden=true;policy.hidden=false;request.hidden=true;payment.hidden=true;tracking.hidden=true;window.scrollTo({top:0,behavior:'smooth'});
+  showErrandStep('policy');
+  pushErrandStep('policy');
 }
 document.querySelector('#requestStart').addEventListener('click',()=>openRequest());
 document.querySelectorAll('[data-kind]').forEach(button=>button.addEventListener('click',()=>openRequest(button.dataset.kind)));
 document.querySelectorAll('[data-item-kind]').forEach(button=>button.addEventListener('click',()=>selectItemKind(button.dataset.itemKind)));
-document.querySelector('#backHome').addEventListener('click',()=>{request.hidden=true;payment.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
-document.querySelector('#policyBack').addEventListener('click',()=>{policy.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
+document.querySelector('#backHome').addEventListener('click',()=>{showErrandStep('home');pushErrandStep('home');});
+document.querySelector('#policyBack').addEventListener('click',()=>{showErrandStep('home');pushErrandStep('home');});
 
 const policyChecks=[...document.querySelectorAll('[data-policy-check]')];
 const policyContinue=document.querySelector('#policyContinue');
@@ -171,9 +196,8 @@ function updatePolicyGate(){
 policyChecks.forEach(input=>input.addEventListener('change',updatePolicyGate));
 policyContinue.addEventListener('click',()=>{
   if(policyContinue.disabled)return;
-  policy.hidden=true;
-  request.hidden=false;
-  window.scrollTo({top:0,behavior:'smooth'});
+  showErrandStep('request');
+  pushErrandStep('request');
 });
 
 function loadPostcode(){
@@ -230,6 +254,7 @@ async function openPostcode(kind){
   activeAddressKind=kind;
   request.hidden=true;
   postcodePanel.hidden=false;
+  pushErrandStep('postcode');
   postcodeTarget.textContent=kind==='pickup'?'가져올 곳 주소':'가져다줄 곳 주소';
   postcodeStatus.hidden=false;
   postcodeStatus.classList.remove('is-error');
@@ -248,11 +273,9 @@ async function openPostcode(kind){
 }
 
 function closePostcode(){
-  postcodeFrame.innerHTML='';
-  postcodePanel.hidden=true;
-  request.hidden=false;
   activeAddressKind=null;
-  window.scrollTo({top:0});
+  if(history.state?.errandStep==='postcode')history.back();
+  else showErrandStep('request');
 }
 
 document.querySelectorAll('[data-address-open]').forEach(button=>button.addEventListener('click',()=>openPostcode(button.dataset.addressOpen)));
@@ -270,13 +293,12 @@ addressNext.addEventListener('click',()=>{
   document.querySelector('#paymentRequest').textContent=errandContent.value.trim();
   request.hidden=true;
   payment.hidden=false;
+  pushErrandStep('payment');
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
 document.querySelector('#paymentBack').addEventListener('click',()=>{
-  payment.hidden=true;
-  request.hidden=false;
-  window.scrollTo({top:0,behavior:'smooth'});
+  history.back();
 });
 
 function normalizedPhone(value){
@@ -344,7 +366,7 @@ function paintTracking(order){
 function showTracking(order){
   paintTracking(order);
   home.hidden=true;policy.hidden=true;request.hidden=true;payment.hidden=true;postcodePanel.hidden=true;tracking.hidden=false;
-  history.replaceState(null,'',`${location.pathname}?preview-order=${encodeURIComponent(order.orderId)}`);
+  history.pushState({errandStep:'tracking'},'',`${location.pathname}?preview-order=${encodeURIComponent(order.orderId)}`);
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -371,10 +393,19 @@ previewSubmit.addEventListener('click',()=>{
 });
 
 document.querySelector('#trackingReview').addEventListener('click',()=>{
-  tracking.hidden=true;payment.hidden=false;window.scrollTo({top:0,behavior:'smooth'});
+  history.back();
 });
 document.querySelector('#trackingHome').addEventListener('click',()=>{
-  tracking.hidden=true;home.hidden=false;history.replaceState(null,'',location.pathname);window.scrollTo({top:0,behavior:'smooth'});
+  showErrandStep('home');history.pushState({errandStep:'home'},'',location.pathname);
+});
+
+document.querySelector('#errandBack').addEventListener('click',()=>{
+  if(currentErrandStep()==='home')location.href='../';
+  else history.back();
+});
+
+window.addEventListener('popstate',event=>{
+  showErrandStep(event.state?.errandStep||'home');
 });
 
 function updateAiAssist(){
@@ -495,15 +526,23 @@ if(savedDraft)restoreDraft(savedDraft);
 
 updateAiAssist();
 
+let initialErrandStep='home';
 if(new URLSearchParams(location.search).has('payment')){
   home.hidden=true;
   policy.hidden=true;
   request.hidden=true;
   payment.hidden=false;
+  initialErrandStep='payment';
 }
 
 const previewOrderId=new URLSearchParams(location.search).get('preview-order');
 const savedPreviewOrder=previewOrderId?readPreviewOrder():null;
-if(savedPreviewOrder&&savedPreviewOrder.orderId===previewOrderId)showTracking(savedPreviewOrder);
+if(savedPreviewOrder&&savedPreviewOrder.orderId===previewOrderId){
+  paintTracking(savedPreviewOrder);
+  showErrandStep('tracking');
+  initialErrandStep='tracking';
+}
+
+history.replaceState({errandStep:initialErrandStep},'',location.href);
 
 updatePreviewReadiness();

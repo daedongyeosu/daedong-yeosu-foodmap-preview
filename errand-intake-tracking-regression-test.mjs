@@ -19,7 +19,7 @@ assert.match(app,/expiresAt:Date\.now\(\)\+ERRAND_DRAFT_TTL_MS/,'preview receipt
 assert.match(app,/maskedPhone\(customerPhone\.value\)/,'stored tracking receipt masks the phone number');
 assert.match(app,/localStorage\.setItem\(ERRAND_PREVIEW_ORDER_KEY/,'preview receipt survives reload locally');
 assert.match(app,/previewSubmit\.disabled=!ready/,'name, phone, and confirmation gate intake');
-assert.match(app,/history\.replaceState\(null,'',`\$\{location\.pathname\}\?preview-order=/,'tracking has a restorable local URL');
+assert.match(app,/history\.pushState\(\{errandStep:'tracking'\},'',`\$\{location\.pathname\}\?preview-order=/,'tracking has a restorable local URL and step history');
 assert.doesNotMatch(app,/fetch\([^)]*(?:order|dispatch|zendely|gendeli)/i,'preview intake never calls an order or dispatch endpoint');
 assert.match(css,/\.customer-contact/,'contact form is visibly styled');
 assert.match(css,/\.progress-card li\[data-state="current"\]/,'current tracking state is visibly distinct');
