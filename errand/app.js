@@ -12,16 +12,34 @@ const aiAssist = document.querySelector('#aiAssist');
 const aiSuggestion = document.querySelector('#aiSuggestion');
 const aiSuggestionText = document.querySelector('#aiSuggestionText');
 const aiStatus = document.querySelector('#aiStatus');
+const itemName = document.querySelector('#itemName');
+const itemPhoto = document.querySelector('#itemPhoto');
+const itemPhotoPreview = document.querySelector('#itemPhotoPreview');
+const itemPhotoImage = document.querySelector('#itemPhotoImage');
+const itemPhotoName = document.querySelector('#itemPhotoName');
+const itemPhotoStatus = document.querySelector('#itemPhotoStatus');
 const ERRAND_AI_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/errand/assist';
 const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
 let postcodePromise = null;
 let aiDraftApplied = false;
+let selectedItemKind = '';
+let itemPhotoUrl = '';
 
-function openRequest(){home.hidden=true;policy.hidden=false;request.hidden=true;payment.hidden=true;window.scrollTo({top:0,behavior:'smooth'});}
-document.querySelector('#requestStart').addEventListener('click',openRequest);
-document.querySelectorAll('[data-kind]').forEach(button=>button.addEventListener('click',openRequest));
+function selectItemKind(kind){
+  selectedItemKind=kind;
+  document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.itemKind===kind)));
+  updateRequestReadiness();
+}
+
+function openRequest(kind=''){
+  if(kind)selectItemKind(kind);
+  home.hidden=true;policy.hidden=false;request.hidden=true;payment.hidden=true;window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelector('#requestStart').addEventListener('click',()=>openRequest());
+document.querySelectorAll('[data-kind]').forEach(button=>button.addEventListener('click',()=>openRequest(button.dataset.kind)));
+document.querySelectorAll('[data-item-kind]').forEach(button=>button.addEventListener('click',()=>selectItemKind(button.dataset.itemKind)));
 document.querySelector('#backHome').addEventListener('click',()=>{request.hidden=true;payment.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
 document.querySelector('#policyBack').addEventListener('click',()=>{policy.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
 
@@ -78,9 +96,13 @@ function updateAddress(kind,data){
 
 function updateRequestReadiness(){
   const addressesReady=Boolean(selectedAddresses.pickup&&selectedAddresses.dropoff);
+  const itemReady=Boolean(selectedItemKind&&itemName.value.trim()&&document.querySelector('[name="itemScale"]:checked'));
   const contentReady=errandContent.value.trim().length>=4;
-  addressNext.disabled=!(addressesReady&&contentReady);
+  addressNext.disabled=!(addressesReady&&itemReady&&contentReady);
   if(!addressesReady)addressNext.textContent='주소 두 곳을 먼저 확인해 주세요';
+  else if(!selectedItemKind)addressNext.textContent='물품 종류를 선택해 주세요';
+  else if(!itemName.value.trim())addressNext.textContent='물품명과 수량을 적어주세요';
+  else if(!document.querySelector('[name="itemScale"]:checked'))addressNext.textContent='배송 규모를 선택해 주세요';
   else if(!contentReady)addressNext.textContent='심부름 내용을 4글자 이상 적어주세요';
   else addressNext.textContent='요금·결제수단 확인하기 →';
 }
@@ -117,11 +139,16 @@ function closePostcode(){
 document.querySelectorAll('[data-address-open]').forEach(button=>button.addEventListener('click',()=>openPostcode(button.dataset.addressOpen)));
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
 addressNext.addEventListener('click',()=>{
-  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||errandContent.value.trim().length<4)return;
+  const itemScale=document.querySelector('[name="itemScale"]:checked')?.value;
+  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||!selectedItemKind||!itemName.value.trim()||!itemScale||errandContent.value.trim().length<4)return;
   const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
   const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
+  const conditions=[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value);
   document.querySelector('#paymentPickup').textContent=`${selectedAddresses.pickup.address}${pickupDetail?` · ${pickupDetail}`:''}`;
   document.querySelector('#paymentDropoff').textContent=`${selectedAddresses.dropoff.address}${dropoffDetail?` · ${dropoffDetail}`:''}`;
+  document.querySelector('#paymentItem').textContent=`${selectedItemKind} · ${itemName.value.trim()} · ${itemScale}`;
+  document.querySelector('#paymentConditions').textContent=conditions.length?`추가 조건: ${conditions.join(' · ')}`:'추가 조건 없음';
+  document.querySelector('#paymentRequest').textContent=errandContent.value.trim();
   request.hidden=true;
   payment.hidden=false;
   window.scrollTo({top:0,behavior:'smooth'});
@@ -146,6 +173,38 @@ errandContent.addEventListener('input',()=>{
     aiStatus.dataset.state='editing';
     aiStatus.textContent='AI 초안을 고객이 직접 수정하고 있습니다. [고객 확인 필요] 부분과 빠진 내용을 정확하게 고쳐주세요.';
   }
+});
+
+itemName.addEventListener('input',updateRequestReadiness);
+document.querySelectorAll('[name="itemScale"]').forEach(input=>input.addEventListener('change',updateRequestReadiness));
+document.querySelector('#itemPhotoPick').addEventListener('click',()=>itemPhoto.click());
+itemPhoto.addEventListener('change',()=>{
+  const file=itemPhoto.files?.[0];
+  if(!file)return;
+  if(!file.type.startsWith('image/')){
+    itemPhoto.value='';
+    itemPhotoStatus.textContent='사진 파일만 선택할 수 있습니다.';
+    return;
+  }
+  if(file.size>10*1024*1024){
+    itemPhoto.value='';
+    itemPhotoStatus.textContent='사진은 10MB 이하로 선택해 주세요.';
+    return;
+  }
+  if(itemPhotoUrl)URL.revokeObjectURL(itemPhotoUrl);
+  itemPhotoUrl=URL.createObjectURL(file);
+  itemPhotoImage.src=itemPhotoUrl;
+  itemPhotoName.textContent=file.name;
+  itemPhotoPreview.hidden=false;
+  itemPhotoStatus.textContent='사진을 선택했습니다. 실제 접수 단계에서는 주문과 함께 안전하게 전송됩니다.';
+});
+document.querySelector('#itemPhotoRemove').addEventListener('click',()=>{
+  if(itemPhotoUrl)URL.revokeObjectURL(itemPhotoUrl);
+  itemPhotoUrl='';
+  itemPhoto.value='';
+  itemPhotoImage.removeAttribute('src');
+  itemPhotoPreview.hidden=true;
+  itemPhotoStatus.textContent='사진을 삭제했습니다.';
 });
 
 aiAssist.addEventListener('click',async()=>{

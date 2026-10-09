@@ -14,7 +14,7 @@ assert.match(js,/roadAddress\|\|data\.jibunAddress\|\|data\.address/);
 assert.match(js,/전라남도\|전남/);
 assert.match(js,/여수시 주소만 접수/);
 assert.match(js,/const addressesReady=Boolean\(selectedAddresses\.pickup&&selectedAddresses\.dropoff\)/);
-assert.match(js,/addressNext\.disabled=!\(addressesReady&&contentReady\)/);
+assert.match(js,/addressNext\.disabled=!\(addressesReady&&itemReady&&contentReady\)/);
 assert.match(js,/심부름 내용을 4글자 이상 적어주세요/);
 assert.match(css,/\.postcode-frame\{[^}]*height:560px/);
 assert.match(html,/verified-address/);
