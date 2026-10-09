@@ -76,8 +76,9 @@ try {
   await page.goto(baseURL, {waitUntil: 'domcontentloaded'});
   await page.waitForSelector('#storeGrid .store-card', {timeout: 15000});
   await page.waitForFunction(() => typeof fxStoreById === 'function' && typeof openStore === 'function');
-  await page.evaluate(() => openStore(fxStoreById('a089d1d54720b48e')));
-  await page.waitForSelector('#modal:not([hidden]) .store-detail[data-store-id="a089d1d54720b48e"]', {timeout: 5000});
+  await page.waitForFunction(targetStoreId => Boolean(fxStoreById(targetStoreId)), storeId, {timeout: 30000});
+  await page.evaluate(targetStoreId => openStore(fxStoreById(targetStoreId)), storeId);
+  await page.waitForSelector('#modal:not([hidden]) .store-detail[data-store-id="a089d1d54720b48e"]', {timeout: 10000});
   await page.locator('[data-store-menu-preview="a089d1d54720b48e"]').click();
   await page.waitForSelector('.store-menu-preview', {timeout: 5000});
   const menuResponse = await menuResponsePending;

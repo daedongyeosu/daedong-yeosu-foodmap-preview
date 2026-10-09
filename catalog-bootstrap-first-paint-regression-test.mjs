@@ -4,6 +4,7 @@ import fs from 'node:fs';
 const api = fs.readFileSync('data-api.js', 'utf8');
 const app = fs.readFileSync('app.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
+const menuSearchBrowser = fs.readFileSync('scripts/browser-alien-pizza-menu-search.mjs', 'utf8');
 
 assert.match(api, /request\('\/api\/catalog\/bootstrap', \{cacheKey: 'catalog-bootstrap', timeoutMs: 8000\}\)/,
   'The small catalog must start before deferred UI scripts finish downloading.');
@@ -22,5 +23,9 @@ assert.match(app, /return safeBootstrapStores;[\s\S]*Promise\.resolve\(safeBoots
   'A temporary full-catalog failure must preserve already visible real stores.');
 assert.match(html, /data-api\.js\?v=[^"\n]*catalog-bootstrap-first-paint-1/);
 assert.match(html, /app\.js\?v=[^"\n]*catalog-bootstrap-first-paint-1/);
+assert.match(menuSearchBrowser, /waitForFunction\(targetStoreId => Boolean\(fxStoreById\(targetStoreId\)\), storeId, \{timeout: 30000\}\)/,
+  'A full-catalog integration test must wait for its non-bootstrap target before opening detail.');
+assert.doesNotMatch(menuSearchBrowser, /openStore\(fxStoreById\('a089d1d54720b48e'\)\)/,
+  'A full-catalog target must not be opened before the progressive catalog contains it.');
 
 console.log('catalog bootstrap first paint regression: PASS');
