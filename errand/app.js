@@ -2,6 +2,7 @@ const home = document.querySelector('#errandHome');
 const policy = document.querySelector('#policyPreview');
 const request = document.querySelector('#requestPreview');
 const payment = document.querySelector('#paymentPreview');
+const tracking = document.querySelector('#trackingPreview');
 const postcodePanel = document.querySelector('#postcodePanel');
 const postcodeFrame = document.querySelector('#postcodeFrame');
 const postcodeStatus = document.querySelector('#postcodeStatus');
@@ -20,10 +21,16 @@ const itemPhotoName = document.querySelector('#itemPhotoName');
 const itemPhotoStatus = document.querySelector('#itemPhotoStatus');
 const draftResume = document.querySelector('#draftResume');
 const draftResumeTime = document.querySelector('#draftResumeTime');
+const customerName = document.querySelector('#customerName');
+const customerPhone = document.querySelector('#customerPhone');
+const contactStatus = document.querySelector('#contactStatus');
+const previewAgreement = document.querySelector('#previewAgreement');
+const previewSubmit = document.querySelector('#previewSubmit');
 const ERRAND_AI_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/errand/assist';
 const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
 const ERRAND_DRAFT_KEY = 'matjidoErrandDraftV1';
 const ERRAND_DRAFT_TTL_MS = 24 * 60 * 60 * 1000;
+const ERRAND_PREVIEW_ORDER_KEY = 'matjidoErrandPreviewOrderV1';
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
 let postcodePromise = null;
@@ -146,7 +153,7 @@ function selectItemKind(kind){
 
 function openRequest(kind=''){
   if(kind)selectItemKind(kind);
-  home.hidden=true;policy.hidden=false;request.hidden=true;payment.hidden=true;window.scrollTo({top:0,behavior:'smooth'});
+  home.hidden=true;policy.hidden=false;request.hidden=true;payment.hidden=true;tracking.hidden=true;window.scrollTo({top:0,behavior:'smooth'});
 }
 document.querySelector('#requestStart').addEventListener('click',()=>openRequest());
 document.querySelectorAll('[data-kind]').forEach(button=>button.addEventListener('click',()=>openRequest(button.dataset.kind)));
@@ -270,6 +277,104 @@ document.querySelector('#paymentBack').addEventListener('click',()=>{
   payment.hidden=true;
   request.hidden=false;
   window.scrollTo({top:0,behavior:'smooth'});
+});
+
+function normalizedPhone(value){
+  return String(value||'').replace(/\D/g,'').slice(0,11);
+}
+
+function formattedPhone(value){
+  const digits=normalizedPhone(value);
+  if(digits.length<=3)return digits;
+  if(digits.length<=7)return `${digits.slice(0,3)}-${digits.slice(3)}`;
+  return `${digits.slice(0,3)}-${digits.slice(3,7)}-${digits.slice(7)}`;
+}
+
+function maskedPhone(value){
+  const digits=normalizedPhone(value);
+  return digits.length===11?`${digits.slice(0,3)}-****-${digits.slice(7)}`:'번호 확인 전';
+}
+
+function updatePreviewReadiness(){
+  const nameReady=customerName.value.trim().length>=2;
+  const phoneReady=/^01[016789]\d{7,8}$/.test(normalizedPhone(customerPhone.value));
+  const ready=nameReady&&phoneReady&&previewAgreement.checked;
+  previewSubmit.disabled=!ready;
+  if(!nameReady)previewSubmit.textContent='신청자 이름을 입력해 주세요';
+  else if(!phoneReady)previewSubmit.textContent='휴대전화번호를 확인해 주세요';
+  else if(!previewAgreement.checked)previewSubmit.textContent='최종 확인 항목에 동의해 주세요';
+  else previewSubmit.textContent='프리뷰 접수 흐름 확인하기 →';
+  contactStatus.dataset.state=phoneReady?'ready':'';
+  contactStatus.textContent=phoneReady?'형식이 확인됐습니다. 실제 접수에서는 문자 인증을 추가합니다.':'실제 접수에서는 문자 인증을 거친 번호만 사용합니다.';
+}
+
+customerName.addEventListener('input',updatePreviewReadiness);
+customerPhone.addEventListener('input',()=>{
+  const caretAtEnd=customerPhone.selectionStart===customerPhone.value.length;
+  customerPhone.value=formattedPhone(customerPhone.value);
+  if(caretAtEnd)customerPhone.setSelectionRange(customerPhone.value.length,customerPhone.value.length);
+  updatePreviewReadiness();
+});
+previewAgreement.addEventListener('change',updatePreviewReadiness);
+
+function previewOrderSnapshot(){
+  const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
+  const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
+  const itemScale=document.querySelector('[name="itemScale"]:checked')?.value||'';
+  return {
+    version:1,
+    orderId:`YS-PREVIEW-${Date.now().toString().slice(-8)}`,
+    createdAt:Date.now(),
+    expiresAt:Date.now()+ERRAND_DRAFT_TTL_MS,
+    pickup:`${selectedAddresses.pickup?.address||''}${pickupDetail?` · ${pickupDetail}`:''}`,
+    dropoff:`${selectedAddresses.dropoff?.address||''}${dropoffDetail?` · ${dropoffDetail}`:''}`,
+    item:`${selectedItemKind} · ${itemName.value.trim()} · ${itemScale}`,
+    contact:`${customerName.value.trim()} · ${maskedPhone(customerPhone.value)}`,
+  };
+}
+
+function paintTracking(order){
+  document.querySelector('#trackingOrderId').textContent=order.orderId;
+  document.querySelector('#trackingPickup').textContent=order.pickup;
+  document.querySelector('#trackingDropoff').textContent=order.dropoff;
+  document.querySelector('#trackingItem').textContent=order.item;
+  document.querySelector('#trackingContact').textContent=order.contact;
+}
+
+function showTracking(order){
+  paintTracking(order);
+  home.hidden=true;policy.hidden=true;request.hidden=true;payment.hidden=true;postcodePanel.hidden=true;tracking.hidden=false;
+  history.replaceState(null,'',`${location.pathname}?preview-order=${encodeURIComponent(order.orderId)}`);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function readPreviewOrder(){
+  try{
+    const order=JSON.parse(localStorage.getItem(ERRAND_PREVIEW_ORDER_KEY)||'null');
+    if(!order||order.version!==1||Date.now()>Number(order.expiresAt)){
+      localStorage.removeItem(ERRAND_PREVIEW_ORDER_KEY);
+      return null;
+    }
+    return order;
+  }catch{
+    try{localStorage.removeItem(ERRAND_PREVIEW_ORDER_KEY);}catch{}
+    return null;
+  }
+}
+
+previewSubmit.addEventListener('click',()=>{
+  updatePreviewReadiness();
+  if(previewSubmit.disabled||!selectedAddresses.pickup||!selectedAddresses.dropoff)return;
+  const order=previewOrderSnapshot();
+  try{localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));}catch{}
+  showTracking(order);
+});
+
+document.querySelector('#trackingReview').addEventListener('click',()=>{
+  tracking.hidden=true;payment.hidden=false;window.scrollTo({top:0,behavior:'smooth'});
+});
+document.querySelector('#trackingHome').addEventListener('click',()=>{
+  tracking.hidden=true;home.hidden=false;history.replaceState(null,'',location.pathname);window.scrollTo({top:0,behavior:'smooth'});
 });
 
 function updateAiAssist(){
@@ -396,3 +501,9 @@ if(new URLSearchParams(location.search).has('payment')){
   request.hidden=true;
   payment.hidden=false;
 }
+
+const previewOrderId=new URLSearchParams(location.search).get('preview-order');
+const savedPreviewOrder=previewOrderId?readPreviewOrder():null;
+if(savedPreviewOrder&&savedPreviewOrder.orderId===previewOrderId)showTracking(savedPreviewOrder);
+
+updatePreviewReadiness();

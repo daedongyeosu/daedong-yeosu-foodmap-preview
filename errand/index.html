@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery">
+  <link rel="stylesheet" href="styles.css?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery-9-intake-tracking">
 </head>
 <body>
   <main>
@@ -126,6 +126,12 @@
         <p id="paymentConditions">추가 조건 없음</p>
         <div><small>기사 전달 내용</small><p id="paymentRequest">요청내용 확인 전</p></div>
       </section>
+      <section class="customer-contact" aria-labelledby="customerContactTitle">
+        <div class="customer-contact-head"><span><b id="customerContactTitle">신청자 연락처</b><small>기사 배정과 현장 확인에 필요한 정보입니다.</small></span><em>필수</em></div>
+        <label for="customerName">신청자 이름<input id="customerName" maxlength="30" autocomplete="name" placeholder="예: 김여수"></label>
+        <label for="customerPhone">휴대전화번호<input id="customerPhone" type="tel" inputmode="numeric" maxlength="13" autocomplete="tel" placeholder="010-0000-0000"></label>
+        <p id="contactStatus" class="contact-status" role="status" aria-live="polite">실제 접수에서는 문자 인증을 거친 번호만 사용합니다.</p>
+      </section>
       <section class="fare-preview">
         <div class="fare-preview-head"><span><small>예상 심부름 요금</small><em>예시 금액</em></span><strong>11,450원</strong></div>
         <dl><div><dt>기사 수행료</dt><dd>10,000원</dd></div><div><dt>플랫폼 이용금액</dt><dd>1,450원</dd></div></dl>
@@ -156,7 +162,40 @@
       <label class="payment-agreement"><input type="checkbox" disabled><span>주소·요청내용·예상요금과 취소환불 기준을 확인했습니다.</span></label>
       <button class="payment-submit" type="button" disabled>토스 계약 후 결제 가능</button>
       <aside>프리뷰 화면입니다. 실제 결제와 젠딜리 주문은 발생하지 않습니다.</aside>
+      <section class="preview-intake" aria-labelledby="previewIntakeTitle">
+        <span class="preview-badge">화면 시험용</span>
+        <h2 id="previewIntakeTitle">결제 없이 다음 진행화면을 확인해 보세요</h2>
+        <p>입력한 내용을 이 기기에만 24시간 임시 보관하고, 접수번호와 기사 진행상태 화면을 보여줍니다. 실제 주문·결제·기사 호출은 절대 발생하지 않습니다.</p>
+        <label><input id="previewAgreement" type="checkbox"><span>입력한 주소·물품·연락처와 취소·환불 기준을 최종 확인했습니다.</span></label>
+        <button id="previewSubmit" type="button" disabled>연락처와 확인 항목을 입력해 주세요</button>
+      </section>
       <button id="paymentBack" class="secondary" type="button">주소와 내용 다시 확인하기</button>
+    </section>
+    <section id="trackingPreview" class="screen tracking-screen" hidden>
+      <p class="eyebrow">심부름 신청 · 진행조회</p>
+      <section class="tracking-confirmed">
+        <span>프리뷰 접수 연습 완료</span>
+        <h1>신청 내용이<br>안전하게 저장됐어요</h1>
+        <p>실제 결제나 기사 호출은 발생하지 않았습니다.</p>
+      </section>
+      <section class="receipt-card" aria-label="프리뷰 접수 정보">
+        <div><span><small>프리뷰 접수번호</small><b id="trackingOrderId">YS-PREVIEW</b></span><em>화면 시험용</em></div>
+        <dl><div><dt>가져올 곳</dt><dd id="trackingPickup">주소 확인 전</dd></div><div><dt>가져다줄 곳</dt><dd id="trackingDropoff">주소 확인 전</dd></div><div><dt>운반 물품</dt><dd id="trackingItem">물품 확인 전</dd></div><div><dt>연락처</dt><dd id="trackingContact">연락처 확인 전</dd></div></dl>
+      </section>
+      <section class="progress-card" aria-labelledby="progressTitle">
+        <div class="progress-card-head"><span><b id="progressTitle">진행상태</b><small>실제 서비스에서 고객에게 보여줄 순서입니다.</small></span><em>프리뷰</em></div>
+        <ol>
+          <li data-state="done"><i>✓</i><span><b>신청 내용 저장</b><small>주소·물품·요청사항을 접수번호와 함께 보관</small></span></li>
+          <li data-state="current"><i>2</i><span><b>결제 승인 대기</b><small>토스 계약 후 결제 성공을 서버에서 확인</small></span></li>
+          <li><i>3</i><span><b>젠딜리에 기사 요청</b><small>결제가 확인된 주문만 브릿지를 통해 전달</small></span></li>
+          <li><i>4</i><span><b>기사 배정</b><small>배정된 기사와 진행상태를 고객에게 안내</small></span></li>
+          <li><i>5</i><span><b>픽업·배송 중</b><small>물품 인수와 이동 상태를 확인</small></span></li>
+          <li><i>6</i><span><b>전달 완료</b><small>완료시간과 최종 정산 내역을 보관</small></span></li>
+        </ol>
+      </section>
+      <aside class="tracking-warning"><b>아직 실제 접수가 아닙니다</b><span>지금 화면은 고객 흐름을 검수하기 위한 프리뷰입니다. 젠딜리 관리자와 기사 앱에는 아무 주문도 생성되지 않았습니다.</span></aside>
+      <button id="trackingReview" class="primary-next" type="button">신청 내용 다시 보기</button>
+      <button id="trackingHome" class="secondary" type="button">심부름 메인으로 돌아가기</button>
     </section>
     <section id="postcodePanel" class="postcode-panel" hidden aria-labelledby="postcodeTitle">
       <header><button id="postcodeBack" type="button" aria-label="주소검색 닫기">←</button><span><b id="postcodeTitle">도로명주소 찾기</b><small id="postcodeTarget">가져올 곳 주소</small></span></header>
@@ -165,6 +204,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery"></script>
+  <script src="app.js?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery-9-intake-tracking"></script>
 </body>
 </html>
