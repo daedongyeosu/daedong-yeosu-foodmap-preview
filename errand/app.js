@@ -1,6 +1,7 @@
 const home = document.querySelector('#errandHome');
 const policy = document.querySelector('#policyPreview');
 const request = document.querySelector('#requestPreview');
+const payment = document.querySelector('#paymentPreview');
 const postcodePanel = document.querySelector('#postcodePanel');
 const postcodeFrame = document.querySelector('#postcodeFrame');
 const postcodeStatus = document.querySelector('#postcodeStatus');
@@ -18,10 +19,10 @@ let activeAddressKind = null;
 let postcodePromise = null;
 let aiDraftApplied = false;
 
-function openRequest(){home.hidden=true;policy.hidden=false;request.hidden=true;window.scrollTo({top:0,behavior:'smooth'});}
+function openRequest(){home.hidden=true;policy.hidden=false;request.hidden=true;payment.hidden=true;window.scrollTo({top:0,behavior:'smooth'});}
 document.querySelector('#requestStart').addEventListener('click',openRequest);
 document.querySelectorAll('[data-kind]').forEach(button=>button.addEventListener('click',openRequest));
-document.querySelector('#backHome').addEventListener('click',()=>{request.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
+document.querySelector('#backHome').addEventListener('click',()=>{request.hidden=true;payment.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
 document.querySelector('#policyBack').addEventListener('click',()=>{policy.hidden=true;home.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
 
 const policyChecks=[...document.querySelectorAll('[data-policy-check]')];
@@ -71,10 +72,17 @@ function updateAddress(kind,data){
   verification.classList.add('is-verified');
   document.querySelector(`[data-address-detail-wrap="${kind}"]`).hidden=false;
   closePostcode();
-  const ready=Boolean(selectedAddresses.pickup&&selectedAddresses.dropoff);
-  addressNext.disabled=!ready;
-  addressNext.textContent=ready?'확인된 주소로 다음 단계':'주소 두 곳을 먼저 확인해 주세요';
+  updateRequestReadiness();
   document.querySelector(`[data-address-detail="${kind}"]`)?.focus();
+}
+
+function updateRequestReadiness(){
+  const addressesReady=Boolean(selectedAddresses.pickup&&selectedAddresses.dropoff);
+  const contentReady=errandContent.value.trim().length>=4;
+  addressNext.disabled=!(addressesReady&&contentReady);
+  if(!addressesReady)addressNext.textContent='주소 두 곳을 먼저 확인해 주세요';
+  else if(!contentReady)addressNext.textContent='심부름 내용을 4글자 이상 적어주세요';
+  else addressNext.textContent='요금·결제수단 확인하기 →';
 }
 
 async function openPostcode(kind){
@@ -109,8 +117,20 @@ function closePostcode(){
 document.querySelectorAll('[data-address-open]').forEach(button=>button.addEventListener('click',()=>openPostcode(button.dataset.addressOpen)));
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
 addressNext.addEventListener('click',()=>{
-  if(!selectedAddresses.pickup||!selectedAddresses.dropoff)return;
-  addressNext.textContent='주소 확인 완료 · 다음 단계 준비 중';
+  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||errandContent.value.trim().length<4)return;
+  const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
+  const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
+  document.querySelector('#paymentPickup').textContent=`${selectedAddresses.pickup.address}${pickupDetail?` · ${pickupDetail}`:''}`;
+  document.querySelector('#paymentDropoff').textContent=`${selectedAddresses.dropoff.address}${dropoffDetail?` · ${dropoffDetail}`:''}`;
+  request.hidden=true;
+  payment.hidden=false;
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+document.querySelector('#paymentBack').addEventListener('click',()=>{
+  payment.hidden=true;
+  request.hidden=false;
+  window.scrollTo({top:0,behavior:'smooth'});
 });
 
 function updateAiAssist(){
@@ -120,6 +140,7 @@ function updateAiAssist(){
 
 errandContent.addEventListener('input',()=>{
   updateAiAssist();
+  updateRequestReadiness();
   if(!aiSuggestion.hidden){aiSuggestion.hidden=true;aiSuggestionText.textContent='';}
   if(aiDraftApplied){
     aiStatus.dataset.state='editing';
@@ -188,3 +209,10 @@ document.querySelector('#closeAiSuggestion').addEventListener('click',()=>{
 });
 
 updateAiAssist();
+
+if(new URLSearchParams(location.search).has('payment')){
+  home.hidden=true;
+  policy.hidden=true;
+  request.hidden=true;
+  payment.hidden=false;
+}

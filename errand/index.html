@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft">
+  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview">
 </head>
 <body>
   <main>
@@ -72,6 +72,45 @@
       <aside>프리뷰 화면입니다. 실제 주문과 결제는 아직 발생하지 않습니다.</aside>
       <button id="backHome" class="secondary" type="button">심부름 메인으로 돌아가기</button>
     </section>
+    <section id="paymentPreview" class="screen payment-screen" hidden>
+      <p class="eyebrow">심부름 신청 · 3단계</p>
+      <h1 class="request-title">요금과 결제수단을<br>확인해 주세요</h1>
+      <section class="payment-route" aria-label="심부름 경로">
+        <div><i class="pickup"></i><span><small>가져올 곳</small><b id="paymentPickup">전남 여수시 시청로 1 · 안내데스크</b></span></div>
+        <div><i class="dropoff"></i><span><small>가져다줄 곳</small><b id="paymentDropoff">전남 여수시 웅천로 20 · 공동현관</b></span></div>
+      </section>
+      <section class="fare-preview">
+        <div class="fare-preview-head"><span><small>예상 심부름 요금</small><em>예시 금액</em></span><strong>11,450원</strong></div>
+        <dl><div><dt>기사 수행료</dt><dd>10,000원</dd></div><div><dt>플랫폼 이용금액</dt><dd>1,450원</dd></div></dl>
+        <p>현재는 화면 확인용 예시입니다. 실제 요금은 거리·물품·현장조건을 반영하여 결제 전에 항목별로 표시합니다.</p>
+      </section>
+      <section class="payment-methods" aria-labelledby="paymentTitle">
+        <div class="payment-title"><span><b id="paymentTitle">결제수단을 선택해 주세요</b><small>결제가 확인되어야 기사 요청이 시작됩니다.</small></span><em>선결제</em></div>
+        <div class="quick-payments">
+          <h2>가장 간편한 결제</h2>
+          <div class="quick-payment-grid" aria-label="토스 계약 후 제공할 간편결제">
+            <button type="button" disabled><span class="pay-logo toss">toss</span><b>토스페이</b><small>준비 중</small></button>
+            <button type="button" disabled><span class="pay-logo kakao">pay</span><b>카카오페이</b><small>준비 중</small></button>
+            <button type="button" disabled><span class="pay-logo naver">N</span><b>네이버페이</b><small>준비 중</small></button>
+            <button type="button" disabled><span class="pay-logo card">CARD</span><b>신용·체크카드</b><small>준비 중</small></button>
+          </div>
+          <p>토스페이먼츠 계약과 결제심사가 끝나면 휴대폰에서 바로 결제할 수 있습니다.</p>
+        </div>
+        <details class="other-payments" open>
+          <summary>다른 결제방법</summary>
+          <div class="other-payment-list">
+            <div class="payment-choice"><span class="method-icon bank">↔</span><span><b>내 계좌에서 바로 이체</b><small>은행 앱으로 이동해 바로 결제하는 방식을 준비합니다.</small></span><em>준비 중</em></div>
+            <div class="payment-choice"><span class="method-icon virtual">₩</span><span><b>주문별 가상계좌</b><small>고객 주문 전용 계좌를 발급해 입금을 자동 확인합니다.</small></span><em>준비 중</em></div>
+            <div class="payment-choice"><span class="method-icon mobile">▣</span><span><b>휴대폰 요금으로 결제</b><small>통신사 소액결제 한도에서 다음 달 요금에 합산됩니다.</small></span><em>심사 후</em></div>
+          </div>
+        </details>
+        <aside class="payment-safety"><b>결제만 되고 주문이 사라지지 않아요</b><span>서버에서 결제 성공을 확인한 주문만 접수하며, 실패·중복 결제는 기사에게 전달하지 않습니다.</span></aside>
+      </section>
+      <label class="payment-agreement"><input type="checkbox" disabled><span>주소·요청내용·예상요금과 취소환불 기준을 확인했습니다.</span></label>
+      <button class="payment-submit" type="button" disabled>토스 계약 후 결제 가능</button>
+      <aside>프리뷰 화면입니다. 실제 결제와 젠딜리 주문은 발생하지 않습니다.</aside>
+      <button id="paymentBack" class="secondary" type="button">주소와 내용 다시 확인하기</button>
+    </section>
     <section id="postcodePanel" class="postcode-panel" hidden aria-labelledby="postcodeTitle">
       <header><button id="postcodeBack" type="button" aria-label="주소검색 닫기">←</button><span><b id="postcodeTitle">도로명주소 찾기</b><small id="postcodeTarget">가져올 곳 주소</small></span></header>
       <p>도로명·건물명·지번을 검색하고 결과에서 정확한 주소를 선택하세요.</p>
@@ -79,6 +118,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261009-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft"></script>
+  <script src="app.js?v=20261009-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview"></script>
 </body>
 </html>
