@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft">
+  <link rel="stylesheet" href="styles.css?v=20261009-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details">
 </head>
 <body>
   <main>
@@ -25,6 +25,7 @@
         <button type="button" data-kind="서류·열쇠"><span>📄</span><b>급한 서류·열쇠</b><small>회사·관공서·집으로 전달</small></button>
         <button type="button" data-kind="결제한 상품"><span>🛍️</span><b>결제한 상품 픽업</b><small>준비된 물건을 받아서 전달</small></button>
         <button type="button" data-kind="중고거래"><span>📦</span><b>중고거래 전달</b><small>약속장소에서 안전하게 전달</small></button>
+        <button type="button" data-kind="가게 대량·특수배송"><span>🧺</span><b>가게 대량·특수배송</b><small>단체주문·여러 박스처럼 일반배달이 어려운 배송</small></button>
       </section>
       <section class="how"><h2>이렇게 진행돼요</h2><ol><li><b>1</b><span><strong>장소와 내용을 입력</strong><small>어디서 무엇을 받아 어디로 보낼지 적어요.</small></span></li><li><b>2</b><span><strong>요금 확인 후 입금</strong><small>신청 전에 전체 금액을 먼저 확인해요.</small></span></li><li><b>3</b><span><strong>기사 배정과 실시간 확인</strong><small>픽업부터 완료까지 진행상태를 확인해요.</small></span></li></ol></section>
     </section>
@@ -58,6 +59,41 @@
         <p class="address-verification" data-address-verification="dropoff">아직 확인된 주소가 없습니다.</p>
         <label class="address-detail" data-address-detail-wrap="dropoff" hidden>상세 위치<input data-address-detail="dropoff" placeholder="동·호수, 층수, 받는 분 안내"></label>
       </section>
+      <section class="item-card" aria-labelledby="itemTitle">
+        <div class="item-card-head"><span><b id="itemTitle">무엇을 옮기나요?</b><small>기사님이 안전하게 준비할 수 있도록 알려주세요.</small></span><em>필수</em></div>
+        <div class="item-kind-grid" aria-label="물품 종류">
+          <button type="button" data-item-kind="서류·열쇠" aria-pressed="false">📄 서류·열쇠</button>
+          <button type="button" data-item-kind="결제한 상품" aria-pressed="false">🛍️ 결제한 상품</button>
+          <button type="button" data-item-kind="중고거래" aria-pressed="false">📦 중고거래</button>
+          <button type="button" data-item-kind="가게 대량·특수배송" aria-pressed="false">🧺 가게 대량배송</button>
+          <button type="button" data-item-kind="기타 물품" aria-pressed="false">＋ 기타 물품</button>
+        </div>
+        <label for="itemName">물품명과 수량 <b class="required-word">필수</b></label>
+        <input id="itemName" maxlength="120" placeholder="예: 포장된 김밥 5봉투 / 옷 1박스">
+        <fieldset class="item-scale">
+          <legend>배송 규모 <b class="required-word">필수</b></legend>
+          <label><input type="radio" name="itemScale" value="오토바이 1대 적재 가능"><span><b>오토바이 1대에 실려요</b><small>봉투·소형 박스 등</small></span></label>
+          <label><input type="radio" name="itemScale" value="큰 짐·여러 박스"><span><b>큰 짐·여러 박스예요</b><small>추가요금 또는 차량 확인 필요</small></span></label>
+          <label><input type="radio" name="itemScale" value="크기를 잘 모르겠음"><span><b>잘 모르겠어요</b><small>사진과 내용을 보고 확인해 드려요</small></span></label>
+        </fieldset>
+        <details class="extra-conditions">
+          <summary>추가 조건이 있나요? <span>해당하는 것만 선택</span></summary>
+          <div>
+            <label><input type="checkbox" value="냉장·냉동 유지"><span>🧊 냉장·냉동 유지</span></label>
+            <label><input type="checkbox" value="파손 주의"><span>⚠️ 파손 주의</span></label>
+            <label><input type="checkbox" value="10kg 이상 무거운 물품"><span>🏋️ 10kg 이상 무거움</span></label>
+            <label><input type="checkbox" value="엘리베이터 없는 계단 운반"><span>🪜 엘리베이터 없는 계단</span></label>
+            <label><input type="checkbox" value="픽업 대기 예상"><span>⏱️ 픽업 대기 예상</span></label>
+          </div>
+        </details>
+        <div class="item-photo-field">
+          <span><b>물품 사진</b><small>선택 · 크기 판단에 도움이 됩니다.</small></span>
+          <input id="itemPhoto" type="file" accept="image/*" capture="environment" hidden>
+          <button id="itemPhotoPick" type="button">📷 사진 찍기·선택</button>
+        </div>
+        <div id="itemPhotoPreview" class="item-photo-preview" hidden><img id="itemPhotoImage" alt="선택한 물품 사진 미리보기"><span><b id="itemPhotoName"></b><small>현재 시안에서는 이 기기에만 미리보기로 표시됩니다.</small></span><button id="itemPhotoRemove" type="button" aria-label="선택한 사진 삭제">삭제</button></div>
+        <p id="itemPhotoStatus" class="item-photo-status" role="status" aria-live="polite"></p>
+      </section>
       <div class="errand-content-head"><label for="errandContent">심부름 내용</label><button id="aiAssist" class="ai-assist" type="button" disabled>✨ AI에게 도움받기</button></div>
       <textarea id="errandContent" rows="5" maxlength="800" placeholder="예: 학동 세탁소에서 결제된 검정 코트 1벌을 받아 문수동 아파트 경비실에 맡겨주세요."></textarea>
       <p class="ai-help">짧거나 애매하게 적어도 괜찮아요. AI가 기사님이 이해하기 쉽게 정리합니다. 원문은 고객이 승인하기 전까지 바뀌지 않으며, <b>적용한 뒤에도 입력칸에서 자유롭게 고칠 수 있습니다.</b></p>
@@ -72,6 +108,50 @@
       <aside>프리뷰 화면입니다. 실제 주문과 결제는 아직 발생하지 않습니다.</aside>
       <button id="backHome" class="secondary" type="button">심부름 메인으로 돌아가기</button>
     </section>
+    <section id="paymentPreview" class="screen payment-screen" hidden>
+      <p class="eyebrow">심부름 신청 · 3단계</p>
+      <h1 class="request-title">요금과 결제수단을<br>확인해 주세요</h1>
+      <section class="payment-route" aria-label="심부름 경로">
+        <div><i class="pickup"></i><span><small>가져올 곳</small><b id="paymentPickup">전남 여수시 시청로 1 · 안내데스크</b></span></div>
+        <div><i class="dropoff"></i><span><small>가져다줄 곳</small><b id="paymentDropoff">전남 여수시 웅천로 20 · 공동현관</b></span></div>
+      </section>
+      <section class="payment-item" aria-label="운반 물품 확인">
+        <span><small>운반 물품</small><b id="paymentItem">물품 정보 확인 전</b></span>
+        <p id="paymentConditions">추가 조건 없음</p>
+        <div><small>기사 전달 내용</small><p id="paymentRequest">요청내용 확인 전</p></div>
+      </section>
+      <section class="fare-preview">
+        <div class="fare-preview-head"><span><small>예상 심부름 요금</small><em>예시 금액</em></span><strong>11,450원</strong></div>
+        <dl><div><dt>기사 수행료</dt><dd>10,000원</dd></div><div><dt>플랫폼 이용금액</dt><dd>1,450원</dd></div></dl>
+        <p>현재는 화면 확인용 예시입니다. 실제 요금은 거리·물품·현장조건을 반영하여 결제 전에 항목별로 표시합니다.</p>
+      </section>
+      <section class="payment-methods" aria-labelledby="paymentTitle">
+        <div class="payment-title"><span><b id="paymentTitle">결제수단을 선택해 주세요</b><small>결제가 확인되어야 기사 요청이 시작됩니다.</small></span><em>선결제</em></div>
+        <div class="quick-payments">
+          <h2>가장 간편한 결제</h2>
+          <div class="quick-payment-grid" aria-label="토스 계약 후 제공할 간편결제">
+            <button type="button" disabled><span class="pay-logo toss">toss</span><b>토스페이</b><small>준비 중</small></button>
+            <button type="button" disabled><span class="pay-logo kakao">pay</span><b>카카오페이</b><small>준비 중</small></button>
+            <button type="button" disabled><span class="pay-logo naver">N</span><b>네이버페이</b><small>준비 중</small></button>
+            <button type="button" disabled><span class="pay-logo card">CARD</span><b>신용·체크카드</b><small>준비 중</small></button>
+          </div>
+          <p>토스페이먼츠 계약과 결제심사가 끝나면 휴대폰에서 바로 결제할 수 있습니다.</p>
+        </div>
+        <details class="other-payments" open>
+          <summary>다른 결제방법</summary>
+          <div class="other-payment-list">
+            <div class="payment-choice"><span class="method-icon bank">↔</span><span><b>내 계좌에서 바로 이체</b><small>은행 앱으로 이동해 바로 결제하는 방식을 준비합니다.</small></span><em>준비 중</em></div>
+            <div class="payment-choice"><span class="method-icon virtual">₩</span><span><b>주문별 가상계좌</b><small>고객 주문 전용 계좌를 발급해 입금을 자동 확인합니다.</small></span><em>준비 중</em></div>
+            <div class="payment-choice"><span class="method-icon mobile">▣</span><span><b>휴대폰 요금으로 결제</b><small>통신사 소액결제 한도에서 다음 달 요금에 합산됩니다.</small></span><em>심사 후</em></div>
+          </div>
+        </details>
+        <aside class="payment-safety"><b>결제만 되고 주문이 사라지지 않아요</b><span>서버에서 결제 성공을 확인한 주문만 접수하며, 실패·중복 결제는 기사에게 전달하지 않습니다.</span></aside>
+      </section>
+      <label class="payment-agreement"><input type="checkbox" disabled><span>주소·요청내용·예상요금과 취소환불 기준을 확인했습니다.</span></label>
+      <button class="payment-submit" type="button" disabled>토스 계약 후 결제 가능</button>
+      <aside>프리뷰 화면입니다. 실제 결제와 젠딜리 주문은 발생하지 않습니다.</aside>
+      <button id="paymentBack" class="secondary" type="button">주소와 내용 다시 확인하기</button>
+    </section>
     <section id="postcodePanel" class="postcode-panel" hidden aria-labelledby="postcodeTitle">
       <header><button id="postcodeBack" type="button" aria-label="주소검색 닫기">←</button><span><b id="postcodeTitle">도로명주소 찾기</b><small id="postcodeTarget">가져올 곳 주소</small></span></header>
       <p>도로명·건물명·지번을 검색하고 결과에서 정확한 주소를 선택하세요.</p>
@@ -79,6 +159,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261009-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft"></script>
+  <script src="app.js?v=20261009-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details"></script>
 </body>
 </html>
