@@ -1,11 +1,14 @@
 const KAKAO_MAPS_APP_KEY='60e2b8ba2516a035006f7c300e0f9ff2';
 const KAKAO_MAPS_SDK_URL=`https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_MAPS_APP_KEY}&libraries=services&autoload=false`;
+const FREIGHT_ROUTE_QUOTE_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/quote';
+const PUBLIC_CLIENT_HEADER='daedong-preview-web-v1-20260804';
 const form=document.querySelector('#freightForm');
 const submit=form.querySelector('button[type="submit"]');
 const postcodePanel=document.querySelector('#postcodePanel');
 const postcodeFrame=document.querySelector('#postcodeFrame');
 const postcodeStatus=document.querySelector('#postcodeStatus');
 let selected={pickup:null,dropoff:null};
+let routeQuote=null;
 let activeKind='';let postcodePromise=null;let kakaoPromise=null;
 
 function loadPostcode(){
@@ -19,9 +22,27 @@ function loadKakao(){
 const isYeosu=address=>/(?:^|\s)여수시(?:\s|$)/.test(String(address||''));
 const areaOf=value=>{const matches=String(value).match(/[가-힣0-9]+(?:동|읍|면|리)(?=\s|$)/g);return matches?.at(-1)||String(value).split(' ').slice(-2).join(' ');};
 function updateReady(){const ready=Boolean(selected.pickup&&selected.dropoff);submit.disabled=!ready;submit.textContent=ready?'무료로 견적 요청해보기':'출발지와 도착지를 먼저 확인해 주세요';}
+const km=meters=>`${(Number(meters||0)/1000).toFixed(1)}km`;
+const duration=seconds=>{const minutes=Math.round(Number(seconds||0)/60);const hours=Math.floor(minutes/60);return hours?`${hours}시간 ${minutes%60}분`:`${minutes}분`;};
+const won=value=>`${Number(value||0).toLocaleString('ko-KR')}원`;
+function resetRouteQuote(){
+  routeQuote=null;const panel=document.querySelector('#routeQuote');const detail=document.querySelector('#routeQuoteDetail');const button=document.querySelector('#routeQuoteButton');
+  panel.hidden=!(selected.pickup&&selected.dropoff);detail.hidden=true;detail.replaceChildren();button.disabled=false;if(panel.hidden)return;
+  if(isYeosu(selected.dropoff.address)){document.querySelector('#routeQuoteBadge').textContent='여수 시내';document.querySelector('#routeQuoteMessage').textContent='여수 안쪽 배송은 관리자 화면에서 실제 내비거리와 현장 조건을 확인해 견적합니다.';button.hidden=true;}
+  else{document.querySelector('#routeQuoteBadge').textContent='왕복 계산';document.querySelector('#routeQuoteMessage').textContent='갈 때와 빈차로 돌아올 때의 실제 자동차 경로·시간·통행료를 함께 계산합니다.';button.hidden=false;button.textContent='왕복 도로거리·예상견적 계산';}
+}
+function showRouteQuote(payload){
+  routeQuote=payload;const detail=document.querySelector('#routeQuoteDetail');detail.innerHTML=`<dt>갈 때</dt><dd>${km(payload.outbound.distance)} · ${duration(payload.outbound.duration)}</dd><dt>빈차 회송</dt><dd>${km(payload.inbound.distance)} · ${duration(payload.inbound.duration)}</dd><dt>왕복 합계</dt><dd>${km(payload.quote.distanceMeters)} · ${duration(payload.quote.durationSeconds)}</dd><dt>왕복 통행료</dt><dd>${won(payload.quote.tollWon)}</dd><dt>참고견적</dt><dd class="total">${won(payload.quote.totalWon)}</dd>`;detail.hidden=false;document.querySelector('#routeQuoteBadge').textContent='도로거리 확인';document.querySelector('#routeQuoteMessage').textContent='카카오 자동차 경로로 왕복 운행을 계산했습니다. 최종 금액은 관리자가 확정합니다.';
+}
+async function requestRouteQuote(){
+  const button=document.querySelector('#routeQuoteButton');button.disabled=true;button.textContent='실제 도로경로 계산 중…';document.querySelector('#routeQuoteMessage').textContent='카카오 자동차 길찾기로 갈 때와 돌아올 때를 각각 확인하고 있습니다.';
+  try{const response=await fetch(FREIGHT_ROUTE_QUOTE_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':PUBLIC_CLIENT_HEADER},body:JSON.stringify({pickupAddress:selected.pickup.address,dropoffAddress:selected.dropoff.address})});const payload=await response.json().catch(()=>({}));if(!response.ok||!payload.available)throw new Error(payload.reason||'route_lookup_failed');showRouteQuote(payload);button.textContent='도로거리·견적 다시 계산';}
+  catch(error){routeQuote=null;document.querySelector('#routeQuoteBadge').textContent='관리자 확인';document.querySelector('#routeQuoteMessage').textContent=error.message==='route_provider_not_configured'?'자동 경로계산을 준비 중입니다. 주소는 그대로 저장되며 관리자가 실제 내비거리와 통행료를 확인해 견적합니다.':'도로경로를 자동 확인하지 못했습니다. 관리자가 실제 내비거리와 통행료를 확인해 견적합니다.';button.textContent='다시 계산';}
+  finally{button.disabled=false;}
+}
 function chooseAddress(kind,value){
   if(kind==='pickup'&&!isYeosu(value.address)){alert('가져올 곳은 현재 여수시 주소만 선택할 수 있습니다.');return;}
-  selected[kind]=value;document.querySelector(`[data-address-label="${kind}"]`).textContent=`${value.placeName?`${value.placeName} · `:''}${value.address}`;const verification=document.querySelector(`[data-address-verification="${kind}"]`);verification.textContent=value.source==='kakao_places'?'✓ 카카오 공식 장소검색에서 선택했습니다.':`✓ 공식 주소검색 확인 완료${value.zonecode?` · 우편번호 ${value.zonecode}`:''}`;verification.classList.add('verified');document.querySelector(`[data-address-detail-wrap="${kind}"]`).hidden=false;const results=document.querySelector(`[data-place-results="${kind}"]`);results.hidden=true;results.replaceChildren();updateReady();document.querySelector(`[data-address-detail="${kind}"]`)?.focus();
+  selected[kind]=value;document.querySelector(`[data-address-label="${kind}"]`).textContent=`${value.placeName?`${value.placeName} · `:''}${value.address}`;const verification=document.querySelector(`[data-address-verification="${kind}"]`);verification.textContent=value.source==='kakao_places'?'✓ 카카오 공식 장소검색에서 선택했습니다.':`✓ 공식 주소검색 확인 완료${value.zonecode?` · 우편번호 ${value.zonecode}`:''}`;verification.classList.add('verified');document.querySelector(`[data-address-detail-wrap="${kind}"]`).hidden=false;const results=document.querySelector(`[data-place-results="${kind}"]`);results.hidden=true;results.replaceChildren();updateReady();resetRouteQuote();document.querySelector(`[data-address-detail="${kind}"]`)?.focus();
 }
 function searchKeyword(places,query){return new Promise((resolve,reject)=>places.keywordSearch(query,(data,status)=>{if(status===globalThis.kakao.maps.services.Status.OK)resolve(data);else if(status===globalThis.kakao.maps.services.Status.ZERO_RESULT)resolve([]);else reject(new Error('search'));}));}
 async function searchPlaces(kind){
@@ -39,8 +60,9 @@ document.querySelectorAll('[data-place-search]').forEach(button=>button.addEvent
 document.querySelectorAll('[data-place-query]').forEach(input=>input.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();searchPlaces(input.dataset.placeQuery);}}));
 document.querySelectorAll('[data-address-open]').forEach(button=>button.addEventListener('click',()=>openPostcode(button.dataset.addressOpen)));
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
+document.querySelector('#routeQuoteButton').addEventListener('click',requestRouteQuote);
 form.addEventListener('submit',event=>{
   event.preventDefault();if(!selected.pickup||!selected.dropoff)return;const data=new FormData(form);const pickupDetail=document.querySelector('[data-address-detail="pickup"]').value.trim();const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]').value.trim();const pickup=`${selected.pickup.address}${pickupDetail?` · ${pickupDetail}`:''}`;const dropoff=`${selected.dropoff.address}${dropoffDetail?` · ${dropoffDetail}`:''}`;const feature=String(data.get('feature')||'');
-  const order=window.MatjidoFreightStore.createRequest({route:`${areaOf(selected.pickup.address)} → ${areaOf(selected.dropoff.address)}`,pickupArea:areaOf(selected.pickup.address),dropoffArea:areaOf(selected.dropoff.address),pickup,dropoff,pickupLocation:selected.pickup,dropoffLocation:selected.dropoff,item:String(data.get('item')).trim(),weight:Number(data.get('weight')),required:feature?[feature]:[],contact:String(data.get('contact')).trim(),requestedAt:String(data.get('requestedAt')||''),note:String(data.get('note')||'').trim()});
+  const order=window.MatjidoFreightStore.createRequest({route:`${areaOf(selected.pickup.address)} → ${areaOf(selected.dropoff.address)}`,pickupArea:areaOf(selected.pickup.address),dropoffArea:areaOf(selected.dropoff.address),pickup,dropoff,pickupLocation:selected.pickup,dropoffLocation:selected.dropoff,routeQuote,distance:routeQuote?Number(routeQuote.quote.distanceMeters||0)/1000:0,item:String(data.get('item')).trim(),weight:Number(data.get('weight')),required:feature?[feature]:[],contact:String(data.get('contact')).trim(),requestedAt:String(data.get('requestedAt')||''),note:String(data.get('note')||'').trim()});
   document.querySelector('#requestId').textContent=`요청번호 ${order.id}`;document.querySelector('#result').hidden=false;document.querySelector('#result').scrollIntoView({behavior:'smooth',block:'center'});submit.disabled=true;
 });

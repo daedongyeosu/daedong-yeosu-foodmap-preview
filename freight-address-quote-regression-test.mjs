@@ -15,6 +15,12 @@ for(const field of ['driverPayout','platformFee','pgFee','expenses'])assert.matc
 assert.match(adminJs,/customerTotal:values\.driverPayout\+values\.platformFee\+values\.pgFee\+values\.expenses/);
 assert.match(adminJs,/const safe=/);
 assert.match(driverJs,/const safe=/);
-assert.doesNotMatch(`${requestJs}\n${adminJs}\n${driverJs}`,/fetch\s*\(/);
+assert.match(requestJs,/FREIGHT_ROUTE_QUOTE_ENDPOINT/);
+assert.match(requestJs,/X-Daedong-Client/);
+assert.match(requestJs,/route_provider_not_configured/);
+assert.doesNotMatch(requestJs,/KAKAO_REST_API_KEY/);
+assert.match(adminJs,/load-suggestion/);
+assert.match(adminJs,/관리자 최종확정/);
+assert.doesNotMatch(`${adminJs}\n${driverJs}`,/fetch\s*\(/);
 
 console.log('freight address and quote regression checks passed');

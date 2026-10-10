@@ -17,6 +17,8 @@ assert.match(store,/assignedDriverId/);
 assert.match(requestHtml,/실제 주문·결제·기사 호출은 발생하지 않습니다/);
 assert.match(requestJs,/MatjidoFreightStore\.createRequest/);
 assert.match(errandHtml,/href="\.\.\/freight-request\/"/);
-assert.doesNotMatch(`${store}\n${requestJs}`,/fetch\s*\(/);
+assert.doesNotMatch(store,/fetch\s*\(/);
+assert.match(requestJs,/fetch\(FREIGHT_ROUTE_QUOTE_ENDPOINT/);
+assert.doesNotMatch(requestJs,/fetch\([^\n]*freight\/orders/);
 
 console.log('freight shared order contract regression checks passed');
