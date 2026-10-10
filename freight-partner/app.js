@@ -4,7 +4,7 @@ const saveDraftButton=document.querySelector('#saveDraft');
 const status=document.querySelector('#formStatus');
 const review=document.querySelector('#applicationReview');
 const summary=document.querySelector('#reviewSummary');
-const DRAFT_KEY='matjidoFreightPartnerDraftV1';
+const DRAFT_KEY='matjidoFreightPartnerDraftV2';
 
 function normalizePhone(value){
   const digits=String(value||'').replace(/\D/g,'').slice(0,11);
@@ -22,7 +22,8 @@ function requiredReady(){
     document.querySelector('#vehicleType').value&&
     Number(document.querySelector('#payloadKg').value)>0&&
     document.querySelector('#serviceArea').value.trim()&&
-    document.querySelector('#serviceHours').value&&
+    form.querySelector('[name="serviceWindow"]:checked')&&
+    form.querySelector('[name="allDayAvailability"]:checked')&&
     document.querySelector('#hasQualification').checked&&
     document.querySelector('#hasCommercialVehicle').checked&&
     document.querySelector('#hasPermit').checked&&
@@ -41,7 +42,7 @@ function updateReadiness(){
 
 function snapshot(){
   return {
-    version:1,updatedAt:Date.now(),
+    version:2,updatedAt:Date.now(),
     partnerType:form.querySelector('[name="partnerType"]:checked')?.value||'',
     contactName:document.querySelector('#contactName').value.trim(),
     contactPhone:document.querySelector('#contactPhone').value.trim(),
@@ -50,7 +51,8 @@ function snapshot(){
     payloadKg:document.querySelector('#payloadKg').value,
     vehicleFeatures:[...form.querySelectorAll('[name="vehicleFeature"]:checked')].map(input=>input.value),
     serviceArea:document.querySelector('#serviceArea').value.trim(),
-    serviceHours:document.querySelector('#serviceHours').value,
+    serviceWindows:[...form.querySelectorAll('[name="serviceWindow"]:checked')].map(input=>input.value),
+    allDayAvailability:form.querySelector('[name="allDayAvailability"]:checked')?.value||'',
     longDistance:document.querySelector('#longDistance').value
   };
 }
@@ -58,14 +60,18 @@ function snapshot(){
 function restoreDraft(){
   try{
     const draft=JSON.parse(localStorage.getItem(DRAFT_KEY)||'null');
-    if(!draft||draft.version!==1)return;
+    if(!draft||draft.version!==2)return;
     const partnerType=form.querySelector(`[name="partnerType"][value="${CSS.escape(draft.partnerType||'')}"]`);
     if(partnerType)partnerType.checked=true;
-    for(const id of ['contactName','contactPhone','businessName','vehicleType','payloadKg','serviceArea','serviceHours','longDistance']){
+    for(const id of ['contactName','contactPhone','businessName','vehicleType','payloadKg','serviceArea','longDistance']){
       const node=document.querySelector(`#${id}`);if(node)node.value=String(draft[id]||'');
     }
     const features=new Set(draft.vehicleFeatures||[]);
     form.querySelectorAll('[name="vehicleFeature"]').forEach(input=>{input.checked=features.has(input.value);});
+    const windows=new Set(draft.serviceWindows||[]);
+    form.querySelectorAll('[name="serviceWindow"]').forEach(input=>{input.checked=windows.has(input.value);});
+    const allDay=form.querySelector(`[name="allDayAvailability"][value="${CSS.escape(draft.allDayAvailability||'')}"]`);
+    if(allDay)allDay.checked=true;
     status.textContent='이 기기에 임시 저장했던 신청정보를 불러왔습니다. 자격 보유 여부를 다시 확인해 주세요.';
   }catch{}
 }
@@ -80,7 +86,7 @@ saveDraftButton.addEventListener('click',()=>{
 form.addEventListener('submit',event=>{
   event.preventDefault();if(!requiredReady())return updateReadiness();
   const data=snapshot();
-  const rows=[['신청 유형',data.partnerType],['신청자',data.contactName],['연락처',data.contactPhone],['상호명',data.businessName||'해당 없음'],['차량',data.vehicleType],['최대적재량',`${Number(data.payloadKg).toLocaleString('ko-KR')}kg`],['차량 특성',data.vehicleFeatures.join(', ')||'없음'],['운행지역',data.serviceArea],['가능시간',data.serviceHours],['장거리',data.longDistance]];
+  const rows=[['신청 유형',data.partnerType],['신청자',data.contactName],['연락처',data.contactPhone],['상호명',data.businessName||'해당 없음'],['차량',data.vehicleType],['최대적재량',`${Number(data.payloadKg).toLocaleString('ko-KR')}kg`],['차량 특성',data.vehicleFeatures.join(', ')||'없음'],['운행지역',data.serviceArea],['가능시간',data.serviceWindows.join(', ')],['24시간 긴급호출',data.allDayAvailability],['장거리',data.longDistance]];
   summary.innerHTML=rows.map(([key,value])=>`<div><dt>${key}</dt><dd>${String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]))}</dd></div>`).join('');
   review.hidden=false;review.scrollIntoView({behavior:'smooth',block:'start'});
 });
