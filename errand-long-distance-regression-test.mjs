@@ -37,5 +37,12 @@ assert.match(app,/Date\.parse\(order\.quote\.validUntil\)<=Date\.now\(\)/,'expir
 assert.match(app,/paymentStatus:'ready_for_checkout'/);
 assert.match(app,/payment-session/);
 assert.match(app,/토스 결제가 연결되기 전에는 돈이 빠져나가지 않으며 기사도 호출되지 않습니다/);
+assert.match(app,/https:\/\/js\.tosspayments\.com\/v2\/standard/);
+assert.match(app,/\.widgets\(\{customerKey:'ANONYMOUS'\}\)/);
+assert.match(app,/renderPaymentWindow\(\{orderName:result\.orderName\}\)/);
+assert.match(app,/windowTarget:'self'/,'mobile payment must use full-page redirect');
+assert.match(app,/payment-result=success/);
+assert.match(app,/ERRAND_PAYMENT_CONFIRM_ENDPOINT/);
+assert.doesNotMatch(app,/initialParams\.get\('message'\)/,'untrusted provider messages must not be reflected to customers');
 
 console.log('errand long-distance and passenger-separation regression checks passed');

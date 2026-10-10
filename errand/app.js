@@ -44,6 +44,8 @@ const ERRAND_DRAFT_TTL_MS = 24 * 60 * 60 * 1000;
 const ERRAND_PREVIEW_ORDER_KEY = 'matjidoErrandPreviewOrderV1';
 const ERRAND_ORDER_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/orders';
 const ERRAND_QUOTE_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/quote';
+const ERRAND_PAYMENT_CONFIRM_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/payments/confirm';
+const TOSS_PAYMENTS_SDK_URL = 'https://js.tosspayments.com/v2/standard';
 const previewSubmitStatus = document.querySelector('#previewSubmitStatus');
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
@@ -55,7 +57,21 @@ let itemPhotoUrl = '';
 let restoringDraft = false;
 let draftSaveTimer = null;
 let routeQuoteRequestId = 0;
+let tossPaymentsSdkPromise = null;
 const routeQuoteCache = new Map();
+
+function loadTossPaymentsSdk(){
+  if(typeof window.TossPayments==='function')return Promise.resolve(window.TossPayments);
+  if(tossPaymentsSdkPromise)return tossPaymentsSdkPromise;
+  tossPaymentsSdkPromise=new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    script.src=TOSS_PAYMENTS_SDK_URL;script.async=true;script.crossOrigin='anonymous';
+    script.onload=()=>typeof window.TossPayments==='function'?resolve(window.TossPayments):reject(new Error('토스 결제 모듈을 확인하지 못했습니다.'));
+    script.onerror=()=>reject(new Error('토스 결제창을 불러오지 못했습니다. 네트워크를 확인해 주세요.'));
+    document.head.appendChild(script);
+  }).catch((error)=>{tossPaymentsSdkPromise=null;throw error;});
+  return tossPaymentsSdkPromise;
+}
 
 const ERRAND_BLOCKED_RULES = [
   {pattern:/(현금(?!영수증)|수표|상품권|유가증권|귀금속|금괴|통장|신용카드|체크카드)/u,reason:'현금·유가증권·귀금속·결제수단은 현재 운송하지 않습니다.'},
@@ -867,17 +883,44 @@ document.querySelector('#trackingPaymentStart').addEventListener('click',async()
   if(!order?.quote||order.quote.acceptanceStatus!=='accepted'||order.quote.paymentStatus==='paid')return;
   const button=document.querySelector('#trackingPaymentStart');
   const status=document.querySelector('#trackingQuoteActionStatus');
-  button.disabled=true;button.textContent='토스 연결상태 확인 중…';status.dataset.state='';status.textContent='계약키와 저장된 결제금액을 안전하게 확인하고 있습니다.';
+  button.disabled=true;button.textContent='토스 결제창 준비 중…';status.dataset.state='';status.textContent='계약키와 저장된 결제금액을 안전하게 확인하고 있습니다.';
   try{
     const response=await fetch(`${ERRAND_ORDER_ENDPOINT}/${encodeURIComponent(order.orderId)}/payment-session`,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken},body:'{}'});
     const result=await response.json();
     if(!response.ok)throw new Error(result?.error||'토스 결제 준비상태를 확인하지 못했습니다.');
+    const TossPayments=await loadTossPaymentsSdk();
+    const widgets=TossPayments(result.clientKey).widgets({customerKey:'ANONYMOUS'});
+    await widgets.setAmount({currency:'KRW',value:Number(result.amountWon)});
+    const paymentWindow=await widgets.renderPaymentWindow({orderName:result.orderName});
+    paymentWindow.on('paymentRequest',async()=>{
+      try{
+        await widgets.requestPayment({orderId:result.paymentOrderId,orderName:result.orderName,customerName:result.customerName,
+          successUrl:`${location.origin}${location.pathname}?payment-result=success`,failUrl:`${location.origin}${location.pathname}?payment-result=fail`,windowTarget:'self'});
+      }catch(error){status.dataset.state='error';status.textContent=error instanceof Error?error.message:'결제창을 시작하지 못했습니다.';}
+    });
+    paymentWindow.on('cancel',()=>{status.dataset.state='';status.textContent='결제를 취소했습니다. 금액은 청구되지 않았습니다.';});
     order.quote={...order.quote,paymentStatus:'checkout_ready'};
     localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));
-    status.dataset.state='accepted';status.textContent=result.mode==='test'?'토스 테스트 결제 준비가 확인됐습니다. 실제 결제는 발생하지 않습니다.':'토스 결제 준비가 확인됐습니다. 실제 결제창 활성화 전 최종 검수가 필요합니다.';
+    status.dataset.state='accepted';status.textContent=result.mode==='test'?'토스 테스트 결제창입니다. 테스트에서는 실제 금액이 청구되지 않습니다.':'토스 결제창에서 결제수단과 금액을 다시 확인해 주세요.';
   }catch(error){status.dataset.state='error';status.textContent=error instanceof Error?error.message:'토스 결제 준비상태를 확인하지 못했습니다.';}
-  finally{button.disabled=false;button.textContent='토스 결제 준비상태 확인';}
+  finally{button.disabled=false;button.textContent='토스로 결제하기';}
 });
+
+async function confirmTossPaymentReturn(params,order){
+  const status=document.querySelector('#trackingQuoteActionStatus');
+  const paymentKey=params.get('paymentKey')||'';
+  const orderId=params.get('orderId')||'';
+  const amount=Number(params.get('amount'));
+  status.dataset.state='';status.textContent='토스 인증 결과와 저장된 견적금액을 서버에서 확인하고 있습니다.';
+  try{
+    const response=await fetch(ERRAND_PAYMENT_CONFIRM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken},body:JSON.stringify({paymentKey,orderId,amount})});
+    const result=await response.json();
+    if(!response.ok)throw new Error(result?.error||'결제 완료를 확인하지 못했습니다.');
+    order.quote={...order.quote,status:'payment_confirmed',paymentStatus:'paid',paidAt:result.paidAt||''};
+    localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));paintTracking(order);
+  }catch(error){status.dataset.state='error';status.textContent=error instanceof Error?error.message:'결제 완료를 확인하지 못했습니다. 운영자에게 문의해 주세요.';}
+  finally{history.replaceState({errandStep:'tracking'},'',`${location.pathname}?preview-order=${encodeURIComponent(order.orderId)}`);}
+}
 
 document.querySelector('#trackingReview').addEventListener('click',()=>{
   history.back();
@@ -1024,7 +1067,8 @@ updateAiAssist();
 updateRiskAssessment();
 
 let initialErrandStep='home';
-if(new URLSearchParams(location.search).has('payment')){
+const initialParams=new URLSearchParams(location.search);
+if(initialParams.has('payment')){
   home.hidden=true;
   policy.hidden=true;
   request.hidden=true;
@@ -1032,12 +1076,19 @@ if(new URLSearchParams(location.search).has('payment')){
   initialErrandStep='payment';
 }
 
-const previewOrderId=new URLSearchParams(location.search).get('preview-order');
-const savedPreviewOrder=previewOrderId?readPreviewOrder():null;
-if(savedPreviewOrder&&savedPreviewOrder.orderId===previewOrderId){
+const paymentResult=initialParams.get('payment-result');
+const previewOrderId=initialParams.get('preview-order');
+const savedPreviewOrder=(previewOrderId||paymentResult)?readPreviewOrder():null;
+if(savedPreviewOrder&&((previewOrderId&&savedPreviewOrder.orderId===previewOrderId)||paymentResult)){
   paintTracking(savedPreviewOrder);
   showErrandStep('tracking');
   initialErrandStep='tracking';
+  if(paymentResult==='success')void confirmTossPaymentReturn(initialParams,savedPreviewOrder);
+  else if(paymentResult==='fail'){
+    const resultStatus=document.querySelector('#trackingQuoteActionStatus');
+    resultStatus.dataset.state='error';resultStatus.textContent=initialParams.get('code')==='PAY_PROCESS_CANCELED'?'결제를 취소했습니다. 금액은 청구되지 않았습니다.':'결제가 완료되지 않았습니다. 금액은 청구되지 않았으며 다시 시도할 수 있습니다.';
+    history.replaceState({errandStep:'tracking'},'',`${location.pathname}?preview-order=${encodeURIComponent(savedPreviewOrder.orderId)}`);
+  }
 }
 
 history.replaceState({errandStep:initialErrandStep},'',location.href);
