@@ -28,9 +28,8 @@ const previewAgreement = document.querySelector('#previewAgreement');
 const previewSubmit = document.querySelector('#previewSubmit');
 const ERRAND_AI_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/errand/assist';
 const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
-const ERRAND_CATALOG_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/catalog';
-const ERRAND_CATALOG_FALLBACK = '../data/errand-place-catalog.json';
-const ERRAND_COORDINATES_ENDPOINT = '../data/store-coordinates.json';
+const KAKAO_MAPS_APP_KEY = '60e2b8ba2516a035006f7c300e0f9ff2';
+const KAKAO_MAPS_SDK_URL = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_MAPS_APP_KEY}&libraries=services&autoload=false`;
 const ERRAND_DRAFT_KEY = 'matjidoErrandDraftV1';
 const ERRAND_DRAFT_TTL_MS = 24 * 60 * 60 * 1000;
 const ERRAND_PREVIEW_ORDER_KEY = 'matjidoErrandPreviewOrderV1';
@@ -39,7 +38,7 @@ const previewSubmitStatus = document.querySelector('#previewSubmitStatus');
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
 let postcodePromise = null;
-let placeCatalogPromise = null;
+let kakaoPlacesPromise = null;
 let aiDraftApplied = false;
 let selectedItemKind = '';
 let itemPhotoUrl = '';
@@ -135,7 +134,8 @@ function paintRestoredAddress(kind,address,detail=''){
     roadAddress:String(address.roadAddress||''),
     jibunAddress:String(address.jibunAddress||''),
     placeName:String(address.placeName||''),
-    storeId:String(address.storeId||''),
+    placeId:String(address.placeId||''),
+    addressSource:String(address.addressSource||''),
     latitude:Number.isFinite(Number(address.latitude))?Number(address.latitude):null,
     longitude:Number.isFinite(Number(address.longitude))?Number(address.longitude):null,
   };
@@ -236,67 +236,63 @@ function formatSelectedAddress(address){
   return `${address.placeName?`${address.placeName} · `:''}${address.address}`;
 }
 
-function normalizePlaceText(value){
-  return String(value||'').toLowerCase().replace(/bbq/g,'비비큐').replace(/[^0-9a-z가-힣]/g,'');
+function loadKakaoPlaces(){
+  if(globalThis.kakao?.maps?.services?.Places)return Promise.resolve(new globalThis.kakao.maps.services.Places());
+  if(kakaoPlacesPromise)return kakaoPlacesPromise;
+  kakaoPlacesPromise=new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    script.src=KAKAO_MAPS_SDK_URL;
+    script.async=true;
+    const timer=setTimeout(()=>{script.remove();reject(new Error('kakao-timeout'));},8000);
+    script.onload=()=>{
+      clearTimeout(timer);
+      if(!globalThis.kakao?.maps){reject(new Error('kakao-unavailable'));return;}
+      globalThis.kakao.maps.load(()=>{
+        if(globalThis.kakao?.maps?.services?.Places)resolve(new globalThis.kakao.maps.services.Places());
+        else reject(new Error('kakao-places-unavailable'));
+      });
+    };
+    script.onerror=()=>{clearTimeout(timer);reject(new Error('kakao-load'));};
+    document.head.append(script);
+  }).catch(error=>{kakaoPlacesPromise=null;throw error;});
+  return kakaoPlacesPromise;
 }
 
-function verifiedStoreAddress(coordinate){
-  if(!coordinate)return '';
-  const candidates=[coordinate.inputAddress,coordinate.matchedAddress].map(value=>String(value||'').trim());
-  return candidates.find(value=>/^(전라남도|전남|전남광주통합특별시)\s+여수시\s/.test(value))||'';
+function isYeosuPlace(place){
+  return /(?:전라남도|전남)\s+여수시\s/.test(String(place.road_address_name||place.address_name||''));
 }
 
-async function loadPlaceCatalog(){
-  if(placeCatalogPromise)return placeCatalogPromise;
-  const catalogRequest=fetch(ERRAND_CATALOG_ENDPOINT,{headers:{'X-Daedong-Client':ERRAND_AI_CLIENT}})
-    .then(response=>{if(!response.ok)throw new Error('catalog');return response.json();})
-    .catch(()=>fetch(ERRAND_CATALOG_FALLBACK).then(response=>{if(!response.ok)throw new Error('catalog-fallback');return response.json();}));
-  placeCatalogPromise=Promise.all([
-    catalogRequest,
-    fetch(ERRAND_COORDINATES_ENDPOINT).then(response=>{if(!response.ok)throw new Error('coordinates');return response.json();}),
-  ]).then(([catalog,coordinates])=>{
-    const deduped=new Map();
-    (Array.isArray(catalog)?catalog:[]).forEach(store=>{
-      const coordinate=coordinates?.[store.id]||coordinates?.[store.store_id]||null;
-      const address=verifiedStoreAddress(coordinate);
-      const item={
-        id:String(store.id||store.store_id||''),
-        name:String(store.name||'').trim(),
-        brandName:String(store.brandName||'').trim(),
-        branchName:String(store.branchName||'').trim(),
-        aliases:Array.isArray(store.searchAliases)?store.searchAliases:[],
-        district:String(store.district||'').trim(),
-        neighborhoods:Array.isArray(store.neighborhoods)?store.neighborhoods:[],
-        category:String(store.category||'').trim(),
-        address,
-        latitude:Number.isFinite(Number(store.latitude))?Number(store.latitude):null,
-        longitude:Number.isFinite(Number(store.longitude))?Number(store.longitude):null,
-      };
-      if(!item.name)return;
-      item.searchText=normalizePlaceText([item.name,item.brandName,item.branchName,...item.aliases,...item.neighborhoods,item.district,item.category,item.address].join(' '));
-      const key=`${normalizePlaceText(item.name)}|${normalizePlaceText(item.district)}`;
-      const previous=deduped.get(key);
-      if(!previous||(item.address&&!previous.address))deduped.set(key,item);
+function keywordSearch(places,keyword){
+  return new Promise((resolve,reject)=>{
+    places.keywordSearch(keyword,(data,status)=>{
+      if(status===globalThis.kakao.maps.services.Status.OK){
+        const filtered=data.filter(isYeosuPlace);
+        resolve({places:filtered,total:filtered.length});
+        return;
+      }
+      if(status===globalThis.kakao.maps.services.Status.ZERO_RESULT){resolve({places:[],total:0});return;}
+      reject(new Error('kakao-search'));
     });
-    return [...deduped.values()];
-  }).catch(error=>{placeCatalogPromise=null;throw error;});
-  return placeCatalogPromise;
+  });
 }
 
-function selectCatalogPlace(kind,place){
+function selectKakaoPlace(kind,place){
+  const address=String(place.road_address_name||place.address_name||'').trim();
+  if(!address||!isYeosuPlace(place))return;
   selectedAddresses[kind]={
-    address:place.address,
+    address,
     zonecode:'',
-    roadAddress:place.address,
-    jibunAddress:'',
-    placeName:place.name,
-    storeId:place.id,
-    latitude:place.latitude,
-    longitude:place.longitude,
+    roadAddress:String(place.road_address_name||''),
+    jibunAddress:String(place.address_name||''),
+    placeName:String(place.place_name||''),
+    placeId:String(place.id||''),
+    addressSource:'kakao_places',
+    latitude:Number.isFinite(Number(place.y))?Number(place.y):null,
+    longitude:Number.isFinite(Number(place.x))?Number(place.x):null,
   };
   document.querySelector(`[data-address-label="${kind}"]`).textContent=formatSelectedAddress(selectedAddresses[kind]);
   const verification=document.querySelector(`[data-address-verification="${kind}"]`);
-  verification.textContent='✓ 여수맛지도 등록 가게의 검증된 주소를 선택했습니다.';
+  verification.textContent='✓ 카카오 공식 장소검색에서 선택한 주소입니다.';
   verification.classList.add('is-verified');
   document.querySelector(`[data-address-detail-wrap="${kind}"]`).hidden=false;
   const results=document.querySelector(`[data-place-results="${kind}"]`);
@@ -313,9 +309,9 @@ function renderPlaceResults(kind,places,total){
   container.hidden=false;
   const summary=document.createElement('p');
   summary.className='place-result-summary';
-  summary.textContent=total?`검색 결과 ${total}개${total>places.length?` · 가까운 지점을 확인해 주세요 (우선 ${places.length}개 표시)`:''}`:'일치하는 가게를 찾지 못했습니다.';
+  summary.textContent=places.length?`카카오 공식 장소검색 결과 ${places.length}개${total>places.length?` · 여수시 결과만 표시`:''}`:'여수시에서 일치하는 장소를 찾지 못했습니다.';
   container.append(summary);
-  if(!total){
+  if(!places.length){
     const help=document.createElement('p');
     help.className='place-result-help';
     help.textContent='아래 공식 주소 찾기에서 도로명·건물명·지번으로 검색해 주세요.';
@@ -325,24 +321,24 @@ function renderPlaceResults(kind,places,total){
   places.forEach(place=>{
     const row=document.createElement('button');
     row.type='button';
-    row.className=`place-result${place.address?'':' needs-address'}`;
+    row.className='place-result';
     const text=document.createElement('span');
     const name=document.createElement('b');
-    name.textContent=place.name;
+    name.textContent=place.place_name;
     const meta=document.createElement('small');
-    meta.textContent=place.address||`${place.district||'여수'} · 정확한 주소를 공식 주소찾기에서 확인해 주세요`;
+    meta.textContent=place.road_address_name||place.address_name;
     text.append(name,meta);
     const action=document.createElement('strong');
-    action.textContent=place.address?'이 주소 선택':'공식 주소 찾기';
+    action.textContent='이 주소 선택';
     row.append(text,action);
-    row.addEventListener('click',()=>place.address?selectCatalogPlace(kind,place):openPostcode(kind));
+    row.addEventListener('click',()=>selectKakaoPlace(kind,place));
     container.append(row);
   });
 }
 
 async function searchPlaces(kind){
   const queryInput=document.querySelector(`[data-place-query="${kind}"]`);
-  const query=normalizePlaceText(queryInput?.value);
+  const query=String(queryInput?.value||'').trim();
   const container=document.querySelector(`[data-place-results="${kind}"]`);
   if(query.length<2){
     container.hidden=false;
@@ -351,13 +347,13 @@ async function searchPlaces(kind){
     return;
   }
   container.hidden=false;
-  container.innerHTML='<p class="place-result-summary">여수맛지도 전체 가게에서 찾는 중입니다…</p>';
+  container.innerHTML='<p class="place-result-summary">카카오 공식 장소검색에서 찾는 중입니다…</p>';
   try{
-    const catalog=await loadPlaceCatalog();
-    const matches=catalog.filter(place=>place.searchText.includes(query)).sort((a,b)=>Number(Boolean(b.address))-Number(Boolean(a.address))||a.name.localeCompare(b.name,'ko'));
-    renderPlaceResults(kind,matches.slice(0,12),matches.length);
+    const places=await loadKakaoPlaces();
+    const result=await keywordSearch(places,`여수 ${query}`);
+    renderPlaceResults(kind,result.places.slice(0,15),result.total);
   }catch{
-    container.innerHTML='<p class="place-result-summary is-error">가게목록을 불러오지 못했습니다. 아래 공식 주소 찾기를 이용해 주세요.</p>';
+    container.innerHTML='<p class="place-result-summary is-error">카카오 공식 장소검색을 불러오지 못했습니다. 아래 공식 도로명주소 찾기를 이용해 주세요.</p>';
   }
 }
 
@@ -365,7 +361,7 @@ function updateAddress(kind,data){
   const address=String(data.roadAddress||data.jibunAddress||data.address||'').trim();
   if(!address){postcodeStatus.textContent='선택한 주소를 확인하지 못했습니다. 다른 검색 결과를 선택해 주세요.';postcodeStatus.classList.add('is-error');return;}
   if(!isYeosuAddress(data,address)){postcodeStatus.textContent='현재는 여수시 주소만 접수할 수 있습니다. 여수시 주소를 선택해 주세요.';postcodeStatus.classList.add('is-error');return;}
-  selectedAddresses[kind]={address,zonecode:String(data.zonecode||''),roadAddress:String(data.roadAddress||''),jibunAddress:String(data.jibunAddress||''),placeName:'',storeId:'',latitude:null,longitude:null};
+  selectedAddresses[kind]={address,zonecode:String(data.zonecode||''),roadAddress:String(data.roadAddress||''),jibunAddress:String(data.jibunAddress||''),placeName:'',placeId:'',addressSource:'daum_postcode',latitude:null,longitude:null};
   document.querySelector(`[data-address-label="${kind}"]`).textContent=address;
   const verification=document.querySelector(`[data-address-verification="${kind}"]`);
   verification.textContent=`✓ 주소검색 확인 완료${data.zonecode?` · 우편번호 ${data.zonecode}`:''}`;

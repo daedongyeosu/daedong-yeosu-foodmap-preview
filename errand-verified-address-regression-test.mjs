@@ -18,7 +18,9 @@ assert.match(js,/const addressesReady=Boolean\(selectedAddresses\.pickup&&select
 assert.match(js,/addressNext\.disabled=!\(addressesReady&&itemReady&&contentReady\)/);
 assert.match(js,/심부름 내용을 4글자 이상 적어주세요/);
 assert.match(css,/\.postcode-frame\{[^}]*height:560px/);
-assert.match(js,/여수맛지도 등록 가게의 검증된 주소를 선택했습니다/);
-assert.match(html,/20261011-12-place-search/);
+assert.match(js,/카카오 공식 장소검색에서 선택한 주소입니다/);
+assert.match(js,/addressSource:'kakao_places'/);
+assert.match(js,/addressSource:'daum_postcode'/);
+assert.match(html,/20261011-13-kakao-place/);
 
 console.log('errand verified address regression checks passed');

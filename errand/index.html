@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261011-12-place-search">
+  <link rel="stylesheet" href="styles.css?v=20261011-13-kakao-place">
 </head>
 <body>
   <main>
@@ -52,13 +52,13 @@
     </section>
     <section id="requestPreview" class="screen" hidden>
       <p class="eyebrow">심부름 신청 · 2단계</p><h1 class="request-title">어디서 가져와<br>어디로 전달할까요?</h1>
-      <p class="address-guidance"><b>가게명으로 먼저 찾아보세요.</b> 여수맛지도에 등록된 모든 가게를 검색하며, 없는 장소는 공식 도로명주소 검색을 이용할 수 있어요.</p>
+      <p class="address-guidance"><b>가게명으로 먼저 찾아보세요.</b> 카카오 공식 장소검색에서 여수의 가게·시설을 찾습니다. 집이나 일반 건물은 공식 도로명주소 찾기를 이용하세요.</p>
       <section class="address-card" data-address-card="pickup">
         <div class="address-card-head"><b>가져올 곳</b><span>필수</span></div>
         <div class="place-search-box">
           <label for="pickupPlaceQuery">가게·장소명 검색</label>
           <div><input id="pickupPlaceQuery" data-place-query="pickup" placeholder="예: 더벤티, BBQ, 철물점"><button type="button" data-place-search="pickup">찾기</button></div>
-          <p>가게명·브랜드명·지점명·동네명으로 찾을 수 있어요.</p>
+          <p>카카오 공식 장소검색에서 여수시 결과만 보여드려요.</p>
         </div>
         <div class="place-results" data-place-results="pickup" hidden aria-live="polite"></div>
         <button class="address-search-button" type="button" data-address-open="pickup"><span data-address-label="pickup">가게가 안 나오면 도로명주소로 찾기</span><strong>공식 주소 찾기 ›</strong></button>
@@ -70,7 +70,7 @@
         <div class="place-search-box">
           <label for="dropoffPlaceQuery">가게·장소명 검색</label>
           <div><input id="dropoffPlaceQuery" data-place-query="dropoff" placeholder="예: 더벤티, BBQ, 철물점"><button type="button" data-place-search="dropoff">찾기</button></div>
-          <p>가게명·브랜드명·지점명·동네명으로 찾을 수 있어요.</p>
+          <p>카카오 공식 장소검색에서 여수시 결과만 보여드려요.</p>
         </div>
         <div class="place-results" data-place-results="dropoff" hidden aria-live="polite"></div>
         <button class="address-search-button" type="button" data-address-open="dropoff"><span data-address-label="dropoff">가게가 안 나오면 도로명주소로 찾기</span><strong>공식 주소 찾기 ›</strong></button>
@@ -218,6 +218,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261011-12-place-search"></script>
+  <script src="app.js?v=20261011-13-kakao-place"></script>
 </body>
 </html>
