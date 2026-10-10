@@ -762,6 +762,7 @@ function paintTracking(order){
   quotePanel.hidden=!quote;
   if(quote){
     document.querySelector('#trackingQuoteAmount').textContent=`${Number(quote.amountWon).toLocaleString('ko-KR')}원`;
+    document.querySelector('#trackingQuoteBreakdown').textContent=`기사 수행료 ${Number(quote.riderFeeWon||0).toLocaleString('ko-KR')}원 + 플랫폼 이용금액 ${Number(quote.platformFeeWon||0).toLocaleString('ko-KR')}원`;
     const validUntil=new Date(quote.validUntil);
     const expired=Number.isNaN(validUntil.getTime())||validUntil.getTime()<=Date.now();
     const accepted=quote.acceptanceStatus==='accepted';

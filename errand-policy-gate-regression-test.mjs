@@ -17,6 +17,6 @@ assert.match(html,/id="policyContinue"[^>]*disabled/);
 assert.match(js,/policyChecks\.every\(input=>input\.checked\)/);
 assert.match(js,/showErrandStep\('request'\);\s*pushErrandStep\('request'\)/);
 assert.match(css,/\.policy-checks/);
-assert.match(html,/20261011-22-toss-window/);
+assert.match(html,/20261011-23-fee-breakdown/);
 
 console.log('errand policy gate regression checks passed');

@@ -43,6 +43,8 @@ assert.match(app,/renderPaymentWindow\(\{orderName:result\.orderName\}\)/);
 assert.match(app,/windowTarget:'self'/,'mobile payment must use full-page redirect');
 assert.match(app,/payment-result=success/);
 assert.match(app,/ERRAND_PAYMENT_CONFIRM_ENDPOINT/);
+assert.match(html,/id="trackingQuoteBreakdown"/);
+assert.match(app,/기사 수행료.*플랫폼 이용금액/);
 assert.doesNotMatch(app,/initialParams\.get\('message'\)/,'untrusted provider messages must not be reflected to customers');
 
 console.log('errand long-distance and passenger-separation regression checks passed');
