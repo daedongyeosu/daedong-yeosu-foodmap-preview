@@ -21,6 +21,6 @@ assert.match(css,/\.postcode-frame\{[^}]*height:560px/);
 assert.match(js,/카카오 공식 장소검색에서 선택한 주소입니다/);
 assert.match(js,/addressSource:'kakao_places'/);
 assert.match(js,/addressSource:'daum_postcode'/);
-assert.match(html,/20261011-20-quote-acceptance/);
+assert.match(html,/20261011-21-payment-safety/);
 
 console.log('errand verified address regression checks passed');

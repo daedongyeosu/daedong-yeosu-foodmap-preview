@@ -753,14 +753,19 @@ function paintTracking(order){
     const agreement=document.querySelector('#trackingQuoteAgreement');
     const agreementInput=document.querySelector('#trackingQuoteAgreementInput');
     const acceptButton=document.querySelector('#trackingQuoteAccept');
+    const paymentButton=document.querySelector('#trackingPaymentStart');
     const actionStatus=document.querySelector('#trackingQuoteActionStatus');
     const quoteKey=`${quote.amountWon}|${quote.validUntil}`;
     if(quotePanel.dataset.quoteKey!==quoteKey){quotePanel.dataset.quoteKey=quoteKey;agreementInput.checked=false;actionStatus.dataset.state='';}
     agreement.hidden=accepted||expired;
     acceptButton.hidden=accepted||expired;
+    paymentButton.hidden=!accepted||expired||quote.paymentStatus==='paid';
     agreementInput.disabled=accepted||expired;
     acceptButton.disabled=!agreementInput.checked||accepted||expired;
-    if(accepted){
+    if(quote.paymentStatus==='paid'){
+      actionStatus.dataset.state='accepted';actionStatus.textContent='토스페이먼츠 결제 완료가 서버에서 확인됐습니다. 젠딜리 브릿지 전송 대기 상태입니다.';
+      document.querySelector('#trackingPaymentLock').textContent='결제 확인 완료 · 중복 전송을 막은 뒤 기사 요청으로 이어집니다';
+    }else if(accepted){
       actionStatus.dataset.state='accepted';actionStatus.textContent='견적 동의가 저장됐습니다. 토스 결제가 연결되기 전에는 돈이 빠져나가지 않으며 기사도 호출되지 않습니다.';
       document.querySelector('#trackingPaymentLock').textContent='다음 단계: 안전한 결제창 연결 · 현재 실제 결제와 젠딜리 전송은 잠겨 있습니다';
     }else if(expired){
@@ -855,6 +860,23 @@ document.querySelector('#trackingQuoteAccept').addEventListener('click',async()=
     status.dataset.state='error';status.textContent=error instanceof Error?error.message:'견적 동의를 저장하지 못했습니다. 새로고침 후 다시 시도해 주세요.';
     button.disabled=false;
   }finally{button.textContent='견적에 동의하기';}
+});
+
+document.querySelector('#trackingPaymentStart').addEventListener('click',async()=>{
+  const order=readPreviewOrder();
+  if(!order?.quote||order.quote.acceptanceStatus!=='accepted'||order.quote.paymentStatus==='paid')return;
+  const button=document.querySelector('#trackingPaymentStart');
+  const status=document.querySelector('#trackingQuoteActionStatus');
+  button.disabled=true;button.textContent='토스 연결상태 확인 중…';status.dataset.state='';status.textContent='계약키와 저장된 결제금액을 안전하게 확인하고 있습니다.';
+  try{
+    const response=await fetch(`${ERRAND_ORDER_ENDPOINT}/${encodeURIComponent(order.orderId)}/payment-session`,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken},body:'{}'});
+    const result=await response.json();
+    if(!response.ok)throw new Error(result?.error||'토스 결제 준비상태를 확인하지 못했습니다.');
+    order.quote={...order.quote,paymentStatus:'checkout_ready'};
+    localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));
+    status.dataset.state='accepted';status.textContent=result.mode==='test'?'토스 테스트 결제 준비가 확인됐습니다. 실제 결제는 발생하지 않습니다.':'토스 결제 준비가 확인됐습니다. 실제 결제창 활성화 전 최종 검수가 필요합니다.';
+  }catch(error){status.dataset.state='error';status.textContent=error instanceof Error?error.message:'토스 결제 준비상태를 확인하지 못했습니다.';}
+  finally{button.disabled=false;button.textContent='토스 결제 준비상태 확인';}
 });
 
 document.querySelector('#trackingReview').addEventListener('click',()=>{
