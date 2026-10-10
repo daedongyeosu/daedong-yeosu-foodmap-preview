@@ -726,7 +726,7 @@ function storedOrder(receipt){
   return {version:2,trackingToken:receipt.trackingToken,orderId:order.id,status:order.status,
     createdAt:Date.parse(order.createdAt)||Date.now(),expiresAt:Number(order.expiresAt)*1000,
     pickup:order.pickupAddress,dropoff:order.dropoffAddress,item:order.itemName,
-    contact:`${customerName.value.trim()} · ${order.customerPhone}`,description:order.description};
+    contact:`${customerName.value.trim()} · ${order.customerPhone}`,description:order.description,quote:null};
 }
 
 const TRACKING_STATUS_LABELS={
@@ -741,6 +741,14 @@ function paintTracking(order){
   document.querySelector('#trackingItem').textContent=order.item;
   document.querySelector('#trackingContact').textContent=order.contact;
   document.querySelector('#trackingLiveStatus').textContent=`현재 상태: ${TRACKING_STATUS_LABELS[order.status]||'운영자 확인 전'} · 실제 결제와 기사 호출은 잠겨 있습니다.`;
+  const quotePanel=document.querySelector('#trackingQuote');
+  const quote=order.quote;
+  quotePanel.hidden=!quote;
+  if(quote){
+    document.querySelector('#trackingQuoteAmount').textContent=`${Number(quote.amountWon).toLocaleString('ko-KR')}원`;
+    const validUntil=new Date(quote.validUntil);
+    document.querySelector('#trackingQuoteValidity').textContent=Number.isNaN(validUntil.getTime())?'운영자에게 견적 유효시간을 확인해 주세요.':`${validUntil.toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}까지 유효합니다. 이후에는 실제 경로와 배차상황을 다시 계산합니다.`;
+  }
 }
 
 function showTracking(order){
@@ -795,7 +803,7 @@ async function refreshTracking(){
     const response=await fetch(`${ERRAND_ORDER_ENDPOINT}/${encodeURIComponent(order.orderId)}`,{headers:{'X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken}});
     const result=await response.json();
     if(!response.ok)throw new Error(result?.error||'상태를 확인하지 못했습니다.');
-    order.status=result.order.status;order.expiresAt=Number(result.order.expiresAt)*1000;
+    order.status=result.order.status;order.expiresAt=Number(result.order.expiresAt)*1000;order.quote=result.order.quote||null;
     localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));paintTracking(order);
   }catch(error){document.querySelector('#trackingLiveStatus').textContent=error instanceof Error?error.message:'상태를 확인하지 못했습니다.';}
   finally{button.disabled=false;button.textContent='운영자 확인상태 새로고침';}

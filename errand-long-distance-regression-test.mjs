@@ -26,5 +26,7 @@ assert.match(app,/quoteAgreement:isLongDistanceQuick\(\)/);
 assert.match(app,/\/api\/errand\/quote/);
 assert.match(app,/카카오모빌리티의 실제 도로 왕복경로/);
 assert.match(app,/response\.ok\|\|payload\?\.available!==true/,'route lookup failure must fall back without inventing a price');
+assert.match(html,/id="trackingQuote"[^>]+hidden/);
+assert.match(app,/order\.quote=result\.order\.quote\|\|null/);
 
 console.log('errand long-distance and passenger-separation regression checks passed');
