@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#13392e">
+  <title>맛지도 화물기사 | 오더</title>
+  <link rel="stylesheet" href="styles.css?v=20261011-1">
+</head>
+<body>
+  <main>
+    <header><a href="../freight-partner/" aria-label="협력기사 등록 화면으로 돌아가기">←</a><span><b>맛지도 화물기사</b><small>여수 화물배송</small></span><em>프리뷰</em></header>
+    <section class="driver-card" aria-label="기사 승인 상태">
+      <div><span class="avatar">🚚</span><span><small>승인완료 데모기사</small><b>700kg 리프트 카고</b></span><strong>VERIFIED</strong></div>
+      <label class="availability"><span><b>오늘 오더 받기</b><small id="availabilityCopy">운행을 시작하면 맞는 오더만 보여드려요.</small></span><input id="availabilityToggle" type="checkbox" role="switch"><i aria-hidden="true"></i></label>
+      <p>실제 운영에서는 자격·영업용 차량·허가·보험이 모두 유효한 기사만 이 화면에 들어옵니다.</p>
+    </section>
+    <nav aria-label="화물기사 메뉴"><button type="button" data-tab="offers" aria-pressed="true">받을 오더 <span id="offerCount">0</span></button><button type="button" data-tab="active" aria-pressed="false">수행 중</button><button type="button" data-tab="settlement" aria-pressed="false">정산</button></nav>
+    <section id="offersPanel" class="panel">
+      <div class="panel-head"><span><p>지금 받을 수 있는 오더</p><h1>내 차량에 맞는 배송</h1></span><button id="refreshOffers" type="button">새로고침</button></div>
+      <div id="offlineMessage" class="empty-state"><span>🅿️</span><h2>현재 운행 대기 중입니다</h2><p>위의 ‘오늘 오더 받기’를 켜면 차량조건에 맞는 오더가 표시됩니다.</p></div>
+      <div id="offerList" class="offer-list" hidden></div>
+    </section>
+    <section id="activePanel" class="panel" hidden>
+      <div class="panel-head"><span><p>현재 수행 중</p><h1>배차된 화물배송</h1></span></div>
+      <div id="activeEmpty" class="empty-state"><span>📭</span><h2>수행 중인 오더가 없습니다</h2><p>받을 오더에서 수락한 배송이 이곳에 나타납니다.</p></div>
+      <article id="activeOrder" class="active-order" hidden>
+        <div class="active-status"><span id="activeStatusBadge">배차 확정</span><strong id="activePayout">받을 금액 0원</strong></div>
+        <h2 id="activeRoute">출발지 → 도착지</h2><p id="activeItem"></p>
+        <div class="private-info"><b>수락 후 공개된 상세정보</b><dl><div><dt>출발</dt><dd id="activePickup"></dd></div><div><dt>도착</dt><dd id="activeDropoff"></dd></div><div><dt>현장연락</dt><dd id="activeContact"></dd></div></dl></div>
+        <ol class="progress"><li data-progress="accepted"><i>1</i><span><b>배차 확정</b><small>기사 수락 완료</small></span></li><li data-progress="arrived"><i>2</i><span><b>현장 도착</b><small>출발지 도착</small></span></li><li data-progress="picked_up"><i>3</i><span><b>물품 인수</b><small>물품·포장 상태 확인</small></span></li><li data-progress="delivered"><i>4</i><span><b>배송 완료</b><small>사진·수령 확인 후 정산대기</small></span></li></ol>
+        <label id="proofCheckWrap" class="proof-check" hidden><input id="proofCheck" type="checkbox"><span>배송완료 사진과 수령인 확인을 남겼습니다.</span></label>
+        <button id="advanceOrder" class="primary-action" type="button">현장에 도착했습니다</button>
+        <button id="cancelDemo" class="text-action" type="button">프리뷰 오더 초기화</button>
+      </article>
+    </section>
+    <section id="settlementPanel" class="panel" hidden>
+      <div class="panel-head"><span><p>내가 받을 돈</p><h1>정산내역</h1></span></div>
+      <section class="settlement-summary"><small>정산예정</small><strong id="pendingTotal">0원</strong><p>배송완료와 증빙 확인 후 등록된 기사 계좌로 지급됩니다.</p></section>
+      <div id="settlementList" class="settlement-list"><div class="empty-state compact"><span>🧾</span><h2>아직 정산내역이 없습니다</h2></div></div>
+      <aside><b>기사 화면에는 받을 확정금액만 표시됩니다.</b><span>고객 결제총액, 맛지도 이용금액과 내부 가산근거는 관리자 정산원장에서 별도로 관리합니다.</span></aside>
+    </section>
+    <section class="demo-boundary"><b>프리뷰 동작 확인용</b><p>현재 수락과 상태변경은 이 기기 안에서만 시연됩니다. 실제 운영에서는 서버가 한 명의 수락만 원자적으로 확정하고 토스 지급대행과 연결합니다.</p></section>
+  </main>
+  <script src="app.js?v=20261011-1"></script>
+</body>
+</html>
