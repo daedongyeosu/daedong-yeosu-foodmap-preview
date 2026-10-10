@@ -31,6 +31,10 @@ const customerPhone = document.querySelector('#customerPhone');
 const contactStatus = document.querySelector('#contactStatus');
 const previewAgreement = document.querySelector('#previewAgreement');
 const previewSubmit = document.querySelector('#previewSubmit');
+const longDistancePromise = document.querySelector('#longDistancePromise');
+const longDistanceDeadlineField = document.querySelector('#longDistanceDeadlineField');
+const longDistanceDeadline = document.querySelector('#longDistanceDeadline');
+const longDistanceQuoteAgreement = document.querySelector('#longDistanceQuoteAgreement');
 const ERRAND_AI_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/errand/assist';
 const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
 const KAKAO_MAPS_APP_KEY = '60e2b8ba2516a035006f7c300e0f9ff2';
@@ -532,20 +536,30 @@ function updateFarePreview(){
   const fareBreakdown=document.querySelector('#fareBreakdown');
   const fareNote=document.querySelector('#fareNote');
   if(isLongDistanceQuick()){
+    longDistancePromise.hidden=false;
     farePreview.dataset.mode='long_distance_express';
     fareLabel.textContent='긴급 장거리 전담배송';
     fareBadge.textContent='관리자 견적';
     fareAmount.textContent='견적 확인 후 확정';
     fareBreakdown.innerHTML='<div><dt>거리 기준</dt><dd>네비게이션 왕복 실제거리</dd></div><div><dt>복귀 기준</dt><dd>빈차 복귀 100% 반영</dd></div><div><dt>별도 실비</dt><dd>통행료·선박비</dd></div>';
     fareNote.textContent='직선거리나 편도거리로 계산하지 않습니다. 차량별 실제 통행 가능한 왕복 경로와 왕복 소요시간, 연료·정비·감가상각, 기사 수행료를 확인한 뒤 결제 전에 최종금액과 도착예정 범위를 안내합니다.';
+    updatePreviewReadiness();
     return;
   }
+  longDistancePromise.hidden=true;
   farePreview.dataset.mode='local_quick';
   fareLabel.textContent='예상 심부름 요금';
   fareBadge.textContent='예시 금액';
   fareAmount.textContent='11,450원';
   fareBreakdown.innerHTML='<div><dt>기사 수행료</dt><dd>10,000원</dd></div><div><dt>플랫폼 이용금액</dt><dd>1,450원</dd></div>';
   fareNote.textContent='현재는 화면 확인용 예시입니다. 실제 요금은 네비게이션 실제 이동거리·물품·현장조건을 반영하여 결제 전에 항목별로 표시합니다.';
+  updatePreviewReadiness();
+}
+
+function updateLongDistanceTiming(){
+  const timing=document.querySelector('[name="longDistanceTiming"]:checked')?.value||'';
+  longDistanceDeadlineField.hidden=timing!=='deadline';
+  updatePreviewReadiness();
 }
 
 addressNext.addEventListener('click',()=>{
@@ -596,10 +610,15 @@ function maskedPhone(value){
 function updatePreviewReadiness(){
   const nameReady=customerName.value.trim().length>=2;
   const phoneReady=/^01[016789]\d{7,8}$/.test(normalizedPhone(customerPhone.value));
-  const ready=nameReady&&phoneReady&&previewAgreement.checked;
+  const timing=document.querySelector('[name="longDistanceTiming"]:checked')?.value||'';
+  const delayPolicy=document.querySelector('[name="longDistanceDelayPolicy"]:checked')?.value||'';
+  const longDistanceReady=!isLongDistanceQuick()||(Boolean(timing)&&Boolean(delayPolicy)&&
+    (timing!=='deadline'||Boolean(longDistanceDeadline.value))&&longDistanceQuoteAgreement.checked);
+  const ready=nameReady&&phoneReady&&longDistanceReady&&previewAgreement.checked;
   previewSubmit.disabled=!ready;
   if(!nameReady)previewSubmit.textContent='신청자 이름을 입력해 주세요';
   else if(!phoneReady)previewSubmit.textContent='휴대전화번호를 확인해 주세요';
+  else if(!longDistanceReady)previewSubmit.textContent='장거리 도착조건과 견적 확인을 완료해 주세요';
   else if(!previewAgreement.checked)previewSubmit.textContent='최종 확인 항목에 동의해 주세요';
   else previewSubmit.textContent='미리보기 접수함에 저장하기 →';
   contactStatus.dataset.state=phoneReady?'ready':'';
@@ -614,6 +633,10 @@ customerPhone.addEventListener('input',()=>{
   updatePreviewReadiness();
 });
 previewAgreement.addEventListener('change',updatePreviewReadiness);
+document.querySelectorAll('[name="longDistanceTiming"]').forEach(input=>input.addEventListener('change',updateLongDistanceTiming));
+document.querySelectorAll('[name="longDistanceDelayPolicy"]').forEach(input=>input.addEventListener('change',updatePreviewReadiness));
+longDistanceDeadline.addEventListener('input',updatePreviewReadiness);
+longDistanceQuoteAgreement.addEventListener('change',updatePreviewReadiness);
 
 function previewOrderPayload(){
   const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
@@ -646,8 +669,13 @@ function previewOrderPayload(){
       routeMetric:'navigation_road_round_trip',
       returnAssumption:isLongDistanceQuick()?'full_empty_return':'not_applicable',
       priceIncludes:isLongDistanceQuick()?['왕복 실제거리','왕복 예상시간','연료·정비·감가상각','기사 수행료','통행료·선박비','플랫폼 이용금액']:[],
+      timingType:isLongDistanceQuick()?(document.querySelector('[name="longDistanceTiming"]:checked')?.value||''):'not_applicable',
+      requestedArrivalAt:isLongDistanceQuick()&&document.querySelector('[name="longDistanceTiming"]:checked')?.value==='deadline'?longDistanceDeadline.value:null,
+      requestedArrivalTimeZone:isLongDistanceQuick()?'Asia/Seoul':'',
+      delayPolicy:isLongDistanceQuick()?(document.querySelector('[name="longDistanceDelayPolicy"]:checked')?.value||''):'not_applicable',
+      quoteAgreement:isLongDistanceQuick()?longDistanceQuoteAgreement.checked:false,
     },
-    policyVersion:'preview-2026-10-11-long-distance-v1',
+    policyVersion:'preview-2026-10-11-arrival-promise-v1',
   };
 }
 

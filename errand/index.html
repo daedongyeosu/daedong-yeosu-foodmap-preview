@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261011-16-long-distance">
+  <link rel="stylesheet" href="styles.css?v=20261011-17-arrival-promise">
 </head>
 <body>
   <main>
@@ -172,6 +172,19 @@
         <label for="customerPhone">휴대전화번호<input id="customerPhone" type="tel" inputmode="numeric" maxlength="13" autocomplete="tel" placeholder="010-0000-0000"></label>
         <p id="contactStatus" class="contact-status" role="status" aria-live="polite">실제 접수에서는 문자 인증을 거친 번호만 사용합니다.</p>
       </section>
+      <section id="longDistancePromise" class="long-distance-promise" hidden aria-labelledby="longDistancePromiseTitle">
+        <div class="long-distance-promise-head"><span><b id="longDistancePromiseTitle">언제까지 도착해야 하나요?</b><small>장거리 견적과 배차 가능 여부를 판단하는 데 꼭 필요한 내용만 확인합니다.</small></span><em>장거리 전용</em></div>
+        <fieldset><legend>희망 도착시간</legend>
+          <label><input type="radio" name="longDistanceTiming" value="asap" checked><span><b>가능한 가장 빨리</b><small>운영자가 예상 도착범위를 안내합니다.</small></span></label>
+          <label><input type="radio" name="longDistanceTiming" value="deadline"><span><b>정해진 시각까지</b><small>교통상황을 확인해 가능 여부부터 답변합니다.</small></span></label>
+        </fieldset>
+        <label id="longDistanceDeadlineField" class="long-distance-deadline" hidden for="longDistanceDeadline"><span>희망 도착 날짜와 시각</span><input id="longDistanceDeadline" type="datetime-local"></label>
+        <fieldset><legend>희망시각 도착이 어려운 경우</legend>
+          <label><input type="radio" name="longDistanceDelayPolicy" value="contact_before_dispatch"><span><b>출발 전에 연락받고 결정할게요</b><small>동의하기 전에는 기사에게 배차하지 않습니다.</small></span></label>
+          <label><input type="radio" name="longDistanceDelayPolicy" value="do_not_dispatch"><span><b>시간을 못 맞추면 배차하지 마세요</b><small>운영자가 확인 후 접수 불가로 안내합니다.</small></span></label>
+        </fieldset>
+        <label class="long-distance-quote-check"><input id="longDistanceQuoteAgreement" type="checkbox"><span>왕복 실제거리·시간, 빈차 복귀, 통행료와 물품조건을 반영한 <b>최종 견적을 확인한 뒤에만 결제·배차</b>하는 것에 동의합니다.</span></label>
+      </section>
       <section id="farePreview" class="fare-preview" data-mode="local_quick">
         <div class="fare-preview-head"><span><small id="fareLabel">예상 심부름 요금</small><em id="fareBadge">예시 금액</em></span><strong id="fareAmount">11,450원</strong></div>
         <dl id="fareBreakdown"><div><dt>기사 수행료</dt><dd>10,000원</dd></div><div><dt>플랫폼 이용금액</dt><dd>1,450원</dd></div></dl>
@@ -246,6 +259,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261011-16-long-distance"></script>
+  <script src="app.js?v=20261011-17-arrival-promise"></script>
 </body>
 </html>
