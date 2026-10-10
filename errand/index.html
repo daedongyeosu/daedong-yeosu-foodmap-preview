@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery-9-intake-tracking-10-step-back">
+  <link rel="stylesheet" href="styles.css?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery-9-intake-tracking-10-step-back-11-server-intake">
 </head>
 <body>
   <main>
@@ -38,7 +38,7 @@
     <section id="policyPreview" class="screen policy-screen" hidden>
       <p class="eyebrow">심부름 신청 · 1단계</p>
       <h1 class="request-title">신청 전에<br>꼭 확인해 주세요</h1>
-      <div class="draft-banner"><b>운영정책 초안</b><span>프리뷰에서는 결제·접수가 발생하지 않으며, 정확한 금액과 법률 문구는 결제 도입 전에 최종 확정합니다.</span></div>
+      <div class="draft-banner"><b>운영정책 초안</b><span>프리뷰에서는 실제 결제·젠딜리 접수가 발생하지 않으며, 정확한 금액과 법률 문구는 결제 도입 전에 최종 확정합니다.</span></div>
       <section class="policy-card"><h2>⚠️ 이용 주의사항</h2><ul><li>기사에게 전달할 물품·수량·크기와 현장 상황을 사실대로 적어야 합니다.</li><li>주소, 연락처, 공동현관 출입방법과 받는 사람 정보를 정확히 입력해야 합니다.</li><li>기사의 안전을 위협하거나 법령·시설 규정을 위반하는 요청은 현장에서 중단될 수 있습니다.</li><li>물품 구입비를 기사가 개인 돈으로 대신 내는 구매대행은 현재 하지 않습니다.</li></ul></section>
       <section class="policy-card is-danger"><h2>🚫 접수 불가 물품·행위</h2><ul><li>불법 약물·위조품·장물, 총포·도검·폭발물·인화성 위험물</li><li>현금·수표·유가증권, 고가 귀금속과 분실 시 대체하기 어려운 물품</li><li>살아 있는 동물, 시신·유골, 누출·파손 우려가 큰 위험 물품</li><li>스토킹·감시·불법 촬영·침입·명의도용 등 타인의 권리를 침해하는 행위</li><li>담배 구매대행은 접수하지 않습니다. 주류 등 성인 확인 품목은 운영 허용 여부가 확정되기 전까지 접수하지 않으며, 향후 허용 시 수령인의 신분증 확인과 19세 미만 전달 거부가 필수입니다.</li></ul></section>
       <section class="policy-card"><h2>💳 요금 산정 방식</h2><p class="policy-formula">기본 수행료 + 이동거리 + 예상시간·대기 + 무게·부피 + 현장·지역 추가요금 + 결제비용</p><ul><li>엘리베이터 없는 고층, 주차·진입 곤란, 고산지대·도서·회피구역은 추가요금 또는 블록요금을 적용할 수 있습니다.</li><li>야간·악천후·장시간 대기·고중량 물품은 접수 전 추가금액을 별도로 표시합니다.</li><li>고객은 기사 배정 전에 전체 예상금액과 각 요금 항목을 확인합니다. 표시하지 않은 금액을 임의로 청구하지 않습니다.</li></ul></section>
@@ -165,18 +165,19 @@
       <section class="preview-intake" aria-labelledby="previewIntakeTitle">
         <span class="preview-badge">화면 시험용</span>
         <h2 id="previewIntakeTitle">결제 없이 다음 진행화면을 확인해 보세요</h2>
-        <p>입력한 내용을 이 기기에만 24시간 임시 보관하고, 접수번호와 기사 진행상태 화면을 보여줍니다. 실제 주문·결제·기사 호출은 절대 발생하지 않습니다.</p>
+        <p>입력한 내용을 미리보기 접수 서버에 24시간 보관하고 운영자 접수함에서 확인합니다. 실제 결제·젠딜리 전송·기사 호출은 절대 발생하지 않습니다.</p>
         <label><input id="previewAgreement" type="checkbox"><span>입력한 주소·물품·연락처와 취소·환불 기준을 최종 확인했습니다.</span></label>
         <button id="previewSubmit" type="button" disabled>연락처와 확인 항목을 입력해 주세요</button>
+        <p id="previewSubmitStatus" class="contact-status" role="status" aria-live="polite"></p>
       </section>
       <button id="paymentBack" class="secondary" type="button">주소와 내용 다시 확인하기</button>
     </section>
     <section id="trackingPreview" class="screen tracking-screen" hidden>
       <p class="eyebrow">심부름 신청 · 진행조회</p>
       <section class="tracking-confirmed">
-        <span>프리뷰 접수 연습 완료</span>
-        <h1>신청 내용이<br>안전하게 저장됐어요</h1>
-        <p>실제 결제나 기사 호출은 발생하지 않았습니다.</p>
+        <span>운영자 접수함 저장 완료</span>
+        <h1>미리보기 신청이<br>안전하게 접수됐어요</h1>
+        <p id="trackingLiveStatus">운영자 확인 전입니다. 실제 결제나 기사 호출은 발생하지 않았습니다.</p>
       </section>
       <section class="receipt-card" aria-label="프리뷰 접수 정보">
         <div><span><small>프리뷰 접수번호</small><b id="trackingOrderId">YS-PREVIEW</b></span><em>화면 시험용</em></div>
@@ -194,6 +195,7 @@
         </ol>
       </section>
       <aside class="tracking-warning"><b>아직 실제 접수가 아닙니다</b><span>지금 화면은 고객 흐름을 검수하기 위한 프리뷰입니다. 젠딜리 관리자와 기사 앱에는 아무 주문도 생성되지 않았습니다.</span></aside>
+      <button id="trackingRefresh" class="primary-next" type="button">운영자 확인상태 새로고침</button>
       <button id="trackingReview" class="primary-next" type="button">신청 내용 다시 보기</button>
       <button id="trackingHome" class="secondary" type="button">심부름 메인으로 돌아가기</button>
     </section>
@@ -204,6 +206,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery-9-intake-tracking-10-step-back"></script>
+  <script src="app.js?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery-9-intake-tracking-10-step-back-11-server-intake"></script>
 </body>
 </html>
