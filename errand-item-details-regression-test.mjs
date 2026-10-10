@@ -15,12 +15,12 @@ assert.match(html,/id="itemPhoto" type="file" accept="image\/\*"/);
 assert.match(html,/id="paymentItem"/);
 assert.match(html,/id="paymentConditions"/);
 assert.match(html,/id="paymentRequest"/);
-assert.match(app,/const itemReady=Boolean\(selectedItemKind&&itemName\.value\.trim\(\)&&document\.querySelector\('\[name="itemScale"\]:checked'\)\)/);
+assert.match(app,/const itemReady=Boolean\(selectedItemKind&&itemName\.value\.trim\(\)&&document\.querySelector\('\[name="itemScale"\]:checked'\)&&riskIntakeReady\(assessment\)\)/);
 assert.match(app,/file\.size>10\*1024\*1024/);
 assert.match(app,/URL\.revokeObjectURL/);
 assert.match(app,/추가 조건: \$\{conditions\.join\(' · '\)\}/);
 assert.match(css,/\.item-kind-grid button\[aria-pressed="true"\]/);
 assert.match(css,/@media\(max-width:430px\).*\.item-kind-grid,\.extra-conditions>div\{grid-template-columns:1fr\}/s);
-assert.match(html,/20261011-14-kakao-yeosu/);
+assert.match(html,/20261011-15-risk-intake/);
 
 console.log('errand item details regression checks passed');

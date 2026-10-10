@@ -14,6 +14,11 @@ const aiSuggestion = document.querySelector('#aiSuggestion');
 const aiSuggestionText = document.querySelector('#aiSuggestionText');
 const aiStatus = document.querySelector('#aiStatus');
 const itemName = document.querySelector('#itemName');
+const itemValue = document.querySelector('#itemValue');
+const itemValueUnknown = document.querySelector('#itemValueUnknown');
+const riskQuestions = document.querySelector('#riskQuestions');
+const riskDecision = document.querySelector('#riskDecision');
+const itemPhotoRequirement = document.querySelector('#itemPhotoRequirement');
 const itemPhoto = document.querySelector('#itemPhoto');
 const itemPhotoPreview = document.querySelector('#itemPhotoPreview');
 const itemPhotoImage = document.querySelector('#itemPhotoImage');
@@ -44,6 +49,21 @@ let selectedItemKind = '';
 let itemPhotoUrl = '';
 let restoringDraft = false;
 let draftSaveTimer = null;
+
+const ERRAND_BLOCKED_RULES = [
+  {pattern:/(현금(?!영수증)|수표|상품권|유가증권|귀금속|금괴|통장|신용카드|체크카드)/u,reason:'현금·유가증권·귀금속·결제수단은 현재 운송하지 않습니다.'},
+  {pattern:/(마약|불법\s*약물|장물|총포|권총|소총|탄약|폭발물|휘발유|경유|부탄가스|농약|염산|황산|독극물)/u,reason:'불법 물품·무기·폭발성·인화성·유해 물질은 접수할 수 없습니다.'},
+  {pattern:/(살아\s*있는\s*(동물|강아지|고양이|생물)|반려동물\s*(배송|운송)|사람\s*(배송|운송))/u,reason:'사람과 살아 있는 동물은 현재 운송하지 않습니다.'},
+  {pattern:/(담배|전자담배|주류|소주|맥주|양주|와인)/u,reason:'담배와 주류는 판매·연령확인 운영기준이 확정되기 전까지 접수하지 않습니다.'},
+];
+
+const ERRAND_RISK_RULES = {
+  fragile:/(케이크|꽃|화분|유리|도자기|그릇|액자|거울|만년필|파손|깨지|눌림|기울)/u,
+  liquid:/(액체|국물|음료|커피|물병|유리병|누수|새는|기름|잉크)/u,
+  electronics:/(노트북|태블릿|컴퓨터|모니터|휴대폰|스마트폰|카메라|전자기기|게임기|액정)/u,
+  temperature:/(냉장|냉동|아이스크림|생선|육류|회\s|신선|온도|보냉)/u,
+  deadline:/(정해진\s*시간|마감|행사|시험|계약서|원본\s*서류|시간\s*필수)/u,
+};
 
 function showErrandStep(step){
   home.hidden=step!=='home';
@@ -82,12 +102,16 @@ function draftSnapshot(){
     itemName:itemName.value.trim(),
     itemScale:document.querySelector('[name="itemScale"]:checked')?.value||'',
     conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value),
+    packingStatus:document.querySelector('[name="packingStatus"]:checked')?.value||'',
+    declaredValue:itemValue.value,
+    valueUnknown:itemValueUnknown.checked,
+    riskConfirmations:[...document.querySelectorAll('[data-risk-question] input:checked')].map(input=>input.value),
     description:errandContent.value,
   };
 }
 
 function meaningfulDraft(draft){
-  return Boolean(draft?.addresses?.pickup||draft?.addresses?.dropoff||draft?.itemKind||draft?.itemName||draft?.itemScale||draft?.conditions?.length||String(draft?.description||'').trim());
+  return Boolean(draft?.addresses?.pickup||draft?.addresses?.dropoff||draft?.itemKind||draft?.itemName||draft?.itemScale||draft?.conditions?.length||draft?.packingStatus||draft?.declaredValue||draft?.valueUnknown||String(draft?.description||'').trim());
 }
 
 function showDraftResume(draft){
@@ -157,8 +181,15 @@ function restoreDraft(draft){
   document.querySelectorAll('[name="itemScale"]').forEach(input=>{input.checked=input.value===draft.itemScale;});
   const conditions=new Set(Array.isArray(draft.conditions)?draft.conditions:[]);
   document.querySelectorAll('.extra-conditions input').forEach(input=>{input.checked=conditions.has(input.value);});
+  document.querySelectorAll('[name="packingStatus"]').forEach(input=>{input.checked=input.value===draft.packingStatus;});
+  itemValue.value=String(draft.declaredValue||'');
+  itemValueUnknown.checked=Boolean(draft.valueUnknown);
+  itemValue.disabled=itemValueUnknown.checked;
+  const riskConfirmations=new Set(Array.isArray(draft.riskConfirmations)?draft.riskConfirmations:[]);
+  document.querySelectorAll('[data-risk-question] input').forEach(input=>{input.checked=riskConfirmations.has(input.value);});
   errandContent.value=String(draft.description||'');
   restoringDraft=false;
+  updateRiskAssessment();
   updateAiAssist();
   updateRequestReadiness();
   showDraftResume(draft);
@@ -173,14 +204,16 @@ function clearDraft(){
   document.querySelectorAll('[data-address-detail-wrap]').forEach(wrap=>{wrap.hidden=true;});
   document.querySelectorAll('[data-address-detail]').forEach(input=>{input.value='';});
   document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed','false'));
-  document.querySelectorAll('[name="itemScale"],.extra-conditions input').forEach(input=>{input.checked=false;});
+  document.querySelectorAll('[name="itemScale"],[name="packingStatus"],.extra-conditions input,[data-risk-question] input').forEach(input=>{input.checked=false;});
+  itemValue.value='';itemValue.disabled=false;itemValueUnknown.checked=false;
   itemName.value='';errandContent.value='';draftResume.hidden=true;
-  updateAiAssist();updateRequestReadiness();
+  updateAiAssist();updateRiskAssessment();updateRequestReadiness();
 }
 
 function selectItemKind(kind){
   selectedItemKind=kind;
   document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.itemKind===kind)));
+  updateRiskAssessment();
   updateRequestReadiness();
   scheduleDraftSave();
 }
@@ -373,17 +406,75 @@ function updateAddress(kind,data){
   document.querySelector(`[data-address-detail="${kind}"]`)?.focus();
 }
 
+function currentRiskAssessment(){
+  const conditions=[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value);
+  const text=`${selectedItemKind} ${itemName.value} ${errandContent.value} ${conditions.join(' ')}`.toLowerCase();
+  if(!selectedItemKind||!itemName.value.trim())return {level:'waiting',flags:[],requiresPhoto:false,title:'물품 정보를 입력하면 접수 가능 여부를 확인합니다.',description:'접수 전에 예상 처리방식과 필요한 준비를 알려드려요.'};
+  const blocked=ERRAND_BLOCKED_RULES.find(rule=>rule.pattern.test(text));
+  if(blocked)return {level:'blocked',flags:[],requiresPhoto:false,title:'현재 접수할 수 없는 요청입니다.',description:blocked.reason};
+  const flags=[];
+  for(const [flag,pattern] of Object.entries(ERRAND_RISK_RULES))if(pattern.test(text))flags.push(flag);
+  if(conditions.includes('파손 주의')||conditions.includes('기울이면 안 됨'))flags.push('fragile');
+  if(conditions.includes('액체·누수 가능'))flags.push('liquid');
+  if(conditions.includes('전자기기'))flags.push('electronics');
+  if(conditions.includes('냉장·냉동 유지'))flags.push('temperature');
+  if(conditions.includes('정해진 시간 필수'))flags.push('deadline');
+  const uniqueFlags=[...new Set(flags)];
+  const scale=document.querySelector('[name="itemScale"]:checked')?.value||'';
+  const packing=document.querySelector('[name="packingStatus"]:checked')?.value||'';
+  const value=Number(itemValue.value||0);
+  const needsReview=scale==='큰 짐·여러 박스'||scale==='크기를 잘 모르겠음'||packing==='포장 확인 필요'||value>=500000||itemValueUnknown.checked;
+  const requiresPhoto=uniqueFlags.some(flag=>['fragile','electronics'].includes(flag))||scale==='큰 짐·여러 박스'||value>=500000;
+  if(needsReview)return {level:'review',flags:uniqueFlags,requiresPhoto,title:'운영자 확인 후 견적을 안내합니다.',description:'크기·포장·물품가액을 확인한 뒤 적합한 차량과 요금을 결정해요.'};
+  if(uniqueFlags.length)return {level:'special',flags:uniqueFlags,requiresPhoto,title:'특별취급 조건으로 접수합니다.',description:'추가 확인을 마치면 기사에게 주의사항이 함께 전달돼요.'};
+  return {level:'standard',flags:uniqueFlags,requiresPhoto:false,title:'일반 전달 심부름으로 접수할 수 있어요.',description:'포장과 물품가액을 확인하면 예상요금을 볼 수 있어요.'};
+}
+
+function updateRiskAssessment(){
+  const assessment=currentRiskAssessment();
+  const activeFlags=new Set(assessment.flags);
+  let visibleQuestions=0;
+  document.querySelectorAll('[data-risk-question]').forEach(label=>{
+    const active=activeFlags.has(label.dataset.riskQuestion);
+    label.hidden=!active;
+    if(active)visibleQuestions+=1;
+    else label.querySelector('input').checked=false;
+  });
+  riskQuestions.hidden=visibleQuestions===0;
+  riskDecision.dataset.level=assessment.level;
+  riskDecision.querySelector('b').textContent=assessment.title;
+  riskDecision.querySelector('span').textContent=assessment.description;
+  itemPhotoRequirement.textContent=assessment.requiresPhoto?'필수 · 픽업 전 상태와 포장을 확인합니다.':'선택 · 크기 판단에 도움이 됩니다.';
+  return assessment;
+}
+
+function riskIntakeReady(assessment=currentRiskAssessment()){
+  if(assessment.level==='blocked'||assessment.level==='waiting')return false;
+  const packingReady=Boolean(document.querySelector('[name="packingStatus"]:checked'));
+  const valueReady=itemValueUnknown.checked||Number(itemValue.value)>0;
+  const activeQuestions=[...document.querySelectorAll('[data-risk-question]')].filter(label=>!label.hidden);
+  const questionsReady=activeQuestions.every(label=>label.querySelector('input').checked);
+  const photoReady=!assessment.requiresPhoto||Boolean(itemPhoto.files?.[0]);
+  return packingReady&&valueReady&&questionsReady&&photoReady;
+}
+
 function updateRequestReadiness(){
   const addressesReady=Boolean(selectedAddresses.pickup&&selectedAddresses.dropoff);
-  const itemReady=Boolean(selectedItemKind&&itemName.value.trim()&&document.querySelector('[name="itemScale"]:checked'));
+  const assessment=updateRiskAssessment();
+  const itemReady=Boolean(selectedItemKind&&itemName.value.trim()&&document.querySelector('[name="itemScale"]:checked')&&riskIntakeReady(assessment));
   const contentReady=errandContent.value.trim().length>=4;
   addressNext.disabled=!(addressesReady&&itemReady&&contentReady);
   if(!addressesReady)addressNext.textContent='주소 두 곳을 먼저 확인해 주세요';
   else if(!selectedItemKind)addressNext.textContent='물품 종류를 선택해 주세요';
   else if(!itemName.value.trim())addressNext.textContent='물품명과 수량을 적어주세요';
   else if(!document.querySelector('[name="itemScale"]:checked'))addressNext.textContent='배송 규모를 선택해 주세요';
+  else if(assessment.level==='blocked')addressNext.textContent='현재 접수할 수 없는 물품입니다';
+  else if(!document.querySelector('[name="packingStatus"]:checked'))addressNext.textContent='포장 상태를 선택해 주세요';
+  else if(!itemValueUnknown.checked&&Number(itemValue.value)<=0)addressNext.textContent='물품가액을 입력해 주세요';
+  else if([...document.querySelectorAll('[data-risk-question]')].some(label=>!label.hidden&&!label.querySelector('input').checked))addressNext.textContent='물품별 안전 확인을 완료해 주세요';
+  else if(assessment.requiresPhoto&&!itemPhoto.files?.[0])addressNext.textContent='물품과 포장 사진을 등록해 주세요';
   else if(!contentReady)addressNext.textContent='심부름 내용을 4글자 이상 적어주세요';
-  else addressNext.textContent='요금·결제수단 확인하기 →';
+  else addressNext.textContent=assessment.level==='review'?'검토·견적 화면 확인하기 →':'요금·결제수단 확인하기 →';
 }
 
 async function openPostcode(kind){
@@ -420,14 +511,21 @@ document.querySelectorAll('[data-place-query]').forEach(input=>input.addEventLis
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
 addressNext.addEventListener('click',()=>{
   const itemScale=document.querySelector('[name="itemScale"]:checked')?.value;
-  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||!selectedItemKind||!itemName.value.trim()||!itemScale||errandContent.value.trim().length<4)return;
+  const assessment=currentRiskAssessment();
+  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||!selectedItemKind||!itemName.value.trim()||!itemScale||!riskIntakeReady(assessment)||errandContent.value.trim().length<4)return;
   const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
   const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
   const conditions=[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value);
+  const packingStatus=document.querySelector('[name="packingStatus"]:checked')?.value||'';
+  const declaredValue=itemValueUnknown.checked?'가격 산정 어려움':`${Number(itemValue.value).toLocaleString('ko-KR')}원`;
   document.querySelector('#paymentPickup').textContent=`${formatSelectedAddress(selectedAddresses.pickup)}${pickupDetail?` · ${pickupDetail}`:''}`;
   document.querySelector('#paymentDropoff').textContent=`${formatSelectedAddress(selectedAddresses.dropoff)}${dropoffDetail?` · ${dropoffDetail}`:''}`;
   document.querySelector('#paymentItem').textContent=`${selectedItemKind} · ${itemName.value.trim()} · ${itemScale}`;
-  document.querySelector('#paymentConditions').textContent=conditions.length?`추가 조건: ${conditions.join(' · ')}`:'추가 조건 없음';
+  document.querySelector('#paymentConditions').textContent=`${conditions.length?`추가 조건: ${conditions.join(' · ')} · `:''}포장: ${packingStatus} · 물품가액: ${declaredValue}`;
+  const paymentRisk=document.querySelector('#paymentRisk');
+  paymentRisk.dataset.level=assessment.level;
+  paymentRisk.querySelector('b').textContent=assessment.title;
+  paymentRisk.querySelector('span').textContent=assessment.description;
   document.querySelector('#paymentRequest').textContent=errandContent.value.trim();
   request.hidden=true;
   payment.hidden=false;
@@ -481,15 +579,28 @@ function previewOrderPayload(){
   const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
   const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
   const itemScale=document.querySelector('[name="itemScale"]:checked')?.value||'';
+  const assessment=currentRiskAssessment();
   return {
     previewOnly:true,
     agreementAccepted:previewAgreement.checked,
     customer:{name:customerName.value.trim(),phone:customerPhone.value.trim()},
     pickup:{...selectedAddresses.pickup,detail:pickupDetail},
     dropoff:{...selectedAddresses.dropoff,detail:dropoffDetail},
-    item:{kind:selectedItemKind,name:itemName.value.trim(),scale:itemScale,conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value)},
+    item:{
+      kind:selectedItemKind,
+      name:itemName.value.trim(),
+      scale:itemScale,
+      conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value),
+      packingStatus:document.querySelector('[name="packingStatus"]:checked')?.value||'',
+      declaredValue:itemValueUnknown.checked?null:Number(itemValue.value),
+      declaredValueUnknown:itemValueUnknown.checked,
+      riskLevel:assessment.level,
+      riskFlags:assessment.flags,
+      safetyConfirmations:[...document.querySelectorAll('[data-risk-question] input:checked')].map(input=>input.value),
+      pickupPhotoSelected:Boolean(itemPhoto.files?.[0]),
+    },
     description:errandContent.value.trim(),
-    policyVersion:'preview-2026-10-10',
+    policyVersion:'preview-2026-10-11-risk-v1',
   };
 }
 
@@ -598,6 +709,7 @@ function updateAiAssist(){
 
 errandContent.addEventListener('input',()=>{
   updateAiAssist();
+  updateRiskAssessment();
   updateRequestReadiness();
   scheduleDraftSave();
   if(!aiSuggestion.hidden){aiSuggestion.hidden=true;aiSuggestionText.textContent='';}
@@ -607,8 +719,14 @@ errandContent.addEventListener('input',()=>{
   }
 });
 
-itemName.addEventListener('input',()=>{updateRequestReadiness();scheduleDraftSave();});
-document.querySelectorAll('[name="itemScale"],.extra-conditions input').forEach(input=>input.addEventListener('change',()=>{updateRequestReadiness();scheduleDraftSave();}));
+itemName.addEventListener('input',()=>{updateRiskAssessment();updateRequestReadiness();scheduleDraftSave();});
+document.querySelectorAll('[name="itemScale"],[name="packingStatus"],.extra-conditions input,[data-risk-question] input').forEach(input=>input.addEventListener('change',()=>{updateRiskAssessment();updateRequestReadiness();scheduleDraftSave();}));
+itemValue.addEventListener('input',()=>{updateRiskAssessment();updateRequestReadiness();scheduleDraftSave();});
+itemValueUnknown.addEventListener('change',()=>{
+  itemValue.disabled=itemValueUnknown.checked;
+  if(itemValueUnknown.checked)itemValue.value='';
+  updateRiskAssessment();updateRequestReadiness();scheduleDraftSave();
+});
 document.querySelectorAll('[data-address-detail]').forEach(input=>input.addEventListener('input',scheduleDraftSave));
 document.querySelector('#itemPhotoPick').addEventListener('click',()=>itemPhoto.click());
 itemPhoto.addEventListener('change',()=>{
@@ -630,6 +748,7 @@ itemPhoto.addEventListener('change',()=>{
   itemPhotoName.textContent=file.name;
   itemPhotoPreview.hidden=false;
   itemPhotoStatus.textContent='사진을 선택했습니다. 실제 접수 단계에서는 주문과 함께 안전하게 전송됩니다.';
+  updateRequestReadiness();
 });
 document.querySelector('#itemPhotoRemove').addEventListener('click',()=>{
   if(itemPhotoUrl)URL.revokeObjectURL(itemPhotoUrl);
@@ -638,6 +757,7 @@ document.querySelector('#itemPhotoRemove').addEventListener('click',()=>{
   itemPhotoImage.removeAttribute('src');
   itemPhotoPreview.hidden=true;
   itemPhotoStatus.textContent='사진을 삭제했습니다.';
+  updateRequestReadiness();
 });
 
 aiAssist.addEventListener('click',async()=>{
@@ -708,6 +828,7 @@ const savedDraft=readDraft();
 if(savedDraft)restoreDraft(savedDraft);
 
 updateAiAssist();
+updateRiskAssessment();
 
 let initialErrandStep='home';
 if(new URLSearchParams(location.search).has('payment')){

@@ -18,6 +18,6 @@ assert.match(app,/AI 초안을 고객이 직접 수정하고 있습니다/);
 assert.match(app,/\[고객 확인 필요\] 부분과 나머지 문장을 직접 수정할 수 있습니다/);
 assert.match(app,/원문은 그대로 보존되었습니다/);
 assert.match(css,/\.ai-suggestion-text/);
-assert.match(html,/20261011-14-kakao-yeosu/);
+assert.match(html,/20261011-15-risk-intake/);
 
 console.log('errand AI assist UI regression checks passed');
