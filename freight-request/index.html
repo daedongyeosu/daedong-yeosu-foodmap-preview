@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#163c32">
   <title>트럭이 필요한 배송 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261011-1">
+  <link rel="stylesheet" href="styles.css?v=20261011-2-address">
+  <style>[hidden]{display:none!important}</style>
 </head>
 <body>
   <main>
@@ -13,15 +14,19 @@
     <section class="hero"><span>🚚</span><div><h1>큰 물건도 먼저<br>간단히 요청하세요</h1><p>출발지·도착지와 물품을 확인한 뒤 정확한 금액을 안내합니다.</p></div></section>
     <section class="notice"><b>지금은 화면과 처리 흐름을 확인하는 시험 화면입니다.</b><p>입력해도 실제 주문·결제·기사 호출은 발생하지 않습니다.</p></section>
     <form id="freightForm">
-      <fieldset><legend>어디에서 어디로 가나요?</legend><label><span>가져올 곳</span><input name="pickup" required autocomplete="street-address" placeholder="예: 여수시 문수로 00 상가 앞"></label><label><span>가져다줄 곳</span><input name="dropoff" required autocomplete="street-address" placeholder="예: 여수산단로 000 경비실"></label></fieldset>
+      <fieldset><legend>어디에서 어디로 가나요?</legend><p class="address-help"><b>출발지는 여수, 도착지는 전국</b>까지 선택할 수 있습니다. 가게·건물명으로 찾거나 공식 주소찾기를 이용하세요.</p>
+        <section class="address-card" data-address-card="pickup"><div class="address-title"><b>가져올 곳</b><em>여수 출발</em></div><div class="place-search"><input data-place-query="pickup" placeholder="예: 여수엑스포역, 문수동 철물점"><button type="button" data-place-search="pickup">찾기</button></div><div class="place-results" data-place-results="pickup" hidden aria-live="polite"></div><button class="address-pick" type="button" data-address-open="pickup"><span data-address-label="pickup">공식 주소를 선택해 주세요</span><strong>주소찾기 ›</strong></button><p data-address-verification="pickup">아직 확인된 주소가 없습니다.</p><label data-address-detail-wrap="pickup" hidden><span>상세 위치</span><input data-address-detail="pickup" placeholder="층수, 상가명, 출입 방법"></label></section>
+        <section class="address-card" data-address-card="dropoff"><div class="address-title"><b>가져다줄 곳</b><em>전국 가능</em></div><div class="place-search"><input data-place-query="dropoff" placeholder="예: 광양시청, 서울역"><button type="button" data-place-search="dropoff">찾기</button></div><div class="place-results" data-place-results="dropoff" hidden aria-live="polite"></div><button class="address-pick" type="button" data-address-open="dropoff"><span data-address-label="dropoff">공식 주소를 선택해 주세요</span><strong>주소찾기 ›</strong></button><p data-address-verification="dropoff">아직 확인된 주소가 없습니다.</p><label data-address-detail-wrap="dropoff" hidden><span>상세 위치</span><input data-address-detail="dropoff" placeholder="동·호수, 경비실, 받는 분 안내"></label></section>
+      </fieldset>
       <fieldset><legend>무엇을 옮기나요?</legend><label><span>물품과 수량</span><textarea name="item" required rows="3" placeholder="예: 포장된 행사물품 6박스"></textarea></label><div class="two"><label><span>대략 무게(kg)</span><input name="weight" required min="1" max="25000" type="number" inputmode="numeric" placeholder="350"></label><label><span>차량 조건</span><select name="feature"><option value="">잘 모르겠어요</option><option value="리프트">리프트 필요</option></select></label></div></fieldset>
       <fieldset><legend>기사에게 전할 내용</legend><label><span>희망 시간</span><input name="requestedAt" type="datetime-local"></label><label><span>연락처</span><input name="contact" required inputmode="tel" autocomplete="tel" placeholder="010-0000-0000"></label><label><span>상·하차 조건</span><textarea name="note" rows="3" placeholder="예: 상차는 도와드리고 도착지는 경비실 인계"></textarea></label></fieldset>
       <label class="agree"><input type="checkbox" required><span>프리뷰이며 실제 주문이 접수되지 않음을 확인했습니다.</span></label>
-      <button class="submit" type="submit">무료로 견적 요청해보기</button>
+      <button class="submit" type="submit" disabled>출발지와 도착지를 먼저 확인해 주세요</button>
     </form>
     <section id="result" class="result" hidden aria-live="polite"><span>✓</span><div><small id="requestId"></small><h2>견적 검토 화면에 등록됐습니다</h2><p>관리자 프리뷰에서 같은 주문을 확인할 수 있습니다.</p><a href="../freight-admin/index.html">관리자 처리 흐름 확인하기</a></div></section>
+    <section id="postcodePanel" class="postcode-panel" hidden><header><button id="postcodeBack" type="button" aria-label="주소검색 닫기">←</button><span><b>공식 도로명주소 찾기</b><small id="postcodeTarget">주소 선택</small></span></header><p id="postcodeStatus">주소검색을 불러오는 중입니다.</p><div id="postcodeFrame"></div></section>
   </main>
   <script src="../freight-order-store.js?v=20261011-1"></script>
-  <script src="app.js?v=20261011-1"></script>
+  <script src="app.js?v=20261011-2-address"></script>
 </body>
 </html>
