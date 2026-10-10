@@ -28,6 +28,9 @@ const previewAgreement = document.querySelector('#previewAgreement');
 const previewSubmit = document.querySelector('#previewSubmit');
 const ERRAND_AI_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/errand/assist';
 const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
+const ERRAND_CATALOG_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/catalog';
+const ERRAND_CATALOG_FALLBACK = '../data/errand-place-catalog.json';
+const ERRAND_COORDINATES_ENDPOINT = '../data/store-coordinates.json';
 const ERRAND_DRAFT_KEY = 'matjidoErrandDraftV1';
 const ERRAND_DRAFT_TTL_MS = 24 * 60 * 60 * 1000;
 const ERRAND_PREVIEW_ORDER_KEY = 'matjidoErrandPreviewOrderV1';
@@ -36,6 +39,7 @@ const previewSubmitStatus = document.querySelector('#previewSubmitStatus');
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
 let postcodePromise = null;
+let placeCatalogPromise = null;
 let aiDraftApplied = false;
 let selectedItemKind = '';
 let itemPhotoUrl = '';
@@ -130,8 +134,12 @@ function paintRestoredAddress(kind,address,detail=''){
     zonecode:String(address.zonecode||''),
     roadAddress:String(address.roadAddress||''),
     jibunAddress:String(address.jibunAddress||''),
+    placeName:String(address.placeName||''),
+    storeId:String(address.storeId||''),
+    latitude:Number.isFinite(Number(address.latitude))?Number(address.latitude):null,
+    longitude:Number.isFinite(Number(address.longitude))?Number(address.longitude):null,
   };
-  document.querySelector(`[data-address-label="${kind}"]`).textContent=selectedAddresses[kind].address;
+  document.querySelector(`[data-address-label="${kind}"]`).textContent=formatSelectedAddress(selectedAddresses[kind]);
   const verification=document.querySelector(`[data-address-verification="${kind}"]`);
   verification.textContent=`✓ 임시 저장된 검색주소${selectedAddresses[kind].zonecode?` · 우편번호 ${selectedAddresses[kind].zonecode}`:''}`;
   verification.classList.add('is-verified');
@@ -160,7 +168,7 @@ function clearDraft(){
   clearTimeout(draftSaveTimer);
   try{localStorage.removeItem(ERRAND_DRAFT_KEY);}catch{}
   selectedAddresses.pickup=null;selectedAddresses.dropoff=null;selectedItemKind='';aiDraftApplied=false;
-  document.querySelectorAll('[data-address-label]').forEach(label=>{label.textContent='도로명주소를 검색해 주세요';});
+  document.querySelectorAll('[data-address-label]').forEach(label=>{label.textContent='가게가 안 나오면 도로명주소로 찾기';});
   document.querySelectorAll('[data-address-verification]').forEach(label=>{label.textContent='아직 확인된 주소가 없습니다.';label.classList.remove('is-verified');});
   document.querySelectorAll('[data-address-detail-wrap]').forEach(wrap=>{wrap.hidden=true;});
   document.querySelectorAll('[data-address-detail]').forEach(input=>{input.value='';});
@@ -223,11 +231,141 @@ function isYeosuAddress(data,address){
   return (/전라남도|전남/.test(sido)&&/여수시/.test(sigungu))||/^(전라남도|전남)\s+여수시\s/.test(address);
 }
 
+function formatSelectedAddress(address){
+  if(!address)return '';
+  return `${address.placeName?`${address.placeName} · `:''}${address.address}`;
+}
+
+function normalizePlaceText(value){
+  return String(value||'').toLowerCase().replace(/bbq/g,'비비큐').replace(/[^0-9a-z가-힣]/g,'');
+}
+
+function verifiedStoreAddress(coordinate){
+  if(!coordinate)return '';
+  const candidates=[coordinate.inputAddress,coordinate.matchedAddress].map(value=>String(value||'').trim());
+  return candidates.find(value=>/^(전라남도|전남|전남광주통합특별시)\s+여수시\s/.test(value))||'';
+}
+
+async function loadPlaceCatalog(){
+  if(placeCatalogPromise)return placeCatalogPromise;
+  const catalogRequest=fetch(ERRAND_CATALOG_ENDPOINT,{headers:{'X-Daedong-Client':ERRAND_AI_CLIENT}})
+    .then(response=>{if(!response.ok)throw new Error('catalog');return response.json();})
+    .catch(()=>fetch(ERRAND_CATALOG_FALLBACK).then(response=>{if(!response.ok)throw new Error('catalog-fallback');return response.json();}));
+  placeCatalogPromise=Promise.all([
+    catalogRequest,
+    fetch(ERRAND_COORDINATES_ENDPOINT).then(response=>{if(!response.ok)throw new Error('coordinates');return response.json();}),
+  ]).then(([catalog,coordinates])=>{
+    const deduped=new Map();
+    (Array.isArray(catalog)?catalog:[]).forEach(store=>{
+      const coordinate=coordinates?.[store.id]||coordinates?.[store.store_id]||null;
+      const address=verifiedStoreAddress(coordinate);
+      const item={
+        id:String(store.id||store.store_id||''),
+        name:String(store.name||'').trim(),
+        brandName:String(store.brandName||'').trim(),
+        branchName:String(store.branchName||'').trim(),
+        aliases:Array.isArray(store.searchAliases)?store.searchAliases:[],
+        district:String(store.district||'').trim(),
+        neighborhoods:Array.isArray(store.neighborhoods)?store.neighborhoods:[],
+        category:String(store.category||'').trim(),
+        address,
+        latitude:Number.isFinite(Number(store.latitude))?Number(store.latitude):null,
+        longitude:Number.isFinite(Number(store.longitude))?Number(store.longitude):null,
+      };
+      if(!item.name)return;
+      item.searchText=normalizePlaceText([item.name,item.brandName,item.branchName,...item.aliases,...item.neighborhoods,item.district,item.category,item.address].join(' '));
+      const key=`${normalizePlaceText(item.name)}|${normalizePlaceText(item.district)}`;
+      const previous=deduped.get(key);
+      if(!previous||(item.address&&!previous.address))deduped.set(key,item);
+    });
+    return [...deduped.values()];
+  }).catch(error=>{placeCatalogPromise=null;throw error;});
+  return placeCatalogPromise;
+}
+
+function selectCatalogPlace(kind,place){
+  selectedAddresses[kind]={
+    address:place.address,
+    zonecode:'',
+    roadAddress:place.address,
+    jibunAddress:'',
+    placeName:place.name,
+    storeId:place.id,
+    latitude:place.latitude,
+    longitude:place.longitude,
+  };
+  document.querySelector(`[data-address-label="${kind}"]`).textContent=formatSelectedAddress(selectedAddresses[kind]);
+  const verification=document.querySelector(`[data-address-verification="${kind}"]`);
+  verification.textContent='✓ 여수맛지도 등록 가게의 검증된 주소를 선택했습니다.';
+  verification.classList.add('is-verified');
+  document.querySelector(`[data-address-detail-wrap="${kind}"]`).hidden=false;
+  const results=document.querySelector(`[data-place-results="${kind}"]`);
+  results.hidden=true;
+  results.replaceChildren();
+  updateRequestReadiness();
+  scheduleDraftSave();
+  document.querySelector(`[data-address-detail="${kind}"]`)?.focus();
+}
+
+function renderPlaceResults(kind,places,total){
+  const container=document.querySelector(`[data-place-results="${kind}"]`);
+  container.replaceChildren();
+  container.hidden=false;
+  const summary=document.createElement('p');
+  summary.className='place-result-summary';
+  summary.textContent=total?`검색 결과 ${total}개${total>places.length?` · 가까운 지점을 확인해 주세요 (우선 ${places.length}개 표시)`:''}`:'일치하는 가게를 찾지 못했습니다.';
+  container.append(summary);
+  if(!total){
+    const help=document.createElement('p');
+    help.className='place-result-help';
+    help.textContent='아래 공식 주소 찾기에서 도로명·건물명·지번으로 검색해 주세요.';
+    container.append(help);
+    return;
+  }
+  places.forEach(place=>{
+    const row=document.createElement('button');
+    row.type='button';
+    row.className=`place-result${place.address?'':' needs-address'}`;
+    const text=document.createElement('span');
+    const name=document.createElement('b');
+    name.textContent=place.name;
+    const meta=document.createElement('small');
+    meta.textContent=place.address||`${place.district||'여수'} · 정확한 주소를 공식 주소찾기에서 확인해 주세요`;
+    text.append(name,meta);
+    const action=document.createElement('strong');
+    action.textContent=place.address?'이 주소 선택':'공식 주소 찾기';
+    row.append(text,action);
+    row.addEventListener('click',()=>place.address?selectCatalogPlace(kind,place):openPostcode(kind));
+    container.append(row);
+  });
+}
+
+async function searchPlaces(kind){
+  const queryInput=document.querySelector(`[data-place-query="${kind}"]`);
+  const query=normalizePlaceText(queryInput?.value);
+  const container=document.querySelector(`[data-place-results="${kind}"]`);
+  if(query.length<2){
+    container.hidden=false;
+    container.innerHTML='<p class="place-result-summary">가게명이나 동네명을 두 글자 이상 입력해 주세요.</p>';
+    queryInput?.focus();
+    return;
+  }
+  container.hidden=false;
+  container.innerHTML='<p class="place-result-summary">여수맛지도 전체 가게에서 찾는 중입니다…</p>';
+  try{
+    const catalog=await loadPlaceCatalog();
+    const matches=catalog.filter(place=>place.searchText.includes(query)).sort((a,b)=>Number(Boolean(b.address))-Number(Boolean(a.address))||a.name.localeCompare(b.name,'ko'));
+    renderPlaceResults(kind,matches.slice(0,12),matches.length);
+  }catch{
+    container.innerHTML='<p class="place-result-summary is-error">가게목록을 불러오지 못했습니다. 아래 공식 주소 찾기를 이용해 주세요.</p>';
+  }
+}
+
 function updateAddress(kind,data){
   const address=String(data.roadAddress||data.jibunAddress||data.address||'').trim();
   if(!address){postcodeStatus.textContent='선택한 주소를 확인하지 못했습니다. 다른 검색 결과를 선택해 주세요.';postcodeStatus.classList.add('is-error');return;}
   if(!isYeosuAddress(data,address)){postcodeStatus.textContent='현재는 여수시 주소만 접수할 수 있습니다. 여수시 주소를 선택해 주세요.';postcodeStatus.classList.add('is-error');return;}
-  selectedAddresses[kind]={address,zonecode:String(data.zonecode||''),roadAddress:String(data.roadAddress||''),jibunAddress:String(data.jibunAddress||'')};
+  selectedAddresses[kind]={address,zonecode:String(data.zonecode||''),roadAddress:String(data.roadAddress||''),jibunAddress:String(data.jibunAddress||''),placeName:'',storeId:'',latitude:null,longitude:null};
   document.querySelector(`[data-address-label="${kind}"]`).textContent=address;
   const verification=document.querySelector(`[data-address-verification="${kind}"]`);
   verification.textContent=`✓ 주소검색 확인 완료${data.zonecode?` · 우편번호 ${data.zonecode}`:''}`;
@@ -281,6 +419,8 @@ function closePostcode(){
 }
 
 document.querySelectorAll('[data-address-open]').forEach(button=>button.addEventListener('click',()=>openPostcode(button.dataset.addressOpen)));
+document.querySelectorAll('[data-place-search]').forEach(button=>button.addEventListener('click',()=>searchPlaces(button.dataset.placeSearch)));
+document.querySelectorAll('[data-place-query]').forEach(input=>input.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();searchPlaces(input.dataset.placeQuery);}}));
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
 addressNext.addEventListener('click',()=>{
   const itemScale=document.querySelector('[name="itemScale"]:checked')?.value;
@@ -288,8 +428,8 @@ addressNext.addEventListener('click',()=>{
   const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
   const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
   const conditions=[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value);
-  document.querySelector('#paymentPickup').textContent=`${selectedAddresses.pickup.address}${pickupDetail?` · ${pickupDetail}`:''}`;
-  document.querySelector('#paymentDropoff').textContent=`${selectedAddresses.dropoff.address}${dropoffDetail?` · ${dropoffDetail}`:''}`;
+  document.querySelector('#paymentPickup').textContent=`${formatSelectedAddress(selectedAddresses.pickup)}${pickupDetail?` · ${pickupDetail}`:''}`;
+  document.querySelector('#paymentDropoff').textContent=`${formatSelectedAddress(selectedAddresses.dropoff)}${dropoffDetail?` · ${dropoffDetail}`:''}`;
   document.querySelector('#paymentItem').textContent=`${selectedItemKind} · ${itemName.value.trim()} · ${itemScale}`;
   document.querySelector('#paymentConditions').textContent=conditions.length?`추가 조건: ${conditions.join(' · ')}`:'추가 조건 없음';
   document.querySelector('#paymentRequest').textContent=errandContent.value.trim();

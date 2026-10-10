@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery-9-intake-tracking-10-step-back-11-server-intake">
+  <link rel="stylesheet" href="styles.css?v=20261011-12-place-search">
 </head>
 <body>
   <main>
@@ -52,16 +52,28 @@
     </section>
     <section id="requestPreview" class="screen" hidden>
       <p class="eyebrow">심부름 신청 · 2단계</p><h1 class="request-title">어디서 가져와<br>어디로 전달할까요?</h1>
-      <p class="address-guidance">주소를 직접 적는 방식이 아닙니다. <b>도로명주소 검색 결과에서 선택한 주소만</b> 접수할 수 있어요.</p>
+      <p class="address-guidance"><b>가게명으로 먼저 찾아보세요.</b> 여수맛지도에 등록된 모든 가게를 검색하며, 없는 장소는 공식 도로명주소 검색을 이용할 수 있어요.</p>
       <section class="address-card" data-address-card="pickup">
         <div class="address-card-head"><b>가져올 곳</b><span>필수</span></div>
-        <button class="address-search-button" type="button" data-address-open="pickup"><span data-address-label="pickup">도로명주소를 검색해 주세요</span><strong>주소 찾기 ›</strong></button>
+        <div class="place-search-box">
+          <label for="pickupPlaceQuery">가게·장소명 검색</label>
+          <div><input id="pickupPlaceQuery" data-place-query="pickup" placeholder="예: 더벤티, BBQ, 철물점"><button type="button" data-place-search="pickup">찾기</button></div>
+          <p>가게명·브랜드명·지점명·동네명으로 찾을 수 있어요.</p>
+        </div>
+        <div class="place-results" data-place-results="pickup" hidden aria-live="polite"></div>
+        <button class="address-search-button" type="button" data-address-open="pickup"><span data-address-label="pickup">가게가 안 나오면 도로명주소로 찾기</span><strong>공식 주소 찾기 ›</strong></button>
         <p class="address-verification" data-address-verification="pickup">아직 확인된 주소가 없습니다.</p>
         <label class="address-detail" data-address-detail-wrap="pickup" hidden>상세 위치<input data-address-detail="pickup" placeholder="동·호수, 층수, 출입 방법"></label>
       </section>
       <section class="address-card" data-address-card="dropoff">
         <div class="address-card-head"><b>가져다줄 곳</b><span>필수</span></div>
-        <button class="address-search-button" type="button" data-address-open="dropoff"><span data-address-label="dropoff">도로명주소를 검색해 주세요</span><strong>주소 찾기 ›</strong></button>
+        <div class="place-search-box">
+          <label for="dropoffPlaceQuery">가게·장소명 검색</label>
+          <div><input id="dropoffPlaceQuery" data-place-query="dropoff" placeholder="예: 더벤티, BBQ, 철물점"><button type="button" data-place-search="dropoff">찾기</button></div>
+          <p>가게명·브랜드명·지점명·동네명으로 찾을 수 있어요.</p>
+        </div>
+        <div class="place-results" data-place-results="dropoff" hidden aria-live="polite"></div>
+        <button class="address-search-button" type="button" data-address-open="dropoff"><span data-address-label="dropoff">가게가 안 나오면 도로명주소로 찾기</span><strong>공식 주소 찾기 ›</strong></button>
         <p class="address-verification" data-address-verification="dropoff">아직 확인된 주소가 없습니다.</p>
         <label class="address-detail" data-address-detail-wrap="dropoff" hidden>상세 위치<input data-address-detail="dropoff" placeholder="동·호수, 층수, 받는 분 안내"></label>
       </section>
@@ -206,6 +218,6 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261010-2-verified-address-3-policy-gate-4-ai-assist-5-editable-draft-6-payment-preview-7-item-details-8-draft-recovery-9-intake-tracking-10-step-back-11-server-intake"></script>
+  <script src="app.js?v=20261011-12-place-search"></script>
 </body>
 </html>
