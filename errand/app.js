@@ -259,7 +259,7 @@ function loadKakaoPlaces(){
 }
 
 function isYeosuPlace(place){
-  return /(?:전라남도|전남)\s+여수시\s/.test(String(place.road_address_name||place.address_name||''));
+  return /(?:^|\s)여수시(?:\s|$)/.test(String(place.road_address_name||place.address_name||''));
 }
 
 function keywordSearch(places,keyword){

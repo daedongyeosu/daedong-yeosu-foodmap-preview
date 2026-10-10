@@ -14,6 +14,8 @@ assert.match(app, /dapi\.kakao\.com\/v2\/maps\/sdk\.js/, '카카오 지도 JavaS
 assert.match(app, /libraries=services&autoload=false/, '장소검색 라이브러리를 명시적으로 사용해야 합니다.');
 assert.match(app, /places\.keywordSearch\(keyword/, '임의 카탈로그가 아니라 카카오 공식 장소검색을 사용해야 합니다.');
 assert.match(app, /data\.filter\(isYeosuPlace\)/, '여수시 주소의 장소만 결과로 표시해야 합니다.');
+assert.match(app, /\(\?:\^\|\\s\)여수시\(\?:\\s\|\$\)/, '시·도 명칭이 바뀌어도 여수시 토큰으로 공식 장소를 판정해야 합니다.');
+assert.doesNotMatch(app, /\(\?:전라남도\|전남\)\\s\+여수시/, '특정 시·도 표기에 여수 장소 판정을 고정하면 안 됩니다.');
 assert.match(app, /placeName:String\(place\.place_name/, '카카오가 반환한 가게명이 주문 주소 데이터에 보존되어야 합니다.');
 assert.match(app, /placeId:String\(place\.id/, '카카오 장소 ID가 주문 주소 데이터에 보존되어야 합니다.');
 assert.match(app, /addressSource:'kakao_places'/, '카카오 장소검색 출처가 주문 주소 데이터에 표시되어야 합니다.');
