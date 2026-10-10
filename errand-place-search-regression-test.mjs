@@ -8,6 +8,7 @@ const css = await readFile(new URL('./errand/styles.css', import.meta.url), 'utf
 assert.match(html, /data-place-query="pickup"/, '픽업 장소명 검색창이 있어야 합니다.');
 assert.match(html, /data-place-query="dropoff"/, '도착 장소명 검색창이 있어야 합니다.');
 assert.match(html, /data-address-open="pickup"/, '공식 도로명주소 검색 대안이 유지되어야 합니다.');
+assert.match(html, /app\.js\?v=20261011-14-kakao-yeosu/, '주소 판정 수정본을 브라우저 캐시와 분리해야 합니다.');
 assert.match(html, /카카오 공식 장소검색에서 여수의 가게·시설을 찾습니다/, '장소 결과의 공식 출처를 고객에게 안내해야 합니다.');
 
 assert.match(app, /dapi\.kakao\.com\/v2\/maps\/sdk\.js/, '카카오 지도 JavaScript SDK를 불러와야 합니다.');
