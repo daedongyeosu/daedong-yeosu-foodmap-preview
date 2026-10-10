@@ -2,6 +2,7 @@ const KAKAO_MAPS_APP_KEY='60e2b8ba2516a035006f7c300e0f9ff2';
 const KAKAO_MAPS_SDK_URL=`https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_MAPS_APP_KEY}&libraries=services&autoload=false`;
 const FREIGHT_ROUTE_QUOTE_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/quote';
 const PUBLIC_CLIENT_HEADER='daedong-preview-web-v1-20260804';
+const CUSTOMER_ORDER_KEY='matjidoFreightCustomerActiveOrderIdV1';
 const form=document.querySelector('#freightForm');
 const submit=form.querySelector('button[type="submit"]');
 const postcodePanel=document.querySelector('#postcodePanel');
@@ -9,6 +10,7 @@ const postcodeFrame=document.querySelector('#postcodeFrame');
 const postcodeStatus=document.querySelector('#postcodeStatus');
 let selected={pickup:null,dropoff:null};
 let routeQuote=null;
+let activeCustomerOrderId=localStorage.getItem(CUSTOMER_ORDER_KEY)||'';
 let activeKind='';let postcodePromise=null;let kakaoPromise=null;
 
 function loadPostcode(){
@@ -40,6 +42,14 @@ async function requestRouteQuote(){
   catch(error){routeQuote=null;document.querySelector('#routeQuoteBadge').textContent='관리자 확인';document.querySelector('#routeQuoteMessage').textContent=error.message==='route_provider_not_configured'?'자동 경로계산을 준비 중입니다. 주소는 그대로 저장되며 관리자가 실제 내비거리와 통행료를 확인해 견적합니다.':'도로경로를 자동 확인하지 못했습니다. 관리자가 실제 내비거리와 통행료를 확인해 견적합니다.';button.textContent='다시 계산';}
   finally{button.disabled=false;}
 }
+function renderCustomerDispatch(state=window.MatjidoFreightStore.read()){
+  if(!activeCustomerOrderId)return;const order=state.orders.find(item=>item.id===activeCustomerOrderId);if(!order)return;
+  const copy={QUOTING:['견적 검토 중','관리자가 차량과 작업조건을 확인하고 있습니다.'],PAID:['결제 확인·배차 준비','결제 확인 후 조건에 맞는 기사에게 알립니다.'],OFFERED:['기사 배차 중',`현재 받을 금액 ${won(order.driverPayout)}으로 기사에게 알리고 있습니다.`],ASSIGNED:['기사 배차 완료','기사가 수락했습니다. 이제 추가금은 올릴 수 없습니다.'],ARRIVED:['기사가 출발지에 도착','물품 인수를 준비하고 있습니다.'],PICKED_UP:['배송 중','기사가 물품을 인수해 이동 중입니다.'],SETTLEMENT_PENDING:['배송 완료','완료 증빙을 확인하고 있습니다.']}[order.status]||['진행상태 확인 중','주문 상태를 확인하고 있습니다.'];
+  document.querySelector('#dispatchStatus').textContent=copy[0];document.querySelector('#dispatchMessage').textContent=copy[1];document.querySelector('#boostBox').hidden=!(order.status==='OFFERED'&&order.boostEligible&&!order.assignedDriverId);
+}
+function addBoost(amount){
+  const result=window.MatjidoFreightStore.addCustomerBoost(activeCustomerOrderId,amount);if(!result.ok){alert(result.reason==='INVALID_AMOUNT'?'추가금은 1,000원 단위이며 누적 100,000원까지 가능합니다.':'이미 기사가 수락했거나 추가금 접수 시간이 종료됐습니다.');return;}document.querySelector('#customBoost').value='';renderCustomerDispatch();
+}
 function chooseAddress(kind,value){
   if(kind==='pickup'&&!isYeosu(value.address)){alert('가져올 곳은 현재 여수시 주소만 선택할 수 있습니다.');return;}
   selected[kind]=value;document.querySelector(`[data-address-label="${kind}"]`).textContent=`${value.placeName?`${value.placeName} · `:''}${value.address}`;const verification=document.querySelector(`[data-address-verification="${kind}"]`);verification.textContent=value.source==='kakao_places'?'✓ 카카오 공식 장소검색에서 선택했습니다.':`✓ 공식 주소검색 확인 완료${value.zonecode?` · 우편번호 ${value.zonecode}`:''}`;verification.classList.add('verified');document.querySelector(`[data-address-detail-wrap="${kind}"]`).hidden=false;const results=document.querySelector(`[data-place-results="${kind}"]`);results.hidden=true;results.replaceChildren();updateReady();resetRouteQuote();document.querySelector(`[data-address-detail="${kind}"]`)?.focus();
@@ -61,8 +71,12 @@ document.querySelectorAll('[data-place-query]').forEach(input=>input.addEventLis
 document.querySelectorAll('[data-address-open]').forEach(button=>button.addEventListener('click',()=>openPostcode(button.dataset.addressOpen)));
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
 document.querySelector('#routeQuoteButton').addEventListener('click',requestRouteQuote);
+document.querySelectorAll('[data-boost]').forEach(button=>button.addEventListener('click',()=>addBoost(Number(button.dataset.boost))));
+document.querySelector('#customBoostButton').addEventListener('click',()=>addBoost(Number(document.querySelector('#customBoost').value||0)));
 form.addEventListener('submit',event=>{
   event.preventDefault();if(!selected.pickup||!selected.dropoff)return;const data=new FormData(form);const pickupDetail=document.querySelector('[data-address-detail="pickup"]').value.trim();const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]').value.trim();const pickup=`${selected.pickup.address}${pickupDetail?` · ${pickupDetail}`:''}`;const dropoff=`${selected.dropoff.address}${dropoffDetail?` · ${dropoffDetail}`:''}`;const feature=String(data.get('feature')||'');
   const order=window.MatjidoFreightStore.createRequest({route:`${areaOf(selected.pickup.address)} → ${areaOf(selected.dropoff.address)}`,pickupArea:areaOf(selected.pickup.address),dropoffArea:areaOf(selected.dropoff.address),pickup,dropoff,pickupLocation:selected.pickup,dropoffLocation:selected.dropoff,routeQuote,distance:routeQuote?Number(routeQuote.quote.distanceMeters||0)/1000:0,item:String(data.get('item')).trim(),weight:Number(data.get('weight')),required:feature?[feature]:[],contact:String(data.get('contact')).trim(),requestedAt:String(data.get('requestedAt')||''),note:String(data.get('note')||'').trim()});
-  document.querySelector('#requestId').textContent=`요청번호 ${order.id}`;document.querySelector('#result').hidden=false;document.querySelector('#result').scrollIntoView({behavior:'smooth',block:'center'});submit.disabled=true;
+  activeCustomerOrderId=order.id;localStorage.setItem(CUSTOMER_ORDER_KEY,order.id);document.querySelector('#requestId').textContent=`요청번호 ${order.id}`;document.querySelector('#result').hidden=false;renderCustomerDispatch();document.querySelector('#result').scrollIntoView({behavior:'smooth',block:'center'});submit.disabled=true;
 });
+window.MatjidoFreightStore.subscribe(renderCustomerDispatch);
+if(activeCustomerOrderId&&window.MatjidoFreightStore.read().orders.some(order=>order.id===activeCustomerOrderId)){document.querySelector('#requestId').textContent=`요청번호 ${activeCustomerOrderId}`;document.querySelector('#result').hidden=false;renderCustomerDispatch();}

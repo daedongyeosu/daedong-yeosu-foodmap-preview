@@ -47,6 +47,19 @@
     state.history.push({orderId,from,to:next,actor,at:order.updatedAt});write(state);
     return {ok:true,order:clone(order)};
   }
+  function markNoAcceptance(orderId){
+    const state=read();const order=state.orders.find(item=>item.id===orderId);
+    if(!order||order.status!=='OFFERED'||order.assignedDriverId||order.boostEligible)return {ok:false,reason:'STATUS_CONFLICT'};
+    order.boostEligible=true;order.unacceptedAt=new Date().toISOString();order.updatedAt=order.unacceptedAt;
+    state.history.push({orderId,from:'OFFERED',to:'OFFERED',actor:'DISPATCH_TIMEOUT',at:order.updatedAt,reason:'NO_DRIVER_ACCEPTANCE'});write(state);return {ok:true,order:clone(order)};
+  }
+  function addCustomerBoost(orderId,amount){
+    const state=read();const order=state.orders.find(item=>item.id===orderId);const boost=Math.floor(Number(amount||0)/1000)*1000;const current=Number(order?.boostTotal||0);
+    if(!order||order.status!=='OFFERED'||order.assignedDriverId||!order.boostEligible)return {ok:false,reason:'STATUS_CONFLICT'};
+    if(boost<1000||boost>100000-current)return {ok:false,reason:'INVALID_AMOUNT'};
+    const at=new Date().toISOString();order.boostTotal=current+boost;order.driverPayout=Number(order.driverPayout||0)+boost;order.customerTotal=Number(order.customerTotal||0)+boost;order.boostEligible=false;order.offerRound=Number(order.offerRound||1)+1;order.lastOfferedAt=at;order.updatedAt=at;order.boostPayments=[...(order.boostPayments||[]),{amount:boost,status:'SUCCEEDED_PREVIEW',paidAt:at}];
+    state.history.push({orderId,from:'OFFERED',to:'OFFERED',actor:'CUSTOMER',at,reason:'CUSTOMER_FAST_DISPATCH_BOOST',amount:boost});write(state);return {ok:true,order:clone(order)};
+  }
   async function acceptOrder(orderId,driverId){
     const perform=()=>{
       const state=read();const order=state.orders.find(item=>item.id===orderId);
@@ -63,5 +76,5 @@
     window.addEventListener(CHANGE_EVENT,local);window.addEventListener('storage',storage);
     return ()=>{window.removeEventListener(CHANGE_EVENT,local);window.removeEventListener('storage',storage);};
   }
-  window.MatjidoFreightStore={KEY,read,reset,createRequest,transition,acceptOrder,eligibleDrivers,subscribe};
+  window.MatjidoFreightStore={KEY,read,reset,createRequest,transition,markNoAcceptance,addCustomerBoost,acceptOrder,eligibleDrivers,subscribe};
 })();
