@@ -11,7 +11,7 @@ const errandHtml=fs.readFileSync('errand/index.html','utf8');
 
 for(const html of [requestHtml,adminHtml,driverHtml])assert.match(html,/freight-order-store\.js/);
 for(const status of ['QUOTING','PAID','OFFERED','ASSIGNED','ARRIVED','PICKED_UP','SETTLEMENT_PENDING'])assert.match(`${store}\n${driverJs}`,new RegExp(status));
-for(const method of ['createRequest','transition','markNoAcceptance','addCustomerBoost','acceptOrder','eligibleDrivers','subscribe'])assert.match(store,new RegExp(method));
+for(const method of ['createRequest','transition','markNoAcceptance','offerSecondsRemaining','expireUnacceptedOffers','addCustomerBoost','acceptOrder','eligibleDrivers','subscribe'])assert.match(store,new RegExp(method));
 assert.match(store,/navigator\.locks/);
 assert.match(store,/assignedDriverId/);
 assert.match(requestHtml,/실제 주문·결제·기사 호출은 발생하지 않습니다/);

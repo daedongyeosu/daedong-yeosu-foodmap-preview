@@ -1,6 +1,8 @@
 (function(){
   const KEY='matjidoFreightSharedPreviewV1';
   const CHANGE_EVENT='matjido-freight-change';
+  const OFFER_TIMEOUT_MS=30000;
+  const MAX_BOOST_WON=100000;
   const seedOrders=[
     {id:'YF-1011-01',status:'PAID',createdAt:'2026-10-11T06:00:00+09:00',route:'문수동 → 여천공단',pickupArea:'문수동',dropoffArea:'여천공단',pickup:'여수시 문수로 00 · 상가 앞',dropoff:'여수시 여수산단로 000 · 경비실 인계',contact:'배차 확정 후 연결되는 안심번호',distance:12.8,item:'포장된 행사물품 6박스',weight:350,required:['리프트'],note:'상차지에서 물품을 리프트에 올려드립니다. 도착지 경비실 인계입니다.',customerTotal:52500,driverPayout:45000,platformFee:5000,pgFee:1500,expenses:1000,assignedDriverId:''},
     {id:'YF-1011-02',status:'QUOTING',createdAt:'2026-10-11T06:05:00+09:00',route:'국동 → 웅천동',pickupArea:'국동',dropoffArea:'웅천동',pickup:'여수시 국동 000 · 창고',dropoff:'여수시 웅천로 000 · 지하주차장',contact:'배차 확정 후 연결되는 안심번호',distance:8.4,item:'생활용품 3박스',weight:120,required:[],note:'파손주의 물품이 포함되어 있습니다. 고정 후 운행해 주세요.',customerTotal:37500,driverPayout:32000,platformFee:4000,pgFee:1000,expenses:500,assignedDriverId:''},
@@ -49,14 +51,29 @@
   }
   function markNoAcceptance(orderId){
     const state=read();const order=state.orders.find(item=>item.id===orderId);
-    if(!order||order.status!=='OFFERED'||order.assignedDriverId||order.boostEligible)return {ok:false,reason:'STATUS_CONFLICT'};
+    if(!order||order.status!=='OFFERED'||order.assignedDriverId||order.boostEligible||Number(order.boostTotal||0)>=MAX_BOOST_WON)return {ok:false,reason:'STATUS_CONFLICT'};
     order.boostEligible=true;order.unacceptedAt=new Date().toISOString();order.updatedAt=order.unacceptedAt;
     state.history.push({orderId,from:'OFFERED',to:'OFFERED',actor:'DISPATCH_TIMEOUT',at:order.updatedAt,reason:'NO_DRIVER_ACCEPTANCE'});write(state);return {ok:true,order:clone(order)};
+  }
+  function offerSecondsRemaining(order,now=Date.now()){
+    if(!order||order.status!=='OFFERED'||order.assignedDriverId||order.boostEligible)return 0;
+    const offeredAt=Date.parse(order.lastOfferedAt||order.updatedAt||order.createdAt||'');
+    if(!Number.isFinite(offeredAt))return Math.ceil(OFFER_TIMEOUT_MS/1000);
+    return Math.max(0,Math.ceil((offeredAt+OFFER_TIMEOUT_MS-Number(now))/1000));
+  }
+  function expireUnacceptedOffers(now=Date.now()){
+    const state=read();const at=new Date(Number(now)).toISOString();let count=0;
+    for(const order of state.orders){
+      if(order.status!=='OFFERED'||order.assignedDriverId||order.boostEligible||Number(order.boostTotal||0)>=MAX_BOOST_WON||offerSecondsRemaining(order,now)>0)continue;
+      order.boostEligible=true;order.unacceptedAt=at;order.updatedAt=at;count+=1;
+      state.history.push({orderId:order.id,from:'OFFERED',to:'OFFERED',actor:'DISPATCH_TIMEOUT',at,reason:'NO_DRIVER_ACCEPTANCE'});
+    }
+    if(count)write(state);return {ok:true,count};
   }
   function addCustomerBoost(orderId,amount){
     const state=read();const order=state.orders.find(item=>item.id===orderId);const boost=Math.floor(Number(amount||0)/1000)*1000;const current=Number(order?.boostTotal||0);
     if(!order||order.status!=='OFFERED'||order.assignedDriverId||!order.boostEligible)return {ok:false,reason:'STATUS_CONFLICT'};
-    if(boost<1000||boost>100000-current)return {ok:false,reason:'INVALID_AMOUNT'};
+    if(boost<1000||boost>MAX_BOOST_WON-current)return {ok:false,reason:'INVALID_AMOUNT'};
     const at=new Date().toISOString();order.boostTotal=current+boost;order.driverPayout=Number(order.driverPayout||0)+boost;order.customerTotal=Number(order.customerTotal||0)+boost;order.boostEligible=false;order.offerRound=Number(order.offerRound||1)+1;order.lastOfferedAt=at;order.updatedAt=at;order.boostPayments=[...(order.boostPayments||[]),{amount:boost,status:'SUCCEEDED_PREVIEW',paidAt:at}];
     state.history.push({orderId,from:'OFFERED',to:'OFFERED',actor:'CUSTOMER',at,reason:'CUSTOMER_FAST_DISPATCH_BOOST',amount:boost});write(state);return {ok:true,order:clone(order)};
   }
@@ -76,5 +93,5 @@
     window.addEventListener(CHANGE_EVENT,local);window.addEventListener('storage',storage);
     return ()=>{window.removeEventListener(CHANGE_EVENT,local);window.removeEventListener('storage',storage);};
   }
-  window.MatjidoFreightStore={KEY,read,reset,createRequest,transition,markNoAcceptance,addCustomerBoost,acceptOrder,eligibleDrivers,subscribe};
+  window.MatjidoFreightStore={KEY,OFFER_TIMEOUT_MS,MAX_BOOST_WON,read,reset,createRequest,transition,markNoAcceptance,offerSecondsRemaining,expireUnacceptedOffers,addCustomerBoost,acceptOrder,eligibleDrivers,subscribe};
 })();
