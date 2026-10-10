@@ -8,13 +8,13 @@ const css = await readFile(new URL('./errand/styles.css', import.meta.url), 'utf
 assert.match(html, /data-place-query="pickup"/, '픽업 장소명 검색창이 있어야 합니다.');
 assert.match(html, /data-place-query="dropoff"/, '도착 장소명 검색창이 있어야 합니다.');
 assert.match(html, /data-address-open="pickup"/, '공식 도로명주소 검색 대안이 유지되어야 합니다.');
-assert.match(html, /app\.js\?v=20261011-14-kakao-yeosu/, '주소 판정 수정본을 브라우저 캐시와 분리해야 합니다.');
-assert.match(html, /카카오 공식 장소검색에서 여수의 가게·시설을 찾습니다/, '장소 결과의 공식 출처를 고객에게 안내해야 합니다.');
+assert.match(html, /app\.js\?v=20261011-16-long-distance/, '최신 심부름 수정본을 브라우저 캐시와 분리해야 합니다.');
+assert.match(html, /가져올 곳은 여수시 안에서 선택하고, 가져다줄 곳은 전국 공식 주소/, '장소 결과의 범위와 공식 출처를 고객에게 안내해야 합니다.');
 
 assert.match(app, /dapi\.kakao\.com\/v2\/maps\/sdk\.js/, '카카오 지도 JavaScript SDK를 불러와야 합니다.');
 assert.match(app, /libraries=services&autoload=false/, '장소검색 라이브러리를 명시적으로 사용해야 합니다.');
 assert.match(app, /places\.keywordSearch\(keyword/, '임의 카탈로그가 아니라 카카오 공식 장소검색을 사용해야 합니다.');
-assert.match(app, /data\.filter\(isYeosuPlace\)/, '여수시 주소의 장소만 결과로 표시해야 합니다.');
+assert.match(app, /kind==='pickup'\?result\.places\.filter\(isYeosuPlace\):result\.places/, '가져올 곳은 여수로 제한하고 도착지는 전국 검색을 허용해야 합니다.');
 assert.match(app, /\(\?:\^\|\\s\)여수시\(\?:\\s\|\$\)/, '시·도 명칭이 바뀌어도 여수시 토큰으로 공식 장소를 판정해야 합니다.');
 assert.doesNotMatch(app, /\(\?:전라남도\|전남\)\\s\+여수시/, '특정 시·도 표기에 여수 장소 판정을 고정하면 안 됩니다.');
 assert.match(app, /placeName:String\(place\.place_name/, '카카오가 반환한 가게명이 주문 주소 데이터에 보존되어야 합니다.');
