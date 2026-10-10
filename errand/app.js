@@ -747,7 +747,27 @@ function paintTracking(order){
   if(quote){
     document.querySelector('#trackingQuoteAmount').textContent=`${Number(quote.amountWon).toLocaleString('ko-KR')}원`;
     const validUntil=new Date(quote.validUntil);
+    const expired=Number.isNaN(validUntil.getTime())||validUntil.getTime()<=Date.now();
+    const accepted=quote.acceptanceStatus==='accepted';
     document.querySelector('#trackingQuoteValidity').textContent=Number.isNaN(validUntil.getTime())?'운영자에게 견적 유효시간을 확인해 주세요.':`${validUntil.toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}까지 유효합니다. 이후에는 실제 경로와 배차상황을 다시 계산합니다.`;
+    const agreement=document.querySelector('#trackingQuoteAgreement');
+    const agreementInput=document.querySelector('#trackingQuoteAgreementInput');
+    const acceptButton=document.querySelector('#trackingQuoteAccept');
+    const actionStatus=document.querySelector('#trackingQuoteActionStatus');
+    const quoteKey=`${quote.amountWon}|${quote.validUntil}`;
+    if(quotePanel.dataset.quoteKey!==quoteKey){quotePanel.dataset.quoteKey=quoteKey;agreementInput.checked=false;actionStatus.dataset.state='';}
+    agreement.hidden=accepted||expired;
+    acceptButton.hidden=accepted||expired;
+    agreementInput.disabled=accepted||expired;
+    acceptButton.disabled=!agreementInput.checked||accepted||expired;
+    if(accepted){
+      actionStatus.dataset.state='accepted';actionStatus.textContent='견적 동의가 저장됐습니다. 토스 결제가 연결되기 전에는 돈이 빠져나가지 않으며 기사도 호출되지 않습니다.';
+      document.querySelector('#trackingPaymentLock').textContent='다음 단계: 안전한 결제창 연결 · 현재 실제 결제와 젠딜리 전송은 잠겨 있습니다';
+    }else if(expired){
+      actionStatus.dataset.state='expired';actionStatus.textContent='견적 유효시간이 지났습니다. 운영자가 현재 경로와 배차상황으로 다시 계산해야 합니다.';
+    }else if(actionStatus.dataset.state!=='error'){
+      actionStatus.dataset.state='';actionStatus.textContent='체크한 뒤 동의하면 이 금액으로 결제를 준비합니다. 지금은 실제 결제가 실행되지 않습니다.';
+    }
   }
 }
 
@@ -810,6 +830,32 @@ async function refreshTracking(){
 }
 
 document.querySelector('#trackingRefresh').addEventListener('click',()=>void refreshTracking());
+
+document.querySelector('#trackingQuoteAgreementInput').addEventListener('change',(event)=>{
+  const button=document.querySelector('#trackingQuoteAccept');
+  button.disabled=!event.currentTarget.checked;
+});
+
+document.querySelector('#trackingQuoteAccept').addEventListener('click',async()=>{
+  const order=readPreviewOrder();
+  if(!order?.quote||order.quote.acceptanceStatus==='accepted')return;
+  const button=document.querySelector('#trackingQuoteAccept');
+  const status=document.querySelector('#trackingQuoteActionStatus');
+  if(Date.parse(order.quote.validUntil)<=Date.now()){
+    status.dataset.state='expired';status.textContent='견적 유효시간이 지났습니다. 새 견적을 받아 주세요.';paintTracking(order);return;
+  }
+  button.disabled=true;button.textContent='견적 동의를 안전하게 저장 중…';status.dataset.state='';status.textContent='창을 닫지 말고 잠시만 기다려 주세요.';
+  try{
+    const response=await fetch(`${ERRAND_ORDER_ENDPOINT}/${encodeURIComponent(order.orderId)}/quote-acceptance`,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken},body:JSON.stringify({amountWon:Number(order.quote.amountWon),validUntil:order.quote.validUntil})});
+    const result=await response.json();
+    if(!response.ok)throw new Error(result?.error||'견적 동의를 저장하지 못했습니다.');
+    order.quote={...order.quote,status:'customer_accepted',acceptanceStatus:'accepted',acceptedAt:result.acceptedAt||'',paymentStatus:'ready_for_checkout'};
+    localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));paintTracking(order);
+  }catch(error){
+    status.dataset.state='error';status.textContent=error instanceof Error?error.message:'견적 동의를 저장하지 못했습니다. 새로고침 후 다시 시도해 주세요.';
+    button.disabled=false;
+  }finally{button.textContent='견적에 동의하기';}
+});
 
 document.querySelector('#trackingReview').addEventListener('click',()=>{
   history.back();

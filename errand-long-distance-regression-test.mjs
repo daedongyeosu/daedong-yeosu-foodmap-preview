@@ -27,6 +27,12 @@ assert.match(app,/\/api\/errand\/quote/);
 assert.match(app,/카카오모빌리티의 실제 도로 왕복경로/);
 assert.match(app,/response\.ok\|\|payload\?\.available!==true/,'route lookup failure must fall back without inventing a price');
 assert.match(html,/id="trackingQuote"[^>]+hidden/);
+assert.match(html,/id="trackingQuoteAgreementInput"/);
+assert.match(html,/id="trackingQuoteAccept"[^>]+disabled/);
 assert.match(app,/order\.quote=result\.order\.quote\|\|null/);
+assert.match(app,/quote-acceptance/);
+assert.match(app,/amountWon:Number\(order\.quote\.amountWon\),validUntil:order\.quote\.validUntil/,'customer must accept the exact quote version shown');
+assert.match(app,/Date\.parse\(order\.quote\.validUntil\)<=Date\.now\(\)/,'expired quotes must be blocked on the customer before the server check');
+assert.match(app,/paymentStatus:'ready_for_checkout'/);
 
 console.log('errand long-distance and passenger-separation regression checks passed');
