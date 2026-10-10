@@ -25,7 +25,7 @@ assert.match(app,/packingStatus:document\.querySelector\('\[name="packingStatus"
 assert.match(app,/declaredValue:itemValueUnknown\.checked\?null:Number\(itemValue\.value\)/,'declared value is included in order data');
 assert.match(app,/riskFlags:assessment\.flags/,'risk flags are included in order data');
 assert.match(app,/safetyConfirmations:/,'customer confirmations are included in order data');
-assert.match(app,/policyVersion:'preview-2026-10-11-risk-v1'/,'risk policy version is auditable');
+assert.match(app,/policyVersion:'preview-2026-10-11-long-distance-v1'/,'risk policy version is auditable');
 
 assert.match(css,/\.risk-decision\[data-level="blocked"\]/,'blocked decision has distinct styling');
 assert.match(css,/@media\(max-width:430px\).*\.transport-check-head small/s,'mobile text remains legible');

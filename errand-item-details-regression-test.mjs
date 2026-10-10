@@ -21,6 +21,6 @@ assert.match(app,/URL\.revokeObjectURL/);
 assert.match(app,/추가 조건: \$\{conditions\.join\(' · '\)\}/);
 assert.match(css,/\.item-kind-grid button\[aria-pressed="true"\]/);
 assert.match(css,/@media\(max-width:430px\).*\.item-kind-grid,\.extra-conditions>div\{grid-template-columns:1fr\}/s);
-assert.match(html,/20261011-15-risk-intake/);
+assert.match(html,/20261011-16-long-distance/);
 
 console.log('errand item details regression checks passed');

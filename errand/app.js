@@ -53,7 +53,7 @@ let draftSaveTimer = null;
 const ERRAND_BLOCKED_RULES = [
   {pattern:/(현금(?!영수증)|수표|상품권|유가증권|귀금속|금괴|통장|신용카드|체크카드)/u,reason:'현금·유가증권·귀금속·결제수단은 현재 운송하지 않습니다.'},
   {pattern:/(마약|불법\s*약물|장물|총포|권총|소총|탄약|폭발물|휘발유|경유|부탄가스|농약|염산|황산|독극물)/u,reason:'불법 물품·무기·폭발성·인화성·유해 물질은 접수할 수 없습니다.'},
-  {pattern:/(살아\s*있는\s*(동물|강아지|고양이|생물)|반려동물\s*(배송|운송)|사람\s*(배송|운송))/u,reason:'사람과 살아 있는 동물은 현재 운송하지 않습니다.'},
+  {pattern:/(살아\s*있는\s*(동물|강아지|고양이|생물)|반려동물\s*(배송|운송)|사람\s*(배송|운송)|(사람|승객|아이|어린이|학생|노인|어르신|환자|취객|술\s*취한\s*사람).{0,24}(태워|태우|데려|이동|운송|픽업|모셔|바래다))/u,reason:'사람 이동은 물품 심부름으로 접수할 수 없습니다. 허가된 택시를 이용하고 응급환자는 119에 연락해 주세요.'},
   {pattern:/(담배|전자담배|주류|소주|맥주|양주|와인)/u,reason:'담배와 주류는 판매·연령확인 운영기준이 확정되기 전까지 접수하지 않습니다.'},
 ];
 
@@ -160,6 +160,8 @@ function paintRestoredAddress(kind,address,detail=''){
     placeName:String(address.placeName||''),
     placeId:String(address.placeId||''),
     addressSource:String(address.addressSource||''),
+    sido:String(address.sido||''),
+    sigungu:String(address.sigungu||''),
     latitude:Number.isFinite(Number(address.latitude))?Number(address.latitude):null,
     longitude:Number.isFinite(Number(address.longitude))?Number(address.longitude):null,
   };
@@ -264,6 +266,16 @@ function isYeosuAddress(data,address){
   return (/전라남도|전남/.test(sido)&&/여수시/.test(sigungu))||/^(전라남도|전남)\s+여수시\s/.test(address);
 }
 
+function addressIsInYeosu(address){
+  if(!address)return false;
+  const text=String(address.address||address.roadAddress||address.jibunAddress||'').trim();
+  return isYeosuAddress(address,text)||/(?:^|\s)여수시(?:\s|$)/u.test(text);
+}
+
+function isLongDistanceQuick(){
+  return Boolean(selectedAddresses.pickup&&selectedAddresses.dropoff&&addressIsInYeosu(selectedAddresses.pickup)&&!addressIsInYeosu(selectedAddresses.dropoff));
+}
+
 function formatSelectedAddress(address){
   if(!address)return '';
   return `${address.placeName?`${address.placeName} · `:''}${address.address}`;
@@ -299,8 +311,7 @@ function keywordSearch(places,keyword){
   return new Promise((resolve,reject)=>{
     places.keywordSearch(keyword,(data,status)=>{
       if(status===globalThis.kakao.maps.services.Status.OK){
-        const filtered=data.filter(isYeosuPlace);
-        resolve({places:filtered,total:filtered.length});
+        resolve({places:data,total:data.length});
         return;
       }
       if(status===globalThis.kakao.maps.services.Status.ZERO_RESULT){resolve({places:[],total:0});return;}
@@ -311,7 +322,7 @@ function keywordSearch(places,keyword){
 
 function selectKakaoPlace(kind,place){
   const address=String(place.road_address_name||place.address_name||'').trim();
-  if(!address||!isYeosuPlace(place))return;
+  if(!address||(kind==='pickup'&&!isYeosuPlace(place)))return;
   selectedAddresses[kind]={
     address,
     zonecode:'',
@@ -320,6 +331,8 @@ function selectKakaoPlace(kind,place){
     placeName:String(place.place_name||''),
     placeId:String(place.id||''),
     addressSource:'kakao_places',
+    sido:/^(전라남도|전남)\s/.test(address)?'전라남도':'',
+    sigungu:(address.match(/(?:^|\s)([^\s]+시|[^\s]+군|[^\s]+구)(?:\s|$)/u)||[])[1]||'',
     latitude:Number.isFinite(Number(place.y))?Number(place.y):null,
     longitude:Number.isFinite(Number(place.x))?Number(place.x):null,
   };
@@ -342,7 +355,7 @@ function renderPlaceResults(kind,places,total){
   container.hidden=false;
   const summary=document.createElement('p');
   summary.className='place-result-summary';
-  summary.textContent=places.length?`카카오 공식 장소검색 결과 ${places.length}개${total>places.length?` · 여수시 결과만 표시`:''}`:'여수시에서 일치하는 장소를 찾지 못했습니다.';
+  summary.textContent=places.length?`카카오 공식 장소검색 결과 ${places.length}개`:(kind==='pickup'?'여수시에서 일치하는 장소를 찾지 못했습니다.':'일치하는 장소를 찾지 못했습니다.');
   container.append(summary);
   if(!places.length){
     const help=document.createElement('p');
@@ -383,8 +396,9 @@ async function searchPlaces(kind){
   container.innerHTML='<p class="place-result-summary">카카오 공식 장소검색에서 찾는 중입니다…</p>';
   try{
     const places=await loadKakaoPlaces();
-    const result=await keywordSearch(places,`여수 ${query}`);
-    renderPlaceResults(kind,result.places.slice(0,15),result.total);
+    const result=await keywordSearch(places,kind==='pickup'?`여수 ${query}`:query);
+    const filtered=kind==='pickup'?result.places.filter(isYeosuPlace):result.places;
+    renderPlaceResults(kind,filtered.slice(0,15),filtered.length);
   }catch{
     container.innerHTML='<p class="place-result-summary is-error">카카오 공식 장소검색을 불러오지 못했습니다. 아래 공식 도로명주소 찾기를 이용해 주세요.</p>';
   }
@@ -393,8 +407,8 @@ async function searchPlaces(kind){
 function updateAddress(kind,data){
   const address=String(data.roadAddress||data.jibunAddress||data.address||'').trim();
   if(!address){postcodeStatus.textContent='선택한 주소를 확인하지 못했습니다. 다른 검색 결과를 선택해 주세요.';postcodeStatus.classList.add('is-error');return;}
-  if(!isYeosuAddress(data,address)){postcodeStatus.textContent='현재는 여수시 주소만 접수할 수 있습니다. 여수시 주소를 선택해 주세요.';postcodeStatus.classList.add('is-error');return;}
-  selectedAddresses[kind]={address,zonecode:String(data.zonecode||''),roadAddress:String(data.roadAddress||''),jibunAddress:String(data.jibunAddress||''),placeName:'',placeId:'',addressSource:'daum_postcode',latitude:null,longitude:null};
+  if(kind==='pickup'&&!isYeosuAddress(data,address)){postcodeStatus.textContent='가져올 곳은 현재 여수시 주소만 접수할 수 있습니다.';postcodeStatus.classList.add('is-error');return;}
+  selectedAddresses[kind]={address,zonecode:String(data.zonecode||''),roadAddress:String(data.roadAddress||''),jibunAddress:String(data.jibunAddress||''),placeName:'',placeId:'',addressSource:'daum_postcode',sido:String(data.sido||''),sigungu:String(data.sigungu||''),latitude:null,longitude:null};
   document.querySelector(`[data-address-label="${kind}"]`).textContent=address;
   const verification=document.querySelector(`[data-address-verification="${kind}"]`);
   verification.textContent=`✓ 주소검색 확인 완료${data.zonecode?` · 우편번호 ${data.zonecode}`:''}`;
@@ -423,9 +437,9 @@ function currentRiskAssessment(){
   const scale=document.querySelector('[name="itemScale"]:checked')?.value||'';
   const packing=document.querySelector('[name="packingStatus"]:checked')?.value||'';
   const value=Number(itemValue.value||0);
-  const needsReview=scale==='큰 짐·여러 박스'||scale==='크기를 잘 모르겠음'||packing==='포장 확인 필요'||value>=500000||itemValueUnknown.checked;
+  const needsReview=scale==='큰 짐·여러 박스'||scale==='크기를 잘 모르겠음'||packing==='포장 확인 필요'||value>=500000||itemValueUnknown.checked||isLongDistanceQuick();
   const requiresPhoto=uniqueFlags.some(flag=>['fragile','electronics'].includes(flag))||scale==='큰 짐·여러 박스'||value>=500000;
-  if(needsReview)return {level:'review',flags:uniqueFlags,requiresPhoto,title:'운영자 확인 후 견적을 안내합니다.',description:'크기·포장·물품가액을 확인한 뒤 적합한 차량과 요금을 결정해요.'};
+  if(needsReview)return {level:'review',flags:uniqueFlags,requiresPhoto,title:'운영자 확인 후 견적을 안내합니다.',description:isLongDistanceQuick()?'여수 밖 긴급 장거리 퀵은 네비게이션 왕복거리·시간과 빈차 복귀비용을 확인한 뒤 금액을 확정해요.':'크기·포장·물품가액을 확인한 뒤 적합한 차량과 요금을 결정해요.'};
   if(uniqueFlags.length)return {level:'special',flags:uniqueFlags,requiresPhoto,title:'특별취급 조건으로 접수합니다.',description:'추가 확인을 마치면 기사에게 주의사항이 함께 전달돼요.'};
   return {level:'standard',flags:uniqueFlags,requiresPhoto:false,title:'일반 전달 심부름으로 접수할 수 있어요.',description:'포장과 물품가액을 확인하면 예상요금을 볼 수 있어요.'};
 }
@@ -509,6 +523,31 @@ document.querySelectorAll('[data-address-open]').forEach(button=>button.addEvent
 document.querySelectorAll('[data-place-search]').forEach(button=>button.addEventListener('click',()=>searchPlaces(button.dataset.placeSearch)));
 document.querySelectorAll('[data-place-query]').forEach(input=>input.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();searchPlaces(input.dataset.placeQuery);}}));
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
+
+function updateFarePreview(){
+  const farePreview=document.querySelector('#farePreview');
+  const fareLabel=document.querySelector('#fareLabel');
+  const fareBadge=document.querySelector('#fareBadge');
+  const fareAmount=document.querySelector('#fareAmount');
+  const fareBreakdown=document.querySelector('#fareBreakdown');
+  const fareNote=document.querySelector('#fareNote');
+  if(isLongDistanceQuick()){
+    farePreview.dataset.mode='long_distance_express';
+    fareLabel.textContent='긴급 장거리 전담배송';
+    fareBadge.textContent='관리자 견적';
+    fareAmount.textContent='견적 확인 후 확정';
+    fareBreakdown.innerHTML='<div><dt>거리 기준</dt><dd>네비게이션 왕복 실제거리</dd></div><div><dt>복귀 기준</dt><dd>빈차 복귀 100% 반영</dd></div><div><dt>별도 실비</dt><dd>통행료·선박비</dd></div>';
+    fareNote.textContent='직선거리나 편도거리로 계산하지 않습니다. 차량별 실제 통행 가능한 왕복 경로와 왕복 소요시간, 연료·정비·감가상각, 기사 수행료를 확인한 뒤 결제 전에 최종금액과 도착예정 범위를 안내합니다.';
+    return;
+  }
+  farePreview.dataset.mode='local_quick';
+  fareLabel.textContent='예상 심부름 요금';
+  fareBadge.textContent='예시 금액';
+  fareAmount.textContent='11,450원';
+  fareBreakdown.innerHTML='<div><dt>기사 수행료</dt><dd>10,000원</dd></div><div><dt>플랫폼 이용금액</dt><dd>1,450원</dd></div>';
+  fareNote.textContent='현재는 화면 확인용 예시입니다. 실제 요금은 네비게이션 실제 이동거리·물품·현장조건을 반영하여 결제 전에 항목별로 표시합니다.';
+}
+
 addressNext.addEventListener('click',()=>{
   const itemScale=document.querySelector('[name="itemScale"]:checked')?.value;
   const assessment=currentRiskAssessment();
@@ -527,6 +566,7 @@ addressNext.addEventListener('click',()=>{
   paymentRisk.querySelector('b').textContent=assessment.title;
   paymentRisk.querySelector('span').textContent=assessment.description;
   document.querySelector('#paymentRequest').textContent=errandContent.value.trim();
+  updateFarePreview();
   request.hidden=true;
   payment.hidden=false;
   pushErrandStep('payment');
@@ -600,7 +640,14 @@ function previewOrderPayload(){
       pickupPhotoSelected:Boolean(itemPhoto.files?.[0]),
     },
     description:errandContent.value.trim(),
-    policyVersion:'preview-2026-10-11-risk-v1',
+    delivery:{
+      mode:isLongDistanceQuick()?'long_distance_express':'local_quick',
+      quoteStatus:isLongDistanceQuick()?'operator_review_required':'preview_only',
+      routeMetric:'navigation_road_round_trip',
+      returnAssumption:isLongDistanceQuick()?'full_empty_return':'not_applicable',
+      priceIncludes:isLongDistanceQuick()?['왕복 실제거리','왕복 예상시간','연료·정비·감가상각','기사 수행료','통행료·선박비','플랫폼 이용금액']:[],
+    },
+    policyVersion:'preview-2026-10-11-long-distance-v1',
   };
 }
 
