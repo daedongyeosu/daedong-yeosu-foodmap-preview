@@ -23,5 +23,8 @@ assert.match(app,/사람 이동은 물품 심부름으로 접수할 수 없습�
 assert.match(app,/timingType:isLongDistanceQuick\(\)/);
 assert.match(app,/delayPolicy:isLongDistanceQuick\(\)/);
 assert.match(app,/quoteAgreement:isLongDistanceQuick\(\)/);
+assert.match(app,/\/api\/errand\/quote/);
+assert.match(app,/카카오모빌리티의 실제 도로 왕복경로/);
+assert.match(app,/response\.ok\|\|payload\?\.available!==true/,'route lookup failure must fall back without inventing a price');
 
 console.log('errand long-distance and passenger-separation regression checks passed');

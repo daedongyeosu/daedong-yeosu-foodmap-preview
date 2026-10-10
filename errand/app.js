@@ -43,6 +43,7 @@ const ERRAND_DRAFT_KEY = 'matjidoErrandDraftV1';
 const ERRAND_DRAFT_TTL_MS = 24 * 60 * 60 * 1000;
 const ERRAND_PREVIEW_ORDER_KEY = 'matjidoErrandPreviewOrderV1';
 const ERRAND_ORDER_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/orders';
+const ERRAND_QUOTE_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/quote';
 const previewSubmitStatus = document.querySelector('#previewSubmitStatus');
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
@@ -53,6 +54,8 @@ let selectedItemKind = '';
 let itemPhotoUrl = '';
 let restoringDraft = false;
 let draftSaveTimer = null;
+let routeQuoteRequestId = 0;
+const routeQuoteCache = new Map();
 
 const ERRAND_BLOCKED_RULES = [
   {pattern:/(현금(?!영수증)|수표|상품권|유가증권|귀금속|금괴|통장|신용카드|체크카드)/u,reason:'현금·유가증권·귀금속·결제수단은 현재 운송하지 않습니다.'},
@@ -544,6 +547,7 @@ function updateFarePreview(){
     fareBreakdown.innerHTML='<div><dt>거리 기준</dt><dd>네비게이션 왕복 실제거리</dd></div><div><dt>복귀 기준</dt><dd>빈차 복귀 100% 반영</dd></div><div><dt>별도 실비</dt><dd>통행료·선박비</dd></div>';
     fareNote.textContent='직선거리나 편도거리로 계산하지 않습니다. 차량별 실제 통행 가능한 왕복 경로와 왕복 소요시간, 연료·정비·감가상각, 기사 수행료를 확인한 뒤 결제 전에 최종금액과 도착예정 범위를 안내합니다.';
     updatePreviewReadiness();
+    void requestLongDistanceQuote();
     return;
   }
   longDistancePromise.hidden=true;
@@ -554,6 +558,44 @@ function updateFarePreview(){
   fareBreakdown.innerHTML='<div><dt>기사 수행료</dt><dd>10,000원</dd></div><div><dt>플랫폼 이용금액</dt><dd>1,450원</dd></div>';
   fareNote.textContent='현재는 화면 확인용 예시입니다. 실제 요금은 네비게이션 실제 이동거리·물품·현장조건을 반영하여 결제 전에 항목별로 표시합니다.';
   updatePreviewReadiness();
+}
+
+function formatRouteDuration(seconds){
+  const totalMinutes=Math.max(1,Math.round(Number(seconds||0)/60));
+  const hours=Math.floor(totalMinutes/60);
+  const minutes=totalMinutes%60;
+  return `${hours?`${hours}시간 `:''}${minutes?`${minutes}분`:''}`.trim();
+}
+
+function paintLongDistanceQuote(payload){
+  const quote=payload?.quote;
+  if(!quote||!Number.isFinite(Number(quote.totalWon)))return false;
+  document.querySelector('#fareLabel').textContent='긴급 장거리 예상견적';
+  document.querySelector('#fareBadge').textContent='운영자 확정 전';
+  document.querySelector('#fareAmount').textContent=`약 ${Number(quote.totalWon).toLocaleString('ko-KR')}원`;
+  document.querySelector('#fareBreakdown').innerHTML=`<div><dt>네비게이션 왕복</dt><dd>${(Number(quote.distanceMeters)/1000).toFixed(1)}km · ${formatRouteDuration(quote.durationSeconds)}</dd></div><div><dt>차량 운행비</dt><dd>${Number(quote.vehicleOperatingWon).toLocaleString('ko-KR')}원</dd></div><div><dt>기사 시간비</dt><dd>${Number(quote.riderTimeWon).toLocaleString('ko-KR')}원</dd></div><div><dt>왕복 통행료</dt><dd>${Number(quote.tollWon).toLocaleString('ko-KR')}원</dd></div><div><dt>플랫폼 이용금액</dt><dd>${Number(quote.platformWon).toLocaleString('ko-KR')}원</dd></div>`;
+  document.querySelector('#fareNote').textContent='카카오모빌리티의 실제 도로 왕복경로로 계산한 화면용 예상견적입니다. 운영자가 차량·물품·날씨·희망시각을 확인한 최종금액에 동의하기 전에는 결제나 배차가 시작되지 않습니다.';
+  return true;
+}
+
+async function requestLongDistanceQuote(){
+  if(!isLongDistanceQuick())return;
+  const key=`${selectedAddresses.pickup.address}\n${selectedAddresses.dropoff.address}`;
+  if(routeQuoteCache.has(key)){paintLongDistanceQuote(routeQuoteCache.get(key));return;}
+  const requestId=++routeQuoteRequestId;
+  document.querySelector('#fareBadge').textContent='왕복경로 확인 중';
+  document.querySelector('#fareAmount').textContent='계산 중…';
+  try{
+    const response=await fetch(ERRAND_QUOTE_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT},body:JSON.stringify({pickupAddress:selectedAddresses.pickup.address,dropoffAddress:selectedAddresses.dropoff.address})});
+    const payload=await response.json();
+    if(requestId!==routeQuoteRequestId||!isLongDistanceQuick())return;
+    if(!response.ok||payload?.available!==true||!paintLongDistanceQuote(payload))throw new Error('quote-unavailable');
+    routeQuoteCache.set(key,payload);
+  }catch{
+    if(requestId!==routeQuoteRequestId||!isLongDistanceQuick())return;
+    document.querySelector('#fareBadge').textContent='관리자 견적';
+    document.querySelector('#fareAmount').textContent='견적 확인 후 확정';
+  }
 }
 
 function updateLongDistanceTiming(){
