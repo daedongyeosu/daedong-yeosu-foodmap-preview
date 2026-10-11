@@ -2,6 +2,7 @@
   const KEY='matjidoFreightSharedPreviewV1';
   const CHANGE_EVENT='matjido-freight-change';
   const OFFER_TIMEOUT_MS=30000;
+  const ASSIGNMENT_GRACE_MS=15*60*1000;
   const MAX_BOOST_WON=100000;
   const seedOrders=[
     {id:'YF-1011-01',status:'PAID',createdAt:'2026-10-11T06:00:00+09:00',route:'문수동 → 여천공단',pickupArea:'문수동',dropoffArea:'여천공단',pickup:'여수시 문수로 00 · 상가 앞',dropoff:'여수시 여수산단로 000 · 경비실 인계',contact:'배차 확정 후 연결되는 안심번호',distance:12.8,item:'포장된 행사물품 6박스',weight:350,required:['리프트'],note:'상차지에서 물품을 리프트에 올려드립니다. 도착지 경비실 인계입니다.',customerTotal:52500,driverPayout:45000,platformFee:5000,pgFee:1500,expenses:1000,assignedDriverId:''},
@@ -29,7 +30,8 @@
   }
   function reset(){return write(initial());}
   function eligibleDrivers(order,state=read()){
-    return state.drivers.filter(driver=>driver.verified&&driver.available&&driver.payload>=Number(order.weight||0)&&(order.required||[]).every(feature=>driver.features.includes(feature)));
+    const excluded=new Set(order.excludedDriverIds||[]);const now=Date.now();
+    return state.drivers.filter(driver=>driver.verified&&driver.available&&!excluded.has(driver.id)&&(!driver.suspendedUntil||Date.parse(driver.suspendedUntil)<=now)&&driver.payload>=Number(order.weight||0)&&(order.required||[]).every(feature=>driver.features.includes(feature)));
   }
   function createRequest(payload){
     const state=read();
@@ -64,7 +66,9 @@
   function expireUnacceptedOffers(now=Date.now()){
     const state=read();const at=new Date(Number(now)).toISOString();let count=0;
     for(const order of state.orders){
-      if(order.status!=='OFFERED'||order.assignedDriverId||order.boostEligible||Number(order.boostTotal||0)>=MAX_BOOST_WON||offerSecondsRemaining(order,now)>0)continue;
+      if(order.status!=='OFFERED'||order.assignedDriverId||offerSecondsRemaining(order,now)>0)continue;
+      if(order.recoveryPriority){order.status='REFUND_PENDING';order.refundReason='REPLACEMENT_DRIVER_UNAVAILABLE';order.updatedAt=at;count+=1;state.history.push({orderId:order.id,from:'OFFERED',to:'REFUND_PENDING',actor:'DISPATCH_RECOVERY',at,reason:order.refundReason});continue;}
+      if(order.boostEligible||Number(order.boostTotal||0)>=MAX_BOOST_WON)continue;
       order.boostEligible=true;order.unacceptedAt=at;order.updatedAt=at;count+=1;
       state.history.push({orderId:order.id,from:'OFFERED',to:'OFFERED',actor:'DISPATCH_TIMEOUT',at,reason:'NO_DRIVER_ACCEPTANCE'});
     }
@@ -82,10 +86,25 @@
       const state=read();const order=state.orders.find(item=>item.id===orderId);
       const driver=state.drivers.find(item=>item.id===driverId);
       if(!order||order.status!=='OFFERED'||!driver||!eligibleDrivers(order,state).some(item=>item.id===driverId))return {ok:false,reason:'ALREADY_ASSIGNED'};
-      return transition(orderId,'OFFERED','ASSIGNED',{assignedDriverId:driverId},`DRIVER:${driverId}`);
+      const acceptedAt=new Date().toISOString();const requested=Date.parse(order.requestedAt||'');const promisedPickupAt=new Date(Number.isFinite(requested)&&requested>Date.now()?requested:Date.now()+ASSIGNMENT_GRACE_MS).toISOString();
+      return transition(orderId,'OFFERED','ASSIGNED',{assignedDriverId:driverId,acceptedAt,promisedPickupAt,commitmentStatus:'ON_TRACK',recoveryPriority:false,boostEligible:false},`DRIVER:${driverId}`);
     };
     if(navigator.locks&&navigator.locks.request)return navigator.locks.request(`freight-accept-${orderId}`,perform);
     return perform();
+  }
+  function recoverDriverFailure(orderId,driverId,reason='DRIVER_UNAVAILABLE',now=Date.now()){
+    const state=read();const order=state.orders.find(item=>item.id===orderId);const driver=state.drivers.find(item=>item.id===driverId);
+    if(!order||order.assignedDriverId!==driverId||!['ASSIGNED','ARRIVED'].includes(order.status))return {ok:false,reason:'STATUS_CONFLICT'};
+    const from=order.status;const at=new Date(Number(now)).toISOString();order.status='OFFERED';order.assignedDriverId='';order.failedDriverId=driverId;order.excludedDriverIds=[...new Set([...(order.excludedDriverIds||[]),driverId])];order.recoveryPriority=true;order.commitmentStatus='DRIVER_FAILED';order.recoveryStartedAt=at;order.lastOfferedAt=at;order.offerRound=Number(order.offerRound||1)+1;order.updatedAt=at;order.boostEligible=false;
+    if(driver){driver.reliabilityFailures=Number(driver.reliabilityFailures||0)+1;driver.lastFailureAt=at;}
+    state.history.push({orderId,from,to:'OFFERED',actor:`DRIVER:${driverId}`,at,reason});write(state);return {ok:true,order:clone(order)};
+  }
+  function assignmentSecondsRemaining(order,now=Date.now()){
+    if(!order||order.status!=='ASSIGNED'||!order.promisedPickupAt)return 0;return Math.max(0,Math.ceil((Date.parse(order.promisedPickupAt)-Number(now))/1000));
+  }
+  function checkAssignmentCommitments(now=Date.now()){
+    const state=read();const overdue=state.orders.filter(order=>order.status==='ASSIGNED'&&order.assignedDriverId&&order.promisedPickupAt&&Date.parse(order.promisedPickupAt)<=Number(now)).map(order=>({orderId:order.id,driverId:order.assignedDriverId}));let count=0;
+    for(const item of overdue){if(recoverDriverFailure(item.orderId,item.driverId,'PICKUP_PROMISE_MISSED',now).ok)count+=1;}return {ok:true,count};
   }
   function subscribe(listener){
     const local=event=>listener(event.detail||read());
@@ -93,5 +112,5 @@
     window.addEventListener(CHANGE_EVENT,local);window.addEventListener('storage',storage);
     return ()=>{window.removeEventListener(CHANGE_EVENT,local);window.removeEventListener('storage',storage);};
   }
-  window.MatjidoFreightStore={KEY,OFFER_TIMEOUT_MS,MAX_BOOST_WON,read,reset,createRequest,transition,markNoAcceptance,offerSecondsRemaining,expireUnacceptedOffers,addCustomerBoost,acceptOrder,eligibleDrivers,subscribe};
+  window.MatjidoFreightStore={KEY,OFFER_TIMEOUT_MS,ASSIGNMENT_GRACE_MS,MAX_BOOST_WON,read,reset,createRequest,transition,markNoAcceptance,offerSecondsRemaining,expireUnacceptedOffers,addCustomerBoost,acceptOrder,recoverDriverFailure,assignmentSecondsRemaining,checkAssignmentCommitments,eligibleDrivers,subscribe};
 })();

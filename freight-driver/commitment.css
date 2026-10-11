@@ -1,0 +1,40 @@
+.commitment {
+  margin-top: 15px;
+  padding: 15px;
+  border: 2px solid #efb36f;
+  border-radius: 15px;
+  background: #fff8e9;
+}
+
+.commitment small {
+  display: block;
+  color: #76533a;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.commitment strong {
+  display: block;
+  margin-top: 5px;
+  color: #a53e18;
+  font-size: 22px;
+}
+
+.commitment p {
+  margin: 6px 0 0;
+  color: #685445;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.danger-action {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 8px;
+  border: 1px solid #d7a58d;
+  border-radius: 14px;
+  background: #fff;
+  color: #97401e;
+  font-size: 15px;
+  font-weight: 900;
+}

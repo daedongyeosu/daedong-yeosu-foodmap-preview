@@ -45,8 +45,8 @@ async function requestRouteQuote(){
 function renderCustomerDispatch(state=window.MatjidoFreightStore.read()){
   if(!activeCustomerOrderId)return;const order=state.orders.find(item=>item.id===activeCustomerOrderId);if(!order)return;
   const seconds=window.MatjidoFreightStore.offerSecondsRemaining(order);const offeredMessage=order.boostEligible?'아직 수락한 기사가 없습니다. 급하면 기사에게 전달할 금액을 직접 올릴 수 있습니다.':Number(order.boostTotal||0)>=window.MatjidoFreightStore.MAX_BOOST_WON?'빠른 배차 추가금이 최대 금액에 도달했습니다. 기사 수락을 기다리고 있습니다.':`현재 수행료 ${won(order.driverPayout)}으로 기사에게 알리는 중입니다. ${seconds}초 뒤에도 미수락이면 추가금 선택이 열립니다.`;
-  const copy={QUOTING:['견적 검토 중','관리자가 차량과 작업조건을 확인하고 있습니다.'],PAID:['결제 확인·배차 준비','결제 확인 후 조건에 맞는 기사에게 알립니다.'],OFFERED:['기사 배차 중',offeredMessage],ASSIGNED:['기사 배차 완료','기사가 수락했습니다. 이제 추가금은 올릴 수 없습니다.'],ARRIVED:['기사가 출발지에 도착','물품 인수를 준비하고 있습니다.'],PICKED_UP:['배송 중','기사가 물품을 인수해 이동 중입니다.'],SETTLEMENT_PENDING:['배송 완료','완료 증빙을 확인하고 있습니다.']}[order.status]||['진행상태 확인 중','주문 상태를 확인하고 있습니다.'];
-  document.querySelector('#dispatchStatus').textContent=copy[0];document.querySelector('#dispatchMessage').textContent=copy[1];document.querySelector('#boostBox').hidden=!(order.status==='OFFERED'&&order.boostEligible&&!order.assignedDriverId);
+  const offerCopy=order.recoveryPriority?'기존 기사의 수행이 어려워져 고객 추가비용 없이 다른 기사를 긴급 배차하고 있습니다.':offeredMessage;const copy={QUOTING:['견적 검토 중','관리자가 차량과 작업조건을 확인하고 있습니다.'],PAID:['결제 확인·배차 준비','결제 확인 후 조건에 맞는 기사에게 알립니다.'],OFFERED:[order.recoveryPriority?'긴급 재배차 중':'기사 배차 중',offerCopy],ASSIGNED:['기사 배차 완료','기사가 픽업 약속을 확인하고 수락했습니다.'],ARRIVED:['기사가 출발지에 도착','물품 인수를 준비하고 있습니다.'],PICKED_UP:['배송 중','기사가 물품을 인수해 이동 중입니다.'],SETTLEMENT_PENDING:['배송 완료','완료 증빙을 확인하고 있습니다.'],REFUND_PENDING:['전액환불 처리 중','약속을 지킬 대체기사를 구하지 못해 결제금액 전액을 환불합니다.']}[order.status]||['진행상태 확인 중','주문 상태를 확인하고 있습니다.'];
+  document.querySelector('#dispatchStatus').textContent=copy[0];document.querySelector('#dispatchMessage').textContent=copy[1];document.querySelector('#boostBox').hidden=!(order.status==='OFFERED'&&order.boostEligible&&!order.assignedDriverId&&!order.recoveryPriority);
 }
 function addBoost(amount){
   const result=window.MatjidoFreightStore.addCustomerBoost(activeCustomerOrderId,amount);if(!result.ok){alert(result.reason==='INVALID_AMOUNT'?'추가금은 1,000원 단위이며 누적 100,000원까지 가능합니다.':'이미 기사가 수락했거나 추가금 접수 시간이 종료됐습니다.');return;}document.querySelector('#customBoost').value='';renderCustomerDispatch();
@@ -80,5 +80,5 @@ form.addEventListener('submit',event=>{
   activeCustomerOrderId=order.id;localStorage.setItem(CUSTOMER_ORDER_KEY,order.id);document.querySelector('#requestId').textContent=`요청번호 ${order.id}`;document.querySelector('#result').hidden=false;renderCustomerDispatch();document.querySelector('#result').scrollIntoView({behavior:'smooth',block:'center'});submit.disabled=true;
 });
 window.MatjidoFreightStore.subscribe(renderCustomerDispatch);
-setInterval(()=>{window.MatjidoFreightStore.expireUnacceptedOffers();renderCustomerDispatch();},1000);
+setInterval(()=>{window.MatjidoFreightStore.checkAssignmentCommitments();window.MatjidoFreightStore.expireUnacceptedOffers();renderCustomerDispatch();},1000);
 if(activeCustomerOrderId&&window.MatjidoFreightStore.read().orders.some(order=>order.id===activeCustomerOrderId)){document.querySelector('#requestId').textContent=`요청번호 ${activeCustomerOrderId}`;document.querySelector('#result').hidden=false;renderCustomerDispatch();}
