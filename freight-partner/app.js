@@ -4,7 +4,8 @@ const saveDraftButton=document.querySelector('#saveDraft');
 const status=document.querySelector('#formStatus');
 const review=document.querySelector('#applicationReview');
 const summary=document.querySelector('#reviewSummary');
-const DRAFT_KEY='matjidoFreightPartnerDraftV2';
+const DRAFT_KEY='matjidoFreightPartnerDraftV3';
+const VEHICLE_LABELS={MOTORCYCLE:'오토바이',JIMBAJI_MOTORCYCLE:'짐받이 오토바이',PASSENGER_CAR:'승용차',DAMAS:'다마스·소형 밴',LABO:'라보·경형 트럭',TON:'포터·봉고·1톤 화물',SPECIAL_TRUCK:'냉동·탑차·리프트·대형 화물'};
 
 function normalizePhone(value){
   const digits=String(value||'').replace(/\D/g,'').slice(0,11);
@@ -42,7 +43,7 @@ function updateReadiness(){
 
 function snapshot(){
   return {
-    version:2,updatedAt:Date.now(),
+    version:3,updatedAt:Date.now(),
     partnerType:form.querySelector('[name="partnerType"]:checked')?.value||'',
     contactName:document.querySelector('#contactName').value.trim(),
     contactPhone:document.querySelector('#contactPhone').value.trim(),
@@ -60,7 +61,7 @@ function snapshot(){
 function restoreDraft(){
   try{
     const draft=JSON.parse(localStorage.getItem(DRAFT_KEY)||'null');
-    if(!draft||draft.version!==2)return;
+    if(!draft||draft.version!==3)return;
     const partnerType=form.querySelector(`[name="partnerType"][value="${CSS.escape(draft.partnerType||'')}"]`);
     if(partnerType)partnerType.checked=true;
     for(const id of ['contactName','contactPhone','businessName','vehicleType','payloadKg','serviceArea','longDistance']){
@@ -86,7 +87,7 @@ saveDraftButton.addEventListener('click',()=>{
 form.addEventListener('submit',event=>{
   event.preventDefault();if(!requiredReady())return updateReadiness();
   const data=snapshot();
-  const rows=[['신청 유형',data.partnerType],['신청자',data.contactName],['연락처',data.contactPhone],['상호명',data.businessName||'해당 없음'],['차량',data.vehicleType],['최대적재량',`${Number(data.payloadKg).toLocaleString('ko-KR')}kg`],['차량 특성',data.vehicleFeatures.join(', ')||'없음'],['운행지역',data.serviceArea],['가능시간',data.serviceWindows.join(', ')],['24시간 긴급호출',data.allDayAvailability],['장거리',data.longDistance]];
+  const rows=[['신청 유형',data.partnerType],['신청자',data.contactName],['연락처',data.contactPhone],['상호명',data.businessName||'해당 없음'],['차량',VEHICLE_LABELS[data.vehicleType]||data.vehicleType],['최대적재량',`${Number(data.payloadKg).toLocaleString('ko-KR')}kg`],['차량 특성',data.vehicleFeatures.join(', ')||'없음'],['운행지역',data.serviceArea],['가능시간',data.serviceWindows.join(', ')],['24시간 긴급호출',data.allDayAvailability],['장거리',data.longDistance]];
   summary.innerHTML=rows.map(([key,value])=>`<div><dt>${key}</dt><dd>${String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]))}</dd></div>`).join('');
   review.hidden=false;review.scrollIntoView({behavior:'smooth',block:'start'});
 });

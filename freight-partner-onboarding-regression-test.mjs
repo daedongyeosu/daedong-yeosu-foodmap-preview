@@ -9,7 +9,7 @@ const scheduleCss=fs.readFileSync('freight-partner/schedule.css','utf8');
 
 assert.match(errandHtml,/href="\.\.\/freight-partner\/"/);
 assert.match(errandHtml,/내 트럭으로<br>여수 배송 일 받기/);
-for(const text of ['개인화물기사','운송업체','등록증상 최대적재량','화물운송종사자격증','영업용','화물운송사업 허가','사업용 자동차보험','서류 검증 전 · 배차 불가'])assert.match(html,new RegExp(text));
+for(const text of ['개인배송기사','운송업체','오토바이','짐받이 오토바이','승용차','다마스','라보','1톤','등록증상 최대적재량','차종별 자격·보험','유상운송','서류 검증 전 · 배차 불가'])assert.match(html,new RegExp(text));
 for(const text of ['평일 주간','평일 야간','심야·새벽','주말·공휴일','24시간 긴급호출이 가능한가요','24시간 가능','사전 협의 가능','24시간 불가'])assert.match(html,new RegExp(text));
 assert.match(html,/id="reviewApplication"[^>]*disabled/);
 assert.match(html,/신분증·등록증 사진은 안전한 보안 업로드 서버가 연결된 뒤에만 받습니다/);

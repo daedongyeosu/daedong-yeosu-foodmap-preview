@@ -22,14 +22,15 @@ api.reset();
 let state=api.read();
 let driver=state.drivers.find(item=>item.id==='D-01');
 assert.equal(api.driverPresenceStatus(driver).online,true);
-assert.equal(api.driverMatchesOrder(driver,{weight:400,required:['리프트']}),true);
-assert.equal(api.driverMatchesOrder(driver,{weight:800,required:['리프트']}),false);
+assert.equal(api.driverMatchesOrder(driver,{fleetClass:'TON',weight:400,required:['리프트']}),true);
+assert.equal(api.driverMatchesOrder(driver,{fleetClass:'LABO',weight:400,required:['리프트']}),false);
+assert.equal(api.driverMatchesOrder(driver,{fleetClass:'TON',weight:800,required:['리프트']}),false);
 
 api.updateDriverPresence('D-01',{available:false,boardOpen:false,locationStatus:'OFF'});
 state=api.read();
 driver=state.drivers.find(item=>item.id==='D-01');
 assert.equal(api.driverPresenceStatus(driver).code,'OFFLINE');
-assert.equal(api.eligibleDrivers({weight:100,required:[]},state).some(item=>item.id==='D-01'),false);
+assert.equal(api.eligibleDrivers({fleetClass:'TON',weight:100,required:[]},state).some(item=>item.id==='D-01'),false);
 
 api.updateDriverPresence('D-01',{available:true,boardOpen:true,locationStatus:'GRANTED',latitude:34.75,longitude:127.70});
 driver=api.read().drivers.find(item=>item.id==='D-01');

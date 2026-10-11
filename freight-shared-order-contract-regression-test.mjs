@@ -16,6 +16,8 @@ assert.match(store,/navigator\.locks/);
 assert.match(store,/assignedDriverId/);
 assert.match(requestHtml,/실제 주문·결제·기사 호출은 발생하지 않습니다/);
 assert.match(requestJs,/MatjidoFreightStore\.createRequest/);
+assert.match(requestHtml,/name="fleetClass"/);
+assert.match(store,/driver\.fleetClass===order\.fleetClass/);
 assert.match(errandHtml,/href="\.\.\/freight-request\/"/);
 assert.doesNotMatch(store,/fetch\s*\(/);
 assert.match(requestJs,/fetch\(FREIGHT_ROUTE_QUOTE_ENDPOINT/);
