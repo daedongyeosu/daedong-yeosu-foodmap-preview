@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b5f4a">
+  <meta name="robots" content="noindex,nofollow">
+  <title>온라인 상점 무료입점 | 여수맛지도</title>
+  <meta name="description" content="여수의 오프라인 상점이 입점비 없이 온라인 상점을 만들고 고객 주문과 배송을 연결하는 여수맛지도 입점 프리뷰">
+  <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
+  <link rel="stylesheet" href="styles.css?v=20261011-1">
+  <link rel="stylesheet" href="product-editor.css?v=20261011-2">
+</head>
+<body>
+  <header class="page-header">
+    <a href="../" aria-label="여수맛지도 홈으로 돌아가기">←</a>
+    <span><b>여수맛지도</b><small>온라인 상점 무료입점</small></span>
+    <em>PREVIEW</em>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span>여수 오프라인 상점 온라인화</span>
+      <h1>가게는 그대로,<br>판매는 온라인까지</h1>
+      <p><b>입점비 없이 온라인 상점을 만들고 상품을 판매해 보세요.</b> 주문이 들어오면 맛지도가 고객 배송까지 연결합니다.</p>
+      <ul aria-label="입점 특징">
+        <li>매장 판매가격 그대로</li>
+        <li>온라인 상품등록</li>
+        <li>고객 배송 연결</li>
+      </ul>
+    </section>
+
+    <section class="notice" aria-label="프리뷰 안내">
+      <b>지금은 입점 흐름을 확인하는 프리뷰입니다.</b>
+      <span>입력 내용은 이 기기에만 임시 저장되며 실제 상점 공개·결제·주문은 발생하지 않습니다.</span>
+    </section>
+
+    <nav class="steps" aria-label="온라인 상점 개설 단계">
+      <button type="button" data-step-nav="1" aria-current="step"><i>1</i><span>가게</span></button>
+      <button type="button" data-step-nav="2" disabled><i>2</i><span>분위기</span></button>
+      <button type="button" data-step-nav="3" disabled><i>3</i><span>상품·배송</span></button>
+      <button type="button" data-step-nav="4" disabled><i>4</i><span>미리보기</span></button>
+    </nav>
+
+    <form id="storeOnboarding" novalidate>
+      <section class="form-step active" data-step="1" aria-labelledby="stepOneTitle">
+        <p class="eyebrow">1. 내 가게 등록</p>
+        <h2 id="stepOneTitle">어떤 가게를 운영하시나요?</h2>
+        <p class="lead">먼저 고객에게 보여줄 기본정보를 알려주세요.</p>
+
+        <label>상점 종류 <b>필수</b>
+          <select id="storeCategory" required>
+            <option value="">선택해 주세요</option>
+            <option>철물·공구</option><option>마트·식료품</option><option>전통시장</option><option>꽃·선물</option><option>미용재료</option><option>생활용품</option><option>의류·잡화</option><option>반찬·먹거리</option><option>기타 상점</option>
+          </select>
+        </label>
+        <label>상점명 <b>필수</b><input id="storeName" maxlength="40" placeholder="예: 여수○○철물" required></label>
+        <label>사장님 휴대전화 <b>필수</b><input id="ownerPhone" type="tel" inputmode="numeric" maxlength="13" autocomplete="tel" placeholder="010-0000-0000" required></label>
+        <div class="address-field">
+          <span>상점 공식 주소 <b>필수</b></span>
+          <button id="findAddress" type="button">도로명주소 찾기</button>
+          <input id="storeAddress" readonly placeholder="공식 주소검색에서 선택해 주세요" required>
+          <input id="storeAddressDetail" maxlength="60" placeholder="층·호수·고객이 찾기 쉬운 설명">
+          <small id="addressStatus" role="status">직접 입력이 아니라 공식 주소검색 결과를 사용합니다.</small>
+        </div>
+      </section>
+
+      <section class="form-step" data-step="2" aria-labelledby="stepTwoTitle" hidden>
+        <p class="eyebrow">2. 내 가게 분위기</p>
+        <h2 id="stepTwoTitle">사진과 색깔로 가게를 꾸며보세요</h2>
+        <p class="lead">사진은 이 기기에서 미리보기만 하며 아직 서버로 전송하지 않습니다.</p>
+        <div class="photo-grid">
+          <label class="photo-picker"><span>🏪</span><b>가게 외관 사진</b><small>간판과 입구가 보이는 사진</small><input id="exteriorPhoto" type="file" accept="image/*" capture="environment"><img id="exteriorPreview" alt="가게 외관 사진 미리보기" hidden></label>
+          <label class="photo-picker"><span>🪴</span><b>가게 내부 사진</b><small>진열대가 보이는 사진</small><input id="interiorPhoto" type="file" accept="image/*" capture="environment"><img id="interiorPreview" alt="가게 내부 사진 미리보기" hidden></label>
+        </div>
+        <fieldset>
+          <legend>원하는 상점 분위기</legend>
+          <div class="choice-grid theme-grid">
+            <label><input type="radio" name="theme" value="실제 가게와 비슷하게" checked><span class="theme natural"><i></i><b>실제 가게처럼</b><small>현재 분위기를 살려요</small></span></label>
+            <label><input type="radio" name="theme" value="따뜻하고 정겨운 가게"><span class="theme warm"><i></i><b>따뜻하고 정겹게</b><small>동네가게 느낌</small></span></label>
+            <label><input type="radio" name="theme" value="깔끔하고 현대적인 가게"><span class="theme modern"><i></i><b>깔끔하고 현대적으로</b><small>밝고 정돈된 느낌</small></span></label>
+            <label><input type="radio" name="theme" value="캐릭터가 있는 재미있는 가게"><span class="theme playful"><i></i><b>재미있고 개성 있게</b><small>캐릭터와 색깔 강조</small></span></label>
+          </div>
+        </fieldset>
+        <aside class="ai-next"><b>AI 상점 꾸미기는 다음 단계에서 연결합니다.</b><span>외관과 내부 사진을 바탕으로 간판·색상·진열대 시안을 만들고 사장님이 선택·수정하는 구조입니다.</span></aside>
+      </section>
+
+      <section class="form-step" data-step="3" aria-labelledby="stepThreeTitle" hidden>
+        <p class="eyebrow">3. 상품과 배송</p>
+        <h2 id="stepThreeTitle">어떻게 상품을 올릴까요?</h2>
+        <p class="lead">상품이 많아도 시작할 수 있도록 등록 방법을 선택합니다.</p>
+        <fieldset>
+          <legend>상품 등록 방법</legend>
+          <div class="choice-grid product-grid">
+            <label><input type="radio" name="productMethod" value="휴대전화로 직접 등록" data-product-method="direct" checked><span><b>휴대전화로 등록</b><small>상품이 많지 않은 가게</small></span></label>
+            <label><input type="radio" name="productMethod" value="엑셀 상품목록 업로드" data-product-method="sheet"><span><b>엑셀로 한꺼번에</b><small>마트·철물점처럼 상품이 많은 가게</small></span></label>
+            <label><input type="radio" name="productMethod" value="메뉴판·가격표 사진 분석" data-product-method="photo"><span><b>가격표 사진으로</b><small>AI가 상품명과 가격을 정리</small></span></label>
+          </div>
+        </fieldset>
+
+        <section class="product-workspace" aria-labelledby="productWorkspaceTitle">
+          <header>
+            <span><small>상품등록 작업대</small><b id="productWorkspaceTitle">상품 초안을 만들어 보세요</b></span>
+            <em id="productCount">등록 0개</em>
+          </header>
+
+          <div class="product-method-panel active" data-product-panel="direct">
+            <div class="product-editor-grid">
+              <label>상품명 <b>필수</b><input id="productName" maxlength="60" placeholder="예: 국산 고춧가루"></label>
+              <label>판매가격 <b>필수</b><input id="productPrice" type="number" inputmode="numeric" min="0" step="100" placeholder="12000"><span class="input-suffix">원</span></label>
+              <label>판매단위 <b>필수</b>
+                <select id="productUnit"><option value="개">개</option><option value="봉지">봉지</option><option value="팩">팩</option><option value="박스">박스</option><option value="통">통</option><option value="병">병</option><option value="500g">500g</option><option value="1kg">1kg</option><option value="1근">1근</option><option value="직접 입력">직접 입력</option></select>
+              </label>
+              <label id="customUnitField" hidden>단위 직접 입력<input id="customUnit" maxlength="15" placeholder="예: 한 묶음"></label>
+              <label>재고 방식
+                <select id="stockMode"><option value="판매 가능">항상 판매 가능</option><option value="수량 관리">수량으로 관리</option><option value="주문 후 확인">주문 후 재고 확인</option></select>
+              </label>
+              <label id="stockQuantityField" hidden>현재 수량<input id="stockQuantity" type="number" inputmode="numeric" min="0" step="1" value="0"></label>
+            </div>
+            <label class="product-note">상품 설명<textarea id="productDescription" maxlength="160" rows="3" placeholder="원산지, 규격, 고객이 알아야 할 내용을 적어주세요."></textarea></label>
+            <label class="product-photo-picker">📷 상품사진 선택<input id="productPhoto" type="file" accept="image/*" capture="environment"><small id="productPhotoStatus">사진은 이 기기에서만 미리 확인합니다.</small></label>
+            <button id="addProduct" class="add-product" type="button">상품 초안에 추가하기</button>
+          </div>
+
+          <div class="product-method-panel" data-product-panel="sheet" hidden>
+            <div class="import-guide">
+              <b>상품이 많다면 목록을 한꺼번에 불러오세요.</b>
+              <span>열 이름을 <strong>상품명, 가격, 단위, 재고</strong>로 만들면 가장 정확합니다.</span>
+              <a href="sample-products.csv" download>CSV 양식 내려받기</a>
+            </div>
+            <label class="file-import">📄 CSV 상품목록 선택<input id="productSheet" type="file" accept=".csv,.xlsx,.xls,text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><small>CSV는 지금 바로 읽습니다. 엑셀 원본(.xlsx·.xls)은 서버 분석 연결 후 지원합니다.</small></label>
+            <p id="sheetStatus" class="method-status" role="status"></p>
+          </div>
+
+          <div class="product-method-panel" data-product-panel="photo" hidden>
+            <div class="import-guide">
+              <b>메뉴판이나 가격표를 똑바로 촬영해 주세요.</b>
+              <span>AI가 상품명·가격·단위를 초안으로 만들고, 사장님이 반드시 확인한 뒤 등록하는 방식입니다.</span>
+            </div>
+            <label class="file-import">📸 메뉴판·가격표 사진 선택<input id="priceBoardPhoto" type="file" accept="image/*" capture="environment"><small>현재 프리뷰에서는 사진 미리보기까지만 제공하며 외부로 전송하지 않습니다.</small></label>
+            <img id="priceBoardPreview" class="price-board-preview" alt="가격표 사진 미리보기" hidden>
+            <p id="photoAiStatus" class="method-status" role="status">AI 분석 서버를 연결하기 전에는 상품정보를 자동 생성하지 않습니다.</p>
+          </div>
+
+          <div id="productDrafts" class="product-drafts" aria-live="polite">
+            <p class="empty-products">아직 등록한 상품이 없습니다. 한 개만 먼저 올려도 상점을 시작할 수 있습니다.</p>
+          </div>
+        </section>
+
+        <fieldset>
+          <legend>고객 배송비를 지원하시겠어요?</legend>
+          <p class="field-help">기본값은 지원하지 않음입니다. 기사 배송료는 그대로 지급되고, 선택한 금액만 사장님 정산에서 부담합니다.</p>
+          <div class="choice-grid subsidy-grid">
+            <label><input type="radio" name="subsidy" value="0" checked><span><b>지원하지 않음</b><small>고객이 배송비 부담</small></span></label>
+            <label><input type="radio" name="subsidy" value="1000"><span><b>건당 1,000원</b><small>고객 배송비 할인</small></span></label>
+            <label><input type="radio" name="subsidy" value="2000"><span><b>건당 2,000원</b><small>고객 배송비 할인</small></span></label>
+          </div>
+          <label class="minimum-order">지원 최소 주문금액<input id="minimumOrder" type="number" inputmode="numeric" min="0" step="1000" value="20000"><span>원 이상</span></label>
+        </fieldset>
+        <section class="price-example" aria-labelledby="priceExampleTitle">
+          <div><span><small>고객 결제 예시</small><b id="priceExampleTitle">상품 20,000원 · 배송료 5,000원</b></span><em>예시</em></div>
+          <dl><div><dt>상품금액</dt><dd>20,000원</dd></div><div><dt>기사 배송료</dt><dd>5,000원</dd></div><div><dt>상점 배송비 지원</dt><dd id="subsidyPreview">0원</dd></div><div><dt>맛지도 이용금액</dt><dd>500원</dd></div><div class="total"><dt>고객 결제금액</dt><dd id="customerTotal">25,500원</dd></div></dl>
+          <p id="settlementPreview">상점은 상품대금 20,000원을 정산받는 예시입니다.</p>
+        </section>
+      </section>
+
+      <section class="form-step" data-step="4" aria-labelledby="stepFourTitle" hidden>
+        <p class="eyebrow">4. 개점 준비 확인</p>
+        <h2 id="stepFourTitle">내 온라인 상점을 확인해 보세요</h2>
+        <p class="lead">실제 공개 전에 사장님이 다시 수정할 수 있습니다.</p>
+        <article class="store-preview-card">
+          <span id="previewCategory">상점 종류</span>
+          <div class="preview-sign"><small>여수맛지도 온라인 상점</small><strong id="previewName">내 상점</strong></div>
+          <dl><div><dt>주소</dt><dd id="previewAddress">주소 확인 전</dd></div><div><dt>분위기</dt><dd id="previewTheme">실제 가게와 비슷하게</dd></div><div><dt>상품 등록</dt><dd id="previewProduct">휴대전화로 직접 등록</dd></div><div><dt>배송비 지원</dt><dd id="previewSubsidy">지원하지 않음</dd></div></dl>
+          <div class="preview-products"><b id="previewProductCount">등록 상품 0개</b><span id="previewProductNames">상품은 상점을 만든 뒤에도 추가할 수 있습니다.</span></div>
+          <ul><li>매장 판매가격 그대로</li><li>맛지도 고객에게 상품 노출</li><li>주문 발생 시 배송 연결</li></ul>
+        </article>
+        <label class="preview-agreement"><input id="previewAgreement" type="checkbox"><span>입력한 상점정보와 배송비 지원 설정을 확인했습니다.</span></label>
+        <button id="savePreview" class="save-preview" type="button" disabled>입점 준비내용 저장하기</button>
+        <p id="saveStatus" class="save-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <footer class="form-actions">
+        <button id="previousStep" class="secondary" type="button" hidden>이전</button>
+        <button id="nextStep" class="primary" type="button">가게 주소와 정보를 확인해 주세요</button>
+      </footer>
+    </form>
+  </main>
+
+  <section id="postcodePanel" class="postcode-panel" hidden aria-labelledby="postcodeTitle">
+    <header><button id="postcodeClose" type="button" aria-label="주소검색 닫기">←</button><span><b id="postcodeTitle">상점 도로명주소 찾기</b><small>공식 주소 결과에서 선택하세요</small></span></header>
+    <p id="postcodeStatus">주소검색을 불러오는 중입니다.</p>
+    <div id="postcodeFrame"></div>
+  </section>
+
+  <script src="app.js?v=20261011-3" defer></script>
+</body>
+</html>
