@@ -1,6 +1,8 @@
 const ONBOARD_KEY='matjido-store-onboarding-preview-v1';
 const CART_KEY='matjido-customer-store-cart-v1';
 const DELIVERY_QUOTE_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-delivery-quote';
+const STORE_ORDER_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-orders/preview';
+const PREVIEW_ORDER_KEY='matjido-customer-store-preview-order-v1';
 const MATJIDO_PUBLIC_CLIENT='daedong-preview-web-v1-20260804';
 const DEFAULT_PLATFORM_FEE=500;
 const fallbackProducts=[
@@ -18,9 +20,13 @@ let deliveryAddress=null;
 let deliveryQuote=null;
 let postcodePromise=null;
 let quoteRequestId=0;
+let trackingTimer=null;
+
+const ORDER_STATUS={NEW:'상점 확인 전',ACCEPTED:'주문 수락',PREPARING:'상품 준비중',READY:'상품 준비완료',DELIVERY_REQUESTED:'배송요청 완료',REJECTED:'주문 거절'};
 
 function money(value){return `${Math.max(0,Number(value)||0).toLocaleString('ko-KR')}원`;}
 function demoMode(){return new URLSearchParams(location.search).get('demo')==='1';}
+function storeId(){return String(store.storeId||'demo-yeosu-store').replace(/[^a-zA-Z0-9_-]/g,'').slice(0,80)||'demo-yeosu-store';}
 function loadStore(){if(demoMode())return fallbackStore;try{const saved=JSON.parse(localStorage.getItem(ONBOARD_KEY)||'null');return saved?.previewOnly?{...fallbackStore,...saved}:fallbackStore;}catch{return fallbackStore;}}
 function normalizeProducts(list){return (Array.isArray(list)&&list.length?list:fallbackProducts).slice(0,500).filter(item=>item&&String(item.name||'').trim()&&Number(item.price)>0).map((item,index)=>({id:String(item.id||`item-${index}`),name:String(item.name).trim(),price:Number(item.price),unit:String(item.unit||'개'),stockMode:String(item.stockMode||'판매 가능'),stockQuantity:item.stockQuantity==null?null:Math.max(0,Number(item.stockQuantity)||0),category:String(item.category||store.category||'등록상품'),description:String(item.description||'')}));}
 function loadCart(){if(demoMode())return{};try{const saved=JSON.parse(localStorage.getItem(CART_KEY)||'{}');return saved&&typeof saved==='object'?saved:{};}catch{return {};}}
@@ -40,6 +46,24 @@ function renderOrderReview(){
   document.querySelector('#reviewStoreName').textContent=store.storeName||fallbackStore.storeName;document.querySelector('#reviewAddress').textContent=deliveryAddress.address;const detail=document.querySelector('#addressDetail').value.trim();document.querySelector('#reviewAddressDetail').textContent=detail||'상세주소 없음';
   const items=document.querySelector('#reviewItems');items.replaceChildren();lines.forEach(({product,quantity})=>{const row=document.createElement('div');const name=document.createElement('span');name.textContent=`${product.name} · 수량 ${quantity} · ${product.unit}`;const amount=document.createElement('b');amount.textContent=money(product.price*quantity);row.append(name,amount);items.append(row);});
   document.querySelector('#reviewSubtotal').textContent=money(subtotal);document.querySelector('#reviewSubsidy').textContent=subsidy?`-${money(subsidy)}`:'0원';document.querySelector('#reviewDeliveryFee').textContent=money(deliveryFee);document.querySelector('#reviewCustomerDeliveryFee').textContent=money(customerDelivery);document.querySelector('#reviewPlatformFee').textContent=money(platformFee);document.querySelector('#reviewTotal').textContent=money(subtotal+customerDelivery+platformFee);
+}
+
+function orderPayload(){
+  const lines=cartLines();const subtotal=lines.reduce((sum,line)=>sum+line.product.price*line.quantity,0);const merchantSupport=subtotal>=Math.max(0,Number(store.minimumOrder)||0)?Math.max(0,Number(store.subsidy)||0):0;const deliveryFee=Number(deliveryQuote.deliveryFee);const platformFee=Number(deliveryQuote.platformFee);const customerDelivery=Math.max(0,deliveryFee-merchantSupport);
+  return {previewOnly:true,storeId:storeId(),storeName:store.storeName||fallbackStore.storeName,items:lines.map(({product,quantity})=>({id:product.id,name:product.name,quantity,priceWon:product.price})),subtotalWon:subtotal,deliveryFeeWon:deliveryFee,platformFeeWon:platformFee,merchantSupportWon:merchantSupport,totalWon:subtotal+customerDelivery+platformFee,destinationLabel:deliveryAddress.address,customerRequest:document.querySelector('#reviewRequest').value.trim()};
+}
+
+function saveTracking(value){try{localStorage.setItem(PREVIEW_ORDER_KEY,JSON.stringify(value));}catch{}}
+function loadTracking(){try{const value=JSON.parse(localStorage.getItem(PREVIEW_ORDER_KEY)||'null');return value?.orderId&&value?.customerToken?value:null;}catch{return null;}}
+function paintTracking(order){const panel=document.querySelector('#orderTracking');panel.hidden=false;document.querySelector('#trackingOrderId').textContent=order.id;document.querySelector('#trackingStatus').textContent=ORDER_STATUS[order.status]||order.status;}
+async function refreshTracking(){
+  const saved=loadTracking();if(!saved)return;
+  try{const response=await fetch(`${STORE_ORDER_ENDPOINT}/${encodeURIComponent(saved.orderId)}`,{headers:{'accept':'application/json','X-Matjido-Order-Token':saved.customerToken},credentials:'omit'});if(!response.ok)return;const result=await response.json();paintTracking(result.order);}catch{}
+}
+async function sendPreviewOrder(){
+  const button=document.querySelector('#sendPreviewOrder');const status=document.querySelector('#reviewSubmitStatus');if(!deliveryAddress||!deliveryQuote||!cartLines().length)return;
+  button.disabled=true;status.className='review-submit-status';status.textContent='상점주 테스트 주문함으로 보내는 중입니다…';
+  try{const response=await fetch(STORE_ORDER_ENDPOINT,{method:'POST',mode:'cors',headers:{'content-type':'application/json','accept':'application/json'},credentials:'omit',body:JSON.stringify(orderPayload())});const result=await response.json();if(!response.ok||!result?.order?.id||!result?.customerToken)throw new Error(result?.message||`order-${response.status}`);saveTracking({orderId:result.order.id,customerToken:result.customerToken});paintTracking(result.order);status.textContent='테스트 주문이 상점주 주문접수 화면에 도착했습니다.';button.textContent='테스트 주문 전송 완료';cart={};saveCart();renderCart();clearInterval(trackingTimer);trackingTimer=setInterval(refreshTracking,5000);}catch(error){status.className='review-submit-status is-error';status.textContent=error?.message&&String(error.message).includes('상점')?String(error.message):'테스트 주문을 보내지 못했습니다. 잠시 뒤 다시 시도해 주세요.';button.disabled=false;}
 }
 
 function loadPostcode(){
@@ -97,4 +121,5 @@ document.querySelector('#postcodeClose').addEventListener('click',closePostcode)
 document.querySelector('#addressDetail').addEventListener('change',()=>{if(deliveryAddress)requestDeliveryQuote();});
 document.querySelector('#previewOrder').addEventListener('click',()=>{const status=document.querySelector('#orderStatus');if(!deliveryAddress){status.textContent='배송받을 공식 주소를 먼저 선택해 주세요.';return;}if(!deliveryQuote){status.textContent='실제 도로거리 배송비가 확정된 뒤 주문내용을 확인할 수 있습니다.';return;}renderOrderReview();document.querySelector('#orderReviewPanel').hidden=false;status.textContent='';});
 document.querySelector('#closeOrderReview').addEventListener('click',()=>{document.querySelector('#orderReviewPanel').hidden=true;});
-applyStore();renderCategories();renderProducts();renderCart();
+document.querySelector('#sendPreviewOrder').addEventListener('click',sendPreviewOrder);
+applyStore();renderCategories();renderProducts();renderCart();refreshTracking();trackingTimer=setInterval(refreshTracking,5000);

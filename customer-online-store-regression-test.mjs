@@ -19,8 +19,8 @@ for(const text of [
   '총 결제예정금액',
   '주문내용 확인',
   '결제 전에 상품과 배송정보를 확인하세요',
-  '결제 연결 후 주문하기',
-  '실제 주문·결제·배송요청은 발생하지 않습니다.'
+  '테스트 주문 보내기',
+  '실제 결제·환불·고객 알림·젠딜리 배송요청은 발생하지 않습니다.'
 ])if(!page.includes(text))throw new Error(`고객 온라인 상점 필수 문구 누락: ${text}`);
 
 for(const contract of [
@@ -35,6 +35,8 @@ for(const contract of [
   'function renderOrderReview',
   '수량 ${quantity} · ${product.unit}',
   "const DELIVERY_QUOTE_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-delivery-quote'",
+  "const STORE_ORDER_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-orders/preview'",
+  "const PREVIEW_ORDER_KEY='matjido-customer-store-preview-order-v1'",
   "const MATJIDO_PUBLIC_CLIENT='daedong-preview-web-v1-20260804'",
   "'X-Daedong-Client':MATJIDO_PUBLIC_CLIENT",
   "credentials:'omit'",
@@ -42,11 +44,15 @@ for(const contract of [
   "source:'daum_postcode'",
   'roadDistanceMeters',
   '배송비 별도',
-  '실제 도로거리 배송비가 확정된 뒤 주문내용을 확인할 수 있습니다.'
+  '실제 도로거리 배송비가 확정된 뒤 주문내용을 확인할 수 있습니다.',
+  'function sendPreviewOrder',
+  'function refreshTracking',
+  'previewOnly:true'
 ])if(!script.includes(contract))throw new Error(`고객 온라인 상점 기능 계약 누락: ${contract}`);
 
 if(!page.includes('id="orderReviewPanel"')||!page.includes('id="closeOrderReview"'))throw new Error('결제 전 주문서 화면 또는 닫기 동작이 없습니다.');
-if(!page.includes('delivery-quote.css?v=20261011-2'))throw new Error('결제 전 주문서 CSS 캐시 버전이 갱신되지 않았습니다.');
+if(!page.includes('id="orderTracking"')||!page.includes('id="reviewRequest"'))throw new Error('테스트 주문 추적 또는 상점 요청 입력 화면이 없습니다.');
+if(!page.includes('delivery-quote.css?v=20261012-1'))throw new Error('결제 전 주문서 CSS 캐시 버전이 갱신되지 않았습니다.');
 if(!deliveryStyle.includes('.order-review-panel')||!deliveryStyle.includes('.review-total'))throw new Error('결제 전 주문서 모바일 화면 스타일이 없습니다.');
 
 if(!merchant.includes('href="../online-store/"'))throw new Error('상점주 최종 미리보기에서 고객 상점으로 연결되지 않습니다.');
