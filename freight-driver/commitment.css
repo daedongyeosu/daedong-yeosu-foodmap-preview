@@ -73,6 +73,26 @@
   font-weight: 750;
 }
 
+.presence-grid > #transportState {
+  grid-column: 1 / -1;
+  padding: 9px 11px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.12);
+  color: #e9f5ef;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.presence-grid > #transportState[data-mode="server"] {
+  background: #dff5e9;
+  color: #176142;
+}
+
+.presence-grid > #transportState[data-mode="error"] {
+  background: #ffe7dc;
+  color: #a13f1a;
+}
+
 .presence-grid[data-status="offline"] strong,
 .presence-grid[data-status="stale"] strong {
   color: #9a4b2c;
