@@ -1,5 +1,7 @@
 const STORAGE_KEY='matjido-store-manager-preview-v1';
 const ONBOARD_KEY='matjido-store-onboarding-preview-v1';
+const STORE_ORDER_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-orders/preview';
+const PREVIEW_CLIENT='store-manager-preview';
 const STATUS={new:'새 주문',accepted:'주문 수락',preparing:'준비중',ready:'준비완료',delivery_requested:'배송요청',assigned:'기사 배정',delivering:'배송중',completed:'배송완료',rejected:'주문 거절',cancelled:'주문 취소'};
 const initialOrders=[
   {id:'YM-1021',placedAt:'2026-10-12T10:21:00+09:00',status:'new',customer:'김○수',phone:'010-12**-56**',address:'전남 여수시 여문2로 38 · 101동 1203호',request:'문 앞에 놓고 벨을 눌러주세요.',items:[{name:'국산 고춧가루',unit:'500g',quantity:1,price:12000},{name:'배추',unit:'1통',quantity:2,price:4500}],subtotal:21000,deliveryFee:6100,merchantSupport:1000,platformFee:500,history:[{status:'new',at:'2026-10-12T10:21:00+09:00',note:'고객 결제 완료 · 상점에 새 주문 알림'}]},
@@ -11,6 +13,7 @@ const initialOrders=[
 let orders=loadOrders();
 let filter='active';
 let selectedId=null;
+let relayTimer=null;
 
 function copyOrders(){return JSON.parse(JSON.stringify(initialOrders));}
 function loadOrders(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');return Array.isArray(saved)&&saved.length?saved:copyOrders();}catch{return copyOrders();}}
@@ -21,6 +24,13 @@ function now(){return new Date().toISOString();}
 function orderTotal(order){return order.subtotal+Math.max(0,order.deliveryFee-order.merchantSupport)+order.platformFee;}
 function itemSummary(order){return order.items.map(item=>`${item.name} · 수량 ${item.quantity} · ${item.unit}`).join(' / ');}
 function loadStoreName(){try{const store=JSON.parse(localStorage.getItem(ONBOARD_KEY)||'null');if(store?.previewOnly&&store.storeName)document.querySelector('#storeStatusTitle').textContent=store.storeName;}catch{}}
+function currentStoreId(){try{const store=JSON.parse(localStorage.getItem(ONBOARD_KEY)||'null');return String(store?.storeId||'demo-yeosu-store').replace(/[^a-zA-Z0-9_-]/g,'').slice(0,80)||'demo-yeosu-store';}catch{return'demo-yeosu-store';}}
+function relayOrder(value){const status=String(value.status||'NEW').toLowerCase();return{id:String(value.id),placedAt:String(value.createdAt),status,version:Number(value.version),relay:true,customer:'테스트',phone:'개인정보 미수집',address:String(value.destinationLabel||'배송지 비공개'),request:String(value.customerRequest||''),items:(Array.isArray(value.items)?value.items:[]).map(item=>({name:String(item.name||''),unit:'개',quantity:Number(item.quantity)||1,price:Number(item.priceWon)||0})),subtotal:Number(value.subtotalWon)||0,deliveryFee:Number(value.deliveryFeeWon)||0,merchantSupport:Number(value.merchantSupportWon)||0,platformFee:Number(value.platformFeeWon)||0,history:[{status,at:String(value.updatedAt||value.createdAt),note:`서버 테스트 주문 · ${STATUS[status]||status}`} ]};}
+async function refreshRelayOrders(){
+  const status=document.querySelector('#relayStatus');
+  try{const response=await fetch(`${STORE_ORDER_ENDPOINT}?storeId=${encodeURIComponent(currentStoreId())}`,{headers:{'accept':'application/json','X-Matjido-Preview-Client':PREVIEW_CLIENT},credentials:'omit'});if(!response.ok)throw new Error(`relay-${response.status}`);const result=await response.json();const fixtures=orders.filter(order=>!order.relay);orders=[...(result.orders||[]).map(relayOrder),...fixtures];status.textContent='고객 온라인 상점의 테스트 주문과 연결되었습니다. 실제 결제·환불·고객 알림·젠딜리 배송요청은 발생하지 않습니다.';renderOrders();if(selectedId){const selected=orders.find(order=>order.id===selectedId);if(selected)openOrder(selected.id);}}
+  catch{status.textContent='테스트 주문 서버 연결을 확인하는 중입니다. 아래 가짜 주문으로 화면 기능은 계속 확인할 수 있습니다.';}
+}
 function group(order){if(order.status==='completed')return'completed';if(['rejected','cancelled'].includes(order.status))return'cancelled';return'active';}
 
 function updateCounts(){
@@ -50,7 +60,11 @@ function renderOrders(){
   });
 }
 
-function history(order,status,note){order.status=status;order.history.push({status,at:now(),note});saveOrders();renderOrders();openOrder(order.id);}
+async function history(order,status,note){
+  if(!order.relay){order.status=status;order.history.push({status,at:now(),note});saveOrders();renderOrders();openOrder(order.id);return;}
+  const targets=order.status==='new'&&status==='preparing'?['ACCEPTED','PREPARING']:[status.toUpperCase()];
+  try{for(const target of targets){const response=await fetch(`${STORE_ORDER_ENDPOINT}/${encodeURIComponent(order.id)}`,{method:'PATCH',headers:{'content-type':'application/json','accept':'application/json','X-Matjido-Preview-Client':PREVIEW_CLIENT,'If-Match':`"${order.version}"`},credentials:'omit',body:JSON.stringify({storeId:currentStoreId(),status:target,note})});const result=await response.json();if(!response.ok)throw new Error(result?.message||`status-${response.status}`);const next=relayOrder(result.order);order.status=next.status;order.version=next.version;order.history.push({status:next.status,at:now(),note});}renderOrders();openOrder(order.id);}catch(error){document.querySelector('#relayStatus').textContent=error?.message||'주문상태를 변경하지 못했습니다. 새로고침 후 다시 시도해 주세요.';await refreshRelayOrders();}
+}
 function renderActions(order){
   const actions=document.querySelector('#panelActions');actions.replaceChildren();
   const button=(label,className,handler)=>{const node=document.createElement('button');node.type='button';node.className=className;node.textContent=label;node.addEventListener('click',handler);actions.append(node);};
@@ -86,7 +100,7 @@ function closeOrder(){document.querySelector('#orderPanel').hidden=true;document
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));renderOrders();}));
 document.querySelector('#closePanel').addEventListener('click',closeOrder);
 document.querySelector('#storeOpen').addEventListener('change',event=>{document.querySelector('#storeOpenText').textContent=event.target.checked?'주문 받는 중':'주문 일시중지';});
-document.querySelector('#resetDemo').addEventListener('click',()=>{orders=copyOrders();saveOrders();filter='active';document.querySelectorAll('[data-filter]').forEach(item=>item.setAttribute('aria-pressed',String(item.dataset.filter==='active')));renderOrders();});
+document.querySelector('#resetDemo').addEventListener('click',refreshRelayOrders);
 document.querySelector('#cancelReject').addEventListener('click',()=>{document.querySelector('#rejectPanel').hidden=true;});
 document.querySelector('#confirmReject').addEventListener('click',()=>{const order=orders.find(item=>item.id===selectedId);if(!order)return;const reason=document.querySelector('[name="rejectReason"]:checked').value;document.querySelector('#rejectPanel').hidden=true;history(order,'rejected',`${reason} 사유로 주문 거절 · 고객 환불요청 상태`);});
 document.querySelector('#packingCheck').addEventListener('change',event=>{document.querySelector('#confirmDelivery').disabled=!event.target.checked;});
@@ -95,3 +109,4 @@ document.querySelector('#confirmDelivery').addEventListener('click',()=>{const o
 
 loadStoreName();
 renderOrders();
+refreshRelayOrders();relayTimer=setInterval(refreshRelayOrders,5000);

@@ -10,7 +10,7 @@
   <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=20261011-1">
   <link rel="stylesheet" href="readability.css?v=20261011-1">
-  <link rel="stylesheet" href="delivery-quote.css?v=20261011-2">
+  <link rel="stylesheet" href="delivery-quote.css?v=20261012-1">
 </head>
 <body>
   <header class="topbar">
@@ -95,11 +95,14 @@
       <section class="review-card"><small>배송받을 곳</small><h2 id="reviewAddress">공식 주소 확인 전</h2><p id="reviewAddressDetail"></p></section>
       <section class="review-card" aria-labelledby="reviewItemsTitle"><small>주문 상품</small><h2 id="reviewItemsTitle">상품 확인</h2><div id="reviewItems" class="review-items"></div></section>
       <section class="review-card review-payment" aria-labelledby="reviewPaymentTitle"><small>결제예정금액</small><h2 id="reviewPaymentTitle">금액 확인</h2><dl><div><dt>상품금액</dt><dd id="reviewSubtotal">0원</dd></div><div><dt>상점 배송비 지원</dt><dd id="reviewSubsidy">0원</dd></div><div><dt>기사 배송료</dt><dd id="reviewDeliveryFee">0원</dd></div><div><dt>고객 배송비</dt><dd id="reviewCustomerDeliveryFee">0원</dd></div><div><dt>맛지도 이용금액</dt><dd id="reviewPlatformFee">0원</dd></div><div class="review-total"><dt>총 결제예정금액</dt><dd id="reviewTotal">0원</dd></div></dl></section>
-      <p class="review-notice">현재는 주문서 확인 단계입니다. 실제 결제·상점 주문접수·배송요청은 발생하지 않습니다.</p>
-      <button class="review-submit" type="button" disabled>결제 연결 후 주문하기</button>
+      <section class="review-card"><label class="review-request"><small>상점에 전할 요청</small><textarea id="reviewRequest" maxlength="300" placeholder="예: 상품이 없으면 주문을 취소해 주세요."></textarea></label></section>
+      <p class="review-notice">테스트 주문만 상점주 미리보기로 전송됩니다. 실제 결제·환불·고객 알림·젠딜리 배송요청은 발생하지 않습니다.</p>
+      <button id="sendPreviewOrder" class="review-submit" type="button">테스트 주문 보내기</button>
+      <p id="reviewSubmitStatus" class="review-submit-status" role="status" aria-live="polite"></p>
+      <section id="orderTracking" class="order-tracking" hidden aria-live="polite"><small>테스트 주문번호</small><b id="trackingOrderId"></b><strong id="trackingStatus"></strong><p>상점주 화면에서 처리하면 이 상태가 자동으로 바뀝니다.</p><a href="../store-manager/">상점주 주문접수 화면 열기</a></section>
     </main>
   </section>
 
-  <script src="app.js?v=20261011-6" defer></script>
+  <script src="app.js?v=20261012-1" defer></script>
 </body>
 </html>
