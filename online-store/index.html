@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles.css?v=20261011-1">
   <link rel="stylesheet" href="readability.css?v=20261011-1">
   <link rel="stylesheet" href="delivery-quote.css?v=20261012-1">
+  <link rel="stylesheet" href="order-tracking.css?v=20261012-1">
 </head>
 <body>
   <header class="topbar">
@@ -30,6 +31,24 @@
     <section class="preview-notice" aria-label="프리뷰 안내">
       <b>고객 화면 프리뷰</b>
       <span>상품과 장바구니 흐름을 확인하는 화면이며 실제 주문·결제·배송요청은 발생하지 않습니다.</span>
+    </section>
+
+    <section id="orderTracking" class="order-tracking" hidden aria-live="polite" aria-labelledby="trackingTitle">
+      <header>
+        <span><small id="trackingTitle">내 테스트 주문</small><b id="trackingOrderId"></b></span>
+        <button id="refreshTracking" type="button">새로고침</button>
+      </header>
+      <strong id="trackingStatus">상점 확인 전</strong>
+      <p id="trackingMessage">상점이 주문을 확인하고 있습니다.</p>
+      <ol id="trackingSteps" class="tracking-steps" aria-label="주문 진행 단계">
+        <li data-status="NEW"><i>1</i><span>주문 전달</span></li>
+        <li data-status="ACCEPTED"><i>2</i><span>주문 수락</span></li>
+        <li data-status="PREPARING"><i>3</i><span>상품 준비</span></li>
+        <li data-status="READY"><i>4</i><span>준비완료</span></li>
+        <li data-status="DELIVERY_REQUESTED"><i>5</i><span>배송요청</span></li>
+      </ol>
+      <p id="trackingUpdated" class="tracking-updated"></p>
+      <a href="../store-manager/">상점주 주문접수 화면 열기</a>
     </section>
 
     <section class="catalog-tools" aria-label="상품 찾기">
@@ -99,10 +118,9 @@
       <p class="review-notice">테스트 주문만 상점주 미리보기로 전송됩니다. 실제 결제·환불·고객 알림·젠딜리 배송요청은 발생하지 않습니다.</p>
       <button id="sendPreviewOrder" class="review-submit" type="button">테스트 주문 보내기</button>
       <p id="reviewSubmitStatus" class="review-submit-status" role="status" aria-live="polite"></p>
-      <section id="orderTracking" class="order-tracking" hidden aria-live="polite"><small>테스트 주문번호</small><b id="trackingOrderId"></b><strong id="trackingStatus"></strong><p>상점주 화면에서 처리하면 이 상태가 자동으로 바뀝니다.</p><a href="../store-manager/">상점주 주문접수 화면 열기</a></section>
     </main>
   </section>
 
-  <script src="app.js?v=20261012-1" defer></script>
+  <script src="app.js?v=20261012-2" defer></script>
 </body>
 </html>

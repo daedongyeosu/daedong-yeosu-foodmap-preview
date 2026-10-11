@@ -23,6 +23,8 @@ let quoteRequestId=0;
 let trackingTimer=null;
 
 const ORDER_STATUS={NEW:'상점 확인 전',ACCEPTED:'주문 수락',PREPARING:'상품 준비중',READY:'상품 준비완료',DELIVERY_REQUESTED:'배송요청 완료',REJECTED:'주문 거절'};
+const ORDER_MESSAGE={NEW:'상점이 주문을 확인하고 있습니다.',ACCEPTED:'상점이 주문을 수락했습니다.',PREPARING:'상점에서 상품을 준비하고 있습니다.',READY:'상품 준비가 끝났습니다. 배송 요청을 기다립니다.',DELIVERY_REQUESTED:'배송 요청이 접수되었습니다.',REJECTED:'상점 사정으로 주문을 진행할 수 없습니다.'};
+const ORDER_PROGRESS=['NEW','ACCEPTED','PREPARING','READY','DELIVERY_REQUESTED'];
 
 function money(value){return `${Math.max(0,Number(value)||0).toLocaleString('ko-KR')}원`;}
 function demoMode(){return new URLSearchParams(location.search).get('demo')==='1';}
@@ -55,15 +57,24 @@ function orderPayload(){
 
 function saveTracking(value){try{localStorage.setItem(PREVIEW_ORDER_KEY,JSON.stringify(value));}catch{}}
 function loadTracking(){try{const value=JSON.parse(localStorage.getItem(PREVIEW_ORDER_KEY)||'null');return value?.orderId&&value?.customerToken?value:null;}catch{return null;}}
-function paintTracking(order){const panel=document.querySelector('#orderTracking');panel.hidden=false;document.querySelector('#trackingOrderId').textContent=order.id;document.querySelector('#trackingStatus').textContent=ORDER_STATUS[order.status]||order.status;}
+function trackingClock(value){if(!value)return'';const date=new Date(value);if(Number.isNaN(date.getTime()))return'';return new Intl.DateTimeFormat('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(date);}
+function paintTracking(order,events=[]){
+  const panel=document.querySelector('#orderTracking');const current=String(order.status||'NEW').toUpperCase();const activeIndex=ORDER_PROGRESS.indexOf(current);
+  panel.hidden=false;panel.classList.toggle('is-rejected',current==='REJECTED');panel.setAttribute('aria-busy','false');
+  document.querySelector('#trackingOrderId').textContent=order.id;document.querySelector('#trackingStatus').textContent=ORDER_STATUS[current]||current;document.querySelector('#trackingMessage').textContent=ORDER_MESSAGE[current]||'주문 진행상황을 확인하고 있습니다.';
+  document.querySelectorAll('#trackingSteps li').forEach((step,index)=>{const complete=current!=='REJECTED'&&activeIndex>=index;step.classList.toggle('is-complete',complete);step.classList.toggle('is-current',current!=='REJECTED'&&activeIndex===index);});
+  const latest=Array.isArray(events)&&events.length?events[events.length-1]?.createdAt:order.updatedAt;const stamp=trackingClock(latest);document.querySelector('#trackingUpdated').textContent=stamp?`최근 변경 ${stamp}`:'상점주 화면에서 처리하면 자동으로 바뀝니다.';
+}
 async function refreshTracking(){
-  const saved=loadTracking();if(!saved)return;
-  try{const response=await fetch(`${STORE_ORDER_ENDPOINT}/${encodeURIComponent(saved.orderId)}`,{headers:{'accept':'application/json','X-Matjido-Order-Token':saved.customerToken},credentials:'omit'});if(!response.ok)return;const result=await response.json();paintTracking(result.order);}catch{}
+  const saved=loadTracking();if(!saved)return;const panel=document.querySelector('#orderTracking');const button=document.querySelector('#refreshTracking');panel.hidden=false;panel.setAttribute('aria-busy','true');button.disabled=true;
+  try{const response=await fetch(`${STORE_ORDER_ENDPOINT}/${encodeURIComponent(saved.orderId)}`,{headers:{'accept':'application/json','X-Matjido-Order-Token':saved.customerToken},credentials:'omit'});const result=await response.json();if(!response.ok)throw new Error(result?.message||`tracking-${response.status}`);paintTracking(result.order,result.events);}
+  catch(error){panel.setAttribute('aria-busy','false');document.querySelector('#trackingOrderId').textContent=saved.orderId;document.querySelector('#trackingStatus').textContent='상태 확인 필요';document.querySelector('#trackingMessage').textContent=String(error?.message||'').includes('만료')?'테스트 주문 확인기간이 끝났습니다.':'연결이 원활하지 않습니다. 잠시 뒤 새로고침해 주세요.';document.querySelector('#trackingUpdated').textContent='자동 재확인 중';}
+  finally{button.disabled=false;}
 }
 async function sendPreviewOrder(){
   const button=document.querySelector('#sendPreviewOrder');const status=document.querySelector('#reviewSubmitStatus');if(!deliveryAddress||!deliveryQuote||!cartLines().length)return;
   button.disabled=true;status.className='review-submit-status';status.textContent='상점주 테스트 주문함으로 보내는 중입니다…';
-  try{const response=await fetch(STORE_ORDER_ENDPOINT,{method:'POST',mode:'cors',headers:{'content-type':'application/json','accept':'application/json'},credentials:'omit',body:JSON.stringify(orderPayload())});const result=await response.json();if(!response.ok||!result?.order?.id||!result?.customerToken)throw new Error(result?.message||`order-${response.status}`);saveTracking({orderId:result.order.id,customerToken:result.customerToken});paintTracking(result.order);status.textContent='테스트 주문이 상점주 주문접수 화면에 도착했습니다.';button.textContent='테스트 주문 전송 완료';cart={};saveCart();renderCart();clearInterval(trackingTimer);trackingTimer=setInterval(refreshTracking,5000);}catch(error){status.className='review-submit-status is-error';status.textContent=error?.message&&String(error.message).includes('상점')?String(error.message):'테스트 주문을 보내지 못했습니다. 잠시 뒤 다시 시도해 주세요.';button.disabled=false;}
+  try{const response=await fetch(STORE_ORDER_ENDPOINT,{method:'POST',mode:'cors',headers:{'content-type':'application/json','accept':'application/json'},credentials:'omit',body:JSON.stringify(orderPayload())});const result=await response.json();if(!response.ok||!result?.order?.id||!result?.customerToken)throw new Error(result?.message||`order-${response.status}`);saveTracking({orderId:result.order.id,customerToken:result.customerToken});paintTracking(result.order);status.textContent='테스트 주문이 상점주 주문접수 화면에 도착했습니다.';button.textContent='테스트 주문 전송 완료';cart={};saveCart();renderCart();document.querySelector('#orderReviewPanel').hidden=true;document.querySelector('#cartPanel').hidden=true;document.body.style.overflow='';document.querySelector('#orderTracking').scrollIntoView({behavior:'smooth',block:'start'});clearInterval(trackingTimer);trackingTimer=setInterval(refreshTracking,5000);}catch(error){status.className='review-submit-status is-error';status.textContent=error?.message&&String(error.message).includes('상점')?String(error.message):'테스트 주문을 보내지 못했습니다. 잠시 뒤 다시 시도해 주세요.';button.disabled=false;}
 }
 
 function loadPostcode(){
@@ -122,4 +133,5 @@ document.querySelector('#addressDetail').addEventListener('change',()=>{if(deliv
 document.querySelector('#previewOrder').addEventListener('click',()=>{const status=document.querySelector('#orderStatus');if(!deliveryAddress){status.textContent='배송받을 공식 주소를 먼저 선택해 주세요.';return;}if(!deliveryQuote){status.textContent='실제 도로거리 배송비가 확정된 뒤 주문내용을 확인할 수 있습니다.';return;}renderOrderReview();document.querySelector('#orderReviewPanel').hidden=false;status.textContent='';});
 document.querySelector('#closeOrderReview').addEventListener('click',()=>{document.querySelector('#orderReviewPanel').hidden=true;});
 document.querySelector('#sendPreviewOrder').addEventListener('click',sendPreviewOrder);
+document.querySelector('#refreshTracking').addEventListener('click',refreshTracking);
 applyStore();renderCategories();renderProducts();renderCart();refreshTracking();trackingTimer=setInterval(refreshTracking,5000);
