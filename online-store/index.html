@@ -10,6 +10,7 @@
   <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=20261011-1">
   <link rel="stylesheet" href="readability.css?v=20261011-1">
+  <link rel="stylesheet" href="delivery-quote.css?v=20261011-1">
 </head>
 <body>
   <header class="topbar">
@@ -43,7 +44,7 @@
 
     <section class="delivery-preview" aria-labelledby="deliveryTitle">
       <span aria-hidden="true">🛵</span>
-      <div><h2 id="deliveryTitle">배송비는 주소 확인 후 계산합니다</h2><p>직선거리가 아닌 실제 도로거리와 지역별 블록요금으로 계산하는 서버를 다음 단계에서 연결합니다.</p></div>
+      <div><h2 id="deliveryTitle">배송비는 주소 확인 후 계산합니다</h2><p>직선거리가 아닌 실제 도로거리와 배송 가능 조건을 확인해 최종 배송비를 계산합니다.</p></div>
     </section>
   </main>
 
@@ -55,12 +56,25 @@
   <section id="cartPanel" class="cart-panel" hidden aria-labelledby="cartTitle">
     <header><button id="closeCart" type="button" aria-label="장바구니 닫기">←</button><span><b id="cartTitle">장바구니</b><small id="cartStoreName">온라인 상점</small></span></header>
     <div id="cartItems" class="cart-items"></div>
+    <section class="delivery-address-card" aria-labelledby="deliveryAddressTitle">
+      <span class="delivery-address-icon" aria-hidden="true">📍</span>
+      <div>
+        <small>배송받을 곳</small>
+        <h2 id="deliveryAddressTitle">공식 주소를 선택해 주세요</h2>
+        <p id="deliveryAddressVerification">주소를 직접 입력하지 않고 공식 주소검색 결과에서 선택합니다.</p>
+      </div>
+      <button id="openAddress" type="button">주소 찾기</button>
+      <label id="addressDetailWrap" hidden><span>상세주소</span><input id="addressDetail" type="text" maxlength="80" placeholder="동·호수, 출입방법 등"></label>
+      <p id="quoteStatus" class="quote-status" role="status" aria-live="polite">주소를 선택하면 실제 도로거리 배송비를 요청합니다.</p>
+    </section>
     <section class="cart-summary" aria-label="결제금액 미리보기">
       <dl>
         <div><dt>상품금액</dt><dd id="productSubtotal">0원</dd></div>
         <div><dt>상점 배송비 지원</dt><dd id="storeSubsidy">0원</dd></div>
-        <div><dt>기사 배송료</dt><dd>주소 확인 후 계산</dd></div>
+        <div><dt>기사 배송료</dt><dd id="deliveryFee">주소 확인 후 계산</dd></div>
+        <div><dt>고객 배송비</dt><dd id="customerDeliveryFee">주소 확인 후 계산</dd></div>
         <div><dt>맛지도 이용금액</dt><dd>500원</dd></div>
+        <div class="order-total"><dt>총 결제예정금액</dt><dd id="orderTotal">배송비 계산 전</dd></div>
       </dl>
       <p>결제금액은 실제 도로거리 배송비가 계산된 뒤 확정됩니다.</p>
     </section>
@@ -68,6 +82,12 @@
     <p id="orderStatus" class="order-status" role="status" aria-live="polite"></p>
   </section>
 
-  <script src="app.js?v=20261011-3" defer></script>
+  <section id="postcodePanel" class="postcode-panel" hidden aria-labelledby="postcodeTitle">
+    <header><button id="postcodeClose" type="button" aria-label="주소검색 닫기">←</button><span><b id="postcodeTitle">배송받을 도로명주소 찾기</b><small>공식 주소 결과에서 선택하세요</small></span></header>
+    <p id="postcodeStatus">주소검색을 불러오는 중입니다.</p>
+    <div id="postcodeFrame"></div>
+  </section>
+
+  <script src="app.js?v=20261011-4" defer></script>
 </body>
 </html>
