@@ -17,6 +17,9 @@ for(const text of [
   '직선거리가 아닌 실제 도로거리',
   '공식 주소를 선택해 주세요',
   '총 결제예정금액',
+  '주문내용 확인',
+  '결제 전에 상품과 배송정보를 확인하세요',
+  '결제 연결 후 주문하기',
   '실제 주문·결제·배송요청은 발생하지 않습니다.'
 ])if(!page.includes(text))throw new Error(`고객 온라인 상점 필수 문구 누락: ${text}`);
 
@@ -29,6 +32,8 @@ for(const contract of [
   'function loadPostcode',
   'function selectDeliveryAddress',
   'function requestDeliveryQuote',
+  'function renderOrderReview',
+  '수량 ${quantity} · ${product.unit}',
   "const DELIVERY_QUOTE_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-delivery-quote'",
   "const MATJIDO_PUBLIC_CLIENT='daedong-preview-web-v1-20260804'",
   "'X-Daedong-Client':MATJIDO_PUBLIC_CLIENT",
@@ -39,6 +44,9 @@ for(const contract of [
   '배송비 별도',
   '실제 도로거리 배송비가 확정된 뒤 주문내용을 확인할 수 있습니다.'
 ])if(!script.includes(contract))throw new Error(`고객 온라인 상점 기능 계약 누락: ${contract}`);
+
+if(!page.includes('id="orderReviewPanel"')||!page.includes('id="closeOrderReview"'))throw new Error('결제 전 주문서 화면 또는 닫기 동작이 없습니다.');
+if(!deliveryStyle.includes('.order-review-panel')||!deliveryStyle.includes('.review-total'))throw new Error('결제 전 주문서 모바일 화면 스타일이 없습니다.');
 
 if(!merchant.includes('href="../online-store/"'))throw new Error('상점주 최종 미리보기에서 고객 상점으로 연결되지 않습니다.');
 if(/기사 배송료<\/dt><dd>\s*[0-9,]+원/.test(page))throw new Error('도로거리 계산 전 기사 배송료를 임의 금액으로 표시했습니다.');

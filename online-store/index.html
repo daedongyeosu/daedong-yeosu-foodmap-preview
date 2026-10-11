@@ -88,6 +88,18 @@
     <div id="postcodeFrame"></div>
   </section>
 
-  <script src="app.js?v=20261011-5" defer></script>
+  <section id="orderReviewPanel" class="order-review-panel" hidden aria-labelledby="orderReviewTitle">
+    <header><button id="closeOrderReview" type="button" aria-label="주문서 닫기">←</button><span><b id="orderReviewTitle">주문내용 확인</b><small>결제 전에 상품과 배송정보를 확인하세요</small></span></header>
+    <main>
+      <section class="review-card review-store"><small>주문 상점</small><h2 id="reviewStoreName">온라인 상점</h2></section>
+      <section class="review-card"><small>배송받을 곳</small><h2 id="reviewAddress">공식 주소 확인 전</h2><p id="reviewAddressDetail"></p></section>
+      <section class="review-card" aria-labelledby="reviewItemsTitle"><small>주문 상품</small><h2 id="reviewItemsTitle">상품 확인</h2><div id="reviewItems" class="review-items"></div></section>
+      <section class="review-card review-payment" aria-labelledby="reviewPaymentTitle"><small>결제예정금액</small><h2 id="reviewPaymentTitle">금액 확인</h2><dl><div><dt>상품금액</dt><dd id="reviewSubtotal">0원</dd></div><div><dt>상점 배송비 지원</dt><dd id="reviewSubsidy">0원</dd></div><div><dt>기사 배송료</dt><dd id="reviewDeliveryFee">0원</dd></div><div><dt>고객 배송비</dt><dd id="reviewCustomerDeliveryFee">0원</dd></div><div><dt>맛지도 이용금액</dt><dd id="reviewPlatformFee">0원</dd></div><div class="review-total"><dt>총 결제예정금액</dt><dd id="reviewTotal">0원</dd></div></dl></section>
+      <p class="review-notice">현재는 주문서 확인 단계입니다. 실제 결제·상점 주문접수·배송요청은 발생하지 않습니다.</p>
+      <button class="review-submit" type="button" disabled>결제 연결 후 주문하기</button>
+    </main>
+  </section>
+
+  <script src="app.js?v=20261011-6" defer></script>
 </body>
 </html>
