@@ -46,6 +46,7 @@ for(const contract of [
 ])if(!script.includes(contract))throw new Error(`고객 온라인 상점 기능 계약 누락: ${contract}`);
 
 if(!page.includes('id="orderReviewPanel"')||!page.includes('id="closeOrderReview"'))throw new Error('결제 전 주문서 화면 또는 닫기 동작이 없습니다.');
+if(!page.includes('delivery-quote.css?v=20261011-2'))throw new Error('결제 전 주문서 CSS 캐시 버전이 갱신되지 않았습니다.');
 if(!deliveryStyle.includes('.order-review-panel')||!deliveryStyle.includes('.review-total'))throw new Error('결제 전 주문서 모바일 화면 스타일이 없습니다.');
 
 if(!merchant.includes('href="../online-store/"'))throw new Error('상점주 최종 미리보기에서 고객 상점으로 연결되지 않습니다.');
