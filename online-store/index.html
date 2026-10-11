@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a5f4b">
+  <meta name="robots" content="noindex,nofollow">
+  <title>온라인 상점 미리보기 | 여수맛지도</title>
+  <meta name="description" content="여수맛지도 온라인 상점의 고객용 상품목록과 장바구니 프리뷰">
+  <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
+  <link rel="stylesheet" href="styles.css?v=20261011-1">
+  <link rel="stylesheet" href="readability.css?v=20261011-1">
+</head>
+<body>
+  <header class="topbar">
+    <a href="../" aria-label="여수맛지도 홈으로 돌아가기">←</a>
+    <span><b>여수맛지도</b><small>온라인 상점</small></span>
+    <em>PREVIEW</em>
+  </header>
+
+  <main>
+    <section class="store-hero" id="storeHero">
+      <span id="storeCategory">동네상점</span>
+      <h1 id="storeName">여수맛지도 온라인 상점</h1>
+      <p id="storeAddress">여수시 상점의 상품을 집에서 주문해 보세요.</p>
+      <ul><li>매장 판매가격 그대로</li><li>맛지도 배송 연결</li><li id="subsidyBadge" hidden></li></ul>
+    </section>
+
+    <section class="preview-notice" aria-label="프리뷰 안내">
+      <b>고객 화면 프리뷰</b>
+      <span>상품과 장바구니 흐름을 확인하는 화면이며 실제 주문·결제·배송요청은 발생하지 않습니다.</span>
+    </section>
+
+    <section class="catalog-tools" aria-label="상품 찾기">
+      <label><span aria-hidden="true">⌕</span><input id="productSearch" type="search" placeholder="이 상점에서 상품 찾기" autocomplete="off"></label>
+      <nav id="categoryFilters" aria-label="상품 분류"></nav>
+    </section>
+
+    <section class="catalog" aria-labelledby="catalogTitle">
+      <header><span><small>판매 중인 상품</small><h2 id="catalogTitle">무엇이 필요하세요?</h2></span><em id="resultCount">0개</em></header>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section class="delivery-preview" aria-labelledby="deliveryTitle">
+      <span aria-hidden="true">🛵</span>
+      <div><h2 id="deliveryTitle">배송비는 주소 확인 후 계산합니다</h2><p>직선거리가 아닌 실제 도로거리와 지역별 블록요금으로 계산하는 서버를 다음 단계에서 연결합니다.</p></div>
+    </section>
+  </main>
+
+  <button id="openCart" class="cart-bar" type="button" disabled>
+    <span><i id="cartCount">0</i> 장바구니</span>
+    <b id="cartBarTotal">상품을 담아주세요</b>
+  </button>
+
+  <section id="cartPanel" class="cart-panel" hidden aria-labelledby="cartTitle">
+    <header><button id="closeCart" type="button" aria-label="장바구니 닫기">←</button><span><b id="cartTitle">장바구니</b><small id="cartStoreName">온라인 상점</small></span></header>
+    <div id="cartItems" class="cart-items"></div>
+    <section class="cart-summary" aria-label="결제금액 미리보기">
+      <dl>
+        <div><dt>상품금액</dt><dd id="productSubtotal">0원</dd></div>
+        <div><dt>상점 배송비 지원</dt><dd id="storeSubsidy">0원</dd></div>
+        <div><dt>기사 배송료</dt><dd>주소 확인 후 계산</dd></div>
+        <div><dt>맛지도 이용금액</dt><dd>500원</dd></div>
+      </dl>
+      <p>결제금액은 실제 도로거리 배송비가 계산된 뒤 확정됩니다.</p>
+    </section>
+    <button id="previewOrder" class="preview-order" type="button">주문내용 미리보기</button>
+    <p id="orderStatus" class="order-status" role="status" aria-live="polite"></p>
+  </section>
+
+  <script src="app.js?v=20261011-3" defer></script>
+</body>
+</html>
