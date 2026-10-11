@@ -3,6 +3,7 @@
   const CHANGE_EVENT='matjido-freight-change';
   const OFFER_TIMEOUT_MS=30000;
   const ASSIGNMENT_GRACE_MS=15*60*1000;
+  const PRESENCE_TIMEOUT_MS=90*1000;
   const MAX_BOOST_WON=100000;
   const seedOrders=[
     {id:'YF-1011-01',status:'PAID',createdAt:'2026-10-11T06:00:00+09:00',route:'문수동 → 여천공단',pickupArea:'문수동',dropoffArea:'여천공단',pickup:'여수시 문수로 00 · 상가 앞',dropoff:'여수시 여수산단로 000 · 경비실 인계',contact:'배차 확정 후 연결되는 안심번호',distance:12.8,item:'포장된 행사물품 6박스',weight:350,required:['리프트'],note:'상차지에서 물품을 리프트에 올려드립니다. 도착지 경비실 인계입니다.',customerTotal:52500,driverPayout:45000,platformFee:5000,pgFee:1500,expenses:1000,assignedDriverId:''},
@@ -15,11 +16,16 @@
     {id:'D-03',name:'박운송',vehicle:'500kg 라보',payload:500,features:[],area:'여수 시내',hours:'주간만 · 현재 운행종료',available:false,verified:true}
   ];
   const clone=value=>JSON.parse(JSON.stringify(value));
-  const initial=()=>({version:1,orders:clone(seedOrders),drivers:clone(seedDrivers),history:[]});
+  const demoLocations={'D-01':{latitude:34.7542,longitude:127.7041},'D-02':{latitude:34.7606,longitude:127.6622}};
+  const initial=()=>({version:2,orders:clone(seedOrders),drivers:clone(seedDrivers).map(driver=>({...driver,boardOpen:driver.available,lastSeenAt:driver.available?new Date().toISOString():'',locationStatus:driver.available?'GRANTED':'OFF',...(demoLocations[driver.id]||{})})),history:[]});
+  function migrate(state){
+    if(Number(state.version||0)>=2)return state;const now=new Date().toISOString();state.version=2;
+    state.drivers=state.drivers.map(driver=>({...driver,boardOpen:Boolean(driver.available),lastSeenAt:driver.available?now:'',locationStatus:driver.available?'GRANTED':'OFF',...(demoLocations[driver.id]||{})}));localStorage.setItem(KEY,JSON.stringify(state));return state;
+  }
   function read(){
     try{
       const saved=JSON.parse(localStorage.getItem(KEY)||'null');
-      if(saved&&Array.isArray(saved.orders)&&Array.isArray(saved.drivers))return saved;
+      if(saved&&Array.isArray(saved.orders)&&Array.isArray(saved.drivers))return migrate(saved);
     }catch{}
     const state=initial();write(state);return state;
   }
@@ -29,10 +35,26 @@
     return state;
   }
   function reset(){return write(initial());}
+  function driverMatchesOrder(driver,order){return Boolean(driver?.verified&&driver.payload>=Number(order.weight||0)&&(order.required||[]).every(feature=>driver.features.includes(feature)));}
+  function driverPresenceStatus(driver,now=Date.now()){
+    if(driver?.dispatchExcluded)return {code:'EXCLUDED',label:'이 주문 재배차 제외',online:false};
+    if(!driver?.available||!driver.boardOpen)return {code:'OFFLINE',label:'오더판 꺼짐',online:false};
+    if(driver.locationStatus!=='GRANTED')return {code:'LOCATION_REQUIRED',label:'위치 확인 필요',online:false};
+    const seen=Date.parse(driver.lastSeenAt||'');if(!Number.isFinite(seen)||Number(now)-seen>PRESENCE_TIMEOUT_MS)return {code:'STALE',label:'연결 끊김',online:false};
+    return {code:'ONLINE',label:'오더 수신 중',online:true};
+  }
   function eligibleDrivers(order,state=read()){
     const excluded=new Set(order.excludedDriverIds||[]);const now=Date.now();
-    return state.drivers.filter(driver=>driver.verified&&driver.available&&!excluded.has(driver.id)&&(!driver.suspendedUntil||Date.parse(driver.suspendedUntil)<=now)&&driver.payload>=Number(order.weight||0)&&(order.required||[]).every(feature=>driver.features.includes(feature)));
+    return state.drivers.filter(driver=>driverMatchesOrder(driver,order)&&driverPresenceStatus(driver,now).online&&!excluded.has(driver.id)&&(!driver.suspendedUntil||Date.parse(driver.suspendedUntil)<=now));
   }
+  function updateDriverPresence(driverId,patch={}){
+    const state=read();const driver=state.drivers.find(item=>item.id===driverId);if(!driver)return {ok:false,reason:'DRIVER_NOT_FOUND'};
+    const allowed=['available','boardOpen','locationStatus','latitude','longitude','accuracy','appState'];for(const key of allowed){if(Object.hasOwn(patch,key))driver[key]=patch[key];}
+    driver.lastSeenAt=new Date().toISOString();write(state);return {ok:true,driver:clone(driver)};
+  }
+  function heartbeatDriver(driverId,patch={}){return updateDriverPresence(driverId,{...patch,appState:patch.appState||'FOREGROUND'});}
+  function distanceKm(a,b){if(!Number.isFinite(a?.latitude)||!Number.isFinite(a?.longitude)||!Number.isFinite(b?.latitude)||!Number.isFinite(b?.longitude))return null;const rad=value=>value*Math.PI/180;const dLat=rad(b.latitude-a.latitude);const dLon=rad(b.longitude-a.longitude);const h=Math.sin(dLat/2)**2+Math.cos(rad(a.latitude))*Math.cos(rad(b.latitude))*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(h),Math.sqrt(1-h));}
+  function rankOrdersForDriver(orders,driver){return [...orders].map(order=>({...order,distanceToPickupKm:distanceKm(driver,order.pickupLocation)})).sort((a,b)=>Number(Boolean(b.recoveryPriority))-Number(Boolean(a.recoveryPriority))||(a.distanceToPickupKm??99999)-(b.distanceToPickupKm??99999)||Date.parse(a.createdAt)-Date.parse(b.createdAt));}
   function createRequest(payload){
     const state=read();
     const serial=String(Date.now()).slice(-6);
@@ -112,5 +134,5 @@
     window.addEventListener(CHANGE_EVENT,local);window.addEventListener('storage',storage);
     return ()=>{window.removeEventListener(CHANGE_EVENT,local);window.removeEventListener('storage',storage);};
   }
-  window.MatjidoFreightStore={KEY,OFFER_TIMEOUT_MS,ASSIGNMENT_GRACE_MS,MAX_BOOST_WON,read,reset,createRequest,transition,markNoAcceptance,offerSecondsRemaining,expireUnacceptedOffers,addCustomerBoost,acceptOrder,recoverDriverFailure,assignmentSecondsRemaining,checkAssignmentCommitments,eligibleDrivers,subscribe};
+  window.MatjidoFreightStore={KEY,OFFER_TIMEOUT_MS,ASSIGNMENT_GRACE_MS,PRESENCE_TIMEOUT_MS,MAX_BOOST_WON,read,reset,createRequest,transition,markNoAcceptance,offerSecondsRemaining,expireUnacceptedOffers,addCustomerBoost,acceptOrder,recoverDriverFailure,assignmentSecondsRemaining,checkAssignmentCommitments,driverMatchesOrder,driverPresenceStatus,updateDriverPresence,heartbeatDriver,rankOrdersForDriver,eligibleDrivers,subscribe};
 })();

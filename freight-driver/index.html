@@ -6,21 +6,22 @@
   <meta name="theme-color" content="#13392e">
   <title>맛지도 화물기사 | 오더</title>
   <link rel="stylesheet" href="styles.css?v=20261011-1">
-  <link rel="stylesheet" href="commitment.css?v=20261011-1">
+  <link rel="stylesheet" href="commitment.css?v=20261011-2-driver-presence">
 </head>
 <body>
   <main>
     <header><a href="../freight-partner/" aria-label="협력기사 등록 화면으로 돌아가기">←</a><span><b>맛지도 화물기사</b><small>여수 화물배송</small></span><em>프리뷰</em></header>
     <section class="driver-card" aria-label="기사 승인 상태">
       <div><span class="avatar">🚚</span><span><small>승인완료 데모기사</small><b>700kg 리프트 카고</b></span><strong>VERIFIED</strong></div>
-      <label class="availability"><span><b>오늘 오더 받기</b><small id="availabilityCopy">운행을 시작하면 맞는 오더만 보여드려요.</small></span><input id="availabilityToggle" type="checkbox" role="switch"><i aria-hidden="true"></i></label>
-      <p>실제 운영에서는 자격·영업용 차량·허가·보험이 모두 유효한 기사만 이 화면에 들어옵니다.</p>
+      <label class="availability"><span><b>오늘 오더 받기</b><small id="availabilityCopy">켜면 위치 확인 후 오더를 수락할 수 있습니다.</small></span><input id="availabilityToggle" type="checkbox" role="switch"><i aria-hidden="true"></i></label>
+      <div class="presence-grid" aria-live="polite"><span><small>GPS</small><strong id="locationState">확인 중</strong></span><span><small>연결</small><strong id="connectionState">확인 중</strong></span><small id="lastSeenState">최근 접속 확인 중</small></div>
+      <p>공개 오더는 꺼진 상태에서도 볼 수 있습니다. 실제 수락은 자격·영업용 차량·허가·보험 확인과 위치·접속 확인이 모두 된 기사만 가능합니다.</p>
     </section>
     <nav aria-label="화물기사 메뉴"><button type="button" data-tab="offers" aria-pressed="true">받을 오더 <span id="offerCount">0</span></button><button type="button" data-tab="active" aria-pressed="false">수행 중</button><button type="button" data-tab="settlement" aria-pressed="false">정산</button></nav>
     <section id="offersPanel" class="panel">
       <div class="panel-head"><span><p>지금 받을 수 있는 오더</p><h1>내 차량에 맞는 배송</h1></span><button id="refreshOffers" type="button">새로고침</button></div>
-      <div id="offlineMessage" class="empty-state"><span>🅿️</span><h2>현재 운행 대기 중입니다</h2><p>위의 ‘오늘 오더 받기’를 켜면 차량조건에 맞는 오더가 표시됩니다.</p></div>
-      <div id="offerList" class="offer-list" hidden></div>
+      <div id="offlineMessage" class="empty-state compact-presence"><span>👀</span><h2>오더를 둘러보는 중입니다</h2><p>수락하려면 위 ‘오늘 오더 받기’를 켜고 위치를 확인하세요.</p></div>
+      <div id="offerList" class="offer-list"></div>
     </section>
     <section id="activePanel" class="panel" hidden>
       <div class="panel-head"><span><p>현재 수행 중</p><h1>배차된 화물배송</h1></span></div>
@@ -45,7 +46,7 @@
     </section>
     <section class="demo-boundary"><b>프리뷰 동작 확인용</b><p>현재 수락과 상태변경은 이 기기 안에서만 시연됩니다. 실제 운영에서는 서버가 한 명의 수락만 원자적으로 확정하고 토스 지급대행과 연결합니다.</p></section>
   </main>
-  <script src="../freight-order-store.js?v=20261011-5-driver-commitment"></script>
-  <script src="app.js?v=20261011-5-driver-commitment"></script>
+  <script src="../freight-order-store.js?v=20261011-6-driver-presence"></script>
+  <script src="app.js?v=20261011-6-driver-presence"></script>
 </body>
 </html>
