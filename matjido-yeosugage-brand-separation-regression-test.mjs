@@ -31,6 +31,11 @@ assert.notEqual(
 
 const html = fs.readFileSync('index.html', 'utf8');
 assert.match(html, /assets\/brand\/yeosugage-app-icon\.png/, '여수가게 진입부는 여수가게 전용 아이콘을 계속 사용해야 합니다.');
-assert.match(html, /daedong-app-icon-192\.png\?v=matjido-master-20261003-preview-1/, '여수맛지도 설치 아이콘은 승인된 맛지도 버전을 사용해야 합니다.');
+assert.match(html, /daedong-preview-icon-192\.png\?v=preview-test-icon-20261012-1/, '미리보기 설치 아이콘은 승인된 맛지도 로고에 TEST 표시를 한 전용 버전이어야 합니다.');
+assert.notEqual(
+  sha256(yeosuGageIcon),
+  sha256('assets/app-icons/daedong-preview-icon-512.png'),
+  '여수가게와 맛지도 미리보기 앱 아이콘도 서로 다른 브랜드 자산이어야 합니다.'
+);
 
 console.log('Matjido / YeosuGage brand separation regression: PASS');
