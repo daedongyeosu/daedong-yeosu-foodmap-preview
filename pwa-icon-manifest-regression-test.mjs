@@ -8,13 +8,13 @@ const manifest = JSON.parse(fs.readFileSync(path.join(root, 'manifest.webmanifes
 const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
 
 const expected = [
-  ['any', '192x192', '/assets/app-icons/daedong-app-icon-192.png'],
-  ['any', '512x512', '/assets/app-icons/daedong-app-icon-512.png'],
-  ['maskable', '192x192', '/assets/app-icons/daedong-app-icon-maskable-192.png'],
-  ['maskable', '512x512', '/assets/app-icons/daedong-app-icon-maskable-512.png']
+  ['any', '192x192', '/assets/app-icons/daedong-preview-icon-192.png'],
+  ['any', '512x512', '/assets/app-icons/daedong-preview-icon-512.png'],
+  ['maskable', '192x192', '/assets/app-icons/daedong-preview-icon-maskable-192.png'],
+  ['maskable', '512x512', '/assets/app-icons/daedong-preview-icon-maskable-512.png']
 ];
 
-assert.equal(manifest.icons.length, expected.length, '공식 앱 아이콘 4개만 manifest에 등록해야 합니다.');
+assert.equal(manifest.icons.length, expected.length, '미리보기 전용 앱 아이콘 4개만 manifest에 등록해야 합니다.');
 
 for (const [purpose, sizes, src] of expected) {
   const icon = manifest.icons.find(item => item.purpose === purpose && item.sizes === sizes);
@@ -33,4 +33,4 @@ for (const [purpose, sizes, src] of expected) {
 }
 
 assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v31-yogiyo-representative-only'/);
-console.log('PWA official app icon manifest regression: PASS');
+console.log('PWA preview TEST app icon manifest regression: PASS');

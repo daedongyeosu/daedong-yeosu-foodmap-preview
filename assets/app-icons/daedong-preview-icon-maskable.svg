@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">여수맛지도 미리보기 TEST 마스크 아이콘</title>
+  <desc id="desc">안전 여백이 있는 기존 여수맛지도 아이콘에 주황색 TEST 표시를 추가한 미리보기 사이트 전용 아이콘</desc>
+  <image href="daedong-app-icon-maskable-512.png" x="0" y="0" width="512" height="512"/>
+  <rect x="116" y="344" width="280" height="84" rx="42" fill="#F4511E" stroke="#FFFFFF" stroke-width="10"/>
+  <text x="256" y="406" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="900" letter-spacing="2" fill="#FFFFFF">TEST</text>
+</svg>

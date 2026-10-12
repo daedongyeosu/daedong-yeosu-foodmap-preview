@@ -1,11 +1,11 @@
 {
   "id": "/",
-  "name": "여수맛지도",
-  "short_name": "여수맛지도",
-  "description": "여수 음식점과 이용 가능한 주문방법을 한눈에 확인하는 여수맛지도",
+  "name": "여수맛지도 미리보기 TEST",
+  "short_name": "맛지도 TEST",
+  "description": "운영 사이트와 구분되는 여수맛지도 미리보기 TEST 앱",
   "lang": "ko-KR",
   "dir": "ltr",
-  "start_url": "/?source=android-app",
+  "start_url": "/?source=preview-app",
   "scope": "/",
   "launch_handler": {
     "client_mode": "navigate-existing"
@@ -18,25 +18,25 @@
   "categories": ["food", "lifestyle", "navigation"],
   "icons": [
     {
-      "src": "/assets/app-icons/daedong-app-icon-192.png",
+      "src": "/assets/app-icons/daedong-preview-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/app-icons/daedong-app-icon-512.png",
+      "src": "/assets/app-icons/daedong-preview-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/app-icons/daedong-app-icon-maskable-192.png",
+      "src": "/assets/app-icons/daedong-preview-icon-maskable-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/assets/app-icons/daedong-app-icon-maskable-512.png",
+      "src": "/assets/app-icons/daedong-preview-icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

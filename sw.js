@@ -8,12 +8,11 @@ const APP_SHELL = [
   '/manifest.webmanifest',
   '/assets/brand/yeosu-taste-map-logo.png?v=yeosu-taste-map-20260924-preview-1',
   '/assets/brand/yeosu-taste-map-share-1200x630.png',
-  '/assets/app-icons/daedong-app-icon-192.png',
-  '/assets/app-icons/daedong-app-icon-192.png?v=matjido-master-20261003-preview-1',
-  '/assets/app-icons/daedong-app-icon-512.png',
-  '/assets/app-icons/daedong-app-icon-512.png?v=matjido-master-20261003-preview-1',
-  '/assets/app-icons/daedong-app-icon-maskable-192.png',
-  '/assets/app-icons/daedong-app-icon-maskable-512.png'
+  '/assets/app-icons/daedong-preview-icon-192.png',
+  '/assets/app-icons/daedong-preview-icon-192.png?v=preview-test-icon-20261012-1',
+  '/assets/app-icons/daedong-preview-icon-512.png',
+  '/assets/app-icons/daedong-preview-icon-maskable-192.png',
+  '/assets/app-icons/daedong-preview-icon-maskable-512.png'
 ];
 const APP_SHELL_PATHS = new Set(APP_SHELL.map(value => new URL(value, self.location.origin).pathname));
 
