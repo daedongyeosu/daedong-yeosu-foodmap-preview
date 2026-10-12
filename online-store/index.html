@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="readability.css?v=20261011-1">
   <link rel="stylesheet" href="delivery-quote.css?v=20261012-1">
   <link rel="stylesheet" href="order-tracking.css?v=20261012-1">
+  <link rel="stylesheet" href="live-market.css?v=20261013-1">
 </head>
 <body>
   <header class="topbar">
@@ -31,6 +32,22 @@
     <section class="preview-notice" aria-label="프리뷰 안내">
       <b>고객 화면 프리뷰</b>
       <span>상품과 장바구니 흐름을 확인하는 화면이며 실제 주문·결제·배송요청은 발생하지 않습니다.</span>
+    </section>
+
+    <section id="liveMarket" class="live-market" aria-labelledby="liveMarketTitle" hidden>
+      <header>
+        <span><small>동네상품 가격판</small><h2 id="liveMarketTitle">지금 움직이는 가격</h2></span>
+        <em id="liveMarketCount">0개 진행 중</em>
+      </header>
+      <p class="live-market-lead">사장님이 직접 정한 수량·기간·최저가격 안에서만 움직입니다. 다른 가게 가격을 따라 자동으로 내리지 않습니다.</p>
+      <nav id="liveMarketFilters" aria-label="실시간 할인 분류">
+        <button type="button" data-live-filter="all" aria-pressed="true">전체</button>
+        <button type="button" data-live-filter="cumulative" aria-pressed="false">함께 주문</button>
+        <button type="button" data-live-filter="clearance" aria-pressed="false">재고 할인</button>
+        <button type="button" data-live-filter="watch" aria-pressed="false">관심상품</button>
+      </nav>
+      <div id="liveMarketList" class="live-market-list" aria-live="polite"></div>
+      <p class="live-market-policy">결제 확인된 주문만 누적됩니다. 누적주문 행사는 마감 최종가를 같은 행사 주문에 적용하는 방식으로 설계합니다.</p>
     </section>
 
     <section id="orderTracking" class="order-tracking" hidden aria-live="polite" aria-labelledby="trackingTitle">
@@ -121,6 +138,7 @@
     </main>
   </section>
 
-  <script src="app.js?v=20261012-2" defer></script>
+  <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
+  <script src="app.js?v=20261013-1" defer></script>
 </body>
 </html>
