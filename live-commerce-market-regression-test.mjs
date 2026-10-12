@@ -8,6 +8,8 @@ const partnerScript=fs.readFileSync('store-partner/app.js','utf8');
 const managerPage=fs.readFileSync('store-manager/index.html','utf8');
 const managerScript=fs.readFileSync('store-manager/app.js','utf8');
 
+if(customerScript.includes('visible.sort((a,b)=>b.state.discountRate'))throw new Error('할인율 순 자동 진열은 가격경쟁을 부추길 수 있어 허용하지 않습니다.');
+
 for(const text of ['지금 움직이는 가격','함께 주문','재고 할인','관심상품','다른 가게 가격을 따라 자동으로 내리지 않습니다.'])if(!customerPage.includes(text))throw new Error(`고객 실시간 장터 필수 문구 누락: ${text}`);
 for(const contract of ['function renderLiveMarket','function priceState','function cartEntry','lockedPrice','bestLockedPrice','결제확인','최저'])if(!customerScript.includes(contract))throw new Error(`고객 실시간 장터 기능 계약 누락: ${contract}`);
 if(!customerStyle.includes('.live-market-card')||!customerStyle.includes('@media(max-width:420px)'))throw new Error('실시간 장터 모바일 카드 스타일이 없습니다.');

@@ -54,7 +54,7 @@ function renderLiveMarket(){
   const visible=activeProducts.filter(({product,state})=>liveFilter==='all'||state.mode===liveFilter||(liveFilter==='watch'&&watchedProducts.has(product.id)));
   list.replaceChildren();
   if(!visible.length){const empty=document.createElement('p');empty.className='live-market-empty';empty.textContent=liveFilter==='watch'?'아직 관심상품이 없습니다. 별표를 눌러 모아보세요.':'이 분류에서 진행 중인 상품이 없습니다.';list.append(empty);return;}
-  visible.sort((a,b)=>b.state.discountRate-a.state.discountRate||a.product.name.localeCompare(b.product.name,'ko')).forEach(({product,state})=>{
+  visible.forEach(({product,state})=>{
     const card=document.createElement('article');card.className='live-market-card';const copy=document.createElement('span');const kicker=document.createElement('small');kicker.textContent=`${state.mode==='cumulative'?'함께 주문':'재고 할인'} · ${globalThis.MatjidoLiveCommerce.timeLeft(state.remainingMs)}`;const name=document.createElement('strong');name.textContent=product.name;copy.append(kicker,name);
     const price=document.createElement('span');price.className='live-market-price';price.innerHTML=`<del>${money(state.basePrice)}</del><b>${money(state.currentPrice)}</b>`;
     const progress=document.createElement('div');progress.className='live-market-progress';const bar=document.createElement('span');const fill=document.createElement('i');const progressValue=state.mode==='cumulative'?(state.nextTier?Math.min(100,state.signal/state.nextTier.threshold*100):100):Math.max(12,state.discountRate*4);fill.style.width=`${Math.max(8,progressValue)}%`;bar.append(fill);const progressText=document.createElement('small');progressText.textContent=globalThis.MatjidoLiveCommerce.describeNext(state);progress.append(bar,progressText);
