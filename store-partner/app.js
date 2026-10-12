@@ -1,4 +1,6 @@
 const STORAGE_KEY='matjido-store-onboarding-preview-v1';
+const STORE_CATALOG_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-orders/preview/catalog';
+const PREVIEW_CLIENT='store-manager-preview';
 const form=document.querySelector('#storeOnboarding');
 const steps=[...document.querySelectorAll('[data-step]')];
 const navButtons=[...document.querySelectorAll('[data-step-nav]')];
@@ -119,11 +121,18 @@ async function openPostcode(){
   try{const Postcode=await loadPostcode();status.textContent='도로명·건물명·지번을 검색해 정확한 상점 주소를 선택하세요.';new Postcode({oncomplete(data){const address=String(data.roadAddress||data.jibunAddress||data.address||'').trim();if(!/(?:^|\s)여수시\s/.test(address)){status.textContent='현재 프리뷰는 여수시 상점만 등록할 수 있습니다.';status.classList.add('error');return;}addressInput.value=address;addressInput.dataset.zonecode=String(data.zonecode||'');addressStatus.textContent='공식 주소검색에서 확인한 여수시 주소입니다.';addressStatus.classList.add('verified');panel.hidden=true;updateNext();document.querySelector('#storeAddressDetail').focus();},width:'100%',height:'100%'}).embed(frame);}
   catch{status.textContent='주소검색을 불러오지 못했습니다. 인터넷 연결을 확인하고 다시 시도해 주세요.';status.classList.add('error');}
 }
-function saveDraft(){
-  const payload={storeName:document.querySelector('#storeName').value.trim(),category:document.querySelector('#storeCategory').value,address:addressInput.value,addressZonecode:String(addressInput.dataset.zonecode||''),addressDetail:document.querySelector('#storeAddressDetail').value.trim(),phone:document.querySelector('#ownerPhone').value,theme:selected('theme'),productMethod:selected('productMethod'),products:products.map(({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing})=>({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing})),subsidy:Number(selected('subsidy'))||0,minimumOrder:Number(document.querySelector('#minimumOrder').value)||0,savedAt:new Date().toISOString(),previewOnly:true};
+async function syncServerCatalog(payload){
+  const response=await fetch(STORE_CATALOG_ENDPOINT,{method:'PUT',mode:'cors',headers:{'content-type':'application/json','accept':'application/json','X-Matjido-Preview-Client':PREVIEW_CLIENT},credentials:'omit',body:JSON.stringify(payload)});
+  const result=await response.json();if(!response.ok)throw new Error(result?.message||`catalog-${response.status}`);return result;
+}
+async function saveDraft(){
+  const previous=(()=>{try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');}catch{return null;}})();
+  const payload={storeId:String(previous?.storeId||'demo-yeosu-store'),storeName:document.querySelector('#storeName').value.trim(),category:document.querySelector('#storeCategory').value,address:addressInput.value,addressZonecode:String(addressInput.dataset.zonecode||''),addressDetail:document.querySelector('#storeAddressDetail').value.trim(),phone:document.querySelector('#ownerPhone').value,theme:selected('theme'),productMethod:selected('productMethod'),products:products.map(({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing})=>({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing,category:document.querySelector('#storeCategory').value})),subsidy:Number(selected('subsidy'))||0,minimumOrder:Number(document.querySelector('#minimumOrder').value)||0,savedAt:new Date().toISOString(),previewOnly:true};
   localStorage.setItem(STORAGE_KEY,JSON.stringify(payload));
-  document.querySelector('#saveStatus').textContent='이 기기에 입점 준비내용을 저장했습니다. 실제 공개나 주문 접수는 발생하지 않았습니다.';
-  saveButton.textContent='입점 준비내용 저장 완료';
+  saveButton.disabled=true;document.querySelector('#saveStatus').textContent='이 기기에 저장했고 서버의 테스트 가격·재고와 맞추는 중입니다…';
+  try{await syncServerCatalog(payload);document.querySelector('#saveStatus').textContent='저장 완료: 서버가 테스트 가격·재고·누적 주문수를 관리합니다. 실제 결제나 공개 판매는 발생하지 않습니다.';saveButton.textContent='서버 연결 저장 완료';}
+  catch(error){document.querySelector('#saveStatus').textContent=`기기에는 저장됐지만 서버 동기화가 필요합니다. ${String(error?.message||'잠시 뒤 다시 저장해 주세요.')}`;saveButton.textContent='서버 동기화 다시 시도';}
+  finally{saveButton.disabled=!agreement.checked;}
 }
 function setRadio(name,value){document.querySelectorAll(`[name="${name}"]`).forEach(input=>{input.checked=input.value===String(value);});}
 function loadDraft(){
