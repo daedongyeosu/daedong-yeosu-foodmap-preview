@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="delivery-quote.css?v=20261012-1">
   <link rel="stylesheet" href="order-tracking.css?v=20261012-1">
   <link rel="stylesheet" href="live-market.css?v=20261013-1">
+  <link rel="stylesheet" href="store-profile.css?v=20261016-1">
+  <link rel="stylesheet" href="store-menu-photo.css?v=20261016-1">
 </head>
 <body>
   <header class="topbar">
@@ -26,12 +28,24 @@
       <span id="storeCategory">동네상점</span>
       <h1 id="storeName">여수맛지도 온라인 상점</h1>
       <p id="storeAddress">여수시 상점의 상품을 집에서 주문해 보세요.</p>
+      <a id="storePhone" class="store-phone" href="#" hidden></a>
       <ul><li>매장 판매가격 그대로</li><li>맛지도 배송 연결</li><li id="subsidyBadge" hidden></li></ul>
     </section>
 
     <section class="preview-notice" aria-label="프리뷰 안내">
       <b>고객 화면 프리뷰</b>
       <span>상품과 장바구니 흐름을 확인하는 화면이며 실제 주문·결제·배송요청은 발생하지 않습니다.</span>
+    </section>
+
+    <section id="storeProfile" class="store-profile" aria-labelledby="storeProfileTitle" hidden>
+      <header><small>가게 안내</small><h2 id="storeProfileTitle">이 가게를 소개합니다</h2></header>
+      <p id="storeIntroduction"></p>
+      <ul id="storeHighlights"></ul>
+      <div class="store-profile-facts">
+        <span id="storeHours"></span>
+        <span id="storeDirections"></span>
+      </div>
+      <a id="storeMapLink" href="#" target="_blank" rel="noopener noreferrer">네이버지도에서 위치·영업정보 보기</a>
     </section>
 
     <section id="liveMarket" class="live-market" aria-labelledby="liveMarketTitle" hidden>
@@ -139,6 +153,6 @@
   </section>
 
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
-  <script src="app.js?v=20261013-1" defer></script>
+  <script src="app.js?v=20261016-2" defer></script>
 </body>
 </html>

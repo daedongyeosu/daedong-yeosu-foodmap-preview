@@ -353,8 +353,8 @@ const INITIAL_STORE_BATCH_SIZE = 16;
 const PHOTO_POLICY_URL = 'data/photo-policy.json';
 const NEIGHBORHOOD_URL = ACTIVE_REGION.neighborhoodUrl || 'data/yeosu-neighborhoods.json';
 const EXTERNAL_APP_KEYS = ['yogiyo', 'coupang', 'baemin'];
-const LOW_FEE_KEYS = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand', 'phone'];
-const LOCAL_DETAIL_KEYS = ['direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand'];
+const LOW_FEE_KEYS = ['online_store', 'direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand', 'phone'];
+const LOCAL_DETAIL_KEYS = ['online_store', 'direct', 'mukkebi', 'ddangyo', 'ondongne', 'brand'];
 const DETAIL_ONLY_KEYS = ['phone', 'chak'];
 const BLOCKED_STORE_ROUTE_KEYS = Object.freeze({
   '09de7c8235046632': new Set(['phone']),
@@ -414,6 +414,7 @@ let analyticsInitialEntry = null;
 let analyticsFlushPromise = null;
 
 const APP_META = {
+  online_store: {label: '맛지도 바로주문', icon: '🛵'},
   direct: {label: '가게바로주문', icon: '🏪'},
   mukkebi: {label: '먹깨비', icon: 'assets/mukkebi-v7.png'},
   ddangyo: {label: '땡겨요', icon: 'assets/ddangyo-v7.png'},
@@ -2642,7 +2643,7 @@ function routeLink(route, extraClass = '') {
   return `<a class="detail-route ${extraClass}" href="${escapeHtml(route.url)}" ${String(route.url).startsWith('http') ? 'target="_blank" rel="noopener"' : ''} data-route-key="${escapeHtml(route.key)}">${appIcon(route.key, 'detail-route-icon')}<span>${escapeHtml(route.name)}</span><b>›</b></a>`;
 }
 function orderAppContinueLabel(key, fallback = '') {
-  return ({yogiyo:'요기요로',baemin:'배달의민족으로',coupang:'쿠팡이츠로',mukkebi:'먹깨비로',ddangyo:'땡겨요로',ondongne:'온동네로',direct:'가게바로주문으로'})[key] || `${fallback} 앱으로`;
+  return ({online_store:'맛지도 바로주문으로',yogiyo:'요기요로',baemin:'배달의민족으로',coupang:'쿠팡이츠로',mukkebi:'먹깨비로',ddangyo:'땡겨요로',ondongne:'온동네로',direct:'가게바로주문으로'})[key] || `${fallback} 앱으로`;
 }
 function storeMenuPreviewEntryMarkup(store) {
   if (store?.hasMenu !== true) return '';
