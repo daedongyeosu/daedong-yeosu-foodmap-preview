@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-13">
+  <link rel="stylesheet" href="studio.css?v=20261017-15">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -98,6 +98,8 @@
           <p class="hint">맛지도 온라인 상점의 상점번호로 상품을 불러옵니다. 진열 사진에 상품을 연결하면 기존 장바구니를 사용합니다. 시안에는 가격·재고를 따로 저장하지 않습니다.</p>
           <label>온라인 상점번호<input id="catalogStore" maxlength="80" placeholder="등록한 온라인 상점번호"></label>
           <button id="loadCatalog" type="button">등록 상품 불러오기·새로고침</button>
+          <button id="placeCatalogPhotos" type="button">등록한 상품사진 진열하기</button>
+          <p id="catalogPhotoStatus" class="hint" role="status">이 기기에 보관한 사진을 상품과 연결해 진열합니다. 이미 연결한 상품은 중복 배치하지 않습니다. 다른 기기의 사진은 서버 저장 연결 후 지원합니다.</p>
           <p id="catalogStatus" class="hint" role="status" aria-live="polite"></p>
         </details>
         <details id="businessSettings"><summary>4. 방문·배달 연결</summary>
@@ -189,12 +191,15 @@
         <section id="productDetails" class="customer-product" hidden aria-label="선택한 상품 안내">
           <img id="customerProductPhoto" alt=""><p id="customerProductDescription"></p>
           <p id="customerCatalogInfo" role="status"></p>
+          <button id="catalogAdd" type="button" hidden>장바구니에 담기</button>
+          <p id="catalogCartFeedback" role="status" aria-live="polite"></p>
           <button id="sampleAdd" hidden>체험 장바구니 담기</button>
           <p id="sampleFeedback" role="status" aria-live="polite"></p>
           <a id="customerProductOrder" class="customer-link order-link" target="_blank" rel="noopener noreferrer" hidden></a>
           <p id="productOrderMissing" hidden>이 상품의 주문 연결을 준비하고 있습니다.</p>
           <small>가격·옵션·재고·배송비와 도착 예상은 주문 화면에서 확인해 주세요.</small>
         </section>
+        <section id="catalogCart" class="catalog-cart" hidden><h2>내 장바구니</h2><p id="catalogCartSummary" role="status"></p><a id="catalogCartLink" class="customer-link order-link">장바구니·배송비 확인하기</a><p class="hint">상품금액에 배송비·맛지도 이용금액은 별도입니다. 담기는 재고 예약이나 주문이 아닙니다.</p></section>
         <section id="customerBrowse" class="customer-browse" hidden><h2>마음에 드는 상품을 골라보세요</h2><p>사진을 누르면 자세히 볼 수 있습니다.</p><div id="browseSections" class="browse-sections"></div><div id="browseProducts" class="browse-products"></div></section>
         <section id="sampleCart" class="sample-cart" hidden><h2>체험 장바구니 <span id="sampleCartCount">0</span></h2><p>예시 상품과 가격으로만 체험합니다. 실제 주문·결제·배달은 발생하지 않습니다.</p><div id="sampleCartItems"></div><strong id="sampleCartTotal">0원</strong><button id="sampleCartClear">모두 비우기</button></section>
         <section id="customerBusiness" class="customer-business" hidden aria-labelledby="customerBusinessTitle">
@@ -209,8 +214,11 @@
   <script src="layout.js?v=20261017-9" defer></script>
   <script src="customer-links.js?v=20261016-3" defer></script>
   <script src="catalog.js?v=20261016-4" defer></script>
+  <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
+  <script src="product-photos.js?v=20261017-1" defer></script>
+  <script src="catalog-cart.js?v=20261017-1" defer></script>
   <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-11" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-13" defer></script>
+  <script src="studio.js?v=20261017-15" defer></script>
 </body></html>

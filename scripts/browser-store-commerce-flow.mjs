@@ -29,7 +29,7 @@ try{
       if(request.method()==='POST'&&url.pathname==='/api/store-orders/preview'&&response.status===201)created++;
       return route.fulfill({status:response.status,headers:Object.fromEntries(response.headers),body:await response.text()});
     }
-    if(url.pathname==='/api/store-delivery-quote'){deliveryQuotes++;deliveryPayload=request.postDataJSON();return route.fulfill({contentType:'application/json',body:JSON.stringify({available:true,quoteId:'isolated-road-quote',deliveryFee:5000,platformFee:500,roadDistanceMeters:2100,policyVersion:'test-only',expiresAt:new Date(Date.now()+60000).toISOString()})});}
+    if(url.pathname==='/api/store-delivery-quote'){deliveryQuotes++;deliveryPayload=request.postDataJSON();assert.ok(deliveryPayload.pickup.address,'No tab may request a delivery quote with an empty pickup');return route.fulfill({contentType:'application/json',body:JSON.stringify({available:true,quoteId:'isolated-road-quote',deliveryFee:5000,platformFee:500,roadDistanceMeters:2100,policyVersion:'test-only',expiresAt:new Date(Date.now()+60000).toISOString()})});}
     throw new Error('External request blocked: '+url.pathname);
   });
   const merchant=await ctx.newPage();await merchant.goto(origin+'/store-partner/index.html');
@@ -56,8 +56,7 @@ try{
   const stock=env.DB.database.prepare('SELECT stock_remaining FROM store_preview_catalog WHERE store_id=?').get(saved.storeId);assert.equal(stock.stock_remaining,2);
   await shop.waitForFunction(()=>document.querySelector('#productGrid').textContent.includes('재고 2개'));
   await shop.locator('#orderTracking').scrollIntoViewIfNeeded();await shop.screenshot({path:'../tmp/store-commerce-tracking-mobile.png'});
-  const quoteCount=deliveryQuotes;
   await shop.evaluate(()=>localStorage.removeItem('matjido-store-onboarding-preview-v1'));
-  const missing=await ctx.newPage();await missing.goto(origin+`/online-store/index.html?catalogStore=${saved.storeId}`);await missing.waitForFunction(()=>document.querySelector('#productGrid').textContent.includes('검사용 상품'));await missing.locator('#productGrid button').click();await missing.locator('#openCart').click();await missing.locator('#openAddress').click();await missing.waitForFunction(()=>document.querySelector('#quoteStatus').textContent.includes('픽업 주소를 확인하지 못했습니다'));assert.equal(deliveryQuotes,quoteCount,'Missing pickup must not produce a quote with an empty origin');
+  const missing=await ctx.newPage();let missingQuotes=0;missing.on('request',request=>{if(new URL(request.url()).pathname==='/api/store-delivery-quote')missingQuotes++;});await missing.goto(origin+`/online-store/index.html?catalogStore=${saved.storeId}`);await missing.waitForFunction(()=>document.querySelector('#productGrid').textContent.includes('검사용 상품'));await missing.locator('#productGrid button').click();await missing.locator('#openCart').click();await missing.locator('#openAddress').click();await missing.waitForFunction(()=>document.querySelector('#quoteStatus').textContent.includes('픽업 주소를 확인하지 못했습니다'));assert.equal(missingQuotes,0,'The tab with missing pickup must not request a quote; other tabs may re-quote their synchronized carts');
   console.log('PASS local API integration: UI product registration → signed server quote → one test order → merchant accept/prepare/packing confirmation → delivery-request state → customer tracking; stock 3→2. No hosted writes, real routing, payment, dispatch or delivery completion.');
 }finally{await browser.close();env.DB.database.close();}

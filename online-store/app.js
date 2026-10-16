@@ -6,6 +6,7 @@ const catalogMode=catalogParams.has('catalogStore');
 const catalogStoreId=catalogBridge.id(catalogParams.get('catalogStore'));
 const activeCartKey=catalogMode?`${CART_KEY}:store:${catalogStoreId}`:CART_KEY;
 let focusedCatalogProduct=false;
+let openedCatalogCart=false;
 const DELIVERY_QUOTE_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-delivery-quote';
 const STORE_ORDER_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-orders/preview';
 const PREVIEW_ORDER_KEY='matjido-customer-store-preview-order-v1';
@@ -123,6 +124,7 @@ async function refreshServerCatalog(){
       const response=await fetch(`${catalogBridge.endpoint}?storeId=${encodeURIComponent(catalogStoreId)}`,{headers:{accept:'application/json'},credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(12000)});
       if(!response.ok)throw new Error('catalog-response');const result=await response.json();if(result.storeId&&result.storeId!==catalogStoreId)throw new Error('store-mismatch');products=normalizeProducts(catalogBridge.products(result));serverCatalogActive=true;
       store={...store,storeName:String(result.storeName||catalogStoreId)};applyStore();
+      try{const photos=await globalThis.MatjidoProductPhotos.list(catalogStoreId);for(const product of products)if(!product.image&&photos[product.id]){product.image=photos[product.id];product.imageLabel='이 기기에 보관한 상품사진';}}catch{/* Product information still works when local photo storage is unavailable. */}
       let cartAdjusted=false;
       for(const key of Object.keys(cart)){const product=products.find(value=>value.id===key);if(!catalogBridge.available(product)){delete cart[key];cartAdjusted=true;}else if(product.stockMode==='수량 관리'&&cartEntry(key).quantity>product.stockQuantity){cart[key]={...cartEntry(key),quantity:product.stockQuantity};cartAdjusted=true;}}
       if(cartAdjusted)document.querySelector('#orderStatus').textContent='판매 상태·재고가 바뀌어 담은 상품을 조정했습니다. 결제 전 장바구니를 다시 확인해 주세요.';
@@ -130,6 +132,7 @@ async function refreshServerCatalog(){
       const requested=catalogBridge.id(catalogParams.get('product')),entry=products.find(value=>value.id===requested);
       const notice=document.querySelector('#catalogSelectionStatus');notice.textContent=entry?`${entry.name} · 가격·재고를 확인하고 장바구니에 담아 주세요.`:requested?'선택한 상품을 찾을 수 없습니다. 상품이 삭제되었거나 판매가 종료되었을 수 있습니다.':'등록 상품을 확인했습니다.';
       if(entry&&!focusedCatalogProduct){document.querySelector('#productSearch').value=entry.name;selectedCategory='전체';renderProducts();document.querySelector('#productGrid').scrollIntoView({block:'start'});focusedCatalogProduct=true;}
+      if(catalogParams.get('cart')==='1'&&!openedCatalogCart&&cartLines().length){openedCatalogCart=true;document.querySelector('#cartPanel').hidden=false;document.body.style.overflow='hidden';}
     }catch{serverCatalogActive=false;products=[];serverPriceQuote=null;deliveryQuote=null;renderProducts();renderLiveMarket();renderCart();document.querySelector('#catalogSelectionStatus').textContent='등록 상품을 확인하지 못했습니다. 잠시 뒤 다시 시도해 주세요. 예시 상품으로 주문하지 않습니다.';}
     return;
   }
@@ -244,6 +247,7 @@ document.querySelector('#productSearch').addEventListener('input',renderProducts
 document.querySelectorAll('[data-live-filter]').forEach(button=>button.addEventListener('click',()=>{liveFilter=button.dataset.liveFilter;document.querySelectorAll('[data-live-filter]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));renderLiveMarket();}));
 document.querySelector('#openCart').addEventListener('click',()=>{document.querySelector('#cartPanel').hidden=false;document.body.style.overflow='hidden';});
 document.querySelector('#closeCart').addEventListener('click',()=>{document.querySelector('#cartPanel').hidden=true;document.body.style.overflow='';});
+window.addEventListener('storage',event=>{if(event.key!==activeCartKey)return;cart=loadCart();serverPriceQuote=null;deliveryQuote=null;quoteRequestId++;document.querySelector('#orderReviewPanel').hidden=true;document.querySelector('#orderStatus').textContent='다른 화면에서 바꾼 장바구니를 반영했습니다. 금액을 다시 확인해 주세요.';renderCart();if(deliveryAddress&&cartLines().length)void requestDeliveryQuote();});
 document.querySelector('#openAddress').addEventListener('click',openPostcode);
 document.querySelector('#postcodeClose').addEventListener('click',closePostcode);
 document.querySelector('#addressDetail').addEventListener('change',()=>{if(deliveryAddress)requestDeliveryQuote();});

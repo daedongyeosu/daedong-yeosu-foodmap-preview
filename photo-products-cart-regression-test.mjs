@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import fs from 'node:fs';
+const require=createRequire(import.meta.url),photos=require('./store-studio/product-photos.js'),cart=require('./store-studio/catalog-cart.js'),catalog=require('./store-studio/catalog.js'),engine=require('./live-commerce-engine.js');
+assert.ok(photos.valid('data:image/webp;base64,YQ=='));for(const src of ['https://example.com/image.png','data:image/svg+xml;base64,YQ==','data:image/webp;base64,'+'A'.repeat(1000001)])assert.equal(photos.valid(src),false);
+const values=new Map(),storage={getItem:k=>values.get(k)||null,setItem:(k,v)=>values.set(k,v)},product={id:'bread',name:'빵',price:3200,stockMode:'수량 관리',stockQuantity:2};
+cart.add(storage,'shop-a',product,catalog,engine);cart.add(storage,'shop-a',product,catalog,engine);assert.throws(()=>cart.add(storage,'shop-a',product,catalog,engine),/모두 담았습니다/);assert.deepEqual(cart.summary(cart.read(storage,'shop-a'),[product],engine),{count:2,total:6400});assert.deepEqual(cart.read(storage,'shop-b'),{});assert.throws(()=>cart.key('__proto__'));assert.throws(()=>cart.add(storage,'shop-a',{...product,stockQuantity:0},catalog,engine),/구매할 수 없는/);assert.throws(()=>cart.add({getItem:()=>null,setItem:()=>{throw Error('quota');}},'shop-a',product,catalog,engine),/저장하지 못/);
+const merchant=fs.readFileSync('store-partner/app.js','utf8'),studio=fs.readFileSync('store-studio/studio.js','utf8'),online=fs.readFileSync('online-store/app.js','utf8');
+assert.match(merchant,/MatjidoProductPhotos\.put/);assert.match(merchant,/restoreProductPhotos/);assert.match(studio,/MatjidoCatalogCart\.add/);assert.match(studio,/await loadCatalog\(\);if\(!previewing/);assert.match(studio,/state\.items\.some\(item=>item\.catalogProductId===product\.id\)/);assert.match(online,/MatjidoProductPhotos\.list\(catalogStoreId\)/);assert.match(online,/event\.key!==activeCartKey/);
+assert.match(studio,/document\.activeElement!==\$\(key\)/);assert.match(studio,/revision===saveRevision/);
+console.log('PASS device-scoped raster photos, shared SKU cart/stock/error rules, fresh-catalog add and cross-tab contracts');
