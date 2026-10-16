@@ -3,17 +3,28 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-1">
+  <link rel="stylesheet" href="studio.css?v=20261017-3">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
   <main>
+    <p id="cloudPublicNotice" class="example-notice" role="status" hidden></p>
     <section id="exampleNotice" class="example-notice" hidden><b>가상 상점 시범매장</b><span>실제 브랜드·가게와 무관합니다. 사진은 AI 연출 이미지이며 가격은 예시입니다. 결제·배달은 발생하지 않습니다. 기존 내 시안과 따로 저장됩니다.</span><nav><a id="backToAlley" href="../store-alley/index.html">← 골목에서 다른 가게 구경</a> · <a id="useExampleStyle" href="index.html" target="_blank" rel="noopener">이 견본의 기본 분위기로 내 상점 시작하기 ↗</a> · <a href="index.html">내 시안으로 돌아가기</a></nav></section>
     <section id="templateNotice" class="example-notice" hidden><b><span id="templateName"></span> 분위기로 시작하기</b><span>아직 기존 시안을 바꾸지 않았습니다. 적용하면 상품사진·가게정보·주문 연결은 유지하고 가구와 스타일만 바꿉니다. 상품사진은 직접 올려 주세요.</span><button id="applyTemplate" type="button">이 디자인 적용하기</button></section>
     <section class="intro"><small>구경이 방문과 주문으로 이어지는 내 가게</small><h1>사진을 올리고, 진열장에 놓아보세요.</h1><p>사진을 손가락이나 마우스로 옮겨 보세요. 이 시안은 이 기기에 저장됩니다. 방문·주문 버튼은 사장님이 등록한 링크로 이동하며, 이 편집기에서 주문이나 결제를 접수하지 않습니다.</p></section>
     <p class="example-entry"><a href="../store-alley/index.html" target="_blank" rel="noopener">서로 다른 가게가 있는 시범 골목 둘러보기 ↗</a></p>
     <div class="workspace">
       <aside class="tools" aria-label="상점 꾸미기 도구">
+        <details id="cloudSettings"><summary>내 계정에 저장·고객 공개</summary>
+          <p class="hint">계정별 한 개 작업본을 저장합니다. 기존 맛지도 가게의 소유권 인증·상품 등록과 별개인 상점 꾸미기 저장 공간입니다. 서버 연결 전에는 기기에만 저장합니다.</p>
+          <a id="cloudHostedEditor" href="https://daedong-yeosu-admin.sisakim.chatgpt.site/store-studio/index.html" hidden>로그인 가능한 편집 화면 열기 ↗</a>
+          <a id="cloudSignIn" href="/signin-with-chatgpt?returnTo=%2Fstore-studio%2Findex.html" target="_top" hidden>ChatGPT 계정으로 로그인</a>
+          <button id="cloudConnect" type="button">서버 상태 확인</button><button id="cloudSave" type="button" disabled>현재 시안 비공개 저장</button><button id="cloudLoad" type="button" disabled>서버 시안 불러오기</button>
+          <p id="cloudStatus" class="hint" role="status" aria-live="polite">먼저 서버 상태를 확인하세요. 이 기기의 시안을 자동으로 덮어쓰지 않습니다.</p>
+          <p id="cloudPublicationStatus" class="hint"></p>
+          <button id="cloudPublish" type="button" disabled>마지막 서버 저장본 공개</button><button id="cloudUnpublish" type="button" disabled>고객 공개 중단</button><a id="cloudPublicLink" target="_blank" rel="noopener" hidden>공개된 고객 화면 보기 ↗</a>
+          <p class="hint">공개는 꾸민 공간을 보여주는 기능입니다. 실제 상품 판매·결제·배달 준비가 끝났다는 뜻은 아닙니다.</p>
+        </details>
         <details open><summary>1. 가게 분위기</summary>
           <label>시작 스타일<select id="preset"><option value="cafe">따뜻한 카페</option><option value="modern">깔끔한 쇼룸</option><option value="market">정겨운 시장가게</option><option value="boutique">차분한 옷가게</option><option value="hardware">튼튼한 철물점</option><option value="playful">색감 있는 소품샵</option></select></label>
           <p class="hint">스타일을 바꿔도 배치한 사진은 유지됩니다.</p>
@@ -138,5 +149,6 @@
   <script src="catalog.js?v=20261016-4" defer></script>
   <script src="design.js?v=20261017-1" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
-  <script src="studio.js?v=20261017-2" defer></script>
+  <script src="cloud.js?v=20261017-3" defer></script>
+  <script src="studio.js?v=20261017-3" defer></script>
 </body></html>

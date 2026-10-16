@@ -6,7 +6,8 @@
   const links=window.ShopStudioCustomerLinks;
   const catalog=window.ShopStudioCatalog;
   const design=window.ShopStudioDesign,examples=window.ShopStudioExamples;
-  const params=new URLSearchParams(location.search),exampleId=params.get('example')||'',sample=examples.get(exampleId);
+  const params=new URLSearchParams(location.search),exampleId=params.has('published')?'':params.get('example')||'',sample=examples.get(exampleId);
+  const publicView=params.has('published');
   if(exampleId&&!sample){location.replace('../store-alley/index.html');return;}
   const exampleMode=Boolean(sample),draftKey=examples.draftKey(exampleId),templateId=params.get('template')||'';
   let selectedDecorId='',decorGesture=null,browseSection='전체';
@@ -190,6 +191,7 @@
     $('removeRealPhoto').disabled=!state.business.realPhoto||loading||importing||previewing;
     renderCustomer();
     renderBrowse();
+    window.ShopStudioCloud?.refresh();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
   $('applyTemplate').onclick=()=>{const template=examples.template(templateId);if(!template||exampleMode)return;if(!confirm('기존 상품사진·가게정보·주문 연결은 유지하고 가구·색·간판 스타일을 바꿉니다. 사진의 기존 진열대 연결은 해제됩니다. 적용할까요?'))return;change(()=>{state={...state,...template,shopTitle:state.shopTitle,business:state.business,catalogStoreId:state.catalogStoreId,items:state.items.map(item=>({...item,decorId:''}))};selectedId='';selectedDecorId='';});say('디자인을 적용했습니다. 기존 상품과 가게정보는 유지했습니다. 되돌리기로 이전 디자인을 복원할 수 있습니다.');};
@@ -368,12 +370,20 @@
   }
   async function initialize(){
     for(const [type,label] of Object.entries(design.types))if(![...$('decorType').options].some(option=>option.value===type))$('decorType').add(new Option(label,type));
+    if(publicView){
+      document.body.classList.add('studio-public');$('cloudPublicNotice').hidden=false;$('cloudPublicNotice').textContent='공개 상점을 불러오고 있습니다…';document.querySelector('.workspace').hidden=true;
+      document.querySelector('header b').textContent='온라인 상점';document.title='온라인 상점 | 맛지도 PREVIEW';
+      try{const scene=await window.ShopStudioCloud.publicScene(params.get('published'));state=restoreScene(scene);previewing=true;loading=false;render();document.querySelector('.workspace').hidden=false;$('cloudPublicNotice').textContent='사장님이 공개한 온라인 공간입니다. 가격·재고·배달 가능 여부는 연결된 주문 화면에서 확인해 주세요.';if(state.catalogStoreId)void loadCatalog();}
+      catch(error){$('cloudPublicNotice').textContent=error.message||'공개 상점을 불러오지 못했습니다. 잠시 뒤 다시 열어 주세요.';}
+      return;
+    }
     if(exampleMode)state=restoreScene(sample.create());
     render();try{db=await storageOpen();const draft=await readDraft();if(draft&&Array.isArray(draft.items)){state=restoreScene(draft);say('이 기기에 저장한 사진과 배치를 불러왔습니다.');}}
     catch{say('이 브라우저에서는 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);}
     if(!exampleMode&&!state.catalogStoreId)try{const saved=JSON.parse(localStorage.getItem('matjido-store-onboarding-preview-v1')||'null');if(saved?.previewOnly)state.catalogStoreId=catalog.id(saved.storeId);}catch{}
     previewing=exampleMode&&new URLSearchParams(location.search).get('view')==='customer';
     loading=false;render();if(state.catalogStoreId)void loadCatalog();
+    window.ShopStudioCloud.bind({sample:exampleMode,blocked:()=>loading||importing||previewing,snapshot:()=>clone(state),restore:scene=>change(()=>{state=restoreScene(scene);selectedId='';selectedDecorId='';catalogRequest++;catalogItems=[];catalogStoreId='';if(state.catalogStoreId)void loadCatalog();})});
   }
   void initialize();
 })();
