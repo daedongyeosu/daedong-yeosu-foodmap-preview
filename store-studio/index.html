@@ -133,20 +133,21 @@
         <p id="saveStatus" role="status" aria-live="polite">사진과 배치를 이 기기에 자동 저장합니다.</p>
         <section id="itemTools" hidden aria-label="선택한 상품 편집">
           <h2>선택한 사진 꾸미기</h2>
+          <label>표시 이름<input id="itemName" maxlength="50"></label>
+          <label>상품 설명<textarea id="itemDescription" maxlength="300" rows="3" placeholder="원두, 맛, 소재, 규격 등을 알려주세요."></textarea></label>
+          <label>상품 구역<input id="itemSection" maxlength="24" list="sectionSuggestions" placeholder="예: 갓 구운 빵"></label><datalist id="sectionSuggestions"></datalist>
           <label>사진 용도<select id="itemPurpose"><option value="product">판매상품 사진</option><option value="decoration">포스터·그림·장식</option></select></label>
           <label id="artworkFrameField" hidden>장식 액자<select id="artworkFrame"><option value="none">액자 없음</option><option value="wood">나무색 액자</option><option value="white">흰색 액자</option><option value="dark">짙은색 액자</option></select></label>
           <p id="artworkHelp" class="hint" hidden>장식 사진은 고객 상품 목록·체험 장바구니·상품등록에 포함하지 않습니다.</p>
           <div class="upload-actions"><button id="replacePhoto" type="button">이 사진 바꾸기 · 사진·파일</button><button id="retakePhoto" type="button">다시 촬영</button></div>
           <input id="replacementPhoto" type="file" accept="image/*" hidden><input id="replacementCamera" type="file" accept="image/*" capture="environment" hidden>
           <p class="hint">사진만 바꾸며 위치·크기·진열대·연결 상품은 유지합니다. 위치 잠금 상태에서도 사진은 바꿀 수 있습니다.</p>
+          <label>함께 움직일 진열대<select id="itemDecor"><option value="">사진만 따로 이동</option></select></label><p class="hint">연결하면 진열대를 옮길 때 상품도 함께 이동합니다. 상품 위치가 잠겨 있으면 연결된 진열대 이동도 막습니다.</p>
+          <h3>판매할 상품 연결</h3>
           <button id="registerPhotoProduct" type="button">이 사진으로 상품등록 계속하기 →</button>
           <p id="registerPhotoHelp" class="hint">사진·이름·설명을 상품등록 화면으로 가져갑니다. 가격·단위·재고를 확인한 뒤 직접 저장하세요. 사진은 이 기기에만 보관되며 아직 공개 판매되지 않습니다.</p>
-          <label>표시 이름<input id="itemName" maxlength="50"></label>
-          <label>상품 구역<input id="itemSection" maxlength="24" list="sectionSuggestions" placeholder="예: 갓 구운 빵"></label><datalist id="sectionSuggestions"></datalist>
-          <label>함께 움직일 진열대<select id="itemDecor"><option value="">사진만 따로 이동</option></select></label><p class="hint">연결하면 진열대를 옮길 때 상품도 함께 이동합니다. 상품 위치가 잠겨 있으면 연결된 진열대 이동도 막습니다.</p>
           <label>이 사진의 등록 상품<select id="itemCatalogProduct"><option value="">상품 연결 안 함</option></select></label>
           <p id="itemCatalogStatus" class="hint"></p>
-          <label>상품 설명<textarea id="itemDescription" maxlength="300" rows="3" placeholder="원두, 맛, 소재, 규격 등을 알려주세요."></textarea></label>
           <label>상품 주문 링크<input id="itemProductUrl" type="url" maxlength="2048" placeholder="https://… 이 상품의 주문 화면"></label>
           <p id="itemLinkStatus" class="hint">비워두면 가게 주문 화면으로 연결합니다. 상품명만으로 주문 링크를 만들지 않습니다.</p>
           <div class="item-flags"><label><input id="itemLocked" type="checkbox"> 위치 잠그기</label><label><input id="itemHidden" type="checkbox"> 시안에서 숨기기</label></div>
