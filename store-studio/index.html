@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261016-2">
+  <link rel="stylesheet" href="studio.css?v=20261016-3">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
   <main>
-    <section class="intro"><small>사장님의 취향으로 채우는 공간</small><h1>사진을 올리고, 진열장에 놓아보세요.</h1><p>사진을 손가락이나 마우스로 옮겨 보세요. 이 시안은 이 기기에 저장되며, 고객에게 공개되거나 실제 주문과 연결되지 않습니다.</p></section>
+    <section class="intro"><small>구경이 방문과 주문으로 이어지는 내 가게</small><h1>사진을 올리고, 진열장에 놓아보세요.</h1><p>사진을 손가락이나 마우스로 옮겨 보세요. 이 시안은 이 기기에 저장됩니다. 방문·주문 버튼은 사장님이 등록한 링크로 이동하며, 이 편집기에서 주문이나 결제를 접수하지 않습니다.</p></section>
     <div class="workspace">
       <aside class="tools" aria-label="상점 꾸미기 도구">
         <details open><summary>1. 가게 분위기</summary>
@@ -28,10 +28,30 @@
           <p class="hint">컴퓨터에서는 사진 파일을 진열장으로 끌어놓아도 됩니다. 투명 배경 PNG·WebP는 물건만 보입니다. 자동 배경 제거는 아직 연결되지 않았습니다.</p>
           <div id="itemList" aria-label="배치한 사진 목록"></div>
         </details>
+        <details id="businessSettings"><summary>3. 방문·배달 연결</summary>
+          <p class="hint">실제 매장 정보와 이 가게의 주문 링크를 등록하세요. 공개 전 고객처럼 보기에서 확인할 수 있습니다.</p>
+          <label>가게 소개<textarea id="businessIntro" maxlength="300" rows="3" placeholder="우리 가게만의 특징을 알려주세요."></textarea></label>
+          <label>매장 주소<input id="businessAddress" maxlength="200" autocomplete="street-address"></label>
+          <label>영업시간·휴무<textarea id="businessHours" maxlength="200" rows="2" placeholder="예: 평일 10:00~20:00, 일요일 휴무"></textarea></label>
+          <label>전화번호<input id="businessPhone" type="tel" maxlength="40" autocomplete="tel" placeholder="061-000-0000"></label>
+          <label>지도 링크<input id="businessMapUrl" type="url" maxlength="2048" placeholder="네이버·카카오지도에서 공유한 링크"></label>
+          <label>가게 주문 링크<input id="businessOrderUrl" type="url" maxlength="2048" placeholder="https://… 이 가게의 주문 화면"></label>
+          <label>배달·포장 안내<textarea id="businessDelivery" maxlength="300" rows="3" placeholder="배달 가능 지역, 포장 안내 등을 적어주세요."></textarea></label>
+          <label class="real-photo-upload">실제 매장 사진<input id="realStorePhoto" type="file" accept="image/*"></label>
+          <p class="hint">꾸민 공간과 구분해 보여줍니다. 사진은 이 기기에만 저장됩니다.</p>
+          <button id="removeRealPhoto" type="button" disabled>실제 매장 사진 빼기</button>
+          <p id="businessValidation" class="hint" role="status" aria-live="polite"></p>
+        </details>
       </aside>
       <section class="display" aria-label="상점 시안">
         <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="focusMode" aria-pressed="false">진열장에 집중</button><button id="preview">고객처럼 보기</button></div>
         <div id="arrangeTools" class="arrange-tools"><button id="arrangeAll">가지런히 진열하기</button><label><input id="snapShelves" type="checkbox" checked> 선반 가까이 놓으면 맞추기</label></div>
+        <nav id="customerQuickActions" class="customer-actions quick-actions" aria-label="방문과 주문" hidden>
+          <a id="customerMap" class="customer-link" target="_blank" rel="noopener noreferrer" hidden>매장 찾아가기</a><button id="customerMapMissing" disabled>지도 연결 준비 중</button>
+          <a id="customerOrder" class="customer-link order-link" target="_blank" rel="noopener noreferrer" hidden>배달 주문 화면 열기</a><button id="customerOrderMissing" disabled>주문 연결 준비 중</button>
+          <a id="customerPhone" class="customer-link" hidden>전화로 문의하기</a><button id="customerPhoneMissing" disabled>전화 문의 준비 중</button>
+        </nav>
+        <p id="virtualSpaceLabel" class="space-label" hidden>사장님이 꾸민 온라인 공간 · 사진을 눌러 상품을 살펴보세요</p>
         <div id="scene" class="scene" data-material="plain" tabindex="0" aria-label="상품사진을 배치하는 진열장">
           <div class="scene-lights" aria-hidden="true"></div><h2 id="sign">나의 작은 카페</h2>
           <div id="dividers" aria-hidden="true"></div><div id="shelfLines" aria-hidden="true"></div><div id="items"></div>
@@ -41,6 +61,9 @@
         <section id="itemTools" hidden aria-label="선택한 상품 편집">
           <h2>선택한 사진 꾸미기</h2>
           <label>표시 이름<input id="itemName" maxlength="50"></label>
+          <label>상품 설명<textarea id="itemDescription" maxlength="300" rows="3" placeholder="원두, 맛, 소재, 규격 등을 알려주세요."></textarea></label>
+          <label>상품 주문 링크<input id="itemProductUrl" type="url" maxlength="2048" placeholder="https://… 이 상품의 주문 화면"></label>
+          <p id="itemLinkStatus" class="hint">비워두면 가게 주문 화면으로 연결합니다. 상품명만으로 주문 링크를 만들지 않습니다.</p>
           <div class="item-flags"><label><input id="itemLocked" type="checkbox"> 위치 잠그기</label><label><input id="itemHidden" type="checkbox"> 시안에서 숨기기</label></div>
           <p id="lockedHelp" class="hint" hidden>위치가 잠겨 있습니다. 이동·크기·회전·삭제를 하려면 잠금을 풀어 주세요.</p>
           <label>크기<input id="itemSize" type="range" min="8" max="45"></label>
@@ -49,11 +72,24 @@
           <div class="item-actions"><button id="moveLeft" aria-label="왼쪽으로 이동">←</button><button id="moveUp" aria-label="위로 이동">↑</button><button id="moveDown" aria-label="아래로 이동">↓</button><button id="moveRight" aria-label="오른쪽으로 이동">→</button><button id="snapSelected">선반에 놓기</button><button id="bringFront">맨 앞으로</button><button id="sendBack">맨 뒤로</button><button id="duplicate">복제</button><button id="remove">진열에서 빼기</button></div>
           <p class="hint">사진을 끌어 옮기거나 방향 버튼으로 조절하세요. 진열에서 뺀 사진은 되돌릴 수 있습니다.</p>
         </section>
-        <p id="previewHelp" hidden>고객이 보는 배치 시안입니다. 사진을 누르면 이름을 볼 수 있습니다. 상품 상세·장바구니·결제는 아직 연결되지 않았습니다.</p>
+        <p id="previewHelp" hidden>공개 전 확인하는 고객 화면입니다. 등록한 방문·주문 링크는 열 수 있으며, 주문·결제는 연결된 화면에서 진행합니다.</p>
         <p id="productInfo" role="status"></p>
+        <section id="productDetails" class="customer-product" hidden aria-label="선택한 상품 안내">
+          <img id="customerProductPhoto" alt=""><p id="customerProductDescription"></p>
+          <a id="customerProductOrder" class="customer-link order-link" target="_blank" rel="noopener noreferrer" hidden></a>
+          <p id="productOrderMissing" hidden>이 상품의 주문 연결을 준비하고 있습니다.</p>
+          <small>가격·옵션·재고·배송비와 도착 예상은 주문 화면에서 확인해 주세요.</small>
+        </section>
+        <section id="customerBusiness" class="customer-business" hidden aria-labelledby="customerBusinessTitle">
+          <h2 id="customerBusinessTitle">매장 방문·배달 안내</h2>
+          <p id="customerIntro"></p>
+          <figure id="realPhotoFigure" hidden><img id="customerRealPhoto" alt="실제 매장 사진"><figcaption>실제 매장 사진</figcaption></figure>
+          <dl><div><dt>주소</dt><dd id="customerAddress"></dd></div><div><dt>영업시간·휴무</dt><dd id="customerHours"></dd></div><div><dt>배달·포장</dt><dd id="customerDelivery"></dd></div></dl>
+        </section>
       </section>
     </div>
   </main>
   <script src="layout.js?v=20261016-2" defer></script>
-  <script src="studio.js?v=20261016-2" defer></script>
+  <script src="customer-links.js?v=20261016-3" defer></script>
+  <script src="studio.js?v=20261016-3" defer></script>
 </body></html>

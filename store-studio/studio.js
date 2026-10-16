@@ -3,7 +3,10 @@
   const $=id=>document.getElementById(id);
   const scene=$('scene'), itemsRoot=$('items'), status=$('saveStatus');
   const layout=window.ShopStudioLayout;
-  const defaults={preset:'cafe',shopTitle:'나의 작은 카페',zones:1,shelves:3,wall:'#eadfce',shelfColor:'#805735',material:'plain',light:100,items:[]};
+  const links=window.ShopStudioCustomerLinks;
+  const businessDefaults={intro:'',address:'',hours:'',phone:'',mapUrl:'',orderUrl:'',delivery:'',realPhoto:''};
+  const businessFields={businessIntro:'intro',businessAddress:'address',businessHours:'hours',businessPhone:'phone',businessMapUrl:'mapUrl',businessOrderUrl:'orderUrl',businessDelivery:'delivery'};
+  const defaults={preset:'cafe',shopTitle:'나의 작은 카페',zones:1,shelves:3,wall:'#eadfce',shelfColor:'#805735',material:'plain',light:100,business:{...businessDefaults},items:[]};
   const presets={
     cafe:{wall:'#eadfce',shelfColor:'#805735',material:'wood',light:105},
     modern:{wall:'#e4ebed',shelfColor:'#4e5a60',material:'plain',light:110},
@@ -14,7 +17,7 @@
   };
   const initialPreset=new URLSearchParams(location.search).get('style');
   let state={...defaults,...(presets[initialPreset]||{}),preset:presets[initialPreset]?initialPreset:'cafe',items:[]};
-  let selectedId='',previewing=false,loading=true,importing=false,gesture=null,db=null,saveChain=Promise.resolve();
+  let selectedId='',previewProductId='',previewing=false,loading=true,importing=false,gesture=null,db=null,saveChain=Promise.resolve();
   const past=[],future=[];
   const clone=value=>JSON.parse(JSON.stringify(value));
   const clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
@@ -38,6 +41,41 @@
   }
   function bounded(item){Object.assign(item,layout.bounded(item));}
   function position(node,item){node.style.left=`${item.x}%`;node.style.top=`${item.y}%`;node.style.width=`${item.size}%`;node.style.transform=`rotate(${item.rotation}deg)`;}
+  function setCustomerLink(id,href,missingId){
+    const node=$(id);node.hidden=!href;
+    if(href)node.setAttribute('href',href);else node.removeAttribute('href');
+    if(missingId)$(missingId).hidden=Boolean(href);
+  }
+  function renderCustomer(){
+    const business=state.business;
+    document.body.classList.toggle('studio-customer-preview',previewing);
+    $('customerBusiness').hidden=!previewing;$('virtualSpaceLabel').hidden=!previewing;$('customerQuickActions').hidden=!previewing;
+    for(const [id,key] of Object.entries(businessFields))$(id).value=business[key];
+    const warnings=[];
+    for(const [id,value,validator,label] of [
+      ['businessMapUrl',business.mapUrl,links.map,'지도 링크는 네이버·카카오지도에서 공유한 HTTPS 링크를 입력해 주세요.'],
+      ['businessOrderUrl',business.orderUrl,links.https,'주문 링크는 https://로 시작하는 이 가게의 주문 화면 주소를 입력해 주세요.'],
+      ['businessPhone',business.phone,links.phone,'전화번호를 확인해 주세요.']
+    ]){const invalid=Boolean(value.trim()&&!validator(value));$(id).setAttribute('aria-invalid',String(invalid));if(invalid)warnings.push(label);}
+    $('businessValidation').textContent=warnings.join(' ');
+    $('removeRealPhoto').disabled=!business.realPhoto||loading||importing||previewing;
+    $('customerIntro').textContent=business.intro;$('customerIntro').hidden=!business.intro;
+    $('customerAddress').textContent=business.address||'매장 주소를 준비하고 있습니다.';
+    $('customerHours').textContent=business.hours||'영업시간은 방문 전 확인해 주세요.';
+    $('customerDelivery').textContent=business.delivery||'배달·포장 가능 여부는 주문 화면이나 전화로 확인해 주세요.';
+    $('realPhotoFigure').hidden=!business.realPhoto;
+    if(business.realPhoto)$('customerRealPhoto').src=business.realPhoto;else $('customerRealPhoto').removeAttribute('src');
+    setCustomerLink('customerMap',links.map(business.mapUrl),'customerMapMissing');
+    setCustomerLink('customerPhone',links.phone(business.phone),'customerPhoneMissing');
+    setCustomerLink('customerOrder',links.https(business.orderUrl),'customerOrderMissing');
+    const product=previewing?state.items.find(item=>item.id===previewProductId&&!item.hidden):null;
+    $('productDetails').hidden=!product;
+    if(product){
+      $('productInfo').textContent=product.name;$('customerProductPhoto').src=product.src;$('customerProductPhoto').alt=product.name;
+      $('customerProductDescription').textContent=product.description||'상품의 자세한 내용은 주문 화면에서 확인해 주세요.';
+      const action=links.product(product,business);$('customerProductOrder').textContent=action.label;setCustomerLink('customerProductOrder',action.href,'productOrderMissing');
+    }else{$('productInfo').textContent='';$('customerProductPhoto').removeAttribute('src');}
+  }
   function render(){
     scene.style.setProperty('--wall',state.wall);scene.style.setProperty('--shelf',state.shelfColor);scene.style.setProperty('--light',state.light/100);scene.dataset.material=state.material;
     scene.classList.toggle('previewing',previewing);$('sign').textContent=state.shopTitle||'내 상점';
@@ -55,7 +93,9 @@
     }
     $('emptyScene').hidden=previewing?state.items.some(item=>!item.hidden):state.items.length>0;
     const item=selected();$('itemTools').hidden=!item||previewing;
-    if(item){$('itemName').value=item.name;$('itemSize').value=item.size;$('itemRotation').value=item.rotation;$('itemShadow').checked=item.shadow;$('itemLocked').checked=Boolean(item.locked);$('itemHidden').checked=Boolean(item.hidden);}
+    if(item){$('itemName').value=item.name;$('itemDescription').value=item.description||'';$('itemProductUrl').value=item.productUrl||'';$('itemSize').value=item.size;$('itemRotation').value=item.rotation;$('itemShadow').checked=item.shadow;$('itemLocked').checked=Boolean(item.locked);$('itemHidden').checked=Boolean(item.hidden);}
+    const badProductLink=Boolean(item?.productUrl?.trim()&&!links.https(item.productUrl));$('itemProductUrl').setAttribute('aria-invalid',String(badProductLink));
+    $('itemLinkStatus').textContent=badProductLink?'상품 주문 링크를 확인해 주세요. https://로 시작하는 주소가 필요합니다.':'비워두면 가게 주문 화면으로 연결합니다. 상품명만으로 주문 링크를 만들지 않습니다.';
     $('lockedHelp').hidden=!item?.locked;
     for(const id of ['itemSize','itemRotation','moveLeft','moveRight','moveUp','moveDown','snapSelected','remove'])$(id).disabled=!item||Boolean(item.locked)||loading||importing||previewing;
     $('undo').disabled=loading||importing||!past.length||previewing;$('redo').disabled=loading||importing||!future.length||previewing;
@@ -63,10 +103,21 @@
     $('previewHelp').hidden=!previewing;
     $('arrangeTools').hidden=previewing;$('arrangeAll').disabled=loading||importing||!state.items.some(item=>!item.locked&&!item.hidden);
     document.querySelectorAll('.tools input,.tools select,.tools button').forEach(node=>node.disabled=loading||importing||previewing);
+    $('removeRealPhoto').disabled=!state.business.realPhoto||loading||importing||previewing;
+    renderCustomer();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
   for(const key of ['shopTitle','zones','shelves','wall','shelfColor','material','light'])$(key).addEventListener('change',event=>change(()=>{state[key]=['zones','shelves','light'].includes(key)?Number(event.target.value):event.target.value;}));
   $('preset').addEventListener('change',event=>change(()=>{const preset=event.target.value;Object.assign(state,presets[preset],{preset});}));
+  for(const [id,key] of Object.entries(businessFields))$(id).addEventListener('change',event=>change(()=>{state.business={...state.business,[key]:event.target.value.trim().slice(0,event.target.maxLength)};}));
+  $('realStorePhoto').addEventListener('change',async event=>{
+    const file=event.target.files?.[0];if(!file||loading||importing||previewing)return;
+    importing=true;render();say('실제 매장 사진을 준비하고 있습니다…');
+    try{const src=await imageData(file);importing=false;change(()=>{state.business={...state.business,realPhoto:src};});}
+    catch(error){importing=false;render();say(error.message,true);}
+    finally{event.target.value='';}
+  });
+  $('removeRealPhoto').onclick=()=>change(()=>{state.business={...state.business,realPhoto:''};});
   $('choosePhotos').onclick=()=>$('photos').click();$('takePhoto').onclick=()=>$('camera').click();
   async function imageData(file){
     if(!file.type.startsWith('image/')||file.size>15*1024*1024)throw new Error('15MB 이하의 사진 파일을 선택해 주세요.');
@@ -118,7 +169,8 @@
     }
   }
   itemsRoot.addEventListener('pointerup',endGesture);itemsRoot.addEventListener('pointercancel',endGesture);
-  itemsRoot.addEventListener('click',event=>{const node=event.target.closest('[data-item-id]');if(!node)return;selectedId=node.dataset.itemId;if(previewing)$('productInfo').textContent=selected().name;else render();});
+  itemsRoot.addEventListener('click',event=>{const node=event.target.closest('[data-item-id]');if(!node)return;selectedId=node.dataset.itemId;if(previewing)previewProductId=selectedId;render();});
+  for(const [id,key,limit] of [['itemDescription','description',300],['itemProductUrl','productUrl',2048]])$(id).addEventListener('change',event=>change(()=>{const item=selected();if(item)item[key]=event.target.value.trim().slice(0,limit);}));
   for(const [id,key,numeric] of [['itemName','name',false],['itemSize','size',true],['itemRotation','rotation',true],['itemShadow','shadow',false],['itemLocked','locked',false],['itemHidden','hidden',false]])$(id).addEventListener('change',event=>{
     if(selected()?.locked&&numeric)return;
     change(()=>{const item=selected();if(!item)return;item[key]=event.target.type==='checkbox'?event.target.checked:numeric?Number(event.target.value):event.target.value.trim().slice(0,50)||'상품';bounded(item);});
@@ -141,13 +193,16 @@
     if(key==='z'){event.preventDefault();event.shiftKey?history(future,past):history(past,future);}
     else if(key==='y'){event.preventDefault();history(future,past);}
   });
-  $('preview').onclick=()=>{previewing=!previewing;$('productInfo').textContent='';render();};
+  $('preview').onclick=()=>{previewing=!previewing;previewProductId='';render();};
   async function initialize(){
     render();try{db=await storageOpen();const draft=await readDraft();if(draft&&Array.isArray(draft.items)){
-      state={...state,...draft,items:draft.items.slice(0,40).filter(item=>item&&typeof item.src==='string'&&/^data:image\/(webp|png|jpeg);base64,/.test(item.src)).map(item=>layout.bounded({...item,id:/^[a-z0-9-]{12,80}$/i.test(item.id)?item.id:crypto.randomUUID(),name:String(item.name||'상품').slice(0,50),locked:item.locked===true,hidden:item.hidden===true}))};
+      state={...state,...draft,items:draft.items.slice(0,40).filter(item=>item&&typeof item.src==='string'&&/^data:image\/(webp|png|jpeg);base64,/.test(item.src)).map(item=>layout.bounded({...item,id:/^[a-z0-9-]{12,80}$/i.test(item.id)?item.id:crypto.randomUUID(),name:String(item.name||'상품').slice(0,50),description:String(item.description||'').slice(0,300),productUrl:String(item.productUrl||'').slice(0,2048),locked:item.locked===true,hidden:item.hidden===true}))};
       state.zones=clamp(Number(state.zones)||1,1,3);state.shelves=clamp(Number(state.shelves)||3,2,4);state.light=clamp(Number(state.light)||100,75,125);
       if(!presets[state.preset])state.preset='cafe';if(!['plain','wood','brick','tile'].includes(state.material))state.material='plain';
       for(const key of ['wall','shelfColor'])if(!/^#[a-f0-9]{6}$/i.test(state[key]))state[key]=defaults[key];
+      const business=state.business&&typeof state.business==='object'?state.business:{};
+      state.business=Object.fromEntries(Object.keys(businessDefaults).map(key=>[key,String(business[key]||'').slice(0,key==='realPhoto'?2000000:2048)]));
+      if(!/^data:image\/(webp|png|jpeg);base64,/.test(state.business.realPhoto))state.business.realPhoto='';
       say('이 기기에 저장한 사진과 배치를 불러왔습니다.');
     }}catch{say('이 브라우저에서는 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);}
     loading=false;render();
