@@ -67,5 +67,15 @@
     const needle=String(query).trim().toLocaleLowerCase('ko-KR');
     return fixtures.filter(item=>(mode==='hidden'?item.hidden:mode==='visible'?!item.hidden:mode==='locked'?item.locked:true)&&(!needle||`${design.types[item.type]||''} ${item.text||''}`.toLocaleLowerCase('ko-KR').includes(needle)));
   }
-  return Object.freeze({clean,create,instantiate,importFile,builtins,arrange,palettes,styleSelection,captureStyle,pasteStyle,findPlaced});
+  function findPhotos(items,query='',purpose='all',mode='all'){
+    const needle=String(query).trim().toLocaleLowerCase('ko-KR');
+    return items.filter(item=>(purpose==='decoration'?item.purpose==='decoration':purpose==='product'?item.purpose!=='decoration':true)&&(mode==='hidden'?item.hidden:mode==='visible'?!item.hidden:mode==='locked'?item.locked:true)&&(!needle||`${item.name||''} ${item.section||''}`.toLocaleLowerCase('ko-KR').includes(needle)));
+  }
+  function photoBatch(items,ids,key,value){
+    if(!['locked','hidden','section'].includes(key)||key==='section'&&typeof value!=='string'||key!=='section'&&typeof value!=='boolean')return{ok:false,message:'바꿀 사진 설정을 확인해 주세요.'};
+    const selected=items.filter(i=>ids.includes(i.id));if(!selected.length)return{ok:false,message:'검색 결과에 적용할 사진이 없습니다.'};
+    const next=key==='section'?value.trim().slice(0,24):value;let changed=0;
+    const updated=items.map(i=>{if(!ids.includes(i.id))return{...i};if(i[key]!==next)changed++;return{...i,[key]:next};});return{ok:true,count:selected.length,items:updated,changed};
+  }
+  return Object.freeze({clean,create,instantiate,importFile,builtins,arrange,palettes,styleSelection,captureStyle,pasteStyle,findPlaced,findPhotos,photoBatch});
 });

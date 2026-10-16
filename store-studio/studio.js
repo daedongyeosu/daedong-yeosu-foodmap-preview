@@ -208,12 +208,14 @@
     $('shelfLines').replaceChildren();for(const level of layout.shelfLevels(state.shelves)){const line=document.createElement('i');line.className='shelf-line';line.style.top=`${level}%`;$('shelfLines').append(line);}
     renderDesign();
     itemsRoot.replaceChildren();$('itemList').replaceChildren();
+    const foundPhotos=matchingPhotos(),photoIds=new Set(foundPhotos.map(i=>i.id));$('photoResultsCount').textContent=`배치한 사진 ${state.items.length}개 중 ${foundPhotos.length}개 표시`;
     for(const item of state.items){
       const node=document.createElement('button');node.type='button';node.className=`scene-item${item.purpose==='decoration'?' artwork artwork-'+(item.photoFrame||'none'):''}${item.shadow?' has-shadow':''}${item.locked?' is-locked':''}${item.hidden?' is-hidden':''}${item.id===selectedId&&!previewing?' selected':''}`;node.dataset.itemId=item.id;node.setAttribute('aria-label',`${item.name} ${previewing?'보기':'선택·이동'}`);if(previewing&&item.purpose==='decoration'){node.tabIndex=-1;node.setAttribute('aria-hidden','true');}node.style.aspectRatio='1';position(node,item);
       const img=document.createElement('img');img.src=item.src;img.alt='';img.draggable=false;img.style.height='100%';
       node.append(img);if(state.appearance.showTags&&item.purpose!=='decoration'){const tag=document.createElement('span');tag.className='scene-label';tag.textContent=item.name;node.append(tag);}if(!previewing||!item.hidden)itemsRoot.append(node);
+      if(!photoIds.has(item.id))continue;
       const listButton=document.createElement('button');listButton.type='button';listButton.disabled=previewing||loading||importing;listButton.setAttribute('aria-label',`${item.name} 목록에서 선택`);listButton.setAttribute('aria-pressed',String(item.id===selectedId));
-      const thumbnail=document.createElement('img');thumbnail.src=item.src;thumbnail.alt='';const label=document.createElement('span');label.textContent=item.name;const flags=document.createElement('small');flags.textContent=[item.locked?'위치 잠금':'',item.hidden?'숨김':''].filter(Boolean).join(' · ');listButton.append(thumbnail,label,flags);
+      const thumbnail=document.createElement('img');thumbnail.src=item.src;thumbnail.alt='';const label=document.createElement('span');label.textContent=item.name;const flags=document.createElement('small');flags.textContent=[item.purpose==='decoration'?'장식':'상품',item.section||'',item.locked?'위치 잠금':'',item.hidden?'숨김':''].filter(Boolean).join(' · ');listButton.append(thumbnail,label,flags);
       listButton.onclick=()=>{selectedDecorId='';selectedId=item.id;render();scene.scrollIntoView({block:'center'});};$('itemList').append(listButton);
     }
     $('emptyScene').hidden=previewing?state.items.some(item=>!item.hidden):state.items.length>0;
@@ -255,9 +257,19 @@
     renderCompositions();
     renderStyleClipboard();
     $('selectFoundDecor').disabled=loading||importing||previewing||!composition.findPlaced(state.decor,$('placedSearch').value,$('placedFilter').value).length;
+    for(const node of document.querySelectorAll('[data-photo-batch]'))node.disabled=loading||importing||previewing||!foundPhotos.length;
     window.ShopStudioCloud?.refresh();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
+  function matchingPhotos(){return composition.findPhotos(state.items,$('photoSearch').value,$('photoPurposeFilter').value,$('photoStateFilter').value);}
+  $('photoSearch').oninput=()=>render();for(const id of ['photoPurposeFilter','photoStateFilter'])$(id).onchange=()=>render();$('resetPhotoSearch').onclick=()=>{$('photoSearch').value='';$('photoPurposeFilter').value='all';$('photoStateFilter').value='all';render();};
+  const photoActions={lock:['locked',true,'잠그기'],unlock:['locked',false,'잠금 풀기'],hide:['hidden',true,'시안에서 숨기기'],show:['hidden',false,'시안에 보이기'],section:['section',null,'상품 구역 지정']};
+  for(const button of document.querySelectorAll('[data-photo-batch]'))button.onclick=()=>{
+    if(loading||importing||previewing)return;const [key,value,label]=photoActions[button.dataset.photoBatch],targets=matchingPhotos(),next=key==='section'?$('photoBatchSection').value:value,result=composition.photoBatch(state.items,targets.map(i=>i.id),key,next);
+    if(!result.ok){$('photoBatchStatus').textContent=result.message;return;}if(!result.changed){$('photoBatchStatus').textContent='이미 같은 설정입니다.';return;}
+    if(targets.length>1&&!confirm(`현재 검색 결과 사진 ${targets.length}개에 ${label}${key==='section'?` (${next.trim()||'구역 없음'})`:''}를 적용할까요? 등록상품·가격·재고는 바꾸지 않습니다.`)){$('photoBatchStatus').textContent='적용을 취소했습니다. 사진은 그대로입니다.';return;}
+    change(()=>{state.items=result.items;});$('photoBatchStatus').textContent=`사진 ${targets.length}개에 ${label}를 적용했습니다. 되돌리기로 복구할 수 있습니다.`;
+  };
   $('applyTemplate').onclick=()=>{const template=examples.template(templateId);if(!template||exampleMode)return;if(!confirm('기존 상품사진·가게정보·주문 연결은 유지하고 가구·색·간판 스타일을 바꿉니다. 사진의 기존 진열대 연결은 해제됩니다. 적용할까요?'))return;change(()=>{state={...state,...template,shopTitle:state.shopTitle,business:state.business,catalogStoreId:state.catalogStoreId,items:state.items.map(item=>({...item,decorId:''}))};selectedId='';selectedDecorId='';});say('디자인을 적용했습니다. 기존 상품과 가게정보는 유지했습니다. 되돌리기로 이전 디자인을 복원할 수 있습니다.');};
   for(const [id,key] of [['designFont','font'],['designSignColor','signColor'],['designSignBackground','signBackground'],['designFloor','floor'],['designAwning','awning'],['designShelves','showShelves'],['designTags','showTags']])$(id).addEventListener('change',event=>change(()=>{state.appearance[key]=event.target.type==='checkbox'?event.target.checked:event.target.value;}));
   for(let i=0;i<3;i++)$(`zoneName${i+1}`).addEventListener('change',event=>change(()=>{state.appearance.zoneNames[i]=event.target.value.trim().slice(0,24)||`구역 ${i+1}`;}));
