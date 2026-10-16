@@ -44,6 +44,7 @@ let selectedItemKind = '';
 let itemPhotoUrl = '';
 let restoringDraft = false;
 let draftSaveTimer = null;
+let previewSubmitting = false;
 
 function showErrandStep(step){
   home.hidden=step!=='home';
@@ -456,6 +457,11 @@ function maskedPhone(value){
 }
 
 function updatePreviewReadiness(){
+  if(previewSubmitting){
+    previewSubmit.disabled=true;
+    previewSubmit.textContent='접수함에 안전하게 저장 중…';
+    return;
+  }
   const nameReady=customerName.value.trim().length>=2;
   const phoneReady=/^01[016789]\d{7,8}$/.test(normalizedPhone(customerPhone.value));
   const ready=nameReady&&phoneReady&&previewAgreement.checked;
@@ -493,12 +499,13 @@ function previewOrderPayload(){
   };
 }
 
-function storedOrder(receipt){
+function storedOrder(receipt,submittedPayload){
   const order=receipt.order;
   return {version:2,trackingToken:receipt.trackingToken,orderId:order.id,status:order.status,
     createdAt:Date.parse(order.createdAt)||Date.now(),expiresAt:Number(order.expiresAt)*1000,
     pickup:order.pickupAddress,dropoff:order.dropoffAddress,item:order.itemName,
-    contact:`${customerName.value.trim()} · ${order.customerPhone}`,description:order.description};
+    contact:`${submittedPayload.customer.name} · ${order.customerPhone}`,description:order.description,
+    itemDetails:[submittedPayload.item.kind,submittedPayload.item.scale,...submittedPayload.item.conditions].filter(Boolean).join(' · ')};
 }
 
 const TRACKING_STATUS_LABELS={
@@ -512,11 +519,15 @@ function paintTracking(order){
   document.querySelector('#trackingDropoff').textContent=order.dropoff;
   document.querySelector('#trackingItem').textContent=order.item;
   document.querySelector('#trackingContact').textContent=order.contact;
+  document.querySelector('#trackingDescription').textContent=order.description||'저장된 요청내용이 없습니다.';
+  document.querySelector('#trackingItemDetails').textContent=order.itemDetails||'이전 접수 기록에는 규모·추가 조건이 보관되지 않았습니다.';
   document.querySelector('#trackingLiveStatus').textContent=`현재 상태: ${TRACKING_STATUS_LABELS[order.status]||'운영자 확인 전'} · 실제 결제와 기사 호출은 잠겨 있습니다.`;
 }
 
 function showTracking(order){
   paintTracking(order);
+  document.querySelector('#trackingDetails').hidden=true;
+  document.querySelector('#trackingReview').setAttribute('aria-expanded','false');
   home.hidden=true;policy.hidden=true;request.hidden=true;payment.hidden=true;postcodePanel.hidden=true;tracking.hidden=false;
   history.pushState({errandStep:'tracking'},'',`${location.pathname}?preview-order=${encodeURIComponent(order.orderId)}`);
   window.scrollTo({top:0,behavior:'smooth'});
@@ -537,23 +548,30 @@ function readPreviewOrder(){
 }
 
 previewSubmit.addEventListener('click',async()=>{
+  if(previewSubmitting)return;
   updatePreviewReadiness();
   if(previewSubmit.disabled||!selectedAddresses.pickup||!selectedAddresses.dropoff)return;
+  const payload=previewOrderPayload();
+  previewSubmitting=true;
   previewSubmit.disabled=true;
+  previewSubmit.setAttribute('aria-busy','true');
   previewSubmit.textContent='접수함에 안전하게 저장 중…';
   previewSubmitStatus.dataset.state='';
   previewSubmitStatus.textContent='창을 닫지 말고 잠시만 기다려 주세요.';
   try{
-    const response=await fetch(ERRAND_ORDER_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT},body:JSON.stringify(previewOrderPayload())});
+    const response=await fetch(ERRAND_ORDER_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT},body:JSON.stringify(payload)});
     const receipt=await response.json();
     if(!response.ok)throw new Error(receipt?.error||'접수 서버에 저장하지 못했습니다.');
-    const order=storedOrder(receipt);
+    const order=storedOrder(receipt,payload);
     try{localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));}catch{}
     try{localStorage.removeItem(ERRAND_DRAFT_KEY);}catch{}
     showTracking(order);
   }catch(error){
     previewSubmitStatus.dataset.state='error';
     previewSubmitStatus.textContent=error instanceof Error?error.message:'접수 서버에 저장하지 못했습니다. 잠시 후 다시 시도해 주세요.';
+  }finally{
+    previewSubmitting=false;
+    previewSubmit.removeAttribute('aria-busy');
     updatePreviewReadiness();
   }
 });
@@ -576,7 +594,13 @@ async function refreshTracking(){
 document.querySelector('#trackingRefresh').addEventListener('click',()=>void refreshTracking());
 
 document.querySelector('#trackingReview').addEventListener('click',()=>{
-  history.back();
+  const order=readPreviewOrder();
+  if(!order){document.querySelector('#trackingLiveStatus').textContent='이 기기에 보관한 접수 확인기간이 끝났습니다. 운영자에게 접수번호로 문의해 주세요.';return;}
+  paintTracking(order);
+  const details=document.querySelector('#trackingDetails');
+  details.hidden=!details.hidden;
+  document.querySelector('#trackingReview').setAttribute('aria-expanded',String(!details.hidden));
+  if(!details.hidden){details.scrollIntoView({block:'start'});details.focus({preventScroll:true});}
 });
 document.querySelector('#trackingHome').addEventListener('click',()=>{
   showErrandStep('home');history.pushState({errandStep:'home'},'',location.pathname);
@@ -629,7 +653,7 @@ itemPhoto.addEventListener('change',()=>{
   itemPhotoImage.src=itemPhotoUrl;
   itemPhotoName.textContent=file.name;
   itemPhotoPreview.hidden=false;
-  itemPhotoStatus.textContent='사진을 선택했습니다. 실제 접수 단계에서는 주문과 함께 안전하게 전송됩니다.';
+  itemPhotoStatus.textContent='사진을 선택했습니다. 지금은 이 기기의 미리보기이며 접수함에는 전송하지 않습니다.';
 });
 document.querySelector('#itemPhotoRemove').addEventListener('click',()=>{
   if(itemPhotoUrl)URL.revokeObjectURL(itemPhotoUrl);

@@ -161,15 +161,21 @@ function renderCart(){
 }
 
 function renderOrderReview(){
+  deliveryDestinationLabel(); // Validate the exact address sent to the order handler before review.
   const lines=cartLines();const subtotal=lines.reduce((sum,line)=>sum+line.unitPrice*line.quantity,0);const subsidy=subtotal>=Math.max(0,Number(store.minimumOrder)||0)?Math.max(0,Number(store.subsidy)||0):0;const deliveryFee=Number(deliveryQuote.deliveryFee);const platformFee=Number(deliveryQuote.platformFee);const customerDelivery=Math.max(0,deliveryFee-subsidy);
   document.querySelector('#reviewStoreName').textContent=store.storeName||fallbackStore.storeName;document.querySelector('#reviewAddress').textContent=deliveryAddress.address;const detail=document.querySelector('#addressDetail').value.trim();document.querySelector('#reviewAddressDetail').textContent=detail||'상세주소 없음';
   const items=document.querySelector('#reviewItems');items.replaceChildren();lines.forEach(({product,quantity,unitPrice,pricing})=>{const row=document.createElement('div');const name=document.createElement('span');name.textContent=`${product.name} · 수량 ${quantity} · ${product.unit}`;if(pricing.active){const note=document.createElement('small');note.className='review-price-note';note.textContent=`${pricing.label} 현재가 잠금`;name.append(note);}const amount=document.createElement('b');amount.textContent=money(unitPrice*quantity);row.append(name,amount);items.append(row);});
   document.querySelector('#reviewSubtotal').textContent=money(subtotal);document.querySelector('#reviewSubsidy').textContent=subsidy?`-${money(subsidy)}`:'0원';document.querySelector('#reviewDeliveryFee').textContent=money(deliveryFee);document.querySelector('#reviewCustomerDeliveryFee').textContent=money(customerDelivery);document.querySelector('#reviewPlatformFee').textContent=money(platformFee);document.querySelector('#reviewTotal').textContent=money(subtotal+customerDelivery+platformFee);
 }
 
+function deliveryDestinationLabel(){
+  const destination=[deliveryAddress.address,document.querySelector('#addressDetail').value.trim()].filter(Boolean).join(' · ');
+  if(destination.length>160)throw new Error('주소와 상세주소를 합쳐 160자 이내로 줄여 주세요. 동·호수는 꼭 남겨 주세요.');
+  return destination;
+}
 function orderPayload(){
   const lines=cartLines();const subtotal=serverPriceQuote?Number(serverPriceQuote.subtotalWon):lines.reduce((sum,line)=>sum+line.unitPrice*line.quantity,0);const merchantSupport=subtotal>=Math.max(0,Number(store.minimumOrder)||0)?Math.max(0,Number(store.subsidy)||0):0;const deliveryFee=Number(deliveryQuote.deliveryFee);const platformFee=Number(deliveryQuote.platformFee);const customerDelivery=Math.max(0,deliveryFee-merchantSupport);
-  return {previewOnly:true,storeId:storeId(),storeName:store.storeName||fallbackStore.storeName,priceQuoteToken:serverPriceQuote?.priceQuoteToken||'',items:lines.map(({product,quantity,unitPrice})=>({id:product.id,name:product.name,unit:product.unit,quantity,priceWon:unitPrice})),subtotalWon:subtotal,deliveryFeeWon:deliveryFee,platformFeeWon:platformFee,merchantSupportWon:merchantSupport,totalWon:subtotal+customerDelivery+platformFee,destinationLabel:deliveryAddress.address,customerRequest:document.querySelector('#reviewRequest').value.trim()};
+  return {previewOnly:true,storeId:storeId(),storeName:store.storeName||fallbackStore.storeName,priceQuoteToken:serverPriceQuote?.priceQuoteToken||'',items:lines.map(({product,quantity,unitPrice})=>({id:product.id,name:product.name,unit:product.unit,quantity,priceWon:unitPrice})),subtotalWon:subtotal,deliveryFeeWon:deliveryFee,platformFeeWon:platformFee,merchantSupportWon:merchantSupport,totalWon:subtotal+customerDelivery+platformFee,destinationLabel:deliveryDestinationLabel(),customerRequest:document.querySelector('#reviewRequest').value.trim()};
 }
 
 function saveTracking(value){try{localStorage.setItem(PREVIEW_ORDER_KEY,JSON.stringify(value));}catch{}}
