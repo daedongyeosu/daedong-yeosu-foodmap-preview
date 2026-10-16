@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#13392e">
+  <meta name="freight-api-base" content="https://daedong-yeosu-admin.sisakim.chatgpt.site/api">
+  <title>맛지도 화물기사 | 오더</title>
+  <link rel="stylesheet" href="styles.css?v=20261011-1">
+  <link rel="stylesheet" href="commitment.css?v=20261011-2-driver-presence">
+</head>
+<body>
+  <main>
+    <header><a href="../freight-partner/" aria-label="협력기사 등록 화면으로 돌아가기">←</a><span><b>맛지도 화물기사</b><small>여수 화물배송</small></span><em>시험 운영</em></header>
+    <section id="loginPanel" class="driver-login" hidden aria-labelledby="driverLoginTitle">
+      <span class="driver-login-icon" aria-hidden="true">🚚</span><p>승인된 화물기사 전용</p><h1 id="driverLoginTitle">기사 오더판 로그인</h1><small>관리자가 등록한 휴대전화번호와 8자리 접속코드를 입력하세요.</small>
+      <form id="driverLoginForm"><label>휴대전화번호<input id="driverPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000" required></label><label>기사 접속코드<input id="driverAccessCode" type="password" inputmode="numeric" autocomplete="one-time-code" maxlength="8" placeholder="8자리" required></label><button type="submit">오더판 열기</button></form>
+      <strong id="driverLoginError" role="alert"></strong><a href="../freight-partner/">아직 등록하지 않았다면 협력기사 등록 안내 보기</a>
+    </section>
+    <div id="driverApp">
+    <section class="driver-card" aria-label="기사 승인 상태">
+      <div><span class="avatar">🚚</span><span><small id="driverName">승인기사</small><b id="driverVehicle">등록 차량</b></span><strong>VERIFIED</strong></div>
+      <label class="availability"><span><b>오늘 오더 받기</b><small id="availabilityCopy">켜면 위치 확인 후 오더를 수락할 수 있습니다.</small></span><input id="availabilityToggle" type="checkbox" role="switch"><i aria-hidden="true"></i></label>
+      <div class="presence-grid" aria-live="polite"><span><small>GPS</small><strong id="locationState">확인 중</strong></span><span><small>연결</small><strong id="connectionState">확인 중</strong></span><small id="lastSeenState">최근 접속 확인 중</small><small id="transportState">프리뷰 · 이 기기에서만 동작</small></div>
+      <p>공개 오더는 꺼진 상태에서도 볼 수 있습니다. 실제 수락은 자격·영업용 차량·허가·보험 확인과 위치·접속 확인이 모두 된 기사만 가능합니다.</p>
+      <button id="driverLogout" class="driver-logout" type="button">기사 로그아웃</button>
+    </section>
+    <nav aria-label="화물기사 메뉴"><button type="button" data-tab="offers" aria-pressed="true">받을 오더 <span id="offerCount">0</span></button><button type="button" data-tab="active" aria-pressed="false">수행 중</button><button type="button" data-tab="settlement" aria-pressed="false">정산</button></nav>
+    <section id="offersPanel" class="panel">
+      <div class="panel-head"><span><p>지금 받을 수 있는 오더</p><h1>내 차량에 맞는 배송</h1></span><button id="refreshOffers" type="button">새로고침</button></div>
+      <div id="offlineMessage" class="empty-state compact-presence"><span>👀</span><h2>오더를 둘러보는 중입니다</h2><p>수락하려면 위 ‘오늘 오더 받기’를 켜고 위치를 확인하세요.</p></div>
+      <div id="offerList" class="offer-list"></div>
+    </section>
+    <section id="activePanel" class="panel" hidden>
+      <div class="panel-head"><span><p>현재 수행 중</p><h1>배차된 화물배송</h1></span></div>
+      <div id="activeEmpty" class="empty-state"><span>📭</span><h2>수행 중인 오더가 없습니다</h2><p>받을 오더에서 수락한 배송이 이곳에 나타납니다.</p></div>
+      <article id="activeOrder" class="active-order" hidden>
+        <div class="active-status"><span id="activeStatusBadge">배차 확정</span><strong id="activePayout">받을 금액 0원</strong></div>
+        <h2 id="activeRoute">출발지 → 도착지</h2><p id="activeItem"></p>
+        <section class="commitment"><small>내가 확정한 픽업 약속</small><strong id="promisedPickup">확인 중</strong><p id="commitmentMessage">약속시간까지 출발지에 도착해 주세요.</p></section>
+        <div class="private-info"><b>수락 후 공개된 상세정보</b><dl><div><dt>출발</dt><dd id="activePickup"></dd></div><div><dt>도착</dt><dd id="activeDropoff"></dd></div><div><dt>현장연락</dt><dd id="activeContact"></dd></div></dl></div>
+        <ol class="progress"><li data-progress="accepted"><i>1</i><span><b>배차 확정</b><small>기사 수락 완료</small></span></li><li data-progress="arrived"><i>2</i><span><b>현장 도착</b><small>출발지 도착</small></span></li><li data-progress="picked_up"><i>3</i><span><b>물품 인수</b><small>물품·포장 상태 확인</small></span></li><li data-progress="delivered"><i>4</i><span><b>배송 완료</b><small>사진·수령 확인 후 정산대기</small></span></li></ol>
+        <label id="proofCheckWrap" class="proof-check" hidden><input id="proofCheck" type="checkbox"><span>배송완료 사진과 수령인 확인을 남겼습니다.</span></label>
+        <button id="advanceOrder" class="primary-action" type="button">현장에 도착했습니다</button>
+        <button id="releaseOrder" class="danger-action" type="button">수행이 어려워졌습니다</button>
+        <button id="cancelDemo" class="text-action" type="button">프리뷰 오더 초기화</button>
+      </article>
+    </section>
+    <section id="settlementPanel" class="panel" hidden>
+      <div class="panel-head"><span><p>내가 받을 돈</p><h1>정산내역</h1></span></div>
+      <section class="settlement-summary"><small>정산예정</small><strong id="pendingTotal">0원</strong><p>배송완료와 증빙 확인 후 등록된 기사 계좌로 지급됩니다.</p></section>
+      <div id="settlementList" class="settlement-list"><div class="empty-state compact"><span>🧾</span><h2>아직 정산내역이 없습니다</h2></div></div>
+      <aside><b>기사 화면에는 받을 확정금액만 표시됩니다.</b><span>고객 결제총액, 맛지도 이용금액과 내부 가산근거는 관리자 정산원장에서 별도로 관리합니다.</span></aside>
+    </section>
+    <section class="demo-boundary"><b>시험 운영 배차 서버</b><p>여러 기사가 동시에 눌러도 서버가 한 명만 배차합니다. 고객 결제와 기사 정산은 아직 연결하지 않았습니다.</p></section>
+    </div>
+  </main>
+  <script src="../freight-order-store.js?v=20261011-7-server-boundary"></script>
+  <script src="../freight-api-client.js?v=20261011-2-driver-auth"></script>
+  <script src="app.js?v=20261011-8-driver-auth"></script>
+</body>
+</html>

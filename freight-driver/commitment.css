@@ -1,0 +1,141 @@
+.commitment {
+  margin-top: 15px;
+  padding: 15px;
+  border: 2px solid #efb36f;
+  border-radius: 15px;
+  background: #fff8e9;
+}
+
+.commitment small {
+  display: block;
+  color: #76533a;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.commitment strong {
+  display: block;
+  margin-top: 5px;
+  color: #a53e18;
+  font-size: 22px;
+}
+
+.commitment p {
+  margin: 6px 0 0;
+  color: #685445;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.danger-action {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 8px;
+  border: 1px solid #d7a58d;
+  border-radius: 14px;
+  background: #fff;
+  color: #97401e;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.driver-card > .presence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.presence-grid > span {
+  display: grid;
+  gap: 4px;
+  padding: 11px 12px;
+  border: 1px solid #d7e3dc;
+  border-radius: 13px;
+  background: #f5faf7;
+}
+
+.presence-grid small {
+  color: #637269;
+  font-size: 14px;
+}
+
+.presence-grid strong {
+  color: #1e6249;
+  font-size: 16px;
+}
+
+.presence-grid > #lastSeenState {
+  grid-column: 1 / -1;
+  padding-inline: 4px;
+  color: #d8ebe2;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.presence-grid > #transportState {
+  grid-column: 1 / -1;
+  padding: 9px 11px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.12);
+  color: #e9f5ef;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.presence-grid > #transportState[data-mode="server"] {
+  background: #dff5e9;
+  color: #176142;
+}
+
+.presence-grid > #transportState[data-mode="error"] {
+  background: #ffe7dc;
+  color: #a13f1a;
+}
+
+.presence-grid[data-status="offline"] strong,
+.presence-grid[data-status="stale"] strong {
+  color: #9a4b2c;
+}
+
+.empty-state.compact-presence {
+  margin-bottom: 12px;
+  padding-block: 16px;
+}
+
+.empty-state.compact-presence span {
+  font-size: 25px;
+}
+
+.empty-state.compact-presence h2 {
+  font-size: 18px;
+}
+
+.nearby-badge {
+  color: #176142;
+  font-weight: 900;
+}
+
+.driver-login {
+  display: grid;
+  gap: 12px;
+  margin: 24px 20px;
+  padding: 26px 22px;
+  border: 1px solid #ccdcd4;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(24, 64, 49, .12);
+}
+
+.driver-login-icon { font-size: 40px; }
+.driver-login p { margin: 0; color: #cc551e; font-size: 15px; font-weight: 900; }
+.driver-login h1 { margin: 0; color: #173f32; font-size: 29px; }
+.driver-login > small { color: #586b61; font-size: 16px; line-height: 1.55; }
+.driver-login form { display: grid; gap: 13px; margin-top: 5px; }
+.driver-login label { display: grid; gap: 7px; color: #294a3d; font-size: 16px; font-weight: 900; }
+.driver-login input { min-height: 52px; padding: 0 14px; border: 1px solid #9fb8ac; border-radius: 13px; color: #14231d; font-size: 18px; }
+.driver-login button { min-height: 54px; border: 0; border-radius: 14px; background: #173f32; color: #fff; font-size: 18px; font-weight: 900; }
+.driver-login button:disabled { opacity: .55; }
+.driver-login > strong { min-height: 22px; color: #ae3617; font-size: 15px; }
+.driver-login > a { color: #285d4a; font-size: 15px; font-weight: 850; }
+.driver-logout { margin-top: 12px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 10px; background: transparent; color: #e7f3ed; font-size: 14px; font-weight: 800; }
