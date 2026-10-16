@@ -19,15 +19,20 @@ for(const value of [
   "name:'한우암소 전골(야채불고기)'",
   "name:'한우암소 특수부위 모듬'",
   "name:'한우암소 육회비빔밥'",
+  "image:'../assets/store-photos/79067fa62663ac/01.webp'",
+  "image:'../assets/store-photos/79067fa62663ac/03.webp'",
+  "image:'../assets/store-photos/79067fa62663ac/04.webp'",
+  "imageLabel:'메뉴 연출 이미지'",
   'inquiryOnly:true',
   "catalogSource:'static'",
   'const preset=previewStore()'
 ])if(!script.includes(value))throw new Error(`황전한우정육 온라인 상점 등록정보 누락: ${value}`);
 
 if(!script.includes('(Array.isArray(list)?list:fallbackProducts)'))throw new Error('상품이 없는 신규 상점에 예시 상품이 섞일 수 있습니다.');
+if(!script.includes("photo.alt=`${product.name} 사진`"))throw new Error('온라인 상점 메뉴 사진에 대체텍스트가 없습니다.');
 if(!script.includes("if(store.catalogSource==='static')return;"))throw new Error('상품 미등록 상점이 다른 서버 상품을 불러올 수 있습니다.');
 if(!script.includes('상점 등록을 마쳤습니다. 판매 상품과 가격은 상점 확인 후 순서대로 등록합니다.'))throw new Error('상품 등록 전 고객 안내가 없습니다.');
-if(!page.includes('id="storePhone"')||!page.includes('id="storeProfile"')||!page.includes('id="storeMapLink"')||!page.includes('store-profile.css?v=20261016-1'))throw new Error('등록된 상점 전화·가게안내 화면이 없습니다.');
+if(!page.includes('id="storePhone"')||!page.includes('id="storeProfile"')||!page.includes('id="storeMapLink"')||!page.includes('store-profile.css?v=20261016-1')||!page.includes('store-menu-photo.css?v=20261016-1'))throw new Error('등록된 상점 전화·가게안내·메뉴사진 화면이 없습니다.');
 for(const sensitive of ['5829800440','630531'])if(script.includes(sensitive)||page.includes(sensitive))throw new Error(`공개 상점 화면에 민감정보가 포함됨: ${sensitive}`);
 
 console.log('PASS 황전한우정육식당 온라인 상점 메뉴·가게정보 등록');
