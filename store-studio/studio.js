@@ -170,6 +170,11 @@
     picker.value=item?.catalogProductId||'';picker.disabled=loading||importing||previewing||catalogBusy||!item;
     $('itemProductUrl').disabled=Boolean(item?.catalogProductId);
     $('itemCatalogStatus').textContent=item?.catalogProductId?'등록 상품의 가격·재고를 사용합니다. 같은 상품을 여러 사진에 연결해도 장바구니는 하나로 합쳐집니다.':'상품을 불러온 뒤 이 사진에 연결하세요.';
+    for(const id of ['replacePhoto','retakePhoto'])$(id).disabled=!item||loading||importing||previewing;
+    $('registerPhotoProduct').hidden=exampleMode;
+    $('registerPhotoHelp').hidden=exampleMode;
+    $('registerPhotoProduct').disabled=!item||Boolean(item.catalogProductId)||loading||importing||previewing;
+    $('registerPhotoHelp').textContent=item?.catalogProductId?'이미 등록된 상품과 연결되어 있습니다. 사진 교체는 가격·재고를 변경하지 않습니다.':'사진·이름·설명을 상품등록 화면으로 가져갑니다. 가격·단위·재고를 확인한 뒤 직접 저장하세요. 사진은 이 기기에만 보관되며 아직 공개 판매되지 않습니다.';
     const badProductLink=Boolean(item?.productUrl?.trim()&&!links.https(item.productUrl));$('itemProductUrl').setAttribute('aria-invalid',String(badProductLink));
     $('itemLinkStatus').textContent=badProductLink?'상품 주문 링크를 확인해 주세요. https://로 시작하는 주소가 필요합니다.':'비워두면 가게 주문 화면으로 연결합니다. 상품명만으로 주문 링크를 만들지 않습니다.';
     $('lockedHelp').hidden=!item?.locked;
@@ -238,6 +243,35 @@
   });
   $('removeRealPhoto').onclick=()=>change(()=>{state.business={...state.business,realPhoto:''};});
   $('choosePhotos').onclick=()=>$('photos').click();$('takePhoto').onclick=()=>$('camera').click();
+  let replacementId='';
+  function chooseReplacement(id){if(loading||importing||previewing||!selected())return;replacementId=selectedId;$(id).click();}
+  $('replacePhoto').onclick=()=>chooseReplacement('replacementPhoto');
+  $('retakePhoto').onclick=()=>chooseReplacement('replacementCamera');
+  for(const id of ['replacementPhoto','replacementCamera'])$(id).onchange=async event=>{
+    const input=event.target,file=input.files?.[0],targetId=replacementId;
+    input.value='';if(!file||loading||importing||previewing)return;
+    importing=true;render();say('새 사진을 준비하고 있습니다…');
+    try{const src=await imageData(file);const item=state.items.find(value=>value.id===targetId);if(!item)throw new Error('사진을 바꿀 대상을 다시 선택해 주세요.');checkpoint();item.src=src;selectedId=targetId;persist();await saveChain;}
+    catch(error){say(error.message,true);}
+    finally{importing=false;render();}
+  };
+  $('registerPhotoProduct').onclick=async()=>{
+    const item=selected();if(exampleMode||!item||item.catalogProductId||loading||importing||previewing)return;
+    try{
+      if(!db)throw new Error('시안을 저장할 수 없어 이동하지 않았습니다. 시안 파일을 보관하거나 저장 가능한 브라우저에서 다시 시도해 주세요.');
+      const transfer=window.ShopStudioProductHandoff,nonce=crypto.randomUUID();
+      const value=transfer.read({version:1,createdAt:Date.now(),storeId:state.catalogStoreId,name:item.name,description:item.description,src:item.src});
+      if(!value)throw new Error('직접 올린 사진을 선택해 주세요. 견본 사진은 판매상품으로 등록하지 않습니다.');
+      let saved;try{saved=JSON.parse(localStorage.getItem('matjido-store-onboarding-preview-v1')||'null');}catch{}
+      if(value.storeId&&(!saved?.previewOnly||saved.storeId!==value.storeId))throw new Error('이 기기의 입점 상점과 연결 상점이 다릅니다. 같은 상점인지 먼저 확인해 주세요.');
+      importing=true;render();await saveChain;
+      // Wait for the actual write, not the status-only save chain which handles errors.
+      await new Promise((resolve,reject)=>{const tx=db.transaction('drafts','readwrite');tx.objectStore('drafts').put(clone(state),draftKey);tx.oncomplete=resolve;tx.onerror=()=>reject(new Error('시안을 저장하지 못해 이동하지 않았습니다.'));tx.onabort=tx.onerror;});
+      sessionStorage.setItem(transfer.key(nonce),JSON.stringify(value));
+      location.assign('../store-partner/index.html?studioProduct='+encodeURIComponent(nonce));
+    }catch(error){say(error.message||'상품등록 화면으로 이동하지 못했습니다. 저장 공간을 확인해 주세요.',true);}
+    finally{importing=false;render();}
+  };
   async function imageData(file){
     if(!file.type.startsWith('image/')||file.size>15*1024*1024)throw new Error('15MB 이하의 사진 파일을 선택해 주세요.');
     let bitmap;try{bitmap=await createImageBitmap(file);}catch{throw new Error('이 사진을 읽을 수 없습니다. JPG·PNG·WebP로 저장한 사진을 선택해 주세요.');}

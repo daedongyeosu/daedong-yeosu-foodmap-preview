@@ -9,7 +9,7 @@
   <meta name="description" content="여수의 오프라인 상점이 입점비 없이 온라인 상점을 만들고 고객 주문과 배송을 연결하는 여수맛지도 입점 프리뷰">
   <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=20261011-1">
-  <link rel="stylesheet" href="product-editor.css?v=20261013-1">
+  <link rel="stylesheet" href="product-editor.css?v=20261017-2">
 </head>
 <body>
   <header class="page-header">
@@ -106,6 +106,7 @@
             <em id="productCount">등록 0개</em>
           </header>
 
+          <p id="studioProductNotice" class="method-status" role="status" hidden></p>
           <div class="product-method-panel active" data-product-panel="direct">
             <div class="product-editor-grid">
               <label>상품명 <b>필수</b><input id="productName" maxlength="60" placeholder="예: 국산 고춧가루"></label>
@@ -142,6 +143,7 @@
               </div>
             </section>
             <label class="product-photo-picker">📷 상품사진 선택<input id="productPhoto" type="file" accept="image/*"><small id="productPhotoStatus">사진은 이 기기에서만 미리 확인합니다.</small></label>
+            <img id="studioProductPhoto" class="studio-product-photo" alt="등록 준비 중인 상품사진" hidden>
             <button id="addProduct" class="add-product" type="button">상품 초안에 추가하기</button>
           </div>
 
@@ -220,6 +222,7 @@
 
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
   <script src="../store-context.js?v=20261016-5" defer></script>
-  <script src="app.js?v=20261016-5" defer></script>
+  <script src="../store-studio/product-handoff.js?v=20261017-2" defer></script>
+  <script src="app.js?v=20261017-2" defer></script>
 </body>
 </html>
