@@ -19,6 +19,7 @@
     $('compositionCount').textContent=`함께 선택한 가구 ${compositionIds.size}개 · 내 세트 ${savedCompositions.length}/12개 · 끌어서 이동하거나 방향 버튼을 사용하세요.`;
     for(const id of ['compositionLeft','compositionRight','compositionUp','compositionDown','compositionDuplicate','compositionClear','compositionSave'])$(id).disabled=loading||importing||previewing||setsBusy||!compositionIds.size;
     $('compositionSave').disabled=$('compositionSave').disabled||compositionIds.size>20||savedCompositions.length>=12;
+    for(const button of document.querySelectorAll('[data-align]'))button.disabled=loading||importing||previewing||setsBusy||compositionIds.size<(button.dataset.align.startsWith('space')?3:2);
     $('compositionExport').disabled=loading||importing||previewing||setsBusy||!savedCompositions.length;$('compositionImport').disabled=loading||importing||previewing||setsBusy;
     $('compositionLibrary').replaceChildren();
     for(const [set,builtin] of [...composition.builtins.map(s=>[s,true]),...savedCompositions.map(s=>[s,false])]){
@@ -257,6 +258,12 @@
   $('cabinetEnabled').onchange=event=>change(()=>{const item=state.decor.find(i=>i.id===selectedDecorId);if(item&&design.cabinetTypes.includes(item.type))item.cabinet=event.target.checked?{rows:3,columns:2,doors:'none',handle:'bar',back:true}:null;});
   for(const [id,key] of [['cabinetRows','rows'],['cabinetColumns','columns'],['cabinetDoors','doors'],['cabinetHandle','handle'],['cabinetBack','back']])$(id).onchange=event=>change(()=>{const item=state.decor.find(i=>i.id===selectedDecorId);if(!item?.cabinet)return;item.cabinet=design.cabinet({...item.cabinet,[key]:event.target.type==='checkbox'?event.target.checked:event.target.type==='number'?Number(event.target.value):event.target.value});});
   function moveComposition(dx,dy){if(!compositionIds.size)return;const result=design.translateMany(state.decor,state.items,[...compositionIds],dx,dy,layout);if(result.blocked){say('묶음의 가구 또는 연결된 상품의 위치 잠금을 먼저 풀어 주세요.',true);return;}change(()=>{state.decor=result.fixtures;state.items=result.items;});}
+  for(const button of document.querySelectorAll('[data-align]'))button.onclick=()=>{
+    if(loading||importing||previewing||setsBusy)return;
+    const result=composition.arrange(state.decor,state.items,[...compositionIds],button.dataset.align,layout);
+    if(!result.ok){say(result.message,true);return;}
+    change(()=>{state.decor=result.fixtures;state.items=result.items;});
+  };
   for(const [id,dx,dy] of [['compositionLeft',-2,0],['compositionRight',2,0],['compositionUp',0,-2],['compositionDown',0,2]])$(id).onclick=()=>moveComposition(dx,dy);
   $('compositionClear').onclick=()=>{compositionIds.clear();render();};
   $('compositionDuplicate').onclick=()=>{const pieces=state.decor.filter(i=>compositionIds.has(i.id));if(!pieces.length)return;if(state.decor.length+pieces.length>60){say('묶음 전체를 복제하려면 가구 60개 한도 안에 여유가 있어야 합니다.',true);return;}change(()=>{const copies=pieces.map(i=>design.decor({...i,id:crypto.randomUUID(),locked:false,hidden:false})),moved=design.translateMany(copies,[],copies.map(i=>i.id),4,3,layout).fixtures;state.decor.push(...moved);compositionIds=new Set(moved.map(i=>i.id));selectedDecorId=moved[0].id;selectedId='';});};
