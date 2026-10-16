@@ -47,5 +47,20 @@
     }
     return{ok:false,message:'이 배치에서는 사진이 겹치지 않게 들어갈 공간이 부족합니다. 진열장 단 수를 늘리거나 사진 일부를 숨겨 주세요.'};
   }
-  return Object.freeze({ASPECT,footprint,bounded,shelfLevels,onShelf,arrange,overlaps});
+  function repeatPlan(items,id,{columns,rows,gapX,gapY}){
+    const item=items.find(i=>i.id===id);
+    if(!item||item.locked||item.hidden)return{ok:false,message:'보이는 사진을 선택하고 위치 잠금을 풀어 주세요.'};
+    if(!Number.isInteger(columns)||columns<1||columns>6||!Number.isInteger(rows)||rows<1||rows>4||![gapX,gapY].every(n=>Number.isFinite(n)&&n>=0&&n<=12)||columns*rows<2)return{ok:false,message:'가로 1~6개·세로 1~4개, 전체 2개 이상과 간격 0~12를 선택해 주세요.'};
+    const count=columns*rows-1;if(items.length+count>40)return{ok:false,message:'사진 40개 한도를 넘습니다. 가로·세로 개수를 줄여 주세요.'};
+    const f=footprint(item),positions=[];
+    for(let row=0;row<rows;row++)for(let col=0;col<columns;col++){
+      if(!row&&!col)continue;
+      const next={...item,x:item.x+col*(f.width+gapX),y:item.y+row*(f.height+gapY)},r=rect(next);
+      if(r.left<0||r.right>100+1e-7||r.top<20||r.bottom>98+1e-7)return{ok:false,message:'현재 크기로는 공간을 벗어납니다. 사진 크기·개수·간격을 줄이거나 시작 사진을 왼쪽 위로 옮겨 주세요.'};
+      if(items.some(other=>other.id!==id&&!other.hidden&&overlaps(next,other)))return{ok:false,message:'다른 사진과 겹치는 자리가 있어 배치하지 않았습니다. 시작 위치나 간격을 바꿔 주세요.'};
+      positions.push({x:next.x,y:next.y});
+    }
+    return{ok:true,positions,count};
+  }
+  return Object.freeze({ASPECT,footprint,bounded,shelfLevels,onShelf,arrange,overlaps,repeatPlan});
 });

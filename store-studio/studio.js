@@ -229,6 +229,7 @@
     const badProductLink=Boolean(item?.productUrl?.trim()&&!links.https(item.productUrl));$('itemProductUrl').setAttribute('aria-invalid',String(badProductLink));
     $('itemLinkStatus').textContent=badProductLink?'상품 주문 링크를 확인해 주세요. https://로 시작하는 주소가 필요합니다.':'비워두면 가게 주문 화면으로 연결합니다. 상품명만으로 주문 링크를 만들지 않습니다.';
     $('lockedHelp').hidden=!item?.locked;
+    const repeated=layout.repeatPlan(state.items,item?.id,repeatOptions());$('repeatSummary').textContent=repeated.ok?`원본은 그대로 두고 ${repeated.count}개를 추가합니다. 진열 사진 합계 ${state.items.length+repeated.count}/40개` :repeated.message;$('repeatApply').disabled=loading||importing||previewing||!repeated.ok;
     for(const id of ['itemSize','itemRotation','moveLeft','moveRight','moveUp','moveDown','snapSelected','remove'])$(id).disabled=!item||Boolean(item.locked)||loading||importing||previewing;
     $('undo').disabled=loading||importing||!past.length||previewing;$('redo').disabled=loading||importing||!future.length||previewing;
     $('preview').textContent=previewing?'꾸미기로 돌아가기':'고객처럼 보기';
@@ -435,6 +436,14 @@
   for(const [id,dx,dy] of [['moveLeft',-2,0],['moveRight',2,0],['moveUp',0,-2],['moveDown',0,2]])$(id).onclick=()=>move(dx,dy);
   scene.addEventListener('keydown',event=>{if(previewing||!selected())return;const moves={ArrowLeft:[-2,0],ArrowRight:[2,0],ArrowUp:[0,-2],ArrowDown:[0,2]};if(moves[event.key]){event.preventDefault();move(...moves[event.key]);itemsRoot.querySelector(`[data-item-id="${selectedId}"]`)?.focus({preventScroll:true});}});
   $('duplicate').onclick=()=>{if(state.items.length>=40){say('이 시안에는 사진을 40개까지 배치할 수 있습니다.',true);return;}change(()=>{const item=selected();if(!item)return;const copy={...item,id:crypto.randomUUID(),locked:false,hidden:false,x:item.x+4,y:item.y+3};bounded(copy);state.items.push(copy);selectedId=copy.id;});};
+  function repeatOptions(){return{columns:Number($('repeatColumns').value),rows:Number($('repeatRows').value),gapX:Number($('repeatGapX').value),gapY:Number($('repeatGapY').value)};}
+  for(const id of ['repeatColumns','repeatRows','repeatGapX','repeatGapY'])$(id).addEventListener('input',()=>render());
+  $('repeatApply').onclick=()=>{
+    if(loading||importing||previewing)return;const item=selected(),result=layout.repeatPlan(state.items,item?.id,repeatOptions());
+    if(!result.ok){say(result.message,true);return;}
+    change(()=>{state.items.push(...result.positions.map(position=>({...item,...position,id:crypto.randomUUID(),locked:false,hidden:false})));});
+    $('repeatSummary').textContent=`사진 ${result.count}개를 추가했습니다. 다시 반복하려면 다른 시작 사진이나 위치·간격을 선택하세요. 되돌리기 한 번으로 이번 추가를 취소할 수 있습니다.`;
+  };
   $('remove').onclick=()=>{if(selected()?.locked)return;change(()=>{state.items=state.items.filter(item=>item.id!==selectedId);selectedId='';});};
   $('snapSelected').onclick=()=>{const item=selected();if(!item||item.locked||item.hidden||item.decorId||!state.appearance.showShelves)return;change(()=>Object.assign(item,layout.onShelf(item,state.shelves)));};
   $('arrangeAll').onclick=()=>{const result=layout.arrange(state.items.map(item=>item.decorId?{...item,locked:true}:item),state.zones,state.shelves);if(!result.ok){say(result.message,true);return;}change(()=>{state.items=result.items.map(item=>({...item,locked:state.items.find(value=>value.id===item.id)?.locked===true}));});};
