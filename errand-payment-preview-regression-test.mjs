@@ -17,7 +17,9 @@ assert.match(html,/실제 결제와 젠딜리 주문은 발생하지 않습니�
 assert.match(html,/class="payment-submit"[^>]*disabled/);
 assert.match(app,/request\.hidden=true;\s*payment\.hidden=false/);
 assert.match(app,/addressNext\.disabled=!\(addressesReady&&itemReady&&contentReady\)/);
-assert.match(app,/new URLSearchParams\(location\.search\)\.has\('payment'\)/);
+assert.match(app,/const initialParams=new URLSearchParams\(location\.search\)/);
+assert.match(app,/initialParams\.has\('payment'\)/);
+assert.match(app,/initialParams\.get\('payment-result'\)/);
 assert.match(css,/\.quick-payment-grid/);
 assert.match(css,/@media\(max-width:430px\).*\.quick-payment-grid\{grid-template-columns:1fr\}/s);
 

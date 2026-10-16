@@ -14,6 +14,11 @@ const aiSuggestion = document.querySelector('#aiSuggestion');
 const aiSuggestionText = document.querySelector('#aiSuggestionText');
 const aiStatus = document.querySelector('#aiStatus');
 const itemName = document.querySelector('#itemName');
+const itemValue = document.querySelector('#itemValue');
+const itemValueUnknown = document.querySelector('#itemValueUnknown');
+const riskQuestions = document.querySelector('#riskQuestions');
+const riskDecision = document.querySelector('#riskDecision');
+const itemPhotoRequirement = document.querySelector('#itemPhotoRequirement');
 const itemPhoto = document.querySelector('#itemPhoto');
 const itemPhotoPreview = document.querySelector('#itemPhotoPreview');
 const itemPhotoImage = document.querySelector('#itemPhotoImage');
@@ -26,6 +31,10 @@ const customerPhone = document.querySelector('#customerPhone');
 const contactStatus = document.querySelector('#contactStatus');
 const previewAgreement = document.querySelector('#previewAgreement');
 const previewSubmit = document.querySelector('#previewSubmit');
+const longDistancePromise = document.querySelector('#longDistancePromise');
+const longDistanceDeadlineField = document.querySelector('#longDistanceDeadlineField');
+const longDistanceDeadline = document.querySelector('#longDistanceDeadline');
+const longDistanceQuoteAgreement = document.querySelector('#longDistanceQuoteAgreement');
 const ERRAND_AI_ENDPOINT = 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev/api/errand/assist';
 const ERRAND_AI_CLIENT = 'daedong-preview-web-v1-20260804';
 const KAKAO_MAPS_APP_KEY = '60e2b8ba2516a035006f7c300e0f9ff2';
@@ -34,6 +43,9 @@ const ERRAND_DRAFT_KEY = 'matjidoErrandDraftV1';
 const ERRAND_DRAFT_TTL_MS = 24 * 60 * 60 * 1000;
 const ERRAND_PREVIEW_ORDER_KEY = 'matjidoErrandPreviewOrderV1';
 const ERRAND_ORDER_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/orders';
+const ERRAND_QUOTE_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/quote';
+const ERRAND_PAYMENT_CONFIRM_ENDPOINT = 'https://daedong-yeosu-admin.sisakim.chatgpt.site/api/errand/payments/confirm';
+const TOSS_PAYMENTS_SDK_URL = 'https://js.tosspayments.com/v2/standard';
 const previewSubmitStatus = document.querySelector('#previewSubmitStatus');
 const selectedAddresses = {pickup:null, dropoff:null};
 let activeAddressKind = null;
@@ -44,6 +56,37 @@ let selectedItemKind = '';
 let itemPhotoUrl = '';
 let restoringDraft = false;
 let draftSaveTimer = null;
+let routeQuoteRequestId = 0;
+let tossPaymentsSdkPromise = null;
+const routeQuoteCache = new Map();
+
+function loadTossPaymentsSdk(){
+  if(typeof window.TossPayments==='function')return Promise.resolve(window.TossPayments);
+  if(tossPaymentsSdkPromise)return tossPaymentsSdkPromise;
+  tossPaymentsSdkPromise=new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    script.src=TOSS_PAYMENTS_SDK_URL;script.async=true;script.crossOrigin='anonymous';
+    script.onload=()=>typeof window.TossPayments==='function'?resolve(window.TossPayments):reject(new Error('토스 결제 모듈을 확인하지 못했습니다.'));
+    script.onerror=()=>reject(new Error('토스 결제창을 불러오지 못했습니다. 네트워크를 확인해 주세요.'));
+    document.head.appendChild(script);
+  }).catch((error)=>{tossPaymentsSdkPromise=null;throw error;});
+  return tossPaymentsSdkPromise;
+}
+
+const ERRAND_BLOCKED_RULES = [
+  {pattern:/(현금(?!영수증)|수표|상품권|유가증권|귀금속|금괴|통장|신용카드|체크카드)/u,reason:'현금·유가증권·귀금속·결제수단은 현재 운송하지 않습니다.'},
+  {pattern:/(마약|불법\s*약물|장물|총포|권총|소총|탄약|폭발물|휘발유|경유|부탄가스|농약|염산|황산|독극물)/u,reason:'불법 물품·무기·폭발성·인화성·유해 물질은 접수할 수 없습니다.'},
+  {pattern:/(살아\s*있는\s*(동물|강아지|고양이|생물)|반려동물\s*(배송|운송)|사람\s*(배송|운송)|(사람|승객|아이|어린이|학생|노인|어르신|환자|취객|술\s*취한\s*사람).{0,24}(태워|태우|데려|이동|운송|픽업|모셔|바래다))/u,reason:'사람 이동은 물품 심부름으로 접수할 수 없습니다. 허가된 택시를 이용하고 응급환자는 119에 연락해 주세요.'},
+  {pattern:/(담배|전자담배|주류|소주|맥주|양주|와인)/u,reason:'담배와 주류는 판매·연령확인 운영기준이 확정되기 전까지 접수하지 않습니다.'},
+];
+
+const ERRAND_RISK_RULES = {
+  fragile:/(케이크|꽃|화분|유리|도자기|그릇|액자|거울|만년필|파손|깨지|눌림|기울)/u,
+  liquid:/(액체|국물|음료|커피|물병|유리병|누수|새는|기름|잉크)/u,
+  electronics:/(노트북|태블릿|컴퓨터|모니터|휴대폰|스마트폰|카메라|전자기기|게임기|액정)/u,
+  temperature:/(냉장|냉동|아이스크림|생선|육류|회\s|신선|온도|보냉)/u,
+  deadline:/(정해진\s*시간|마감|행사|시험|계약서|원본\s*서류|시간\s*필수)/u,
+};
 
 function showErrandStep(step){
   home.hidden=step!=='home';
@@ -82,12 +125,16 @@ function draftSnapshot(){
     itemName:itemName.value.trim(),
     itemScale:document.querySelector('[name="itemScale"]:checked')?.value||'',
     conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value),
+    packingStatus:document.querySelector('[name="packingStatus"]:checked')?.value||'',
+    declaredValue:itemValue.value,
+    valueUnknown:itemValueUnknown.checked,
+    riskConfirmations:[...document.querySelectorAll('[data-risk-question] input:checked')].map(input=>input.value),
     description:errandContent.value,
   };
 }
 
 function meaningfulDraft(draft){
-  return Boolean(draft?.addresses?.pickup||draft?.addresses?.dropoff||draft?.itemKind||draft?.itemName||draft?.itemScale||draft?.conditions?.length||String(draft?.description||'').trim());
+  return Boolean(draft?.addresses?.pickup||draft?.addresses?.dropoff||draft?.itemKind||draft?.itemName||draft?.itemScale||draft?.conditions?.length||draft?.packingStatus||draft?.declaredValue||draft?.valueUnknown||String(draft?.description||'').trim());
 }
 
 function showDraftResume(draft){
@@ -136,6 +183,8 @@ function paintRestoredAddress(kind,address,detail=''){
     placeName:String(address.placeName||''),
     placeId:String(address.placeId||''),
     addressSource:String(address.addressSource||''),
+    sido:String(address.sido||''),
+    sigungu:String(address.sigungu||''),
     latitude:Number.isFinite(Number(address.latitude))?Number(address.latitude):null,
     longitude:Number.isFinite(Number(address.longitude))?Number(address.longitude):null,
   };
@@ -157,8 +206,15 @@ function restoreDraft(draft){
   document.querySelectorAll('[name="itemScale"]').forEach(input=>{input.checked=input.value===draft.itemScale;});
   const conditions=new Set(Array.isArray(draft.conditions)?draft.conditions:[]);
   document.querySelectorAll('.extra-conditions input').forEach(input=>{input.checked=conditions.has(input.value);});
+  document.querySelectorAll('[name="packingStatus"]').forEach(input=>{input.checked=input.value===draft.packingStatus;});
+  itemValue.value=String(draft.declaredValue||'');
+  itemValueUnknown.checked=Boolean(draft.valueUnknown);
+  itemValue.disabled=itemValueUnknown.checked;
+  const riskConfirmations=new Set(Array.isArray(draft.riskConfirmations)?draft.riskConfirmations:[]);
+  document.querySelectorAll('[data-risk-question] input').forEach(input=>{input.checked=riskConfirmations.has(input.value);});
   errandContent.value=String(draft.description||'');
   restoringDraft=false;
+  updateRiskAssessment();
   updateAiAssist();
   updateRequestReadiness();
   showDraftResume(draft);
@@ -173,14 +229,16 @@ function clearDraft(){
   document.querySelectorAll('[data-address-detail-wrap]').forEach(wrap=>{wrap.hidden=true;});
   document.querySelectorAll('[data-address-detail]').forEach(input=>{input.value='';});
   document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed','false'));
-  document.querySelectorAll('[name="itemScale"],.extra-conditions input').forEach(input=>{input.checked=false;});
+  document.querySelectorAll('[name="itemScale"],[name="packingStatus"],.extra-conditions input,[data-risk-question] input').forEach(input=>{input.checked=false;});
+  itemValue.value='';itemValue.disabled=false;itemValueUnknown.checked=false;
   itemName.value='';errandContent.value='';draftResume.hidden=true;
-  updateAiAssist();updateRequestReadiness();
+  updateAiAssist();updateRiskAssessment();updateRequestReadiness();
 }
 
 function selectItemKind(kind){
   selectedItemKind=kind;
   document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.itemKind===kind)));
+  updateRiskAssessment();
   updateRequestReadiness();
   scheduleDraftSave();
 }
@@ -231,6 +289,16 @@ function isYeosuAddress(data,address){
   return (/전라남도|전남/.test(sido)&&/여수시/.test(sigungu))||/^(전라남도|전남)\s+여수시\s/.test(address);
 }
 
+function addressIsInYeosu(address){
+  if(!address)return false;
+  const text=String(address.address||address.roadAddress||address.jibunAddress||'').trim();
+  return isYeosuAddress(address,text)||/(?:^|\s)여수시(?:\s|$)/u.test(text);
+}
+
+function isLongDistanceQuick(){
+  return Boolean(selectedAddresses.pickup&&selectedAddresses.dropoff&&addressIsInYeosu(selectedAddresses.pickup)&&!addressIsInYeosu(selectedAddresses.dropoff));
+}
+
 function formatSelectedAddress(address){
   if(!address)return '';
   return `${address.placeName?`${address.placeName} · `:''}${address.address}`;
@@ -266,8 +334,7 @@ function keywordSearch(places,keyword){
   return new Promise((resolve,reject)=>{
     places.keywordSearch(keyword,(data,status)=>{
       if(status===globalThis.kakao.maps.services.Status.OK){
-        const filtered=data.filter(isYeosuPlace);
-        resolve({places:filtered,total:filtered.length});
+        resolve({places:data,total:data.length});
         return;
       }
       if(status===globalThis.kakao.maps.services.Status.ZERO_RESULT){resolve({places:[],total:0});return;}
@@ -278,7 +345,7 @@ function keywordSearch(places,keyword){
 
 function selectKakaoPlace(kind,place){
   const address=String(place.road_address_name||place.address_name||'').trim();
-  if(!address||!isYeosuPlace(place))return;
+  if(!address||(kind==='pickup'&&!isYeosuPlace(place)))return;
   selectedAddresses[kind]={
     address,
     zonecode:'',
@@ -287,6 +354,8 @@ function selectKakaoPlace(kind,place){
     placeName:String(place.place_name||''),
     placeId:String(place.id||''),
     addressSource:'kakao_places',
+    sido:/^(전라남도|전남)\s/.test(address)?'전라남도':'',
+    sigungu:(address.match(/(?:^|\s)([^\s]+시|[^\s]+군|[^\s]+구)(?:\s|$)/u)||[])[1]||'',
     latitude:Number.isFinite(Number(place.y))?Number(place.y):null,
     longitude:Number.isFinite(Number(place.x))?Number(place.x):null,
   };
@@ -309,7 +378,7 @@ function renderPlaceResults(kind,places,total){
   container.hidden=false;
   const summary=document.createElement('p');
   summary.className='place-result-summary';
-  summary.textContent=places.length?`카카오 공식 장소검색 결과 ${places.length}개${total>places.length?` · 여수시 결과만 표시`:''}`:'여수시에서 일치하는 장소를 찾지 못했습니다.';
+  summary.textContent=places.length?`카카오 공식 장소검색 결과 ${places.length}개`:(kind==='pickup'?'여수시에서 일치하는 장소를 찾지 못했습니다.':'일치하는 장소를 찾지 못했습니다.');
   container.append(summary);
   if(!places.length){
     const help=document.createElement('p');
@@ -350,8 +419,9 @@ async function searchPlaces(kind){
   container.innerHTML='<p class="place-result-summary">카카오 공식 장소검색에서 찾는 중입니다…</p>';
   try{
     const places=await loadKakaoPlaces();
-    const result=await keywordSearch(places,`여수 ${query}`);
-    renderPlaceResults(kind,result.places.slice(0,15),result.total);
+    const result=await keywordSearch(places,kind==='pickup'?`여수 ${query}`:query);
+    const filtered=kind==='pickup'?result.places.filter(isYeosuPlace):result.places;
+    renderPlaceResults(kind,filtered.slice(0,15),filtered.length);
   }catch{
     container.innerHTML='<p class="place-result-summary is-error">카카오 공식 장소검색을 불러오지 못했습니다. 아래 공식 도로명주소 찾기를 이용해 주세요.</p>';
   }
@@ -360,8 +430,8 @@ async function searchPlaces(kind){
 function updateAddress(kind,data){
   const address=String(data.roadAddress||data.jibunAddress||data.address||'').trim();
   if(!address){postcodeStatus.textContent='선택한 주소를 확인하지 못했습니다. 다른 검색 결과를 선택해 주세요.';postcodeStatus.classList.add('is-error');return;}
-  if(!isYeosuAddress(data,address)){postcodeStatus.textContent='현재는 여수시 주소만 접수할 수 있습니다. 여수시 주소를 선택해 주세요.';postcodeStatus.classList.add('is-error');return;}
-  selectedAddresses[kind]={address,zonecode:String(data.zonecode||''),roadAddress:String(data.roadAddress||''),jibunAddress:String(data.jibunAddress||''),placeName:'',placeId:'',addressSource:'daum_postcode',latitude:null,longitude:null};
+  if(kind==='pickup'&&!isYeosuAddress(data,address)){postcodeStatus.textContent='가져올 곳은 현재 여수시 주소만 접수할 수 있습니다.';postcodeStatus.classList.add('is-error');return;}
+  selectedAddresses[kind]={address,zonecode:String(data.zonecode||''),roadAddress:String(data.roadAddress||''),jibunAddress:String(data.jibunAddress||''),placeName:'',placeId:'',addressSource:'daum_postcode',sido:String(data.sido||''),sigungu:String(data.sigungu||''),latitude:null,longitude:null};
   document.querySelector(`[data-address-label="${kind}"]`).textContent=address;
   const verification=document.querySelector(`[data-address-verification="${kind}"]`);
   verification.textContent=`✓ 주소검색 확인 완료${data.zonecode?` · 우편번호 ${data.zonecode}`:''}`;
@@ -373,17 +443,75 @@ function updateAddress(kind,data){
   document.querySelector(`[data-address-detail="${kind}"]`)?.focus();
 }
 
+function currentRiskAssessment(){
+  const conditions=[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value);
+  const text=`${selectedItemKind} ${itemName.value} ${errandContent.value} ${conditions.join(' ')}`.toLowerCase();
+  if(!selectedItemKind||!itemName.value.trim())return {level:'waiting',flags:[],requiresPhoto:false,title:'물품 정보를 입력하면 접수 가능 여부를 확인합니다.',description:'접수 전에 예상 처리방식과 필요한 준비를 알려드려요.'};
+  const blocked=ERRAND_BLOCKED_RULES.find(rule=>rule.pattern.test(text));
+  if(blocked)return {level:'blocked',flags:[],requiresPhoto:false,title:'현재 접수할 수 없는 요청입니다.',description:blocked.reason};
+  const flags=[];
+  for(const [flag,pattern] of Object.entries(ERRAND_RISK_RULES))if(pattern.test(text))flags.push(flag);
+  if(conditions.includes('파손 주의')||conditions.includes('기울이면 안 됨'))flags.push('fragile');
+  if(conditions.includes('액체·누수 가능'))flags.push('liquid');
+  if(conditions.includes('전자기기'))flags.push('electronics');
+  if(conditions.includes('냉장·냉동 유지'))flags.push('temperature');
+  if(conditions.includes('정해진 시간 필수'))flags.push('deadline');
+  const uniqueFlags=[...new Set(flags)];
+  const scale=document.querySelector('[name="itemScale"]:checked')?.value||'';
+  const packing=document.querySelector('[name="packingStatus"]:checked')?.value||'';
+  const value=Number(itemValue.value||0);
+  const needsReview=scale==='큰 짐·여러 박스'||scale==='크기를 잘 모르겠음'||packing==='포장 확인 필요'||value>=500000||itemValueUnknown.checked||isLongDistanceQuick();
+  const requiresPhoto=uniqueFlags.some(flag=>['fragile','electronics'].includes(flag))||scale==='큰 짐·여러 박스'||value>=500000;
+  if(needsReview)return {level:'review',flags:uniqueFlags,requiresPhoto,title:'운영자 확인 후 견적을 안내합니다.',description:isLongDistanceQuick()?'여수 밖 긴급 장거리 퀵은 네비게이션 왕복거리·시간과 빈차 복귀비용을 확인한 뒤 금액을 확정해요.':'크기·포장·물품가액을 확인한 뒤 적합한 차량과 요금을 결정해요.'};
+  if(uniqueFlags.length)return {level:'special',flags:uniqueFlags,requiresPhoto,title:'특별취급 조건으로 접수합니다.',description:'추가 확인을 마치면 기사에게 주의사항이 함께 전달돼요.'};
+  return {level:'standard',flags:uniqueFlags,requiresPhoto:false,title:'일반 전달 심부름으로 접수할 수 있어요.',description:'포장과 물품가액을 확인하면 예상요금을 볼 수 있어요.'};
+}
+
+function updateRiskAssessment(){
+  const assessment=currentRiskAssessment();
+  const activeFlags=new Set(assessment.flags);
+  let visibleQuestions=0;
+  document.querySelectorAll('[data-risk-question]').forEach(label=>{
+    const active=activeFlags.has(label.dataset.riskQuestion);
+    label.hidden=!active;
+    if(active)visibleQuestions+=1;
+    else label.querySelector('input').checked=false;
+  });
+  riskQuestions.hidden=visibleQuestions===0;
+  riskDecision.dataset.level=assessment.level;
+  riskDecision.querySelector('b').textContent=assessment.title;
+  riskDecision.querySelector('span').textContent=assessment.description;
+  itemPhotoRequirement.textContent=assessment.requiresPhoto?'필수 · 픽업 전 상태와 포장을 확인합니다.':'선택 · 크기 판단에 도움이 됩니다.';
+  return assessment;
+}
+
+function riskIntakeReady(assessment=currentRiskAssessment()){
+  if(assessment.level==='blocked'||assessment.level==='waiting')return false;
+  const packingReady=Boolean(document.querySelector('[name="packingStatus"]:checked'));
+  const valueReady=itemValueUnknown.checked||Number(itemValue.value)>0;
+  const activeQuestions=[...document.querySelectorAll('[data-risk-question]')].filter(label=>!label.hidden);
+  const questionsReady=activeQuestions.every(label=>label.querySelector('input').checked);
+  const photoReady=!assessment.requiresPhoto||Boolean(itemPhoto.files?.[0]);
+  return packingReady&&valueReady&&questionsReady&&photoReady;
+}
+
 function updateRequestReadiness(){
   const addressesReady=Boolean(selectedAddresses.pickup&&selectedAddresses.dropoff);
-  const itemReady=Boolean(selectedItemKind&&itemName.value.trim()&&document.querySelector('[name="itemScale"]:checked'));
+  const assessment=updateRiskAssessment();
+  const itemReady=Boolean(selectedItemKind&&itemName.value.trim()&&document.querySelector('[name="itemScale"]:checked')&&riskIntakeReady(assessment));
   const contentReady=errandContent.value.trim().length>=4;
   addressNext.disabled=!(addressesReady&&itemReady&&contentReady);
   if(!addressesReady)addressNext.textContent='주소 두 곳을 먼저 확인해 주세요';
   else if(!selectedItemKind)addressNext.textContent='물품 종류를 선택해 주세요';
   else if(!itemName.value.trim())addressNext.textContent='물품명과 수량을 적어주세요';
   else if(!document.querySelector('[name="itemScale"]:checked'))addressNext.textContent='배송 규모를 선택해 주세요';
+  else if(assessment.level==='blocked')addressNext.textContent='현재 접수할 수 없는 물품입니다';
+  else if(!document.querySelector('[name="packingStatus"]:checked'))addressNext.textContent='포장 상태를 선택해 주세요';
+  else if(!itemValueUnknown.checked&&Number(itemValue.value)<=0)addressNext.textContent='물품가액을 입력해 주세요';
+  else if([...document.querySelectorAll('[data-risk-question]')].some(label=>!label.hidden&&!label.querySelector('input').checked))addressNext.textContent='물품별 안전 확인을 완료해 주세요';
+  else if(assessment.requiresPhoto&&!itemPhoto.files?.[0])addressNext.textContent='물품과 포장 사진을 등록해 주세요';
   else if(!contentReady)addressNext.textContent='심부름 내용을 4글자 이상 적어주세요';
-  else addressNext.textContent='요금·결제수단 확인하기 →';
+  else addressNext.textContent=assessment.level==='review'?'검토·견적 화면 확인하기 →':'요금·결제수단 확인하기 →';
 }
 
 async function openPostcode(kind){
@@ -418,17 +546,99 @@ document.querySelectorAll('[data-address-open]').forEach(button=>button.addEvent
 document.querySelectorAll('[data-place-search]').forEach(button=>button.addEventListener('click',()=>searchPlaces(button.dataset.placeSearch)));
 document.querySelectorAll('[data-place-query]').forEach(input=>input.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();searchPlaces(input.dataset.placeQuery);}}));
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
+
+function updateFarePreview(){
+  const farePreview=document.querySelector('#farePreview');
+  const fareLabel=document.querySelector('#fareLabel');
+  const fareBadge=document.querySelector('#fareBadge');
+  const fareAmount=document.querySelector('#fareAmount');
+  const fareBreakdown=document.querySelector('#fareBreakdown');
+  const fareNote=document.querySelector('#fareNote');
+  if(isLongDistanceQuick()){
+    longDistancePromise.hidden=false;
+    farePreview.dataset.mode='long_distance_express';
+    fareLabel.textContent='긴급 장거리 전담배송';
+    fareBadge.textContent='관리자 견적';
+    fareAmount.textContent='견적 확인 후 확정';
+    fareBreakdown.innerHTML='<div><dt>거리 기준</dt><dd>네비게이션 왕복 실제거리</dd></div><div><dt>복귀 기준</dt><dd>빈차 복귀 100% 반영</dd></div><div><dt>별도 실비</dt><dd>통행료·선박비</dd></div>';
+    fareNote.textContent='직선거리나 편도거리로 계산하지 않습니다. 차량별 실제 통행 가능한 왕복 경로와 왕복 소요시간, 연료·정비·감가상각, 기사 수행료를 확인한 뒤 결제 전에 최종금액과 도착예정 범위를 안내합니다.';
+    updatePreviewReadiness();
+    void requestLongDistanceQuote();
+    return;
+  }
+  longDistancePromise.hidden=true;
+  farePreview.dataset.mode='local_quick';
+  fareLabel.textContent='예상 심부름 요금';
+  fareBadge.textContent='예시 금액';
+  fareAmount.textContent='11,450원';
+  fareBreakdown.innerHTML='<div><dt>기사 수행료</dt><dd>10,000원</dd></div><div><dt>플랫폼 이용금액</dt><dd>1,450원</dd></div>';
+  fareNote.textContent='현재는 화면 확인용 예시입니다. 실제 요금은 네비게이션 실제 이동거리·물품·현장조건을 반영하여 결제 전에 항목별로 표시합니다.';
+  updatePreviewReadiness();
+}
+
+function formatRouteDuration(seconds){
+  const totalMinutes=Math.max(1,Math.round(Number(seconds||0)/60));
+  const hours=Math.floor(totalMinutes/60);
+  const minutes=totalMinutes%60;
+  return `${hours?`${hours}시간 `:''}${minutes?`${minutes}분`:''}`.trim();
+}
+
+function paintLongDistanceQuote(payload){
+  const quote=payload?.quote;
+  if(!quote||!Number.isFinite(Number(quote.totalWon)))return false;
+  document.querySelector('#fareLabel').textContent='긴급 장거리 예상견적';
+  document.querySelector('#fareBadge').textContent='운영자 확정 전';
+  document.querySelector('#fareAmount').textContent=`약 ${Number(quote.totalWon).toLocaleString('ko-KR')}원`;
+  document.querySelector('#fareBreakdown').innerHTML=`<div><dt>네비게이션 왕복</dt><dd>${(Number(quote.distanceMeters)/1000).toFixed(1)}km · ${formatRouteDuration(quote.durationSeconds)}</dd></div><div><dt>차량 운행비</dt><dd>${Number(quote.vehicleOperatingWon).toLocaleString('ko-KR')}원</dd></div><div><dt>기사 시간비</dt><dd>${Number(quote.riderTimeWon).toLocaleString('ko-KR')}원</dd></div><div><dt>왕복 통행료</dt><dd>${Number(quote.tollWon).toLocaleString('ko-KR')}원</dd></div><div><dt>플랫폼 이용금액</dt><dd>${Number(quote.platformWon).toLocaleString('ko-KR')}원</dd></div>`;
+  document.querySelector('#fareNote').textContent='카카오모빌리티의 실제 도로 왕복경로로 계산한 화면용 예상견적입니다. 운영자가 차량·물품·날씨·희망시각을 확인한 최종금액에 동의하기 전에는 결제나 배차가 시작되지 않습니다.';
+  return true;
+}
+
+async function requestLongDistanceQuote(){
+  if(!isLongDistanceQuick())return;
+  const key=`${selectedAddresses.pickup.address}\n${selectedAddresses.dropoff.address}`;
+  if(routeQuoteCache.has(key)){paintLongDistanceQuote(routeQuoteCache.get(key));return;}
+  const requestId=++routeQuoteRequestId;
+  document.querySelector('#fareBadge').textContent='왕복경로 확인 중';
+  document.querySelector('#fareAmount').textContent='계산 중…';
+  try{
+    const response=await fetch(ERRAND_QUOTE_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT},body:JSON.stringify({pickupAddress:selectedAddresses.pickup.address,dropoffAddress:selectedAddresses.dropoff.address})});
+    const payload=await response.json();
+    if(requestId!==routeQuoteRequestId||!isLongDistanceQuick())return;
+    if(!response.ok||payload?.available!==true||!paintLongDistanceQuote(payload))throw new Error('quote-unavailable');
+    routeQuoteCache.set(key,payload);
+  }catch{
+    if(requestId!==routeQuoteRequestId||!isLongDistanceQuick())return;
+    document.querySelector('#fareBadge').textContent='관리자 견적';
+    document.querySelector('#fareAmount').textContent='견적 확인 후 확정';
+  }
+}
+
+function updateLongDistanceTiming(){
+  const timing=document.querySelector('[name="longDistanceTiming"]:checked')?.value||'';
+  longDistanceDeadlineField.hidden=timing!=='deadline';
+  updatePreviewReadiness();
+}
+
 addressNext.addEventListener('click',()=>{
   const itemScale=document.querySelector('[name="itemScale"]:checked')?.value;
-  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||!selectedItemKind||!itemName.value.trim()||!itemScale||errandContent.value.trim().length<4)return;
+  const assessment=currentRiskAssessment();
+  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||!selectedItemKind||!itemName.value.trim()||!itemScale||!riskIntakeReady(assessment)||errandContent.value.trim().length<4)return;
   const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
   const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
   const conditions=[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value);
+  const packingStatus=document.querySelector('[name="packingStatus"]:checked')?.value||'';
+  const declaredValue=itemValueUnknown.checked?'가격 산정 어려움':`${Number(itemValue.value).toLocaleString('ko-KR')}원`;
   document.querySelector('#paymentPickup').textContent=`${formatSelectedAddress(selectedAddresses.pickup)}${pickupDetail?` · ${pickupDetail}`:''}`;
   document.querySelector('#paymentDropoff').textContent=`${formatSelectedAddress(selectedAddresses.dropoff)}${dropoffDetail?` · ${dropoffDetail}`:''}`;
   document.querySelector('#paymentItem').textContent=`${selectedItemKind} · ${itemName.value.trim()} · ${itemScale}`;
-  document.querySelector('#paymentConditions').textContent=conditions.length?`추가 조건: ${conditions.join(' · ')}`:'추가 조건 없음';
+  document.querySelector('#paymentConditions').textContent=`${conditions.length?`추가 조건: ${conditions.join(' · ')} · `:''}포장: ${packingStatus} · 물품가액: ${declaredValue}`;
+  const paymentRisk=document.querySelector('#paymentRisk');
+  paymentRisk.dataset.level=assessment.level;
+  paymentRisk.querySelector('b').textContent=assessment.title;
+  paymentRisk.querySelector('span').textContent=assessment.description;
   document.querySelector('#paymentRequest').textContent=errandContent.value.trim();
+  updateFarePreview();
   request.hidden=true;
   payment.hidden=false;
   pushErrandStep('payment');
@@ -458,10 +668,15 @@ function maskedPhone(value){
 function updatePreviewReadiness(){
   const nameReady=customerName.value.trim().length>=2;
   const phoneReady=/^01[016789]\d{7,8}$/.test(normalizedPhone(customerPhone.value));
-  const ready=nameReady&&phoneReady&&previewAgreement.checked;
+  const timing=document.querySelector('[name="longDistanceTiming"]:checked')?.value||'';
+  const delayPolicy=document.querySelector('[name="longDistanceDelayPolicy"]:checked')?.value||'';
+  const longDistanceReady=!isLongDistanceQuick()||(Boolean(timing)&&Boolean(delayPolicy)&&
+    (timing!=='deadline'||Boolean(longDistanceDeadline.value))&&longDistanceQuoteAgreement.checked);
+  const ready=nameReady&&phoneReady&&longDistanceReady&&previewAgreement.checked;
   previewSubmit.disabled=!ready;
   if(!nameReady)previewSubmit.textContent='신청자 이름을 입력해 주세요';
   else if(!phoneReady)previewSubmit.textContent='휴대전화번호를 확인해 주세요';
+  else if(!longDistanceReady)previewSubmit.textContent='장거리 도착조건과 견적 확인을 완료해 주세요';
   else if(!previewAgreement.checked)previewSubmit.textContent='최종 확인 항목에 동의해 주세요';
   else previewSubmit.textContent='미리보기 접수함에 저장하기 →';
   contactStatus.dataset.state=phoneReady?'ready':'';
@@ -476,20 +691,49 @@ customerPhone.addEventListener('input',()=>{
   updatePreviewReadiness();
 });
 previewAgreement.addEventListener('change',updatePreviewReadiness);
+document.querySelectorAll('[name="longDistanceTiming"]').forEach(input=>input.addEventListener('change',updateLongDistanceTiming));
+document.querySelectorAll('[name="longDistanceDelayPolicy"]').forEach(input=>input.addEventListener('change',updatePreviewReadiness));
+longDistanceDeadline.addEventListener('input',updatePreviewReadiness);
+longDistanceQuoteAgreement.addEventListener('change',updatePreviewReadiness);
 
 function previewOrderPayload(){
   const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
   const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
   const itemScale=document.querySelector('[name="itemScale"]:checked')?.value||'';
+  const assessment=currentRiskAssessment();
   return {
     previewOnly:true,
     agreementAccepted:previewAgreement.checked,
     customer:{name:customerName.value.trim(),phone:customerPhone.value.trim()},
     pickup:{...selectedAddresses.pickup,detail:pickupDetail},
     dropoff:{...selectedAddresses.dropoff,detail:dropoffDetail},
-    item:{kind:selectedItemKind,name:itemName.value.trim(),scale:itemScale,conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value)},
+    item:{
+      kind:selectedItemKind,
+      name:itemName.value.trim(),
+      scale:itemScale,
+      conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value),
+      packingStatus:document.querySelector('[name="packingStatus"]:checked')?.value||'',
+      declaredValue:itemValueUnknown.checked?null:Number(itemValue.value),
+      declaredValueUnknown:itemValueUnknown.checked,
+      riskLevel:assessment.level,
+      riskFlags:assessment.flags,
+      safetyConfirmations:[...document.querySelectorAll('[data-risk-question] input:checked')].map(input=>input.value),
+      pickupPhotoSelected:Boolean(itemPhoto.files?.[0]),
+    },
     description:errandContent.value.trim(),
-    policyVersion:'preview-2026-10-10',
+    delivery:{
+      mode:isLongDistanceQuick()?'long_distance_express':'local_quick',
+      quoteStatus:isLongDistanceQuick()?'operator_review_required':'preview_only',
+      routeMetric:'navigation_road_round_trip',
+      returnAssumption:isLongDistanceQuick()?'full_empty_return':'not_applicable',
+      priceIncludes:isLongDistanceQuick()?['왕복 실제거리','왕복 예상시간','연료·정비·감가상각','기사 수행료','통행료·선박비','플랫폼 이용금액']:[],
+      timingType:isLongDistanceQuick()?(document.querySelector('[name="longDistanceTiming"]:checked')?.value||''):'not_applicable',
+      requestedArrivalAt:isLongDistanceQuick()&&document.querySelector('[name="longDistanceTiming"]:checked')?.value==='deadline'?longDistanceDeadline.value:null,
+      requestedArrivalTimeZone:isLongDistanceQuick()?'Asia/Seoul':'',
+      delayPolicy:isLongDistanceQuick()?(document.querySelector('[name="longDistanceDelayPolicy"]:checked')?.value||''):'not_applicable',
+      quoteAgreement:isLongDistanceQuick()?longDistanceQuoteAgreement.checked:false,
+    },
+    policyVersion:'preview-2026-10-11-arrival-promise-v1',
   };
 }
 
@@ -498,7 +742,7 @@ function storedOrder(receipt){
   return {version:2,trackingToken:receipt.trackingToken,orderId:order.id,status:order.status,
     createdAt:Date.parse(order.createdAt)||Date.now(),expiresAt:Number(order.expiresAt)*1000,
     pickup:order.pickupAddress,dropoff:order.dropoffAddress,item:order.itemName,
-    contact:`${customerName.value.trim()} · ${order.customerPhone}`,description:order.description};
+    contact:`${customerName.value.trim()} · ${order.customerPhone}`,description:order.description,quote:null};
 }
 
 const TRACKING_STATUS_LABELS={
@@ -513,6 +757,40 @@ function paintTracking(order){
   document.querySelector('#trackingItem').textContent=order.item;
   document.querySelector('#trackingContact').textContent=order.contact;
   document.querySelector('#trackingLiveStatus').textContent=`현재 상태: ${TRACKING_STATUS_LABELS[order.status]||'운영자 확인 전'} · 실제 결제와 기사 호출은 잠겨 있습니다.`;
+  const quotePanel=document.querySelector('#trackingQuote');
+  const quote=order.quote;
+  quotePanel.hidden=!quote;
+  if(quote){
+    document.querySelector('#trackingQuoteAmount').textContent=`${Number(quote.amountWon).toLocaleString('ko-KR')}원`;
+    document.querySelector('#trackingQuoteBreakdown').textContent=`기사 수행료 ${Number(quote.riderFeeWon||0).toLocaleString('ko-KR')}원 + 플랫폼 이용금액 ${Number(quote.platformFeeWon||0).toLocaleString('ko-KR')}원`;
+    const validUntil=new Date(quote.validUntil);
+    const expired=Number.isNaN(validUntil.getTime())||validUntil.getTime()<=Date.now();
+    const accepted=quote.acceptanceStatus==='accepted';
+    document.querySelector('#trackingQuoteValidity').textContent=Number.isNaN(validUntil.getTime())?'운영자에게 견적 유효시간을 확인해 주세요.':`${validUntil.toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}까지 유효합니다. 이후에는 실제 경로와 배차상황을 다시 계산합니다.`;
+    const agreement=document.querySelector('#trackingQuoteAgreement');
+    const agreementInput=document.querySelector('#trackingQuoteAgreementInput');
+    const acceptButton=document.querySelector('#trackingQuoteAccept');
+    const paymentButton=document.querySelector('#trackingPaymentStart');
+    const actionStatus=document.querySelector('#trackingQuoteActionStatus');
+    const quoteKey=`${quote.amountWon}|${quote.validUntil}`;
+    if(quotePanel.dataset.quoteKey!==quoteKey){quotePanel.dataset.quoteKey=quoteKey;agreementInput.checked=false;actionStatus.dataset.state='';}
+    agreement.hidden=accepted||expired;
+    acceptButton.hidden=accepted||expired;
+    paymentButton.hidden=!accepted||expired||quote.paymentStatus==='paid';
+    agreementInput.disabled=accepted||expired;
+    acceptButton.disabled=!agreementInput.checked||accepted||expired;
+    if(quote.paymentStatus==='paid'){
+      actionStatus.dataset.state='accepted';actionStatus.textContent='토스페이먼츠 결제 완료가 서버에서 확인됐습니다. 젠딜리 브릿지 전송 대기 상태입니다.';
+      document.querySelector('#trackingPaymentLock').textContent='결제 확인 완료 · 중복 전송을 막은 뒤 기사 요청으로 이어집니다';
+    }else if(accepted){
+      actionStatus.dataset.state='accepted';actionStatus.textContent='견적 동의가 저장됐습니다. 토스 결제가 연결되기 전에는 돈이 빠져나가지 않으며 기사도 호출되지 않습니다.';
+      document.querySelector('#trackingPaymentLock').textContent='다음 단계: 안전한 결제창 연결 · 현재 실제 결제와 젠딜리 전송은 잠겨 있습니다';
+    }else if(expired){
+      actionStatus.dataset.state='expired';actionStatus.textContent='견적 유효시간이 지났습니다. 운영자가 현재 경로와 배차상황으로 다시 계산해야 합니다.';
+    }else if(actionStatus.dataset.state!=='error'){
+      actionStatus.dataset.state='';actionStatus.textContent='체크한 뒤 동의하면 이 금액으로 결제를 준비합니다. 지금은 실제 결제가 실행되지 않습니다.';
+    }
+  }
 }
 
 function showTracking(order){
@@ -567,13 +845,83 @@ async function refreshTracking(){
     const response=await fetch(`${ERRAND_ORDER_ENDPOINT}/${encodeURIComponent(order.orderId)}`,{headers:{'X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken}});
     const result=await response.json();
     if(!response.ok)throw new Error(result?.error||'상태를 확인하지 못했습니다.');
-    order.status=result.order.status;order.expiresAt=Number(result.order.expiresAt)*1000;
+    order.status=result.order.status;order.expiresAt=Number(result.order.expiresAt)*1000;order.quote=result.order.quote||null;
     localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));paintTracking(order);
   }catch(error){document.querySelector('#trackingLiveStatus').textContent=error instanceof Error?error.message:'상태를 확인하지 못했습니다.';}
   finally{button.disabled=false;button.textContent='운영자 확인상태 새로고침';}
 }
 
 document.querySelector('#trackingRefresh').addEventListener('click',()=>void refreshTracking());
+
+document.querySelector('#trackingQuoteAgreementInput').addEventListener('change',(event)=>{
+  const button=document.querySelector('#trackingQuoteAccept');
+  button.disabled=!event.currentTarget.checked;
+});
+
+document.querySelector('#trackingQuoteAccept').addEventListener('click',async()=>{
+  const order=readPreviewOrder();
+  if(!order?.quote||order.quote.acceptanceStatus==='accepted')return;
+  const button=document.querySelector('#trackingQuoteAccept');
+  const status=document.querySelector('#trackingQuoteActionStatus');
+  if(Date.parse(order.quote.validUntil)<=Date.now()){
+    status.dataset.state='expired';status.textContent='견적 유효시간이 지났습니다. 새 견적을 받아 주세요.';paintTracking(order);return;
+  }
+  button.disabled=true;button.textContent='견적 동의를 안전하게 저장 중…';status.dataset.state='';status.textContent='창을 닫지 말고 잠시만 기다려 주세요.';
+  try{
+    const response=await fetch(`${ERRAND_ORDER_ENDPOINT}/${encodeURIComponent(order.orderId)}/quote-acceptance`,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken},body:JSON.stringify({amountWon:Number(order.quote.amountWon),validUntil:order.quote.validUntil})});
+    const result=await response.json();
+    if(!response.ok)throw new Error(result?.error||'견적 동의를 저장하지 못했습니다.');
+    order.quote={...order.quote,status:'customer_accepted',acceptanceStatus:'accepted',acceptedAt:result.acceptedAt||'',paymentStatus:'ready_for_checkout'};
+    localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));paintTracking(order);
+  }catch(error){
+    status.dataset.state='error';status.textContent=error instanceof Error?error.message:'견적 동의를 저장하지 못했습니다. 새로고침 후 다시 시도해 주세요.';
+    button.disabled=false;
+  }finally{button.textContent='견적에 동의하기';}
+});
+
+document.querySelector('#trackingPaymentStart').addEventListener('click',async()=>{
+  const order=readPreviewOrder();
+  if(!order?.quote||order.quote.acceptanceStatus!=='accepted'||order.quote.paymentStatus==='paid')return;
+  const button=document.querySelector('#trackingPaymentStart');
+  const status=document.querySelector('#trackingQuoteActionStatus');
+  button.disabled=true;button.textContent='토스 결제창 준비 중…';status.dataset.state='';status.textContent='계약키와 저장된 결제금액을 안전하게 확인하고 있습니다.';
+  try{
+    const response=await fetch(`${ERRAND_ORDER_ENDPOINT}/${encodeURIComponent(order.orderId)}/payment-session`,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken},body:'{}'});
+    const result=await response.json();
+    if(!response.ok)throw new Error(result?.error||'토스 결제 준비상태를 확인하지 못했습니다.');
+    const TossPayments=await loadTossPaymentsSdk();
+    const widgets=TossPayments(result.clientKey).widgets({customerKey:'ANONYMOUS'});
+    await widgets.setAmount({currency:'KRW',value:Number(result.amountWon)});
+    const paymentWindow=await widgets.renderPaymentWindow({orderName:result.orderName});
+    paymentWindow.on('paymentRequest',async()=>{
+      try{
+        await widgets.requestPayment({orderId:result.paymentOrderId,orderName:result.orderName,customerName:result.customerName,
+          successUrl:`${location.origin}${location.pathname}?payment-result=success`,failUrl:`${location.origin}${location.pathname}?payment-result=fail`,windowTarget:'self'});
+      }catch(error){status.dataset.state='error';status.textContent=error instanceof Error?error.message:'결제창을 시작하지 못했습니다.';}
+    });
+    paymentWindow.on('cancel',()=>{status.dataset.state='';status.textContent='결제를 취소했습니다. 금액은 청구되지 않았습니다.';});
+    order.quote={...order.quote,paymentStatus:'checkout_ready'};
+    localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));
+    status.dataset.state='accepted';status.textContent=result.mode==='test'?'토스 테스트 결제창입니다. 테스트에서는 실제 금액이 청구되지 않습니다.':'토스 결제창에서 결제수단과 금액을 다시 확인해 주세요.';
+  }catch(error){status.dataset.state='error';status.textContent=error instanceof Error?error.message:'토스 결제 준비상태를 확인하지 못했습니다.';}
+  finally{button.disabled=false;button.textContent='토스로 결제하기';}
+});
+
+async function confirmTossPaymentReturn(params,order){
+  const status=document.querySelector('#trackingQuoteActionStatus');
+  const paymentKey=params.get('paymentKey')||'';
+  const orderId=params.get('orderId')||'';
+  const amount=Number(params.get('amount'));
+  status.dataset.state='';status.textContent='토스 인증 결과와 저장된 견적금액을 서버에서 확인하고 있습니다.';
+  try{
+    const response=await fetch(ERRAND_PAYMENT_CONFIRM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT,'X-Matjido-Order-Token':order.trackingToken},body:JSON.stringify({paymentKey,orderId,amount})});
+    const result=await response.json();
+    if(!response.ok)throw new Error(result?.error||'결제 완료를 확인하지 못했습니다.');
+    order.quote={...order.quote,status:'payment_confirmed',paymentStatus:'paid',paidAt:result.paidAt||''};
+    localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));paintTracking(order);
+  }catch(error){status.dataset.state='error';status.textContent=error instanceof Error?error.message:'결제 완료를 확인하지 못했습니다. 운영자에게 문의해 주세요.';}
+  finally{history.replaceState({errandStep:'tracking'},'',`${location.pathname}?preview-order=${encodeURIComponent(order.orderId)}`);}
+}
 
 document.querySelector('#trackingReview').addEventListener('click',()=>{
   history.back();
@@ -598,6 +946,7 @@ function updateAiAssist(){
 
 errandContent.addEventListener('input',()=>{
   updateAiAssist();
+  updateRiskAssessment();
   updateRequestReadiness();
   scheduleDraftSave();
   if(!aiSuggestion.hidden){aiSuggestion.hidden=true;aiSuggestionText.textContent='';}
@@ -607,8 +956,14 @@ errandContent.addEventListener('input',()=>{
   }
 });
 
-itemName.addEventListener('input',()=>{updateRequestReadiness();scheduleDraftSave();});
-document.querySelectorAll('[name="itemScale"],.extra-conditions input').forEach(input=>input.addEventListener('change',()=>{updateRequestReadiness();scheduleDraftSave();}));
+itemName.addEventListener('input',()=>{updateRiskAssessment();updateRequestReadiness();scheduleDraftSave();});
+document.querySelectorAll('[name="itemScale"],[name="packingStatus"],.extra-conditions input,[data-risk-question] input').forEach(input=>input.addEventListener('change',()=>{updateRiskAssessment();updateRequestReadiness();scheduleDraftSave();}));
+itemValue.addEventListener('input',()=>{updateRiskAssessment();updateRequestReadiness();scheduleDraftSave();});
+itemValueUnknown.addEventListener('change',()=>{
+  itemValue.disabled=itemValueUnknown.checked;
+  if(itemValueUnknown.checked)itemValue.value='';
+  updateRiskAssessment();updateRequestReadiness();scheduleDraftSave();
+});
 document.querySelectorAll('[data-address-detail]').forEach(input=>input.addEventListener('input',scheduleDraftSave));
 document.querySelector('#itemPhotoPick').addEventListener('click',()=>itemPhoto.click());
 itemPhoto.addEventListener('change',()=>{
@@ -630,6 +985,7 @@ itemPhoto.addEventListener('change',()=>{
   itemPhotoName.textContent=file.name;
   itemPhotoPreview.hidden=false;
   itemPhotoStatus.textContent='사진을 선택했습니다. 실제 접수 단계에서는 주문과 함께 안전하게 전송됩니다.';
+  updateRequestReadiness();
 });
 document.querySelector('#itemPhotoRemove').addEventListener('click',()=>{
   if(itemPhotoUrl)URL.revokeObjectURL(itemPhotoUrl);
@@ -638,6 +994,7 @@ document.querySelector('#itemPhotoRemove').addEventListener('click',()=>{
   itemPhotoImage.removeAttribute('src');
   itemPhotoPreview.hidden=true;
   itemPhotoStatus.textContent='사진을 삭제했습니다.';
+  updateRequestReadiness();
 });
 
 aiAssist.addEventListener('click',async()=>{
@@ -708,9 +1065,11 @@ const savedDraft=readDraft();
 if(savedDraft)restoreDraft(savedDraft);
 
 updateAiAssist();
+updateRiskAssessment();
 
 let initialErrandStep='home';
-if(new URLSearchParams(location.search).has('payment')){
+const initialParams=new URLSearchParams(location.search);
+if(initialParams.has('payment')){
   home.hidden=true;
   policy.hidden=true;
   request.hidden=true;
@@ -718,12 +1077,19 @@ if(new URLSearchParams(location.search).has('payment')){
   initialErrandStep='payment';
 }
 
-const previewOrderId=new URLSearchParams(location.search).get('preview-order');
-const savedPreviewOrder=previewOrderId?readPreviewOrder():null;
-if(savedPreviewOrder&&savedPreviewOrder.orderId===previewOrderId){
+const paymentResult=initialParams.get('payment-result');
+const previewOrderId=initialParams.get('preview-order');
+const savedPreviewOrder=(previewOrderId||paymentResult)?readPreviewOrder():null;
+if(savedPreviewOrder&&((previewOrderId&&savedPreviewOrder.orderId===previewOrderId)||paymentResult)){
   paintTracking(savedPreviewOrder);
   showErrandStep('tracking');
   initialErrandStep='tracking';
+  if(paymentResult==='success')void confirmTossPaymentReturn(initialParams,savedPreviewOrder);
+  else if(paymentResult==='fail'){
+    const resultStatus=document.querySelector('#trackingQuoteActionStatus');
+    resultStatus.dataset.state='error';resultStatus.textContent=initialParams.get('code')==='PAY_PROCESS_CANCELED'?'결제를 취소했습니다. 금액은 청구되지 않았습니다.':'결제가 완료되지 않았습니다. 금액은 청구되지 않았으며 다시 시도할 수 있습니다.';
+    history.replaceState({errandStep:'tracking'},'',`${location.pathname}?preview-order=${encodeURIComponent(savedPreviewOrder.orderId)}`);
+  }
 }
 
 history.replaceState({errandStep:initialErrandStep},'',location.href);
