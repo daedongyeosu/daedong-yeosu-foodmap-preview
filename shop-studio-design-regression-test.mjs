@@ -10,7 +10,7 @@ assert.equal(design.image('https://untrusted.test/pixel.png'),false);assert.equa
 assert.equal(design.image('../assets/studio-bakery/cake.webp'),true);
 assert.throws(()=>design.validateImport({version:1,scene:{items:[]}}));
 assert.throws(()=>design.validateImport({format:'matjido-studio',version:1,scene:{items:[{src:'javascript:alert(1)'}]}}));
-assert.throws(()=>design.validateImport({format:'matjido-studio',version:1,scene:{items:[],decor:Array(31).fill({})}}));
+assert.throws(()=>design.validateImport({format:'matjido-studio',version:1,scene:{items:[],decor:Array(61).fill({})}}));
 const sample=bakery.create();assert.equal(sample.sampleOnly,true);assert.equal(sample.catalogStoreId,'');assert.equal(sample.items.length,8);assert.equal(sample.decor.length,7);
 assert.ok(sample.items.every(item=>design.image(item.src)&&!item.productUrl&&!item.catalogProductId));
 assert.equal(new Set(sample.items.map(item=>item.demoSku)).size,5,'Duplicate displays share a sample SKU');

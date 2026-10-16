@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-3">
+  <link rel="stylesheet" href="studio.css?v=20261017-4">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -44,8 +44,14 @@
           <p class="hint">공간 나누기에서 선택한 구역 수만큼 표시합니다.</p>
         </details>
         <details id="furnitureSettings"><summary>진열대·가구·안내판 배치</summary>
+          <p class="hint">48종의 가구·장식을 업종에 상관없이 섞어 쓰세요. 진열장·마네킹은 사진을 놓는 바탕이며, 가상 착장이나 실제 조명 시뮬레이션은 아닙니다.</p>
+          <label>업종별 도구<select id="decorGroup"><option value="all">전체</option></select></label>
+          <label>도구 찾기<input id="decorSearch" type="search" maxlength="60" placeholder="예: 의자, 꽃, 냉장고"></label>
+          <p id="decorLibraryCount" class="hint" role="status" aria-live="polite"></p>
+          <div id="decorLibrary" class="decor-library" aria-label="가구·장식 도구 상자"></div>
+          <button id="decorMore" type="button">도구 더 보기</button>
           <label>추가할 도구<select id="decorType"><option value="rack">나무 진열장</option><option value="glass">유리 쇼케이스</option><option value="ledge">벽 선반</option><option value="counter">계산·픽업대</option><option value="board">안내판</option><option value="window">창문</option><option value="plant">화분</option></select></label><button id="addDecor">공간에 추가</button>
-          <p class="hint">가구는 상품사진 뒤에 배치됩니다. 겹친 가구는 아래 목록에서 선택하세요. 최대 30개입니다.</p><div id="decorList"></div>
+          <p class="hint">가구는 상품사진 뒤에 배치됩니다. 겹친 가구는 아래 목록에서 선택하세요. 최대 60개입니다.</p><div id="decorList"></div>
         </details>
         <details open><summary>2. 진열할 사진</summary>
           <div class="upload-actions"><button id="choosePhotos" type="button">사진·파일에서 선택</button><button id="takePhoto" type="button">카메라로 촬영</button></div>
@@ -116,11 +122,15 @@
         </section>
         <section id="decorTools" hidden aria-label="선택한 가구 편집"><h2>선택한 가구 꾸미기</h2>
           <label>안내 문구<input id="decorText" maxlength="80"></label><label>재질 색<input id="decorColor" type="color"></label>
+          <label>보조 색<input id="decorAccent" type="color"></label>
+          <label>표면 재질<select id="decorFinish"><option value="plain">단색</option><option value="wood">나뭇결</option><option value="metal">금속 결</option><option value="fabric">직물 무늬</option></select></label>
+          <label><input id="decorShowLabel" type="checkbox"> 가구 문구 표시</label>
+          <p class="hint">보조색·표면 재질은 이번에 추가한 36종 도구에 적용됩니다. 예전 도구의 모양은 그대로 유지합니다.</p>
           <label>가로 크기<input id="decorWidth" type="range" min="10" max="90"></label><label>세로 크기<input id="decorHeight" type="range" min="5" max="65"></label>
           <label>가로 위치<input id="decorX" type="range" min="0" max="90"></label><label>세로 위치<input id="decorY" type="range" min="18" max="93"></label>
           <label><input id="decorLocked" type="checkbox"> 위치 잠금</label><label><input id="decorHidden" type="checkbox"> 고객에게 숨기기</label>
           <div class="item-actions"><button id="duplicateDecor">가구 복제</button><button id="decorFront">가구 중 맨 앞으로</button><button id="decorBack">가구 중 맨 뒤로</button><button id="removeDecor">가구 빼기</button></div>
-          <p class="hint">가구도 손가락으로 끌어 움직일 수 있습니다. 연결된 상품은 함께 이동합니다. 크기 변경은 가구만 바꾸며 상품 크기는 유지합니다. 가구 복제는 가구만, 가구 삭제는 상품을 남겨둡니다. 화분과 창문은 장식이며 주문되지 않습니다.</p>
+          <p class="hint">가구도 손가락으로 끌어 움직일 수 있습니다. 연결된 상품은 함께 이동합니다. 크기 변경은 가구만 바꾸며 상품 크기는 유지합니다. 가구 복제는 가구만, 가구 삭제는 상품을 남겨둡니다. 가구·장식 자체는 주문되지 않습니다.</p>
         </section>
         <p id="previewHelp" hidden>공개 전 확인하는 고객 화면입니다. 등록한 방문·주문 링크는 열 수 있으며, 주문·결제는 연결된 화면에서 진행합니다.</p>
         <p id="productInfo" role="status"></p>
@@ -147,8 +157,8 @@
   <script src="layout.js?v=20261016-2" defer></script>
   <script src="customer-links.js?v=20261016-3" defer></script>
   <script src="catalog.js?v=20261016-4" defer></script>
-  <script src="design.js?v=20261017-1" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
+  <script src="design.js?v=20261017-4" defer></script><script src="furniture-art.js?v=20261017-4" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-3" defer></script>
+  <script src="studio.js?v=20261017-4" defer></script>
 </body></html>
