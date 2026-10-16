@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import fs from 'node:fs';
+const require=createRequire(import.meta.url),transfer=require('./store-studio/product-handoff.js');
+const now=Date.now(),fixture={version:1,createdAt:now,storeId:'preview-test',name:' 빵 ',description:'설명',src:'data:image/webp;base64,YWJj'};
+assert.equal(transfer.read(fixture,now).name,'빵');
+for(const value of [null,{...fixture,version:2},{...fixture,createdAt:now-1800001},{...fixture,createdAt:now+60001},{...fixture,src:'https://example.com/image.png'},{...fixture,src:'data:image/svg+xml;base64,YWJj'},{...fixture,src:'data:image/webp;base64,<script>'},{...fixture,storeId:'constructor'},{...fixture,name:' '}])assert.equal(transfer.read(value,now),null);
+assert.equal(transfer.key('../bad'),'');assert.ok(transfer.key('a'.repeat(20)).startsWith('matjido-studio-product-v1:'));
+const studio=fs.readFileSync('store-studio/studio.js','utf8'),html=fs.readFileSync('store-studio/index.html','utf8');
+assert.match(studio,/item\.src=src/);assert.match(studio,/if\(exampleMode\|\|!item\|\|item\.catalogProductId/);
+assert.match(html,/<input id="replacementPhoto"[^>]+accept="image\/\*" hidden>/);
+assert.match(html,/<input id="replacementCamera"[^>]+capture="environment"/);
+console.log('PASS studio photo replacement and safe product handoff contract');

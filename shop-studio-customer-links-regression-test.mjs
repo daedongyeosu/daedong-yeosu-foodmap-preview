@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const links=createRequire(import.meta.url)('./store-studio/customer-links.js');
+for(const value of ['',null,'javascript:alert(1)','data:text/html,x','//example.com','http://example.com','https://user:pass@example.com/'])assert.equal(links.https(value),'');
+assert.equal(links.https(' https://example.test/order?item=coffee '),'https://example.test/order?item=coffee');
+assert.equal(links.map('https://map.naver.com.evil.test/place'),'');
+assert.equal(links.map('https://example.test/map'),'');
+for(const url of ['https://map.naver.com/p/','https://naver.me/example','https://map.kakao.com/','https://place.map.kakao.com/123'])assert.equal(links.map(url),url);
+assert.equal(links.phone('061-123-4567'),'tel:0611234567');
+assert.equal(links.phone('010-1234-5678'),'tel:01012345678');
+for(const value of ['','123','javascript:01012345678','abc0611234567'])assert.equal(links.phone(value),'');
+const business={orderUrl:'https://example.test/shop'};
+assert.deepEqual(links.product({productUrl:''},business),{href:business.orderUrl,label:'가게 주문 화면 열기'});
+assert.deepEqual(links.product({productUrl:'https://example.test/item/123'},business),{href:'https://example.test/item/123',label:'이 상품 주문 화면 열기'});
+assert.equal(links.product({productUrl:'javascript:alert(1)'},business).href,'','A bad explicit product link must not silently route to another order page');
+assert.equal(links.product({},{}).href,'','No configured link means no invented order destination');
+console.log('PASS studio customer links: exact supplied destinations, map hosts, telephone, product fallback and invalid-link rejection');

@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const api=createRequire(import.meta.url)('./store-studio/catalog.js');
+const item={id:'latte-1',name:'라테',price:4500,stockMode:'수량 관리',stockQuantity:2};
+assert.equal(api.id('../bad'),'');assert.equal(api.id(null),'');
+assert.equal(api.id('__proto__'),'');assert.equal(api.id('constructor'),'');
+assert.equal(api.products({products:[]}).length,0);
+assert.throws(()=>api.products({products:[item,item]}));
+for(const bad of [NaN,-1,1.5,'4500',Infinity])assert.throws(()=>api.products({products:[{...item,price:bad}]}));
+assert.throws(()=>api.products({products:[{...item,stockQuantity:-1}]}));
+assert.equal(api.available(item),true);
+for(const product of [null,{...item,price:0},{...item,inquiryOnly:true},{...item,stockQuantity:0},{...item,stockMode:'품절'},{...item,stockMode:'전화 확인'}])assert.equal(api.available(product),false);
+assert.equal(api.route('store-a','latte-1','https://preview.daedongmap.com/store-studio/index.html'),'https://preview.daedongmap.com/online-store/index.html?catalogStore=store-a&product=latte-1');
+assert.equal(api.route('../invalid','latte-1','https://example.test/'),'');
+console.log('PASS shop catalog: stable IDs, no duplicate SKU, strict prices/stock, unavailable block and same-origin route');

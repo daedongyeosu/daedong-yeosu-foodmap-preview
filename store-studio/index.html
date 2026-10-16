@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
+  <link rel="stylesheet" href="studio.css?v=20261017-12">
+</head>
+<body>
+  <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
+  <main>
+    <p id="cloudPublicNotice" class="example-notice" role="status" hidden></p>
+    <section id="exampleNotice" class="example-notice" hidden><b>가상 상점 시범매장</b><span>실제 브랜드·가게와 무관합니다. 사진은 AI 연출 이미지이며 가격은 예시입니다. 결제·배달은 발생하지 않습니다. 기존 내 시안과 따로 저장됩니다.</span><nav><a id="backToAlley" href="../store-alley/index.html">← 골목에서 다른 가게 구경</a> · <a id="useExampleStyle" href="index.html" target="_blank" rel="noopener">이 견본의 기본 분위기로 내 상점 시작하기 ↗</a> · <a href="index.html">내 시안으로 돌아가기</a></nav></section>
+    <section id="templateNotice" class="example-notice" hidden><b><span id="templateName"></span> 분위기로 시작하기</b><span>아직 기존 시안을 바꾸지 않았습니다. 적용하면 상품사진·가게정보·주문 연결은 유지하고 가구와 스타일만 바꿉니다. 상품사진은 직접 올려 주세요.</span><button id="applyTemplate" type="button">이 디자인 적용하기</button></section>
+    <section class="intro"><small>구경이 방문과 주문으로 이어지는 내 가게</small><h1>사진을 올리고, 진열장에 놓아보세요.</h1><p>사진을 손가락이나 마우스로 옮겨 보세요. 이 시안은 이 기기에 저장됩니다. 방문·주문 버튼은 사장님이 등록한 링크로 이동하며, 이 편집기에서 주문이나 결제를 접수하지 않습니다.</p></section>
+    <p class="example-entry"><a href="../store-alley/index.html" target="_blank" rel="noopener">서로 다른 가게가 있는 시범 골목 둘러보기 ↗</a></p>
+    <nav id="editorTaskNav" class="editor-task-nav" aria-label="꾸미기 작업 바로가기"><button type="button" data-studio-task="photos">사진 추가</button><button type="button" data-studio-task="furniture">가구 선택</button><button id="editSelectedTask" type="button" data-studio-task="selection" disabled>선택한 것 수정</button><button type="button" data-studio-task="atmosphere">가게 분위기</button><button type="button" data-studio-task="save">저장·공개 안내</button><button type="button" data-studio-task="business">방문·주문 연결</button><p id="editorTaskHint" class="hint">진열장에서 사진·가구를 선택하면 선택한 것 수정으로 바로 이동할 수 있습니다.</p></nav>
+    <div class="workspace">
+      <aside class="tools" aria-label="상점 꾸미기 도구">
+        <button id="returnToScene" type="button" data-studio-task="scene">↑ 진열장으로 돌아가기</button>
+        <details id="cloudSettings"><summary>내 계정에 저장·고객 공개</summary>
+          <p class="hint">계정별 한 개 작업본을 저장합니다. 기존 맛지도 가게의 소유권 인증·상품 등록과 별개인 상점 꾸미기 저장 공간입니다. 서버 연결 전에는 기기에만 저장합니다.</p>
+          <a id="cloudHostedEditor" href="https://daedong-yeosu-admin.sisakim.chatgpt.site/store-studio/index.html" hidden>로그인 가능한 편집 화면 열기 ↗</a>
+          <a id="cloudSignIn" href="/signin-with-chatgpt?returnTo=%2Fstore-studio%2Findex.html" target="_top" hidden>ChatGPT 계정으로 로그인</a>
+          <button id="cloudConnect" type="button">서버 상태 확인</button><button id="cloudSave" type="button" disabled>현재 시안 비공개 저장</button><button id="cloudLoad" type="button" disabled>서버 시안 불러오기</button>
+          <p id="cloudStatus" class="hint" role="status" aria-live="polite">먼저 서버 상태를 확인하세요. 이 기기의 시안을 자동으로 덮어쓰지 않습니다.</p>
+          <p id="cloudPublicationStatus" class="hint"></p>
+          <button id="cloudPublish" type="button" disabled>마지막 서버 저장본 공개</button><button id="cloudUnpublish" type="button" disabled>고객 공개 중단</button><a id="cloudPublicLink" target="_blank" rel="noopener" hidden>공개된 고객 화면 보기 ↗</a>
+          <p class="hint">공개는 꾸민 공간을 보여주는 기능입니다. 실제 상품 판매·결제·배달 준비가 끝났다는 뜻은 아닙니다.</p>
+        </details>
+        <details id="atmosphereSettings" open><summary>1. 가게 분위기</summary>
+          <label>시작 스타일<select id="preset"><option value="cafe">따뜻한 카페</option><option value="modern">깔끔한 쇼룸</option><option value="market">정겨운 시장가게</option><option value="boutique">차분한 옷가게</option><option value="hardware">튼튼한 철물점</option><option value="playful">색감 있는 소품샵</option></select></label>
+          <p class="hint">스타일을 바꿔도 배치한 사진은 유지됩니다.</p>
+          <label>간판 이름<input id="shopTitle" maxlength="40" value="나의 작은 카페"></label>
+          <label>공간 나누기<select id="zones"><option value="1">한 구역</option><option value="2">두 구역</option><option value="3">세 구역</option></select></label>
+          <label>진열장 단 수<select id="shelves"><option value="2">두 단</option><option value="3" selected>세 단</option><option value="4">네 단</option></select></label>
+          <label>벽 색<input id="wall" type="color" value="#eadfce"></label>
+          <label>진열대 색<input id="shelfColor" type="color" value="#805735"></label>
+          <label>벽 재질<select id="material"><option value="plain">매끈한 벽</option><option value="wood">나무</option><option value="brick">벽돌</option><option value="tile">타일</option></select></label>
+          <label>조명 밝기<input id="light" type="range" min="75" max="125" value="100"></label>
+        </details>
+        <details id="designSettings"><summary>간판·구역·바닥 꾸미기</summary>
+          <label>간판 글씨<select id="designFont"><option value="serif">감성 있는 명조</option><option value="sans">또렷한 고딕</option><option value="rounded">부드러운 둥근 글씨</option></select></label>
+          <label>간판 글자색<input id="designSignColor" type="color"></label><label>간판 바탕색<input id="designSignBackground" type="color"></label><label>바닥 색<input id="designFloor" type="color"></label>
+          <label><input id="designAwning" type="checkbox"> 줄무늬 차양</label><label><input id="designShelves" type="checkbox" checked> 기본 공통 선반 표시</label><label><input id="designTags" type="checkbox"> 상품 이름표 표시</label>
+          <label>첫 구역 이름<input id="zoneName1" maxlength="24"></label><label>둘째 구역 이름<input id="zoneName2" maxlength="24"></label><label>셋째 구역 이름<input id="zoneName3" maxlength="24"></label>
+          <p class="hint">공간 나누기에서 선택한 구역 수만큼 표시합니다.</p>
+        </details>
+        <details id="brandingSettings"><summary>내 로고·벽지·바닥·포스터</summary>
+          <p class="hint">직접 만든 로고와 사용권이 있는 사진·패턴으로 꾸미세요. 사진은 다른 상품과 함께 이 기기에 저장됩니다. 벽지·로고·장식은 주문되는 상품이 아닙니다.</p>
+          <button id="chooseLogo" type="button">내 로고 사진·파일 선택</button><input id="logoFile" type="file" accept="image/*" hidden>
+          <label>로고 크기<input id="logoSize" type="range" min="6" max="22" value="12"></label><label>로고 위치<select id="logoSide"><option value="left">가게 이름 왼쪽</option><option value="right">가게 이름 오른쪽</option></select></label><button id="removeLogo" type="button">로고만 빼기</button>
+          <hr><label>꾸밀 면<select id="surfaceTarget"><option value="wall">벽</option><option value="floor">바닥</option></select></label>
+          <button id="chooseSurface" type="button">사진·패턴 파일로 꾸미기</button><input id="surfaceFile" type="file" accept="image/*" hidden>
+          <label>사진 배치<select id="surfaceMode"><option value="cover">면을 채우는 한 장</option><option value="repeat">무늬 반복하기</option></select></label><label>반복 무늬 크기<input id="surfaceScale" type="range" min="40" max="480" value="160"></label>
+          <label>사진 진하기<input id="surfaceOpacity" type="range" min="0" max="100" value="100"></label><label>가로 중심<input id="surfaceX" type="range" min="0" max="100" value="50"></label><label>세로 중심<input id="surfaceY" type="range" min="0" max="100" value="50"></label><button id="removeSurface" type="button">선택한 면의 사진만 빼기</button>
+          <p class="hint">사진을 빼면 기존 벽 재질과 색·바닥색이 다시 보입니다. 반복 무늬 크기는 반복 모드에서 조절합니다. 실제 매장 사진은 방문 안내의 사진과 구분해 온라인 배경으로 표시합니다.</p>
+          <hr><button id="chooseArtwork" type="button">포스터·그림·장식 사진 추가</button><input id="artworkFiles" type="file" accept="image/*" multiple hidden>
+          <p class="hint">장식 사진은 위치·크기·회전·액자를 조절할 수 있습니다. 상품사진과 합해 최대 40개입니다.</p>
+        </details>
+        <details id="furnitureSettings"><summary>진열대·가구·안내판 배치</summary>
+          <p class="hint">48종의 가구·장식을 업종에 상관없이 섞어 쓰세요. 진열장·마네킹은 사진을 놓는 바탕이며, 가상 착장이나 실제 조명 시뮬레이션은 아닙니다.</p>
+          <label>업종별 도구<select id="decorGroup"><option value="all">전체</option></select></label>
+          <label>도구 찾기<input id="decorSearch" type="search" maxlength="60" placeholder="예: 의자, 꽃, 냉장고"></label>
+          <p id="decorLibraryCount" class="hint" role="status" aria-live="polite"></p>
+          <div id="decorLibrary" class="decor-library" aria-label="가구·장식 도구 상자"></div>
+          <button id="decorMore" type="button">도구 더 보기</button>
+          <label>추가할 도구<select id="decorType"><option value="rack">나무 진열장</option><option value="glass">유리 쇼케이스</option><option value="ledge">벽 선반</option><option value="counter">계산·픽업대</option><option value="board">안내판</option><option value="window">창문</option><option value="plant">화분</option></select></label><button id="addDecor">공간에 추가</button>
+          <p class="hint">가구는 상품사진 뒤에 배치됩니다. 겹친 가구는 아래 목록에서 선택하세요. 최대 60개입니다.</p><label>배치한 가구 찾기<input id="placedSearch" type="search" maxlength="80" placeholder="가구 이름·문구로 찾기"></label><label>목록 상태<select id="placedFilter"><option value="all">모두 보기</option><option value="visible">고객에게 보이는 가구</option><option value="hidden">숨긴 가구</option><option value="locked">위치 잠근 가구</option></select></label><div class="item-actions"><button id="selectFoundDecor" type="button">검색 결과 함께 선택</button><button id="resetPlacedSearch" type="button">검색·필터 초기화</button></div><p id="placedCount" class="hint" role="status" aria-live="polite"></p><p class="hint">검색은 이 목록에만 적용됩니다. 공간의 가구와 기존 함께 선택은 유지하고, 검색 결과 선택은 기존 선택에 추가합니다.</p><div id="decorList"></div>
+        </details>
+        <details id="compositionSettings"><summary>내 진열 구성 · 세트 보관함</summary>
+          <p class="hint">가구 목록에서 함께 쓸 가구를 체크하세요. 묶음 이동·복제·세트 보관은 선택한 가구에만 적용합니다. 상품사진·가격·재고는 복제하지 않습니다.</p>
+          <p id="compositionCount" class="hint" role="status">함께 선택한 가구 0개</p>
+          <div class="item-actions"><button id="compositionLeft" type="button" aria-label="선택 묶음 왼쪽으로">←</button><button id="compositionUp" type="button" aria-label="선택 묶음 위로">↑</button><button id="compositionDown" type="button" aria-label="선택 묶음 아래로">↓</button><button id="compositionRight" type="button" aria-label="선택 묶음 오른쪽으로">→</button><button id="compositionDuplicate" type="button">선택 묶음 복제</button><button id="compositionClear" type="button">함께 선택 해제</button></div>
+          <fieldset id="compositionAlignment"><legend>선택한 가구 가지런히 맞추기</legend><div class="item-actions"><button type="button" data-align="left">왼쪽 맞춤</button><button type="button" data-align="centerX">세로 중심선 맞춤</button><button type="button" data-align="right">오른쪽 맞춤</button><button type="button" data-align="top">위쪽 맞춤</button><button type="button" data-align="centerY">가로 중심선 맞춤</button><button type="button" data-align="bottom">아래쪽 맞춤</button><button type="button" data-align="spaceX">좌우 같은 간격</button><button type="button" data-align="spaceY">위아래 같은 간격</button></div><p class="hint">정렬은 2개, 같은 간격은 3개 이상 선택하세요. 선택한 가구 전체의 테두리를 기준으로 맞추며, 연결된 사진도 함께 이동합니다. 중심선 맞춤은 가구가 겹칠 수 있습니다. 잠금·숨김·공간 부족이면 아무것도 이동하지 않습니다.</p></fieldset>
+          <details id="compositionStyle"><summary>선택한 가구 색·재질 함께 꾸미기</summary>
+            <p class="hint">추천 배색을 고르거나 직접 색을 정한 뒤 적용하세요. 추천 선택만으로는 가구가 바뀌지 않습니다.</p><div id="paletteLibrary" class="palette-library" aria-label="추천 가구 배색"></div>
+            <label>주색<input id="batchColor" type="color" value="#986641"></label><label>보조색<input id="batchAccent" type="color" value="#f1d9a5"></label><label>재질<select id="batchFinish"><option value="plain">단색</option><option value="wood">나뭇결</option><option value="metal">금속 결</option><option value="fabric">직물 무늬</option></select></label>
+            <fieldset class="batch-fields"><legend>바꿀 항목만 선택</legend><label><input id="batchUseColor" type="checkbox" checked>주색</label><label><input id="batchUseAccent" type="checkbox" checked>보조색</label><label><input id="batchUseFinish" type="checkbox" checked>재질</label></fieldset>
+            <button id="batchApply" type="button">선택한 가구에 적용</button><p id="batchStatus" class="hint" role="status" aria-live="polite"></p><p class="hint">위치·크기·문구·칸 구성·위치 잠금·숨김과 상품사진은 유지합니다. 기존 기본형 12종은 주색만 지원하며, 보조색·재질은 새 가구 36종에 적용됩니다. 되돌리기로 복구할 수 있습니다.</p>
+          </details>
+          <button id="pasteStyleGroup" type="button">복사한 스타일을 체크한 가구에 적용</button><p id="compositionStyleStatus" class="hint" role="status" aria-live="polite"></p>
+          <label>보관할 세트 이름<input id="compositionName" maxlength="40" placeholder="예: 봄맞이 진열 코너"></label><button id="compositionSave" type="button">선택한 가구 세트 보관</button>
+          <p class="hint">내 세트는 이 기기에 최대 12개, 세트마다 가구 20개까지 보관합니다. 서버 계정 저장과는 별개입니다. 파일로 보관해 다른 기기에 가져갈 수 있습니다.</p>
+          <div id="compositionLibrary" class="composition-library"></div>
+          <div class="item-actions"><button id="compositionExport" type="button">내 세트 파일로 보관</button><button id="compositionImport" type="button">세트 파일 가져오기</button><input id="compositionFile" type="file" accept=".json,application/json" hidden></div>
+          <p id="compositionStatus" class="hint" role="status" aria-live="polite"></p>
+        </details>
+        <details id="photosSettings" open><summary>2. 진열할 사진</summary>
+          <div class="upload-actions"><button id="choosePhotos" type="button">사진·파일에서 선택</button><button id="takePhoto" type="button">카메라로 촬영</button></div>
+          <input id="photos" type="file" accept="image/*" multiple hidden><input id="camera" type="file" accept="image/*" capture="environment" hidden>
+          <p class="hint">컴퓨터에서는 사진 파일을 진열장으로 끌어놓아도 됩니다. 투명 배경 PNG·WebP는 물건만 보입니다. 자동 배경 제거는 아직 연결되지 않았습니다.</p>
+          <label>배치한 사진 찾기<input id="photoSearch" type="search" maxlength="80" placeholder="사진 이름·상품 구역"></label><label>사진 용도<select id="photoPurposeFilter"><option value="all">모든 사진</option><option value="product">판매상품 사진</option><option value="decoration">포스터·그림·장식</option></select></label><label>사진 상태<select id="photoStateFilter"><option value="all">모두 보기</option><option value="visible">고객에게 보이는 사진</option><option value="hidden">숨긴 사진</option><option value="locked">위치 잠근 사진</option></select></label><button id="resetPhotoSearch" type="button">사진 검색·필터 초기화</button><p id="photoResultsCount" class="hint" role="status" aria-live="polite"></p><p class="hint">검색은 아래 목록만 바꿉니다. 실제 진열과 고객 상품 목록은 바뀌지 않습니다.</p>
+          <details id="photoBatchTools"><summary>검색된 사진 함께 정리하기</summary><div class="item-actions"><button type="button" data-photo-batch="lock">위치 모두 잠그기</button><button type="button" data-photo-batch="unlock">위치 잠금 모두 풀기</button><button type="button" data-photo-batch="hide">시안에서 모두 숨기기</button><button type="button" data-photo-batch="show">시안에 모두 보이기</button></div><label>지정할 상품 구역<input id="photoBatchSection" maxlength="24" placeholder="예: 봄 신상품"></label><button type="button" data-photo-batch="section">검색 결과에 구역 지정</button><p id="photoBatchStatus" class="hint" role="status" aria-live="polite"></p><p class="hint">현재 검색 결과에만 적용합니다. 검색이 없으면 전체 사진이 대상입니다. 여러 장은 적용 전에 확인합니다. 구역을 비우면 기존 구역 이름을 지웁니다. 숨김은 시안의 표시만 바꾸며 등록상품·재고를 삭제하거나 판매 중단하지 않습니다. 되돌리기 한 번으로 복구합니다.</p></details>
+          <div id="itemList" aria-label="배치한 사진 목록"></div>
+        </details>
+        <details id="catalogSettings"><summary>3. 등록 상품 연결</summary>
+          <p class="hint">맛지도 온라인 상점의 상점번호로 상품을 불러옵니다. 진열 사진에 상품을 연결하면 기존 장바구니를 사용합니다. 시안에는 가격·재고를 따로 저장하지 않습니다.</p>
+          <label>온라인 상점번호<input id="catalogStore" maxlength="80" placeholder="등록한 온라인 상점번호"></label>
+          <button id="loadCatalog" type="button">등록 상품 불러오기·새로고침</button>
+          <p id="catalogStatus" class="hint" role="status" aria-live="polite"></p>
+        </details>
+        <details id="businessSettings"><summary>4. 방문·배달 연결</summary>
+          <p class="hint">실제 매장 정보와 이 가게의 주문 링크를 등록하세요. 공개 전 고객처럼 보기에서 확인할 수 있습니다.</p>
+          <label>가게 소개<textarea id="businessIntro" maxlength="300" rows="3" placeholder="우리 가게만의 특징을 알려주세요."></textarea></label>
+          <label>매장 주소<input id="businessAddress" maxlength="200" autocomplete="street-address"></label>
+          <label>영업시간·휴무<textarea id="businessHours" maxlength="200" rows="2" placeholder="예: 평일 10:00~20:00, 일요일 휴무"></textarea></label>
+          <label>전화번호<input id="businessPhone" type="tel" maxlength="40" autocomplete="tel" placeholder="061-000-0000"></label>
+          <label>지도 링크<input id="businessMapUrl" type="url" maxlength="2048" placeholder="네이버·카카오지도에서 공유한 링크"></label>
+          <label>가게 주문 링크<input id="businessOrderUrl" type="url" maxlength="2048" placeholder="https://… 이 가게의 주문 화면"></label>
+          <label>배달·포장 안내<textarea id="businessDelivery" maxlength="300" rows="3" placeholder="배달 가능 지역, 포장 안내 등을 적어주세요."></textarea></label>
+          <label class="real-photo-upload">실제 매장 사진<input id="realStorePhoto" type="file" accept="image/*"></label>
+          <p class="hint">꾸민 공간과 구분해 보여줍니다. 사진은 이 기기에만 저장됩니다.</p>
+          <button id="removeRealPhoto" type="button" disabled>실제 매장 사진 빼기</button>
+          <p id="businessValidation" class="hint" role="status" aria-live="polite"></p>
+        </details>
+      </aside>
+      <section class="display" aria-label="상점 시안">
+        <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="focusMode" aria-pressed="false">진열장에 집중</button><button id="zoomScene" aria-pressed="false">가까이 보기</button><button id="preview">고객처럼 보기</button></div>
+        <div id="backupTools" class="backup-tools"><button id="exportScene">시안 파일로 보관</button><button id="importScene">보관한 시안 불러오기</button><input id="sceneFile" type="file" accept=".json,application/json" hidden><span>사진·배치를 함께 보관합니다. 기존 주문·상품정보는 변경하지 않습니다.</span></div>
+        <div id="arrangeTools" class="arrange-tools"><button id="arrangeAll">개별 사진 가지런히 진열</button><label><input id="snapShelves" type="checkbox" checked> 공통 선반 가까이 놓으면 맞추기</label><small>진열대에 연결한 사진은 자동 정리로 바꾸지 않습니다.</small></div>
+        <nav id="customerQuickActions" class="customer-actions quick-actions" aria-label="방문과 주문" hidden>
+          <a id="customerMap" class="customer-link" target="_blank" rel="noopener noreferrer" hidden>매장 찾아가기</a><button id="customerMapMissing" disabled>지도 연결 준비 중</button>
+          <a id="customerOrder" class="customer-link order-link" target="_blank" rel="noopener noreferrer" hidden>배달 주문 화면 열기</a><button id="customerOrderMissing" disabled>주문 연결 준비 중</button>
+          <a id="customerPhone" class="customer-link" hidden>전화로 문의하기</a><button id="customerPhoneMissing" disabled>전화 문의 준비 중</button>
+        </nav>
+        <p id="virtualSpaceLabel" class="space-label" hidden>사장님이 꾸민 온라인 공간 · 사진을 눌러 상품을 살펴보세요</p>
+        <div id="sceneViewport" class="scene-viewport" tabindex="0" aria-label="상점 공간 · 가까이 보기에서는 좌우로 이동할 수 있습니다"><div id="scene" class="scene" data-material="plain" tabindex="0" aria-label="상품사진을 배치하는 진열장">
+          <div id="sceneWallSurface" class="scene-wall-surface" aria-hidden="true" hidden></div><div id="sceneFloor" class="scene-floor" aria-hidden="true"><div id="sceneFloorSurface" class="scene-floor-surface" hidden></div></div><div id="sceneAwning" class="scene-awning" aria-hidden="true" hidden></div>
+          <div class="scene-lights" aria-hidden="true"></div><h2 id="sign">나의 작은 카페</h2>
+          <div id="zoneLabels" class="zone-labels"></div><div id="dividers" aria-hidden="true"></div><div id="shelfLines" aria-hidden="true"></div><div id="decorRoot"></div><div id="items"></div>
+          <p id="emptyScene">☕<br>커피, 빵, 소품 사진을 올려<br>내 가게를 채워보세요.</p>
+        </div></div>
+        <p id="saveStatus" role="status" aria-live="polite">사진과 배치를 이 기기에 자동 저장합니다.</p>
+        <section id="itemTools" hidden aria-label="선택한 상품 편집">
+          <h2>선택한 사진 꾸미기</h2>
+          <label>표시 이름<input id="itemName" maxlength="50"></label>
+          <label>상품 설명<textarea id="itemDescription" maxlength="300" rows="3" placeholder="원두, 맛, 소재, 규격 등을 알려주세요."></textarea></label>
+          <label>상품 구역<input id="itemSection" maxlength="24" list="sectionSuggestions" placeholder="예: 갓 구운 빵"></label><datalist id="sectionSuggestions"></datalist>
+          <label>사진 용도<select id="itemPurpose"><option value="product">판매상품 사진</option><option value="decoration">포스터·그림·장식</option></select></label>
+          <label id="artworkFrameField" hidden>장식 액자<select id="artworkFrame"><option value="none">액자 없음</option><option value="wood">나무색 액자</option><option value="white">흰색 액자</option><option value="dark">짙은색 액자</option></select></label>
+          <p id="artworkHelp" class="hint" hidden>장식 사진은 고객 상품 목록·체험 장바구니·상품등록에 포함하지 않습니다.</p>
+          <div class="upload-actions"><button id="replacePhoto" type="button">이 사진 바꾸기 · 사진·파일</button><button id="retakePhoto" type="button">다시 촬영</button></div>
+          <input id="replacementPhoto" type="file" accept="image/*" hidden><input id="replacementCamera" type="file" accept="image/*" capture="environment" hidden>
+          <p class="hint">사진만 바꾸며 위치·크기·진열대·연결 상품은 유지합니다. 위치 잠금 상태에서도 사진은 바꿀 수 있습니다.</p>
+          <label>함께 움직일 진열대<select id="itemDecor"><option value="">사진만 따로 이동</option></select></label><p class="hint">연결하면 진열대를 옮길 때 상품도 함께 이동합니다. 상품 위치가 잠겨 있으면 연결된 진열대 이동도 막습니다.</p>
+          <h3>판매할 상품 연결</h3>
+          <button id="registerPhotoProduct" type="button">이 사진으로 상품등록 계속하기 →</button>
+          <p id="registerPhotoHelp" class="hint">사진·이름·설명을 상품등록 화면으로 가져갑니다. 가격·단위·재고를 확인한 뒤 직접 저장하세요. 사진은 이 기기에만 보관되며 아직 공개 판매되지 않습니다.</p>
+          <label>이 사진의 등록 상품<select id="itemCatalogProduct"><option value="">상품 연결 안 함</option></select></label>
+          <p id="itemCatalogStatus" class="hint"></p>
+          <label>상품 주문 링크<input id="itemProductUrl" type="url" maxlength="2048" placeholder="https://… 이 상품의 주문 화면"></label>
+          <p id="itemLinkStatus" class="hint">비워두면 가게 주문 화면으로 연결합니다. 상품명만으로 주문 링크를 만들지 않습니다.</p>
+          <div class="item-flags"><label><input id="itemLocked" type="checkbox"> 위치 잠그기</label><label><input id="itemHidden" type="checkbox"> 시안에서 숨기기</label></div>
+          <p id="lockedHelp" class="hint" hidden>위치가 잠겨 있습니다. 이동·크기·회전·삭제를 하려면 잠금을 풀어 주세요.</p>
+          <label>크기<input id="itemSize" type="range" min="8" max="45"></label>
+          <label>회전<input id="itemRotation" type="range" min="-45" max="45"></label>
+          <label><input id="itemShadow" type="checkbox"> 물건 그림자</label>
+          <div class="item-actions"><button id="moveLeft" aria-label="왼쪽으로 이동">←</button><button id="moveUp" aria-label="위로 이동">↑</button><button id="moveDown" aria-label="아래로 이동">↓</button><button id="moveRight" aria-label="오른쪽으로 이동">→</button><button id="snapSelected">선반에 놓기</button><button id="bringFront">맨 앞으로</button><button id="sendBack">맨 뒤로</button><button id="duplicate">복제</button><button id="remove">진열에서 빼기</button></div>
+          <details id="repeatTools"><summary>같은 사진 여러 칸에 반복 진열</summary><p class="hint">선택한 사진을 왼쪽 위 시작점으로 오른쪽·아래에 반복합니다. 개수에는 원본 1개가 포함됩니다.</p><label>가로 개수<input id="repeatColumns" type="number" min="1" max="6" value="3"></label><label>세로 개수<input id="repeatRows" type="number" min="1" max="4" value="1"></label><label>가로 간격<input id="repeatGapX" type="number" min="0" max="12" step="0.5" value="2"></label><label>세로 간격<input id="repeatGapY" type="number" min="0" max="12" step="0.5" value="2"></label><p id="repeatSummary" class="hint" role="status" aria-live="polite"></p><button id="repeatApply" type="button">반복 진열 적용</button><p class="hint">간격 단위는 공간 가로·세로의 %입니다. 같은 등록상품 연결·설명·액자·진열대 연결을 유지하며 상품이나 재고를 새로 등록하지 않습니다. 장식도 반복할 수 있습니다. 다른 사진과 겹침·공간 부족·사진 40개 초과면 배치하지 않으며 되돌리기 한 번으로 복구합니다.</p></details>
+          <p class="hint">사진을 끌어 옮기거나 방향 버튼으로 조절하세요. 진열에서 뺀 사진은 되돌릴 수 있습니다.</p>
+        </section>
+        <section id="decorTools" hidden aria-label="선택한 가구 편집"><h2>선택한 가구 꾸미기</h2>
+          <label>안내 문구<input id="decorText" maxlength="80"></label><label>재질 색<input id="decorColor" type="color"></label>
+          <label>보조 색<input id="decorAccent" type="color"></label>
+          <label>표면 재질<select id="decorFinish"><option value="plain">단색</option><option value="wood">나뭇결</option><option value="metal">금속 결</option><option value="fabric">직물 무늬</option></select></label>
+          <label><input id="decorShowLabel" type="checkbox"> 가구 문구 표시</label>
+          <p class="hint">보조색·표면 재질은 이번에 추가한 36종 도구에 적용됩니다. 예전 도구의 모양은 그대로 유지합니다.</p>
+          <div class="item-actions"><button id="copyDecorStyle" type="button">이 가구 스타일 복사</button><button id="pasteDecorStyle" type="button">이 가구에 스타일 붙여넣기</button><button id="clearDecorStyle" type="button">복사한 스타일 비우기</button></div><p id="decorStyleStatus" class="hint" role="status" aria-live="polite"></p><p class="hint">색·지원하는 재질·문구 표시 여부만 옮깁니다. 문구 내용·위치·크기·칸 구성·상품·잠금·숨김은 유지합니다. 기본형 가구는 주색·문구 표시만 지원합니다. 복사한 스타일은 이 화면에서만 임시 보관하며 새로고침하면 비워집니다.</p>
+          <section id="cabinetSettings" hidden><h3>내 진열장 구성 만들기</h3>
+            <label><input id="cabinetEnabled" type="checkbox"> 칸 구성 직접 바꾸기</label>
+            <div id="cabinetFields" hidden>
+              <label>세로 단수<input id="cabinetRows" type="number" min="1" max="6" step="1" value="3"></label>
+              <label>가로 칸수<input id="cabinetColumns" type="number" min="1" max="6" step="1" value="2"></label>
+              <label>문 모양<select id="cabinetDoors"><option value="none">문 없는 진열장</option><option value="glass">유리문</option><option value="solid">막힌 문</option></select></label>
+              <label>손잡이<select id="cabinetHandle"><option value="bar">막대형</option><option value="knob">원형</option><option value="none">없음</option></select></label>
+              <label><input id="cabinetBack" type="checkbox" checked> 뒤판 표시</label>
+            </div><p class="hint">진열장 8종에서 1~6단 × 1~6칸을 조합합니다. 체크를 해제하면 원래 모양으로 돌아갑니다. 문은 그림 모양이며 열고 닫는 기능은 아닙니다. 상품사진은 별도로 배치합니다.</p>
+          </section>
+          <label>가로 크기<input id="decorWidth" type="range" min="10" max="90"></label><label>세로 크기<input id="decorHeight" type="range" min="5" max="65"></label>
+          <label>가로 위치<input id="decorX" type="range" min="0" max="90"></label><label>세로 위치<input id="decorY" type="range" min="18" max="93"></label>
+          <label><input id="decorLocked" type="checkbox"> 위치 잠금</label><label><input id="decorHidden" type="checkbox"> 고객에게 숨기기</label>
+          <div class="item-actions"><button id="duplicateDecor">가구 복제</button><button id="decorFront">가구 중 맨 앞으로</button><button id="decorBack">가구 중 맨 뒤로</button><button id="removeDecor">가구 빼기</button></div>
+          <p class="hint">가구도 손가락으로 끌어 움직일 수 있습니다. 연결된 상품은 함께 이동합니다. 크기 변경은 가구만 바꾸며 상품 크기는 유지합니다. 가구 복제는 가구만, 가구 삭제는 상품을 남겨둡니다. 가구·장식 자체는 주문되지 않습니다.</p>
+        </section>
+        <p id="previewHelp" hidden>공개 전 확인하는 고객 화면입니다. 등록한 방문·주문 링크는 열 수 있으며, 주문·결제는 연결된 화면에서 진행합니다.</p>
+        <p id="productInfo" role="status"></p>
+        <section id="productDetails" class="customer-product" hidden aria-label="선택한 상품 안내">
+          <img id="customerProductPhoto" alt=""><p id="customerProductDescription"></p>
+          <p id="customerCatalogInfo" role="status"></p>
+          <button id="sampleAdd" hidden>체험 장바구니 담기</button>
+          <p id="sampleFeedback" role="status" aria-live="polite"></p>
+          <a id="customerProductOrder" class="customer-link order-link" target="_blank" rel="noopener noreferrer" hidden></a>
+          <p id="productOrderMissing" hidden>이 상품의 주문 연결을 준비하고 있습니다.</p>
+          <small>가격·옵션·재고·배송비와 도착 예상은 주문 화면에서 확인해 주세요.</small>
+        </section>
+        <section id="customerBrowse" class="customer-browse" hidden><h2>마음에 드는 상품을 골라보세요</h2><p>사진을 누르면 자세히 볼 수 있습니다.</p><div id="browseSections" class="browse-sections"></div><div id="browseProducts" class="browse-products"></div></section>
+        <section id="sampleCart" class="sample-cart" hidden><h2>체험 장바구니 <span id="sampleCartCount">0</span></h2><p>예시 상품과 가격으로만 체험합니다. 실제 주문·결제·배달은 발생하지 않습니다.</p><div id="sampleCartItems"></div><strong id="sampleCartTotal">0원</strong><button id="sampleCartClear">모두 비우기</button></section>
+        <section id="customerBusiness" class="customer-business" hidden aria-labelledby="customerBusinessTitle">
+          <h2 id="customerBusinessTitle">매장 방문·배달 안내</h2>
+          <p id="customerIntro"></p>
+          <figure id="realPhotoFigure" hidden><img id="customerRealPhoto" alt="실제 매장 사진"><figcaption>실제 매장 사진</figcaption></figure>
+          <dl><div><dt>주소</dt><dd id="customerAddress"></dd></div><div><dt>영업시간·휴무</dt><dd id="customerHours"></dd></div><div><dt>배달·포장</dt><dd id="customerDelivery"></dd></div></dl>
+        </section>
+      </section>
+    </div>
+  </main>
+  <script src="layout.js?v=20261017-9" defer></script>
+  <script src="customer-links.js?v=20261016-3" defer></script>
+  <script src="catalog.js?v=20261016-4" defer></script>
+  <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-11" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
+  <script src="product-handoff.js?v=20261017-2" defer></script>
+  <script src="cloud.js?v=20261017-3" defer></script>
+  <script src="studio.js?v=20261017-12" defer></script>
+</body></html>

@@ -1,0 +1,51 @@
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+let playwright;
+try{playwright=await import('playwright');}catch{playwright=await import(pathToFileURL(path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES,'playwright/index.mjs')).href);}
+const browser=await playwright.chromium.launch({headless:true});
+const origin=process.env.STUDIO_TEST_ORIGIN||'http://127.0.0.1:4192';
+try{
+  const context=await browser.newContext({viewport:{width:390,height:844}}),page=await context.newPage(),errors=[];
+  let fail=false,stock=2,posts=0,deleted=false;
+  page.on('pageerror',error=>errors.push(error.message));
+  const product=()=>({id:'latte-1',name:'검사용 라테',price:4500,stockMode:'수량 관리',stockQuantity:stock,unit:'잔',description:'테스트 전용 상품'});
+  await context.route('https://daedong-yeosu-admin.sisakim.chatgpt.site/**',async route=>{
+    const url=new URL(route.request().url());
+    if(route.request().method()!=='GET')posts++;
+    if(url.pathname.endsWith('/catalog'))return route.fulfill({status:fail?503:200,contentType:'application/json',body:JSON.stringify({storeId:url.searchParams.get('storeId'),storeName:'동작검사 상점',products:deleted?[]:[product()]})});
+    return route.fulfill({status:404,contentType:'application/json',body:'{}'});
+  });
+  await page.goto(origin+'/store-studio/index.html');await page.waitForFunction(()=>!document.querySelector('#choosePhotos').disabled);
+  await page.locator('#catalogSettings summary').click();await page.locator('#catalogStore').fill('store-a');await page.locator('#loadCatalog').click();
+  await page.waitForFunction(()=>document.querySelector('#itemCatalogProduct').options.length===2);
+  const photo=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=100;c.height=100;c.getContext('2d').fillRect(20,20,50,60);return c.toDataURL().split(',')[1];});
+  await page.locator('#photos').setInputFiles({name:'컵.png',mimeType:'image/png',buffer:Buffer.from(photo,'base64')});
+  await page.waitForFunction(()=>document.querySelectorAll('.scene-item').length===1&&!document.querySelector('#choosePhotos').disabled);
+  await page.locator('#itemCatalogProduct').selectOption('latte-1');await page.locator('#duplicate').click();
+  await page.locator('#arrangeAll').click();
+  await page.waitForFunction(async()=>{const db=await new Promise(resolve=>{const r=indexedDB.open('matjido-shop-studio-v1');r.onsuccess=()=>resolve(r.result);});const data=await new Promise(resolve=>{const r=db.transaction('drafts').objectStore('drafts').get('scene');r.onsuccess=()=>resolve(r.result);});db.close();return data?.catalogStoreId==='store-a'&&data.items.length===2&&data.items.every(item=>item.catalogProductId==='latte-1');});
+  await page.reload();await page.waitForFunction(()=>document.querySelectorAll('.scene-item').length===2&&document.querySelector('#itemCatalogProduct').options.length===2);
+  await page.locator('#preview').click();await page.waitForFunction(()=>!document.querySelector('#loadCatalog').textContent.includes('로딩')&&document.querySelector('#catalogStatus').textContent.includes('1개'));
+  await page.locator('.scene-item').first().click();
+  await page.waitForFunction(()=>document.querySelector('#customerCatalogInfo').textContent.includes('4,500원'));
+  const first=await page.locator('#customerProductOrder').getAttribute('href');
+  await page.locator('.scene-item').last().click();assert.equal(await page.locator('#customerProductOrder').getAttribute('href'),first);
+  await page.locator('#productDetails').scrollIntoViewIfNeeded();await page.screenshot({path:'../tmp/shop-studio-catalog-mobile.png'});
+  const opened=page.waitForEvent('popup');await page.locator('#customerProductOrder').click();const shop=await opened;
+  await shop.waitForFunction(()=>document.querySelector('#productGrid').textContent.includes('검사용 라테'));
+  assert.equal(await shop.locator('#cartCount').innerText(),'0','Opening the product must not silently add it');
+  for(let i=0;i<3;i++)await shop.locator('#productGrid button').click();assert.equal(await shop.locator('#cartCount').innerText(),'2','One SKU must share its stock ceiling');
+  await shop.locator('#openCart').click();await shop.getByRole('button',{name:'검사용 라테 수량 줄이기'}).click();assert.equal(await shop.locator('#cartCount').innerText(),'1');
+  await shop.reload();await shop.waitForFunction(()=>document.querySelector('#productGrid').textContent.includes('검사용 라테'));assert.equal(await shop.locator('#cartCount').innerText(),'1');
+  const other=await context.newPage();await other.goto(origin+'/online-store/index.html?catalogStore=store-b&product=latte-1');await other.waitForFunction(()=>document.querySelector('#productGrid').textContent.includes('검사용 라테'));assert.equal(await other.locator('#cartCount').innerText(),'0','Stores with the same product ID must not share carts');await other.close();
+  await shop.locator('#openCart').click();await shop.getByRole('button',{name:'검사용 라테 수량 줄이기'}).click();assert.equal(await shop.locator('#cartCount').innerText(),'0');
+  stock=0;await shop.reload();await shop.waitForFunction(()=>document.querySelector('#productGrid').textContent.includes('재고 0개'));assert.equal(await shop.locator('#productGrid button').isDisabled(),true);assert.equal(await shop.locator('#cartCount').innerText(),'0');
+  fail=true;await shop.reload();await shop.waitForFunction(()=>document.querySelector('#catalogSelectionStatus').textContent.includes('확인하지 못했습니다'));assert.equal(await shop.locator('#productGrid button').count(),0);assert.equal(await shop.locator('#productGrid').innerText().then(text=>text.includes('고춧가루')),false);
+  await page.locator('#preview').click();await page.locator('#catalogSettings summary').click();await page.locator('#loadCatalog').click();await page.waitForFunction(()=>document.querySelector('#catalogStatus').textContent.includes('불러오지 못했습니다'));await page.locator('#preview').click();await page.locator('.scene-item').first().click();assert.equal(await page.locator('#customerProductOrder').getAttribute('href'),null);
+  fail=false;deleted=true;await shop.reload();await shop.waitForFunction(()=>document.querySelector('#catalogSelectionStatus').textContent.includes('선택한 상품을 찾을 수 없습니다'));assert.equal(await shop.locator('#productGrid button').count(),0);
+  await shop.goto(origin+'/online-store/index.html?catalogStore=..&product=latte-1');await shop.waitForFunction(()=>document.querySelector('#catalogSelectionStatus').textContent.includes('확인하지 못했습니다'));assert.equal(await shop.locator('#productGrid button').count(),0);
+  assert.equal(posts,0,'Catalog and cart checks must not create orders or payments');assert.deepEqual(errors,[]);
+  assert.ok(await shop.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  console.log('PASS catalog studio: stable SKU binding, duplicate displays, scoped carts, quantity/remove/reload, stock limit, unavailable/failure blocking; no live writes');
+}finally{await browser.close();}
