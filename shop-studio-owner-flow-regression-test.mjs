@@ -1,0 +1,7 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const html=fs.readFileSync('store-studio/index.html','utf8'),css=fs.readFileSync('store-studio/studio.css','utf8'),js=fs.readFileSync('store-studio/studio.js','utf8'),plan=fs.readFileSync('docs/SHOP_STUDIO_BENCHMARK.md','utf8');
+for(const id of ['editorTaskNav','editSelectedTask','returnToScene','photosSettings','atmosphereSettings'])assert.match(html,new RegExp('id="'+id+'"'));
+for(const task of ['photos','furniture','selection','atmosphere','save','business','scene'])assert.match(html,new RegExp('data-studio-task="'+task+'"'));
+assert.match(css,/\.workspace>\.display\{order:-1/);assert.match(css,/studio-customer-preview #editorTaskNav/);assert.match(css,/studio-public #editorTaskNav/);assert.match(js,/target\.focus\(\{preventScroll:true\}\)/);assert.match(plan,/P0, 이번 수정/);assert.match(plan,/실제 사장님 참여 시험/);
+console.log('PASS owner workflow: source-backed plan, existing tool entry points, mobile canvas-first layout, selection focus and preview/public isolation');

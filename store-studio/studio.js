@@ -258,9 +258,18 @@
     renderStyleClipboard();
     $('selectFoundDecor').disabled=loading||importing||previewing||!composition.findPlaced(state.decor,$('placedSearch').value,$('placedFilter').value).length;
     for(const node of document.querySelectorAll('[data-photo-batch]'))node.disabled=loading||importing||previewing||!foundPhotos.length;
+    for(const node of document.querySelectorAll('[data-studio-task]'))node.disabled=loading||importing||previewing;
+    const hasSelection=state.items.some(i=>i.id===selectedId)||state.decor.some(i=>i.id===selectedDecorId);$('editSelectedTask').disabled=loading||importing||previewing||!hasSelection;
     window.ShopStudioCloud?.refresh();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
+  for(const button of document.querySelectorAll('[data-studio-task]'))button.onclick=()=>{
+    if(loading||importing||previewing||publicView)return;const task=button.dataset.studioTask;
+    const selection=state.items.some(i=>i.id===selectedId)?$('itemTools'):state.decor.some(i=>i.id===selectedDecorId)?$('decorTools'):null;
+    const target={photos:$('photosSettings'),furniture:$('furnitureSettings'),atmosphere:$('atmosphereSettings'),save:$('cloudSettings'),business:$('businessSettings'),selection,scene:$('sceneViewport')}[task];if(!target)return;
+    if(task!=='scene'&&document.body.classList.contains('studio-focused')){document.body.classList.remove('studio-focused');$('focusMode').setAttribute('aria-pressed','false');$('focusMode').textContent='진열장에 집중';}
+    if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({block:'start',behavior:'auto'});target.tabIndex=-1;target.focus({preventScroll:true});
+  };
   function matchingPhotos(){return composition.findPhotos(state.items,$('photoSearch').value,$('photoPurposeFilter').value,$('photoStateFilter').value);}
   $('photoSearch').oninput=()=>render();for(const id of ['photoPurposeFilter','photoStateFilter'])$(id).onchange=()=>render();$('resetPhotoSearch').onclick=()=>{$('photoSearch').value='';$('photoPurposeFilter').value='all';$('photoStateFilter').value='all';render();};
   const photoActions={lock:['locked',true,'잠그기'],unlock:['locked',false,'잠금 풀기'],hide:['hidden',true,'시안에서 숨기기'],show:['hidden',false,'시안에 보이기'],section:['section',null,'상품 구역 지정']};

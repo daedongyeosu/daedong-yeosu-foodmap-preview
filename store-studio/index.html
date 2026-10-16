@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-8">
+  <link rel="stylesheet" href="studio.css?v=20261017-12">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -13,8 +13,10 @@
     <section id="templateNotice" class="example-notice" hidden><b><span id="templateName"></span> 분위기로 시작하기</b><span>아직 기존 시안을 바꾸지 않았습니다. 적용하면 상품사진·가게정보·주문 연결은 유지하고 가구와 스타일만 바꿉니다. 상품사진은 직접 올려 주세요.</span><button id="applyTemplate" type="button">이 디자인 적용하기</button></section>
     <section class="intro"><small>구경이 방문과 주문으로 이어지는 내 가게</small><h1>사진을 올리고, 진열장에 놓아보세요.</h1><p>사진을 손가락이나 마우스로 옮겨 보세요. 이 시안은 이 기기에 저장됩니다. 방문·주문 버튼은 사장님이 등록한 링크로 이동하며, 이 편집기에서 주문이나 결제를 접수하지 않습니다.</p></section>
     <p class="example-entry"><a href="../store-alley/index.html" target="_blank" rel="noopener">서로 다른 가게가 있는 시범 골목 둘러보기 ↗</a></p>
+    <nav id="editorTaskNav" class="editor-task-nav" aria-label="꾸미기 작업 바로가기"><button type="button" data-studio-task="photos">사진 추가</button><button type="button" data-studio-task="furniture">가구 선택</button><button id="editSelectedTask" type="button" data-studio-task="selection" disabled>선택한 것 수정</button><button type="button" data-studio-task="atmosphere">가게 분위기</button><button type="button" data-studio-task="save">저장·공개 안내</button><button type="button" data-studio-task="business">방문·주문 연결</button><p id="editorTaskHint" class="hint">진열장에서 사진·가구를 선택하면 선택한 것 수정으로 바로 이동할 수 있습니다.</p></nav>
     <div class="workspace">
       <aside class="tools" aria-label="상점 꾸미기 도구">
+        <button id="returnToScene" type="button" data-studio-task="scene">↑ 진열장으로 돌아가기</button>
         <details id="cloudSettings"><summary>내 계정에 저장·고객 공개</summary>
           <p class="hint">계정별 한 개 작업본을 저장합니다. 기존 맛지도 가게의 소유권 인증·상품 등록과 별개인 상점 꾸미기 저장 공간입니다. 서버 연결 전에는 기기에만 저장합니다.</p>
           <a id="cloudHostedEditor" href="https://daedong-yeosu-admin.sisakim.chatgpt.site/store-studio/index.html" hidden>로그인 가능한 편집 화면 열기 ↗</a>
@@ -25,7 +27,7 @@
           <button id="cloudPublish" type="button" disabled>마지막 서버 저장본 공개</button><button id="cloudUnpublish" type="button" disabled>고객 공개 중단</button><a id="cloudPublicLink" target="_blank" rel="noopener" hidden>공개된 고객 화면 보기 ↗</a>
           <p class="hint">공개는 꾸민 공간을 보여주는 기능입니다. 실제 상품 판매·결제·배달 준비가 끝났다는 뜻은 아닙니다.</p>
         </details>
-        <details open><summary>1. 가게 분위기</summary>
+        <details id="atmosphereSettings" open><summary>1. 가게 분위기</summary>
           <label>시작 스타일<select id="preset"><option value="cafe">따뜻한 카페</option><option value="modern">깔끔한 쇼룸</option><option value="market">정겨운 시장가게</option><option value="boutique">차분한 옷가게</option><option value="hardware">튼튼한 철물점</option><option value="playful">색감 있는 소품샵</option></select></label>
           <p class="hint">스타일을 바꿔도 배치한 사진은 유지됩니다.</p>
           <label>간판 이름<input id="shopTitle" maxlength="40" value="나의 작은 카페"></label>
@@ -83,7 +85,7 @@
           <div class="item-actions"><button id="compositionExport" type="button">내 세트 파일로 보관</button><button id="compositionImport" type="button">세트 파일 가져오기</button><input id="compositionFile" type="file" accept=".json,application/json" hidden></div>
           <p id="compositionStatus" class="hint" role="status" aria-live="polite"></p>
         </details>
-        <details open><summary>2. 진열할 사진</summary>
+        <details id="photosSettings" open><summary>2. 진열할 사진</summary>
           <div class="upload-actions"><button id="choosePhotos" type="button">사진·파일에서 선택</button><button id="takePhoto" type="button">카메라로 촬영</button></div>
           <input id="photos" type="file" accept="image/*" multiple hidden><input id="camera" type="file" accept="image/*" capture="environment" hidden>
           <p class="hint">컴퓨터에서는 사진 파일을 진열장으로 끌어놓아도 됩니다. 투명 배경 PNG·WebP는 물건만 보입니다. 자동 배경 제거는 아직 연결되지 않았습니다.</p>
@@ -207,5 +209,5 @@
   <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-11" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-11" defer></script>
+  <script src="studio.js?v=20261017-12" defer></script>
 </body></html>
