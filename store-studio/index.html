@@ -28,7 +28,13 @@
           <p class="hint">컴퓨터에서는 사진 파일을 진열장으로 끌어놓아도 됩니다. 투명 배경 PNG·WebP는 물건만 보입니다. 자동 배경 제거는 아직 연결되지 않았습니다.</p>
           <div id="itemList" aria-label="배치한 사진 목록"></div>
         </details>
-        <details id="businessSettings"><summary>3. 방문·배달 연결</summary>
+        <details id="catalogSettings"><summary>3. 등록 상품 연결</summary>
+          <p class="hint">맛지도 온라인 상점의 상점번호로 상품을 불러옵니다. 진열 사진에 상품을 연결하면 기존 장바구니를 사용합니다. 시안에는 가격·재고를 따로 저장하지 않습니다.</p>
+          <label>온라인 상점번호<input id="catalogStore" maxlength="80" placeholder="등록한 온라인 상점번호"></label>
+          <button id="loadCatalog" type="button">등록 상품 불러오기·새로고침</button>
+          <p id="catalogStatus" class="hint" role="status" aria-live="polite"></p>
+        </details>
+        <details id="businessSettings"><summary>4. 방문·배달 연결</summary>
           <p class="hint">실제 매장 정보와 이 가게의 주문 링크를 등록하세요. 공개 전 고객처럼 보기에서 확인할 수 있습니다.</p>
           <label>가게 소개<textarea id="businessIntro" maxlength="300" rows="3" placeholder="우리 가게만의 특징을 알려주세요."></textarea></label>
           <label>매장 주소<input id="businessAddress" maxlength="200" autocomplete="street-address"></label>
@@ -61,6 +67,8 @@
         <section id="itemTools" hidden aria-label="선택한 상품 편집">
           <h2>선택한 사진 꾸미기</h2>
           <label>표시 이름<input id="itemName" maxlength="50"></label>
+          <label>이 사진의 등록 상품<select id="itemCatalogProduct"><option value="">상품 연결 안 함</option></select></label>
+          <p id="itemCatalogStatus" class="hint"></p>
           <label>상품 설명<textarea id="itemDescription" maxlength="300" rows="3" placeholder="원두, 맛, 소재, 규격 등을 알려주세요."></textarea></label>
           <label>상품 주문 링크<input id="itemProductUrl" type="url" maxlength="2048" placeholder="https://… 이 상품의 주문 화면"></label>
           <p id="itemLinkStatus" class="hint">비워두면 가게 주문 화면으로 연결합니다. 상품명만으로 주문 링크를 만들지 않습니다.</p>
@@ -76,6 +84,7 @@
         <p id="productInfo" role="status"></p>
         <section id="productDetails" class="customer-product" hidden aria-label="선택한 상품 안내">
           <img id="customerProductPhoto" alt=""><p id="customerProductDescription"></p>
+          <p id="customerCatalogInfo" role="status"></p>
           <a id="customerProductOrder" class="customer-link order-link" target="_blank" rel="noopener noreferrer" hidden></a>
           <p id="productOrderMissing" hidden>이 상품의 주문 연결을 준비하고 있습니다.</p>
           <small>가격·옵션·재고·배송비와 도착 예상은 주문 화면에서 확인해 주세요.</small>
@@ -91,5 +100,6 @@
   </main>
   <script src="layout.js?v=20261016-2" defer></script>
   <script src="customer-links.js?v=20261016-3" defer></script>
-  <script src="studio.js?v=20261016-3" defer></script>
+  <script src="catalog.js?v=20261016-4" defer></script>
+  <script src="studio.js?v=20261016-4" defer></script>
 </body></html>

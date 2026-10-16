@@ -4,9 +4,11 @@
   const scene=$('scene'), itemsRoot=$('items'), status=$('saveStatus');
   const layout=window.ShopStudioLayout;
   const links=window.ShopStudioCustomerLinks;
+  const catalog=window.ShopStudioCatalog;
+  let catalogItems=[],catalogStoreId='',catalogRequest=0,catalogBusy=false;
   const businessDefaults={intro:'',address:'',hours:'',phone:'',mapUrl:'',orderUrl:'',delivery:'',realPhoto:''};
   const businessFields={businessIntro:'intro',businessAddress:'address',businessHours:'hours',businessPhone:'phone',businessMapUrl:'mapUrl',businessOrderUrl:'orderUrl',businessDelivery:'delivery'};
-  const defaults={preset:'cafe',shopTitle:'나의 작은 카페',zones:1,shelves:3,wall:'#eadfce',shelfColor:'#805735',material:'plain',light:100,business:{...businessDefaults},items:[]};
+  const defaults={preset:'cafe',shopTitle:'나의 작은 카페',zones:1,shelves:3,wall:'#eadfce',shelfColor:'#805735',material:'plain',light:100,catalogStoreId:'',business:{...businessDefaults},items:[]};
   const presets={
     cafe:{wall:'#eadfce',shelfColor:'#805735',material:'wood',light:105},
     modern:{wall:'#e4ebed',shelfColor:'#4e5a60',material:'plain',light:110},
@@ -74,6 +76,16 @@
       $('productInfo').textContent=product.name;$('customerProductPhoto').src=product.src;$('customerProductPhoto').alt=product.name;
       $('customerProductDescription').textContent=product.description||'상품의 자세한 내용은 주문 화면에서 확인해 주세요.';
       const action=links.product(product,business);$('customerProductOrder').textContent=action.label;setCustomerLink('customerProductOrder',action.href,'productOrderMissing');
+      $('customerCatalogInfo').textContent='';
+      if(product.catalogProductId){
+        const entry=catalogStoreId===state.catalogStoreId?catalogItems.find(value=>value.id===product.catalogProductId):null;
+        $('productInfo').textContent=entry?.name||product.name;
+        $('customerProductDescription').textContent=entry?.description||'상품정보를 확인해 주세요.';
+        $('customerCatalogInfo').textContent=entry?`${entry.price.toLocaleString('ko-KR')}원${entry.unit?' / '+entry.unit:''} · ${entry.stockMode==='수량 관리'?'재고 '+entry.stockQuantity+'개':entry.stockMode}`:'상품정보를 확인하지 못했습니다. 사장님이 등록 상품을 새로고침해야 합니다.';
+        const href=catalog.available(entry)?catalog.route(state.catalogStoreId,entry.id,location.href):'';
+        $('customerProductOrder').textContent='이 상품 확인하고 장바구니 담기';setCustomerLink('customerProductOrder',href,'productOrderMissing');
+        $('productOrderMissing').textContent=entry?'현재 구매할 수 없는 상품입니다. 가격·판매 상태를 확인해 주세요.':'등록 상품 연결을 확인하고 있습니다.';
+      }else $('productOrderMissing').textContent='이 상품의 주문 연결을 준비하고 있습니다.';
     }else{$('productInfo').textContent='';$('customerProductPhoto').removeAttribute('src');}
   }
   function render(){
@@ -94,6 +106,13 @@
     $('emptyScene').hidden=previewing?state.items.some(item=>!item.hidden):state.items.length>0;
     const item=selected();$('itemTools').hidden=!item||previewing;
     if(item){$('itemName').value=item.name;$('itemDescription').value=item.description||'';$('itemProductUrl').value=item.productUrl||'';$('itemSize').value=item.size;$('itemRotation').value=item.rotation;$('itemShadow').checked=item.shadow;$('itemLocked').checked=Boolean(item.locked);$('itemHidden').checked=Boolean(item.hidden);}
+    $('catalogStore').value=state.catalogStoreId;
+    const picker=$('itemCatalogProduct');picker.replaceChildren(new Option('상품 연결 안 함',''));
+    if(catalogStoreId===state.catalogStoreId)for(const product of catalogItems)picker.add(new Option(`${product.name} · ${product.price.toLocaleString('ko-KR')}원`,product.id));
+    if(item?.catalogProductId&&(catalogStoreId!==state.catalogStoreId||!catalogItems.some(product=>product.id===item.catalogProductId)))picker.add(new Option('연결한 상품 확인 필요',item.catalogProductId));
+    picker.value=item?.catalogProductId||'';picker.disabled=loading||importing||previewing||catalogBusy||!item;
+    $('itemProductUrl').disabled=Boolean(item?.catalogProductId);
+    $('itemCatalogStatus').textContent=item?.catalogProductId?'등록 상품의 가격·재고를 사용합니다. 같은 상품을 여러 사진에 연결해도 장바구니는 하나로 합쳐집니다.':'상품을 불러온 뒤 이 사진에 연결하세요.';
     const badProductLink=Boolean(item?.productUrl?.trim()&&!links.https(item.productUrl));$('itemProductUrl').setAttribute('aria-invalid',String(badProductLink));
     $('itemLinkStatus').textContent=badProductLink?'상품 주문 링크를 확인해 주세요. https://로 시작하는 주소가 필요합니다.':'비워두면 가게 주문 화면으로 연결합니다. 상품명만으로 주문 링크를 만들지 않습니다.';
     $('lockedHelp').hidden=!item?.locked;
@@ -103,10 +122,30 @@
     $('previewHelp').hidden=!previewing;
     $('arrangeTools').hidden=previewing;$('arrangeAll').disabled=loading||importing||!state.items.some(item=>!item.locked&&!item.hidden);
     document.querySelectorAll('.tools input,.tools select,.tools button').forEach(node=>node.disabled=loading||importing||previewing);
+    $('loadCatalog').disabled=loading||importing||previewing||catalogBusy;
     $('removeRealPhoto').disabled=!state.business.realPhoto||loading||importing||previewing;
     renderCustomer();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
+  $('catalogStore').addEventListener('change',event=>{
+    const value=event.target.value.trim();if(!catalog.id(value)&&value){$('catalogStatus').textContent='상점번호는 영문·숫자·밑줄·하이픈으로 입력해 주세요.';return;}
+    if(value===state.catalogStoreId)return;
+    if(state.items.some(item=>item.catalogProductId)&&!confirm('상점을 바꾸면 기존 사진의 상품 연결이 해제됩니다. 계속할까요?')){render();return;}
+    catalogRequest++;catalogItems=[];catalogStoreId='';catalogBusy=false;
+    change(()=>{state.catalogStoreId=value;state.items.forEach(item=>delete item.catalogProductId);});$('catalogStatus').textContent='등록 상품 불러오기를 눌러 주세요.';
+  });
+  $('itemCatalogProduct').addEventListener('change',event=>change(()=>{const item=selected();if(item)item.catalogProductId=catalog.id(event.target.value);}));
+  async function loadCatalog(){
+    if(!catalog.id(state.catalogStoreId)){$('catalogStatus').textContent='등록한 온라인 상점번호를 입력해 주세요.';return;}
+    const request=++catalogRequest,storeId=state.catalogStoreId;catalogItems=[];catalogStoreId='';catalogBusy=true;render();$('catalogStatus').textContent='등록 상품을 확인하고 있습니다…';
+    try{
+      const response=await fetch(`${catalog.endpoint}?storeId=${encodeURIComponent(storeId)}`,{headers:{accept:'application/json'},credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(12000)});
+      if(!response.ok)throw new Error('catalog-response');const result=await response.json();if(result.storeId&&result.storeId!==storeId)throw new Error('store-mismatch');const items=catalog.products(result);
+      if(request!==catalogRequest)return;catalogItems=items;catalogStoreId=storeId;$('catalogStatus').textContent=`${String(result.storeName||storeId)} · ${items.length}개 상품을 확인했습니다. 사진을 선택해 상품을 연결하세요.`;
+    }catch{if(request!==catalogRequest)return;$('catalogStatus').textContent='등록 상품을 불러오지 못했습니다. 상점번호와 연결 상태를 확인하고 다시 시도해 주세요.';}
+    finally{if(request===catalogRequest){catalogBusy=false;render();}}
+  }
+  $('loadCatalog').onclick=loadCatalog;
   for(const key of ['shopTitle','zones','shelves','wall','shelfColor','material','light'])$(key).addEventListener('change',event=>change(()=>{state[key]=['zones','shelves','light'].includes(key)?Number(event.target.value):event.target.value;}));
   $('preset').addEventListener('change',event=>change(()=>{const preset=event.target.value;Object.assign(state,presets[preset],{preset});}));
   for(const [id,key] of Object.entries(businessFields))$(id).addEventListener('change',event=>change(()=>{state.business={...state.business,[key]:event.target.value.trim().slice(0,event.target.maxLength)};}));
@@ -193,7 +232,7 @@
     if(key==='z'){event.preventDefault();event.shiftKey?history(future,past):history(past,future);}
     else if(key==='y'){event.preventDefault();history(future,past);}
   });
-  $('preview').onclick=()=>{previewing=!previewing;previewProductId='';render();};
+  $('preview').onclick=()=>{previewing=!previewing;previewProductId='';render();if(previewing&&state.catalogStoreId)void loadCatalog();};
   async function initialize(){
     render();try{db=await storageOpen();const draft=await readDraft();if(draft&&Array.isArray(draft.items)){
       state={...state,...draft,items:draft.items.slice(0,40).filter(item=>item&&typeof item.src==='string'&&/^data:image\/(webp|png|jpeg);base64,/.test(item.src)).map(item=>layout.bounded({...item,id:/^[a-z0-9-]{12,80}$/i.test(item.id)?item.id:crypto.randomUUID(),name:String(item.name||'상품').slice(0,50),description:String(item.description||'').slice(0,300),productUrl:String(item.productUrl||'').slice(0,2048),locked:item.locked===true,hidden:item.hidden===true}))};
@@ -205,7 +244,7 @@
       if(!/^data:image\/(webp|png|jpeg);base64,/.test(state.business.realPhoto))state.business.realPhoto='';
       say('이 기기에 저장한 사진과 배치를 불러왔습니다.');
     }}catch{say('이 브라우저에서는 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);}
-    loading=false;render();
+    state.catalogStoreId=catalog.id(state.catalogStoreId);loading=false;render();if(state.catalogStoreId)void loadCatalog();
   }
   void initialize();
 })();
