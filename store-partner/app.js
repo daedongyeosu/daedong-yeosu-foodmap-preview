@@ -162,3 +162,29 @@ navButtons.forEach(button=>button.addEventListener('click',()=>{const target=Num
 agreement.addEventListener('change',()=>{saveButton.disabled=!agreement.checked;});
 saveButton.addEventListener('click',saveDraft);
 loadDraft();showProductMethod();renderProducts();updatePricePreview();updateNext();
+
+// Suggestions are kept separate from the shop draft and never submit that form.
+const suggestionDialog=document.querySelector('#suggestionDialog');
+const suggestionDetails=document.querySelector('#suggestionDetails');
+const suggestionCategory=document.querySelector('#suggestionCategory');
+const suggestionStatus=document.querySelector('#suggestionStatus');
+const SUGGESTION_DRAFT_KEY='matjido-merchant-suggestion-draft-v1';
+function saveSuggestionDraft(){
+  try{localStorage.setItem(SUGGESTION_DRAFT_KEY,JSON.stringify({category:suggestionCategory.value,details:suggestionDetails.value}));}
+  catch{suggestionStatus.textContent='이 기기에 임시 저장하지 못했습니다. 창을 닫기 전에 내용을 복사해 주세요.';}
+}
+document.querySelector('#openSuggestion').addEventListener('click',()=>{
+  try{const draft=JSON.parse(localStorage.getItem(SUGGESTION_DRAFT_KEY)||'null');if(draft){suggestionDetails.value=String(draft.details||'').slice(0,1000);if([...suggestionCategory.options].some(option=>option.value===draft.category))suggestionCategory.value=draft.category;}}catch{}
+  suggestionDialog.showModal();suggestionDetails.focus();
+});
+document.querySelector('#closeSuggestion').addEventListener('click',()=>suggestionDialog.close());
+suggestionDetails.addEventListener('input',saveSuggestionDraft);
+suggestionCategory.addEventListener('change',saveSuggestionDraft);
+document.querySelector('#suggestionForm').addEventListener('submit',event=>{
+  event.preventDefault();
+  const details=suggestionDetails.value.trim();if(!details){suggestionDetails.focus();return;}
+  saveSuggestionDraft();
+  const body=`분류: ${suggestionCategory.value}\n\n${details}\n\n작성 화면: 온라인 상점 무료입점 · ${currentStep}단계`;
+  location.href=`mailto:sisakim@naver.com?subject=${encodeURIComponent('[맛지도 사장님 제안] '+suggestionCategory.value)}&body=${encodeURIComponent(body)}`;
+  suggestionStatus.textContent='이메일 앱에서 보내기를 눌러야 전달됩니다. 앱이 열리지 않으면 위 내용을 복사해 sisakim@naver.com으로 보내 주세요. 작성한 의견은 이 기기에 남겨두었습니다.';
+});

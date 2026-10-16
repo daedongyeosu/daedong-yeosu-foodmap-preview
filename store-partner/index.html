@@ -8,7 +8,7 @@
   <title>온라인 상점 무료입점 | 여수맛지도</title>
   <meta name="description" content="여수의 오프라인 상점이 입점비 없이 온라인 상점을 만들고 고객 주문과 배송을 연결하는 여수맛지도 입점 프리뷰">
   <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=20261011-1">
+  <link rel="stylesheet" href="styles.css?v=20261011-1-merchant-suggestions-1">
   <link rel="stylesheet" href="product-editor.css?v=20261013-1">
 </head>
 <body>
@@ -217,6 +217,21 @@
   </section>
 
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
-  <script src="app.js?v=20261013-1" defer></script>
+  <section class="merchant-suggestions" aria-labelledby="suggestionTitle">
+    <h2 id="suggestionTitle">내 가게에 필요한 도구가 있나요?</h2>
+    <p>꾸미다가 아쉬운 점이나 있으면 좋을 기능을 알려주세요.</p>
+    <button id="openSuggestion" type="button">필요한 도구 제안하기</button>
+    <dialog id="suggestionDialog" aria-labelledby="suggestionDialogTitle">
+      <form id="suggestionForm">
+        <h2 id="suggestionDialogTitle">사장님의 아이디어를 들려주세요</h2>
+        <label>어떤 부분인가요?<select id="suggestionCategory"><option>상점 꾸미기</option><option>공간·구역 나누기</option><option>진열대·상품 배치</option><option>사진·상품 등록</option><option>주문·배송 관리</option><option>기타</option></select></label>
+        <label>필요한 도구나 불편한 점<textarea id="suggestionDetails" rows="5" maxlength="1000" required placeholder="예: 옷을 한 벌씩 코디해서 마네킹에 입히고 싶어요."></textarea></label>
+        <p>의견은 대표 이메일 sisakim@naver.com으로 보냅니다. 다음 화면에서 이메일을 직접 보내 주세요. 사진이나 연락처는 자동으로 첨부하지 않습니다.</p>
+        <p id="suggestionStatus" role="status" aria-live="polite"></p>
+        <div class="suggestion-actions"><button id="closeSuggestion" type="button">닫기</button><button type="submit">이메일로 제안 보내기</button></div>
+      </form>
+    </dialog>
+  </section>
+  <script src="app.js?v=20261013-1-merchant-suggestions-1" defer></script>
 </body>
 </html>
