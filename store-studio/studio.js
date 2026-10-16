@@ -20,6 +20,7 @@
     for(const id of ['compositionLeft','compositionRight','compositionUp','compositionDown','compositionDuplicate','compositionClear','compositionSave'])$(id).disabled=loading||importing||previewing||setsBusy||!compositionIds.size;
     $('compositionSave').disabled=$('compositionSave').disabled||compositionIds.size>20||savedCompositions.length>=12;
     for(const button of document.querySelectorAll('[data-align]'))button.disabled=loading||importing||previewing||setsBusy||compositionIds.size<(button.dataset.align.startsWith('space')?3:2);
+    $('batchApply').disabled=loading||importing||previewing||setsBusy||!compositionIds.size;
     $('compositionExport').disabled=loading||importing||previewing||setsBusy||!savedCompositions.length;$('compositionImport').disabled=loading||importing||previewing||setsBusy;
     $('compositionLibrary').replaceChildren();
     for(const [set,builtin] of [...composition.builtins.map(s=>[s,true]),...savedCompositions.map(s=>[s,false])]){
@@ -258,6 +259,16 @@
   $('cabinetEnabled').onchange=event=>change(()=>{const item=state.decor.find(i=>i.id===selectedDecorId);if(item&&design.cabinetTypes.includes(item.type))item.cabinet=event.target.checked?{rows:3,columns:2,doors:'none',handle:'bar',back:true}:null;});
   for(const [id,key] of [['cabinetRows','rows'],['cabinetColumns','columns'],['cabinetDoors','doors'],['cabinetHandle','handle'],['cabinetBack','back']])$(id).onchange=event=>change(()=>{const item=state.decor.find(i=>i.id===selectedDecorId);if(!item?.cabinet)return;item.cabinet=design.cabinet({...item.cabinet,[key]:event.target.type==='checkbox'?event.target.checked:event.target.type==='number'?Number(event.target.value):event.target.value});});
   function moveComposition(dx,dy){if(!compositionIds.size)return;const result=design.translateMany(state.decor,state.items,[...compositionIds],dx,dy,layout);if(result.blocked){say('묶음의 가구 또는 연결된 상품의 위치 잠금을 먼저 풀어 주세요.',true);return;}change(()=>{state.decor=result.fixtures;state.items=result.items;});}
+  for(const palette of composition.palettes){const button=document.createElement('button');button.type='button';button.className='palette-card';button.setAttribute('aria-pressed','false');const swatch=document.createElement('span');swatch.className='palette-swatch';swatch.style.background=`linear-gradient(90deg,${palette.color} 60%,${palette.accent} 60%)`;swatch.setAttribute('aria-hidden','true');button.append(swatch,document.createTextNode(palette.name));button.onclick=()=>{$('batchColor').value=palette.color;$('batchAccent').value=palette.accent;$('batchFinish').value=palette.finish;for(const node of $('paletteLibrary').children)node.setAttribute('aria-pressed',String(node===button));$('batchStatus').textContent=palette.name+' 배색을 골랐습니다. 바꿀 항목을 확인한 뒤 적용하세요.';};$('paletteLibrary').append(button);}
+  for(const id of ['batchColor','batchAccent','batchFinish'])$(id).addEventListener('change',()=>{for(const node of $('paletteLibrary').children)node.setAttribute('aria-pressed','false');});
+  $('batchApply').onclick=()=>{
+    if(loading||importing||previewing||setsBusy)return;
+    const fields=[['batchUseColor','color'],['batchUseAccent','accent'],['batchUseFinish','finish']].filter(([id])=>$(id).checked).map(([,key])=>key);
+    const result=composition.styleSelection(state.decor,[...compositionIds],{color:$('batchColor').value,accent:$('batchAccent').value,finish:$('batchFinish').value},fields);
+    if(!result.ok){$('batchStatus').textContent=result.message;return;}
+    if(result.changed)change(()=>{state.decor=result.fixtures;});
+    $('batchStatus').textContent=(result.changed?`선택한 가구 ${result.count}개에 적용했습니다.`:'적용할 변경이 없습니다.')+(result.limited?' 기본형 가구의 보조색·재질은 바꾸지 않았습니다.':'');
+  };
   for(const button of document.querySelectorAll('[data-align]'))button.onclick=()=>{
     if(loading||importing||previewing||setsBusy)return;
     const result=composition.arrange(state.decor,state.items,[...compositionIds],button.dataset.align,layout);

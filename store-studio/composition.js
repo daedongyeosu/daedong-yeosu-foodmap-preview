@@ -33,5 +33,26 @@
     }
     return{ok:true,fixtures:fixtures.map(i=>moved.get(i.id)||{...i}),items:photos};
   }
-  return Object.freeze({clean,create,instantiate,importFile,builtins,arrange});
+  const palettes=[
+    {name:'따뜻한 오크',color:'#986641',accent:'#f1d9a5',finish:'wood'},
+    {name:'숲속 가게',color:'#315b49',accent:'#e1cfa5',finish:'wood'},
+    {name:'크림 베이커리',color:'#c29b71',accent:'#fff2d4',finish:'plain'},
+    {name:'로즈 부티크',color:'#ae7789',accent:'#f5e0e6',finish:'fabric'},
+    {name:'바닷빛 상점',color:'#356b82',accent:'#d4ebe8',finish:'plain'},
+    {name:'차콜 스튜디오',color:'#353d46',accent:'#d6b477',finish:'metal'},
+    {name:'라벤더 소품점',color:'#88749f',accent:'#eee0af',finish:'fabric'},
+    {name:'오렌지 공방',color:'#b96637',accent:'#e7d3a7',finish:'metal'}
+  ];
+  function styleSelection(fixtures,ids,values,fields){
+    const selected=fixtures.filter(i=>ids.includes(i.id)),keys=['color','accent','finish'].filter(k=>fields.includes(k));
+    if(!selected.length||!keys.length)return{ok:false,message:'가구와 바꿀 항목을 하나 이상 선택해 주세요.'};
+    if(keys.some(k=>k==='finish'?!['plain','wood','metal','fabric'].includes(values[k]):!/^#[a-f0-9]{6}$/i.test(values[k])))return{ok:false,message:'색상과 재질을 다시 확인해 주세요.'};
+    let changed=0,limited=0;
+    const result=fixtures.map(item=>{if(!ids.includes(item.id))return{...item};const next={...item},modern=design.catalog[item.type]?.modern;
+      for(const key of keys){if(key!=='color'&&!modern){limited++;continue;}if(next[key]!==values[key]){next[key]=values[key];changed++;}}
+      return next;
+    });
+    return{ok:true,fixtures:result,changed,limited,count:selected.length};
+  }
+  return Object.freeze({clean,create,instantiate,importFile,builtins,arrange,palettes,styleSelection});
 });
