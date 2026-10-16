@@ -15,5 +15,5 @@ const sample=bakery.create();assert.equal(sample.sampleOnly,true);assert.equal(s
 assert.ok(sample.items.every(item=>design.image(item.src)&&!item.productUrl&&!item.catalogProductId));
 assert.equal(new Set(sample.items.map(item=>item.demoSku)).size,5,'Duplicate displays share a sample SKU');
 for(const asset of design.assets)assert.ok(fs.existsSync('store-studio/'+asset));
-const app=fs.readFileSync('store-studio/studio.js','utf8');assert.ok(app.includes("exampleMode?'scene-bakery-example-v1':'scene'"));assert.ok(app.includes('if(exampleMode)return;'));assert.ok(app.includes('Boolean(value.example)!==exampleMode'));
+const app=fs.readFileSync('store-studio/studio.js','utf8');assert.ok(app.includes('draftKey=examples.draftKey(exampleId)'));assert.ok(app.includes('if(exampleMode)return;'));assert.ok(app.includes('Boolean(value.example)!==exampleMode'));
 console.log('PASS shop design: bounded furniture, safe image/backup formats, sample SKU and independent sample storage');

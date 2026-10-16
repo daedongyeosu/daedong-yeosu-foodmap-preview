@@ -5,9 +5,10 @@
   const layout=window.ShopStudioLayout;
   const links=window.ShopStudioCustomerLinks;
   const catalog=window.ShopStudioCatalog;
-  const design=window.ShopStudioDesign,bakery=window.ShopStudioBakery;
-  const exampleMode=new URLSearchParams(location.search).get('example')==='bakery';
-  const draftKey=exampleMode?'scene-bakery-example-v1':'scene';
+  const design=window.ShopStudioDesign,examples=window.ShopStudioExamples;
+  const params=new URLSearchParams(location.search),exampleId=params.get('example')||'',sample=examples.get(exampleId);
+  if(exampleId&&!sample){location.replace('../store-alley/index.html');return;}
+  const exampleMode=Boolean(sample),draftKey=examples.draftKey(exampleId),templateId=params.get('template')||'';
   let selectedDecorId='',decorGesture=null,browseSection='전체';
   const sampleCart=new Map();
   let catalogItems=[],catalogStoreId='',catalogRequest=0,catalogBusy=false;
@@ -99,9 +100,12 @@
   function renderDesign(){
     const a=state.appearance;
     $('exampleNotice').hidden=!exampleMode;document.body.classList.toggle('bakery-example',exampleMode);
+    document.body.dataset.example=exampleId;
+    if(exampleMode){$('exampleNotice').querySelector('b').textContent=`${sample.name} · 가상 ${sample.category} 시범매장`;$('useExampleStyle').href=`index.html?template=${exampleId}`;$('backToAlley').href=`../store-alley/index.html#shop-${exampleId}`;document.title=`${sample.name} | 맛지도 시범 골목`;}
+    const template=examples.get(templateId);$('templateNotice').hidden=exampleMode||!template;if(template)$('templateName').textContent=template.name;
     document.querySelector('.example-entry').hidden=exampleMode;$('backupTools').hidden=previewing;
     if(exampleMode)$('catalogSettings').hidden=true;
-    $('previewHelp').textContent=exampleMode?'가상의 베이커리를 둘러보는 체험 화면입니다. 상품을 선택해 체험 장바구니에 담아보세요. 실제 주문·결제는 발생하지 않습니다.':'공개 전 확인하는 고객 화면입니다. 등록한 방문·주문 링크는 열 수 있으며, 주문·결제는 연결된 화면에서 진행합니다.';
+    $('previewHelp').textContent=exampleMode?'가상 상점을 둘러보는 체험 화면입니다. 상품을 선택해 체험 장바구니에 담아보세요. 실제 주문·결제는 발생하지 않습니다.':'공개 전 확인하는 고객 화면입니다. 등록한 방문·주문 링크는 열 수 있으며, 주문·결제는 연결된 화면에서 진행합니다.';
     scene.style.setProperty('--sign-color',a.signColor);scene.style.setProperty('--sign-background',a.signBackground);scene.style.setProperty('--floor',a.floor);scene.dataset.font=a.font;
     $('sceneAwning').hidden=!a.awning;$('shelfLines').hidden=!a.showShelves;$('dividers').hidden=!a.showShelves;
     for(const [id,key] of [['designFont','font'],['designSignColor','signColor'],['designSignBackground','signBackground'],['designFloor','floor']])$(id).value=a[key];
@@ -132,10 +136,10 @@
       const button=document.createElement('button');button.className='browse-product';const img=document.createElement('img');img.src=item.src;img.alt='';img.loading='lazy';const label=document.createElement('strong');label.textContent=item.name;const note=document.createElement('small');note.textContent=exampleMode?`예시 ${Number(item.demoPrice||0).toLocaleString('ko-KR')}원`:'사진을 눌러 상품 확인';button.append(img,label,note);button.onclick=()=>{selectedId=item.id;previewProductId=item.id;renderCustomer();$('productDetails').scrollIntoView({behavior:'smooth',block:'nearest'});};$('browseProducts').append(button);
     }
     $('sampleCartItems').replaceChildren();let total=0,count=0;
-    for(const [sku,quantity] of sampleCart){const product=bakery.products.find(value=>value.sku===sku);if(!product)continue;count+=quantity;total+=quantity*product.price;const row=document.createElement('div');row.className='sample-cart-row';const label=document.createElement('span');label.textContent=product.name;row.append(label);for(const [text,delta,title] of [['−',-1,'줄이기'],['+',1,'늘리기'],['빼기',-quantity,'삭제']]){const button=document.createElement('button');button.textContent=text;button.setAttribute('aria-label',`${product.name} ${title}`);button.onclick=()=>sampleQuantity(sku,delta);if(delta===1)button.disabled=quantity>=20;row.append(button);if(delta===-1){const value=document.createElement('b');value.textContent=quantity;row.append(value);}}$('sampleCartItems').append(row);}
+    for(const [sku,quantity] of sampleCart){const product=sample.products.find(value=>value.sku===sku);if(!product)continue;count+=quantity;total+=quantity*product.price;const row=document.createElement('div');row.className='sample-cart-row';const label=document.createElement('span');label.textContent=product.name;row.append(label);for(const [text,delta,title] of [['−',-1,'줄이기'],['+',1,'늘리기'],['빼기',-quantity,'삭제']]){const button=document.createElement('button');button.textContent=text;button.setAttribute('aria-label',`${product.name} ${title}`);button.onclick=()=>sampleQuantity(sku,delta);if(delta===1)button.disabled=quantity>=20;row.append(button);if(delta===-1){const value=document.createElement('b');value.textContent=quantity;row.append(value);}}$('sampleCartItems').append(row);}
     $('sampleCartCount').textContent=count;$('sampleCartTotal').textContent=`상품 합계(예시) ${total.toLocaleString('ko-KR')}원`;$('sampleCartClear').disabled=!count;
   }
-  function sampleQuantity(sku,delta){if(!exampleMode||!bakery.products.some(value=>value.sku===sku))return;const count=Math.max(0,Math.min(20,(sampleCart.get(sku)||0)+delta));count?sampleCart.set(sku,count):sampleCart.delete(sku);$('sampleFeedback').textContent=count?`${bakery.products.find(value=>value.sku===sku).name} ${count}개를 체험 장바구니에 담았습니다.`:'체험 장바구니에서 상품을 뺐습니다.';renderBrowse();}
+  function sampleQuantity(sku,delta){if(!exampleMode||!sample.products.some(value=>value.sku===sku))return;const count=Math.max(0,Math.min(20,(sampleCart.get(sku)||0)+delta));count?sampleCart.set(sku,count):sampleCart.delete(sku);$('sampleFeedback').textContent=count?`${sample.products.find(value=>value.sku===sku).name} ${count}개를 체험 장바구니에 담았습니다.`:'체험 장바구니에서 상품을 뺐습니다.';renderBrowse();}
   $('sampleAdd').onclick=()=>{const item=state.items.find(value=>value.id===previewProductId);if(item?.demoSku)sampleQuantity(item.demoSku,1);};$('sampleCartClear').onclick=()=>{sampleCart.clear();renderBrowse();};
   function render(){
     state.appearance=design.appearance(state.appearance);state.decor=Array.isArray(state.decor)?state.decor:[];
@@ -183,6 +187,7 @@
     renderBrowse();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
+  $('applyTemplate').onclick=()=>{const template=examples.template(templateId);if(!template||exampleMode)return;if(!confirm('기존 상품사진·가게정보·주문 연결은 유지하고 가구·색·간판 스타일을 바꿉니다. 사진의 기존 진열대 연결은 해제됩니다. 적용할까요?'))return;change(()=>{state={...state,...template,shopTitle:state.shopTitle,business:state.business,catalogStoreId:state.catalogStoreId,items:state.items.map(item=>({...item,decorId:''}))};selectedId='';selectedDecorId='';});say('디자인을 적용했습니다. 기존 상품과 가게정보는 유지했습니다. 되돌리기로 이전 디자인을 복원할 수 있습니다.');};
   for(const [id,key] of [['designFont','font'],['designSignColor','signColor'],['designSignBackground','signBackground'],['designFloor','floor'],['designAwning','awning'],['designShelves','showShelves'],['designTags','showTags']])$(id).addEventListener('change',event=>change(()=>{state.appearance[key]=event.target.type==='checkbox'?event.target.checked:event.target.value;}));
   for(let i=0;i<3;i++)$(`zoneName${i+1}`).addEventListener('change',event=>change(()=>{state.appearance.zoneNames[i]=event.target.value.trim().slice(0,24)||`구역 ${i+1}`;}));
   $('itemSection').addEventListener('change',event=>change(()=>{if(selected())selected().section=event.target.value.trim().slice(0,24);}));
@@ -198,9 +203,9 @@
   $('decorRoot').addEventListener('pointermove',event=>{const g=decorGesture;if(!g||g.pointerId!==event.pointerId)return;const dx=event.clientX-g.x,dy=event.clientY-g.y;if(Math.abs(dx)+Math.abs(dy)<4&&!g.moved)return;g.moved=true;const item=state.decor.find(value=>value.id===selectedDecorId);if(!placeDecor(item,g.startX+dx/g.rect.width*100,g.startY+dy/g.rect.height*100))return;g.node.style.left=item.x+'%';g.node.style.top=item.y+'%';for(const linked of state.items.filter(value=>value.decorId===item.id)){const node=itemsRoot.querySelector(`[data-item-id="${linked.id}"]`);if(node)position(node,linked);}});
   for(const type of ['pointerup','pointercancel'])$('decorRoot').addEventListener(type,event=>{const g=decorGesture;if(!g||g.pointerId!==event.pointerId)return;decorGesture=null;if(type==='pointercancel')state=g.before;else if(g.moved){past.push(g.before);if(past.length>20)past.shift();future.length=0;persist();}render();});
   $('zoomScene').onclick=()=>{const active=$('sceneViewport').classList.toggle('zoomed');$('zoomScene').setAttribute('aria-pressed',String(active));$('zoomScene').textContent=active?'공간 전체 보기':'가까이 보기';};
-  $('exportScene').onclick=()=>{const file=new Blob([JSON.stringify({format:'matjido-studio',version:1,example:exampleMode,scene:state})],{type:'application/json'}),url=URL.createObjectURL(file),link=document.createElement('a');link.href=url;link.download=exampleMode?'맛지도_베이커리_시안.json':'맛지도_내상점_시안.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);say('시안 파일을 내려받았습니다. 사진과 배치가 들어 있으니 안전한 곳에 보관하세요.');};
+  $('exportScene').onclick=()=>{const file=new Blob([JSON.stringify({format:'matjido-studio',version:1,example:exampleMode,exampleId,scene:state})],{type:'application/json'}),url=URL.createObjectURL(file),link=document.createElement('a');link.href=url;link.download=exampleMode?`맛지도_${sample.name}_시안.json`:'맛지도_내상점_시안.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);say('시안 파일을 내려받았습니다. 사진과 배치가 들어 있으니 안전한 곳에 보관하세요.');};
   $('importScene').onclick=()=>$('sceneFile').click();
-  $('sceneFile').onchange=async event=>{const file=event.target.files?.[0];if(!file)return;try{if(file.size>20*1024*1024)throw new Error('20MB 이하의 시안 파일을 선택해 주세요.');const value=JSON.parse(await file.text()),draft=design.validateImport(value);if(Boolean(value.example)!==exampleMode)throw new Error('내 상점과 시범매장 시안은 해당 화면에서 각각 불러와 주세요.');if(!confirm('현재 시안을 불러온 파일로 바꿀까요? 먼저 시안 파일로 보관할 수 있으며, 불러온 뒤 되돌리기도 가능합니다.'))return;change(()=>{state=restoreScene(draft);selectedId='';selectedDecorId='';});catalogRequest++;catalogItems=[];catalogStoreId='';if(state.catalogStoreId)void loadCatalog();}catch(error){say(error instanceof SyntaxError?'시안 파일을 읽지 못했습니다. 맛지도에서 보관한 JSON 파일을 선택해 주세요.':error.message,true);}finally{event.target.value='';}};
+  $('sceneFile').onchange=async event=>{const file=event.target.files?.[0];if(!file)return;try{if(file.size>20*1024*1024)throw new Error('20MB 이하의 시안 파일을 선택해 주세요.');const value=JSON.parse(await file.text()),draft=design.validateImport(value);if(Boolean(value.example)!==exampleMode||(exampleMode&&(value.exampleId||'bakery')!==exampleId))throw new Error('내 상점과 시범매장 시안은 해당 화면에서 각각 불러와 주세요.');if(!confirm('현재 시안을 불러온 파일로 바꿀까요? 먼저 시안 파일로 보관할 수 있으며, 불러온 뒤 되돌리기도 가능합니다.'))return;change(()=>{state=restoreScene(draft);selectedId='';selectedDecorId='';});catalogRequest++;catalogItems=[];catalogStoreId='';if(state.catalogStoreId)void loadCatalog();}catch(error){say(error instanceof SyntaxError?'시안 파일을 읽지 못했습니다. 맛지도에서 보관한 JSON 파일을 선택해 주세요.':error.message,true);}finally{event.target.value='';}};
   $('catalogStore').addEventListener('change',event=>{
     const value=event.target.value.trim();if(!catalog.id(value)&&value){$('catalogStatus').textContent='상점번호는 영문·숫자·밑줄·하이픈으로 입력해 주세요.';return;}
     if(value===state.catalogStoreId)return;
@@ -313,7 +318,7 @@
     const ids=new Set();
     const safeId=value=>{const result=/^[a-z0-9-]{3,80}$/i.test(value)&&!ids.has(value)?value:crypto.randomUUID();ids.add(result);return result;};
     next.items=(Array.isArray(raw.items)?raw.items:[]).slice(0,40).filter(item=>item&&design.image(item.src)).map(item=>{
-      const product=exampleMode?bakery.products.find(value=>value.sku===item.demoSku):null;
+      const product=exampleMode?sample.products.find(value=>value.sku===item.demoSku):null;
       return layout.bounded({...item,id:safeId(item.id),name:String(item.name||'상품').slice(0,50),description:String(item.description||'').slice(0,300),productUrl:exampleMode?'':String(item.productUrl||'').slice(0,2048),catalogProductId:exampleMode?'':catalog.id(item.catalogProductId),section:String(item.section||'').slice(0,24),demoSku:product?.sku||'',demoPrice:product?.price||0,locked:item.locked===true,hidden:item.hidden===true});
     });
     next.decor=(Array.isArray(raw.decor)?raw.decor:[]).slice(0,30).filter(item=>item&&typeof item==='object').map(item=>design.decor({...item,id:safeId(item.id)}));
@@ -328,7 +333,8 @@
     return next;
   }
   async function initialize(){
-    if(exampleMode)state=restoreScene(bakery.create());
+    for(const [type,label] of Object.entries(design.types))if(![...$('decorType').options].some(option=>option.value===type))$('decorType').add(new Option(label,type));
+    if(exampleMode)state=restoreScene(sample.create());
     render();try{db=await storageOpen();const draft=await readDraft();if(draft&&Array.isArray(draft.items)){state=restoreScene(draft);say('이 기기에 저장한 사진과 배치를 불러왔습니다.');}}
     catch{say('이 브라우저에서는 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);}
     if(!exampleMode&&!state.catalogStoreId)try{const saved=JSON.parse(localStorage.getItem('matjido-store-onboarding-preview-v1')||'null');if(saved?.previewOnly)state.catalogStoreId=catalog.id(saved.storeId);}catch{}

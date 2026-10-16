@@ -1,7 +1,7 @@
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.ShopStudioDesign=api;})(globalThis,function(){
   'use strict';
-  const types={rack:'나무 진열장',glass:'유리 쇼케이스',ledge:'벽 선반',counter:'계산·픽업대',board:'안내판',window:'창문',plant:'화분'};
-  const assets=['croissant','bread','cake','sandwich','coffee'].map(name=>`../assets/studio-bakery/${name}.webp`);
+  const types={rack:'나무 진열장',glass:'유리 쇼케이스',ledge:'벽 선반',counter:'계산·픽업대',board:'안내판',window:'창문',plant:'화분',clothesrack:'옷걸이 행거',mannequin:'수동 배치 마네킹',mirror:'전신 거울',pegboard:'벽걸이 공구판',bin:'부품 진열함'};
+  const assets=[...['croissant','bread','cake','sandwich','coffee'].map(name=>`../assets/studio-bakery/${name}.webp`),...['blouse','bag','kimchi','namul','hammer','saw'].map(name=>`../assets/studio-alley/${name}.webp`)];
   const clamp=(value,min,max)=>Math.max(min,Math.min(max,Number.isFinite(Number(value))?Number(value):min));
   const color=(value,fallback)=>/^#[\da-f]{6}$/i.test(value)?value:fallback;
   const image=value=>typeof value==='string'&&(assets.includes(value)||/^data:image\/(webp|png|jpeg);base64,[a-z\d+/=]+$/i.test(value)&&value.length<=2000000);
