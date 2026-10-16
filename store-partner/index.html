@@ -9,7 +9,7 @@
   <meta name="description" content="여수의 오프라인 상점이 입점비 없이 온라인 상점을 만들고 고객 주문과 배송을 연결하는 여수맛지도 입점 프리뷰">
   <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=20261011-1">
-  <link rel="stylesheet" href="product-editor.css?v=20261017-2">
+  <link rel="stylesheet" href="product-editor.css?v=20261017-3">
 </head>
 <body>
   <header class="page-header">
@@ -145,6 +145,8 @@
             <label class="product-photo-picker">📷 상품사진 선택<input id="productPhoto" type="file" accept="image/*"><small id="productPhotoStatus">사진은 이 기기에서만 미리 확인합니다.</small></label>
             <img id="studioProductPhoto" class="studio-product-photo" alt="등록 준비 중인 상품사진" hidden>
             <button id="addProduct" class="add-product" type="button">상품 초안에 추가하기</button>
+            <button id="cancelProductEdit" class="cancel-product-edit" type="button" hidden>상품 수정 취소</button>
+            <p id="productEditorStatus" class="method-status" role="status" aria-live="polite"></p>
           </div>
 
           <div class="product-method-panel" data-product-panel="sheet" hidden>
@@ -200,7 +202,8 @@
           <div class="preview-products"><b id="previewProductCount">등록 상품 0개</b><span id="previewProductNames">상품은 상점을 만든 뒤에도 추가할 수 있습니다.</span></div>
           <ul><li>매장 판매가격 그대로</li><li>맛지도 고객에게 상품 노출</li><li>주문 발생 시 배송 연결</li></ul>
         </article>
-        <a class="customer-preview-link" href="../online-store/">고객에게 보이는 온라인 상점 확인하기 <span aria-hidden="true">›</span></a>
+        <p id="customerPreviewHelp" class="method-status" role="status">준비내용을 저장한 뒤 고객 화면을 확인할 수 있습니다.</p>
+        <a id="customerStorePreview" class="customer-preview-link" href="../online-store/" hidden>고객에게 보이는 온라인 상점 확인하기 <span aria-hidden="true">›</span></a>
         <a class="customer-preview-link manager-preview-link" href="../store-manager/">상점주 주문접수 화면 확인하기 <span aria-hidden="true">›</span></a>
         <label class="preview-agreement"><input id="previewAgreement" type="checkbox"><span>입력한 상점정보와 배송비 지원 설정을 확인했습니다.</span></label>
         <button id="savePreview" class="save-preview" type="button" disabled>입점 준비내용 저장하기</button>
@@ -223,6 +226,6 @@
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
   <script src="../store-context.js?v=20261016-5" defer></script>
   <script src="../store-studio/product-handoff.js?v=20261017-2" defer></script>
-  <script src="app.js?v=20261017-2" defer></script>
+  <script src="app.js?v=20261017-3" defer></script>
 </body>
 </html>

@@ -13,6 +13,7 @@ const saveButton=document.querySelector('#savePreview');
 let currentStep=1;
 let postcodePromise=null;
 let products=[];
+let editingProductId='';
 let studioProductKey='';
 let draftStoreId='';
 function ensureStoreId(previous){
@@ -41,7 +42,7 @@ function showStep(number){
   currentStep=Math.max(1,Math.min(4,number));
   steps.forEach(step=>{const active=Number(step.dataset.step)===currentStep;step.hidden=!active;step.classList.toggle('active',active);});
   navButtons.forEach(button=>{const step=Number(button.dataset.stepNav);button.toggleAttribute('disabled',step>currentStep);button.classList.toggle('done',step<currentStep);if(step===currentStep)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');});
-  if(currentStep===4)paintPreview();
+  if(currentStep===4){paintPreview();document.querySelector('#customerStorePreview').hidden=true;document.querySelector('#customerPreviewHelp').textContent='아래에서 준비내용을 저장한 뒤 이 가게의 고객 화면을 확인할 수 있습니다.';}
   updateNext();
   scrollTo({top:0,behavior:'smooth'});
 }
@@ -102,21 +103,38 @@ function readLivePricing(basePrice,stockMode,stockQuantity){
   return{enabled:true,mode,floorPrice,endAt:endAt?new Date(endAt).toISOString():'',tiers:sorted,confirmedOrders:0,remainingStock:mode==='clearance'?Math.max(0,Number(stockQuantity)||0):null,merchantControlled:true,competitorPricing:false};
 }
 function resetLivePricingEditor(){document.querySelector('#livePricingEnabled').checked=false;document.querySelector('#livePricingFields').hidden=true;['livePricingFloor','liveTier1Threshold','liveTier1Price','liveTier2Threshold','liveTier2Price','liveTier3Threshold','liveTier3Price'].forEach(id=>{document.querySelector(`#${id}`).value='';});document.querySelector('#livePricingEndAt').value='';document.querySelector('#livePricingMode').value='cumulative';document.querySelector('#livePricingStatus').textContent='가격은 입력한 최저가격 아래로 내려가지 않습니다. 행사 상품은 최저가 순서만으로 노출하지 않습니다.';}
+function editorStatus(message,error=false){const node=document.querySelector('#productEditorStatus');node.textContent=message;node.classList.toggle('error',error);}
+function pendingProduct(){return Boolean(editingProductId||document.querySelector('#productName').value.trim()||document.querySelector('#productPrice').value||document.querySelector('#productDescription').value.trim()||document.querySelector('#productPhoto').files.length);}
+function finishProductEdit(){editingProductId='';document.querySelector('#productName').value='';document.querySelector('#productPrice').value='';document.querySelector('#productDescription').value='';document.querySelector('#productPhoto').value='';document.querySelector('#productPhotoStatus').textContent='사진은 이 기기에서만 미리 확인합니다.';document.querySelector('#studioProductPhoto').hidden=true;document.querySelector('#addProduct').textContent='상품 초안에 추가하기';document.querySelector('#cancelProductEdit').hidden=true;resetLivePricingEditor();}
+function editProduct(product){
+  if(pendingProduct()){editorStatus('작성 중인 상품을 먼저 추가하거나, 수정 중이라면 적용·취소해 주세요.',true);document.querySelector('#productName').focus();return;}
+  editingProductId=product.id;document.querySelector('[data-product-method="direct"]').checked=true;showProductMethod();
+  document.querySelector('#productName').value=product.name;document.querySelector('#productPrice').value=String(product.price);document.querySelector('#productDescription').value=product.description||'';
+  const unit=document.querySelector('#productUnit'),known=[...unit.options].some(option=>option.value===product.unit&&option.value!=='직접 입력');unit.value=known?product.unit:'직접 입력';document.querySelector('#customUnit').value=known?'':product.unit;document.querySelector('#customUnitField').hidden=known;
+  document.querySelector('#stockMode').value=product.stockMode;document.querySelector('#stockQuantity').value=String(product.stockQuantity??0);document.querySelector('#stockQuantityField').hidden=product.stockMode!=='수량 관리';
+  resetLivePricingEditor();if(product.livePricing?.enabled){const pricing=product.livePricing;document.querySelector('#livePricingEnabled').checked=true;document.querySelector('#livePricingMode').value=pricing.mode;document.querySelector('#livePricingFloor').value=String(pricing.floorPrice);const end=new Date(pricing.endAt);if(Number.isFinite(end.getTime())){end.setMinutes(end.getMinutes()-end.getTimezoneOffset());document.querySelector('#livePricingEndAt').value=end.toISOString().slice(0,16);}pricing.tiers.slice(0,3).forEach((tier,index)=>{document.querySelector(`#liveTier${index+1}Threshold`).value=String(tier.threshold);document.querySelector(`#liveTier${index+1}Price`).value=String(tier.price);});showLivePricing();}
+  document.querySelector('#addProduct').textContent='수정내용 적용하기';document.querySelector('#cancelProductEdit').hidden=false;editorStatus(`${product.name} 수정 중입니다. 적용 후 마지막 단계에서 저장하면 고객 화면에 반영됩니다.`);
+  document.querySelector('#productName').scrollIntoView({block:'center'});document.querySelector('#productName').focus({preventScroll:true});
+}
+function productReadyToLeave(){if(!pendingProduct())return true;editorStatus('입력 중인 상품이 있습니다. 먼저 초안에 추가하거나 수정내용을 적용·취소해 주세요.',true);document.querySelector('#addProduct').scrollIntoView({block:'center'});document.querySelector('#addProduct').focus({preventScroll:true});return false;}
 function renderProducts(){
   const drafts=document.querySelector('#productDrafts');
   const count=document.querySelector('#productCount');
   count.textContent=`등록 ${products.length}개`;
   drafts.replaceChildren();
   if(!products.length){const empty=document.createElement('p');empty.className='empty-products';empty.textContent='아직 등록한 상품이 없습니다. 한 개만 먼저 올려도 상점을 시작할 수 있습니다.';drafts.append(empty);return;}
-  products.forEach(product=>{const card=document.createElement('article');card.className='product-draft';const name=document.createElement('strong');name.textContent=product.name;const price=document.createElement('span');price.textContent=`${money(product.price)} / ${product.unit}`;const detail=document.createElement('small');detail.textContent=[product.stockMode,product.stockMode==='수량 관리'?`재고 ${product.stockQuantity}개`:'',product.hasPhoto?'사진 있음':'사진 없음',product.source==='csv'?'목록에서 불러옴':'직접 등록'].filter(Boolean).join(' · ');const remove=document.createElement('button');remove.type='button';remove.setAttribute('aria-label',`${product.name} 삭제`);remove.textContent='×';remove.addEventListener('click',()=>{products=products.filter(item=>item.id!==product.id);renderProducts();});card.append(name,price,detail);if(product.livePricing?.enabled){const summary=document.createElement('small');summary.className='live-program-summary';summary.textContent=`⚡ ${livePricingModeLabel(product.livePricing.mode)} · 최저 ${money(product.livePricing.floorPrice)} · ${product.livePricing.tiers.length}단계`;card.append(summary);}card.append(remove);drafts.append(card);});
+  products.forEach(product=>{const card=document.createElement('article');card.className='product-draft';const name=document.createElement('strong');name.textContent=product.name;const price=document.createElement('span');price.textContent=`${money(product.price)} / ${product.unit}`;const detail=document.createElement('small');detail.textContent=[product.stockMode,product.stockMode==='수량 관리'?`재고 ${product.stockQuantity}개`:'',product.hasPhoto?'사진 있음':'사진 없음',product.source==='csv'?'목록에서 불러옴':'직접 등록'].filter(Boolean).join(' · ');const remove=document.createElement('button');remove.type='button';remove.className='remove-product';remove.setAttribute('aria-label',`${product.name} 삭제`);remove.textContent='×';remove.addEventListener('click',()=>{if(editingProductId===product.id)finishProductEdit();products=products.filter(item=>item.id!==product.id);renderProducts();});const edit=document.createElement('button');edit.type='button';edit.className='edit-product';edit.dataset.productEdit=product.id;edit.setAttribute('aria-label',`${product.name} 수정`);edit.textContent='수정';edit.onclick=()=>editProduct(product);card.append(name,price,detail);if(product.livePricing?.enabled){const summary=document.createElement('small');summary.className='live-program-summary';summary.textContent=`⚡ ${livePricingModeLabel(product.livePricing.mode)} · 최저 ${money(product.livePricing.floorPrice)} · ${product.livePricing.tiers.length}단계`;card.append(summary);}card.append(edit,remove);drafts.append(card);});
 }
 function addDirectProduct(){
   const name=document.querySelector('#productName').value.trim();const price=Number(document.querySelector('#productPrice').value);const unit=productUnit();
-  if(!name){document.querySelector('#productName').focus();return;}
-  if(!Number.isSafeInteger(price)||price<=0){document.querySelector('#productPrice').focus();return;}
-  if(!unit){document.querySelector('#customUnit').focus();return;}
-  const stockMode=document.querySelector('#stockMode').value;const stockQuantity=stockMode==='수량 관리'?Math.max(0,Number(document.querySelector('#stockQuantity').value)||0):null;const livePricing=readLivePricing(price,stockMode,stockQuantity);if(livePricing===false)return;products.push({id:`product-${Date.now()}-${products.length}`,name,price,unit,stockMode,stockQuantity,description:document.querySelector('#productDescription').value.trim(),livePricing,hasPhoto:Boolean(document.querySelector('#productPhoto').files?.[0]),source:'direct'});
-  document.querySelector('#productName').value='';document.querySelector('#productPrice').value='';document.querySelector('#productDescription').value='';document.querySelector('#productPhoto').value='';document.querySelector('#productPhotoStatus').textContent='사진은 이 기기에서만 미리 확인합니다.';resetLivePricingEditor();renderProducts();document.querySelector('#productName').focus();
+  if(!name){editorStatus('상품명을 입력해 주세요.',true);document.querySelector('#productName').focus();return;}
+  if(!Number.isSafeInteger(price)||price<=0){editorStatus('판매가격을 1원 이상의 정수로 입력해 주세요.',true);document.querySelector('#productPrice').focus();return;}
+  if(!unit){editorStatus('판매단위를 입력해 주세요.',true);document.querySelector('#customUnit').focus();return;}
+  const stockMode=document.querySelector('#stockMode').value;const stockQuantity=stockMode==='수량 관리'?Number(document.querySelector('#stockQuantity').value):null;if(stockMode==='수량 관리'&&(!Number.isSafeInteger(stockQuantity)||stockQuantity<0)){editorStatus('재고 수량을 0 이상의 정수로 입력해 주세요.',true);document.querySelector('#stockQuantity').focus();return;}const livePricing=readLivePricing(price,stockMode,stockQuantity);if(livePricing===false)return;
+  const existing=products.find(product=>product.id===editingProductId);if(editingProductId&&!existing){editorStatus('수정할 상품을 다시 선택해 주세요.',true);return;}const product={...existing,id:existing?.id||`product-${crypto.randomUUID()}`,name,price,unit,stockMode,stockQuantity,description:document.querySelector('#productDescription').value.trim(),livePricing,hasPhoto:Boolean(document.querySelector('#productPhoto').files?.[0])||Boolean(existing?.hasPhoto),source:existing?.source||'direct'};
+  if(product.livePricing&&existing?.livePricing)product.livePricing={...existing.livePricing,...product.livePricing,confirmedOrders:existing.livePricing.confirmedOrders||0};
+  if(existing)products=products.map(item=>item.id===existing.id?product:item);else products.push(product);
+  finishProductEdit();renderProducts();editorStatus(`${name} ${existing?'수정내용을 적용했습니다':'상품을 초안에 추가했습니다'}. 마지막 단계에서 저장해 주세요.`);document.querySelector('#productName').focus();
   document.querySelector('#studioProductPhoto').hidden=true;
   if(studioProductKey){sessionStorage.removeItem(studioProductKey);studioProductKey='';const url=new URL(location.href);url.searchParams.delete('studioProduct');history.replaceState(history.state,'',url);document.querySelector('#studioProductNotice').textContent='상품 초안에 추가했습니다. 마지막 단계에서 저장한 뒤, 꾸미기 화면의 등록 상품 불러오기에서 사진과 연결하세요. 아직 실제 공개·결제는 발생하지 않습니다.';}
 }
@@ -139,13 +157,14 @@ async function syncServerCatalog(payload){
   const result=await response.json();if(!response.ok)throw new Error(result?.message||`catalog-${response.status}`);return result;
 }
 async function saveDraft(){
+  if(pendingProduct()){showStep(3);productReadyToLeave();return;}
   if(!stepOneReady()){showStep(1);document.querySelector('#saveStatus').textContent='먼저 가게 이름·주소·전화번호와 종류를 확인해 주세요.';return;}
   const previous=(()=>{try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');}catch{return null;}})();
   const payload={storeId:ensureStoreId(previous),storeName:document.querySelector('#storeName').value.trim(),category:document.querySelector('#storeCategory').value,address:addressInput.value,addressZonecode:String(addressInput.dataset.zonecode||''),addressDetail:document.querySelector('#storeAddressDetail').value.trim(),phone:document.querySelector('#ownerPhone').value,theme:selected('theme'),productMethod:selected('productMethod'),products:products.map(({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing})=>({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing,category:document.querySelector('#storeCategory').value})),subsidy:Number(selected('subsidy'))||0,minimumOrder:Number(document.querySelector('#minimumOrder').value)||0,savedAt:new Date().toISOString(),previewOnly:true};
   localStorage.setItem(STORAGE_KEY,JSON.stringify(payload));
-  updateSavedLinks();
+  document.querySelector('#customerStorePreview').hidden=true;
   saveButton.disabled=true;document.querySelector('#saveStatus').textContent='이 기기에 저장했고 서버의 테스트 가격·재고와 맞추는 중입니다…';
-  try{await syncServerCatalog(payload);document.querySelector('#saveStatus').textContent='저장 완료: 서버가 테스트 가격·재고·누적 주문수를 관리합니다. 실제 결제나 공개 판매는 발생하지 않습니다.';saveButton.textContent='서버 연결 저장 완료';}
+  try{await syncServerCatalog(payload);updateSavedLinks();document.querySelector('#customerStorePreview').hidden=false;document.querySelector('#customerPreviewHelp').textContent='테스트 상품 저장을 확인했습니다. 아래에서 이 가게의 상품·장바구니를 확인해 보세요. 실제 공개·결제는 아닙니다.';document.querySelector('#saveStatus').textContent='저장 완료: 서버가 테스트 가격·재고·누적 주문수를 관리합니다. 실제 결제나 공개 판매는 발생하지 않습니다.';saveButton.textContent='서버 연결 저장 완료';}
   catch(error){document.querySelector('#saveStatus').textContent=`기기에는 저장됐지만 서버 동기화가 필요합니다. ${String(error?.message||'잠시 뒤 다시 저장해 주세요.')}`;saveButton.textContent='서버 동기화 다시 시도';}
   finally{saveButton.disabled=!agreement.checked;}
 }
@@ -168,10 +187,11 @@ document.querySelector('#livePricingEnabled').addEventListener('change',showLive
 document.querySelector('#livePricingMode').addEventListener('change',showLivePricing);
 document.querySelector('#productPhoto').addEventListener('change',event=>{document.querySelector('#productPhotoStatus').textContent=event.target.files?.[0]?`${event.target.files[0].name} · 실제 등록 전 사진 검토가 필요합니다.`:'사진은 이 기기에서만 미리 확인합니다.';});
 document.querySelector('#addProduct').addEventListener('click',addDirectProduct);
+document.querySelector('#cancelProductEdit').addEventListener('click',()=>{finishProductEdit();editorStatus('수정을 취소했습니다. 기존 상품 초안은 그대로입니다.');document.querySelector('#productName').focus();});
 document.querySelector('#productSheet').addEventListener('change',importProductSheet);
 document.querySelector('#priceBoardPhoto').addEventListener('change',event=>{const preview=document.querySelector('#priceBoardPreview');const status=document.querySelector('#photoAiStatus');const file=event.target.files?.[0];if(!file)return;const url=URL.createObjectURL(file);preview.src=url;preview.hidden=false;preview.onload=()=>URL.revokeObjectURL(url);status.textContent='사진을 이 기기에서 미리 표시했습니다. AI 서버 연결 전에는 분석하거나 외부로 전송하지 않습니다.';status.className='method-status success';});
 document.querySelectorAll('[name="subsidy"]').forEach(input=>input.addEventListener('change',updatePricePreview));
-nextButton.addEventListener('click',()=>{if(currentStep===1&&!stepOneReady()){updateNext();return;}showStep(currentStep+1);});
+nextButton.addEventListener('click',()=>{if(currentStep===1&&!stepOneReady()){updateNext();return;}if(currentStep===3&&!productReadyToLeave())return;showStep(currentStep+1);});
 previousButton.addEventListener('click',()=>showStep(currentStep-1));
 navButtons.forEach(button=>button.addEventListener('click',()=>{const target=Number(button.dataset.stepNav);if(target<=currentStep)showStep(target);}));
 agreement.addEventListener('change',()=>{saveButton.disabled=!agreement.checked;});
