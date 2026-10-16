@@ -2,8 +2,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
-const root=process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES;
-const {chromium}=await import(pathToFileURL(path.join(root,'playwright/index.mjs')).href);
+let playwright;
+try{playwright=await import('playwright');}
+catch{playwright=await import(pathToFileURL(path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES,'playwright/index.mjs')).href);}
+const {chromium}=playwright;
 const browser=await chromium.launch({headless:true});
 try{
   const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true});
