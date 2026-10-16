@@ -20,9 +20,11 @@
   const clamp=(value,min,max)=>Math.max(min,Math.min(max,Number.isFinite(Number(value))?Number(value):min));
   const color=(value,fallback)=>/^#[\da-f]{6}$/i.test(value)?value:fallback;
   const image=value=>typeof value==='string'&&(assets.includes(value)||/^data:image\/(webp|png|jpeg);base64,[a-z\d+/=]+$/i.test(value)&&value.length<=2000000);
+  const cabinetTypes=['shoerack','cosmeticrack','towelrack','jewelrycase','partsdrawer','toolbox','refrigerator','freezer'];
+  function cabinet(value){if(!value||typeof value!=='object')return null;return{rows:Math.round(clamp(value.rows,1,6)),columns:Math.round(clamp(value.columns,1,6)),doors:['none','glass','solid'].includes(value.doors)?value.doors:'none',handle:['none','bar','knob'].includes(value.handle)?value.handle:'bar',back:value.back!==false};}
   function decor(value){
     const type=Object.hasOwn(types,value?.type)?value.type:'rack',width=clamp(value?.width,10,90),height=clamp(value?.height,5,65);
-    return {id:String(value?.id||'').slice(0,80),type,text:String(value?.text??types[type]).slice(0,80),color:color(value?.color,'#87613e'),accent:color(value?.accent,'#ead9ba'),finish:['plain','wood','metal','fabric'].includes(value?.finish)?value.finish:'plain',showLabel:value?.showLabel!==false,width,height,x:clamp(value?.x,0,100-width),y:clamp(value?.y,18,98-height),locked:value?.locked===true,hidden:value?.hidden===true};
+    return {id:String(value?.id||'').slice(0,80),type,text:String(value?.text??types[type]).slice(0,80),color:color(value?.color,'#87613e'),accent:color(value?.accent,'#ead9ba'),finish:['plain','wood','metal','fabric'].includes(value?.finish)?value.finish:'plain',showLabel:value?.showLabel!==false,cabinet:cabinetTypes.includes(type)?cabinet(value?.cabinet):null,width,height,x:clamp(value?.x,0,100-width),y:clamp(value?.y,18,98-height),locked:value?.locked===true,hidden:value?.hidden===true};
   }
   function appearance(value={}){value=value&&typeof value==='object'?value:{};return {signColor:color(value.signColor,'#f5ead6'),signBackground:color(value.signBackground,'#193d42'),floor:color(value.floor,'#c5ac88'),font:['serif','sans','rounded'].includes(value.font)?value.font:'serif',awning:value.awning===true,showShelves:value.showShelves!==false,showTags:value.showTags===true,zoneNames:[0,1,2].map(i=>String(value.zoneNames?.[i]||`구역 ${i+1}`).slice(0,24))};}
   function translate(fixture,items,dx,dy,geometry){
@@ -39,5 +41,10 @@
     if(value.scene.decor&&!Array.isArray(value.scene.decor)||value.scene.decor?.length>60)throw new Error('가구는 60개까지 복원할 수 있습니다.');
     return value.scene;
   }
-  return Object.freeze({types,catalog,groups,findDecor,createDecor,assets,color,image,decor,appearance,translate,validateImport});
+  function translateMany(fixtures,items,ids,dx,dy,geometry){
+    const selected=fixtures.filter(item=>ids.includes(item.id));let x=dx,y=dy;
+    for(const fixture of selected){const result=translate(fixture,items,dx,dy,geometry);if(result.blocked)return{blocked:true,fixtures,items};const ax=result.fixture.x-fixture.x,ay=result.fixture.y-fixture.y;x=dx>=0?Math.min(x,ax):Math.max(x,ax);y=dy>=0?Math.min(y,ay):Math.max(y,ay);}
+    let movedItems=items.map(item=>({...item}));const moved=fixtures.map(fixture=>{if(!ids.includes(fixture.id))return{...fixture};const result=translate(fixture,movedItems,x,y,geometry);movedItems=result.items;return result.fixture;});return{blocked:false,fixtures:moved,items:movedItems};
+  }
+  return Object.freeze({types,catalog,groups,findDecor,createDecor,cabinetTypes,cabinet,assets,color,image,decor,appearance,translate,translateMany,validateImport});
 });

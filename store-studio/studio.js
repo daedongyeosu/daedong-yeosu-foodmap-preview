@@ -12,6 +12,30 @@
   const exampleMode=Boolean(sample),draftKey=examples.draftKey(exampleId),templateId=params.get('template')||'';
   let selectedDecorId='',decorGesture=null,browseSection='전체';
   let libraryLimit=8;
+  let compositionIds=new Set(),savedCompositions=[],setsBusy=false,setsReadable=true,setsRevision='null';
+  const composition=window.ShopStudioComposition;
+  function renderCompositions(){
+    compositionIds=new Set([...compositionIds].filter(id=>state.decor.some(item=>item.id===id)));
+    $('compositionCount').textContent=`함께 선택한 가구 ${compositionIds.size}개 · 내 세트 ${savedCompositions.length}/12개 · 끌어서 이동하거나 방향 버튼을 사용하세요.`;
+    for(const id of ['compositionLeft','compositionRight','compositionUp','compositionDown','compositionDuplicate','compositionClear','compositionSave'])$(id).disabled=loading||importing||previewing||setsBusy||!compositionIds.size;
+    $('compositionSave').disabled=$('compositionSave').disabled||compositionIds.size>20||savedCompositions.length>=12;
+    $('compositionExport').disabled=loading||importing||previewing||setsBusy||!savedCompositions.length;$('compositionImport').disabled=loading||importing||previewing||setsBusy;
+    $('compositionLibrary').replaceChildren();
+    for(const [set,builtin] of [...composition.builtins.map(s=>[s,true]),...savedCompositions.map(s=>[s,false])]){
+      const row=document.createElement('div'),button=document.createElement('button');button.type='button';button.textContent=`${builtin?'견본 · ':''}${set.name} (${set.decor.length}개) 추가`;button.disabled=loading||importing||previewing||state.decor.length+set.decor.length>60;button.onclick=()=>addComposition(set);row.append(button);
+      if(!builtin){const remove=document.createElement('button');remove.type='button';remove.textContent='삭제';remove.setAttribute('aria-label',set.name+' 보관함에서 삭제');remove.disabled=setsBusy||loading||importing||previewing;remove.onclick=()=>{if(confirm('보관함에서 이 세트를 삭제할까요? 이미 배치한 가구는 그대로 남습니다.'))void storeCompositions(savedCompositions.filter(s=>s.id!==set.id));};row.append(remove);}
+      $('compositionLibrary').append(row);
+    }
+  }
+  async function storeCompositions(next){
+    if(setsBusy||loading||importing||previewing)return;if(!setsReadable){$('compositionStatus').textContent='보관함 읽기에 문제가 있어 기존 자료를 보호하기 위해 저장을 중지했습니다. 새로고침하거나 보관한 파일을 확인해 주세요.';return;}if(!db){$('compositionStatus').textContent='이 브라우저에서는 세트를 보관할 수 없습니다.';return;}
+    setsBusy=true;renderCompositions();try{await new Promise((resolve,reject)=>{const tx=db.transaction('drafts','readwrite'),store=tx.objectStore('drafts'),read=store.get('furniture-sets-v1');let conflict=false;read.onsuccess=()=>{if(JSON.stringify(read.result??null)!==setsRevision){conflict=true;tx.abort();}else store.put(next,'furniture-sets-v1');};tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(Error(conflict?'다른 화면에서 보관함을 변경했습니다. 새로고침한 뒤 다시 확인해 주세요.':'저장 공간 문제로 보관하지 못했습니다. 이전 보관함과 현재 배치는 유지합니다.'));});savedCompositions=next;setsRevision=JSON.stringify(next);$('compositionStatus').textContent='세트 보관함을 이 기기에 저장했습니다. 배치한 가구와 상품은 바꾸지 않았습니다.';}catch(error){$('compositionStatus').textContent=error?.message||'보관하지 못했습니다. 이전 보관함은 유지합니다.';}finally{setsBusy=false;renderCompositions();}
+  }
+  async function loadCompositions(){
+    try{const sets=await new Promise((resolve,reject)=>{const r=db.transaction('drafts').objectStore('drafts').get('furniture-sets-v1');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});setsRevision=JSON.stringify(sets??null);if(sets==null)return;if(!Array.isArray(sets)||sets.length>12)throw Error('invalid-sets');savedCompositions=sets.map(set=>composition.clean(set,crypto.randomUUID()));}
+    catch{setsReadable=false;$('compositionStatus').textContent='보관함을 읽지 못했습니다. 기존 보관함을 보호하기 위해 저장하지 않습니다.';}
+  }
+  function addComposition(set){if(loading||importing||previewing)return;if(state.decor.length+set.decor.length>60){say('세트를 놓을 공간이 부족합니다. 가구는 60개까지 배치합니다.',true);return;}change(()=>{const pieces=composition.instantiate(set,()=>crypto.randomUUID());state.decor.push(...pieces);compositionIds=new Set(pieces.map(item=>item.id));selectedDecorId=pieces[0].id;selectedId='';});}
   function renderLibrary(){
     const matches=design.findDecor($('decorSearch').value,$('decorGroup').value),container=$('decorLibrary');container.replaceChildren();
     $('decorLibraryCount').textContent=`${matches.length}종 도구 · 현재 ${state.decor.length}/60개 배치`;
@@ -129,18 +153,21 @@
     for(let i=0;i<3;i++){$(`zoneName${i+1}`).value=a.zoneNames[i];$(`zoneName${i+1}`).closest('label').hidden=i>=state.zones;if(i<state.zones){const label=document.createElement('span');label.textContent=a.zoneNames[i];$('zoneLabels').append(label);}}
     $('decorRoot').replaceChildren();$('decorList').replaceChildren();
     for(const item of state.decor){
-      const node=document.createElement('button');node.type='button';node.className=`decor decor-${item.type}${item.id===selectedDecorId?' decor-selected':''}${item.hidden?' decor-hidden':''}`;node.dataset.decorId=item.id;node.setAttribute('aria-label',`${item.text} 가구 선택`);node.tabIndex=previewing?-1:0;
+      const node=document.createElement('button');node.type='button';node.className=`decor decor-${item.type}${item.id===selectedDecorId?' decor-selected':''}${compositionIds.has(item.id)?' decor-multi':''}${item.hidden?' decor-hidden':''}`;node.dataset.decorId=item.id;node.setAttribute('aria-label',`${item.text} 가구 선택`);node.tabIndex=previewing?-1:0;
       for(const key of ['x','y','width','height'])node.style[{x:'left',y:'top',width:'width',height:'height'}[key]]=item[key]+'%';node.style.setProperty('--decor-color',item.color);
       if(design.catalog[item.type]?.modern){node.classList.add('decor-vector');node.append(window.ShopStudioFurnitureArt.draw(document,item,'scene-'+item.id));}
       const label=document.createElement('span');label.textContent=item.text;label.hidden=item.showLabel===false;node.append(label);
       if(['rack','glass'].includes(item.type))for(const level of [36,68,100]){const shelf=document.createElement('i');shelf.style.top=level+'%';node.append(shelf);}
       if(!previewing||!item.hidden)$('decorRoot').append(node);
       const entry=document.createElement('button');entry.type='button';entry.textContent=`${design.types[item.type]} · ${item.text}${item.locked?' 🔒':''}${item.hidden?' (숨김)':''}`;entry.disabled=loading||importing||previewing;entry.setAttribute('aria-pressed',String(item.id===selectedDecorId));entry.onclick=()=>{selectedDecorId=item.id;selectedId='';render();$('decorTools').scrollIntoView({block:'nearest'});};$('decorList').append(entry);
+      const checkLabel=document.createElement('label');checkLabel.className='composition-check';const check=document.createElement('input');check.type='checkbox';check.dataset.groupId=item.id;check.checked=compositionIds.has(item.id);check.disabled=loading||importing||previewing;check.setAttribute('aria-label',item.text+' 함께 선택');check.onchange=()=>{check.checked?compositionIds.add(item.id):compositionIds.delete(item.id);render();[...$('decorList').querySelectorAll('input')].find(node=>node.dataset.groupId===item.id)?.focus({preventScroll:true});};checkLabel.append(check,document.createTextNode('묶음에 포함'));$('decorList').append(checkLabel);
     }
     const item=state.decor.find(value=>value.id===selectedDecorId);$('decorTools').hidden=!item||previewing;
     if(item){for(const [id,key] of [['decorText','text'],['decorColor','color'],['decorWidth','width'],['decorHeight','height'],['decorX','x'],['decorY','y']])$(id).value=item[key];$('decorLocked').checked=item.locked;$('decorHidden').checked=item.hidden;}
     $('decorAccent').value=item?.accent||'#ead9ba';$('decorFinish').value=item?.finish||'plain';$('decorShowLabel').checked=item?.showLabel!==false;
     for(const id of ['decorAccent','decorFinish'])$(id).closest('label').hidden=!design.catalog[item?.type]?.modern;
+    $('cabinetSettings').hidden=!design.cabinetTypes.includes(item?.type);$('cabinetEnabled').checked=!!item?.cabinet;$('cabinetFields').hidden=!item?.cabinet;
+    const cabinet=item?.cabinet||{rows:3,columns:2,doors:'none',handle:'bar',back:true};for(const [id,key] of [['cabinetRows','rows'],['cabinetColumns','columns'],['cabinetDoors','doors'],['cabinetHandle','handle']])$(id).value=cabinet[key];$('cabinetBack').checked=cabinet.back;
     for(const id of ['decorWidth','decorHeight','decorX','decorY','removeDecor'])$(id).disabled=!item||item.locked||loading||importing||previewing;
     for(const id of ['exportScene','importScene'])$(id).disabled=loading||importing;
   }
@@ -208,6 +235,7 @@
     renderCustomer();
     renderBrowse();
     renderLibrary();
+    renderCompositions();
     window.ShopStudioCloud?.refresh();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
@@ -216,17 +244,27 @@
   for(let i=0;i<3;i++)$(`zoneName${i+1}`).addEventListener('change',event=>change(()=>{state.appearance.zoneNames[i]=event.target.value.trim().slice(0,24)||`구역 ${i+1}`;}));
   $('itemSection').addEventListener('change',event=>change(()=>{if(selected())selected().section=event.target.value.trim().slice(0,24);}));
   $('itemDecor').addEventListener('change',event=>change(()=>{if(selected())selected().decorId=state.decor.some(item=>item.id===event.target.value)?event.target.value:'';}));
-  function placeDecor(item,x,y){const result=design.translate(item,state.items,x-item.x,y-item.y,layout);if(result.blocked){say('가구 또는 연결된 상품의 위치 잠금을 먼저 풀어 주세요.',true);return false;}Object.assign(item,result.fixture);state.items=result.items;return true;}
+  function placeDecor(item,x,y,ids=[]){if(ids.length>1){const result=design.translateMany(state.decor,state.items,ids,x-item.x,y-item.y,layout);if(result.blocked){say('묶음의 가구 또는 연결된 상품의 위치 잠금을 먼저 풀어 주세요.',true);return false;}state.decor=result.fixtures;state.items=result.items;return true;}const result=design.translate(item,state.items,x-item.x,y-item.y,layout);if(result.blocked){say('가구 또는 연결된 상품의 위치 잠금을 먼저 풀어 주세요.',true);return false;}Object.assign(item,result.fixture);state.items=result.items;return true;}
   function addFurniture(type){if(state.decor.length>=60){say('가구·장식은 60개까지 배치할 수 있습니다.',true);return;}change(()=>{const item=design.createDecor(type,crypto.randomUUID());state.decor.push(item);selectedDecorId=item.id;selectedId='';});}
   $('addDecor').onclick=()=>addFurniture($('decorType').value);
   $('decorSearch').oninput=()=>{libraryLimit=8;renderLibrary();};$('decorGroup').onchange=()=>{libraryLimit=8;renderLibrary();};$('decorMore').onclick=()=>{libraryLimit+=8;renderLibrary();};
+  $('cabinetEnabled').onchange=event=>change(()=>{const item=state.decor.find(i=>i.id===selectedDecorId);if(item&&design.cabinetTypes.includes(item.type))item.cabinet=event.target.checked?{rows:3,columns:2,doors:'none',handle:'bar',back:true}:null;});
+  for(const [id,key] of [['cabinetRows','rows'],['cabinetColumns','columns'],['cabinetDoors','doors'],['cabinetHandle','handle'],['cabinetBack','back']])$(id).onchange=event=>change(()=>{const item=state.decor.find(i=>i.id===selectedDecorId);if(!item?.cabinet)return;item.cabinet=design.cabinet({...item.cabinet,[key]:event.target.type==='checkbox'?event.target.checked:event.target.type==='number'?Number(event.target.value):event.target.value});});
+  function moveComposition(dx,dy){if(!compositionIds.size)return;const result=design.translateMany(state.decor,state.items,[...compositionIds],dx,dy,layout);if(result.blocked){say('묶음의 가구 또는 연결된 상품의 위치 잠금을 먼저 풀어 주세요.',true);return;}change(()=>{state.decor=result.fixtures;state.items=result.items;});}
+  for(const [id,dx,dy] of [['compositionLeft',-2,0],['compositionRight',2,0],['compositionUp',0,-2],['compositionDown',0,2]])$(id).onclick=()=>moveComposition(dx,dy);
+  $('compositionClear').onclick=()=>{compositionIds.clear();render();};
+  $('compositionDuplicate').onclick=()=>{const pieces=state.decor.filter(i=>compositionIds.has(i.id));if(!pieces.length)return;if(state.decor.length+pieces.length>60){say('묶음 전체를 복제하려면 가구 60개 한도 안에 여유가 있어야 합니다.',true);return;}change(()=>{const copies=pieces.map(i=>design.decor({...i,id:crypto.randomUUID(),locked:false,hidden:false})),moved=design.translateMany(copies,[],copies.map(i=>i.id),4,3,layout).fixtures;state.decor.push(...moved);compositionIds=new Set(moved.map(i=>i.id));selectedDecorId=moved[0].id;selectedId='';});};
+  $('compositionSave').onclick=()=>{try{if(savedCompositions.length>=12)throw Error('내 세트는 12개까지 보관합니다.');const set=composition.create($('compositionName').value,state.decor,[...compositionIds],crypto.randomUUID());void storeCompositions([...savedCompositions,set]);}catch(error){$('compositionStatus').textContent=error.message;}};
+  $('compositionExport').onclick=()=>{if(!savedCompositions.length||previewing)return;const blob=new Blob([JSON.stringify({format:'matjido-furniture-sets',version:1,sets:savedCompositions},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='맛지도-내-가구세트.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+  $('compositionImport').onclick=()=>$('compositionFile').click();
+  $('compositionFile').onchange=async event=>{const file=event.target.files?.[0];event.target.value='';if(!file||loading||importing||previewing||setsBusy)return;try{if(file.size>256*1024)throw Error('256KB 이하의 세트 파일을 선택해 주세요.');const added=composition.importFile(JSON.parse(await file.text()),()=>crypto.randomUUID());if(savedCompositions.length+added.length>12)throw Error('보관함은 12개까지입니다. 먼저 필요 없는 세트를 정리해 주세요.');if(confirm(`${added.length}개 세트를 보관함에 추가할까요? 현재 배치는 바꾸지 않습니다.`))await storeCompositions([...savedCompositions,...added]);}catch(error){$('compositionStatus').textContent=error instanceof SyntaxError?'세트 파일을 읽지 못했습니다. 맛지도 세트 JSON 파일을 선택해 주세요.':error.message;}};
   for(const [id,key,numeric] of [['decorText','text',false],['decorColor','color',false],['decorAccent','accent',false],['decorFinish','finish',false],['decorShowLabel','showLabel',false],['decorWidth','width',true],['decorHeight','height',true],['decorX','x',true],['decorY','y',true],['decorLocked','locked',false],['decorHidden','hidden',false]])$(id).addEventListener('change',event=>change(()=>{const item=state.decor.find(value=>value.id===selectedDecorId);if(!item||item.locked&&numeric)return;if(key==='x'||key==='y'){placeDecor(item,key==='x'?Number(event.target.value):item.x,key==='y'?Number(event.target.value):item.y);return;}item[key]=event.target.type==='checkbox'?event.target.checked:numeric?Number(event.target.value):event.target.value;Object.assign(item,design.decor(item));}));
   $('removeDecor').onclick=()=>{const item=state.decor.find(value=>value.id===selectedDecorId);if(!item||item.locked)return;change(()=>{state.decor=state.decor.filter(value=>value.id!==item.id);state.items.forEach(value=>{if(value.decorId===item.id)value.decorId='';});selectedDecorId='';});};
   $('duplicateDecor').onclick=()=>{if(state.decor.length>=60)return;change(()=>{const item=state.decor.find(value=>value.id===selectedDecorId);if(!item)return;const copy=design.decor({...item,id:crypto.randomUUID(),x:item.x+3,y:item.y+3,locked:false,hidden:false});state.decor.push(copy);selectedDecorId=copy.id;});};
   function reorderDecor(front){change(()=>{const item=state.decor.find(value=>value.id===selectedDecorId);if(!item)return;state.decor=state.decor.filter(value=>value.id!==item.id);front?state.decor.push(item):state.decor.unshift(item);});}
   $('decorFront').onclick=()=>reorderDecor(true);$('decorBack').onclick=()=>reorderDecor(false);
-  $('decorRoot').addEventListener('pointerdown',event=>{const node=event.target.closest('[data-decor-id]');if(!node||previewing||loading||importing||event.button!==0)return;selectedDecorId=node.dataset.decorId;selectedId='';render();const item=state.decor.find(value=>value.id===selectedDecorId);if(item.locked)return;const fresh=$('decorRoot').querySelector(`[data-decor-id="${item.id}"]`);fresh.setPointerCapture(event.pointerId);decorGesture={node:fresh,pointerId:event.pointerId,before:clone(state),rect:scene.getBoundingClientRect(),startX:item.x,startY:item.y,x:event.clientX,y:event.clientY,moved:false};event.preventDefault();});
-  $('decorRoot').addEventListener('pointermove',event=>{const g=decorGesture;if(!g||g.pointerId!==event.pointerId)return;const dx=event.clientX-g.x,dy=event.clientY-g.y;if(Math.abs(dx)+Math.abs(dy)<4&&!g.moved)return;g.moved=true;const item=state.decor.find(value=>value.id===selectedDecorId);if(!placeDecor(item,g.startX+dx/g.rect.width*100,g.startY+dy/g.rect.height*100))return;g.node.style.left=item.x+'%';g.node.style.top=item.y+'%';for(const linked of state.items.filter(value=>value.decorId===item.id)){const node=itemsRoot.querySelector(`[data-item-id="${linked.id}"]`);if(node)position(node,linked);}});
+  $('decorRoot').addEventListener('pointerdown',event=>{const node=event.target.closest('[data-decor-id]');if(!node||previewing||loading||importing||event.button!==0)return;selectedDecorId=node.dataset.decorId;selectedId='';render();const item=state.decor.find(value=>value.id===selectedDecorId);if(item.locked)return;const fresh=$('decorRoot').querySelector(`[data-decor-id="${item.id}"]`);fresh.setPointerCapture(event.pointerId);decorGesture={node:fresh,pointerId:event.pointerId,before:clone(state),ids:compositionIds.has(item.id)?[...compositionIds]:[item.id],rect:scene.getBoundingClientRect(),startX:item.x,startY:item.y,x:event.clientX,y:event.clientY,moved:false};event.preventDefault();});
+  $('decorRoot').addEventListener('pointermove',event=>{const g=decorGesture;if(!g||g.pointerId!==event.pointerId)return;const dx=event.clientX-g.x,dy=event.clientY-g.y;if(Math.abs(dx)+Math.abs(dy)<4&&!g.moved)return;g.moved=true;const item=state.decor.find(value=>value.id===selectedDecorId);if(!placeDecor(item,g.startX+dx/g.rect.width*100,g.startY+dy/g.rect.height*100,g.ids))return;for(const fixture of state.decor.filter(i=>g.ids.includes(i.id))){const node=$('decorRoot').querySelector(`[data-decor-id="${fixture.id}"]`);if(node){node.style.left=fixture.x+'%';node.style.top=fixture.y+'%';}}for(const linked of state.items.filter(value=>g.ids.includes(value.decorId))){const node=itemsRoot.querySelector(`[data-item-id="${linked.id}"]`);if(node)position(node,linked);}});
   for(const type of ['pointerup','pointercancel'])$('decorRoot').addEventListener(type,event=>{const g=decorGesture;if(!g||g.pointerId!==event.pointerId)return;decorGesture=null;if(type==='pointercancel')state=g.before;else if(g.moved){past.push(g.before);if(past.length>20)past.shift();future.length=0;persist();}render();});
   $('zoomScene').onclick=()=>{const active=$('sceneViewport').classList.toggle('zoomed');$('zoomScene').setAttribute('aria-pressed',String(active));$('zoomScene').textContent=active?'공간 전체 보기':'가까이 보기';};
   $('exportScene').onclick=()=>{const file=new Blob([JSON.stringify({format:'matjido-studio',version:1,example:exampleMode,exampleId,scene:state})],{type:'application/json'}),url=URL.createObjectURL(file),link=document.createElement('a');link.href=url;link.download=exampleMode?`맛지도_${sample.name}_시안.json`:'맛지도_내상점_시안.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);say('시안 파일을 내려받았습니다. 사진과 배치가 들어 있으니 안전한 곳에 보관하세요.');};
@@ -398,7 +436,7 @@
       return;
     }
     if(exampleMode)state=restoreScene(sample.create());
-    render();try{db=await storageOpen();const draft=await readDraft();if(draft&&Array.isArray(draft.items)){state=restoreScene(draft);say('이 기기에 저장한 사진과 배치를 불러왔습니다.');}}
+    render();try{db=await storageOpen();const draft=await readDraft();if(draft&&Array.isArray(draft.items)){state=restoreScene(draft);say('이 기기에 저장한 사진과 배치를 불러왔습니다.');}await loadCompositions();}
     catch{say('이 브라우저에서는 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);}
     if(!exampleMode&&!state.catalogStoreId)try{const saved=JSON.parse(localStorage.getItem('matjido-store-onboarding-preview-v1')||'null');if(saved?.previewOnly)state.catalogStoreId=catalog.id(saved.storeId);}catch{}
     previewing=exampleMode&&new URLSearchParams(location.search).get('view')==='customer';

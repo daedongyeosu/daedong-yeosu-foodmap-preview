@@ -21,6 +21,19 @@
     const shelves=(count=3)=>{for(let i=1;i<=count;i++)r(9,12+i*65/(count+1),82,3,accent,0);};
     const wheels=()=>{e(22,91,6,5,ink);e(78,91,6,5,ink);};
     const drawers=(rows,columns)=>{for(let row=0;row<rows;row++)for(let col=0;col<columns;col++){const w=80/columns,h=69/rows;r(10+col*w,13+row*h,w-2,h-2,row%2?accent:material);l(13+col*w+w*.3,13+row*h+h*.45,13+col*w+w*.6,13+row*h+h*.45);}};
+    if(item.cabinet){
+      const c=item.cabinet,rows=Math.max(1,Math.min(6,Math.round(c.rows))),columns=Math.max(1,Math.min(6,Math.round(c.columns)));
+      if(c.back)r(5,3,90,90);else{r(5,3,5,90);r(90,3,5,90);r(5,3,90,5);}
+      r(4,91,92,5,accent);const w=80/columns,h=78/rows;
+      for(let row=0;row<rows;row++)for(let column=0;column<columns;column++){
+        const x=10+column*w,y=9+row*h;
+        const cell=make('g',{'data-cabinet-cell':row+'-'+column},svg);
+        if(c.doors!=='none'){const pane=r(x+1,y+1,w-2,h-2,c.doors==='glass'?glass:material);if(c.doors==='glass')pane.setAttribute('fill-opacity','.55');cell.append(pane);}
+        l(x,y+h,x+w,y+h,accent,2);if(column)l(x,y,x,y+h,accent,2);
+        if(c.doors!=='none'&&c.handle!=='none'){const handle=c.handle==='knob'?e(x+w-4,y+h/2,1.4,1.4,accent):r(x+w-5,y+h*.35,1.8,h*.3,accent,1);handle.setAttribute('data-cabinet-handle',c.handle);cell.append(handle);}
+      }
+      return svg;
+    }
     switch(item.type){
       case 'table':r(44,40,12,45,accent);e(50,91,27,6,accent);e(50,30,46,22);e(50,27,43,18);break;
       case 'chair':r(15,5,70,45,material,12);legs(20,80,50);r(10,49,80,13,accent,5);l(22,14,22,40,accent,3);l(78,14,78,40,accent,3);break;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-4">
+  <link rel="stylesheet" href="studio.css?v=20261017-5">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -52,6 +52,16 @@
           <button id="decorMore" type="button">도구 더 보기</button>
           <label>추가할 도구<select id="decorType"><option value="rack">나무 진열장</option><option value="glass">유리 쇼케이스</option><option value="ledge">벽 선반</option><option value="counter">계산·픽업대</option><option value="board">안내판</option><option value="window">창문</option><option value="plant">화분</option></select></label><button id="addDecor">공간에 추가</button>
           <p class="hint">가구는 상품사진 뒤에 배치됩니다. 겹친 가구는 아래 목록에서 선택하세요. 최대 60개입니다.</p><div id="decorList"></div>
+        </details>
+        <details id="compositionSettings"><summary>내 진열 구성 · 세트 보관함</summary>
+          <p class="hint">가구 목록에서 함께 쓸 가구를 체크하세요. 묶음 이동·복제·세트 보관은 선택한 가구에만 적용합니다. 상품사진·가격·재고는 복제하지 않습니다.</p>
+          <p id="compositionCount" class="hint" role="status">함께 선택한 가구 0개</p>
+          <div class="item-actions"><button id="compositionLeft" type="button" aria-label="선택 묶음 왼쪽으로">←</button><button id="compositionUp" type="button" aria-label="선택 묶음 위로">↑</button><button id="compositionDown" type="button" aria-label="선택 묶음 아래로">↓</button><button id="compositionRight" type="button" aria-label="선택 묶음 오른쪽으로">→</button><button id="compositionDuplicate" type="button">선택 묶음 복제</button><button id="compositionClear" type="button">함께 선택 해제</button></div>
+          <label>보관할 세트 이름<input id="compositionName" maxlength="40" placeholder="예: 봄맞이 진열 코너"></label><button id="compositionSave" type="button">선택한 가구 세트 보관</button>
+          <p class="hint">내 세트는 이 기기에 최대 12개, 세트마다 가구 20개까지 보관합니다. 서버 계정 저장과는 별개입니다. 파일로 보관해 다른 기기에 가져갈 수 있습니다.</p>
+          <div id="compositionLibrary" class="composition-library"></div>
+          <div class="item-actions"><button id="compositionExport" type="button">내 세트 파일로 보관</button><button id="compositionImport" type="button">세트 파일 가져오기</button><input id="compositionFile" type="file" accept=".json,application/json" hidden></div>
+          <p id="compositionStatus" class="hint" role="status" aria-live="polite"></p>
         </details>
         <details open><summary>2. 진열할 사진</summary>
           <div class="upload-actions"><button id="choosePhotos" type="button">사진·파일에서 선택</button><button id="takePhoto" type="button">카메라로 촬영</button></div>
@@ -126,6 +136,16 @@
           <label>표면 재질<select id="decorFinish"><option value="plain">단색</option><option value="wood">나뭇결</option><option value="metal">금속 결</option><option value="fabric">직물 무늬</option></select></label>
           <label><input id="decorShowLabel" type="checkbox"> 가구 문구 표시</label>
           <p class="hint">보조색·표면 재질은 이번에 추가한 36종 도구에 적용됩니다. 예전 도구의 모양은 그대로 유지합니다.</p>
+          <section id="cabinetSettings" hidden><h3>내 진열장 구성 만들기</h3>
+            <label><input id="cabinetEnabled" type="checkbox"> 칸 구성 직접 바꾸기</label>
+            <div id="cabinetFields" hidden>
+              <label>세로 단수<input id="cabinetRows" type="number" min="1" max="6" step="1" value="3"></label>
+              <label>가로 칸수<input id="cabinetColumns" type="number" min="1" max="6" step="1" value="2"></label>
+              <label>문 모양<select id="cabinetDoors"><option value="none">문 없는 진열장</option><option value="glass">유리문</option><option value="solid">막힌 문</option></select></label>
+              <label>손잡이<select id="cabinetHandle"><option value="bar">막대형</option><option value="knob">원형</option><option value="none">없음</option></select></label>
+              <label><input id="cabinetBack" type="checkbox" checked> 뒤판 표시</label>
+            </div><p class="hint">진열장 8종에서 1~6단 × 1~6칸을 조합합니다. 체크를 해제하면 원래 모양으로 돌아갑니다. 문은 그림 모양이며 열고 닫는 기능은 아닙니다. 상품사진은 별도로 배치합니다.</p>
+          </section>
           <label>가로 크기<input id="decorWidth" type="range" min="10" max="90"></label><label>세로 크기<input id="decorHeight" type="range" min="5" max="65"></label>
           <label>가로 위치<input id="decorX" type="range" min="0" max="90"></label><label>세로 위치<input id="decorY" type="range" min="18" max="93"></label>
           <label><input id="decorLocked" type="checkbox"> 위치 잠금</label><label><input id="decorHidden" type="checkbox"> 고객에게 숨기기</label>
@@ -157,8 +177,8 @@
   <script src="layout.js?v=20261016-2" defer></script>
   <script src="customer-links.js?v=20261016-3" defer></script>
   <script src="catalog.js?v=20261016-4" defer></script>
-  <script src="design.js?v=20261017-4" defer></script><script src="furniture-art.js?v=20261017-4" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
+  <script src="design.js?v=20261017-5" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-5" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-4" defer></script>
+  <script src="studio.js?v=20261017-5" defer></script>
 </body></html>
