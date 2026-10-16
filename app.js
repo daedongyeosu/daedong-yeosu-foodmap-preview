@@ -1393,6 +1393,12 @@ function routeKey(name) {
   if (text.includes('배달의민족') || text === '배민') return 'baemin';
   return 'brand';
 }
+function canonicalRouteKey(route) {
+  route = route || {};
+  const explicitKey = String(route?.key || '').trim();
+  if (explicitKey && Object.hasOwn(APP_META, explicitKey)) return explicitKey;
+  return routeKey(route?.name);
+}
 function parseCoordinate(value) {
   if (value === null || value === undefined || String(value).trim() === '') return null;
   const number = Number(value);
@@ -1543,7 +1549,10 @@ function normalizedStore(raw, index) {
   const routes = sourceRoutes
     .filter(route => route && route.enabled !== false && route.url && safeHref(route.url) !== '#')
     .map(route => {
-      const key = routeKey(route.name);
+      // The secure detail API already sends a canonical route key.  Preserve it
+      // even when a shop uses a custom customer-facing label such as
+      // "맛지도에서 배달 주문" or "네이버지도".
+      const key = canonicalRouteKey(route);
       const url = safeHref(route.url);
       return {...route, key, url, customerUsable: isCustomerUsableExternalRoute(key, url)};
     });
