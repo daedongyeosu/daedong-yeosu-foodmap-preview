@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-5">
+  <link rel="stylesheet" href="studio.css?v=20261017-6">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -42,6 +42,18 @@
           <label><input id="designAwning" type="checkbox"> 줄무늬 차양</label><label><input id="designShelves" type="checkbox" checked> 기본 공통 선반 표시</label><label><input id="designTags" type="checkbox"> 상품 이름표 표시</label>
           <label>첫 구역 이름<input id="zoneName1" maxlength="24"></label><label>둘째 구역 이름<input id="zoneName2" maxlength="24"></label><label>셋째 구역 이름<input id="zoneName3" maxlength="24"></label>
           <p class="hint">공간 나누기에서 선택한 구역 수만큼 표시합니다.</p>
+        </details>
+        <details id="brandingSettings"><summary>내 로고·벽지·바닥·포스터</summary>
+          <p class="hint">직접 만든 로고와 사용권이 있는 사진·패턴으로 꾸미세요. 사진은 다른 상품과 함께 이 기기에 저장됩니다. 벽지·로고·장식은 주문되는 상품이 아닙니다.</p>
+          <button id="chooseLogo" type="button">내 로고 사진·파일 선택</button><input id="logoFile" type="file" accept="image/*" hidden>
+          <label>로고 크기<input id="logoSize" type="range" min="6" max="22" value="12"></label><label>로고 위치<select id="logoSide"><option value="left">가게 이름 왼쪽</option><option value="right">가게 이름 오른쪽</option></select></label><button id="removeLogo" type="button">로고만 빼기</button>
+          <hr><label>꾸밀 면<select id="surfaceTarget"><option value="wall">벽</option><option value="floor">바닥</option></select></label>
+          <button id="chooseSurface" type="button">사진·패턴 파일로 꾸미기</button><input id="surfaceFile" type="file" accept="image/*" hidden>
+          <label>사진 배치<select id="surfaceMode"><option value="cover">면을 채우는 한 장</option><option value="repeat">무늬 반복하기</option></select></label><label>반복 무늬 크기<input id="surfaceScale" type="range" min="40" max="480" value="160"></label>
+          <label>사진 진하기<input id="surfaceOpacity" type="range" min="0" max="100" value="100"></label><label>가로 중심<input id="surfaceX" type="range" min="0" max="100" value="50"></label><label>세로 중심<input id="surfaceY" type="range" min="0" max="100" value="50"></label><button id="removeSurface" type="button">선택한 면의 사진만 빼기</button>
+          <p class="hint">사진을 빼면 기존 벽 재질과 색·바닥색이 다시 보입니다. 반복 무늬 크기는 반복 모드에서 조절합니다. 실제 매장 사진은 방문 안내의 사진과 구분해 온라인 배경으로 표시합니다.</p>
+          <hr><button id="chooseArtwork" type="button">포스터·그림·장식 사진 추가</button><input id="artworkFiles" type="file" accept="image/*" multiple hidden>
+          <p class="hint">장식 사진은 위치·크기·회전·액자를 조절할 수 있습니다. 상품사진과 합해 최대 40개입니다.</p>
         </details>
         <details id="furnitureSettings"><summary>진열대·가구·안내판 배치</summary>
           <p class="hint">48종의 가구·장식을 업종에 상관없이 섞어 쓰세요. 진열장·마네킹은 사진을 놓는 바탕이며, 가상 착장이나 실제 조명 시뮬레이션은 아닙니다.</p>
@@ -101,7 +113,7 @@
         </nav>
         <p id="virtualSpaceLabel" class="space-label" hidden>사장님이 꾸민 온라인 공간 · 사진을 눌러 상품을 살펴보세요</p>
         <div id="sceneViewport" class="scene-viewport" tabindex="0" aria-label="상점 공간 · 가까이 보기에서는 좌우로 이동할 수 있습니다"><div id="scene" class="scene" data-material="plain" tabindex="0" aria-label="상품사진을 배치하는 진열장">
-          <div id="sceneFloor" class="scene-floor" aria-hidden="true"></div><div id="sceneAwning" class="scene-awning" aria-hidden="true" hidden></div>
+          <div id="sceneWallSurface" class="scene-wall-surface" aria-hidden="true" hidden></div><div id="sceneFloor" class="scene-floor" aria-hidden="true"><div id="sceneFloorSurface" class="scene-floor-surface" hidden></div></div><div id="sceneAwning" class="scene-awning" aria-hidden="true" hidden></div>
           <div class="scene-lights" aria-hidden="true"></div><h2 id="sign">나의 작은 카페</h2>
           <div id="zoneLabels" class="zone-labels"></div><div id="dividers" aria-hidden="true"></div><div id="shelfLines" aria-hidden="true"></div><div id="decorRoot"></div><div id="items"></div>
           <p id="emptyScene">☕<br>커피, 빵, 소품 사진을 올려<br>내 가게를 채워보세요.</p>
@@ -109,6 +121,9 @@
         <p id="saveStatus" role="status" aria-live="polite">사진과 배치를 이 기기에 자동 저장합니다.</p>
         <section id="itemTools" hidden aria-label="선택한 상품 편집">
           <h2>선택한 사진 꾸미기</h2>
+          <label>사진 용도<select id="itemPurpose"><option value="product">판매상품 사진</option><option value="decoration">포스터·그림·장식</option></select></label>
+          <label id="artworkFrameField" hidden>장식 액자<select id="artworkFrame"><option value="none">액자 없음</option><option value="wood">나무색 액자</option><option value="white">흰색 액자</option><option value="dark">짙은색 액자</option></select></label>
+          <p id="artworkHelp" class="hint" hidden>장식 사진은 고객 상품 목록·체험 장바구니·상품등록에 포함하지 않습니다.</p>
           <div class="upload-actions"><button id="replacePhoto" type="button">이 사진 바꾸기 · 사진·파일</button><button id="retakePhoto" type="button">다시 촬영</button></div>
           <input id="replacementPhoto" type="file" accept="image/*" hidden><input id="replacementCamera" type="file" accept="image/*" capture="environment" hidden>
           <p class="hint">사진만 바꾸며 위치·크기·진열대·연결 상품은 유지합니다. 위치 잠금 상태에서도 사진은 바꿀 수 있습니다.</p>
@@ -177,8 +192,8 @@
   <script src="layout.js?v=20261016-2" defer></script>
   <script src="customer-links.js?v=20261016-3" defer></script>
   <script src="catalog.js?v=20261016-4" defer></script>
-  <script src="design.js?v=20261017-5" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-5" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
+  <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-5" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-5" defer></script>
+  <script src="studio.js?v=20261017-6" defer></script>
 </body></html>
