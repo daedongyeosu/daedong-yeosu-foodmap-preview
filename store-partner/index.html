@@ -70,8 +70,8 @@
         <h2 id="stepTwoTitle">사진과 색깔로 가게를 꾸며보세요</h2>
         <p class="lead">사진은 이 기기에서 미리보기만 하며 아직 서버로 전송하지 않습니다.</p>
         <div class="photo-grid">
-          <label class="photo-picker"><span>🏪</span><b>가게 외관 사진</b><small>간판과 입구가 보이는 사진</small><input id="exteriorPhoto" type="file" accept="image/*" capture="environment"><img id="exteriorPreview" alt="가게 외관 사진 미리보기" hidden></label>
-          <label class="photo-picker"><span>🪴</span><b>가게 내부 사진</b><small>진열대가 보이는 사진</small><input id="interiorPhoto" type="file" accept="image/*" capture="environment"><img id="interiorPreview" alt="가게 내부 사진 미리보기" hidden></label>
+          <label class="photo-picker"><span>🏪</span><b>가게 외관 사진</b><small>저장된 사진이나 파일에서 선택하세요</small><input id="exteriorPhoto" type="file" accept="image/*"><img id="exteriorPreview" alt="가게 외관 사진 미리보기" hidden></label>
+          <label class="photo-picker"><span>🪴</span><b>가게 내부 사진</b><small>저장된 사진이나 파일에서 선택하세요</small><input id="interiorPhoto" type="file" accept="image/*"><img id="interiorPreview" alt="가게 내부 사진 미리보기" hidden></label>
         </div>
         <fieldset>
           <legend>원하는 상점 분위기</legend>
@@ -83,6 +83,8 @@
           </div>
         </fieldset>
         <aside class="ai-next"><b>AI 상점 꾸미기는 다음 단계에서 연결합니다.</b><span>외관과 내부 사진을 바탕으로 간판·색상·진열대 시안을 만들고 사장님이 선택·수정하는 구조입니다.</span></aside>
+        <a id="studioLink" class="customer-preview-link" href="../store-studio/" target="_blank" rel="noopener">사진으로 진열장 직접 꾸미기 ↗</a>
+        <p class="lead">별도 창에서 구역·재질·조명을 고르고 상품사진을 배치해 보세요. 입점 준비내용은 이 창에 그대로 남습니다.</p>
       </section>
 
       <section class="form-step" data-step="3" aria-labelledby="stepThreeTitle" hidden>
@@ -139,7 +141,7 @@
                 <p id="livePricingStatus" class="live-pricing-rule" role="status">가격은 입력한 최저가격 아래로 내려가지 않습니다. 행사 상품은 최저가 순서만으로 노출하지 않습니다.</p>
               </div>
             </section>
-            <label class="product-photo-picker">📷 상품사진 선택<input id="productPhoto" type="file" accept="image/*" capture="environment"><small id="productPhotoStatus">사진은 이 기기에서만 미리 확인합니다.</small></label>
+            <label class="product-photo-picker">📷 상품사진 선택<input id="productPhoto" type="file" accept="image/*"><small id="productPhotoStatus">사진은 이 기기에서만 미리 확인합니다.</small></label>
             <button id="addProduct" class="add-product" type="button">상품 초안에 추가하기</button>
           </div>
 
@@ -158,7 +160,7 @@
               <b>메뉴판이나 가격표를 똑바로 촬영해 주세요.</b>
               <span>AI가 상품명·가격·단위를 초안으로 만들고, 사장님이 반드시 확인한 뒤 등록하는 방식입니다.</span>
             </div>
-            <label class="file-import">📸 메뉴판·가격표 사진 선택<input id="priceBoardPhoto" type="file" accept="image/*" capture="environment"><small>현재 프리뷰에서는 사진 미리보기까지만 제공하며 외부로 전송하지 않습니다.</small></label>
+            <label class="file-import">📸 메뉴판·가격표 사진 선택<input id="priceBoardPhoto" type="file" accept="image/*"><small>현재 프리뷰에서는 사진 미리보기까지만 제공하며 외부로 전송하지 않습니다.</small></label>
             <img id="priceBoardPreview" class="price-board-preview" alt="가격표 사진 미리보기" hidden>
             <p id="photoAiStatus" class="method-status" role="status">AI 분석 서버를 연결하기 전에는 상품정보를 자동 생성하지 않습니다.</p>
           </div>
@@ -217,6 +219,6 @@
   </section>
 
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
-  <script src="app.js?v=20261013-1" defer></script>
+  <script src="app.js?v=20261013-1-shop-studio-1" defer></script>
 </body>
 </html>

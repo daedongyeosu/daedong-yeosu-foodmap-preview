@@ -162,3 +162,10 @@ navButtons.forEach(button=>button.addEventListener('click',()=>{const target=Num
 agreement.addEventListener('change',()=>{saveButton.disabled=!agreement.checked;});
 saveButton.addEventListener('click',saveDraft);
 loadDraft();showProductMethod();renderProducts();updatePricePreview();updateNext();
+
+function updateStudioLink(){
+  const styles={'실제 가게와 비슷하게':'market','따뜻하고 정겨운 가게':'cafe','깔끔하고 현대적인 가게':'modern','캐릭터가 있는 재미있는 가게':'playful'};
+  document.querySelector('#studioLink').href='../store-studio/?style='+encodeURIComponent(styles[selected('theme')]||'cafe');
+}
+document.querySelectorAll('[name="theme"]').forEach(input=>input.addEventListener('change',updateStudioLink));
+updateStudioLink();
