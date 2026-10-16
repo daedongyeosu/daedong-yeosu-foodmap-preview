@@ -216,7 +216,7 @@
       if(!photoIds.has(item.id))continue;
       const listButton=document.createElement('button');listButton.type='button';listButton.disabled=previewing||loading||importing;listButton.setAttribute('aria-label',`${item.name} 목록에서 선택`);listButton.setAttribute('aria-pressed',String(item.id===selectedId));
       const thumbnail=document.createElement('img');thumbnail.src=item.src;thumbnail.alt='';const label=document.createElement('span');label.textContent=item.name;const flags=document.createElement('small');flags.textContent=[item.purpose==='decoration'?'장식':'상품',item.section||'',item.locked?'위치 잠금':'',item.hidden?'숨김':''].filter(Boolean).join(' · ');listButton.append(thumbnail,label,flags);
-      listButton.onclick=()=>{selectedDecorId='';selectedId=item.id;render();scene.scrollIntoView({block:'center'});};$('itemList').append(listButton);
+      listButton.onclick=()=>{if(loading||importing||previewing||publicView)return;selectedDecorId='';selectedId=item.id;render();navigateEditor('selection');$('itemName').focus({preventScroll:true});};$('itemList').append(listButton);
     }
     $('emptyScene').hidden=previewing?state.items.some(item=>!item.hidden):state.items.length>0;
     const item=selected();$('itemTools').hidden=!item||previewing;
@@ -263,13 +263,19 @@
     window.ShopStudioCloud?.refresh();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
-  for(const button of document.querySelectorAll('[data-studio-task]'))button.onclick=()=>{
-    if(loading||importing||previewing||publicView)return;const task=button.dataset.studioTask;
+  function navigateEditor(task){
+    if(loading||importing||previewing||publicView)return;
     const selection=state.items.some(i=>i.id===selectedId)?$('itemTools'):state.decor.some(i=>i.id===selectedDecorId)?$('decorTools'):null;
-    const target={photos:$('photosSettings'),furniture:$('furnitureSettings'),atmosphere:$('atmosphereSettings'),save:$('cloudSettings'),business:$('businessSettings'),selection,scene:$('sceneViewport')}[task];if(!target)return;
+    const target={photos:$('photosSettings'),'photo-list':$('itemList'),furniture:$('furnitureSettings'),atmosphere:$('atmosphereSettings'),save:$('cloudSettings'),business:$('businessSettings'),selection,scene:$('sceneViewport')}[task];if(!target)return;
     if(task!=='scene'&&document.body.classList.contains('studio-focused')){document.body.classList.remove('studio-focused');$('focusMode').setAttribute('aria-pressed','false');$('focusMode').textContent='진열장에 집중';}
+    if(task==='photo-list'){
+      $('photosSettings').open=true;
+      const current=$('itemList').querySelector('[aria-pressed="true"]'),destination=current||($('itemList').childElementCount?$('itemList'):$('photoSearch'));
+      destination.scrollIntoView({block:'center',behavior:'auto'});if(!current&&destination===$('itemList'))destination.tabIndex=-1;destination.focus({preventScroll:true});return;
+    }
     if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({block:'start',behavior:'auto'});target.tabIndex=-1;target.focus({preventScroll:true});
-  };
+  }
+  for(const button of document.querySelectorAll('[data-studio-task]'))button.onclick=()=>navigateEditor(button.dataset.studioTask);
   function matchingPhotos(){return composition.findPhotos(state.items,$('photoSearch').value,$('photoPurposeFilter').value,$('photoStateFilter').value);}
   $('photoSearch').oninput=()=>render();for(const id of ['photoPurposeFilter','photoStateFilter'])$(id).onchange=()=>render();$('resetPhotoSearch').onclick=()=>{$('photoSearch').value='';$('photoPurposeFilter').value='all';$('photoStateFilter').value='all';render();};
   const photoActions={lock:['locked',true,'잠그기'],unlock:['locked',false,'잠금 풀기'],hide:['hidden',true,'시안에서 숨기기'],show:['hidden',false,'시안에 보이기'],section:['section',null,'상품 구역 지정']};

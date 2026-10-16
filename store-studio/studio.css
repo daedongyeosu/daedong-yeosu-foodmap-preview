@@ -5,6 +5,7 @@
 .workspace .scene-item.is-hidden{opacity:.25;border:2px dashed #895d36}
 .workspace .scene.previewing .scene-item{touch-action:pan-y}
 .workspace #itemList{display:grid;gap:7px;margin-top:12px}
+.photo-edit-navigation{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.photo-edit-navigation button{flex:1;min-width:0;font-size:13px}
 .workspace #itemList button{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:8px;text-align:left;align-items:center;min-height:50px}
 .workspace #itemList button[aria-pressed=true]{border:2px solid #187b62;background:#edf7f1}
 .workspace #itemList img{width:36px;height:36px;object-fit:contain}

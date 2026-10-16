@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-12">
+  <link rel="stylesheet" href="studio.css?v=20261017-13">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -91,6 +91,7 @@
           <p class="hint">컴퓨터에서는 사진 파일을 진열장으로 끌어놓아도 됩니다. 투명 배경 PNG·WebP는 물건만 보입니다. 자동 배경 제거는 아직 연결되지 않았습니다.</p>
           <label>배치한 사진 찾기<input id="photoSearch" type="search" maxlength="80" placeholder="사진 이름·상품 구역"></label><label>사진 용도<select id="photoPurposeFilter"><option value="all">모든 사진</option><option value="product">판매상품 사진</option><option value="decoration">포스터·그림·장식</option></select></label><label>사진 상태<select id="photoStateFilter"><option value="all">모두 보기</option><option value="visible">고객에게 보이는 사진</option><option value="hidden">숨긴 사진</option><option value="locked">위치 잠근 사진</option></select></label><button id="resetPhotoSearch" type="button">사진 검색·필터 초기화</button><p id="photoResultsCount" class="hint" role="status" aria-live="polite"></p><p class="hint">검색은 아래 목록만 바꿉니다. 실제 진열과 고객 상품 목록은 바뀌지 않습니다.</p>
           <details id="photoBatchTools"><summary>검색된 사진 함께 정리하기</summary><div class="item-actions"><button type="button" data-photo-batch="lock">위치 모두 잠그기</button><button type="button" data-photo-batch="unlock">위치 잠금 모두 풀기</button><button type="button" data-photo-batch="hide">시안에서 모두 숨기기</button><button type="button" data-photo-batch="show">시안에 모두 보이기</button></div><label>지정할 상품 구역<input id="photoBatchSection" maxlength="24" placeholder="예: 봄 신상품"></label><button type="button" data-photo-batch="section">검색 결과에 구역 지정</button><p id="photoBatchStatus" class="hint" role="status" aria-live="polite"></p><p class="hint">현재 검색 결과에만 적용합니다. 검색이 없으면 전체 사진이 대상입니다. 여러 장은 적용 전에 확인합니다. 구역을 비우면 기존 구역 이름을 지웁니다. 숨김은 시안의 표시만 바꾸며 등록상품·재고를 삭제하거나 판매 중단하지 않습니다. 되돌리기 한 번으로 복구합니다.</p></details>
+          <p class="hint">목록의 사진을 누르면 이름·설명을 바로 수정합니다. 배치 위치는 수정 화면의 ‘진열장에서 보기’로 확인하세요.</p>
           <div id="itemList" aria-label="배치한 사진 목록"></div>
         </details>
         <details id="catalogSettings"><summary>3. 등록 상품 연결</summary>
@@ -133,6 +134,7 @@
         <p id="saveStatus" role="status" aria-live="polite">사진과 배치를 이 기기에 자동 저장합니다.</p>
         <section id="itemTools" hidden aria-label="선택한 상품 편집">
           <h2>선택한 사진 꾸미기</h2>
+          <div class="photo-edit-navigation" aria-label="사진 수정 중 이동"><button type="button" data-studio-task="photo-list">사진 목록으로</button><button type="button" data-studio-task="scene">진열장에서 보기</button></div>
           <label>표시 이름<input id="itemName" maxlength="50"></label>
           <label>상품 설명<textarea id="itemDescription" maxlength="300" rows="3" placeholder="원두, 맛, 소재, 규격 등을 알려주세요."></textarea></label>
           <label>상품 구역<input id="itemSection" maxlength="24" list="sectionSuggestions" placeholder="예: 갓 구운 빵"></label><datalist id="sectionSuggestions"></datalist>
@@ -210,5 +212,5 @@
   <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-11" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-12" defer></script>
+  <script src="studio.js?v=20261017-13" defer></script>
 </body></html>
