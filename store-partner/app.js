@@ -13,6 +13,16 @@ const saveButton=document.querySelector('#savePreview');
 let currentStep=1;
 let postcodePromise=null;
 let products=[];
+let draftStoreId='';
+function ensureStoreId(previous){
+  if(!draftStoreId)draftStoreId=globalThis.MatjidoStoreContext.id(previous?.storeId)&&previous.storeId!=='demo-yeosu-store'?previous.storeId:`preview-${crypto.randomUUID()}`;
+  return draftStoreId;
+}
+function updateSavedLinks(){
+  try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');if(!saved?.previewOnly||!globalThis.MatjidoStoreContext.id(saved.storeId))return;
+    document.querySelector('.customer-preview-link[href^="../online-store/"]').href=`../online-store/index.html?catalogStore=${encodeURIComponent(saved.storeId)}`;
+  }catch{}
+}
 
 function money(value){return `${Math.max(0,Number(value)||0).toLocaleString('ko-KR')}원`;}
 function selected(name){return form.querySelector(`[name="${name}"]:checked`)?.value||'';}
@@ -127,8 +137,9 @@ async function syncServerCatalog(payload){
 }
 async function saveDraft(){
   const previous=(()=>{try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');}catch{return null;}})();
-  const payload={storeId:String(previous?.storeId||'demo-yeosu-store'),storeName:document.querySelector('#storeName').value.trim(),category:document.querySelector('#storeCategory').value,address:addressInput.value,addressZonecode:String(addressInput.dataset.zonecode||''),addressDetail:document.querySelector('#storeAddressDetail').value.trim(),phone:document.querySelector('#ownerPhone').value,theme:selected('theme'),productMethod:selected('productMethod'),products:products.map(({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing})=>({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing,category:document.querySelector('#storeCategory').value})),subsidy:Number(selected('subsidy'))||0,minimumOrder:Number(document.querySelector('#minimumOrder').value)||0,savedAt:new Date().toISOString(),previewOnly:true};
+  const payload={storeId:ensureStoreId(previous),storeName:document.querySelector('#storeName').value.trim(),category:document.querySelector('#storeCategory').value,address:addressInput.value,addressZonecode:String(addressInput.dataset.zonecode||''),addressDetail:document.querySelector('#storeAddressDetail').value.trim(),phone:document.querySelector('#ownerPhone').value,theme:selected('theme'),productMethod:selected('productMethod'),products:products.map(({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing})=>({id,name,price,unit,stockMode,stockQuantity,description,source,livePricing,category:document.querySelector('#storeCategory').value})),subsidy:Number(selected('subsidy'))||0,minimumOrder:Number(document.querySelector('#minimumOrder').value)||0,savedAt:new Date().toISOString(),previewOnly:true};
   localStorage.setItem(STORAGE_KEY,JSON.stringify(payload));
+  updateSavedLinks();
   saveButton.disabled=true;document.querySelector('#saveStatus').textContent='이 기기에 저장했고 서버의 테스트 가격·재고와 맞추는 중입니다…';
   try{await syncServerCatalog(payload);document.querySelector('#saveStatus').textContent='저장 완료: 서버가 테스트 가격·재고·누적 주문수를 관리합니다. 실제 결제나 공개 판매는 발생하지 않습니다.';saveButton.textContent='서버 연결 저장 완료';}
   catch(error){document.querySelector('#saveStatus').textContent=`기기에는 저장됐지만 서버 동기화가 필요합니다. ${String(error?.message||'잠시 뒤 다시 저장해 주세요.')}`;saveButton.textContent='서버 동기화 다시 시도';}
@@ -162,6 +173,7 @@ navButtons.forEach(button=>button.addEventListener('click',()=>{const target=Num
 agreement.addEventListener('change',()=>{saveButton.disabled=!agreement.checked;});
 saveButton.addEventListener('click',saveDraft);
 loadDraft();showProductMethod();renderProducts();updatePricePreview();updateNext();
+updateSavedLinks();
 
 function updateStudioLink(){
   const styles={'실제 가게와 비슷하게':'market','따뜻하고 정겨운 가게':'cafe','깔끔하고 현대적인 가게':'modern','캐릭터가 있는 재미있는 가게':'playful'};

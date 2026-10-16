@@ -244,7 +244,9 @@
       if(!/^data:image\/(webp|png|jpeg);base64,/.test(state.business.realPhoto))state.business.realPhoto='';
       say('이 기기에 저장한 사진과 배치를 불러왔습니다.');
     }}catch{say('이 브라우저에서는 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);}
-    state.catalogStoreId=catalog.id(state.catalogStoreId);loading=false;render();if(state.catalogStoreId)void loadCatalog();
+    state.catalogStoreId=catalog.id(state.catalogStoreId);
+    if(!state.catalogStoreId)try{const saved=JSON.parse(localStorage.getItem('matjido-store-onboarding-preview-v1')||'null');if(saved?.previewOnly)state.catalogStoreId=catalog.id(saved.storeId);}catch{}
+    loading=false;render();if(state.catalogStoreId)void loadCatalog();
   }
   void initialize();
 })();
