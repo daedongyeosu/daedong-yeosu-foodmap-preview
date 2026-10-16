@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261016-1">
+  <link rel="stylesheet" href="studio.css?v=20261016-2">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -30,7 +30,8 @@
         </details>
       </aside>
       <section class="display" aria-label="상점 시안">
-        <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="preview">고객처럼 보기</button></div>
+        <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="focusMode" aria-pressed="false">진열장에 집중</button><button id="preview">고객처럼 보기</button></div>
+        <div id="arrangeTools" class="arrange-tools"><button id="arrangeAll">가지런히 진열하기</button><label><input id="snapShelves" type="checkbox" checked> 선반 가까이 놓으면 맞추기</label></div>
         <div id="scene" class="scene" data-material="plain" tabindex="0" aria-label="상품사진을 배치하는 진열장">
           <div class="scene-lights" aria-hidden="true"></div><h2 id="sign">나의 작은 카페</h2>
           <div id="dividers" aria-hidden="true"></div><div id="shelfLines" aria-hidden="true"></div><div id="items"></div>
@@ -40,10 +41,12 @@
         <section id="itemTools" hidden aria-label="선택한 상품 편집">
           <h2>선택한 사진 꾸미기</h2>
           <label>표시 이름<input id="itemName" maxlength="50"></label>
+          <div class="item-flags"><label><input id="itemLocked" type="checkbox"> 위치 잠그기</label><label><input id="itemHidden" type="checkbox"> 시안에서 숨기기</label></div>
+          <p id="lockedHelp" class="hint" hidden>위치가 잠겨 있습니다. 이동·크기·회전·삭제를 하려면 잠금을 풀어 주세요.</p>
           <label>크기<input id="itemSize" type="range" min="8" max="45"></label>
           <label>회전<input id="itemRotation" type="range" min="-45" max="45"></label>
           <label><input id="itemShadow" type="checkbox"> 물건 그림자</label>
-          <div class="item-actions"><button id="moveLeft" aria-label="왼쪽으로 이동">←</button><button id="moveUp" aria-label="위로 이동">↑</button><button id="moveDown" aria-label="아래로 이동">↓</button><button id="moveRight" aria-label="오른쪽으로 이동">→</button><button id="duplicate">복제</button><button id="remove">진열에서 빼기</button></div>
+          <div class="item-actions"><button id="moveLeft" aria-label="왼쪽으로 이동">←</button><button id="moveUp" aria-label="위로 이동">↑</button><button id="moveDown" aria-label="아래로 이동">↓</button><button id="moveRight" aria-label="오른쪽으로 이동">→</button><button id="snapSelected">선반에 놓기</button><button id="bringFront">맨 앞으로</button><button id="sendBack">맨 뒤로</button><button id="duplicate">복제</button><button id="remove">진열에서 빼기</button></div>
           <p class="hint">사진을 끌어 옮기거나 방향 버튼으로 조절하세요. 진열에서 뺀 사진은 되돌릴 수 있습니다.</p>
         </section>
         <p id="previewHelp" hidden>고객이 보는 배치 시안입니다. 사진을 누르면 이름을 볼 수 있습니다. 상품 상세·장바구니·결제는 아직 연결되지 않았습니다.</p>
@@ -51,5 +54,6 @@
       </section>
     </div>
   </main>
-  <script src="studio.js?v=20261016-1" defer></script>
+  <script src="layout.js?v=20261016-2" defer></script>
+  <script src="studio.js?v=20261016-2" defer></script>
 </body></html>
