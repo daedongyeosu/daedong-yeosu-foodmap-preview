@@ -19,8 +19,14 @@ try{
   await page.locator('#zones').selectOption('3');await page.locator('#material').selectOption('brick');
   // Create actual transparent image bytes through the browser; no external uploads.
   const png=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=120;c.height=120;const x=c.getContext('2d');x.fillStyle='#98562a';x.fillRect(30,30,65,60);x.strokeStyle='#98562a';x.lineWidth=8;x.strokeRect(92,40,20,30);return c.toDataURL('image/png').split(',')[1];});
+  const emptyPng=await page.evaluate(()=>{const c=document.createElement('canvas');c.width=50;c.height=50;return c.toDataURL('image/png').split(',')[1];});
+  await page.locator('#photos').setInputFiles({name:'빈 사진.png',mimeType:'image/png',buffer:Buffer.from(emptyPng,'base64')});
+  await page.waitForFunction(()=>document.querySelector('#saveStatus').textContent.includes('완전히 투명'));
+  assert.equal(await page.locator('.scene-item').count(),0,'Fully transparent images must not become invisible items');
   await page.locator('#photos').setInputFiles([{name:'커피.png',mimeType:'image/png',buffer:Buffer.from(png,'base64')},{name:'두번째 커피.png',mimeType:'image/png',buffer:Buffer.from(png,'base64')}]);
   await page.waitForFunction(()=>document.querySelectorAll('.scene-item').length===2&&!document.querySelector('#choosePhotos').disabled);
+  await page.waitForFunction(()=>{const img=document.querySelector('.scene-item img');return img.complete&&img.naturalWidth>0;});
+  assert.ok(await page.locator('.scene-item img').first().evaluate(img=>img.naturalWidth<120&&img.naturalHeight<120),'Transparent margins must be trimmed before placement');
   assert.equal(await page.locator('.divider').count(),2);
   const item=page.locator('.scene-item').first();await item.click();
   await page.locator('#itemName').fill('따뜻한 라테');await page.locator('#itemName').press('Tab');
