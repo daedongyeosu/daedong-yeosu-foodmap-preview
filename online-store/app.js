@@ -14,10 +14,10 @@ const fallbackProducts=[
 ];
 const fallbackStore={storeName:'여수 동네상점 예시',category:'생활상점',address:'여수시 온라인 상점 프리뷰',theme:'실제 가게와 비슷하게',subsidy:0,minimumOrder:20000,products:fallbackProducts};
 const previewStores={
-  'hwajeon-hanwoo-munsu':{
-    storeId:'hwajeon-hanwoo-munsu',
-    storeName:'화전한우정육(문수점)',
-    pickupName:'화전한우정육식당',
+  'hwangjeon-hanwoo-munsu':{
+    storeId:'hwangjeon-hanwoo-munsu',
+    storeName:'황전한우정육(문수점)',
+    pickupName:'황전한우정육식당',
     category:'정육점',
     address:'전남광주통합특별시 여수시 문수동 457-2',
     phone:'010-2401-0067',
