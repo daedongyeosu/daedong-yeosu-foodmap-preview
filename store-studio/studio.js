@@ -14,6 +14,12 @@
   let libraryLimit=8;
   let compositionIds=new Set(),savedCompositions=[],setsBusy=false,setsReadable=true,setsRevision='null';
   const composition=window.ShopStudioComposition;
+  let copiedStyle=null,styleMessage='';
+  function renderStyleClipboard(){
+    const busy=loading||importing||previewing||setsBusy,hasSelected=state.decor.some(i=>i.id===selectedDecorId);
+    $('copyDecorStyle').disabled=busy||!hasSelected;$('pasteDecorStyle').disabled=busy||!hasSelected||!copiedStyle;$('clearDecorStyle').disabled=busy||!copiedStyle;$('pasteStyleGroup').disabled=busy||!copiedStyle||!compositionIds.size;
+    for(const id of ['decorStyleStatus','compositionStyleStatus'])$(id).textContent=styleMessage||'아직 복사한 가구 스타일이 없습니다.';
+  }
   function renderCompositions(){
     compositionIds=new Set([...compositionIds].filter(id=>state.decor.some(item=>item.id===id)));
     $('compositionCount').textContent=`함께 선택한 가구 ${compositionIds.size}개 · 내 세트 ${savedCompositions.length}/12개 · 끌어서 이동하거나 방향 버튼을 사용하세요.`;
@@ -158,6 +164,7 @@
     $('sectionSuggestions').replaceChildren();for(const name of a.zoneNames.slice(0,state.zones))$('sectionSuggestions').append(new Option(name,name));
     for(let i=0;i<3;i++){$(`zoneName${i+1}`).value=a.zoneNames[i];$(`zoneName${i+1}`).closest('label').hidden=i>=state.zones;if(i<state.zones){const label=document.createElement('span');label.textContent=a.zoneNames[i];$('zoneLabels').append(label);}}
     $('decorRoot').replaceChildren();$('decorList').replaceChildren();
+    const found=composition.findPlaced(state.decor,$('placedSearch').value,$('placedFilter').value),foundIds=new Set(found.map(i=>i.id));$('placedCount').textContent=`배치한 가구 ${state.decor.length}개 중 ${found.length}개 표시`;
     for(const item of state.decor){
       const node=document.createElement('button');node.type='button';node.className=`decor decor-${item.type}${item.id===selectedDecorId?' decor-selected':''}${compositionIds.has(item.id)?' decor-multi':''}${item.hidden?' decor-hidden':''}`;node.dataset.decorId=item.id;node.setAttribute('aria-label',`${item.text} 가구 선택`);node.tabIndex=previewing?-1:0;
       for(const key of ['x','y','width','height'])node.style[{x:'left',y:'top',width:'width',height:'height'}[key]]=item[key]+'%';node.style.setProperty('--decor-color',item.color);
@@ -165,6 +172,7 @@
       const label=document.createElement('span');label.textContent=item.text;label.hidden=item.showLabel===false;node.append(label);
       if(['rack','glass'].includes(item.type))for(const level of [36,68,100]){const shelf=document.createElement('i');shelf.style.top=level+'%';node.append(shelf);}
       if(!previewing||!item.hidden)$('decorRoot').append(node);
+      if(!foundIds.has(item.id))continue;
       const entry=document.createElement('button');entry.type='button';entry.textContent=`${design.types[item.type]} · ${item.text}${item.locked?' 🔒':''}${item.hidden?' (숨김)':''}`;entry.disabled=loading||importing||previewing;entry.setAttribute('aria-pressed',String(item.id===selectedDecorId));entry.onclick=()=>{selectedDecorId=item.id;selectedId='';render();$('decorTools').scrollIntoView({block:'nearest'});};$('decorList').append(entry);
       const checkLabel=document.createElement('label');checkLabel.className='composition-check';const check=document.createElement('input');check.type='checkbox';check.dataset.groupId=item.id;check.checked=compositionIds.has(item.id);check.disabled=loading||importing||previewing;check.setAttribute('aria-label',item.text+' 함께 선택');check.onchange=()=>{check.checked?compositionIds.add(item.id):compositionIds.delete(item.id);render();[...$('decorList').querySelectorAll('input')].find(node=>node.dataset.groupId===item.id)?.focus({preventScroll:true});};checkLabel.append(check,document.createTextNode('묶음에 포함'));$('decorList').append(checkLabel);
     }
@@ -245,6 +253,8 @@
     renderBrowse();
     renderLibrary();
     renderCompositions();
+    renderStyleClipboard();
+    $('selectFoundDecor').disabled=loading||importing||previewing||!composition.findPlaced(state.decor,$('placedSearch').value,$('placedFilter').value).length;
     window.ShopStudioCloud?.refresh();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
@@ -256,6 +266,16 @@
   function placeDecor(item,x,y,ids=[]){if(ids.length>1){const result=design.translateMany(state.decor,state.items,ids,x-item.x,y-item.y,layout);if(result.blocked){say('묶음의 가구 또는 연결된 상품의 위치 잠금을 먼저 풀어 주세요.',true);return false;}state.decor=result.fixtures;state.items=result.items;return true;}const result=design.translate(item,state.items,x-item.x,y-item.y,layout);if(result.blocked){say('가구 또는 연결된 상품의 위치 잠금을 먼저 풀어 주세요.',true);return false;}Object.assign(item,result.fixture);state.items=result.items;return true;}
   function addFurniture(type){if(state.decor.length>=60){say('가구·장식은 60개까지 배치할 수 있습니다.',true);return;}change(()=>{const item=design.createDecor(type,crypto.randomUUID());state.decor.push(item);selectedDecorId=item.id;selectedId='';});}
   $('addDecor').onclick=()=>addFurniture($('decorType').value);
+  $('placedSearch').oninput=()=>render();$('placedFilter').onchange=()=>render();$('resetPlacedSearch').onclick=()=>{$('placedSearch').value='';$('placedFilter').value='all';render();};
+  $('selectFoundDecor').onclick=()=>{if(loading||importing||previewing)return;for(const item of composition.findPlaced(state.decor,$('placedSearch').value,$('placedFilter').value))compositionIds.add(item.id);render();};
+  $('copyDecorStyle').onclick=()=>{if(loading||importing||previewing)return;const item=state.decor.find(i=>i.id===selectedDecorId);copiedStyle=composition.captureStyle(item);styleMessage=copiedStyle?`${item.text||design.types[item.type]}의 스타일을 복사했습니다. 다른 가구를 선택해 붙여넣으세요.`:'복사할 가구를 선택해 주세요.';renderStyleClipboard();};
+  function pasteDecorStyle(ids){
+    if(loading||importing||previewing||setsBusy)return;const result=composition.pasteStyle(state.decor,ids,copiedStyle);
+    if(!result.ok){styleMessage=result.message;renderStyleClipboard();return;}
+    if(result.changed)change(()=>{state.decor=result.fixtures;});
+    styleMessage=(result.changed?`${result.count}개 가구에 스타일을 붙여넣었습니다.`:'이미 같은 스타일입니다.')+(result.limited?' 기본형 가구의 보조색·재질은 유지했습니다.':'');renderStyleClipboard();
+  }
+  $('pasteDecorStyle').onclick=()=>pasteDecorStyle([selectedDecorId]);$('pasteStyleGroup').onclick=()=>pasteDecorStyle([...compositionIds]);$('clearDecorStyle').onclick=()=>{copiedStyle=null;styleMessage='복사한 스타일을 비웠습니다. 배치한 가구는 그대로입니다.';renderStyleClipboard();};
   $('decorSearch').oninput=()=>{libraryLimit=8;renderLibrary();};$('decorGroup').onchange=()=>{libraryLimit=8;renderLibrary();};$('decorMore').onclick=()=>{libraryLimit+=8;renderLibrary();};
   $('cabinetEnabled').onchange=event=>change(()=>{const item=state.decor.find(i=>i.id===selectedDecorId);if(item&&design.cabinetTypes.includes(item.type))item.cabinet=event.target.checked?{rows:3,columns:2,doors:'none',handle:'bar',back:true}:null;});
   for(const [id,key] of [['cabinetRows','rows'],['cabinetColumns','columns'],['cabinetDoors','doors'],['cabinetHandle','handle'],['cabinetBack','back']])$(id).onchange=event=>change(()=>{const item=state.decor.find(i=>i.id===selectedDecorId);if(!item?.cabinet)return;item.cabinet=design.cabinet({...item.cabinet,[key]:event.target.type==='checkbox'?event.target.checked:event.target.type==='number'?Number(event.target.value):event.target.value});});

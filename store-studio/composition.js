@@ -54,5 +54,18 @@
     });
     return{ok:true,fixtures:result,changed,limited,count:selected.length};
   }
-  return Object.freeze({clean,create,instantiate,importFile,builtins,arrange,palettes,styleSelection});
+  function captureStyle(item){
+    if(!item||!Object.hasOwn(design.types,item.type))return null;const safe=design.decor(item),style={color:safe.color,showLabel:safe.showLabel};
+    if(design.catalog[item.type].modern)Object.assign(style,{accent:safe.accent,finish:safe.finish});return style;
+  }
+  function pasteStyle(fixtures,ids,style){
+    if(!style||typeof style.showLabel!=='boolean')return{ok:false,message:'먼저 가구의 스타일을 복사해 주세요.'};
+    const result=styleSelection(fixtures,ids,style,['color',...['accent','finish'].filter(key=>Object.hasOwn(style,key))]);if(!result.ok)return result;
+    result.fixtures=result.fixtures.map(item=>{if(!ids.includes(item.id))return item;if(item.showLabel!==style.showLabel)result.changed++;return{...item,showLabel:style.showLabel};});return result;
+  }
+  function findPlaced(fixtures,query='',mode='all'){
+    const needle=String(query).trim().toLocaleLowerCase('ko-KR');
+    return fixtures.filter(item=>(mode==='hidden'?item.hidden:mode==='visible'?!item.hidden:mode==='locked'?item.locked:true)&&(!needle||`${design.types[item.type]||''} ${item.text||''}`.toLocaleLowerCase('ko-KR').includes(needle)));
+  }
+  return Object.freeze({clean,create,instantiate,importFile,builtins,arrange,palettes,styleSelection,captureStyle,pasteStyle,findPlaced});
 });

@@ -63,7 +63,7 @@
           <div id="decorLibrary" class="decor-library" aria-label="가구·장식 도구 상자"></div>
           <button id="decorMore" type="button">도구 더 보기</button>
           <label>추가할 도구<select id="decorType"><option value="rack">나무 진열장</option><option value="glass">유리 쇼케이스</option><option value="ledge">벽 선반</option><option value="counter">계산·픽업대</option><option value="board">안내판</option><option value="window">창문</option><option value="plant">화분</option></select></label><button id="addDecor">공간에 추가</button>
-          <p class="hint">가구는 상품사진 뒤에 배치됩니다. 겹친 가구는 아래 목록에서 선택하세요. 최대 60개입니다.</p><div id="decorList"></div>
+          <p class="hint">가구는 상품사진 뒤에 배치됩니다. 겹친 가구는 아래 목록에서 선택하세요. 최대 60개입니다.</p><label>배치한 가구 찾기<input id="placedSearch" type="search" maxlength="80" placeholder="가구 이름·문구로 찾기"></label><label>목록 상태<select id="placedFilter"><option value="all">모두 보기</option><option value="visible">고객에게 보이는 가구</option><option value="hidden">숨긴 가구</option><option value="locked">위치 잠근 가구</option></select></label><div class="item-actions"><button id="selectFoundDecor" type="button">검색 결과 함께 선택</button><button id="resetPlacedSearch" type="button">검색·필터 초기화</button></div><p id="placedCount" class="hint" role="status" aria-live="polite"></p><p class="hint">검색은 이 목록에만 적용됩니다. 공간의 가구와 기존 함께 선택은 유지하고, 검색 결과 선택은 기존 선택에 추가합니다.</p><div id="decorList"></div>
         </details>
         <details id="compositionSettings"><summary>내 진열 구성 · 세트 보관함</summary>
           <p class="hint">가구 목록에서 함께 쓸 가구를 체크하세요. 묶음 이동·복제·세트 보관은 선택한 가구에만 적용합니다. 상품사진·가격·재고는 복제하지 않습니다.</p>
@@ -76,6 +76,7 @@
             <fieldset class="batch-fields"><legend>바꿀 항목만 선택</legend><label><input id="batchUseColor" type="checkbox" checked>주색</label><label><input id="batchUseAccent" type="checkbox" checked>보조색</label><label><input id="batchUseFinish" type="checkbox" checked>재질</label></fieldset>
             <button id="batchApply" type="button">선택한 가구에 적용</button><p id="batchStatus" class="hint" role="status" aria-live="polite"></p><p class="hint">위치·크기·문구·칸 구성·위치 잠금·숨김과 상품사진은 유지합니다. 기존 기본형 12종은 주색만 지원하며, 보조색·재질은 새 가구 36종에 적용됩니다. 되돌리기로 복구할 수 있습니다.</p>
           </details>
+          <button id="pasteStyleGroup" type="button">복사한 스타일을 체크한 가구에 적용</button><p id="compositionStyleStatus" class="hint" role="status" aria-live="polite"></p>
           <label>보관할 세트 이름<input id="compositionName" maxlength="40" placeholder="예: 봄맞이 진열 코너"></label><button id="compositionSave" type="button">선택한 가구 세트 보관</button>
           <p class="hint">내 세트는 이 기기에 최대 12개, 세트마다 가구 20개까지 보관합니다. 서버 계정 저장과는 별개입니다. 파일로 보관해 다른 기기에 가져갈 수 있습니다.</p>
           <div id="compositionLibrary" class="composition-library"></div>
@@ -159,6 +160,7 @@
           <label>표면 재질<select id="decorFinish"><option value="plain">단색</option><option value="wood">나뭇결</option><option value="metal">금속 결</option><option value="fabric">직물 무늬</option></select></label>
           <label><input id="decorShowLabel" type="checkbox"> 가구 문구 표시</label>
           <p class="hint">보조색·표면 재질은 이번에 추가한 36종 도구에 적용됩니다. 예전 도구의 모양은 그대로 유지합니다.</p>
+          <div class="item-actions"><button id="copyDecorStyle" type="button">이 가구 스타일 복사</button><button id="pasteDecorStyle" type="button">이 가구에 스타일 붙여넣기</button><button id="clearDecorStyle" type="button">복사한 스타일 비우기</button></div><p id="decorStyleStatus" class="hint" role="status" aria-live="polite"></p><p class="hint">색·지원하는 재질·문구 표시 여부만 옮깁니다. 문구 내용·위치·크기·칸 구성·상품·잠금·숨김은 유지합니다. 기본형 가구는 주색·문구 표시만 지원합니다. 복사한 스타일은 이 화면에서만 임시 보관하며 새로고침하면 비워집니다.</p>
           <section id="cabinetSettings" hidden><h3>내 진열장 구성 만들기</h3>
             <label><input id="cabinetEnabled" type="checkbox"> 칸 구성 직접 바꾸기</label>
             <div id="cabinetFields" hidden>
@@ -200,8 +202,8 @@
   <script src="layout.js?v=20261017-9" defer></script>
   <script src="customer-links.js?v=20261016-3" defer></script>
   <script src="catalog.js?v=20261016-4" defer></script>
-  <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-8" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
+  <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-10" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-9" defer></script>
+  <script src="studio.js?v=20261017-10" defer></script>
 </body></html>
