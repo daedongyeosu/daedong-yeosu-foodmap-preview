@@ -9,7 +9,7 @@ const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 
 assert.match(
   html,
-  /<img class="brand-logo" src="assets\/brand\/yeosu-taste-map-logo\.png\?v=yeosu-taste-map-20260924-preview-1" alt="여수맛지도">/,
+  /<img class="brand-logo" src="assets\/brand\/yeosu-taste-map-logo\.display\.webp\?v=display-20261017-1" alt="여수맛지도">/,
   '메인 헤더는 확정한 여수맛지도 통합 로고를 사용해야 합니다.'
 );
 assert.doesNotMatch(html, /class="brand-word(?:\s|\")|class="brand-symbol(?:\s|\")/,
