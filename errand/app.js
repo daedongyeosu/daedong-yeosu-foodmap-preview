@@ -14,6 +14,9 @@ const aiSuggestion = document.querySelector('#aiSuggestion');
 const aiSuggestionText = document.querySelector('#aiSuggestionText');
 const aiStatus = document.querySelector('#aiStatus');
 const itemName = document.querySelector('#itemName');
+const packingStatus = document.querySelector('#packingStatus');
+const declaredValue = document.querySelector('#declaredValue');
+const declaredValueUnknown = document.querySelector('#declaredValueUnknown');
 const itemPhoto = document.querySelector('#itemPhoto');
 const itemPhotoPreview = document.querySelector('#itemPhotoPreview');
 const itemPhotoImage = document.querySelector('#itemPhotoImage');
@@ -44,6 +47,7 @@ let selectedItemKind = '';
 let itemPhotoUrl = '';
 let restoringDraft = false;
 let draftSaveTimer = null;
+let previewSubmitting = false;
 
 function showErrandStep(step){
   home.hidden=step!=='home';
@@ -81,6 +85,7 @@ function draftSnapshot(){
     itemKind:selectedItemKind,
     itemName:itemName.value.trim(),
     itemScale:document.querySelector('[name="itemScale"]:checked')?.value||'',
+    packingStatus:packingStatus.value,declaredValue:declaredValue.value,declaredValueUnknown:declaredValueUnknown.checked,
     conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value),
     description:errandContent.value,
   };
@@ -154,6 +159,7 @@ function restoreDraft(draft){
   selectedItemKind=String(draft.itemKind||'');
   document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.itemKind===selectedItemKind)));
   itemName.value=String(draft.itemName||'');
+  packingStatus.value=String(draft.packingStatus||'');declaredValue.value=String(draft.declaredValue||'');declaredValueUnknown.checked=draft.declaredValueUnknown===true;declaredValue.disabled=declaredValueUnknown.checked;
   document.querySelectorAll('[name="itemScale"]').forEach(input=>{input.checked=input.value===draft.itemScale;});
   const conditions=new Set(Array.isArray(draft.conditions)?draft.conditions:[]);
   document.querySelectorAll('.extra-conditions input').forEach(input=>{input.checked=conditions.has(input.value);});
@@ -175,6 +181,8 @@ function clearDraft(){
   document.querySelectorAll('[data-item-kind]').forEach(button=>button.setAttribute('aria-pressed','false'));
   document.querySelectorAll('[name="itemScale"],.extra-conditions input').forEach(input=>{input.checked=false;});
   itemName.value='';errandContent.value='';draftResume.hidden=true;
+  packingStatus.value='';declaredValue.value='';declaredValueUnknown.checked=false;declaredValue.disabled=false;
+  document.querySelectorAll('.safety-confirmations input').forEach(input=>{input.checked=false;});
   updateAiAssist();updateRequestReadiness();
 }
 
@@ -376,13 +384,16 @@ function updateAddress(kind,data){
 function updateRequestReadiness(){
   const addressesReady=Boolean(selectedAddresses.pickup&&selectedAddresses.dropoff);
   const itemReady=Boolean(selectedItemKind&&itemName.value.trim()&&document.querySelector('[name="itemScale"]:checked'));
-  const contentReady=errandContent.value.trim().length>=4;
-  addressNext.disabled=!(addressesReady&&itemReady&&contentReady);
+  const contentReady=errandContent.value.trim().length>=5;
+  const valueReady=declaredValueUnknown.checked||(Number.isInteger(Number(declaredValue.value))&&Number(declaredValue.value)>=1&&Number(declaredValue.value)<=100000000);
+  addressNext.disabled=!(addressesReady&&itemReady&&contentReady&&packingStatus.value&&valueReady);
   if(!addressesReady)addressNext.textContent='주소 두 곳을 먼저 확인해 주세요';
   else if(!selectedItemKind)addressNext.textContent='물품 종류를 선택해 주세요';
   else if(!itemName.value.trim())addressNext.textContent='물품명과 수량을 적어주세요';
   else if(!document.querySelector('[name="itemScale"]:checked'))addressNext.textContent='배송 규모를 선택해 주세요';
-  else if(!contentReady)addressNext.textContent='심부름 내용을 4글자 이상 적어주세요';
+  else if(!packingStatus.value)addressNext.textContent='포장상태를 선택해 주세요';
+  else if(!valueReady)addressNext.textContent='물품가액 또는 잘 모르겠어요를 선택해 주세요';
+  else if(!contentReady)addressNext.textContent='심부름 내용을 5글자 이상 적어주세요';
   else addressNext.textContent='요금·결제수단 확인하기 →';
 }
 
@@ -419,15 +430,16 @@ document.querySelectorAll('[data-place-search]').forEach(button=>button.addEvent
 document.querySelectorAll('[data-place-query]').forEach(input=>input.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();searchPlaces(input.dataset.placeQuery);}}));
 document.querySelector('#postcodeBack').addEventListener('click',closePostcode);
 addressNext.addEventListener('click',()=>{
+  updateRequestReadiness();if(addressNext.disabled)return;
   const itemScale=document.querySelector('[name="itemScale"]:checked')?.value;
-  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||!selectedItemKind||!itemName.value.trim()||!itemScale||errandContent.value.trim().length<4)return;
+  if(!selectedAddresses.pickup||!selectedAddresses.dropoff||!selectedItemKind||!itemName.value.trim()||!itemScale||errandContent.value.trim().length<5)return;
   const pickupDetail=document.querySelector('[data-address-detail="pickup"]')?.value.trim();
   const dropoffDetail=document.querySelector('[data-address-detail="dropoff"]')?.value.trim();
   const conditions=[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value);
   document.querySelector('#paymentPickup').textContent=`${formatSelectedAddress(selectedAddresses.pickup)}${pickupDetail?` · ${pickupDetail}`:''}`;
   document.querySelector('#paymentDropoff').textContent=`${formatSelectedAddress(selectedAddresses.dropoff)}${dropoffDetail?` · ${dropoffDetail}`:''}`;
   document.querySelector('#paymentItem').textContent=`${selectedItemKind} · ${itemName.value.trim()} · ${itemScale}`;
-  document.querySelector('#paymentConditions').textContent=conditions.length?`추가 조건: ${conditions.join(' · ')}`:'추가 조건 없음';
+  document.querySelector('#paymentConditions').textContent=[packingStatus.value,declaredValueUnknown.checked?'물품가액 확인 필요':`물품가액 ${Number(declaredValue.value).toLocaleString('ko-KR')}원`,conditions.length?`추가 조건: ${conditions.join(' · ')}`:'추가 조건 없음'].join(' · ');
   document.querySelector('#paymentRequest').textContent=errandContent.value.trim();
   request.hidden=true;
   payment.hidden=false;
@@ -456,6 +468,11 @@ function maskedPhone(value){
 }
 
 function updatePreviewReadiness(){
+  if(previewSubmitting){
+    previewSubmit.disabled=true;
+    previewSubmit.textContent='접수함에 안전하게 저장 중…';
+    return;
+  }
   const nameReady=customerName.value.trim().length>=2;
   const phoneReady=/^01[016789]\d{7,8}$/.test(normalizedPhone(customerPhone.value));
   const ready=nameReady&&phoneReady&&previewAgreement.checked;
@@ -487,18 +504,19 @@ function previewOrderPayload(){
     customer:{name:customerName.value.trim(),phone:customerPhone.value.trim()},
     pickup:{...selectedAddresses.pickup,detail:pickupDetail},
     dropoff:{...selectedAddresses.dropoff,detail:dropoffDetail},
-    item:{kind:selectedItemKind,name:itemName.value.trim(),scale:itemScale,conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value)},
+    item:{kind:selectedItemKind,name:itemName.value.trim(),scale:itemScale,conditions:[...document.querySelectorAll('.extra-conditions input:checked')].map(input=>input.value),packingStatus:packingStatus.value,declaredValue:declaredValueUnknown.checked?null:Number(declaredValue.value),declaredValueUnknown:declaredValueUnknown.checked,safetyConfirmations:[...document.querySelectorAll('.safety-confirmations input:checked')].map(input=>input.value),pickupPhotoSelected:Boolean(itemPhoto.files?.length)},
     description:errandContent.value.trim(),
     policyVersion:'preview-2026-10-10',
   };
 }
 
-function storedOrder(receipt){
+function storedOrder(receipt,submittedPayload){
   const order=receipt.order;
   return {version:2,trackingToken:receipt.trackingToken,orderId:order.id,status:order.status,
     createdAt:Date.parse(order.createdAt)||Date.now(),expiresAt:Number(order.expiresAt)*1000,
-    pickup:order.pickupAddress,dropoff:order.dropoffAddress,item:order.itemName,
-    contact:`${customerName.value.trim()} · ${order.customerPhone}`,description:order.description};
+    pickup:[order.pickupAddress,submittedPayload.pickup.detail].filter(Boolean).join(' · '),dropoff:[order.dropoffAddress,submittedPayload.dropoff.detail].filter(Boolean).join(' · '),item:order.itemName,
+    contact:`${submittedPayload.customer.name} · ${order.customerPhone}`,description:order.description,
+    itemDetails:[submittedPayload.item.kind,submittedPayload.item.scale,submittedPayload.item.packingStatus,submittedPayload.item.declaredValueUnknown?'물품가액 확인 필요':`물품가액 ${Number(submittedPayload.item.declaredValue).toLocaleString('ko-KR')}원`,...submittedPayload.item.conditions].filter(Boolean).join(' · ')};
 }
 
 const TRACKING_STATUS_LABELS={
@@ -512,11 +530,15 @@ function paintTracking(order){
   document.querySelector('#trackingDropoff').textContent=order.dropoff;
   document.querySelector('#trackingItem').textContent=order.item;
   document.querySelector('#trackingContact').textContent=order.contact;
+  document.querySelector('#trackingDescription').textContent=order.description||'저장된 요청내용이 없습니다.';
+  document.querySelector('#trackingItemDetails').textContent=order.itemDetails||'이전 접수 기록에는 규모·추가 조건이 보관되지 않았습니다.';
   document.querySelector('#trackingLiveStatus').textContent=`현재 상태: ${TRACKING_STATUS_LABELS[order.status]||'운영자 확인 전'} · 실제 결제와 기사 호출은 잠겨 있습니다.`;
 }
 
 function showTracking(order){
   paintTracking(order);
+  document.querySelector('#trackingDetails').hidden=true;
+  document.querySelector('#trackingReview').setAttribute('aria-expanded','false');
   home.hidden=true;policy.hidden=true;request.hidden=true;payment.hidden=true;postcodePanel.hidden=true;tracking.hidden=false;
   history.pushState({errandStep:'tracking'},'',`${location.pathname}?preview-order=${encodeURIComponent(order.orderId)}`);
   window.scrollTo({top:0,behavior:'smooth'});
@@ -536,27 +558,51 @@ function readPreviewOrder(){
   }
 }
 
-previewSubmit.addEventListener('click',async()=>{
+function updatePendingErrand(){
+  try{document.querySelector('#pendingErrandSubmission').hidden=!globalThis.MatjidoSubmission?.has('errand');}
+  catch{document.querySelector('#pendingErrandSubmission').hidden=false;document.querySelector('#errandRecoveryStatus').textContent='이 기기의 접수 확인정보를 읽지 못했습니다. 새 신청 전에 운영자에게 확인해 주세요.';}
+}
+async function sendErrand(recover=false){
+  if(previewSubmitting)return;
   updatePreviewReadiness();
-  if(previewSubmit.disabled||!selectedAddresses.pickup||!selectedAddresses.dropoff)return;
+  if(!recover&&(previewSubmit.disabled||!selectedAddresses.pickup||!selectedAddresses.dropoff))return;
+  const status=recover?document.querySelector('#errandRecoveryStatus'):previewSubmitStatus;
+  previewSubmitting=true;
+  document.querySelector('#recoverErrandSubmission').disabled=true;
   previewSubmit.disabled=true;
+  previewSubmit.setAttribute('aria-busy','true');
   previewSubmit.textContent='접수함에 안전하게 저장 중…';
-  previewSubmitStatus.dataset.state='';
-  previewSubmitStatus.textContent='창을 닫지 말고 잠시만 기다려 주세요.';
+  status.dataset.state='';
+  status.textContent='창을 닫지 말고 잠시만 기다려 주세요.';
   try{
-    const response=await fetch(ERRAND_ORDER_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','X-Daedong-Client':ERRAND_AI_CLIENT},body:JSON.stringify(previewOrderPayload())});
-    const receipt=await response.json();
-    if(!response.ok)throw new Error(receipt?.error||'접수 서버에 저장하지 못했습니다.');
-    const order=storedOrder(receipt);
-    try{localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,JSON.stringify(order));}catch{}
-    try{localStorage.removeItem(ERRAND_DRAFT_KEY);}catch{}
+    if(!globalThis.MatjidoSubmission)throw Error('안전한 접수 기능을 불러오지 못했습니다. 화면을 새로고침해 주세요.');
+    if(!recover&&globalThis.MatjidoSubmission.has('errand'))throw Error('먼저 기존 접수 결과를 확인해 주세요. 새 신청은 보내지 않았습니다.');
+    const {receipt,payload}=await globalThis.MatjidoSubmission.send('errand',ERRAND_ORDER_ENDPOINT,recover?null:previewOrderPayload(),{'X-Daedong-Client':ERRAND_AI_CLIENT});
+    if(!receipt.order?.id||!receipt.trackingToken)throw Error('접수번호를 확인하지 못했습니다. 기존 접수 결과를 다시 확인해 주세요.');
+    const order=storedOrder(receipt,payload);
+    const raw=JSON.stringify(order);localStorage.setItem(ERRAND_PREVIEW_ORDER_KEY,raw);
+    if(localStorage.getItem(ERRAND_PREVIEW_ORDER_KEY)!==raw)throw Error('접수번호를 이 기기에 보관하지 못했습니다. 기존 접수 결과를 다시 확인해 주세요.');
+    // Preserve an independently edited/new draft, including edits made while the request was pending.
+    if(JSON.stringify(previewOrderPayload(),(key,value)=>key==='clientRequestId'?undefined:value)===JSON.stringify(payload,(key,value)=>key==='clientRequestId'?undefined:value)){
+      clearTimeout(draftSaveTimer);localStorage.removeItem(ERRAND_DRAFT_KEY);
+    }
+    globalThis.MatjidoSubmission.clear('errand',payload.clientRequestId);
     showTracking(order);
   }catch(error){
-    previewSubmitStatus.dataset.state='error';
-    previewSubmitStatus.textContent=error instanceof Error?error.message:'접수 서버에 저장하지 못했습니다. 잠시 후 다시 시도해 주세요.';
+    status.dataset.state='error';
+    status.textContent=error instanceof Error?error.message:'접수 서버에 저장하지 못했습니다. 잠시 후 다시 시도해 주세요.';
+  }finally{
+    previewSubmitting=false;
+    previewSubmit.removeAttribute('aria-busy');
     updatePreviewReadiness();
+    document.querySelector('#recoverErrandSubmission').disabled=false;updatePendingErrand();
   }
-});
+}
+previewSubmit.addEventListener('click',()=>void sendErrand());
+document.querySelector('#recoverErrandSubmission').addEventListener('click',()=>void sendErrand(true));
+window.addEventListener('matjido-submit-change',updatePendingErrand);
+window.addEventListener('storage',updatePendingErrand);
+updatePendingErrand();
 
 async function refreshTracking(){
   const order=readPreviewOrder();
@@ -576,7 +622,13 @@ async function refreshTracking(){
 document.querySelector('#trackingRefresh').addEventListener('click',()=>void refreshTracking());
 
 document.querySelector('#trackingReview').addEventListener('click',()=>{
-  history.back();
+  const order=readPreviewOrder();
+  if(!order){document.querySelector('#trackingLiveStatus').textContent='이 기기에 보관한 접수 확인기간이 끝났습니다. 운영자에게 접수번호로 문의해 주세요.';return;}
+  paintTracking(order);
+  const details=document.querySelector('#trackingDetails');
+  details.hidden=!details.hidden;
+  document.querySelector('#trackingReview').setAttribute('aria-expanded',String(!details.hidden));
+  if(!details.hidden){details.scrollIntoView({block:'start'});details.focus({preventScroll:true});}
 });
 document.querySelector('#trackingHome').addEventListener('click',()=>{
   showErrandStep('home');history.pushState({errandStep:'home'},'',location.pathname);
@@ -608,6 +660,7 @@ errandContent.addEventListener('input',()=>{
 });
 
 itemName.addEventListener('input',()=>{updateRequestReadiness();scheduleDraftSave();});
+[packingStatus,declaredValue,declaredValueUnknown].forEach(input=>input.addEventListener('input',()=>{declaredValue.disabled=declaredValueUnknown.checked;updateRequestReadiness();scheduleDraftSave();}));
 document.querySelectorAll('[name="itemScale"],.extra-conditions input').forEach(input=>input.addEventListener('change',()=>{updateRequestReadiness();scheduleDraftSave();}));
 document.querySelectorAll('[data-address-detail]').forEach(input=>input.addEventListener('input',scheduleDraftSave));
 document.querySelector('#itemPhotoPick').addEventListener('click',()=>itemPhoto.click());
@@ -629,7 +682,7 @@ itemPhoto.addEventListener('change',()=>{
   itemPhotoImage.src=itemPhotoUrl;
   itemPhotoName.textContent=file.name;
   itemPhotoPreview.hidden=false;
-  itemPhotoStatus.textContent='사진을 선택했습니다. 실제 접수 단계에서는 주문과 함께 안전하게 전송됩니다.';
+  itemPhotoStatus.textContent='사진을 선택했습니다. 지금은 이 기기의 미리보기이며 접수함에는 전송하지 않습니다.';
 });
 document.querySelector('#itemPhotoRemove').addEventListener('click',()=>{
   if(itemPhotoUrl)URL.revokeObjectURL(itemPhotoUrl);

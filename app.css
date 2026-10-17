@@ -474,3 +474,4 @@ html.modal-open,body.modal-open{overflow:hidden!important;overscroll-behavior:no
   .island-expo-support-banner>strong{font-size:14px}
   .island-expo-support-action{padding:0 7px;font-size:11px}
 }
+.online-shop-owner-link{display:block;padding:16px 8px;color:#44605a;font-size:14px;line-height:1.5}.online-shop-public-link{display:grid!important;grid-template-columns:28px minmax(0,1fr) 16px!important;gap:10px;background:#126952;color:white!important;font-weight:800;margin:14px 0;padding:18px 14px!important;min-height:58px}.online-shop-public-link>span:nth-child(2){width:auto!important;min-width:0;font-size:18px!important;line-height:1.4;word-break:keep-all}

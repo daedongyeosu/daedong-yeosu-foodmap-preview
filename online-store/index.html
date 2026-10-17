@@ -83,6 +83,12 @@
       <a href="../store-manager/">상점주 주문접수 화면 열기</a>
     </section>
 
+    <section id="pendingStoreSubmission" class="preview-note" hidden aria-live="polite">
+      <strong>아직 확인하지 못한 접수가 있습니다</strong>
+      <p>새 주문을 보내기 전에 기존 접수 결과를 확인해 주세요. 같은 접수번호로 확인하며 주문을 중복 생성하지 않습니다.</p>
+      <button id="recoverStoreSubmission" class="preview-order" type="button">기존 접수 결과 확인</button>
+      <p id="storeRecoveryStatus" role="status"></p>
+    </section>
     <section class="catalog-tools" aria-label="상품 찾기">
       <label><span aria-hidden="true">⌕</span><input id="productSearch" type="search" placeholder="이 상점에서 상품 찾기" autocomplete="off"></label>
       <nav id="categoryFilters" aria-label="상품 분류"></nav>
@@ -124,7 +130,7 @@
         <div><dt>상점 배송비 지원</dt><dd id="storeSubsidy">0원</dd></div>
         <div><dt>기사 배송료</dt><dd id="deliveryFee">주소 확인 후 계산</dd></div>
         <div><dt>고객 배송비</dt><dd id="customerDeliveryFee">주소 확인 후 계산</dd></div>
-        <div><dt>맛지도 이용금액</dt><dd id="platformFee">500원</dd></div>
+        <div><dt>맛지도 이용금액</dt><dd id="platformFee">배송비와 함께 확인</dd></div>
         <div class="order-total"><dt>총 결제예정금액</dt><dd id="orderTotal">배송비 계산 전</dd></div>
       </dl>
       <p>결제금액은 실제 도로거리 배송비가 계산된 뒤 확정됩니다.</p>
@@ -154,8 +160,12 @@
   </section>
 
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
+  <script src="../online-shop.js?v=20261017-2" defer></script>
+  <script src="../delivery-cost-sharing.js?v=20261017-1" defer></script>
   <script src="../store-studio/catalog.js?v=20261016-4" defer></script>
-  <script src="../store-context.js?v=20261016-5" defer></script>
-  <script src="app.js?v=20261016-5" defer></script>
+  <script src="../store-context.js?v=20261016-5-sharing-1" defer></script>
+  <script src="../store-studio/product-photos.js?v=20261017-1" defer></script>
+  <script src="../customer-submission.js?v=20261017-1" defer></script>
+  <script src="app.js?v=20261017-9-public-shop-1" defer></script>
 </body>
 </html>

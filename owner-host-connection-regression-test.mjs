@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {createRequire} from 'node:module';
+const host='https://daedong-yeosu-admin.sisakim.chatgpt.site',id='0123456789abcdef',calls=[];
+const context={window:{setTimeout,clearTimeout},location:{origin:host},URL,console,AbortController,fetch:async(url,init)=>{const parsed=new URL(url,host);calls.push({path:parsed.pathname,init});const body=parsed.pathname==='/api/online-shops/source/'+id?{id,name:'로그인한 가게',routes:[]}:parsed.pathname==='/api/online-shops/source/'+id+'/menu'?{storeId:id,items:[]}:null;return{ok:Boolean(body),status:body?200:404,json:async()=>body};}};
+vm.createContext(context);vm.runInContext(fs.readFileSync('data-api.js','utf8'),context);
+assert.equal((await context.window.daedongDataApi.detail(id)).id,id);assert.equal((await context.window.daedongDataApi.menu(id)).storeId,id);
+const protectedReads=calls.filter(c=>c.path.startsWith('/api/online-shops/source/'));assert.equal(protectedReads.length,2);assert.ok(protectedReads.every(c=>c.init.credentials==='same-origin'));
+assert.ok(!calls.some(c=>c.path==='/api/store/'+id),'Owner host must not request cross-origin source with omitted identity');
+const require=createRequire(import.meta.url),api=require('./online-shop.js');assert.equal(new URL(api.ownerRoute(id,'https://preview.daedongmap.com/')).origin,host);assert.equal(new URL(api.ownerRoute(id,'http://127.0.0.1:4197/')).origin,'http://127.0.0.1:4197');assert.equal(api.ownerRoute('bad/id','https://preview.daedongmap.com/'),'');
+const admin=fs.readFileSync('shop-owners/app.js','utf8');assert.match(admin,/action==='grant'&&!checked.checked/);assert.match(admin,/reason.value.trim\(\)/);assert.match(admin,/confirm\(/);
+assert.match(fs.readFileSync('scripts/stage-online-shop-assets.mjs','utf8'),/explicit public assets/);
+console.log('PASS owner-host same-origin identity-preserving source reads, hosted registration route and explicit verification controls');

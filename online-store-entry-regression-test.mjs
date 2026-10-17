@@ -27,7 +27,9 @@ const requiredOnboarding=[
   'AI 분석 서버를 연결하기 전에는 상품정보를 자동 생성하지 않습니다.',
   '건당 1,000원',
   '건당 2,000원',
-  '실제 상점 공개·결제·주문은 발생하지 않습니다.'
+  '기기 초안은 고객에게 보이지 않습니다.',
+  '상점주 확인 후 서버 저장·공개를 별도로 선택',
+  '실제 결제·배송 접수는 아직 준비 중입니다.'
 ];
 for(const copy of requiredOnboarding){if(!page.includes(copy))throw new Error(`입점 프리뷰 필수 항목 누락: ${copy}`);}
 if(!script.includes("previewOnly:true"))throw new Error('프리뷰 저장이 실제 입점 데이터와 구분되지 않습니다.');

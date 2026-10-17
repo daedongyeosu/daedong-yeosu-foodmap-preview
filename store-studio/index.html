@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-12">
+  <link rel="stylesheet" href="studio.css?v=20261017-15-native-pinch-1">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -91,12 +91,15 @@
           <p class="hint">컴퓨터에서는 사진 파일을 진열장으로 끌어놓아도 됩니다. 투명 배경 PNG·WebP는 물건만 보입니다. 자동 배경 제거는 아직 연결되지 않았습니다.</p>
           <label>배치한 사진 찾기<input id="photoSearch" type="search" maxlength="80" placeholder="사진 이름·상품 구역"></label><label>사진 용도<select id="photoPurposeFilter"><option value="all">모든 사진</option><option value="product">판매상품 사진</option><option value="decoration">포스터·그림·장식</option></select></label><label>사진 상태<select id="photoStateFilter"><option value="all">모두 보기</option><option value="visible">고객에게 보이는 사진</option><option value="hidden">숨긴 사진</option><option value="locked">위치 잠근 사진</option></select></label><button id="resetPhotoSearch" type="button">사진 검색·필터 초기화</button><p id="photoResultsCount" class="hint" role="status" aria-live="polite"></p><p class="hint">검색은 아래 목록만 바꿉니다. 실제 진열과 고객 상품 목록은 바뀌지 않습니다.</p>
           <details id="photoBatchTools"><summary>검색된 사진 함께 정리하기</summary><div class="item-actions"><button type="button" data-photo-batch="lock">위치 모두 잠그기</button><button type="button" data-photo-batch="unlock">위치 잠금 모두 풀기</button><button type="button" data-photo-batch="hide">시안에서 모두 숨기기</button><button type="button" data-photo-batch="show">시안에 모두 보이기</button></div><label>지정할 상품 구역<input id="photoBatchSection" maxlength="24" placeholder="예: 봄 신상품"></label><button type="button" data-photo-batch="section">검색 결과에 구역 지정</button><p id="photoBatchStatus" class="hint" role="status" aria-live="polite"></p><p class="hint">현재 검색 결과에만 적용합니다. 검색이 없으면 전체 사진이 대상입니다. 여러 장은 적용 전에 확인합니다. 구역을 비우면 기존 구역 이름을 지웁니다. 숨김은 시안의 표시만 바꾸며 등록상품·재고를 삭제하거나 판매 중단하지 않습니다. 되돌리기 한 번으로 복구합니다.</p></details>
+          <p class="hint">목록의 사진을 누르면 이름·설명을 바로 수정합니다. 배치 위치는 수정 화면의 ‘진열장에서 보기’로 확인하세요.</p>
           <div id="itemList" aria-label="배치한 사진 목록"></div>
         </details>
         <details id="catalogSettings"><summary>3. 등록 상품 연결</summary>
           <p class="hint">맛지도 온라인 상점의 상점번호로 상품을 불러옵니다. 진열 사진에 상품을 연결하면 기존 장바구니를 사용합니다. 시안에는 가격·재고를 따로 저장하지 않습니다.</p>
           <label>온라인 상점번호<input id="catalogStore" maxlength="80" placeholder="등록한 온라인 상점번호"></label>
           <button id="loadCatalog" type="button">등록 상품 불러오기·새로고침</button>
+          <button id="placeCatalogPhotos" type="button">등록한 상품사진 진열하기</button>
+          <p id="catalogPhotoStatus" class="hint" role="status">이 기기에 보관한 사진을 상품과 연결해 진열합니다. 이미 연결한 상품은 중복 배치하지 않습니다. 다른 기기의 사진은 서버 저장 연결 후 지원합니다.</p>
           <p id="catalogStatus" class="hint" role="status" aria-live="polite"></p>
         </details>
         <details id="businessSettings"><summary>4. 방문·배달 연결</summary>
@@ -115,7 +118,8 @@
         </details>
       </aside>
       <section class="display" aria-label="상점 시안">
-        <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="focusMode" aria-pressed="false">진열장에 집중</button><button id="zoomScene" aria-pressed="false">가까이 보기</button><button id="preview">고객처럼 보기</button></div>
+        <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="focusMode" aria-pressed="false">진열장에 집중</button><button id="preview">고객처럼 보기</button></div>
+        <p id="sceneGestureHelp" class="hint">사진을 눌러 상품을 살펴보세요. 두 손가락을 벌리면 공간과 사진을 확대할 수 있습니다.</p>
         <div id="backupTools" class="backup-tools"><button id="exportScene">시안 파일로 보관</button><button id="importScene">보관한 시안 불러오기</button><input id="sceneFile" type="file" accept=".json,application/json" hidden><span>사진·배치를 함께 보관합니다. 기존 주문·상품정보는 변경하지 않습니다.</span></div>
         <div id="arrangeTools" class="arrange-tools"><button id="arrangeAll">개별 사진 가지런히 진열</button><label><input id="snapShelves" type="checkbox" checked> 공통 선반 가까이 놓으면 맞추기</label><small>진열대에 연결한 사진은 자동 정리로 바꾸지 않습니다.</small></div>
         <nav id="customerQuickActions" class="customer-actions quick-actions" aria-label="방문과 주문" hidden>
@@ -124,7 +128,7 @@
           <a id="customerPhone" class="customer-link" hidden>전화로 문의하기</a><button id="customerPhoneMissing" disabled>전화 문의 준비 중</button>
         </nav>
         <p id="virtualSpaceLabel" class="space-label" hidden>사장님이 꾸민 온라인 공간 · 사진을 눌러 상품을 살펴보세요</p>
-        <div id="sceneViewport" class="scene-viewport" tabindex="0" aria-label="상점 공간 · 가까이 보기에서는 좌우로 이동할 수 있습니다"><div id="scene" class="scene" data-material="plain" tabindex="0" aria-label="상품사진을 배치하는 진열장">
+        <div id="sceneViewport" class="scene-viewport" tabindex="0" aria-label="상점 공간 · 두 손가락으로 확대하거나 축소할 수 있습니다"><div id="scene" class="scene" data-material="plain" tabindex="0" aria-label="상품사진을 배치하는 진열장">
           <div id="sceneWallSurface" class="scene-wall-surface" aria-hidden="true" hidden></div><div id="sceneFloor" class="scene-floor" aria-hidden="true"><div id="sceneFloorSurface" class="scene-floor-surface" hidden></div></div><div id="sceneAwning" class="scene-awning" aria-hidden="true" hidden></div>
           <div class="scene-lights" aria-hidden="true"></div><h2 id="sign">나의 작은 카페</h2>
           <div id="zoneLabels" class="zone-labels"></div><div id="dividers" aria-hidden="true"></div><div id="shelfLines" aria-hidden="true"></div><div id="decorRoot"></div><div id="items"></div>
@@ -133,6 +137,7 @@
         <p id="saveStatus" role="status" aria-live="polite">사진과 배치를 이 기기에 자동 저장합니다.</p>
         <section id="itemTools" hidden aria-label="선택한 상품 편집">
           <h2>선택한 사진 꾸미기</h2>
+          <div class="photo-edit-navigation" aria-label="사진 수정 중 이동"><button type="button" data-studio-task="photo-list">사진 목록으로</button><button type="button" data-studio-task="scene">진열장에서 보기</button></div>
           <label>표시 이름<input id="itemName" maxlength="50"></label>
           <label>상품 설명<textarea id="itemDescription" maxlength="300" rows="3" placeholder="원두, 맛, 소재, 규격 등을 알려주세요."></textarea></label>
           <label>상품 구역<input id="itemSection" maxlength="24" list="sectionSuggestions" placeholder="예: 갓 구운 빵"></label><datalist id="sectionSuggestions"></datalist>
@@ -187,12 +192,15 @@
         <section id="productDetails" class="customer-product" hidden aria-label="선택한 상품 안내">
           <img id="customerProductPhoto" alt=""><p id="customerProductDescription"></p>
           <p id="customerCatalogInfo" role="status"></p>
+          <button id="catalogAdd" type="button" hidden>장바구니에 담기</button>
+          <p id="catalogCartFeedback" role="status" aria-live="polite"></p>
           <button id="sampleAdd" hidden>체험 장바구니 담기</button>
           <p id="sampleFeedback" role="status" aria-live="polite"></p>
           <a id="customerProductOrder" class="customer-link order-link" target="_blank" rel="noopener noreferrer" hidden></a>
           <p id="productOrderMissing" hidden>이 상품의 주문 연결을 준비하고 있습니다.</p>
           <small>가격·옵션·재고·배송비와 도착 예상은 주문 화면에서 확인해 주세요.</small>
         </section>
+        <section id="catalogCart" class="catalog-cart" hidden><h2>내 장바구니</h2><p id="catalogCartSummary" role="status"></p><a id="catalogCartLink" class="customer-link order-link">장바구니·배송비 확인하기</a><p class="hint">상품금액에 배송비·맛지도 이용금액은 별도입니다. 담기는 재고 예약이나 주문이 아닙니다.</p></section>
         <section id="customerBrowse" class="customer-browse" hidden><h2>마음에 드는 상품을 골라보세요</h2><p>사진을 누르면 자세히 볼 수 있습니다.</p><div id="browseSections" class="browse-sections"></div><div id="browseProducts" class="browse-products"></div></section>
         <section id="sampleCart" class="sample-cart" hidden><h2>체험 장바구니 <span id="sampleCartCount">0</span></h2><p>예시 상품과 가격으로만 체험합니다. 실제 주문·결제·배달은 발생하지 않습니다.</p><div id="sampleCartItems"></div><strong id="sampleCartTotal">0원</strong><button id="sampleCartClear">모두 비우기</button></section>
         <section id="customerBusiness" class="customer-business" hidden aria-labelledby="customerBusinessTitle">
@@ -207,8 +215,11 @@
   <script src="layout.js?v=20261017-9" defer></script>
   <script src="customer-links.js?v=20261016-3" defer></script>
   <script src="catalog.js?v=20261016-4" defer></script>
+  <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
+  <script src="product-photos.js?v=20261017-1" defer></script>
+  <script src="catalog-cart.js?v=20261017-1" defer></script>
   <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-11" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-12" defer></script>
+  <script src="studio.js?v=20261017-15-native-pinch-1" defer></script>
 </body></html>

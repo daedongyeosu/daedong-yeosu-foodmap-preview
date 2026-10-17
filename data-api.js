@@ -3,6 +3,7 @@
 (() => {
   const ACTIVE_REGION = window.DAEDONG_REGION || {code: 'yeosu'};
   const IS_GOHEUNG = ACTIVE_REGION.code === 'goheung';
+  const IS_OWNER_HOST = typeof location !== 'undefined' && location.origin === 'https://daedong-yeosu-admin.sisakim.chatgpt.site';
   const BASE_URL = IS_GOHEUNG ? '' : 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev';
   const GOHEUNG_CATALOG_URL = 'data/goheung-catalog.json';
   const CLIENT_HEADER = 'daedong-preview-web-v1-20260804';
@@ -281,10 +282,11 @@
     if (recentFailure && recentFailure.until > Date.now()) throw recentFailure.error;
     if (cacheKey) requestFailures.delete(cacheKey);
     const requestAbort = createRequestAbort(signal, timeoutMs);
-    const pending = fetch(`${BASE_URL}${path}`, {
+    const ownerPath=IS_OWNER_HOST&&/^\/api\/store\/[a-f0-9]{16}(?:\/menu)?$/i.test(path)?'/api/online-shops/source/'+path.slice('/api/store/'.length):'';
+    const pending = fetch(ownerPath||`${BASE_URL}${path}`, {
       method: 'GET',
       mode: 'cors',
-      credentials: 'omit',
+      credentials: ownerPath?'same-origin':'omit',
       cache: 'no-store',
       priority: cacheKey === 'catalog' ? 'high' : 'auto',
       headers: JSON_HEADERS,
