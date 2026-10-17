@@ -26,11 +26,12 @@
     const result=await response.json();if(result.sourceStoreId!==sourceId||result.published!==true||!Array.isArray(result.shop?.products))throw Error('공개 상점 정보가 올바르지 않습니다.');return result;
   }
   function route(sourceId,base){if(!id(sourceId))return '';const url=new URL('online-store/index.html',base);url.searchParams.set('publicShop',sourceId);return url.href;}
+  function ownerRoute(sourceId,base){if(!id(sourceId))return '';const url=new URL('store-partner/index.html',base);if(!['127.0.0.1','localhost'].includes(url.hostname))url.host=new URL(host).host;url.protocol=url.hostname==='127.0.0.1'||url.hostname==='localhost'?url.protocol:'https:';url.searchParams.set('sourceStore',sourceId);return url.href;}
   async function card(target,sourceId){
     if(!target||!id(sourceId))return;
     target.replaceChildren();
-    const a=document.createElement('a');a.className='online-shop-owner-link';a.href=new URL('store-partner/index.html?sourceStore='+encodeURIComponent(sourceId),document.baseURI).href;a.textContent='사장님이신가요? 온라인 상점 등록하기';target.append(a);
+    const a=document.createElement('a');a.className='online-shop-owner-link';a.href=ownerRoute(sourceId,document.baseURI);a.textContent='사장님이신가요? 온라인 상점 등록하기';target.append(a);
     try{const result=await publicShop(sourceId);if(!target.isConnected)return;if(result){const link=document.createElement('a');link.className='detail-route online-shop-public-link';link.href=route(sourceId,document.baseURI);link.innerHTML='<span aria-hidden="true">🏪</span><span>온라인 상점 보기</span><b aria-hidden="true">›</b>';link.setAttribute('aria-label','온라인 상점 보기');target.prepend(link);}}catch{/* A failed lookup never exposes a draft or removes existing order routes. */}
   }
-  return Object.freeze({host,endpoint,id,image,importStore,publicShop,route,card});
+  return Object.freeze({host,endpoint,id,image,importStore,publicShop,route,ownerRoute,card});
 });

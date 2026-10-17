@@ -1,0 +1,15 @@
+'use strict';
+const claimsStatus=document.querySelector('#claimsStatus'),claimsList=document.querySelector('#claimsList');
+async function claimApi(path,body){const response=await fetch('/api/online-shops/'+path,{method:body?'POST':'GET',credentials:'same-origin',cache:'no-store',headers:{'content-type':'application/json'},body:body?JSON.stringify(body):undefined});const result=await response.json();if(!response.ok){if([401,403].includes(response.status))document.querySelector('#claimsLogin').hidden=false;throw Error(result.message||'요청을 확인하지 못했습니다.');}return result;}
+async function loadClaims(){
+  const button=document.querySelector('#reloadClaims');button.disabled=true;claimsStatus.textContent='확인 대기 요청을 불러오고 있습니다.';
+  try{const result=await claimApi('claims');if(!Array.isArray(result.items))throw Error('요청 목록 형식이 다릅니다.');claimsList.replaceChildren();claimsStatus.textContent=result.items.length?`${result.items.length}개 요청입니다. 최대100개씩 표시하며, 처리 후 새로고침하면 다음 대기 요청을 볼 수 있습니다.`:'확인 대기 요청이 없습니다.';
+    for(const claim of result.items){
+      const row=document.createElement('article'),title=document.createElement('h2'),meta=document.createElement('small'),reason=document.createElement('textarea'),label=document.createElement('label'),checked=document.createElement('input'),actions=document.createElement('div'),approve=document.createElement('button'),reject=document.createElement('button'),status=document.createElement('p');
+      title.textContent=claim.storeName;meta.textContent=`가게 ${claim.sourceStoreId} / 요청 계정 ${claim.userId} / ${claim.requestedAt}`;reason.maxLength=500;reason.placeholder='확인한 연락처·증빙 종류와 판단 근거 (민감한 서류 원문·주민번호는 쓰지 마세요)';reason.setAttribute('aria-label',claim.storeName+' 확인 근거');checked.type='checkbox';label.append(checked,document.createTextNode(' 이 요청 계정의 실제 가게 운영 권한을 별도로 확인했습니다.'));actions.className='claim-actions';approve.type=reject.type='button';approve.textContent='확인 후 승인';reject.textContent='사유와 함께 반려';status.setAttribute('role','status');actions.append(approve,reject);row.append(title,meta,reason,label,actions,status);claimsList.append(row);
+      let busy=false;async function decide(action){if(busy)return;if(!reason.value.trim()||action==='grant'&&!checked.checked){status.textContent='판단 근거를 입력하고, 승인할 때는 운영 권한 확인에 체크해 주세요.';return;}if(!confirm(`${claim.storeName} 요청을 ${action==='grant'?'승인':'반려'}할까요?`))return;busy=true;approve.disabled=reject.disabled=true;try{await claimApi('manage/'+encodeURIComponent(claim.sourceStoreId)+'/'+action,{userId:claim.userId,reason:reason.value.trim()});status.textContent=action==='grant'?'승인했습니다. 해당 사장님이 상점을 공개할 수 있습니다. 실제 공개나 주문은 발생하지 않았습니다.':'반려했습니다. 가게 운영 권한은 부여하지 않았습니다.';}catch(error){status.textContent=error.message;approve.disabled=reject.disabled=false;}finally{busy=false;}}
+      approve.onclick=()=>decide('grant');reject.onclick=()=>decide('reject');
+    }
+  }catch(error){claimsStatus.textContent=error.message;claimsList.replaceChildren();}finally{button.disabled=false;}
+}
+document.querySelector('#reloadClaims').onclick=loadClaims;void loadClaims();

@@ -21,6 +21,8 @@ let sourceStoreId='',onlineShopVersion=0,onlineShopBusy=false,serverShopDraft=nu
 let deliveryCostSharing={mode:'ratio',customerPercent:100,stepWon:100};
 let legacySharing=false;
 let importingExisting=false;
+let accessStoreId='';
+let ownerCanRequest=false;
 const SHARE_EXAMPLE_TOTAL=5500;
 function sharingSupport(){return legacySharing?Number(selected('subsidy'))||0:globalThis.MatjidoDeliverySharing.split(SHARE_EXAMPLE_TOTAL,deliveryCostSharing).merchantWon;}
 function paintSharing(){
@@ -48,6 +50,7 @@ function digits(value){return String(value||'').replace(/\D/g,'').slice(0,11);}
 function formatPhone(value){const raw=digits(value);if(raw.length<=3)return raw;if(raw.length<=7)return `${raw.slice(0,3)}-${raw.slice(3)}`;return `${raw.slice(0,3)}-${raw.slice(3,7)}-${raw.slice(7)}`;}
 function stepOneReady(){const length=digits(document.querySelector('#ownerPhone').value).length;return Boolean(document.querySelector('#storeCategory').value&&document.querySelector('#storeName').value.trim()&&(length===11||sourceStoreId&&length>=9)&&addressInput.value.trim());}
 function updateNext(){
+  document.querySelector('#requestOwnerAccess').disabled=!ownerCanRequest||!document.querySelector('#storeName').value.trim();
   if(currentStep===1){nextButton.disabled=!stepOneReady();nextButton.textContent=stepOneReady()?'가게 분위기 꾸미기 →':'가게 주소와 정보를 확인해 주세요';}
   else if(currentStep===2){nextButton.disabled=false;nextButton.textContent='상품과 배송 설정하기 →';}
   else if(currentStep===3){nextButton.disabled=false;nextButton.textContent='내 온라인 상점 미리보기 →';}
@@ -228,6 +231,7 @@ function addImportedPrices(){
 async function beginExistingStore(){
   const id=globalThis.MatjidoOnlineShop.id(new URLSearchParams(location.search).get('sourceStore'));if(!id&&!sourceStoreId)return;
   const target=id||sourceStoreId,panel=document.querySelector('#existingStorePanel'),status=document.querySelector('#existingStoreStatus'),button=document.querySelector('#importExistingStore');panel.hidden=false;document.querySelector('#publicationPanel').hidden=target!==sourceStoreId;
+  accessStoreId=target;void connectOwnerAccount();
   status.textContent=sourceStoreId===target?'저장한 내 가게 초안을 이어서 수정할 수 있습니다. 다시 가져오기는 기존 편집내용을 덮어쓰므로 확인 후 진행합니다.':'기존 가게의 메뉴·사진을 가져오고 매장가격만 확인해 시작하세요. 아직 고객에게 공개되지 않습니다.';
   const importExisting=async(includeMenu)=>{
     if(importingExisting)return;
@@ -237,7 +241,8 @@ async function beginExistingStore(){
     try{
       const detail=await globalThis.daedongDataApi.detail(target);
       const menu=includeMenu?await globalThis.daedongDataApi.menu(target):{storeId:target,items:[]};
-      const next=globalThis.MatjidoOnlineShop.importStore(target,detail,menu,new URL('../',location.href).href);
+      const assetBase=location.origin===globalThis.MatjidoOnlineShop.host?'https://preview.daedongmap.com/':new URL('../',location.href).href;
+      const next=globalThis.MatjidoOnlineShop.importStore(target,detail,menu,assetBase);
       if(saved)localStorage.setItem(STORAGE_KEY+':store:'+saved.storeId,JSON.stringify(saved));
       const old=localStorage.getItem(STORAGE_KEY+':store:'+next.storeId);const resumed=old?JSON.parse(old):next;
       localStorage.setItem(STORAGE_KEY,JSON.stringify(resumed));draftStoreId='';finishProductEdit();loadDraft();restoreExtendedDraft();renderProducts();addImportedPrices();updatePricePreview();updateNext();
@@ -249,6 +254,13 @@ async function beginExistingStore(){
   button.onclick=()=>importExisting(true);
   document.querySelector('#importExistingStoreBasics').onclick=()=>importExisting(false);
   void refreshPublication();
+}
+async function connectOwnerAccount(){
+  const api=globalThis.MatjidoOnlineShop,local=['127.0.0.1','localhost'].includes(location.hostname),status=document.querySelector('#ownerAccessStatus');
+  document.querySelector('#ownerAccessPanel').hidden=false;
+  const signIn=document.querySelector('#ownerEntrySignIn');signIn.href=api.host+'/signin-with-chatgpt?returnTo='+encodeURIComponent('/store-partner/index.html?sourceStore='+accessStoreId);
+  if(location.origin!==api.host&&!local){status.textContent='상점 저장·공개는 관리자 호스트에서 로그인하고 진행합니다. 이 기기의 초안이 자동으로 다른 주소에 복사되지는 않습니다.';signIn.href=api.ownerRoute(accessStoreId,document.baseURI);signIn.textContent='상점주 관리화면으로 이동';return;}
+  try{const response=await fetch('/api/online-shops/session',{credentials:'same-origin',cache:'no-store'});if(!response.ok)throw Error();const session=await response.json();signIn.hidden=session.signedIn;ownerCanRequest=session.canRequestVerification===true;updateNext();status.textContent=session.signedIn?'로그인했습니다. 상점주 확인 전에도 초안을 준비할 수 있고, 확인 후 저장·공개할 수 있습니다.':'먼저 로그인해 주세요. 로그인했다고 다른 가게를 수정할 수 있는 것은 아닙니다.';}catch{status.textContent='계정 연결 서버를 확인하지 못했습니다. 초안은 유지합니다.';}
 }
 async function shopRequest(action,method='GET',body){
   const api=globalThis.MatjidoOnlineShop;
@@ -295,6 +307,7 @@ document.querySelectorAll('[name="subsidy"]').forEach(input=>input.addEventListe
 document.querySelector('#deliveryShare').addEventListener('input',event=>{legacySharing=false;deliveryCostSharing=globalThis.MatjidoDeliverySharing.policy(SHARE_EXAMPLE_TOTAL,globalThis.MatjidoDeliverySharing.choices(SHARE_EXAMPLE_TOTAL)[Number(event.target.value)]);updatePricePreview();});
 document.querySelectorAll('[data-share-percent]').forEach(button=>button.onclick=()=>{legacySharing=false;deliveryCostSharing={mode:'ratio',customerPercent:Number(button.dataset.sharePercent),stepWon:100};updatePricePreview();});
 document.querySelector('#saveOnlineShop').onclick=()=>publicationAction('save');
+document.querySelector('#requestOwnerAccess').onclick=async()=>{const button=document.querySelector('#requestOwnerAccess'),status=document.querySelector('#ownerAccessStatus');button.disabled=true;try{const response=await fetch('/api/online-shops/manage/'+accessStoreId+'/claim',{method:'POST',credentials:'same-origin',headers:{'content-type':'application/json'},body:JSON.stringify({storeName:document.querySelector('#storeName').value.trim()})});const result=await response.json();if(!response.ok)throw Error(result.message||'상점주 확인을 요청하지 못했습니다.');status.textContent=result.verified?'이미 확인된 내 가게입니다. 준비한 초안을 저장할 수 있습니다.':result.message;void refreshPublication();}catch(error){status.textContent=error.message;}finally{button.disabled=false;}};
 document.querySelector('#loadOnlineShop').onclick=async()=>{if(onlineShopBusy)return;if(!confirm('이 기기의 편집내용 대신 마지막 서버 초안을 불러올까요? 현재 내용은 가게별 보관함에 남깁니다.'))return;try{const result=await shopRequest('');if(!result.shop)throw Error('서버에 저장한 초안이 없습니다.');const current=shopSnapshot();localStorage.setItem(STORAGE_KEY+':store:'+current.storeId,JSON.stringify(current));localStorage.setItem(STORAGE_KEY,JSON.stringify({...result.shop,previewOnly:true}));finishProductEdit();loadDraft();restoreExtendedDraft();renderProducts();updatePricePreview();updateNext();onlineShopVersion=result.version;document.querySelector('#publicationStatus').textContent='마지막 서버 초안을 불러왔습니다. 수정 후 저장하고 다시 공개할 수 있습니다.';}catch(error){document.querySelector('#publicationStatus').textContent=error.message;}};
 document.querySelector('#publishOnlineShop').onclick=()=>publicationAction('publish');
 document.querySelector('#unpublishOnlineShop').onclick=()=>publicationAction('unpublish');

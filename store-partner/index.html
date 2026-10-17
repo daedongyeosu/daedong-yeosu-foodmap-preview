@@ -9,7 +9,7 @@
   <meta name="description" content="여수의 오프라인 상점이 입점비 없이 온라인 상점을 만들고 고객 주문과 배송을 연결하는 여수맛지도 입점 프리뷰">
   <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=20261011-1">
-  <link rel="stylesheet" href="product-editor.css?v=20261017-4-owner-shop-1">
+  <link rel="stylesheet" href="product-editor.css?v=20261017-4-owner-shop-1-account-2">
 </head>
 <body>
   <header class="page-header">
@@ -32,7 +32,7 @@
 
     <section class="notice" aria-label="프리뷰 안내">
       <b>지금은 입점 흐름을 확인하는 프리뷰입니다.</b>
-      <span>입력 내용은 이 기기에만 임시 저장되며 실제 상점 공개·결제·주문은 발생하지 않습니다.</span>
+      <span>기기 초안은 고객에게 보이지 않습니다. 상점주 확인 후 서버 저장·공개를 별도로 선택할 수 있으며, 실제 결제·배송 접수는 아직 준비 중입니다.</span>
     </section>
 
     <nav class="steps" aria-label="온라인 상점 개설 단계">
@@ -43,6 +43,12 @@
     </nav>
 
     <form id="storeOnboarding" novalidate>
+      <section id="ownerAccessPanel" class="notice" hidden>
+        <b>내 가게 운영 계정 연결</b>
+        <p id="ownerAccessStatus" role="status">로그인 상태를 확인하고 있습니다.</p>
+        <a id="ownerEntrySignIn" target="_top">로그인하고 내 가게 연결하기</a>
+        <button id="requestOwnerAccess" type="button" disabled>이 가게의 상점주 확인 요청</button>
+      </section>
       <section id="existingStorePanel" class="notice" hidden>
         <b>맛지도에 등록된 내 가게로 시작하기</b>
         <p id="existingStoreStatus" role="status"></p>
@@ -250,12 +256,12 @@
   </section>
 
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
-  <script src="../data-api.js?v=owner-import-20261017" defer></script>
-  <script src="../online-shop.js?v=20261017-1" defer></script>
+  <script src="../data-api.js?v=owner-import-20261017-same-origin-1" defer></script>
+  <script src="../online-shop.js?v=20261017-2" defer></script>
   <script src="../delivery-cost-sharing.js?v=20261017-1" defer></script>
   <script src="../store-context.js?v=20261016-5-sharing-1" defer></script>
   <script src="../store-studio/product-handoff.js?v=20261017-2" defer></script>
   <script src="../store-studio/product-photos.js?v=20261017-1" defer></script>
-  <script src="app.js?v=20261017-4-owner-shop-1" defer></script>
+  <script src="app.js?v=20261017-4-owner-shop-1-account-2" defer></script>
 </body>
 </html>

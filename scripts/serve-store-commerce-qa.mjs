@@ -32,8 +32,11 @@ const server=http.createServer(async(req,res)=>{try{
   if(req.headers.origin&&req.headers.origin!==origin)return send(res,403,'{}');
   if(url.pathname==='/qa-postcode.js'&&req.method==='GET')return send(res,200,`window.daum={Postcode:class{constructor(options){this.options=options;}embed(frame){const button=document.createElement('button');button.textContent='테스트 주소 선택 (실제 주소검색 아님)';button.onclick=()=>this.options.oncomplete(${JSON.stringify(address)});frame.append(button);}}};`,'application/javascript');
   if(url.pathname.startsWith('/api/')){
+    if(testShops&&url.pathname==='/api/qa-reset-shop'&&req.method==='POST'){
+      await env.DB.batch([env.DB.prepare('DELETE FROM online_shops WHERE source_store_id=?').bind('qa-existing-store'),env.DB.prepare('DELETE FROM online_shop_claims WHERE source_store_id=?').bind('qa-existing-store'),env.DB.prepare('DELETE FROM online_shop_owners WHERE source_store_id=?').bind('qa-existing-store')]);return send(res,200,'{}');
+    }
     if(testShops&&url.pathname.startsWith('/api/online-shops/')){
-      if(!/^\/api\/online-shops\/(public|manage)\/qa-existing-store(?:\/(grant|save|publish|unpublish))?$/.test(url.pathname))return send(res,403,'{}');
+      if(!/^\/api\/online-shops\/(?:(?:public|manage)\/qa-existing-store(?:\/(claim|reject|grant|save|publish|unpublish))?|session|claims)$/.test(url.pathname))return send(res,403,'{}');
       const chunks=[];for await(const chunk of req)chunks.push(chunk);const body=Buffer.concat(chunks);
       if(body.length>2*1024*1024)return send(res,413,'{}');
       const role=String(req.headers.cookie||'').match(/qa-shop-role=(owner|admin|intruder)(?:;|$)/)?.[1];

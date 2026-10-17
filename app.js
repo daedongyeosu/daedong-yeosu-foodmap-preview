@@ -2653,7 +2653,7 @@ function storeMenuPreviewEntryMarkup(store) {
 function onlineShopEntryMarkup(store){
   if(window.daedongDataApi?.regionCode!=='yeosu'||!window.MatjidoOnlineShop?.id(store?.id))return '';
   const id=escapeHtml(store.id);
-  return `<section data-online-shop-card="${id}" aria-label="온라인 상점"><a class="online-shop-owner-link" href="store-partner/index.html?sourceStore=${encodeURIComponent(store.id)}">사장님이신가요? 온라인 상점 등록하기</a></section>`;
+  return `<section data-online-shop-card="${id}" aria-label="온라인 상점"><a class="online-shop-owner-link" href="${escapeHtml(window.MatjidoOnlineShop.ownerRoute(store.id,document.baseURI))}">사장님이신가요? 온라인 상점 등록하기</a></section>`;
 }
 function loadOnlineShopEntry(store){
   const target=document.querySelector('#modalContent [data-online-shop-card]');
