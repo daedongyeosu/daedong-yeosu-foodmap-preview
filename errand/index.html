@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
   <title>24시간 심부름 | 여수맛지도</title>
-  <link rel="stylesheet" href="styles.css?v=20261011-14-kakao-yeosu-receipt-20261017-1">
+  <link rel="stylesheet" href="styles.css?v=20261011-14-kakao-yeosu-durable-submit-20261017-1">
 </head>
 <body>
   <main>
     <header><button id="errandBack" type="button" aria-label="이전 심부름 단계로 돌아가기">←</button><span><b>여수맛지도</b><small>24시간 심부름</small></span><em>시안</em></header>
+    <section id="pendingErrandSubmission" class="draft-resume" hidden aria-live="polite">
+      <h2>아직 확인하지 못한 접수가 있습니다</h2>
+      <p>새 신청을 보내지 않고 기존 신청 결과를 확인합니다. 재확인을 위해 이 기기에 신청 내용을 보관하며, 확인 가능 시간은 24시간입니다.</p>
+      <button id="recoverErrandSubmission" type="button">기존 접수 결과 확인</button>
+      <p id="errandRecoveryStatus" role="status"></p>
+    </section>
     <section id="errandHome" class="screen">
       <p class="return-note">← 여수맛지도에서 심부름을 선택해 들어온 화면</p>
       <section id="draftResume" class="draft-resume" hidden aria-labelledby="draftResumeTitle">
@@ -94,6 +100,20 @@
           <label><input type="radio" name="itemScale" value="큰 짐·여러 박스"><span><b>큰 짐·여러 박스예요</b><small>추가요금 또는 차량 확인 필요</small></span></label>
           <label><input type="radio" name="itemScale" value="크기를 잘 모르겠음"><span><b>잘 모르겠어요</b><small>사진과 내용을 보고 확인해 드려요</small></span></label>
         </fieldset>
+        <label for="packingStatus">포장상태 <b class="required-word">필수</b></label>
+        <select id="packingStatus"><option value="">선택해 주세요</option><option>밀봉·완충 포장 완료</option><option>픽업 전 포장 예정</option><option>포장 확인 필요</option></select>
+        <label for="declaredValue">물품가액 (원) <b class="required-word">필수</b></label>
+        <input id="declaredValue" type="number" inputmode="numeric" min="1" max="100000000" step="1" placeholder="물품 자체의 금액 · 배송비 아님">
+        <label><input id="declaredValueUnknown" type="checkbox">물품가액을 잘 모르겠어요 (운영자 확인 필요)</label>
+        <details class="safety-confirmations">
+          <summary>취급 주의사항 확인 (해당하는 물품만)</summary>
+          <p>파손·전자기기·큰 짐·50만원 이상 물품은 사진 선택도 필요합니다. 사진은 아직 이 기기에서만 미리봅니다.</p>
+          <label><input type="checkbox" value="충격·눌림 방지 포장 확인">충격·눌림 방지 포장 확인</label>
+          <label><input type="checkbox" value="액체 이중 밀봉 확인">액체 이중 밀봉 확인</label>
+          <label><input type="checkbox" value="전자기기 기존 상태·완충 확인">전자기기 기존 상태·완충 확인</label>
+          <label><input type="checkbox" value="보냉 한계 확인">보냉 한계 확인</label>
+          <label><input type="checkbox" value="시간 지연 가능성 확인">시간 지연 가능성 확인</label>
+        </details>
         <details class="extra-conditions">
           <summary>추가 조건이 있나요? <span>해당하는 것만 선택</span></summary>
           <div>
@@ -223,6 +243,7 @@
       <div id="postcodeFrame" class="postcode-frame"></div>
     </section>
   </main>
-  <script src="app.js?v=20261011-14-kakao-yeosu-submit-guard-20261017-1"></script>
+  <script src="../customer-submission.js?v=20261017-1"></script>
+  <script src="app.js?v=20261011-14-kakao-yeosu-durable-submit-20261017-1"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@ let openedCatalogCart=false;
 const DELIVERY_QUOTE_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-delivery-quote';
 const STORE_ORDER_ENDPOINT='https://daedong-yeosu-admin.sisakim.chatgpt.site/api/store-orders/preview';
 const PREVIEW_ORDER_KEY='matjido-customer-store-preview-order-v1';
+let submittingOrder=false;
 const WATCH_KEY='matjido-live-market-watch-v1';
 const MATJIDO_PUBLIC_CLIENT='daedong-preview-web-v1-20260804';
 const fallbackProducts=[
@@ -178,7 +179,7 @@ function orderPayload(){
   return {previewOnly:true,storeId:storeId(),storeName:store.storeName||fallbackStore.storeName,priceQuoteToken:serverPriceQuote?.priceQuoteToken||'',items:lines.map(({product,quantity,unitPrice})=>({id:product.id,name:product.name,unit:product.unit,quantity,priceWon:unitPrice})),subtotalWon:subtotal,deliveryFeeWon:deliveryFee,platformFeeWon:platformFee,merchantSupportWon:merchantSupport,totalWon:subtotal+customerDelivery+platformFee,destinationLabel:deliveryDestinationLabel(),customerRequest:document.querySelector('#reviewRequest').value.trim()};
 }
 
-function saveTracking(value){try{localStorage.setItem(PREVIEW_ORDER_KEY,JSON.stringify(value));}catch{}}
+function saveTracking(value){try{const raw=JSON.stringify(value);localStorage.setItem(PREVIEW_ORDER_KEY,raw);return localStorage.getItem(PREVIEW_ORDER_KEY)===raw;}catch{return false;}}
 function loadTracking(){try{const value=JSON.parse(localStorage.getItem(PREVIEW_ORDER_KEY)||'null');return value?.orderId&&value?.customerToken?value:null;}catch{return null;}}
 function trackingClock(value){if(!value)return'';const date=new Date(value);if(Number.isNaN(date.getTime()))return'';return new Intl.DateTimeFormat('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(date);}
 function paintTracking(order,events=[]){
@@ -194,11 +195,33 @@ async function refreshTracking(){
   catch(error){panel.setAttribute('aria-busy','false');document.querySelector('#trackingOrderId').textContent=saved.orderId;document.querySelector('#trackingStatus').textContent='상태 확인 필요';document.querySelector('#trackingMessage').textContent=String(error?.message||'').includes('만료')?'테스트 주문 확인기간이 끝났습니다.':'연결이 원활하지 않습니다. 잠시 뒤 새로고침해 주세요.';document.querySelector('#trackingUpdated').textContent='자동 재확인 중';}
   finally{button.disabled=false;}
 }
-async function sendPreviewOrder(){
-  const button=document.querySelector('#sendPreviewOrder');const status=document.querySelector('#reviewSubmitStatus');if(!deliveryAddress||!deliveryQuote||!cartLines().length)return;
-  if(catalogMode&&(!serverCatalogActive||!serverPriceQuote?.priceQuoteToken)){status.textContent='가격·재고 확인이 필요합니다. 주문내용 확인을 다시 진행해 주세요.';return;}
+function pendingStoreScope(){return `store:${storeId()}`;}
+function updatePendingStore(){try{document.querySelector('#pendingStoreSubmission').hidden=!globalThis.MatjidoSubmission?.has(pendingStoreScope());}catch{document.querySelector('#storeRecoveryStatus').textContent='이 기기의 접수 확인정보를 읽지 못했습니다.';}}
+async function sendPreviewOrder(recover=false){
+  if(submittingOrder)return;
+  const button=document.querySelector('#sendPreviewOrder'),recovery=document.querySelector('#recoverStoreSubmission');const status=document.querySelector(recover?'#storeRecoveryStatus':'#reviewSubmitStatus');
+  if(!globalThis.MatjidoSubmission){status.textContent='안전한 접수 기능을 불러오지 못했습니다. 화면을 새로고침해 주세요.';return;}
+  try{if(!recover&&globalThis.MatjidoSubmission.has(pendingStoreScope())){status.textContent='먼저 기존 접수 결과를 확인해 주세요.';updatePendingStore();return;}}
+  catch{status.textContent='이 기기의 저장공간을 확인하지 못했습니다. 주문은 보내지 않았습니다.';return;}
+  if(!recover&&(!deliveryAddress||!deliveryQuote||!cartLines().length))return;
+  if(!recover&&catalogMode&&(!serverCatalogActive||!serverPriceQuote?.priceQuoteToken)){status.textContent='가격·재고 확인이 필요합니다. 주문내용 확인을 다시 진행해 주세요.';return;}
+  submittingOrder=true;recovery.disabled=true;
   button.disabled=true;status.className='review-submit-status';status.textContent='상점주 테스트 주문함으로 보내는 중입니다…';
-  try{const response=await fetch(STORE_ORDER_ENDPOINT,{method:'POST',mode:'cors',headers:{'content-type':'application/json','accept':'application/json'},credentials:'omit',body:JSON.stringify(orderPayload())});const result=await response.json();if(!response.ok||!result?.order?.id||!result?.customerToken)throw new Error(result?.message||`order-${response.status}`);saveTracking({orderId:result.order.id,customerToken:result.customerToken});paintTracking(result.order);status.textContent=result.order.pricingAuthority==='SERVER'?'서버가 가격·재고를 확정해 테스트 주문함에 전달했습니다. 실제 결제는 발생하지 않았습니다.':'테스트 주문이 상점주 주문접수 화면에 도착했습니다.';button.textContent='테스트 주문 전송 완료';cart={};serverPriceQuote=null;saveCart();renderCart();document.querySelector('#orderReviewPanel').hidden=true;document.querySelector('#cartPanel').hidden=true;if(catalogMode)void refreshServerCatalog();document.body.style.overflow='';document.querySelector('#orderTracking').scrollIntoView({behavior:'smooth',block:'start'});clearInterval(trackingTimer);trackingTimer=setInterval(refreshTracking,5000);}catch(error){serverPriceQuote=null;status.className='review-submit-status is-error';status.textContent=String(error?.message||'').includes('가격')||String(error?.message||'').includes('재고')?String(error.message):'테스트 주문을 보내지 못했습니다. 잠시 뒤 다시 시도해 주세요.';button.disabled=false;}
+  try{
+    const {receipt:result,payload}=await globalThis.MatjidoSubmission.send(pendingStoreScope(),STORE_ORDER_ENDPOINT,recover?null:orderPayload());
+    if(!result?.order?.id||!result?.customerToken)throw new Error('서버의 접수 결과를 확인하지 못했습니다. 기존 접수 결과를 다시 확인해 주세요.');
+    if(catalogMode&&!(result.order.pricingAuthority==='SERVER'))throw new Error('서버에서 현재 가격과 재고를 확정한 접수인지 확인하지 못했습니다. 기존 접수 결과를 다시 확인해 주세요.');
+    if(!saveTracking({orderId:result.order.id,customerToken:result.customerToken}))throw new Error('접수는 확인됐지만 이 기기에 접수증을 보관하지 못했습니다. 기존 결과 확인으로 다시 확인해 주세요.');
+    const signature=items=>JSON.stringify(items.map(item=>[item.id,item.quantity]).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))));
+    if(signature(cartLines().map(line=>({id:line.product.id,quantity:line.quantity})))===signature(payload.items)){
+      const previous=cart;cart={};saveCart();
+      if(!demoMode()&&localStorage.getItem(activeCartKey)!=='{}'){cart=previous;throw new Error('장바구니 정리를 저장하지 못했습니다. 기존 접수 결과를 다시 확인해 주세요.');}
+    }
+    globalThis.MatjidoSubmission.clear(pendingStoreScope(),payload.clientRequestId);serverPriceQuote=null;renderCart();paintTracking(result.order);
+    status.textContent='테스트 접수를 확인했습니다. 실제 결제는 발생하지 않았으며 기사 호출도 하지 않았습니다.';button.textContent='테스트 주문 전송 완료';
+    document.querySelector('#orderReviewPanel').hidden=true;document.querySelector('#cartPanel').hidden=true;if(catalogMode)void refreshServerCatalog();document.body.style.overflow='';document.querySelector('#orderTracking').scrollIntoView({behavior:'smooth',block:'start'});clearInterval(trackingTimer);trackingTimer=setInterval(refreshTracking,5000);
+  }catch(error){status.className='review-submit-status is-error';status.textContent=error?.message||'접수 결과를 확인하지 못했습니다.';}
+  finally{submittingOrder=false;button.disabled=false;recovery.disabled=false;updatePendingStore();}
 }
 
 function loadPostcode(){
@@ -259,6 +282,10 @@ document.querySelector('#postcodeClose').addEventListener('click',closePostcode)
 document.querySelector('#addressDetail').addEventListener('change',()=>{if(deliveryAddress)requestDeliveryQuote();});
 document.querySelector('#previewOrder').addEventListener('click',async()=>{const status=document.querySelector('#orderStatus');if(!deliveryAddress){status.textContent='배송받을 공식 주소를 먼저 선택해 주세요.';return;}if(!deliveryQuote){status.textContent='실제 도로거리 배송비가 확정된 뒤 주문내용을 확인할 수 있습니다.';return;}status.textContent=serverCatalogActive?'서버에서 현재 가격과 재고를 확정하는 중입니다…':'';try{await requestServerPriceQuote();renderOrderReview();document.querySelector('#orderReviewPanel').hidden=false;status.textContent=serverCatalogActive?'서버 가격·재고 확인 완료 · 실제 결제 전 테스트입니다.':'';}catch(error){serverPriceQuote=null;status.textContent=String(error?.message||'가격이나 재고가 변경되었습니다. 다시 확인해 주세요.');await refreshServerCatalog();}});
 document.querySelector('#closeOrderReview').addEventListener('click',()=>{document.querySelector('#orderReviewPanel').hidden=true;});
-document.querySelector('#sendPreviewOrder').addEventListener('click',sendPreviewOrder);
+document.querySelector('#sendPreviewOrder').addEventListener('click',()=>sendPreviewOrder());
+document.querySelector('#recoverStoreSubmission').addEventListener('click',()=>sendPreviewOrder(true));
+window.addEventListener('matjido-submit-change',updatePendingStore);
+window.addEventListener('storage',updatePendingStore);
+updatePendingStore();
 document.querySelector('#refreshTracking').addEventListener('click',refreshTracking);
 applyStore();renderCategories();renderProducts();renderLiveMarket();renderCart();refreshTracking();refreshServerCatalog();trackingTimer=setInterval(refreshTracking,5000);liveMarketTimer=setInterval(()=>{renderProducts();renderLiveMarket();renderCart();refreshServerCatalog();},30000);
