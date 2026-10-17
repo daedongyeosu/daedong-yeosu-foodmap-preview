@@ -93,6 +93,12 @@ await context.addInitScript(() => {
   sessionStorage.setItem('daedongCommunityIntroPlayedV4', '1');
   sessionStorage.setItem('daedongMukkebiIslandExpoEventSeenSessionV1', '1');
   window.__returnedOrderMethodTouchState = [];
+  window.__orderRouteLaunches = [];
+  const nativeOpen = window.open;
+  window.open = function (...args) {
+    window.__orderRouteLaunches.push({href: args[0], at: performance.now(), active: navigator.userActivation?.isActive});
+    return nativeOpen.apply(this, args);
+  };
   const recordReturnedOrderMethodTouch = event => {
     if (!event.target?.closest?.('[data-rc3-other-methods]')) return;
     window.__returnedOrderMethodTouchState.push({
@@ -330,23 +336,15 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
     `${storeName} 외부 주문앱 복귀 뒤 주문앱 목록 열린 상태 유지`
   );
 
-  // Samsung Kakao WebView can deliver the first route selection after native
-  // app return as click without the pointerdown timestamp used before pause.
-  // Choose a different app directly from the list preserved across return.
+  // Exercise a real browser touch after return, not just a DOM dispatch.
+  // The bounded click-only/native-resume race is tested separately below.
   const returnedExternalRoute = page.locator('#modal:not([hidden]) [data-rc3-external-route="coupang"]');
   const returnedExpectedURL = await returnedExternalRoute.evaluate(element => {
     const store = window.fxStoreById?.(element.dataset.storeId);
     return store?.routes?.find(route => route.key === element.dataset.rc3ExternalRoute)?.url || '';
   });
   const returnedExternalPagePromise = context.waitForEvent('page', {timeout: 5000});
-  await returnedExternalRoute.evaluate(element => {
-    element.dispatchEvent(new MouseEvent('click', {
-      bubbles: true,
-      cancelable: true,
-      detail: 1,
-      view: window
-    }));
-  });
+  await returnedExternalRoute.tap();
   const returnedExternalPage = await returnedExternalPagePromise;
   await returnedExternalPage.waitForLoadState('domcontentloaded');
   await check(
@@ -355,7 +353,74 @@ async function checkStore(storeName, screenshotName, {nativeResume = false} = {}
   );
   await returnedExternalPage.close();
   await page.bringToFront();
+  await checkRapidRouteSwitch(storeName);
   await resetScenarioState();
+}
+
+async function checkRapidRouteSwitch(storeName) {
+  // Establish a clean boundary for the prior physical tap, then model the
+  // original failure's 30ms native-resume -> click-only different-app choice.
+  // Do not increase popup timeouts or retry a swallowed activation.
+  await page.waitForTimeout(100);
+  const rapidPopups = [];
+  const popupPromise = context.waitForEvent('page', {
+    timeout: 5000,
+    predicate: popup => { rapidPopups.push(popup); return rapidPopups.length === 2; }
+  });
+  // Attach a rejection handler immediately; the assertion below must retain
+  // the useful launch trace even when the unfixed runtime opens only one tab.
+  const popupsDone = popupPromise.then(() => null, error => error);
+  const state = await page.evaluate(async () => {
+    const started = window.__orderRouteLaunches.length;
+    const click = key => {
+      const target = document.querySelector(`#modal:not([hidden]) [data-rc3-external-route="${key}"]`);
+      const rect = target.getBoundingClientRect();
+      target.dispatchEvent(new MouseEvent('click', {
+        bubbles: true, cancelable: true, detail: 1, view: window,
+        clientX: rect.x + rect.width / 2, clientY: rect.y + rect.height / 2
+      }));
+    };
+    click('baemin');
+    window.dispatchEvent(new Event('blur'));
+    let hidden = true;
+    const hiddenDescriptor = Object.getOwnPropertyDescriptor(document, 'hidden');
+    const visibilityDescriptor = Object.getOwnPropertyDescriptor(document, 'visibilityState');
+    try {
+      Object.defineProperty(document, 'hidden', {configurable: true, get: () => hidden});
+      Object.defineProperty(document, 'visibilityState', {configurable: true, get: () => hidden ? 'hidden' : 'visible'});
+      document.dispatchEvent(new Event('visibilitychange'));
+      await new Promise(resolve => setTimeout(resolve, 30));
+      hidden = false;
+      document.dispatchEvent(new Event('visibilitychange'));
+      window.dispatchEvent(new Event('focus'));
+      const secondAt = performance.now();
+      click('coupang');
+      click('coupang'); // Same input echo must not create a third window.
+      const launches = window.__orderRouteLaunches.slice(started);
+      return {launches, gap: secondAt - launches[0]?.at};
+    } finally {
+      if (hiddenDescriptor) Object.defineProperty(document, 'hidden', hiddenDescriptor);
+      else delete document.hidden;
+      if (visibilityDescriptor) Object.defineProperty(document, 'visibilityState', visibilityDescriptor);
+      else delete document.visibilityState;
+    }
+  });
+  report.rapidReturns ||= [];
+  report.rapidReturns.push({storeName, ...state, withinDedupeWindow: state.gap < 80});
+  const popupError = await popupsDone;
+  // A slow browser can spend >80ms creating the first real popup alone. The
+  // exact 30ms boundary is deterministic in rapid-order-route-tap-regression-
+  // test.mjs; here retain actual windows and assert the customer outcome,
+  // recording wall time instead of claiming every CPU can exercise <80ms.
+  await check(Promise.resolve(state.launches.length === 2), `${storeName} 빠른 복귀의 다른 앱은 허용하고 같은 입력 중복은 차단`);
+  if (popupError) throw popupError;
+  await check(Promise.resolve(rapidPopups.length === 2), `${storeName} 빠른 복귀 뒤 실제 새 창 두 개 생성`);
+  for (let index = 0; index < rapidPopups.length; index++) {
+    await rapidPopups[index].waitForLoadState('domcontentloaded');
+    await check(Promise.resolve(rapidPopups[index].url() === state.launches[index].href), `${storeName} 빠른 선택${index + 1}의 주문앱 주소 일치`);
+    await rapidPopups[index].close();
+  }
+  await page.bringToFront();
 }
 
 async function checkConditionalOrderLabel(storeName, expectedLabel, {singleYogiyo = false} = {}) {
@@ -423,7 +488,8 @@ try {
     modalHidden: document.querySelector('#modal')?.hidden,
     modalText: document.querySelector('#modal')?.innerText?.slice(0, 1000) || '',
     modalHtml: document.querySelector('#modal')?.innerHTML?.slice(0, 2000) || '',
-    returnedTouchState: window.__returnedOrderMethodTouchState || []
+    returnedTouchState: window.__returnedOrderMethodTouchState || [],
+    routeLaunches: window.__orderRouteLaunches || []
   })).catch(() => null);
   await page.screenshot({path: 'browser-other-order-method-touch-failure.png', fullPage: false}).catch(() => {});
 } finally {
