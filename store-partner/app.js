@@ -230,7 +230,7 @@ function addImportedPrices(){
 }
 async function beginExistingStore(){
   const id=globalThis.MatjidoOnlineShop.id(new URLSearchParams(location.search).get('sourceStore'));if(!id&&!sourceStoreId)return;
-  const target=id||sourceStoreId,panel=document.querySelector('#existingStorePanel'),status=document.querySelector('#existingStoreStatus'),button=document.querySelector('#importExistingStore');panel.hidden=false;document.querySelector('#publicationPanel').hidden=target!==sourceStoreId;
+  const target=id||sourceStoreId,panel=document.querySelector('#existingStorePanel'),status=document.querySelector('#existingStoreStatus'),button=document.querySelector('#importExistingStore');panel.hidden=false;document.querySelector('#publicationPanel').hidden=false;
   accessStoreId=target;void connectOwnerAccount();
   status.textContent=sourceStoreId===target?'저장한 내 가게 초안을 이어서 수정할 수 있습니다. 다시 가져오기는 기존 편집내용을 덮어쓰므로 확인 후 진행합니다.':'기존 가게의 메뉴·사진을 가져오고 매장가격만 확인해 시작하세요. 아직 고객에게 공개되지 않습니다.';
   const importExisting=async(includeMenu)=>{
@@ -265,21 +265,34 @@ async function connectOwnerAccount(){
 async function shopRequest(action,method='GET',body){
   const api=globalThis.MatjidoOnlineShop;
   if(location.origin!==api.host&&!['127.0.0.1','localhost'].includes(location.hostname))throw Error('서버 저장·공개는 관리자 사이트에서 로그인한 뒤 진행할 수 있습니다.');
-  const response=await fetch('/api/online-shops/manage/'+sourceStoreId+(action?'/'+action:''),{method,credentials:'same-origin',cache:'no-store',headers:{'content-type':'application/json'},body:body?JSON.stringify(body):undefined});
+  const response=await fetch('/api/online-shops/manage/'+(sourceStoreId||accessStoreId)+(action?'/'+action:''),{method,credentials:'same-origin',cache:'no-store',headers:{'content-type':'application/json'},body:body?JSON.stringify(body):undefined});
   const result=await response.json();if(!response.ok)throw Error(result.message||'상점주 권한과 서버 연결을 확인해 주세요.');return result;
 }
 async function refreshPublication(){
-  if(!sourceStoreId)return;
+  if(!sourceStoreId&&!accessStoreId)return;
   const signIn=document.querySelector('#ownerSignIn');signIn.href=globalThis.MatjidoOnlineShop.host+'/signin-with-chatgpt?returnTo='+encodeURIComponent('/store-partner/index.html?sourceStore='+sourceStoreId);signIn.hidden=false;
-  try{const result=await shopRequest('');onlineShopVersion=result.version;serverShopDraft=result.shop;document.querySelector('#loadOnlineShop').hidden=!serverShopDraft;document.querySelector('#publishOnlineShop').disabled=!result.version;document.querySelector('#unpublishOnlineShop').hidden=!result.published;document.querySelector('#publicationStatus').textContent=result.published?'현재 고객에게 공개 중입니다. 수정사항은 서버 저장 후 다시 공개해야 반영됩니다.':'현재 비공개입니다. 서버에 저장하고 공개하기를 눌러 주세요.';}catch(error){document.querySelector('#publicationStatus').textContent=error.message;}
+  try{const result=await shopRequest('');onlineShopVersion=result.version;serverShopDraft=result.shop;document.querySelector('#loadOnlineShop').hidden=!serverShopDraft;document.querySelector('#publishOnlineShop').disabled=!result.version||!sourceStoreId;document.querySelector('#unpublishOnlineShop').hidden=!result.published;document.querySelector('#publicationStatus').textContent=!sourceStoreId&&serverShopDraft?'다른 기기에 저장한 서버 초안이 있습니다. 서버 초안 불러오기로 사진과 상품을 이어서 수정하세요.':result.published?'현재 고객에게 공개 중입니다. 수정사항은 서버 저장 후 다시 공개해야 반영됩니다.':'현재 비공개입니다. 서버에 저장하고 공개하기를 눌러 주세요.';}catch(error){document.querySelector('#publicationStatus').textContent=error.message;}
 }
 async function publicationAction(action){
   if(onlineShopBusy||!sourceStoreId)return;
   const status=document.querySelector('#publicationStatus');
   if(action!=='save'&&!confirm(action==='publish'?'마지막 서버 저장 내용을 고객에게 공개할까요?':'고객에게 보이는 온라인 상점을 비공개로 바꿀까요?'))return;
-  onlineShopBusy=true;document.querySelectorAll('#publicationPanel button').forEach(button=>button.disabled=true);
-  try{if(action==='save'&&pendingProduct())throw Error('작성 중인 상품을 먼저 적용하거나 취소해 주세요.');const snapshot=action==='save'?shopSnapshot():null;const result=await shopRequest(action,'POST',{version:onlineShopVersion,...(snapshot?{shop:snapshot}:{} )});onlineShopVersion=result.version;status.textContent=action==='save'?'서버에 초안을 저장했습니다. 공개 전까지 고객에게 보이지 않습니다.':action==='publish'?'공개했습니다. 기존 가게카드를 다시 열면 온라인 상점 보기 버튼이 나타납니다.':'공개를 중지했습니다.';document.querySelector('#unpublishOnlineShop').hidden=!result.published;if(snapshot){serverShopDraft=snapshot;document.querySelector('#loadOnlineShop').hidden=false;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(snapshot));}catch{status.textContent+=' 이 기기 저장 공간이 부족하므로 다음에는 서버 초안을 불러오세요.';}}}
-  catch(error){status.textContent=error.message;}finally{onlineShopBusy=false;document.querySelectorAll('#publicationPanel button').forEach(button=>button.disabled=false);document.querySelector('#publishOnlineShop').disabled=!onlineShopVersion;}
+  onlineShopBusy=true;const controls=[...form.querySelectorAll('input,select,textarea,button')].map(node=>[node,node.disabled]);controls.forEach(([node])=>node.disabled=true);form.setAttribute('aria-busy','true');
+  try{
+    if(action==='save'&&(pendingProduct()||photoBusy||productSaving))throw Error('작성 중인 상품을 먼저 적용하거나 취소해 주세요.');
+    const snapshot=action==='save'?shopSnapshot():null,uploaded=[];
+    if(snapshot){const photos=products.filter(p=>globalThis.MatjidoProductPhotos.valid(p.image));for(const [index,product] of photos.entries()){
+      status.textContent=`상품사진 ${index+1}/${photos.length}장을 서버에 보관하고 있습니다… 공개는 아직 하지 않습니다.`;
+      const saved=await shopRequest('photos','POST',{dataUrl:product.image});
+      const image=globalThis.MatjidoOnlineShop.image(saved.image,document.baseURI),expected=new URL('/api/online-shops/public/'+sourceStoreId+'/photos/',location.href);
+      if(!image||new URL(image).origin!==expected.origin||!new URL(image).pathname.startsWith(expected.pathname))throw Error('서버 사진 주소를 확인하지 못했습니다. 기기 사진은 유지했습니다.');
+      snapshot.products.find(p=>p.id===product.id).image=image;uploaded.push([product,image]);
+    }}
+    const result=await shopRequest(action,'POST',{version:onlineShopVersion,...(snapshot?{shop:snapshot}:{})});onlineShopVersion=result.version;
+    status.textContent=action==='save'?'서버에 초안을 저장했습니다. 상품사진도 보관했습니다. 공개 전까지 고객에게 보이지 않습니다.':action==='publish'?'공개했습니다. 기존 가게카드를 다시 열면 온라인 상점 보기 버튼이 나타납니다.':'공개를 중지했습니다.';
+    document.querySelector('#unpublishOnlineShop').hidden=!result.published;
+    if(snapshot){for(const [product,image] of uploaded){product.image=image;product.hasPhoto=true;}renderProducts();serverShopDraft=snapshot;document.querySelector('#loadOnlineShop').hidden=false;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(snapshot));}catch{status.textContent+=' 이 기기 저장 공간이 부족하므로 다음에는 서버 초안을 불러오세요.';}}
+  }catch(error){status.textContent=error.message;}finally{onlineShopBusy=false;controls.forEach(([node,disabled])=>node.disabled=disabled);form.removeAttribute('aria-busy');document.querySelector('#publishOnlineShop').disabled=!onlineShopVersion;}
 }
 
 form.addEventListener('input',updateNext);
@@ -349,7 +362,7 @@ function restoreStudioProduct(){
 }
 async function restoreProductPhotos(){
   document.querySelector('#addProduct').disabled=true;
-  try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');if(saved?.storeId){const photos=await globalThis.MatjidoProductPhotos.list(saved.storeId);for(const product of products)if(photos[product.id]){product.image=photos[product.id];product.hasPhoto=true;}}}
+  try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');if(saved?.storeId){const photos=await globalThis.MatjidoProductPhotos.list(saved.storeId);for(const product of products)if(!product.image&&photos[product.id]){product.image=photos[product.id];product.hasPhoto=true;}}}
   catch{editorStatus('보관한 상품사진을 읽지 못했습니다. 기존 자료를 지우지 않았습니다. 다시 열어 확인해 주세요.',true);}
   finally{renderProducts();document.querySelector('#addProduct').disabled=false;restoreStudioProduct();}
 }

@@ -48,6 +48,7 @@
         <p id="ownerAccessStatus" role="status">로그인 상태를 확인하고 있습니다.</p>
         <a id="ownerEntrySignIn" target="_top">로그인하고 내 가게 연결하기</a>
         <button id="requestOwnerAccess" type="button" disabled>이 가게의 상점주 확인 요청</button>
+        <button id="loadOnlineShop" type="button" hidden>서버에 저장한 상점 초안 불러오기</button>
       </section>
       <section id="existingStorePanel" class="notice" hidden>
         <b>맛지도에 등록된 내 가게로 시작하기</b>
@@ -225,7 +226,7 @@
         <p id="customerPreviewHelp" class="method-status" role="status">준비내용을 저장한 뒤 고객 화면을 확인할 수 있습니다.</p>
         <a id="customerStorePreview" class="customer-preview-link" href="../online-store/" hidden>고객에게 보이는 온라인 상점 확인하기 <span aria-hidden="true">›</span></a>
         <a class="customer-preview-link" href="../store-studio/index.html">상품사진으로 진열장 꾸미기 <span aria-hidden="true">›</span></a>
-        <p class="method-status">꾸미기의 ‘등록 상품 연결’에서 이 기기에 보관한 상품사진을 진열할 수 있습니다. 사진의 다른 기기 공개는 아직 지원하지 않습니다.</p>
+        <p class="method-status">상품사진은 먼저 이 기기에 보관합니다. 기존 가게의 확인된 상점주는 아래 ‘서버에 초안 저장’으로 사진까지 보관한 뒤 공개할 수 있습니다. 저장만으로 고객에게 보이지 않으며, 꾸민 공간의 상품 연결은 별도 준비 중입니다.</p>
         <a class="customer-preview-link manager-preview-link" href="../store-manager/">상점주 주문접수 화면 확인하기 <span aria-hidden="true">›</span></a>
         <label class="preview-agreement"><input id="previewAgreement" type="checkbox"><span>입력한 상점정보와 배송비 지원 설정을 확인했습니다.</span></label>
         <button id="savePreview" class="save-preview" type="button" disabled>입점 준비내용 저장하기</button>
@@ -234,7 +235,6 @@
           <b>고객에게 공개하기</b>
           <p>가게 운영 권한을 확인한 계정만 공개할 수 있습니다. 가격을 모두 확인하고 저장한 내용만 공개합니다. 결제·배송 접수는 별도 준비 단계입니다.</p>
           <a id="ownerSignIn" target="_top" hidden>관리자 사이트에서 로그인하고 계속하기</a>
-          <button id="loadOnlineShop" type="button" hidden>서버에 저장한 상점 초안 불러오기</button>
           <button id="saveOnlineShop" type="button">확인한 상점 초안 서버에 저장</button>
           <button id="publishOnlineShop" type="button" disabled>온라인 상점 공개하기</button>
           <button id="unpublishOnlineShop" type="button" hidden>공개 중지</button>
@@ -257,11 +257,11 @@
 
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
   <script src="../data-api.js?v=owner-import-20261017-same-origin-1" defer></script>
-  <script src="../online-shop.js?v=20261017-2" defer></script>
+  <script src="../online-shop.js?v=20261017-3-photos" defer></script>
   <script src="../delivery-cost-sharing.js?v=20261017-1" defer></script>
   <script src="../store-context.js?v=20261016-5-sharing-1" defer></script>
   <script src="../store-studio/product-handoff.js?v=20261017-2" defer></script>
   <script src="../store-studio/product-photos.js?v=20261017-1" defer></script>
-  <script src="app.js?v=20261017-4-owner-shop-1-account-2" defer></script>
+  <script src="app.js?v=20261017-5-owner-photos-1" defer></script>
 </body>
 </html>

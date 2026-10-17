@@ -21,6 +21,7 @@ const env={DB:new LocalD1(),RATE_LIMIT_SALT:'isolated-local-qa-only-no-live-secr
 const testIntake=process.argv.includes('--test-intake'),testShops=process.argv.includes('--test-shops'),errandReceipts=new Map();
 if(testShops&&!realWorker)throw Error('--test-shops requires the compiled real worker.');
 if(testShops)env.ADMIN_EMAILS='qa-admin@local.invalid';
+if(testShops){const objects=new Map();env.BUCKET={head:async key=>objects.get(key)||null,list:async({prefix,limit=500})=>{const all=[...objects].filter(([key])=>key.startsWith(prefix)).map(([key])=>({key}));return {objects:all.slice(0,limit),truncated:all.length>limit};},put:async(key,body,options)=>objects.set(key,{body:new Uint8Array(body),...options}),get:async key=>objects.get(key)||null};}
 env.PUBLIC_ALLOWED_ORIGINS=origin;env.ASSETS={fetch:async()=>new Response('not found',{status:404})};
 const address={address:'전라남도 여수시 테스트로 10',roadAddress:'전라남도 여수시 테스트로 10',jibunAddress:'전라남도 여수시 테스트동 10',zonecode:'59700',sido:'전라남도',sigungu:'여수시'};
 const types={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.csv':'text/csv; charset=utf-8'};
@@ -36,7 +37,7 @@ const server=http.createServer(async(req,res)=>{try{
       await env.DB.batch([env.DB.prepare('DELETE FROM online_shops WHERE source_store_id=?').bind('qa-existing-store'),env.DB.prepare('DELETE FROM online_shop_claims WHERE source_store_id=?').bind('qa-existing-store'),env.DB.prepare('DELETE FROM online_shop_owners WHERE source_store_id=?').bind('qa-existing-store')]);return send(res,200,'{}');
     }
     if(testShops&&url.pathname.startsWith('/api/online-shops/')){
-      if(!/^\/api\/online-shops\/(?:(?:public|manage)\/qa-existing-store(?:\/(claim|reject|grant|save|publish|unpublish))?|session|claims)$/.test(url.pathname))return send(res,403,'{}');
+      if(!/^\/api\/online-shops\/(?:(?:public|manage)\/qa-existing-store(?:\/(claim|reject|grant|save|publish|unpublish|photos(?:\/[a-f0-9]{64}\.(?:png|jpg|webp))?))?|session|claims)$/.test(url.pathname))return send(res,403,'{}');
       const chunks=[];for await(const chunk of req)chunks.push(chunk);const body=Buffer.concat(chunks);
       if(body.length>2*1024*1024)return send(res,413,'{}');
       const role=String(req.headers.cookie||'').match(/qa-shop-role=(owner|admin|intruder)(?:;|$)/)?.[1];
@@ -45,7 +46,7 @@ const server=http.createServer(async(req,res)=>{try{
       if(role)headers['oai-authenticated-user-id']=role;
       if(role==='admin')headers['oai-authenticated-user-email']='qa-admin@local.invalid';
       const response=await realWorker.fetch(new Request(url,{method:req.method,headers,body:req.method==='GET'?undefined:body}),env,{waitUntil(){},passThroughOnException(){}});
-      return send(res,response.status,await response.text());
+      return send(res,response.status,Buffer.from(await response.arrayBuffer()),response.headers.get('content-type')||'application/json');
     }
     if(req.method==='GET'&&url.pathname==='/api/qa-state')return send(res,200,JSON.stringify({testIntake,realWorker:Boolean(realWorker),errandReceipts:realWorker?env.DB.database.prepare('SELECT count(*) AS n FROM errand_orders').get().n:errandReceipts.size,products:env.DB.database.prepare('SELECT store_id,item_id,item_name,base_price_won,stock_remaining FROM store_preview_catalog WHERE enabled=1').all(),orders:env.DB.database.prepare('SELECT count(*) AS count FROM store_preview_orders').get().count,receipts:realWorker?env.DB.database.prepare('SELECT count(*) AS n FROM customer_submit_requests').get().n:0}));
     const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>1024*1024)return send(res,413,'{}');chunks.push(chunk);}const body=Buffer.concat(chunks).toString();

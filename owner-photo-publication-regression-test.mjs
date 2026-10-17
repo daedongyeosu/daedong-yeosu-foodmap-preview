@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const js=fs.readFileSync('store-partner/app.js','utf8'),html=fs.readFileSync('store-partner/index.html','utf8');
+assert.match(js,/shopRequest\('photos','POST',\{dataUrl:product.image\}\)/);
+assert.match(js,/snapshot.products.find\(p=>p.id===product.id\).image=image/,'Photo references retain stable product IDs');
+assert.ok(js.indexOf("const result=await shopRequest(action,'POST'")<js.indexOf('for(const [product,image] of uploaded)'), 'Local photos are not replaced on failed server save');
+assert.match(js,/if\(!product.image&&photos\[product.id\]\)/,'Old device photos never overwrite loaded server references');
+assert.match(js,/sourceStoreId\|\|accessStoreId/,'A fresh owner device can request the server draft before importing');
+assert.ok(html.indexOf('id="loadOnlineShop"')<html.indexOf('id="existingStorePanel"'),'Server restore is reachable before completing empty wizard steps');
+assert.match(html,/app.js\?v=20261017-5-owner-photos-1/);
+assert.equal((html.match(/id="loadOnlineShop"/g)||[]).length,1);
+console.log('PASS owner photo publication: explicit verified-server upload, stable SKU, save failure preservation, fresh-device restore and cache version');
