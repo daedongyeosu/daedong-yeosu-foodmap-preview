@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const js=fs.readFileSync('store-studio/studio.js','utf8'),css=fs.readFileSync('store-studio/studio.css','utf8'),html=fs.readFileSync('store-studio/index.html','utf8');
+assert.match(js,/appendSampleCartControls\(entry,row,'cartDockItems'\)/,'The visible zoom dock must include quantity controls');
+assert.match(js,/appendSampleCartControls\(row,\{sku,name:product.name,quantity\},'sampleCartItems'\)/,'Both cart surfaces share controls');
+assert.match(js,/button\('−','decrease','수량 줄이기',row.quantity<=1\)/,'Minus at one must not delete');
+assert.match(js,/button\('\+','increase','수량 늘리기',row.quantity>=20\)/);
+assert.match(js,/button\('삭제','delete','삭제',false\)/,'Whole-line deletion is a separate explicit action');
+assert.match(js,/const count=Math.max\(1,Math.min\(20,previous\+delta\)\)/);
+assert.match(js,/function sampleRemove\(sku\)/);assert.doesNotMatch(js,/sampleQuantity\(row.sku,-row.quantity\)/);
+assert.match(js,/focus\(\{preventScroll:true\}\)/);assert.match(css,/min-width:44px;min-height:44px/);
+for(const asset of ['studio.js','studio.css'])assert.ok(html.includes(asset+'?v=20261017-17-cart-quantity-1'));
+assert.match(fs.readFileSync('.github/workflows/preview-api-client-checks.yml','utf8'),/STUDIO_TEST_ORIGIN=http:\/\/127\.0\.0\.1:4173 OUTPUT_DIR=\. node scripts\/browser-studio-cart-dock\.mjs/,'CI must run the real quantity touch flow, not only source assertions');
+console.log('PASS cart quantity controls: shared dock/full cart, one-at-a-time changes, minimum1/maximum20, separate delete, touch targets and refreshed assets');
