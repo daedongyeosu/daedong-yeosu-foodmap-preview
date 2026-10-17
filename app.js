@@ -264,18 +264,23 @@ document.addEventListener('click', event => {
 function installDaedongTapAction({selector, activate}) {
   const pointerStarts = new Map();
   const touchStarts = new Map();
-  let activatedAt = 0;
+  let activatedAt = -Infinity;
+  let activatedTarget = null;
 
   const targetFor = event => event?.target?.closest?.(selector) || null;
   const moved = (start, point) => Math.hypot(point.x - start.x, point.y - start.y) > DAEDONG_TAP_MOVE_TOLERANCE;
   const activateOnce = (event, target) => {
     const now = performance.now();
-    if (now - activatedAt < DAEDONG_TAP_DEDUPE_WINDOW_MS) {
+    // Suppress the pointer/touch/click echoes of this control only. A native
+    // app resume can be followed immediately by a different route's click;
+    // the previous route must not swallow that new customer choice.
+    if (target === activatedTarget && now - activatedAt < DAEDONG_TAP_DEDUPE_WINDOW_MS) {
       consumeDaedongEvent(event);
       return true;
     }
     if (activate(target, event) === false) return false;
     activatedAt = now;
+    activatedTarget = target;
     rememberDaedongGhostClick(event);
     consumeDaedongEvent(event);
     return true;
