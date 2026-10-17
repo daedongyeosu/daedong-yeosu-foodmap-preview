@@ -4,7 +4,7 @@
   const endpoint=host+'/api/online-shops';
   const id=value=>typeof value==='string'&&/^[a-zA-Z0-9_-]{1,80}$/.test(value)&&!['__proto__','constructor','prototype'].includes(value)?value:'';
   function hash(value){let n=14695981039346656037n;for(const byte of new TextEncoder().encode(value))n=BigInt.asUintN(64,(n^BigInt(byte))*1099511628211n);return n.toString(16);}
-  function image(value,base){try{const u=new URL(value,base);return value&&u.protocol==='https:'&&!u.username&&!u.password?u.href:'';}catch{return '';}}
+  function image(value,base){try{const u=new URL(value,base),local=u.origin===new URL(base).origin&&['127.0.0.1','localhost'].includes(u.hostname);return value&&(u.protocol==='https:'||local)&&!u.username&&!u.password?u.href:'';}catch{return '';}}
   function importStore(sourceId,detail,menu,base){
     if(!id(sourceId)||!detail||String(detail.id||detail.store_id||detail.storeId)!==sourceId||!String(detail.name||detail.storeName||'').trim())throw Error('기존 가게 정보를 확인하지 못했습니다.');
     if(!menu||String(menu.storeId||menu.store_id||'')!==sourceId||!Array.isArray(menu.items))throw Error('이 가게의 메뉴를 확인하지 못했습니다. 다시 불러와 주세요.');
