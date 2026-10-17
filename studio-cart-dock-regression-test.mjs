@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const html=fs.readFileSync('store-studio/index.html','utf8'),js=fs.readFileSync('store-studio/studio.js','utf8'),css=fs.readFileSync('store-studio/studio.css','utf8');
+for(const id of ['cartDock','cartDockProduct','cartDockQuantity','cartDockAdd','cartDockFeedback','cartDockSummary','cartDockDetails'])assert.ok(html.includes(`id="${id}"`),id);
+assert.match(html,/id="cartDockFeedback" role="status" aria-live="polite"/);
+assert.match(js,/window\.visualViewport\?\.addEventListener\('scroll',positionCartDock/);
+assert.match(js,/scale\(\$\{1\/scale\}\)/,'Inverse zoom keeps the dock legible');
+assert.match(js,/dock\.hidden=!previewing/,'Editor controls are never covered');
+assert.match(js,/사진 선택만으로는 담기지 않습니다/);
+assert.match(js,/dockFeedback\(message,dockError\)/,'Failure must appear in the same viewport');
+assert.match(css,/\.cart-dock\{position:fixed/);
+assert.doesNotMatch(html,/user-scalable=no/);
+console.log('PASS visual viewport cart dock: selection vs add, accessible feedback, native zoom tracking, editor isolation');
