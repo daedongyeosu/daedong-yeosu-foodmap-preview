@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const html=fs.readFileSync('store-studio/index.html','utf8'),css=fs.readFileSync('store-studio/studio.css','utf8'),js=fs.readFileSync('store-studio/studio.js','utf8');
+assert.doesNotMatch(html,/id="zoomScene"|가까이 보기|공간 전체 보기/,'No separate close-up toggle remains');
+assert.doesNotMatch(js,/\$\('zoomScene'\)/,'Removing the button must not break editor initialization');
+assert.doesNotMatch(html,/user-scalable=no|maximum-scale=1(?:[,"])/,'Keep native page zoom available');
+assert.match(css,/\.workspace \.scene\.previewing[^{}]*,\.workspace \.scene\.previewing \.scene-item\{touch-action:pan-x pan-y pinch-zoom\}/,'Both the scene and product targets must allow native pinch');
+assert.match(css,/\.scene-item\{[^}]*touch-action:none/,'Editor single-pointer placement is preserved');
+assert.match(js,/if\(!node\|\|previewing\|\|loading\|\|importing/,'Preview does not consume pointerdown to move products');
+assert.match(html,/두 손가락/,'Give one unobtrusive gesture hint instead of a button');
+console.log('PASS studio native pinch contract: no close-up toggle, scalable viewport, customer pinch + scroll, editor placement retained');

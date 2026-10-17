@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-15">
+  <link rel="stylesheet" href="studio.css?v=20261017-15-native-pinch-1">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -118,7 +118,8 @@
         </details>
       </aside>
       <section class="display" aria-label="상점 시안">
-        <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="focusMode" aria-pressed="false">진열장에 집중</button><button id="zoomScene" aria-pressed="false">가까이 보기</button><button id="preview">고객처럼 보기</button></div>
+        <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="focusMode" aria-pressed="false">진열장에 집중</button><button id="preview">고객처럼 보기</button></div>
+        <p id="sceneGestureHelp" class="hint">사진을 눌러 상품을 살펴보세요. 두 손가락을 벌리면 공간과 사진을 확대할 수 있습니다.</p>
         <div id="backupTools" class="backup-tools"><button id="exportScene">시안 파일로 보관</button><button id="importScene">보관한 시안 불러오기</button><input id="sceneFile" type="file" accept=".json,application/json" hidden><span>사진·배치를 함께 보관합니다. 기존 주문·상품정보는 변경하지 않습니다.</span></div>
         <div id="arrangeTools" class="arrange-tools"><button id="arrangeAll">개별 사진 가지런히 진열</button><label><input id="snapShelves" type="checkbox" checked> 공통 선반 가까이 놓으면 맞추기</label><small>진열대에 연결한 사진은 자동 정리로 바꾸지 않습니다.</small></div>
         <nav id="customerQuickActions" class="customer-actions quick-actions" aria-label="방문과 주문" hidden>
@@ -127,7 +128,7 @@
           <a id="customerPhone" class="customer-link" hidden>전화로 문의하기</a><button id="customerPhoneMissing" disabled>전화 문의 준비 중</button>
         </nav>
         <p id="virtualSpaceLabel" class="space-label" hidden>사장님이 꾸민 온라인 공간 · 사진을 눌러 상품을 살펴보세요</p>
-        <div id="sceneViewport" class="scene-viewport" tabindex="0" aria-label="상점 공간 · 가까이 보기에서는 좌우로 이동할 수 있습니다"><div id="scene" class="scene" data-material="plain" tabindex="0" aria-label="상품사진을 배치하는 진열장">
+        <div id="sceneViewport" class="scene-viewport" tabindex="0" aria-label="상점 공간 · 두 손가락으로 확대하거나 축소할 수 있습니다"><div id="scene" class="scene" data-material="plain" tabindex="0" aria-label="상품사진을 배치하는 진열장">
           <div id="sceneWallSurface" class="scene-wall-surface" aria-hidden="true" hidden></div><div id="sceneFloor" class="scene-floor" aria-hidden="true"><div id="sceneFloorSurface" class="scene-floor-surface" hidden></div></div><div id="sceneAwning" class="scene-awning" aria-hidden="true" hidden></div>
           <div class="scene-lights" aria-hidden="true"></div><h2 id="sign">나의 작은 카페</h2>
           <div id="zoneLabels" class="zone-labels"></div><div id="dividers" aria-hidden="true"></div><div id="shelfLines" aria-hidden="true"></div><div id="decorRoot"></div><div id="items"></div>
@@ -220,5 +221,5 @@
   <script src="design.js?v=20261017-6" defer></script><script src="furniture-art.js?v=20261017-5" defer></script><script src="composition.js?v=20261017-11" defer></script><script src="bakery.js?v=20261016-6" defer></script><script src="examples.js?v=20261017-1" defer></script>
   <script src="product-handoff.js?v=20261017-2" defer></script>
   <script src="cloud.js?v=20261017-3" defer></script>
-  <script src="studio.js?v=20261017-15" defer></script>
+  <script src="studio.js?v=20261017-15-native-pinch-1" defer></script>
 </body></html>
