@@ -8,5 +8,5 @@ const navigation=js.slice(js.indexOf('function navigateEditor(task)'),js.indexOf
 assert.ok(navigation.includes("$('photosSettings').open=true"));
 assert.ok(navigation.includes("$('photoSearch')"));
 assert.doesNotMatch(navigation,/checkpoint\(|persist\(|change\(/,'Moving between panels must not write scene state or undo history');
-assert.match(html,/studio\.js\?v=20261017-15/);
+assert.match(html,/studio\.js\?v=20261017-16-cart-dock-1/);
 console.log('PASS photo workflow: direct basic editing, return paths, empty-filter recovery, pure navigation and updated cache');
