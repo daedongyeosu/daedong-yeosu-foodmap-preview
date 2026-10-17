@@ -18,7 +18,9 @@ class LocalD1{
   batch(statements){const next=this.tail.then(()=>{this.database.exec('BEGIN');try{const results=[];for(const s of statements)results.push(s.run());this.database.exec('COMMIT');return results;}catch(e){this.database.exec('ROLLBACK');throw e;}});this.tail=next.catch(()=>{});return next;}
 }
 const env={DB:new LocalD1(),RATE_LIMIT_SALT:'isolated-local-qa-only-no-live-secret'},root=process.cwd(),port=Number(process.argv[2]||4196),origin=`http://127.0.0.1:${port}`;
-const testIntake=process.argv.includes('--test-intake'),errandReceipts=new Map();
+const testIntake=process.argv.includes('--test-intake'),testShops=process.argv.includes('--test-shops'),errandReceipts=new Map();
+if(testShops&&!realWorker)throw Error('--test-shops requires the compiled real worker.');
+if(testShops)env.ADMIN_EMAILS='qa-admin@local.invalid';
 env.PUBLIC_ALLOWED_ORIGINS=origin;env.ASSETS={fetch:async()=>new Response('not found',{status:404})};
 const address={address:'전라남도 여수시 테스트로 10',roadAddress:'전라남도 여수시 테스트로 10',jibunAddress:'전라남도 여수시 테스트동 10',zonecode:'59700',sido:'전라남도',sigungu:'여수시'};
 const types={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.csv':'text/csv; charset=utf-8'};
@@ -30,6 +32,18 @@ const server=http.createServer(async(req,res)=>{try{
   if(req.headers.origin&&req.headers.origin!==origin)return send(res,403,'{}');
   if(url.pathname==='/qa-postcode.js'&&req.method==='GET')return send(res,200,`window.daum={Postcode:class{constructor(options){this.options=options;}embed(frame){const button=document.createElement('button');button.textContent='테스트 주소 선택 (실제 주소검색 아님)';button.onclick=()=>this.options.oncomplete(${JSON.stringify(address)});frame.append(button);}}};`,'application/javascript');
   if(url.pathname.startsWith('/api/')){
+    if(testShops&&url.pathname.startsWith('/api/online-shops/')){
+      if(!/^\/api\/online-shops\/(public|manage)\/qa-existing-store(?:\/(grant|save|publish|unpublish))?$/.test(url.pathname))return send(res,403,'{}');
+      const chunks=[];for await(const chunk of req)chunks.push(chunk);const body=Buffer.concat(chunks);
+      if(body.length>2*1024*1024)return send(res,413,'{}');
+      const role=String(req.headers.cookie||'').match(/qa-shop-role=(owner|admin|intruder)(?:;|$)/)?.[1];
+      // Loopback-only explicit QA mode supplies identity; incoming auth headers are never trusted.
+      const headers={origin,'content-type':'application/json'};
+      if(role)headers['oai-authenticated-user-id']=role;
+      if(role==='admin')headers['oai-authenticated-user-email']='qa-admin@local.invalid';
+      const response=await realWorker.fetch(new Request(url,{method:req.method,headers,body:req.method==='GET'?undefined:body}),env,{waitUntil(){},passThroughOnException(){}});
+      return send(res,response.status,await response.text());
+    }
     if(req.method==='GET'&&url.pathname==='/api/qa-state')return send(res,200,JSON.stringify({testIntake,realWorker:Boolean(realWorker),errandReceipts:realWorker?env.DB.database.prepare('SELECT count(*) AS n FROM errand_orders').get().n:errandReceipts.size,products:env.DB.database.prepare('SELECT store_id,item_id,item_name,base_price_won,stock_remaining FROM store_preview_catalog WHERE enabled=1').all(),orders:env.DB.database.prepare('SELECT count(*) AS count FROM store_preview_orders').get().count,receipts:realWorker?env.DB.database.prepare('SELECT count(*) AS n FROM customer_submit_requests').get().n:0}));
     const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>1024*1024)return send(res,413,'{}');chunks.push(chunk);}const body=Buffer.concat(chunks).toString();
     if(url.pathname==='/api/store-delivery-quote'&&req.method==='POST')return send(res,200,JSON.stringify({available:true,quoteId:'local-qa-not-road-routing',deliveryFee:3500,platformFee:800,roadDistanceMeters:2100,policyVersion:'local-qa-only',expiresAt:new Date(Date.now()+60000).toISOString()}));

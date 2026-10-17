@@ -2,8 +2,10 @@ const ONBOARD_KEY='matjido-store-onboarding-preview-v1';
 const CART_KEY='matjido-customer-store-cart-v1';
 const catalogBridge=globalThis.ShopStudioCatalog;
 const catalogParams=new URLSearchParams(location.search);
-const catalogMode=catalogParams.has('catalogStore');
-const catalogStoreId=catalogBridge.id(catalogParams.get('catalogStore'));
+const publicShopMode=catalogParams.has('publicShop');
+const publicSourceStoreId=catalogBridge.id(catalogParams.get('publicShop'));
+const catalogMode=catalogParams.has('catalogStore')||publicShopMode;
+const catalogStoreId=publicShopMode?'shop-'+publicSourceStoreId:catalogBridge.id(catalogParams.get('catalogStore'));
 const activeCartKey=catalogMode?`${CART_KEY}:store:${catalogStoreId}`:CART_KEY;
 let focusedCatalogProduct=false;
 let openedCatalogCart=false;
@@ -117,6 +119,17 @@ function addToCart(product){if(catalogMode&&(!serverCatalogActive||!catalogBridg
 function changeQuantity(id,change){const product=products.find(item=>item.id===id);if(!product)return;const entry=cartEntry(id);const limit=product.stockMode==='수량 관리'?Math.max(0,Number(product.stockQuantity)||0):99;if(catalogMode&&change>0&&(!serverCatalogActive||!catalogBridge.available(product)))return;const next=Math.max(0,Math.min(limit,entry.quantity+change));if(next){const current=livePrice(product);cart[id]={...entry,quantity:next,lockedPrice:globalThis.MatjidoLiveCommerce.bestLockedPrice(entry.lockedPrice,current,product.price)};}else delete cart[id];serverPriceQuote=null;saveCart();deliveryQuote=null;quoteRequestId++;renderCart();if(deliveryAddress&&cartLines().length)requestDeliveryQuote();}
 function cartLines(){return products.map(product=>{const entry=cartEntry(product.id);const current=livePrice(product);const unitPrice=globalThis.MatjidoLiveCommerce.bestLockedPrice(entry.lockedPrice,current,product.price);return{product,quantity:entry.quantity,unitPrice,pricing:priceState(product)};}).filter(line=>line.quantity>0);}
 async function refreshServerCatalog(){
+  if(publicShopMode){
+    try{
+      const result=await globalThis.MatjidoOnlineShop.publicShop(publicSourceStoreId);if(!result)throw Error('비공개 상점');
+      store={...result.shop,subsidy:0};products=normalizeProducts(catalogBridge.products(store));serverCatalogActive=true;applyStore();
+      for(const key of Object.keys(cart))if(!catalogBridge.available(products.find(p=>p.id===key)))delete cart[key];
+      saveCart();renderCategories();renderProducts();renderLiveMarket();renderCart();
+      document.querySelector('#catalogSelectionStatus').textContent='공개된 온라인 상점입니다. 상품과 장바구니를 살펴보세요. 온라인 결제·배송 접수는 준비 중입니다.';
+      document.querySelector('#previewOrder').disabled=true;document.querySelector('#previewOrder').textContent='온라인 결제·배송 접수 준비 중';
+    }catch{products=[];serverCatalogActive=false;deliveryQuote=null;renderProducts();renderCart();document.querySelector('#catalogSelectionStatus').textContent='공개된 상점을 확인하지 못했습니다. 비공개 전환 또는 연결 상태를 확인해 주세요.';}
+    return;
+  }
   if(store.catalogSource==='static')return;
   if(catalogMode&&!document.querySelector('#orderReviewPanel').hidden)return;
   if(catalogMode){
@@ -141,6 +154,7 @@ async function refreshServerCatalog(){
   catch{/* 이미 확인한 서버 상품은 유지하고 다음 자동 새로고침에서 다시 시도합니다. */}
 }
 async function requestServerPriceQuote(){
+  if(publicShopMode)throw Error('온라인 결제·배송 접수는 아직 준비 중입니다.');
   if(catalogMode&&!serverCatalogActive)throw new Error('현재 가격·재고를 확인하지 못했습니다. 다시 시도해 주세요.');
   if(!serverCatalogActive)return null;const lines=cartLines();if(!lines.length)return null;
   const response=await fetch(`${STORE_ORDER_ENDPOINT}/quote`,{method:'POST',headers:{'content-type':'application/json','accept':'application/json'},credentials:'omit',body:JSON.stringify({previewOnly:true,storeId:storeId(),items:lines.map(({product,quantity})=>({id:product.id,quantity}))})});
@@ -158,6 +172,14 @@ function renderCart(){
   document.querySelector('#customerDeliveryFee').textContent=customerDelivery==null?'주소 확인 후 계산':money(customerDelivery);
   document.querySelector('#platformFee').textContent=platformFee==null?'배송비와 함께 확인':money(platformFee);
   document.querySelector('#orderTotal').textContent=customerDelivery==null||platformFee==null?'배송비 계산 전':money(subtotal+customerDelivery+platformFee);
+  if(store.deliveryCostSharing&&Number.isSafeInteger(deliveryFee)&&Number.isSafeInteger(platformFee)){
+    const sharing=globalThis.MatjidoDeliverySharing.split(deliveryFee+platformFee,subtotal>=store.minimumOrder?store.deliveryCostSharing:{mode:'ratio',customerPercent:100});
+    document.querySelector('#storeSubsidy').textContent=sharing.merchantWon?`-${money(sharing.merchantWon)}`:'0원';
+    document.querySelector('#customerDeliveryFee').textContent=money(sharing.customerWon)+' (이용금액 포함)';
+    document.querySelector('#platformFee').textContent=money(platformFee)+' · 위 배송서비스 총액에 포함';
+    document.querySelector('#orderTotal').textContent=money(subtotal+sharing.customerWon)+' (예상)';
+  }
+  if(store.deliveryCostSharing?.customerPercent<100){document.querySelector('#previewOrder').disabled=true;document.querySelector('#previewOrder').textContent='배송비 분담 주문접수 준비 중';}
   const items=document.querySelector('#cartItems');items.replaceChildren();lines.forEach(({product,quantity,unitPrice,pricing})=>{const row=document.createElement('article');row.className='cart-item';const name=document.createElement('strong');name.textContent=product.name;const amount=document.createElement('span');amount.textContent=money(unitPrice*quantity);const unit=document.createElement('small');unit.textContent=`${money(unitPrice)} / ${product.unit}`;const controls=document.createElement('div');controls.className='quantity';const minus=document.createElement('button');minus.type='button';minus.setAttribute('aria-label',`${product.name} 수량 줄이기`);minus.textContent='−';minus.addEventListener('click',()=>changeQuantity(product.id,-1));const value=document.createElement('b');value.textContent=String(quantity);const plus=document.createElement('button');plus.type='button';plus.setAttribute('aria-label',`${product.name} 수량 늘리기`);plus.textContent='+';plus.addEventListener('click',()=>changeQuantity(product.id,1));controls.append(minus,value,plus);row.append(name,amount,unit,controls);if(pricing.active){const lock=document.createElement('p');lock.className='cart-price-lock';lock.textContent=pricing.settlement;row.append(lock);}items.append(row);});
 }
 
@@ -198,6 +220,7 @@ async function refreshTracking(){
 function pendingStoreScope(){return `store:${storeId()}`;}
 function updatePendingStore(){try{document.querySelector('#pendingStoreSubmission').hidden=!globalThis.MatjidoSubmission?.has(pendingStoreScope());}catch{document.querySelector('#storeRecoveryStatus').textContent='이 기기의 접수 확인정보를 읽지 못했습니다.';}}
 async function sendPreviewOrder(recover=false){
+  if(publicShopMode)return;
   if(submittingOrder)return;
   const button=document.querySelector('#sendPreviewOrder'),recovery=document.querySelector('#recoverStoreSubmission');const status=document.querySelector(recover?'#storeRecoveryStatus':'#reviewSubmitStatus');
   if(!globalThis.MatjidoSubmission){status.textContent='안전한 접수 기능을 불러오지 못했습니다. 화면을 새로고침해 주세요.';return;}

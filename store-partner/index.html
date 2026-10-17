@@ -9,7 +9,7 @@
   <meta name="description" content="여수의 오프라인 상점이 입점비 없이 온라인 상점을 만들고 고객 주문과 배송을 연결하는 여수맛지도 입점 프리뷰">
   <link rel="icon" href="../assets/app-icons/daedong-app-icon-192.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=20261011-1">
-  <link rel="stylesheet" href="product-editor.css?v=20261017-4">
+  <link rel="stylesheet" href="product-editor.css?v=20261017-4-owner-shop-1">
 </head>
 <body>
   <header class="page-header">
@@ -43,6 +43,12 @@
     </nav>
 
     <form id="storeOnboarding" novalidate>
+      <section id="existingStorePanel" class="notice" hidden>
+        <b>맛지도에 등록된 내 가게로 시작하기</b>
+        <p id="existingStoreStatus" role="status"></p>
+        <button id="importExistingStore" type="button">기존 가게·메뉴·사진 불러오기</button>
+        <button id="importExistingStoreBasics" type="button">가게 기본정보만 가져오기 · 상품은 직접 추가</button>
+      </section>
       <section class="form-step active" data-step="1" aria-labelledby="stepOneTitle">
         <p class="eyebrow">1. 내 가게 등록</p>
         <h2 id="stepOneTitle">어떤 가게를 운영하시나요?</h2>
@@ -175,13 +181,21 @@
         </section>
 
         <fieldset>
-          <legend>고객 배송비를 지원하시겠어요?</legend>
+          <legend>배송비 부담 나누기</legend>
+          <p class="field-help">막대를 한 칸 움직이면 예상 부담액이 100원씩 바뀝니다. 왼쪽은 상점 전액, 오른쪽은 고객 전액입니다. 기사 배송료와 맛지도 몫은 줄어들지 않습니다.</p>
+          <label for="deliveryShare">고객 부담 조절 <output id="deliveryShareLabel"></output></label>
+          <input id="deliveryShare" type="range" min="0" max="55" step="1" value="55" aria-describedby="deliveryShareEstimate">
+          <div class="share-shortcuts"><button type="button" data-share-percent="0">상점 전액</button><button type="button" data-share-percent="50">반반</button><button type="button" data-share-percent="100">고객 전액 ＋</button></div>
+          <p id="deliveryShareEstimate" role="status" aria-live="polite"></p>
+          <p class="field-help">아래는 배송료 5,000원＋맛지도 이용금액 500원의 산정 예시입니다. 실제 도로거리·계약 요율은 별도로 확정합니다. 카드수수료를 고객에게 별도 부과하는 기능이 아닙니다.</p>
+          <details id="legacySubsidy"><summary>기존 고정액 지원 설정</summary>
           <p class="field-help">기본값은 지원하지 않음입니다. 기사 배송료는 그대로 지급되고, 선택한 금액만 사장님 정산에서 부담합니다.</p>
           <div class="choice-grid subsidy-grid">
             <label><input type="radio" name="subsidy" value="0" checked><span><b>지원하지 않음</b><small>고객이 배송비 부담</small></span></label>
             <label><input type="radio" name="subsidy" value="1000"><span><b>건당 1,000원</b><small>고객 배송비 할인</small></span></label>
             <label><input type="radio" name="subsidy" value="2000"><span><b>건당 2,000원</b><small>고객 배송비 할인</small></span></label>
           </div>
+          </details>
           <label class="minimum-order">지원 최소 주문금액<input id="minimumOrder" type="number" inputmode="numeric" min="0" step="1000" value="20000"><span>원 이상</span></label>
         </fieldset>
         <section class="price-example" aria-labelledby="priceExampleTitle">
@@ -210,6 +224,16 @@
         <label class="preview-agreement"><input id="previewAgreement" type="checkbox"><span>입력한 상점정보와 배송비 지원 설정을 확인했습니다.</span></label>
         <button id="savePreview" class="save-preview" type="button" disabled>입점 준비내용 저장하기</button>
         <p id="saveStatus" class="save-status" role="status" aria-live="polite"></p>
+        <section id="publicationPanel" class="notice" hidden>
+          <b>고객에게 공개하기</b>
+          <p>가게 운영 권한을 확인한 계정만 공개할 수 있습니다. 가격을 모두 확인하고 저장한 내용만 공개합니다. 결제·배송 접수는 별도 준비 단계입니다.</p>
+          <a id="ownerSignIn" target="_top" hidden>관리자 사이트에서 로그인하고 계속하기</a>
+          <button id="loadOnlineShop" type="button" hidden>서버에 저장한 상점 초안 불러오기</button>
+          <button id="saveOnlineShop" type="button">확인한 상점 초안 서버에 저장</button>
+          <button id="publishOnlineShop" type="button" disabled>온라인 상점 공개하기</button>
+          <button id="unpublishOnlineShop" type="button" hidden>공개 중지</button>
+          <p id="publicationStatus" role="status" aria-live="polite"></p>
+        </section>
       </section>
 
       <footer class="form-actions">
@@ -226,9 +250,12 @@
   </section>
 
   <script src="../live-commerce-engine.js?v=20261013-1" defer></script>
-  <script src="../store-context.js?v=20261016-5" defer></script>
+  <script src="../data-api.js?v=owner-import-20261017" defer></script>
+  <script src="../online-shop.js?v=20261017-1" defer></script>
+  <script src="../delivery-cost-sharing.js?v=20261017-1" defer></script>
+  <script src="../store-context.js?v=20261016-5-sharing-1" defer></script>
   <script src="../store-studio/product-handoff.js?v=20261017-2" defer></script>
   <script src="../store-studio/product-photos.js?v=20261017-1" defer></script>
-  <script src="app.js?v=20261017-4" defer></script>
+  <script src="app.js?v=20261017-4-owner-shop-1" defer></script>
 </body>
 </html>

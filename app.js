@@ -2650,6 +2650,15 @@ function storeMenuPreviewEntryMarkup(store) {
   const entryImage = photoResolver?.resolve?.(store)?.src || '';
   return `<button class="store-menu-preview-entry" type="button" data-store-menu-preview="${escapeHtml(store.id)}">${entryImage ? `<img src="${escapeHtml(entryImage)}" alt="" data-photo-kind="menu-entry" data-photo-store-id="${escapeHtml(store.id)}">` : ''}<span><b>음식보기</b><small>사진과 설명으로 전체 메뉴 미리보기 · 가격 미표시</small></span><strong>메뉴 보기 ›</strong></button>`;
 }
+function onlineShopEntryMarkup(store){
+  if(window.daedongDataApi?.regionCode!=='yeosu'||!window.MatjidoOnlineShop?.id(store?.id))return '';
+  const id=escapeHtml(store.id);
+  return `<section data-online-shop-card="${id}" aria-label="온라인 상점"><a class="online-shop-owner-link" href="store-partner/index.html?sourceStore=${encodeURIComponent(store.id)}">사장님이신가요? 온라인 상점 등록하기</a></section>`;
+}
+function loadOnlineShopEntry(store){
+  const target=document.querySelector('#modalContent [data-online-shop-card]');
+  if(target?.dataset.onlineShopCard===store.id)void window.MatjidoOnlineShop?.card(target,store.id);
+}
 function feeGuideMarkup(store, selectedRoute, {fromBrowser = false} = {}) {
   const localRoutes = LOW_FEE_KEYS.map(key => routeFor(store, key)).filter(Boolean);
   const selectedMeta = APP_META[selectedRoute.key] || {label:selectedRoute.name};
@@ -2667,7 +2676,7 @@ function storeDetailUnavailableMarkup(store, error) {
   const busyMessage = Number(error?.status) === 429
     ? (retryAfter > 60 ? '요청이 잠시 몰렸습니다. 가게 기본정보는 그대로 볼 수 있으며 주문방법만 다시 확인해 주세요.' : '가게 기본정보는 표시했습니다. 잠시 후 주문방법을 다시 확인해 주세요.')
     : '가게 기본정보는 표시했습니다. 주문방법 연결만 일시적으로 확인하지 못했습니다.';
-  return `<article class="store-detail store-detail-degraded" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p></div>${storeMenuPreviewEntryMarkup(store)}<section class="store-detail-retry" role="status"><strong>가게 화면은 계속 이용할 수 있습니다</strong><p>${escapeHtml(busyMessage)}</p><button type="button" data-store-detail-retry="${escapeHtml(store.id)}">주문방법 다시 확인</button></section><div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`;
+  return `<article class="store-detail store-detail-degraded" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p></div>${storeMenuPreviewEntryMarkup(store)}${onlineShopEntryMarkup(store)}<section class="store-detail-retry" role="status"><strong>가게 화면은 계속 이용할 수 있습니다</strong><p>${escapeHtml(busyMessage)}</p><button type="button" data-store-detail-retry="${escapeHtml(store.id)}">주문방법 다시 확인</button></section><div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`;
 }
 async function openStore(store) {
   if (!store) return false;
@@ -2686,6 +2695,7 @@ async function openStore(store) {
     if (!secureDetail || typeof secureDetail.enrich !== 'function') {
       if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
       openModal(storeDetailUnavailableMarkup(store, new Error('상세정보 기능 준비 중')));
+      loadOnlineShopEntry(store);
       $('#modal').dataset.activeStoreId = store.id;
       return false;
     }
@@ -2696,6 +2706,7 @@ async function openStore(store) {
       if ($('#modal').dataset.activeStoreId === store.id && !$('#modal').hidden) {
         if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
         openModal(storeDetailUnavailableMarkup(store, error));
+        loadOnlineShopEntry(store);
         $('#modal').dataset.activeStoreId = store.id;
       }
       return false;
@@ -2716,11 +2727,12 @@ async function openStore(store) {
   const otherMenu = otherRoutes.length ? `<div class="store-other-wrap"><button class="detail-route store-other-toggle external-text-route" type="button"><span>다른 주문방법 보기</span><b>›</b></button><div class="store-other-popover" hidden><button type="button" class="store-other-close" aria-label="다른 주문방법 닫기">×</button>${otherRoutes.map(route => route.key === 'phone' ? routeLink(route,'store-other-link') : `<button type="button" class="store-other-link external-text-route" data-external-route-key="${route.key}"><span>${escapeHtml(route.name)}</span><b>›</b></button>`).join('')}${externalAppNoticeMarkup()}</div></div>` : '';
   const selectedCta = selectedRoute ? `<a class="selected-order-cta external-text-route" href="${escapeHtml(selectedRoute.url)}" data-community-original="${selectedRoute.key}" target="_blank" rel="noopener"><span>${escapeHtml(APP_META[selectedRoute.key].label)}로 바로 주문하기</span><b>›</b></a>` : '';
   const favorite=isFavorite(store.id);
-  const menuEntry = storeMenuPreviewEntryMarkup(store);
+  const menuEntry = storeMenuPreviewEntryMarkup(store)+onlineShopEntryMarkup(store);
   if (typeof rc2ReplaceModal === 'function') rc2ReplaceModal();
 openModal(`<article class="store-detail" data-store-id="${escapeHtml(store.id)}"><h2 id="modalTitle">${escapeHtml(store.name)}</h2>${photoResolver.galleryMarkup(store)}<div class="detail-meta-row"><p class="detail-meta">${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${quick.length ? `<div class="detail-quick-links">${quick.join('')}</div>` : ''}</div>${nativeStoreInformation(store)}${menuEntry}<div class="detail-routes local-detail-routes">${local.map(route=>routeLink(route,'local-order-route')).join('') || '<p class="muted">등록된 지역 주문방법을 확인 중입니다.</p>'}</div>${otherMenu}${selectedCta}<div class="detail-personal-actions"><button type="button" class="detail-personal-btn ${favorite?'active':''}" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite?'찜 해제':'찜하기'}</span></button><button type="button" class="detail-personal-btn" data-feedback-store="${escapeHtml(store.id)}">정보 수정 요청</button></div></article>`);
   const carouselRoot = $('#detailPhotoCarousel'); if (carouselRoot) detailCarousel = new InfiniteCarousel(carouselRoot,{interval:0});
   $('#modal').dataset.activeStoreId=store.id;
+  loadOnlineShopEntry(store);
   return true;
 }
 
