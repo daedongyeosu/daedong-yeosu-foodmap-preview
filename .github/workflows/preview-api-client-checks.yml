@@ -72,6 +72,7 @@ jobs:
             sleep 0.25
           done
           STUDIO_TEST_ORIGIN=http://127.0.0.1:4173 OUTPUT_DIR=. node scripts/browser-studio-cart-dock.mjs
+          STUDIO_TEST_ORIGIN=http://127.0.0.1:4173 OUTPUT_DIR=. node scripts/browser-catalog-cart-quantity.mjs
       - name: Verify installed app switches to the newly scanned store QR
         run: |
           python3 -m http.server 4173 >/tmp/daedong-installed-qr-server.log 2>&1 &
@@ -228,6 +229,7 @@ jobs:
           name: preview-pr-verification
           path: |
             browser-studio-cart-*-quantity-mobile.png
+            browser-catalog-quantity-mobile.png
             browser-reviewed-identity/
             browser-installed-qr/
             static-validation-report.json
