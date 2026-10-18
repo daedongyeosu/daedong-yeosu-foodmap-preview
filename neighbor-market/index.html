@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow"><title>이웃의 작은 장터 | 맛지도 PREVIEW</title>
+  <link rel="stylesheet" href="market.css?v=20261019-1">
+</head>
+<body>
+  <header class="site-header"><a href="../store-alley/index.html" class="brand">맛지도 <span>이웃의 작은 장터</span></a><span class="preview-label">PREVIEW 견본</span></header>
+  <p class="boundary">개인 중고장터의 체험용 견본입니다. 실제 판매·예약·결제·배송은 발생하지 않습니다.</p>
+  <main>
+    <section class="intro" id="intro">
+      <div><p class="eyebrow">SECONDHAND, A NEW LITTLE STORY</p><h1>내겐 추억,<br>이웃에겐 발견.</h1><p class="lead">잘 쓰던 물건을, 좋아해 줄 다음 이웃에게.<br>사진과 가격만 넣으면 나만의 작은 장터가 됩니다.</p><div class="intro-actions"><button id="startMarket" class="primary">사진으로 내 장터 만들기 <span>＋</span></button><a href="#experience">먼저 견본 구경하기 ↓</a></div><p class="small">사업자·실물 매장 입력 없이 견본을 체험합니다. 실제 개인 판매 서비스는 아직 열리지 않았습니다.</p></div>
+      <aside class="paper-note"><span class="note-pin" aria-hidden="true"></span><p>버리기엔 아깝고<br>누군가에겐 반가운 것들.</p><span>사진 몇 장으로 시작해요</span><div class="note-doodle" aria-hidden="true">♧</div></aside>
+    </section>
+    <section id="experience" aria-labelledby="marketTitle">
+      <div class="market-heading"><div><p id="marketMode" class="eyebrow">이웃 중고장터 · AI 사진 견본</p><h2 id="marketTitle">모퉁이 보물상자</h2><p id="marketSummary">서로 다른 여섯 물건, 저마다의 다음 이야기.</p></div><div class="owner-actions"><button id="editMarket" hidden>사진·가격 수정</button><button id="customize">이 분위기로 꾸며보기</button><button id="showExample" hidden>원래 견본 보기</button><button id="resumeMarket" hidden>내 장터 이어보기</button></div></div>
+      <div id="workspace" class="workspace">
+        <section class="display" aria-label="이웃 장터 공간">
+          <div id="editToolbar" class="edit-toolbar" hidden><button id="undo" disabled>↶ 되돌리기</button><button id="redo" aria-label="다시 하기" disabled>↷</button><button id="finishDecorating">꾸미기 닫기</button></div>
+          <div id="sceneViewport" class="scene-viewport"><div id="marketScene" class="market-scene" data-finish="wood" aria-label="물건을 눌러 살펴보는 중고장터">
+            <div class="buntons" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="market-sign"><small>소중했던 물건들의 두 번째 이야기</small><h3 id="sceneTitle">모퉁이 보물상자</h3></div>
+            <div class="shelf shelf-one" aria-hidden="true"></div><div class="shelf shelf-two" aria-hidden="true"></div><div class="floor" aria-hidden="true"></div>
+            <div id="decorations" class="decorations"></div><div id="objects" class="objects"></div><p id="emptyScene" hidden>사진과 가격을 넣어<br>첫 번째 물건을 놓아보세요.</p>
+          </div></div>
+          <p id="sceneHint" class="scene-hint">물건을 눌러 상태·가격을 살펴보세요. 같은 물건은 하나뿐인 중고품으로 체험합니다.</p>
+        </section>
+        <aside id="customTools" class="custom-tools" aria-label="장터를 보며 꾸미는 도구" hidden>
+          <h3>내 취향으로 조금 더</h3><p class="small">사진·가격은 그대로, 공간만 바꿔보세요.</p>
+          <label>장터 이름<input id="decorName" maxlength="40"></label>
+          <div id="themeChoices" class="theme-choices" aria-label="장터 분위기"></div>
+          <details open><summary>색·재질·밝기</summary><label>벽 색<input type="color" id="wallColor"></label><label>선반 색<input type="color" id="woodColor"></label><label>간판·포인트 색<input type="color" id="accentColor"></label><label>표면 느낌<select id="finish"><option value="wood">손때 묻은 나무</option><option value="linen">보송한 리넨</option><option value="plain">담백한 단색</option></select></label><label>빛의 밝기<input type="range" id="brightness" min="80" max="115"></label><label><input type="checkbox" id="priceTags"> 종이 가격표 보이기</label></details>
+          <details open><summary>소품 놓기</summary><div id="decorChoices" class="decor-choices"></div><p class="small">소품도 손가락으로 옮길 수 있습니다. 최대 12개입니다.</p></details>
+          <details open><summary>선택한 것 옮기기</summary><label>사진·장식 선택<select id="selectedObject"></select></label><p id="selectionHint" class="small"></p><label>크기<input id="objectSize" type="range" min="12" max="36"></label><label><input type="checkbox" id="objectLock"> 위치 잠그기</label><div class="move-controls"><button id="moveLeft" aria-label="왼쪽으로 이동">←</button><button id="moveUp" aria-label="위로 이동">↑</button><button id="moveDown" aria-label="아래로 이동">↓</button><button id="moveRight" aria-label="오른쪽으로 이동">→</button></div><button id="removeDecoration" disabled>선택한 장식 빼기</button></details>
+          <button id="arrange">물건 가지런히 놓기</button><button id="saveDecor" class="primary">이 기기에 꾸민 장터 저장</button><button id="exportDraft">사진·가격·꾸미기 파일 보관</button><p class="small">다른 기기·고객에게 공개하지 않습니다. 기존 상점 꾸미기와 별도로 보관합니다.</p>
+        </aside>
+      </div>
+      <p id="saveStatus" class="save-status" role="status" aria-live="polite">견본을 구경하거나 사진으로 내 장터를 시작해 보세요.</p>
+    </section>
+    <section id="catalog" class="catalog" aria-labelledby="catalogTitle"><div class="section-heading"><div><p class="eyebrow">천천히 구경해도 좋아요</p><h2 id="catalogTitle">이 장터의 물건들</h2></div><span id="itemCount"></span></div><div id="productList" class="product-grid"></div></section>
+    <section id="howItWorks" class="how-it-works"><h2>장터를 여는 일, 가볍게.</h2><ol><li><b>01</b><strong>사진과 가격이면 시작</strong><span>이름·상태 설명은 천천히 더해도 돼요.</span></li><li><b>02</b><strong>기본 진열로 바로 완성</strong><span>원한다면 색·소품·배치를 내 취향대로.</span></li><li><b>03</b><strong>구경하고, 골라보기</strong><span>지금은 내 기기에서만 만드는 체험이에요.</span></li></ol><p class="small">실제 서비스에는 본인 확인·하자 고지·개인정보 보호·결제 및 분쟁처리 준비가 별도로 필요합니다. 이 견본은 개인 판매 자격이나 실제 거래 안전을 보증하지 않습니다.</p></section>
+  </main>
+  <footer>맛지도 이웃 중고장터 · 서비스 기획 견본 <span>물건도, 이야기도 동네 안에서.</span></footer>
+  <dialog id="makerDialog" aria-labelledby="makerTitle"><form id="makerForm" novalidate><div class="dialog-heading"><div><p class="eyebrow">쉽게 시작하기</p><h2 id="makerTitle">사진과 가격부터 놓아볼까요?</h2></div><button id="closeMaker" type="button" aria-label="등록창 닫기">×</button></div><p class="small">이 기기에만 저장하는 견본입니다. 주소·전화번호·사업자 정보는 입력하지 않습니다.</p><label>장터 이름 <span class="optional">선택</span><input id="marketName" maxlength="40" placeholder="나의 이웃장터"></label><div class="upload-actions"><button id="choosePhotos" type="button">앨범·파일에서 사진 선택</button><button id="takePhoto" type="button">카메라로 촬영</button></div><input id="photos" type="file" accept="image/*" multiple hidden><input id="camera" type="file" accept="image/*" capture="environment" hidden><p id="uploadStatus" class="small" role="status" aria-live="polite">여러 장을 한 번에 선택할 수 있어요. 최대 20장 · 한 장당 15MB 이하.</p><div id="entryList" class="entry-list"></div><p id="makerError" class="error" role="alert"></p><div class="maker-bottom"><p class="small">빈 가격은 미설정, 0원은 무료 나눔입니다.<br>실제 판매·공개·배송 접수는 하지 않습니다.</p><button id="buildMarket" class="primary" type="submit">기본 진열로 내 장터 만들기</button><button id="previewWithoutSave" type="button" hidden>저장하지 않고 임시 미리보기</button></div></form></dialog>
+  <dialog id="productDialog" aria-labelledby="detailTitle"><div class="dialog-heading"><p class="eyebrow">이웃의 물건 · 거래 체험</p><button id="closeProduct" type="button" aria-label="물건 상세 닫기">×</button></div><img id="detailPhoto" alt=""><div class="detail-copy"><p id="detailSample" class="sample-label"></p><h2 id="detailTitle"></h2><strong id="detailPrice"></strong><p id="detailCondition"></p><p id="detailNote"></p><p class="small">실제 판매 물건이 아닙니다. 체험 담기는 예약·구매·재고 확보가 아닙니다.</p><button id="addToBasket" class="primary">체험 장바구니 담기</button><button id="toggleSold" hidden>판매완료 표시 체험</button><p id="detailFeedback" role="status" aria-live="polite"></p></div></dialog>
+  <aside id="basketDock" class="basket-dock" aria-label="체험 장바구니" hidden><div><strong id="basketSummary"></strong><button id="basketToggle" aria-expanded="false" aria-controls="basketDetails">담은 물건 보기</button></div><section id="basketDetails" hidden><div id="basketItems"></div><p>상품 합계만 표시합니다. 배송비는 미산정이며 실제 결제·배송은 연결하지 않았습니다.</p><button disabled>실제 거래는 아직 준비 중</button></section><p id="basketFeedback" role="status" aria-live="polite"></p></aside>
+  <script src="../store-studio/furniture-art.js?v=20261017-5" defer></script><script src="model.js?v=20261019-1" defer></script><script src="market.js?v=20261019-1" defer></script>
+</body>
+</html>
