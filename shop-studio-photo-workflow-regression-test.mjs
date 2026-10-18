@@ -4,9 +4,9 @@ const html=fs.readFileSync('store-studio/index.html','utf8'),js=fs.readFileSync(
 assert.match(html,/data-studio-task="photo-list"/);
 assert.match(html,/목록의 사진을 누르면 이름·설명을 바로 수정/);
 assert.match(js,/listButton\.onclick=[^\n]+navigateEditor\('selection'\)[^\n]+itemName/);
-const navigation=js.slice(js.indexOf('function navigateEditor(task)'),js.indexOf('function matchingPhotos()'));
+const navigation=js.slice(js.indexOf('function navigateEditor('),js.indexOf('function matchingPhotos()'));
 assert.ok(navigation.includes("$('photosSettings').open=true"));
 assert.ok(navigation.includes("$('photoSearch')"));
 assert.doesNotMatch(navigation,/checkpoint\(|persist\(|change\(/,'Moving between panels must not write scene state or undo history');
-assert.match(html,/studio\.js\?v=20261017-18-catalog-quantity-1/);
+assert.match(html,/studio\.js\?v=20261019-shared-workspace-1/);
 console.log('PASS photo workflow: direct basic editing, return paths, empty-filter recovery, pure navigation and updated cache');

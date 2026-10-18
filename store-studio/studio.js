@@ -15,6 +15,47 @@
   let compositionIds=new Set(),savedCompositions=[],setsBusy=false,setsReadable=true,setsRevision='null';
   const composition=window.ShopStudioComposition;
   let copiedStyle=null,styleMessage='';
+  // Move the existing controls once; their IDs, listeners, state and history stay intact.
+  const editorPanel=$('editorPanel'),editorPanelBody=$('editorPanelBody'),editorDivider=$('editorDivider');
+  editorPanel.insertBefore($('editorTaskNav'),editorPanelBody);
+  editorPanelBody.prepend($('itemTools'),$('decorTools'));
+  $('editorUtilities').append($('arrangeTools'),$('backupTools'));
+  const utilitiesTask=document.createElement('button');utilitiesTask.type='button';utilitiesTask.dataset.studioTask='utilities';utilitiesTask.textContent='배치·파일';$('editorTaskNav').insertBefore(utilitiesTask,$('editorTaskHint'));
+  let editorSelectionKey='',editorPaneReady=false,sceneShare=44;
+  function fitEditorScene(){
+    if(!document.body.classList.contains('studio-editor'))return;
+    const viewport=$('sceneViewport'),width=Math.min(viewport.clientWidth-22,(viewport.clientHeight-24)*4/3);
+    viewport.style.setProperty('--editor-scene-width',Math.max(40,width)+'px');
+  }
+  function sizeEditorWorkspace(){
+    const viewport=window.visualViewport;
+    document.documentElement.style.setProperty('--editor-height',(viewport&&viewport.scale===1?Math.min(viewport.height,innerHeight):innerHeight)+'px');
+    requestAnimationFrame(fitEditorScene);
+  }
+  if(typeof ResizeObserver==='function')new ResizeObserver(fitEditorScene).observe($('sceneViewport'));
+  window.addEventListener('resize',sizeEditorWorkspace);window.visualViewport?.addEventListener('resize',sizeEditorWorkspace);
+  function setSceneShare(value){
+    sceneShare=Math.max(28,Math.min(68,value));document.querySelector('.workspace').style.setProperty('--scene-share',sceneShare+'%');
+    editorDivider.setAttribute('aria-valuenow',String(Math.round(sceneShare)));editorDivider.setAttribute('aria-valuetext','상점 영역 '+Math.round(sceneShare)+'%');requestAnimationFrame(fitEditorScene);
+  }
+  editorDivider.addEventListener('keydown',event=>{const values={ArrowUp:sceneShare-5,ArrowDown:sceneShare+5,Home:28,End:68};if(event.key in values){event.preventDefault();setSceneShare(values[event.key]);}});
+  let dividerPointer=null;
+  editorDivider.addEventListener('pointerdown',event=>{if(event.button!==0)return;dividerPointer=event.pointerId;editorDivider.setPointerCapture(event.pointerId);event.preventDefault();});
+  editorDivider.addEventListener('pointermove',event=>{if(dividerPointer!==event.pointerId)return;const rect=document.querySelector('.workspace').getBoundingClientRect();setSceneShare((event.clientY-rect.top)/rect.height*100);});
+  for(const type of ['pointerup','pointercancel','lostpointercapture'])editorDivider.addEventListener(type,()=>{dividerPointer=null;});
+  function renderEditorWorkspace(){
+    const editing=!previewing&&!publicView;document.body.classList.toggle('studio-editor',editing);
+    editorPanel.hidden=!editing;editorDivider.hidden=!editing;
+    if(!editing){editorSelectionKey='';editorPaneReady=false;return;}
+    const item=state.items.find(value=>value.id===selectedId),decor=state.decor.find(value=>value.id===selectedDecorId),key=item?'photo:'+item.id:decor?'decor:'+decor.id:'';
+    $('editorSelectionLabel').textContent=item?'사진 · '+item.name:decor?'가구 · '+(decor.text||design.types[decor.type]):'꾸미기 도구';
+    if(!loading&&!importing){
+      if(key&&key!==editorSelectionKey)navigateEditor('selection',{focus:false});
+      else if(!editorPaneReady)navigateEditor('photos',{focus:false});
+      editorPaneReady=true;
+    }
+    editorSelectionKey=key;sizeEditorWorkspace();
+  }
   function renderStyleClipboard(){
     const busy=loading||importing||previewing||setsBusy,hasSelected=state.decor.some(i=>i.id===selectedDecorId);
     $('copyDecorStyle').disabled=busy||!hasSelected;$('pasteDecorStyle').disabled=busy||!hasSelected||!copiedStyle;$('clearDecorStyle').disabled=busy||!copiedStyle;$('pasteStyleGroup').disabled=busy||!copiedStyle||!compositionIds.size;
@@ -247,7 +288,7 @@
       if(['rack','glass'].includes(item.type))for(const level of [36,68,100]){const shelf=document.createElement('i');shelf.style.top=level+'%';node.append(shelf);}
       if(!previewing||!item.hidden)$('decorRoot').append(node);
       if(!foundIds.has(item.id))continue;
-      const entry=document.createElement('button');entry.type='button';entry.textContent=`${design.types[item.type]} · ${item.text}${item.locked?' 🔒':''}${item.hidden?' (숨김)':''}`;entry.disabled=loading||importing||previewing;entry.setAttribute('aria-pressed',String(item.id===selectedDecorId));entry.onclick=()=>{selectedDecorId=item.id;selectedId='';render();$('decorTools').scrollIntoView({block:'nearest'});};$('decorList').append(entry);
+      const entry=document.createElement('button');entry.type='button';entry.textContent=`${design.types[item.type]} · ${item.text}${item.locked?' 🔒':''}${item.hidden?' (숨김)':''}`;entry.disabled=loading||importing||previewing;entry.setAttribute('aria-pressed',String(item.id===selectedDecorId));entry.onclick=()=>{selectedDecorId=item.id;selectedId='';render();navigateEditor('selection');};$('decorList').append(entry);
       const checkLabel=document.createElement('label');checkLabel.className='composition-check';const check=document.createElement('input');check.type='checkbox';check.dataset.groupId=item.id;check.checked=compositionIds.has(item.id);check.disabled=loading||importing||previewing;check.setAttribute('aria-label',item.text+' 함께 선택');check.onchange=()=>{check.checked?compositionIds.add(item.id):compositionIds.delete(item.id);render();[...$('decorList').querySelectorAll('input')].find(node=>node.dataset.groupId===item.id)?.focus({preventScroll:true});};checkLabel.append(check,document.createTextNode('묶음에 포함'));$('decorList').append(checkLabel);
     }
     const item=state.decor.find(value=>value.id===selectedDecorId);$('decorTools').hidden=!item||previewing;
@@ -349,19 +390,26 @@
     for(const node of document.querySelectorAll('[data-studio-task]'))node.disabled=loading||importing||previewing;
     const hasSelection=state.items.some(i=>i.id===selectedId)||state.decor.some(i=>i.id===selectedDecorId);$('editSelectedTask').disabled=loading||importing||previewing||!hasSelection;
     window.ShopStudioCloud?.refresh();
+    renderEditorWorkspace();
   }
   function change(action){if(loading||importing||previewing)return;checkpoint();action();render();persist();}
-  function navigateEditor(task){
+  function navigateEditor(task,{focus=true}={}){
     if(loading||importing||previewing||publicView)return;
     const selection=state.items.some(i=>i.id===selectedId)?$('itemTools'):state.decor.some(i=>i.id===selectedDecorId)?$('decorTools'):null;
-    const target={photos:$('photosSettings'),'photo-list':$('itemList'),furniture:$('furnitureSettings'),atmosphere:$('atmosphereSettings'),save:$('cloudSettings'),business:$('businessSettings'),selection,scene:$('sceneViewport')}[task];if(!target)return;
+    const target={photos:$('photosSettings'),'photo-list':$('itemList'),furniture:$('furnitureSettings'),atmosphere:$('atmosphereSettings'),save:$('cloudSettings'),business:$('businessSettings'),utilities:$('editorUtilities'),selection,scene:$('sceneViewport')}[task];if(!target)return;
     if(task!=='scene'&&document.body.classList.contains('studio-focused')){document.body.classList.remove('studio-focused');$('focusMode').setAttribute('aria-pressed','false');$('focusMode').textContent='진열장에 집중';}
     if(task==='photo-list'){
       $('photosSettings').open=true;
       const current=$('itemList').querySelector('[aria-pressed="true"]'),destination=current||($('itemList').childElementCount?$('itemList'):$('photoSearch'));
-      destination.scrollIntoView({block:'center',behavior:'auto'});if(!current&&destination===$('itemList'))destination.tabIndex=-1;destination.focus({preventScroll:true});return;
+      scrollEditorControl(destination);if(!current&&destination===$('itemList'))destination.tabIndex=-1;if(focus)destination.focus({preventScroll:true});return;
     }
-    if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({block:'start',behavior:'auto'});target.tabIndex=-1;target.focus({preventScroll:true});
+    if(target.tagName==='DETAILS')target.open=true;
+    scrollEditorControl(target);target.tabIndex=-1;if(focus)target.focus({preventScroll:true});
+    for(const node of $('editorTaskNav').querySelectorAll('button'))node.setAttribute('aria-pressed',String(node.dataset.studioTask===task));
+    requestAnimationFrame(fitEditorScene);
+  }
+  function scrollEditorControl(target){
+    if(editorPanelBody.contains(target))editorPanelBody.scrollTop+=target.getBoundingClientRect().top-editorPanelBody.getBoundingClientRect().top-10;
   }
   for(const button of document.querySelectorAll('[data-studio-task]'))button.onclick=()=>navigateEditor(button.dataset.studioTask);
   function matchingPhotos(){return composition.findPhotos(state.items,$('photoSearch').value,$('photoPurposeFilter').value,$('photoStateFilter').value);}
@@ -592,7 +640,7 @@
   $('arrangeAll').onclick=()=>{const result=layout.arrange(state.items.map(item=>item.decorId?{...item,locked:true}:item),state.zones,state.shelves);if(!result.ok){say(result.message,true);return;}change(()=>{state.items=result.items.map(item=>({...item,locked:state.items.find(value=>value.id===item.id)?.locked===true}));});};
   function reorder(front){if(!selected())return;change(()=>{const item=selected();state.items=state.items.filter(other=>other.id!==item.id);front?state.items.push(item):state.items.unshift(item);});}
   $('bringFront').onclick=()=>reorder(true);$('sendBack').onclick=()=>reorder(false);
-  $('focusMode').onclick=()=>{const focus=document.body.classList.toggle('studio-focused');$('focusMode').setAttribute('aria-pressed',String(focus));$('focusMode').textContent=focus?'전체 도구 보기':'진열장에 집중';if(focus)scene.scrollIntoView({block:'center'});};
+  $('focusMode').onclick=()=>{const focus=document.body.classList.toggle('studio-focused');$('focusMode').setAttribute('aria-pressed',String(focus));$('focusMode').textContent=focus?'전체 도구 보기':'진열장에 집중';sizeEditorWorkspace();};
   function history(from,to){if(loading||importing||previewing||!from.length)return;to.push(clone(state));state=from.pop();selectedId='';selectedDecorId='';render();persist();}
   $('undo').onclick=()=>history(past,future);$('redo').onclick=()=>history(future,past);
   document.addEventListener('keydown',event=>{
