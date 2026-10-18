@@ -50,8 +50,10 @@
     const item=state.items.find(value=>value.id===selectedId),decor=state.decor.find(value=>value.id===selectedDecorId),key=item?'photo:'+item.id:decor?'decor:'+decor.id:'';
     $('editorSelectionLabel').textContent=item?'사진 · '+item.name:decor?'가구 · '+(decor.text||design.types[decor.type]):'꾸미기 도구';
     if(!loading&&!importing){
-      if(key&&key!==editorSelectionKey)navigateEditor('selection',{focus:false});
-      else if(!editorPaneReady)navigateEditor('photos',{focus:false});
+      if(!document.body.classList.contains('studio-focused')){
+        if(key&&key!==editorSelectionKey)navigateEditor('selection',{focus:false});
+        else if(!editorPaneReady)navigateEditor('photos',{focus:false});
+      }
       editorPaneReady=true;
     }
     editorSelectionKey=key;sizeEditorWorkspace();
@@ -640,7 +642,7 @@
   $('arrangeAll').onclick=()=>{const result=layout.arrange(state.items.map(item=>item.decorId?{...item,locked:true}:item),state.zones,state.shelves);if(!result.ok){say(result.message,true);return;}change(()=>{state.items=result.items.map(item=>({...item,locked:state.items.find(value=>value.id===item.id)?.locked===true}));});};
   function reorder(front){if(!selected())return;change(()=>{const item=selected();state.items=state.items.filter(other=>other.id!==item.id);front?state.items.push(item):state.items.unshift(item);});}
   $('bringFront').onclick=()=>reorder(true);$('sendBack').onclick=()=>reorder(false);
-  $('focusMode').onclick=()=>{const focus=document.body.classList.toggle('studio-focused');$('focusMode').setAttribute('aria-pressed',String(focus));$('focusMode').textContent=focus?'전체 도구 보기':'진열장에 집중';sizeEditorWorkspace();};
+  $('focusMode').onclick=()=>{const focus=document.body.classList.toggle('studio-focused');$('focusMode').setAttribute('aria-pressed',String(focus));$('focusMode').textContent=focus?'전체 도구 보기':'진열장에 집중';if(!focus)navigateEditor('selection',{focus:false});sizeEditorWorkspace();};
   function history(from,to){if(loading||importing||previewing||!from.length)return;to.push(clone(state));state=from.pop();selectedId='';selectedDecorId='';render();persist();}
   $('undo').onclick=()=>history(past,future);$('redo').onclick=()=>history(future,past);
   document.addEventListener('keydown',event=>{
