@@ -9,6 +9,6 @@ assert.match(js,/button\('삭제','delete','삭제',false\)/,'Whole-line deletio
 assert.match(js,/const count=Math.max\(1,Math.min\(20,previous\+delta\)\)/);
 assert.match(js,/function sampleRemove\(sku\)/);assert.doesNotMatch(js,/sampleQuantity\(row.sku,-row.quantity\)/);
 assert.match(js,/focus\(\{preventScroll:true\}\)/);assert.match(css,/min-width:44px;min-height:44px/);
-for(const asset of ['studio.js','studio.css'])assert.ok(html.includes(asset+'?v=20261019-shared-workspace-1'));
+for(const asset of ['studio.js','studio.css'])assert.ok(html.includes(asset+'?v=20261019-first-owner-1'));
 assert.match(fs.readFileSync('.github/workflows/preview-api-client-checks.yml','utf8'),/STUDIO_TEST_ORIGIN=http:\/\/127\.0\.0\.1:4173 OUTPUT_DIR=\. node scripts\/browser-studio-cart-dock\.mjs/,'CI must run the real quantity touch flow, not only source assertions');
 console.log('PASS cart quantity controls: shared dock/full cart, one-at-a-time changes, minimum1/maximum20, separate delete, touch targets and refreshed assets');

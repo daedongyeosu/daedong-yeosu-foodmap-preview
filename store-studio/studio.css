@@ -78,11 +78,21 @@ body.studio-editor #editorTaskNav button[aria-pressed=true]{background:#176651;c
 body.studio-editor #editorTaskHint{display:none}
 body.studio-editor .editor-panel-body{flex:1;min-height:0;padding:10px;overflow:auto;overscroll-behavior:contain;scroll-padding:10px;scrollbar-gutter:stable;touch-action:pan-y pinch-zoom}
 body.studio-editor .editor-panel-body>.tools{width:100%;display:block}
-body.studio-editor .editor-panel-body #itemTools,body.studio-editor .editor-panel-body #decorTools,body.studio-editor .tools details,body.studio-editor #editorUtilities{padding:12px;margin:0 0 10px;border:1px solid #d9e2da;border-radius:12px;background:#fff;scroll-margin:10px}
+body.studio-editor .editor-panel-body #itemTools,body.studio-editor .editor-panel-body #decorTools,body.studio-editor .tools details,body.studio-editor .owner-guide,body.studio-editor #editorUtilities{padding:12px;margin:0 0 10px;border:1px solid #d9e2da;border-radius:12px;background:#fff;scroll-margin:10px}
 body.studio-editor .editor-panel-body h2{font-size:16px;margin:0 0 12px}
 body.studio-editor .editor-panel-body summary{font-size:15px;min-height:32px}
 body.studio-editor .editor-panel-body label{font-size:13px;gap:8px}
 body.studio-editor .editor-panel-body input,body.studio-editor .editor-panel-body select,body.studio-editor .editor-panel-body textarea{font-size:16px}
+body.studio-editor .photo-review-row{display:grid;grid-template-columns:42px minmax(0,1fr) 56px;gap:8px;align-items:center;padding:8px 0;border-top:1px solid #e3eae5}
+body.studio-editor .photo-review-row img{width:42px;height:48px;object-fit:contain}
+body.studio-editor .photo-review-row label{display:block;min-width:0;margin:0}
+body.studio-editor .photo-review-row label span{display:block;font-size:12px;margin-bottom:3px;color:#5d6d62}
+body.studio-editor .photo-review-row input{width:100%;max-width:100%}
+body.studio-editor .photo-review-row button{font-size:12px;padding:6px}
+body.studio-editor .owner-guide>button,body.studio-editor #photosNext{display:block;width:100%;margin:10px 0}
+body.studio-editor #photosNext,body.studio-editor #arrangeNext,body.studio-editor #saveDraft{background:#176651;color:#fff}
+body.studio-editor #draftSaveStatus.error{color:#a23b22}
+body.studio-editor #photosSettings .upload-actions button{font-size:13px;padding:9px 6px;word-break:keep-all}
 body.studio-editor #returnToScene{position:static;font-size:12px;margin:0 0 10px}
 body.studio-editor.studio-focused .editor-panel,body.studio-editor.studio-focused #editorDivider{display:none}
 body.studio-editor.studio-focused .workspace{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
