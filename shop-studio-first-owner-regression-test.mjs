@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const html=fs.readFileSync('store-studio/index.html','utf8'),js=fs.readFileSync('store-studio/studio.js','utf8');
+for(const id of ['photoReviewList','photosNext','arrangeGuide','arrangeAll','arrangeNext','saveGuide','draftSaveStatus','saveDraft','backupDraft','reviewDraft','openCloudGuide'])assert.equal(html.split('id="'+id+'"').length-1,1,id+' must exist exactly once');
+const tasks=[...html.matchAll(/data-studio-task="([^"]+)"/g)].slice(0,3).map(match=>match[1]);assert.deepEqual(tasks,['photos','arrange','save'],'The beginner path must precede advanced tools');
+assert.match(js,/persist\(\);navigateEditor\('photos',\{focus:false\}\)/,'New photos must return to the multi-photo name review, not leave the owner at the last photo details');
+assert.match(js,/if\(list.dataset.ids!==ids\)/,'Name fields must stay mounted during edits');assert.match(js,/input\.maxLength=50;input\.enterKeyHint='next'/);
+assert.match(js,/event.key==='Enter'&&!event.isComposing/,'Korean IME composition Enter is not the next-field action');
+assert.match(js,/target.name!==name\)change\(\(\)=>\{target.name=name;/,'Name edits must use undo and persistence');
+assert.match(js,/save:\$\('saveGuide'\),cloud:\$\('cloudSettings'\)/,'Local save and server publication must remain separate');
+assert.match(js,/tx.oncomplete=resolve;tx.onerror=\(\)=>reject\(tx.error\)/);
+assert.match(js,/then\(\(\)=>\{if\(revision===saveRevision\)\{localSaveState='saved'/,'Success may be shown only after a completed transaction');
+assert.match(js,/catch\(\(\)=>\{if\(revision===saveRevision\)\{localSaveState='error'/);
+assert.match(html,/아직 다른 휴대폰이나 고객에게 보이지 않습니다/);assert.match(html,/가격·재고 등록과 고객 공개는 별도/);
+for(const id of ['photosSettings','furnitureSettings','compositionSettings','catalogSettings','businessSettings','itemTools','decorTools','cloudSettings','backupTools'])assert.equal(html.split('id="'+id+'"').length-1,1,id+' must be preserved');
+console.log('PASS novice owner: visible photo/arrange/save path, stable editable photo review, real transaction status and separate local/public saving');

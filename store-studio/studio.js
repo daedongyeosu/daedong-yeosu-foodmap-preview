@@ -19,9 +19,10 @@
   const editorPanel=$('editorPanel'),editorPanelBody=$('editorPanelBody'),editorDivider=$('editorDivider');
   editorPanel.insertBefore($('editorTaskNav'),editorPanelBody);
   editorPanelBody.prepend($('itemTools'),$('decorTools'));
-  $('editorUtilities').append($('arrangeTools'),$('backupTools'));
+  $('arrangeGuideTools').append($('arrangeTools'));
+  $('editorUtilities').append($('backupTools'));
   const utilitiesTask=document.createElement('button');utilitiesTask.type='button';utilitiesTask.dataset.studioTask='utilities';utilitiesTask.textContent='배치·파일';$('editorTaskNav').insertBefore(utilitiesTask,$('editorTaskHint'));
-  let editorSelectionKey='',editorPaneReady=false,sceneShare=44;
+  let editorSelectionKey='',editorPaneReady=false,sceneShare=44,editorTask='photos';
   function fitEditorScene(){
     if(!document.body.classList.contains('studio-editor'))return;
     const viewport=$('sceneViewport'),width=Math.min(viewport.clientWidth-22,(viewport.clientHeight-24)*4/3);
@@ -48,7 +49,6 @@
     editorPanel.hidden=!editing;editorDivider.hidden=!editing;
     if(!editing){editorSelectionKey='';editorPaneReady=false;return;}
     const item=state.items.find(value=>value.id===selectedId),decor=state.decor.find(value=>value.id===selectedDecorId),key=item?'photo:'+item.id:decor?'decor:'+decor.id:'';
-    $('editorSelectionLabel').textContent=item?'사진 · '+item.name:decor?'가구 · '+(decor.text||design.types[decor.type]):'꾸미기 도구';
     if(!loading&&!importing){
       if(!document.body.classList.contains('studio-focused')){
         if(key&&key!==editorSelectionKey)navigateEditor('selection',{focus:false});
@@ -56,7 +56,11 @@
       }
       editorPaneReady=true;
     }
-    editorSelectionKey=key;sizeEditorWorkspace();
+    editorSelectionKey=key;renderEditorHeading();sizeEditorWorkspace();
+  }
+  function renderEditorHeading(){
+    const item=state.items.find(value=>value.id===selectedId),decor=state.decor.find(value=>value.id===selectedDecorId);
+    $('editorSelectionLabel').textContent=({photos:'사진 추가·이름 적기',arrange:'사진 진열하기',save:'시안 저장 확인'})[editorTask]||(item?'사진 · '+item.name:decor?'가구 · '+(decor.text||design.types[decor.type]):'꾸미기 도구');
   }
   function renderStyleClipboard(){
     const busy=loading||importing||previewing||setsBusy,hasSelected=state.decor.some(i=>i.id===selectedDecorId);
@@ -163,7 +167,7 @@
   };
   const initialPreset=new URLSearchParams(location.search).get('style');
   let state={...defaults,...(presets[initialPreset]||{}),preset:presets[initialPreset]?initialPreset:'cafe',items:[]};
-  let selectedId='',previewProductId='',previewing=false,loading=true,importing=false,gesture=null,db=null,saveChain=Promise.resolve(),saveRevision=0;
+  let selectedId='',previewProductId='',previewing=false,loading=true,importing=false,gesture=null,db=null,saveChain=Promise.resolve(),saveRevision=0,localSaveState='new';
   const past=[],future=[];
   const clone=value=>JSON.parse(JSON.stringify(value));
   const clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
@@ -177,13 +181,40 @@
     request.onblocked=()=>reject(new Error('storage-blocked'));
   });}
   function readDraft(){return new Promise((resolve,reject)=>{const request=db.transaction('drafts').objectStore('drafts').get(draftKey);request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});}
+  function renderSaveGuide(){
+    const messages={new:'아직 저장 전입니다. 사진과 배치를 바꾸면 자동 저장하며, 아래 버튼으로도 저장할 수 있습니다.',saving:'사진과 배치를 이 기기에 저장 중입니다…',saved:'이 기기에 저장 완료 · 사진 '+state.items.length+'개, 가구 '+state.decor.length+'개',loaded:'이 기기에 보관한 시안을 불러왔습니다. 사진 '+state.items.length+'개, 가구 '+state.decor.length+'개',error:'저장하지 못했습니다. 창을 닫기 전에 시안을 파일로 보관해 주세요.'};
+    $('draftSaveStatus').textContent=messages[localSaveState];$('draftSaveStatus').classList.toggle('error',localSaveState==='error');
+    $('saveDraft').disabled=loading||importing||previewing||!db||localSaveState==='saving';
+  }
   function persist(){
-    if(!db){say('현재 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);return;}
-    const snapshot=clone(state),revision=++saveRevision;say('사진과 배치를 이 기기에 저장 중입니다…');
+    if(!db){localSaveState='error';renderSaveGuide();say('현재 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);return;}
+    const snapshot=clone(state),revision=++saveRevision;localSaveState='saving';renderSaveGuide();say('사진과 배치를 이 기기에 저장 중입니다…');
     saveChain=saveChain.catch(()=>{}).then(()=>new Promise((resolve,reject)=>{
       const tx=db.transaction('drafts','readwrite');tx.objectStore('drafts').put(snapshot,draftKey);
       tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);
-    })).then(()=>{if(revision===saveRevision)say('사진과 배치를 이 기기에 저장했습니다.');}).catch(()=>{if(revision===saveRevision)say('저장 공간이 부족하거나 사용할 수 없습니다. 현재 시안은 보이지만 새로고침하면 변경사항이 사라질 수 있습니다.',true);});
+    })).then(()=>{if(revision===saveRevision){localSaveState='saved';renderSaveGuide();say('사진과 배치를 이 기기에 저장했습니다.');}}).catch(()=>{if(revision===saveRevision){localSaveState='error';renderSaveGuide();say('저장 공간이 부족하거나 사용할 수 없습니다. 현재 시안은 보이지만 새로고침하면 변경사항이 사라질 수 있습니다.',true);}});
+  }
+  function renderPhotoReview(){
+    const list=$('photoReviewList'),ids=JSON.stringify(state.items.map(item=>item.id));
+    // Keep name fields mounted while editing, including the mobile keyboard's Next action.
+    if(list.dataset.ids!==ids){
+      list.replaceChildren();list.dataset.ids=ids;
+      for(const [index,item] of state.items.entries()){
+        const row=document.createElement('div');row.className='photo-review-row';row.dataset.photoId=item.id;
+        const thumb=document.createElement('img');thumb.alt='';
+        const label=document.createElement('label'),caption=document.createElement('span'),input=document.createElement('input');caption.textContent='사진 '+(index+1)+' 표시 이름';input.type='text';input.maxLength=50;input.enterKeyHint='next';input.setAttribute('aria-label',caption.textContent);label.append(caption,input);
+        input.onchange=()=>{const target=state.items.find(value=>value.id===item.id),name=input.value.trim().slice(0,50)||'상품';if(target&&target.name!==name)change(()=>{target.name=name;});input.value=name;};
+        input.onkeydown=event=>{if(event.key==='Enter'&&!event.isComposing){event.preventDefault();input.blur();const fields=[...list.querySelectorAll('input')];(fields[fields.indexOf(input)+1]||$('photosNext')).focus({preventScroll:true});scrollEditorControl(document.activeElement);}};
+        const edit=document.createElement('button');edit.type='button';edit.textContent='자세히';edit.onclick=()=>{selectedId=item.id;selectedDecorId='';render();navigateEditor('selection');};row.append(thumb,label,edit);list.append(row);
+      }
+    }
+    for(const [index,item] of state.items.entries()){
+      const row=list.children[index],input=row.querySelector('input');row.querySelector('img').src=item.src;
+      if(document.activeElement!==input)input.value=item.name;input.disabled=loading||importing||previewing;
+      const edit=row.querySelector('button');edit.disabled=loading||importing||previewing;edit.setAttribute('aria-label',item.name+' 자세히 수정');
+    }
+    $('photoReviewCount').textContent=state.items.length?'사진 '+state.items.length+'개 · 표시 이름을 확인하세요.':'아직 사진이 없습니다. 휴대폰 앨범이나 컴퓨터의 사진을 선택해 주세요.';
+    $('photosNext').disabled=loading||importing||previewing||!state.items.length;
   }
   function bounded(item){Object.assign(item,layout.bounded(item));}
   function position(node,item){node.style.left=`${item.x}%`;node.style.top=`${item.y}%`;node.style.width=`${item.size}%`;node.style.transform=`rotate(${item.rotation}deg)`;}
@@ -391,6 +422,8 @@
     for(const node of document.querySelectorAll('[data-photo-batch]'))node.disabled=loading||importing||previewing||!foundPhotos.length;
     for(const node of document.querySelectorAll('[data-studio-task]'))node.disabled=loading||importing||previewing;
     const hasSelection=state.items.some(i=>i.id===selectedId)||state.decor.some(i=>i.id===selectedDecorId);$('editSelectedTask').disabled=loading||importing||previewing||!hasSelection;
+    renderPhotoReview();renderSaveGuide();
+    for(const id of ['arrangeFurniture','arrangeNext','backupDraft','reviewDraft','openCloudGuide','openArrangeGuide'])$(id).disabled=loading||importing||previewing;
     window.ShopStudioCloud?.refresh();
     renderEditorWorkspace();
   }
@@ -398,7 +431,8 @@
   function navigateEditor(task,{focus=true}={}){
     if(loading||importing||previewing||publicView)return;
     const selection=state.items.some(i=>i.id===selectedId)?$('itemTools'):state.decor.some(i=>i.id===selectedDecorId)?$('decorTools'):null;
-    const target={photos:$('photosSettings'),'photo-list':$('itemList'),furniture:$('furnitureSettings'),atmosphere:$('atmosphereSettings'),save:$('cloudSettings'),business:$('businessSettings'),utilities:$('editorUtilities'),selection,scene:$('sceneViewport')}[task];if(!target)return;
+    const target={photos:$('photosSettings'),'photo-list':$('itemList'),furniture:$('furnitureSettings'),atmosphere:$('atmosphereSettings'),arrange:$('arrangeGuide'),save:$('saveGuide'),cloud:$('cloudSettings'),business:$('businessSettings'),utilities:$('editorUtilities'),selection,scene:$('sceneViewport')}[task];if(!target)return;
+    editorTask=task;renderEditorHeading();
     if(task!=='scene'&&document.body.classList.contains('studio-focused')){document.body.classList.remove('studio-focused');$('focusMode').setAttribute('aria-pressed','false');$('focusMode').textContent='진열장에 집중';}
     if(task==='photo-list'){
       $('photosSettings').open=true;
@@ -415,6 +449,10 @@
   }
   for(const button of document.querySelectorAll('[data-studio-task]'))button.onclick=()=>navigateEditor(button.dataset.studioTask);
   function matchingPhotos(){return composition.findPhotos(state.items,$('photoSearch').value,$('photoPurposeFilter').value,$('photoStateFilter').value);}
+  $('photosNext').onclick=()=>navigateEditor('arrange');$('arrangeNext').onclick=()=>navigateEditor('save');$('arrangeFurniture').onclick=()=>navigateEditor('furniture');
+  $('openArrangeGuide').onclick=()=>navigateEditor('arrange');
+  $('saveDraft').onclick=()=>{if(!loading&&!importing&&!previewing)persist();};
+  $('backupDraft').onclick=()=>$('exportScene').click();$('reviewDraft').onclick=()=>$('preview').click();$('openCloudGuide').onclick=()=>navigateEditor('cloud');
   $('photoSearch').oninput=()=>render();for(const id of ['photoPurposeFilter','photoStateFilter'])$(id).onchange=()=>render();$('resetPhotoSearch').onclick=()=>{$('photoSearch').value='';$('photoPurposeFilter').value='all';$('photoStateFilter').value='all';render();};
   const photoActions={lock:['locked',true,'잠그기'],unlock:['locked',false,'잠금 풀기'],hide:['hidden',true,'시안에서 숨기기'],show:['hidden',false,'시안에 보이기'],section:['section',null,'상품 구역 지정']};
   for(const button of document.querySelectorAll('[data-photo-batch]'))button.onclick=()=>{
@@ -591,7 +629,7 @@
     for(const file of [...files].slice(0,available)){
       try{const src=await imageData(file);const i=state.items.length+added.length;added.push({id:crypto.randomUUID(),name:file.name.replace(/\.[^.]+$/,'').slice(0,50)||'상품',src,purpose:purpose==='decoration'?'decoration':'product',photoFrame:'none',x:8+(i%4)*21,y:30+Math.floor(i%12/4)*21,size:18,rotation:0,shadow:true});}catch(error){errors.push(`${file.name}: ${error.message}`);}
     }
-    importing=false;if(added.length){checkpoint();state.items.push(...added);selectedId=added.at(-1).id;render();persist();}else render();
+    importing=false;if(added.length){checkpoint();state.items.push(...added);selectedId=added.at(-1).id;selectedDecorId='';render();persist();navigateEditor('photos',{focus:false});}else render();
     await saveChain;
     if(errors.length)say(`${added.length}개 추가. ${errors.join(' ')}`,true);
     else if(files.length>available)say(`${added.length}개 추가했습니다. 시안당 사진은 40개까지 지원합니다.`);
@@ -639,7 +677,7 @@
   };
   $('remove').onclick=()=>{if(selected()?.locked)return;change(()=>{state.items=state.items.filter(item=>item.id!==selectedId);selectedId='';});};
   $('snapSelected').onclick=()=>{const item=selected();if(!item||item.locked||item.hidden||item.decorId||!state.appearance.showShelves)return;change(()=>Object.assign(item,layout.onShelf(item,state.shelves)));};
-  $('arrangeAll').onclick=()=>{const result=layout.arrange(state.items.map(item=>item.decorId?{...item,locked:true}:item),state.zones,state.shelves);if(!result.ok){say(result.message,true);return;}change(()=>{state.items=result.items.map(item=>({...item,locked:state.items.find(value=>value.id===item.id)?.locked===true}));});};
+  $('arrangeAll').onclick=()=>{if(loading||importing||previewing)return;const result=layout.arrange(state.items.map(item=>item.decorId?{...item,locked:true}:item),state.zones,state.shelves);if(!result.ok){$('arrangeFeedback').textContent=result.message;say(result.message,true);return;}change(()=>{state.items=result.items.map(item=>({...item,locked:state.items.find(value=>value.id===item.id)?.locked===true}));});$('arrangeFeedback').textContent='개별 사진을 가지런히 진열했습니다. 위 상점에서 확인하고, 원하는 사진은 더 옮겨보세요.';};
   function reorder(front){if(!selected())return;change(()=>{const item=selected();state.items=state.items.filter(other=>other.id!==item.id);front?state.items.push(item):state.items.unshift(item);});}
   $('bringFront').onclick=()=>reorder(true);$('sendBack').onclick=()=>reorder(false);
   $('focusMode').onclick=()=>{const focus=document.body.classList.toggle('studio-focused');$('focusMode').setAttribute('aria-pressed',String(focus));$('focusMode').textContent=focus?'전체 도구 보기':'진열장에 집중';if(!focus)navigateEditor('selection',{focus:false});sizeEditorWorkspace();};
@@ -682,8 +720,8 @@
       return;
     }
     if(exampleMode)state=restoreScene(sample.create());
-    render();try{db=await storageOpen();const draft=await readDraft();if(draft&&Array.isArray(draft.items)){state=restoreScene(draft);say('이 기기에 저장한 사진과 배치를 불러왔습니다.');}await loadCompositions();}
-    catch{say('이 브라우저에서는 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);}
+    render();try{db=await storageOpen();const draft=await readDraft();if(draft&&Array.isArray(draft.items)){state=restoreScene(draft);localSaveState='loaded';say('이 기기에 저장한 사진과 배치를 불러왔습니다.');}await loadCompositions();}
+    catch{localSaveState='error';say('이 브라우저에서는 시안을 저장할 수 없습니다. 창을 닫거나 새로고침하면 변경사항이 사라질 수 있습니다.',true);}
     if(!exampleMode&&!state.catalogStoreId)try{const saved=JSON.parse(localStorage.getItem('matjido-store-onboarding-preview-v1')||'null');if(saved?.previewOnly)state.catalogStoreId=catalog.id(saved.storeId);}catch{}
     previewing=exampleMode&&new URLSearchParams(location.search).get('view')==='customer';
     loading=false;render();if(state.catalogStoreId)void loadCatalog();

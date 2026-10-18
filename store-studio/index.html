@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261019-shared-workspace-1">
+  <link rel="stylesheet" href="studio.css?v=20261019-first-owner-1">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -13,7 +13,7 @@
     <section id="templateNotice" class="example-notice" hidden><b><span id="templateName"></span> 분위기로 시작하기</b><span>아직 기존 시안을 바꾸지 않았습니다. 적용하면 상품사진·가게정보·주문 연결은 유지하고 가구와 스타일만 바꿉니다. 상품사진은 직접 올려 주세요.</span><button id="applyTemplate" type="button">이 디자인 적용하기</button></section>
     <section class="intro"><small>구경이 방문과 주문으로 이어지는 내 가게</small><h1>사진을 올리고, 진열장에 놓아보세요.</h1><p>사진을 손가락이나 마우스로 옮겨 보세요. 이 시안은 이 기기에 저장됩니다. 방문·주문 버튼은 사장님이 등록한 링크로 이동하며, 이 편집기에서 주문이나 결제를 접수하지 않습니다.</p></section>
     <p class="example-entry"><a href="../store-alley/index.html" target="_blank" rel="noopener">서로 다른 가게가 있는 시범 골목 둘러보기 ↗</a></p>
-    <nav id="editorTaskNav" class="editor-task-nav" aria-label="꾸미기 작업 바로가기"><button type="button" data-studio-task="photos">사진 추가</button><button type="button" data-studio-task="furniture">가구 선택</button><button id="editSelectedTask" type="button" data-studio-task="selection" disabled>선택한 것 수정</button><button type="button" data-studio-task="atmosphere">가게 분위기</button><button type="button" data-studio-task="save">저장·공개 안내</button><button type="button" data-studio-task="business">방문·주문 연결</button><p id="editorTaskHint" class="hint">진열장에서 사진·가구를 선택하면 선택한 것 수정으로 바로 이동할 수 있습니다.</p></nav>
+    <nav id="editorTaskNav" class="editor-task-nav" aria-label="꾸미기 작업 바로가기"><button type="button" data-studio-task="photos">사진 추가</button><button type="button" data-studio-task="arrange">진열하기</button><button type="button" data-studio-task="save">저장·공개 안내</button><button type="button" data-studio-task="furniture">가구 선택</button><button id="editSelectedTask" type="button" data-studio-task="selection" disabled>선택한 것 수정</button><button type="button" data-studio-task="atmosphere">가게 분위기</button><button type="button" data-studio-task="business">방문·주문 연결</button><p id="editorTaskHint" class="hint">사진 추가 → 진열하기 → 저장 순서로 시작하세요. 나머지 도구도 옆으로 넘겨 사용할 수 있습니다.</p></nav>
     <div class="workspace">
       <section id="editorPanel" class="editor-panel" aria-label="상점을 보면서 꾸미기" hidden>
         <div class="editor-panel-heading"><strong id="editorSelectionLabel" aria-live="polite">꾸미기 도구</strong><span>상점은 그대로, 도구만 스크롤하세요</span></div>
@@ -88,10 +88,16 @@
           <div class="item-actions"><button id="compositionExport" type="button">내 세트 파일로 보관</button><button id="compositionImport" type="button">세트 파일 가져오기</button><input id="compositionFile" type="file" accept=".json,application/json" hidden></div>
           <p id="compositionStatus" class="hint" role="status" aria-live="polite"></p>
         </details>
-        <details id="photosSettings" open><summary>2. 진열할 사진</summary>
-          <div class="upload-actions"><button id="choosePhotos" type="button">사진·파일에서 선택</button><button id="takePhoto" type="button">카메라로 촬영</button></div>
+        <details id="photosSettings" open><summary>1. 사진 추가·이름 적기</summary>
+          <p class="hint">사진을 고르고 이름을 적은 뒤 ‘다음: 진열하기’를 누르세요. 가격·재고 등록과 고객 공개는 별도입니다.</p>
+          <div class="upload-actions"><button id="choosePhotos" type="button">사진·파일 선택</button><button id="takePhoto" type="button">카메라로 촬영</button></div>
           <input id="photos" type="file" accept="image/*" multiple hidden><input id="camera" type="file" accept="image/*" capture="environment" hidden>
-          <p class="hint">컴퓨터에서는 사진 파일을 진열장으로 끌어놓아도 됩니다. 투명 배경 PNG·WebP는 물건만 보입니다. 자동 배경 제거는 아직 연결되지 않았습니다.</p>
+          <section id="photoReview" class="photo-review" aria-label="추가한 사진 이름 확인">
+            <p id="photoReviewCount" class="hint" role="status"></p>
+            <div id="photoReviewList"></div>
+            <button id="photosNext" type="button">다음: 진열하기 →</button>
+          </section>
+          <details><summary>사진 파일 안내</summary><p class="hint">컴퓨터에서는 사진 파일을 진열장으로 끌어놓아도 됩니다. 투명 배경 PNG·WebP는 물건만 보입니다. 자동 배경 제거는 아직 연결되지 않았습니다.</p></details>
           <label>배치한 사진 찾기<input id="photoSearch" type="search" maxlength="80" placeholder="사진 이름·상품 구역"></label><label>사진 용도<select id="photoPurposeFilter"><option value="all">모든 사진</option><option value="product">판매상품 사진</option><option value="decoration">포스터·그림·장식</option></select></label><label>사진 상태<select id="photoStateFilter"><option value="all">모두 보기</option><option value="visible">고객에게 보이는 사진</option><option value="hidden">숨긴 사진</option><option value="locked">위치 잠근 사진</option></select></label><button id="resetPhotoSearch" type="button">사진 검색·필터 초기화</button><p id="photoResultsCount" class="hint" role="status" aria-live="polite"></p><p class="hint">검색은 아래 목록만 바꿉니다. 실제 진열과 고객 상품 목록은 바뀌지 않습니다.</p>
           <details id="photoBatchTools"><summary>검색된 사진 함께 정리하기</summary><div class="item-actions"><button type="button" data-photo-batch="lock">위치 모두 잠그기</button><button type="button" data-photo-batch="unlock">위치 잠금 모두 풀기</button><button type="button" data-photo-batch="hide">시안에서 모두 숨기기</button><button type="button" data-photo-batch="show">시안에 모두 보이기</button></div><label>지정할 상품 구역<input id="photoBatchSection" maxlength="24" placeholder="예: 봄 신상품"></label><button type="button" data-photo-batch="section">검색 결과에 구역 지정</button><p id="photoBatchStatus" class="hint" role="status" aria-live="polite"></p><p class="hint">현재 검색 결과에만 적용합니다. 검색이 없으면 전체 사진이 대상입니다. 여러 장은 적용 전에 확인합니다. 구역을 비우면 기존 구역 이름을 지웁니다. 숨김은 시안의 표시만 바꾸며 등록상품·재고를 삭제하거나 판매 중단하지 않습니다. 되돌리기 한 번으로 복구합니다.</p></details>
           <p class="hint">목록의 사진을 누르면 이름·설명을 바로 수정합니다. 배치 위치는 수정 화면의 ‘진열장에서 보기’로 확인하세요.</p>
@@ -120,7 +126,26 @@
           <p id="businessValidation" class="hint" role="status" aria-live="polite"></p>
         </details>
       </aside>
-          <details id="editorUtilities"><summary>배치 정리·시안 파일</summary></details>
+          <section id="arrangeGuide" class="owner-guide" tabindex="-1" aria-labelledby="arrangeGuideTitle">
+            <h2 id="arrangeGuideTitle">2. 사진 진열하기</h2>
+            <p class="hint">위 사진을 끌어 옮기거나, 아래 버튼으로 가지런히 놓으세요.</p>
+            <div id="arrangeGuideTools"></div>
+            <p id="arrangeFeedback" class="hint" role="status" aria-live="polite"></p>
+            <button id="arrangeFurniture" type="button">가구도 골라 놓기</button>
+            <button id="arrangeNext" type="button">다음: 저장 확인 →</button>
+            <details><summary>자동 정리에서 유지되는 것</summary><p class="hint">잠근 사진·숨긴 사진·가구에 연결한 사진은 자동 정리로 옮기지 않습니다. 마음에 안 들면 위 ‘되돌리기’를 누르세요.</p></details>
+          </section>
+          <section id="saveGuide" class="owner-guide" tabindex="-1" aria-labelledby="saveGuideTitle">
+            <h2 id="saveGuideTitle">3. 시안 저장 확인</h2>
+            <p id="draftSaveStatus" class="hint" role="status" aria-live="polite"></p>
+            <button id="saveDraft" type="button">이 기기에 시안 저장</button>
+            <p class="hint">이 브라우저에만 보관합니다. 아직 다른 휴대폰이나 고객에게 보이지 않습니다. 브라우저 데이터를 지우면 사라질 수 있으니 파일로도 보관하세요.</p>
+            <button id="backupDraft" type="button">사진·배치를 파일로 보관</button>
+            <button id="reviewDraft" type="button">고객 화면 미리보기</button>
+            <button id="openCloudGuide" type="button">다른 기기에서 보기·공개 안내</button>
+            <p class="hint">미리보기는 공개·판매가 아닙니다. 계정 저장·공개는 연결 상태를 확인한 뒤 직접 진행합니다.</p>
+          </section>
+          <details id="editorUtilities"><summary>배치 정리·시안 파일</summary><button id="openArrangeGuide" type="button">진열 정리 도구 열기</button></details>
         </div>
       </section>
       <div id="editorDivider" class="editor-divider" role="separator" tabindex="0" aria-label="상점과 도구 영역 크기 조절" aria-orientation="horizontal" aria-valuemin="28" aria-valuemax="68" aria-valuenow="44" hidden><span></span></div>
@@ -234,5 +259,5 @@
     <button id="cartDockToggle" type="button" aria-expanded="false" aria-controls="cartDockDetails"><span id="cartDockSummary"></span><b>장바구니 보기</b></button>
     <section id="cartDockDetails" aria-label="담은 상품 확인" hidden><div id="cartDockItems"></div><a id="cartDockLink" class="customer-link" hidden>장바구니·배송비 확인</a><small id="cartDockNotice"></small></section>
   </aside>
-  <script src="studio.js?v=20261019-shared-workspace-1" defer></script>
+  <script src="studio.js?v=20261019-first-owner-1" defer></script>
 </body></html>
