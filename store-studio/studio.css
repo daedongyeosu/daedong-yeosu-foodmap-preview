@@ -51,3 +51,55 @@ body.studio-public #templateNotice{display:none!important}
 .scene-viewport,#customerProductPhoto,.browse-product{touch-action:pan-x pan-y pinch-zoom}body:not(.studio-customer-preview):not(.studio-public) #sceneGestureHelp{display:none}
 .cart-dock .cart-dock-row,.sample-cart .sample-cart-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:8px 0}.cart-line-name{grid-column:1/-1;min-width:0;overflow-wrap:anywhere}.cart-quantity-controls{display:flex;align-items:center;gap:4px;justify-self:start}.cart-quantity-controls .cart-quantity-value{min-width:34px;text-align:center;font-size:15px;font-weight:700}.cart-dock .cart-quantity-controls button,.sample-cart .cart-quantity-controls button{min-width:44px;min-height:44px;padding:8px;font-size:20px;line-height:1}.cart-dock .cart-line-delete,.sample-cart .cart-line-delete{min-width:52px;min-height:44px;padding:8px;align-self:center;color:#8d3226;background:#fff8f5;border-color:#e5c9c1}.cart-quantity-controls button:disabled{opacity:.4;cursor:not-allowed}.cart-quantity-controls button:focus-visible,.cart-line-delete:focus-visible{outline:3px solid #176651;outline-offset:2px}
 .cart-dock{position:fixed;left:0;top:0;z-index:30;transform-origin:top left;width:calc(100% - 16px);max-width:none;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));border:1px solid #afcabc;border-radius:16px;background:#fffffff5;box-shadow:0 3px 24px #123e3433;color:#203b35;font-size:14px;line-height:1.4;touch-action:pan-x pan-y pinch-zoom}.cart-dock-selection{display:flex;align-items:center;gap:12px}.cart-dock-selection>div{flex:1;min-width:0}.cart-dock strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px}.cart-dock small{display:block;font-size:12px;color:#52695c}.cart-dock-selection button{background:#176651;color:white;min-width:66px;flex-shrink:0}.cart-dock p{font-size:12px;line-height:1.4;margin:6px 0;color:#176651;overflow-wrap:anywhere}.cart-dock p:empty{display:none}.cart-dock p.error{color:#a13721}#cartDockToggle{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;margin-top:8px;padding:8px;border:0;background:#e6f2e9;font-size:13px}#cartDockToggle b{white-space:nowrap;font-size:12px}#cartDockDetails{overflow:auto;overscroll-behavior:contain;margin-top:8px;border-top:1px solid #d5dfd8;padding-top:6px}.cart-dock-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:6px 0}.cart-dock-row span{min-width:0;overflow-wrap:anywhere}.cart-dock-row button{font-size:12px;min-width:48px}#cartDockNotice{margin-top:8px}.has-cart-dock main{padding-bottom:220px}
+
+/* Owner-only workspace: the stage never scrolls away with the controls. */
+.editor-divider{display:none}
+body.studio-editor{height:var(--editor-height,100dvh);overflow:hidden}
+body.studio-editor>header{height:48px;padding:8px 12px;gap:10px;font-size:13px}
+body.studio-editor>main{max-width:1680px;width:100%;height:calc(var(--editor-height,100dvh) - 48px);padding:10px 12px max(10px,env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;min-height:0}
+body.studio-editor .intro,body.studio-editor .example-entry{display:none}
+body.studio-editor .example-notice{flex-shrink:0;max-height:96px;overflow:auto;margin:0 0 8px;padding:8px 12px;font-size:12px}
+body.studio-editor .example-notice b{font-size:15px}
+body.studio-editor .workspace{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,360px);grid-template-rows:minmax(0,1fr);gap:12px;align-items:stretch}
+body.studio-editor .workspace>.display{order:0;min-height:0;width:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:8px}
+body.studio-editor .display>.toolbar{order:0;margin:0;padding:0;position:static;display:flex;gap:6px;flex-wrap:wrap}
+body.studio-editor .display>.toolbar button{font-size:13px;padding:8px;min-width:0;min-height:44px}
+body.studio-editor .display>#sceneViewport{order:0;min-width:0;min-height:0;margin:0;padding:10px;display:grid;place-items:center;overflow:hidden;background:#e8e8de;border:1px solid #d3ddd3;border-radius:14px}
+body.studio-editor .workspace .scene{width:var(--editor-scene-width,100%);max-width:100%;margin:0;flex:none;aspect-ratio:4/3;touch-action:pan-x pan-y pinch-zoom}
+body.studio-editor .display>#saveStatus{order:0;margin:0;min-height:0;max-height:38px;overflow:auto;font-size:12px;line-height:1.45}
+body.studio-editor .display>:not(.toolbar):not(#sceneViewport):not(#saveStatus){display:none}
+body.studio-editor .editor-panel{order:2;min-width:0;min-height:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid #c9d8ce;border-radius:14px;background:#fff}
+.editor-panel-heading{padding:10px 12px 5px;min-width:0}
+.editor-panel-heading strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px;color:#176651}
+.editor-panel-heading>span{font-size:11px;color:#68796d}
+body.studio-editor #editorTaskNav{display:flex;flex-shrink:0;overflow-x:auto;overscroll-behavior-x:contain;gap:5px;margin:0;padding:5px 8px 8px;border-bottom:1px solid #dbe5de}
+body.studio-editor #editorTaskNav button{flex:0 0 auto;padding:7px 10px;font-size:12px;min-height:44px}
+body.studio-editor #editorTaskNav button[aria-pressed=true]{background:#176651;color:#fff}
+body.studio-editor #editorTaskHint{display:none}
+body.studio-editor .editor-panel-body{flex:1;min-height:0;padding:10px;overflow:auto;overscroll-behavior:contain;scroll-padding:10px;scrollbar-gutter:stable;touch-action:pan-y pinch-zoom}
+body.studio-editor .editor-panel-body>.tools{width:100%;display:block}
+body.studio-editor .editor-panel-body #itemTools,body.studio-editor .editor-panel-body #decorTools,body.studio-editor .tools details,body.studio-editor #editorUtilities{padding:12px;margin:0 0 10px;border:1px solid #d9e2da;border-radius:12px;background:#fff;scroll-margin:10px}
+body.studio-editor .editor-panel-body h2{font-size:16px;margin:0 0 12px}
+body.studio-editor .editor-panel-body summary{font-size:15px;min-height:32px}
+body.studio-editor .editor-panel-body label{font-size:13px;gap:8px}
+body.studio-editor .editor-panel-body input,body.studio-editor .editor-panel-body select,body.studio-editor .editor-panel-body textarea{font-size:16px}
+body.studio-editor #returnToScene{position:static;font-size:12px;margin:0 0 10px}
+body.studio-editor.studio-focused .editor-panel,body.studio-editor.studio-focused #editorDivider{display:none}
+body.studio-editor.studio-focused .workspace{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+body.studio-editor.studio-focused .display{max-width:none;margin:0}
+@media(max-width:760px){
+  body.studio-editor>main{padding:6px 8px max(6px,env(safe-area-inset-bottom,0px))}
+  body.studio-editor .workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(min(190px,50%),var(--scene-share,44%)) 16px minmax(0,1fr);gap:0}
+  body.studio-editor .workspace>.display{order:0;gap:5px}
+  body.studio-editor .display>.toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+  body.studio-editor .display>.toolbar button{font-size:12px;padding:5px 3px;white-space:normal}
+  body.studio-editor .toolbar #preview{margin:0}
+  body.studio-editor #editorDivider{order:1;display:grid;place-items:center;touch-action:none;cursor:row-resize;border-radius:8px}
+  body.studio-editor #editorDivider span{width:52px;height:4px;border-radius:9px;background:#729182}
+  body.studio-editor #editorDivider:focus-visible{outline:3px solid #e87629;outline-offset:-2px}
+  body.studio-editor .editor-panel-heading{padding:7px 10px 2px}
+  body.studio-editor .editor-panel-heading>span{display:none}
+  body.studio-editor .editor-panel-body{padding:8px}
+  body.studio-editor .workspace .scene{outline-width:4px}
+}
+@media(max-height:520px){body.studio-editor .example-notice{max-height:48px}body.studio-editor .editor-panel-heading{padding-top:3px}body.studio-editor #editorTaskNav{padding-top:2px;padding-bottom:2px}}

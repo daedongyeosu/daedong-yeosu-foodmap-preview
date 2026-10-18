@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const html=fs.readFileSync('store-studio/index.html','utf8'),css=fs.readFileSync('store-studio/studio.css','utf8'),js=fs.readFileSync('store-studio/studio.js','utf8');
+for(const id of ['editorPanel','editorPanelBody','editorDivider','editorUtilities','itemTools','decorTools','photosSettings','furnitureSettings','compositionSettings','catalogSettings','businessSettings','atmosphereSettings','cloudSettings'])assert.equal(html.split('id="'+id+'"').length-1,1,id+' must remain available exactly once');
+assert.match(js,/editorPanelBody\.prepend\(\$\('itemTools'\),\$\('decorTools'\)\)/);
+assert.match(js,/editorPanelBody\.scrollTop\+=/);assert.match(js,/navigateEditor\('selection',\{focus:false\}\)/);
+assert.match(js,/const editing=!previewing&&!publicView/);assert.match(js,/editorPanel\.hidden=!editing;editorDivider\.hidden=!editing/);
+assert.match(css,/\.editor-panel-body\{[^}]*overflow:auto/);assert.match(css,/body\.studio-editor\{[^}]*overflow:hidden/);
+assert.match(css,/grid-template-columns:minmax\(0,1fr\) minmax\(290px,360px\)/);assert.match(css,/grid-template-rows:minmax\(min\(190px,50%\),var\(--scene-share,44%\)\) 16px minmax\(0,1fr\)/);
+assert.match(html,/role="separator"[^>]*tabindex="0"/);assert.match(js,/ArrowUp:sceneShare-5,ArrowDown:sceneShare\+5/);assert.match(js,/visualViewport\?\.addEventListener\('resize'/);
+const navigation=js.slice(js.indexOf('  function navigateEditor('),js.indexOf('  function matchingPhotos('));assert.doesNotMatch(navigation,/checkpoint\(|persist\(|change\(/,'Tool navigation cannot change the design or undo history');
+console.log('PASS owner workspace: existing tool groups preserved, pane-only navigation, responsive split, keyboard resize and customer/public isolation');

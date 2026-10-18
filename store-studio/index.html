@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow"><title>내 상점 꾸미기 | 맛지도 PREVIEW</title>
-  <link rel="stylesheet" href="studio.css?v=20261017-18-catalog-quantity-1">
+  <link rel="stylesheet" href="studio.css?v=20261019-shared-workspace-1">
 </head>
 <body>
   <header><a href="../store-partner/">← 입점 준비</a><b>내 상점 꾸미기</b><span>PREVIEW</span></header>
@@ -15,6 +15,9 @@
     <p class="example-entry"><a href="../store-alley/index.html" target="_blank" rel="noopener">서로 다른 가게가 있는 시범 골목 둘러보기 ↗</a></p>
     <nav id="editorTaskNav" class="editor-task-nav" aria-label="꾸미기 작업 바로가기"><button type="button" data-studio-task="photos">사진 추가</button><button type="button" data-studio-task="furniture">가구 선택</button><button id="editSelectedTask" type="button" data-studio-task="selection" disabled>선택한 것 수정</button><button type="button" data-studio-task="atmosphere">가게 분위기</button><button type="button" data-studio-task="save">저장·공개 안내</button><button type="button" data-studio-task="business">방문·주문 연결</button><p id="editorTaskHint" class="hint">진열장에서 사진·가구를 선택하면 선택한 것 수정으로 바로 이동할 수 있습니다.</p></nav>
     <div class="workspace">
+      <section id="editorPanel" class="editor-panel" aria-label="상점을 보면서 꾸미기" hidden>
+        <div class="editor-panel-heading"><strong id="editorSelectionLabel" aria-live="polite">꾸미기 도구</strong><span>상점은 그대로, 도구만 스크롤하세요</span></div>
+        <div id="editorPanelBody" class="editor-panel-body" tabindex="-1">
       <aside class="tools" aria-label="상점 꾸미기 도구">
         <button id="returnToScene" type="button" data-studio-task="scene">↑ 진열장으로 돌아가기</button>
         <details id="cloudSettings"><summary>내 계정에 저장·고객 공개</summary>
@@ -117,6 +120,10 @@
           <p id="businessValidation" class="hint" role="status" aria-live="polite"></p>
         </details>
       </aside>
+          <details id="editorUtilities"><summary>배치 정리·시안 파일</summary></details>
+        </div>
+      </section>
+      <div id="editorDivider" class="editor-divider" role="separator" tabindex="0" aria-label="상점과 도구 영역 크기 조절" aria-orientation="horizontal" aria-valuemin="28" aria-valuemax="68" aria-valuenow="44" hidden><span></span></div>
       <section class="display" aria-label="상점 시안">
         <div class="toolbar"><button id="undo" disabled>↶ 되돌리기</button><button id="redo" disabled>↷ 다시 하기</button><button id="focusMode" aria-pressed="false">진열장에 집중</button><button id="preview">고객처럼 보기</button></div>
         <p id="sceneGestureHelp" class="hint">사진을 눌러 상품을 살펴보세요. 두 손가락을 벌리면 공간과 사진을 확대할 수 있습니다.</p>
@@ -227,5 +234,5 @@
     <button id="cartDockToggle" type="button" aria-expanded="false" aria-controls="cartDockDetails"><span id="cartDockSummary"></span><b>장바구니 보기</b></button>
     <section id="cartDockDetails" aria-label="담은 상품 확인" hidden><div id="cartDockItems"></div><a id="cartDockLink" class="customer-link" hidden>장바구니·배송비 확인</a><small id="cartDockNotice"></small></section>
   </aside>
-  <script src="studio.js?v=20261017-18-catalog-quantity-1" defer></script>
+  <script src="studio.js?v=20261019-shared-workspace-1" defer></script>
 </body></html>
