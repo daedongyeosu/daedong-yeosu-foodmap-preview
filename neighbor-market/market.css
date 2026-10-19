@@ -90,6 +90,16 @@ dialog{width:min(660px,calc(100% - 24px));border:1px solid #d6cbb5;border-radius
 .basket-row>button{flex:none;min-width:64px;white-space:nowrap}
 #basketEmpty{font-weight:700;color:#245342}
 #continueShopping{width:100%;min-height:44px;margin-bottom:8px}
+.face-nav{grid-template-columns:70px minmax(0,1fr) 70px}.face-nav button:first-child,.face-nav #faceNext{font-size:12px;white-space:nowrap;padding:4px}
+.workspace-divider{display:flex;gap:6px;min-height:44px;align-items:stretch}.workspace-divider>button{min-height:44px;padding:2px 6px;font-size:11px}.workspace-divider #workspaceResize{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;touch-action:none;cursor:row-resize;border:2px solid #b6a78b;background:#e9e3d3;line-height:1.3}.workspace-divider #resetWorkspace{min-width:44px}
+.customizing .workspace.adjustable-workspace{grid-template-columns:minmax(0,1fr);row-gap:6px;grid-template-rows:auto var(--display-row,40%) auto 44px minmax(0,1fr)}
+.adjustable-workspace>.display{display:contents}.adjustable-workspace .display-controls{grid-row:1}.adjustable-workspace .scene-viewport{grid-row:2;padding:4px}.adjustable-workspace .scene-actions{grid-row:3;margin-top:0}.adjustable-workspace>.workspace-divider{grid-row:4}.adjustable-workspace>.custom-tools{grid-row:5}
+.tools-compact .decor-photo-actions p{display:none}.tools-compact .decor-photo-actions{padding-block:4px;margin-bottom:6px}.tools-compact .custom-tools{scroll-padding-top:68px}
+.customizing .market-scene.compact-scene{overflow:visible}
+.customizing .market-scene .price-tag{font-size:calc(11px * var(--price-scale,1))!important;padding:calc(3px * var(--price-scale,1)) calc(5px * var(--price-scale,1))!important;min-height:12px!important}
+.trash-item-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}.trash-row .trash-item-actions button{min-width:0;font-size:12px;margin:5px 0 0}.danger,#confirmTrashDelete{color:#a43c25;border-color:#b76b55;background:#fff4ed}
+.trash-footer{flex:none;display:flex;gap:8px;border-top:1px solid #d8d0bd;padding-top:8px}.trash-footer button{flex:1;min-width:0;min-height:44px;padding:6px;font-size:12px}
+#trashDeleteDialog{width:min(440px,calc(100% - 24px));max-height:calc(100dvh - 24px);overflow:auto}#trashDeleteDialog h2{font-size:20px;line-height:1.5;margin:0 0 12px}#trashDeleteDialog p{font-size:13px;line-height:1.7;overflow-wrap:anywhere}#trashDeleteDialog>div{display:flex;gap:8px}#trashDeleteDialog button{flex:1;min-width:0;min-height:44px;font-size:12px;padding:8px}
 /* Scene-local removal: no scroll into the tools, no hidden drag-only action. */
 .customizing .display{grid-template-rows:auto minmax(0,1fr) auto auto}
 #trashSelected.nearby-trash{position:absolute;z-index:7;width:112px;min-width:112px;min-height:44px;margin:0;padding:6px;font-size:12px;white-space:nowrap;background:#fffaf0;color:#783c28;border:2px solid #99492c;box-shadow:0 2px 6px #51331c30;touch-action:manipulation}

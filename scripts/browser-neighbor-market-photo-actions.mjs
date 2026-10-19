@@ -9,6 +9,7 @@ assert.ok(['127.0.0.1','localhost','preview.daedongmap.com'].includes(new URL(or
 const output=process.env.OUTPUT_DIR||'tmp/neighbor-market-photo-actions';await fs.mkdir(output,{recursive:true});
 const photos=['camera','books','bag'].map(name=>path.resolve('assets/neighbor-market/'+name+'.webp'));
 const browser=await playwright.chromium.launch({headless:true}),results=[];
+async function editingSpace(page){const handle=page.locator('#workspaceResize');if(await handle.isVisible())await handle.press('End');await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));}
 async function record(page,name='matjido-neighbor-market-preview-v1',key='owner-draft'){
   return page.evaluate(({name,key})=>new Promise((resolve,reject)=>{const r=indexedDB.open(name,1);r.onsuccess=()=>{const db=r.result,q=db.transaction('drafts').objectStore('drafts').get(key);q.onsuccess=()=>{resolve(q.result);db.close();};q.onerror=()=>reject(q.error);};r.onerror=()=>reject(r.error);}),{name,key});
 }
@@ -21,6 +22,7 @@ async function imported(page,n){await page.waitForFunction(n=>document.querySele
 async function saveNew(page,price){await page.locator('.price-input').first().fill(String(price));await page.locator('#buildMarket').click();await page.waitForFunction(()=>!document.getElementById('makerDialog').open);}
 async function exportScene(page){const pending=page.waitForEvent('download');await page.locator('#exportDraft').click();const download=await pending;assert.equal(download.suggestedFilename(),'맛지도_이웃장터_시안.json');return JSON.parse(await fs.readFile(await download.path(),'utf8'));}
 async function geometry(page){
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   const g=await page.evaluate(()=>({width:innerWidth,height:innerHeight,scrollY,overflow:document.documentElement.scrollWidth>innerWidth,boxes:['marketScene','customTools','saveDecor','takeDecorPhoto','chooseDecorPhotos'].map(id=>{const r=document.getElementById(id).getBoundingClientRect();return{id,x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom,right:r.right};})}));
   assert.equal(g.overflow,false,JSON.stringify(g));assert.equal(g.scrollY,0);
   for(const box of g.boxes){assert.ok(box.x>=0&&box.y>=0&&box.right<=g.width+1&&box.bottom<=g.height+1,JSON.stringify(g));assert.ok(box.height>=(['marketScene','customTools'].includes(box.id)?65:44),JSON.stringify(g));}
@@ -38,7 +40,7 @@ try{
     await page.locator('#startMarket').click();await page.locator('#photos').setInputFiles(photos);await imported(page,3);
     for(const [i,price] of [12000,9000,0].entries())await page.locator('.price-input').nth(i).fill(String(price));
     await page.locator('#buildMarket').click();await page.waitForFunction(()=>!document.getElementById('makerDialog').open);
-    const first=await record(page);await page.locator('#customize').click();await geometry(page);
+    const first=await record(page);await page.locator('#customize').click();await editingSpace(page);await geometry(page);
     assert.equal(await page.locator('#precisePosition').evaluate(node=>node.open),false);assert.equal(await page.locator('#moveLeft').isVisible(),false);
     await page.getByRole('button',{name:'햇살 드는 책방',exact:true}).click();await page.locator('#decorName').fill('내 손으로 꾸민 장터');await page.locator('#decorName').press('Tab');
     await page.getByRole('button',{name:'꽃병 ＋',exact:true}).click();await page.locator('#selectedObject').selectOption(first.scene.items[0].id);
@@ -66,7 +68,7 @@ try{
     await geometry(page);await page.screenshot({path:path.join(output,'editor-photo-actions-'+viewport.width+'.png')});
     await page.locator('#undo').click();assert.deepEqual(await exportScene(page),before,'Undo removes only newly appended photo, keeping prior unsaved decor');
     assert.equal(await page.locator('#undo').isDisabled(),false,'Earlier edit history survives photo addition');await page.locator('#redo').click();await page.locator('#saveDecor').click();await page.waitForFunction(()=>document.getElementById('saveDecor').textContent==='저장됨');
-    const restored=await record(page);await page.reload();await page.waitForFunction(()=>!document.getElementById('startMarket').disabled);assert.deepEqual(await record(page),restored);await page.locator('#customize').click();
+    const restored=await record(page);await page.reload();await page.waitForFunction(()=>!document.getElementById('startMarket').disabled);assert.deepEqual(await record(page),restored);await page.locator('#customize').click();await editingSpace(page);
     // Cancel only the new input; neither the old stored scene nor the live scene changes.
     const cancelPick=await chooser(page,'chooseDecorPhotos','photos');await cancelPick.setFiles(photos[1]);await imported(page,1);acceptConfirm=false;await page.locator('#closeMaker').click();assert.equal(await page.locator('#makerDialog').evaluate(node=>node.open),true);acceptConfirm=true;await page.locator('#closeMaker').click();assert.deepEqual(await record(page),restored);assert.deepEqual(await exportScene(page),restored.scene);
     // Quota failure preserves old saved data and new inputs; temporary preview is explicit.
@@ -81,14 +83,14 @@ try{
     results.push({viewport,photos:3,appendPreservesUnsavedDecor:true,cancelPreserves:true,quotaPreserves:true,undoRedo:true,arrowsFoldedAndFunctional:true,stickyButtons:true});await context.close();
   }
   // All-AI customized scenes are preserved by ADD (normal photo/price replacement remains separate).
-  const context=await browser.newContext({viewport:{width:390,height:844}}),page=await context.newPage();await context.route('**/*',route=>new URL(route.request().url()).origin===origin&&['GET','HEAD'].includes(route.request().method())?route.continue():route.abort());page.on('dialog',d=>d.accept());await ready(page);await page.locator('#customize').click();const sample=await exportScene(page);
+  const context=await browser.newContext({viewport:{width:390,height:844}}),page=await context.newPage();await context.route('**/*',route=>new URL(route.request().url()).origin===origin&&['GET','HEAD'].includes(route.request().method())?route.continue():route.abort());page.on('dialog',d=>d.accept());await ready(page);await page.locator('#customize').click();await editingSpace(page);const sample=await exportScene(page);
   await (await chooser(page,'chooseDecorPhotos','photos')).setFiles(photos[0]);await imported(page,1);await saveNew(page,1000);const addedSample=await record(page);assert.deepEqual(addedSample.scene.items.slice(0,6),sample.items);assert.equal(addedSample.scene.items.length,7);
   // Capacity applies across old + new photos; invalid images are not silently accepted.
-  const capacity={...addedSample,revision:addedSample.revision+1,scene:{...addedSample.scene,items:Array.from({length:19},(_,i)=>({...addedSample.scene.items[6],id:'capacity-'+i}))}};await seed(page,capacity);await ready(page);await page.locator('#customize').click();
+  const capacity={...addedSample,revision:addedSample.revision+1,scene:{...addedSample.scene,items:Array.from({length:19},(_,i)=>({...addedSample.scene.items[6],id:'capacity-'+i}))}};await seed(page,capacity);await ready(page);await page.locator('#customize').click();await editingSpace(page);
   await (await chooser(page,'chooseDecorPhotos','photos')).setFiles([{name:'broken.png',mimeType:'image/png',buffer:Buffer.from('broken image')}]);await page.waitForFunction(()=>!document.getElementById('closeMaker').disabled);assert.equal(await page.locator('.price-input').count(),0);assert.match(await page.locator('#uploadStatus').innerText(),/읽을 수 없습니다/);assert.deepEqual(await record(page),capacity);
   await page.locator('#photos').setInputFiles(photos);await imported(page,1);assert.match(await page.locator('#uploadStatus').innerText(),/20장 한도/);await saveNew(page,0);assert.equal((await record(page)).scene.items.length,20);assert.equal(await page.locator('#takeDecorPhoto').isDisabled(),true);assert.equal(await page.locator('#chooseDecorPhotos').isDisabled(),true);assert.match(await page.locator('#decorPhotoHint').innerText(),/20장/);assert.equal(await page.locator('#finishDecorating').evaluate(node=>node===document.activeElement),true);
   // Another window saves while this editor has new input: do not overwrite it.
-  await seed(page,capacity);await ready(page);await page.locator('#customize').click();const staleScene=await exportScene(page);
+  await seed(page,capacity);await ready(page);await page.locator('#customize').click();await editingSpace(page);const staleScene=await exportScene(page);
   await (await chooser(page,'chooseDecorPhotos','photos')).setFiles(photos[0]);await imported(page,1);await page.locator('.price-input').fill('8000');
   const other=await context.newPage();await ready(other);await other.locator('#editMarket').click();await other.locator('.price-input').first().fill('3333');await other.locator('#buildMarket').click();await other.waitForFunction(()=>!document.getElementById('makerDialog').open);const newer=await record(other);
   await page.locator('#buildMarket').click();await page.waitForFunction(()=>document.getElementById('makerError').textContent.includes('다른 창'));assert.equal(await page.locator('.price-input').inputValue(),'8000');assert.deepEqual(await record(page),newer);await page.locator('#closeMaker').click();assert.deepEqual(await exportScene(page),staleScene,'Old live scene also stays unchanged after conflict');await context.close();
