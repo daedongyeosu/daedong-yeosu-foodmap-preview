@@ -2344,6 +2344,24 @@ function storeCard(store, index = 0) {
   const favorite = isFavorite(store.id);
   return `<article class="store-card" data-id="${escapeHtml(store.id)}">${photoResolver.markup(store, 'card', {deferred:index >= 4})}<div class="store-info"><h3 title="${escapeHtml(store.name)}">${escapeHtml(store.name)}</h3><p>${escapeHtml(store.area || REGION_SHORT_NAME)} · ${escapeHtml(store.cat)}</p>${distance}<div class="miniapps">${miniRoutes(store)}</div></div><button class="card-favorite ${favorite ? 'active' : ''}" type="button" data-favorite-store="${escapeHtml(store.id)}" aria-pressed="${favorite}">♥ <span data-favorite-label>${favorite ? '찜 해제' : '찜하기'}</span></button></article>`;
 }
+const storeListRenderTotals = new WeakMap();
+function storeListTotalContext() {
+  return JSON.stringify([state.category, state.query, state.brandId, state.location,
+    state.sortByDistance, state.coords?.lat, state.coords?.lng, state.addressLabel]);
+}
+function rememberStoreListRenderTotal(grid, total) {
+  storeListRenderTotals.set(grid, {catalog: stores, size: stores.length,
+    filter: filteredStores, context: storeListTotalContext(), total});
+  return total;
+}
+function storeListRenderTotal(grid) {
+  const cached = storeListRenderTotals.get(grid);
+  if (cached?.catalog === stores && cached.size === stores.length
+    && cached.filter === filteredStores && cached.context === storeListTotalContext()) return cached.total;
+  // Bootstrap can finish without replacing an actively touched grid. Invalidate
+  // against the source snapshot, not just a DOM attribute from that early paint.
+  return rememberStoreListRenderTotal(grid, filteredStores().length);
+}
 function renderStores({scroll = false, resetCount = false} = {}) {
   if (resetCount) state.visibleCount = INITIAL_STORE_BATCH_SIZE;
   const list = filteredStores(), visible = list.slice(0, state.visibleCount);
@@ -2356,8 +2374,12 @@ function renderStores({scroll = false, resetCount = false} = {}) {
   else if (state.location !== REGION_DEFAULT_AREA) title = `${state.location} 추천`;
   $('#recommendSection h2').textContent = title;
   $('#resetCategoryBtn').hidden = state.category === '전체' && !state.brandId && !state.query;
-  $('#storeGrid').innerHTML = visible.length ? (window.daedongLocalServices?.interleave(visible, storeCard, state.category === '전체' && !state.query && !state.brandId) ?? visible.map(storeCard).join('')) : '<div class="empty">조건에 맞는 가게가 아직 없습니다.</div>';
-  observeDeferredPhotos($('#storeGrid'));
+  const grid = $('#storeGrid');
+  // The pager only needs this count. Do not repeat full-catalog ranking on
+  // every geometry read, photo hydration or horizontal scroll callback.
+  rememberStoreListRenderTotal(grid, list.length);
+  grid.innerHTML = visible.length ? (window.daedongLocalServices?.interleave(visible, storeCard, state.category === '전체' && !state.query && !state.brandId) ?? visible.map(storeCard).join('')) : '<div class="empty">조건에 맞는 가게가 아직 없습니다.</div>';
+  observeDeferredPhotos(grid);
   $('#loadMoreBtn').hidden = visible.length >= list.length || !list.length;
   $('#loadMoreBtn').textContent = '더보기';
   const filters = [];
