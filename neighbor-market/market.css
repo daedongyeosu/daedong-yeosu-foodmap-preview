@@ -58,6 +58,7 @@ dialog{width:min(660px,calc(100% - 24px));border:1px solid #d6cbb5;border-radius
 .basket-dock>div:first-child,.basket-dock>#basketFeedback{flex:none}
 .basket-dock>section{min-height:0;overflow-y:auto;overscroll-behavior:contain}
 .basket-row>span{overflow-wrap:anywhere;min-width:0}
+.basket-row>button{flex:none;min-width:64px;white-space:nowrap}
 #basketEmpty{font-weight:700;color:#245342}
 #continueShopping{width:100%;min-height:44px;margin-bottom:8px}
 @media(max-height:520px){#productDialog{padding:12px}#productDialog>.dialog-heading{margin:0 0 4px}#productDialog .dialog-heading .eyebrow{margin:0}.product-detail-actions{padding-top:6px}#detailFeedback{font-size:11px;margin-bottom:5px}}
