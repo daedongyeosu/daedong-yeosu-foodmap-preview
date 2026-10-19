@@ -73,7 +73,7 @@ try {
     assert.equal(await page.locator('.product-card').count(), 6);assert.equal(await record(page), undefined);
     await page.locator('[data-product-id="sample-0"]').click();await page.locator('#addToBasket').click();
     assert.match(await page.locator('#detailFeedback').innerText(), /전체 1점/);await page.locator('#reviewBasket').click();
-    await page.locator('#basketItems button').click();assert.match(await page.locator('#basketSummary').innerText(), /0점.*0원/);
+    await page.locator('#basketItems .basket-remove').click();assert.match(await page.locator('#basketSummary').innerText(), /0점.*0원/);
     await page.goBack();assert.equal(new URL(page.url()).pathname, '/index.html');
     await entry(page, '/index.html', 'create');
     assert.equal(await page.locator('#makerDialog').evaluate(node => node.open), true);
