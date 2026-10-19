@@ -41,7 +41,7 @@ function storeListPagerContextKey(){
 }
 function storeListPagerMetrics(grid){
   const cards=Array.from(grid?.children||[]).filter(node=>node.classList?.contains('store-card'));
-  const total=storeListPagerEligible(grid)?filteredStores().length:cards.length;
+  const total=storeListPagerEligible(grid)?(typeof storeListRenderTotal==='function'?storeListRenderTotal(grid):filteredStores().length):cards.length;
   if(!cards.length)return{cards,total,pageSize:1,maxPage:0};
   const firstLeft=cards[0].offsetLeft;
   const viewportEnd=firstLeft+Math.max(1,grid.clientWidth)-1;
