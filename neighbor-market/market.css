@@ -90,4 +90,19 @@ dialog{width:min(660px,calc(100% - 24px));border:1px solid #d6cbb5;border-radius
 .basket-row>button{flex:none;min-width:64px;white-space:nowrap}
 #basketEmpty{font-weight:700;color:#245342}
 #continueShopping{width:100%;min-height:44px;margin-bottom:8px}
+/* Scene-local removal: no scroll into the tools, no hidden drag-only action. */
+.customizing .display{grid-template-rows:auto minmax(0,1fr) auto auto}
+#trashSelected.nearby-trash{position:absolute;z-index:7;width:112px;min-width:112px;min-height:44px;margin:0;padding:6px;font-size:12px;white-space:nowrap;background:#fffaf0;color:#783c28;border:2px solid #99492c;box-shadow:0 2px 6px #51331c30;touch-action:manipulation}
+.scene-actions{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:3px 6px;min-width:0;margin-top:5px;padding:5px 8px;border:1px solid #d8d0bd;border-radius:9px;background:#fffdf6}
+.scene-actions>p{min-width:0;margin:0;color:#665d48;font-size:11px;line-height:1.5}
+.scene-actions.has-trash-undo>p,.scene-actions.has-trash-undo>.recovery-actions{grid-column:1/-1}
+.scene-actions.has-inline-trash>p{visibility:hidden}
+.recovery-actions{display:flex;justify-content:flex-end;gap:6px;min-height:44px}
+.recovery-actions button{min-height:44px;min-width:108px;padding:6px 9px;font-size:12px}
+#undoTrash{margin-right:auto;color:#783c28;border-color:#b07857}
+.scene-actions.is-dragging>.recovery-actions,.scene-actions.is-dragging>p{visibility:hidden}
+.scene-actions .trash-drop{position:absolute;inset:0;width:auto;min-height:100%;box-shadow:none;grid-template-columns:32px minmax(0,1fr);align-content:center;padding:5px 12px}
+.scene-actions .trash-drop strong{font-size:14px;line-height:1.5}.scene-actions .trash-drop.drop-ready{outline:2px solid #f6c59c;outline-offset:-4px}
+@media(max-height:640px) and (max-width:559px){.customizing .workspace{grid-template-rows:minmax(0,1fr) 112px}}
+@media(max-height:520px) and (max-width:559px){.customizing .workspace{grid-template-rows:minmax(0,1fr) 96px}}
 @media(max-height:520px){#productDialog{padding:12px}#productDialog>.dialog-heading{margin:0 0 4px}#productDialog .dialog-heading .eyebrow{margin:0}.product-detail-actions{padding-top:6px}#detailFeedback{font-size:11px;margin-bottom:5px}}
