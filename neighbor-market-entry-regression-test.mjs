@@ -9,7 +9,7 @@ for (const [file, prefix] of [['index.html', ''], ['store-alley/index.html', '..
   for (const [label, suffix] of [
     ['이웃 중고장터 구경하기', '?view=example#experience'],
     ['내 장터 만들기', '?action=create']
-  ]) assert.ok(section.includes(`href="${prefix}neighbor-market/index.html${suffix}">${label}</a>`), `${file}: ${label}`);
+  ]) {const link=section.match(new RegExp('<a[^>]*href="'+(prefix+'neighbor-market/index.html'+suffix).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'"[^>]*>[\\s\\S]*?</a>'))?.[0];assert.ok(link,`${file}: ${label} destination`);assert.ok(link.includes(label)||link.includes(`aria-label="${label}"`),`${file}: ${label} accessible name`);}
   assert.match(section, /실제 판매·결제·배송은 발생하지 않습니다/);
   assert.match(html, new RegExp(`href="${prefix.replaceAll('.', '\\.')}neighbor-market/entry\\.css\\?v=20261020-entry-1"`));
   assert.doesNotMatch(section, /target=|onclick=|<script|<img|<form/i, 'Entry is same-tab navigation, not an order or heavy editor import');
