@@ -115,4 +115,5 @@ dialog{width:min(660px,calc(100% - 24px));border:1px solid #d6cbb5;border-radius
 .scene-actions .trash-drop strong{font-size:14px;line-height:1.5}.scene-actions .trash-drop.drop-ready{outline:2px solid #f6c59c;outline-offset:-4px}
 @media(max-height:640px) and (max-width:559px){.customizing .workspace{grid-template-rows:minmax(0,1fr) 112px}}
 @media(max-height:520px) and (max-width:559px){.customizing .workspace{grid-template-rows:minmax(0,1fr) 96px}}
+@media(max-height:520px) and (max-width:559px){.customizing .workspace.adjustable-workspace{row-gap:4px}.adjustable-workspace .scene-actions{padding:0;border:0;min-height:44px}}
 @media(max-height:520px){#productDialog{padding:12px}#productDialog>.dialog-heading{margin:0 0 4px}#productDialog .dialog-heading .eyebrow{margin:0}.product-detail-actions{padding-top:6px}#detailFeedback{font-size:11px;margin-bottom:5px}}
