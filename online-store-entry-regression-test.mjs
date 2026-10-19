@@ -7,9 +7,10 @@ const sample=fs.readFileSync('store-partner/sample-products.csv','utf8');
 
 const requiredHomeCopy=[
   '가게는 그대로, 판매는 온라인까지',
-  '입점비 없이 온라인 상점을 만들고 상품을 판매해 보세요. 주문이 들어오면 맛지도가 고객 배송까지 연결합니다.',
+  '온라인상점',
+  '무료입점',
   'href="store-partner/"',
-  '지금 내 상점 만들기'
+  '내 상점 만들기'
 ];
 for(const copy of requiredHomeCopy){if(!home.includes(copy))throw new Error(`메인 온라인 상점 입점 문구 누락: ${copy}`);}
 

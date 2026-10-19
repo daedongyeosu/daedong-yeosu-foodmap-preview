@@ -81,6 +81,7 @@ jobs:
           MARKET_TEST_ORIGIN=http://127.0.0.1:4173 OUTPUT_DIR=browser-neighbor-market-worlds node scripts/browser-neighbor-market-worlds.mjs
           MARKET_TEST_ORIGIN=http://127.0.0.1:4173 OUTPUT_DIR=browser-neighbor-market-resize-faces node scripts/browser-neighbor-market-resize-faces.mjs
           MARKET_TEST_ORIGIN=http://127.0.0.1:4173 OUTPUT_DIR=browser-neighbor-market-trash node scripts/browser-neighbor-market-trash.mjs
+          MARKET_TEST_ORIGIN=http://127.0.0.1:4173 OUTPUT_DIR=browser-home-commerce-market node scripts/browser-home-commerce-market.mjs
       - name: Verify installed app switches to the newly scanned store QR
         run: |
           python3 -m http.server 4173 >/tmp/daedong-installed-qr-server.log 2>&1 &
@@ -246,6 +247,7 @@ jobs:
             browser-neighbor-market-worlds/
             browser-neighbor-market-resize-faces/
             browser-neighbor-market-trash/
+            browser-home-commerce-market/
             browser-reviewed-identity/
             browser-installed-qr/
             static-validation-report.json

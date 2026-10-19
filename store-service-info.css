@@ -1145,7 +1145,7 @@ body.store-service-overview-open {
 @media (max-width: 520px) {
   .store-finder-quick nav {
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, .8fr);
+    grid-template-columns: minmax(0, 1.5fr) max-content minmax(0, .8fr);
     gap: 5px;
     overflow-x: visible;
   }
@@ -1206,6 +1206,14 @@ body.store-service-overview-open {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+}
+
+/* Keep the complete benefit label on one line, including narrow phones. */
+.store-finder-quick nav [data-store-service-quick-benefit] {
+  white-space: nowrap;
+  padding-inline: 6px;
+  font-size: clamp(13px, 3.6vw, 15px);
+  letter-spacing: -.03em;
 }
 
 .store-service-gift-app-link b {

@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {execFileSync} from 'node:child_process';
+const baseline=process.argv.includes('--baseline'),read=p=>baseline?execFileSync('git',['show','344fdfbe492cbab64041980901a8842df8e3e53a:'+p],{encoding:'utf8'}):fs.readFileSync(p,'utf8');
+const home=read('index.html'),css=read('final-experience.css'),market=read('neighbor-market/index.html'),js=read('neighbor-market/market.js'),quick=read('store-service-info.css');
+assert.match(home,/<div class="matjido-commerce-entries"/,'Online and used-market entries must share one compact two-column row');
+assert.match(css,/\.matjido-commerce-entries\{[^}]*grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);assert.match(css,/\.matjido-online-store-entry-wrap\{[^}]*grid-template-rows:minmax\(0,1fr\) auto/);
+for(const route of ['store-partner/','store-alley/index.html','neighbor-market/index.html?view=example#experience','neighbor-market/index.html?action=create'])assert.ok(home.includes('href="'+route+'"'),route);
+assert.match(home,/실제 판매·결제·배송은 발생하지 않습니다/);assert.match(home,/온라인상점/);assert.match(home,/중고장터/);assert.match(quick,/\.store-finder-quick nav \[data-store-service-quick-benefit\]\s*\{[^}]*white-space: nowrap;/);
+assert.doesNotMatch(market,/id="removeDecoration"|선택한 장식 빼기/);assert.match(market,/id="trashSelected"[^>]*>선택한 사진·소품을 휴지통으로/);assert.match(js,/\$\('trashSelected'\)\.disabled=!item\|\|item\.locked===true/);
+for(const id of ['marketBack','backDialog','saveAndBack','keepMarket','backError'])assert.equal((market.match(new RegExp('id="'+id+'"','g'))||[]).length,1,id);
+const helper=js.match(/function canUseHistory\(referrer,href,length\)\{[^\n]+\}/)?.[0];assert.ok(helper,'History navigation needs an explicit same-origin, non-market destination guard');const can=vm.runInNewContext('('+helper+')',{URL});
+for(const [ref,length,expected]of [['https://preview.daedongmap.com/',2,true],['https://preview.daedongmap.com/store-alley/index.html',2,true],['https://evil.test/',2,false],['',3,false],['broken',3,false],['https://preview.daedongmap.com/neighbor-market/index.html',3,false],['https://preview.daedongmap.com/',1,false]])assert.equal(can(ref,'https://preview.daedongmap.com/neighbor-market/index.html',length),expected,ref);
+assert.match(js,/if\(customizing\)\{\$\('finishDecorating'\)\.click\(\);return;\}/);assert.match(js,/await save\(own\);\$\('backDialog'\)\.close\(\);navigateBack\(\)/,'Never navigate before an atomic save completes');assert.match(js,/catch\(error\)\{\$\('backError'\)\.textContent=error.message;/);
+assert.doesNotMatch(js,/localStorage\.clear|indexedDB.deleteDatabase/);console.log('PASS compact equal-height commerce entries, original destinations, one-line benefits, common photo/prop trash and safe visible back/unsaved-save navigation');

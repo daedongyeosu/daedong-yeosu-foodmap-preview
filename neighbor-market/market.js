@@ -34,6 +34,12 @@
   function closeTrash(){$('trashDialog').close();$('openTrash').focus({preventScroll:true});}
   $('closeTrash').onclick=closeTrash;$('trashDialog').addEventListener('cancel',event=>{event.preventDefault();closeTrash();});
   $('trashSelected').onclick=putInTrash;
+  function canUseHistory(referrer,href,length){try{const from=new URL(referrer),here=new URL(href);return length>1&&from.origin===here.origin&&!from.pathname.startsWith('/neighbor-market/');}catch{return false;}}
+  function navigateBack(){if(canUseHistory(document.referrer,location.href,window.history.length))window.history.back();else location.assign('../index.html');}
+  $('marketBack').onclick=()=>{if(busy())return;sceneGestures?.cancel();if(customizing){$('finishDecorating').click();return;}if(dirty){$('backError').textContent='';$('backDialog').showModal();$('keepMarket').focus();return;}navigateBack();};
+  function keepMarket(){if(busy())return;$('backDialog').close();$('marketBack').focus({preventScroll:true});}
+  $('keepMarket').onclick=keepMarket;$('backDialog').addEventListener('cancel',event=>{event.preventDefault();keepMarket();});
+  $('saveAndBack').onclick=async()=>{if(busy())return;try{await save(own);$('backDialog').close();navigateBack();}catch(error){$('backError').textContent=error.message;say(error.message,true);}};
   function fitOverlays(){
     const root=$('marketScene'),w=root.clientWidth,h=root.clientHeight;if(!w||!h)return;
     for(const node of $('objects').children){const tag=node.querySelector('.price-tag');if(!tag)continue;tag.style.maxWidth=Math.max(20,w-4)+'px';tag.style.minWidth=Math.min(44,Math.max(20,w-4))+'px';tag.style.width=Math.max(node.offsetWidth,Math.min(76,w*.30))+'px';const x=Math.max(2,Math.min(w-tag.offsetWidth-2,node.offsetLeft+node.offsetWidth/2-tag.offsetWidth/2));tag.style.left=(x-node.offsetLeft)+'px';const selectedPrice=customizing&&node.classList.contains('selected')&&!node.classList.contains('is-locked');let top=selectedPrice?node.offsetHeight+24:node.offsetHeight*.94;if(selectedPrice&&top>h-node.offsetTop-tag.offsetHeight-2)top=-tag.offsetHeight-26;tag.style.top=Math.max(2-node.offsetTop,Math.min(top,h-node.offsetTop-tag.offsetHeight-2))+'px';}
@@ -59,7 +65,7 @@
     for(const id of ['takeDecorPhoto','chooseDecorPhotos'])$(id).disabled=busy()||(own?editing().items.length:0)>=M.MAX;
     $('decorPhotoHint').textContent=(own?editing().items.length:0)>=M.MAX?'이 면은 20장으로 가득 찼어요. 진열면 ＋로 공간을 늘려보세요.':'사진은 이 면에만 추가돼요 · 기존 사진·꾸미기 유지';
     $('makerForm').querySelectorAll('input,select,textarea,.remove-entry').forEach(node=>node.disabled=saving||importing||loading);
-    $('customTools').inert=busy();$('editToolbar').inert=busy();$('trashDialog').inert=busy();
+    $('customTools').inert=busy();$('editToolbar').inert=busy();$('trashDialog').inert=busy();$('marketBack').disabled=busy();$('saveAndBack').disabled=busy();$('keepMarket').disabled=busy();
     $('saveDecor').disabled=busy()||!db||!readable||!dirty;$('saveDecor').textContent=saving?'저장 중…':dirty?'저장하기':'저장됨';
     $('saveAndFinish').disabled=busy()||!db||!readable;$('saveAndFinish').textContent=saving?'저장 중…':'이 기기에 저장하고 닫기';
     updateMakerProgress();
@@ -94,7 +100,7 @@
     for(const button of $('worldChoices').children){const preset=M.worlds[button.dataset.world];button.setAttribute('aria-pressed',String(['backdrop','season','display','lighting','wall','wood','accent'].every(key=>preset[key]===scene[key])));}
     const select=$('selectedObject');select.replaceChildren(new Option('사진·장식을 선택하세요',''));for(const item of scene.items)select.add(new Option('사진 · '+item.name,item.id));for(const item of scene.decor)select.add(new Option('장식 · '+decorLabels[item.type],item.id));select.value=selected;
     const item=[...scene.items,...scene.decor].find(value=>value.id===selected);$('selectionHint').textContent=item?(item.name||decorLabels[item.type])+(item.locked?' · 위치가 잠겨 있습니다.':' · 모서리를 끌거나 두 손가락으로 크기를 바꿔요.'):'사진·소품을 누르면 화면 위에 크기 손잡이가 나타나요.';
-    $('objectSize').value=item?.size??24;$('objectLock').checked=item?.locked===true;for(const id of ['objectSize','moveLeft','moveUp','moveDown','moveRight'])$(id).disabled=!item||item.locked;$('objectLock').disabled=!item;$('removeDecoration').disabled=!scene.decor.some(d=>d.id===selected)||item?.locked===true;$('trashSelected').disabled=!scene.items.some(d=>d.id===selected)||item?.locked===true;
+    $('objectSize').value=item?.size??24;$('objectLock').checked=item?.locked===true;for(const id of ['objectSize','moveLeft','moveUp','moveDown','moveRight'])$(id).disabled=!item||item.locked;$('objectLock').disabled=!item;$('trashSelected').disabled=!item||item.locked===true;
     $('moveFace').replaceChildren(...M.faces(own).filter(entry=>entry.id!==activeFace).map((entry,index)=>new Option(entry.id==='main'?'첫 진열면':entry.scene.name,entry.id)));$('moveToFace').disabled=!item||item.locked||M.faces(own).length<2;
   }
   function selectObject(id){selected=id;document.querySelectorAll('[data-object-id]').forEach(node=>node.classList.toggle('selected',node.dataset.objectId===id));updateTools();fitOverlays();}
@@ -176,7 +182,6 @@
   $('objectLock').onchange=()=>changeFace(scene=>{const item=[...scene.items,...scene.decor].find(value=>value.id===selected);if(item)item.locked=$('objectLock').checked;});
   function move(dx,dy){const item=own&&[...editing().items,...editing().decor].find(value=>value.id===selected);if(!item||item.locked)return;changed(()=>Object.assign(item,M.position({...item,x:item.x+dx,y:item.y+dy})));}
   for(const [id,x,y] of [['moveLeft',-2,0],['moveRight',2,0],['moveUp',0,-2],['moveDown',0,2]])$(id).onclick=()=>move(x,y);
-  $('removeDecoration').onclick=putInTrash;
   $('arrange').onclick=()=>{try{changeFace(scene=>M.arrange(scene));}catch(error){say(error.message,true);}};
   function history(from,to){if(busy()||!own||!from.length)return;to.push(copy(own));own=from.pop();dirty=true;selected='';render();say('배치를 되돌렸습니다. 저장 전 변경입니다.');}$('undo').onclick=()=>history(past,future);$('redo').onclick=()=>history(future,past);
   $('saveDecor').onclick=async()=>{try{await save(own);render();}catch(error){say(error.message,true);}};
