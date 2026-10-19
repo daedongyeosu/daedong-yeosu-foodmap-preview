@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const html=fs.readFileSync('neighbor-market/index.html','utf8'),js=fs.readFileSync('neighbor-market/market.js','utf8'),css=fs.readFileSync('neighbor-market/market.css','utf8');
+const quick=html.indexOf('id="selectedQuick"'),worlds=html.indexOf('id="worldChoices"');assert.ok(quick>html.indexOf('id="customTools"')&&quick<worlds,'Selected item tools must precede long decoration choices');
+for(const id of ['selectedQuickName','selectedQuickHint','transferControls','emptyTransfer','moveFace','moveToFace'])assert.equal(html.split('id="'+id+'"').length-1,1,'One shared '+id);
+assert.ok(html.indexOf('id="moveToFace"')<worlds,'Move between faces without searching below every decoration');
+const start=js.indexOf('function makerIntroText('),end=js.indexOf('\n  }',start);assert.ok(start>=0&&end>start);const context=vm.createContext({});vm.runInContext(js.slice(start,end+4),context);
+assert.match(context.makerIntroText('create'),/새 장터/);assert.doesNotMatch(context.makerIntroText('create'),/수정합니다/);assert.match(context.makerIntroText('edit'),/수정합니다/);assert.match(context.makerIntroText('append'),/기존 사진/);
+assert.match(js,/가격 미입력/);const selectBody=js.slice(js.indexOf('function selectObject('),js.indexOf('function fitScene('));assert.doesNotMatch(selectBody,/scrollTop|scrollIntoView/,'Selection must preserve the current tool scroll and keyboard focus');
+assert.match(css,/\.custom-tools\{overflow-anchor:none\}/,'Selection content must not cause native scroll anchoring to move the tool panel');
+console.log('PASS contextual creation/edit/append guidance, explicit empty price, shared selected-item tools before decoration choices and focus-safe discovery');
