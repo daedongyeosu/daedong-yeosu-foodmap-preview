@@ -143,6 +143,7 @@
   $('basketToggle').onclick=()=>openBasket($('basketDetails').hidden);
   $('continueShopping').onclick=()=>{openBasket(false);if(!basketIds.size)basketTouched=false;renderBasket();const target=[...$('productList').children].find(node=>node.dataset.productId===detailId)||$('productList').firstElementChild;if(target){target.focus({preventScroll:true});target.scrollIntoView({block:'center'});}};
   window.addEventListener('beforeunload',event=>{if(dirty||saving||importing||$('makerDialog').open&&makerDirty()){event.preventDefault();event.returnValue='';}});
-  async function initialize(){try{db=await openDB();const stored=await read();if(stored){if(!Number.isSafeInteger(stored.revision)||stored.revision<1)throw Error('invalid-revision');own=M.clean(stored.scene);view='own';revision=stored.revision;say('이 기기에 보관한 내 장터의 사진·가격·꾸미기를 불러왔습니다. 고객 공개는 하지 않았습니다.');}}catch{readable=false;say('기기 저장을 사용할 수 없습니다. 이전 자료를 덮어쓰지 않으며 임시 미리보기만 가능합니다.',true);}loading=false;render();}
+  function entryMode(search){const params=new URLSearchParams(search);return params.get('action')==='create'?'create':params.get('view')==='example'?'example':'';}
+  async function initialize(){try{db=await openDB();const stored=await read();if(stored){if(!Number.isSafeInteger(stored.revision)||stored.revision<1)throw Error('invalid-revision');own=M.clean(stored.scene);view='own';revision=stored.revision;say('이 기기에 보관한 내 장터의 사진·가격·꾸미기를 불러왔습니다. 고객 공개는 하지 않았습니다.');}}catch{readable=false;say('기기 저장을 사용할 수 없습니다. 이전 자료를 덮어쓰지 않으며 임시 미리보기만 가능합니다.',true);}loading=false;const mode=entryMode(location.search);if(mode==='example')view='example';render();if(mode==='create')showMaker();}
   void initialize();
 })();
