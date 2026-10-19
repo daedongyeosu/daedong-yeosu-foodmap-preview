@@ -97,3 +97,4 @@ try{
   await fs.writeFile(path.join(output,'report.json'),JSON.stringify({success:true,scope:'Mobile-size Chromium role QA, simulated native file selection; not physical phone/camera verification. GET/HEAD preview only; no server writes.',results,samplePreserved:true,capacity:true,invalidImage:true,staleAppendPreserves:true},null,2));
   console.log('PASS editor photo actions: 390/320/1280 and short viewports, sticky camera/gallery, drag + folded precise controls, old photos/decor retained, append/save/undo/cancel/quota/reload, samples and 20-photo cap');
 }finally{await browser.close();}
+await import('./browser-neighbor-market-first-use.mjs');
