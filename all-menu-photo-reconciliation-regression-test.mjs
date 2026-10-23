@@ -111,14 +111,14 @@ for(const [id,store] of Object.entries(published.stores))for(const [itemId,p] of
     }
   }
 }
-assert.equal(guarded,1912,'all newly reviewed mappings keep composition guards');
-assert.equal(sharedCount,150,'only the audited same-brand exact-menu batch uses shared reviewed photos');
-assert.match(source,/reviewed-menu-photo-links\/\$\{bucket\}\.json\?v=all-menu-photos-20260913/);
+assert.equal(guarded,7921,'all newly reviewed mappings keep composition guards');
+assert.equal(sharedCount,247,'only audited same-brand exact-menu batches use shared reviewed photos');
+assert.match(source,/reviewed-menu-photo-links\/\$\{bucket\}\.json\?v=[^'`]*coupang-exact-20261024/);
 assert.doesNotMatch(source,/fetch\('data\/reviewed-menu-photo-links\.json/,'detail/search must never download the whole inventory');
 const combined={version:1,sharedAssets:{},stores:{}};
 for(const bucket of '0123456789abcdef'){
   const text=read('data/reviewed-menu-photo-links/'+bucket+'.json');
-  assert.ok(Buffer.byteLength(text)<96*1024,'one store loads a bounded photo shard even with shared-brand provenance');
+  assert.ok(Buffer.byteLength(text)<160*1024,'one store loads a bounded photo shard even with exact same-store photos and shared-brand provenance');
   const shard=JSON.parse(text);
   assert.ok(Object.keys(shard.stores).every(id=>id[0]===bucket));
   Object.assign(combined.sharedAssets,shard.sharedAssets||{});
@@ -140,6 +140,6 @@ await loader.reviewedMenuSearchPhotoLinks({stores:{}});assert.equal(fetched.leng
 let attempts=0;loader.reviewedPhotoLinkRequests.clear();loader.fetch=async()=>{attempts++;if(attempts===1)throw Error('transient');return{ok:true,json:async()=>({stores:{}})};};
 assert.equal(await loader.reviewedMenuPhotoLinks(storeId),null);
 await loader.reviewedMenuPhotoLinks(storeId);assert.equal(attempts,2,'transient failure never poisons photo cache');
-assert.match(read('index.html'),/data-api\.js\?[^"\n]*all-menu-photos-20260913/);
+assert.match(read('index.html'),/data-api\.js\?[^"\n]*coupang-exact-20261024/);
 assert.match(read('scripts/browser-alien-pizza-menu-search.mjs'),/sources\.flatMap\(item => \[item\.image, reviewedPhotoFor\(item\)\]\)/,'browser coverage uses verified additional evidence, not a broad photo exemption');
 console.log('PASS verified photo reconciliation: identity/composition guards, stale source rejection, search parity, immutable fields and owned assets');

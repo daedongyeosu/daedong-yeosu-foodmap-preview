@@ -39,9 +39,9 @@ for (const [storeId, store] of Object.entries(inventory.stores)) {
     assets++;
   }
 }
-assert.equal(Object.keys(inventory.stores).length, 323);
-assert.equal(assets, 2883); // Includes 19 exact official-brand photos and 150 audited same-brand fills.
-assert.equal(sharedAssets, 150);
+assert.equal(Object.keys(inventory.stores).length, 865);
+assert.equal(assets, 8892); // Includes reviewed same-store exact matches and audited same-brand fills.
+assert.equal(sharedAssets, 247);
 const achasan = 'c7a234ae0185bdee';
 const dish = {id: 'coupang-920304-1', name: '[걸쭉꾸덕] 아차산매운떡볶이', image: ''};
 const source = {storeId: achasan, mainImage: '', items: [dish]};

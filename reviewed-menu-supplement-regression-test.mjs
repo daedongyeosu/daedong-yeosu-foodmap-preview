@@ -19,5 +19,5 @@ const kept=ctx.applyReviewedMenuPhotos(id,newer,inv);
 assert.equal(kept.items[0].description,'최신 설명');assert.equal(kept.items[0].image,'new.jpg');assert.equal(kept.items.length,6);
 assert.equal(ctx.applyReviewedMenuPhotos('another',payload,inv),payload);
 for(const photo of Object.values(inv.stores[id].items))assert.ok(fs.existsSync(photo.image));
-assert.equal(Object.keys(inv.stores[id].items).length,9);
+assert.equal(Object.keys(inv.stores[id].items).length,11);
 console.log('reviewed-menu-supplement-regression-test: pass');
