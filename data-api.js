@@ -451,6 +451,7 @@
 
   window.daedongDataApi = Object.freeze({
     baseUrl: BASE_URL,
+    locationJournalBaseUrl: BASE_URL || 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev',
     regionCode: ACTIVE_REGION.code,
     isCustomerHiddenStoreId,
     catalogBootstrap,

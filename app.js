@@ -626,8 +626,12 @@ const PROMO_CAROUSEL_DETAILS = {
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
-const readLocalJson = (key, fallback = []) => { try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); } catch { return fallback; } };
-const writeLocalJson = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+const readLocalJson = (key, fallback = []) => { try { return JSON.parse(sessionStorage.getItem(key) || localStorage.getItem(key) || JSON.stringify(fallback)); } catch { return fallback; } };
+const isGpsAddress = value => value && (value.type === 'current' || value.coordinateSource === 'browser-geolocation' || value.regionSource === 'browser_geolocation');
+const writeLocalJson = (key, value) => {
+  if (isGpsAddress(value)) { sessionStorage.setItem(key, JSON.stringify(value)); localStorage.removeItem(key); }
+  else { localStorage.setItem(key, JSON.stringify(value)); sessionStorage.removeItem(key); }
+};
 function favoriteIds() { return readLocalJson(FAVORITE_KEY, []).map(String); }
 function isFavorite(id) { return favoriteIds().includes(String(id)); }
 function toggleFavorite(id) {
@@ -933,7 +937,7 @@ function normalizeOutsideYeosuCurrent(item) {
 }
 function loadSavedLocation() {
   try {
-    const saved = normalizeOutsideYeosuCurrent(JSON.parse(localStorage.getItem(SAVED_LOCATION_KEY) || 'null'));
+    const saved = normalizeOutsideYeosuCurrent(readLocalJson(SAVED_LOCATION_KEY, null));
     if (!saved || typeof saved !== 'object') return null;
     const lat = Number(saved.coords?.lat), lng = Number(saved.coords?.lng);
     return {
@@ -2608,7 +2612,7 @@ function allCategoriesModal() {
 }
 function getSavedAddress() { return normalizeOutsideYeosuCurrent(readLocalJson(ADDRESS_KEY, null)); }
 function getAddressBook() { return readLocalJson(ADDRESS_BOOK_KEY, []).map(normalizeOutsideYeosuCurrent); }
-function saveAddressBook(list) { writeLocalJson(ADDRESS_BOOK_KEY, list.slice(0, 12)); }
+function saveAddressBook(list) { writeLocalJson(ADDRESS_BOOK_KEY, list.filter(item => !isGpsAddress(item)).slice(0, 12)); }
 function shortAddress(text = '', area = '') {
   const cityName = typeof REGION_CITY_NAME !== 'undefined' ? REGION_CITY_NAME : '여수시';
   const defaultArea = typeof REGION_DEFAULT_AREA !== 'undefined' ? REGION_DEFAULT_AREA : '여수시 전체';
@@ -2621,7 +2625,7 @@ function shortAddress(text = '', area = '') {
 function saveLocationState(label, coords = null, sortByDistance = false, meta = {}) {
   const region = analyticsCoarseRegion(meta);
   const saved = {label, area:meta.area || label, address:meta.address || label, detail:meta.detail || '', type:meta.type || 'recent', coords, sortByDistance, ...region, savedAt:new Date().toISOString()};
-  localStorage.setItem(SAVED_LOCATION_KEY, JSON.stringify(saved)); localStorage.setItem(LOCATION_KEY, saved.area);
+  writeLocalJson(SAVED_LOCATION_KEY, saved); if (!isGpsAddress(saved)) localStorage.setItem(LOCATION_KEY, saved.area);
 }
 function addressAreas() { return [REGION_DEFAULT_AREA, ...new Set(stores.map(store => store.area).filter(Boolean))].sort((a,b)=>a===REGION_DEFAULT_AREA?-1:a.localeCompare(b,'ko')); }
 function addressAreaFor(text='') { const neighborhood=neighborhoodFor(text); if(neighborhood)return neighborhood; const normalized=normalize(text); return addressAreas().find(area=>area!==REGION_DEFAULT_AREA&&normalized.includes(normalize(area))) || REGION_DEFAULT_AREA; }
@@ -2658,10 +2662,13 @@ function useCurrentLocation() {
   const button=$('#gpsLocationBtn'); if(!button)return;
   if(!navigator.geolocation){button.innerHTML='⌖ <span>이 기기는 위치 기능을 지원하지 않습니다</span>';return;}
   button.disabled=true;button.innerHTML='⌖ <span>현재 위치 확인 중…</span>';
-  navigator.geolocation.getCurrentPosition(position=>{button.disabled=false;button.innerHTML='⌖ <span>현재 위치 확인 완료</span>';chooseAddressBase('현재 위치',{area:REGION_DEFAULT_AREA,coords:{lat:position.coords.latitude,lng:position.coords.longitude},sortByDistance:true,type:'current'});},error=>{button.disabled=false;button.innerHTML=`⌖ <span>${error.code===1?'위치 권한을 허용해 주세요':'현재 위치를 확인하지 못했습니다'}</span>`;},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
+  window.MatjidoLocation?.getCurrentPosition(position=>{button.disabled=false;button.innerHTML='⌖ <span>현재 위치 확인 완료</span>';chooseAddressBase('현재 위치',{area:REGION_DEFAULT_AREA,coords:{lat:position.coords.latitude,lng:position.coords.longitude},sortByDistance:true,type:'current'});},error=>{button.disabled=false;button.innerHTML=`⌖ <span>${error.code===1?'위치 권한을 허용해 주세요':'현재 위치를 확인하지 못했습니다'}</span>`;},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
+}
+function locationPrivacyModal() {
+  openModal(`<h2 id="modalTitle">위치 동의 관리</h2><p>현재 위치는 가까운 가게를 찾을 때만 사용합니다. 주소 검색은 위치 동의 없이 이용할 수 있습니다.</p><p><a href="/location-terms/">위치기반서비스 이용약관</a> · <a href="/privacy/">개인정보처리방침</a></p><div class="location-privacy-actions"><button type="button" data-location-records>내 위치 이용 기록 보기</button><button type="button" data-location-withdraw>위치 동의 철회·기록 삭제</button></div><p data-location-status role="status"></p><p>브라우저·휴대전화 설정의 위치 권한도 직접 끌 수 있습니다. 문의: 010-4797-7803 · sisakim@naver.com</p>`);
 }
 function myPage() {
-  openModal(`<h2 id="modalTitle">마이페이지</h2><p>로그인 없이 이 기기에 저장된 정보입니다.</p><div class="my-list"><button type="button" data-open-favorites>♡ 찜한 가게</button><button type="button" data-open-recent>◷ 최근 방문 가게</button><button type="button" data-open-address>📍 저장 지역 — ${escapeHtml(state.location)}</button><button type="button" data-open-guide>❓ 주문방법 안내</button><button type="button" data-open-ad-inquiry>✉ 광고 문의</button></div>`);
+  openModal(`<h2 id="modalTitle">마이페이지</h2><p>로그인 없이 이 기기에 저장된 정보입니다.</p><div class="my-list"><button type="button" data-open-favorites>♡ 찜한 가게</button><button type="button" data-open-recent>◷ 최근 방문 가게</button><button type="button" data-open-address>📍 저장 지역 — ${escapeHtml(state.location)}</button><button type="button" data-location-settings>위치 동의 관리</button><a href="/location-terms/">위치기반서비스 이용약관</a><button type="button" data-open-guide>❓ 주문방법 안내</button><button type="button" data-open-ad-inquiry>✉ 광고 문의</button></div>`);
 }
 function routeLink(route, extraClass = '') {
   if (route.key === 'direct') {
@@ -2962,7 +2969,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.addEventListener('click', event => { if (!pop.hidden && !event.target.closest('#moreAppsPopover') && !event.target.closest('#moreAppsBtn')) pop.hidden = true; });
 
-  $$('[data-open]').forEach(button => button.addEventListener('click', () => ({mypage: myPage, guide, brands: brandsModal}[button.dataset.open] || guide)()));
+  $$('[data-open]').forEach(button => button.addEventListener('click', () => ({mypage: myPage, guide, brands: brandsModal, locationPrivacy: locationPrivacyModal}[button.dataset.open] || guide)()));
   installDaedongTapAction({
     selector: '#modal .modal-close',
     activate() {
@@ -3035,6 +3042,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(event.target.closest('[data-open-recent]')){recentModal();return;}
     if(event.target.closest('[data-open-guide]')){guide();return;}
     if(event.target.closest('[data-open-address]')){areaModal();return;}
+    if(event.target.closest('[data-location-settings]')){locationPrivacyModal();return;}
     if(event.target.closest('[data-open-ad-inquiry]')){adInquiryModal();return;}
     const lifeFilter=event.target.closest('[data-life-filter]');if(lifeFilter){openYeosuLifeNews(lifeFilter.dataset.lifeFilter);return;}
     const lifeItem=event.target.closest('[data-life-item]');if(lifeItem){openYeosuLifeItem(lifeItem.dataset.lifeItem);return;}
@@ -3116,4 +3124,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (!$('#modal').hidden) hardClose({fromPop: true});
   });
+});
+
+window.addEventListener('matjido-location-withdrawn', () => {
+  if (isGpsAddress(addressDraft)) addressDraft = null;
+  state.coords = null; state.sortByDistance = false;
+  const manual = getSavedAddress();
+  state.coords = manual?.coords || null; state.sortByDistance = Boolean(manual?.coords);
+  state.location = manual?.area || REGION_DEFAULT_AREA;
+  state.addressLabel = manual?.label || REGION_DEFAULT_AREA;
+  const label = document.querySelector('#locationText');
+  if (label) label.textContent = shortAddress(state.addressLabel, state.location);
+  renderStores({resetCount:true});
 });

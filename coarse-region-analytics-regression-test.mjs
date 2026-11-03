@@ -70,7 +70,7 @@ assert.doesNotMatch(sender, /\b(?:address|coords|latitude|longitude)\s*:/);
 assert.match(addressMap, /region1: data\.sido/);
 assert.match(addressMap, /region2: data\.sigungu/);
 assert.match(addressMap, /data\.bname/);
-assert.match(addressMap, /nominatim\.openstreetmap\.org\/reverse/);
+assert.doesNotMatch(addressMap, /nominatim\.openstreetmap\.org\/reverse/, 'GPS coordinates must not leave the device for coarse region analytics');
 assert.match(addressMap, /Math\.hypot\(latDistance, lngDistance\) <= 12/);
 assert.match(html, /anonymous-analytics-1-coarse-region-1/);
 
