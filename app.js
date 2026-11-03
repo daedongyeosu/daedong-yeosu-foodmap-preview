@@ -763,6 +763,7 @@ function analyticsCoarseRegion(input = {}) {
 }
 function analyticsRegionContext() {
   const selected = readLocalJson(ADDRESS_KEY, null) || readLocalJson(SAVED_LOCATION_KEY, null) || {};
+  if (isGpsAddress(selected)) return analyticsCoarseRegion({});
   return analyticsCoarseRegion(selected);
 }
 function analyticsStoreIdentity(value, fallbackName = '') {

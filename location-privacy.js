@@ -28,6 +28,10 @@
         }
       } catch { /* Manual addresses and favorites must remain intact. */ }
     }
+    try {
+      const queue=JSON.parse(localStorage.getItem('daedongAnalyticsQueueV1') || '[]');
+      if(Array.isArray(queue))localStorage.setItem('daedongAnalyticsQueueV1',JSON.stringify(queue.map(item=>item?.regionSource==='browser_geolocation'?{...item,region1:'',region2:'',region3:'',regionSource:'saved_address'}:item)));
+    } catch {}
   }
   // Legacy GPS positions were retained indefinitely without a dedicated consent.
   eraseGpsStorage();
