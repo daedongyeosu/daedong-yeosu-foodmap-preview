@@ -65,6 +65,7 @@ const core={window:context.window,BLOCKED_STORE_ROUTE_KEYS:{},EXTERNAL_APP_KEYS:
 vm.createContext(core);
 vm.runInContext(['storeRouteIsBlocked','routeFor','storeHasChannel','routeLink'].map(name=>extract(app,name)).join('\n'),core);
 assert.equal(core.storeHasChannel(records.at(-1),'direct'),false,'미승인 가게의 바로주문은 열리지 않아야 합니다.');
+assert.match(core.routeLink(core.routeFor(records.at(-1),'direct')),/disabled[^>]*data-route-key="direct"/,'다른 가게의 기존 준비중 표시는 비활성 상태로 보존합니다.');
 assert.equal(core.routeFor(records.at(-1),'mukkebi').url,originalRoutes[1].url);
 const direct=(await api.detail(ids[0])).routes.find(r=>r.key==='direct');
 assert.match(core.routeLink(direct),/<a /);
