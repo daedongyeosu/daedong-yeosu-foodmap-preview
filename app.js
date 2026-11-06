@@ -1608,7 +1608,6 @@ function storeRouteIsBlocked(store, key) {
   return Boolean(BLOCKED_STORE_ROUTE_KEYS[String(store?.id || store?.store_id || '')]?.has(String(key || '')));
 }
 function routeFor(store, key) {
-  if (key === 'direct' && window.daedongDataApi?.isDirectOrderStoreId?.(store?.id || store?.store_id) !== true) return undefined;
   if (storeRouteIsBlocked(store, key)) return undefined;
   return (Array.isArray(store?.routes) ? store.routes : []).find(route => route?.key === key && route?.customerUsable !== false);
 }
