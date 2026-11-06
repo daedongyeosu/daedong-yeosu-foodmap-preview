@@ -232,7 +232,7 @@ assert.doesNotMatch(rc2, /if \(rc2FreshReturnState\(sessionSaved\)\) return sess
 assert.match(html, /final-experience\.js\?v=[^"\n]*kakao-fresh-entry-token-1/);
 assert.match(html, /final-experience\.js\?v=[^"\n]*detached-kakao-order-return-1/,
   '카카오 링크 재진입 수정본을 즉시 받도록 최종 런타임 주소를 갱신해야 합니다.');
-assert.match(html, /name="daedong-release" content="detached-kakao-return-grace-5m-1"/,
+assert.match(html, /name="daedong-release" content="preview-open-count-refresh-20261106-1"/,
   '5분 링크 재진입 제한 배포본을 CDN에서 구분할 표시가 필요합니다.');
 assert.match(html, /app\.js\?v=[^"\n]*external-return-lifecycle-1/,
   '기존 휴대폰 런타임 캐시에 남은 app.js와 구분되는 주소가 필요합니다.');
