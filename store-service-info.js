@@ -2047,10 +2047,15 @@ document.addEventListener('input', event => {
     if (serviceLoadState === 'ready' && typeof renderStores === 'function') {
       renderStores({resetCount: false});
     }
+    ensureOverviewButtons();
     document.querySelectorAll('[data-store-service-card-meta]').forEach(node => node.remove());
     decorateStoreCards();
     decorateStoreDetails();
     const overlay = document.querySelector('[data-store-service-overview-overlay]');
     if (overlay && !overlay.hidden) renderOverview();
   }, 60000);
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') ensureOverviewButtons();
+  });
+  window.addEventListener('pageshow', () => ensureOverviewButtons());
 })();
