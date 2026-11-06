@@ -8,6 +8,7 @@
   let mapUserMoved = false;
   let renderedAddresses = [];
   let installed = false;
+  let externalMapAllowed = false;
 
   function inAppBrowserInfo() {
     const userAgent = String(navigator.userAgent || '');
@@ -183,41 +184,9 @@
     return /(?:여수|yeosu)/i.test([region.region1, region.region2, region.region3].filter(Boolean).join(' '));
   }
 
-  async function reverseRegionForCoords(coords) {
-    const point = validCoords(coords);
-    if (!point) return {};
-    try {
-      const params = new URLSearchParams({
-        format: 'jsonv2',
-        lat: String(point.lat),
-        lon: String(point.lng),
-        zoom: '18',
-        addressdetails: '1',
-        'accept-language': 'ko'
-      });
-      const response = await fetch(`https://nominatim.openstreetmap.org/reverse?${params}`, {
-        headers: {accept: 'application/json'},
-        signal: AbortSignal.timeout(5000)
-      });
-      if (!response.ok) return {};
-      const data = await response.json();
-      const address = data?.address || {};
-      const city = address.city || address.county || address.municipality || '';
-      const district = address.city_district || address.borough || '';
-      const region2 = [city, district].filter((value, index, list) => value && list.indexOf(value) === index).join(' ');
-      const region3 = address.suburb || address.quarter || address.neighbourhood || address.town || address.village || '';
-      return {
-        ...analyticsCoarseRegion({
-          region1: address.province || address.state || '',
-          region2,
-          region3,
-          regionSource: 'browser_geolocation'
-        }),
-        isYeosu: /(?:여수|yeosu)/i.test([city, district, address.county, address.municipality].filter(Boolean).join(' '))
-      };
-    } catch {
-      return {};
-    }
+  async function reverseRegionForCoords() {
+    // Do not send a customer's GPS coordinates to external reverse-geocoders.
+    return {};
   }
 
   function syncMainAddress() {
@@ -401,7 +370,7 @@
     const input = document.querySelector('#addressSearchInput');
     if (input) input.value = address;
     renderDraft();
-    if (coords) moveMap(coords, {zoom: 17});
+    if (coords && !isGpsAddress(addressDraft)) moveMap(coords, {zoom: 17});
     else {
       const point = area !== '여수시 전체' ? neighborhoodPoint(area) : null;
       if (point) moveMap(point, {zoom: 14});
@@ -437,8 +406,12 @@
   function initializeMap() {
     const element = document.querySelector('#deliveryAddressMap');
     if (!element) return;
+    if (!externalMapAllowed) {
+      element.innerHTML = '<div class="rc7-map-unavailable"><b>외부 지도를 불러올까요?</b><span>OpenStreetMap에 지도 표시 범위·IP·접속시각이 전달됩니다. GPS 원본과 상세주소는 보내지 않습니다. 지도 없이 주소를 저장할 수도 있습니다.</span><a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">지도 제공업체의 개인정보처리방침</a><button type="button" data-rc7-map-allow>확인하고 외부 지도 불러오기</button></div>';
+      return;
+    }
     destroyMap();
-    const view = mapViewForDraft();
+    const view = isGpsAddress(addressDraft) ? {coords:DEFAULT_CENTER, zoom:12} : mapViewForDraft();
     if (!window.L) {
       element.innerHTML = '<div class="rc7-map-unavailable"><b>지도를 불러오지 못했습니다.</b><span>주소와 현재 위치 기능은 그대로 사용할 수 있습니다.</span></div>';
       addressDraft = {...(addressDraft || {}), mapUnavailable: true};
@@ -583,7 +556,7 @@
           form.hidden = false;
           view.hidden = true;
           showAddressStep('detail');
-          void locateSelectedAddress(addressDraft);
+          // The optional map is opened explicitly by the customer.
         },
         onclose() {
           form.hidden = false;
@@ -607,6 +580,11 @@
   async function useGps() {
     const button = document.querySelector('#gpsLocationBtn');
     if (!button) return;
+    if (!window.MatjidoLocation) {
+      button.textContent = '현재 위치 대신 주소 검색을 이용해 주세요';
+      showLocationRecovery('현재 위치 이용 준비가 되지 않았습니다.');
+      return;
+    }
     if (!navigator.geolocation) {
       button.innerHTML = '<span class="rc7-gps-symbol" aria-hidden="true">⌖</span><span>이 기기는 위치 기능을 지원하지 않습니다</span>';
       showLocationRecovery('이 기기는 위치 기능을 지원하지 않습니다.');
@@ -616,7 +594,8 @@
     hideLocationRecovery();
     button.disabled = true;
     button.innerHTML = '<span class="rc7-gps-symbol rc7-gps-loading" aria-hidden="true">⌖</span><span>현재 위치를 확인하고 있습니다…</span>';
-    navigator.geolocation.getCurrentPosition(async position => {
+    window.MatjidoLocation?.getCurrentPosition(async position => {
+      if (!document.querySelector('.rc7-address-sheet') || document.querySelector('#modal')?.hidden) return;
       const coords = {lat: position.coords.latitude, lng: position.coords.longitude};
       const accuracy = Number(position.coords.accuracy || Infinity);
       const localArea = currentAreaForCoords(coords);
@@ -667,7 +646,8 @@
         region3: region.region3 || '',
         regionSource: 'browser_geolocation'
       });
-      void openMapStep();
+      addressDraft = {...addressDraft, mapUnavailable:true, mapVerified:true};
+      showAddressStep('detail');
       const hint = document.querySelector('#rc7MapHint');
       if (hint) hint.textContent = accuracy <= 300 ? '휴대전화의 현재 위치로 지도를 이동했습니다.' : `위치 오차가 약 ${Math.round(accuracy)}m입니다. 지도를 움직여 조정할 수 있습니다.`;
     }, error => {
@@ -745,6 +725,11 @@
   }
 
   function handleClick(event) {
+    if (event.target.closest('[data-rc7-map-allow]')) {
+      event.preventDefault();event.stopImmediatePropagation();
+      externalMapAllowed = true;
+      initializeMap();return;
+    }
     const chrome = event.target.closest('[data-rc7-open-chrome]');
     if (chrome) {
       event.preventDefault();
@@ -853,6 +838,7 @@
         return true;
       }
     });
+    window.addEventListener('matjido-location-withdrawn', () => {externalMapAllowed=false;destroyMap();syncMainAddress();});
     document.addEventListener('click', handleClick, true);
     document.addEventListener('input', event => {
       if (event.target.id === 'addressDetailInput' || event.target.id === 'addressNicknameInput') renderDraft();

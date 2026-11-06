@@ -11,6 +11,6 @@ assert.match(source, /const heroImage = menuHeroImage\(menu\)/);
 assert.match(source, /escapeMenuHtml\(heroImage\)/);
 assert.doesNotMatch(source, /escapeMenuHtml\(menu\.mainImage\)/);
 assert.match(index, /store-menu-preview\.js\?v=[^"']*official-placeholder-logo-1/);
-assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v31-yogiyo-representative-only'/);
+assert.match(serviceWorker, /CACHE_NAME = 'daedong-yeosu-app-shell-v32-location-privacy'/);
 
 console.log('menu preview official placeholder logo regression passed');

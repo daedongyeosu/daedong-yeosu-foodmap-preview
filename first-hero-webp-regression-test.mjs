@@ -16,7 +16,7 @@ assert.doesNotMatch(html, /rel="preload" as="image" href="images\/01\.png"/,
   '1MB가 넘는 PNG 배너를 초기 화면에서 미리 받으면 안 됩니다.');
 assert.match(html, /<img class="brand-logo" src="assets\/brand\/yeosu-taste-map-logo\.display\.webp\?v=display-20261017-1" alt="여수맛지도">/,
   '첫 화면에는 캐시 버전이 지정된 같은 로고의 경량 화면용 파일을 사용해야 합니다.');
-assert.match(serviceWorker, /daedong-yeosu-app-shell-v31-yogiyo-representative-only/,
+assert.match(serviceWorker, /daedong-yeosu-app-shell-v32-location-privacy/,
   '최신 서비스워커 캐시 전략을 예전 구현으로 되돌리면 안 됩니다.');
 
 console.log('PASS: 첫 광고 배너를 200KB 이하 WebP로 제공하고 최신 성능 구조를 유지합니다.');

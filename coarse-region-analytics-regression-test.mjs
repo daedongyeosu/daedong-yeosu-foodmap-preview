@@ -70,8 +70,13 @@ assert.doesNotMatch(sender, /\b(?:address|coords|latitude|longitude)\s*:/);
 assert.match(addressMap, /region1: data\.sido/);
 assert.match(addressMap, /region2: data\.sigungu/);
 assert.match(addressMap, /data\.bname/);
-assert.match(addressMap, /nominatim\.openstreetmap\.org\/reverse/);
+assert.doesNotMatch(addressMap, /nominatim\.openstreetmap\.org\/reverse/, 'GPS coordinates must not leave the device for coarse region analytics');
 assert.match(addressMap, /Math\.hypot\(latDistance, lngDistance\) <= 12/);
+context.localStorage.getItem = key => key === 'daedongDeliveryAddressV2' ? JSON.stringify({type:'current',region1:'전라남도',region2:'여수시',region3:'여서동'}) : null;
+const gpsContext = vm.runInContext('analyticsRegionContext()', context);
+assert.equal(gpsContext.region1, '');
+assert.equal(gpsContext.region2, '');
+assert.equal(gpsContext.region3, '', 'GPS-derived regions must not be sent to general analytics');
 assert.match(html, /anonymous-analytics-1-coarse-region-1/);
 
 console.log('coarse region analytics regression: PASS');

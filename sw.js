@@ -1,7 +1,7 @@
 'use strict';
 
-const CACHE_NAME = 'daedong-yeosu-app-shell-v31-yogiyo-representative-only';
-const RUNTIME_CACHE = 'daedong-yeosu-runtime-v4-yogiyo-representative-only';
+const CACHE_NAME = 'daedong-yeosu-app-shell-v32-location-privacy';
+const RUNTIME_CACHE = 'daedong-yeosu-runtime-v5-location-privacy';
 const CACHEABLE_DESTINATIONS = new Set(['image', 'style', 'script', 'font']);
 const APP_SHELL = [
   '/',
