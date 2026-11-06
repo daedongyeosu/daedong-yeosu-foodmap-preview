@@ -53,6 +53,8 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.55.0
           npx playwright install --with-deps chromium
+      - name: Verify four approved direct-order stores and operating hours
+        run: node scripts/browser-four-store-direct-order.mjs
       - name: Verify reviewed Naver identities on mobile
         run: |
           python3 -m http.server 4173 >/tmp/daedong-reviewed-identity-server.log 2>&1 &
@@ -248,6 +250,7 @@ jobs:
             browser-neighbor-market-resize-faces/
             browser-neighbor-market-trash/
             browser-home-commerce-market/
+            artifacts/four-direct/
             browser-reviewed-identity/
             browser-installed-qr/
             static-validation-report.json
