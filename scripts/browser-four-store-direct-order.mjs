@@ -48,6 +48,10 @@ try{
  await page.screenshot({path:out+'/four-store-list.png'});
  await page.evaluate(()=>hardClose({fromPop:true}));
  for(const key of ['direct','ondongne']){
+  // Start an independent channel visit. fromPop is an external-return signal,
+  // so calling it after Back deliberately restores the pending order list.
+  await page.goto(base,{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>window.__daedongCatalogProgress?.complete===true,{},{timeout:45000});
   await page.locator('[data-order-key="'+key+'"]').tap();
   await page.waitForSelector('#modal[data-app-browser-key="'+key+'"]:not([hidden])');
   const entries=await page.locator('#modal [data-app-store-order]').evaluateAll(nodes=>nodes.map(n=>n.dataset.appStoreOrder));
@@ -65,8 +69,9 @@ try{
    report.repeatReturns.push({key,id,code:targets[id]});
   }
   await page.screenshot({path:out+'/'+key+'-repeated-back.png'});
-  await page.evaluate(()=>hardClose({fromPop:true}));
  }
+ await page.goto(base,{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>window.__daedongCatalogProgress?.complete===true,{},{timeout:45000});
  await page.evaluate(async()=>{await window.daedongStoreServiceInfo.ready;});
  for(const [id,code] of Object.entries(targets)){
   await page.evaluate(id=>openStore(fxStoreById(id)),id);
