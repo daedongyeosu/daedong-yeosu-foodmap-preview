@@ -182,7 +182,7 @@ function fxRestoreAppBrowserReturn(){
  if(!['direct','mukkebi','ddangyo','ondongne','yogiyo','coupang','baemin'].includes(saved.key)){window.daedongClearExternalReturnState?.(FX_APP_BROWSER_RETURN,saved);return false;}
  const visibleSameApp=!modal?.hidden&&modal.dataset.appBrowserKey===saved.key;
  const restoredCards=visibleSameApp?modal.querySelectorAll('[data-app-store-order]').length:0;
- if(visibleSameApp&&restoredCards>0){window.daedongStabilizeReturnPosition?.(saved);window.daedongArmRestoredReturnLease?.(FX_APP_BROWSER_RETURN,saved);return true;}
+ if(visibleSameApp&&restoredCards>0){fxRestoreRegisteredAppButtons();window.daedongStabilizeReturnPosition?.(saved);window.daedongArmRestoredReturnLease?.(FX_APP_BROWSER_RETURN,saved);return true;}
  // Kakao may recreate this page after the order app was opened. In that cold
  // return, pageshow/focus can run before the catalog has finished loading. Do
  // not replace a missing snapshot with a false "no stores" result or consume
@@ -192,6 +192,7 @@ function fxRestoreAppBrowserReturn(){
  window.scrollTo(0,Number(saved.pageScroll||0));
  openAppBrowser(saved.key,saved.category||'추천');
  if(modal?.hidden||modal.dataset.appBrowserKey!==saved.key)return false;
+ fxRestoreRegisteredAppButtons();
  window.daedongStabilizeReturnPosition?.(saved);
  window.daedongArmRestoredReturnLease?.(FX_APP_BROWSER_RETURN,saved);return true;
 }
@@ -205,8 +206,9 @@ async function fxOpenRegisteredAppOrder(button){
   if(!route||href==='#')throw new Error('order route unavailable');
   if(EXTERNAL_APP_KEYS.includes(key))rememberSelectedExternal(store,key);
   sendAnalyticsEvent('order_click',{storeId:store.id,storeName:store.name,channel:key,surface:'app_store_list'});
-  fxRememberAppBrowserReturn(key,store.id);
+  // Save a clickable return screen, not the transient departure lock.
   delete button.dataset.routeBusy;button.removeAttribute('aria-busy');
+  fxRememberAppBrowserReturn(key,store.id);
   if(typeof window.daedongLaunchMobileRoute==='function')await window.daedongLaunchMobileRoute(key,href);else if(key==='ddangyo')await openDdangyoRoute(href);else location.assign(href);
  }catch{window.alert(`${APP_META[key]?.label||'주문앱'} 주문주소를 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.`);}finally{delete button.dataset.routeBusy;button.removeAttribute('aria-busy');}
 }

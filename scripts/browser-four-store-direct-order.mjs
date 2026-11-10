@@ -17,7 +17,7 @@ if(!process.env.BASE_URL){
  server=http.createServer((req,res)=>{try{let file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,base).pathname));if(file!==root&&!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}if(fs.statSync(file).isDirectory())file=path.join(file,'index.html');res.setHeader('Content-Type',mime[path.extname(file)]||'application/octet-stream');res.end(fs.readFileSync(file));}catch{res.writeHead(404).end();}});
  await new Promise(resolve=>server.listen(4188,'127.0.0.1',resolve));
 }
-const browser=await chromium.launch({headless:true,...(process.env.CODEX_BROWSER_EXECUTABLE_PATH?{executablePath:process.env.CODEX_BROWSER_EXECUTABLE_PATH}:{})});
+const browser=await chromium.launch({headless:true,args:['--disable-features=BackForwardCache'],...(process.env.CODEX_BROWSER_EXECUTABLE_PATH?{executablePath:process.env.CODEX_BROWSER_EXECUTABLE_PATH}:{})});
 const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,locale:'ko-KR',timezoneId:'Asia/Seoul',serviceWorkers:'block'});
 await context.addInitScript(()=>{sessionStorage.setItem('daedongCommunityIntroPlayedV4','1');sessionStorage.setItem('daedongMukkebiIslandExpoEventSeenSessionV1','1');});
 await context.route('**/api/events',route=>route.fulfill({status:204,body:''}));
@@ -28,7 +28,14 @@ if(['localhost','127.0.0.1'].includes(new URL(base).hostname)){
   await route.fulfill({response,headers:{...response.headers(),'access-control-allow-origin':new URL(base).origin}});
  });
 }
-const page=await context.newPage(),report={success:false,stores:[],hours:[],errors:[]};
+// Intercept only the provider destination: navigation/back are real, no order
+// is created and the stored merchant URL/code must still be exact.
+await context.route('https://ond.bursim.co.kr/shop/mns/**',async route=>{
+ const code=new URL(route.request().url()).searchParams.get('stCode');
+ assert.ok(Object.values(targets).includes(code));
+ await route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><html lang="ko"><meta charset="utf-8"><title>주문 연결 확인</title><h1>'+code+'</h1></html>'});
+});
+const page=await context.newPage(),report={success:false,stores:[],repeatReturns:[],hours:[],errors:[]};
 page.on('pageerror',error=>report.errors.push(error.message));
 const out='artifacts/four-direct';fs.mkdirSync(out,{recursive:true});
 try{
@@ -40,6 +47,31 @@ try{
  assert.deepEqual([...listed].sort(),Object.keys(targets).sort(),'Home direct ordering exposes exactly the four approved stores');
  await page.screenshot({path:out+'/four-store-list.png'});
  await page.evaluate(()=>hardClose({fromPop:true}));
+ for(const key of ['direct','ondongne']){
+  // Start an independent channel visit. fromPop is an external-return signal,
+  // so calling it after Back deliberately restores the pending order list.
+  await page.goto(base,{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>window.__daedongCatalogProgress?.complete===true,{},{timeout:45000});
+  await page.locator('[data-order-key="'+key+'"]').tap();
+  await page.waitForSelector('#modal[data-app-browser-key="'+key+'"]:not([hidden])');
+  const entries=await page.locator('#modal [data-app-store-order]').evaluateAll(nodes=>nodes.map(n=>n.dataset.appStoreOrder));
+  assert.deepEqual([...entries].sort(),Object.keys(targets).sort());
+  const first=Object.keys(targets)[0],other=Object.keys(targets)[2];
+  for(const id of [first,first,other,first]){
+   await page.locator('#modal [data-app-store-order="'+id+'"]').tap();
+   await page.waitForURL('https://ond.bursim.co.kr/shop/mns/**',{timeout:15000});
+   assert.equal(await page.locator('h1').innerText(),targets[id]);
+   await page.goBack({waitUntil:'domcontentloaded'});
+   await page.waitForSelector('#modal[data-app-browser-key="'+key+'"] [data-app-store-order="'+id+'"]',{timeout:15000});
+   await page.waitForFunction(()=>window.__daedongCatalogProgress?.complete===true&&typeof fxOpenRegisteredAppOrder==='function',{},{timeout:45000});
+   const locks=await page.locator('#modal [data-app-store-order]').evaluateAll(nodes=>nodes.filter(n=>n.disabled||n.dataset.routeBusy==='true'||n.getAttribute('aria-busy')==='true').length);
+   assert.equal(locks,0,key+': native Back must not restore a locked order button');
+   report.repeatReturns.push({key,id,code:targets[id]});
+  }
+  await page.screenshot({path:out+'/'+key+'-repeated-back.png'});
+ }
+ await page.goto(base,{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>window.__daedongCatalogProgress?.complete===true,{},{timeout:45000});
  await page.evaluate(async()=>{await window.daedongStoreServiceInfo.ready;});
  for(const [id,code] of Object.entries(targets)){
   await page.evaluate(id=>openStore(fxStoreById(id)),id);

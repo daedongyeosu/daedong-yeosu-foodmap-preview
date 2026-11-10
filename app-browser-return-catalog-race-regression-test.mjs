@@ -41,6 +41,7 @@ function restoreScenario({catalogComplete, visible, cardCount}) {
     querySelectorAll: selector => selector === '[data-app-store-order]' ? Array.from({length: cardCount}, () => ({})) : []
   };
   const context = {
+    fxRestoreRegisteredAppButtons() {},
     window: {
       __daedongCatalogProgress: {complete: catalogComplete},
       daedongReadExternalReturnState: () => saved,

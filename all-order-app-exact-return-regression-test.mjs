@@ -104,6 +104,7 @@ let opened = null;
 let stabilized = null;
 let armed = null;
 const restoreContext = {
+    fxRestoreRegisteredAppButtons() {},
   window: {
     __daedongCatalogProgress: {complete: true},
     daedongReadExternalReturnState: () => restoreSaved,
