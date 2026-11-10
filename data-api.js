@@ -7,6 +7,40 @@
   const BASE_URL = IS_GOHEUNG ? '' : 'https://daedong-yeosu-data-api-preview.sisakim.workers.dev';
   const GOHEUNG_CATALOG_URL = 'data/goheung-catalog.json';
   const CLIENT_HEADER = 'daedong-preview-web-v1-20260804';
+  // Customer entries verified in the provider UI. Legacy preparing pages stay closed.
+  const VERIFIED_DIRECT_ORDER_MERCHANTS = Object.freeze({
+    '7bc7239e6b509c44': 'S503561',
+    '04910f606ba038a6': 'S502168',
+    'd86586aaef8454c9': 'S503551',
+    '84c118675c0caa4c': 'S502719'
+  });
+  function isDirectOrderStoreId(value) {
+    return !IS_GOHEUNG && Object.hasOwn(VERIFIED_DIRECT_ORDER_MERCHANTS, String(value || ''));
+  }
+  function withVerifiedDirectOrderDetail(detail) {
+    const id = String(detail?.id || detail?.store_id || '');
+    if (!isDirectOrderStoreId(id)) return detail;
+    const routes = (detail.routes || []).filter(route => !['direct','ondongne'].includes(route.key) && route.name !== '가게바로주문');
+    return {...detail, routes: [...routes, {key:'direct', name:'가게바로주문', enabled:true,
+      url:'https://ond.bursim.co.kr/shop/mns/?pageType=redirect&stCode=' + VERIFIED_DIRECT_ORDER_MERCHANTS[id],
+      directOrderVerified:true}, {key:'ondongne', name:'온동네', enabled:true,
+      url:'https://ond.bursim.co.kr/shop/mns/?pageType=redirect&stCode=' + VERIFIED_DIRECT_ORDER_MERCHANTS[id],
+      directOrderVerified:true}]};
+  }
+  function withVerifiedDirectOrderHours(payload) {
+    if (IS_GOHEUNG || !payload?.stores) return payload;
+    const stores = {...payload.stores};
+    for (const id of Object.keys(VERIFIED_DIRECT_ORDER_MERCHANTS)) {
+      if (!stores[id]) continue;
+      const previous = stores[id].hours || {};
+      const weekly = Object.fromEntries(['sun','mon','tue','wed','thu','fri','sat'].map(day =>
+        [day, [{open:day === 'sun' ? '15:00' : '11:00', close:'01:00'}]]));
+      const displayLines = ['월–토 11:00–다음 날 01:00', '일요일 15:00–다음 날 01:00',
+        ...(previous.closures || []).map(rule => rule.label).filter(Boolean)];
+      stores[id] = {...stores[id], hours:{...previous, timezone:'Asia/Seoul', weekly, partialWeekly:false, displayLines}};
+    }
+    return {...payload, stores};
+  }
   const JSON_HEADERS = Object.freeze({
     Accept: 'application/json',
     'X-Daedong-Client': CLIENT_HEADER
@@ -349,7 +383,8 @@
       return !CUSTOMER_HIDDEN_STORE_IDS.has(id);
     }).map(store => {
       const id = String(store?.id || store?.store_id || '').toLowerCase();
-      return STATIC_MENU_URLS[id] && store?.hasMenu !== true ? {...store, hasMenu: true} : store;
+      const visible = STATIC_MENU_URLS[id] && store?.hasMenu !== true ? {...store, hasMenu: true} : store;
+      return isDirectOrderStoreId(id) ? {...visible, channelKeys:[...new Set([...(visible.channelKeys || []),'direct','ondongne'])]} : visible;
     });
   }
 
@@ -365,11 +400,11 @@
 
   function customerVisibleServices(services) {
     if (!services || typeof services !== 'object') return {};
-    return Object.fromEntries(
+    return withVerifiedDirectOrderHours(Object.fromEntries(
       Object.entries(services).filter(([storeId]) =>
         !CUSTOMER_HIDDEN_STORE_IDS.has(String(storeId || '').toLowerCase())
       )
-    );
+    ));
   }
 
   function customerVisibleStoreId(value) {
@@ -399,7 +434,7 @@
     return Promise.all([
       request(`/api/store/${id}`, {cacheKey: `detail:${id}`, ...options}).catch(error=>{if(error.status===404)return null;throw error;}),
       nativeStoreDetail(id).catch(error=>{console.warn('자체 게시 내용 확인 실패',error);return null;})
-    ]).then(([base,patch])=>{if(!base&&!patch)throw new Error('가게 상세자료를 찾지 못했습니다.');return mergeNativeDetail(base,patch);});
+    ]).then(([base,patch])=>{if(!base&&!patch)throw new Error('가게 상세자료를 찾지 못했습니다.');return withVerifiedDirectOrderDetail(mergeNativeDetail(base,patch));});
   };
   const menu = (storeId, options = {}) => {
     const id = customerVisibleStoreId(storeId);
@@ -453,6 +488,7 @@
     baseUrl: BASE_URL,
     regionCode: ACTIVE_REGION.code,
     isCustomerHiddenStoreId,
+    isDirectOrderStoreId,
     catalogBootstrap,
     catalog,
     services,
