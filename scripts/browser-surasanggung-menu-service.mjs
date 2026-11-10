@@ -159,9 +159,8 @@ try {
     '등록된 외부 주문앱을 처음에는 숨김'
   );
   await check(
-    page.locator('[data-menu-sticky-order="direct"]').getAttribute('href')
-      .then(value => value === 'https://app.notion.com/p/398da158dd2a80b6ba32fa75d2f4c137'),
-    '음식보기 하단 가게바로주문 링크 유지'
+    page.locator('[data-menu-sticky-order="direct"]').isDisabled(),
+    '음식보기 하단 가게바로주문 준비중 유지'
   );
   await check(
     page.locator('[data-menu-sticky-order="phone"]').getAttribute('href')
@@ -188,9 +187,8 @@ try {
   await check(page.locator('[data-menu-order-sheet]').evaluate(node => !node.hidden), '검색 메뉴 터치 시 주문방법 선택창 열림');
   await check(page.locator('[data-menu-order-sheet] [data-selected-menu-image]').isHidden(), '사진 미제공 메뉴에 빈 이미지 노출 없음');
   await check(
-    page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').getAttribute('href')
-      .then(value => value === 'https://app.notion.com/p/398da158dd2a80b6ba32fa75d2f4c137'),
-    '기존 가게바로주문 링크 유지'
+    page.locator('[data-menu-order-sheet] [data-menu-order="direct"]').isDisabled(),
+    '가게바로주문 준비중 유지'
   );
   await check(
     page.locator('[data-menu-order-sheet] [data-menu-order="phone"]').getAttribute('href')
