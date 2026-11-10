@@ -63,6 +63,8 @@ jobs:
           PERF_REQUEST_ORIGIN=https://preview.daedongmap.com \
           node scripts/browser-reviewed-identity.mjs
       - name: Verify studio cart quantity controls on mobile
+        env:
+          MARKET_TEST_IMAGE_DELAY_MS: "500"
         run: |
           python3 -m http.server 4173 >/tmp/daedong-studio-cart-quantity-server.log 2>&1 &
           SERVER_PID=$!

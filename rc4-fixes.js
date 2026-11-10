@@ -2,7 +2,7 @@
 
 /* RC4 fixes only. Content data, photos, routes, brand-apps, HappyOrder and banners remain read-only. */
 const RC4_CATEGORY_ICON_SPRITE=CATEGORY_ICON_SPRITE;
-const RC4_POSTCODE_SCRIPT='https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js';
+const RC4_POSTCODE_SCRIPT='https://t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js';
 const RC4_CATEGORY_ICON_MAP=Object.freeze([
  [/^전체$/,'all'],[/마라|양꼬치/,'mala'],[/치킨|닭/,'chicken'],[/피자/,'pizza'],[/중식|짜장|짬뽕/,'chinese'],
  [/분식.*도시락|도시락.*분식/,'lunchbox'],[/분식|떡볶이/,'snack'],[/족발|보쌈/,'pork'],[/회|해산물|초밥|선어|수산/,'seafood'],

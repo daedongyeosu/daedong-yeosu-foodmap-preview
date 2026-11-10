@@ -94,7 +94,7 @@ function photoPreview(input,preview){
 function loadPostcode(){
   if(globalThis.daum?.Postcode)return Promise.resolve(globalThis.daum.Postcode);
   if(postcodePromise)return postcodePromise;
-  postcodePromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js';script.onload=()=>globalThis.daum?.Postcode?resolve(globalThis.daum.Postcode):reject(new Error('postcode-unavailable'));script.onerror=()=>reject(new Error('postcode-load'));document.head.append(script);}).catch(error=>{postcodePromise=null;throw error;});
+  postcodePromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='https://t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js';script.onload=()=>globalThis.daum?.Postcode?resolve(globalThis.daum.Postcode):reject(new Error('postcode-unavailable'));script.onerror=()=>reject(new Error('postcode-load'));document.head.append(script);}).catch(error=>{postcodePromise=null;throw error;});
   return postcodePromise;
 }
 function productMethod(){return form.querySelector('[data-product-method]:checked')?.dataset.productMethod||'direct';}

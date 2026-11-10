@@ -736,7 +736,7 @@ fxRc2Script.onload=()=>{
  fxRc3Script.async=false;
  fxRc3Script.onload=()=>{
   const fxRc4Script=document.createElement('script');
-  fxRc4Script.src='rc4-fixes.js?v=category-first-paint-1-postcode-on-demand-1-brand-key-cache-1';
+  fxRc4Script.src='rc4-fixes.js?v=category-first-paint-1-postcode-on-demand-1-brand-key-cache-1-postcode-cdn-20261110';
   fxRc4Script.async=false;
   fxRc4Script.onload=()=>{
    const fxRc5Script=document.createElement('script');
