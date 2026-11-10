@@ -20,8 +20,10 @@
   function withVerifiedDirectOrderDetail(detail) {
     const id = String(detail?.id || detail?.store_id || '');
     if (!isDirectOrderStoreId(id)) return detail;
-    const routes = (detail.routes || []).filter(route => route.key !== 'direct' && route.name !== '가게바로주문');
+    const routes = (detail.routes || []).filter(route => !['direct','ondongne'].includes(route.key) && route.name !== '가게바로주문');
     return {...detail, routes: [...routes, {key:'direct', name:'가게바로주문', enabled:true,
+      url:'https://ond.bursim.co.kr/shop/mns/?pageType=redirect&stCode=' + VERIFIED_DIRECT_ORDER_MERCHANTS[id],
+      directOrderVerified:true}, {key:'ondongne', name:'온동네', enabled:true,
       url:'https://ond.bursim.co.kr/shop/mns/?pageType=redirect&stCode=' + VERIFIED_DIRECT_ORDER_MERCHANTS[id],
       directOrderVerified:true}]};
   }
@@ -382,7 +384,7 @@
     }).map(store => {
       const id = String(store?.id || store?.store_id || '').toLowerCase();
       const visible = STATIC_MENU_URLS[id] && store?.hasMenu !== true ? {...store, hasMenu: true} : store;
-      return isDirectOrderStoreId(id) ? {...visible, channelKeys:[...new Set([...(visible.channelKeys || []),'direct'])]} : visible;
+      return isDirectOrderStoreId(id) ? {...visible, channelKeys:[...new Set([...(visible.channelKeys || []),'direct','ondongne'])]} : visible;
     });
   }
 

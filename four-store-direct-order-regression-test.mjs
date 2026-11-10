@@ -36,6 +36,9 @@ assert.deepEqual(catalog.filter(x=>api.isDirectOrderStoreId(x.id)).map(x=>x.id),
 for(const [id,code] of Object.entries(merchants)){
   assert.equal(catalog.find(x=>x.id===id).channelKeys.includes('direct'),true);
   const detail=await api.detail(id);
+  assert.equal(catalog.find(x=>x.id===id).channelKeys.includes('ondongne'),true);
+  const ondongne=detail.routes.find(r=>r.key==='ondongne');
+  assert.equal(new URL(ondongne.url).searchParams.get('stCode'),code);
   const direct=detail.routes.filter(r=>r.key==='direct');
   assert.equal(direct.length,1);
   assert.equal(direct[0].directOrderVerified,true);
@@ -44,7 +47,7 @@ for(const [id,code] of Object.entries(merchants)){
   assert.equal(destination.pathname,'/shop/mns/');
   assert.equal(destination.searchParams.get('pageType'),'redirect');
   assert.equal(destination.searchParams.get('stCode'),code);
-  assert.deepEqual(plain(detail.routes.filter(r=>r.key!=='direct')),originalRoutes.filter(r=>r.key!=='direct'));
+  assert.deepEqual(plain(detail.routes.filter(r=>!['direct','ondongne'].includes(r.key))),originalRoutes.filter(r=>!['direct','ondongne'].includes(r.key)));
 }
 assert.equal(api.isDirectOrderStoreId(otherId),false);
 assert.deepEqual(plain((await api.detail(otherId)).routes),originalRoutes,'다른 가게의 원본 링크를 덮어쓰지 않습니다.');
@@ -74,4 +77,6 @@ assert.match(core.routeLink(originalRoutes[0]),/disabled/);
 const home=fs.readFileSync('index.html','utf8');
 const homeButton=home.match(/<button[^>]*data-order-key="direct"[^>]*>[\s\S]*?<\/button>/)?.[0];
 assert.ok(homeButton);assert.doesNotMatch(homeButton,/disabled|준비중/);
+const ondongneButton=home.match(/<button[^>]*data-order-key="ondongne"[^>]*>[\s\S]*?<\/button>/)?.[0];
+assert.ok(ondongneButton);assert.doesNotMatch(ondongneButton,/disabled|준비중/);
 console.log('PASS four verified order routes, four-store-only gate, Sunday/overnight hours and untouched existing routes/holidays');

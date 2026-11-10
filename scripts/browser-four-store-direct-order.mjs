@@ -47,6 +47,7 @@ try{
   const detailRoute=page.locator('#modal a[data-route-key="direct"]').first();
   await detailRoute.waitFor({state:'visible'});
   const href=await detailRoute.getAttribute('href');
+  assert.equal(await page.locator('#modal a[data-route-key="ondongne"]').first().getAttribute('href'),href);
   assert.equal(new URL(href).searchParams.get('stCode'),code);
   assert.equal(new URL(href).hostname,'ond.bursim.co.kr');
   assert.doesNotMatch(href,/notion|bit\.ly/);
@@ -56,6 +57,7 @@ try{
   await sticky.waitFor({state:'visible',timeout:15000});
   assert.equal(new URL(await sticky.getAttribute('href')).searchParams.get('stCode'),code);
   assert.doesNotMatch(await sticky.innerText(),/준비중/);
+  assert.equal(await page.locator('a[data-menu-sticky-order="ondongne"]').getAttribute('href'),href);
   report.stores.push({id,code,detail:true,menu:true});
   if(id===Object.keys(targets)[0])await page.screenshot({path:out+'/sura-menu-order.png'});
   await page.locator('[data-menu-preview-close]').first().click();
