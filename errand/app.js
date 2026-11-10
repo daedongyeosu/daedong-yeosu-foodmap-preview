@@ -223,7 +223,7 @@ function loadPostcode(){
   if(postcodePromise)return postcodePromise;
   postcodePromise=new Promise((resolve,reject)=>{
     const script=document.createElement('script');
-    script.src='https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js';
+    script.src='https://t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js';
     script.async=true;
     const timer=setTimeout(()=>{script.remove();reject(new Error('timeout'));},7000);
     script.onload=()=>{clearTimeout(timer);globalThis.daum?.Postcode?resolve(globalThis.daum.Postcode):reject(new Error('unavailable'));};

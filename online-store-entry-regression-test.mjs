@@ -34,7 +34,7 @@ const requiredOnboarding=[
 ];
 for(const copy of requiredOnboarding){if(!page.includes(copy))throw new Error(`입점 프리뷰 필수 항목 누락: ${copy}`);}
 if(!script.includes("previewOnly:true"))throw new Error('프리뷰 저장이 실제 입점 데이터와 구분되지 않습니다.');
-if(!script.includes('daumcdn.net/mapjsapi/bundle/postcode'))throw new Error('공식 주소검색 연결이 없습니다.');
+if(!script.includes('https://t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'))throw new Error('공식 주소검색 연결이 없습니다.');
 if(!script.includes("/(?:^|\\s)여수시\\s/"))throw new Error('행정구역 명칭 변경에도 여수시 공식 주소를 허용해야 합니다.');
 if(!script.includes('function addDirectProduct'))throw new Error('직접 상품등록 기능이 없습니다.');
 if(!script.includes('async function importProductSheet'))throw new Error('CSV 상품 일괄등록 기능이 없습니다.');

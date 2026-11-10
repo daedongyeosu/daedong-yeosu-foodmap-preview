@@ -75,7 +75,7 @@ const server=http.createServer(async(req,res)=>{try{
   const relative=decodeURIComponent(url.pathname).replace(/^\/+/,''),file=path.resolve(root,relative||'index.html');
   if(!file.startsWith(root+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile())return send(res,404,'{}');
   const extension=path.extname(file);let body=fs.readFileSync(file);
-  if(['.html','.js'].includes(extension))body=body.toString().replaceAll('https://daedong-yeosu-admin.sisakim.chatgpt.site',origin).replaceAll('https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js',origin+'/qa-postcode.js');
+  if(['.html','.js'].includes(extension))body=body.toString().replaceAll('https://daedong-yeosu-admin.sisakim.chatgpt.site',origin).replaceAll('https://t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js',origin+'/qa-postcode.js');
   if(extension==='.html')body=body.replace('<body>','<body><p style="margin:0;padding:10px;background:#fff1c6;color:#553c10;font-weight:bold">격리된 로컬 시험 · 주소/배송비는 모의값 · 실제 주문/결제 불가</p>');
   send(res,200,body,types[extension]||'application/octet-stream');
 }catch(error){console.error(error.message);send(res,500,JSON.stringify({message:'로컬 시험 오류'}));}});
