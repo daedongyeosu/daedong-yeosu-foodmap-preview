@@ -16,7 +16,8 @@ permissions:
 
 jobs:
   verify-preview-api-client:
-    runs-on: ubuntu-latest
+    # Playwright 1.55 supports Ubuntu 24.04, not the rolling ubuntu-latest image.
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4

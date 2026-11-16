@@ -13,7 +13,8 @@ concurrency:
 jobs:
   verify-deployed-preview:
     if: github.event.deployment_status.state == 'success'
-    runs-on: ubuntu-latest
+    # Keep the deployed-site browser checks on the same supported Playwright OS.
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
